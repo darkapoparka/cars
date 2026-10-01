@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+pkg.scripts.test = 'node scripts/prepare-domain-tests.mjs && node --test tests/domain.test.mjs';
+pkg.scripts.check = 'npm run lint && npm run typecheck && npm test && npm run build';
+pkg.scripts['qa:browser'] = 'node scripts/capture-web.mjs';
+pkg.scripts.format = 'prettier --write src tests scripts/capture-web.mjs scripts/prepare-domain-tests.mjs';
+pkg.scripts['format:check'] = 'prettier --check src tests scripts/capture-web.mjs scripts/prepare-domain-tests.mjs';
+fs.writeFileSync('package.json', JSON.stringify(pkg, null, 2) + '\n');
+const ignore = fs.readFileSync('.gitignore', 'utf8');
+if (!ignore.includes('.qa/')) fs.appendFileSync('.gitignore', '\n.qa/\n');

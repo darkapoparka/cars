@@ -1,0 +1,404 @@
+'use client';
+import { Fragment, useState } from 'react';
+import Image from 'next/image';
+import { NativeDealerCards } from './NativeDealerCards';
+import { DealerLogo } from './DealerLogo';
+import * as stylex from '@stylexjs/stylex';
+import type { Vehicle } from '@/lib/types';
+import { colors } from '@/styles/tokens.stylex';
+import { number } from '@/lib/search';
+import { vehicles } from '@/lib/catalog';
+import { Button, Modal, ui } from './ui';
+import { Icon, type IconName } from './Icon';
+import { RatingStars } from './RatingStars';
+import { AssistantPanel } from './AssistantEntry';
+import { VehicleCard } from './VehicleCard';
+const s = stylex.create({
+  body: {
+    backgroundColor: colors.surface,
+    padding: 8,
+    paddingTop: 0,
+    paddingBottom: 100,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+  },
+  card: {
+    backgroundColor: colors.background,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 16,
+    overflow: 'hidden',
+  },
+  pad: { padding: 16 },
+  title: {
+    fontSize: 16,
+    fontWeight: 700,
+    lineHeight: '24px',
+    paddingBottom: 8,
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
+    marginBottom: 8,
+  },
+  specs: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    gap: 24,
+    padding: 8,
+    paddingTop: 8,
+    paddingBottom: 24,
+  },
+  spec: { display: 'flex', alignItems: 'center', gap: 16, minHeight: 40 },
+  label: { fontSize: 12, lineHeight: '20px', color: colors.muted },
+  value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
+  seller: {
+    width: '100%',
+    borderWidth: 0,
+    backgroundColor: 'transparent',
+    textAlign: 'left',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 16,
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.line,
+    marginTop: 16,
+    paddingTop: 16,
+    color: colors.text,
+    textDecoration: 'none',
+    fontSize: 14,
+  },
+  stars: { color: '#bf8000', fontSize: 20, letterSpacing: 1 },
+  table: {
+    width: '100%',
+    borderCollapse: 'collapse',
+    fontSize: 14,
+    lineHeight: '20px',
+    tableLayout: 'fixed',
+  },
+  row: { backgroundColor: { default: colors.background, ':nth-child(even)': colors.stripe } },
+  diagram: { width: '100%', height: 'auto', display: 'block', objectFit: 'contain' },
+  diagramCell: { padding: 8, backgroundColor: colors.background },
+  cell: {
+    whiteSpace: 'pre-line',
+    padding: 8,
+    paddingBlock: 6,
+    height: 52,
+    fontWeight: 400,
+    textAlign: 'left',
+    verticalAlign: 'middle',
+    width: '50%',
+    overflowWrap: 'anywhere',
+  },
+  key: { fontWeight: 700 },
+  check: { textAlign: 'right', color: colors.muted, width: '20%' },
+  more: {
+    width: '100%',
+    height: 64,
+    borderWidth: 0,
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.line,
+    backgroundColor: colors.background,
+    color: colors.accent,
+    fontSize: 14,
+    fontWeight: 500,
+  },
+  modalScroll: { flex: '1', minHeight: 0, overflowY: 'auto', paddingTop: 4, marginBottom: 12 },
+  modalCell: {
+    paddingBlock: 0,
+    borderBottomWidth: 4,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.background,
+  },
+  modalKey: { fontWeight: 500 },
+  modalTitle: {
+    fontSize: 16,
+    lineHeight: '24px',
+    fontWeight: 700,
+    marginBottom: 8,
+    paddingBottom: 9,
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
+  },
+  modalClose: { borderTopWidth: 0, textAlign: 'right', paddingRight: 32, height: 48 },
+  tags: { display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 8 },
+  description: { whiteSpace: 'pre-line', fontSize: 14, lineHeight: '22px' },
+  carousel: {
+    display: 'flex',
+    overflowX: 'auto',
+    gap: 16,
+    padding: 16,
+    scrollSnapType: 'x mandatory',
+  },
+  featuresLabel: { width: '80%' },
+});
+export function VehicleSections({
+  vehicle: v,
+  onReport,
+}: {
+  vehicle: Vehicle;
+  onReport: () => void;
+}) {
+  const [technical, setTechnical] = useState(false);
+  const [features, setFeatures] = useState(false);
+  const [description, setDescription] = useState(false);
+  const spec: [IconName, string, string][] = [
+    ['mileage', 'Mileage', number(v.mileage) + ' km'],
+    ...(v.mileage > 0
+      ? [['date', 'First Registration', v.registration] as [IconName, string, string]]
+      : []),
+    ['gauge', 'Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)'],
+    ...(v.attributes?.hideOwners
+      ? []
+      : [['user', 'Number of Owners', v.attributes?.owners || '1'] as [IconName, string, string]]),
+    ['fuel', 'Fuel', v.attributes?.fuelLabel || v.fuel],
+    ['transmission', 'Transmission', v.transmission],
+  ];
+  const data: [string, string][] = v.technicalData || [
+    ['Vehicle condition', v.mileage ? 'Used vehicle' : 'New vehicle'],
+    ['Category', v.body],
+    ...(v.attributes?.modelRange
+      ? [['Model range', v.attributes.modelRange] as [string, string]]
+      : []),
+    ...(v.attributes?.trimLine ? [['Trim line', v.attributes.trimLine] as [string, string]] : []),
+    ...(v.attributes?.origin ? [['Origin', v.attributes.origin] as [string, string]] : []),
+    ['Mileage', number(v.mileage) + ' km'],
+    ['Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)'],
+    ['Fuel', v.fuel],
+    ['Transmission', v.transmission],
+    ['First Registration', v.registration],
+    ['Colour', v.color],
+    ['Number of seats', String(v.seats)],
+    ['Number of doors', String(v.doors)],
+    ...Object.entries(v.attributes || {}).filter(
+      ([key]) => !['modelRange', 'trimLine', 'origin', 'owners', 'description'].includes(key),
+    ),
+  ];
+  return (
+    <div {...stylex.props(s.body)}>
+      <section {...stylex.props(s.card, s.pad)}>
+        <div {...stylex.props(s.specs)}>
+          {spec.map(([icon, label, value]) => (
+            <div key={label} {...stylex.props(s.spec)}>
+              <span {...stylex.props(ui.orange)}>
+                <Icon name={icon} size={28} />
+              </span>
+              <div>
+                <p {...stylex.props(s.label)}>{label}</p>
+                <p {...stylex.props(s.value)}>{value}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <AssistantPanel detail />
+        <button
+          type="button"
+          onClick={() =>
+            document
+              .getElementById('about-dealer-' + v.id)
+              ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
+          {...stylex.props(s.seller)}
+        >
+          <DealerLogo id={v.id} size={40} />
+          <div>
+            <p>{v.dealer}</p>
+            <p {...stylex.props(s.stars)}>
+              <RatingStars rating={v.rating} />{' '}
+              <span {...stylex.props(s.label)}>({v.reviews})</span>
+            </p>
+            <span {...stylex.props(ui.orange)}>About this dealer</span>
+          </div>
+        </button>
+        {v.specialFeatures && (
+          <div {...stylex.props(ui.space)}>
+            <strong>Special features according to dealer</strong>
+            <div {...stylex.props(s.tags)}>
+              {v.specialFeatures.map((feature) => (
+                <span key={feature} {...stylex.props(ui.badge)}>
+                  {feature}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+      </section>
+      <section {...stylex.props(s.card)}>
+        <div {...stylex.props(s.pad)}>
+          <h2 {...stylex.props(s.title)}>Technical data</h2>
+          <table {...stylex.props(s.table)}>
+            <tbody>
+              {data.slice(0, 6).map(([label, value]) => (
+                <tr key={label} {...stylex.props(s.row)}>
+                  <th scope="row" {...stylex.props(s.cell, s.key)}>
+                    {label}
+                  </th>
+                  <td {...stylex.props(s.cell)}>{value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <button
+          type="button"
+          aria-expanded={technical}
+          aria-label="Show more technical data"
+          aria-haspopup="dialog"
+          onClick={() => setTechnical(true)}
+          {...stylex.props(s.more)}
+        >
+          Show more
+        </button>
+      </section>
+      <section {...stylex.props(s.card)}>
+        <div {...stylex.props(s.pad)}>
+          <h2 {...stylex.props(s.title)}>Features</h2>
+          <table {...stylex.props(s.table)}>
+            <tbody>
+              {v.features.slice(0, 6).map((feature) => (
+                <tr key={feature} {...stylex.props(s.row)}>
+                  <th scope="row" {...stylex.props(s.cell, s.key, s.featuresLabel)}>
+                    {feature}
+                  </th>
+                  <td {...stylex.props(s.cell, s.check)}>
+                    <Icon name="check" size={18} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {v.features.length > 6 && (
+          <button
+            type="button"
+            aria-expanded={features}
+            aria-label="Show more features"
+            aria-haspopup="dialog"
+            onClick={() => setFeatures(true)}
+            {...stylex.props(s.more)}
+          >
+            Show more
+          </button>
+        )}
+      </section>
+      <section {...stylex.props(s.card)}>
+        <div {...stylex.props(s.pad)}>
+          <h2 {...stylex.props(s.title)}>Vehicle Description</h2>
+          <p {...stylex.props(s.description)}>
+            {v.attributes?.description
+              ? description
+                ? v.attributes.description
+                : v.attributes.description.slice(0, 600)
+              : v.make + ' ' + v.model + '\n' + v.variant}
+          </p>
+          {description && (
+            <p {...stylex.props(ui.small, ui.muted, ui.space)}>
+              Captured vehicle example. Supplementary specifications are local fixtures, not a
+              verified current sales offer.
+            </p>
+          )}
+        </div>
+        <button
+          type="button"
+          aria-expanded={description}
+          aria-label={
+            description ? 'Show less vehicle description' : 'Show more vehicle description'
+          }
+          onClick={() => setDescription(!description)}
+          {...stylex.props(s.more)}
+        >
+          {description ? 'Show less' : 'Show more'}
+        </button>
+      </section>
+      <NativeDealerCards vehicle={v} />
+      <section {...stylex.props(s.card)}>
+        <h2 {...stylex.props(s.title, s.pad)}>Similar vehicles</h2>
+        <div {...stylex.props(s.carousel)}>
+          {vehicles
+            .filter((other) => other.id !== v.id)
+            .map((other) => (
+              <VehicleCard key={other.id} vehicle={other} home />
+            ))}
+        </div>
+      </section>
+      <Button variant="ghost" onClick={onReport}>
+        Report this listing
+      </Button>
+      <p {...stylex.props(ui.small, ui.muted, ui.center)}>
+        Local reference · No live seller connection
+      </p>
+      <Modal table open={technical} onClose={() => setTechnical(false)}>
+        <h2 {...stylex.props(s.modalTitle)}>Technical data</h2>
+        <div {...stylex.props(s.modalScroll)}>
+          <table {...stylex.props(s.table)}>
+            <tbody>
+              {data.map(([label, value]) => (
+                <Fragment key={label}>
+                  <tr {...stylex.props(s.row)}>
+                    <th scope="row" {...stylex.props(s.cell, s.modalCell, s.modalKey)}>
+                      {label}
+                    </th>
+                    <td {...stylex.props(s.cell, s.modalCell)}>{value}</td>
+                  </tr>
+                  {v.technicalDiagrams?.[label] && (
+                    <tr>
+                      <td colSpan={2} {...stylex.props(s.diagramCell)}>
+                        <Image
+                          src={v.technicalDiagrams[label]}
+                          alt={label + ' — captured emissions classification'}
+                          width={928}
+                          height={555}
+                          {...stylex.props(s.diagram)}
+                        />
+                      </td>
+                    </tr>
+                  )}
+                </Fragment>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <button
+          type="button"
+          onClick={() => setTechnical(false)}
+          {...stylex.props(s.more, s.modalClose)}
+        >
+          Close
+        </button>
+      </Modal>
+      <Modal table open={features} onClose={() => setFeatures(false)}>
+        <h2 {...stylex.props(s.modalTitle)}>Features</h2>
+        <div {...stylex.props(s.modalScroll)}>
+          <table {...stylex.props(s.table)}>
+            <tbody>
+              {v.features.map((feature) => (
+                <tr key={feature} {...stylex.props(s.row)}>
+                  <th
+                    scope="row"
+                    {...stylex.props(s.cell, s.modalCell, s.modalKey, s.featuresLabel)}
+                  >
+                    {feature}
+                  </th>
+                  <td {...stylex.props(s.cell, s.modalCell, s.check)}>
+                    <Icon name="check" size={18} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <button
+          type="button"
+          onClick={() => setFeatures(false)}
+          {...stylex.props(s.more, s.modalClose)}
+        >
+          Close
+        </button>
+      </Modal>
+    </div>
+  );
+}

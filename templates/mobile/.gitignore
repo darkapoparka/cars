@@ -1,0 +1,24 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.log
+*.tsbuildinfo
+reference/android/*.apk
+reference/browser-profile/
+reference/android/
+
+.qa/
+
+reference/android/fonts/
+
+.next-overlay*/
+.next-review/
+
+.vercel
+.env*.local
+
+# Raw local audit captures; reviewed reports are retained in docs/audits.
+reference/web/live-final-20260928/
+reference/web/parity-followup-20260928/
+reference/web/pass3-visual/reference-review/

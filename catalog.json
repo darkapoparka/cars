@@ -6,6 +6,26 @@
   "defaultTemplate": "auto-best",
   "templates": [
     {
+      "key": "mobile",
+      "name": "Mobile",
+      "aliases": ["mobile-de", "mobile.de", "6474"],
+      "path": "templates/mobile",
+      "version": "2026.10.01-reference-import",
+      "family": "mobile-de",
+      "stack": "next",
+      "sourcePort": 6424,
+      "libraryPort": 6474,
+      "entry": "/",
+      "homes": [{"id": "main", "route": "/"}],
+      "priority": "polish-next",
+      "readiness": "reference-content-candidate",
+      "reskinEffort": "dealer-adaptation-needed",
+      "brandFiles": ["src/app/layout.tsx", "src/styles/tokens.stylex.ts", "src/components", "src/lib/catalog.ts", "src/lib/dealers.ts", "public"],
+      "note": "Independent source import from L:/inspiration/mobile-de-app at 89e4395cdc3954857a6194612b3ae302ad7164d0. Preserves the mobile.de Android reference composition and local demo behavior. Branding, seller facts and inventory need personalization before dealer use. See templates/mobile/TEMPLATE.md.",
+      "versionRole": "Local candidate import; not an immutable approved dealer release.",
+      "sourceRepository": "darkapoparka/cars"
+    },
+    {
       "key": "auto-best",
       "name": "Auto Best",
       "aliases": [

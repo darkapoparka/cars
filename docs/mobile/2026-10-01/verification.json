@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "key": "mobile",
+  "scope": "local-reference-import",
+  "verifiedAt": "2026-10-01T08:59:27.626Z",
+  "canonicalSource": "L:/CODEX/cars/templates/mobile",
+  "preview": "http://127.0.0.1:6474/",
+  "sourceDigest": "e6a1882804c708b81de167a2b4a01ca8ed967ba4d7d10aa2c48c9ef955c2ad72",
+  "exportPolicy": "cars-source-v1",
+  "additionalExclusions": [
+    "reference/android/**"
+  ],
+  "runtime": "Node 22.20.0",
+  "buildId": "-mPnr-dp8umdPVDeFDBzK",
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "domain": {
+      "passed": 57,
+      "failed": 0
+    },
+    "productionBuild": "passed",
+    "routes": 45,
+    "responsive": 48,
+    "interactionScenarios": {
+      "passed": 13,
+      "failed": 0
+    },
+    "pageErrors": 0,
+    "externalRequests": 0,
+    "workflowDocumentCheck": "passed",
+    "workflowTests": {
+      "passed": 243,
+      "failed": 1,
+      "unrelatedFailure": "scripts/refresh-client.test.mjs:175 — Auto Best/Navara inline address assertion"
+    }
+  },
+  "sourceImport": {
+    "repository": "darkapoparka/inspiration-mobile",
+    "commit": "89e4395cdc3954857a6194612b3ae302ad7164d0",
+    "donorPreserved": true
+  },
+  "release": {
+    "status": "library-candidate",
+    "dealerReleaseSelected": false
+  },
+  "native": {
+    "serial": "emulator-5554",
+    "initiallyOnline": true,
+    "mobileDeVersion": "10.26",
+    "autoScout24Version": "26.38.6",
+    "finalState": "exited; absent from ADB",
+    "restarted": false
+  },
+  "reports": {
+    "routes": "110af11a60e95f8db1106ed5c400125562d31ca24acb380b3727e9a99f040eaa",
+    "interactions": "78c552fa38ca0d9071092337977df9bd79cd77ba33fb9d869cfc859ba1e50274"
+  }
+}

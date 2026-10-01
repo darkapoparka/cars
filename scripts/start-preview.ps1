@@ -16,7 +16,8 @@ $carExisting=@(Get-NetTCPConnection -State Listen -LocalPort $Port -ErrorAction 
 if($carExisting.Count){throw "Port $Port is already used by PID $($carExisting[0].OwningProcess). No process was stopped."}
 if(-not $NodePath){
     $carPinned=Join-Path $env:LOCALAPPDATA 'nvm\v22.23.2\node.exe'
-    $NodePath=if($Template -in @('auto-best','modern') -and (Test-Path -LiteralPath $carPinned)){$carPinned}else{(Get-Command node).Source}
+    $carMobileNode='L:\Toolchains\Node\22.20.0\node.exe'
+    $NodePath=if($Template -eq 'mobile' -and (Test-Path -LiteralPath $carMobileNode)){$carMobileNode}elseif($Template -in @('auto-best','modern') -and (Test-Path -LiteralPath $carPinned)){$carPinned}else{(Get-Command node).Source}
 }
 $carLogs=Join-Path $carRoot 'runtime'
 New-Item -ItemType Directory -Path $carLogs -Force | Out-Null
@@ -29,6 +30,10 @@ $carOldPort=$env:PORT;$carOldHost=$env:HOST
 try {
     if($Template -eq 'autodeal') {
         $env:PORT=[string]$Port;$env:HOST='127.0.0.1';$carArgs=@('server.mjs')
+    } elseif($Template -eq 'mobile') {
+        if(-not(Test-Path -LiteralPath (Join-Path $carProject 'node_modules\next\dist\bin\next'))){throw 'Run npm ci in templates/mobile first; see its TEMPLATE.md.'}
+        if(-not(Test-Path -LiteralPath (Join-Path $carProject '.next-review\BUILD_ID'))){throw 'Run npm run build in templates/mobile before opening its production preview.'}
+        $carArgs=@('scripts/review-preview.mjs','start',[string]$Port)
     } elseif($Template -eq 'modern') {
         $carWorking=Join-Path $carProject 'apps\web'
         $carNext=Join-Path $carWorking 'node_modules\next\dist\bin\next'

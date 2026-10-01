@@ -1,0 +1,59 @@
+{
+  "name": "cars-template-mobile",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1 --port 6474",
+    "build": "node scripts/review-preview.mjs build",
+    "start": "node scripts/review-preview.mjs start",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
+    "test": "node scripts/prepare-domain-tests.mjs && node --test tests/domain.test.mjs",
+    "qa:browser": "node scripts/qa-final-release.mjs",
+    "format": "prettier --write src tests scripts/capture-web.mjs scripts/prepare-domain-tests.mjs",
+    "format:check": "prettier --check src tests scripts/capture-web.mjs scripts/prepare-domain-tests.mjs",
+    "qa:interactions": "node scripts/qa-interactions.mjs",
+    "qa:filters": "node scripts/qa-parity.mjs",
+    "qa:state": "node scripts/qa-state.mjs",
+    "qa:filters:all": "node scripts/prepare-domain-tests.mjs && node scripts/qa-filter-coverage.mjs",
+    "qa:visual": "node scripts/qa-visual.mjs",
+    "qa:enquiry": "node scripts/qa-enquiry.mjs",
+    "qa:contracts": "node scripts/qa-reference-contracts.mjs",
+    "qa:resources": "node scripts/prepare-domain-tests.mjs && node scripts/qa-native-resources.mjs",
+    "qa:icons": "node scripts/qa-icon-assets.mjs",
+    "qa:overlays": "node scripts/qa-overlays.mjs",
+    "qa:overlay-flows": "node scripts/qa-overlay-interactions.mjs",
+    "qa:filter-visual": "node scripts/compare-filter-surfaces.mjs",
+    "qa:make-model": "node scripts/qa-make-model.mjs",
+    "qa:make-catalog": "node scripts/prepare-domain-tests.mjs && node scripts/qa-make-catalog.mjs",
+    "qa:make-visual": "node scripts/qa-make-model-visual.mjs",
+    "qa:make-release": "node scripts/qa-make-model-release.mjs"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "0.19.1",
+    "lucide-react": "1.48.0",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@stylexjs/babel-plugin": "0.19.1",
+    "@stylexjs/eslint-plugin": "0.19.1",
+    "@stylexjs/postcss-plugin": "0.19.1",
+    "@types/node": "^22.20.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.3.6",
+    "playwright": "^1.58.2",
+    "postcss": "^8.5.6",
+    "prettier": "3.9.9",
+    "sharp": "0.35.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
