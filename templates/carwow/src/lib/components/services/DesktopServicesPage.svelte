@@ -348,14 +348,15 @@
 
 <style>
 	.services-shortcuts {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 8px;
 		margin: 14px 0;
 	}
 	.services-shortcuts a {
 		display: inline-flex;
 		align-items: center;
+		justify-content: center;
 		gap: 8px;
 		min-height: 40px;
 		padding: 8px 12px;

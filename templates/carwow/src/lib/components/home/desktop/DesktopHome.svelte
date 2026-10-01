@@ -22,11 +22,7 @@
 		<SiteChrome />
 		<main id="main-content" tabindex="-1">
 			<DesktopHomeHero vehicles={data.vehicles} variant="cutouts" />
-			<DesktopHomeInventoryPreview
-				vehicles={data.vehicles}
-				showHeaderCta={true}
-				showHeaderSubtitle={false}
-			/>
+			<DesktopHomeInventoryPreview vehicles={data.vehicles} showHeaderSubtitle={false} />
 			<DesktopHomeReviews showReviews={false} balancedActionCards />
 			<DesktopHomeVehicleCategories
 				title={i18n.t('copy.26557fae2714')}

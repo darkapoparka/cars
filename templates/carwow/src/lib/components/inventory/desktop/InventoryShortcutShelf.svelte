@@ -10,8 +10,7 @@
 		padding: 0;
 	}
 	:global(.inventory-refined .inventory-results-shortcuts .daynight-inventory-type-pills) {
-		display: flex !important;
-		flex-wrap: wrap !important;
+		display: grid !important;
 		gap: 8px !important;
 		padding: 0 !important;
 		margin: 0 !important;

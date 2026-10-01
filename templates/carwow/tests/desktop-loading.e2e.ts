@@ -97,10 +97,10 @@ test.afterEach(async ({ page }, testInfo) => {
 	});
 });
 
-test('home and inventory use matching centered frames and compact four or five column cards', async ({
-	page
-}, testInfo) => {
-	for (const width of [992, 1280, 1440, 1920]) {
+for (const width of [992, 1280, 1440, 1920]) {
+	test(`home and inventory use matching frames and compact cards at ${width}px`, async ({
+		page
+	}, testInfo) => {
 		await page.setViewportSize({ width, height: 1000 });
 		await page.goto('/en');
 		await expect(page.locator('.daynight-home-shell')).toBeVisible();
@@ -114,8 +114,10 @@ test('home and inventory use matching centered frames and compact four or five c
 			)
 			.toBe(expectedColumns);
 		await expect(homeGrid.locator('[data-daynight-vehicle-card]:visible')).toHaveCount(
-			expectedColumns * 2
+			expectedColumns * 2 - 1
 		);
+		await expect(homeGrid.locator('[data-daynight-inventory-browse]')).toBeVisible();
+		await expect(homeGrid.locator(':scope > :visible')).toHaveCount(expectedColumns * 2);
 		const homeFrame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
 		await expectAlignedCardDetails(page);
 		await expect(homeGrid.locator('.desktop-vehicle-details__metadata').first()).toHaveCSS(
@@ -171,8 +173,8 @@ test('home and inventory use matching centered frames and compact four or five c
 				);
 			})
 			.toBe(true);
-	}
-});
+	});
+}
 
 test('desktop cards keep single-line titles and specification badges before pricing in both languages', async ({
 	page
@@ -439,6 +441,25 @@ test.describe('desktop without JavaScript', () => {
 
 test('desktop videos request the player only after activation', async ({ page }, testInfo) => {
 	await page.goto('/en');
+	await page.evaluate(() => document.fonts.ready);
+	await expect
+		.poll(() =>
+			page.locator('.home-videos__title').evaluate((title) => {
+				const brand = title.querySelector('.home-videos__brand')!,
+					image = brand.querySelector('img')!;
+				const fontSize = parseFloat(getComputedStyle(title).fontSize),
+					brandBox = brand.getBoundingClientRect(),
+					imageBox = image.getBoundingClientRect();
+				return (
+					getComputedStyle(brand).fontSize === getComputedStyle(title).fontSize &&
+					getComputedStyle(image).fontSize === getComputedStyle(title).fontSize &&
+					Math.abs(brandBox.width / fontSize - 4.75) < 0.01 &&
+					Math.abs(brandBox.height / fontSize - 1.1) < 0.01 &&
+					Math.abs(imageBox.width / imageBox.height - 1705 / 573) < 0.01
+				);
+			})
+		)
+		.toBe(true);
 	await page.locator('.home-video__play').first().click({ trial: true });
 	await expect(page.locator('.home-videos iframe')).toHaveCount(0);
 	await expect(page.locator('.home-videos h3')).toHaveCount(0);

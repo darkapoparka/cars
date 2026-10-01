@@ -52,4 +52,54 @@
 	body .desktop-primary-action :is(span, svg, svg *) {
 		color: inherit !important;
 	}
+
+	/* The shared header dialog keeps its original phone field below 992px. */
+	#searchForm form[role='search'] > div {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 44px;
+		align-items: center;
+		gap: 4px;
+		height: 54px;
+		padding: 4px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 8px;
+		background: #fff;
+	}
+	#searchForm form[role='search'] > div:focus-within {
+		outline: 2px solid var(--desktop-focus);
+		outline-offset: -1px;
+	}
+	#searchForm #searchModalInput {
+		/* Header utility adapters are important; keep this override within the desktop dialog. */
+		min-width: 0 !important;
+		width: 100% !important;
+		height: 44px !important;
+		margin: 0 !important;
+		padding: 0 12px !important;
+		border: 0 !important;
+		border-radius: 0 !important;
+		background: transparent !important;
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font) !important;
+		box-shadow: none !important;
+		outline: 0 !important;
+	}
+	#searchForm form[role='search'] button {
+		position: static !important;
+		display: grid !important;
+		place-items: center !important;
+		width: 44px !important;
+		height: 44px !important;
+		padding: 0 !important;
+		border: 0 !important;
+		border-radius: 6px !important;
+		background: var(--desktop-action) !important;
+		color: var(--desktop-action-text) !important;
+	}
+	#searchForm form[role='search'] button:hover {
+		background: var(--desktop-action-hover) !important;
+	}
+	#searchForm form[role='search'] button svg {
+		width: 20px !important;
+		height: 20px !important;
+	}
 }

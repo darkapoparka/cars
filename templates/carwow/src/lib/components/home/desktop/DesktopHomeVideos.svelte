@@ -28,12 +28,14 @@
 			{#snippet titleContent()}
 				<span class="home-videos__title"
 					>{sectionTitle.replace(/\s+YouTube$/, '')}
-					<img
-						src={i18n.asset('/assets/brands/youtube-logo.png')}
-						alt={i18n.t('copy.fb7accfff8c6')}
-						width="196"
-						height="65"
-					/></span
+					<span class="home-videos__brand">
+						<img
+							src={i18n.asset('/assets/brands/youtube-logo.png')}
+							alt={i18n.t('copy.fb7accfff8c6')}
+							width="1705"
+							height="573"
+						/>
+					</span></span
 				>
 			{/snippet}
 		</DesktopSectionHeading>
@@ -113,10 +115,24 @@
 		color: inherit;
 	}
 	.home-videos__title img {
+		font: inherit;
 		display: block;
-		width: 196px;
-		height: 65px;
-		object-fit: contain;
+		position: absolute;
+		width: 6.15em;
+		height: 2.07em;
+		max-width: none;
+		left: -0.7em;
+		top: -0.48em;
+	}
+	/* The retained logo has wide canvas padding; crop that padding only on desktop. */
+	.home-videos__brand {
+		font: inherit;
+		position: relative;
+		display: inline-block;
+		flex: none;
+		width: 4.75em;
+		height: 1.1em;
+		overflow: hidden;
 	}
 	.home-videos__grid {
 		display: grid;

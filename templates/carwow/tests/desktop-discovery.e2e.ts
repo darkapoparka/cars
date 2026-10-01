@@ -23,11 +23,11 @@ test('desktop type and make grids open all inventory from the final tile', async
 	}
 });
 
-test('quick inventory filters wrap within their row and toggle without losing focus', async ({
-	page
-}, testInfo) => {
-	for (const locale of ['en', 'bg']) {
-		for (const width of [992, 1280, 1440, 1920]) {
+for (const locale of ['en', 'bg']) {
+	for (const width of [992, 1280, 1440, 1920]) {
+		test(`quick inventory filters fill their rows and preserve focus in ${locale} at ${width}px`, async ({
+			page
+		}, testInfo) => {
 			await page.setViewportSize({ width, height: 1000 });
 			await page.goto(`/${locale}/inventory`);
 			await expect(page.locator('.inventory-filter-triggers button').first()).toBeVisible();
@@ -75,6 +75,27 @@ test('quick inventory filters wrap within their row and toggle without losing fo
 					})
 				)
 				.toEqual({ separated: true, aligned: true, contained: true });
+			await expect
+				.poll(() =>
+					chips.evaluateAll((elements) => {
+						const shelf = elements[0]
+							.closest('.inventory-results-shortcuts')!
+							.getBoundingClientRect();
+						const rows = new Map<number, DOMRect[]>();
+						for (const element of elements) {
+							const box = element.getBoundingClientRect();
+							const key = Math.round(box.top);
+							rows.set(key, [...(rows.get(key) ?? []), box]);
+						}
+						return [...rows.values()].every(
+							(row) =>
+								row.length > 1 &&
+								Math.abs(row[0].left - shelf.left) < 1 &&
+								Math.abs(row.at(-1)!.right - shelf.right) < 1
+						);
+					})
+				)
+				.toBe(true);
 			const bmw = chips.filter({ hasText: /^BMW$/ });
 			await bmw.focus();
 			await bmw.press('Enter');
@@ -87,9 +108,9 @@ test('quick inventory filters wrap within their row and toggle without losing fo
 			await expect(page).not.toHaveURL(/brand=BMW/);
 			await expect(chips.first()).toHaveAttribute('aria-current', 'true');
 			await page.screenshot({ path: testInfo.outputPath(`quick-filters-${locale}-${width}.png`) });
-		}
+		});
 	}
-});
+}
 
 test('inventory search entry points open the full filter dialog and restore focus', async ({
 	page

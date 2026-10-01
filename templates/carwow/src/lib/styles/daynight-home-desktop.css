@@ -174,8 +174,8 @@
 	}
 	/* Inventory preview uses the same readable density as the catalogue. */
 	.daynight-home-shell .daynight-home-inventory__pills {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(9, minmax(max-content, 1fr));
 		gap: 8px;
 		margin: 0 0 20px;
 	}
@@ -342,7 +342,7 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 16px;
 	}
-	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 9) {
+	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 8) {
 		display: none;
 	}
 	.daynight-home-shell .daynight-home-hero__car--left {
@@ -356,7 +356,7 @@
 	.daynight-home-shell .daynight-home-inventory__grid {
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
-	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 9) {
+	.daynight-home-shell .daynight-home-inventory__card:nth-child(n + 8) {
 		display: none;
 	}
 }
