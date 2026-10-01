@@ -6,7 +6,6 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import SectionBannerArtwork from './SectionBannerArtwork.svelte';
   import { brands, desktopBrands } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
@@ -25,8 +24,7 @@
 <section class="dn-brand-section dn-home-content-section" aria-labelledby="brand-title">
   <div class="container dn-brand-shell">
     <div class="dn-brand-hero">
-      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--artwork dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
-        <SectionBannerArtwork section="brands" />
+      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--light dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
         <h2 id="brand-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_9eb6d7e50e27")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5216bd5728f8")}</span>
@@ -98,9 +96,9 @@
   @media (min-width: 992px) {
     .dn-brand-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .dn-brand-hero { padding: 0; }
-    .dn-brand-card { border: 1px solid var(--dn-line); background: var(--dn-surface-raised); box-shadow: none; }
+    .dn-brand-card { border: 0; background: var(--dn-surface-subtle); box-shadow: none; }
     .dn-brand-card:hover,
-    .dn-brand-card:focus-visible { border-color: var(--dn-line-emphasis); background: var(--dn-surface-raised); box-shadow: none; }
+    .dn-brand-card:focus-visible { background: var(--dn-surface-raised); box-shadow: var(--dn-card-hover-shadow); }
     .dn-brand-card__image { height: 72px; }
     .dn-brand-card__frame { width: var(--logo-desktop-width); }
     .dn-brand-card strong { font-size: var(--dn-text-lead); line-height: var(--dn-leading-body); }

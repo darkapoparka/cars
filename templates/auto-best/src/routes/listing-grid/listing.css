@@ -25,15 +25,16 @@
 
 @media (min-width: 992px) {
   .dn-app-shell .dn-listing-stage .dn-listing-hero.dn-route-hero--studio {
-    background: var(--dn-theme-hero-surface-deep);
+    --dn-studio-background: var(--dn-surface-canvas);
+    background: var(--dn-studio-background);
   }
 }
 
 @media (min-width: 992px) {
   .dn-listing-stage[data-layout='hero-discovery'] {
-    --dn-studio-background: var(--dn-theme-hero-surface-deep);
-    --dn-studio-heading: #fff;
-    --dn-studio-description: var(--dn-white);
+    --dn-studio-background: var(--dn-surface-canvas);
+    --dn-studio-heading: var(--dn-ink);
+    --dn-studio-description: var(--dn-muted);
     min-height: var(--dn-route-hero-height);
     padding-bottom: 0;
     background: var(--dn-studio-background);

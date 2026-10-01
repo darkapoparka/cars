@@ -26,10 +26,9 @@
     normalizeListingMakeTransition
   } from '$data/listing-draft';
 
-  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, typeInFacets = false, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
+  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
     showFilterAction?: boolean;
     enableSticky?: boolean;
-    typeInFacets?: boolean;
     keywordPlaceholder?: string;
     filters: ListingFilters;
     openFilters: (event: MouseEvent, field?: string) => void;
@@ -80,13 +79,8 @@
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-{#snippet typeField()}
-  <label class="dn-discovery__type"><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
-{/snippet}
-
-<form id="dn-desktop-discovery" class="dn-discovery" class:dn-discovery--type-in-facets={typeInFacets} {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
+<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
-    {#if !typeInFacets}{@render typeField()}{/if}
     <div class="dn-discovery__search">
       <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
@@ -102,7 +96,7 @@
     </div>
   </div>
   <div class="dn-discovery__facets">
-    {#if typeInFacets}{@render typeField()}{/if}
+    <label><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
     <label><span>{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
     <label><span>{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
     <label><span>{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
@@ -131,9 +125,6 @@
     display: grid;
     gap: var(--dn-discovery-gap);
   }
-  .dn-discovery__type { display: grid; flex: 0 0 190px; min-width: 0; height: var(--dn-discovery-search-height); padding: var(--dn-space-1) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface); }
-  .dn-discovery__type > span { color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-meta); }
-  .dn-discovery__type select { min-width: 0; width: 100%; height: 30px; padding: 0 24px 0 0; border: 0; background-color: transparent; color: var(--dn-ink); font: var(--dn-body-font); }
   .dn-discovery__toolbar { display: flex; align-items: center; gap: 14px; min-width: 0; }
   .dn-discovery__search { display: flex; flex: 1; align-items: center; gap: 8px; min-width: 0; height: var(--dn-discovery-search-height, 60px); padding: 5px; border: 1px solid #dfe2e6; border-radius: var(--dn-pill); background: #f5f6f7; }
   .dn-discovery__keyword { display: flex; flex: 1; align-items: center; gap: 12px; min-width: 0; height: 48px; padding: 0 12px; border: 0; border-radius: var(--dn-pill); background: transparent; color: #68717d; text-align: left; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-regular); line-height: var(--dn-leading-control); cursor: pointer; }
@@ -141,10 +132,13 @@
   .dn-discovery__keyword:hover { color: var(--dn-ink); background: #eceef1; }
   .dn-discovery__submit { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-red); color: white; cursor: pointer; }
   .dn-discovery__submit:hover { background: var(--dn-red-hover); }
-  .dn-discovery__facets { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); align-items: end; gap: var(--dn-discovery-gap, 14px); }
-  .dn-discovery__facets label { display: grid; min-width: 0; }
-  .dn-discovery__facets label > span { margin: 0 0 6px 2px; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); }
-  .dn-discovery__facets select { width: 100%; min-width: 0; height: 52px; padding: 0 36px 0 14px; border: 1px solid #dfe2e6; border-radius: var(--dn-radius-control); background-color: #f5f6f7; color: var(--dn-ink); font: var(--dn-body-font); font-size: var(--dn-text-control-prominent); font-weight: var(--dn-weight-ui); }
+  .dn-discovery__facets { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
+  .dn-discovery__facets label { position: relative; display: grid; min-width: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
+  .dn-discovery__facets label > span { position: absolute; top: var(--dn-space-2); left: var(--dn-space-3); right: var(--dn-space-3); overflow: hidden; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); white-space: nowrap; text-overflow: ellipsis; pointer-events: none; }
+  .dn-discovery__facets select { width: 100%; min-width: 0; height: 64px; padding: 20px 24px 0 var(--dn-space-3); border: 0; border-radius: inherit; background-color: transparent; color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
+  .dn-discovery__facets label:hover { background: var(--dn-surface-hover); }
+  .dn-discovery__facets label:focus-within { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+  .dn-discovery__facets select:focus-visible { outline: 0; }
   .dn-discovery__filters { position: relative; display: flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 16px; border: 1px solid #202329; border-radius: var(--dn-pill); background: #202329; color: #fff; font: var(--dn-control-font); cursor: pointer; }
   .dn-discovery__filters:hover { background: #3a3e46; }
   .dn-discovery__count { position: absolute; top: -6px; right: -6px; display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border: 2px solid white; border-radius: var(--dn-pill); background: var(--dn-red); color: white; font-size: var(--dn-text-meta); }
@@ -160,30 +154,13 @@
   .dn-discovery-sticky__submit { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; padding: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-red); color: #fff; cursor: pointer; }
   .dn-discovery-sticky__submit:hover { background: var(--dn-red-hover); }
   @media (max-width: 991px) { .dn-discovery-sticky:popover-open { display: none; } }
-  @media (min-width: 768px) and (max-width: 991px) { .dn-discovery__facets { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (min-width: 992px) and (max-width: 1199px) { .dn-discovery__facets { gap: 10px; } .dn-discovery__facets select { font-size: var(--dn-text-control-prominent); padding-left: 10px; } }
-  @media (min-width: 1440px) and (max-width: 1599px) { .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); } }
+  @media (min-width: 768px) and (max-width: 991px) { .dn-discovery__facets { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
   @media (max-width: 767px) { .dn-discovery { display: none; } }
   @media (min-width: 768px) {
-    .dn-discovery--type-in-facets .dn-discovery__type {
-      height: auto;
-      padding: 0;
-      border: 0;
-      background: transparent;
-    }
-    .dn-discovery--type-in-facets .dn-discovery__facets { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .dn-discovery--type-in-facets .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
+    .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
-    .dn-discovery .dn-discovery__facets { gap: var(--dn-space-3); }
-    .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); cursor: pointer; transition: none; }
-    .dn-discovery .dn-discovery__facets select:hover { background-color: #eceef1; border-color: var(--dn-line-emphasis); }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
-    .dn-discovery--type-in-facets .dn-discovery__facets {
-      grid-template-columns: repeat(7, minmax(0, 1fr));
-      gap: var(--dn-space-2);
-    }
-    .dn-discovery--type-in-facets .dn-discovery__facets select { padding-inline: var(--dn-space-3) 24px; }
   }
 </style>

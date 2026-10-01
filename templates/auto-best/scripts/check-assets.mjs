@@ -13,6 +13,8 @@ const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
 for (const asset of homeScenePrototypes) retainedSourceAssets.add(asset);
+// Rejected desktop section images remain available as source history, without runtime requests.
+for (const name of ['inventory', 'body', 'brands', 'guides']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-v1.webp`);
 for (const name of ['sell', 'import', 'finance']) retainedSourceAssets.add(`/assets/images/template/home-action-${name}-v2.webp`);
 // Previous identity and the untouched generated source remain available for provenance.
 retainedSourceAssets.add('/assets/images/template/auto-best-logo.svg');

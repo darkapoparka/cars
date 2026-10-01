@@ -111,15 +111,12 @@
   }
 
   .dn-listing-sort__value {
-    position: absolute;
+    position: relative;
     z-index: 2;
-    right: 36px;
-    left: 42px;
+    padding: 0 32px 0 38px;
     overflow: hidden;
     color: #202329;
-    font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-medium);
-    line-height: var(--dn-leading-meta);
+    font: var(--dn-control-font);
     text-overflow: ellipsis;
     white-space: nowrap;
     pointer-events: none;
@@ -128,11 +125,11 @@
   .dn-listing-sort {
     position: relative;
     display: inline-flex;
-    width: 208px;
-    min-width: 208px;
+    width: max-content;
+    min-width: 0;
     height: 44px;
     min-height: 44px;
-    flex: 0 0 208px;
+    flex: 0 0 auto;
     align-items: center;
     padding: 0;
     border: 0;
@@ -176,7 +173,8 @@
   }
 
   .dn-listing-sort select {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 1;
     width: 100%;
     height: 44px;
@@ -207,6 +205,10 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
     align-items: stretch;
+  }
+
+  @media (min-width: 1360px) {
+    .dn-listing-results__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
   }
 
   .dn-listing-empty {

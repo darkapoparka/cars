@@ -7,7 +7,7 @@
   let { count }: { count: number } = $props();
 </script>
 
-<section class="dn-listing-hero dn-route-hero dn-route-hero--studio dn-discovery-hero" aria-labelledby="listing-title">
+<section class="dn-listing-hero dn-route-hero dn-route-hero--studio dn-route-hero--light dn-discovery-hero" aria-labelledby="listing-title">
   <HeroVehicles pair="inventory" />
   <div class="dn-listing-hero__media" aria-hidden="true"></div>
   <div class="dn-listing-hero__overlay" aria-hidden="true"></div>

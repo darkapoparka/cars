@@ -4,7 +4,7 @@
   const i18n = getI18n();
 
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
-  import Icon from '$components/ui/Icon.svelte';
+  import HeroLocation from '$components/ui/HeroLocation.svelte';
   import { mobileHeroRegions } from '$data/vehicle-artwork';
   import { imageSrcset, mobileHeroSizes } from '$data/responsive-images';
 </script>
@@ -21,7 +21,7 @@
         <span class="dn-hero__title-desktop">{i18n.t("m_bb7c0e3ca487")}</span>
         <span class="dn-hero__title-mobile">{i18n.t("m_f92c64344e85")}</span>
       </h1>
-      <p class="dn-hero__location"><Icon name="map-pin" size={16} /><span>{i18n.dealer('city')}, {i18n.dealer('addressLine')}</span></p>
+      <HeroLocation />
     </div>
   </div>
 </section>
@@ -31,27 +31,8 @@
     isolation: isolate;
   }
 
-  .dn-hero__location { display: none; }
-
   @media (min-width: 992px) {
     .dn-hero { background: var(--dn-surface-canvas); }
-    .dn-hero .dn-hero__copy .dn-hero__location {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--dn-space-2);
-      width: fit-content;
-      max-width: 100%;
-      min-height: 32px;
-      padding: var(--dn-space-1) var(--dn-space-4);
-      border-radius: var(--dn-pill);
-      background: var(--dn-surface-raised);
-      color: var(--dn-muted);
-      font-size: var(--dn-text-meta);
-      line-height: var(--dn-leading-meta);
-      text-wrap: balance;
-    }
-    .dn-hero__location :global(svg) { flex-shrink: 0; }
   }
 
   .dn-hero__title-mobile {

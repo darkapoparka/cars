@@ -93,12 +93,6 @@
     --dn-studio-description: var(--dn-white);
   }
 
-  .dn-route-hero--charcoal {
-    --dn-studio-background: var(--dn-theme-contact-surface);
-    --dn-studio-heading: #fff;
-    --dn-studio-description: #c9cbd0;
-  }
-
   .dn-app-shell .dn-route-hero.dn-route-hero--studio {
     align-items: flex-start;
     height: var(--dn-route-hero-height);
@@ -148,19 +142,10 @@
     margin-top: 0;
   }
 
-  .dn-app-shell .dn-contact-hero.dn-route-hero--studio {
+  .dn-app-shell .dn-contact-hero.dn-route-hero--studio:not(.dn-contact-hero--general) {
     --dn-studio-background: var(--dn-workflow-canvas);
     --dn-studio-heading: #fff;
     --dn-studio-description: #f5dadd;
-  }
-
-  .dn-app-shell .dn-contact-hero--general .dn-route-hero__artwork.dn-route-hero__artwork--colored {
-    mask-image: radial-gradient(ellipse at center, #000 72%, transparent 100%);
-  }
-
-  .dn-app-shell .dn-contact-hero--general .dn-route-hero__artwork.dn-route-hero__artwork--phone {
-    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent), linear-gradient(to bottom, transparent, #000 12%, #000 84%, transparent);
-    mask-composite: intersect;
   }
 
   .dn-contact-hero.dn-route-hero--studio .dn-contact-hero__action {
@@ -204,13 +189,13 @@
   }
 
   .dn-route-hero--neutral {
-    --dn-studio-background: var(--dn-surface-raised);
+    --dn-studio-background: var(--dn-surface-canvas);
     --dn-studio-heading: var(--dn-ink);
     --dn-studio-description: var(--dn-muted);
   }
 
   .dn-route-hero--light {
-    --dn-studio-background: var(--dn-surface-panel);
+    --dn-studio-background: var(--dn-surface-canvas);
     --dn-studio-heading: var(--dn-ink);
     --dn-studio-description: var(--dn-ink);
   }

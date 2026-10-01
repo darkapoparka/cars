@@ -11,7 +11,7 @@ const routes = ['', 'listing-grid', 'about-us', 'blog', 'contact'];
 
 try {
   for (const locale of ['bg', 'en']) {
-    for (const width of [390, 992, 1024, 1440, 1920]) {
+    for (const width of [320, 390, 992, 1024, 1440, 1920]) {
       const context = await returningContext(browser, { viewport: { width, height: 1000 }, reducedMotion: 'reduce' });
       await context.addCookies([{ name: 'cars_locale', value: locale, url: base, httpOnly: true, sameSite: 'Lax' }]);
       const page = await context.newPage();
@@ -44,7 +44,7 @@ try {
               const lead = copy.querySelector('p');
               const scene = hero.querySelector('.dn-desktop-hero-scene img');
               const rect = e => e?.getBoundingClientRect().toJSON();
-              const controls = document.querySelector('.dn-search__desktop-form, .dn-listing-desktop-discovery, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-actions');
+              const controls = document.querySelector('.dn-search__desktop-form, .dn-listing-desktop-discovery, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-desktop-showroom');
               return {
                 hero: rect(hero), copy: rect(copy), heading: rect(heading), lead: rect(lead), controls: rect(controls),
                 header: rect(document.querySelector('.dn-header-fixed')),
@@ -70,7 +70,7 @@ try {
             }
             if (route !== 'about-us') {
               assert.equal(geometry.scene, null, 'Cutout routes omit the full scene element');
-              assert.equal(geometry.cutouts.length, 2, 'The original cutout pair is rendered');
+              assert.equal(geometry.cutouts.length, route === 'contact' ? 0 : 2, 'Contact omits hidden decorative vehicles; discovery retains its cutout pair');
               assert(geometry.cutouts.every(image => width >= 1440 ? (!image.width || image.src.startsWith('http')) : image.src.startsWith('data:')), 'Visible wide cutouts load; narrow screens use placeholders');
               if (width >= 1440 && (route === '' || route === 'listing-grid')) {
                 assert(geometry.cutouts[0].right <= geometry.controls.x, 'Left car stays clear of search');
@@ -81,38 +81,47 @@ try {
               assert.equal(geometry.hero.height, 540, 'Shared desktop hero height');
               if (!hasScene) assert.equal(geometry.backgroundImage, 'none', 'Cutouts use solid neutral surfaces');
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
-              assert.equal(geometry.leadSize, '18px');
+              assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
               assert(geometry.copy.y >= geometry.header.bottom + 8, 'Hero text clears navigation');
               assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
-              assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
+              if (route !== 'contact') assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
               }
               if (route === 'about-us' || route === 'contact') {
-                const social = page.locator(route === 'about-us' ? '.dn-about-socials a' : '.dn-contact-actions__social a');
+                const social = page.locator('.dn-desktop-showroom__social a');
                 assert.equal(await social.count(), 0, 'The master has no borrowed dealer social accounts');
-                for (const link of await social.all()) {
-                  const box = await link.boundingBox();
-                  assert.equal(box.width, 56); assert.equal(box.height, 56);
-                  assert.equal((await link.locator('svg').boundingBox()).width, 28);
-                  assert.equal(await link.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)');
-                  assert(box.y + box.height <= geometry.hero.bottom, 'Social controls fit within hero');
-                }
               }
               const surface = { '': '.dn-inventory', 'listing-grid': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];
               if (surface) assert.equal(await page.locator(surface).evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop routes share a light-grey content canvas');
-              if (route === '' || route === 'blog') assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), route === '' ? 'rgb(244, 245, 247)' : 'rgb(255, 255, 255)', 'Home hero is soft grey; Blog hero remains white');
+              assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop heroes share the soft grey canvas; About adds its photographic scene');
               if (route === '') {
                 for (const section of await page.locator('.dn-home-content-section').all()) assert.equal(await section.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Home sections use one canvas');
                 for (const card of await page.locator('.dn-vehicle-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Vehicle cards remain white');
-                for (const card of await page.locator('.dn-body-type, .dn-brand-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Discovery tiles retain white surfaces with subtle depth');
+                for (const card of await page.locator('.dn-body-type, .dn-brand-card').filter({ visible: true }).all()) {
+                  assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(246, 247, 249)', 'Discovery tiles start on the subtle surface');
+                  await card.hover();
+                  assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Hover restores the white tile');
+                }
               }
-              if (route === 'contact') assert((await page.locator('.dn-contact-section--general').evaluate(e => getComputedStyle(e).backgroundImage)).includes('rgb(244, 245, 247)'), 'Contact uses the grey canvas below the hero');
+              if (route === 'about-us' || route === 'contact') {
+                const showroom = page.locator('.dn-desktop-showroom');
+                await showroom.locator('iframe').waitFor({ state: 'attached' });
+                assert(await showroom.isVisible(), 'Desktop uses one contact-and-map panel');
+                assert.equal(await showroom.locator('a[href^="tel:"]').count(), 1, 'Showroom has one primary phone action');
+                assert.equal(await showroom.locator('iframe').count(), 1, 'Map is mounted on desktop');
+                assert.match(await showroom.locator('iframe').getAttribute('src'), /maps\.google\.com\/maps\?q=42\.648551,23\.341905/, 'Map uses the configured showroom coordinates');
+                for (const link of await showroom.locator('a[target="_blank"]').all()) assert.match(await link.getAttribute('rel'), /noopener/, 'External links isolate their browsing context');
+              }
               if (route === 'about-us') {
                 assert.equal(await page.locator('.dn-about-showroom').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Map sits on the shared grey canvas');
-                for (const card of await page.locator('.dn-about-service-card, .dn-about-showroom__card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'About cards and map panel are white');
+                for (const panel of await page.locator('.dn-about-process__panel, .dn-desktop-showroom').all()) assert.equal(await panel.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'About services and map have white outer containers');
+                assert(!(await page.locator('.dn-about-hero__lead').isVisible()), 'The demo description is replaced by the location badge on desktop');
+                const services = await page.locator('.dn-about-process__panel').boundingBox();
+                const visit = await page.locator('.dn-desktop-showroom').boundingBox();
+                assert(Math.abs(visit.y - (services.y + services.height) - 64) <= 1, 'Showroom follows services with the shared 64px section gap');
                 assert.equal(await page.locator('.dn-desktop-hero-scene').evaluate(e => getComputedStyle(e).filter), 'grayscale(1)', 'Architecture uses the neutral palette');
               }
               // Verify actual glyph rendering, including Cyrillic, rather than only the CSS font stack.
@@ -125,11 +134,13 @@ try {
               assert(fonts.length && fonts.every(font => font.familyName.includes('Onest')), 'Headings render in bundled Onest');
               await cdp.detach();
             }
+            if (width < 992) assert.equal(await page.locator('.dn-desktop-showroom iframe').count(), 0, 'Mobile does not request the desktop map');
             if (width === 1440 || width === 390) {
               await page.screenshot({ path: `${output}/${locale}-${width}-${route || 'home'}.png`, fullPage: true });
             }
             if (route === 'blog' && width === 1440) {
               const category = page.locator('.dn-blog-categories a:not(.active)').first();
+              assert.equal(await category.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Inactive categories have visible white pill surfaces');
               const selected = await page.locator('.dn-blog-categories .active').evaluate(e => getComputedStyle(e).backgroundColor);
               await category.hover();
               assert.equal(await category.evaluate(e => getComputedStyle(e).backgroundColor), selected, 'Category hover preserves the red surface behind white text');

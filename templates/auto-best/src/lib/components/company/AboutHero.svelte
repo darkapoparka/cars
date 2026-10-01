@@ -8,6 +8,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
+  import HeroLocation from '$components/ui/HeroLocation.svelte';
 
   const socialProfiles = [
     { name: 'instagram', label: 'Instagram', href: brand.instagramUrl },
@@ -21,6 +22,7 @@
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
       <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
+      <HeroLocation />
       <p class="dn-about-hero__lead">{i18n.t("m_b9634bb91bba", { p0: i18n.dealer('city') })}</p>
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/listing-grid'))}>
@@ -51,7 +53,7 @@
   .dn-about-socials a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
   @media (min-width: 992px) {
     .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
-    .dn-about-socials { position: absolute; top: calc(var(--dn-route-hero-control-top) + 68px); left: 0; width: 100%; gap: 12px; }
-    .dn-about-socials > span { color: var(--dn-ink); }
+    .dn-about-socials { display: none; }
+    .dn-about-hero__lead { display: none; }
   }
 </style>

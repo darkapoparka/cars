@@ -24,7 +24,7 @@ try {
       if (route === '/') {
         assert.equal(await form.locator('.dn-discovery__filters, .dn-discovery__actions').count(), 0);
         const formHeight = Math.round((await form.boundingBox()).height);
-        assert(formHeight >= 148 && formHeight <= 154, `Home discovery panel must remain compact, got ${formHeight}px`);
+        assert(formHeight >= 128 && formHeight <= 154, `Home discovery panel must remain compact, got ${formHeight}px`);
       } else {
         assert.equal(await form.locator('.dn-discovery__filters').count(), 0);
         const resultFilter = page.locator('.dn-listing-results__filters');
@@ -46,7 +46,14 @@ try {
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
       }
       assert.equal(await form.locator('.dn-discovery__search .dn-discovery__filters').count(), 0);
-      assert.equal(await form.locator('.dn-discovery__facets > label').count(), 6);
+      assert.equal(await form.locator('.dn-discovery__toolbar select').count(), 0, 'Vehicle type shares the facet row on Home and inventory');
+      assert.equal(await form.locator('.dn-discovery__facets > label').count(), 7);
+      for (const label of await form.locator('.dn-discovery__facets > label').all()) {
+        const control = await label.boundingBox();
+        const caption = await label.locator('span').boundingBox();
+        assert(caption.x >= control.x && caption.y >= control.y && caption.y + caption.height <= control.y + control.height, 'Caption sits inside its native filter control');
+        assert((await label.locator('select').boundingBox()).height >= 44, 'Filter retains a full-height click target');
+      }
       const facetWidths = await form.locator('.dn-discovery__facets select').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
       assert.ok(Math.max(...facetWidths) - Math.min(...facetWidths) < 1);
       if (width === 1440 && route === '/listing-grid') await form.screenshot({ path: `${output}/cars-search-panel.png` });

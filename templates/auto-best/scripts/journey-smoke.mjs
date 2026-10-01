@@ -11,6 +11,7 @@ try {
   for (const width of [390, 1440]) {
     const page = await returningPage(browser, { viewport: { width, height: 900 } });
     page.setDefaultTimeout(8000);
+    page.setDefaultNavigationTimeout(30000);
     await suite.check(`list and article return ${width}`, async () => {
       await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
@@ -35,10 +36,13 @@ try {
       assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/listing-grid');
     });
     await suite.check(`vehicle context and finance ${width}`, async () => {
-      for (let id = 1; id <= 8; id++) {
+      await page.goto(`${base}/listing-grid`, { waitUntil: 'networkidle' });
+      const ids = await page.locator('.dn-listing-results .dn-vehicle-card__link').evaluateAll(links => [...new Set(links.map(link => Number(new URL(link.href).pathname.split('/').at(-1))))]);
+      assert(ids.length > 0 && ids.every(Number.isSafeInteger), 'Exercise every actual inventory record');
+      for (const id of ids) {
         await page.goto(`${base}/listing-detail-v1/${id}`, { waitUntil: 'networkidle' });
         const title = await page.locator('h1').innerText();
-        if (width < 768) await page.locator('.dn-detail-finance-trigger').click();
+        if (width < 768) await page.locator('.dn-detail-finance-trigger button').click();
         const finance = page.locator(width < 768 ? '.dn-detail-finance-dialog .dn-finance-calculator' : '.dn-detail-finance-inline .dn-finance-calculator');
         await finance.waitFor({ state: 'visible' });
         const amountBefore = await finance.locator('dd').first().innerText();
@@ -124,8 +128,9 @@ try {
           assert.equal(await scene.locator('.dn-hero-vehicles__shared-car img').count(), 1);
           if (width < 768) {
             const expectedDetails = `service-${service}-front-v3.webp`;
-            assert(support[0].includes(expectedDetails) && support[2].includes(expectedDetails));
-            assert(support[1].includes('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
+            const artwork = support.map(src => new URL(src).pathname.replace(/-\d+(?=\.webp$)/, ''));
+            assert(artwork[0].endsWith(expectedDetails) && artwork[2].endsWith(expectedDetails), 'Responsive crops retain the reviewed service artwork');
+            assert(artwork[1].endsWith('service-sell-front-v3.webp'), 'Both services reuse the reviewed central car');
             if (sharedServiceCar === null) sharedServiceCar = support[1];
             else assert.equal(support[1], sharedServiceCar, 'Sell and Import must use the exact same central-car source');
           } else {

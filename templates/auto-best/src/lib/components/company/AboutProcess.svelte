@@ -11,7 +11,7 @@
 </script>
 
 <section class="dn-about-process dn-section" id="process" aria-labelledby="about-process-title">
-  <div class="container">
+  <div class="container dn-about-process__panel">
     <div class="dn-about-section-heading">
       <h2 id="about-process-title">{brand.name}</h2>
       <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>

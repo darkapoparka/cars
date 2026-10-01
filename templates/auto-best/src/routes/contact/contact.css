@@ -658,68 +658,23 @@
   .dn-contact-call-number { white-space: normal; }
 }
 
-/* General Contact actions occupy the remaining shared hero height in normal flow. */
+/* General contact pairs the useful details and map in one desktop panel. */
 @media (min-width: 992px) {
   .dn-app-shell .dn-contact-hero--general.dn-route-hero {
     align-items: flex-start;
-    background: var(--dn-theme-contact-surface);
+    background: var(--dn-surface-canvas);
   }
-
-  .dn-app-shell .dn-contact-hero--general :is(.dn-hero-vehicles, .dn-contact-hero__action) {
-    display: none;
-  }
-
-  .dn-app-shell .dn-contact-section--general {
+  .dn-app-shell .dn-contact-hero--general .dn-contact-hero__action { display: none; }
+  .dn-contact-section--general {
     position: relative;
     z-index: 1;
-    margin-top: calc(var(--dn-route-hero-control-top) - var(--dn-route-hero-height));
-    padding: 0 0 72px;
-    background: linear-gradient(to bottom, transparent calc(var(--dn-route-hero-height) - var(--dn-route-hero-control-top)), var(--dn-surface-canvas) 0);
+    margin-top: -188px;
+    padding: 0 0 64px;
+    background: transparent;
     scroll-margin-top: 160px;
   }
-
-  .dn-app-shell .dn-contact-section--general > .container {
-    width: min(1408px, 100%);
-    padding-inline: 24px;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location--general {
-    margin: 56px auto 0;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__card {
-    overflow: hidden;
-    border-radius: 20px;
-    background: var(--dn-white);
-    box-shadow: var(--dn-card-hover-shadow);
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading {
-    max-width: none;
-    margin: 0;
-    padding: 28px 32px;
-    text-align: center;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading h2 {
-    font-size: var(--dn-text-section-compact);
-    line-height: var(--dn-leading-section);
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-contact-location__heading p { margin-top: 8px; }
-
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map,
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map__frame {
-    width: 100%;
-    min-height: 440px;
-    height: 440px;
-  }
-
-  .dn-app-shell .dn-contact-section--general .dn-showroom-map {
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  .dn-contact-section--general > .container { width: min(1344px, 100%); padding-inline: 24px; }
+  .dn-contact-location--general { display: none; }
 }
 
 /* Topic journeys share the studio banner and readable white panels. */

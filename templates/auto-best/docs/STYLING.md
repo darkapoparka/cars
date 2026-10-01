@@ -2,6 +2,22 @@
 
 Auto Best combines an image-led automotive layout, Onest typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
+## Desktop route composition
+
+Home, Inventory, Blog and general Contact use `--dn-surface-canvas` behind their
+heroes. About retains its neutral showroom photograph. All share the 540px hero
+geometry and centered type. White Blog category pills remain distinct from the
+canvas; the active and hovered category uses the brand accent.
+
+`HeroLocation.svelte` owns the white 14px location badge used below the Home and
+About titles. `DesktopShowroom.svelte` owns the shared About/Contact visit panel:
+address and appointment copy, one primary call action, directions, configured
+social profiles, and the Google map. Its coordinates come from `brand.ts`.
+The map mounts only at 992px and above; the external map link stays available
+without JavaScript or when the provider is unavailable. Mobile retains its
+existing contact composition. General Contact overlaps this panel into the hero
+instead of repeating call/address cards beneath an empty map placeholder.
+
 ## CSS structure
 
 [app.css](../src/app.css) imports three global sheets in this order:

@@ -10,6 +10,7 @@
   import AboutTeam from '$components/company/AboutTeam.svelte';
   import AboutPartners from '$components/company/AboutPartners.svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
+  import DesktopShowroom from '$components/company/DesktopShowroom.svelte';
   import { brand } from '$config/brand';
 </script>
 
@@ -23,9 +24,10 @@
 {#if template.sections.demoTeam}<AboutTeam />{/if}
 {#if template.sections.demoPartners}<AboutPartners />{/if}
 
-<section class="dn-about-showroom dn-section" aria-labelledby="about-showroom-title">
+<section class="dn-about-showroom dn-section" aria-label={i18n.t("m_931269cbffaa")}>
   <div class="container">
-    <div class="dn-about-showroom__card">
+    <DesktopShowroom id="about-showroom-desktop-title" />
+    <div class="dn-about-showroom__card dn-about-showroom__mobile">
       <div class="dn-about-showroom__heading">
         <h2 id="about-showroom-title">{i18n.t("m_931269cbffaa")}</h2>
         <p>{i18n.dealer('address')} · {i18n.dealer('appointment')}</p>
