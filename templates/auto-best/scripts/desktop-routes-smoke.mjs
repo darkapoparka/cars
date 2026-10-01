@@ -13,6 +13,8 @@ const routes = ['', 'listing-grid', 'about-us', 'blog', 'contact'];
 const check = (name, run) => !caseFilter || caseFilter.test(name) ? suite.check(name, run) : Promise.resolve();
 
 async function settleHeroFonts(page) {
+  // Vite registers imported font-face CSS after the initial HTML is available.
+  await page.waitForFunction(() => [...document.fonts].some(font => font.family.includes('Onest')));
   await page.evaluate(async () => {
     const heading = document.querySelector('.dn-route-hero h1');
     // Load the actual heading glyphs before sampling CDP font usage after route changes.
@@ -54,10 +56,10 @@ async function heroGeometry(page) {
 }
 
 function assertDesktopFrame(geometry, width) {
-  assert.equal(geometry.hero.height, 500, 'Desktop routes share one hero height');
-  assert.equal(geometry.heading.y - geometry.hero.y, 164, 'Titles keep the same top anchor regardless of subtitle length');
-  assert.equal(geometry.controls.y - geometry.hero.y, 304, 'Search panels and actions keep the same top anchor');
-  assert(geometry.copy.y >= geometry.header.bottom + 8, 'Hero text clears navigation');
+  assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
+  assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Titles keep the same top anchor regardless of subtitle length');
+  assert.equal(geometry.controls.y - geometry.hero.y, 340, 'Search panels and actions keep the same top anchor');
+  assert(geometry.copy.y >= geometry.header.bottom + 60, 'Hero titles have at least 60px of breathing room below navigation');
   assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
   assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
   if (width >= 1440) {

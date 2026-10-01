@@ -7,9 +7,10 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 Home, Inventory and Blog use `--dn-surface-canvas` behind their
 heroes. About retains its neutral showroom photograph; Contact uses its dark
 showroom photograph with white copy and call/directions actions. All desktop
-route heroes share a 500px frame: titles start at 164px and primary controls at
-304px. Subtitle length does not move either anchor. Home and Inventory use the
-same search-panel bounds, padding and radius; Blog uses that same center lane. Wide car
+route heroes share a 540px frame: titles start at 200px, leaving 60px below the
+desktop header, and primary controls start at 340px. Subtitle length does not move
+either anchor. Home and Inventory use the same search-panel bounds, padding and
+radius; Blog uses that same center lane. Wide car
 cutouts share their visible body scale and a baseline 50px above the hero bottom.
 About and Contact use the same full-scene frame and crop. The desktop logo has a
 fixed image box and flex alignment so decoding or route typography does not move

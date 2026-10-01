@@ -218,9 +218,9 @@
 
 @media (min-width: 992px) {
   :root {
-    --dn-route-hero-height: 500px;
-    --dn-route-hero-content-top: 164px;
-    --dn-route-hero-control-top: 304px;
+    --dn-route-hero-height: 540px;
+    --dn-route-hero-content-top: 200px;
+    --dn-route-hero-control-top: 340px;
     --dn-route-hero-overlay: rgba(10, 12, 16, 0.56);
   }
 
