@@ -18,7 +18,7 @@
   ] as const;
 </script>
 
-<section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--light dn-route-hero--compact" aria-labelledby="about-title">
+<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--light dn-route-hero--compact" aria-labelledby="about-title">
   <DesktopHeroScene scene="about" />
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
@@ -53,6 +53,10 @@
   .dn-about-socials a { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border: 1px solid #686c73; border-radius: 50%; color: #fff; }
   .dn-about-socials a:hover { background: #fff; border-color: #fff; color: #1d1f23; }
   .dn-about-socials a:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+  @media (max-width: 991px) {
+    .dn-about-hero__lead, .dn-about-hero > .dn-about-hero__content > .dn-about-button { display: none; }
+    .dn-about-socials--mobile { margin-top: var(--dn-space-5); }
+  }
   @media (min-width: 992px) {
     .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
     .dn-about-socials--mobile { display: none; }

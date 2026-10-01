@@ -20,6 +20,7 @@ export type HeaderPresentation = {
   listingHeader: boolean;
   homeOverlayHeader: boolean;
   contactOverlayHeader: boolean;
+  informationOverlayHeader: 'light' | 'dark' | null;
   mobileMenuSection: boolean;
   contactTopic: ContactTopicId | null;
   detailVehicle: Vehicle | null;
@@ -105,6 +106,7 @@ export function resolveShellPresentation(url: URL, status = 200): ShellPresentat
       listingHeader: route === 'listing',
       homeOverlayHeader: route === 'home',
       contactOverlayHeader: route === 'contact',
+      informationOverlayHeader: route === 'blog' ? 'light' : route === 'about' ? 'dark' : null,
       mobileMenuSection,
       contactTopic,
       detailVehicle,

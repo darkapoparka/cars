@@ -6,6 +6,7 @@
   import type { Vehicle } from '$data/inventory';
   import ContactVehicle from './ContactVehicle.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { brand } from '$config/brand';
   import { contactPreparation, type ContactTopic } from '$data/company';
   import SocialBrandIcon from './SocialBrandIcon.svelte';
@@ -26,7 +27,7 @@
 </script>
 
 <div class="dn-contact-intent" class:dn-contact-intent--general={topic.id === 'general'} class:dn-contact-intent--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-intent--tradein={topic.id === 'trade-in'} class:dn-contact-intent--import={topic.id === 'import'}>
-  <div class="dn-contact-intent__main">
+  <div class="dn-contact-intent__main" class:dn-information-card={topic.id === 'general'}>
     {#if topic.id === 'trade-in' || topic.id === 'import'}
       <h1 class="dn-contact-workflow-title">{topic.id === 'trade-in' ? i18n.t("m_cd386206fba4") : i18n.text(topic.title)}</h1>
       {#if topic.id === 'import'}<p class="dn-contact-workflow-hint">{i18n.t("m_4028a7f4ea80")}</p>{/if}
@@ -61,11 +62,21 @@
     {/if}
 
     {#if topic.id !== 'trade-in' && topic.id !== 'import'}
+    {#if topic.id === 'general'}
+    <div class="dn-contact-primary-actions">
+      <a class="dn-compact-control dn-entry-action dn-compact-primary" href={brand.phoneHref} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}>
+        <MobileActionIcon name="phone" size={18} /><span class="dn-contact-call-number">{brand.phone}</span>
+      </a>
+      <a class="dn-contact-primary-directions dn-compact-control dn-entry-action dn-compact-pill" href={directionsUrl} target="_blank" rel="noopener noreferrer">
+        <MobileActionIcon name="location" size={18} /><span>{i18n.t("m_c95356784006")}</span>
+      </a>
+    </div>
+    {:else}
     <a class="dn-contact-button dn-contact-button--call" href={i18n.href(brand.phoneHref)} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}>
       <span class="dn-contact-call-icon" aria-hidden="true"><Icon name="phone" size={20} /></span>
       <span class="dn-contact-call-label">{i18n.t("m_cbd2ed38b295")} </span><span class="dn-contact-call-number">{brand.phone}</span>
     </a>
-
+    {/if}
 
     {#if socialPlatforms.some(profile => profile.href)}
     <div class="dn-contact-social" role="group" aria-label={i18n.t("m_b16446d4331a")}>

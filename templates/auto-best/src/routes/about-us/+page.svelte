@@ -11,6 +11,9 @@
   import AboutPartners from '$components/company/AboutPartners.svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import DesktopShowroom from '$components/company/DesktopShowroom.svelte';
+  import EntryCard from '$components/ui/entry/EntryCard.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+  import { resolve } from '$app/paths';
   import { brand } from '$config/brand';
 </script>
 
@@ -20,6 +23,14 @@
 </svelte:head>
 
 <AboutHero />
+<div class="dn-about-intro dn-information-panel">
+  <EntryCard title={brand.name} titleId="about-intro-title">
+    <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
+    <a class="dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/listing-grid'))}>
+      <span>{i18n.t("m_f92c64344e85")}</span><MobileActionIcon name="arrow" size={18} />
+    </a>
+  </EntryCard>
+</div>
 <AboutProcess />
 {#if template.sections.demoTeam}<AboutTeam />{/if}
 {#if template.sections.demoPartners}<AboutPartners />{/if}

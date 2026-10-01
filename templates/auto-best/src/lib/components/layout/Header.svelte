@@ -40,6 +40,7 @@
   const listingHeader = $derived(presentation.listingHeader);
   const homeOverlayHeader = $derived(presentation.homeOverlayHeader);
   const contactOverlayHeader = $derived(presentation.contactOverlayHeader);
+  const informationOverlayHeader = $derived(presentation.informationOverlayHeader);
 
   const isInternalHref = (href: NavigationHref): href is InternalNavigationHref => href.startsWith('/');
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
@@ -203,6 +204,8 @@
   class:dn-header-fixed--mobile-surface={mobileSurfaceHeader}
   class:dn-header-fixed--home-overlay={homeOverlayHeader}
   class:dn-header-fixed--contact-overlay={contactOverlayHeader}
+  class:dn-header-fixed--information-overlay={Boolean(informationOverlayHeader)}
+  class:dn-header-fixed--information-light={informationOverlayHeader === 'light'}
   class:dn-header-fixed--listing={listingHeader}
 >
   <header
@@ -228,7 +231,7 @@
           <div class="dn-logo-box">
             <a class="dn-logo" href={i18n.href(resolve('/'))} aria-label={i18n.t("m_d007ba60d7c9", { p0: brand.name })}>
               <picture>
-                {#if mobileSurfaceHeader || contactOverlayHeader}
+                {#if mobileSurfaceHeader || contactOverlayHeader || informationOverlayHeader === 'dark'}
                   <source media="(max-width: 991px)" srcset={brand.logoOnDark} />
                 {/if}
                 <img src={brand.logo} alt={brand.name} width="220" height="58" fetchpriority="high" />
@@ -854,6 +857,15 @@
   @media (max-width: 359px) {
     .dn-header .dn-logo img { width: 148px; max-width: 148px; height: 40px; }
     .dn-mobile-controls { gap: 6px; }
+  }
+
+  @media (max-width: 991px) {
+    .dn-header-fixed--information-overlay { position: absolute; inset: 0 0 auto; background: transparent; }
+    .dn-header-fixed--information-overlay .dn-header,
+    .dn-header-fixed--information-overlay .dn-header__lower { background: transparent; border: 0; }
+    .dn-header-fixed--information-overlay .dn-header__inner { min-height: 66px; }
+    .dn-header-fixed--information-overlay .dn-header .dn-mobile-controls :is(.dn-mobile-control, .dn-mobile-toggle) { color: var(--dn-white); }
+    .dn-header-fixed--information-light .dn-header .dn-mobile-controls :is(.dn-mobile-control, .dn-mobile-toggle) { color: var(--dn-ink); }
   }
 
   @media (min-width: 992px) {

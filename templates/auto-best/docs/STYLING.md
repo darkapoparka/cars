@@ -19,8 +19,8 @@ About titles. `DesktopShowroom.svelte` owns the shared About/Contact visit panel
 address and appointment copy, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available
-without JavaScript or when the provider is unavailable. Mobile retains its
-existing contact composition. General Contact uses the compact visit panel below
+without JavaScript or when the provider is unavailable. Mobile uses its own
+intro and contact cards. General Contact uses the compact desktop visit panel below
 the complete hero, with a 32px gap. Its map area reserves both grid rows before
 hydration so the external map link stays at the bottom while the iframe mounts.
 
@@ -29,6 +29,17 @@ heroes and visit panels. Hero controls sit 24px below the primary actions; dark
 heroes use a white keyboard focus ring. Profiles come only from `brand.ts`.
 Empty profile URLs omit the corresponding icon instead of creating dead links.
 The existing mobile social layout remains separate.
+
+Below 992px, About and general Contact use an overlay header on their dark hero,
+with an inset white card overlapping the banner by 52px, as on Home. About uses
+`EntryCard.svelte` for its introduction and inventory action; Contact groups its
+phone and directions actions before address and visit details. Its actions stack
+when their container is narrower than 18rem, including enlarged text. Blog's
+header shares the yellow hero surface. `BlogHero.svelte` keeps one native GET
+search form, with Home's entry-field tokens and a 44px mobile submit control.
+Its horizontally scrolling categories reuse the 44px target and 40px painted pill proportions;
+the active mobile category uses ink. Desktop Blog controls retain their own
+composition and accent selection.
 
 Desktop inventory cards keep the existing five-column wide grid and 16px gutters.
 Model titles use one line with an ellipsis, while the heading tooltip, accessible

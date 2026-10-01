@@ -61,6 +61,11 @@ try {
             assert(geometry.overflow <= 1, 'Horizontal page overflow');
             assert.deepEqual(geometry.broken, [], 'Broken visible images');
             assert.deepEqual(errors, [], 'Browser runtime errors');
+            if (route === 'blog') {
+              assert.equal(await page.locator('.dn-blog-search__submit').isVisible(), width < 992, 'The touch search button is visible only on mobile');
+              assert.equal(await page.locator('.dn-blog-search__icon--mobile').isVisible(), width < 992, 'Mobile search uses its dedicated icon');
+              assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
+            }
             const hasScene = (route === 'about-us' || route === 'contact') && width >= 992;
             assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Only visible About/Contact scenes are requested; phones load none');
             if (hasScene) {

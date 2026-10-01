@@ -362,3 +362,32 @@
 }
 .dn-skip-link { position: fixed; top: 8px; left: 8px; z-index: 10000; padding: 12px 18px; border-radius: var(--dn-radius-control); background: #fff; color: #202329; transform: translateY(-200%); }
 .dn-skip-link:focus { transform: none; outline: 3px solid var(--dn-focus); }
+
+/* Mobile information pages reuse the inset card and overlapping edge from Home. */
+@media (max-width: 991px) {
+  .dn-app-shell .dn-information-hero.dn-route-hero { height: auto; min-height: 0; }
+  .dn-information-hero.dn-route-hero .dn-route-hero__layout {
+    height: auto;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 0;
+    padding: calc(var(--dn-space-8) * 3) var(--dn-space-6) calc(var(--dn-space-8) * 2 + var(--dn-space-4));
+  }
+  .dn-information-hero .dn-route-hero__copy { display: block; text-align: center; }
+  .dn-information-hero .dn-route-hero__copy h1 { font-size: var(--dn-text-heading); line-height: var(--dn-leading-heading); }
+  .dn-information-panel {
+    position: relative;
+    z-index: 1;
+    width: min(calc(100% - var(--dn-space-6)), 760px);
+    margin: calc(-1 * (var(--dn-space-8) + var(--dn-space-5))) auto 0;
+  }
+  .dn-information-card {
+    min-width: 0;
+    padding: var(--dn-entry-card-padding);
+    border: 1px solid var(--dn-line);
+    border-radius: var(--dn-radius-lg);
+    background: var(--dn-surface-raised);
+    color: var(--dn-ink);
+    box-shadow: var(--dn-card-shadow);
+  }
+}
