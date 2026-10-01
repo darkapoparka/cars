@@ -162,7 +162,6 @@
     transition: box-shadow 180ms ease-out;
   }
 
-  .dn-editorial-item:hover,
   .dn-editorial-item:focus-within {
     box-shadow: var(--dn-card-hover-shadow);
   }
@@ -253,9 +252,13 @@
     transition: color 180ms ease-out;
   }
 
-  .dn-editorial-item:hover h3,
   .dn-editorial-item:focus-within h3 {
     color: var(--dn-red);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .dn-editorial-item:hover { box-shadow: var(--dn-card-hover-shadow); }
+    .dn-editorial-item:hover h3 { color: var(--dn-red); }
   }
 
   .dn-editorial-item__summary {
@@ -411,11 +414,12 @@
     }
 
     .dn-editorial-item__meta { margin-bottom: var(--dn-space-half); }
-    .dn-editorial-item__meta span { font-size: var(--dn-text-caption); font-weight: var(--dn-weight-regular); }
+    .dn-editorial-item__meta span { font: var(--dn-mobile-card-meta-font); }
 
     .dn-editorial-item h3 {
-      margin-bottom: 7px;
-      font-size: var(--dn-text-lead);
+      margin-bottom: var(--dn-space-2);
+      font: var(--dn-mobile-card-title-font);
+      letter-spacing: var(--dn-tracking-normal);
     }
 
     .dn-editorial-item__summary {

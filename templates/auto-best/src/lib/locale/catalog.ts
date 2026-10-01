@@ -1059,7 +1059,7 @@ export const bg = {
   "service.sell.banner.copy": "Продажба или бартер.",
   "service.import.banner.title": "Твоята следваща кола",
   "service.import.banner.copy": "Внос по заявка.",
-  "inventory.spec.automaticCompact": "Автом.",
+  "inventory.spec.automaticCompact": "Автомат",
   "inventory.spec.electricCompact": "Електр.",
   "inventory.spec.petrolLpg": "Бензин/ЛПГ",
   "inventory.spec.petrolLpgCompact": "Б/ЛПГ",

@@ -63,7 +63,7 @@ async function longCardCopy(page, locale, layout) {
       heading.textContent = title.slice('Tesla '.length);
       heading.title = title;
       card.querySelector('a').setAttribute('aria-label', title);
-      const labels = [fuel, { compact: locale === 'bg' ? 'Автом.' : 'Auto', full: locale === 'bg' ? 'Автоматик' : 'Automatic' }];
+      const labels = [fuel, { compact: locale === 'bg' ? 'Автомат' : 'Auto', full: locale === 'bg' ? 'Автоматик' : 'Automatic' }];
       const badges = [...card.querySelectorAll(layout === 'listing' ? '.dn-vehicle-card__fact' : '.dn-vehicle-card__spec')].slice(layout === 'listing' ? 2 : 0);
       for (const [index, badge] of badges.entries()) {
         badge.title = labels[index].full;
@@ -85,7 +85,8 @@ async function longCardCopy(page, locale, layout) {
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
           badges: badges.map(badge => {
-            const text = badge.querySelector(listing ? '[aria-hidden="true"]' : '.dn-vehicle-card__spec-compact') ?? badge;
+            const text = listing ? badge.querySelector('[aria-hidden="true"]') ?? badge
+              : [...badge.querySelectorAll('.dn-vehicle-card__spec-full, .dn-vehicle-card__spec-compact')].find(label => label.checkVisibility());
             const box = badge.getBoundingClientRect(), textBox = text.getBoundingClientRect(), style = getComputedStyle(text);
             return { top: box.top, full: badge.title, whiteSpace: style.whiteSpace, height: textBox.height,
               padding: text === badge ? parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) : 0,
@@ -111,7 +112,7 @@ async function longCardCopy(page, locale, layout) {
 try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430, 1440]) {
     await suite.check(`${locale} mobile polish ${width}`, async () => {
-      const page = await browser.newPage({ viewport: { width, height: width === 1440 ? 900 : 844 }, reducedMotion: 'reduce' });
+      const page = await browser.newPage({ viewport: { width, height: width === 1440 ? 900 : 844 }, hasTouch: width < 768, reducedMotion: 'reduce' });
       page.setDefaultNavigationTimeout(60000);
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
@@ -174,12 +175,24 @@ try {
           assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs stay proportionate to the wordmark');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
+          assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '16px',
+            'The search editor uses the same readable input size as its entry field');
           await page.locator('.dn-quick-search__close').click();
           assert.equal(await page.locator('.dn-quick-search__trigger').evaluate(el => getComputedStyle(el).outlineStyle), 'none', 'Closing by pointer does not leave a focus ring over the opener');
           await page.keyboard.press('Tab');
           await page.keyboard.press('Shift+Tab');
           assert(await page.locator('.dn-quick-search__trigger').evaluate(el => el.matches(':focus-visible') && parseFloat(getComputedStyle(el).outlineWidth) >= 2), 'Keyboard navigation retains a visible focus indicator');
           await longCardCopy(page, locale, 'carousel');
+          const cardTypography = await page.locator('.dn-inventory .dn-vehicle-card').first().evaluate(card => {
+            const title = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
+            const price = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
+            const transmission = card.querySelector('.dn-vehicle-card__spec--transmission .dn-vehicle-card__spec-full');
+            return { titleSize: title.fontSize, titleWeight: title.fontWeight,
+              priceSize: price.fontSize, priceWeight: price.fontWeight,
+              transmission: transmission.innerText, fits: transmission.scrollWidth <= transmission.clientWidth + 1 };
+          });
+          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '20px', priceWeight: '600',
+            transmission: locale === 'bg' ? 'Автоматик' : 'Automatic', fits: true }, 'Model and price have distinct roles; full transmission fits');
           const viewAll = page.locator('.dn-search__mobile-all:visible').first();
           await compactControl(viewAll, { icon: true });
           assert.match(await viewAll.innerText(), /\([1-9]\d*\)/, 'Home action exposes the inventory count');
@@ -290,6 +303,8 @@ try {
           assert(photos.every(photo => photo.loaded && photo.fits),
             `Photos match the full height of the details and two rows of badges: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
           const mileageBadge = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2)').first();
+          assert.equal(await page.locator('.dn-vehicle-card__mobile-meta li:last-child [aria-hidden="true"]').first().innerText(),
+            locale === 'bg' ? 'Автомат' : 'Auto', 'Dense cards use a recognizable transmission label');
           assert.match(await mileageBadge.locator('[aria-hidden="true"]').innerText(), /^\d+$/,
             'Mobile mileage keeps all digits without an extra unit or grouping');
           assert.match(await mileageBadge.locator('.dn-sr-only').innerText(), /km|км/,
@@ -404,6 +419,21 @@ try {
           assert.equal(await number.evaluate(el => getComputedStyle(el).whiteSpace), 'nowrap');
           await capture('inspection');
         } else await capture('detail');
+        if (width < 768) {
+          await visit('/blog');
+          const articleStyles = await page.locator('.dn-blog-search input').evaluate(input => ({
+            size: getComputedStyle(input).fontSize, border: getComputedStyle(input).borderWidth,
+            height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('form')).padding
+          }));
+          assert.deepEqual(articleStyles, { size: '16px', border: '0px', height: 52, frame: '0px' },
+            'Article search shares the mobile input system without a second frame');
+          assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '500');
+          await capture('articles');
+          await page.locator('#dn-blog-search').fill(locale === 'bg' ? 'внос' : 'import');
+          await page.locator('#dn-blog-search').press('Enter');
+          await page.waitForURL(url => url.searchParams.has('q'));
+          assert(await page.locator('.dn-blog-card').count() > 0, 'Article search returns matching cards');
+        }
         await visit('/locale-settings');
         assert((await page.title()).endsWith(' — Auto Best'));
         assert.deepEqual(errors, []);

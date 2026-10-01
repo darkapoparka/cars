@@ -56,6 +56,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
     --dn-entry-surface: var(--dn-entry-prominent-surface);
     --dn-entry-line: transparent;
     --dn-focus: var(--dn-ink);
+    --dn-overlay-field-font: var(--dn-entry-prominent-font);
   }
   .dn-app-shell :is(a, button, input, select, textarea, summary) { -webkit-tap-highlight-color: transparent; }
   .dn-app-shell .dn-entry-field { border: 0; border-radius: var(--dn-radius-control); box-shadow: none; }

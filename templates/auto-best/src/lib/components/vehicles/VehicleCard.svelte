@@ -30,6 +30,14 @@
     ? vehicle.title.slice(cardBrand.length + 1)
     : modelTitle);
   const priceLabel = $derived(formatVehiclePriceLabel(vehicle.priceEur, i18n.locale));
+  const specifications = $derived([
+    { icon: 'fuel' as const, value: vehicle.fuel },
+    { icon: 'transmission' as const, value: vehicle.transmission }
+  ].map(spec => ({
+    ...spec,
+    label: specificationLabel(spec.value, i18n.locale),
+    compactLabel: compactSpecificationLabel(spec.value, i18n.locale)
+  })));
 </script>
 
 {#snippet amount()}
@@ -88,18 +96,14 @@
       {/if}
       {#if layout !== 'showcase'}
       <div class="dn-vehicle-card__specs" aria-label={i18n.t("m_148a9be6e575")}>
-        <span class="dn-vehicle-card__spec" title={specificationLabel(vehicle.fuel, i18n.locale)}>
-          <Icon name="fuel" size={15} strokeWidth={1.7} />
-          <span class="dn-vehicle-card__spec-full" aria-hidden="true">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
-          <span class="dn-vehicle-card__spec-compact" aria-hidden="true">{compactSpecificationLabel(vehicle.fuel, i18n.locale)}</span>
-          <span class="dn-sr-only">{specificationLabel(vehicle.fuel, i18n.locale)}</span>
-        </span>
-        <span class="dn-vehicle-card__spec" title={specificationLabel(vehicle.transmission, i18n.locale)}>
-          <Icon name="transmission" size={15} strokeWidth={1.7} />
-          <span class="dn-vehicle-card__spec-full" aria-hidden="true">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
-          <span class="dn-vehicle-card__spec-compact" aria-hidden="true">{compactSpecificationLabel(vehicle.transmission, i18n.locale)}</span>
-          <span class="dn-sr-only">{specificationLabel(vehicle.transmission, i18n.locale)}</span>
-        </span>
+        {#each specifications as spec (spec.icon)}
+          <span class="dn-vehicle-card__spec" class:dn-vehicle-card__spec--transmission={spec.icon === 'transmission'} title={spec.label}>
+            <Icon name={spec.icon} size={15} strokeWidth={1.7} />
+            <span class="dn-vehicle-card__spec-full" aria-hidden="true">{spec.label}</span>
+            <span class="dn-vehicle-card__spec-compact" aria-hidden="true">{spec.compactLabel}</span>
+            <span class="dn-sr-only">{spec.label}</span>
+          </span>
+        {/each}
       </div>
       {/if}
 
@@ -111,8 +115,9 @@
       <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
         <li class="dn-vehicle-card__fact">{vehicle.year}</li>
         <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span aria-hidden="true">{compactMileage(vehicle.mileageKm, i18n.locale)}</span><span class="dn-sr-only">{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
-        <li class="dn-vehicle-card__fact" title={specificationLabel(vehicle.fuel, i18n.locale)}><span aria-hidden="true">{compactSpecificationLabel(vehicle.fuel, i18n.locale)}</span><span class="dn-sr-only">{specificationLabel(vehicle.fuel, i18n.locale)}</span></li>
-        <li class="dn-vehicle-card__fact" title={specificationLabel(vehicle.transmission, i18n.locale)}><span aria-hidden="true">{compactSpecificationLabel(vehicle.transmission, i18n.locale)}</span><span class="dn-sr-only">{specificationLabel(vehicle.transmission, i18n.locale)}</span></li>
+        {#each specifications as spec (spec.icon)}
+          <li class="dn-vehicle-card__fact" title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
+        {/each}
       </ul>
     {/if}
   </a>
@@ -366,11 +371,12 @@
     }
 
     .dn-vehicle-card__make {
-      font-size: var(--dn-text-caption);
+      font: var(--dn-mobile-card-meta-font);
     }
 
     .dn-vehicle-card__name {
-      font-size: var(--dn-text-lead);
+      font: var(--dn-mobile-card-title-font);
+      letter-spacing: var(--dn-tracking-normal);
     }
 
     .dn-vehicle-card__specs {
@@ -382,23 +388,24 @@
     .dn-vehicle-card__spec {
       min-height: 28px;
       gap: var(--dn-space-1);
-      padding-inline: var(--dn-space-2);
-      font-size: var(--dn-text-caption);
-      line-height: var(--dn-leading-badge);
+      padding-inline: var(--dn-vehicle-card-spec-padding, var(--dn-space-2));
+      font: var(--dn-mobile-card-spec-font);
     }
     .dn-vehicle-card__spec-full { display: none; }
-    .dn-vehicle-card__spec-compact {
+    .dn-vehicle-card__spec-compact,
+    .dn-vehicle-card__spec--transmission .dn-vehicle-card__spec-full {
       display: block;
       min-width: 0;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    .dn-vehicle-card__spec--transmission .dn-vehicle-card__spec-compact { display: none; }
     .dn-vehicle-card__spec :global(svg) { flex: 0 0 auto; }
     .dn-vehicle-card__amount {
       margin-top: var(--dn-space-2);
       padding-top: 0;
-      font-size: var(--dn-text-card);
+      font: var(--dn-mobile-card-price-font);
     }
 
     .dn-vehicle-card--listing {
@@ -456,7 +463,6 @@
     .dn-vehicle-card--listing .dn-vehicle-card__make {
       display: block;
       color: var(--dn-muted);
-      font-size: var(--dn-text-caption);
       overflow-wrap: anywhere;
     }
 
@@ -488,9 +494,7 @@
       border-radius: var(--dn-radius-xs);
       background: var(--dn-surface-panel);
       color: var(--dn-ink-hover);
-      font-size: var(--dn-text-caption);
-      font-weight: var(--dn-weight-medium);
-      line-height: var(--dn-leading-badge);
+      font: var(--dn-mobile-card-spec-font);
       font-variant-numeric: tabular-nums;
       text-align: center;
       white-space: nowrap;
@@ -507,9 +511,6 @@
     .dn-vehicle-card--listing .dn-vehicle-card__name {
       display: -webkit-box;
       min-width: 0;
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-weight-medium);
-      line-height: var(--dn-leading-control);
       white-space: normal;
       overflow-wrap: normal;
       line-clamp: 2;
@@ -529,9 +530,7 @@
       margin-top: 0;
       padding: 0;
       color: var(--dn-ink);
-      font-size: var(--dn-text-lead);
-      font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-control);
+      font: var(--dn-mobile-card-price-compact-font);
       letter-spacing: var(--dn-tracking-normal);
       text-align: start;
       overflow-wrap: anywhere;

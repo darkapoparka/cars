@@ -20,18 +20,20 @@
 <style>
   .dn-browse-all { display: none; }
   @media (max-width: 767px) {
-    .dn-browse-all { position: relative; display: flex; min-width: 0; min-height: 260px; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px 16px; border: 1px solid #dce0e5; border-radius: 16px; background: #fff; color: #202329; text-align: center; scroll-snap-align: start; }
-    .mark { display: grid; flex-shrink: 0; width: 48px; height: 48px; place-items: center; border-radius: 50%; background: #f1f2f4; color: #202329; }
-    strong { max-width: 100%; overflow-wrap: anywhere; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+    .dn-browse-all { position: relative; display: flex; min-width: 0; min-height: 0; height: 100%; flex-direction: column; align-items: center; justify-content: center; gap: var(--dn-space-2); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); text-align: center; scroll-snap-align: start; }
+    .mark { display: grid; flex-shrink: 0; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); place-items: center; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); }
+    strong { max-width: 100%; overflow-wrap: anywhere; font: var(--dn-mobile-card-title-font); }
     .detail { color: #626a75; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
-    .action { display: flex; max-width: 100%; min-height: 44px; align-items: center; justify-content: center; gap: 8px; margin-top: 8px; padding: 8px 18px; border-radius: var(--dn-pill); background: var(--dn-red); color: #fff; font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); overflow-wrap: anywhere; }
+    .action { display: flex; max-width: 100%; min-height: var(--dn-control-height-default); align-items: center; justify-content: center; gap: var(--dn-space-2); margin-top: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); border-radius: var(--dn-pill); background: var(--dn-red); color: var(--dn-white); font: var(--dn-control-font); overflow-wrap: anywhere; }
     .action :global(svg) { flex-shrink: 0; }
     .compact { min-height: 108px; gap: 8px; padding: 10px 6px; border: 0; }
     .compact strong { font-size: var(--dn-text-meta); }
     .compact.dn-browse-all--with-image { align-items: flex-start; padding: 8px 12px 12px; text-align: left; }
     .compact.dn-browse-all--with-image strong { font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); }
     img { width: min(176px, 92%); height: 78px; object-fit: contain; }
-    a:hover { background: #fafafa; }
+    @media (hover: hover) and (pointer: fine) {
+      a:hover { background: var(--dn-surface-subtle); }
+    }
     a:focus-visible { outline: 2px solid var(--dn-red); outline-offset: -2px; }
   }
 </style>
