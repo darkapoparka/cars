@@ -39,7 +39,6 @@
 		min-width: 0;
 	}
 	.desktop-vehicle-details__title {
-		min-block-size: 2lh;
 		margin: 0;
 		color: var(--sa-ink);
 		font: var(--sa-weight-strong) var(--sa-text-lg)/1.35 var(--sa-font);
@@ -48,11 +47,10 @@
 	.desktop-vehicle-details__title a {
 		color: inherit;
 		font: inherit;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 2;
-		line-clamp: 2;
+		display: block;
 		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.desktop-vehicle-details :global(.card-box__price) {
 		margin: auto 0 0;
@@ -61,10 +59,10 @@
 	.desktop-vehicle-details__metadata {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 6px 12px;
-		max-inline-size: 22rem;
+		gap: 6px;
+		max-inline-size: 18rem;
 		margin: 12px 0 0;
-		color: var(--discovery-muted, #62676e);
+		color: var(--discovery-ink, #171b1e);
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 		letter-spacing: 0;
 	}
@@ -79,9 +77,13 @@
 	.desktop-vehicle-details__metadata dd {
 		margin: 0;
 		min-width: 0;
+		padding: 4px 6px;
+		border-radius: 6px;
+		background: var(--discovery-muted-surface, #f3f4f6);
 		color: inherit;
 		font: inherit;
 		font-variant-numeric: tabular-nums;
+		text-align: center;
 		white-space: nowrap;
 	}
 	.desktop-vehicle-details a:focus-visible {

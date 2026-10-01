@@ -11,6 +11,8 @@ async function expectAlignedCardDetails(page: Page) {
 					cards.length > 0 &&
 					cards.every((card) => {
 						const title = card.querySelector('.desktop-vehicle-details__title')!;
+						const titleLink = title.querySelector('a')!;
+						const titleStyle = getComputedStyle(titleLink);
 						const facts = card.querySelector('.desktop-vehicle-details__metadata')!;
 						const values = [...facts.querySelectorAll('dd')];
 						if (values.length !== 4) return false;
@@ -24,14 +26,27 @@ async function expectAlignedCardDetails(page: Page) {
 						rowOffsets.set(row, rowOffset);
 						return (
 							getComputedStyle(title).fontSize === '18px' &&
-							Math.abs(titleBox.height - parseFloat(getComputedStyle(title).lineHeight) * 2) < 1 &&
+							Math.abs(titleBox.height - parseFloat(getComputedStyle(title).lineHeight)) < 1 &&
+							titleStyle.whiteSpace === 'nowrap' &&
+							titleStyle.textOverflow === 'ellipsis' &&
+							titleStyle.overflow === 'hidden' &&
+							titleLink.title === titleLink.textContent?.trim() &&
 							factsBox.top >= titleBox.bottom + 11 &&
 							Math.abs(factsOffset - rowOffset) < 1 &&
-							values.every(
-								(value) =>
-									getComputedStyle(value).fontSize === '14px' &&
-									value.scrollWidth <= value.clientWidth + 1
-							) &&
+							values.every((value) => {
+								const style = getComputedStyle(value);
+								const box = value.getBoundingClientRect();
+								return (
+									style.fontSize === '14px' &&
+									style.backgroundColor !== 'rgba(0, 0, 0, 0)' &&
+									parseFloat(style.borderRadius) >= 6 &&
+									parseFloat(style.paddingTop) >= 4 &&
+									parseFloat(style.paddingLeft) >= 6 &&
+									value.scrollWidth <= value.clientWidth + 1 &&
+									box.left >= factsBox.left &&
+									box.right <= factsBox.right + 1
+								);
+							}) &&
 							Math.abs(valueBoxes[0].top - valueBoxes[1].top) < 1 &&
 							Math.abs(valueBoxes[2].top - valueBoxes[3].top) < 1 &&
 							Math.abs(valueBoxes[0].left - valueBoxes[2].left) < 1 &&
@@ -159,7 +174,7 @@ test('home and inventory use matching centered frames and compact four or five c
 	}
 });
 
-test('desktop cards align titles and specifications before pricing in both languages', async ({
+test('desktop cards keep single-line titles and specification badges before pricing in both languages', async ({
 	page
 }) => {
 	for (const locale of ['en', 'bg']) {

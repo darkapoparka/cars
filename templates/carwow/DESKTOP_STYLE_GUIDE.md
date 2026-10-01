@@ -46,15 +46,15 @@ Desktop header utilities, including Sell, are icon-only: 24px outline icons insi
 
 ## Control families
 
-| Family              | Geometry                                                    | State and behavior                                                                                                                                                                   |
-| ------------------- | ----------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Task panel          | 12px radius; flat white                                     | Group one task. No shadow, glass, gradient or heavy black frame.                                                                                                                     |
-| Buy / Sell / Import | 36px tab, 42px rail; 15px semibold                          | Dark active tab identifies a mode. Arrow keys change mode; retain independent drafts. Coarse pointer tabs are at least 44px.                                                         |
-| Search              | 54px outer field; 8px radius; 44px trailing icon action     | White field, black action, white 20px Lucide Search icon. Accessible label and title are required. Home submits the query; inventory opens its shared search/filter dialog.          |
-| Filter trigger      | 46px high; 8px radius; 15px medium                          | Light neutral default with dark text/chevrons; yellow hover; black applied selection with white text/chevrons. Opens the existing filter interface.                                  |
-| Shortcut chip       | 36px high; 8px radius; 14px medium; 12px horizontal padding | Text-only, white default, yellow hover, black active. Same class and state styling on home and inventory. At least 44px for coarse pointers.                                         |
-| Dialog field        | Light surface and neutral border; 8px radius                | Use the same neutral family for triggers and fields inside the dialog. Apply submits the draft; Escape cancels and returns focus.                                                    |
-| Vehicle card        | White, 12px radius, 1px neutral border                      | 4:3 photography, a strong model name, grouped year/mileage and drivetrain facts, then price and the bottom action. Retain white circular favorite/compare controls over photography. |
+| Family              | Geometry                                                    | State and behavior                                                                                                                                                                |
+| ------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Task panel          | 12px radius; flat white                                     | Group one task. No shadow, glass, gradient or heavy black frame.                                                                                                                  |
+| Buy / Sell / Import | 36px tab, 42px rail; 15px semibold                          | Dark active tab identifies a mode. Arrow keys change mode; retain independent drafts. Coarse pointer tabs are at least 44px.                                                      |
+| Search              | 54px outer field; 8px radius; 44px trailing icon action     | White field, black action, white 20px Lucide Search icon. Accessible label and title are required. Home submits the query; inventory opens its shared search/filter dialog.       |
+| Filter trigger      | 46px high; 8px radius; 15px medium                          | Light neutral default with dark text/chevrons; yellow hover; black applied selection with white text/chevrons. Opens the existing filter interface.                               |
+| Shortcut chip       | 36px high; 8px radius; 14px medium; 12px horizontal padding | Text-only, white default, yellow hover, black active. Same class and state styling on home and inventory. At least 44px for coarse pointers.                                      |
+| Dialog field        | Light surface and neutral border; 8px radius                | Use the same neutral family for triggers and fields inside the dialog. Apply submits the draft; Escape cancels and returns focus.                                                 |
+| Vehicle card        | White, 12px radius, 1px neutral border                      | 4:3 photography, a single-line model name, four compact specification badges, then price and the bottom action. Retain white circular favorite/compare controls over photography. |
 
 ## Typography, icons and spacing
 
@@ -84,17 +84,17 @@ Keyboard focus uses a solid 2px black outline with a 2–3px offset. For composi
 
 ## Ownership and migration
 
-| Family                        | Owners migrated in this pass                                                                                                               |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Home task controls            | `DesktopHomeSearchPanel.svelte`                                                                                                            |
-| Inventory task controls       | `InventoryDesktopPage.svelte`, `InventoryFilterTriggers.svelte`, `InventoryFilterDialog.svelte`                                            |
-| Shared shortcut appearance    | `desktop-discovery.css`, `DesktopHomeInventoryTabs.svelte`, `InventoryShortcutShelf.svelte`, `InventoryTypePills.svelte`                   |
-| Discovery canvas/card borders | `DesktopHomeInventoryPreview.svelte`, `DesktopHome.svelte`, `DesktopHomeInventoryCard.svelte`, `InventoryDesktopPage.svelte`               |
-| Buy / Sell and review panels  | `DesktopHomeReviews.svelte`; the desktop composition sheet does not override their geometry                                                |
-| Three promotional banners     | `DesktopHomeWhyDayNight.svelte`; compact content with a separate illustration area                                                         |
-| Desktop video panel           | `DesktopHomeVideos.svelte`; white section panel, 16:9 thumbnails and click-to-play players                                                 |
-| Desktop vehicle card details  | `DesktopVehicleCardDetails.svelte`, `VehiclePriceRow.svelte`, `VehicleMetaRow.svelte`; one hierarchy for Home, catalogue and related cards |
-| Type and make browse grids    | `DesktopHomeVehicleCategories.svelte`, `DesktopHomeBrandStrip.svelte`; centered headings and a final View all tile                         |
+| Family                        | Owners migrated in this pass                                                                                                 |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Home task controls            | `DesktopHomeSearchPanel.svelte`                                                                                              |
+| Inventory task controls       | `InventoryDesktopPage.svelte`, `InventoryFilterTriggers.svelte`, `InventoryFilterDialog.svelte`                              |
+| Shared shortcut appearance    | `desktop-discovery.css`, `DesktopHomeInventoryTabs.svelte`, `InventoryShortcutShelf.svelte`, `InventoryTypePills.svelte`     |
+| Discovery canvas/card borders | `DesktopHomeInventoryPreview.svelte`, `DesktopHome.svelte`, `DesktopHomeInventoryCard.svelte`, `InventoryDesktopPage.svelte` |
+| Buy / Sell and review panels  | `DesktopHomeReviews.svelte`; the desktop composition sheet does not override their geometry                                  |
+| Three promotional banners     | `DesktopHomeWhyDayNight.svelte`; compact content with a separate illustration area                                           |
+| Desktop video panel           | `DesktopHomeVideos.svelte`; white section panel, 16:9 thumbnails and click-to-play players                                   |
+| Desktop vehicle card details  | `DesktopVehicleCardDetails.svelte`, `VehiclePriceRow.svelte`; one hierarchy for Home, catalogue and related cards            |
+| Type and make browse grids    | `DesktopHomeVehicleCategories.svelte`, `DesktopHomeBrandStrip.svelte`; centered headings and a final View all tile           |
 
 Inventory shortcuts have a separate row, aligned with the filter triggers, with a 12px row gap and 8px chip gaps. Let the chips wrap within the panel at smaller desktop widths. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and the URL filter state.
 
@@ -102,7 +102,7 @@ Inventory shortcuts have a separate row, aligned with the filter triggers, with 
 
 The paired action banners have matching grid geometry and a 272px minimum height, growing to fit longer copy. Keep the car illustrations in their own grid column instead of mixing absolute positioning with grid placement. Video and review sections use matching flat white containers with 28px padding; review quotes sit on quiet neutral surfaces inside the group.
 
-The desktop Home preview shows eight cars in four columns at 992–1439px and ten cars in five columns from 1440px. Default Inventory uses the same column counts and centered content frame; retain the existing alternate density and sidebar controls. Card details follow the owner's hierarchy: model, a compact facts group with year/mileage followed by transmission/fuel, then price, financing and the detail action at the bottom. Every 18px title reserves two lines, including short titles, so specifications begin on matching baselines across a row. Use a two-column definition list with 14px supporting text: year above transmission, mileage above fuel. Keep the values aligned, unbroken and fully readable; the definition labels remain available to assistive technology. Buying facts must appear before the action in both DOM and visual order. `DesktopVehicleCardDetails.svelte` owns the layout and typography for Home, Inventory and related cards, without legacy title, paragraph or tag classes. Do not reorder it with route-specific CSS. Keep details compact and omit internal divider lines. Avoid spec pictograms and transmission badges over the photos. Keep actual availability, photo counts, save/compare actions, financing links and detail navigation.
+The desktop Home preview shows eight cars in four columns at 992–1439px and ten cars in five columns from 1440px. Default Inventory uses the same column counts and centered content frame; retain the existing alternate density and sidebar controls. Card details follow the owner's hierarchy: a single-line model name, year/mileage badges followed by transmission/fuel badges, then price, financing and the detail action at the bottom. Every 18px title occupies exactly one line. Longer names use an ellipsis, retaining the complete name in the link's accessible text and tooltip. Use a two-column definition list with four light-grey badges, 14px text, 6px corners, 4px vertical padding, 6px horizontal padding and 6px gaps. Center each value inside its badge; keep the values unbroken and fully readable. Definition labels remain available to assistive technology. Buying facts must appear before the action in both DOM and visual order. `DesktopVehicleCardDetails.svelte` owns the layout and typography for Home, Inventory and related cards, without legacy title, paragraph or tag classes. Do not reorder it with route-specific CSS. Keep details compact and omit internal divider lines. Avoid spec pictograms and transmission badges over the photos. Keep actual availability, photo counts, save/compare actions, financing links and detail navigation. Map cards retain their separate composition.
 
 Type and make headings are centered without a separate heading CTA. The last tile opens the full inventory, replacing the last preview tile; the complete taxonomy remains available through inventory filters. The strip variant retains its compact logo-only composition.
 
