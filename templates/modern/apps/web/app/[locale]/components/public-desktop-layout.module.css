@@ -371,30 +371,26 @@
 
 @media (min-width: 1024px) {
   .loadingLanding {
-    padding: 2rem
+    padding: 0
       max(var(--layout-gutter), calc((100% - var(--layout-content-max)) / 2))
-      2.5rem;
-    background: var(--inverse);
+      1.5rem;
+    background: linear-gradient(var(--inverse) 15rem, var(--background) 15rem);
   }
   .loadingIntroduction {
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 3.5rem;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  .loadingPhoto {
-    height: clamp(19rem, 27vw, 23rem);
-    background: var(--inverse-control);
-    border-radius: 1rem;
+    gap: 0.75rem;
+    align-content: center;
+    justify-items: center;
+    min-height: 12rem;
   }
   .loadingSearch {
     display: grid;
-    gap: 1rem;
-    min-height: 13.5rem;
-    padding: 1.25rem 1.5rem;
+    gap: 0.875rem;
+    min-height: 12.5rem;
+    padding: 1rem 1.25rem 1.25rem;
     background: var(--panel);
-    border-radius: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
   }
   .loadingResults {
     width: min(

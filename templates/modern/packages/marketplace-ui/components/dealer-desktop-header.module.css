@@ -4,7 +4,7 @@
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-height: 5.25rem;
+    --desktop-header-height: 4.5rem;
     position: relative;
     z-index: 40;
     display: block;
@@ -52,6 +52,7 @@
   }
 
   .segments a {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +62,7 @@
     font-weight: var(--font-weight-medium);
     color: var(--inverse-muted);
     border: 1px solid transparent;
-    border-radius: var(--radius-pill);
+    border-radius: 0;
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction),
@@ -77,9 +78,19 @@
   .segments a[aria-current="page"] {
     font-weight: var(--font-weight-semibold);
     color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse-foreground) 8%, transparent);
-    border-color: var(--inverse-border);
+    background: transparent;
+    border-color: transparent;
     box-shadow: none;
+  }
+
+  .segments a[aria-current="page"]::after {
+    position: absolute;
+    right: 0.9375rem;
+    bottom: 0;
+    left: 0.9375rem;
+    height: 2px;
+    content: "";
+    background: var(--brand);
   }
 
   .contact {

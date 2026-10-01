@@ -127,13 +127,9 @@ const DealerLoadingHeader = ({ locale }: { locale: string }) => (
     <DealerDesktopHeader activeMode={null} locale={locale} />
     <div aria-hidden="true" className={desktopStyles.loadingLanding}>
       <div className={desktopStyles.loadingIntroduction}>
-        <div className="space-y-5">
-          <div className="h-3 w-48 rounded bg-inverse-control" />
-          <div className="h-28 w-4/5 rounded-xl bg-inverse-control" />
-          <div className="h-12 w-4/5 rounded bg-inverse-control" />
-          <div className="h-8 w-48 rounded bg-inverse-control" />
-        </div>
-        <div className={desktopStyles.loadingPhoto} />
+        <div className="h-3 w-48 rounded bg-inverse-control" />
+        <div className="h-12 w-1/2 rounded bg-inverse-control" />
+        <div className="h-5 w-1/3 rounded bg-inverse-control" />
       </div>
       <div className={desktopStyles.loadingSearch}>
         <div className="h-10 w-1/3 rounded-lg bg-control" />

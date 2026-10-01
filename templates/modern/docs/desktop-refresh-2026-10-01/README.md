@@ -1,5 +1,24 @@
 # Modern desktop refresh — 1 October 2026
 
+## Revision after owner feedback
+
+The owner rejected the split introduction below. It is historical evidence, not
+an accepted visual direction. The current revision restores the original studio
+artwork in a compact, centered masthead and removes the arbitrary featured listing.
+The desktop header is 72px tall, navigation and vehicle categories use underlines,
+and the search panel has a smaller radius and no elevated shadow. Vehicle photos
+begin about 300px earlier at 1440px. The loading skeleton follows this composition.
+
+Current evidence: `home-revision-1440.jpg`. The earlier screenshots show the
+rejected iteration and are retained for comparison.
+
+Revision verification: typecheck, production build, scoped Biome and diff checks
+passed; the existing web/UI suites passed all 271 tests. Browser checks covered
+BG home at 1024, 1440 and 1920px, preserved mobile home at 320px, expanded and
+collapsed search, and a BMW search reaching `/bg/cars?q=BMW` with five results.
+The final reload logged no new browser errors. No search or provider behavior
+was changed. Owner visual acceptance is still pending; no dealer deployment.
+
 ## Audit and implementation
 
 Reviewed the live preview in Codex Browser at http://127.0.0.1:6462/bg.
