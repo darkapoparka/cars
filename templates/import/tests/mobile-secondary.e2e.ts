@@ -138,9 +138,19 @@ for (const locale of ['en', 'bg']) {
 		const filters = page.getByRole('group', {
 			name: locale === 'en' ? 'Quick service filters' : 'Бърз избор на услуга'
 		});
-		for (const filter of await filters.getByRole('button').all()) {
+		const filterButtons = filters.getByRole('button');
+		const rows = await filterButtons.evaluateAll((buttons) =>
+			buttons.map((button) => button.getBoundingClientRect().top)
+		);
+		expect(Math.max(...rows) - Math.min(...rows)).toBeLessThanOrEqual(1);
+		for (const filter of await filterButtons.all()) {
+			await filter.scrollIntoViewIfNeeded();
 			await expect(filter).toBeInViewport({ ratio: 1 });
 		}
+		expect(await filters.evaluate((rail) => rail.scrollLeft)).toBeGreaterThan(0);
+		expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+			320
+		);
 		const vin = filters.getByRole('button', {
 			name: locale === 'en' ? 'Check / VIN' : 'Проверка / VIN',
 			exact: true
@@ -216,7 +226,7 @@ for (const width of [320, 390]) {
 		await expect(page).toHaveURL(/\/account\/profile\?lang=en$/);
 		await expect(page.getByRole('heading', { level: 1, name: 'Your profile' })).toBeVisible();
 		await expect(page.locator('#dashboardToggleBtn')).not.toBeVisible();
-		const profileMap = page.locator('.daynight-profile-form iframe');
+		const profileMap = page.locator('[data-mobile-profile-form] iframe');
 		const mapAddress = new URL((await profileMap.getAttribute('src'))!).searchParams.get('q');
 		expect(mapAddress).toContain('София');
 		await expect(profileMap).toHaveAttribute('title', /София/);

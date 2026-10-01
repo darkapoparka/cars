@@ -162,14 +162,20 @@
 		}
 		.service-mobile-filters {
 			display: flex;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;
 			gap: var(--bc-space-2);
+			overflow-x: auto;
+			margin-inline: calc(-1 * var(--bc-mobile-gutter));
+			padding: var(--bc-space-1) var(--bc-mobile-gutter);
+			scroll-padding-inline: var(--bc-mobile-gutter);
+			scrollbar-width: none;
 		}
 		.service-mobile-filters :global(.site-action) {
 			flex: 0 0 auto;
 			border-radius: var(--bc-radius-pill);
 			padding-inline: var(--bc-space-3);
 			font-size: var(--bc-mobile-label);
+			white-space: nowrap;
 		}
 		.services-grid {
 			grid-template-columns: 1fr;

@@ -69,7 +69,7 @@ for (const locale of ['bg', 'en']) {
 			expect(clippedServiceTitles, route).toEqual([]);
 			const clippedActions = await page
 				.locator(
-					'.daynight-dashboard-overview__primary, .daynight-profile-form button[type="submit"]'
+					'.daynight-dashboard-overview__primary, [data-mobile-profile-form] button[type="submit"]'
 				)
 				.evaluateAll((actions) =>
 					actions
@@ -134,19 +134,92 @@ for (const locale of ['bg', 'en']) {
 		await navigation
 			.getByRole('link', { name: locale === 'en' ? 'Profile' : 'Профил', exact: true })
 			.click();
-		await expect(page.locator('[data-daynight-profile-form]')).toBeVisible();
-		const avatar = page.locator('.upload-preview--avatar');
+		const profileForm = page.locator('[data-mobile-profile-form]');
+		await expect(profileForm).toBeVisible();
+		const avatar = profileForm.locator('[data-profile-image-upload="avatar"] > img');
 		const dimensions = await avatar.boundingBox();
 		expect(dimensions!.width).toBeLessThanOrEqual(80);
 		expect(dimensions!.height).toBeLessThanOrEqual(80);
-		for (const target of ['avatarInput', 'posterInput']) {
-			const upload = page.locator(`button[data-target="${target}"]`);
+		await profileForm.locator('details').first().locator('summary').click();
+		for (const target of ['avatar', 'poster']) {
+			const upload = profileForm.locator(`[data-profile-image-upload="${target}"] button`);
 			await upload.scrollIntoViewIfNeeded();
 			await expect(upload).toBeInViewport({ ratio: 1 });
 			expect((await upload.boundingBox())!.height).toBeGreaterThanOrEqual(44);
 		}
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 			true
+		);
+	});
+
+	test(`mobile ${locale} profile keeps extra fields and handles save errors and retry`, async ({
+		page
+	}, info) => {
+		await page.setViewportSize({ width: 390, height: 844 });
+		await page.context().addCookies([
+			{ name: 'cars_prompt', value: promptVersion, url: info.project.use.baseURL as string },
+			{ name: 'cars_locale', value: locale, url: info.project.use.baseURL as string }
+		]);
+		await page.goto(`/account/profile?lang=${locale}`);
+		const form = page.locator('[data-mobile-profile-form]');
+		await expect(form).toBeVisible();
+		await expect(form.locator('details[open]')).toHaveCount(0);
+		const data = await form.evaluate((element) => [
+			...new FormData(element as HTMLFormElement).keys()
+		]);
+		for (const name of [
+			'role',
+			'actorRole',
+			'Company',
+			'message',
+			'SalesPhone',
+			'Gender',
+			'DayofBirth',
+			'Facebook',
+			'PriceListing',
+			'SelectLocation'
+		]) {
+			expect(data).toContain(name);
+		}
+		await form.locator('[name="first_name"]').fill('Mobile');
+		await form.locator('[name="last_name"]').fill('Preview');
+		await form.locator('[data-profile-image-upload="avatar"] input').setInputFiles({
+			name: 'photo.png',
+			mimeType: 'image/png',
+			buffer: Buffer.from(
+				'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=',
+				'base64'
+			)
+		});
+		await expect(form.locator('[data-profile-image-upload="avatar"] img')).toHaveAttribute(
+			'src',
+			/^data:image\/png;base64,/
+		);
+		const endpoint = '**/api/account/profile';
+		await page.route(endpoint, (route) =>
+			route.fulfill({ status: 500, contentType: 'application/json', body: '{"ok":false}' })
+		);
+		const save = form.getByRole('button', {
+			name: locale === 'en' ? 'Save changes' : 'Запази промените',
+			exact: true
+		});
+		await save.click();
+		await expect(form.getByRole('status')).toHaveText(
+			locale === 'en' ? 'Could not save. Try again.' : 'Не успяхме да запазим. Опитай отново.'
+		);
+		await expect(save).toBeEnabled();
+		await page.unroute(endpoint);
+		const responsePromise = page.waitForResponse((response) =>
+			new URL(response.url()).pathname.endsWith('/api/account/profile')
+		);
+		await save.click();
+		const response = await responsePromise;
+		expect(response.ok()).toBe(true);
+		const result = await response.json();
+		expect(result.data.name).toBe('Mobile Preview');
+		expect(response.request().postData()).not.toContain('photo.png');
+		await expect(form.getByRole('status')).toHaveText(
+			locale === 'en' ? 'Saved in this demo profile.' : 'Запазено в този демо профил.'
 		);
 	});
 }
