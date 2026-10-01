@@ -5,6 +5,7 @@ import { DealerVehicleFacts } from "@repo/marketplace-ui/components/dealer-vehic
 import Image from "@repo/marketplace-ui/components/public-image";
 import { VehicleCardMoney } from "@repo/marketplace-ui/components/vehicle-card-money";
 import {
+  mobileVehicleCardBrandClassName,
   mobileVehicleCardClassName,
   mobileVehicleCardContentClassName,
   mobileVehicleCardFactsClassName,
@@ -15,7 +16,10 @@ import {
   mobileVehicleCardPriceSummaryClassName,
   mobileVehicleCardTitleClassName,
 } from "@repo/marketplace-ui/lib/mobile-vehicle-card-layout";
-import { getVehicleCardSpecFacts } from "@repo/marketplace-ui/lib/vehicle-card-policy";
+import {
+  getMobileVehicleCardHeading,
+  getVehicleCardSpecFacts,
+} from "@repo/marketplace-ui/lib/vehicle-card-policy";
 import { useState } from "react";
 import {
   type FinancingVehicleOption,
@@ -39,6 +43,10 @@ export function LeaseSelectedVehicle({
 }) {
   const [failedImageUrl, setFailedImageUrl] = useState<string | null>(null);
   const facts = getVehicleCardSpecFacts(vehicle.filterData, locale);
+  const heading = getMobileVehicleCardHeading({
+    spec: vehicle.filterData.spec,
+    title: vehicle.title,
+  });
 
   return (
     <article
@@ -69,12 +77,28 @@ export function LeaseSelectedVehicle({
       </div>
       <div className={mobileVehicleCardContentClassName}>
         <div className={mobileVehicleCardInfoClassName}>
+          {heading.brand ? (
+            <p
+              aria-hidden="true"
+              className={`${mobileVehicleCardBrandClassName} lg:hidden`}
+              data-slot="vehicle-card-brand"
+              title={heading.brand}
+            >
+              {heading.brand}
+            </p>
+          ) : null}
           <h2
+            aria-label={vehicle.title}
             className={mobileVehicleCardTitleClassName}
             data-slot="lease-selected-vehicle-title"
             title={vehicle.title}
           >
-            {vehicle.title}
+            <span aria-hidden="true" className="lg:hidden">
+              {heading.title}
+            </span>
+            <span aria-hidden="true" className="hidden lg:inline">
+              {vehicle.title}
+            </span>
           </h2>
           <div className={mobileVehicleCardPriceSummaryClassName}>
             <p

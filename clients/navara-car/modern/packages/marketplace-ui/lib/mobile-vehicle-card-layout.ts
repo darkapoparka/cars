@@ -9,7 +9,10 @@ export const mobileVehicleCardMediaClassName =
 
 /** One right-hand content block; the photo stretches to the same row height. */
 export const mobileVehicleCardContentClassName =
-  "col-start-2 row-start-1 flex min-h-39 min-w-0 flex-col gap-2 px-2 py-3 lg:min-h-0 lg:flex-1 lg:justify-center lg:px-2.5";
+  "col-start-2 row-start-1 flex min-h-39 min-w-0 flex-col justify-between gap-2 px-2 py-3 lg:min-h-0 lg:flex-1 lg:justify-center lg:px-2.5";
+
+export const mobileVehicleCardBrandClassName =
+  "truncate font-normal text-micro text-muted-foreground tracking-normal";
 
 /** Title and price stay adjacent, including listings without a payment label. */
 export const mobileVehicleCardInfoClassName =

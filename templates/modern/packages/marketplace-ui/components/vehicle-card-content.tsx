@@ -32,6 +32,7 @@ import {
   type ListingSellerRole,
 } from "../lib/listing-truth";
 import {
+  mobileVehicleCardBrandClassName,
   mobileVehicleCardContentClassName,
   mobileVehicleCardFactsClassName,
   mobileVehicleCardInfoClassName,
@@ -41,6 +42,7 @@ import {
 } from "../lib/mobile-vehicle-card-layout";
 import {
   formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
   getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
@@ -496,34 +498,48 @@ const MobileDealerVehicleCardContent = ({
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
-}) => (
-  <Link
-    className={cn(
-      mobileVehicleCardContentClassName,
-      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
-    )}
-    data-slot="vehicle-card-mobile-content"
-    href={listingHref}
-  >
-    <div className={mobileVehicleCardInfoClassName}>
-      <h2
-        className={mobileVehicleCardTitleClassName}
-        data-slot="vehicle-card-title"
-        title={getVehicleCardTitle(listing, "comparison")}
-      >
-        {getVehicleCardTitle(listing, "comparison")}
-      </h2>
-      <VehiclePriceSummary
-        listing={listing}
-        locale={locale}
-        variant="comparison"
-      />
-    </div>
-    <div className={mobileVehicleCardFactsClassName}>
-      <VehicleSpecPills listing={listing} locale={locale} />
-    </div>
-  </Link>
-);
+}) => {
+  const heading = getMobileVehicleCardHeading(listing);
+  return (
+    <Link
+      className={cn(
+        mobileVehicleCardContentClassName,
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset lg:hidden"
+      )}
+      data-slot="vehicle-card-mobile-content"
+      href={listingHref}
+    >
+      <div className={mobileVehicleCardInfoClassName}>
+        {heading.brand ? (
+          <p
+            aria-hidden="true"
+            className={mobileVehicleCardBrandClassName}
+            data-slot="vehicle-card-brand"
+            title={heading.brand}
+          >
+            {heading.brand}
+          </p>
+        ) : null}
+        <h2
+          aria-label={heading.fullTitle}
+          className={mobileVehicleCardTitleClassName}
+          data-slot="vehicle-card-title"
+          title={heading.fullTitle}
+        >
+          {heading.title}
+        </h2>
+        <VehiclePriceSummary
+          listing={listing}
+          locale={locale}
+          variant="comparison"
+        />
+      </div>
+      <div className={mobileVehicleCardFactsClassName}>
+        <VehicleSpecPills listing={listing} locale={locale} />
+      </div>
+    </Link>
+  );
+};
 
 const ComparisonVehicleCardContent = ({
   desktopHeadingLevel,

@@ -516,16 +516,40 @@ for (const width of [320, 375, 390, 430]) {
       const cards = page.locator('[data-slot="vehicle-card-mobile-content"]');
       await expect(cards.first()).toBeVisible();
       const metrics = await cards.evaluateAll((elements) =>
-        elements.map((card) => ({
-          rows: [
-            ...card.querySelectorAll(
-              '[data-slot="vehicle-card-spec-pills"]:first-child > li'
-            ),
-          ]
-            .filter((row) => row.getBoundingClientRect().width > 0)
-            .map((row) =>
-              [...row.querySelectorAll('[data-slot="vehicle-card-spec"]')].map(
-                (pill) => {
+        elements.map((card) => {
+          const brand = card.querySelector('[data-slot="vehicle-card-brand"]');
+          const title = card.querySelector('[data-slot="vehicle-card-title"]');
+          const media = card
+            .closest("article")
+            ?.querySelector('[data-slot="vehicle-card-media"]');
+          const facts = card.querySelector(
+            '[data-slot="vehicle-card-spec-pills"]'
+          );
+          return {
+            brand: brand?.textContent,
+            brandFont: brand ? getComputedStyle(brand).fontSize : undefined,
+            titleName: title?.getAttribute("aria-label"),
+            fullTitle: title?.getAttribute("title"),
+            topDelta:
+              brand && media
+                ? brand.getBoundingClientRect().top -
+                  media.getBoundingClientRect().top
+                : undefined,
+            bottomDelta:
+              facts && media
+                ? facts.getBoundingClientRect().bottom -
+                  media.getBoundingClientRect().bottom
+                : undefined,
+            rows: [
+              ...card.querySelectorAll(
+                '[data-slot="vehicle-card-spec-pills"]:first-child > li'
+              ),
+            ]
+              .filter((row) => row.getBoundingClientRect().width > 0)
+              .map((row) =>
+                [
+                  ...row.querySelectorAll('[data-slot="vehicle-card-spec"]'),
+                ].map((pill) => {
                   const text = pill.firstElementChild;
                   const style = text ? getComputedStyle(text) : undefined;
                   return {
@@ -537,13 +561,22 @@ for (const width of [320, 375, 390, 430]) {
                     overflow: style?.overflow,
                     padding: getComputedStyle(pill).paddingInlineStart,
                   };
-                }
-              )
-            ),
-        }))
+                })
+              ),
+          };
+        })
       );
       expect(metrics.length).toBeGreaterThan(0);
       for (const card of metrics) {
+        expect(card.brand).toBeTruthy();
+        expect(card.brandFont).toBe("12px");
+        expect(card.titleName).toBe(card.fullTitle);
+        expect(
+          Math.abs(card.topDelta ?? Number.POSITIVE_INFINITY)
+        ).toBeLessThan(1);
+        expect(
+          Math.abs(card.bottomDelta ?? Number.POSITIVE_INFINITY)
+        ).toBeLessThan(1);
         expect(card.rows).toHaveLength(2);
         for (const row of card.rows) {
           expect(row).toHaveLength(2);

@@ -84,3 +84,38 @@ Automatic approval review rejected starting the local production preview with
 `blocked by policy`. Both production builds passed; browser interactions used
 the development previews. No public deployment or immutable template release
 was performed. Hosted acceptance remains a separate step.
+
+## Brand label follow-up
+
+The mobile card now shows the actual make as a muted 12px line above its
+single-line model title. A complete matching make prefix is removed from the
+visible title; unfamiliar prefixes remain intact. The complete vehicle name
+is retained as the accessible heading and tooltip. Desktop titles are retained.
+Inventory, related cars and mobile financing selection use the same policy.
+
+The text block distributes its remaining space so that the brand line starts
+at the photo's top and the bottom badges end at its bottom. In the matched
+Tesla example, card height remains 156px: photo and text stack both measure
+132px. The original text stack measured 111px. Equal badge columns and
+single-line truncation are retained.
+
+The Browser checked all 14 Navara cards at 320, 375, 390 and 430px with no
+misaligned columns, page overflow or broken visible images. English inventory
+was checked at the same widths; desktop at 1440px retains full titles and has
+no visible brand label. The actual Tesla detail and its three related cards
+were also inspected. The complete model name remains in the listing heading.
+
+Validation: 85 marketplace UI tests and both master/Navara web typechecks
+passed. Fourteen focused Chromium/WebKit checks covered the brand/fact geometry,
+desktop selection markup, leasing persistence/phone handoff, and menu/gallery
+dismissal with focus return. The first run passed 13; one WebKit 390px check
+lost its execution context during a development reload before assertions.
+The unchanged check passed when rerun. Its original trace is preserved.
+Biome and scoped whitespace checks passed. The React Best Practices review
+confirmed derived text without additional state, effects or dependencies.
+
+The matched comparison was captured at the browser's 356px viewport and is
+preserved as `runtime/modern-brand-eyebrow-2026-10-01/tesla-brand-before-after.png`,
+alongside geometry JSON and the reload trace. This follow-up uses the existing
+development previews; production builds were not repeated for this label
+iteration. No public deployment was performed.

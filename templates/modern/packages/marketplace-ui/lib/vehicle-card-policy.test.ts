@@ -6,6 +6,7 @@ import {
 import { describe, expect, it } from "vitest";
 import {
   formatVehicleCardMoney,
+  getMobileVehicleCardHeading,
   getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
@@ -25,6 +26,28 @@ const getListing = (slug: string): VehicleListing => {
 };
 
 describe("vehicle card policy", () => {
+  it("separates the real brand only at a complete title prefix", () => {
+    const listing = getListing("bmw-x5-m50d-sofia-2020");
+    expect(getMobileVehicleCardHeading(listing)).toEqual({
+      brand: "BMW",
+      fullTitle: "BMW X5 M50d",
+      title: "X5 M50d",
+    });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "2020 bmw X5 M50d" })
+    ).toEqual({ brand: "BMW", fullTitle: "bmw X5 M50d", title: "X5 M50d" });
+    expect(
+      getMobileVehicleCardHeading({ ...listing, title: "BMWi special edition" })
+        .title
+    ).toBe("BMWi special edition");
+    expect(
+      getMobileVehicleCardHeading({
+        ...listing,
+        spec: { ...listing.spec, make: "" },
+      })
+    ).toEqual({ brand: "", fullTitle: "BMW X5 M50d", title: "BMW X5 M50d" });
+  });
+
   it("resolves explicit comparison, compact-list, and standard variants", () => {
     expect(
       getVehicleCardVariant({

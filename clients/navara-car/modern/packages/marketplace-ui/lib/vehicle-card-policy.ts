@@ -66,13 +66,29 @@ export const getVehicleCardVariant = ({
 };
 
 export const getVehicleCardTitle = (
-  listing: VehicleListing,
+  listing: Pick<VehicleListing, "spec" | "title">,
   _variant: VehicleCardVariant
 ) => {
   const yearPrefix = `${listing.spec.year} `;
   return listing.title.startsWith(yearPrefix)
     ? listing.title.slice(yearPrefix.length)
     : listing.title;
+};
+
+/** Keep the actual brand separate without dropping any model or trim text. */
+export const getMobileVehicleCardHeading = (
+  listing: Pick<VehicleListing, "spec" | "title">
+) => {
+  const brand = listing.spec.make.trim();
+  const fullTitle = getVehicleCardTitle(listing, "comparison").trim();
+  const hasBrandPrefix =
+    brand &&
+    fullTitle.toLocaleLowerCase().startsWith(`${brand.toLocaleLowerCase()} `);
+  return {
+    brand,
+    fullTitle,
+    title: hasBrandPrefix ? fullTitle.slice(brand.length).trim() : fullTitle,
+  };
 };
 
 /** Split the actual listing title into a scannable model and variant; never invent stock details. */
