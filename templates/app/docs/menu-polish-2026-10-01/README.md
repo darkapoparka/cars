@@ -1,6 +1,6 @@
 # Restrained mobile menu polish
 
-The /more page keeps its existing grouped cards, dark Cars row, icons, language control and bottom navigation. Ordinary mobile row labels now use weight 400. Mobile separators align with the start of the text and stop before the chevron, instead of crossing the icon column. Desktop keeps weight 500 and full-width separators. Rows remain 56px high, with the two leading rows at 60px.
+The /more page keeps its existing grouped cards, dark Cars row, icons, language control and bottom navigation. Ordinary mobile row labels now use weight 400. The owner rejected the inset separators; full-width row borders have been restored on mobile, matching the original composition. Desktop keeps weight 500 and full-width separators. Rows remain 56px high, with the two leading rows at 60px. The current screenshot is 390-full-width.jpg; the earlier screenshots retain the rejected inset treatment for comparison.
 
 Verified the main template at 320px, 390px and 1440px with no page overflow. English/Bulgarian switching retains /more and marks the selected language correctly. The vehicle-services menu link opens /bg/service, and returning restores the menu. Desktop computed styles retain the previous weights and separators.
 

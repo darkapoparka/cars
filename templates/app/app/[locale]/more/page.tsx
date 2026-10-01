@@ -24,13 +24,13 @@ export default function MorePage() {
     <PageHeader title="Menu" action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
     <main {...stylex.props(s.content)}>
       {showroom.menu.map(group => <nav key={group.label} aria-label={tx(group.label)} {...stylex.props(s.section, s.list)}>
-        {group.items.map((item, index) => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} primary={item.primary} divider={index < group.items.length - 1} copy={item.location ? location : undefined}/>)}
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} primary={item.primary} copy={item.location ? location : undefined}/>)}
       </nav>)}
 
       {dealer.phoneE164 || dealer.email ? <section aria-label={tx('Contact the dealer')} {...stylex.props(s.section)}>
         <h2 {...stylex.props(s.sectionTitle)}>{tx('Contact the dealer')}</h2>
         <div {...stylex.props(s.list)}>
-          {dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164} divider={Boolean(dealer.email)}/> : null}
+          {dealer.phoneE164 ? <MenuRow href={'tel:' + dealer.phoneE164} icon="phone" title={dealer.phoneDisplay || dealer.phoneE164}/> : null}
           {dealer.email ? <MenuRow href={'mailto:' + dealer.email} icon="email" title={dealer.email}/> : null}
         </div>
       </section> : null}
@@ -46,12 +46,11 @@ export default function MorePage() {
   </div>;
 }
 
-function MenuRow({href, icon, title, copy, primary = false, divider = false}: {href: string; icon: ShowroomIconName; title: string; copy?: string; primary?: boolean; divider?: boolean}) {
+function MenuRow({href, icon, title, copy, primary = false}: {href: string; icon: ShowroomIconName; title: string; copy?: string; primary?: boolean}) {
   return <Link href={href} {...stylex.props(s.row, primary && s.primaryRow)}>
     <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={24}/></span>
     <span {...stylex.props(s.copy)}><span>{title}</span>{copy ? <span {...stylex.props(s.subtitle)}>{copy}</span> : null}</span>
     <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron, primary && s.primaryChevron)}/>
-    {divider && !primary ? <span aria-hidden="true" {...stylex.props(s.divider)}/> : null}
   </Link>;
 }
 
@@ -62,8 +61,7 @@ const s = stylex.create({
   section: {marginBottom: 16},
   sectionTitle: {margin: 0, paddingBlock: 10, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 500, lineHeight: '20px'},
   list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
-  row: {position: 'relative', display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: {[media.mobile]: 400, default: 500}, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0, [media.mobile]: 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
-  divider: {position: 'absolute', left: 55, right: 15, bottom: 0, height: 1, display: {[media.mobile]: 'block', default: 'none'}, backgroundColor: $.line, pointerEvents: 'none'},
+  row: {display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: {[media.mobile]: 400, default: 500}, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
   primaryRow: {minHeight: 60, fontWeight: 600, color: $.surface, borderBottomColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark, ':active': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
   icon: {display: 'grid', placeItems: 'center', width: 28, height: 28},
   copy: {display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflowWrap: 'anywhere'},
