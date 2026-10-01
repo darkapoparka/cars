@@ -98,7 +98,7 @@
 		{/if}
 		<div class="mobile-service-entry__vehicles">
 			{#each serviceVehicles as card, index (card.slug)}
-				<MobileVehicleCard {card} priority={index < 2} />
+				<MobileVehicleCard {card} priority={index < 2} variant="import" />
 			{/each}
 		</div>
 	</section>

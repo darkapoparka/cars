@@ -1137,7 +1137,7 @@
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .image) {
-			aspect-ratio: 2.05;
+			aspect-ratio: 1.75;
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .content) {
@@ -1253,9 +1253,7 @@
 		}
 
 		.daynight-home-vehicle-grid :global(.card-box-style-1 .card-box__title) {
-			-webkit-line-clamp: 1;
-			line-clamp: 1;
-			white-space: nowrap;
+			white-space: normal;
 		}
 
 		.daynight-newest-footer-cta {

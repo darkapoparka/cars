@@ -68,7 +68,13 @@ for (const width of [320, 390]) {
 			}
 		]) {
 			await navigation.getByRole('link', { name: service.link, exact: true }).click();
-			await expect(page.getByRole('heading', { name: service.heading, exact: true })).toBeVisible();
+			await expect(
+				page.getByRole('heading', {
+					name: service.heading,
+					level: service.link === 'Sell' ? 2 : 1,
+					exact: true
+				})
+			).toBeVisible();
 			await page.getByRole('tab', { name: service.tab, exact: true }).click();
 			await page.getByRole('button', { name: service.trigger, exact: true }).click();
 			const dialog = page.getByRole('dialog', { name: service.dialog, exact: true });

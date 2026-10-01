@@ -174,6 +174,7 @@
 
 	@media (max-width: 767.98px) {
 		:global(body) {
+			--bc-mobile-nav-height: max(58px, calc(3.5rem + 2px));
 			padding-bottom: calc(var(--bc-mobile-nav-height) + env(safe-area-inset-bottom));
 		}
 		:global(body:has(.mobile-bottom-nav[data-footer-visible='true'])) {
@@ -228,7 +229,7 @@
 			border-radius: 0;
 			background: transparent;
 			appearance: none;
-			color: var(--bc-copy);
+			color: var(--bc-muted);
 			cursor: pointer;
 			padding: 0;
 			text-align: center;
@@ -240,15 +241,18 @@
 
 		.mobile-bottom-nav__icon {
 			display: grid;
-			width: 44px;
-			height: 30px;
+			width: 28px;
+			height: 28px;
 			place-items: center;
-			border-radius: 10px;
 			color: inherit;
 			line-height: 0;
 		}
 
 		.mobile-bottom-nav__label {
+			display: block;
+			min-width: 0;
+			max-width: 100%;
+			overflow-wrap: anywhere;
 			color: inherit;
 			font-size: 0.75rem;
 			font-weight: var(--bc-weight-body);
@@ -257,12 +261,24 @@
 
 		.mobile-bottom-nav a.active,
 		.mobile-bottom-nav__menu-trigger.active {
-			color: var(--bc-accent);
+			color: var(--bc-ink);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__icon,
 		.mobile-bottom-nav__menu-trigger.active .mobile-bottom-nav__icon {
-			background: color-mix(in srgb, var(--bc-accent) 9%, var(--bc-white));
+			color: var(--bc-accent);
+		}
+		.mobile-bottom-nav a.active::before,
+		.mobile-bottom-nav__menu-trigger.active::before {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: 24px;
+			height: 3px;
+			border-radius: 0 0 3px 3px;
+			background: var(--bc-accent);
+			content: '';
+			transform: translateX(-50%);
 		}
 
 		.mobile-bottom-nav a.active .mobile-bottom-nav__label,
@@ -287,6 +303,8 @@
 
 		:global(.mobile-menu-sheet__panel .bc-mobile-sheet__body) {
 			display: grid;
+			grid-auto-rows: max-content;
+			align-content: start;
 			gap: var(--bc-space-3);
 			padding-bottom: var(--bc-space-2);
 		}

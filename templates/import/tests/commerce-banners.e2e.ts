@@ -20,14 +20,27 @@ test('menu banner stays inside its row and clear of contact buttons', async ({ p
 				.getByRole('button', { name: locale === 'en' ? 'Menu' : 'Меню', exact: true })
 				.click();
 			const menu = page.getByRole('dialog');
-			await expect(menu.locator('.commerce-banner')).toBeVisible();
+			await expect(menu.locator('.mobile-navigation-menu__banner')).toBeVisible();
 			const layout = await menu.evaluate((element) => {
-				const banner = element.querySelector('.commerce-banner')!.getBoundingClientRect();
+				const feature = element.querySelector('.mobile-navigation-menu__banner')!;
+				const banner = feature.getBoundingClientRect();
 				const buttons = element
 					.querySelector('.mobile-navigation-menu__actions')!
 					.getBoundingClientRect();
 				const body = element.querySelector('.bc-mobile-sheet__body')!.getBoundingClientRect();
+				const contactFits = [...feature.querySelectorAll('.mobile-navigation-menu__logo, a')].every(
+					(node) => {
+						const box = node.getBoundingClientRect();
+						return (
+							box.left >= banner.left &&
+							box.right <= banner.right &&
+							box.top >= banner.top &&
+							box.bottom <= banner.bottom
+						);
+					}
+				);
 				return {
+					contactFits,
 					gap: buttons.top - banner.bottom,
 					right: banner.right,
 					bodyRight: body.right,
@@ -36,7 +49,7 @@ test('menu banner stays inside its row and clear of contact buttons', async ({ p
 				};
 			});
 			await page.screenshot({
-				path: `docs/banner-nav-2026-09-30/menu-contained-${locale}-${width}-${height}.png`
+				path: info.outputPath(`menu-contained-${locale}-${width}-${height}.png`)
 			});
 			expect(
 				layout.gap,
@@ -44,6 +57,18 @@ test('menu banner stays inside its row and clear of contact buttons', async ({ p
 			).toBeGreaterThanOrEqual(11);
 			expect(layout.right).toBeLessThanOrEqual(layout.bodyRight + 1);
 			expect(layout.left).toBeGreaterThanOrEqual(layout.bodyLeft - 1);
+			expect(layout.contactFits).toBe(true);
+			const localeControl = menu.locator('[data-locale-selector]');
+			await localeControl.scrollIntoViewIfNeeded();
+			await expect(localeControl).toBeVisible();
+			expect(
+				await menu
+					.locator('.mobile-navigation-menu__locale')
+					.evaluate((node) => getComputedStyle(node).position)
+			).toBe('static');
+			expect(
+				await localeControl.evaluate((node) => Boolean(node.closest('.bc-mobile-sheet__body')))
+			).toBe(true);
 		}
 	}
 });
@@ -86,7 +111,7 @@ for (const locale of ['en', 'bg'] as const) {
 			}
 			await campaign.scrollIntoViewIfNeeded();
 			await page.screenshot({
-				path: `docs/banner-nav-2026-09-30/home-commerce-${locale}-${width}.png`
+				path: info.outputPath(`home-commerce-${locale}-${width}.png`)
 			});
 			await page
 				.getByRole('tab', { name: locale === 'en' ? 'Buy' : 'Купи', exact: true })
@@ -98,12 +123,12 @@ for (const locale of ['en', 'bg'] as const) {
 				.getByRole('button', { name: locale === 'en' ? 'Menu' : 'Меню', exact: true })
 				.click();
 			const menu = page.getByRole('dialog');
-			const feature = menu.locator('.commerce-banner');
+			const feature = menu.locator('.mobile-navigation-menu__banner');
 			await expect(feature).toBeVisible();
 			await expect
 				.poll(() =>
 					feature
-						.locator('img')
+						.locator('.mobile-navigation-menu__logo')
 						.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)
 				)
 				.toBe(true);
@@ -112,9 +137,14 @@ for (const locale of ['en', 'bg'] as const) {
 				.analyze();
 			expect(accessibility.violations).toEqual([]);
 			await page.screenshot({
-				path: `docs/banner-nav-2026-09-30/menu-commerce-${locale}-${width}.png`
+				path: info.outputPath(`menu-commerce-${locale}-${width}.png`)
 			});
-			await feature.click();
+			await menu
+				.getByRole('link', {
+					name: locale === 'en' ? 'Sell your car' : 'Продай колата си',
+					exact: true
+				})
+				.click();
 			await expect(page).toHaveURL(/\/sell-your-car/);
 			await expect(menu).not.toBeVisible();
 			const title = page.locator('#sell-valuation-title');
@@ -151,7 +181,7 @@ test('desktop commerce actions and article covers load', async ({ page }, info) 
 			)
 			.toBe(true);
 	}
-	await page.screenshot({ path: 'docs/banner-nav-2026-09-30/home-commerce-en-1440.png' });
+	await page.screenshot({ path: info.outputPath('home-commerce-en-1440.png') });
 	await visit(page, '/en/blog/gotov-za-registracia?lang=en');
 	await expect(page.locator('.article-cover')).toBeVisible();
 });
@@ -173,7 +203,7 @@ test('shared contact banner and registration cover reflow', async ({ page }, inf
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 			true
 		);
-		await page.screenshot({ path: `docs/banner-nav-2026-09-30/contact-commerce-en-${width}.png` });
+		await page.screenshot({ path: info.outputPath(`contact-commerce-en-${width}.png`) });
 		await visit(page, '/en/blog/gotov-za-registracia?lang=en');
 		const cover = page.locator('.article-cover');
 		await expect
@@ -185,6 +215,6 @@ test('shared contact banner and registration cover reflow', async ({ page }, inf
 			true
 		);
 		await cover.scrollIntoViewIfNeeded();
-		await page.screenshot({ path: `docs/banner-nav-2026-09-30/article-commerce-en-${width}.png` });
+		await page.screenshot({ path: info.outputPath(`article-commerce-en-${width}.png`) });
 	}
 });

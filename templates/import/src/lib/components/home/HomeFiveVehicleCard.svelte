@@ -1,4 +1,10 @@
 <script lang="ts">
+	import { page } from '$app/state';
+	import {
+		compactCardFuel,
+		compactCardMileage,
+		compactCardTransmission
+	} from '$lib/domain/vehicle-card-labels';
 	import { assetHref } from '$lib/utils/assets';
 	import { imageFallback } from '$lib/browser/image-fallback';
 	import { linkHref as resolve } from '$lib/utils/links';
@@ -22,6 +28,7 @@
 	} = $props();
 
 	const garage = getGarageContext();
+	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
 	let isSaved = $derived(garage.isFavorite(vehicle.slug));
 
 	const handleFavoriteActivation = (event: MouseEvent) => {
@@ -36,7 +43,13 @@
 	data-daynight-slug={vehicle.slug}
 >
 	<div class="top">
-		<p class={`${vehicle.highlightClass} highlight text-white`}>{vehicle.mileageLabel}</p>
+		<p class={`${vehicle.highlightClass} highlight text-white`} title={vehicle.mileageLabel}>
+			<span class="card-label-full">{vehicle.mileageLabel}</span><span
+				class="card-label-compact"
+				aria-hidden="true">{compactCardMileage(vehicle.mileageLabel, locale)}</span
+			>
+			<span class="card-label-compact sr-only">{copy.mileageAlt}: {vehicle.mileageLabel}</span>
+		</p>
 		<button
 			type="button"
 			class={['heart daynight-favorite', isSaved && 'is-active']}
@@ -111,11 +124,17 @@
 			</li>
 			<li aria-label={`${copy.fuelAlt}: ${vehicle.fuel}`}>
 				<Fuel size={14} strokeWidth={1.9} aria-hidden="true" />
-				<span>{vehicle.fuel}</span>
+				<span class="card-label-full">{vehicle.fuel}</span><span
+					class="card-label-compact"
+					aria-hidden="true">{compactCardFuel(vehicle.fuel)}</span
+				>
 			</li>
 			<li aria-label={`${copy.transmissionAlt}: ${vehicle.transmission}`}>
 				<Cog size={14} strokeWidth={1.9} aria-hidden="true" />
-				<span>{vehicle.transmission}</span>
+				<span class="card-label-full">{vehicle.transmission}</span><span
+					class="card-label-compact"
+					aria-hidden="true">{compactCardTransmission(vehicle.transmission)}</span
+				>
 			</li>
 		</ul>
 		<p class="card-box__price daynight-card-price h6">
@@ -138,6 +157,9 @@
 </div>
 
 <style>
+	.card-label-compact {
+		display: none;
+	}
 	.top {
 		position: absolute;
 		inset: 0 0 auto;
@@ -528,11 +550,14 @@
 			transform: translateY(1px);
 		}
 
-		/* Mobile card is finalized as title → chips → price; the details-arrow
-		   row is a desktop-only affordance (the whole card is tappable). */
-		.card-box-style-1 .divider,
-		.daynight-card-actions {
+		.card-box-style-1 .divider {
 			display: none;
+		}
+		.card-label-full {
+			display: none;
+		}
+		.card-label-compact {
+			display: inline;
 		}
 
 		.daynight-card-soft-hover .content {
@@ -564,7 +589,7 @@
 			padding: 0 9px;
 			border-radius: 8px;
 			font-size: 12px;
-			font-weight: 700;
+			font-weight: var(--bc-weight-body);
 			letter-spacing: -0.1px;
 			line-height: 24px;
 			border: 1px solid rgba(28, 28, 28, 0.08);
@@ -586,14 +611,14 @@
 
 		.card-box-style-1 .card-box__title {
 			min-height: 0;
-			margin-bottom: 8px;
+			margin-bottom: 0;
 			font-size: 18px;
 			font-weight: 650;
-			line-height: 24px;
+			line-height: 22px;
 		}
 
 		.card-box-style-1 .card-box__title a {
-			display: flex;
+			display: block;
 			width: 100%;
 			min-width: 0;
 			max-width: 100%;
@@ -602,16 +627,19 @@
 			overflow: hidden;
 			margin-block: -9px;
 			padding-block: 9px;
-			white-space: nowrap;
+			white-space: normal;
 		}
 
 		.card-box-style-1 .daynight-card-title-full {
-			display: block;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
 			min-width: 0;
 			max-width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			white-space: nowrap;
+			white-space: normal;
 		}
 
 		/* Auxero app.css underlines the title/brand link on tap (.active fake-hover
@@ -622,14 +650,14 @@
 			text-decoration: none !important;
 		}
 
-		/* Mobile: title → spec chips → price anchored at the bottom (price as the bold conclusion). */
+		/* Title and price lead; compact facts and the outline action follow. */
 		.daynight-card-specs {
 			display: grid !important;
 			grid-template-columns: repeat(3, minmax(0, 1fr));
-			order: 1;
+			order: 2;
 			gap: 5px !important;
 			margin-top: 0;
-			margin-bottom: 9px !important;
+			margin-bottom: 0 !important;
 		}
 
 		.daynight-card-specs li {
@@ -640,12 +668,12 @@
 			box-sizing: border-box;
 			gap: 0;
 			padding: 3px 7px;
-			min-height: 32px;
+			min-height: 24px;
 			font-size: 12px;
 			line-height: 16px;
 			/* Inset specs use a soft fill within the white mobile card. */
 			background: var(--bc-surface-soft);
-			border-color: var(--bc-border);
+			border-color: transparent;
 		}
 
 		.daynight-card-specs span {
@@ -662,8 +690,8 @@
 		}
 
 		.daynight-card-price {
-			order: 2;
-			margin-top: auto;
+			order: 1;
+			margin-top: 0;
 			align-items: center;
 			flex-direction: row;
 			gap: 8px;
@@ -694,6 +722,21 @@
 			min-height: 44px;
 			align-items: center;
 			margin-block: -14px;
+		}
+		.card-box-style-1 .content {
+			gap: 8px;
+		}
+		.daynight-card-actions {
+			order: 3;
+			margin-top: 0;
+		}
+		.daynight-card-actions .view-details {
+			min-height: 44px;
+			border-color: var(--bc-border-strong);
+			background: transparent;
+			color: var(--bc-ink) !important;
+			font-size: 16px !important;
+			font-weight: var(--bc-weight-action) !important;
 		}
 	}
 
