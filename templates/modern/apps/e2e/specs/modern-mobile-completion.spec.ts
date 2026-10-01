@@ -506,7 +506,7 @@ test("320px inventory keeps semantic type and complete vehicle facts", async ({
 });
 
 for (const width of [320, 375, 390, 430]) {
-  test(`mobile spec badges keep equal columns and one line at ${width}px`, async ({
+  test(`mobile spec badges keep full values in padded rows at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 844 });
@@ -560,6 +560,9 @@ for (const width of [320, 375, 390, 430]) {
                     textOverflow: style?.textOverflow,
                     overflow: style?.overflow,
                     padding: getComputedStyle(pill).paddingInlineStart,
+                    textClientWidth: text?.clientWidth,
+                    textScrollWidth: text?.scrollWidth,
+                    text: text?.textContent,
                   };
                 })
               ),
@@ -580,8 +583,11 @@ for (const width of [320, 375, 390, 430]) {
         expect(card.rows).toHaveLength(2);
         for (const row of card.rows) {
           expect(row).toHaveLength(2);
-          expect(Math.abs(row[0].width - row[1].width)).toBeLessThan(1);
           for (const pill of row) {
+            expect(
+              pill.textScrollWidth,
+              pill.text ?? "vehicle fact"
+            ).toBeLessThanOrEqual(pill.textClientWidth ?? 0);
             expect(pill.height).toBe(24);
             expect(pill.weight).toBe("400");
             expect(pill.whiteSpace).toBe("nowrap");

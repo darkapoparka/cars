@@ -23,7 +23,10 @@ export function DealerVehicleFacts({
           data-slot="vehicle-card-spec-pills"
         >
           {rows.map((row) => (
-            <li className="grid min-w-0 grid-cols-2 gap-1.5" key={row[0].id}>
+            <li
+              className="grid min-w-0 grid-cols-[minmax(0,1fr)_minmax(max-content,1fr)] gap-1.5"
+              key={row[0].id}
+            >
               {row.map((fact) => (
                 <span
                   className="flex min-h-6 min-w-0 max-w-full items-center justify-center rounded-md border border-border/40 bg-secondary px-1.5 py-0.5 font-normal tabular-nums"

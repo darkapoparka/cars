@@ -1,15 +1,15 @@
 /** Shared mobile geometry for inventory links and financing selection cards. */
 export const mobileVehicleCardClassName =
-  "grid grid-cols-[44%_minmax(0,1fr)] lg:flex lg:flex-row";
+  "grid grid-cols-[42%_minmax(0,1fr)] lg:flex lg:flex-row";
 
-export const mobileVehicleCardImageSizes = "44vw";
+export const mobileVehicleCardImageSizes = "42vw";
 
 export const mobileVehicleCardMediaClassName =
   "relative col-start-1 row-start-1 z-10 m-3 mr-0 min-w-0 self-stretch overflow-hidden rounded-lg bg-secondary lg:z-auto lg:m-0 lg:aspect-auto lg:min-h-28 lg:w-[40%] lg:min-w-24 lg:max-w-44 lg:shrink-0 lg:rounded-none";
 
 /** One right-hand content block; the photo stretches to the same row height. */
 export const mobileVehicleCardContentClassName =
-  "col-start-2 row-start-1 flex min-h-39 min-w-0 flex-col justify-between gap-2 px-2 py-3 lg:min-h-0 lg:flex-1 lg:justify-center lg:px-2.5";
+  "col-start-2 row-start-1 flex min-h-39 min-w-0 flex-col justify-between gap-2 py-3 pr-3 pl-2 lg:min-h-0 lg:flex-1 lg:justify-center lg:px-2.5";
 
 export const mobileVehicleCardBrandClassName =
   "truncate font-normal text-micro text-muted-foreground tracking-normal";
