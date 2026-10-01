@@ -135,6 +135,8 @@ test('desktop sidebar maximums and choices submit without JavaScript', async ({
 			url.searchParams.get('layout') === 'dashboard'
 	);
 	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
+	const sortMenu = page.locator('.inventory-sort summary');
+	await sortMenu.click();
 	await page.getByRole('button', { name: 'Най-ниска цена', exact: true }).click();
 	await expect(page).toHaveURL(
 		(url) =>
@@ -144,6 +146,8 @@ test('desktop sidebar maximums and choices submit without JavaScript', async ({
 			url.searchParams.getAll('brand').includes('Audi') &&
 			url.searchParams.get('layout') === 'dashboard'
 	);
+	await expect(sortMenu).toHaveAttribute('title', 'Най-ниска цена');
+	await sortMenu.click();
 	await expect(page.getByRole('button', { name: 'Най-ниска цена', exact: true })).toHaveAttribute(
 		'aria-pressed',
 		'true'
@@ -168,11 +172,19 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 	);
 	await page.keyboard.press('Escape');
 	await expect(model).toBeFocused();
+	const sortMenu = page.locator('.inventory-sort summary');
+	await expect(sortMenu).toHaveCount(1);
+	await expect(sortMenu).toHaveAttribute('title', 'Best Match');
+	await sortMenu.press('Enter');
 	const sort = page.getByRole('button', { name: 'Lowest Price', exact: true });
 	await expect(page.getByRole('button', { name: 'Best Match', exact: true })).toHaveAttribute(
 		'aria-pressed',
 		'true'
 	);
+	await sort.press('Escape');
+	await expect(sortMenu).toBeFocused();
+	await expect(sort).not.toBeVisible();
+	await sortMenu.press('Enter');
 	await sort.press('Enter');
 	await expect(page).toHaveURL(
 		(url) =>
@@ -182,13 +194,20 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 			url.searchParams.get('maxPrice') === '50000' &&
 			url.searchParams.get('lang') === 'en'
 	);
+	await expect(sortMenu).toHaveAttribute('title', 'Lowest Price');
+	await expect(sort).not.toBeVisible();
+	await sortMenu.click();
 	await expect(sort).toHaveAttribute('aria-pressed', 'true');
 	const view = page.locator('.inventory-view summary');
 	await view.click();
+	await expect(sort).not.toBeVisible();
 	await expect(page.getByRole('link', { name: 'Comfortable grid', exact: true })).toBeVisible();
 	await view.press('Escape');
 	await expect(view).toBeFocused();
 	await expect(page.getByRole('link', { name: 'Comfortable grid', exact: true })).not.toBeVisible();
+	await sortMenu.click();
+	await page.getByRole('heading', { name: 'Available vehicles', exact: true }).click();
+	await expect(sort).not.toBeVisible();
 	await view.click();
 	await page.getByRole('link', { name: 'Comfortable grid', exact: true }).click();
 	await expect(page).toHaveURL(

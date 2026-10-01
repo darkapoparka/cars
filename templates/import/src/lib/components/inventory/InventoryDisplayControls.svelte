@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import {
-		inventoryDesktopControlsCopy,
-		inventorySortButtonOrder
-	} from '$lib/content/inventory-desktop-controls';
+	import { inventoryDesktopControlsCopy } from '$lib/content/inventory-desktop-controls';
+	import ArrowDownUp from '@lucide/svelte/icons/arrow-down-up';
+	import Check from '@lucide/svelte/icons/check';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import PanelLeft from '@lucide/svelte/icons/panel-left';
@@ -13,59 +12,72 @@
 	let { desktop, english = false }: { desktop: AuxeroInventoryDesktopData; english?: boolean } =
 		$props();
 	const controlsCopy = $derived(inventoryDesktopControlsCopy[english ? 'en' : 'bg']);
-	const sortButtons = $derived(
-		inventorySortButtonOrder
-			.map((value) => desktop.sortOptions.find((option) => option.value === value))
-			.filter((option) => option !== undefined)
-	);
+	let sortMenu: HTMLDetailsElement;
 	let viewMenu: HTMLDetailsElement;
-	function dismissViewMenu(event: PointerEvent | FocusEvent) {
-		if (event.target instanceof Node && !viewMenu?.contains(event.target) && viewMenu) {
-			viewMenu.open = false;
+	function dismissMenus(event: PointerEvent | FocusEvent) {
+		if (!(event.target instanceof Node)) return;
+		for (const menu of [sortMenu, viewMenu]) {
+			if (menu?.open && !menu.contains(event.target)) menu.open = false;
 		}
 	}
-	function handleViewKey(event: KeyboardEvent) {
-		if (event.key === 'Escape' && viewMenu?.open) {
-			viewMenu.open = false;
-			viewMenu.querySelector('summary')?.focus();
+	function handleMenuKey(event: KeyboardEvent) {
+		if (event.key !== 'Escape') return;
+		const menu = [sortMenu, viewMenu].find((menu) => menu?.open);
+		if (menu) {
+			menu.open = false;
+			menu.querySelector('summary')?.focus();
+		}
+	}
+	function keepOneMenu(event: Event) {
+		const opened = event.currentTarget as HTMLDetailsElement;
+		if (!opened.open) return;
+		for (const menu of [sortMenu, viewMenu]) {
+			if (menu && menu !== opened) menu.open = false;
 		}
 	}
 </script>
 
-<svelte:document
-	onpointerdown={dismissViewMenu}
-	onfocusin={dismissViewMenu}
-	onkeydown={handleViewKey}
-/>
+<svelte:document onpointerdown={dismissMenus} onfocusin={dismissMenus} onkeydown={handleMenuKey} />
 
 <div class="inventory-display" role="group" aria-label={desktop.controlsLabel}>
-	<form
-		action={linkHref('/inventory')}
-		class="inventory-display__sort"
-		aria-label={controlsCopy.sortLabel}
-	>
-		{#each [...page.url.searchParams].filter(([name]) => name !== 'sort') as [name, value], i (i)}<input
-				type="hidden"
-				{name}
-				{value}
-			/>{/each}
-		<span class="inventory-sort-label">{controlsCopy.sortLabel}</span>
-		<div class="inventory-sort-buttons">
-			{#each sortButtons as option (option.value)}<Action
-					type="submit"
-					name="sort"
-					value={option.value}
-					variant="quiet"
-					size="compact"
-					class="inventory-sort-button"
-					aria-label={option.label}
-					title={option.label}
-					aria-pressed={option.active}
-					>{controlsCopy.sortButtons[option.value] ?? option.label}</Action
-				>{/each}
-		</div>
-	</form>
-	<details class="inventory-view" bind:this={viewMenu}>
+	<details class="inventory-menu inventory-sort" bind:this={sortMenu} ontoggle={keepOneMenu}>
+		<summary
+			aria-label={controlsCopy.sortLabel + ': ' + desktop.selectedSort}
+			title={desktop.selectedSort}
+			><ArrowDownUp size={18} aria-hidden="true" />{controlsCopy.sortLabel}<ChevronDown
+				size={16}
+				aria-hidden="true"
+			/></summary
+		>
+		<nav aria-label={controlsCopy.sortLabel}>
+			<form
+				action={linkHref('/inventory')}
+				onsubmit={() => {
+					sortMenu.open = false;
+				}}
+			>
+				{#each [...page.url.searchParams].filter(([name]) => name !== 'sort') as [name, value], i (i)}<input
+						type="hidden"
+						{name}
+						{value}
+					/>{/each}
+				{#each desktop.sortOptions as option (option.value)}<Action
+						type="submit"
+						name="sort"
+						value={option.value}
+						variant="quiet"
+						size="compact"
+						class="inventory-sort__option"
+						aria-pressed={option.active}
+						><span>{option.label}</span>{#if option.active}<Check
+								size={18}
+								aria-hidden="true"
+							/>{/if}</Action
+					>{/each}
+			</form>
+		</nav>
+	</details>
+	<details class="inventory-menu inventory-view" bind:this={viewMenu} ontoggle={keepOneMenu}>
 		<summary
 			><LayoutGrid size={18} aria-hidden="true" />{desktop.viewLabel}<ChevronDown
 				size={16}
@@ -76,7 +88,8 @@
 			{#each desktop.viewOptions as option (option.view)}<a
 					href={linkHref(option.href)}
 					aria-label={option.ariaLabel}
-					aria-current={option.active ? 'true' : undefined}>{option.label}</a
+					aria-current={option.active ? 'true' : undefined}
+					onclick={() => (viewMenu.open = false)}>{option.label}</a
 				>{/each}
 			<div class="inventory-view__layout">
 				<Action
@@ -99,76 +112,39 @@
 
 <style>
 	.inventory-display {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		align-items: center;
-		gap: var(--bc-space-4);
-	}
-	.inventory-display__sort {
 		display: flex;
-		align-items: center;
 		justify-content: flex-end;
-		gap: var(--bc-space-2);
-		margin: 0;
-		min-width: 0;
-	}
-	.inventory-sort-label {
-		color: var(--bc-copy);
-		font-size: var(--bc-text-body);
-		white-space: nowrap;
-	}
-	.inventory-sort-buttons {
-		display: flex;
-		gap: var(--bc-space-1);
-	}
-	.inventory-sort-buttons :global(.inventory-sort-button) {
-		min-height: var(--bc-control-height-standard);
-		padding-inline: var(--bc-space-3);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-md);
-		background: var(--bc-surface-raised);
-		font-size: var(--bc-text-label);
-		white-space: nowrap;
-	}
-	.inventory-sort-buttons :global(.inventory-sort-button:hover) {
-		border-color: var(--bc-ink);
-		background: var(--bc-surface);
-	}
-	.inventory-sort-buttons :global(.inventory-sort-button[aria-pressed='true']) {
-		border-color: var(--bc-accent);
-		background: var(--bc-accent-soft);
-		color: var(--bc-accent);
+		align-items: center;
+		gap: var(--bc-space-3);
 	}
 	summary {
-		border: 0;
-		border-radius: var(--bc-radius-sm);
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-2);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-pill);
 		min-height: var(--bc-control-height-standard);
-		padding: 0 var(--bc-space-2);
-		background: transparent;
+		padding: 0 var(--bc-space-4);
+		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
-	}
-	.inventory-view {
-		position: relative;
-	}
-	summary {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-		border: 0;
-		background: transparent;
+		white-space: nowrap;
 		list-style: none;
 		cursor: pointer;
 	}
+	.inventory-menu {
+		position: relative;
+	}
 	summary:hover,
-	.inventory-view[open] summary {
+	.inventory-menu[open] summary {
 		background: var(--bc-surface);
+		border-color: var(--bc-ink);
 	}
 	summary::-webkit-details-marker {
 		display: none;
 	}
-	.inventory-view nav {
+	.inventory-menu nav {
 		position: absolute;
 		right: 0;
 		top: calc(100% + var(--bc-space-2));
@@ -181,9 +157,15 @@
 		box-shadow: var(--bc-shadow-panel);
 		display: grid;
 	}
-	.inventory-view a {
+	.inventory-menu form {
+		margin: 0;
+	}
+	.inventory-menu a,
+	.inventory-menu :global(.inventory-sort__option) {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-4);
 		min-height: var(--bc-control-height-standard);
 		padding: var(--bc-space-2) var(--bc-space-3);
 		border-radius: var(--bc-radius-md);
@@ -191,8 +173,15 @@
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 	}
-	.inventory-view a:hover,
-	.inventory-view a[aria-current='true'] {
+	.inventory-menu :global(.inventory-sort__option) {
+		width: 100%;
+		border: 0;
+		font-weight: var(--bc-weight-control);
+	}
+	.inventory-menu a:hover,
+	.inventory-menu a[aria-current='true'],
+	.inventory-menu :global(.inventory-sort__option:hover),
+	.inventory-menu :global(.inventory-sort__option[aria-pressed='true']) {
 		background: var(--bc-surface-hover);
 	}
 	.inventory-view__layout {
@@ -207,20 +196,5 @@
 		border-radius: var(--bc-radius-md);
 		padding-inline: var(--bc-space-3);
 		white-space: nowrap;
-	}
-	@media (max-width: 1199px) {
-		.inventory-sort-label {
-			display: none;
-		}
-	}
-	@media (min-width: 768px) and (max-width: 1023px) {
-		.inventory-display__sort {
-			justify-content: stretch;
-		}
-		.inventory-sort-buttons {
-			display: grid;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			width: 100%;
-		}
 	}
 </style>

@@ -6,14 +6,12 @@
 		onopen,
 		summary,
 		expanded = false,
-		embedded = false,
 		inverse = false
 	}: {
 		filter: AuxeroInventoryFilter;
 		onopen: () => void;
 		expanded?: boolean;
 		summary?: string;
-		embedded?: boolean;
 		inverse?: boolean;
 	} = $props();
 </script>
@@ -21,12 +19,11 @@
 <button
 	type="button"
 	class="site-filter-trigger"
-	class:site-filter-trigger--embedded={embedded}
 	class:site-filter-trigger--inverse={inverse}
 	data-active={Boolean(summary) || filter.selectedValues.length > 0}
 	aria-haspopup="dialog"
 	aria-expanded={expanded}
-	aria-label={embedded || inverse
+	aria-label={inverse
 		? filter.label +
 			(summary ? ': ' + summary : filter.selectedValues.length ? ': ' + filter.selectedSummary : '')
 		: undefined}
@@ -93,18 +90,9 @@
 			flex-shrink: 0;
 			color: var(--bc-muted);
 		}
-		.site-filter-trigger--embedded {
-			min-height: var(--bc-control-height-hero);
-			border: 0;
-			border-right: 1px solid var(--bc-border);
-			border-radius: 0;
-			background: transparent;
-		}
-		.site-filter-trigger--embedded[data-active='true'] {
-			border-color: var(--bc-border);
-			background: transparent;
-		}
 		.site-filter-trigger--inverse {
+			max-width: 100%;
+			border-radius: var(--bc-radius-pill);
 			border-color: var(--bc-glass-border);
 			background: var(--bc-glass-surface);
 			color: var(--bc-white);

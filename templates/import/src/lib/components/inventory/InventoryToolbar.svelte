@@ -33,7 +33,7 @@
 		return `${filter.selectedValues[0] ? format(min) + ' – ' + format(filter.selectedValues[0]) : (english ? 'From ' : 'От ') + format(min)} ${filter.numericInput.unit}`;
 	}
 	const quickFilters = $derived(
-		['maxPrice', 'maxMileage', 'fuel', 'body']
+		['brand', 'q', 'maxPrice', 'maxMileage', 'fuel', 'body']
 			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
 			.filter((filter) => filter !== undefined)
 	);
@@ -41,15 +41,13 @@
 
 <div class="inventory-toolbar">
 	<div class="inventory-toolbar__row">
-		<div class="inventory-toolbar__filters">
-			{#each quickFilters as filter (filter.id)}<InventoryFilter
-					{filter}
-					inverse
-					summary={appliedRangeSummary(filter)}
-					expanded={allOpen && activeFilter?.id === filter.id}
-					onopen={() => onopen(filter)}
-				/>{/each}
-		</div>
+		{#each quickFilters as filter (filter.id)}<InventoryFilter
+				{filter}
+				inverse
+				summary={appliedRangeSummary(filter)}
+				expanded={allOpen && activeFilter?.id === filter.id}
+				onopen={() => onopen(filter)}
+			/>{/each}
 		<Action
 			variant="glass"
 			size="compact"
@@ -77,15 +75,10 @@
 		max-width: var(--bc-desktop-discovery-width);
 	}
 	.inventory-toolbar__row {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 		align-items: center;
-		gap: var(--bc-space-4);
-	}
-	.inventory-toolbar__filters {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-		min-width: 0;
 		gap: var(--bc-space-2);
 	}
 	.inventory-toolbar__active {
@@ -115,12 +108,7 @@
 	}
 	.inventory-toolbar__row :global(.inventory-toolbar__all) {
 		min-height: var(--bc-control-height-primary);
-		border-radius: var(--bc-radius-md);
+		border-radius: var(--bc-radius-pill);
 		white-space: nowrap;
-	}
-	@media (min-width: 768px) and (max-width: 1023px) {
-		.inventory-toolbar__filters {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
 	}
 </style>

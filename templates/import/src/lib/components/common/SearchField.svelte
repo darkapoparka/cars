@@ -7,7 +7,6 @@
 		placeholder = label,
 		name = 'q',
 		controls,
-		embedded = false,
 		children
 	}: {
 		value?: string;
@@ -15,17 +14,12 @@
 		placeholder?: string;
 		name?: string;
 		controls?: string;
-		embedded?: boolean;
 		children?: Snippet;
 	} = $props();
 	const id = $props.id();
 </script>
 
-<div
-	class="search-field"
-	class:search-field--action={Boolean(children)}
-	class:search-field--embedded={embedded}
->
+<div class="search-field" class:search-field--action={Boolean(children)}>
 	<Search size={22} aria-hidden="true" />
 	<label class="sr-only" for={id}>{label}</label>
 	<input
@@ -81,14 +75,5 @@
 	input::placeholder {
 		color: var(--bc-copy);
 		opacity: 1;
-	}
-	@media (min-width: 768px) {
-		.search-field--embedded {
-			min-width: 0;
-			border: 0;
-			border-radius: 0;
-			background: transparent;
-			padding-block: 0;
-		}
 	}
 </style>

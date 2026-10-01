@@ -13,18 +13,13 @@
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
 	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
-	import InventoryFilter from './InventoryFilter.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import SearchField from '$lib/components/common/SearchField.svelte';
 	import InventorySidebar from './InventorySidebar.svelte';
-	import {
-		inventoryFilterParam,
-		parseInventoryQuery,
-		serializeInventoryQuery
-	} from '$lib/domain/inventory-query';
+	import { parseInventoryQuery, serializeInventoryQuery } from '$lib/domain/inventory-query';
 	let {
 		cards,
 		desktop,
@@ -58,11 +53,6 @@
 	let allOpen = $state(false);
 	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
 	let dialog = $state<InventoryFiltersDialog>();
-	const heroFilters = $derived(
-		['brand', 'q']
-			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
-			.filter((filter) => filter !== undefined)
-	);
 	const openFilters = (filter?: AuxeroInventoryFilter) => dialog?.openFilters(filter);
 	const searchState = $derived(parseInventoryQuery(page.url.searchParams));
 	const searchHiddenInputs = $derived(
@@ -88,14 +78,7 @@
 							{name}
 							{value}
 						/>{/each}
-					{#each heroFilters as filter (filter.id)}<InventoryFilter
-							{filter}
-							embedded
-							expanded={allOpen && activeFilter?.id === filter.id}
-							onopen={() => openFilters(filter)}
-						/>{/each}
 					<SearchField
-						embedded
 						name="keyword"
 						value={searchState.filters.keyword ?? ''}
 						label={desktop.searchLabel}
@@ -171,13 +154,6 @@
 		margin-inline: auto;
 	}
 	.inventory-hero__search {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 3fr);
-		padding: var(--bc-space-1);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
 		text-align: start;
 	}
 	.inventory-results__layout,
