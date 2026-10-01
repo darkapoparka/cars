@@ -39,6 +39,8 @@ the assertion. The same failure was reproduced with a saved test log.
 
 The compact machine-readable receipt is [mobile verification](mobile/2026-10-01/verification.json).
 Raw reports remain local under `runtime/mobile-20261001-artifacts/qa/`.
+The committed product-source fingerprint excludes native captures and generated
+`.qa/` test output. All 653 committed source files match the verified working copy.
 
 ## Template status
 
@@ -53,8 +55,8 @@ Product fonts, native icons, photographs and domain catalogs are source assets.
 Native Android screenshots/UI hierarchies are local comparison evidence under
 ignored `reference/android/`, rather than product assets published with the clone.
 A byte-identical C: copy of all 1,614 reference files (191,842,674 bytes) was prepared.
-Their relocation is awaiting the owner response because automatic approval review
-blocked the relocation command; both copies remain preserved.
+Automatic approval review blocked their relocation command. Both copies remain
+preserved; no original reference files were moved or deleted.
 
 ## Android reference
 
@@ -64,10 +66,16 @@ It also contained CARS24 UAE, AutoScout24 and DubiCars. AutoScout24 26.38.6 home
 results and filter screens were inspected and captured.
 
 L: fell from approximately 5 GiB free before launch to approximately 27 MiB.
-The emulator subsequently exited and disappeared from ADB; L: recovered to about
-590 MiB. It was not restarted, wiped or relocated. Its data remains on L:. More
-space is needed before another boot. The observed timing does not by itself prove
-which process caused the exit or every byte of the drive growth.
+The emulator subsequently exited and disappeared from ADB. After L: recovered to
+about 4.2 GiB and RAM was checked, one controlled recovery boot used verified
+copies of its user-data and cache disks plus temporary files on C:, with read-only
+mode and snapshots disabled. It reached ADB online, but QEMU still mapped the
+original RAM image under the L: AVD, and L: fell to roughly 295 MiB free. The
+recovery emulator was shut down through ADB. It is currently stopped; no further
+restart was attempted. Original data and the verified C: recovery copies remain
+preserved. A runtime entirely on a drive with enough space is required before
+another boot. The observed timing does not by itself prove which process caused
+the first exit or every byte of drive growth.
 
 ## Final app reference recommendation
 

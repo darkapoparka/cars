@@ -5,10 +5,11 @@
   "verifiedAt": "2026-10-01T08:59:27.626Z",
   "canonicalSource": "L:/CODEX/cars/templates/mobile",
   "preview": "http://127.0.0.1:6474/",
-  "sourceDigest": "e6a1882804c708b81de167a2b4a01ca8ed967ba4d7d10aa2c48c9ef955c2ad72",
+  "sourceDigest": "4e774e199fe47d56768215315d0dff78873c573ac4564ac05251d9e49ce3361f",
   "exportPolicy": "cars-source-v1",
   "additionalExclusions": [
-    "reference/android/**"
+    "reference/android/**",
+    ".qa/**"
   ],
   "runtime": "Node 22.20.0",
   "buildId": "-mPnr-dp8umdPVDeFDBzK",
@@ -49,11 +50,23 @@
     "initiallyOnline": true,
     "mobileDeVersion": "10.26",
     "autoScout24Version": "26.38.6",
-    "finalState": "exited; absent from ADB",
-    "restarted": false
+    "finalState": "stopped after recovery boot; absent from ADB",
+    "restarted": true,
+    "recovery": {
+      "mode": "one controlled read-only recovery boot",
+      "dataDirectory": "C:/Users/radev/AppData/Local/Cars/mobile-89e4395-20261001/emulator-data",
+      "originalRamImageStillOn": "L:",
+      "stoppedThroughAdb": true,
+      "finalAdbState": "no devices",
+      "originalFilesNotDeleted": true,
+      "verifiedDiskCopiesPreserved": true
+    }
   },
   "reports": {
     "routes": "110af11a60e95f8db1106ed5c400125562d31ca24acb380b3727e9a99f040eaa",
     "interactions": "78c552fa38ca0d9071092337977df9bd79cd77ba33fb9d869cfc859ba1e50274"
-  }
+  },
+  "sourceFileCount": 653,
+  "sourceCommit": "6a787b8c4dc17a58abf897119c49657c53bb51bc",
+  "receiptUpdatedAt": "2026-10-01T09:38:33.092Z"
 }
