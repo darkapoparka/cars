@@ -24,7 +24,7 @@
 
 <AboutHero />
 <div class="dn-about-intro dn-information-panel">
-  <EntryCard title={brand.name} titleId="about-intro-title">
+  <EntryCard title={i18n.t("m_b4b580a9ad8c")} titleId="about-intro-title">
     <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
     <a class="dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/listing-grid'))}>
       <span>{i18n.t("m_f92c64344e85")}</span><MobileActionIcon name="arrow" size={18} />
