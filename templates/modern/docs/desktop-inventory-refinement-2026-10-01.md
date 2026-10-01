@@ -1,5 +1,7 @@
 # Desktop inventory refinement — 1 October 2026
 
+The owner rejected this desktop composition. Its visual changes are superseded by [Desktop density correction](desktop-density-correction-2026-10-01.md). The checks below describe this earlier implementation, not the current layout or visual acceptance.
+
 The catalogue keeps Modern's existing black, white and red identity, inventory data, search draft, URL state and filter dialogs. The changes apply at 1024px and above. Mobile card components and mobile layout constants are unchanged.
 
 ## Changes

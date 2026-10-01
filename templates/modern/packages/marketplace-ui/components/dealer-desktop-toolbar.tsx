@@ -7,6 +7,7 @@ import type {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import type { ReactNode } from "react";
+import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-policy";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
 import { DealerHeroSearch } from "./dealer-hero-search";
@@ -28,12 +29,11 @@ export const DealerDesktopToolbar = ({
   locale,
   taxonomy,
 }: DealerDesktopToolbarProps) => {
-  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
       <DealerDesktopHero
-        title={isBg ? "Автомобили в наличност" : "Vehicles in stock"}
-        variant="landing"
+        title={getMarketplaceResultTitle(filters, locale)}
+        variant="inventory"
       >
         <div className={styles.content}>
           <DealerHeroSearch

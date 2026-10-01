@@ -83,6 +83,21 @@
     letter-spacing: -0.035em;
     text-wrap: balance;
   }
+  .hero[data-variant="inventory"] {
+    gap: 0.75rem;
+    padding: 1.25rem 0 1rem;
+    color: var(--foreground);
+    background: var(--background);
+  }
+  .hero[data-variant="inventory"] .scene {
+    display: none;
+  }
+  .hero[data-variant="inventory"] .copy {
+    min-height: 0;
+  }
+  .hero[data-variant="inventory"] .copy h1 {
+    font-size: 1.75rem;
+  }
   .description {
     max-width: 38rem;
     margin: 0.625rem auto 0;

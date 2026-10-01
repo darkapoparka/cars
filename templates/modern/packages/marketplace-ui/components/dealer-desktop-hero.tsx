@@ -11,7 +11,7 @@ export interface DealerDesktopHeroProps {
   loading?: boolean;
   sceneTone?: "standard" | "quiet";
   title: string;
-  variant?: "landing" | "page" | "compact" | "service";
+  variant?: "landing" | "inventory" | "page" | "compact" | "service";
 }
 
 /** One desktop masthead surface. Pages supply context; mobile keeps its own chrome. */
@@ -24,8 +24,8 @@ export function DealerDesktopHero({
   variant = "page",
   children,
 }: DealerDesktopHeroProps) {
-  const titleId =
-    variant === "landing" ? "desktop-home-title" : "desktop-page-title";
+  const isLanding = variant === "landing" || variant === "inventory";
+  const titleId = isLanding ? "desktop-home-title" : "desktop-page-title";
   const content =
     variant === "service" ? (
       <div className={styles.serviceContent}>{children}</div>
@@ -39,9 +39,7 @@ export function DealerDesktopHero({
       data-loading={loading || undefined}
       data-scene-tone={sceneTone}
       data-slot={
-        variant === "landing"
-          ? "dealer-desktop-home-hero"
-          : "dealer-desktop-context-hero"
+        isLanding ? "dealer-desktop-home-hero" : "dealer-desktop-context-hero"
       }
       data-variant={variant}
     >
