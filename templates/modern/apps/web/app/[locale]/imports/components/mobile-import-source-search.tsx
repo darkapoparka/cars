@@ -11,6 +11,7 @@ import {
   mobileMarketplaceOverlayPrimaryActionClassName,
 } from "@repo/marketplace-ui/components/mobile-marketplace-overlay";
 import {
+  mobileSearchIconClassName,
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
@@ -82,15 +83,12 @@ export const MobileImportSourceSearch = ({
           ref={triggerRef}
           type="button"
         >
-          <DealerUiIcon
-            className="size-[18px] shrink-0 text-zinc-500"
-            name="search"
-          />
+          <DealerUiIcon className={mobileSearchIconClassName} name="search" />
           <span className={mobileSearchTriggerLabelClassName}>
             {sourceUrl || placeholder}
           </span>
           <DealerUiIcon
-            className="size-5 shrink-0 text-zinc-950"
+            className={mobileSearchIconClassName}
             name="chevronRight"
           />
         </button>

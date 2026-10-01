@@ -6,6 +6,11 @@ their data and actions rather than copying control markup.
 
 ## Shared boundaries
 
+- `MobileDealerChrome` owns the 16px page gutter and the 12px gap between the
+  brand row and primary control. Header fields share 52px geometry and quiet
+  18px icons through `lib/mobile-form-control.ts`; inventory, import, VIN,
+  financing and guides reuse it. The compact scrolling inventory bar keeps
+  44px controls. Guides use a 44px clear action and retain typing focus.
 - `packages/marketplace-ui/lib/mobile-overlay-styles.ts` owns focus, field,
   icon-action, scrolling and primary-action geometry. Icon targets are 44px;
   primary actions have a 48px minimum and allow translated labels to wrap.

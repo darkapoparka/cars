@@ -79,7 +79,7 @@ const MobileLoadingHeader = ({
         locale={locale === "bg" ? "bg" : "en"}
         tone={mobileTone}
       >
-        <div className="h-12 rounded-full bg-white" />
+        <div className="h-[52px] rounded-full bg-white" />
       </MobileDealerServiceHero>
     ) : (
       <div className="bg-zinc-950">
@@ -96,7 +96,7 @@ const MobileLoadingHeader = ({
             </div>
           }
         >
-          <div className="h-12 rounded-full bg-white" />
+          <div className="h-[52px] rounded-full bg-white" />
         </MobileDealerChrome>
       </div>
     )}

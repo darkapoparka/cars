@@ -10,14 +10,17 @@ export function MobileDealerChrome({
 }) {
   return (
     <div
-      className={`px-3 pt-[max(0.75rem,env(safe-area-inset-top))] sm:px-4 ${children ? "pb-6" : "pb-3"}`}
+      className={`px-4 pt-[max(0.75rem,env(safe-area-inset-top))] ${children ? "pb-6" : "pb-3"}`}
       data-slot="mobile-dealer-chrome"
     >
       <div className="relative h-11" data-slot="mobile-dealer-brand-row">
         {brandRow}
       </div>
       {children ? (
-        <div className="mt-2 h-12" data-slot="mobile-dealer-primary-control">
+        <div
+          className="mt-3 h-[52px]"
+          data-slot="mobile-dealer-primary-control"
+        >
           {children}
         </div>
       ) : null}

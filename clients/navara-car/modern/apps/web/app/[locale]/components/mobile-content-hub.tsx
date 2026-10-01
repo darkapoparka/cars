@@ -18,6 +18,10 @@ import {
   mobileHeaderIconActionClassName,
 } from "@repo/marketplace-ui";
 import Image from "@repo/marketplace-ui/components/public-image";
+import {
+  mobileSearchFieldClassName,
+  mobileSearchIconClassName,
+} from "@repo/marketplace-ui/lib/mobile-form-control";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import {
   ArrowRight,
@@ -185,10 +189,17 @@ export const MobileContentHub = ({
               />
             }
           >
-            <div className="flex h-12 items-center gap-2.5 rounded-full bg-white px-4 text-zinc-950 ring-1 ring-white/20 ring-inset focus-within:outline-2 focus-within:outline-white">
+            <div
+              className={cn(
+                mobileSearchFieldClassName,
+                "bg-white p-1 pl-4 text-zinc-950 ring-white/20 focus-within:outline-2 focus-within:outline-[var(--lead-site-accent-bright)] focus-within:outline-offset-2"
+              )}
+              data-slot="mobile-guides-search"
+            >
               <Search
                 aria-hidden="true"
-                className="size-[18px] shrink-0 text-muted-foreground"
+                className={mobileSearchIconClassName}
+                strokeWidth={1.75}
               />
               <label className="sr-only" htmlFor="content-search">
                 {isBg ? "Търси" : "Search"}
@@ -197,7 +208,7 @@ export const MobileContentHub = ({
                 aria-label={
                   isBg ? "Търси съвети и статии" : "Search guides and articles"
                 }
-                className="min-w-0 flex-1 bg-transparent font-medium text-body outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
+                className="h-full min-w-0 flex-1 bg-transparent font-normal text-body outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                 disabled={!ready}
                 id="content-search"
                 onChange={(event) =>
@@ -213,7 +224,7 @@ export const MobileContentHub = ({
               {query ? (
                 <button
                   aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
-                  className="grid size-8 shrink-0 place-items-center rounded-full bg-zinc-100"
+                  className="grid size-11 shrink-0 place-items-center rounded-full bg-zinc-100 transition-colors hover:bg-zinc-200 focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 active:bg-zinc-200"
                   disabled={!ready}
                   onClick={() => {
                     updateSearch({ query: "", filter });

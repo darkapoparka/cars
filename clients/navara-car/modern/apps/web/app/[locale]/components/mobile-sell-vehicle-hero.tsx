@@ -7,6 +7,7 @@ import {
 } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import {
+  mobileSearchIconClassName,
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
@@ -63,12 +64,16 @@ export const MobileSellVehicleHero = ({
           >
             <ScanLine
               aria-hidden="true"
-              className="size-[18px] shrink-0 text-zinc-500"
+              className={mobileSearchIconClassName}
+              strokeWidth={1.75}
             />
             <span className={mobileSearchTriggerLabelClassName}>
               {vin || content.vin}
             </span>
-            <DealerUiIcon className="size-5 shrink-0" name="chevronRight" />
+            <DealerUiIcon
+              className={mobileSearchIconClassName}
+              name="chevronRight"
+            />
           </button>
         </div>
       </MobileDealerServiceHero>

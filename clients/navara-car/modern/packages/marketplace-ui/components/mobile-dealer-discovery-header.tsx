@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import type { MouseEvent } from "react";
 import {
+  mobileSearchIconClassName,
   mobileSearchTriggerClassName,
   mobileSearchTriggerLabelClassName,
 } from "../lib/mobile-form-control";
@@ -175,7 +176,7 @@ const MobileSearchButton = ({
       onDark
         ? "bg-white ring-white/15 hover:bg-zinc-100 focus-visible:outline-[var(--lead-site-accent-bright)]"
         : "bg-zinc-100 ring-zinc-200/80 hover:bg-zinc-200 focus-visible:outline-ring",
-      isCompact ? "h-11 flex-1 px-3" : "h-12 w-full px-4"
+      isCompact ? "h-11 flex-1 px-3" : "w-full"
     )}
     data-slot="mobile-discovery-search"
     onClick={(event) => openFromButton(event, onOpenSearch)}
@@ -183,8 +184,8 @@ const MobileSearchButton = ({
   >
     <Search
       aria-hidden="true"
-      className="size-[18px] shrink-0 text-zinc-600"
-      strokeWidth={2}
+      className={mobileSearchIconClassName}
+      strokeWidth={1.75}
     />
     <span className={mobileSearchTriggerLabelClassName}>
       {hasMakeModelSelection ? makeModelValue : searchLabel}
@@ -192,7 +193,8 @@ const MobileSearchButton = ({
     {isCompact ? null : (
       <ChevronRight
         aria-hidden="true"
-        className="size-5 shrink-0 text-zinc-950"
+        className={mobileSearchIconClassName}
+        strokeWidth={1.75}
       />
     )}
   </button>
@@ -333,7 +335,7 @@ export const MobileCompactSearchHeader = ({
   }
 
   return (
-    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-zinc-950 px-3 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 motion-reduce:animate-none sm:px-4 lg:hidden">
+    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-zinc-950 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 motion-reduce:animate-none lg:hidden">
       <div className="mx-auto w-full max-w-lg">
         <MobileCompactDiscoverySurface
           category={category}
