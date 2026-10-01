@@ -24,7 +24,7 @@ export default function MorePage() {
     <PageHeader title="Menu" action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
     <main {...stylex.props(s.content)}>
       {showroom.menu.map(group => <nav key={group.label} aria-label={tx(group.label)} {...stylex.props(s.section, s.list)}>
-        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} primary={item.primary} copy={item.location ? location : undefined}/>)}
+        {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} copy={item.location ? location : undefined}/>)}
       </nav>)}
 
       {dealer.phoneE164 || dealer.email ? <section aria-label={tx('Contact the dealer')} {...stylex.props(s.section)}>
@@ -46,11 +46,11 @@ export default function MorePage() {
   </div>;
 }
 
-function MenuRow({href, icon, title, copy, primary = false}: {href: string; icon: ShowroomIconName; title: string; copy?: string; primary?: boolean}) {
-  return <Link href={href} {...stylex.props(s.row, primary && s.primaryRow)}>
+function MenuRow({href, icon, title, copy}: {href: string; icon: ShowroomIconName; title: string; copy?: string}) {
+  return <Link href={href} {...stylex.props(s.row)}>
     <span {...stylex.props(s.icon)}><ShowroomIcon name={icon} size={24}/></span>
     <span {...stylex.props(s.copy)}><span>{title}</span>{copy ? <span {...stylex.props(s.subtitle)}>{copy}</span> : null}</span>
-    <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron, primary && s.primaryChevron)}/>
+    <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.chevron)}/>
   </Link>;
 }
 
@@ -62,12 +62,10 @@ const s = stylex.create({
   sectionTitle: {margin: 0, paddingBlock: 10, paddingInline: 2, color: $.muted, fontSize: 13, fontWeight: 500, lineHeight: '20px'},
   list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
   row: {display: 'grid', gridTemplateColumns: '28px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 9, paddingInline: 15, color: $.ink, fontSize: 16, fontWeight: {[media.mobile]: 400, default: 500}, lineHeight: '22px', textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: $.line, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineColor: {default: 'transparent', ':focus-visible': $.ink}},
-  primaryRow: {minHeight: 60, fontWeight: 600, color: $.surface, borderBottomColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark, ':active': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
   icon: {display: 'grid', placeItems: 'center', width: 28, height: 28},
   copy: {display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0, overflowWrap: 'anywhere'},
   subtitle: {color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px'},
   chevron: {color: $.subtle},
-  primaryChevron: {color: $.surface},
   languageRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 52, paddingInline: 2},
   languageTitle: {fontSize: 14, fontWeight: 500, lineHeight: '20px'},
   languages: {display: 'flex', gap: 2, padding: 3, borderRadius: 28, backgroundColor: $.surfaceAlt},
