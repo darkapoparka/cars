@@ -6,7 +6,6 @@ import {Heart,Search,X} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
 import FilterPill from '@/components/FilterPill';
-import InventoryPromotion from '@/components/InventoryPromotion';
 import VehicleCard from '@/components/VehicleCard';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import {BrandRow} from '@/components/ReferenceUI';
@@ -66,7 +65,6 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
     </span>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}
   </label></div>
-  <InventoryPromotion/>
   <nav aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar)}>
     <FilterPill label={tx("Filter")} icon="filter" selected={filtered} onClick={()=>open('filters')}/>
     <FilterPill label={tx("Sort")} icon="sort" selected={sort!=='default'} onClick={()=>open('sort')}/>
