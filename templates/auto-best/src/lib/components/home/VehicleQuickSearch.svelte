@@ -155,7 +155,7 @@
 </script>
 
 <button
-  class="dn-quick-search__trigger dn-entry-field"
+  class="dn-quick-search__trigger dn-entry-field dn-entry-field--prominent"
   type="button"
   {@attach attachTrigger}
   aria-haspopup="dialog"
@@ -169,7 +169,7 @@
   <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
   <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
-  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
+  <span class="dn-quick-search__mobile-filter dn-entry-field__affordance" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
 </button>
 
 <dialog onkeydown={trapDialogTab}
@@ -341,8 +341,8 @@
 
   @media (hover: hover) and (pointer: fine) {
     .dn-quick-search__trigger:hover {
-      border-color: #b8bec7;
-      background: #f3f4f6;
+      border-color: var(--dn-entry-hover-line, #b8bec7);
+      background: var(--dn-entry-hover-surface, #f3f4f6);
     }
   }
 
@@ -438,6 +438,7 @@
   }
 
   @media (max-width: 767px) {
+    .dn-quick-search__trigger { gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
     .dn-quick-search__search-desktop { display: none; }
     .dn-quick-search__search-mobile { display: grid; place-items: center; }
     .dn-quick-search__label-full {
@@ -446,11 +447,15 @@
 
     .dn-quick-search__label-mobile {
       display: inline;
-      color: var(--dn-ink-hover);
+      min-width: 0;
+      overflow: hidden;
+      color: var(--dn-entry-prominent-ink);
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .dn-quick-search__trigger :global(.dn-icon) {
-      color: var(--dn-muted);
+      color: var(--dn-entry-prominent-ink);
     }
 
     .dn-quick-search__mobile-filter {

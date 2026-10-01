@@ -55,6 +55,7 @@
   --dn-space-8: 32px;
   --dn-control-height-compact: 40px;
   --dn-control-height-default: 44px;
+  --dn-control-height-prominent: 52px;
   --dn-control-height-editor: var(--dn-control-height-default);
   --dn-compact-control-visual-height: var(--dn-control-height-compact);
   --dn-compact-control-inset: calc((var(--dn-control-height-default) - var(--dn-compact-control-visual-height)) / 2);
@@ -177,6 +178,12 @@
   --dn-entry-line: var(--dn-line-strong);
   --dn-entry-mobile-line: #d8dde3;
   --dn-entry-mobile-shadow: 0 2px 6px rgb(20 23 29 / 6%);
+  --dn-entry-prominent-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-entry-prominent-surface: var(--dn-ink-strong);
+  --dn-entry-prominent-ink: var(--dn-white);
+  --dn-entry-prominent-muted: var(--dn-muted-on-ink);
+  --dn-entry-prominent-action: color-mix(in srgb, var(--dn-white) 12%, var(--dn-ink-strong));
+  --dn-entry-prominent-action-size: 32px;
   --dn-control-hit-height: var(--dn-control-height-default);
   --dn-segment-height: var(--dn-control-height-compact);
   --dn-entry-action-height: var(--dn-control-height-default);

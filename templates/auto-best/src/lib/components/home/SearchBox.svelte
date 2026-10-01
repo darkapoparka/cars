@@ -7,6 +7,7 @@
   import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
   import EntryInput from '$components/ui/entry/EntryInput.svelte';
   import EntryAction from '$components/ui/entry/EntryAction.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
   import { emptyListingDraft, listingFiltersFromDraft } from '$data/listing-draft';
   import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
@@ -52,7 +53,9 @@
           <input type="hidden" name="topic" value="import" />
           <label class="dn-search__import-field">
             <span class="dn-sr-only">{i18n.t("m_409235f690e6")}</span>
+            <span class="dn-search__import-icon" aria-hidden="true"><MobileActionIcon name="article" size={22} /></span>
             <EntryInput
+              class="dn-entry-field--prominent"
               bind:element={importInput}
               bind:value={importUrl}
               type="url"
@@ -161,7 +164,9 @@
       gap: var(--dn-entry-stack-gap);
     }
 
-    .dn-search__import-field { display: block; min-width: 0; }
+    .dn-search__import-field { position: relative; display: block; min-width: 0; }
+    .dn-search__import-icon { position: absolute; z-index: 1; top: 0; bottom: 0; left: var(--dn-space-3); display: grid; place-items: center; color: var(--dn-entry-prominent-ink); pointer-events: none; }
+    .dn-search__import-field :global(.dn-entry-input) { padding-inline-start: calc(var(--dn-space-3) + 22px + var(--dn-space-2)); }
 
     .dn-search__import-error {
       margin: 0;

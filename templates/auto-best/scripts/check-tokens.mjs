@@ -36,6 +36,7 @@ for (const token of tokenDeclarations) {
 const expectedControlScale = new Map([
   ['--dn-control-height-compact', '40px'],
   ['--dn-control-height-default', '44px'],
+  ['--dn-control-height-prominent', '52px'],
   ['--dn-control-icon-size', '18px'],
   ['--dn-entry-action-icon-size', '15px']
 ]);
@@ -119,7 +120,8 @@ const controlAlias = /^var\(--dn-control-height-(?:compact|default|editor)\)$/;
 for (const [file, source] of sourceByFile) {
   if (file === tokenPath) continue;
   for (const token of declarations(source)) {
-    if (governedControlTokens.has(token.name) && !controlAlias.test(token.value)) {
+    const prominentEntry = token.name === '--dn-entry-height' && token.value === 'var(--dn-control-height-prominent)';
+    if (governedControlTokens.has(token.name) && !controlAlias.test(token.value) && !prominentEntry) {
       errors.push(`${file}: ${token.name} must reference a shared control-height token, not ${token.value}.`);
     }
   }

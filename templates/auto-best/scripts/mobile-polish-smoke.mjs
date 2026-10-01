@@ -153,17 +153,22 @@ try {
           const search = await page.locator('.dn-quick-search__trigger').evaluate(el => {
             const box = el.getBoundingClientRect();
             return { height: box.height, font: getComputedStyle(el).fontSize, gap: getComputedStyle(el).gap,
-              background: getComputedStyle(el).backgroundColor,
+              background: getComputedStyle(el).backgroundColor, border: getComputedStyle(el).borderWidth,
+              color: getComputedStyle(el.querySelector('.dn-quick-search__label-mobile')).color,
+              labelFits: (() => { const label = el.querySelector('.dn-quick-search__label-mobile'); return label.scrollWidth <= label.clientWidth + 1; })(),
               tapHighlight: getComputedStyle(el).webkitTapHighlightColor,
               icons: [...el.querySelectorAll('svg')].filter(svg => svg.checkVisibility()).map(svg => {
                 const icon = svg.getBoundingClientRect();
                 return { width: icon.width, dy: icon.y + icon.height / 2 - box.y - box.height / 2 };
               }) };
           });
-          assert.equal(search.height, 44); assert.equal(search.font, '18px'); assert.equal(search.gap, '11px');
+          assert.equal(search.height, 52); assert.equal(search.font, '16px'); assert.equal(search.gap, '8px');
           assert.deepEqual(search.icons.map(icon => icon.width), [22, 20]);
           assert(search.icons.every(icon => Math.abs(icon.dy) <= .5));
-          assert.equal(search.background, 'rgb(255, 255, 255)', 'Mobile entry fields use a white surface');
+          assert.equal(search.background, 'rgb(23, 26, 32)', 'The main mobile entry field has a charcoal surface');
+          assert.equal(search.color, 'rgb(255, 255, 255)', 'Entry copy stays legible on charcoal');
+          assert.equal(search.border, '0px', 'Prominent fields have no decorative border');
+          assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
           const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));
           assert.deepEqual(headerIcons, [28, 28], 'Header location and phone glyphs remain visibly large');
