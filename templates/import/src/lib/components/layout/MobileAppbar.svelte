@@ -12,6 +12,8 @@
 	import { page } from '$app/state';
 	import type { Snippet } from 'svelte';
 	import MobileIconAction from '$lib/components/common/MobileIconAction.svelte';
+	import MobileMenuAction from '$lib/components/common/MobileMenuAction.svelte';
+	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 
 	let {
 		actionsLabel = nt('ui137'),
@@ -27,9 +29,11 @@
 		onMap?: () => void;
 	} = $props();
 	const english = $derived(page.data.locale === 'en');
+	const isViber = $derived(site.contact.messageHref.startsWith('viber:'));
+	let contactOpen = $state(false);
 </script>
 
-<!-- Keep contact actions in a fixed order across routes. The map callback
+<!-- Keep contact and map actions in a fixed order across routes. The map callback
      preserves existing location drawers without changing the button geometry. -->
 <header class:bc-mobile-appbar--dark={surface === 'dark'} class="bc-mobile-appbar">
 	<a
@@ -47,6 +51,15 @@
 	</a>
 	<div class="bc-mobile-appbar__actions" role="group" aria-label={actionsLabel}>
 		{#if children}{@render children()}{:else}
+			<MobileIconAction
+				label={english ? 'Contact' : 'Контакти'}
+				tone={surface === 'dark' ? 'dark' : 'light'}
+				haspopup="dialog"
+				expanded={contactOpen}
+				onclick={() => (contactOpen = true)}
+			>
+				<PhoneCall size={18} strokeWidth={2.35} aria-hidden="true" />
+			</MobileIconAction>
 			{#if onMap}
 				<MobileIconAction
 					label={english ? 'Map' : 'Карта'}
@@ -67,25 +80,37 @@
 					<MapPin size={18} strokeWidth={2.35} aria-hidden="true" />
 				</MobileIconAction>
 			{/if}
-			<MobileIconAction
-				label={english ? 'Call' : 'Обади се'}
-				tone={surface === 'dark' ? 'dark' : 'light'}
-				href={site.contact.phoneHref}
-			>
-				<PhoneCall size={18} strokeWidth={2.35} aria-hidden="true" />
-			</MobileIconAction>
-			<MobileIconAction
-				label={english ? 'Message' : 'Пиши ни'}
-				tone={surface === 'dark' ? 'dark' : 'light'}
-				href={site.contact.messageHref}
-			>
-				<MessageCircle size={18} strokeWidth={2.35} aria-hidden="true" />
-			</MobileIconAction>
 		{/if}
 	</div>
 </header>
 
+<MobileSheet
+	bind:open={contactOpen}
+	title={english ? 'Contact us' : 'Свържи се'}
+	description={site.contact.phone}
+>
+	<div class="bc-mobile-appbar__contact-options">
+		<MobileMenuAction
+			href={site.contact.phoneHref}
+			label={english ? 'Call' : 'Обади се'}
+			icon={PhoneCall}
+			variant="primary"
+		/>
+		<MobileMenuAction
+			href={site.contact.messageHref}
+			label={isViber ? 'Viber' : english ? 'Message us' : 'Пиши ни'}
+			icon={MessageCircle}
+			variant="secondary"
+		/>
+	</div>
+</MobileSheet>
+
 <style>
+	.bc-mobile-appbar__contact-options {
+		display: grid;
+		gap: var(--bc-space-2);
+	}
+
 	.bc-mobile-appbar {
 		position: absolute;
 		top: 0;

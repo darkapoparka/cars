@@ -1495,6 +1495,7 @@
 
 		.daynight-mobile-hero__search-module {
 			display: grid;
+			grid-template-columns: minmax(0, 1fr);
 			gap: var(--bc-mobile-entry-gap);
 			margin-bottom: var(--bc-mobile-entry-gap);
 			padding: 0;
