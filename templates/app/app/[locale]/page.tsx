@@ -82,7 +82,7 @@ const s = stylex.create({
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: 24},
   feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 14, marginTop: 14},
-  inventoryHeading: {marginTop: 16},
+  inventoryHeading: {marginTop: {[media.mobile]: 0, default: 16}},
   inventoryLink: {minHeight: 44},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8}, borderTopWidth: {[media.mobile]: 0, default: 1}, borderTopStyle: 'solid', borderTopColor: '#e8e8eb'},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},

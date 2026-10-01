@@ -1,5 +1,11 @@
 # Home and inventory search flow — 1 October 2026
 
+## Restrained carousel polish — 2 October 2026
+
+The mobile carousel keeps its position under the makes and reveals 20px of the next slide, separated by its existing 12px gutter. Each mobile slide is 32px narrower; responsive image sizing follows that width. The rail no longer rounds off the exposed next-slide edge. Desktop retains the existing two-column grid.
+
+Removed 4px above the pagination and 16px above the mobile inventory heading. At 390px, the artwork-to-heading gap is now 53.8px instead of 73.8px; pagination buttons remain 44px tall. `carousel-polish-390.jpg` is the current screenshot. Checked 320/390/1440px with no document overflow. At 320px, financing and visit slides show their copy and CTA, and selecting the second, final and first pagination buttons selects the correct slide. Search, navigation, copy, brand strip and vehicle cards are unchanged.
+
 ## Owner correction: banner restored
 
 The owner rejected moving the promotional carousel below four cars. It is restored directly under the make strip and before the inventory heading, with all eight initial cars in one feed. The search/filter changes remain. This supersedes the banner-placement notes and earlier screenshots below; `banner-restored-390.jpg` shows the corrected mobile composition. Checked at 320, 390 and 1440px with no document horizontal overflow. `npm run check` passed completely (lint, typecheck and production build, 407 pages) after this correction.
@@ -30,3 +36,5 @@ In-app browser, Bulgarian routes, widths 320, 390 and 1440. No document horizont
 `npm run check` passed lint and typecheck. Its first production build compiled but could not resolve Next modules after build output was relocated to address a full L: drive. The inactive `.next-build-check` directory was preserved at `C:/Users/radev/.codex/tmp/cars-app-build-20261001/.next-build-check` and its original path replaced with a junction. A sibling `node_modules` junction now points to the existing App dependencies so server output resolves modules correctly. No source or recovery data was removed.
 
 Production build rerun passed (exit 0) with Node 22.20.0 and `NEXT_DIST_DIR=.next-build-check`, including all 407 generated pages. Lint, typecheck and production build therefore each passed; no application code changed between the check and build rerun. Workspace doctor fetched Cars main with ahead=0/behind=0; unrelated template and admin work was preserved.
+
+Carousel polish validation: npm run check passed (lint, typecheck and production build, 407 pages), using Node 22.20.0 and NEXT_DIST_DIR=.next-build-check.
