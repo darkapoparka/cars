@@ -18,7 +18,7 @@
   ] as const;
 </script>
 
-<section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--light" aria-labelledby="about-title">
+<section class="dn-about-hero dn-route-hero dn-route-hero--studio dn-route-hero--light dn-route-hero--compact" aria-labelledby="about-title">
   <DesktopHeroScene scene="about" />
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
@@ -30,7 +30,7 @@
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
-    <DesktopSocialLinks hero />
+    <DesktopSocialLinks hero flow />
     {#if socialProfiles.some(profile => profile.href)}
     <nav class="dn-about-socials dn-about-socials--mobile" aria-label={i18n.t("m_3931afa2068d")}>
       <span>{i18n.t("m_9200ee75efd0")}</span>

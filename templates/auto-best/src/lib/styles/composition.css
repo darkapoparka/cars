@@ -212,6 +212,27 @@
 
   .dn-route-hero--light .dn-about-button:focus-visible { outline-color: var(--dn-focus); }
 
+  /* Secondary pages size the banner around their copy and actions. */
+  .dn-app-shell .dn-route-hero.dn-route-hero--compact {
+    height: auto;
+    min-height: 0;
+  }
+  .dn-route-hero--compact .dn-route-hero__layout {
+    height: auto;
+    justify-content: flex-start;
+    padding: 176px var(--dn-space-6) 48px;
+  }
+  .dn-route-hero--compact .dn-route-hero__control {
+    position: static;
+    margin-top: var(--dn-space-6);
+  }
+  .dn-blog-hero.dn-route-hero--compact .dn-blog-toolbar {
+    position: static;
+    width: min(100%, var(--dn-hero-center-width));
+    margin-top: var(--dn-space-6);
+    transform: none;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -333,7 +354,7 @@
 
 /* One center lane for all desktop heroes; artwork uses the same lower baseline. */
 @media (min-width: 1440px) {
-  .dn-blog-hero.dn-route-hero--studio .dn-blog-toolbar {
+  .dn-blog-hero.dn-route-hero--studio:not(.dn-route-hero--compact) .dn-blog-toolbar {
     left: 50%;
     width: var(--dn-hero-center-width);
     transform: translateX(-50%);

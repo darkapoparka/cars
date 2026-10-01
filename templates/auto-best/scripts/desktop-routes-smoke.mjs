@@ -78,7 +78,11 @@ try {
               }
             }
             if (width >= 992) {
-              assert.equal(geometry.hero.height, 540, 'Shared desktop hero height');
+              if (route === '' || route === 'listing-grid') {
+                assert.equal(geometry.hero.height, route === '' ? 540 : 460, 'Home keeps its feature banner; inventory uses the compact search banner');
+              } else {
+                assert(Math.abs(geometry.hero.bottom - geometry.controls.bottom - 48) <= 1, 'Secondary heroes end 48px below their actual controls without reserving empty space');
+              }
               if (!hasScene) assert.equal(geometry.backgroundImage, 'none', 'Cutouts use solid neutral surfaces');
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
@@ -89,6 +93,17 @@ try {
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
+                for (const card of await page.locator('.dn-listing-results .dn-vehicle-card').all()) {
+                  const title = await card.locator('.dn-vehicle-card__name').getAttribute('title');
+                  assert((await card.locator('.dn-vehicle-card__link').getAttribute('aria-label')).includes(title), 'The accessible card label retains the complete vehicle title');
+                  const spacing = await card.evaluate(e => {
+                    const name = e.querySelector('.dn-vehicle-card__name');
+                    const specs = e.querySelector('.dn-vehicle-card__specs');
+                    return { titleHeight: name.getBoundingClientRect().height, lineHeight: parseFloat(getComputedStyle(name).lineHeight), gap: specs.getBoundingClientRect().top - name.getBoundingClientRect().bottom };
+                  });
+                  assert(spacing.titleHeight <= spacing.lineHeight + 1, 'Desktop card models occupy one line while complete titles remain available');
+                  assert(spacing.gap >= 8 && spacing.gap <= 16, 'Card specifications follow the title without an empty spacer');
+                }
               }
               if (route === 'about-us' || route === 'contact') {
                 const social = page.locator('.dn-desktop-socials a');

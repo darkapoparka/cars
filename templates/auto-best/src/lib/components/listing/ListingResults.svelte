@@ -100,7 +100,7 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-results { background: var(--dn-surface-canvas); }
+    .dn-listing-results { padding-top: var(--dn-space-4); background: var(--dn-surface-canvas); }
   }
 
   .dn-listing-results__heading {
@@ -108,6 +108,10 @@
     align-items: center;
     justify-content: center;
     margin: 0 0 20px;
+  }
+
+  @media (min-width: 992px) {
+    .dn-listing-results__heading { margin-bottom: var(--dn-space-4); }
   }
 
   .dn-listing-sort__value {

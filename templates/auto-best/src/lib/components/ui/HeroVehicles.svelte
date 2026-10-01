@@ -69,12 +69,12 @@
   @media (min-width: 1440px) {
     .dn-hero-vehicles {
       --car-height: clamp(100px, calc(10vw - 44px), 148px);
-      --car-baseline: calc(var(--dn-route-hero-height) - 60px);
+      --car-baseline: calc(100% - 60px);
       --side-room: calc((100vw - var(--dn-hero-center-width)) / 2);
       display: block;
       position: absolute;
       inset: 0;
-      height: var(--dn-route-hero-height);
+      height: 100%;
       overflow: hidden;
       pointer-events: none;
     }
@@ -90,7 +90,7 @@
     /* Enlarge discovery artwork without narrowing the shared search lane. */
     .dn-hero-vehicles[data-pair='home'], .dn-hero-vehicles[data-pair='inventory'] {
       --car-height: clamp(120px, calc(8.333vw), 160px);
-      --car-baseline: calc(var(--dn-route-hero-height) - 50px);
+      --car-baseline: calc(100% - 50px);
     }
   }
 </style>
