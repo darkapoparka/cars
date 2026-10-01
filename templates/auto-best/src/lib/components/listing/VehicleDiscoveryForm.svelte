@@ -26,9 +26,10 @@
     normalizeListingMakeTransition
   } from '$data/listing-draft';
 
-  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
+  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, integratedType = false, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
     showFilterAction?: boolean;
     enableSticky?: boolean;
+    integratedType?: boolean;
     keywordPlaceholder?: string;
     filters: ListingFilters;
     openFilters: (event: MouseEvent, field?: string) => void;
@@ -79,10 +80,15 @@
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
+{#snippet typeField()}
+  <label class="dn-discovery__type"><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
+{/snippet}
+
+<form id="dn-desktop-discovery" class="dn-discovery" class:dn-discovery--integrated-type={integratedType} {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
-    <label class="dn-discovery__type"><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
+    {#if !integratedType}{@render typeField()}{/if}
     <div class="dn-discovery__search">
+      {#if integratedType}{@render typeField()}{/if}
       <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
         <Icon name="search" size={20} />
         <span>{filters.q || i18n.text(keywordPlaceholder)}</span>
@@ -158,6 +164,24 @@
   @media (min-width: 992px) and (max-width: 1199px) { .dn-discovery__facets { gap: 10px; } .dn-discovery__facets select { font-size: var(--dn-text-control-prominent); padding-left: 10px; } }
   @media (min-width: 1440px) and (max-width: 1599px) { .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); } }
   @media (max-width: 767px) { .dn-discovery { display: none; } }
+  @media (min-width: 768px) {
+    .dn-discovery--integrated-type .dn-discovery__type {
+      flex-basis: 160px;
+      height: 44px;
+      margin-left: var(--dn-space-2);
+      padding: 0 var(--dn-space-4) 0 var(--dn-space-3);
+      border: 0;
+      border-right: 1px solid var(--dn-line-strong);
+      border-radius: 0;
+      background: transparent;
+    }
+    .dn-discovery--integrated-type .dn-discovery__type select {
+      height: 26px;
+      cursor: pointer;
+    }
+    .dn-discovery--integrated-type .dn-discovery__keyword { gap: var(--dn-space-2); }
+    .dn-discovery--integrated-type .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
+  }
   @media (min-width: 992px) {
     .dn-discovery .dn-discovery__facets { gap: var(--dn-space-3); }
     .dn-discovery .dn-discovery__facets select { padding-inline: 10px 28px; font-size: var(--dn-control-size); cursor: pointer; transition: none; }

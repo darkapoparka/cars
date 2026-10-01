@@ -4,7 +4,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import VehicleCutout from '$components/ui/VehicleCutout.svelte';
+  import { vehicleArtwork } from '$data/vehicle-artwork';
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { serviceArtwork } from '$data/service-artwork';
   import { featureArtwork } from '$data/feature-artwork';
@@ -16,7 +16,6 @@
     {
       title: 'Вижте колекцията',
       artwork: { src: leadSite.artwork.home.collection, width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
-      vehicle: 'urus',
       tone: 'black',
       mobileTitle: 'Автомобили',
       mobileCta: 'Разгледай',
@@ -29,7 +28,6 @@
     {
       title: 'Продажба или бартер',
       artwork: { src: leadSite.artwork.home.sellCompact, width: 1200, height: 400, bounds: [0, 0, 1200, 400], view: 'front-service' },
-      vehicle: 'gclass',
       tone: 'red',
       mobileTitle: 'Продай/Бартер',
       mobileCta: 'Заяви оценка',
@@ -41,7 +39,7 @@
     },
     {
       title: 'Внос по заявка',
-      vehicle: 'gclass',
+      artwork: { ...vehicleArtwork.gclass, view: 'side-profile' },
       tone: 'red',
       mobileTitle: 'Внос по заявка',
       mobileCta: 'Заяви внос',
@@ -53,7 +51,7 @@
     },
     {
       title: 'Собствен лизинг',
-      vehicle: 'urus',
+      artwork: { ...vehicleArtwork.urus, view: 'side-profile' },
       tone: 'black',
       mobileTitle: 'Лизинг',
       mobileCta: 'Виж условия',
@@ -80,21 +78,17 @@
       {/if}
       <div class="dn-trust-actions__grid">
         {#each visibleActions as action (action.href)}
-          <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners' && 'artwork' in action}>
+          <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners'}>
             {#if variant === 'banners'}
-              {#if 'artwork' in action}
-                {@const art = action.artwork}
-                {@const bodyHeight = art.bounds[3] - art.bounds[1]}
-                <div class="dn-trust-card__vehicle dn-trust-card__vehicle--campaign"
-                  style:--art-width={art.width / bodyHeight}
-                  style:--art-height={art.height / bodyHeight}
-                  style:--art-bottom={art.bounds[3] / bodyHeight}
-                  style:--art-right={(art.width - art.bounds[2]) / bodyHeight}>
-                  <img class="dn-trust-card__lineup" data-view={art.view} src={art.src} alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
-                </div>
-              {:else}
-                <div class="dn-trust-card__vehicle"><VehicleCutout vehicle={action.vehicle} framing="banner" /></div>
-              {/if}
+              {@const art = action.artwork}
+              {@const bodyHeight = art.bounds[3] - art.bounds[1]}
+              <div class="dn-trust-card__vehicle dn-trust-card__vehicle--campaign"
+                style:--art-width={art.width / bodyHeight}
+                style:--art-height={art.height / bodyHeight}
+                style:--art-bottom={art.bounds[3] / bodyHeight}
+                style:--art-right={(art.width - art.bounds[2]) / bodyHeight}>
+                <img class="dn-trust-card__lineup" data-view={art.view} src={art.src} alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
+              </div>
             {/if}
             {#if mobileArtwork && variant === 'banners' && group === 'browse'}
               <div class="dn-trust-card__mobile-art" aria-hidden="true">
@@ -157,19 +151,19 @@
     .dn-trust-card--red .dn-trust-card__action:hover { background: var(--dn-red-hover); }
     .dn-trust-card.dn-trust-card--red a:focus-visible { outline-color: var(--dn-focus); }
     .dn-trust-card h3 a { display: inline-flex; min-height: 44px; align-items: center; }
-    .dn-trust-card__content { justify-content: flex-start; }
+    .dn-trust-card__content { justify-content: flex-start; gap: var(--dn-home-copy-gap); }
     .dn-trust-card h3 { margin: 0; }
-    .dn-trust-card p { margin: var(--dn-home-copy-gap) 0 0; }
-    .dn-trust-card .dn-trust-card__action { width: max-content; margin-top: var(--dn-home-cta-gap); white-space: nowrap; }
-    .dn-trust-card--ownership .dn-trust-card__vehicle { width: min(340px, 42%); right: -24px; }
+    .dn-trust-card p { margin: 0; }
+    .dn-trust-card__description-line { display: inline; }
+    .dn-trust-card .dn-trust-card__action { width: max-content; max-width: 100%; margin-top: auto; white-space: normal; }
     .dn-trust-card--campaign { container-type: inline-size; }
-    .dn-trust-card--campaign .dn-trust-card__content { width: 100%; }
-    .dn-trust-card--campaign p { width: 50%; }
+    .dn-trust-card--campaign .dn-trust-card__content { width: max(52%, 240px); }
+    .dn-trust-card--campaign p { width: 100%; max-width: 28ch; }
     .dn-trust-card__vehicle--campaign {
-      --car-height: min(144px, calc(min(55cqw, 100cqw - 244px) / var(--art-width)));
-      top: calc(206px - var(--car-height) * var(--art-bottom));
-      right: calc(16px - var(--car-height) * var(--art-right));
-      bottom: auto;
+      --car-height: min(144px, calc(min(46cqw, 100cqw - 244px) / var(--art-width)));
+      top: auto;
+      right: calc(var(--dn-space-6) - var(--car-height) * var(--art-right));
+      bottom: calc(var(--dn-space-8) - var(--car-height) * (var(--art-height) - var(--art-bottom)));
       width: calc(var(--car-height) * var(--art-width));
       height: calc(var(--car-height) * var(--art-height));
     }
