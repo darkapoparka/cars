@@ -135,6 +135,19 @@ test('desktop sidebar maximums and choices submit without JavaScript', async ({
 			url.searchParams.get('layout') === 'dashboard'
 	);
 	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
+	await page.getByRole('button', { name: 'Най-ниска цена', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('maxPrice') === '32000' &&
+			url.searchParams.getAll('brand').includes('BMW') &&
+			url.searchParams.getAll('brand').includes('Audi') &&
+			url.searchParams.get('layout') === 'dashboard'
+	);
+	await expect(page.getByRole('button', { name: 'Най-ниска цена', exact: true })).toHaveAttribute(
+		'aria-pressed',
+		'true'
+	);
 	await context.close();
 });
 
@@ -142,18 +155,34 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
-	await visit(page, '/en/inventory?brand=BMW&maxPrice=50000&view=4&lang=en');
-	const sort = page.locator('.inventory-display select[name="sort"]');
-	await expect(sort).toHaveValue('best-match');
-	await sort.selectOption('lowest-price');
+	await visit(page, '/en/inventory?brand=BMW&q=X3&maxPrice=50000&view=4&lang=en');
+	const hero = page.locator('.inventory-hero');
+	await expect(hero.locator('.site-filter-trigger')).toHaveCount(6);
+	await expect(hero.getByRole('button', { name: 'All filters', exact: true })).toBeVisible();
+	await expect(hero.getByRole('button', { name: 'Make: BMW', exact: true })).toBeVisible();
+	const model = hero.getByRole('button', { name: 'Model: X3', exact: true });
+	await model.click();
+	await expect(page.getByRole('dialog').getByRole('tab', { name: /^Model\b/ })).toHaveAttribute(
+		'aria-selected',
+		'true'
+	);
+	await page.keyboard.press('Escape');
+	await expect(model).toBeFocused();
+	const sort = page.getByRole('button', { name: 'Lowest Price', exact: true });
+	await expect(page.getByRole('button', { name: 'Best Match', exact: true })).toHaveAttribute(
+		'aria-pressed',
+		'true'
+	);
+	await sort.press('Enter');
 	await expect(page).toHaveURL(
 		(url) =>
 			url.searchParams.get('sort') === 'lowest-price' &&
 			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('q') === 'X3' &&
 			url.searchParams.get('maxPrice') === '50000' &&
 			url.searchParams.get('lang') === 'en'
 	);
-	await expect(sort).toHaveValue('lowest-price');
+	await expect(sort).toHaveAttribute('aria-pressed', 'true');
 	const view = page.locator('.inventory-view summary');
 	await view.click();
 	await expect(page.getByRole('link', { name: 'Comfortable grid', exact: true })).toBeVisible();
@@ -167,6 +196,7 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 			url.searchParams.get('view') === '3' &&
 			url.searchParams.get('sort') === 'lowest-price' &&
 			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('q') === 'X3' &&
 			url.searchParams.get('maxPrice') === '50000'
 	);
 	await view.click();
@@ -177,6 +207,7 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 			url.searchParams.get('layout') === 'dashboard' &&
 			url.searchParams.get('sort') === 'lowest-price' &&
 			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('q') === 'X3' &&
 			url.searchParams.get('maxPrice') === '50000' &&
 			url.searchParams.get('lang') === 'en'
 	);

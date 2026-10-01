@@ -1,19 +1,30 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { inventoryDesktopControlsCopy } from '$lib/content/inventory-desktop-controls';
 	import { replaceState } from '$app/navigation';
-	import type { AuxeroInventoryDesktopData } from '$lib/server/inventory-options';
+	import type {
+		AuxeroInventoryDesktopData,
+		AuxeroInventoryFilter
+	} from '$lib/server/inventory-options';
 	import type { InventoryMobileData } from '$lib/server/inventory-options-mobile';
 	import type { AuxeroInventoryVehicleCard } from '$lib/domain/vehicle-card';
 	import type { InventoryCopy, Locale } from '$lib/i18n/messages';
 	import { linkHref } from '$lib/utils/links';
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
+	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
+	import InventoryFilter from './InventoryFilter.svelte';
+	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import SearchField from '$lib/components/common/SearchField.svelte';
 	import InventorySidebar from './InventorySidebar.svelte';
-	import { parseInventoryQuery, serializeInventoryQuery } from '$lib/domain/inventory-query';
+	import {
+		inventoryFilterParam,
+		parseInventoryQuery,
+		serializeInventoryQuery
+	} from '$lib/domain/inventory-query';
 	let {
 		cards,
 		desktop,
@@ -43,6 +54,16 @@
 			daynightInventoryProgress: { cardSetKey: key, count: Math.min(cards.length, count + 12) }
 		});
 	const english = $derived(locale === 'en');
+	const controlsCopy = $derived(inventoryDesktopControlsCopy[locale]);
+	let allOpen = $state(false);
+	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
+	let dialog = $state<InventoryFiltersDialog>();
+	const heroFilters = $derived(
+		['brand', 'q']
+			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
+			.filter((filter) => filter !== undefined)
+	);
+	const openFilters = (filter?: AuxeroInventoryFilter) => dialog?.openFilters(filter);
 	const searchState = $derived(parseInventoryQuery(page.url.searchParams));
 	const searchHiddenInputs = $derived(
 		[...serializeInventoryQuery(searchState, page.url.searchParams)].filter(
@@ -56,23 +77,29 @@
 		<PageIntro
 			title={desktop.title}
 			class="inventory-hero"
-			compact
 			vehicleArtwork
 			align="center"
 			desktopDescription={desktop.subtitle}
 		>
 			{#snippet desktopActions()}
-				<form action={linkHref('/inventory')} role="search">
+				<form action={linkHref('/inventory')} role="search" class="inventory-hero__search">
 					{#each searchHiddenInputs as [name, value] (name)}<input
 							type="hidden"
 							{name}
 							{value}
 						/>{/each}
+					{#each heroFilters as filter (filter.id)}<InventoryFilter
+							{filter}
+							embedded
+							expanded={allOpen && activeFilter?.id === filter.id}
+							onopen={() => openFilters(filter)}
+						/>{/each}
 					<SearchField
+						embedded
 						name="keyword"
 						value={searchState.filters.keyword ?? ''}
 						label={desktop.searchLabel}
-						placeholder={desktop.searchPlaceholder}
+						placeholder={controlsCopy.searchPlaceholder}
 					>
 						<Action type="submit" size="primary"
 							>{english ? 'Search' : 'Търси'} ({desktop.resultCount})</Action
@@ -80,12 +107,24 @@
 					</SearchField>
 				</form>
 			{/snippet}
+			{#snippet desktopSecondaryActions()}
+				<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
+			{/snippet}
 		</PageIntro>
+		<InventoryFiltersDialog bind:this={dialog} {desktop} {english} bind:allOpen bind:activeFilter />
 		<section
 			class="inventory-results site-section"
 			aria-label={english ? 'Cars for sale' : 'Автомобили за продажба'}
 		>
-			<InventoryToolbar {desktop} {english} />
+			<div class="inventory-results__controls">
+				<div class="site-container inventory-results__overview">
+					<p role="status">
+						<strong>{desktop.resultCount}</strong>
+						{controlsCopy.vehicleNoun(desktop.resultCount)}
+					</p>
+					<InventoryDisplayControls {desktop} {english} />
+				</div>
+			</div>
 			<div
 				class="site-container inventory-results__layout"
 				id="inventory-results"
@@ -131,6 +170,16 @@
 		max-width: var(--bc-desktop-discovery-width);
 		margin-inline: auto;
 	}
+	.inventory-hero__search {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr)) minmax(0, 3fr);
+		padding: var(--bc-space-1);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-surface-raised);
+		color: var(--bc-ink);
+		text-align: start;
+	}
 	.inventory-results__layout,
 	.inventory-results__content {
 		min-width: 0;
@@ -143,6 +192,30 @@
 	.inventory-results {
 		background: var(--bc-bg);
 		padding-top: var(--bc-space-3);
+	}
+	.inventory-results__controls {
+		position: sticky;
+		top: 0;
+		z-index: 80;
+		background: var(--bc-bg);
+		padding-block: var(--bc-space-3);
+		margin-bottom: var(--bc-space-2);
+	}
+	.inventory-results__overview {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		align-items: center;
+		gap: var(--bc-space-2) var(--bc-space-4);
+	}
+	.inventory-results__overview p {
+		margin: 0;
+		color: var(--bc-copy);
+		font-size: var(--bc-text-body);
+	}
+	.inventory-results__overview strong {
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-heading);
 	}
 	.inventory-grid {
 		display: grid;

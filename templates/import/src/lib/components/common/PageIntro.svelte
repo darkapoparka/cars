@@ -150,6 +150,9 @@
 			min-height: var(--bc-desktop-page-hero-height);
 			padding-block: var(--bc-space-6);
 		}
+		.site-intro--cars {
+			min-height: var(--bc-desktop-discovery-hero-height);
+		}
 		.site-intro--compact {
 			min-height: var(--bc-desktop-page-hero-height-compact);
 		}

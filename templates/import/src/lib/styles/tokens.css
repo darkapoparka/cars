@@ -319,6 +319,7 @@
 		--bc-desktop-hero-title: clamp(2.25rem, 3vw, 2.75rem);
 		--bc-desktop-section-title: clamp(1.75rem, 2.25vw, 2rem);
 		--bc-desktop-discovery-width: 880px;
+		--bc-desktop-discovery-hero-height: 400px;
 		--bc-desktop-service-search-width: 640px;
 		--bc-desktop-home-panel-height: 160px;
 		--bc-desktop-card-title: 18px;
@@ -326,6 +327,12 @@
 		--bc-desktop-card-price: 26px;
 		--bc-desktop-team-width: 1056px;
 		--bc-desktop-team-image-height: 220px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+	.site-shell {
+		--bc-desktop-discovery-hero-height: 450px;
 	}
 }
 

@@ -1,5 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import {
+		inventoryDesktopControlsCopy,
+		inventorySortButtonOrder
+	} from '$lib/content/inventory-desktop-controls';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import PanelLeft from '@lucide/svelte/icons/panel-left';
@@ -8,6 +12,12 @@
 	import type { AuxeroInventoryDesktopData } from '$lib/server/inventory-options';
 	let { desktop, english = false }: { desktop: AuxeroInventoryDesktopData; english?: boolean } =
 		$props();
+	const controlsCopy = $derived(inventoryDesktopControlsCopy[english ? 'en' : 'bg']);
+	const sortButtons = $derived(
+		inventorySortButtonOrder
+			.map((value) => desktop.sortOptions.find((option) => option.value === value))
+			.filter((option) => option !== undefined)
+	);
 	let viewMenu: HTMLDetailsElement;
 	function dismissViewMenu(event: PointerEvent | FocusEvent) {
 		if (event.target instanceof Node && !viewMenu?.contains(event.target) && viewMenu) {
@@ -29,24 +39,31 @@
 />
 
 <div class="inventory-display" role="group" aria-label={desktop.controlsLabel}>
-	<form action={linkHref('/inventory')} class="inventory-display__sort">
+	<form
+		action={linkHref('/inventory')}
+		class="inventory-display__sort"
+		aria-label={controlsCopy.sortLabel}
+	>
 		{#each [...page.url.searchParams].filter(([name]) => name !== 'sort') as [name, value], i (i)}<input
 				type="hidden"
 				{name}
 				{value}
 			/>{/each}
-		<label
-			><span>{desktop.sortLabel}</span><select
-				name="sort"
-				value={desktop.sortOptions.find((option) => option.active)?.value ??
-					desktop.sortOptions[0]?.value}
-				onchange={(event) => event.currentTarget.form?.requestSubmit()}
-				>{#each desktop.sortOptions as option (option.value)}<option value={option.value}
-						>{option.label}</option
-					>{/each}</select
-			></label
-		>
-		<noscript><button type="submit">{english ? 'Sort' : 'Подреди'}</button></noscript>
+		<span class="inventory-sort-label">{controlsCopy.sortLabel}</span>
+		<div class="inventory-sort-buttons">
+			{#each sortButtons as option (option.value)}<Action
+					type="submit"
+					name="sort"
+					value={option.value}
+					variant="quiet"
+					size="compact"
+					class="inventory-sort-button"
+					aria-label={option.label}
+					title={option.label}
+					aria-pressed={option.active}
+					>{controlsCopy.sortButtons[option.value] ?? option.label}</Action
+				>{/each}
+		</div>
 	</form>
 	<details class="inventory-view" bind:this={viewMenu}>
 		<summary
@@ -71,13 +88,9 @@
 					class="inventory-toolbar__layout"
 					onclick={() => (viewMenu.open = false)}
 				>
-					<PanelLeft size={18} aria-hidden="true" />{english
-						? desktop.layout === 'dashboard'
-							? 'Hide filter panel'
-							: 'Show filter panel'
-						: desktop.layout === 'dashboard'
-							? 'Скрий панела с филтри'
-							: 'Покажи панел с филтри'}
+					<PanelLeft size={18} aria-hidden="true" />{desktop.layout === 'dashboard'
+						? controlsCopy.hideFilterPanel
+						: controlsCopy.showFilterPanel}
 				</Action>
 			</div>
 		</nav>
@@ -86,22 +99,46 @@
 
 <style>
 	.inventory-display {
-		display: flex;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-4);
 	}
 	.inventory-display__sort {
-		margin: 0;
-	}
-	label {
 		display: flex;
 		align-items: center;
-		gap: var(--bc-space-1);
+		justify-content: flex-end;
+		gap: var(--bc-space-2);
+		margin: 0;
+		min-width: 0;
+	}
+	.inventory-sort-label {
 		color: var(--bc-copy);
 		font-size: var(--bc-text-body);
+		white-space: nowrap;
 	}
-	select,
+	.inventory-sort-buttons {
+		display: flex;
+		gap: var(--bc-space-1);
+	}
+	.inventory-sort-buttons :global(.inventory-sort-button) {
+		min-height: var(--bc-control-height-standard);
+		padding-inline: var(--bc-space-3);
+		border: 1px solid var(--bc-border);
+		border-radius: var(--bc-radius-md);
+		background: var(--bc-surface-raised);
+		font-size: var(--bc-text-label);
+		white-space: nowrap;
+	}
+	.inventory-sort-buttons :global(.inventory-sort-button:hover) {
+		border-color: var(--bc-ink);
+		background: var(--bc-surface);
+	}
+	.inventory-sort-buttons :global(.inventory-sort-button[aria-pressed='true']) {
+		border-color: var(--bc-accent);
+		background: var(--bc-accent-soft);
+		color: var(--bc-accent);
+	}
 	summary {
 		border: 0;
 		border-radius: var(--bc-radius-sm);
@@ -124,7 +161,6 @@
 		list-style: none;
 		cursor: pointer;
 	}
-	select:hover,
 	summary:hover,
 	.inventory-view[open] summary {
 		background: var(--bc-surface);
@@ -171,5 +207,20 @@
 		border-radius: var(--bc-radius-md);
 		padding-inline: var(--bc-space-3);
 		white-space: nowrap;
+	}
+	@media (max-width: 1199px) {
+		.inventory-sort-label {
+			display: none;
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1023px) {
+		.inventory-display__sort {
+			justify-content: stretch;
+		}
+		.inventory-sort-buttons {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			width: 100%;
+		}
 	}
 </style>

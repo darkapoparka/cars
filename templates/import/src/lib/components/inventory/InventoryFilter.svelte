@@ -5,21 +5,31 @@
 		filter,
 		onopen,
 		summary,
-		expanded = false
+		expanded = false,
+		embedded = false,
+		inverse = false
 	}: {
 		filter: AuxeroInventoryFilter;
 		onopen: () => void;
 		expanded?: boolean;
 		summary?: string;
+		embedded?: boolean;
+		inverse?: boolean;
 	} = $props();
 </script>
 
 <button
 	type="button"
 	class="site-filter-trigger"
+	class:site-filter-trigger--embedded={embedded}
+	class:site-filter-trigger--inverse={inverse}
 	data-active={Boolean(summary) || filter.selectedValues.length > 0}
 	aria-haspopup="dialog"
 	aria-expanded={expanded}
+	aria-label={embedded || inverse
+		? filter.label +
+			(summary ? ': ' + summary : filter.selectedValues.length ? ': ' + filter.selectedSummary : '')
+		: undefined}
 	title={summary ?? (filter.selectedValues.length ? filter.selectedSummary : filter.label)}
 	onclick={onopen}
 >
@@ -82,6 +92,33 @@
 		.site-filter-trigger :global(svg) {
 			flex-shrink: 0;
 			color: var(--bc-muted);
+		}
+		.site-filter-trigger--embedded {
+			min-height: var(--bc-control-height-hero);
+			border: 0;
+			border-right: 1px solid var(--bc-border);
+			border-radius: 0;
+			background: transparent;
+		}
+		.site-filter-trigger--embedded[data-active='true'] {
+			border-color: var(--bc-border);
+			background: transparent;
+		}
+		.site-filter-trigger--inverse {
+			border-color: var(--bc-glass-border);
+			background: var(--bc-glass-surface);
+			color: var(--bc-white);
+			backdrop-filter: blur(12px);
+		}
+		.site-filter-trigger--inverse:hover,
+		.site-filter-trigger--inverse[aria-expanded='true'],
+		.site-filter-trigger--inverse[data-active='true'] {
+			border-color: var(--bc-white);
+			background: var(--bc-glass-hover);
+			color: var(--bc-white);
+		}
+		.site-filter-trigger--inverse :global(svg) {
+			color: inherit;
 		}
 	}
 </style>
