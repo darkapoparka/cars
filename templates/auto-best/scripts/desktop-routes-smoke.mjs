@@ -40,12 +40,6 @@ async function heroGeometry(page) {
       backgroundImage: getComputedStyle(hero).backgroundImage,
       scene: scene ? { src: scene.currentSrc, ...rect(scene) } : null,
       cutouts: [...hero.querySelectorAll('.dn-hero-vehicles__car img')].map(image => ({ src: image.currentSrc, ...rect(image) })),
-      carBodies: [...hero.querySelectorAll('.dn-hero-vehicles__car')].map(car => {
-        const bounds = car.getBoundingClientRect();
-        const style = getComputedStyle(car);
-        const height = bounds.height / parseFloat(style.getPropertyValue('--art-height-ratio'));
-        return { height, baseline: bounds.y + height * parseFloat(style.getPropertyValue('--art-bottom-ratio')) };
-      }),
       font: getComputedStyle(heading).fontFamily,
       headingSize: getComputedStyle(heading).fontSize,
       leadSize: getComputedStyle(lead).fontSize,
@@ -55,19 +49,13 @@ async function heroGeometry(page) {
   });
 }
 
-function assertDesktopFrame(geometry, width) {
+function assertDesktopFrame(geometry) {
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
   assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Titles keep the same top anchor regardless of subtitle length');
   assert.equal(geometry.controls.y - geometry.hero.y, 340, 'Search panels and actions keep the same top anchor');
   assert(geometry.copy.y >= geometry.header.bottom + 60, 'Hero titles have at least 60px of breathing room below navigation');
   assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
   assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
-  if (width >= 1440) {
-    for (const car of geometry.carBodies) {
-      assert(Math.abs(car.height - Math.min(160, Math.max(120, width * .08333))) <= 1, 'Every cutout pair uses the shared visible-body scale');
-      assert(Math.abs(car.baseline - (geometry.hero.bottom - 50)) <= 1, 'Every cutout pair meets the shared body baseline');
-    }
-  }
 }
 
 try {
@@ -81,7 +69,7 @@ try {
           const errors = [];
           const sceneRequests = [];
           const onError = error => errors.push(error.message);
-          const onRequest = request => { if (/auto-best-desktop-.+-v1\.webp/.test(request.url())) sceneRequests.push(request.url()); };
+          const onRequest = request => { if (/auto-best-desktop-.+-v[12]\.webp/.test(request.url())) sceneRequests.push(request.url()); };
           page.on('pageerror', onError);
           page.on('request', onRequest);
           try {
@@ -107,25 +95,18 @@ try {
               assert.equal(await page.locator('.dn-blog-search__icon--mobile').isVisible(), width < 992, 'Mobile search uses its dedicated icon');
               assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
             }
-            const hasScene = (route === 'about-us' || route === 'contact') && width >= 992;
-            assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Only visible About/Contact scenes are requested; phones load none');
+            const hasScene = width >= 992;
+            assert.equal(sceneRequests.length, hasScene ? 1 : 0, 'Every desktop route requests only its own scene; phones load none');
             if (hasScene) {
-              assert(geometry.scene.src.endsWith(`auto-best-desktop-${route === 'about-us' ? 'about' : 'contact'}-v1.webp`), 'Each company page uses its configured photographic hero');
+              const scene = { '': 'home-v2', 'listing-grid': 'inventory-v2', 'about-us': 'about-v1', blog: 'blog-v2', contact: 'contact-v2' }[route];
+              assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'Each route has its own configured artwork in the shared frame');
               assert.equal(geometry.scene.height, geometry.hero.height - (width < 1200 ? 140 : 0), 'Laptop crop keeps scene edges below navigation');
               assert.equal(geometry.scene.bottom, geometry.hero.bottom, 'Scene meets the banner baseline');
+              assert.equal(await page.locator('.dn-desktop-hero-scene').evaluate(e => getComputedStyle(e).filter), route === 'about-us' ? 'brightness(0.55)' : 'none', 'About retains its photograph with readable white copy; campaign artwork uses its original colour');
             }
-            if (route !== 'about-us' && route !== 'contact') {
-              assert.equal(geometry.scene, null, 'Cutout routes omit the full scene element');
-              assert.equal(geometry.cutouts.length, route === 'contact' ? 0 : 2, 'Contact omits hidden decorative vehicles; discovery retains its cutout pair');
-              assert(geometry.cutouts.every(image => width >= 1440 ? (!image.width || image.src.startsWith('http')) : image.src.startsWith('data:')), 'Visible wide cutouts load; narrow screens use placeholders');
-              if (width >= 1440 && (route === '' || route === 'listing-grid')) {
-                assert(geometry.cutouts[0].right <= geometry.controls.x, 'Left car stays clear of search');
-                assert(geometry.cutouts[1].x >= geometry.controls.right, 'Right car stays clear of search');
-              }
-            }
+            assert.equal(geometry.cutouts.length, 0, 'The shared showroom replaces separate desktop vehicle overlays');
             if (width >= 992) {
-              assertDesktopFrame(geometry, width);
-              if (!hasScene) assert.equal(geometry.backgroundImage, 'none', 'Cutouts use solid neutral surfaces');
+              assertDesktopFrame(geometry);
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
@@ -150,14 +131,15 @@ try {
               }
               const surface = { '': '.dn-inventory', 'listing-grid': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];
               if (surface) assert.equal(await page.locator(surface).evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop routes share a light-grey content canvas');
-              if (route !== 'contact') assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Discovery heroes use the soft grey canvas; About adds its photograph');
+              assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(21, 24, 29)', 'Every hero has the same graphite fallback surface');
+              assert.equal(await page.locator('.dn-route-hero h1').evaluate(e => getComputedStyle(e).color), 'rgb(255, 255, 255)', 'All desktop hero headings use readable white copy');
               if (route === 'contact') {
-                assert.equal(await page.locator('h1').evaluate(e => getComputedStyle(e).color), 'rgb(255, 255, 255)', 'Contact title contrasts against the dark photograph');
                 assert.equal(await page.locator('.dn-contact-hero__call').getAttribute('href'), 'tel:+359879824625');
                 const showroom = await page.locator('.dn-desktop-showroom').boundingBox();
                 assert.equal(showroom.y - geometry.hero.bottom, 32, 'The visit panel follows the complete hero instead of obscuring it');
                 await page.locator('.dn-contact-hero__visit').focus();
                 assert.equal(await page.locator('.dn-contact-hero__visit').evaluate(e => getComputedStyle(e).outlineStyle), 'solid');
+                assert.equal(await page.locator('.dn-contact-hero__visit').evaluate(e => getComputedStyle(e).outlineColor), 'rgb(255, 255, 255)', 'Directions has a visible focus ring against the dark campaign artwork');
                 await page.locator('.dn-contact-hero__visit').click();
                 assert.equal(new URL(page.url()).hash, '#contact-intent', 'Directions takes the visitor to the visit panel');
                 await page.evaluate(() => scrollTo(0, 0));
@@ -187,7 +169,6 @@ try {
                 const services = await page.locator('.dn-about-process__panel').boundingBox();
                 const visit = await page.locator('.dn-desktop-showroom').boundingBox();
                 assert(Math.abs(visit.y - (services.y + services.height) - 64) <= 1, 'Showroom follows services with the shared 64px section gap');
-                assert.equal(await page.locator('.dn-desktop-hero-scene').evaluate(e => getComputedStyle(e).filter), 'grayscale(1)', 'Architecture uses the neutral palette');
               }
               // Verify actual glyph rendering, including Cyrillic, rather than only the CSS font stack.
               // The inventory/map scroll pass can leave the heading unpainted when CDP samples it.
@@ -236,7 +217,7 @@ try {
       }
       if (width === 1440) {
         await check(`${locale}/desktop header navigation keeps hero anchors`, async () => {
-          await page.goto(`${base}/${locale}/`, { waitUntil: 'domcontentloaded' });
+          await page.goto(`${base}/${locale}/`, { waitUntil: 'networkidle' });
           await settleHeroFonts(page);
           await page.locator('.dn-logo img').evaluate(image => image.decode());
           const initial = await heroGeometry(page);
@@ -249,21 +230,28 @@ try {
             assert(index >= 0, `Header has a destination for ${route || 'home'}`);
             // Hover opens the existing disclosure menu; clicking its title then navigates.
             await links.nth(index).hover();
+            if (await links.nth(index).getAttribute('aria-expanded') !== null) {
+              await page.waitForFunction(index => document.querySelectorAll('.dn-nav__list > li > a')[index].getAttribute('aria-expanded') === 'true', index);
+            }
             await links.nth(index).click();
-            await page.waitForURL(url => appPath(url) === (route ? `/${route}` : '/') && !url.search);
+            await page.waitForURL(url => appPath(url) === (route ? `/${route}` : '/') && !url.search, { waitUntil: 'domcontentloaded' });
             await settleHeroFonts(page);
             await page.evaluate(async () => {
               await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
             });
             const geometry = await heroGeometry(page);
-            assertDesktopFrame(geometry, width);
+            assertDesktopFrame(geometry);
+            const { src: currentSource, ...currentScene } = geometry.scene;
+            const { src: initialSource, ...initialScene } = initial.scene;
+            assert.deepEqual(currentScene, initialScene, 'Artwork framing stays fixed through header navigation');
+            if (route) assert.notEqual(currentSource, initialSource, 'Main destinations have individual artwork');
             for (const element of ['header', 'logo', 'navigation']) {
               assert.deepEqual(geometry[element], initial[element], `${element} keeps its position and size when switching routes`);
             }
             if (route === 'listing-grid' || route === '') {
               assert.deepEqual(geometry.controls, initial.controls, 'Home and Inventory share the complete search-panel bounds');
             }
-            frames.push({ route: route || 'home', hero: geometry.hero, heading: geometry.heading, controls: geometry.controls, carBodies: geometry.carBodies, logo: geometry.logo });
+            frames.push({ route: route || 'home', hero: geometry.hero, heading: geometry.heading, controls: geometry.controls, scene: geometry.scene, logo: geometry.logo });
           }
           return frames;
         });
@@ -272,7 +260,9 @@ try {
             await page.goto(`${base}/${locale}/contact?topic=${topic}`, { waitUntil: 'domcontentloaded' });
             await settleHeroFonts(page);
             const geometry = await heroGeometry(page);
-            assertDesktopFrame(geometry, width);
+            assertDesktopFrame(geometry);
+            assert(geometry.scene.src.endsWith('auto-best-desktop-contact-v2.webp'), 'Service entries share the Contact campaign artwork');
+            assert.equal(geometry.cutouts.length, 0, 'Service illustrations remain mobile only');
             assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');
             return geometry;
           });

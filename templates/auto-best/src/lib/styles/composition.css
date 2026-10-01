@@ -144,17 +144,6 @@
     margin-top: 0;
   }
 
-  .dn-app-shell .dn-contact-hero.dn-route-hero--studio:not(.dn-contact-hero--general) {
-    --dn-studio-background: var(--dn-workflow-canvas);
-    --dn-studio-heading: #fff;
-    --dn-studio-description: #f5dadd;
-  }
-
-  .dn-contact-hero.dn-route-hero--studio .dn-contact-hero__action {
-    background: #fff;
-    color: #202329;
-  }
-
   .dn-route-hero--studio :is(.dn-about-button, .dn-contact-hero__action) {
     min-width: 0;
     min-height: 44px;
@@ -191,29 +180,22 @@
     transform: translateX(-50%);
   }
 
-  .dn-route-hero--neutral {
-    --dn-studio-background: var(--dn-surface-canvas);
-    --dn-studio-heading: var(--dn-ink);
-    --dn-studio-description: var(--dn-muted);
+  .dn-route-hero--campaign {
+    --dn-studio-background: var(--dn-theme-hero-surface-deep);
+    --dn-studio-heading: var(--dn-white);
+    --dn-studio-description: var(--dn-white);
   }
 
-  .dn-route-hero--light {
-    --dn-studio-background: var(--dn-surface-canvas);
-    --dn-studio-heading: var(--dn-ink);
-    --dn-studio-description: var(--dn-ink);
-  }
-
-  .dn-route-hero--light .dn-about-button {
+  .dn-route-hero--campaign :is(.dn-about-button, .dn-contact-hero__action) {
     background: var(--dn-red);
     color: var(--dn-white);
   }
 
-  .dn-route-hero--light .dn-about-button:is(:hover, :focus-visible) {
+  .dn-route-hero--campaign :is(.dn-about-button, .dn-contact-hero__action):is(:hover, :focus-visible) {
     background: var(--dn-red-hover);
     color: var(--dn-white);
   }
 
-  .dn-route-hero--light .dn-about-button:focus-visible { outline-color: var(--dn-focus); }
 }
 
 @media (min-width: 992px) {

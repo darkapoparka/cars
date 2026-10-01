@@ -4,6 +4,7 @@
   const i18n = getI18n();
 
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import HeroLocation from '$components/ui/HeroLocation.svelte';
   import { mobileHeroRegions } from '$data/vehicle-artwork';
   import { imageSrcset, mobileHeroSizes } from '$data/responsive-images';
@@ -13,8 +14,9 @@
   <link rel="preload" as="image" href={mobileHeroRegions.home.src} imagesrcset={imageSrcset(mobileHeroRegions.home.src)} imagesizes={mobileHeroSizes} media="(max-width: 767px)" fetchpriority="high" />
 </svelte:head>
 
-<section class="dn-hero dn-route-hero dn-route-hero--light dn-discovery-hero" aria-labelledby="home-hero-title">
-  <HeroVehicles pair="home" mobile />
+<section class="dn-hero dn-route-hero dn-route-hero--campaign dn-discovery-hero" aria-labelledby="home-hero-title">
+  <DesktopHeroScene scene="home" />
+  <HeroVehicles pair="home" mobile desktop={false} />
   <div class="container dn-hero__inner dn-route-hero__layout">
     <div class="dn-hero__copy dn-route-hero__copy">
       <h1 id="home-hero-title">
@@ -32,7 +34,7 @@
   }
 
   @media (min-width: 992px) {
-    .dn-hero { background: var(--dn-surface-canvas); }
+    .dn-hero { background: var(--dn-theme-hero-surface-deep); }
   }
 
   .dn-hero__title-mobile {

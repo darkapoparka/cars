@@ -10,7 +10,7 @@
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 </script>
 
-<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--light" aria-labelledby="about-title">
+<section class="dn-about-hero dn-information-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" aria-labelledby="about-title">
   <DesktopHeroScene scene="about" />
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
@@ -22,13 +22,12 @@
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>
-    <DesktopSocialLinks hero />
+    <DesktopSocialLinks hero onDark />
   </div>
 </section>
 
 <style>
   @media (min-width: 992px) {
-    .dn-about-hero :global(.dn-desktop-hero-scene) { filter: grayscale(1); }
     .dn-about-hero__lead { display: none; }
   }
 </style>

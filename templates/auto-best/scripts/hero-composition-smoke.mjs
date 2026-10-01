@@ -12,7 +12,7 @@ try {
     let sellCarPixels, sellCarBox;
     for(const topic of ['home','trade-in','import']) {
       await page.goto(`${base}/${locale}${topic==='home'?'':'/contact?topic='+topic}`,{waitUntil:'networkidle',timeout:60000});
-      const hero=page.locator('.dn-hero-vehicles').first();
+      const hero=page.locator(width<768?'.dn-hero-vehicles':'.dn-desktop-hero-scene').first();
       const frame=await hero.boundingBox();assert(frame,'Hero is visible');
       const center=frame.x+frame.width/2;
       if(width<768) {
@@ -26,7 +26,7 @@ try {
         if(topic!=='home') {
           const car=main.locator('.dn-hero-vehicles__shared-car');
           const carImage=car.locator('img');
-          assert((await carImage.evaluate(e=>e.currentSrc)).includes('service-sell-front-v3.webp'),'Both routes use the exact same car source');
+          assert.match(await carImage.evaluate(e=>e.currentSrc),/\/service-sell-front-v3(?:-480)?\.webp$/,'Both routes use the exact same car source or its reviewed responsive rendition');
           const carBox=await car.boundingBox();
           const pixels=await car.screenshot({path:`${output}/${locale}-${width}-${topic}-car.png`});
           if(topic==='trade-in') { sellCarPixels=pixels;sellCarBox=carBox; }
@@ -39,12 +39,15 @@ try {
             assert(difference.ratio<.001&&difference.maxDelta<=1,JSON.stringify({message:'Car pixels differ',locale,width,difference}));
           }
           for(const img of await main.locator('.dn-hero-vehicles__detail img').all()) {
-            assert((await img.evaluate(e=>e.currentSrc)).includes('service-'+(topic==='trade-in'?'sell':'import')+'-front-v3.webp'),'Only supporting artwork changes by service');
+            assert.match(await img.evaluate(e=>e.currentSrc),new RegExp('/service-'+(topic==='trade-in'?'sell':'import')+'-front-v3(?:-480)?\\.webp$'),'Only supporting artwork changes by service');
           }
         }
 
       } else {
-        assert.equal(await hero.locator('.dn-hero-vehicles__car:visible').count(),2,'Desktop retains its two side vehicles');
+        const image=hero.locator('img');
+        await image.evaluate(image=>image.decode());
+        assert((await image.evaluate(image=>image.currentSrc)).endsWith(`auto-best-desktop-${topic==='home'?'home':'contact'}-v2.webp`),'Home and services use their individual campaign artwork within one desktop frame');
+        assert.equal(await page.locator('.dn-hero-vehicles__car').count(),0,'Desktop does not mount additional cutout pairs');
       }
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'No horizontal overflow');
       await page.screenshot({path:`${output}/${locale}-${width}-${topic}.png`});

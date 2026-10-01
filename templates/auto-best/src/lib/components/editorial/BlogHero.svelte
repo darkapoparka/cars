@@ -3,7 +3,7 @@
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
-  import HeroVehicles from '$components/ui/HeroVehicles.svelte';
+  import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { blogCategories, blogFilterHref, type BlogFilters } from '$data/editorial';
@@ -11,8 +11,8 @@
   let { filters }: { filters: BlogFilters } = $props();
 </script>
 
-<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--neutral" aria-labelledby="blog-title">
-  <HeroVehicles pair="blog" />
+<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" aria-labelledby="blog-title">
+  <DesktopHeroScene scene="blog" />
   <div class="container dn-blog-hero__inner dn-route-hero__layout">
     <div class="dn-blog-hero__copy dn-route-hero__copy">
       <h1 id="blog-title">{i18n.t("m_572cd72feb9a")}</h1>

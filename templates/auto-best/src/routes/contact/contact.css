@@ -684,9 +684,6 @@
 /* Keep the full photographic hero separate from the practical visit panel. */
 @media (min-width: 992px) {
   .dn-app-shell .dn-contact-hero--general.dn-route-hero {
-    --dn-studio-background: var(--dn-theme-contact-surface);
-    --dn-studio-heading: var(--dn-white);
-    --dn-studio-description: var(--dn-white);
     align-items: flex-start;
   }
   .dn-app-shell .dn-contact-hero--general .dn-contact-hero__action { display: none; }

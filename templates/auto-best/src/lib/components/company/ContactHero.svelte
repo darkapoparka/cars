@@ -24,11 +24,10 @@
   });
 </script>
 
-<section class="dn-contact-hero dn-route-hero dn-route-hero--studio" class:dn-information-hero={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
-  {#if topic.id === 'general'}
-    <DesktopHeroScene scene="contact" />
-  {:else}
-  <HeroVehicles pair="contact" mobile={topic.id === 'trade-in' || topic.id === 'import'} mobileScene={topic.id === 'trade-in' ? 'sell' : topic.id === 'import' ? 'import' : 'car'} />
+<section class="dn-contact-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" class:dn-information-hero={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
+  <DesktopHeroScene scene="contact" />
+  {#if topic.id === 'trade-in' || topic.id === 'import'}
+    <HeroVehicles pair="contact" mobile desktop={false} mobileScene={topic.id === 'trade-in' ? 'sell' : 'import'} />
   {/if}
   <div class="container dn-contact-hero__content dn-route-hero__layout">
     <div class="dn-contact-hero__copy dn-route-hero__copy">

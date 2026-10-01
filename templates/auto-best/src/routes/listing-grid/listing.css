@@ -15,7 +15,7 @@
 .dn-listing-hero__media,
 .dn-listing-hero__overlay { display: none; }
 
-/* The existing tablet photograph is separate from the solid desktop banner. */
+/* The tablet photograph remains separate from the desktop campaign artwork. */
 @media (min-width: 768px) and (max-width: 991px) {
   .dn-listing-hero__media,
   .dn-listing-hero__overlay { display: block; position: absolute; inset: 0; }
@@ -25,7 +25,7 @@
 
 @media (min-width: 992px) {
   .dn-app-shell .dn-listing-stage .dn-listing-hero.dn-route-hero--studio {
-    --dn-studio-background: var(--dn-surface-canvas);
+    --dn-studio-background: var(--dn-theme-hero-surface-deep);
     background: var(--dn-studio-background);
   }
 }

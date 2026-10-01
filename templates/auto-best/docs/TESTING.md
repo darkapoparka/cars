@@ -71,7 +71,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and two-line models with complete accessible labels, plain price hierarchy, equal card heights and right-column two-by-two badges with one text line, long Tesla/electric/petrol-LPG layout fixtures, 52px pale borderless entry fields and pointer/keyboard focus, 22px header glyphs, inventory search and quick filters matching Home pill size with 44px targets, flat white dock with official Hugeicons Stroke Rounded icons and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title |
 | `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy, and checks equal inventory card heights |
 | `scripts/desktop-discovery-smoke.mjs` | Seven native filters with internal captions on Home and inventory, applied URL state, dependent model reset and sticky-control behavior |
-| `scripts/desktop-routes-smoke.mjs` | Localized route geometry, shared grey hero canvas, white location/category pills, About panels, discovery-tile hover, showroom actions and desktop-only map mounting |
+| `scripts/desktop-routes-smoke.mjs` | Localized route geometry, individual campaign artwork within a shared frame, white location/category pills, About panels, discovery-tile hover, showroom actions and desktop-only map mounting |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
 | `scripts/typography-smoke.mjs` | Entry/segment/CTA hierarchy, keyboard tab switching, link/VIN/description editor save and discard, stable card height, sell/import validation and review, reference edits and clearing, manual fallback, copied text, Escape/focus return, control reflow and screenshots |
 
@@ -105,16 +105,20 @@ and control anchor at 340px on every route. Actual header navigation in both
 languages checks these positions through Home, Inventory, About, Contact and Blog;
 the import, trade-in and leasing routes
 use the same frame. Header, logo and navigation bounds remain unchanged through
-those page transitions. Wide cutout pairs share one visible-body scale and a baseline
-50px above the hero bottom. Home and Inventory keep identical search-panel bounds.
+those page transitions. Artwork framing remains identical through header
+navigation while the image changes for each main destination. The initial Home
+load waits for hydration before testing the hover disclosure and title click.
+Home and Inventory keep identical search-panel bounds.
 It also verifies
 single-line desktop card titles with complete accessible labels and compact
-title-to-specifications spacing, About/Contact scene requests, responsive cutout loading and search clearance,
+title-to-specifications spacing, one selected desktop scene request per route and
+no desktop scene requests on mobile, with no additional vehicle overlays,
 title/description/control separation, real Onest
 glyph rendering (including Cyrillic), visible images, page overflow and runtime
-errors. Desktop content canvases and flat heroes are light grey with white cards;
-About keeps a neutral architectural hero; Contact restores its dark photograph,
-white heading, call action and keyboard-accessible directions anchor. Its compact
+errors. Desktop content canvases are light grey with white cards;
+all heroes use white headings on dark campaign artwork. About retains its
+architectural photograph with a darker grade.
+Contact keeps its call action and keyboard-accessible directions anchor. Its compact
 visit panel follows the hero without overlap. Home/About share the white location
 badge. About/Contact share one white visit panel with a real map and call/directions
 actions. The map mounts after desktop hydration and is absent from mobile DOM;

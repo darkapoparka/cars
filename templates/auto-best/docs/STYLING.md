@@ -4,15 +4,20 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 ## Desktop route composition
 
-Home, Inventory and Blog use `--dn-surface-canvas` behind their
-heroes. About retains its neutral showroom photograph; Contact uses its dark
-showroom photograph with white copy and call/directions actions. All desktop
+Home, Inventory, Blog and Contact use individual graphite campaign images through
+`DesktopHeroScene.svelte`. The artwork shares subtle halftone dots and restrained
+red accents, with vehicles or relevant service objects confined to the edges.
+About retains its architectural photograph with a darker grade. White headings,
+red primary actions and white search/category/location controls share one
+treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
+entries use the Contact artwork. All desktop
 route heroes share a 540px frame: titles start at 200px, leaving 60px below the
 desktop header, and primary controls start at 340px. Subtitle length does not move
 either anchor. Home and Inventory use the same search-panel bounds, padding and
-radius; Blog uses that same center lane. Wide car
-cutouts share their visible body scale and a baseline 50px above the hero bottom.
-About and Contact use the same full-scene frame and crop. The desktop logo has a
+radius; Blog uses that same center lane. The artwork has identical framing
+across routes, without additional desktop cutout pairs. Mobile Home
+and service illustrations keep their existing composition and do not request
+the desktop artwork. The desktop logo has a
 fixed image box and flex alignment so decoding or route typography does not move
 it within the shared header. White Blog category pills remain distinct from the
 canvas; the active and hovered category uses the brand accent.
@@ -28,8 +33,9 @@ the complete hero, with a 32px gap. Its map area reserves both grid rows before
 hydration so the external map link stays at the bottom while the iframe mounts.
 
 `DesktopSocialLinks.svelte` renders the same 44px social controls in both company
-heroes and visit panels. Hero controls sit 24px below the primary actions; dark
-heroes use a white keyboard focus ring. Profiles come only from `brand.ts`.
+heroes and visit panels. Hero controls sit 24px below the primary actions and use
+a white keyboard focus ring against dark hero artwork. Visit panels use the
+shared focus colour. Profiles come only from `brand.ts`.
 Empty profile URLs omit the corresponding icon instead of creating dead links.
 The existing mobile social layout remains separate.
 
@@ -187,7 +193,7 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 | Up to 767px | Mobile navigation, home service grid, compact search and bottom-sheet treatments |
 | 768–991px | Intermediate layout; individual components retain their own arrangements |
 | 992px and above | Desktop composition, section banners and desktop discovery controls |
-| 1440px and above | Wide hero side-vehicle artwork is enabled by its media sources |
+| 1440px and above | Individual campaign artwork fills the shared hero frame |
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
 

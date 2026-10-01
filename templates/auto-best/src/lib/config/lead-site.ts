@@ -30,7 +30,7 @@ type LeadSiteConfig = {
   };
   artwork: {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
-    desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'contact', SiteAssetPath>;
+    desktopHeroScenes: Record<'home' | 'inventory' | 'about' | 'blog' | 'contact', SiteAssetPath>;
     contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
@@ -148,10 +148,11 @@ export const leadSite = {
       ]
     },
     desktopHeroScenes: {
-      home: '/assets/images/lead/auto-best-desktop-home-v1.webp',
-      inventory: '/assets/images/lead/auto-best-desktop-inventory-v1.webp',
+      home: '/assets/images/lead/auto-best-desktop-home-v2.webp',
+      inventory: '/assets/images/lead/auto-best-desktop-inventory-v2.webp',
       about: '/assets/images/lead/auto-best-desktop-about-v1.webp',
-      contact: '/assets/images/lead/auto-best-desktop-contact-v1.webp'
+      blog: '/assets/images/lead/auto-best-desktop-blog-v2.webp',
+      contact: '/assets/images/lead/auto-best-desktop-contact-v2.webp'
     },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
