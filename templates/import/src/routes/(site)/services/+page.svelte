@@ -158,7 +158,9 @@
 	}
 	@media (max-width: 767.98px) {
 		.service-mobile-tools {
-			padding-top: var(--bc-space-4);
+			position: relative;
+			margin-top: calc(-1 * var(--bc-space-6));
+			padding-top: var(--bc-space-2);
 		}
 		.service-mobile-filters {
 			display: flex;
