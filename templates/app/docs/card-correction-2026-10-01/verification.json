@@ -1,0 +1,612 @@
+{
+  "date": "2026-10-01",
+  "checks": [
+    {
+      "app": "navara",
+      "width": 320,
+      "cardsChecked": 9,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 800 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Навигация",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2021 Nissan Micra",
+          "price": "€10 500",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "125 902 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Bluetooth",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2018 Volkswagen Polo",
+          "price": "€10 000",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 900 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "4x4",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2022 Tesla Model 3",
+          "price": "€32 999",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        }
+      ]
+    },
+    {
+      "app": "navara",
+      "width": 390,
+      "cardsChecked": 9,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 800 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Навигация",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2021 Nissan Micra",
+          "price": "€10 500",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "125 902 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Bluetooth",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2018 Volkswagen Polo",
+          "price": "€10 000",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 900 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "4x4",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2022 Tesla Model 3",
+          "price": "€32 999",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "15px",
+          "titleWeight": "500"
+        }
+      ]
+    },
+    {
+      "app": "navara",
+      "width": 768,
+      "cardsChecked": 9,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 800 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Навигация",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2021 Nissan Micra",
+          "price": "€10 500",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "125 902 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Bluetooth",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2018 Volkswagen Polo",
+          "price": "€10 000",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 900 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "4x4",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2022 Tesla Model 3",
+          "price": "€32 999",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        }
+      ]
+    },
+    {
+      "app": "navara",
+      "width": 1440,
+      "cardsChecked": 9,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 800 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Навигация",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2021 Nissan Micra",
+          "price": "€10 500",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "125 902 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Ръчна",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Bluetooth",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2018 Volkswagen Polo",
+          "price": "€10 000",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "63 900 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "4x4",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hiddenFacts": false,
+          "name": "2022 Tesla Model 3",
+          "price": "€32 999",
+          "priceSize": "20px",
+          "priceWeight": "700",
+          "titleSize": "16px",
+          "titleWeight": "500"
+        }
+      ]
+    },
+    {
+      "app": "master",
+      "width": 320,
+      "cardsChecked": 48,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "50,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Отлично състояние",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2024 Toyota FORTUNER",
+          "price": "€94,099"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "92,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Круиз контрол",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2023 Suzuki Ciaz",
+          "price": "€28,799"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "47,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Добри гуми",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2025 Toyota VELOZ",
+          "price": "€64,699"
+        }
+      ]
+    },
+    {
+      "app": "master",
+      "width": 390,
+      "cardsChecked": 48,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "50,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Отлично състояние",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2024 Toyota FORTUNER",
+          "price": "€94,099"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "92,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Круиз контрол",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2023 Suzuki Ciaz",
+          "price": "€28,799"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "47,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Добри гуми",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2025 Toyota VELOZ",
+          "price": "€64,699"
+        }
+      ]
+    },
+    {
+      "app": "master",
+      "width": 1440,
+      "cardsChecked": 48,
+      "pageOverflow": false,
+      "allFactsVisible": true,
+      "maximumDetailsGap": 8,
+      "sample": [
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "50,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Отлично състояние",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2024 Toyota FORTUNER",
+          "price": "€94,099"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "92,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Круиз контрол",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2023 Suzuki Ciaz",
+          "price": "€28,799"
+        },
+        {
+          "facts": [
+            {
+              "clipped": false,
+              "text": "47,000 км",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Автоматична",
+              "visible": true
+            },
+            {
+              "clipped": false,
+              "text": "Добри гуми",
+              "visible": true
+            }
+          ],
+          "gap": 8,
+          "hidden": false,
+          "name": "2025 Toyota VELOZ",
+          "price": "€64,699"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    "EN/BG cards",
+    "Save and unsave restored",
+    "Vehicle detail opens"
+  ],
+  "builds": "npm run check passed for master and Navara"
+}

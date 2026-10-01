@@ -32,12 +32,12 @@ function VehicleCard({vehicle, showDiscount = false}: {vehicle: Vehicle; showDis
       <div {...stylex.props(s.info)}>
         <Link href={href} {...stylex.props(s.details)}>
           <p data-vehicle-make {...stylex.props(s.make)}>{tx(vehicle.make)}</p>
-          <h3 {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
+          <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
           {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
-          <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={13} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
+          <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
           {vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
         </Link>
-        <div data-vehicle-facts role="group" aria-label={tx('Specifications')} tabIndex={0} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} {...stylex.props(s.pill)}>{tx(item)}</span>)}</div>
+        <div data-vehicle-facts role="group" tabIndex={0} aria-label={tx('Specifications')} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(item)} {...stylex.props(s.pill, index === 2 && s.equipment)}>{index === 1 && item === 'Automatic' ? tx('Auto') : tx(item)}</span>)}</div>
         {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
       </div>
       <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button>
@@ -49,20 +49,21 @@ export default memo(VehicleCard);
 
 const s = stylex.create({
   card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: '#e7e7ea', borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: '#fff', boxShadow: '0 3px 12px rgba(0,0,0,.035)'},
-  main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '40% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: 12, padding: 12, minHeight: 128},
-  photo: {position: 'relative', alignSelf: 'stretch', display: 'block', minHeight: {[media.mobile]: 104, default: 126}, overflow: 'hidden', borderRadius: 10},
+  main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: 10, padding: {[media.mobile]: 10, default: 12}},
+  photo: {position: 'relative', alignSelf: 'stretch', display: 'block', overflow: 'hidden', borderRadius: 10},
   image: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},
   placeholderImage: {objectFit: 'contain', padding: 14, backgroundColor: '#f0f2f4'},
   placeholderLabel: {position: 'absolute', left: 8, right: 8, bottom: 7, padding: '3px 6px', color: '#555b62', fontSize: 9, fontWeight: 600, lineHeight: '13px', textAlign: 'center', borderRadius: 999, backgroundColor: 'rgba(255,255,255,.94)'},
   rate: {position: 'absolute', left: 0, bottom: 0, maxWidth: '100%', overflow: 'hidden', paddingInline: 6, color: '#fff', fontSize: 12, fontWeight: 500, lineHeight: '18px', whiteSpace: 'nowrap', borderTopRightRadius: 9, backgroundColor: '#b51b72'},
   coming: {backgroundColor: '#676767'},
-  info: {display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minWidth: 0, minHeight: {[media.mobile]: 104, default: 126}},
+  info: {display: 'flex', flexDirection: 'column', minWidth: 0},
   details: {display: 'block', minWidth: 0},
-  make: {overflow: 'hidden', paddingRight: 28, color: $.muted, fontSize: 11, fontWeight: 400, lineHeight: '14px', whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
-  title: {overflow: 'hidden', paddingRight: 22, fontSize: {[media.mobile]: 15, default: 16}, fontWeight: 500, lineHeight: '20px', display: '-webkit-box', whiteSpace: 'normal', textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
+  make: {overflow: 'hidden', paddingRight: {[media.mobile]: 0, default: 28}, color: $.muted, fontSize: 11, fontWeight: 400, lineHeight: '14px', whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
+  title: {overflow: 'hidden', paddingRight: {[media.mobile]: 0, default: 22}, fontSize: {[media.mobile]: 15, default: 16}, fontWeight: 400, lineHeight: '21px', display: {[media.mobile]: 'block', default: '-webkit-box'}, whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, textOverflow: 'ellipsis', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical'},
   trim: {overflow: 'hidden', marginTop: 1, color: $.muted, fontSize: 13, fontWeight: 400, lineHeight: '18px', whiteSpace: 'nowrap', textOverflow: 'ellipsis'},
-  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 5, marginTop: 6, minHeight: 20},
-  price: {display: 'inline-flex', flexWrap: 'wrap', alignItems: 'center', gap: 2, maxWidth: '100%', fontSize: 16, fontWeight: 600, lineHeight: '20px'},
+  priceRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 5, marginTop: 5},
+  price: {display: 'inline-flex', flexWrap: 'wrap', alignItems: 'baseline', gap: 1, maxWidth: '100%', fontSize: 20, fontWeight: 700, lineHeight: '26px', letterSpacing: '-.025em'},
+  priceOnRequest: {fontSize: 15, fontWeight: 600, lineHeight: '22px', letterSpacing: 0},
   discount: {paddingInline: 4, color: '#008c36', fontSize: 11, fontWeight: 500, lineHeight: '16px', whiteSpace: 'nowrap', borderRadius: 12, backgroundColor: '#effbf1'},
   monthly: {display: 'flex', alignItems: 'center', gap: 4, marginTop: 1, whiteSpace: 'nowrap', lineHeight: '18px'},
   monthlyPrice: {display: 'inline-flex', alignItems: 'center', gap: 2, fontSize: 13, fontWeight: 400},
@@ -71,9 +72,10 @@ const s = stylex.create({
   benefitLabel: {display: 'block', marginBottom: 3, color: '#7a8087', fontSize: 8, fontWeight: 700, lineHeight: '11px', letterSpacing: '.04em', textTransform: 'uppercase'},
   benefitRow: {display: 'flex', flexWrap: 'wrap', gap: 3},
   benefitChip: {maxWidth: '100%', padding: '2px 5px', color: '#34383d', fontSize: 9, fontWeight: 600, lineHeight: '13px', overflowWrap: 'anywhere', borderRadius: 8, backgroundColor: '#eef0f2'},
-  heart: {position: 'absolute', top: 3, right: 1, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
+  heart: {position: 'absolute', top: 3, right: 1, display: {[media.mobile]: 'none', default: 'grid'}, placeItems: 'center', width: 44, height: 44, padding: 0, color: '#727272', borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   heartSaved: {color: $.ink},
-  meta: {display: 'flex', flexWrap: 'nowrap', alignItems: 'center', minWidth: 0, maxWidth: '100%', overflowX: 'auto', overscrollBehaviorX: 'contain', scrollbarWidth: 'none', gap: 4, marginTop: 8, borderRadius: 6, outline: {default: 'none', ':focus-visible': '2px solid #66666e'}, outlineOffset: 2},
-  pill: {flexShrink: 0, padding: '3px 6px', color: $.muted, fontSize: {[media.mobile]: 11, default: 12}, fontWeight: 400, lineHeight: '16px', whiteSpace: 'nowrap', borderRadius: 6, backgroundColor: '#f4f4f4'},
+  meta: {display: {[media.mobile]: 'flex', default: 'grid'}, gridTemplateColumns: 'max-content minmax(0,1fr)', justifyItems: 'start', alignItems: 'stretch', minWidth: 0, maxWidth: '100%', gap: 4, marginTop: 8, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
+  equipment: {gridColumn: '1 / -1'},
+  pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: 11, fontWeight: 400, lineHeight: '16px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'normal', borderRadius: 6, backgroundColor: '#f4f4f4'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},
 });

@@ -35,7 +35,8 @@ export function BrandRow({title='Browse by brands',showTitle=true,onSelect,compa
   const items = stocked.map(make => ({make, artwork: brandLogo(make)}));
   if (!items.length) return null;
   return <section data-stocked-brands aria-label={tx(title)} {...stylex.props(s.brandSection)}>{showTitle?<h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2>:null}<div {...stylex.props(s.brandRow,!showTitle&&s.brandRowWithoutTitle)}>{items.map(({make,artwork})=>{
-    const content=<><span {...stylex.props(s.brandIcon,artwork?.presentation==='framed'&&s.brandIconFramed)}>{artwork ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImage,artwork.presentation==='framed'&&s.brandImageFramed,artwork.presentation==='badge'&&s.brandImageBadge,artwork.presentation==='tesla'&&s.brandImageTesla,artwork.presentation==='peugeot'&&s.brandImagePeugeot)}/> : <span {...stylex.props(s.brandName)}>{make}</span>}</span><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : make)}</span></>;
+    const logo = artwork?.presentation === 'framed' ? <img data-brand-logo src={assetPath(artwork.src)} width={72} height={72} alt="" {...stylex.props(s.brandImageFramed)}/> : artwork ? <svg data-brand-logo viewBox={artwork.symbolViewBox} aria-hidden="true" focusable="false" {...stylex.props(s.brandImage, artwork.wide && s.brandImageWide, artwork.compact && s.brandImageCompact)}><image href={assetPath(artwork.src)} width={artwork.sourceSize?.[0]} height={artwork.sourceSize?.[1]}/></svg> : <span {...stylex.props(s.brandName)}>{make}</span>;
+    const content=<><span {...stylex.props(s.brandIcon,artwork?.presentation==='framed'&&s.brandIconFramed)}>{logo}</span><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : make)}</span></>;
     return onSelect?<button key={make} type="button" aria-label={tx(make)} onClick={()=>onSelect(make)} {...stylex.props(s.brand)}>{content}</button>:<Link key={make} aria-label={tx(make)} href={`/cars?brand=${encodeURIComponent(make)}`} {...stylex.props(s.brand)}>{content}</Link>;
   })}</div></section>;
 }
@@ -49,7 +50,7 @@ export function FilterPills() {
 export function CurrencyLabel({size=14}: {size?:number}) {
   const tx = useCopy();
 
-  return <span style={{display:'inline-block',flexShrink:0,fontSize:Math.max(12,size),marginRight:3,lineHeight:'inherit'}}>{tx(currency.code)}</span>;
+  return <span style={{display:'inline-block',flexShrink:0,fontSize:Math.max(12,size),marginRight:3,lineHeight:'inherit'}}>{tx(currency.symbol)}</span>;
 }
 
 export function WhatsAppIcon({size=26}: {size?:number}) {
@@ -83,11 +84,10 @@ const s=stylex.create({
  brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
  brandIcon:{display:'grid',placeItems:'center',width:'100%',aspectRatio:'1',overflow:'hidden',borderWidth:1,borderStyle:'solid',borderColor:'#e1e6ed',borderRadius:'50%',backgroundColor:'#fff'},
  brandIconFramed:{borderWidth:0},
- brandImage:{width:'80%',height:'80%',objectFit:'contain'},
- brandImageFramed:{width:'100%',height:'100%',objectFit:'cover'},
- brandImageBadge:{width:'82%',height:'82%',objectFit:'cover'},
- brandImageTesla:{width:'100%',height:'100%',objectFit:'cover',transform:'translateY(12%) scale(1.14)'},
- brandImagePeugeot:{width:'100%',height:'100%',objectFit:'cover',transform:'translateY(14%) scale(1.25)'},
+ brandImage:{display:'block',width:'60%',height:'auto',maxHeight:'60%',overflow:'hidden'},
+ brandImageWide:{width:'76%'},
+ brandImageCompact:{width:'50%',maxHeight:'50%'},
+ brandImageFramed:{display:'block',width:'100%',height:'100%',objectFit:'cover'},
  brandName:{maxWidth:'90%',fontSize:11,fontWeight:600,overflowWrap:'anywhere'},
  brandLabelCompact:{fontWeight:500},
  brandLabel:{fontSize:{[media.mobile]:12,default:15},fontWeight:400,lineHeight:'18px',maxWidth:'100%',overflowWrap:'anywhere'},

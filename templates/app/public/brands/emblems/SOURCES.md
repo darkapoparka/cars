@@ -10,3 +10,5 @@ These retained/local files identify actual inventory makes. No manufacturer embl
 The earlier flat replacements for the original badges remain preserved as unused draft assets. They are not selected by `lib/brand-logos.ts` for makes with original detailed badges.
 
 `lib/brand-logos.ts` maps makes to these assets. It covers all current template and Navara inventory makes. When another client introduces a new make, add its real sourced emblem and inspect it in the strip; do not insert a generic car icon.
+
+Optical normalization (1 October): source bytes are unchanged. lib/brand-logos.ts records source dimensions and tightly bounded symbol view boxes, rendered with SVG image elements inside consistent circles. Tesla, Peugeot and Lexus show their complete symbol without repeating the source image's wordmark beneath the separate UI label. Suzuki/Mitsubishi use a smaller optical size; wide marks use a wider slot. Original framed App assets remain unchanged.

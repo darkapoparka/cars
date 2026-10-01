@@ -1,0 +1,34 @@
+{
+  "navara320": {
+    "call": "tel:+359899192300",
+    "circles": [
+      72
+    ],
+    "logo": "/variant-4/dealer-app/logo-dark-c2736c32f1b7151c1206.webp",
+    "overflow": false,
+    "width": 320
+  },
+  "master1440": {
+    "circles": [
+      108
+    ],
+    "logos": [
+      {
+        "loaded": true,
+        "src": "/identity/drive24/logo-light-v2.webp"
+      },
+      {
+        "loaded": true,
+        "src": "/identity/drive24/logo-dark-v2.webp"
+      }
+    ],
+    "overflow": false,
+    "width": 1440
+  },
+  "masterToyotaFilter": {
+    "count": 9,
+    "makes": [
+      "Toyota"
+    ]
+  }
+}
