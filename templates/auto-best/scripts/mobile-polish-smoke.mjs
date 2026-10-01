@@ -165,9 +165,9 @@ try {
           assert.equal(search.height, 52); assert.equal(search.font, '16px'); assert.equal(search.gap, '8px');
           assert.deepEqual(search.icons.map(icon => icon.width), [22, 20]);
           assert(search.icons.every(icon => Math.abs(icon.dy) <= .5));
-          assert.equal(search.background, 'rgb(23, 26, 32)', 'The main mobile entry field has a charcoal surface');
-          assert.equal(search.color, 'rgb(255, 255, 255)', 'Entry copy stays legible on charcoal');
-          assert.equal(search.border, '0px', 'Prominent fields have no decorative border');
+          assert.equal(search.background, 'rgb(255, 255, 255)', 'The main mobile entry field has a light surface');
+          assert.equal(search.color, 'rgb(98, 104, 115)', 'The prompt uses the shared placeholder color');
+          assert.equal(search.border, '1px', 'Entry fields retain a thin boundary');
           assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
           const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));

@@ -59,7 +59,6 @@
 <button {id} class="dn-service-entry__field dn-entry-field dn-entry-field--prominent" bind:this={trigger} type="button" onclick={() => edit()} aria-haspopup="dialog" aria-controls={`${id}-dialog`} aria-label={`${placeholder}${summary ? `: ${summary}` : ''}`} title={summary || placeholder}>
   <MobileActionIcon name={mode === 'listing' ? 'article' : 'search'} size={22} />
   <span class:placeholder={!summary}>{summary || placeholder}</span>
-  <span class="dn-entry-field__affordance" aria-hidden="true"><MobileActionIcon name="arrow" size={18} /></span>
 </button>
 
 <dialog id={`${id}-dialog`} class="dn-service-editor" bind:this={dialog} {@attach dialogViewport} onkeydown={trapDialogTab} aria-labelledby={`${id}-title`} onclose={restore} onclick={(event) => { if (event.target === dialog) dialog.close(); }}>
@@ -87,8 +86,8 @@
 
 <style>
   .dn-service-entry__field { display: flex; align-items: center; gap: var(--dn-space-2); width: 100%; min-height: var(--dn-entry-height); padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-entry-prominent-ink); font: var(--dn-entry-prominent-font); text-align: left; cursor: pointer; }
-  .dn-service-entry__field > span:not(.dn-entry-field__affordance) { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .placeholder { color: var(--dn-entry-prominent-ink); }
+  .dn-service-entry__field > span { min-width: 0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dn-service-entry__field > :global(svg), .placeholder { color: var(--dn-entry-prominent-muted); }
   :global(body:has(.dn-service-editor[open])) { position: fixed; top: var(--dn-service-editor-scroll, 0); width: 100%; overflow: hidden; }
   .dn-service-editor { position: fixed; inset: 0; width: 100%; max-width: none; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; border-radius: 0; background: var(--dn-white); color: var(--dn-ink); overflow: hidden; }
   .dn-service-editor[open] { display: flex; flex-direction: column; }

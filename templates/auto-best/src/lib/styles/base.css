@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
 .dn-segmented-control .dn-segmented-option { display: flex; min-width: 0; min-height: var(--dn-control-hit-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: var(--dn-space-half) solid transparent; border-radius: var(--dn-pill); background-color: transparent; background-clip: padding-box; color: var(--dn-muted); font: var(--dn-tab-font); overflow-wrap: anywhere; cursor: pointer; }
 .dn-segmented-control .dn-segmented-option:is(.active, [aria-selected='true'], [aria-pressed='true']) { background-color: var(--dn-segment-selected); color: var(--dn-ink); }
 .dn-segmented-control .dn-segmented-option:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
-/* Entry fields carry more emphasis than the mode switch above them. */
+/* Inputs and entry openers share a quiet field frame. */
 .dn-entry-field { min-height: var(--dn-entry-height); border: 1px solid var(--dn-entry-line); border-radius: var(--dn-pill); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-entry-font); }
 .dn-entry-field--multiline { border-radius: var(--dn-radius-control); }
 .dn-entry-field .dn-entry-field__input { width: 100%; min-width: 0; min-height: calc(var(--dn-entry-height) - 2px); margin: 0; padding: 0; border: 0; outline: none; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); }
@@ -58,33 +58,23 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
     --dn-focus: var(--dn-ink);
   }
   .dn-app-shell :is(a, button, input, select, textarea, summary) { -webkit-tap-highlight-color: transparent; }
-  .dn-app-shell .dn-entry-field { border-radius: var(--dn-radius-control); box-shadow: var(--dn-entry-mobile-shadow); }
+  .dn-app-shell .dn-entry-field { border-radius: var(--dn-radius-control); box-shadow: none; }
   .dn-app-shell button.dn-entry-field:focus:not(:focus-visible) { outline: none; }
   .dn-app-shell .dn-entry-field--prominent {
     --dn-entry-height: var(--dn-control-height-prominent);
     --dn-entry-surface: var(--dn-entry-prominent-surface);
-    --dn-entry-line: transparent;
-    --dn-entry-hover-surface: var(--dn-ink-hover);
-    --dn-entry-hover-line: transparent;
+    --dn-entry-line: var(--dn-entry-mobile-line);
+    --dn-entry-hover-surface: var(--dn-entry-prominent-surface);
+    --dn-entry-hover-line: var(--dn-line-strong);
     min-height: var(--dn-entry-height);
     padding-inline: var(--dn-space-3);
-    border: 0;
+    border: 1px solid var(--dn-entry-line);
     background: var(--dn-entry-surface);
     color: var(--dn-entry-prominent-ink);
     font: var(--dn-entry-prominent-font);
     box-shadow: none;
   }
   .dn-app-shell input.dn-entry-field--prominent::placeholder { color: var(--dn-entry-prominent-muted); opacity: 1; }
-  .dn-app-shell .dn-entry-field--prominent > .dn-entry-field__affordance {
-    display: grid;
-    width: var(--dn-entry-prominent-action-size);
-    height: var(--dn-entry-prominent-action-size);
-    flex: none;
-    place-items: center;
-    border-radius: var(--dn-pill);
-    background: var(--dn-entry-prominent-action);
-    color: var(--dn-entry-prominent-ink);
-  }
   @media (hover: hover) and (pointer: fine) {
     .dn-app-shell .dn-entry-field--prominent:hover { background: var(--dn-entry-hover-surface); }
   }

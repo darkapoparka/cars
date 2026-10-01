@@ -169,7 +169,7 @@
   <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
   <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
-  <span class="dn-quick-search__mobile-filter dn-entry-field__affordance" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
+  <span class="dn-quick-search__mobile-filter" aria-hidden="true"><MobileActionIcon name="filters" size={20} /></span>
 </button>
 
 <dialog onkeydown={trapDialogTab}
@@ -449,13 +449,13 @@
       display: inline;
       min-width: 0;
       overflow: hidden;
-      color: var(--dn-entry-prominent-ink);
+      color: var(--dn-entry-prominent-muted);
       text-overflow: ellipsis;
       white-space: nowrap;
     }
 
     .dn-quick-search__trigger :global(.dn-icon) {
-      color: var(--dn-entry-prominent-ink);
+      color: var(--dn-entry-prominent-muted);
     }
 
     .dn-quick-search__mobile-filter {

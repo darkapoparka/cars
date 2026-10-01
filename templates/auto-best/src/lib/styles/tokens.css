@@ -177,13 +177,10 @@
   --dn-entry-surface: var(--dn-home-panel);
   --dn-entry-line: var(--dn-line-strong);
   --dn-entry-mobile-line: #d8dde3;
-  --dn-entry-mobile-shadow: 0 2px 6px rgb(20 23 29 / 6%);
-  --dn-entry-prominent-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
-  --dn-entry-prominent-surface: var(--dn-ink-strong);
-  --dn-entry-prominent-ink: var(--dn-white);
-  --dn-entry-prominent-muted: var(--dn-muted-on-ink);
-  --dn-entry-prominent-action: color-mix(in srgb, var(--dn-white) 12%, var(--dn-ink-strong));
-  --dn-entry-prominent-action-size: 32px;
+  --dn-entry-prominent-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-entry-prominent-surface: var(--dn-white);
+  --dn-entry-prominent-ink: var(--dn-ink);
+  --dn-entry-prominent-muted: var(--dn-muted);
   --dn-control-hit-height: var(--dn-control-height-default);
   --dn-segment-height: var(--dn-control-height-compact);
   --dn-entry-action-height: var(--dn-control-height-default);
