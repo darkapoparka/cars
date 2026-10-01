@@ -4,13 +4,13 @@
 
   let { pair, framing = 'hero', priority = false }: {
     pair: HeroVehiclePair;
-    framing?: 'hero' | 'section';
+    framing?: 'hero' | 'search' | 'section';
     priority?: boolean;
   } = $props();
   const sides = ['left', 'right'] as const;
 </script>
 
-<div class="dn-campaign-vehicles" class:dn-campaign-vehicles--section={framing === 'section'} data-pair={pair} aria-hidden="true">
+<div class="dn-campaign-vehicles" class:dn-campaign-vehicles--section={framing === 'section'} class:dn-campaign-vehicles--search={framing === 'search'} data-pair={pair} aria-hidden="true">
   <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--left"></span>
   <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--right"></span>
   <span class="dn-campaign-vehicles__arc dn-campaign-vehicles__arc--left"></span>
@@ -86,5 +86,9 @@
 
   @media (min-width: 992px) and (max-width: 1199px) {
     .dn-campaign-vehicles:not(.dn-campaign-vehicles--section) { --car-height: 92px; --car-baseline: calc(100% - 30px); }
+    .dn-campaign-vehicles.dn-campaign-vehicles--search {
+      --car-height: 70px;
+      --car-baseline: calc(100% - var(--dn-route-hero-height) + var(--dn-route-hero-control-top) - var(--dn-space-4));
+    }
   }
 </style>

@@ -2,11 +2,12 @@
   import { getI18n } from '$lib/locale/context';
   import Icon from './Icon.svelte';
 
+  let { aboveTitle = false }: { aboveTitle?: boolean } = $props();
   const i18n = getI18n();
   const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i18n.dealer('address'))}`);
 </script>
 
-<p class="dn-hero-location">
+<p class="dn-hero-location" class:dn-hero-location--above-title={aboveTitle}>
   <Icon name="map-pin" size={16} />
   <a href={directionsUrl} target="_blank" rel="noopener noreferrer">{i18n.dealer('city')}, {i18n.dealer('addressLine')}</a>
 </p>
@@ -32,6 +33,9 @@
       font-size: var(--dn-text-meta);
       line-height: var(--dn-leading-meta);
       text-wrap: balance;
+    }
+    :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--above-title {
+      margin: 0 auto var(--dn-space-3);
     }
     .dn-hero-location :global(svg) {
       flex-shrink: 0;

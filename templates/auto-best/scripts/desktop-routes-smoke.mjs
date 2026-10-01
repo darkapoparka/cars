@@ -50,9 +50,15 @@ async function heroGeometry(page) {
   });
 }
 
-function assertDesktopFrame(geometry) {
+function assertDesktopFrame(geometry, route = '') {
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
-  assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Titles keep the same top anchor regardless of subtitle length');
+  assert.equal(geometry.copy.y - geometry.hero.y, 200, 'Hero introductions keep the same top anchor');
+  if (route === 'about-us') {
+    assert.equal(geometry.lead.y - geometry.hero.y, 200, 'About starts with its location badge');
+    assert.equal(geometry.heading.y - geometry.lead.bottom, 12, 'About places its location above the title with a clear gap');
+  } else {
+    assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Titles keep the same top anchor regardless of subtitle length');
+  }
   assert.equal(geometry.controls.y - geometry.hero.y, 340, 'Search panels and actions keep the same top anchor');
   assert(geometry.copy.y >= geometry.header.bottom + 60, 'Hero titles have at least 60px of breathing room below navigation');
   assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
@@ -97,15 +103,15 @@ try {
               assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
             }
             const hasScene = width >= 992;
-            const imageScene = route === '' || route === 'listing-grid';
-            assert.equal(sceneRequests.length, hasScene && imageScene ? 1 : 0, 'Only Home and Inventory request campaign raster scenes; phones load none');
+            const imageScene = route === 'about-us' || route === 'contact';
+            assert.equal(sceneRequests.length, hasScene && imageScene ? 1 : 0, 'Only About and Contact request campaign raster scenes; phones load none');
             if (hasScene) {
-              assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Company and editorial routes reuse reviewed vehicle cutouts');
+              assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Search heroes use cutouts; company heroes use larger car scenes');
               if (imageScene) {
-                const scene = route === '' ? 'home-v2' : 'inventory-v2';
-                assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'Home and Inventory keep their individual artwork');
+                const scene = route === 'about-us' ? 'home-v2' : 'inventory-v2';
+                assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'About and Contact reuse the approved larger car banners');
               } else {
-                const pair = { 'about-us': ['porsche', 'amggt'], blog: ['m5', 'e63'], contact: ['m4', 'rs5'] }[route];
+                const pair = { '': ['gclass', 'urus'], 'listing-grid': ['golf', 'a45'], blog: ['m5', 'e63'] }[route];
                 assert.deepEqual(geometry.cutouts.map(car => car.vehicle), pair, 'Each destination has its own reviewed car pair');
                 for (const car of geometry.cutouts) {
                   assert.match(car.src, new RegExp(`day-night-cutout-${car.vehicle}-v1\\.webp`), 'The original cutout source is used without generated props');
@@ -123,10 +129,10 @@ try {
               }
             }
             if (width >= 992) {
-              assertDesktopFrame(geometry);
+              assertDesktopFrame(geometry, route);
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
               assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
-              assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
+              if (route !== 'about-us') assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
@@ -261,11 +267,11 @@ try {
               await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
             });
             const geometry = await heroGeometry(page);
-            assertDesktopFrame(geometry);
+            assertDesktopFrame(geometry, route);
             const { src: currentSource, artwork: _currentArtwork, ...currentScene } = geometry.scene;
             const { src: initialSource, artwork: _initialArtwork, ...initialScene } = initial.scene;
             assert.deepEqual(currentScene, initialScene, 'Artwork framing stays fixed through header navigation');
-            if (route) assert.notEqual(currentSource ?? geometry.cutouts.map(car => car.vehicle).join(','), initialSource, 'Main destinations have individual artwork');
+            if (route) assert.notEqual(currentSource ?? geometry.cutouts.map(car => car.vehicle).join(','), initialSource ?? initial.cutouts.map(car => car.vehicle).join(','), 'Main destinations have individual artwork');
             for (const element of ['header', 'logo', 'navigation']) {
               assert.deepEqual(geometry[element], initial[element], `${element} keeps its position and size when switching routes`);
             }
@@ -282,8 +288,9 @@ try {
             await settleHeroFonts(page);
             const geometry = await heroGeometry(page);
             assertDesktopFrame(geometry);
-            assert.equal(geometry.scene.artwork, 'vehicles', 'Service entries share the clean Contact composition');
-            assert.deepEqual(geometry.cutouts.map(car => car.vehicle), ['m4', 'rs5'], 'Service entries keep the Contact car pair');
+            assert.equal(geometry.scene.artwork, 'image', 'Service entries share the larger Contact car scene');
+            assert(geometry.scene.src.endsWith('auto-best-desktop-inventory-v2.webp'), 'Service entries use the approved Contact banner');
+            assert.equal(geometry.cutouts.length, 0, 'Service entries have one artwork layer');
             assert.equal(await page.locator('.dn-hero-vehicles__car').count(), 0, 'Service illustrations remain mobile only');
             assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');
             return geometry;

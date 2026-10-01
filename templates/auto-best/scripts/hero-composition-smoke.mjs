@@ -46,10 +46,11 @@ try {
       } else {
         await hero.locator('img').evaluateAll(images=>Promise.all(images.map(image=>image.decode())));
         if(topic==='home') {
-          assert((await hero.locator('img').evaluate(image=>image.currentSrc)).endsWith('auto-best-desktop-home-v2.webp'),'Home keeps its individual campaign artwork');
+          assert.equal(await hero.getAttribute('data-artwork'),'vehicles','Home frames its search panel with the reviewed cutouts');
+          assert.deepEqual(await hero.locator('.dn-campaign-vehicles__car').evaluateAll(cars=>cars.map(car=>car.dataset.vehicle)),['gclass','urus'],'Home keeps its original inward-facing car pair');
         } else {
-          assert.equal(await hero.getAttribute('data-artwork'),'vehicles','Service heroes use the clean black Contact composition');
-          assert.deepEqual(await hero.locator('.dn-campaign-vehicles__car').evaluateAll(cars=>cars.map(car=>car.dataset.vehicle)),['m4','rs5'],'Both service routes reuse the original Contact car pair');
+          assert.equal(await hero.getAttribute('data-artwork'),'image','Service heroes use the larger Contact car scene');
+          assert((await hero.locator('img').evaluate(image=>image.currentSrc)).endsWith('auto-best-desktop-inventory-v2.webp'),'Both service routes reuse the approved Contact banner');
         }
         assert.equal(await page.locator('.dn-hero-vehicles__car').count(),0,'Desktop does not mount additional cutout pairs');
       }

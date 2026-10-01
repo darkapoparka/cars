@@ -4,20 +4,25 @@ Auto Best combines an image-led automotive layout, Onest typography, rounded sur
 
 ## Desktop route composition
 
-Home and Inventory use individual graphite campaign images through
-`DesktopHeroScene.svelte`. About, Blog and Contact use the existing transparent
-vehicle pairs through `CampaignVehiclePair.svelte`, with the same black palette,
-subtle halftone dots and restrained red accents. The warm About photograph and
+Home and Inventory frame their search panels with the original inward-facing
+vehicle pairs through `CampaignVehiclePair.svelte`. About and Contact use the
+approved larger car scenes through `DesktopHeroScene.svelte`, giving their simpler
+introductions more presence. Blog keeps its original vehicle pair. All use the same
+black palette, subtle halftone dots and restrained red accents. The warm About photograph and
 the distorted Blog/Contact props are retained as provenance only. White headings,
 red primary actions and white search/category/location controls share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
-entries use the Contact pair. All desktop
-route heroes share a 540px frame: titles start at 200px, leaving 60px below the
-desktop header, and primary controls start at 340px. Subtitle length does not move
-either anchor. Home and Inventory use the same search-panel bounds, padding and
+entries use the Contact scene. All desktop
+route heroes share a 540px frame: introductions start at 200px, leaving 60px below
+the desktop header, and primary controls start at 340px. About starts with its
+location badge, followed by the title with a 12px gap; other routes start with
+their title. Subtitle length does not move the introduction or control anchors.
+Home and Inventory use the same search-panel bounds, padding and
 radius; Blog uses that same center lane. The artwork has identical framing
 across routes. Vehicle alpha bounds set body height and tyre baselines without
 stretching; the cars stay at the outer edges, leaving the copy and controls clear.
+Below 1200px, search-hero cutouts sit above the panel's outer corners so the wider
+panel does not hide them. Blog and section banners retain their existing framing.
 The Home inventory and editorial heading banners reuse the same cutout renderer
 in its smaller section frame. Mobile Home
 and service illustrations keep their existing composition and do not request
@@ -26,8 +31,8 @@ fixed image box and flex alignment so decoding or route typography does not move
 it within the shared header. White Blog category pills remain distinct from the
 canvas; the active and hovered category uses the brand accent.
 
-`HeroLocation.svelte` owns the white 14px location badge used below the Home and
-About titles. `DesktopShowroom.svelte` owns the shared About/Contact visit panel:
+`HeroLocation.svelte` owns the white 14px location badge used below the Home title
+and above the About title. `DesktopShowroom.svelte` owns the shared About/Contact visit panel:
 address and appointment copy, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available

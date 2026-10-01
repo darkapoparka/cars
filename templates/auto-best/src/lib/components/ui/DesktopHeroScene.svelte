@@ -13,7 +13,7 @@
       <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="2160" height="720" fetchpriority="high" decoding="async" />
     </picture>
   {:else}
-    <CampaignVehiclePair pair={artwork.pair} priority />
+    <CampaignVehiclePair pair={artwork.pair} framing={scene === 'home' || scene === 'inventory' ? 'search' : 'hero'} priority />
   {/if}
 </div>
 
