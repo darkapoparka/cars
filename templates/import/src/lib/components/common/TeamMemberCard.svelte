@@ -127,4 +127,37 @@
 			transition: none;
 		}
 	}
+
+	@media (max-width: 767.98px) {
+		.team-card {
+			display: grid;
+			grid-template-columns: 104px minmax(0, 1fr);
+			align-items: stretch;
+			border: 1px solid var(--bc-border);
+			background: var(--bc-white);
+		}
+		.team-card__portrait {
+			width: 104px;
+			height: 100%;
+			min-height: 144px;
+			object-position: center 25%;
+		}
+		.team-card__body {
+			min-width: 0;
+			justify-items: start;
+			align-content: center;
+			text-align: left;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-3);
+		}
+		h3 {
+			margin: 0;
+			font-size: var(--bc-text-h4);
+			overflow-wrap: anywhere;
+		}
+		p {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
+	}
 </style>

@@ -33,11 +33,15 @@
 <main id="main-content">
 	<PageIntro
 		title={english ? 'Services for your car' : 'Услуги за твоя автомобил'}
+		mobileTitle={english ? 'Services' : 'Услуги'}
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
 		desktopImage="/assets/daynight/banners/services-desktop-v2.webp"
 		align="center"
 		desktopDescription={data.directory.description}
 	>
+		{#snippet mobileActions()}<form role="search" method="GET">
+				<SearchField bind:value={query} label={data.directory.search} controls="service-results" />
+			</form>{/snippet}
 		{#snippet desktopActions()}
 			<form class="service-search" role="search" method="GET">
 				<SearchField bind:value={query} label={data.directory.search} controls="service-results" />
@@ -260,6 +264,60 @@
 		}
 		p {
 			font-size: var(--bc-text-body);
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.service-card > a {
+			display: grid;
+			grid-template-columns: 35% minmax(0, 1fr);
+			align-items: stretch;
+		}
+		.service-card img {
+			min-height: 160px;
+		}
+		.service-card img {
+			height: 100%;
+			aspect-ratio: auto;
+			object-fit: cover;
+		}
+		.service-card {
+			background: var(--bc-white);
+			border: 1px solid var(--bc-border);
+		}
+		.service-card__body {
+			align-items: stretch;
+			text-align: left;
+			padding: var(--bc-space-3);
+			gap: var(--bc-space-2);
+		}
+		.service-card h2 {
+			font-size: var(--bc-text-control);
+			line-height: 1.25;
+		}
+		.service-card p {
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			line-clamp: 2;
+			overflow: hidden;
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+			margin: 0;
+		}
+		.service-card__cta {
+			justify-content: space-between;
+			min-height: var(--bc-control-height-standard);
+			padding: 0;
+			border-radius: 0;
+			background: transparent;
+			color: var(--bc-ink);
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-action);
+		}
+		a:hover .service-card__cta {
+			background: transparent;
+			color: var(--bc-ink);
 		}
 	}
 </style>

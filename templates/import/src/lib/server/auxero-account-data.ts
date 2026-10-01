@@ -479,7 +479,7 @@ const statCards = (context: AccountContext) => {
 const rowAction = (row: AuxeroAccountListingRow, kind: AuxeroAccountListingAction['kind']) =>
 	row.actions.find((action) => action.kind === kind);
 
-const inventoryCartItem = (row: AuxeroAccountListingRow) => {
+const inventoryCartItem = (row: AuxeroAccountListingRow, headers: string[]) => {
 	const url = row.href ?? `/inventory/${encodeURIComponent(row.id)}`;
 	const edit = rowAction(row, 'edit-inventory');
 	const remove = rowAction(row, 'remove');
@@ -495,10 +495,10 @@ const inventoryCartItem = (row: AuxeroAccountListingRow) => {
 			${row.priceLabel ? `<p class="h5">${escapeHtml(row.priceLabel)}</p>` : ''}
 		</div>
 	</a>
-	<div class="cart-item__price"><span class="price">${escapeHtml(row.columns[0] ?? '')}</span></div>
-	<div class="cart-item__year"><span>${escapeHtml(row.columns[1] ?? '')}</span></div>
-	<div class="cart-item__total"><span>${escapeHtml(row.columns[2] ?? '')}</span></div>
-	<div><span>${escapeHtml(row.columns[3] ?? '')}</span></div>
+	<div class="cart-item__price" data-label="${escapeHtml(headers[1] ?? '')}"><span class="price">${escapeHtml(row.columns[0] ?? '')}</span></div>
+	<div class="cart-item__year" data-label="${escapeHtml(headers[2] ?? '')}"><span>${escapeHtml(row.columns[1] ?? '')}</span></div>
+	<div class="cart-item__total" data-label="${escapeHtml(headers[3] ?? '')}"><span>${escapeHtml(row.columns[2] ?? '')}</span></div>
+	<div data-label="${escapeHtml(headers[4] ?? '')}"><span>${escapeHtml(row.columns[3] ?? '')}</span></div>
 	<div class="cart-item__action">
 		${
 			edit
@@ -527,7 +527,7 @@ const inventoryCartWrapper = (
 		${data.headers.map((header) => `<div class="font-weight-600">${escapeHtml(header)}</div>`).join('\n')}
 	</div>
 	<div class="cart-items">
-		${data.rows.map(inventoryCartItem).join('\n')}
+		${data.rows.map((row) => inventoryCartItem(row, data.headers)).join('\n')}
 	</div>
 	<div class="divider w-full mb-20"></div>
 	<div class="flex justify-between items-center flex-wrap gap-12 pagination-bottom" id="pagination-bottom">
@@ -538,7 +538,7 @@ const inventoryCartWrapper = (
 	</div>
 </div>`;
 
-const submissionCartItem = (row: AuxeroAccountListingRow) => {
+const submissionCartItem = (row: AuxeroAccountListingRow, headers: string[]) => {
 	const edit = rowAction(row, 'edit-submission');
 	const message = rowAction(row, 'message');
 
@@ -553,10 +553,10 @@ const submissionCartItem = (row: AuxeroAccountListingRow) => {
 					${row.titleMeta ? `<p class="h5">${escapeHtml(row.titleMeta)}</p>` : ''}
 				</div>
 			</div>
-			<div class="cart-item__price"><span class="price">${escapeHtml(row.columns[0] ?? '')}</span></div>
-			<div class="cart-item__year"><span>${escapeHtml(row.columns[1] ?? '')}</span></div>
-			<div class="cart-item__total"><span>${escapeHtml(row.columns[2] ?? '')}</span></div>
-			<div><span>${escapeHtml(row.columns[3] ?? '')}</span></div>
+			<div class="cart-item__price" data-label="${escapeHtml(headers[1] ?? '')}"><span class="price">${escapeHtml(row.columns[0] ?? '')}</span></div>
+			<div class="cart-item__year" data-label="${escapeHtml(headers[2] ?? '')}"><span>${escapeHtml(row.columns[1] ?? '')}</span></div>
+			<div class="cart-item__total" data-label="${escapeHtml(headers[3] ?? '')}"><span>${escapeHtml(row.columns[2] ?? '')}</span></div>
+			<div data-label="${escapeHtml(headers[4] ?? '')}"><span>${escapeHtml(row.columns[3] ?? '')}</span></div>
 			<div class="cart-item__action">
 				${
 					edit
@@ -585,7 +585,7 @@ const submissionCartWrapper = (
 		${data.headers.map((header) => `<div class="font-weight-600">${escapeHtml(header)}</div>`).join('\n')}
 	</div>
 	<div class="cart-items">
-		${data.rows.map(submissionCartItem).join('\n')}
+		${data.rows.map((row) => submissionCartItem(row, data.headers)).join('\n')}
 	</div>
 	<div class="divider w-full mb-20"></div>
 	<p class="text-secondary">${escapeHtml(data.footerText)}</p>
@@ -1050,6 +1050,13 @@ const applyProfileData = (
 		.replace(
 			'placeholder="6205 Peachtree Dunwoody Rd, Atlanta, GA 30328" value="" required',
 			`placeholder="${escapeHtml(profile.address)}" value="${escapeHtml(profile.address)}" required`
+		)
+		.replace(
+			/<iframe\b[^>]*src="https:\/\/www\.google\.com\/maps\/embed[^"\n]*"[^>]*>/g,
+			(iframe) =>
+				iframe
+					.replace(/src="[^"]*"/, `src="${escapeHtml(daynightContact.mapEmbedUrl)}"`)
+					.replace('<iframe', `<iframe title="${escapeHtml(daynightContact.addressLabel)}"`)
 		);
 
 	if (!context.isAdmin) {

@@ -3,6 +3,8 @@
 	import type { PageProps } from './$types';
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
+	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
+	import { linkHref } from '$lib/utils/links';
 	let { data }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 </script>
@@ -20,10 +22,19 @@
 	/></svelte:head
 >
 <main id="main-content">
+	<MobilePageHero title={english ? 'Guides' : 'Полезно'} headingLevel={2}
+		>{#snippet actions()}<a
+				class="article-mobile-back"
+				href={linkHref('/blog' + (english ? '?lang=en' : ''))}
+				>← {english ? 'All guides' : 'Всички статии'}</a
+			>{/snippet}</MobilePageHero
+	>
 	<article class="site-container article-page">
-		<Action href={'/blog' + (english ? '?lang=en' : '')} variant="quiet"
-			>← {english ? 'All guides' : 'Всички статии'}</Action
-		>
+		<div class="site-desktop-only">
+			<Action href={'/blog' + (english ? '?lang=en' : '')} variant="quiet"
+				>← {english ? 'All guides' : 'Всички статии'}</Action
+			>
+		</div>
 		<h1>{data.post.title}</h1>
 		<p class="article-meta">{data.post.category} · {data.post.date}</p>
 		<img
@@ -43,7 +54,7 @@
 	<section class="site-section site-container site-stack">
 		<h2 class="site-heading">{english ? 'Related guides' : 'Още по темата'}</h2>
 		<div class="article-related">
-			{#each data.related as post (post.slug)}<ArticleCard {post} {english} />{/each}
+			{#each data.related as post (post.slug)}<ArticleCard {post} {english} mobileRow />{/each}
 		</div>
 	</section>
 </main>
@@ -84,6 +95,32 @@
 	@media (max-width: 767.98px) {
 		.article-related {
 			grid-template-columns: 1fr;
+		}
+	}
+
+	.article-mobile-back {
+		display: flex;
+		width: fit-content;
+		align-items: center;
+		min-height: var(--bc-control-height-standard);
+		color: var(--bc-white);
+		font-size: var(--bc-text-control);
+		text-decoration: none;
+	}
+	@media (max-width: 767.98px) {
+		h1 {
+			margin-top: 0;
+			font-size: var(--bc-mobile-page-title);
+			line-height: var(--bc-mobile-page-title-leading);
+		}
+		p {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body-lg);
+			margin-block: var(--bc-space-4);
+		}
+		.article-cover {
+			aspect-ratio: 1.8;
+			object-fit: contain;
 		}
 	}
 </style>

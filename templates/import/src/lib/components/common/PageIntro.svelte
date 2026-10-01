@@ -2,11 +2,15 @@
 	import { assetHref } from '$lib/utils/assets';
 	import type { Snippet } from 'svelte';
 	import HeroCars from './HeroCars.svelte';
+	import MobilePageHero from './MobilePageHero.svelte';
 	let {
 		title,
 		description,
 		image,
 		desktopImage,
+		mobileTitle,
+		mobileDescription,
+		mobileActions,
 		compact = false,
 		vehicleArtwork = false,
 		titleId,
@@ -21,6 +25,9 @@
 		description?: string;
 		image?: string;
 		desktopImage?: string;
+		mobileTitle?: string;
+		mobileDescription?: string;
+		mobileActions?: Snippet;
 		compact?: boolean;
 		vehicleArtwork?: boolean;
 		titleId?: string;
@@ -33,8 +40,14 @@
 	} = $props();
 </script>
 
+<MobilePageHero
+	title={mobileTitle ?? title}
+	description={mobileDescription}
+	{image}
+	actions={mobileActions}
+/>
 <section
-	class={['site-intro', className]}
+	class={['site-intro', 'site-desktop-only', className]}
 	class:site-intro--image={Boolean(image) || vehicleArtwork}
 	class:site-intro--cars={vehicleArtwork}
 	class:site-intro--compact={compact}

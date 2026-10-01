@@ -55,8 +55,8 @@
 
 		:global(body.auxero-template-my-listings-html .dashboard-box) {
 			border: 1px solid var(--bc-border) !important;
-			border-radius: 8px !important;
-			background: var(--bc-surface) !important;
+			border-radius: var(--bc-radius-panel) !important;
+			background: var(--bc-white) !important;
 			padding: 14px !important;
 		}
 
@@ -83,8 +83,8 @@
 			flex-direction: column !important;
 			align-items: stretch !important;
 			border: 1px solid var(--bc-border) !important;
-			border-radius: 8px !important;
-			background: var(--bc-surface) !important;
+			border-radius: var(--bc-radius-card) !important;
+			background: var(--bc-white) !important;
 			padding: 12px !important;
 		}
 
@@ -92,6 +92,21 @@
 			width: auto !important;
 			min-width: 0 !important;
 			padding-bottom: 10px !important;
+		}
+		:global(body.auxero-template-my-listings-html .cart-item__product .info),
+		:global(body.auxero-template-my-listings-html .cart-item__name) {
+			min-width: 0 !important;
+			max-width: 100%;
+		}
+		:global(body.auxero-template-my-listings-html .cart-item__product p),
+		:global(body.auxero-template-my-listings-html .cart-item__product a) {
+			white-space: normal !important;
+			overflow-wrap: anywhere;
+			min-width: 0;
+		}
+		:global(body.auxero-template-my-listings-html .cart-item > div > span) {
+			min-width: 0;
+			overflow-wrap: anywhere;
 		}
 
 		:global(body.auxero-template-my-listings-html .daynight-account-listings .cart-item__price),
@@ -113,54 +128,29 @@
 		}
 
 		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__price
-		)::before {
-			content: 'Контакт';
-		}
-
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__year
-		)::before {
-			content: 'Очаквана цена';
-		}
-
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__total
-		)::before {
-			content: 'Пробег';
-		}
-
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item > div:not([class])
-		)::before {
-			content: 'Статус';
-		}
-
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__price
-		)::before,
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__year
-		)::before,
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item__total
-		)::before,
-		:global(
-			body.auxero-template-my-listings-html .daynight-account-listings .cart-item > div:not([class])
-		)::before {
+			body.auxero-template-my-listings-html
+				.daynight-account-listings
+				.cart-item
+				> [data-label]::before
+		) {
+			content: attr(data-label);
 			flex: 0 0 auto !important;
-			color: #6b7280 !important;
-			font-size: 12px !important;
-			font-weight: 500 !important;
-			text-transform: uppercase !important;
+			max-width: 48%;
+			color: var(--bc-muted) !important;
+			font-size: var(--bc-text-meta) !important;
+			font-weight: var(--bc-weight-body) !important;
+			text-transform: none !important;
 		}
-
 		:global(body.auxero-template-my-listings-html .daynight-account-listings .cart-item__action) {
 			justify-content: flex-start !important;
 			gap: 8px !important;
 			border-top: 1px solid var(--bc-border) !important;
 			padding-top: 10px !important;
 			margin-top: 10px !important;
+		}
+		:global(body.auxero-template-my-listings-html .cart-item__action .action) {
+			min-width: var(--bc-control-height-standard);
+			min-height: var(--bc-control-height-standard);
 		}
 
 		/* Right-align the meta values so each row reads as label … value. */

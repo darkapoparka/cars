@@ -70,6 +70,6 @@ test('native route changes do not leave old modal or body cleanup behind', async
 	await page.locator('a[href="/bg/about"]:visible').first().click();
 	await expect(page).toHaveURL((url) => url.pathname === '/bg/about');
 	await expect(page.locator('link[data-legacy-styles]')).toHaveCount(0);
-	await expect(page.locator('main h1')).toBeVisible();
+	await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 	expect(await page.evaluate(() => getComputedStyle(document.body).overflow)).not.toBe('hidden');
 });

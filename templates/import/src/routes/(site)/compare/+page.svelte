@@ -9,6 +9,8 @@
 	import { linkHref } from '$lib/utils/links';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import Action from '$lib/components/common/Action.svelte';
+	import Plus from '@lucide/svelte/icons/plus';
+	import MobileVehiclePicker from '$lib/components/compare/MobileVehiclePicker.svelte';
 	let { data }: PageProps = $props();
 	const garage = getGarageContext();
 	const english = $derived(data.locale === 'en');
@@ -35,6 +37,19 @@
 		{ label: english ? 'Fuel' : 'Гориво', key: 'fuel' as const },
 		{ label: english ? 'Transmission' : 'Скоростна кутия', key: 'transmission' as const }
 	]);
+	let pickerOpen = $state(false);
+	let pendingCar = $state<string | null>(null);
+	function chooseCar(slug: string) {
+		pendingCar = slug;
+		pickerOpen = false;
+	}
+	function finishPicker() {
+		if (!pendingCar) return;
+		const slug = pendingCar;
+		pendingCar = null;
+		// Start in the next event turn, after all router popstate listeners finish.
+		setTimeout(() => update([...ids, slug]), 0);
+	}
 	function update(next: string[]) {
 		const valid = [...new Set(next)].slice(0, 4);
 		garage.setCompare(valid);
@@ -51,8 +66,29 @@
 	/></svelte:head
 >
 <main id="main-content">
-	<PageIntro title={english ? 'Compare cars' : 'Сравни автомобили'} />
+	<PageIntro title={english ? 'Compare cars' : 'Сравни автомобили'}>
+		{#snippet mobileActions()}
+			<button
+				class="compare-picker-trigger"
+				type="button"
+				disabled={selected.length >= 4}
+				aria-haspopup="dialog"
+				aria-expanded={pickerOpen}
+				onclick={() => (pickerOpen = true)}
+				><Plus size={22} aria-hidden="true" /><span
+					>{english ? 'Add a car' : 'Добави автомобил'}</span
+				><small>{selected.length} / 4</small></button
+			>
+		{/snippet}
+	</PageIntro>
 	<div class="site-section site-container site-stack">
+		{#if selected.length}<div class="compare-mobile-controls">
+				<Action variant="quiet" onclick={() => update([])}
+					>{english ? 'Clear comparison' : 'Изчисти сравнението'}</Action
+				>{#if selected.length > 1}<span
+						>{english ? 'Swipe for more cars' : 'Плъзни за още автомобили'}</span
+					>{/if}
+			</div>{/if}
 		<div class="compare-controls">
 			<label class="site-field"
 				><span>{english ? 'Add a car (up to four)' : 'Добави автомобил (до четири)'}</span><select
@@ -122,8 +158,42 @@
 			</div>{/if}
 	</div>
 </main>
+<MobileVehiclePicker
+	bind:open={pickerOpen}
+	cars={available}
+	{english}
+	onselect={chooseCar}
+	onclose={finishPicker}
+/>
 
 <style>
+	.compare-mobile-controls {
+		display: none;
+	}
+	.compare-picker-trigger {
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-3);
+		width: 100%;
+		min-height: var(--bc-control-height-primary);
+		padding: 0 var(--bc-space-4);
+		border: 0;
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		font: var(--bc-weight-action) var(--bc-text-control)/var(--bc-leading-control)
+			var(--bc-font-body);
+		text-align: left;
+	}
+	.compare-picker-trigger small {
+		margin-left: auto;
+		font-size: var(--bc-text-label);
+		color: var(--bc-muted);
+		white-space: nowrap;
+	}
+	.compare-picker-trigger:disabled {
+		opacity: 0.65;
+	}
 	.compare-controls {
 		display: flex;
 		align-items: end;
@@ -181,12 +251,51 @@
 		border-bottom: 0;
 	}
 	@media (max-width: 767.98px) {
+		.compare-controls {
+			display: none;
+		}
+		.compare-mobile-controls {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: var(--bc-space-2);
+		}
+		.compare-mobile-controls > span {
+			color: var(--bc-muted);
+			font-size: var(--bc-text-meta);
+		}
+		.compare-scroll {
+			--compare-car-width: max(144px, calc((100vw - var(--bc-page-x) * 2 - 104px) / 2));
+		}
+		table {
+			width: max-content;
+			min-width: 100%;
+			table-layout: fixed;
+		}
+		thead th a {
+			font-size: var(--bc-text-body);
+			line-height: 1.25;
+			gap: var(--bc-space-2);
+			overflow-wrap: break-word;
+		}
+		thead img {
+			height: 80px;
+		}
+
 		th,
 		td {
-			min-width: 170px;
+			min-width: var(--compare-car-width);
+			width: var(--compare-car-width);
+			max-width: var(--compare-car-width);
+			padding: var(--bc-space-2);
+			font-size: var(--bc-text-body);
+			overflow-wrap: anywhere;
 		}
 		th:first-child {
-			min-width: 100px;
+			min-width: 104px;
+			width: 104px;
+			max-width: 104px;
 			font-size: var(--bc-text-label);
 		}
 	}

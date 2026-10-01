@@ -88,9 +88,14 @@ test('visible mobile inventory photos load delivery renditions and Contact prior
 test('mobile comparison supports adding, removing and clearing cars', async ({ page }) => {
 	await page.setViewportSize({ width: 320, height: 844 });
 	await visit(page, '/en/compare');
-	const choose = page.getByRole('combobox', { name: 'Add a car (up to four)' });
-	await choose.selectOption({ label: 'BMW X3 30e xDrive' });
-	await choose.selectOption({ label: 'BMW X4 M Competition' });
+	for (const title of ['BMW X3 30e xDrive', 'BMW X4 M Competition']) {
+		await page.getByRole('button', { name: /Add a car/ }).click();
+		const picker = page.getByRole('dialog', { name: 'Choose a car', exact: true });
+		await picker.getByRole('searchbox').fill(title);
+		await picker.getByRole('button', { name: 'Add ' + title, exact: true }).click();
+		await expect(picker).not.toBeVisible();
+		await expect(page.getByRole('link', { name: title, exact: true })).toBeVisible();
+	}
 	const table = page.getByRole('table', { name: 'Vehicle specifications' });
 	await expect(table.getByRole('columnheader')).toHaveCount(3);
 	const result = await new AxeBuilder({ page })

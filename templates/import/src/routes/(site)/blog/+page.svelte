@@ -18,7 +18,12 @@
 <main id="main-content">
 	<PageIntro title={english ? 'Guides and advice' : 'Полезно за автомобила'} />
 	<section class="site-section site-container article-grid">
-		{#each data.posts as post (post.slug)}<ArticleCard {post} {english} level={2} />{/each}
+		{#each data.posts as post (post.slug)}<ArticleCard
+				{post}
+				{english}
+				level={2}
+				mobileRow
+			/>{/each}
 	</section>
 </main>
 

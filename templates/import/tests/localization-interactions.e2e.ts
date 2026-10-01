@@ -123,9 +123,9 @@ for (const width of [320, 390, 1440])
 			await calculator.locator('input').nth(2).fill('10');
 			await calculator.locator('input').nth(3).fill('20');
 			await calculator.locator('input').nth(4).fill('500');
-			await expect(calculator.locator('output')).toContainText(/41[\s,.]*300/);
+			await expect(calculator.locator('output:visible')).toContainText(/41[\s,.]*300/);
 			await calculator.locator('input').first().fill('-1');
-			await expect(calculator.getByRole('status')).toBeVisible();
+			await expect(calculator.locator('section [role="status"]')).toBeVisible();
 			await page.goto(route(locale, '/financing'), { waitUntil: 'domcontentloaded' });
 			await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 			const finance = page.locator('.finance-estimator');

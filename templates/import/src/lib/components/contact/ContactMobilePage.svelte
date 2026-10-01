@@ -15,7 +15,7 @@
 	import { linkHref } from '$lib/utils/links';
 	import { daynightContact } from '$lib/config/dealer';
 	import type { AuxeroContactFormData, AuxeroContactPageInfo } from '$lib/auxero/contact';
-	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
+	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
@@ -47,78 +47,80 @@
 	data-daynight-contact-mobile
 	data-form-open={formOpen ? 'true' : 'false'}
 >
-	<MobileAppbar surface="dark" />
-
 	<svelte:element this={embedded ? 'section' : 'main'} class="daynight-contact-mobile__main">
-		<section class="daynight-contact-mobile__hero" aria-labelledby="contact-mobile-title">
-			<div>
-				<h1 id="contact-mobile-title">{page.data.locale === 'en' ? 'Contact us' : 'Контакти'}</h1>
-				<span>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</span>
-			</div>
-		</section>
-		<nav class="daynight-contact-mobile__actions" aria-label={nt('ui36')}>
-			<a {...hrefAttributes(info.phoneHref)}
-				><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</a
-			>
-			<a {...hrefAttributes(daynightContact.viberHref)}
-				><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</a
-			>
-			<button
-				type="button"
-				onclick={openForm}
-				aria-label={nt('ui39')}
-				aria-haspopup="dialog"
-				aria-expanded={formOpen}
-				><Plus size={18} strokeWidth={2.35} aria-hidden="true" />{nt('ui40')}</button
-			>
-		</nav>
+		<MobilePageHero
+			title={page.data.locale === 'en' ? 'Contact us' : 'Контакти'}
+			description={dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}
+			image="/assets/daynight/proof-studio-import-handoff.webp"
+			titleId="contact-mobile-title"
+		>
+			{#snippet actions()}
+				<nav class="daynight-contact-mobile__actions" aria-label={nt('ui36')}>
+					<a {...hrefAttributes(info.phoneHref)}
+						><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui37')}</a
+					>
+					<a {...hrefAttributes(daynightContact.viberHref)}
+						><MessageCircle size={18} strokeWidth={2.25} aria-hidden="true" />{nt('ui38')}</a
+					>
+					<button
+						type="button"
+						onclick={openForm}
+						aria-label={nt('ui39')}
+						aria-haspopup="dialog"
+						aria-expanded={formOpen}
+						><Plus size={18} strokeWidth={2.35} aria-hidden="true" />{nt('ui40')}</button
+					>
+				</nav>
+			{/snippet}
+		</MobilePageHero>
+		<div class="daynight-contact-mobile__body">
+			<SocialLinks />
 
-		<SocialLinks />
+			<section class="daynight-contact-mobile__info" aria-label={nt('ui41')}>
+				<article>
+					<span><MapPin size={18} strokeWidth={2.25} aria-hidden="true" /></span>
+					<div>
+						<p>{info.officeLabel}</p>
+						<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
+						<small>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</small>
+					</div>
+				</article>
+				<article>
+					<span><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" /></span>
+					<div>
+						<p>{nt('ui23')}</p>
+						<a {...hrefAttributes(info.phoneHref)}>{info.phoneLabel}</a>
+						{#if info.secondaryPhoneHref !== info.phoneHref || info.secondaryPhoneLabel !== info.phoneLabel}
+							<a {...hrefAttributes(info.secondaryPhoneHref)}>{info.secondaryPhoneLabel}</a>
+						{/if}
+					</div>
+				</article>
+				<article>
+					<span><Mail size={18} strokeWidth={2.25} aria-hidden="true" /></span>
+					<div>
+						<p>{nt('ui42')}</p>
+						<a {...hrefAttributes(info.emailHref)}>{info.emailLabel}</a>
+					</div>
+				</article>
+			</section>
 
-		<section class="daynight-contact-mobile__info" aria-label={nt('ui41')}>
-			<article>
-				<span><MapPin size={18} strokeWidth={2.25} aria-hidden="true" /></span>
+			<section class="daynight-contact-mobile__map-card" aria-label={nt('ui19')}>
+				<div class="daynight-contact-mobile__map-preview" aria-hidden="true">
+					<span class="road road-a"></span>
+					<span class="road road-b"></span>
+					<span class="road road-c"></span>
+					<span class="pin"><MapPin size={24} strokeWidth={2.45} /></span>
+				</div>
 				<div>
-					<p>{info.officeLabel}</p>
+					<p>{nt('ui43')}</p>
 					<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
-					<small>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].appointment}</small>
+					<a {...hrefAttributes(mapHref)} target="_blank" rel="noreferrer">
+						{nt('ui44')}
+						<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />
+					</a>
 				</div>
-			</article>
-			<article>
-				<span><PhoneCall size={18} strokeWidth={2.25} aria-hidden="true" /></span>
-				<div>
-					<p>{nt('ui23')}</p>
-					<a {...hrefAttributes(info.phoneHref)}>{info.phoneLabel}</a>
-					{#if info.secondaryPhoneHref !== info.phoneHref || info.secondaryPhoneLabel !== info.phoneLabel}
-						<a {...hrefAttributes(info.secondaryPhoneHref)}>{info.secondaryPhoneLabel}</a>
-					{/if}
-				</div>
-			</article>
-			<article>
-				<span><Mail size={18} strokeWidth={2.25} aria-hidden="true" /></span>
-				<div>
-					<p>{nt('ui42')}</p>
-					<a {...hrefAttributes(info.emailHref)}>{info.emailLabel}</a>
-				</div>
-			</article>
-		</section>
-
-		<section class="daynight-contact-mobile__map-card" aria-label={nt('ui19')}>
-			<div class="daynight-contact-mobile__map-preview" aria-hidden="true">
-				<span class="road road-a"></span>
-				<span class="road road-b"></span>
-				<span class="road road-c"></span>
-				<span class="pin"><MapPin size={24} strokeWidth={2.45} /></span>
-			</div>
-			<div>
-				<p>{nt('ui43')}</p>
-				<strong>{dealerCopy[page.data.locale === 'en' ? 'en' : 'bg'].address}</strong>
-				<a {...hrefAttributes(mapHref)} target="_blank" rel="noreferrer">
-					{nt('ui44')}
-					<Navigation size={17} strokeWidth={2.3} aria-hidden="true" />
-				</a>
-			</div>
-		</section>
+			</section>
+		</div>
 	</svelte:element>
 
 	<MobileSheet bind:open={formOpen} title={form.title}
@@ -138,53 +140,11 @@
 		color: var(--bc-ink);
 	}
 
-	.daynight-contact-mobile__main {
+	.daynight-contact-mobile__body {
 		display: grid;
 		gap: var(--bc-space-3);
 		padding: var(--bc-space-3) var(--bc-mobile-gutter)
 			calc(var(--bc-mobile-nav-height) + var(--bc-space-6));
-	}
-
-	.daynight-contact-mobile__hero {
-		position: relative;
-		display: grid;
-		min-height: 164px;
-		align-content: center;
-		text-align: center;
-		overflow: hidden;
-		border-radius: var(--bc-radius-card);
-		background:
-			linear-gradient(90deg, rgb(9 10 11 / 0.9), rgb(9 10 11 / 0.7)),
-			url('/assets/daynight/proof-studio-import-handoff.webp') 58% center / cover;
-		color: var(--bc-white);
-		padding: var(--bc-space-4);
-	}
-
-	.daynight-contact-mobile__hero div {
-		display: grid;
-		gap: 5px;
-		max-width: 310px;
-		margin-inline: auto;
-	}
-
-	.daynight-contact-mobile__hero h1,
-	.daynight-contact-mobile__hero span {
-		margin: 0;
-		letter-spacing: 0;
-	}
-
-	.daynight-contact-mobile__hero h1 {
-		color: var(--bc-white);
-		font-size: var(--bc-mobile-page-title);
-		font-weight: var(--bc-weight-heading);
-		line-height: var(--bc-mobile-page-title-leading);
-	}
-
-	.daynight-contact-mobile__hero span {
-		color: rgba(255, 255, 255, 0.82);
-		font-size: var(--bc-mobile-body);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-mobile-body-leading);
 	}
 
 	.daynight-contact-mobile__actions {
@@ -440,15 +400,7 @@
 		transform: translateX(-50%);
 	}
 
-	@media (hover: hover) and (pointer: fine) {
-	}
-
 	@media (max-width: 359px) {
-		.daynight-contact-mobile__hero h1 {
-			font-size: var(--bc-mobile-page-title);
-			line-height: var(--bc-mobile-page-title-leading);
-			font-weight: var(--bc-weight-heading);
-		}
 		.daynight-contact-mobile__map-card {
 			grid-template-columns: 1fr;
 		}

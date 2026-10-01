@@ -7,11 +7,22 @@
 		post,
 		english = false,
 		level = 3,
-		compact = false
-	}: { post: BlogPost; english?: boolean; level?: 2 | 3; compact?: boolean } = $props();
+		compact = false,
+		mobileRow = false
+	}: {
+		post: BlogPost;
+		english?: boolean;
+		level?: 2 | 3;
+		compact?: boolean;
+		mobileRow?: boolean;
+	} = $props();
 </script>
 
-<article class="article-card" class:article-card--compact={compact}>
+<article
+	class="article-card"
+	class:article-card--compact={compact}
+	class:article-card--mobile-row={mobileRow}
+>
 	<a class="article-card__link" href={linkHref('/blog/' + post.slug + (english ? '?lang=en' : ''))}>
 		<img
 			class="article-card__image"
@@ -163,6 +174,39 @@
 			line-clamp: 2;
 			overflow: hidden;
 			min-height: 44px;
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.article-card--mobile-row .article-card__link {
+			display: grid;
+			grid-template-columns: 32% minmax(0, 1fr);
+		}
+		.article-card--mobile-row .article-card__image {
+			height: 100%;
+			min-height: 160px;
+			aspect-ratio: auto;
+		}
+		.article-card--mobile-row .article-card__body {
+			min-width: 0;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-3);
+		}
+		.article-card--mobile-row p,
+		.article-card--mobile-row .article-card__meta span:first-child {
+			display: none;
+		}
+		.article-card--mobile-row .article-card__title {
+			font-size: var(--bc-text-control);
+			line-height: 1.25;
+			min-height: 0;
+			-webkit-line-clamp: 3;
+			line-clamp: 3;
+		}
+		.article-card--mobile-row .article-card__more {
+			padding: 0;
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-action);
 		}
 	}
 </style>

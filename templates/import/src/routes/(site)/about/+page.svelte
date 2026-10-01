@@ -21,6 +21,9 @@
 <main id="main-content">
 	<PageIntro
 		title={english ? 'About us' : 'За нас'}
+		mobileDescription={english
+			? 'Cars, checks and a clear next step.'
+			: 'Автомобили, проверка и ясен следващ ход.'}
 		description={about.hero.description}
 		image={about.hero.image}
 		desktopImage="/assets/daynight/banners/about-desktop-v2.webp"

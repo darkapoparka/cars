@@ -173,4 +173,45 @@
 			font-weight: var(--bc-weight-heading);
 		}
 	}
+
+	@media (max-width: 767.98px) {
+		.finance-estimator {
+			gap: var(--bc-space-4);
+		}
+		.finance-estimator > h2 {
+			order: -2;
+			font-size: var(--bc-text-h4);
+		}
+		.finance-estimator > [aria-live] {
+			order: -1;
+		}
+		.finance-estimator__total {
+			order: -1;
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			align-items: center;
+			gap: var(--bc-space-3);
+			padding: var(--bc-space-3);
+			border: 0;
+			border-radius: var(--bc-radius-control);
+			background: var(--bc-bg-strong);
+		}
+		.finance-estimator__total dt {
+			color: var(--bc-ink);
+			font-size: var(--bc-text-body);
+		}
+		.finance-estimator__total dd {
+			font-size: var(--bc-mobile-page-title);
+		}
+		.site-fields {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: var(--bc-space-3);
+		}
+		.site-fields > label:nth-child(-n + 2) {
+			grid-column: 1 / -1;
+		}
+		.site-fields > label:nth-child(n + 3) > span {
+			min-height: 2.5em;
+		}
+	}
 </style>
