@@ -105,11 +105,23 @@ try {
             assert.deepEqual(geometry.broken, [], 'Broken visible images');
             assert.deepEqual(errors, [], 'Browser runtime errors');
             if (route === 'blog') {
-              assert(await page.locator('.dn-blog-search__submit').isVisible(), 'Article search has an explicit submit action at every viewport');
-              assert.equal(await page.locator('.dn-blog-search__submit-icon--mobile').isVisible(), width < 992, 'The touch search action keeps its mobile arrow');
-              assert.equal(await page.locator('.dn-blog-search__submit-icon--desktop').isVisible(), width >= 992, 'Desktop search uses the same search glyph as Home');
-              assert.equal(await page.locator('.dn-blog-search__icon--mobile').isVisible(), width < 992, 'Mobile search uses its dedicated icon');
-              assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
+              if (width >= 992) {
+                assert(await page.locator('.dn-blog-search__submit').isVisible(), 'Desktop article search has an explicit submit action');
+                assert(await page.locator('.dn-blog-search__submit-icon--desktop').isVisible(), 'Desktop search uses the same search glyph as Home');
+                assert(await page.locator('.dn-blog-search__icon--desktop').isVisible(), 'Desktop retains its search icon');
+              } else {
+                const trigger = page.locator('.dn-blog-search-trigger');
+                assert(await trigger.isVisible(), 'Mobile has its dedicated article search field');
+                assert(await trigger.locator('.dn-blog-search-trigger__arrow').isVisible(), 'The touch search field keeps its mobile arrow');
+                await trigger.click();
+                const dialog = page.locator('.dn-blog-search-dialog');
+                await dialog.waitFor({ state: 'visible' });
+                assert(await dialog.locator('input[type="search"]').isVisible(), 'Mobile search opens its query editor');
+                assert(await dialog.locator('button[type="submit"]').isVisible(), 'The search overlay has an explicit result action');
+                await dialog.locator('.dn-overlay-close').click();
+                await dialog.waitFor({ state: 'hidden' });
+                assert(await trigger.evaluate(element => document.activeElement === element), 'Closing search restores focus to its field');
+              }
             }
             const hasScene = width >= 992;
             const imageScene = route === 'about-us' || route === 'contact';
@@ -118,7 +130,7 @@ try {
               if (route === 'blog') {
                 const cards = await page.locator('.dn-blog-grid > .dn-blog-card').evaluateAll(elements => elements.map(element => element.getBoundingClientRect().toJSON()));
                 const firstRow = cards.filter(card => Math.abs(card.y - cards[0].y) < 1);
-                assert.equal(firstRow.length, width >= 1200 ? 4 : 2, 'The editorial index uses four wide-desktop columns and two compact-desktop columns');
+                assert.equal(firstRow.length, width >= 1360 ? 4 : 2, 'The editorial index uses four wide-desktop columns and two compact-desktop columns');
                 assert(cards[0].y >= geometry.hero.bottom + 32 && cards[0].y <= geometry.hero.bottom + 64, 'Article cards follow the hero without an extra empty margin');
               }
               assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Search heroes use cutouts; company heroes use larger car scenes');

@@ -307,11 +307,12 @@ the configured currency's narrow symbol and locale number formatting.
 
 ## Article cards
 
-Desktop article titles on Home and Blog use the shared card type and leading,
-with a minimum space of two lines. Short titles leave the second line empty so
-summaries align; longer titles can grow without clipping. Keep the existing
-article order and natural wrapping rather than grouping by title length or
-inserting manual breaks. Mobile titles retain their natural height.
+Article titles use their natural height without reserving empty lines. Blog's
+curated order puts the four longer headlines first, then the shorter headlines,
+with "How to choose a car" starting the short-title row. Four columns start at
+1360px, giving the short titles enough width for one line in Bulgarian and
+English. Smaller desktops use two columns. Titles can grow with enlarged text;
+mobile cards retain their existing presentation.
 
 ## Inventory and vehicle cards
 

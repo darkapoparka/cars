@@ -28,7 +28,7 @@
     {#if data.posts.length}
       <div class="dn-blog-grid">
         {#each data.posts as post, index (post.id)}
-          <BlogCard {post} returnTo={`${page.url.pathname}${page.url.search}#article-${post.id}`} priority={index < 4} imageSizes="(min-width: 1320px) 309px, (min-width: 1200px) calc((100vw - 84px) / 4), calc((100vw - 44px) / 2)" />
+          <BlogCard {post} returnTo={`${page.url.pathname}${page.url.search}#article-${post.id}`} priority={index < 4} imageSizes="(min-width: 1360px) 309px, calc((100vw - 44px) / 2)" />
         {/each}
       </div>
     {:else}
