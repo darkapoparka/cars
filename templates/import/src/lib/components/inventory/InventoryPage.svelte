@@ -17,7 +17,8 @@
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import SearchField from '$lib/components/common/SearchField.svelte';
+	import DesktopSearchControl from '$lib/components/common/DesktopSearchControl.svelte';
+	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import InventorySidebar from './InventorySidebar.svelte';
 	import { parseInventoryQuery, serializeInventoryQuery } from '$lib/domain/inventory-query';
 	let {
@@ -72,26 +73,23 @@
 			desktopDescription={desktop.subtitle}
 		>
 			{#snippet desktopActions()}
-				<form action={linkHref('/inventory')} role="search" class="inventory-hero__search">
-					{#each searchHiddenInputs as [name, value] (name)}<input
-							type="hidden"
-							{name}
-							{value}
-						/>{/each}
-					<SearchField
-						name="keyword"
-						value={searchState.filters.keyword ?? ''}
-						label={desktop.searchLabel}
-						placeholder={controlsCopy.searchPlaceholder}
-					>
-						<Action type="submit" size="primary"
-							>{english ? 'Search' : 'Търси'} ({desktop.resultCount})</Action
-						>
-					</SearchField>
-				</form>
-			{/snippet}
-			{#snippet desktopSecondaryActions()}
-				<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
+				<DesktopDiscoveryPanel>
+					<form action={linkHref('/inventory')} role="search" class="inventory-hero__search">
+						{#each searchHiddenInputs as [name, value], index (index)}<input
+								type="hidden"
+								{name}
+								{value}
+							/>{/each}
+						<DesktopSearchControl
+							name="keyword"
+							value={searchState.filters.keyword ?? ''}
+							label={desktop.searchLabel}
+							placeholder={controlsCopy.searchPlaceholder}
+							actionLabel={english ? 'Search' : 'Търси'}
+						/>
+					</form>
+					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
+				</DesktopDiscoveryPanel>
 			{/snippet}
 		</PageIntro>
 		<InventoryFiltersDialog bind:this={dialog} {desktop} {english} bind:allOpen bind:activeFilter />
@@ -149,9 +147,7 @@
 
 <style>
 	form[role='search'] {
-		width: 100%;
-		max-width: var(--bc-desktop-discovery-width);
-		margin-inline: auto;
+		min-width: 0;
 	}
 	.inventory-hero__search {
 		text-align: start;

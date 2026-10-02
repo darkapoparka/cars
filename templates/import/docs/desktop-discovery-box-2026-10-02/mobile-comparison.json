@@ -1,0 +1,58 @@
+[
+	{
+		"route": "home",
+		"width": 320,
+		"height": 3752,
+		"changedPixels": 21875,
+		"pixelIdentical": false,
+		"maxChannelDelta": 22,
+		"changeBounds": {
+			"left": 16,
+			"top": 1887,
+			"right": 272,
+			"bottom": 2031
+		}
+	},
+	{
+		"route": "inventory",
+		"width": 320,
+		"height": 2386,
+		"changedPixels": 16928,
+		"pixelIdentical": false,
+		"maxChannelDelta": 21,
+		"changeBounds": {
+			"left": 0,
+			"top": 1295,
+			"right": 144,
+			"bottom": 1472
+		}
+	},
+	{
+		"route": "home",
+		"width": 390,
+		"height": 3844,
+		"changedPixels": 36473,
+		"pixelIdentical": false,
+		"maxChannelDelta": 228,
+		"changeBounds": {
+			"left": 16,
+			"top": 559,
+			"right": 336,
+			"bottom": 2095
+		}
+	},
+	{
+		"route": "inventory",
+		"width": 390,
+		"height": 2390,
+		"changedPixels": 20923,
+		"pixelIdentical": false,
+		"maxChannelDelta": 16,
+		"changeBounds": {
+			"left": 0,
+			"top": 1295,
+			"right": 176,
+			"bottom": 1472
+		}
+	}
+]

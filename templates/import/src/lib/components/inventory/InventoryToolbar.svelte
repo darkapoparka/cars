@@ -43,13 +43,12 @@
 	<div class="inventory-toolbar__row">
 		{#each quickFilters as filter (filter.id)}<InventoryFilter
 				{filter}
-				inverse
 				summary={appliedRangeSummary(filter)}
 				expanded={allOpen && activeFilter?.id === filter.id}
 				onopen={() => onopen(filter)}
 			/>{/each}
 		<Action
-			variant="glass"
+			variant="strong"
 			size="compact"
 			class="inventory-toolbar__all"
 			aria-haspopup="dialog"
@@ -72,12 +71,12 @@
 <style>
 	.inventory-toolbar {
 		width: 100%;
-		max-width: var(--bc-desktop-discovery-width);
+		min-width: 0;
 	}
 	.inventory-toolbar__row {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		gap: var(--bc-space-2);
 	}
@@ -91,14 +90,14 @@
 		display: inline-flex;
 		align-items: center;
 		gap: var(--bc-space-2);
-		color: var(--bc-white);
+		color: var(--bc-ink);
 		font-size: var(--bc-text-label);
 		text-decoration: none;
 		min-height: var(--bc-control-height-standard);
 		padding: var(--bc-space-1) var(--bc-space-2);
 		border-radius: var(--bc-radius-sm);
-		border: 1px solid var(--bc-glass-border);
-		background: var(--bc-glass-surface);
+		border: 1px solid var(--bc-border);
+		background: var(--bc-control);
 	}
 	.inventory-toolbar__active .inventory-toolbar__clear {
 		background: transparent;
@@ -107,8 +106,28 @@
 		text-underline-offset: var(--bc-space-1);
 	}
 	.inventory-toolbar__row :global(.inventory-toolbar__all) {
+		flex: none;
 		min-height: var(--bc-control-height-primary);
+		padding-inline: var(--bc-space-3);
 		border-radius: var(--bc-radius-pill);
 		white-space: nowrap;
+		margin-inline-start: auto;
+	}
+	@media (min-width: 901px) {
+		.inventory-toolbar__row {
+			flex-wrap: nowrap;
+		}
+	}
+	@media (max-width: 900px) {
+		.inventory-toolbar__row {
+			display: grid;
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			row-gap: var(--bc-space-3);
+		}
+		.inventory-toolbar__row :global(.inventory-toolbar__all) {
+			grid-column: span 2;
+			justify-self: end;
+			margin-inline-start: 0;
+		}
 	}
 </style>

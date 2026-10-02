@@ -88,18 +88,24 @@ test('desktop sidebar submits canonical filters, keeps searched-out choices and 
 	await expect(sidebar).not.toBeVisible();
 });
 
-test('desktop keyword search replaces its previous value and preserves model and presentation state', async ({
+test('desktop keyword search preserves multiple makes, repeated parameters and presentation state', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(
 		page,
-		'/inventory?brand=BMW&model=X3&keyword=Sport&priceTo=50000&layout=dashboard&view=3&sort=lowest-price'
+		'/inventory?brand=BMW&brand=Audi&model=X3&keyword=Sport&priceTo=50000&layout=dashboard&view=3&sort=lowest-price&campaign=one&campaign=two'
 	);
 	await page.locator('.inventory-hero').getByRole('searchbox').fill('xDrive');
 	await page.locator('.inventory-hero').getByRole('searchbox').press('Enter');
 	await expect(page).toHaveURL(
 		(url) =>
+			url.searchParams
+				.getAll('brand')
+				.flatMap((value) => value.split(','))
+				.sort()
+				.join() === 'Audi,BMW' &&
+			url.searchParams.getAll('campaign').join() === 'one,two' &&
 			url.searchParams.getAll('keyword').join() === 'xDrive' &&
 			url.searchParams.get('q') === 'X3' &&
 			!url.searchParams.has('model') &&

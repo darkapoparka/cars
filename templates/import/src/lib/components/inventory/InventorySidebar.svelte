@@ -23,7 +23,11 @@
 <aside class="inventory-sidebar" aria-label={desktop.sidebar.title}>
 	{#key page.url.search}
 		<form action={linkHref('/inventory')} method="GET">
-			{#each passthrough as [name, value] (name)}<input type="hidden" {name} {value} />{/each}
+			{#each passthrough as [name, value], index (index)}<input
+					type="hidden"
+					{name}
+					{value}
+				/>{/each}
 			<header>
 				<h2>{desktop.sidebar.title}</h2>
 				<Action href={desktop.sidebar.actions.clearHref} variant="quiet" size="compact"

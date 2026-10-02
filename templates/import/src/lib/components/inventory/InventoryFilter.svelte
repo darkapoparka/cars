@@ -5,28 +5,23 @@
 		filter,
 		onopen,
 		summary,
-		expanded = false,
-		inverse = false
+		expanded = false
 	}: {
 		filter: AuxeroInventoryFilter;
 		onopen: () => void;
 		expanded?: boolean;
 		summary?: string;
-		inverse?: boolean;
 	} = $props();
 </script>
 
 <button
 	type="button"
 	class="site-filter-trigger"
-	class:site-filter-trigger--inverse={inverse}
 	data-active={Boolean(summary) || filter.selectedValues.length > 0}
 	aria-haspopup="dialog"
 	aria-expanded={expanded}
-	aria-label={inverse
-		? filter.label +
-			(summary ? ': ' + summary : filter.selectedValues.length ? ': ' + filter.selectedSummary : '')
-		: undefined}
+	aria-label={filter.label +
+		(summary ? ': ' + summary : filter.selectedValues.length ? ': ' + filter.selectedSummary : '')}
 	title={summary ?? (filter.selectedValues.length ? filter.selectedSummary : filter.label)}
 	onclick={onopen}
 >
@@ -70,11 +65,11 @@
 			font-weight: var(--bc-weight-control);
 			min-height: var(--bc-control-height-primary);
 			min-width: 0;
-			max-width: none;
-			border-radius: var(--bc-radius-md);
-			border-color: var(--bc-border-strong);
-			background: var(--bc-surface-raised);
-			padding-inline: var(--bc-space-3);
+			max-width: min(100%, 240px);
+			border-radius: var(--bc-radius-pill);
+			border-color: var(--bc-border);
+			background: var(--bc-control);
+			padding-inline: var(--bc-space-2);
 			gap: var(--bc-space-2);
 		}
 		.site-filter-trigger:hover,
@@ -89,24 +84,6 @@
 		.site-filter-trigger :global(svg) {
 			flex-shrink: 0;
 			color: var(--bc-muted);
-		}
-		.site-filter-trigger--inverse {
-			max-width: 100%;
-			border-radius: var(--bc-radius-pill);
-			border-color: var(--bc-glass-border);
-			background: var(--bc-glass-surface);
-			color: var(--bc-white);
-			backdrop-filter: blur(12px);
-		}
-		.site-filter-trigger--inverse:hover,
-		.site-filter-trigger--inverse[aria-expanded='true'],
-		.site-filter-trigger--inverse[data-active='true'] {
-			border-color: var(--bc-white);
-			background: var(--bc-glass-hover);
-			color: var(--bc-white);
-		}
-		.site-filter-trigger--inverse :global(svg) {
-			color: inherit;
 		}
 	}
 </style>

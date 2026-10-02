@@ -17,7 +17,8 @@
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
-	import DesktopHomeSearchEntry from './DesktopHomeSearchEntry.svelte';
+	import DesktopSearchControl from '$lib/components/common/DesktopSearchControl.svelte';
+	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import { linkHref } from '$lib/utils/links';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import { homeHeroModes } from '$lib/content/home-discovery';
@@ -141,26 +142,38 @@
 {/snippet}
 <PageIntro {title} titleId="home-title" class="home-hero" vehicleArtwork align="center">
 	{#snippet desktopActions()}
-		<div class="home-hero__box">
-			<ModeTabs
-				surface="dark"
-				appearance="attached"
-				value={mode}
-				onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
-				idPrefix="home-mode"
-				label={english ? 'Choose a service' : 'Избери услуга'}
-				options={[
-					{ value: 'buy', label: english ? 'Buy' : 'Купи', icon: CarFront, panelId: 'home-entry' },
-					{
-						value: 'finance',
-						label: english ? 'Finance' : 'Лизинг',
-						icon: HandCoins,
-						panelId: 'home-entry'
-					},
-					{ value: 'sell', label: english ? 'Sell' : 'Продай', icon: Tag, panelId: 'home-entry' },
-					{ value: 'import', label: english ? 'Import' : 'Внос', icon: Ship, panelId: 'home-entry' }
-				]}
-			/>
+		<DesktopDiscoveryPanel class="home-hero__box">
+			{#snippet header()}
+				<ModeTabs
+					surface="light"
+					appearance="attached"
+					value={mode}
+					onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
+					idPrefix="home-mode"
+					label={english ? 'Choose a service' : 'Избери услуга'}
+					options={[
+						{
+							value: 'buy',
+							label: english ? 'Buy' : 'Купи',
+							icon: CarFront,
+							panelId: 'home-entry'
+						},
+						{
+							value: 'finance',
+							label: english ? 'Finance' : 'Лизинг',
+							icon: HandCoins,
+							panelId: 'home-entry'
+						},
+						{ value: 'sell', label: english ? 'Sell' : 'Продай', icon: Tag, panelId: 'home-entry' },
+						{
+							value: 'import',
+							label: english ? 'Import' : 'Внос',
+							icon: Ship,
+							panelId: 'home-entry'
+						}
+					]}
+				/>
+			{/snippet}
 			<div
 				class="home-hero__panel"
 				id="home-entry"
@@ -169,13 +182,14 @@
 				aria-labelledby={'home-mode-' + mode}
 			>
 				{#if mode === 'buy'}
-					<DesktopHomeSearchEntry
+					<DesktopSearchControl
 						id="home-query"
+						class="home-hero__search"
 						value={keyword}
-						placeholder={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
+						label={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
 						actionLabel={english ? 'Search' : 'Търси'}
 						href={searchHref}
-						open={searchOpen}
+						expanded={searchOpen}
 						onopen={() => (searchOpen = true)}
 					/>
 					<div class="home-hero__filters">{@render searchFilters()}</div>
@@ -231,7 +245,7 @@
 					</form>
 				{/if}
 			</div>
-		</div>
+		</DesktopDiscoveryPanel>
 	{/snippet}
 	{#snippet desktopSecondaryActions()}
 		<nav class="home-quick-links" aria-label={english ? 'Quick car searches' : 'Бързо търсене'}>
@@ -253,27 +267,11 @@
 />
 
 <style>
-	.home-hero__box {
-		width: 100%;
-		max-width: var(--bc-desktop-discovery-width);
-		margin-inline: auto;
-		text-align: left;
-	}
-	.home-hero__box :global(.mobile-mode-tabs) {
-		margin-inline: 0;
-	}
 	.home-hero__panel {
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);
-		min-height: var(--bc-desktop-home-panel-height);
-		border: 1px solid var(--bc-border);
-		border-top: 0;
-		border-radius: 0 0 var(--bc-radius-panel) var(--bc-radius-panel);
-		padding: var(--bc-space-5);
-		color: var(--bc-ink);
-		background: var(--bc-surface-raised);
-		box-shadow: var(--bc-shadow-panel);
+		min-height: calc(var(--bc-desktop-discovery-panel-height) - 2 * var(--bc-space-5));
 	}
 	.home-hero__panel:focus-visible {
 		outline-offset: 4px !important;

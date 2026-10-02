@@ -405,6 +405,7 @@
 		.hfp__field--prominent {
 			border-color: var(--bc-border);
 			background: var(--bc-surface);
+			border-radius: var(--desktop-discovery-control-radius, var(--bc-radius-md));
 		}
 		.hfp__field--prominent .hfp__value {
 			font-weight: var(--bc-weight-control);
