@@ -141,15 +141,17 @@
 
     .dn-home-page :global(.dn-home-section-panel) {
       position: relative;
-      margin: 0;
+      margin: calc(-1 * var(--dn-home-banner-overlap)) 0 0;
       padding: var(--dn-space-6);
-      border-radius: 0 0 var(--dn-radius-lg) var(--dn-radius-lg);
+      border-radius: var(--dn-radius);
       background: var(--dn-surface-raised);
     }
 
     .dn-home-page :global(.dn-home-banner-frame) {
       min-height: var(--dn-home-heading-banner-height);
       padding: var(--dn-home-banner-padding);
+      padding-top: calc(var(--dn-space-7) - var(--dn-home-banner-overlap) / 2);
+      padding-bottom: calc(var(--dn-space-7) + var(--dn-home-banner-overlap) / 2);
     }
     .dn-home-page :global(.dn-home-banner-copy) {
       display: flex;

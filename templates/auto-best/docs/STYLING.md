@@ -260,7 +260,7 @@ The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
-**Section introductions.** Desktop inventory/body/brand/editorial sections use their existing branded heading banners attached to light content panels. Their heading/CTA and overlap rules are shared. Mobile uses compact headings appropriate to its denser layout rather than miniaturizing the full desktop banners.
+**Section introductions.** Desktop inventory/body/brand/editorial sections use their existing branded heading banners attached to light content panels. The light panel overlaps the banner by the shared overlap token, with rounded upper corners forming an inward curve at the join. Banner padding keeps its heading and action clear of that overlap. Their heading/CTA and overlap rules are shared. Mobile uses compact headings appropriate to its denser layout rather than miniaturizing the full desktop banners.
 
 **Body types and brands.** These use image-led grid tiles, live labels and expandable mobile discovery. Artwork bounds align the visible car or logo rather than the transparent image canvas. Labels are centered within the mobile cards. Body-type and brand components own their own header actions and expansion state; changing one should not implicitly replace the other.
 
