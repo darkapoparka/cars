@@ -15,7 +15,7 @@
     align-items: start;
     width: var(--desktop-content-width);
     max-width: none;
-    padding: 0 0 90px;
+    padding: 24px 0 90px;
     margin-inline: auto;
   }
   .sidebar {

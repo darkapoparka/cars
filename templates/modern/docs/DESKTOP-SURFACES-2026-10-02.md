@@ -2,7 +2,26 @@
 
 The owner accepted the blue Boxcars direction and requested another desktop-only polish pass: consistent backgrounds, more white containers, stronger tab rails, clearer inventory and better article cards. This receipt follows [the desktop rematch and service-page polish](DESKTOP-BOXCARS-2026-10-02.md).
 
-## Surface and component decisions
+## Follow-up: restore space around the hero
+
+The owner then questioned the heavy backgrounds and containers. This correction replaces the blanket grey homepage and outer white stock box described in the initial pass below.
+
+- Home uses white space around its photo/search hero and discovery sections. The stock wrapper has no background, border or padding; its cards now align with the hero gutters. The blue accent, 4px category rails, individual white cards and article improvements remain.
+- Standalone page-title bands use white. Inventory and service forms retain the soft grey `#f5f6f8` canvas behind their white panels, so the panels remain distinct. Inventory panels start 24px below the title band; the sidebar starts at y=324 at 1440px.
+- The homepage photo/search hero itself was unchanged by the initial surface pass and this correction: at 1440px it remains x=24, y=90, width=1392 and height=680. Its title and search proportions remain.
+- All four CSS edits are inside existing min-width 1024px rules or desktop-only components. No mobile source, behavior, artwork mappings or typography changed.
+
+The final optimized web build passed after the last frontend edit with isolated run ID `desktop-background-balance-20261002-build`. Scoped Biome passed for the four CSS files and existing desktop test. The homepage search/sidebar draft-filter journey passed in Chromium and WebKit, and the final desktop geometry suite passed in both engines across EN/BG and 1024/1440/1920px. The existing inventory position assertion was updated from y=300 to y=324 for the intentional gap; other assertions remain.
+
+Ten desktop captures covered Home in EN/BG at 1024/1440px and BG Cars, articles, Lease, Sell, Import and Contact at 1440px. Cars was captured again at 1024/1440px after the final spacing edit. All returned 200 without page exceptions, horizontal overflow or completed broken images. The homepage proof captures the hero and first stock row together at 1440px. Manual inspection confirmed the white homepage and title bands, unboxed stock section and separated inventory panels.
+
+The four mobile baselines (EN Home at 320/390/1023px and BG Cars at 390px) all retain identical stable geometry after the final edit. One screenshot is pixel-identical; the other three differ by 305 channel bytes total, with maximum channel delta 8. Only transient image-loading skeleton markers are excluded from the stable geometry comparison. Strict all-pixel equality is not claimed; reports and original captures are retained. The inherited pending mobile image candidates remain recorded separately.
+
+A development HMR warning about a missing CSS link cleared after one reload of the temporary inspection tab. The active preview and read-only reference servers were retained, and the temporary browser viewport override was reset.
+
+This correction changes four CSS files, one existing geometry expectation and this receipt. The other 50 paths in the previous 56-path reviewed manifest remain byte-identical. Fetch-backed workspace inspection and scoped integration preserve unrelated work on main. Evidence, source hashes and integration details are retained under ignored `runtime/desktop-background-balance-20261002/`. The unit-test results below belong to the earlier pass and were not rerun for this CSS correction.
+
+## Initial surface and component decisions (before the correction)
 
 - The shared desktop canvas is soft grey `#f5f6f8`. Content surfaces are white, with a quiet `#e3e6eb` border. Form controls and specification panels use a pale grey fill. Blue remains the action and selected-state color; dark text and muted grey copy preserve the hierarchy.
 - Home's "Разгледай нашите автомобили" section is a white container on that grey canvas. Its three categories share a continuous 4px grey rail, with a 4px blue selected segment. The article categories use the same rail treatment in their own white container.

@@ -93,7 +93,7 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe(60);
-            expect(sidebar?.y).toBe(300);
+            expect(sidebar?.y).toBe(324);
           }
         }
         expect(
