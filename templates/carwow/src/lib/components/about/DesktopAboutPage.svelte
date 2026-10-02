@@ -15,11 +15,11 @@
 	} from '@lucide/svelte';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
+	import DesktopTeamCard from '$lib/components/team/DesktopTeamCard.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
-	type AssetHref = `/assets/${string}`;
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
 		{ brand: 'BMW', image: 'bmw' },
@@ -65,9 +65,6 @@
 	const teamMembers = daynightTeam.slice(0, 4);
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	let mapVisible = $state(false);
-	function teamHref(slug: string): `/team/${string}` {
-		return `/team/${slug}`;
-	}
 </script>
 
 <main id="main-content" tabindex="-1" class="about-page">
@@ -142,9 +139,7 @@
 					<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
 						>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} aria-hidden="true" /></a
 					>
-					<a
-						class="about-hero-browse sa-cta sa-cta-secondary"
-						href={i18n.href(resolve('/inventory'))}
+					<a class="about-hero-browse" href={i18n.href(resolve('/inventory'))}
 						>{i18n.t('copy.f20a4411e8d6')} <ArrowRight size={18} aria-hidden="true" /></a
 					>
 				</div>
@@ -152,55 +147,20 @@
 		</div>
 	</DesktopYellowRouteHero>
 
-	<section class="about-section" aria-labelledby="about-story-title">
-		<div class="about-container about-story">
-			<div>
-				<h2 id="about-story-title">
-					{i18n.t('copy.8e364ad977c2')}
-					{i18n.t('copy.26f103de55d7')}
-				</h2>
-				<p>{i18n.t('about.desktop.intro')}</p>
-			</div>
-		</div>
-	</section>
-
 	<section class="about-section about-team" aria-labelledby="about-team-title">
 		<div class="about-container">
 			<div class="about-section-heading">
 				<h2 id="about-team-title">{i18n.t('copy.f92fc966857c')}</h2>
 				<DesktopBrowseLink href={i18n.href(resolve('/team'))} label={i18n.t('copy.4815fed6958b')} />
 			</div>
-			<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
+			<p class="about-team-intro">{i18n.t('about.desktop.intro')}</p>
 			<div class="about-team-grid">
 				{#each teamMembers as member (member.slug)}
-					<article class="about-team-card">
-						<a class="about-team-card__image" href={i18n.href(resolve(teamHref(member.slug)))}
-							><img
-								src={i18n.asset(resolve(member.image as AssetHref))}
-								alt={i18n.t('pattern.141e9e4edaa0', { v0: i18n.text(member.name) })}
-								width="500"
-								height="500"
-								loading="lazy"
-							/></a
-						>
-						<div class="about-team-card__body">
-							<h3>
-								<a href={i18n.href(resolve(teamHref(member.slug)))}>{i18n.text(member.name)}</a>
-							</h3>
-							<p class="about-team-card__role">{i18n.text(member.role)}</p>
-							<div class="about-team-card__contact">
-								<a
-									class="about-seller-contact"
-									href={i18n.href(`tel:${member.phone}`)}
-									aria-label={i18n.t('pattern.83d5aea4691e', { v0: i18n.text(member.role) })}
-									><Phone size={18} /></a
-								>
-							</div>
-						</div>
-					</article>
+					<DesktopTeamCard {member} />
 				{/each}
 			</div>
 			<div class="about-social-row">
+				<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
 				<a class="about-reviews-link about-text-link" href={i18n.href(resolve('/reviews'))}
 					>{i18n.t('copy.93b3d88de23a')} <ArrowRight size={18} /></a
 				>
@@ -210,15 +170,11 @@
 
 	<section class="about-section" aria-labelledby="about-brands-title">
 		<div class="about-container">
-			<div class="about-section-heading">
+			<div class="about-section-heading about-section-heading--centered">
 				<h2 id="about-brands-title">{i18n.t('copy.6381cc76ef70')}</h2>
-				<DesktopBrowseLink
-					href={i18n.href(resolve('/inventory'))}
-					label={i18n.t('copy.8666797b13d9')}
-				/>
 			</div>
 			<div class="about-brands">
-				{#each brands as brand (brand.brand)}
+				{#each brands.slice(0, 15) as brand (brand.brand)}
 					<a href={i18n.href(resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`))}>
 						<img
 							src={i18n.asset(resolve(`/assets/images/brand/mobile/${brand.image}.svg`))}
@@ -230,6 +186,10 @@
 						<span>{brand.brand}</span>
 					</a>
 				{/each}
+				<a class="about-brands-all" href={i18n.href(resolve('/inventory'))}>
+					<ArrowRight size={24} aria-hidden="true" />
+					<span>{i18n.t('copy.8666797b13d9')}</span>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -242,9 +202,9 @@
 			<div class="about-support-grid">
 				{#each support as item (item.href)}
 					<a class="about-support-card" href={i18n.href(resolve(item.href))}>
-						<item.icon size={28} strokeWidth={1.8} aria-hidden="true" />
+						<item.icon size={24} strokeWidth={2} aria-hidden="true" />
 						<h3>{i18n.text(item.title)}</h3>
-						<p>{i18n.text(item.description)}</p>
+						<p title={i18n.text(item.description)}>{i18n.text(item.description)}</p>
 						<span class="about-support-action"
 							>{i18n.text(item.action)}<ArrowRight size={18} aria-hidden="true" /></span
 						>
@@ -332,22 +292,37 @@
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
 	.about-hero-actions {
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		display: flex;
+		justify-content: center;
 		gap: 12px;
 	}
 	.about-hero-actions > a {
+		--sa-cta-height: 44px;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		gap: 12px;
 		min-width: 0;
-		min-height: 48px;
-		padding: 0 20px;
-		border: 1px solid var(--desktop-control-border);
+		min-height: 44px;
+		padding: 0 16px;
+		border: 1px solid transparent;
 		border-radius: 8px;
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.3 var(--sa-font);
 		white-space: nowrap;
+	}
+	.about-page .about-hero-browse {
+		border-color: #858d93;
+		background: transparent;
+		color: #fff;
+		transition:
+			background-color 140ms ease,
+			border-color 140ms ease,
+			color 140ms ease;
+	}
+	.about-page .about-hero-browse:hover {
+		border-color: #fff;
+		background: #fff;
+		color: var(--desktop-action);
 	}
 
 	.about-hero-contact {
@@ -355,7 +330,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
-		padding: 0 12px 0 24px;
+		padding: 0 12px;
 	}
 
 	.about-page .about-hero-contact a {
@@ -402,11 +377,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 24px;
-		margin-top: 24px;
+		gap: 16px;
+		margin-top: 16px;
 	}
 	.about-page {
-		background: var(--discovery-canvas, #f4f6fa);
+		background: var(--desktop-canvas);
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
 	}
@@ -424,7 +399,7 @@
 		margin-inline: auto;
 	}
 	.about-section {
-		padding: 36px 0;
+		padding: var(--sa-desktop-section-y-sm) 0;
 	}
 	.about-page h2 {
 		font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
@@ -437,17 +412,6 @@
 		color: var(--sa-ink);
 		margin: 20px 0 0;
 	}
-	.about-page .sa-cta-primary {
-		color: #fff;
-		--sa-cta-height: 48px;
-		--sa-cta-font-size: var(--sa-button-font-size);
-		gap: 12px;
-		padding-inline: 22px;
-	}
-	.about-story {
-		background: transparent;
-		border: 0;
-	}
 	.about-text-link {
 		display: inline-flex;
 		align-items: center;
@@ -455,106 +419,38 @@
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		min-height: 44px;
 	}
-	.about-story > div {
-		max-width: 860px;
-		margin-inline: auto;
-		padding: 0;
-		text-align: center;
-	}
-	.about-story h2 {
-		color: var(--sa-ink);
-		font-size: var(--sa-text-panel-title);
-	}
-	.about-story p {
-		color: #59616a;
-		font-size: var(--sa-type-body);
-		margin-top: 16px;
-	}
 	.about-section-heading {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		gap: 24px;
-		margin-bottom: 32px;
+		margin-bottom: 24px;
+	}
+	.about-section-heading--centered {
+		justify-content: center;
+		text-align: center;
 	}
 	.about-team {
-		padding-top: 48px;
-		padding-bottom: 16px;
+		padding-top: var(--sa-desktop-section-y-md);
+		padding-bottom: 12px;
 	}
 	.about-team-grid {
 		display: grid;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 20px;
 	}
-	.about-team-card {
-		background: var(--desktop-panel);
-		border: 1px solid var(--desktop-control-border);
-		border-radius: 12px;
-		overflow: hidden;
-		display: grid;
-		grid-template-rows: 190px 1fr;
-		padding: 0;
-	}
-	.about-team-card__image {
-		display: block;
-		overflow: hidden;
-	}
-	.about-team-card__image img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		min-height: 0;
-		object-fit: cover;
-		object-position: center top;
-	}
-	.about-team-card__body {
-		padding: 18px;
-		text-align: left;
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) 44px;
-		column-gap: 12px;
-		align-content: start;
-	}
-	.about-team-card h3 {
-		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
-		color: var(--sa-ink);
-		margin: 0;
-	}
-	.about-team-card__contact {
-		display: flex;
-		align-items: center;
-		grid-column: 2;
-		grid-row: 1 / 3;
-	}
-	.about-team-card__contact .about-seller-contact {
-		display: flex;
-		gap: 8px;
-		align-items: center;
-		min-height: 44px;
-		width: 100%;
-		justify-content: center;
-		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
-		color: var(--sa-ink);
-		background: var(--desktop-field);
-		border-radius: 8px;
-		padding-inline: 8px;
-	}
-	.about-seller-contact :global(svg) {
-		color: var(--sa-ink);
-	}
-	.about-team-card__contact .about-seller-contact:hover {
-		background: var(--sa-yellow);
-	}
-	.about-page .about-team-card__role {
-		grid-column: 1;
-		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
-		margin: 6px 0 0;
-		color: #62676e;
+	.about-page .about-team-intro {
+		margin: -12px 0 24px;
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
+		color: var(--sa-muted);
 	}
 	.about-page .about-demo-label {
-		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
-		color: #59616c;
-		margin: -20px 0 24px;
+		margin: 0;
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.45 var(--sa-font);
+		color: var(--sa-muted);
+	}
+	.about-social-row > a {
+		flex: none;
 	}
 	.about-reviews-link {
 		margin-top: 0;
@@ -562,7 +458,7 @@
 	.about-support-grid {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 24px;
+		gap: 20px;
 	}
 	.about-brands {
 		display: grid;
@@ -571,14 +467,16 @@
 	}
 	.about-brands a {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		gap: 8px;
-		border-radius: 8px;
+		border-radius: 12px;
 		background: var(--desktop-panel);
 		border: 1px solid var(--desktop-control-border);
 		padding: 12px 8px;
-		min-height: 64px;
+		min-height: 96px;
 		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
 	.about-brands img {
@@ -589,25 +487,39 @@
 	.about-brands a:hover {
 		background: var(--desktop-secondary-hover);
 	}
+	.about-brands .about-brands-all {
+		background: var(--sa-yellow);
+		border-color: var(--sa-yellow);
+		color: var(--desktop-action);
+	}
+	.about-brands .about-brands-all:hover {
+		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
+		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
+	}
 	.about-support-card {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		border-radius: 12px;
-		background: #fff;
-		border: 1px solid #dfe2e4;
-		padding: 32px;
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
+		padding: 20px;
 	}
 	.about-support-card h3 {
-		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.3 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.3 var(--sa-font);
 		color: var(--sa-ink);
-		margin: 20px 0 0;
+		margin: 12px 0 0;
 	}
 	.about-support-card p {
-		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
-		color: #444c52;
-		margin: 10px 0 24px;
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
+		color: var(--sa-muted);
+		margin: 8px 0 16px;
 		flex: 1;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		line-clamp: 2;
+		overflow: hidden;
 	}
 	.about-support-action {
 		display: inline-flex;
@@ -629,10 +541,6 @@
 	.about-support {
 		padding-bottom: 48px;
 	}
-	.about-page .about-team-card h3 a:hover {
-		text-decoration: underline;
-		text-underline-offset: 4px;
-	}
 	.about-text-link:hover {
 		text-decoration: underline;
 		text-underline-offset: 4px;
@@ -649,7 +557,7 @@
 		grid-template-columns: 1fr 1.1fr;
 		align-items: center;
 		background: var(--sa-yellow);
-		border-radius: 16px;
+		border-radius: 12px;
 		overflow: hidden;
 	}
 	.about-visit__copy {
@@ -732,17 +640,6 @@
 	}
 	.about-map-link:hover {
 		background: var(--desktop-secondary-hover);
-	}
-	@media (max-width: 1199px) {
-		.about-team-grid {
-			gap: 16px;
-		}
-		.about-team-card__body {
-			padding: 16px;
-		}
-		.about-team-card__image img {
-			height: 100%;
-		}
 	}
 	@media (max-width: 991px) {
 		.about-page {

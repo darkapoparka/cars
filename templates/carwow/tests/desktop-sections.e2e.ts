@@ -140,7 +140,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 					route === 'services'
 						? '.desktop-services-offers .container'
 						: route === 'about'
-							? '.about-story'
+							? '.about-team .about-container'
 							: '.blog-container'
 				);
 				await expect(container).toBeVisible();
@@ -199,8 +199,9 @@ for (const width of [992, 1280, 1440, 1920]) {
 						)
 						.toBe(true);
 				} else if (route === 'about') {
-					await expect(container.locator('img')).toHaveCount(0);
-					expect(box.height).toBeLessThan(360);
+					const teamCards = container.locator('.desktop-team-card');
+					await expect(teamCards).toHaveCount(4);
+					await expect(page.locator('.about-story')).toHaveCount(0);
 					await expect(container).toHaveCSS('border-width', '0px');
 					const aboutHero = page.locator('.about-hero-panel');
 					const aboutHeroBox = (await aboutHero.boundingBox())!;
@@ -212,13 +213,14 @@ for (const width of [992, 1280, 1440, 1920]) {
 					await expect(visitAction).toHaveAttribute('href', `/${locale}/contact`);
 					await expect(browseAction).toHaveAttribute('href', `/${locale}/inventory`);
 					await expect(visitAction).toHaveCSS('color', 'rgb(15, 20, 23)');
-					await expect(browseAction).toHaveCSS('color', 'rgb(23, 27, 30)');
-					await expect(browseAction).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+					await expect(browseAction).toHaveCSS('color', 'rgb(255, 255, 255)');
+					await expect(browseAction).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 					const visitBox = (await visitAction.boundingBox())!;
 					const browseBox = (await browseAction.boundingBox())!;
 					expect(visitBox.y).toBe(browseBox.y);
-					expect(visitBox.height).toBe(48);
-					expect(browseBox.height).toBe(48);
+					expect(visitBox.height).toBe(44);
+					expect(browseBox.height).toBe(44);
+					expect(visitBox.width + browseBox.width + 12).toBeLessThan(aboutHeroBox.width - 48);
 					await expect(aboutHero.locator('.about-hero-location')).toHaveAttribute(
 						'href',
 						/google\.com\/maps/
@@ -228,6 +230,13 @@ for (const width of [992, 1280, 1440, 1920]) {
 						/^tel:/
 					);
 					await expect(aboutHero.locator('.about-hero-socials a')).toHaveCount(3);
+					const profile = teamCards.first().locator('.desktop-team-card__profile');
+					await expect(profile).toHaveAttribute('href', `/${locale}/team/prodazhbi-showroom`);
+					await profile.press('Enter');
+					await expect(page).toHaveURL(new RegExp(`/${locale}/team/prodazhbi-showroom$`));
+					await expect(page.locator('.team-member-page')).toBeVisible();
+					await page.goBack();
+					await expect(page).toHaveURL(new RegExp(`/${locale}/about$`));
 				} else {
 					await expect(page.locator('.blog-featured-card, .blog-magazine')).toHaveCount(0);
 					await expect

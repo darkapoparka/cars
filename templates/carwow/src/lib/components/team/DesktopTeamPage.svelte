@@ -3,13 +3,10 @@
 	const i18n = getI18n();
 
 	import { daynightSite } from '$lib/data/daynight-site';
-	// Native 1:1 rebuild of the localized /team (sale-agents.html) desktop content:
-	// breadcrumb + title + the consultant card grid (photo with social overlay +
-	// name/role/contact row). Self-contained scoped styles reproduce the effective
-	// app.css + daynight-template-head.css + StorefrontTemplateContent :global blend,
-	// measured via getComputedStyle at 1440px on the prod build. Brand blue routes
-	// through --sa-blue; template neutrals stay literal. Runes-only, no :global except
-	// the lucide breadcrumb chevron sizing.
+	// Preserve the existing narrow composition; desktop uses the shared card family.
+	import { getViewportContext } from '$lib/hooks/viewport.svelte';
+	import DesktopTeamCard from './DesktopTeamCard.svelte';
+	const viewport = getViewportContext();
 
 	import { resolve } from '$app/paths';
 	import { ChevronRight } from '@lucide/svelte';
@@ -178,34 +175,38 @@
 {/snippet}
 
 {#snippet teamCard(member: DayNightTeamMember)}
-	<div class="sale-agent-box">
-		<div class="card-top mb-20">
-			<a
-				class="flex w-full"
-				href={i18n.href(resolve(teamHref(member.slug)))}
-				aria-label={i18n.t('pattern.c09d582164e0', { v0: i18n.text(member.name) })}
-			>
-				<img
-					class="w-full"
-					src={i18n.asset(asset(member.image as AssetHref))}
-					alt={i18n.text(member.name)}
-				/>
-			</a>
-			{@render teamHoverActions(member)}
-		</div>
-		<div class="card-bottom flex items-center justify-between gap-16">
-			<div class="content">
+	{#if !viewport.mobile}
+		<DesktopTeamCard {member} />
+	{:else}
+		<div class="sale-agent-box">
+			<div class="card-top mb-20">
 				<a
-					class="h5 font-weight-600 sale-agent-title"
+					class="flex w-full"
 					href={i18n.href(resolve(teamHref(member.slug)))}
+					aria-label={i18n.t('pattern.c09d582164e0', { v0: i18n.text(member.name) })}
 				>
-					{i18n.text(member.name)}
+					<img
+						class="w-full"
+						src={i18n.asset(asset(member.image as AssetHref))}
+						alt={i18n.text(member.name)}
+					/>
 				</a>
-				<p class="text-secondary text-sm">{i18n.text(member.role)}</p>
+				{@render teamHoverActions(member)}
 			</div>
-			{@render teamContactActions(member)}
+			<div class="card-bottom flex items-center justify-between gap-16">
+				<div class="content">
+					<a
+						class="h5 font-weight-600 sale-agent-title"
+						href={i18n.href(resolve(teamHref(member.slug)))}
+					>
+						{i18n.text(member.name)}
+					</a>
+					<p class="text-secondary text-sm">{i18n.text(member.role)}</p>
+				</div>
+				{@render teamContactActions(member)}
+			</div>
 		</div>
-	</div>
+	{/if}
 {/snippet}
 
 <div class="team-page">
@@ -259,6 +260,11 @@
 
 <style>
 	@media (min-width: 992px) {
+		.team-page .sm-grid-cols-1.lg-grid-cols-2.gap-30.grid.grid-cols-4 {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
+			gap: 20px;
+		}
+
 		.team-page > .background-light,
 		.team-page > .pb-100 > .container > h1,
 		.team-disclosure {
