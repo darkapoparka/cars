@@ -10,11 +10,11 @@
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import type { BlogPost } from '$data/editorial';
 
-  let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
+  let { post, returnTo, priority = false, idPrefix = 'article', onselect }: { post: BlogPost; returnTo?: string; priority?: boolean; idPrefix?: string; onselect?: (event: MouseEvent) => void } = $props();
 </script>
 
-<article id={`article-${post.id}`} class="dn-blog-card">
-  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)}>
+<article id={`${idPrefix}-${post.id}`} class="dn-blog-card">
+  <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)} onclick={onselect}>
     <picture class="dn-blog-card__media">
       <source media="(min-width: 992px)" srcset={imageSrcset(post.image) ?? post.image} sizes="33vw" />
       <img

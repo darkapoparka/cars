@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { MediaQuery } from 'svelte/reactivity';
   import { getI18n } from '$lib/locale/context';
   const i18n = getI18n();
 
@@ -7,11 +8,13 @@
   import Icon from '$components/ui/Icon.svelte';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import EntryCard from '$components/ui/entry/EntryCard.svelte';
+  import BlogSearch from './BlogSearch.svelte';
   import { leadSite } from '$config/lead-site';
   import { imageSrcset } from '$data/responsive-images';
   import { blogCategories, blogFilterHref, type BlogFilters } from '$data/editorial';
 
   let { filters }: { filters: BlogFilters } = $props();
+  const mobile = new MediaQuery('(max-width: 991px)', false);
 </script>
 
 <section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" aria-label={i18n.t('m_572cd72feb9a')}>
@@ -32,6 +35,9 @@
 <div class="dn-blog-controls">
     <div class="dn-blog-toolbar" aria-label={i18n.t("m_52a2403e77ab")}>
       <EntryCard class="dn-blog-search-card" title={i18n.t('m_572cd72feb9a')} titleTag="h1" titleId="blog-entry-title">
+        {#if mobile.current}
+          <BlogSearch {filters} />
+        {:else}
         <form class="dn-blog-search" role="search" aria-label={i18n.t("m_2de9b4285a63")} method="GET" action={i18n.href(resolve('/blog'))}>
           <label class="dn-sr-only" for="dn-blog-search">{i18n.t("m_2de9b4285a63")}</label>
           <span class="dn-blog-search__icon dn-blog-search__icon--desktop"><Icon name="search" size={20} strokeWidth={1.7} /></span>
@@ -43,6 +49,7 @@
             <span class="dn-blog-search__submit-icon--mobile"><MobileActionIcon name="arrow" size={16} /></span>
           </button>
         </form>
+        {/if}
       </EntryCard>
 
       <nav class="dn-blog-categories" aria-label={i18n.t("m_05f6c615a351")}>
