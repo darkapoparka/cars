@@ -262,12 +262,16 @@ The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte
 
 **Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Buy/Import tabs share the quieter pill-shaped segmented control with Sell/Import. Mobile entry fields use a pale borderless surface and regular text; primary actions remain red. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
 
-From 992px, Home and Inventory share a 56px native facet-select frame (58px including
-the enclosing border). The value uses a 12px top inset, bringing it closer to the
-small caption at the existing 8px anchor. The shared select chevron sits at the
-field's center plus half that inset, aligning it with the selected value. The
-same inset owns both positions. Typography, full-field click targets and native
-selection behavior stay intact; smaller breakpoints retain their own geometry.
+Home and Inventory use single-line native facet selects. An unset field shows its
+localized name (Type, Make, Model, Body, Budget, Year or Mileage); a selection
+replaces that name with the chosen value. Permanent accessible labels retain the
+field and range meaning. Text and the shared chevron are vertically centered,
+with space reserved for the arrow and ellipsis for long values. From 992px, the
+select frame remains 56px (58px including the enclosing border); tablet retains
+its 64px frame and mobile uses its separate search controls. Full-field click
+targets, keyboard selection, dependent model reset and native GET filtering stay
+intact. Choosing the field name again removes that restriction. Budget values use
+the configured currency's narrow symbol and locale number formatting.
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 

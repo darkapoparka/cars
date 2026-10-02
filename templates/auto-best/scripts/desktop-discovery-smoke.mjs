@@ -48,15 +48,27 @@ try {
       assert.equal(await form.locator('.dn-discovery__search .dn-discovery__filters').count(), 0);
       assert.equal(await form.locator('.dn-discovery__toolbar select').count(), 0, 'Vehicle type shares the facet row on Home and inventory');
       assert.equal(await form.locator('.dn-discovery__facets > label').count(), 7);
+      const emptyLabels = { type: 'Тип', make: 'Марка', model: 'Модел', body: 'Купе', price_max: 'Бюджет', year_min: 'Година', mileage_max: 'Пробег' };
       for (const label of await form.locator('.dn-discovery__facets > label').all()) {
-        const control = await label.boundingBox();
-        const caption = await label.locator('span').boundingBox();
-        assert(caption.x >= control.x && caption.y >= control.y && caption.y + caption.height <= control.y + control.height, 'Caption sits inside its native filter control');
-        assert((await label.locator('select').boundingBox()).height >= 44, 'Filter retains a full-height click target');
+        const select = label.locator('select');
+        const name = await select.getAttribute('name');
+        const accessibleName = await label.locator('span').innerText();
+        assert.equal(await form.getByRole('combobox', { name: accessibleName, exact: true }).count(), 1, 'Native filters retain permanent accessible names');
+        assert.equal(await select.locator('option:checked').innerText(), emptyLabels[name], 'Unset native filters show the field name on one line');
+        assert((await select.boundingBox()).height >= 44, 'Filter retains a full-height click target');
       }
       const facetWidths = await form.locator('.dn-discovery__facets select').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
       assert.ok(Math.max(...facetWidths) - Math.min(...facetWidths) < 1);
       if (width === 1440 && route === '/listing-grid') await form.screenshot({ path: `${output}/cars-search-panel.png` });
+      await form.locator('select[name=make]').selectOption('Audi');
+      const model = form.locator('select[name=model]');
+      await model.selectOption({ index: 1 });
+      await form.locator('select[name=make]').selectOption('BMW');
+      await page.waitForFunction(() => document.querySelector('.dn-discovery select[name=model]').selectedIndex === 0);
+      assert.equal(await model.inputValue(), '');
+      assert.equal(await model.locator('option:checked').innerText(), 'Модел', 'Changing make restores a visibly selected model placeholder');
+      await form.locator('select[name=make]').selectOption('');
+      assert.equal(await form.locator('select[name=make] option:checked').innerText(), 'Марка', 'Resetting make restores its field name');
       await form.locator('select[name=make]').selectOption('Audi');
       if (width === 1440) await page.screenshot({ path: `${output}/${route === '/' ? 'home' : 'cars'}-top.png` });
       if (route === '/') {

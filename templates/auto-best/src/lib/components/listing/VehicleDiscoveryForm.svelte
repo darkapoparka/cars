@@ -3,6 +3,7 @@
   import { specificationLabel } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
+  import { intlLocale, localeContract } from '$lib/locale/core';
 
   const i18n = getI18n();
 
@@ -63,6 +64,9 @@
   let activeCount = $derived(activeFilterCount(pending));
   let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
   let prices = $derived(listingOptionsWithCurrent(listingFilterOptions.prices, filters.priceMax?.toString() ?? ''));
+  const budgetFormatter = $derived(new Intl.NumberFormat(intlLocale(i18n.locale), {
+    style: 'currency', currency: localeContract.inventoryCurrency, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0
+  }));
   let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
   let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
   let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
@@ -79,7 +83,7 @@
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} oninput={updateDraft} onchange={updateDraft} onformdata={clean}>
+<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} onchange={updateDraft} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
       <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -96,13 +100,13 @@
     </div>
   </div>
   <div class="dn-discovery__facets">
-    <label><span>{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{listingFacetOptionLabel('type', value, i18n.locale)}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{specificationLabel(bodyLabel(value), i18n.locale) || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? i18n.t("m_7ce2209d146e", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
-    <label><span>{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t("m_a52ace420f21")}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{value ? listingFacetOptionLabel('type', value, i18n.locale) : i18n.t('inventory.facet.type')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t('inventory.facet.make')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t('inventory.facet.model')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{value ? specificationLabel(bodyLabel(value), i18n.locale) : i18n.t('inventory.facet.bodyShort')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? budgetFormatter.format(Number(value)) : i18n.t('inventory.facet.price')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t('inventory.facet.year')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t('inventory.facet.mileage_max')}</option>{/each}</select></label>
   </div>
 
   {#each hiddenFields as [name, value], index (`${name}-${value}-${index}`)}<input type="hidden" {name} {value} />{/each}
@@ -134,8 +138,7 @@
   .dn-discovery__submit:hover { background: var(--dn-red-hover); }
   .dn-discovery__facets { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
   .dn-discovery__facets label { position: relative; display: grid; min-width: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
-  .dn-discovery__facets label > span { position: absolute; top: var(--dn-space-2); left: var(--dn-space-3); right: var(--dn-space-3); overflow: hidden; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-meta); white-space: nowrap; text-overflow: ellipsis; pointer-events: none; }
-  .dn-discovery__facets select { width: 100%; min-width: 0; height: 64px; padding: 20px 24px 0 var(--dn-space-3); border: 0; border-radius: inherit; background-color: transparent; color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
+  .dn-discovery .dn-discovery__facets label > select { width: 100%; min-width: 0; height: 64px; padding: 0 var(--dn-space-8) 0 var(--dn-space-3); border: 0; border-radius: inherit; background-color: transparent; background-position: right var(--dn-space-2) center; color: var(--dn-ink); font: var(--dn-control-font); text-overflow: ellipsis; cursor: pointer; }
   .dn-discovery__facets label:hover { background: var(--dn-surface-hover); }
   .dn-discovery__facets label:focus-within { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   .dn-discovery__facets select:focus-visible { outline: 0; }
@@ -160,8 +163,7 @@
     .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
-    .dn-discovery__facets { --dn-discovery-value-inset: var(--dn-space-3); }
-    .dn-discovery .dn-discovery__facets label > select { height: 56px; padding-top: var(--dn-discovery-value-inset); background-position-y: calc(50% + var(--dn-discovery-value-inset) / 2); }
+    .dn-discovery .dn-discovery__facets label > select { height: 56px; }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
   }
