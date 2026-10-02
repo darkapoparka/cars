@@ -20,7 +20,10 @@ sort and scroll position. The native make/model picker and range controls remain
 Every Home filter pill opens one editor with the same underline tabs: Make & model,
 Price, Year, Fuel, Condition and More. Options update a draft; Show cars applies it.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
-controls are embedded in that editor instead of opening another dialog.
+taxonomy and selection logic power a dedicated showroom list inside that editor.
+Compact Make/Model controls switch views; selected makes remain editable. Model
+choices have aligned labels and selection controls, with expandable families.
+Optional variants and exclusion live in a collapsed More options section.
 Services has All / Import / Sell your car tabs. Import and Sell show short overviews
 and start a three-step enquiry sheet. Drafts stay on the device; forms do not send
 an enquiry or invent a valuation.

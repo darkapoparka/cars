@@ -13,6 +13,7 @@ import {
 } from '../.qa/domain/search.mjs';
 import { answerLocally } from '../.qa/domain/assistant.mjs';
 import { createInitialState, decodeState } from '../.qa/domain/persistence.mjs';
+import { showroomMakeOptions } from '../.qa/domain/make-picker-options.mjs';
 const filters = (patch) => ({ ...structuredClone(defaultFilters), ...patch });
 test('default search returns the captured cars', () =>
   assert.equal(filterVehicles(vehicles, filters({})).length, 4));
@@ -21,6 +22,23 @@ test('search text matches multiple non-adjacent words', () =>
 test('make inclusion and exclusion are independent', () => {
   assert.equal(filterVehicles(vehicles, filters({ makes: ['Audi'] })).length, 0);
   assert.equal(filterVehicles(vehicles, filters({ excludedMakes: ['BMW'] })).length, 0);
+});
+test('choosing or excluding the only stocked make does not remove it from make choices', () => {
+  const stockMakes = [...new Set(vehicles.map((vehicle) => vehicle.make))];
+  for (const excluded of [false, true]) {
+    const draft = filters({});
+    const selected = { ...draft, ...applyMakeSelection(draft, 'BMW', [], excluded) };
+    assert.deepEqual(
+      showroomMakeOptions(stockMakes, [...selected.makes, ...excludedMakeNames(selected)]),
+      ['Any', 'BMW'],
+    );
+  }
+});
+test('make choices retain removable criteria outside stock and search finds selected makes', () => {
+  assert.deepEqual(showroomMakeOptions([], ['Audi', 'Audi']), ['Any', 'Audi']);
+  assert.deepEqual(showroomMakeOptions(['BMW', 'Audi'], ['BMW'], ' bmw '), ['BMW']);
+  assert.deepEqual(showroomMakeOptions(['BMW'], [], 'audi'), []);
+  assert.deepEqual(showroomMakeOptions(['BMW'], [], 'any make'), ['Any']);
 });
 test('BMW model families select the correct series', () => {
   assert.deepEqual(

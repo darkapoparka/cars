@@ -5,6 +5,7 @@ import * as stylex from '@stylexjs/stylex';
 import { controls } from '@/styles/controls.stylex';
 import { topMakes } from '@/lib/catalog';
 import { makeImages, popularMakes } from '@/lib/makes';
+import { showroomMakeOptions } from '@/lib/make-picker-options';
 import {
   nativeCarMakes as allMakes,
   modelGroupsFor,
@@ -32,6 +33,7 @@ import {
 import { IconButton, Modal, ui } from './ui';
 import { Icon } from './Icon';
 import { PickerScrollbar } from './PickerScrollbar';
+import { ShowroomModelOptions } from './ShowroomModelOptions';
 import { pickerStyles as s } from './make-picker.stylex';
 export function BrandLogo({ make, size = 40 }: { make: string; size?: number }) {
   const src =
@@ -66,7 +68,7 @@ function SelectionButton({
       aria-label={label + ': ' + value}
       aria-controls="showroom-make-model-options"
       aria-expanded={active}
-      title={value}
+      title={disabled ? 'Choose a make first' : value}
       onClick={onClick}
       {...stylex.props(s.selector, active && s.selectorActive, disabled && s.selectorDisabled)}
     >
@@ -74,7 +76,7 @@ function SelectionButton({
       <span {...stylex.props(s.selectorValue)}>
         <span {...stylex.props(s.selectorText)}>{value}</span>
         <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-          <Icon name={active ? 'up' : 'down'} size={18} />
+          <Icon name={active ? 'up' : 'down'} size={16} />
         </span>
       </span>
     </button>
@@ -122,15 +124,9 @@ export function MakePicker({
     excluded,
     summary: makeSelectionSummary(filters, name, excluded),
   }));
-  const selectedNames = new Set(selectedMakes.map(({ name }) => name));
-  const modelSummary = draft.selected.length
-    ? draft.selected.map(modelLabel).join(', ')
-    : 'Any model';
+  const modelSummary = draft.selected.length ? draft.selected.map(modelLabel).join(', ') : 'Any';
   const groups = modelGroupsFor(make);
   const q = query.trim().toLocaleLowerCase();
-  const visibleSelectedMakes = selectedMakes.filter(
-    ({ name }) => !q || name.toLocaleLowerCase().includes(q),
-  );
   const visibleGroups = groups.filter(
     (group) =>
       !q || [group.name, ...group.children].some((name) => name.toLocaleLowerCase().includes(q)),
@@ -152,10 +148,10 @@ export function MakePicker({
       ? [
           {
             title: '',
-            names: ['Any', ...makeNames].filter(
-              (name) =>
-                (name === 'Any' || !selectedNames.has(name)) &&
-                (!q || name.toLocaleLowerCase().includes(q)),
+            names: showroomMakeOptions(
+              availableMakes,
+              selectedMakes.map(({ name }) => name),
+              q,
             ),
           },
         ]
@@ -189,7 +185,7 @@ export function MakePicker({
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = 0;
   }, [make, query, modelsVisible]);
-  function chooseMake(name: string) {
+  function chooseMake(name: string, mode = exclude) {
     if (name === 'Any') {
       changeFilters({
         makes: [],
@@ -213,12 +209,13 @@ export function MakePicker({
     }
     setMake(name);
     setSelector('model');
+    setExclude(mode);
     setQuery('');
     setExpanded([]);
-    const next = modelDraftFor(filters, name, exclude);
+    const next = modelDraftFor(filters, name, mode);
     setDraft(next);
     if (embedded) {
-      applyDraft(name, next, exclude);
+      applyDraft(name, next, mode);
       requestAnimationFrame(() => modelSelectorRef.current?.focus({ preventScroll: true }));
     }
   }
@@ -239,6 +236,12 @@ export function MakePicker({
       setExclude(false);
       setDraft({ selected: [], variants: {} });
     }
+    requestAnimationFrame(() => {
+      const row = [
+        ...(listRef.current?.querySelectorAll<HTMLElement>('[data-make-option]') || []),
+      ].find((element) => element.dataset.makeOption === name);
+      row?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true });
+    });
   }
   function applyDraft(
     name: string,
@@ -261,6 +264,15 @@ export function MakePicker({
   function changeDraft(next: ModelDraft) {
     setDraft(next);
     if (embedded) applyDraft(make, next, exclude);
+  }
+  function toggleExcluded() {
+    const next = !exclude;
+    setExclude(next);
+    if (embedded && make)
+      applyDraft(make, draft, next, {
+        ...filters,
+        ...removeMakeSelection(filters, make, exclude),
+      });
   }
   function apply() {
     const variants = selectedModelVariants(draft);
@@ -287,10 +299,9 @@ export function MakePicker({
           autoComplete="off"
           onChange={(event) => {
             const value = event.target.value;
-            if (embedded) changeDraft(setModelVariant(draft, model, value, group));
-            else setDraft((current) => setModelVariant(current, model, value, group));
+            setDraft((current) => setModelVariant(current, model, value, group));
           }}
-          {...stylex.props(ui.input, s.variant, embedded && s.embeddedInput)}
+          {...stylex.props(ui.input, s.variant)}
         />
       </div>
     );
@@ -337,25 +348,20 @@ export function MakePicker({
           <span aria-hidden="true" {...stylex.props(s.arrow)} />
         )}
         <label {...stylex.props(s.choice)}>
-          <span>{name || (embedded ? 'Any model' : 'Any')}</span>
+          <span>{name || 'Any'}</span>
           <span {...stylex.props(s.checkTarget)}>
             <input
               type="checkbox"
               data-model-key={key}
-              aria-label={name || (embedded ? 'Any model' : 'Any')}
+              aria-label={name || 'Any'}
               checked={checked}
               ref={(element) => {
                 if (element) element.indeterminate = Boolean(partial);
               }}
               onChange={(event) => {
-                if (embedded)
-                  changeDraft(
-                    toggleModelDraft(draft, key, event.target.checked, groups, parent?.name),
-                  );
-                else
-                  setDraft((current) =>
-                    toggleModelDraft(current, key, event.target.checked, groups, parent?.name),
-                  );
+                setDraft((current) =>
+                  toggleModelDraft(current, key, event.target.checked, groups, parent?.name),
+                );
               }}
               {...stylex.props(controls.checkbox, partial && s.mixed)}
             />
@@ -365,30 +371,17 @@ export function MakePicker({
     );
   }
   const excludeToggle = (
-    <label {...stylex.props(s.toggle, embedded && s.embeddedToggle)}>
-      {embedded ? 'Exclude selection' : 'Exclude'}
+    <label {...stylex.props(s.toggle)}>
+      Exclude
       <button
         type="button"
         role="switch"
         aria-label="Exclude make"
         aria-checked={exclude}
-        onClick={() => {
-          setExclude((value) => !value);
-          if (embedded && make)
-            applyDraft(make, draft, !exclude, {
-              ...filters,
-              ...removeMakeSelection(filters, make, exclude),
-            });
-        }}
-        {...stylex.props(embedded ? s.toggleTarget : s.switch, !embedded && exclude && s.switchOn)}
+        onClick={toggleExcluded}
+        {...stylex.props(s.switch, exclude && s.switchOn)}
       >
-        {embedded ? (
-          <span aria-hidden="true" {...stylex.props(s.switch, exclude && s.switchOn)}>
-            <span {...stylex.props(s.dot, exclude && s.dotOn)} />
-          </span>
-        ) : (
-          <span {...stylex.props(s.dot, exclude && s.dotOn)} />
-        )}
+        <span {...stylex.props(s.dot, exclude && s.dotOn)} />
       </button>
     </label>
   );
@@ -398,7 +391,7 @@ export function MakePicker({
         <div {...stylex.props(s.selectors)}>
           <SelectionButton
             label="Make"
-            value={make || 'Any make'}
+            value={make || 'Any'}
             active={!modelsVisible}
             onClick={() => {
               setSelector('make');
@@ -408,7 +401,7 @@ export function MakePicker({
           <SelectionButton
             buttonRef={modelSelectorRef}
             label="Model"
-            value={make ? modelSummary : 'Choose make'}
+            value={make ? modelSummary : 'Any'}
             active={modelsVisible}
             disabled={!make}
             onClick={() => {
@@ -470,126 +463,143 @@ export function MakePicker({
           id={embedded ? 'showroom-make-model-options' : make ? undefined : 'car-make-list'}
           ref={listRef}
           data-picker-scroll={modelsVisible ? 'models' : 'makes'}
-          {...stylex.props(
-            s.list,
-            !modelsVisible && s.makeList,
-            embedded && !modelsVisible && s.embeddedList,
-          )}
+          {...stylex.props(s.list, !modelsVisible && s.makeList, embedded && s.embeddedList)}
         >
           {modelsVisible ? (
-            <>
-              {embedded && (
-                <div {...stylex.props(s.modelHeading)}>
-                  <h3 {...stylex.props(s.embeddedGroup)}>Models</h3>
-                  {excludeToggle}
-                </div>
-              )}
-              {!q && (
-                <div {...stylex.props(s.block)}>
-                  {modelRow('')}
-                  {!draft.selected.length && variantField('')}
-                </div>
-              )}
-              {visibleGroups.map((group) => {
-                const show =
-                  group.children.length > 0 && (expanded.includes(group.name) || Boolean(q));
-                return (
-                  <div
-                    key={modelNodeKey(group, groups)}
-                    data-model-node={modelNodeKey(group, groups)}
-                    {...stylex.props(s.block)}
-                  >
-                    {modelRow(group.name, group, undefined, show)}
-                    {show &&
-                      group.children
-                        .filter(
-                          (name) =>
-                            !q ||
-                            group.name.toLocaleLowerCase().includes(q) ||
-                            name.toLocaleLowerCase().includes(q),
-                        )
-                        .map((name) => <div key={name}>{modelRow(name, undefined, group)}</div>)}
-                    {(draft.selected.includes(modelNodeKey(group, groups)) ||
-                      group.children.some((name) =>
-                        draft.selected.includes(modelLeafKey(name, group)),
-                      )) &&
-                      variantField(modelNodeKey(group, groups), group)}
+            embedded ? (
+              <ShowroomModelOptions
+                key={make}
+                groups={groups}
+                draft={draft}
+                query={query}
+                expanded={expanded}
+                excluded={exclude}
+                onChange={changeDraft}
+                onToggleFamily={(name) =>
+                  setExpanded((current) =>
+                    current.includes(name)
+                      ? current.filter((value) => value !== name)
+                      : [...current, name],
+                  )
+                }
+                onToggleExcluded={toggleExcluded}
+              />
+            ) : (
+              <>
+                {!q && (
+                  <div {...stylex.props(s.block)}>
+                    {modelRow('')}
+                    {!draft.selected.length && variantField('')}
                   </div>
-                );
-              })}
-              {q && !visibleGroups.length && (
-                <p role="status" {...stylex.props(embedded ? s.empty : ui.srOnly)}>
-                  No models found
-                </p>
-              )}
-            </>
+                )}
+                {visibleGroups.map((group) => {
+                  const show =
+                    group.children.length > 0 && (expanded.includes(group.name) || Boolean(q));
+                  return (
+                    <div
+                      key={modelNodeKey(group, groups)}
+                      data-model-node={modelNodeKey(group, groups)}
+                      {...stylex.props(s.block)}
+                    >
+                      {modelRow(group.name, group, undefined, show)}
+                      {show &&
+                        group.children
+                          .filter(
+                            (name) =>
+                              !q ||
+                              group.name.toLocaleLowerCase().includes(q) ||
+                              name.toLocaleLowerCase().includes(q),
+                          )
+                          .map((name) => <div key={name}>{modelRow(name, undefined, group)}</div>)}
+                      {(draft.selected.includes(modelNodeKey(group, groups)) ||
+                        group.children.some((name) =>
+                          draft.selected.includes(modelLeafKey(name, group)),
+                        )) &&
+                        variantField(modelNodeKey(group, groups), group)}
+                    </div>
+                  );
+                })}
+                {q && !visibleGroups.length && (
+                  <p role="status" {...stylex.props(ui.srOnly)}>
+                    No models found
+                  </p>
+                )}
+              </>
+            )
           ) : (
             <>
-              {embedded && visibleSelectedMakes.length > 0 && (
-                <section aria-label="Selected makes">
-                  <h3 {...stylex.props(s.group, s.embeddedGroup)}>Selected makes</h3>
-                  {visibleSelectedMakes.map(({ name, excluded, summary }) => (
-                    <div key={name + excluded} {...stylex.props(s.selectedRow)}>
-                      <button
-                        type="button"
-                        {...stylex.props(s.make, s.selectedMake)}
-                        onClick={() => editSelectedMake(name, excluded)}
-                      >
-                        <BrandLogo make={name} size={32} />
-                        <span {...stylex.props(s.selectedCopy)}>
-                          <span>
-                            {excluded ? 'Exclude ' : ''}
-                            {name}
-                          </span>
-                          <span {...stylex.props(s.selectionSummary)}>
-                            {summary === 'Any' ? 'All models' : summary}
-                          </span>
-                        </span>
-                        <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-                          <Icon name="right" size={18} />
-                        </span>
-                      </button>
-                      <IconButton
-                        icon="close"
-                        label={'Remove ' + (excluded ? 'excluded ' : '') + name}
-                        onClick={() => removeSelectedMake(name, excluded)}
-                      />
-                    </div>
-                  ))}
-                </section>
-              )}
               {sections.map((section, sectionIndex) => (
                 <section key={section.title || 'matches'}>
                   {section.title && <h3 {...stylex.props(s.group)}>{section.title}</h3>}
-                  {section.names.map((name, index) => (
-                    <button
-                      type="button"
-                      key={name}
-                      onClick={() => chooseMake(name)}
-                      {...stylex.props(
-                        s.make,
-                        embedded && s.embeddedMake,
-                        sectionIndex === sections.length - 1 &&
-                          index === section.names.length - 1 &&
-                          !embedded &&
-                          s.lastMake,
-                      )}
-                    >
-                      {(name !== 'Any' || !embedded) && (
-                        <BrandLogo make={name} size={embedded ? 32 : 40} />
-                      )}
-                      <span {...stylex.props(embedded && s.makeName)}>
-                        {embedded && name === 'Any' ? 'Any make' : name}
-                      </span>
-                      {embedded &&
-                        (name === 'Any' && !selectedMakes.length ? (
-                          <Icon name="check" size={20} />
-                        ) : (
-                          <Icon name="right" size={18} />
-                        ))}
-                    </button>
-                  ))}
-                  {!section.names.length && (!embedded || !visibleSelectedMakes.length) && (
+                  {section.names.map((name, index) => {
+                    const selected = embedded
+                      ? selectedMakes.find(
+                          (selection) => selection.name === name && selection.excluded === exclude,
+                        ) || selectedMakes.find((selection) => selection.name === name)
+                      : undefined;
+                    const option = (
+                      <button
+                        type="button"
+                        key={name}
+                        onClick={() =>
+                          selected
+                            ? editSelectedMake(name, selected.excluded)
+                            : chooseMake(name, embedded ? false : exclude)
+                        }
+                        {...stylex.props(
+                          s.make,
+                          embedded && s.embeddedMake,
+                          sectionIndex === sections.length - 1 &&
+                            index === section.names.length - 1 &&
+                            !embedded &&
+                            s.lastMake,
+                        )}
+                      >
+                        {(name !== 'Any' || !embedded) && (
+                          <BrandLogo make={name} size={embedded ? 32 : 40} />
+                        )}
+                        <span
+                          {...stylex.props(
+                            embedded && s.makeName,
+                            Boolean(selected) && s.selectedCopy,
+                          )}
+                        >
+                          <span>
+                            {selected?.excluded ? 'Exclude ' : ''}
+                            {embedded && name === 'Any' ? 'Any make' : name}
+                          </span>
+                          {selected && (
+                            <span {...stylex.props(s.selectionSummary)}>
+                              {selected.summary === 'Any' ? 'All models' : selected.summary}
+                            </span>
+                          )}
+                        </span>
+                        {embedded &&
+                          (selected || (name === 'Any' && !selectedMakes.length) ? (
+                            <span aria-hidden="true" {...stylex.props(s.selectedMark)}>
+                              <Icon name="check" size={20} />
+                            </span>
+                          ) : (
+                            <Icon name="right" size={18} />
+                          ))}
+                      </button>
+                    );
+                    return embedded ? (
+                      <div key={name} data-make-option={name} {...stylex.props(s.makeOption)}>
+                        {option}
+                        {selected && (
+                          <IconButton
+                            icon="close"
+                            label={'Remove ' + (selected.excluded ? 'excluded ' : '') + name}
+                            onClick={() => removeSelectedMake(name, selected.excluded)}
+                          />
+                        )}
+                      </div>
+                    ) : (
+                      option
+                    );
+                  })}
+                  {!section.names.length && (
                     <p role="status" {...stylex.props(embedded ? s.empty : ui.srOnly)}>
                       No makes found
                     </p>

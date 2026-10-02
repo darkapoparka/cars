@@ -14,9 +14,10 @@ dialog. Options scroll between a fixed header/tab rail and a fixed, rounded red
 Show N cars action. Reset changes only the draft. Selections survive switching
 sections; the applied inventory, URL and stored filters change when Show cars is
 pressed. Close, Escape and browser Back discard unapplied changes. Direct editor
-URLs close in place. The make/model tree, search, variants, exclusion and non-car
-make controls are reused inside the editor, with no nested picker dialog or OK
-step. The native standalone pickers retain their original mode on reference routes.
+URLs close in place. Make/model taxonomy, search, variants and exclusion reuse the
+existing filter domain in a dedicated showroom option list. Non-car make controls
+remain embedded, with no nested picker dialog or OK step. The native standalone
+pickers retain their original mode on reference routes.
 
 Import and Sell tabs now show a short overview and a rounded Start enquiry button.
 They open a sheet with **Car → Details → Review** progress:
@@ -65,33 +66,68 @@ in that scoped delivery. No alternate index or lock-removal workaround was used.
 
 Reset now uses the shared 48px icon button, matching Close around the centered
 Filters heading. Make & model remains one top-level section. Inside the car picker,
-separate labelled Make and Model selector buttons show the current editing context.
+compact, single-line Make and Model pills show the current editing context with
+a 48px minimum target instead of the tall two-line selector cards.
 Model is disabled until a make is chosen. Changing between the two option lists
 retains that make's model selection. Selecting a make moves keyboard focus to the
-Model selector. Selected make cards show model summaries and a remove action;
-remaining in-stock makes appear once, without the duplicate Top Makes/alphabet
-groups. The embedded list uses native scrolling instead of the copied custom rail.
-Exclusion keeps its existing behavior, with a 48px switch target in the model list.
+Model selector. All in-stock makes remain in the same flat list after selection,
+with a 56px minimum row target. Chosen rows show a checkmark, model summary and
+remove action. Stored criteria for makes outside current stock remain editable.
+The duplicate Top Makes/alphabet groups are removed. The embedded list uses
+native scrolling instead of the copied custom rail.
+Exclusion keeps its existing behavior through a 48px row target in More options.
 
 Price, Year and Mileage have persistent From/To labels and Any placeholders.
 Their slider, numeric-entry constraints and filter semantics are retained. The
 standalone native make picker and range controls keep their original presentation.
-The showroom browser contract now also checks the initial disabled Model selector
-and retained X6 selection after changing Make/Model views. That browser contract
-has only been syntax checked; rendered acceptance is still pending below.
+The previous refinement mistakenly omitted selected makes from the main choices.
+Because all four preview cars are BMWs, the remaining choice could be just Any.
+The new pure option builder combines stock and selected makes without hiding or
+duplicating either, and keeps search case-insensitive. Choosing a new make starts
+in include mode; editing an existing selection retains its inclusion/exclusion mode.
+Removing a selection keeps its stocked make available and returns focus to its row.
+
+The showroom browser contract now checks the initial disabled Model selector,
+retained X6 selection after changing Make/Model views, one selectable BMW row,
+and removal followed by selecting BMW again. That browser contract has only been
+syntax checked; rendered acceptance is still pending below.
+
+## Model menu refinement
+
+The showroom model menu now has a dedicated `ShowroomModelOptions` component.
+Any model and all model/family names start at the same left inset; the empty
+48px native chevron placeholder no longer offsets standalone choices. Rows have
+a 52px minimum target and 16px text. Native checkboxes share one right-hand column
+and use the showroom accent; partial families retain their indeterminate state.
+Family names are expansion buttons, with the chevron beside the name area and
+an independent checkbox for selecting all models in that family. Children have
+one modest inset, and search results can be collapsed and expanded manually.
+
+The repeated Models heading, Exclude switch and inline variant inputs have been
+removed from the primary list. More options is initially collapsed, containing
+exclusion and persistently labelled optional variant inputs. Active optional
+criteria remain indicated while collapsed. Existing model/variant/inclusion
+semantics and draft application/cancellation are retained. The standalone native
+picker keeps its original layout.
+
+The prepared browser contract checks aligned Any/family text, collapsed optional
+fields, partial-family selection and reset through Any, and family expansion
+during search. It is syntax checked only under the existing URL policy restriction.
 
 ## Validation
 
 Passed with Node 22.20.0:
 
 - ESLint with zero warnings and TypeScript `--noEmit`.
-- All 72 domain tests. Added coverage checks per-step validation, earliest error
+- All 74 domain tests. Added regression coverage for make choices after inclusion
+  and exclusion, stored criteria outside stock and search for selected makes.
+  Existing coverage checks per-step validation, earliest error
   routing, unfinished draft recovery, filter URL sections, immutable draft changes
   across sections and Reset without changing the applied category.
-- Production build, 50 static pages; final build ID `PcHJJmN5VmjmVJoyagqzh`.
+- Production build, 50 static pages; final build ID `i7j7CaaIRISqooI-MdsEx`.
 - Syntax checks for the updated showroom browser suite and preview launcher.
-- Latest HTTP 200 checks covered Cars, Make/Price/Year/More editor URLs, Services
-  and Contact. The original overlay checks also covered the remaining filter and
+- Latest HTTP 200 checks covered Cars, Make/Year editor URLs, Services and Contact.
+  Earlier overlay checks also covered Price/More, Contact, remaining filter and
   service deep links, retained Financing/Parts URLs and matching Contact contexts.
 - `workspace-doctor.mjs --fetch`; root main was current with fetched origin/main.
 
@@ -128,3 +164,25 @@ source, Git history or unrelated cache was deleted. The listener remains on 6474
 Only the Mobile master and these local notes changed. Dealer copies, template
 release selection, public projects and aliases were not updated. This remains a
 local template candidate; source/build checks do not establish visual acceptance.
+
+## Source scope
+
+The make-list regression fix and model-menu refinement are applied in
+`L:/CODEX/cars` on `main`, with source basis
+`afc31dbc769e989556be93f13b2fb8a1c813ec72`. The earlier Boxcar staged files were
+preserved; that task has since released the shared index.
+
+The owned paths are:
+
+- `docs/mobile-overlay-editors-20261002.md`
+- `templates/mobile/src/components/MakePicker.tsx`
+- `templates/mobile/src/components/make-picker.stylex.ts`
+- `templates/mobile/src/components/ShowroomModelOptions.tsx`
+- `templates/mobile/src/components/showroom-model-options.stylex.ts`
+- `templates/mobile/src/lib/make-picker-options.ts`
+- `templates/mobile/scripts/prepare-domain-tests.mjs`
+- `templates/mobile/scripts/qa-showroom.mjs`
+- `templates/mobile/tests/domain.test.mjs`
+- `templates/mobile/TEMPLATE.md`
+
+Browser acceptance remains pending under the recorded URL policy restriction.

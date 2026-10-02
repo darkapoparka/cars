@@ -10,6 +10,7 @@ const files = [
   'persistence',
   'model-groups',
   'make-selection',
+  'make-picker-options',
   'model-picker',
   'navigation',
   'enquiry',

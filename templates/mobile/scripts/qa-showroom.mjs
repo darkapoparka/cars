@@ -410,16 +410,65 @@ async function run(name, engine) {
     await page.locator('[data-quick-filter="make"]').click();
     assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
+    const modelOptions = page.locator('[data-showroom-model-options]');
+    assert.equal(
+      await modelOptions.getByRole('checkbox', { name: 'Any model', exact: true }).count(),
+      1,
+    );
+    assert.equal(
+      await modelOptions.getByRole('textbox', { name: 'Variant', exact: true }).isVisible(),
+      false,
+    );
+    const anyText = await modelOptions.getByText('Any model', { exact: true }).boundingBox();
+    const familyText = await modelOptions.getByText('1 Series', { exact: true }).boundingBox();
+    assert(anyText && familyText && Math.abs(anyText.x - familyText.x) < 1);
+    await modelOptions.locator('summary').click();
+    await modelOptions.getByRole('textbox', { name: 'Variant', exact: true }).waitFor();
+    await modelOptions.locator('summary').click();
+    assert.equal(
+      await modelOptions.getByRole('textbox', { name: 'Variant', exact: true }).isVisible(),
+      false,
+    );
+    await modelOptions.getByRole('button', { name: 'Expand 1 Series', exact: true }).click();
+    await modelOptions.getByRole('checkbox', { name: '120', exact: true }).check();
+    assert.equal(
+      await modelOptions
+        .getByRole('checkbox', { name: '1 Series', exact: true })
+        .evaluate((input) => input.indeterminate),
+      true,
+    );
+    await modelOptions.getByRole('checkbox', { name: 'Any model', exact: true }).check();
+    assert.equal(
+      await modelOptions.getByRole('checkbox', { name: '120', exact: true }).isChecked(),
+      false,
+    );
+    await modelOptions.getByRole('button', { name: 'Collapse 1 Series', exact: true }).click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
+    await modelOptions.getByRole('button', { name: 'Collapse X Series', exact: true }).click();
+    assert.equal(
+      await modelOptions.getByRole('checkbox', { name: 'X6', exact: true }).isVisible(),
+      false,
+    );
+    await modelOptions.getByRole('button', { name: 'Expand X Series', exact: true }).click();
     await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
     await page.getByRole('button', { name: 'Make: BMW', exact: true }).click();
+    assert.equal(await page.locator('[data-make-option="BMW"]').count(), 1);
     await page
-      .locator('section[aria-label="Selected makes"]')
+      .locator('[data-make-option="BMW"]')
       .getByRole('button', { name: /BMW.*X6/ })
       .waitFor();
     await page.getByRole('button', { name: 'Model: X6', exact: true }).click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     assert.equal(await page.getByRole('checkbox', { name: 'X6', exact: true }).isChecked(), true);
+    await page.getByRole('button', { name: 'Make: BMW', exact: true }).click();
+    await page.getByRole('button', { name: 'Remove BMW', exact: true }).click();
+    assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
+    await page
+      .locator('[data-make-option="BMW"]')
+      .getByRole('button', { name: 'BMW', exact: true })
+      .click();
+    await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
+    await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
     await page.getByRole('button', { name: 'Show 1 car', exact: true }).click();
     await cars(1);
     assert.equal(
@@ -430,6 +479,7 @@ async function run(name, engine) {
     check('Linked Make/Model selectors retain model choices and filter the showroom stock');
     await page.locator('[data-quick-filter="make"]').click();
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
+    await page.locator('[data-showroom-model-options] summary').click();
     await page.getByRole('switch', { name: 'Exclude make', exact: true }).click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
