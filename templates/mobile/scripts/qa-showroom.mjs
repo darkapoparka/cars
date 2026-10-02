@@ -1030,9 +1030,17 @@ async function run(name, engine) {
     ]);
     await page.getByRole('tabpanel', { name: 'Details', exact: true }).waitFor();
     const pdpHistoryLength = await page.evaluate(() => history.length);
+    await detailTabs.getByRole('tab', { name: 'Details', exact: true }).press('PageDown');
     await detailTabs.getByRole('tab', { name: 'Photos', exact: true }).click();
     const photosPanel = page.getByRole('tabpanel', { name: 'Photos', exact: true });
     await photosPanel.waitFor();
+    await page.waitForFunction(() => {
+      const rail = document.querySelector('[data-vehicle-detail-nav]');
+      const firstPhoto = document.querySelector('[aria-label="Open vehicle image 1"]');
+      if (!rail || !firstPhoto) return false;
+      const gap = firstPhoto.getBoundingClientRect().top - rail.getBoundingClientRect().bottom;
+      return gap >= 0 && gap <= 24;
+    });
     assert.equal(new URL(page.url()).hash, '#photos');
     assert.equal(await page.evaluate(() => history.length), pdpHistoryLength);
     const photoCount = await photosPanel
@@ -1137,9 +1145,12 @@ async function run(name, engine) {
         for (const section of ['details', 'photos', 'features']) {
           await go('/vehicle/bmw-x6' + (section === 'details' ? '' : '#' + section));
           await page.locator('[data-vehicle-detail-panel="' + section + '"]').waitFor();
-          await page
-            .locator('[data-vehicle-detail-nav]')
-            .evaluate((element) => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
+          await page.locator('[data-vehicle-detail-sheet]').evaluate((element) =>
+            window.scrollTo({
+              top: Math.max(0, scrollY + element.getBoundingClientRect().top - 60),
+              behavior: 'instant',
+            }),
+          );
           if (section !== 'details') await page.locator('[data-vehicle-contact-dock]').waitFor();
           await geometry(width + 'px PDP ' + section);
           const tabs = await page

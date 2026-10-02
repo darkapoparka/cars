@@ -266,9 +266,15 @@ export function VehicleSections({
   const showFeatures = !showroomMode || section === 'features';
   function selectSection(value: VehicleDetailSection) {
     selectVehicleDetailSection(value);
-    requestAnimationFrame(() =>
-      navigation.current?.scrollIntoView({ block: 'start', behavior: 'instant' }),
-    );
+    requestAnimationFrame(() => {
+      const sheet = navigation.current?.closest('[data-vehicle-detail-sheet]');
+      if (!sheet) return;
+      // A sticky rail's visible position changes; the sheet retains its page position.
+      window.scrollTo({
+        top: Math.max(0, window.scrollY + sheet.getBoundingClientRect().top - 60),
+        behavior: 'instant',
+      });
+    });
   }
   const [technical, setTechnical] = useState(false);
   const [features, setFeatures] = useState(false);
