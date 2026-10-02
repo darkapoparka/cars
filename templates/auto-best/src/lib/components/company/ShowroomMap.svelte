@@ -3,7 +3,6 @@
   import { getI18n } from '$lib/locale/context';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
-  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   let { headingId }: { headingId?: string } = $props();
 
@@ -53,7 +52,6 @@
   </div>
   <a class="dn-showroom-map__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
     {i18n.t('m_c95356784006')}
-    <span class="dn-showroom-map__arrow--mobile"><MobileActionIcon name="arrow" size={18} /></span>
     <span class="dn-showroom-map__arrow--desktop"><Icon name="arrow-right" size={18} /></span>
   </a>
 </div>
@@ -113,7 +111,7 @@
     font-weight: var(--dn-weight-semibold);
   }
   .dn-showroom-map__directions {
-    display: flex;
+    display: none;
     min-height: var(--dn-control-height-prominent);
     align-items: center;
     justify-content: center;
@@ -127,15 +125,8 @@
   }
   .dn-showroom-map__directions:hover { background: var(--dn-surface-hover); }
   .dn-showroom-map__directions:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: -4px; }
-  .dn-showroom-map__arrow--desktop { display: none; }
-  @media (max-width: 991px) {
-    .dn-showroom-map__directions {
-      justify-content: flex-start;
-      text-align: left;
-    }
-  }
+  .dn-showroom-map__arrow--desktop { display: inline-flex; }
   @media (min-width: 992px) {
-    .dn-showroom-map__arrow--mobile { display: none; }
-    .dn-showroom-map__arrow--desktop { display: inline-flex; }
+    .dn-showroom-map__directions { display: flex; }
   }
 </style>

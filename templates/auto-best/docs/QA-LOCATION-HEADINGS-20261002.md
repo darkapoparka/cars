@@ -7,10 +7,10 @@ heading and address have no location icon. General Contact's mobile details card
 uses plain address, visit and phone rows with right arrows; the leading red icons
 are hidden. Each arrow aligns with its title, and the short description spans
 the full row below. The Contact entry title and introduction are centered,
-including their width-capped blocks on wider mobile screens. Mobile map directions
-are left aligned, with the arrow beside the
-label. About/Contact's map title, address and directions share the same left
-inset. Desktop keeps its existing map composition and PDP address icon.
+including their width-capped blocks on wider mobile screens. Mobile maps end at
+the map canvas, with no directions footer or empty action space. About/Contact's
+map title and address share the same left inset. Desktop keeps its existing map
+composition, directions footer and PDP address icon.
 
 Earlier plain-heading verification at `http://127.0.0.1:6461`, using Node 22.20.0:
 
@@ -75,3 +75,12 @@ errors/warnings and the production build passed. Evidence is under
 `contact-390.png`, `locales-test.log`, `static-checks-final.log`, `check.log`
 and `build.log`. The authored compact copy lives in `src/lib/config/locale.ts`
 and `localization/dealer.reviewed.json`; generated outputs were rebuilt.
+
+The mobile directions footer was subsequently removed. Eight Chromium states
+cover BG/EN Contact at 320px, BG Contact at 390px and 991px, About and PDP at
+320px, and desktop PDP at 992px and 1440px. Mobile map cards end immediately
+after the 280px iframe, without a blank footer; desktop retains its existing
+directions action and destination. Page overflow and browser errors were absent.
+CSS policy, tokens, typography and the production build passed; Svelte check
+reported zero errors/warnings. Evidence is in `runtime/map-footer-removal-20261002/`:
+`review.json`, `map-390.png`, `static-checks.log`, `check.log` and `build.log`.
