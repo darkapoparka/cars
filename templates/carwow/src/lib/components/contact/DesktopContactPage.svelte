@@ -513,10 +513,10 @@
 
 	/* StorefrontTemplateContent generics used by the markup */
 	.container {
-		width: min(100% - 48px, 1320px);
-		max-width: 1440px;
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
 		margin: 0 auto;
-		padding: 0 15px;
+		padding: 0;
 	}
 
 	.bg-white {

@@ -3,6 +3,8 @@ import { expect, test } from '@playwright/test';
 test('Newest cars uses a centered heading, full-width pills and a final inventory tile', async ({
 	page
 }) => {
+	// This journey checks eight locale/width states and navigates into inventory after each.
+	test.setTimeout(90_000);
 	for (const locale of ['en', 'bg']) {
 		for (const width of [992, 1280, 1440, 1920]) {
 			await page.setViewportSize({ width, height: 1000 });

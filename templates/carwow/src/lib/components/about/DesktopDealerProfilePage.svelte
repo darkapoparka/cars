@@ -193,7 +193,9 @@
 			<div class="title-section mb-30">
 				<div>
 					<h2>{i18n.t('copy.93b3d88de23a')}</h2>
-					<p class="text-secondary">{i18n.text(daynightReviewDisclosure)}</p>
+					<p class="text-secondary profile-review-disclosure">
+						{i18n.text(daynightReviewDisclosure)}
+					</p>
 				</div>
 				<a href={i18n.href(resolve('/reviews'))} class="sa-cta sa-cta-ghost">
 					{i18n.t('copy.5701bc5c6a95')}
@@ -215,12 +217,31 @@
 <style>
 	@media (min-width: 992px) {
 		.dealer-page > .background-light,
-		.dealer-profile-hero__content > h1 {
+		.dealer-profile-hero__content > h1,
+		.profile-review-disclosure {
 			display: none;
 		}
 
 		.dealer-profile-hero {
 			padding-top: var(--sa-desktop-section-y-md);
+		}
+
+		.dealer-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.dealer-page .container h2 {
+			font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+			letter-spacing: -0.8px;
+		}
+
+		.dealer-page .py-80 {
+			padding-block: var(--sa-desktop-section-y-md);
+		}
+
+		.dealer-page .pb-80 {
+			padding-bottom: var(--sa-desktop-section-y-md);
 		}
 	}
 

@@ -4,7 +4,7 @@
 
 	import { resolve } from '$app/paths';
 	import { daynightSite } from '$lib/data/daynight-site';
-	import { daynightReviewAverage, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
+	import { daynightReviewAverage } from '$lib/data/daynight-reviews';
 	import {
 		desktopDetailRatingRows,
 		desktopDetailReviews,
@@ -15,8 +15,6 @@
 <div class="mb-16 flex items-center justify-between gap-16">
 	<h2 class="h4">{i18n.t('copy.93b3d88de23a')}</h2>
 </div>
-
-<p class="text-secondary mb-20">{i18n.text(daynightReviewDisclosure)}</p>
 
 <div class="rating-box mb-40">
 	<div class="rating-box__content">

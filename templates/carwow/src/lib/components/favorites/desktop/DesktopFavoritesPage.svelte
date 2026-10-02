@@ -109,10 +109,8 @@
 	.desktop-favorites__content {
 		box-sizing: border-box;
 		margin: 0 auto;
-		max-width: 1440px;
-		padding-left: 15px;
-		padding-right: 15px;
-		width: 100%;
+		max-width: var(--desktop-content-max);
+		width: var(--desktop-content-width);
 	}
 
 	.desktop-favorites__section-kicker {
@@ -148,9 +146,8 @@
 
 	.desktop-favorites__section-heading h2 {
 		color: #101828;
-		font-size: var(--sa-heading-section);
-		font-weight: var(--sa-weight-heading);
-		line-height: 1.08;
+		font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+		letter-spacing: -0.8px;
 		margin: 0;
 	}
 
@@ -172,7 +169,7 @@
 
 	.desktop-favorites__grid {
 		display: grid;
-		gap: 24px;
+		gap: 16px;
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 	}
 
@@ -226,12 +223,6 @@
 
 	.desktop-favorites :global(.card-box.card-box-style-1[data-daynight-vehicle-card] .content) {
 		border-radius: 0 0 8px 8px;
-	}
-
-	@media (max-width: 1320px) {
-		.desktop-favorites__grid {
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-		}
 	}
 
 	@media (max-width: 991px) {

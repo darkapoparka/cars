@@ -21,7 +21,7 @@
 		secondaryLabel,
 		secondaryHref,
 		sectionId,
-		panel = 'dark',
+		panel = 'light',
 		compact = false,
 		deckWidth = 'standard',
 		artwork = 'cars',
@@ -337,8 +337,7 @@
 	}
 
 	.daynight-yellow-route-hero--compact .daynight-yellow-route-hero__deck {
-		max-width: 720px;
-		padding: 0;
+		max-width: 680px;
 	}
 
 	.daynight-yellow-route-hero--contact .daynight-yellow-route-hero__deck {

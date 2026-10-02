@@ -1,11 +1,6 @@
 /* Shared content frame for the desktop storefront routes. */
 @media (min-width: 992px) {
-	.daynight-home-shell,
-	.inventory-template-shell,
-	.daynight-detail,
-	.desktop-services,
-	.about-page,
-	.blog-page {
+	:root {
 		--desktop-content-max: 1320px;
 		--desktop-content-gutters: 80px;
 		--desktop-content-width: min(
@@ -15,12 +10,7 @@
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-	.daynight-home-shell,
-	.inventory-template-shell,
-	.daynight-detail,
-	.desktop-services,
-	.about-page,
-	.blog-page {
+	:root {
 		--desktop-content-gutters: 48px;
 	}
 }

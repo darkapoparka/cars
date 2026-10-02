@@ -149,7 +149,9 @@
 			<div class="title-section mb-30">
 				<div>
 					<h2>{i18n.t('copy.93b3d88de23a')}</h2>
-					<p class="text-secondary">{i18n.text(daynightReviewDisclosure)}</p>
+					<p class="text-secondary profile-review-disclosure">
+						{i18n.text(daynightReviewDisclosure)}
+					</p>
 				</div>
 				<a href={i18n.href(resolve('/reviews'))} class="sa-cta-compact sa-cta sa-cta-ghost">
 					{i18n.t('copy.5701bc5c6a95')}
@@ -223,12 +225,45 @@
 <style>
 	@media (min-width: 992px) {
 		.team-member-page > .background-light,
-		.team-member-profile__content > h1 {
+		.team-member-profile__content > h1,
+		.profile-review-disclosure {
 			display: none;
 		}
 
 		.team-member-profile {
 			padding-top: var(--sa-desktop-section-y-md);
+		}
+
+		.team-member-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.team-member-page .container h2 {
+			font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+			letter-spacing: -0.8px;
+		}
+
+		.team-member-page .py-80 {
+			padding-block: var(--sa-desktop-section-y-md);
+		}
+
+		.team-member-page .pb-80 {
+			padding-bottom: var(--sa-desktop-section-y-md);
+		}
+
+		.team-member-page :is(.team-vehicle-card, .team-teammate-card, .team-review-card) {
+			transition: border-color 160ms var(--sa-ease);
+		}
+
+		.team-member-page :is(.team-vehicle-card, .team-teammate-card):hover {
+			border-color: var(--desktop-control-border);
+			outline: 0;
+		}
+
+		.team-member-page :is(.team-vehicle-card, .team-teammate-card):focus-visible {
+			outline: 2px solid var(--desktop-focus);
+			outline-offset: 3px;
 		}
 	}
 

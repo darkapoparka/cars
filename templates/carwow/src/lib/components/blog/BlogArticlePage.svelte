@@ -248,6 +248,20 @@
 		.blog-article-main {
 			padding-top: var(--sa-space-10);
 		}
+
+		.blog-article-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.blog-article-page .container > h2 {
+			font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+			letter-spacing: -0.8px;
+		}
+
+		.blog-article-page .py-100 {
+			padding-block: var(--sa-desktop-section-y-lg);
+		}
 	}
 
 	/* Self-contained scoped styles for /blog/[slug]. Reproduce the legacy app.css +

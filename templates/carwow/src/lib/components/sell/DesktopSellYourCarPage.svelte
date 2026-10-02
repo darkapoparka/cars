@@ -651,8 +651,8 @@
 
 	.sell-container {
 		box-sizing: border-box;
-		width: calc(100% - 96px);
-		max-width: 1280px;
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
 		margin-inline: auto;
 	}
 	.sell-section {
@@ -661,10 +661,10 @@
 	.desktop-sell .sell-section-title {
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		font-size: var(--sa-text-desktop-section-title);
+		font-size: var(--sa-heading-section);
 		font-weight: var(--sa-weight-strong);
-		line-height: 1.1;
-		letter-spacing: -0.025em;
+		line-height: 1.15;
+		letter-spacing: -0.8px;
 		margin: 0;
 		text-wrap: balance;
 	}
@@ -858,12 +858,9 @@
 	}
 	.desktop-sell :is(a, summary):focus-visible {
 		outline: 2px solid var(--desktop-focus);
-		outline-offset: 5px;
+		outline-offset: 3px;
 	}
 	@media (max-width: 1199px) {
-		.sell-container {
-			width: calc(100% - 64px);
-		}
 		.sell-benefits__layout {
 			padding-inline: 32px;
 		}

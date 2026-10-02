@@ -4,7 +4,7 @@
 
 	import { daynightSite } from '$lib/data/daynight-site';
 	import Check from '@lucide/svelte/icons/check';
-	import { daynightReviews, daynightReviewDisclosure } from '$lib/data/daynight-reviews';
+	import { daynightReviews } from '$lib/data/daynight-reviews';
 	import DesktopSectionHeading from '$lib/components/shared/DesktopSectionHeading.svelte';
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import { resolve } from '$app/paths';
@@ -111,7 +111,6 @@
 					href={i18n.href(showHeaderCta ? resolve('/reviews') : undefined)}
 					label={ctaLabel}
 				/>
-				<p class="home-reviews-disclosure">{i18n.text(daynightReviewDisclosure)}</p>
 			</div>
 			<div class="daynight-home-section-panel daynight-home-section-panel--reviews">
 				<div class="daynight-home-review-grid">
@@ -310,12 +309,7 @@
 		margin-bottom: 24px;
 	}
 	.home-reviews-heading :global(.desktop-section-heading) {
-		margin-bottom: 12px;
-	}
-	.home-reviews-disclosure {
-		margin: 0;
-		color: var(--sa-ink-soft);
-		font: var(--sa-weight-regular) var(--sa-text-sm)/1.5 var(--sa-font);
+		margin-bottom: 0;
 	}
 	.daynight-home-review-grid__items {
 		display: grid;

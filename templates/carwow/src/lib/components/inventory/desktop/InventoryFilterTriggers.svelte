@@ -106,7 +106,7 @@
 	button :global(svg) {
 		flex-shrink: 0;
 	}
-	button:hover {
+	button:hover:not(:disabled) {
 		background: var(--discovery-filter-hover);
 		border-color: var(--discovery-filter-hover);
 	}
@@ -115,7 +115,7 @@
 		border-color: var(--discovery-action);
 		background: var(--discovery-action);
 	}
-	button.has-selection:hover {
+	button.has-selection:hover:not(:disabled) {
 		background: var(--discovery-action-hover);
 		border-color: var(--discovery-action-hover);
 	}

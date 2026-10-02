@@ -27,7 +27,6 @@
 	<DesktopYellowRouteHero
 		headingId="reviews-route-title"
 		title={i18n.t('copy.93b3d88de23a')}
-		copy={i18n.text(daynightReviewDisclosure)}
 		panel="light"
 		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
@@ -106,6 +105,48 @@
 
 		.reviews-page > .pb-100 {
 			padding-top: var(--sa-desktop-section-y-md);
+			padding-bottom: var(--sa-desktop-section-y-lg);
+		}
+
+		.reviews-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.reviews-page .grid {
+			gap: 24px;
+			margin-bottom: 0;
+		}
+
+		.reviews-page .testimonior-box {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.reviews-page .testimonior-box--user {
+			gap: 12px;
+			margin-top: auto;
+		}
+
+		.reviews-page .testimonior--img {
+			width: 48px;
+			height: 48px;
+			flex-shrink: 0;
+		}
+
+		.reviews-page .testimonior-box--user-content {
+			min-width: 0;
+			margin-left: 0;
+		}
+
+		.reviews-page .testimonior-box--desc {
+			color: var(--sa-ink);
+			line-height: 1.6;
+		}
+
+		.reviews-page .desc {
+			line-height: 1.4;
+			margin-top: 4px;
 		}
 	}
 

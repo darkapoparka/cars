@@ -269,6 +269,15 @@
 		.team-page > .pb-100 > .tf-spacing-style3 {
 			height: var(--sa-desktop-section-y-md);
 		}
+
+		.team-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.team-page .pb-100 {
+			padding-bottom: var(--sa-desktop-section-y-lg);
+		}
 	}
 
 	.team-disclosure {

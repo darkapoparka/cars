@@ -16,7 +16,7 @@ The previous mismatch was measurable: home and inventory shortcuts used differen
 
 - Shared desktop CTA grammar: `src/lib/styles/desktop-controls.css` (992px and wider). `sa-cta-primary` and `desktop-primary-action` use black; secondary/ghost actions use white with a neutral border.
 - Shared desktop discovery roles and chip states: `src/lib/styles/desktop-discovery.css`.
-- Shared Home, catalogue, vehicle-detail, Services, About and Blog content frame: `src/lib/styles/desktop-page-frame.css` (1320px maximum, matching desktop gutters).
+- Shared desktop content frame: `src/lib/styles/desktop-page-frame.css` (1320px maximum, matching desktop gutters). Reviews, Sell, Contact, Financing, Calculator, Team, profiles, related articles and Saved cars use the same outer frame; reading columns and form panels may be narrower inside it.
 - Existing brand yellow, Geist font and responsive heading scale: `src/lib/styles/tokens.css`.
 - Do not change global/mobile tokens to solve a desktop-only issue.
 - The former generated visual specimen is not shipped. Review the live Home and Inventory routes; their components and shared styles are the implementation authority for complete controls.
@@ -59,6 +59,7 @@ Desktop header utilities, including Sell, are icon-only: 24px outline icons insi
 ## Typography, icons and spacing
 
 - Use the existing self-hosted Geist family including Cyrillic. Use existing responsive H1/H2 tokens; do not create a second heading scale.
+- Section headings use `--sa-heading-section`, weight 700, 1.15 leading and -0.8px tracking. Keep 28px headings inside form/reading panels and 18px vehicle titles; a secondary section must not inherit the hero title size.
 - Use 16px search text, 15px filter/mode labels, 14px shortcuts and supporting labels. Let layout wrap rather than shrinking text for a long Bulgarian label.
 - Lucide supplies utility icons: 20px for search, 16px chevrons, 18px filter tools, consistent 2px stroke. Icons inherit their control color.
 - Shortcut text already explains the category. Do not add miniature car drawings, decorative price symbols, or mixed icon fonts.
@@ -97,6 +98,8 @@ Keyboard focus uses a solid 2px black outline with a 2–3px offset. For composi
 | Type and make browse grids    | `DesktopHomeVehicleCategories.svelte`, `DesktopHomeBrandStrip.svelte`; centered headings and a final View all tile           |
 
 The standard desktop heroes share a 400px minimum height, 36px top padding, 32px bottom padding, 24px panel gap and matching title typography through the geometry tokens in `desktop-controls.css`. Home and `DesktopYellowRouteHero.svelte` consume that contract; route styles must not override the height or vertical content padding. Keep artwork and task-panel widths appropriate to each route. The retained `/home1` photo composition has its own layout.
+
+Standard route task panels default to white with 20px padding. Compact panels keep that padding while using a narrower width. Reviews use 24px grid gaps and author rows aligned to the bottom of each card; the Home review heading has one 24px gap above its cards. Longer reading routes use the existing 76px section rhythm, with a 52px first-section inset. Preserve all mobile compositions and shared font/data assets when applying these desktop rules.
 
 Home's mode rail fits its three tabs and is centered within the task panel. Tabs have a 104px minimum width, without extra shadows. Keep the search input white inside its white frame. Newest cars has a centered title, a full-width nine-pill grid and a final inventory-browse tile, without a heading or footer CTA. Inventory uses a contained 1040px hero panel with a full-width search row, followed by one row of Make, Model, Price, Mileage and More filters. Fuel, transmission, availability and extras remain in the full filter dialog. The results toolbar owns a separate compact row of five car-type shortcuts: All, SUV, Sedan, Coupe and Van. Use 8px gaps and content-width chips, 12px below the count/sort toolbar. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and URL state. Other selected filters appear as removable tags above the results rather than permanent preset pills.
 

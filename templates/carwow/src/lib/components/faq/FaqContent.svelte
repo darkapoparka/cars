@@ -135,6 +135,11 @@
 		.faq-page > .bg-white {
 			padding-top: var(--sa-desktop-section-y-md);
 		}
+
+		.faq-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
 	}
 
 	.faq-page section > .container + .container {

@@ -374,16 +374,12 @@
 		margin-top: 0;
 	}
 
-	/* Layout container. The legacy `.container` was a blend of app.css
-	   (`max-width:1440px; padding:0 15px`) and StorefrontTemplateContent
-	   (`width:min(100% - 48px, 1320px)`). The explicit `max-width:1440px` also defeats
-	   Tailwind's built-in `.container` utility (1280px at xl). Verified width 1320px /
-	   max 1440px / padding 0 15px via getComputedStyle. */
+	/* Align the desktop content with the shared storefront frame. */
 	.container {
-		width: min(100% - 48px, 1320px);
-		max-width: 1440px;
+		width: var(--desktop-content-width);
+		max-width: var(--desktop-content-max);
 		margin: 0 auto;
-		padding: 0 15px;
+		padding: 0;
 	}
 
 	.background-light {
@@ -394,15 +390,13 @@
 		background: #fff;
 	}
 
-	/* Section spacing utilities (verified: hero pb-100 = 100px; process/blog/faq
-	   py-100 = 100px top+bottom; breadcrumb section mb-32 = 32px). */
+	/* Use the existing spacious section rhythm for this longer reading page. */
 	.pb-100 {
-		padding-bottom: 100px;
+		padding-bottom: var(--sa-desktop-section-y-lg);
 	}
 
 	.py-100 {
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding-block: var(--sa-desktop-section-y-lg);
 	}
 
 	/* Margin utilities */
@@ -516,10 +510,8 @@
 	   section h2 headings are left (start). */
 	.financing-page h2 {
 		color: #111827;
-		font-size: var(--sa-text-desktop-hero-title);
-		font-weight: var(--sa-weight-heading);
-		letter-spacing: 0;
-		line-height: 1.08;
+		font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+		letter-spacing: -0.8px;
 	}
 
 	/* The detailed financing explanation follows the route hero in one reading column. */
@@ -527,7 +519,7 @@
 		display: grid;
 		grid-template-columns: minmax(0, 760px);
 		justify-content: center;
-		padding-top: 72px;
+		padding-top: var(--sa-desktop-section-y-md);
 	}
 
 	/* Benefit list (verified: grid single column, gap 26px, mb-40; each item flex,

@@ -1,3 +1,5 @@
+@import './desktop-page-frame.css';
+
 /* SiteChrome is mounted only by the selected desktop composition. Keeping this
  * document rule outside a width query prevents WebKit's scrollbar from hiding
  * the desktop route at the 991/992px boundary. The mobile dock shares the data
@@ -38,8 +40,8 @@ html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
 		box-shadow: none !important;
 		background-image: none !important;
 	}
-	body .sa-cta.sa-cta-primary:hover,
-	body .desktop-primary-action:hover {
+	body .sa-cta.sa-cta-primary:hover:not(:disabled):not([aria-disabled='true']),
+	body .desktop-primary-action:hover:not(:disabled):not([aria-disabled='true']) {
 		background: var(--desktop-action-hover) !important;
 		border-color: var(--desktop-action-hover) !important;
 		color: var(--desktop-action-text) !important;
@@ -53,9 +55,9 @@ html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
 		box-shadow: none !important;
 		background-image: none !important;
 	}
-	body .sa-cta.sa-cta-secondary:hover,
-	body .sa-cta.sa-cta-ghost:hover,
-	body .sa-cta.sa-cta-on-dark:hover {
+	body .sa-cta.sa-cta-secondary:hover:not(:disabled):not([aria-disabled='true']),
+	body .sa-cta.sa-cta-ghost:hover:not(:disabled):not([aria-disabled='true']),
+	body .sa-cta.sa-cta-on-dark:hover:not(:disabled):not([aria-disabled='true']) {
 		background: var(--desktop-secondary-hover) !important;
 		border-color: var(--desktop-secondary-hover) !important;
 		color: var(--desktop-action) !important;

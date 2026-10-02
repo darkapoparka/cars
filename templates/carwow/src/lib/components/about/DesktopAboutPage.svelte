@@ -376,8 +376,8 @@
 		padding: 36px 0;
 	}
 	.about-page h2 {
-		font: var(--sa-weight-strong) var(--sa-text-desktop-section-title)/1.1 var(--sa-font);
-		letter-spacing: -0.025em;
+		font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+		letter-spacing: -0.8px;
 		color: var(--sa-ink);
 		margin: 0;
 	}
@@ -538,7 +538,7 @@
 		object-fit: contain;
 	}
 	.about-brands a:hover {
-		background: #fff;
+		background: var(--desktop-secondary-hover);
 	}
 	.about-support-card {
 		display: flex;
@@ -570,7 +570,7 @@
 		color: var(--sa-ink);
 	}
 	.about-page .about-support-card:hover {
-		background: #e0e4e6;
+		border-color: var(--discovery-border-hover);
 		color: var(--sa-ink);
 	}
 	.about-support-card:is(:hover, :focus-visible) .about-support-action {
@@ -583,12 +583,13 @@
 	.about-page .about-team-card h3 a:hover {
 		color: var(--sa-yellow);
 	}
-	.about-page a:not(.sa-cta):hover {
-		color: var(--sa-red);
+	.about-text-link:hover {
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 	.about-page :is(a, button):focus-visible {
-		outline: 2px solid var(--sa-red);
-		outline-offset: 4px;
+		outline: 2px solid var(--desktop-focus);
+		outline-offset: 3px;
 	}
 	.about-visit {
 		padding: 8px 0 64px;
@@ -678,6 +679,9 @@
 		min-height: 48px;
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		border-radius: 0 0 10px 10px;
+	}
+	.about-map-link:hover {
+		background: var(--desktop-secondary-hover);
 	}
 	@media (max-width: 1199px) {
 		.about-team-grid {

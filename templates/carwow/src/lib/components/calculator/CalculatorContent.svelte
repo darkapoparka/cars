@@ -434,6 +434,26 @@
 
 		.calculator-page > .pb-100 {
 			padding-top: var(--sa-desktop-section-y-md);
+			padding-bottom: var(--sa-desktop-section-y-lg);
+		}
+
+		.calculator-page .container {
+			width: var(--desktop-content-width);
+			padding-inline: 0;
+		}
+
+		.calculator-page > section h2 {
+			font: var(--sa-weight-strong) var(--sa-heading-section)/1.15 var(--sa-font);
+			letter-spacing: -0.8px;
+		}
+
+		.calculator-page .finance-layout h2 {
+			font: var(--sa-weight-semibold) var(--sa-text-panel-title)/1.2 var(--sa-font);
+			letter-spacing: -0.025em;
+		}
+
+		.calculator-page .py-100 {
+			padding-block: var(--sa-desktop-section-y-lg);
 		}
 	}
 
