@@ -10,6 +10,16 @@ import { Modal, ui } from './ui';
 import { DialogActions } from './FilterDialog';
 import { Icon } from './Icon';
 const s = stylex.create({
+  embedded: {
+    display: 'flex',
+    flexDirection: 'column',
+    flex: '1',
+    minHeight: 0,
+    minWidth: 0,
+    paddingInline: 16,
+    paddingTop: 16,
+  },
+  embeddedInput: { fontSize: 16, height: 48, borderRadius: 12 },
   title: {
     fontFamily: 'var(--font-base)',
     fontSize: 20,
@@ -106,12 +116,14 @@ export function CategoryMakePicker({
   onClose,
   filters: suppliedFilters,
   onApply,
+  embedded = false,
 }: {
   initialMake?: string;
   initialExclude?: boolean;
   onClose: () => void;
   filters?: Filters;
   onApply?: (patch: Partial<Filters>) => void;
+  embedded?: boolean;
 }) {
   const state = useAppState();
   const filters = suppliedFilters || state.filters;
@@ -132,14 +144,20 @@ export function CategoryMakePicker({
     ...new Set([...draft.excludedMakes, ...Object.keys(draft.excludedMakeVariants)]),
   ];
   function choose(make: string) {
-    setDraft((current) => {
-      const next = editingMake
-        ? { ...current, ...removeMakeSelection(current, editingMake, exclude) }
-        : current;
-      return make === 'Any' ? next : { ...next, ...applyMakeSelection(next, make, [], exclude) };
-    });
+    const previous = editingMake
+      ? { ...draft, ...removeMakeSelection(draft, editingMake, exclude) }
+      : draft;
+    changeDraft(
+      make === 'Any'
+        ? previous
+        : { ...previous, ...applyMakeSelection(previous, make, [], exclude) },
+    );
     setEditingMake(null);
     setScreen('summary');
+  }
+  function changeDraft(next: Filters) {
+    setDraft(next);
+    if (embedded) changeFilters(next);
   }
   function selection(make: string, isExcluded: boolean) {
     return (
@@ -160,10 +178,7 @@ export function CategoryMakePicker({
             type="button"
             aria-label={'Remove ' + (isExcluded ? 'excluded ' : '') + make}
             onClick={() =>
-              setDraft((current) => ({
-                ...current,
-                ...removeMakeSelection(current, make, isExcluded),
-              }))
+              changeDraft({ ...draft, ...removeMakeSelection(draft, make, isExcluded) })
             }
             {...stylex.props(s.close)}
           >
@@ -178,25 +193,19 @@ export function CategoryMakePicker({
             placeholder="Any"
             maxLength={200}
             onChange={(event) =>
-              setDraft((current) => ({
-                ...current,
-                ...applyMakeSelection(current, make, [], isExcluded, event.target.value),
-              }))
+              changeDraft({
+                ...draft,
+                ...applyMakeSelection(draft, make, [], isExcluded, event.target.value),
+              })
             }
-            {...stylex.props(ui.input, s.input)}
+            {...stylex.props(ui.input, s.input, embedded && s.embeddedInput)}
           />
         </label>
       </div>
     );
   }
-  return (
-    <Modal
-      open
-      onClose={onClose}
-      table={screen === 'make'}
-      wide={screen === 'make'}
-      range={screen === 'summary'}
-    >
+  const content = (
+    <>
       <h2 {...stylex.props(s.title, screen === 'summary' && s.summaryTitle)}>
         {screen === 'summary' ? 'Make, Model' : 'Make'}
       </h2>
@@ -259,19 +268,34 @@ export function CategoryMakePicker({
           </>
         )}
       </div>
-      <div {...stylex.props(screen === 'make' && s.footer)}>
-        <DialogActions
-          onCancel={screen === 'summary' ? onClose : () => setScreen('summary')}
-          onApply={
-            screen === 'summary'
-              ? () => {
-                  changeFilters(draft);
-                  onClose();
-                }
-              : undefined
-          }
-        />
-      </div>
+      {!embedded && (
+        <div {...stylex.props(screen === 'make' && s.footer)}>
+          <DialogActions
+            onCancel={screen === 'summary' ? onClose : () => setScreen('summary')}
+            onApply={
+              screen === 'summary'
+                ? () => {
+                    changeFilters(draft);
+                    onClose();
+                  }
+                : undefined
+            }
+          />
+        </div>
+      )}
+    </>
+  );
+  return embedded ? (
+    <div {...stylex.props(s.embedded)}>{content}</div>
+  ) : (
+    <Modal
+      open
+      onClose={onClose}
+      table={screen === 'make'}
+      wide={screen === 'make'}
+      range={screen === 'summary'}
+    >
+      {content}
     </Modal>
   );
 }

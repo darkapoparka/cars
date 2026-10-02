@@ -19,6 +19,19 @@ export type ServiceRequestField = keyof typeof serviceRequestLimits;
 export type ServiceRequestValues = Record<ServiceRequestField, string>;
 export type ServiceRequestErrors = Partial<Record<ServiceRequestField, string>>;
 export const saleConditions = ['Excellent', 'Good', 'Needs repairs'] as const;
+export type ServiceRequestStep = 0 | 1 | 2;
+export const serviceRequestSteps = {
+  import: [
+    { label: 'Car', fields: ['make', 'model'] },
+    { label: 'Details', fields: ['budget', 'year', 'listing'] },
+    { label: 'Review', fields: ['name', 'phone', 'email', 'message'] },
+  ],
+  sell: [
+    { label: 'Car', fields: ['make', 'model', 'year'] },
+    { label: 'Details', fields: ['mileage', 'price', 'condition'] },
+    { label: 'Review', fields: ['name', 'phone', 'email', 'message'] },
+  ],
+} as const;
 
 export function emptyServiceRequest(): ServiceRequestValues {
   return {
@@ -111,6 +124,27 @@ export function validateServiceRequest(
   if (values.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email))
     errors.email = 'Enter a valid email address.';
   return errors;
+}
+
+export function validateServiceRequestStep(
+  kind: ServiceRequestKind,
+  step: ServiceRequestStep,
+  values: ServiceRequestValues,
+  currentYear = new Date().getFullYear(),
+) {
+  const allErrors = validateServiceRequest(kind, values, currentYear);
+  const errors: ServiceRequestErrors = {};
+  for (const field of serviceRequestSteps[kind][step].fields) {
+    if (allErrors[field]) errors[field] = allErrors[field];
+  }
+  return errors;
+}
+
+export function serviceRequestErrorStep(kind: ServiceRequestKind, errors: ServiceRequestErrors) {
+  const first = serviceRequestSteps[kind].findIndex(({ fields }) =>
+    fields.some((field) => Boolean(errors[field])),
+  );
+  return (first < 0 ? 0 : first) as ServiceRequestStep;
 }
 
 export function serviceRequestMessage(kind: ServiceRequestKind, values: ServiceRequestValues) {

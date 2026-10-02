@@ -1,6 +1,10 @@
 # Mobile showroom service flows — 2 October 2026
 
-## Current behavior
+This records the earlier inline-form iteration. The subsequent
+[overlay editor change](mobile-overlay-editors-20261002.md) replaces Import/Sell
+forms with steppers and the standalone Filters button with a shared tabbed editor.
+
+## Earlier behavior
 
 Services retains the same white, branded header as Cars and now uses the same
 search component below it. The existing underline rail shows **All / Import /

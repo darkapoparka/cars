@@ -544,8 +544,54 @@ import {
   serializeServiceRequest,
   serviceRequestStorageKey,
   serviceRequestMessage,
+  serviceRequestErrorStep,
   validateServiceRequest,
+  validateServiceRequestStep,
 } from '../.qa/domain/service-requests.mjs';
+import {
+  showroomFilterTab,
+  updateShowroomFilterDraft,
+  resetShowroomFilterDraft,
+} from '../.qa/domain/showroom-filter-editor.mjs';
+
+test('unified filter sections reject unknown editor URLs', () => {
+  for (const value of ['make', 'price', 'year', 'fuel', 'condition', 'more'])
+    assert.equal(showroomFilterTab(value), value);
+  for (const value of [null, '', 'payment', 'location', 'unknown'])
+    assert.equal(showroomFilterTab(value), null);
+});
+
+test('filter drafts combine sections without mutating the applied inventory or category', () => {
+  const applied = filters({ category: 'car', query: 'BMW' });
+  const baseline = structuredClone(applied);
+  let draft = updateShowroomFilterDraft(applied, { maxPrice: '50000', category: 'bike' });
+  draft = updateShowroomFilterDraft(draft, { condition: ['Used'] });
+  draft = updateShowroomFilterDraft(draft, applyMakeSelection(draft, 'BMW', ['1 Series'], false));
+  assert.deepEqual(applied, baseline);
+  assert.equal(draft.category, 'car');
+  assert.equal(draft.maxPrice, '50000');
+  assert.deepEqual(draft.condition, ['Used']);
+  assert.deepEqual(draft.makes, ['BMW']);
+  assert.equal(draft.query, 'BMW');
+});
+
+test('editor Reset discards only the draft and preserves the current vehicle category', () => {
+  const applied = filters({
+    category: 'bike',
+    makes: ['Honda'],
+    makeVariants: { Honda: 'CBR' },
+    maxPrice: '5000',
+  });
+  const baseline = structuredClone(applied);
+  const reset = resetShowroomFilterDraft(applied);
+  assert.deepEqual(applied, baseline);
+  assert.equal(reset.category, 'bike');
+  assert.deepEqual(reset.makes, []);
+  assert.deepEqual(reset.makeVariants, {});
+  assert.equal(reset.maxPrice, '');
+  reset.condition.push('Used');
+  assert.deepEqual(defaultFilters.condition, []);
+});
 
 test('service tabs omit categories the dealer does not offer', () => {
   const general = showroomServices.filter((service) => service.category === 'services');
@@ -696,4 +742,68 @@ test('service request summaries preserve the matching enquiry and omit unrelated
   assert.match(sold, /^Car sale \/ buyout enquiry/);
   assert.match(sold, /Mileage \(km\): 80000/);
   assert.doesNotMatch(sold, /Maximum budget/);
+});
+
+test('car steps do not require fields from later steps and sale year belongs to the car', () => {
+  const empty = emptyServiceRequest();
+  assert.deepEqual(Object.keys(validateServiceRequestStep('import', 0, empty, 2026)), [
+    'make',
+    'model',
+  ]);
+  assert.deepEqual(Object.keys(validateServiceRequestStep('sell', 0, empty, 2026)), [
+    'make',
+    'model',
+    'year',
+  ]);
+  const car = { ...empty, make: 'BMW', model: 'X3', email: 'not an email' };
+  assert.deepEqual(validateServiceRequestStep('import', 0, car, 2026), {});
+  assert.deepEqual(validateServiceRequestStep('sell', 0, { ...car, year: '2020' }, 2026), {});
+});
+
+test('detail steps validate the correct kind without trapping users on earlier or optional contact fields', () => {
+  const values = { ...emptyServiceRequest(), budget: '35000', mileage: '82000', email: 'invalid' };
+  assert.deepEqual(validateServiceRequestStep('import', 1, values, 2026), {});
+  assert.deepEqual(validateServiceRequestStep('sell', 1, values, 2026), {});
+  assert.ok(validateServiceRequestStep('import', 1, { ...values, budget: '0' }, 2026).budget);
+  assert.ok(validateServiceRequestStep('import', 1, { ...values, year: '2028' }, 2026).year);
+  assert.ok(
+    validateServiceRequestStep('import', 1, { ...values, listing: 'file:///car' }, 2026).listing,
+  );
+  assert.ok(validateServiceRequestStep('sell', 1, { ...values, mileage: '-1' }, 2026).mileage);
+  assert.ok(validateServiceRequestStep('sell', 1, { ...values, price: '-5' }, 2026).price);
+  assert.deepEqual(validateServiceRequestStep('import', 2, values, 2026), {
+    email: 'Enter a valid email address.',
+  });
+});
+
+test('final validation returns users to the earliest invalid step for the matching kind', () => {
+  assert.equal(
+    serviceRequestErrorStep('import', { email: 'invalid', budget: 'missing', make: 'missing' }),
+    0,
+  );
+  assert.equal(serviceRequestErrorStep('import', { year: 'invalid', email: 'invalid' }), 1);
+  assert.equal(serviceRequestErrorStep('sell', { year: 'invalid', mileage: 'missing' }), 0);
+  assert.equal(serviceRequestErrorStep('sell', { mileage: 'missing', email: 'invalid' }), 1);
+  assert.equal(serviceRequestErrorStep('sell', { email: 'invalid' }), 2);
+  assert.equal(serviceRequestErrorStep('import', {}), 0);
+  const unfinished = {
+    ...emptyServiceRequest(),
+    make: 'Toyota',
+    model: 'Corolla',
+    email: 'invalid',
+  };
+  assert.ok(validateServiceRequest('sell', unfinished, 2026).year);
+  assert.ok(validateServiceRequest('sell', unfinished, 2026).mileage);
+});
+
+test('unfinished drafts can be restored without being treated as completed enquiries', () => {
+  const incomplete = { ...emptyServiceRequest(), make: 'Toyota', model: 'Corolla' };
+  const restored = parseServiceRequest('sell', serializeServiceRequest('sell', incomplete));
+  assert.deepEqual(restored, incomplete);
+  assert.ok(validateServiceRequest('sell', restored, 2026).year);
+  assert.ok(validateServiceRequest('sell', restored, 2026).mileage);
+  assert.deepEqual(
+    parseServiceRequest('import', serializeServiceRequest('sell', incomplete)),
+    emptyServiceRequest(),
+  );
 });

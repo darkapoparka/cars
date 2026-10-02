@@ -19,6 +19,7 @@ const files = [
   'native-taxonomy',
   'showroom-services',
   'service-requests',
+  'showroom-filter-editor',
 ];
 await mkdir('.qa/domain/native-data', { recursive: true });
 for (const file of files) {

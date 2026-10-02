@@ -1,6 +1,11 @@
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 export const pickerStyles = stylex.create({
+  embedded: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0, minWidth: 0 },
+  embeddedHeader: { paddingTop: 8, minHeight: 56 },
+  embeddedInput: { fontSize: 16, lineHeight: '24px', height: 48, borderRadius: 12 },
+  selectedRow: { display: 'flex', alignItems: 'center', gap: 8, paddingRight: 8 },
+  selectedMake: { flex: '1', minWidth: 0, overflowWrap: 'anywhere' },
   header: {
     display: 'flex',
     alignItems: 'center',

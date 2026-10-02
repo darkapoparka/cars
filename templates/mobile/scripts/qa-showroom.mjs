@@ -111,9 +111,79 @@ async function run(name, engine) {
     await page.screenshot({ path: path.join(output, name + '-' + label + '.png') });
     report.captures.push(name + '-' + label + '.png');
   }
+  async function requestGeometry(label) {
+    await geometry(label);
+    const bounds = await page.locator('dialog[open]').evaluate((dialog) => {
+      const rect = dialog.getBoundingClientRect();
+      const footer = dialog.querySelector('[data-service-request-footer]').getBoundingClientRect();
+      const body = dialog.querySelector('[data-service-request-body]');
+      const content = body.getBoundingClientRect();
+      return {
+        contained:
+          rect.left >= -1 &&
+          rect.top >= -1 &&
+          rect.right <= innerWidth + 1 &&
+          rect.bottom <= innerHeight + 1,
+        footerVisible: footer.top >= rect.top && footer.bottom <= innerHeight + 1,
+        bodyHeight: body.clientHeight,
+        overflow: body.scrollWidth > body.clientWidth + 1,
+        fieldsContained: [...body.querySelectorAll('input,select,textarea')].every((field) => {
+          const box = field.getBoundingClientRect();
+          return box.left >= content.left - 1 && box.right <= content.right + 1;
+        }),
+      };
+    });
+    assert.equal(bounds.contained, true, label + ' dialog inside viewport');
+    assert.equal(bounds.footerVisible, true, label + ' actions visible');
+    assert.ok(bounds.bodyHeight > 0, label + ' scroll area available');
+    assert.equal(bounds.overflow, false, label + ' sheet horizontal overflow');
+    assert.equal(bounds.fieldsContained, true, label + ' fields inside sheet');
+  }
+  async function enlargeText() {
+    await page.evaluate(() => {
+      const sizes = [...document.querySelectorAll('body *')].map((element) => [
+        element,
+        getComputedStyle(element).fontSize,
+        getComputedStyle(element).lineHeight,
+      ]);
+      for (const [element, font, line] of sizes) {
+        element.style.fontSize = parseFloat(font) * 2 + 'px';
+        if (line.endsWith('px')) element.style.lineHeight = parseFloat(line) * 2 + 'px';
+      }
+    });
+  }
+  async function filterGeometry(label) {
+    await geometry(label);
+    const bounds = await page.locator('dialog[open]').evaluate((dialog) => {
+      const rect = dialog.getBoundingClientRect();
+      const footer = dialog.querySelector('[data-filter-footer]').getBoundingClientRect();
+      const panel = dialog.querySelector('#showroom-filter-options');
+      return {
+        contained:
+          rect.left >= -1 &&
+          rect.top >= -1 &&
+          rect.right <= innerWidth + 1 &&
+          rect.bottom <= innerHeight + 1,
+        actions: footer.top >= rect.top && footer.bottom <= innerHeight + 1,
+        scrollArea: panel.clientHeight > 0,
+        overflow: panel.scrollWidth > panel.clientWidth + 1,
+        fieldsContained: [...panel.querySelectorAll('input,select,textarea')]
+          .filter((field) => field.getClientRects().length)
+          .every((field) => {
+            const box = field.getBoundingClientRect();
+            return box.left >= rect.left - 1 && box.right <= rect.right + 1;
+          }),
+      };
+    });
+    for (const field of ['contained', 'actions', 'scrollArea', 'fieldsContained'])
+      assert.equal(bounds[field], true, label + ' ' + field);
+    assert.equal(bounds.overflow, false, label + ' options horizontal overflow');
+  }
   try {
     await go('/');
     await cars(4);
+    assert.equal(await page.getByRole('button', { name: 'Filters', exact: true }).count(), 0);
+    assert.equal(await page.locator('[data-quick-filter]').count(), 5);
     assert.deepEqual(
       await page
         .getByRole('navigation', { name: 'Main navigation' })
@@ -209,7 +279,7 @@ async function run(name, engine) {
     await page.getByRole('button', { name: 'Add vehicle', exact: true }).click();
     await page.getByRole('button', { name: 'Honda', exact: true }).click();
     await page.getByRole('textbox', { name: 'Model for Honda', exact: true }).fill('CBR');
-    await page.getByRole('button', { name: 'OK', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 0 motorbikes', exact: true }).click();
     assert.equal(new URL(page.url()).searchParams.get('makes'), 'Honda');
     await tabs.getByRole('tab', { name: 'Cars', exact: true }).click();
     await cars(1);
@@ -232,7 +302,7 @@ async function run(name, engine) {
       'CBR',
     );
     await page.keyboard.press('Escape');
-    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.locator('[data-quick-filter="more"]').click();
     await page.getByRole('button', { name: 'Reset', exact: true }).click();
     await page.getByRole('button', { name: 'Show 0 motorbikes', exact: true }).click();
     assert.equal(new URL(page.url()).searchParams.get('category'), 'bike');
@@ -245,7 +315,8 @@ async function run(name, engine) {
       'Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category',
     );
 
-    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.locator('[data-quick-filter="more"]').click();
+    await page.getByRole('tab', { name: 'Condition', exact: true }).click();
     await page.getByRole('checkbox', { name: 'Used', exact: true }).check();
     await page.getByRole('button', { name: 'Show 2 cars', exact: true }).click();
     await cars(2);
@@ -253,27 +324,46 @@ async function run(name, engine) {
       (await page.locator('#showroom-filter-count').textContent()).trim(),
       '1 active filter',
     );
-    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.locator('[data-quick-filter="more"]').click();
+    await page.getByRole('tab', { name: 'Condition', exact: true }).click();
     await page.getByRole('checkbox', { name: 'Used', exact: true }).uncheck();
     await page.getByRole('checkbox', { name: 'New', exact: true }).check();
     await page.getByRole('button', { name: 'Show 2 cars', exact: true }).click();
     await cars(2);
-    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.locator('[data-quick-filter="more"]').click();
+    await page.getByRole('tab', { name: 'Condition', exact: true }).click();
     await page.getByRole('checkbox', { name: 'Used', exact: true }).check();
     await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
     await cars(4);
     assert.equal(
-      await page
-        .getByRole('button', { name: 'Filters', exact: true })
-        .getAttribute('aria-describedby'),
+      await page.locator('[data-quick-filter="more"]').getAttribute('aria-describedby'),
       null,
     );
     check('Filter count reflects an applied condition and clears with Reset');
     check('Used/New condition choices live in Filters and work separately or together');
 
     await page.locator('[data-quick-filter="price"]').click();
+    await page.getByRole('textbox', { name: 'Price to', exact: true }).fill('50000');
+    await cars(4);
+    assert.equal(new URL(page.url()).searchParams.get('maxPrice'), null);
+    await page.getByRole('tab', { name: 'Year', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Year from', exact: true }).fill('2000');
+    await page.getByRole('tab', { name: 'Price', exact: true }).click();
+    assert.equal(
+      await page.getByRole('textbox', { name: 'Price to', exact: true }).inputValue(),
+      '50000',
+    );
+    await page.goBack();
+    await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+    await cars(4);
+    assert.equal(new URL(page.url()).searchParams.get('maxPrice'), null);
+    await page.locator('[data-quick-filter="price"]').click();
+    assert.equal(
+      await page.getByRole('textbox', { name: 'Price to', exact: true }).inputValue(),
+      '',
+    );
     await page.getByRole('textbox', { name: 'Price to', exact: true }).fill('50000');
     await page.getByRole('button', { name: 'Show 1 car', exact: true }).click();
     await cars(1);
@@ -291,12 +381,17 @@ async function run(name, engine) {
     const years = await page.locator('[data-showroom-vehicle]').locator('p').allTextContents();
     assert.ok(years.some((text) => text.includes('2025') || text.includes('2026')));
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
-    check('Price, year and fuel sheets update listings without a results-page step');
+    check(
+      'Filter tabs retain drafts; browser Back cancels; Show cars applies price/year/fuel to Home',
+    );
 
-    await page.getByRole('button', { name: 'Filters', exact: true }).click();
-    await page.getByRole('button', { name: 'Any make', exact: true }).click();
+    await page.locator('[data-quick-filter="more"]').click();
+    await page.getByRole('tab', { name: 'Make & model', exact: true }).click();
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
-    await page.getByRole('button', { name: 'OK', exact: true }).click();
+    await page.getByRole('tab', { name: 'Price', exact: true }).click();
+    await page.getByRole('tab', { name: 'Make & model', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Search models', exact: true }).waitFor();
+    assert.equal(await page.locator('dialog[open]').count(), 1);
     await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
@@ -310,13 +405,13 @@ async function run(name, engine) {
         key,
       );
     }
-    check('Existing make picker returns to all filters; Escape restores each opener');
+    check('Make/model stays inside one editor across tabs; Escape restores each opener');
 
     await page.locator('[data-quick-filter="make"]').click();
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
-    await page.getByRole('button', { name: 'OK', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 1 car', exact: true }).click();
     await cars(1);
     assert.equal(
       await page.locator('[data-showroom-vehicle]').getAttribute('data-showroom-vehicle'),
@@ -324,6 +419,26 @@ async function run(name, engine) {
     );
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
     check('Make and model selections filter the showroom stock');
+    await page.locator('[data-quick-filter="make"]').click();
+    await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
+    await page.getByRole('switch', { name: 'Exclude make', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
+    await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
+    await page.getByRole('button', { name: 'Show 3 cars', exact: true }).waitFor();
+    await page.getByRole('switch', { name: 'Exclude make', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 1 car', exact: true }).waitFor();
+    await page.getByRole('switch', { name: 'Exclude make', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 3 cars', exact: true }).click();
+    await cars(3);
+    assert.match(
+      await page.locator('[data-quick-filter="make"]').getAttribute('aria-label'),
+      /Exclude BMW/,
+    );
+    await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
+    await cars(4);
+    check(
+      'Include/exclude switching clears the opposite scope and exclusions remain visible on Home',
+    );
 
     await page.getByRole('button', { name: /^Sort cars:/ }).click();
     await page.getByRole('radio', { name: 'Price: low to high', exact: true }).click();
@@ -433,7 +548,8 @@ async function run(name, engine) {
     check('Service search finds buyout, persists in the URL and recovers from empty results');
     await page.getByRole('tab', { name: 'All', exact: true }).press('ArrowRight');
     await selectedServiceTab('Import');
-    await page.getByRole('form', { name: 'Car import enquiry' }).waitFor();
+    await page.getByRole('button', { name: 'Start import enquiry', exact: true }).waitFor();
+    assert.equal(await page.getByRole('form', { name: 'Car import enquiry' }).count(), 0);
     assert.equal(await page.locator('[data-import-example]').count(), 2);
     await page.getByRole('tab', { name: 'Import', exact: true }).press('ArrowRight');
     await selectedServiceTab('Sell your car');
@@ -552,20 +668,81 @@ async function run(name, engine) {
     );
     await go('/services?tab=import');
     await selectedServiceTab('Import');
-    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    const importStart = page.getByRole('button', { name: 'Start import enquiry', exact: true });
+    const saleStart = page.getByRole('button', { name: 'Start sale enquiry', exact: true });
+    const continueRequest = () =>
+      page.getByRole('button', { name: 'Continue', exact: true }).click();
+    const enquiry = page.locator('dialog[open]');
+    assert.equal(await page.getByRole('form', { name: 'Car import enquiry' }).count(), 0);
+    await importStart.click();
+    await page.getByRole('dialog', { name: 'Import a car', exact: true }).waitFor();
+    await page.waitForFunction(() => document.activeElement?.textContent === 'Your preferred car');
+    await page.getByRole('button', { name: 'Continue', exact: true }).focus();
+    await page.keyboard.press('Tab');
+    assert.equal(await page.locator(':focus').getAttribute('aria-label'), 'Close enquiry');
+    await page.keyboard.press('Shift+Tab');
+    assert.equal(await page.locator(':focus').innerText(), 'Continue');
+    assert.equal(new URL(page.url()).searchParams.get('request'), '1');
+    assert.equal(
+      await enquiry.getByRole('list', { name: 'Enquiry progress' }).getByRole('listitem').count(),
+      3,
+    );
+    await continueRequest();
     await page.getByText('Enter a make.', { exact: true }).waitFor();
     assert.equal(await page.locator(':focus').getAttribute('name'), 'make');
     await page.getByLabel('Make', { exact: true }).fill('BMW');
     await page.getByLabel('Model', { exact: true }).fill('X3');
+    await continueRequest();
+    await page.getByRole('heading', { name: 'Budget & preferences', exact: true }).waitFor();
+    assert.equal(await page.getByLabel('Email (optional)', { exact: true }).count(), 0);
+    await continueRequest();
+    await page.getByText('Enter a budget greater than zero.', { exact: true }).waitFor();
+    assert.equal(await page.locator(':focus').getAttribute('name'), 'budget');
     await page.getByLabel('Maximum budget (€)', { exact: true }).fill('35000');
+    await page.getByRole('button', { name: 'Back', exact: true }).click();
+    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
+    await page.goBack();
+    await enquiry.waitFor({ state: 'hidden' });
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'import');
+    assert.equal(new URL(page.url()).searchParams.get('request'), null);
+    assert.equal(await importStart.evaluate((button) => button === document.activeElement), true);
+    await importStart.press('Enter');
+    await enquiry.waitFor();
+    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
+    await page.keyboard.press('Escape');
+    await enquiry.waitFor({ state: 'hidden' });
+    assert.equal(await importStart.evaluate((button) => button === document.activeElement), true);
+    await importStart.click();
+    await continueRequest();
+    assert.equal(
+      await page.getByLabel('Maximum budget (€)', { exact: true }).inputValue(),
+      '35000',
+    );
+    await continueRequest();
+    await page.getByRole('heading', { name: 'Contact & review', exact: true }).waitFor();
+    assert.match(
+      await page.getByRole('region', { name: 'Car details summary' }).innerText(),
+      /BMW X3/,
+    );
+    await page.getByLabel('Email (optional)', { exact: true }).fill('invalid');
     await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
-    await page.getByText('Import draft saved on this device.', { exact: true }).waitFor();
+    await page.getByText('Enter a valid email address.', { exact: true }).waitFor();
+    assert.equal(await page.locator(':focus').getAttribute('name'), 'email');
+    await page.getByLabel('Email (optional)', { exact: true }).fill('');
+    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    await page
+      .getByText('Import draft saved on this device. Nothing was sent.', { exact: true })
+      .waitFor();
     assert.equal(sentRequests, 0);
     await page.reload({ waitUntil: 'load' });
-    await page.waitForFunction(
-      () => document.querySelector('input[name="budget"]')?.value === '35000',
+    await enquiry.waitFor();
+    await page.waitForFunction(() => document.querySelector('input[name="model"]')?.value === 'X3');
+    await continueRequest();
+    assert.equal(
+      await page.getByLabel('Maximum budget (€)', { exact: true }).inputValue(),
+      '35000',
     );
-    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
+    await continueRequest();
     await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
     await page.getByRole('link', { name: 'View enquiry draft', exact: true }).click();
     assert.equal(new URL(page.url()).searchParams.get('service'), 'import');
@@ -577,27 +754,82 @@ async function run(name, engine) {
     await selectedServiceTab('Import');
     await page.getByRole('tab', { name: 'Sell your car', exact: true }).click();
     await selectedServiceTab('Sell your car');
+    assert.equal(await page.getByRole('form', { name: 'Car sale enquiry' }).count(), 0);
+    await saleStart.click();
+    await page.getByRole('dialog', { name: 'Sell your car', exact: true }).waitFor();
     assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), '');
     await page.getByLabel('Make', { exact: true }).fill('Toyota');
     await page.getByLabel('Model', { exact: true }).fill('Corolla');
     await page.getByLabel('Year', { exact: true }).fill('2020');
+    await continueRequest();
+    await continueRequest();
+    await page.getByText('Enter the mileage in kilometres.', { exact: true }).waitFor();
     await page.getByLabel('Mileage (km)', { exact: true }).fill('82000');
+    await continueRequest();
     await page.getByRole('button', { name: 'Save sale draft', exact: true }).click();
-    await page.getByText('Sale draft saved on this device.', { exact: true }).waitFor();
+    await page
+      .getByText('Sale draft saved on this device. Nothing was sent.', { exact: true })
+      .waitFor();
+    await page.getByRole('button', { name: 'Done', exact: true }).click();
+    await enquiry.waitFor({ state: 'hidden' });
     await page.reload({ waitUntil: 'load' });
+    await saleStart.click();
     await page.waitForFunction(
       () => document.querySelector('input[name="model"]')?.value === 'Corolla',
     );
+    await page.getByRole('button', { name: 'Close enquiry', exact: true }).click();
+    await enquiry.waitFor({ state: 'hidden' });
     await page.getByRole('tab', { name: 'Import', exact: true }).click();
+    await importStart.click();
     await page.waitForFunction(() => document.querySelector('input[name="model"]')?.value === 'X3');
+    await continueRequest();
     assert.equal(
       await page.getByLabel('Maximum budget (€)', { exact: true }).inputValue(),
       '35000',
     );
     assert.equal(sentRequests, 0);
     check(
-      'Import/sale forms validate, persist independently, retain enquiry context and send no request',
+      'Import/sale steppers validate each stage, recover drafts, restore focus, retain context and send no request',
     );
+    await page.keyboard.press('Escape');
+    await enquiry.waitFor({ state: 'hidden' });
+    await go('/services?tab=sell&request=1');
+    await enquiry.waitFor();
+    const directHistoryLength = await page.evaluate(() => history.length);
+    await page.getByRole('button', { name: 'Close enquiry', exact: true }).click();
+    await enquiry.waitFor({ state: 'hidden' });
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'sell');
+    assert.equal(new URL(page.url()).searchParams.get('request'), null);
+    assert.equal(await page.evaluate(() => history.length), directHistoryLength);
+    check('Direct overlay links dismiss in place without leaving the service route');
+    await go('/services?tab=import');
+    await importStart.click();
+    await page.evaluate(() => {
+      window.__qaStorageSetItem = Storage.prototype.setItem;
+      Storage.prototype.setItem = function (key, value) {
+        if (key.startsWith('cars-mobile-service-request-v1:'))
+          throw new Error('Storage unavailable in QA');
+        return window.__qaStorageSetItem.call(this, key, value);
+      };
+    });
+    await page.getByLabel('Make', { exact: true }).fill('BMW draft');
+    await page
+      .getByText('Saving is unavailable. Keep this sheet open to retain your details.', {
+        exact: true,
+      })
+      .waitFor();
+    await continueRequest();
+    await continueRequest();
+    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    assert.equal(await page.getByRole('heading', { name: 'Draft saved', exact: true }).count(), 0);
+    await page.evaluate(() => {
+      Storage.prototype.setItem = window.__qaStorageSetItem;
+      delete window.__qaStorageSetItem;
+    });
+    assert.equal(sentRequests, 0);
+    await page.keyboard.press('Escape');
+    await enquiry.waitFor({ state: 'hidden' });
+    check('Unavailable draft storage retains in-memory values and never reports a successful save');
     await go('/vehicle/bmw-x6');
     await page.getByRole('link', { name: 'Enquire', exact: true }).click();
     assert.match(
@@ -630,11 +862,48 @@ async function run(name, engine) {
           await go('/services?tab=' + tab);
           await geometry(width + 'px service ' + tab);
           await capture('services-' + tab + '-' + width);
+          if (tab === 'import' || tab === 'sell') {
+            await page
+              .getByRole('button', {
+                name: tab === 'import' ? 'Start import enquiry' : 'Start sale enquiry',
+                exact: true,
+              })
+              .click();
+            for (let step = 0; step < 3; step++) {
+              await page
+                .locator('dialog[open] [aria-current="step"]')
+                .filter({ hasText: ['Car', 'Details', 'Review'][step] })
+                .waitFor();
+              await requestGeometry(width + 'px ' + tab + ' step ' + (step + 1));
+              await capture('services-' + tab + '-step' + (step + 1) + '-' + width);
+              if (step < 2) await continueRequest();
+            }
+            await page.keyboard.press('Escape');
+            await enquiry.waitFor({ state: 'hidden' });
+          }
         }
+      }
+      for (const width of [320, 390, 1440]) {
+        await page.setViewportSize({ width, height: width === 1440 ? 1000 : 844 });
+        await go('/');
+        await page.locator('[data-quick-filter="make"]').click();
+        for (const section of ['Make & model', 'Price', 'Year', 'Fuel', 'Condition', 'More']) {
+          await page.getByRole('tab', { name: section, exact: true }).click();
+          assert.equal(await page.locator('dialog[open]').count(), 1);
+          await filterGeometry(width + 'px filter ' + section);
+          await capture(
+            'filters-' +
+              section.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and') +
+              '-' +
+              width,
+          );
+        }
+        await page.keyboard.press('Escape');
+        await page.locator('dialog[open]').waitFor({ state: 'hidden' });
       }
       await page.setViewportSize({ width: 320, height: 480 });
       await go('/');
-      for (const label of ['Filters', 'Price filters', 'Sort cars: Recommended']) {
+      for (const label of ['More filters', 'Price filters', 'Sort cars: Recommended']) {
         await page.getByRole('button', { name: label, exact: true }).click();
         const dialog = page.locator('dialog[open]');
         const box = await dialog.boundingBox();
@@ -652,6 +921,31 @@ async function run(name, engine) {
         await capture('short-' + label.split(' ')[0].toLowerCase());
         await page.keyboard.press('Escape');
       }
+      for (const tab of ['make', 'price', 'year', 'fuel', 'condition', 'more']) {
+        await go('/?filter=' + tab);
+        await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
+        await filterGeometry('320x480 filter ' + tab);
+        await capture('short-filters-' + tab);
+        await page.getByRole('button', { name: 'Close filters', exact: true }).click();
+        await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+        assert.equal(new URL(page.url()).searchParams.get('filter'), null);
+      }
+      for (const tab of ['import', 'sell']) {
+        await page.setViewportSize({ width: 320, height: 480 });
+        await go('/services?tab=' + tab + '&request=1');
+        await enquiry.waitFor();
+        for (let step = 0; step < 3; step++) {
+          await page
+            .locator('dialog[open] [aria-current="step"]')
+            .filter({ hasText: ['Car', 'Details', 'Review'][step] })
+            .waitFor();
+          await requestGeometry('320x480 ' + tab + ' step ' + (step + 1));
+          await capture('short-' + tab + '-step' + (step + 1));
+          if (step < 2) await continueRequest();
+        }
+        await page.keyboard.press('Escape');
+        await enquiry.waitFor({ state: 'hidden' });
+      }
       await page.setViewportSize({ width: 320, height: 700 });
       for (const route of [
         '/',
@@ -664,24 +958,37 @@ async function run(name, engine) {
         '/contact?service=parts',
       ]) {
         await go(route);
-        await page.evaluate(() => {
-          const sizes = [...document.querySelectorAll('body *')].map((element) => [
-            element,
-            getComputedStyle(element).fontSize,
-            getComputedStyle(element).lineHeight,
-          ]);
-          for (const [element, font, line] of sizes) {
-            element.style.fontSize = parseFloat(font) * 2 + 'px';
-            if (line.endsWith('px')) element.style.lineHeight = parseFloat(line) * 2 + 'px';
-          }
-        });
+        await enlargeText();
         await geometry('320px 200% text ' + route);
         await capture(
           (route === '/' ? 'cars' : route.slice(1).replaceAll('?', '-').replaceAll('=', '-')) +
             '-320-text200',
         );
       }
-      check('320/390/1440px routes, short-height sheets and 200% text reflow');
+      for (const tab of ['import', 'sell']) {
+        for (let step = 0; step < 3; step++) {
+          await go('/services?tab=' + tab + '&request=1');
+          await enquiry.waitFor();
+          for (let previous = 0; previous < step; previous++) await continueRequest();
+          await page
+            .locator('dialog[open] [aria-current="step"]')
+            .filter({ hasText: ['Car', 'Details', 'Review'][step] })
+            .waitFor();
+          await enlargeText();
+          await requestGeometry('320px 200% ' + tab + ' step ' + (step + 1));
+          await capture('services-' + tab + '-step' + (step + 1) + '-320-text200');
+        }
+      }
+      for (const tab of ['make', 'price', 'year', 'fuel', 'condition', 'more']) {
+        await go('/?filter=' + tab);
+        await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
+        await enlargeText();
+        await filterGeometry('320px 200% filter ' + tab);
+        await capture('filters-' + tab + '-320-text200');
+      }
+      check(
+        '320/390/1440px routes, short-height editors/steppers, reachable actions and 200% text reflow',
+      );
     }
     await settle();
     console.log(

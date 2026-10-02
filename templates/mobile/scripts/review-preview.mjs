@@ -8,8 +8,15 @@ import { prepareReferenceAssets } from './prepare-reference-assets.mjs';
 const mode = process.argv[2];
 if (!['dev', 'build', 'start'].includes(mode)) throw new Error('Expected dev, build or start');
 const root = fileURLToPath(new URL('../', import.meta.url));
+const defaultDevDir =
+  process.platform === 'win32' &&
+  fs.existsSync(path.join(root, '.next')) &&
+  fs.lstatSync(path.join(root, '.next')).isSymbolicLink()
+    ? '.next-preview-6474'
+    : '.next';
 const distDir =
-  process.env.NEXT_DIST_DIR || (mode === 'dev' || process.env.VERCEL ? '.next' : '.next-review');
+  process.env.NEXT_DIST_DIR ||
+  (mode === 'dev' ? defaultDevDir : process.env.VERCEL ? '.next' : '.next-review');
 const env = { ...process.env, NEXT_DIST_DIR: distDir };
 // Next's relative client entries need the project-facing dependency paths on Windows.
 // Preserve junction paths when dependencies live on another drive.
@@ -18,6 +25,12 @@ if (
   path.parse(fs.realpathSync(path.join(root, 'node_modules'))).root.toLowerCase() !==
     path.parse(root).root.toLowerCase()
 ) {
+  if (mode === 'dev' && !env.NEXT_WEBPACK_CACHE_DIR) {
+    const dependencyCacheRoot = path.dirname(
+      path.dirname(fs.realpathSync(path.join(root, 'node_modules'))),
+    );
+    env.NEXT_WEBPACK_CACHE_DIR = path.join(dependencyCacheRoot, 'dev-webpack-cache');
+  }
   env.NODE_OPTIONS = [process.env.NODE_OPTIONS, '--preserve-symlinks', '--preserve-symlinks-main']
     .filter(Boolean)
     .join(' ');

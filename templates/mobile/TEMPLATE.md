@@ -17,6 +17,14 @@ The bottom navigation is Cars / Services / Contact. Saved cars live in the heade
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
+Every Home filter pill opens one editor with the same underline tabs: Make & model,
+Price, Year, Fuel, Condition and More. Options update a draft; Show cars applies it.
+Close, Escape and browser Back cancel unapplied changes. The native make/model
+controls are embedded in that editor instead of opening another dialog.
+Services has All / Import / Sell your car tabs. Import and Sell show short overviews
+and start a three-step enquiry sheet. Drafts stay on the device; forms do not send
+an enquiry or invent a valuation.
+
 The imported marketplace screens and taxonomy remain reference source. Old
 `/search` and `/results` entry links resolve to Cars. Fixture data and local storage
 keep the template usable without a live dealer service. Contact saves local enquiry
@@ -39,7 +47,11 @@ From this directory run `npm ci`, then `npm run check`.
 `npm run dev` uses the same port; run one mode at a time.
 Dev and production share the preview launcher, which preserves project-facing
 dependency paths for Windows junctions on another drive. Dev writes to `.next`;
-the local production build writes to `.next-review`.
+on Windows an existing `.next` junction selects the physical `.next-preview-6474`
+fallback. The local production build writes to `.next-review`. For dependencies on
+another drive, the launcher also supplies an external `NEXT_WEBPACK_CACHE_DIR`
+for dev. Route output stays on the source drive while large webpack caches use
+the dependency cache location. Explicit cache paths and `NEXT_DIST_DIR` remain supported.
 The shared launcher also supports this template:
 
 ```powershell
@@ -54,7 +66,7 @@ Keep source and build unchanged during acceptance.
 
 Brand boundaries are `src/lib/showroom.ts`, `src/app/layout.tsx`,
 `src/styles/tokens.stylex.ts`, `src/lib/catalog.ts` and `public/`.
-The header uses a neutral text placeholder until an actual dealer logo is supplied.
+The header uses a fictional SHOWROOM placeholder logo until an actual dealer logo is supplied.
 The showroom configuration holds verified logo, phone, email, address, directions
 and opening hours; absent contact details do not create invented call/map links.
 Replace sample stock, imagery and captured detail facts for a real dealer proposal.

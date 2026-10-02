@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { ArrowDownUp, SlidersHorizontal } from 'lucide-react';
+import { ArrowDownUp } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -18,9 +18,9 @@ import {
 } from '@/lib/showroom';
 import { Header } from './Header';
 import { Icon } from './Icon';
-import { MakePicker } from './MakePicker';
-import { CategoryMakePicker } from './CategoryMakePicker';
-import { ShowroomFilterSheet, type ShowroomSheet } from './ShowroomFilterSheet';
+import { showroomFilterTab, type ShowroomFilterTab } from '@/lib/showroom-filter-editor';
+import { excludedMakeNames, makeSelectionSummary } from '@/lib/make-selection';
+import { ShowroomFilterSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
@@ -155,23 +155,19 @@ export function ShowroomInventoryScreen() {
   const query = params.toString();
   const filters = showroomFilters(parseFilters(query));
   const sort = showroomSorts.find(([value]) => value === params.get('sort'))?.[0] || 'standard';
-  const [sheet, setSheet] = useState<ShowroomSheet | 'make' | 'sort' | null>(null);
-  const [returnToFilters, setReturnToFilters] = useState(false);
+  const [sorting, setSorting] = useState(false);
+  const sheet = showroomFilterTab(params.get('filter'));
   const opener = useRef<HTMLButtonElement | null>(null);
   const category = showroomCategory(filters.category);
+  const excludedNames = excludedMakeNames(filters);
   const stock = vehicles.filter((vehicle) => vehicle.category === filters.category);
-  const stockMakes = [...new Set(stock.map((vehicle) => vehicle.make))];
   const results = sortVehicles(filterVehicles(stock, filters), sort);
   const active =
     showroomInventoryHref(filters) !==
     showroomInventoryHref({ ...defaultFilters, category: filters.category });
-  const activeFilterCount = [
-    filters.makes.length || filters.excludedMakes.length || filters.models.length,
+  const otherFilterCount = [
     filters.condition.length,
-    filters.minPrice || filters.maxPrice,
-    filters.minYear || filters.maxYear,
     filters.minMileage || filters.maxMileage,
-    filters.fuel.length,
     filters.transmission.length,
     filters.body.length,
     filters.color.length,
@@ -211,21 +207,36 @@ export function ShowroomInventoryScreen() {
     patchState({ filters: next, inventorySort: sort });
     window.scrollTo(0, 0);
   }
-  function openSheet(value: ShowroomSheet | 'make' | 'sort', button: HTMLButtonElement) {
+  function openSheet(value: ShowroomFilterTab | 'sort', button: HTMLButtonElement) {
     opener.current = button;
     button.focus({ preventScroll: true });
-    setSheet(value);
+    if (value === 'sort') setSorting(true);
+    else {
+      const url = new URL(window.location.href);
+      url.searchParams.set('filter', value);
+      window.history.pushState({ carsMobileFilterEditor: true }, '', url.pathname + url.search);
+    }
   }
   function close() {
-    setSheet(null);
-    setReturnToFilters(false);
+    setSorting(false);
+    if (sheet) {
+      if (window.history.state?.carsMobileFilterEditor) window.history.back();
+      else window.history.replaceState(null, '', showroomInventoryHref(filters, sort));
+    }
     requestAnimationFrame(() => opener.current?.focus({ preventScroll: true }));
   }
-  function closeMake() {
-    if (returnToFilters) {
-      setSheet('all');
-      setReturnToFilters(false);
-    } else close();
+  function selectFilterTab(value: ShowroomFilterTab) {
+    const url = new URL(window.location.href);
+    url.searchParams.set('filter', value);
+    window.history.replaceState(
+      window.history.state?.carsMobileFilterEditor ? { carsMobileFilterEditor: true } : null,
+      '',
+      url.pathname + url.search,
+    );
+  }
+  function applyFilters(next: Filters) {
+    change(next);
+    requestAnimationFrame(() => opener.current?.focus({ preventScroll: true }));
   }
   const priceLabel =
     filters.minPrice || filters.maxPrice
@@ -243,11 +254,15 @@ export function ShowroomInventoryScreen() {
           ? 'From ' + filters.minYear
           : 'To ' + filters.maxYear
       : 'Year';
-  const pills: { key: 'make' | ShowroomSheet; label: string; active: boolean; name: string }[] = [
+  const pills: { key: ShowroomFilterTab; label: string; active: boolean; name: string }[] = [
     {
       key: 'make',
-      label: filters.makes.join(', ') || 'Make',
-      active: Boolean(filters.makes.length || filters.excludedMakes.length),
+      label:
+        filters.makes.length === 1 && filters.models.length
+          ? filters.makes[0] + ' · ' + makeSelectionSummary(filters, filters.makes[0])
+          : filters.makes.join(', ') ||
+            (excludedNames.length ? 'Exclude ' + excludedNames.join(', ') : 'Make & model'),
+      active: Boolean(filters.makes.length || excludedNames.length || filters.models.length),
       name: 'Make and model',
     },
     {
@@ -268,6 +283,7 @@ export function ShowroomInventoryScreen() {
       active: Boolean(filters.fuel.length),
       name: 'Fuel',
     },
+    { key: 'more', label: 'More', active: otherFilterCount > 0, name: 'More' },
   ];
   return (
     <>
@@ -291,27 +307,6 @@ export function ShowroomInventoryScreen() {
           onChange={selectCategory}
         />
         <div {...stylex.props(s.filterRow)}>
-          <button
-            type="button"
-            aria-label="Filters"
-            aria-describedby={activeFilterCount > 0 ? 'showroom-filter-count' : undefined}
-            aria-haspopup="dialog"
-            onClick={(event) => openSheet('all', event.currentTarget)}
-            {...stylex.props(s.pill, activeFilterCount > 0 && s.selectedPill)}
-          >
-            <SlidersHorizontal size={18} strokeWidth={2} aria-hidden="true" />
-            Filters
-            {activeFilterCount > 0 && (
-              <>
-                <span aria-hidden="true" {...stylex.props(s.filterCount)}>
-                  {activeFilterCount}
-                </span>
-                <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
-                  {activeFilterCount} active {activeFilterCount === 1 ? 'filter' : 'filters'}
-                </span>
-              </>
-            )}
-          </button>
           <div aria-label="Quick filters" {...stylex.props(s.filterScroll)}>
             {pills.map((pill) => (
               <button
@@ -320,10 +315,23 @@ export function ShowroomInventoryScreen() {
                 data-quick-filter={pill.key}
                 aria-label={pill.name + ' filters' + (pill.active ? ': ' + pill.label : '')}
                 aria-haspopup="dialog"
+                aria-describedby={
+                  pill.key === 'more' && otherFilterCount > 0 ? 'showroom-filter-count' : undefined
+                }
                 onClick={(event) => openSheet(pill.key, event.currentTarget)}
                 {...stylex.props(s.pill, pill.active && s.selectedPill)}
               >
                 <span {...stylex.props(s.pillText)}>{pill.label}</span>
+                {pill.key === 'more' && otherFilterCount > 0 && (
+                  <>
+                    <span aria-hidden="true" {...stylex.props(s.filterCount)}>
+                      {otherFilterCount}
+                    </span>
+                    <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
+                      {otherFilterCount} active {otherFilterCount === 1 ? 'filter' : 'filters'}
+                    </span>
+                  </>
+                )}
                 <Icon name="down" size={16} />
               </button>
             ))}
@@ -389,33 +397,16 @@ export function ShowroomInventoryScreen() {
         )}
         <p {...stylex.props(s.note)}>Sample inventory · Showroom template preview</p>
       </section>
-      {sheet === 'make' && filters.category === 'car' && (
-        <MakePicker
-          open
-          availableMakes={stockMakes}
-          filters={filters}
-          onApply={change}
-          onClose={closeMake}
-        />
-      )}
-      {sheet === 'make' && filters.category !== 'car' && (
-        <CategoryMakePicker filters={filters} onApply={change} onClose={closeMake} />
-      )}
-      {sheet && sheet !== 'make' && sheet !== 'sort' && (
+      {sheet && (
         <ShowroomFilterSheet
           sheet={sheet}
           filters={filters}
-          count={results.length}
-          onChange={change}
+          onApply={applyFilters}
           onClose={close}
-          onReset={reset}
-          onMake={() => {
-            setReturnToFilters(true);
-            setSheet('make');
-          }}
+          onTabChange={selectFilterTab}
         />
       )}
-      <Modal open={sheet === 'sort'} onClose={close} label={'Sort ' + category.plural}>
+      <Modal open={sorting} onClose={close} label={'Sort ' + category.plural}>
         <div {...stylex.props(s.modalHead)}>
           <h2 {...stylex.props(ui.title)}>Sort {category.plural}</h2>
           <IconButton icon="close" label="Close sorting" onClick={close} />

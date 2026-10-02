@@ -91,6 +91,11 @@ const s = stylex.create({
     '::-webkit-inner-spin-button': { appearance: 'none' },
   },
   unit: { fontSize: 14, flexShrink: 0 },
+  comfortableRoot: { fontSize: 16 },
+  comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,10em),1fr))' },
+  comfortableField: { minHeight: 52, borderRadius: 12, borderColor: colors.line },
+  comfortableText: { fontSize: 16, lineHeight: '24px' },
+  comfortableFill: { backgroundColor: colors.accent },
 });
 type Props = {
   label: string;
@@ -100,6 +105,7 @@ type Props = {
   ceiling: number;
   step?: number;
   unit?: string;
+  comfortable?: boolean;
   onChange: (min: string, max: string) => void;
 };
 export function RangeField({
@@ -110,6 +116,7 @@ export function RangeField({
   ceiling,
   step = 1,
   unit = '',
+  comfortable = false,
   onChange,
 }: Props) {
   const drag = useRef<{ id: number; side: 'from' | 'to' } | null>(null);
@@ -145,7 +152,7 @@ export function RangeField({
     else to(value === ceiling ? '' : String(Math.max(value, low)));
   }
   return (
-    <div {...stylex.props(s.root)}>
+    <div {...stylex.props(s.root, comfortable && s.comfortableRoot)}>
       <div {...stylex.props(s.head)}>
         <h3 {...stylex.props(s.title)}>{label}</h3>
         <output {...stylex.props(s.summary)}>{summary}</output>
@@ -179,6 +186,7 @@ export function RangeField({
               ((low - floor) / (ceiling - floor)) * 100,
               ((ceiling - high) / (ceiling - floor)) * 100,
             ),
+            comfortable && s.comfortableFill,
           )}
         />
         <input
@@ -214,8 +222,8 @@ export function RangeField({
           {...stylex.props(s.slider)}
         />
       </div>
-      <div {...stylex.props(s.inputs)}>
-        <label {...stylex.props(s.field)}>
+      <div {...stylex.props(s.inputs, comfortable && s.comfortableInputs)}>
+        <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
           <input
             aria-label={label + ' from'}
             inputMode="numeric"
@@ -224,11 +232,11 @@ export function RangeField({
             value={min}
             onChange={(e) => from(e.target.value)}
             placeholder="from"
-            {...stylex.props(s.input)}
+            {...stylex.props(s.input, comfortable && s.comfortableText)}
           />
-          {unit && <span {...stylex.props(s.unit)}>{unit}</span>}
+          {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
         </label>
-        <label {...stylex.props(s.field)}>
+        <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
           <input
             aria-label={label + ' to'}
             inputMode="numeric"
@@ -237,9 +245,9 @@ export function RangeField({
             value={max}
             onChange={(e) => to(e.target.value)}
             placeholder="to"
-            {...stylex.props(s.input)}
+            {...stylex.props(s.input, comfortable && s.comfortableText)}
           />
-          {unit && <span {...stylex.props(s.unit)}>{unit}</span>}
+          {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
         </label>
       </div>
     </div>

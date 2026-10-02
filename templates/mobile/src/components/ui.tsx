@@ -194,6 +194,22 @@ const s = stylex.create({
     backgroundColor: '#fdfcff',
     '::backdrop': { backgroundColor: 'rgba(0,0,0,.33)' },
   },
+  flowSheet: {
+    width: { default: '100%', '@media (min-width: 700px)': 'calc(100% - 48px)' },
+    height: {
+      default: '100dvh',
+      '@media (min-width: 700px)': 'min(760px, calc(100dvh - 48px))',
+    },
+    maxHeight: { default: '100dvh', '@media (min-width: 700px)': 'calc(100dvh - 48px)' },
+    maxWidth: 640,
+    padding: 0,
+    margin: 'auto',
+    borderRadius: { default: 0, '@media (min-width: 700px)': 20 },
+    display: { default: 'flex', ':not([open])': 'none' },
+    flexDirection: 'column',
+    overflow: 'hidden',
+    '::backdrop': { backgroundColor: 'rgba(0,0,0,.4)' },
+  },
   wideDialog: { width: 'calc(100% - 48px)', padding: 0 },
   pickerHeight: (height: number) => ({ height: `min(${height}px, calc(100dvh - 44px))` }),
   pickerDialog: {
@@ -357,6 +373,7 @@ export function Modal({
   wide = false,
   sorting = false,
   fullScreen = false,
+  flowSheet = false,
   material = false,
   selection = false,
   picker = false,
@@ -374,6 +391,7 @@ export function Modal({
   wide?: boolean;
   sorting?: boolean;
   fullScreen?: boolean;
+  flowSheet?: boolean;
   material?: boolean;
   selection?: boolean;
   picker?: boolean;
@@ -410,6 +428,7 @@ export function Modal({
         wide && s.wideDialog,
         sorting && s.sortingDialog,
         fullScreen && s.fullScreenDialog,
+        flowSheet && s.flowSheet,
         material && s.materialDialog,
         selection && s.selectionDialog,
         picker && s.pickerDialog,
