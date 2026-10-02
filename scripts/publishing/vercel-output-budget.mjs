@@ -21,7 +21,12 @@ export function auditVercelOutput(outputRoot, { maxBytes = 512 * 1024 * 1024, ma
         } catch { unsafe.push({ path: relative, reason: 'unrecognized-or-external-output-link' }); }
         continue;
       }
-      const own = /(?:^|\/)static\//.test(relative) ? relative.split('/static/')[0] === relative ? 'static' : relative.split('/static/')[0] + '/static' : relative.match(/^(.*?functions\/.*?\.func)(?:\/|$)/)?.[1] || group;
+      // Keep the enclosing output category. A runtime dependency named static/
+      // is still part of its Function; public URL folders are still static assets.
+      const parts = relative.split('/');
+      const own = group !== 'metadata' ? group
+        : parts.at(-1) === 'static' ? relative
+        : relative.match(/^(.*?functions\/.*?\.func)(?:\/|$)/)?.[1] || group;
       if (entry.isDirectory()) { walk(full, own); continue; }
       if (!entry.isFile()) continue;
       const row = groups.get(own) || { name: own, files: 0, bytes: 0 };

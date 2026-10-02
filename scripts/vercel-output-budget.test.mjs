@@ -60,3 +60,24 @@ test('pnpm directory-link entries in NFT are metadata, not whole dependency-tree
   const report = auditNextTraces(root); assert.equal(report.passed, true);
   assert.equal(report.uniqueBytes, 5); assert.equal(report.dependencyAliases, 1);
 });
+
+test('static-named folders inside a Function remain charged to that function budget', t => {
+  const root = fixture(t, { 'config.json': { version: 3 },
+    'functions/server.func/index.js': '123',
+    'functions/server.func/node_modules/lib/static/large.js': '0123456789',
+    'static/catalogue.webp': 'image' });
+  const report = auditVercelOutput(root, { maxFunctionBytes: 12 });
+  assert.equal(report.groups.find(g => g.name === 'functions/server.func').bytes, 13);
+  assert.equal(report.passed, false);
+  assert.equal(report.oversizedFunctions.length, 1);
+});
+test('function-like public URL names remain static files, including nested static directories', t => {
+  const root = fixture(t, { 'config.json': { version: 3 },
+    'static/functions/demo.func/image.webp': 'photo',
+    'services/app/static/assets/static/font.woff2': 'font' });
+  const report = auditVercelOutput(root, { maxFunctionBytes: 1 });
+  assert.equal(report.passed, true);
+  assert.equal(report.groups.filter(g => g.name.endsWith('.func')).length, 0);
+  assert.equal(report.groups.find(g => g.name === 'static').bytes, 5);
+  assert.equal(report.groups.find(g => g.name === 'services/app/static').bytes, 4);
+});

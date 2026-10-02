@@ -1,6 +1,8 @@
 # Template releases from Cars
 
-The editable masters are `templates/{auto-best,modern,carwow,import}` in `darkapoparka/cars`. Work on Cars main. `templates.lock.json` selects an immutable commit and subtree for dealer creation and explicit updates. Editing a template changes neither that selection nor existing dealers.
+The editable masters are `templates/{auto-best,modern,carwow,import,app}` in `darkapoparka/cars`. Work on Cars main. `templates.lock.json` selects an immutable commit and subtree for dealer creation and explicit updates. Editing a template changes neither that selection nor existing dealers.
+
+The dedicated `cars-template-*` repositories remain publishing mirrors for standalone previews and provenance, not independently editable masters. For the pending five-design fleet release, follow [the combined Vercel release plan](VERCEL-COMBINED-RELEASE-PLAN.md). Mobile and Boxcar Updated remain candidates until explicitly selected and integrated.
 
 ## Develop and select a release
 
@@ -24,7 +26,7 @@ node scripts/template-release.mjs verify --key carwow
 
 The CLI fetches Cars main first. Evidence must bind `repository`, `commit`, `sourcePath`, `sourceTree` and `sourceDigest`; record `approved: true`, `verifiedAt`, `runtime`, passed `checks`, and `standalone.mobile` / `standalone.desktop`. Record mounted support separately in `modes`. Source approval does not by itself establish dealer deployment or owner visual acceptance.
 
-All current templates contain native EN/BG localization. Their release evidence must also include exact-source `nativeLocalization` acceptance, including the required catalog, routing, preference, isolation, security, mounted and public checks plus the matching public deployment. Prior standalone QA cannot be relabeled as proof for a new Cars commit. Missing evidence is a release hold to resolve through verification, not an extra owner permission step.
+The native Auto Best, Modern, Carwow and Import release evidence must include exact-source `nativeLocalization` acceptance, including the required catalog, routing, preference, isolation, security, mounted and public checks plus the matching public deployment. App is also selected in the release lock, but its fourth-design integration retains the separate App collector, dealer adapter and `.cars-app.json` source receipt; follow [APP-VARIANT](APP-VARIANT.md) rather than fabricating the native trio receipt for App. Prior standalone QA cannot be relabeled as proof for a new Cars commit. Missing evidence is a release hold to resolve through verification, not an extra owner permission step.
 
 The write changes only the release lock. Commit the lock and its review evidence together. The copier exports that exact Git subtree even if the working template has newer development edits. A malformed source locator is rejected; it cannot fall back to loose working files. Neither approval nor copying publishes a dealer.
 

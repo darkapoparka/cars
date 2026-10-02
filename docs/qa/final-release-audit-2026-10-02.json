@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "kind": "release-tooling-audit-not-final-template-or-dealer-approval",
+  "checkedAt": "2026-10-02T11:46:45.555Z",
+  "sourceHeadAtObservation": "48b0d65133177cae313e4da7108fa1369b6291b9",
+  "canonicalRepository": "darkapoparka/cars",
+  "canonicalRoot": "L:/CODEX/cars",
+  "workingBranch": "main",
+  "templateFamilies": [
+    {
+      "key": "auto-best",
+      "nestedGit": false,
+      "latestCommit": "104b7ee469c1ecb73e0aec3538f2b6ad249f2ea2",
+      "dirtyPathCount": 13
+    },
+    {
+      "key": "modern",
+      "nestedGit": false,
+      "latestCommit": "48b0d65133177cae313e4da7108fa1369b6291b9",
+      "dirtyPathCount": 0
+    },
+    {
+      "key": "carwow",
+      "nestedGit": false,
+      "latestCommit": "b71ef63ce5ba916d0036ac24d34440e644294ad9",
+      "dirtyPathCount": 26
+    },
+    {
+      "key": "import",
+      "nestedGit": false,
+      "latestCommit": "527c96d836e5b8bea4f6a240118a2525a3d45791",
+      "dirtyPathCount": 49
+    },
+    {
+      "key": "app",
+      "nestedGit": false,
+      "latestCommit": "24ece1ee64806a9a4d67de7cee87600855f07bb5",
+      "dirtyPathCount": 2
+    },
+    {
+      "key": "mobile",
+      "nestedGit": false,
+      "latestCommit": "3aea7f26ee1b30f885bea8012f82eead0aca6263",
+      "dirtyPathCount": 16
+    },
+    {
+      "key": "boxcar-updated",
+      "nestedGit": false,
+      "latestCommit": "a2f0abf69a8f58940f661cd1302eab672c8b35e2",
+      "dirtyPathCount": 12
+    }
+  ],
+  "templateMirrors": [
+    {
+      "repository": "darkapoparka/cars-template-app",
+      "projectId": "prj_TnD7adaf0u3zjwhmV2xRxx9mWkOu",
+      "productionCommit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+      "mainCommit": "8ab7571fedc0bf66473fc81ce077fd700c3231b7",
+      "mainMatchesProduction": true
+    },
+    {
+      "repository": "darkapoparka/cars-template-import",
+      "projectId": "prj_6oD4HMR2gOO5Qn6tZUviKNx8ugXv",
+      "productionCommit": "5bbcb962dd671237f2a360dcae8229638d51d947",
+      "mainCommit": "5bbcb962dd671237f2a360dcae8229638d51d947",
+      "mainMatchesProduction": true
+    },
+    {
+      "repository": "darkapoparka/cars-template-carwow",
+      "projectId": "prj_MrJ6NCi6r5wuMlo1k697mUk1AENj",
+      "productionCommit": "d23b2a392ad6e511547d5501573428ea2fda4e26",
+      "mainCommit": "d23b2a392ad6e511547d5501573428ea2fda4e26",
+      "mainMatchesProduction": true
+    },
+    {
+      "repository": "darkapoparka/cars-template-modern",
+      "projectId": "prj_A4DN3YbKHzofjvcbYOh3foMBCMpy",
+      "productionCommit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+      "mainCommit": "4f6e759e7480b66707ca855ea8bb5fc2611d9afe",
+      "mainMatchesProduction": true
+    },
+    {
+      "repository": "darkapoparka/cars-template-auto-best",
+      "projectId": "prj_4U4cBdkH0or7uKtFsLO3OkNSzXIX",
+      "productionCommit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+      "mainCommit": "e4e1c7840416478d7f8dc285ab4f600e30a8f63b",
+      "mainMatchesProduction": true
+    }
+  ],
+  "vercel": {
+    "observedProjects": 48,
+    "dealerProjects": 25,
+    "matchingRepositories": 25,
+    "servicesProjects": 25,
+    "productionReady": 25,
+    "verifiedAliasBindings": [
+      {
+        "slug": "al-basma-motors",
+        "alias": "cars-albasmamotors.vercel.app",
+        "projectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+        "deploymentId": "dpl_hP7y3P8K3MEtAxcAATM1ZmrHaM7E",
+        "expectedProjectId": "prj_axqFQFzpsq6JLTBwXOzyv5Wnbphk",
+        "expectedDeploymentId": "dpl_hP7y3P8K3MEtAxcAATM1ZmrHaM7E",
+        "passed": true
+      },
+      {
+        "slug": "al-hamoor-al-thahabi",
+        "alias": "cars-alhamooralthahabi.vercel.app",
+        "projectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+        "deploymentId": "dpl_4wbyD8vay9VxpLi3ka2ZhngZGn9K",
+        "expectedProjectId": "prj_hdzWSWLwsNVu7mmsmGA97XbCDSrw",
+        "expectedDeploymentId": "dpl_4wbyD8vay9VxpLi3ka2ZhngZGn9K",
+        "passed": true
+      },
+      {
+        "slug": "al-reef-used-cars",
+        "alias": "cars-alreefusedcars.vercel.app",
+        "projectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+        "deploymentId": "dpl_BfsjuKiPkoTAKovuevKqTYdMBuPm",
+        "expectedProjectId": "prj_r5Vaw6NQh5iTxi5jjfrtuP9GFTNm",
+        "expectedDeploymentId": "dpl_BfsjuKiPkoTAKovuevKqTYdMBuPm",
+        "passed": true
+      },
+      {
+        "slug": "asko-96",
+        "alias": "cars-asko96.vercel.app",
+        "projectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+        "deploymentId": "dpl_BfqT84DrmfapcgcF8QoWt4mCYzBB",
+        "expectedProjectId": "prj_lrmxXJdqRTKdDlufXaS0vd8TdpJX",
+        "expectedDeploymentId": "dpl_BfqT84DrmfapcgcF8QoWt4mCYzBB",
+        "passed": true
+      },
+      {
+        "slug": "astracar",
+        "alias": "cars-astracar.vercel.app",
+        "projectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+        "deploymentId": "dpl_8X2Fr8ocAYb3uqCmLGT85WpSyq8h",
+        "expectedProjectId": "prj_70zIp6vOJGgHSVcOtk9pR8dCTsTT",
+        "expectedDeploymentId": "dpl_8X2Fr8ocAYb3uqCmLGT85WpSyq8h",
+        "passed": true
+      },
+      {
+        "slug": "autolife",
+        "alias": "cars-autolife.vercel.app",
+        "projectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+        "deploymentId": "dpl_3Fbrq7yQLpXohXHzSxdRuBJNExoE",
+        "expectedProjectId": "prj_h9XFj7PYyl3OsEMxBueC5bZWvdSd",
+        "expectedDeploymentId": "dpl_3Fbrq7yQLpXohXHzSxdRuBJNExoE",
+        "passed": true
+      },
+      {
+        "slug": "automarket-varna",
+        "alias": "cars-automarketvarna.vercel.app",
+        "projectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+        "deploymentId": "dpl_7zZ316iM4FZSBDewsW6PGGkobdSk",
+        "expectedProjectId": "prj_5H4OESlQ0KpNM5mJvbIEmlUgaMcP",
+        "expectedDeploymentId": "dpl_7zZ316iM4FZSBDewsW6PGGkobdSk",
+        "passed": true
+      },
+      {
+        "slug": "avangard-auto",
+        "alias": "cars-avangardauto.vercel.app",
+        "projectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+        "deploymentId": "dpl_ES1xCeT4fns6msvBmhRXC5ey9Wyr",
+        "expectedProjectId": "prj_QqFCB2Zllc60dfPVIo6aJ8P4wlKc",
+        "expectedDeploymentId": "dpl_ES1xCeT4fns6msvBmhRXC5ey9Wyr",
+        "passed": true
+      },
+      {
+        "slug": "champion-auto-pro",
+        "alias": "cars-championautopro.vercel.app",
+        "projectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+        "deploymentId": "dpl_DReff4mraUo7G7cwsHVjjhBEmjPb",
+        "expectedProjectId": "prj_Zles0MpLROdFwgSnvuvpxrNBWcRY",
+        "expectedDeploymentId": "dpl_DReff4mraUo7G7cwsHVjjhBEmjPb",
+        "passed": true
+      },
+      {
+        "slug": "day-and-night-auto-group",
+        "alias": "day-and-night-a.vercel.app",
+        "projectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+        "deploymentId": "dpl_4Vy1b9CbVyvpE3qMZq7LAKk4TNVw",
+        "expectedProjectId": "prj_enD9orrI6rwguMMtDlS0IP6RAXjr",
+        "expectedDeploymentId": "dpl_4Vy1b9CbVyvpE3qMZq7LAKk4TNVw",
+        "passed": true
+      },
+      {
+        "slug": "eliqauto",
+        "alias": "cars-eliqauto.vercel.app",
+        "projectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+        "deploymentId": "dpl_7BwA7YRCjYneQkQ4w3Sn1rezR4R9",
+        "expectedProjectId": "prj_0aDYGRa0LI91M3AJRY4dlGssLUF3",
+        "expectedDeploymentId": "dpl_7BwA7YRCjYneQkQ4w3Sn1rezR4R9",
+        "passed": true
+      },
+      {
+        "slug": "elit-auto-import",
+        "alias": "cars-elitautoimport.vercel.app",
+        "projectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+        "deploymentId": "dpl_8Pc3hUvWjXNHqjVBdULz53S19kz3",
+        "expectedProjectId": "prj_7QV9OtCRFxJMWpWWlUXLpptcQPXs",
+        "expectedDeploymentId": "dpl_8Pc3hUvWjXNHqjVBdULz53S19kz3",
+        "passed": true
+      },
+      {
+        "slug": "excellent-cars",
+        "alias": "excellent-cars.vercel.app",
+        "projectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+        "deploymentId": "dpl_FYH1mqeLdw4YVem7diHyTZrdUFo3",
+        "expectedProjectId": "prj_dhANzY6pxcqK1hO06ar9ZTk0k4eq",
+        "expectedDeploymentId": "dpl_FYH1mqeLdw4YVem7diHyTZrdUFo3",
+        "passed": true
+      },
+      {
+        "slug": "f1rst-motors",
+        "alias": "cars-f1rstmotors.vercel.app",
+        "projectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+        "deploymentId": "dpl_BoQkVyFCn2N6whcKUEFeS2kmZEgy",
+        "expectedProjectId": "prj_mavqUXCj6hSEg8EvBJW8G3XJlihm",
+        "expectedDeploymentId": "dpl_BoQkVyFCn2N6whcKUEFeS2kmZEgy",
+        "passed": true
+      },
+      {
+        "slug": "isauto-varna",
+        "alias": "cars-isautovarna.vercel.app",
+        "projectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "deploymentId": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+        "expectedProjectId": "prj_8k5z9l4jyDCcoEfaaLBiyH1GbRVv",
+        "expectedDeploymentId": "dpl_26QVkgsQngkf1MSZ1nhBiVFSyFJW",
+        "passed": true
+      },
+      {
+        "slug": "ivo-auto",
+        "alias": "cars-ivoauto.vercel.app",
+        "projectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+        "deploymentId": "dpl_2x5vDFvWVASRWjt1kn4nk5n8U4gK",
+        "expectedProjectId": "prj_bruM9mopofyBcgwxkKFG9tQFZBMN",
+        "expectedDeploymentId": "dpl_2x5vDFvWVASRWjt1kn4nk5n8U4gK",
+        "passed": true
+      },
+      {
+        "slug": "kg-team-auto",
+        "alias": "cars-kgteamauto.vercel.app",
+        "projectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+        "deploymentId": "dpl_D7zunBRarFy1iDW3YzAsxiCHJFD9",
+        "expectedProjectId": "prj_IALzfkjBAv5N4YJfNB1sEliOaNBg",
+        "expectedDeploymentId": "dpl_D7zunBRarFy1iDW3YzAsxiCHJFD9",
+        "passed": true
+      },
+      {
+        "slug": "legend-auto",
+        "alias": "cars-legendauto.vercel.app",
+        "projectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+        "deploymentId": "dpl_4RqBgzJ5RpeDUNLpXChZaHMHP3vX",
+        "expectedProjectId": "prj_kdnDQxZaPh8xgKBiIXyb9uODrXZw",
+        "expectedDeploymentId": "dpl_4RqBgzJ5RpeDUNLpXChZaHMHP3vX",
+        "passed": true
+      },
+      {
+        "slug": "navara-car",
+        "alias": "cars-navaracar.vercel.app",
+        "projectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+        "deploymentId": "dpl_3KJXn9VfE7Ff4tCqTP47zEYW8dMo",
+        "expectedProjectId": "prj_WIHXMoyCM4BIwvUsrbTosvNXYXwr",
+        "expectedDeploymentId": "dpl_3KJXn9VfE7Ff4tCqTP47zEYW8dMo",
+        "passed": true
+      },
+      {
+        "slug": "outletcars-varna",
+        "alias": "cars-outletcarsvarna.vercel.app",
+        "projectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+        "deploymentId": "dpl_AjqHM5R6U3qHNbUWSL56htVanSam",
+        "expectedProjectId": "prj_1KYEEcbBwAd5iCtAvDGM59INQLe7",
+        "expectedDeploymentId": "dpl_AjqHM5R6U3qHNbUWSL56htVanSam",
+        "passed": true
+      },
+      {
+        "slug": "perfect-auto-varna",
+        "alias": "cars-perfectauto.vercel.app",
+        "projectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+        "deploymentId": "dpl_9yg9p9Sf73SQQB3cVKBj6sZ538SH",
+        "expectedProjectId": "prj_sqN8Xc2fs7g2Y2pSs0qeSeYJgVZR",
+        "expectedDeploymentId": "dpl_9yg9p9Sf73SQQB3cVKBj6sZ538SH",
+        "passed": true
+      },
+      {
+        "slug": "priselci",
+        "alias": "cars-priselci.vercel.app",
+        "projectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+        "deploymentId": "dpl_6vagoGbNzVAgTmCpHBTFQsuL6a8a",
+        "expectedProjectId": "prj_GwnlfPmyImlJuiocl77NWplzvTTb",
+        "expectedDeploymentId": "dpl_6vagoGbNzVAgTmCpHBTFQsuL6a8a",
+        "passed": true
+      },
+      {
+        "slug": "promosale-varna",
+        "alias": "cars-promosalevarna.vercel.app",
+        "projectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+        "deploymentId": "dpl_Anbqsb3aKzfwSKXriKZZTTgyWU9H",
+        "expectedProjectId": "prj_yjXIu0an7sqCiY26hKWgOGUl5hbY",
+        "expectedDeploymentId": "dpl_Anbqsb3aKzfwSKXriKZZTTgyWU9H",
+        "passed": true
+      },
+      {
+        "slug": "texas-drive-auto",
+        "alias": "cars-texasdriveauto.vercel.app",
+        "projectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+        "deploymentId": "dpl_3a4ewWfrqkz3vrEXSmw1fRxDKGw9",
+        "expectedProjectId": "prj_0BoiQdp4HpS0QcfH425hy9ns536V",
+        "expectedDeploymentId": "dpl_3a4ewWfrqkz3vrEXSmw1fRxDKGw9",
+        "passed": true
+      },
+      {
+        "slug": "the-dealers-point",
+        "alias": "cars-thedealerspoint.vercel.app",
+        "projectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+        "deploymentId": "dpl_5B7R9U5aKP8cHBpacSYTbMWPPqBv",
+        "expectedProjectId": "prj_tzUK5hufsHiC8aJ7uyxZF5qCii07",
+        "expectedDeploymentId": "dpl_5B7R9U5aKP8cHBpacSYTbMWPPqBv",
+        "passed": true
+      }
+    ],
+    "observation": "2026-10-02T11:29:37.915Z",
+    "deploymentsCreated": 0
+  },
+  "implemented": [
+    "Fix Function byte accounting when dependencies contain static-named directories",
+    "Add aggregate final service-output audit requiring all declared designs and a combined byte budget",
+    "Consolidate the existing-Vercel five-design release plan and clarify master versus publishing-mirror ownership"
+  ],
+  "checks": {
+    "workflow": {
+      "passed": 315,
+      "total": 315,
+      "command": "node --test --test-concurrency=1 scripts/*.test.mjs"
+    },
+    "focused": {
+      "passed": 15,
+      "total": 15
+    },
+    "workflowCheck": true,
+    "scopedWhitespace": true,
+    "newBrowserOrProductionBuild": false
+  },
+  "localDisk": {
+    "observedZeroFreeBytesOnL": true,
+    "relocatedBytes": 1150573587,
+    "relocatedFiles": 4224,
+    "scope": "Previously generated audit outputs and caches only; hash-verified archive retained on C; source/history/current previews preserved",
+    "archive": "C:\\Users\\radev\\Documents\\CodexCarsDerived\\final-release-audit-20261002\\archived-generated-output",
+    "receipt": "C:/Users/radev/Documents/CodexCarsDerived/final-release-audit-20261002/relocation-receipt.json",
+    "freeBytesNow": 1710837760
+  },
+  "remaining": [
+    {
+      "issue": "Three legacy workflows retain automatic push triggers",
+      "paths": [
+        ".github/workflows/deploy-autobest-release.yml",
+        ".github/workflows/fix-autobest-contact-localization.yml",
+        ".github/workflows/reconcile-canonical-fleet-once.yml"
+      ],
+      "state": "Unchanged; attempted trigger edit was blocked by a tool safety check. Review before the combined release."
+    },
+    {
+      "issue": "Mobile versus Boxcar remains unselected; actual fifth-design packaging/localization/adaptation is not implemented by this audit"
+    },
+    {
+      "issue": "Frontend/dealer work is still changing; freeze exact source, reconcile Navara receipt and perform full combined builds and browser acceptance"
+    },
+    {
+      "issue": "Reported Vercel approximately 60 GB has not been reconciled to a team metric/period; retained storage review remains separate"
+    }
+  ],
+  "plan": "docs/VERCEL-COMBINED-RELEASE-PLAN.md",
+  "sourceFileHashes": {
+    "scripts/audit-vercel-services.mjs": "5703a84407eb7095a54bd73c5337f224e9e2178c46b7e9c140d77e778f3c4b40",
+    "scripts/vercel-services-audit.test.mjs": "dfe18313068bc74f07c00624de5ea4633fc187964df6f2deb6dadcf22482e5a4",
+    "scripts/publishing/vercel-output-budget.mjs": "12abb3629f4ac64b3e0abd40558f6e9d5d51e9d33d484fb8973c5c950471114a",
+    "scripts/vercel-output-budget.test.mjs": "7c963e3e444520483a7fedd80b884d702677e58735c25ba6f62e837c89c3b2ef",
+    "docs/TEMPLATE-PROMOTION.md": "043dbdada37db0c037c3841a1442d4de9b647b27d751ecf517e23964fbee1e77",
+    "docs/PUBLIC-ASSET-PIPELINE.md": "4e75d9b88c1d6db5db3b89d3240a4d43be633e33649dd0d9ef38068b46a48e7d",
+    "docs/VERCEL-COMBINED-RELEASE-PLAN.md": "c7c12e8c3011b635eb65cfbce0ea8cfc5f4fecf854c478bf0a621de1cf42ea4a"
+  },
+  "scope": {
+    "uiEdits": false,
+    "dealerSourceEdits": false,
+    "independentSourceEdits": false,
+    "releaseLockChanged": false,
+    "workflowTriggersChanged": false,
+    "publishingRepositoryPushes": 0,
+    "deployments": 0,
+    "billingChanged": false,
+    "dnsChanged": false
+  }
+}

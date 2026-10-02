@@ -103,3 +103,9 @@ Fresh native packages split installation from compilation. Vercel's install comm
 Publisher dry runs and package receipts now expose `assetDelivery`: local public source bytes, external reference bytes, reviewed unused bytes and eliminated local duplication. These quantities must balance. Existing externalization is not new savings and external storage remains billable separately. Source-asset estimates do not include compiled JavaScript/CSS or Functions. Next after-build reports now add `.next/static` client chunks to `deliveredStaticBytes`; Svelte's public output already contains its client code. The final combined Vercel output still requires its full output audit.
 
 No master preview, release selection, existing dealer source, remote media object, Vercel deployment or billing setting is changed by these build/publisher improvements. Later frontend changes and the selected fifth design require fresh exact-source release and combined-dealer acceptance. Template work-in-progress must not be blanket-staged into that release.
+
+## Combined release acceptance
+
+The pending all-dealer release follows [VERCEL-COMBINED-RELEASE-PLAN](VERCEL-COMBINED-RELEASE-PLAN.md). Run the final-output budget across the whole project, not independently against each design. `audit-vercel-services.mjs` accepts the dealer manifest and an exact mapping of every offered design to its actual final Vercel output; it rejects missing or overlapping outputs and aggregates the static/Function bytes. It is an explicit release check, not an automatically attached platform hook and not a substitute for adapter output or hosted verification.
+
+The final-output classifier preserves its enclosing category: a dependency directory named `static` inside a Function is charged to that Function, while public URL directories named `functions` remain static. Regression tests cover both cases.
