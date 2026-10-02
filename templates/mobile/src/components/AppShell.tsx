@@ -2,15 +2,15 @@
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { CarFront, Handshake, Phone, type LucideIcon } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
-import { Icon, type IconName } from './Icon';
 import { showroomInventoryHref } from '@/lib/showroom';
-const tabs: [string, string, IconName][] = [
-  ['/', 'Cars', 'car'],
-  ['/services', 'Services', 'wrench'],
-  ['/contact', 'Contact', 'phone'],
+const tabs: [string, string, LucideIcon][] = [
+  ['/', 'Cars', CarFront],
+  ['/services', 'Services', Handshake],
+  ['/contact', 'Contact', Phone],
 ];
 const s = stylex.create({
   root: {
@@ -42,15 +42,15 @@ const s = stylex.create({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 6,
+    gap: 4,
     color: colors.muted,
     textDecoration: 'none',
     fontSize: 12,
     lineHeight: '16px',
-    fontWeight: 400,
+    fontWeight: 500,
     minWidth: 0,
   },
-  tabIcon: { color: colors.text },
+  tabIcon: { display: 'flex' },
   active: { color: colors.accent, fontWeight: 700 },
   toast: {
     position: 'fixed',
@@ -101,7 +101,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main id="main-content">{children}</main>
       {primary && (
         <nav aria-label="Main navigation" {...stylex.props(s.nav)}>
-          {tabs.map(([href, label, icon]) => (
+          {tabs.map(([href, label, NavIcon]) => (
             <Link
               key={href}
               href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
@@ -109,8 +109,8 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <span {...stylex.props(s.tabIcon, pathname === href && s.active)}>
-                <Icon name={icon} size={24} />
+              <span {...stylex.props(s.tabIcon)}>
+                <NavIcon size={24} strokeWidth={1.8} aria-hidden="true" focusable="false" />
               </span>
               <span>{label}</span>
             </Link>

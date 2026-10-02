@@ -126,7 +126,18 @@ async function run(name, engine) {
       .boundingBox();
     assert.ok(firstPhoto.y < 340, 'A car is visible below the compact controls');
     check('Cars is Home; three navigation destinations; stock visible on entry');
+    const sortControl = page.getByRole('button', { name: 'Sort cars: Recommended', exact: true });
+    assert.match(await sortControl.innerText(), /Recommended/);
+    check('The sort control visibly names the current ordering');
     await capture('cars-390');
+    await page
+      .locator('[data-showroom-vehicle]')
+      .first()
+      .click({ position: { x: 30, y: 40 } });
+    await page.locator('header').getByRole('heading', { name: 'BMW X6', exact: true }).waitFor();
+    await page.getByRole('button', { name: 'Go back', exact: true }).click();
+    await cars(4);
+    check('The photo area opens the car through the single card link');
     await page.getByRole('searchbox', { name: 'Search make or model' }).fill('BMW X6');
     await cars(1);
     assert.equal(
@@ -235,6 +246,10 @@ async function run(name, engine) {
     await page.getByRole('checkbox', { name: 'Used', exact: true }).check();
     await page.getByRole('button', { name: 'Show 2 cars', exact: true }).click();
     await cars(2);
+    assert.equal(
+      (await page.locator('#showroom-filter-count').textContent()).trim(),
+      '1 active filter',
+    );
     await page.getByRole('button', { name: 'Filters', exact: true }).click();
     await page.getByRole('checkbox', { name: 'Used', exact: true }).uncheck();
     await page.getByRole('checkbox', { name: 'New', exact: true }).check();
@@ -246,6 +261,13 @@ async function run(name, engine) {
     await cars(4);
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
     await cars(4);
+    assert.equal(
+      await page
+        .getByRole('button', { name: 'Filters', exact: true })
+        .getAttribute('aria-describedby'),
+      null,
+    );
+    check('Filter count reflects an applied condition and clears with Reset');
     check('Used/New condition choices live in Filters and work separately or together');
 
     await page.locator('[data-quick-filter="price"]').click();
@@ -302,6 +324,12 @@ async function run(name, engine) {
 
     await page.getByRole('button', { name: /^Sort cars:/ }).click();
     await page.getByRole('radio', { name: 'Price: low to high', exact: true }).click();
+    assert.match(
+      await page
+        .getByRole('button', { name: 'Sort cars: Price: low to high', exact: true })
+        .innerText(),
+      /Price ↑/,
+    );
     assert.equal(
       await page.locator('[data-showroom-vehicle]').first().getAttribute('data-showroom-vehicle'),
       'bmw-120',
@@ -311,9 +339,11 @@ async function run(name, engine) {
     await page.getByRole('link', { name: 'Cars', exact: true }).click();
     await cars(4);
     assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-asc');
-    await page.evaluate(() => window.scrollTo(0, 720));
     const link = page.getByRole('link', { name: 'BMW 540', exact: true });
-    await link.scrollIntoViewIfNeeded();
+    // Center the target clear of the sticky controls before measuring Back's scroll context.
+    await link.evaluate((element) =>
+      element.scrollIntoView({ block: 'center', inline: 'nearest' }),
+    );
     const scrollBefore = await page.evaluate(() => scrollY);
     const urlBefore = page.url();
     await link.click();
@@ -326,7 +356,26 @@ async function run(name, engine) {
     await page.getByRole('button', { name: 'Go back', exact: true }).click();
     await cars(4);
     assert.equal(page.url(), urlBefore);
-    await page.waitForFunction((expected) => Math.abs(scrollY - expected) < 4, scrollBefore);
+    try {
+      await page.waitForFunction((expected) => Math.abs(scrollY - expected) < 4, scrollBefore);
+    } catch (error) {
+      report.scrollRestoreFailure = await page.evaluate(
+        (expected) => ({
+          expected,
+          actual: scrollY,
+          titleTop: document
+            .querySelector('[data-showroom-vehicle="bmw-540"] h2 a')
+            ?.getBoundingClientRect().top,
+          controlsBottom: document
+            .querySelector('section[aria-label="Find a vehicle"]')
+            ?.getBoundingClientRect().bottom,
+        }),
+        scrollBefore,
+      );
+      console.error(JSON.stringify(report.scrollRestoreFailure));
+      await capture('scroll-restore-failure');
+      throw error;
+    }
     assert.ok((await page.evaluate(() => history.length)) <= detailHistoryLength);
     await settle();
     await page.goForward({ waitUntil: 'load' });

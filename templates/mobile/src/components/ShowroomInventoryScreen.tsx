@@ -89,7 +89,7 @@ const s = stylex.create({
       backgroundColor: colors.accent,
     },
   },
-  filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 12, paddingLeft: 16 },
+  filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 6, paddingLeft: 16 },
   filterScroll: {
     display: 'flex',
     alignItems: 'center',
@@ -98,7 +98,7 @@ const s = stylex.create({
     scrollbarWidth: 'none',
     paddingRight: 16,
     minWidth: 0,
-    paddingBlock: 4,
+    paddingBlock: 2,
   },
   pill: {
     display: 'inline-flex',
@@ -106,7 +106,7 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 6,
     minHeight: 44,
-    paddingInline: 14,
+    paddingInline: 12,
     flexShrink: 0,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -118,10 +118,19 @@ const s = stylex.create({
     fontWeight: 500,
     whiteSpace: 'nowrap',
   },
-  fixedFilter: {
-    backgroundColor: colors.deepPurple,
-    borderColor: colors.deepPurple,
-    color: '#fff',
+  filterCount: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 20,
+    minHeight: 20,
+    paddingInline: 4,
+    borderRadius: 20,
+    backgroundColor: colors.purple,
+    color: colors.background,
+    fontSize: 12,
+    fontWeight: 700,
+    lineHeight: '20px',
   },
   selectedPill: {
     backgroundColor: colors.assistant,
@@ -139,26 +148,33 @@ const s = stylex.create({
     minHeight: 60,
   },
   count: { fontSize: 16, fontWeight: 700, lineHeight: '24px' },
+  actions: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8, maxWidth: '100%' },
   sort: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
     minHeight: 44,
-    borderWidth: 0,
-    paddingInline: 8,
-    backgroundColor: 'transparent',
+    maxWidth: '100%',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 12,
+    paddingInline: 10,
+    paddingBlock: 6,
+    backgroundColor: colors.background,
     color: colors.text,
     fontSize: 14,
     fontWeight: 500,
   },
   grid: {
     display: 'grid',
-    gap: 20,
+    gap: 14,
     gridTemplateColumns: { default: '1fr', '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))' },
   },
   reset: {
     minHeight: 44,
+    minWidth: 44,
     paddingInline: 4,
     borderWidth: 0,
     backgroundColor: 'transparent',
@@ -206,6 +222,32 @@ export function ShowroomInventoryScreen() {
   const active =
     showroomInventoryHref(filters) !==
     showroomInventoryHref({ ...defaultFilters, category: filters.category });
+  const activeFilterCount = [
+    filters.makes.length || filters.excludedMakes.length || filters.models.length,
+    filters.condition.length,
+    filters.minPrice || filters.maxPrice,
+    filters.minYear || filters.maxYear,
+    filters.minMileage || filters.maxMileage,
+    filters.fuel.length,
+    filters.transmission.length,
+    filters.body.length,
+    filters.color.length,
+    filters.minPower || filters.maxPower,
+    filters.seats || filters.maxSeats,
+    filters.doors,
+    filters.features.length,
+    filters.details.length,
+    filters.deal,
+    filters.damagedOnly || !filters.excludeDamaged,
+  ].filter(Boolean).length;
+  const sortLabel = showroomSorts.find(([value]) => value === sort)?.[1] || 'Recommended';
+  const compactSortLabel = {
+    standard: 'Recommended',
+    'price-asc': 'Price ↑',
+    'price-desc': 'Price ↓',
+    newest: 'Newest',
+    mileage: 'Low mileage',
+  }[sort];
   useEffect(() => {
     patchState({ filters: showroomFilters(parseFilters(query)), inventorySort: sort });
   }, [query, sort]);
@@ -261,7 +303,7 @@ export function ShowroomInventoryScreen() {
   const pills: { key: 'make' | ShowroomSheet; label: string; active: boolean; name: string }[] = [
     {
       key: 'make',
-      label: filters.makes.join(', ') || 'Make & model',
+      label: filters.makes.join(', ') || 'Make',
       active: Boolean(filters.makes.length || filters.excludedMakes.length),
       name: 'Make and model',
     },
@@ -344,12 +386,24 @@ export function ShowroomInventoryScreen() {
         <div {...stylex.props(s.filterRow)}>
           <button
             type="button"
+            aria-label="Filters"
+            aria-describedby={activeFilterCount > 0 ? 'showroom-filter-count' : undefined}
             aria-haspopup="dialog"
             onClick={(event) => openSheet('all', event.currentTarget)}
-            {...stylex.props(s.pill, s.fixedFilter)}
+            {...stylex.props(s.pill, activeFilterCount > 0 && s.selectedPill)}
           >
             <Icon name="filter" size={18} />
             Filters
+            {activeFilterCount > 0 && (
+              <>
+                <span aria-hidden="true" {...stylex.props(s.filterCount)}>
+                  {activeFilterCount}
+                </span>
+                <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
+                  {activeFilterCount} active {activeFilterCount === 1 ? 'filter' : 'filters'}
+                </span>
+              </>
+            )}
           </button>
           <div aria-label="Quick filters" {...stylex.props(s.filterScroll)}>
             {pills.map((pill) => (
@@ -379,26 +433,26 @@ export function ShowroomInventoryScreen() {
           <h1 aria-live="polite" {...stylex.props(s.count)}>
             {results.length} {results.length === 1 ? category.singular : category.plural}
           </h1>
-          <div {...stylex.props(ui.row)}>
+          <div {...stylex.props(s.actions)}>
             {active && (
-              <button type="button" onClick={reset} {...stylex.props(s.reset)}>
-                Clear filters
+              <button
+                type="button"
+                aria-label="Clear filters"
+                onClick={reset}
+                {...stylex.props(s.reset)}
+              >
+                Clear
               </button>
             )}
             <button
               type="button"
-              aria-label={
-                'Sort ' +
-                category.plural +
-                ': ' +
-                showroomSorts.find(([value]) => value === sort)?.[1]
-              }
+              aria-label={'Sort ' + category.plural + ': ' + sortLabel}
               aria-haspopup="dialog"
               onClick={(event) => openSheet('sort', event.currentTarget)}
               {...stylex.props(s.sort)}
             >
-              <Icon name="sort" size={20} />
-              Sort
+              {compactSortLabel}
+              <Icon name="down" size={16} />
             </button>
           </div>
         </div>
