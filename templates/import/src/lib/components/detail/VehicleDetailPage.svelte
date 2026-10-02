@@ -13,6 +13,7 @@
 	import VehicleCard from '$lib/components/inventory/VehicleCard.svelte';
 	import VehicleGallery from './VehicleGallery.svelte';
 	import VehiclePurchasePanel from './VehiclePurchasePanel.svelte';
+	import VehicleDealerBanner from './VehicleDealerBanner.svelte';
 	import VehicleFacts from './VehicleFacts.svelte';
 	import MobilePdp from './AuxeroVehicleMobilePdp.svelte';
 	let {
@@ -41,41 +42,33 @@
 				<a href={linkHref('/inventory' + localeSuffix)}>{english ? 'Cars' : 'Автомобили'}</a>
 				<span aria-hidden="true">/</span><span>{detail.title}</span>
 			</nav>
+			<header class="detail-heading">
+				<h1>{detail.title}</h1>
+				<div class="detail-utilities">
+					<Action
+						variant="quiet"
+						size="compact"
+						aria-pressed={garage.isFavorite(detail.slug)}
+						onclick={() => garage.toggleFavorite(detail.slug)}
+					>
+						<Heart
+							size={18}
+							aria-hidden="true"
+							fill={garage.isFavorite(detail.slug) ? 'currentColor' : 'none'}
+						/>{english ? 'Save' : 'Запази'}
+					</Action>
+					<Action
+						variant="quiet"
+						size="compact"
+						aria-pressed={garage.isCompared(detail.slug)}
+						onclick={() => garage.toggleCompare(detail.slug)}
+					>
+						<ArrowLeftRight size={18} aria-hidden="true" />{english ? 'Compare' : 'Сравни'}
+					</Action>
+				</div>
+			</header>
 			<div class="detail-grid">
 				<div class="site-stack">
-					<header class="detail-heading">
-						<h1>{detail.title}</h1>
-						<div class="detail-heading__meta">
-							<p>
-								{detail.overviewItems
-									.slice(0, 4)
-									.map((item) => item.value)
-									.join(' · ')}
-							</p>
-							<div class="detail-utilities">
-								<Action
-									variant="quiet"
-									size="compact"
-									aria-pressed={garage.isFavorite(detail.slug)}
-									onclick={() => garage.toggleFavorite(detail.slug)}
-								>
-									<Heart
-										size={18}
-										aria-hidden="true"
-										fill={garage.isFavorite(detail.slug) ? 'currentColor' : 'none'}
-									/>{english ? 'Save' : 'Запази'}
-								</Action>
-								<Action
-									variant="quiet"
-									size="compact"
-									aria-pressed={garage.isCompared(detail.slug)}
-									onclick={() => garage.toggleCompare(detail.slug)}
-								>
-									<ArrowLeftRight size={18} aria-hidden="true" />{english ? 'Compare' : 'Сравни'}
-								</Action>
-							</div>
-						</div>
-					</header>
 					<VehicleGallery images={detail.galleryImages} title={detail.title} {english} />
 					<section class="site-panel detail-description-card">
 						<h2>{english ? 'Description' : 'Описание'}</h2>
@@ -111,6 +104,7 @@
 							{english}
 							oninquiry={() => (inquiryOpen = true)}
 						/>{/key}
+					<VehicleDealerBanner {english} />
 					<VehicleFacts items={detail.overviewItems} {english} />
 				</aside>
 			</div>
@@ -158,32 +152,26 @@
 		gap: var(--bc-space-8);
 	}
 	.detail-heading {
-		display: grid;
-		gap: var(--bc-space-3);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-6);
+		margin-bottom: var(--bc-space-6);
 		padding: var(--bc-space-5) var(--bc-space-6);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
 	}
-	.detail-heading__meta {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
-		gap: var(--bc-space-2);
-	}
-	.detail-heading__meta p {
-		margin: 0;
-		color: var(--bc-muted);
-		font-size: var(--bc-text-label);
-	}
 	h1 {
+		min-width: 0;
 		margin: 0;
 		font: var(--bc-weight-heading) var(--bc-text-h2)/1.12 var(--bc-font-heading);
+		overflow-wrap: anywhere;
 	}
 	.detail-utilities {
 		display: flex;
-		gap: var(--bc-space-1);
+		flex-shrink: 0;
+		gap: var(--bc-space-2);
 	}
 	.detail-description-card {
 		background: #fff;

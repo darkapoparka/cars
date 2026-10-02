@@ -1,13 +1,10 @@
 <script lang="ts">
 	import { formatMoney } from '$lib/i18n/formatting';
-	import { linkHref } from '$lib/utils/links';
 	import { Tabs } from 'bits-ui';
 	import Phone from '@lucide/svelte/icons/phone';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
-	import MapPin from '@lucide/svelte/icons/map-pin';
 	import type { AuxeroVehicleDetailData } from '$lib/server/vehicle-detail';
 	import { site } from '$lib/config/site';
-	import { dealerCopy } from '$lib/config/dealer-copy';
 	import { estimateFinance } from '$lib/domain/finance';
 	import Action from '$lib/components/common/Action.svelte';
 	let {
@@ -32,9 +29,16 @@
 			: null
 	);
 	const money = (value: number) => formatMoney(value, english ? 'en' : 'bg');
+	const overviewSummary = $derived(
+		detail.overviewItems
+			.slice(0, 4)
+			.map((item) => item.value)
+			.join(' · ')
+	);
 </script>
 
 <section class="purchase-panel" aria-label={english ? 'Price and viewing' : 'Цена и оглед'}>
+	<p class="purchase-summary">{overviewSummary}</p>
 	<Tabs.Root value="cash">
 		<Tabs.List class="purchase-tabs" aria-label={english ? 'Payment options' : 'Начин на плащане'}>
 			<Tabs.Trigger value="cash" class="purchase-tab"
@@ -102,13 +106,6 @@
 			><Phone size={18} aria-hidden="true" />{site.contact.phone}</Action
 		>
 	</div>
-	<div class="purchase-dealer">
-		<strong>{site.identity.name}</strong>
-		<p>{dealerCopy[english ? 'en' : 'bg'].appointment}</p>
-		<a href={linkHref(site.contact.mapHref)} target="_blank" rel="noreferrer"
-			><MapPin size={18} aria-hidden="true" /><span>{site.contact.address}</span></a
-		>
-	</div>
 </section>
 
 <style>
@@ -119,6 +116,13 @@
 		background: var(--bc-surface-raised);
 		padding: var(--bc-space-6);
 		min-width: 0;
+	}
+	.purchase-summary {
+		margin: 0 0 var(--bc-space-4);
+		color: var(--bc-copy);
+		font-size: var(--bc-text-label);
+		line-height: var(--bc-leading-label);
+		text-wrap: pretty;
 	}
 	:global(.purchase-tabs) {
 		display: flex;
@@ -213,36 +217,5 @@
 	.purchase-actions {
 		display: grid;
 		gap: var(--bc-space-2);
-	}
-	.purchase-dealer {
-		display: grid;
-		gap: var(--bc-space-2);
-		border-top: 1px solid var(--bc-border);
-		margin-top: var(--bc-space-5);
-		padding-top: var(--bc-space-5);
-	}
-	.purchase-dealer > strong {
-		font: var(--bc-weight-heading) var(--bc-text-h6)/1.3 var(--bc-font-heading);
-	}
-	.purchase-dealer p {
-		color: var(--bc-muted);
-		font-size: var(--bc-text-label);
-		margin: 0;
-	}
-	.purchase-dealer a {
-		display: flex;
-		align-items: start;
-		gap: var(--bc-space-2);
-		font-size: var(--bc-text-label);
-		color: var(--bc-copy);
-		text-decoration: none;
-	}
-	.purchase-dealer a :global(svg) {
-		flex-shrink: 0;
-		margin-top: var(--bc-space-1);
-	}
-	.purchase-dealer a:hover span {
-		text-decoration: underline;
-		text-underline-offset: 3px;
 	}
 </style>
