@@ -15,7 +15,7 @@
 	import VehiclePurchasePanel from './VehiclePurchasePanel.svelte';
 	import VehicleDealerBanner from './VehicleDealerBanner.svelte';
 	import VehicleFacts from './VehicleFacts.svelte';
-	import VehicleInformationSection from './VehicleInformationSection.svelte';
+	import VehicleEquipment from './VehicleEquipment.svelte';
 	import MobilePdp from './AuxeroVehicleMobilePdp.svelte';
 	let {
 		detail,
@@ -83,15 +83,13 @@
 						<h2>{english ? 'Description' : 'Описание'}</h2>
 						<p class="detail-description">{detail.description}</p>
 					</section>
-					<div class="site-panel detail-information-card">
+					<div class="detail-information">
 						<VehicleFacts items={detail.overviewItems} {english} />
-						{#each detail.featureTabs.filter((tab) => tab.items.length) as tab (tab.label)}
-							<VehicleInformationSection title={tab.label}>
-								<ul class="detail-features">
-									{#each tab.items as item, index (index)}<li>{item}</li>{/each}
-								</ul>
-							</VehicleInformationSection>
-						{/each}
+						{#key detail.slug}
+							{#each detail.featureTabs.filter((tab) => tab.items.length) as tab (tab.label)}
+								<VehicleEquipment title={tab.label} items={tab.items} {english} />
+							{/each}
+						{/key}
 					</div>
 				</div>
 				<aside
@@ -201,28 +199,9 @@
 		line-height: var(--bc-leading-prose);
 		overflow-wrap: anywhere;
 	}
-	.detail-information-card {
-		container: vehicle-information / inline-size;
+	.detail-information {
 		display: grid;
-		gap: var(--bc-space-8);
-		border: 0;
-	}
-	.detail-features {
-		display: grid;
-		gap: var(--bc-space-2) var(--bc-space-8);
-		padding: 0;
-		margin: 0;
-		font-size: var(--bc-text-label);
-		line-height: var(--bc-leading-h7);
-	}
-	.detail-features li {
-		margin-inline-start: var(--bc-space-6);
-		overflow-wrap: anywhere;
-	}
-	@container vehicle-information (min-width: 40rem) {
-		.detail-features {
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
+		gap: var(--bc-space-6);
 	}
 	.detail-related {
 		display: grid;

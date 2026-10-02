@@ -72,12 +72,11 @@
 	}
 	.vehicle-facts__panels {
 		display: grid;
-		align-items: start;
-		gap: var(--bc-space-8);
+		gap: var(--bc-space-6);
 	}
 	dl {
 		display: grid;
-		gap: var(--bc-space-4);
+		gap: var(--bc-space-3);
 		margin: 0;
 	}
 	dl > div {
