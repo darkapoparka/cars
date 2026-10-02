@@ -24,7 +24,7 @@
 	});
 	const visible = $derived(
 		filters.filter(
-			(field) => sidebar || ['brand', 'model', 'price', 'mileage', 'fuel'].includes(field.name)
+			(field) => sidebar || ['brand', 'model', 'price', 'mileage'].includes(field.name)
 		)
 	);
 	function openFromTrigger(event: MouseEvent, name?: string) {
@@ -71,7 +71,7 @@
 <style>
 	.inventory-filter-triggers {
 		display: grid;
-		grid-template-columns: repeat(6, minmax(0, 1fr));
+		grid-template-columns: repeat(5, minmax(0, 1fr));
 		gap: 12px;
 		background: transparent;
 		border-radius: 12px;

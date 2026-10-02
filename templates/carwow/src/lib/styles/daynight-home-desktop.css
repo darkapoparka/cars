@@ -35,8 +35,8 @@
 		overflow: hidden;
 	}
 	.daynight-home-shell .daynight-home-hero--cutouts {
-		min-height: 400px;
-		padding: 36px 40px 48px;
+		min-height: var(--desktop-hero-height);
+		padding: var(--desktop-hero-padding-top) 40px var(--desktop-hero-padding-bottom);
 	}
 	.daynight-home-shell .daynight-home-hero__stage {
 		display: flex;
@@ -49,9 +49,9 @@
 		color: var(--sa-ink);
 		font-size: var(--sa-text-desktop-hero-title);
 		font-weight: var(--sa-weight-heading);
-		letter-spacing: -0.035em;
-		line-height: 1.12;
-		margin: 0 0 24px;
+		letter-spacing: var(--desktop-hero-title-tracking);
+		line-height: var(--desktop-hero-title-leading);
+		margin: 0 0 var(--desktop-hero-panel-gap);
 		text-align: center;
 	}
 	.daynight-home-shell .daynight-home-hero__stage > form {

@@ -6,7 +6,7 @@
 
 <style>
 	.inventory-results-shortcuts {
-		margin: 0;
+		margin: 12px 0 0;
 		padding: 0;
 	}
 	:global(.inventory-refined .inventory-results-shortcuts .daynight-inventory-type-pills) {

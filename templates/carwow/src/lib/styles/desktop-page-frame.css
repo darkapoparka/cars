@@ -1,28 +1,4 @@
 /* Shared content frame for the desktop storefront routes. */
-/* The legacy root scrollbar changes width at 991/992px. WebKit can alternate
- * viewport modes as that gutter appears/disappears. These shells are selected
- * exclusively by the desktop branch; keep its root scrolling gutter-free.
- * Mobile compositions and their existing scrollbar rules are unchanged. */
-html:has(
-	.daynight-home-shell,
-	.inventory-template-shell,
-	.daynight-detail,
-	.desktop-services,
-	.about-page,
-	.blog-page
-) {
-	scrollbar-width: none;
-}
-html:has(
-		.daynight-home-shell,
-		.inventory-template-shell,
-		.daynight-detail,
-		.desktop-services,
-		.about-page,
-		.blog-page
-	)::-webkit-scrollbar {
-	display: none;
-}
 @media (min-width: 992px) {
 	.daynight-home-shell,
 	.inventory-template-shell,

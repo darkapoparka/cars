@@ -3,6 +3,7 @@
 	const i18n = getI18n();
 
 	import SortDropdown from './SortDropdown.svelte';
+	import InventoryShortcutShelf from './InventoryShortcutShelf.svelte';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import List from '@lucide/svelte/icons/list';
@@ -65,6 +66,7 @@
 			</div>
 		</div>
 	</div>
+	<InventoryShortcutShelf />
 </div>
 <div
 	class={[

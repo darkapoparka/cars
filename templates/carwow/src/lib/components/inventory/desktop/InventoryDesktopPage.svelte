@@ -11,7 +11,6 @@
 	// One inventory-family stylesheet owns the retained base/layout/native cascade.
 	import './inventory-desktop.css';
 	import InventoryFilterTriggers from './InventoryFilterTriggers.svelte';
-	import InventoryShortcutShelf from './InventoryShortcutShelf.svelte';
 	import InventoryFilterDialog from './InventoryFilterDialog.svelte';
 	import InventoryListingsPanel from './InventoryListingsPanel.svelte';
 	import SearchBar from './SearchBar.svelte';
@@ -55,7 +54,6 @@
 				filters={page.quickFilters}
 				onOpen={(name) => filterDialog.open(name)}
 			/>
-			<InventoryShortcutShelf />
 		</div>
 	</div>
 {/snippet}

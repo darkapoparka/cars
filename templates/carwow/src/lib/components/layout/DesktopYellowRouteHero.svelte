@@ -154,7 +154,7 @@
 	.daynight-yellow-route-hero {
 		background: var(--sa-yellow);
 		isolation: isolate;
-		min-height: 390px;
+		min-height: var(--desktop-hero-height);
 		overflow: hidden;
 		position: relative;
 	}
@@ -165,7 +165,7 @@
 		flex-direction: column;
 		margin-inline: auto !important;
 		max-width: 1180px;
-		padding: 54px 24px 34px;
+		padding: var(--desktop-hero-padding-top) 24px var(--desktop-hero-padding-bottom);
 		position: relative;
 		text-align: center;
 		width: calc(100% - 48px);
@@ -178,11 +178,6 @@
 
 	.daynight-yellow-route-hero--with-rail .daynight-yellow-route-hero__content {
 		padding-bottom: 16px;
-		padding-top: 42px;
-	}
-
-	.daynight-yellow-route-hero--with-rail .daynight-yellow-route-hero__deck {
-		margin-top: 22px !important;
 	}
 
 	.daynight-yellow-route-hero__rail {
@@ -291,8 +286,8 @@
 		font-family: var(--sa-font);
 		font-size: var(--sa-text-desktop-hero-title);
 		font-weight: var(--sa-weight-heading);
-		letter-spacing: var(--sa-tracking-desktop-hero-title);
-		line-height: var(--sa-leading-desktop-hero-title);
+		letter-spacing: var(--desktop-hero-title-tracking);
+		line-height: var(--desktop-hero-title-leading);
 		margin: 0 !important;
 		max-width: 920px;
 		text-wrap: balance;
@@ -312,7 +307,7 @@
 		background: #171717;
 		border-radius: 12px;
 		box-sizing: border-box;
-		margin: 28px auto 0 !important;
+		margin: var(--desktop-hero-panel-gap) auto 0 !important;
 		max-width: 720px;
 		padding: 20px;
 		width: 100%;
@@ -344,10 +339,6 @@
 	.daynight-yellow-route-hero--compact .daynight-yellow-route-hero__deck {
 		max-width: 720px;
 		padding: 0;
-	}
-
-	.daynight-yellow-route-hero--compact .daynight-yellow-route-hero__content {
-		padding-block: 40px;
 	}
 
 	.daynight-yellow-route-hero--contact .daynight-yellow-route-hero__deck {

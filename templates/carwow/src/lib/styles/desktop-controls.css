@@ -1,6 +1,23 @@
-/* Desktop action contract. Brand/status red and the mobile theme remain independent. */
+/* SiteChrome is mounted only by the selected desktop composition. Keeping this
+ * document rule outside a width query prevents WebKit's scrollbar from hiding
+ * the desktop route at the 991/992px boundary. The mobile dock shares the data
+ * attribute, so match the desktop component's class as well. */
+html:has(.site-chrome[data-daynight-site-chrome]) {
+	scrollbar-width: none;
+}
+html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
+	display: none;
+}
+
+/* Shared desktop geometry and controls. */
 @media (min-width: 992px) {
 	:root {
+		--desktop-hero-height: 400px;
+		--desktop-hero-padding-top: 36px;
+		--desktop-hero-padding-bottom: 32px;
+		--desktop-hero-panel-gap: 24px;
+		--desktop-hero-title-leading: 1.12;
+		--desktop-hero-title-tracking: -0.04em;
 		--desktop-action: #171b1e;
 		--desktop-action-hover: #343a3e;
 		--desktop-action-text: #fff;

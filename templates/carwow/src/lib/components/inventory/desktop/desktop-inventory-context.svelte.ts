@@ -18,9 +18,8 @@ type InventoryQuickFiltersSource =
 	| undefined;
 
 /**
- * Quick-select type pills (the `.daynight-inventory-type-pill` shelf). Shared
- * between the pills component and `hasRenderedTags` so a filter that has a pill
- * never ALSO renders an applied-filter tag (legacy `hasShortcutFor` rule).
+ * Car-type shortcuts above the results. Selected types are represented by their
+ * shortcut; other selected filters appear as removable applied-filter tags.
  */
 export type InventoryShortcut = {
 	label: string;
@@ -31,18 +30,10 @@ export type InventoryShortcut = {
 
 export const inventoryShortcuts: InventoryShortcut[] = [
 	{ label: 'Всички', clearsAll: true },
-	{ label: 'Mercedes-Benz', field: 'brand', value: 'Mercedes-Benz' },
-	{ label: 'BMW', field: 'brand', value: 'BMW' },
-	{ label: 'Audi', field: 'brand', value: 'Audi' },
 	{ label: 'Джип', field: 'body', value: 'Джип' },
 	{ label: 'Седан', field: 'body', value: 'Седан' },
 	{ label: 'Купе', field: 'body', value: 'Купе' },
-	{ label: 'Ван', field: 'body', value: 'Ван' },
-	{ label: 'Налични', field: 'availability', value: 'available' },
-	{ label: 'Дизел', field: 'fuel', value: 'Дизел' },
-	{ label: 'Бензин', field: 'fuel', value: 'Бензин' },
-	{ label: 'До 50 000 EUR', field: 'price', value: 'under-50000' },
-	{ label: 'До 100 000 км', field: 'mileage', value: 'under-100000' }
+	{ label: 'Ван', field: 'body', value: 'Ван' }
 ];
 
 function hasShortcutFor(field: string, value: string): boolean {
@@ -73,6 +64,7 @@ function dedupe(values: string[]): string[] {
  */
 export class DesktopInventoryFilters {
 	readonly store: InventoryFilterState;
+	private readonly optionLabelsByField: Record<string, Record<string, string>> = {};
 	sort = $state<DesktopSortKey>('best-match');
 	/** Name of the quick-field whose inline popover is open (''=none). One at a time. */
 	openField = $state('');
@@ -87,6 +79,11 @@ export class DesktopInventoryFilters {
 		// Map each Модел option → the brands that stock it, so the menu can scope to
 		// the chosen Марка and stale model selections can be pruned when it changes.
 		const quickFilterGroups = typeof quickFilters === 'function' ? quickFilters() : quickFilters;
+		for (const group of quickFilterGroups ?? []) {
+			this.optionLabelsByField[group.name] = Object.fromEntries(
+				group.options.map((option) => [option.value, option.label])
+			);
+		}
 		const modelGroup = quickFilterGroups?.find((group) => group.name === 'model');
 		for (const option of modelGroup?.options ?? []) {
 			if (option.value) this.optionBrandsByModel[option.value] = option.brands ?? [];
@@ -115,11 +112,9 @@ export class DesktopInventoryFilters {
 	);
 
 	/**
-	 * Applied-filter chips for `#filterTags`. A filter value that has a matching
-	 * type-pill (e.g. body=SUV, fuel=Електрически, price=under-10000) is NOT
-	 * rendered as a chip — the pill already represents it (legacy behaviour). This
-	 * is what makes `#filterResults`/`#btnClearAll` stay hidden for pill filters
-	 * but appear for brand/feature multi-selects.
+	 * Applied-filter chips for `#filterTags`. Car types already have a selected,
+	 * removable shortcut. Make, fuel, budget and other selections need their own
+	 * tags so filters chosen in the dialog remain visible above the results.
 	 */
 	appliedTags = $derived.by(() => {
 		const s = this.store;
@@ -139,8 +134,8 @@ export class DesktopInventoryFilters {
 		for (const value of s.body) pushSingle('body', value, value);
 		pushSingle('fuel', s.fuel, s.fuel);
 		pushSingle('transmission', s.transmission, s.transmission);
-		pushSingle('price', s.price, s.price);
-		pushSingle('mileage', s.mileage, s.mileage);
+		pushSingle('price', s.price, this.optionLabelsByField.price?.[s.price] ?? s.price);
+		pushSingle('mileage', s.mileage, this.optionLabelsByField.mileage?.[s.mileage] ?? s.mileage);
 		pushSingle(
 			'availability',
 			s.availability,

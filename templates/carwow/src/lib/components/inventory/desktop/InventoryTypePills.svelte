@@ -10,13 +10,6 @@
 	} from './desktop-inventory-context.svelte';
 
 	const filters = getDesktopInventoryContext();
-	const vehicleShortcuts = inventoryShortcuts.filter(
-		(shortcut) => shortcut.clearsAll || shortcut.field === 'brand' || shortcut.field === 'body'
-	);
-	const ownershipShortcuts = inventoryShortcuts.filter(
-		(shortcut) => !vehicleShortcuts.includes(shortcut)
-	);
-	const shortcutGroups = [vehicleShortcuts, ownershipShortcuts];
 
 	function pillHref(shortcut: (typeof inventoryShortcuts)[number]) {
 		if (shortcut.clearsAll || !shortcut.field || !shortcut.value) {
@@ -58,40 +51,38 @@
 	data-daynight-shortcut-pills
 	aria-label={i18n.t('copy.0ff4d985dee2')}
 >
-	{#each shortcutGroups as group (group[0].label)}
-		<div class="daynight-inventory-type-pills__group" style:--shortcut-count={group.length}>
-			{#each group as pill (pill.label)}
-				{@const active = pillActive(pill)}
-				<a
-					class={[
-						'daynight-inventory-type-pill desktop-discovery-chip',
-						active && 'is-active',
-						active && 'is-selected'
-					]}
-					href={i18n.href(pillHref(pill))}
-					data-daynight-shortcut-clear={pill.clearsAll ? 'true' : undefined}
-					data-daynight-shortcut-field={pill.field}
-					data-daynight-shortcut-value={pill.value}
-					aria-current={active ? 'true' : 'false'}
-					aria-label={pill.clearsAll
-						? i18n.t('copy.507ff40ff784')
-						: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
-					title={pill.clearsAll
-						? i18n.t('copy.507ff40ff784')
-						: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
-					onclick={(event) => handlePillClick(event, pill)}
-				>
-					<span>{i18n.spec(pill.label)}</span>
-				</a>
-			{/each}
-		</div>
-	{/each}
+	<div class="daynight-inventory-type-pills__group">
+		{#each inventoryShortcuts as pill (pill.label)}
+			{@const active = pillActive(pill)}
+			<a
+				class={[
+					'daynight-inventory-type-pill desktop-discovery-chip',
+					active && 'is-active',
+					active && 'is-selected'
+				]}
+				href={i18n.href(pillHref(pill))}
+				data-daynight-shortcut-clear={pill.clearsAll ? 'true' : undefined}
+				data-daynight-shortcut-field={pill.field}
+				data-daynight-shortcut-value={pill.value}
+				aria-current={active ? 'true' : 'false'}
+				aria-label={pill.clearsAll
+					? i18n.t('copy.507ff40ff784')
+					: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
+				title={pill.clearsAll
+					? i18n.t('copy.507ff40ff784')
+					: i18n.t('pattern.8b15a08c1b53', { v0: i18n.spec(pill.label) })}
+				onclick={(event) => handlePillClick(event, pill)}
+			>
+				<span>{i18n.spec(pill.label)}</span>
+			</a>
+		{/each}
+	</div>
 </div>
 
 <style>
 	.daynight-inventory-type-pills__group {
 		display: grid;
-		grid-template-columns: repeat(var(--shortcut-count), minmax(max-content, 1fr));
+		grid-template-columns: repeat(5, max-content);
 		gap: 8px;
 	}
 	.daynight-inventory-type-pill.is-selected:not([data-daynight-shortcut-clear='true'])::after {

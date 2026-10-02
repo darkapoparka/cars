@@ -3344,12 +3344,6 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	width: var(--desktop-content-width);
 	max-width: var(--desktop-content-max);
 	padding-inline: 0;
-	padding-top: 30px;
-	padding-bottom: 24px;
-}
-
-.inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
-	margin-top: 18px !important;
 }
 
 .inventory-refined .daynight-inventory-viewport--grid [data-daynight-grid-panel].active > .grid {
@@ -3373,10 +3367,6 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 		grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 	}
 }
-.inventory-refined .inventory-hero .daynight-yellow-route-hero {
-	min-height: 0;
-}
-
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
 	background: var(--discovery-panel) !important;
 	padding: 14px 18px !important;
