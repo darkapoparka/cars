@@ -148,9 +148,7 @@
 				</div>
 				{#if showBelowCta}
 					<div class="daynight-home-reviews__browse-cta">
-						<a href={i18n.href(resolve('/reviews'))} class="daynight-home-reviews__browse-cta-link">
-							{i18n.text(ctaLabel)}
-						</a>
+						<DesktopBrowseLink href={i18n.href(resolve('/reviews'))} label={i18n.text(ctaLabel)} />
 					</div>
 				{/if}
 			</div>
@@ -196,7 +194,7 @@
 									<DesktopBrowseLink
 										href={i18n.href(resolve(card.ctaHref))}
 										label={card.ctaLabel}
-										tone={card.modifier === 'inventory' ? 'dark' : 'light'}
+										tone={card.modifier === 'inventory' ? 'dark' : 'brand'}
 									/>
 								</div>
 							</div>
@@ -230,6 +228,7 @@
 	}
 	.daynight-home-action-card--sell {
 		--banner-foreground: #fff;
+		--desktop-focus: #fff;
 		background: var(--sa-red-strong);
 	}
 	.daynight-home-action-card__image {
@@ -375,23 +374,6 @@
 		display: flex;
 		justify-content: center;
 		margin-top: 24px;
-	}
-	.daynight-home-reviews__browse-cta-link {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 44px;
-		padding: 0 18px;
-		border: 1px solid var(--desktop-control-border);
-		border-radius: 8px;
-		color: var(--desktop-action);
-		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
-		background: #fff;
-		text-decoration: none;
-	}
-	.daynight-home-reviews__browse-cta-link:hover {
-		background: var(--desktop-secondary-hover);
-		border-color: var(--desktop-secondary-hover);
 	}
 	@media (max-width: 1199px) {
 		.daynight-home-action-grid {

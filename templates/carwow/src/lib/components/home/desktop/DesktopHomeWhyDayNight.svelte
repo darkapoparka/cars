@@ -107,7 +107,7 @@
 							<DesktopBrowseLink
 								href={i18n.href(resolve(campaign.href))}
 								label={campaign.cta}
-								tone={campaign.id === 'collection' ? 'light' : 'dark'}
+								tone={campaign.id === 'viewing' ? 'dark' : 'brand'}
 							/>
 						</div>
 					</article>
