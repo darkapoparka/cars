@@ -41,7 +41,7 @@
 					<Action href={data.site.contact.phoneHref} size="primary"
 						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
 					>
-					<Action href="#contact-enquiry" variant="secondary" size="primary"
+					<Action href="#contact-enquiry" variant="strong" size="primary"
 						>{desktopCopy[data.locale].contactEnquiry}</Action
 					>
 				</DesktopHeroActions>

@@ -1,5 +1,7 @@
 # About and Contact desktop hero follow-up
 
+The later [black right-hand action follow-up](action-update/README.md) supersedes the grey button treatment. The live comparison gallery now shows that update; this receipt and its original screenshots retain the earlier hero-content implementation evidence.
+
 The owner requested social icons below About's white action panel and useful content in Contact's empty hero center. About now shows the configured Facebook, Instagram and TikTok links. Contact now shows the localized dealer address, a Google Maps directions link and the configured Viber message shortcut. Centered headings, white primary-action panels, red actions and automotive artwork keep their existing positions.
 
 ## Ownership

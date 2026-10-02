@@ -63,10 +63,8 @@
 				<Action href={about.hero.actions?.[0]?.href ?? '/inventory'} size="primary"
 					>{desktopCopy[data.locale].aboutCars}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
-				<Action
-					href={about.hero.actions?.[1]?.href ?? '/contact'}
-					variant="secondary"
-					size="primary">{desktopCopy[data.locale].aboutContact}</Action
+				<Action href={about.hero.actions?.[1]?.href ?? '/contact'} variant="strong" size="primary"
+					>{desktopCopy[data.locale].aboutContact}</Action
 				>
 			</DesktopHeroActions>
 		{/snippet}

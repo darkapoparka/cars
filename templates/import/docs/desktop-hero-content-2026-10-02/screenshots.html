@@ -84,10 +84,10 @@
 		</style>
 	</head>
 	<body>
-		<h1>About and Contact — hero update</h1>
+		<h1>About and Contact — black right-hand actions</h1>
 		<p>
-			Matched screenshots at 1440px. Select a route and language; click either image to inspect it
-			at full size.
+			Grey before, black after. Matched screenshots at 1440px. Select a route and language; click
+			either image to inspect it at full size.
 		</p>
 		<nav aria-label="Screenshot comparisons">
 			<button type="button" data-pair="about-bg" aria-pressed="true">About · BG</button>
@@ -98,10 +98,10 @@
 		<div class="pairs">
 			<figure>
 				<figcaption>Before</figcaption>
-				<a id="before-link" href="before/about-bg.png" target="_blank" rel="noopener"
+				<a id="before-link" href="action-update/before/about-bg.png" target="_blank" rel="noopener"
 					><img
 						id="before-image"
-						src="before/about-bg.png"
+						src="action-update/before/about-bg.png"
 						alt="About BG before"
 						width="1440"
 						height="680"
@@ -109,10 +109,10 @@
 			</figure>
 			<figure>
 				<figcaption>After</figcaption>
-				<a id="after-link" href="after/about-bg.png" target="_blank" rel="noopener"
+				<a id="after-link" href="action-update/after/about-bg.png" target="_blank" rel="noopener"
 					><img
 						id="after-image"
-						src="after/about-bg.png"
+						src="action-update/after/about-bg.png"
 						alt="About BG after"
 						width="1440"
 						height="680"
@@ -120,7 +120,7 @@
 			</figure>
 		</div>
 		<footer>
-			<a class="receipt" href="README.md">Verification receipt</a
+			<a class="receipt" href="action-update/README.md">Verification receipt</a
 			><a href="http://127.0.0.1:6790/bg/about">Live About</a
 			><a href="http://127.0.0.1:6790/bg/contact">Live Contact</a>
 		</footer>
@@ -131,7 +131,7 @@
 						.querySelectorAll('[data-pair]')
 						.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
 					for (const phase of ['before', 'after']) {
-						const source = `${phase}/${button.dataset.pair}.png`;
+						const source = `action-update/${phase}/${button.dataset.pair}.png`;
 						document.getElementById(`${phase}-image`).src = source;
 						document.getElementById(`${phase}-image`).alt = `${button.textContent} ${phase}`;
 						document.getElementById(`${phase}-link`).href = source;
