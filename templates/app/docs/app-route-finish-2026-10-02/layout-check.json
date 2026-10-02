@@ -1,0 +1,893 @@
+[
+  {
+    "page": "pdp",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": null,
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 1354.03125,
+        "height": 1174,
+        "left": 16,
+        "right": 304,
+        "top": 180.03125,
+        "width": 288
+      },
+      "modal": null,
+      "path": "/bg/cars/2024-toyota-fortuner-exr",
+      "purchase": {
+        "bottom": 740,
+        "buttons": [
+          {
+            "bottom": 734,
+            "font": "14px",
+            "height": 44,
+            "icon": {
+              "bottom": 721,
+              "height": 18,
+              "left": 39.90625,
+              "right": 57.90625,
+              "top": 703,
+              "width": 18
+            },
+            "left": 12,
+            "right": 155,
+            "text": "Запазено",
+            "top": 690,
+            "width": 143
+          },
+          {
+            "bottom": 734,
+            "font": "14px",
+            "height": 44,
+            "icon": null,
+            "left": 163,
+            "right": 308,
+            "text": "Оглед",
+            "top": 690,
+            "width": 145
+          }
+        ],
+        "height": 57,
+        "left": 0,
+        "reserved": 73,
+        "right": 320,
+        "top": 683,
+        "width": 320
+      },
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 223.03125,
+        "height": 27,
+        "left": 16,
+        "right": 304,
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "top": 196.03125,
+        "width": 288
+      },
+      "width": 320
+    }
+  },
+  {
+    "page": "saved",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [
+        {
+          "bottom": 317,
+          "height": 157,
+          "left": 14,
+          "right": 306,
+          "title": "2024 Toyota FORTUNER",
+          "top": 160,
+          "width": 292
+        }
+      ],
+      "header": {
+        "bottom": 56,
+        "height": 56,
+        "left": 0,
+        "right": 320,
+        "top": 0,
+        "width": 320
+      },
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 385,
+        "height": 329,
+        "left": 0,
+        "right": 320,
+        "top": 56,
+        "width": 320
+      },
+      "modal": null,
+      "path": "/bg/saved",
+      "purchase": null,
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 40.140625,
+        "height": 24.296875,
+        "left": 68,
+        "right": 308,
+        "text": "Запазени автомобили",
+        "top": 15.84375,
+        "width": 240
+      },
+      "width": 320
+    }
+  },
+  {
+    "page": "more",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": {
+        "bottom": 56,
+        "height": 56,
+        "left": 0,
+        "right": 320,
+        "top": 0,
+        "width": 320
+      },
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [
+        {
+          "bottom": 488,
+          "current": null,
+          "height": 44,
+          "left": 125.109375,
+          "right": 200.875,
+          "text": "English",
+          "top": 444,
+          "width": 75.765625
+        },
+        {
+          "bottom": 488,
+          "current": "true",
+          "height": 44,
+          "left": 202.875,
+          "right": 303,
+          "text": "Български",
+          "top": 444,
+          "width": 100.125
+        }
+      ],
+      "main": {
+        "bottom": 564,
+        "height": 508,
+        "left": 0,
+        "right": 320,
+        "top": 56,
+        "width": 320
+      },
+      "modal": null,
+      "path": "/bg/more",
+      "purchase": null,
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 40.140625,
+        "height": 24.296875,
+        "left": 68,
+        "right": 218,
+        "text": "Меню",
+        "top": 15.84375,
+        "width": 150
+      },
+      "width": 320
+    }
+  },
+  {
+    "page": "pdp",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": null,
+      "height": 844,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 1393.421875,
+        "height": 1174,
+        "left": 16,
+        "right": 374,
+        "top": 219.421875,
+        "width": 358
+      },
+      "modal": null,
+      "path": "/bg/cars/2024-toyota-fortuner-exr",
+      "purchase": {
+        "bottom": 844,
+        "buttons": [
+          {
+            "bottom": 838,
+            "font": "14px",
+            "height": 44,
+            "icon": {
+              "bottom": 825,
+              "height": 18,
+              "left": 57.40625,
+              "right": 75.40625,
+              "top": 807,
+              "width": 18
+            },
+            "left": 12,
+            "right": 190,
+            "text": "Запазено",
+            "top": 794,
+            "width": 178
+          },
+          {
+            "bottom": 838,
+            "font": "14px",
+            "height": 44,
+            "icon": null,
+            "left": 198,
+            "right": 378,
+            "text": "Оглед",
+            "top": 794,
+            "width": 180
+          }
+        ],
+        "height": 57,
+        "left": 0,
+        "reserved": 73,
+        "right": 390,
+        "top": 787,
+        "width": 390
+      },
+      "scrollWidth": 390,
+      "title": {
+        "bottom": 262.421875,
+        "height": 27,
+        "left": 16,
+        "right": 374,
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "top": 235.421875,
+        "width": 358
+      },
+      "width": 390
+    }
+  },
+  {
+    "page": "saved",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [
+        {
+          "bottom": 296,
+          "height": 157,
+          "left": 14,
+          "right": 376,
+          "title": "2024 Toyota FORTUNER",
+          "top": 139,
+          "width": 362
+        }
+      ],
+      "header": {
+        "bottom": 56,
+        "height": 56,
+        "left": 0,
+        "right": 390,
+        "top": 0,
+        "width": 390
+      },
+      "height": 844,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 364,
+        "height": 308,
+        "left": 0,
+        "right": 390,
+        "top": 56,
+        "width": 390
+      },
+      "modal": null,
+      "path": "/bg/saved",
+      "purchase": null,
+      "scrollWidth": 390,
+      "title": {
+        "bottom": 40.140625,
+        "height": 24.296875,
+        "left": 68,
+        "right": 378,
+        "text": "Запазени автомобили",
+        "top": 15.84375,
+        "width": 310
+      },
+      "width": 390
+    }
+  },
+  {
+    "page": "more",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": {
+        "bottom": 56,
+        "height": 56,
+        "left": 0,
+        "right": 390,
+        "top": 0,
+        "width": 390
+      },
+      "height": 844,
+      "horizontalClips": [],
+      "languages": [
+        {
+          "bottom": 488,
+          "current": null,
+          "height": 44,
+          "left": 195.109375,
+          "right": 270.875,
+          "text": "English",
+          "top": 444,
+          "width": 75.765625
+        },
+        {
+          "bottom": 488,
+          "current": "true",
+          "height": 44,
+          "left": 272.875,
+          "right": 373,
+          "text": "Български",
+          "top": 444,
+          "width": 100.125
+        }
+      ],
+      "main": {
+        "bottom": 564,
+        "height": 508,
+        "left": 0,
+        "right": 390,
+        "top": 56,
+        "width": 390
+      },
+      "modal": null,
+      "path": "/bg/more",
+      "purchase": null,
+      "scrollWidth": 390,
+      "title": {
+        "bottom": 40.140625,
+        "height": 24.296875,
+        "left": 68,
+        "right": 288,
+        "text": "Меню",
+        "top": 15.84375,
+        "width": 220
+      },
+      "width": 390
+    }
+  },
+  {
+    "page": "pdp",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": null,
+      "height": 1024,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 1836.09375,
+        "height": 1404,
+        "left": 28,
+        "right": 740,
+        "top": 432.09375,
+        "width": 712
+      },
+      "modal": null,
+      "path": "/bg/cars/2024-toyota-fortuner-exr",
+      "purchase": {
+        "bottom": 1024,
+        "buttons": [
+          {
+            "bottom": 1016,
+            "font": "14px",
+            "height": 44,
+            "icon": {
+              "bottom": 1003,
+              "height": 18,
+              "left": 154.90625,
+              "right": 172.90625,
+              "top": 985,
+              "width": 18
+            },
+            "left": 18,
+            "right": 379,
+            "text": "Запазено",
+            "top": 972,
+            "width": 361
+          },
+          {
+            "bottom": 1016,
+            "font": "14px",
+            "height": 44,
+            "icon": null,
+            "left": 387,
+            "right": 750,
+            "text": "Уговорете оглед",
+            "top": 972,
+            "width": 363
+          }
+        ],
+        "height": 61,
+        "left": 0,
+        "reserved": 77,
+        "right": 768,
+        "top": 963,
+        "width": 768
+      },
+      "scrollWidth": 768,
+      "title": {
+        "bottom": 483.09375,
+        "height": 35,
+        "left": 28,
+        "right": 740,
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "top": 448.09375,
+        "width": 712
+      },
+      "width": 768
+    }
+  },
+  {
+    "page": "saved",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [
+        {
+          "bottom": 354,
+          "height": 187,
+          "left": 28,
+          "right": 376,
+          "title": "2024 Toyota FORTUNER",
+          "top": 167,
+          "width": 348
+        }
+      ],
+      "header": {
+        "bottom": 68,
+        "height": 68,
+        "left": 0,
+        "right": 768,
+        "top": 0,
+        "width": 768
+      },
+      "height": 1024,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 374,
+        "height": 306,
+        "left": 0,
+        "right": 768,
+        "top": 68,
+        "width": 768
+      },
+      "modal": null,
+      "path": "/bg/saved",
+      "purchase": null,
+      "scrollWidth": 768,
+      "title": {
+        "bottom": 46.140625,
+        "height": 24.296875,
+        "left": 84,
+        "right": 740,
+        "text": "Запазени автомобили",
+        "top": 21.84375,
+        "width": 656
+      },
+      "width": 768
+    }
+  },
+  {
+    "page": "more",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": {
+        "bottom": 68,
+        "height": 68,
+        "left": 4,
+        "right": 764,
+        "top": 0,
+        "width": 760
+      },
+      "height": 1024,
+      "horizontalClips": [],
+      "languages": [
+        {
+          "bottom": 500,
+          "current": null,
+          "height": 44,
+          "left": 553.109375,
+          "right": 628.875,
+          "text": "English",
+          "top": 456,
+          "width": 75.765625
+        },
+        {
+          "bottom": 500,
+          "current": "true",
+          "height": 44,
+          "left": 630.875,
+          "right": 731,
+          "text": "Български",
+          "top": 456,
+          "width": 100.125
+        }
+      ],
+      "main": {
+        "bottom": 558,
+        "height": 490,
+        "left": 4,
+        "right": 764,
+        "top": 68,
+        "width": 760
+      },
+      "modal": null,
+      "path": "/bg/more",
+      "purchase": null,
+      "scrollWidth": 768,
+      "title": {
+        "bottom": 46.140625,
+        "height": 24.296875,
+        "left": 88,
+        "right": 646,
+        "text": "Меню",
+        "top": 21.84375,
+        "width": 558
+      },
+      "width": 768
+    }
+  },
+  {
+    "page": "pdp",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": null,
+      "height": 1000,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 2166.65625,
+        "height": 1396,
+        "left": 128,
+        "right": 952,
+        "top": 770.65625,
+        "width": 824
+      },
+      "modal": null,
+      "path": "/bg/cars/2024-toyota-fortuner-exr",
+      "purchase": null,
+      "scrollWidth": 1440,
+      "title": {
+        "bottom": 821.65625,
+        "height": 35,
+        "left": 128,
+        "right": 952,
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "top": 786.65625,
+        "width": 824
+      },
+      "width": 1440
+    }
+  },
+  {
+    "page": "saved",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [
+        {
+          "bottom": 427,
+          "height": 187,
+          "left": 128,
+          "right": 512,
+          "title": "2024 Toyota FORTUNER",
+          "top": 240,
+          "width": 384
+        }
+      ],
+      "header": {
+        "bottom": 141,
+        "height": 68,
+        "left": 0,
+        "right": 1440,
+        "top": 73,
+        "width": 1440
+      },
+      "height": 1000,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 447,
+        "height": 306,
+        "left": 100,
+        "right": 1340,
+        "top": 141,
+        "width": 1240
+      },
+      "modal": null,
+      "path": "/bg/saved",
+      "purchase": null,
+      "scrollWidth": 1440,
+      "title": {
+        "bottom": 119.140625,
+        "height": 24.296875,
+        "left": 184,
+        "right": 1312,
+        "text": "Запазени автомобили",
+        "top": 94.84375,
+        "width": 1128
+      },
+      "width": 1440
+    }
+  },
+  {
+    "page": "more",
+    "textScale": 1,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": {
+        "bottom": 141,
+        "height": 68,
+        "left": 340,
+        "right": 1100,
+        "top": 73,
+        "width": 760
+      },
+      "height": 1000,
+      "horizontalClips": [],
+      "languages": [
+        {
+          "bottom": 573,
+          "current": null,
+          "height": 44,
+          "left": 889.109375,
+          "right": 964.875,
+          "text": "English",
+          "top": 529,
+          "width": 75.765625
+        },
+        {
+          "bottom": 573,
+          "current": "true",
+          "height": 44,
+          "left": 966.875,
+          "right": 1067,
+          "text": "Български",
+          "top": 529,
+          "width": 100.125
+        }
+      ],
+      "main": {
+        "bottom": 631,
+        "height": 490,
+        "left": 340,
+        "right": 1100,
+        "top": 141,
+        "width": 760
+      },
+      "modal": null,
+      "path": "/bg/more",
+      "purchase": null,
+      "scrollWidth": 1440,
+      "title": {
+        "bottom": 119.140625,
+        "height": 24.296875,
+        "left": 424,
+        "right": 982,
+        "text": "Меню",
+        "top": 94.84375,
+        "width": 558
+      },
+      "width": 1440
+    }
+  },
+  {
+    "page": "pdp",
+    "textScale": 2,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": null,
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 2309.953125,
+        "height": 2129.921875,
+        "left": 16,
+        "right": 304,
+        "top": 180.03125,
+        "width": 288
+      },
+      "modal": null,
+      "path": "/bg/cars/2024-toyota-fortuner-exr",
+      "purchase": {
+        "bottom": 740,
+        "buttons": [
+          {
+            "bottom": 734,
+            "font": "28px",
+            "height": 44,
+            "icon": {
+              "bottom": 721,
+              "height": 18,
+              "left": 22,
+              "right": 40,
+              "top": 703,
+              "width": 18
+            },
+            "left": 12,
+            "right": 181.359375,
+            "text": "Запазено",
+            "top": 690,
+            "width": 169.359375
+          },
+          {
+            "bottom": 734,
+            "font": "28px",
+            "height": 44,
+            "icon": null,
+            "left": 189.359375,
+            "right": 308,
+            "text": "Оглед",
+            "top": 690,
+            "width": 118.640625
+          }
+        ],
+        "height": 57,
+        "left": 0,
+        "reserved": 73,
+        "right": 320,
+        "top": 683,
+        "width": 320
+      },
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 304.03125,
+        "height": 108,
+        "left": 16,
+        "right": 304,
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "top": 196.03125,
+        "width": 288
+      },
+      "width": 320
+    }
+  },
+  {
+    "page": "saved",
+    "textScale": 2,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [
+        {
+          "bottom": 643.171875,
+          "height": 321.984375,
+          "left": 14,
+          "right": 306,
+          "title": "2024 Toyota FORTUNER",
+          "top": 321.1875,
+          "width": 292
+        }
+      ],
+      "header": {
+        "bottom": 109.1875,
+        "height": 109.1875,
+        "left": 0,
+        "right": 320,
+        "top": 0,
+        "width": 320
+      },
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [],
+      "main": {
+        "bottom": 722.359375,
+        "height": 613.171875,
+        "left": 0,
+        "right": 320,
+        "top": 109.1875,
+        "width": 320
+      },
+      "modal": null,
+      "path": "/bg/saved",
+      "purchase": null,
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 103.1875,
+        "height": 97.1875,
+        "left": 68,
+        "right": 308,
+        "text": "Запазени автомобили",
+        "top": 6,
+        "width": 240
+      },
+      "width": 320
+    }
+  },
+  {
+    "page": "more",
+    "textScale": 2,
+    "measurement": {
+      "brokenVisibleImages": [],
+      "cards": [],
+      "header": {
+        "bottom": 60.59375,
+        "height": 60.59375,
+        "left": 0,
+        "right": 320,
+        "top": 0,
+        "width": 320
+      },
+      "height": 740,
+      "horizontalClips": [],
+      "languages": [
+        {
+          "bottom": 886.75,
+          "current": null,
+          "height": 57.1875,
+          "left": 17,
+          "right": 138.53125,
+          "text": "English",
+          "top": 829.5625,
+          "width": 121.53125
+        },
+        {
+          "bottom": 945.9375,
+          "current": "true",
+          "height": 57.1875,
+          "left": 17,
+          "right": 187.234375,
+          "text": "Български",
+          "top": 888.75,
+          "width": 170.234375
+        }
+      ],
+      "main": {
+        "bottom": 1128.9375,
+        "height": 1068.34375,
+        "left": 0,
+        "right": 320,
+        "top": 60.59375,
+        "width": 320
+      },
+      "modal": null,
+      "path": "/bg/more",
+      "purchase": null,
+      "scrollWidth": 320,
+      "title": {
+        "bottom": 54.59375,
+        "height": 48.59375,
+        "left": 68,
+        "right": 218,
+        "text": "Меню",
+        "top": 6,
+        "width": 150
+      },
+      "width": 320
+    }
+  }
+]

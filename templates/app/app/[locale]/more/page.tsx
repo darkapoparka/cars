@@ -21,7 +21,7 @@ export default function MorePage() {
   const location = dealer.address.trim() || dealer.city.trim() ? showroomLocation(locale, true) : tx('Plan your visit');
 
   return <div {...stylex.props(s.screen)}>
-    <PageHeader title="Menu" action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
+    <PageHeader title="Menu" compact wrapTitle action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
     <main {...stylex.props(s.content)}>
       {showroom.menu.map(group => <nav key={group.label} aria-label={tx(group.label)} {...stylex.props(s.section, s.list)}>
         {group.items.map(item => <MenuRow key={item.href} href={item.href} icon={item.icon} title={tx(item.href === '/cars' ? 'Cars' : item.label)} copy={item.location ? location : undefined}/>)}
@@ -68,8 +68,8 @@ const s = stylex.create({
   chevron: {color: $.subtle},
   languageRow: {display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 52, paddingInline: 2},
   languageTitle: {fontSize: 14, fontWeight: 500, lineHeight: '20px'},
-  languages: {display: 'flex', gap: 2, padding: 3, borderRadius: 28, backgroundColor: $.surfaceAlt},
-  language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingInline: 14, color: $.muted, fontSize: 14, fontWeight: 500, lineHeight: '20px', borderWidth: 1, borderStyle: 'solid', borderColor: 'transparent', borderRadius: 24, backgroundColor: {default: 'transparent', ':hover': $.rail}, outlineOffset: -3},
+  languages: {display: 'flex', flexWrap: 'wrap', maxWidth: '100%', gap: 2, padding: 3, borderRadius: 28, backgroundColor: $.surfaceAlt},
+  language: {display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 44, paddingBlock: 8, paddingInline: 14, color: $.muted, fontSize: 14, fontWeight: 500, lineHeight: 1.4, borderWidth: 1, borderStyle: 'solid', borderColor: 'transparent', borderRadius: 24, backgroundColor: {default: 'transparent', ':hover': $.rail}, outlineOffset: -3},
   languageSelected: {color: $.surface, borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}, outlineColor: {default: 'transparent', ':focus-visible': $.surface}},
   notice: {margin: 0, paddingTop: 16, paddingInline: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
 });

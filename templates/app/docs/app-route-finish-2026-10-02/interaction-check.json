@@ -1,0 +1,74 @@
+{
+  "saved": {
+    "removeMovesFocusToNext": true,
+    "twoCarsSavedThroughPdp": true,
+    "englishReloadBackReturnedToSaved": true,
+    "lastRemoveMovesFocusToExplore": true,
+    "reloadBackReturnedToSaved": true,
+    "quotaFailurePreservedList": true,
+    "reloadPersisted": true
+  },
+  "pdp": {
+    "quotaFailure": {
+      "error": "Браузърът не успя да обнови запазените автомобили. Разрешете локалното съхранение и опитайте отново.",
+      "saved": "true",
+      "stored": "[\"2024-toyota-fortuner-exr\"]"
+    },
+    "unsentEnquiryDraft": true,
+    "escapeRestoredFocusAndScrolling": true,
+    "gallery": true,
+    "viewingSheet": true,
+    "priceSheet": true,
+    "viewingShortViewport": "320x480",
+    "errorDismissed": true
+  },
+  "inventoryReturn": {
+    "count": 9,
+    "originScroll": 500,
+    "scroll": 500,
+    "sort": "price-asc",
+    "url": "/bg/cars?brand=Toyota"
+  },
+  "directEntryFallbackCount": 48,
+  "moreDestinations": {
+    "languages": [
+      {
+        "current": null,
+        "path": "/en/more",
+        "text": "English"
+      },
+      {
+        "current": "true",
+        "path": "/bg/more",
+        "text": "Български"
+      }
+    ],
+    "menu": [
+      {
+        "path": "/bg/cars",
+        "text": "Автомобили"
+      },
+      {
+        "path": "/bg/stores",
+        "text": "Посетете ни\nПланирайте посещение"
+      },
+      {
+        "path": "/bg/saved",
+        "text": "Запазени автомобили"
+      },
+      {
+        "path": "/bg/sell",
+        "text": "Продайте или заменете"
+      },
+      {
+        "path": "/bg/finance",
+        "text": "Начини на плащане"
+      },
+      {
+        "path": "/bg/service",
+        "text": "Услуги за автомобила"
+      }
+    ]
+  },
+  "browserErrors": []
+}

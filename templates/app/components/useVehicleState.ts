@@ -32,15 +32,22 @@ export function useRecentVehicles() {
 export function useSavedVehicle(slug: string) {
   const saved = useSavedVehicles().includes(slug);
   const [error, setError] = useState('');
-  const toggle = useCallback(() => {
+  const change = useCallback((value?: boolean) => {
     try {
-      const previous = decode(read(SAVED_KEY));
-      localStorage.setItem(SAVED_KEY, JSON.stringify(previous.includes(slug) ? previous.filter(item => item !== slug) : [...previous, slug]));
+      const previous = decode(localStorage.getItem(SAVED_KEY) ?? '[]');
+      const save = value ?? !previous.includes(slug);
+      const next = previous.filter(item => item !== slug);
+      if (save) next.push(slug);
+      localStorage.setItem(SAVED_KEY, JSON.stringify(next));
       window.dispatchEvent(new Event(CHANGE_EVENT));
       setError('');
-    } catch {setError('This browser could not save the car. Please allow local storage and try again.');}
+      return true;
+    } catch {setError('This browser could not update saved cars. Please allow local storage and try again.'); return false;}
   }, [slug]);
-  return {saved, toggle, error};
+  const toggle = useCallback(() => change(), [change]);
+  const remove = useCallback(() => change(false), [change]);
+  const clearError = useCallback(() => setError(''), []);
+  return {saved, toggle, remove, error, clearError};
 }
 export function recordVehicleView(slug: string) {
   try {

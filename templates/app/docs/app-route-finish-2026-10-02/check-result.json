@@ -1,0 +1,43 @@
+{
+  "started": "2026-10-02T01:02:24.3916416Z",
+  "finished": "2026-10-02T01:11:43.5641014Z",
+  "exit": 0,
+  "node": "22.20.0",
+  "dist": ".next-mobile-final-audit-20261002",
+  "nextEnvRestored": true,
+  "tsconfigRestored": true,
+  "sourceFiles": [
+    {
+      "path": "app/[locale]/more/page.tsx",
+      "sha256": "DE8BBECB58198B99FEDBCE395D4D5458D616190F3F9B1DF2567E58AFD846C76C"
+    },
+    {
+      "path": "app/[locale]/saved/page.tsx",
+      "sha256": "D5C1D299F191C3603550239646723012FAE3115C5FD24FAB63E8AB0695280F88"
+    },
+    {
+      "path": "components/PageHeader.tsx",
+      "sha256": "774F5DA5279BAC5ADFF8AEF80E5F720C3897EAFCC68DD0B54A6F2142B3BFCAE3"
+    },
+    {
+      "path": "components/VehicleDetailClient.tsx",
+      "sha256": "85260CE266E4E0DF7CAF2A8DAF5A684F14A61A810D81380F86F6D583DF2C82C8"
+    },
+    {
+      "path": "components/useInventoryHistory.ts",
+      "sha256": "DAADFC8CD72168DB2D0FAB0BEBA3037EB6CCF242C4BE7E0A8DA8F6A5801A92F4"
+    },
+    {
+      "path": "components/useVehicleState.ts",
+      "sha256": "7C2679008D92A0FD36EF3A9A7C7A3C2837A03AFF0B31289BCA635E8BEF951E4C"
+    },
+    {
+      "path": "lib/locales/bg.json",
+      "sha256": "3E687BAC010438980BD34739D0BC0EFCF1683915537E4AD57681B7E91B826EDB"
+    },
+    {
+      "path": "lib/locales/en.json",
+      "sha256": "1622A8C8F2DC9823F6DEBED521BD2F6A8E38B7DE336225B0AC653BC59B29B728"
+    }
+  ]
+}
