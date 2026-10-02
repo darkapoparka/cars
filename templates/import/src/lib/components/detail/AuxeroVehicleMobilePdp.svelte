@@ -1146,15 +1146,17 @@
 
 		.daynight-mobile-pdp__cta {
 			display: inline-flex;
-			min-height: 44px;
+			min-width: 0;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 6px;
 			border: 0;
 			border-radius: var(--bc-radius-control);
-			font-size: var(--bc-text-control);
+			padding: 6px var(--bc-space-3);
+			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-leading-control);
+			line-height: var(--bc-leading-label);
 			text-align: center;
 			text-decoration: none;
 			cursor: pointer;
@@ -1168,6 +1170,10 @@
 		.daynight-mobile-pdp__cta :global(svg),
 		.daynight-mobile-pdp__cta :global(svg *) {
 			color: inherit;
+		}
+
+		.daynight-mobile-pdp__cta :global(svg) {
+			flex-shrink: 0;
 		}
 
 		.daynight-mobile-pdp__cta--primary {
