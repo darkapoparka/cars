@@ -19,37 +19,33 @@ import { PriceRating } from './VehicleCard';
 const s = stylex.create({
   paymentTabs: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
     marginInline: 16,
     marginTop: 12,
-    height: 44,
-    borderRadius: 8,
-    overflow: 'hidden',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.line,
+    padding: 3,
+    minHeight: 48,
+    borderRadius: 12,
+    backgroundColor: colors.controlSurface,
   },
   paymentTab: {
-    backgroundColor: colors.background,
+    backgroundColor: 'transparent',
     color: colors.text,
     borderWidth: 0,
+    borderRadius: 9,
+    minHeight: 44,
+    padding: 8,
     fontSize: 14,
-    fontWeight: 700,
+    fontWeight: 500,
+    lineHeight: '20px',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
   },
-  selectedTab: { boxShadow: 'inset 0 0 0 1.5px #5a087b' },
-  leasePrice: { display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 8 },
-  leaseCopy: { fontSize: 12, color: colors.muted, lineHeight: '20px' },
-  leaseAction: {
-    borderWidth: 0,
-    padding: 0,
-    width: 'fit-content',
-    fontSize: 16,
-    fontWeight: 700,
-    color: colors.accent,
-    backgroundColor: 'transparent',
-    textAlign: 'left',
-    lineHeight: '24px',
+  selectedTab: {
+    backgroundColor: colors.background,
+    boxShadow: '0 1px 3px #0001',
   },
+  leasePrice: { display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 8, marginTop: 12 },
+  leaseCopy: { fontSize: 13, color: colors.muted, lineHeight: '20px' },
   hero: {
     touchAction: 'pan-y',
     display: 'block',
@@ -61,97 +57,155 @@ const s = stylex.create({
   image: { objectFit: 'cover' },
   counter: {
     position: 'absolute',
-    right: 8,
-    bottom: 8,
+    right: 12,
+    bottom: 12,
     width: 84,
     height: 32,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
-    backgroundColor: '#38393c',
-    borderRadius: 8,
+    backgroundColor: '#25262bcc',
+    borderRadius: 16,
     fontSize: 14,
-    fontWeight: 700,
+    fontWeight: 500,
     color: '#fff',
   },
-  info: { paddingInline: 16, paddingTop: 8 },
+  info: { paddingInline: 16, paddingTop: 16 },
   stickyPrice: {
     position: 'sticky',
     top: 60,
     zIndex: 26,
     backgroundColor: colors.background,
     paddingInline: 16,
-    paddingBottom: 12,
+    paddingBottom: 16,
     display: 'flex',
     flexDirection: 'column',
   },
-  model: { fontSize: 14, fontWeight: 700, lineHeight: '20px' },
-  variant: { fontSize: 16, lineHeight: '24px' },
-  price: { fontFamily: 'var(--font-base)', fontSize: 20, fontWeight: 700, lineHeight: '28px' },
-  priceRow: { display: 'flex', alignItems: 'center', gap: 12, marginTop: 14, marginBottom: 10 },
+  model: { fontSize: 24, fontWeight: 700, lineHeight: '30px', overflowWrap: 'anywhere' },
+  variant: {
+    fontSize: 14,
+    lineHeight: '20px',
+    color: colors.muted,
+    marginTop: 4,
+    overflowWrap: 'anywhere',
+  },
+  price: { fontFamily: 'var(--font-base)', fontSize: 24, fontWeight: 700, lineHeight: '32px' },
+  priceRow: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 10,
+    marginBottom: 2,
+  },
+  priceNote: { fontSize: 12, lineHeight: '18px', color: colors.muted },
   finance: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: { default: 24, '@media (max-width: 380px)': 12 },
-    padding: 8,
+    flexWrap: 'wrap',
+    gap: 8,
+    paddingBlock: 12,
+    paddingInline: 12,
+    borderWidth: 0,
+    borderRadius: 12,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
+    color: colors.text,
+    width: '100%',
+    marginTop: 12,
+    minHeight: 48,
+    fontSize: 14,
+    lineHeight: '20px',
+    fontWeight: 500,
+    outlineColor: colors.accent,
+    outlineOffset: -3,
+  },
+  actions: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    gap: 8,
+    marginTop: 12,
+  },
+  action: {
+    display: 'inline-flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 8,
+    minHeight: 48,
+    paddingBlock: 12,
+    paddingInline: 12,
+    borderRadius: 12,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 12,
-    backgroundColor: colors.background,
-    color: colors.accent,
-    width: '100%',
-    marginTop: 8,
-    minHeight: 48,
-    fontSize: 14,
-  },
-  actions: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginTop: 8 },
-  financeAmount: {
-    minWidth: { default: 131, '@media (max-width: 380px)': 112 },
-    display: 'inline-flex',
-    alignItems: 'center',
-    gap: 4,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     color: colors.text,
-    fontWeight: 700,
-    whiteSpace: 'nowrap',
+    fontSize: 15,
+    fontWeight: 500,
+    lineHeight: '22px',
+    textDecoration: 'none',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
   },
-  financeAction: { flex: '1', textAlign: 'left' },
+  enquire: {
+    backgroundColor: { default: colors.accent, ':hover': colors.accent },
+    borderColor: colors.accent,
+    color: '#fff',
+  },
+  actionIcon: { display: 'inline-flex', flexShrink: 0 },
+  financeAmount: {
+    display: 'inline-flex',
+    flexWrap: 'wrap',
+    alignItems: 'baseline',
+    gap: 4,
+    color: colors.muted,
+    fontWeight: 400,
+  },
+  financeAction: { display: 'inline-flex', alignItems: 'center', gap: 4, marginLeft: 'auto' },
   ratingButton: {
     display: 'inline-flex',
     alignItems: 'center',
-    gap: 16,
+    gap: 6,
+    minHeight: 44,
+    marginLeft: 'auto',
+    paddingBlock: 4,
+    paddingInline: 6,
+    borderRadius: 8,
     borderWidth: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.muted,
-    padding: 0,
+    textAlign: 'left',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
   },
-  oldRow: { marginTop: 4, marginBottom: 6 },
-  discountFinance: { marginTop: 14 },
-  financeValue: { fontWeight: 700, fontSize: 16 },
-  old: { fontSize: 16, fontWeight: 700, textDecoration: 'line-through', color: colors.accent },
-  discount: {
-    backgroundColor: '#ff8f66',
-    color: colors.text,
-    paddingLeft: 18,
-    paddingRight: 8,
-    borderRadius: 5,
+  oldRow: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
+    marginTop: 2,
+    marginBottom: 6,
+  },
+  financeValue: { fontWeight: 500, fontSize: 16, color: colors.text },
+  old: {
     fontSize: 14,
-    fontWeight: 700,
-    lineHeight: '22px',
-    clipPath: 'polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%)',
-    position: 'relative',
-    '::before': {
-      content: '""',
-      position: 'absolute',
-      left: 5,
-      top: 9,
-      width: 4,
-      height: 4,
-      borderRadius: '50%',
-      backgroundColor: '#fff',
-    },
+    lineHeight: '20px',
+    fontWeight: 400,
+    textDecoration: 'line-through',
+    color: colors.muted,
+  },
+  discount: {
+    backgroundColor: colors.activeSurface,
+    color: colors.accent,
+    paddingInline: 8,
+    paddingBlock: 2,
+    borderRadius: 6,
+    fontSize: 12,
+    fontWeight: 500,
+    lineHeight: '18px',
   },
 });
 export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
@@ -167,6 +221,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   const [leaseQuote, setLeaseQuote] = useState(false);
   const [paymentOverride, setPaymentOverride] = useState<'buy' | 'lease' | null>(null);
   const leasing = Boolean(v.leaseTerms) && (paymentOverride || filters.payment) === 'lease';
+  const financeMonthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
 
   const [priceInfo, setPriceInfo] = useState(false);
   const [report, setReport] = useState(false);
@@ -242,17 +297,16 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
         </span>
       </Link>
       <section {...stylex.props(s.info)}>
-        <h1 {...stylex.props(s.model, ui.row)}>
+        <h1 {...stylex.props(s.model)}>
           {v.make} {v.model}
         </h1>
         <p {...stylex.props(s.variant)}>{v.variant}</p>
       </section>
       {v.leaseTerms && (
-        <div {...stylex.props(s.paymentTabs)} role="tablist" aria-label="Payment type">
+        <div {...stylex.props(s.paymentTabs)} role="group" aria-label="Payment type">
           <button
             type="button"
-            role="tab"
-            aria-selected={!leasing}
+            aria-pressed={!leasing}
             onClick={() => setPaymentOverride('buy')}
             {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
           >
@@ -260,8 +314,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
           </button>
           <button
             type="button"
-            role="tab"
-            aria-selected={leasing}
+            aria-pressed={leasing}
             onClick={() => setPaymentOverride('lease')}
             {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
           >
@@ -287,10 +340,12 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
             </p>
             <button
               type="button"
-              {...stylex.props(s.leaseAction)}
+              aria-haspopup="dialog"
+              {...stylex.props(s.finance)}
               onClick={() => setLeaseQuote(true)}
             >
-              Calculate lease rate
+              Leasing details
+              <Icon name="right" size={18} />
             </button>
           </>
         ) : (
@@ -300,6 +355,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
               <button
                 type="button"
                 aria-label="Price rating details"
+                aria-haspopup="dialog"
                 onClick={() => setPriceInfo(true)}
                 {...stylex.props(s.ratingButton)}
               >
@@ -308,38 +364,49 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
               </button>
             </div>
             {v.previousPrice && (
-              <p {...stylex.props(ui.row, s.oldRow)}>
+              <p {...stylex.props(s.oldRow)}>
                 <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
                 <span {...stylex.props(s.discount)}>-{money(v.previousPrice - v.price)}</span>
               </p>
             )}
-            <p {...stylex.props(ui.small, ui.muted, ui.row)}>
-              {v.priceNote || money(v.price / 1.19) + ' Net, 19.00% VAT'}{' '}
-              <Icon name="info" size={14} />
+            <p {...stylex.props(s.priceNote)}>
+              {v.priceNote || money(v.price / 1.19) + ' Net, 19.00% VAT'}
             </p>
             <button
               type="button"
+              aria-label={'Calculate financing, from ' + money(financeMonthly) + ' per month'}
+              aria-haspopup="dialog"
               onClick={() => setFinance(true)}
-              {...stylex.props(s.finance, Boolean(v.previousPrice) && s.discountFinance)}
+              {...stylex.props(s.finance)}
             >
               <span {...stylex.props(s.financeAmount)}>
-                from{' '}
-                <strong {...stylex.props(s.financeValue)}>
-                  {money(v.financeMonthly || v.monthly || Math.round(v.price * 0.01061))}
-                </strong>{' '}
-                mth. <Icon name="info" size={14} />
+                from <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /
+                month
               </span>
-              <strong {...stylex.props(s.financeAction)}>Calculate Financing</strong>
+              <span {...stylex.props(s.financeAction)}>
+                Financing <Icon name="right" size={18} />
+              </span>
             </button>
           </>
         )}
         <div {...stylex.props(s.actions)}>
-          <Button icon="phone" onClick={() => setContact(true)}>
+          <button
+            type="button"
+            aria-haspopup="dialog"
+            onClick={() => setContact(true)}
+            {...stylex.props(s.action)}
+          >
+            <span {...stylex.props(s.actionIcon)}>
+              <Icon name="phone" size={18} />
+            </span>
             Contact
-          </Button>
-          <Button icon="mail" href={'/contact?vehicle=' + v.id}>
+          </button>
+          <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
+            <span {...stylex.props(s.actionIcon)}>
+              <Icon name="mail" size={18} />
+            </span>
             Enquire
-          </Button>
+          </Link>
         </div>
       </section>
       <VehicleSections vehicle={v} showroomMode onReport={() => setReport(true)} />

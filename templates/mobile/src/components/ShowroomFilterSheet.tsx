@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
-import { filterVehicles } from '@/lib/search';
+import { filterVehicles, money } from '@/lib/search';
 import { showroomCategory } from '@/lib/showroom';
 import {
   resetShowroomFilterDraft,
@@ -16,6 +16,7 @@ import { RangeField } from './RangeField';
 import { MakePicker } from './MakePicker';
 import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomTabs } from './ShowroomTabs';
+import { ShowroomSearchField } from './ShowroomSearch';
 import { Button, CheckRow, IconButton, Modal } from './ui';
 
 const s = stylex.create({
@@ -54,6 +55,28 @@ const s = stylex.create({
   group: { borderWidth: 0, padding: 0, minWidth: 0 },
   fieldTitle: { fontSize: 18, fontWeight: 600, lineHeight: '26px', marginBottom: 12 },
   copy: { color: colors.muted, fontSize: 14, lineHeight: '22px' },
+  searchPanel: { gap: 16 },
+  suggestions: { display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 },
+  suggestion: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+    minHeight: 48,
+    minWidth: 0,
+    paddingInline: 12,
+    paddingBlock: 10,
+    borderWidth: 0,
+    borderRadius: 12,
+    backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
+    color: colors.text,
+    textAlign: 'left',
+    outlineColor: colors.accent,
+    fontSize: 15,
+    lineHeight: '22px',
+  },
+  suggestionName: { minWidth: 0, overflowWrap: 'anywhere', fontWeight: 500 },
+  suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
   footer: {
     flexShrink: 0,
     paddingInline: 16,
@@ -123,12 +146,16 @@ export function ShowroomFilterSheet({
   const fuels = [...new Set(stock.map((vehicle) => vehicle.fuel))];
   const transmissions = [...new Set(stock.map((vehicle) => vehicle.transmission))];
   const bodies = [...new Set(stock.map((vehicle) => vehicle.body))];
-  const count = filterVehicles(stock, draft).length;
+  const matches = filterVehicles(stock, draft);
+  const count = matches.length;
+  const initialSheet = useRef(sheet);
   useEffect(() => {
+    const selector =
+      initialSheet.current === 'search'
+        ? '[data-showroom-search-input]'
+        : '[role="tab"][aria-selected="true"]';
     const frame = requestAnimationFrame(() =>
-      editorRef.current
-        ?.querySelector<HTMLButtonElement>('[role="tab"][aria-selected="true"]')
-        ?.focus({ preventScroll: true }),
+      editorRef.current?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: true }),
     );
     return () => cancelAnimationFrame(frame);
   }, []);
@@ -139,11 +166,11 @@ export function ShowroomFilterSheet({
     setDraft((current) => updateShowroomFilterDraft(current, patch));
   }
   return (
-    <Modal open onClose={onClose} label="Filters" flowSheet>
+    <Modal open onClose={onClose} label="Search and filters" flowSheet>
       <div ref={editorRef} {...stylex.props(s.editor)}>
         <div {...stylex.props(s.heading)}>
           <IconButton icon="close" label="Close filters" onClick={onClose} />
-          <h2 {...stylex.props(s.title)}>Filters</h2>
+          <h2 {...stylex.props(s.title)}>{sheet === 'search' ? 'Search' : 'Filters'}</h2>
           <IconButton
             icon="reset"
             label="Reset"
@@ -195,7 +222,43 @@ export function ShowroomFilterSheet({
             )}
           </div>
           {sheet !== 'make' && (
-            <div ref={fieldsRef} data-filter-scroll {...stylex.props(s.fields)}>
+            <div
+              ref={fieldsRef}
+              data-filter-scroll
+              {...stylex.props(s.fields, sheet === 'search' && s.searchPanel)}
+            >
+              {sheet === 'search' && (
+                <>
+                  <ShowroomSearchField
+                    label="Search make or model"
+                    value={draft.query}
+                    onChange={(query) => change({ query })}
+                    onSubmit={() => onApply(draft)}
+                  />
+                  <div {...stylex.props(s.suggestions)}>
+                    <h3 {...stylex.props(s.copy)}>
+                      {draft.query.trim() ? 'Matching vehicles' : 'In this showroom'}
+                    </h3>
+                    {matches.slice(0, 6).map((vehicle) => (
+                      <button
+                        key={vehicle.id}
+                        type="button"
+                        aria-label={'Search for ' + vehicle.make + ' ' + vehicle.model}
+                        onClick={() => change({ query: vehicle.make + ' ' + vehicle.model })}
+                        {...stylex.props(s.suggestion)}
+                      >
+                        <span {...stylex.props(s.suggestionName)}>
+                          {vehicle.make} {vehicle.model}
+                        </span>
+                        <span {...stylex.props(s.suggestionPrice)}>{money(vehicle.price)}</span>
+                      </button>
+                    ))}
+                    {!count && (
+                      <p {...stylex.props(s.copy)}>Try another search or adjust the filter tabs.</p>
+                    )}
+                  </div>
+                </>
+              )}
               {sheet === 'price' && (
                 <RangeField
                   comfortable

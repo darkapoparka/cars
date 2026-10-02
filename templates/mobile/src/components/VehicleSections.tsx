@@ -1,6 +1,7 @@
 'use client';
 import { Fragment, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { NativeDealerCards } from './NativeDealerCards';
 import { DealerLogo } from './DealerLogo';
 import * as stylex from '@stylexjs/stylex';
@@ -52,9 +53,29 @@ const s = stylex.create({
     paddingTop: 8,
     paddingBottom: 24,
   },
-  spec: { display: 'flex', alignItems: 'center', gap: 16, minHeight: 40 },
+  spec: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    position: 'relative',
+    paddingLeft: 44,
+    minHeight: 40,
+    minWidth: 0,
+    overflowWrap: 'anywhere',
+  },
   label: { fontSize: 12, lineHeight: '20px', color: colors.muted },
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
+  showroomSpecs: { padding: 0, gap: 16 },
+  showroomSpec: { paddingLeft: 34 },
+  specIcon: {
+    display: 'inline-flex',
+    position: 'absolute',
+    left: 0,
+    top: '50%',
+    transform: 'translateY(-50%)',
+  },
+  showroomLabel: { fontSize: 12, lineHeight: '18px' },
+  showroomValue: { fontSize: 14, lineHeight: '20px', fontWeight: 500 },
   seller: {
     width: '100%',
     borderWidth: 0,
@@ -108,6 +129,38 @@ const s = stylex.create({
     fontSize: 14,
     fontWeight: 500,
   },
+  showroomMore: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    minHeight: 48,
+    height: 'auto',
+    padding: 12,
+    color: colors.text,
+    fontSize: 14,
+    lineHeight: '20px',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+  },
+  contactAction: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    minHeight: 48,
+    paddingBlock: 12,
+    paddingInline: 16,
+    borderRadius: 12,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: '20px',
+    textDecoration: 'none',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
+  },
   modalScroll: { flex: '1', minHeight: 0, overflowY: 'auto', paddingTop: 4, marginBottom: 12 },
   modalCell: {
     paddingBlock: 0,
@@ -154,12 +207,24 @@ export function VehicleSections({
   const spec: [IconName, string, string][] = [
     ['mileage', 'Mileage', number(v.mileage) + ' km'],
     ...(v.mileage > 0
-      ? [['date', 'First Registration', v.registration] as [IconName, string, string]]
+      ? [
+          ['date', showroomMode ? 'First registered' : 'First Registration', v.registration] as [
+            IconName,
+            string,
+            string,
+          ],
+        ]
       : []),
     ['gauge', 'Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)'],
     ...(v.attributes?.hideOwners
       ? []
-      : [['user', 'Number of Owners', v.attributes?.owners || '1'] as [IconName, string, string]]),
+      : [
+          ['user', showroomMode ? 'Owners' : 'Number of Owners', v.attributes?.owners || '1'] as [
+            IconName,
+            string,
+            string,
+          ],
+        ]),
     ['fuel', 'Fuel', v.attributes?.fuelLabel || v.fuel],
     ['transmission', 'Transmission', v.transmission],
   ];
@@ -186,19 +251,19 @@ export function VehicleSections({
   return (
     <div {...stylex.props(s.body)}>
       <section {...stylex.props(s.card, s.pad)}>
-        <div {...stylex.props(s.specs)}>
+        <dl {...stylex.props(s.specs, showroomMode && s.showroomSpecs)}>
           {spec.map(([icon, label, value]) => (
-            <div key={label} {...stylex.props(s.spec)}>
-              <span {...stylex.props(ui.orange)}>
-                <Icon name={icon} size={28} />
-              </span>
-              <div>
-                <p {...stylex.props(s.label)}>{label}</p>
-                <p {...stylex.props(s.value)}>{value}</p>
-              </div>
+            <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
+              <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
+                <span {...stylex.props(ui.orange, s.specIcon)}>
+                  <Icon name={icon} size={showroomMode ? 24 : 28} />
+                </span>
+                {label}
+              </dt>
+              <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>{value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
         {!showroomMode && <AssistantPanel detail />}
         {!showroomMode && (
           <button
@@ -256,9 +321,10 @@ export function VehicleSections({
           aria-label="Show more technical data"
           aria-haspopup="dialog"
           onClick={() => setTechnical(true)}
-          {...stylex.props(s.more)}
+          {...stylex.props(s.more, showroomMode && s.showroomMore)}
         >
-          Show more
+          {showroomMode ? 'All specifications' : 'Show more'}
+          {showroomMode && <Icon name="right" size={18} />}
         </button>
       </section>
       <section {...stylex.props(s.card)}>
@@ -286,9 +352,10 @@ export function VehicleSections({
             aria-label="Show more features"
             aria-haspopup="dialog"
             onClick={() => setFeatures(true)}
-            {...stylex.props(s.more)}
+            {...stylex.props(s.more, showroomMode && s.showroomMore)}
           >
-            Show more
+            {showroomMode ? 'All features' : 'Show more'}
+            {showroomMode && <Icon name="right" size={18} />}
           </button>
         )}
       </section>
@@ -316,7 +383,7 @@ export function VehicleSections({
             description ? 'Show less vehicle description' : 'Show more vehicle description'
           }
           onClick={() => setDescription(!description)}
-          {...stylex.props(s.more)}
+          {...stylex.props(s.more, showroomMode && s.showroomMore)}
         >
           {description ? 'Show less' : 'Show more'}
         </button>
@@ -328,9 +395,10 @@ export function VehicleSections({
             Ask about this car or arrange a viewing.
           </p>
           <div {...stylex.props(ui.space)}>
-            <Button href={'/contact?vehicle=' + v.id} icon="mail">
+            <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.contactAction)}>
+              <Icon name="mail" size={18} />
               Contact the showroom
-            </Button>
+            </Link>
           </div>
         </section>
       ) : (
@@ -362,7 +430,7 @@ export function VehicleSections({
           ? 'Sample vehicle · Showroom template preview'
           : 'Local reference · No live seller connection'}
       </p>
-      <Modal table open={technical} onClose={() => setTechnical(false)}>
+      <Modal table open={technical} onClose={() => setTechnical(false)} label="Technical data">
         <h2 {...stylex.props(s.modalTitle)}>Technical data</h2>
         <div {...stylex.props(s.modalScroll)}>
           <table {...stylex.props(s.table)}>
@@ -401,7 +469,7 @@ export function VehicleSections({
           Close
         </button>
       </Modal>
-      <Modal table open={features} onClose={() => setFeatures(false)}>
+      <Modal table open={features} onClose={() => setFeatures(false)} label="Features">
         <h2 {...stylex.props(s.modalTitle)}>Features</h2>
         <div {...stylex.props(s.modalScroll)}>
           <table {...stylex.props(s.table)}>

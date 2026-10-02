@@ -583,7 +583,7 @@ import {
 } from '../.qa/domain/showroom-filter-editor.mjs';
 
 test('unified filter sections reject unknown editor URLs', () => {
-  for (const value of ['make', 'price', 'year', 'fuel', 'condition', 'more'])
+  for (const value of ['search', 'make', 'price', 'year', 'fuel', 'condition', 'more'])
     assert.equal(showroomFilterTab(value), value);
   for (const value of [null, '', 'payment', 'location', 'unknown'])
     assert.equal(showroomFilterTab(value), null);
@@ -619,6 +619,24 @@ test('editor Reset discards only the draft and preserves the current vehicle cat
   assert.equal(reset.maxPrice, '');
   reset.condition.push('Used');
   assert.deepEqual(defaultFilters.condition, []);
+});
+
+test('search drafts combine with price filters without applying changes to inventory', () => {
+  const applied = filters({ category: 'car', makes: ['BMW'] });
+  const baseline = structuredClone(applied);
+  let draft = updateShowroomFilterDraft(applied, { query: 'BMW X6', maxPrice: '1' });
+  assert.deepEqual(filterVehicles(vehicles, draft), []);
+  draft = updateShowroomFilterDraft(draft, { maxPrice: '' });
+  assert.deepEqual(
+    filterVehicles(vehicles, draft).map((vehicle) => vehicle.id),
+    ['bmw-x6'],
+  );
+  assert.equal(draft.query, 'BMW X6');
+  assert.deepEqual(draft.makes, ['BMW']);
+  assert.deepEqual(applied, baseline);
+  const reset = resetShowroomFilterDraft(draft);
+  assert.equal(reset.query, '');
+  assert.equal(filterVehicles(vehicles, reset).length, 4);
 });
 
 test('service tabs omit categories the dealer does not offer', () => {

@@ -112,7 +112,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <ShowroomNavIcon name={icon} />
+              <ShowroomNavIcon name={icon} active={pathname === href} />
               <span>{label}</span>
             </Link>
           ))}

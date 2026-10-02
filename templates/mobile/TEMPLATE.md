@@ -13,13 +13,17 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
-The bottom navigation is Cars / Services / Contact, using one 24px outline icon
-family with a simple side-profile car. Saved cars live in the header
+The bottom navigation is Cars / Services / Contact, using original 24px Phosphor
+glyphs: a front-facing car with headlights, a wrench and a conversation bubble.
+Inactive destinations use the regular glyph; the current one uses its filled
+version in the showroom accent. The source is pinned with its MIT license under
+`src/components/icons/phosphor/`. Saved cars live in the header
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
-Every Home filter pill opens one editor with the same underline tabs: Make & model,
-Price, Year, Fuel, Condition and More. Options update a draft; Show cars applies it.
+Home search and filter pills open one editor with the same underline tabs: Search,
+Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
+field with matching vehicle suggestions. Options update a draft; Show cars applies it.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
 Compact Make/Model controls switch views; selected makes remain editable. Model
@@ -29,6 +33,18 @@ Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Long vehicle names wrap within the card; inventory keeps its
 two single-line subtext rows. Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
+
+Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
+The retained price rating sits opposite the price, with slimmer bars and a 44px
+details target. The finance entry uses a neutral rounded row and shorter label;
+48px Contact and Enquire actions use 15px medium text, with Enquire as the primary
+action. Price reductions use a small plain chip. The rounded white stats panels
+and their technical-data and feature dialogs remain. Summary facts use semantic
+label/value pairs, smaller icons and shorter registration/owner labels; panel
+footers use 48px controls. Buying/Leasing uses native pressed buttons, and the
+lease entry opens the captured terms. Ratings, prices and finance terms remain
+sample data requiring dealer verification. Rendered acceptance is still pending.
+
 Services has three equal-width All / Import / Sell tabs that fill the viewport.
 Import uses a white starter card with a thin border, a small globe beside its
 heading and a neutral entry area; Sell keeps its white starter box. Their compact entry
@@ -64,11 +80,15 @@ smaller 32px Start face.
 
 Home places Sort in the quick-pill row, with Clear at its end when filters are
 active. Inventory starts directly below the controls, while the result count
-remains available to screen readers. Home and Services share a 44px search field
-with 16px input text. Text search stays inline; filter pills open the tabbed editor.
-Search uses one custom Clear action, suppresses the browser's extra search adornments
-and provides a Search keyboard action. Enter dismisses the keyboard after inline
-filtering; composition input is preserved. Pill, tab and bottom-navigation focus
+remains available to screen readers. Home and Services share a 44px search trigger
+with 16px labels. Text entry happens inside the mobile full-screen overlay, with
+a contained dialog on desktop. Services search previews matching offerings and
+applies the query to All; cancelling retains the original category, country or
+topic. Both searches preserve drafts until applied and support Close, Escape and
+browser Back. Search uses one custom Clear action, suppresses the browser's extra
+search adornments and provides a Search keyboard action. Enter applies the search;
+composition input is preserved. Opening Cars search focuses the input once;
+switching filter tabs retains their keyboard navigation. Pill, tab and bottom-navigation focus
 rings use the showroom accent and sit inside their targets. Toasts account for
 the phone's bottom safe area.
 Inventory cards keep two subtext rows: one variant line and one year/mileage/

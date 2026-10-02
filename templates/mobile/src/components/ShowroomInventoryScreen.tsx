@@ -226,7 +226,7 @@ export function ShowroomInventoryScreen() {
         <ShowroomSearch
           label="Search make or model"
           value={filters.query}
-          onChange={(query) => change({ query })}
+          onOpen={(button) => openSheet('search', button)}
         />
         <ShowroomTabs
           label="Vehicle category"

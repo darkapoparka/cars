@@ -58,15 +58,28 @@ this is not a template release or dealer deployment.
   mileage / fuel / transmission. Automatic is displayed as Auto in the compact
   facts. Full values remain in the tooltip and detail page; long rows truncate
   instead of wrapping to a third line.
-- Bottom navigation uses one 24px outline icon family with 1.8px strokes:
-  simple side-profile car, service grid and phone. Retained icon assets remain untouched.
+- Bottom navigation now uses original 24px Phosphor glyphs: front-facing car
+  with headlights, wrench and conversation bubble. Regular inactive and filled
+  active glyphs use the same source family and current color. The six paths are
+  copied unchanged from official core commit
+  `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, with its MIT license and source
+  receipt under `src/components/icons/phosphor/`. Retained reference assets are
+  untouched. The glyphs were inspected in a standalone reference sheet at 24px
+  and 48px; this is asset review, not a screenshot of the running application.
 - Home's Sort action moves into the quick-pill row, retaining its modal, selected
   ordering, URL state and focus return. Clear moves to the row's end when filters
   are active. The visible count/sort toolbar is removed; result announcements
   remain available to screen readers. Inventory starts 12px below the controls.
-- Home and Services share a smaller 44px search field, 16px input text and a
-  44px Clear search target. Text search remains inline; the existing pills open
-  the tabbed filter editor.
+- Home and Services share a compact 44px search trigger. Cars search opens the
+  existing full-screen editor on a new Search tab, with input, matching vehicle
+  suggestions and the shared Show cars footer. Search criteria combine with
+  Make & model, Price, Year, Fuel, Condition and More in one draft. Close, Escape
+  and browser Back cancel edits; Show cars or Enter applies them.
+- Services search opens a focused full-screen overlay with matching offerings
+  and a Show services footer. Applying searches across All; cancelling retains
+  the original tab, country and topic. Both overlays use the contained desktop
+  dialog and native focus/scroll handling. Search fields retain 16px text and
+  a 44px Clear target.
 - Contact replaces the grey title area with a white action strip below the logo:
   rounded grey Call us / Visit us buttons keep 48px targets with 44px faces.
   The enquiry form sits in a centered white card on the grey section below,
@@ -86,9 +99,10 @@ this is not a template release or dealer deployment.
   entry summaries. Full summary values remain available through an accessible
   description and tooltip. Country selection, local drafts and overlay steps
   are retained.
-- Home and Services search suppress duplicate browser search adornments, use a
-  Search keyboard action and dismiss the keyboard on Enter after inline filtering.
-  IME composition is preserved. Keyboard focus rings use the showroom accent
+- Home and Services search suppress duplicate browser search adornments and use a
+  Search keyboard action. Enter applies the draft; IME composition is preserved.
+  Cars focuses the input on initial search opening without stealing focus when
+  navigating the underline tabs. Keyboard focus rings use the showroom accent
   inside pill/tab/navigation targets, and toast positioning accounts for the
   bottom safe area. These are source changes awaiting rendered acceptance.
 
@@ -96,39 +110,45 @@ this is not a template release or dealer deployment.
 
 Using `L:/Toolchains/Node/22.20.0/node.exe` in `templates/mobile`:
 
-These checks cover the compact card, search, starter-entry and focus pass and
-the subsequent service-directory refinement.
+These checks cover the search overlays, navigation glyphs and latest PDP source,
+together with the preceding card, starter-entry, focus and service-directory
+refinements. The PDP build receipt is recorded in its follow-up below.
 
 - ESLint over `src`, with zero warnings: passed.
 - TypeScript `--noEmit`: passed.
-- Domain tests: all 80 passed, including country filtering, sale type,
-  optional VIN validation, immutable context seeding and legacy draft recovery.
-- Prettier for both source files changed in the service-directory refinement:
-  passed. Tests and the browser script were unchanged in this follow-up.
-- `node --check scripts/qa-showroom.mjs`: passed in the preceding compact pass.
+- Domain tests: all 81 passed, including query/price draft isolation, country
+  filtering, sale type, optional VIN validation, immutable context seeding and
+  legacy draft recovery.
+- Prettier for the thirteen changed code/test files and the icon-source README:
+  passed.
+- `node --check scripts/qa-showroom.mjs`: passed. The script includes search
+  opening, cancellation, application and new navigation-glyph assertions.
 - The earlier standard `.next-review` production check stopped at its disk-space guard
-  before invoking the build because C: had less than 1 GiB free. The latest production
+  before invoking the build because C: had less than 1 GiB free. The search/navigation production
   build passed using `NEXT_DIST_DIR=.next-overlay-card-tabs-20261002` and
   `NEXT_WEBPACK_CACHE_DIR=L:/CODEX/cars/runtime/mobile-services-hierarchy-20261002/webpack-production-card-tabs`,
   with `node scripts/review-preview.mjs build`: 50 static pages, build ID
-  `8ORnXFzymdWX47IzJX4pS`. This includes the service-directory refinement,
+  `L8mUb_e5bwWCsxEs2q9pl`. This includes the search overlays, Phosphor navigation
+  glyphs and service-directory refinement,
   compact 16:10 cards, outline Save controls,
   single-clear search, keyboard behavior, starter summaries and focus/safe-area
   refinements, together with the previous Home, Services and Contact changes.
 - `node scripts/workspace-doctor.mjs --fetch`: completed. Cars was zero ahead and
   zero behind at the check. A subsequent fetch confirmed local `main` and
-  `origin/main` matched at `3f891e7e59edc607cad0c90d63063252c996a976` before the
-  follow-up commit. That intervening commit did not overlap Mobile or this report.
+  `origin/main` matched at `b9c6ac23807b74b369a258ec8c1aa7c5a4ae78d6` during the
+  follow-up. Intervening commits did not overlap Mobile or this report.
   Other dirty template work and Admin's four-ahead/four-behind state were
   preserved; this inspection does not claim the entire workspace is clean.
 - After the latest build and preview restart, status-only HTTP HEAD requests on
-  `http://127.0.0.1:6474` all returned 200 for seven routes: Home, Services,
-  Germany Import, Sell, Financing, Parts and Contact. No response body was
-  inspected. The preceding compact pass also checked the filter URLs, Canada
-  Import, direct Sell overlay URL, BMW X6 detail and Car park.
+  `http://127.0.0.1:6474` all returned 200 for nine routes: Home; Search; Search
+  with BMW X6; combined query/Price; Services; service Search; Germany Import
+  with Search; buyout query with Search; and Contact. No response body was
+  inspected. Earlier passes also checked Sell, Financing, Parts, other filter
+  URLs, Canada Import, the direct Sell overlay, BMW X6 detail and Car park.
 
-The existing browser suite now includes the new country and sale entry flows,
-draft resume behavior and pill geometry contracts. It was syntax checked only:
+The existing browser suite now includes the country and sale entry flows,
+draft resume behavior, pill geometry, search transactions and navigation-glyph
+contracts. It was syntax checked only:
 browser URL policy blocked rendered verification. Fresh 320px, 390px, 1440px,
 short-screen, large-text, touch/focus and screenshot acceptance remain pending.
 HTTP health checks are separate from this visual acceptance.
@@ -141,7 +161,8 @@ The previous owned preview listener was stopped after verifying its executable,
 command and port. The owned preview was restarted through
 `scripts/review-preview.mjs` with `.next-preview-6474` and the L: cache at
 `runtime/mobile-services-hierarchy-20261002/webpack-dev-card-tabs`. The listener
-was PID 46348 after the service-directory refinement and remains running.
+was PID 41544 after the search/navigation refinement. The latest PDP restart and
+build receipt are recorded below.
 
 The alternate build's generated TypeScript paths were removed after verifying
 they were the only additions, and the original `tsconfig.json` bytes were restored.
@@ -159,7 +180,7 @@ The recovery copies remain at
 The pre-Contact source recovery file remains at
 `runtime/mobile-services-hierarchy-20261002/ShowroomPages-before-contact-20261002-180311.tsx`.
 The latest workspace fetch log is
-`runtime/mobile-services-hierarchy-20261002/workspace-doctor-service-cards.txt`.
+`runtime/mobile-services-hierarchy-20261002/workspace-doctor-search-icons.txt`.
 
 ## Source handoff
 
@@ -221,3 +242,151 @@ Final tool output records the resulting commit and non-force push verification.
 The preview's generated `next-env.d.ts` path changes remain outside the source
 commit. Rendered acceptance remains a separate outstanding check. Mobile remains
 a local candidate: this pass does not promote a release or deploy dealer copies.
+
+## Search and navigation follow-up
+
+The latest follow-up builds on `b9c6ac23807b74b369a258ec8c1aa7c5a4ae78d6` on
+Cars `main`. It owns only these fifteen paths:
+
+```text
+docs/mobile-services-hierarchy-20261002.md
+templates/mobile/TEMPLATE.md
+templates/mobile/scripts/qa-showroom.mjs
+templates/mobile/src/components/AppShell.tsx
+templates/mobile/src/components/ShowroomFilterSheet.tsx
+templates/mobile/src/components/ShowroomInventoryScreen.tsx
+templates/mobile/src/components/ShowroomNavIcon.tsx
+templates/mobile/src/components/ShowroomPages.tsx
+templates/mobile/src/components/ShowroomSearch.tsx
+templates/mobile/src/components/ShowroomServiceSearchSheet.tsx
+templates/mobile/src/components/icons/phosphor/LICENSE
+templates/mobile/src/components/icons/phosphor/README.md
+templates/mobile/src/components/icons/phosphor/navigation.ts
+templates/mobile/src/lib/showroom-filter-editor.ts
+templates/mobile/tests/domain.test.mjs
+```
+
+The source glyph family was researched from the official Phosphor core and
+React repositories. The library exposes the original regular and filled weights;
+the reviewed source is pinned rather than introducing a new package or icon font.
+The standalone icon reference sheet is retained at
+`runtime/mobile-services-hierarchy-20261002/phosphor-navigation-reference.png`.
+It is not a before/after screenshot of the application.
+
+Source integration was pending at that follow-up. Native `git add --intent-to-add` for the four new
+paths failed with `Unable to create L:/CODEX/cars/.git/index.lock: File exists`.
+The existing lock was retained, and cached file IDs matched before and after
+that failed operation. No alternate index, lock removal or unrelated Git-process
+termination was used. Local and fetched main remained
+`b9c6ac23807b74b369a258ec8c1aa7c5a4ae78d6` at the final check.
+
+The existing lock subsequently cleared externally. This task did not remove it
+or stop a foreign Git process. The intended integration includes these fifteen
+owned paths and the three PDP paths below, using native intent-to-add for the four
+new files, `git commit --only`, foreign staged-ID comparison and a non-force push
+to main. A new shared index lock reappeared during the PDP checks and later
+cleared externally; the latest source checkpoint is below. Generated preview paths stay excluded. Rendered
+acceptance remains outstanding under the browser URL-policy restriction.
+
+## PDP follow-up
+
+The owner requested a slight detail-page polish while retaining the rounded
+stats/drawer composition. The three additional source paths are
+`DetailScreen.tsx`, `VehicleSections.tsx` and `VehicleCard.tsx`, under
+`templates/mobile/src/components/`.
+
+- Vehicle title and price use 24px text. The full trim description uses quieter
+  14px text and wraps. Price stays left and the price-rating control sits right;
+  its detail-only bars are slimmer and its target is at least 44px. Discounted
+  vehicles retain their previous price and saving in a small rounded chip.
+- The financing entry uses a neutral rounded row with its amount and a shorter
+  Financing cue. Contact is a secondary outlined action and Enquire is primary;
+  both use 15px medium text and at least 48px targets. Narrow/large-text content
+  can wrap instead of relying on fixed widths. Gallery swipe, Save, enquiry
+  vehicle context, existing prices and local finance behavior are retained.
+- Stats stay in the same rounded white cards. Compact summary facts use a
+  semantic description list, 24px icons and medium values. First registered and
+  Owners labels shorten only the summary; full technical data remains. All
+  specifications and All features controls open the retained dialogs, now with
+  explicit accessible names. Their mobile panel footers use at least 48px
+  targets. The Buying/Leasing selector uses native pressed buttons and the lease
+  entry accurately says Leasing details for its captured-terms dialog.
+- ESLint with zero warnings, TypeScript `--noEmit`, all 81 domain tests and
+  formatting for the combined changed source/test scope passed. The browser
+  script was syntax checked only. No new tests mirror the styling changes.
+
+Cars `main` and fetched `origin/main` matched
+`04568c0ee531e4b1fd3ac3215e9af1a4093a96d6` before the PDP build. Intervening
+Modern, App, Auto Best, Import and Boxcar commits did not overlap Mobile or this
+report. `workspace-doctor.mjs --fetch` completed with Cars zero ahead/behind,
+905 changed paths and Admin four ahead/four behind; unrelated work was retained.
+The current inspection log is
+`runtime/mobile-services-hierarchy-20261002/workspace-doctor-pdp.txt`.
+
+The latest production build passed with the same physical L: output/cache and
+`node scripts/review-preview.mjs build`: 50 static pages, build ID
+`PCUOVkRIe733bhSV97L8w`. This includes all search/navigation and PDP changes.
+The owned listener PID 41544 was stopped only after revalidating its port,
+executable and command. After the build, only the two generated include paths
+were removed in memory and the complete remaining TypeScript config was compared
+with its pre-build recovery copy before restoring the original bytes. The
+generated `next-env.d.ts` imports were likewise normalized and compared before
+restoration against the unchanged HEAD blob. Both files matched tracked source
+before restart; the TypeScript config hash is still
+`1F57C8C1BAA9DE8727B711D09D7A04E5AA8D051840DEF2622A5F948D9BA6C12A`.
+The maintained dev preview restarted with `.next-preview-6474`, the L: cache and
+listener PID 17912; its Node 22 executable and project command were verified.
+Home, Services search and vehicle-context Contact returned 200, but the first
+six detail/gallery/checklist HEAD requests timed out, then the server recorded
+500 responses. A syntax-only scan of the fifteen generated JSON files found one
+invalid `dev/prerender-manifest.json`: 670 bytes with non-JSON trailing data after
+position 656. Source and production output were valid.
+
+The owned listener 17912 was stopped after revalidating executable, command and
+port. Its invalid generated manifest was preserved at
+`runtime/mobile-services-hierarchy-20261002/prerender-manifest-corrupt-pdp-20261002.json`
+(SHA-256 `b71fd272f3dce160d230f0385a8cc42f1933ad1de88f91411af143432a70fda4`).
+Only the parseable complete prefix was retained, after validating manifest version
+4 and its expected schema. The repaired 657-byte JSON parsed successfully;
+no source, cache directory, junction or unrelated runtime was removed. The
+preview restarted with the same output/cache as listener 18312.
+Active preview imports remain generated-only changes excluded from integration.
+
+After repair, status-only HEAD requests returned 200 for all nine affected
+routes: the four vehicle detail pages, BMW X6 gallery/checklist, vehicle-context
+Contact, Home and Services search. No response body was inspected. The dev
+preview remains running on port 6474 as verified listener 18312. These health
+results do not establish rendered mobile/desktop acceptance.
+
+An earlier source inspection found Cars `main` at
+`04568c0ee531e4b1fd3ac3215e9af1a4093a96d6`, matching fetched `origin/main`,
+with no staged paths but an existing zero-byte
+`L:/CODEX/cars/.git/index.lock`, created/modified at 2026-10-02 20:04:45 UTC.
+No lock was removed or bypassed and no unrelated Git process was terminated.
+The lock cleared externally before integration. A fresh workspace-doctor fetch
+then confirmed local/fetched `main` at
+`5623419ae374cbc18811f0cef61694638afbb8d4`, zero ahead/behind, with no staged
+paths or index lock. The intervening Import commit did not overlap Mobile or
+this report. Cars had 936 dirty paths and Admin remained four ahead/four behind;
+other work is preserved. The fresh inspection receipt is
+`runtime/mobile-services-hierarchy-20261002/workspace-doctor-pdp-integration.txt`.
+
+Native integration uses the eighteen owned paths (the fifteen search/navigation
+paths plus the three PDP components), intent-to-add for the four new files and
+`git commit --only`. Foreign staged file IDs are compared before/after, then main
+is pushed without force. Final tool output records the actual commit/push result.
+`next-env.d.ts` stays outside that scope. This source integration does not select
+a template release, refresh dealers or deploy a site.
+
+The four new files were registered with native intent-to-add. The first scoped
+commit collided with a shared index lock while another task's App commit landed.
+Foreign cached file IDs still matched the pre-operation snapshot. The lock then
+cleared externally; `7a7535b0ebd7556811fa98cb1aca1c863c441d1f` only changed
+`templates/app`, leaving this Mobile scope intact. The native scoped commit is
+retried on that inspected main, preserving other work and the four intent entries.
+
+Automatic approval review rejected localhost browser access under the Browser
+URL policy. This follow-up does not retry browser/CDP inspection or substitute
+source composition for app screenshots. Fresh mobile/desktop geometry, drawer
+interactions, large-text and visual acceptance remain pending. Status-only HEAD
+health checks and source/build checks are recorded separately.

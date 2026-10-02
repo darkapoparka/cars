@@ -77,6 +77,20 @@ async function run(name, engine) {
       count,
     );
   }
+  async function searchCars(value) {
+    await page.getByRole('button', { name: 'Search make or model', exact: true }).click();
+    const dialog = page.getByRole('dialog', { name: 'Search and filters', exact: true });
+    await dialog.getByRole('searchbox', { name: 'Search make or model' }).fill(value);
+    await dialog.getByRole('button', { name: /^Show \d+ / }).click();
+    await dialog.waitFor({ state: 'hidden' });
+  }
+  async function searchServices(value) {
+    await page.getByRole('button', { name: 'Search services', exact: true }).click();
+    const dialog = page.getByRole('dialog', { name: 'Search services', exact: true });
+    await dialog.getByRole('searchbox', { name: 'Search services' }).fill(value);
+    await dialog.getByRole('button', { name: /^Show \d+ / }).click();
+    await dialog.waitFor({ state: 'hidden' });
+  }
   async function selectedServiceTab(label) {
     await page.getByRole('tab', { name: label, exact: true, selected: true }).waitFor();
   }
@@ -202,6 +216,14 @@ async function run(name, engine) {
         .allTextContents(),
       ['Cars', 'Services', 'Contact'],
     );
+    const navigation = page.getByRole('navigation', { name: 'Main navigation' });
+    assert.equal(await navigation.locator('svg[data-icon-family="phosphor"]').count(), 3);
+    assert.deepEqual(
+      await navigation
+        .locator('svg')
+        .evaluateAll((icons) => icons.map((icon) => icon.dataset.iconWeight)),
+      ['fill', 'regular', 'regular'],
+    );
     assert.equal(await page.getByRole('link', { name: 'Profile', exact: true }).count(), 0);
     const firstPhoto = await page
       .locator('[data-showroom-vehicle]')
@@ -222,7 +244,13 @@ async function run(name, engine) {
     await page.getByRole('button', { name: 'Go back', exact: true }).click();
     await cars(4);
     check('The photo area opens the car through the single card link');
+    await page.getByRole('button', { name: 'Search make or model', exact: true }).click();
     await page.getByRole('searchbox', { name: 'Search make or model' }).fill('BMW X6');
+    await cars(4);
+    await page.getByRole('button', { name: 'Close filters', exact: true }).click();
+    await page.getByRole('dialog').waitFor({ state: 'hidden' });
+    assert.equal(new URL(page.url()).searchParams.get('query'), null);
+    await searchCars('BMW X6');
     await cars(1);
     assert.equal(
       await page.locator('[data-showroom-vehicle]').getAttribute('data-showroom-vehicle'),
@@ -231,7 +259,7 @@ async function run(name, engine) {
     await settle();
     await page.reload({ waitUntil: 'load' });
     await cars(1);
-    await page.getByRole('button', { name: 'Clear search', exact: true }).click();
+    await searchCars('');
     await cars(4);
     check('Search, reload and clear filter the same inventory');
     const tabs = page.getByRole('tablist', { name: 'Vehicle category' });
@@ -282,7 +310,7 @@ async function run(name, engine) {
       'All five native category tabs select real categories; empty stock never shows cars; keyboard navigation works',
     );
 
-    await page.getByRole('searchbox', { name: 'Search make or model' }).fill('BMW X6');
+    await searchCars('BMW X6');
     await cars(1);
     await tabs.getByRole('tab', { name: 'Motorbikes', exact: true }).click();
     await cars(0);
@@ -295,7 +323,7 @@ async function run(name, engine) {
     await tabs.getByRole('tab', { name: 'Cars', exact: true }).click();
     await cars(1);
     assert.equal(
-      await page.getByRole('searchbox', { name: 'Search make or model' }).inputValue(),
+      await page.getByRole('button', { name: 'Search make or model', exact: true }).innerText(),
       'BMW X6',
     );
     await tabs.getByRole('tab', { name: 'Motorbikes', exact: true }).click();
@@ -403,7 +431,7 @@ async function run(name, engine) {
     await page.getByRole('tab', { name: 'Make & model', exact: true }).click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).waitFor();
     assert.equal(await page.locator('dialog[open]').count(), 1);
-    await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
+    await page.getByRole('dialog', { name: 'Search and filters', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
@@ -617,21 +645,27 @@ async function run(name, engine) {
     await page.waitForFunction(
       () => document.querySelectorAll('[data-showroom-service]').length === 8,
     );
+    await page.getByRole('button', { name: 'Search services', exact: true }).click();
     await page.getByRole('searchbox', { name: 'Search services' }).fill('buy out');
+    assert.equal(await page.locator('[data-showroom-service]').count(), 8);
+    await page.keyboard.press('Escape');
+    await page.getByRole('dialog').waitFor({ state: 'hidden' });
+    assert.equal(new URL(page.url()).searchParams.get('q'), null);
+    await searchServices('buy out');
     await page.waitForFunction(
       () => document.querySelectorAll('[data-showroom-service]').length === 1,
     );
     assert.equal(await page.locator('[data-showroom-service="sell"]').count(), 1);
     await page.reload({ waitUntil: 'load' });
     assert.equal(
-      await page.getByRole('searchbox', { name: 'Search services' }).inputValue(),
+      await page.getByRole('button', { name: 'Search services', exact: true }).innerText(),
       'buy out',
     );
-    await page.getByRole('button', { name: 'Clear search', exact: true }).click();
+    await searchServices('');
     await page.waitForFunction(
       () => document.querySelectorAll('[data-showroom-service]').length === 8,
     );
-    await page.getByRole('searchbox', { name: 'Search services' }).fill('nonexistent service');
+    await searchServices('nonexistent service');
     await page.getByRole('heading', { name: 'No services found', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Show all services', exact: true }).click();
     await selectedServiceTab('All');
@@ -994,7 +1028,7 @@ async function run(name, engine) {
     assert.equal(new URL(page.url()).pathname, '/');
     await go('/search');
     await cars(4);
-    await page.getByRole('searchbox', { name: 'Search make or model' }).fill('nonexistent car');
+    await searchCars('nonexistent car');
     await cars(0);
     await page.getByRole('button', { name: 'Show all cars', exact: true }).click();
     await cars(4);
@@ -1039,7 +1073,15 @@ async function run(name, engine) {
         await page.setViewportSize({ width, height: width === 1440 ? 1000 : 844 });
         await go('/');
         await page.locator('[data-quick-filter="make"]').click();
-        for (const section of ['Make & model', 'Price', 'Year', 'Fuel', 'Condition', 'More']) {
+        for (const section of [
+          'Search',
+          'Make & model',
+          'Price',
+          'Year',
+          'Fuel',
+          'Condition',
+          'More',
+        ]) {
           await page.getByRole('tab', { name: section, exact: true }).click();
           assert.equal(await page.locator('dialog[open]').count(), 1);
           await filterGeometry(width + 'px filter ' + section);
@@ -1073,9 +1115,9 @@ async function run(name, engine) {
         await capture('short-' + label.split(' ')[0].toLowerCase());
         await page.keyboard.press('Escape');
       }
-      for (const tab of ['make', 'price', 'year', 'fuel', 'condition', 'more']) {
+      for (const tab of ['search', 'make', 'price', 'year', 'fuel', 'condition', 'more']) {
         await go('/?filter=' + tab);
-        await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
+        await page.getByRole('dialog', { name: 'Search and filters', exact: true }).waitFor();
         await filterGeometry('320x480 filter ' + tab);
         await capture('short-filters-' + tab);
         await page.getByRole('button', { name: 'Close filters', exact: true }).click();
@@ -1131,9 +1173,9 @@ async function run(name, engine) {
           await capture('services-' + tab + '-step' + (step + 1) + '-320-text200');
         }
       }
-      for (const tab of ['make', 'price', 'year', 'fuel', 'condition', 'more']) {
+      for (const tab of ['search', 'make', 'price', 'year', 'fuel', 'condition', 'more']) {
         await go('/?filter=' + tab);
-        await page.getByRole('dialog', { name: 'Filters', exact: true }).waitFor();
+        await page.getByRole('dialog', { name: 'Search and filters', exact: true }).waitFor();
         await enlargeText();
         await filterGeometry('320px 200% filter ' + tab);
         await capture('filters-' + tab + '-320-text200');

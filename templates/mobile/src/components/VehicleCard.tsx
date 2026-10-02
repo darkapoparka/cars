@@ -78,7 +78,8 @@ const s = stylex.create({
   price: { fontSize: 16, fontWeight: 700, lineHeight: '24px' },
   pricing: { display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' },
   rating: { color: colors.muted, fontSize: 12, lineHeight: '16px', fontWeight: 500 },
-  detailBar: { width: 16, height: 8 },
+  detailRating: { color: colors.green, fontSize: 13, lineHeight: '18px' },
+  detailBar: { width: 14, height: 3 },
   inactiveBar: { backgroundColor: colors.line },
   bars: { display: 'flex', gap: 3, marginBottom: 2 },
   bar: { width: 13, height: 2, borderRadius: 1, backgroundColor: colors.green },
@@ -180,7 +181,7 @@ export function PriceRating({
   list?: boolean;
 }) {
   return (
-    <span {...stylex.props(s.rating)}>
+    <span {...stylex.props(s.rating, detail && s.detailRating)}>
       <span {...stylex.props(s.bars)}>
         {[0, 1, 2, 3, 4].map((i) => (
           <span

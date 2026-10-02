@@ -2,6 +2,7 @@ import { normalizeFilters } from './filters';
 import { defaultFilters, type Filters } from './types';
 
 export const showroomFilterTabs = [
+  { value: 'search', label: 'Search' },
   { value: 'make', label: 'Make & model' },
   { value: 'price', label: 'Price' },
   { value: 'year', label: 'Year' },

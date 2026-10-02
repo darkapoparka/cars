@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { ChevronRight, Clock3, Mail, MapPin, Phone } from 'lucide-react';
@@ -32,6 +32,7 @@ import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomServiceSearchSheet } from './ShowroomServiceSearchSheet';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { ShowroomServiceRequest } from './ShowroomServiceRequest';
 import { ShowroomImportExamples } from './ShowroomImportExamples';
@@ -359,6 +360,8 @@ export function SavedCarsScreen() {
 export function ShowroomServicesScreen() {
   const params = useSearchParams();
   const query = params.get('q') || '';
+  const searching = params.get('search') === '1';
+  const searchOpener = useRef<HTMLButtonElement | null>(null);
   const selected = query.trim()
     ? 'services'
     : serviceCategories.find(({ value }) => value === params.get('tab'))?.value || 'services';
@@ -386,7 +389,24 @@ export function ShowroomServicesScreen() {
     window.scrollTo(0, 0);
   }
   function search(value: string) {
-    window.history.replaceState(null, '', serviceSearchHref(value, overview ? quickFilter : 'all'));
+    window.history.replaceState(null, '', serviceSearchHref(value));
+    requestAnimationFrame(() => searchOpener.current?.focus({ preventScroll: true }));
+  }
+  function openSearch(button: HTMLButtonElement) {
+    searchOpener.current = button;
+    button.focus({ preventScroll: true });
+    const url = new URL(window.location.href);
+    url.searchParams.set('search', '1');
+    window.history.pushState({ carsMobileServiceSearch: true }, '', url.pathname + url.search);
+  }
+  function closeSearch() {
+    if (window.history.state?.carsMobileServiceSearch) window.history.back();
+    else {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('search');
+      window.history.replaceState(null, '', url.pathname + url.search);
+    }
+    requestAnimationFrame(() => searchOpener.current?.focus({ preventScroll: true }));
   }
   function selectServiceFilter(value: ServiceQuickFilter) {
     window.history.pushState(null, '', serviceQuickFilterHref(value, query));
@@ -396,7 +416,7 @@ export function ShowroomServicesScreen() {
       <Header home />
       <h1 {...stylex.props(ui.srOnly)}>Services</h1>
       <div {...stylex.props(s.tabs)}>
-        <ShowroomSearch label="Search services" value={query} onChange={search} />
+        <ShowroomSearch label="Search services" value={query} onOpen={openSearch} />
         <ShowroomTabs
           label="Service category"
           tabs={serviceCategories}
@@ -564,6 +584,9 @@ export function ShowroomServicesScreen() {
           {selected === 'import' ? 'Sample import gallery' : 'Example services'}
         </p>
       </div>
+      {searching && (
+        <ShowroomServiceSearchSheet value={query} onApply={search} onClose={closeSearch} />
+      )}
     </>
   );
 }

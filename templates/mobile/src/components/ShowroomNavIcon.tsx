@@ -1,5 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
-import { Car, LayoutGrid, Phone } from 'lucide-react';
+import { phosphorNavigationIcons } from './icons/phosphor/navigation';
 
 const s = stylex.create({
   icon: {
@@ -10,19 +10,29 @@ const s = stylex.create({
   },
 });
 
-const icons = { cars: Car, services: LayoutGrid, contact: Phone };
-
 export type ShowroomNavIconName = 'cars' | 'services' | 'contact';
 
-export function ShowroomNavIcon({ name }: { name: ShowroomNavIconName }) {
-  const NavIcon = icons[name];
+export function ShowroomNavIcon({
+  name,
+  active = false,
+}: {
+  name: ShowroomNavIconName;
+  active?: boolean;
+}) {
+  const weight = active ? 'fill' : 'regular';
   return (
-    <NavIcon
-      size={24}
-      strokeWidth={1.8}
+    <svg
+      width={24}
+      height={24}
+      viewBox="0 0 256 256"
+      fill="currentColor"
       aria-hidden="true"
       focusable="false"
+      data-icon-family="phosphor"
+      data-icon-weight={weight}
       {...stylex.props(s.icon)}
-    />
+    >
+      <path d={phosphorNavigationIcons[name][weight]} />
+    </svg>
   );
 }
