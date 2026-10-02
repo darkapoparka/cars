@@ -150,7 +150,7 @@ export const MarketplaceResults = ({
                   listing={listing}
                   locale={locale}
                   presentation={
-                    isDealershipSite ? "discovery" : regularPresentation
+                    isDealershipSite ? "showroom" : regularPresentation
                   }
                   priority={index < priorityListingCount}
                   saveHref={getAccountListingSaveFlowHref(appBaseUrl, listing)}

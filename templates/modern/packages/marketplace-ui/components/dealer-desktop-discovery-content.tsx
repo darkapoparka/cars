@@ -65,7 +65,7 @@ export const DealerDesktopDiscoveryContent = ({
             />
           </div>
         </div>
-        <CarouselContent>
+        <CarouselContent className={styles.carouselTrack}>
           {listings.map((listing) => (
             <CarouselItem className={styles.vehicleSlide} key={listing.id}>
               <VehicleCard
@@ -75,7 +75,7 @@ export const DealerDesktopDiscoveryContent = ({
                 href={getLocalizedPublicPath(locale, getListingPath(listing))}
                 listing={listing}
                 locale={locale}
-                presentation="discovery"
+                presentation="showroom"
                 priority={false}
                 viewMode="grid"
               />

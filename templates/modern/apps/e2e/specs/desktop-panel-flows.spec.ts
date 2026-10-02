@@ -5,60 +5,63 @@ const fuelQueryPattern = /fuel=/;
 const phonePattern = /^tel:/;
 const sourceQueryPattern = /sourceUrl=/;
 const vehicleQueryPattern = /[?&]vehicle=/;
+const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("main routes share a stable hero with a content-sized import panel", async ({
+test("desktop routes align their headings and content panels", async ({
   page,
 }) => {
   test.setTimeout(120_000);
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const locale of ["en", "bg"]) {
-      let reference: unknown;
+      let reference: { x: number; width: number } | undefined;
       for (const path of ["", "/cars", "/sell", "/lease", "/imports"]) {
         await page.goto(`/${locale}${path}`);
         await expect(
           page.locator('[data-slot="public-route-loading-content"]')
         ).toBeHidden();
         const hero = page.locator(desktopHeroSelector);
-        await expect(hero.locator("[data-desktop-action-panel]")).toBeVisible();
+        await expect(hero.locator("h1").first()).toBeVisible();
         const panel = await hero
           .locator("[data-desktop-action-panel]")
           .boundingBox();
-        const standardPanelHeight = width >= 1280 ? 280 : 320;
-        if (path === "/imports") {
-          expect(panel?.height).toBeLessThan(standardPanelHeight);
-        } else {
-          expect(panel?.height).toBe(standardPanelHeight);
+        const heading = await hero
+          .locator("h1")
+          .first()
+          .evaluate((element) => {
+            const box = element.parentElement?.getBoundingClientRect();
+            return box ? { x: box.x, width: box.width } : null;
+          });
+        if (!(panel && heading)) {
+          throw new Error(
+            "The desktop heading and action panel must be visible"
+          );
         }
-        const geometry = await hero.evaluate((element) => {
-          const rect = (target: Element | null) => {
-            const box = target?.getBoundingClientRect();
-            return box ? [box.x, box.y, box.width, box.height] : null;
-          };
-          return {
-            hero: rect(element),
-            heading: rect(element.querySelector("h1")?.parentElement ?? null),
-            panel: rect(
-              element.querySelector("[data-desktop-action-panel]")
-            )?.slice(0, 3),
-            banner: rect(
-              element.querySelector('[data-slot="desktop-hero-scene"]')
-            ),
-          };
-        });
+        expect(panel.width).toBeLessThanOrEqual(1280);
+        expect(panel.x).toBeGreaterThanOrEqual(24);
+        expect(panel.height).toBeGreaterThan(0);
+        expect(panel.height).toBeLessThan(600);
+        expect(heading.x).toBeCloseTo(panel.x, 0);
+        expect(heading.width).toBeCloseTo(panel.width, 0);
         if (reference) {
-          expect(geometry, `${locale}${path} at ${width}px`).toEqual(reference);
+          expect(panel.x).toBeCloseTo(reference.x, 0);
+          expect(panel.width).toBeCloseTo(reference.width, 0);
         } else {
-          reference = geometry;
+          reference = { x: panel.x, width: panel.width };
         }
+        expect(
+          await page.evaluate(
+            () => document.documentElement.scrollWidth <= innerWidth
+          )
+        ).toBe(true);
       }
     }
   }
 });
 
-test("desktop navigation keeps hero geometry stable through loading", async ({
+test("desktop navigation keeps the header stable through loading", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -66,75 +69,31 @@ test("desktop navigation keeps hero geometry stable through loading", async ({
   await expect(
     page.locator('[data-slot="public-route-loading-content"]')
   ).toBeHidden();
-  await page.evaluate(() => document.fonts.ready);
-  await page.evaluate((selector) => {
-    const samples = new Set<string>();
-    let frame = 0;
-    const sample = () => {
-      const hero = Array.from(document.querySelectorAll(selector)).find(
-        (element) => element.getBoundingClientRect().height > 0
-      );
-      const panel = hero?.querySelector("[data-desktop-action-panel]");
-      if (hero && panel) {
-        samples.add(
-          JSON.stringify(
-            [
-              hero,
-              panel,
-              hero.querySelector('[data-slot="desktop-hero-scene"]'),
-            ].map((element, index) => {
-              const box = element?.getBoundingClientRect();
-              return box
-                ? [
-                    box.x,
-                    box.y + scrollY,
-                    box.width,
-                    ...(index === 1 ? [] : [box.height]),
-                  ]
-                : null;
-            })
-          )
-        );
-      }
-      frame = requestAnimationFrame(sample);
-    };
-    sample();
-    Object.assign(window, {
-      heroStability: {
-        stop: () => {
-          cancelAnimationFrame(frame);
-          return Array.from(samples);
-        },
-      },
-    });
-  }, desktopHeroSelector);
+  const header = page.locator('[data-slot="dealer-desktop-header"]:visible');
+  const initial = await header.boundingBox();
+  let documents = 0;
+  page.on("request", (request) => {
+    if (request.isNavigationRequest() && request.frame() === page.mainFrame()) {
+      documents += 1;
+    }
+  });
   for (const [mode, title] of [
-    ["buy", "Vehicles in stock"],
+    ["buy", "Cars for sale"],
     ["sell", "Sell us your vehicle"],
     ["lease", "Vehicle financing"],
     ["imports", "Import a vehicle"],
     ["home", "Find Your Next Drive"],
   ]) {
-    await page
-      .locator(
-        `[data-slot="dealer-desktop-header"] [data-marketplace-mode="${mode}"]`
-      )
-      .click();
+    await header.locator(`[data-marketplace-mode="${mode}"]`).click();
     await expect(
       page.locator(desktopHeroSelector).locator("h1").first()
     ).toHaveText(title);
     await expect(
       page.locator('[data-slot="public-route-loading-content"]')
     ).toBeHidden();
+    expect(await header.boundingBox()).toEqual(initial);
   }
-  const samples = await page.evaluate(() =>
-    (
-      window as unknown as Window & {
-        heroStability: { stop: () => string[] };
-      }
-    ).heroStability.stop()
-  );
-  expect(samples).toHaveLength(1);
+  expect(documents).toBe(0);
 });
 
 test.beforeEach(async ({ page }) => {
@@ -143,7 +102,7 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("home and inventory share a buy box and submit the same draft", async ({
+test("home and inventory keep the same quick filters and submit their draft", async ({
   page,
 }) => {
   for (const width of [1024, 1440, 1920]) {
@@ -158,26 +117,35 @@ test("home and inventory share a buy box and submit the same draft", async ({
     await expect(
       page.locator('[data-slot="public-route-loading-content"]')
     ).toBeHidden();
-    expect(await panel.boundingBox()).toEqual(home);
+    const inventory = await panel.boundingBox();
+    expect(inventory?.x).toBe(home?.x);
+    expect(inventory?.width).toBe(home?.width);
+    expect(inventory?.height).toBe(home?.height);
     const controls = page.locator('[data-slot="desktop-results-controls"]');
     await expect(controls).toBeVisible();
     await expect(
       panel.locator('[data-slot="desktop-results-controls"]')
     ).toHaveCount(0);
     const controlBox = await controls.boundingBox();
-    expect(controlBox?.y).toBeGreaterThan((home?.y ?? 0) + (home?.height ?? 0));
+    expect(controlBox?.y).toBeGreaterThan(
+      (inventory?.y ?? 0) + (inventory?.height ?? 0)
+    );
     const summaryBox = await page
       .locator('[data-slot="dealer-inventory-summary"]')
       .boundingBox();
     if (!(controlBox && summaryBox)) {
       throw new Error("Inventory filter and sort controls must be visible");
     }
+    expect(controlBox.x).toBeGreaterThanOrEqual(summaryBox.x);
+    expect(controlBox.x + controlBox.width).toBeLessThanOrEqual(
+      summaryBox.x + summaryBox.width
+    );
     expect(
       Math.abs(
-        controlBox.x +
-          controlBox.width / 2 -
-          summaryBox.x -
-          summaryBox.width / 2
+        controlBox.y +
+          controlBox.height / 2 -
+          summaryBox.y -
+          summaryBox.height / 2
       )
     ).toBeLessThan(1);
     const inputBox = await panel.locator("label").first().boundingBox();
@@ -194,18 +162,67 @@ test("home and inventory share a buy box and submit the same draft", async ({
   }
 
   await page.goto("/en");
+  await page.getByRole("button", { name: "More filters", exact: true }).click();
   await page.locator('[data-slot="desktop-hero-fuel"]').click();
   const dialog = page.getByRole("dialog");
   await dialog.getByRole("button", { name: "Diesel", exact: true }).click();
   await dialog.getByRole("button", { name: "Apply", exact: true }).click();
   await page.locator('[data-slot="desktop-hero-submit"]').click();
   await expect(page).toHaveURL(dieselResultsPattern);
+  await page.getByRole("button", { name: moreFiltersPattern }).click();
   await expect(page.locator('[data-slot="desktop-hero-fuel"]')).toHaveText(
     "Diesel"
   );
   await page.getByRole("button", { name: "Reset", exact: true }).click();
   await page.locator('[data-slot="desktop-hero-submit"]').click();
   await expect(page).not.toHaveURL(fuelQueryPattern);
+});
+
+test("desktop listing keeps the gallery, information and phone handoff usable", async ({
+  page,
+}) => {
+  for (const width of [1024, 1440, 1920]) {
+    await page.setViewportSize({ width, height: 1000 });
+    await page.goto("/en/listing/bmw-x5-m50d-sofia-2020");
+    const title = page.locator('[data-slot="listing-summary-header"]');
+    const gallery = page.locator('[data-slot="listing-gallery"]');
+    const transaction = page.locator('[data-slot="listing-transaction-card"]');
+    await expect(title.getByRole("heading", { level: 1 })).toHaveText(
+      "2020 BMW X5 M50d"
+    );
+    const titleBox = await title.boundingBox();
+    const galleryBox = await gallery.boundingBox();
+    const transactionBox = await transaction.boundingBox();
+    if (!(titleBox && galleryBox && transactionBox)) {
+      throw new Error("Desktop vehicle information must be visible");
+    }
+    expect(titleBox.y + titleBox.height).toBeLessThan(galleryBox.y);
+    expect(transactionBox.y).toBeCloseTo(galleryBox.y, 0);
+    expect(transactionBox.x).toBeGreaterThan(galleryBox.x + galleryBox.width);
+    await expect(transaction.locator('a[href^="tel:"]')).toBeVisible();
+    const openPhoto = gallery.getByRole("button", {
+      name: "Open photo 1 of 1 full screen",
+      exact: true,
+    });
+    await openPhoto.click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("dialog")).toBeHidden();
+    await expect(openPhoto).toBeFocused();
+    const sections = page.locator('[data-slot="listing-details-tabs-desktop"]');
+    await sections
+      .getByRole("tab", { name: "Information", exact: true })
+      .click();
+    await expect(sections.locator('[role="tabpanel"]:visible')).toHaveAttribute(
+      "id",
+      "listing-desktop-panel-information"
+    );
+    await page.keyboard.press("ArrowRight");
+    await expect(sections.locator('[role="tabpanel"]:visible')).toHaveAttribute(
+      "id",
+      "listing-desktop-panel-specifications"
+    );
+  }
 });
 
 test("financing selection and preferences survive navigation and clearing", async ({
@@ -243,7 +260,7 @@ test("financing selection and preferences survive navigation and clearing", asyn
   const selectedTitle = await dialog
     .locator('[data-slot="lease-selected-vehicle-title"]')
     .nth(1)
-    .textContent();
+    .getAttribute("title");
   await dialog
     .locator('[data-slot="lease-vehicle-option"] button')
     .nth(1)

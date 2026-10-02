@@ -72,6 +72,7 @@ export interface DealerHeroSearchProps {
   filters: MarketplaceSearchParams;
   locale?: string;
   searchListings?: readonly InventorySearchListing[];
+  surface?: "hero" | "inventory";
   taxonomy?: VehicleTaxonomyMakeOption[];
 }
 
@@ -83,6 +84,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     searchListings,
     assistantSlot,
     compact = false,
+    surface = "inventory",
     taxonomy = fallbackVehicleTaxonomy,
   } = props;
   const router = useRouter();
@@ -146,7 +148,11 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     isBg
   );
   return (
-    <div className={styles.desktopSearch} data-compact={compact}>
+    <div
+      className={styles.desktopSearch}
+      data-compact={compact}
+      data-surface={surface}
+    >
       <DesktopActionPanel
         className={styles.panel}
         data-slot="dealer-desktop-toolbar"
@@ -216,7 +222,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               <Search aria-hidden="true" size={18} />
               {pending
                 ? text("Търсене…", "Searching…")
-                : text("Покажи обявите", "Show results")}
+                : text("Търси", "Search")}
             </DesktopActionButton>
           </div>
           <div className={styles.fields}>

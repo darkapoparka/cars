@@ -1,10 +1,13 @@
 @media (min-width: 1024px) {
+  .footerFrame {
+    width: min(calc(100% - 3rem), 80rem);
+    max-width: none;
+    padding-inline: 0;
+  }
+
   .content {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
-    max-width: var(--layout-content-max);
+    width: min(calc(100% - 3rem), 80rem);
+    max-width: 80rem;
     padding: 2rem 0 4rem;
     margin-inline: auto;
   }
@@ -141,11 +144,8 @@
 }
 @media (min-width: 1024px) {
   .editorialBody {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
-    max-width: var(--layout-content-max);
+    width: min(calc(100% - 3rem), 80rem);
+    max-width: 80rem;
     padding-inline: 0;
   }
   .editorialSearch {
@@ -230,10 +230,7 @@
 
 @media (min-width: 1024px) {
   .heroContent {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
+    width: min(calc(100% - 3rem), 80rem);
   }
   .heroContent .panel {
     padding: 1.5rem;
@@ -330,11 +327,8 @@
 
 @media (min-width: 1024px) {
   .serviceBody {
-    width: min(
-      calc(100% - 2 * var(--layout-gutter)),
-      var(--layout-content-max)
-    );
-    max-width: var(--layout-content-max);
+    width: min(calc(100% - 3rem), 80rem);
+    max-width: 80rem;
   }
 }
 

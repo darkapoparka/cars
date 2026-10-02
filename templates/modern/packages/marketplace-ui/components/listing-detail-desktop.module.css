@@ -1,0 +1,160 @@
+@media (min-width: 1024px) {
+  .detail .content {
+    width: min(calc(100% - 3rem), 80rem);
+    max-width: none;
+    padding: 1.75rem 0 4rem;
+    margin-inline: auto;
+  }
+
+  .detail .columns {
+    grid-template-columns: minmax(0, 1fr) 22rem;
+    gap: 2rem;
+  }
+
+  .detail :global([data-slot="listing-summary-header"]) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem 2rem;
+    min-height: 0;
+    padding: 0;
+    margin-bottom: 1.75rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .detail :global([data-slot="listing-summary-header"]) > a {
+    grid-column: 1 / -1;
+    justify-self: start;
+    height: auto;
+    min-height: 1.5rem;
+    padding: 0;
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--muted-foreground);
+    background: transparent;
+  }
+
+  .detail :global([data-slot="listing-summary-header"]) h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+  }
+
+  .detail :global([data-slot="listing-summary-header"]) > div:last-child {
+    align-self: center;
+  }
+
+  .detail :global([data-slot="listing-gallery-stage"]),
+  .detail :global([data-slot="listing-gallery-empty"]) {
+    display: block;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    border-radius: 1rem;
+  }
+
+  .detail :global([data-slot="listing-gallery-stage"]) > button {
+    cursor: zoom-in;
+    border-radius: 1rem;
+  }
+
+  .detail :global([data-slot="listing-gallery-secondary-grid"]) {
+    display: none;
+  }
+
+  .detail :global([data-slot="listing-gallery-thumbnails"]) {
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .detail :global([data-slot="listing-gallery-thumbnails"]) button {
+    width: 7rem;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+  }
+
+  .detail .purchaseColumn {
+    top: 1.5rem;
+  }
+
+  .purchaseColumn > div > div {
+    position: static;
+  }
+
+  .detail :global([data-slot="listing-transaction-card"]),
+  .detail :global([data-slot="listing-dealership-card"]) {
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .detail :global([data-slot="listing-transaction-card"]) > p:nth-child(2) {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .detail :global([data-slot="listing-transaction-card"]) > div {
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .detail :global([data-slot="listing-transaction-card"]) a {
+    min-height: 3rem;
+  }
+
+  .detail :global([data-slot="listing-dealership-card"]) > a {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .detail :global([data-slot="listing-dealership-card"]) dl {
+    padding-inline: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .detail :global([data-slot="listing-details-tabs-desktop"]) {
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .detail
+    :global([data-slot="listing-details-tabs-desktop"])
+    > [role="tablist"] {
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .detail :global([data-slot="listing-details-tabs-desktop"]) [role="tab"] {
+    height: 3.5rem;
+    padding: 0 0.125rem;
+    margin-bottom: -1px;
+    font-size: 0.9375rem;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .detail
+    :global([data-slot="listing-details-tabs-desktop"])
+    [aria-selected="true"] {
+    color: var(--foreground);
+    border-bottom-color: var(--brand);
+  }
+
+  .detail
+    :global([data-slot="listing-details-tabs-desktop"])
+    > [role="tabpanel"] {
+    padding: 1.5rem;
+  }
+
+  .detail :global([data-slot="listing-description"]) {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+  }
+}
