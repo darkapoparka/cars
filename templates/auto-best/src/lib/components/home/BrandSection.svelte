@@ -24,7 +24,7 @@
 <section class="dn-brand-section dn-home-content-section" aria-labelledby="brand-title">
   <div class="container dn-brand-shell">
     <div class="dn-brand-hero">
-      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-section-heading--light dn-home-banner-frame dn-home-banner-copy dn-home-section-heading--compact">
+      <div class="dn-brand-hero__copy dn-home-section-heading dn-home-section-heading--branded dn-home-banner-frame dn-home-banner-copy">
         <h2 id="brand-title" class="dn-home-section-title">
           <span class="dn-heading-desktop">{i18n.t("m_9eb6d7e50e27")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5216bd5728f8")}</span>

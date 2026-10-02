@@ -11,7 +11,7 @@ its existing preview frame.
 Desktop article cards use a 160px image, 16px content padding, category metadata,
 a two-line summary and a localized reading action. Home's featured articles use
 the same treatment. Each remains one complete link, including its reading action.
-The Blog index uses four columns at 1200px and above, two at compact desktop
+The Blog index uses four columns at 1360px and above, two at compact desktop
 widths and one below 992px. Its grid follows the hero with the section's 32px
 padding, without a second empty margin. Index image sizes match those columns;
 Home's featured cards retain their existing grid and image sizing.
@@ -299,7 +299,20 @@ the configured currency's narrow symbol and locale number formatting.
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
-**Section introductions.** Desktop inventory/body/brand/editorial sections use their existing branded heading banners attached to light content panels. The light panel overlaps the banner by the shared overlap token, with rounded upper corners forming an inward curve at the join. Banner padding keeps its heading and action clear of that overlap. Their heading/CTA and overlap rules are shared. Mobile uses compact headings appropriate to its denser layout rather than miniaturizing the full desktop banners.
+**Section introductions.** Desktop inventory/body/brand/editorial sections share
+one charcoal banner, a white heading and a white action. Their existing car
+cutouts stay on the inventory and editorial banners; body and brand discovery
+use plain introductions. All content sections use the shared 32px section
+padding, giving adjacent panels the same 64px gap. The white content panel
+overlaps its banner by 24px, with rounded upper corners forming an inward curve
+at the join. Heading and action are centered within the visible banner above
+that overlap, with equal clearance above and below. The optional video section
+uses the same banner geometry. Mobile retains its compact section headings.
+
+Home groups curated previews inside these panels. Inventory and Blog put their
+full result grids directly on the shared grey canvas, with controls in their
+own panel. These are complementary compositions using the same palette,
+typography, card surfaces, corner radii and spacing scale.
 
 **Body types and brands.** These use image-led grid tiles, live labels and expandable mobile discovery. Artwork bounds align the visible car or logo rather than the transparent image canvas. Labels are centered within the mobile cards. Body-type and brand components own their own header actions and expansion state; changing one should not implicitly replace the other.
 

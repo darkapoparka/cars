@@ -51,6 +51,7 @@
     .dn-home-page { --dn-home-heading-banner-height: 164px; }
 
     .dn-home-page :global(.dn-home-content-section) {
+      padding-block: var(--dn-home-section-space);
       background: var(--dn-surface-canvas);
     }
     .dn-home-page :global(.dn-home-section-heading) {
@@ -128,8 +129,8 @@
 
     .dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner) > :is(h2, p, a)) { position: relative; z-index: 1; }
 
-    .dn-home-page :global(.dn-home-section-heading--branded > h2) { color: var(--dn-white); }
-    .dn-home-page :global(.dn-home-section-heading--branded > p) { color: var(--dn-text-on-ink); }
+    .dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner) > h2) { color: var(--dn-white); }
+    .dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner) > p) { color: var(--dn-text-on-ink); }
     .dn-home-page :global(.dn-home-section-heading--light) {
       background: var(--dn-surface-raised);
     }
