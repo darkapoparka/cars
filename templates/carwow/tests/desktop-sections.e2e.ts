@@ -17,9 +17,16 @@ for (const width of [992, 1280, 1440, 1920]) {
 			const tabs = await page.locator('.hero-intent__tabs button').evaluateAll((buttons) => {
 				const first = buttons[0].getBoundingClientRect();
 				const last = buttons.at(-1)!.getBoundingClientRect();
-				return { left: first.left, right: last.right, width: last.right - first.left };
+				return {
+					left: first.left,
+					right: last.right,
+					width: last.right - first.left,
+					widths: buttons.map((button) => button.getBoundingClientRect().width)
+				};
 			});
-			expect(tabs.width).toBeLessThan(panel.width - 32);
+			expect(Math.abs(tabs.width - panel.width)).toBeLessThan(1);
+			for (const tabWidth of tabs.widths)
+				expect(Math.abs(tabWidth - panel.width / 3)).toBeLessThan(1);
 			expect(Math.abs((tabs.left + tabs.right) / 2 - panel.x - panel.width / 2)).toBeLessThan(1);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'background-color',
@@ -31,7 +38,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 			);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'border-width',
-				'1px'
+				'0px'
 			);
 			await expect(page.locator('label[for="hero-buy-query"]')).toHaveCSS('width', '1px');
 			await expect(page.locator('#hero-buy-query')).toHaveAccessibleName(

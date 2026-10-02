@@ -609,32 +609,28 @@
 		width: 100%;
 	}
 	.hero-intent__tabs {
-		display: flex;
-		gap: 8px;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 		background: var(--discovery-action);
 		border-radius: var(--discovery-panel-radius) var(--discovery-panel-radius) 0 0;
-		padding: 6px 24px;
+		overflow: hidden;
 	}
 	.hero-intent__tabs button {
-		background: var(--discovery-action-hover);
-		border: 1px solid #70757a;
-		border-radius: var(--discovery-control-radius);
+		background: transparent;
+		border: 0;
+		border-radius: 0;
 		color: #fff;
 		cursor: pointer;
 		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
-		min-height: 40px;
-		min-width: 128px;
-		padding: 0 16px;
+		min-height: 52px;
+		min-width: 0;
+		padding: 0 20px;
 		white-space: nowrap;
-		transition:
-			background-color 140ms ease,
-			border-color 140ms ease;
+		transition: background-color 140ms ease;
 	}
 	.hero-intent__tabs button:hover:not(:disabled) {
 		background: #4b5256;
-		border-color: #abb1b5;
 	}
 	.hero-intent button:disabled {
 		cursor: wait;
@@ -642,7 +638,6 @@
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
 		background: var(--discovery-panel);
-		border-color: var(--discovery-panel);
 		color: var(--discovery-ink);
 		font-weight: var(--sa-weight-semibold);
 	}
