@@ -1,10 +1,9 @@
 <script lang="ts">
   import { vehicleArtwork, type Vehicle } from '$data/vehicle-artwork';
-  let { vehicle = 'silver', mobileVehicle, eager = false, framing = 'hero', media }: {
+  let { vehicle = 'silver', mobileVehicle, eager = false, media }: {
     vehicle?: Vehicle;
     mobileVehicle?: Vehicle;
     eager?: boolean;
-    framing?: 'hero' | 'banner';
     media?: string;
   } = $props();
 
@@ -13,7 +12,7 @@
 <picture>
   {#if media}<source {media} srcset={vehicleArtwork[vehicle].src} />{/if}
   {#if mobileVehicle && !media}<source media="(max-width: 767px)" srcset={vehicleArtwork[mobileVehicle].src} />{/if}
-  <img class="dn-vehicle-cutout" class:dn-vehicle-cutout--banner-gclass={framing === 'banner' && vehicle === 'gclass'} data-view="side-profile" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+  <img class="dn-vehicle-cutout" data-view="side-profile" src={media ? 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=' : vehicleArtwork[vehicle].src} alt="" width="1000" height="667" loading={eager ? 'eager' : 'lazy'} decoding="async" />
 </picture>
 
 <style>
@@ -26,6 +25,4 @@
     pointer-events: none;
     user-select: none;
   }
-  /* Match the G-Class opaque body height and wheel baseline to the Urus. */
-  .dn-vehicle-cutout--banner-gclass { transform: translateY(-0.42%) scale(0.793); transform-origin: right center; }
 </style>

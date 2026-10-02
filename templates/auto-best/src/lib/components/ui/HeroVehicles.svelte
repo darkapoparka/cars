@@ -1,7 +1,7 @@
 <script lang="ts">
   import VehicleCutout from './VehicleCutout.svelte';
   import ArtworkRegion from './ArtworkRegion.svelte';
-  import { heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
+  import { getVehicleArtworkRatios, heroVehiclePairs, vehicleArtwork, mobileHeroArtwork, type HeroVehiclePair, type Vehicle, type MobileHeroScene } from '$data/vehicle-artwork';
   import { mobileHeroRegions, mobileServiceArtwork } from '$data/vehicle-artwork';
   import { mobileHeroSizes } from '$data/responsive-images';
 
@@ -31,15 +31,15 @@
   {#each sides as side (side)}
     {@const vehicle = vehicles[side === 'left' ? 0 : 1]}
     {@const artwork = vehicleArtwork[vehicle]}
-    {@const bodyHeight = artwork.bounds[3] - artwork.bounds[1]}
+    {@const ratios = getVehicleArtworkRatios(artwork)}
     {@const mobileVehicle = side === 'left' ? mobileLeft : mobileRight}
     <div class="dn-hero-vehicles__car dn-hero-vehicles__car--{side}"
       class:dn-hero-vehicles__car--reverse={side === 'left' && mobileLeft === 'gclass'}
       data-vehicle={vehicle} data-mobile-vehicle={mobileVehicle}
-      style:--art-width-ratio={artwork.width / bodyHeight}
-      style:--art-height-ratio={artwork.height / bodyHeight}
-      style:--art-bottom-ratio={artwork.bounds[3] / bodyHeight}
-      style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / bodyHeight}>
+      style:--art-width-ratio={ratios.width}
+      style:--art-height-ratio={ratios.height}
+      style:--art-bottom-ratio={ratios.bottom}
+      style:--art-front-ratio={ratios.front}>
       <VehicleCutout media="(min-width: 1440px)" {vehicle} mobileVehicle={mobile ? mobileVehicle : undefined} eager />
     </div>
   {/each}
@@ -70,7 +70,7 @@
   }
   @media (min-width: 1440px) {
     .dn-hero-vehicles--desktop {
-      --car-height: clamp(120px, 8.333vw, 160px);
+      --car-size: clamp(200px, 13.889vw, 270px);
       --car-baseline: calc(100% - 50px);
       --side-room: calc((100vw - var(--dn-hero-center-width)) / 2);
       display: block;
@@ -81,11 +81,11 @@
       pointer-events: none;
     }
     .dn-hero-vehicles__car {
-      --car-edge: calc(var(--side-room) - 24px - var(--car-height) * var(--art-front-ratio));
+      --car-edge: calc(var(--side-room) - 24px - var(--car-size) * var(--art-front-ratio));
       position: absolute;
-      top: calc(var(--car-baseline) - var(--car-height) * var(--art-bottom-ratio));
-      width: calc(var(--car-height) * var(--art-width-ratio));
-      height: calc(var(--car-height) * var(--art-height-ratio));
+      top: calc(var(--car-baseline) - var(--car-size) * var(--art-bottom-ratio));
+      width: calc(var(--car-size) * var(--art-width-ratio));
+      height: calc(var(--car-size) * var(--art-height-ratio));
     }
     .dn-hero-vehicles__car--left { left: var(--car-edge); transform: scaleX(-1); }
     .dn-hero-vehicles__car--right { right: var(--car-edge); }

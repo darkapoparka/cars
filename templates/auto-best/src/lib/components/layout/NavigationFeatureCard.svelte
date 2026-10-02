@@ -4,10 +4,11 @@
 
   import { resolve } from '$app/paths';
   import type { NavigationFeature } from '$data/navigation';
-  import { vehicleArtwork } from '$data/vehicle-artwork';
+  import { getVehicleArtworkRatios, vehicleArtwork, vehicleArtworkFrame } from '$data/vehicle-artwork';
   import FeatureArtwork from '$components/ui/FeatureArtwork.svelte';
   import Icon from '$components/ui/Icon.svelte';
   let { feature }: { feature: NavigationFeature } = $props();
+  const vehicleRatios = $derived(feature.vehicle ? getVehicleArtworkRatios(vehicleArtwork[feature.vehicle]) : undefined);
   // Frame the visible object, not the transparent padding in the source canvas.
   const artwork = $derived.by(() => {
     if (!feature.vehicle) return feature.artwork;
@@ -19,7 +20,10 @@
 
 <a class="dn-mega__feature" class:dn-mega__feature--red={feature.tone === 'red'} class:dn-mega__feature--ink={feature.tone === 'ink'} href={i18n.href(resolve(feature.href))}>
   <span class="copy"><strong>{i18n.text(feature.title)}</strong></span>
-  <span class="artwork" class:artwork--photo={feature.media === 'photo'}>
+  <span class="artwork" class:artwork--photo={feature.media === 'photo'} class:artwork--vehicle={!!feature.vehicle}
+    style:--vehicle-width={vehicleRatios?.bodyWidth}
+    style:--vehicle-frame-width={vehicleArtworkFrame.width}
+    style:--vehicle-frame-height={vehicleArtworkFrame.height}>
     <FeatureArtwork {artwork} />
   </span>
   <span class="arrow" aria-hidden="true"><Icon name="arrow-right" size={20} /></span>
@@ -36,6 +40,7 @@
   strong { display: block; color: inherit; font-size: inherit; font-weight: var(--dn-menu-heading-weight); line-height: var(--dn-leading-heading); }
   .artwork { display: flex; flex: none; align-items: flex-end; justify-content: center; height: var(--dn-menu-art-height); margin: auto -12px 24px; }
   .artwork :global(.feature-artwork) { width: min(96%, calc(var(--dn-menu-art-height) * var(--artwork-ratio))); height: auto; }
+  .artwork--vehicle :global(.feature-artwork) { width: min(calc(var(--dn-menu-art-height) * var(--vehicle-width) / var(--vehicle-frame-height)), calc(96% * var(--vehicle-width) / var(--vehicle-frame-width))); }
   .artwork :global(img) { mix-blend-mode: multiply; }
   .artwork--photo :global(.feature-artwork) {
     mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent), linear-gradient(transparent, #000 7%, #000 93%, transparent);

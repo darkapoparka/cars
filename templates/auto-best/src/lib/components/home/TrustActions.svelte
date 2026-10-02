@@ -4,7 +4,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { vehicleArtwork } from '$data/vehicle-artwork';
+  import { getVehicleArtworkRatios, vehicleArtwork } from '$data/vehicle-artwork';
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { serviceArtwork } from '$data/service-artwork';
   import { featureArtwork } from '$data/feature-artwork';
@@ -62,6 +62,7 @@
       icon: 'finance'
     }
   ] as const;
+  const artworkFrameWidth = Math.max(...actions.map(action => getVehicleArtworkRatios(action.artwork).width));
   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
 </script>
 
@@ -81,12 +82,13 @@
           <article class={variant === 'cards' ? 'dn-service-card' : 'dn-trust-card'} class:dn-trust-card--ownership={variant === 'banners' && group === 'ownership'} class:dn-trust-card--illustrated={variant === 'banners' && group === 'browse'} class:dn-trust-card--red={variant === 'banners' && action.tone === 'red'} class:dn-trust-card--campaign={variant === 'banners'}>
             {#if variant === 'banners'}
               {@const art = action.artwork}
-              {@const bodyHeight = art.bounds[3] - art.bounds[1]}
+              {@const ratios = getVehicleArtworkRatios(art)}
               <div class="dn-trust-card__vehicle dn-trust-card__vehicle--campaign"
-                style:--art-width={art.width / bodyHeight}
-                style:--art-height={art.height / bodyHeight}
-                style:--art-bottom={art.bounds[3] / bodyHeight}
-                style:--art-right={(art.width - art.bounds[2]) / bodyHeight}>
+                style:--art-width={ratios.width}
+                style:--art-height={ratios.height}
+                style:--art-bottom={ratios.bottom}
+                style:--art-right={ratios.right}
+                style:--art-frame-width={artworkFrameWidth}>
                 <img class="dn-trust-card__lineup" data-view={art.view} src={art.src} alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
               </div>
             {/if}
@@ -160,12 +162,12 @@
     .dn-trust-card--campaign .dn-trust-card__content { width: max(52%, 240px); }
     .dn-trust-card--campaign p { width: 100%; max-width: 28ch; }
     .dn-trust-card__vehicle--campaign {
-      --car-height: min(144px, calc(min(46cqw, 100cqw - 244px) / var(--art-width)));
+      --car-size: min(188px, calc(min(46cqw, 100cqw - 244px) / var(--art-frame-width)));
       top: auto;
-      right: calc(var(--dn-space-6) - var(--car-height) * var(--art-right));
-      bottom: calc(var(--dn-space-8) - var(--car-height) * (var(--art-height) - var(--art-bottom)));
-      width: calc(var(--car-height) * var(--art-width));
-      height: calc(var(--car-height) * var(--art-height));
+      right: calc(var(--dn-space-6) - var(--car-size) * var(--art-right));
+      bottom: calc(var(--dn-space-8) - var(--car-size) * (var(--art-height) - var(--art-bottom)));
+      width: calc(var(--car-size) * var(--art-width));
+      height: calc(var(--car-size) * var(--art-height));
     }
   }
   .dn-trust-card__action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 9px; align-self: flex-start; margin-top: auto; padding: 10px 14px; border-radius: var(--dn-radius-button); background: #fff; color: #202329; font: var(--dn-cta-font); letter-spacing: var(--dn-cta-tracking); }

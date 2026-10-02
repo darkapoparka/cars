@@ -21,10 +21,12 @@ subtitle 8px below the title, keeping title, address and action in one group.
 Home and Inventory use the same search-panel bounds, padding and
 radius; Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
-across routes. Vehicle alpha bounds set body height and tyre baselines without
-stretching. Desktop optical scale adjustments in `vehicle-artwork.ts` give the taller
-G-Class balanced visual weight beside the Urus while preserving tyre and front-edge
-anchors; the cars stay at the outer edges, leaving the copy and controls clear.
+across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop
+cutouts by the area of their visible alpha bounds. Hero pairs, section banners,
+Home action banners and vehicle menu cards share this rule, with a frame size for
+each placement and no model-specific scale boosts. Taller bodies remain taller
+and shorter in length without stretching. Tyre baselines and front-edge anchors
+remain aligned; the cars stay at the outer edges, leaving the copy and controls clear.
 Below 1200px, search-hero cutouts sit above the panel's outer corners so the wider
 panel does not hide them. Home, Inventory and Blog share this placement;
 section banners keep their smaller frame.

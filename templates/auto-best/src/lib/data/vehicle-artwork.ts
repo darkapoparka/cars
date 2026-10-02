@@ -18,9 +18,28 @@ export const vehicleArtwork = {
 
 export type Vehicle = LeadVehicleArtwork;
 
-// Height matching makes the taller G-Class too narrow beside the Urus.
-export const desktopVehicleOpticalScale: Readonly<Partial<Record<Vehicle, number>>> = {
-  gclass: 1.18
+// A shared size unit gives every cutout the same visible bounding-box area.
+// Transparent margins do not affect scale; the original proportions and anchors remain intact.
+export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[] }) {
+  const [left, top, right, bottom] = artwork.bounds;
+  const bodyWidth = right - left;
+  const bodyHeight = bottom - top;
+  const size = Math.sqrt(bodyWidth * bodyHeight);
+  return {
+    width: artwork.width / size,
+    height: artwork.height / size,
+    bottom: bottom / size,
+    front: (artwork.width - left) / size,
+    right: (artwork.width - right) / size,
+    bodyWidth: bodyWidth / size,
+    bodyHeight: bodyHeight / size
+  };
+}
+
+const vehicleRatios = Object.values(vehicleArtwork).map(getVehicleArtworkRatios);
+export const vehicleArtworkFrame = {
+  width: Math.max(...vehicleRatios.map(artwork => artwork.bodyWidth)),
+  height: Math.max(...vehicleRatios.map(artwork => artwork.bodyHeight))
 };
 
 export const heroVehiclePairs = leadSite.artwork.heroVehiclePairs;

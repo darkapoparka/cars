@@ -1,6 +1,6 @@
 <script lang="ts">
   import VehicleCutout from './VehicleCutout.svelte';
-  import { desktopVehicleOpticalScale, heroVehiclePairs, vehicleArtwork, type HeroVehiclePair } from '$data/vehicle-artwork';
+  import { getVehicleArtworkRatios, heroVehiclePairs, vehicleArtwork, type HeroVehiclePair } from '$data/vehicle-artwork';
 
   let { pair, framing = 'hero', priority = false }: {
     pair: HeroVehiclePair;
@@ -18,12 +18,12 @@
   {#each sides as side, index (side)}
     {@const vehicle = heroVehiclePairs[pair][index]}
     {@const artwork = vehicleArtwork[vehicle]}
-    {@const normalizationHeight = (artwork.bounds[3] - artwork.bounds[1]) / (desktopVehicleOpticalScale[vehicle] ?? 1)}
+    {@const ratios = getVehicleArtworkRatios(artwork)}
     <div class="dn-campaign-vehicles__car dn-campaign-vehicles__car--{side}" data-vehicle={vehicle}
-      style:--art-width-ratio={artwork.width / normalizationHeight}
-      style:--art-height-ratio={artwork.height / normalizationHeight}
-      style:--art-bottom-ratio={artwork.bounds[3] / normalizationHeight}
-      style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / normalizationHeight}>
+      style:--art-width-ratio={ratios.width}
+      style:--art-height-ratio={ratios.height}
+      style:--art-bottom-ratio={ratios.bottom}
+      style:--art-front-ratio={ratios.front}>
       <VehicleCutout media="(min-width: 992px)" {vehicle} eager={priority} />
     </div>
   {/each}
@@ -34,7 +34,7 @@
 
   @media (min-width: 992px) {
     .dn-campaign-vehicles {
-      --car-height: clamp(140px, 11.111vw, 190px);
+      --car-size: clamp(235px, 18.056vw, 320px);
       --car-baseline: calc(100% - 50px);
       --side-room: max(160px, calc((100% - var(--dn-hero-center-width)) / 2 - 24px));
       display: block;
@@ -68,15 +68,15 @@
     .dn-campaign-vehicles__arc--right { left: calc(100% - 180px); }
     .dn-campaign-vehicles__car {
       position: absolute;
-      top: calc(var(--car-baseline) - var(--car-height) * var(--art-bottom-ratio));
-      width: calc(var(--car-height) * var(--art-width-ratio));
-      height: calc(var(--car-height) * var(--art-height-ratio));
+      top: calc(var(--car-baseline) - var(--car-size) * var(--art-bottom-ratio));
+      width: calc(var(--car-size) * var(--art-width-ratio));
+      height: calc(var(--car-size) * var(--art-height-ratio));
     }
-    .dn-campaign-vehicles__car--left { left: calc(var(--side-room) - var(--car-height) * var(--art-front-ratio)); transform: scaleX(-1); }
-    .dn-campaign-vehicles__car--right { right: calc(var(--side-room) - var(--car-height) * var(--art-front-ratio)); }
+    .dn-campaign-vehicles__car--left { left: calc(var(--side-room) - var(--car-size) * var(--art-front-ratio)); transform: scaleX(-1); }
+    .dn-campaign-vehicles__car--right { right: calc(var(--side-room) - var(--car-size) * var(--art-front-ratio)); }
 
     .dn-campaign-vehicles--section {
-      --car-height: clamp(64px, 6.667vw, 96px);
+      --car-size: clamp(104px, 10.694vw, 154px);
       --car-baseline: calc(100% - 26px);
       --side-room: max(100px, calc((100% - 640px) / 2 - 24px));
     }
@@ -85,9 +85,9 @@
   }
 
   @media (min-width: 992px) and (max-width: 1199px) {
-    .dn-campaign-vehicles:not(.dn-campaign-vehicles--section) { --car-height: 92px; --car-baseline: calc(100% - 30px); }
+    .dn-campaign-vehicles:not(.dn-campaign-vehicles--section) { --car-size: 155px; --car-baseline: calc(100% - 30px); }
     .dn-campaign-vehicles.dn-campaign-vehicles--search {
-      --car-height: 70px;
+      --car-size: 120px;
       --car-baseline: calc(100% - var(--dn-route-hero-height) + var(--dn-route-hero-control-top) - var(--dn-space-4));
     }
   }

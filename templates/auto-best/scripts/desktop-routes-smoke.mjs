@@ -134,9 +134,10 @@ try {
               if (!imageScene && width < 1200) {
                 const vehicleBodies = await page.locator('.dn-route-hero .dn-campaign-vehicles__car').evaluateAll(cars => cars.map(car => {
                   const style = getComputedStyle(car);
-                  const bodyHeight = parseFloat(style.getPropertyValue('--car-height'));
+                  const box = car.getBoundingClientRect();
+                  const heightRatio = parseFloat(style.getPropertyValue('--art-height-ratio'));
                   const bottomRatio = parseFloat(style.getPropertyValue('--art-bottom-ratio'));
-                  return { bottom: car.getBoundingClientRect().top + bodyHeight * bottomRatio };
+                  return { bottom: box.top + box.height * bottomRatio / heightRatio };
                 }));
                 for (const body of vehicleBodies) assert(body.bottom <= geometry.controls.y - 12, 'Laptop search panels leave the painted vehicle bodies visible above their outer corners');
               }
