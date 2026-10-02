@@ -1,3 +1,5 @@
+import {readFileSync} from 'node:fs';
+import {applyVercelAssets, clearVercelAssetPlan} from './vercel-asset-plan.mjs';
 import {createHash} from 'node:crypto';
 export const APP_PACKAGING_VERSION='3';
 export const APP_VARIANT=Object.freeze({key:'app',base:'/variant-4',entry:'/variant-4/'});
@@ -36,6 +38,7 @@ export function assertAppVariant(files,manifest){
 /** Additive, exact-input packaging. Existing runtime and assets are not regenerated. */
 export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,sharedSwitcher,provenance,baseDeployment}){
  const original=new Map(baseFiles),files=new Map(baseFiles);
+ clearVercelAssetPlan(files);
  const manifest=JSON.parse(files.get('dealer.json').toString());
  if(manifest.packaging?.version!=='2'||manifest.variants?.length!==3)throw Error('App append requires a verified native trio');
  if(!/^[a-f0-9]{40}$/.test(template.revision)||!sourceCommit)throw Error('An exact committed App source is required');
@@ -58,9 +61,12 @@ export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,share
  files.set('scripts/build-app-service.mjs',Buffer.from("import {spawnSync} from 'node:child_process';\nimport path from 'node:path';\nconst cwd=path.resolve(import.meta.dirname,'../app');\nconst result=spawnSync(process.execPath,[path.join(cwd,'node_modules/next/dist/bin/next'),'build','--webpack'],{cwd,stdio:'inherit',env:{...process.env,NEXT_PUBLIC_BASE_PATH:'/variant-4'},windowsHide:true});\nif(result.error)throw result.error;process.exitCode=result.status??1;\n"));
  files.set('vercel.json',json(appendAppService(JSON.parse(files.get('vercel.json').toString()))));
  files.set('dealer.json',json(manifest));
+ applyVercelAssets(files);
+ files.set('scripts/vercel-service-assets.mjs',readFileSync(new URL('./vercel-service-assets.mjs',import.meta.url)));
+ files.set('scripts/vercel-output-budget.mjs',readFileSync(new URL('./vercel-output-budget.mjs',import.meta.url)));
  const appReceipt={schemaVersion:1,dealer:manifest.slug,template,appDigest:digest(appFiles),provenance,baseDeployment,baseReceiptSha256:previous?sha256(previous):null};
  files.set('.cars-app.json',json(appReceipt));
- const mutable=new Set(['dealer.json','vercel.json','.cars-package.json',switcherName,'scripts/build-native-service.mjs']);
+ const mutable=new Set(['.cars-vercel-assets.json','scripts/vercel-service-assets.mjs','scripts/vercel-output-budget.mjs','dealer.json','vercel.json','.cars-package.json',switcherName,'scripts/build-native-service.mjs']);
  let preserved=0;for(const [name,bytes]of original){if(mutable.has(name))continue;if(!files.get(name)?.equals(bytes))throw Error('Existing dealer file changed: '+name);preserved++;}
  const payload=[...files].filter(([p])=>p!=='.cars-package.json').sort(([a],[b])=>a<b?-1:a>b?1:0).map(([p,b])=>({path:p,sha256:sha256(b)}));
  files.set('.cars-package.json',json({schemaVersion:1,manifest,sourceCommit,packagingVersion:APP_PACKAGING_VERSION,sourceMode:'additive-preserved-production',preservedBase:{deployment:baseDeployment,receiptSha256:appReceipt.baseReceiptSha256,unchangedFiles:preserved},payloadDigest:sha256(Buffer.from(JSON.stringify(payload))),payload}));

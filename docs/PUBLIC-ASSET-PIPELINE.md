@@ -1,6 +1,23 @@
 # Public dealer asset pipeline
 
-## Scope and ownership
+## Vercel is the current default
+
+The ordinary native dealer publisher now applies Vercel asset planning automatically for Auto Best, Modern, Carwow, Import and App. This is not gated behind the separate Cloudflare `--local-assets` experiment. `package-dealer.mjs`, additive App packaging and the existing shared-media packaging entry point all use `vercel-asset-plan.mjs`. The source release lock and dealer refresh remain separate from publishing.
+
+The sequence is: retain source and customization; select exact-hash existing Blob media; evaluate each family's unused-asset policy; pool remaining duplicate binary media; seal the generated plan; build and validate every service. JavaScript, CSS and SVG are not relocated. Different bytes with the same filename remain different objects. Unknown or newly customized images are retained.
+
+Pooled source objects live under `.cars-media/<dealer>/` in the generated publishing package, outside template/native/App source seals. Only the root Auto Best build materializes their immutable public paths under `/_cars/media/<dealer>/`. Exact Vercel Services rewrites point existing image URLs to that one root asset, preserving current mounted paths. Neither source adoption seals nor original application bytes are rewritten to conceal a packaging change.
+
+Next's generated public copies are trimmed before its build and Vercel public-file collection. Svelte's copied Vercel output is trimmed after compilation. The existing Svelte retention hook and Blob pruner cooperate using exact-hash omission evidence; a missing asset without that evidence is still a build error. `vercel-service-assets.mjs` refuses canonical source roots, validates the sealed plan and checks bytes before removing generated copies. It does not operate on live deployments.
+
+Storage checks are executable: the package has a default 384 MiB aggregate local-public budget and a 1,500-rule routing budget. After-build checks validate Svelte's final Vercel output and Next's production dependency traces. Next defaults are 160 MiB unique runtime dependencies and 96 MiB for an individual trace; shared dependencies are counted once. The final-output auditor defaults to 512 MiB total and 200 MiB per distinct function. These are Cars release budgets, not Vercel plan prices or a guarantee of final billed storage. Recognized contained Svelte function aliases and pnpm trace links are accounted without multiplying bundles or recursively copying dependency trees.
+
+Modern and App carry `public-assets.policy.json` into their source releases. App retains its reviewed source collector, including exclusion of reference capture datasets from dealer exports; do not mistake an unpersonalized master reference preview for the dealer artifact. A new family requires its own reviewed root/service mapping and release integration. The asset planner does not approve a fifth design.
+
+For the final combined UI/architecture release, qualify both existing four-design combinations, enforce the byte/route/runtime checks, verify the mounted application on the deployment platform, then refresh dealers through the existing preservation-aware workflow. Keep Vercel history, billing and DNS unchanged in this source-only optimization step.
+
+
+## Separate Cloudflare asset compiler: scope and ownership
 
 The existing source, template release, dealer refresh and publishing workflows remain authoritative. This is an opt-in post-build step in `scripts/package-shared-media.mjs`, not a replacement generator. It changes the derived public asset payload only. It does not edit template UI, dealer source, inventory, source receipts, release locks, Vercel projects, billing, DNS or independent Al Reef source.
 

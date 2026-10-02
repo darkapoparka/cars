@@ -12,6 +12,7 @@ import { assertLegacyLocaleCompatible } from './lib/dealer-locale.mjs';
 import { NATIVE_PACKAGING_VERSION, assertNativeAdoption } from './lib/native-localization.mjs';
 import { adoptNativeSource, applyNativeMounts } from './publishing/native-mounts.mjs';
 import { applySharedMedia } from './publishing/shared-media.mjs';
+import { applyVercelAssets } from './publishing/vercel-asset-plan.mjs';
 import {writeDerivedFile} from './lib/derived-assets.mjs';
 
 export const PACKAGING_VERSION = '1';
@@ -218,6 +219,11 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
   if (native && await exists(mediaCatalog)) {
     applySharedMedia(files, JSON.parse(await fs.readFile(mediaCatalog, 'utf8')));
     for (const helper of ['prune-shared-media.mjs', 'storage-assets.mjs']) files.set(`scripts/${helper}`, await fs.readFile(new URL(`./publishing/${helper}`, import.meta.url)));
+  }
+  if (native) {
+    applyVercelAssets(files);
+    files.set('scripts/vercel-service-assets.mjs', await fs.readFile(new URL('./publishing/vercel-service-assets.mjs', import.meta.url)));
+    files.set('scripts/vercel-output-budget.mjs', await fs.readFile(new URL('./publishing/vercel-output-budget.mjs', import.meta.url)));
   }
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   const payload = hashes();

@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-vercel-template-tooling-qa-not-release-approval",
+  "checkedAt": "2026-10-02T08:22:04.629Z",
+  "implementationBaseCommit": "6bfa9889e70b80afc3e0a128995f603c9ade814f",
+  "reviewedFamilies": [
+    "auto-best",
+    "modern",
+    "carwow",
+    "import",
+    "app"
+  ],
+  "defaultVercelPublishing": true,
+  "entrypoints": [
+    "package-dealer.mjs",
+    "publishing/app-variant.mjs",
+    "package-shared-media.mjs"
+  ],
+  "changes": [
+    "Apply retained-asset policies to all five Vercel families",
+    "Preserve existing verified shared Blob catalog",
+    "Pool remaining duplicate media in the root service at build time without changing native/App source seals",
+    "Preserve unknown/customized assets and original source paths",
+    "Keep Svelte retention and shared-media pruning compatible",
+    "Enforce local-public/routing and runtime storage budgets during generated service builds"
+  ],
+  "tests": {
+    "workflow": {
+      "passed": 294,
+      "total": 294,
+      "command": "node --test --test-concurrency=1 scripts/*.test.mjs"
+    },
+    "workflowCheck": true,
+    "nextProductionBuilds": [
+      "modern",
+      "app"
+    ],
+    "nextBrowser": [
+      {
+        "family": "modern",
+        "passed": true,
+        "cases": 42,
+        "method": "Production Next build with exact retained public index enforced",
+        "rootSwitcherFixture": false,
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "bg",
+          "en"
+        ]
+      },
+      {
+        "family": "app",
+        "passed": true,
+        "cases": 54,
+        "method": "Production Next build with exact retained public index enforced",
+        "rootSwitcherFixture": true,
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "bg",
+          "en"
+        ]
+      }
+    ],
+    "runtimeBudgets": [
+      {
+        "family": "auto-best",
+        "passed": true,
+        "accounting": "Logical bytes in final Vercel output only. Not a Vercel billing-meter measurement.",
+        "bytes": 18135886,
+        "aliases": 22
+      },
+      {
+        "family": "carwow",
+        "passed": true,
+        "accounting": "Logical bytes in final Vercel output only. Not a Vercel billing-meter measurement.",
+        "bytes": 30812033,
+        "aliases": 114
+      },
+      {
+        "family": "import",
+        "passed": true,
+        "accounting": "Logical bytes in final Vercel output only. Not a Vercel billing-meter measurement.",
+        "bytes": 124230061,
+        "aliases": 150
+      },
+      {
+        "family": "app",
+        "passed": true,
+        "accounting": "Unique traced runtime bytes and largest individual trace; shared dependencies are not multiplied per route.",
+        "bytes": 33174418,
+        "aliases": 0
+      },
+      {
+        "family": "modern",
+        "passed": true,
+        "accounting": "Unique traced runtime bytes and largest individual trace; shared dependencies are not multiplied per route.",
+        "bytes": 46120096,
+        "aliases": 46
+      }
+    ],
+    "nativeRepackAndRefresh": {
+      "passed": 27,
+      "total": 27
+    }
+  },
+  "limits": {
+    "localPublicBytes": 402653184,
+    "routeRules": 1500,
+    "nextUniqueRuntimeBytes": 167772160,
+    "nextIndividualTraceBytes": 100663296,
+    "vercelFinalOutputBytes": 536870912,
+    "individualFunctionBytes": 209715200
+  },
+  "templateSourceAssetProjections": [
+    {
+      "configuration": [
+        "auto-best",
+        "modern",
+        "carwow",
+        "app"
+      ],
+      "kind": "Template source-asset projection; excludes compiled JS/CSS and function output; not a dealer deployment size",
+      "inputBytes": 338224716,
+      "outputBytes": 29568766,
+      "existingExternalMediaBytes": 288415250,
+      "note": "Existing externalization is not new savings from this change."
+    },
+    {
+      "configuration": [
+        "auto-best",
+        "import",
+        "carwow",
+        "app"
+      ],
+      "kind": "Template source-asset projection; excludes compiled JS/CSS and function output; not a dealer deployment size",
+      "inputBytes": 450387596,
+      "outputBytes": 30412771,
+      "existingExternalMediaBytes": 409031565,
+      "note": "Existing externalization is not new savings from this change."
+    }
+  ],
+  "diagnostics": {
+    "appOfficialVercelAdapter": "Existing production build inspected successfully locally; not a cloud deployment",
+    "modernOfficialVercelAdapter": "Local Windows legacy-adapter inspection of existing output failed with NEXT_MISSING_LAMBDA for /-/apple-icon.png. Production Next build and 42 browser cases passed. Full Linux/platform build remains a release gate."
+  },
+  "scope": {
+    "dealerRefresh": false,
+    "releaseLockChanged": false,
+    "fifthDesignPromoted": false,
+    "liveDeployment": false,
+    "billingChanged": false,
+    "dnsChanged": false,
+    "cloudflareChanged": false
+  },
+  "acceptanceNote": "The owner continues frontend work. These checks approve tooling only, not later UI edits or a dealer release. Regenerate exact-source combinations and run hosted Vercel QA before fleet publication.",
+  "sourceFiles": [
+    {
+      "path": "docs/PUBLIC-ASSET-PIPELINE.md",
+      "sha256": "37f9228c3d5bba64b864572ede780807592271a691a3d3ea56095f83cb986613"
+    },
+    {
+      "path": "scripts/package-dealer.mjs",
+      "sha256": "7ecccd4892ef7d7f4d98cc1c7dd16b88ada9f4054377b32ec7603b5ea009e77a"
+    },
+    {
+      "path": "scripts/package-shared-media.mjs",
+      "sha256": "12840bf7e516ea4f7f126ea6462abdfa3e68f9ce89c964f88de1c973c8546a91"
+    },
+    {
+      "path": "scripts/publishing/app-source.mjs",
+      "sha256": "b545fdedd29b5e4fd00235300afb74fb178d0276a3bdd97ba620d4fa50af1ba3"
+    },
+    {
+      "path": "scripts/publishing/app-variant.mjs",
+      "sha256": "683c890f8f77aed52ed29f0b191f2b3336dda7bf1ce003e431630707ca4c0ac5"
+    },
+    {
+      "path": "scripts/publishing/prune-shared-media.mjs",
+      "sha256": "a107f42df741c89e11208e0b0b6a38ec47bf3fe53ceee41146f6f3d9def4241e"
+    },
+    {
+      "path": "scripts/verify-template-assets-browser.mjs",
+      "sha256": "fb95acfeaba4494a12cb7ca8ded7076aaefa0e606304579c4626caf13e9129d6"
+    },
+    {
+      "path": "scripts/app-variant.test.mjs",
+      "sha256": "80f553ff8e21d0f118e71be8fc762ee4f11dc688a2a10ca654ed14d1b59edf02"
+    },
+    {
+      "path": "scripts/shared-media.test.mjs",
+      "sha256": "478e961fa2068f7f215ddbc0932d2d5d8dbf2682a0148a958c8a8b0d2eb4048f"
+    },
+    {
+      "path": "scripts/publishing/vercel-asset-plan.mjs",
+      "sha256": "2b277cdd5ef0f13924c71c675f786705443a4ad930c45c4f9e60654dff7c9923"
+    },
+    {
+      "path": "scripts/publishing/vercel-service-assets.mjs",
+      "sha256": "c726dc029c92ac03a7cf67e32aaf8e7e07ae60b7f0dcd0f3c6d0c897d528caa9"
+    },
+    {
+      "path": "scripts/publishing/vercel-output-budget.mjs",
+      "sha256": "5f8787d29761ad9320ce014a271579270e63c33b469235d4abf541fbb97ad5fc"
+    },
+    {
+      "path": "scripts/audit-vercel-output.mjs",
+      "sha256": "1099278911dfa5756525437ec64a45550b78bcd404c11ae852f388dccfe37693"
+    },
+    {
+      "path": "scripts/vercel-assets.test.mjs",
+      "sha256": "181f601be74c78eda90238c0cad7fcdbaaf4fda51d8b6a3ad7c08c193ba55010"
+    },
+    {
+      "path": "scripts/vercel-output-budget.test.mjs",
+      "sha256": "bc0552219c50265720d77a7db7bbd0b5599ae5c7389b027681b3867b09a5ca03"
+    },
+    {
+      "path": "templates/app/public-assets.policy.json",
+      "sha256": "97c80cf43673db7694eadc1f7bed41568610af5d0d3cb5e14f3e936aac20549b"
+    },
+    {
+      "path": "templates/modern/public-assets.policy.json",
+      "sha256": "bffdabc4bdc1e74ae69b6d924fdf8c020945da85b96f7bb5cb9f9e32b9540f7f"
+    }
+  ]
+}

@@ -4,6 +4,7 @@ import path from 'node:path';
 import {ROOT,args,git,exportCommit,sha256,normalized,inside} from './lib/workflow.mjs';
 import {packageFiles,verifyPackage} from './export-dealer.mjs';
 import {applySharedMedia} from './publishing/shared-media.mjs';
+import {applyVercelAssets} from './publishing/vercel-asset-plan.mjs';
 
 /** Extend an exact existing publishing commit, preserving every application file. */
 export function packageSharedMedia({root=ROOT,slug,publishingCommit,sourceCommit,out,catalog}){
@@ -22,6 +23,9 @@ export function packageSharedMedia({root=ROOT,slug,publishingCommit,sourceCommit
  const publishedManifest=JSON.parse(files.get('dealer.json').toString());
  if(publishedManifest.slug!==slug||publishedManifest.repository!==manifest.repository)throw Error('Publishing source identity mismatch');
  const result=applySharedMedia(files,catalog);
+ const vercelAssets=applyVercelAssets(files);
+ files.set('scripts/vercel-service-assets.mjs',fs.readFileSync(path.join(root,'scripts/publishing/vercel-service-assets.mjs')));
+ files.set('scripts/vercel-output-budget.mjs',fs.readFileSync(path.join(root,'scripts/publishing/vercel-output-budget.mjs')));
  for(const name of ['prune-shared-media.mjs','storage-assets.mjs'])files.set('scripts/'+name,fs.readFileSync(path.join(root,'scripts/publishing',name)));
  const original=new Map(packageFiles(out).map(p=>[p,fs.readFileSync(path.join(out,p))]));
  for(const [p,b]of original)if(!['vercel.json','.cars-package.json'].includes(p)&&!files.get(p)?.equals(b))throw Error('Original publishing source changed '+p);
@@ -29,7 +33,7 @@ export function packageSharedMedia({root=ROOT,slug,publishingCommit,sourceCommit
  files.set('.cars-package.json',Buffer.from(JSON.stringify({...prior,sourceCommit,sourceMode:'shared-media-preserved-publishing',preservedPublishingCommit:publishingCommit,payload,payloadDigest:sha256(JSON.stringify(payload))},null,2)+'\n'));
  for(const [p,b]of files){const target=path.join(out,p);fs.mkdirSync(path.dirname(target),{recursive:true});fs.writeFileSync(target,b);}
  verifyPackage(out);
- return{slug,publishingCommit,sourceCommit,out,files:result.entries.length,bytes:result.bytes};
+ return{slug,publishingCommit,sourceCommit,out,files:result.entries.length,bytes:result.bytes,vercelAssets:vercelAssets.summary};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename){
  if(process.argv.includes('--local-assets')) {

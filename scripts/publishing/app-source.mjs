@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';import path from 'node:path';
 const folders=new Set(['app','components','lib','public']);
-const rootFiles=new Set(['package.json','package-lock.json','next.config.js','next-env.d.ts','tsconfig.json','babel.config.js','postcss.config.js','eslint.config.mjs','proxy.ts','README.md','TEMPLATE.md','.gitattributes']);
+const rootFiles=new Set(['public-assets.policy.json','package.json','package-lock.json','next.config.js','next-env.d.ts','tsconfig.json','babel.config.js','postcss.config.js','eslint.config.mjs','proxy.ts','README.md','TEMPLATE.md','.gitattributes']);
 const excluded=['public/reference-assets/vehicle-details/','public/reference-assets/final-pass/','public/reference-assets/catalog/'];
 const normalize=bytes=>{if(bytes.includes(0))return bytes;const text=bytes.toString('utf8');return Buffer.from(text).equals(bytes)?Buffer.from(text.replaceAll('\r\n','\n')):bytes;};
 export const appSourceRetainsPath = relative => !excluded.some(p=>relative.startsWith(p)) && !relative.endsWith('.tsbuildinfo') &&

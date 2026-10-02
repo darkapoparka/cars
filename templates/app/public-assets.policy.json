@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 1,
+  "family": "app",
+  "consumerRoots": [
+    "app",
+    "components",
+    "lib"
+  ],
+  "consumerFiles": [
+    "proxy.ts",
+    "next.config.js",
+    "postcss.config.js"
+  ],
+  "candidates": [
+    {
+      "path": "brands/audi.webp",
+      "sha256": "4d2a6fd572fa2acd7c4fe10d073298f06b64b9bcb03e48dfe4a159299e383a1b",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/bmw.webp",
+      "sha256": "bc20a2b89d568fefbe1ee196b52f0e71ca7aa913771ab8b4c5a38c5581313925",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/chevrolet.svg",
+      "sha256": "c40bdb61de2602d55d92e0a121acafbf7ab5fd9d8ff85bb6c42fd161fd822e0f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/audi.svg",
+      "sha256": "43af01b7b9331040a84756bfbfd1dd4b9ffbf0ccf045a329e24514435a5be339",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/bmw.svg",
+      "sha256": "e80a2212b5eb954c70e9f8a66aa97067884fdada154f60e40e6741cd2050bda1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/chevrolet.svg",
+      "sha256": "c40bdb61de2602d55d92e0a121acafbf7ab5fd9d8ff85bb6c42fd161fd822e0f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/ford.svg",
+      "sha256": "9f6a3e7b984260de4b4e4afb6a155e939bcf41d0a098529ba5965737d17f6d16",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/honda.svg",
+      "sha256": "c8126e635090b1773269cb5f34e1af2733b59ea65d48e43d276cd305377b0aaf",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/hyundai.svg",
+      "sha256": "dcd2d6c20e7c4bc431f7c3a1108c4493b007f978b8ee6f48b007406cc8435937",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/kia.svg",
+      "sha256": "bbdeeab899331fc6181949c2b31686208a88d7afc69d182b54dccc138b8e4843",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/nissan.svg",
+      "sha256": "97980fa3135dfeffb72a9acdf3ee23b21bf9a53b8475e7b5cff9ce6df645cf5c",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/opel-badge.png",
+      "sha256": "1a1b24dd66759917e9ce06f8b0ac68903a38a34fbfea1d910342ddb62640d1f2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/opel.svg",
+      "sha256": "30372097f05f482163f49f2fe7363ce9807d6394c1a2531d7e666321ed4adc14",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/peugeot-badge.png",
+      "sha256": "a462700407352b6e328626f4bf0fbde79930fab868a9a73553742362c027181e",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/peugeot.svg",
+      "sha256": "983259cfcdec14b8fef194454588470f8f344c7d64961c1a1cf11182cbbb2efc",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/smart-badge.png",
+      "sha256": "de3f8a8e0c85bb8bb371b15f738dabde642fb45ee05b1692e88f406b66e701db",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/smart.svg",
+      "sha256": "ae7c0c92c9ebd055b732bc4f882cfa14dd0b3b7099628405d8408420bffe18fd",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/SOURCES.md",
+      "sha256": "a7829f2bee30c63d3803af76000046c60d3a4fe94cb0c1e9d50dd3a07aec969e",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/tesla-badge.png",
+      "sha256": "883f1efb9e1e5d1d077095fc8d39c2419a92ed0a98c6e18f2772072017423db1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/tesla.svg",
+      "sha256": "4b94d9eaf23849d6feec7a9c819e3699a35cbb76045ba7d482d17cbcc97414a5",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/toyota.svg",
+      "sha256": "70a20e8335255cff3311314636ab15dbc0c5941a52d1ae5ea3471e85f40e7507",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/volkswagen-badge.png",
+      "sha256": "885e777d31548803a8debda6057f99fb7e156191586c7ea51eb546e234aab3eb",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/emblems/volkswagen.svg",
+      "sha256": "24d0666e617afcfc1a030001f39fe844807c547130652c77ae9d57526261d068",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/honda.svg",
+      "sha256": "c8126e635090b1773269cb5f34e1af2733b59ea65d48e43d276cd305377b0aaf",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/kia.webp",
+      "sha256": "c327a6b2049d79d9f9e8080cfb05044e9607ff98210775fcb16a1caa671be03d",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/mercedes.webp",
+      "sha256": "af60248f26fdb7032a0c74c29f24ee771afd22d35b020c0c1ac07e295ef2ef60",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/toyota.webp",
+      "sha256": "979f2408df1f241da8bcb3ea64283687da9a9245ec014e7ebfbae1f627aa2061",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "brands/volkswagen.webp",
+      "sha256": "c8279260fae7af62521af3eb539f528061054679df934c06e8c44dff68f08ee8",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "cutouts/BUY-SEDAN-PROMPT.md",
+      "sha256": "12c213a763ef955c2b32b7ee0e90761d4c81b809ee8093c153fb7db60d84c5d2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "cutouts/hero-suv.png",
+      "sha256": "f1696ec29e73aef2942f9412715e7e451777f07820f31ba8c09849edc4d80ec2",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "services/finance.webp",
+      "sha256": "7bb887cc539229ca22f147d01f16f715cfab5e62389d868a986848a1f1d86a8f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/ALIGNED-BANNER-PROMPTS.md",
+      "sha256": "1d305af333c9c6027a5515675bb61ce5d69a44fe7e6bc47dd59047937a1cb197",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/black/DEALER-SATIN-PROMPT.md",
+      "sha256": "cfef6166948c75fb71148e9df744d1be5fa04f2ddaccb5cf1b5c3bf472bd7572",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/black/PDP-THEME-PROMPTS.md",
+      "sha256": "dab47555ebf3ae5db4da896e7f5f71f011c1c8d851427b99f8293052254683ac",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/black/PROMPTS.md",
+      "sha256": "0c9b6963489f65b19010e841d1fce9c2fbd521b6c908924217d005b39dc825c6",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/black/SELL-PROMPTS.md",
+      "sha256": "cd5e43401caa68a53ab902b266fc8b1eedd9caa2abb6f3061f0587f38ca32e32",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/black/SERVICE-PACKAGE-PROMPTS.md",
+      "sha256": "20d45726203516a10610ee4e316064aa0ca52bcc65343fca6c305fb9aaf09cf4",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/COLLECTION-ARTWORK.md",
+      "sha256": "cb21515bc518048a888572e9494fad5945819bbd4f0ddac06727e34901131582",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/COLOUR-CAMPAIGN-PROMPTS.md",
+      "sha256": "8e734c0284eb0d031f710cfb2678be26730f9229bcc2a7f4f76258d4a9c941bc",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/finance-banner-v1.png",
+      "sha256": "a51a7bfd577892e09f76f83f53743a1bebdd6d4193958ad84caa875df500f0fd",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/finance-banner-v2.png",
+      "sha256": "dd30c7bba10df2ed0fb30e4e3a5602ce42fb19231b56e7b8b89211e527734790",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/finance-v2.png",
+      "sha256": "bccc401c0307ae50bbecc3f42f279e8225e6c71ff27b21a3bc393a1ca95179fc",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/HOME-CAROUSEL-PROMPTS.md",
+      "sha256": "8f73f8d184322ff6e46d2b5ff196ff58fab0713380111490daa11646423de19f",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/navigation/PROMPTS.md",
+      "sha256": "eec731c25e5070d125656ba73df111a30f5795c340ddcface5fc79d0c6d3ab4d",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/sell-banner-v1.png",
+      "sha256": "6433d37bb4bccaeaf553bb5f3af99a6c63c474a84b690678ab0827543713f0aa",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/sell-banner-v2.png",
+      "sha256": "38f729c5ed9f0ba960f758251cf09ec708200d2b19d0e3fe1858f59b02e3dac1",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/SELL-CARDS-PROMPTS.md",
+      "sha256": "5ad46294279090481e5694db182269dc95e21ed2c85f2639ca5bdd6715e42474",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/service-banner-v1.png",
+      "sha256": "20246650e604bc1704c96b474fbb26024b2122c45a8185bd0d860adc272a55b5",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/service-banner-v2.png",
+      "sha256": "1c53d391908980452ed0348c9d41b67de6ed552892b19944a702271be0187fd3",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/service-v2.png",
+      "sha256": "86f46fbe80b603733c76b958cfa66b125dd503bf630a86b450373055fb45b85e",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    },
+    {
+      "path": "showroom/SILVER-BANNER-PROMPTS.md",
+      "sha256": "63fc2784f3fb568f70575bdfe40fb3292c28c494f24b6b4b36bdb1cf04850103",
+      "reason": "Superseded or reference-only master asset; rechecked against runtime code and public dependencies at publication."
+    }
+  ],
+  "keepPrefixes": []
+}

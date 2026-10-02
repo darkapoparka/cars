@@ -129,3 +129,23 @@ test('pruner rejects a package identity mismatch before touching files', async t
   assert.deepEqual(await readFile(sourceFile), mediaBytes);
 });
 
+test('shared media accepts already omitted Svelte output only with exact retention and source evidence', async t => {
+  const packageRoot = await mkdtemp(path.join(os.tmpdir(), 'cars-shared-retention-'));
+  t.after(() => rm(packageRoot, { recursive: true, force: true }));
+  const digest = sha256(mediaBytes), relative = 'dealer/old.png';
+  const sourceFile = path.join(packageRoot, 'carwow/static', relative);
+  const proof = path.join(packageRoot, 'carwow/.svelte-kit/cars-public-assets/retention.json');
+  await mkdir(path.dirname(sourceFile), { recursive: true });
+  await mkdir(path.dirname(proof), { recursive: true });
+  await mkdir(path.join(packageRoot, 'carwow/.vercel/output/static'), { recursive: true });
+  await writeFile(sourceFile, mediaBytes);
+  await writeFile(path.join(packageRoot, '.cars-package.json'), JSON.stringify({ manifest: { slug: 'review-fixture' } }));
+  await writeFile(path.join(packageRoot, 'dealer.json'), JSON.stringify({ slug: 'review-fixture', variants: [{ key: 'carwow', base: '/variant-3' }] }));
+  await writeFile(path.join(packageRoot, '.cars-shared-media.json'), JSON.stringify({ schemaVersion: 1, dealer: 'review-fixture', entries: [{ service: 'carwow', relative, sha256: digest, bytes: mediaBytes.length, remoteUrl: remoteUrl(digest) }] }));
+  await assert.rejects(pruneService('carwow', { packageRoot }), /Missing expected/);
+  await writeFile(proof, JSON.stringify({ omitted: [{ path: relative, sha256: digest, bytes: mediaBytes.length }] }));
+  assert.equal((await pruneService('carwow', { packageRoot })).prunedFiles, 0);
+  await writeFile(sourceFile, 'customized dealer artwork');
+  await assert.rejects(pruneService('carwow', { packageRoot }), /differs from omission evidence/);
+  assert.equal((await readFile(sourceFile)).toString(), 'customized dealer artwork');
+});
