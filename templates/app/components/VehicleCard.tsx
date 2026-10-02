@@ -4,17 +4,18 @@ import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {Heart} from 'lucide-react';
+import {Calculator, ChevronRight, Heart} from 'lucide-react';
 import {CurrencyLabel} from '@/components/ReferenceUI';
 import {SAVED_KEY, useSavedVehicle} from '@/components/useVehicleState';
 import {formatPrice, type Vehicle} from '@/lib/data';
 import {media, tokens as $} from '@/app/tokens.stylex';
+import {typography as t} from '@/app/typography.stylex';
 
 export const STORAGE_KEY = SAVED_KEY;
 function factOverflow(element: HTMLElement) {
   return (element.scrollLeft > 1 ? 1 : 0) | (element.scrollLeft + element.clientWidth < element.scrollWidth - 1 ? 2 : 0);
 }
-function VehicleCard({vehicle, showDiscount = false}: {vehicle: Vehicle; showDiscount?: boolean}) {
+function VehicleCard({vehicle, showDiscount = false, finance}: {vehicle: Vehicle; showDiscount?: boolean; finance?: {monthly: number; onCalculate: () => void}}) {
   const tx = useCopy();
   const factRow = useRef<HTMLDivElement>(null);
   const [overflow, setOverflow] = useState(0);
@@ -50,13 +51,14 @@ function VehicleCard({vehicle, showDiscount = false}: {vehicle: Vehicle; showDis
           <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
           {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
           <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
-          {vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
+          {!finance && vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
         </Link>
         <div {...stylex.props(s.facts)}><div ref={factRow} data-vehicle-facts role="group" tabIndex={0} aria-label={tx('Specifications')} onScroll={event => setOverflow(factOverflow(event.currentTarget))} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(item)} {...stylex.props(s.pill, index === 2 && s.equipment)}>{index === 1 && item === 'Automatic' ? tx('Auto') : tx(item)}</span>)}</div>{overflow & 1 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueLeft)}/> : null}{overflow & 2 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueRight)}/> : null}</div>
         {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
       </div>
       <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button>
     </div>
+    {finance ? <button type="button" data-finance-car-payment aria-label={`${tx('Estimate payment')}: ${vehicle.year} ${vehicle.make} ${vehicle.model}`} onClick={finance.onCalculate} {...stylex.props(s.financeAction, t.control)}><Calculator size={20} aria-hidden="true"/><span><CurrencyLabel size={16}/>{formatPrice(Math.round(finance.monthly))}{tx('/mo*')}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.financeArrow)}/></button> : null}
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
 }
@@ -97,4 +99,6 @@ const s = stylex.create({
   equipment: {gridColumn: '1 / -1'},
   pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: {[media.mobile]: 12, default: 11}, fontWeight: 400, lineHeight: '16px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'normal', borderRadius: 6, backgroundColor: '#f4f4f4'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},
+  financeAction: {display: 'flex', alignItems: 'center', gap: 8, width: '100%', minHeight: 44, padding: '8px 12px', color: $.ink, borderWidth: 0, backgroundColor: {default: '#f3f2fa', ':hover': '#e9e7f5'}, textAlign: 'left', cursor: 'pointer'},
+  financeArrow: {marginLeft: 'auto', flexShrink: 0},
 });

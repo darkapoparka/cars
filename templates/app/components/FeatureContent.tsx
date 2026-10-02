@@ -5,7 +5,7 @@ import {useState} from 'react';
 import Link from '@/components/AppLink';
 import Image from '@/components/AppImage';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowRight, BadgePercent, Check, ChevronDown, FileText, Mail, MapPin, Phone} from 'lucide-react';
+import {ArrowRight, BadgePercent, Check, ChevronDown, FileText, ListChecks, Mail, MapPin, Phone} from 'lucide-react';
 import BrandCampaign from '@/components/BrandCampaign';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import {dealer} from '@/lib/dealer-config';
@@ -30,15 +30,12 @@ const steps = {
     ['delivery-and-payment', 'After the repair', 'Review the work and costs.'],
     ['happy-driving', 'Service record', 'Keep your workshop documents.'],
   ],
-  finance: [
-    ['item1', 'Choose your car', 'Browse the available cars.'],
-    ['item2', 'Prepare your documents', 'Ask which documents you need.'],
-    ['item3', 'Discuss the terms', 'Discuss the deposit, term and rate.'],
-    ['item4', 'Compare offers', 'Check the payment and total cost.'],
-    ['item5', 'Lender approval', 'Approval depends on the lender.'],
-    ['keys', 'Collect your car', 'Collect after the details are confirmed.'],
-  ],
 };
+const financeSteps = [
+  [0, 'Choose your car', 'Browse the available cars.'],
+  [2, 'Estimate payment', 'Adjust the deposit, term and rate.'],
+  [5, 'Confirm with the dealer', 'Confirm availability, documents and terms.'],
+] as const;
 const packages = [
   {name: 'Routine service', mobileName: 'Servicing', copy: 'Oil, filters and routine checks.', checks: ['Oil and filter requirements', 'Fluid levels and safety checks', 'Tyres, brakes and lighting'], mobileChecks: ['Oil and filters', 'Safety checks', 'Tyres and brakes']},
   {name: 'Inspection and diagnostics', mobileName: 'Diagnostics', copy: 'Check your car and plan any work.', checks: ['Diagnostic and condition checks', 'Suspension and braking system', 'Maintenance recommendations'], mobileChecks: ['Computer check', 'Suspension and brakes', 'Recommendations']},
@@ -62,6 +59,15 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
   const tx = useCopy();
 
   const [information, setInformation] = useState<{title: string; description: string} | null>(null);
+  if (kind === 'finance') return <section data-finance-help {...stylex.props(s.section)} aria-label={tx('Good to know')}>
+    <div {...stylex.props(s.helpHeader)}><h2 {...stylex.props(s.heading, t.title)}>{tx('Good to know')}</h2><button type="button" onClick={onStart} {...stylex.props(s.helpAction, t.control)}>{tx('Ask us')}<ArrowRight size={18} aria-hidden="true"/></button></div>
+    <div {...stylex.props(s.documentList)}>
+      <details {...stylex.props(s.documentDisclosure)}><summary {...stylex.props(s.documentSummary, t.control)}><ListChecks size={22} aria-hidden="true" {...stylex.props(s.documentIcon)}/><span {...stylex.props(s.documentTitle)}>{tx('How it works')}</span><ChevronDown size={20} aria-hidden="true" {...stylex.props(s.documentIcon)}/></summary>
+        <ol data-finance-process aria-label={tx('Finance steps')} {...stylex.props(s.financeSteps)}>{financeSteps.map(([index, title, copy]) => <li key={index} {...stylex.props(s.financeStep)}><Image src={showroom.artwork.financeSteps[index]} width={72} height={72} sizes="72px" alt="" {...stylex.props(s.financeImage)}/><div {...stylex.props(s.financeCopy)}><h3 {...stylex.props(s.processTitle, t.control)}>{tx(title)}</h3><p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p></div></li>)}</ol>
+      </details>
+      {[{title: 'Required documents', Icon: FileText, copy: 'Confirm identity and income documents with your lender.'}, {title: 'Rates and approval', Icon: BadgePercent, copy: 'The lender confirms eligibility, rates and terms. Calculator results are estimates.'}].map(({title, Icon, copy}) => <details key={title} {...stylex.props(s.documentDisclosure)}><summary {...stylex.props(s.documentSummary, t.control)}><Icon size={22} aria-hidden="true" {...stylex.props(s.documentIcon)}/><span {...stylex.props(s.documentTitle)}>{tx(title)}</span><ChevronDown size={20} aria-hidden="true" {...stylex.props(s.documentIcon)}/></summary><p {...stylex.props(s.documentCopy, t.body)}>{tx(copy)}</p></details>)}
+    </div>
+  </section>;
   return <>
     {kind === 'sell' ? <section {...stylex.props(s.methods)} aria-label={tx("Ways to sell your car")}>
       {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} data-selling-method {...stylex.props(s.method)}>
@@ -78,30 +84,12 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
       <ul {...stylex.props(s.checks)}>{checks.map((check, index) => <li key={check} {...stylex.props(s.check, t.body)}><Check size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={check} short={mobileChecks[index]}/></li>)}</ul>
       <button type="button" aria-label={`${tx('More details')}: ${tx(name)}`} onClick={() => setInformation({title: name, description: `${tx(copy)} ${checks.map(check => tx(check)).join(', ')}. ${tx('Available work, intervals and pricing depend on your car. Confirm the package with the showroom before booking.')}`})} {...stylex.props(s.packageAction, t.control)}>{tx("View more")}<ArrowRight size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/></button>
     </article>)}</section> : null}
-    {kind === 'finance' ? <BrandCampaign kind="finance" onAction={onStart}/> : null}
     <section {...stylex.props(s.section)}>
-      <h2 {...stylex.props(s.heading, t.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Your finance journey, step by step' : 'Car care, step by step')}</span><span {...stylex.props(s.mobileCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Finance steps' : 'Service steps')}</span></h2>
-      {kind === 'finance' ? <ol data-finance-process aria-label={tx('Finance steps')} {...stylex.props(s.financeSteps)}>
-        {steps.finance.map(([asset, title, copy], index) => <li key={asset} {...stylex.props(s.financeStep)}>
-          <Image src={showroom.artwork.financeSteps[index]} width={100} height={100} sizes="100px" alt="" {...stylex.props(s.financeImage)}/>
-          <div {...stylex.props(s.financeCopy)}>
-            <h3 {...stylex.props(s.processTitle, t.control)}>{tx(title)}</h3>
-            <p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p>
-          </div>
-        </li>)}
-      </ol> : kind === 'service' ? <ol data-service-process aria-label={tx('Service steps')} {...stylex.props(s.processSteps)}>{steps.service.map(([asset, title, copy], index) => <li key={asset} {...stylex.props(s.processStep)}><span aria-hidden="true" {...stylex.props(s.processNumber, t.title)}>{String(index + 1).padStart(2, '0')}</span><div><h3 {...stylex.props(s.processTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p></div></li>)}</ol> : <div {...stylex.props(s.steps)}>{steps.sell.map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/sell-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription, t.caption)}>{tx(copy)}</p></div></article>)}</div>}
+      <h2 {...stylex.props(s.heading, t.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : 'Car care, step by step')}</span><span {...stylex.props(s.mobileCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : 'Service steps')}</span></h2>
+      {kind === 'service' ? <ol data-service-process aria-label={tx('Service steps')} {...stylex.props(s.processSteps)}>{steps.service.map(([asset, title, copy], index) => <li key={asset} {...stylex.props(s.processStep)}><span aria-hidden="true" {...stylex.props(s.processNumber, t.title)}>{String(index + 1).padStart(2, '0')}</span><div><h3 {...stylex.props(s.processTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p></div></li>)}</ol> : <div {...stylex.props(s.steps)}>{steps.sell.map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/sell-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription, t.caption)}>{tx(copy)}</p></div></article>)}</div>}
     </section>
     {kind === 'sell' ? <BrandCampaign kind="sell" onAction={onStart}/> : kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
-    {kind === 'finance' ? <section data-finance-documents {...stylex.props(s.section)}>
-      <h2 {...stylex.props(s.heading, t.heading)}><ResponsiveCopy full="Documents and terms" short="Documents"/></h2>
-      <p {...stylex.props(s.documentIntro, t.body)}>{tx('Requirements vary by lender.')}</p>
-      <div {...stylex.props(s.documentList)}>
-        {[{title: 'Required documents', Icon: FileText, copy: 'Confirm identity and income documents with your lender.'}, {title: 'Rates and approval', Icon: BadgePercent, copy: 'The lender confirms eligibility, rates and terms. Calculator results are estimates.'}].map(({title, Icon, copy}) => <details key={title} {...stylex.props(s.documentDisclosure)}>
-          <summary {...stylex.props(s.documentSummary, t.control)}><Icon size={22} aria-hidden="true" {...stylex.props(s.documentIcon)}/><span {...stylex.props(s.documentTitle)}>{tx(title)}</span><ChevronDown size={20} aria-hidden="true" {...stylex.props(s.documentIcon)}/></summary>
-          <p {...stylex.props(s.documentCopy, t.body)}>{tx(copy)}</p>
-        </details>)}
-      </div>
-    </section> : <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx('A little more detail')}</h2>{[['What happens next?', 'Tell the showroom what you need. Availability, pricing and any terms are confirmed before you commit.'], ['Can I visit in person?', 'Yes, explore the showroom information and arrange a suitable time to discuss your car.']].map(([title, copy]) => <details key={title} {...stylex.props(s.faq)}><summary {...stylex.props(s.summary, t.control)}>{tx(title)}<ChevronDown size={18}/></summary><p {...stylex.props(s.faqCopy, t.caption)}>{tx(copy)}</p></details>)}</section>}
+    <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx('A little more detail')}</h2>{[['What happens next?', 'Tell the showroom what you need. Availability, pricing and any terms are confirmed before you commit.'], ['Can I visit in person?', 'Yes, explore the showroom information and arrange a suitable time to discuss your car.']].map(([title, copy]) => <details key={title} {...stylex.props(s.faq)}><summary {...stylex.props(s.summary, t.control)}>{tx(title)}<ChevronDown size={18}/></summary><p {...stylex.props(s.faqCopy, t.caption)}>{tx(copy)}</p></details>)}</section>
     <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx("Let’s talk about your car")}</h2><div {...stylex.props(s.contactGrid)}>{[['Call us', Phone], ['Email us', Mail], ['Visit us', MapPin]].map(([label, Icon]) => {const Symbol = Icon as typeof Phone; return label === 'Call us' && dealer.phoneE164 ? <a key={String(label)} href={'tel:' + dealer.phoneE164} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Email us' && dealer.email ? <a key={String(label)} href={'mailto:' + dealer.email} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Visit us' ? <Link key={String(label)} href="/stores" {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></Link> : <button type="button" key={String(label)} onClick={() => setInformation({title: String(label), description: dealer.phoneDisplay || dealer.email || 'Contact details are not configured for this template.'})} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></button>;})}</div></section>
     {information ? <ReferenceInfoSheet {...information} onClose={() => setInformation(null)}/> : null}
   </>;
@@ -135,16 +123,17 @@ const s = stylex.create({
   stepCopy: {padding: 12},
   stepTitle: {overflowWrap: 'anywhere'},
   stepDescription: {marginTop: 5, color: $.muted, overflowWrap: 'anywhere'},
-  financeSteps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: {[media.mobile]: 12, default: 16}, margin: '16px 0 0', padding: 0, listStyle: 'none'},
-  financeStep: {display: 'grid', gridTemplateColumns: '100px minmax(0,1fr)', alignItems: 'center', overflow: 'hidden', minHeight: 102, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 13, backgroundColor: '#fff'},
-  financeImage: {display: 'block', alignSelf: 'end', width: 100, height: 100, objectFit: 'contain', objectPosition: 'left bottom'},
-  financeCopy: {minWidth: 0, padding: '12px'},
+  financeSteps: {display: 'grid', gap: 16, margin: 0, padding: '0 16px 20px', listStyle: 'none'},
+  financeStep: {display: 'grid', gridTemplateColumns: '72px minmax(0,1fr)', alignItems: 'center', gap: 12, minHeight: 72},
+  financeImage: {display: 'block', width: 72, height: 72, objectFit: 'contain'},
+  financeCopy: {minWidth: 0},
   processSteps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: 24, margin: '22px 0 0', padding: 0, listStyle: 'none'},
   processStep: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr)', alignItems: 'start', gap: 12},
   processNumber: {color: '#707079', fontVariantNumeric: 'tabular-nums'},
   processTitle: {textWrap: 'pretty'},
   processDescription: {marginTop: 5, color: $.muted, textWrap: 'pretty'},
-  documentIntro: {marginTop: 8, color: $.muted},
+  helpHeader: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
+  helpAction: {display: 'inline-flex', alignItems: 'center', gap: 8, minHeight: 44, padding: 0, color: $.ink, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   documentList: {marginTop: 16, overflow: 'hidden', borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 16},
   documentDisclosure: {borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: campaign.lightBorder},
   documentSummary: {display: 'flex', alignItems: 'center', gap: 12, minHeight: 64, padding: '14px 16px', color: $.ink, listStyle: 'none', cursor: 'pointer'},
