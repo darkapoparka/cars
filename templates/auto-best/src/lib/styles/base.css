@@ -23,7 +23,7 @@ button { font: var(--dn-control-font); }
 @media (max-width: 767px) {
   html:has(dialog[open]) { overflow: hidden; }
   .dn-app-shell dialog .dn-mobile-overlay-header { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-overlay-header-padding); background: var(--dn-white); }
-  .dn-app-shell dialog .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); overflow-wrap: anywhere; }
+  .dn-app-shell dialog .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); letter-spacing: var(--dn-tracking-heading); overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-header > .dn-overlay-close { margin-inline-start: auto; }
   .dn-app-shell dialog .dn-mobile-overlay-search { display: flex; min-height: var(--dn-overlay-control-height); align-items: center; gap: var(--dn-entry-icon-gap); padding: 0 var(--dn-space-1) 0 var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-entry-prominent-surface); color: var(--dn-muted); box-shadow: none; }
   .dn-app-shell dialog .dn-mobile-overlay-search:focus-within { border: 0; outline: 2px solid var(--dn-focus); outline-offset: 2px; box-shadow: none; }

@@ -166,7 +166,8 @@
   }
 
   @media (max-width: 991px) {
-    .dn-blog-card { border: 0; border-radius: var(--dn-radius-control); }
+    .dn-blog-card { border: 1px solid var(--dn-line); border-radius: var(--dn-radius-lg); box-shadow: var(--dn-card-shadow-subtle); }
+    .dn-blog-card__link:focus-visible::after { border-radius: inherit; }
     .dn-blog-card__link { display: block; }
     .dn-blog-card__media { display: none; }
     .dn-blog-card__body { min-width: 0; min-height: 0; padding: var(--dn-space-4); }

@@ -173,6 +173,8 @@
   /* Mobile overlays use the default frame; desktop overlays can opt into the expanded editor frame. */
   --dn-selection-surface: color-mix(in srgb, var(--dn-red) 4%, var(--dn-white));
   --dn-selection-line: color-mix(in srgb, var(--dn-red) 28%, var(--dn-white));
+  --dn-mobile-selection-surface: var(--dn-home-panel);
+  --dn-mobile-selection-line: var(--dn-line-strong);
   --dn-overlay-header-padding: max(var(--dn-space-3), env(safe-area-inset-top)) var(--dn-space-4) var(--dn-space-3);
   --dn-overlay-gutter: var(--dn-space-4);
   --dn-overlay-gap: var(--dn-space-2);

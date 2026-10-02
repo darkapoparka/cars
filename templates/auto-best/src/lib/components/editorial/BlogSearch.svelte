@@ -47,6 +47,15 @@
   }
 
   function closeSearch() { dialog?.close(); }
+  function handleDialogKeydown(event: KeyboardEvent) {
+    if (event.key === 'Escape' && !event.isComposing) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeSearch();
+      return;
+    }
+    trapDialogTab(event);
+  }
   function navigate() { navigating = true; closeSearch(); }
   function clearSearch() { query = ''; category = ''; input?.focus({ preventScroll: true }); }
   function cleanFormData(event: FormDataEvent) {
@@ -88,7 +97,7 @@
   bind:this={dialog}
   {@attach dialogViewport}
   aria-labelledby="dn-blog-search-title"
-  onkeydown={trapDialogTab}
+  onkeydown={handleDialogKeydown}
   onclose={restore}
 >
   <header class="dn-mobile-overlay-header dn-blog-search-dialog__header">

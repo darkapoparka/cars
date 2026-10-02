@@ -159,7 +159,7 @@
     onformdata={cleanFormData}
   >
     <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header">
-      <h2 id="dn-listing-filter-title" tabindex="-1">{i18n.t("m_32729e44de2d")}</h2>
+      <h2 id="dn-listing-filter-title" tabindex="-1"><span class="dn-listing-filter__title-desktop">{i18n.t("m_32729e44de2d")}</span><span class="dn-listing-filter__title-mobile">{i18n.t("m_546ebb8eb993")}</span></h2>
       <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t("m_2b3fff4a027c")} onclick={closeFilters}>
         <Icon name="x" />
       </button>
@@ -415,6 +415,7 @@
   }
 
   .dn-listing-filter__dialog-header h2:focus { outline: none; }
+  .dn-listing-filter__title-mobile { display: none; }
 
   .dn-listing-filter__close { margin-left: auto; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: #202329; }
 
@@ -674,9 +675,16 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .dn-listing-filter__equipment-option:has(input:checked) {
+      background: var(--dn-mobile-selection-surface);
+      box-shadow: inset 0 0 0 1px var(--dn-mobile-selection-line);
+    }
+
   }
 
   @media (max-width: 767px) {
+    .dn-listing-filter__title-desktop { display: none; }
+    .dn-listing-filter__title-mobile { display: inline; }
     .dn-listing-filter__inline-submit, .dn-listing-filter__filter-groups { display: none; }
     .dn-mobile-filter-fields { display: grid; gap: var(--dn-overlay-gap); }
     .dn-listing-filter__dialog-submit :global(svg),

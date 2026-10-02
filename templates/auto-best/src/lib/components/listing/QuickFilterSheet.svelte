@@ -173,7 +173,7 @@
   .choice { display: flex; box-sizing: border-box; min-height: var(--dn-overlay-control-height); padding: 0 var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: #24272c; font: var(--dn-overlay-option-font); cursor: pointer; }
   .choice[hidden] { display: none; }
   .choice:hover { background: #e4e7ea; }
-  .choice:has(:checked) { background: var(--dn-selection-surface); color: var(--dn-ink); box-shadow: inset 0 0 0 1px var(--dn-selection-line); }
+  .choice:has(:checked) { background: var(--dn-mobile-selection-surface); color: var(--dn-ink); box-shadow: inset 0 0 0 1px var(--dn-mobile-selection-line); }
   .choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .choice input { width: 20px; height: 20px; flex: 0 0 20px; margin: 0; accent-color: var(--dn-red); }
 

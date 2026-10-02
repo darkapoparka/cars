@@ -40,7 +40,7 @@
     {#if data.topic.id === 'general'}
       <DesktopShowroom id="contact-showroom-desktop-title" showSocialProfiles={false} />
       <ContactSocialChannels />
-      <div class="dn-contact-location dn-contact-location--general">
+      <div class="dn-contact-location dn-contact-location--general" id="contact-location-title">
         <div class="dn-contact-location__card">
           <ShowroomMap />
         </div>

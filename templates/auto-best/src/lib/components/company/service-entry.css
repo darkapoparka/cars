@@ -2,7 +2,7 @@
 .dn-service-entry--mobile { display: none; }
 @media (max-width: 767px) {
   .dn-service-entry--desktop { display: none; }
-  .dn-service-entry--mobile { display: grid; }
+  .dn-service-entry--mobile { display: grid; min-width: 0; grid-template-columns: minmax(0, 1fr); }
   .dn-service-entry--mobile .dn-service-entry__submit { justify-self: center; max-width: 100%; margin: 0 auto; cursor: pointer; }
 }
 .dn-service-entry__fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }

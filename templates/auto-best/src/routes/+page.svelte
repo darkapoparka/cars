@@ -209,7 +209,7 @@
       font-weight: var(--dn-weight-medium);
     }
 
-    .dn-home-page :global(:is(.dn-mobile-core-card, .dn-vehicle-card, .dn-body-type, .dn-brand-card, .dn-discovery-toggle, .dn-editorial-item, .dn-browse-all)) {
+    .dn-home-page :global(:is(.dn-vehicle-card, .dn-body-type, .dn-brand-card, .dn-discovery-toggle, .dn-editorial-item, .dn-browse-all)) {
       border: 1px solid var(--dn-line);
       border-radius: var(--dn-space-6);
       box-shadow: var(--dn-card-shadow-subtle);
@@ -220,8 +220,8 @@
     }
 
     .dn-home-page :global(.dn-browse-all .action) {
-      background: var(--dn-surface-panel);
-      color: var(--dn-ink);
+      background: var(--dn-ink-deep);
+      color: var(--dn-white);
     }
   }
 </style>

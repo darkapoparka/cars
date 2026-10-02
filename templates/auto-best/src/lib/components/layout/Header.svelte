@@ -325,6 +325,7 @@
               type="button"
               {@attach attachMobileToggle}
               aria-expanded={mobileOpen}
+              aria-haspopup="dialog"
               {@attach i18n.registerFocusTarget} aria-controls="dn-mobile-menu"
               aria-label={mobileOpen ? i18n.t("m_434b5049f81b") : i18n.t("m_adeff71e51a4")}
               onclick={openMobile}
@@ -345,8 +346,8 @@
   <div hidden={mobileOpen}>
     {#if vehicleDetailHeader}
       <nav class="dn-mobile-detail-bar" aria-label={i18n.t("m_4c09f960cece")}>
-        <a class="dn-mobile-detail-bar__secondary" href={i18n.href(resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'))} title={i18n.t("m_be4b2e6f02d6")}>{i18n.t("action.viewingShort")}</a>
-        <a class="dn-mobile-detail-bar__primary" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`}>
+        <a class="dn-mobile-detail-bar__secondary dn-compact-control" href={i18n.href(resolve(detailVehicle ? vehicleContactHref(detailVehicle.id) : '/contact?topic=inspection'))} title={i18n.t("m_be4b2e6f02d6")}>{i18n.t("action.viewingShort")}</a>
+        <a class="dn-mobile-detail-bar__primary dn-compact-control dn-compact-primary" {...phoneLinkAttributes} aria-label={`${i18n.t("action.callShort")} — ${brand.phone}`}>
           <MobileNavIcon name="phone" size={22} />
           {i18n.t("action.callShort")}
         </a>
@@ -390,6 +391,7 @@
           type="button"
           {@attach i18n.registerFocusTarget} aria-controls="dn-mobile-menu"
           aria-expanded={mobileOpen}
+          aria-haspopup="dialog"
           onclick={openMobile}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" /></span>
@@ -657,13 +659,13 @@
       min-height: var(--dn-control-height-default);
       place-items: center;
       align-content: center;
-      grid-template-rows: 24px auto;
+      grid-template-rows: var(--dn-space-7) auto;
       gap: var(--dn-space-half);
       padding: 3px 0;
       border: 0;
       border-radius: var(--dn-radius);
       background: transparent;
-      color: var(--dn-ink);
+      color: var(--dn-muted);
       font: inherit;
       font-size: var(--dn-text-caption);
       font-weight: var(--dn-weight-medium);
@@ -676,19 +678,21 @@
     .dn-mobile-bottom-nav a.active,
     .dn-mobile-bottom-nav button.active {
       background: transparent;
-      color: var(--dn-red);
+      color: var(--dn-ink-deep);
       font-weight: var(--dn-weight-semibold);
     }
 
     .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon {
+      background: var(--dn-mobile-selection-surface);
       color: inherit;
     }
 
     .dn-mobile-bottom-nav__icon {
       display: grid;
-      width: 24px;
-      height: 24px;
+      width: var(--dn-compact-control-visual-height);
+      height: var(--dn-space-7);
       place-items: center;
+      border-radius: var(--dn-pill);
     }
 
     .dn-mobile-bottom-nav :global(.dn-icon) {
@@ -698,7 +702,7 @@
 
     .dn-mobile-bottom-nav a:not(.active):active,
     .dn-mobile-bottom-nav button:not(.active):active {
-      color: var(--dn-red);
+      color: var(--dn-ink-deep);
     }
 
     .dn-mobile-bottom-nav a:focus-visible,
@@ -722,7 +726,7 @@
 
       .dn-mobile-bottom-nav a,
       .dn-mobile-bottom-nav button {
-        grid-template-rows: 24px;
+        grid-template-rows: var(--dn-space-7);
         gap: 0;
       }
     }
@@ -731,34 +735,24 @@
       display: grid;
       height: calc(var(--dn-mobile-detail-bar-height) + env(safe-area-inset-bottom));
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-      gap: 8px;
-      padding: 8px 12px calc(8px + env(safe-area-inset-bottom));
+      gap: var(--dn-space-2);
+      padding: var(--dn-space-2) var(--dn-space-3) calc(var(--dn-space-2) + env(safe-area-inset-bottom));
     }
 
     .dn-mobile-detail-bar a {
-      display: inline-flex;
       min-width: 0;
-      min-height: 44px;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
-      border-radius: var(--dn-radius-button);
-      font-size: var(--dn-text-body);
-      font-weight: var(--dn-control-weight);
-      line-height: var(--dn-leading-control);
       text-align: center;
+      white-space: normal;
     }
 
     .dn-mobile-detail-bar :global(svg) { flex-shrink: 0; }
 
     .dn-mobile-detail-bar__secondary {
-      background: var(--dn-red);
-      color: #fff;
+      --dn-compact-control-surface: var(--dn-home-panel);
     }
 
-    .dn-mobile-detail-bar__primary {
-      background: var(--dn-ink);
-      color: #fff;
+    .dn-mobile-detail-bar__secondary:is(:hover, :focus-visible) {
+      --dn-compact-control-surface: var(--dn-surface-hover);
     }
   }
 

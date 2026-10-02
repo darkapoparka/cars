@@ -36,6 +36,7 @@ export type HeaderPresentation = {
     listing: boolean;
     blog: boolean;
     about: boolean;
+    contact: boolean;
   };
 };
 
@@ -121,7 +122,8 @@ export function resolveShellPresentation(url: URL, status = 200): ShellPresentat
       mobileMenu: {
         listing: route === 'listing',
         blog: pathname.startsWith('/blog'),
-        about: route === 'about'
+        about: route === 'about',
+        contact: route === 'contact' && !workflowJourney
       }
     }
   };

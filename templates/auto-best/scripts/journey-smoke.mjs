@@ -26,7 +26,7 @@ try {
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card__link').first().getAttribute('aria-label'), title);
       assert(new URL(page.url()).hash.startsWith('#vehicle-'));
       await page.goto(`${base}/blog?category=${encodeURIComponent('Внос')}`, { waitUntil: 'networkidle' });
-      await page.locator('.dn-blog-card__link').first().click();
+      await page.locator('.dn-blog-grid .dn-blog-card__link').first().click();
       await page.waitForURL('**/blog-detail/**');
       await page.locator('.dn-blog-detail__back').click();
       await page.waitForURL(url => appPath(url) === '/blog');
