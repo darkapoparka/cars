@@ -10,6 +10,7 @@
 		desktopOnlySrcset
 	} from '$lib/utils/desktop-only-assets';
 	import DesktopHomeSearchPanel from './DesktopHomeSearchPanel.svelte';
+	import DesktopHeroArtwork from '$lib/components/layout/DesktopHeroArtwork.svelte';
 
 	let {
 		vehicles,
@@ -18,11 +19,6 @@
 		vehicles: HomeDesktopVehicle[];
 		variant?: 'photo' | 'cutouts';
 	} = $props();
-
-	const leftCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
-	const rightCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
 
 	function openMap() {
 		window.open(daynightSite.mapUrl, '_blank', 'noopener,noreferrer');
@@ -34,30 +30,7 @@
 		class="daynight-home-hero daynight-home-hero--cutouts"
 		aria-labelledby="daynight-home-hero-title"
 	>
-		<img
-			class="daynight-home-hero__car daynight-home-hero__car--left"
-			src={i18n.asset(desktopOnlyImagePlaceholder)}
-			srcset={desktopOnlySrcset(leftCarSrc, 1400)}
-			sizes={desktopOnlySizes('36vw')}
-			alt=""
-			width="1400"
-			height="933"
-			loading="eager"
-			decoding="async"
-			aria-hidden="true"
-		/>
-		<img
-			class="daynight-home-hero__car daynight-home-hero__car--right"
-			src={i18n.asset(desktopOnlyImagePlaceholder)}
-			srcset={desktopOnlySrcset(rightCarSrc, 1400)}
-			sizes={desktopOnlySizes('36vw')}
-			alt=""
-			width="1400"
-			height="933"
-			loading="eager"
-			decoding="async"
-			aria-hidden="true"
-		/>
+		<DesktopHeroArtwork panelWidth={640} />
 		<div class="daynight-home-hero__stage">
 			<h1 id="daynight-home-hero-title" class="daynight-home-hero__title">
 				{i18n.t('copy.701fdf103815')}

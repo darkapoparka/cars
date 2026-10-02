@@ -3,15 +3,7 @@
 	import '$lib/styles/desktop-page-frame.css';
 	const i18n = getI18n();
 
-	import {
-		ArrowRight,
-		ScanSearch,
-		FileCheck2,
-		Wallet,
-		ArrowLeftRight,
-		Search,
-		Truck
-	} from '@lucide/svelte';
+	import { ArrowRight, ChevronDown, ScanSearch } from '@lucide/svelte';
 	import { browser } from '$app/environment';
 	import { goto } from '$app/navigation';
 	import { resolve } from '$app/paths';
@@ -25,7 +17,6 @@
 	const services = [
 		{
 			id: 'inspection',
-			icon: ScanSearch,
 			title: i18n.t('copy.5614ec1dae85'),
 			summary: i18n.t('copy.d3fa00dce963'),
 			image: '/assets/images/services/service-card-inspection-daynight-v2.webp',
@@ -33,7 +24,6 @@
 		},
 		{
 			id: 'documents',
-			icon: FileCheck2,
 			title: i18n.t('copy.f1da90a0a436'),
 			summary: i18n.t('copy.a612933622e4'),
 			image: '/assets/images/services/service-card-documents-daynight-v2.webp',
@@ -41,7 +31,6 @@
 		},
 		{
 			id: 'financing',
-			icon: Wallet,
 			title: i18n.t('copy.6e55eeb12cce'),
 			summary: i18n.t('copy.4bb935a12b5e'),
 			image: '/assets/images/services/service-card-financing-daynight-v2.webp',
@@ -49,7 +38,6 @@
 		},
 		{
 			id: 'trade-in',
-			icon: ArrowLeftRight,
 			title: i18n.t('copy.d7a5831e8826'),
 			summary: i18n.t('copy.3396cccc2803'),
 			image: '/assets/images/services/service-card-trade-in-daynight-v2.webp',
@@ -57,7 +45,6 @@
 		},
 		{
 			id: 'sourcing',
-			icon: Search,
 			title: i18n.t('copy.48ebd7529fe3'),
 			summary: i18n.t('copy.a16ad0426974'),
 			image: '/assets/images/services/service-card-sourcing-daynight-v2.webp',
@@ -65,7 +52,6 @@
 		},
 		{
 			id: 'delivery',
-			icon: Truck,
 			title: i18n.t('copy.1f9c7e5286a7'),
 			summary: i18n.t('copy.0e290359d369'),
 			image: '/assets/images/services/service-card-delivery-daynight-v2.webp',
@@ -168,20 +154,32 @@
 	class="desktop-services"
 	aria-label={i18n.t('pattern.eb6cae93a699', { v0: daynightSite.shortName })}
 >
-	<DesktopYellowRouteHero headingId="daynight-services-title" title={i18n.t('copy.d700ec2758ef')}>
+	<DesktopYellowRouteHero
+		headingId="daynight-services-title"
+		title={i18n.t('copy.d700ec2758ef')}
+		artwork="services"
+	>
 		<div class="services-chooser">
-			<h2 id="services-choice-title">{i18n.t('copy.c4eb9ace64ee')}</h2>
-			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
-				{#each services as service (service.id)}
-					<a
-						href={i18n.href(resolve(serviceRequestPath(service.id)))}
-						onclick={(event) => chooseService(service.id, event)}
-					>
-						<service.icon size={18} strokeWidth={1.7} aria-hidden="true" />
-						<span>{i18n.text(service.title)}</span>
-					</a>
-				{/each}
-			</nav>
+			<div class="services-chooser__row">
+				<label class="services-select">
+					<ScanSearch size={20} strokeWidth={1.7} aria-hidden="true" />
+					<span class="desktop-services-sr-only">{i18n.t('copy.b3b1d6656697')}</span>
+					<select id="desktop-services-hero-service" bind:value={selectedService}>
+						{#each services as service (service.id)}
+							<option value={service.id}>{i18n.text(service.title)}</option>
+						{/each}
+					</select>
+					<ChevronDown size={18} strokeWidth={1.7} aria-hidden="true" />
+				</label>
+				<a
+					class="services-chooser__action sa-cta sa-cta-primary"
+					href={i18n.href(resolve(serviceRequestPath(selectedService)))}
+					onclick={(event) => chooseService(selectedService, event)}
+				>
+					{i18n.t('copy.df4fb2d6674a')}
+					<ArrowRight size={18} aria-hidden="true" />
+				</a>
+			</div>
 			<p class="services-help">
 				{i18n.t('copy.bade5f3f4082')}
 				<a href={i18n.href(daynightSite.phoneHref)}>{i18n.t('copy.2384a5f73657')}</a>
@@ -342,38 +340,54 @@
 </main>
 
 <style>
-	.services-shortcuts {
+	.services-chooser__row {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		grid-auto-rows: 1fr;
-		gap: 8px;
-		margin: 14px 0;
-	}
-	.services-shortcuts a {
-		display: inline-flex;
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 12px;
 		align-items: center;
-		justify-content: center;
-		gap: 8px;
-		min-height: 44px;
-		padding: 8px 12px;
-		border: 1px solid var(--desktop-control-border);
+	}
+	.services-select {
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-width: 0;
+		gap: 12px;
+		height: 48px;
+		padding-inline: 16px;
 		border-radius: 8px;
 		background: #fff;
 		color: var(--sa-ink);
-		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
-		text-align: left;
 	}
-	.services-shortcuts a > :global(svg) {
+	.services-select > :global(svg) {
 		flex: none;
+		pointer-events: none;
 	}
-	.services-shortcuts a:hover {
-		background: var(--desktop-secondary-hover);
-		border-color: var(--desktop-secondary-hover);
+	.services-select select {
+		appearance: none;
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		padding: 0 44px 0 48px !important;
+		border: 0 !important;
+		border-radius: inherit;
+		background: transparent !important;
+		color: inherit !important;
+		font: var(--sa-weight-medium) var(--sa-text-base)/1.4 var(--sa-font);
+		cursor: pointer;
+	}
+	.services-select > :global(svg:last-child) {
+		margin-left: auto;
+	}
+	.services-chooser__action {
+		gap: 12px;
+		padding-inline: 20px;
 	}
 	.desktop-services .services-help {
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
-		margin: 14px 0 0;
+		margin: 12px 0 0;
 		color: var(--desktop-hero-copy);
+		text-align: center;
 	}
 	.desktop-services .services-help a {
 		color: var(--sa-yellow);
@@ -402,12 +416,6 @@
 	.services-chooser {
 		padding: 0;
 		text-align: left;
-	}
-	.desktop-services .services-chooser h2 {
-		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
-		color: #fff;
-		margin: 0;
-		letter-spacing: 0;
 	}
 	.desktop-services-offers {
 		padding: 36px 0 48px;

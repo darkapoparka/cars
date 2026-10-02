@@ -61,21 +61,6 @@
 	.daynight-home-shell .daynight-home-hero__stage > form {
 		width: min(100%, 640px);
 	}
-	.daynight-home-shell .daynight-home-hero__car {
-		position: absolute;
-		width: clamp(340px, 34vw, 540px);
-		height: auto;
-		max-width: none;
-		bottom: -8px;
-		pointer-events: none;
-		z-index: 0;
-	}
-	.daynight-home-shell .daynight-home-hero__car--left {
-		left: -90px;
-	}
-	.daynight-home-shell .daynight-home-hero__car--right {
-		right: -90px;
-	}
 	/* Photo composition retained for /home1. */
 	.daynight-home-shell--home1 .daynight-home-hero__visual {
 		position: absolute;

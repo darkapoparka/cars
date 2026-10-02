@@ -2,6 +2,8 @@
 
 Verified locally on 2026-10-02 using Node 24.21.0. Source is the reusable Carwow master in `L:/CODEX/cars/templates/carwow` on Cars `main`.
 
+The subsequent [desktop hero artwork and Services correction](DESKTOP-HERO-ASSETS-2026-10-02.md) replaces this audit's Services shortcut grid with a single selector/action row and updates desktop car artwork. The original evidence below describes the earlier source state; the follow-up has its own verification evidence.
+
 ## Result
 
 `DesktopYellowRouteHero.svelte` owns one charcoal deck with white controls, yellow primary actions, a visible yellow keyboard outline and consistent panel spacing. Its 17 consumers no longer select conflicting light or compact variants. Standard decks use a 720px maximum width, 20px vertical / 24px horizontal padding and 12px corners. Blog retains a 1040px deck for its search and category/topic controls. The surrounding heroes remain 400px in the inspected route states, with the existing yellow background and artwork.

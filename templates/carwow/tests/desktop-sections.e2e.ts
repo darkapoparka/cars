@@ -131,18 +131,27 @@ for (const width of [992, 1280, 1440, 1920]) {
 				expect(Math.abs(box.x - frame.x)).toBeLessThan(1);
 				expect(Math.abs(box.width - frame.width)).toBeLessThan(1);
 				if (route === 'services') {
-					await expect
-						.poll(() =>
-							page.locator('.services-shortcuts a').evaluateAll((links) => {
-								const rows = new Map<number, number>();
-								for (const link of links) {
-									const top = Math.round(link.getBoundingClientRect().top);
-									rows.set(top, (rows.get(top) ?? 0) + 1);
-								}
-								return links.length === 6 && [...rows.values()].every((count) => count > 1);
-							})
-						)
-						.toBe(true);
+					const serviceChoice = page.locator('#desktop-services-hero-service');
+					const serviceAction = page.locator('.services-chooser__action');
+					await expect(serviceChoice).toHaveAccessibleName(
+						locale === 'en' ? 'Choose a service' : 'Изберете услуга'
+					);
+					const choiceBox = (await serviceChoice.boundingBox())!;
+					const actionBox = (await serviceAction.boundingBox())!;
+					expect(choiceBox.y).toBe(actionBox.y);
+					expect(choiceBox.height).toBe(actionBox.height);
+					expect(choiceBox.height).toBe(48);
+					await expect(serviceAction).toHaveCSS('background-color', 'rgb(245, 197, 66)');
+					await serviceChoice.selectOption('documents');
+					await expect(serviceAction).toHaveAttribute(
+						'href',
+						`/${locale}/services?service=documents#services-request`
+					);
+					await serviceAction.press('Enter');
+					await expect(page).toHaveURL(
+						new RegExp(`/${locale}/services\\?service=documents#services-request$`)
+					);
+					await expect(page.locator('#desktop-services-service')).toHaveValue('documents');
 					const cards = page.locator('.desktop-services-card');
 					await expect(cards).toHaveCount(6);
 					await expect

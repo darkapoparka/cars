@@ -4,6 +4,7 @@
 
 	import type { Snippet } from 'svelte';
 	import { resolve } from '$app/paths';
+	import DesktopHeroArtwork from './DesktopHeroArtwork.svelte';
 	import {
 		desktopOnlyImagePlaceholder,
 		desktopOnlySizes,
@@ -34,14 +35,9 @@
 		secondaryHref?: HeroHref;
 		sectionId?: string;
 		deckWidth?: 'standard' | 'wide';
-		artwork?: 'cars' | 'contact';
+		artwork?: 'cars' | 'contact' | 'services';
 		children?: Snippet;
 	} = $props();
-
-	const leftCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-right-hero-1400.webp';
-	const rightCarSrc =
-		'/assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-left-hero-1400.webp';
 </script>
 
 <section
@@ -49,7 +45,8 @@
 	class={[
 		'daynight-yellow-route-hero',
 		deckWidth === 'wide' && 'daynight-yellow-route-hero--deck-wide',
-		artwork === 'contact' && 'daynight-yellow-route-hero--contact'
+		artwork === 'contact' && 'daynight-yellow-route-hero--contact',
+		artwork === 'services' && 'daynight-yellow-route-hero--studio'
 	]}
 	aria-labelledby={headingId}
 >
@@ -74,23 +71,9 @@
 				</div>
 			{/each}
 		{:else}
-			<img
-				class="daynight-yellow-route-hero__car daynight-yellow-route-hero__car--left"
-				src={i18n.asset(resolve(leftCarSrc))}
-				alt=""
-				width="1400"
-				height="933"
-				loading="eager"
-				decoding="async"
-			/>
-			<img
-				class="daynight-yellow-route-hero__car daynight-yellow-route-hero__car--right"
-				src={i18n.asset(resolve(rightCarSrc))}
-				alt=""
-				width="1400"
-				height="933"
-				loading="eager"
-				decoding="async"
+			<DesktopHeroArtwork
+				variant={artwork === 'services' ? 'services' : 'cars'}
+				panelWidth={deckWidth === 'wide' ? 1040 : 720}
 			/>
 		{/if}
 	</div>
@@ -168,6 +151,12 @@
 		margin: 0 !important;
 		max-width: 920px;
 		text-wrap: balance;
+	}
+	.daynight-yellow-route-hero--studio {
+		background: #141719;
+	}
+	.daynight-yellow-route-hero--studio h1 {
+		color: #fff;
 	}
 
 	p {
@@ -262,40 +251,6 @@
 	}
 	.daynight-yellow-route-hero__contact-art--right img {
 		right: 0;
-	}
-
-	.daynight-yellow-route-hero__car {
-		bottom: -18px;
-		height: auto;
-		max-height: 280px;
-		max-width: min(35vw, 500px);
-		object-fit: contain;
-		pointer-events: none;
-		position: absolute;
-		user-select: none;
-		width: auto;
-		z-index: 1;
-	}
-
-	.daynight-yellow-route-hero__car--left {
-		left: -46px;
-		object-position: left bottom;
-	}
-
-	.daynight-yellow-route-hero__car--right {
-		object-position: right bottom;
-		right: -46px;
-	}
-
-	@media (max-width: 1199px) {
-		.daynight-yellow-route-hero__car {
-			max-height: 220px;
-			opacity: 0.92;
-		}
-
-		h1 {
-			font-size: var(--sa-text-desktop-hero-title);
-		}
 	}
 
 	@media (max-width: 991px) {
