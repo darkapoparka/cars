@@ -16,7 +16,8 @@ const browser = await (engine === "webkit" ? webkit : chromium).launch(
 const page = await browser.newPage({ viewport: { width: 1440, height: 950 } });
 const errors = [],
   passed = [],
-  layouts = [];
+  layouts = [],
+  headers = [];
 page.on("pageerror", (error) => errors.push(error.message));
 page.on("response", (response) => {
   if (response.status() >= 400 && response.url().startsWith(base))
@@ -169,41 +170,90 @@ try {
         );
       for (const distance of state.headings)
         assert.ok(distance <= 2, `${width}px heading is not centered`);
-      const stockControls = await page
-        .locator("#stock-all .slick-arrow,.curated-stock-more a")
+      assert.equal(
+        await page
+          .locator(
+            ".curated-stock .slick-arrow,.curated-stock .slick-initialized",
+          )
+          .count(),
+        0,
+      );
+      const stock = await page
+        .locator("#stock-all .car-block-ten")
         .evaluateAll((nodes) =>
-          nodes.map((el) => {
-            const rect = el.getBoundingClientRect();
-            return {
-              text: el.textContent.trim(),
-              left: rect.left,
-              right: rect.right,
-              top: rect.top,
-              bottom: rect.bottom,
-              height: rect.height,
-            };
-          }),
+          nodes
+            .filter((el) => el.getBoundingClientRect().width > 0)
+            .map((el) => {
+              const card = el.getBoundingClientRect();
+              const price = el
+                .querySelector(".btn-box small")
+                .getBoundingClientRect();
+              const detail = el
+                .querySelector(".details")
+                .getBoundingClientRect();
+              return {
+                top: card.top,
+                bottom: card.bottom,
+                width: card.width,
+                left: card.left,
+                right: card.right,
+                footerFits:
+                  price.left >= card.left &&
+                  detail.right <= card.right &&
+                  price.right + 4 <= detail.left,
+              };
+            }),
         );
-      assert.equal(stockControls.length, 3);
-      const [previous, next, browse] = stockControls;
-      for (const arrow of [previous, next]) {
-        assert.ok(
-          arrow.height >= 44,
-          `${width}px carousel control is too short`,
+      assert.equal(
+        stock.length,
+        width <= 575 ? 4 : 8,
+        `${width}px visible stock count`,
+      );
+      const columns =
+        width >= 1200 ? 4 : width >= 992 ? 3 : width >= 576 ? 2 : 1;
+      const firstRow = stock.filter(
+        (card) => Math.abs(card.top - stock[0].top) < 2,
+      );
+      assert.equal(firstRow.length, columns, `${width}px stock columns`);
+      if (width === 1440)
+        assert.equal(
+          new Set(stock.map((card) => Math.round(card.top))).size,
+          2,
+          "Desktop stock must have two rows",
         );
-        assert.ok(
-          arrow.bottom + 12 <= browse.top,
-          `${width}px carousel overlaps View all cars`,
-        );
-      }
+      for (const card of stock)
+        assert.ok(card.footerFits, `${width}px price and details collide`);
       assert.ok(
-        previous.right + 12 <= next.left,
-        `${width}px carousel arrows overlap`,
+        Math.max(...firstRow.map((card) => card.bottom)) -
+          Math.min(...firstRow.map((card) => card.bottom)) <=
+          1,
+        `${width}px stock row is uneven`,
+      );
+      const browse = await page
+        .locator(".curated-stock-more a")
+        .evaluate((el) => {
+          const r = el.getBoundingClientRect(),
+            style = getComputedStyle(el);
+          return {
+            height: r.height,
+            top: r.top,
+            center: r.left + r.width / 2,
+            background: style.backgroundColor,
+            color: style.color,
+            icons: el.querySelectorAll("svg,i").length,
+          };
+        });
+      assert.ok(
+        browse.height >= 44 && Math.abs(browse.center - state.client / 2) < 2,
+        `${width}px stock CTA alignment`,
       );
       assert.ok(
-        Math.abs((previous.left + next.right) / 2 - state.client / 2) < 2,
-        `${width}px carousel controls are not centered`,
+        browse.top >= Math.max(...stock.map((card) => card.bottom)) + 24,
+        `${width}px stock CTA touches cards`,
       );
+      assert.equal(browse.icons, 0, "Stock CTA should have a simple label");
+      assert.equal(browse.color, "rgb(255, 255, 255)");
+      assert.notEqual(browse.background, "rgba(0, 0, 0, 0)");
       assert.equal(await page.locator("h1").count(), 1);
       if (width >= 1024)
         assert.equal(
@@ -236,6 +286,12 @@ try {
             width === 1440 ? "curated-desktop.png" : "curated-mobile.png",
           ),
         });
+      if (engine === "chromium" && width === 1440) {
+        await page.locator(".curated-stock h2").click();
+        await page
+          .locator(".curated-stock")
+          .screenshot({ path: path.join(evidence, "curated-stock.png") });
+      }
     }
   });
   await step(
@@ -400,7 +456,7 @@ try {
     assert.equal(await control.getAttribute("aria-expanded"), "false");
   });
   await step(
-    "Stock tabs, slider, saved state and detail/Back context",
+    "Stock tabs, grid, saved state and detail/Back context",
     async () => {
       await home();
       const used = page.getByRole("tab", { name: "Used cars", exact: true });
@@ -415,18 +471,6 @@ try {
           (id) => catalog.find((v) => v.id === id)?.condition === "Used",
         ),
       );
-      const before = await shelf
-        .locator(".slick-active")
-        .first()
-        .getAttribute("data-vehicle-id");
-      await shelf.locator(".slick-next").click();
-      await page.waitForFunction(
-        (previous) =>
-          document
-            .querySelector("#stock-used .slick-active")
-            ?.getAttribute("data-vehicle-id") !== previous,
-        before,
-      );
       await used.press("ArrowLeft");
       assert.equal(
         await page
@@ -434,12 +478,11 @@ try {
           .getAttribute("aria-selected"),
         "true",
       );
-      // The newly selected stock panel fades in while Slick lays out its cards.
-      // Click the save control after that visible transition has completed.
+      // Wait for the selected source tab's fade before interacting with its grid.
       await page.waitForFunction(() => {
         const panel = document.querySelector("#stock-new");
-        const card = panel.querySelector(".car-block-ten.slick-active");
-        const list = panel.querySelector(".slick-list");
+        const card = panel.querySelector(".car-block-ten");
+        const list = panel.querySelector(".curated-stock-grid");
         const bounds = card?.getBoundingClientRect();
         const shelf = list?.getBoundingClientRect();
         return (
@@ -449,14 +492,12 @@ try {
           bounds.right <= shelf.right + 1
         );
       });
-      const visibleCard = page
-        .locator("#stock-new .car-block-ten.slick-active")
-        .first();
+      const visibleCard = page.locator("#stock-new .car-block-ten").first();
       const id = await visibleCard.getAttribute("data-vehicle-id"),
         vehicle = catalog.find((v) => v.id === id);
-      // Keep the assertions on the chosen car if focus or scrolling changes the visible slide.
+      // Keep assertions on the chosen vehicle after scrolling or navigation.
       const card = page.locator(
-        `#stock-new .car-block-ten:not(.slick-cloned)[data-vehicle-id="${id}"]`,
+        `#stock-new .car-block-ten[data-vehicle-id="${id}"]`,
       );
       const save = card.getByRole("button", {
         name: `Save ${vehicle.title}`,
@@ -490,10 +531,6 @@ try {
       assert.equal(await unsavedButton.getAttribute("aria-pressed"), "false");
       await unsavedButton.press("Space");
       assert.equal(await savedButton.getAttribute("aria-pressed"), "true");
-      assert.equal(
-        await card.evaluate((el) => el.closest(".slick-list").scrollLeft),
-        0,
-      );
       await card
         .getByRole("link", { name: "View details", exact: true })
         .scrollIntoViewIfNeeded();
@@ -527,7 +564,7 @@ try {
     },
   );
   await step(
-    "Search sits below the headline, with a clean header and visible dropdowns",
+    "Search is centered in the hero below its headline, with visible dropdowns",
     async () => {
       for (const width of [1440, 1024, 768, 390, 320]) {
         await home(width);
@@ -562,9 +599,12 @@ try {
           const headline = root.querySelector("h1").getBoundingClientRect();
           const form = root.querySelector(".curated-banner form");
           const bounds = form.getBoundingClientRect();
-          const contact = root.querySelector("header .header-btn-two");
-          const navigation = root
-            .querySelector("header .navigation")
+          const photo = root
+            .querySelector(".curated-banner .banner-slide > img")
+            .getBoundingClientRect();
+          const contact = document.querySelector("header .dealer-contact");
+          const navigation = document
+            .querySelector("header .dealer-navigation")
             .getBoundingClientRect();
           return {
             gap: bounds.top - headline.bottom,
@@ -572,22 +612,23 @@ try {
               (bounds.left + bounds.right) / 2 -
                 document.documentElement.clientWidth / 2,
             ),
+            verticallyCentered: Math.abs(
+              (bounds.top + bounds.bottom) / 2 - (photo.top + photo.bottom) / 2,
+            ),
             background: getComputedStyle(form).backgroundColor,
             searchContrast: contrast(form.querySelector(".form-submit button")),
             contactContrast: contact.getBoundingClientRect().width
               ? contrast(contact)
               : null,
-            headerHeight: root.querySelector("header").getBoundingClientRect()
-              .height,
+            headerHeight: document
+              .querySelector("header")
+              .getBoundingClientRect().height,
             navigationCentered: navigation.width
               ? Math.abs(
                   (navigation.left + navigation.right) / 2 -
                     document.documentElement.clientWidth / 2,
                 )
               : null,
-            activeCards: root.querySelectorAll(
-              "#stock-all .slick-active.car-block-ten",
-            ).length,
           };
         });
         assert.ok(
@@ -598,6 +639,11 @@ try {
           appearance.centered <= 2,
           `${width}px search is not centered`,
         );
+        if (width >= 768)
+          assert.ok(
+            appearance.verticallyCentered <= 2,
+            `${width}px hero search sits above the photograph's center`,
+          );
         assert.equal(appearance.background, "rgb(255, 255, 255)");
         assert.ok(
           appearance.searchContrast >= 4.5,
@@ -617,10 +663,6 @@ try {
             appearance.navigationCentered <= 2,
             `${width}px header navigation is not centered`,
           );
-        assert.equal(
-          appearance.activeCards,
-          width >= 991 ? 3 : width >= 767 ? 2 : 1,
-        );
         for (let index = 0; index < 4; index++) {
           const menu = page.locator(".curated-banner .drop-menu").nth(index);
           await menu.locator(".select").click();
@@ -714,20 +756,16 @@ try {
           };
           const buttons = Array.from(
             document.querySelectorAll(
-              ".curated-banner .form-submit button, .curated-stock-more a, #stock-all .slick-active .details, .curated-services .read-more, .curated-next-car .btn",
+              ".curated-banner .form-submit button, #stock-all .car-block-ten .details, .curated-services .read-more, .curated-next-car .btn",
             ),
-          ).map((el) => ({
-            name: el.textContent.trim(),
-            button: rect(el),
-            icon: rect(el.querySelector("svg")),
-            label: rect(el.querySelector("span")),
-          }));
-          const arrows = Array.from(
-            document.querySelectorAll("#stock-all .slick-arrow"),
-          ).map((el) => ({
-            button: rect(el),
-            icon: rect(el.querySelector("svg")),
-          }));
+          )
+            .filter((el) => el.getBoundingClientRect().width > 0)
+            .map((el) => ({
+              name: el.textContent.trim(),
+              button: rect(el),
+              icon: rect(el.querySelector("svg")),
+              label: rect(el.querySelector("span")),
+            }));
           const cards = Array.from(
             document.querySelectorAll(".curated-service-card"),
           ).map((el) => ({
@@ -741,7 +779,6 @@ try {
             client: document.documentElement.clientWidth,
             scroll: document.documentElement.scrollWidth,
             buttons,
-            arrows,
             cards,
             banner: rect(banner),
             bannerTitle: rect(banner.querySelector("h2")),
@@ -775,14 +812,6 @@ try {
           assert.ok(
             button.right <= geometry.client + 1 && button.left >= 0,
             `${width}px ${name} outside viewport`,
-          );
-        }
-        for (const { button, icon } of geometry.arrows) {
-          assert.ok(button.width >= 44 && button.height >= 44);
-          assert.ok(
-            Math.abs(button.cx - icon.cx) <= 1 &&
-              Math.abs(button.cy - icon.cy) <= 1,
-            `${width}px carousel arrow is off center`,
           );
         }
         assert.equal(geometry.cards.length, 4);
@@ -841,6 +870,7 @@ try {
     async () => {
       for (const width of [1440, 320]) {
         for (const [selector, name, route] of [
+          [".curated-stock-more", "View all cars", "/inventory/"],
           [".curated-services", "Explore cars", "/inventory/"],
           [".curated-services", "Get in touch", "/contact/?intent=sell"],
           [".curated-services", "Compare cars", "/compare/"],
@@ -887,8 +917,8 @@ try {
   );
   await step("Mobile dealer navigation and inner routes", async () => {
     await home(320);
-    await page.getByRole("link", { name: "Open menu", exact: true }).click();
-    const menu = page.getByRole("dialog", { name: "Main menu" });
+    await page.getByRole("button", { name: "Open menu", exact: true }).click();
+    const menu = page.getByRole("dialog", { name: "Explore Boxcars" });
     await menu.waitFor();
     assert.equal(
       await menu.getByRole("link", { name: "Home 01", exact: true }).count(),
@@ -930,11 +960,187 @@ try {
       }
     }
   });
+  await step(
+    "One consistent dealer header across direct loads and navigation",
+    async () => {
+      const appearance = async () => {
+        await page.evaluate(() => document.fonts.ready);
+        assert.equal(await page.locator("header").count(), 1);
+        assert.equal(await page.locator("header.dealer-header").count(), 1);
+        return page.locator("header").evaluate((header) => {
+          const rect = (element) => {
+            const box = element.getBoundingClientRect();
+            return [box.x, box.y, box.width, box.height].map(
+              (value) => Math.round(value * 100) / 100,
+            );
+          };
+          const navigation = header.querySelector(".dealer-navigation");
+          const contact = header.querySelector(".dealer-contact");
+          const logo = header.querySelector("img");
+          const style = getComputedStyle(header);
+          const contactStyle = getComputedStyle(contact);
+          return {
+            header: rect(header),
+            logo: rect(logo),
+            logoSource: logo.getAttribute("src"),
+            navigation: rect(navigation),
+            links: Array.from(navigation.querySelectorAll("a"), (link) => [
+              link.textContent.trim(),
+              link.getAttribute("href"),
+            ]),
+            saved: rect(header.querySelector(".dealer-saved")),
+            contact: rect(contact),
+            contactLabel: contact.textContent.trim(),
+            contactStyle: [
+              contactStyle.color,
+              contactStyle.backgroundColor,
+              contactStyle.borderRadius,
+              contactStyle.fontSize,
+              contactStyle.fontWeight,
+            ],
+            menu: rect(header.querySelector(".dealer-menu-trigger")),
+            font: [style.fontFamily, style.fontSize, style.lineHeight],
+          };
+        });
+      };
+      const routes = [
+        ["Cars", "/inventory/"],
+        ["About us", "/about/"],
+        ["Contact", "/contact/"],
+        ["Home", "/"],
+      ];
+      for (const width of [1440, 1024, 768, 390, 320]) {
+        await home(width);
+        const expected = await appearance();
+        assert.deepEqual(expected.links, [
+          ["Home", "/"],
+          ["Cars", "/inventory/"],
+          ["About us", "/about/"],
+          ["Contact", "/contact/"],
+        ]);
+        assert.equal(expected.contactLabel, "Contact us");
+        assert.equal(expected.header[3], width < 768 ? 76 : 90);
+        if (width >= 992) {
+          assert.ok(
+            Math.abs(
+              expected.navigation[0] +
+                expected.navigation[2] / 2 -
+                expected.header[2] / 2,
+            ) <= 1,
+          );
+          assert.equal(expected.menu[2], 0);
+        } else {
+          assert.equal(expected.navigation[2], 0);
+          assert.ok(expected.menu[2] >= 44 && expected.menu[3] >= 44);
+          await page
+            .getByRole("button", { name: "Open menu", exact: true })
+            .click();
+          const drawer = page.getByRole("dialog", { name: "Explore Boxcars" });
+          await drawer.waitFor();
+          await drawer.press("Escape");
+          await drawer.waitFor({ state: "hidden" });
+          assert.equal(
+            await page
+              .getByRole("button", { name: "Open menu", exact: true })
+              .evaluate((button) => button === document.activeElement),
+            true,
+          );
+        }
+        for (const [label, destination] of routes) {
+          if (width >= 992) {
+            await page
+              .locator("header nav")
+              .getByRole("link", { name: label, exact: true })
+              .click();
+          } else {
+            await page
+              .getByRole("button", { name: "Open menu", exact: true })
+              .click();
+            await page
+              .getByRole("dialog", { name: "Explore Boxcars" })
+              .getByRole("link", { name: label, exact: true })
+              .click();
+          }
+          await page.waitForURL(base + destination);
+          if (destination === "/")
+            await page.locator(".curated-home[data-ready=true]").waitFor();
+          else await page.locator("main h1").waitFor();
+          assert.deepEqual(
+            await appearance(),
+            expected,
+            `${width}px header changed after navigating to ${destination}`,
+          );
+          assert.equal(
+            (
+              await page.locator('header [aria-current="page"]').textContent()
+            ).trim(),
+            label,
+          );
+          assert.equal(await page.locator("dialog[open]").count(), 0);
+          headers.push({
+            width,
+            destination,
+            load: "navigation",
+            layout: "matches home",
+          });
+          if (
+            engine === "chromium" &&
+            destination === "/contact/" &&
+            [1440, 320].includes(width)
+          ) {
+            await page.screenshot({
+              path: path.join(
+                evidence,
+                width === 1440
+                  ? "curated-contact-header.png"
+                  : "curated-mobile-header.png",
+              ),
+            });
+          }
+        }
+        if ([1440, 320].includes(width)) {
+          for (const destination of [
+            "/inventory/",
+            "/about/",
+            "/contact/",
+            "/favorites/",
+            "/compare/",
+            "/calculator/",
+            "/blog/",
+            "/blog/choosing-your-next-car/",
+            "/faq/",
+            "/terms/",
+            `/vehicle/${catalog[0].slug}/`,
+          ]) {
+            await page.goto(base + destination, { waitUntil: "networkidle" });
+            assert.deepEqual(
+              await appearance(),
+              expected,
+              `${width}px direct-load header differs on ${destination}`,
+            );
+            headers.push({
+              width,
+              destination,
+              load: "direct",
+              layout: "matches home",
+            });
+          }
+        }
+      }
+    },
+  );
   assert.deepEqual(errors, []);
   await fs.writeFile(
     path.join(out, `${engine}-results.json`),
     JSON.stringify(
-      { engine, checkedAt: new Date().toISOString(), passed, layouts, errors },
+      {
+        engine,
+        checkedAt: new Date().toISOString(),
+        passed,
+        layouts,
+        headers,
+        errors,
+      },
       null,
       2,
     ) + "\n",

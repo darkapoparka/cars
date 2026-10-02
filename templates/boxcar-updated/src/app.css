@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Boxcar Dealer";
+  src: url("/reference/fonts/rP2Hp2ywxg089UriCZOIHQ.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+}
 .skip-link {
   position: fixed;
   left: 12px;

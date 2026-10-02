@@ -32,12 +32,12 @@
     }
   ],
   "composition": {
-    "header": "Home 10, centered dealer navigation, shared identity and contact action",
-    "hero": "Home 10, single source photograph and centered Home 5 headline",
+    "header": "Shared Header.svelte, Home 10 centered dealer navigation and contact action across the curated home and all supporting pages",
+    "hero": "Home 10, single source photograph; search centered horizontally and vertically with its headline directly above",
     "search": "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
     "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
-    "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
+    "inventory": "Home 8 boxed card DOM in a four-column, two-row desktop grid; four cards on phones, condition tabs, native saved state and one solid View all cars CTA; no carousel controls",
     "services": "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
     "nextCar": "Home 2 original photographic CTA banner, centered dealer title and viewing action",
     "journalAndFooter": "Home 8, shared articles and identity"

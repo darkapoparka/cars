@@ -5,10 +5,7 @@
   let saved = $derived(selections.favorites.includes(vehicle.id));
 </script>
 
-<div
-  class="box-car car-block-ten col-lg-3 col-md-6 col-sm-12"
-  data-vehicle-id={vehicle.id}
->
+<div class="box-car car-block-ten" data-vehicle-id={vehicle.id}>
   <div class="inner-box">
     <div class="image-box">
       <div class="image">
@@ -27,13 +24,7 @@
         class="icon-box"
         aria-label={`${saved ? "Unsave" : "Save"} ${vehicle.title}`}
         aria-pressed={saved}
-        onmousedowncapture={(event) => event.stopPropagation()}
-        ontouchstartcapture={(event) => event.stopPropagation()}
-        onclickcapture={(event) => {
-          // Handle the real button before Slick's list click handler can consume it.
-          event.stopPropagation();
-          toggleFavorite(vehicle.id);
-        }}
+        onclick={() => toggleFavorite(vehicle.id)}
       >
         <svg
           width="18"

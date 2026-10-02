@@ -7,53 +7,6 @@ import {articles} from '../data/journal';
 import CuratedStock from './CuratedStock.svelte';
 </script>
 <div class="boxcar-wrapper cus-layout-home10 reference-home curated-home" data-reference-home="curated" data-curated-home use:referencePage>
-<header class="boxcar-header hheader-style-v4 v10">
-        <div class="header-inner">
-            <div class="inner-container">
-                
-                <div class="c-box">
-                    <div class="nav-list">
-                        <div class="logo-inner">
-                            <div class="logo">
-                                <a href="/" aria-label="{brand.name} home"><img src="{brand.logoDark}" alt="{brand.name}" title="{brand.name}"></a>
-                            </div>
-                        </div>
-
-                        
-                        <div class="nav-out-bar">    
-                            <nav class="nav main-menu" aria-label="Main navigation">
-                                <ul class="navigation" id="navbar"><li class="current"><a href="/" aria-current="page">Home</a></li><li><a href="/inventory/">Cars</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li></ul>
-                            </nav>
-                            
-                        </div>
-                    </div>
-
-                    <div class="right-box">
-                        
-                        <a href="/favorites/" title="" class="box-account" aria-label="Saved cars"><i class="far fa-bookmark" aria-hidden="true"></i> Saved</a>
-                        <div class="btn">
-                            <a href="/contact/" class="header-btn-two">Contact us</a>
-                        </div>
-                        <div class="mobile-navigation">
-                            <a href="#nav-mobile" title="" aria-label="Open menu">
-                               <svg width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="22" height="2" fill="#050B20"></rect>
-                                    <rect y="9" width="22" height="2" fill="#050B20"></rect>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        
-        
-        
-
-        <div id="nav-mobile"></div>
-	</header>
 <section class="boxcar-banner-section-seven v10 curated-banner">
         <div class="banner-slider-v7" data-static-hero="">
             <div class="inner-box">
@@ -63,8 +16,8 @@ import CuratedStock from './CuratedStock.svelte';
                         <div class="right-box">
                             <div class="boxcar-container">
                                 <div class="content-box">
-                                    <span class="sub-title">Explore new and used cars, all in one place.</span>
-                                    <h1>Find Your Perfect Car</h1>
+                                    <div class="curated-hero-heading"><span class="sub-title">Explore new and used cars, all in one place.</span><h1>Find Your Perfect Car</h1></div>
+                                    
                                 <div class="form-tab-content">
             <div class="cus-container10"><div class="form-tab-pane current">
                             <form aria-label="Find your next car">
@@ -267,12 +220,7 @@ import CuratedStock from './CuratedStock.svelte';
             </div>
         </div>
     </section>
-<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="-1 -1 16 16" fill="none" aria-hidden="true">
-                                                <g>
-                                                <path d="M13.6109 0H5.05533C4.84037 0 4.66643 0.173943 4.66643 0.388901C4.66643 0.603859 4.84037 0.777802 5.05533 0.777802H12.6721L0.113697 13.3362C-0.0382246 13.4881 -0.0382246 13.7342 0.113697 13.8861C0.18964 13.962 0.289171 14 0.388666 14C0.488161 14 0.587656 13.962 0.663635 13.8861L13.222 1.3277V8.94447C13.222 9.15943 13.3959 9.33337 13.6109 9.33337C13.8259 9.33337 13.9998 9.15943 13.9998 8.94447V0.388901C13.9998 0.173943 13.8258 0 13.6109 0Z" fill="currentColor" stroke="currentColor" stroke-width=".45" stroke-linejoin="round"></path>
-                                                </g>
-                                                
-                                                </svg></a></div></div></div></div></section>
+<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span></a></div></div></div></div></section>
 <section class="blog-section-two pt-0 curated-services" aria-labelledby="curated-services-title">
         <div class="boxcar-container"><div class="boxcar-title text-center"><h2 id="curated-services-title">A Better Way To Find Your Next Car</h2><p>Buy, sell and plan your next move, all in one place.</p></div>
             <div class="row"><div class="blog-blockt-two curated-service-card">
@@ -315,7 +263,7 @@ import CuratedStock from './CuratedStock.svelte';
                 </div>
 <div class="blog-blockt-two curated-service-card">
                     <div class="inner-box wow fadeInUp"><div class="hover-img"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-                                <g clip-path="url(#clip0_24_681-curated-11)">
+                                <g clip-path="url(#clip0_24_681-curated-9)">
                                 <path d="M8.75576 36.7478L35.3054 10.198C37.136 8.36741 40.104 8.36741 41.9346 10.198L36.8955 5.15894C35.0649 3.32837 32.097 3.32837 30.2664 5.15894L3.71671 31.7087C1.88613 33.5393 1.88613 36.5073 3.71671 38.3378L8.75576 43.3768C6.92518 41.5462 6.92518 38.5783 8.75576 36.7478Z" fill="#EEF1FB"></path>
                                 <path d="M50.1537 18.4171C51.9843 20.2477 51.9843 23.2157 50.1537 25.0463L23.6039 51.5959C21.7734 53.4265 18.8054 53.4265 16.9748 51.5959L3.71671 38.3378C1.88613 36.5072 1.88613 33.5392 3.71671 31.7086L30.2664 5.15894C32.097 3.32836 35.0649 3.32836 36.8955 5.15894L43.5247 11.7881L52.9689 2.34387" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M18.9633 31.0458C18.7631 32.4554 19.2051 33.9388 20.2894 35.0231C22.12 36.8537 25.088 36.8537 26.9186 35.0231C28.7492 33.1926 28.7492 30.2246 26.9186 28.394C25.088 26.5634 25.088 23.5954 26.9186 21.7648C28.7492 19.9342 31.7172 19.9342 33.5478 21.7648C34.6321 22.8491 35.0741 24.3325 34.8739 25.7421" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -324,7 +272,7 @@ import CuratedStock from './CuratedStock.svelte';
                                 <path d="M43.5938 57.6562L57.6563 43.5937" stroke="#FF5CF4" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_24_681-curated-11">
+                                <clipPath id="clip0_24_681-curated-9">
                                 <rect width="60" height="60" fill="white"></rect>
                                 </clipPath>
                                 </defs>
@@ -342,7 +290,7 @@ import CuratedStock from './CuratedStock.svelte';
                 </div>
 <div class="blog-blockt-two curated-service-card">
                     <div class="inner-box wow fadeInUp two"><div class="hover-img"><svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 51 60" fill="none" aria-hidden="true">
-                                <g clip-path="url(#clip0_24_628-curated-13)">
+                                <g clip-path="url(#clip0_24_628-curated-11)">
                                     <path d="M22.9688 52.9676C22.9688 52.732 22.827 52.5195 22.6096 52.4289C20.0682 51.3695 18.2812 48.8627 18.2812 45.9375V23.4375C18.2812 20.5123 20.0682 18.0054 22.6096 16.9461C22.827 16.8555 22.9688 16.6429 22.9688 16.4074V16.4062H18.2812C14.398 16.4062 11.25 19.5543 11.25 23.4375V45.9375C11.25 49.8207 14.398 52.9688 18.2812 52.9688H22.9688V52.9676Z" fill="#EEF1FB"></path>
                                     <path d="M23.3708 41.3167L36.6292 28.0583" stroke="#FF5CF4" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path d="M30 21.0938L44.0625 2.34375" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -350,7 +298,7 @@ import CuratedStock from './CuratedStock.svelte';
                                     <path d="M48.75 30V23.4375C48.75 19.5543 45.602 16.4062 41.7188 16.4062H38.0747C36.4508 13.6159 33.4612 11.7188 30 11.7188C26.5388 11.7188 23.5493 13.6159 21.9253 16.4062H18.2812C14.398 16.4062 11.25 19.5543 11.25 23.4375V45.9375C11.25 49.8207 14.398 52.9688 18.2812 52.9688H21.9253C23.5492 55.7591 26.5388 57.6562 30 57.6562C33.4612 57.6562 36.4507 55.7591 38.0747 52.9688H41.7188C45.602 52.9688 48.75 49.8207 48.75 45.9375V39.375" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_24_628-curated-13">
+                                    <clipPath id="clip0_24_628-curated-11">
                                     <rect width="51" height="60" fill="white"></rect>
                                     </clipPath>
                                 </defs>

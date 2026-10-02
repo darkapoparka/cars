@@ -46,28 +46,8 @@ const dynamic = (html) =>
     .replaceAll("__EMAIL__", "{brand.contactEmail}");
 const outer = ($, el) => $(el).prop("outerHTML");
 
-const header = ten("header").clone();
-header
-  .find(".navigation")
-  .html(
-    `<li class="current"><a href="/" aria-current="page">Home</a></li><li><a href="/inventory/">Cars</a></li><li><a href="/about/">About us</a></li><li><a href="/contact/">Contact</a></li>`,
-  );
-header.find("nav").attr("aria-label", "Main navigation");
-header.find(".logo a").attr("href", "/").attr("aria-label", "__NAME__ home");
-header
-  .find(".logo img")
-  .attr("src", "__LOGO__")
-  .attr("alt", "__NAME__")
-  .attr("title", "__NAME__");
-header
-  .find(".box-account")
-  .attr("href", "/favorites/")
-  .attr("aria-label", "Saved cars")
-  .html('<i class="far fa-bookmark" aria-hidden="true"></i> Saved');
-header.find(".header-btn-two").attr("href", "/contact/").text("Contact us");
-// The dealer page has one prominent search beneath the hero headline.
-// The original ten homes retain their source header search and suggestions.
-header.find(".search-popup,.layout-search").remove();
+// App.svelte renders the shared dealer header outside the page composition.
+// The ten original homes retain their own captured headers and interactions.
 
 const hero = ten(".boxcar-banner-section-seven").clone();
 hero.addClass("curated-banner");
@@ -125,6 +105,9 @@ hero.find(".cus-container10").empty().append(search);
 const heroSearch = hero.find(".form-tab-content").clone();
 hero.find(".form-tab-content").remove();
 hero.find(".content-box").append(heroSearch);
+hero
+  .find(".content-box .sub-title, .content-box h1")
+  .wrapAll('<div class="curated-hero-heading"></div>');
 
 const types = ten(".vehicles-section-two").clone();
 types.addClass("curated-types");
@@ -290,9 +273,8 @@ footer
     '<div class="copyright-text">© 2026 __NAME__. All rights reserved.</div><ul class="footer-nav"><li><a href="/terms/">Terms &amp; privacy</a></li></ul>',
   );
 
-const stock = `<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span>${arrowHTML}</a></div></div></div></div></section>`;
+const stock = `<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span></a></div></div></div></div></section>`;
 let markup = `<div class="boxcar-wrapper cus-layout-home10 reference-home curated-home" data-reference-home="curated" data-curated-home use:referencePage>
-${outer(ten, header)}
 ${outer(ten, hero)}
 ${outer(eight, types)}
 ${outer(eight, brands)}
@@ -328,8 +310,8 @@ await fs.writeFile(
       })),
       composition: {
         header:
-          "Home 10, centered dealer navigation, shared identity and contact action",
-        hero: "Home 10, single source photograph and centered Home 5 headline",
+          "Shared Header.svelte, Home 10 centered dealer navigation and contact action across the curated home and all supporting pages",
+        hero: "Home 10, single source photograph; search centered horizontally and vertically with its headline directly above",
         search:
           "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
         types:
@@ -337,7 +319,7 @@ await fs.writeFile(
         brands:
           "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
         inventory:
-          "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
+          "Home 8 boxed card DOM in a four-column, two-row desktop grid; four cards on phones, condition tabs, native saved state and one solid View all cars CTA; no carousel controls",
         services:
           "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
         nextCar:

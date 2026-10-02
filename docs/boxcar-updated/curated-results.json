@@ -2,14 +2,14 @@
   "version": "2026.10.02-curated",
   "candidate": "templates/boxcar-updated",
   "preview": "http://127.0.0.1:6455/",
-  "recordedAt": "2026-10-02T10:41:02.049Z",
+  "recordedAt": "2026-10-02T11:47:51.455Z",
   "composition": {
-    "header": "Home 10, centered dealer navigation, shared identity and contact action",
-    "hero": "Home 10, single source photograph and centered Home 5 headline",
+    "header": "Shared Header.svelte, Home 10 centered dealer navigation and contact action across the curated home and all supporting pages",
+    "hero": "Home 10, single source photograph; search centered horizontally and vertically with its headline directly above",
     "search": "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
     "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
-    "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
+    "inventory": "Home 8 boxed card DOM in a four-column, two-row desktop grid; four cards on phones, condition tabs, native saved state and one solid View all cars CTA; no carousel controls",
     "services": "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
     "nextCar": "Home 2 original photographic CTA banner, centered dealer title and viewing action",
     "journalAndFooter": "Home 8, shared articles and identity"
@@ -23,12 +23,12 @@
     "domainAndAssets": {
       "status": "passed",
       "tests": 8,
-      "note": "Eight domain and local-image tests rerun for the service-card and CTA correction."
+      "note": "Eight domain and local-image tests retained from the compact stock-grid correction; this header revision changes presentation and navigation."
     },
     "productionBuild": {
       "status": "passed",
-      "checkedAt": "2026-10-02T10:41:02.049Z",
-      "modules": 153,
+      "checkedAt": "2026-10-02T11:47:51.455Z",
+      "modules": 154,
       "staticCuratedCSSMatchesSource": true
     },
     "regeneration": {
@@ -53,25 +53,67 @@
         320,
         304
       ],
-      "note": "Search/CTA label and SVG centers, carousel icon centers, service card 4/2/1 columns and CTA baselines, viewport bounds and centered photo banner."
+      "note": "Search/CTA label and SVG centers, compact stock grid 4/3/2/1 columns, aligned price/detail footers and centered solid browse CTA with no icon or carousel controls, service card 4/2/1 columns and CTA baselines, viewport bounds and centered photo banner."
+    },
+    "heroPlacement": {
+      "status": "passed",
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "centeredInPhotoWidths": [
+        1440,
+        1024,
+        768
+      ],
+      "maximumCenterOffsetPx": 2,
+      "headlineGapRangePx": [
+        20,
+        40
+      ],
+      "phoneWidths": [
+        390,
+        320
+      ]
+    },
+    "sharedHeader": {
+      "status": "passed",
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "layoutsPerEngine": 42,
+      "navigationWidths": [
+        1440,
+        1024,
+        768,
+        390,
+        320
+      ],
+      "directLoadWidths": [
+        1440,
+        320
+      ],
+      "note": "Same header/logo/navigation/saved/contact/menu geometry and font through primary page navigation and eleven direct supporting routes; current-page state, Escape/focus return and drawer close after navigation."
     }
   },
   "curated": {
     "chromium": {
       "engine": "chromium",
-      "checkedAt": "2026-10-02T10:35:38.610Z",
+      "checkedAt": "2026-10-02T11:46:26.913Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
         "Long selected filters stay within their rows at 390 and 320px",
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
-        "Stock tabs, slider, saved state and detail/Back context",
-        "Search sits below the headline, with a clean header and visible dropdowns",
+        "Stock tabs, grid, saved state and detail/Back context",
+        "Search is centered in the hero below its headline, with visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
         "Aligned button icons and four source service cards at desktop, tablet and phone widths",
         "Service cards and showroom CTA open their intended destinations",
-        "Mobile dealer navigation and inner routes"
+        "Mobile dealer navigation and inner routes",
+        "One consistent dealer header across direct loads and navigation"
       ],
       "layouts": [
         {
@@ -80,26 +122,26 @@
           "controls": [
             {
               "left": 185,
-              "right": 409.6875,
-              "width": 224.6875,
+              "right": 410.6875,
+              "width": 225.6875,
               "height": 76
             },
             {
-              "left": 409.6875,
-              "right": 634.375,
-              "width": 224.6875,
+              "left": 410.6875,
+              "right": 636.390625,
+              "width": 225.703125,
               "height": 76
             },
             {
-              "left": 634.375,
-              "right": 859.0625,
-              "width": 224.6875,
+              "left": 636.390625,
+              "right": 862.078125,
+              "width": 225.6875,
               "height": 76
             },
             {
-              "left": 859.0625,
-              "right": 1083.75,
-              "width": 224.6875,
+              "left": 862.078125,
+              "right": 1087.78125,
+              "width": 225.703125,
               "height": 76
             },
             {
@@ -119,26 +161,26 @@
           "controls": [
             {
               "left": 58,
-              "right": 243.203125,
-              "width": 185.203125,
+              "right": 243.1875,
+              "width": 185.1875,
               "height": 76
             },
             {
-              "left": 243.203125,
+              "left": 243.1875,
               "right": 428.390625,
-              "width": 185.1875,
+              "width": 185.203125,
               "height": 76
             },
             {
               "left": 428.390625,
-              "right": 613.59375,
-              "width": 185.203125,
+              "right": 613.578125,
+              "width": 185.1875,
               "height": 76
             },
             {
-              "left": 613.59375,
+              "left": 613.578125,
               "right": 798.78125,
-              "width": 185.1875,
+              "width": 185.203125,
               "height": 76
             },
             {
@@ -158,32 +200,32 @@
           "controls": [
             {
               "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "right": 183.1875,
+              "width": 125.1875,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 183.1875,
+              "right": 308.390625,
+              "width": 125.203125,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 308.390625,
+              "right": 433.578125,
+              "width": 125.1875,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 433.578125,
+              "right": 558.78125,
+              "width": 125.203125,
               "height": 76
             },
             {
-              "left": 58,
+              "left": 558.78125,
               "right": 710,
-              "width": 652,
+              "width": 151.21875,
               "height": 56
             }
           ],
@@ -270,23 +312,278 @@
           "badges": "fit"
         }
       ],
+      "headers": [
+        {
+          "width": 1440,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/inventory/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/about/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/contact/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/favorites/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/compare/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/calculator/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/blog/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/blog/choosing-your-next-car/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/faq/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/terms/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/vehicle/bmw-8-series/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/inventory/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/about/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/contact/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/favorites/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/compare/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/calculator/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/blog/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/blog/choosing-your-next-car/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/faq/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/terms/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/vehicle/bmw-8-series/",
+          "load": "direct",
+          "layout": "matches home"
+        }
+      ],
       "errors": []
     },
     "webkit": {
       "engine": "webkit",
-      "checkedAt": "2026-10-02T10:37:35.508Z",
+      "checkedAt": "2026-10-02T11:44:31.600Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
         "Long selected filters stay within their rows at 390 and 320px",
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
-        "Stock tabs, slider, saved state and detail/Back context",
-        "Search sits below the headline, with a clean header and visible dropdowns",
+        "Stock tabs, grid, saved state and detail/Back context",
+        "Search is centered in the hero below its headline, with visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
         "Aligned button icons and four source service cards at desktop, tablet and phone widths",
         "Service cards and showroom CTA open their intended destinations",
-        "Mobile dealer navigation and inner routes"
+        "Mobile dealer navigation and inner routes",
+        "One consistent dealer header across direct loads and navigation"
       ],
       "layouts": [
         {
@@ -295,26 +592,26 @@
           "controls": [
             {
               "left": 185,
-              "right": 409.6875,
-              "width": 224.6875,
+              "right": 410.328125,
+              "width": 225.328125,
               "height": 76
             },
             {
-              "left": 409.6875,
-              "right": 634.375,
-              "width": 224.6875,
+              "left": 410.328125,
+              "right": 635.65625,
+              "width": 225.328125,
               "height": 76
             },
             {
-              "left": 634.375,
-              "right": 859.0625,
-              "width": 224.6875,
+              "left": 635.65625,
+              "right": 860.984375,
+              "width": 225.328125,
               "height": 76
             },
             {
-              "left": 859.0625,
-              "right": 1083.75,
-              "width": 224.6875,
+              "left": 860.984375,
+              "right": 1086.3125,
+              "width": 225.328125,
               "height": 76
             },
             {
@@ -373,32 +670,32 @@
           "controls": [
             {
               "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "right": 182.828125,
+              "width": 124.828125,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 182.828125,
+              "right": 307.65625,
+              "width": 124.828125,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 307.65625,
+              "right": 432.484375,
+              "width": 124.828125,
               "height": 76
             },
             {
-              "left": 58,
-              "right": 194.90625,
-              "width": 136.90625,
+              "left": 432.484375,
+              "right": 557.3125,
+              "width": 124.828125,
               "height": 76
             },
             {
-              "left": 58,
+              "left": 557.328125,
               "right": 710,
-              "width": 652,
+              "width": 152.671875,
               "height": 56
             }
           ],
@@ -485,6 +782,260 @@
           "badges": "fit"
         }
       ],
+      "headers": [
+        {
+          "width": 1440,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/inventory/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/about/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/contact/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/favorites/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/compare/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/calculator/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/blog/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/blog/choosing-your-next-car/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/faq/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/terms/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1440,
+          "destination": "/vehicle/bmw-8-series/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 1024,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 768,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 390,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/inventory/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/about/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/contact/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/",
+          "load": "navigation",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/inventory/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/about/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/contact/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/favorites/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/compare/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/calculator/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/blog/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/blog/choosing-your-next-car/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/faq/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/terms/",
+          "load": "direct",
+          "layout": "matches home"
+        },
+        {
+          "width": 320,
+          "destination": "/vehicle/bmw-8-series/",
+          "load": "direct",
+          "layout": "matches home"
+        }
+      ],
       "errors": []
     }
   },
@@ -528,23 +1079,23 @@
     },
     {
       "file": "templates/boxcar-updated/.template/curated.json",
-      "sha256": "971a4b11d6781afd71ac608662f90d6d9d37bfe5d2fca355088afd70a7b16c6a"
+      "sha256": "cea99a7544fbf6175a7a86824d2f1f05960765c05a59e0e7c34e2653f86de55e"
     },
     {
       "file": "templates/boxcar-updated/scripts/compose-curated.mjs",
-      "sha256": "42a8a9bd0a33dfaddad6bdb2fbbf3bc627cf50b099d4148632cb26c138daf8ae"
+      "sha256": "b7021b5be202783fd4df3b4e713667ed4f82833aa07be1dd2f435d153facfa3a"
     },
     {
       "file": "templates/boxcar-updated/public/reference/curated.css",
-      "sha256": "70c059a8fa235f97746437350fb8aa64bd39cd8b4750adb8d2798e922b8c0cd6"
+      "sha256": "bff534c5a3af1c0127257ef402b939d5d50d9bec10e5ba87d906d0132fcd84be"
     },
     {
       "file": "templates/boxcar-updated/src/App.svelte",
-      "sha256": "8667916175e353e1cf5568aee7d9f62c75744fee5c66b8c2d40dc1c22e283174"
+      "sha256": "e80c67e0af126ae0a4ebb3b2860eb2919607e746c8e6035b95e632f5c3bfb097"
     },
     {
       "file": "templates/boxcar-updated/src/components/Header.svelte",
-      "sha256": "5b4bb8458b96867f923b1100a42b401e833096119fd797c5e58b0fe2aefae6bc"
+      "sha256": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5"
     },
     {
       "file": "templates/boxcar-updated/src/components/Footer.svelte",
@@ -568,27 +1119,31 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/interactions.ts",
-      "sha256": "b8dda9ccae3ec3744e8ed031d68725e5e7c8781f00cd5c48337b68488f17646f"
+      "sha256": "0df75c7a7243f560fd25f45b87596761df3efa3cbde443a44123f9a1d6b920c6"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
-      "sha256": "5afd1a1bee9bc77ae4add4942c4e1caba46d22dc06409e04728ef3d62794f494"
+      "sha256": "359a8ddeac944556a2aff88a05c714072b3dab5d2b3deb2e0c2f1458a21ecf7f"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedStock.svelte",
-      "sha256": "da1274c2d06682361435b77051ae4b3c7cad2fa679a3465de0d361055b2a8edd"
+      "sha256": "a8b32acf375b44e14e0e22720260d93e29119bf7ced4f53b87279555d76a8656"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedCarCard.svelte",
-      "sha256": "aff47bccf9fb66525d125be3863807d6beb41ed01d093a126341272a4b568229"
+      "sha256": "44c89ae412a87ac9ee4175e8b347f9faa482abb0f088bcfa39cd4d6fac33ffaf"
     },
     {
       "file": "templates/boxcar-updated/scripts/curated-flows.mjs",
-      "sha256": "6920a718f44d29ff0753807df96d44649100da87946d8842fb673f2f26a8984d"
+      "sha256": "8a5817a4e3fe6f72dbf39de80f2b090fd92dbf6a4f7759612261f87988f55e2c"
     },
     {
       "file": "templates/boxcar-updated/src/data/vehicles.json",
       "sha256": "407bc8723c1a36ab1918e5ce6a343160ba7a551b21754a79860513e2ffd1de03"
+    },
+    {
+      "file": "templates/boxcar-updated/src/app.css",
+      "sha256": "b3a5352ecd4700f131b1565489d8271d07088829a561af0d96512c9acaad9b2b"
     }
   ],
   "originalHashes": [
@@ -646,27 +1201,39 @@
   "screenshots": [
     {
       "file": "docs/boxcar-updated/curated-desktop.png",
-      "sha256": "70dc3f66b0f87f425a285d75b63f61246944de790a216510516113b21ac81250"
+      "sha256": "794a8b777e9ddf84b2abb38b846441970ceaf8c3224603d39966a7d1c7aa4c95"
     },
     {
       "file": "docs/boxcar-updated/curated-desktop-full.png",
-      "sha256": "2144964102a9bbb045f3ad61abfee1cdb11aec071b845dbb49ac6f64c39a810c"
+      "sha256": "6c9c0c3da6556b2cddb26eb558261b7fc9de911565c02211eb7117a4efcea458"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile.png",
-      "sha256": "3768168bac6393dc7a914b242a925a129b17b41dbcbe068bb2b6b50f95c26e4b"
+      "sha256": "c18e64334170d25fddca00929651807fbdc034a11f21689d4ea013260610ae59"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-stock.png",
+      "sha256": "c038948c556784200e3e83c28689d04dd6070cf38f0ba2a008526cd83c4675bb"
     },
     {
       "file": "docs/boxcar-updated/curated-hero-search.png",
-      "sha256": "7551d215e89568dc6df330b126502494a954b2be20fa78fc91c4201b9e12fb00"
+      "sha256": "f3521dc277b95c4740b03c0cbfbdf00ea940b6e372cb98bab71920b72ef67485"
     },
     {
       "file": "docs/boxcar-updated/curated-services.png",
-      "sha256": "e61b88a39abff4b17387c090d23d622a5ad6195ae0bac5611c520ec3b2c84c4f"
+      "sha256": "a5456033674920f201a6aac654a0ee6da7ac43362ff65698cedba0882cd2ab77"
     },
     {
       "file": "docs/boxcar-updated/curated-next-car.png",
-      "sha256": "39b94ee861a07f3dcbc4bfc9967c647423fa9fd41bff2a346f3ca08c434abd67"
+      "sha256": "e1136e4444d4d60d92b2f8e1c101a61de3b2f4b28d7cbd2d5e4dbaea911d54ca"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-contact-header.png",
+      "sha256": "225c60ab60720b4ad2ee35e9afdde92b3aa1a00322dd69a16cf42fd50e109028"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-mobile-header.png",
+      "sha256": "a39aa28cbae27b2e0404945c37dd67b23446b3e3ffba1bbf13cba03962a493c3"
     }
   ],
   "boundaries": [
@@ -677,12 +1244,15 @@
     "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
   ],
   "corrections": [
+    "Mount one shared Home 10-style Header.svelte on the curated home and every supporting dealer page, with scoped geometry, source font under a distinct name, active links and one native mobile drawer.",
     "Use the original search magnifier SVG at 22px, align it with a separate text span, and use SVG dropdown chevrons with compact default labels.",
     "Align 20px diagonal arrow boxes with CTA labels and remove inherited vertical offsets and SVG margins.",
-    "Use centered 24px carousel arrows inside 48px source-style bordered buttons with visible disabled and keyboard states.",
+    "Replace the curated carousel with eight compact cards in a four-column, two-row desktop grid, three/two columns at intermediate widths and four single-column cards on phones.",
+    "Remove curated carousel chevrons and render one centered solid blue View all cars button with a simple label.",
+    "Center the hero search horizontally and vertically in the photograph, with its headline directly above; explicitly override inherited tablet block layout and margins.",
     "Replace the plain benefits row with Home 5 original pastel buy/sell CTA card DOM and SVGs, four centered service cards and working destinations.",
     "Replace the numbered testimonial-shaped buying steps with Home 2 original photographic CTA DOM, a centered title and a viewing action.",
-    "Retain the headline search placement, centered header, photographic categories, brand tiles and finite stateful vehicle carousel.",
+    "Retain the centered header, photographic categories, brand tiles and native saved state without Slick click interception.",
     "Retain the corrected Bentley sample identity and all ten original homepage sources."
   ]
 }

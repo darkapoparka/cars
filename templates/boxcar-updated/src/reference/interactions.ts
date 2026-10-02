@@ -605,34 +605,7 @@ export function referencePage(node: HTMLElement) {
         for (const el of node.querySelectorAll<HTMLElement>(config.selector)) {
           if (el.hasAttribute("data-static-hero")) continue;
           if (!carousels.has(el)) {
-            // The dealer shelf contains Svelte save buttons. Keep it finite:
-            // Slick's cloned cards do not carry their Svelte event bindings.
-            const options =
-              curated && el.classList.contains("car-slider-three")
-                ? {
-                    ...config,
-                    slidesToShow: 3,
-                    infinite: false,
-                    prevArrow:
-                      '<button type="button" class="slick-prev" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M19 12H5m7-7-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-                    nextArrow:
-                      '<button type="button" class="slick-next" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
-                    responsive: Array.isArray(config.responsive)
-                      ? config.responsive.map((breakpoint) => ({
-                          ...breakpoint,
-                          settings: {
-                            ...breakpoint.settings,
-                            slidesToShow: Math.min(
-                              3,
-                              Number(breakpoint.settings.slidesToShow) || 3,
-                            ),
-                            infinite: false,
-                          },
-                        }))
-                      : undefined,
-                  }
-                : config;
-            carousels.set(el, carousel(el, options, jq));
+            carousels.set(el, carousel(el, config, jq));
           }
         }
       await decodeImages();

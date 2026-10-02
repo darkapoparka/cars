@@ -1,37 +1,20 @@
 /* Dealer composition only. Original Home 01–10 retain their own layout CSS. */
 .curated-home { --theme-color1: var(--accent, #405ff2); }
 .curated-home .boxcar-container, .curated-home .large-container { max-width: 1440px; padding: 0 24px; }
-.curated-home .boxcar-header { padding: 0 !important; }
-.curated-home .boxcar-header .header-inner { padding: 20px 0; }
-.curated-home .boxcar-header .inner-container { max-width: 1440px; padding: 0 24px; margin: auto; }
-.curated-home .boxcar-header .c-box { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 32px; }
-.curated-home .boxcar-header .nav-list { display: contents; }
-.curated-home .boxcar-header .nav-out-bar { display: block !important; margin-left: 0; }
-.curated-home .boxcar-header.hheader-style-v4.v10 .header-inner .c-box .nav-out-bar { margin: 0; }
-.curated-home .boxcar-header .header-inner .c-box .nav-out-bar .nav { display: block; }
-.curated-home .boxcar-header .navigation { display: flex; align-items: center; gap: 32px; }
-.curated-home .boxcar-header .mobile-navigation { display: none; }
-.curated-home .boxcar-header .main-menu .navigation > li { float: none; margin: 0; }
-.curated-home .boxcar-header .main-menu .navigation > li > a { display: flex; align-items: center; min-height: 48px; padding: 0; font-size: 15px; font-weight: 500; }
-.curated-home .boxcar-header .main-menu .navigation > li > a[aria-current=page] { color: var(--theme-color1); }
-.curated-home .boxcar-header .logo img { width: auto; max-width: 160px; max-height: 34px; object-fit: contain; }
-.curated-home .boxcar-header .right-box { justify-self: end; gap: 28px; }
-.curated-home .boxcar-header .right-box > .btn { padding: 0; }
-.curated-home .boxcar-header .box-account { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; margin: 0; font-weight: 500; white-space: nowrap; }
-.curated-home .boxcar-header.hheader-style-v4.v10 .btn .header-btn-two { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; color: #fff; background: var(--theme-color1); border: 1px solid var(--theme-color1); border-radius: 12px; white-space: nowrap; }
-.curated-home .boxcar-header.hheader-style-v4.v10 .btn .header-btn-two:hover { color: #fff; background: #050b20; border-color: #050b20; }
 .curated-home .boxcar-banner-section-seven .banner-slide { position: relative; height: auto; min-height: 0; }
-.curated-home .boxcar-banner-section-seven .banner-slide > img { width: 100%; height: 620px; object-fit: cover; object-position: center; }
-.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { top: 76px; transform: none; }
-.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { max-width: 1140px; margin: auto; }
+.curated-home .boxcar-banner-section-seven { --curated-hero-height: 680px; }
+.curated-home .boxcar-banner-section-seven .banner-slide > img { width: 100%; height: var(--curated-hero-height); object-fit: cover; object-position: center; }
+.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { top: 0; transform: none; }
+.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { display: grid; grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr); height: var(--curated-hero-height); max-width: 1140px; margin: auto; }
+.curated-home .curated-hero-heading { grid-row: 1; align-self: end; padding-bottom: 32px; }
 .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box .sub-title { margin: 0 0 16px; font-size: 16px; line-height: 26px; }
 .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box h1 { margin: 0; font-size: clamp(44px, 5vw, 70px); line-height: 1.12; text-wrap: balance; }
-.curated-home .boxcar-banner-section-seven .form-tab-content { position: relative; bottom: auto; left: auto; margin-top: 32px; }
+.curated-home .boxcar-banner-section-seven .form-tab-content { grid-row: 2; position: relative; bottom: auto; left: auto; margin-top: 0; }
 .curated-home .boxcar-banner-section-seven .cus-container10 { max-width: 1090px; padding: 0; margin: auto; }
-.curated-home .boxcar-banner-section-seven form { min-height: 76px; padding: 0 10px; border-radius: 50px; background: #fff; box-shadow: 0 16px 40px #050b201a; flex-wrap: nowrap; }
-.curated-home .boxcar-banner-section-seven form .form_boxes { width: 21%; height: 76px; min-width: 0; }
+.curated-home .boxcar-banner-section-seven form { display: flex; align-items: center; min-height: 76px; margin: 0; padding: 0 10px; border-radius: 50px; background: #fff; box-shadow: 0 16px 40px #050b201a; flex-wrap: nowrap; }
+.curated-home .boxcar-banner-section-seven form .form_boxes { flex: 1 1 0; width: auto; height: 76px; min-width: 0; }
 .curated-home .boxcar-banner-section-seven .drop-menu { text-align: left; }
-.curated-home .boxcar-banner-section-seven form .form_boxes:before { background: #e1e1e1; opacity: 1; }
+.curated-home .boxcar-banner-section-seven form .form_boxes:before { display: block; background: #e1e1e1; opacity: 1; }
 .curated-home .boxcar-banner-section-seven form .drop-menu .select { color: #050b20; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 28px; font-size: 15px; line-height: 22px; }
 .curated-home .boxcar-banner-section-seven form .drop-menu .select > span { flex: 1; min-width: 0; line-height: 22px; }
 .curated-home .boxcar-banner-section-seven form .drop-menu .select > svg { display: block; flex: none; position: static; margin: 0; width: 18px; height: 18px; }
@@ -66,38 +49,30 @@
 .curated-home .curated-brands .image { min-height: 70px; display: flex; align-items: center; justify-content: center; }
 .curated-home .curated-brands .image img { max-height: 60px; width: auto; object-fit: contain; }
 .curated-home .curated-stock { padding: 0 0 90px; }
-.curated-home .curated-stock .right-box { padding: 64px 48px; }
-.curated-home .curated-stock-layout { max-width: 1280px; margin: auto; }
+.curated-home .curated-stock .right-box { padding: 56px 32px; }
+.curated-home .curated-stock-layout { max-width: 1328px; margin: auto; }
+.curated-home .curated-stock-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.curated-home .curated-stock .car-block-ten { width: auto; min-width: 0; margin: 0; }
+.curated-home .curated-stock .car-block-ten .inner-box { display: flex; flex-direction: column; height: 100%; }
 .curated-home .curated-stock-note { margin: 12px 0 0; color: #667085; font-size: 15px; }
 .curated-home .curated-stock .nav-tabs { justify-content: center; gap: 32px; margin-bottom: 32px; }
 .curated-home .curated-stock .nav-link { margin-right: 0; min-height: 44px; }
-.curated-home .curated-stock .car-slider-three { padding-bottom: 64px; }
-/* Slick owns horizontal movement; native focus must not scroll its track. */
-.curated-home .curated-stock .slick-list { overflow: clip; }
-.curated-home .curated-stock .car-slider-three .slick-arrow { display: grid; place-items: center; bottom: 0; width: 48px; height: 48px; padding: 0; border-radius: 12px; border: 1px solid #050b20; color: #050b20; background: transparent; font-size: 0; }
-.curated-home .curated-stock .car-slider-three .slick-arrow::before { display: none; }
-.curated-home .curated-stock .car-slider-three .slick-arrow svg { display: block; width: 24px; height: 24px; }
-.curated-home .curated-stock .car-slider-three .slick-arrow:hover:not(.slick-disabled) { background: #050b20; color: #fff; }
-.curated-home .curated-stock .car-slider-three .slick-arrow.slick-disabled { opacity: .35; cursor: default; }
-.curated-home .curated-stock .car-slider-three .slick-arrow:focus-visible { outline: 2px solid #050b20; outline-offset: 4px; }
-.curated-home .curated-stock .car-slider-three .slick-prev { left: calc(50% - 56px); right: auto; }
-.curated-home .curated-stock .car-slider-three .slick-next { left: calc(50% + 8px); right: auto; }
 .curated-home .curated-stock .car-block-ten .image img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.curated-home .curated-stock .car-block-ten .content-box { padding: 20px 24px 22px; }
-.curated-home .curated-stock .car-block-ten .title { margin-bottom: 6px; font-size: 18px; line-height: 26px; }
-.curated-home .curated-car-summary { margin: 0 0 12px; font-size: 14px; line-height: 22px; color: #667085; }
+.curated-home .curated-stock .car-block-ten .content-box { display: flex; flex-direction: column; flex: 1; padding: 18px; }
+.curated-home .curated-stock .car-block-ten .title { min-height: 48px; margin-bottom: 4px; font-size: 18px; line-height: 24px; }
+.curated-home .curated-car-summary { margin: 0 0 10px; font-size: 13px; line-height: 20px; color: #667085; }
 .curated-home .curated-stock .car-block-ten .content-box > ul { min-height: 0; line-height: 24px; margin-bottom: 16px; flex-wrap: wrap; row-gap: 6px; }
-.curated-home .curated-stock .car-block-ten .content-box > ul li { font-size: 14px; line-height: 22px; margin-bottom: 0; padding-right: 10px; }
+.curated-home .curated-stock .car-block-ten .content-box > ul li { font-size: 13px; line-height: 22px; margin-bottom: 0; padding-right: 8px; }
 .curated-home .curated-stock .car-block-ten .content-box > ul li:before { top: 9px; }
-.curated-home .curated-stock .car-block-ten .btn-box { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-top: 1px solid #e1e1e1; padding-top: 16px; }
-.curated-home .curated-stock .car-block-ten .btn-box small { margin: 0; font-size: 22px; white-space: nowrap; }
-.curated-home .curated-stock .car-block-ten .btn-box .details { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; white-space: nowrap; line-height: 24px; font-weight: 500; }
+.curated-home .curated-stock .car-block-ten .btn-box { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; border-top: 1px solid #e1e1e1; padding-top: 12px; }
+.curated-home .curated-stock .car-block-ten .btn-box small { margin: 0; font-size: 20px; white-space: nowrap; }
+.curated-home .curated-stock .car-block-ten .btn-box .details { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; white-space: nowrap; line-height: 24px; font-size: 14px; font-weight: 500; }
 .curated-home .curated-stock .car-block-ten .btn-box .details svg { position: static; margin: 0; width: 20px; height: 20px; }
 .curated-home .curated-stock .car-block-ten .icon-box { display: grid; place-items: center; width: 44px; height: 44px; }
 .curated-home .curated-stock .car-block-ten .icon-box[aria-pressed=true] { color: var(--theme-color1); }
-.curated-home .curated-stock-more { text-align: center; margin-top: 24px; }
-.curated-home .curated-stock-more .read-more { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 56px; padding: 14px 26px; border: 1px solid #050b20; border-radius: 12px; color: #050b20; font-size: 15px; font-weight: 500; }
-.curated-home .curated-stock-more .read-more:hover { background: #050b20; color: white; }
+.curated-home .curated-stock-more { text-align: center; margin-top: 32px; }
+.curated-home .curated-stock-more .read-more { display: inline-flex; align-items: center; justify-content: center; min-width: 200px; min-height: 52px; padding: 14px 28px; border: 1px solid var(--theme-color1); border-radius: 12px; background: var(--theme-color1); color: #fff; font-size: 15px; font-weight: 500; }
+.curated-home .curated-stock-more .read-more:hover { background: #050b20; border-color: #050b20; color: white; }
 .curated-home .curated-services { padding: 0 0 90px; }
 .curated-home .curated-services .boxcar-title { margin: 0 auto 40px; }
 .curated-home .curated-services .boxcar-title p { margin: 14px 0 0; color: #667085; font-size: 16px; line-height: 26px; }
@@ -127,6 +102,7 @@
 }
 @media (max-width: 1199px) {
   .curated-home .curated-services .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .curated-home .curated-stock-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 }
 .curated-home .curated-journal { padding: 0 0 80px; }
 .curated-home .curated-journal .blog-block .image img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
@@ -137,34 +113,23 @@
 .curated-home .boxcar-footer .widget-content .text { color: #050b20; font-size: 15px; margin: 0 0 16px; }
 .curated-home .reference-preview-note { margin: 0; padding: 18px 15px; }
 @media (max-width: 1250px) {
-  .curated-home .boxcar-header .c-box { gap: 24px; }
-  .curated-home .boxcar-header .navigation { gap: 24px; }
-  .curated-home .boxcar-header .right-box { gap: 20px; }
   .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 22px; }
 }
 @media (max-width: 991px) {
-  .curated-home .boxcar-header .c-box { display: flex; justify-content: space-between; }
-  .curated-home .boxcar-header .nav-out-bar { display: none !important; }
-  .curated-home .boxcar-header .mobile-navigation { display: flex; }
-  .curated-home .boxcar-header .mobile-navigation a { display: grid; place-items: center; width: 44px; height: 48px; }
   .curated-home .curated-stock .right-box { padding: 56px 24px; }
+  .curated-home .curated-stock-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .curated-home .curated-next-car { padding: 72px 24px; }
-  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { top: 64px; }
-  .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 14px; font-size: 14px; }
-  .curated-home .boxcar-banner-section-seven .form-submit button { padding: 0 20px; }
+  .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 10px; gap: 8px; font-size: 14px; }
+  .curated-home .boxcar-banner-section-seven .form-submit button { padding: 0 18px; }
 }
 @media (max-width: 767px) {
   .curated-home .boxcar-container, .curated-home .large-container { padding: 0 14px; }
-  .curated-home .boxcar-header .inner-container { padding: 0 18px; }
-  .curated-home .boxcar-header .header-inner { padding: 14px 0; }
-  .curated-home .boxcar-header .right-box { gap: 12px; }
-  .curated-home .boxcar-header .right-box .btn { display: none; }
-  .curated-home .boxcar-header .box-account { font-size: 14px; }
   .curated-home .boxcar-banner-section-seven .banner-slide > img { position: absolute; inset: 0; height: 100%; object-position: 52% center; }
   .curated-home .boxcar-banner-section-seven .banner-slide { min-height: 550px; height: auto; }
   .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { position: relative; top: auto; padding: 36px 14px 190px; }
   .curated-home .boxcar-banner-section-seven .banner-slide .right-box .boxcar-container { padding: 0; }
-  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { max-width: 560px; margin: auto; }
+  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { display: block; height: auto; max-width: 560px; margin: auto; }
+  .curated-home .curated-hero-heading { padding-bottom: 0; }
   .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box .sub-title { font-size: 14px; line-height: 22px; margin: 0 auto 16px; max-width: 300px; }
   .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box h1 { font-size: clamp(30px, 7.6vw, 42px); padding: 0; }
   .curated-home .boxcar-banner-section-seven .form-tab-content { margin-top: 24px; z-index: 100; }
@@ -194,10 +159,9 @@
   .curated-home .curated-brands .image { min-height: 54px; }
   .curated-home .curated-brands .image img { max-width: 60px; max-height: 40px; }
   .curated-home .curated-stock { padding-bottom: 56px; }
-  .curated-home .curated-stock .right-box { padding: 40px 20px; }
+  .curated-home .curated-stock .right-box { padding: 40px 16px; }
   .curated-home .curated-stock .nav-tabs { gap: 24px; }
   .curated-home .curated-stock .nav-link { font-size: 15px; }
-  .curated-home .curated-stock .car-block-ten { margin: 0 8px; }
   .curated-home .curated-stock .car-block-ten .title { font-size: 18px; }
   .curated-home .curated-stock .car-block-ten .content-box { padding: 18px 14px 16px; }
   .curated-home .curated-stock .car-block-ten .btn-box { gap: 8px; }
@@ -217,4 +181,6 @@
 }
 @media (max-width: 575px) {
   .curated-home .curated-services .row { grid-template-columns: minmax(0, 1fr); }
+  .curated-home .curated-stock-grid { grid-template-columns: minmax(0, 1fr); }
+  .curated-home .curated-stock-grid .car-block-ten:nth-child(n+5) { display: none; }
 }

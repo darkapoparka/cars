@@ -85,7 +85,7 @@
 <svelte:window onstorage={syncSelections} />
 <div class="app" style:--accent={brand.accent}>
   <a class="skip-link" href="#main">Skip to content</a>
-  {#if !design && !curated}<Header home={0} />{/if}
+  {#if !design}<Header />{/if}
   <main id="main" tabindex="-1">
     {#key route.path}{#if curated}<ReferenceHome
           home={0}

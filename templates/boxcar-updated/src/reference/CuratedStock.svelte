@@ -46,7 +46,7 @@
       role="tabpanel"
       aria-labelledby={`stock-${group.key}-tab`}
     >
-      <div class="row car-slider-three" data-preview="3">
+      <div class="curated-stock-grid">
         {#each group.cars as vehicle (vehicle.id)}<CuratedCarCard
             {vehicle}
           />{/each}
