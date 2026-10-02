@@ -12,6 +12,7 @@ import FeatureContent from '@/components/FeatureContent';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
+import {typography as t} from '@/app/typography.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
@@ -40,8 +41,8 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
     <DiscoveryHeader active={kind} hideMobileIdentity />
     <ShowroomBanner title={tx(current.title)} mobileTitle={current.mobileTitle} description={tx(current.copy)} mobileDescription={current.mobileCopy} action={current.cta} mobileAction={current.mobileCta} image={showroom.artwork.heroes[kind]} colourful onClick={() => start()} />
     <main {...stylex.props(s.content)}>
-      <section aria-label={tx(kind === 'finance' ? 'Finance options' : 'Choose your brand')} {...stylex.props(s.firstSection)}>{kind !== 'finance' ? <h2 {...stylex.props(s.heading)}>{tx("Choose your brand")}</h2> : null}
-        {kind === 'finance' ? <div {...stylex.props(s.benefits)}>{benefits.map((title, index) => <button type="button" key={title} onClick={() => start()} {...stylex.props(s.benefit)}><Image sizes="(max-width: 767px) 50vw, 600px" src={showroom.artwork.financeBenefits[index]} width={486} height={324} alt={tx("")} {...stylex.props(s.benefitArt)} /><h3 {...stylex.props(s.benefitTitle)}><span {...stylex.props(s.desktopCopy)}>{tx(title)}</span><span {...stylex.props(s.mobileCopy)}>{tx(mobileBenefits[index])}</span></h3></button>)}</div> : <div {...stylex.props(s.brands)}>{brands.map(([name, asset]) => <button type="button" key={name} onClick={() => start(name)} {...stylex.props(s.brand)}><img src={assetPath(`/reference-assets/${asset}.png`)} alt={tx("")} width={83} height={76} {...stylex.props(s.brandImage)} /><span {...stylex.props(s.brandName)}>{tx(name)}</span></button>)}</div>}
+      <section aria-label={tx(kind === 'finance' ? 'Finance options' : 'Choose your brand')} {...stylex.props(s.firstSection)}>{kind !== 'finance' ? <h2 {...stylex.props(s.heading, t.control)}>{tx("Choose your brand")}</h2> : null}
+        {kind === 'finance' ? <div {...stylex.props(s.benefits)}>{benefits.map((title, index) => <button type="button" key={title} onClick={() => start()} {...stylex.props(s.benefit)}><Image sizes="(max-width: 767px) 50vw, 600px" src={showroom.artwork.financeBenefits[index]} width={486} height={324} alt={tx("")} {...stylex.props(s.benefitArt)} /><h3 {...stylex.props(s.benefitTitle, t.title)}><span {...stylex.props(s.desktopCopy)}>{tx(title)}</span><span {...stylex.props(s.mobileCopy)}>{tx(mobileBenefits[index])}</span></h3></button>)}</div> : <div {...stylex.props(s.brands, t.caption)}>{brands.map(([name, asset]) => <button type="button" key={name} onClick={() => start(name)} {...stylex.props(s.brand, t.caption)}><img src={assetPath(`/reference-assets/${asset}.png`)} alt={tx("")} width={83} height={76} {...stylex.props(s.brandImage)} /><span {...stylex.props(s.brandName)}>{tx(name)}</span></button>)}</div>}
       </section>
       <FeatureContent kind={kind} onStart={() => start()} />
     </main>
@@ -52,15 +53,15 @@ const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 170, backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
   firstSection: {paddingTop: 20},
-  heading: {fontSize: 16, color: $.text, fontWeight: 500, lineHeight: 1.4},
-  brands: {display: 'grid', gridAutoFlow: 'column', gridTemplateRows: 'repeat(2,auto)', gridAutoColumns: {[media.mobile]: 'max(83px,6em)', default: 110}, columnGap: 14, rowGap: 18, overflowX: 'auto', marginTop: 14, marginRight: {[media.mobile]: -12, default: 0}, fontSize: 14, scrollbarWidth: 'none'},
-  brand: {display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: 0, color: $.text, fontSize: 14, fontWeight: 500, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
+  heading: {color: $.text},
+  brands: {display: 'grid', gridAutoFlow: 'column', gridTemplateRows: 'repeat(2,auto)', gridAutoColumns: {[media.mobile]: 'max(83px,6em)', default: 110}, columnGap: 14, rowGap: 18, overflowX: 'auto', marginTop: 14, marginRight: {[media.mobile]: -12, default: 0}, scrollbarWidth: 'none'},
+  brand: {display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: 0, color: $.text, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   brandImage: {width: '100%', height: 68, objectFit: 'contain'},
-  brandName: {minHeight: 20, lineHeight: '20px'},
+  brandName: {minHeight: 20},
   benefits: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'repeat(2,minmax(0,1fr))', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(4,minmax(0,1fr))'}, gap: 12},
   benefit: {position: 'relative', aspectRatio: {[media.mobile]: '1.25', default: '1.5'}, padding: 0, overflow: 'hidden', textAlign: 'left', color: $.text, borderWidth: 0, borderRadius: 16, backgroundColor: '#f9f9f9', cursor: 'pointer'},
   benefitArt: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right bottom'},
-  benefitTitle: {position: 'relative', zIndex: 1, minHeight: '100%', padding: {[media.mobile]: '14px 10px 64px', default: '18px 18px 64px'}, fontSize: {[media.mobile]: 18, default: 25}, fontWeight: 600, lineHeight: 1.25, whiteSpace: 'normal', textWrap: 'pretty', letterSpacing: '-.01em', overflowWrap: 'anywhere'},
+  benefitTitle: {position: 'relative', zIndex: 1, minHeight: '100%', padding: {[media.mobile]: '14px 10px 64px', default: '18px 18px 64px'}, whiteSpace: 'normal', textWrap: 'pretty', overflowWrap: 'anywhere'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });

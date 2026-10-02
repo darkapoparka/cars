@@ -2,7 +2,7 @@ import * as stylex from '@stylexjs/stylex';
 
 export const tokens = stylex.defineVars({
   fontSans: 'Geist, Roboto, Arial, sans-serif',
-  fontDisplay: 'Poppins, Roboto, Arial, sans-serif',
+  fontDisplay: 'Geist, Roboto, Arial, sans-serif',
   // Keep legacy names compatible; all shared brand accents use the charcoal palette.
   violet: '#202024',
   violetDark: '#111113',
@@ -43,7 +43,7 @@ export const tokens = stylex.defineVars({
   bannerCopyLineHeight: '21px',
 });
 
-// The retained Geist/Poppins subsets have no Cyrillic. Use one complete family
+// The retained Geist subset has no Cyrillic. Use one complete family
 // for Bulgarian text, numbers and controls instead of per-glyph fallbacks.
 export const bulgarianTypography = stylex.createTheme(tokens, {
   fontSans: 'Roboto, Arial, sans-serif',

@@ -1,0 +1,3858 @@
+{
+  "date": "2026-10-02",
+  "origin": "http://127.0.0.1:6483",
+  "checks": [
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 28.359375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 91.625,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 159.59375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 238.6875,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Разгледайте колите.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека стане ваш.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Време е за промяна?",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Вижте на място.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24.3px",
+          "size": "18px",
+          "text": "Автомобили",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 FORTUNER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 Ciaz",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2025 VELOZ",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2022 SELTOS",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 GRAND VITARA",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2022 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 PATROL",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24.3px",
+          "size": "18px",
+          "text": "Последно разгледани",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "17.6px",
+          "size": "16px",
+          "text": "Разгледайте селекцията",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 XC40",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 DEFENDER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2020 X2",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 430I",
+          "weight": "400"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Разгледайте колите."
+        },
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Нека стане ваш."
+        },
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Време е за промяна?"
+        },
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Вижте на място."
+        }
+      ],
+      "url": "/bg",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 28.359375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 91.625,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 159.59375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 238.6875,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продай колата си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продай ни колата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Замяна",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Преди продажбата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продажба чрез Drive24",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преглед",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Оценка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Следващата ви кола.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/sell",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 28.359375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 91.625,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 159.59375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 238.6875,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Сервизни услуги",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Обслужване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Диагностика",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Как протича обслужването",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Избор на услуга",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Удобен час",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преди ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "След ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сервизна история",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Грижа за колата.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/service",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 183,
+          "width": 281,
+          "x": 12,
+          "y": 531.1875
+        },
+        "launcher": {
+          "height": 44,
+          "width": 177.84375,
+          "x": 12,
+          "y": 726.1875
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 28.359375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 91.625,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 159.59375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 238.6875,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Финансиране.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Самоучастие",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Срок",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Лихва",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Планирай бюджета",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Как работи финансирането",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изберете автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сравнете офертите",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Одобрение",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Предаване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Преди да кандидатствате",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 37.109375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 117.875,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 203.34375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 299.9375,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Разгледайте колите.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека стане ваш.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Време е за промяна?",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Вижте на място.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24.3px",
+          "size": "18px",
+          "text": "Автомобили",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 FORTUNER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 Ciaz",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2025 VELOZ",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2022 SELTOS",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 GRAND VITARA",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2022 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2024 PATROL",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24.3px",
+          "size": "18px",
+          "text": "Последно разгледани",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "17.6px",
+          "size": "16px",
+          "text": "Разгледайте селекцията",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 XC40",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 DEFENDER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2020 X2",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "15px",
+          "text": "2023 430I",
+          "weight": "400"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [
+        {
+          "ctaInside": true,
+          "height": 180,
+          "title": "Разгледайте колите."
+        },
+        {
+          "ctaInside": true,
+          "height": 180,
+          "title": "Нека стане ваш."
+        },
+        {
+          "ctaInside": true,
+          "height": 180,
+          "title": "Време е за промяна?"
+        },
+        {
+          "ctaInside": true,
+          "height": 180,
+          "title": "Вижте на място."
+        }
+      ],
+      "url": "/bg",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 37.109375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 117.875,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 203.34375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 299.9375,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продай колата си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продай ни колата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Замяна",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Преди продажбата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Продажба чрез Drive24",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преглед",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Оценка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Следващата ви кола.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/sell",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 37.109375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 117.875,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 203.34375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 299.9375,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Сервизни услуги",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Обслужване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Диагностика",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Как протича обслужването",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Избор на услуга",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Удобен час",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преди ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "След ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сервизна история",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Грижа за колата.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/service",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 183,
+          "width": 351,
+          "x": 12,
+          "y": 587.1875
+        },
+        "launcher": {
+          "height": 44,
+          "width": 177.84375,
+          "x": 12,
+          "y": 782.1875
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 31.515625,
+              "x": 37.109375,
+              "y": 13
+            },
+            "text": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 49.5,
+              "x": 117.875,
+              "y": 13
+            },
+            "text": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 58.0625,
+              "x": 203.34375,
+              "y": 13
+            },
+            "text": "Финанси",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 44.359375,
+              "x": 299.9375,
+              "y": 13
+            },
+            "text": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Финансиране.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Самоучастие",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Срок",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Лихва",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Планирай бюджета",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Как работи финансирането",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изберете автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сравнете офертите",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Одобрение",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Предаване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Преди да кандидатствате",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/finance",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 183,
+          "width": 351,
+          "x": 12,
+          "y": 300.1875
+        },
+        "launcher": {
+          "height": 44,
+          "width": 177.84375,
+          "x": 12,
+          "y": 495.1875
+        }
+      },
+      "header": {
+        "compact": "true",
+        "height": 52,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 44,
+            "pill": {
+              "height": 32,
+              "width": 81.75,
+              "x": 12,
+              "y": 10
+            },
+            "text": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 4
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 44,
+            "pill": {
+              "height": 32,
+              "width": 81.75,
+              "x": 101.75,
+              "y": 10
+            },
+            "text": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 4
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 44,
+            "pill": {
+              "height": 32,
+              "width": 81.75,
+              "x": 191.5,
+              "y": 10
+            },
+            "text": "Финанси",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 4
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 44,
+            "pill": {
+              "height": 32,
+              "width": 81.75,
+              "x": 281.25,
+              "y": 10
+            },
+            "text": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 4
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Финансиране.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Самоучастие",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Срок",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Лихва",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Планирай бюджета",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Как работи финансирането",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изберете автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сравнете офертите",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Одобрение",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Предаване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Преди да кандидатствате",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/finance",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 190,
+        "tabs": [
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 29,
+              "y": 91
+            },
+            "text": "Купи",
+            "width": 162.25,
+            "x": 28,
+            "y": 74
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 207.25,
+              "y": 91
+            },
+            "text": "Продай",
+            "width": 162.25,
+            "x": 206.25,
+            "y": 74
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 385.5,
+              "y": 91
+            },
+            "text": "Финанси",
+            "width": 162.25,
+            "x": 384.5,
+            "y": 74
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 563.75,
+              "y": 91
+            },
+            "text": "Услуги",
+            "width": 162.25,
+            "x": 562.75,
+            "y": 74
+          }
+        ],
+        "width": 753,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "36px",
+          "size": "30px",
+          "text": "",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Разгледайте колите.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека стане ваш.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Време е за промяна?",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Вижте на място.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Автомобили",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 FORTUNER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 Ciaz",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2025 VELOZ",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2022 SELTOS",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 GRAND VITARA",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2022 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 PATROL",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Последно разгледани",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Разгледайте селекцията",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2025 Lexus RX350",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2022 Toyota LAND CRUISER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 XC40",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 DEFENDER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2020 X2",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 430I",
+          "weight": "400"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [
+        {
+          "ctaInside": true,
+          "height": 238.84375,
+          "title": "Разгледайте колите."
+        },
+        {
+          "ctaInside": true,
+          "height": 238.84375,
+          "title": "Нека стане ваш."
+        },
+        {
+          "ctaInside": true,
+          "height": 214.84375,
+          "title": "Време е за промяна?"
+        },
+        {
+          "ctaInside": true,
+          "height": 214.84375,
+          "title": "Вижте на място."
+        }
+      ],
+      "url": "/bg",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 146,
+        "tabs": [
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 121.5,
+              "y": 120
+            },
+            "text": "Купи",
+            "width": 284,
+            "x": 120.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 421.5,
+              "y": 120
+            },
+            "text": "Продай",
+            "width": 284,
+            "x": 420.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 721.5,
+              "y": 120
+            },
+            "text": "Финанси",
+            "width": 284,
+            "x": 720.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 1021.5,
+              "y": 120
+            },
+            "text": "Услуги",
+            "width": 284,
+            "x": 1020.5,
+            "y": 103
+          }
+        ],
+        "width": 1425,
+        "x": 0,
+        "y": 73
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "44px",
+          "size": "36px",
+          "text": "",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Разгледайте колите.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека стане ваш.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Време е за промяна?",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Вижте на място.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Автомобили",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 FORTUNER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 Ciaz",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2025 VELOZ",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2022 SELTOS",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 GRAND VITARA",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2022 LAND CRUISER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2024 PATROL",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Последно разгледани",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "33.75px",
+          "size": "25px",
+          "text": "Разгледайте селекцията",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2025 Lexus RX350",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2022 Toyota LAND CRUISER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "20px",
+          "size": "14px",
+          "text": "2024 Toyota FORTUNER",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 XC40",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 DEFENDER",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2020 X2",
+          "weight": "400"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "21px",
+          "size": "16px",
+          "text": "2023 430I",
+          "weight": "400"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Разгледайте колите."
+        },
+        {
+          "ctaInside": true,
+          "height": 202,
+          "title": "Нека стане ваш."
+        },
+        {
+          "ctaInside": true,
+          "height": 178,
+          "title": "Време е за промяна?"
+        },
+        {
+          "ctaInside": true,
+          "height": 178,
+          "title": "Вижте на място."
+        }
+      ],
+      "url": "/bg",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 146,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 121.5,
+              "y": 120
+            },
+            "text": "Купи",
+            "width": 284,
+            "x": 120.5,
+            "y": 103
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 421.5,
+              "y": 120
+            },
+            "text": "Продай",
+            "width": 284,
+            "x": 420.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 721.5,
+              "y": 120
+            },
+            "text": "Финанси",
+            "width": 284,
+            "x": 720.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 1021.5,
+              "y": 120
+            },
+            "text": "Услуги",
+            "width": 284,
+            "x": 1020.5,
+            "y": 103
+          }
+        ],
+        "width": 1425,
+        "x": 0,
+        "y": 73
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "44px",
+          "size": "36px",
+          "text": "Продайте колата си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Продай ни колата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Замяна с доплащане",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Преди продажбата",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Продажба чрез Drive24",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преглед",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Оценка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Вашето следващо начало.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/sell",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "financeOrder": null,
+      "header": {
+        "compact": "false",
+        "height": 146,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 121.5,
+              "y": 120
+            },
+            "text": "Купи",
+            "width": 284,
+            "x": 120.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 421.5,
+              "y": 120
+            },
+            "text": "Продай",
+            "width": 284,
+            "x": 420.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 721.5,
+              "y": 120
+            },
+            "text": "Финанси",
+            "width": 284,
+            "x": 720.5,
+            "y": 103
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 1021.5,
+              "y": 120
+            },
+            "text": "Услуги",
+            "width": 284,
+            "x": 1020.5,
+            "y": 103
+          }
+        ],
+        "width": 1425,
+        "x": 0,
+        "y": 73
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "44px",
+          "size": "36px",
+          "text": "Погрижете се за автомобила си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "16px",
+          "text": "Изберете марка",
+          "weight": "500"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Периодично обслужване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Преглед и диагностика",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Грижа за автомобила, стъпка по стъпка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Избор на услуга",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Удобен час",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Преди ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "След ремонта",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сервизна история",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Грижа за колата.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Още малко подробности",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/service",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 211,
+          "width": 1184,
+          "x": 120.5,
+          "y": 716.328125
+        },
+        "launcher": {
+          "height": 44,
+          "width": 177.84375,
+          "x": 120.5,
+          "y": 939.328125
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 146,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 121.5,
+              "y": 120
+            },
+            "text": "Купи",
+            "width": 284,
+            "x": 120.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 421.5,
+              "y": 120
+            },
+            "text": "Продай",
+            "width": 284,
+            "x": 420.5,
+            "y": 103
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 721.5,
+              "y": 120
+            },
+            "text": "Финанси",
+            "width": 284,
+            "x": 720.5,
+            "y": 103
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 282,
+              "x": 1021.5,
+              "y": 120
+            },
+            "text": "Услуги",
+            "width": 284,
+            "x": 1020.5,
+            "y": 103
+          }
+        ],
+        "width": 1425,
+        "x": 0,
+        "y": 73
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "44px",
+          "size": "36px",
+          "text": "Финансирайте следващия си автомобил.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Първоначална вноска",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Срок на плащане",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изисквания",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Лихви и вноски",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Планирайте бюджета си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Финансиране, стъпка по стъпка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изберете автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сравнете офертите",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Одобрение",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Предаване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Преди да кандидатствате",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/finance",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 235,
+          "width": 697,
+          "x": 28,
+          "y": 504.65625
+        },
+        "launcher": {
+          "height": 44,
+          "width": 177.84375,
+          "x": 28,
+          "y": 751.65625
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 190,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 29,
+              "y": -369
+            },
+            "text": "Купи",
+            "width": 162.25,
+            "x": 28,
+            "y": -386
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 207.25,
+              "y": -369
+            },
+            "text": "Продай",
+            "width": 162.25,
+            "x": 206.25,
+            "y": -386
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 385.5,
+              "y": -369
+            },
+            "text": "Финанси",
+            "width": 162.25,
+            "x": 384.5,
+            "y": -386
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Roboto, Arial, sans-serif",
+              "lineHeight": "24px",
+              "size": "16px",
+              "weight": "400"
+            },
+            "height": 104,
+            "pill": {
+              "height": 24,
+              "width": 160.25,
+              "x": 563.75,
+              "y": -369
+            },
+            "text": "Услуги",
+            "width": 162.25,
+            "x": 562.75,
+            "y": -386
+          }
+        ],
+        "width": 753,
+        "x": 0,
+        "y": -460
+      },
+      "headings": [
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "36px",
+          "size": "30px",
+          "text": "Финансирайте следващия си автомобил.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Първоначална вноска",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Срок на плащане",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изисквания",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Лихви и вноски",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Планирайте бюджета си.",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Финансиране, стъпка по стъпка",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Изберете автомобил",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Документи",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Условия",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Сравнете офертите",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Одобрение",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Предаване",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Преди да кандидатствате",
+          "weight": "600"
+        },
+        {
+          "family": "Roboto, Arial, sans-serif",
+          "lineHeight": "34px",
+          "size": "28px",
+          "text": "Нека поговорим за автомобила ви",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/bg/finance",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 183,
+          "width": 351,
+          "x": 12,
+          "y": 587.1875
+        },
+        "launcher": {
+          "height": 44,
+          "width": 233.21875,
+          "x": 12,
+          "y": 782.1875
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 25.1875,
+              "x": 40.28125,
+              "y": 13
+            },
+            "text": "Buy",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 25.0625,
+              "x": 130.09375,
+              "y": 13
+            },
+            "text": "Sell",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 51.828125,
+              "x": 206.453125,
+              "y": 13
+            },
+            "text": "Finance",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 56.453125,
+              "x": 293.890625,
+              "y": 13
+            },
+            "text": "Services",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Car finance.",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Down payment",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Term",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Eligibility",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Interest rate",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Plan your budget",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Finance, step by step",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Choose a car",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Documents",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Finance terms",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Compare offers",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Lender approval",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Handover",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Before you apply",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Let’s talk about your car",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/en/finance",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "financeOrder": {
+        "below": true,
+        "campaign": {
+          "height": 183,
+          "width": 281,
+          "x": 12,
+          "y": 531.1875
+        },
+        "launcher": {
+          "height": 44,
+          "width": 233.21875,
+          "x": 12,
+          "y": 726.1875
+        }
+      },
+      "header": {
+        "compact": "false",
+        "height": 88,
+        "tabs": [
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 25.1875,
+              "x": 31.53125,
+              "y": 13
+            },
+            "text": "Buy",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 25.0625,
+              "x": 103.84375,
+              "y": 13
+            },
+            "text": "Sell",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 51.828125,
+              "x": 162.703125,
+              "y": 13
+            },
+            "text": "Finance",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "font": {
+              "family": "Geist, Roboto, Arial, sans-serif",
+              "lineHeight": "20px",
+              "size": "14px",
+              "weight": "400"
+            },
+            "height": 72,
+            "pill": {
+              "height": 20,
+              "width": 56.453125,
+              "x": 232.640625,
+              "y": 13
+            },
+            "text": "Services",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "headings": [
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Car finance.",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Down payment",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Term",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Eligibility",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Interest rate",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Plan your budget",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Finance, step by step",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Choose a car",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Documents",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Finance terms",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Compare offers",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Lender approval",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "24px",
+          "size": "18px",
+          "text": "Handover",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Before you apply",
+          "weight": "600"
+        },
+        {
+          "family": "Geist, Roboto, Arial, sans-serif",
+          "lineHeight": "28px",
+          "size": "24px",
+          "text": "Let’s talk about your car",
+          "weight": "600"
+        }
+      ],
+      "horizontalOverflow": false,
+      "promoClipping": [],
+      "url": "/en/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    }
+  ],
+  "calculator": {
+    "price": 30000,
+    "annualInterest": 0,
+    "years": 3,
+    "depositPercent": 20,
+    "observedMonthly": "€ 667",
+    "desktopDialog": {
+      "bottom": 772.5,
+      "height": 545,
+      "left": 440,
+      "right": 1000,
+      "top": 227.5,
+      "width": 560,
+      "x": 440,
+      "y": 227.5
+    },
+    "focusTrap": "Shift+Tab wraps from close to estimate disclosure",
+    "escape": "closes and restores launcher focus and body scrolling",
+    "back": "closes without leaving /bg/finance",
+    "retainsValuesAfterReopen": true
+  }
+}

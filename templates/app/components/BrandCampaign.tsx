@@ -7,6 +7,7 @@ import * as stylex from '@stylexjs/stylex';
 import {campaignTokens as theme} from '@/app/campaign-theme.stylex';
 import {showroom} from '@/lib/showroom';
 import {media} from '@/app/tokens.stylex';
+import {typography as t} from '@/app/typography.stylex';
 
 type Kind = 'sell' | 'care' | 'finance';
 const campaigns = {
@@ -24,10 +25,10 @@ export default function BrandCampaign({kind, onAction}: {kind: Kind; onAction?: 
   return <section data-brand-campaign={kind} {...stylex.props(s.campaign, kind === 'finance' && s.wide, kind === 'care' && s.care)}>
     <Image src={showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art, kind === 'care' && s.careArt, kind === 'finance' && s.financeArt)} />
     <div {...stylex.props(s.copy, kind === 'sell' && s.sellCopy, kind === 'finance' && s.financeCopy, kind === 'care' && s.careCopy)}>
-      {kind === 'finance' ? <p {...stylex.props(s.brand)}>{tx(showroom.name)}{tx(' Finance')}</p> : null}
-      <h2 {...stylex.props(s.title, kind === 'care' && s.careTitle)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
-      <p {...stylex.props(s.description, kind === 'finance' && s.shortDescription)}>{kind === 'care' ? tx(campaign.mobileCopy) : copy(campaign.copy, campaign.mobileCopy)}</p>
-      {onAction ? <button type="button" onClick={onAction} {...stylex.props(s.action)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></button> : <Link href={campaign.href} {...stylex.props(s.action)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></Link>}
+      {kind === 'finance' ? <p {...stylex.props(t.caption)}>{tx(showroom.name)}{tx(' Finance')}</p> : null}
+      <h2 {...stylex.props(s.title, t.heading, kind === 'care' && s.careTitle)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
+      <p {...stylex.props(s.description, t.body, kind === 'finance' && s.shortDescription)}>{kind === 'care' ? tx(campaign.mobileCopy) : copy(campaign.copy, campaign.mobileCopy)}</p>
+      {onAction ? <button type="button" onClick={onAction} {...stylex.props(s.action, t.control)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></button> : <Link href={campaign.href} {...stylex.props(s.action, t.control)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></Link>}
     </div>
   </section>;
 }
@@ -43,11 +44,10 @@ const s = stylex.create({
   financeCopy: {padding: {[media.mobile]: 18, default: 28}},
   careCopy: {width: {[media.mobile]: '100%', default: '65%'}, padding: {[media.mobile]: 20, default: 28}},
   careTitle: {marginTop: 0},
-  brand: {fontSize: 12, fontWeight: 600, letterSpacing: '.03em'},
-  title: {maxWidth: 440, marginTop: 8, fontSize: {[media.mobile]: 26, default: 32}, fontWeight: 600, lineHeight: 1.15, letterSpacing: '-.02em', textWrap: 'pretty'},
-  description: {maxWidth: 350, marginTop: 9, color: theme.muted, fontSize: {[media.mobile]: 15, default: 16}, lineHeight: 1.4},
+  title: {maxWidth: 440, marginTop: 8, textWrap: 'pretty'},
+  description: {maxWidth: 350, marginTop: 9, color: theme.muted},
   shortDescription: {maxWidth: {[media.mobile]: '70%', default: '55%'}},
-  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 16, padding: '10px 18px', color: theme.actionText, fontSize: 16, fontWeight: 500, lineHeight: 1.4, borderWidth: 0, borderRadius: 30, backgroundColor: '#fff', cursor: 'pointer'},
+  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 16, padding: '10px 18px', color: theme.actionText, borderWidth: 0, borderRadius: 30, backgroundColor: '#fff', cursor: 'pointer'},
   icon: {flexShrink: 0},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
