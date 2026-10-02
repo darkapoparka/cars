@@ -8,17 +8,14 @@ import {assetPath} from '@/lib/paths';
 import {currency} from '@/lib/currency';
 import {formatPrice, vehicles, type Vehicle} from '@/lib/data';
 import {emptyFilters, matchesInventory} from '@/lib/inventory-filters';
-import {estimateFinance} from '@/lib/finance';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import {searchField} from './search-field.stylex';
-import VehicleCard from './VehicleCard';
 import FinanceCalculator from './FinanceCalculator';
 import {useModal} from './useModal';
 
-// These are priced inventory examples, not an assertion of lender eligibility.
+// Priced local cars remain selectable inside the illustrative calculator.
 const stock = vehicles.filter(car => Number.isFinite(car.price) && car.price > 0 && !car.priceOnRequest && !car.badges.some(badge => /coming soon/i.test(badge)));
-const featured = [...stock].sort((a, b) => a.price - b.price).slice(0, 3);
 const defaultFilters = emptyFilters();
 
 export type FinanceView = 'cars' | 'calculator' | null;
@@ -48,18 +45,7 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView}:
     setSelection(previous => ({car, version: previous.version + 1}));
     setView('calculator');
   }
-  function browse() {setQuery(''); setView('cars');}
-
-  return <>
-    <section data-finance-discovery {...stylex.props(s.discovery)} aria-label={tx('Cars to finance')}>
-      <section aria-labelledby={id + '-cars-title'} {...stylex.props(s.inventory)}>
-        <div {...stylex.props(s.inventoryHeader)}><h2 id={id + '-cars-title'} {...stylex.props(t.heading, s.inventoryTitle)}>{tx('Cars to finance')}</h2>{stock.length ? <button type="button" data-finance-view-all aria-label={tx('View all')} aria-haspopup="dialog" aria-expanded={view === 'cars'} aria-controls={id + '-dialog'} onClick={browse} {...stylex.props(s.allCars, t.caption)}>{tx('View all')}<ChevronRight size={16} aria-hidden="true" {...stylex.props(s.icon)}/></button> : null}</div>
-        <div data-finance-cars {...stylex.props(s.cars)}>{featured.map(car => <VehicleCard key={car.slug} vehicle={car} finance={{monthly: estimateFinance(car.price, car.price * .2, 7, 5).monthly, onCalculate: () => choose(car)}}/>)}</div>
-        {stock.length ? <p {...stylex.props(s.note, s.assumptions, t.caption)}>{tx('Example: 20% deposit · 7% yearly · 5 years.')}</p> : null}
-        {!stock.length ? <p {...stylex.props(s.note, t.body)}>{tx('No priced cars are available. You can still estimate a payment.')}</p> : null}
-      </section>
-    </section>
-    <div hidden={!view} {...stylex.props(s.backdrop, !view && s.hidden)} onMouseDown={event => {if (event.currentTarget === event.target) close();}}>
+  return <div hidden={!view} {...stylex.props(s.backdrop, !view && s.hidden)} onMouseDown={event => {if (event.currentTarget === event.target) close();}}>
       <section id={id + '-dialog'} ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id + '-title'} {...stylex.props(s.sheet)}>
         <header {...stylex.props(s.header)}><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx(view === 'cars' ? 'Choose your car' : 'Finance calculator')}</h2><button type="button" aria-label={tx(view === 'cars' ? 'Close car selection' : 'Close calculator')} onClick={close} {...stylex.props(s.close)}><X size={23} aria-hidden="true"/></button></header>
         <div ref={content} {...stylex.props(s.body)}>
@@ -77,20 +63,12 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView}:
           </div>
         </div>
       </section>
-    </div>
-  </>;
+    </div>;
 }
 
 const s = stylex.create({
-  discovery: {marginTop: 16, color: $.ink},
   icon: {flexShrink: 0},
-  inventory: {marginTop: 0},
-  inventoryHeader: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8},
-  inventoryTitle: {minWidth: 0, fontSize: {[media.mobile]: 18, default: 24}, lineHeight: {[media.mobile]: '24px', default: '30px'}},
   note: {color: $.muted},
-  assumptions: {marginTop: 12},
-  allCars: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 4, minHeight: 44, padding: '10px 6px', color: $.ink, borderWidth: 0, borderRadius: 24, backgroundColor: 'transparent', cursor: 'pointer'},
-  cars: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: 12, marginTop: 6},
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.58)'},
   hidden: {display: 'none'},
   sheet: {display: 'flex', flexDirection: 'column', width: '100%', maxWidth: 560, maxHeight: 'calc(100dvh - 24px)', color: $.ink, fontFamily: $.fontSans, borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: '#fff', outlineStyle: 'none', overflow: 'hidden'},

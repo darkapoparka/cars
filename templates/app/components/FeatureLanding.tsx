@@ -6,6 +6,7 @@ import DiscoveryHeader from '@/components/DiscoveryHeader';
 import ShowroomBanner from '@/components/ShowroomBanner';
 import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
+import ImportCountryPicker from '@/components/ImportCountryPicker';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellIntent} from '@/components/SellEnquirySheet';
 import {showroom} from '@/lib/showroom';
@@ -34,7 +35,7 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
     <DiscoveryHeader active={kind} hideMobileIdentity />
     {kind === 'sell' ? <ShowroomBanner {...banner}/> : <ShowroomBanner {...banner} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/>}
     <main {...stylex.props(s.content)}>
-      {kind === 'finance' ? <FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/> : null}
+      {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/></> : null}
       <FeatureContent kind={kind} onStart={start} />
     </main>
     <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
