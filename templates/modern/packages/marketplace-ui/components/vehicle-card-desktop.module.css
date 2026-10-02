@@ -9,7 +9,7 @@
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--desktop-border-card);
     border-radius: var(--radius-vehicle);
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
 
   .card[data-presentation="discovery"] [data-slot="vehicle-card-media"] {
@@ -213,14 +213,14 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
     transition:
       border-color var(--duration-interaction),
       box-shadow var(--duration-interaction);
   }
   .card[data-presentation="showroom"]:hover {
     border-color: var(--brand);
-    box-shadow: 0 8px 24px rgb(31 40 58 / 6%);
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media"] {
     width: 100%;

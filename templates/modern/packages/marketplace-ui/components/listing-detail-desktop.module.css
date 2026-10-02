@@ -87,6 +87,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
   }
 
   .purchaseColumn > div > div > * {
@@ -129,7 +130,9 @@
 
   .detail :global([data-slot="listing-details-tabs-desktop"]) {
     margin-top: calc(var(--spacing) * 6);
+    background: var(--panel);
     border-radius: var(--radius-vehicle);
+    box-shadow: var(--desktop-surface-shadow);
   }
 
   .detail

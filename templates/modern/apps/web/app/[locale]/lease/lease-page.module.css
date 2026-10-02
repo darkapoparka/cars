@@ -7,7 +7,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 20px;
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .financePanel [data-slot="lease-vehicle-selector"] {
     margin-top: 0;

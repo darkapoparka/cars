@@ -28,7 +28,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .sectionTitle {
     margin: 0;
@@ -121,6 +121,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .contactDetails h2 {
     grid-column: 1 / -1;
@@ -189,6 +190,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .serviceCard strong {
     display: flex;
@@ -206,6 +208,10 @@
   }
   .serviceCard:hover strong {
     color: var(--brand-text);
+  }
+  .serviceCard:hover {
+    border-color: var(--brand);
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
   .sellPanel[data-desktop-action-panel],
   .importPanel[data-desktop-action-panel] {
@@ -396,7 +402,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .editorialSearch > svg {
     flex-shrink: 0;
@@ -498,7 +504,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 20px;
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .editorial [data-slot="content-card-media"] {
     width: 100%;
@@ -553,6 +559,7 @@
   }
   .editorial [data-slot="content-card"]:hover {
     border-color: var(--brand);
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
   .editorial [data-slot="content-card"]:focus-visible {
     outline: 2px solid var(--ring);

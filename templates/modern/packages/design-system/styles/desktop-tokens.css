@@ -27,6 +27,8 @@
   --desktop-surround: var(--desktop-canvas);
   --desktop-service-canvas: var(--desktop-canvas);
   --desktop-surface: #ffffff;
+  --desktop-surface-shadow: 0 2px 8px rgb(5 11 32 / 3%);
+  --desktop-surface-hover-shadow: 0 8px 24px rgb(5 11 32 / 6%);
   --desktop-tab-rail: #e2e6ed;
   --desktop-tab-rail-height: 4px;
   --desktop-frame-border: #dce0e6;

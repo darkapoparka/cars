@@ -24,6 +24,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .filterBar {
     display: block;
@@ -40,6 +41,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .heading {
     min-width: 0;

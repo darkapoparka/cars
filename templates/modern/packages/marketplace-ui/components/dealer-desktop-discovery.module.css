@@ -140,6 +140,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 20px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .serviceLinks a > span:not(.serviceArrow) {
     display: flex;
@@ -186,6 +187,10 @@
   }
   .serviceLinks a:hover .serviceArrow {
     background: var(--inverse);
+  }
+  .serviceLinks a:hover {
+    border-color: var(--brand);
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
   .serviceLinks[data-placement="hero"] {
     display: none;
@@ -279,6 +284,7 @@
     background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 20px;
+    box-shadow: var(--desktop-surface-shadow);
   }
   .journalImage {
     position: relative;
@@ -337,6 +343,9 @@
   }
   .journalCard:hover h3 {
     color: var(--brand-text);
+  }
+  .journalCard:hover {
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
   .discoveryContent a:focus-visible {
     outline: 2px solid var(--ring);

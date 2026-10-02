@@ -8,7 +8,7 @@
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-vehicle);
-    box-shadow: none;
+    box-shadow: var(--desktop-surface-shadow);
   }
 
   .panel h2:not([class~="sr-only"]) {

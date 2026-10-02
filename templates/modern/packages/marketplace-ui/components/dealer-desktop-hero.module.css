@@ -141,11 +141,13 @@
     color: var(--foreground);
   }
   .hero[data-variant="service"] .serviceContent {
+    padding: 32px 0 56px;
     margin-top: 36px;
+    background: var(--desktop-service-canvas);
   }
   .hero[data-variant="service"] {
-    padding-bottom: 56px;
-    background: var(--desktop-service-canvas);
+    padding-bottom: 0;
+    background: var(--desktop-surface);
   }
   .hero[data-variant="service"] .copy {
     text-align: center;

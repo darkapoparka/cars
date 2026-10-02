@@ -220,7 +220,7 @@
     overflow: hidden;
     color: var(--foreground);
     text-align: left;
-    background: var(--desktop-service-canvas);
+    background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
   }
@@ -266,7 +266,7 @@
     min-height: 152px;
     padding: 16px;
     overflow: hidden;
-    background: var(--desktop-service-canvas);
+    background: var(--panel);
     border: 1px solid var(--border);
     border-radius: 16px;
   }
