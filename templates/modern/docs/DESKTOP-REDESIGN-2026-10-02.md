@@ -1,6 +1,24 @@
 # Modern desktop refresh
 
-## Current category image pills and filled controls
+## Current underlined categories and inset search
+
+The category artwork now sits above its label in four flat tabs immediately above search. The selected tab has a full-width red underline; the category tabs have no filled pill backgrounds. The existing generated car, truck, motorcycle, and van cutouts render at 88 by 48 CSS pixels. The existing category links continue to control search and preserve its URL parameters.
+
+Search is one full-width field with its submit icon inside the right edge. The icon is 20px inside a 44px accessible submit target. The primary filter row now contains Make, Model, Price, Year, Mileage, and More filters in six equal columns, all 48px tall. Mileage uses the existing range picker, appears only once, and no longer increments the More filters count. All styling remains scoped to desktop widths of 1024px and above.
+
+Validation on 2 October 2026 with Node 22.23.2 and pnpm 11.4.0:
+
+- Web typecheck, the public-demo production build, all 271 Web and Marketplace UI unit tests, and Biome for the three changed source/test files passed. The build reused the completed normal project output with `E2E_PUBLIC_RUN_ID=desktop-category-pills-final-local-20261002`.
+- The in-app browser checked Bulgarian and English Home and inventory at actual 1024, 1440, and 1920px widths. All twelve views had equal filter widths and heights, unclipped default labels, four loaded category images, an inset submit target, and no horizontal overflow or broken completed visible images.
+- Selecting a maximum mileage of 100,000 km stayed as a draft on Home, then submitting through the inset icon navigated to `/en/cars?mileageMax=100000` and returned the correct four vehicles. More filters retained its unnumbered label, and expanding it showed no duplicate Mileage control. Reset and keyboard submission returned twelve vehicles. A BMW query submitted through the inset icon returned five vehicles at `/en/cars?q=BMW`.
+- Fresh mobile before/after comparisons covered Bulgarian Home and inventory at 320 and 390px. All 302 persistent measured elements retained their text, geometry, typography, foreground, and background. Four temporary image-loading placeholders in the 320px Home baseline were excluded. No view overflowed or mounted desktop category images. This verifies measured mobile preservation, not pixel-identical image decoding.
+- Fresh navigation and interaction checks recorded no new application errors. The existing desktop layout test assertions were updated to require the submit target inside the search field; separate Playwright/WebKit suites were not rerun.
+
+Current screenshots and JSON evidence are in ignored `runtime/desktop-inline-search-2026-10-02/`, including `modern-desktop-inline-search-1440.png`, the twelve desktop captures, Mileage and text-search results, and this revision's mobile comparison.
+
+Local preview: http://127.0.0.1:6482/bg/cars. Mobile components, dealer identity, sample inventory, provider behavior, and unrelated working changes were preserved. Owner visual acceptance, template release selection, and dealer deployment remain separate.
+
+## Previous category image pills and filled controls
 
 The desktop category row now sits immediately above vehicle search as four compact image pills. The selected pill uses a subtle grey fill and a short, centred red underline. The matching graphite car, truck, motorcycle, and van cutouts add category recognition without another heavy navigation bar. The existing category links continue to select the search category and retain the established URL behavior.
 

@@ -171,9 +171,14 @@ test("home and inventory keep the same quick filters and submit their draft", as
     if (!(inputBox && submitBox)) {
       throw new Error("Search input and submit action must be visible");
     }
-    expect(submitBox.x).toBeGreaterThan(inputBox.x + inputBox.width);
-    expect(submitBox.y).toBeCloseTo(inputBox.y, 0);
-    expect(submitBox.height).toBeCloseTo(inputBox.height, 0);
+    expect(submitBox.x).toBeGreaterThanOrEqual(inputBox.x);
+    expect(submitBox.x + submitBox.width).toBeLessThanOrEqual(
+      inputBox.x + inputBox.width
+    );
+    expect(submitBox.y).toBeGreaterThanOrEqual(inputBox.y);
+    expect(submitBox.y + submitBox.height).toBeLessThanOrEqual(
+      inputBox.y + inputBox.height
+    );
     const bodyBox = await page.locator("body").boundingBox();
     expect(bodyBox?.width).toBeLessThanOrEqual(1248);
     expect(bodyBox?.x).toBeGreaterThan(0);

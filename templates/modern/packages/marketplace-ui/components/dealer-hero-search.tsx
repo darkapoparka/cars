@@ -41,10 +41,7 @@ import {
 import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-hero-search.module.css";
-import {
-  DesktopActionButton,
-  DesktopActionPanel,
-} from "./desktop-action-panel";
+import { DesktopActionPanel } from "./desktop-action-panel";
 import {
   DesktopQuickFilterDialog,
   DesktopQuickRangeDialog,
@@ -103,7 +100,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
   );
   const filterCount = activeFilterChips.length;
   const advancedFilterCount = activeFilterChips.filter(
-    (chip) => !["make-model", "price", "year"].includes(chip.id)
+    (chip) => !["make-model", "price", "year", "mileage"].includes(chip.id)
   ).length;
   const onApply = (updates: Partial<MarketplaceSearchParams>) => {
     setFilters((current) => withSearchParamUpdates(current, updates));
@@ -201,23 +198,22 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 scope="vehicles"
                 searchActionLabel={text("Покажи обявите", "Show results")}
               />
-              <Search
-                aria-hidden="true"
-                className={styles.searchIcon}
-                size={19}
-              />
+              <Button
+                aria-label={
+                  pending
+                    ? text("Търсене…", "Searching…")
+                    : text("Търси", "Search")
+                }
+                className={styles.submit}
+                data-slot="desktop-hero-submit"
+                disabled={pending}
+                size="icon"
+                type="submit"
+                variant="ghost"
+              >
+                <Search aria-hidden="true" className="size-5" />
+              </Button>
             </div>
-            <DesktopActionButton
-              className={styles.submit}
-              data-slot="desktop-hero-submit"
-              disabled={pending}
-              type="submit"
-            >
-              <Search aria-hidden="true" size={18} />
-              {pending
-                ? text("Търсене…", "Searching…")
-                : text("Търси", "Search")}
-            </DesktopActionButton>
           </div>
           <div className={styles.fields}>
             <Button
@@ -326,6 +322,35 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               ]}
               title={text("Година", "Year")}
             />
+            <DesktopQuickRangeDialog
+              active={filters.mileageMax !== undefined}
+              className={fieldClassName}
+              dataSlot="desktop-hero-mileage"
+              description={text(
+                "Задайте максимален пробег.",
+                "Set a maximum mileage."
+              )}
+              formatValue={(value) =>
+                `${numberFormatter.format(value)} ${text("км", "km")}`
+              }
+              isBg={isBg}
+              label={labels.mileage}
+              maximumLabel={text("Максимален пробег", "Maximum mileage")}
+              maximumOnly
+              maximumPrefix={text("До", "Up to")}
+              minimumLabel={text("Минимум", "Minimum")}
+              onApply={({ maximum }) => onApply({ mileageMax: maximum })}
+              presets={[]}
+              quickSelectLabel={text("Бърз избор", "Quick select")}
+              range={marketplaceMileageRange}
+              selectedMaximum={filters.mileageMax}
+              step={5000}
+              thumbLabels={[
+                text("Минимален пробег", "Minimum mileage"),
+                text("Максимален пробег", "Maximum mileage"),
+              ]}
+              title={text("Пробег", "Mileage")}
+            />
             {compact ? (
               <Button
                 aria-controls={advancedFiltersId}
@@ -347,35 +372,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               hidden={compact && !advancedFiltersOpen}
               id={advancedFiltersId}
             >
-              <DesktopQuickRangeDialog
-                active={filters.mileageMax !== undefined}
-                className={fieldClassName}
-                dataSlot="desktop-hero-mileage"
-                description={text(
-                  "Задайте максимален пробег.",
-                  "Set a maximum mileage."
-                )}
-                formatValue={(value) =>
-                  `${numberFormatter.format(value)} ${text("км", "km")}`
-                }
-                isBg={isBg}
-                label={labels.mileage}
-                maximumLabel={text("Максимален пробег", "Maximum mileage")}
-                maximumOnly
-                maximumPrefix={text("До", "Up to")}
-                minimumLabel={text("Минимум", "Minimum")}
-                onApply={({ maximum }) => onApply({ mileageMax: maximum })}
-                presets={[]}
-                quickSelectLabel={text("Бърз избор", "Quick select")}
-                range={marketplaceMileageRange}
-                selectedMaximum={filters.mileageMax}
-                step={5000}
-                thumbLabels={[
-                  text("Минимален пробег", "Minimum mileage"),
-                  text("Максимален пробег", "Maximum mileage"),
-                ]}
-                title={text("Пробег", "Mileage")}
-              />
               <DesktopQuickFilterDialog
                 active={Boolean(filters.transmission)}
                 anyLabel={text("Всички скорости", "Any transmission")}
@@ -591,7 +587,7 @@ function VehicleCategoryTabs({
                   draggable={false}
                   height={926}
                   loading="eager"
-                  sizes="72px"
+                  sizes="88px"
                   src={`/images/categories/desktop-category-${category.id}-v1.png`}
                   width={1698}
                 />
