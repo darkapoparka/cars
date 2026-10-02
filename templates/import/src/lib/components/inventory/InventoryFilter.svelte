@@ -63,13 +63,14 @@
 	@media (min-width: 768px) {
 		.site-filter-trigger {
 			font-weight: var(--bc-weight-control);
+			justify-content: flex-start;
 			min-height: var(--bc-control-height-primary);
 			min-width: 0;
 			max-width: min(100%, 240px);
 			border-radius: var(--bc-radius-pill);
 			border-color: var(--bc-border);
 			background: var(--bc-control);
-			padding-inline: var(--bc-space-2);
+			padding-inline: var(--bc-space-2) var(--bc-space-4);
 			gap: var(--bc-space-2);
 		}
 		.site-filter-trigger:hover,

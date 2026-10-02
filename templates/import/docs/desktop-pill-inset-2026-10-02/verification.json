@@ -1,0 +1,18 @@
+{
+  "source": "src/lib/components/inventory/InventoryFilter.svelte",
+  "sha256": "6c52480398711cdb0e16b96ac3aff82b5f631e1dd9228c786479d811edc394d5",
+  "previousCommit": "9419a99b3078d2601295781d1b75d05fef8b4c1e",
+  "states": 13,
+  "oldPaddingEnd": "8px",
+  "newPaddingEnd": "16px",
+  "labelToArrowGap": "8px",
+  "mobileDefaultSourceUnchanged": true,
+  "checks": [
+    "Scoped Prettier passed",
+    "Scoped ESLint passed",
+    "git diff --check passed",
+    "Vite dev compilation and 13 hydrated layout states passed",
+    "Filter opens; Escape closes and restores Make focus"
+  ],
+  "limits": "CSS-only follow-up. Earlier production build and browser suite are not reported as new checks for this change."
+}
