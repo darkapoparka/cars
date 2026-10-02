@@ -140,6 +140,9 @@ try {
       const panel = page.locator('.dn-mega');
       await panel.waitFor({ state: 'visible' });
       assert.equal(await panel.evaluate(element => element.contains(document.activeElement)), true);
+      await page.mouse.move(1430, 880);
+      assert(await panel.isVisible(), 'Pointer departure must preserve a keyboard-focused menu');
+      assert.equal(await panel.evaluate(element => element.contains(document.activeElement)), true);
       await page.keyboard.press('Escape');
       await panel.waitFor({ state: 'hidden' });
       assert.equal(await trigger.evaluate(element => element === document.activeElement), true);

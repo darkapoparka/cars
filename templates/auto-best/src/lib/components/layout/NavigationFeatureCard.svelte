@@ -36,8 +36,8 @@
   .dn-mega__feature--red:hover { background: var(--dn-red); }
   .dn-mega__feature--ink { background: var(--dn-ink); color: var(--dn-white); }
   .dn-mega__feature--ink:hover { background: var(--dn-ink); }
-  .copy { position: relative; z-index: 1; min-height: 2.5em; font-size: var(--dn-text-subheading); }
-  strong { display: block; color: inherit; font-size: inherit; font-weight: var(--dn-menu-heading-weight); line-height: var(--dn-leading-heading); }
+  .copy { position: relative; z-index: 1; min-height: 2.5em; font-size: var(--dn-text-subheading); overflow-wrap: anywhere; }
+  strong { display: block; color: inherit; font-size: inherit; font-weight: var(--dn-menu-heading-weight); line-height: var(--dn-leading-control); }
   .artwork { display: flex; flex: none; align-items: flex-end; justify-content: center; height: var(--dn-menu-art-height); margin: auto -12px 24px; }
   .artwork :global(.feature-artwork) { width: min(96%, calc(var(--dn-menu-art-height) * var(--artwork-ratio))); height: auto; }
   .artwork--vehicle :global(.feature-artwork) { width: min(calc(var(--dn-menu-art-height) * var(--vehicle-width) / var(--vehicle-frame-height)), calc(96% * var(--vehicle-width) / var(--vehicle-frame-width))); }

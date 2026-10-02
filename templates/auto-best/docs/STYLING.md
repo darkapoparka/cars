@@ -107,6 +107,22 @@ Desktop navigation runs Home, Inventory, Guides, About, Contact through the
 `desktopNavigation` export. Its DOM and keyboard order agree; other menus use
 their existing content order.
 
+`Header.svelte` keeps a dropdown open while one of its links has keyboard focus,
+even when the pointer leaves. Escape closes it and restores the trigger; moving
+focus outside dismisses it. At compact container widths, navigation can wrap
+between the logo and action columns. Feature titles use the control leading
+role, and long titles/sidebar labels can wrap with enlarged text. When enlarged
+text leaves insufficient room for three feature cards or two link groups,
+their container queries reflow the cards into two columns with a full-width
+last card and the link groups into one column.
+`LocaleSettingsMenu.svelte` also dismisses when focus leaves its controls.
+
+At 992px and above, the filter dialog's search field uses the 52px minimum
+prominent role with an inset charcoal submit button using the 40px compact
+minimum. Both can grow with enlarged text. The button has the same vertical
+clearance above and below and sits close to the field's right edge; its label,
+live count and arrow retain their existing alignment and submission behavior.
+
 Below 992px, About and general Contact use an overlay header on their dark hero,
 with an inset white card overlapping the banner by 52px, as on Home. About uses
 `EntryCard.svelte` for its only visible page heading, a service-section shortcut,

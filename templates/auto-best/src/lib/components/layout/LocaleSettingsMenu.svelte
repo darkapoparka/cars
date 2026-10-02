@@ -12,6 +12,10 @@
     if (open && event.target instanceof Node && !root?.contains(event.target)) open = false;
   }
 
+  function handleFocusIn(event: FocusEvent) {
+    if (open && event.target instanceof Node && !root?.contains(event.target)) open = false;
+  }
+
   function handleKeydown(event: KeyboardEvent) {
     if (!open || event.key !== 'Escape') return;
     event.preventDefault();
@@ -20,7 +24,7 @@
   }
 </script>
 
-<svelte:window onpointerdown={handlePointerDown} onkeydown={handleKeydown} />
+<svelte:window onpointerdown={handlePointerDown} onfocusin={handleFocusIn} onkeydown={handleKeydown} />
 <div class="locale-settings-menu" bind:this={root}>
   <button
     bind:this={trigger}

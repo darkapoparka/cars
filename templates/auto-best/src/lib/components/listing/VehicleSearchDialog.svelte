@@ -509,6 +509,21 @@
     cursor: not-allowed;
   }
 
+  @media (min-width: 992px) {
+    .dn-listing-filter__dialog-search {
+      flex: 0 0 auto;
+      height: auto;
+      min-height: var(--dn-control-height-prominent);
+      padding: var(--dn-space-1) var(--dn-space-1) var(--dn-space-1) var(--dn-space-4);
+    }
+
+    .dn-listing-filter__inline-submit {
+      height: auto;
+      min-height: var(--dn-control-height-compact);
+      padding: var(--dn-space-1) var(--dn-space-4);
+    }
+  }
+
   .dn-listing-filter__filter-groups {
     min-width: 0;
   }
