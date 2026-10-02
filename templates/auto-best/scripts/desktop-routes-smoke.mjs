@@ -53,12 +53,9 @@ async function heroGeometry(page) {
 function assertDesktopFrame(geometry, route = '') {
   const company = route === 'about-us' || route === 'contact';
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
-  assert.equal(geometry.copy.y - geometry.hero.y, route === 'about-us' ? 232 : company ? 272 : 200, 'Each hero composition keeps its introduction anchor');
+  assert.equal(geometry.copy.y - geometry.hero.y, company ? 272 : 200, 'Each hero composition keeps its introduction anchor');
   if (route === 'about-us') {
-    assert.equal(geometry.lead.y - geometry.hero.y, 232, 'About starts with its compact location badge');
-    assert.equal(geometry.lead.height, 28, 'About uses a compact city badge');
-    assert(geometry.lead.width <= 160, 'The About badge does not repeat the full street address');
-    assert.equal(geometry.heading.y - geometry.lead.bottom, 12, 'About places its location above the title with a clear gap');
+    assert.equal(geometry.lead.y - geometry.heading.bottom, 8, 'About places its plain location subtitle directly below the title');
   }
   assert.equal(geometry.heading.y - geometry.hero.y, company ? 272 : 200, 'About and Contact align their titles lower in the photo banners');
   assert.equal(geometry.controls.y - geometry.hero.y, company ? 384 : 340, 'Company actions align; search and service panels keep their anchor');
@@ -100,7 +97,9 @@ try {
             assert.deepEqual(geometry.broken, [], 'Broken visible images');
             assert.deepEqual(errors, [], 'Browser runtime errors');
             if (route === 'blog') {
-              assert.equal(await page.locator('.dn-blog-search__submit').isVisible(), width < 992, 'The touch search button is visible only on mobile');
+              assert(await page.locator('.dn-blog-search__submit').isVisible(), 'Article search has an explicit submit action at every viewport');
+              assert.equal(await page.locator('.dn-blog-search__submit-icon--mobile').isVisible(), width < 992, 'The touch search action keeps its mobile arrow');
+              assert.equal(await page.locator('.dn-blog-search__submit-icon--desktop').isVisible(), width >= 992, 'Desktop search uses the same search glyph as Home');
               assert.equal(await page.locator('.dn-blog-search__icon--mobile').isVisible(), width < 992, 'Mobile search uses its dedicated icon');
               assert.equal(await page.locator('.dn-blog-search__icon--desktop').isVisible(), width >= 992, 'Desktop retains its search icon');
             }
@@ -132,10 +131,33 @@ try {
             }
             if (width >= 992) {
               assertDesktopFrame(geometry, route);
+              if (!imageScene && width < 1200) {
+                const vehicleBodies = await page.locator('.dn-route-hero .dn-campaign-vehicles__car').evaluateAll(cars => cars.map(car => {
+                  const style = getComputedStyle(car);
+                  const bodyHeight = parseFloat(style.getPropertyValue('--car-height'));
+                  const bottomRatio = parseFloat(style.getPropertyValue('--art-bottom-ratio'));
+                  return { bottom: car.getBoundingClientRect().top + bodyHeight * bottomRatio };
+                }));
+                for (const body of vehicleBodies) assert(body.bottom <= geometry.controls.y - 12, 'Laptop search panels leave the painted vehicle bodies visible above their outer corners');
+              }
               assert.deepEqual(await page.locator('.dn-nav__list > li > a').evaluateAll(links => links.map(link => new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, ''))), ['', 'listing-grid', 'blog', 'about-us', 'contact'], 'Desktop places Guides before About in DOM and keyboard order');
               assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
-              assert.equal(geometry.leadSize, route === '' || route === 'about-us' ? '14px' : '18px', 'Location badges use metadata type; descriptions use lead type');
-              if (route !== 'about-us') assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
+              assert.equal(geometry.leadSize, route === '' ? '14px' : '18px', 'Home keeps its metadata badge; About and route subtitles use lead type');
+              assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
+              if (route === 'blog') {
+                const panel = page.locator('.dn-blog-toolbar');
+                const panelStyle = await panel.evaluate(e => {
+                  const s = getComputedStyle(e);
+                  return { background: s.backgroundColor, radius: s.borderRadius, padding: parseFloat(s.paddingLeft) };
+                });
+                assert.equal(panelStyle.background, 'rgb(255, 255, 255)', 'Search and categories share one white panel');
+                assert.equal(panelStyle.radius, '16px', 'The Blog panel uses the Home panel radius');
+                for (const selector of ['.dn-blog-search', '.dn-blog-categories']) {
+                  const control = await page.locator(selector).boundingBox();
+                  assert(control.x >= geometry.controls.x + panelStyle.padding && control.x + control.width <= geometry.controls.right - panelStyle.padding + 1, 'Search and categories share the panel inset');
+                  assert(control.y >= geometry.controls.y + panelStyle.padding && control.y + control.height <= geometry.controls.bottom - panelStyle.padding + 1, 'The complete search and category row fit inside the white panel');
+                }
+              }
               if (route === 'listing-grid') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
@@ -193,14 +215,22 @@ try {
                 for (const link of await showroom.locator('a[target="_blank"]').all()) assert.match(await link.getAttribute('rel'), /noopener/, 'External links isolate their browsing context');
               }
               if (route === 'about-us') {
-                const location = page.locator('.dn-about-hero .dn-hero-location a');
+                const subtitle = page.locator('.dn-about-hero .dn-hero-location--subtitle');
+                const location = subtitle.locator('a');
                 const fullAddress = new URL(await location.getAttribute('href')).searchParams.get('query');
-                assert.equal(await location.getAttribute('title'), fullAddress, 'The compact badge retains the full address on hover');
-                assert.equal(await location.getAttribute('aria-label'), fullAddress, 'The compact badge retains the full accessible address');
-                assert(fullAddress.includes(await location.innerText()), 'The visible badge identifies the configured city');
+                assert.equal(await location.getAttribute('title'), fullAddress, 'The subtitle directions link retains the full address on hover');
+                assert((await location.getAttribute('aria-label')).includes(fullAddress), 'Directions has a localized accessible label with the full address');
+                for (const part of (await location.innerText()).split(' · ')) assert(fullAddress.includes(part), 'The visible subtitle contains the configured city and street address');
+                assert.deepEqual(await subtitle.evaluate(e => {
+                  const s = getComputedStyle(e);
+                  return { background: s.backgroundColor, radius: s.borderRadius, padding: s.padding };
+                }), { background: 'rgba(0, 0, 0, 0)', radius: '0px', padding: '0px' }, 'About presents its location as a plain subtitle without a badge');
+                await location.hover();
+                assert.equal(await location.evaluate(e => getComputedStyle(e).color), 'rgb(255, 255, 255)', 'The location remains readable on hover');
+                await location.focus();
+                assert.equal(await location.evaluate(e => getComputedStyle(e).outlineColor), 'rgb(255, 255, 255)', 'Directions has a visible white focus ring on the dark hero');
                 assert.equal(await page.locator('.dn-about-showroom').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Map sits on the shared grey canvas');
                 for (const panel of await page.locator('.dn-about-process__panel, .dn-desktop-showroom').all()) assert.equal(await panel.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'About services and map have white outer containers');
-                assert(!(await page.locator('.dn-about-hero__lead').isVisible()), 'The demo description is replaced by the location badge on desktop');
                 const services = await page.locator('.dn-about-process__panel').boundingBox();
                 const visit = await page.locator('.dn-desktop-showroom').boundingBox();
                 assert(Math.abs(visit.y - (services.y + services.height) - 64) <= 1, 'Showroom follows services with the shared 64px section gap');
@@ -223,13 +253,38 @@ try {
             }
             if (route === 'blog' && width === 1440) {
               const category = page.locator('.dn-blog-categories a:not(.active)').first();
-              assert.equal(await category.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Inactive categories have visible white pill surfaces');
+              assert.equal(await category.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(246, 247, 249)', 'Inactive categories use pale pill surfaces inside the white panel');
               const selected = await page.locator('.dn-blog-categories .active').evaluate(e => getComputedStyle(e).backgroundColor);
               await category.hover();
               assert.equal(await category.evaluate(e => getComputedStyle(e).backgroundColor), selected, 'Category hover preserves the red surface behind white text');
               const search = page.locator('#dn-blog-search');
               await search.focus();
               assert.equal(await search.evaluate(e => getComputedStyle(e).outlineStyle), 'solid', 'Search has a visible focus outline');
+              const submit = page.locator('.dn-blog-search__submit');
+              await submit.focus();
+              assert.equal(await submit.evaluate(e => getComputedStyle(e).outlineStyle), 'solid', 'The desktop search action has visible keyboard focus');
+              const total = await page.locator('.dn-blog-card').count();
+              const selectedCategory = new URL(await category.getAttribute('href'), base).searchParams.get('category');
+              await category.click();
+              await page.waitForURL(url => url.searchParams.get('category') === selectedCategory);
+              const query = await page.locator('.dn-blog-card h2').first().innerText();
+              await search.fill(query);
+              await submit.click();
+              await page.waitForURL(url => url.searchParams.get('q') === query);
+              assert.equal(new URL(page.url()).pathname, `/${locale}/blog`, 'Article search preserves the chosen language');
+              assert.equal(new URL(page.url()).searchParams.get('category'), selectedCategory, 'Article search preserves the selected category');
+              assert.equal(await page.locator('.dn-blog-card').count(), 1, 'Native GET search filters the localized article title');
+              await search.fill('zzzznomatch');
+              await search.press('Enter');
+              await page.waitForURL(url => url.searchParams.get('q') === 'zzzznomatch');
+              assert(await page.locator('.dn-blog-empty').isVisible(), 'Keyboard submission shows the honest empty result');
+              await page.locator('.dn-blog-categories a').first().click();
+              await page.waitForURL(url => !url.searchParams.has('category'));
+              assert.equal(new URL(page.url()).searchParams.get('q'), 'zzzznomatch', 'Changing category preserves the search query');
+              await search.fill('');
+              await submit.click();
+              await page.waitForURL(url => url.searchParams.get('q') === '');
+              assert.equal(await page.locator('.dn-blog-card').count(), total, 'Clearing search restores the complete article list');
             }
             if (route === 'listing-grid' && width === 1440) {
               const count = page.locator('.dn-listing-hero__copy p');
@@ -290,6 +345,10 @@ try {
             }
             if (route === 'listing-grid' || route === '') {
               assert.deepEqual(geometry.controls, initial.controls, 'Home and Inventory share the complete search-panel bounds');
+            }
+            if (route === 'blog') {
+              assert.equal(geometry.controls.x, initial.controls.x, 'Blog uses the Home panel alignment');
+              assert.equal(geometry.controls.width, initial.controls.width, 'Blog uses the Home panel width');
             }
             frames.push({ route: route || 'home', hero: geometry.hero, heading: geometry.heading, controls: geometry.controls, scene: geometry.scene, logo: geometry.logo });
           }

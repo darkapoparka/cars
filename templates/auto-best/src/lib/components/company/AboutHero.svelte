@@ -19,9 +19,8 @@
   </picture>
   <div class="container dn-about-hero__content dn-route-hero__layout">
     <div class="dn-about-hero__copy dn-route-hero__copy">
-      <HeroLocation aboveTitle compact />
       <h1 id="about-title">{i18n.t("m_b4b580a9ad8c")}</h1>
-      <p class="dn-about-hero__lead">{i18n.t("m_b9634bb91bba", { p0: i18n.dealer('city') })}</p>
+      <HeroLocation appearance="subtitle" />
     </div>
     <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/listing-grid'))}>
       <span>{i18n.t("m_9304497d3f4b")}</span>
@@ -49,7 +48,4 @@
     .dn-about-hero__showroom { width: min(calc(100% - var(--dn-space-6)), 320px); }
   }
 
-  @media (min-width: 992px) {
-    .dn-about-hero__lead { display: none; }
-  }
 </style>

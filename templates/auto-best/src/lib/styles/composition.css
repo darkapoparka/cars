@@ -175,8 +175,6 @@
     left: 50%;
     width: min(var(--dn-hero-center-width), calc(100% - 48px));
     margin-top: 0;
-    padding: 0;
-    background: transparent;
     transform: translateX(-50%);
   }
 
@@ -209,10 +207,6 @@
   .dn-route-hero--company {
     --dn-route-hero-content-top: 272px;
     --dn-route-hero-control-top: 384px;
-  }
-
-  .dn-about-hero.dn-route-hero--company {
-    --dn-route-hero-content-top: 232px;
   }
 
   .dn-app-shell main[data-layout='flush'] {

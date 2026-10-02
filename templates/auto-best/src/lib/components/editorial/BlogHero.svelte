@@ -27,7 +27,10 @@
           <span class="dn-blog-search__icon dn-blog-search__icon--mobile"><MobileActionIcon name="search" size={18} /></span>
           <input {@attach i18n.validation} id="dn-blog-search" type="search" name="q" value={filters.q} placeholder={i18n.t("m_2de9b4285a63")} />
           {#if filters.category}<input type="hidden" name="category" value={filters.category} />{/if}
-          <button class="dn-blog-search__submit dn-icon-button" type="submit" aria-label={i18n.t("m_2de9b4285a63")}><MobileActionIcon name="arrow" size={16} /></button>
+          <button class="dn-blog-search__submit dn-icon-button" type="submit" aria-label={i18n.t("m_2de9b4285a63")}>
+            <span class="dn-blog-search__submit-icon--desktop"><Icon name="search" size={20} /></span>
+            <span class="dn-blog-search__submit-icon--mobile"><MobileActionIcon name="arrow" size={16} /></span>
+          </button>
         </form>
       </div>
 

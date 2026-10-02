@@ -2,20 +2,20 @@
   import { getI18n } from '$lib/locale/context';
   import Icon from './Icon.svelte';
 
-  let { aboveTitle = false, compact = false }: { aboveTitle?: boolean; compact?: boolean } = $props();
+  let { appearance = 'badge' }: { appearance?: 'badge' | 'subtitle' } = $props();
   const i18n = getI18n();
   const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i18n.dealer('address'))}`);
 </script>
 
-<p class="dn-hero-location" class:dn-hero-location--above-title={aboveTitle} class:dn-hero-location--compact={compact}>
-  <Icon name="map-pin" size={compact ? 14 : 16} />
+<p class="dn-hero-location" class:dn-hero-location--subtitle={appearance === 'subtitle'}>
+  <Icon name="map-pin" size={16} />
   <a
     href={directionsUrl}
-    title={compact ? i18n.dealer('address') : undefined}
-    aria-label={compact ? i18n.dealer('address') : undefined}
+    title={i18n.dealer('address')}
+    aria-label={i18n.t("m_ddaed2048f75", { p0: i18n.dealer('address') })}
     target="_blank"
     rel="noopener noreferrer"
-  >{#if compact}{i18n.dealer('city')}{:else}{i18n.dealer('city')}, {i18n.dealer('addressLine')}{/if}</a>
+  >{i18n.dealer('city')}{appearance === 'subtitle' ? ' · ' : ', '}{i18n.dealer('addressLine')}</a>
 </p>
 
 <style>
@@ -40,18 +40,15 @@
       line-height: var(--dn-leading-meta);
       text-wrap: balance;
     }
-    :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--above-title {
-      margin: 0 auto var(--dn-space-3);
-    }
-    :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--compact {
-      min-height: 28px;
-      gap: var(--dn-space-1);
-      padding: 0 var(--dn-space-3);
-    }
-    .dn-hero-location--compact a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 28px;
+    :global(.dn-route-hero .dn-route-hero__copy) .dn-hero-location--subtitle {
+      min-height: 0;
+      margin-top: var(--dn-space-2);
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      color: var(--dn-white);
+      font-size: var(--dn-text-lead);
+      line-height: var(--dn-leading-body);
     }
     .dn-hero-location :global(svg) {
       flex-shrink: 0;
@@ -69,5 +66,7 @@
       outline-offset: 4px;
       border-radius: 2px;
     }
+    .dn-hero-location--subtitle a:hover { color: var(--dn-white); }
+    .dn-hero-location--subtitle a:focus-visible { outline-color: var(--dn-white); }
   }
 </style>
