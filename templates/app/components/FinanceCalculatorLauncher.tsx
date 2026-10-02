@@ -6,6 +6,7 @@ import {ArrowRight, Calculator, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
+import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import FinanceCalculator from './FinanceCalculator';
 import {useModal} from './useModal';
 
@@ -16,9 +17,12 @@ export default function FinanceCalculatorLauncher() {
   const panel = useModal(open, close);
 
   return <>
-    <div {...stylex.props(s.launcherRow)}><button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={open} aria-controls={id + '-dialog'} onClick={() => setOpen(true)} {...stylex.props(s.launcher, t.control)}>
-      <Calculator size={20} aria-hidden="true" {...stylex.props(s.icon)}/><span>{tx('Finance calculator')}</span><ArrowRight size={18} aria-hidden="true" {...stylex.props(s.icon)}/>
-    </button></div>
+    <section data-finance-calculator-feature aria-labelledby={id + '-launcher-title'} {...stylex.props(s.feature)}>
+      <div><h2 id={id + '-launcher-title'} {...stylex.props(t.heading)}>{tx('Finance calculator')}</h2><p {...stylex.props(s.description, t.body)}>{tx('Explore your monthly payment.')}</p></div>
+      <button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={open} aria-controls={id + '-dialog'} onClick={() => setOpen(true)} {...stylex.props(s.launcher, t.control)}>
+        <Calculator size={22} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Calculate')}<ArrowRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
+      </button>
+    </section>
     <div hidden={!open} {...stylex.props(s.backdrop, !open && s.hidden)} onClick={event => {if (event.currentTarget === event.target) close();}}>
       <section id={id + '-dialog'} ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id + '-title'} {...stylex.props(s.sheet)}>
         <header {...stylex.props(s.header)}><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx('Finance calculator')}</h2><button type="button" aria-label={tx('Close calculator')} onClick={close} {...stylex.props(s.close)}><X size={23} aria-hidden="true"/></button></header>
@@ -29,8 +33,9 @@ export default function FinanceCalculatorLauncher() {
 }
 
 const s = stylex.create({
-  launcherRow: {display: 'flex', marginTop: 12},
-  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, minHeight: $.controlHeight, maxWidth: '100%', padding: '10px 16px', color: $.ink, textAlign: 'left', borderWidth: 0, borderRadius: 30, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, cursor: 'pointer', outlineColor: $.ink, outlineOffset: 3},
+  feature: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', default: 'minmax(0,1fr) minmax(240px,320px)'}, alignItems: 'center', gap: {[media.mobile]: 18, default: 28}, marginTop: 20, padding: {[media.mobile]: 20, default: 28}, color: '#fff', borderRadius: 20, backgroundColor: campaign.surface},
+  description: {marginTop: 8, color: campaign.muted},
+  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, width: '100%', minHeight: 56, padding: '12px 20px', color: campaign.actionText, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#f0f0f2'}, cursor: 'pointer', outlineColor: '#fff', outlineOffset: 3},
   icon: {flexShrink: 0},
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.58)'},
   hidden: {display: 'none'},

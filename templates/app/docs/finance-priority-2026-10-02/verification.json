@@ -1,0 +1,224 @@
+{
+  "date": "2026-10-02",
+  "origin": "http://127.0.0.1:6483",
+  "checks": [
+    {
+      "beforeOptions": true,
+      "budget": {
+        "height": 207,
+        "width": 697,
+        "x": 28,
+        "y": 1106.65625
+      },
+      "budgetBelow": true,
+      "budgetEyebrowAbsent": true,
+      "button": {
+        "height": 56,
+        "width": 320,
+        "x": 377,
+        "y": 501
+      },
+      "feature": {
+        "height": 122,
+        "width": 697,
+        "x": 28,
+        "y": 468
+      },
+      "firstMainSection": true,
+      "overflow": false,
+      "processActions": 0,
+      "processRows": 6,
+      "stepsHeading": {
+        "height": 34,
+        "text": "Финансиране, стъпка по стъпка",
+        "width": 697,
+        "x": 28,
+        "y": 1341.65625
+      },
+      "titleFont": "600 28px / 34px Roboto, Arial, sans-serif",
+      "url": "/bg/finance",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "beforeOptions": true,
+      "budget": {
+        "height": 183,
+        "width": 1184,
+        "x": 120.5,
+        "y": 858.328125
+      },
+      "budgetBelow": true,
+      "budgetEyebrowAbsent": true,
+      "button": {
+        "height": 56,
+        "width": 320,
+        "x": 956.5,
+        "y": 530
+      },
+      "feature": {
+        "height": 122,
+        "width": 1184,
+        "x": 120.5,
+        "y": 497
+      },
+      "firstMainSection": true,
+      "overflow": false,
+      "processActions": 0,
+      "processRows": 6,
+      "stepsHeading": {
+        "height": 34,
+        "text": "Финансиране, стъпка по стъпка",
+        "width": 1184,
+        "x": 120.5,
+        "y": 1069.328125
+      },
+      "titleFont": "600 28px / 34px Roboto, Arial, sans-serif",
+      "url": "/bg/finance",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "beforeOptions": true,
+      "budget": {
+        "height": 155,
+        "width": 281,
+        "x": 12,
+        "y": 723.1875
+      },
+      "budgetBelow": true,
+      "budgetEyebrowAbsent": true,
+      "button": {
+        "height": 56,
+        "width": 241,
+        "x": 32,
+        "y": 372
+      },
+      "feature": {
+        "height": 172,
+        "width": 281,
+        "x": 12,
+        "y": 276
+      },
+      "firstMainSection": true,
+      "overflow": false,
+      "processActions": 0,
+      "processRows": 6,
+      "stepsHeading": {
+        "height": 28,
+        "text": "Steps",
+        "width": 281,
+        "x": 12,
+        "y": 906.1875
+      },
+      "titleFont": "600 24px / 28px Geist, Roboto, Arial, sans-serif",
+      "url": "/en/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "beforeOptions": true,
+      "budget": {
+        "height": 155,
+        "width": 281,
+        "x": 12,
+        "y": 723.1875
+      },
+      "budgetBelow": true,
+      "budgetEyebrowAbsent": true,
+      "button": {
+        "height": 56,
+        "width": 241,
+        "x": 32,
+        "y": 372
+      },
+      "feature": {
+        "height": 172,
+        "width": 281,
+        "x": 12,
+        "y": 276
+      },
+      "firstMainSection": true,
+      "overflow": false,
+      "processActions": 0,
+      "processRows": 6,
+      "stepsHeading": {
+        "height": 28,
+        "text": "Стъпки",
+        "width": 281,
+        "x": 12,
+        "y": 906.1875
+      },
+      "titleFont": "600 24px / 28px Roboto, Arial, sans-serif",
+      "url": "/bg/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "beforeOptions": true,
+      "budget": {
+        "height": 155,
+        "width": 351,
+        "x": 12,
+        "y": 779.1875
+      },
+      "budgetBelow": true,
+      "budgetEyebrowAbsent": true,
+      "button": {
+        "height": 56,
+        "width": 311,
+        "x": 32,
+        "y": 372
+      },
+      "feature": {
+        "height": 172,
+        "width": 351,
+        "x": 12,
+        "y": 276
+      },
+      "firstMainSection": true,
+      "overflow": false,
+      "processActions": 0,
+      "processRows": 6,
+      "stepsHeading": {
+        "height": 28,
+        "text": "Стъпки",
+        "width": 351,
+        "x": 12,
+        "y": 962.1875
+      },
+      "titleFont": "600 24px / 28px Roboto, Arial, sans-serif",
+      "url": "/bg/finance",
+      "viewport": [
+        390,
+        844
+      ]
+    }
+  ],
+  "interaction": {
+    "isolated": true,
+    "monthly": "€ 667",
+    "phoneDialog": {
+      "bottom": 720,
+      "height": 545,
+      "left": 0,
+      "right": 320,
+      "top": 175,
+      "width": 320,
+      "x": 0,
+      "y": 175
+    },
+    "scrollLocked": true,
+    "valuesRetainedAfterReopen": true,
+    "escapeRestoresFocus": true,
+    "backClosesWithoutNavigation": true
+  }
+}

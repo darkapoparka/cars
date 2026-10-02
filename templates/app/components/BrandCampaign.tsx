@@ -25,8 +25,7 @@ export default function BrandCampaign({kind, onAction}: {kind: Kind; onAction?: 
   return <section data-brand-campaign={kind} {...stylex.props(s.campaign, kind === 'finance' && s.wide, kind === 'care' && s.care)}>
     <Image src={showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art, kind === 'care' && s.careArt, kind === 'finance' && s.financeArt)} />
     <div {...stylex.props(s.copy, kind === 'sell' && s.sellCopy, kind === 'finance' && s.financeCopy, kind === 'care' && s.careCopy)}>
-      {kind === 'finance' ? <p {...stylex.props(t.caption)}>{tx(showroom.name)}{tx(' Finance')}</p> : null}
-      <h2 {...stylex.props(s.title, t.heading, kind === 'care' && s.careTitle)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
+      <h2 {...stylex.props(s.title, t.heading, kind !== 'sell' && s.titleAtTop)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
       <p {...stylex.props(s.description, t.body, kind === 'finance' && s.shortDescription)}>{kind === 'care' ? tx(campaign.mobileCopy) : copy(campaign.copy, campaign.mobileCopy)}</p>
       {onAction ? <button type="button" onClick={onAction} {...stylex.props(s.action, t.control)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></button> : <Link href={campaign.href} {...stylex.props(s.action, t.control)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></Link>}
     </div>
@@ -43,7 +42,7 @@ const s = stylex.create({
   sellCopy: {marginTop: 'auto'},
   financeCopy: {padding: {[media.mobile]: 18, default: 28}},
   careCopy: {width: {[media.mobile]: '100%', default: '65%'}, padding: {[media.mobile]: 20, default: 28}},
-  careTitle: {marginTop: 0},
+  titleAtTop: {marginTop: 0},
   title: {maxWidth: 440, marginTop: 8, textWrap: 'pretty'},
   description: {maxWidth: 350, marginTop: 9, color: theme.muted},
   shortDescription: {maxWidth: {[media.mobile]: '70%', default: '55%'}},
