@@ -24,7 +24,8 @@ try {
       if (route === '/') {
         assert.equal(await form.locator('.dn-discovery__filters, .dn-discovery__actions').count(), 0);
         const formHeight = Math.round((await form.boundingBox()).height);
-        assert(formHeight >= 128 && formHeight <= 154, `Home discovery panel must remain compact, got ${formHeight}px`);
+        const searchHeight = (await form.locator('.dn-discovery__search').boundingBox()).height;
+        assert(formHeight >= searchHeight + 44 + 8 && formHeight <= 154, `Home discovery panel must fit its search row, full-size filters and row spacing without excess height, got ${formHeight}px`);
       } else {
         assert.equal(await form.locator('.dn-discovery__filters').count(), 0);
         const resultFilter = page.locator('.dn-listing-results__filters');
@@ -55,7 +56,7 @@ try {
         const accessibleName = await label.locator('span').innerText();
         assert.equal(await form.getByRole('combobox', { name: accessibleName, exact: true }).count(), 1, 'Native filters retain permanent accessible names');
         assert.equal(await select.locator('option:checked').innerText(), emptyLabels[name], 'Unset native filters show the field name on one line');
-        assert((await select.boundingBox()).height >= 44, 'Filter retains a full-height click target');
+        assert((await label.boundingBox()).height >= 44, 'The wrapping label retains the full filter click target, including its border');
       }
       const facetWidths = await form.locator('.dn-discovery__facets select').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
       assert.ok(Math.max(...facetWidths) - Math.min(...facetWidths) < 1);

@@ -31,7 +31,11 @@ Contact align their titles at 272px and their actions at 384px, giving the simpl
 photo banners more space below navigation. About places its plain location
 subtitle 8px below the title, keeping title, address and action in one group.
 Home and Inventory use the same search-panel bounds, padding and
-radius; Blog uses that same center lane with one white panel containing the
+radius. Their native desktop facets use a 44px field face with 20px labels;
+at compact desktop widths below 1200px, the labels use the 18px role so the
+seven field names remain visible. The wrapping label owns the full click target,
+including the border. Mobile and tablet controls retain their existing roles.
+Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
 across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop
 cutouts by the area of their visible alpha bounds. Hero pairs, section banners,

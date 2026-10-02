@@ -160,8 +160,12 @@
     .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
-    .dn-discovery .dn-discovery__facets label > select { height: 56px; }
+    .dn-discovery .dn-discovery__facets label { min-height: var(--dn-control-height-default); box-sizing: border-box; }
+    .dn-discovery .dn-discovery__facets label > select { height: auto; min-height: calc(var(--dn-control-height-default) - 2px); padding-block: var(--dn-space-2); font-size: var(--dn-text-lead); }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
+  }
+  @media (min-width: 1200px) {
+    .dn-discovery .dn-discovery__facets label > select { font-size: var(--dn-text-card); }
   }
 </style>
