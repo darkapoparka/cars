@@ -1,4 +1,5 @@
 # Generated homepage bytes are recorded in .template/port.json.
 src/reference/Home*.svelte
+src/reference/CuratedHome.svelte
 # Preserve imported vendor source and its asset hashes.
 public/reference/

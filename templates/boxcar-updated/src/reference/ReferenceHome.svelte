@@ -2,6 +2,7 @@
   import type { Component } from "svelte";
   let { home }: { home: number } = $props();
   const pages = import.meta.glob<{ default: Component }>("./Home*.svelte");
+  const curated = () => import("./CuratedHome.svelte");
   let Page = $state<Component>();
   let stylesLoaded = $state(0);
   const styleLoaded = () => {
@@ -10,9 +11,11 @@
   $effect(() => {
     let active = true;
     Page = undefined;
-    void pages[`./Home${home}.svelte`]().then((module) => {
-      if (active) Page = module.default;
-    });
+    void (home === 0 ? curated() : pages[`./Home${home}.svelte`]()).then(
+      (module) => {
+        if (active) Page = module.default;
+      },
+    );
     return () => {
       active = false;
     };
@@ -34,5 +37,10 @@
   <link rel="stylesheet" href="/reference/css/mmenu.css" onload={styleLoaded} />
   <link rel="stylesheet" href="/reference/css/style.css" onload={styleLoaded} />
   <link rel="stylesheet" href="/reference/native.css" onload={styleLoaded} />
+  {#if home === 0}<link
+      rel="stylesheet"
+      href="/reference/curated.css"
+      onload={styleLoaded}
+    />{/if}
 </svelte:head>
-{#if Page && stylesLoaded >= 6}<Page />{/if}
+{#if Page && stylesLoaded >= (home === 0 ? 7 : 6)}<Page />{/if}

@@ -1,5 +1,5 @@
 import { tick } from "svelte";
-import { homeForPath } from "../data/homes";
+import { homeForPath, isCuratedHomePath } from "../data/homes";
 let pendingScroll: AbortController | undefined;
 export const route = $state({
   path: window.location.pathname,
@@ -61,7 +61,7 @@ export function setupRouter() {
     const top = Number(event.state?.scrollY) || 0;
     const restore = () => window.scrollTo({ top, behavior: "instant" });
     if (
-      homeForPath(route.path) &&
+      (homeForPath(route.path) || isCuratedHomePath(route.path)) &&
       !document.querySelector(".reference-home[data-ready=true]")
     ) {
       pendingScroll = new AbortController();

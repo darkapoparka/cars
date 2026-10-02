@@ -1,6 +1,5 @@
 <script lang="ts">
   import { brand } from "../data/brand";
-  import { homes } from "../data/homes";
   import { makes } from "../lib/catalog";
   import { filterQuery } from "../lib/domain";
   import Icon from "./Icon.svelte";
@@ -77,11 +76,6 @@
         <a href="/contact/">Plan your visit <Icon name="arrow" size={14} /></a>
         <p class="sample-note">Sample inventory · demo enquiries</p>
       </div>
-    </div>
-    <div class="footer-homes" aria-label="Homepage designs">
-      {#each homes as item}<a class:active={home === item.id} href={item.route}>
-          Home {String(item.id).padStart(2, "0")}
-        </a>{/each}
     </div>
     <div class="footer-bottom">
       <span>

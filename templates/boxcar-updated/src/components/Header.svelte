@@ -1,6 +1,5 @@
 <script lang="ts">
   import { brand } from "../data/brand";
-  import { homes } from "../data/homes";
   import { route } from "../lib/router.svelte";
   import { selections } from "../lib/state.svelte";
   import { showDialog } from "../lib/dialog";
@@ -77,30 +76,10 @@
       />
     </a>
     <nav class="desktop-nav" aria-label="Main navigation">
-      <details>
-        <summary>Home <Icon name="chevron" size={12} /></summary>
-        <div class="nav-dropdown home-dropdown">
-          {#each homes as item}<a
-              class:current={home === item.id}
-              href={item.route}
-            >
-              Home {String(item.id).padStart(2, "0")}
-              <small>{item.name}</small>
-            </a>{/each}
-        </div>
-      </details>
-      <a href="/inventory/">Inventory</a>
-      <a href="/blog/">Blog</a>
-      <details>
-        <summary>Pages <Icon name="chevron" size={12} /></summary>
-        <div class="nav-dropdown">
-          <a href="/about/">About us</a>
-          <a href="/calculator/">Loan calculator</a>
-          <a href="/compare/">Compare cars</a>
-          <a href="/favorites/">Saved cars</a>
-          <a href="/faq/">FAQs</a>
-        </div>
-      </details>
+      <a href="/">Home</a>
+      <a href="/inventory/">Cars</a>
+      <a href="/about/">About us</a>
+      <a href="/blog/">Buying advice</a>
       <a href="/contact/">Contact</a>
     </nav>
     <div class="header-actions">
@@ -146,19 +125,8 @@
     </button>
   </div>
   <nav aria-label="Mobile navigation">
-    <a href="/inventory/">Browse inventory <Icon name="arrow" /></a>
-    <details open>
-      <summary>Home designs</summary>
-      <div class="drawer-homes">
-        {#each homes as item}<a
-            class:current={home === item.id}
-            href={item.route}
-          >
-            <span>{String(item.id).padStart(2, "0")}</span>
-            {item.name}
-          </a>{/each}
-      </div>
-    </details>
+    <a href="/">Home</a>
+    <a href="/inventory/">Browse cars <Icon name="arrow" /></a>
     <a href="/favorites/">Saved cars ({selections.favorites.length})</a>
     <a href="/compare/">Compare cars ({selections.compare.length})</a>
     <a href="/calculator/">Loan calculator</a>

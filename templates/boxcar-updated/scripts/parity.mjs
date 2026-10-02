@@ -243,7 +243,7 @@ try {
       await reference.setViewportSize({ width, height: 950 });
       await local.setViewportSize({ width, height: 950 });
       const file = home === 1 ? "index.html" : `index-${home}.html`,
-        url = home === 1 ? "/" : `/home-${home}/`;
+        url = `/home-${home}/`;
       console.log("Compare", engine, width, home);
       await reference.bringToFront();
       await reference.goto(fixtureURL + "/" + file, {

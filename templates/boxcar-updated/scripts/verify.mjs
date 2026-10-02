@@ -147,7 +147,7 @@ try {
     for (const width of [1440, 390, 320]) {
       await page.setViewportSize({ width, height: width === 1440 ? 950 : 844 });
       for (let n = 1; n <= (innerOnly ? 0 : 10); n++) {
-        await ready(n === 1 ? "/" : `/home-${n}/`);
+        await ready(`/home-${n}/`);
         assert.equal(
           await page.locator("[data-home]").getAttribute("data-home"),
           String(n),

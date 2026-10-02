@@ -13,7 +13,7 @@ const failures = [],
   passed = [];
 page.on("pageerror", (e) => failures.push(e.message));
 const home = async (n = 1) => {
-  await page.goto(base + (n === 1 ? "/" : `/home-${n}/`), {
+  await page.goto(base + `/home-${n}/`, {
     waitUntil: "networkidle",
   });
   await page.locator(".reference-home[data-ready=true]").waitFor();
@@ -404,7 +404,11 @@ try {
   assert.deepEqual(failures, []);
   await fs.writeFile(
     path.join(out, `${engine}-flows.json`),
-    JSON.stringify({ engine, passed, failures }, null, 2),
+    JSON.stringify(
+      { engine, checkedAt: new Date().toISOString(), passed, failures },
+      null,
+      2,
+    ),
   );
 } finally {
   await browser.close();

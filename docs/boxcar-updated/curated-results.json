@@ -1,0 +1,630 @@
+{
+  "version": "2026.10.02-curated",
+  "candidate": "templates/boxcar-updated",
+  "preview": "http://127.0.0.1:6455/",
+  "recordedAt": "2026-10-02T08:48:23.499Z",
+  "composition": {
+    "header": "Home 10, simplified dealer navigation and shared identity",
+    "hero": "Home 10, single source photograph and centered Home 5 headline",
+    "search": "Home 5 white pill DOM, four working filters and visible search label",
+    "typesAndBrands": "Home 8, centered rows with catalogue destinations",
+    "inventory": "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
+    "benefits": "Home 5 horizontal four-icon section",
+    "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
+    "journalAndFooter": "Home 8, shared articles and identity"
+  },
+  "checks": {
+    "svelteTypescript": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 0
+    },
+    "domainAndAssets": {
+      "status": "passed",
+      "tests": 8,
+      "note": "Existing suite ran earlier in this task; domain and asset inputs were not changed."
+    },
+    "productionBuild": {
+      "status": "passed",
+      "checkedAt": "2026-10-02T08:39:35.421Z",
+      "modules": 153
+    },
+    "regeneration": {
+      "status": "passed",
+      "curatedSourceAndReceiptBytes": "identical"
+    },
+    "preservedHomes": {
+      "status": "passed",
+      "files": 10
+    }
+  },
+  "curated": {
+    "chromium": {
+      "engine": "chromium",
+      "checkedAt": "2026-10-02T08:38:12.933Z",
+      "passed": [
+        "Original ten homepage sources remain intact",
+        "Curated layout at 1440, 1024, 768, 390 and 320px",
+        "Long selected filters stay within their rows at 390 and 320px",
+        "Search conditions, make/model resets, price and inventory URLs",
+        "Keyboard dropdowns, Escape and outside dismissal",
+        "Stock tabs, slider, saved state and detail/Back context",
+        "Header suggestions at 1440px keep neutral pointer focus",
+        "Mobile dealer navigation, buyer links and inner routes"
+      ],
+      "layouts": [
+        {
+          "width": 1440,
+          "document": 1440,
+          "controls": [
+            {
+              "left": 185,
+              "right": 409.6875,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 409.6875,
+              "right": 634.375,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 634.375,
+              "right": 859.0625,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 859.0625,
+              "right": 1083.75,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 1096.78125,
+              "right": 1255,
+              "width": 158.21875,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 1024,
+          "document": 1024,
+          "controls": [
+            {
+              "left": 30,
+              "right": 231.453125,
+              "width": 201.453125,
+              "height": 76
+            },
+            {
+              "left": 231.453125,
+              "right": 432.890625,
+              "width": 201.4375,
+              "height": 76
+            },
+            {
+              "left": 432.890625,
+              "right": 634.34375,
+              "width": 201.453125,
+              "height": 76
+            },
+            {
+              "left": 634.34375,
+              "right": 835.78125,
+              "width": 201.4375,
+              "height": 76
+            },
+            {
+              "left": 835.78125,
+              "right": 994,
+              "width": 158.21875,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 768,
+          "document": 768,
+          "controls": [
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 738,
+              "width": 708,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 390,
+          "document": 390,
+          "controls": [
+            {
+              "left": 22,
+              "right": 195,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 195,
+              "right": 368,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 195,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 195,
+              "right": 368,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 368,
+              "width": 346,
+              "height": 50
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 320,
+          "document": 320,
+          "controls": [
+            {
+              "left": 22,
+              "right": 160,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 160,
+              "right": 298,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 160,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 160,
+              "right": 298,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 298,
+              "width": 276,
+              "height": 50
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        }
+      ],
+      "errors": []
+    },
+    "webkit": {
+      "engine": "webkit",
+      "checkedAt": "2026-10-02T08:43:01.921Z",
+      "passed": [
+        "Original ten homepage sources remain intact",
+        "Curated layout at 1440, 1024, 768, 390 and 320px",
+        "Long selected filters stay within their rows at 390 and 320px",
+        "Search conditions, make/model resets, price and inventory URLs",
+        "Keyboard dropdowns, Escape and outside dismissal",
+        "Stock tabs, slider, saved state and detail/Back context",
+        "Header suggestions at 1440px keep neutral pointer focus",
+        "Mobile dealer navigation, buyer links and inner routes"
+      ],
+      "layouts": [
+        {
+          "width": 1440,
+          "document": 1440,
+          "controls": [
+            {
+              "left": 185,
+              "right": 409.6875,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 409.6875,
+              "right": 634.375,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 634.375,
+              "right": 859.0625,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 859.0625,
+              "right": 1083.75,
+              "width": 224.6875,
+              "height": 76
+            },
+            {
+              "left": 1095.328125,
+              "right": 1255,
+              "width": 159.671875,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 1024,
+          "document": 1024,
+          "controls": [
+            {
+              "left": 30,
+              "right": 231.078125,
+              "width": 201.078125,
+              "height": 76
+            },
+            {
+              "left": 231.078125,
+              "right": 432.15625,
+              "width": 201.078125,
+              "height": 76
+            },
+            {
+              "left": 432.15625,
+              "right": 633.234375,
+              "width": 201.078125,
+              "height": 76
+            },
+            {
+              "left": 633.234375,
+              "right": 834.3125,
+              "width": 201.078125,
+              "height": 76
+            },
+            {
+              "left": 834.328125,
+              "right": 994,
+              "width": 159.671875,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 768,
+          "document": 768,
+          "controls": [
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 178.671875,
+              "width": 148.671875,
+              "height": 76
+            },
+            {
+              "left": 30,
+              "right": 738,
+              "width": 708,
+              "height": 56
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 390,
+          "document": 390,
+          "controls": [
+            {
+              "left": 22,
+              "right": 195,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 195,
+              "right": 368,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 195,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 195,
+              "right": 368,
+              "width": 173,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 368,
+              "width": 346,
+              "height": 50
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        },
+        {
+          "width": 320,
+          "document": 320,
+          "controls": [
+            {
+              "left": 22,
+              "right": 160,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 160,
+              "right": 298,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 160,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 160,
+              "right": 298,
+              "width": 138,
+              "height": 60
+            },
+            {
+              "left": 22,
+              "right": 298,
+              "width": 276,
+              "height": 50
+            }
+          ],
+          "images": "loaded",
+          "footer": "readable",
+          "badges": "fit"
+        }
+      ],
+      "errors": []
+    }
+  },
+  "originalReferences": {
+    "chromium": {
+      "engine": "chromium",
+      "checkedAt": "2026-10-02T08:10:31.358Z",
+      "passed": [
+        "Header search: all ten homes, matching cars, keyboard, dismissal and inventory URLs",
+        "Source search: make change resets model and URL selects real inventory",
+        "Source tabs and dropdowns support keyboard selection and Escape",
+        "Carousel changes visible cars and vehicle tabs retain source geometry",
+        "Featured sliders and the correct Mercedes/Volvo detail routes",
+        "Back restores the previous homepage scroll after lazy loading",
+        "Mobile source menu: nested Home choices, Escape and focus return",
+        "Newsletter is a local preview, with no fake send result"
+      ],
+      "failures": []
+    },
+    "webkit": {
+      "engine": "webkit",
+      "checkedAt": "2026-10-02T08:10:52.094Z",
+      "passed": [
+        "Header search: all ten homes, matching cars, keyboard, dismissal and inventory URLs",
+        "Source search: make change resets model and URL selects real inventory",
+        "Source tabs and dropdowns support keyboard selection and Escape",
+        "Carousel changes visible cars and vehicle tabs retain source geometry",
+        "Featured sliders and the correct Mercedes/Volvo detail routes",
+        "Back restores the previous homepage scroll after lazy loading",
+        "Mobile source menu: nested Home choices, Escape and focus return",
+        "Newsletter is a local preview, with no fake send result"
+      ],
+      "failures": []
+    }
+  },
+  "sourceHashes": [
+    {
+      "file": "templates/boxcar-updated/package.json",
+      "sha256": "04d47586d99eaf77a67887b4ea662cd6b223bccbbf139d92ff5e3571b06607d6"
+    },
+    {
+      "file": "templates/boxcar-updated/.template/curated.json",
+      "sha256": "3e775ea51ab50da42d5fed7e10e1b000d04df2025d2b75a4e5ec0de46965418a"
+    },
+    {
+      "file": "templates/boxcar-updated/scripts/compose-curated.mjs",
+      "sha256": "70ff69dd86ad4e10b015c43e42b6c024eaa50079327035eaafc654a300547eb7"
+    },
+    {
+      "file": "templates/boxcar-updated/public/reference/curated.css",
+      "sha256": "b0a66aeb0a678b07e3c1490307948d26d6cb6559f5c1a4d159357da9d923bda3"
+    },
+    {
+      "file": "templates/boxcar-updated/src/App.svelte",
+      "sha256": "8667916175e353e1cf5568aee7d9f62c75744fee5c66b8c2d40dc1c22e283174"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/Header.svelte",
+      "sha256": "5b4bb8458b96867f923b1100a42b401e833096119fd797c5e58b0fe2aefae6bc"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/Footer.svelte",
+      "sha256": "6a7d391136e4ded046c0092abb0e8a025abc0893d1e68abf8924d152dc4c52a0"
+    },
+    {
+      "file": "templates/boxcar-updated/src/data/homes.ts",
+      "sha256": "2012de9b7be923b3dc9f9a92daa94c52870cae61d8b2f2f134f9b5e5b34994e8"
+    },
+    {
+      "file": "templates/boxcar-updated/src/lib/router.svelte.ts",
+      "sha256": "72158282e18add988b385ba2ab6d011c0a72d617994c39a48bd2091de6913dc7"
+    },
+    {
+      "file": "templates/boxcar-updated/src/pages/Content.svelte",
+      "sha256": "0c88b92322f5e65db5391136a8733de4a11d3732b6f299818cacb32c1723ebb9"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/ReferenceHome.svelte",
+      "sha256": "d19cb89e0dac4616662a0607cc103847b059ee27e19064fef2a29dc27c56a0b1"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/interactions.ts",
+      "sha256": "4a04ff7442fb95adca57c98ef5688ac53ab029b8eccffb7045dcfc9a815dce70"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
+      "sha256": "15fe0e0580237ad510091d0a52ac21973dbcc56f770fa01c1a592960d5a5a062"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/CuratedStock.svelte",
+      "sha256": "b13230b97bd1980e7436c8386564ec5d721b98e4568d4eb84aa65c8da7aa6fc0"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/CuratedCarCard.svelte",
+      "sha256": "a4760330a054464cd5141da0cf7fcadee7cd51acc3c5b79173e1b8a39b3fabe5"
+    }
+  ],
+  "originalHashes": [
+    {
+      "file": "templates/boxcar-updated/src/reference/Home1.svelte",
+      "sha256": "5b070605fdce19ac8930d74c6f1860b444f097723a31eba483f61d9e91890194",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home2.svelte",
+      "sha256": "c77416ab4e2475367ea5351eab482f43bfd44e97dc5f2a575c117757ca067bfa",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home3.svelte",
+      "sha256": "7235569ce9c12b39e8867f1e3d11f8d6bad6e80f38ac1103fb2032f7f65fdaa6",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home4.svelte",
+      "sha256": "be42f2be9565e18fb346b21dd4ed27e2799ffa86688ea7f0047977896fd0f205",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home5.svelte",
+      "sha256": "6f9ff5a14e41deb8973db7216d3b9d4b39952ff474ba496d75d2192b33f2b76d",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home6.svelte",
+      "sha256": "5f85c59950d3d9732df6b562aa3f143c6288c6a3ee22441faa893dc38767cba4",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home7.svelte",
+      "sha256": "1f333c2b6e2a4ea6aad059900fc0d1abe32839a2f42c7e57c8a08537298da177",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home8.svelte",
+      "sha256": "20e147f7aed1f9fb2a76b38fc9f314376714ad006017a2ca74b88886997fddf8",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home9.svelte",
+      "sha256": "e8f23c16414a41f02482e74df7a48cf0376d1758e13ab957ed2e08dfbcaf2617",
+      "unchanged": true
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/Home10.svelte",
+      "sha256": "201830867dbc8fecb92e302dee5bc561ba59cddbdd39db67bd9b588db2a8ea6a",
+      "unchanged": true
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/boxcar-updated/curated-desktop.png",
+      "sha256": "a701894cfd56bcc72a253fdc807b142172d810986caa51cfb89647a14c257010"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-mobile.png",
+      "sha256": "cb10ad7815bfe0a056105f679b6b3b210610a88b7e49bb586f21ffa1774ae9bf"
+    }
+  ],
+  "boundaries": [
+    "Curated section combination; original-home pixel parity is separate historical evidence.",
+    "Supporting inventory/detail pages retain adapted Svelte layouts.",
+    "Local sample catalogue and preview forms; no hosted deployment or dealer refresh was launched.",
+    "Physical Safari/iPhone, 200-percent text and owner visual acceptance remain unverified.",
+    "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
+  ]
+}

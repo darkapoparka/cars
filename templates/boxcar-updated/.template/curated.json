@@ -1,0 +1,41 @@
+{
+  "version": "2026.10.02-curated",
+  "defaultRoute": "/",
+  "preservedReferenceRoutes": [
+    "/home-1/",
+    "/home-2/",
+    "/home-3/",
+    "/home-4/",
+    "/home-5/",
+    "/home-6/",
+    "/home-7/",
+    "/home-8/",
+    "/home-9/",
+    "/home-10/"
+  ],
+  "sources": [
+    {
+      "home": 10,
+      "svelteSHA256": "201830867dbc8fecb92e302dee5bc561ba59cddbdd39db67bd9b588db2a8ea6a"
+    },
+    {
+      "home": 5,
+      "svelteSHA256": "6f9ff5a14e41deb8973db7216d3b9d4b39952ff474ba496d75d2192b33f2b76d"
+    },
+    {
+      "home": 8,
+      "svelteSHA256": "20e147f7aed1f9fb2a76b38fc9f314376714ad006017a2ca74b88886997fddf8"
+    }
+  ],
+  "composition": {
+    "header": "Home 10, simplified dealer navigation and shared identity",
+    "hero": "Home 10, single source photograph and centered Home 5 headline",
+    "search": "Home 5 white pill DOM, four working filters and visible search label",
+    "typesAndBrands": "Home 8, centered rows with catalogue destinations",
+    "inventory": "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
+    "benefits": "Home 5 horizontal four-icon section",
+    "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
+    "journalAndFooter": "Home 8, shared articles and identity"
+  },
+  "method": "Compose preserved source DOM as compiled Svelte; scoped responsive CSS and native controls. No changes to the ten source homepage components."
+}

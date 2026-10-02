@@ -21,6 +21,7 @@ export function referencePage(node: HTMLElement) {
   const carousels = new Map<HTMLElement, Carousel>();
   const abort = new AbortController(),
     signal = abort.signal;
+  const curated = node.hasAttribute("data-curated-home");
   initializeHeaderSearch(node, signal);
   const selectorLabel = (menu: HTMLElement) =>
     menu.querySelector<HTMLElement>(".select span")?.textContent?.trim() || "";
@@ -79,7 +80,7 @@ export function referencePage(node: HTMLElement) {
     if (values.length) {
       const list = menu.querySelector(".dropdown");
       list?.replaceChildren(
-        ...values.map((text) => {
+        ...(curated ? [selectorLabel(menu), ...values] : values).map((text) => {
           const li = document.createElement("li");
           li.textContent = text;
           li.setAttribute("role", "option");
@@ -90,6 +91,17 @@ export function referencePage(node: HTMLElement) {
       );
     }
     menu.dataset.initial = selectorLabel(menu);
+    if (curated) {
+      const control = menu.querySelector<HTMLElement>(".select");
+      if (control) {
+        menu.dataset.controlLabel =
+          control.getAttribute("aria-label") || selectorLabel(menu);
+        control.setAttribute(
+          "aria-label",
+          `${menu.dataset.controlLabel}: ${selectorLabel(menu)}`,
+        );
+      }
+    }
   }
   const click = (event: MouseEvent) => {
     const target = event.target as Element;
@@ -116,12 +128,14 @@ export function referencePage(node: HTMLElement) {
       section.querySelectorAll("[data-bs-toggle=tab]").forEach((el) => {
         el.classList.remove("active");
         el.setAttribute("aria-selected", "false");
+        if (curated) el.setAttribute("tabindex", "-1");
       });
       section
         .querySelectorAll(".tab-pane")
         .forEach((el) => el.classList.remove("show", "active"));
       bootstrap.classList.add("active");
       bootstrap.setAttribute("aria-selected", "true");
+      if (curated) bootstrap.tabIndex = 0;
       section
         .querySelector(bootstrap.dataset.bsTarget || "")
         ?.classList.add("show", "active");
@@ -135,6 +149,18 @@ export function referencePage(node: HTMLElement) {
         const span = menu.querySelector<HTMLElement>(".select span")!;
         span.textContent = option.textContent;
         span.classList.add("selected");
+        menu
+          .querySelectorAll(".dropdown li")
+          .forEach((li) =>
+            li.setAttribute("aria-selected", String(li === option)),
+          );
+        if (curated)
+          menu
+            .querySelector(".select")
+            ?.setAttribute(
+              "aria-label",
+              `${menu.dataset.controlLabel}: ${selectorLabel(menu)}`,
+            );
         if (menu.dataset.initial?.toLowerCase().includes("make")) {
           const form = menu.closest("form");
           const modelMenu = Array.from(
@@ -143,17 +169,40 @@ export function referencePage(node: HTMLElement) {
           if (modelMenu) {
             modelMenu.querySelector(".select span")!.textContent =
               modelMenu.dataset.initial!;
+            if (curated)
+              modelMenu
+                .querySelector(".select")
+                ?.setAttribute(
+                  "aria-label",
+                  `${modelMenu.dataset.controlLabel}: ${modelMenu.dataset.initial}`,
+                );
             const list = modelMenu.querySelector(".dropdown");
+            const choices = [
+              ...new Set(
+                vehicles
+                  .filter(
+                    (v) =>
+                      v.make === option.textContent ||
+                      (curated && option.textContent === menu.dataset.initial),
+                  )
+                  .map((v) => v.model),
+              ),
+            ].sort();
             list?.replaceChildren(
-              ...vehicles
-                .filter((v) => v.make === option.textContent)
-                .map((v) => {
-                  const li = document.createElement("li");
-                  li.textContent = v.model;
-                  li.tabIndex = 0;
-                  li.setAttribute("role", "option");
-                  return li;
-                }),
+              ...(curated
+                ? [modelMenu.dataset.initial!, ...choices]
+                : choices
+              ).map((model) => {
+                const li = document.createElement("li");
+                li.textContent = model;
+                li.tabIndex = 0;
+                li.setAttribute("role", "option");
+                li.setAttribute(
+                  "aria-selected",
+                  String(model === modelMenu.dataset.initial),
+                );
+                return li;
+              }),
             );
           }
         }
@@ -374,11 +423,71 @@ export function referencePage(node: HTMLElement) {
     signal.addEventListener("abort", restore, { once: true });
   }
   node.addEventListener("click", click, { signal });
+  if (curated) {
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (!node.contains(event.target as Node)) closeDrops();
+      },
+      { signal },
+    );
+    node.addEventListener(
+      "focusout",
+      (event) => {
+        if (!(event.relatedTarget as Element | null)?.closest(".drop-menu"))
+          closeDrops();
+      },
+      { signal },
+    );
+  }
   node.addEventListener(
     "keydown",
     (event) => {
+      const target = event.target as HTMLElement;
+      const menu = curated ? target.closest<HTMLElement>(".drop-menu") : null;
+      if (
+        curated &&
+        target.matches("[data-bs-toggle=tab]") &&
+        ["ArrowLeft", "ArrowRight"].includes(event.key)
+      ) {
+        event.preventDefault();
+        const tabs = Array.from(
+          target
+            .closest("[role=tablist]")!
+            .querySelectorAll<HTMLElement>("[role=tab]"),
+        );
+        const next =
+          (tabs.indexOf(target) +
+            (event.key === "ArrowRight" ? 1 : tabs.length - 1)) %
+          tabs.length;
+        tabs[next]?.click();
+        tabs[next]?.focus();
+        return;
+      }
+      if (menu && ["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+        event.preventDefault();
+        if (!menu.classList.contains("active"))
+          menu.querySelector<HTMLElement>(".select")?.click();
+        const options = Array.from(
+          menu.querySelectorAll<HTMLElement>(".dropdown li"),
+        );
+        const index = options.indexOf(target);
+        const next =
+          event.key === "Home"
+            ? 0
+            : event.key === "End"
+              ? options.length - 1
+              : event.key === "ArrowDown"
+                ? (index + 1) % options.length
+                : index <= 0
+                  ? options.length - 1
+                  : index - 1;
+        options[next]?.focus();
+        return;
+      }
       if (event.key === "Escape") {
         closeDrops();
+        menu?.querySelector<HTMLElement>(".select")?.focus();
         node
           .querySelectorAll(".reference-nav-open")
           .forEach((el) => el.classList.remove("reference-nav-open"));
@@ -474,27 +583,47 @@ export function referencePage(node: HTMLElement) {
   scroll();
   const resize = () => carousels.forEach((c) => c.layout());
   window.addEventListener("resize", resize, { signal });
+  // Offscreen lazy images must not hold up slider initialization or Back.
+  const decodeImages = () =>
+    Promise.all(
+      Array.from(node.querySelectorAll("img"))
+        .filter(
+          (img) =>
+            img.loading !== "lazy" || (img.complete && img.naturalWidth > 0),
+        )
+        .map((img) => img.decode().catch(() => {})),
+    );
   new Promise<void>((resolve) => requestAnimationFrame(() => resolve())).then(
     async () => {
       await document.fonts.ready;
       if (!alive) return;
-      await Promise.all(
-        Array.from(node.querySelectorAll("img")).map((img) =>
-          img.decode().catch(() => {}),
-        ),
-      );
+      await decodeImages();
       if (!alive) return;
       const jq = await loadSliderLibrary();
       if (!alive) return;
       for (const config of carouselOptions as Options[])
         for (const el of node.querySelectorAll<HTMLElement>(config.selector)) {
-          if (!carousels.has(el)) carousels.set(el, carousel(el, config, jq));
+          if (el.hasAttribute("data-static-hero")) continue;
+          if (!carousels.has(el)) {
+            // The dealer shelf contains Svelte save buttons. Keep it finite:
+            // Slick's cloned cards do not carry their Svelte event bindings.
+            const options =
+              curated && el.classList.contains("car-slider-three")
+                ? {
+                    ...config,
+                    infinite: false,
+                    responsive: Array.isArray(config.responsive)
+                      ? config.responsive.map((breakpoint) => ({
+                          ...breakpoint,
+                          settings: { ...breakpoint.settings, infinite: false },
+                        }))
+                      : undefined,
+                  }
+                : config;
+            carousels.set(el, carousel(el, options, jq));
+          }
         }
-      await Promise.all(
-        Array.from(node.querySelectorAll("img")).map((img) =>
-          img.decode().catch(() => {}),
-        ),
-      );
+      await decodeImages();
       if (!alive) return;
       carousels.forEach((c) => c.layout());
       node.querySelectorAll<HTMLElement>(".wow").forEach((el) => {
@@ -507,8 +636,9 @@ export function referencePage(node: HTMLElement) {
   // A concise fixture note keeps the source demo's marketing counts/copy honest.
   const note = document.createElement("p");
   note.className = "reference-preview-note";
-  note.textContent =
-    "Template demo · illustrative inventory, reviews and figures. Forms are local previews.";
+  note.textContent = curated
+    ? "Template preview · sample vehicles. Forms are local previews."
+    : "Template demo · illustrative inventory, reviews and figures. Forms are local previews.";
   node.querySelector("footer")?.append(note);
   return {
     destroy() {

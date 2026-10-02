@@ -1,0 +1,155 @@
+/* Dealer composition only. Original Home 01–10 retain their own layout CSS. */
+.curated-home { --theme-color1: var(--accent, #405ff2); }
+.curated-home .boxcar-header { padding: 0 !important; }
+.curated-home .boxcar-header .header-inner { padding: 24px 0; }
+.curated-home .boxcar-header .inner-container { max-width: 1780px; margin: auto; }
+.curated-home .boxcar-header .nav-list { gap: 52px; }
+.curated-home .boxcar-header .nav-out-bar { display: block !important; margin-left: 0; }
+.curated-home .boxcar-header .header-inner .c-box .nav-out-bar .nav { display: block; }
+.curated-home .boxcar-header .mobile-navigation { display: none; }
+.curated-home .boxcar-header .main-menu .navigation > li { margin-right: 28px; }
+.curated-home .boxcar-header .main-menu .navigation > li:last-child { margin-right: 0; }
+.curated-home .boxcar-header .logo img { width: auto; max-width: 160px; max-height: 32px; object-fit: contain; }
+.curated-home .boxcar-header .right-box { gap: 24px; }
+.curated-home .boxcar-header .box-account { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.curated-home .boxcar-header .layout-search { display: block; }
+.curated-home .boxcar-header .layout-search .show-search { width: 265px; }
+.curated-home .boxcar-header .header-btn-two { white-space: nowrap; }
+.curated-home .boxcar-banner-section-seven .banner-slide { position: relative; height: auto; min-height: 0; }
+.curated-home .boxcar-banner-section-seven .banner-slide > img { width: 100%; height: clamp(480px, 38vw, 650px); object-fit: cover; object-position: center; }
+.curated-home .boxcar-banner-section-seven .banner-slide .right-box { top: 36%; }
+.curated-home .boxcar-banner-section-seven .banner-slide .content-box h1 { font-size: clamp(44px, 4.5vw, 70px); line-height: 1.12; }
+.curated-home .boxcar-banner-section-seven .form-tab-content { bottom: 52px; }
+.curated-home .boxcar-banner-section-seven .cus-container10 { max-width: 1130px; padding: 0 20px; margin: auto; }
+.curated-home .boxcar-banner-section-seven form { min-height: 76px; padding: 0 10px; border-radius: 50px; background: #fff; box-shadow: 0 16px 40px #050b201a; flex-wrap: nowrap; }
+.curated-home .boxcar-banner-section-seven form .form_boxes { width: 21%; height: 76px; min-width: 0; }
+.curated-home .boxcar-banner-section-seven form .form_boxes:before { background: #e1e1e1; opacity: 1; }
+.curated-home .boxcar-banner-section-seven form .drop-menu .select { color: #050b20; min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 28px; font-size: 15px; line-height: 22px; }
+.curated-home .boxcar-banner-section-seven form .drop-menu .select > span { flex: 1; min-width: 0; line-height: 22px; }
+.curated-home .boxcar-banner-section-seven form .drop-menu .select > i { flex-shrink: 0; float: none; position: static; line-height: 22px; }
+.curated-home .boxcar-banner-section-seven .drop-menu .dropdown { top: 100%; border-radius: 12px; color: #050b20; max-height: 285px; overflow-y: auto; min-width: 100%; box-shadow: 0 12px 32px #050b2026; }
+.curated-home .boxcar-banner-section-seven .drop-menu .dropdown li { line-height: 24px; padding: 10px 18px; }
+.curated-home .boxcar-banner-section-seven .drop-menu .dropdown li[aria-selected=true] { background: #f0f3ff; }
+.curated-home .boxcar-banner-section-seven .form-submit { flex-shrink: 0; margin-left: auto; }
+.curated-home .boxcar-banner-section-seven .form-submit button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 56px; line-height: 24px; padding: 0 26px; border-radius: 50px; background: var(--theme-color1); color: #fff; border: 0; }
+.curated-home .boxcar-banner-section-seven .form-submit button i { top: 0; margin: 0; }
+.curated-home .boxcar-title { text-align: center; }
+.curated-home .curated-types { padding: 90px 0 64px; }
+.curated-home .curated-types .right-box { justify-content: center; gap: 20px; flex-wrap: wrap; overflow: visible; }
+.curated-home .curated-types .cars-block-six { width: auto; flex: 1; max-width: 180px; margin: 0; }
+.curated-home .curated-brands { padding: 0 0 80px; }
+.curated-home .curated-brands .right-box { display: flex; justify-content: center; flex-wrap: wrap; gap: 36px; }
+.curated-home .curated-brands .cars-block-five { width: 150px; margin: 0; }
+.curated-home .curated-brands .cars-block-five .inner-box { text-align: center; }
+.curated-home .curated-brands .image { min-height: 70px; display: flex; align-items: center; justify-content: center; }
+.curated-home .curated-brands .image img { max-height: 60px; width: auto; object-fit: contain; }
+.curated-home .curated-stock { padding: 0 0 90px; }
+.curated-home .curated-stock .right-box { padding: 72px 48px; }
+.curated-home .curated-stock-layout { max-width: 1280px; margin: auto; }
+.curated-home .curated-stock-note { margin: 12px 0 0; color: #667085; font-size: 15px; }
+.curated-home .curated-stock .nav-tabs { justify-content: center; gap: 32px; margin-bottom: 32px; }
+.curated-home .curated-stock .nav-link { margin-right: 0; min-height: 44px; }
+.curated-home .curated-stock .car-slider-three { padding-bottom: 64px; }
+/* Slick owns horizontal movement; native focus must not scroll its track. */
+.curated-home .curated-stock .slick-list { overflow: clip; }
+.curated-home .curated-stock .car-slider-three .slick-arrow { bottom: 0; height: 44px; }
+.curated-home .curated-stock .car-slider-three .slick-prev { left: calc(50% - 70px); right: auto; }
+.curated-home .curated-stock .car-slider-three .slick-next { left: calc(50% + 10px); right: auto; }
+.curated-home .curated-stock .car-block-ten .image img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.curated-home .curated-stock .car-block-ten .title { min-height: 52px; font-size: 18px; line-height: 26px; }
+.curated-home .curated-stock .car-block-ten .content-box > ul { min-height: 50px; line-height: 24px; margin-bottom: 18px; }
+.curated-home .curated-stock .car-block-ten .content-box > ul li { font-size: 14px; }
+.curated-home .curated-stock .car-block-ten .btn-box small { font-size: 20px; }
+.curated-home .curated-stock .car-block-ten .icon-box { display: grid; place-items: center; }
+.curated-home .curated-stock .car-block-ten .icon-box[aria-pressed=true] { color: var(--theme-color1); }
+.curated-home .curated-stock-more { text-align: center; margin-top: 24px; }
+.curated-home .curated-stock-more .read-more { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 13px 26px; border: 1px solid #050b20; border-radius: 12px; color: #050b20; font-size: 15px; }
+.curated-home .curated-stock-more .read-more:hover { background: #050b20; color: white; }
+.curated-home .curated-benefits { padding: 0 0 80px; }
+.curated-home .curated-benefits .right-box { padding: 0 48px; background: transparent; }
+.curated-home .curated-benefits .choose-us-block .inner-box { text-align: center; }
+.curated-home .curated-benefits .choose-us-block .icon-box { margin: 0 auto 24px; }
+.curated-home .curated-next-steps { padding: 0 0 90px; }
+.curated-home .curated-next-steps .right-box { padding: 72px 72px; }
+.curated-home .curated-next-steps .boxcar-title { display: block; margin-bottom: 40px; }
+.curated-home .curated-next-steps .boxcar-title .text { margin: 14px auto 0; }
+.curated-home .curated-next-steps .testimonial-block-four .inner-box { height: 100%; padding: 32px; }
+.curated-home .curated-next-steps .testimonial-block-four .icon { position: static; margin-bottom: 22px; }
+.curated-home .curated-step-number { font-size: 36px; line-height: 1; font-weight: 700; color: var(--theme-color1); }
+.curated-home .curated-next-steps .testimonial-block-four .text { margin-bottom: 24px; }
+.curated-home .curated-step-link { display: inline-flex; align-items: center; gap: 12px; color: #050b20; min-height: 44px; }
+.curated-home .curated-journal { padding: 0 0 80px; }
+.curated-home .curated-journal .blog-block .image img { aspect-ratio: 3 / 2; object-fit: cover; width: 100%; }
+.curated-home .curated-journal .blog-block .date { max-width: calc(100% - 40px); width: auto; height: auto; line-height: 22px; padding: 4px 14px; white-space: nowrap; }
+.curated-home .boxcar-footer .widgets-section { padding: 70px 0 35px; }
+.curated-home .curated-footer-logo { display: inline-block; margin-bottom: 20px; }
+.curated-home .curated-footer-logo img { width: auto; max-width: 170px; max-height: 32px; object-fit: contain; }
+.curated-home .boxcar-footer .widget-content .text { color: #050b20; font-size: 15px; margin: 0 0 16px; }
+.curated-home .reference-preview-note { margin: 0; padding: 18px 15px; }
+@media (max-width: 1250px) {
+  .curated-home .boxcar-header .layout-search { display: none; }
+  .curated-home .boxcar-header .nav-list { gap: 36px; }
+  .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 22px; }
+}
+@media (max-width: 991px) {
+  .curated-home .boxcar-header .nav-out-bar { display: none !important; }
+  .curated-home .boxcar-header .mobile-navigation { display: block; }
+  .curated-home .curated-stock .right-box { padding: 56px 24px; }
+  .curated-home .curated-benefits .right-box { padding: 0 15px; }
+  .curated-home .curated-next-steps .right-box { padding: 56px 24px; }
+  .curated-home .curated-next-steps .testimonial-block-four { margin-bottom: 24px; }
+  .curated-home .curated-types .right-box { gap: 14px; }
+  .curated-home .curated-types .cars-block-six { flex: 0 0 calc(33.333% - 10px); max-width: none; }
+  .curated-home .boxcar-banner-section-seven .form-tab-content { bottom: 32px; }
+  .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 14px; font-size: 14px; }
+  .curated-home .boxcar-banner-section-seven .form-submit button { padding: 0 20px; }
+}
+@media (max-width: 767px) {
+  .curated-home .boxcar-header .header-inner { padding: 20px 0; }
+  .curated-home .boxcar-header .right-box { gap: 20px; }
+  .curated-home .boxcar-header .right-box .btn { display: none; }
+  .curated-home .boxcar-header .box-account { font-size: 14px; }
+  .curated-home .boxcar-banner-section-seven .banner-slide > img { height: 390px; object-position: 52% center; }
+  .curated-home .boxcar-banner-section-seven .banner-slide { min-height: 0; height: auto; }
+  .curated-home .boxcar-banner-section-seven .banner-slide .right-box { top: 35%; padding: 0 12px; }
+  .curated-home .boxcar-banner-section-seven .banner-slide .right-box .boxcar-container { padding: 0; }
+  .curated-home .boxcar-banner-section-seven .banner-slide .content-box { max-width: 440px; margin: auto; }
+  .curated-home .boxcar-banner-section-seven .banner-slide .content-box .sub-title { font-size: 14px; line-height: 22px; margin-bottom: 16px; max-width: 270px; }
+  .curated-home .boxcar-banner-section-seven .banner-slide .content-box h1 { font-size: clamp(30px, 7.6vw, 42px); padding: 0 10px; }
+  .curated-home .boxcar-banner-section-seven .form-tab-content { position: relative; bottom: auto; margin-top: -26px; z-index: 100; }
+  .curated-home .boxcar-banner-section-seven .cus-container10 { padding: 0 14px; max-width: 580px; }
+  .curated-home .boxcar-banner-section-seven form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; height: auto; padding: 8px; border-radius: 16px; margin: 0; }
+  .curated-home .boxcar-banner-section-seven form .form_boxes { width: auto; height: 60px; }
+  .curated-home .boxcar-banner-section-seven form .form_boxes:before { display: none; }
+  .curated-home .boxcar-banner-section-seven form .drop-menu .select { min-height: 60px; height: auto; padding: 0 12px; font-size: 14px; }
+  .curated-home .boxcar-banner-section-seven .form-submit { grid-column: 1 / -1; width: auto; margin: 4px 0 0; }
+  .curated-home .boxcar-banner-section-seven .form-submit button { width: 100%; min-height: 50px; height: auto; padding: 14px; border-radius: 10px; line-height: 22px; }
+  .curated-home .boxcar-banner-section-seven .drop-menu .dropdown { min-width: 160px; }
+  .curated-home .boxcar-banner-section-seven .form_boxes:nth-child(even) .dropdown { right: 0; left: auto; }
+  .curated-home .boxcar-title h2 { font-size: 28px; line-height: 36px; }
+  .curated-home .curated-types { padding: 56px 0 48px; }
+  .curated-home .curated-types .boxcar-title { margin-bottom: 26px; }
+  .curated-home .curated-types .right-box { gap: 12px; }
+  .curated-home .curated-types .cars-block-six { flex: 0 0 calc(50% - 6px); }
+  .curated-home .curated-brands { padding-bottom: 48px; }
+  .curated-home .curated-brands .right-box { gap: 28px 18px; }
+  .curated-home .curated-brands .cars-block-five { width: calc(33.333% - 12px); }
+  .curated-home .curated-brands .image img { max-width: 70px; max-height: 48px; }
+  .curated-home .curated-stock { padding-bottom: 56px; }
+  .curated-home .curated-stock .right-box { padding: 40px 20px; }
+  .curated-home .curated-stock .nav-tabs { gap: 24px; }
+  .curated-home .curated-stock .nav-link { font-size: 15px; }
+  .curated-home .curated-stock .car-block-ten { margin: 0 8px; }
+  .curated-home .curated-stock .car-block-ten .title { font-size: 18px; }
+  .curated-home .curated-stock .car-block-ten .image-box span { top: 12px; left: 12px; }
+  .curated-home .curated-stock .car-block-ten .icon-box { top: 12px; right: 12px; width: 44px; height: 44px; }
+  .curated-home .curated-benefits { padding-bottom: 40px; }
+  .curated-home .curated-benefits .choose-us-block { margin-bottom: 24px; }
+  .curated-home .curated-benefits .choose-us-block .inner-box .text { max-width: 340px; margin: auto; }
+  .curated-home .curated-next-steps { padding-bottom: 56px; }
+  .curated-home .curated-next-steps .right-box { padding: 40px 24px 16px; }
+  .curated-home .curated-next-steps .testimonial-block-four { padding: 0; }
+  .curated-home .curated-next-steps .testimonial-block-four .inner-box { padding: 28px; }
+  .curated-home .curated-journal { padding-bottom: 24px; }
+  .curated-home .boxcar-footer .widgets-section { padding: 40px 0 12px; }
+}

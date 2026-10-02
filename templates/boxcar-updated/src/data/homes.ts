@@ -35,7 +35,7 @@ export const homes: HomeDesign[] = [
   {
     id: 1,
     name: "Mountain",
-    route: "/",
+    route: "/home-1/",
     hero: "mountain",
     sections: [
       { kind: "brands" },
@@ -279,8 +279,10 @@ export const homes: HomeDesign[] = [
   },
 ];
 export function homeForPath(path: string): HomeDesign | undefined {
-  if (["/", "/index.html", "/home-1/", "/home-1"].includes(path))
-    return homes[0];
+  if (["/home-1/", "/home-1"].includes(path)) return homes[0];
   const match = path.match(/^\/(?:home-|index-)(\d+)(?:\/|\.html)?$/);
   return match ? homes.find((h) => h.id === Number(match[1])) : undefined;
+}
+export function isCuratedHomePath(path: string): boolean {
+  return path === "/" || path === "/index.html";
 }

@@ -133,8 +133,8 @@
           dealer.
         </p>
         <p>
-          This {brand.name} demonstration presents ten homepage designs around one
-          shared catalogue and a consistent browsing experience.
+          Explore the cars, save your favourites and compare the details before
+          arranging a viewing.
         </p>
         <a class="button" href="/inventory/">
           Explore Inventory <Icon name="arrow" size={16} />

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { brand } from "./data/brand";
-  import { homeForPath } from "./data/homes";
+  import { homeForPath, isCuratedHomePath } from "./data/homes";
   import { vehicles } from "./lib/catalog";
   import { route, setupRouter } from "./lib/router.svelte";
   import { selections, syncSelections, clearCompare } from "./lib/state.svelte";
@@ -15,6 +15,7 @@
   import Compare from "./pages/Compare.svelte";
   import Content from "./pages/Content.svelte";
   let design = $derived(homeForPath(route.path));
+  let curated = $derived(isCuratedHomePath(route.path));
   let vehicle = $derived(
     vehicles.find(
       (v) =>
@@ -55,36 +56,40 @@
   let saved = $derived(path === "/favorites");
   let comparison = $derived(["/compare", "/compare.html"].includes(path));
   let title = $derived(
-    design
-      ? `${brand.name} — Home ${design.id} · ${design.name}`
-      : vehicle
-        ? `${vehicle.title} — ${brand.name}`
-        : inventory
-          ? `Cars for sale — ${brand.name}`
-          : saved
-            ? `Saved cars — ${brand.name}`
-            : comparison
-              ? `Compare cars — ${brand.name}`
-              : `${content ? content.charAt(0).toUpperCase() + content.slice(1) : "Page not found"} — ${brand.name}`,
+    curated
+      ? `${brand.name} — Find your perfect car`
+      : design
+        ? `${brand.name} — Home ${design.id} · ${design.name}`
+        : vehicle
+          ? `${vehicle.title} — ${brand.name}`
+          : inventory
+            ? `Cars for sale — ${brand.name}`
+            : saved
+              ? `Saved cars — ${brand.name}`
+              : comparison
+                ? `Compare cars — ${brand.name}`
+                : `${content ? content.charAt(0).toUpperCase() + content.slice(1) : "Page not found"} — ${brand.name}`,
   );
   onMount(setupRouter);
 </script>
 
 <svelte:head>
-  {#if !design}<link rel="stylesheet" href={nativeStyles} />{/if}
+  {#if !design && !curated}<link rel="stylesheet" href={nativeStyles} />{/if}
   <title>{title}</title>
   <meta
     name="description"
-    content={`Explore ${brand.name}: ten distinct homepage designs, sample inventory, saved cars, comparison and repayment estimates.`}
+    content={`Find your next car with ${brand.name}. Explore new and used vehicles, save your favourites and compare the details.`}
   />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </svelte:head>
 <svelte:window onstorage={syncSelections} />
 <div class="app" style:--accent={brand.accent}>
   <a class="skip-link" href="#main">Skip to content</a>
-  {#if !design}<Header home={0} />{/if}
+  {#if !design && !curated}<Header home={0} />{/if}
   <main id="main" tabindex="-1">
-    {#key route.path}{#if design}<ReferenceHome
+    {#key route.path}{#if curated}<ReferenceHome
+          home={0}
+        />{:else if design}<ReferenceHome
           home={design.id}
         />{:else if vehicle}<VehicleDetail
           {vehicle}
@@ -95,13 +100,13 @@
         />{:else}<div class="container not-found">
           <span>404</span>
           <h1>We couldn’t find that page</h1>
-          <p>Explore our homepage designs or browse the inventory.</p>
+          <p>Browse our cars or get in touch with the showroom.</p>
           <a class="button" href="/">
             Back to Home <Icon name="arrow" size={16} />
           </a>
         </div>{/if}{/key}
   </main>
-  {#if !design}<Footer home={0} />{/if}
+  {#if !design && !curated}<Footer home={0} />{/if}
   {#if selections.compare.length && !comparison}<aside
       class="compare-tray"
       aria-label="Selected cars"
