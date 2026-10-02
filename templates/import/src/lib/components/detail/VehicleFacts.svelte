@@ -1,28 +1,10 @@
 <script lang="ts">
-	import Gauge from '@lucide/svelte/icons/gauge';
-	import Calendar from '@lucide/svelte/icons/calendar';
-	import Fuel from '@lucide/svelte/icons/fuel';
-	import Palette from '@lucide/svelte/icons/palette';
-	import MapPin from '@lucide/svelte/icons/map-pin';
-	import Armchair from '@lucide/svelte/icons/armchair';
-	import Cog from '@lucide/svelte/icons/cog';
-	import Settings from '@lucide/svelte/icons/settings';
-	import QrCode from '@lucide/svelte/icons/qr-code';
 	import type { AuxeroVehicleDetailOverviewItem } from '$lib/server/vehicle-detail';
+	import { vehicleInformationCopy } from '$lib/content/vehicle-information';
 	import VehicleInformationSection from './VehicleInformationSection.svelte';
 	let { items, english = false }: { items: AuxeroVehicleDetailOverviewItem[]; english?: boolean } =
 		$props();
-	const icons = {
-		'icon-gauge.svg': Gauge,
-		'calendar.svg': Calendar,
-		'gaspump.svg': Fuel,
-		'palette.svg': Palette,
-		'MapPin.svg': MapPin,
-		'Seatbelt.svg': Armchair,
-		'Frame.svg': Cog,
-		'transmission-2.svg': Settings,
-		'QrCode.svg': QrCode
-	};
+	const copy = $derived(vehicleInformationCopy[english ? 'en' : 'bg']);
 	const primaryIcons = new Set([
 		'icon-gauge.svg',
 		'calendar.svg',
@@ -34,12 +16,12 @@
 		[
 			{
 				id: 'primary',
-				title: english ? 'Vehicle details' : 'Основни данни',
+				title: copy.factsTitle,
 				items: items.filter((item) => primaryIcons.has(item.icon))
 			},
 			{
 				id: 'additional',
-				title: english ? 'Details' : 'Детайли',
+				title: copy.detailsTitle,
 				items: items.filter((item) => !primaryIcons.has(item.icon))
 			}
 		].filter((group) => group.items.length)
@@ -52,11 +34,8 @@
 			<VehicleInformationSection title={group.title}>
 				<dl>
 					{#each group.items as item (item.label)}
-						{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
 						<div class:vehicle-facts__row--reference={item.icon === 'QrCode.svg'}>
-							<dt>
-								<Icon size={16} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span>
-							</dt>
+							<dt>{item.label}</dt>
 							<dd>{item.value || '—'}</dd>
 						</div>
 					{/each}
@@ -76,32 +55,26 @@
 	}
 	dl {
 		display: grid;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-2);
 		margin: 0;
 	}
 	dl > div {
 		display: grid;
-		grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.2fr);
+		grid-template-columns: minmax(7rem, 0.8fr) minmax(0, 1.2fr);
 		align-items: center;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-4);
 		font-size: var(--bc-text-label);
 		line-height: var(--bc-leading-h7);
 	}
 	dt {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-2);
 		color: var(--bc-muted);
-	}
-	dt :global(svg) {
-		flex-shrink: 0;
+		font-size: var(--bc-text-meta);
 	}
 	dd {
 		margin: 0;
 		color: var(--bc-ink);
 		font-weight: var(--bc-weight-heading);
 		font-variant-numeric: tabular-nums;
-		text-align: end;
 		overflow-wrap: anywhere;
 	}
 	.vehicle-facts__row--reference dd {

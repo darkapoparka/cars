@@ -1,43 +1,35 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	let { title, meta, children }: { title: string; meta?: string; children: Snippet } = $props();
+	let { title, actions, children }: { title: string; actions?: Snippet; children: Snippet } =
+		$props();
 </script>
 
 <section class="vehicle-information-section">
 	<header>
 		<h2>{title}</h2>
-		{#if meta}<span>{meta}</span>{/if}
+		{@render actions?.()}
 	</header>
-	<div class="vehicle-information-section__body">{@render children()}</div>
+	{@render children()}
 </section>
 
 <style>
 	.vehicle-information-section {
 		min-width: 0;
-		border: 1px solid var(--bc-border-strong);
+		padding: var(--bc-space-6);
+		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
 	}
 	header {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
 		gap: var(--bc-space-3);
-		padding: var(--bc-space-4) var(--bc-space-6);
-		border-bottom: 1px solid var(--bc-border);
-		border-radius: calc(var(--bc-radius-panel) - 1px) calc(var(--bc-radius-panel) - 1px) 0 0;
-		background: var(--bc-surface-hover);
+		margin-bottom: var(--bc-space-5);
 	}
 	h2 {
 		margin: 0;
-		font: var(--bc-weight-heading) var(--bc-text-h5) / var(--bc-leading-h5) var(--bc-font-body);
-	}
-	header span {
-		flex-shrink: 0;
-		color: var(--bc-muted);
-		font-size: var(--bc-text-meta);
-	}
-	.vehicle-information-section__body {
-		padding: var(--bc-space-5) var(--bc-space-6);
+		font: var(--bc-weight-heading) var(--bc-text-h4) / var(--bc-leading-h4) var(--bc-font-heading);
 	}
 </style>
