@@ -2,12 +2,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import type { Vehicle } from '@/lib/types';
-import { money, serializeFilters } from '@/lib/search';
+import { money } from '@/lib/search';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
-import { useScrollThreshold } from '@/lib/use-scroll-threshold';
+import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/showroom';
 import { VehicleSections } from './VehicleSections';
 import { Header } from './Header';
 import { Icon } from './Icon';
@@ -15,7 +16,6 @@ import { Button, IconButton, Modal, ui } from './ui';
 import { ContactSheet } from './ContactSheet';
 import { FinanceCalculator } from './FinanceCalculator';
 import { PriceRating } from './VehicleCard';
-import { AssistantFab } from './AssistantEntry';
 const s = stylex.create({
   paymentTabs: {
     display: 'grid',
@@ -86,15 +86,6 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
   },
-  delivery: {
-    fontSize: 12,
-    fontWeight: 500,
-    lineHeight: '20px',
-    backgroundColor: '#bed7fe',
-    color: '#354878',
-    paddingInline: 4,
-    borderRadius: 4,
-  },
   model: { fontSize: 14, fontWeight: 700, lineHeight: '20px' },
   variant: { fontSize: 16, lineHeight: '24px' },
   price: { fontFamily: 'var(--font-base)', fontSize: 20, fontWeight: 700, lineHeight: '28px' },
@@ -117,22 +108,6 @@ const s = stylex.create({
     fontSize: 14,
   },
   actions: { display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, marginTop: 8 },
-  ad: {
-    height: 256,
-    backgroundColor: colors.surface,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  watermark: {
-    transform: 'translateY(-4px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 64,
-    height: 64,
-    color: colors.iconBg,
-  },
   financeAmount: {
     minWidth: { default: 131, '@media (max-width: 380px)': 112 },
     display: 'inline-flex',
@@ -180,6 +155,7 @@ const s = stylex.create({
   },
 });
 export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
+  const router = useRouter();
   const { parked, filters, photoIndexes } = useAppState();
   const photoIndex = Math.min(v.images.length - 1, Math.max(0, photoIndexes[v.id] || 0));
   const photoGesture = useRef({ x: 0, y: 0, moved: false });
@@ -195,7 +171,6 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   const [priceInfo, setPriceInfo] = useState(false);
   const [report, setReport] = useState(false);
   useEffect(() => markViewed(v.id), [v.id]);
-  const compactAssistant = useScrollThreshold(360);
   async function share() {
     try {
       await navigator.clipboard.writeText(window.location.href);
@@ -206,12 +181,21 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   }
   return (
     <>
-      <Header title={v.make + ' ' + v.model} back={'/results?' + serializeFilters(filters)}>
+      <Header
+        title={v.make + ' ' + v.model}
+        back="/"
+        onBack={() => {
+          const canGoBack = inventoryCanGoBack(v.id);
+          const href = inventoryReturnHref(v.id);
+          if (canGoBack) router.back();
+          else router.replace(href, { scroll: false });
+        }}
+      >
         <IconButton icon="share" label="Share via" onClick={share} />
         <IconButton icon="checklist" label="Checklist" href={'/vehicle/' + v.id + '/checklist'} />
         <IconButton
           icon="heart"
-          label={parked.includes(v.id) ? 'Unpark' : 'Park'}
+          label={parked.includes(v.id) ? 'Remove from saved cars' : 'Save car'}
           filled={parked.includes(v.id)}
           onClick={() => togglePark(v.id)}
         />
@@ -260,7 +244,6 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
       <section {...stylex.props(s.info)}>
         <h1 {...stylex.props(s.model, ui.row)}>
           {v.make} {v.model}
-          {v.deliveryPossible && <span {...stylex.props(s.delivery)}>Delivery possible</span>}
         </h1>
         <p {...stylex.props(s.variant)}>{v.variant}</p>
       </section>
@@ -352,20 +335,14 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
         )}
         <div {...stylex.props(s.actions)}>
           <Button icon="phone" onClick={() => setContact(true)}>
-            Call
+            Contact
           </Button>
-          <Button icon="mail" href={'/vehicle/' + v.id + '/message'}>
-            Message
+          <Button icon="mail" href={'/contact?vehicle=' + v.id}>
+            Enquire
           </Button>
         </div>
       </section>
-      <div {...stylex.props(s.ad)} aria-label="Reserved reference advertising area">
-        <span aria-hidden="true" {...stylex.props(s.watermark)}>
-          <Icon name="brandMark" size={64} />
-        </span>
-      </div>
-      <VehicleSections vehicle={v} onReport={() => setReport(true)} />
-      <AssistantFab low compact={compactAssistant} />
+      <VehicleSections vehicle={v} showroomMode onReport={() => setReport(true)} />
       <ContactSheet vehicle={v} open={contact} onClose={() => setContact(false)} />
       <Modal open={finance} onClose={() => setFinance(false)} title="Calculate Financing">
         <FinanceCalculator vehicle={v} onClose={() => setFinance(false)} />

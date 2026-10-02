@@ -6,12 +6,11 @@ import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
 import { Icon, type IconName } from './Icon';
+import { showroomInventoryHref } from '@/lib/showroom';
 const tabs: [string, string, IconName][] = [
-  ['/', 'Home', 'home'],
-  ['/search', 'Search', 'search'],
-  ['/my-searches', 'My Searches', 'searches'],
-  ['/car-park', 'Car Park', 'heart'],
-  ['/sell', 'Sell', 'tag'],
+  ['/', 'Cars', 'car'],
+  ['/services', 'Services', 'wrench'],
+  ['/contact', 'Contact', 'phone'],
 ];
 const s = stylex.create({
   root: {
@@ -33,7 +32,7 @@ const s = stylex.create({
     height: 'calc(64px + env(safe-area-inset-bottom))',
     paddingBottom: 'env(safe-area-inset-bottom)',
     display: 'grid',
-    gridTemplateColumns: 'repeat(5,1fr)',
+    gridTemplateColumns: 'repeat(3,1fr)',
     backgroundColor: colors.background,
     zIndex: 40,
     boxShadow: '0 -3px 12px #00000004',
@@ -46,8 +45,8 @@ const s = stylex.create({
     gap: 6,
     color: colors.muted,
     textDecoration: 'none',
-    fontSize: 10,
-    lineHeight: '14px',
+    fontSize: 12,
+    lineHeight: '16px',
     fontWeight: 400,
     minWidth: 0,
   },
@@ -80,7 +79,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     () => false,
   );
   const state = useAppState();
-  const primary = tabs.some(([href]) => href === pathname);
+  const primary = tabs.some(([href]) => href === pathname) || pathname === '/car-park';
   useEffect(() => {
     hydrateStore();
     window.addEventListener('storage', syncStorage);
@@ -105,7 +104,8 @@ export function AppShell({ children }: { children: ReactNode }) {
           {tabs.map(([href, label, icon]) => (
             <Link
               key={href}
-              href={href}
+              href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
+              prefetch={href === '/' ? false : undefined}
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >

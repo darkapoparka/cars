@@ -7,6 +7,7 @@ const crossDriveDependencies = process.platform === 'win32' &&
 /** @type {import('next').NextConfig} */
 module.exports = {
   devIndicators: false,
+  agentRules: false,
   poweredByHeader: false,
   distDir: process.env.NEXT_DIST_DIR || '.next',
   experimental: { cpus: 2 },

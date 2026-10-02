@@ -14,6 +14,7 @@ import {
   type NativeModelGroup,
 } from '@/lib/native-taxonomy';
 import { updateFilters, useAppState } from '@/lib/store';
+import type { Filters } from '@/lib/types';
 import { applyMakeSelection } from '@/lib/make-selection';
 import {
   modelDraftFor,
@@ -36,9 +37,27 @@ export function BrandLogo({ make, size = 40 }: { make: string; size?: number }) 
     <span aria-hidden="true" {...stylex.props(s.fallback)} />
   );
 }
-type Props = { open: boolean; onClose: () => void; initialMake?: string; initialExclude?: boolean };
-export function MakePicker({ open, onClose, initialMake = '', initialExclude = false }: Props) {
-  const { filters } = useAppState();
+type Props = {
+  open: boolean;
+  onClose: () => void;
+  initialMake?: string;
+  initialExclude?: boolean;
+  filters?: Filters;
+  onApply?: (patch: Partial<Filters>) => void;
+  availableMakes?: string[];
+};
+export function MakePicker({
+  open,
+  onClose,
+  initialMake = '',
+  initialExclude = false,
+  filters: suppliedFilters,
+  onApply,
+  availableMakes,
+}: Props) {
+  const state = useAppState();
+  const filters = suppliedFilters || state.filters;
+  const changeFilters = onApply || updateFilters;
   const initialMode = initialExclude || filters.excludedMakes.includes(initialMake);
   const [make, setMake] = useState(initialMake);
   const [exclude, setExclude] = useState(initialMode);
@@ -53,7 +72,9 @@ export function MakePicker({ open, onClose, initialMake = '', initialExclude = f
     (group) =>
       !q || [group.name, ...group.children].some((name) => name.toLocaleLowerCase().includes(q)),
   );
-  const makeNames = allMakes.filter((name) => name !== 'Any' && name !== 'Other');
+  const makeNames = (availableMakes || allMakes).filter(
+    (name) => name !== 'Any' && name !== 'Other',
+  );
   const matchingMakes = q
     ? [...makeNames, 'Other', 'Any'].filter((name) => name.toLocaleLowerCase().includes(q))
     : makeNames;
@@ -66,7 +87,7 @@ export function MakePicker({ open, onClose, initialMake = '', initialExclude = f
   const sections = q
     ? alphabet
     : [
-        { title: 'Top Makes', names: popularMakes },
+        { title: 'Top Makes', names: availableMakes || popularMakes },
         ...alphabet,
         { title: '#', names: ['Other', 'Any'] },
       ];
@@ -95,7 +116,7 @@ export function MakePicker({ open, onClose, initialMake = '', initialExclude = f
   }, [make, query]);
   function chooseMake(name: string) {
     if (name === 'Any') {
-      updateFilters({
+      changeFilters({
         makes: [],
         excludedMakes: [],
         models: [],
@@ -116,7 +137,7 @@ export function MakePicker({ open, onClose, initialMake = '', initialExclude = f
   }
   function apply() {
     const variants = selectedModelVariants(draft);
-    updateFilters(
+    changeFilters(
       applyMakeSelection(
         filters,
         make,

@@ -1,4 +1,6 @@
-import { ResultsScreen } from '@/components/ResultsScreen';
+import { redirect } from 'next/navigation';
+import { parseFilters } from '@/lib/search';
+import { showroomInventoryHref } from '@/lib/showroom';
 export default async function Page({
   searchParams,
 }: {
@@ -9,5 +11,7 @@ export default async function Page({
   for (const [key, value] of Object.entries(values)) {
     if (value !== undefined) params.set(key, Array.isArray(value) ? value[0] : value);
   }
-  return <ResultsScreen query={params.toString()} />;
+  redirect(
+    showroomInventoryHref(parseFilters(params.toString()), params.get('sort') || 'standard'),
+  );
 }

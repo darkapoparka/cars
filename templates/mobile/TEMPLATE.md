@@ -8,10 +8,16 @@ edits in this directory; the inspiration checkout remains independently preserve
 
 ## Composition and behavior
 
-The copy retains native mobile.de navigation, vehicle categories, search and
-advanced filters, results, vehicle details and galleries, saved vehicles/searches,
-dealer screens, local message drafts and the sell flow. Fixture data and local
-storage keep it usable without the original marketplace service.
+The owner-requested showroom adaptation makes Cars the home: search, stock
+condition tabs, horizontal filter pills and photo-led inventory share one screen.
+The bottom navigation is Cars / Services / Contact. Saved cars live in the header
+and work locally without an account. Vehicle Back retains the inventory filters,
+sort and scroll position. The native make/model picker and range controls remain.
+
+The imported marketplace screens and taxonomy remain reference source. Old
+`/search` and `/results` entry links resolve to Cars. Fixture data and local storage
+keep the template usable without a live dealer service. Contact saves local enquiry
+drafts and never claims to have sent an enquiry.
 
 Next.js 16, React, TypeScript and StyleX are preserved with the original dependency
 versions. Required fonts, native SVGs, vehicle photographs, data catalogs, domain
@@ -40,11 +46,17 @@ Keep source and build unchanged during acceptance.
 
 ## Personalization and release
 
-Brand boundaries are `src/app/layout.tsx`, `src/styles/tokens.stylex.ts`,
-`src/components`, `src/lib/catalog.ts`, `src/lib/dealers.ts` and `public/`.
-The UI deliberately retains its recognizable reference identity in this first
-copy. Replace all seller contacts, dealer identities, stock facts and brand assets
-for any proposal. Preserve truthful demo responses and neutral sample inventory.
+Brand boundaries are `src/lib/showroom.ts`, `src/app/layout.tsx`,
+`src/styles/tokens.stylex.ts`, `src/lib/catalog.ts` and `public/`.
+The header uses a neutral text placeholder until an actual dealer logo is supplied.
+The showroom configuration holds verified logo, phone, email, address, directions
+and opening hours; absent contact details do not create invented call/map links.
+Replace sample stock, imagery and captured detail facts for a real dealer proposal.
+Preserve truthful demo responses. Example services require dealer confirmation.
+
+Run `npm run qa:showroom` against port 6474 after lint, typecheck, domain tests and
+the production build. This adaptation has its own browser checks; historical
+marketplace screenshot contracts do not establish showroom acceptance.
 
 The catalog registers a working library candidate. No dealer release is selected,
 and the existing dealer generator and default design sets remain as recorded.

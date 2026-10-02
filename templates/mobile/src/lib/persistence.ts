@@ -2,6 +2,7 @@ import { defaultFilters, type Filters, type SavedSearch } from './types';
 import { normalizeFilters } from './filters';
 export type State = {
   filters: Filters;
+  inventorySort: string;
   categoryFilters: Partial<Record<Filters['category'], Filters>>;
   parked: string[];
   parkedAt: Record<string, number>;
@@ -26,6 +27,7 @@ export type State = {
 export function createInitialState(): State {
   return {
     filters: structuredClone(defaultFilters),
+    inventorySort: 'standard',
     categoryFilters: {},
     parked: [],
     parkedAt: {},
@@ -83,6 +85,12 @@ export function decodeState(raw: string | null): State {
   try {
     const data = record(JSON.parse(raw));
     const result: State = { ...initial, filters: normalizeFilters(data.filters) };
+    if (
+      ['standard', 'price-asc', 'price-desc', 'newest', 'mileage'].includes(
+        String(data.inventorySort),
+      )
+    )
+      result.inventorySort = String(data.inventorySort);
     for (const key of ['parked', 'dealers', 'checklist', 'viewed'] as const)
       result[key] = strings(data[key]);
     for (const key of ['notifications', 'consent', 'readWelcome', 'parkNoticeDismissed'] as const)

@@ -7,6 +7,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { IconButton } from './ui';
 import type { IconName } from './Icon';
 import { useAppState } from '@/lib/store';
+import { showroom, showroomInventoryHref } from '@/lib/showroom';
 const s = stylex.create({
   header: {
     height: 60,
@@ -35,7 +36,17 @@ const s = stylex.create({
   logo: { width: 124, height: 28, objectFit: 'contain' },
   home: { paddingLeft: 16, paddingRight: 0 },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
-  logoLink: { display: 'flex', alignItems: 'center', flex: '1' },
+  logoLink: {
+    display: 'flex',
+    alignItems: 'center',
+    flex: '1',
+    minWidth: 0,
+    minHeight: 48,
+    textDecoration: 'none',
+    fontSize: 19,
+    fontWeight: 700,
+    lineHeight: '26px',
+  },
   badge: {
     position: 'absolute',
     right: 9,
@@ -50,6 +61,7 @@ const s = stylex.create({
     lineHeight: '16px',
   },
   relative: { position: 'relative' },
+  placeholder: { minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
 });
 export function Header({
   title,
@@ -66,7 +78,7 @@ export function Header({
   onBack?: () => void;
   backIcon?: IconName;
 }) {
-  const { readWelcome } = useAppState();
+  const { parked, filters, inventorySort } = useAppState();
   return (
     <header {...stylex.props(s.header, home && s.home)}>
       {(back || onBack) && (
@@ -78,27 +90,43 @@ export function Header({
         />
       )}
       {home ? (
-        <Link href="/" {...stylex.props(s.logoLink)} aria-label="mobile.de home">
-          <Image
-            src="/images/logo.png"
-            alt="mobile.de"
-            width={124}
-            height={28}
-            priority
-            {...stylex.props(s.logo)}
-          />
+        <Link
+          href={showroomInventoryHref(filters, inventorySort)}
+          prefetch={false}
+          {...stylex.props(s.logoLink)}
+          aria-label={showroom.name + ' cars'}
+        >
+          {showroom.logo ? (
+            <Image
+              src={showroom.logo}
+              alt={showroom.name}
+              width={124}
+              height={28}
+              priority
+              {...stylex.props(s.logo)}
+            />
+          ) : (
+            <span {...stylex.props(s.placeholder)}>{showroom.name}</span>
+          )}
         </Link>
       ) : (
         <h1 {...stylex.props(s.title, Boolean(back || onBack) && s.backTitle)}>{title}</h1>
       )}
       {home ? (
         <div {...stylex.props(s.actions)}>
-          <IconButton href="/messages" icon="message" label="Messages" />
           <span {...stylex.props(s.relative)}>
-            <IconButton href="/notifications" icon="bell" label="Notifications" />
-            {!readWelcome && <span {...stylex.props(s.badge)}>1</span>}
+            <IconButton
+              href="/car-park"
+              icon="heart"
+              label={'Saved cars' + (parked.length ? ', ' + parked.length + ' saved' : '')}
+              filled={parked.length > 0}
+            />
+            {parked.length > 0 && (
+              <span aria-hidden="true" {...stylex.props(s.badge)}>
+                {parked.length}
+              </span>
+            )}
           </span>
-          <IconButton href="/profile" icon="user" label="Profile" />
         </div>
       ) : (
         children

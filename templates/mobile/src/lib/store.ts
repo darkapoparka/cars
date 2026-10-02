@@ -73,7 +73,7 @@ export function togglePark(id: string) {
   patchState({
     parked: exists ? state.parked.filter((value) => value !== id) : [...state.parked, id],
     parkedAt: exists ? state.parkedAt : { ...state.parkedAt, [id]: Date.now() },
-    toast: exists ? 'Vehicle removed from your Car Park' : 'Vehicle added to your Car Park',
+    toast: exists ? 'Car removed from saved cars' : 'Car saved on this device',
   });
 }
 export function saveSearch(name: string, filters: Filters) {

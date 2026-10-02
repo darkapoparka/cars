@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-02T01:48:14.434Z",
+  "source": "L:/CODEX/cars/templates/mobile",
+  "branch": "main",
+  "sourceBasisCommit": "e97c9ae57b7226c84692d4fc57c747c24ece24ec",
+  "testedSource": "Showroom working tree before its scoped implementation commit",
+  "runtime": "Node 22.20.0",
+  "productionBuildId": "5bBHusWVOMPbYIRDS2A0M",
+  "preview": "http://127.0.0.1:6474",
+  "checks": {
+    "lint": "passed",
+    "typescript": "passed",
+    "domainTestsPassed": 57,
+    "productionBuild": "passed",
+    "chromiumChecks": 28,
+    "webkitChecks": 9,
+    "browserErrors": []
+  },
+  "responsive": {
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "shortViewport": [
+      320,
+      480
+    ],
+    "simulatedTextScale": 2,
+    "routes": [
+      "/",
+      "/services",
+      "/contact",
+      "/car-park",
+      "/vehicle/bmw-x6"
+    ]
+  },
+  "browserChecks": [
+    {
+      "engine": "chromium",
+      "description": "Cars is Home; three navigation destinations; stock visible on entry"
+    },
+    {
+      "engine": "chromium",
+      "description": "Search, reload, clear and Used/New tabs filter the same inventory"
+    },
+    {
+      "engine": "chromium",
+      "description": "Price, year and fuel sheets update listings without a results-page step"
+    },
+    {
+      "engine": "chromium",
+      "description": "Existing make picker returns to all filters; Escape restores each opener"
+    },
+    {
+      "engine": "chromium",
+      "description": "Make and model selections filter the showroom stock"
+    },
+    {
+      "engine": "chromium",
+      "description": "Sort survives tabs; Back through related cars restores inventory URL and scroll"
+    },
+    {
+      "engine": "chromium",
+      "description": "Saved cars persist on reload and can be removed without registration"
+    },
+    {
+      "engine": "chromium",
+      "description": "Service and vehicle enquiries retain context; draft save sends no request"
+    },
+    {
+      "engine": "chromium",
+      "description": "Old search/results links resolve to Cars; empty results offer recovery"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320/390/1440px routes, short-height sheets and 200% text reflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "Cars is Home; three navigation destinations; stock visible on entry"
+    },
+    {
+      "engine": "webkit",
+      "description": "Search, reload, clear and Used/New tabs filter the same inventory"
+    },
+    {
+      "engine": "webkit",
+      "description": "Price, year and fuel sheets update listings without a results-page step"
+    },
+    {
+      "engine": "webkit",
+      "description": "Existing make picker returns to all filters; Escape restores each opener"
+    },
+    {
+      "engine": "webkit",
+      "description": "Make and model selections filter the showroom stock"
+    },
+    {
+      "engine": "webkit",
+      "description": "Sort survives tabs; Back through related cars restores inventory URL and scroll"
+    },
+    {
+      "engine": "webkit",
+      "description": "Saved cars persist on reload and can be removed without registration"
+    },
+    {
+      "engine": "webkit",
+      "description": "Service and vehicle enquiries retain context; draft save sends no request"
+    },
+    {
+      "engine": "webkit",
+      "description": "Old search/results links resolve to Cars; empty results offer recovery"
+    }
+  ],
+  "finalCaptures": [
+    "cars-390.png",
+    "filters-320-short.png",
+    "contact-390.png"
+  ],
+  "limitations": [
+    "Captured sample stock and detail facts",
+    "Example showroom services",
+    "Enquiries are local drafts and send no request",
+    "Local Playwright browsers; no native device verification",
+    "Library candidate; no template release or dealer deployment",
+    "Owner visual acceptance pending"
+  ],
+  "cleanup": "Automatic approval review blocked removal of inactive task dev output and junction; production preview is separate"
+}

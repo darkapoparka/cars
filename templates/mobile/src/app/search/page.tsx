@@ -1,4 +1,4 @@
-import { SearchScreen } from '@/components/SearchScreen';
+import { redirect } from 'next/navigation';
 export default function Page() {
-  return <SearchScreen />;
+  redirect('/');
 }

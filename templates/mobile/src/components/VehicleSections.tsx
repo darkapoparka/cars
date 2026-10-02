@@ -8,11 +8,13 @@ import type { Vehicle } from '@/lib/types';
 import { colors } from '@/styles/tokens.stylex';
 import { number } from '@/lib/search';
 import { vehicles } from '@/lib/catalog';
+import { showroom } from '@/lib/showroom';
 import { Button, Modal, ui } from './ui';
 import { Icon, type IconName } from './Icon';
 import { RatingStars } from './RatingStars';
 import { AssistantPanel } from './AssistantEntry';
 import { VehicleCard } from './VehicleCard';
+import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 const s = stylex.create({
   body: {
     backgroundColor: colors.surface,
@@ -135,13 +137,16 @@ const s = stylex.create({
     scrollSnapType: 'x mandatory',
   },
   featuresLabel: { width: '80%' },
+  showroomCar: { width: 281, flexShrink: 0, scrollSnapAlign: 'start' },
 });
 export function VehicleSections({
   vehicle: v,
   onReport,
+  showroomMode = false,
 }: {
   vehicle: Vehicle;
   onReport: () => void;
+  showroomMode?: boolean;
 }) {
   const [technical, setTechnical] = useState(false);
   const [features, setFeatures] = useState(false);
@@ -194,26 +199,28 @@ export function VehicleSections({
             </div>
           ))}
         </div>
-        <AssistantPanel detail />
-        <button
-          type="button"
-          onClick={() =>
-            document
-              .getElementById('about-dealer-' + v.id)
-              ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }
-          {...stylex.props(s.seller)}
-        >
-          <DealerLogo id={v.id} size={40} />
-          <div>
-            <p>{v.dealer}</p>
-            <p {...stylex.props(s.stars)}>
-              <RatingStars rating={v.rating} />{' '}
-              <span {...stylex.props(s.label)}>({v.reviews})</span>
-            </p>
-            <span {...stylex.props(ui.orange)}>About this dealer</span>
-          </div>
-        </button>
+        {!showroomMode && <AssistantPanel detail />}
+        {!showroomMode && (
+          <button
+            type="button"
+            onClick={() =>
+              document
+                .getElementById('about-dealer-' + v.id)
+                ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+            {...stylex.props(s.seller)}
+          >
+            <DealerLogo id={v.id} size={40} />
+            <div>
+              <p>{v.dealer}</p>
+              <p {...stylex.props(s.stars)}>
+                <RatingStars rating={v.rating} />{' '}
+                <span {...stylex.props(s.label)}>({v.reviews})</span>
+              </p>
+              <span {...stylex.props(ui.orange)}>About this dealer</span>
+            </div>
+          </button>
+        )}
         {v.specialFeatures && (
           <div {...stylex.props(ui.space)}>
             <strong>Special features according to dealer</strong>
@@ -314,22 +321,46 @@ export function VehicleSections({
           {description ? 'Show less' : 'Show more'}
         </button>
       </section>
-      <NativeDealerCards vehicle={v} />
+      {showroomMode ? (
+        <section {...stylex.props(s.card, ui.pad)}>
+          <h2 {...stylex.props(s.title)}>{showroom.name}</h2>
+          <p {...stylex.props(ui.text, ui.muted, ui.space)}>
+            Ask about this car or arrange a viewing.
+          </p>
+          <div {...stylex.props(ui.space)}>
+            <Button href={'/contact?vehicle=' + v.id} icon="mail">
+              Contact the showroom
+            </Button>
+          </div>
+        </section>
+      ) : (
+        <NativeDealerCards vehicle={v} />
+      )}
       <section {...stylex.props(s.card)}>
         <h2 {...stylex.props(s.title, s.pad)}>Similar vehicles</h2>
         <div {...stylex.props(s.carousel)}>
           {vehicles
             .filter((other) => other.id !== v.id)
-            .map((other) => (
-              <VehicleCard key={other.id} vehicle={other} home />
-            ))}
+            .map((other) =>
+              showroomMode ? (
+                <div key={other.id} {...stylex.props(s.showroomCar)}>
+                  <ShowroomVehicleCard vehicle={other} />
+                </div>
+              ) : (
+                <VehicleCard key={other.id} vehicle={other} home />
+              ),
+            )}
         </div>
       </section>
-      <Button variant="ghost" onClick={onReport}>
-        Report this listing
-      </Button>
+      {!showroomMode && (
+        <Button variant="ghost" onClick={onReport}>
+          Report this listing
+        </Button>
+      )}
       <p {...stylex.props(ui.small, ui.muted, ui.center)}>
-        Local reference · No live seller connection
+        {showroomMode
+          ? 'Sample vehicle · Showroom template preview'
+          : 'Local reference · No live seller connection'}
       </p>
       <Modal table open={technical} onClose={() => setTechnical(false)}>
         <h2 {...stylex.props(s.modalTitle)}>Technical data</h2>
