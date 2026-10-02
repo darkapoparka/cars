@@ -44,8 +44,8 @@ const packages = [
   {name: 'Inspection and diagnostics', mobileName: 'Diagnostics', copy: 'Check your car and plan any work.', checks: ['Diagnostic and condition checks', 'Suspension and braking system', 'Maintenance recommendations'], mobileChecks: ['Computer check', 'Suspension and brakes', 'Recommendations']},
 ];
 const sellingMethods = [
-  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Inspection', 'Documents'], action: 'Get a valuation', mobileAction: 'Get valuation'},
-  {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Next car', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Explore exchange'},
+  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Car check', 'Documents'], action: 'Get a valuation', mobileAction: 'Get valuation'},
+  {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Choice', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Explore exchange'},
 ];
 const sellingGuides = [
   {title: 'Car valuation', mobileTitle: 'Valuation', image: showroom.artwork.selling.valuation, description: 'Have your mileage, registration details and service records ready. The showroom will review your car’s condition and discuss a valuation before you decide.'},
@@ -65,7 +65,7 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
   return <>
     {kind === 'sell' ? <section {...stylex.props(s.methods)} aria-label={tx("Ways to sell your car")}>
       {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} {...stylex.props(s.method)}>
-        <div {...stylex.props(s.methodMedia)}><Image src={image} fill sizes="(max-width: 767px) 100vw, 50vw" alt="" {...stylex.props(s.methodArtwork)}/></div>
+        <div {...stylex.props(s.methodMedia)}><Image src={image} width={1536} height={1024} sizes="(max-width: 767px) 100vw, 50vw" alt="" {...stylex.props(s.methodArtwork)}/></div>
         <div {...stylex.props(s.methodCopy)}><h2 {...stylex.props(s.heading)}><ResponsiveCopy full={title} short={mobileTitle}/></h2>
           <ul {...stylex.props(s.methodPoints)}>{points.map((point, index) => <li key={point} {...stylex.props(s.methodPoint)}><Check size={15} {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={point} short={mobilePoints[index]}/></li>)}</ul>
           <button type="button" onClick={onStart} {...stylex.props(s.methodAction)}><ResponsiveCopy full={action} short={mobileAction}/><ArrowRight size={15} {...stylex.props(s.pointIcon)}/></button>
@@ -90,11 +90,11 @@ const s = stylex.create({
   heading: {color: '#202024', fontSize: {[media.mobile]: 19, default: 26}, fontWeight: 600, lineHeight: 1.25, overflowWrap: 'anywhere'},
   section: {marginTop: 28},
   methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 30},
-  method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', minHeight: {[media.mobile]: 'max(270px, 19em)', default: 270}, fontSize: {[media.mobile]: 12, default: 14}, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 20, backgroundColor: '#fff'},
+  method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', aspectRatio: {[media.mobile]: '3 / 2', default: 'auto'}, minHeight: {[media.mobile]: 'max(196px, 16em)', default: 270}, fontSize: {[media.mobile]: 12, default: 14}, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 20, backgroundColor: '#fff'},
   methodMedia: {position: 'absolute', inset: 0},
-  methodArtwork: {objectFit: 'contain', objectPosition: 'right bottom'},
+  methodArtwork: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: {[media.mobile]: 'cover', default: 'contain'}, objectPosition: 'right bottom', pointerEvents: 'none'},
   methodCopy: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: {[media.mobile]: '100%', default: '60%'}, minHeight: {[media.mobile]: 0, default: 270}, padding: {[media.mobile]: 16, default: '26px 0 26px 22px'}},
-  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', maxWidth: {[media.mobile]: 210, default: '100%'}, gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
+  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', maxWidth: {[media.mobile]: 148, default: '100%'}, gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
   methodPoint: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
   methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 44, maxWidth: '100%', marginTop: {[media.mobile]: 14, default: 'auto'}, padding: '8px 10px', color: campaign.lightInk, fontSize: {[media.mobile]: 12, default: 14}, fontWeight: 600, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},

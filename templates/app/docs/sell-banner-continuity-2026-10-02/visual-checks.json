@@ -1,0 +1,683 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "locale": "bg",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Преглед",
+              "width": 68.015625
+            },
+            {
+              "text": "Документи",
+              "width": 83.921875
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.99288256227758,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Продай ни колата",
+          "width": 281
+        },
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Избор",
+              "width": 55.875
+            },
+            {
+              "text": "Доплащане",
+              "width": 87
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.99288256227758,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Замяна",
+          "width": 281
+        }
+      ],
+      "viewport": {
+        "contentWidth": 305,
+        "height": 740,
+        "scrollWidth": 305,
+        "width": 320
+      }
+    },
+    {
+      "width": 320,
+      "locale": "en",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Valuation",
+              "width": 75.046875
+            },
+            {
+              "text": "Check",
+              "width": 56.953125
+            },
+            {
+              "text": "Documents",
+              "width": 85.5
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.99288256227758,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Sell your car to us",
+          "width": 281
+        },
+        {
+          "checks": [
+            {
+              "text": "Valuation",
+              "width": 75.046875
+            },
+            {
+              "text": "Choice",
+              "width": 59.796875
+            },
+            {
+              "text": "Upgrade",
+              "width": 69.234375
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.99288256227758,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Exchange",
+          "width": 281
+        }
+      ],
+      "viewport": {
+        "contentWidth": 305,
+        "height": 740,
+        "scrollWidth": 305,
+        "width": 320
+      }
+    },
+    {
+      "width": 390,
+      "locale": "bg",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Преглед",
+              "width": 68.015625
+            },
+            {
+              "text": "Документи",
+              "width": 83.921875
+            }
+          ],
+          "height": 234,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9943019943019944,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Продай ни колата",
+          "width": 351
+        },
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Избор",
+              "width": 55.875
+            },
+            {
+              "text": "Доплащане",
+              "width": 87
+            }
+          ],
+          "height": 234,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9943019943019944,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Замяна",
+          "width": 351
+        }
+      ],
+      "viewport": {
+        "contentWidth": 375,
+        "height": 740,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Valuation",
+              "width": 75.046875
+            },
+            {
+              "text": "Check",
+              "width": 56.953125
+            },
+            {
+              "text": "Documents",
+              "width": 85.5
+            }
+          ],
+          "height": 234,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9943019943019944,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Sell your car to us",
+          "width": 351
+        },
+        {
+          "checks": [
+            {
+              "text": "Valuation",
+              "width": 75.046875
+            },
+            {
+              "text": "Choice",
+              "width": 59.796875
+            },
+            {
+              "text": "Upgrade",
+              "width": 69.234375
+            }
+          ],
+          "height": 234,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9943019943019944,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Exchange",
+          "width": 351
+        }
+      ],
+      "viewport": {
+        "contentWidth": 375,
+        "height": 740,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "width": 768,
+      "locale": "bg",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Оценка на автомобила",
+              "width": 181.09375
+            },
+            {
+              "text": "Преглед на състоянието",
+              "width": 181.09375
+            },
+            {
+              "text": "Съдействие с документите",
+              "width": 181.09375
+            }
+          ],
+          "height": 304,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9941262848751836,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Продай ни колата",
+          "width": 340.5
+        },
+        {
+          "checks": [
+            {
+              "text": "Оценете автомобила си",
+              "width": 181.09375
+            },
+            {
+              "text": "Открийте следващия си автомобил",
+              "width": 181.09375
+            },
+            {
+              "text": "Планирайте смяната",
+              "width": 181.09375
+            }
+          ],
+          "height": 304,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9941262848751836,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Замяна с доплащане",
+          "width": 340.5
+        }
+      ],
+      "viewport": {
+        "contentWidth": 753,
+        "height": 740,
+        "scrollWidth": 753,
+        "width": 768
+      }
+    },
+    {
+      "width": 768,
+      "locale": "en",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Car valuation",
+              "width": 142.390625
+            },
+            {
+              "text": "Condition review",
+              "width": 142.390625
+            },
+            {
+              "text": "Guided paperwork",
+              "width": 142.390625
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9941262848751836,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Sell your car to us",
+          "width": 340.5
+        },
+        {
+          "checks": [
+            {
+              "text": "Value your car",
+              "width": 141.359375
+            },
+            {
+              "text": "Find your next car",
+              "width": 141.359375
+            },
+            {
+              "text": "Plan your upgrade",
+              "width": 141.359375
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9941262848751836,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Part-exchange",
+          "width": 340.5
+        }
+      ],
+      "viewport": {
+        "contentWidth": 753,
+        "height": 740,
+        "scrollWidth": 753,
+        "width": 768
+      }
+    },
+    {
+      "width": 1440,
+      "locale": "bg",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Оценка на автомобила",
+              "width": 199.53125
+            },
+            {
+              "text": "Преглед на състоянието",
+              "width": 199.53125
+            },
+            {
+              "text": "Съдействие с документите",
+              "width": 199.53125
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9965753424657534,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Продай ни колата",
+          "width": 584
+        },
+        {
+          "checks": [
+            {
+              "text": "Оценете автомобила си",
+              "width": 254.796875
+            },
+            {
+              "text": "Открийте следващия си автомобил",
+              "width": 254.796875
+            },
+            {
+              "text": "Планирайте смяната",
+              "width": 254.796875
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9965753424657534,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Замяна с доплащане",
+          "width": 584
+        }
+      ],
+      "viewport": {
+        "contentWidth": 1425,
+        "height": 740,
+        "scrollWidth": 1425,
+        "width": 1440
+      }
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Car valuation",
+              "width": 142.390625
+            },
+            {
+              "text": "Condition review",
+              "width": 142.390625
+            },
+            {
+              "text": "Guided paperwork",
+              "width": 142.390625
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9965753424657534,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Sell your car to us",
+          "width": 584
+        },
+        {
+          "checks": [
+            {
+              "text": "Value your car",
+              "width": 141.359375
+            },
+            {
+              "text": "Find your next car",
+              "width": 141.359375
+            },
+            {
+              "text": "Plan your upgrade",
+              "width": 141.359375
+            }
+          ],
+          "height": 272,
+          "image": {
+            "fit": "contain",
+            "frameCoverage": 0.9965753424657534,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 3,
+          "textContained": true,
+          "title": "Part-exchange",
+          "width": 584
+        }
+      ],
+      "viewport": {
+        "contentWidth": 1425,
+        "height": 740,
+        "scrollWidth": 1425,
+        "width": 1440
+      }
+    },
+    {
+      "width": 324,
+      "locale": "bg",
+      "cards": [
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Преглед",
+              "width": 68.015625
+            },
+            {
+              "text": "Документи",
+              "width": 83.921875
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9929824561403509,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Продай ни колата",
+          "width": 285
+        },
+        {
+          "checks": [
+            {
+              "text": "Оценка",
+              "width": 62.671875
+            },
+            {
+              "text": "Избор",
+              "width": 55.875
+            },
+            {
+              "text": "Доплащане",
+              "width": 87
+            }
+          ],
+          "height": 196,
+          "image": {
+            "fit": "cover",
+            "frameCoverage": 0.9929824561403509,
+            "loaded": true,
+            "mask": "none"
+          },
+          "rows": 2,
+          "textContained": true,
+          "title": "Замяна",
+          "width": 285
+        }
+      ],
+      "viewport": {
+        "contentWidth": 309,
+        "height": 740,
+        "scrollWidth": 309,
+        "width": 324
+      }
+    }
+  ],
+  "desktopFrames": [
+    {
+      "locale": "bg",
+      "bottom": 630.59375,
+      "top": 358.59375,
+      "visible": true,
+      "width": 1440
+    },
+    {
+      "locale": "en",
+      "bottom": 630.59375,
+      "top": 358.59375,
+      "visible": true,
+      "width": 1440
+    }
+  ],
+  "visibleFinalState": {
+    "cards": [
+      {
+        "checks": [
+          {
+            "text": "Оценка",
+            "width": 62.671875
+          },
+          {
+            "text": "Преглед",
+            "width": 68.015625
+          },
+          {
+            "text": "Документи",
+            "width": 83.921875
+          }
+        ],
+        "height": 196,
+        "image": {
+          "fit": "cover",
+          "frameCoverage": 0.9929824561403509,
+          "loaded": true,
+          "mask": "none"
+        },
+        "rows": 2,
+        "textContained": true,
+        "title": "Продай ни колата",
+        "width": 285
+      },
+      {
+        "checks": [
+          {
+            "text": "Оценка",
+            "width": 62.671875
+          },
+          {
+            "text": "Избор",
+            "width": 55.875
+          },
+          {
+            "text": "Доплащане",
+            "width": 87
+          }
+        ],
+        "height": 196,
+        "image": {
+          "fit": "cover",
+          "frameCoverage": 0.9929824561403509,
+          "loaded": true,
+          "mask": "none"
+        },
+        "rows": 2,
+        "textContained": true,
+        "title": "Замяна",
+        "width": 285
+      }
+    ],
+    "viewport": {
+      "contentWidth": 309,
+      "height": 740,
+      "scrollWidth": 309,
+      "width": 324
+    }
+  },
+  "interactions": [
+    "Valuation opens the existing /bg/sell/details draft route; Back restores /bg/sell.",
+    "Exchange opens the existing /bg/sell/details draft route; Back restores /bg/sell. No enquiry submitted."
+  ],
+  "consoleErrors": []
+}
