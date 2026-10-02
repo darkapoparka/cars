@@ -404,6 +404,7 @@
 
     .dn-editorial-item {
       scroll-snap-align: start;
+      padding: calc(var(--dn-space-1) + var(--dn-space-half));
       border-radius: 16px;
       background: var(--dn-mobile-surface);
       box-shadow: none;
@@ -412,7 +413,7 @@
     .dn-editorial-item__media {
       height: auto;
       aspect-ratio: 16 / 9;
-      border-radius: 16px 16px 0 0;
+      border-radius: var(--dn-radius);
     }
 
     .dn-editorial-item__content {
