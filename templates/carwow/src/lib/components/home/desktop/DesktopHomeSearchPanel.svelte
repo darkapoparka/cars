@@ -55,9 +55,9 @@
 	let keywordQuery = $state('');
 	type HeroIntent = 'buy' | 'sell' | 'import';
 	const intents = [
-		{ value: 'buy', label: i18n.t('copy.2c7f964ab3f3') },
-		{ value: 'sell', label: i18n.t('copy.3ba407bb3a13') },
-		{ value: 'import', label: i18n.t('copy.3d1ecec672e9') }
+		{ value: 'buy', label: 'copy.2c7f964ab3f3', compactLabel: 'copy.f6c6952d4d23' },
+		{ value: 'sell', label: 'copy.3ba407bb3a13', compactLabel: 'copy.6510e880c790' },
+		{ value: 'import', label: 'copy.3d1ecec672e9', compactLabel: 'copy.995bfafd0b63' }
 	] as const;
 	let activeIntent = $state<HeroIntent>('buy');
 	let hydrated = $state(false);
@@ -269,9 +269,11 @@
 					id={`hero-intent-${intent.value}`}
 					aria-selected={activeIntent === intent.value}
 					aria-controls="hero-intent-panel"
+					title={i18n.t(intent.label)}
 					tabindex={activeIntent === intent.value ? 0 : -1}
 					onclick={() => selectIntent(intent.value)}
-					onkeydown={(event) => handleIntentKeydown(event, index)}>{i18n.text(intent.label)}</button
+					onkeydown={(event) => handleIntentKeydown(event, index)}
+					>{i18n.t(i18n.locale === 'bg' ? intent.compactLabel : intent.label)}</button
 				>
 			{/each}
 		</div>
@@ -608,25 +610,31 @@
 	}
 	.hero-intent__tabs {
 		display: flex;
+		gap: 8px;
 		justify-content: center;
 		background: var(--discovery-action);
 		border-radius: var(--discovery-panel-radius) var(--discovery-panel-radius) 0 0;
-		padding: 0 24px;
+		padding: 6px 24px;
 	}
 	.hero-intent__tabs button {
-		background: transparent;
-		border: 0;
-		border-radius: 0;
+		background: var(--discovery-action-hover);
+		border: 1px solid #70757a;
+		border-radius: var(--discovery-control-radius);
 		color: #fff;
 		cursor: pointer;
 		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
-		min-height: 52px;
-		padding: 0 20px;
+		min-height: 40px;
+		min-width: 128px;
+		padding: 0 16px;
 		white-space: nowrap;
+		transition:
+			background-color 140ms ease,
+			border-color 140ms ease;
 	}
 	.hero-intent__tabs button:hover:not(:disabled) {
-		background: var(--discovery-action-hover);
+		background: #4b5256;
+		border-color: #abb1b5;
 	}
 	.hero-intent button:disabled {
 		cursor: wait;
@@ -634,6 +642,7 @@
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
 		background: var(--discovery-panel);
+		border-color: var(--discovery-panel);
 		color: var(--discovery-ink);
 		font-weight: var(--sa-weight-semibold);
 	}

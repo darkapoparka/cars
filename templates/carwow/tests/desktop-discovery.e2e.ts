@@ -272,7 +272,7 @@ test('card actions remain legible and retain state from home to inventory and fa
 	page
 }) => {
 	await page.goto('/');
-	await expect(page.getByRole('tab', { name: 'Купи автомобил', exact: true })).toBeEnabled();
+	await expect(page.getByRole('tab', { name: 'Купи', exact: true })).toBeEnabled();
 	const card = page.locator('.daynight-home-inventory__card').first();
 	const slug = await card.getAttribute('data-daynight-slug');
 	const actions = card.locator('.desktop-vehicle-actions button');

@@ -31,7 +31,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 			);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'border-width',
-				'0px'
+				'1px'
 			);
 			await expect(page.locator('label[for="hero-buy-query"]')).toHaveCSS('width', '1px');
 			await expect(page.locator('#hero-buy-query')).toHaveAccessibleName(

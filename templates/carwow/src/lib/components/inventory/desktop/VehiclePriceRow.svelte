@@ -9,14 +9,26 @@
 		$props();
 
 	const displayPrice = $derived(vehicle.priceEur.replace(/\s*EUR\b/, ' €'));
+	const financingCaption = $derived(i18n.spec(vehicle.monthly));
+	const compactFinancingCaption = $derived(
+		financingCaption === i18n.t('copy.44b20a0a5b9e')
+			? i18n.t('copy.6e55eeb12cce')
+			: financingCaption
+	);
 </script>
 
 <div class="card-box__price">
 	<span class="daynight-card-price__stack">
 		<span class="daynight-card-price__value">{displayPrice}</span>
-		<span class="daynight-card-price__monthly">
-			{#if financeLink}<a href={i18n.href(resolve('/financing'))}>{i18n.spec(vehicle.monthly)}</a
-				>{:else}{i18n.spec(vehicle.monthly)}{/if}
+		<span class="daynight-card-price__monthly" title={financingCaption}>
+			{#if financeLink}
+				<a href={i18n.href(resolve('/financing'))} aria-label={financingCaption}
+					>{compactFinancingCaption}</a
+				>
+			{:else}
+				<span aria-hidden="true">{compactFinancingCaption}</span>
+				<span class="sr-only">{financingCaption}</span>
+			{/if}
 		</span>
 	</span>
 	<a
@@ -72,7 +84,7 @@
 		letter-spacing: 0;
 		line-height: 1.2;
 		max-width: 100%;
-		white-space: normal;
+		white-space: nowrap;
 	}
 
 	.daynight-card-price__link {

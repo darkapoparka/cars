@@ -208,6 +208,8 @@ test('desktop cards keep single-line titles and specification badges before pric
 									details.lastElementChild?.matches('.card-box__price') &&
 									caption.getBoundingClientRect().right <=
 										arrow.getBoundingClientRect().left - 10 &&
+									caption.getBoundingClientRect().height <=
+										parseFloat(getComputedStyle(caption).lineHeight) + 1 &&
 									caption.scrollWidth <= caption.clientWidth + 1
 								);
 							})
