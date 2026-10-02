@@ -14,7 +14,8 @@
       "tabs",
       "catalogue search",
       "preview forms",
-      "calculator"
+      "calculator",
+      "header catalogue suggestions"
     ],
     "retainedVendorDependencies": [
       "jQuery 3.6.1",
@@ -37,7 +38,7 @@
   "browserTotals": {
     "homepageComparisons": 60,
     "supportingPageChecks": 118,
-    "referenceJourneys": 14
+    "referenceJourneys": 16
   },
   "homepageComparisons": [
     {
@@ -609,6 +610,7 @@
     {
       "engine": "chromium",
       "passed": [
+        "Header search: all ten homes, matching cars, keyboard, dismissal and inventory URLs",
         "Source search: make change resets model and URL selects real inventory",
         "Source tabs and dropdowns support keyboard selection and Escape",
         "Carousel changes visible cars and vehicle tabs retain source geometry",
@@ -617,11 +619,13 @@
         "Mobile source menu: nested Home choices, Escape and focus return",
         "Newsletter is a local preview, with no fake send result"
       ],
-      "failures": []
+      "failures": [],
+      "verifiedAt": "2026-10-02T03:56:03.331Z"
     },
     {
       "engine": "webkit",
       "passed": [
+        "Header search: all ten homes, matching cars, keyboard, dismissal and inventory URLs",
         "Source search: make change resets model and URL selects real inventory",
         "Source tabs and dropdowns support keyboard selection and Escape",
         "Carousel changes visible cars and vehicle tabs retain source geometry",
@@ -630,7 +634,8 @@
         "Mobile source menu: nested Home choices, Escape and focus return",
         "Newsletter is a local preview, with no fake send result"
       ],
-      "failures": []
+      "failures": [],
+      "verifiedAt": "2026-10-02T03:56:03.331Z"
     }
   ],
   "supportingPages": [
@@ -657,57 +662,57 @@
   "build": {
     "passed": true,
     "output": {
-      "Home1-BwsXo9VM.js": {
+      "Home1-cJu-ZA0z.js": {
         "bytes": 272479,
-        "gzipBytes": 16215
+        "gzipBytes": 16214
       },
-      "Home10-O__2Cb8z.js": {
+      "Home10-CV9AkDRu.js": {
         "bytes": 321634,
-        "gzipBytes": 16638
+        "gzipBytes": 16635
       },
-      "Home2-__ZsPscG.js": {
+      "Home2-BvFTMdSI.js": {
         "bytes": 244300,
-        "gzipBytes": 18497
+        "gzipBytes": 18491
       },
-      "Home3-BEVf95Bd.js": {
+      "Home3-ChriM717.js": {
         "bytes": 398995,
-        "gzipBytes": 22607
+        "gzipBytes": 22604
       },
-      "Home4-CFhPHN_e.js": {
+      "Home4-DNhqJb58.js": {
         "bytes": 153795,
-        "gzipBytes": 17399
+        "gzipBytes": 17396
       },
-      "Home5-CatlnPkM.js": {
+      "Home5-BZbxnLyR.js": {
         "bytes": 301389,
-        "gzipBytes": 15231
+        "gzipBytes": 15228
       },
-      "Home6-CYtEeISC.js": {
+      "Home6-Dni6ZAtQ.js": {
         "bytes": 200195,
-        "gzipBytes": 13127
+        "gzipBytes": 13124
       },
-      "Home7-Dc5D-kTR.js": {
+      "Home7-BoI2uium.js": {
         "bytes": 196278,
-        "gzipBytes": 13314
+        "gzipBytes": 13310
       },
-      "Home8-BSoZo0iB.js": {
+      "Home8-BeMHjos-.js": {
         "bytes": 217949,
-        "gzipBytes": 19123
+        "gzipBytes": 19120
       },
-      "Home9-xCyI3Ra9.js": {
+      "Home9-Cwgnciuy.js": {
         "bytes": 273025,
-        "gzipBytes": 15320
+        "gzipBytes": 15317
       },
-      "index-fFkPaGEF.js": {
-        "bytes": 133124,
-        "gzipBytes": 43963
+      "index-Og1P5Paa.js": {
+        "bytes": 133156,
+        "gzipBytes": 43979
       },
       "index-UK8Ql3h4.css": {
         "bytes": 635,
         "gzipBytes": 340
       },
-      "interactions-B6KlqvxM.js": {
-        "bytes": 19298,
-        "gzipBytes": 4816
+      "interactions-B0rnhatc.js": {
+        "bytes": 21975,
+        "gzipBytes": 5691
       },
       "styles-xx0g6lNo.css": {
         "bytes": 67016,
@@ -723,7 +728,8 @@
         "bytes": 68524,
         "gzipBytes": 13013
       }
-    }
+    },
+    "verifiedAt": "2026-10-02T03:56:03.331Z"
   },
   "boundaries": {
     "wholeSitePixelPerfect": false,
@@ -735,5 +741,25 @@
     "forms": "Local preview only",
     "inventory": "Seventeen sample catalogue vehicles and illustrative source homepage shelves",
     "map": "Source Home 6 lazy external illustrative embed; third-party availability not certified"
+  },
+  "headerSearchCorrection": {
+    "verifiedAt": "2026-10-02T03:56:03.331Z",
+    "homesTested": 10,
+    "desktopWidth": 1920,
+    "hiddenAtWidths": [
+      1440,
+      320
+    ],
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "sourceDropdownInspectedLive": true,
+    "matchingCatalogue": true,
+    "keyboardAndPointerNavigation": true,
+    "emptyResults": true,
+    "dismissal": true,
+    "previousVisualComparisonsRerun": false,
+    "dealerPresentationIntegrated": false
   }
 }

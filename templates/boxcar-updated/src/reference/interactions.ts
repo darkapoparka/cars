@@ -2,6 +2,7 @@ import carouselOptions from "./carousels.json";
 import { navigate } from "../lib/router.svelte";
 import { vehicles } from "../lib/catalog";
 import { calculateLoan } from "../lib/domain";
+import { initializeHeaderSearch } from "./header-search";
 
 import {
   carousel,
@@ -20,6 +21,7 @@ export function referencePage(node: HTMLElement) {
   const carousels = new Map<HTMLElement, Carousel>();
   const abort = new AbortController(),
     signal = abort.signal;
+  initializeHeaderSearch(node, signal);
   const selectorLabel = (menu: HTMLElement) =>
     menu.querySelector<HTMLElement>(".select span")?.textContent?.trim() || "";
   const closeDrops = () =>
@@ -454,20 +456,6 @@ export function referencePage(node: HTMLElement) {
           "Preview only",
           "Your details were checked locally. No email or enquiry was sent.",
         );
-    },
-    { signal },
-  );
-  node.addEventListener(
-    "input",
-    (event) => {
-      const target = event.target as HTMLInputElement;
-      if (target.classList.contains("show-search")) {
-        const parent = target.closest(".layout-search");
-        parent?.classList.toggle("active", !!target.value.trim());
-        parent
-          ?.querySelector(".box-content-search")
-          ?.classList.toggle("active", !!target.value.trim());
-      }
     },
     { signal },
   );

@@ -38,6 +38,128 @@ const step = async (name, work) => {
 };
 try {
   await step(
+    "Header search: all ten homes, matching cars, keyboard, dismissal and inventory URLs",
+    async () => {
+      await page.setViewportSize({ width: 1920, height: 950 });
+      for (let n = 1; n <= 10; n += 1) {
+        await home(n);
+        const input = page.locator(".layout-search .show-search");
+        await input.fill("Audi");
+        const popup = page.locator(".box-content-search.active");
+        await popup.waitFor({ state: "visible" });
+        const options = popup.getByRole("option");
+        assert.deepEqual(await options.locator(".name").allTextContents(), [
+          "Audi A8",
+          "Audi A5 Cabriolet",
+        ]);
+        await page.waitForFunction(() =>
+          Array.from(
+            document.querySelectorAll(".box-content-search.active img"),
+          ).every((image) => image.complete && image.naturalWidth > 0),
+        );
+        await input.press("ArrowDown");
+        assert.equal(
+          await options.first().getAttribute("aria-selected"),
+          "true",
+        );
+        assert.equal(
+          await input.getAttribute("aria-activedescendant"),
+          await options.first().getAttribute("id"),
+        );
+        await input.press("Escape");
+        assert.equal(await input.getAttribute("aria-expanded"), "false");
+        assert.equal(await input.inputValue(), "Audi");
+        await input.click();
+        await popup.waitFor({ state: "visible" });
+        await input.fill("");
+        assert.equal(await input.getAttribute("aria-expanded"), "false");
+      }
+      await home();
+      let input = page.locator(".layout-search .show-search");
+      await input.fill("Audi");
+      await page
+        .getByRole("heading", { name: "Find Your Perfect Car", exact: true })
+        .click();
+      assert.equal(await input.getAttribute("aria-expanded"), "false");
+      await input.click();
+      await page.screenshot({
+        path: path.join(out, `${engine}-header-search.png`),
+      });
+      await input.press("Enter");
+      await page.waitForURL("**/inventory/?q=Audi");
+      await page.locator(".vehicle-card").first().waitFor();
+      assert.equal(await page.locator(".vehicle-card").count(), 2);
+      await home();
+      input = page.locator(".layout-search .show-search");
+      await input.fill("Audi");
+      await input.press("ArrowUp");
+      await input.press("Enter");
+      await page.waitForURL("**/vehicle/audi-a5-cabriolet/**");
+      await page.locator("main h1").waitFor();
+      await page.goBack();
+      await page.locator(".reference-home[data-ready=true]").waitFor();
+      input = page.locator(".layout-search .show-search");
+      await input.fill("Volvo");
+      await page.locator(".box-content-search.active .btn-view-search").click();
+      await page.waitForURL("**/inventory/?q=Volvo");
+      await page.locator(".vehicle-card").first().waitFor();
+      assert.equal(await page.locator(".vehicle-card").count(), 2);
+      await home();
+      input = page.locator(".layout-search .show-search");
+      await input.fill("Audi");
+      await page
+        .locator(".box-content-search")
+        .getByRole("option", { name: /Audi A8/ })
+        .click();
+      await page.waitForURL("**/vehicle/audi-a8/**");
+      await page.locator("main h1").waitFor();
+      await home();
+      input = page.locator(".layout-search .show-search");
+      await input.fill("NoSuchModel");
+      assert.equal(
+        await page.locator(".box-content-search [role=option]").count(),
+        0,
+      );
+      assert.match(
+        await page.locator(".reference-search-empty").innerText(),
+        /No matching cars/,
+      );
+      await input.press("Enter");
+      await page.waitForURL("**/inventory/?q=NoSuchModel");
+      await page
+        .getByText("No cars match these filters", { exact: true })
+        .waitFor();
+      await home();
+      input = page.locator(".layout-search .show-search");
+      await input.fill("Audi");
+      await input.press("Tab");
+      assert.equal(
+        await page
+          .locator(".btn-view-search")
+          .evaluate((link) => document.activeElement === link),
+        true,
+      );
+      await page.keyboard.press("Escape");
+      assert.equal(await input.getAttribute("aria-expanded"), "false");
+      await input.click();
+      await input.press("Tab");
+      await page.keyboard.press("Tab");
+      assert.equal(await input.getAttribute("aria-expanded"), "false");
+      await page.setViewportSize({ width: 1440, height: 950 });
+      assert.equal(await input.isVisible(), false);
+      await page.setViewportSize({ width: 320, height: 844 });
+      assert.equal(await input.isVisible(), false);
+      assert.equal(
+        await page
+          .locator(".form-tab-pane.current form .select")
+          .first()
+          .isVisible(),
+        true,
+      );
+      await page.setViewportSize({ width: 1440, height: 950 });
+    },
+  );
+  await step(
     "Source search: make change resets model and URL selects real inventory",
     async () => {
       await home();

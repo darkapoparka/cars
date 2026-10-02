@@ -17,7 +17,7 @@ The WordPress demo is a separate reference. Inventory, detail and other supporti
 | Production build | Pass; ten separately loaded homepage modules |
 | Source / component provenance | 206 asset hashes and ten generated Svelte hashes verified |
 | Homepage comparisons | 30 per engine: ten homes at 1440, 390 and 320 px |
-| Reference interaction journeys | Seven per engine |
+| Reference interaction journeys | Eight per engine, including header search across ten homes |
 | Adapted supporting pages | 59 rendered checks per engine |
 | Cars workflow documentation | Pass |
 
@@ -25,11 +25,22 @@ Homepage comparisons render archived source HTML with its complete original demo
 
 Full-page desktop comparisons were also recorded for Homes 01, 03, 07 and 10 through the last content section, before the footer. These measurements are recorded evidence, not a whole-site pixel-perfect acceptance gate. Small image/paint differences remain. A narrow WebKit flex-image compatibility rule keeps horizontal vehicle cards at the reference height. The fixed-pixel source typography has not been accepted at 200% text size.
 
-The seven journeys check make/model reset and inventory URLs, keyboard tabs/dropdowns, carousel movement and vehicle tabs, Mercedes/Volvo hero destinations, Back/scroll restoration, the 320 px nested mobile menu with Escape/focus return, and honest newsletter previews. Slider destination checks wait for the original transition to finish. Supporting-page checks cover nine pages at three widths plus the other 16 vehicle details at desktop and 320 px, giving 59 checks per engine.
+The eight journeys check header search, make/model reset and inventory URLs, keyboard tabs/dropdowns, carousel movement and vehicle tabs, Mercedes/Volvo hero destinations, Back/scroll restoration, the 320 px nested mobile menu with Escape/focus return, and honest newsletter previews. Slider destination checks wait for the original transition to finish. Supporting-page checks cover nine pages at three widths plus the other 16 vehicle details at desktop and 320 px, giving 59 checks per engine.
+
+## Header search correction
+
+The initial DOM port toggled the original dropdown on typing, but retained four repeated placeholder cars and had no working Enter submission or outside-click dismissal. The earlier seven journeys tested the hero search, not this header interaction. Live inspection of the original HTML demo confirmed its dropdown and outside-click behavior; the older WordPress-derived template has working hero make/model controls but no equivalent header field. Its Home 2–10 entries still alias Home 1.
+
+The header now displays matching vehicles, photos and prices from the shared sample catalogue. Arrow keys and Enter select a vehicle; Enter without a selection and View all open filtered inventory. Empty results, clearing the query, Escape, outside clicks and keyboard focus dismissal are covered. A WebKit focus change during pointer clicks is handled without hiding the link before navigation. The results panel shrinks for a short result set while retaining the original scroll limit. The original header field is hidden at 1440 px and below, including the narrow in-app preview; hero filters remain available.
+
+After this correction, Svelte/TypeScript reports zero errors and warnings, the eight domain/asset tests pass, the production build passes, and all eight interaction journeys pass in Chrome and Playwright WebKit. The new header journey checks all ten homes at 1920 px, matching images, keyboard and pointer detail destinations, filtered inventory, empty results, Escape from the footer link, Tab focus and the 1440/320 px visibility rules. The homepage pixel/geometry comparisons and adapted supporting-page tables above retain the earlier measurements; they were not rerun for this interaction repair.
+
+Dealer promotion still needs one selected home, one listing/detail presentation, ordinary dealer navigation, personalized assets/content and release/generator support. The library's inventory variant labels currently alias the same adapted inventory route; they are not separate original layouts ready to offer a lead.
 
 ## Visual evidence
 
 - [Original HTML and compiled Svelte side by side](home-1-comparison.png)
+- [Header search using matching sample cars](header-search.png)
 - [Ten desktop homepages](homes-desktop.png)
 - [Ten mobile homepages](homes-mobile.png)
 - [Original desktop reference captures](reference-desktop.png)
