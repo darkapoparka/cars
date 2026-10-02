@@ -42,7 +42,8 @@
 				<span class="service-card__context service-card__mobile-copy">{detail.mobileContext}</span>
 				<h2>
 					<span class="service-card__mobile-copy">{detail.mobileTitle ?? service.title}</span><span
-						class="service-card__desktop-copy">{service.title}</span
+						class="service-card__desktop-copy"
+						title={service.title}>{service.title}</span
 					>
 				</h2>
 			</div>
@@ -154,20 +155,26 @@
 		}
 		.service-card__body {
 			align-items: start;
-			gap: var(--bc-space-3);
-			padding: var(--bc-space-5);
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-4);
 			text-align: left;
 		}
 		.service-card h2 {
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 			font-family: var(--bc-font-body);
-			font-size: var(--bc-desktop-service-title);
+			font-size: var(--bc-text-h6);
 			line-height: var(--bc-leading-h4);
 		}
 		p {
 			margin: 0;
 			font-size: var(--bc-text-body);
+			min-height: calc(2em * var(--bc-leading-body));
 		}
 		.service-card__cta {
+			min-height: var(--bc-control-height-compact);
 			align-self: start;
 			padding: 0;
 			background: transparent;

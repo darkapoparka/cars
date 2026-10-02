@@ -1,0 +1,35 @@
+[
+	{
+		"name": "contact",
+		"channels": [
+			"Call us\n0877 733 110",
+			"Visit us\n18 Atanas Manchev Street, Studentski Grad, Sofia",
+			"Message us\nViber"
+		],
+		"overflow": false,
+		"serviceCards": 0,
+		"steps": [],
+		"title": "Contact us"
+	},
+	{
+		"name": "about",
+		"channels": [],
+		"overflow": false,
+		"serviceCards": 0,
+		"steps": [
+			"01\nRequest\n\nSend a listing, VIN or the model you want.",
+			"02\nReview\n\nReview the history, documents and costs.",
+			"03\nDecision\n\nDiscuss the car and its total cost.",
+			"04\nViewing and handover\n\nArrange viewing, documents and handover."
+		],
+		"title": "About us"
+	},
+	{
+		"name": "services",
+		"channels": [],
+		"overflow": false,
+		"serviceCards": 6,
+		"steps": [],
+		"title": "Services"
+	}
+]

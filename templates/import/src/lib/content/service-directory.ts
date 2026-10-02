@@ -1,5 +1,6 @@
 import type { Locale } from '$lib/locale/core';
 import { desktopCopy } from './desktop-copy';
+import { daynightAssets } from '$lib/config/dealer';
 import type { AuxeroSupportService } from './services';
 
 export type ServiceDetail = {
@@ -12,12 +13,12 @@ export type ServiceDetail = {
 	includes: string[];
 };
 export const serviceArtwork: Record<AuxeroSupportService['id'], string> = {
-	sourcing: '/assets/daynight/services/desktop/sourcing.webp',
-	'listing-check': '/assets/daynight/services/desktop/listing-check.webp',
-	selling: '/assets/daynight/services/desktop/selling.webp',
-	registration: '/assets/daynight/services/desktop/registration.webp',
-	viewing: '/assets/daynight/services/desktop/viewing.webp',
-	comparison: '/assets/daynight/services/desktop/comparison.webp'
+	sourcing: '/assets/daynight/services/desktop/sourcing-v3.webp',
+	'listing-check': daynightAssets.aboutProcessImage,
+	selling: '/assets/daynight/services/desktop/selling-v3.webp',
+	registration: '/assets/daynight/services/desktop/registration-v3.webp',
+	viewing: daynightAssets.contactVisitBanner,
+	comparison: '/assets/daynight/services/desktop/comparison-v3.webp'
 };
 type DirectoryCopy = {
 	description: string;
@@ -51,63 +52,63 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		],
 		details: {
 			sourcing: {
-				summary: 'Подбор според твоя бюджет, изисквания и планове.',
+				summary: 'Автомобил според твоя бюджет.',
 				mobileContext: 'Избор на автомобил',
 				mobileTitle: 'Подбрани коли',
 				mobileSummary: 'Подбор по бюджет',
 				href: '/inventory',
-				action: 'Разгледай автомобилите',
+				action: 'Разгледай',
 				includes: ['Избор според бюджет и изисквания', 'История, оборудване и крайна цена']
 			},
 			'listing-check': {
-				summary: 'История, състояние и разходи — преди да решиш.',
+				summary: 'История и разходи преди покупка.',
 				mobileContext: 'Преди покупка',
 				mobileSummary: 'VIN и история',
 				href: '/import',
-				action: 'Провери автомобил за внос',
+				action: 'Провери VIN',
 				includes: ['Преглед на обява или VIN', 'Уточняване на история и разходи за внос']
 			},
 			selling: {
-				summary: 'От оценката до правилния път за продажба.',
+				summary: 'Оценка и подготовка за продажба.',
 				mobileContext: 'Твоят автомобил',
 				mobileTitle: 'Продажба на кола',
 				mobileSummary: 'Оценка и продажба',
 				href: '/sell-your-car',
-				action: 'Разгледай възможностите',
+				action: 'Заяви продажба',
 				includes: [
 					'Данни, състояние и снимки на автомобила',
 					'Обсъждане на очакваната цена и продажбата'
 				]
 			},
 			registration: {
-				summary: 'Съдействие с документите, регистрацията и предаването.',
+				summary: 'Документи, регистрация и предаване.',
 				mobileContext: 'След покупка',
 				mobileTitle: 'Регистрация',
 				mobileSummary: 'Документи за КАТ',
 				href: '/contact?topic=registration#contact-details',
-				action: 'Обсъди документите',
+				action: 'Запитване',
 				includes: [
 					'Уточняване на нужните документи за внос',
 					'Подготовка за регистрация и предаване'
 				]
 			},
 			viewing: {
-				summary: 'Автомобил и консултант, подготвени за твоята среща.',
+				summary: 'Удобен час за подготвен оглед.',
 				mobileContext: 'На място',
 				mobileSummary: 'Час за оглед',
 				href: '/contact#contact-details',
-				action: 'Виж контакти и адрес',
+				action: 'Уговори оглед',
 				includes: [
 					'Уговаряне на удобен час за оглед',
 					'Автомобил и документи, подготвени за срещата'
 				]
 			},
 			comparison: {
-				summary: 'Цена, пробег и оборудване. Ясен избор между моделите.',
+				summary: 'Цена, пробег и оборудване.',
 				mobileContext: 'Преди решение',
 				mobileSummary: 'Цена и оборудване',
 				href: '/compare',
-				action: 'Сравни автомобили',
+				action: 'Сравни',
 				includes: ['Цена, пробег и оборудване на едно място', 'Избор между запазените кандидати']
 			}
 		}
@@ -130,65 +131,65 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		],
 		details: {
 			sourcing: {
-				summary: 'A shortlist shaped around your budget and plans.',
+				summary: 'A car that fits your budget.',
 				mobileContext: 'Find your car',
 				mobileSummary: 'Selection by budget',
 				href: '/inventory',
-				action: 'Browse available cars',
+				action: 'Browse cars',
 				includes: [
 					'A shortlist for your budget and requirements',
 					'History, equipment and total price'
 				]
 			},
 			'listing-check': {
-				summary: 'History, condition and costs — before you decide.',
+				summary: 'History and costs before buying.',
 				mobileContext: 'Before buying',
 				mobileSummary: 'VIN and history',
 				href: '/import',
-				action: 'Check a car for import',
+				action: 'Check a VIN',
 				includes: ['Review a listing or VIN', 'Discuss the history and import costs']
 			},
 			selling: {
-				summary: 'From the valuation to the right way to sell.',
+				summary: 'Valuation and preparation for sale.',
 				mobileContext: 'Your car',
 				mobileSummary: 'Valuation and sale',
 				href: '/sell-your-car',
-				action: 'Explore selling options',
+				action: 'Sell your car',
 				includes: [
 					'Vehicle details, condition and photographs',
 					'Discuss your expected price and sale'
 				]
 			},
 			registration: {
-				summary: 'Help with the paperwork, registration and handover.',
+				summary: 'Paperwork, registration and handover.',
 				mobileContext: 'After buying',
 				mobileTitle: 'Registration',
 				mobileSummary: 'Registration docs',
 				href: '/contact?topic=registration#contact-details',
-				action: 'Discuss the paperwork',
+				action: 'Enquire',
 				includes: [
 					'Clarify the documents needed for import',
 					'Preparation for registration and handover'
 				]
 			},
 			viewing: {
-				summary: 'Your car and consultant, ready for your appointment.',
+				summary: 'A prepared car at a time that suits you.',
 				mobileContext: 'Visit us',
 				mobileTitle: 'Book a viewing',
 				mobileSummary: 'Viewing appointment',
 				href: '/contact#contact-details',
-				action: 'View contact details',
+				action: 'Arrange a viewing',
 				includes: [
 					'Arrange a convenient viewing time',
 					'The car and documents prepared for your visit'
 				]
 			},
 			comparison: {
-				summary: 'Price, mileage and equipment. Make an informed choice.',
+				summary: 'Price, mileage and equipment.',
 				mobileContext: 'Before you decide',
 				mobileSummary: 'Price and equipment',
 				href: '/compare',
-				action: 'Compare cars',
+				action: 'Compare',
 				includes: [
 					'Price, mileage and equipment in one place',
 					'Choose between your saved candidates'

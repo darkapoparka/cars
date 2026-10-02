@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { linkHref } from '$lib/utils/links';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -10,36 +9,16 @@
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
+	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
+	import ImageLinkBanner from '$lib/components/common/ImageLinkBanner.svelte';
+	import { desktopContactChannels } from '$lib/content/contact-desktop';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
 	import MapPin from '@lucide/svelte/icons/map-pin';
-	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
-	const channels = $derived([
-		{
-			kind: 'phone',
-			href: data.site.contact.phoneHref,
-			title: english ? 'Call us' : 'Обади се',
-			text: data.site.contact.phone,
-			icon: Phone
-		},
-		{
-			kind: 'visit',
-			href: data.site.contact.mapHref,
-			title: english ? 'Visit the showroom' : 'Посети ни',
-			text: data.site.contact.address,
-			icon: MapPin
-		},
-		{
-			kind: 'message',
-			href: data.site.contact.messageHref,
-			title: english ? 'Message us' : 'Пиши ни',
-			text: 'Viber',
-			icon: MessageCircle
-		}
-	]);
+	const channels = $derived(desktopContactChannels(data.site, data.locale));
 </script>
 
 <svelte:head>
@@ -74,26 +53,32 @@
 		>
 			<div class="contact-channels">
 				{#each channels as channel (channel.href)}
-					<a class="contact-channel" data-channel={channel.kind} href={linkHref(channel.href)}>
-						<span class="contact-channel__icon"
-							><channel.icon size={26} strokeWidth={1.6} aria-hidden="true" /></span
-						>
-						<h2>{channel.title}</h2>
-						<p>{channel.text}</p>
-					</a>
+					<ImageLinkBanner
+						class="contact-channel"
+						channel={channel.kind}
+						href={channel.href}
+						image={channel.image}
+						external={channel.external}
+					>
+						{#snippet heading()}<h2 class="contact-channel-title">{channel.title}</h2>{/snippet}
+						{channel.text}
+					</ImageLinkBanner>
 				{/each}
 			</div>
 		</section>
 		<section class="site-section contact-intake">
-			<div class="site-container contact-form-panel">
-				<header>
-					<h2 class="site-heading">{english ? 'Send an enquiry' : 'Изпрати запитване'}</h2>
-				</header>
-				<LeadForm
-					{english}
-					source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
-					result={form}
-				/>
+			<div class="site-container contact-intake-grid">
+				<ContactLocation {english} layout="stacked" />
+				<div class="contact-form-panel">
+					<header>
+						<h2 class="site-heading">{english ? 'Send an enquiry' : 'Изпрати запитване'}</h2>
+					</header>
+					<LeadForm
+						{english}
+						source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
+						result={form}
+					/>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -129,105 +114,42 @@
 	.contact-overview {
 		display: grid;
 		gap: var(--bc-space-6);
-		padding-block: var(--bc-space-8);
+		padding-block: var(--bc-space-6);
 	}
 	.contact-channels {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-5);
 	}
-	.contact-channel {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: var(--bc-space-2);
-		padding: var(--bc-space-5);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-card);
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
-		text-decoration: none;
-		text-align: center;
-	}
-	.contact-channel:hover {
-		background: var(--bc-surface-hover);
-	}
-	.contact-channel__icon {
-		display: grid;
-		place-items: center;
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		border-radius: var(--bc-radius-pill);
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
-	}
-	.contact-channel h2 {
+	.contact-channel-title {
 		margin: 0;
-		font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
-	}
-	.contact-channel p {
-		margin: 0;
-		max-width: 32ch;
-		font-size: var(--bc-text-body-lg);
-		font-weight: var(--bc-weight-body);
-		line-height: var(--bc-leading-body-lg);
-		color: var(--bc-copy);
+		font: var(--bc-weight-heading) var(--bc-desktop-service-title)/var(--bc-leading-h4)
+			var(--bc-font-body);
+		color: var(--bc-white);
 	}
 	.contact-intake {
 		padding-top: var(--bc-space-2);
 	}
+	.contact-intake-grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		align-items: stretch;
+		gap: var(--bc-space-6);
+	}
 	.contact-form-panel {
-		max-width: var(--bc-container-narrow);
+		min-width: 0;
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
-		padding: var(--bc-space-8);
+		padding: var(--bc-space-6);
 		background: var(--bc-surface-raised);
 	}
 	.contact-form-panel header {
 		margin-bottom: var(--bc-space-6);
-		text-align: center;
+		text-align: left;
 	}
-	@media (min-width: 768px) {
-		.contact-channel {
-			display: grid;
-			grid-template-columns: var(--bc-control-height-primary) minmax(0, 1fr);
-			align-items: start;
-			align-content: start;
-			grid-template-rows: auto auto;
-			gap: var(--bc-space-2) var(--bc-space-4);
-			padding: var(--bc-space-5);
-			text-align: left;
-		}
-		.contact-channel__icon {
-			grid-row: 1 / 3;
-		}
-		.contact-channel h2,
-		.contact-channel p {
-			grid-column: 2;
-		}
-		.contact-channel h2 {
-			font-family: var(--bc-font-body);
-			font-size: var(--bc-text-body);
-			font-weight: var(--bc-weight-body);
-			color: var(--bc-copy);
-		}
-		.contact-channel p {
-			font-size: var(--bc-desktop-service-title);
-			font-weight: var(--bc-weight-heading);
-			line-height: var(--bc-leading-control);
-			color: var(--bc-ink);
-		}
-		.contact-channel[data-channel='visit'] p {
-			font-size: var(--bc-text-body-lg);
-			font-weight: var(--bc-weight-body);
-		}
-		.contact-overview {
-			padding-block: var(--bc-space-6);
-		}
-		.contact-channel:hover {
-			background: var(--bc-card-bg);
-			border-color: var(--bc-border-strong);
-			box-shadow: var(--bc-shadow-card);
+	@media (max-width: 1023px) {
+		.contact-intake-grid {
+			grid-template-columns: minmax(0, 1fr);
 		}
 	}
 </style>

@@ -29,13 +29,19 @@ export const daynightBrand = {
 		'Proposal build reflects public contact channels for Day Night Auto Group; verify final assets and inventory before outreach.'
 } as const;
 
+const contactVisitBanner = '/assets/daynight/banners/contact-visit-desktop-v3.webp';
+
 export const daynightAssets = {
 	logoDark: '/assets/daynight/brand/daynight-logo-generated-600.webp',
 	logoLight: '/assets/daynight/brand/daynight-logo-generated-600.webp',
 	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
 	homeHeroSlides: [],
 	footerImage: '/assets/daynight/footer-premium-request-v2.webp',
-	vehicleDealerBanner: '/assets/daynight/banners/commerce-collection.webp'
+	vehicleDealerBanner: contactVisitBanner,
+	contactVisitBanner,
+	contactPhoneBanner: '/assets/daynight/banners/contact-call-desktop-v3.webp',
+	contactMessageBanner: '/assets/daynight/banners/contact-message-desktop-v3.webp',
+	aboutProcessImage: '/assets/daynight/banners/about-process-desktop-v3.webp'
 } as const;
 
 export const mainNavigation = [

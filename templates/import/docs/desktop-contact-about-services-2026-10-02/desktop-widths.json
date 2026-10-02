@@ -1,0 +1,190 @@
+[
+	{
+		"name": "contact",
+		"banners": [
+			{
+				"height": 220,
+				"width": 216
+			},
+			{
+				"height": 220,
+				"width": 216
+			},
+			{
+				"height": 220,
+				"width": 216
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"name": "contact",
+		"banners": [
+			{
+				"height": 220,
+				"width": 302
+			},
+			{
+				"height": 220,
+				"width": 302
+			},
+			{
+				"height": 220,
+				"width": 302
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"name": "contact",
+		"banners": [
+			{
+				"height": 220,
+				"width": 427
+			},
+			{
+				"height": 220,
+				"width": 427
+			},
+			{
+				"height": 220,
+				"width": 427
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"name": "contact",
+		"banners": [
+			{
+				"height": 220,
+				"width": 427
+			},
+			{
+				"height": 220,
+				"width": 427
+			},
+			{
+				"height": 220,
+				"width": 427
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"name": "about",
+		"banners": [],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"name": "about",
+		"banners": [],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"name": "about",
+		"banners": [],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"name": "about",
+		"banners": [],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"name": "services",
+		"banners": [],
+		"breadcrumbs": 0,
+		"columns": "334.5px 334.5px",
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"name": "services",
+		"banners": [],
+		"breadcrumbs": 0,
+		"columns": "221.25px 221.25px 221.25px 221.25px",
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"name": "services",
+		"banners": [],
+		"breadcrumbs": 0,
+		"columns": "315px 315px 315px 315px",
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"name": "services",
+		"banners": [],
+		"breadcrumbs": 0,
+		"columns": "315px 315px 315px 315px",
+		"overflow": false,
+		"width": 1920
+	},
+	{
+		"name": "pdp",
+		"banners": [
+			{
+				"height": 220,
+				"width": 320
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 768
+	},
+	{
+		"name": "pdp",
+		"banners": [
+			{
+				"height": 220,
+				"width": 370
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1024
+	},
+	{
+		"name": "pdp",
+		"banners": [
+			{
+				"height": 220,
+				"width": 370
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1440
+	},
+	{
+		"name": "pdp",
+		"banners": [
+			{
+				"height": 220,
+				"width": 370
+			}
+		],
+		"breadcrumbs": 0,
+		"overflow": false,
+		"width": 1920
+	}
+]

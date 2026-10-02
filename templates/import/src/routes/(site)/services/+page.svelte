@@ -167,6 +167,13 @@
 		}
 		.services-grid {
 			padding-top: var(--bc-space-4);
+			gap: var(--bc-space-5);
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+	}
+	@media (min-width: 1024px) {
+		.services-grid {
+			grid-template-columns: repeat(4, minmax(0, 1fr));
 		}
 	}
 	@media (max-width: 767.98px) {

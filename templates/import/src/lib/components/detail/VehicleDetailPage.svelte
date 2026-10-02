@@ -6,7 +6,6 @@
 	import type { AuxeroVehicleDetailData } from '$lib/server/vehicle-detail';
 	import type { AuxeroInventoryVehicleCard } from '$lib/domain/vehicle-card';
 	import { getGarageContext } from '$lib/state/garage.svelte';
-	import { linkHref } from '$lib/utils/links';
 	import Action from '$lib/components/common/Action.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import Modal from '$lib/components/common/Modal.svelte';
@@ -36,7 +35,6 @@
 	});
 	const garage = getGarageContext();
 	let inquiryOpen = $state(false);
-	const localeSuffix = $derived(english ? '?lang=en' : '');
 </script>
 
 <main id="main-content" class="detail-main">
@@ -47,10 +45,6 @@
 	{/if}
 	{#if !hydrated || !mobile.current}
 		<div class="site-container detail-page detail-desktop">
-			<nav class="detail-breadcrumb" aria-label={english ? 'Breadcrumb' : 'Навигация'}>
-				<a href={linkHref('/inventory' + localeSuffix)}>{english ? 'Cars' : 'Автомобили'}</a>
-				<span aria-hidden="true">/</span><span>{detail.title}</span>
-			</nav>
 			<div class="detail-grid">
 				<div class="detail-gallery-column site-stack">
 					<header class="detail-heading">
@@ -149,18 +143,6 @@
 <style>
 	.detail-page {
 		padding-top: var(--bc-space-5);
-	}
-	.detail-breadcrumb {
-		display: flex;
-		gap: var(--bc-space-2);
-		font-size: var(--bc-text-label);
-		color: var(--bc-muted);
-		margin-bottom: var(--bc-space-5);
-	}
-	.detail-breadcrumb > span:last-child {
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
 	}
 	.detail-grid {
 		display: grid;

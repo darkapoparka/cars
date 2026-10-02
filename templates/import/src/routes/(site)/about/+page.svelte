@@ -3,6 +3,8 @@
 	import { desktopCopy } from '$lib/content/desktop-copy';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
+	import DesktopProcess from '$lib/components/common/DesktopProcess.svelte';
+	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import Action from '$lib/components/common/Action.svelte';
@@ -92,10 +94,13 @@
 			<header class="about-heading">
 				<h2 class="site-heading">{english ? 'How we work' : 'Как работим'}</h2>
 			</header>
-			{@render processSteps(false)}
+			<DesktopProcess {steps} />
 		</section>
 	</div>
-	<section class="site-section site-container about-contact">
+	<section class="site-section site-container site-desktop-only">
+		<ContactLocation {english} />
+	</section>
+	<section class="site-section site-container about-contact site-mobile-only">
 		<ContactBanner
 			{english}
 			title={english ? 'Visit ' + data.site.identity.name : 'Посети ' + data.site.identity.name}
