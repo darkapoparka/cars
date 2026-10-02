@@ -39,6 +39,7 @@ type LeadSiteConfig = {
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
     homeSectionBackgrounds: { body: SiteAssetPath; brands: SiteAssetPath; inventory: SiteAssetPath; guides: SiteAssetPath };
+    homeSectionCutouts: { guidesLeft: SiteAssetPath; guidesRight: SiteAssetPath };
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -192,7 +193,11 @@ export const leadSite = {
       body: '/assets/images/template/home-section-body-backdrop-v1.webp',
       brands: '/assets/images/template/home-section-brands-backdrop-v1.webp',
       inventory: '/assets/images/template/home-section-inventory-backdrop-v1.webp',
-      guides: '/assets/images/template/home-section-guides-editorial-v2.webp'
+      guides: '/assets/images/template/home-section-guides-backdrop-v1.webp'
+    },
+    homeSectionCutouts: {
+      guidesLeft: '/assets/images/template/home-section-guides-notebook-cutout-v3.webp',
+      guidesRight: '/assets/images/template/home-section-guides-checklist-cutout-v3.webp'
     },
     home: {
       collection,

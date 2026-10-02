@@ -323,8 +323,12 @@ the configured currency's narrow symbol and locale number formatting.
 one charcoal banner, a white heading and a white action. Inventory keeps its
 existing car cutouts over a brushed graphite background. Body types use
 sculpted satin contours and brands use fine perforated metal. Advice has its
-own editorial flat lay with a notebook, pen and inspection checklist; it omits
-the vehicle pair to distinguish reading from browsing cars. Each keeps detail
+own low-angle notebook/pen and checklist cutouts, layered separately over the
+graphite backdrop. Both keep complete outlines and natural proportions; their
+width grows from 164px to 250px with the viewport, with side clearance and a
+24px lower inset. They use the same isolated-object composition as inventory
+while distinguishing reading from browsing cars. `leadSite.artwork.homeSectionCutouts`
+owns their transparent WebP sources. Each keeps detail
 at the edges and a quiet center behind copy. `CampaignVehiclePair` disables
 its native dots, arcs and gradient only in Home inventory, letting the
 background sit behind the unchanged car pair. `leadSite.artwork.homeSectionBackgrounds` owns the

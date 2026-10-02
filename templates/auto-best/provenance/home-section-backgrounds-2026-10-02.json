@@ -47,7 +47,7 @@
       "height": 724,
       "bytes": 82630,
       "format": "WebP",
-      "runtimeStatus": "Superseded by guides-editorial; retained as source provenance."
+      "runtimeStatus": "Active graphite backdrop beneath the separate editorial cutouts."
     },
     {
       "name": "guides-editorial",
@@ -60,7 +60,50 @@
       "width": 2172,
       "height": 724,
       "bytes": 65284,
-      "format": "WebP"
+      "format": "WebP",
+      "runtimeStatus": "Superseded by transparent editorial cutouts on the original graphite backdrop; retained as source provenance."
+    },
+    {
+      "name": "guides-notebook-cutout",
+      "date": "2026-10-03",
+      "path": "static/assets/images/template/home-section-guides-notebook-cutout-v3.webp",
+      "purpose": "Active transparent side illustration for the Home buying-advice banner.",
+      "prompt": "Use case: product-mockup.\nAsset type: one photorealistic editorial object cutout for a black automotive buying-advice banner. True transparent background, isolated subject only, landscape canvas about 3:2.\nSubject: a small open guide notebook with a black linen cover and off-white lightly ruled pages, accompanied by one slim dark satin-metal pen resting close beside it. No words or printed illustrations. No cars. Crisp believable binding, page edges, fabric and pen geometry.\nView and shape: photograph from a LOW front three-quarter angle, camera about 20 degrees above the horizontal plane, so the open book appears as a WIDE LOW HORIZONTAL SILHOUETTE, like a car seen from the side. Definitely NOT top-down or overhead. Position its long axis horizontally, with subtle perspective aimed toward the right. A black cover and page block define the edges clearly; the whole open notebook and whole pen are visible. A grounded premium studio product cutout, not an icon or cartoon.\nComposition: single centered object group with transparent clear space on all sides. Wide object group, approximately 2.2:1 visible width-to-height ratio. No crop, no part touching the image boundaries, no frame. A very soft tight neutral contact shadow immediately beneath the objects is allowed with preserved alpha; do not paint a desk, floor, wall or rectangular background.\nLighting/palette: restrained neutral studio highlights, black linen, dark satin metal, subdued off-white paper. Natural clean photographic detail, no glossy sci-fi look. No colored lighting, red accents, gold, neon or bright white glare.\nConstraints: actual alpha transparency outside the subject. No opaque backdrop, no dark rectangle, no gradients across the canvas, no text, logos, watermark, UI, people, hands, car imagery or extra props. Only this notebook-and-pen cutout.",
+      "generatedSource": "exec-ddfc7e2e-9dd0-4ddb-8627-d05c4efb8719.png",
+      "backupPath": "runtime/home-advice-cutouts-20261003/source-guides-notebook-cutout.png",
+      "width": 640,
+      "height": 291,
+      "alpha": true,
+      "visibleBounds": {
+        "left": 23,
+        "top": 74,
+        "right": 620,
+        "bottom": 238
+      },
+      "bytes": 20044,
+      "format": "WebP",
+      "delivery": "Full frame scaled to 640px width; WebP quality 84, alpha quality 100, effort 6. No crop, compositing or pixel retouching."
+    },
+    {
+      "name": "guides-checklist-cutout",
+      "date": "2026-10-03",
+      "path": "static/assets/images/template/home-section-guides-checklist-cutout-v3.webp",
+      "purpose": "Active transparent side illustration for the Home buying-advice banner.",
+      "prompt": "Use case: product-mockup.\nAsset type: one photorealistic inspection-checklist object cutout for a black automotive buying-advice banner. TRUE transparent background; isolated subject only; wide landscape canvas roughly 2:1.\nSubject: a thin dark charcoal clipboard with one clean off-white checklist sheet. The paper has just four small empty square checkboxes and thin straight blank horizontal rules. No words or numbers. A realistic simple dark satin-metal clip secures the sheet. No other objects.\nView and shape: the clipboard lies flat, photographed from a LOW front three-quarter studio angle with the camera only 20 degrees above its horizontal plane, so its silhouette is WIDE and LOW like a car viewed from the side. Its long axis reads left-to-right in the frame, subtly pointing toward the left. Do not show an upright portrait clipboard or a top-down overhead view. The entire clipboard, metal clip, paper edges and contact shadow are fully visible, with clear space around all sides. Target visible width-to-height ratio around 2.2:1.\nStyle: premium restrained product photography, believable matte paper and dark charcoal backing, thin crisp edges and neutral highlights. Pair visually with an open black linen notebook viewed from the same low angle. The off-white paper should be subdued, not bright white glare. A soft tight neutral contact shadow immediately beneath the clipboard is allowed with alpha, but no floor or desk plane.\nComposition: centered single object with generous alpha space. It will be rendered only around 230 by 115px beside a live heading, so keep geometry clean and readable at that size. No cropping, no object touching a canvas boundary.\nConstraints: true alpha outside the object. No opaque background or rectangle, no desk, no floor, no room, no gradient over the canvas, no text, brands, watermark, icons, vehicle imagery, people, hands, screens, red lines, colored accents, gold, neon or additional props. Output ONLY the complete low-angle clipboard-and-paper cutout.",
+      "generatedSource": "exec-7acb84fa-9d8e-4c7a-94c8-dfb2e5587277.png",
+      "backupPath": "runtime/home-advice-cutouts-20261003/source-guides-checklist-cutout.png",
+      "width": 640,
+      "height": 328,
+      "alpha": true,
+      "visibleBounds": {
+        "left": 21,
+        "top": 91,
+        "right": 615,
+        "bottom": 269
+      },
+      "bytes": 19458,
+      "format": "WebP",
+      "delivery": "Full frame scaled to 640px width; WebP quality 84, alpha quality 100, effort 6. No crop, compositing or pixel retouching."
     }
   ]
 }

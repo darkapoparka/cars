@@ -26,7 +26,9 @@
   style:--dn-home-body-background={`url("${leadSite.artwork.homeSectionBackgrounds.body}")`}
   style:--dn-home-brands-background={`url("${leadSite.artwork.homeSectionBackgrounds.brands}")`}
   style:--dn-home-inventory-background={`url("${leadSite.artwork.homeSectionBackgrounds.inventory}")`}
-  style:--dn-home-guides-background={`url("${leadSite.artwork.homeSectionBackgrounds.guides}")`}>
+  style:--dn-home-guides-background={`url("${leadSite.artwork.homeSectionBackgrounds.guides}")`}
+  style:--dn-home-guides-left={`url("${leadSite.artwork.homeSectionCutouts.guidesLeft}")`}
+  style:--dn-home-guides-right={`url("${leadSite.artwork.homeSectionCutouts.guidesRight}")`}>
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
   <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
@@ -145,7 +147,11 @@
     .dn-home-page :global(.dn-body-types__heading) { background-image: var(--dn-home-body-background); }
     .dn-home-page :global(.dn-brand-hero__copy) { background-image: var(--dn-home-brands-background); }
     .dn-home-page :global(.dn-inventory__heading) { background-image: var(--dn-home-inventory-background); }
-    .dn-home-page :global(.dn-editorial__heading) { background-image: var(--dn-home-guides-background); }
+    .dn-home-page :global(.dn-editorial__heading) {
+      background-image: var(--dn-home-guides-left), var(--dn-home-guides-right), var(--dn-home-guides-background);
+      background-size: clamp(164px, 19vw, 250px) auto, clamp(164px, 19vw, 250px) auto, cover;
+      background-position: left clamp(24px, 4vw, 64px) bottom 24px, right clamp(24px, 4vw, 64px) bottom 24px, center;
+    }
 
     .dn-home-page :global(.dn-home-section-heading--light) {
       background: var(--dn-surface-raised);
