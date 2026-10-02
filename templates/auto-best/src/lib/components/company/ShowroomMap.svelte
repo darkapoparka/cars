@@ -30,8 +30,7 @@
   {#if headingId}
     <div class="dn-showroom-map__header">
       <h2 class="dn-showroom-map__heading" id={headingId}>
-        <span class="dn-showroom-map__pin"><MobileActionIcon name="location" size={22} /></span>
-        <span>{i18n.t('m_15b61974b270')}</span>
+        {i18n.t('m_15b61974b270')}
       </h2>
       <p class="dn-showroom-map__address">{address}</p>
     </div>
@@ -71,9 +70,6 @@
     overflow-wrap: anywhere;
   }
   .dn-showroom-map__heading {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--dn-space-2);
     margin: 0;
     color: var(--dn-ink);
     font-size: var(--dn-text-card);
@@ -88,12 +84,6 @@
     font-size: var(--dn-text-meta);
     line-height: var(--dn-leading-meta);
     text-align: left;
-  }
-  .dn-showroom-map__pin {
-    display: flex;
-    height: 1lh;
-    align-items: center;
-    flex: 0 0 auto;
   }
   .dn-showroom-map__canvas {
     min-height: 280px;

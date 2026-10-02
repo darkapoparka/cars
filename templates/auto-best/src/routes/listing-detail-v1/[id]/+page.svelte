@@ -12,7 +12,6 @@
   import { resolve } from '$app/paths';
   import { tick } from 'svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
-  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
   import { brand } from '$config/brand';
@@ -198,7 +197,7 @@
 
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
-                <h2 id="location-title"><span class="dn-detail-location-card__pin"><MobileActionIcon name="location" size={22} /></span><span>{i18n.t("m_15b61974b270")}</span></h2>
+                <h2 id="location-title">{i18n.t("m_15b61974b270")}</h2>
                 <p><span class="dn-detail-location-card__address-pin"><Icon name="map-pin" size={20} strokeWidth={1.7} /></span>{i18n.dealer('address')}</p>
               </div>
               <ShowroomMap />

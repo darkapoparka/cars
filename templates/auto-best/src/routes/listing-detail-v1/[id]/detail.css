@@ -303,7 +303,6 @@
   flex: 0 0 auto;
 }
 
-.dn-detail-location-card__pin { display: none; }
 .dn-detail-location-card__address-pin { display: flex; flex: 0 0 auto; }
 
 .dn-detail-sidebar {
@@ -520,17 +519,8 @@
     margin-bottom: 12px;
   }
   .dn-detail-location-card__header h2 {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--dn-space-2);
     font-size: var(--dn-text-card);
     text-align: left;
-  }
-  .dn-detail-location-card__pin {
-    display: flex;
-    height: 1lh;
-    align-items: center;
-    flex: 0 0 auto;
   }
   .dn-detail-location-card__address-pin { display: none; }
   .dn-detail-location-card__header p { text-align: left; }
