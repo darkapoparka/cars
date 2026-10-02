@@ -131,7 +131,16 @@ for (const locale of ['en', 'bg']) {
 		page
 	}) => {
 		await page.setViewportSize({ width: 320, height: 568 });
-		await visit(page, `/${locale}/services`);
+		await visit(page, `/${locale}/inventory`);
+		await page
+			.getByRole('button', { name: locale === 'en' ? 'Menu' : 'Меню', exact: true })
+			.click();
+		const menu = page.getByRole('dialog');
+		await menu
+			.getByRole('link', { name: locale === 'en' ? 'Services' : 'Услуги', exact: true })
+			.click();
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}/services`);
+		await expect(menu).not.toBeVisible();
 		const search = page.getByRole('searchbox', {
 			name: locale === 'en' ? 'Search services' : 'Търси услуга'
 		});

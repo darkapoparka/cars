@@ -219,12 +219,12 @@
 			align-self: start;
 			justify-content: center;
 			margin-top: 0;
-			min-height: var(--bc-control-height-standard);
-			padding: 0 var(--bc-space-4);
+			min-height: var(--bc-control-height-compact);
+			padding: 0 var(--bc-space-3);
 			border-radius: var(--bc-radius-pill);
 			background: var(--bc-control);
 			color: var(--bc-ink);
-			font-size: var(--bc-text-body);
+			font-size: var(--bc-mobile-label);
 			font-weight: var(--bc-weight-action);
 		}
 		a:hover .service-card__cta {
@@ -233,6 +233,8 @@
 		}
 		.service-card__cta :global(svg) {
 			flex-shrink: 0;
+			width: 16px;
+			height: 16px;
 		}
 	}
 	@container service-list (width < 16rem) {

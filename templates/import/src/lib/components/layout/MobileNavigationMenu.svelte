@@ -60,6 +60,7 @@
 		{
 			title: site.identity.name,
 			links: [
+				{ href: '/services', label: english ? 'Services' : 'Услуги', icon: Wrench },
 				{ href: '/about', label: english ? 'About us' : 'За нас', icon: Info },
 				{ href: '/contact', label: english ? 'Contact' : 'Контакти', icon: PhoneCall },
 				{
