@@ -33,10 +33,11 @@ export default function FinanceCalculator({initialPrice = 25000, presentation = 
   const estimate = estimateFinance(price, deposit, rate, years);
   return <section aria-label={tx('Illustrative finance calculator')} {...stylex.props(s.card, presentation === 'dialog' && s.dialog)}>
     {presentation === 'card' ? <h2 {...stylex.props(t.heading)}>{tx('Explore a payment example')}</h2> : null}
-    <p {...stylex.props(s.note, t.caption)}>{tx('An estimate, not a finance offer.')}</p>
+    {presentation === 'card' ? <p {...stylex.props(s.note, t.caption)}>{tx('An estimate, not a finance offer.')}</p> : null}
     <div {...stylex.props(s.summary, t.caption, presentation === 'dialog' && s.dialogSummary)}>
       <div {...stylex.props(s.payment)}><output aria-live="polite" {...stylex.props(s.amount, t.amount, presentation === 'dialog' && s.dialogAmount, presentation === 'dialog' && t.featuredAmount)}>{currency.symbol} {formatPrice(Math.round(estimate.monthly))}</output><span>{tx('per month')}</span></div>
       <span>{tx('Total with deposit')}: {currency.symbol} {formatPrice(Math.round(estimate.total))}</span>
+      {presentation === 'dialog' ? <p {...stylex.props(s.estimateNote)}>{tx('An estimate, not a finance offer.')}</p> : null}
     </div>
     <div {...stylex.props(s.fields)}>
       <label htmlFor={id + '-price'} {...stylex.props(s.field, t.caption)}>{tx('Vehicle price')} ({currency.symbol})<AmountInput id={id + '-price'} label={`${tx('Vehicle price')} (${currency.symbol})`} min={1} max={10000000} value={price} onChange={setPrice}/></label>
@@ -60,10 +61,11 @@ const s = stylex.create({
   number: {width: '100%', minWidth: 0, minHeight: 44, padding: '8px 10px', borderColor: $.controlBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 9, backgroundColor: '#fff', color: $.ink},
   row: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, marginTop: 20},
   summary: {display: 'grid', gap: 6, marginTop: 14, paddingBottom: 18, color: $.muted, borderBottomWidth: 1, borderBottomStyle: 'solid', borderBottomColor: '#e4e4e7'},
-  dialogSummary: {padding: 18, color: campaign.muted, borderWidth: 0, borderRadius: 16, backgroundColor: campaign.surface},
+  dialogSummary: {padding: 18, color: $.muted, borderWidth: 0, borderRadius: 16, backgroundColor: campaign.lightSurface},
   payment: {display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 8},
   amount: {color: $.ink},
-  dialogAmount: {color: '#fff'},
+  dialogAmount: {color: $.ink},
+  estimateNote: {margin: 0},
   details: {marginTop: 8, color: $.muted},
   detailsToggle: {minHeight: 44, paddingBlock: 12, cursor: 'pointer'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},

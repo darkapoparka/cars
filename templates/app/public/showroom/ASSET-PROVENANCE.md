@@ -2,6 +2,10 @@
 
 Generated on 2026-09-26 with the built-in image generation tool. Model/version selection was not exposed. These are synthetic demo illustrations, not real dealer stock photography or financial endorsements. Original generation files are retained; runtime files are copies and served through Next Image.
 
+## Service card photographs - 2 October 2026
+
+The owner requested original generated imagery for the Services cards. [Service originals and exact prompts](services/PROMPTS.md) record the maintenance and diagnostics series, created with the built-in image generation tool. Model selection was not exposed. PNG originals are retained alongside optimized WebP copies; these illustrative scenes do not depict the actual dealer team or facilities.
+
 ## finance
 
 File: finance-v2.png
@@ -25,4 +29,3 @@ File: studio-car-v2.png
 Prompt:
 
 Use case: ads-marketing. Create an exceptionally refined automotive showroom website banner photograph, wide landscape 2:1 composition. An original unbranded deep racing-red luxury sportback sedan, tasteful modern design, front three-quarter view facing toward the left, parked on a pale warm gray seamless studio floor. The COMPLETE car including all wheels occupies the RIGHT 55 percent of the image, with generous breathing space around its silhouette and realistic contact shadow so it is grounded. The LEFT 45 percent is clean empty pale gray negative space for editable dark website headline overlay; no car or objects in that area. Car placed in lower half, subtle soft architectural light sweeps in upper right, bright silver-white studio environment, premium editorial automotive photography, realistic paint and materials, restrained dramatic reflections. Camera at headlamp height, 70mm lens look. The whole scene is one coherent photograph. No text, no numbers, no logos or badges, no brands, no watermarks, no typography, no colored gradients, no graphic ornaments. Ensure car is fully visible with comfortable margin on right and bottom. Wide 2:1 image.
-

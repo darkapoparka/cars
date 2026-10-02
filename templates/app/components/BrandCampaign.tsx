@@ -13,17 +13,17 @@ type Kind = 'sell' | 'care' | 'finance';
 const campaigns = {
   sell: {title: 'Your next chapter.', mobileTitle: 'Your next car.', copy: 'Sell or part-exchange with the showroom.', mobileCopy: 'Sell or exchange.', action: 'Start with a valuation', mobileAction: 'Get valuation', href: '/sell/details'},
   care: {title: 'A little care. A better drive.', mobileTitle: 'Car care.', copy: 'Maintenance, inspections and advice for the road ahead.', mobileCopy: 'Servicing and inspections.', action: 'Explore car care', mobileAction: 'View services', href: '/service/details'},
-  finance: {title: 'Make the numbers work.', mobileTitle: 'Plan your budget.', copy: 'Explore deposits, payment terms and your next steps.', mobileCopy: 'Choose a deposit and term.', action: 'Discuss your options', mobileAction: 'Ask us', href: '/finance'},
+  finance: {title: 'Need a hand?', mobileTitle: 'Need a hand?', copy: 'Help with your car and finance options.', mobileCopy: 'Let’s talk finance.', action: 'Ask us', mobileAction: 'Ask us', href: '/finance'},
 } as const;
 
 /** Original campaign compositions with readable, editable dealer copy. */
-export default function BrandCampaign({kind, onAction}: {kind: Kind; onAction?: () => void}) {
+export default function BrandCampaign({kind, onAction, image}: {kind: Kind; onAction?: () => void; image?: string}) {
   const tx = useCopy();
 
   const campaign = campaigns[kind];
   function copy(full: string, short: string) {return <><span {...stylex.props(s.desktopCopy)}>{tx(full)}</span><span {...stylex.props(s.mobileCopy)}>{tx(short)}</span></>;}
   return <section data-brand-campaign={kind} {...stylex.props(s.campaign, kind === 'finance' && s.wide, kind === 'care' && s.care)}>
-    <Image src={showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art, kind === 'care' && s.careArt, kind === 'finance' && s.financeArt)} />
+    <Image src={image ?? showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art, kind === 'care' && s.careArt, kind === 'finance' && s.financeArt)} />
     <div {...stylex.props(s.copy, kind === 'sell' && s.sellCopy, kind === 'finance' && s.financeCopy, kind === 'care' && s.careCopy)}>
       <h2 {...stylex.props(s.title, t.heading, kind !== 'sell' && s.titleAtTop)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
       <p {...stylex.props(s.description, t.body, kind === 'finance' && s.shortDescription)}>{kind === 'care' ? tx(campaign.mobileCopy) : copy(campaign.copy, campaign.mobileCopy)}</p>

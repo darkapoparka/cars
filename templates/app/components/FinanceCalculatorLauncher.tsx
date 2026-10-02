@@ -2,7 +2,7 @@
 
 import {useDeferredValue, useEffect, useId, useRef, useState} from 'react';
 import * as stylex from '@stylexjs/stylex';
-import {Calculator, ChevronRight, Search, X} from 'lucide-react';
+import {ChevronRight, Search, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
 import {assetPath} from '@/lib/paths';
 import {currency} from '@/lib/currency';
@@ -12,6 +12,7 @@ import {estimateFinance} from '@/lib/finance';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import {searchField} from './search-field.stylex';
+import {actionButton} from './action-button.stylex';
 import VehicleCard from './VehicleCard';
 import FinanceCalculator from './FinanceCalculator';
 import {useModal} from './useModal';
@@ -21,9 +22,10 @@ const stock = vehicles.filter(car => Number.isFinite(car.price) && car.price > 0
 const featured = [...stock].sort((a, b) => a.price - b.price).slice(0, 3);
 const defaultFilters = emptyFilters();
 
-export default function FinanceCalculatorLauncher() {
+export type FinanceView = 'cars' | 'calculator' | null;
+
+export default function FinanceCalculatorLauncher({view, onViewChange: setView}: {view: FinanceView; onViewChange: (view: FinanceView) => void}) {
   const tx = useCopy(), id = useId();
-  const [view, setView] = useState<'cars' | 'calculator' | null>(null);
   const [query, setQuery] = useState('');
   const deferredQuery = useDeferredValue(query);
   const [selection, setSelection] = useState<{car: Vehicle | null; version: number}>({car: null, version: 0});
@@ -51,16 +53,13 @@ export default function FinanceCalculatorLauncher() {
 
   return <>
     <section data-finance-discovery {...stylex.props(s.discovery)} aria-label={tx('Cars to finance')}>
-      <div {...stylex.props(s.tools)}>
-        <button type="button" data-finance-car-search aria-haspopup="dialog" aria-expanded={view === 'cars'} aria-controls={id + '-dialog'} onClick={browse} {...stylex.props(searchField.field, s.searchLauncher)}>
-          <Search size={22} aria-hidden="true" {...stylex.props(searchField.icon)}/><span {...stylex.props(s.searchPrompt)}>{tx('Choose a car to finance')}</span><ChevronRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
-        </button>
-        <button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={view === 'calculator'} aria-controls={id + '-dialog'} onClick={() => setView('calculator')} {...stylex.props(s.launcher, t.control)}><Calculator size={20} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Estimate payment')}</button>
-      </div>
+      <button type="button" data-finance-car-search aria-haspopup="dialog" aria-expanded={view === 'cars'} aria-controls={id + '-dialog'} onClick={browse} {...stylex.props(searchField.field, s.searchLauncher)}>
+        <Search size={22} aria-hidden="true" {...stylex.props(searchField.icon)}/><span {...stylex.props(s.searchPrompt)}>{tx('Choose your car')}</span><ChevronRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
+      </button>
       <section aria-labelledby={id + '-cars-title'} {...stylex.props(s.inventory)}>
-        <div {...stylex.props(s.inventoryHeader)}><h2 id={id + '-cars-title'} {...stylex.props(t.heading)}>{tx('Cars to finance')}</h2>{stock.length ? <button type="button" onClick={browse} {...stylex.props(s.textAction, t.control)}>{tx('View all')}</button> : null}</div>
-        <p {...stylex.props(s.note, t.caption)}>{tx('Estimates: 20% deposit · 7% annual rate · 5 years.')}</p>
+        <h2 id={id + '-cars-title'} {...stylex.props(t.heading)}>{tx('Cars to finance')}</h2>
         <div data-finance-cars {...stylex.props(s.cars)}>{featured.map(car => <VehicleCard key={car.slug} vehicle={car} finance={{monthly: estimateFinance(car.price, car.price * .2, 7, 5).monthly, onCalculate: () => choose(car)}}/>)}</div>
+        {stock.length ? <><p {...stylex.props(s.note, s.assumptions, t.caption)}>{tx('Example: 20% deposit · 7% yearly · 5 years.')}</p><button type="button" data-finance-view-all aria-label={tx('View all')} aria-haspopup="dialog" aria-expanded={view === 'cars'} aria-controls={id + '-dialog'} onClick={browse} {...stylex.props(actionButton.filled, s.allCars, t.control)}>{tx('All cars for finance')}<ChevronRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/></button></> : null}
         {!stock.length ? <p {...stylex.props(s.note, t.body)}>{tx('No priced cars are available. You can still estimate a payment.')}</p> : null}
       </section>
     </section>
@@ -88,16 +87,14 @@ export default function FinanceCalculatorLauncher() {
 
 const s = stylex.create({
   discovery: {marginTop: 16, color: $.ink},
-  tools: {display: 'flex', flexDirection: {[media.mobile]: 'column', default: 'row'}, alignItems: {[media.mobile]: 'stretch', default: 'center'}, gap: {[media.mobile]: 4, default: 16}},
-  searchLauncher: {width: '100%', flexGrow: 1, minHeight: 48, textAlign: 'left', cursor: 'pointer'},
+  searchLauncher: {width: '100%', minWidth: 0, minHeight: 52, color: $.ink, borderRadius: $.radiusSm, textAlign: 'left', cursor: 'pointer'},
   searchPrompt: {flexGrow: 1, minWidth: 0},
-  launcher: {display: 'inline-flex', alignItems: 'center', flexShrink: 0, alignSelf: 'flex-start', gap: 8, minHeight: 44, padding: '8px 2px', color: $.ink, borderWidth: 0, borderRadius: 8, backgroundColor: 'transparent', cursor: 'pointer', outlineColor: $.ink, outlineOffset: 3},
   icon: {flexShrink: 0},
-  inventory: {marginTop: 20},
-  inventoryHeader: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
-  textAction: {display: 'inline-flex', alignItems: 'center', flexShrink: 0, minHeight: 44, padding: 0, color: $.ink, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
+  inventory: {marginTop: {[media.mobile]: 20, default: 24}},
   note: {color: $.muted},
-  cars: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: 12, marginTop: 14},
+  assumptions: {marginTop: 12},
+  allCars: {width: {[media.mobile]: '100%', default: 'auto'}, minHeight: 48, marginTop: {[media.mobile]: 12, default: 16}, paddingInline: 20},
+  cars: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: 12, marginTop: 12},
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.58)'},
   hidden: {display: 'none'},
   sheet: {display: 'flex', flexDirection: 'column', width: '100%', maxWidth: 560, maxHeight: 'calc(100dvh - 24px)', color: $.ink, fontFamily: $.fontSans, borderRadius: {[media.mobile]: '24px 24px 0 0', default: 24}, backgroundColor: '#fff', outlineStyle: 'none', overflow: 'hidden'},

@@ -1,5 +1,7 @@
 # Finance steps
 
+This earlier six-step layout is historical. The current three-step composition and browser reference are recorded in the [later Finance step revision](../finance-steps-revision-2026-10-02/README.md).
+
 Checked the live [Cars24 UAE loan page](https://www.cars24.ae/car-loan/) and retained native captures `reference/2026-09-26-continuation/finance-how-427.png` and `finance-how-2-427.png` on 2 October 2026. The reference puts a small illustration beside a numbered title and short explanation; desktop uses three columns.
 
 Finance now follows that composition with monochrome imagery and the existing shared `title` and `body` typography. The six steps remain an informational ordered list. Artwork is configured in `lib/showroom-art.ts`; the car and euro/key assets are existing App artwork, and the unbranded people/document images are retained comparison assets. No new reference assets were downloaded. Existing release rules for retained reference artwork still apply.
