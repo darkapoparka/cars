@@ -191,6 +191,30 @@ for (const locale of ['en', 'bg']) {
 					.map((title) => (title as HTMLElement).innerText)
 			);
 			expect(wrappedTitles, `${locale} service titles at ${width}px`).toEqual([]);
+			const wrappedSummaries = await page.locator('.service-card p').evaluateAll((summaries) =>
+				summaries
+					.filter((summary) => {
+						const text = document.createRange();
+						text.selectNodeContents(summary.querySelector('.service-card__mobile-copy')!);
+						return new Set([...text.getClientRects()].map((rect) => Math.round(rect.top))).size > 1;
+					})
+					.map((summary) => (summary as HTMLElement).innerText)
+			);
+			expect(wrappedSummaries, `${locale} service summaries at ${width}px`).toEqual([]);
+			const banner = await page.locator('.contact-banner').evaluate((element) => ({
+				height: element.getBoundingClientRect().height,
+				actions: [...element.querySelectorAll('a')].map((action) => ({
+					top: action.getBoundingClientRect().top,
+					height: action.getBoundingClientRect().height
+				}))
+			}));
+			expect(banner.height, `${locale} compact service CTA at ${width}px`).toBeLessThan(225);
+			expect(banner.actions).toHaveLength(2);
+			expect(
+				Math.max(...banner.actions.map((action) => action.top)) -
+					Math.min(...banner.actions.map((action) => action.top))
+			).toBeLessThanOrEqual(1);
+			expect(banner.actions.every((action) => action.height >= 44)).toBe(true);
 			expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
 				width
 			);

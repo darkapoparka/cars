@@ -54,7 +54,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				summary: 'Подбор според твоя бюджет, изисквания и планове.',
 				mobileContext: 'Избор на автомобил',
 				mobileTitle: 'Подбрани коли',
-				mobileSummary: 'По бюджет и изисквания.',
+				mobileSummary: 'Подбор по бюджет',
 				href: '/inventory',
 				action: 'Разгледай автомобилите',
 				includes: ['Избор според бюджет и изисквания', 'История, оборудване и крайна цена']
@@ -62,7 +62,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			'listing-check': {
 				summary: 'История, състояние и разходи — преди да решиш.',
 				mobileContext: 'Преди покупка',
-				mobileSummary: 'VIN, история и състояние.',
+				mobileSummary: 'VIN и история',
 				href: '/import',
 				action: 'Провери автомобил за внос',
 				includes: ['Преглед на обява или VIN', 'Уточняване на история и разходи за внос']
@@ -71,7 +71,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				summary: 'От оценката до правилния път за продажба.',
 				mobileContext: 'Твоят автомобил',
 				mobileTitle: 'Продажба на кола',
-				mobileSummary: 'Оценка и съдействие.',
+				mobileSummary: 'Оценка и продажба',
 				href: '/sell-your-car',
 				action: 'Разгледай възможностите',
 				includes: [
@@ -83,7 +83,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				summary: 'Съдействие с документите, регистрацията и предаването.',
 				mobileContext: 'След покупка',
 				mobileTitle: 'Регистрация',
-				mobileSummary: 'Документи и предаване.',
+				mobileSummary: 'Документи за КАТ',
 				href: '/contact?topic=registration#contact-details',
 				action: 'Обсъди документите',
 				includes: [
@@ -94,7 +94,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			viewing: {
 				summary: 'Автомобил и консултант, подготвени за твоята среща.',
 				mobileContext: 'На място',
-				mobileSummary: 'С предварителна уговорка.',
+				mobileSummary: 'Час за оглед',
 				href: '/contact#contact-details',
 				action: 'Виж контакти и адрес',
 				includes: [
@@ -105,7 +105,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			comparison: {
 				summary: 'Цена, пробег и оборудване. Ясен избор между моделите.',
 				mobileContext: 'Преди решение',
-				mobileSummary: 'Цена, пробег и оборудване.',
+				mobileSummary: 'Цена и оборудване',
 				href: '/compare',
 				action: 'Сравни автомобили',
 				includes: ['Цена, пробег и оборудване на едно място', 'Избор между запазените кандидати']
@@ -132,7 +132,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			sourcing: {
 				summary: 'A shortlist shaped around your budget and plans.',
 				mobileContext: 'Find your car',
-				mobileSummary: 'Chosen for your budget.',
+				mobileSummary: 'Selection by budget',
 				href: '/inventory',
 				action: 'Browse available cars',
 				includes: [
@@ -143,7 +143,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			'listing-check': {
 				summary: 'History, condition and costs — before you decide.',
 				mobileContext: 'Before buying',
-				mobileSummary: 'VIN, history and condition.',
+				mobileSummary: 'VIN and history',
 				href: '/import',
 				action: 'Check a car for import',
 				includes: ['Review a listing or VIN', 'Discuss the history and import costs']
@@ -151,7 +151,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			selling: {
 				summary: 'From the valuation to the right way to sell.',
 				mobileContext: 'Your car',
-				mobileSummary: 'Valuation and sales support.',
+				mobileSummary: 'Valuation and sale',
 				href: '/sell-your-car',
 				action: 'Explore selling options',
 				includes: [
@@ -163,7 +163,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				summary: 'Help with the paperwork, registration and handover.',
 				mobileContext: 'After buying',
 				mobileTitle: 'Registration',
-				mobileSummary: 'Paperwork and handover.',
+				mobileSummary: 'Registration docs',
 				href: '/contact?topic=registration#contact-details',
 				action: 'Discuss the paperwork',
 				includes: [
@@ -175,7 +175,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				summary: 'Your car and consultant, ready for your appointment.',
 				mobileContext: 'Visit us',
 				mobileTitle: 'Book a viewing',
-				mobileSummary: 'Arrange a viewing time.',
+				mobileSummary: 'Viewing appointment',
 				href: '/contact#contact-details',
 				action: 'View contact details',
 				includes: [
@@ -186,7 +186,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			comparison: {
 				summary: 'Price, mileage and equipment. Make an informed choice.',
 				mobileContext: 'Before you decide',
-				mobileSummary: 'Price, mileage, equipment.',
+				mobileSummary: 'Price and equipment',
 				href: '/compare',
 				action: 'Compare cars',
 				includes: [
