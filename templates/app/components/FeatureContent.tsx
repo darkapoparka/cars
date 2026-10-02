@@ -94,7 +94,7 @@ const s = stylex.create({
   methodMedia: {position: 'absolute', inset: 0},
   methodArtwork: {objectFit: 'contain', objectPosition: 'right bottom'},
   methodCopy: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: {[media.mobile]: '100%', default: '60%'}, minHeight: {[media.mobile]: 0, default: 270}, padding: {[media.mobile]: 16, default: '26px 0 26px 22px'}},
-  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
+  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', maxWidth: {[media.mobile]: 210, default: '100%'}, gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
   methodPoint: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
   methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 44, maxWidth: '100%', marginTop: {[media.mobile]: 14, default: 'auto'}, padding: '8px 10px', color: campaign.lightInk, fontSize: {[media.mobile]: 12, default: 14}, fontWeight: 600, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},
