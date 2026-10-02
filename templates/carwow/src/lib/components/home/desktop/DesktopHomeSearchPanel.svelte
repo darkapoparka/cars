@@ -55,9 +55,9 @@
 	let keywordQuery = $state('');
 	type HeroIntent = 'buy' | 'sell' | 'import';
 	const intents = [
-		{ value: 'buy', label: i18n.t('copy.f6c6952d4d23') },
-		{ value: 'sell', label: i18n.t('copy.6510e880c790') },
-		{ value: 'import', label: i18n.t('copy.995bfafd0b63') }
+		{ value: 'buy', label: i18n.t('copy.2c7f964ab3f3') },
+		{ value: 'sell', label: i18n.t('copy.3ba407bb3a13') },
+		{ value: 'import', label: i18n.t('copy.3d1ecec672e9') }
 	] as const;
 	let activeIntent = $state<HeroIntent>('buy');
 	let hydrated = $state(false);
@@ -599,56 +599,54 @@
 	}
 	/* The task panel owns its controls; legacy hero selectors do not style it. */
 	.hero-intent {
-		background: var(--discovery-panel);
-		border-radius: 16px;
-		color: var(--sa-ink);
+		background: var(--discovery-action-hover);
+		border-radius: var(--discovery-panel-radius);
+		color: #fff;
 		font-family: var(--sa-font);
-		padding: 20px 24px;
 		text-align: left;
 		width: 100%;
 	}
 	.hero-intent__tabs {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 8px;
-		width: min(100%, 312px);
-		margin: 0 auto 16px;
+		display: flex;
+		justify-content: center;
+		background: var(--discovery-action);
+		border-radius: var(--discovery-panel-radius) var(--discovery-panel-radius) 0 0;
+		padding: 0 24px;
 	}
 	.hero-intent__tabs button {
-		background: var(--discovery-surface);
-		border: 1px solid var(--discovery-control-border);
-		border-radius: var(--discovery-control-radius);
-		color: var(--discovery-ink);
+		background: transparent;
+		border: 0;
+		border-radius: 0;
+		color: #fff;
 		cursor: pointer;
 		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
-		min-height: 44px;
-		padding: 0 16px;
+		min-height: 52px;
+		padding: 0 20px;
+		white-space: nowrap;
 	}
 	.hero-intent__tabs button:hover:not(:disabled) {
-		background: var(--discovery-light-hover);
-		border-color: var(--discovery-light-hover);
-		color: var(--sa-ink);
+		background: var(--discovery-action-hover);
 	}
 	.hero-intent button:disabled {
 		cursor: wait;
 		opacity: 0.6;
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
-		background: var(--discovery-action);
-		border-color: var(--discovery-action);
-		color: #fff;
+		background: var(--discovery-panel);
+		color: var(--discovery-ink);
 		font-weight: var(--sa-weight-semibold);
 	}
 	.hero-intent__tabs button[aria-selected='true']:hover:not(:disabled) {
-		background: var(--discovery-action-hover);
-		border-color: var(--discovery-action-hover);
+		background: var(--discovery-muted-surface);
 	}
 	.hero-intent__panel {
-		min-height: 112px;
+		color: #fff;
+		min-height: 156px;
+		padding: 20px 40px 24px;
 	}
 	.hero-intent__label {
-		color: var(--sa-ink);
+		color: #fff;
 		display: grid;
 		font-size: var(--sa-text-caption);
 		font-weight: var(--sa-weight-medium);
@@ -690,10 +688,10 @@
 	}
 	.hero-intent__submit {
 		align-items: center;
-		background: var(--discovery-action);
+		background: var(--sa-yellow);
 		border: 0;
 		border-radius: 8px;
-		color: #fff;
+		color: var(--discovery-ink);
 		cursor: pointer;
 		display: inline-flex;
 		font: inherit;
@@ -705,7 +703,7 @@
 		padding: 0 16px;
 	}
 	.hero-intent__submit:hover {
-		background: var(--discovery-action-hover);
+		background: color-mix(in srgb, var(--sa-yellow) 88%, #fff);
 	}
 	.hero-intent__row--search {
 		display: flex;
@@ -718,9 +716,9 @@
 		background: #fff;
 	}
 	.hero-intent__row--search:focus-within {
-		border-color: var(--discovery-action);
-		outline: 2px solid var(--discovery-action);
-		outline-offset: -1px;
+		border-color: var(--sa-yellow);
+		outline: 2px solid var(--sa-yellow);
+		outline-offset: 2px;
 	}
 	.hero-intent .hero-intent__row--search .hero-intent__input {
 		flex: 1;
@@ -728,7 +726,7 @@
 		border: 0;
 		border-radius: 0;
 		background: transparent;
-		padding: 0 9px;
+		padding: 0 15px;
 		outline: none;
 		box-shadow: none;
 	}
@@ -737,11 +735,11 @@
 		width: var(--discovery-search-action-size);
 		height: var(--discovery-search-action-size);
 		padding: 0;
-		border-radius: var(--discovery-control-radius);
+		border-radius: var(--discovery-search-action-radius);
 	}
 	.hero-intent__quick-fields {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: center;
 		gap: 8px;
 		margin-top: 12px;
 	}
@@ -786,20 +784,23 @@
 	.hero-intent__filter.is-selected {
 		color: #fff;
 		background: var(--discovery-action);
-		border-color: var(--discovery-action);
+		border-color: #fff;
 	}
 	.hero-intent__filter.is-selected:hover {
 		background: var(--discovery-action-hover);
-		border-color: var(--discovery-action-hover);
+		border-color: #fff;
 	}
 	.hero-intent__hint {
-		color: #59616c;
+		color: #fff;
 		font-size: var(--sa-text-caption);
 		line-height: 20px;
 		margin: 12px 0 0;
 	}
 	.hero-intent :is(button, input):focus-visible {
-		outline: 2px solid var(--discovery-action);
+		outline: 2px solid var(--sa-yellow);
 		outline-offset: 3px;
+	}
+	.hero-intent__tabs button:focus-visible {
+		outline-offset: -4px;
 	}
 </style>

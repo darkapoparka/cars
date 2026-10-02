@@ -10,24 +10,28 @@ for (const width of [992, 1280, 1440, 1920]) {
 			await expect(page.locator('.hero-intent')).toBeVisible();
 			const frame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
 			const panel = (await page.locator('.hero-intent').boundingBox())!;
+			const tabHeader = (await page.locator('.hero-intent__tabs').boundingBox())!;
+			expect(Math.abs(tabHeader.x - panel.x)).toBeLessThan(1);
+			expect(Math.abs(tabHeader.y - panel.y)).toBeLessThan(1);
+			expect(Math.abs(tabHeader.width - panel.width)).toBeLessThan(1);
 			const tabs = await page.locator('.hero-intent__tabs button').evaluateAll((buttons) => {
 				const first = buttons[0].getBoundingClientRect();
 				const last = buttons.at(-1)!.getBoundingClientRect();
 				return { left: first.left, right: last.right, width: last.right - first.left };
 			});
-			expect(tabs.width).toBeLessThan(panel.width * 0.75);
+			expect(tabs.width).toBeLessThan(panel.width - 32);
 			expect(Math.abs((tabs.left + tabs.right) / 2 - panel.x - panel.width / 2)).toBeLessThan(1);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'background-color',
-				'rgb(23, 27, 30)'
-			);
-			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
-				'color',
 				'rgb(255, 255, 255)'
 			);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
+				'color',
+				'rgb(23, 27, 30)'
+			);
+			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'border-width',
-				'1px'
+				'0px'
 			);
 			await expect(page.locator('label[for="hero-buy-query"]')).toHaveCSS('width', '1px');
 			await expect(page.locator('#hero-buy-query')).toHaveAccessibleName(

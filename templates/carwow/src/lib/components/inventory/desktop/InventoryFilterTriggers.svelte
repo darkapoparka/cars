@@ -78,7 +78,7 @@
 <style>
 	.inventory-filter-triggers {
 		display: flex;
-		justify-content: flex-start;
+		justify-content: var(--discovery-filters-align, flex-start);
 		gap: 8px;
 		background: transparent;
 		border-radius: 12px;
@@ -120,15 +120,15 @@
 	}
 	button.has-selection {
 		color: #fff;
-		border-color: var(--discovery-action);
+		border-color: var(--discovery-filter-selection-border, var(--discovery-action));
 		background: var(--discovery-action);
 	}
 	button.has-selection:hover:not(:disabled) {
 		background: var(--discovery-action-hover);
-		border-color: var(--discovery-action-hover);
+		border-color: var(--discovery-filter-selection-border, var(--discovery-action-hover));
 	}
 	button:focus-visible {
-		outline: 2px solid var(--discovery-action);
+		outline: 2px solid var(--discovery-filter-focus, var(--discovery-action));
 		outline-offset: 3px;
 	}
 	.all-filters {

@@ -272,7 +272,7 @@ test('card actions remain legible and retain state from home to inventory and fa
 	page
 }) => {
 	await page.goto('/');
-	await expect(page.getByRole('tab', { name: 'Купи', exact: true })).toBeEnabled();
+	await expect(page.getByRole('tab', { name: 'Купи автомобил', exact: true })).toBeEnabled();
 	const card = page.locator('.daynight-home-inventory__card').first();
 	const slug = await card.getAttribute('data-daynight-slug');
 	const actions = card.locator('.desktop-vehicle-actions button');
@@ -333,7 +333,7 @@ test('home and inventory controls match, inventory modal applies a filter and re
 	await expect(input).toHaveCSS('outline-style', 'none');
 	await expect(page.locator('.inventory-hero .daynight-inventory-search')).toHaveCSS(
 		'outline-color',
-		'rgb(23, 27, 30)'
+		'rgb(245, 197, 66)'
 	);
 	await trigger.click();
 	const dialog = page.getByRole('dialog');

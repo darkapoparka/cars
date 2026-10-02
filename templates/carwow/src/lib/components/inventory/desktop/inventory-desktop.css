@@ -3368,9 +3368,13 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	}
 }
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
-	background: var(--discovery-panel) !important;
+	--discovery-filters-align: center;
+	--discovery-filter-focus: var(--sa-yellow);
+	--discovery-filter-selection-border: #fff;
+	background: var(--discovery-action-hover) !important;
 	padding: 20px 24px !important;
-	border-radius: 16px;
+	border: 0;
+	border-radius: var(--discovery-panel-radius);
 }
 .inventory-refined .inventory-hero .daynight-inventory-searchbar__label {
 	position: absolute;
@@ -3400,7 +3404,7 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	border: 0 !important;
 	border-radius: 0 !important;
 	background: transparent !important;
-	padding: 0 9px !important;
+	padding: 0 15px !important;
 	font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font) !important;
 	color: #171b1e !important;
 }
@@ -3417,9 +3421,9 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	min-width: var(--discovery-search-action-size);
 	height: var(--discovery-search-action-size) !important;
 	padding: 0 !important;
-	background: var(--discovery-action) !important;
-	border-radius: var(--discovery-control-radius) !important;
-	color: #fff !important;
+	background: var(--sa-yellow) !important;
+	border-radius: var(--discovery-search-action-radius) !important;
+	color: var(--discovery-ink) !important;
 	font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
 		var(--sa-font) !important;
 	transform: none !important;
@@ -3429,7 +3433,7 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	color: inherit !important;
 }
 .inventory-refined .inventory-hero .daynight-inventory-searchbar__submit:hover {
-	background: var(--discovery-action-hover) !important;
+	background: color-mix(in srgb, var(--sa-yellow) 88%, #fff) !important;
 }
 
 .inventory-template-shell
@@ -3441,13 +3445,13 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	box-shadow: none !important;
 }
 .inventory-refined .inventory-hero .daynight-inventory-search:focus-within {
-	border-color: var(--discovery-action) !important;
+	border-color: var(--sa-yellow) !important;
 	box-shadow: none !important;
-	outline: 2px solid var(--discovery-action);
+	outline: 2px solid var(--sa-yellow);
 	outline-offset: 2px;
 }
 .inventory-refined .inventory-hero .daynight-inventory-searchbar__submit:focus-visible {
-	outline: 2px solid var(--discovery-action) !important;
+	outline: 2px solid var(--sa-yellow) !important;
 	outline-offset: 3px;
 }
 .inventory-refined .daynight-inventory-viewport {

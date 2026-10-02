@@ -4,22 +4,22 @@ test.use({ viewport: { width: 1440, height: 1000 } });
 
 test('hero modes switch with the keyboard and retain separate drafts', async ({ page }) => {
 	await page.goto('/');
-	const buy = page.getByRole('tab', { name: 'Купи', exact: true });
+	const buy = page.getByRole('tab', { name: 'Купи автомобил', exact: true });
 	await buy.click();
 	await page.locator('#hero-buy-query').fill('Audi');
 	await buy.focus();
 	await page.keyboard.press('ArrowRight');
-	await expect(page.getByRole('tab', { name: 'Продай', exact: true })).toBeFocused();
+	await expect(page.getByRole('tab', { name: 'Продай или замени', exact: true })).toBeFocused();
 	await page.locator('#hero-sell-make').fill('BMW');
 	await page.locator('#hero-sell-model').fill('320d Touring');
-	await page.getByRole('tab', { name: 'Внос', exact: true }).click();
+	await page.getByRole('tab', { name: 'Внос на автомобил', exact: true }).click();
 	await page.locator('#hero-import-url').fill('https://www.mobile.de/auto-inserat/test/123.html');
 	await buy.click();
 	await expect(page.locator('#hero-buy-query')).toHaveValue('Audi');
-	await page.getByRole('tab', { name: 'Продай', exact: true }).click();
+	await page.getByRole('tab', { name: 'Продай или замени', exact: true }).click();
 	await expect(page.locator('#hero-sell-make')).toHaveValue('BMW');
 	await expect(page.locator('#hero-sell-model')).toHaveValue('320d Touring');
-	await page.getByRole('tab', { name: 'Внос', exact: true }).click();
+	await page.getByRole('tab', { name: 'Внос на автомобил', exact: true }).click();
 	await expect(page.locator('#hero-import-url')).toHaveValue(
 		'https://www.mobile.de/auto-inserat/test/123.html'
 	);
@@ -28,7 +28,7 @@ test('hero modes switch with the keyboard and retain separate drafts', async ({ 
 
 test('sell carries make and model into the existing desktop intake', async ({ page }) => {
 	await page.goto('/');
-	await page.getByRole('tab', { name: 'Продай', exact: true }).click();
+	await page.getByRole('tab', { name: 'Продай или замени', exact: true }).click();
 	await page.locator('#hero-sell-make').fill('BMW');
 	await page.locator('#hero-sell-model').fill('320d Touring');
 	await page.locator('.hero-intent__submit').click();
@@ -39,7 +39,7 @@ test('sell carries make and model into the existing desktop intake', async ({ pa
 
 test('import validates a URL and carries it into the existing request', async ({ page }) => {
 	await page.goto('/');
-	await page.getByRole('tab', { name: 'Внос', exact: true }).click();
+	await page.getByRole('tab', { name: 'Внос на автомобил', exact: true }).click();
 	const input = page.locator('#hero-import-url');
 	await input.fill('not-a-url');
 	await page.locator('.hero-intent__submit').click();
@@ -95,7 +95,7 @@ for (const width of [1280, 1440, 1920]) {
 		expect(parseFloat(layout.headings[0][0])).toBeLessThanOrEqual(50);
 		expect(layout.heroSize).toBeGreaterThan(parseFloat(layout.headings[0][0]));
 		const heights: number[] = [];
-		for (const mode of ['Купи', 'Продай', 'Внос']) {
+		for (const mode of ['Купи автомобил', 'Продай или замени', 'Внос на автомобил']) {
 			await page.getByRole('tab', { name: mode, exact: true }).click();
 			heights.push((await page.locator('.hero-intent').boundingBox())!.height);
 			await page.screenshot({ path: testInfo.outputPath(`hero-${width}-${mode}.png`) });

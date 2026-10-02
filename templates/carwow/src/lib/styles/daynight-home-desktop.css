@@ -20,7 +20,11 @@
 	.daynight-home-shell .daynight-home-section {
 		padding: 0 0 48px;
 	}
-	.daynight-home-shell :is(.daynight-home-section-content, .daynight-home-inventory__body) {
+	.daynight-home-shell--original
+		:is(.daynight-home-section-content, .daynight-home-inventory__body) {
+		padding-top: 0;
+	}
+	.daynight-home-shell--home1 .daynight-home-inventory__body {
 		padding-top: 24px;
 	}
 	.daynight-home-shell :is(a, button, input):focus-visible {
@@ -55,7 +59,7 @@
 		text-align: center;
 	}
 	.daynight-home-shell .daynight-home-hero__stage > form {
-		width: min(100%, 720px);
+		width: min(100%, 640px);
 	}
 	.daynight-home-shell .daynight-home-hero__car {
 		position: absolute;

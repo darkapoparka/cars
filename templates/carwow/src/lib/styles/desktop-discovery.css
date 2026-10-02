@@ -11,7 +11,8 @@
 	--sa-red-strong: #b70022;
 	--discovery-search-height: 54px;
 	--discovery-search-action-size: 44px;
-	--discovery-search-radius: 12px;
+	--discovery-search-radius: 999px;
+	--discovery-search-action-radius: 50%;
 	--discovery-control-border: #d9dde1;
 	--discovery-border-hover: #9ca3af;
 	--discovery-canvas: #f4f6fa;

@@ -264,7 +264,7 @@ test('server bootstrap and hydration use one desktop CSS URL', async ({ page }, 
 		if (/daynight-home-desktop.*\.css/.test(request.url())) requests.add(request.url());
 	});
 	await page.goto('/en');
-	await expect(page.getByRole('tab', { name: 'Buy', exact: true })).toBeEnabled();
+	await expect(page.getByRole('tab', { name: 'Buy a car', exact: true })).toBeEnabled();
 	expect(requests.size).toBe(1);
 	await page.evaluate(() => document.fonts.ready);
 	const photoHeights = await page
