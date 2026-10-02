@@ -9,7 +9,7 @@ const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("desktop routes align their headings and content panels", async ({
+test("desktop home has a photographic hero and inner routes align their content", async ({
   page,
 }) => {
   test.setTimeout(120_000);
@@ -17,6 +17,7 @@ test("desktop routes align their headings and content panels", async ({
     await page.setViewportSize({ width, height: 1000 });
     for (const locale of ["en", "bg"]) {
       let reference: { x: number; width: number } | undefined;
+      let headerReference: { x: number; width: number } | undefined;
       for (const path of ["", "/cars", "/sell", "/lease", "/imports"]) {
         await page.goto(`/${locale}${path}`);
         await expect(
@@ -45,9 +46,24 @@ test("desktop routes align their headings and content panels", async ({
         expect(panel.x).toBeGreaterThanOrEqual(24);
         expect(panel.height).toBeGreaterThan(0);
         expect(panel.height).toBeLessThan(600);
-        expect(panel.x).toBeCloseTo(headerFrame.x, 0);
-        expect(panel.width).toBeCloseTo(headerFrame.width, 0);
-        if (path === "" || path === "/cars") {
+        expect(panel.x).toBeGreaterThanOrEqual(headerFrame.x);
+        expect(panel.x + panel.width).toBeLessThanOrEqual(
+          headerFrame.x + headerFrame.width
+        );
+        if (path === "") {
+          await expect(hero.locator("h1").first()).toBeVisible();
+          expect(
+            await hero.evaluate(
+              (element) => getComputedStyle(element).backgroundImage
+            )
+          ).toContain("url(");
+          await expect(
+            page.locator('[data-slot="dealer-desktop-discovery-content"]')
+          ).toBeVisible();
+          await expect(
+            page.locator('[data-slot="dealer-inventory-summary"]')
+          ).toBeHidden();
+        } else if (path === "/cars") {
           const inventoryTitle = page.locator(
             '[data-slot="dealer-inventory-summary"] h2'
           );
@@ -61,11 +77,17 @@ test("desktop routes align their headings and content panels", async ({
           expect(heading.x).toBeCloseTo(panel.x, 0);
           expect(heading.width).toBeCloseTo(panel.width, 0);
         }
-        if (reference) {
+        if (path !== "" && reference) {
           expect(panel.x).toBeCloseTo(reference.x, 0);
           expect(panel.width).toBeCloseTo(reference.width, 0);
-        } else {
+        } else if (path !== "") {
           reference = { x: panel.x, width: panel.width };
+        }
+        if (headerReference) {
+          expect(headerFrame.x).toBeCloseTo(headerReference.x, 0);
+          expect(headerFrame.width).toBeCloseTo(headerReference.width, 0);
+        } else {
+          headerReference = headerFrame;
         }
         expect(
           await page.evaluate(
@@ -98,7 +120,7 @@ test("desktop navigation keeps the header stable through loading", async ({
     ["sell", "Sell us your vehicle"],
     ["lease", "Vehicle financing"],
     ["imports", "Import a vehicle"],
-    ["home", "Cars for sale"],
+    ["home", "Find your next car"],
   ]) {
     await header.locator(`[data-marketplace-mode="${mode}"]`).click();
     await expect(
@@ -129,14 +151,22 @@ test("home and inventory keep the same quick filters and submit their draft", as
     ).toBeHidden();
     const panel = page.locator('[data-slot="dealer-desktop-toolbar"]');
     const home = await panel.boundingBox();
+    await expect(
+      page.locator('[data-slot="dealer-desktop-home-hero"] h1')
+    ).toBeVisible();
+    for (const slot of ["make", "model", "price", "year", "mileage"]) {
+      await expect(
+        panel.locator(`[data-slot="desktop-hero-${slot}"]`)
+      ).toBeVisible();
+    }
     await page.goto("/en/cars");
     await expect(
       page.locator('[data-slot="public-route-loading-content"]')
     ).toBeHidden();
     const inventory = await panel.boundingBox();
-    expect(inventory?.x).toBe(home?.x);
-    expect(inventory?.width).toBe(home?.width);
-    expect(inventory?.height).toBe(home?.height);
+    expect(home?.width).toBeGreaterThan(0);
+    expect(inventory?.width).toBeGreaterThan(0);
+    expect(inventory?.height).not.toBe(home?.height);
     const controls = page.locator('[data-slot="desktop-results-controls"]');
     await expect(controls).toBeVisible();
     await expect(
@@ -180,8 +210,18 @@ test("home and inventory keep the same quick filters and submit their draft", as
       inputBox.y + inputBox.height
     );
     const bodyBox = await page.locator("body").boundingBox();
-    expect(bodyBox?.width).toBeLessThanOrEqual(1248);
-    expect(bodyBox?.x).toBeGreaterThan(0);
+    expect(bodyBox?.width).toBeCloseTo(
+      await page.evaluate(() =>
+        Number.parseFloat(getComputedStyle(document.documentElement).width)
+      ),
+      0
+    );
+    expect(bodyBox?.x).toBe(0);
+    expect(
+      await page
+        .locator("body")
+        .evaluate((element) => getComputedStyle(element).boxShadow)
+    ).toBe("none");
     const grid = page.locator('[data-slot="marketplace-listing-grid"]');
     expect(
       await grid.evaluate(

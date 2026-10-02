@@ -1,3 +1,4 @@
+import { publicSite } from "@repo/marketplace/site-config";
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import {
@@ -12,12 +13,14 @@ export function DealerDesktopDiscoveryHero({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <DealerDesktopHero
+      artwork={publicSite.artwork.heroScene}
       description={
         isBg
-          ? "Налични автомобили, внос и лизинг на едно място."
-          : "Browse our inventory, arrange an import or explore financing."
+          ? "Налични автомобили. Внос по заявка. Възможности за лизинг."
+          : "Available vehicles. Imports to order. Financing options."
       }
-      title={isBg ? "Намерете своя автомобил" : "Find your next car"}
+      eyebrow={publicSite.identity.name}
+      title={isBg ? "Вашият следващ автомобил" : "Find your next car"}
       variant="landing"
     >
       <div className={styles.heroSearch}>

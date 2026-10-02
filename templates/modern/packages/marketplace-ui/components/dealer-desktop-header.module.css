@@ -9,16 +9,14 @@
     display: block;
     color: var(--foreground);
     background: var(--panel);
-    border-bottom: var(--desktop-border-width) solid
-      var(--desktop-border-subtle);
-    border-radius: var(--radius-desktop-frame) var(--radius-desktop-frame) 0 0;
   }
   .nav {
     display: grid;
     grid-template-columns: var(--desktop-logo-width) minmax(0, 1fr) auto;
     gap: calc(var(--spacing) * 6);
     align-items: center;
-    width: var(--desktop-content-width);
+    width: calc(100% - var(--layout-gutter) * 2);
+    max-width: var(--layout-wide-max);
     min-height: var(--desktop-header-height);
     margin-inline: auto;
   }
@@ -32,7 +30,7 @@
   }
   .segments {
     display: flex;
-    gap: calc(var(--spacing) * 0.5);
+    gap: calc(var(--spacing) * 3);
     align-items: center;
     justify-content: center;
   }
@@ -40,24 +38,22 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: calc(var(--spacing) * 10);
-    padding-inline: calc(var(--spacing) * 3.5);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 2);
     font-size: var(--text-compact-control);
     font-weight: var(--font-weight-medium);
-    color: var(--muted-foreground);
+    color: var(--foreground);
     white-space: nowrap;
-    border-radius: var(--radius-lg);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction);
   }
   .segments a:hover,
   .segments a[aria-current="page"] {
-    color: var(--foreground);
-    background: var(--control);
+    color: var(--brand-text);
   }
   .segments a[aria-current="page"] {
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-medium);
   }
   .contact {
     display: flex;
@@ -94,13 +90,14 @@
   }
   .contact .phone {
     gap: calc(var(--spacing) * 2.5);
-    padding-inline: calc(var(--spacing) * 3.5);
-    color: var(--inverse-foreground);
-    background: var(--inverse);
+    height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 5);
+    color: var(--brand-foreground);
+    background: var(--brand);
   }
   .contact .phone:hover {
-    color: var(--inverse-foreground);
-    background: var(--desktop-inverse-hover);
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
   }
   .contact .language {
     gap: var(--spacing);

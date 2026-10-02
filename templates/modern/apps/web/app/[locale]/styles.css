@@ -13,26 +13,22 @@
 
   :root[data-site-kind="dealership"] body {
     position: relative;
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-frame-max);
-    min-height: var(--desktop-frame-min-height);
-    margin: calc(var(--spacing) * 6) auto;
-    border: var(--desktop-border-width) solid var(--desktop-frame-border);
-    border-radius: var(--radius-desktop-frame);
-    box-shadow: var(--desktop-frame-shadow);
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0;
   }
 
   :root[data-site-kind="dealership"]
     :is([data-slot="marketplace-main"], [data-slot="listing-detail"]) {
-    border-radius: var(--radius-desktop-frame) var(--radius-desktop-frame) 0 0;
+    border-radius: 0;
   }
 
   :root[data-site-kind="dealership"] [data-slot="public-marketplace-frame"] {
-    border-radius: var(--radius-desktop-frame);
+    border-radius: 0;
   }
 
   :root[data-site-kind="dealership"] [data-slot="public-marketplace-footer"] {
-    border-radius: 0 0 var(--radius-desktop-frame) var(--radius-desktop-frame);
+    border-radius: 0;
   }
 }
 

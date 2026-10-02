@@ -7,6 +7,7 @@
     position: relative;
     z-index: var(--desktop-layer-raised);
     width: var(--desktop-content-width);
+    margin-inline: auto;
     margin-top: 0;
   }
 
@@ -78,16 +79,16 @@
         minmax(0, 1fr)
       );
     gap: calc(var(--spacing) * 4);
-    margin-top: calc(var(--spacing) * 8);
+    margin-top: calc(var(--spacing) * 18);
     color: var(--muted-foreground);
   }
 
   .serviceLinks[data-placement="inventory"] a {
-    min-height: calc(var(--spacing) * 17);
-    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 4);
-    background: var(--control);
-    border: var(--desktop-border-width) solid transparent;
-    border-radius: var(--radius-lg);
+    min-height: calc(var(--spacing) * 24);
+    padding: calc(var(--spacing) * 5);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-vehicle);
   }
 
   .serviceLinks[data-placement="inventory"] strong {
@@ -95,9 +96,9 @@
   }
 
   .serviceLinks[data-placement="inventory"] svg {
-    width: calc(var(--spacing) * 5);
-    height: calc(var(--spacing) * 5);
-    color: var(--foreground);
+    width: calc(var(--spacing) * 7);
+    height: calc(var(--spacing) * 7);
+    color: var(--brand-text);
   }
 
   .serviceLinks[data-placement="inventory"] a:hover {
@@ -117,7 +118,7 @@
   .discoveryContent {
     display: block;
     width: var(--desktop-content-width);
-    padding-block: calc(var(--spacing) * 11) calc(var(--spacing) * 14);
+    padding-block: calc(var(--spacing) * 18) calc(var(--spacing) * 20);
     margin-inline: auto;
   }
 
@@ -126,13 +127,13 @@
     gap: calc(var(--spacing) * 6);
     align-items: center;
     justify-content: space-between;
-    margin-bottom: calc(var(--spacing) * 6);
+    margin-bottom: calc(var(--spacing) * 8);
   }
 
   .sectionHeading h2 {
     margin: 0;
     font-size: var(--text-desktop-section);
-    font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-bold);
     line-height: var(--desktop-leading-tight);
     letter-spacing: var(--tracking-heading);
   }

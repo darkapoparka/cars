@@ -11,7 +11,7 @@
     display: block;
     width: var(--desktop-content-width);
     max-width: none;
-    padding: calc(var(--spacing) * 6) 0 calc(var(--spacing) * 10);
+    padding: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 20);
     margin-inline: auto;
   }
   .filterBar {
@@ -24,7 +24,7 @@
     gap: calc(var(--spacing) * 2.5);
     align-items: center;
     min-height: calc(var(--spacing) * 12);
-    margin-bottom: calc(var(--spacing) * 4.5);
+    margin-bottom: calc(var(--spacing) * 7);
   }
   .heading {
     display: flex;
@@ -35,7 +35,7 @@
   }
   .heading h2 {
     margin: 0;
-    font-size: var(--text-section-title-lg);
+    font-size: var(--text-desktop-section);
     font-weight: var(--font-weight-semibold);
     line-height: var(--desktop-leading-section);
     letter-spacing: var(--desktop-tracking-section);
@@ -146,7 +146,7 @@
         var(--desktop-inventory-columns),
         minmax(0, 1fr)
       );
-    gap: calc(var(--spacing) * 4.5);
+    gap: calc(var(--spacing) * 7);
     align-items: stretch;
     width: 100%;
     max-width: none;

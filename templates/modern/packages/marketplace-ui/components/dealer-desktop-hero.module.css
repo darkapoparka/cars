@@ -18,7 +18,7 @@
     flex-direction: column;
     gap: calc(var(--spacing) * 7);
     align-items: center;
-    padding: calc(var(--spacing) * 12) 0 0;
+    padding: calc(var(--spacing) * 14) 0 calc(var(--spacing) * 10);
     color: var(--foreground);
     background: var(--panel);
     isolation: isolate;
@@ -52,14 +52,46 @@
     line-height: var(--desktop-leading-copy);
     color: var(--muted-foreground);
   }
-  .hero[data-variant="landing"],
+  .hero[data-variant="landing"] {
+    gap: calc(var(--spacing) * 9);
+    justify-content: center;
+    width: calc(100% - var(--layout-gutter) * 2);
+    max-width: var(--layout-wide-max);
+    min-height: 36rem;
+    padding: calc(var(--spacing) * 16) 0;
+    margin-inline: auto;
+    color: var(--inverse-foreground);
+    background-color: var(--inverse);
+    background-image:
+      linear-gradient(rgb(0 0 0 / 24%), rgb(0 0 0 / 24%)),
+      var(--desktop-hero-scene, none);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius-vehicle);
+  }
+  .hero[data-variant="landing"] .copy {
+    width: min(100% - calc(var(--spacing) * 12), 60rem);
+    text-align: center;
+  }
+  .hero[data-variant="landing"] h1 {
+    font-size: clamp(2.75rem, 4.5vw, 4.5rem);
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+  .hero[data-variant="landing"] .description {
+    max-width: none;
+    margin-top: calc(var(--spacing) * 5);
+    color: var(--inverse-foreground);
+  }
+  .hero[data-variant="landing"] .eyebrow {
+    color: var(--inverse-foreground);
+  }
   .hero[data-variant="inventory"] {
     gap: 0;
-    padding: calc(var(--spacing) * 2) 0 calc(var(--spacing) * 5);
+    padding: calc(var(--spacing) * 6) 0 calc(var(--spacing) * 8);
     background: var(--panel);
     border-bottom: var(--desktop-border-width) solid var(--border);
   }
-  .hero[data-variant="landing"] .copy,
   .hero[data-variant="inventory"] .copy {
     position: absolute;
     width: var(--desktop-border-width);

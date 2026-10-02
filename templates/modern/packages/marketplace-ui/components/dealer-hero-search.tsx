@@ -202,16 +202,16 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 aria-label={
                   pending
                     ? text("Търсене…", "Searching…")
-                    : text("Търси", "Search")
+                    : text("Търси автомобили", "Search cars")
                 }
                 className={styles.submit}
                 data-slot="desktop-hero-submit"
                 disabled={pending}
-                size="icon"
                 type="submit"
                 variant="ghost"
               >
                 <Search aria-hidden="true" className="size-5" />
+                <span>{text("Търси автомобили", "Search cars")}</span>
               </Button>
             </div>
           </div>

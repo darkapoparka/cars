@@ -18,6 +18,12 @@ test("desktop category navigation preserves scroll and the browser document", as
     await dismiss.click();
   }
   await expect(page.getByRole("dialog")).toBeHidden();
+  // The dev server can reload the initial document while its first chunks compile.
+  // Start the navigation assertion once the initial page is ready.
+  const initialDocuments = documents;
+  await page.evaluate(() => {
+    document.documentElement.dataset.navigationContinuity = "initial";
+  });
   // Keep the non-sticky header fully visible; Playwright otherwise scrolls the
   // clipped link into view before clicking, independently of navigation.
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
@@ -43,6 +49,10 @@ test("desktop category navigation preserves scroll and the browser document", as
     ).toBeHidden();
     await expect(submit).toBeEnabled();
     await expect.poll(() => page.evaluate(() => window.scrollY)).toBe(80);
+    await expect(page.locator("html")).toHaveAttribute(
+      "data-navigation-continuity",
+      "initial"
+    );
   }
-  expect(documents).toBe(1);
+  expect(documents).toBe(initialDocuments);
 });
