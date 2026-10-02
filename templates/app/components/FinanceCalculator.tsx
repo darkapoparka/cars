@@ -8,6 +8,20 @@ import {estimateFinance} from '@/lib/finance';
 import {useCopy} from '@/lib/locale';
 import LoanSliderFrame from './LoanSliderFrame';
 import {media, tokens as $} from '@/app/tokens.stylex';
+
+function AmountInput({id, label, value, onChange, min, max, step = 1}: {id: string; label: string; value: number; onChange: (value: number) => void; min: number; max: number; step?: number}) {
+  const [draft, setDraft] = useState(String(value));
+  const [editing, setEditing] = useState(false);
+  function update(raw: string) {
+    setDraft(raw);
+    if (raw.trim() && Number.isFinite(Number(raw))) onChange(Math.max(min, Math.min(max, Number(raw))));
+  }
+  return <input id={id} aria-label={label} type="number" inputMode={step < 1 ? 'decimal' : 'numeric'} min={min} max={max} step={step} value={editing ? draft : value}
+    onFocus={() => {setDraft(String(value)); setEditing(true);}} onChange={event => update(event.target.value)}
+    onBlur={() => {onChange(Math.max(min, Math.min(max, Number(draft) || min))); setEditing(false);}}
+    onKeyDown={event => {if (event.key === 'Enter') event.currentTarget.blur();}} {...stylex.props(s.number)}/>;
+}
+
 export default function FinanceCalculator({initialPrice = 25000}: {initialPrice?: number}) {
   const tx = useCopy(), id = useId();
   const [price, setPrice] = useState(Math.max(1, initialPrice));
@@ -17,30 +31,37 @@ export default function FinanceCalculator({initialPrice = 25000}: {initialPrice?
   const estimate = estimateFinance(price, deposit, rate, years);
   return <section aria-label={tx('Illustrative finance calculator')} {...stylex.props(s.card)}>
     <h2 {...stylex.props(s.title)}>{tx('Explore a payment example')}</h2>
-    <p {...stylex.props(s.note)}>{tx('Illustration only. This is not a dealer or lender offer. Change the assumptions below.')}</p>
-    <div {...stylex.props(s.fields)}>
-      <label htmlFor={id + '-price'} {...stylex.props(s.field)}>{tx('Vehicle price')} ({currency.code})<input id={id + '-price'} type="number" min={1} max={10000000} value={price} onChange={e => setPrice(Math.max(1, Math.min(10000000, Number(e.target.value) || 1)))} {...stylex.props(s.number)}/></label>
-      <label htmlFor={id + '-rate'} {...stylex.props(s.field)}>{tx('Annual interest')} (%)<input id={id + '-rate'} type="number" min={0} max={50} step={0.1} value={rate} onChange={e => setRate(Math.max(0, Math.min(50, Number(e.target.value) || 0)))} {...stylex.props(s.number)}/></label>
+    <p {...stylex.props(s.note)}>{tx('An estimate, not a finance offer.')}</p>
+    <div {...stylex.props(s.summary)}>
+      <div {...stylex.props(s.payment)}><output aria-live="polite" {...stylex.props(s.amount)}>{currency.symbol} {formatPrice(Math.round(estimate.monthly))}</output><span>{tx('per month')}</span></div>
+      <span>{tx('Total with deposit')}: {currency.symbol} {formatPrice(Math.round(estimate.total))}</span>
     </div>
-    <div {...stylex.props(s.row)}><label htmlFor={id + '-deposit'}>{tx('Deposit')}</label><output>{currency.code} {formatPrice(Math.round(deposit))} · {depositPercent}%</output></div>
+    <div {...stylex.props(s.fields)}>
+      <label htmlFor={id + '-price'} {...stylex.props(s.field)}>{tx('Vehicle price')} ({currency.symbol})<AmountInput id={id + '-price'} label={`${tx('Vehicle price')} (${currency.symbol})`} min={1} max={10000000} value={price} onChange={setPrice}/></label>
+      <div {...stylex.props(s.pairedFields)}>
+      <label htmlFor={id + '-rate'} {...stylex.props(s.field)}><span><span {...stylex.props(s.desktopCopy)}>{tx('Annual interest')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Annual rate')}</span> (%)</span><AmountInput id={id + '-rate'} label={`${tx('Annual interest')} (%)`} min={0} max={50} step={0.1} value={rate} onChange={setRate}/></label>
+      <label htmlFor={id + '-term'} {...stylex.props(s.field)}><span><span {...stylex.props(s.desktopCopy)}>{tx('Repayment term')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Term')}</span></span><select id={id + '-term'} aria-label={tx('Repayment term')} value={years} onChange={event => setYears(Number(event.target.value))} {...stylex.props(s.number)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <option key={term} value={term}>{term} {tx(term === 1 ? 'year' : 'years')}</option>)}</select></label>
+      </div>
+    </div>
+    <div {...stylex.props(s.row)}><label htmlFor={id + '-deposit'}><span {...stylex.props(s.desktopCopy)}>{tx('Deposit')}</span><span {...stylex.props(s.mobileCopy)}>{tx('Down payment')}</span></label><output>{currency.symbol} {formatPrice(Math.round(deposit))} · {depositPercent}%</output></div>
     <LoanSliderFrame><input id={id + '-deposit'} type="range" min={0} max={80} value={depositPercent} onChange={e => setDepositPercent(Number(e.target.value))} aria-label={tx('Deposit percentage')} className="cars24-emi-range" style={{'--range-progress': `${depositPercent / 80 * 100}%`} as React.CSSProperties}/></LoanSliderFrame>
-    <fieldset {...stylex.props(s.term)}><legend>{tx('Repayment term')}</legend><div {...stylex.props(s.terms)}>{[1, 2, 3, 4, 5, 6, 7].map(term => <button type="button" key={term} aria-pressed={years === term} onClick={() => setYears(term)} {...stylex.props(s.termButton, years === term && s.selected)}>{term} {tx(term === 1 ? 'year' : 'years')}</button>)}</div></fieldset>
-    <div {...stylex.props(s.summary)}><span>{tx('Estimated monthly payment')}</span><output aria-live="polite" {...stylex.props(s.amount)}>{currency.code} {formatPrice(Math.round(estimate.monthly))}</output><span>{tx('Example total including deposit')}: {currency.code} {formatPrice(Math.round(estimate.total))}</span></div>
-    <p {...stylex.props(s.note)}>{tx('Taxes, registration, insurance and additional fees are not included. Actual rates, eligibility and service availability must be confirmed with the dealer and lender.')}</p>
+    <details {...stylex.props(s.details)}><summary {...stylex.props(s.detailsToggle)}>{tx('About this estimate')}</summary><p {...stylex.props(s.note)}>{tx('Taxes, registration, insurance and additional fees are not included. Actual rates, eligibility and service availability must be confirmed with the dealer and lender.')}</p></details>
   </section>;
 }
 const s = stylex.create({
   card: {marginTop: 24, padding: {[media.mobile]: 18, default: 26}, color: $.ink, borderColor: '#e4e4e7', borderStyle: 'solid', borderWidth: 1, borderRadius: 20, backgroundColor: '#fff'},
   title: {fontSize: {[media.mobile]: 19, default: 24}, fontWeight: 600, lineHeight: 1.3},
-  note: {marginTop: 12, color: $.muted, fontSize: 12, lineHeight: 1.6},
-  fields: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12, marginTop: 20},
-  field: {display: 'grid', alignContent: 'start', gap: 8, fontSize: 12, lineHeight: 1.5},
-  number: {width: '100%', minWidth: 0, height: 44, padding: '8px 10px', borderColor: $.controlBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 9, backgroundColor: '#fff', color: $.ink, fontSize: 16},
-  row: {display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, marginTop: 24, fontSize: 13},
-  term: {marginTop: 16, padding: 0, borderWidth: 0, fontSize: 13},
-  terms: {display: 'flex', flexWrap: 'wrap', gap: 7, marginTop: 10},
-  termButton: {minWidth: 58, minHeight: 44, padding: '6px 10px', borderColor: $.controlBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 10, backgroundColor: '#fff', color: $.ink, fontSize: 12, cursor: 'pointer'},
-  selected: {color: '#fff', borderColor: '#262629', backgroundColor: '#262629'},
-  summary: {display: 'grid', gap: 6, marginTop: 22, padding: 18, textAlign: 'center', color: $.muted, fontSize: 12, borderRadius: 14, backgroundColor: '#f4f4f5'},
-  amount: {color: $.ink, fontSize: 29, fontWeight: 600},
+  note: {marginTop: 8, color: $.muted, fontSize: 12, lineHeight: 1.5},
+  fields: {display: 'grid', gap: 12, marginTop: 18},
+  pairedFields: {display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,10em),1fr))', gap: 12, fontSize: 12},
+  field: {display: 'grid', minWidth: 0, alignContent: 'start', gap: 8, fontSize: 12, lineHeight: 1.5},
+  number: {width: '100%', minWidth: 0, minHeight: 44, padding: '8px 10px', borderColor: $.controlBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 9, backgroundColor: '#fff', color: $.ink, fontSize: 16, lineHeight: 1.5},
+  row: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 8, marginTop: 20, fontSize: 13, lineHeight: 1.5},
+  summary: {display: 'grid', gap: 6, marginTop: 14, paddingBottom: 18, color: $.muted, fontSize: 12, lineHeight: 1.5, borderBottomWidth: 1, borderBottomStyle: 'solid', borderBottomColor: '#e4e4e7'},
+  payment: {display: 'flex', alignItems: 'baseline', flexWrap: 'wrap', gap: 8},
+  amount: {color: $.ink, fontSize: 32, fontWeight: 600, lineHeight: 1.2},
+  details: {marginTop: 8, color: $.muted, fontSize: 12},
+  detailsToggle: {minHeight: 44, paddingBlock: 12, lineHeight: 1.5, cursor: 'pointer'},
+  desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
+  mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });
