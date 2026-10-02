@@ -200,17 +200,8 @@ for (const width of [992, 1280, 1440, 1920]) {
 						.toBe(true);
 				} else if (route === 'about') {
 					const teamCards = container.locator('.desktop-team-card');
-					await expect(teamCards).toHaveCount(3);
-					const viewTeam = container.getByRole('link', {
-						name: locale === 'en' ? 'Meet the team' : 'Виж екипа',
-						exact: true
-					});
-					await expect(viewTeam).toHaveAttribute('href', `/${locale}/team`);
-					const viewTeamBox = (await viewTeam.boundingBox())!;
-					const firstTeamBox = (await teamCards.first().boundingBox())!;
-					for (const dimension of ['y', 'width', 'height'] as const) {
-						expect(Math.abs(viewTeamBox[dimension] - firstTeamBox[dimension])).toBeLessThan(1);
-					}
+					await expect(teamCards).toHaveCount(4);
+					await expect(container.locator('a[href$="/team"]')).toHaveCount(0);
 					for (const section of ['team', 'brands', 'support', 'visit']) {
 						const heading = page.locator(`#about-${section}-title`);
 						const headingBox = (await heading.boundingBox())!;
@@ -255,11 +246,6 @@ for (const width of [992, 1280, 1440, 1920]) {
 					await profile.press('Enter');
 					await expect(page).toHaveURL(new RegExp(`/${locale}/team/prodazhbi-showroom$`));
 					await expect(page.locator('.team-member-page')).toBeVisible();
-					await page.goBack();
-					await expect(page).toHaveURL(new RegExp(`/${locale}/about$`));
-					await viewTeam.press('Enter');
-					await expect(page).toHaveURL(new RegExp(`/${locale}/team$`));
-					await expect(page.locator('.desktop-team-card')).toHaveCount(4);
 					await page.goBack();
 					await expect(page).toHaveURL(new RegExp(`/${locale}/about$`));
 				} else {

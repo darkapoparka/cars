@@ -66,7 +66,6 @@
 		}
 	] as const;
 
-	const teamMembers = daynightTeam.slice(0, 3);
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	let mapVisible = $state(false);
 </script>
@@ -158,13 +157,9 @@
 			</div>
 			<p class="about-team-intro">{i18n.t('about.desktop.intro')}</p>
 			<div class="about-team-grid">
-				{#each teamMembers as member (member.slug)}
+				{#each daynightTeam as member (member.slug)}
 					<DesktopTeamCard {member} />
 				{/each}
-				<a class="about-team-all" href={i18n.href(resolve('/team'))}>
-					<ArrowRight size={40} aria-hidden="true" />
-					<span>{i18n.t('copy.4815fed6958b')}</span>
-				</a>
 			</div>
 			<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
 		</div>
@@ -449,18 +444,6 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 20px;
 	}
-	.about-team-all {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 16px;
-		padding: 24px;
-		border: 1px solid var(--sa-yellow);
-		border-radius: 12px;
-		text-align: center;
-		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.3 var(--sa-font);
-	}
 	.about-page .about-team-intro {
 		margin: -12px 0 24px;
 		text-align: center;
@@ -523,14 +506,12 @@
 	.about-brands a:hover {
 		background: var(--desktop-secondary-hover);
 	}
-	.about-brands .about-brands-all,
-	.about-page .about-team-all {
+	.about-brands .about-brands-all {
 		background: var(--sa-yellow);
 		border-color: var(--sa-yellow);
 		color: var(--desktop-action);
 	}
-	.about-brands .about-brands-all:hover,
-	.about-page .about-team-all:hover {
+	.about-brands .about-brands-all:hover {
 		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
 		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
 	}

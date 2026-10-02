@@ -27,7 +27,7 @@ Keep one canvas throughout the route. Do not alternate white page sections with 
 - `DesktopYellowRouteHero.svelte` owns the 400px hero and shared heading/panel position. At 992–1440px the panel starts 166px into the hero; the existing fluid title moves that to approximately 185px at 1920px. Route content must not override this geometry.
 - Home, Sell and About have a 640px task panel with a 44px attached header and a 130px body, for 174px overall. Blog uses the same width with its shorter 146px content. Standard route panels use 720px and grow to fit their content. The retained `/home1` photo layout keeps its separate composition.
 - Use the existing desktop section-spacing tokens. A section header owns one 24px gap before its grid. Use 20px card-grid gaps, 16px card padding, 12px between control rows and 8px between closely related labels.
-- Centre collection headings within the content frame. When a collection has a final View all tile, keep its heading free of a separate browse button. Put other actions within the relevant card or functional banner; card text and location details keep their natural reading alignment.
+- Centre collection headings within the content frame. Use a final View all tile only when the collection previews a larger set; a complete collection needs no browse tile or heading button. Put other actions within the relevant card or functional banner; card text and location details keep their natural reading alignment.
 - Artwork stays outside the task panel. Retain the approved cutouts and their crops; do not replace imagery to conceal a spacing problem.
 
 ## Typography and icons
@@ -56,7 +56,7 @@ Home and default Inventory use four columns at 992–1439px and five from 1440px
 
 `DesktopTeamCard.svelte` owns the team-card family for About and Team:
 
-- Four equal columns, 20px gaps and the same white/border/radius treatment as vehicle cards. Team shows all four profiles; About previews three profiles followed by a yellow View team tile of the same height.
+- Four equal columns, 20px gaps and the same white/border/radius treatment as vehicle cards. About and Team both show the complete team, with no View team tile or heading button.
 - A 4:3 portrait crop aligned toward the top. Clip it to the card's top corners; do not add a rounded frame inside the card or social controls over the face.
 - A one-line 18px name using the full width of the body. Retain the complete localized name in the accessible link and tooltip.
 - A 14px role with space for up to two lines, so every card's action row aligns. Do not squeeze the title beside the phone icon.
@@ -67,7 +67,7 @@ Services retain five white cards per desktop row, 16:9 imagery, 18px headings an
 
 ## About page composition
 
-About begins with the team section under its hero. Team, Brands, Help and Visit titles all use the same centred section-heading role. One concise, centred introduction belongs with Team; do not add another standalone slogan/intro section above it. Three shared team cards and a final yellow View team tile form one row. Keep the disclosure centred below the grid and the reviews destination as a compact secondary link inside the visit banner.
+About begins with the team section under its hero. Team, Brands, Help and Visit titles all use the same centred section-heading role. One concise, centred introduction belongs with Team; do not add another standalone slogan/intro section above it. Show every team profile using the shared team cards, with no separate team-directory tile. Keep the disclosure centred below the grid and the reviews destination as a compact secondary link inside the visit banner.
 
 The brand collection has a centred heading, two balanced rows of eight 112px logo tiles and a final yellow View all tile. Logo and name are stacked. Use the existing Home artwork from `homeBrandLogoByBrand` and retained OEM assets where available, preserving their colours and detail. Do not substitute compact mobile symbols for an available full-quality logo. A 52px logo slot uses wider sizing for horizontal marks and accounts for transparent padding in retained artwork. The full brand list remains available in Inventory.
 
