@@ -47,7 +47,7 @@ for (const locale of ['en', 'bg']) {
 		}) => {
 			test.setTimeout(90_000);
 			await page.setViewportSize({ width, height: 1000 });
-			let reference: { height: number; titleTop: number; titleFont: string } | undefined;
+			let reference: { height: number; titleFont: string } | undefined;
 			for (const route of routes) {
 				await page.goto(`/${locale}${route}`);
 				const hero = page.locator('.daynight-home-hero--cutouts, .daynight-yellow-route-hero');
@@ -65,9 +65,12 @@ for (const locale of ['en', 'bg']) {
 					const content = element.querySelector(
 						'.daynight-home-hero__stage, .daynight-yellow-route-hero__content'
 					)!;
+					const titleBox = title.getBoundingClientRect();
+					const contentBottom = content.lastElementChild!.getBoundingClientRect().bottom;
 					return {
 						height: box.height,
-						titleTop: title.getBoundingClientRect().top - box.top,
+						topSpace: titleBox.top - box.top,
+						bottomSpace: box.bottom - contentBottom,
 						titleFont: getComputedStyle(title).font,
 						contentContained: content.getBoundingClientRect().bottom <= box.bottom + 1
 					};
@@ -79,9 +82,13 @@ for (const locale of ['en', 'bg']) {
 					`/${locale}${route} height ${geometry.height}px; Home ${reference.height}px`
 				).toBeLessThan(1);
 				expect(
-					Math.abs(geometry.titleTop - reference.titleTop),
-					`/${locale}${route} title spacing`
+					Math.abs(geometry.topSpace - geometry.bottomSpace),
+					`/${locale}${route} title and panel are vertically centred`
 				).toBeLessThan(1);
+				expect(
+					geometry.topSpace,
+					`/${locale}${route} header breathing room`
+				).toBeGreaterThanOrEqual(32);
 				expect(geometry.titleFont, `/${locale}${route} title typography`).toBe(reference.titleFont);
 				expect(geometry.contentContained, `/${locale}${route} content fits`).toBe(true);
 				expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(

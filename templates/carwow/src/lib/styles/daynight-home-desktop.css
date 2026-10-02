@@ -39,6 +39,9 @@
 		overflow: hidden;
 	}
 	.daynight-home-shell .daynight-home-hero--cutouts {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		min-height: var(--desktop-hero-height);
 		padding: var(--desktop-hero-padding-top) 40px var(--desktop-hero-padding-bottom);
 	}
@@ -46,6 +49,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
 		position: relative;
 		z-index: 1;
 	}

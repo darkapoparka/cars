@@ -210,6 +210,11 @@
 	/* Primary actions are yellow on charcoal. Keep this exception within the
   * desktop hero so forms, cards and mobile retain their own button roles. */
 	@media (min-width: 992px) {
+		.daynight-yellow-route-hero__content {
+			min-height: var(--desktop-hero-height);
+			justify-content: center;
+		}
+
 		.daynight-yellow-route-hero__deck :global(.sa-cta.sa-cta-primary),
 		.daynight-yellow-route-hero__deck :global(.desktop-primary-action) {
 			background: var(--sa-yellow) !important;

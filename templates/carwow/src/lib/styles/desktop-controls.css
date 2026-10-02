@@ -15,7 +15,7 @@ html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
 @media (min-width: 992px) {
 	:root {
 		--desktop-hero-height: 400px;
-		--desktop-hero-padding-top: 36px;
+		--desktop-hero-padding-top: 32px;
 		--desktop-hero-padding-bottom: 32px;
 		--desktop-hero-panel-gap: 24px;
 		--desktop-hero-title-leading: 1.12;
