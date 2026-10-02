@@ -252,7 +252,7 @@
 		max-width: 220px;
 		padding: 0 12px;
 		border: 1px solid transparent;
-		border-radius: var(--bc-radius-control);
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-white);
 		color: var(--bc-ink);
 		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
