@@ -41,7 +41,9 @@
 		.hero-cars {
 			--car-height: clamp(120px, 11.111vw, 190px);
 			--car-baseline: calc(100% - var(--bc-space-8));
-			--side-room: calc((100% - var(--bc-desktop-discovery-width)) / 2 - var(--bc-space-6));
+			--side-room: calc(
+				(100% - var(--hero-panel-width, var(--bc-desktop-discovery-width))) / 2 - var(--bc-space-6)
+			);
 			display: block;
 			position: absolute;
 			inset: 0;

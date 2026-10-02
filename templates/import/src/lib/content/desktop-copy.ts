@@ -4,17 +4,26 @@ type DesktopPageCopy = {
 	inventoryCaption: string;
 	servicesCaption: string;
 	aboutCaption: string;
+	aboutCars: string;
+	aboutContact: string;
+	contactEnquiry: string;
 };
 
 export const desktopCopy: Record<Locale, DesktopPageCopy> = {
 	bg: {
 		inventoryCaption: 'Сравни цена, пробег и оборудване. Избери автомобил за оглед.',
 		servicesCaption: 'Подбор, проверка и съдействие за твоя автомобил.',
-		aboutCaption: 'Автомобили от Европа, ясни стъпки и оглед с уговорка.'
+		aboutCaption: 'Подбор и внос на автомобили от Европа с проверка преди покупката.',
+		aboutCars: 'Разгледай коли',
+		aboutContact: 'Свържи се с нас',
+		contactEnquiry: 'Изпрати запитване'
 	},
 	en: {
 		inventoryCaption: 'Compare price, mileage and equipment. Find a car to view.',
 		servicesCaption: 'Sourcing, checks and support for your next car.',
-		aboutCaption: 'European cars, clear next steps and viewings by appointment.'
+		aboutCaption: 'Sourcing and importing European cars, with checks before you buy.',
+		aboutCars: 'Browse our cars',
+		aboutContact: 'Contact us',
+		contactEnquiry: 'Send an enquiry'
 	}
 };

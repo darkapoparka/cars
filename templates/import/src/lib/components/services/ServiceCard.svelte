@@ -17,18 +17,20 @@
 		priority?: boolean;
 	} = $props();
 	const mobileImage = $derived(imageDelivery(service.image));
+	const desktopArtwork = $derived(serviceArtwork[service.id]);
 </script>
 
 <article class="service-card">
 	<a href={linkHref(detail.href)}>
 		<picture>
-			<source media="(min-width: 768px)" srcset={assetHref(serviceArtwork[service.id])} />
+			<source media="(min-width: 768px)" srcset={assetHref(desktopArtwork.src)} />
 			{#if mobileImage.srcset}<source
 					media="(max-width: 767.98px)"
 					srcset={mobileImage.srcset}
 					sizes="320px"
 				/>{/if}
 			<img
+				style:--desktop-service-image-position={desktopArtwork.position ?? 'center'}
 				src={assetHref(service.image)}
 				alt=""
 				width="900"
@@ -152,6 +154,8 @@
 		}
 		.service-card img {
 			aspect-ratio: 16 / 9;
+			object-position: var(--desktop-service-image-position);
+			background: var(--bc-ink);
 		}
 		.service-card__body {
 			align-items: start;

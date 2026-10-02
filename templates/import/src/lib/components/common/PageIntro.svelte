@@ -13,6 +13,7 @@
 		mobileActions,
 		mobileAlign = 'start',
 		vehicleArtwork = false,
+		artworkPanelWidth,
 		titleId,
 		class: className = '',
 		align = 'start',
@@ -30,6 +31,7 @@
 		mobileActions?: Snippet;
 		mobileAlign?: 'start' | 'center';
 		vehicleArtwork?: boolean;
+		artworkPanelWidth?: string;
 		titleId?: string;
 		class?: string;
 		align?: 'start' | 'center';
@@ -53,9 +55,10 @@
 	class:site-intro--cars={vehicleArtwork}
 	class:site-intro--center={align === 'center'}
 	class:site-intro--interactive={Boolean(desktopActions)}
+	style:--hero-panel-width={artworkPanelWidth}
 >
 	{#if vehicleArtwork}<HeroCars />{/if}
-	{#if image}<picture>
+	{#if image && !vehicleArtwork}<picture>
 			<source media="(min-width: 768px)" srcset={assetHref(desktopImage ?? image)} />
 			<img
 				src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"

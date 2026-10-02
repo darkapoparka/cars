@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { desktopCopy } from '$lib/content/desktop-copy';
+	import DesktopHeroActions from '$lib/components/common/DesktopHeroActions.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
 	import DesktopProcess from '$lib/components/common/DesktopProcess.svelte';
@@ -8,7 +9,6 @@
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import Action from '$lib/components/common/Action.svelte';
-	import MapPin from '@lucide/svelte/icons/map-pin';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import TeamMemberCard from '$lib/components/common/TeamMemberCard.svelte';
 	let { data }: PageProps = $props();
@@ -43,7 +43,8 @@
 		description={about.hero.description}
 		desktopDescription={desktopCopy[data.locale].aboutCaption}
 		image={about.hero.image}
-		desktopImage="/assets/daynight/banners/about-desktop-v2.webp"
+		vehicleArtwork
+		artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 		align="center"
 	>
 		{#snippet mobileActions()}
@@ -60,14 +61,16 @@
 			</div>
 		{/snippet}
 		{#snippet desktopActions()}
-			<Action href={data.site.contact.mapHref} variant="glass" size="hero"
-				><MapPin size={20} aria-hidden="true" />{english
-					? 'Get directions'
-					: 'Как да стигнем'}</Action
-			>
-		{/snippet}
-		{#snippet desktopSecondaryActions()}
-			<SocialLinks tone="dark" />
+			<DesktopHeroActions>
+				<Action href={about.hero.actions?.[0]?.href ?? '/inventory'} size="primary"
+					>{desktopCopy[data.locale].aboutCars}<ArrowRight size={18} aria-hidden="true" /></Action
+				>
+				<Action
+					href={about.hero.actions?.[1]?.href ?? '/contact'}
+					variant="secondary"
+					size="primary">{desktopCopy[data.locale].aboutContact}</Action
+				>
+			</DesktopHeroActions>
 		{/snippet}
 	</PageIntro>
 	<div class="site-mobile-only">

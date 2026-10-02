@@ -7,14 +7,14 @@
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
-	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	import DesktopHeroActions from '$lib/components/common/DesktopHeroActions.svelte';
+	import { desktopCopy } from '$lib/content/desktop-copy';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
 	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
 	import ImageLinkBanner from '$lib/components/common/ImageLinkBanner.svelte';
 	import { desktopContactChannels } from '$lib/content/contact-desktop';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
-	import MapPin from '@lucide/svelte/icons/map-pin';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
@@ -31,20 +31,20 @@
 			title={english ? 'Contact us' : 'Контакти'}
 			description={data.site.contact.appointment}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
-			desktopImage="/assets/daynight/banners/contact-desktop-v2.webp"
+			vehicleArtwork
+			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 			align="center"
 		>
 			{#snippet desktopActions()}
-				<Action href={data.site.contact.phoneHref} size="hero"
-					><Phone size={20} aria-hidden="true" />{english ? 'Call us' : 'Обади се'}</Action
-				>
-				<Action href={data.site.contact.mapHref} variant="glass" size="hero"
-					><MapPin size={20} aria-hidden="true" />{english
-						? 'Get directions'
-						: 'Как да стигнеш'}</Action
-				>
+				<DesktopHeroActions>
+					<Action href={data.site.contact.phoneHref} size="primary"
+						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
+					>
+					<Action href="#contact-enquiry" variant="secondary" size="primary"
+						>{desktopCopy[data.locale].contactEnquiry}</Action
+					>
+				</DesktopHeroActions>
 			{/snippet}
-			{#snippet desktopSecondaryActions()}<SocialLinks tone="dark" />{/snippet}
 		</PageIntro>
 		<section
 			class="site-section site-container contact-overview"
@@ -69,7 +69,7 @@
 		<section class="site-section contact-intake">
 			<div class="site-container contact-intake-grid">
 				<ContactLocation {english} layout="stacked" />
-				<div class="contact-form-panel">
+				<div class="contact-form-panel" id="contact-enquiry">
 					<header>
 						<h2 class="site-heading">{english ? 'Send an enquiry' : 'Изпрати запитване'}</h2>
 					</header>
@@ -137,6 +137,7 @@
 		gap: var(--bc-space-6);
 	}
 	.contact-form-panel {
+		scroll-margin-block-start: calc(var(--bc-desktop-header-height) + var(--bc-space-6));
 		min-width: 0;
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);

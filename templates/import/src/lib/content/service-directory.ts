@@ -1,6 +1,5 @@
 import type { Locale } from '$lib/locale/core';
 import { desktopCopy } from './desktop-copy';
-import { daynightAssets } from '$lib/config/dealer';
 import type { AuxeroSupportService } from './services';
 
 export type ServiceDetail = {
@@ -12,13 +11,19 @@ export type ServiceDetail = {
 	mobileSummary: string;
 	includes: string[];
 };
-export const serviceArtwork: Record<AuxeroSupportService['id'], string> = {
-	sourcing: '/assets/daynight/services/desktop/sourcing-v3.webp',
-	'listing-check': daynightAssets.aboutProcessImage,
-	selling: '/assets/daynight/services/desktop/selling-v3.webp',
-	registration: '/assets/daynight/services/desktop/registration-v3.webp',
-	viewing: daynightAssets.contactVisitBanner,
-	comparison: '/assets/daynight/services/desktop/comparison-v3.webp'
+export const serviceArtwork: Record<
+	AuxeroSupportService['id'],
+	{ src: string; position?: string }
+> = {
+	sourcing: { src: '/assets/daynight/services/desktop/sourcing-reference-v4.webp' },
+	'listing-check': { src: '/assets/daynight/services/desktop/inspection-reference-v4.webp' },
+	selling: { src: '/assets/daynight/services/desktop/selling-reference-v4.webp' },
+	registration: { src: '/assets/daynight/services/desktop/documents-reference-v4.webp' },
+	viewing: {
+		src: '/assets/daynight/services/desktop/viewing-reference-v4.webp',
+		position: 'center bottom'
+	},
+	comparison: { src: '/assets/daynight/services/desktop/comparison-reference-v4.webp' }
 };
 type DirectoryCopy = {
 	description: string;
