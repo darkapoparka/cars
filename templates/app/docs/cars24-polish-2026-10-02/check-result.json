@@ -1,0 +1,59 @@
+{
+  "StartedUtc": "2026-10-02T04:00:18.7975538Z",
+  "FinishedUtc": "2026-10-02T04:02:13.3345346Z",
+  "ExitCode": 0,
+  "SourceChanged": [],
+  "Files": [
+    {
+      "Path": "components/VehicleBelowFold.tsx",
+      "Hash": "7379F3B25F5548F85BEDA5525528CBF664E78CA0F97AC90C83DB11CA6A6147A7"
+    },
+    {
+      "Path": "components/VehicleDetailClient.tsx",
+      "Hash": "1164FE3378358758C195B9D2D65BEFCC4D2D8854F317355B8AC8591D63A9C504"
+    },
+    {
+      "Path": "components/VehiclePhotoAlbums.tsx",
+      "Hash": "06EFCAF043076C9D14F03D8FFB51CC649FC194E4006BFC3410CE29BA5664DF81"
+    },
+    {
+      "Path": "components/ReferenceUI.tsx",
+      "Hash": "7B07C9519A5DF857C6EBD0B5CD7E63DDDF3C8652DFB789FF5485AA50FE8DA6EC"
+    },
+    {
+      "Path": "lib/vehicle-gallery.ts",
+      "Hash": "13126EAFD9AE47AF0E6C4069067977694B4EDCE550D60E15F4E41B06D2536144"
+    },
+    {
+      "Path": "lib/showroom.ts",
+      "Hash": "6FA69C4E4E472424BADE921104DBF872E24E220387F0513705BF34AB251DDD39"
+    },
+    {
+      "Path": "lib/locales/bg.json",
+      "Hash": "A39CED25B41C85159FEADB4988FDE5BC0CC40F5DB0ABA026D2709816C34DBD6A"
+    },
+    {
+      "Path": "lib/locales/en.json",
+      "Hash": "2A39E3BB88F7884D7596C5110A247F4A1FC8C46DC81D8BA8882AF696CF113894"
+    },
+    {
+      "Path": "public/showroom/navigation/finance-v4.png",
+      "Hash": "226255F5B5279AE612C8E3537035AC42543358EC5CAD846F95AB472517ECE716"
+    },
+    {
+      "Path": "public/showroom/navigation/finance-v4.webp",
+      "Hash": "78AD7190166E5F02E1C337CAA3DE95826A1F119F7CAF8D41EEB88791ECF4E52F"
+    },
+    {
+      "Path": "public/showroom/navigation/service-v3.png",
+      "Hash": "2BEBCBDA159AB1A16DEF5CABC8565499CB216D76E7244F66EE25A687E65A3A9D"
+    },
+    {
+      "Path": "public/showroom/navigation/service-v3.webp",
+      "Hash": "935B6EF5F14A41D8D334BE6D6D09E00B4F10D416EB0E2915354D6F3ACC905E92"
+    }
+  ],
+  "Removed": [
+    "components/VehicleDetailTabs.tsx"
+  ]
+}

@@ -47,8 +47,8 @@ export const showroom = {
   services: [
     {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png'},
     {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png'},
-    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/finance-v2.png'},
-    {key: 'service', label: 'Services', href: '/service', image: '/showroom/service-v2.png'},
+    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp'},
+    {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp'},
   ],
   navigation: [
     {href: '/', label: 'Home', icon: 'home'},

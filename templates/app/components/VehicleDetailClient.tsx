@@ -2,7 +2,7 @@
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {useEffect,useRef,useState,type TouchEvent} from 'react';
-import {dealer,isDealer} from '@/lib/dealer-config';
+import {dealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
@@ -15,7 +15,7 @@ import VehicleComparison from '@/components/VehicleComparison';
 import SimilarVehiclesSheet from '@/components/SimilarVehiclesSheet';
 import LoginSheet,{type DealerEnquiryIntent} from '@/components/DealerEnquirySheet';
 import VehicleBelowFold from '@/components/VehicleBelowFold';
-import VehicleDetailTabs from '@/components/VehicleDetailTabs';
+import VehiclePhotoAlbums from '@/components/VehiclePhotoAlbums';
 import VehiclePriceSheet from '@/components/DealerPriceSheet';
 import VehiclePhotoViewer from '@/components/VehiclePhotoViewer';
 import VehicleTourViewer from '@/components/VehicleTourViewer';
@@ -34,16 +34,13 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const sectionRail=useRef<HTMLElement>(null);
  const purchaseBar=useRef<HTMLElement>(null),purchaseSpace=useRef<HTMLDivElement>(null);
  const {saved,toggle:toggleSaved,error:saveError,clearError}=useSavedVehicle(vehicle.slug);
- const fortuner=!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr';
  const approvedReference=dealer.referenceClaimsApproved?reference:undefined;
  const primaryImage=reference?.primaryImage??vehicle.image;
- const exteriorThumbnail=reference?.gallery.find(item=>item.label==='Right Side View')?.src??primaryImage;
- const photos=reference?.gallery.length?reference.gallery:vehicleGallery(vehicle);
+ const listedPhotos=reference?.gallery.length?reference.gallery:vehicleGallery(vehicle);
+ const photos=listedPhotos.some(item=>item.src===primaryImage)?listedPhotos:[{category:'Exteriors' as const,label:'Exterior',src:primaryImage},...listedPhotos];
  const hasDetails=Boolean(approvedReference);
- const gallery=fortuner?[{label:'Exteriors',image:primaryImage,thumbnail:exteriorThumbnail},{label:'Interiors',image:'/reference-assets/fortuner-interior.jpg',thumbnail:photos.find(item=>/Right Side Front Door Cabin/i.test(item.label))?.src},{label:'Features',image:'/reference-assets/fortuner-feature.jpg'},{label:'Exteriors',image:'/reference-assets/fortuner-right.jpg'}]:(reference?.gallery.length?(['Exteriors','Interiors','Features'] as const).flatMap(category=>{const first=(category==='Interiors'?photos.find(p=>/Right Side Front Door Cabin/i.test(p.label)):category==='Features'?photos.find(p=>/Steering Wheel/i.test(p.label)):undefined)??photos.find(p=>p.category===category);return first?[{label:category,image:category==='Exteriors'?primaryImage:first.src,thumbnail:category==='Exteriors'?exteriorThumbnail:first.src}]:[];}):[{label:'Exteriors',image:primaryImage}]);
  const [photo,setPhoto]=useState(0),[login,setLogin]=useState(false),[overlay,setOverlay]=useState<Overlay>(null),[shared,setShared]=useState(''),[scrolled,setScrolled]=useState(false),[activeSection,setActiveSection]=useState('price'),[swipe,setSwipe]=useState<number|null>(null);
  const [gallerySelection,setGallerySelection]=useState<{photos:GalleryPhoto[];index:number}|null>(null);
- const [informationVisible,setInformationVisible]=useState(true);
  const [enquiryIntent,setEnquiryIntent]=useState<DealerEnquiryIntent>('enquiry');
  const panel=useModal(overlay==='warranty',()=>setOverlay(null));
  const title=`${vehicle.year} ${vehicle.make.toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
@@ -66,27 +63,29 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  },[]);
  useEffect(()=>{const rail=sectionRail.current;const active=rail?.querySelector<HTMLElement>('[aria-current="location"]');if(rail&&active)rail.scrollTo({left:Math.max(0,active.offsetLeft+active.offsetWidth-rail.clientWidth+22),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});},[activeSection,scrolled]);
  async function share(){try{if(navigator.share){await navigator.share({title,url:location.href});}else if(navigator.clipboard){await navigator.clipboard.writeText(location.href);setShared('Link copied');}else{setShared(location.href);}}catch(error){if(!(error instanceof DOMException&&error.name==='AbortError'))setShared('Sharing is unavailable in this browser.');}}
- function nextPhoto(direction:number){setPhoto(current=>(current+direction+gallery.length)%gallery.length);}
+ function nextPhoto(direction:number){setPhoto(current=>(current+direction+photos.length)%photos.length);}
  function endSwipe(event:TouchEvent){if(swipe!==null&&Math.abs(event.changedTouches[0].clientX-swipe)>40)nextPhoto(event.changedTouches[0].clientX<swipe?1:-1);setSwipe(null);}
  function openPhoto(selectedPhotos:GalleryPhoto[],index=0){setGallerySelection({photos:selectedPhotos,index});setOverlay('gallery');}
  function openEnquiry(intent:DealerEnquiryIntent='enquiry'){setEnquiryIntent(intent);setLogin(true);}
  function jump(id:string){const target=document.getElementById(id);if(target){const offset=innerWidth>=1100?144:68;window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}else if(id==='similar-cars'){setOverlay('similar');}}
  return <div {...stylex.props(s.screen)}>
   <div data-vehicle-gallery {...stylex.props(s.gallery)} onTouchStart={e=>setSwipe(e.touches[0].clientX)} onTouchEnd={endSwipe}>
-   <button type="button" onClick={()=>reference?.videoTour&&photo===0?setOverlay('tour'):openPhoto(photos)} aria-label={tx(reference?.videoTour&&photo===0?'Open vehicle video tour':'Open vehicle photo gallery')} {...stylex.props(s.imageButton)}><img src={assetPath(reference?.videoTour&&photo===0?reference.videoTour.poster:gallery[photo].image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(title)} width={1365} height={768} fetchPriority="high" {...stylex.props(s.heroImage,vehicle.imagePlaceholder&&s.placeholderHero)}/>{vehicle.imagePlaceholder?<span {...stylex.props(s.photoUnavailable)}>{tx('Photo unavailable')}</span>:null}{reference?.videoTour&&photo===0?<span aria-hidden="true" {...stylex.props(s.tourShade)}/>:null}{reference?.videoTour&&photo===0?<span {...stylex.props(s.tourPlay)}><Play size={22} fill="currentColor"/></span>:null}</button>
+   <button type="button" onClick={()=>reference?.videoTour&&photo===0?setOverlay('tour'):openPhoto(photos,photo)} aria-label={tx(reference?.videoTour&&photo===0?'Open vehicle video tour':'Open vehicle photo gallery')} {...stylex.props(s.imageButton)}><img src={assetPath(reference?.videoTour&&photo===0?reference.videoTour.poster:photos[photo].src)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(title)} width={1365} height={768} fetchPriority="high" {...stylex.props(s.heroImage,vehicle.imagePlaceholder&&s.placeholderHero)}/>{vehicle.imagePlaceholder?<span {...stylex.props(s.photoUnavailable)}>{tx('Photo unavailable')}</span>:null}{reference?.videoTour&&photo===0?<span aria-hidden="true" {...stylex.props(s.tourShade)}/>:null}{reference?.videoTour&&photo===0?<span {...stylex.props(s.tourPlay)}><Play size={22} fill="currentColor"/></span>:null}</button>
    <nav aria-label={tx('Vehicle actions')} {...stylex.props(s.heroActions)}><BackButton onClick={backToInventory} label="Back" tone="photo"/><IconButton icon={Share2} label={tx('Share car')} onClick={share} tone="photo"/></nav>
-   <button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><Layers2 size={17} aria-hidden="true"/>{tx("Similar Cars")}</button>
+   <div {...stylex.props(s.heroFooter)}><button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><Layers2 size={17} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Similar Cars")}</button>
+   {!vehicle.imagePlaceholder&&photos.length>1?<span aria-hidden="true" {...stylex.props(s.photoCount)}>{photo+1} / {photos.length}</span>:null}</div>
   </div>
   <div {...stylex.props(s.layout)}><main {...stylex.props(s.main)}>
-   <header {...stylex.props(s.heading)}><h1 {...stylex.props(s.title)}>{tx(title)}</h1></header>
+   {!vehicle.imagePlaceholder?<VehiclePhotoAlbums photos={photos} onOpenPhoto={openPhoto}/>:null}
+   <header {...stylex.props(s.heading)}><h1 {...stylex.props(s.title)}>{tx(title)}</h1><p {...stylex.props(s.summary)}>{[vehicle.mileageOnRequest?tx('Mileage on request'):`${tx(formatPrice(vehicle.mileage))} ${tx('km')}`,vehicle.transmission!=='Not published'?tx(vehicle.transmission):null,vehicle.fuel!=='Not published'?tx(vehicle.fuel):null].filter(Boolean).join(' · ')}</p></header>
    <section id="price" aria-label={tx("Vehicle price")} {...stylex.props(s.priceCard)}>
      <p {...stylex.props(s.price,vehicle.priceOnRequest&&s.requestPrice)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18}/>{tx(formatPrice(vehicle.price))}</>}</p>
      <IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/>
    </section>
-   <VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={intent=>openEnquiry(intent)}/></VehicleDetailTabs>
-  </main><aside {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
+   <VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={intent=>openEnquiry(intent)}/>
+  </main><aside {...stylex.props(s.desktopBuy,scrolled&&s.desktopBuyWithSections)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
   {dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
-  {scrolled&&informationVisible?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],...(approvedReference?.inspection.length? [['Inspection report','condition']]:[]),['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
+  {scrolled?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],...(approvedReference?.inspection.length? [['Inspection report','condition']]:[]),['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
   <div {...stylex.props(s.floating)}><button type="button" onClick={()=>openEnquiry()} aria-label={tx("Contact the dealer")} {...stylex.props(s.whatsapp)}><span {...stylex.props(s.whatsappInner)}><MessageCircle size={24}/></span></button></div>
   <div ref={purchaseSpace} aria-hidden="true" {...stylex.props(s.purchaseSpace)}/>
   <footer ref={purchaseBar} {...stylex.props(s.purchase)}><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.mobileCta,s.mobileSecondary,s.actionWithIcon)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'} {...stylex.props(s.actionIcon)}/><span>{tx(saved?'Vehicle saved':'Save vehicle')}</span></button><button type="button" onClick={()=>setOverlay('viewing')} aria-label={tx("Arrange a viewing")} {...stylex.props(s.primary,s.mobileCta,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/><span {...stylex.props(s.mobileLabel)}>{tx("Viewing")}</span><span {...stylex.props(s.wideLabel)}>{tx("Arrange viewing")}</span></button></footer>
@@ -103,18 +102,21 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
 const s=stylex.create({
 heroActions:{display:'flex',alignItems:'center',justifyContent:'space-between',position:'absolute',top:'calc(8px + env(safe-area-inset-top))',left:8,right:8,zIndex:1,pointerEvents:'none'},
 screen:{paddingTop:0,paddingBottom:{[media.desktop]:32,default:0},color:'#202024',backgroundColor:'#fff'},
-gallery:{position:'relative',maxWidth:$.content,aspectRatio:'1365/768',marginInline:'auto',overflow:'hidden'},
+gallery:{position:'relative',maxWidth:$.content,aspectRatio:{[media.mobile]:'8/5',default:'1365/768'},marginInline:'auto',overflow:'hidden'},
 imageButton:{position:'relative',display:'block',width:'100%',height:'100%',padding:0,borderWidth:0,backgroundColor:'#f5f5f5',cursor:'zoom-in'},
 tourShade:{position:'absolute',inset:0,pointerEvents:'none',backgroundImage:'linear-gradient(180deg,rgba(0,0,0,.40),transparent 45%,rgba(0,0,0,.29))'},
 tourPlay:{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',display:'grid',placeItems:'center',width:48,height:48,color:'#000',borderRadius:'50%',backgroundColor:'#fff'},
 heroImage:{width:'100%',height:'100%',objectFit:'cover'},
 placeholderHero:{objectFit:'contain',padding:{[media.mobile]:34,default:72},backgroundColor:'#f0f2f4'},
 photoUnavailable:{position:'absolute',left:'50%',bottom:18,transform:'translateX(-50%)',padding:'6px 11px',color:'#555b62',fontSize:11,fontWeight:600,borderRadius:999,backgroundColor:'rgba(255,255,255,.94)'},
-similarButton:{display:'inline-flex',alignItems:'center',gap:8,position:'absolute',bottom:9,left:12,maxWidth:'calc(100% - 24px)',minHeight:44,padding:'8px 12px',color:$.ink,fontSize:13,fontWeight:600,borderWidth:0,borderRadius:999,backgroundColor:'#fff',cursor:'pointer'},
+heroFooter:{position:'absolute',left:12,right:12,bottom:9,display:'flex',alignItems:'center',justifyContent:'space-between',gap:8,pointerEvents:'none'},
+similarButton:{display:'inline-flex',alignItems:'center',gap:8,minWidth:0,minHeight:44,padding:'8px 12px',color:$.ink,fontSize:13,fontWeight:600,borderWidth:0,borderRadius:999,backgroundColor:'#fff',cursor:'pointer',pointerEvents:'auto'},
+photoCount:{flexShrink:0,padding:'4px 8px',color:'#fff',fontFamily:$.fontSans,fontSize:12,lineHeight:'16px',borderRadius:6,backgroundColor:'rgba(0,0,0,.65)'},
 layout:{display:'grid',gridTemplateColumns:{[media.desktop]:'minmax(0,1fr) 330px',default:'1fr'},gap:{[media.desktop]:30,default:0},maxWidth:$.content,marginInline:'auto',paddingInline:{[media.mobile]:16,default:28}},
 main:{minWidth:0},
 heading:{marginTop:16},
 title:{minWidth:0,fontFamily:$.fontDisplay,fontSize:{[media.mobile]:18,default:27},fontWeight:600,lineHeight:{[media.mobile]:'27px',default:'35px'},overflowWrap:'anywhere'},
+summary:{marginTop:4,color:$.muted,fontFamily:$.fontSans,fontSize:13,fontWeight:400,lineHeight:'20px',overflowWrap:'anywhere'},
 priceCard:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,marginTop:6},
 price:{minWidth:0,fontFamily:$.fontSans,fontSize:{[media.mobile]:26,default:28},fontWeight:600,lineHeight:'36px',whiteSpace:'nowrap'},
 requestPrice:{fontSize:18,lineHeight:'24px',whiteSpace:'normal',textAlign:'left'},

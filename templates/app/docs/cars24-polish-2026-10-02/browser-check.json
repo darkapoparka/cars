@@ -1,0 +1,2393 @@
+{
+  "Complete": true,
+  "FinishedUtc": "2026-10-02T04:00:58.1035905Z",
+  "Cases": [
+    {
+      "Name": "bg-home-320",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 843,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota FORTUNER",
+            "top": 686,
+            "width": 296
+          },
+          {
+            "bottom": 1014,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki Ciaz",
+            "top": 857,
+            "width": 296
+          },
+          {
+            "bottom": 1185,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2025 Toyota VELOZ",
+            "top": 1028,
+            "width": 296
+          },
+          {
+            "bottom": 1356,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Kia SELTOS",
+            "top": 1199,
+            "width": 296
+          },
+          {
+            "bottom": 1527,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1370,
+            "width": 296
+          },
+          {
+            "bottom": 1698,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1541,
+            "width": 296
+          },
+          {
+            "bottom": 1869,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1712,
+            "width": 296
+          },
+          {
+            "bottom": 2040,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Nissan PATROL",
+            "top": 1883,
+            "width": 296
+          },
+          {
+            "bottom": 2302.296875,
+            "height": 199,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2103.296875,
+            "width": 192
+          },
+          {
+            "bottom": 2302.296875,
+            "height": 199,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 2103.296875,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 2655.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Volvo XC40",
+            "top": 2498.296875,
+            "width": 296
+          },
+          {
+            "bottom": 2826.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2669.296875,
+            "width": 296
+          },
+          {
+            "bottom": 2997.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2020 BMW X2",
+            "top": 2840.296875,
+            "width": 296
+          },
+          {
+            "bottom": 3168.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 BMW 430I",
+            "top": 3011.296875,
+            "width": 296
+          }
+        ],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3253.296875,
+          "height": 2941.296875,
+          "left": 0,
+          "right": 320,
+          "top": 312,
+          "width": 320
+        },
+        "modal": null,
+        "path": "/bg",
+        "purchase": null,
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 191,
+          "height": 68,
+          "left": 58,
+          "right": 262,
+          "text": "",
+          "top": 123,
+          "width": 204
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "bg-pdp-320",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1273,
+          "height": 1073,
+          "left": 16,
+          "right": 304,
+          "top": 200,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 740,
+          "buttons": [
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 47.625,
+                "right": 65.625,
+                "top": 703,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Запази",
+              "top": 690,
+              "width": 143
+            },
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 203.28125,
+                "right": 221.28125,
+                "top": 703,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Оглед",
+              "top": 690,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 683,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 335,
+          "height": 27,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 308,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "bg-home-390",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 844.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Toyota FORTUNER",
+            "top": 687.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1015.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Suzuki Ciaz",
+            "top": 858.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1186.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2025 Toyota VELOZ",
+            "top": 1029.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1357.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2022 Kia SELTOS",
+            "top": 1200.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1528.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1371.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1699.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1542.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1870.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1713.296875,
+            "width": 366
+          },
+          {
+            "bottom": 2041.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Nissan PATROL",
+            "top": 1884.296875,
+            "width": 366
+          },
+          {
+            "bottom": 2303.59375,
+            "height": 199,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2104.59375,
+            "width": 192
+          },
+          {
+            "bottom": 2303.59375,
+            "height": 199,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 2104.59375,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 2656.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Volvo XC40",
+            "top": 2499.59375,
+            "width": 366
+          },
+          {
+            "bottom": 2827.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2670.59375,
+            "width": 366
+          },
+          {
+            "bottom": 2998.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2020 BMW X2",
+            "top": 2841.59375,
+            "width": 366
+          },
+          {
+            "bottom": 3169.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 BMW 430I",
+            "top": 3012.59375,
+            "width": 366
+          }
+        ],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3254.59375,
+          "height": 2941.296875,
+          "left": 0,
+          "right": 390,
+          "top": 313.296875,
+          "width": 390
+        },
+        "modal": null,
+        "path": "/bg",
+        "purchase": null,
+        "scrollWidth": 390,
+        "title": {
+          "bottom": 192.296875,
+          "height": 68,
+          "left": 93,
+          "right": 297,
+          "text": "",
+          "top": 124.296875,
+          "width": 204
+        },
+        "width": 390
+      }
+    },
+    {
+      "Name": "bg-pdp-390",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1316.75,
+          "height": 1073,
+          "left": 16,
+          "right": 374,
+          "top": 243.75,
+          "width": 358
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 844,
+          "buttons": [
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 65.125,
+                "right": 83.125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 12,
+              "right": 190,
+              "text": "Запази",
+              "top": 794,
+              "width": 178
+            },
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 255.78125,
+                "right": 273.78125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 198,
+              "right": 378,
+              "text": "Оглед",
+              "top": 794,
+              "width": 180
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 390,
+          "top": 787,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "title": {
+          "bottom": 378.75,
+          "height": 27,
+          "left": 16,
+          "right": 374,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 351.75,
+          "width": 358
+        },
+        "width": 390
+      }
+    },
+    {
+      "Name": "bg-home-1440",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 1532.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2024 Toyota FORTUNER",
+            "top": 1345.5,
+            "width": 585
+          },
+          {
+            "bottom": 1532.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Suzuki Ciaz",
+            "top": 1345.5,
+            "width": 585
+          },
+          {
+            "bottom": 1733.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2025 Toyota VELOZ",
+            "top": 1546.5,
+            "width": 585
+          },
+          {
+            "bottom": 1733.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2022 Kia SELTOS",
+            "top": 1546.5,
+            "width": 585
+          },
+          {
+            "bottom": 1934.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1747.5,
+            "width": 585
+          },
+          {
+            "bottom": 1934.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1747.5,
+            "width": 585
+          },
+          {
+            "bottom": 2135.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1948.5,
+            "width": 585
+          },
+          {
+            "bottom": 2135.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2024 Nissan PATROL",
+            "top": 1948.5,
+            "width": 585
+          },
+          {
+            "bottom": 2407.25,
+            "height": 199,
+            "left": 128,
+            "right": 320,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2208.25,
+            "width": 192
+          },
+          {
+            "bottom": 2407.25,
+            "height": 199,
+            "left": 332,
+            "right": 524,
+            "title": "2023 Haval H6 GT",
+            "top": 2208.25,
+            "width": 192
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 128,
+            "right": 338,
+            "title": "2025 Lexus RX350",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 350,
+            "right": 560,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 572,
+            "right": 782,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2962.25,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2023 Volvo XC40",
+            "top": 2775.25,
+            "width": 585
+          },
+          {
+            "bottom": 2962.25,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2775.25,
+            "width": 585
+          },
+          {
+            "bottom": 3163.25,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2020 BMW X2",
+            "top": 2976.25,
+            "width": 585
+          },
+          {
+            "bottom": 3163.25,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 BMW 430I",
+            "top": 2976.25,
+            "width": 585
+          }
+        ],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3402.25,
+          "height": 2977.25,
+          "left": 100,
+          "right": 1340,
+          "top": 425,
+          "width": 1240
+        },
+        "modal": null,
+        "path": "/bg",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": 334,
+          "height": 80,
+          "left": 507.125,
+          "right": 763.125,
+          "text": "",
+          "top": 254,
+          "width": 256
+        },
+        "width": 1440
+      }
+    },
+    {
+      "Name": "bg-pdp-1440",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 2050.65625,
+          "height": 1280,
+          "left": 128,
+          "right": 952,
+          "top": 770.65625,
+          "width": 824
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": 913.65625,
+          "height": 35,
+          "left": 128,
+          "right": 952,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 878.65625,
+          "width": 824
+        },
+        "width": 1440
+      }
+    },
+    {
+      "Name": "bg-home-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 1274.875,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota FORTUNER",
+            "top": 1003.890625,
+            "width": 296
+          },
+          {
+            "bottom": 1559.859375,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki Ciaz",
+            "top": 1288.875,
+            "width": 296
+          },
+          {
+            "bottom": 1844.84375,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2025 Toyota VELOZ",
+            "top": 1573.859375,
+            "width": 296
+          },
+          {
+            "bottom": 2129.828125,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Kia SELTOS",
+            "top": 1858.84375,
+            "width": 296
+          },
+          {
+            "bottom": 2465.8125,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 2143.828125,
+            "width": 296
+          },
+          {
+            "bottom": 2750.796875,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 2479.8125,
+            "width": 296
+          },
+          {
+            "bottom": 3086.78125,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 2764.796875,
+            "width": 296
+          },
+          {
+            "bottom": 3422.765625,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Nissan PATROL",
+            "top": 3100.78125,
+            "width": 296
+          },
+          {
+            "bottom": 3816.953125,
+            "height": 258,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 3558.953125,
+            "width": 192
+          },
+          {
+            "bottom": 3816.953125,
+            "height": 258,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 3558.953125,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 4283.9375,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Volvo XC40",
+            "top": 4012.953125,
+            "width": 296
+          },
+          {
+            "bottom": 4619.921875,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 4297.9375,
+            "width": 296
+          },
+          {
+            "bottom": 4904.90625,
+            "height": 270.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2020 BMW X2",
+            "top": 4633.921875,
+            "width": 296
+          },
+          {
+            "bottom": 5240.890625,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 BMW 430I",
+            "top": 4918.90625,
+            "width": 296
+          }
+        ],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 5355.890625,
+          "height": 5000.515625,
+          "left": 0,
+          "right": 320,
+          "top": 355.375,
+          "width": 320
+        },
+        "modal": null,
+        "path": "/bg",
+        "purchase": null,
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 227.875,
+          "height": 68,
+          "left": 58,
+          "right": 262,
+          "text": "",
+          "top": 159.875,
+          "width": 204
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "bg-pdp-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 2506.859375,
+          "height": 2306.859375,
+          "left": 16,
+          "right": 304,
+          "top": 200,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 24.25,
+                "right": 42.25,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Запази",
+              "top": 430,
+              "width": 143
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 183.578125,
+                "right": 201.578125,
+                "top": 443,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Оглед",
+              "top": 430,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 423,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 515.96875,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 407.96875,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "bg-pdp-facts-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1887.859375,
+          "height": 2306.859375,
+          "left": 16,
+          "right": 304,
+          "top": -419,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 24.25,
+                "right": 42.25,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Запази",
+              "top": 430,
+              "width": 143
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 183.578125,
+                "right": 201.578125,
+                "top": 443,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Оглед",
+              "top": 430,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 423,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -103.03125,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -211.03125,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "en-home-320",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 843,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota FORTUNER",
+            "top": 686,
+            "width": 296
+          },
+          {
+            "bottom": 1014,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki Ciaz",
+            "top": 857,
+            "width": 296
+          },
+          {
+            "bottom": 1185,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2025 Toyota VELOZ",
+            "top": 1028,
+            "width": 296
+          },
+          {
+            "bottom": 1356,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Kia SELTOS",
+            "top": 1199,
+            "width": 296
+          },
+          {
+            "bottom": 1527,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1370,
+            "width": 296
+          },
+          {
+            "bottom": 1698,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1541,
+            "width": 296
+          },
+          {
+            "bottom": 1869,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1712,
+            "width": 296
+          },
+          {
+            "bottom": 2040,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Nissan PATROL",
+            "top": 1883,
+            "width": 296
+          },
+          {
+            "bottom": 2302.296875,
+            "height": 199,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2103.296875,
+            "width": 192
+          },
+          {
+            "bottom": 2302.296875,
+            "height": 199,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 2103.296875,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 2655.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Volvo XC40",
+            "top": 2498.296875,
+            "width": 296
+          },
+          {
+            "bottom": 2826.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2669.296875,
+            "width": 296
+          },
+          {
+            "bottom": 2997.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2020 BMW X2",
+            "top": 2840.296875,
+            "width": 296
+          },
+          {
+            "bottom": 3168.296875,
+            "height": 157,
+            "left": 12,
+            "right": 308,
+            "title": "2023 BMW 430I",
+            "top": 3011.296875,
+            "width": 296
+          }
+        ],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3253.296875,
+          "height": 2941.296875,
+          "left": 0,
+          "right": 320,
+          "top": 312,
+          "width": 320
+        },
+        "modal": null,
+        "path": "/en",
+        "purchase": null,
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 191,
+          "height": 68,
+          "left": 58,
+          "right": 262,
+          "text": "",
+          "top": 123,
+          "width": 204
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "en-pdp-320",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1273,
+          "height": 1073,
+          "left": 16,
+          "right": 304,
+          "top": 200,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 740,
+          "buttons": [
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 53.671875,
+                "right": 71.671875,
+                "top": 703,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Save",
+              "top": 690,
+              "width": 143
+            },
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 195.0625,
+                "right": 213.0625,
+                "top": 703,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Viewing",
+              "top": 690,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 683,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 335,
+          "height": 27,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 308,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "en-home-390",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 844.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Toyota FORTUNER",
+            "top": 687.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1015.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Suzuki Ciaz",
+            "top": 858.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1186.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2025 Toyota VELOZ",
+            "top": 1029.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1357.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2022 Kia SELTOS",
+            "top": 1200.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1528.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1371.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1699.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1542.296875,
+            "width": 366
+          },
+          {
+            "bottom": 1870.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1713.296875,
+            "width": 366
+          },
+          {
+            "bottom": 2041.296875,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2024 Nissan PATROL",
+            "top": 1884.296875,
+            "width": 366
+          },
+          {
+            "bottom": 2303.59375,
+            "height": 199,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2104.59375,
+            "width": 192
+          },
+          {
+            "bottom": 2303.59375,
+            "height": 199,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 2104.59375,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 2656.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Volvo XC40",
+            "top": 2499.59375,
+            "width": 366
+          },
+          {
+            "bottom": 2827.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2670.59375,
+            "width": 366
+          },
+          {
+            "bottom": 2998.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2020 BMW X2",
+            "top": 2841.59375,
+            "width": 366
+          },
+          {
+            "bottom": 3169.59375,
+            "height": 157,
+            "left": 12,
+            "right": 378,
+            "title": "2023 BMW 430I",
+            "top": 3012.59375,
+            "width": 366
+          }
+        ],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3254.59375,
+          "height": 2941.296875,
+          "left": 0,
+          "right": 390,
+          "top": 313.296875,
+          "width": 390
+        },
+        "modal": null,
+        "path": "/en",
+        "purchase": null,
+        "scrollWidth": 390,
+        "title": {
+          "bottom": 192.296875,
+          "height": 68,
+          "left": 93,
+          "right": 297,
+          "text": "",
+          "top": 124.296875,
+          "width": 204
+        },
+        "width": 390
+      }
+    },
+    {
+      "Name": "en-pdp-390",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1316.75,
+          "height": 1073,
+          "left": 16,
+          "right": 374,
+          "top": 243.75,
+          "width": 358
+        },
+        "modal": null,
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 844,
+          "buttons": [
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 71.171875,
+                "right": 89.171875,
+                "top": 807,
+                "width": 18
+              },
+              "left": 12,
+              "right": 190,
+              "text": "Save",
+              "top": 794,
+              "width": 178
+            },
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 247.5625,
+                "right": 265.5625,
+                "top": 807,
+                "width": 18
+              },
+              "left": 198,
+              "right": 378,
+              "text": "Viewing",
+              "top": 794,
+              "width": 180
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 390,
+          "top": 787,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "title": {
+          "bottom": 378.75,
+          "height": 27,
+          "left": 16,
+          "right": 374,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 351.75,
+          "width": 358
+        },
+        "width": 390
+      }
+    },
+    {
+      "Name": "en-home-1440",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 1532.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2024 Toyota FORTUNER",
+            "top": 1345.5,
+            "width": 585
+          },
+          {
+            "bottom": 1532.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Suzuki Ciaz",
+            "top": 1345.5,
+            "width": 585
+          },
+          {
+            "bottom": 1733.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2025 Toyota VELOZ",
+            "top": 1546.5,
+            "width": 585
+          },
+          {
+            "bottom": 1733.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2022 Kia SELTOS",
+            "top": 1546.5,
+            "width": 585
+          },
+          {
+            "bottom": 1934.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 1747.5,
+            "width": 585
+          },
+          {
+            "bottom": 1934.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 1747.5,
+            "width": 585
+          },
+          {
+            "bottom": 2135.5,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 1948.5,
+            "width": 585
+          },
+          {
+            "bottom": 2135.5,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2024 Nissan PATROL",
+            "top": 1948.5,
+            "width": 585
+          },
+          {
+            "bottom": 2407.25,
+            "height": 199,
+            "left": 128,
+            "right": 320,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2208.25,
+            "width": 192
+          },
+          {
+            "bottom": 2407.25,
+            "height": 199,
+            "left": 332,
+            "right": 524,
+            "title": "2023 Haval H6 GT",
+            "top": 2208.25,
+            "width": 192
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 128,
+            "right": 338,
+            "title": "2025 Lexus RX350",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 350,
+            "right": 560,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2745.25,
+            "height": 217,
+            "left": 572,
+            "right": 782,
+            "title": "2024 Toyota FORTUNER",
+            "top": 2528.25,
+            "width": 210
+          },
+          {
+            "bottom": 2962.25,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2023 Volvo XC40",
+            "top": 2775.25,
+            "width": 585
+          },
+          {
+            "bottom": 2962.25,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 2775.25,
+            "width": 585
+          },
+          {
+            "bottom": 3163.25,
+            "height": 187,
+            "left": 128,
+            "right": 713,
+            "title": "2020 BMW X2",
+            "top": 2976.25,
+            "width": 585
+          },
+          {
+            "bottom": 3163.25,
+            "height": 187,
+            "left": 727,
+            "right": 1312,
+            "title": "2023 BMW 430I",
+            "top": 2976.25,
+            "width": 585
+          }
+        ],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 3402.25,
+          "height": 2977.25,
+          "left": 100,
+          "right": 1340,
+          "top": 425,
+          "width": 1240
+        },
+        "modal": null,
+        "path": "/en",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": 334,
+          "height": 80,
+          "left": 496.9375,
+          "right": 752.9375,
+          "text": "",
+          "top": 254,
+          "width": 256
+        },
+        "width": 1440
+      }
+    },
+    {
+      "Name": "en-pdp-1440",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 2050.65625,
+          "height": 1280,
+          "left": 128,
+          "right": 952,
+          "top": 770.65625,
+          "width": 824
+        },
+        "modal": null,
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": 913.65625,
+          "height": 35,
+          "left": 128,
+          "right": 952,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 878.65625,
+          "width": 824
+        },
+        "width": 1440
+      }
+    },
+    {
+      "Name": "en-home-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [
+          {
+            "bottom": 1410.46875,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota FORTUNER",
+            "top": 1088.484375,
+            "width": 296
+          },
+          {
+            "bottom": 1746.453125,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki Ciaz",
+            "top": 1424.46875,
+            "width": 296
+          },
+          {
+            "bottom": 2082.4375,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2025 Toyota VELOZ",
+            "top": 1760.453125,
+            "width": 296
+          },
+          {
+            "bottom": 2418.421875,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Kia SELTOS",
+            "top": 2096.4375,
+            "width": 296
+          },
+          {
+            "bottom": 2754.40625,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Toyota LAND CRUISER",
+            "top": 2432.421875,
+            "width": 296
+          },
+          {
+            "bottom": 3090.390625,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Suzuki GRAND VITARA",
+            "top": 2768.40625,
+            "width": 296
+          },
+          {
+            "bottom": 3426.375,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 3104.390625,
+            "width": 296
+          },
+          {
+            "bottom": 3762.359375,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2024 Nissan PATROL",
+            "top": 3440.375,
+            "width": 296
+          },
+          {
+            "bottom": 4156.546875,
+            "height": 258,
+            "left": 12,
+            "right": 204,
+            "title": "2024 Toyota FORTUNER",
+            "top": 3898.546875,
+            "width": 192
+          },
+          {
+            "bottom": 4156.546875,
+            "height": 258,
+            "left": 216,
+            "right": 408,
+            "title": "2023 Haval H6 GT",
+            "top": 3898.546875,
+            "width": 192
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2025 Lexus RX350",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2022 Toyota LAND CRUISER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 0,
+            "height": 0,
+            "left": 0,
+            "right": 0,
+            "title": "2024 Toyota FORTUNER",
+            "top": 0,
+            "width": 0
+          },
+          {
+            "bottom": 4674.53125,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Volvo XC40",
+            "top": 4352.546875,
+            "width": 296
+          },
+          {
+            "bottom": 5010.515625,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 Land Rover DEFENDER",
+            "top": 4688.53125,
+            "width": 296
+          },
+          {
+            "bottom": 5346.5,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2020 BMW X2",
+            "top": 5024.515625,
+            "width": 296
+          },
+          {
+            "bottom": 5682.484375,
+            "height": 321.984375,
+            "left": 12,
+            "right": 308,
+            "title": "2023 BMW 430I",
+            "top": 5360.5,
+            "width": 296
+          }
+        ],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 5767.484375,
+          "height": 5412.109375,
+          "left": 0,
+          "right": 320,
+          "top": 355.375,
+          "width": 320
+        },
+        "modal": null,
+        "path": "/en",
+        "purchase": null,
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 227.875,
+          "height": 68,
+          "left": 58,
+          "right": 262,
+          "text": "",
+          "top": 159.875,
+          "width": 204
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "en-pdp-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 2429.890625,
+          "height": 2229.890625,
+          "left": 16,
+          "right": 304,
+          "top": 200,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 29.46875,
+                "right": 47.46875,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 141.25,
+              "text": "Save",
+              "top": 430,
+              "width": 129.25
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 160.25,
+                "right": 178.25,
+                "top": 443,
+                "width": 18
+              },
+              "left": 149.25,
+              "right": 308,
+              "text": "Viewing",
+              "top": 430,
+              "width": 158.75
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 423,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": 515.96875,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": 407.96875,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "en-pdp-facts-320-double-text",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1811.890625,
+          "height": 2229.890625,
+          "left": 16,
+          "right": 304,
+          "top": -418,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 29.46875,
+                "right": 47.46875,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 141.25,
+              "text": "Save",
+              "top": 430,
+              "width": 129.25
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 160.25,
+                "right": 178.25,
+                "top": 443,
+                "width": 18
+              },
+              "left": 149.25,
+              "right": 308,
+              "text": "Viewing",
+              "top": 430,
+              "width": 158.75
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 423,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -102.03125,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -210.03125,
+          "width": 288
+        },
+        "width": 320
+      }
+    },
+    {
+      "Name": "single-photo-haval",
+      "Metrics": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1224.75,
+          "height": 981,
+          "left": 16,
+          "right": 374,
+          "top": 243.75,
+          "width": 358
+        },
+        "modal": null,
+        "path": "/bg/cars/2023-haval-h6-gt-top",
+        "purchase": {
+          "bottom": 844,
+          "buttons": [
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 65.125,
+                "right": 83.125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 12,
+              "right": 190,
+              "text": "Запази",
+              "top": 794,
+              "width": 178
+            },
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 255.78125,
+                "right": 273.78125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 198,
+              "right": 378,
+              "text": "Оглед",
+              "top": 794,
+              "width": 180
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 390,
+          "top": 787,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "title": {
+          "bottom": 286.75,
+          "height": 27,
+          "left": 16,
+          "right": 374,
+          "text": "2023 HAVAL H6 GT TOP",
+          "top": 259.75,
+          "width": 358
+        },
+        "width": 390
+      }
+    }
+  ],
+  "Flows": [
+    {
+      "Album": "Интериор, 7 снимки",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Екстериор, 6 снимки",
+      "Count": 6,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Интериор, 7 снимки",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Back",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Детайли, 5 снимки",
+      "Count": 5,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Интериор, 7 снимки",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Интериор, 7 снимки",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Interiors, 7 photos",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Exteriors, 6 photos",
+      "Count": 6,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Interiors, 7 photos",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Back",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Details, 5 photos",
+      "Count": 5,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Interiors, 7 photos",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "Album": "Interiors, 7 photos",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Escape",
+      "InformationRemains": true
+    },
+    {
+      "SampleHistory": true,
+      "Viewing": true
+    },
+    {
+      "Album": "Интериор, 7 снимки",
+      "Count": 7,
+      "Next": true,
+      "Focus": true,
+      "Dismissal": "Back",
+      "InformationRemains": true
+    },
+    {
+      "InventoryContextPreserved": true,
+      "Url": "http://127.0.0.1:6483/bg/cars?brand=Toyota"
+    }
+  ]
+}

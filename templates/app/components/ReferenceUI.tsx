@@ -19,7 +19,7 @@ export function ServiceTabs({active,compact=false}: {active:ServiceKey;compact?:
 
   return <nav aria-label={tx("Car services")} {...stylex.props(s.tabs)}>{showroom.services.map(tab => <Link key={tab.key} href={tab.href} aria-label={tx(tab.label)} aria-current={active===tab.key?'page':undefined} {...stylex.props(s.tab,active===tab.key&&s.tabActive,compact&&s.tabCompact,compact&&active===tab.key&&s.tabCompactActive)}>
     <span {...stylex.props(s.tabTitle,compact&&s.tabTitleCompact)}>{tx(tab.key === 'finance' ? 'Finance navigation' : tab.label)}</span>
-    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox,(tab.key==='finance'||tab.key==='service')&&s.serviceArt)}><Image src={tab.image} alt="" fill sizes="(max-width: 767px) 90px, 160px" {...stylex.props(s.tabArt)}/></span> : null}
+    {!compact ? <span aria-hidden="true" {...stylex.props(s.tabArtworkBox)}><Image src={tab.image} alt="" fill sizes="(max-width: 767px) 90px, 160px" {...stylex.props(s.tabArt)}/></span> : null}
     {active===tab.key&&!compact?<span aria-hidden="true" {...stylex.props(s.tabIndicator)}/>:null}
   </Link>)}</nav>;
 }
@@ -79,7 +79,6 @@ const s=stylex.create({
  tabTitleCompact:{position:'static',display:'grid',placeItems:'center',fontSize:13,fontWeight:500,lineHeight:1.25,whiteSpace:'normal',backgroundColor:'inherit'},
  tabArtworkBox:{position:{[media.mobile]:'relative',default:'absolute'},flexShrink:0,left:{[media.mobile]:'auto',default:'50%'},transform:{[media.mobile]:'none',default:'translateX(-50%)'},bottom:{[media.mobile]:'auto',default:2},width:'100%',height:{[media.mobile]:46,default:'64%'},maxWidth:160},
  tabArt:{objectFit:'contain'},
- serviceArt:{bottom:{[media.mobile]:'auto',default:6},width:'90%',height:{[media.mobile]:46,default:'57%'},maxWidth:140},
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,fontSize:{[media.mobile]:'clamp(12px,3.7vw,15px)',default:18},fontWeight:600,lineHeight:1.06,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
  brandSection:{paddingTop:10},
