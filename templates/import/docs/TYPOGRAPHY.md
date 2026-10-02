@@ -27,6 +27,8 @@ Actions remain at least 44px high; primary actions, option rows and social links
 
 Desktop vehicle cards keep a single 18px title line with an ellipsis and the full name on hover. Year, fuel and transmission share one metadata row, with the complete mileage aligned right. Year and transmission retain their width; long fuel labels truncate within the remaining space and retain their full hover text. Mileage belongs in this row rather than over the photograph. Card actions retain 18px text and a 44px minimum height at compact card widths too. This contract is shared by Home, Inventory, Favorites and related vehicles; mobile keeps its separate card composition.
 
+Desktop intro headings share `PageIntro` and start 32px below their frame's top edge. Heading width and scale, 16px spacing between heading/caption/actions, and 24px end padding belong to desktop hero tokens. The grid flows from that anchor; the height of route-specific controls does not vertically recenter the heading. Image hero frames retain their common responsive minimum height and grow when content needs room. Text-only intros share the same centered type and anchor. `mobileAlign` and the independent mobile hero compositions retain their existing behavior.
+
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.

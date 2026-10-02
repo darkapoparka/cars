@@ -51,7 +51,6 @@
 <main id="main-content">
 	<PageIntro
 		{title}
-		align="center"
 		image="/assets/daynight/services/evaluate-link-service.webp"
 		description={english
 			? 'An illustrative payment before you decide.'

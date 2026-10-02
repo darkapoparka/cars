@@ -140,7 +140,7 @@
 		isEnglish={english}
 	/>
 {/snippet}
-<PageIntro {title} titleId="home-title" class="home-hero" vehicleArtwork align="center">
+<PageIntro {title} titleId="home-title" class="home-hero" vehicleArtwork>
 	{#snippet desktopActions()}
 		<DesktopDiscoveryPanel class="home-hero__box">
 			{#snippet header()}

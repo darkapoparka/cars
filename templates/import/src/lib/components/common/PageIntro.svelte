@@ -16,7 +16,6 @@
 		artworkPanelWidth,
 		titleId,
 		class: className = '',
-		align = 'start',
 		desktopDescription,
 		desktopActions,
 		desktopSecondaryActions,
@@ -34,7 +33,6 @@
 		artworkPanelWidth?: string;
 		titleId?: string;
 		class?: string;
-		align?: 'start' | 'center';
 		desktopDescription?: string;
 		desktopActions?: Snippet;
 		desktopSecondaryActions?: Snippet;
@@ -53,8 +51,6 @@
 	class={['site-intro', 'site-desktop-only', className]}
 	class:site-intro--image={Boolean(image) || vehicleArtwork}
 	class:site-intro--cars={vehicleArtwork}
-	class:site-intro--center={align === 'center'}
-	class:site-intro--interactive={Boolean(desktopActions)}
 	style:--hero-panel-width={artworkPanelWidth}
 >
 	{#if vehicleArtwork}<HeroCars />{/if}
@@ -130,47 +126,40 @@
 	.site-intro__actions {
 		margin-top: var(--bc-space-5);
 	}
-	.site-intro--center {
-		text-align: center;
-	}
-	.site-intro--center h1,
-	.site-intro--center p {
-		margin-inline: auto;
-	}
-	.site-intro--center h1 {
-		max-width: 32ch;
-	}
-	.site-intro--center.site-intro--image::after {
-		background: linear-gradient(180deg, rgb(9 10 11 / 0.62), rgb(9 10 11 / 0.72));
-	}
 	@media (min-width: 768px) {
+		.site-intro {
+			padding-block: var(--bc-desktop-hero-padding-start) var(--bc-desktop-hero-padding-end);
+			text-align: center;
+		}
+		.site-intro__content {
+			display: grid;
+			gap: var(--bc-desktop-hero-gap);
+		}
+		.site-intro--image::after {
+			background: linear-gradient(180deg, rgb(9 10 11 / 0.62), rgb(9 10 11 / 0.72));
+		}
 		.site-intro--cars::after {
 			display: none;
 		}
 		h1 {
+			max-width: var(--bc-desktop-hero-title-width);
+			margin-inline: auto;
 			font-size: var(--bc-desktop-hero-title);
+			text-wrap: balance;
 		}
 		.site-intro--image {
-			display: flex;
-			align-items: center;
 			min-height: var(--bc-desktop-page-hero-height);
-			padding-block: var(--bc-space-6);
-		}
-		.site-intro--interactive .site-intro__content {
-			display: grid;
-			gap: var(--bc-space-4);
-		}
-		.site-intro--interactive p {
-			margin-block: 0;
 		}
 		p {
 			max-width: 76ch;
+			margin: 0 auto;
 			font-size: var(--bc-text-body);
 			line-height: var(--bc-leading-body-lg);
 			color: inherit;
 		}
 		.site-intro__desktop-actions {
 			display: flex;
+			justify-content: center;
 			align-items: center;
 			flex-wrap: wrap;
 			gap: var(--bc-space-3);
@@ -182,8 +171,8 @@
 			align-items: center;
 			min-height: var(--bc-control-height-primary);
 		}
-		.site-intro--center .site-intro__desktop-actions {
-			justify-content: center;
+		.site-intro__actions {
+			margin-top: 0;
 		}
 	}
 </style>

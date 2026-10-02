@@ -34,7 +34,6 @@
 	>
 	<div class="site-desktop-only">
 		<PageIntro
-			align="center"
 			{title}
 			image="/assets/daynight/services/sell-car-service.webp"
 			description={english

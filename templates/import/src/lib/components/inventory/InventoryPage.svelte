@@ -69,7 +69,6 @@
 			title={desktop.title}
 			class="inventory-hero"
 			vehicleArtwork
-			align="center"
 			desktopDescription={desktop.subtitle}
 		>
 			{#snippet desktopActions()}

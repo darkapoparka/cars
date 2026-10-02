@@ -34,7 +34,6 @@
 	>
 	<div class="site-desktop-only">
 		<PageIntro
-			align="center"
 			{title}
 			image="/assets/daynight/services/premium-cars-banner-generated.webp"
 			description={english

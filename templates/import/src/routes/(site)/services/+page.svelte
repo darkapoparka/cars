@@ -49,7 +49,6 @@
 		mobileAlign="center"
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
 		desktopImage="/assets/daynight/banners/services-studio-desktop.webp"
-		align="center"
 		desktopDescription={data.directory.description}
 	>
 		{#snippet mobileActions()}<form role="search" method="GET">

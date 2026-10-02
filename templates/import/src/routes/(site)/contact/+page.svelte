@@ -33,7 +33,6 @@
 			image="/assets/daynight/proof-studio-import-handoff.webp"
 			vehicleArtwork
 			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
-			align="center"
 		>
 			{#snippet desktopActions()}
 				<DesktopHeroActions>

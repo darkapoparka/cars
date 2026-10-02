@@ -45,7 +45,6 @@
 		image={about.hero.image}
 		vehicleArtwork
 		artworkPanelWidth="var(--bc-desktop-action-panel-width)"
-		align="center"
 	>
 		{#snippet mobileActions()}
 			<div class="about-mobile-actions">
