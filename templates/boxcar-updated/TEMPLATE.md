@@ -60,7 +60,7 @@ Set `BOXCAR_BROWSER=webkit` to repeat with Playwright WebKit. Comparison output 
 
 ## Application behavior
 
-- Homepage header search: typing displays up to six matching sample vehicles with their photos and prices. Arrow keys and Enter open the selected detail; Enter without a selection and the View all link open filtered inventory. Escape, outside clicks and moving keyboard focus outside dismiss suggestions. The original theme hides this header field at 1440 px and below; the hero make/model search remains available. Results use the shared catalogue instead of the original four repeated placeholder entries.
+- Homepage header search: clicking or focusing the empty field displays six sample vehicles with their photos and prices. Typing filters those suggestions; clearing the query restores the initial choices. Arrow keys and Enter open the selected detail; Enter without a selection and the View all link open inventory with the current query, or all stock when empty. Escape, outside clicks and moving keyboard focus outside dismiss suggestions. The original theme hides this header field at 1440 px and below; the hero make/model search remains available. Results use the shared catalogue instead of the original four repeated placeholder entries.
 - `/inventory/`: URL-driven keyword, make/model, condition, body, fuel, year and price filters; sorting, pagination and grid/list views.
 - `/vehicle/<slug>/`: model photos, specification overview, related cars, enquiry preview and repayment estimate. `return` keeps the browsing context; browser Back restores scroll.
 - `/favorites/` and `/compare/`: native Svelte state persisted in this browser. Comparison accepts at most four cars and supports removal and clearing.

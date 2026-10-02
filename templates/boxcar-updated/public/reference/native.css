@@ -35,6 +35,9 @@
 .reference-home .layout-search .box-content-search {
   height: auto;
 }
+.reference-home .layout-search.active .search-box input::placeholder {
+  color: #6b7280;
+}
 .reference-home .layout-search .box-car-search {
   height: auto;
   max-height: 333px;

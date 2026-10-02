@@ -620,7 +620,7 @@
         "Newsletter is a local preview, with no fake send result"
       ],
       "failures": [],
-      "verifiedAt": "2026-10-02T03:56:03.331Z"
+      "verifiedAt": "2026-10-02T04:19:27.763Z"
     },
     {
       "engine": "webkit",
@@ -635,7 +635,7 @@
         "Newsletter is a local preview, with no fake send result"
       ],
       "failures": [],
-      "verifiedAt": "2026-10-02T03:56:03.331Z"
+      "verifiedAt": "2026-10-02T04:19:27.763Z"
     }
   ],
   "supportingPages": [
@@ -662,57 +662,57 @@
   "build": {
     "passed": true,
     "output": {
-      "Home1-cJu-ZA0z.js": {
+      "Home1-Bw00J0GX.js": {
         "bytes": 272479,
-        "gzipBytes": 16214
+        "gzipBytes": 16215
       },
-      "Home10-CV9AkDRu.js": {
+      "Home10-DQv2mqqQ.js": {
         "bytes": 321634,
-        "gzipBytes": 16635
+        "gzipBytes": 16636
       },
-      "Home2-BvFTMdSI.js": {
+      "Home2-nSVHGNEA.js": {
         "bytes": 244300,
-        "gzipBytes": 18491
+        "gzipBytes": 18494
       },
-      "Home3-ChriM717.js": {
+      "Home3-DqLOD7KE.js": {
         "bytes": 398995,
-        "gzipBytes": 22604
+        "gzipBytes": 22605
       },
-      "Home4-DNhqJb58.js": {
+      "Home4-CqSKDDUw.js": {
         "bytes": 153795,
-        "gzipBytes": 17396
+        "gzipBytes": 17397
       },
-      "Home5-BZbxnLyR.js": {
+      "Home5-B9GUDk_z.js": {
         "bytes": 301389,
-        "gzipBytes": 15228
+        "gzipBytes": 15229
       },
-      "Home6-Dni6ZAtQ.js": {
+      "Home6-Cx1sj5IL.js": {
         "bytes": 200195,
-        "gzipBytes": 13124
+        "gzipBytes": 13125
       },
-      "Home7-BoI2uium.js": {
+      "Home7-DmVOBE7B.js": {
         "bytes": 196278,
-        "gzipBytes": 13310
+        "gzipBytes": 13312
       },
-      "Home8-BeMHjos-.js": {
+      "Home8-zg52yRpq.js": {
         "bytes": 217949,
-        "gzipBytes": 19120
+        "gzipBytes": 19121
       },
-      "Home9-Cwgnciuy.js": {
+      "Home9-BSpHXabd.js": {
         "bytes": 273025,
-        "gzipBytes": 15317
+        "gzipBytes": 15318
       },
-      "index-Og1P5Paa.js": {
+      "index-PbM3FEaO.js": {
         "bytes": 133156,
-        "gzipBytes": 43979
+        "gzipBytes": 43993
       },
       "index-UK8Ql3h4.css": {
         "bytes": 635,
         "gzipBytes": 340
       },
-      "interactions-B0rnhatc.js": {
-        "bytes": 21975,
-        "gzipBytes": 5691
+      "interactions-D82uaS4R.js": {
+        "bytes": 21984,
+        "gzipBytes": 5693
       },
       "styles-xx0g6lNo.css": {
         "bytes": 67016,
@@ -729,7 +729,7 @@
         "gzipBytes": 13013
       }
     },
-    "verifiedAt": "2026-10-02T03:56:03.331Z"
+    "verifiedAt": "2026-10-02T04:19:27.763Z"
   },
   "boundaries": {
     "wholeSitePixelPerfect": false,
@@ -743,7 +743,7 @@
     "map": "Source Home 6 lazy external illustrative embed; third-party availability not certified"
   },
   "headerSearchCorrection": {
-    "verifiedAt": "2026-10-02T03:56:03.331Z",
+    "verifiedAt": "2026-10-02T04:19:27.763Z",
     "homesTested": 10,
     "desktopWidth": 1920,
     "hiddenAtWidths": [
@@ -760,6 +760,11 @@
     "emptyResults": true,
     "dismissal": true,
     "previousVisualComparisonsRerun": false,
-    "dealerPresentationIntegrated": false
+    "dealerPresentationIntegrated": false,
+    "openOnEmptyClick": true,
+    "openOnEmptyFocus": true,
+    "emptyQuerySuggestions": 6,
+    "clearingRestoresSuggestions": true,
+    "emptyQueryInventoryURL": "/inventory/"
   }
 }

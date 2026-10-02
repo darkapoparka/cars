@@ -80,7 +80,7 @@ export function initializeHeaderSearch(root: HTMLElement, signal: AbortSignal) {
           empty.textContent = "No matching cars. Try another make or model.";
           list.append(empty);
         }
-        more.href = "/inventory/?" + search;
+        more.href = "/inventory/" + (text ? "?" + search : "");
         more.replaceChildren(
           document.createTextNode(
             `View all ${matches.length} ${matches.length === 1 ? "car" : "cars"}`,
@@ -89,7 +89,7 @@ export function initializeHeaderSearch(root: HTMLElement, signal: AbortSignal) {
         );
         select(-1);
       }
-      open(!!text);
+      open(true);
     };
     open(false);
     input.addEventListener("input", refresh, { signal });

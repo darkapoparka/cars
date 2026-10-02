@@ -44,8 +44,32 @@ try {
       for (let n = 1; n <= 10; n += 1) {
         await home(n);
         const input = page.locator(".layout-search .show-search");
-        await input.fill("Audi");
         const popup = page.locator(".box-content-search.active");
+        assert.equal(await input.getAttribute("aria-expanded"), "false");
+        await input.click();
+        await popup.waitFor({ state: "visible" });
+        assert.equal(await input.inputValue(), "");
+        assert.equal(await popup.getByRole("option").count(), 6);
+        assert.equal(
+          await popup.locator(".btn-view-search").getAttribute("href"),
+          "/inventory/",
+        );
+        if (n === 1) {
+          await page.waitForFunction(() =>
+            Array.from(
+              document.querySelectorAll(".box-content-search.active img"),
+            ).every((image) => image.complete && image.naturalWidth > 0),
+          );
+          await page.mouse.move(1800, 850);
+          await page.screenshot({
+            path: path.join(out, `${engine}-header-search-click.png`),
+          });
+        }
+        await input.press("Escape");
+        assert.equal(await input.getAttribute("aria-expanded"), "false");
+        await input.click();
+        await popup.waitFor({ state: "visible" });
+        await input.fill("Audi");
         await popup.waitFor({ state: "visible" });
         const options = popup.getByRole("option");
         assert.deepEqual(await options.locator(".name").allTextContents(), [
@@ -72,10 +96,26 @@ try {
         await input.click();
         await popup.waitFor({ state: "visible" });
         await input.fill("");
+        assert.equal(await input.getAttribute("aria-expanded"), "true");
+        assert.equal(await popup.getByRole("option").count(), 6);
+        await input.press("Escape");
         assert.equal(await input.getAttribute("aria-expanded"), "false");
       }
       await home();
       let input = page.locator(".layout-search .show-search");
+      await input.focus();
+      assert.equal(await input.getAttribute("aria-expanded"), "true");
+      await page.locator(".box-content-search.active .btn-view-search").click();
+      await page.waitForURL(base + "/inventory/");
+      await page.locator(".vehicle-card").first().waitFor();
+      await home();
+      input = page.locator(".layout-search .show-search");
+      await input.click();
+      await input.press("Enter");
+      await page.waitForURL(base + "/inventory/");
+      await page.locator(".vehicle-card").first().waitFor();
+      await home();
+      input = page.locator(".layout-search .show-search");
       await input.fill("Audi");
       await page
         .getByRole("heading", { name: "Find Your Perfect Car", exact: true })
