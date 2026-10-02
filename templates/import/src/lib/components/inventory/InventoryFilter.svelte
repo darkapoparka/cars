@@ -62,16 +62,21 @@
 	}
 	@media (min-width: 768px) {
 		.site-filter-trigger {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			font-size: var(--bc-text-label);
 			font-weight: var(--bc-weight-control);
-			justify-content: flex-start;
 			min-height: var(--bc-control-height-primary);
 			min-width: 0;
 			max-width: min(100%, 240px);
 			border-radius: var(--bc-radius-pill);
 			border-color: var(--bc-border);
 			background: var(--bc-control);
-			padding-inline: var(--bc-space-2) var(--bc-space-4);
+			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);
+		}
+		.filter-trigger-label {
+			text-align: center;
 		}
 		.site-filter-trigger:hover,
 		.site-filter-trigger[aria-expanded='true'] {
@@ -83,7 +88,8 @@
 			background: var(--bc-accent-soft);
 		}
 		.site-filter-trigger :global(svg) {
-			flex-shrink: 0;
+			width: var(--bc-space-4);
+			height: var(--bc-space-4);
 			color: var(--bc-muted);
 		}
 	}

@@ -112,15 +112,17 @@
 		border-radius: var(--bc-radius-pill);
 		white-space: nowrap;
 	}
+	@media (min-width: 768px) {
+		.inventory-toolbar__row :global(.inventory-toolbar__all) {
+			font-size: var(--bc-text-label);
+		}
+	}
 	@media (min-width: 901px) {
 		.inventory-toolbar__row {
 			flex-wrap: nowrap;
 		}
 		.inventory-toolbar__row :global(.site-filter-trigger) {
-			flex: 1 1 auto;
-		}
-		.inventory-toolbar__row :global(.site-filter-trigger[data-active='false']) {
-			flex-shrink: 0;
+			flex: 1 1 0;
 		}
 	}
 	@media (max-width: 900px) {
