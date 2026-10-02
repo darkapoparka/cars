@@ -247,26 +247,37 @@
   .dn-about-service-card {
     min-height: 0;
     display: grid;
-    grid-template-columns: 32px minmax(0, 1fr);
-    gap: 8px 12px;
-    padding: 16px;
-    border: 0;
+    grid-template-columns: var(--dn-control-height-default) minmax(0, 1fr);
+    gap: var(--dn-space-3);
+    padding: var(--dn-space-5);
+    border: 1px solid var(--dn-line);
+    border-radius: var(--dn-space-6);
+    box-shadow: 0 2px 12px rgb(20 23 29 / 3%);
   }
-  .dn-about-service-card__icon { width: 32px; height: 32px; margin: 0; grid-row: 1; align-self: center; }
-  .dn-about-service-card__icon svg { width: 100%; height: 100%; }
+  .dn-about-service-card:hover,
+  .dn-about-service-card:focus-within { border-color: var(--dn-line); box-shadow: 0 2px 12px rgb(20 23 29 / 3%); }
+  .dn-about-service-card__icon { display: grid; width: var(--dn-control-height-default); height: var(--dn-control-height-default); margin: 0; grid-row: 1; align-self: center; place-items: center; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); }
+  .dn-about-service-card__icon svg { width: var(--dn-space-7); height: var(--dn-space-7); }
   .dn-about-service-card__copy { display: contents; }
-  .dn-about-service-card h3 { grid-column: 2; grid-row: 1; align-self: center; font-size: var(--dn-text-body); }
+  .dn-about-service-card h3 { grid-column: 2; grid-row: 1; align-self: center; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-medium); }
   .dn-about-service-card p { grid-column: 1 / -1; grid-row: 2; margin: 0; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
 
   .dn-about-service-card > a {
     grid-column: 1 / -1;
-    margin-top: 4px;
-    min-height: 44px;
-    background: #f2f3f5;
-    border-color: transparent;
-    color: #202329;
+    justify-self: start;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: var(--dn-space-1);
+    min-height: var(--dn-control-height-default);
+    padding: var(--dn-space-2) var(--dn-space-4);
+    background: var(--dn-white);
+    border-color: var(--dn-line);
+    color: var(--dn-ink);
     font: var(--dn-control-font);
   }
+  .dn-about-service-card > a > .dn-icon { display: none; }
+  .dn-about-service-card > a:hover { border-color: var(--dn-line-strong); background: var(--dn-surface-subtle); color: var(--dn-ink); }
+  .dn-about-service-card > a:focus-visible { border-color: var(--dn-line); background: var(--dn-white); color: var(--dn-ink); outline: 2px solid var(--dn-focus); outline-offset: 3px; }
 
   .dn-about-showroom.dn-section { padding: var(--dn-space-6) 0 var(--dn-space-8); }
 }
