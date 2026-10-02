@@ -77,7 +77,6 @@
 		headingId="terms-route-title"
 		title={i18n.t('copy.e07ecdfd3f88')}
 		copy={i18n.t('pattern.e9297efb228d', { v0: daynightSite.shortName })}
-		panel="light"
 		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
 		secondaryLabel={i18n.t('copy.f20a4411e8d6')}

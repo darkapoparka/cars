@@ -40,8 +40,7 @@
 body.daynight-home-page
 	.daynight-home-shell--original
 	.daynight-home-inventory
-	a.desktop-discovery-chip,
-.inventory-template-shell .inventory-refined .inventory-results-shortcuts a.desktop-discovery-chip {
+	a.desktop-discovery-chip {
 	display: inline-flex !important;
 	align-items: center !important;
 	justify-content: center !important;
@@ -69,10 +68,6 @@ body.daynight-home-page
 body.daynight-home-page
 	.daynight-home-shell--original
 	.daynight-home-inventory
-	a.desktop-discovery-chip:hover,
-.inventory-template-shell
-	.inventory-refined
-	.inventory-results-shortcuts
 	a.desktop-discovery-chip:hover {
 	background: var(--discovery-light-hover) !important;
 	border-color: var(--discovery-light-hover) !important;
@@ -81,10 +76,6 @@ body.daynight-home-page
 body.daynight-home-page
 	.daynight-home-shell--original
 	.daynight-home-inventory
-	a.desktop-discovery-chip.is-active,
-.inventory-template-shell
-	.inventory-refined
-	.inventory-results-shortcuts
 	a.desktop-discovery-chip.is-active {
 	background: var(--discovery-action) !important;
 	border-color: var(--discovery-action) !important;
@@ -94,10 +85,6 @@ body.daynight-home-page
 body.daynight-home-page
 	.daynight-home-shell--original
 	.daynight-home-inventory
-	a.desktop-discovery-chip.is-active:hover,
-.inventory-template-shell
-	.inventory-refined
-	.inventory-results-shortcuts
 	a.desktop-discovery-chip.is-active:hover {
 	background: var(--discovery-action-hover) !important;
 	border-color: var(--discovery-action-hover) !important;

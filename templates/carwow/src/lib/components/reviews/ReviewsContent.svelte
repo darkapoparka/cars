@@ -27,7 +27,6 @@
 	<DesktopYellowRouteHero
 		headingId="reviews-route-title"
 		title={i18n.t('copy.93b3d88de23a')}
-		panel="light"
 		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
 		secondaryLabel={i18n.t('copy.f36755515677')}

@@ -157,8 +157,6 @@
 		sectionId="sell-intake"
 		headingId="daynight-sell-title"
 		title={i18n.t('copy.42b0d511b828')}
-		panel="light"
-		compact
 	>
 		<div class="sell-intake-card">
 			<p>{i18n.t('copy.2366c40c8e45')}</p>
@@ -424,14 +422,14 @@
 
 <style>
 	.sell-intake-card {
-		padding: 24px 32px;
+		padding: 0;
 		text-align: center;
 	}
 	.desktop-sell .sell-intake-card p {
-		margin: 0 auto 20px;
+		margin: 0 auto 16px;
 		max-width: 52ch;
-		color: var(--sa-ink);
-		font: var(--sa-weight-regular) var(--sa-text-lg)/1.5 var(--sa-font);
+		color: var(--desktop-hero-copy);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 	}
 	.sell-modal {
 		width: min(640px, calc(100vw - 48px));

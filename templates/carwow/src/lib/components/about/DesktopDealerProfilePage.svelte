@@ -44,7 +44,6 @@
 		primaryHref="/inventory"
 		secondaryLabel={i18n.t('copy.f36755515677')}
 		secondaryHref="/contact"
-		compact
 	/>
 	<section class="background-light mb-32">
 		<div class="container">

@@ -17,31 +17,6 @@ type InventoryQuickFiltersSource =
 	| (() => InventoryQuickFilterGroup[] | undefined)
 	| undefined;
 
-/**
- * Car-type shortcuts above the results. Selected types are represented by their
- * shortcut; other selected filters appear as removable applied-filter tags.
- */
-export type InventoryShortcut = {
-	label: string;
-	field?: 'brand' | 'fuel' | 'body' | 'price' | 'mileage' | 'availability';
-	value?: string;
-	clearsAll?: boolean;
-};
-
-export const inventoryShortcuts: InventoryShortcut[] = [
-	{ label: 'Всички', clearsAll: true },
-	{ label: 'Джип', field: 'body', value: 'Джип' },
-	{ label: 'Седан', field: 'body', value: 'Седан' },
-	{ label: 'Купе', field: 'body', value: 'Купе' },
-	{ label: 'Ван', field: 'body', value: 'Ван' }
-];
-
-function hasShortcutFor(field: string, value: string): boolean {
-	return inventoryShortcuts.some(
-		(shortcut) => shortcut.field === field && shortcut.value === value
-	);
-}
-
 /** Drop empties + duplicates, preserving order (no `Set` — keeps this .svelte.ts file clean). */
 function dedupe(values: string[]): string[] {
 	const out: string[] = [];
@@ -58,7 +33,7 @@ function dedupe(values: string[]): string[] {
  * Composes the shared {@link InventoryFilterState} (query/brand/model/body/fuel/
  * transmission/price/mileage/feature/condition) and layers the desktop-only sort
  * + URL sync + reactive result count on top. Provided via context so every
- * control (search, dropdowns, type-pills, sort, clear-all) reads/writes the same
+ * control (search, dropdowns, sort, clear-all) reads/writes the same
  * instance without prop-threading. Instantiated PER page mount (never a module
  * singleton) so SSR never leaks one request's filters into another.
  */
@@ -112,19 +87,18 @@ export class DesktopInventoryFilters {
 	);
 
 	/**
-	 * Applied-filter chips for `#filterTags`. Car types already have a selected,
-	 * removable shortcut. Make, fuel, budget and other selections need their own
-	 * tags so filters chosen in the dialog remain visible above the results.
+	 * Every chosen filter gets a removable tag above the results, including body
+	 * types. There is no separate preset row that hides those selections.
 	 */
 	appliedTags = $derived.by(() => {
 		const s = this.store;
 		const tags: Array<{ field: string; value: string; label: string }> = [];
 		const pushSingle = (field: string, value: string, label: string) => {
-			if (value && !hasShortcutFor(field, value)) tags.push({ field, value, label });
+			if (value) tags.push({ field, value, label });
 		};
 		const pushMulti = (field: string, values: string[]) => {
 			for (const value of values) {
-				if (!hasShortcutFor(field, value)) tags.push({ field, value, label: value });
+				if (value) tags.push({ field, value, label: value });
 			}
 		};
 		pushMulti('brand', s.brand);
@@ -236,39 +210,6 @@ export class DesktopInventoryFilters {
 			brands.length === 0 ||
 			optionBrands.some((brand) => brands.includes(brand))
 		);
-	}
-
-	/** True when `value` is the current selection for a single-value field. */
-	isShortcutActive(field: string | undefined, value: string): boolean {
-		if (!field || !value) return false;
-		const s = this.store;
-		if (field === 'brand') return s.brand.includes(value);
-		if (field === 'model') return s.model.includes(value);
-		if (field === 'body') return s.body.includes(value);
-		if (field === 'feature') return s.feature.includes(value);
-		if (field === 'fuel') return s.fuel === value;
-		if (field === 'transmission') return s.transmission === value;
-		if (field === 'price') return s.price === value;
-		if (field === 'mileage') return s.mileage === value;
-		if (field === 'condition') return s.condition === value;
-		if (field === 'availability') return s.availability === value;
-		return false;
-	}
-
-	/** Toggle a single-value shortcut field (type-pills): set, or clear if already set. */
-	toggleShortcut(field: string, value: string) {
-		const s = this.store;
-		const active = this.isShortcutActive(field, value);
-		if (field === 'brand') s.brand = active ? [] : [value];
-		else if (field === 'model') s.model = active ? [] : [value];
-		else if (field === 'body') s.body = active ? [] : [value];
-		else if (field === 'feature') s.feature = active ? [] : [value];
-		else if (field === 'fuel') s.fuel = active ? '' : value;
-		else if (field === 'transmission') s.transmission = active ? '' : value;
-		else if (field === 'price') s.price = active ? '' : value;
-		else if (field === 'mileage') s.mileage = active ? '' : value;
-		else if (field === 'condition') s.condition = active ? '' : value;
-		else if (field === 'availability') s.availability = active ? '' : value;
 	}
 
 	/** Both layouts use the shared URL contract, including sort. */

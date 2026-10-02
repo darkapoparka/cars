@@ -1,5 +1,67 @@
 import { expect, test } from '@playwright/test';
 
+for (const locale of ['en', 'bg']) {
+	for (const width of [992, 1440]) {
+		test(`desktop hero actions remain readable and centered in ${locale} at ${width}px`, async ({
+			page
+		}) => {
+			await page.setViewportSize({ width, height: 1000 });
+			for (const route of ['contact', 'financing', 'faq', 'favorites', 'sell-your-car']) {
+				await page.mouse.move(0, 0);
+				await page.goto(`/${locale}/${route}`, { waitUntil: 'networkidle' });
+				await page.evaluate(() => document.fonts.ready);
+				const hero = page.locator('.daynight-yellow-route-hero');
+				const deck = hero.locator('.daynight-yellow-route-hero__deck');
+				await expect(deck).toHaveCSS('background-color', 'rgb(52, 58, 62)');
+				const heroBox = (await hero.boundingBox())!;
+				const deckBox = (await deck.boundingBox())!;
+				expect(heroBox.height).toBe(400);
+				expect(deckBox.width).toBe(720);
+				expect(Math.abs(deckBox.x + deckBox.width / 2 - width / 2)).toBeLessThan(1);
+				const primary = deck.locator('.sa-cta-primary, .desktop-primary-action');
+				await expect(primary).toHaveCSS('background-color', 'rgb(245, 197, 66)');
+				await expect(primary).toHaveCSS('color', 'rgb(15, 20, 23)');
+				await primary.focus();
+				await expect(primary).toHaveCSS('outline-color', 'rgb(245, 197, 66)');
+				await expect(primary).toHaveCSS('outline-width', '2px');
+				await primary.hover();
+				await expect(primary).not.toHaveCSS('background-color', 'rgb(245, 197, 66)');
+				await expect(primary).toHaveCSS('color', 'rgb(15, 20, 23)');
+				if (route === 'sell-your-car') {
+					const button = (await primary.boundingBox())!;
+					expect(
+						Math.abs(button.x + button.width / 2 - deckBox.x - deckBox.width / 2)
+					).toBeLessThan(1);
+					expect(button.width).toBeLessThan(400);
+					await primary.press('Enter');
+					await expect(page.locator('.sell-modal')).toBeVisible();
+					await page.keyboard.press('Escape');
+					await expect(primary).toBeFocused();
+				} else {
+					const actions = deck.locator('.daynight-yellow-route-hero__actions');
+					const buttons = await actions.locator('a').evaluateAll((links) =>
+						links.map((link) => {
+							const r = link.getBoundingClientRect();
+							return { left: r.left, right: r.right, top: r.top, width: r.width, height: r.height };
+						})
+					);
+					expect(buttons).toHaveLength(2);
+					expect(buttons[0].top).toBe(buttons[1].top);
+					expect(buttons[0].width).toBe(buttons[1].width);
+					expect(buttons[0].height).toBe(48);
+					expect(
+						Math.abs((buttons[0].left + buttons[1].right) / 2 - deckBox.x - deckBox.width / 2)
+					).toBeLessThan(1);
+					await expect(actions.locator('a').last()).toHaveAttribute(
+						'href',
+						new RegExp(`^/${locale}/`)
+					);
+				}
+			}
+		});
+	}
+}
+
 for (const width of [992, 1280, 1440, 1920]) {
 	test(`desktop sections share a frame and use compact cards at ${width}px`, async ({
 		page
@@ -8,6 +70,8 @@ for (const width of [992, 1280, 1440, 1920]) {
 		for (const locale of ['en', 'bg']) {
 			await page.goto(`/${locale}`);
 			await expect(page.locator('.hero-intent')).toBeVisible();
+			await expect(page.locator('.hero-intent__tabs button').first()).toBeEnabled();
+			await page.evaluate(() => document.fonts.ready);
 			const frame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
 			const panel = (await page.locator('.hero-intent').boundingBox())!;
 			const tabHeader = (await page.locator('.hero-intent__tabs').boundingBox())!;
@@ -111,6 +175,9 @@ for (const width of [992, 1280, 1440, 1920]) {
 				} else if (route === 'about') {
 					await expect(container.locator('img')).toHaveCount(0);
 					expect(box.height).toBeLessThan(360);
+					for (const link of await page.locator('.about-hero-contact > a').all()) {
+						await expect(link).toHaveCSS('color', 'rgb(15, 20, 23)');
+					}
 				} else {
 					await expect(page.locator('.blog-featured-card, .blog-magazine')).toHaveCount(0);
 					await expect
@@ -132,7 +199,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 						.toBe(true);
 					const pills = page.locator('.blog-category-switch a, .blog-quick-topics a');
 					await expect(pills.first()).toHaveCSS('border-radius', '8px');
-					await expect(pills.first()).toHaveCSS('background-color', 'rgb(23, 27, 30)');
+					await expect(pills.first()).toHaveCSS('background-color', 'rgb(245, 197, 66)');
 				}
 				if (width === 1440 && locale === 'en')
 					await page.screenshot({ path: testInfo.outputPath(`${route}.png`) });

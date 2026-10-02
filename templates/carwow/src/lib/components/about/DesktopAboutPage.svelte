@@ -75,8 +75,6 @@
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
 		title={i18n.t('pattern.558d5da46c92', { v0: daynightSite.shortName })}
-		panel="light"
-		compact
 	>
 		<div class="about-hero-panel">
 			<div class="about-hero-primary">
@@ -284,7 +282,7 @@
 	.about-hero-panel {
 		display: grid;
 		gap: 12px;
-		padding: 14px;
+		padding: 0;
 	}
 
 	.about-hero-primary {
@@ -310,7 +308,7 @@
 		gap: 10px;
 	}
 
-	.about-hero-contact a {
+	.about-page .about-hero-contact a {
 		display: inline-flex;
 		min-height: 44px;
 		align-items: center;

@@ -213,7 +213,6 @@
 		headingId="team-route-title"
 		title={i18n.t('pattern.b531635e92b3', { v0: daynightSite.shortName })}
 		copy={i18n.text(daynightTeamDisclosure)}
-		panel="light"
 		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
 		secondaryLabel={i18n.t('copy.f20a4411e8d6')}

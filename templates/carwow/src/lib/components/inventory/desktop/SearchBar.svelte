@@ -68,6 +68,7 @@
 					? i18n.t('pattern.769c3ae47eea', { v0: filters.store.query })
 					: i18n.t('copy.364f79690e39')}
 				aria-haspopup="dialog"
+				aria-describedby={`${searchId}-result-count`}
 				disabled={!hydrated}
 				onclick={openFromTrigger}>{filters.store.query || i18n.text(searchPlaceholder)}</button
 			>
@@ -80,11 +81,16 @@
 				name="q"
 				data-daynight-inventory-search-input
 				autocomplete="off"
+				aria-describedby={`${searchId}-result-count`}
 				placeholder={i18n.text(searchPlaceholder)}
 				bind:value={filters.store.query}
 				onkeydown={handleKeydown}
 			/>
 		{/if}
+		<span class="daynight-inventory-search__count" aria-hidden="true">({filters.resultCount})</span>
+		<span id={`${searchId}-result-count`} class="sr-only" role="status" aria-atomic="true"
+			>{filters.resultCount} {i18n.t('copy.afc67636f9b8')}</span
+		>
 		<button
 			class="daynight-inventory-searchbar__submit"
 			type="button"
@@ -127,6 +133,14 @@
 
 	.daynight-inventory-search__input {
 		background: #fff;
+	}
+	.daynight-inventory-search__count {
+		flex: 0 0 auto;
+		color: var(--discovery-muted);
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.4 var(--sa-font);
+		font-variant-numeric: tabular-nums;
+		padding-right: 8px;
+		white-space: nowrap;
 	}
 
 	.daynight-inventory-searchbar__submit {

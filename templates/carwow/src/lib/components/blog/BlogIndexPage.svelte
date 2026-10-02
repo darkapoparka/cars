@@ -283,7 +283,6 @@
 		<DesktopYellowRouteHero
 			headingId="blog-route-title"
 			title={i18n.t('copy.9651258a1b3e')}
-			panel="light"
 			deckWidth="wide"
 			children={blogHeroControls}
 		/>
@@ -337,6 +336,18 @@
 		gap: 8px;
 		align-items: center;
 	}
+	.blog-category-switch {
+		justify-content: center;
+	}
+	.blog-hero-controls .desktop-discovery-chip.is-active {
+		background: var(--sa-yellow) !important;
+		border-color: var(--sa-yellow) !important;
+		color: var(--sa-ink) !important;
+	}
+	.blog-hero-controls .desktop-discovery-chip.is-active:hover {
+		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
+		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
+	}
 	.blog-hero-search {
 		margin: 0;
 	}
@@ -348,7 +359,7 @@
 		height: 54px;
 		padding: 4px;
 		border: 1px solid var(--discovery-control-border);
-		border-radius: 8px;
+		border-radius: var(--discovery-search-radius);
 		background: #fff;
 	}
 	.blog-hero-search__field input {
@@ -356,7 +367,7 @@
 		width: 100%;
 		height: 44px;
 		margin: 0;
-		padding: 0 12px;
+		padding: 0 15px;
 		border: 0;
 		background: transparent;
 		color: var(--sa-ink);
@@ -371,20 +382,20 @@
 		place-items: center;
 		padding: 0;
 		border: 0;
-		border-radius: 6px;
-		background: var(--desktop-action);
-		color: #fff;
+		border-radius: var(--discovery-search-action-radius);
+		background: var(--sa-yellow);
+		color: var(--sa-ink);
 		cursor: pointer;
 	}
 	.blog-hero-search__field button :global(svg) {
 		color: inherit;
 	}
 	.blog-hero-search__field button:hover {
-		background: var(--desktop-action-hover);
+		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink));
 	}
 	.blog-hero-search__field:focus-within {
 		outline: 2px solid var(--desktop-focus);
-		outline-offset: -1px;
+		outline-offset: 3px;
 	}
 	.blog-quick-row {
 		display: flex;
@@ -401,7 +412,7 @@
 		align-items: center;
 		gap: 12px;
 		margin-left: auto;
-		color: var(--discovery-muted);
+		color: var(--desktop-hero-copy);
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		white-space: nowrap;
 	}

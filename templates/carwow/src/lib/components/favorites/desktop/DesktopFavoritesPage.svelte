@@ -34,18 +34,11 @@
 		copy={vehicles.length
 			? i18n.t('pattern.3fb1938f7f16', { v0: countLabel })
 			: i18n.t('copy.e79533fe3403')}
-		panel="light"
-		compact
-	>
-		<div class="desktop-favorites__hero-actions" aria-label={i18n.t('copy.cad123465b9e')}>
-			<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/inventory'))}
-				>{i18n.t('copy.4b5a450faf64')}</a
-			>
-			<a class="sa-cta sa-cta-ghost" href={i18n.href(resolve('/compare'))}
-				>{i18n.t('copy.3c4226f1f842')}</a
-			>
-		</div>
-	</DesktopYellowRouteHero>
+		primaryLabel={i18n.t('copy.4b5a450faf64')}
+		primaryHref="/inventory"
+		secondaryLabel={i18n.t('copy.3c4226f1f842')}
+		secondaryHref="/compare"
+	/>
 
 	<section class="desktop-favorites__content" aria-label={i18n.t('copy.925606ad84b8')}>
 		<GarageUnavailable
@@ -124,12 +117,6 @@
 	.desktop-favorites h2,
 	.desktop-favorites p {
 		letter-spacing: 0;
-	}
-
-	.desktop-favorites__hero-actions {
-		display: grid;
-		gap: 10px;
-		grid-template-columns: repeat(2, minmax(220px, 1fr));
 	}
 
 	.desktop-favorites__content {

@@ -37,7 +37,6 @@
 		headingId="faq-route-title"
 		title={i18n.t('copy.6a4ec0f53189')}
 		copy={i18n.t('pattern.be0ea7080930', { v0: daynightSite.shortName })}
-		panel="light"
 		primaryLabel={i18n.t('copy.f36755515677')}
 		primaryHref="/contact"
 		secondaryLabel={i18n.t('copy.f20a4411e8d6')}

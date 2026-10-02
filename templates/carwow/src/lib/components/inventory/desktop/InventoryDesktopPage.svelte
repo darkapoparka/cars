@@ -66,7 +66,6 @@
 			<DesktopYellowRouteHero
 				headingId="daynight-inventory-title"
 				title={i18n.t('copy.3bce9c370af2')}
-				panel="light"
 				children={inventoryControls}
 			/>
 		</div>

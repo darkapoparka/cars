@@ -3,7 +3,6 @@
 	const i18n = getI18n();
 
 	import SortDropdown from './SortDropdown.svelte';
-	import InventoryShortcutShelf from './InventoryShortcutShelf.svelte';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import List from '@lucide/svelte/icons/list';
@@ -22,7 +21,6 @@
 	} = $props();
 
 	const filters = getDesktopInventoryContext();
-	const count = $derived(filters.resultCount);
 	const hasTags = $derived(filters.hasRenderedTags);
 
 	function clearAll() {
@@ -34,12 +32,6 @@
 
 <div class="daynight-inventory-listing-controls">
 	<div class="daynight-inventory-results-toolbar">
-		<div class="daynight-inventory-results-count-cell">
-			<p class="daynight-inventory-result-count">
-				<span id="filterMatchesCount">{count}</span>
-				{i18n.t('copy.afc67636f9b8')}
-			</p>
-		</div>
 		<div class="inventory-toolbar-actions">
 			<div class="daynight-inventory-sort-control">
 				<SortDropdown />
@@ -66,7 +58,6 @@
 			</div>
 		</div>
 	</div>
-	<InventoryShortcutShelf />
 </div>
 <div
 	class={[
@@ -131,20 +122,11 @@
 	:global(.inventory-refined .daynight-inventory-results-toolbar) {
 		display: flex !important;
 		align-items: center !important;
-		justify-content: space-between !important;
+		justify-content: center !important;
 		gap: 20px;
 		margin: 0 !important;
 		padding: 0 !important;
 		min-height: 44px;
-	}
-	:global(.inventory-refined .daynight-inventory-result-count) {
-		font: var(--sa-weight-medium) var(--sa-text-control)/1.4 var(--sa-font) !important;
-		color: #454d55 !important;
-		margin: 0 !important;
-	}
-	:global(.inventory-refined .daynight-inventory-result-count span) {
-		font-weight: var(--sa-weight-strong) !important;
-		color: #161a1d;
 	}
 	.inventory-toolbar-actions {
 		display: flex;
@@ -174,8 +156,16 @@
 		color: #fff;
 		background: #171b1e;
 	}
+	.inventory-view-buttons button:hover {
+		background: var(--desktop-secondary-hover);
+		color: var(--desktop-action);
+	}
+	.inventory-view-buttons button[aria-pressed='true']:hover {
+		background: var(--desktop-action-hover);
+		color: var(--desktop-action-text);
+	}
 	.inventory-view-buttons button:focus-visible {
-		outline: 2px solid #d50028;
+		outline: 2px solid var(--desktop-focus);
 		outline-offset: 2px;
 	}
 </style>

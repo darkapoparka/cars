@@ -63,7 +63,6 @@
 		headingId="compare-route-title"
 		title={i18n.t('copy.dac519153648')}
 		copy={i18n.t('copy.3b5a987fafed')}
-		panel="light"
 		primaryLabel={i18n.text('Добави автомобили')}
 		primaryHref="/inventory"
 		secondaryLabel={i18n.t('copy.2ff1cef08851')}

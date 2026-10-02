@@ -21,12 +21,8 @@
 		secondaryLabel,
 		secondaryHref,
 		sectionId,
-		panel = 'light',
-		compact = false,
 		deckWidth = 'standard',
 		artwork = 'cars',
-		rail,
-		afterPanel,
 		children
 	}: {
 		headingId?: string;
@@ -37,12 +33,8 @@
 		secondaryLabel?: string;
 		secondaryHref?: HeroHref;
 		sectionId?: string;
-		panel?: 'dark' | 'light';
-		compact?: boolean;
-		deckWidth?: 'standard' | 'wide' | 'full';
+		deckWidth?: 'standard' | 'wide';
 		artwork?: 'cars' | 'contact';
-		rail?: Snippet;
-		afterPanel?: Snippet;
 		children?: Snippet;
 	} = $props();
 
@@ -56,10 +48,7 @@
 	id={sectionId}
 	class={[
 		'daynight-yellow-route-hero',
-		rail && 'daynight-yellow-route-hero--with-rail',
-		compact && 'daynight-yellow-route-hero--compact',
 		deckWidth === 'wide' && 'daynight-yellow-route-hero--deck-wide',
-		deckWidth === 'full' && 'daynight-yellow-route-hero--deck-full',
 		artwork === 'contact' && 'daynight-yellow-route-hero--contact'
 	]}
 	aria-labelledby={headingId}
@@ -112,12 +101,7 @@
 			<p>{copy}</p>
 		{/if}
 		{#if children || (primaryLabel && primaryHref)}
-			<div
-				class={[
-					'daynight-yellow-route-hero__deck',
-					panel === 'light' && 'daynight-yellow-route-hero__deck--light'
-				]}
-			>
+			<div class="daynight-yellow-route-hero__deck">
 				{#if children}
 					{@render children()}
 				{:else if primaryLabel && primaryHref}
@@ -140,14 +124,7 @@
 				{/if}
 			</div>
 		{/if}
-		{#if afterPanel}{@render afterPanel()}{/if}
 	</div>
-
-	{#if rail}
-		<div class="daynight-yellow-route-hero__rail">
-			{@render rail()}
-		</div>
-	{/if}
 </section>
 
 <style>
@@ -164,29 +141,13 @@
 		display: flex;
 		flex-direction: column;
 		margin-inline: auto !important;
-		max-width: 1180px;
-		padding: var(--desktop-hero-padding-top) 24px var(--desktop-hero-padding-bottom);
+		box-sizing: border-box;
+		max-width: var(--desktop-content-max);
+		padding: var(--desktop-hero-padding-top) 0 var(--desktop-hero-padding-bottom);
 		position: relative;
 		text-align: center;
-		width: calc(100% - 48px);
+		width: var(--desktop-content-width);
 		z-index: 2;
-	}
-
-	.daynight-yellow-route-hero--with-rail {
-		overflow: visible;
-	}
-
-	.daynight-yellow-route-hero--with-rail .daynight-yellow-route-hero__content {
-		padding-bottom: 16px;
-	}
-
-	.daynight-yellow-route-hero__rail {
-		box-sizing: border-box;
-		margin: 0 auto 18px !important;
-		max-width: 1440px;
-		position: relative;
-		width: calc(100% - 48px);
-		z-index: 4;
 	}
 
 	.daynight-yellow-route-hero__cars {
@@ -195,90 +156,6 @@
 		pointer-events: none;
 		position: absolute;
 		z-index: 1;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-filter-region),
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-filter-region .daynight-inventory-band),
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-band .daynight-inventory-controls-shell),
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-controls-shell .row),
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.row .daynight-inventory-controls) {
-		box-sizing: border-box;
-		margin: 0 !important;
-		max-width: none !important;
-		padding: 0 !important;
-		width: 100% !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-filter-region .daynight-inventory-band) {
-		background: transparent !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-filter-region .daynight-inventory-band::before) {
-		content: none !important;
-		display: none !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-controls .daynight-inventory-quick-form) {
-		backdrop-filter: none !important;
-		background: #f7f8fa !important;
-		border: 0 !important;
-		box-shadow: none !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-quick-form .daynight-inventory-filter-dropdown),
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-quick-form .daynight-inventory-quick-sidebar) {
-		background: #fff !important;
-		border: 1px solid #d5dae1 !important;
-		color: var(--sa-ink) !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-quick-form .daynight-inventory-type-pill) {
-		background: #fff !important;
-		border-color: #d5dae1 !important;
-		color: #252b32 !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(.daynight-inventory-quick-form .daynight-inventory-type-pill:hover) {
-		background: #eef0f3 !important;
-		border-color: #bcc3cc !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail
-		.daynight-yellow-route-hero__rail
-		:global(
-			.daynight-inventory-quick-form .daynight-inventory-type-pill:is(.is-active, .is-selected)
-		) {
-		background: var(--sa-red) !important;
-		border-color: var(--sa-red) !important;
-		color: #fff !important;
-	}
-
-	.daynight-yellow-route-hero--with-rail .daynight-yellow-route-hero__car {
-		bottom: 0;
 	}
 
 	h1 {
@@ -304,12 +181,15 @@
 	}
 
 	.daynight-yellow-route-hero__deck {
-		background: #171717;
+		--desktop-focus: var(--sa-yellow);
+		--desktop-hero-copy: #e2e5e7;
+		background: var(--desktop-action-hover);
+		color: #fff;
 		border-radius: 12px;
 		box-sizing: border-box;
 		margin: var(--desktop-hero-panel-gap) auto 0 !important;
 		max-width: 720px;
-		padding: 20px;
+		padding: 20px 24px;
 		width: 100%;
 	}
 
@@ -317,31 +197,40 @@
 		max-width: 1040px;
 	}
 
-	.daynight-yellow-route-hero--deck-full .daynight-yellow-route-hero__content {
-		max-width: 1368px;
-	}
-
-	.daynight-yellow-route-hero--deck-full .daynight-yellow-route-hero__deck {
-		max-width: 1320px;
-	}
-
 	.daynight-yellow-route-hero__actions {
-		display: grid;
-		gap: 10px;
-		grid-template-columns: minmax(220px, 1fr) minmax(220px, 1fr);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 12px;
 	}
 
-	.daynight-yellow-route-hero__deck--light {
-		background: var(--desktop-panel);
-		box-shadow: none;
+	.daynight-yellow-route-hero__actions .sa-cta {
+		flex: 1 1 0;
+		min-width: 0;
+		max-width: 300px;
 	}
 
-	.daynight-yellow-route-hero--compact .daynight-yellow-route-hero__deck {
-		max-width: 680px;
-	}
-
-	.daynight-yellow-route-hero--contact .daynight-yellow-route-hero__deck {
-		max-width: 680px;
+	/* Primary actions are yellow on charcoal. Keep this exception within the
+  * desktop hero so forms, cards and mobile retain their own button roles. */
+	@media (min-width: 992px) {
+		.daynight-yellow-route-hero__deck :global(.sa-cta.sa-cta-primary),
+		.daynight-yellow-route-hero__deck :global(.desktop-primary-action) {
+			background: var(--sa-yellow) !important;
+			border-color: var(--sa-yellow) !important;
+			color: var(--sa-ink) !important;
+		}
+		.daynight-yellow-route-hero__deck
+			:global(.sa-cta.sa-cta-primary:hover:not(:disabled):not([aria-disabled='true'])),
+		.daynight-yellow-route-hero__deck
+			:global(.desktop-primary-action:hover:not(:disabled):not([aria-disabled='true'])) {
+			background: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
+			border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
+			color: var(--sa-ink) !important;
+		}
+		.daynight-yellow-route-hero__deck :global(:is(a, button, input, select):focus-visible) {
+			outline: 2px solid var(--sa-yellow) !important;
+			outline-offset: 3px !important;
+		}
 	}
 
 	.daynight-yellow-route-hero__contact-art {
@@ -375,10 +264,6 @@
 		right: 0;
 	}
 
-	.daynight-yellow-route-hero__actions .sa-cta {
-		width: 100%;
-	}
-
 	.daynight-yellow-route-hero__car {
 		bottom: -18px;
 		height: auto;
@@ -400,53 +285,6 @@
 	.daynight-yellow-route-hero__car--right {
 		object-position: right bottom;
 		right: -46px;
-	}
-
-	:global(.daynight-yellow-route-hero .daynight-inventory-searchbar__label) {
-		color: #fff;
-		font-size: var(--sa-text-caption);
-		font-weight: var(--sa-weight-strong);
-		margin: 0 0 7px;
-		text-align: left;
-	}
-
-	:global(.daynight-yellow-route-hero .daynight-inventory-search) {
-		align-items: stretch;
-		background: #fff;
-		border-radius: 9px;
-		display: grid;
-		grid-template-columns: 1fr 148px;
-		overflow: hidden;
-	}
-
-	:global(.daynight-yellow-route-hero .daynight-inventory-search__input) {
-		border: 0;
-		border-radius: 0;
-		box-sizing: border-box;
-		color: var(--sa-ink);
-		font-family: var(--sa-font);
-		font-size: var(--sa-text-base);
-		font-weight: var(--sa-weight-semibold);
-		height: 54px;
-		min-width: 0;
-		outline: 0;
-		padding: 0 18px;
-		width: 100%;
-	}
-
-	:global(.daynight-yellow-route-hero .daynight-inventory-searchbar__submit) {
-		background: var(--sa-red);
-		border-radius: 0;
-		color: #fff;
-		font-family: var(--sa-font);
-		font-size: var(--sa-button-font-size);
-		font-weight: var(--sa-button-font-weight);
-	}
-
-	:global(.daynight-yellow-route-hero .daynight-inventory-searchbar__submit img) {
-		filter: brightness(0) invert(1);
-		height: 18px;
-		width: 18px;
 	}
 
 	@media (max-width: 1199px) {

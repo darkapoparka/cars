@@ -99,7 +99,6 @@
 		headingId="calculator-route-title"
 		title={i18n.t('copy.50394aea8413')}
 		copy={i18n.t('copy.69a264fc6c2e')}
-		panel="light"
 		primaryLabel={i18n.t('copy.f20a4411e8d6')}
 		primaryHref="/inventory"
 		secondaryLabel={i18n.t('copy.291cd221f7a7')}

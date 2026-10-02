@@ -211,7 +211,6 @@
 	<main id="main-content" tabindex="-1" aria-labelledby="daynight-contact-title">
 		<DesktopYellowRouteHero
 			artwork={isImportMode ? 'cars' : 'contact'}
-			panel="light"
 			headingId="daynight-contact-title"
 			title={isImportMode ? i18n.t('copy.2e7c9b80674d') : i18n.t('copy.ef106e677853')}
 			copy={isImportMode ? i18n.t('copy.f2c82db998a8') : i18n.t('copy.c06078b56711')}

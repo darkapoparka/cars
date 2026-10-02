@@ -168,12 +168,7 @@
 	class="desktop-services"
 	aria-label={i18n.t('pattern.eb6cae93a699', { v0: daynightSite.shortName })}
 >
-	<DesktopYellowRouteHero
-		headingId="daynight-services-title"
-		title={i18n.t('copy.d700ec2758ef')}
-		panel="light"
-		deckWidth="wide"
-	>
+	<DesktopYellowRouteHero headingId="daynight-services-title" title={i18n.t('copy.d700ec2758ef')}>
 		<div class="services-chooser">
 			<h2 id="services-choice-title">{i18n.t('copy.c4eb9ace64ee')}</h2>
 			<nav class="services-shortcuts" aria-labelledby="services-choice-title">
@@ -350,6 +345,7 @@
 	.services-shortcuts {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-auto-rows: 1fr;
 		gap: 8px;
 		margin: 14px 0;
 	}
@@ -358,7 +354,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		min-height: 40px;
+		min-height: 44px;
 		padding: 8px 12px;
 		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
@@ -377,9 +373,10 @@
 	.desktop-services .services-help {
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 		margin: 14px 0 0;
-		color: var(--sa-ink);
+		color: var(--desktop-hero-copy);
 	}
 	.desktop-services .services-help a {
+		color: var(--sa-yellow);
 		font-weight: var(--sa-button-font-weight);
 		text-decoration: underline;
 		text-underline-offset: 3px;
@@ -408,7 +405,7 @@
 	}
 	.desktop-services .services-chooser h2 {
 		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.4 var(--sa-font);
-		color: var(--sa-ink);
+		color: #fff;
 		margin: 0;
 		letter-spacing: 0;
 	}

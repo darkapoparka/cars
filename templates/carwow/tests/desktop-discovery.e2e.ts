@@ -30,98 +30,57 @@ for (const locale of ['en', 'bg']) {
 		}, testInfo) => {
 			await page.setViewportSize({ width, height: 1000 });
 			await page.goto(`/${locale}/inventory`);
-			await expect(page.locator('.inventory-filter-triggers button').first()).toBeVisible();
-			await expect(page.locator('.inventory-filter-triggers button').first()).toBeEnabled();
-			await page.evaluate(() => document.fonts.ready);
-			const shelf = page.locator('.inventory-results-shortcuts');
-			await expect(shelf).toBeVisible();
-			await expect
-				.poll(() =>
-					page
-						.locator('[data-daynight-grid-panel].active .image > a img')
-						.first()
-						.evaluate((image: HTMLImageElement) => ({
-							loaded: image.complete && image.naturalWidth > 0,
-							realPhoto: !image.currentSrc.includes('transparent-1x1'),
-							currentSrc: image.currentSrc,
-							viewport: innerWidth,
-							gutter: getComputedStyle(document.documentElement).scrollbarGutter
-						}))
-				)
-				.toMatchObject({ loaded: true, realPhoto: true });
-			const chips = shelf.locator('a');
-			await expect(chips).toHaveCount(5);
 			const mainFilters = page.locator('.inventory-banner-filters .inventory-filter-triggers');
 			await expect(mainFilters.locator('button')).toHaveCount(5);
-			await expect(page.locator('.inventory-hero .inventory-results-shortcuts')).toHaveCount(0);
-			await expect
-				.poll(() =>
-					shelf.evaluate((element) => {
-						const box = element.getBoundingClientRect();
-						const hero = document.querySelector('.inventory-hero');
-						const listings = element.closest('.daynight-inventory-listing-controls');
-						if (!element.isConnected || !hero || !listings) return null;
-						const frame = listings.getBoundingClientRect();
-						return {
-							separated: box.top > hero.getBoundingClientRect().bottom,
-							aligned: Math.abs(box.left - frame.left) < 1,
-							contained: [...element.querySelectorAll('a')].every((chip) => {
-								const bounds = chip.getBoundingClientRect();
-								return (
-									bounds.left >= box.left - 1 &&
-									bounds.right <= box.right + 1 &&
-									bounds.top >= box.top &&
-									bounds.bottom <= box.bottom + 1
-								);
-							})
-						};
-					})
+			await expect(mainFilters.locator('button').first()).toBeEnabled();
+			await page.evaluate(() => document.fonts.ready);
+			await expect(
+				page.locator(
+					'.inventory-hero-shortcuts, .inventory-results-shortcuts, [data-daynight-shortcut-clear]'
 				)
-				.toEqual({ separated: true, aligned: true, contained: true });
-			await expect
-				.poll(() =>
-					chips.evaluateAll((elements) => {
-						const shelf = elements[0]
-							.closest('.inventory-results-shortcuts')!
-							.getBoundingClientRect();
-						const rows = new Map<number, DOMRect[]>();
-						for (const element of elements) {
-							const box = element.getBoundingClientRect();
-							const key = Math.round(box.top);
-							rows.set(key, [...(rows.get(key) ?? []), box]);
-						}
-						return (
-							rows.size === 1 &&
-							[...rows.values()].every(
-								(row) =>
-									row.length > 1 &&
-									Math.abs(row[0].left - shelf.left) < 1 &&
-									row.at(-1)!.right <= shelf.right + 1
-							)
-						);
-					})
-				)
-				.toBe(true);
-			const controlRows = await mainFilters
+			).toHaveCount(0);
+			await expect(page.locator('.daynight-inventory-result-count')).toHaveCount(0);
+			const count = page.locator('.daynight-inventory-search__count');
+			const initialCount = await page.locator('[data-daynight-vehicle-card]:visible').count();
+			await expect(count).toHaveText(`(${initialCount})`);
+			const toolbar = (await page.locator('.inventory-toolbar-actions').boundingBox())!;
+			const frame = (await page.locator('.daynight-inventory-listing-controls').boundingBox())!;
+			expect(Math.abs(toolbar.x + toolbar.width / 2 - frame.x - frame.width / 2)).toBeLessThan(1);
+			const rows = await mainFilters
 				.locator('button')
 				.evaluateAll((buttons) =>
 					buttons.map((button) => Math.round(button.getBoundingClientRect().top))
 				);
-			expect(new Set(controlRows).size).toBe(1);
-			const suv = shelf.locator(
-				'[data-daynight-shortcut-field="body"][data-daynight-shortcut-value="Джип"]'
-			);
-			await suv.focus();
-			await suv.press('Enter');
-			await expect(suv).toHaveAttribute('aria-current', 'true');
-			await expect(suv).toBeFocused();
+			expect(new Set(rows).size).toBe(1);
+			const trigger = mainFilters.locator('.all-filters');
+			await trigger.focus();
+			await trigger.press('Enter');
+			const dialog = page.getByRole('dialog');
+			await expect(dialog).toBeVisible();
+			await dialog.locator('#modal-body').selectOption('Джип');
+			await dialog.locator('.filter-dialog-apply').click();
+			await expect(dialog).not.toBeVisible();
+			await expect(trigger).toBeFocused();
 			await expect.poll(() => new URL(page.url()).searchParams.get('body')).toBe('Джип');
-			await expect(suv).toHaveCSS('color', 'rgb(255, 255, 255)');
-			await suv.press('Enter');
-			await expect(suv).toHaveAttribute('aria-current', 'false');
+			const bodyTag = page.locator('[data-daynight-clear-field="body"]');
+			await expect(bodyTag).toBeVisible();
+			await expect(bodyTag.locator('.select-item__label')).toHaveText(
+				locale === 'en' ? 'SUV' : 'Джип'
+			);
+			await expect
+				.poll(
+					async () =>
+						(await count.innerText()) ===
+						`(${await page.locator('[data-daynight-vehicle-card]:visible').count()})`
+				)
+				.toBe(true);
+			await bodyTag.click();
 			await expect.poll(() => new URL(page.url()).searchParams.has('body')).toBe(false);
-			await expect(chips.first()).toHaveAttribute('aria-current', 'true');
-			await page.screenshot({ path: testInfo.outputPath(`quick-filters-${locale}-${width}.png`) });
+			await expect(page.locator('#filterResults')).not.toBeVisible();
+			await expect(count).toHaveText(`(${initialCount})`);
+			await page.screenshot({
+				path: testInfo.outputPath(`inventory-controls-${locale}-${width}.png`)
+			});
 		});
 	}
 }
@@ -161,10 +120,7 @@ for (const locale of ['en', 'bg']) {
 		await page.locator('#btnClearAll').click();
 		await expect(page).toHaveURL(new RegExp(`/${locale}/inventory$`));
 		await expect(page.locator('#filterResults')).not.toBeVisible();
-		await expect(page.locator('[data-daynight-shortcut-clear]')).toHaveAttribute(
-			'aria-current',
-			'true'
-		);
+		await expect(page.locator('.daynight-inventory-search__count')).toHaveText('(40)');
 	});
 }
 
