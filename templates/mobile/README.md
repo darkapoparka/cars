@@ -8,7 +8,8 @@ Use Node 22.x. Run `npm ci`, `npm run check`, then `npm start`.
 Open **http://127.0.0.1:6474**. The production preview uses `.next-review`.
 `npm run dev` uses the same port, so choose one mode at a time.
 
-Cars is the home, with search, filters and inventory together. The bottom navigation
+Cars is the home, with search, native vehicle-category tabs, quick filters and
+inventory together. Used/New is inside Filters. The bottom navigation
 is Cars / Services / Contact; saved cars work without registration. Dealer identity
 and contact details are configured in `src/lib/showroom.ts`.
 

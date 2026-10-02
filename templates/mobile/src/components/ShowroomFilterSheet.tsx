@@ -2,6 +2,7 @@
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
+import { showroomCategory } from '@/lib/showroom';
 import { colors } from '@/styles/tokens.stylex';
 import { Icon } from './Icon';
 import { RangeField } from './RangeField';
@@ -9,10 +10,6 @@ import { Button, CheckRow, IconButton, Modal } from './ui';
 
 export type ShowroomSheet = 'price' | 'year' | 'fuel' | 'all';
 const titles = { price: 'Price', year: 'Year', fuel: 'Fuel', all: 'Filters' };
-const stock = vehicles.filter((vehicle) => vehicle.category === 'car');
-const fuels = [...new Set(stock.map((vehicle) => vehicle.fuel))];
-const transmissions = [...new Set(stock.map((vehicle) => vehicle.transmission))];
-const bodies = [...new Set(stock.map((vehicle) => vehicle.body))];
 const s = stylex.create({
   heading: {
     display: 'flex',
@@ -62,7 +59,7 @@ function Choices({
   onChange,
 }: {
   title: string;
-  field: 'fuel' | 'transmission' | 'body';
+  field: 'condition' | 'fuel' | 'transmission' | 'body';
   options: string[];
   filters: Filters;
   onChange: (patch: Partial<Filters>) => void;
@@ -107,6 +104,11 @@ export function ShowroomFilterSheet({
   onReset: () => void;
 }) {
   const all = sheet === 'all';
+  const category = showroomCategory(filters.category);
+  const stock = vehicles.filter((vehicle) => vehicle.category === filters.category);
+  const fuels = [...new Set(stock.map((vehicle) => vehicle.fuel))];
+  const transmissions = [...new Set(stock.map((vehicle) => vehicle.transmission))];
+  const bodies = [...new Set(stock.map((vehicle) => vehicle.body))];
   return (
     <Modal open onClose={onClose} label={titles[sheet]} sheet>
       <div {...stylex.props(s.heading)}>
@@ -125,6 +127,15 @@ export function ShowroomFilterSheet({
               <Icon name="right" size={20} />
             </button>
           </section>
+        )}
+        {all && (
+          <Choices
+            title="Condition"
+            field="condition"
+            options={['Used', 'New']}
+            filters={filters}
+            onChange={onChange}
+          />
         )}
         {(all || sheet === 'price') && (
           <RangeField
@@ -160,7 +171,7 @@ export function ShowroomFilterSheet({
             onChange={(minMileage, maxMileage) => onChange({ minMileage, maxMileage })}
           />
         )}
-        {(all || sheet === 'fuel') && (
+        {((all && fuels.length > 0) || sheet === 'fuel') && (
           <Choices
             title="Fuel"
             field="fuel"
@@ -169,23 +180,26 @@ export function ShowroomFilterSheet({
             onChange={onChange}
           />
         )}
-        {all && (
-          <>
-            <Choices
-              title="Transmission"
-              field="transmission"
-              options={transmissions}
-              filters={filters}
-              onChange={onChange}
-            />
-            <Choices
-              title="Body type"
-              field="body"
-              options={bodies}
-              filters={filters}
-              onChange={onChange}
-            />
-          </>
+        {sheet === 'fuel' && !fuels.length && (
+          <p>No fuel options in this category’s inventory yet.</p>
+        )}
+        {all && transmissions.length > 0 && (
+          <Choices
+            title="Transmission"
+            field="transmission"
+            options={transmissions}
+            filters={filters}
+            onChange={onChange}
+          />
+        )}
+        {all && bodies.length > 0 && (
+          <Choices
+            title="Body type"
+            field="body"
+            options={bodies}
+            filters={filters}
+            onChange={onChange}
+          />
         )}
       </div>
       <div {...stylex.props(s.footer)}>
@@ -193,7 +207,7 @@ export function ShowroomFilterSheet({
           Reset
         </Button>
         <Button onClick={onClose}>
-          Show {count} {count === 1 ? 'car' : 'cars'}
+          Show {count} {count === 1 ? category.singular : category.plural}
         </Button>
       </div>
     </Modal>

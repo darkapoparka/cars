@@ -8,8 +8,11 @@ edits in this directory; the inspiration checkout remains independently preserve
 
 ## Composition and behavior
 
-The owner-requested showroom adaptation makes Cars the home: search, stock
-condition tabs, horizontal filter pills and photo-led inventory share one screen.
+The owner-requested showroom adaptation makes Cars the home: search, vehicle
+category tabs, horizontal filter pills and photo-led inventory share one screen.
+The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
+Used/New condition choices live inside Filters. Category selections retain their
+own filters; categories without sample stock show an honest empty state.
 The bottom navigation is Cars / Services / Contact. Saved cars live in the header
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.

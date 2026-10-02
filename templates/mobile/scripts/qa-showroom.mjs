@@ -138,13 +138,115 @@ async function run(name, engine) {
     await cars(1);
     await page.getByRole('button', { name: 'Clear search', exact: true }).click();
     await cars(4);
-    await page.getByRole('button', { name: 'Used', exact: true }).click();
-    await cars(2);
-    await page.getByRole('button', { name: 'New', exact: true }).click();
-    await cars(2);
-    await page.getByRole('button', { name: 'All cars', exact: true }).click();
+    check('Search, reload and clear filter the same inventory');
+    const tabs = page.getByRole('tablist', { name: 'Vehicle category' });
+    assert.deepEqual(
+      await tabs
+        .getByRole('tab')
+        .evaluateAll((elements) => elements.map((element) => element.getAttribute('aria-label'))),
+      ['Cars', 'Motorbikes', 'E-bikes', 'Motorhomes', 'Trucks & more'],
+    );
+    assert.equal(await page.getByRole('button', { name: 'Used', exact: true }).count(), 0);
+    for (const [label, value] of [
+      ['Motorbikes', 'bike'],
+      ['E-bikes', 'electric-bike'],
+      ['Motorhomes', 'motorhome'],
+      ['Trucks & more', 'truck'],
+    ]) {
+      await tabs.getByRole('tab', { name: label, exact: true }).click();
+      await cars(0);
+      assert.equal(new URL(page.url()).searchParams.get('category'), value);
+      assert.equal(
+        await tabs.getByRole('tab', { name: label, exact: true }).getAttribute('aria-selected'),
+        'true',
+      );
+      assert.equal(
+        await page.getByRole('button', { name: 'Clear filters', exact: true }).count(),
+        0,
+      );
+      await page.getByRole('heading', { name: /^No .+ listed yet$/ }).waitFor();
+      await geometry(label + ' empty inventory');
+    }
+    await tabs.getByRole('tab', { name: 'Cars', exact: true }).click();
     await cars(4);
-    check('Search, reload, clear and Used/New tabs filter the same inventory');
+    await tabs.getByRole('tab', { name: 'Cars', exact: true }).focus();
+    await page.keyboard.press('ArrowRight');
+    await cars(0);
+    assert.equal(
+      await page.evaluate(() => document.activeElement?.getAttribute('aria-label')),
+      'Motorbikes',
+    );
+    await page.keyboard.press('End');
+    assert.equal(
+      await page.evaluate(() => document.activeElement?.getAttribute('aria-label')),
+      'Trucks & more',
+    );
+    await page.keyboard.press('Home');
+    await cars(4);
+    check(
+      'All five native category tabs select real categories; empty stock never shows cars; keyboard navigation works',
+    );
+
+    await page.getByRole('searchbox', { name: 'Search make or model' }).fill('BMW X6');
+    await cars(1);
+    await tabs.getByRole('tab', { name: 'Motorbikes', exact: true }).click();
+    await cars(0);
+    await page.locator('[data-quick-filter="make"]').click();
+    await page.getByRole('button', { name: 'Add vehicle', exact: true }).click();
+    await page.getByRole('button', { name: 'Honda', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Model for Honda', exact: true }).fill('CBR');
+    await page.getByRole('button', { name: 'OK', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('makes'), 'Honda');
+    await tabs.getByRole('tab', { name: 'Cars', exact: true }).click();
+    await cars(1);
+    assert.equal(
+      await page.getByRole('searchbox', { name: 'Search make or model' }).inputValue(),
+      'BMW X6',
+    );
+    await tabs.getByRole('tab', { name: 'Motorbikes', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('makes'), 'Honda');
+    await settle();
+    await page.reload({ waitUntil: 'load' });
+    await page.getByRole('tab', { name: 'Motorbikes', exact: true, selected: true }).waitFor();
+    await page.getByRole('link', { name: 'Services', exact: true }).click();
+    await page.getByRole('heading', { name: 'Services', exact: true }).waitFor();
+    await page.getByRole('link', { name: 'Cars', exact: true }).click();
+    await page.getByRole('tab', { name: 'Motorbikes', exact: true, selected: true }).waitFor();
+    await page.locator('[data-quick-filter="make"]').click();
+    assert.equal(
+      await page.getByRole('textbox', { name: 'Model for Honda', exact: true }).inputValue(),
+      'CBR',
+    );
+    await page.keyboard.press('Escape');
+    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.getByRole('button', { name: 'Reset', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 0 motorbikes', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('category'), 'bike');
+    assert.equal(new URL(page.url()).searchParams.has('makes'), false);
+    await page.getByRole('button', { name: 'View cars', exact: true }).click();
+    await cars(1);
+    await page.getByRole('button', { name: 'Clear search', exact: true }).click();
+    await cars(4);
+    check(
+      'Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category',
+    );
+
+    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.getByRole('checkbox', { name: 'Used', exact: true }).check();
+    await page.getByRole('button', { name: 'Show 2 cars', exact: true }).click();
+    await cars(2);
+    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.getByRole('checkbox', { name: 'Used', exact: true }).uncheck();
+    await page.getByRole('checkbox', { name: 'New', exact: true }).check();
+    await page.getByRole('button', { name: 'Show 2 cars', exact: true }).click();
+    await cars(2);
+    await page.getByRole('button', { name: 'Filters', exact: true }).click();
+    await page.getByRole('checkbox', { name: 'Used', exact: true }).check();
+    await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
+    await cars(4);
+    await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
+    await cars(4);
+    check('Used/New condition choices live in Filters and work separately or together');
 
     await page.locator('[data-quick-filter="price"]').click();
     await page.getByRole('textbox', { name: 'Price to', exact: true }).fill('50000');

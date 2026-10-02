@@ -6,9 +6,11 @@ import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
 import { defaultFilters, type Filters } from '@/lib/types';
 import { filterVehicles, money, parseFilters, sortVehicles } from '@/lib/search';
-import { patchState } from '@/lib/store';
+import { patchState, switchVehicleCategory } from '@/lib/store';
 import {
   restoreInventoryPosition,
+  showroomCategories,
+  showroomCategory,
   showroomFilters,
   showroomInventoryHref,
   showroomSorts,
@@ -16,14 +18,11 @@ import {
 import { Header } from './Header';
 import { Icon } from './Icon';
 import { MakePicker } from './MakePicker';
+import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomFilterSheet, type ShowroomSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { Button, IconButton, Modal, ui } from './ui';
 
-const stock = vehicles.filter((vehicle) => vehicle.category === 'car');
-const stockMakes = [...new Set(stock.map((vehicle) => vehicle.make))];
-const hasUsed = stock.some((vehicle) => vehicle.mileage > 0);
-const hasNew = stock.some((vehicle) => vehicle.mileage === 0);
 const s = stylex.create({
   controls: {
     position: 'sticky',
@@ -53,21 +52,43 @@ const s = stylex.create({
     paddingBlock: 14,
     outlineOffset: 3,
   },
-  tabs: { display: 'flex', gap: 24, marginInline: 16, marginTop: 8 },
+  tabs: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(5,minmax(0,1fr))',
+    height: 48,
+    marginTop: 8,
+    backgroundColor: colors.background,
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
+  },
   tab: {
-    minWidth: 48,
-    minHeight: 48,
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minWidth: 0,
     paddingInline: 2,
     borderWidth: 0,
-    borderBottomWidth: 3,
-    borderBottomStyle: 'solid',
-    borderBottomColor: 'transparent',
     backgroundColor: 'transparent',
     color: colors.muted,
     fontSize: 15,
     fontWeight: 500,
   },
-  chosenTab: { color: colors.accent, borderBottomColor: colors.accent, fontWeight: 700 },
+  chosenTab: {
+    color: colors.accent,
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 2,
+      right: 2,
+      height: 3,
+      borderTopLeftRadius: 3,
+      borderTopRightRadius: 3,
+      backgroundColor: colors.accent,
+    },
+  },
   filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 12, paddingLeft: 16 },
   filterScroll: {
     display: 'flex',
@@ -178,9 +199,13 @@ export function ShowroomInventoryScreen() {
   const [sheet, setSheet] = useState<ShowroomSheet | 'make' | 'sort' | null>(null);
   const [returnToFilters, setReturnToFilters] = useState(false);
   const opener = useRef<HTMLButtonElement | null>(null);
+  const category = showroomCategory(filters.category);
+  const stock = vehicles.filter((vehicle) => vehicle.category === filters.category);
+  const stockMakes = [...new Set(stock.map((vehicle) => vehicle.make))];
   const results = sortVehicles(filterVehicles(stock, filters), sort);
-  const condition = filters.condition.length === 1 ? filters.condition[0] : '';
-  const active = showroomInventoryHref(filters) !== '/';
+  const active =
+    showroomInventoryHref(filters) !==
+    showroomInventoryHref({ ...defaultFilters, category: filters.category });
   useEffect(() => {
     patchState({ filters: showroomFilters(parseFilters(query)), inventorySort: sort });
   }, [query, sort]);
@@ -192,7 +217,14 @@ export function ShowroomInventoryScreen() {
     patchState({ filters: next, inventorySort: nextSort });
   }
   function reset() {
-    change(structuredClone(defaultFilters));
+    change({ ...structuredClone(defaultFilters), category: filters.category });
+  }
+  function selectCategory(value: Filters['category']) {
+    if (value === filters.category) return;
+    const next = showroomFilters(switchVehicleCategory(value));
+    window.history.replaceState(null, '', showroomInventoryHref(next, sort));
+    patchState({ filters: next, inventorySort: sort });
+    window.scrollTo(0, 0);
   }
   function openSheet(value: ShowroomSheet | 'make' | 'sort', button: HTMLButtonElement) {
     opener.current = button;
@@ -203,6 +235,12 @@ export function ShowroomInventoryScreen() {
     setSheet(null);
     setReturnToFilters(false);
     requestAnimationFrame(() => opener.current?.focus({ preventScroll: true }));
+  }
+  function closeMake() {
+    if (returnToFilters) {
+      setSheet('all');
+      setReturnToFilters(false);
+    } else close();
   }
   const priceLabel =
     filters.minPrice || filters.maxPrice
@@ -249,7 +287,7 @@ export function ShowroomInventoryScreen() {
   return (
     <>
       <Header home />
-      <section aria-label="Find a car" {...stylex.props(s.controls)}>
+      <section aria-label="Find a vehicle" {...stylex.props(s.controls)}>
         <div {...stylex.props(s.search)}>
           <Icon name="search" size={22} />
           <input
@@ -266,25 +304,43 @@ export function ShowroomInventoryScreen() {
             <span {...stylex.props(ui.pad)} />
           )}
         </div>
-        {hasUsed && hasNew && (
-          <div role="group" aria-label="Stock condition" {...stylex.props(s.tabs)}>
-            {[
-              ['', 'All cars'],
-              ['Used', 'Used'],
-              ['New', 'New'],
-            ].map(([value, label]) => (
-              <button
-                key={value}
-                type="button"
-                aria-pressed={condition === value}
-                onClick={() => change({ condition: value ? [value] : [] })}
-                {...stylex.props(s.tab, condition === value && s.chosenTab)}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        )}
+        <div role="tablist" aria-label="Vehicle category" {...stylex.props(s.tabs)}>
+          {showroomCategories.map(({ value, label, icon }, index) => (
+            <button
+              key={value}
+              type="button"
+              role="tab"
+              id={'category-' + value}
+              aria-controls="showroom-stock"
+              aria-label={label}
+              aria-selected={filters.category === value}
+              tabIndex={filters.category === value ? 0 : -1}
+              title={label}
+              onClick={() => selectCategory(value)}
+              onKeyDown={(event) => {
+                const next =
+                  event.key === 'ArrowRight'
+                    ? (index + 1) % showroomCategories.length
+                    : event.key === 'ArrowLeft'
+                      ? (index + showroomCategories.length - 1) % showroomCategories.length
+                      : event.key === 'Home'
+                        ? 0
+                        : event.key === 'End'
+                          ? showroomCategories.length - 1
+                          : null;
+                if (next === null) return;
+                event.preventDefault();
+                selectCategory(showroomCategories[next].value);
+                event.currentTarget.parentElement
+                  ?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
+                  [next]?.focus({ preventScroll: true });
+              }}
+              {...stylex.props(s.tab, filters.category === value && s.chosenTab)}
+            >
+              <Icon name={icon} size={40} />
+            </button>
+          ))}
+        </div>
         <div {...stylex.props(s.filterRow)}>
           <button
             type="button"
@@ -313,10 +369,15 @@ export function ShowroomInventoryScreen() {
           </div>
         </div>
       </section>
-      <section aria-label="Cars" {...stylex.props(s.content)}>
+      <section
+        id="showroom-stock"
+        role="tabpanel"
+        aria-labelledby={'category-' + filters.category}
+        {...stylex.props(s.content)}
+      >
         <div {...stylex.props(s.toolbar)}>
           <h1 aria-live="polite" {...stylex.props(s.count)}>
-            {results.length} {results.length === 1 ? 'car' : 'cars'}
+            {results.length} {results.length === 1 ? category.singular : category.plural}
           </h1>
           <div {...stylex.props(ui.row)}>
             {active && (
@@ -326,7 +387,12 @@ export function ShowroomInventoryScreen() {
             )}
             <button
               type="button"
-              aria-label={'Sort cars: ' + showroomSorts.find(([value]) => value === sort)?.[1]}
+              aria-label={
+                'Sort ' +
+                category.plural +
+                ': ' +
+                showroomSorts.find(([value]) => value === sort)?.[1]
+              }
               aria-haspopup="dialog"
               onClick={(event) => openSheet('sort', event.currentTarget)}
               {...stylex.props(s.sort)}
@@ -344,27 +410,35 @@ export function ShowroomInventoryScreen() {
           </div>
         ) : (
           <div {...stylex.props(ui.empty)}>
-            <Icon name="car" size={40} />
-            <h2 {...stylex.props(ui.title)}>No cars match these filters</h2>
-            <p>Try another make, a wider budget or fewer filters.</p>
-            <Button onClick={reset}>Show all cars</Button>
+            <Icon name={category.icon} size={40} />
+            <h2 {...stylex.props(ui.title)}>
+              {stock.length
+                ? 'No ' + category.plural + ' match these filters'
+                : 'No ' + category.plural + ' listed yet'}
+            </h2>
+            <p>
+              {stock.length
+                ? 'Try another make, a wider budget or fewer filters.'
+                : 'Choose another vehicle category to browse this showroom’s inventory.'}
+            </p>
+            <Button onClick={stock.length ? reset : () => selectCategory('car')}>
+              {stock.length ? 'Show all ' + category.plural : 'View cars'}
+            </Button>
           </div>
         )}
         <p {...stylex.props(s.note)}>Sample inventory · Showroom template preview</p>
       </section>
-      {sheet === 'make' && (
+      {sheet === 'make' && filters.category === 'car' && (
         <MakePicker
           open
           availableMakes={stockMakes}
           filters={filters}
           onApply={change}
-          onClose={() => {
-            if (returnToFilters) {
-              setSheet('all');
-              setReturnToFilters(false);
-            } else close();
-          }}
+          onClose={closeMake}
         />
+      )}
+      {sheet === 'make' && filters.category !== 'car' && (
+        <CategoryMakePicker filters={filters} onApply={change} onClose={closeMake} />
       )}
       {sheet && sheet !== 'make' && sheet !== 'sort' && (
         <ShowroomFilterSheet
@@ -380,9 +454,9 @@ export function ShowroomInventoryScreen() {
           }}
         />
       )}
-      <Modal open={sheet === 'sort'} onClose={close} label="Sort cars">
+      <Modal open={sheet === 'sort'} onClose={close} label={'Sort ' + category.plural}>
         <div {...stylex.props(s.modalHead)}>
-          <h2 {...stylex.props(ui.title)}>Sort cars</h2>
+          <h2 {...stylex.props(ui.title)}>Sort {category.plural}</h2>
           <IconButton icon="close" label="Close sorting" onClick={close} />
         </div>
         {showroomSorts.map(([value, label]) => (

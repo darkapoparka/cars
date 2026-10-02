@@ -5,6 +5,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { nativeMakesFor } from '@/lib/native-taxonomy';
 import { applyMakeSelection, removeMakeSelection } from '@/lib/make-selection';
 import { updateFilters, useAppState } from '@/lib/store';
+import type { Filters } from '@/lib/types';
 import { Modal, ui } from './ui';
 import { DialogActions } from './FilterDialog';
 import { Icon } from './Icon';
@@ -103,12 +104,18 @@ export function CategoryMakePicker({
   initialMake = '',
   initialExclude = false,
   onClose,
+  filters: suppliedFilters,
+  onApply,
 }: {
   initialMake?: string;
   initialExclude?: boolean;
   onClose: () => void;
+  filters?: Filters;
+  onApply?: (patch: Partial<Filters>) => void;
 }) {
-  const { filters } = useAppState();
+  const state = useAppState();
+  const filters = suppliedFilters || state.filters;
+  const changeFilters = onApply || updateFilters;
   const [screen, setScreen] = useState<'summary' | 'make'>('summary');
   const [exclude, setExclude] = useState(false);
   const [editingMake, setEditingMake] = useState<string | null>(null);
@@ -258,7 +265,7 @@ export function CategoryMakePicker({
           onApply={
             screen === 'summary'
               ? () => {
-                  updateFilters(draft);
+                  changeFilters(draft);
                   onClose();
                 }
               : undefined

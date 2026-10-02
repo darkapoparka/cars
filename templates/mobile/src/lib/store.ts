@@ -129,6 +129,7 @@ export function switchVehicleCategory(category: Filters['category']) {
       details: next.details.filter((value) => !value.startsWith('truckCategory=')),
     };
   patchState({ filters: normalizeFilters(next), categoryFilters: snapshots });
+  return state.filters;
 }
 
 export function removeParkedVehicle(id: string) {

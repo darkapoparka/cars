@@ -30,10 +30,39 @@ export const showroomSorts = [
   ['mileage', 'Lowest mileage first'],
 ] as const;
 
+export const showroomCategories = [
+  { value: 'car', label: 'Cars', singular: 'car', plural: 'cars', icon: 'car' },
+  { value: 'bike', label: 'Motorbikes', singular: 'motorbike', plural: 'motorbikes', icon: 'bike' },
+  {
+    value: 'electric-bike',
+    label: 'E-bikes',
+    singular: 'e-bike',
+    plural: 'e-bikes',
+    icon: 'electric',
+  },
+  {
+    value: 'motorhome',
+    label: 'Motorhomes',
+    singular: 'motorhome',
+    plural: 'motorhomes',
+    icon: 'motorhome',
+  },
+  {
+    value: 'truck',
+    label: 'Trucks & more',
+    singular: 'vehicle',
+    plural: 'vehicles',
+    icon: 'truck',
+  },
+] as const;
+
+export function showroomCategory(category: Filters['category']) {
+  return showroomCategories.find(({ value }) => value === category) || showroomCategories[0];
+}
+
 export function showroomFilters(filters: Filters): Filters {
   return normalizeFilters({
     ...filters,
-    category: 'car',
     payment: 'buy',
     seller: 'Any',
     location: '',

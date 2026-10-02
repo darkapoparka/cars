@@ -1,0 +1,237 @@
+{
+  "at": "2026-10-02T02:47:28.815Z",
+  "base": "http://127.0.0.1:6474",
+  "checks": [
+    {
+      "engine": "chromium",
+      "description": "Cars is Home; three navigation destinations; stock visible on entry"
+    },
+    {
+      "engine": "chromium",
+      "description": "Search, reload and clear filter the same inventory"
+    },
+    {
+      "engine": "chromium",
+      "description": "Motorbikes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "E-bikes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "Motorhomes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "Trucks & more empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "All five native category tabs select real categories; empty stock never shows cars; keyboard navigation works"
+    },
+    {
+      "engine": "chromium",
+      "description": "Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category"
+    },
+    {
+      "engine": "chromium",
+      "description": "Used/New condition choices live in Filters and work separately or together"
+    },
+    {
+      "engine": "chromium",
+      "description": "Price, year and fuel sheets update listings without a results-page step"
+    },
+    {
+      "engine": "chromium",
+      "description": "Existing make picker returns to all filters; Escape restores each opener"
+    },
+    {
+      "engine": "chromium",
+      "description": "Make and model selections filter the showroom stock"
+    },
+    {
+      "engine": "chromium",
+      "description": "Sort survives tabs; Back through related cars restores inventory URL and scroll"
+    },
+    {
+      "engine": "chromium",
+      "description": "Saved cars persist on reload and can be removed without registration"
+    },
+    {
+      "engine": "chromium",
+      "description": "Service and vehicle enquiries retain context; draft save sends no request"
+    },
+    {
+      "engine": "chromium",
+      "description": "Old search/results links resolve to Cars; empty results offer recovery"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /car-park: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "1440px /vehicle/bmw-x6: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /services: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px 200% text /contact: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "chromium",
+      "description": "320/390/1440px routes, short-height sheets and 200% text reflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "Cars is Home; three navigation destinations; stock visible on entry"
+    },
+    {
+      "engine": "webkit",
+      "description": "Search, reload and clear filter the same inventory"
+    },
+    {
+      "engine": "webkit",
+      "description": "Motorbikes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "webkit",
+      "description": "E-bikes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "webkit",
+      "description": "Motorhomes empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "webkit",
+      "description": "Trucks & more empty inventory: no horizontal overflow or broken images"
+    },
+    {
+      "engine": "webkit",
+      "description": "All five native category tabs select real categories; empty stock never shows cars; keyboard navigation works"
+    },
+    {
+      "engine": "webkit",
+      "description": "Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category"
+    },
+    {
+      "engine": "webkit",
+      "description": "Used/New condition choices live in Filters and work separately or together"
+    },
+    {
+      "engine": "webkit",
+      "description": "Price, year and fuel sheets update listings without a results-page step"
+    },
+    {
+      "engine": "webkit",
+      "description": "Existing make picker returns to all filters; Escape restores each opener"
+    },
+    {
+      "engine": "webkit",
+      "description": "Make and model selections filter the showroom stock"
+    },
+    {
+      "engine": "webkit",
+      "description": "Sort survives tabs; Back through related cars restores inventory URL and scroll"
+    },
+    {
+      "engine": "webkit",
+      "description": "Saved cars persist on reload and can be removed without registration"
+    },
+    {
+      "engine": "webkit",
+      "description": "Service and vehicle enquiries retain context; draft save sends no request"
+    },
+    {
+      "engine": "webkit",
+      "description": "Old search/results links resolve to Cars; empty results offer recovery"
+    }
+  ],
+  "errors": [],
+  "captures": [
+    "chromium-cars-390.png",
+    "chromium-cars-320.png",
+    "chromium-services-320.png",
+    "chromium-contact-320.png",
+    "chromium-car-park-320.png",
+    "chromium-vehicle-bmw-x6-320.png",
+    "chromium-cars-390.png",
+    "chromium-services-390.png",
+    "chromium-contact-390.png",
+    "chromium-car-park-390.png",
+    "chromium-vehicle-bmw-x6-390.png",
+    "chromium-cars-1440.png",
+    "chromium-services-1440.png",
+    "chromium-contact-1440.png",
+    "chromium-car-park-1440.png",
+    "chromium-vehicle-bmw-x6-1440.png",
+    "chromium-short-filters.png",
+    "chromium-short-price.png",
+    "chromium-short-sort.png",
+    "chromium-cars-320-text200.png",
+    "chromium-services-320-text200.png",
+    "chromium-contact-320-text200.png",
+    "webkit-cars-390.png"
+  ],
+  "passed": true
+}
