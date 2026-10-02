@@ -1,0 +1,471 @@
+{
+  "checks": [
+    {
+      "columns": "281px",
+      "interactiveElements": 0,
+      "items": [
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 263.1875,
+            "height": 127,
+            "left": 12,
+            "right": 293,
+            "top": 136.1875,
+            "width": 281,
+            "x": 12,
+            "y": 136.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "1. Изберете автомобил"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 389.1875,
+            "height": 114,
+            "left": 12,
+            "right": 293,
+            "top": 275.1875,
+            "width": 281,
+            "x": 12,
+            "y": 275.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "2. Документи"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 515.1875,
+            "height": 114,
+            "left": 12,
+            "right": 293,
+            "top": 401.1875,
+            "width": 281,
+            "x": 12,
+            "y": 401.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "3. Условия"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 654.1875,
+            "height": 127,
+            "left": 12,
+            "right": 293,
+            "top": 527.1875,
+            "width": 281,
+            "x": 12,
+            "y": 527.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "4. Сравнете офертите"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 780.1875,
+            "height": 114,
+            "left": 12,
+            "right": 293,
+            "top": 666.1875,
+            "width": 281,
+            "x": 12,
+            "y": 666.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "5. Одобрение"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 906.1875,
+            "height": 114,
+            "left": 12,
+            "right": 293,
+            "top": 792.1875,
+            "width": 281,
+            "x": 12,
+            "y": 792.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "6. Предаване"
+        }
+      ],
+      "stepCount": 6,
+      "viewport": {
+        "clientWidth": 305,
+        "height": 900,
+        "scrollWidth": 305,
+        "width": 320
+      }
+    },
+    {
+      "columns": "351px",
+      "interactiveElements": 0,
+      "items": [
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 250.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 136.1875,
+            "width": 351,
+            "x": 12,
+            "y": 136.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "1. Изберете автомобил"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 376.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 262.1875,
+            "width": 351,
+            "x": 12,
+            "y": 262.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "2. Документи"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 502.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 388.1875,
+            "width": 351,
+            "x": 12,
+            "y": 388.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "3. Условия"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 628.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 514.1875,
+            "width": 351,
+            "x": 12,
+            "y": 514.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "4. Сравнете офертите"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 754.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 640.1875,
+            "width": 351,
+            "x": 12,
+            "y": 640.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "5. Одобрение"
+        },
+        {
+          "bodySize": "15px",
+          "box": {
+            "bottom": 880.1875,
+            "height": 114,
+            "left": 12,
+            "right": 363,
+            "top": 766.1875,
+            "width": 351,
+            "x": 12,
+            "y": 766.1875
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "6. Предаване"
+        }
+      ],
+      "stepCount": 6,
+      "viewport": {
+        "clientWidth": 375,
+        "height": 844,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "columns": "340.5px 340.5px",
+      "interactiveElements": 0,
+      "items": [
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 606.65625,
+            "height": 114,
+            "left": 28,
+            "right": 368.5,
+            "top": 492.65625,
+            "width": 340.5,
+            "x": 28,
+            "y": 492.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "1. Изберете автомобил"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 606.65625,
+            "height": 114,
+            "left": 384.5,
+            "right": 725,
+            "top": 492.65625,
+            "width": 340.5,
+            "x": 384.5,
+            "y": 492.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "2. Документи"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 736.65625,
+            "height": 114,
+            "left": 28,
+            "right": 368.5,
+            "top": 622.65625,
+            "width": 340.5,
+            "x": 28,
+            "y": 622.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "3. Условия"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 736.65625,
+            "height": 114,
+            "left": 384.5,
+            "right": 725,
+            "top": 622.65625,
+            "width": 340.5,
+            "x": 384.5,
+            "y": 622.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "4. Сравнете офертите"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 866.65625,
+            "height": 114,
+            "left": 28,
+            "right": 368.5,
+            "top": 752.65625,
+            "width": 340.5,
+            "x": 28,
+            "y": 752.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "5. Одобрение"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 866.65625,
+            "height": 114,
+            "left": 384.5,
+            "right": 725,
+            "top": 752.65625,
+            "width": 340.5,
+            "x": 384.5,
+            "y": 752.65625
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "6. Предаване"
+        }
+      ],
+      "stepCount": 6,
+      "viewport": {
+        "clientWidth": 753,
+        "height": 1024,
+        "scrollWidth": 753,
+        "width": 768
+      }
+    },
+    {
+      "columns": "384px 384px 384px",
+      "interactiveElements": 0,
+      "items": [
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 322.328125,
+            "height": 114,
+            "left": 120.5,
+            "right": 504.5,
+            "top": 208.328125,
+            "width": 384,
+            "x": 120.5,
+            "y": 208.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "1. Изберете автомобил"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 322.328125,
+            "height": 114,
+            "left": 520.5,
+            "right": 904.5,
+            "top": 208.328125,
+            "width": 384,
+            "x": 520.5,
+            "y": 208.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "2. Документи"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 322.328125,
+            "height": 114,
+            "left": 920.5,
+            "right": 1304.5,
+            "top": 208.328125,
+            "width": 384,
+            "x": 920.5,
+            "y": 208.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "3. Условия"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 452.328125,
+            "height": 114,
+            "left": 120.5,
+            "right": 504.5,
+            "top": 338.328125,
+            "width": 384,
+            "x": 120.5,
+            "y": 338.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "4. Сравнете офертите"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 452.328125,
+            "height": 114,
+            "left": 520.5,
+            "right": 904.5,
+            "top": 338.328125,
+            "width": 384,
+            "x": 520.5,
+            "y": 338.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "5. Одобрение"
+        },
+        {
+          "bodySize": "16px",
+          "box": {
+            "bottom": 452.328125,
+            "height": 114,
+            "left": 920.5,
+            "right": 1304.5,
+            "top": 338.328125,
+            "width": 384,
+            "x": 920.5,
+            "y": 338.328125
+          },
+          "fontSize": "18px",
+          "imageLoaded": true,
+          "lineHeight": "24px",
+          "title": "6. Предаване"
+        }
+      ],
+      "stepCount": 6,
+      "viewport": {
+        "clientWidth": 1425,
+        "height": 1000,
+        "scrollWidth": 1425,
+        "width": 1440
+      }
+    }
+  ],
+  "structure": {
+    "benefitButtons": 4,
+    "budgetBanner": 1,
+    "calculator": true,
+    "calculatorButtonPresent": true,
+    "hero": "Финансирайте следващия си автомобил.Финансиране."
+  }
+}

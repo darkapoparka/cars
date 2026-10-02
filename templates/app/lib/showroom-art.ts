@@ -34,6 +34,14 @@ function artwork(theme: BannerTheme) {
     financeBenefits: [1, 2, 3, 4].map(index => theme === 'black'
       ? `/showroom/black/finance-benefit-${index}-v1.png`
       : `/reference-assets/finance-benefit-${index}.png`),
+    financeSteps: [
+      '/cutouts/buy-sedan-v1.png',
+      '/reference-assets/continuation/finance-item2.png',
+      '/reference-assets/continuation/finance-item3.png',
+      '/services/finance.webp',
+      '/reference-assets/continuation/finance-item4.png',
+      '/reference-assets/continuation/finance-keys.png',
+    ],
     selling: {
       direct: `${base}/sell-direct-v1.png`,
       exchange: `${base}/sell-exchange-v1.png`,
