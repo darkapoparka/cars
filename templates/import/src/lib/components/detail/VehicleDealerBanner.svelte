@@ -1,5 +1,4 @@
 <script lang="ts">
-	import MapPin from '@lucide/svelte/icons/map-pin';
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 	import { site } from '$lib/config/site';
 	import { daynightAssets } from '$lib/config/dealer';
@@ -33,7 +32,6 @@
 		<p>{copy.appointment}</p>
 	</div>
 	<span class="dealer-banner__address">
-		<span class="dealer-banner__map-icon"><MapPin size={18} aria-hidden="true" /></span>
 		<span>{copy.address}</span>
 		<ArrowUpRight size={18} aria-hidden="true" />
 	</span>
@@ -90,27 +88,19 @@
 	}
 	.dealer-banner__address {
 		display: grid;
-		grid-template-columns: auto minmax(0, 1fr) auto;
+		grid-template-columns: minmax(0, 1fr) auto;
 		align-items: center;
 		gap: var(--bc-space-3);
 		font-size: var(--bc-text-label);
 		line-height: var(--bc-leading-h7);
 		font-weight: var(--bc-weight-body);
 	}
-	.dealer-banner__map-icon {
-		display: grid;
-		place-items: center;
-		width: var(--bc-space-8);
-		height: var(--bc-space-8);
-		border-radius: var(--bc-radius-pill);
-		background: color-mix(in srgb, var(--bc-white) 12%, transparent);
-	}
 	.dealer-banner:hover,
 	.dealer-banner:focus-visible {
 		color: var(--bc-white);
 	}
-	.dealer-banner:hover .dealer-banner__address > span:not(.dealer-banner__map-icon),
-	.dealer-banner:focus-visible .dealer-banner__address > span:not(.dealer-banner__map-icon) {
+	.dealer-banner:hover .dealer-banner__address > span,
+	.dealer-banner:focus-visible .dealer-banner__address > span {
 		text-decoration: underline;
 		text-underline-offset: var(--bc-space-1);
 	}
