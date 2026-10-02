@@ -1,10 +1,14 @@
 # Mobile location headings — 2 October 2026
 
 About and general Contact use a plain, left aligned “Карта” / “Map” heading with
-a muted address below it. PDP keeps “Местоположение” / “Location”. The mobile
+a muted compact street/number/city address below it. PDP keeps “Местоположение” / “Location”
+and the same compact mobile address. The mobile
 heading and address have no location icon. General Contact's mobile details card
 uses plain address, visit and phone rows with right arrows; the leading red icons
-are hidden. Mobile map directions are left aligned, with the arrow beside the
+are hidden. Each arrow aligns with its title, and the short description spans
+the full row below. The Contact entry title and introduction are centered,
+including their width-capped blocks on wider mobile screens. Mobile map directions
+are left aligned, with the arrow beside the
 label. About/Contact's map title, address and directions share the same left
 inset. Desktop keeps its existing map composition and PDP address icon.
 
@@ -53,3 +57,21 @@ PDP retains its centered map action. CSS policy, tokens, typography, Svelte chec
 (zero errors/warnings) and the production build passed. Evidence is under
 `runtime/map-link-alignment-20261002/`: both `review-*.json` reports,
 `preview-390.png`, `static-checks.log`, `check.log` and `build.log`.
+
+The compact details and row layout passed thirteen Chromium states and three
+Windows WebKit states. BG/EN Contact covers 320/390px and 200% text at 320px,
+plus the wider 991px entry card. About and PDP cover both locales at 320px.
+Contact and PDP desktop checks retain the full address and existing composition.
+At normal text size, each Contact description and map address occupies one line;
+enlarged copy wraps without clipping. Title/arrow alignment, full-width second
+rows, centered intro geometry, focus and Chromium Tab order, original telephone
+and full-address/coordinate destinations, and page overflow passed.
+
+The locale suite passed all 27 tests, including native compact-copy selection
+and older dealer configurations retaining their own full localized fields.
+Final CSS policy, token and typography checks passed. Svelte check reported zero
+errors/warnings and the production build passed. Evidence is under
+`runtime/contact-copy-layout-20261002/`: both `review-*.json` reports,
+`contact-390.png`, `locales-test.log`, `static-checks-final.log`, `check.log`
+and `build.log`. The authored compact copy lives in `src/lib/config/locale.ts`
+and `localization/dealer.reviewed.json`; generated outputs were rebuilt.

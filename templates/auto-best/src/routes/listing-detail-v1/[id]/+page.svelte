@@ -198,7 +198,11 @@
             <section class="dn-detail-card dn-detail-location-card" id="location" aria-labelledby="location-title">
               <div class="dn-detail-location-card__header">
                 <h2 id="location-title">{i18n.t("m_15b61974b270")}</h2>
-                <p><span class="dn-detail-location-card__address-pin"><Icon name="map-pin" size={20} strokeWidth={1.7} /></span>{i18n.dealer('address')}</p>
+                <p>
+                  <span class="dn-detail-location-card__address-pin"><Icon name="map-pin" size={20} strokeWidth={1.7} /></span>
+                  <span class="dn-detail-location-card__address--wide">{i18n.dealer('address')}</span>
+                  <span class="dn-detail-location-card__address--mobile">{i18n.dealer('address', true)}</span>
+                </p>
               </div>
               <ShowroomMap />
             </section>

@@ -670,6 +670,8 @@
   .dn-contact-section--general { position: relative; z-index: 1; margin-top: calc(-1 * (var(--dn-space-8) + var(--dn-space-5))); background: linear-gradient(to bottom, transparent calc(var(--dn-space-8) + var(--dn-space-5)), var(--dn-mobile-canvas) 0); }
   .dn-contact-section--general > .container { width: min(100%, 784px); padding-inline: var(--dn-space-3); }
   .dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card { container-type: inline-size; margin: 0; padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-lg); }
+  .dn-contact-intent--general .dn-contact-intent__heading,
+  .dn-contact-intent--general .dn-contact-selected { width: 100%; margin-inline: auto; }
   .dn-contact-intent--general .dn-contact-intent__heading h1 {
     margin: 0;
     color: var(--dn-ink);
@@ -680,6 +682,7 @@
     text-align: center;
   }
   .dn-contact-section--general .dn-contact-intent--general .dn-contact-selected { text-align: center; }
+  .dn-contact-intent--general .dn-contact-selected p { margin-inline: auto; }
   .dn-contact-primary-actions { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
   .dn-contact-primary-actions .dn-entry-action { width: 100%; min-width: 0; padding-inline: var(--dn-space-3); }
   .dn-contact-intent--general .dn-contact-primary-actions .dn-contact-primary-directions { --dn-compact-control-surface: var(--dn-home-panel); }
@@ -689,9 +692,26 @@
   .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
   .dn-contact-intent--general .dn-contact-card__link {
     grid-template-columns: minmax(0, 1fr) 20px;
-    gap: var(--dn-space-4);
+    column-gap: var(--dn-space-4);
+    row-gap: 3px;
+    align-content: center;
   }
   .dn-contact-intent--general .dn-contact-card__icon { display: none; }
+  .dn-contact-intent--general .dn-contact-card__copy { display: contents; }
+  .dn-contact-intent--general .dn-contact-card__copy strong {
+    min-width: 0;
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .dn-contact-intent--general .dn-contact-card__copy > span {
+    min-width: 0;
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+  .dn-contact-intent--general .dn-contact-card__cue {
+    grid-column: 2;
+    grid-row: 1;
+  }
   .dn-contact-section--general .dn-contact-location { margin-top: var(--dn-space-6); }
   .dn-contact-section--general .dn-contact-location__card {
     overflow: hidden;

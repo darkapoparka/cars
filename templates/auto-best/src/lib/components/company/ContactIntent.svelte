@@ -125,7 +125,7 @@
         <span class="dn-contact-card__icon"><Icon name="map-pin" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
           <strong>{i18n.t("m_56ef8f20955f")}</strong>
-          <span>{i18n.dealer('address')}</span>
+          <span>{i18n.dealer('address', topic.id === 'general')}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />
@@ -141,7 +141,7 @@
         <span class="dn-contact-card__icon"><Icon name="clock" size={24} strokeWidth={1.8} /></span>
         <span class="dn-contact-card__copy">
           <strong>{i18n.t("m_f514c310bd9e")}</strong>
-          <span>{i18n.dealer('appointment')}</span>
+          <span>{i18n.dealer('appointment', topic.id === 'general')}</span>
         </span>
         <span class="dn-contact-card__cue" aria-hidden="true">
           <Icon name="arrow-right" size={20} strokeWidth={1.8} />

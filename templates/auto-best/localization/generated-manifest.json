@@ -4,8 +4,8 @@
     "en",
     "bg"
   ],
-  "messages": 1027,
-  "catalogSha256": "4de7278cc859143bf777eb5158177265e4f299d39d0bcefc488da4ac02d2c7c4",
+  "messages": 1029,
+  "catalogSha256": "143acf88564776c5371930b05adb8deaf4111960df3203d3e3e1e7c4a15dfc3d",
   "sources": [
     "localization/common.json",
     "localization/catalog.reviewed.json",
@@ -16,7 +16,7 @@
     "localization/common.json": "bfaab5aa0b1b9f965b28f772efc9823d4894e1b2c92774a6bd41be3be2802925",
     "localization/catalog.reviewed.json": "5e878df9d64a3289ff415e9a45f65ff5f6a30ff62c1ae40cbc07b9ccc80489cd",
     "localization/template.reviewed.json": "e8276265d20a7069f25dfca610af2fa39125bb2f7ae392c174a5a4a9bd30c1b5",
-    "localization/dealer.reviewed.json": "22ebd7f3ba2ce8ff5e78964797431bad1075e46c67cfea194f5b024ca0a7ff2f"
+    "localization/dealer.reviewed.json": "26b9efbe79b547ee75735a8fa9f81e2e03d4e90f9e2e630bb01f7ce17cec2e72"
   },
   "policySha256": "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc",
   "ambiguousAliases": [
@@ -25,6 +25,7 @@
     "Arrange a viewing",
     "Automatic",
     "Browse cars",
+    "By appointment",
     "Car search",
     "Choose JPG, PNG or WebP photos.",
     "Choosing a car",

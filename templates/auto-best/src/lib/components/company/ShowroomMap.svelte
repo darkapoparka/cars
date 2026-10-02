@@ -32,7 +32,7 @@
       <h2 class="dn-showroom-map__heading" id={headingId}>
         {i18n.t('label.map')}
       </h2>
-      <p class="dn-showroom-map__address">{address}</p>
+      <p class="dn-showroom-map__address">{i18n.dealer('address', true)}</p>
     </div>
   {/if}
   <div class="dn-showroom-map__canvas" {@attach observeMap}>

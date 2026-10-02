@@ -22,13 +22,17 @@ export const dealerLocalizedText = {
     city: 'Sofia',
     addressLine: '18 Atanas Manchev Street, Studentski Grad',
     address: '18 Atanas Manchev Street, Studentski Grad, Sofia',
-    appointment: 'Visits by appointment'
+    addressShort: '18 Atanas Manchev St, Sofia',
+    appointment: 'Visits by appointment',
+    appointmentShort: 'By appointment'
   },
   bg: {
     city: brand.city,
     addressLine: brand.addressLine,
     address: brand.address,
-    appointment: brand.appointment
+    addressShort: 'ул. „Атанас Манчев“ 18, София',
+    appointment: brand.appointment,
+    appointmentShort: 'С предварителна уговорка'
   }
 } as const;
 

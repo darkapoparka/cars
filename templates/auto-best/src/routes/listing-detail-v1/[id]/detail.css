@@ -304,6 +304,7 @@
 }
 
 .dn-detail-location-card__address-pin { display: flex; flex: 0 0 auto; }
+.dn-detail-location-card__address--mobile { display: none; }
 
 .dn-detail-sidebar {
   display: grid;
@@ -523,6 +524,8 @@
     text-align: left;
   }
   .dn-detail-location-card__address-pin { display: none; }
+  .dn-detail-location-card__address--wide { display: none; }
+  .dn-detail-location-card__address--mobile { display: inline; }
   .dn-detail-location-card__header p { text-align: left; }
   .dn-detail-sidebar { position: static; }
   .dn-detail-summary { position: static; min-height: 0; }
