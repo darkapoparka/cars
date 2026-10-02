@@ -22,24 +22,58 @@
 		'transmission-2.svg': Settings,
 		'QrCode.svg': QrCode
 	};
+	const primaryIcons = new Set([
+		'icon-gauge.svg',
+		'calendar.svg',
+		'gaspump.svg',
+		'Frame.svg',
+		'transmission-2.svg'
+	]);
+	const groups = $derived(
+		[
+			{
+				id: 'primary',
+				title: english ? 'Vehicle details' : 'Основни данни',
+				items: items.filter((item) => primaryIcons.has(item.icon))
+			},
+			{
+				id: 'additional',
+				title: english ? 'Details' : 'Детайли',
+				items: items.filter((item) => !primaryIcons.has(item.icon))
+			}
+		].filter((group) => group.items.length)
+	);
 </script>
 
-<section class="site-panel vehicle-facts">
-	<h2>{english ? 'Vehicle details' : 'Основни данни'}</h2>
-	<dl>
-		{#each items as item (item.label)}
-			{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
-			<div>
-				<dt><Icon size={18} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span></dt>
-				<dd>{item.value || '—'}</dd>
-			</div>
+<div class="vehicle-facts">
+	<div class="vehicle-facts__panels">
+		{#each groups as group (group.id)}
+			<section class="site-panel vehicle-facts__panel">
+				<h2>{group.title}</h2>
+				<dl>
+					{#each group.items as item (item.label)}
+						{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
+						<div>
+							<dt>
+								<Icon size={18} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span>
+							</dt>
+							<dd>{item.value || '—'}</dd>
+						</div>
+					{/each}
+				</dl>
+			</section>
 		{/each}
-	</dl>
-</section>
+	</div>
+</div>
 
 <style>
 	.vehicle-facts {
 		container: vehicle-facts / inline-size;
+	}
+	.vehicle-facts__panels {
+		display: grid;
+		align-items: start;
+		gap: var(--bc-space-6);
 	}
 	dl {
 		display: grid;
@@ -80,16 +114,8 @@
 		overflow-wrap: anywhere;
 	}
 	@container vehicle-facts (min-width: 40rem) {
-		dl {
+		.vehicle-facts__panels {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-			column-gap: var(--bc-space-8);
-		}
-		dl > div:nth-child(2) {
-			padding-top: 0;
-		}
-		dl > div:nth-last-child(-n + 2) {
-			border-bottom: 0;
-			padding-bottom: 0;
 		}
 	}
 </style>
