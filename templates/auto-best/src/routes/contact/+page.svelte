@@ -7,6 +7,7 @@
   import ContactHero from '$components/company/ContactHero.svelte';
   import ServiceLanding from '$components/company/ServiceLanding.svelte';
   import DesktopShowroom from '$components/company/DesktopShowroom.svelte';
+  import ContactSocialChannels from '$components/company/ContactSocialChannels.svelte';
   import ContactIntent from '$components/company/ContactIntent.svelte';
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import { brand } from '$config/brand';
@@ -37,7 +38,8 @@
     <ContactIntent vehicle={data.vehicle} topic={data.topic} importUrl={data.importUrl} />
 
     {#if data.topic.id === 'general'}
-      <DesktopShowroom id="contact-showroom-desktop-title" compact />
+      <DesktopShowroom id="contact-showroom-desktop-title" showSocialProfiles={false} />
+      <ContactSocialChannels />
       <div class="dn-contact-location dn-contact-location--general" aria-labelledby="contact-location-title">
         <div class="dn-contact-location__card">
           <div class="dn-contact-location__heading">

@@ -131,8 +131,16 @@ glyph rendering (including Cyrillic), visible images, page overflow and runtime
 errors. Desktop content canvases are light grey with white cards;
 all heroes use white headings on dark campaign artwork. About shares the black
 palette and no longer uses the warm architectural photograph.
-Contact keeps its call action and keyboard-accessible directions anchor. Its compact
-visit panel follows the hero without overlap. Home keeps its white location
+Contact keeps its call action and keyboard-accessible directions anchor. Its
+visit panel follows the hero without overlap. Its contact column is capped at
+360px on both About and Contact; the framed map fills the remaining width, and both share the same top and
+bottom edges inside 32px panel padding. Address and appointment values must wrap
+without clipping, and the stacked phone/directions actions stay at the bottom.
+Check both actions' destinations and keyboard focus. Address and visit rows use
+plain labels and values without icons. About's desktop service heading shows the
+configured light-surface logo with its business name as the accessible heading;
+verify proportion, image decoding and the unchanged service destinations.
+Home keeps its white location
 badge; About uses a plain location subtitle. About/Contact share one white visit
 panel with a real map and call/directions
 actions. The map mounts after desktop hydration and is absent from mobile DOM;
@@ -141,7 +149,10 @@ inspection and is not established by the iframe URL assertion.
 Inventory shows its concise count below the hero title,
 with applied and zero-result cases checked in BG/EN. Hero and map social controls
 render only configured profiles. General Contact replaces the desktop footer's
-service cards with Facebook, YouTube and Instagram channels. Preview-only empty
+service cards with one white Facebook, YouTube and Instagram panel below the
+visit card. Its title sits above three bordered profile cards, with round brand
+icons and labels underneath. Cards keep a 16px gap and equal heights;
+check that it shares the visit card's width, radius and 32px spacing. Preview-only empty
 profiles are labelled samples and have no link or keyboard action; published
 pages omit missing profiles and omit the section if none are configured.
 Check the row at 992px and 1440px, with normal and enlarged text, in BG/EN;

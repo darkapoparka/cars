@@ -54,7 +54,7 @@ Start with verified business name, usable logo, phone, location and destinations
 
 Update both textual address and `showroomCoordinates`; changing only the address will not move the map pin. Set the actual social profiles and review all displayed video records. A new YouTube channel URL does not replace the inherited thumbnail/video selection.
 
-General Contact uses the configured Facebook, YouTube and Instagram URLs in its desktop social row above the footer. In preview mode, empty URLs display labelled, noninteractive sample profiles. Published mode omits them; with no configured profiles, the entire row is omitted. Keep real dealer destinations in `brand.ts`. The hero, visit panel and mobile social controls continue to show only configured profiles.
+General Contact uses the configured Facebook, YouTube and Instagram URLs in one white desktop panel below the visit card. Its title sits above three bordered profile cards, with round brand icons and labels underneath. In preview mode, empty URLs display labelled, noninteractive sample profiles. Published mode omits them; with no configured profiles, the entire panel is omitted. Keep real dealer destinations in `brand.ts`. The hero, About visit panel and mobile social controls continue to show only configured profiles.
 
 ## Inventory
 

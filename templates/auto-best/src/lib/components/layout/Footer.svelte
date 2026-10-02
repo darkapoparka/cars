@@ -8,10 +8,9 @@
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
-  import ContactSocialChannels from '$components/company/ContactSocialChannels.svelte';
   import { brand } from '$config/brand';
 
-  let { showActions = true, socialActions = false, showMobileFooter = false, observeFooter }: { showActions?: boolean; socialActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
+  let { showActions = true, hideDesktopActions = false, showMobileFooter = false, observeFooter }: { showActions?: boolean; hideDesktopActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = $derived([
@@ -43,8 +42,7 @@
 </script>
 
 {#if showActions}
-  {#if socialActions}<ContactSocialChannels />{/if}
-  <section class="dn-footer-actions" class:dn-footer-actions--contact={socialActions} aria-label={i18n.t("m_920d4a55469d")}>
+  <section class="dn-footer-actions" class:dn-footer-actions--desktop-hidden={hideDesktopActions} aria-label={i18n.t("m_920d4a55469d")}>
     <div class="container dn-footer-actions__grid">
       {#each actions as action (action.href)}
         <a href={i18n.href(resolve(action.href))}>
@@ -110,7 +108,7 @@
   .dn-footer-actions a:hover strong { color: var(--dn-red); }
   .dn-footer-actions a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; border-radius: var(--dn-radius); }
   @media (min-width: 992px) {
-    .dn-footer-actions--contact { display: none; }
+    .dn-footer-actions--desktop-hidden { display: none; }
   }
   @media (min-width: 768px) and (hover: hover) {
     .dn-footer-actions__grid > a { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }

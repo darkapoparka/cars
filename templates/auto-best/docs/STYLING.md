@@ -43,16 +43,37 @@ address and appointment copy, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available
 without JavaScript or when the provider is unavailable. Mobile uses its own
-intro and contact cards. General Contact uses the compact desktop visit panel below
-the complete hero, with a 32px gap. Its map area reserves both grid rows before
-hydration so the external map link stays at the bottom while the iframe mounts.
+intro and contact cards. General Contact places the desktop visit panel below
+the complete hero, with a 32px gap. About and Contact share one white panel with
+32px padding, a contact column capped at 360px and the remaining width for an
+inset, bordered map. Address and appointment rows use plain muted labels and darker values. The
+call and directions actions span the contact column and align to its bottom.
+The map area reserves both grid rows before hydration so the external map link
+stays at the bottom while the iframe mounts.
+
+About's service panel uses the configured transparent light-surface logo above
+its introduction and service cards on desktop. The image replaces the visible
+business-name heading while retaining its accessible heading name. Its bounded
+220px by 58px image box preserves the logo's proportions without a decorative
+background. Mobile retains its existing service composition.
 
 `DesktopSocialLinks.svelte` renders the same 44px social controls in both company
-heroes and visit panels. Hero controls sit 24px below the primary actions and use
+heroes and About's visit panel. General Contact uses its dedicated profile cards
+below the visit panel. Hero controls sit 24px below the primary actions and use
 a white keyboard focus ring against dark hero artwork. Visit panels use the
 shared focus colour. Profiles come only from `brand.ts`.
 Empty profile URLs omit the corresponding icon instead of creating dead links.
 The existing mobile social layout remains separate.
+
+General Contact places `ContactSocialChannels.svelte` directly below its desktop
+visit panel, using the same content width, white surface and 20px corner radius.
+The panel has 32px padding and a 32px gap above it. Its title sits above a centered
+row of profile cards with a pale surface, 1px border, 16px radius and 24px padding.
+Cards share the row evenly up to 400px each, with 16px gaps. Their 52px round brand
+icons sit above platform names and sample labels. Preview-only missing URLs are
+noninteractive samples; published pages omit
+missing profiles. The shared footer suppresses its desktop service strip on this
+route. Contact owns the social panel in its page content.
 
 Desktop navigation runs Home, Inventory, Guides, About, Contact through the
 `desktopNavigation` export. Its DOM and keyboard order agree; other menus use

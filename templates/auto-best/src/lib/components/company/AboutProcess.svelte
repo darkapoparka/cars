@@ -13,7 +13,13 @@
 <section class="dn-about-process dn-section" id="process" aria-labelledby="about-process-title">
   <div class="container dn-about-process__panel">
     <div class="dn-about-section-heading">
-      <h2 id="about-process-title">{brand.name}</h2>
+      <h2 id="about-process-title">
+        <span class="dn-about-process__name">{brand.name}</span>
+        <picture class="dn-about-process__logo">
+          <source media="(min-width: 992px)" srcset={brand.logo} />
+          <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt={brand.name} width="220" height="58" loading="lazy" decoding="async" />
+        </picture>
+      </h2>
       <p>{i18n.t("m_335a481bffd9", { p0: i18n.dealer('city') })}</p>
     </div>
 
@@ -37,3 +43,13 @@
 
   </div>
 </section>
+
+<style>
+  .dn-about-process__logo { display: none; }
+
+  @media (min-width: 992px) {
+    .dn-about-process__name { display: none; }
+    .dn-about-process__logo { display: flex; justify-content: center; }
+    .dn-about-process__logo img { display: block; width: min(220px, 100%); height: 58px; object-fit: contain; }
+  }
+</style>
