@@ -1,38 +1,33 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
+	import { desktopHeroArtwork } from '$lib/content/desktop-hero-artwork';
 	// Hidden desktop compositions must not download decorative vehicle artwork on phones.
 	const emptyImage = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 </script>
 
 <div class="hero-cars" aria-hidden="true">
-	<picture>
-		<source
-			media="(min-width: 768px)"
-			srcset={assetHref('/assets/daynight/banners/hero-car-left-v1.webp')}
-		/>
-		<img
-			class="hero-cars__left"
-			src={emptyImage}
-			alt=""
-			width="960"
-			height="640"
-			decoding="async"
-		/>
-	</picture>
-	<picture>
-		<source
-			media="(min-width: 768px)"
-			srcset={assetHref('/assets/daynight/banners/hero-car-right-v1.webp')}
-		/>
-		<img
-			class="hero-cars__right"
-			src={emptyImage}
-			alt=""
-			width="960"
-			height="640"
-			decoding="async"
-		/>
-	</picture>
+	{#each desktopHeroArtwork as artwork (artwork.side)}
+		{@const bodyHeight = artwork.bounds[3] - artwork.bounds[1]}
+		<div
+			class="hero-cars__car hero-cars__car--{artwork.side}"
+			class:hero-cars__car--mirrored={artwork.mirrored}
+			style:--art-width-ratio={artwork.width / bodyHeight}
+			style:--art-height-ratio={artwork.height / bodyHeight}
+			style:--art-bottom-ratio={artwork.bounds[3] / bodyHeight}
+			style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / bodyHeight}
+		>
+			<picture>
+				<source media="(min-width: 1200px)" srcset={assetHref(artwork.src)} />
+				<img
+					src={emptyImage}
+					alt=""
+					width={artwork.width}
+					height={artwork.height}
+					decoding="async"
+				/>
+			</picture>
+		</div>
+	{/each}
 </div>
 
 <style>
@@ -40,41 +35,38 @@
 		display: contents;
 	}
 	.hero-cars {
-		position: absolute;
-		inset: 0;
-		z-index: -1;
-		overflow: hidden;
-		pointer-events: none;
+		display: none;
 	}
-	img {
-		position: absolute;
-		top: 50%;
-		width: clamp(360px, 34vw, 640px);
-		max-width: none;
-		height: auto;
-	}
-	.hero-cars__left {
-		left: 0;
-		transform: translate(-28%, -50%);
-	}
-	.hero-cars__right {
-		right: 0;
-		transform: translate(28%, -50%);
-	}
-	@media (max-width: 1199px) {
-		img {
-			opacity: 0.55;
-		}
-		.hero-cars__left {
-			transform: translate(-55%, -50%);
-		}
-		.hero-cars__right {
-			transform: translate(55%, -50%);
-		}
-	}
-	@media (max-width: 767.98px) {
+	@media (min-width: 1200px) {
 		.hero-cars {
-			display: none;
+			--car-height: clamp(120px, 11.111vw, 190px);
+			--car-baseline: calc(100% - var(--bc-space-8));
+			--side-room: calc((100% - var(--bc-desktop-discovery-width)) / 2 - var(--bc-space-6));
+			display: block;
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+			overflow: hidden;
+			pointer-events: none;
+		}
+		.hero-cars__car {
+			position: absolute;
+			top: calc(var(--car-baseline) - var(--car-height) * var(--art-bottom-ratio));
+			width: calc(var(--car-height) * var(--art-width-ratio));
+			height: calc(var(--car-height) * var(--art-height-ratio));
+		}
+		.hero-cars__car--left {
+			left: calc(var(--side-room) - var(--car-height) * var(--art-front-ratio));
+		}
+		.hero-cars__car--right {
+			right: calc(var(--side-room) - var(--car-height) * var(--art-front-ratio));
+		}
+		.hero-cars__car--mirrored {
+			transform: scaleX(-1);
+		}
+		img {
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>

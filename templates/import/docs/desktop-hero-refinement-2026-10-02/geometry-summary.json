@@ -1,0 +1,503 @@
+{
+  "states": 23,
+  "assets": [
+    {
+      "target": "hero-car-left-profile-v1.webp",
+      "reference": "day-night-cutout-gclass-v1.webp",
+      "bytes": 84112,
+      "sha256": "18a3a6d3a1cf1153455add77153db987ed6a7240d99787be00981c8f995d1f6a",
+      "exactCopy": true
+    },
+    {
+      "target": "hero-car-right-profile-v1.webp",
+      "reference": "day-night-cutout-urus-v1.webp",
+      "bytes": 65210,
+      "sha256": "1c7f0d9728f03a7f7fe07d78ef8f5019bcde844fed9c21e07ca4bb38b929d027",
+      "exactCopy": true
+    }
+  ],
+  "geometry": [
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 1280,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.003,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 24.004,
+          "bottomInset": 32.015
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 1280,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.003,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 24.004,
+          "bottomInset": 32.015
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en",
+      "width": 1280,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.003,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 24.004,
+          "bottomInset": 32.015
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en/inventory",
+      "width": 1280,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.003,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 24.004,
+          "bottomInset": 32.015
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 1440,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.011,
+          "bottomInset": 32.025
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.021
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 1440,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.011,
+          "bottomInset": 32.025
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.021
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en",
+      "width": 1440,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.011,
+          "bottomInset": 32.025
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.021
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en/inventory",
+      "width": 1440,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.011,
+          "bottomInset": 32.025
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.021
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 1920,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.015,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.009
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 1920,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.015,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.009
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en",
+      "width": 1920,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.015,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.009
+        }
+      ],
+      "gaps": [],
+      "artHidden": false,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/en/inventory",
+      "width": 1920,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "cars": [
+        {
+          "side": "left",
+          "clearance": 24.015,
+          "bottomInset": 32.013
+        },
+        {
+          "side": "right",
+          "clearance": 23.995,
+          "bottomInset": 32.009
+        }
+      ],
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": false,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 320,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 320,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 390,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 390,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 768,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 768,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 900,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 900,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg",
+      "width": 1024,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/bg/inventory",
+      "width": 1024,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": true
+    },
+    {
+      "url": "http://127.0.0.1:6790/en/inventory?brand=BMW&brand=Audi&model=X3&keyword=Sport&priceTo=50000&layout=dashboard&view=3&sort=lowest-price&campaign=one&campaign=two",
+      "width": 1024,
+      "hydrated": true,
+      "horizontalOverflow": false,
+      "gaps": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "artHidden": true,
+      "inactiveLabelsFit": true,
+      "search": {
+        "width": 44,
+        "height": 44,
+        "radius": "999px"
+      }
+    }
+  ]
+}

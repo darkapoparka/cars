@@ -60,7 +60,7 @@
 		title={actionLabel}
 		class="desktop-search-control__action"
 	>
-		<Search size={22} aria-hidden="true" />
+		<Search size={20} aria-hidden="true" />
 	</Action>
 </div>
 
@@ -73,7 +73,7 @@
 		min-height: var(--bc-control-height-hero);
 		padding: var(--bc-space-1);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
+		border-radius: var(--bc-radius-pill);
 		background: var(--bc-control);
 		color: var(--bc-ink);
 		transition: border-color var(--bc-motion-fast);
@@ -95,7 +95,7 @@
 		min-width: 0;
 		padding: 0 var(--bc-space-3);
 		border: 0;
-		border-radius: var(--bc-radius-md);
+		border-radius: var(--bc-radius-pill);
 		background: transparent;
 		color: inherit;
 		font: inherit;
@@ -126,7 +126,8 @@
 		align-self: center;
 		flex: none;
 		width: var(--bc-control-height-standard);
+		height: var(--bc-control-height-standard);
 		padding: 0;
-		border-radius: var(--bc-radius-md);
+		border-radius: var(--bc-radius-pill);
 	}
 </style>

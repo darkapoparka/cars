@@ -1,0 +1,1692 @@
+[
+  {
+    "cars": [
+      {
+        "bottom": 503.328125,
+        "height": 220.59375,
+        "right": 170.8125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 330.734375,
+        "x": -159.921875,
+        "y": 282.734375
+      },
+      {
+        "bottom": 534.140625,
+        "height": 279.8125,
+        "right": 1508.46875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 419.515625,
+        "x": 1088.953125,
+        "y": 254.328125
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1265,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 398.5,
+      "height": 214,
+      "right": 1072.5,
+      "width": 880,
+      "x": 192.5,
+      "y": 184.5
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 307.5,
+      "height": 44,
+      "right": 1046.5,
+      "width": 44,
+      "x": 1002.5,
+      "y": 263.5
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 1280
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 503.328125,
+        "height": 220.59375,
+        "right": 170.8125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 330.734375,
+        "x": -159.921875,
+        "y": 282.734375
+      },
+      {
+        "bottom": 534.140625,
+        "height": 279.8125,
+        "right": 1508.46875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 419.515625,
+        "x": 1088.953125,
+        "y": 254.328125
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Марка",
+        "right": 316.5,
+        "width": 103,
+        "x": 213.5,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Модел",
+        "right": 428.3125,
+        "width": 103.8125,
+        "x": 324.5,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Цена",
+        "right": 529.15625,
+        "width": 92.84375,
+        "x": 436.3125,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Пробег",
+        "right": 649.171875,
+        "width": 112.015625,
+        "x": 537.15625,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Гориво",
+        "right": 765.8125,
+        "width": 108.640625,
+        "x": 657.171875,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Купе",
+        "right": 865.28125,
+        "width": 91.46875,
+        "x": 773.8125,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 1051.5,
+        "width": 178.21875,
+        "x": 873.28125,
+        "y": 355.890625
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1265,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 424.890625,
+      "height": 162,
+      "right": 1072.5,
+      "width": 880,
+      "x": 192.5,
+      "y": 262.890625
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 333.890625,
+      "height": 44,
+      "right": 1046.5,
+      "width": 44,
+      "x": 1002.5,
+      "y": 289.890625
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 1280
+  },
+  {
+    "cars": [
+      {
+        "bottom": 503.328125,
+        "height": 220.59375,
+        "right": 170.8125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 330.734375,
+        "x": -159.921875,
+        "y": 282.734375
+      },
+      {
+        "bottom": 534.140625,
+        "height": 279.8125,
+        "right": 1508.46875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 419.515625,
+        "x": 1088.953125,
+        "y": 254.328125
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1265,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 398.5,
+      "height": 214,
+      "right": 1072.5,
+      "width": 880,
+      "x": 192.5,
+      "y": 184.5
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 307.5,
+      "height": 44,
+      "right": 1046.5,
+      "width": 44,
+      "x": 1002.5,
+      "y": 263.5
+    },
+    "url": "http://127.0.0.1:6790/en",
+    "viewport": 1280
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 503.328125,
+        "height": 220.59375,
+        "right": 170.8125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 330.734375,
+        "x": -159.921875,
+        "y": 282.734375
+      },
+      {
+        "bottom": 534.140625,
+        "height": 279.8125,
+        "right": 1508.46875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 419.515625,
+        "x": 1088.953125,
+        "y": 254.328125
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Make",
+        "right": 323.140625,
+        "width": 109.640625,
+        "x": 213.5,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Model",
+        "right": 446.984375,
+        "width": 115.84375,
+        "x": 331.140625,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Price",
+        "right": 562.984375,
+        "width": 108,
+        "x": 454.984375,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Mileage",
+        "right": 699.15625,
+        "width": 128.171875,
+        "x": 570.984375,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Fuel",
+        "right": 808.28125,
+        "width": 101.125,
+        "x": 707.15625,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "Body",
+        "right": 923.953125,
+        "width": 107.671875,
+        "x": 816.28125,
+        "y": 355.890625
+      },
+      {
+        "bottom": 403.890625,
+        "height": 48,
+        "label": "All filters",
+        "right": 1051.5,
+        "width": 119.546875,
+        "x": 931.953125,
+        "y": 355.890625
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1265,
+      "width": 1265,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 424.890625,
+      "height": 162,
+      "right": 1072.5,
+      "width": 880,
+      "x": 192.5,
+      "y": 262.890625
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 333.890625,
+      "height": 44,
+      "right": 1046.5,
+      "width": 44,
+      "x": 1002.5,
+      "y": 289.890625
+    },
+    "url": "http://127.0.0.1:6790/en/inventory",
+    "viewport": 1280
+  },
+  {
+    "cars": [
+      {
+        "bottom": 508.484375,
+        "height": 248.171875,
+        "right": 251.09375,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 372.078125,
+        "x": -120.984375,
+        "y": 260.3125
+      },
+      {
+        "bottom": 543.15625,
+        "height": 314.796875,
+        "right": 1639.96875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 471.96875,
+        "x": 1168,
+        "y": 228.359375
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1425,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 401.1875,
+      "height": 214,
+      "right": 1152.5,
+      "width": 880,
+      "x": 272.5,
+      "y": 187.1875
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 310.1875,
+      "height": 44,
+      "right": 1126.5,
+      "width": 44,
+      "x": 1082.5,
+      "y": 266.1875
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 1440
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 508.484375,
+        "height": 248.171875,
+        "right": 251.09375,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 372.078125,
+        "x": -120.984375,
+        "y": 260.3125
+      },
+      {
+        "bottom": 543.15625,
+        "height": 314.796875,
+        "right": 1639.96875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 471.96875,
+        "x": 1168,
+        "y": 228.359375
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Марка",
+        "right": 396.5,
+        "width": 103,
+        "x": 293.5,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Модел",
+        "right": 508.3125,
+        "width": 103.8125,
+        "x": 404.5,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Цена",
+        "right": 609.15625,
+        "width": 92.84375,
+        "x": 516.3125,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Пробег",
+        "right": 729.171875,
+        "width": 112.015625,
+        "x": 617.15625,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Гориво",
+        "right": 845.8125,
+        "width": 108.640625,
+        "x": 737.171875,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Купе",
+        "right": 945.28125,
+        "width": 91.46875,
+        "x": 853.8125,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 1131.5,
+        "width": 178.21875,
+        "x": 953.28125,
+        "y": 358.578125
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1425,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 427.578125,
+      "height": 162,
+      "right": 1152.5,
+      "width": 880,
+      "x": 272.5,
+      "y": 265.578125
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 336.578125,
+      "height": 44,
+      "right": 1126.5,
+      "width": 44,
+      "x": 1082.5,
+      "y": 292.578125
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 1440
+  },
+  {
+    "cars": [
+      {
+        "bottom": 508.484375,
+        "height": 248.171875,
+        "right": 251.09375,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 372.078125,
+        "x": -120.984375,
+        "y": 260.3125
+      },
+      {
+        "bottom": 543.15625,
+        "height": 314.796875,
+        "right": 1639.96875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 471.96875,
+        "x": 1168,
+        "y": 228.359375
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1425,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 401.1875,
+      "height": 214,
+      "right": 1152.5,
+      "width": 880,
+      "x": 272.5,
+      "y": 187.1875
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 310.1875,
+      "height": 44,
+      "right": 1126.5,
+      "width": 44,
+      "x": 1082.5,
+      "y": 266.1875
+    },
+    "url": "http://127.0.0.1:6790/en",
+    "viewport": 1440
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 508.484375,
+        "height": 248.171875,
+        "right": 251.09375,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 372.078125,
+        "x": -120.984375,
+        "y": 260.3125
+      },
+      {
+        "bottom": 543.15625,
+        "height": 314.796875,
+        "right": 1639.96875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 471.96875,
+        "x": 1168,
+        "y": 228.359375
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Make",
+        "right": 403.140625,
+        "width": 109.640625,
+        "x": 293.5,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Model",
+        "right": 526.984375,
+        "width": 115.84375,
+        "x": 411.140625,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Price",
+        "right": 642.984375,
+        "width": 108,
+        "x": 534.984375,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Mileage",
+        "right": 779.15625,
+        "width": 128.171875,
+        "x": 650.984375,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Fuel",
+        "right": 888.28125,
+        "width": 101.125,
+        "x": 787.15625,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "Body",
+        "right": 1003.953125,
+        "width": 107.671875,
+        "x": 896.28125,
+        "y": 358.578125
+      },
+      {
+        "bottom": 406.578125,
+        "height": 48,
+        "label": "All filters",
+        "right": 1131.5,
+        "width": 119.546875,
+        "x": 1011.953125,
+        "y": 358.578125
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1425,
+      "width": 1425,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 427.578125,
+      "height": 162,
+      "right": 1152.5,
+      "width": 880,
+      "x": 272.5,
+      "y": 265.578125
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 336.578125,
+      "height": 44,
+      "right": 1126.5,
+      "width": 44,
+      "x": 1082.5,
+      "y": 292.578125
+    },
+    "url": "http://127.0.0.1:6790/en/inventory",
+    "viewport": 1440
+  },
+  {
+    "cars": [
+      {
+        "bottom": 517.21875,
+        "height": 294.71875,
+        "right": 491.578125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 441.859375,
+        "x": 49.71875,
+        "y": 222.5
+      },
+      {
+        "bottom": 558.390625,
+        "height": 373.828125,
+        "right": 1966.875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 560.46875,
+        "x": 1406.40625,
+        "y": 184.5625
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1905,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 401.625,
+      "height": 214,
+      "right": 1392.5,
+      "width": 880,
+      "x": 512.5,
+      "y": 187.625
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 310.625,
+      "height": 44,
+      "right": 1366.5,
+      "width": 44,
+      "x": 1322.5,
+      "y": 266.625
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 1920
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 517.21875,
+        "height": 294.71875,
+        "right": 491.578125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 441.859375,
+        "x": 49.71875,
+        "y": 222.5
+      },
+      {
+        "bottom": 558.390625,
+        "height": 373.828125,
+        "right": 1966.875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 560.46875,
+        "x": 1406.40625,
+        "y": 184.5625
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Марка",
+        "right": 636.5,
+        "width": 103,
+        "x": 533.5,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Модел",
+        "right": 748.3125,
+        "width": 103.8125,
+        "x": 644.5,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Цена",
+        "right": 849.15625,
+        "width": 92.84375,
+        "x": 756.3125,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Пробег",
+        "right": 969.171875,
+        "width": 112.015625,
+        "x": 857.15625,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Гориво",
+        "right": 1085.8125,
+        "width": 108.640625,
+        "x": 977.171875,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Купе",
+        "right": 1185.28125,
+        "width": 91.46875,
+        "x": 1093.8125,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 1371.5,
+        "width": 178.21875,
+        "x": 1193.28125,
+        "y": 359.03125
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1905,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 428.03125,
+      "height": 162,
+      "right": 1392.5,
+      "width": 880,
+      "x": 512.5,
+      "y": 266.03125
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 337.03125,
+      "height": 44,
+      "right": 1366.5,
+      "width": 44,
+      "x": 1322.5,
+      "y": 293.03125
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 1920
+  },
+  {
+    "cars": [
+      {
+        "bottom": 517.21875,
+        "height": 294.71875,
+        "right": 491.578125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 441.859375,
+        "x": 49.71875,
+        "y": 222.5
+      },
+      {
+        "bottom": 558.390625,
+        "height": 373.828125,
+        "right": 1966.875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 560.46875,
+        "x": 1406.40625,
+        "y": 184.5625
+      }
+    ],
+    "controls": [],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1905,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 401.625,
+      "height": 214,
+      "right": 1392.5,
+      "width": 880,
+      "x": 512.5,
+      "y": 187.625
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 310.625,
+      "height": 44,
+      "right": 1366.5,
+      "width": 44,
+      "x": 1322.5,
+      "y": 266.625
+    },
+    "url": "http://127.0.0.1:6790/en",
+    "viewport": 1920
+  },
+  {
+    "artDisplay": "block",
+    "artSources": [
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+      "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp"
+    ],
+    "cars": [
+      {
+        "bottom": 517.21875,
+        "height": 294.71875,
+        "right": 491.578125,
+        "side": "left",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-left-profile-v1.webp",
+        "width": 441.859375,
+        "x": 49.71875,
+        "y": 222.5
+      },
+      {
+        "bottom": 558.390625,
+        "height": 373.828125,
+        "right": 1966.875,
+        "side": "right",
+        "src": "http://127.0.0.1:6790/assets/daynight/banners/hero-car-right-profile-v1.webp",
+        "width": 560.46875,
+        "x": 1406.40625,
+        "y": 184.5625
+      }
+    ],
+    "controls": [
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Make",
+        "right": 643.140625,
+        "width": 109.640625,
+        "x": 533.5,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Model",
+        "right": 766.984375,
+        "width": 115.84375,
+        "x": 651.140625,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Price",
+        "right": 882.984375,
+        "width": 108,
+        "x": 774.984375,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Mileage",
+        "right": 1019.15625,
+        "width": 128.171875,
+        "x": 890.984375,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Fuel",
+        "right": 1128.28125,
+        "width": 101.125,
+        "x": 1027.15625,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "Body",
+        "right": 1243.953125,
+        "width": 107.671875,
+        "x": 1136.28125,
+        "y": 359.03125
+      },
+      {
+        "bottom": 407.03125,
+        "height": 48,
+        "label": "All filters",
+        "right": 1371.5,
+        "width": 119.546875,
+        "x": 1251.953125,
+        "y": 359.03125
+      }
+    ],
+    "hero": {
+      "bottom": 494,
+      "height": 400,
+      "right": 1905,
+      "width": 1905,
+      "x": 0,
+      "y": 94
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 428.03125,
+      "height": 162,
+      "right": 1392.5,
+      "width": 880,
+      "x": 512.5,
+      "y": 266.03125
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 337.03125,
+      "height": 44,
+      "right": 1366.5,
+      "width": 44,
+      "x": 1322.5,
+      "y": 293.03125
+    },
+    "url": "http://127.0.0.1:6790/en/inventory",
+    "viewport": 1920
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 0,
+      "height": 0,
+      "right": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 320
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Марка",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Модел",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Цена",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Пробег",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Гориво",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Купе",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Всички филтри",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 0,
+      "height": 0,
+      "right": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 320
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 0,
+      "height": 0,
+      "right": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 390
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Марка",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Модел",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Цена",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Пробег",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Гориво",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Купе",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "bottom": 0,
+        "height": 0,
+        "label": "Всички филтри",
+        "right": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 0,
+      "height": 0,
+      "right": 0,
+      "width": 0,
+      "x": 0,
+      "y": 0
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 390
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 491.15625,
+      "height": 274,
+      "right": 721,
+      "width": 689,
+      "x": 32,
+      "y": 217.15625
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 768
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Марка",
+        "right": 208.75,
+        "width": 155.75,
+        "x": 53,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Модел",
+        "right": 372.5,
+        "width": 155.75,
+        "x": 216.75,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Цена",
+        "right": 536.25,
+        "width": 155.75,
+        "x": 380.5,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Пробег",
+        "right": 700,
+        "width": 155.75,
+        "x": 544.25,
+        "y": 388.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Гориво",
+        "right": 208.75,
+        "width": 155.75,
+        "x": 53,
+        "y": 448.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Купе",
+        "right": 372.5,
+        "width": 155.75,
+        "x": 216.75,
+        "y": 448.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 700,
+        "width": 319.5,
+        "x": 380.5,
+        "y": 448.546875
+      }
+    ],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 517.546875,
+      "height": 222,
+      "right": 721,
+      "width": 689,
+      "x": 32,
+      "y": 295.546875
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 768
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 491.15625,
+      "height": 274,
+      "right": 853,
+      "width": 821,
+      "x": 32,
+      "y": 217.15625
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 900
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Марка",
+        "right": 241.75,
+        "width": 188.75,
+        "x": 53,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Модел",
+        "right": 438.5,
+        "width": 188.75,
+        "x": 249.75,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Цена",
+        "right": 635.25,
+        "width": 188.75,
+        "x": 446.5,
+        "y": 388.546875
+      },
+      {
+        "bottom": 436.546875,
+        "height": 48,
+        "label": "Пробег",
+        "right": 832,
+        "width": 188.75,
+        "x": 643.25,
+        "y": 388.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Гориво",
+        "right": 241.75,
+        "width": 188.75,
+        "x": 53,
+        "y": 448.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Купе",
+        "right": 438.5,
+        "width": 188.75,
+        "x": 249.75,
+        "y": 448.546875
+      },
+      {
+        "bottom": 496.546875,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 832,
+        "width": 385.5,
+        "x": 446.5,
+        "y": 448.546875
+      }
+    ],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 517.546875,
+      "height": 222,
+      "right": 853,
+      "width": 821,
+      "x": 32,
+      "y": 295.546875
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 900
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 436.15625,
+      "height": 214,
+      "right": 944.5,
+      "width": 880,
+      "x": 64.5,
+      "y": 222.15625
+    },
+    "url": "http://127.0.0.1:6790/bg",
+    "viewport": 1024
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Марка",
+        "right": 188.5,
+        "width": 103,
+        "x": 85.5,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Модел",
+        "right": 300.3125,
+        "width": 103.8125,
+        "x": 196.5,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Цена",
+        "right": 401.15625,
+        "width": 92.84375,
+        "x": 308.3125,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Пробег",
+        "right": 521.171875,
+        "width": 112.015625,
+        "x": 409.15625,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Гориво",
+        "right": 637.8125,
+        "width": 108.640625,
+        "x": 529.171875,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Купе",
+        "right": 737.28125,
+        "width": 91.46875,
+        "x": 645.8125,
+        "y": 393.546875
+      },
+      {
+        "bottom": 441.546875,
+        "height": 48,
+        "label": "Всички филтри",
+        "right": 923.5,
+        "width": 178.21875,
+        "x": 745.28125,
+        "y": 393.546875
+      }
+    ],
+    "hydrated": "true",
+    "overflow": false,
+    "panel": {
+      "bottom": 462.546875,
+      "height": 162,
+      "right": 944.5,
+      "width": 880,
+      "x": 64.5,
+      "y": 300.546875
+    },
+    "url": "http://127.0.0.1:6790/bg/inventory",
+    "viewport": 1024
+  },
+  {
+    "artDisplay": "none",
+    "artSources": [
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+      "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+    ],
+    "controls": [
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "BMW + Audi",
+        "right": 216.796875,
+        "width": 131.296875,
+        "x": 85.5,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "BMW X3",
+        "right": 328.765625,
+        "width": 103.96875,
+        "x": 224.796875,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "Up to 50,000 EUR",
+        "right": 509.9375,
+        "width": 173.171875,
+        "x": 336.765625,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "Mileage",
+        "right": 621.125,
+        "width": 103.1875,
+        "x": 517.9375,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "Fuel",
+        "right": 705.265625,
+        "width": 76.140625,
+        "x": 629.125,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "Body",
+        "right": 795.953125,
+        "width": 82.6875,
+        "x": 713.265625,
+        "y": 347.109375
+      },
+      {
+        "bottom": 395.109375,
+        "height": 48,
+        "label": "All filters",
+        "right": 923.5,
+        "width": 119.546875,
+        "x": 803.953125,
+        "y": 347.109375
+      }
+    ],
+    "hero": {
+      "bottom": 552.109375,
+      "height": 419.109375,
+      "right": 1009,
+      "width": 1009,
+      "x": 0,
+      "y": 133
+    },
+    "hydrated": "true",
+    "inactiveLabelsFit": true,
+    "overflow": false,
+    "panel": {
+      "bottom": 528.109375,
+      "height": 274,
+      "right": 944.5,
+      "width": 880,
+      "x": 64.5,
+      "y": 254.109375
+    },
+    "radius": "999px",
+    "search": {
+      "bottom": 325.109375,
+      "height": 44,
+      "right": 918.5,
+      "width": 44,
+      "x": 874.5,
+      "y": 281.109375
+    },
+    "url": "http://127.0.0.1:6790/en/inventory?brand=BMW&brand=Audi&model=X3&keyword=Sport&priceTo=50000&layout=dashboard&view=3&sort=lowest-price&campaign=one&campaign=two",
+    "viewport": 1024
+  }
+]

@@ -111,11 +111,16 @@
 		padding-inline: var(--bc-space-3);
 		border-radius: var(--bc-radius-pill);
 		white-space: nowrap;
-		margin-inline-start: auto;
 	}
 	@media (min-width: 901px) {
 		.inventory-toolbar__row {
 			flex-wrap: nowrap;
+		}
+		.inventory-toolbar__row :global(.site-filter-trigger) {
+			flex: 1 1 auto;
+		}
+		.inventory-toolbar__row :global(.site-filter-trigger[data-active='false']) {
+			flex-shrink: 0;
 		}
 	}
 	@media (max-width: 900px) {
@@ -126,8 +131,6 @@
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			grid-column: span 2;
-			justify-self: end;
-			margin-inline-start: 0;
 		}
 	}
 </style>
