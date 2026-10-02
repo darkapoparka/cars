@@ -1,0 +1,315 @@
+{
+  "date": "2026-10-02",
+  "origin": "http://127.0.0.1:6483",
+  "checks": [
+    {
+      "budgetCampaign": 0,
+      "extraCalculatorPanel": 0,
+      "hero": {
+        "bottom": 264,
+        "height": 172,
+        "left": 12,
+        "right": 363,
+        "top": 92,
+        "width": 351,
+        "x": 12,
+        "y": 92
+      },
+      "heroes": 1,
+      "mainImages": 0,
+      "optionControls": 0,
+      "optionImages": 0,
+      "optionTerms": 4,
+      "overflow": false,
+      "processRows": 6,
+      "steps": {
+        "bottom": 566,
+        "height": 28,
+        "left": 12,
+        "right": 363,
+        "text": "Стъпки",
+        "top": 538,
+        "width": 351,
+        "x": 12,
+        "y": 538
+      },
+      "trigger": {
+        "bottom": 244,
+        "height": 56,
+        "left": 32,
+        "right": 343,
+        "top": 188,
+        "width": 311,
+        "x": 32,
+        "y": 188
+      },
+      "triggerBackground": "rgb(255, 255, 255)",
+      "triggerBorder": "0px",
+      "triggerFont": "500 16px / 24px Roboto, Arial, sans-serif",
+      "triggerInsideHero": true,
+      "url": "/bg/finance",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "budgetCampaign": 0,
+      "extraCalculatorPanel": 0,
+      "hero": {
+        "bottom": 286,
+        "height": 194,
+        "left": 12,
+        "right": 293,
+        "top": 92,
+        "width": 281,
+        "x": 12,
+        "y": 92
+      },
+      "heroes": 1,
+      "mainImages": 0,
+      "optionControls": 0,
+      "optionImages": 0,
+      "optionTerms": 4,
+      "overflow": false,
+      "processRows": 6,
+      "steps": {
+        "bottom": 610,
+        "height": 28,
+        "left": 12,
+        "right": 293,
+        "text": "Стъпки",
+        "top": 582,
+        "width": 281,
+        "x": 12,
+        "y": 582
+      },
+      "trigger": {
+        "bottom": 266,
+        "height": 56,
+        "left": 32,
+        "right": 273,
+        "top": 210,
+        "width": 241,
+        "x": 32,
+        "y": 210
+      },
+      "triggerBackground": "rgb(255, 255, 255)",
+      "triggerBorder": "0px",
+      "triggerFont": "500 16px / 24px Roboto, Arial, sans-serif",
+      "triggerInsideHero": true,
+      "url": "/bg/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    },
+    {
+      "budgetCampaign": 0,
+      "extraCalculatorPanel": 0,
+      "hero": {
+        "bottom": 432,
+        "height": 238,
+        "left": 28,
+        "right": 725,
+        "top": 194,
+        "width": 697,
+        "x": 28,
+        "y": 194
+      },
+      "heroes": 1,
+      "mainImages": 0,
+      "optionControls": 0,
+      "optionImages": 0,
+      "optionTerms": 4,
+      "overflow": false,
+      "processRows": 6,
+      "steps": {
+        "bottom": 700,
+        "height": 34,
+        "left": 28,
+        "right": 725,
+        "text": "Финансиране, стъпка по стъпка",
+        "top": 666,
+        "width": 697,
+        "x": 28,
+        "y": 666
+      },
+      "trigger": {
+        "bottom": 404,
+        "height": 56,
+        "left": 56,
+        "right": 336,
+        "top": 348,
+        "width": 280,
+        "x": 56,
+        "y": 348
+      },
+      "triggerBackground": "rgb(255, 255, 255)",
+      "triggerBorder": "0px",
+      "triggerFont": "500 16px / 24px Roboto, Arial, sans-serif",
+      "triggerInsideHero": true,
+      "url": "/bg/finance",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "budgetCampaign": 0,
+      "extraCalculatorPanel": 0,
+      "hero": {
+        "bottom": 471,
+        "height": 248,
+        "left": 120.5,
+        "right": 1304.5,
+        "top": 223,
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "heroes": 1,
+      "mainImages": 0,
+      "optionControls": 0,
+      "optionImages": 0,
+      "optionTerms": 4,
+      "overflow": false,
+      "processRows": 6,
+      "steps": {
+        "bottom": 665,
+        "height": 34,
+        "left": 120.5,
+        "right": 1304.5,
+        "text": "Финансиране, стъпка по стъпка",
+        "top": 631,
+        "width": 1184,
+        "x": 120.5,
+        "y": 631
+      },
+      "trigger": {
+        "bottom": 424,
+        "height": 56,
+        "left": 156.5,
+        "right": 436.5,
+        "top": 368,
+        "width": 280,
+        "x": 156.5,
+        "y": 368
+      },
+      "triggerBackground": "rgb(255, 255, 255)",
+      "triggerBorder": "0px",
+      "triggerFont": "500 16px / 24px Roboto, Arial, sans-serif",
+      "triggerInsideHero": true,
+      "url": "/bg/finance",
+      "viewport": [
+        1440,
+        1000
+      ]
+    },
+    {
+      "budgetCampaign": 0,
+      "extraCalculatorPanel": 0,
+      "hero": {
+        "bottom": 286,
+        "height": 194,
+        "left": 12,
+        "right": 293,
+        "top": 92,
+        "width": 281,
+        "x": 12,
+        "y": 92
+      },
+      "heroes": 1,
+      "mainImages": 0,
+      "optionControls": 0,
+      "optionImages": 0,
+      "optionTerms": 4,
+      "overflow": false,
+      "processRows": 6,
+      "steps": {
+        "bottom": 634,
+        "height": 28,
+        "left": 12,
+        "right": 293,
+        "text": "Steps",
+        "top": 606,
+        "width": 281,
+        "x": 12,
+        "y": 606
+      },
+      "trigger": {
+        "bottom": 266,
+        "height": 56,
+        "left": 32,
+        "right": 273,
+        "top": 210,
+        "width": 241,
+        "x": 32,
+        "y": 210
+      },
+      "triggerBackground": "rgb(255, 255, 255)",
+      "triggerBorder": "0px",
+      "triggerFont": "500 16px / 24px Geist, Roboto, Arial, sans-serif",
+      "triggerInsideHero": true,
+      "url": "/en/finance",
+      "viewport": [
+        320,
+        720
+      ]
+    }
+  ],
+  "interaction": {
+    "dialog": {
+      "bottom": 844,
+      "height": 545,
+      "left": 0,
+      "right": 390,
+      "top": 299,
+      "width": 390,
+      "x": 0,
+      "y": 299
+    },
+    "inertBackground": true,
+    "monthly": "€ 667",
+    "scrollLocked": true,
+    "focusRestored": true,
+    "valuesRetained": true,
+    "backClosesWithoutNavigation": true,
+    "desktopDialog": {
+      "bottom": 772.5,
+      "height": 545,
+      "left": 440,
+      "right": 1000,
+      "top": 227.5,
+      "width": 560,
+      "x": 440,
+      "y": 227.5
+    },
+    "enquiryDraftStillAvailable": true
+  },
+  "sharedBanners": [
+    {
+      "action": "Поискайте оценка",
+      "actionHeight": 44,
+      "overflow": false,
+      "url": "/bg/sell",
+      "viewport": [
+        320,
+        720
+      ],
+      "destination": "http://127.0.0.1:6483/bg/sell/details"
+    },
+    {
+      "action": "Запитване за услуга",
+      "actionHeight": 44,
+      "overflow": false,
+      "url": "/bg/service",
+      "viewport": [
+        320,
+        720
+      ],
+      "destination": "http://127.0.0.1:6483/bg/service/details"
+    }
+  ],
+  "browserErrors": 0
+}

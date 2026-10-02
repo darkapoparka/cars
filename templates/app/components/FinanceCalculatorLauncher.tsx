@@ -1,6 +1,7 @@
 'use client';
 
 import {useId, useState} from 'react';
+import type {ReactNode} from 'react';
 import * as stylex from '@stylexjs/stylex';
 import {ArrowRight, Calculator, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
@@ -10,19 +11,16 @@ import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import FinanceCalculator from './FinanceCalculator';
 import {useModal} from './useModal';
 
-export default function FinanceCalculatorLauncher() {
+export default function FinanceCalculatorLauncher({renderTrigger}: {renderTrigger: (trigger: ReactNode) => ReactNode}) {
   const tx = useCopy(), id = useId();
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
   const panel = useModal(open, close);
 
   return <>
-    <section data-finance-calculator-feature aria-labelledby={id + '-launcher-title'} {...stylex.props(s.feature)}>
-      <div><h2 id={id + '-launcher-title'} {...stylex.props(t.heading)}>{tx('Finance calculator')}</h2><p {...stylex.props(s.description, t.body)}>{tx('Explore your monthly payment.')}</p></div>
-      <button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={open} aria-controls={id + '-dialog'} onClick={() => setOpen(true)} {...stylex.props(s.launcher, t.control)}>
-        <Calculator size={22} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Calculate')}<ArrowRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
-      </button>
-    </section>
+    {renderTrigger(<button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={open} aria-controls={id + '-dialog'} onClick={() => setOpen(true)} {...stylex.props(s.launcher, t.control)}>
+      <Calculator size={22} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Calculate')}<ArrowRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
+    </button>)}
     <div hidden={!open} {...stylex.props(s.backdrop, !open && s.hidden)} onClick={event => {if (event.currentTarget === event.target) close();}}>
       <section id={id + '-dialog'} ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id + '-title'} {...stylex.props(s.sheet)}>
         <header {...stylex.props(s.header)}><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx('Finance calculator')}</h2><button type="button" aria-label={tx('Close calculator')} onClick={close} {...stylex.props(s.close)}><X size={23} aria-hidden="true"/></button></header>
@@ -33,9 +31,7 @@ export default function FinanceCalculatorLauncher() {
 }
 
 const s = stylex.create({
-  feature: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', default: 'minmax(0,1fr) minmax(240px,320px)'}, alignItems: 'center', gap: {[media.mobile]: 18, default: 28}, marginTop: 20, padding: {[media.mobile]: 20, default: 28}, color: '#fff', borderRadius: 20, backgroundColor: campaign.surface},
-  description: {marginTop: 8, color: campaign.muted},
-  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, width: '100%', minHeight: 56, padding: '12px 20px', color: campaign.actionText, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#f0f0f2'}, cursor: 'pointer', outlineColor: '#fff', outlineOffset: 3},
+  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, width: {[media.mobile]: '100%', default: 280}, maxWidth: '100%', minHeight: 56, marginTop: 18, padding: '12px 20px', color: campaign.actionText, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#f0f0f2'}, cursor: 'pointer', outlineColor: '#fff', outlineOffset: 3},
   icon: {flexShrink: 0},
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.58)'},
   hidden: {display: 'none'},
