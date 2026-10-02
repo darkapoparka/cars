@@ -262,6 +262,11 @@ The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte
 
 **Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Buy/Import tabs share the quieter pill-shaped segmented control with Sell/Import. Mobile entry fields use a pale borderless surface and regular text; primary actions remain red. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
 
+From 992px, Home and Inventory share a 56px native facet-select frame (58px including
+the enclosing border). The value uses a 12px top inset, bringing it closer to the
+small caption at the existing 8px anchor. Typography, full-field click targets and
+native selection behavior stay intact; smaller breakpoints retain their own geometry.
+
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections use their existing branded heading banners attached to light content panels. The light panel overlaps the banner by the shared overlap token, with rounded upper corners forming an inward curve at the join. Banner padding keeps its heading and action clear of that overlap. Their heading/CTA and overlap rules are shared. Mobile uses compact headings appropriate to its denser layout rather than miniaturizing the full desktop banners.
