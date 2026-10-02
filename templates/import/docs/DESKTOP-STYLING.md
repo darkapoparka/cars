@@ -19,6 +19,8 @@ The Treido reference source is `L:/PLATFORMS/treido-eu-global/app/apps/web/src/f
 
 ## Keep the automotive identity
 
+The requested About/Contact hero follow-up uses `PageIntro`'s existing secondary-actions slot below the white primary action panel: configured social icons on About; address, directions and message shortcuts on Contact. Use existing tokens and contact/content owners, retain the shared title/artwork anchors and preserve mobile. See [the hero follow-up receipt](desktop-hero-content-2026-10-02/README.md).
+
 Keep the centered dark hero, recognizable vehicle artwork, dealer identity, red primary actions, existing Home/Inventory discovery patterns, vehicle photographs, prices, specifications and finance hierarchy. Maintain common hero typography, anchor, height and artwork baseline through `PageIntro` and `HeroCars`. Search, quick filters and Make/Model belong inside the discovery panel. Hero content must have clearance from decorative cars and grow when it needs more room.
 
 Use the accepted About surfaces as the starting point: neutral canvas, white cards, quiet borders and shadows, inset media, clear type roles and deliberate spacing. Let inventory remain a useful four-column car catalogue at wide desktop sizes. Keep search, filters and stock browsing prominent. Admin navigation, green branding, generic onboarding illustrations and narrow shopping-feed composition do not belong in this dealer template.

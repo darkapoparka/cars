@@ -76,11 +76,11 @@ test('About opens with the team and retains accessible social destinations', asy
 	await expect(page.locator('.about-team article')).toHaveCount(3);
 	const socials = page.locator(
 		info.project.name === 'desktop'
-			? '.site-footer .social-links a:visible'
+			? '.site-intro .social-links a:visible'
 			: '.about-socials .social-links a:visible'
 	);
 	if (info.project.name === 'desktop')
-		await expect(page.locator('.site-intro .social-links')).toHaveCount(0);
+		await expect(page.locator('.site-footer .social-links a')).toHaveCount(3);
 	await expect(socials).toHaveCount(3);
 	for (const link of await socials.all()) {
 		await expect(link).toHaveAttribute('href', /^https:/);

@@ -150,7 +150,7 @@ test('page actions are real destinations and the services directory is accessibl
 	await expect(directions).toHaveAttribute('href', /^https:\/\/www.google.com\/maps/);
 	const action = (await directions.boundingBox())!;
 	expect(action.height).toBeGreaterThanOrEqual(44);
-	await expect(page.locator('.site-intro .social-links')).toHaveCount(0);
+	await expect(page.locator('.site-intro .social-links a')).toHaveCount(3);
 	await expect(page.locator('.site-footer .social-links a')).toHaveCount(3);
 	await visit(page, '/en/contact');
 	const phone = page.locator('.site-intro a[href^="tel:"]');
@@ -160,6 +160,12 @@ test('page actions are real destinations and the services directory is accessibl
 	await expect(
 		page.locator('.contact-location').getByRole('link', { name: 'Get directions' })
 	).toHaveAttribute('href', /^https:\/\/www.google.com\/maps/);
+	const heroDirections = page
+		.locator('.contact-hero-details')
+		.getByRole('link', { name: 'Get directions' });
+	await expect(heroDirections).toHaveAttribute('href', /^https:\/\/www.google.com\/maps/);
+	await expect(heroDirections).toHaveAttribute('target', '_blank');
+	await expect(page.locator('.contact-hero-details a[href^="viber:"]')).toHaveCount(1);
 	await visit(page, '/en/services');
 	const hrefs = await page
 		.locator('.service-card > a')

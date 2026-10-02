@@ -11,6 +11,7 @@
 	import { desktopCopy } from '$lib/content/desktop-copy';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
 	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
+	import ContactHeroDetails from '$lib/components/contact/ContactHeroDetails.svelte';
 	import ImageLinkBanner from '$lib/components/common/ImageLinkBanner.svelte';
 	import { desktopContactChannels, contactDesktopCopy } from '$lib/content/contact-desktop';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
@@ -44,6 +45,9 @@
 						>{desktopCopy[data.locale].contactEnquiry}</Action
 					>
 				</DesktopHeroActions>
+			{/snippet}
+			{#snippet desktopSecondaryActions()}
+				<ContactHeroDetails site={data.site} locale={data.locale} />
 			{/snippet}
 		</PageIntro>
 		<section

@@ -70,6 +70,9 @@
 				>
 			</DesktopHeroActions>
 		{/snippet}
+		{#snippet desktopSecondaryActions()}
+			<SocialLinks links={data.site.socials} tone="dark" />
+		{/snippet}
 	</PageIntro>
 	<div class="site-mobile-only">
 		<section class="site-section site-container site-stack">

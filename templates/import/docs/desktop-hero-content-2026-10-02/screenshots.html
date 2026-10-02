@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Import — About and Contact hero comparison</title>
+		<style>
+			:root {
+				color-scheme: light;
+				font-family: system-ui, sans-serif;
+				color: #17191c;
+				background: #f6f6f7;
+			}
+			body {
+				max-width: 1800px;
+				margin: 0 auto;
+				padding: 24px;
+			}
+			h1 {
+				margin: 0 0 8px;
+				font-size: 24px;
+			}
+			p {
+				margin: 0 0 20px;
+				line-height: 1.5;
+			}
+			nav {
+				display: flex;
+				gap: 8px;
+				flex-wrap: wrap;
+				margin-bottom: 24px;
+			}
+			button,
+			.receipt {
+				padding: 10px 16px;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				background: white;
+				color: inherit;
+				font: inherit;
+				cursor: pointer;
+			}
+			button[aria-pressed='true'] {
+				background: #17191c;
+				color: white;
+			}
+			button:focus-visible,
+			a:focus-visible {
+				outline: 3px solid #b9161c;
+				outline-offset: 4px;
+			}
+			.pairs {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 16px;
+			}
+			figure {
+				margin: 0;
+			}
+			figcaption {
+				margin-bottom: 8px;
+				font-weight: 600;
+			}
+			img {
+				display: block;
+				width: 100%;
+				border-radius: 12px;
+			}
+			footer {
+				margin-top: 24px;
+				display: flex;
+				gap: 16px;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			@media (max-width: 700px) {
+				.pairs {
+					grid-template-columns: 1fr;
+				}
+				body {
+					padding: 16px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<h1>About and Contact — hero update</h1>
+		<p>
+			Matched screenshots at 1440px. Select a route and language; click either image to inspect it
+			at full size.
+		</p>
+		<nav aria-label="Screenshot comparisons">
+			<button type="button" data-pair="about-bg" aria-pressed="true">About · BG</button>
+			<button type="button" data-pair="contact-bg" aria-pressed="false">Contact · BG</button>
+			<button type="button" data-pair="about-en" aria-pressed="false">About · EN</button>
+			<button type="button" data-pair="contact-en" aria-pressed="false">Contact · EN</button>
+		</nav>
+		<div class="pairs">
+			<figure>
+				<figcaption>Before</figcaption>
+				<a id="before-link" href="before/about-bg.png" target="_blank" rel="noopener"
+					><img
+						id="before-image"
+						src="before/about-bg.png"
+						alt="About BG before"
+						width="1440"
+						height="680"
+				/></a>
+			</figure>
+			<figure>
+				<figcaption>After</figcaption>
+				<a id="after-link" href="after/about-bg.png" target="_blank" rel="noopener"
+					><img
+						id="after-image"
+						src="after/about-bg.png"
+						alt="About BG after"
+						width="1440"
+						height="680"
+				/></a>
+			</figure>
+		</div>
+		<footer>
+			<a class="receipt" href="README.md">Verification receipt</a
+			><a href="http://127.0.0.1:6790/bg/about">Live About</a
+			><a href="http://127.0.0.1:6790/bg/contact">Live Contact</a>
+		</footer>
+		<script>
+			document.querySelectorAll('[data-pair]').forEach((button) => {
+				button.addEventListener('click', () => {
+					document
+						.querySelectorAll('[data-pair]')
+						.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+					for (const phase of ['before', 'after']) {
+						const source = `${phase}/${button.dataset.pair}.png`;
+						document.getElementById(`${phase}-image`).src = source;
+						document.getElementById(`${phase}-image`).alt = `${button.textContent} ${phase}`;
+						document.getElementById(`${phase}-link`).href = source;
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
