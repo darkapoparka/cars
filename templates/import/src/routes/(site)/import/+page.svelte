@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -11,18 +12,16 @@
 	import ImportRequestWizard from '$lib/components/services/ImportRequestWizard.svelte';
 	import ImportRequestMobilePage from '$lib/components/services/ImportRequestMobilePage.svelte';
 	let { data }: PageProps = $props();
+	const copy = $derived(publicPageCopy[data.locale].import);
 	let mode = $state('listing');
 	let session = $state(0);
-	const english = $derived(data.locale === 'en');
-	const title = $derived(english ? 'Import a car' : 'Внос на автомобил');
+	const title = $derived(copy.title);
 </script>
 
 <svelte:head
 	><title>{title} — {data.site.identity.name}</title><meta
 		name="description"
-		content={english
-			? 'Send a listing or VIN, or describe the car you are looking for.'
-			: 'Изпрати линк или VIN, или опиши автомобила, който търсиш.'}
+		content={copy.description}
 	/></svelte:head
 >
 <main id="main-content">
@@ -36,9 +35,7 @@
 		<PageIntro
 			{title}
 			image="/assets/daynight/services/premium-cars-banner-generated.webp"
-			description={english
-				? 'Send a listing or VIN. Understand the car and the costs before deciding.'
-				: 'Изпрати линк или VIN. Уточни автомобила и разходите преди решение.'}
+			description={copy.heroDescription}
 		/>
 		<section class="site-section">
 			<div class="site-container import-page">
@@ -46,13 +43,13 @@
 					<ModeTabs
 						bind:value={mode}
 						surface="light"
-						label={english ? 'Request type' : 'Начин за заявка'}
+						label={copy.requestType}
 						idPrefix="desktop-import-mode"
 						options={[
-							{ value: 'listing', label: 'LINK / VIN', panelId: 'desktop-import-intake' },
+							{ value: 'listing', label: copy.linkVin, panelId: 'desktop-import-intake' },
 							{
 								value: 'source',
-								label: english ? 'Find a car' : 'Нямам линк',
+								label: copy.find,
 								panelId: 'desktop-import-intake'
 							}
 						]}
@@ -73,13 +70,11 @@
 				</div>
 				<div class="service-process">
 					<h2 class="site-heading">
-						{english ? 'From a listing to a decision' : 'От обява до решение'}
+						{copy.process}
 					</h2>
 					<ProcessSteps steps={data.steps} horizontal /><Action
 						href={data.site.contact.phoneHref}
-						variant="secondary"
-						>{english ? 'Discuss your search' : 'Обсъди търсенето'} · {data.site.contact
-							.phone}</Action
+						variant="secondary">{copy.discuss} · {data.site.contact.phone}</Action
 					>
 				</div>
 			</div>

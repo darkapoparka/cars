@@ -2,6 +2,8 @@
 
 Copy the prompt below into a new session opened in `L:/CODEX/cars/templates/import`.
 
+The 2 October implementation requested from this prompt is recorded in [the desktop audit receipt](desktop-editorial-2026-10-02/README.md). Use that receipt as the current state when continuing; the prompt below preserves the requested contract.
+
 ```text
 Work in the existing Cars Import master at L:/CODEX/cars/templates/import on main. Audit and polish the entire public DESKTOP, then implement the fixes. Preserve current mobile, including the mobile About trial; no other mobile redesign.
 

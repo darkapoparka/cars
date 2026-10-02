@@ -6,6 +6,7 @@
 	import { countries, safeReturnPath } from '$lib/locale/core';
 	import { getI18n } from '$lib/locale/context';
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
+	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	const i18n = getI18n();
 	const names = $derived(new Intl.DisplayNames([i18n.locale], { type: 'region' }));
 </script>
@@ -17,9 +18,9 @@
 	/></svelte:head
 >
 <main id="main-content">
+	<div class="site-desktop-only"><PageIntro title={i18n.t('title')} /></div>
 	<MobilePageHero title={i18n.t('title')} />
 	<div class="site-container site-section settings-panel">
-		<h1 class="site-desktop-only">{i18n.t('title')}</h1>
 		<p>{i18n.t('description')}</p>
 		<p>
 			{i18n.t('suggestion', {
@@ -80,6 +81,45 @@
 		border-radius: 8px;
 	}
 
+	@media (min-width: 768px) {
+		.settings-panel {
+			width: min(calc(100% - var(--bc-page-x) * 2), var(--bc-container-narrow));
+			margin-block: var(--bc-space-8);
+			padding: var(--bc-space-8);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-desktop-card-radius);
+			background: var(--bc-surface-raised);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		form {
+			width: 100%;
+			gap: var(--bc-space-5);
+		}
+		select,
+		button {
+			min-height: var(--bc-control-height-primary);
+			font: var(--bc-weight-control) var(--bc-text-control)/var(--bc-leading-control)
+				var(--bc-font-body);
+			border-radius: var(--bc-radius-control);
+			background: var(--bc-control);
+			color: var(--bc-ink);
+		}
+		button[value='save'] {
+			background: var(--bc-accent);
+			color: var(--bc-accent-contrast);
+			border-color: var(--bc-accent);
+		}
+		button[value='save']:hover {
+			background: var(--bc-accent-hover);
+		}
+		p {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
+		.settings-panel > p:first-of-type {
+			margin-top: 0;
+		}
+	}
 	@media (max-width: 767.98px) {
 		.settings-panel {
 			padding-block: var(--bc-space-4);

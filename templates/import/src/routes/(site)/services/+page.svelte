@@ -35,7 +35,7 @@
 </script>
 
 <svelte:head
-	><title>{english ? 'Services' : 'Услуги'} — {data.site.identity.name}</title><meta
+	><title>{data.directory.pageTitle} — {data.site.identity.name}</title><meta
 		name="description"
 		content={english
 			? 'Vehicle sourcing, sales and preparation services.'
@@ -44,8 +44,8 @@
 >
 <main id="main-content">
 	<PageIntro
-		title={english ? 'Services for your car' : 'Услуги за твоя автомобил'}
-		mobileTitle={english ? 'Services' : 'Услуги'}
+		title={data.directory.titleDesktop}
+		mobileTitle={data.directory.pageTitle}
 		mobileAlign="center"
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
 		desktopImage="/assets/daynight/banners/services-studio-desktop.webp"
@@ -65,7 +65,7 @@
 						bind:value={query}
 						name="q"
 						label={data.directory.search}
-						actionLabel={english ? 'Search' : 'Търси'}
+						actionLabel={data.directory.searchAction}
 						controls="service-results"
 					/>
 				</form>

@@ -67,6 +67,7 @@
 	--bc-ink: #17191c;
 	--bc-ink-soft: #1c1c1c;
 	--bc-copy: #4f5965;
+	--bc-description-copy: #343b43;
 	--bc-muted: #626d7c;
 	--bc-muted-light: #9fa1a4;
 	--bc-subtle: #697078;
@@ -304,14 +305,16 @@
 	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
 	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
 
-	/* Opt-in editorial surfaces shared by About's desktop and mobile compositions. */
+	/* Editorial surfaces shared by public desktop and the opt-in mobile About trial. */
 	--bc-editorial-canvas: #f6f6f7;
 	--bc-editorial-border: #e5e5e7;
+	--bc-editorial-border-strong: #c8c8cd;
 	--bc-editorial-muted: #66676b;
 	--bc-editorial-hover: #eeeef0;
 	--bc-editorial-radius: var(--bc-radius-modal);
 	--bc-editorial-photo-radius: var(--bc-radius-panel);
 	--bc-editorial-shadow: 0 1px 2px rgb(23 25 28 / 0.04), 0 8px 24px rgb(23 25 28 / 0.025);
+	--bc-editorial-hover-shadow: 0 2px 4px rgb(23 25 28 / 0.04), 0 10px 28px rgb(23 25 28 / 0.06);
 
 	--bc-motion-fast: 150ms ease;
 	--bc-motion-hover: 140ms ease;
@@ -320,6 +323,28 @@
 }
 
 @media (min-width: 768px) {
+	/* The public desktop theme also reaches public dialog portals. Mobile and
+	   the independently owned legacy/admin shells retain their existing values. */
+	.site-shell,
+	.site-dialog {
+		--bc-bg: var(--bc-editorial-canvas);
+		--bc-bg-strong: var(--bc-editorial-canvas);
+		--bc-surface: var(--bc-editorial-canvas);
+		--bc-surface-soft: var(--bc-editorial-canvas);
+		--bc-surface-hover: var(--bc-editorial-hover);
+		--bc-border: var(--bc-editorial-border);
+		--bc-border-strong: var(--bc-editorial-border-strong);
+		--bc-copy: var(--bc-editorial-muted);
+		--bc-muted: var(--bc-editorial-muted);
+		--bc-card-bg: var(--bc-surface-raised);
+		--bc-shadow-subtle: var(--bc-editorial-shadow);
+		--bc-shadow-card: var(--bc-editorial-hover-shadow);
+		--bc-desktop-card-radius: var(--bc-editorial-radius);
+		--bc-desktop-media-radius: var(--bc-editorial-photo-radius);
+		--bc-desktop-card-heading: var(--bc-text-h5);
+		--desktop-discovery-radius: var(--bc-editorial-radius);
+		--desktop-discovery-shadow: var(--bc-editorial-shadow);
+	}
 	.site-shell {
 		--bc-text-meta: 0.875rem;
 		--bc-desktop-page-hero-height: 400px;
@@ -328,17 +353,17 @@
 		--bc-desktop-hero-padding-start: var(--bc-space-8);
 		--bc-desktop-hero-padding-end: var(--bc-space-6);
 		--bc-desktop-hero-gap: var(--bc-space-4);
-		--bc-desktop-section-title: clamp(1.75rem, 2.25vw, 2rem);
+		--bc-desktop-section-title: var(--bc-desktop-editorial-title);
 		--bc-desktop-discovery-width: 880px;
 		--bc-desktop-service-search-width: 640px;
-		--bc-desktop-action-panel-width: 640px;
+		--bc-desktop-action-panel-width: var(--bc-desktop-editorial-action-width);
 		--bc-desktop-discovery-panel-height: 160px;
 		--bc-desktop-card-title: 18px;
 		--bc-desktop-service-title: 22px;
 		--bc-desktop-card-price: 26px;
 		--bc-desktop-team-width: 1056px;
 		--bc-desktop-team-image-height: 220px;
-		/* Calm editorial surfaces, adopted independently by desktop page compositions. */
+		/* About-compatible aliases for explicit framed desktop compositions. */
 		--bc-desktop-editorial-width: 1120px;
 		--bc-desktop-editorial-action-width: 560px;
 		--bc-desktop-editorial-canvas: var(--bc-editorial-canvas);

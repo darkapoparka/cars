@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { vehicleImageDelivery } from '$lib/utils/vehicle-images';
 	import { imageFallback } from '$lib/browser/image-fallback';
+	import { vehicleCardCopy } from '$lib/content/vehicle-card';
 	import Heart from '@lucide/svelte/icons/heart';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -13,6 +14,7 @@
 		english = false
 	}: { card: AuxeroInventoryVehicleCard; priority?: boolean; english?: boolean } = $props();
 	const garage = getGarageContext();
+	const copy = $derived(vehicleCardCopy[english ? 'en' : 'bg']);
 	const deliveryImage = $derived(vehicleImageDelivery(card.image));
 	const href = $derived(
 		'/inventory/' + encodeURIComponent(card.slug) + (english ? '?lang=en' : '')
@@ -39,7 +41,7 @@
 		<button
 			class="site-vehicle-card__favorite"
 			type="button"
-			aria-label={(english ? 'Save ' : 'Запази ') + card.title}
+			aria-label={copy.save + card.title}
 			aria-pressed={garage.isFavorite(card.slug)}
 			onclick={() => garage.toggleFavorite(card.slug)}
 			><Heart
@@ -52,7 +54,7 @@
 	<div class="site-vehicle-card__body">
 		<h2><a href={linkHref(href)} title={card.title}>{card.title}</a></h2>
 		<div class="site-vehicle-card__metadata">
-			<ul aria-label={english ? 'Specifications' : 'Характеристики'}>
+			<ul aria-label={copy.specifications}>
 				<li>{card.year}</li>
 				<li title={card.fuel}>{card.fuel}</li>
 				<li title={card.transmission}>{card.transmission}</li>
@@ -64,14 +66,13 @@
 					href={linkHref(
 						'/financing?vehicle=' + encodeURIComponent(card.slug) + (english ? '&lang=en' : '')
 					)}
-					aria-label={(english ? 'Illustrative financing: ' : 'Ориентировъчно финансиране: ') +
-						card.monthlyLabel}>{card.monthlyLabel}</a
+					aria-label={copy.financing + card.monthlyLabel}>{card.monthlyLabel}</a
 				>{/if}
 		</div>
 		<div class="site-vehicle-card__actions">
-			<Action {href}>{english ? 'View details' : 'Виж детайли'}</Action><button
+			<Action {href}>{copy.details}</Action><button
 				type="button"
-				aria-label={(english ? 'Compare ' : 'Сравни ') + card.title}
+				aria-label={copy.compare + card.title}
 				aria-pressed={garage.isCompared(card.slug)}
 				onclick={() => garage.toggleCompare(card.slug)}
 				><ArrowLeftRight size={19} aria-hidden="true" /></button
@@ -229,6 +230,10 @@
 		color: var(--bc-accent);
 	}
 	@media (min-width: 768px) {
+		.site-vehicle-card {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
 		h2 {
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-card-title);
@@ -291,6 +296,9 @@
 		}
 		.site-vehicle-card__media {
 			aspect-ratio: 1.6;
+			margin: var(--bc-space-2) var(--bc-space-2) 0;
+			border-radius: var(--bc-desktop-media-radius);
+			overflow: hidden;
 		}
 		.site-vehicle-card {
 			container-type: inline-size;

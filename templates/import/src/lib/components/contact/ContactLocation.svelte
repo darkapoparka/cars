@@ -5,6 +5,7 @@
 	import { daynightContact } from '$lib/config/dealer';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import Action from '$lib/components/common/Action.svelte';
+	import { contactDesktopCopy } from '$lib/content/contact-desktop';
 	let {
 		english = false,
 		layout = 'split',
@@ -12,16 +13,17 @@
 	}: { english?: boolean; layout?: 'split' | 'stacked'; desktopFramed?: boolean } = $props();
 	const desktop = new MediaQuery('(min-width: 768px)', false);
 	const copy = $derived(dealerCopy[english ? 'en' : 'bg']);
+	const labels = $derived(contactDesktopCopy[english ? 'en' : 'bg']);
 </script>
 
 <section
 	class="contact-location"
 	class:contact-location--stacked={layout === 'stacked'}
 	class:contact-location--desktop-framed={desktopFramed}
-	aria-label={english ? 'Our location' : 'Нашият адрес'}
+	aria-label={labels.location}
 >
 	<div class="contact-location__info">
-		<h2>{english ? 'Visit us' : 'Посети ни'}</h2>
+		<h2>{labels.visit}</h2>
 		<p class="contact-location__address">{copy.address}</p>
 		<p class="contact-location__appointment">{copy.appointment}</p>
 		<div class="contact-location__actions">
@@ -32,7 +34,7 @@
 				target="_blank"
 				rel="noreferrer"
 			>
-				{english ? 'Get directions' : 'Как да стигнеш'}<ArrowUpRight size={18} aria-hidden="true" />
+				{labels.directions}<ArrowUpRight size={18} aria-hidden="true" />
 			</Action>
 			<Action
 				href={site.contact.phoneHref}
@@ -44,7 +46,7 @@
 	{#if desktop.current}
 		<iframe
 			src={daynightContact.mapEmbedUrl}
-			title={english ? 'Map of our Sofia address' : 'Карта на адреса ни в София'}
+			title={labels.mapTitle}
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
 			allowfullscreen
@@ -116,12 +118,14 @@
 	}
 	@media (min-width: 768px) {
 		.contact-location--desktop-framed {
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
 			gap: var(--bc-space-2);
 			padding: var(--bc-space-2);
 			border-color: var(--bc-desktop-editorial-border);
 			border-radius: var(--bc-desktop-editorial-radius);
 			box-shadow: var(--bc-desktop-editorial-shadow);
+		}
+		.contact-location--desktop-framed:not(.contact-location--stacked) {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
 		}
 		.contact-location--desktop-framed .contact-location__info {
 			padding: var(--bc-space-6);

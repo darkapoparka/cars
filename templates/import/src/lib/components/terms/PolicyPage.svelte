@@ -5,6 +5,7 @@
 		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import Action from '$lib/components/common/Action.svelte';
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
+	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import { MediaQuery } from 'svelte/reactivity';
 	const desktop = new MediaQuery('(min-width: 768px)', true);
@@ -20,9 +21,9 @@
 </script>
 
 <main id="main-content">
+	<div class="site-desktop-only"><PageIntro title={policy.title} /></div>
 	<MobilePageHero title={policy.title} />
 	<div class="site-container policy-page">
-		<h1 class="site-desktop-only">{policy.title}</h1>
 		<p class="policy-intro">{policy.intro}</p>
 		{#each policy.sections as section, index (section.id)}
 			<details
@@ -48,10 +49,6 @@
 		max-width: var(--bc-container-narrow);
 		padding-block: var(--bc-section-sm);
 	}
-	h1 {
-		font: var(--bc-weight-heading) var(--bc-text-h2)/var(--bc-leading-h2) var(--bc-font-heading);
-		margin: 0;
-	}
 	.policy-intro {
 		font-size: var(--bc-text-body-lg);
 	}
@@ -76,6 +73,24 @@
 	}
 	summary :global(svg) {
 		display: none;
+	}
+	@media (min-width: 768px) {
+		.policy-page {
+			margin-block: var(--bc-space-8);
+			padding: var(--bc-space-8);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-desktop-card-radius);
+			background: var(--bc-surface-raised);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		h2 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-heading);
+		}
+		p {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
 	}
 	@media (max-width: 767.98px) {
 		details {

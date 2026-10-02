@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { siteShellCopy, publicNavigationEnglish } from '$lib/content/site-shell';
 	import { assetHref } from '$lib/utils/assets';
 	import LocaleSettingsMenu from './LocaleSettingsMenu.svelte';
 	import { routeParts } from '$lib/locale/core';
@@ -19,31 +20,26 @@
 	const garage = getGarageContext();
 	const countId = $props.id();
 	const english = $derived(page.data.locale === 'en');
-	const labels: Record<string, string> = {
-		'/': 'Home',
-		'/inventory': 'Cars',
-		'/services': 'Services',
-		'/about': 'About',
-		'/contact': 'Contact'
-	};
+	const copy = $derived(siteShellCopy[english ? 'en' : 'bg']);
+
 	const groups = $derived<Record<string, { label: string; href: string }[]>>({
 		'/inventory': [
-			{ href: '/inventory', label: english ? 'All cars' : 'Всички автомобили' },
-			{ href: '/compare', label: english ? 'Compare' : 'Сравни автомобили' },
-			{ href: '/account/favorites', label: english ? 'Saved cars' : 'Любими автомобили' }
+			{ href: '/inventory', label: copy.allCars },
+			{ href: '/compare', label: copy.compareCars },
+			{ href: '/account/favorites', label: copy.savedCars }
 		],
 		'/services': [
-			{ href: '/services', label: english ? 'All services' : 'Всички услуги' },
-			{ href: '/import', label: english ? 'Import a car' : 'Внос на автомобил' },
-			{ href: '/sell-your-car', label: english ? 'Sell your car' : 'Продай автомобил' },
-			{ href: '/financing', label: english ? 'Financing' : 'Финансиране' },
-			{ href: '/calculator', label: english ? 'Import calculator' : 'Калкулатор за внос' }
+			{ href: '/services', label: copy.allServices },
+			{ href: '/import', label: copy.importCar },
+			{ href: '/sell-your-car', label: copy.sellCar },
+			{ href: '/financing', label: copy.financing },
+			{ href: '/calculator', label: copy.calculator }
 		],
 		'/about': [
-			{ href: '/about', label: english ? 'About us' : 'За нас' },
-			{ href: '/blog', label: english ? 'Guides' : 'Полезно' },
-			{ href: '/reviews', label: english ? 'Reviews' : 'Отзиви' },
-			{ href: '/faqs', label: english ? 'Questions' : 'Въпроси' }
+			{ href: '/about', label: copy.aboutUs },
+			{ href: '/blog', label: copy.guides },
+			{ href: '/reviews', label: copy.reviews },
+			{ href: '/faqs', label: copy.questions }
 		]
 	});
 	const localizedHref = (href: string) =>
@@ -61,9 +57,9 @@
 				height="512"
 			/></a
 		>
-		<nav class="site-header__nav" aria-label={english ? 'Main navigation' : 'Основна навигация'}>
+		<nav class="site-header__nav" aria-label={copy.mainNavigation}>
 			{#each siteNavigation as item (item.href)}<NavigationMenu
-					label={english ? labels[item.href] : item.label}
+					label={english ? publicNavigationEnglish[item.href] : item.label}
 					href={localizedHref(item.href)}
 					links={(groups[item.href] ?? []).map((link) => ({
 						...link,
@@ -80,53 +76,52 @@
 			<a
 				class="site-header__icon"
 				href={linkHref(site.contact.phoneHref)}
-				aria-label={english ? 'Call' : 'Обади се'}
-				title={(english ? 'Call ' : 'Обади се: ') + site.contact.phoneHref.replace('tel:', '')}
+				aria-label={copy.call}
+				title={copy.callPhonePrefix + site.contact.phoneHref.replace('tel:', '')}
 				><PhoneCall size={22} strokeWidth={1.7} aria-hidden="true" /></a
 			>
 			<LocaleSettingsMenu />
 			<a
 				class="site-header__icon site-header__account"
 				href={linkHref('/account')}
-				aria-label={english ? 'Account' : 'Профил'}
-				title={english ? 'Account' : 'Профил'}
-				><UserRound size={22} strokeWidth={1.7} aria-hidden="true" /></a
+				aria-label={copy.account}
+				title={copy.account}><UserRound size={22} strokeWidth={1.7} aria-hidden="true" /></a
 			>
 			<button
 				class="site-header__icon"
 				type="button"
 				onclick={() => (searchOpen = true)}
-				aria-label={english ? 'Search cars' : 'Търси автомобили'}
-				title={english ? 'Search cars' : 'Търси автомобили'}
+				aria-label={copy.search}
+				title={copy.search}
 				aria-haspopup="dialog"
 				aria-expanded={searchOpen}><Search size={22} strokeWidth={1.7} aria-hidden="true" /></button
 			>
 			<a
 				class="site-header__icon"
 				href={linkHref(localizedHref('/compare'))}
-				aria-label={english ? 'Compare' : 'Сравни'}
+				aria-label={copy.compare}
 				aria-describedby={countId + '-compare'}
-				title={(english ? 'Compare' : 'Сравни') + ' (' + garage.compare.length + ')'}
+				title={copy.compare + ' (' + garage.compare.length + ')'}
 				><ArrowLeftRight size={22} strokeWidth={1.7} aria-hidden="true" />
 				{#if garage.compare.length}<span class="site-header__badge" aria-hidden="true"
 						>{garage.compare.length}</span
 					>{/if}
 				<span class="sr-only" id={countId + '-compare'}
-					>{english ? 'Cars selected: ' : 'Избрани автомобили: '}{garage.compare.length}</span
+					>{copy.selectedCount}{garage.compare.length}</span
 				></a
 			>
 			<a
 				class="site-header__icon"
 				href={linkHref(localizedHref('/account/favorites'))}
-				aria-label={english ? 'Saved cars' : 'Любими'}
+				aria-label={copy.saved}
 				aria-describedby={countId + '-favorites'}
-				title={(english ? 'Saved cars' : 'Любими') + ' (' + garage.favorites.length + ')'}
+				title={copy.saved + ' (' + garage.favorites.length + ')'}
 				><Heart size={22} strokeWidth={1.7} aria-hidden="true" />
 				{#if garage.favorites.length}<span class="site-header__badge" aria-hidden="true"
 						>{garage.favorites.length > 99 ? '99+' : garage.favorites.length}</span
 					>{/if}
 				<span class="sr-only" id={countId + '-favorites'}
-					>{english ? 'Saved cars: ' : 'Запазени автомобили: '}{garage.favorites.length}</span
+					>{copy.savedCount}{garage.favorites.length}</span
 				></a
 			>
 		</div>

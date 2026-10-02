@@ -2,11 +2,13 @@
 	let {
 		steps,
 		horizontal = false,
-		mobilePanel = false
+		mobilePanel = false,
+		editorial = false
 	}: {
 		steps: readonly { title: string; text: string; mobileText?: string }[];
 		horizontal?: boolean;
 		mobilePanel?: boolean;
+		editorial?: boolean;
 	} = $props();
 </script>
 
@@ -14,13 +16,16 @@
 	class="process-steps"
 	class:process-steps--horizontal={horizontal}
 	class:process-steps--mobile-panel={mobilePanel}
+	class:desktop-process={editorial}
 	style:--step-count={steps.length}
 >
 	{#each steps as step, index (step.title)}<li>
-			<span class="process-steps__number" aria-hidden="true">{index + 1}</span>
+			<span class="process-steps__number" aria-hidden="true"
+				>{editorial ? String(index + 1).padStart(2, '0') : index + 1}</span
+			>
 			<div>
 				<h3>{step.title}</h3>
-				<p>{mobilePanel ? (step.mobileText ?? step.text) : step.text}</p>
+				<p>{mobilePanel || editorial ? (step.mobileText ?? step.text) : step.text}</p>
 			</div>
 		</li>{/each}
 </ol>
@@ -82,22 +87,41 @@
 		}
 	}
 	@media (min-width: 768px) {
+		.process-steps--horizontal {
+			gap: var(--bc-space-4);
+		}
 		.process-steps--horizontal li {
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-5);
 			border: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-card);
+			border-radius: var(--bc-desktop-editorial-radius);
 			background: var(--bc-card-bg);
-			grid-template-rows: auto 1fr;
+			box-shadow: var(--bc-desktop-editorial-shadow);
+			grid-template-rows: auto auto 1fr;
 			align-content: start;
 		}
+		.process-steps--horizontal li > div {
+			display: contents;
+		}
 		.process-steps--horizontal .process-steps__number {
-			background: var(--bc-accent-tint);
-			color: var(--bc-accent);
+			width: var(--bc-space-8);
+			height: var(--bc-space-8);
+			margin-bottom: var(--bc-space-2);
+			background: var(--bc-desktop-editorial-canvas);
+			color: var(--bc-desktop-editorial-muted);
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-body);
+			line-height: var(--bc-leading-h5);
+			font-variant-numeric: tabular-nums;
 		}
 		.process-steps--horizontal h3 {
+			margin: 0;
 			font-family: var(--bc-font-body);
+			font-size: var(--bc-text-control);
 		}
 		.process-steps--horizontal p {
 			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body-lg);
 		}
 	}
 	@media (max-width: 575px) {

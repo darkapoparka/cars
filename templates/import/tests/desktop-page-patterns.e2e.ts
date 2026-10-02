@@ -11,6 +11,7 @@ for (const locale of ['bg', 'en']) {
 		for (const width of [768, 1440, 1920]) {
 			await page.setViewportSize({ width, height: 1000 });
 			let frameBaseline;
+			let titleBaseline;
 			let actionBaseline;
 			for (const route of [
 				'',
@@ -28,13 +29,22 @@ for (const locale of ['bg', 'en']) {
 					return {
 						top: rect.y,
 						height: rect.height,
+						minimum: getComputedStyle(node).minHeight,
 						title: node.querySelector('h1')!.getBoundingClientRect().y,
 						actions: node.querySelector('.site-intro__desktop-actions')?.getBoundingClientRect().y
 					};
 				});
 				const frame = { top: geometry.top, height: geometry.height };
 				frameBaseline ??= frame;
-				expect(frame, `${width}: ${route || 'home'} hero frame`).toEqual(frameBaseline);
+				// Content-driven heroes can grow by a fractional pixel with font metrics.
+				expect(frame.top, `${width}: ${route || 'home'} hero top`).toBe(frameBaseline.top);
+				expect(
+					Math.abs(frame.height - frameBaseline.height),
+					`${width}: ${route || 'home'} hero frame`
+				).toBeLessThan(1);
+				expect(geometry.minimum).toBe(width === 768 ? '450px' : '400px');
+				titleBaseline ??= geometry.title;
+				expect(geometry.title, `${width}: ${route || 'home'} title anchor`).toBe(titleBaseline);
 				if (['services', 'about', 'contact'].includes(route)) {
 					actionBaseline ??= geometry;
 					expect(geometry, `${width}: ${route} action placement`).toEqual(actionBaseline);
@@ -128,18 +138,27 @@ test('page actions are real destinations and the services directory is accessibl
 	page
 }) => {
 	await visit(page, '/en/about');
-	const directions = page.locator('.site-intro').getByRole('link', { name: 'Get directions' });
+	await expect(
+		page.locator('.site-intro').getByRole('link', { name: 'Browse our cars' })
+	).toHaveAttribute('href', /^\/en\/inventory(?:\?|$)/);
+	await expect(
+		page.locator('.site-intro').getByRole('link', { name: 'Contact us' })
+	).toHaveAttribute('href', /^\/en\/contact(?:\?|$)/);
+	const directions = page
+		.locator('.contact-location')
+		.getByRole('link', { name: 'Get directions' });
 	await expect(directions).toHaveAttribute('href', /^https:\/\/www.google.com\/maps/);
 	const action = (await directions.boundingBox())!;
-	const socials = (await page.locator('.site-intro .social-links').boundingBox())!;
-	expect(socials.y).toBeGreaterThan(action.y + action.height);
+	expect(action.height).toBeGreaterThanOrEqual(44);
+	await expect(page.locator('.site-intro .social-links')).toHaveCount(0);
+	await expect(page.locator('.site-footer .social-links a')).toHaveCount(3);
 	await visit(page, '/en/contact');
-	await expect(page.locator('.site-intro').getByRole('link', { name: 'Call us' })).toHaveAttribute(
-		'href',
-		/^tel:/
-	);
+	const phone = page.locator('.site-intro a[href^="tel:"]');
+	await expect(phone).toHaveCount(1);
+	await expect(phone).toHaveAccessibleName(/\d+/);
+	expect((await phone.boundingBox())!.height).toBeGreaterThanOrEqual(48);
 	await expect(
-		page.locator('.site-intro').getByRole('link', { name: 'Get directions' })
+		page.locator('.contact-location').getByRole('link', { name: 'Get directions' })
 	).toHaveAttribute('href', /^https:\/\/www.google.com\/maps/);
 	await visit(page, '/en/services');
 	const hrefs = await page

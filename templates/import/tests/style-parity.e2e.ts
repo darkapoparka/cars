@@ -80,10 +80,21 @@ test('about and services retain centered media sections at desktop and mobile wi
 	await visit(page, '/services');
 	await expect(page.locator('.service-card')).toHaveCount(6);
 	expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-	if (info.project.name === 'desktop')
-		expect(
-			await page
-				.locator('.services-grid')
-				.evaluate((node) => getComputedStyle(node).gridTemplateColumns.split(' ').length)
-		).toBe(3);
+	if (info.project.name === 'desktop') {
+		for (const [width, columns] of [
+			[768, 2],
+			[1024, 4],
+			[1440, 4]
+		]) {
+			await page.setViewportSize({ width, height: 1000 });
+			expect(
+				await page
+					.locator('.services-grid')
+					.evaluate((node) => getComputedStyle(node).gridTemplateColumns.split(' ').length)
+			).toBe(columns);
+			expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+				true
+			);
+		}
+	}
 });

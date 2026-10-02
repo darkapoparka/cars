@@ -5,6 +5,8 @@
 	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import type { Snippet } from 'svelte';
 	import MobileIconAction from './MobileIconAction.svelte';
+	import { siteShellCopy } from '$lib/content/site-shell';
+	const copy = $derived(siteShellCopy[page.data.locale === 'en' ? 'en' : 'bg']);
 	let {
 		open = $bindable(false),
 		title,
@@ -58,7 +60,7 @@
 				{#if onBack}<button
 						type="button"
 						class="site-dialog__icon"
-						aria-label={backLabel ?? (page.data.locale === 'en' ? 'Back' : 'Назад')}
+						aria-label={backLabel ?? copy.back}
 						onclick={onBack}><ArrowLeft size={20} aria-hidden="true" /></button
 					>{/if}
 				<div class="site-dialog__heading">
@@ -69,14 +71,11 @@
 				</div>
 				{#if headerActions}{@render headerActions()}{/if}
 				{#if variant === 'filter'}
-					<Dialog.Close
-						class="site-dialog__icon"
-						aria-label={page.data.locale === 'en' ? 'Close' : 'Затвори'}
+					<Dialog.Close class="site-dialog__icon" aria-label={copy.close}
 						><X size={20} aria-hidden="true" /></Dialog.Close
 					>
-				{:else}<MobileIconAction
-						label={page.data.locale === 'en' ? 'Close' : 'Затвори'}
-						onclick={() => (open = false)}><X size={20} aria-hidden="true" /></MobileIconAction
+				{:else}<MobileIconAction label={copy.close} onclick={() => (open = false)}
+						><X size={20} aria-hidden="true" /></MobileIconAction
 					>
 				{/if}
 			</header>
@@ -183,6 +182,16 @@
 	.site-dialog__toolbar {
 		flex-shrink: 0;
 		min-width: 0;
+	}
+	@media (min-width: 768px) {
+		:global(.site-dialog) {
+			border-radius: var(--bc-editorial-radius);
+		}
+		:global(.site-dialog__title) {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-editorial-title);
+			line-height: var(--bc-leading-h4);
+		}
 	}
 	/* Filter dialogs own their shell here; consumers only arrange their content. */
 	:global(.site-dialog--filter) {

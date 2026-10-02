@@ -2,17 +2,11 @@
 	import { page } from '$app/state';
 	import { site } from '$lib/config/site';
 	import Action from '$lib/components/common/Action.svelte';
-	const english = $derived(page.data.locale === 'en');
+	import { errorPageCopy } from '$lib/content/error-page';
+	import { isPublicPath, routeParts } from '$lib/locale/core';
+	const copy = $derived(errorPageCopy[page.data.locale === 'en' ? 'en' : 'bg']);
 	const missing = $derived(page.status === 404);
-	const title = $derived(
-		missing
-			? english
-				? 'Page not found'
-				: 'Страницата не е намерена'
-			: english
-				? 'Temporarily unavailable'
-				: 'Временно недостъпно'
-	);
+	const title = $derived(missing ? copy.missing : copy.unavailable);
 </script>
 
 <svelte:head
@@ -21,21 +15,16 @@
 		content="noindex"
 	/></svelte:head
 >
-<main id="main-content" class="site-container site-section error-page">
+<main
+	id="main-content"
+	class="site-container site-section error-page"
+	class:error-page--public={isPublicPath(routeParts(page.url.pathname).path)}
+>
 	<h1>{title}</h1>
-	<p>
-		{missing
-			? english
-				? 'This address is no longer available. Browse our available cars or return home.'
-				: 'Този адрес не е достъпен. Разгледай наличните автомобили или се върни в началото.'
-			: english
-				? 'Please try again shortly, or contact us by phone.'
-				: 'Моля, опитай отново след малко или се свържи с нас по телефон.'}
-	</p>
+	<p>{missing ? copy.missingDescription : copy.unavailableDescription}</p>
 	<div>
-		<Action href="/inventory">{english ? 'Browse cars' : 'Разгледай автомобили'}</Action><Action
-			href="/"
-			variant="secondary">{english ? 'Home' : 'Начало'}</Action
+		<Action href="/inventory">{copy.browse}</Action><Action href="/" variant="secondary"
+			>{copy.home}</Action
 		>
 	</div>
 </main>
@@ -60,5 +49,20 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: var(--bc-space-3);
+	}
+	@media (min-width: 768px) {
+		.error-page--public {
+			align-content: start;
+			justify-items: center;
+			gap: var(--bc-desktop-hero-gap);
+			padding-top: var(--bc-desktop-hero-padding-start);
+			text-align: center;
+		}
+		.error-page--public h1 {
+			max-width: var(--bc-desktop-hero-title-width);
+			font-size: var(--bc-desktop-hero-title);
+			line-height: 1.12;
+			text-wrap: balance;
+		}
 	}
 </style>

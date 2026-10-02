@@ -68,13 +68,19 @@ test('public actions share a readable control weight', async ({ page }, info) =>
 	}
 });
 
-test('About opens with the team, not a wall of duplicate introduction copy', async ({ page }) => {
+test('About opens with the team and retains accessible social destinations', async ({
+	page
+}, info) => {
 	await visit(page, '/about');
 	await expect(page.locator('.about-overview')).toHaveCount(0);
 	await expect(page.locator('.about-team article')).toHaveCount(3);
 	const socials = page.locator(
-		'.about-socials .social-links a:visible, .site-intro .social-links a:visible'
+		info.project.name === 'desktop'
+			? '.site-footer .social-links a:visible'
+			: '.about-socials .social-links a:visible'
 	);
+	if (info.project.name === 'desktop')
+		await expect(page.locator('.site-intro .social-links')).toHaveCount(0);
 	await expect(socials).toHaveCount(3);
 	for (const link of await socials.all()) {
 		await expect(link).toHaveAttribute('href', /^https:/);
@@ -83,24 +89,35 @@ test('About opens with the team, not a wall of duplicate introduction copy', asy
 	}
 });
 
-test('Contact has centered contact channels and a centered usable form', async ({ page }, info) => {
+test('Contact pairs the framed location with a usable form and reflows at narrower desktop widths', async ({
+	page
+}, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/contact');
 	const form = page.locator('.contact-form-panel');
 	const bounds = await form.boundingBox();
-	const parent = await page.locator('.contact-intake').boundingBox();
-	const viewportCenter = parent!.x + parent!.width / 2;
-	expect(Math.abs(bounds!.x + bounds!.width / 2 - viewportCenter)).toBeLessThan(2);
+	const parent = await page.locator('.contact-intake-grid').boundingBox();
+	const location = page.locator('.contact-intake .contact-location');
+	const map = (await location.boundingBox())!;
+	expect(map.x + map.width).toBeLessThan(bounds!.x);
+	expect(Math.abs(map.y - bounds!.y)).toBeLessThan(1);
+	expect(Math.abs(bounds!.x + bounds!.width - parent!.x - parent!.width)).toBeLessThan(1);
 	await expect(page.locator('.contact-channel')).toHaveCount(3);
 	expect(
 		await page.locator('.site-intro__content').evaluate((node) => getComputedStyle(node).textAlign)
 	).toBe('center');
 	expect(await form.locator('header').evaluate((node) => getComputedStyle(node).textAlign)).toBe(
-		'center'
+		'left'
 	);
 	expect(
 		await form.locator('input[name="name"]').evaluate((node) => getComputedStyle(node).fontSize)
 	).toBe('18px');
+	await page.setViewportSize({ width: 768, height: 1000 });
+	const narrowMap = (await location.boundingBox())!;
+	const narrowForm = (await form.boundingBox())!;
+	expect(narrowMap.y + narrowMap.height).toBeLessThan(narrowForm.y);
+	expect(Math.abs(narrowMap.x - narrowForm.x)).toBeLessThan(1);
+	expect(Math.abs(narrowMap.width - narrowForm.width)).toBeLessThan(1);
 	const result = await new AxeBuilder({ page })
 		.withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
 		.analyze();

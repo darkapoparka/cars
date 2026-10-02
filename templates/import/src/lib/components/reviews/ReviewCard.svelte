@@ -103,7 +103,12 @@
 	@media (min-width: 768px) {
 		.review-card {
 			background: var(--bc-card-bg);
-			border-radius: var(--bc-radius-card);
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		blockquote {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
 		}
 		.review-card__avatar {
 			background: var(--bc-bg-strong);

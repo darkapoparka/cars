@@ -7,6 +7,7 @@
 	import { page } from '$app/state';
 	import PublicHeader from '$lib/components/layout/PublicHeader.svelte';
 	import PublicFooter from '$lib/components/layout/PublicFooter.svelte';
+	import SiteSkipLink from '$lib/components/layout/SiteSkipLink.svelte';
 	import type { LayoutProps } from './$types';
 	let { data, children }: LayoutProps = $props();
 	const canonicalFor = (locale: 'bg' | 'en') =>
@@ -35,9 +36,7 @@
 	class:site-shell--secondary={!isHome && !primaryMobilePage}
 	use:localizedValidation={() => data.locale}
 >
-	<a class="site-skip" href="#main-content"
-		>{data.locale === 'en' ? 'Skip to content' : 'Към съдържанието'}</a
-	>
+	<SiteSkipLink />
 	<PublicHeader mobile={isHome} />
 	{@render children()}
 	<div class:site-shell__footer--desktop-only={!isHome} data-home-footer={isHome ? '' : undefined}>
@@ -72,19 +71,5 @@
 		.site-shell__footer--desktop-only {
 			display: none;
 		}
-	}
-	.site-skip {
-		position: fixed;
-		top: 8px;
-		left: 8px;
-		z-index: 2000;
-		transform: translateY(-200%);
-		background: var(--bc-white);
-		color: var(--bc-ink);
-		padding: var(--bc-space-3);
-		border-radius: var(--bc-radius-md);
-	}
-	.site-skip:focus {
-		transform: none;
 	}
 </style>

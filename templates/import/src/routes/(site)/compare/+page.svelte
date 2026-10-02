@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { pageDescriptions } from '$lib/content/seo';
 	import { assetHref } from '$lib/utils/assets';
 	import { page } from '$app/state';
@@ -12,6 +13,7 @@
 	import Plus from '@lucide/svelte/icons/plus';
 	import MobileVehiclePicker from '$lib/components/compare/MobileVehiclePicker.svelte';
 	let { data }: PageProps = $props();
+	const copy = $derived(publicPageCopy[data.locale].compare);
 	const garage = getGarageContext();
 	const english = $derived(data.locale === 'en');
 	const ids = $derived(
@@ -31,11 +33,11 @@
 	);
 	const available = $derived(data.cards.filter((card) => !ids.includes(card.slug)));
 	const rows = $derived([
-		{ label: english ? 'Price' : 'Цена', key: 'priceLabel' as const },
-		{ label: english ? 'Year' : 'Година', key: 'year' as const },
-		{ label: english ? 'Mileage' : 'Пробег', key: 'mileageLabel' as const },
-		{ label: english ? 'Fuel' : 'Гориво', key: 'fuel' as const },
-		{ label: english ? 'Transmission' : 'Скоростна кутия', key: 'transmission' as const }
+		{ label: copy.price, key: 'priceLabel' as const },
+		{ label: copy.year, key: 'year' as const },
+		{ label: copy.mileage, key: 'mileageLabel' as const },
+		{ label: copy.fuel, key: 'fuel' as const },
+		{ label: copy.transmission, key: 'transmission' as const }
 	]);
 	let pickerOpen = $state(false);
 	let pendingCar = $state<string | null>(null);
@@ -60,13 +62,13 @@
 </script>
 
 <svelte:head
-	><title>{english ? 'Compare cars' : 'Сравни автомобили'} — {data.site.identity.name}</title><meta
+	><title>{copy.title} — {data.site.identity.name}</title><meta
 		name="description"
 		content={pageDescriptions.compare[data.locale === 'en' ? 'en' : 'bg']}
 	/></svelte:head
 >
 <main id="main-content">
-	<PageIntro title={english ? 'Compare cars' : 'Сравни автомобили'}>
+	<PageIntro title={copy.title}>
 		{#snippet mobileActions()}
 			<button
 				class="compare-picker-trigger"
@@ -78,51 +80,39 @@
 					event.currentTarget.focus({ preventScroll: true });
 					pickerOpen = true;
 				}}
-				><Plus size={22} aria-hidden="true" /><span
-					>{english ? 'Add a car' : 'Добави автомобил'}</span
-				><small>{selected.length} / 4</small></button
+				><Plus size={22} aria-hidden="true" /><span>{copy.add}</span><small
+					>{selected.length} / 4</small
+				></button
 			>
 		{/snippet}
 	</PageIntro>
 	<div class="site-section site-container site-stack">
 		{#if selected.length}<div class="compare-mobile-controls">
-				<Action variant="quiet" onclick={() => update([])}
-					>{english ? 'Clear comparison' : 'Изчисти сравнението'}</Action
-				>{#if selected.length > 1}<span
-						>{english ? 'Swipe for more cars' : 'Плъзни за още автомобили'}</span
-					>{/if}
+				<Action variant="quiet" onclick={() => update([])}>{copy.clear}</Action
+				>{#if selected.length > 1}<span>{copy.swipe}</span>{/if}
 			</div>{/if}
 		<div class="compare-controls">
 			<label class="site-field"
-				><span>{english ? 'Add a car (up to four)' : 'Добави автомобил (до четири)'}</span><select
+				><span>{copy.addFour}</span><select
 					disabled={selected.length >= 4}
 					value=""
 					onchange={(event) => {
 						if (event.currentTarget.value) update([...ids, event.currentTarget.value]);
 					}}
-					><option value="">{english ? 'Choose a car' : 'Избери автомобил'}</option
-					>{#each available as car (car.slug)}<option value={car.slug}>{car.title}</option
+					><option value="">{copy.choose}</option>{#each available as car (car.slug)}<option
+							value={car.slug}>{car.title}</option
 						>{/each}</select
 				></label
-			>{#if selected.length}<Action variant="quiet" onclick={() => update([])}
-					>{english ? 'Clear comparison' : 'Изчисти сравнението'}</Action
+			>{#if selected.length}<Action variant="quiet" onclick={() => update([])}>{copy.clear}</Action
 				>{/if}
 		</div>
 		{#if selected.length}
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex (Keyboard users need to focus and scroll the comparison region.) -->
-			<div
-				class="compare-scroll"
-				tabindex="0"
-				role="region"
-				aria-label={english ? 'Vehicle comparison table' : 'Таблица за сравнение'}
-			>
+			<div class="compare-scroll" tabindex="0" role="region" aria-label={copy.table}>
 				<table>
-					<caption class="sr-only"
-						>{english ? 'Vehicle specifications' : 'Характеристики на автомобилите'}</caption
-					><thead
+					<caption class="sr-only">{copy.specifications}</caption><thead
 						><tr
-							><th scope="col">{english ? 'Vehicle' : 'Автомобил'}</th
-							>{#each selected as car (car.slug)}<th scope="col"
+							><th scope="col">{copy.vehicle}</th>{#each selected as car (car.slug)}<th scope="col"
 									><a href={linkHref('/inventory/' + car.slug)}
 										><img
 											src={assetHref(car.image)}
@@ -134,7 +124,7 @@
 									><Action
 										variant="quiet"
 										onclick={() => update(ids.filter((id) => id !== car.slug))}
-										>{english ? 'Remove' : 'Премахни'}</Action
+										>{copy.remove}</Action
 									></th
 								>{/each}</tr
 						></thead
@@ -149,15 +139,11 @@
 				</table>
 			</div>
 		{:else}<div class="site-panel site-stack site-empty-state">
-				<h2>{english ? 'Choose cars to compare' : 'Избери автомобили за сравнение'}</h2>
+				<h2>{copy.emptyTitle}</h2>
 				<p>
-					{english
-						? 'Compare the facts side by side, without an automatic winner.'
-						: 'Сравни характеристиките на избраните автомобили.'}
+					{copy.emptyText}
 				</p>
-				<Action href="/inventory" variant="secondary"
-					>{english ? 'Browse cars' : 'Разгледай автомобили'}</Action
-				>
+				<Action href="/inventory" variant="secondary">{copy.browse}</Action>
 			</div>{/if}
 	</div>
 </main>
@@ -252,6 +238,24 @@
 	}
 	tbody tr:last-child > * {
 		border-bottom: 0;
+	}
+	@media (min-width: 768px) {
+		.compare-scroll {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		thead img {
+			border-radius: var(--bc-desktop-media-radius);
+		}
+		thead th a {
+			font-size: var(--bc-desktop-card-title);
+			line-height: var(--bc-leading-h5);
+		}
+		th,
+		td {
+			font-size: var(--bc-text-body);
+			line-height: var(--bc-leading-body);
+		}
 	}
 	@media (max-width: 767.98px) {
 		.compare-controls {

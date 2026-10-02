@@ -77,6 +77,15 @@
 	font: var(--bc-weight-heading) var(--bc-text-h4)/1.3 var(--bc-font-heading);
 }
 @media (min-width: 768px) {
+	:where(.site-shell, .site-dialog) .site-panel {
+		border-radius: var(--bc-desktop-card-radius);
+		box-shadow: var(--bc-editorial-shadow);
+	}
+	:where(.site-shell, .site-dialog) .site-panel > h2,
+	:where(.site-shell, .site-dialog) .site-panel > h3 {
+		font-family: var(--bc-font-body);
+		font-size: var(--bc-desktop-card-heading);
+	}
 	.site-field > span,
 	.site-field > label {
 		color: var(--bc-ink);

@@ -1,6 +1,6 @@
 # Typography contract
 
-Public copy uses self-hosted Sofia Sans. Headings use Sofia Sans SemiCondensed. Keep the admin font configuration isolated.
+Public copy uses self-hosted Sofia Sans. Hero headings use Sofia Sans SemiCondensed; public desktop section and panel headings use the body font. Keep the admin font configuration isolated.
 
 The root layout bundles `src/lib/styles/fonts.css` with the shared styles, avoiding a separate blocking font CSS request. It references fonts through their public `/fonts/sofia-sans/` URLs; importing a stylesheet from `static/` can produce forbidden development asset paths. Latin and Cyrillic delivery subsets retain the original glyph metrics; the original full fonts remain the fallback for other scripts. The SIL OFL license and a compatible relative-path stylesheet stay beside all font files. To regenerate these assets and both stylesheet copies, install FontTools 4.66.1 and Brotli 1.2.0 in an isolated Python environment and run `python scripts/subset-fonts.py`. Python is only needed for asset maintenance.
 
@@ -17,8 +17,10 @@ Design values live in src/lib/styles/tokens.css. Action, MobileModeTabs, HeroFil
 | Field labels                     | 16px                    | 16px                                                 | 400                     |
 | Instructions / compact body copy | 16px                    | 16px                                                 | 400                     |
 | Prose / prominent copy           | 18px                    | 18px                                                 | 400                     |
-| Section headings                 | Responsive 32–36px      | Public section scale or established 22px drawer role | 600                     |
-| Metadata                         | 13px                    | 13px                                                 | 400                     |
+| Section headings                 | 28px body font          | Public section scale or established 22px drawer role | 600                     |
+| Panel / article-card headings    | 20px body font          | Existing component role                              | 600                     |
+| Process titles                   | 18px body font          | Existing component role                              | 600                     |
+| Metadata                         | 14px public desktop     | 13px                                                 | 400                     |
 | Compact vehicle specifications   | Existing metadata scale | 12px / 16px                                          | 400                     |
 
 Actions use --bc-weight-action; inputs and options use --bc-weight-control. Headings and prices retain emphasis. Selected controls use their underline, border, colour or checkmark rather than changing text weight or width.
@@ -29,7 +31,7 @@ Desktop vehicle cards keep a single 18px title line with an ellipsis and the ful
 
 Desktop intro headings share `PageIntro` and start 32px below their frame's top edge. Heading width and scale, 16px spacing between heading/caption/actions, and 24px end padding belong to desktop hero tokens. The grid flows from that anchor; the height of route-specific controls does not vertically recenter the heading. Image hero frames retain their common responsive minimum height and grow when content needs room. Text-only intros share the same centered type and anchor. `mobileAlign` and the independent mobile hero compositions retain their existing behavior.
 
-About's desktop editorial treatment uses 28px body-font section headings, 20px team names, 18px process titles and 16px supporting copy. Its location actions use the existing compact 18px role and 44px targets. Hero headings retain the shared `PageIntro` contract. The separately requested mobile About trial uses body-font section headings at 22px/28px, names and process titles at 18px/24px, and copy at 16px/24px. Its hero retains the existing heading font and scale. Social targets remain 48px. [Desktop styling](DESKTOP-STYLING.md) records the accepted reference and future rollout boundaries.
+The public desktop editorial theme shares About's 28px body-font section headings, 20px panel/team/article headings, 18px process titles and 16px supporting copy. Vehicle-card titles retain their explicit 18px role and prices retain their stronger scale. Location actions use the existing compact 18px role and 44px targets. Hero headings retain the shared `PageIntro` contract. The separately requested mobile About trial uses body-font section headings at 22px/28px, names and process titles at 18px/24px, and copy at 16px/24px. Its hero retains the existing heading font and scale. Social targets remain 48px. [Desktop styling](DESKTOP-STYLING.md) records the accepted reference and rollout boundaries; [the desktop receipt](desktop-editorial-2026-10-02/README.md) records verification.
 
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 

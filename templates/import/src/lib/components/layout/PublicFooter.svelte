@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { siteShellCopy } from '$lib/content/site-shell';
 	import { assetHref } from '$lib/utils/assets';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import { site } from '$lib/config/site';
@@ -6,13 +7,14 @@
 	import { page } from '$app/state';
 	import { linkHref } from '$lib/utils/links';
 	const english = $derived(page.data.locale === 'en');
+	const copy = $derived(siteShellCopy[english ? 'en' : 'bg']);
 	const links = $derived([
-		{ href: '/inventory', label: english ? 'Cars' : 'Автомобили' },
-		{ href: '/import', label: english ? 'Import' : 'Внос' },
-		{ href: '/sell-your-car', label: english ? 'Sell your car' : 'Продай автомобил' },
-		{ href: '/financing', label: english ? 'Financing' : 'Финансиране' },
-		{ href: '/about', label: english ? 'About' : 'За нас' },
-		{ href: '/contact', label: english ? 'Contact' : 'Контакти' }
+		{ href: '/inventory', label: copy.cars },
+		{ href: '/import', label: copy.import },
+		{ href: '/sell-your-car', label: copy.sellCar },
+		{ href: '/financing', label: copy.financing },
+		{ href: '/about', label: copy.about },
+		{ href: '/contact', label: copy.contact }
 	]);
 </script>
 
@@ -31,7 +33,7 @@
 				<p>{dealerCopy[english ? 'en' : 'bg'].appointment}</p>
 				<div class="site-footer__socials"><SocialLinks tone="dark" align="start" /></div>
 			</div>
-			<nav aria-label={english ? 'Useful links' : 'Полезни връзки'}>
+			<nav aria-label={copy.usefulLinks}>
 				{#each links as link (link.href)}<a href={linkHref(link.href)}>{link.label}</a>{/each}
 			</nav>
 			<address>
@@ -39,15 +41,15 @@
 					href={linkHref(site.contact.mapHref)}
 					target="_blank"
 					rel="noreferrer">{dealerCopy[english ? 'en' : 'bg'].address}</a
-				><a href={linkHref(site.contact.messageHref)}>{english ? 'Message us' : 'Пиши ни'}</a>
+				><a href={linkHref(site.contact.messageHref)}>{copy.message}</a>
 			</address>
 		</div>
 		<div class="site-footer__legal">
 			<span>{site.identity.name}</span>
-			<nav aria-label={english ? 'Policies' : 'Политики'}>
-				<a href={linkHref('/privacy')}>{english ? 'Privacy' : 'Поверителност'}</a><a
-					href={linkHref('/terms')}>{english ? 'Terms' : 'Условия'}</a
-				><a href={linkHref('/cookies')}>{english ? 'Cookies' : 'Бисквитки'}</a>
+			<nav aria-label={copy.policies}>
+				<a href={linkHref('/privacy')}>{copy.privacy}</a><a href={linkHref('/terms')}
+					>{copy.terms}</a
+				><a href={linkHref('/cookies')}>{copy.cookies}</a>
 			</nav>
 		</div>
 	</div>

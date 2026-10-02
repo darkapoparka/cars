@@ -21,7 +21,7 @@
 	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import { linkHref } from '$lib/utils/links';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import { homeHeroModes } from '$lib/content/home-discovery';
+	import { homeHeroModes, desktopHomeCopy } from '$lib/content/home-discovery';
 	let {
 		hero,
 		english = false,
@@ -31,6 +31,7 @@
 		english?: boolean;
 		discoveryLinks: { label: string; href: string }[];
 	} = $props();
+	const copy = $derived(desktopHomeCopy[english ? 'en' : 'bg']);
 	let modeOverride = $state<HomeFiveHeroActionMode | 'finance' | null>(null);
 	const mode = $derived(modeOverride ?? hero.activeMode);
 	let brandSelection = $state<string[]>([]);
@@ -53,8 +54,8 @@
 	const mileageFilter: HomeFiveHeroSelect = $derived({
 		id: 'desktop-home-mileage',
 		name: 'maxMileage',
-		title: english ? 'Mileage up to' : 'Пробег до',
-		defaultLabel: english ? 'Any mileage' : 'Без ограничение',
+		title: copy.mileageUpTo,
+		defaultLabel: copy.anyMileage,
 		options:
 			mileageSource?.options.map((option) => ({ value: option.value, label: option.label })) ?? []
 	});
@@ -98,7 +99,7 @@
 
 {#snippet searchFilters()}
 	{#if brandFilter}<HeroFilterDialog
-			select={{ ...brandFilter, title: english ? 'Make' : 'Марка' }}
+			select={{ ...brandFilter, title: copy.make }}
 			bind:selected={() => brandSelection, updateBrandSelection}
 			mode="multi"
 			variant="grid"
@@ -107,10 +108,10 @@
 			prominent
 			icon={LayoutGrid}
 			isEnglish={english}
-			dialogTitle={english ? 'Choose make' : 'Избери марка'}
+			dialogTitle={copy.chooseMake}
 		/>{/if}
 	{#if modelFilter}<HeroFilterDialog
-			select={{ ...modelFilter, title: english ? 'Model' : 'Модел' }}
+			select={{ ...modelFilter, title: copy.model }}
 			bind:selected={modelSelection}
 			options={modelOptions}
 			mode="multi"
@@ -119,10 +120,10 @@
 			prominent
 			icon={CarFront}
 			isEnglish={english}
-			dialogTitle={english ? 'Choose model' : 'Избери модел'}
+			dialogTitle={copy.chooseModel}
 		/>{/if}
 	{#if priceFilter}<HeroFilterDialog
-			select={{ ...priceFilter, title: english ? 'Price' : 'Цена' }}
+			select={{ ...priceFilter, title: copy.price }}
 			bind:selected={priceSelection}
 			mode="single"
 			compact
@@ -131,7 +132,7 @@
 			isEnglish={english}
 		/>{/if}
 	<HeroFilterDialog
-		select={{ ...mileageFilter, title: english ? 'Mileage' : 'Пробег' }}
+		select={{ ...mileageFilter, title: copy.mileage }}
 		bind:selected={mileageSelection}
 		mode="single"
 		compact
@@ -150,24 +151,24 @@
 					value={mode}
 					onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
 					idPrefix="home-mode"
-					label={english ? 'Choose a service' : 'Избери услуга'}
+					label={copy.chooseService}
 					options={[
 						{
 							value: 'buy',
-							label: english ? 'Buy' : 'Купи',
+							label: copy.buy,
 							icon: CarFront,
 							panelId: 'home-entry'
 						},
 						{
 							value: 'finance',
-							label: english ? 'Finance' : 'Лизинг',
+							label: copy.finance,
 							icon: HandCoins,
 							panelId: 'home-entry'
 						},
-						{ value: 'sell', label: english ? 'Sell' : 'Продай', icon: Tag, panelId: 'home-entry' },
+						{ value: 'sell', label: copy.sell, icon: Tag, panelId: 'home-entry' },
 						{
 							value: 'import',
-							label: english ? 'Import' : 'Внос',
+							label: copy.import,
 							icon: Ship,
 							panelId: 'home-entry'
 						}
@@ -186,33 +187,25 @@
 						id="home-query"
 						class="home-hero__search"
 						value={keyword}
-						label={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
-						actionLabel={english ? 'Search' : 'Търси'}
+						label={copy.search}
+						actionLabel={copy.searchAction}
 						href={searchHref}
 						expanded={searchOpen}
 						onopen={() => (searchOpen = true)}
 					/>
 					<div class="home-hero__filters">{@render searchFilters()}</div>
-					<noscript
-						><a href={linkHref(localized('/inventory'))}
-							>{english ? 'Browse all cars' : 'Разгледай всички автомобили'}</a
-						></noscript
-					>
+					<noscript><a href={linkHref(localized('/inventory'))}>{copy.browseAll}</a></noscript>
 				{:else if mode === 'finance'}
 					<div class="home-hero__finance">
 						<p>
-							{english
-								? 'Calculate a monthly payment for your next car.'
-								: 'Изчисли месечна вноска за следващия си автомобил.'}
+							{copy.financeDescription}
 						</p>
 						<div class="home-hero__intent-actions">
 							<Action href={localized('/financing')} size="primary"
-								><HandCoins size={20} aria-hidden="true" />{english
-									? 'Calculate payment'
-									: 'Изчисли вноска'}</Action
+								><HandCoins size={20} aria-hidden="true" />{copy.calculatePayment}</Action
 							>
 							<Action variant="secondary" aria-haspopup="dialog" onclick={() => (searchOpen = true)}
-								>{english ? 'Choose a car' : 'Избери автомобил'}</Action
+								>{copy.chooseCar}</Action
 							>
 						</div>
 					</div>
@@ -231,16 +224,10 @@
 									placeholder={mode === 'import' ? 'LINK / VIN' : 'VIN'}
 								/>
 							</label>
-							<Action type="submit" size="primary">{english ? 'Continue' : 'Продължи'}</Action>
+							<Action type="submit" size="primary">{copy.continue}</Action>
 						</div>
 						<a class="home-hero__intent-link" href={linkHref(localized(action))}
-							>{mode === 'import'
-								? english
-									? 'Find a car without a listing'
-									: 'Нямам линк — търся автомобил'
-								: english
-									? 'Enter make and model instead'
-									: 'Въведи марка и модел вместо VIN'}</a
+							>{mode === 'import' ? copy.withoutListing : copy.manualCar}</a
 						>
 					</form>
 				{/if}
@@ -248,7 +235,7 @@
 		</DesktopDiscoveryPanel>
 	{/snippet}
 	{#snippet desktopSecondaryActions()}
-		<nav class="home-quick-links" aria-label={english ? 'Quick car searches' : 'Бързо търсене'}>
+		<nav class="home-quick-links" aria-label={copy.quickSearch}>
 			{#each discoveryLinks as link (link.href)}<Action
 					href={link.href}
 					variant="glass"

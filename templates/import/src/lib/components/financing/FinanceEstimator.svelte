@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { financeEstimatorCopy } from '$lib/content/finance-estimator';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import { formatMoney } from '$lib/i18n/formatting';
 	import { assetHref } from '$lib/utils/assets';
@@ -18,6 +19,7 @@
 		banner?: string;
 		inquiryHref?: string;
 	} = $props();
+	const copy = $derived(financeEstimatorCopy[english ? 'en' : 'bg']);
 	const termLabelId = $props.id();
 	// svelte-ignore state_referenced_locally
 	let price = $state(initialPrice);
@@ -31,17 +33,15 @@
 
 <noscript
 	><p class="site-container site-form-note">
-		{english
-			? 'Interactive calculations require JavaScript. You can request an estimate using the contact form.'
-			: 'Интерактивните изчисления изискват JavaScript. Можеш да заявиш изчисление чрез контактната форма.'}
-		<Action href="/contact">{english ? 'Request an estimate' : 'Заяви изчисление'}</Action>
+		{copy.noScript}
+		<Action href="/contact">{copy.requestEstimate}</Action>
 	</p></noscript
 >
 
 <section
 	class="site-panel finance-estimator"
 	class:finance-estimator--sidebar={layout === 'sidebar'}
-	aria-label={english ? 'Monthly payment calculator' : 'Калкулатор за месечна вноска'}
+	aria-label={copy.label}
 >
 	{#if banner}<img
 			class="finance-estimator__banner"
@@ -51,11 +51,10 @@
 			height="512"
 			loading="lazy"
 		/>{/if}
-	<h2>{english ? 'Calculate your payment' : 'Изчисли месечна вноска'}</h2>
+	<h2>{copy.title}</h2>
 	<div class="site-fields">
 		<label class="site-field" class:site-field--wide={layout === 'sidebar'}
-			><span>{english ? 'Vehicle price' : 'Цена на автомобила'} ({site.locale.currency})</span
-			><input
+			><span>{copy.price} ({site.locale.currency})</span><input
 				type="number"
 				inputmode="decimal"
 				min="0"
@@ -65,8 +64,7 @@
 			/></label
 		>
 		<label class="site-field" class:site-field--wide={layout === 'sidebar'}
-			><span>{english ? 'Down payment' : 'Първоначална вноска'} ({site.locale.currency})</span
-			><input
+			><span>{copy.deposit} ({site.locale.currency})</span><input
 				type="number"
 				inputmode="decimal"
 				min="0"
@@ -76,9 +74,9 @@
 			/></label
 		>
 		<label class="site-field finance-estimator__term"
-			><span id={layout === 'sidebar' ? termLabelId : undefined}
-				>{english ? 'Term (months)' : 'Срок (месеци)'}</span
-			><select bind:value={months} aria-labelledby={layout === 'sidebar' ? termLabelId : undefined}
+			><span id={layout === 'sidebar' ? termLabelId : undefined}>{copy.term}</span><select
+				bind:value={months}
+				aria-labelledby={layout === 'sidebar' ? termLabelId : undefined}
 				>{#each [12, 24, 36, 48, 60, 72, 84, 96] as term (term)}<option value={term}>{term}</option
 					>{/each}</select
 			>
@@ -87,7 +85,7 @@
 			{/if}</label
 		>
 		<label class="site-field"
-			><span>{english ? 'Annual interest (%)' : 'Годишна лихва (%)'}</span><input
+			><span>{copy.interest}</span><input
 				type="number"
 				inputmode="decimal"
 				min="0"
@@ -100,30 +98,26 @@
 	<div aria-live="polite" aria-atomic="true">
 		{#if estimate}<dl>
 				<div>
-					<dt>{english ? 'Financed amount' : 'Финансирана сума'}</dt>
+					<dt>{copy.financed}</dt>
 					<dd>{money(estimate.financed)}</dd>
 				</div>
 				<div>
-					<dt>{english ? 'Total including down payment' : 'Общо с първоначалната вноска'}</dt>
+					<dt>{copy.total}</dt>
 					<dd>{money(estimate.total)}</dd>
 				</div>
 				<div class="finance-estimator__total">
-					<dt>{english ? 'Estimated monthly payment' : 'Ориентировъчна месечна вноска'}</dt>
+					<dt>{copy.monthly}</dt>
 					<dd>{money(estimate.monthly)}</dd>
 				</div>
 			</dl>
 		{:else}<p class="site-form-error">
-				{english
-					? 'Check the price, down payment, term and interest rate.'
-					: 'Провери цената, първоначалната вноска, срока и лихвата.'}
+				{copy.invalid}
 			</p>{/if}
 	</div>
 	<p class="site-form-note">
-		{english
-			? 'Illustrative calculation, not a credit offer. Fees and insurance are not included; the lender confirms the final terms.'
-			: 'Примерно изчисление, не кредитна оферта. Такси и застраховки не са включени; кредиторът потвърждава крайните условия.'}
+		{copy.disclosure}
 	</p>
-	<Action href={inquiryHref}>{english ? 'Ask about financing' : 'Запитване за финансиране'}</Action>
+	<Action href={inquiryHref}>{copy.enquiry}</Action>
 </section>
 
 <style>

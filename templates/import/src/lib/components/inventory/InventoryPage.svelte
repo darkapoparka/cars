@@ -117,7 +117,7 @@
 								{card}
 								{english}
 								priority={index === 0}
-							/>{:else}<div class="inventory-empty">
+							/>{:else}<div class="inventory-empty site-empty-state">
 								<h2>{copy.emptyTitle}</h2>
 								<p>{copy.emptyBody}</p>
 								<Action href="/inventory" variant="secondary">{copy.reset}</Action>

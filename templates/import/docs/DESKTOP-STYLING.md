@@ -1,6 +1,6 @@
 # Import desktop styling direction
 
-This is the maintained direction for the next desktop refinement, recorded on 2 October 2026. It captures the owner's accepted About styling and the boundaries for applying it across the public car storefront. It is a design and implementation contract, not evidence that every route has already passed the next audit.
+This is the maintained public desktop direction, recorded on 2 October 2026. It captures the owner's accepted About styling and the boundaries for applying it across the car storefront. The requested implementation and its route/state evidence are recorded in [the desktop receipt](desktop-editorial-2026-10-02/README.md). This contract remains separate from owner acceptance, template promotion and dealer deployment.
 
 ## Visual anchor and references
 
@@ -25,7 +25,7 @@ Use the accepted About surfaces as the starting point: neutral canvas, white car
 
 ## Values and composition have owners
 
-`src/lib/styles/tokens.css` owns reusable design values. Existing `--bc-editorial-*` tokens contain the shared About neutral surfaces; desktop aliases retain the approved styling. Adopt them intentionally during the route audit. A token addition alone is not a completed rollout.
+`src/lib/styles/tokens.css` owns reusable design values. `--bc-editorial-*` tokens contain the shared neutral surfaces. From 768px, public `.site-shell` and `.site-dialog` aliases adopt them for canvas, copy, borders, shadows, discovery frames and card/media radii. Component consumers implement their own composition; the mobile theme and legacy/admin shells retain their existing values. About's mobile trial remains an explicit route opt-in.
 
 Components own layout and interaction. Prefer the existing `Action`, `DesktopDiscoveryPanel`, `DesktopSearchControl`, `InventoryFilter`, `InventoryDisplayControls`, `VehicleInformationSection`, form, modal and mobile primitives. Add a small explicit variant only where the component's responsibility warrants it. Keep useful component dimensions, breakpoints, borders, aspect ratios and data-driven grid counts. Avoid hundreds of tokens for unrelated geometry or a metric requiring zero numeric literals.
 

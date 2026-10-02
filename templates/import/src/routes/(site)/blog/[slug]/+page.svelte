@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { editorialCopy } from '$lib/content/editorial';
 	import { assetHref } from '$lib/utils/assets';
 	import type { PageProps } from './$types';
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
@@ -6,6 +7,7 @@
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
 	import { linkHref } from '$lib/utils/links';
 	let { data }: PageProps = $props();
+	const copy = $derived(editorialCopy[data.locale]);
 	const english = $derived(data.locale === 'en');
 </script>
 
@@ -22,17 +24,16 @@
 	/></svelte:head
 >
 <main id="main-content">
-	<MobilePageHero title={english ? 'Guides' : 'Полезно'} headingLevel={2}
+	<MobilePageHero title={copy.guides} headingLevel={2}
 		>{#snippet actions()}<a
 				class="article-mobile-back"
-				href={linkHref('/blog' + (english ? '?lang=en' : ''))}
-				>← {english ? 'All guides' : 'Всички статии'}</a
+				href={linkHref('/blog' + (english ? '?lang=en' : ''))}>← {copy.allGuides}</a
 			>{/snippet}</MobilePageHero
 	>
 	<article class="site-container article-page">
 		<div class="site-desktop-only">
 			<Action href={'/blog' + (english ? '?lang=en' : '')} variant="quiet"
-				>← {english ? 'All guides' : 'Всички статии'}</Action
+				>← {copy.allGuides}</Action
 			>
 		</div>
 		<h1>{data.post.title}</h1>
@@ -47,12 +48,10 @@
 		/>
 		<p class="article-lead">{data.post.excerpt}</p>
 		{#each data.post.content as paragraph, index (index)}<p>{paragraph}</p>{/each}
-		<Action href="/contact" variant="secondary"
-			>{english ? 'Discuss your car' : 'Обсъди своя автомобил'}</Action
-		>
+		<Action href="/contact" variant="secondary">{copy.discuss}</Action>
 	</article>
 	<section class="site-section site-container site-stack">
-		<h2 class="site-heading">{english ? 'Related guides' : 'Още по темата'}</h2>
+		<h2 class="site-heading">{copy.related}</h2>
 		<div class="article-related">
 			{#each data.related as post (post.slug)}<ArticleCard {post} {english} mobileRow />{/each}
 		</div>
@@ -91,6 +90,25 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-6);
+	}
+	@media (min-width: 768px) {
+		.article-page {
+			margin-block: var(--bc-space-8);
+			padding: var(--bc-space-8);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-desktop-card-radius);
+			background: var(--bc-surface-raised);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		h1 {
+			font-size: var(--bc-desktop-hero-title);
+		}
+		.article-cover {
+			border-radius: var(--bc-desktop-media-radius);
+		}
+		.article-related {
+			gap: var(--bc-space-5);
+		}
 	}
 	@media (max-width: 767.98px) {
 		.article-related {

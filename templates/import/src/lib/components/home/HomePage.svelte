@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { homeDiscoveryCopy } from '$lib/content/home-discovery';
 	import { assetHref } from '$lib/utils/assets';
 	import { MediaQuery } from 'svelte/reactivity';
 	import type { homePageData } from '$lib/server/home';
@@ -16,6 +17,7 @@
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
 	let { data }: { data: ReturnType<typeof homePageData> } = $props();
 	const mobile = new MediaQuery('(max-width: 767.98px)', false);
+	const copy = $derived(homeDiscoveryCopy[data.locale]);
 	const english = $derived(data.locale === 'en');
 	const localized = (url: string) =>
 		english ? url + (url.includes('?') ? '&' : '?') + 'lang=en' : url;
@@ -38,7 +40,7 @@
 			</div>
 			<div class="home-section-action">
 				<Action href={localized('/inventory')} variant="strong"
-					>{english ? 'View all' : 'Виж всички'}<ArrowRight size={18} aria-hidden="true" /></Action
+					>{copy.viewAll}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
 			</div>
 		</section>
@@ -46,7 +48,7 @@
 	<ActionBand copy={data.copy} variant="ownership" />
 	<section class="site-section site-container site-stack">
 		<h2 class="site-heading home-section-title">
-			{english ? 'Browse by make' : mobile.current ? 'Марки' : 'Разгледай по марка'}
+			{mobile.current ? copy.mobileMakes : copy.browseMakes}
 		</h2>
 		<div class="home-brands">
 			{#each data.brands as brand (brand.query)}<a
@@ -64,7 +66,7 @@
 							loading="lazy"
 						/>{/if}<strong
 						>{#if brand.allTile}<span class="browse-label-full">{brand.name}</span><span
-								class="browse-label-short">{english ? 'All' : 'Всички'}</span
+								class="browse-label-short">{copy.all}</span
 							>{:else}{brand.name}{/if}</strong
 					><span>{brand.count}</span></a
 				>{/each}
@@ -72,7 +74,7 @@
 	</section>
 	<section class="site-section site-container site-stack">
 		<h2 class="site-heading home-section-title">
-			{english ? 'Browse by type' : mobile.current ? 'Типове' : 'Разгледай по тип'}
+			{mobile.current ? copy.mobileTypes : copy.browseTypes}
 		</h2>
 		<div class="home-types">
 			{#each data.types as type (type.bodyType)}<a
@@ -95,30 +97,23 @@
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
 				<h2 class="site-heading home-section-title">
-					{english ? 'Customer reviews' : 'Клиентски отзиви'}
+					{copy.reviews}
 				</h2>
 			</header>
 			<!-- Keyboard focus lets readers scroll the review rail with arrow keys. -->
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<div
-				class="home-reviews"
-				tabindex="0"
-				role="region"
-				aria-label={english ? 'Customer reviews' : 'Клиентски отзиви'}
-			>
+			<div class="home-reviews" tabindex="0" role="region" aria-label={copy.reviews}>
 				{#each data.reviewItems as review (review.name)}<ReviewCard
 						{review}
-						compactRole={english ? 'Customer' : 'Клиент'}
+						compactRole={copy.customer}
 					/>{/each}
 				<a class="home-rail-end" href={href('/reviews')}
-					><ArrowRight size={32} aria-hidden="true" /><strong
-						>{english ? 'View all' : 'Виж всички'}</strong
-					></a
+					><ArrowRight size={32} aria-hidden="true" /><strong>{copy.viewAll}</strong></a
 				>
 			</div>
 			<div class="home-section-action home-desktop-action">
 				<Action href={localized('/reviews')} variant="strong"
-					>{english ? 'View all' : 'Виж всички'}<ArrowRight size={18} aria-hidden="true" /></Action
+					>{copy.viewAll}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
 			</div>
 		</section>
@@ -127,30 +122,20 @@
 	<section class="site-section site-container site-stack">
 		<header class="home-section-heading">
 			<h2 class="site-heading home-section-title">
-				{english ? 'Guides and advice' : 'Полезно за автомобила'}
+				{copy.guides}
 			</h2>
 		</header>
 		<!-- Keyboard focus lets readers scroll the article rail with arrow keys. -->
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-		<div
-			class="home-news"
-			tabindex="0"
-			role="region"
-			aria-label={english ? 'Guides and advice' : 'Полезно за автомобила'}
-		>
+		<div class="home-news" tabindex="0" role="region" aria-label={copy.guides}>
 			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} compact />{/each}
 			<a class="home-rail-end" href={href('/blog')}
-				><ArrowRight size={32} aria-hidden="true" /><strong
-					>{english ? 'All guides' : 'Всички статии'}</strong
-				></a
+				><ArrowRight size={32} aria-hidden="true" /><strong>{copy.allGuides}</strong></a
 			>
 		</div>
 		<div class="home-section-action home-desktop-action">
 			<Action href={localized('/blog')} variant="strong"
-				>{english ? 'All guides' : 'Всички статии'}<ArrowRight
-					size={18}
-					aria-hidden="true"
-				/></Action
+				>{copy.allGuides}<ArrowRight size={18} aria-hidden="true" /></Action
 			>
 		</div>
 	</section>
@@ -237,6 +222,8 @@
 			align-content: center;
 			gap: var(--bc-space-3);
 			padding: var(--bc-space-5);
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
 		}
 		.home-brands strong,
 		.home-types strong {

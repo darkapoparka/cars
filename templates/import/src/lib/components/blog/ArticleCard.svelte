@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
+	import { editorialCopy } from '$lib/content/editorial';
 	import type { BlogPost } from '$lib/data/blog';
 	import { linkHref } from '$lib/utils/links';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
@@ -40,7 +41,7 @@
 			>
 			<p>{post.excerpt}</p>
 			<span class="article-card__more"
-				>{english ? 'Read article' : 'Прочети статията'}<ArrowRight
+				>{editorialCopy[english ? 'en' : 'bg'].read}<ArrowRight
 					size={18}
 					aria-hidden="true"
 				/></span
@@ -132,7 +133,19 @@
 	}
 	@media (min-width: 768px) {
 		.article-card__link {
-			border-radius: var(--bc-radius-card);
+			border-radius: var(--bc-desktop-card-radius);
+		}
+		.article-card__image {
+			width: calc(100% - var(--bc-space-2) * 2);
+			margin: var(--bc-space-2) var(--bc-space-2) 0;
+			border-radius: var(--bc-desktop-media-radius);
+		}
+		.article-card__title {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-heading);
+		}
+		.article-card__more {
+			font-weight: var(--bc-weight-action);
 		}
 		.article-card--compact .article-card__image {
 			aspect-ratio: 2.4;
@@ -155,7 +168,7 @@
 		}
 		p,
 		.article-card__more {
-			font-size: var(--bc-text-prose);
+			font-size: var(--bc-text-body);
 		}
 		p {
 			line-height: var(--bc-leading-body-lg);

@@ -3,9 +3,39 @@ import type { SiteConfig } from '$lib/config/site';
 import { daynightAssets } from '$lib/config/dealer';
 import { dealerCopy } from '$lib/config/dealer-copy';
 
-const copy: Record<Locale, { phone: string; visit: string; message: string }> = {
-	bg: { phone: 'Обади се', visit: 'Посети ни', message: 'Пиши ни' },
-	en: { phone: 'Call us', visit: 'Visit us', message: 'Message us' }
+export const contactDesktopCopy: Record<
+	Locale,
+	{
+		title: string;
+		details: string;
+		phone: string;
+		visit: string;
+		message: string;
+		location: string;
+		directions: string;
+		mapTitle: string;
+	}
+> = {
+	bg: {
+		title: 'Контакти',
+		details: 'Връзка с нас',
+		phone: 'Обади се',
+		visit: 'Посети ни',
+		message: 'Пиши ни',
+		location: 'Нашият адрес',
+		directions: 'Как да стигнеш',
+		mapTitle: 'Карта на адреса ни в София'
+	},
+	en: {
+		title: 'Contact us',
+		details: 'Contact details',
+		phone: 'Call us',
+		visit: 'Visit us',
+		message: 'Message us',
+		location: 'Our location',
+		directions: 'Get directions',
+		mapTitle: 'Map of our Sofia address'
+	}
 };
 
 export function desktopContactChannels(site: SiteConfig, locale: Locale) {
@@ -13,7 +43,7 @@ export function desktopContactChannels(site: SiteConfig, locale: Locale) {
 		{
 			kind: 'phone',
 			href: site.contact.phoneHref,
-			title: copy[locale].phone,
+			title: contactDesktopCopy[locale].phone,
 			text: site.contact.phone,
 			image: daynightAssets.contactPhoneBanner,
 			external: false
@@ -21,7 +51,7 @@ export function desktopContactChannels(site: SiteConfig, locale: Locale) {
 		{
 			kind: 'visit',
 			href: site.contact.mapHref,
-			title: copy[locale].visit,
+			title: contactDesktopCopy[locale].visit,
 			text: dealerCopy[locale].address,
 			image: daynightAssets.contactVisitBanner,
 			external: true
@@ -29,7 +59,7 @@ export function desktopContactChannels(site: SiteConfig, locale: Locale) {
 		{
 			kind: 'message',
 			href: site.contact.messageHref,
-			title: copy[locale].message,
+			title: contactDesktopCopy[locale].message,
 			text: 'Viber',
 			image: daynightAssets.contactMessageBanner,
 			external: false

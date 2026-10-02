@@ -53,4 +53,14 @@
 	.vehicle-information-section--specifications h2 {
 		font: var(--bc-weight-heading) var(--bc-text-h5) / var(--bc-leading-h5) var(--bc-font-body);
 	}
+	@media (min-width: 768px) {
+		.vehicle-information-section {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		h2 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-card-heading);
+		}
+	}
 </style>

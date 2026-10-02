@@ -1,22 +1,22 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { pageDescriptions } from '$lib/content/seo';
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
 	let { data }: PageProps = $props();
+	const copy = $derived(publicPageCopy[data.locale].blog);
 	const english = $derived(data.locale === 'en');
 </script>
 
 <svelte:head
-	><title
-		>{english ? 'Guides and advice' : 'Полезно за автомобила'} — {data.site.identity.name}</title
-	><meta
+	><title>{copy.title} — {data.site.identity.name}</title><meta
 		name="description"
 		content={pageDescriptions.blog[data.locale === 'en' ? 'en' : 'bg']}
 	/></svelte:head
 >
 <main id="main-content">
-	<PageIntro title={english ? 'Guides and advice' : 'Полезно за автомобила'} />
+	<PageIntro title={copy.title} />
 	<section class="site-section site-container article-grid">
 		{#each data.posts as post (post.slug)}<ArticleCard
 				{post}

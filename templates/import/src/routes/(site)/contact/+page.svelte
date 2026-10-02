@@ -12,12 +12,13 @@
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
 	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
 	import ImageLinkBanner from '$lib/components/common/ImageLinkBanner.svelte';
-	import { desktopContactChannels } from '$lib/content/contact-desktop';
+	import { desktopContactChannels, contactDesktopCopy } from '$lib/content/contact-desktop';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
+	const copy = $derived(contactDesktopCopy[data.locale]);
 	const channels = $derived(desktopContactChannels(data.site, data.locale));
 </script>
 
@@ -28,7 +29,7 @@
 <main id="main-content">
 	<div class="site-desktop-only">
 		<PageIntro
-			title={english ? 'Contact us' : 'Контакти'}
+			title={copy.title}
 			description={data.site.contact.appointment}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
 			vehicleArtwork
@@ -48,7 +49,7 @@
 		<section
 			class="site-section site-container contact-overview"
 			id="contact-details"
-			aria-label={english ? 'Contact details' : 'Връзка с нас'}
+			aria-label={copy.details}
 		>
 			<div class="contact-channels">
 				{#each channels as channel (channel.href)}
@@ -67,10 +68,10 @@
 		</section>
 		<section class="site-section contact-intake">
 			<div class="site-container contact-intake-grid">
-				<ContactLocation {english} layout="stacked" />
+				<ContactLocation {english} layout="stacked" desktopFramed />
 				<div class="contact-form-panel" id="contact-enquiry">
 					<header>
-						<h2 class="site-heading">{english ? 'Send an enquiry' : 'Изпрати запитване'}</h2>
+						<h2 class="site-heading">{desktopCopy[data.locale].contactEnquiry}</h2>
 					</header>
 					<LeadForm
 						{english}
@@ -139,9 +140,10 @@
 		scroll-margin-block-start: calc(var(--bc-desktop-header-height) + var(--bc-space-6));
 		min-width: 0;
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-panel);
+		border-radius: var(--bc-desktop-card-radius);
 		padding: var(--bc-space-6);
 		background: var(--bc-surface-raised);
+		box-shadow: var(--bc-editorial-shadow);
 	}
 	.contact-form-panel header {
 		margin-bottom: var(--bc-space-6);

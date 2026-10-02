@@ -1,0 +1,87 @@
+import type { Locale } from '$lib/locale/core';
+
+const shellBg = {
+	skip: 'Към съдържанието',
+	back: 'Назад',
+	close: 'Затвори',
+	allCars: 'Всички автомобили',
+	compareCars: 'Сравни автомобили',
+	savedCars: 'Любими автомобили',
+	allServices: 'Всички услуги',
+	importCar: 'Внос на автомобил',
+	sellCar: 'Продай автомобил',
+	financing: 'Финансиране',
+	calculator: 'Калкулатор за внос',
+	aboutUs: 'За нас',
+	guides: 'Полезно',
+	reviews: 'Отзиви',
+	questions: 'Въпроси',
+	mainNavigation: 'Основна навигация',
+	call: 'Обади се',
+	callPhonePrefix: 'Обади се: ',
+	account: 'Профил',
+	search: 'Търси автомобили',
+	compare: 'Сравни',
+	selectedCount: 'Избрани автомобили: ',
+	saved: 'Любими',
+	savedCount: 'Запазени автомобили: ',
+	cars: 'Автомобили',
+	import: 'Внос',
+	about: 'За нас',
+	contact: 'Контакти',
+	usefulLinks: 'Полезни връзки',
+	message: 'Пиши ни',
+	policies: 'Политики',
+	privacy: 'Поверителност',
+	terms: 'Условия',
+	cookies: 'Бисквитки'
+};
+
+export const siteShellCopy = {
+	bg: shellBg,
+	en: {
+		skip: 'Skip to content',
+		back: 'Back',
+		close: 'Close',
+		allCars: 'All cars',
+		compareCars: 'Compare',
+		savedCars: 'Saved cars',
+		allServices: 'All services',
+		importCar: 'Import a car',
+		sellCar: 'Sell your car',
+		financing: 'Financing',
+		calculator: 'Import calculator',
+		aboutUs: 'About us',
+		guides: 'Guides',
+		reviews: 'Reviews',
+		questions: 'Questions',
+		mainNavigation: 'Main navigation',
+		call: 'Call',
+		callPhonePrefix: 'Call ',
+		account: 'Account',
+		search: 'Search cars',
+		compare: 'Compare',
+		selectedCount: 'Cars selected: ',
+		saved: 'Saved cars',
+		savedCount: 'Saved cars: ',
+		cars: 'Cars',
+		import: 'Import',
+		about: 'About',
+		contact: 'Contact',
+		usefulLinks: 'Useful links',
+		message: 'Message us',
+		policies: 'Policies',
+		privacy: 'Privacy',
+		terms: 'Terms',
+		cookies: 'Cookies'
+	}
+} satisfies Record<Locale, typeof shellBg>;
+
+/** English labels complement the configured default-language main navigation. */
+export const publicNavigationEnglish: Record<string, string> = {
+	'/': 'Home',
+	'/inventory': 'Cars',
+	'/services': 'Services',
+	'/about': 'About',
+	'/contact': 'Contact'
+};

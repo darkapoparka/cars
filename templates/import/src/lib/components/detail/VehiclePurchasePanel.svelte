@@ -110,6 +110,13 @@
 		padding: var(--bc-space-6);
 		min-width: 0;
 	}
+	@media (min-width: 768px) {
+		.purchase-panel {
+			border-color: var(--bc-border);
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+	}
 	:global(.purchase-tabs) {
 		display: flex;
 		gap: var(--bc-space-1);

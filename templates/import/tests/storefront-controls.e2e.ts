@@ -38,7 +38,7 @@ test('desktop buying panel contrasts with its hero without shrinking the tabs', 
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/');
-	const surface = await page.locator('.home-hero__panel').evaluate((node) => ({
+	const surface = await page.locator('.home-hero__box').evaluate((node) => ({
 		panel: getComputedStyle(node).backgroundColor,
 		hero: getComputedStyle(node.closest('.home-hero')!).backgroundColor
 	}));

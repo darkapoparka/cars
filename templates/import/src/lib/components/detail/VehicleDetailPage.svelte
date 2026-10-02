@@ -178,13 +178,13 @@
 		background: var(--bc-control-active);
 	}
 	.detail-description-card {
-		background: #fff;
-		color: #1c1c1c;
+		background: var(--bc-surface-raised);
+		color: var(--bc-ink-soft);
 	}
 	.detail-description {
 		margin: 0;
 		white-space: pre-line;
-		color: #343b43;
+		color: var(--bc-description-copy);
 		font-size: var(--bc-text-prose);
 		line-height: var(--bc-leading-prose);
 		overflow-wrap: anywhere;
@@ -219,6 +219,10 @@
 		}
 	}
 	@media (min-width: 768px) {
+		.detail-heading {
+			border-radius: var(--bc-desktop-card-radius);
+			box-shadow: var(--bc-editorial-shadow);
+		}
 		.detail-mobile {
 			display: none;
 		}

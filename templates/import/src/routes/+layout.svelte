@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { routeParts } from '$lib/locale/core';
+	import { routeParts, isPublicPath } from '$lib/locale/core';
 	import LocalePreferences from '$lib/locale/LocalePreferences.svelte';
 	import { base } from '$app/paths';
 	import '$lib/styles/app.css';
@@ -11,6 +11,7 @@
 	import SiteHeader from '$lib/components/layout/SiteHeader.svelte';
 	import LegacyLayoutAssets from '$lib/components/layout/LegacyLayoutAssets.svelte';
 	import MobileBottomNav from '$lib/components/layout/MobileBottomNav.svelte';
+	import PublicErrorShell from '$lib/components/layout/PublicErrorShell.svelte';
 	import { GarageState, setGarageContext } from '$lib/state/garage.svelte';
 	let { children } = $props();
 	const garage = new GarageState();
@@ -46,6 +47,8 @@
 {#if !nativeSite}<LegacyLayoutAssets enabled={legacyStyles} />{/if}
 {#if nativeSite || legacyFullPage}
 	{@render children()}
+{:else if page.status >= 400 && isPublicPath(routeParts(page.url.pathname).path)}
+	<PublicErrorShell pathname={page.url.pathname}>{@render children()}</PublicErrorShell>
 {:else}
 	<SiteHeader variant={page.url.pathname === '/' ? 'home' : 'light'} pathname={page.url.pathname} />
 	{@render children()}

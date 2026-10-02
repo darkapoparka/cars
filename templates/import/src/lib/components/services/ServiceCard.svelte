@@ -3,7 +3,11 @@
 	import { linkHref } from '$lib/utils/links';
 	import { imageDelivery } from '$lib/utils/image-delivery';
 	import type { AuxeroSupportService } from '$lib/content/services';
-	import { serviceArtwork, type ServiceDetail } from '$lib/content/service-directory';
+	import {
+		serviceArtwork,
+		serviceDirectoryCopy,
+		type ServiceDetail
+	} from '$lib/content/service-directory';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	let {
 		service,
@@ -56,7 +60,7 @@
 			</p>
 			<span class="service-card__cta"
 				><span class="site-desktop-only">{detail.action}</span><span class="site-mobile-only"
-					>{english ? 'Learn more' : 'Виж повече'}</span
+					>{serviceDirectoryCopy[english ? 'en' : 'bg'].learnMore}</span
 				><ArrowRight size={18} aria-hidden="true" /></span
 			>
 		</div>
@@ -135,8 +139,9 @@
 	@media (min-width: 768px) {
 		.service-card {
 			border: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-card);
+			border-radius: var(--bc-desktop-card-radius);
 			background: var(--bc-card-bg);
+			box-shadow: var(--bc-editorial-shadow);
 			transition:
 				border-color var(--bc-motion-fast),
 				box-shadow var(--bc-motion-fast);
@@ -154,6 +159,9 @@
 		}
 		.service-card img {
 			aspect-ratio: 16 / 9;
+			width: calc(100% - var(--bc-space-2) * 2);
+			margin: var(--bc-space-2) var(--bc-space-2) 0;
+			border-radius: var(--bc-desktop-media-radius);
 			object-position: var(--desktop-service-image-position);
 			background: var(--bc-ink);
 		}

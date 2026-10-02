@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { publicPageCopy } from '$lib/content/desktop-copy';
 	import { nativeMessage } from '$lib/i18n/native';
 	import { page } from '$app/state';
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
@@ -11,18 +12,16 @@
 	import SellCarWizard from '$lib/components/sell-your-car/SellCarWizard.svelte';
 	import SellYourCarMobilePage from '$lib/components/sell-your-car/SellYourCarMobilePage.svelte';
 	let { data }: PageProps = $props();
+	const copy = $derived(publicPageCopy[data.locale].sell);
 	let mode = $state('vin');
 	let session = $state(0);
-	const english = $derived(data.locale === 'en');
-	const title = $derived(english ? 'Sell your car' : 'Продай автомобила си');
+	const title = $derived(copy.title);
 </script>
 
 <svelte:head
 	><title>{title} — {data.site.identity.name}</title><meta
 		name="description"
-		content={english
-			? 'Request a vehicle appraisal with its VIN or make and model.'
-			: 'Заяви оценка с VIN или марка и модел на автомобила.'}
+		content={copy.description}
 	/></svelte:head
 >
 <main id="main-content">
@@ -36,9 +35,7 @@
 		<PageIntro
 			{title}
 			image="/assets/daynight/services/sell-car-service.webp"
-			description={english
-				? 'Share the car details and discuss the next step.'
-				: 'Сподели данните за автомобила и обсъди следващата стъпка.'}
+			description={copy.heroDescription}
 		/>
 		<section class="site-section">
 			<div class="site-container sell-page">
@@ -46,13 +43,13 @@
 					<ModeTabs
 						bind:value={mode}
 						surface="light"
-						label={english ? 'Vehicle identification' : 'Данни за автомобила'}
+						label={copy.identification}
 						idPrefix="desktop-sell-mode"
 						options={[
-							{ value: 'vin', label: 'VIN', panelId: 'desktop-sell-intake' },
+							{ value: 'vin', label: copy.vin, panelId: 'desktop-sell-intake' },
 							{
 								value: 'manual',
-								label: english ? 'Make / model' : 'Марка / модел',
+								label: copy.makeModel,
 								panelId: 'desktop-sell-intake'
 							}
 						]}
@@ -72,12 +69,11 @@
 				</div>
 				<div class="service-process">
 					<h2 class="site-heading">
-						{english ? 'How the appraisal works' : 'Как протича оценката'}
+						{copy.process}
 					</h2>
 					<ProcessSteps steps={data.steps} horizontal /><Action
 						href={data.site.contact.phoneHref}
-						variant="secondary"
-						>{english ? 'Contact us' : 'Свържи се с нас'} · {data.site.contact.phone}</Action
+						variant="secondary">{copy.contact} · {data.site.contact.phone}</Action
 					>
 				</div>
 			</div>

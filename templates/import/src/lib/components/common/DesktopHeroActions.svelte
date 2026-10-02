@@ -14,6 +14,7 @@
 	.desktop-hero-actions {
 		--bc-desktop-discovery-width: var(--bc-desktop-action-panel-width);
 		--bc-desktop-discovery-panel-height: 0px;
+		--desktop-discovery-padding: var(--bc-space-3);
 		width: 100%;
 	}
 	.desktop-hero-actions__row {

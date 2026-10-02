@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Import desktop — before and after</title>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				margin: 0;
+				background: #f6f6f7;
+				color: #1c1c1c;
+				font:
+					16px/1.5 system-ui,
+					sans-serif;
+			}
+			header {
+				padding: 20px 24px;
+				background: white;
+				border-bottom: 1px solid #e5e5e7;
+			}
+			h1 {
+				margin: 0 0 8px;
+				font-size: 24px;
+			}
+			p {
+				margin: 0 0 16px;
+				color: #66676b;
+			}
+			.controls {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 16px;
+			}
+			select {
+				font: inherit;
+				padding: 8px 12px;
+			}
+			main {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 20px;
+				padding: 20px 24px;
+			}
+			section {
+				min-width: 0;
+			}
+			h2 {
+				display: flex;
+				justify-content: space-between;
+				margin: 0 0 8px;
+				font-size: 18px;
+			}
+			h2 a {
+				font-size: 14px;
+				font-weight: 400;
+				color: inherit;
+			}
+			.frame {
+				height: calc(100vh - 230px);
+				min-height: 400px;
+				overflow: auto;
+				border: 1px solid #e5e5e7;
+				border-radius: 12px;
+				background: white;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+			}
+			@media (max-width: 700px) {
+				main {
+					grid-template-columns: 1fr;
+				}
+				.frame {
+					height: 70vh;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Import desktop: before and after</h1>
+			<p>
+				Real BG browser captures at 1440 × 1000. Select a page or state, scroll, or open the
+				original image.
+			</p>
+			<p>
+				Additional after captures: <a href="after/home-finance.jpg">Home Finance</a> ·
+				<a href="supplement/inventory-sidebar-canonical.jpg">Supported sidebar</a> ·
+				<a href="supplement/inventory-sorted.jpg">Lowest-price sort</a> ·
+				<a href="states/search-dialog.jpg">Search dialog</a> ·
+				<a href="states/filters-dialog.jpg">Filters</a> ·
+				<a href="states/favorites-populated.jpg">Saved cars</a> ·
+				<a href="states/vehicle-gallery.jpg">Gallery</a> ·
+				<a href="states/vehicle-enquiry.jpg">Enquiry</a> ·
+				<a href="states/header-services.jpg">Header menu</a>
+			</p>
+			<div class="controls">
+				<label
+					>Page or state
+					<select id="route"></select
+				></label>
+				<label><input id="sync" type="checkbox" checked /> Linked scrolling</label>
+				<a href="README.md">Audit receipt</a>
+			</div>
+		</header>
+		<main>
+			<section>
+				<h2>Before <a id="before-link" target="_blank">Original image</a></h2>
+				<div class="frame" id="before-frame">
+					<img id="before" alt="Before desktop refinement" />
+				</div>
+			</section>
+			<section>
+				<h2>After <a id="after-link" target="_blank">Original image</a></h2>
+				<div class="frame" id="after-frame"><img id="after" alt="After desktop refinement" /></div>
+			</section>
+		</main>
+		<script>
+			const routes = [
+				'home',
+				'home-sell',
+				'home-import',
+				'inventory',
+				'inventory-selected',
+				'inventory-sidebar',
+				'inventory-empty',
+				'pdp',
+				'pdp-second',
+				'pdp-third',
+				'services',
+				'services-selected',
+				'services-empty',
+				'about',
+				'contact',
+				'contact-vehicle',
+				'import',
+				'sell',
+				'financing',
+				'calculator',
+				'favorites',
+				'compare-empty',
+				'compare',
+				'reviews',
+				'faq',
+				'blog',
+				'article',
+				'locale',
+				'terms',
+				'privacy',
+				'cookies',
+				'error'
+			];
+			const selector = document.getElementById('route');
+			const labels = {
+				'inventory-sidebar': 'inventory — unsupported layout query / grid fallback',
+				'inventory-selected': 'inventory — BMW / unsupported sort query fallback'
+			};
+			for (const route of routes)
+				selector.add(new Option(labels[route] ?? route.replaceAll('-', ' '), route));
+			function show() {
+				for (const phase of ['before', 'after']) {
+					const source = `${phase}/${selector.value}.jpg`;
+					document.getElementById(phase).src = source;
+					document.getElementById(`${phase}-link`).href = source;
+					document.getElementById(`${phase}-frame`).scrollTop = 0;
+				}
+			}
+			selector.addEventListener('change', show);
+			selector.value = 'services';
+			show();
+			let following = false;
+			for (const phase of ['before', 'after']) {
+				const frame = document.getElementById(`${phase}-frame`);
+				frame.addEventListener('scroll', () => {
+					if (following || !document.getElementById('sync').checked) return;
+					following = true;
+					const other = document.getElementById(`${phase === 'before' ? 'after' : 'before'}-frame`);
+					other.scrollTop =
+						(frame.scrollTop / Math.max(1, frame.scrollHeight - frame.clientHeight)) *
+						(other.scrollHeight - other.clientHeight);
+					requestAnimationFrame(() => {
+						following = false;
+					});
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -26,6 +26,10 @@ export const serviceArtwork: Record<
 	comparison: { src: '/assets/daynight/services/desktop/comparison-reference-v4.webp' }
 };
 type DirectoryCopy = {
+	pageTitle: string;
+	titleDesktop: string;
+	searchAction: string;
+	learnMore: string;
 	description: string;
 	search: string;
 	title: string;
@@ -40,6 +44,10 @@ type DirectoryCopy = {
 
 export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 	bg: {
+		pageTitle: 'Услуги',
+		titleDesktop: 'Услуги за твоя автомобил',
+		searchAction: 'Търси',
+		learnMore: 'Виж повече',
 		description: desktopCopy.bg.servicesCaption,
 		search: 'Търси услуга',
 		title: 'Как можем да помогнем',
@@ -119,6 +127,10 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		}
 	},
 	en: {
+		pageTitle: 'Services',
+		titleDesktop: 'Services for your car',
+		searchAction: 'Search',
+		learnMore: 'Learn more',
 		description: desktopCopy.en.servicesCaption,
 		search: 'Search services',
 		title: 'How we can help',

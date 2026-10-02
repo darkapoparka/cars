@@ -1,0 +1,44 @@
+[
+	{
+		"name": "search-dialog",
+		"overflow": -15,
+		"dialogs": [
+			" Търсене на автомобили      Марка, модел или ключова дума      Марка      Модел      Цена      Пробе"
+		],
+		"errors": []
+	},
+	{
+		"name": "filters-dialog",
+		"overflow": -15,
+		"dialogs": [
+			" Филтри        Търсене Марка Модел Цена Пробег Купе Скорости Гориво Екстри  Търси марка    BMW   Mer"
+		],
+		"errors": []
+	},
+	{
+		"name": "favorites-populated",
+		"overflow": -15,
+		"dialogs": [],
+		"errors": []
+	},
+	{
+		"name": "vehicle-gallery",
+		"overflow": -15,
+		"dialogs": [" Audi A7 55TFSI Technik Black Optic       "],
+		"errors": []
+	},
+	{
+		"name": "vehicle-enquiry",
+		"overflow": -15,
+		"dialogs": [
+			" Запитване за автомобилаAudi A7 55TFSI Technik Black Optic      Име * Телефон * Имейл (по желание) С"
+		],
+		"errors": []
+	},
+	{
+		"name": "header-services",
+		"overflow": -15,
+		"dialogs": [],
+		"errors": []
+	}
+]
