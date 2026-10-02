@@ -111,9 +111,10 @@
 		gap: 8px;
 		min-height: 44px;
 		padding: 0 12px;
-		border: 1px solid var(--desktop-control-border);
+		border: 1px solid var(--sa-yellow);
 		border-radius: 8px;
-		color: var(--sa-ink);
+		background: var(--sa-yellow);
+		color: var(--desktop-action);
 		font: var(--sa-weight-medium) var(--sa-text-caption)/1.3 var(--sa-font);
 		transition:
 			background-color 140ms ease,
@@ -122,17 +123,15 @@
 	.desktop-team-card__profile {
 		flex: 1;
 		min-width: 0;
-		background: var(--desktop-field);
 	}
 	.desktop-team-card__actions .desktop-team-card__utility {
 		flex: 0 0 44px;
 		width: 44px;
 		padding: 0;
-		background: var(--desktop-panel);
 	}
 	.desktop-team-card__actions a:hover {
-		border-color: var(--sa-yellow);
-		background: var(--sa-yellow);
+		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
+		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
 	}
 	a:focus-visible {
 		outline: 2px solid var(--desktop-focus);

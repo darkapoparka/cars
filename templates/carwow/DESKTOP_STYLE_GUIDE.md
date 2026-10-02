@@ -27,6 +27,7 @@ Keep one canvas throughout the route. Do not alternate white page sections with 
 - `DesktopYellowRouteHero.svelte` owns the 400px hero and shared heading/panel position. At 992–1440px the panel starts 166px into the hero; the existing fluid title moves that to approximately 185px at 1920px. Route content must not override this geometry.
 - Home, Sell and About have a 640px task panel with a 44px attached header and a 130px body, for 174px overall. Blog uses the same width with its shorter 146px content. Standard route panels use 720px and grow to fit their content. The retained `/home1` photo layout keeps its separate composition.
 - Use the existing desktop section-spacing tokens. A section header owns one 24px gap before its grid. Use 20px card-grid gaps, 16px card padding, 12px between control rows and 8px between closely related labels.
+- Centre collection headings within the content frame. When a collection has a final View all tile, keep its heading free of a separate browse button. Put other actions within the relevant card or functional banner; card text and location details keep their natural reading alignment.
 - Artwork stays outside the task panel. Retain the approved cutouts and their crops; do not replace imagery to conceal a spacing problem.
 
 ## Typography and icons
@@ -55,22 +56,22 @@ Home and default Inventory use four columns at 992–1439px and five from 1440px
 
 `DesktopTeamCard.svelte` owns the team-card family for About and Team:
 
-- Four equal cards, 20px gaps and the same white/border/radius treatment as vehicle cards.
+- Four equal columns, 20px gaps and the same white/border/radius treatment as vehicle cards. Team shows all four profiles; About previews three profiles followed by a yellow View team tile of the same height.
 - A 4:3 portrait crop aligned toward the top. Clip it to the card's top corners; do not add a rounded frame inside the card or social controls over the face.
 - A one-line 18px name using the full width of the body. Retain the complete localized name in the accessible link and tooltip.
 - A 14px role with space for up to two lines, so every card's action row aligns. Do not squeeze the title beside the phone icon.
-- A separate 44px footer row with a readable profile link and phone/email utilities. Keep all existing destinations and conditional email support.
+- A separate 44px footer row with a readable profile link and phone/email utilities. Every action in this row uses the same yellow surface, dark text/icons and 8px corners; yellow deepens on hover. Do not mix a grey profile button with white utility buttons. Keep all existing destinations and conditional email support.
 - Demo portrait/profile disclosure stays visible. No invented staff names, roles or identity changes.
 
 Services retain five white cards per desktop row, 16:9 imagery, 18px headings and two-line 14px previews. Blog retains its regular four-column grid, or three columns at 992–1199px. No oversized featured article. Existing search, filters, URL/history and empty states remain functional.
 
 ## About page composition
 
-About begins with the team section under its hero. One concise introduction belongs with that section heading; do not add another standalone slogan/intro section above it. The shared team cards provide the visual content. Keep the disclosure below the grid and the reviews destination as a compact secondary link.
+About begins with the team section under its hero. Team, Brands, Help and Visit titles all use the same centred section-heading role. One concise, centred introduction belongs with Team; do not add another standalone slogan/intro section above it. Three shared team cards and a final yellow View team tile form one row. Keep the disclosure centred below the grid and the reviews destination as a compact secondary link inside the visit banner.
 
-The brand collection has a centred heading, two balanced rows of eight compact logo tiles and a final yellow View all tile. Logo and name are stacked, so longer brand names do not compete with the logo for horizontal space. The full brand list remains available in Inventory.
+The brand collection has a centred heading, two balanced rows of eight 112px logo tiles and a final yellow View all tile. Logo and name are stacked. Use the existing Home artwork from `homeBrandLogoByBrand` and retained OEM assets where available, preserving their colours and detail. Do not substitute compact mobile symbols for an available full-quality logo. A 52px logo slot uses wider sizing for horizontal marks and accounts for transparent padding in retained artwork. The full brand list remains available in Inventory.
 
-Support links use three compact white cards: 18px heading, a two-line 14px summary and a visible action. Keep the icons small and the padding consistent with the other cards. The visit panel retains the address, hours, viewing action and click-to-load map; it is functional location content, not another large introductory split.
+Support links use three compact white cards: 18px heading, a two-line 14px summary and a visible action. Keep the icons small and the padding consistent with the other cards. The centred Visit heading sits above the location banner. The banner retains the address, hours, compact viewing/reviews actions and click-to-load map.
 
 ## Media and promotional panels
 

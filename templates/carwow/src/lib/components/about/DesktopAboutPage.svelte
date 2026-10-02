@@ -2,7 +2,6 @@
 	import { getI18n } from '$lib/locale/context';
 	const i18n = getI18n();
 
-	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
 	import '$lib/styles/desktop-page-frame.css';
 	import {
 		ArrowRight,
@@ -19,6 +18,7 @@
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
 	import { daynightSite } from '$lib/data/daynight-site';
 	import { daynightTeam, daynightTeamDisclosure } from '$lib/data/daynight-team';
+	import { homeBrandLogoByBrand } from '$lib/data/home-brand-strip';
 	import { youtubeChannelUrl } from '$lib/data/daynight-videos';
 	const brands = [
 		{ brand: 'Audi', image: 'audi' },
@@ -38,6 +38,10 @@
 		{ brand: 'VW', image: 'volkswagen' },
 		{ brand: 'Volvo', image: 'volvo' }
 	] as const;
+	const brandImage = (brand: (typeof brands)[number]) =>
+		homeBrandLogoByBrand.get(brand.brand) ??
+		`/assets/images/brand/${brand.image === 'citroen' || brand.image === 'opel' ? 'oem' : 'mobile'}/${brand.image}.svg`;
+	const wideBrandLogos = ['Audi', 'Chevrolet', 'Chrysler', 'Ford', 'Jaguar', 'Land Rover'];
 	const support = [
 		{
 			title: i18n.t('copy.d305ebd80044'),
@@ -62,7 +66,7 @@
 		}
 	] as const;
 
-	const teamMembers = daynightTeam.slice(0, 4);
+	const teamMembers = daynightTeam.slice(0, 3);
 	const mapEmbedSrc = daynightSite.mapEmbedSrc;
 	let mapVisible = $state(false);
 </script>
@@ -151,38 +155,44 @@
 		<div class="about-container">
 			<div class="about-section-heading">
 				<h2 id="about-team-title">{i18n.t('copy.f92fc966857c')}</h2>
-				<DesktopBrowseLink href={i18n.href(resolve('/team'))} label={i18n.t('copy.4815fed6958b')} />
 			</div>
 			<p class="about-team-intro">{i18n.t('about.desktop.intro')}</p>
 			<div class="about-team-grid">
 				{#each teamMembers as member (member.slug)}
 					<DesktopTeamCard {member} />
 				{/each}
+				<a class="about-team-all" href={i18n.href(resolve('/team'))}>
+					<ArrowRight size={40} aria-hidden="true" />
+					<span>{i18n.t('copy.4815fed6958b')}</span>
+				</a>
 			</div>
-			<div class="about-social-row">
-				<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
-				<a class="about-reviews-link about-text-link" href={i18n.href(resolve('/reviews'))}
-					>{i18n.t('copy.93b3d88de23a')} <ArrowRight size={18} /></a
-				>
-			</div>
+			<p class="about-demo-label">{i18n.text(daynightTeamDisclosure)}</p>
 		</div>
 	</section>
 
 	<section class="about-section" aria-labelledby="about-brands-title">
 		<div class="about-container">
-			<div class="about-section-heading about-section-heading--centered">
+			<div class="about-section-heading">
 				<h2 id="about-brands-title">{i18n.t('copy.6381cc76ef70')}</h2>
 			</div>
 			<div class="about-brands">
 				{#each brands.slice(0, 15) as brand (brand.brand)}
 					<a href={i18n.href(resolve(`/inventory?brand=${encodeURIComponent(brand.brand)}`))}>
-						<img
-							src={i18n.asset(resolve(`/assets/images/brand/mobile/${brand.image}.svg`))}
-							alt=""
-							width="36"
-							height="28"
-							loading="lazy"
-						/>
+						<span
+							class="about-brand-logo"
+							class:about-brand-logo--wide={wideBrandLogos.includes(brand.brand)}
+							class:about-brand-logo--padded={brand.brand === 'Honda' || brand.brand === 'Mazda'}
+							aria-hidden="true"
+						>
+							<img
+								src={i18n.asset(resolve(brandImage(brand) as `/assets/${string}`))}
+								alt=""
+								width="52"
+								height="52"
+								loading="lazy"
+								decoding="async"
+							/>
+						</span>
 						<span>{brand.brand}</span>
 					</a>
 				{/each}
@@ -215,11 +225,16 @@
 	</section>
 
 	<section class="about-visit" aria-labelledby="about-visit-title">
+		<div class="about-container">
+			<div class="about-section-heading">
+				<h2 id="about-visit-title">
+					{i18n.t('copy.6743c626ebbe')}
+					{i18n.t('copy.3a7eae8de6f0')}
+				</h2>
+			</div>
+		</div>
 		<div class="about-container about-visit__banner">
 			<div class="about-visit__copy">
-				<h2 id="about-visit-title">
-					{i18n.t('copy.6743c626ebbe')}<br />{i18n.t('copy.3a7eae8de6f0')}
-				</h2>
 				<address class="about-visit-address">
 					<MapPin size={20} aria-hidden="true" /><span>{i18n.dealer('address')}</span>
 				</address>
@@ -227,9 +242,14 @@
 					<Clock3 size={20} aria-hidden="true" />
 					<div><strong>{i18n.text(daynightSite.hoursLabel)}</strong></div>
 				</div>
-				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
-					>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} /></a
-				>
+				<div class="about-visit-actions">
+					<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+						>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} aria-hidden="true" /></a
+					>
+					<a class="about-reviews-link about-text-link" href={i18n.href(resolve('/reviews'))}
+						>{i18n.t('copy.93b3d88de23a')} <ArrowRight size={18} aria-hidden="true" /></a
+					>
+				</div>
 			</div>
 			<div class="about-visit__map">
 				{#if mapVisible}
@@ -373,13 +393,6 @@
 		object-fit: contain;
 		filter: brightness(0) invert(1);
 	}
-	.about-social-row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: 16px;
-		margin-top: 16px;
-	}
 	.about-page {
 		background: var(--desktop-canvas);
 		color: var(--sa-ink);
@@ -422,13 +435,10 @@
 	.about-section-heading {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 24px;
-		margin-bottom: 24px;
-	}
-	.about-section-heading--centered {
 		justify-content: center;
 		text-align: center;
+		gap: 24px;
+		margin-bottom: 24px;
 	}
 	.about-team {
 		padding-top: var(--sa-desktop-section-y-md);
@@ -439,21 +449,29 @@
 		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: 20px;
 	}
+	.about-team-all {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+		padding: 24px;
+		border: 1px solid var(--sa-yellow);
+		border-radius: 12px;
+		text-align: center;
+		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.3 var(--sa-font);
+	}
 	.about-page .about-team-intro {
 		margin: -12px 0 24px;
+		text-align: center;
 		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
 		color: var(--sa-muted);
 	}
 	.about-page .about-demo-label {
-		margin: 0;
+		margin: 16px 0 0;
+		text-align: center;
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.45 var(--sa-font);
 		color: var(--sa-muted);
-	}
-	.about-social-row > a {
-		flex: none;
-	}
-	.about-reviews-link {
-		margin-top: 0;
 	}
 	.about-support-grid {
 		display: grid;
@@ -476,23 +494,43 @@
 		background: var(--desktop-panel);
 		border: 1px solid var(--desktop-control-border);
 		padding: 12px 8px;
-		min-height: 96px;
+		min-height: 112px;
 		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
-	.about-brands img {
-		width: 36px;
-		height: 28px;
+	.about-brand-logo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 52px;
+		overflow: hidden;
+	}
+	.about-brand-logo img {
+		flex: none;
+		width: 52px;
+		height: 52px;
 		object-fit: contain;
+	}
+	.about-brand-logo--wide img {
+		width: 96px;
+		height: 96px;
+		max-width: 100%;
+	}
+	.about-brand-logo--padded img {
+		width: 64px;
+		height: 64px;
 	}
 	.about-brands a:hover {
 		background: var(--desktop-secondary-hover);
 	}
-	.about-brands .about-brands-all {
+	.about-brands .about-brands-all,
+	.about-page .about-team-all {
 		background: var(--sa-yellow);
 		border-color: var(--sa-yellow);
 		color: var(--desktop-action);
 	}
-	.about-brands .about-brands-all:hover {
+	.about-brands .about-brands-all:hover,
+	.about-page .about-team-all:hover {
 		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
 		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--desktop-action));
 	}
@@ -563,7 +601,11 @@
 	.about-visit__copy {
 		padding: 40px;
 	}
-	.about-visit__copy .sa-cta {
+	.about-visit-actions {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 12px 16px;
 		margin-top: 24px;
 	}
 	.about-visit-address,
@@ -572,7 +614,7 @@
 		align-items: flex-start;
 		gap: 12px;
 		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
-		margin-top: 24px;
+		margin: 0;
 	}
 	.about-visit-address :global(svg),
 	.about-visit-hours :global(svg) {
