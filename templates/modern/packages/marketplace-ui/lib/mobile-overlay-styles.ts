@@ -7,7 +7,7 @@ export const mobileMarketplaceOverlayIconActionClassName = `size-11 shrink-0 rou
 export const mobileMarketplaceOverlayFieldClassName =
   "flex h-[52px] min-w-0 items-center gap-1 rounded-full bg-zinc-100 p-1 pl-4 ring-1 ring-inset ring-black/5 focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2";
 export const mobileMarketplaceOverlayInputClassName =
-  "h-full min-w-0 flex-1 bg-transparent px-2 font-normal text-body text-muted-foreground tracking-normal outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:appearance-none";
+  "h-full min-w-0 flex-1 bg-transparent pr-2 pl-1 font-normal text-body text-muted-foreground tracking-normal outline-none placeholder:text-muted-foreground [&::-webkit-search-cancel-button]:appearance-none";
 export const mobileMarketplaceOverlayFieldRowClassName =
   "shrink-0 bg-white px-4 pb-3";
 export const mobileMarketplaceOverlayScrollClassName =

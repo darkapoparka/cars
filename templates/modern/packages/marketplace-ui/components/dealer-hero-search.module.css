@@ -36,7 +36,7 @@
     min-width: 0;
   }
   .query label {
-    padding-inline: 2.875rem 1rem;
+    padding-inline: 2.625rem 1rem;
     background: var(--control);
     border: 1px solid transparent;
     border-radius: 0.875rem;

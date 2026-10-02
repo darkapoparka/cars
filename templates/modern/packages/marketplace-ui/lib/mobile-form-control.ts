@@ -7,7 +7,7 @@ export const mobileResponsiveFormTextClassName =
 
 /** Header inputs, entry points and loading states share one 48px height. */
 export const mobileSearchFieldHeightClassName = "h-12";
-export const mobileSearchFieldClassName = `flex ${mobileSearchFieldHeightClassName} w-full min-w-0 items-center gap-3 rounded-full px-4 text-left ring-1 ring-inset shadow-[0_1px_2px_rgb(0_0_0/0.06)]`;
+export const mobileSearchFieldClassName = `flex ${mobileSearchFieldHeightClassName} w-full min-w-0 items-center gap-2 rounded-full px-4 text-left ring-1 ring-inset shadow-[0_1px_2px_rgb(0_0_0/0.06)]`;
 export const mobileSearchTriggerClassName = `${mobileSearchFieldClassName} text-muted-foreground transition-colors focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60`;
 export const mobileSearchIconClassName = "size-[18px] shrink-0 text-zinc-500";
 export const mobileSearchTriggerLabelClassName =
