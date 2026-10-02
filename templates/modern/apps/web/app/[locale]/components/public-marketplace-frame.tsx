@@ -113,6 +113,7 @@ export const PublicMarketplaceFrame = ({
           ? "flex min-h-screen flex-col break-words bg-background pb-[calc(4rem+env(safe-area-inset-bottom))] text-foreground lg:pb-0"
           : "flex min-h-screen flex-col break-words bg-background text-foreground"
       }
+      data-slot="public-marketplace-frame"
     >
       <a
         className="fixed top-3 left-3 z-[100] -translate-y-24 rounded-lg bg-foreground px-4 py-3 font-semibold text-background shadow-lg focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"

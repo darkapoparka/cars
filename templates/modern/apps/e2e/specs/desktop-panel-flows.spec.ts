@@ -23,9 +23,11 @@ test("desktop routes align their headings and content panels", async ({
           page.locator('[data-slot="public-route-loading-content"]')
         ).toBeHidden();
         const hero = page.locator(desktopHeroSelector);
-        await expect(hero.locator("h1").first()).toBeVisible();
         const panel = await hero
           .locator("[data-desktop-action-panel]")
+          .boundingBox();
+        const headerFrame = await page
+          .locator('[data-slot="dealer-desktop-header"] > div')
           .boundingBox();
         const heading = await hero
           .locator("h1")
@@ -34,7 +36,7 @@ test("desktop routes align their headings and content panels", async ({
             const box = element.parentElement?.getBoundingClientRect();
             return box ? { x: box.x, width: box.width } : null;
           });
-        if (!(panel && heading)) {
+        if (!(panel && heading && headerFrame)) {
           throw new Error(
             "The desktop heading and action panel must be visible"
           );
@@ -43,8 +45,22 @@ test("desktop routes align their headings and content panels", async ({
         expect(panel.x).toBeGreaterThanOrEqual(24);
         expect(panel.height).toBeGreaterThan(0);
         expect(panel.height).toBeLessThan(600);
-        expect(heading.x).toBeCloseTo(panel.x, 0);
-        expect(heading.width).toBeCloseTo(panel.width, 0);
+        expect(panel.x).toBeCloseTo(headerFrame.x, 0);
+        expect(panel.width).toBeCloseTo(headerFrame.width, 0);
+        if (path === "" || path === "/cars") {
+          const inventoryTitle = page.locator(
+            '[data-slot="dealer-inventory-summary"] h2'
+          );
+          await expect(inventoryTitle).toBeVisible();
+          expect((await inventoryTitle.boundingBox())?.x).toBeCloseTo(
+            panel.x,
+            0
+          );
+        } else {
+          await expect(hero.locator("h1").first()).toBeVisible();
+          expect(heading.x).toBeCloseTo(panel.x, 0);
+          expect(heading.width).toBeCloseTo(panel.width, 0);
+        }
         if (reference) {
           expect(panel.x).toBeCloseTo(reference.x, 0);
           expect(panel.width).toBeCloseTo(reference.width, 0);
@@ -82,7 +98,7 @@ test("desktop navigation keeps the header stable through loading", async ({
     ["sell", "Sell us your vehicle"],
     ["lease", "Vehicle financing"],
     ["imports", "Import a vehicle"],
-    ["home", "Find your next car"],
+    ["home", "Cars for sale"],
   ]) {
     await header.locator(`[data-marketplace-mode="${mode}"]`).click();
     await expect(
@@ -155,10 +171,19 @@ test("home and inventory keep the same quick filters and submit their draft", as
     if (!(inputBox && submitBox)) {
       throw new Error("Search input and submit action must be visible");
     }
-    expect(submitBox.x + submitBox.width).toBeLessThan(
-      inputBox.x + inputBox.width
-    );
-    expect(submitBox.height).toBeLessThan(inputBox.height);
+    expect(submitBox.x).toBeGreaterThan(inputBox.x + inputBox.width);
+    expect(submitBox.y).toBeCloseTo(inputBox.y, 0);
+    expect(submitBox.height).toBeCloseTo(inputBox.height, 0);
+    const bodyBox = await page.locator("body").boundingBox();
+    expect(bodyBox?.width).toBeLessThanOrEqual(1248);
+    expect(bodyBox?.x).toBeGreaterThan(0);
+    const grid = page.locator('[data-slot="marketplace-listing-grid"]');
+    expect(
+      await grid.evaluate(
+        (element) =>
+          getComputedStyle(element).gridTemplateColumns.split(" ").length
+      )
+    ).toBe(width < 1200 ? 2 : 3);
   }
 
   await page.goto("/en");

@@ -10,6 +10,7 @@ import { useState } from "react";
 import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   mobileVehicleCardClassName,
+  mobileVehicleCardImageSizes,
   mobileVehicleCardMediaClassName,
 } from "../lib/mobile-vehicle-card-layout";
 import { getVehicleCardVariant } from "../lib/vehicle-card-policy";
@@ -115,11 +116,15 @@ export const VehicleCard = ({
             }}
             onLoad={() => setImageLoaded(true)}
             referrerPolicy="no-referrer"
-            sizes={getVehicleCardImageSizes(
-              isCompact,
-              isGrid,
-              isDesktopComparison
-            )}
+            sizes={
+              presentation === "showroom"
+                ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 45vw, 400px`
+                : getVehicleCardImageSizes(
+                    isCompact,
+                    isGrid,
+                    isDesktopComparison
+                  )
+            }
             src={imageSource}
             unoptimized={imageSource.startsWith("data:")}
           />

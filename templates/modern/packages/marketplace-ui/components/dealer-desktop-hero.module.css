@@ -52,30 +52,21 @@
     line-height: 1.5;
     color: var(--muted-foreground);
   }
-  .hero[data-variant="landing"] {
-    gap: 1.5rem;
-    padding: 3rem 0 2rem;
-    background: color-mix(in srgb, var(--panel) 96%, var(--foreground));
+  .hero[data-variant="landing"],
+  .hero[data-variant="inventory"] {
+    gap: 0;
+    padding: 1.25rem 0 1rem;
+    background: var(--panel);
     border-bottom: 1px solid var(--border);
   }
-  .hero[data-variant="landing"] .copy {
-    text-align: center;
-  }
-  .hero[data-variant="landing"] .copy h1 {
-    max-width: 64rem;
-    margin-inline: auto;
-    font-size: clamp(2.75rem, 3.8vw, 3.5rem);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.05em;
-  }
-  .hero[data-variant="landing"] .description {
-    max-width: none;
-    margin-inline: auto;
-  }
-  .hero[data-variant="inventory"] {
-    gap: 2rem;
-    padding-top: 2.75rem;
+  .hero[data-variant="landing"] .copy,
+  .hero[data-variant="inventory"] .copy {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
   }
   .serviceContent {
     position: relative;

@@ -7,7 +7,40 @@
 
 @media (min-width: 1024px) {
   :root[data-site-kind="dealership"] {
-    --canvas: oklch(0.99 0 0);
+    --canvas: #f5f6f9;
+    background: #e8ebf0;
+  }
+
+  :root[data-site-kind="dealership"] body {
+    position: relative;
+    width: calc(100% - 3rem);
+    max-width: 78rem;
+    min-height: calc(100dvh - 3rem);
+    margin: 1.5rem auto;
+    border: 1px solid #dce0e6;
+    border-radius: 1.25rem;
+    box-shadow: 0 12px 48px rgb(31 40 58 / 5%);
+  }
+
+  :root[data-site-kind="dealership"]
+    :is([data-slot="marketplace-main"], [data-slot="listing-detail"]) {
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-frame"] {
+    border-radius: 1.25rem;
+  }
+
+  :root[data-site-kind="dealership"] [data-slot="public-marketplace-footer"] {
+    border-radius: 0 0 1.25rem 1.25rem;
+  }
+}
+
+@layer base {
+  @media (min-width: 1024px) {
+    :root[data-site-kind="dealership"] body[data-scroll-locked] {
+      margin-right: auto !important;
+    }
   }
 }
 

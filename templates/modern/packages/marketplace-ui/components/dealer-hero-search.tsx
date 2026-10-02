@@ -20,6 +20,7 @@ import {
   CarFront,
   ChevronDown,
   Search,
+  SlidersHorizontal,
   Truck,
 } from "lucide-react";
 import Link from "next/link";
@@ -157,17 +158,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
         className={styles.panel}
         data-slot="dealer-desktop-toolbar"
       >
-        <nav
-          aria-label={text("Категории превозни средства", "Vehicle categories")}
-          className={styles.tabs}
-        >
-          <VehicleCategoryTabs
-            filters={filters}
-            isBg={isBg}
-            locale={locale}
-            pathname={pathname}
-          />
-        </nav>
         <form
           aria-busy={pending}
           aria-label={text("Търсене на автомобили", "Vehicle search")}
@@ -209,7 +199,32 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 size={19}
               />
             </div>
+            <DesktopActionButton
+              className={styles.submit}
+              data-slot="desktop-hero-submit"
+              disabled={pending}
+              type="submit"
+            >
+              <Search aria-hidden="true" size={18} />
+              {pending
+                ? text("Търсене…", "Searching…")
+                : text("Търси", "Search")}
+            </DesktopActionButton>
           </div>
+          <nav
+            aria-label={text(
+              "Категории превозни средства",
+              "Vehicle categories"
+            )}
+            className={styles.tabs}
+          >
+            <VehicleCategoryTabs
+              filters={filters}
+              isBg={isBg}
+              locale={locale}
+              pathname={pathname}
+            />
+          </nav>
           <div className={styles.fields}>
             <Button
               aria-expanded={makeModelStep === "make"}
@@ -326,6 +341,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 type="button"
                 variant="outline"
               >
+                <SlidersHorizontal aria-hidden="true" size={16} />
                 <span>
                   {text("Още филтри", "More filters")}
                   {advancedFilterCount ? ` (${advancedFilterCount})` : ""}
@@ -512,15 +528,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               />
             </div>
           </div>
-          <DesktopActionButton
-            className={styles.submit}
-            data-slot="desktop-hero-submit"
-            disabled={pending}
-            type="submit"
-          >
-            <Search aria-hidden="true" size={18} />
-            {pending ? text("Търсене…", "Searching…") : text("Търси", "Search")}
-          </DesktopActionButton>
           <SearchDraftStatus
             filterCount={filterCount}
             isBg={isBg}

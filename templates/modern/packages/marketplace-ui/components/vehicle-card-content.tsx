@@ -5,13 +5,9 @@ import {
   ArrowUpRight,
   BadgeCheck,
   Boxes,
-  CalendarDays,
   Clock3,
   Factory,
-  Fuel,
-  Gauge,
   MapPin,
-  Settings2,
   ShieldCheck,
   Ship,
   Store,
@@ -620,13 +616,6 @@ const ComparisonVehicleCardContent = ({
   );
 };
 
-const showroomFactIcons = {
-  year: CalendarDays,
-  mileage: Gauge,
-  fuel: Fuel,
-  transmission: Settings2,
-} as const;
-
 /** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
 const ShowroomVehicleCardContent = ({
   listing,
@@ -638,9 +627,8 @@ const ShowroomVehicleCardContent = ({
   locale?: string;
 }) => {
   const heading = getShowroomVehicleHeading(listing, locale);
-  const facts = getVehicleCardSpecFacts(listing, locale).filter(
-    (fact) => fact.id !== "year"
-  );
+  const title = heading.title.slice(`${listing.spec.year} `.length);
+  const facts = getVehicleCardSpecFacts(listing, locale);
   return (
     <Link
       className="min-w-0"
@@ -648,7 +636,7 @@ const ShowroomVehicleCardContent = ({
       href={listingHref}
     >
       <div data-slot="showroom-vehicle-heading">
-        <h3 data-slot="vehicle-card-title">{heading.title}</h3>
+        <h3 data-slot="vehicle-card-title">{title}</h3>
         <p data-slot="showroom-vehicle-subtitle" title={heading.subtitle}>
           {heading.subtitle}
         </p>
@@ -657,15 +645,11 @@ const ShowroomVehicleCardContent = ({
         aria-label={getVehicleCardCopy(locale).specs}
         data-slot="showroom-vehicle-facts"
       >
-        {facts.map((fact) => {
-          const Icon = showroomFactIcons[fact.id];
-          return (
-            <li data-fact={fact.id} key={fact.id}>
-              <Icon aria-hidden="true" size={17} strokeWidth={1.6} />
-              <span>{fact.value}</span>
-            </li>
-          );
-        })}
+        {facts.map((fact) => (
+          <li data-fact={fact.id} key={fact.id}>
+            <span>{fact.value}</span>
+          </li>
+        ))}
       </ul>
       <div data-slot="showroom-vehicle-price-row">
         <VehiclePriceSummary

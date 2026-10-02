@@ -8,11 +8,13 @@ import type {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
+import { usePathname } from "next/navigation";
 import { type ReactNode, useState } from "react";
 import {
   marketplaceContentFrameClassName,
   marketplaceDiscoveryFrameClassName,
 } from "../lib/marketplace-layout";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery-hero";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
@@ -94,6 +96,7 @@ export const DesktopMarketplaceBar = ({
   taxonomy,
   variant = "discovery",
 }: DesktopMarketplaceBarProps) => {
+  const pathname = usePathname();
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const numberFormatter = new Intl.NumberFormat(isBg ? "bg-BG" : "en-US");
   const isResults = variant === "results";
@@ -138,7 +141,9 @@ export const DesktopMarketplaceBar = ({
 
     return (
       <DealerDesktopHeader
-        activeMode={showDealerDesktopLanding ? "home" : "buy"}
+        activeMode={
+          pathname === getLocalizedPublicPath(locale, "/") ? "home" : "buy"
+        }
         layout="showroom"
         locale={locale}
       >
