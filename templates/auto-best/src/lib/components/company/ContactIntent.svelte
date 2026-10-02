@@ -33,7 +33,11 @@
       {#if topic.id === 'import'}<p class="dn-contact-workflow-hint">{i18n.t("m_4028a7f4ea80")}</p>{/if}
     {/if}
     <div class="dn-contact-intent__heading">
-      <h2><span class:dn-contact-mobile-copy={topic.id === 'general'}>{i18n.t("m_d7def4b82f7c")}</span>{#if topic.id === 'general'}<span class="dn-contact-desktop-copy">{i18n.t("m_5c9190347136")}</span>{/if}</h2>
+      {#if topic.id === 'general'}
+        <h1 id="contact-intro-title">{i18n.t("m_2b5c3d26721a")}</h1>
+      {:else}
+        <h2>{i18n.t("m_d7def4b82f7c")}</h2>
+      {/if}
     </div>
 
     {#if vehicle && topic.id !== 'leasing'}

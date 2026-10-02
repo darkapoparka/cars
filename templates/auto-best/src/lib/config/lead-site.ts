@@ -32,7 +32,7 @@ type LeadSiteConfig = {
   artwork: {
     responsiveImages: Partial<Record<SiteAssetPath, readonly { src: SiteAssetPath; width: number }[]>>;
     desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
-    contactHero: { desktop: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
+    contactHero: { desktop: SiteAssetPath; generalMobile: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     blogHero: SiteAssetPath;
@@ -55,6 +55,7 @@ type LeadSiteConfig = {
 const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as const;
 const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const;
 const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
+const mobileContact = '/assets/images/template/contact-showroom-banner-v1.webp' as const;
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -110,6 +111,10 @@ export const leadSite = {
         { src: '/assets/images/template/service-import-front-v3-480.webp', width: 480 },
         { src: mobileImport, width: 1200 }
       ],
+      [mobileContact]: [
+        { src: '/assets/images/template/contact-showroom-banner-v1-480.webp', width: 480 },
+        { src: mobileContact, width: 960 }
+      ],
       '/assets/images/lead/day-night-stock-01.webp': [
         { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
         { src: '/assets/images/lead/day-night-stock-01-960.webp', width: 960 },
@@ -157,6 +162,7 @@ export const leadSite = {
     },
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
+      generalMobile: mobileContact,
       sellMobile: '/assets/images/lead/day-night-sell-banner-v1.webp',
       importMobile: '/assets/images/lead/day-night-import-banner-v1.webp',
       support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'

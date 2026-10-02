@@ -11,6 +11,8 @@
   import HeroVehicles from '$components/ui/HeroVehicles.svelte';
   import DesktopHeroScene from '$components/ui/DesktopHeroScene.svelte';
   import { brand } from '$config/brand';
+  import { leadSite } from '$config/lead-site';
+  import { imageSrcset } from '$data/responsive-images';
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
   import type { ContactTopic } from '$data/company';
 
@@ -26,6 +28,12 @@
 
 <section class="dn-contact-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" class:dn-information-hero={topic.id === 'general'} class:dn-route-hero--company={topic.id === 'general'} class:dn-contact-hero--vehicle={topic.id === 'leasing' && !!vehicle} class:dn-contact-hero--general={topic.id === 'general'} class:dn-contact-hero--workflow={topic.id === 'trade-in' || topic.id === 'import'} class:dn-contact-hero--import={topic.id === 'import'} aria-labelledby="contact-title">
   <DesktopHeroScene scene="contact" />
+  {#if topic.id === 'general'}
+    <picture class="dn-contact-hero__showroom" aria-hidden="true">
+      <source media="(max-width: 991px)" srcset={imageSrcset(leadSite.artwork.contactHero.generalMobile) ?? leadSite.artwork.contactHero.generalMobile} sizes="(max-width: 383px) calc(100vw - 24px), 360px" />
+      <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width="960" height="370" fetchpriority="high" decoding="async" />
+    </picture>
+  {/if}
   {#if topic.id === 'trade-in' || topic.id === 'import'}
     <HeroVehicles pair="contact" mobile desktop={false} mobileScene={topic.id === 'trade-in' ? 'sell' : 'import'} />
   {/if}
@@ -64,3 +72,19 @@
     {/if}
   </div>
 </section>
+
+<style>
+  .dn-contact-hero__showroom { display: none; }
+  @media (max-width: 991px) {
+    .dn-contact-hero__showroom {
+      display: block;
+      position: absolute;
+      top: calc(var(--dn-space-8) + var(--dn-space-6));
+      left: 50%;
+      width: min(calc(100% - var(--dn-space-6)), 360px);
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .dn-contact-hero__showroom img { display: block; width: 100%; height: auto; }
+  }
+</style>

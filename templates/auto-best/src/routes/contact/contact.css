@@ -660,11 +660,25 @@
 }
 
 @media (max-width: 991px) {
+  .dn-app-shell .dn-contact-hero--general.dn-information-hero.dn-route-hero {
+    display: block;
+    height: 244px;
+    min-height: 244px;
+  }
+  .dn-contact-hero--general .dn-contact-hero__content { display: none; }
   .dn-contact-hero--general .dn-contact-hero__action { display: none; }
   .dn-contact-section--general { position: relative; z-index: 1; margin-top: calc(-1 * (var(--dn-space-8) + var(--dn-space-5))); background: linear-gradient(to bottom, transparent calc(var(--dn-space-8) + var(--dn-space-5)), var(--dn-mobile-canvas) 0); }
   .dn-contact-section--general > .container { width: min(100%, 784px); padding-inline: var(--dn-space-3); }
   .dn-contact-section.dn-contact-section--general .dn-contact-intent__main.dn-information-card { container-type: inline-size; margin: 0; padding: var(--dn-entry-card-padding); border-radius: var(--dn-radius-lg); }
-  .dn-contact-intent--general .dn-contact-intent__heading h2 { text-align: center; }
+  .dn-contact-intent--general .dn-contact-intent__heading h1 {
+    margin: 0;
+    color: var(--dn-ink);
+    font-size: var(--dn-text-subheading);
+    font-weight: var(--dn-weight-semibold);
+    line-height: var(--dn-leading-heading);
+    letter-spacing: var(--dn-tracking-heading);
+    text-align: center;
+  }
   .dn-contact-section--general .dn-contact-intent--general .dn-contact-selected { text-align: center; }
   .dn-contact-primary-actions { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
   .dn-contact-primary-actions .dn-entry-action { width: 100%; min-width: 0; padding-inline: var(--dn-space-3); }
@@ -680,10 +694,7 @@
     border-radius: var(--dn-radius-lg);
     background: var(--dn-surface-raised);
   }
-  .dn-contact-section--general .dn-contact-location__heading {
-    margin: 0;
-    padding: var(--dn-space-5) var(--dn-space-4);
-  }
+  .dn-contact-section--general .dn-contact-location__heading { display: none; }
   .dn-contact-section--general .dn-contact-location__card .dn-showroom-map {
     border: 0;
     border-radius: 0;
