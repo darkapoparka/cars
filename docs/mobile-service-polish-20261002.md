@@ -43,3 +43,17 @@ earlier on 2 October; they are not newly captured after images:
 No fresh after screenshot is available. Browser access needs to be restored before
 the requested matched comparison and visual acceptance can be completed. No
 reviewed template release or dealer deployment is selected by this source change.
+
+## Dev startup repair
+
+The raw Next dev command was listening but returned HTTP 500 because it resolved
+client entries through the dependency junction on C: instead of the project path
+on L:. `npm run dev` now uses the same launcher and Windows symlink flags as the
+production preview, while retaining its separate `.next` output.
+
+After restarting with this launcher, `/services`, `/` and `/contact` returned
+HTTP 200. The first development compile needed over 50 seconds; subsequent
+Services responses were immediate. Launcher syntax, the Cars workflow check and
+workflow test suite passed. The production build also passed, with build ID
+`EG3zEDCbw2yFP5hWZqWcg`. These are server checks; fresh visual captures remain
+pending under the browser access restriction described above.

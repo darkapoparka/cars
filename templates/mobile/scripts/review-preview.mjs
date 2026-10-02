@@ -4,11 +4,12 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { prepareReferenceAssets } from './prepare-reference-assets.mjs';
 
-// Isolated local production preview. Hosted builds keep Next's normal output directory.
+// Dev uses .next; local production preview uses .next-review.
 const mode = process.argv[2];
-if (!['build', 'start'].includes(mode)) throw new Error('Expected build or start');
+if (!['dev', 'build', 'start'].includes(mode)) throw new Error('Expected dev, build or start');
 const root = fileURLToPath(new URL('../', import.meta.url));
-const distDir = process.env.NEXT_DIST_DIR || (process.env.VERCEL ? '.next' : '.next-review');
+const distDir =
+  process.env.NEXT_DIST_DIR || (mode === 'dev' || process.env.VERCEL ? '.next' : '.next-review');
 const env = { ...process.env, NEXT_DIST_DIR: distDir };
 // Next's relative client entries need the project-facing dependency paths on Windows.
 // Preserve junction paths when dependencies live on another drive.
@@ -17,11 +18,9 @@ if (
   path.parse(fs.realpathSync(path.join(root, 'node_modules'))).root.toLowerCase() !==
     path.parse(root).root.toLowerCase()
 ) {
-  env.NODE_OPTIONS = [
-    process.env.NODE_OPTIONS,
-    '--preserve-symlinks',
-    '--preserve-symlinks-main',
-  ].filter(Boolean).join(' ');
+  env.NODE_OPTIONS = [process.env.NODE_OPTIONS, '--preserve-symlinks', '--preserve-symlinks-main']
+    .filter(Boolean)
+    .join(' ');
 }
 if (mode === 'build') await prepareReferenceAssets();
 const port = Number(process.argv[3] || process.env.PORT || 6474);
@@ -29,7 +28,9 @@ if (!Number.isInteger(port) || port < 1024 || port > 65535) throw Error('Invalid
 const args =
   mode === 'build'
     ? ['build', '--webpack']
-    : ['start', '--hostname', '127.0.0.1', '--port', String(port)];
+    : mode === 'dev'
+      ? ['dev', '--webpack', '--hostname', '127.0.0.1', '--port', String(port)]
+      : ['start', '--hostname', '127.0.0.1', '--port', String(port)];
 const child = spawn(process.execPath, ['node_modules/next/dist/bin/next', ...args], {
   cwd: root,
   env,

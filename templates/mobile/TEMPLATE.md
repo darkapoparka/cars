@@ -37,6 +37,9 @@ Use Node 22.x (this workstation: `L:/Toolchains/Node/22.20.0/node.exe`).
 From this directory run `npm ci`, then `npm run check`.
 `npm start` serves the production `.next-review` build on port **6474**.
 `npm run dev` uses the same port; run one mode at a time.
+Dev and production share the preview launcher, which preserves project-facing
+dependency paths for Windows junctions on another drive. Dev writes to `.next`;
+the local production build writes to `.next-review`.
 The shared launcher also supports this template:
 
 ```powershell

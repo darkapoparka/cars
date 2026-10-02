@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --webpack --hostname 127.0.0.1 --port 6474",
+    "dev": "node scripts/review-preview.mjs dev",
     "build": "node scripts/review-preview.mjs build",
     "start": "node scripts/review-preview.mjs start",
     "typecheck": "tsc --noEmit",
