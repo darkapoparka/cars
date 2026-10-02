@@ -11,6 +11,10 @@ its existing preview frame.
 Desktop article cards use a 160px image, 16px content padding, category metadata,
 a two-line summary and a localized reading action. Home's featured articles use
 the same treatment. Each remains one complete link, including its reading action.
+The Blog index uses four columns at 1200px and above, two at compact desktop
+widths and one below 992px. Its grid follows the hero with the section's 32px
+padding, without a second empty margin. Index image sizes match those columns;
+Home's featured cards retain their existing grid and image sizing.
 Vehicle prices, budgets, filter chips and finance controls share the locale policy's
 currency formatter and symbol. EUR renders as `€` with the locale's number grouping.
 
@@ -27,9 +31,13 @@ treatment. Each scene is selected explicitly from `lead-site.ts`; Contact servic
 entries use the Contact scene. All desktop
 route heroes share a 540px frame. Home, Inventory, Blog and service entries start
 their introductions at 200px and their controls at 340px. About and general
-Contact align their titles at 272px and their actions at 384px, giving the simpler
-photo banners more space below navigation. About places its plain location
-subtitle 8px below the title, keeping title, address and action in one group.
+Contact start their page label at the same 200px anchor, followed by a stronger
+two-line introduction. Their headlines use the 56px role, or 48px below 1200px.
+About keeps its plain location subtitle 8px below the title. Actions flow 24px
+below the copy, followed by any configured social profiles. The shared frame
+stays 540px with the default content; enlarged type or longer business names can
+increase its height so content and actions remain readable. Enlarged type also
+increases the company introduction's clearance below the header.
 Home and Inventory use the same search-panel bounds, padding and
 radius. Their native desktop facets use a 44px field face with 20px labels;
 at compact desktop widths below 1200px, the labels use the 18px role so the

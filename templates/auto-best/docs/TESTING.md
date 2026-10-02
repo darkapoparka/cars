@@ -102,7 +102,8 @@ general Contact in Bulgarian and English at 992, 1024, 1440 and 1920px, plus
 320px and 390px regression passes. Set `BASE_URL` first. It verifies the shared
 540px desktop hero, at least 60px below the header, and introduction/control
 anchors of 200px/340px on Home, Inventory, Blog and service entries. About and
-general Contact align their titles at 272px and actions at 384px. About puts its
+general Contact start their page labels at 200px, with a two-line headline below
+and actions flowing 24px after the complete copy. About puts its
 plain city/address subtitle 8px below the title, with a localized accessible
 directions label, hover title and visible focus ring.
 Actual header navigation in both
@@ -114,7 +115,9 @@ navigation while the image or car pair changes for each main destination. The in
 load waits for hydration before testing the hover disclosure and title click.
 Home and Inventory keep identical search-panel bounds.
 Blog uses the same panel width and alignment, containing search and category
-pills together on one white surface. Its explicit search button and Enter key
+pills together on one white surface. Its index has four columns from 1200px and
+two at compact desktop widths, with no extra empty margin below the hero.
+Its explicit search button and Enter key
 submit the native GET form; localized title filtering, empty results, category
 and query preservation, and clearing search are checked in both languages.
 Below 1200px, the painted vehicle bounds must clear the search panel on Home,

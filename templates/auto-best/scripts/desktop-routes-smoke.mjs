@@ -35,6 +35,7 @@ async function heroGeometry(page) {
     const controls = document.querySelector('.dn-search, .dn-listing-filter, .dn-blog-toolbar, .dn-about-hero .dn-about-button, .dn-contact-hero__desktop-actions, .dn-contact-hero__action');
     return {
       hero: rect(hero), copy: rect(copy), heading: rect(heading), lead: rect(lead), controls: rect(controls),
+      eyebrow: rect(copy.querySelector('.dn-company-hero__eyebrow')),
       header: rect(document.querySelector('.dn-header-fixed')),
       logo: rect(document.querySelector('.dn-logo img')),
       navigation: rect(document.querySelector('.dn-nav')),
@@ -53,12 +54,19 @@ async function heroGeometry(page) {
 function assertDesktopFrame(geometry, route = '') {
   const company = route === 'about-us' || route === 'contact';
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
-  assert.equal(geometry.copy.y - geometry.hero.y, company ? 272 : 200, 'Each hero composition keeps its introduction anchor');
+  assert.equal(geometry.copy.y - geometry.hero.y, 200, 'Each hero composition keeps its introduction anchor');
   if (route === 'about-us') {
     assert.equal(geometry.lead.y - geometry.heading.bottom, 8, 'About places its plain location subtitle directly below the title');
   }
-  assert.equal(geometry.heading.y - geometry.hero.y, company ? 272 : 200, 'About and Contact align their titles lower in the photo banners');
-  assert.equal(geometry.controls.y - geometry.hero.y, company ? 384 : 340, 'Company actions align; search and service panels keep their anchor');
+  if (company) {
+    assert(geometry.eyebrow.height >= 20, 'Company heroes keep their page label above the headline');
+    assert.equal(geometry.heading.y - geometry.eyebrow.bottom, 12, 'Company page labels clear the headline');
+    assert(geometry.heading.height >= parseFloat(geometry.headingSize) * 2, 'Company introductions have a substantial two-line headline');
+    assert.equal(geometry.controls.y - geometry.copy.bottom, 24, 'Company actions flow below the complete introduction');
+  } else {
+    assert.equal(geometry.heading.y - geometry.hero.y, 200, 'Search and service titles keep their shared anchor');
+    assert.equal(geometry.controls.y - geometry.hero.y, 340, 'Search and service panels keep their shared anchor');
+  }
   assert(geometry.copy.y >= geometry.header.bottom + 60, 'Hero titles have at least 60px of breathing room below navigation');
   assert(geometry.controls.y >= geometry.copy.bottom + 20, 'Hero controls clear copy');
   assert(geometry.controls.bottom <= geometry.hero.bottom + 1, 'Hero controls fit banner');
@@ -107,6 +115,12 @@ try {
             const imageScene = route === 'about-us' || route === 'contact';
             assert.equal(sceneRequests.length, hasScene && imageScene ? 1 : 0, 'Only About and Contact request campaign raster scenes; phones load none');
             if (hasScene) {
+              if (route === 'blog') {
+                const cards = await page.locator('.dn-blog-grid > .dn-blog-card').evaluateAll(elements => elements.map(element => element.getBoundingClientRect().toJSON()));
+                const firstRow = cards.filter(card => Math.abs(card.y - cards[0].y) < 1);
+                assert.equal(firstRow.length, width >= 1200 ? 4 : 2, 'The editorial index uses four wide-desktop columns and two compact-desktop columns');
+                assert(cards[0].y >= geometry.hero.bottom + 32 && cards[0].y <= geometry.hero.bottom + 64, 'Article cards follow the hero without an extra empty margin');
+              }
               assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Search heroes use cutouts; company heroes use larger car scenes');
               if (imageScene) {
                 const scene = route === 'about-us' ? 'home-v2' : 'inventory-v2';
@@ -142,7 +156,7 @@ try {
                 for (const body of vehicleBodies) assert(body.bottom <= geometry.controls.y - 12, 'Laptop search panels leave the painted vehicle bodies visible above their outer corners');
               }
               assert.deepEqual(await page.locator('.dn-nav__list > li > a').evaluateAll(links => links.map(link => new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, ''))), ['', 'listing-grid', 'blog', 'about-us', 'contact'], 'Desktop places Guides before About in DOM and keyboard order');
-              assert.equal(geometry.headingSize, width < 1200 ? '42px' : '48px');
+              assert.equal(geometry.headingSize, imageScene ? (width < 1200 ? '48px' : '56px') : (width < 1200 ? '42px' : '48px'));
               assert.equal(geometry.leadSize, route === '' ? '14px' : '18px', 'Home keeps its metadata badge; About and route subtitles use lead type');
               assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               if (route === 'blog') {

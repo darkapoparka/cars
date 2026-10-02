@@ -205,8 +205,59 @@
   }
 
   .dn-route-hero--company {
-    --dn-route-hero-content-top: 272px;
-    --dn-route-hero-control-top: 384px;
+    /* Enlarged type also increases clearance below the desktop header. */
+    --dn-route-hero-content-top: max(200px, 12.5rem);
+  }
+
+  .dn-app-shell .dn-route-hero.dn-route-hero--company {
+    height: auto;
+  }
+
+  .dn-route-hero--company .dn-route-hero__layout {
+    height: auto;
+    min-height: var(--dn-route-hero-height);
+    padding-bottom: var(--dn-space-6);
+    box-sizing: border-box;
+  }
+
+  .dn-route-hero--company .dn-route-hero__copy {
+    width: min(760px, 100%);
+  }
+
+  .dn-company-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--dn-space-3);
+    margin-bottom: var(--dn-space-3);
+    color: var(--dn-muted-on-ink);
+    font-size: var(--dn-text-meta);
+    font-weight: var(--dn-weight-medium);
+    line-height: var(--dn-leading-meta);
+    letter-spacing: var(--dn-tracking-label);
+    text-transform: uppercase;
+  }
+
+  .dn-company-hero__eyebrow::before {
+    width: var(--dn-space-6);
+    height: var(--dn-space-half);
+    background: var(--dn-red);
+    content: '';
+  }
+
+  .dn-route-hero--company .dn-route-hero__copy h1 {
+    font-size: var(--dn-text-hero-large);
+    line-height: var(--dn-leading-display);
+  }
+
+  .dn-company-hero__title-line {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .dn-route-hero--company .dn-route-hero__control {
+    position: static;
+    margin-top: var(--dn-space-6);
   }
 
   .dn-app-shell main[data-layout='flush'] {
@@ -288,8 +339,6 @@
 @media (min-width: 992px) {
   .dn-app-shell .dn-body-types.dn-section { padding-top: 48px; }
   .dn-app-shell .dn-about-process { padding-top: 48px; }
-  .dn-app-shell .dn-blog-index { padding-top: 32px; }
-  .dn-app-shell .dn-blog-grid { margin-top: 0; }
 }
 
 /* Shared desktop control width and compact heading scale. */
@@ -299,6 +348,9 @@
 @media (min-width: 992px) and (max-width: 1199px) {
   .dn-route-hero .dn-route-hero__copy h1 {
     font-size: var(--dn-text-section);
+  }
+  .dn-route-hero--company .dn-route-hero__copy h1 {
+    font-size: var(--dn-text-hero);
   }
 }
 

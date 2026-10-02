@@ -1086,5 +1086,29 @@
     "bg": "За наличност, следващи стъпки или друг въпрос за {dealerName}.",
     "disposition": "translate",
     "notes": "Native source display correction verified against retained dealer fields; source records and external destinations are unchanged."
+  },
+  {
+    "key": "about.hero.intro",
+    "source": "Get to know",
+    "en": "Get to know",
+    "bg": "Запознайте се с",
+    "disposition": "translate",
+    "notes": "Authored company introduction; followed by the configured business name. Not independent human linguistic review. src/lib/components/company/AboutHero.svelte"
+  },
+  {
+    "key": "contact.hero.intro",
+    "source": "Let's talk",
+    "en": "Let's talk",
+    "bg": "Да поговорим",
+    "disposition": "translate",
+    "notes": "Authored general contact introduction; not independent human linguistic review. src/lib/components/company/ContactHero.svelte"
+  },
+  {
+    "key": "contact.hero.subject",
+    "source": "about your car.",
+    "en": "about your car.",
+    "bg": "за вашия автомобил.",
+    "disposition": "translate",
+    "notes": "Second line of the authored general contact introduction; not independent human linguistic review. src/lib/components/company/ContactHero.svelte"
   }
 ]

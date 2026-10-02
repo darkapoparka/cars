@@ -32,10 +32,7 @@
       gap: var(--dn-space-3);
     }
     .dn-desktop-socials--hero {
-      position: absolute;
-      top: calc(var(--dn-route-hero-control-top) + var(--dn-control-height-default) + var(--dn-space-6));
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: var(--dn-space-4);
     }
     a {
       display: grid;
