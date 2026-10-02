@@ -1,7 +1,6 @@
 'use client';
 
 import {useCopy} from '@/lib/locale';
-import type {ReactNode} from 'react';
 import Link from '@/components/AppLink';
 import Image from '@/components/AppImage';
 import {ArrowRight} from 'lucide-react';
@@ -21,11 +20,10 @@ type Props = {
   mobileAction?: string;
   image: string;
   colourful?: boolean;
-  actionContent?: ReactNode;
 } & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
 
 /** Shared content-sized composition for every showroom hero and artwork theme. */
-export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false, actionContent}: Props) {
+export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false}: Props) {
   const tx = useCopy();
 
   return <ShowroomBannerFrame><section data-showroom-banner {...stylex.props(s.banner, colourful && s.colourful)}>
@@ -34,7 +32,7 @@ export default function ShowroomBanner({title, mobileTitle, description, mobileD
     <div {...stylex.props(s.copy)}>
       <h1 {...stylex.props(s.title, t.hero)}><span {...stylex.props(Boolean(mobileTitle) && s.desktopCopy)}>{tx(title)}</span>{mobileTitle ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileTitle)}</span> : null}</h1>
       <p {...stylex.props(s.description, t.body, colourful && s.colourDescription)}><span {...stylex.props(Boolean(mobileDescription) && s.desktopCopy)}>{tx(description)}</span>{mobileDescription ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileDescription)}</span> : null}</p>
-      {actionContent ?? (href ? <Link href={href} aria-label={tx(action)} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></Link> : <button type="button" onClick={onClick} aria-label={tx(action)} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></button>)}
+      {href ? <Link href={href} aria-label={tx(action)} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></Link> : <button type="button" onClick={onClick} aria-label={tx(action)} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></button>}
     </div>
   </section></ShowroomBannerFrame>;
 }

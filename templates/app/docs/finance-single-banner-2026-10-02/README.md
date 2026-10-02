@@ -1,5 +1,7 @@
 # Single Finance banner — 2 October 2026
 
+**Reverted at the owner's request.** The source changes from commit `338bd804b` were undone, restoring the preceding calculator panel, photo cards and budget campaign. These screenshots and measurements are preserved as evidence of the discarded layout. See [the restored composition](../finance-priority-2026-10-02/README.md).
+
 Finance had accumulated a main campaign, a second calculator panel, four photo cards and a budget campaign. The page now has one campaign banner, with its primary white 56px Calculate action opening the existing calculator modal. The standalone calculator panel and budget campaign are removed from this page.
 
 The four finance parameters are a plain definition list with short localized explanations. A quiet Ask us text action preserves the existing enquiry draft. The numbered process, mobile Стъпки / Steps heading, FAQ and contact section remain available. Typography uses the shared locale roles; other landing banners retain their existing actions. Original assets and earlier verification screenshots are preserved.
