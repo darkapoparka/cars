@@ -626,15 +626,12 @@
 		}
 
 		.card-box-style-1 .daynight-card-title-full {
-			display: -webkit-box;
-			-webkit-box-orient: vertical;
-			-webkit-line-clamp: 2;
-			line-clamp: 2;
+			display: block;
 			min-width: 0;
 			max-width: 100%;
 			overflow: hidden;
 			text-overflow: ellipsis;
-			white-space: normal;
+			white-space: nowrap;
 		}
 
 		/* Auxero app.css underlines the title/brand link on tap (.active fake-hover
