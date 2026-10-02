@@ -1,0 +1,526 @@
+{
+  "checkedAt": "2026-10-02T21:05:42.68Z",
+  "clientDate": "2026-10-03",
+  "base": "http://127.0.0.1:6455",
+  "browser": "Codex IAB Chromium",
+  "passed": true,
+  "layouts": [
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 364.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 1331.5,
+          "title": "Showroom",
+          "width": 480.859375,
+          "x": 850.640625,
+          "y": 274.1875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 466.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 1331.5,
+          "title": "Opening hours",
+          "width": 480.859375,
+          "x": 850.640625,
+          "y": 376.1875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 568.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 1331.5,
+          "title": "Email",
+          "width": 480.859375,
+          "x": 850.640625,
+          "y": 478.1875
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "background": "rgb(242, 244, 247)",
+        "border": "0px",
+        "bottom": 795.5,
+        "color": "rgb(5, 11, 32)",
+        "height": 660.5,
+        "radius": "0px",
+        "right": 1371.5,
+        "width": 560.859375,
+        "x": 810.640625,
+        "y": 135
+      },
+      "documentWidth": 1425,
+      "form": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "bottom": 795.5,
+        "color": "rgb(5, 11, 32)",
+        "height": 660.5,
+        "radius": "0px",
+        "right": 810.640625,
+        "width": 757.140625,
+        "x": 53.5,
+        "y": 135
+      },
+      "overlay": false,
+      "panel": {
+        "background": "rgb(255, 255, 255)",
+        "border": "1px",
+        "bottom": 796.5,
+        "color": "rgb(5, 11, 32)",
+        "height": 662.5,
+        "radius": "24px",
+        "right": 1372.5,
+        "width": 1320,
+        "x": 52.5,
+        "y": 134
+      },
+      "viewing": {
+        "background": "rgb(64, 95, 242)",
+        "border": "0px",
+        "bottom": 708.1875,
+        "color": "rgb(255, 255, 255)",
+        "headingColor": "rgb(255, 255, 255)",
+        "height": 120,
+        "radius": "16px",
+        "right": 1331.5,
+        "textColor": "rgb(255, 255, 255)",
+        "width": 480.859375,
+        "x": 850.640625,
+        "y": 588.1875
+      },
+      "width": 1440
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 382.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 936,
+          "title": "Showroom",
+          "width": 330.46875,
+          "x": 605.53125,
+          "y": 292.1875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 484.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 936,
+          "title": "Opening hours",
+          "width": 330.46875,
+          "x": 605.53125,
+          "y": 394.1875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 586.1875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 936,
+          "title": "Email",
+          "width": 330.46875,
+          "x": 605.53125,
+          "y": 496.1875
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "background": "rgb(242, 244, 247)",
+        "border": "0px",
+        "bottom": 782.1875,
+        "color": "rgb(5, 11, 32)",
+        "height": 647.1875,
+        "radius": "0px",
+        "right": 968,
+        "width": 394.46875,
+        "x": 573.53125,
+        "y": 135
+      },
+      "documentWidth": 1009,
+      "form": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "bottom": 782.1875,
+        "color": "rgb(5, 11, 32)",
+        "height": 647.1875,
+        "radius": "0px",
+        "right": 573.53125,
+        "width": 532.53125,
+        "x": 41,
+        "y": 135
+      },
+      "overlay": false,
+      "panel": {
+        "background": "rgb(255, 255, 255)",
+        "border": "1px",
+        "bottom": 783.1875,
+        "color": "rgb(5, 11, 32)",
+        "height": 649.1875,
+        "radius": "24px",
+        "right": 969,
+        "width": 929,
+        "x": 40,
+        "y": 134
+      },
+      "viewing": {
+        "background": "rgb(64, 95, 242)",
+        "border": "0px",
+        "bottom": 750.1875,
+        "color": "rgb(255, 255, 255)",
+        "headingColor": "rgb(255, 255, 255)",
+        "height": 144,
+        "radius": "16px",
+        "right": 936,
+        "textColor": "rgb(255, 255, 255)",
+        "width": 330.46875,
+        "x": 605.53125,
+        "y": 606.1875
+      },
+      "width": 1024
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1000.6875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 696,
+          "title": "Showroom",
+          "width": 639,
+          "x": 57,
+          "y": 910.6875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1102.6875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 696,
+          "title": "Opening hours",
+          "width": 639,
+          "x": 57,
+          "y": 1012.6875
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1204.6875,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 696,
+          "title": "Email",
+          "width": 639,
+          "x": 57,
+          "y": 1114.6875
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "background": "rgb(242, 244, 247)",
+        "border": "0px",
+        "bottom": 1376.6875,
+        "color": "rgb(5, 11, 32)",
+        "height": 597.1875,
+        "radius": "0px",
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 779.5
+      },
+      "documentWidth": 753,
+      "form": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "bottom": 779.5,
+        "color": "rgb(5, 11, 32)",
+        "height": 644.5,
+        "radius": "0px",
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 135
+      },
+      "overlay": false,
+      "panel": {
+        "background": "rgb(255, 255, 255)",
+        "border": "1px",
+        "bottom": 1377.6875,
+        "color": "rgb(5, 11, 32)",
+        "height": 1243.6875,
+        "radius": "24px",
+        "right": 729,
+        "width": 705,
+        "x": 24,
+        "y": 134
+      },
+      "viewing": {
+        "background": "rgb(64, 95, 242)",
+        "border": "0px",
+        "bottom": 1344.6875,
+        "color": "rgb(255, 255, 255)",
+        "headingColor": "rgb(255, 255, 255)",
+        "height": 120,
+        "radius": "16px",
+        "right": 696,
+        "textColor": "rgb(255, 255, 255)",
+        "width": 639,
+        "x": 57,
+        "y": 1224.6875
+      },
+      "width": 768
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1096.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 116,
+          "radius": "16px",
+          "right": 330,
+          "title": "Showroom",
+          "width": 285,
+          "x": 45,
+          "y": 980.484375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1224.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 116,
+          "radius": "16px",
+          "right": 330,
+          "title": "Opening hours",
+          "width": 285,
+          "x": 45,
+          "y": 1108.484375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1326.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 330,
+          "title": "Email",
+          "width": 285,
+          "x": 45,
+          "y": 1236.484375
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "background": "rgb(242, 244, 247)",
+        "border": "0px",
+        "bottom": 1516.484375,
+        "color": "rgb(5, 11, 32)",
+        "height": 687.1875,
+        "radius": "0px",
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 829.296875
+      },
+      "documentWidth": 375,
+      "form": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "bottom": 829.296875,
+        "color": "rgb(5, 11, 32)",
+        "height": 812.296875,
+        "radius": "0px",
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 17
+      },
+      "overlay": false,
+      "panel": {
+        "background": "rgb(255, 255, 255)",
+        "border": "1px",
+        "bottom": 1517.484375,
+        "color": "rgb(5, 11, 32)",
+        "height": 1501.484375,
+        "radius": "20px",
+        "right": 357,
+        "width": 339,
+        "x": 18,
+        "y": 16
+      },
+      "viewing": {
+        "background": "rgb(64, 95, 242)",
+        "border": "0px",
+        "bottom": 1490.484375,
+        "color": "rgb(255, 255, 255)",
+        "headingColor": "rgb(255, 255, 255)",
+        "height": 144,
+        "radius": "16px",
+        "right": 330,
+        "textColor": "rgb(255, 255, 255)",
+        "width": 285,
+        "x": 45,
+        "y": 1346.484375
+      },
+      "width": 390
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1144.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 116,
+          "radius": "16px",
+          "right": 264,
+          "title": "Showroom",
+          "width": 223,
+          "x": 41,
+          "y": 1028.484375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1272.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 116,
+          "radius": "16px",
+          "right": 264,
+          "title": "Opening hours",
+          "width": 223,
+          "x": 41,
+          "y": 1156.484375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "0px",
+          "bottom": 1374.484375,
+          "color": "rgb(5, 11, 32)",
+          "height": 90,
+          "radius": "16px",
+          "right": 264,
+          "title": "Email",
+          "width": 223,
+          "x": 41,
+          "y": 1284.484375
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "background": "rgb(242, 244, 247)",
+        "border": "0px",
+        "bottom": 1584.484375,
+        "color": "rgb(5, 11, 32)",
+        "height": 729.1875,
+        "radius": "0px",
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 855.296875
+      },
+      "documentWidth": 305,
+      "form": {
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "bottom": 855.296875,
+        "color": "rgb(5, 11, 32)",
+        "height": 838.296875,
+        "radius": "0px",
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 17
+      },
+      "overlay": false,
+      "panel": {
+        "background": "rgb(255, 255, 255)",
+        "border": "1px",
+        "bottom": 1585.484375,
+        "color": "rgb(5, 11, 32)",
+        "height": 1569.484375,
+        "radius": "20px",
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 16
+      },
+      "viewing": {
+        "background": "rgb(64, 95, 242)",
+        "border": "0px",
+        "bottom": 1562.484375,
+        "color": "rgb(255, 255, 255)",
+        "headingColor": "rgb(255, 255, 255)",
+        "height": 168,
+        "radius": "16px",
+        "right": 264,
+        "textColor": "rgb(255, 255, 255)",
+        "width": 223,
+        "x": 41,
+        "y": 1394.484375
+      },
+      "width": 320
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "contact-cards-desktop.jpg",
+    "contact-cards-320.jpg"
+  ],
+  "checks": [
+    "Showroom, opening hours and email use white rounded cards",
+    "Viewing note uses brand blue with white text",
+    "Right panel uses a light grey surface",
+    "Connected panel geometry retained at desktop and stacked widths",
+    "No horizontal overflow or clipped contact copy"
+  ],
+  "sourceHashes": {
+    "src/inner-pages.css": "b0a5c262f8867d5aed8d04c35fb6dfdb0fe390f20f9de1e4f3342f20eb4866b9",
+    "src/pages/Contact.svelte": "9276f360796b8caaa9a0447d4de5395678fe590f880a404ef1ba4bc75e2cd470",
+    "src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "src/components/PageBanner.svelte": "f92064f135fe23745251dc4430e7f02203b84b26352017cde73cacced6ff6ecd",
+    "src/data/brand.ts": "7648b4c7cc6afc15b640c35075c1b9c43b673e7698ac4f428bcc05ddc37d3a66",
+    "src/styles.css": "120dababa40b0716dc72752b386e5117700dfdfd70c9ec7d9c07f055bcbcbf0d"
+  },
+  "unchangedSources": [
+    "src/pages/Contact.svelte",
+    "src/components/EnquiryForm.svelte",
+    "src/components/PageBanner.svelte",
+    "src/data/brand.ts",
+    "src/styles.css"
+  ],
+  "validation": {
+    "node": "22.23.2",
+    "build": "vite build: passed, 163 modules",
+    "change": "Contact CSS surfaces only"
+  }
+}

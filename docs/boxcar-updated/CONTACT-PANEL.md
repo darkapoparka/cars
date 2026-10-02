@@ -1,5 +1,7 @@
 # Joined Contact panel
 
+For the latest grey surface, white detail cards and blue viewing note, see [Contact detail cards](CONTACT-CARDS.md). The evidence below records the preceding pale blue panel.
+
 Contact's form and contact details share one rounded outer container. The form is white; the adjoining details area is pale blue, with a white viewing note inside it. The two columns meet without a gap or an inner divider. Their upper edges align and the blue surface fills the full panel height.
 
 Below 1000 px the form and details stack inside the same continuous container. Padding reduces on tablets and phones; existing field labels, native inputs and contact configuration remain intact.
