@@ -320,14 +320,14 @@ the configured currency's narrow symbol and locale number formatting.
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections share
-one charcoal banner, a white heading and a white action. Their existing car
-cutouts stay on the inventory and editorial banners. All four use related
-generated graphite backgrounds: sculpted satin contours for body types,
-fine perforated metal for brands, brushed panels for inventory and a quieter
-perforated surface for advice. Each keeps detail at the edges and a quiet center
-behind copy. `CampaignVehiclePair` disables its native dots, arcs and gradient
-only in the two Home sections, letting their new background sit behind the
-unchanged car pairs. `leadSite.artwork.homeSectionBackgrounds` owns the
+one charcoal banner, a white heading and a white action. Inventory keeps its
+existing car cutouts over a brushed graphite background. Body types use
+sculpted satin contours and brands use fine perforated metal. Advice has its
+own editorial flat lay with a notebook, pen and inspection checklist; it omits
+the vehicle pair to distinguish reading from browsing cars. Each keeps detail
+at the edges and a quiet center behind copy. `CampaignVehiclePair` disables
+its native dots, arcs and gradient only in Home inventory, letting the
+background sit behind the unchanged car pair. `leadSite.artwork.homeSectionBackgrounds` owns the
 versioned WebP URLs; the Home route applies them only from 992px, so tablet and
 mobile do not request the artwork. Their original framing and rounded panel
 joins stay intact. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)

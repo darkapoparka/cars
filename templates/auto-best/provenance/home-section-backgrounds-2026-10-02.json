@@ -4,7 +4,7 @@
   "purpose": "Decorative desktop Home body-type, brand, inventory and buying-advice section banner backgrounds.",
   "constraints": "No text, identity, vehicles, UI or red lines. Keep the center quiet for existing live headings and actions.",
   "delivery": "Full-frame WebP encoding using Sharp/libvips at quality 84 and effort 6. No crop, compositing or pixel retouching. Desktop CSS uses center/cover; media queries prevent use below 992px.",
-  "generatedSourceBackup": "Per-asset original PNG copies are preserved under the two ignored runtime/home-banner-backgrounds directories. Original generated images remain at the tool's default location.",
+  "generatedSourceBackup": "Per-asset original PNG copies are preserved under the ignored runtime Home-banner work directories. Original generated images remain at the tool's default location.",
   "assets": [
     {
       "name": "body",
@@ -46,6 +46,20 @@
       "width": 2172,
       "height": 724,
       "bytes": 82630,
+      "format": "WebP",
+      "runtimeStatus": "Superseded by guides-editorial; retained as source provenance."
+    },
+    {
+      "name": "guides-editorial",
+      "path": "static/assets/images/template/home-section-guides-editorial-v2.webp",
+      "purpose": "Active Home advice banner; editorial flat lay replaces the repeated vehicle pair.",
+      "replaces": "home-section-guides-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background for a premium automotive website's Home buying-advice/blog section. One panoramic landscape plate, approximately 3:1. The existing website crops the central horizontal band to a very shallow 8:1 banner about 1360 by 164, and overlays centered live white heading text plus a white button. BACKGROUND ART ONLY.\nPrimary request: a restrained editorial flat lay on a matte graphite-black desk. At the far left, part of an open high-quality black linen notebook with off-white pages and one slim dark metal pen. At the far right, the edge of a neatly arranged off-white inspection checklist/document folder, with a few small empty square boxes and fine grey horizontal rules. These should suggest useful reading, research and a practical buyer's guide. Use physically believable paper edges, linen and satin metal with understated soft studio shadows. No car imagery.\nComposition: balanced but asymmetric editorial arrangements at the outermost 20 percent on each side. The central 60 percent is completely empty, smooth near-black graphite around #15181d, for centered title and button. Subjects must remain recognizable within the middle vertical third, because only this shallow horizontal band is visible after cropping; intentional partial objects entering from the far left/right edges, not large tall objects lost above/below the crop. Keep all notebook and paper edges outside the central title area. Straight overhead photography with calm precision, clean material detail, no scene perspective.\nPalette: neutral charcoal black, soft off-white paper and muted grey. Related to a family of black satin and brushed graphite automotive banners, but this one has an editorial reading/research identity. Small highlights only at outer edges; no red lines, blue tint, gold or neon.\nText: none. The checklist contains only restrained empty square boxes and straight blank rules, no words, letters, numbers, illegible filler, brands or logos. Notebook pages mostly blank with faint ruled lines.\nConstraints: no cars, car cutouts, wheels, vehicle silhouettes, people, hands, phones, screens, web mockups, interface elements, UI buttons, title text, watermark, border, framing, smoke, glossy sci-fi material or excessive objects. One polished full-bleed photographic banner plate, with uninterrupted dark central negative space.",
+      "generatedSource": "exec-55ba7fb9-47f4-4490-8d97-f102c6e05128.png",
+      "backupPath": "runtime/home-advice-banner-20261002/source-editorial.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 65284,
       "format": "WebP"
     }
   ]

@@ -192,7 +192,7 @@ export const leadSite = {
       body: '/assets/images/template/home-section-body-backdrop-v1.webp',
       brands: '/assets/images/template/home-section-brands-backdrop-v1.webp',
       inventory: '/assets/images/template/home-section-inventory-backdrop-v1.webp',
-      guides: '/assets/images/template/home-section-guides-backdrop-v1.webp'
+      guides: '/assets/images/template/home-section-guides-editorial-v2.webp'
     },
     home: {
       collection,
