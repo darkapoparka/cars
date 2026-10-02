@@ -1,10 +1,22 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	let { title, actions, children }: { title: string; actions?: Snippet; children: Snippet } =
-		$props();
+	let {
+		title,
+		variant = 'standard',
+		actions,
+		children
+	}: {
+		title: string;
+		variant?: 'standard' | 'specifications';
+		actions?: Snippet;
+		children: Snippet;
+	} = $props();
 </script>
 
-<section class="vehicle-information-section">
+<section
+	class="vehicle-information-section"
+	class:vehicle-information-section--specifications={variant === 'specifications'}
+>
 	<header>
 		<h2>{title}</h2>
 		{@render actions?.()}
@@ -31,5 +43,14 @@
 	h2 {
 		margin: 0;
 		font: var(--bc-weight-heading) var(--bc-text-h4) / var(--bc-leading-h4) var(--bc-font-heading);
+	}
+	.vehicle-information-section--specifications {
+		padding: var(--bc-space-5);
+	}
+	.vehicle-information-section--specifications header {
+		margin-bottom: var(--bc-space-4);
+	}
+	.vehicle-information-section--specifications h2 {
+		font: var(--bc-weight-heading) var(--bc-text-h5) / var(--bc-leading-h5) var(--bc-font-body);
 	}
 </style>

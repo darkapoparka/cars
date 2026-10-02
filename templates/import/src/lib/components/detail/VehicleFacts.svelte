@@ -51,13 +51,13 @@
 <div class="vehicle-facts">
 	<div class="vehicle-facts__panels">
 		{#each groups as group (group.id)}
-			<VehicleInformationSection title={group.title}>
+			<VehicleInformationSection title={group.title} variant="specifications">
 				<dl>
 					{#each group.items as item (item.label)}
 						{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
-						<div class:vehicle-facts__row--reference={item.icon === 'QrCode.svg'}>
+						<div>
 							<dt>
-								<Icon size={18} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span>
+								<Icon size={16} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span>
 							</dt>
 							<dd>{item.value || '—'}</dd>
 						</div>
@@ -74,20 +74,25 @@
 	}
 	.vehicle-facts__panels {
 		display: grid;
+		align-items: start;
 		gap: var(--bc-space-6);
 	}
 	dl {
 		display: grid;
-		gap: var(--bc-space-4);
 		margin: 0;
 	}
 	dl > div {
 		display: grid;
-		grid-template-columns: minmax(7rem, 0.8fr) minmax(0, 1.2fr);
+		grid-template-columns: minmax(max-content, 1fr) minmax(0, max-content);
 		align-items: center;
-		gap: var(--bc-space-4);
+		gap: var(--bc-space-3);
+		padding: var(--bc-space-2);
+		border-radius: var(--bc-radius-sm);
 		font-size: var(--bc-text-label);
 		line-height: var(--bc-leading-h7);
+	}
+	dl > div:nth-child(odd) {
+		background: var(--bc-surface);
 	}
 	dt {
 		display: flex;
@@ -100,16 +105,13 @@
 		flex-shrink: 0;
 	}
 	dd {
+		min-width: 0;
 		margin: 0;
 		color: var(--bc-ink);
 		font-weight: var(--bc-weight-heading);
 		font-variant-numeric: tabular-nums;
+		text-align: right;
 		overflow-wrap: anywhere;
-	}
-	.vehicle-facts__row--reference dd {
-		color: var(--bc-copy);
-		font-size: var(--bc-text-meta);
-		font-weight: var(--bc-weight-body);
 	}
 	@container vehicle-facts (min-width: 40rem) {
 		.vehicle-facts__panels {
