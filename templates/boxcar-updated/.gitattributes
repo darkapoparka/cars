@@ -1,2 +1,5 @@
 # Preserve captured reference bytes so asset SHA-256 provenance survives checkout.
 public/media/** -text
+public/reference/** -text
+# Generated DOM captures intentionally retain source whitespace for browser layout.
+src/reference/Home*.svelte whitespace=-blank-at-eol

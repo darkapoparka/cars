@@ -8,7 +8,8 @@
   import Header from "./components/Header.svelte";
   import Footer from "./components/Footer.svelte";
   import Icon from "./components/Icon.svelte";
-  import Home from "./pages/Home.svelte";
+  import ReferenceHome from "./reference/ReferenceHome.svelte";
+  import nativeStyles from "./styles.css?url";
   import Inventory from "./pages/Inventory.svelte";
   import VehicleDetail from "./pages/VehicleDetail.svelte";
   import Compare from "./pages/Compare.svelte";
@@ -70,6 +71,7 @@
 </script>
 
 <svelte:head>
+  {#if !design}<link rel="stylesheet" href={nativeStyles} />{/if}
   <title>{title}</title>
   <meta
     name="description"
@@ -80,10 +82,10 @@
 <svelte:window onstorage={syncSelections} />
 <div class="app" style:--accent={brand.accent}>
   <a class="skip-link" href="#main">Skip to content</a>
-  <Header home={design?.id || 0} />
+  {#if !design}<Header home={0} />{/if}
   <main id="main" tabindex="-1">
-    {#key route.path}{#if design}<Home
-          {design}
+    {#key route.path}{#if design}<ReferenceHome
+          home={design.id}
         />{:else if vehicle}<VehicleDetail
           {vehicle}
         />{:else if inventory || saved}<Inventory
@@ -99,7 +101,7 @@
           </a>
         </div>{/if}{/key}
   </main>
-  <Footer home={design?.id || 0} />
+  {#if !design}<Footer home={0} />{/if}
   {#if selections.compare.length && !comparison}<aside
       class="compare-tray"
       aria-label="Selected cars"

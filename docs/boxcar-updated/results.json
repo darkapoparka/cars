@@ -1,20 +1,27 @@
 {
+  "schemaVersion": 2,
+  "verifiedAt": "2026-10-02T03:05:00.538Z",
   "verifiedLocalDate": "2026-10-02",
   "source": "templates/boxcar-updated",
   "version": "2026.10.02-native-10-homes",
   "node": "22.23.2",
-  "build": {
-    "passed": true,
-    "output": {
-      "index-CD84gDZ8.js": {
-        "bytes": 138656,
-        "gzipBytes": 45166
-      },
-      "index-xx0g6lNo.css": {
-        "bytes": 67016,
-        "gzipBytes": 12559
-      }
-    }
+  "preview": "http://127.0.0.1:6455/",
+  "reference": "https://creativelayers.net/themes/boxcar-html/",
+  "implementation": {
+    "homepages": "Ten original HTML DOM layouts compiled into Svelte, preserving whitespace and localized source CSS/assets",
+    "nativeControls": [
+      "menus",
+      "tabs",
+      "catalogue search",
+      "preview forms",
+      "calculator"
+    ],
+    "retainedVendorDependencies": [
+      "jQuery 3.6.1",
+      "original Slick core"
+    ],
+    "supportingPages": "Adapted Svelte layouts; original inner-page DOM not ported",
+    "webkitCompatibility": "Horizontal vehicle-card flex image width"
   },
   "svelte": {
     "errors": 0,
@@ -24,2319 +31,709 @@
     "passed": 8,
     "total": 8
   },
-  "assetProvenance": {
-    "sha256Verified": 157
+  "workflow": {
+    "passed": true
   },
   "browserTotals": {
-    "renderedChecks": 220,
-    "journeys": 24
+    "homepageComparisons": 60,
+    "supportingPageChecks": 118,
+    "referenceJourneys": 14
   },
-  "reports": [
+  "homepageComparisons": [
     {
-      "mode": "views",
-      "date": "2026-10-01T23:57:38.140Z",
-      "base": "http://127.0.0.1:6455",
       "engine": "chromium",
-      "views": [
+      "passed": 30,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "viewportHeight": 950,
+      "maxFirstViewportDifferentPixels": 0.007519736842105263,
+      "maxSectionPositionDelta": 0,
+      "maxSectionHeightDelta": 0,
+      "cases": [
         {
-          "label": "home-1-1440",
+          "home": 1,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7361,
+            "mae": 0.267214410783559,
+            "different": 0.003954682334827695
+          }
         },
         {
-          "label": "home-2-1440",
+          "home": 2,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.08975950292397661,
+            "differentPixels": 0.0018252923976608186
+          }
         },
         {
-          "label": "home-3-1440",
+          "home": 3,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7124,
+            "mae": 0.03133763413188596,
+            "different": 0.0009019784453178614
+          }
         },
         {
-          "label": "home-4-1440",
+          "home": 4,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.026796052631578946,
+            "differentPixels": 0.0005833333333333334
+          }
         },
         {
-          "label": "home-5-1440",
+          "home": 5,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-1440",
+          "home": 6,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-1440",
+          "home": 7,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.0000043859649122807014,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7026,
+            "mae": 0.0005907620900148655,
+            "different": 0
+          }
         },
         {
-          "label": "home-8-1440",
+          "home": 8,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-1440",
+          "home": 9,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-1440",
+          "home": 10,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.10258845029239766,
+            "differentPixels": 0.001722953216374269
+          },
+          "fullContent": {
+            "height": 8199,
+            "mae": 0.8682364719274708,
+            "different": 0.011010150289330677
+          }
         },
         {
-          "label": "/inventory/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bmw-8-series-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "BMW 8 Series",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-glc-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz GLC",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-bronze-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Bronze",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-nissan-qashqai-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Nissan Qashqai",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-amber-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Amber",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-blue-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a8-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Audi A8",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-volvo-xc90-grey-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 — Grey",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a5-cabriolet-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Audi A5 Cabriolet",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-evoque-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover Evoque",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mini-cooper-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "MINI Cooper",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-blue-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-s-class-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz S-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-porsche-cayenne-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Porsche Cayenne",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-ocean-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover — Ocean",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-e-class-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "home-1-390",
+          "home": 1,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.000002699055330634278,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-2-390",
+          "home": 2,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.33968690958164643,
+            "differentPixels": 0.006164642375168691
+          }
         },
         {
-          "label": "home-3-390",
+          "home": 3,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-4-390",
+          "home": 4,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.10414035087719298,
+            "differentPixels": 0.002175438596491228
+          }
         },
         {
-          "label": "home-5-390",
+          "home": 5,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-390",
+          "home": 6,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-390",
+          "home": 7,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.000029689608636977057,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-8-390",
+          "home": 8,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-390",
+          "home": 9,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-390",
+          "home": 10,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.00007287449392712551,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "/inventory/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "home-1-320",
+          "home": 1,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.0000032894736842105265,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-2-320",
+          "home": 2,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.41492763157894735,
+            "differentPixels": 0.007519736842105263
+          }
         },
         {
-          "label": "home-3-320",
+          "home": 3,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-4-320",
+          "home": 4,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.1270921052631579,
+            "differentPixels": 0.0026546052631578948
+          }
         },
         {
-          "label": "home-5-320",
+          "home": 5,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-320",
+          "home": 6,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-320",
+          "home": 7,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.00008552631578947368,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-8-320",
+          "home": 8,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-320",
+          "home": 9,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-320",
+          "home": 10,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/inventory/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bmw-8-series-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "BMW 8 Series",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-glc-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz GLC",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-bronze-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Bronze",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-nissan-qashqai-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Nissan Qashqai",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-amber-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Amber",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-blue-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a8-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Audi A8",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-volvo-xc90-grey-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 — Grey",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a5-cabriolet-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Audi A5 Cabriolet",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-evoque-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover Evoque",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mini-cooper-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "MINI Cooper",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-blue-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-s-class-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz S-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-porsche-cayenne-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Porsche Cayenne",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-ocean-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover — Ocean",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-e-class-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0.1889407894736842,
+            "differentPixels": 0
+          }
         }
       ],
-      "journeys": [],
-      "errors": []
+      "method": {
+        "sourceFixture": "Archived HTML with full original vendor scripts, localized source CSS and assets",
+        "normalized": "Animation and count-up states",
+        "changedPixelThreshold": "Maximum RGB channel difference greater than 16",
+        "gates": "Section positions/heights within 1px; first-viewport changed pixels below 1%; fonts/images loaded; no document overflow",
+        "fullContent": "Homes 1, 3, 7, 10 at desktop width through last content section before footer; measurement only"
+      }
     },
     {
-      "mode": "flows",
-      "date": "2026-10-02T00:05:59.112Z",
-      "base": "http://127.0.0.1:6455",
-      "engine": "chromium",
-      "views": [
-        {
-          "label": "mobile-home-navigation",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "mobile-filter-results",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        }
-      ],
-      "journeys": [
-        "Homepage make/model dependency and search carry-through",
-        "Filtered detail return and browser Back preserve result context",
-        "Sorting, pagination, empty results and reset",
-        "Saved cars persist across reload and can be removed",
-        "Comparison enforces four-car maximum, removal and clear",
-        "Zero-interest calculator and invalid deposit validation",
-        "Contact form is an honest local preview",
-        "320px menu dismissal, focus return and real home navigation",
-        "320px gallery and enquiry dialog are usable and restore focus",
-        "320px filters close after applying and reveal the results",
-        "Featured car controls update the actual vehicle destination"
-      ],
-      "errors": []
-    },
-    {
-      "mode": "text",
-      "date": "2026-10-01T23:54:13.133Z",
-      "base": "http://127.0.0.1:6455",
-      "engine": "chromium",
-      "views": [
-        {
-          "label": "/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-2/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-3/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-4/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-5/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-6/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 VehiclesAvailable",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-7/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-8/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-9/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-10/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/inventory/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        }
-      ],
-      "journeys": [
-        "200% text menu navigation"
-      ],
-      "errors": []
-    },
-    {
-      "mode": "views",
-      "date": "2026-10-02T00:10:00.186Z",
-      "base": "http://127.0.0.1:6455",
       "engine": "webkit",
-      "views": [
+      "passed": 30,
+      "viewportWidths": [
+        1440,
+        390,
+        320
+      ],
+      "viewportHeight": 950,
+      "maxFirstViewportDifferentPixels": 0,
+      "maxSectionPositionDelta": 0,
+      "maxSectionHeightDelta": 0,
+      "cases": [
         {
-          "label": "home-1-1440",
+          "home": 1,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7413,
+            "mae": 0.4264066879505973,
+            "different": 0.0049205037696539115
+          }
         },
         {
-          "label": "home-2-1440",
+          "home": 2,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-3-1440",
+          "home": 3,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7120,
+            "mae": 0.022607872971285893,
+            "different": 0.00031952247191011237
+          }
         },
         {
-          "label": "home-4-1440",
+          "home": 4,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-5-1440",
+          "home": 5,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-1440",
+          "home": 6,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-1440",
+          "home": 7,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 7026,
+            "mae": 0,
+            "different": 0
+          }
         },
         {
-          "label": "home-8-1440",
+          "home": 8,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-1440",
+          "home": 9,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-1440",
+          "home": 10,
           "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          },
+          "fullContent": {
+            "height": 8229,
+            "mae": 0,
+            "different": 0
+          }
         },
         {
-          "label": "/inventory/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bmw-8-series-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "BMW 8 Series",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-glc-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz GLC",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-bronze-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Bronze",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-nissan-qashqai-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Nissan Qashqai",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-amber-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Amber",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-blue-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a8-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Audi A8",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-volvo-xc90-grey-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Volvo XC90 — Grey",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a5-cabriolet-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Audi A5 Cabriolet",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-evoque-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover Evoque",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mini-cooper-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "MINI Cooper",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-blue-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Bentley Bentayga — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-s-class-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz S-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-porsche-cayenne-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Porsche Cayenne",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-ocean-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Range Rover — Ocean",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-e-class-1440",
-          "width": 1440,
-          "usableWidth": 1440,
-          "documentWidth": 1440,
-          "heading": "Mercedes-Benz E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "home-1-390",
+          "home": 1,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-2-390",
+          "home": 2,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-3-390",
+          "home": 3,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-4-390",
+          "home": 4,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-5-390",
+          "home": 5,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-390",
+          "home": 6,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-390",
+          "home": 7,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-8-390",
+          "home": 8,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-390",
+          "home": 9,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-390",
+          "home": 10,
           "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "/inventory/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-390",
-          "width": 390,
-          "usableWidth": 390,
-          "documentWidth": 390,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "home-1-320",
+          "home": 1,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-2-320",
+          "home": 2,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-3-320",
+          "home": 3,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-4-320",
+          "home": 4,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-5-320",
+          "home": 5,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-6-320",
+          "home": 6,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-7-320",
+          "home": 7,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-8-320",
+          "home": 8,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-9-320",
+          "home": 9,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         },
         {
-          "label": "home-10-320",
+          "home": 10,
           "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/inventory/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bmw-8-series-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "BMW 8 Series",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-glc-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz GLC",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-bronze-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Bronze",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-nissan-qashqai-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Nissan Qashqai",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-amber-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Amber",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-blue-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a8-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Audi A8",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-volvo-xc90-grey-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 — Grey",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-audi-a5-cabriolet-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Audi A5 Cabriolet",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-evoque-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover Evoque",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mini-cooper-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "MINI Cooper",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-bentley-bentayga-blue-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Bentley Bentayga — Blue",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-s-class-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz S-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-porsche-cayenne-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Porsche Cayenne",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-range-rover-ocean-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Range Rover — Ocean",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "vehicle-mercedes-e-class-320",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes-Benz E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
+          "firstViewport": {
+            "meanMaxRGBDifference": 0,
+            "differentPixels": 0
+          }
         }
       ],
-      "journeys": [],
-      "errors": []
-    },
-    {
-      "mode": "flows",
-      "date": "2026-10-02T00:06:08.230Z",
-      "base": "http://127.0.0.1:6455",
-      "engine": "webkit",
-      "views": [
-        {
-          "label": "mobile-home-navigation",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "mobile-filter-results",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        }
-      ],
-      "journeys": [
-        "Homepage make/model dependency and search carry-through",
-        "Filtered detail return and browser Back preserve result context",
-        "Sorting, pagination, empty results and reset",
-        "Saved cars persist across reload and can be removed",
-        "Comparison enforces four-car maximum, removal and clear",
-        "Zero-interest calculator and invalid deposit validation",
-        "Contact form is an honest local preview",
-        "320px menu dismissal, focus return and real home navigation",
-        "320px gallery and enquiry dialog are usable and restore focus",
-        "320px filters close after applying and reveal the results",
-        "Featured car controls update the actual vehicle destination"
-      ],
-      "errors": []
-    },
-    {
-      "mode": "text",
-      "date": "2026-10-02T00:12:03.594Z",
-      "base": "http://127.0.0.1:6455",
-      "engine": "webkit",
-      "views": [
-        {
-          "label": "/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-2/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Mercedes New E-Class",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-3/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-4/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-5/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-6/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "17 Vehicles  Available",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-7/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-8/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Let’s Find Your Perfect Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-9/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Search Less. Live More.",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/home-10/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Find Your Perfect New  or Used Car",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/inventory/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "New and Used Cars For Sale",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/vehicle/volvo-xc90-recharge/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Volvo XC90 Recharge",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/contact/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Get in Touch",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/calculator/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Auto Loan Calculator",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/about/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "About Boxcars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/compare/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Compare Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/favorites/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Your Saved Cars",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/blog/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Our Journal",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        },
-        {
-          "label": "/faq/-320-200-percent-text",
-          "width": 320,
-          "usableWidth": 320,
-          "documentWidth": 320,
-          "heading": "Frequently Asked Questions",
-          "brokenImages": [],
-          "clippedControls": [],
-          "overlay": false
-        }
-      ],
-      "journeys": [
-        "200% text menu navigation"
-      ],
-      "errors": []
+      "method": {
+        "sourceFixture": "Archived HTML with full original vendor scripts, localized source CSS and assets",
+        "normalized": "Animation and count-up states",
+        "changedPixelThreshold": "Maximum RGB channel difference greater than 16",
+        "gates": "Section positions/heights within 1px; first-viewport changed pixels below 1%; fonts/images loaded; no document overflow",
+        "fullContent": "Homes 1, 3, 7, 10 at desktop width through last content section before footer; measurement only"
+      }
     }
   ],
-  "repositorySuite": {
-    "passed": 243,
-    "total": 244,
-    "workflowDocumentCheck": "passed",
-    "failure": {
-      "file": "scripts/refresh-client.test.mjs",
-      "test": "Auto Best refresh keeps approved hero artwork and restores Navara dealer data",
-      "assertion": "Expected i18n.dealer(addressLine) directly in the Auto Best hero",
-      "scope": "Pre-existing Auto Best fixture failure; Boxcar Updated does not modify this template or refresh adapter"
+  "referenceJourneys": [
+    {
+      "engine": "chromium",
+      "passed": [
+        "Source search: make change resets model and URL selects real inventory",
+        "Source tabs and dropdowns support keyboard selection and Escape",
+        "Carousel changes visible cars and vehicle tabs retain source geometry",
+        "Featured sliders and the correct Mercedes/Volvo detail routes",
+        "Back restores the previous homepage scroll after lazy loading",
+        "Mobile source menu: nested Home choices, Escape and focus return",
+        "Newsletter is a local preview, with no fake send result"
+      ],
+      "failures": []
+    },
+    {
+      "engine": "webkit",
+      "passed": [
+        "Source search: make change resets model and URL selects real inventory",
+        "Source tabs and dropdowns support keyboard selection and Escape",
+        "Carousel changes visible cars and vehicle tabs retain source geometry",
+        "Featured sliders and the correct Mercedes/Volvo detail routes",
+        "Back restores the previous homepage scroll after lazy loading",
+        "Mobile source menu: nested Home choices, Escape and focus return",
+        "Newsletter is a local preview, with no fake send result"
+      ],
+      "failures": []
+    }
+  ],
+  "supportingPages": [
+    {
+      "engine": "chromium",
+      "verifiedAt": "2026-10-02T02:10:58.648Z",
+      "passed": 59,
+      "errors": [],
+      "scope": "Nine adapted supporting pages at three widths and sixteen additional vehicle details at desktop and 320px"
+    },
+    {
+      "engine": "webkit",
+      "verifiedAt": "2026-10-02T02:13:52.765Z",
+      "passed": 59,
+      "errors": [],
+      "scope": "Nine adapted supporting pages at three widths and sixteen additional vehicle details at desktop and 320px"
+    }
+  ],
+  "assetProvenance": {
+    "sha256Verified": 206,
+    "generatedSvelteHashesVerified": 10,
+    "archivedSourceHTMLHashesVerified": 10
+  },
+  "build": {
+    "passed": true,
+    "output": {
+      "Home1-BwsXo9VM.js": {
+        "bytes": 272479,
+        "gzipBytes": 16215
+      },
+      "Home10-O__2Cb8z.js": {
+        "bytes": 321634,
+        "gzipBytes": 16638
+      },
+      "Home2-__ZsPscG.js": {
+        "bytes": 244300,
+        "gzipBytes": 18497
+      },
+      "Home3-BEVf95Bd.js": {
+        "bytes": 398995,
+        "gzipBytes": 22607
+      },
+      "Home4-CFhPHN_e.js": {
+        "bytes": 153795,
+        "gzipBytes": 17399
+      },
+      "Home5-CatlnPkM.js": {
+        "bytes": 301389,
+        "gzipBytes": 15231
+      },
+      "Home6-CYtEeISC.js": {
+        "bytes": 200195,
+        "gzipBytes": 13127
+      },
+      "Home7-Dc5D-kTR.js": {
+        "bytes": 196278,
+        "gzipBytes": 13314
+      },
+      "Home8-BSoZo0iB.js": {
+        "bytes": 217949,
+        "gzipBytes": 19123
+      },
+      "Home9-xCyI3Ra9.js": {
+        "bytes": 273025,
+        "gzipBytes": 15320
+      },
+      "index-fFkPaGEF.js": {
+        "bytes": 133124,
+        "gzipBytes": 43963
+      },
+      "index-UK8Ql3h4.css": {
+        "bytes": 635,
+        "gzipBytes": 340
+      },
+      "interactions-B6KlqvxM.js": {
+        "bytes": 19298,
+        "gzipBytes": 4816
+      },
+      "styles-xx0g6lNo.css": {
+        "bytes": 67016,
+        "gzipBytes": 12559
+      }
+    },
+    "publicSliderDependencies": {
+      "jquery.js": {
+        "bytes": 89663,
+        "gzipBytes": 31036
+      },
+      "slick-core.js": {
+        "bytes": 68524,
+        "gzipBytes": 13013
+      }
     }
   },
-  "limits": [
-    "Local fixture browser verification",
-    "Playwright WebKit engine, no physical iPhone test",
-    "Forms preview locally",
-    "Production build compiled, no hosted deployment requested",
-    "Candidate requires owner visual review and commercial asset/entitlement review before approved dealer release"
-  ]
+  "boundaries": {
+    "wholeSitePixelPerfect": false,
+    "originalInnerPageDOMPorted": false,
+    "wordPressUpdateParity": false,
+    "text200PercentAccepted": false,
+    "hostedDeploymentTested": false,
+    "physicalSafariDeviceTested": false,
+    "forms": "Local preview only",
+    "inventory": "Seventeen sample catalogue vehicles and illustrative source homepage shelves",
+    "map": "Source Home 6 lazy external illustrative embed; third-party availability not certified"
+  }
 }

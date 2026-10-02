@@ -1,10 +1,7 @@
 {
   "key": "boxcar-updated",
   "name": "Boxcar Updated",
-  "aliases": [
-    "boxcars-updated",
-    "6455"
-  ],
+  "aliases": ["boxcars-updated", "6455"],
   "path": "templates/boxcar-updated",
   "version": "2026.10.02-native-10-homes",
   "family": "boxcar",
@@ -68,13 +65,15 @@
   "readiness": "reference-content-candidate",
   "reskinEffort": "dealer-adaptation-needed",
   "brandFiles": [
+    "src/reference",
+    "public/reference/css/style.css",
     "src/data/brand.ts",
     "src/data/homes.ts",
     "src/data/vehicles.json",
     "src/data/journal.ts",
     "public/media"
   ],
-  "note": "Ten distinct native Svelte 5 home designs rebuilt from the Boxcar HTML public reference. Shared URL-driven inventory, vehicle details, saved cars, comparison, loan estimates and local enquiry previews. Sample inventory and reference assets require dealer personalization. See templates/boxcar-updated/TEMPLATE.md.",
+  "note": "Ten original Boxcar HTML homepage DOM layouts compiled into Svelte 5 with original styles, native controls and the original Slick slider via a lifecycle bridge. Supporting inventory/detail pages remain adapted Svelte layouts. Reference content and sample inventory require dealer personalization. See templates/boxcar-updated/TEMPLATE.md.",
   "versionRole": "Local candidate; owner acceptance and an approved immutable release are separate.",
   "sourceRepository": "darkapoparka/cars",
   "personalizationRequired": true,

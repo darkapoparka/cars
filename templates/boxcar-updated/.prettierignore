@@ -1,0 +1,4 @@
+# Generated homepage bytes are recorded in .template/port.json.
+src/reference/Home*.svelte
+# Preserve imported vendor source and its asset hashes.
+public/reference/

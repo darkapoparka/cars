@@ -8,6 +8,7 @@ const engine = process.env.BOXCAR_BROWSER || "chromium";
 const viewsOnly = process.argv.includes("--views");
 const flowsOnly = process.argv.includes("--flows");
 const textOnly = process.argv.includes("--text");
+const innerOnly = process.argv.includes("--inner");
 const dir = path.resolve("qa", engine);
 await fs.mkdir(dir, { recursive: true });
 const catalog = JSON.parse(await fs.readFile("src/data/vehicles.json", "utf8"));
@@ -39,7 +40,9 @@ page.on("response", (response) => {
 });
 async function ready(route) {
   await page.goto(base + route, { waitUntil: "networkidle" });
-  await page.locator("main h1").waitFor();
+  await page.locator("main h1, main section h2").first().waitFor();
+  if (await page.locator(".reference-home").count())
+    await page.locator(".reference-home[data-ready=true]").waitFor();
   if (textOnly)
     await page.addStyleTag({ content: "html { font-size: 200% !important; }" });
   await page.evaluate(() => document.fonts.ready);
@@ -143,7 +146,7 @@ try {
   if (!flowsOnly && !textOnly) {
     for (const width of [1440, 390, 320]) {
       await page.setViewportSize({ width, height: width === 1440 ? 950 : 844 });
-      for (let n = 1; n <= 10; n++) {
+      for (let n = 1; n <= (innerOnly ? 0 : 10); n++) {
         await ready(n === 1 ? "/" : `/home-${n}/`);
         assert.equal(
           await page.locator("[data-home]").getAttribute("data-home"),
@@ -190,10 +193,14 @@ try {
           await assertLayout(`vehicle-${vehicle.slug}-${width}`);
         }
       }
-      console.log(`PASS ${width}px: ten homepages and nine supporting routes`);
+      console.log(
+        `PASS ${width}px: ${innerOnly ? "nine supporting routes" : "ten homepages and nine supporting routes"}`,
+      );
     }
-    await mosaic(1440);
-    await mosaic(390);
+    if (!innerOnly) {
+      await mosaic(1440);
+      await mosaic(390);
+    }
   }
   if (textOnly) {
     await page.setViewportSize({ width: 320, height: 844 });

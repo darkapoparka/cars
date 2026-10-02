@@ -12,15 +12,19 @@
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1 --port 6455 --strictPort",
     "test": "node --test scripts/domain.test.mjs",
-    "verify": "node scripts/verify.mjs",
+    "verify": "node scripts/parity.mjs --all",
+    "verify:flows": "node scripts/reference-flows.mjs",
+    "verify:inner": "node scripts/verify.mjs --views --inner",
     "format": "prettier --write src scripts *.json *.js *.ts *.html",
-    "reference": "node scripts/reference.mjs"
+    "reference": "node scripts/reference.mjs",
+    "port:reference": "node scripts/port-reference.mjs"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "7.3.0",
     "agent-browser": "0.27.0",
     "cheerio": "1.2.0",
     "playwright": "1.59.1",
+    "postcss": "8.5.28",
     "prettier": "3.8.1",
     "prettier-plugin-svelte": "3.5.1",
     "sharp": "0.35.1",

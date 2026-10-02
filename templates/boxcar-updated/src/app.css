@@ -1,0 +1,49 @@
+.skip-link {
+  position: fixed;
+  left: 12px;
+  top: -100px;
+  z-index: 99999;
+  padding: 12px 18px;
+  background: #fff;
+  color: #050b20;
+}
+.skip-link:focus {
+  top: 12px;
+}
+#main:focus {
+  outline: none;
+}
+.compare-tray {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  color: #fff;
+  background: #050b20;
+  box-shadow: 0 5px 30px #050b2040;
+}
+.compare-tray a,
+.compare-tray button {
+  color: inherit;
+}
+.toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2000;
+  max-width: calc(100vw - 40px);
+  padding: 16px;
+  border-radius: 12px;
+  color: #fff;
+  background: #050b20;
+}
+.toast button {
+  margin-left: 16px;
+  color: inherit;
+}

@@ -1,0 +1,130 @@
+{
+  "captured": "2026-10-02",
+  "method": "Compiled Svelte preserves public HTML DOM, whitespace, SVGs and styles. Native controls and a Svelte lifecycle bridge to the original Slick core supply behavior.",
+  "missingBackgrounds": [
+    "https://creativelayers.net/themes/boxcar-html/images/icons/pattern-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/next.png",
+    "https://creativelayers.net/themes/boxcar-html/css/images/resource/company-logo/3-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-2.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-3.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-4.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-5.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-6.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-7.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-8.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-9.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-10.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-11.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/pattern-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/next.png",
+    "https://creativelayers.net/themes/boxcar-html/css/images/resource/company-logo/3-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-2.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-3.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-4.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-5.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-6.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-7.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-8.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-9.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-10.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-11.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/pattern-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/next.png",
+    "https://creativelayers.net/themes/boxcar-html/css/images/resource/company-logo/3-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-1.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-2.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-3.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-4.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-5.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-6.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-7.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-8.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-9.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-10.png",
+    "https://creativelayers.net/themes/boxcar-html/images/icons/footer-bg-11.png"
+  ],
+  "pages": [
+    {
+      "home": 1,
+      "source": "https://creativelayers.net/themes/boxcar-html/index.html",
+      "sourceSHA256": "ea2d31d619b32068b3ff82b5dfdcb1916443ca94b2331e12ef4b38cf96ad24af",
+      "svelteSHA256": "5b070605fdce19ac8930d74c6f1860b444f097723a31eba483f61d9e91890194",
+      "warnings": [],
+      "sections": 11
+    },
+    {
+      "home": 2,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-2.html",
+      "sourceSHA256": "5fb38b67ef927be2fb4ad25b1603320c3b5ef54dc102995fa6636802aa08e144",
+      "svelteSHA256": "c77416ab4e2475367ea5351eab482f43bfd44e97dc5f2a575c117757ca067bfa",
+      "warnings": [],
+      "sections": 12
+    },
+    {
+      "home": 3,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-3.html",
+      "sourceSHA256": "1f90851f971d4aeb24423af00553106eac37e6a1b263402574dd6f4d18c5d5c0",
+      "svelteSHA256": "7235569ce9c12b39e8867f1e3d11f8d6bad6e80f38ac1103fb2032f7f65fdaa6",
+      "warnings": [],
+      "sections": 11
+    },
+    {
+      "home": 4,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-4.html",
+      "sourceSHA256": "68e89da293269569f9cde71c1804444b5f84a9b8b158a1ed0feea2e9102d90d0",
+      "svelteSHA256": "be42f2be9565e18fb346b21dd4ed27e2799ffa86688ea7f0047977896fd0f205",
+      "warnings": [],
+      "sections": 11
+    },
+    {
+      "home": 5,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-5.html",
+      "sourceSHA256": "01c6c6d6d37879628f1c2ef675558042e6da9c96396b5b7f5779e4dc45edb7ff",
+      "svelteSHA256": "6f9ff5a14e41deb8973db7216d3b9d4b39952ff474ba496d75d2192b33f2b76d",
+      "warnings": [],
+      "sections": 11
+    },
+    {
+      "home": 6,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-6.html",
+      "sourceSHA256": "a6a64187ba43e1c115840e3c6f671cf799ab63862e5082857123b40bc9757e7c",
+      "svelteSHA256": "5f85c59950d3d9732df6b562aa3f143c6288c6a3ee22441faa893dc38767cba4",
+      "warnings": [],
+      "sections": 11
+    },
+    {
+      "home": 7,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-7.html",
+      "sourceSHA256": "0cc4ce4c8f4bb88d7cf9c3f75f8c71ea5aa85e27b6f1e3c31f1e00f760bb3068",
+      "svelteSHA256": "1f333c2b6e2a4ea6aad059900fc0d1abe32839a2f42c7e57c8a08537298da177",
+      "warnings": [],
+      "sections": 12
+    },
+    {
+      "home": 8,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-8.html",
+      "sourceSHA256": "b31412bbf54df598a3968b7ae2a4f11535c1bedb9954bb8fa7e99d5f2d01a25f",
+      "svelteSHA256": "20e147f7aed1f9fb2a76b38fc9f314376714ad006017a2ca74b88886997fddf8",
+      "warnings": [],
+      "sections": 10
+    },
+    {
+      "home": 9,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-9.html",
+      "sourceSHA256": "adb3a532985e196e2f81c1e6b131bf0c83e31cccf25e481f561060e4a162a8ce",
+      "svelteSHA256": "e8f23c16414a41f02482e74df7a48cf0376d1758e13ab957ed2e08dfbcaf2617",
+      "warnings": [],
+      "sections": 12
+    },
+    {
+      "home": 10,
+      "source": "https://creativelayers.net/themes/boxcar-html/index-10.html",
+      "sourceSHA256": "956779c95a29e70f39401932c6e9adb6c5c53abef61cdd166a69a868e18ee17a",
+      "svelteSHA256": "201830867dbc8fecb92e302dee5bc561ba59cddbdd39db67bd9b588db2a8ea6a",
+      "warnings": [],
+      "sections": 13
+    }
+  ]
+}

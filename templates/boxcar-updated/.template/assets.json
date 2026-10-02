@@ -945,6 +945,318 @@
       "bytes": 48200,
       "sha256": "2a8e7f713ee79fbccdef3cef5c787aff47580299f7da60144961e7db2ec08211",
       "usage": "Retained initial source font; runtime uses variable WOFF2."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/bootstrap.min.css",
+      "local": "public/reference/css/bootstrap.min.css",
+      "bytes": 155845,
+      "sha256": "7633b7c0c97d19e682feee8afa2738523fcb2a14544a550572caeecd2eefe66b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/slick-theme.css",
+      "local": "public/reference/css/slick-theme.css",
+      "bytes": 2746,
+      "sha256": "5bc9c66db241bdc1311fc6c8050445f8e87105ba5a989f2bd06b0ce13f676e1b",
+      "sourceSHA256": "1df60fb88143fba16201e653b041f7261ec150838e6fadbd12f586d63dedf560",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/slick.css",
+      "local": "public/reference/css/slick.css",
+      "bytes": 1776,
+      "sha256": "de1e399b07289f3b0a8d35142e363e128124a1185770e214e25e58030dad48e5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/mmenu.css",
+      "local": "public/reference/css/mmenu.css",
+      "bytes": 57294,
+      "sha256": "79d1e982775cf25354cacfceb086ee557444d60128abae6d435ecdc2bbf4ad09"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/animate.css",
+      "local": "public/reference/css/animate.css",
+      "bytes": 75686,
+      "sha256": "b18f585d50e4954b5d80d1d79f90ee59f9e549130a9b3379fecf3a8a4fbb4de3",
+      "sourceSHA256": "c61d53c6505e7604efa05c6ccef932f18d110d33cc7970696533e72ebdf732d3",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/owl.css",
+      "local": "public/reference/css/owl.css",
+      "bytes": 4091,
+      "sha256": "50443aa532dfb3e908f7a2d924d1f5ad13a1b69262260acab2c281f528ef86ee",
+      "sourceSHA256": "7342aa28694e4ad5609e0b47a82f860d116a0231f81dea54437127015e82ca3f",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/jquery.fancybox.min.css",
+      "local": "public/reference/css/jquery.fancybox.min.css",
+      "bytes": 13735,
+      "sha256": "c76d02c0bcfd961835d98c6b5a1f34afb4391eebd494a275e50db17f98bee449"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/linearicons-free.eot",
+      "local": "public/reference/fonts/linearicons-free.eot",
+      "bytes": 66336,
+      "sha256": "4e3b2924346b3bb08d9f97051a38f5a9e635c9ce0cbbbeaedbe95a2bb4461c02"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/linearicons-free.ttf",
+      "local": "public/reference/fonts/linearicons-free.ttf",
+      "bytes": 66136,
+      "sha256": "2f2d8e8daf9e0a620acf0223472bc53f7e4c47ea21792907854df68496c2db7e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/linearicons-free.woff",
+      "local": "public/reference/fonts/linearicons-free.woff",
+      "bytes": 66212,
+      "sha256": "e7da03a2f3b45a3b8cd1757ec107e0c6cc32cfaa7f1ad9a907ec124def94595d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/linearicons-free.svg",
+      "local": "public/reference/fonts/linearicons-free.svg",
+      "bytes": 240845,
+      "sha256": "045ce87dc399abc6b987cfa130f0217a2371d6cfdf4a50c1d8a9a0c096666f2f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/linear.css",
+      "local": "public/reference/css/linear.css",
+      "bytes": 10774,
+      "sha256": "3865295e122322f3c973e5f39ab8217a66cbbd94da5d3592fb2e2daff2050002",
+      "sourceSHA256": "b3b4f61ee5fd15b3d6a413297f985122ee25d6c86f24993a4873ec9e211031fd",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-brands-400.woff2",
+      "local": "public/reference/fonts/fa-brands-400.woff2",
+      "bytes": 104804,
+      "sha256": "0e0772e0bd095e4edfcd4efd7a177e6b0d8d6a3afb31a4e4e692630f28748c8a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-brands-400.woff",
+      "local": "public/reference/fonts/fa-brands-400.woff",
+      "bytes": 104496,
+      "sha256": "7274bf892cd75cef017c8e67708e5a06262855a926dcb43703f4cafd28bad551"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-brands-400.ttf",
+      "local": "public/reference/fonts/fa-brands-400.ttf",
+      "bytes": 173980,
+      "sha256": "baac4a80bdeafa7dad1a0175b2c43d7384e35dbcf92b98e47f70ebeceece47e8"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-duotone-900.woff2",
+      "local": "public/reference/fonts/fa-duotone-900.woff2",
+      "bytes": 353788,
+      "sha256": "45a988113e149126bf065957fe93052eb02a023649796e5e8188d3cd620fda3a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-duotone-900.woff",
+      "local": "public/reference/fonts/fa-duotone-900.woff",
+      "bytes": 375628,
+      "sha256": "6fbf7efb4f330b50e071942dcfc77355d47cc7c4114392d41aac547b05ea5604"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-duotone-900.ttf",
+      "local": "public/reference/fonts/fa-duotone-900.ttf",
+      "bytes": 890636,
+      "sha256": "8284caa6e04d2162e84a59e1fdad2b27f7191590e19e6ecede32323f6f667b36"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-light-300.woff2",
+      "local": "public/reference/fonts/fa-light-300.woff2",
+      "bytes": 340136,
+      "sha256": "cd8fdabe5161d05bc992f4e149092c3e38c209c734b3c1140c47f77258a20858"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-light-300.woff",
+      "local": "public/reference/fonts/fa-light-300.woff",
+      "bytes": 356840,
+      "sha256": "d42c20563c7b06414385722d0e9124306065e96b229ffe1180c7e9f9186db8b8"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-light-300.ttf",
+      "local": "public/reference/fonts/fa-light-300.ttf",
+      "bytes": 834624,
+      "sha256": "2b72c05aed775545c826fd7ca6bd5a9ff88839528599a1d9b20c0d64a13a56ff"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-regular-400.woff2",
+      "local": "public/reference/fonts/fa-regular-400.woff2",
+      "bytes": 315700,
+      "sha256": "f0c616b40c22bf761652211dd2d451690458868b2797bbf702fc5eb850579068"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-regular-400.woff",
+      "local": "public/reference/fonts/fa-regular-400.woff",
+      "bytes": 329884,
+      "sha256": "ac2701bf48d1b407418556d26d29ff14ed0774e2a3fc5f40f80d363582d94d9e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-regular-400.ttf",
+      "local": "public/reference/fonts/fa-regular-400.ttf",
+      "bytes": 741508,
+      "sha256": "b466481df694f2c10c56bca3fc12810918403686a1334da1c8c97706d4f3da1b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-solid-900.woff2",
+      "local": "public/reference/fonts/fa-solid-900.woff2",
+      "bytes": 270360,
+      "sha256": "4dd3561bac1f21c70270e2f4d93e30b9eaa7538b5fb12b6f6d5d9a74033e5750"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-solid-900.woff",
+      "local": "public/reference/fonts/fa-solid-900.woff",
+      "bytes": 279576,
+      "sha256": "414c2208b5666a778b5e0e65741dfbce30ae413327e2b9addb46c5bb21d2834e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-solid-900.ttf",
+      "local": "public/reference/fonts/fa-solid-900.ttf",
+      "bytes": 648356,
+      "sha256": "db04c49278de66fe78d2bfebf2ea48cea5ea5278071b87bb757d1fad6ad045f4"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-thin-100.woff2",
+      "local": "public/reference/fonts/fa-thin-100.woff2",
+      "bytes": 372948,
+      "sha256": "d6e55519695eac9edcb09924dc9fdc390b8051c1a8a27688b5ad0da23ec49195"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-thin-100.woff",
+      "local": "public/reference/fonts/fa-thin-100.woff",
+      "bytes": 393940,
+      "sha256": "ff7d2b8e4630e2ac96c969f446d90f4712ecf3d2cda5bd56762353bdc9215940"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/fa-thin-100.ttf",
+      "local": "public/reference/fonts/fa-thin-100.ttf",
+      "bytes": 923132,
+      "sha256": "863a79a9ffeb4d49d20a69c8f58dc722d565b7d0d429a4b0693b5efafe96583d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/fontawesome.css",
+      "local": "public/reference/css/fontawesome.css",
+      "bytes": 513483,
+      "sha256": "6825face6755ed8fcd798a551460548f80e20d370bce6c8abd53438e44fdc54d",
+      "sourceSHA256": "b3597215a733a52d24a7c6b45972383016101c03a68322d4183f7c1165ba7f3b",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/flaticon_boxcar.ttf",
+      "local": "public/reference/fonts/flaticon_boxcar.ttf",
+      "bytes": 15272,
+      "sha256": "21e9bf54e40a2db69f77abe8eb73099de2bb4a76b52a5900bf50075fc8c89849"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/flaticon_boxcar.woff",
+      "local": "public/reference/fonts/flaticon_boxcar.woff",
+      "bytes": 8772,
+      "sha256": "574296ac87ee7574faa2b3726ba6b9dd94aa616997800b06d2ed7c88cd58b479"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/flaticon_boxcar.woff2",
+      "local": "public/reference/fonts/flaticon_boxcar.woff2",
+      "bytes": 7456,
+      "sha256": "5d156d3aca3b4e6e89420eb2f8af02156b045d1b37ef910c58d11be51f3faf84"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/flaticon_boxcar.eot",
+      "local": "public/reference/fonts/flaticon_boxcar.eot",
+      "bytes": 15468,
+      "sha256": "cb5c88fefce704f3c97025a0a990fba7de2cebbc6039f54b70f5105e4d0609a2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/fonts/flaticon_boxcar.svg",
+      "local": "public/reference/fonts/flaticon_boxcar.svg",
+      "bytes": 125107,
+      "sha256": "a6b786aa6794b49a102c2dd21b0765b6621d95c6b95fee75dbc7a2855797bda8"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/flaticon.css",
+      "local": "public/reference/css/flaticon.css",
+      "bytes": 3287,
+      "sha256": "bc137f425331b1dc6ca53d48a85f404bcb803ef58a193e0f87a82007cfd12f34",
+      "sourceSHA256": "2daaca6906eea0c81d5c161fa6846acb18fbbff0130134a5248e9ec5ffe5dbfa",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2",
+      "local": "public/reference/fonts/rP2Fp2ywxg089UriCZa4ET-DNl0.woff2",
+      "bytes": 40840,
+      "sha256": "b72f7226650dcbc66e1e6ccdc9e53dc8c66107357eeac2d2a4ca18942c42f360"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2Fp2ywxg089UriCZa4Hz-D.woff2",
+      "local": "public/reference/fonts/rP2Fp2ywxg089UriCZa4Hz-D.woff2",
+      "bytes": 76248,
+      "sha256": "d5c53a50536536971ea27318a590dbf723a190dd2f608e7a92929a021cc0ebaa"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZ2IHSeH.woff2",
+      "local": "public/reference/fonts/rP2Hp2ywxg089UriCZ2IHSeH.woff2",
+      "bytes": 31292,
+      "sha256": "5d18d31d23ada61ebee1d589b11d5da30db9e158f589d5e35221ba2b1a45de54"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2Hp2ywxg089UriCZOIHQ.woff2",
+      "local": "public/reference/fonts/rP2Hp2ywxg089UriCZOIHQ.woff2",
+      "bytes": 62724,
+      "sha256": "ca72d2bcea8f4daa783dbdfa2d9b46068c3ce38168e05918fb867aa453b4f890"
+    },
+    {
+      "source": "https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap",
+      "local": "public/reference/css/dm-sans.css",
+      "bytes": 1609,
+      "sha256": "86f5e9ba557dcb3a5847012684ce6961be4372d0a283a47812ca43f3163e22d4",
+      "sourceSHA256": "c957388ac27a37d7a365cfeaa1eefeda01845db2f1dc42f6cf98a762d2c48ba5",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/favicon.png",
+      "local": "public/media/favicon.png",
+      "bytes": 2007,
+      "sha256": "e7467889588d5e02112a77a0565cbe81cd8223bf5c1d406ead9f50bcf95d0c67"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/background/child.jpg",
+      "local": "public/media/background/child.jpg",
+      "bytes": 65571,
+      "sha256": "8612fc28c9bb16bed254a0e5184f5420d8031c571db2ac40bda4021de74f0570"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/banner-calc-9.jpg",
+      "local": "public/media/banner/banner-calc-9.jpg",
+      "bytes": 89104,
+      "sha256": "fb0dedd51af71e1799578847d3b5d82cd4f9c9cd83a49f4d55f13e451b42a43a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/css/style.css",
+      "local": "public/reference/css/style.css",
+      "bytes": 659298,
+      "sha256": "ca226abf149c3beebf5b2cadbb0c356b3880a17d75d658bb187d40eb8dd7951b",
+      "sourceSHA256": "4820e9fe670148d4cbc0aad16c41b6800f1cdd22a0afe02b78b5f5420c1c48c5",
+      "transformation": "Local URLs and LF whitespace; unused missing Slick/Owl assets removed; custom-control label selectors preserve source specificity and appearance."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/car-search.jpg",
+      "local": "public/media/resource/car-search.jpg",
+      "bytes": 2290,
+      "sha256": "0b990548281dc85acdfbc5f5f3a575c6f3141fa0a63e17ac4b0ab0fd879d8a59"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/js/jquery.js",
+      "local": "public/reference/js/jquery.js",
+      "bytes": 89663,
+      "sha256": "131c0d82967fed05e1920e519e0ea6ec91ab97b7c40480f72f8af8680bba1f0a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/js/slick.min.js",
+      "local": "public/reference/js/slick-core.js",
+      "bytes": 68524,
+      "sha256": "8def3b3368cc2573daf868320b89e41db322639d4842d83d4fe7d1d9da1423d7",
+      "sourceSHA256": "79f03a85a65bfb89d9378a0529554de5aafadf1b3722ec454aa9516c4e60d34b",
+      "transformation": "Original Slick core UMD statement; demo auto-initialization replaced by the Svelte lifecycle action."
     }
   ]
 }

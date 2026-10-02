@@ -1,4 +1,6 @@
 import { tick } from "svelte";
+import { homeForPath } from "../data/homes";
+let pendingScroll: AbortController | undefined;
 export const route = $state({
   path: window.location.pathname,
   search: window.location.search,
@@ -8,6 +10,7 @@ function update() {
   route.search = window.location.search;
 }
 export async function navigate(href: string, replace = false) {
+  pendingScroll?.abort();
   const url = new URL(href, window.location.origin);
   if (url.origin !== window.location.origin) {
     window.location.href = url.href;
@@ -52,16 +55,26 @@ export function setupRouter() {
     void navigate(url.pathname + url.search + url.hash);
   };
   const back = async (event: PopStateEvent) => {
+    pendingScroll?.abort();
     update();
     await tick();
-    window.scrollTo({
-      top: Number(event.state?.scrollY) || 0,
-      behavior: "instant",
-    });
+    const top = Number(event.state?.scrollY) || 0;
+    const restore = () => window.scrollTo({ top, behavior: "instant" });
+    if (
+      homeForPath(route.path) &&
+      !document.querySelector(".reference-home[data-ready=true]")
+    ) {
+      pendingScroll = new AbortController();
+      document.addEventListener("boxcar:reference-ready", restore, {
+        once: true,
+        signal: pendingScroll.signal,
+      });
+    } else restore();
   };
   document.addEventListener("click", click);
   window.addEventListener("popstate", back);
   return () => {
+    pendingScroll?.abort();
     document.removeEventListener("click", click);
     window.removeEventListener("popstate", back);
   };

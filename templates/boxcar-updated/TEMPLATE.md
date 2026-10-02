@@ -2,7 +2,9 @@
 
 `boxcar-updated` · `2026.10.02-native-10-homes` · native Svelte 5 / Vite 8 · local preview port **6455**.
 
-Ten real homepage compositions share one editable catalogue and application state. The design reference is the [Boxcar HTML public preview](https://creativelayers.net/themes/boxcar-html/). The existing `templates/boxcar` WordPress capture remains its own template.
+The ten homepages preserve the original DOM structure, whitespace, section copy, photographs, SVGs, local fonts and layout CSS from the [Boxcar HTML public preview](https://creativelayers.net/themes/boxcar-html/). The captured markup is compiled into Svelte components. Native actions implement menus, tabs and search. A Svelte lifecycle action retains the source's **jQuery and Slick slider core** for faithful carousel behavior. Homepage modules load separately; this is not a complete rewrite of every vendor dependency.
+
+This is the ten-home **HTML** design reference. The existing `templates/boxcar` WordPress capture remains its own template. Inventory, vehicle details and other supporting routes retain the adapted Svelte layouts; they have not been ported to the original inner-page DOM. WordPress plugins, accounts and backend services are outside this candidate.
 
 ## Homepage choices
 
@@ -19,7 +21,7 @@ Ten real homepage compositions share one editable catalogue and application stat
 | 09 | Lifestyle photo, upper search and lower headline | `/home-9/` |
 | 10 | Touring photo, compact header and floating search | `/home-10/` |
 
-The Home menu, mobile drawer and footer link to these actual routes. `index.html` and `index-2.html` through `index-10.html` also resolve locally. Section order, backgrounds, image treatments and vehicle shelf layouts differ between homes. Shared components keep filtering and vehicle browsing consistent.
+The Home menu and native mobile drawer link to these actual routes. `index.html` and `index-2.html` through `index-10.html` also resolve locally. Visible source marketing figures and example reviews remain part of the reference design. A short footer disclosure identifies the demo content; search leads into the working 17-vehicle sample catalogue.
 
 ## Run and checks
 
@@ -41,7 +43,14 @@ Start from Cars with the existing launcher on a free port:
 
 The Vite development preview is [http://127.0.0.1:6455/](http://127.0.0.1:6455/). A production build creates `dist/`; `vercel.json` supplies SPA route fallback for an eventual deployment.
 
-With the local preview running, `npm run verify -- --views` checks all ten homes at 1440, 390 and 320 px, nine supporting pages, and every sample detail at desktop and 320 px. `npm run verify -- --flows` exercises search, filtered return/Back, sort, pagination, empty results, saved persistence, four-car comparison, calculator validation, enquiry preview, menu focus return, gallery and mobile filter dismissal. `npm run verify -- --text` checks 320 px at 200% text, including populated saved and comparison pages. Set `BOXCAR_BROWSER=webkit` to repeat with Playwright WebKit. QA output is ignored under `qa/<engine>/`.
+With the local preview running:
+
+- `npm run verify` compares all ten homepages with a locally rendered fixture of the archived source HTML and vendor scripts at 1440, 390 and 320 px. It checks section geometry, first-viewport pixel differences, image/font loading and document width. The fixture executes the full original demo script set; production retains the local jQuery/Slick slider dependencies.
+- `npm run verify -- --full` also records full-page comparisons for Homes 01, 03, 07 and 10 at desktop width. Pixel differences and section geometry are evidence, not a declaration of whole-site parity.
+- `npm run verify:flows` exercises source-style search, keyboard tabs/dropdowns, sliders, featured destinations, Back/scroll restoration, mobile nested navigation and newsletter previews.
+- `npm run verify:inner` checks nine supporting pages at three widths and all 17 vehicle details at desktop and 320 px.
+
+Set `BOXCAR_BROWSER=webkit` to repeat with Playwright WebKit. Comparison output is ignored under Cars' `runtime/boxcar-updated-parity/`; supporting-page output is under the template's ignored `qa/<engine>/`. The original fixed-pixel typography has not been accepted for 200% text accessibility.
 
 ## Application behavior
 
@@ -55,13 +64,17 @@ Enquiry and newsletter forms show a local preview. Contact input is not persiste
 
 ## Personalization boundaries
 
-`src/data/brand.ts` owns business name, logo paths, accent, contact, location and hours. `src/data/homes.ts` owns composition choices. `src/data/vehicles.json` owns stock, images, specifications and descriptive slugs. `src/data/journal.ts` owns buyer guidance. `public/media/` holds local assets; typography uses local variable DM Sans with its OFL license.
+`src/reference/Home1.svelte` through `Home10.svelte` own the visible homepage copy and original composition. `public/reference/css/style.css`, the source theme variables and `public/media/` own homepage appearance. `src/reference/interactions.ts` supplies native controls. `src/reference/carousel.ts` loads the two local slider dependencies and destroys sliders on unmount.
 
-All 17 vehicles are samples. The inherited catalogue had mismatched titles and mixed-model galleries; this version re-matches the pictured makes/models and retains original IDs and legacy routes for provenance. Prices, years, mileage and specifications are illustrative. The five-image Volvo gallery is a model preview, including different colours, rather than evidence for one vehicle. Example customer reviews, staff and showroom images are labelled as examples. Replace these inputs with verified dealer facts before use.
+`src/data/brand.ts` owns identity and contacts on the adapted inner pages, not every homepage consumer. `src/data/homes.ts` registers homepage names/routes. `src/data/vehicles.json` owns the working sample stock and detail destinations; `src/data/journal.ts` owns adapted buyer guidance. Personalizing a dealer requires updating both reference homepages and shared inner-page identity, with a review of all logo/contact consumers.
+
+All 17 catalogue vehicles are samples. The adapted catalogue matches pictured makes/models and retains original IDs and legacy routes. Prices, years, mileage and specifications are illustrative. The five-image Volvo gallery contains model previews in different colours. Original homepage shelves, stock counts, reviews, staff and showroom copy are also illustrative reference content. Replace these inputs with verified dealer facts before use.
 
 ## Reference, ownership and acceptance
 
-[`.template/reference.json`](.template/reference.json) records ten source URLs, captured HTML SHA-256 values and section classes. [`.template/assets.json`](.template/assets.json) records every imported asset's source, size and hash. Raw DOM/CSS and design captures live in Cars' ignored `runtime/boxcar-updated-reference/`; the application renders native components instead of injecting that captured HTML. `scripts/reference.mjs`, `reference-shots.mjs` and `import-assets.mjs` support reference research; asset refresh rewrites source reference images, so it belongs in template research before personalization.
+[`.template/reference.json`](.template/reference.json) records the original research captures. [`.template/port.json`](.template/port.json) records the source and generated Svelte hashes, section classes and missing optional source backgrounds. [`.template/assets.json`](.template/assets.json) records imported asset URLs, sizes, hashes and CSS transformations. Raw captures live in Cars' ignored `runtime/boxcar-updated-reference/`.
+
+`scripts/port-reference.mjs` regenerates the ten compiled homepage sources from those archived HTML files; `--refresh-assets` refreshes original styles, fonts and pictures. It reads carousel options as syntax data without executing JavaScript at build time, and extracts the original Slick core without automatic demo initialization. CSS changes localize asset URLs, replace unused missing dependencies, and preserve label appearance for custom controls. A narrow WebKit compatibility rule fixes the flex image width in horizontal vehicle cards mounted by Svelte. Regeneration overwrites homepage personalization, so use it during template research before adapting a dealer. Production renders compiled Svelte markup, retains the local slider libraries and loads Home 06's illustrative map embed when it enters view.
 
 Reference assets retain their existing ownership. No new ThemeForest purchase or multi-client rights determination was made. The owner must check existing entitlement and image rights before commercial reuse.
 
