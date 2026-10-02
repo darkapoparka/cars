@@ -48,6 +48,11 @@ try {
         assert.equal(await input.getAttribute("aria-expanded"), "false");
         await input.click();
         await popup.waitFor({ state: "visible" });
+        assert.equal(
+          await input.evaluate((field) => getComputedStyle(field).outlineStyle),
+          "none",
+          `Home ${n}: mouse focus must not draw a border around the search`,
+        );
         assert.equal(await input.inputValue(), "");
         assert.equal(await popup.getByRole("option").count(), 6);
         assert.equal(
@@ -67,8 +72,39 @@ try {
         }
         await input.press("Escape");
         assert.equal(await input.getAttribute("aria-expanded"), "false");
+        await input.press("Shift+Tab");
+        await page.keyboard.press("Tab");
+        assert.equal(
+          await input.evaluate((field) => document.activeElement === field),
+          true,
+        );
+        assert.equal(await input.getAttribute("aria-expanded"), "true");
+        assert.deepEqual(
+          await input.evaluate((field) => {
+            const style = getComputedStyle(field);
+            return [
+              style.outlineStyle,
+              style.outlineWidth,
+              style.outlineOffset,
+              style.outlineColor === style.color,
+            ];
+          }),
+          ["solid", "2px", "-4px", true],
+          `Home ${n}: keyboard focus stays visible inside the search`,
+        );
+        if (n === 1) {
+          await page.screenshot({
+            path: path.join(out, `${engine}-header-search-keyboard.png`),
+          });
+        }
+        await input.press("Escape");
         await input.click();
         await popup.waitFor({ state: "visible" });
+        assert.equal(
+          await input.evaluate((field) => getComputedStyle(field).outlineStyle),
+          "none",
+          `Home ${n}: mouse use clears the keyboard focus indicator`,
+        );
         await input.fill("Audi");
         await popup.waitFor({ state: "visible" });
         const options = popup.getByRole("option");
@@ -178,6 +214,14 @@ try {
           .locator(".btn-view-search")
           .evaluate((link) => document.activeElement === link),
         true,
+      );
+      assert.deepEqual(
+        await page.locator(".btn-view-search").evaluate((link) => {
+          const style = getComputedStyle(link);
+          return [style.outlineStyle, style.outlineWidth, style.outlineOffset];
+        }),
+        ["solid", "2px", "-4px"],
+        "The footer focus indicator stays inside the dropdown",
       );
       await page.keyboard.press("Escape");
       assert.equal(await input.getAttribute("aria-expanded"), "false");

@@ -95,9 +95,18 @@ export function initializeHeaderSearch(root: HTMLElement, signal: AbortSignal) {
     input.addEventListener("input", refresh, { signal });
     input.addEventListener("focus", refresh, { signal });
     input.addEventListener("click", refresh, { signal });
+    document.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "Tab") layout.setAttribute("data-keyboard-focus", "");
+      },
+      { signal, capture: true },
+    );
     layout.addEventListener(
       "keydown",
       (event) => {
+        if (["ArrowDown", "ArrowUp", "Escape"].includes(event.key))
+          layout.setAttribute("data-keyboard-focus", "");
         if (event.key === "Escape") {
           event.preventDefault();
           input.focus({ preventScroll: true });
@@ -135,6 +144,7 @@ export function initializeHeaderSearch(root: HTMLElement, signal: AbortSignal) {
     document.addEventListener(
       "pointerdown",
       (event) => {
+        layout.removeAttribute("data-keyboard-focus");
         pointerInside = layout.contains(event.target as Node);
         if (!pointerInside) open(false);
       },

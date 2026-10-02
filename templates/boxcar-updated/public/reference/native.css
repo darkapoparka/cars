@@ -29,6 +29,23 @@
   outline: 2px solid #405ff2 !important;
   outline-offset: 4px;
 }
+/* Text inputs match :focus-visible after mouse clicks too. Preserve the
+   source search panel for pointer use; keep keyboard focus inside it. */
+.reference-home .layout-search .show-search:focus {
+  outline: none !important;
+}
+.reference-home .layout-search[data-keyboard-focus] .show-search:focus-visible {
+  outline: 2px solid currentColor !important;
+  outline-offset: -4px;
+}
+.reference-home .layout-search .btn-view-search {
+  transition-property: color, background-color;
+  border-radius: 0 0 16px 16px;
+}
+.reference-home .layout-search .btn-view-search:focus-visible {
+  outline: 2px solid #050b20 !important;
+  outline-offset: -4px;
+}
 .reference-home .car-search-item[aria-selected="true"] {
   background: #eef1ff;
 }
