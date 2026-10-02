@@ -59,7 +59,7 @@ interface DesktopMarketplaceBarProps {
 }
 
 const leadSiteDiscoveryControlsBannerStyle = {
-  backgroundColor: "#030303",
+  backgroundColor: "var(--inverse)",
   backgroundImage:
     "radial-gradient(circle at 50% -75%, rgba(255, 255, 255, 0.12), transparent 58%)",
 } as const;
@@ -69,7 +69,7 @@ const getDiscoveryBandClassName = (
   transparentForLeadSite = false
 ) => {
   if (isDealershipSite) {
-    return transparentForLeadSite ? "bg-transparent" : "bg-black";
+    return transparentForLeadSite ? "bg-transparent" : "bg-inverse";
   }
   return isResults ? "bg-card" : "bg-control/70";
 };

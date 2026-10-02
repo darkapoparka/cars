@@ -1,23 +1,23 @@
 @media (min-width: 1024px) {
   .detail .content {
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
     max-width: none;
-    padding: 1.75rem 0 4rem;
+    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 16);
     margin-inline: auto;
   }
 
   .detail .columns {
-    grid-template-columns: minmax(0, 1fr) 22rem;
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr) var(--desktop-sidebar-width);
+    gap: calc(var(--spacing) * 8);
   }
 
   .detail :global([data-slot="listing-summary-header"]) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
-    gap: 1.25rem 2rem;
+    gap: calc(var(--spacing) * 5) calc(var(--spacing) * 8);
     min-height: 0;
     padding: 0;
-    margin-bottom: 1.75rem;
+    margin-bottom: calc(var(--spacing) * 7);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -27,18 +27,18 @@
     grid-column: 1 / -1;
     justify-self: start;
     height: auto;
-    min-height: 1.5rem;
+    min-height: calc(var(--spacing) * 6);
     padding: 0;
-    font-size: 0.875rem;
+    font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
     color: var(--muted-foreground);
     background: transparent;
   }
 
   .detail :global([data-slot="listing-summary-header"]) h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    letter-spacing: -0.04em;
+    font-size: var(--text-page-title-lg);
+    line-height: var(--desktop-leading-tight);
+    letter-spacing: var(--desktop-tracking-page);
   }
 
   .detail :global([data-slot="listing-summary-header"]) > div:last-child {
@@ -49,13 +49,13 @@
   .detail :global([data-slot="listing-gallery-empty"]) {
     display: block;
     height: auto;
-    aspect-ratio: 16 / 10;
-    border-radius: 1rem;
+    aspect-ratio: var(--desktop-gallery-aspect);
+    border-radius: var(--radius-vehicle);
   }
 
   .detail :global([data-slot="listing-gallery-stage"]) > button {
     cursor: zoom-in;
-    border-radius: 1rem;
+    border-radius: var(--radius-vehicle);
   }
 
   .detail :global([data-slot="listing-gallery-secondary-grid"]) {
@@ -63,18 +63,18 @@
   }
 
   .detail :global([data-slot="listing-gallery-thumbnails"]) {
-    gap: 0.75rem;
-    margin-top: 0.75rem;
+    gap: calc(var(--spacing) * 3);
+    margin-top: calc(var(--spacing) * 3);
   }
 
   .detail :global([data-slot="listing-gallery-thumbnails"]) button {
-    width: 7rem;
-    height: 4.5rem;
-    border-radius: 0.5rem;
+    width: calc(var(--spacing) * 28);
+    height: calc(var(--spacing) * 18);
+    border-radius: calc(var(--spacing) * 2);
   }
 
   .detail .purchaseColumn {
-    top: 1.5rem;
+    top: calc(var(--spacing) * 6);
   }
 
   .purchaseColumn > div > div {
@@ -83,23 +83,23 @@
 
   .detail :global([data-slot="listing-transaction-card"]),
   .detail :global([data-slot="listing-dealership-card"]) {
-    padding: 1.5rem;
-    border-radius: 1rem;
+    padding: calc(var(--spacing) * 6);
+    border-radius: var(--radius-vehicle);
   }
 
   .detail :global([data-slot="listing-transaction-card"]) > p:nth-child(2) {
-    margin-top: 0.5rem;
-    font-size: 2rem;
-    line-height: 1.2;
+    margin-top: calc(var(--spacing) * 2);
+    font-size: var(--text-display);
+    line-height: var(--desktop-leading-tight);
   }
 
   .detail :global([data-slot="listing-transaction-card"]) > div {
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    gap: calc(var(--spacing) * 3);
+    margin-top: calc(var(--spacing) * 6);
   }
 
   .detail :global([data-slot="listing-transaction-card"]) a {
-    min-height: 3rem;
+    min-height: calc(var(--spacing) * 12);
   }
 
   .detail :global([data-slot="listing-dealership-card"]) > a {
@@ -115,26 +115,26 @@
   }
 
   .detail :global([data-slot="listing-details-tabs-desktop"]) {
-    margin-top: 1.5rem;
-    border-radius: 1rem;
+    margin-top: calc(var(--spacing) * 6);
+    border-radius: var(--radius-vehicle);
   }
 
   .detail
     :global([data-slot="listing-details-tabs-desktop"])
     > [role="tablist"] {
-    gap: 1.5rem;
-    padding: 0 1.5rem;
-    border-bottom: 1px solid var(--border);
+    gap: calc(var(--spacing) * 6);
+    padding: 0 calc(var(--spacing) * 6);
+    border-bottom: var(--desktop-border-width) solid var(--border);
   }
 
   .detail :global([data-slot="listing-details-tabs-desktop"]) [role="tab"] {
-    height: 3.5rem;
-    padding: 0 0.125rem;
-    margin-bottom: -1px;
-    font-size: 0.9375rem;
+    height: calc(var(--spacing) * 14);
+    padding: 0 calc(var(--spacing) * 0.5);
+    margin-bottom: calc(var(--desktop-border-width) * -1);
+    font-size: var(--text-compact-control);
     background: transparent;
     border: 0;
-    border-bottom: 2px solid transparent;
+    border-bottom: var(--desktop-focus-width) solid transparent;
     border-radius: 0;
     box-shadow: none;
   }
@@ -149,7 +149,7 @@
   .detail
     :global([data-slot="listing-details-tabs-desktop"])
     > [role="tabpanel"] {
-    padding: 1.5rem;
+    padding: calc(var(--spacing) * 6);
   }
 
   .detail :global([data-slot="listing-description"]) {

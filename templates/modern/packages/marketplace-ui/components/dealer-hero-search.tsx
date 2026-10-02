@@ -216,157 +216,159 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
             </div>
           </div>
           <div className={styles.fields}>
-            <Button
-              aria-expanded={makeModelStep === "make"}
-              aria-haspopup="dialog"
-              aria-pressed={Boolean(filters.make)}
-              className={fieldClassName}
-              data-slot="desktop-hero-make"
-              onClick={() => openOverlay(() => setMakeModelStep("make"))}
-              type="button"
-              variant="outline"
-            >
-              <span>{filters.make || text("Марка", "Make")}</span>
-              <ChevronDown aria-hidden="true" size={15} />
-            </Button>
-            <Button
-              aria-expanded={makeModelStep === "model"}
-              aria-haspopup="dialog"
-              aria-pressed={Boolean(filters.model)}
-              className={fieldClassName}
-              data-slot="desktop-hero-model"
-              onClick={() => openOverlay(() => setMakeModelStep("model"))}
-              type="button"
-              variant="outline"
-            >
-              <span>{filters.model || text("Модел", "Model")}</span>
-              <ChevronDown aria-hidden="true" size={15} />
-            </Button>
-            <DesktopQuickRangeDialog
-              active={Boolean(filters.priceMin || filters.priceMax)}
-              className={fieldClassName}
-              dataSlot="desktop-hero-price"
-              description={text(
-                "Изберете ценови диапазон.",
-                "Choose a price range."
-              )}
-              formatValue={(value) =>
-                `${numberFormatter.format(value)} ${currencyLabel}`
-              }
-              isBg={isBg}
-              label={getDesktopPriceQuickFilterLabel(
-                filters,
-                isBg,
-                numberFormatter
-              )}
-              maximumLabel={text("Максимум", "Maximum")}
-              maximumPrefix={text("До", "Up to")}
-              minimumLabel={text("Минимум", "Minimum")}
-              onApply={({ minimum, maximum }) =>
-                onApply({
-                  priceMin: minimum,
-                  priceMax: maximum,
-                  currency:
-                    minimum !== undefined || maximum !== undefined
-                      ? marketplaceSearchCurrency
-                      : undefined,
-                })
-              }
-              presets={marketplacePricePresets.map((value) => ({
-                label:
-                  text("До ", "Up to ") +
-                  numberFormatter.format(value) +
-                  " " +
-                  currencyLabel,
-                value: [marketplacePriceRange[0], value],
-              }))}
-              quickSelectLabel={text("Бърз избор", "Quick select")}
-              range={marketplacePriceRange}
-              selectedMaximum={filters.priceMax}
-              selectedMinimum={filters.priceMin}
-              step={1000}
-              thumbLabels={[
-                text("Минимална цена", "Minimum price"),
-                text("Максимална цена", "Maximum price"),
-              ]}
-              title={text("Цена", "Price range")}
-            />
-            <DesktopQuickRangeDialog
-              active={
-                filters.yearMin !== undefined || filters.yearMax !== undefined
-              }
-              className={fieldClassName}
-              dataSlot="desktop-hero-year"
-              description={text(
-                "Изберете диапазон на годината.",
-                "Choose a year range."
-              )}
-              formatValue={String}
-              isBg={isBg}
-              label={labels.year}
-              maximumLabel={text("До година", "To year")}
-              maximumPrefix={text("До", "Up to")}
-              minimumLabel={text("От година", "From year")}
-              onApply={({ minimum, maximum }) =>
-                onApply({ yearMin: minimum, yearMax: maximum })
-              }
-              presets={[]}
-              quickSelectLabel={text("Бърз избор", "Quick select")}
-              range={marketplaceYearRange}
-              selectedMaximum={filters.yearMax}
-              selectedMinimum={filters.yearMin}
-              step={1}
-              thumbLabels={[
-                text("От година", "From year"),
-                text("До година", "To year"),
-              ]}
-              title={text("Година", "Year")}
-            />
-            <DesktopQuickRangeDialog
-              active={filters.mileageMax !== undefined}
-              className={fieldClassName}
-              dataSlot="desktop-hero-mileage"
-              description={text(
-                "Задайте максимален пробег.",
-                "Set a maximum mileage."
-              )}
-              formatValue={(value) =>
-                `${numberFormatter.format(value)} ${text("км", "km")}`
-              }
-              isBg={isBg}
-              label={labels.mileage}
-              maximumLabel={text("Максимален пробег", "Maximum mileage")}
-              maximumOnly
-              maximumPrefix={text("До", "Up to")}
-              minimumLabel={text("Минимум", "Minimum")}
-              onApply={({ maximum }) => onApply({ mileageMax: maximum })}
-              presets={[]}
-              quickSelectLabel={text("Бърз избор", "Quick select")}
-              range={marketplaceMileageRange}
-              selectedMaximum={filters.mileageMax}
-              step={5000}
-              thumbLabels={[
-                text("Минимален пробег", "Minimum mileage"),
-                text("Максимален пробег", "Maximum mileage"),
-              ]}
-              title={text("Пробег", "Mileage")}
-            />
-            {compact ? (
+            <div className={styles.primaryFields}>
               <Button
-                aria-controls={advancedFiltersId}
-                aria-expanded={advancedFiltersOpen}
-                className={`${fieldClassName} ${styles.expandFilters}`}
-                onClick={() => setAdvancedFiltersOpen((open) => !open)}
+                aria-expanded={makeModelStep === "make"}
+                aria-haspopup="dialog"
+                aria-pressed={Boolean(filters.make)}
+                className={fieldClassName}
+                data-slot="desktop-hero-make"
+                onClick={() => openOverlay(() => setMakeModelStep("make"))}
                 type="button"
                 variant="outline"
               >
-                <span>
-                  {text("Още филтри", "More filters")}
-                  {advancedFilterCount ? ` (${advancedFilterCount})` : ""}
-                </span>
-                <ChevronDown aria-hidden size={16} />
+                <span>{filters.make || text("Марка", "Make")}</span>
+                <ChevronDown aria-hidden="true" className="size-4" />
               </Button>
-            ) : null}
+              <Button
+                aria-expanded={makeModelStep === "model"}
+                aria-haspopup="dialog"
+                aria-pressed={Boolean(filters.model)}
+                className={fieldClassName}
+                data-slot="desktop-hero-model"
+                onClick={() => openOverlay(() => setMakeModelStep("model"))}
+                type="button"
+                variant="outline"
+              >
+                <span>{filters.model || text("Модел", "Model")}</span>
+                <ChevronDown aria-hidden="true" className="size-4" />
+              </Button>
+              <DesktopQuickRangeDialog
+                active={Boolean(filters.priceMin || filters.priceMax)}
+                className={fieldClassName}
+                dataSlot="desktop-hero-price"
+                description={text(
+                  "Изберете ценови диапазон.",
+                  "Choose a price range."
+                )}
+                formatValue={(value) =>
+                  `${numberFormatter.format(value)} ${currencyLabel}`
+                }
+                isBg={isBg}
+                label={getDesktopPriceQuickFilterLabel(
+                  filters,
+                  isBg,
+                  numberFormatter
+                )}
+                maximumLabel={text("Максимум", "Maximum")}
+                maximumPrefix={text("До", "Up to")}
+                minimumLabel={text("Минимум", "Minimum")}
+                onApply={({ minimum, maximum }) =>
+                  onApply({
+                    priceMin: minimum,
+                    priceMax: maximum,
+                    currency:
+                      minimum !== undefined || maximum !== undefined
+                        ? marketplaceSearchCurrency
+                        : undefined,
+                  })
+                }
+                presets={marketplacePricePresets.map((value) => ({
+                  label:
+                    text("До ", "Up to ") +
+                    numberFormatter.format(value) +
+                    " " +
+                    currencyLabel,
+                  value: [marketplacePriceRange[0], value],
+                }))}
+                quickSelectLabel={text("Бърз избор", "Quick select")}
+                range={marketplacePriceRange}
+                selectedMaximum={filters.priceMax}
+                selectedMinimum={filters.priceMin}
+                step={1000}
+                thumbLabels={[
+                  text("Минимална цена", "Minimum price"),
+                  text("Максимална цена", "Maximum price"),
+                ]}
+                title={text("Цена", "Price range")}
+              />
+              <DesktopQuickRangeDialog
+                active={
+                  filters.yearMin !== undefined || filters.yearMax !== undefined
+                }
+                className={fieldClassName}
+                dataSlot="desktop-hero-year"
+                description={text(
+                  "Изберете диапазон на годината.",
+                  "Choose a year range."
+                )}
+                formatValue={String}
+                isBg={isBg}
+                label={labels.year}
+                maximumLabel={text("До година", "To year")}
+                maximumPrefix={text("До", "Up to")}
+                minimumLabel={text("От година", "From year")}
+                onApply={({ minimum, maximum }) =>
+                  onApply({ yearMin: minimum, yearMax: maximum })
+                }
+                presets={[]}
+                quickSelectLabel={text("Бърз избор", "Quick select")}
+                range={marketplaceYearRange}
+                selectedMaximum={filters.yearMax}
+                selectedMinimum={filters.yearMin}
+                step={1}
+                thumbLabels={[
+                  text("От година", "From year"),
+                  text("До година", "To year"),
+                ]}
+                title={text("Година", "Year")}
+              />
+              <DesktopQuickRangeDialog
+                active={filters.mileageMax !== undefined}
+                className={fieldClassName}
+                dataSlot="desktop-hero-mileage"
+                description={text(
+                  "Задайте максимален пробег.",
+                  "Set a maximum mileage."
+                )}
+                formatValue={(value) =>
+                  `${numberFormatter.format(value)} ${text("км", "km")}`
+                }
+                isBg={isBg}
+                label={labels.mileage}
+                maximumLabel={text("Максимален пробег", "Maximum mileage")}
+                maximumOnly
+                maximumPrefix={text("До", "Up to")}
+                minimumLabel={text("Минимум", "Minimum")}
+                onApply={({ maximum }) => onApply({ mileageMax: maximum })}
+                presets={[]}
+                quickSelectLabel={text("Бърз избор", "Quick select")}
+                range={marketplaceMileageRange}
+                selectedMaximum={filters.mileageMax}
+                step={5000}
+                thumbLabels={[
+                  text("Минимален пробег", "Minimum mileage"),
+                  text("Максимален пробег", "Maximum mileage"),
+                ]}
+                title={text("Пробег", "Mileage")}
+              />
+              {compact ? (
+                <Button
+                  aria-controls={advancedFiltersId}
+                  aria-expanded={advancedFiltersOpen}
+                  className={`${fieldClassName} ${styles.expandFilters}`}
+                  onClick={() => setAdvancedFiltersOpen((open) => !open)}
+                  type="button"
+                  variant="outline"
+                >
+                  <span>
+                    {text("Още филтри", "More filters")}
+                    {advancedFilterCount ? ` (${advancedFilterCount})` : ""}
+                  </span>
+                  <ChevronDown aria-hidden className="size-4" />
+                </Button>
+              ) : null}
+            </div>
             <div
               className={styles.advancedFields}
               hidden={compact && !advancedFiltersOpen}

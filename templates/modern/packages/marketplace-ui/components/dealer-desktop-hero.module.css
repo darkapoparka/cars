@@ -11,14 +11,14 @@
 @media (min-width: 1024px) {
   .hero,
   .hero[data-variant="service"] {
-    --desktop-action-panel-min-height: 0rem;
+    --desktop-action-panel-min-height: 0;
     position: relative;
-    z-index: 20;
+    z-index: var(--desktop-layer-hero);
     display: flex;
     flex-direction: column;
-    gap: 1.75rem;
+    gap: calc(var(--spacing) * 7);
     align-items: center;
-    padding: 3rem 0 0;
+    padding: calc(var(--spacing) * 12) 0 0;
     color: var(--foreground);
     background: var(--panel);
     isolation: isolate;
@@ -27,43 +27,43 @@
     position: relative;
     z-index: 1;
     display: block;
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
     text-align: left;
   }
   .copy h1 {
     margin: 0;
-    font-size: 2.5rem;
-    font-weight: 600;
-    line-height: 1.15;
-    letter-spacing: -0.045em;
+    font-size: var(--text-desktop-hero);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--desktop-leading-display);
+    letter-spacing: var(--desktop-tracking-display);
     text-wrap: balance;
   }
   .description {
-    max-width: 42rem;
-    margin: 1rem 0 0;
-    font-size: 1.0625rem;
-    line-height: 1.6;
+    max-width: calc(var(--spacing) * 168);
+    margin: calc(var(--spacing) * 4) 0 0;
+    font-size: var(--text-desktop-lead);
+    line-height: var(--desktop-leading-prose);
     color: var(--muted-foreground);
     text-wrap: pretty;
   }
   .eyebrow {
-    margin: 0 0 1rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
+    margin: 0 0 calc(var(--spacing) * 4);
+    font-size: var(--text-meta);
+    line-height: var(--desktop-leading-copy);
     color: var(--muted-foreground);
   }
   .hero[data-variant="landing"],
   .hero[data-variant="inventory"] {
     gap: 0;
-    padding: 0.5rem 0 1.25rem;
+    padding: calc(var(--spacing) * 2) 0 calc(var(--spacing) * 5);
     background: var(--panel);
-    border-bottom: 1px solid var(--border);
+    border-bottom: var(--desktop-border-width) solid var(--border);
   }
   .hero[data-variant="landing"] .copy,
   .hero[data-variant="inventory"] .copy {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: var(--desktop-border-width);
+    height: var(--desktop-border-width);
     overflow: hidden;
     white-space: nowrap;
     clip-path: inset(50%);
@@ -77,16 +77,16 @@
   .loadingPanelFrame {
     position: relative;
     z-index: 1;
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
   }
-  .loadingPanelFrame :global([data-desktop-action-panel]) {
-    min-height: 12.875rem;
+  .loadingPanelFrame [data-desktop-action-panel] {
+    min-height: calc(var(--spacing) * 51.5);
     background: transparent;
     border: 0;
     box-shadow: none;
   }
   .copy .loadingTitle {
-    max-width: 24rem;
+    max-width: calc(var(--spacing) * 96);
     color: transparent;
     background: var(--control);
     border-radius: var(--radius-sm);
@@ -94,17 +94,17 @@
   .loadingFields {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.75rem;
+    gap: calc(var(--spacing) * 3);
   }
   .loadingFields > div {
-    height: 3.5rem;
+    height: calc(var(--spacing) * 14);
     background: var(--control);
-    border-radius: 0.5rem;
+    border-radius: calc(var(--spacing) * 2);
   }
 }
 
 @media (min-width: 1280px) {
-  .loadingPanelFrame :global([data-desktop-action-panel]) {
-    min-height: 7.875rem;
+  .loadingPanelFrame [data-desktop-action-panel] {
+    min-height: calc(var(--spacing) * 31.5);
   }
 }

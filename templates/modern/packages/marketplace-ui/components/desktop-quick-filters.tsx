@@ -89,7 +89,7 @@ const DesktopQuickSort = ({
     <DesktopQuickFilterDialog
       active={filters.sort !== "recommended"}
       anyLabel={localizeMarketplace(isBg, "Препоръчани", "Recommended")}
-      className="w-auto min-w-28 shrink-0 gap-2 px-4 has-[>svg]:px-4 min-[112rem]:px-[18px] min-[112rem]:has-[>svg]:px-[18px]"
+      className="w-auto min-w-28 shrink-0 gap-2 desktop-ultra:px-[var(--desktop-control-compact-padding)] px-4 desktop-ultra:has-[>svg]:px-[var(--desktop-control-compact-padding)] has-[>svg]:px-4"
       dataSlot="desktop-sort-trigger"
       elevated={elevated}
       isBg={isBg}
@@ -166,7 +166,9 @@ export const DesktopQuickFilters = ({
   return (
     <div
       className={cn(
-        compact ? "py-2.5" : "mx-auto mt-7 max-w-[100rem] py-0.5",
+        compact
+          ? "py-2.5"
+          : "mx-auto mt-7 max-w-[var(--layout-wide-max)] py-0.5",
         layout !== "rail" && "p-0",
         appearance === "inverse" && styles.inverse
       )}
@@ -178,7 +180,7 @@ export const DesktopQuickFilters = ({
         </legend>
         <div
           className={cn(
-            "mx-auto flex w-full max-w-[100rem] flex-nowrap items-center justify-center gap-2",
+            "mx-auto flex w-full max-w-[var(--layout-wide-max)] flex-nowrap items-center justify-center gap-2",
             layout !== "rail" && "justify-start",
             filterLayoutStyles[layout].row
           )}
@@ -370,7 +372,7 @@ export const DesktopQuickFilters = ({
                     active={Boolean(filters.mileageMax)}
                     className={cn(
                       desktopQuickFilterRailItemClassName,
-                      "hidden min-[85rem]:inline-flex"
+                      "desktop-expanded:inline-flex hidden"
                     )}
                     dataSlot="desktop-quick-filter"
                     description={localizeMarketplace(
@@ -437,7 +439,7 @@ export const DesktopQuickFilters = ({
                     )}
                     className={cn(
                       desktopQuickFilterRailItemClassName,
-                      "hidden min-[85rem]:inline-flex"
+                      "desktop-expanded:inline-flex hidden"
                     )}
                     dataSlot="desktop-quick-filter"
                     elevated={elevated}
@@ -467,7 +469,7 @@ export const DesktopQuickFilters = ({
                         )}
                         className={cn(
                           desktopQuickFilterRailItemClassName,
-                          "hidden min-[96rem]:inline-flex"
+                          "desktop-full:inline-flex hidden"
                         )}
                         dataSlot="desktop-quick-filter"
                         elevated={elevated}
@@ -505,7 +507,7 @@ export const DesktopQuickFilters = ({
                         )}
                         className={cn(
                           desktopQuickFilterRailItemClassName,
-                          "hidden min-[96rem]:inline-flex"
+                          "desktop-full:inline-flex hidden"
                         )}
                         dataSlot="desktop-quick-filter"
                         elevated={elevated}
@@ -578,7 +580,10 @@ export const DesktopQuickFilters = ({
               type="button"
               variant="secondary"
             >
-              <SlidersHorizontal aria-hidden="true" className="size-[18px]" />
+              <SlidersHorizontal
+                aria-hidden="true"
+                className="size-[var(--desktop-icon-size)]"
+              />
               <span>{localizeMarketplace(isBg, "Филтри", "Filters")}</span>
               {filterCount > 0 ? (
                 <span className="pointer-events-none absolute -top-1 -right-1 grid min-h-5 min-w-5 place-items-center rounded-full bg-panel px-1.5 font-semibold text-foreground text-micro ring-2 ring-primary">

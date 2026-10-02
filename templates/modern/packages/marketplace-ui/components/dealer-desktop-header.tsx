@@ -100,7 +100,10 @@ export const DealerDesktopHeader = ({
               target="_blank"
             >
               <span>{isBg ? "Шоурум" : "Showroom"}</span>
-              <ArrowUpRight aria-hidden="true" size={16} strokeWidth={1.8} />
+              <ArrowUpRight
+                aria-hidden="true"
+                className="size-4 [stroke-width:var(--desktop-icon-stroke)]"
+              />
             </a>
             <a
               aria-label={
@@ -111,7 +114,10 @@ export const DealerDesktopHeader = ({
               className={styles.phone}
               href={withBasePath(site.contact.phoneHref)}
             >
-              <Phone aria-hidden="true" size={16} strokeWidth={1.8} />
+              <Phone
+                aria-hidden="true"
+                className="size-4 [stroke-width:var(--desktop-icon-stroke)]"
+              />
               <span>{site.contact.phoneDisplay}</span>
             </a>
             <MarketplaceLocaleSwitchLink
@@ -120,7 +126,7 @@ export const DealerDesktopHeader = ({
               locale={locale}
             >
               {isBg ? "BG" : "EN"}
-              <ChevronDown aria-hidden="true" size={14} />
+              <ChevronDown aria-hidden="true" className="size-3.5" />
             </MarketplaceLocaleSwitchLink>
           </div>
         </div>

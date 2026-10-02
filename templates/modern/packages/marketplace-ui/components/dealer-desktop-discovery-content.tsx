@@ -53,7 +53,7 @@ export const DealerDesktopDiscoveryContent = ({
               )}
             >
               {isBg ? "Виж всички" : "View all vehicles"}
-              <ArrowRight aria-hidden="true" size={15} />
+              <ArrowRight aria-hidden="true" className="size-4" />
             </Link>
             <CarouselPrevious
               aria-label={isBg ? "Предишни автомобили" : "Previous vehicles"}

@@ -72,7 +72,10 @@ export function DealerDesktopServiceLinks({
     <div className={styles.serviceLinks} data-placement={placement}>
       {enabled.map(({ path, icon: Icon, title, detail }) => (
         <Link href={getLocalizedPublicPath(locale, path)} key={path}>
-          <Icon aria-hidden="true" size={27} strokeWidth={1.5} />
+          <Icon
+            aria-hidden="true"
+            className="size-[var(--desktop-service-icon-size)] [stroke-width:var(--desktop-service-icon-stroke)]"
+          />
           <span>
             <strong>{title}</strong>
             <small>{detail}</small>

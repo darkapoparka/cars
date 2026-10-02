@@ -1,6 +1,25 @@
 # Modern desktop refresh
 
-## Current underlined categories and inset search
+## Current desktop design tokens
+
+Desktop presentation values now come from the existing design-system palette, typography, radius, spacing, and elevation tokens, plus `packages/design-system/styles/desktop-tokens.css` for desktop layout settings. Component styles no longer contain their own literal colours, lengths, timings, or typography values. The frame, header, search, filters, inventory, cards, detail page, service pages, lease picker, and desktop dialogs use those shared settings. Standard spacing utilities and scale multipliers remain valid token consumers.
+
+The category row and primary filters use automatic equal columns based on their rendered children. Their layouts no longer assume four categories or six filter controls. Responsive inventory/service column settings and custom desktop utility breakpoints live in the design system. The existing boxed composition, category artwork, underline, inset submit icon, and Mileage control remain in place. Native desktop form selects no longer embed a fixed-colour SVG arrow.
+
+The existing refactor contract suite now also rejects local desktop palettes, dimensions, timings, and typography values in component styles, and local palette/arbitrary dimension utilities in desktop components. Breakpoint conditions, structural proportions, intrinsic image dimensions, and country-flag artwork remain layout/asset data. Mobile rules and the mobile Make/Model branch were preserved.
+
+Validation on 2 October 2026 with Node 22.23.2 and pnpm 11.4.0:
+
+- Web typecheck and the public-demo production build passed. The build reused the completed physical project output with `E2E_PUBLIC_RUN_ID=desktop-category-pills-final-local-20261002`. All 271 Web/Marketplace UI unit tests and all seven refactor contracts passed. Biome checked the 32 changed source/style/test files; the scoped Git whitespace check passed.
+- The in-app browser checked eight Bulgarian routes (Home, inventory, vehicle detail, imports, sell, lease, contact, and guides) and English Home/inventory at actual 1024, 1440, and 1920px widths: 30 views without horizontal overflow or broken completed visible images. Search views retained four loaded category images, six equally sized 48px filters, and the submit target inside the field.
+- Interaction checks verified the Mileage dialog and 100,000 km search (four results), advanced filter expansion without duplicate Mileage, reset/keyboard submission, BMW search (five results), Make/Model dialog sizing and Escape dismissal, and ascending price sorting. Opening the sorting menu preserved the boxed frame's position. The search and Make/Model dialogs resolved their shared width/height settings correctly. Fresh verification recorded no application errors.
+- Sixteen fresh mobile before/after comparisons covered the same eight Bulgarian routes at 320 and 390px. All 673 persistent measured elements retained text, geometry, typography, foreground, and background. Temporary skeleton nodes were excluded. No mobile view overflowed or mounted the desktop category images. This is measured UI preservation, not a pixel-identical decoding claim.
+
+Evidence is in ignored `runtime/desktop-tokens-2026-10-02/`, including the source replacement audit, route screenshots, mobile comparison, dialog captures, interaction results, and `modern-desktop-tokens-1440.png`. Browser verification used the in-app browser; the separate Playwright/WebKit suites were not rerun.
+
+Local preview: http://127.0.0.1:6482/bg/cars. Dealer configuration, sample inventory, provider behavior, and unrelated working changes were preserved. This is shared source styling work; owner visual acceptance, template release selection, and dealer deployment remain separate.
+
+## Previous underlined categories and inset search
 
 The category artwork now sits above its label in four flat tabs immediately above search. The selected tab has a full-width red underline; the category tabs have no filled pill backgrounds. The existing generated car, truck, motorcycle, and van cutouts render at 88 by 48 CSS pixels. The existing category links continue to control search and preserve its URL parameters.
 

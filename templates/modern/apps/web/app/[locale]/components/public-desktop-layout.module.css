@@ -1,58 +1,58 @@
 @media (min-width: 1024px) {
   .footerFrame {
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
     max-width: none;
     padding-inline: 0;
   }
 
   .content {
-    width: min(calc(100% - 3rem), 80rem);
-    max-width: 80rem;
-    padding: 2rem 0 4rem;
+    width: var(--desktop-content-width);
+    max-width: var(--desktop-content-max);
+    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 16);
     margin-inline: auto;
   }
   .panel {
     position: relative;
-    z-index: 21;
+    z-index: var(--desktop-layer-action);
     width: 100%;
     max-width: none;
-    padding: 2rem;
+    padding: calc(var(--spacing) * 8);
     margin: 0 auto;
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 1rem;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-vehicle);
     box-shadow: none;
   }
   .panel h2 {
-    margin: 0 0 1.25rem;
+    margin: 0 0 calc(var(--spacing) * 5);
     font-size: var(--text-dialog-title);
     font-weight: var(--font-weight-semibold);
     line-height: var(--text-dialog-title--line-height);
   }
   .panel :is([data-slot="input"], select, [data-slot="textarea"]) {
     background-color: var(--panel);
-    border: 1px solid var(--border);
+    border: var(--desktop-border-width) solid var(--border);
   }
   .panel
     :is([data-slot="input"], select, [data-slot="textarea"]):focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 2px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-width);
   }
   .contactGrid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 2.5rem;
+    gap: calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .contactCard {
     display: flex;
-    gap: 1.25rem;
+    gap: calc(var(--spacing) * 5);
     align-items: center;
-    min-height: 7.5rem;
-    padding: 1.5rem;
+    min-height: calc(var(--spacing) * 30);
+    padding: calc(var(--spacing) * 6);
     color: var(--foreground);
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-lg);
     transition: border-color var(--duration-interaction);
   }
@@ -69,42 +69,45 @@
     display: block;
   }
   .contactCard small {
-    margin-bottom: 0.375rem;
+    margin-bottom: calc(var(--spacing) * 1.5);
     font-size: var(--text-meta);
     color: var(--muted-foreground);
   }
   .contactCard strong {
-    font-size: 1.0625rem;
+    font-size: var(--text-desktop-lead);
     font-weight: var(--font-weight-semibold);
-    line-height: 1.5;
+    line-height: var(--desktop-leading-copy);
   }
   .contactCard[href^="tel:"] strong {
-    font-size: 1.5rem;
+    font-size: var(--text-section-title-lg);
     font-variant-numeric: tabular-nums;
-    line-height: 1.25;
+    line-height: var(--desktop-leading-heading);
   }
   .contactCard:hover {
     border-color: var(--muted-foreground);
   }
   .contactCard:focus-visible,
   .serviceCard:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
   .serviceGrid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(
+        var(--desktop-service-columns),
+        minmax(0, 1fr)
+      );
+    gap: calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 6);
   }
   .serviceCard {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1.5rem;
+    gap: calc(var(--spacing) * 4);
+    padding: calc(var(--spacing) * 6);
     color: var(--foreground);
     background: var(--control);
-    border: 1px solid transparent;
+    border: var(--desktop-border-width) solid transparent;
     border-radius: var(--radius-lg);
     transition: border-color var(--duration-interaction);
   }
@@ -113,7 +116,7 @@
   }
   .serviceCard strong {
     display: flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     justify-content: space-between;
     font-size: var(--text-body);
   }
@@ -121,9 +124,9 @@
     flex-shrink: 0;
   }
   .serviceCard p {
-    margin-top: 0.5rem;
+    margin-top: calc(var(--spacing) * 2);
     font-size: var(--text-meta);
-    line-height: 1.6;
+    line-height: var(--desktop-leading-prose);
     color: var(--muted-foreground);
   }
   .sectionTitle {
@@ -133,33 +136,27 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .serviceGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
 .editorialSearch {
   display: none;
 }
 @media (min-width: 1024px) {
   .editorialBody {
-    width: min(calc(100% - 3rem), 80rem);
-    max-width: 80rem;
+    width: var(--desktop-content-width);
+    max-width: var(--desktop-content-max);
     padding-inline: 0;
   }
   .editorialSearch {
     position: relative;
-    z-index: 21;
+    z-index: var(--desktop-layer-action);
     display: flex;
-    gap: 0.75rem;
+    gap: calc(var(--spacing) * 3);
     align-items: center;
-    width: min(80%, 44rem);
-    min-height: 3.5rem;
-    padding: 0.75rem 1rem;
-    margin: 2rem auto 0;
+    width: var(--desktop-editorial-search-width);
+    min-height: calc(var(--spacing) * 14);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+    margin: calc(var(--spacing) * 8) auto 0;
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-xl);
     box-shadow: var(--elevation-panel);
   }
@@ -175,15 +172,15 @@
     background: transparent;
   }
   .editorialSearch:focus-within {
-    outline: 2px solid var(--ring);
-    outline-offset: 2px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-width);
   }
   .editorialSearch button {
     display: grid;
     flex-shrink: 0;
     place-items: center;
-    width: 2rem;
-    height: 2rem;
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
     border-radius: var(--radius-sm);
   }
   .editorialSearch button:hover {
@@ -191,7 +188,7 @@
   }
   .editorial [data-slot="content-card"] {
     flex-direction: column;
-    border: 1px solid var(--border);
+    border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-vehicle);
     box-shadow: var(--elevation-panel);
     transition:
@@ -205,20 +202,20 @@
   .editorial [data-slot="content-card-media"] {
     width: 100%;
     min-width: 0;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: var(--desktop-editorial-aspect);
   }
   .editorial [data-slot="content-card-body"] {
-    gap: 0.375rem;
-    padding: 1.25rem;
+    gap: calc(var(--spacing) * 1.5);
+    padding: calc(var(--spacing) * 5);
   }
   .editorial [data-slot="content-card-meta"] {
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
   }
 }
 
 @media (min-width: 1024px) {
   .narrowPanel {
-    max-width: 48rem;
+    max-width: calc(var(--spacing) * 192);
   }
 }
 
@@ -230,26 +227,26 @@
 
 @media (min-width: 1024px) {
   .heroContent {
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
   }
   .heroContent .panel {
-    padding: 1.5rem;
-    border-radius: 1rem;
+    padding: calc(var(--spacing) * 6);
+    border-radius: var(--radius-vehicle);
   }
   .heroContent [data-slot="desktop-import-routes"] a,
   .editorialBody [data-slot="editorial-filter-pills"] button {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    min-height: 2.75rem;
-    padding: 0.625rem 1.125rem;
-    font-weight: 500;
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
     color: var(--foreground);
     white-space: nowrap;
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-pill);
   }
   .heroContent [data-slot="desktop-import-routes"] a[aria-current="page"],
   .editorialBody
@@ -263,8 +260,8 @@
     border-color: var(--muted-foreground);
   }
   .heroContent [data-slot="desktop-import-routes"] a:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
 }
 
@@ -277,22 +274,22 @@
   }
   .heroContent [data-slot="sell-hero"] textarea {
     field-sizing: content;
-    min-height: 5rem;
+    min-height: calc(var(--spacing) * 20);
     max-height: none;
   }
 }
 
 @media (min-width: 1024px) {
   .importPanel [data-slot="desktop-import-routes"] {
-    margin-top: 1rem;
+    margin-top: calc(var(--spacing) * 4);
   }
   .heroContent .importPanel [data-slot="desktop-import-routes"] a {
-    gap: 0.375rem;
-    height: 3rem;
-    min-height: 3rem;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    gap: calc(var(--spacing) * 1.5);
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+    font-size: var(--text-meta);
+    line-height: calc(var(--spacing) * 5);
     background: var(--control);
     border-color: transparent;
     box-shadow: none;
@@ -314,12 +311,12 @@
     border: 0;
   }
   .heroContent [data-slot="sell-optional-details"] summary {
-    padding-block: 0.25rem;
+    padding-block: var(--spacing);
   }
   .heroContent [data-slot="sell-form-panel"] > p {
     padding-top: 0;
-    margin-top: 0.75rem;
-    font-size: 0.75rem;
+    margin-top: calc(var(--spacing) * 3);
+    font-size: var(--text-micro);
     text-align: left;
     border: 0;
   }
@@ -327,29 +324,29 @@
 
 @media (min-width: 1024px) {
   .serviceBody {
-    width: min(calc(100% - 3rem), 80rem);
-    max-width: 80rem;
+    width: var(--desktop-content-width);
+    max-width: var(--desktop-content-max);
   }
 }
 
 @media (min-width: 1024px) {
   .heroContent [data-slot="sell-optional-details"] {
-    padding-top: 0.25rem;
-    margin-top: 0.25rem;
+    padding-top: var(--spacing);
+    margin-top: var(--spacing);
   }
   .heroContent [data-slot="sell-vehicle-start-form"] > div {
     min-width: 0;
   }
   .heroContent .importPanel search form {
-    gap: 0.5rem;
-    height: 3rem;
-    padding: 0.375rem;
+    gap: calc(var(--spacing) * 2);
+    height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 1.5);
     background: var(--control);
-    border-radius: 0.75rem;
+    border-radius: calc(var(--spacing) * 3);
   }
   .heroContent .importPanel search form:focus-within {
-    outline: 2px solid var(--brand);
-    outline-offset: 2px;
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: var(--desktop-focus-width);
   }
   .heroContent .importPanel search input:focus-visible {
     outline: none;
@@ -359,8 +356,8 @@
     display: none;
   }
   .importPanel search label {
-    padding-inline: 0.5rem;
+    padding-inline: calc(var(--spacing) * 2);
     background: transparent;
-    border-radius: 0.5rem;
+    border-radius: calc(var(--spacing) * 2);
   }
 }

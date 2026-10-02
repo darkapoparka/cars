@@ -4,21 +4,21 @@
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-height: 5.5rem;
     position: relative;
-    z-index: 40;
+    z-index: var(--desktop-layer-header);
     display: block;
     color: var(--foreground);
     background: var(--panel);
-    border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
-    border-radius: 1.25rem 1.25rem 0 0;
+    border-bottom: var(--desktop-border-width) solid
+      var(--desktop-border-subtle);
+    border-radius: var(--radius-desktop-frame) var(--radius-desktop-frame) 0 0;
   }
   .nav {
     display: grid;
-    grid-template-columns: 10.25rem minmax(0, 1fr) auto;
-    gap: 1.5rem;
+    grid-template-columns: var(--desktop-logo-width) minmax(0, 1fr) auto;
+    gap: calc(var(--spacing) * 6);
     align-items: center;
-    width: min(calc(100% - 3rem), 80rem);
+    width: var(--desktop-content-width);
     min-height: var(--desktop-header-height);
     margin-inline: auto;
   }
@@ -26,13 +26,13 @@
     position: relative;
     display: block;
     justify-self: start;
-    width: 10.25rem;
-    height: 3rem;
+    width: var(--desktop-logo-width);
+    height: calc(var(--spacing) * 12);
     border-radius: var(--radius-sm);
   }
   .segments {
     display: flex;
-    gap: 0.125rem;
+    gap: calc(var(--spacing) * 0.5);
     align-items: center;
     justify-content: center;
   }
@@ -40,13 +40,13 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.5rem;
-    padding-inline: 0.875rem;
-    font-size: 0.9375rem;
-    font-weight: 500;
+    min-height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 3.5);
+    font-size: var(--text-compact-control);
+    font-weight: var(--font-weight-medium);
     color: var(--muted-foreground);
     white-space: nowrap;
-    border-radius: 0.625rem;
+    border-radius: var(--radius-lg);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction);
@@ -57,11 +57,11 @@
     background: var(--control);
   }
   .segments a[aria-current="page"] {
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
   }
   .contact {
     display: flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
@@ -69,15 +69,15 @@
   }
   .contact a {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    height: 2.75rem;
-    padding-inline: 0.625rem;
-    font-size: 0.875rem;
-    font-weight: 500;
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 2.5);
+    font-size: var(--text-meta);
+    font-weight: var(--font-weight-medium);
     white-space: nowrap;
-    border-radius: 0.625rem;
+    border-radius: var(--radius-lg);
     transition:
       color var(--duration-interaction),
       background-color var(--duration-interaction);
@@ -93,20 +93,20 @@
     background: var(--control);
   }
   .contact .phone {
-    gap: 0.625rem;
-    padding-inline: 0.875rem;
+    gap: calc(var(--spacing) * 2.5);
+    padding-inline: calc(var(--spacing) * 3.5);
     color: var(--inverse-foreground);
     background: var(--inverse);
   }
   .contact .phone:hover {
     color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse) 85%, var(--panel));
+    background: var(--desktop-inverse-hover);
   }
   .contact .language {
-    gap: 0.25rem;
-    min-width: 3.25rem;
-    font-size: 0.8125rem;
-    font-weight: 600;
+    gap: var(--spacing);
+    min-width: calc(var(--spacing) * 13);
+    font-size: var(--text-card-spec);
+    font-weight: var(--font-weight-semibold);
     color: var(--muted-foreground);
   }
   .contact .language:hover {
@@ -114,33 +114,33 @@
     background: var(--control);
   }
   .header a:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .nav {
-    grid-template-columns: 9rem minmax(0, 1fr) auto;
-    gap: 1rem;
+    grid-template-columns: var(--desktop-logo-compact-width) minmax(0, 1fr) auto;
+    gap: calc(var(--spacing) * 4);
   }
   .brand {
-    width: 9rem;
+    width: var(--desktop-logo-compact-width);
   }
   .segments {
     gap: 0;
   }
   .segments a {
-    padding-inline: 0.75rem;
+    padding-inline: calc(var(--spacing) * 3);
   }
   .contact {
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
   }
   .contact a[href^="tel:"] span {
     display: none;
   }
   .contact .phone {
-    width: 2.75rem;
+    width: calc(var(--spacing) * 11);
     padding: 0;
   }
 }

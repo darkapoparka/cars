@@ -458,8 +458,8 @@ export const MarketplaceMakeModelPicker = ({
       className={cn(
         "min-h-0 p-4",
         step === "derivative"
-          ? "h-[min(28rem,calc(100dvh-12rem))] flex-none"
-          : "h-[24rem] flex-none"
+          ? "h-[var(--desktop-model-derivatives-height)] flex-none"
+          : "h-[var(--desktop-model-options-height)] flex-none"
       )}
     >
       {pickerContent}
@@ -475,12 +475,12 @@ export const MarketplaceMakeModelPicker = ({
     return (
       <Dialog onOpenChange={onOpenChange} open={open}>
         <DialogContent
-          className="flex max-h-[calc(100dvh-4rem)] w-[calc(100vw-3rem)] flex-col gap-0 overflow-hidden rounded-2xl border-border/80 bg-card p-0 shadow-2xl sm:max-w-[54rem]"
+          className="flex max-h-[var(--desktop-model-dialog-max-height)] w-[var(--desktop-model-dialog-width)] flex-col gap-0 overflow-hidden rounded-2xl border-border/80 bg-card p-0 shadow-overlay sm:max-w-[var(--desktop-model-dialog-max-width)]"
           data-slot="make-model-dialog"
           showCloseButton={false}
         >
           <DialogHeader className="px-4 py-3 text-left">
-            <div className="grid grid-cols-[6rem_minmax(0,1fr)_6rem] items-center gap-2">
+            <div className="grid grid-cols-[var(--desktop-model-header-columns)] items-center gap-2">
               <div>
                 {step !== "make" ? (
                   <Button
@@ -494,7 +494,7 @@ export const MarketplaceMakeModelPicker = ({
                   </Button>
                 ) : null}
               </div>
-              <DialogTitle className="truncate text-center text-xl leading-7">
+              <DialogTitle className="truncate text-center text-dialog-title">
                 {title}
               </DialogTitle>
               <DialogClose asChild>
@@ -505,7 +505,10 @@ export const MarketplaceMakeModelPicker = ({
                   type="button"
                   variant="secondary"
                 >
-                  <X aria-hidden="true" className="size-[18px]" />
+                  <X
+                    aria-hidden="true"
+                    className="size-[var(--desktop-icon-size)]"
+                  />
                 </Button>
               </DialogClose>
             </div>

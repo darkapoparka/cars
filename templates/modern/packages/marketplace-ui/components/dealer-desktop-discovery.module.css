@@ -5,8 +5,8 @@
 @media (min-width: 1024px) {
   .heroSearch {
     position: relative;
-    z-index: 3;
-    width: min(calc(100% - 3rem), 80rem);
+    z-index: var(--desktop-layer-raised);
+    width: var(--desktop-content-width);
     margin-top: 0;
   }
 
@@ -17,7 +17,7 @@
 
   .serviceLinks a {
     display: flex;
-    gap: 0.75rem;
+    gap: calc(var(--spacing) * 3);
     align-items: center;
     min-width: 0;
     color: inherit;
@@ -35,7 +35,7 @@
   .serviceLinks strong,
   .serviceLinks small {
     display: block;
-    line-height: 1.25rem;
+    line-height: calc(var(--spacing) * 5);
   }
 
   .serviceLinks strong {
@@ -44,7 +44,7 @@
   }
 
   .serviceLinks small {
-    margin-top: 0.125rem;
+    margin-top: calc(var(--spacing) * 0.5);
     font-size: var(--text-micro);
     color: var(--muted-foreground);
   }
@@ -53,15 +53,15 @@
     position: relative;
     z-index: 1;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(100%, 64rem);
-    margin-top: 1rem;
+    width: min(100%, calc(var(--spacing) * 256));
+    margin-top: calc(var(--spacing) * 4);
     color: var(--inverse-foreground);
   }
 
   .serviceLinks[data-placement="hero"] a {
-    min-height: 3.5rem;
-    padding-inline: 1.25rem;
-    border-left: 1px solid var(--inverse-border);
+    min-height: calc(var(--spacing) * 14);
+    padding-inline: calc(var(--spacing) * 5);
+    border-left: var(--desktop-border-width) solid var(--inverse-border);
   }
 
   .serviceLinks[data-placement="hero"] a:first-child {
@@ -73,17 +73,20 @@
   }
 
   .serviceLinks[data-placement="inventory"] {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(
+        var(--desktop-service-columns),
+        minmax(0, 1fr)
+      );
+    gap: calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 8);
     color: var(--muted-foreground);
   }
 
   .serviceLinks[data-placement="inventory"] a {
-    min-height: 4.25rem;
-    padding: 0.875rem 1rem;
+    min-height: calc(var(--spacing) * 17);
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 4);
     background: var(--control);
-    border: 1px solid transparent;
+    border: var(--desktop-border-width) solid transparent;
     border-radius: var(--radius-lg);
   }
 
@@ -92,66 +95,66 @@
   }
 
   .serviceLinks[data-placement="inventory"] svg {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
     color: var(--foreground);
   }
 
   .serviceLinks[data-placement="inventory"] a:hover {
     background: var(--control-hover);
-    border-color: color-mix(in srgb, var(--foreground) 16%, var(--border));
+    border-color: var(--desktop-border-hover-soft);
   }
 
   .serviceLinks[data-placement="hero"] a:hover {
-    background: color-mix(in srgb, var(--inverse-control) 72%, transparent);
+    background: var(--desktop-inverse-soft);
   }
 
   .serviceLinks a:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
 
   .discoveryContent {
     display: block;
-    width: min(calc(100% - 3rem), 80rem);
-    padding-block: 2.75rem 3.5rem;
+    width: var(--desktop-content-width);
+    padding-block: calc(var(--spacing) * 11) calc(var(--spacing) * 14);
     margin-inline: auto;
   }
 
   .sectionHeading {
     display: flex;
-    gap: 1.5rem;
+    gap: calc(var(--spacing) * 6);
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
+    margin-bottom: calc(var(--spacing) * 6);
   }
 
   .sectionHeading h2 {
     margin: 0;
-    font-size: 1.875rem;
+    font-size: var(--text-desktop-section);
     font-weight: var(--font-weight-semibold);
-    line-height: 1.2;
+    line-height: var(--desktop-leading-tight);
     letter-spacing: var(--tracking-heading);
   }
 
   .sectionActions {
     display: flex;
-    gap: 0.5rem;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
   }
 
   .sectionAction {
     display: inline-flex;
-    gap: 0.625rem;
+    gap: calc(var(--spacing) * 2.5);
     align-items: center;
     justify-content: center;
     min-height: var(--control-height-lg);
-    padding-inline: 1rem;
+    padding-inline: calc(var(--spacing) * 4);
     font-size: var(--text-meta);
     font-weight: var(--font-weight-medium);
     color: var(--foreground);
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-pill);
   }
 
@@ -160,8 +163,8 @@
   }
 
   .sectionAction:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 3px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
 
   .sectionActions .arrow {
@@ -176,28 +179,16 @@
 
   .vehicleSlide {
     display: flex;
-    flex-basis: 33.333333%;
+    flex-basis: var(--desktop-carousel-basis);
     min-width: 0;
-    padding-left: 1.5rem;
+    padding-left: calc(var(--spacing) * 6);
   }
 
   .carouselTrack {
-    margin-left: -1.5rem;
+    margin-left: calc(var(--spacing) * -6);
   }
 
   .vehicleSlide > article {
     width: 100%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .vehicleSlide {
-    flex-basis: 25%;
-  }
-}
-
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .serviceLinks[data-placement="inventory"] {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
