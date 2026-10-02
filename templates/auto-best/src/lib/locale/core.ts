@@ -6,7 +6,7 @@ const policy = createLocalePolicy<'en' | 'bg'>(dealerLocaleConfiguration);
 export type Locale = typeof dealerLocaleConfiguration.enabledLocales[number];
 export type LocaleState = ResolvedLocale<Locale>;
 export const localeContract = policy.contract;
-export const { countries, isCountry, isLocale, intlLocale, formatPrice,
+export const { countries, isCountry, isLocale, intlLocale, formatPrice, currencySymbol,
   routeParts, isResource, unsupportedLocale, localeHref, safeReturnPath,
   preferredLanguage, resolveLocale, preferenceResponse } = policy;
 export { cookieValue, privateHeaders } from './policy';

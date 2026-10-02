@@ -92,12 +92,22 @@ export function createLocaleRouting<const L extends Language>(input: LocaleConfi
     if (!isLocale(locale)) throw new Error('Language is not enabled');
     return contract.formatLocales[locale];
   };
+  const priceFormatters = new Map<L, Intl.NumberFormat>();
+  const priceFormatter = (locale: L) => {
+    const cached = priceFormatters.get(locale);
+    if (cached) return cached;
+    const formatter = new Intl.NumberFormat(intlLocale(locale), {
+      style: 'currency', currency: contract.inventoryCurrency, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0
+    });
+    priceFormatters.set(locale, formatter);
+    return formatter;
+  };
   const formatPrice = (value: number, locale: L): string => {
     if (!Number.isFinite(value)) throw new Error('Price must be finite');
-    return new Intl.NumberFormat(intlLocale(locale), {
-      style: 'currency', currency: contract.inventoryCurrency, currencyDisplay: 'code', maximumFractionDigits: 0
-    }).format(value);
+    return priceFormatter(locale).format(value);
   };
+  const currencySymbol = (locale: L): string =>
+    priceFormatter(locale).formatToParts(0).find(part => part.type === 'currency')?.value ?? contract.inventoryCurrency;
   function routeParts(pathname: string) {
     const base = pathname.match(/^\/variant-[23](?=\/|$)/)?.[0] ?? '';
     const rest = pathname.slice(base.length) || '/';
@@ -140,7 +150,7 @@ export function createLocaleRouting<const L extends Language>(input: LocaleConfi
       return url.pathname + url.search + url.hash;
     } catch { return null; }
   }
-  return Object.freeze({ contract, countries, isCountry, isLocale, intlLocale, formatPrice, routeParts, isResource, unsupportedLocale, localeHref, safeReturnPath });
+  return Object.freeze({ contract, countries, isCountry, isLocale, intlLocale, formatPrice, currencySymbol, routeParts, isResource, unsupportedLocale, localeHref, safeReturnPath });
 }
 
 /* CARS_DEFAULT_PUBLIC_BINDINGS */

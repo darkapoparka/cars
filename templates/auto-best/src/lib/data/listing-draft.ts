@@ -1,5 +1,5 @@
 import { vehicleTypes, type VehicleEquipment } from './inventory';
-import { localeContract, intlLocale, type Locale } from '$lib/locale/core';
+import { currencySymbol, intlLocale, type Locale } from '$lib/locale/core';
 import { message, templateText } from '$lib/locale/messages';
 import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
 import {
@@ -197,7 +197,7 @@ export function listingFacetSummary(field: ListingFacetField, draft: ListingDraf
     case 'make': return draft.make || templateText(locale, 'All brands');
     case 'model': return draft.model || templateText(locale, 'All модели');
     case 'body': return specificationLabel(bodyLabel(draft.body), locale) || templateText(locale, 'All купета');
-    case 'price': return listingRangeSummary(draft.priceMin, draft.priceMax, ' ' + localeContract.inventoryCurrency, locale);
+    case 'price': return listingRangeSummary(draft.priceMin, draft.priceMax, ' ' + currencySymbol(locale), locale);
     case 'year': return listingRangeSummary(draft.yearMin, draft.yearMax, '', locale);
     case 'fuel': return specificationLabel(draft.fuel, locale) || templateText(locale, 'Всяко fuel');
     case 'mileage_max': return draft.mileageMax ? formatTemplate(locale, 'To {p0} km', { p0: formatListingNumber(draft.mileageMax, locale) }) : message(locale, 'inventory.range.unlimited');
@@ -228,8 +228,8 @@ export function listingAppliedFilterLabel(filters: ListingFilters, key: string, 
     case 'body': return specificationLabel(bodyLabel(filters.body), locale);
     case 'condition': return message(locale, filters.condition === 'new' ? 'inventory.condition.new' : 'inventory.condition.used');
     case 'fuel': case 'transmission': case 'equipment': return specificationLabel(value, locale);
-    case 'price_min': return formatTemplate(locale, 'From {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMin ?? 0, locale) });
-    case 'price_max': return formatTemplate(locale, 'To {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMax ?? 0, locale) });
+    case 'price_min': return formatTemplate(locale, 'From {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMin ?? 0, locale), inventoryCurrency: currencySymbol(locale) });
+    case 'price_max': return formatTemplate(locale, 'To {p0} {inventoryCurrency}', { p0: formatListingNumber(filters.priceMax ?? 0, locale), inventoryCurrency: currencySymbol(locale) });
     case 'year_min': return message(locale, 'inventory.year.from', { p0: filters.yearMin ?? '' });
     case 'year_max': return message(locale, 'inventory.year.to', { p0: filters.yearMax ?? '' });
     case 'mileage_max': return formatTemplate(locale, 'To {p0} km', { p0: formatListingNumber(filters.mileageMax ?? 0, locale) });

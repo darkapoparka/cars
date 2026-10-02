@@ -35,6 +35,35 @@ try {
       await page.goto(`${base}/listing-detail-v1/4?return=https://example.com`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/listing-grid');
     });
+    await suite.check(`full photo viewer ${width}`, async () => {
+      await page.goto(`${base}/listing-detail-v1/1`, { waitUntil: 'networkidle' });
+      const trigger = page.locator('.dn-vehicle-photo');
+      const dialog = page.locator('.dn-vehicle-photo-dialog');
+      const overflowBefore = await page.evaluate(() => document.body.style.overflow);
+      assert.equal(await dialog.locator('img').count(), 0, 'Full photo is requested only when opened');
+      await trigger.focus();
+      await page.keyboard.press('Enter');
+      assert(await dialog.evaluate(el => el.matches(':modal')));
+      await dialog.locator('img').waitFor();
+      assert.equal(await dialog.locator('img').evaluate(el => getComputedStyle(el).objectFit), 'contain');
+      assert.equal(await page.evaluate(() => document.body.style.overflow), 'hidden');
+      for (const key of ['Tab', 'Shift+Tab']) {
+        await page.keyboard.press(key);
+        assert(await dialog.evaluate(el => el.contains(document.activeElement)));
+      }
+      await page.keyboard.press('Escape');
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
+      await trigger.click();
+      await dialog.locator('button').click();
+      await dialog.waitFor({ state: 'hidden' });
+      assert(await trigger.evaluate(el => el === document.activeElement));
+      await trigger.click();
+      await page.mouse.click(2, 2);
+      await dialog.waitFor({ state: 'hidden' });
+      assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
+    });
     await suite.check(`vehicle context and finance ${width}`, async () => {
       await page.goto(`${base}/listing-grid`, { waitUntil: 'networkidle' });
       const ids = await page.locator('.dn-listing-results .dn-vehicle-card__link').evaluateAll(links => [...new Set(links.map(link => Number(new URL(link.href).pathname.split('/').at(-1))))]);
@@ -113,9 +142,10 @@ try {
         assert(!media.some(url => url.includes('urus-front-v1')), 'Home uses the refreshed two-car artwork');
         const homeArtwork = await page.locator('.dn-hero-vehicles__pair img').evaluate(image => image.currentSrc);
         assert(width < 768 ? homeArtwork.includes('collection-banner-v2') : homeArtwork.startsWith('data:'));
-        const sources = await page.locator('.dn-hero-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
+        assert.equal(await page.locator('.dn-hero-vehicles__car img').count(), 0, 'Mobile hero omits unused desktop car nodes');
+        const sources = await page.locator('.dn-hero .dn-campaign-vehicles__car img').evaluateAll(images => images.map(image => image.currentSrc));
         assert.equal(sources.length, 2);
-        assert(sources.every(src => width >= 1440 ? src.startsWith('http') : src.startsWith('data:')));
+        assert(sources.every(src => width >= 992 ? src.startsWith('http') : src.startsWith('data:')));
         assert.equal(media.filter(url => /auto-best-desktop-.+-v1\.webp/.test(url)).length, 0, 'Home no longer requests the generated scene');
         evidence.push({ width, heroSources: sources, homeArtwork });
         let sharedServiceCar = null;

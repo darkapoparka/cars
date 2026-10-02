@@ -496,7 +496,7 @@ async function finance(s) {
   const input=calc.locator(auto?'input[type=number]':'[name=deposit]');
   const output=calc.locator(auto?'.dn-finance-calculator__result':'.font-weight-600');
   await check(s,'changing deposit updates configured-currency estimate',refs,async d=>{
-    d.before=await output.allTextContents();await input.fill('10000');await p.waitForFunction(({selector,before})=>JSON.stringify([...document.querySelectorAll(selector)].map(e=>e.textContent))!==JSON.stringify(before),{selector:calcSelector+(auto?' .dn-finance-calculator__result':' .font-weight-600'),before:d.before});d.after=await output.allTextContents();assert.notDeepEqual(d.before,d.after);assert(d.after.join(' ').includes(inventoryCurrency));assert(!/\bBGN\b|\bAED\b/.test(d.after.join(' ')));
+    d.before=await output.allTextContents();await input.fill('10000');await p.waitForFunction(({selector,before})=>JSON.stringify([...document.querySelectorAll(selector)].map(e=>e.textContent))!==JSON.stringify(before),{selector:calcSelector+(auto?' .dn-finance-calculator__result':' .font-weight-600'),before:d.before});d.after=await output.allTextContents();assert.notDeepEqual(d.before,d.after);assert(d.after.join(' ').includes(auto ? '€' : inventoryCurrency));assert(!/\bBGN\b|\bAED\b/.test(d.after.join(' ')));
   });
   await check(s,'negative finance input rejected / localized error / reset',refs,async d=>{
     await input.fill('-1');if(auto)d.error=await invalid(s,input);else d.error=await alertText(s,calc);

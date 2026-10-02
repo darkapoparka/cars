@@ -1,5 +1,5 @@
 <script lang="ts">
-import { localeContract } from '$lib/locale/core';
+  import { currencySymbol } from '$lib/locale/core';
   import { containDialogTab } from '$lib/locale/focus';
   import { getI18n } from '$lib/locale/context';
   import { templateMessage } from '$lib/i18n/presentation';
@@ -115,8 +115,8 @@ import { localeContract } from '$lib/locale/core';
     <div class="content">
       {#if range}
         <div class="range">
-          <label>{templateMessage(i18n, "From{p0}", { p0: field === 'price' ? ' (' + localeContract.inventoryCurrency + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_min`} bind:value={minimum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t("m_8a702098f672")} /></label>
-          <label>{templateMessage(i18n, "To{p0}", { p0: field === 'price' ? ' (' + localeContract.inventoryCurrency + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_max`} bind:value={maximum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t("m_585b0741c5fb")} /></label>
+          <label>{templateMessage(i18n, "From{p0}", { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_min`} bind:value={minimum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t("m_8a702098f672")} /></label>
+          <label>{templateMessage(i18n, "To{p0}", { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_max`} bind:value={maximum} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t("m_585b0741c5fb")} /></label>
         </div>
         {#if invalid}<p role="alert">{i18n.t("m_8418439e87ac")}</p>{/if}
       {:else if field === 'mileage_max'}

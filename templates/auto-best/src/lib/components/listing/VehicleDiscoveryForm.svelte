@@ -3,7 +3,7 @@
   import { specificationLabel } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
-  import { intlLocale, localeContract } from '$lib/locale/core';
+  import { formatPrice } from '$lib/locale/core';
 
   const i18n = getI18n();
 
@@ -64,9 +64,6 @@
   let activeCount = $derived(activeFilterCount(pending));
   let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
   let prices = $derived(listingOptionsWithCurrent(listingFilterOptions.prices, filters.priceMax?.toString() ?? ''));
-  const budgetFormatter = $derived(new Intl.NumberFormat(intlLocale(i18n.locale), {
-    style: 'currency', currency: localeContract.inventoryCurrency, currencyDisplay: 'narrowSymbol', maximumFractionDigits: 0
-  }));
   let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
   let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
   let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
@@ -104,7 +101,7 @@
     <label><span class="dn-sr-only">{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t('inventory.facet.make')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t('inventory.facet.model')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{value ? specificationLabel(bodyLabel(value), i18n.locale) : i18n.t('inventory.facet.bodyShort')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? budgetFormatter.format(Number(value)) : i18n.t('inventory.facet.price')}</option>{/each}</select></label>
+    <label><span class="dn-sr-only">{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? formatPrice(Number(value), i18n.locale) : i18n.t('inventory.facet.price')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t('inventory.facet.year')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t('inventory.facet.mileage_max')}</option>{/each}</select></label>
   </div>

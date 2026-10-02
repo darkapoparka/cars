@@ -2,6 +2,18 @@
 
 Auto Best combines an image-led automotive layout, Onest typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
+At desktop widths, the vehicle detail preview uses a 16:10 frame. `VehiclePhoto.svelte`
+opens the full, uncropped photograph in a native dialog with keyboard focus containment,
+Escape/backdrop/close actions and focus restoration. Its image link also works without
+JavaScript. The full-size photo mounts only while the viewer is open; mobile retains
+its existing preview frame.
+
+Desktop article cards use a 160px image, 16px content padding, category metadata,
+a two-line summary and a localized reading action. Home's featured articles use
+the same treatment. Each remains one complete link, including its reading action.
+Vehicle prices, budgets, filter chips and finance controls share the locale policy's
+currency formatter and symbol. EUR renders as `€` with the locale's number grouping.
+
 ## Desktop route composition
 
 Home and Inventory frame their search panels with the original inward-facing

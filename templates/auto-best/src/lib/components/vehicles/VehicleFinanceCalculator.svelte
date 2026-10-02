@@ -5,7 +5,7 @@
 
   import { vehicleContactHref } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { formatPrice } from '$lib/locale/core';
+  import { formatPrice, currencySymbol } from '$lib/locale/core';
 
   let { priceEur, vehicleId, idPrefix = 'finance' }: { priceEur: number; vehicleId: number; idPrefix?: string } = $props();
 
@@ -42,7 +42,7 @@
           onblur={normalizeDownPayment}
           aria-describedby={disclaimerId}
         />
-        <b>{i18n.t("m_716f15f096c0")}</b>
+        <b>{currencySymbol(i18n.locale)}</b>
       </span>
     </label>
 

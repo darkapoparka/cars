@@ -52,6 +52,10 @@
                 </span>
                 <h3>{i18n.text(item.title)}</h3>
                 <span class="dn-editorial-item__summary">{i18n.text(item.text)}</span>
+                <span class="dn-editorial-item__action">
+                  {i18n.t('action.readArticle')}
+                  <Icon name="arrow-right" size={16} />
+                </span>
               </span>
             </a>
           </article>
@@ -274,6 +278,8 @@
     line-clamp: 2;
   }
 
+  .dn-editorial-item__action { display: none; }
+
   @media (prefers-reduced-motion: reduce) {
     .dn-editorial-item, .dn-editorial-item h3 {
       transition: none;
@@ -431,6 +437,15 @@
     .dn-editorial {
       padding-block: 32px;
     }
+
+    .dn-editorial-item__link { display: flex; flex-direction: column; }
+    .dn-editorial-item__media { flex-shrink: 0; height: 160px; }
+    .dn-editorial-item__badge { display: none; }
+    .dn-editorial-item__content { display: flex; flex: 1; flex-direction: column; padding: var(--dn-space-4); }
+    .dn-editorial-item__meta { margin-bottom: var(--dn-space-1); }
+    .dn-editorial-item h3 { margin-bottom: 6px; }
+    .dn-editorial-item__summary { margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-editorial-item__action { display: inline-flex; min-height: 28px; align-items: center; gap: var(--dn-space-2); margin-top: auto; color: var(--dn-red); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
 
     .dn-editorial__banner {
       width: min(var(--dn-content), calc(100% - 48px));

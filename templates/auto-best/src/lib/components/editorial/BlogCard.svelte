@@ -6,7 +6,7 @@
 
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
-  import { brand } from '$config/brand';
+  import Icon from '$components/ui/Icon.svelte';
   import type { BlogPost } from '$data/editorial';
 
   let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
@@ -29,11 +29,14 @@
     </span>
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
-        <span class="dn-blog-card__brand">{brand.name}</span>
         <span class="dn-blog-card__category">{i18n.text(post.category)}</span>
       </span>
       <h2>{blogPostTitle(post, i18n.locale)}</h2>
       <span class="dn-blog-card__text">{blogPostSummary(post, i18n.locale)}</span>
+      <span class="dn-blog-card__action">
+        {i18n.t('action.readArticle')}
+        <Icon name="arrow-right" size={16} />
+      </span>
     </span>
   </a>
 </article>
@@ -113,23 +116,9 @@
     line-height: var(--dn-leading-meta);
   }
 
-  .dn-blog-card__brand {
-    font-weight: var(--dn-weight-regular);
-  }
-
   .dn-blog-card__category {
     display: inline-flex;
     align-items: center;
-    padding-left: 8px;
-  }
-
-  .dn-blog-card__category::before {
-    width: 4px;
-    height: 4px;
-    margin-right: 8px;
-    border-radius: 50%;
-    background: #9da3ac;
-    content: '';
   }
 
   h2 {
@@ -163,9 +152,15 @@
     line-clamp: 2;
   }
 
+  .dn-blog-card__action { display: none; }
+
   @media (min-width: 992px) {
-    .dn-blog-card__body { padding: var(--dn-space-5); }
-    h2 { font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+    .dn-blog-card__media { height: 160px; flex-basis: 160px; }
+    .dn-blog-card__media img { height: 100%; }
+    .dn-blog-card__body { padding: var(--dn-space-4); }
+    h2 { margin: var(--dn-space-1) 0 6px; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-card); }
+    .dn-blog-card__text { margin-top: 0; margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
+    .dn-blog-card__action { display: inline-flex; min-height: 28px; align-items: center; gap: var(--dn-space-2); margin-top: auto; color: var(--dn-red); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
   }
 
   @media (max-width: 767px) {
@@ -175,9 +170,6 @@
     .dn-blog-card__media img { height: 100%; }
     .dn-blog-card__body { min-width: 0; min-height: 0; padding: var(--dn-space-3); }
     .dn-blog-card__meta { min-height: 0; font: var(--dn-mobile-card-meta-font); }
-    .dn-blog-card__brand { display: none; }
-    .dn-blog-card__category { padding-left: 0; }
-    .dn-blog-card__category::before { display: none; }
     h2 { margin: var(--dn-space-half) 0 var(--dn-space-2); font: var(--dn-mobile-card-title-font); }
     .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }

@@ -4,8 +4,8 @@
     "en",
     "bg"
   ],
-  "messages": 1030,
-  "catalogSha256": "b9709aa3f77e41d2f4b1db4aa2d8f7f181ee25520ed51825a23bfd8c8a6c411f",
+  "messages": 1033,
+  "catalogSha256": "b6925b020391a08777c678cc323153b42b56f9cabaf2f29701d27d1d7fbf7bcd",
   "sources": [
     "localization/common.json",
     "localization/catalog.reviewed.json",
@@ -13,12 +13,12 @@
     "localization/dealer.reviewed.json"
   ],
   "sourceSha256": {
-    "localization/common.json": "2d07574b36c24f044372ce6c5ee5390275bd139c2c68f5d87a36689557132ae9",
+    "localization/common.json": "51f36da69d0fe0ae2e85aee51cbf407fe1afe0fc19827a6b4a1f2b67c3c3f88b",
     "localization/catalog.reviewed.json": "5e878df9d64a3289ff415e9a45f65ff5f6a30ff62c1ae40cbc07b9ccc80489cd",
     "localization/template.reviewed.json": "e8276265d20a7069f25dfca610af2fa39125bb2f7ae392c174a5a4a9bd30c1b5",
     "localization/dealer.reviewed.json": "26b9efbe79b547ee75735a8fa9f81e2e03d4e90f9e2e630bb01f7ce17cec2e72"
   },
-  "policySha256": "5cac2494777341dfb0f2cbc886de13a554dee17bfa46ba8b116ddf57a2a700bc",
+  "policySha256": "9b965830b64c496eac861fdc4059813f130056d543173bc3a777eb34624226cf",
   "ambiguousAliases": [
     "About",
     "Address and visits",

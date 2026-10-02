@@ -14,6 +14,7 @@
   import ShowroomMap from '$components/company/ShowroomMap.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import VehicleFinanceCalculator from '$components/vehicles/VehicleFinanceCalculator.svelte';
+  import VehiclePhoto from '$components/vehicles/VehiclePhoto.svelte';
   import { brand } from '$config/brand';
   import { formatVehiclePrice, formatVehiclePriceLabel, type Vehicle } from '$data/inventory';
   import { imageSrcset } from '$data/responsive-images';
@@ -120,16 +121,7 @@
                     <Icon name="share" size={20} strokeWidth={1.9} />
                   </button>
                 </div>
-                <img
-                  src={data.vehicle.image}
-                  srcset={imageSrcset(data.vehicle.image)}
-                  sizes="(max-width: 991px) 100vw, (max-width: 1199px) 65vw, 850px"
-                  alt={data.vehicle.title}
-                  width="1245"
-                  height="988"
-                  fetchpriority="high"
-                  decoding="async"
-                />
+                <VehiclePhoto image={data.vehicle.image} title={data.vehicle.title} id={`vehicle-photo-${data.vehicle.id}`} />
               </figure>
             </div>
 

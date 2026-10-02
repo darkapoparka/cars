@@ -14,8 +14,7 @@
   import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
   import { resolveImportUrl } from '$data/company';
   import { listingBudgetCaps, listingVehicles } from '$data/listing';
-  import { formatPrice } from '$lib/locale/core';
-  import { localeContract } from '$lib/locale/core';
+  import { formatPrice, currencySymbol } from '$lib/locale/core';
 
   const budgetCaps = listingBudgetCaps();
   let desktopFilters = $state(listingFiltersFromDraft(emptyListingDraft()));
@@ -24,13 +23,7 @@
   let importError = $state('');
   let importInput = $state<HTMLInputElement>();
 
-  const compactInventoryCurrency = $derived.by(() =>
-    new Intl.NumberFormat(i18n.locale, {
-      style: 'currency',
-      currency: localeContract.inventoryCurrency,
-      currencyDisplay: 'narrowSymbol'
-    }).formatToParts(0).find((part) => part.type === 'currency')?.value ?? localeContract.inventoryCurrency
-  );
+  const compactInventoryCurrency = $derived(currencySymbol(i18n.locale));
 
   function validateImport(event: SubmitEvent) {
     if (resolveImportUrl(importUrl)) return;

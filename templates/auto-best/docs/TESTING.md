@@ -64,7 +64,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | --- | --- |
 | `scripts/sveltekit-smoke.mjs` | Entry point for native route and journey coverage |
 | `scripts/route-smoke.mjs` | Routes/status codes, images, page errors, overflow and responsive layout |
-| `scripts/journey-smoke.mjs` | Listing/article returns, vehicle contact context, discovery and menu interaction |
+| `scripts/journey-smoke.mjs` | Listing/article returns, full-photo dialog keyboard/close/backdrop behavior and focus/scroll restoration, vehicle contact context, discovery and menu interaction |
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/service-entry-overlay-smoke.mjs` | Mobile Sell/Import single-field entry, immediate criteria editor, full-screen geometry, shared close target, Save/Cancel/Escape, draft persistence, invalid URLs, contact/review continuation, 200% text and text spacing |
 | `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
