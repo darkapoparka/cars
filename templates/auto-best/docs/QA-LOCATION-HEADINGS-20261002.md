@@ -1,16 +1,15 @@
 # Mobile location headings — 2 October 2026
 
-About and general Contact use a plain, left aligned “Карта” / “Map” heading with
-a muted compact street/number/city address below it. PDP keeps “Местоположение” / “Location”
-and the same compact mobile address. The mobile
-heading and address have no location icon. General Contact's mobile details card
-uses plain address, visit and phone rows with right arrows; the leading red icons
-are hidden. Each arrow aligns with its title, and the short description spans
-the full row below. The Contact entry title and introduction are centered,
-including their width-capped blocks on wider mobile screens. Mobile maps end at
-the map canvas, with no directions footer or empty action space. About/Contact's
-map title and address share the same left inset. Desktop keeps its existing map
-composition, directions footer and PDP address icon.
+About, Contact and PDP mobile maps now use an uninterrupted map canvas, with no
+title/address container above it or directions footer below it. A white rounded
+“Отвори картата” / “Open map” action floats at the bottom center, leaving room for
+the provider's right-side controls and bottom attribution. Its accessible label
+and hover title retain the dealer's full localized address; its link opens the
+configured showroom coordinates in Google Maps. General Contact's mobile
+details card keeps its short address, visit and phone rows with title-aligned
+arrows, and its centered entry card. Desktop keeps its existing showroom panels,
+PDP heading/address and directions footer. Earlier checks below record the
+preceding mobile designs.
 
 Earlier plain-heading verification at `http://127.0.0.1:6461`, using Node 22.20.0:
 
@@ -84,3 +83,20 @@ directions action and destination. Page overflow and browser errors were absent.
 CSS policy, tokens, typography and the production build passed; Svelte check
 reported zero errors/warnings. Evidence is in `runtime/map-footer-removal-20261002/`:
 `review.json`, `map-390.png`, `static-checks.log`, `check.log` and `build.log`.
+
+The floating map action and removal of mobile heading containers passed seventeen
+Chromium states and three Windows WebKit states. Coverage includes About,
+Contact and PDP at 320/390px, both native locales, 200% text, the 991/992px
+transition and all three desktop routes at 1440px. The action remains centered,
+at least 44px tall, clear of the right control zone and bottom attribution, and
+fully readable when enlarged. Real provider tiles were inspected on all three
+390px mobile maps. Full-address accessibility, Hugeicons geometry, focus,
+external-link attributes, showroom coordinates, page overflow and browser errors
+passed. Desktop retains its existing composition and primary actions.
+
+All 27 locale tests passed, alongside CSS policy, tokens, typography and the
+production build. Svelte check reported zero errors/warnings. Evidence is under
+`runtime/map-pill-20261002/`: both `review-*.json` reports, the three
+`*-map-390.png` previews, `locales-test.log`, `static-checks.log`, `check.log`
+and `build.log`. The compact button copy is owned by `localization/common.json`;
+the generated catalog and manifest were rebuilt.

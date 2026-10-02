@@ -531,6 +531,7 @@
   }
 
   .dn-contact-location__heading {
+    display: none;
     margin-bottom: 22px;
     text-align: left;
   }

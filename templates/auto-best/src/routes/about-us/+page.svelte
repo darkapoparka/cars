@@ -59,7 +59,7 @@
   <div class="container">
     <DesktopShowroom id="about-showroom-desktop-title" />
     <div class="dn-about-showroom__card dn-about-showroom__mobile">
-      <ShowroomMap headingId="about-location-title" />
+      <ShowroomMap />
     </div>
   </div>
 </section>

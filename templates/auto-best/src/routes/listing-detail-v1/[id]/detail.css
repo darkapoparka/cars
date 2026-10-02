@@ -513,11 +513,10 @@
   .dn-detail-finance-card { grid-row: 5; }
   .dn-detail-dealer { grid-row: 6; }
   #location { grid-row: 7; }
+  .dn-detail-location-card { padding: 0; overflow: hidden; }
+  .dn-detail-location-card .dn-showroom-map { border: 0; border-radius: inherit; }
   .dn-detail-location-card__header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 12px;
+    display: none;
   }
   .dn-detail-location-card__header h2 {
     font-size: var(--dn-text-card);
@@ -785,7 +784,7 @@
   }
 
   .dn-detail-location-card {
-    padding: 16px;
+    padding: 0;
     background: #fff;
   }
 

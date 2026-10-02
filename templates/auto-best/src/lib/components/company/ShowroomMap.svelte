@@ -3,12 +3,12 @@
   import { getI18n } from '$lib/locale/context';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
-
-  let { headingId }: { headingId?: string } = $props();
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   const i18n = getI18n();
   const address = $derived(i18n.dealer('address'));
   const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
+  const openMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(coordinates)}`;
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(coordinates)}`;
   const mapUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(coordinates)}&z=16&hl=${i18n.locale}&output=embed`);
   let mapReady = $state(false);
@@ -26,14 +26,6 @@
 </script>
 
 <div class="dn-showroom-map" role="group" aria-label={i18n.t('m_cd07db46b2c6', { p0: brand.name })}>
-  {#if headingId}
-    <div class="dn-showroom-map__header">
-      <h2 class="dn-showroom-map__heading" id={headingId}>
-        {i18n.t('label.map')}
-      </h2>
-      <p class="dn-showroom-map__address">{i18n.dealer('address', true)}</p>
-    </div>
-  {/if}
   <div class="dn-showroom-map__canvas" {@attach observeMap}>
     {#if mapReady}
       <iframe
@@ -49,6 +41,17 @@
         <span>{address}</span>
       </div>
     {/if}
+    <a
+      class="dn-showroom-map__open"
+      href={openMapUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`${i18n.t('action.openMap')}: ${address}`}
+      title={address}
+    >
+      <MobileActionIcon name="location" size={18} />
+      <span>{i18n.t('action.openMap')}</span>
+    </a>
   </div>
   <a class="dn-showroom-map__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
     {i18n.t('m_c95356784006')}
@@ -63,27 +66,8 @@
     border-radius: var(--dn-radius-lg);
     background: var(--dn-surface-raised);
   }
-  .dn-showroom-map__header {
-    padding: var(--dn-space-4);
-    overflow-wrap: anywhere;
-  }
-  .dn-showroom-map__heading {
-    margin: 0;
-    color: var(--dn-ink);
-    font-size: var(--dn-text-card);
-    font-weight: var(--dn-weight-semibold);
-    line-height: var(--dn-leading-heading);
-    letter-spacing: var(--dn-tracking-heading);
-    text-align: left;
-  }
-  .dn-showroom-map__address {
-    margin: 7px 0 0;
-    color: var(--dn-muted);
-    font-size: var(--dn-text-meta);
-    line-height: var(--dn-leading-meta);
-    text-align: left;
-  }
   .dn-showroom-map__canvas {
+    position: relative;
     min-height: 280px;
     background: var(--dn-surface-subtle);
   }
@@ -110,6 +94,9 @@
     color: var(--dn-ink);
     font-weight: var(--dn-weight-semibold);
   }
+  .dn-showroom-map__open {
+    display: none;
+  }
   .dn-showroom-map__directions {
     display: none;
     min-height: var(--dn-control-height-prominent);
@@ -126,6 +113,36 @@
   .dn-showroom-map__directions:hover { background: var(--dn-surface-hover); }
   .dn-showroom-map__directions:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: -4px; }
   .dn-showroom-map__arrow--desktop { display: inline-flex; }
+  @media (max-width: 991px) {
+    .dn-showroom-map__open {
+      position: absolute;
+      inset-inline-start: 50%;
+      bottom: var(--dn-space-6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--dn-space-2);
+      min-height: var(--dn-control-height-default);
+      width: max-content;
+      max-width: calc(100% - 104px);
+      padding: var(--dn-space-2) var(--dn-space-4);
+      box-sizing: border-box;
+      border: 1px solid var(--dn-line);
+      border-radius: var(--dn-pill);
+      background: var(--dn-surface-raised);
+      color: var(--dn-ink);
+      box-shadow: var(--dn-card-hover-shadow);
+      font: var(--dn-control-font);
+      text-align: center;
+      transform: translateX(-50%);
+    }
+    .dn-showroom-map__open span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .dn-showroom-map__open:hover { background: var(--dn-surface-hover); }
+    .dn-showroom-map__open:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+  }
   @media (min-width: 992px) {
     .dn-showroom-map__directions { display: flex; }
   }
