@@ -1,31 +1,23 @@
 'use client';
-import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import {Suspense, useState} from 'react';
-import Link from '@/components/AppLink';
 import Image from '@/components/AppImage';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowRight, Check, ChevronDown, Mail, MapPin, Phone} from 'lucide-react';
+import {ArrowRight, Check} from 'lucide-react';
 import BrandCampaign from '@/components/BrandCampaign';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import ServiceCatalogue from '@/components/ServiceCatalogue';
-import {dealer} from '@/lib/dealer-config';
+import type {SellIntent} from '@/components/SellEnquirySheet';
 import {showroom} from '@/lib/showroom';
-import {media, tokens as $} from '@/app/tokens.stylex';
+import {media} from '@/app/tokens.stylex';
 import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
 type Kind = 'sell' | 'finance' | 'service';
-const sellSteps = [
-  ['sell-car-to-us', 'Car details', 'Make, mileage and photos.'],
-  ['quick-vehicle-inspection', 'Inspection', 'Condition and service history.'],
-  ['no-hidden-fees', 'Valuation', 'Discuss the price and terms.'],
-  ['hassle-free-paperwork', 'Documents', 'Agree the paperwork and handover.'],
-];
 const sellingMethods = [
-  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Car check', 'Documents'], action: 'Get a valuation', mobileAction: 'Valuation'},
-  {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Choice', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Exchange'},
-];
+  {intent: 'sale', title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Car check', 'Documents'], action: 'Get a valuation', mobileAction: 'Valuation'},
+  {intent: 'exchange', title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Choice', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Exchange'},
+] as const;
 const sellingGuides = [
   {title: 'Car valuation', mobileTitle: 'Valuation', image: showroom.artwork.selling.valuation, description: 'Have your mileage, registration details and service records ready. The showroom will review your car’s condition and discuss a valuation before you decide.'},
   {title: 'Service history', mobileTitle: 'Service history', image: showroom.artwork.selling.history, description: 'Gather your service book, maintenance invoices and any warranty documents. Include both keys if you have them, and tell the showroom about any outstanding finance or known faults.'},
@@ -37,39 +29,31 @@ function ResponsiveCopy({full, short}: {full: string; short: string}) {
   return <><span {...stylex.props(s.desktopCopy)}>{tx(full)}</span><span {...stylex.props(s.mobileCopy)}>{tx(short)}</span></>;
 }
 
-export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: () => void}) {
+export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: (intent?: SellIntent) => void}) {
   const tx = useCopy();
 
   const [information, setInformation] = useState<{title: string; description: string} | null>(null);
   if (kind === 'finance') return <BrandCampaign kind="finance" image={showroom.artwork.heroes.finance} onAction={onStart}/>;
   return <>
     {kind === 'sell' ? <section {...stylex.props(s.methods)} aria-label={tx("Ways to sell your car")}>
-      {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} data-selling-method {...stylex.props(s.method)}>
+      {sellingMethods.map(({intent, title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} data-selling-method {...stylex.props(s.method)}>
         <div {...stylex.props(s.methodMedia)}><Image src={image} width={1536} height={1024} sizes="(max-width: 767px) 100vw, 50vw" alt="" {...stylex.props(s.methodArtwork)}/></div>
         <div {...stylex.props(s.methodCopy)}><h2 {...stylex.props(s.heading, t.heading, s.methodTitle)}><ResponsiveCopy full={title} short={mobileTitle}/></h2>
           <ul {...stylex.props(s.methodPoints)}>{points.map((point, index) => <li key={point} {...stylex.props(s.methodPoint, t.body)}><Check size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={point} short={mobilePoints[index]}/></li>)}</ul>
-          <button type="button" onClick={onStart} aria-label={tx(action)} {...stylex.props(s.methodAction, t.control)}>{tx(mobileAction)}<ArrowRight size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/></button>
+          <button type="button" onClick={() => onStart(intent)} aria-label={tx(action)} aria-haspopup="dialog" {...stylex.props(s.methodAction, t.control)}>{tx(mobileAction)}<ArrowRight size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/></button>
         </div>
       </article>)}
     </section> : null}
     {kind === 'sell' ? <section {...stylex.props(s.section)} aria-label={tx("Selling guides")}><h2 {...stylex.props(s.heading, t.heading)}>{tx("Before you sell")}</h2><div {...stylex.props(s.toolsRail)}>{sellingGuides.map(({title, mobileTitle, image, description}) => <button key={title} type="button" onClick={() => setInformation({title, description})} {...stylex.props(s.tool)}><Image src={image} width={600} height={450} sizes="238px" alt="" {...stylex.props(s.toolImage)}/><span {...stylex.props(s.toolLabel, t.control)}><ResponsiveCopy full={title} short={mobileTitle}/><ArrowRight size={17} {...stylex.props(s.pointIcon)}/></span></button>)}</div></section> : null}
     {kind === 'service' ? <Suspense fallback={null}><ServiceCatalogue/></Suspense> : null}
-    {kind === 'sell' ? <section {...stylex.props(s.section)}>
-      <h2 {...stylex.props(s.heading, t.heading)}>{tx(`Selling with ${showroom.name}`)}</h2>
-      <div {...stylex.props(s.steps)}>{sellSteps.map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/sell-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription, t.caption)}>{tx(copy)}</p></div></article>)}</div>
-    </section> : null}
-    {kind === 'sell' ? <BrandCampaign kind="sell" onAction={onStart}/> : kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
-    {kind === 'sell' ? <>
-      <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx('A little more detail')}</h2>{[['What happens next?', 'Tell the showroom what you need. Availability, pricing and any terms are confirmed before you commit.'], ['Can I visit in person?', 'Yes, explore the showroom information and arrange a suitable time to discuss your car.']].map(([title, copy]) => <details key={title} {...stylex.props(s.faq)}><summary {...stylex.props(s.summary, t.control)}>{tx(title)}<ChevronDown size={18}/></summary><p {...stylex.props(s.faqCopy, t.caption)}>{tx(copy)}</p></details>)}</section>
-      <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx("Let’s talk about your car")}</h2><div {...stylex.props(s.contactGrid)}>{[['Call us', Phone], ['Email us', Mail], ['Visit us', MapPin]].map(([label, Icon]) => {const Symbol = Icon as typeof Phone; return label === 'Call us' && dealer.phoneE164 ? <a key={String(label)} href={'tel:' + dealer.phoneE164} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Email us' && dealer.email ? <a key={String(label)} href={'mailto:' + dealer.email} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Visit us' ? <Link key={String(label)} href="/stores" {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></Link> : <button type="button" key={String(label)} onClick={() => setInformation({title: String(label), description: dealer.phoneDisplay || dealer.email || 'Contact details are not configured for this template.'})} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></button>;})}</div></section>
-    </> : null}
+    {kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
     {information ? <ReferenceInfoSheet {...information} onClose={() => setInformation(null)}/> : null}
   </>;
 }
 const s = stylex.create({
   heading: {color: '#202024', textWrap: 'pretty'},
   section: {marginTop: 28},
-  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 30},
+  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 20},
   method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', borderRadius: 20, backgroundColor: campaign.lightSurface},
   methodMedia: {position: 'absolute', inset: 0},
   methodArtwork: {position: 'absolute', right: 0, bottom: 0, width: {[media.mobile]: '100%', default: 'auto'}, height: '100%', objectFit: {[media.mobile]: 'cover', default: 'contain'}, objectPosition: 'right bottom', maskImage: 'linear-gradient(to right,transparent,#000 48%)', pointerEvents: 'none'},
@@ -80,20 +64,9 @@ const s = stylex.create({
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
   methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 18, padding: '10px 18px', color: campaign.lightInk, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#fafafa'}, boxShadow: '0 2px 8px rgba(0,0,0,.04)', cursor: 'pointer'},
   toolsRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 14, paddingBottom: 8, scrollSnapType: 'x mandatory', scrollbarWidth: 'none'},
-  tool: {display: 'flex', flexDirection: 'column', gap: 10, flex: '0 0 238px', padding: 0, borderWidth: 0, backgroundColor: 'transparent', textAlign: 'left', cursor: 'pointer', scrollSnapAlign: 'start'},
+  tool: {display: 'flex', flexDirection: 'column', gap: 10, flex: {[media.mobile]: '0 0 184px', default: '1 1 0'}, minWidth: 0, padding: 0, borderWidth: 0, backgroundColor: 'transparent', textAlign: 'left', cursor: 'pointer', scrollSnapAlign: 'start'},
   toolImage: {display: 'block', width: '100%', height: 'auto', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 15},
   toolLabel: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', color: '#202024'},
-  steps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 12, marginTop: 14},
-  step: {display: 'grid', gridTemplateColumns: 'min(100px,30%) minmax(0,1fr)', alignItems: 'center', minHeight: 102, overflow: 'hidden', borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 13, backgroundColor: '#fff'},
-  stepImage: {width: '100%', height: 'auto', aspectRatio: '1', objectFit: 'cover'},
-  stepCopy: {padding: 12},
-  stepTitle: {overflowWrap: 'anywhere'},
-  stepDescription: {marginTop: 5, color: $.muted, overflowWrap: 'anywhere'},
-  faq: {marginTop: 12, borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff'},
-  summary: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 56, padding: '12px 15px', color: '#202024', cursor: 'pointer', listStyle: 'none'},
-  faqCopy: {padding: '0 15px 15px', color: $.muted},
-  contactGrid: {display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 12, marginTop: 14},
-  contact: {display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 10, minHeight: 100, padding: 12, color: campaign.lightInk, borderWidth: 0, borderRadius: 18, backgroundColor: campaign.lightSurface, cursor: 'pointer'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });
