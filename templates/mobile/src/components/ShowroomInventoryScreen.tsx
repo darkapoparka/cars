@@ -34,11 +34,11 @@ const s = stylex.create({
     backgroundColor: colors.background,
     paddingTop: 4,
   },
-  filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 6, paddingLeft: 16 },
+  filterRow: { display: 'flex', alignItems: 'center', gap: 10, paddingBlock: 8, paddingLeft: 16 },
   filterScroll: {
     display: 'flex',
     alignItems: 'center',
-    gap: 8,
+    gap: 10,
     overflowX: 'auto',
     scrollbarWidth: 'none',
     paddingRight: 16,
@@ -50,16 +50,19 @@ const s = stylex.create({
     alignItems: 'center',
     justifyContent: 'center',
     gap: 6,
-    minHeight: 44,
-    paddingInline: 12,
+    minHeight: 48,
+    minWidth: 64,
+    paddingInline: 16,
+    paddingBlock: 8,
     flexShrink: 0,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'transparent',
     borderRadius: 24,
-    backgroundColor: colors.controlSurface,
+    backgroundColor: { default: colors.controlSurface, ':active': colors.activeSurface },
     color: colors.text,
-    fontSize: 14,
+    fontSize: 16,
+    lineHeight: '22px',
     fontWeight: 500,
     whiteSpace: 'nowrap',
   },
@@ -296,6 +299,7 @@ export function ShowroomInventoryScreen() {
         />
         <ShowroomTabs
           label="Vehicle category"
+          variant="icon"
           tabs={showroomCategories.map(({ value, label, icon }) => ({
             value,
             label,

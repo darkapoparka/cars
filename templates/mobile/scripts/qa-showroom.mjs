@@ -408,9 +408,18 @@ async function run(name, engine) {
     check('Make/model stays inside one editor across tabs; Escape restores each opener');
 
     await page.locator('[data-quick-filter="make"]').click();
+    assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     await page.getByRole('checkbox', { name: 'X6', exact: true }).check();
+    await page.getByRole('button', { name: 'Make: BMW', exact: true }).click();
+    await page
+      .locator('section[aria-label="Selected makes"]')
+      .getByRole('button', { name: /BMW.*X6/ })
+      .waitFor();
+    await page.getByRole('button', { name: 'Model: X6', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
+    assert.equal(await page.getByRole('checkbox', { name: 'X6', exact: true }).isChecked(), true);
     await page.getByRole('button', { name: 'Show 1 car', exact: true }).click();
     await cars(1);
     assert.equal(
@@ -418,7 +427,7 @@ async function run(name, engine) {
       'bmw-x6',
     );
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
-    check('Make and model selections filter the showroom stock');
+    check('Linked Make/Model selectors retain model choices and filter the showroom stock');
     await page.locator('[data-quick-filter="make"]').click();
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
     await page.getByRole('switch', { name: 'Exclude make', exact: true }).click();

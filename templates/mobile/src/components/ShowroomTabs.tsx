@@ -10,7 +10,7 @@ const s = stylex.create({
     gridAutoColumns: 'minmax(max-content,1fr)',
     overflowX: 'auto',
     scrollbarWidth: 'none',
-    minHeight: 48,
+    minHeight: 52,
     marginTop: 8,
     backgroundColor: colors.background,
     borderBottomWidth: 1,
@@ -22,18 +22,24 @@ const s = stylex.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: 0,
-    minHeight: 47,
+    minWidth: 48,
+    minHeight: 52,
     paddingInline: 4,
     paddingBlock: 3,
     borderWidth: 0,
-    backgroundColor: 'transparent',
+    backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
     color: colors.muted,
     fontSize: 15,
     lineHeight: '22px',
     fontWeight: 500,
     whiteSpace: 'nowrap',
     outlineOffset: -3,
+  },
+  textTab: {
+    minWidth: 64,
+    paddingInline: 16,
+    paddingBlock: 10,
+    fontSize: 16,
   },
   selected: {
     color: colors.accent,
@@ -57,6 +63,7 @@ export function ShowroomTabs<T extends string>({
   selected,
   panelId,
   idPrefix,
+  variant = 'text',
   onChange,
 }: {
   label: string;
@@ -64,6 +71,7 @@ export function ShowroomTabs<T extends string>({
   selected: T;
   panelId: string;
   idPrefix: string;
+  variant?: 'text' | 'icon';
   onChange: (value: T) => void;
 }) {
   const activeTab = useRef<HTMLButtonElement | null>(null);
@@ -116,7 +124,11 @@ export function ShowroomTabs<T extends string>({
               ?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
               [next]?.focus({ preventScroll: true });
           }}
-          {...stylex.props(s.tab, selected === value && s.selected)}
+          {...stylex.props(
+            s.tab,
+            variant === 'text' && s.textTab,
+            selected === value && s.selected,
+          )}
         >
           {content ?? tabLabel}
         </button>

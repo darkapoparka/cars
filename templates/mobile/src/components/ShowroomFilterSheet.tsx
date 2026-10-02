@@ -28,20 +28,13 @@ const s = stylex.create({
     paddingTop: 'max(8px, env(safe-area-inset-top))',
     flexShrink: 0,
   },
-  title: { fontSize: 20, fontWeight: 700, lineHeight: '28px', flex: '1', minWidth: 0 },
-  reset: {
-    minHeight: 44,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 24,
-    paddingInline: 12,
-    paddingBlock: 8,
-    backgroundColor: colors.controlSurface,
-    color: colors.text,
-    fontSize: 14,
-    lineHeight: '20px',
-    fontWeight: 500,
+  title: {
+    fontSize: 20,
+    fontWeight: 700,
+    lineHeight: '28px',
+    flex: '1',
+    minWidth: 0,
+    textAlign: 'center',
   },
   tabs: { flexShrink: 0 },
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
@@ -151,16 +144,14 @@ export function ShowroomFilterSheet({
         <div {...stylex.props(s.heading)}>
           <IconButton icon="close" label="Close filters" onClick={onClose} />
           <h2 {...stylex.props(s.title)}>Filters</h2>
-          <button
-            type="button"
-            {...stylex.props(s.reset)}
+          <IconButton
+            icon="reset"
+            label="Reset"
             onClick={() => {
               setDraft(resetShowroomFilterDraft(draft));
               setResetVersion((current) => current + 1);
             }}
-          >
-            Reset
-          </button>
+          />
         </div>
         <div {...stylex.props(s.tabs)}>
           <ShowroomTabs

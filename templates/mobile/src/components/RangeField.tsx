@@ -93,7 +93,17 @@ const s = stylex.create({
   unit: { fontSize: 14, flexShrink: 0 },
   comfortableRoot: { fontSize: 16 },
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,10em),1fr))' },
-  comfortableField: { minHeight: 52, borderRadius: 12, borderColor: colors.line },
+  comfortableField: {
+    minHeight: 72,
+    borderRadius: 12,
+    borderColor: colors.line,
+    flexDirection: 'column',
+    alignItems: 'stretch',
+    gap: 4,
+    padding: 12,
+  },
+  fieldLabel: { fontSize: 13, lineHeight: '18px', fontWeight: 500, color: colors.muted },
+  valueRow: { display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 },
   comfortableText: { fontSize: 16, lineHeight: '24px' },
   comfortableFill: { backgroundColor: colors.accent },
 });
@@ -150,6 +160,23 @@ export function RangeField({
     const value = point(event);
     if (drag.current.side === 'from') from(value === floor ? '' : String(Math.min(value, high)));
     else to(value === ceiling ? '' : String(Math.max(value, low)));
+  }
+  function numericInput(side: 'from' | 'to') {
+    return (
+      <>
+        <input
+          aria-label={label + ' ' + side}
+          inputMode="numeric"
+          type="text"
+          maxLength={9}
+          value={side === 'from' ? min : max}
+          onChange={(event) => (side === 'from' ? from : to)(event.target.value)}
+          placeholder={comfortable ? 'Any' : side}
+          {...stylex.props(s.input, comfortable && s.comfortableText)}
+        />
+        {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
+      </>
+    );
   }
   return (
     <div {...stylex.props(s.root, comfortable && s.comfortableRoot)}>
@@ -224,30 +251,24 @@ export function RangeField({
       </div>
       <div {...stylex.props(s.inputs, comfortable && s.comfortableInputs)}>
         <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
-          <input
-            aria-label={label + ' from'}
-            inputMode="numeric"
-            type="text"
-            maxLength={9}
-            value={min}
-            onChange={(e) => from(e.target.value)}
-            placeholder="from"
-            {...stylex.props(s.input, comfortable && s.comfortableText)}
-          />
-          {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
+          {comfortable ? (
+            <>
+              <span {...stylex.props(s.fieldLabel)}>From</span>
+              <span {...stylex.props(s.valueRow)}>{numericInput('from')}</span>
+            </>
+          ) : (
+            numericInput('from')
+          )}
         </label>
         <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
-          <input
-            aria-label={label + ' to'}
-            inputMode="numeric"
-            type="text"
-            maxLength={9}
-            value={max}
-            onChange={(e) => to(e.target.value)}
-            placeholder="to"
-            {...stylex.props(s.input, comfortable && s.comfortableText)}
-          />
-          {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
+          {comfortable ? (
+            <>
+              <span {...stylex.props(s.fieldLabel)}>To</span>
+              <span {...stylex.props(s.valueRow)}>{numericInput('to')}</span>
+            </>
+          ) : (
+            numericInput('to')
+          )}
         </label>
       </div>
     </div>

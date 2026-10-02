@@ -40,6 +40,46 @@ focus after navigation; invalid fields receive focus on validation. Direct overl
 links and owned overlay history entries have separate dismissal behavior. These
 are implementation facts; rendered browser acceptance remains pending below.
 
+## Tap target refinement
+
+The follow-up tap comfort change increases Home's quick pills from 44px to a
+48px minimum height, with 16px labels, 16px side padding and 10px between pills.
+The shared underlined tabs have a 52px minimum height. Text tabs in Filters and
+Services use 16px labels and 16px side padding instead of 4px. The icon category
+tabs keep their native 40px artwork inside the larger button target. Filter Reset
+also has a 48px minimum height. Pills and tabs show a background while pressed.
+The entire padded button remains clickable; horizontal scrolling, the underline,
+keyboard navigation and selection semantics are preserved.
+
+These are source dimensions. Actual tap geometry, small-screen rendering and touch
+acceptance remain pending under the browser restriction recorded below.
+The follow-up passed lint, typecheck, all 72 existing domain tests and a new
+50-page production build (`Z0NHmv7SGxEPCakrw2T8q`). Home, Make/Price editor URLs
+and Services/Import/Sell returned HTTP 200. Formatting and the scoped diff passed.
+An existing `L:/CODEX/cars/.git/index.lock` blocked the initial tap-target commit.
+Its modification time advanced during inspection, so it was preserved. The lock
+cleared before the filter-control follow-up; the earlier tap changes are included
+in that scoped delivery. No alternate index or lock-removal workaround was used.
+
+## Filter control refinement
+
+Reset now uses the shared 48px icon button, matching Close around the centered
+Filters heading. Make & model remains one top-level section. Inside the car picker,
+separate labelled Make and Model selector buttons show the current editing context.
+Model is disabled until a make is chosen. Changing between the two option lists
+retains that make's model selection. Selecting a make moves keyboard focus to the
+Model selector. Selected make cards show model summaries and a remove action;
+remaining in-stock makes appear once, without the duplicate Top Makes/alphabet
+groups. The embedded list uses native scrolling instead of the copied custom rail.
+Exclusion keeps its existing behavior, with a 48px switch target in the model list.
+
+Price, Year and Mileage have persistent From/To labels and Any placeholders.
+Their slider, numeric-entry constraints and filter semantics are retained. The
+standalone native make picker and range controls keep their original presentation.
+The showroom browser contract now also checks the initial disabled Model selector
+and retained X6 selection after changing Make/Model views. That browser contract
+has only been syntax checked; rendered acceptance is still pending below.
+
 ## Validation
 
 Passed with Node 22.20.0:
@@ -48,10 +88,11 @@ Passed with Node 22.20.0:
 - All 72 domain tests. Added coverage checks per-step validation, earliest error
   routing, unfinished draft recovery, filter URL sections, immutable draft changes
   across sections and Reset without changing the applied category.
-- Production build, 50 static pages; final build ID `c9AlaTKO_xnXITloNtvSj`.
+- Production build, 50 static pages; final build ID `PcHJJmN5VmjmVJoyagqzh`.
 - Syntax checks for the updated showroom browser suite and preview launcher.
-- HTTP 200 for Cars, every filter section URL, Services, Import/Sell overview and
-  direct sheet URLs, retained Financing/Parts URLs and matching Contact contexts.
+- Latest HTTP 200 checks covered Cars, Make/Price/Year/More editor URLs, Services
+  and Contact. The original overlay checks also covered the remaining filter and
+  service deep links, retained Financing/Parts URLs and matching Contact contexts.
 - `workspace-doctor.mjs --fetch`; root main was current with fetched origin/main.
 
 The browser suite was updated for the new functional contract: one filter editor,
