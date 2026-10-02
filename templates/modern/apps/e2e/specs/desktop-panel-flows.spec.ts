@@ -22,6 +22,9 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       );
       const headerBox = await header.boundingBox();
       expect(headerBox?.height).toBe(90);
+      expect(headerBox?.x).toBe(Math.max(24, (width - 1392) / 2));
+      expect(headerBox?.y).toBe(24);
+      expect(headerBox?.width).toBe(Math.min(width - 48, 1392));
       expect(
         await page
           .locator("footer")
@@ -30,9 +33,20 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       const hero = page.locator('[data-slot="dealer-desktop-home-hero"]');
       const heroBox = await hero.boundingBox();
       expect(heroBox?.x).toBe(Math.max(24, (width - 1392) / 2));
-      expect(heroBox?.y).toBe(90);
+      expect(heroBox?.y).toBe(114);
       expect(heroBox?.height).toBe(680);
       expect(heroBox?.width).toBe(Math.min(width - 48, 1392));
+      expect(headerBox?.x).toBe(heroBox?.x);
+      expect(headerBox?.width).toBe(heroBox?.width);
+      expect((headerBox?.y ?? 0) + (headerBox?.height ?? 0)).toBe(heroBox?.y);
+      expect(
+        await header.evaluate(
+          (element) => getComputedStyle(element).borderRadius
+        )
+      ).toBe("20px 20px 0px 0px");
+      expect(
+        await hero.evaluate((element) => getComputedStyle(element).borderRadius)
+      ).toBe("0px 0px 20px 20px");
       expect(
         await hero.evaluate(
           (element) => getComputedStyle(element).backgroundImage
@@ -41,7 +55,7 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       const search = hero.locator("form");
       expect((await search.boundingBox())?.height).toBe(76);
       const stock = page.locator('[data-slot="home-stock-panel"]');
-      expect((await stock.boundingBox())?.y).toBe(834);
+      expect((await stock.boundingBox())?.y).toBe(858);
       const stockGrid = page.locator('[data-slot="home-stock-grid"]');
       expect(
         await stockGrid.evaluate(
@@ -93,7 +107,7 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe(60);
-            expect(sidebar?.y).toBe(324);
+            expect(sidebar?.y).toBe(348);
           }
         }
         expect(

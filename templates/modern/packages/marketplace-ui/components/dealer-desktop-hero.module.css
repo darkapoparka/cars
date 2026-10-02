@@ -72,10 +72,10 @@
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: 0;
-    width: calc(100% - var(--layout-gutter) * 2);
-    max-width: 1392px;
-    height: 680px;
-    min-height: 680px;
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    height: var(--desktop-home-hero-height);
+    min-height: var(--desktop-home-hero-height);
     padding: 0;
     margin-inline: auto;
     color: var(--inverse-foreground);
@@ -85,7 +85,8 @@
       var(--desktop-hero-scene, none);
     background-position: center;
     background-size: cover;
-    border-radius: var(--radius-vehicle);
+    border-radius: 0 0 var(--radius-desktop-frame) var(--radius-desktop-frame);
+    box-shadow: var(--desktop-surface-shadow);
   }
   .hero[data-variant="landing"] .copy {
     grid-row: 1;

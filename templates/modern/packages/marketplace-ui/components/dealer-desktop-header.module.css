@@ -4,20 +4,35 @@
 
 @media (min-width: 1024px) {
   .header {
+    --desktop-header-border-height: calc(var(--desktop-border-width) * 2);
     position: relative;
     z-index: var(--desktop-layer-header);
     display: block;
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    margin: 24px auto 0;
     color: var(--foreground);
     background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-desktop-frame);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .header:has(+ [data-slot="dealer-desktop-home-hero"]) {
+    --desktop-header-border-height: var(--desktop-border-width);
+    border-bottom: 0;
+    border-radius: var(--radius-desktop-frame) var(--radius-desktop-frame) 0 0;
+    box-shadow: none;
   }
   .nav {
     display: grid;
     grid-template-columns: var(--desktop-logo-width) minmax(0, 1fr) auto;
     gap: calc(var(--spacing) * 6);
     align-items: center;
-    width: calc(100% - var(--layout-gutter) * 2);
-    max-width: var(--layout-wide-max);
-    min-height: var(--desktop-header-height);
+    width: min(calc(100% - 48px), var(--desktop-content-max));
+    min-height: calc(
+      var(--desktop-header-height) -
+      var(--desktop-header-border-height)
+    );
     margin-inline: auto;
   }
   .brand {
