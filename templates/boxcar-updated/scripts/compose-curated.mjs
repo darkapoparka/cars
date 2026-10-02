@@ -48,25 +48,9 @@ header
   .attr("aria-label", "Saved cars")
   .html('<i class="far fa-bookmark" aria-hidden="true"></i> Saved');
 header.find(".header-btn-two").attr("href", "/contact/").text("Contact us");
-header.find(".search-popup").remove();
-// Keep one source-shaped row for the header action to clone, with real catalogue
-// bindings instead of the demo's repeated placeholder. Initialization fills six.
-header.find(".box-car-search li").slice(1).remove();
-header.find(".car-search-item").attr("href", "/vehicle/{vehicles[0].slug}/");
-header
-  .find(".box-car-search img")
-  .attr("src", "{vehicles[0].image}")
-  .attr("alt", "{vehicles[0].title}");
-header.find(".box-car-search .name").text("{vehicles[0].title}");
-header.find(".box-car-search .price").text("{money(vehicles[0].price)}");
-header
-  .find(".btn-view-search")
-  .attr("href", "/inventory/")
-  .html(`View all cars ${arrowHTML}`);
-header
-  .find(".show-search")
-  .attr("placeholder", "Search cars…")
-  .attr("aria-label", "Search cars");
+// The dealer page has one prominent search beneath the hero headline.
+// The original ten homes retain their source header search and suggestions.
+header.find(".search-popup,.layout-search").remove();
 
 const hero = ten(".boxcar-banner-section-seven").clone();
 hero.addClass("curated-banner");
@@ -112,6 +96,11 @@ search
   .removeAttr("aria-label")
   .html('<i class="flaticon-search" aria-hidden="true"></i>Search cars');
 hero.find(".cus-container10").empty().append(search);
+// Keep the search in normal flow with the headline. The original Home 10
+// sibling form was pinned across the car at the bottom of the photograph.
+const heroSearch = hero.find(".form-tab-content").clone();
+hero.find(".form-tab-content").remove();
+hero.find(".content-box").append(heroSearch);
 
 const types = ten(".vehicles-section-two").clone();
 types.addClass("curated-types");
@@ -147,11 +136,12 @@ brands.find(".cars-block-five").each((_, el) => {
     card.remove();
     return;
   }
-  card.find("h6 a").text(make);
-  card
-    .find("a")
-    .attr("href", "/inventory/?make=" + encodeURIComponent(make))
-    .attr("aria-label", `Browse ${make} cars`);
+  card.find("h6").text(make);
+  const inner = card.find(".inner-box");
+  inner.find(".image a").replaceWith(inner.find(".image a").html());
+  inner.replaceWith(
+    `<a class="inner-box" href="/inventory/?make=${encodeURIComponent(make)}" aria-label="Browse ${make} cars">${inner.html()}</a>`,
+  );
   card.find("img").attr("alt", make).attr("loading", "lazy");
 });
 
@@ -281,7 +271,7 @@ markup = markup.replace(/<svg[\s\S]*?<\/svg>/g, (svg) => {
   const suffix = `-curated-${id++}`;
   return svg.replace(/(id="|url\(#)([^"\)]+)("|\))/g, "$1$2" + suffix + "$3");
 });
-const script = `<svelte:options preserveWhitespace={true} />\n<script lang="ts">\nimport {referencePage} from './interactions';\nimport {brand} from '../data/brand';\nimport {vehicles, money} from '../lib/catalog';\nimport {articles} from '../data/journal';\nimport CuratedStock from './CuratedStock.svelte';\n</script>\n`;
+const script = `<svelte:options preserveWhitespace={true} />\n<script lang="ts">\nimport {referencePage} from './interactions';\nimport {brand} from '../data/brand';\nimport {vehicles} from '../lib/catalog';\nimport {articles} from '../data/journal';\nimport CuratedStock from './CuratedStock.svelte';\n</script>\n`;
 compile(script + markup, { filename: "CuratedHome.svelte", generate: false });
 await fs.writeFile("src/reference/CuratedHome.svelte", script + markup + "\n");
 await fs.writeFile(
@@ -299,15 +289,17 @@ await fs.writeFile(
         svelteSHA256: sha256,
       })),
       composition: {
-        header: "Home 10, simplified dealer navigation and shared identity",
+        header:
+          "Home 10, centered dealer navigation, shared identity and contact action",
         hero: "Home 10, single source photograph and centered Home 5 headline",
         search:
-          "Home 5 white pill DOM, four working filters and visible search label",
+          "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
         types:
           "Home 10 photographic body types, centered row with catalogue destinations",
-        brands: "Home 8 centered brand row with catalogue destinations",
+        brands:
+          "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
         inventory:
-          "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
+          "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
         benefits: "Home 5 horizontal four-icon section",
         nextSteps:
           "Home 8 dark rounded card section, buyer steps instead of fixture reviews",

@@ -2,14 +2,14 @@
   "version": "2026.10.02-curated",
   "candidate": "templates/boxcar-updated",
   "preview": "http://127.0.0.1:6455/",
-  "recordedAt": "2026-10-02T09:24:55.386Z",
+  "recordedAt": "2026-10-02T10:08:52.451Z",
   "composition": {
-    "header": "Home 10, simplified dealer navigation and shared identity",
+    "header": "Home 10, centered dealer navigation, shared identity and contact action",
     "hero": "Home 10, single source photograph and centered Home 5 headline",
-    "search": "Home 5 white pill DOM, four working filters and visible search label",
+    "search": "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
-    "brands": "Home 8 centered brand row with catalogue destinations",
-    "inventory": "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
+    "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
+    "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
     "benefits": "Home 5 horizontal four-icon section",
     "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
     "journalAndFooter": "Home 8, shared articles and identity"
@@ -23,12 +23,13 @@
     "domainAndAssets": {
       "status": "passed",
       "tests": 8,
-      "note": "Eight domain and local-image tests rerun after the catalogue label correction."
+      "note": "Eight domain and local-image tests rerun for this desktop revision."
     },
     "productionBuild": {
       "status": "passed",
-      "checkedAt": "2026-10-02T09:21:44.436Z",
-      "modules": 153
+      "checkedAt": "2026-10-02T10:08:52.451Z",
+      "modules": 153,
+      "staticCuratedCSSMatchesSource": true
     },
     "regeneration": {
       "status": "passed",
@@ -42,7 +43,7 @@
   "curated": {
     "chromium": {
       "engine": "chromium",
-      "checkedAt": "2026-10-02T09:22:05.966Z",
+      "checkedAt": "2026-10-02T10:04:50.247Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -50,7 +51,7 @@
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
         "Stock tabs, slider, saved state and detail/Back context",
-        "Header search stays visible and readable before and during use at 1440px",
+        "Search sits below the headline, with a clean header and visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
         "Mobile dealer navigation, buyer links and inner routes"
       ],
@@ -99,32 +100,32 @@
           "document": 1024,
           "controls": [
             {
-              "left": 30,
-              "right": 231.453125,
-              "width": 201.453125,
+              "left": 58,
+              "right": 245.453125,
+              "width": 187.453125,
               "height": 76
             },
             {
-              "left": 231.453125,
+              "left": 245.453125,
               "right": 432.890625,
-              "width": 201.4375,
+              "width": 187.4375,
               "height": 76
             },
             {
               "left": 432.890625,
-              "right": 634.34375,
-              "width": 201.453125,
+              "right": 620.34375,
+              "width": 187.453125,
               "height": 76
             },
             {
-              "left": 634.34375,
-              "right": 835.78125,
-              "width": 201.4375,
+              "left": 620.34375,
+              "right": 807.78125,
+              "width": 187.4375,
               "height": 76
             },
             {
-              "left": 835.78125,
-              "right": 994,
+              "left": 807.78125,
+              "right": 966,
               "width": 158.21875,
               "height": 56
             }
@@ -138,33 +139,33 @@
           "document": 768,
           "controls": [
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 738,
-              "width": 708,
+              "left": 58,
+              "right": 710,
+              "width": 652,
               "height": 56
             }
           ],
@@ -177,33 +178,33 @@
           "document": 390,
           "controls": [
             {
-              "left": 22,
-              "right": 195,
-              "width": 173,
-              "height": 60
+              "left": 39,
+              "right": 190,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 195,
-              "right": 368,
-              "width": 173,
-              "height": 60
+              "left": 200,
+              "right": 351,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 195,
-              "width": 173,
-              "height": 60
+              "left": 39,
+              "right": 190,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 195,
-              "right": 368,
-              "width": 173,
-              "height": 60
+              "left": 200,
+              "right": 351,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 368,
-              "width": 346,
+              "left": 38,
+              "right": 352,
+              "width": 314,
               "height": 50
             }
           ],
@@ -216,33 +217,33 @@
           "document": 320,
           "controls": [
             {
-              "left": 22,
-              "right": 160,
-              "width": 138,
-              "height": 60
+              "left": 39,
+              "right": 155,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 160,
-              "right": 298,
-              "width": 138,
-              "height": 60
+              "left": 165,
+              "right": 281,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 160,
-              "width": 138,
-              "height": 60
+              "left": 39,
+              "right": 155,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 160,
-              "right": 298,
-              "width": 138,
-              "height": 60
+              "left": 165,
+              "right": 281,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 298,
-              "width": 276,
+              "left": 38,
+              "right": 282,
+              "width": 244,
               "height": 50
             }
           ],
@@ -255,7 +256,7 @@
     },
     "webkit": {
       "engine": "webkit",
-      "checkedAt": "2026-10-02T09:22:44.413Z",
+      "checkedAt": "2026-10-02T10:05:45.139Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -263,7 +264,7 @@
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
         "Stock tabs, slider, saved state and detail/Back context",
-        "Header search stays visible and readable before and during use at 1440px",
+        "Search sits below the headline, with a clean header and visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
         "Mobile dealer navigation, buyer links and inner routes"
       ],
@@ -312,32 +313,32 @@
           "document": 1024,
           "controls": [
             {
-              "left": 30,
-              "right": 231.078125,
-              "width": 201.078125,
+              "left": 58,
+              "right": 245.078125,
+              "width": 187.078125,
               "height": 76
             },
             {
-              "left": 231.078125,
+              "left": 245.078125,
               "right": 432.15625,
-              "width": 201.078125,
+              "width": 187.078125,
               "height": 76
             },
             {
               "left": 432.15625,
-              "right": 633.234375,
-              "width": 201.078125,
+              "right": 619.234375,
+              "width": 187.078125,
               "height": 76
             },
             {
-              "left": 633.234375,
-              "right": 834.3125,
-              "width": 201.078125,
+              "left": 619.234375,
+              "right": 806.3125,
+              "width": 187.078125,
               "height": 76
             },
             {
-              "left": 834.328125,
-              "right": 994,
+              "left": 806.328125,
+              "right": 966,
               "width": 159.671875,
               "height": 56
             }
@@ -351,33 +352,33 @@
           "document": 768,
           "controls": [
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 178.671875,
-              "width": 148.671875,
+              "left": 58,
+              "right": 194.90625,
+              "width": 136.90625,
               "height": 76
             },
             {
-              "left": 30,
-              "right": 738,
-              "width": 708,
+              "left": 58,
+              "right": 710,
+              "width": 652,
               "height": 56
             }
           ],
@@ -390,33 +391,33 @@
           "document": 390,
           "controls": [
             {
-              "left": 22,
-              "right": 195,
-              "width": 173,
-              "height": 60
+              "left": 39,
+              "right": 190,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 195,
-              "right": 368,
-              "width": 173,
-              "height": 60
+              "left": 200,
+              "right": 351,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 195,
-              "width": 173,
-              "height": 60
+              "left": 39,
+              "right": 190,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 195,
-              "right": 368,
-              "width": 173,
-              "height": 60
+              "left": 200,
+              "right": 351,
+              "width": 151,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 368,
-              "width": 346,
+              "left": 38,
+              "right": 352,
+              "width": 314,
               "height": 50
             }
           ],
@@ -429,33 +430,33 @@
           "document": 320,
           "controls": [
             {
-              "left": 22,
-              "right": 160,
-              "width": 138,
-              "height": 60
+              "left": 39,
+              "right": 155,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 160,
-              "right": 298,
-              "width": 138,
-              "height": 60
+              "left": 165,
+              "right": 281,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 160,
-              "width": 138,
-              "height": 60
+              "left": 39,
+              "right": 155,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 160,
-              "right": 298,
-              "width": 138,
-              "height": 60
+              "left": 165,
+              "right": 281,
+              "width": 116,
+              "height": 58
             },
             {
-              "left": 22,
-              "right": 298,
-              "width": 276,
+              "left": 38,
+              "right": 282,
+              "width": 244,
               "height": 50
             }
           ],
@@ -498,7 +499,7 @@
       ],
       "failures": []
     },
-    "note": "Earlier reference journeys retained with their recorded timestamps; not rerun for the curated styling correction."
+    "note": "Historical ten-home journeys retained; not rerun for the curated desktop revision. Original homepage source hashes remain intact."
   },
   "sourceHashes": [
     {
@@ -507,15 +508,15 @@
     },
     {
       "file": "templates/boxcar-updated/.template/curated.json",
-      "sha256": "87be82fa068ee429059ef455bd57054499efc2a17cb89e109598e34102d1a557"
+      "sha256": "570b2f293297458dbca6b6937f762f43da21536584f3c4c8bd7ffd6a24082365"
     },
     {
       "file": "templates/boxcar-updated/scripts/compose-curated.mjs",
-      "sha256": "8708b9277ee16fc9b142111bf06590415a91e9e288fc9b824ff90f7fc8ff5737"
+      "sha256": "ce62f1b6a99673df6de641ee09e6eef4e6706cb65edd6b43c164aafc57c560de"
     },
     {
       "file": "templates/boxcar-updated/public/reference/curated.css",
-      "sha256": "ee50cb386b9d0b69d0fbc3241fbf7ecbc5151a8dc830cdd3c9f84ba6620ce1db"
+      "sha256": "a9c8809eb0d329c34e6a13b56782662b933c492b7620473a9cbe23350dc9da4a"
     },
     {
       "file": "templates/boxcar-updated/src/App.svelte",
@@ -547,23 +548,23 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/interactions.ts",
-      "sha256": "4a04ff7442fb95adca57c98ef5688ac53ab029b8eccffb7045dcfc9a815dce70"
+      "sha256": "600c39ff62615fd9802b3729e97b93435d0328087916fdc3da4d16a111110713"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
-      "sha256": "0e8a86cc896b944e81d77b47be2c743578b04a9784f7cb662a1d9d760b4aeee7"
+      "sha256": "c270325022998acbf882345ae255a8bc9ed3ffb6ef2817c5edbae7d78d82d459"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedStock.svelte",
-      "sha256": "b13230b97bd1980e7436c8386564ec5d721b98e4568d4eb84aa65c8da7aa6fc0"
+      "sha256": "da1274c2d06682361435b77051ae4b3c7cad2fa679a3465de0d361055b2a8edd"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedCarCard.svelte",
-      "sha256": "b89a07dbf14b7f42d242dbad376b1752b9738e16e3115508735b2c5be5dafee6"
+      "sha256": "07ed88d49277a576c8ff93d7bce3186cce0ccd08db331deeba9b26369e157ef9"
     },
     {
       "file": "templates/boxcar-updated/scripts/curated-flows.mjs",
-      "sha256": "0b6315909dd340caa0ca266805bc39d8420f1f64ac77cdf89197e0d5777fea28"
+      "sha256": "dcf4d3691e59286b0552e7f3fae6e0d41a54403eb254d1cfe1775b95b9d37336"
     },
     {
       "file": "templates/boxcar-updated/src/data/vehicles.json",
@@ -625,15 +626,19 @@
   "screenshots": [
     {
       "file": "docs/boxcar-updated/curated-desktop.png",
-      "sha256": "129d26820ddd4ac2bb72d9b3b656d75dabb4784383f0745273fc4e6bfa812183"
+      "sha256": "0de7eb18b428e0075c78e83811504c52d45d64f7dfeab2ba58f1ba5038b3c0e4"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-desktop-full.png",
+      "sha256": "1600c5bfcf73bec5cc4fa75b54343b83dfc7a4953b593ae0041a7664d54939c7"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile.png",
-      "sha256": "001d9d84558fd0c34c3a8d13ce984946ba934f66bcff24edfa8be7dc14d70b61"
+      "sha256": "dcbb85c5b572aa0476779fb08e23109cfad777350c6f8586c9245c5a6f8f7443"
     },
     {
-      "file": "docs/boxcar-updated/curated-header-search.png",
-      "sha256": "7b393131ffc07dc026a484ebe13cfe12ef5e31266fd9fea6717e24abbfb7380e"
+      "file": "docs/boxcar-updated/curated-hero-search.png",
+      "sha256": "d27ea49a8c8abad8cc440ea97d90022f392428299ba4edd68b642f329f062d40"
     }
   ],
   "boundaries": [
@@ -644,10 +649,12 @@
     "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
   ],
   "corrections": [
-    "Give the header a visible neutral field, dark typed text and stable focus width; test idle and active contrast.",
-    "Replace Home 8 tiny lifestyle SVGs with Home 10 photographic body choices and verify their filtered inventory across both pages.",
-    "Restore the Home 5 pale rounded benefits container; correct banner selector specificity and balance centered headline wrapping.",
-    "Handle curated saved-car clicks in capture before Slick can consume them; verify pointer and keyboard saved state after switching tabs.",
-    "Correct the silver Bentley photo label and catalogue make/model while preserving its existing reference URL."
+    "Put the Home 5 white search pill directly beneath the headline in normal flow; remove the competing curated header keyword field.",
+    "Give the header centered dealer navigation and a readable contact action, overriding the inherited source margin and colour rules.",
+    "Show three large desktop stock cards with year/body/engine summaries, compact specifications and aligned price/detail actions.",
+    "Use the Home 10 photographic body choices and Home 8 brands in visible source-style tiles with working catalogue destinations.",
+    "Retain the Home 5 pale benefits container, balanced headings, finite stock carousel and working captured saved-car clicks.",
+    "Remove the inherited fixed phone dropdown height; fit default filter labels on one line and keep long selections within their cells.",
+    "Retain the corrected silver Bentley label and existing reference URL; preserve all ten original homepage components."
   ]
 }

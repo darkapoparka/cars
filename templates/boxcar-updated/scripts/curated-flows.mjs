@@ -101,6 +101,12 @@ try {
               ".curated-banner .select,.curated-banner .form-submit button",
             ),
           ).map(rect),
+          defaultLabels: Array.from(
+            root.querySelectorAll(".curated-banner .select > span"),
+          ).map((el) => ({
+            text: el.textContent,
+            height: el.getBoundingClientRect().height,
+          })),
           badges: Array.from(
             root.querySelectorAll(".curated-journal .date"),
           ).map((el) => ({
@@ -145,6 +151,11 @@ try {
         );
         assert.ok(control.left >= 0 && control.right <= state.client + 1);
       }
+      for (const label of state.defaultLabels)
+        assert.ok(
+          label.height <= 23,
+          `${width}px default filter wraps: ${label.text}`,
+        );
       for (const badge of state.badges)
         assert.ok(
           badge.scroll <= badge.client + 1 && badge.height >= 22,
@@ -516,16 +527,13 @@ try {
     },
   );
   await step(
-    "Header search stays visible and readable before and during use at 1440px",
+    "Search sits below the headline, with a clean header and visible dropdowns",
     async () => {
-      await home();
-      const input = page.getByRole("combobox", {
-        name: "Search cars",
-        exact: true,
-      });
-      const appearance = () =>
-        input.evaluate((el) => {
-          const style = getComputedStyle(el);
+      for (const width of [1440, 1024, 768, 390, 320]) {
+        await home(width);
+        assert.equal(await page.locator("header .layout-search").count(), 0);
+        assert.equal(await page.locator(".curated-banner form").count(), 1);
+        const appearance = await page.evaluate(() => {
           const luminance = (color) => {
             const channels = color
               .match(/[\d.]+/g)
@@ -541,57 +549,122 @@ try {
               channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
             );
           };
-          const background = luminance(style.backgroundColor);
-          const contrast = (color) => {
-            const text = luminance(color);
+          const contrast = (element) => {
+            const style = getComputedStyle(element);
+            const background = luminance(style.backgroundColor);
+            const text = luminance(style.color);
             return (
               (Math.max(text, background) + 0.05) /
               (Math.min(text, background) + 0.05)
             );
           };
+          const root = document.querySelector(".curated-home");
+          const headline = root.querySelector("h1").getBoundingClientRect();
+          const form = root.querySelector(".curated-banner form");
+          const bounds = form.getBoundingClientRect();
+          const contact = root.querySelector("header .header-btn-two");
+          const navigation = root
+            .querySelector("header .navigation")
+            .getBoundingClientRect();
           return {
-            width: el.getBoundingClientRect().width,
-            height: el.getBoundingClientRect().height,
-            border: Number.parseFloat(style.borderTopWidth),
-            textContrast: contrast(style.color),
-            placeholderContrast: contrast(
-              getComputedStyle(el, "::placeholder").color,
+            gap: bounds.top - headline.bottom,
+            centered: Math.abs(
+              (bounds.left + bounds.right) / 2 -
+                document.documentElement.clientWidth / 2,
             ),
+            background: getComputedStyle(form).backgroundColor,
+            searchContrast: contrast(form.querySelector(".form-submit button")),
+            contactContrast: contact.getBoundingClientRect().width
+              ? contrast(contact)
+              : null,
+            headerHeight: root.querySelector("header").getBoundingClientRect()
+              .height,
+            navigationCentered: navigation.width
+              ? Math.abs(
+                  (navigation.left + navigation.right) / 2 -
+                    document.documentElement.clientWidth / 2,
+                )
+              : null,
+            activeCards: root.querySelectorAll(
+              "#stock-all .slick-active.car-block-ten",
+            ).length,
           };
         });
-      const idle = await appearance();
-      assert.ok(idle.border >= 1 && idle.width >= 250 && idle.height >= 44);
-      assert.ok(
-        idle.textContrast >= 4.5 && idle.placeholderContrast >= 4.5,
-        "Header search is unreadable before focus",
-      );
-      await input.click();
-      const popup = page.locator(".box-content-search.active");
-      await popup.waitFor();
-      assert.equal(await popup.getByRole("option").count(), 6);
-      assert.equal(
-        await input.evaluate((el) => getComputedStyle(el).outlineStyle),
-        "none",
-      );
-      await input.fill("Audi A8");
-      const active = await appearance();
-      assert.ok(
-        active.textContrast >= 4.5,
-        "Typed header search is unreadable",
-      );
-      assert.ok(
-        Math.abs(active.width - idle.width) <= 1,
-        "Header shifts on focus",
-      );
-      assert.equal(await popup.getByRole("option").count(), 1);
-      if (engine === "chromium")
-        await page.screenshot({
-          path: path.join(evidence, "curated-header-search.png"),
-        });
-      await input.press("ArrowDown");
-      await input.press("Enter");
-      await page.waitForURL("**/vehicle/audi-a8/**");
-      assert.equal(await page.locator("main h1").innerText(), "Audi A8");
+        assert.ok(
+          appearance.gap >= 20 && appearance.gap <= 40,
+          `${width}px search is disconnected from the headline`,
+        );
+        assert.ok(
+          appearance.centered <= 2,
+          `${width}px search is not centered`,
+        );
+        assert.equal(appearance.background, "rgb(255, 255, 255)");
+        assert.ok(
+          appearance.searchContrast >= 4.5,
+          `${width}px unreadable search button`,
+        );
+        if (appearance.contactContrast !== null)
+          assert.ok(
+            appearance.contactContrast >= 4.5,
+            `${width}px unreadable header action`,
+          );
+        assert.ok(
+          appearance.headerHeight <= 104,
+          `${width}px header is too tall`,
+        );
+        if (width >= 1024)
+          assert.ok(
+            appearance.navigationCentered <= 2,
+            `${width}px header navigation is not centered`,
+          );
+        assert.equal(
+          appearance.activeCards,
+          width >= 991 ? 3 : width >= 767 ? 2 : 1,
+        );
+        for (let index = 0; index < 4; index++) {
+          const menu = page.locator(".curated-banner .drop-menu").nth(index);
+          await menu.locator(".select").click();
+          const popup = menu.locator(".dropdown");
+          await popup.waitFor({ state: "visible" });
+          const visible = await popup.evaluate((el) => {
+            const style = getComputedStyle(el),
+              r = el.getBoundingClientRect();
+            const first = [...el.children].find((item) => !item.hidden);
+            const item = first.getBoundingClientRect();
+            const hit = document.elementFromPoint(
+              item.left + item.width / 2,
+              Math.max(0, item.top) +
+                Math.min(item.height, innerHeight - item.top) / 2,
+            );
+            return {
+              background: style.backgroundColor,
+              left: r.left,
+              right: r.right,
+              hit: first.contains(hit),
+            };
+          });
+          assert.equal(visible.background, "rgb(255, 255, 255)");
+          assert.ok(
+            visible.left >= 0 && visible.right <= width + 1,
+            `${width}px dropdown clips outside the page`,
+          );
+          assert.equal(visible.hit, true, `${width}px dropdown is covered`);
+          if (engine === "chromium" && width === 1440 && index === 1)
+            await page.screenshot({
+              path: path.join(evidence, "curated-hero-search.png"),
+            });
+          await page
+            .getByRole("heading", {
+              name: "Find Your Perfect Car",
+              exact: true,
+            })
+            .click();
+          assert.equal(
+            await menu.locator(".select").getAttribute("aria-expanded"),
+            "false",
+          );
+        }
+      }
     },
   );
   await step(

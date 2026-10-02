@@ -611,11 +611,19 @@ export function referencePage(node: HTMLElement) {
               curated && el.classList.contains("car-slider-three")
                 ? {
                     ...config,
+                    slidesToShow: 3,
                     infinite: false,
                     responsive: Array.isArray(config.responsive)
                       ? config.responsive.map((breakpoint) => ({
                           ...breakpoint,
-                          settings: { ...breakpoint.settings, infinite: false },
+                          settings: {
+                            ...breakpoint.settings,
+                            slidesToShow: Math.min(
+                              3,
+                              Number(breakpoint.settings.slidesToShow) || 3,
+                            ),
+                            infinite: false,
+                          },
                         }))
                       : undefined,
                   }

@@ -28,12 +28,12 @@
     }
   ],
   "composition": {
-    "header": "Home 10, simplified dealer navigation and shared identity",
+    "header": "Home 10, centered dealer navigation, shared identity and contact action",
     "hero": "Home 10, single source photograph and centered Home 5 headline",
-    "search": "Home 5 white pill DOM, four working filters and visible search label",
+    "search": "Home 5 white pill DOM directly beneath the hero headline, four working filters and visible search label",
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
-    "brands": "Home 8 centered brand row with catalogue destinations",
-    "inventory": "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
+    "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
+    "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
     "benefits": "Home 5 horizontal four-icon section",
     "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
     "journalAndFooter": "Home 8, shared articles and identity"

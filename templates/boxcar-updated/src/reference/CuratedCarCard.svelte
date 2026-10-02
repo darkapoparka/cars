@@ -53,6 +53,9 @@
     </div>
     <div class="content-box">
       <h3 class="title"><a href={detailHref(vehicle)}>{vehicle.title}</a></h3>
+      <p class="curated-car-summary">
+        {vehicle.year} · {vehicle.body} · {vehicle.engine}L
+      </p>
       <ul>
         <li>{number(vehicle.mileage)} miles</li>
         <li>{vehicle.fuel}</li>

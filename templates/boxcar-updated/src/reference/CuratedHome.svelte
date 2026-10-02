@@ -2,7 +2,7 @@
 <script lang="ts">
 import {referencePage} from './interactions';
 import {brand} from '../data/brand';
-import {vehicles, money} from '../lib/catalog';
+import {vehicles} from '../lib/catalog';
 import {articles} from '../data/journal';
 import CuratedStock from './CuratedStock.svelte';
 </script>
@@ -29,37 +29,7 @@ import CuratedStock from './CuratedStock.svelte';
                     </div>
 
                     <div class="right-box">
-                        <div class="layout-search">
-                            <div class="search-box">
-                                <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M7.29301 1.2876C3.9872 1.2876 1.29431 3.98048 1.29431 7.28631C1.29431 10.5921 3.9872 13.2902 7.29301 13.2902C8.70502 13.2902 10.0036 12.7954 11.03 11.9738L13.5287 14.4712C13.6548 14.5921 13.8232 14.6588 13.9979 14.657C14.1725 14.6552 14.3395 14.5851 14.4631 14.4617C14.5867 14.3382 14.6571 14.1713 14.6591 13.9967C14.6611 13.822 14.5947 13.6535 14.474 13.5272L11.9753 11.0285C12.7976 10.0006 13.293 8.69995 13.293 7.28631C13.293 3.98048 10.5988 1.2876 7.29301 1.2876ZM7.29301 2.62095C9.87824 2.62095 11.9584 4.70108 11.9584 7.28631C11.9584 9.87153 9.87824 11.9569 7.29301 11.9569C4.70778 11.9569 2.62764 9.87153 2.62764 7.28631C2.62764 4.70108 4.70778 2.62095 7.29301 2.62095Z" fill="white"></path>
-                                </svg>  
-                                <input type="search" placeholder="Search cars…" class="show-search" name="name" value="" aria-label="Search cars">
-
-                            </div>
-                            <div class="box-content-search" id="box-content-search">
-                                <ul class="box-car-search">
-                                    <li><a href="/vehicle/{vehicles[0].slug}/" class="car-search-item">
-                                        <div class="box-img">
-                                            <img src="{vehicles[0].image}" alt="{vehicles[0].title}">
-                                        </div>
-                                        <div class="info">
-                                            <p class="name">{vehicles[0].title}</p>
-                                            <span class="price">{money(vehicles[0].price)}</span>
-                                        </div>
-                                    </a></li>
-                                    
-                                    
-                                    
-                                </ul>
-                                <a href="/inventory/" class="btn-view-search">View all cars <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                                                <g>
-                                                <path d="M13.6109 0H5.05533C4.84037 0 4.66643 0.173943 4.66643 0.388901C4.66643 0.603859 4.84037 0.777802 5.05533 0.777802H12.6721L0.113697 13.3362C-0.0382246 13.4881 -0.0382246 13.7342 0.113697 13.8861C0.18964 13.962 0.289171 14 0.388666 14C0.488161 14 0.587656 13.962 0.663635 13.8861L13.222 1.3277V8.94447C13.222 9.15943 13.3959 9.33337 13.6109 9.33337C13.8259 9.33337 13.9998 9.15943 13.9998 8.94447V0.388901C13.9998 0.173943 13.8258 0 13.6109 0Z" fill="currentColor"></path>
-                                                </g>
-                                                
-                                                </svg></a>
-                            </div>
-                        </div>
+                        
                         <a href="/favorites/" title="" class="box-account" aria-label="Saved cars"><i class="far fa-bookmark" aria-hidden="true"></i> Saved</a>
                         <div class="btn">
                             <a href="/contact/" class="header-btn-two">Contact us</a>
@@ -95,16 +65,7 @@ import CuratedStock from './CuratedStock.svelte';
                                 <div class="content-box">
                                     <span class="sub-title">Explore new and used cars, all in one place.</span>
                                     <h1>Find Your Perfect Car</h1>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-        </div>  
-        <div class="form-tab-content">
+                                <div class="form-tab-content">
             <div class="cus-container10"><div class="form-tab-pane current">
                             <form aria-label="Find your next car">
                                 <div class="form_boxes">
@@ -161,7 +122,16 @@ import CuratedStock from './CuratedStock.svelte';
                                 </div>
                             </form>
                         </div></div>
-        </div>
+        </div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>  
+        
     </section>
 <section class="vehicles-section-two curated-types">
         <div class="boxcar-container">
@@ -229,64 +199,64 @@ import CuratedStock from './CuratedStock.svelte';
             <div class="right-box">
                 
                 <div class="cars-block-five">
-                    <div class="inner-box wow fadeInUp">
+                    <a class="inner-box" href="/inventory/?make=Audi" aria-label="Browse Audi cars">
                         <div class="image-box">
-                            <figure class="image"><a href="/inventory/?make=Audi" aria-label="Browse Audi cars"><img src="/media/resource/brand5-1.png" alt="Audi" loading="lazy"></a></figure>
+                            <figure class="image"><img src="/media/resource/brand5-1.png" alt="Audi" loading="lazy"></figure>
                         </div>
                         <div class="content-box">
-                            <h6 class="title"><a href="/inventory/?make=Audi" aria-label="Browse Audi cars">Audi</a></h6>
+                            <h6 class="title">Audi</h6>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 <div class="cars-block-five">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="100ms">
+                    <a class="inner-box" href="/inventory/?make=BMW" aria-label="Browse BMW cars">
                         <div class="image-box">
-                            <figure class="image"><a href="/inventory/?make=BMW" aria-label="Browse BMW cars"><img src="/media/resource/brand5-2.png" alt="BMW" loading="lazy"></a></figure>
+                            <figure class="image"><img src="/media/resource/brand5-2.png" alt="BMW" loading="lazy"></figure>
                         </div>
                         <div class="content-box">
-                            <h6 class="title"><a href="/inventory/?make=BMW" aria-label="Browse BMW cars">BMW</a></h6>
+                            <h6 class="title">BMW</h6>
                         </div>
-                    </div>
-                </div>
-                
-                
-                
-                <div class="cars-block-five">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="300ms">
-                        <div class="image-box">
-                            <figure class="image"><a href="/inventory/?make=Mercedes-Benz" aria-label="Browse Mercedes-Benz cars"><img src="/media/resource/brand5-4.png" alt="Mercedes-Benz" loading="lazy"></a></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title"><a href="/inventory/?make=Mercedes-Benz" aria-label="Browse Mercedes-Benz cars">Mercedes-Benz</a></h6>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
                 
+                <div class="cars-block-five">
+                    <a class="inner-box" href="/inventory/?make=Mercedes-Benz" aria-label="Browse Mercedes-Benz cars">
+                        <div class="image-box">
+                            <figure class="image"><img src="/media/resource/brand5-4.png" alt="Mercedes-Benz" loading="lazy"></figure>
+                        </div>
+                        <div class="content-box">
+                            <h6 class="title">Mercedes-Benz</h6>
+                        </div>
+                    </a>
+                </div>
+                
+                
+                
                 
                 
                 <div class="cars-block-five">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="500ms">
+                    <a class="inner-box" href="/inventory/?make=Bentley" aria-label="Browse Bentley cars">
                         <div class="image-box">
-                            <figure class="image"><a href="/inventory/?make=Bentley" aria-label="Browse Bentley cars"><img src="/media/resource/brand5-7.png" alt="Bentley" loading="lazy"></a></figure>
+                            <figure class="image"><img src="/media/resource/brand5-7.png" alt="Bentley" loading="lazy"></figure>
                         </div>
                         <div class="content-box">
-                            <h6 class="title"><a href="/inventory/?make=Bentley" aria-label="Browse Bentley cars">Bentley</a></h6>
+                            <h6 class="title">Bentley</h6>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 <div class="cars-block-five">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="500ms">
+                    <a class="inner-box" href="/inventory/?make=Nissan" aria-label="Browse Nissan cars">
                         <div class="image-box">
-                            <figure class="image"><a href="/inventory/?make=Nissan" aria-label="Browse Nissan cars"><img src="/media/resource/brand5-8.png" alt="Nissan" loading="lazy"></a></figure>
+                            <figure class="image"><img src="/media/resource/brand5-8.png" alt="Nissan" loading="lazy"></figure>
                         </div>
                         <div class="content-box">
-                            <h6 class="title"><a href="/inventory/?make=Nissan" aria-label="Browse Nissan cars">Nissan</a></h6>
+                            <h6 class="title">Nissan</h6>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 
                 
@@ -312,7 +282,7 @@ import CuratedStock from './CuratedStock.svelte';
                     <div class="choose-us-block col-lg-3 col-md-6 col-sm-12">
                         <div class="inner-box wow fadeInUp">
                             <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="51" height="60" viewBox="0 0 51 60" fill="none">
-                                <g clip-path="url(#clip0_24_628-curated-4)">
+                                <g clip-path="url(#clip0_24_628-curated-2)">
                                     <path d="M22.9688 52.9676C22.9688 52.732 22.827 52.5195 22.6096 52.4289C20.0682 51.3695 18.2812 48.8627 18.2812 45.9375V23.4375C18.2812 20.5123 20.0682 18.0054 22.6096 16.9461C22.827 16.8555 22.9688 16.6429 22.9688 16.4074V16.4062H18.2812C14.398 16.4062 11.25 19.5543 11.25 23.4375V45.9375C11.25 49.8207 14.398 52.9688 18.2812 52.9688H22.9688V52.9676Z" fill="#EEF1FB"></path>
                                     <path d="M23.3708 41.3167L36.6292 28.0583" stroke="#FF5CF4" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                     <path d="M30 21.0938L44.0625 2.34375" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -320,7 +290,7 @@ import CuratedStock from './CuratedStock.svelte';
                                     <path d="M48.75 30V23.4375C48.75 19.5543 45.602 16.4062 41.7188 16.4062H38.0747C36.4508 13.6159 33.4612 11.7188 30 11.7188C26.5388 11.7188 23.5493 13.6159 21.9253 16.4062H18.2812C14.398 16.4062 11.25 19.5543 11.25 23.4375V45.9375C11.25 49.8207 14.398 52.9688 18.2812 52.9688H21.9253C23.5492 55.7591 26.5388 57.6562 30 57.6562C33.4612 57.6562 36.4507 55.7591 38.0747 52.9688H41.7188C45.602 52.9688 48.75 49.8207 48.75 45.9375V39.375" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                                 <defs>
-                                    <clipPath id="clip0_24_628-curated-4">
+                                    <clipPath id="clip0_24_628-curated-2">
                                     <rect width="51" height="60" fill="white"></rect>
                                     </clipPath>
                                 </defs>
@@ -356,7 +326,7 @@ import CuratedStock from './CuratedStock.svelte';
                     <div class="choose-us-block col-lg-3 col-md-6 col-sm-12">
                         <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                             <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
-                                <g clip-path="url(#clip0_24_681-curated-6)">
+                                <g clip-path="url(#clip0_24_681-curated-4)">
                                 <path d="M8.75576 36.7478L35.3054 10.198C37.136 8.36741 40.104 8.36741 41.9346 10.198L36.8955 5.15894C35.0649 3.32837 32.097 3.32837 30.2664 5.15894L3.71671 31.7087C1.88613 33.5393 1.88613 36.5073 3.71671 38.3378L8.75576 43.3768C6.92518 41.5462 6.92518 38.5783 8.75576 36.7478Z" fill="#EEF1FB"></path>
                                 <path d="M50.1537 18.4171C51.9843 20.2477 51.9843 23.2157 50.1537 25.0463L23.6039 51.5959C21.7734 53.4265 18.8054 53.4265 16.9748 51.5959L3.71671 38.3378C1.88613 36.5072 1.88613 33.5392 3.71671 31.7086L30.2664 5.15894C32.097 3.32836 35.0649 3.32836 36.8955 5.15894L43.5247 11.7881L52.9689 2.34387" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 <path d="M18.9633 31.0458C18.7631 32.4554 19.2051 33.9388 20.2894 35.0231C22.12 36.8537 25.088 36.8537 26.9186 35.0231C28.7492 33.1926 28.7492 30.2246 26.9186 28.394C25.088 26.5634 25.088 23.5954 26.9186 21.7648C28.7492 19.9342 31.7172 19.9342 33.5478 21.7648C34.6321 22.8491 35.0741 24.3325 34.8739 25.7421" stroke="#405FF2" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -365,7 +335,7 @@ import CuratedStock from './CuratedStock.svelte';
                                 <path d="M43.5938 57.6562L57.6563 43.5937" stroke="#FF5CF4" stroke-width="3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                                 <defs>
-                                <clipPath id="clip0_24_681-curated-6">
+                                <clipPath id="clip0_24_681-curated-4">
                                 <rect width="60" height="60" fill="white"></rect>
                                 </clipPath>
                                 </defs>
