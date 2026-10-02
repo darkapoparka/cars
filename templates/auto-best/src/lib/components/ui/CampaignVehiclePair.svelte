@@ -2,19 +2,22 @@
   import VehicleCutout from './VehicleCutout.svelte';
   import { getVehicleArtworkRatios, heroVehiclePairs, vehicleArtwork, type HeroVehiclePair } from '$data/vehicle-artwork';
 
-  let { pair, framing = 'hero', priority = false }: {
+  let { pair, framing = 'hero', priority = false, decoration = true }: {
     pair: HeroVehiclePair;
     framing?: 'hero' | 'search' | 'section';
     priority?: boolean;
+    decoration?: boolean;
   } = $props();
   const sides = ['left', 'right'] as const;
 </script>
 
-<div class="dn-campaign-vehicles" class:dn-campaign-vehicles--section={framing === 'section'} class:dn-campaign-vehicles--search={framing === 'search'} data-pair={pair} aria-hidden="true">
-  <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--left"></span>
-  <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--right"></span>
-  <span class="dn-campaign-vehicles__arc dn-campaign-vehicles__arc--left"></span>
-  <span class="dn-campaign-vehicles__arc dn-campaign-vehicles__arc--right"></span>
+<div class="dn-campaign-vehicles" class:dn-campaign-vehicles--section={framing === 'section'} class:dn-campaign-vehicles--search={framing === 'search'} class:dn-campaign-vehicles--plain={!decoration} data-pair={pair} aria-hidden="true">
+  {#if decoration}
+    <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--left"></span>
+    <span class="dn-campaign-vehicles__dots dn-campaign-vehicles__dots--right"></span>
+    <span class="dn-campaign-vehicles__arc dn-campaign-vehicles__arc--left"></span>
+    <span class="dn-campaign-vehicles__arc dn-campaign-vehicles__arc--right"></span>
+  {/if}
   {#each sides as side, index (side)}
     {@const vehicle = heroVehiclePairs[pair][index]}
     {@const artwork = vehicleArtwork[vehicle]}
@@ -44,6 +47,7 @@
       pointer-events: none;
       background: linear-gradient(180deg, transparent 45%, var(--dn-ink-deep));
     }
+    .dn-campaign-vehicles--plain { background: none; }
     .dn-campaign-vehicles__dots {
       position: absolute;
       top: 28%;

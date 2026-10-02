@@ -1,0 +1,52 @@
+{
+  "date": "2026-10-02",
+  "tool": "Built-in image_gen.imagegen through the imagegen skill; no CLI fallback.",
+  "purpose": "Decorative desktop Home body-type, brand, inventory and buying-advice section banner backgrounds.",
+  "constraints": "No text, identity, vehicles, UI or red lines. Keep the center quiet for existing live headings and actions.",
+  "delivery": "Full-frame WebP encoding using Sharp/libvips at quality 84 and effort 6. No crop, compositing or pixel retouching. Desktop CSS uses center/cover; media queries prevent use below 992px.",
+  "generatedSourceBackup": "Per-asset original PNG copies are preserved under the two ignored runtime/home-banner-backgrounds directories. Original generated images remain at the tool's default location.",
+  "assets": [
+    {
+      "name": "body",
+      "path": "static/assets/images/template/home-section-body-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for an existing premium automotive website's shallow desktop section banner, Browse by body type. Landscape panoramic composition approximately 3:1, 3072 by 1024 if possible. The site centers white heading text and a white pill button on top inside a banner approximately 1360 by 164. BACKGROUND ONLY, not UI.\nPrimary request: a restrained black graphite background with sweeping satin-metal contours at the far left and far right, suggesting sculpted automotive bodywork without depicting a car or an identifiable part. Layer two or three broad, gently curved graphite surfaces with softly lit silver-grey edges, plus very fine sparse halftone dots fading toward the center. Clean, believable material, precision and quiet visual depth. This belongs to the same dark perforated graphite family as a companion brand-discovery banner, but use flowing contoured planes instead of prominent grille perforations.\nComposition: detail only in outer 22 percent at each side. The central 56 percent is nearly flat charcoal approximately #15181d, entirely empty and uniform for text and button. Texture and satin highlights stay visible within the middle vertical quarter when cropped into an 8:1 strip. Balanced visual weight at both edges, extremely low-contrast highlights and no highlight running across the center.\nPalette: neutral graphite black, charcoal and restrained silver-grey. No blue, no gold, no red line, no luminous colors.\nConstraints: no cars, wheels, car silhouettes, manufacturer logos, letters, numbers, people, road, buildings, icons, UI, buttons, border, frame, watermark, sci-fi panels, chrome tubes, concentric rings, streaks, smoke, light flares or neon. No bright or busy detail behind centered copy. One full-bleed background plate.",
+      "generatedSource": "exec-519963bd-ccb7-4e78-bcc4-c80dab21c7ac.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 45896,
+      "format": "WebP"
+    },
+    {
+      "name": "brands",
+      "path": "static/assets/images/template/home-section-brands-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for an existing premium automotive website's shallow desktop section banner, Browse by brand. Generate landscape panoramic composition, approximately 3:1, 3072 by 1024 if possible. The site will center white text and a white pill button on top, in a banner about 1360 by 164; this is BACKGROUND ONLY, not a website mockup.\nPrimary request: refined black graphite automotive material texture with very subtle brushed-metal sculpting and precise fine circular perforations at the far left and far right. Small silver-grey dots dissolve gradually into a smooth, nearly flat center. At the outermost edges only, a softly lit curved graphite sheet suggests polished automotive craftsmanship, with understated satin highlights. Related to a dark automotive banner family with halftone dots.\nComposition: all meaningful texture contained at outer 22 percent on each side and inside the middle horizontal band. The central 56 percent is uninterrupted matte charcoal approximately #15181d, completely empty and uniform behind the title and button. Detail must remain visible when the image is cropped into an 8:1 strip across its center. Keep lighting physically believable, texture delicate, and visual weight balanced at both edges.\nPalette: neutral graphite black, dark charcoal, extremely restrained silver-grey highlights. No blue, no warm gold, no red line.\nConstraints: no cars, car parts, manufacturer logos, letters, numbers, icons, UI, buttons, frame, border, watermark, people, buildings, mountains, glossy sci-fi graphics, racing stripes, smoke, flares or neon. Do not add bright or busy detail near the center. One clean full-bleed background plate.",
+      "generatedSource": "exec-212c317c-f309-44fb-a7d6-87c466154817.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 87308,
+      "format": "WebP"
+    },
+    {
+      "name": "inventory",
+      "path": "static/assets/images/template/home-section-inventory-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a raster background plate for the existing Home automobile-inventory section of a premium automotive website. Landscape panoramic 3:1, about 3072 by 1024. The site crops the middle of this image into an 8:1 banner, centers a white heading and button, and places its EXISTING realistic transparent SUV cutouts at the outer sides. BACKGROUND ONLY.\nPrimary request: a refined neutral black graphite material texture from a cohesive banner family featuring satin sculpted-metal contours and fine perforated dots. This inventory variant uses broad shallow brushed-graphite panels at the outermost left and right, softly receding toward the center, with very small, sparse, low-contrast silver-grey perforations near the upper outer edges. Understated precision and calm automotive craftsmanship. Preserve large quiet dark regions where the site's vehicles will be composited.\nComposition: detailed material only in the outermost 18 percent on each side. The central 64 percent is empty, nearly flat matte charcoal around #15181d. All highlights and useful texture fit across the middle vertical quarter so they remain visible after an 8:1 center crop. Keep the lower middle strip dark and plain for the existing wheels and shadows. Balanced visual weight at both edges. No horizontal streak or bright edge crossing behind the title.\nPalette: graphite black, charcoal, restrained dark silver-grey. Physically believable satin highlights, much darker than polished chrome. No blue, no warm gold, no red line.\nConstraints: no vehicles, car parts, wheel silhouettes, people, roads, logos, letters, numbers, icons, UI, buttons, framing, borders, watermark, concentric rings, neon, smoke or flares. One clean full-bleed background plate. Do not paint cars; the website already supplies the cars.",
+      "generatedSource": "exec-a67c7a5d-cdab-4496-8019-24c77867dc35.png",
+      "backupPath": "runtime/home-banner-backgrounds-extension-20261002/source-inventory.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 24984,
+      "format": "WebP"
+    },
+    {
+      "name": "guides",
+      "path": "static/assets/images/template/home-section-guides-backdrop-v1.webp",
+      "prompt": "Use case: ads-marketing.\nAsset type: a finished raster background plate for the Home buying-advice/blog section banner of a premium automotive website. Landscape panoramic 3:1, about 3072 by 1024. The website crops the central horizontal strip to about 1360 by 164, supplies centered white live text and a white button, and composites two existing realistic silver/white car cutouts at the sides. BACKGROUND ONLY, no cars painted in the asset.\nPrimary request: quiet graphite black with fine perforated-dot fields and a very subtle curved brushed-metal surface entering from each outer edge. A related companion to a black satin automotive body-type texture and a perforated graphite brand-discovery banner. This advice variant is lighter in detail: finer dots, flatter material planes, broader calm dark space. Elegant and believable, restrained studio material photography.\nComposition: the central 64 percent is empty, nearly flat charcoal #15181d, fully clear behind text/button. Patterns limited to the outermost 18 percent at each edge, fading smoothly into the center. A thin soft silver-grey reflection on an outer curved surface suggests automotive precision. Texture concentrated in the middle vertical quarter so it survives an 8:1 center crop. The lower middle strip stays nearly black for car wheels and shadows. Balanced left/right visual weight. No bright diagonal or horizontal edge across the text area.\nPalette: neutral graphite black, charcoal and exceptionally restrained satin dark-silver highlights. No blue, no gold, no red lines.\nConstraints: no people, vehicles, car parts, logo, letters, numbers, books, pens, papers, icons, UI, buttons, border, frame, watermark, smoke, neon, flares, glossy chrome tubes or sci-fi imagery. One full-bleed background plate, no website mockup.",
+      "generatedSource": "exec-8615bbb6-42eb-43ac-add9-5f0425f835bb.png",
+      "backupPath": "runtime/home-banner-backgrounds-extension-20261002/source-guides.png",
+      "width": 2172,
+      "height": 724,
+      "bytes": 82630,
+      "format": "WebP"
+    }
+  ]
+}

@@ -321,8 +321,17 @@ the configured currency's narrow symbol and locale number formatting.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections share
 one charcoal banner, a white heading and a white action. Their existing car
-cutouts stay on the inventory and editorial banners; body and brand discovery
-use plain introductions. All content sections use the shared 32px section
+cutouts stay on the inventory and editorial banners. All four use related
+generated graphite backgrounds: sculpted satin contours for body types,
+fine perforated metal for brands, brushed panels for inventory and a quieter
+perforated surface for advice. Each keeps detail at the edges and a quiet center
+behind copy. `CampaignVehiclePair` disables its native dots, arcs and gradient
+only in the two Home sections, letting their new background sit behind the
+unchanged car pairs. `leadSite.artwork.homeSectionBackgrounds` owns the
+versioned WebP URLs; the Home route applies them only from 992px, so tablet and
+mobile do not request the artwork. Their original framing and rounded panel
+joins stay intact. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)
+record generation and delivery encodings. All content sections use the shared 32px section
 padding, giving adjacent panels the same 64px gap. The white content panel
 overlaps its banner by 24px, with rounded upper corners forming an inward curve
 at the join. Heading and action are centered within the visible banner above
