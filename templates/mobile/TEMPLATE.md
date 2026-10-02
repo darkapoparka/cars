@@ -13,7 +13,8 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
-The bottom navigation is Cars / Services / Contact. Saved cars live in the header
+The bottom navigation is Cars / Services / Contact, using one 24px outline icon
+family with a simple side-profile car. Saved cars live in the header
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
@@ -24,9 +25,59 @@ taxonomy and selection logic power a dedicated showroom list inside that editor.
 Compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
 Optional variants and exclusion live in a collapsed More options section.
-Services has All / Import / Sell your car tabs. Import and Sell show short overviews
-and start a three-step enquiry sheet. Drafts stay on the device; forms do not send
-an enquiry or invent a valuation.
+Inventory and import cards share 16:10 photo frames, 16px corners and compact
+12px body padding. Long vehicle names wrap within the card; inventory keeps its
+two single-line subtext rows. Photo save actions use the same outline-heart family
+as the header, with a 36px face inside a 48px button and an explicit pressed state.
+Services has three equal-width All / Import / Sell tabs that fill the viewport.
+Import uses a white starter card with a thin border, a small globe beside its
+heading and a neutral entry area; Sell keeps its white starter box. Their compact entry
+buttons open a three-step enquiry sheet at the optional VIN field. Under the tabs,
+secondary pills filter services, example import
+countries or sale purpose. Country and sale type prefill new enquiries; resumed
+drafts retain edits made inside the sheet. Import examples show illustrative
+country badges in a larger single-column mobile list, with two columns on desktop.
+Their origins are demo data, not evidence of
+completed dealer imports. Drafts stay on the device; forms do not send an enquiry,
+decode a VIN or invent a valuation.
+Import and Sell starter headings use the same 18px size. The entry summary stays
+on one line and exposes its full value through an accessible description and
+tooltip. Native 48px entry targets and smaller Start faces are retained.
+
+Underline tabs keep 52px targets and use a wider 3px active rail. Home and filter
+editor tabs scroll horizontally at their own widths. Services distributes its
+three categories equally across the viewport, allowing labels to wrap at larger
+text sizes. The wider indicator follows the retained native search reference.
+Home and service pills use
+lighter 32px outlined faces inside 48px targets, with neutral filled selection
+and a stronger selected border.
+Make/Model view selectors retain their 36px faces and 48px targets.
+Each service overview card is one native link, with a smaller 28px View/Enquire
+cue at top right and its description across the full width below. The All pill
+includes the service count, updated for the search query; no separate count row
+appears above the cards. Service detail CTAs have 36px painted faces inside 44px
+targets and use their natural width. Starter entries keep 48px targets with a
+smaller 32px Start face.
+
+Home places Sort in the quick-pill row, with Clear at its end when filters are
+active. Inventory starts directly below the controls, while the result count
+remains available to screen readers. Home and Services share a 44px search field
+with 16px input text. Text search stays inline; filter pills open the tabbed editor.
+Search uses one custom Clear action, suppresses the browser's extra search adornments
+and provides a Search keyboard action. Enter dismisses the keyboard after inline
+filtering; composition input is preserved. Pill, tab and bottom-navigation focus
+rings use the showroom accent and sit inside their targets. Toasts account for
+the phone's bottom safe area.
+Inventory cards keep two subtext rows: one variant line and one year/mileage/
+fuel/transmission line. Automatic is shortened to Auto in the compact facts;
+the full values remain in the detail page and the facts tooltip. Long rows
+truncate rather than creating a third line.
+
+Contact puts rounded grey Call us / Visit us actions on a white strip below the
+logo header. A white enquiry card sits in the grey section below, centered within
+620px on wider screens. Verified phone and directions enable the native links;
+missing details show inactive preview actions. Email is offered when configured.
+The compact Save enquiry draft button retains local storage and native validation.
 
 The imported marketplace screens and taxonomy remain reference source. Old
 `/search` and `/results` entry links resolve to Cars. Fixture data and local storage

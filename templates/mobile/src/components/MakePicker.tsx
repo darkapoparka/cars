@@ -70,13 +70,22 @@ function SelectionButton({
       aria-expanded={active}
       title={disabled ? 'Choose a make first' : value}
       onClick={onClick}
-      {...stylex.props(s.selector, active && s.selectorActive, disabled && s.selectorDisabled)}
+      {...stylex.props(s.selector)}
     >
-      <span {...stylex.props(s.selectorLabel)}>{label}</span>
-      <span {...stylex.props(s.selectorValue)}>
-        <span {...stylex.props(s.selectorText)}>{value}</span>
-        <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-          <Icon name={active ? 'up' : 'down'} size={16} />
+      <span
+        data-pill-surface
+        {...stylex.props(
+          s.selectorSurface,
+          active && s.selectorActive,
+          disabled && s.selectorDisabled,
+        )}
+      >
+        <span {...stylex.props(s.selectorLabel)}>{label}</span>
+        <span {...stylex.props(s.selectorValue)}>
+          <span {...stylex.props(s.selectorText)}>{value}</span>
+          <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
+            <Icon name={active ? 'up' : 'down'} size={14} />
+          </span>
         </span>
       </span>
     </button>

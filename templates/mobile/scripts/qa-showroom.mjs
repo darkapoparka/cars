@@ -184,6 +184,17 @@ async function run(name, engine) {
     await cars(4);
     assert.equal(await page.getByRole('button', { name: 'Filters', exact: true }).count(), 0);
     assert.equal(await page.locator('[data-quick-filter]').count(), 5);
+    const quickPillSizes = await page.locator('[data-quick-filter]').evaluateAll((buttons) =>
+      buttons.map((button) => ({
+        target: button.getBoundingClientRect().height,
+        face: button.querySelector('[data-pill-surface]').getBoundingClientRect().height,
+      })),
+    );
+    assert(
+      quickPillSizes.every(
+        ({ target, face }) => target >= 48 && face >= 32 && face <= 36 && face < target,
+      ),
+    );
     assert.deepEqual(
       await page
         .getByRole('navigation', { name: 'Main navigation' })
@@ -582,10 +593,30 @@ async function run(name, engine) {
         .getByRole('tablist', { name: 'Service category' })
         .getByRole('tab')
         .allTextContents(),
-      ['All', 'Import', 'Sell your car'],
+      ['All', 'Import', 'Sell'],
     );
     assert.equal(await page.locator('[data-showroom-service]').count(), 8);
     assert.equal(await page.locator('[data-showroom-service] dl').count(), 0);
+    await page
+      .getByRole('group', { name: 'Service filters', exact: true })
+      .getByRole('button', { name: 'Viewings', exact: true })
+      .click();
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-showroom-service]').length === 1,
+    );
+    assert.equal(await page.locator('[data-showroom-service="viewing"]').count(), 1);
+    assert.equal(new URL(page.url()).searchParams.get('topic'), 'viewing');
+    await page.reload({ waitUntil: 'load' });
+    assert.equal(
+      await page
+        .getByRole('button', { name: 'Viewings', exact: true })
+        .getAttribute('aria-pressed'),
+      'true',
+    );
+    await page.getByRole('button', { name: 'All services (8)', exact: true }).click();
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-showroom-service]').length === 8,
+    );
     await page.getByRole('searchbox', { name: 'Search services' }).fill('buy out');
     await page.waitForFunction(
       () => document.querySelectorAll('[data-showroom-service]').length === 1,
@@ -609,13 +640,47 @@ async function run(name, engine) {
     await selectedServiceTab('Import');
     await page.getByRole('button', { name: 'Start import enquiry', exact: true }).waitFor();
     assert.equal(await page.getByRole('form', { name: 'Car import enquiry' }).count(), 0);
-    assert.equal(await page.locator('[data-import-example]').count(), 2);
-    await page.getByRole('tab', { name: 'Import', exact: true }).press('ArrowRight');
-    await selectedServiceTab('Sell your car');
+    assert.equal(await page.locator('[data-import-example]').count(), 4);
+    const countryPills = page.getByRole('group', { name: 'Import countries', exact: true });
+    await countryPills.getByRole('button', { name: 'Canada', exact: true }).click();
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-import-example]').length === 1,
+    );
+    assert.equal(
+      await page.locator('[data-import-example][data-import-country="canada"]').count(),
+      1,
+    );
+    assert.equal(new URL(page.url()).searchParams.get('country'), 'canada');
+    await page.reload({ waitUntil: 'load' });
+    assert.equal(
+      await countryPills
+        .getByRole('button', { name: 'Canada', exact: true })
+        .getAttribute('aria-pressed'),
+      'true',
+    );
+    await page.getByRole('button', { name: 'Start import enquiry', exact: true }).click();
+    await page.waitForFunction(() => document.activeElement?.getAttribute('name') === 'vin');
+    await page.getByLabel('Make', { exact: true }).fill('BMW');
+    await page.getByLabel('Model', { exact: true }).fill('X3');
+    await page.getByRole('button', { name: 'Continue', exact: true }).click();
     assert.equal(
       await page
-        .getByRole('tab', { name: 'Sell your car', exact: true })
-        .getAttribute('aria-selected'),
+        .getByRole('group', { name: 'Import country preference', exact: true })
+        .getByRole('button', { name: 'Canada', exact: true })
+        .getAttribute('aria-pressed'),
+      'true',
+    );
+    await page.keyboard.press('Escape');
+    await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+    await countryPills.getByRole('button', { name: 'All countries', exact: true }).click();
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-import-example]').length === 4,
+    );
+    await page.evaluate(() => localStorage.removeItem('cars-mobile-service-request-v1:import'));
+    await page.getByRole('tab', { name: 'Import', exact: true }).press('ArrowRight');
+    await selectedServiceTab('Sell');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Sell', exact: true }).getAttribute('aria-selected'),
       'true',
     );
     assert.equal(await page.locator(':focus').getAttribute('id'), 'service-category-sell');
@@ -633,21 +698,44 @@ async function run(name, engine) {
       () =>
         document.querySelector('#service-category-sell')?.getAttribute('aria-selected') === 'true',
     );
-    await page.getByRole('tab', { name: 'Sell your car', exact: true }).press('Home');
+    await page.getByRole('tab', { name: 'Sell', exact: true }).press('Home');
     await selectedServiceTab('All');
     assert.equal(
       await page.getByRole('tab', { name: 'All', exact: true }).getAttribute('aria-selected'),
       'true',
     );
     await page.getByRole('tab', { name: 'All', exact: true }).press('End');
-    await selectedServiceTab('Sell your car');
+    await selectedServiceTab('Sell');
     assert.equal(
-      await page
-        .getByRole('tab', { name: 'Sell your car', exact: true })
-        .getAttribute('aria-selected'),
+      await page.getByRole('tab', { name: 'Sell', exact: true }).getAttribute('aria-selected'),
       'true',
     );
     check('All/Import/Sell tabs support keyboard focus, deep links, reload and Back/Forward');
+    await page
+      .getByRole('group', { name: 'Sale type', exact: true })
+      .getByRole('button', { name: 'Part exchange', exact: true })
+      .click();
+    assert.equal(new URL(page.url()).searchParams.get('saleType'), 'part-exchange');
+    await page.getByRole('button', { name: 'Start sale enquiry', exact: true }).click();
+    await page.waitForFunction(() => document.activeElement?.getAttribute('name') === 'vin');
+    assert.equal(await page.getByRole('form', { name: 'Car sale enquiry' }).count(), 1);
+    await page.getByLabel('Make', { exact: true }).fill('BMW');
+    await page.getByLabel('Model', { exact: true }).fill('X3');
+    await page.getByLabel('Year', { exact: true }).fill('2020');
+    await page.getByRole('button', { name: 'Continue', exact: true }).click();
+    assert.equal(
+      await page
+        .getByRole('group', { name: 'Sale preference', exact: true })
+        .getByRole('button', { name: 'Part exchange', exact: true })
+        .getAttribute('aria-pressed'),
+      'true',
+    );
+    await page.keyboard.press('Escape');
+    await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+    await page.evaluate(() => localStorage.removeItem('cars-mobile-service-request-v1:sell'));
+    check(
+      'Secondary service/country/purpose pills persist their URLs and banner entries open VIN-ready overlays',
+    );
     await go('/services?tab=unrecognized');
     assert.equal(
       await page.getByRole('tab', { name: 'All', exact: true }).getAttribute('aria-selected'),
@@ -735,7 +823,8 @@ async function run(name, engine) {
     assert.equal(await page.getByRole('form', { name: 'Car import enquiry' }).count(), 0);
     await importStart.click();
     await page.getByRole('dialog', { name: 'Import a car', exact: true }).waitFor();
-    await page.waitForFunction(() => document.activeElement?.textContent === 'Your preferred car');
+    await page.waitForFunction(() => document.activeElement?.getAttribute('name') === 'vin');
+    await page.getByLabel('VIN (optional)', { exact: true }).fill('WBA12345678901234');
     await page.getByRole('button', { name: 'Continue', exact: true }).focus();
     await page.keyboard.press('Tab');
     assert.equal(await page.locator(':focus').getAttribute('aria-label'), 'Close enquiry');
@@ -760,6 +849,10 @@ async function run(name, engine) {
     await page.getByLabel('Maximum budget (€)', { exact: true }).fill('35000');
     await page.getByRole('button', { name: 'Back', exact: true }).click();
     assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
+    assert.equal(
+      await page.getByLabel('VIN (optional)', { exact: true }).inputValue(),
+      'WBA12345678901234',
+    );
     await page.goBack();
     await enquiry.waitFor({ state: 'hidden' });
     assert.equal(new URL(page.url()).searchParams.get('tab'), 'import');
@@ -811,8 +904,8 @@ async function run(name, engine) {
     );
     await page.getByRole('link', { name: 'View service', exact: true }).click();
     await selectedServiceTab('Import');
-    await page.getByRole('tab', { name: 'Sell your car', exact: true }).click();
-    await selectedServiceTab('Sell your car');
+    await page.getByRole('tab', { name: 'Sell', exact: true }).click();
+    await selectedServiceTab('Sell');
     assert.equal(await page.getByRole('form', { name: 'Car sale enquiry' }).count(), 0);
     await saleStart.click();
     await page.getByRole('dialog', { name: 'Sell your car', exact: true }).waitFor();

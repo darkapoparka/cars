@@ -554,10 +554,20 @@ import {
   searchShowroomServices,
   serviceCategoryHref,
   serviceSearchHref,
+  serviceQuickFiltersFor,
+  serviceQuickFilter,
+  serviceQuickFilterHref,
+  importCountries,
+  importCountry,
+  importCountryHref,
+  importExamplesFor,
+  saleEnquiryType,
+  saleEnquiryHref,
 } from '../.qa/domain/showroom-services.mjs';
 import {
   emptyServiceRequest,
   normalizeServiceRequest,
+  seedServiceRequest,
   parseServiceRequest,
   serializeServiceRequest,
   serviceRequestStorageKey,
@@ -618,14 +628,14 @@ test('service tabs omit categories the dealer does not offer', () => {
     serviceCategoriesFor(showroomServices.filter((service) => service.category !== 'import')),
     [
       { value: 'services', label: 'All' },
-      { value: 'sell', label: 'Sell your car' },
+      { value: 'sell', label: 'Sell' },
     ],
   );
   assert.deepEqual(serviceCategoriesFor([]), [{ value: 'services', label: 'All' }]);
   assert.deepEqual(serviceCategoriesFor(showroomServices), [
     { value: 'services', label: 'All' },
     { value: 'import', label: 'Import' },
-    { value: 'sell', label: 'Sell your car' },
+    { value: 'sell', label: 'Sell' },
   ]);
 });
 
@@ -658,6 +668,164 @@ test('service search URLs encode text and retain existing finance/parts deep lin
     new URL(serviceSearchHref(query), 'https://example.test').searchParams.get('q'),
     query,
   );
+});
+
+test('service pills preserve search context, existing detail URLs and available offerings', () => {
+  const query = 'test drive & viewing';
+  const url = new URL(serviceQuickFilterHref('viewing', query), 'https://example.test');
+  assert.equal(url.searchParams.get('topic'), 'viewing');
+  assert.equal(url.searchParams.get('q'), query);
+  assert.equal(serviceQuickFilterHref('financing', query), '/services?tab=financing');
+  assert.equal(serviceQuickFilterHref('parts'), '/services?tab=parts');
+  assert.equal(serviceQuickFilter('unavailable'), 'all');
+  assert.deepEqual(
+    serviceQuickFiltersFor(showroomServices.filter((service) => service.id === 'parts')).map(
+      ({ value }) => value,
+    ),
+    ['all', 'parts'],
+  );
+  assert.deepEqual(
+    serviceQuickFiltersFor([]).map(({ value }) => value),
+    ['all'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'Canada').map(({ id }) => id),
+    ['import'],
+  );
+});
+
+test('country pills filter illustrative imports backed by local vehicle assets', () => {
+  const examples = importExamplesFor('all');
+  assert.equal(examples.length, 4);
+  assert.equal(new Set(examples.map(({ vehicleId }) => vehicleId)).size, examples.length);
+  for (const { value } of importCountries) {
+    const countryExamples = importExamplesFor(value);
+    assert(countryExamples.length > 0);
+    assert(countryExamples.every((example) => value === 'all' || example.country === value));
+    assert(
+      countryExamples.every(
+        (example) => vehicles.find((vehicle) => vehicle.id === example.vehicleId)?.images.length,
+      ),
+    );
+    assert.equal(
+      importCountry(
+        new URL(importCountryHref(value), 'https://example.test').searchParams.get('country'),
+      ),
+      value,
+    );
+  }
+  assert.equal(importCountry('unrecognized'), 'all');
+  assert.deepEqual(
+    importExamplesFor('canada').map(({ vehicleId }) => vehicleId),
+    ['bmw-x3'],
+  );
+  assert.equal(
+    saleEnquiryType(
+      new URL(saleEnquiryHref('part-exchange'), 'https://example.test').searchParams.get(
+        'saleType',
+      ),
+    ),
+    'part-exchange',
+  );
+  assert.equal(saleEnquiryType('unrecognized'), 'buyout');
+});
+
+test('new enquiry context preserves car details and isolates country from sale purpose', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    make: 'BMW',
+    model: 'X3',
+    vin: 'wba12345678901234',
+    country: 'germany',
+    saleType: 'buyout',
+    budget: '35000',
+    mileage: '82000',
+    email: 'owner@example.test',
+  };
+  const baseline = structuredClone(values);
+  const imported = seedServiceRequest('import', values, { country: 'canada' });
+  assert.deepEqual(values, baseline);
+  assert.equal(imported.country, 'canada');
+  assert.equal(imported.vin, 'WBA12345678901234');
+  assert.equal(imported.model, 'X3');
+  assert.equal(imported.budget, '35000');
+  assert.equal(imported.saleType, '');
+  assert.equal(imported.mileage, '');
+  assert.deepEqual(
+    parseServiceRequest('import', serializeServiceRequest('import', imported)),
+    imported,
+  );
+  assert.equal(seedServiceRequest('import', imported, { country: 'all' }).country, 'canada');
+  const sold = seedServiceRequest('sell', values, { saleType: 'part-exchange' });
+  assert.equal(sold.saleType, 'part-exchange');
+  assert.equal(sold.country, '');
+  assert.equal(sold.budget, '');
+  assert.equal(sold.email, 'owner@example.test');
+  assert.deepEqual(parseServiceRequest('sell', serializeServiceRequest('sell', sold)), sold);
+});
+
+test('existing version-one drafts remain usable without new optional fields', () => {
+  const restored = parseServiceRequest(
+    'import',
+    JSON.stringify({
+      version: 1,
+      kind: 'import',
+      values: { make: 'BMW', model: 'X6', budget: '35000' },
+    }),
+  );
+  assert.equal(restored.vin, '');
+  assert.equal(restored.country, '');
+  assert.equal(restored.saleType, '');
+  assert.deepEqual(validateServiceRequest('import', restored, 2026), {});
+});
+
+test('optional VIN is validated on the car step without inventing decoded car details', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    vin: 'WBA12345678901234',
+    make: 'BMW',
+    model: 'X3',
+    year: '2020',
+    mileage: '0',
+    budget: '35000',
+  };
+  for (const kind of ['import', 'sell']) {
+    assert.deepEqual(validateServiceRequest(kind, values, 2026), {});
+    assert.deepEqual(validateServiceRequestStep(kind, 0, { ...values, vin: '' }, 2026), {});
+    const invalid = validateServiceRequest(kind, { ...values, vin: 'too-short' }, 2026);
+    assert(invalid.vin);
+    assert.equal(serviceRequestErrorStep(kind, invalid), 0);
+    assert(validateServiceRequest(kind, { ...values, make: '' }, 2026).make);
+  }
+});
+
+test('country and sale purpose reach only the matching enquiry and validate on Details', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    make: 'BMW',
+    model: 'X3',
+    vin: 'WBA12345678901234',
+    country: 'canada',
+    saleType: 'part-exchange',
+    year: '2020',
+    mileage: '0',
+    budget: '35000',
+  };
+  const imported = serviceRequestMessage('import', values);
+  const sold = serviceRequestMessage('sell', values);
+  assert.match(imported, /Import country: Canada/);
+  assert.match(imported, /VIN: WBA12345678901234/);
+  assert.doesNotMatch(imported, /Sale type:/);
+  assert.match(sold, /Sale type: Part exchange/);
+  assert.doesNotMatch(sold, /Import country:|Maximum budget/);
+  assert(
+    validateServiceRequestStep('import', 1, { ...values, country: 'unrecognized' }, 2026).country,
+  );
+  assert(
+    validateServiceRequestStep('sell', 1, { ...values, saleType: 'unrecognized' }, 2026).saleType,
+  );
+  assert.equal(serviceRequestErrorStep('import', { country: 'invalid' }), 1);
+  assert.equal(serviceRequestErrorStep('sell', { saleType: 'invalid' }), 1);
 });
 
 test('import and sale drafts are isolated, normalized and round-trip independently', () => {

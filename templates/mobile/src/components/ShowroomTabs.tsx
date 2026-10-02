@@ -5,25 +5,27 @@ import { colors } from '@/styles/tokens.stylex';
 
 const s = stylex.create({
   rail: {
-    display: 'grid',
-    gridAutoFlow: 'column',
-    gridAutoColumns: 'minmax(max-content,1fr)',
+    display: 'flex',
     overflowX: 'auto',
     scrollbarWidth: 'none',
     minHeight: 52,
     marginTop: 8,
+    paddingInline: 16,
     backgroundColor: colors.background,
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     borderBottomColor: colors.line,
+    boxShadow: '0 2px 3px #00000008',
   },
+  fillRail: { paddingInline: 0, overflowX: 'visible' },
   tab: {
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minWidth: 48,
+    minWidth: 72,
     minHeight: 52,
+    flexShrink: 0,
     paddingInline: 4,
     paddingBlock: 3,
     borderWidth: 0,
@@ -34,12 +36,22 @@ const s = stylex.create({
     fontWeight: 500,
     whiteSpace: 'nowrap',
     outlineOffset: -3,
+    outlineColor: colors.accent,
   },
   textTab: {
-    minWidth: 64,
     paddingInline: 16,
     paddingBlock: 10,
     fontSize: 16,
+  },
+  iconTab: { minWidth: 76, paddingInline: 18 },
+  fillTab: {
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 0,
+    minWidth: 0,
+    paddingInline: 8,
+    whiteSpace: 'normal',
+    overflowWrap: 'anywhere',
   },
   selected: {
     color: colors.accent,
@@ -55,6 +67,7 @@ const s = stylex.create({
       backgroundColor: colors.accent,
     },
   },
+  selectedText: { fontWeight: 600 },
 });
 
 export function ShowroomTabs<T extends string>({
@@ -64,6 +77,7 @@ export function ShowroomTabs<T extends string>({
   panelId,
   idPrefix,
   variant = 'text',
+  layout = 'scroll',
   onChange,
 }: {
   label: string;
@@ -72,6 +86,7 @@ export function ShowroomTabs<T extends string>({
   panelId: string;
   idPrefix: string;
   variant?: 'text' | 'icon';
+  layout?: 'scroll' | 'fill';
   onChange: (value: T) => void;
 }) {
   const activeTab = useRef<HTMLButtonElement | null>(null);
@@ -92,7 +107,11 @@ export function ShowroomTabs<T extends string>({
     return () => observer.disconnect();
   }, [selected]);
   return (
-    <div role="tablist" aria-label={label} {...stylex.props(s.rail)}>
+    <div
+      role="tablist"
+      aria-label={label}
+      {...stylex.props(s.rail, layout === 'fill' && s.fillRail)}
+    >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
         <button
           key={value}
@@ -127,7 +146,10 @@ export function ShowroomTabs<T extends string>({
           {...stylex.props(
             s.tab,
             variant === 'text' && s.textTab,
+            variant === 'icon' && s.iconTab,
+            layout === 'fill' && s.fillTab,
             selected === value && s.selected,
+            selected === value && variant === 'text' && s.selectedText,
           )}
         >
           {content ?? tabLabel}

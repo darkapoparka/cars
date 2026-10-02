@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Clock3, Mail, MapPin, Phone } from 'lucide-react';
@@ -15,13 +15,24 @@ import {
   searchShowroomServices,
   showroomService,
   showroomServices,
+  importCountries,
+  importCountry,
+  importCountryHref,
+  saleEnquiryTypes,
+  saleEnquiryType,
+  saleEnquiryHref,
+  serviceQuickFiltersFor,
+  serviceQuickFilter,
+  serviceQuickFilterHref,
   type ServiceTab,
+  type ServiceQuickFilter,
 } from '@/lib/showroom-services';
 import { notify, saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { ShowroomServiceRequest } from './ShowroomServiceRequest';
 import { ShowroomImportExamples } from './ShowroomImportExamples';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
@@ -38,8 +49,6 @@ const s = stylex.create({
   head: { paddingBlock: 12, marginBottom: 20, display: 'flex', flexDirection: 'column', gap: 8 },
   title: { fontSize: 28, lineHeight: '36px', fontWeight: 700 },
   intro: { fontSize: 16, lineHeight: '24px', color: colors.muted },
-  pageHead: { display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 16 },
-  pageTitle: { fontSize: 24, lineHeight: '32px', fontWeight: 700 },
   subTitle: { fontSize: 18, lineHeight: '24px', fontWeight: 700 },
   tabs: {
     position: 'sticky',
@@ -47,44 +56,72 @@ const s = stylex.create({
     zIndex: 25,
     backgroundColor: colors.background,
     paddingTop: 4,
-    paddingBottom: 6,
+    paddingBottom: 0,
   },
-  serviceCount: { fontSize: 14, lineHeight: '22px', color: colors.muted, marginBottom: 12 },
   serviceFlow: {
     display: 'grid',
     gridTemplateColumns: {
       default: 'minmax(0,1fr)',
-      '@media (min-width: 700px)': 'minmax(0,1.2fr) minmax(0,.8fr)',
+      '@media (min-width: 700px)': 'minmax(0,1fr)',
     },
     alignItems: 'start',
     gap: 20,
     maxWidth: 1040,
     marginInline: 'auto',
   },
-  saleFlow: { gridTemplateColumns: 'minmax(0,1fr)', maxWidth: 620 },
+  saleFlow: { gridTemplateColumns: 'minmax(0,1fr)', maxWidth: 720 },
   serviceGrid: {
     display: 'grid',
-    gridTemplateColumns: { default: '1fr', '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))' },
+    gridTemplateColumns: {
+      default: 'minmax(0,1fr)',
+      '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
+    },
     alignItems: 'start',
     gap: 8,
     maxWidth: 1040,
     marginInline: 'auto',
   },
   serviceCard: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) auto',
     alignItems: 'center',
-    gap: 12,
+    columnGap: 8,
+    rowGap: 4,
     backgroundColor: colors.background,
     borderRadius: 12,
-    paddingBlock: 14,
+    paddingBlock: 12,
     paddingInline: 14,
     minWidth: 0,
+  },
+  serviceCardLink: {
+    color: colors.text,
+    textDecoration: 'none',
+    backgroundColor: { default: colors.background, ':hover': colors.panel },
+    outlineColor: colors.accent,
+    outlineOffset: 3,
+  },
+  serviceCardCopy: { gridColumn: '1 / -1' },
+  serviceCardCue: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    justifySelf: 'end',
+    minHeight: 28,
+    paddingBlock: 4,
+    paddingInline: 9,
+    borderRadius: 14,
+    backgroundColor: colors.controlSurface,
+    color: colors.muted,
+    fontSize: 12,
+    fontWeight: 500,
+    lineHeight: '20px',
+    whiteSpace: 'nowrap',
   },
   serviceDetail: {
     display: 'grid',
     gridTemplateColumns: 'minmax(0,1fr)',
     alignItems: 'start',
+    gap: 12,
     borderRadius: 16,
     padding: 20,
   },
@@ -96,29 +133,41 @@ const s = stylex.create({
     gap: 4,
     minWidth: 0,
   },
-  serviceRowBody: { flex: '1 1 180px' },
-  serviceTitle: { fontSize: 16, lineHeight: '22px', fontWeight: 600 },
-  serviceCopy: { fontSize: 14, lineHeight: '20px', color: colors.muted },
+  serviceTitle: { fontSize: 16, lineHeight: '22px', fontWeight: 600, overflowWrap: 'anywhere' },
+  serviceCopy: { fontSize: 14, lineHeight: '20px', color: colors.muted, overflowWrap: 'anywhere' },
   serviceAction: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 44,
-    minWidth: 80,
     flexShrink: 0,
-    paddingBlock: 10,
+    padding: 0,
+    borderRadius: 18,
+    textDecoration: 'none',
+    outlineColor: colors.accent,
+  },
+  serviceActionFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: 36,
+    paddingBlock: 7,
     paddingInline: 12,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 8,
-    backgroundColor: { default: colors.background, ':hover': colors.stripe },
+    borderRadius: 18,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     color: colors.text,
     fontSize: 14,
     fontWeight: 500,
     lineHeight: '20px',
-    textDecoration: 'none',
-    outlineColor: colors.accent,
+  },
+  serviceActionPrimary: {
+    backgroundColor: { default: colors.accent, ':hover': colors.accent },
+    borderColor: colors.accent,
+    color: '#fff',
+    fontWeight: 600,
   },
   serviceDetailAction: { gridColumn: '1 / -1', marginTop: 4 },
   serviceDetails: {
@@ -133,16 +182,18 @@ const s = stylex.create({
   detailCopy: { fontSize: 14, lineHeight: '20px', color: colors.muted },
   contactGrid: {
     display: 'grid',
-    gridTemplateColumns: {
-      default: '1fr',
-      '@media (min-width: 700px)': 'minmax(0,1.2fr) minmax(0,.8fr)',
-    },
+    gridTemplateColumns: 'minmax(0,1fr)',
     alignItems: 'start',
     gap: 12,
   },
-  contactContainer: { maxWidth: 1040, marginInline: 'auto' },
-  contactSingle: { maxWidth: 620 },
-  singleColumn: { gridTemplateColumns: '1fr' },
+  contactPage: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: 'calc(100dvh - 124px)',
+  },
+  contactIntro: { backgroundColor: colors.background, paddingInline: 16, paddingBlock: 12 },
+  contactBody: { flex: '1', minHeight: 0 },
+  contactContainer: { maxWidth: 620, marginInline: 'auto', minWidth: 0 },
   grid: {
     display: 'grid',
     gridTemplateColumns: { default: '1fr', '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))' },
@@ -160,44 +211,51 @@ const s = stylex.create({
   },
   body: { fontSize: 15, lineHeight: '22px', color: colors.muted },
   contactActions: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 8,
-    marginBottom: 16,
-  },
-  contactSecondary: {
     display: 'grid',
-    gridAutoFlow: 'column',
-    gridAutoColumns: 'minmax(0,1fr)',
-    gap: 8,
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    gap: 12,
   },
   contactAction: {
+    display: 'inline-flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    minHeight: 48,
+    minWidth: 0,
+    padding: 0,
+    borderWidth: 0,
+    borderRadius: 22,
+    backgroundColor: 'transparent',
+    textDecoration: 'none',
+    outlineColor: colors.accent,
+    cursor: { default: 'pointer', ':disabled': 'default' },
+  },
+  contactActionFace: {
     display: 'flex',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     gap: 8,
-    minHeight: 48,
+    width: '100%',
+    minHeight: 44,
     paddingBlock: 10,
     paddingInline: 12,
-    borderRadius: 12,
-    backgroundColor: colors.background,
+    borderRadius: 22,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
+    borderColor: 'transparent',
     color: colors.text,
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: 500,
     lineHeight: '20px',
-    textDecoration: 'none',
     overflowWrap: 'anywhere',
   },
-  contactPrimary: {
-    backgroundColor: colors.accent,
-    borderColor: colors.accent,
-    color: '#fff',
-    fontWeight: 600,
+  contactActionUnavailable: {
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
+    color: colors.muted,
   },
+  contactExtraAction: { gridColumn: '1 / -1', justifySelf: 'center', minWidth: 144 },
+  contactAvailability: { marginTop: 8 },
+  contactSubmit: { alignSelf: 'flex-start', borderWidth: 0, backgroundColor: 'transparent' },
   info: { display: 'flex', flexDirection: 'column', gap: 12 },
   infoRow: { display: 'flex', alignItems: 'flex-start', gap: 10 },
   infoIcon: { display: 'inline-flex', color: colors.muted, flexShrink: 0, marginTop: 2 },
@@ -297,14 +355,28 @@ export function ShowroomServicesScreen() {
       ? showroomService(params.get('tab') || '')
       : undefined;
   const overview = selected === 'services' && !detail;
-  const shown = overview ? searchShowroomServices(showroomServices, query) : detail ? [detail] : [];
+  const country = importCountry(params.get('country'));
+  const saleType = saleEnquiryType(params.get('saleType'));
+  const quickFilters = serviceQuickFiltersFor(showroomServices);
+  const requestedQuickFilter = serviceQuickFilter(detail?.id || params.get('topic'));
+  const quickFilter =
+    quickFilters.find(({ value }) => value === requestedQuickFilter)?.value || 'all';
+  const matchingServices = searchShowroomServices(showroomServices, query);
+  const shown = overview
+    ? matchingServices.filter((service) => quickFilter === 'all' || service.id === quickFilter)
+    : detail
+      ? [detail]
+      : [];
   function selectCategory(value: ServiceTab) {
     if (value === selected && !query && !detail) return;
     window.history.pushState(null, '', serviceCategoryHref(value));
     window.scrollTo(0, 0);
   }
   function search(value: string) {
-    window.history.replaceState(null, '', serviceSearchHref(value));
+    window.history.replaceState(null, '', serviceSearchHref(value, overview ? quickFilter : 'all'));
+  }
+  function selectServiceFilter(value: ServiceQuickFilter) {
+    window.history.pushState(null, '', serviceQuickFilterHref(value, query));
   }
   return (
     <>
@@ -318,8 +390,52 @@ export function ShowroomServicesScreen() {
           selected={selected}
           panelId="showroom-services"
           idPrefix="service-category-"
+          layout="fill"
           onChange={selectCategory}
         />
+        {selected === 'import' ? (
+          <ShowroomQuickPills label="Import countries">
+            {importCountries.map(({ value, label }) => (
+              <ShowroomQuickPill
+                key={value}
+                active={country === value}
+                aria-pressed={country === value}
+                onClick={() => window.history.pushState(null, '', importCountryHref(value))}
+              >
+                {label}
+              </ShowroomQuickPill>
+            ))}
+          </ShowroomQuickPills>
+        ) : selected === 'sell' ? (
+          <ShowroomQuickPills label="Sale type">
+            {saleEnquiryTypes.map(({ value, label }) => (
+              <ShowroomQuickPill
+                key={value}
+                active={saleType === value}
+                aria-pressed={saleType === value}
+                onClick={() => window.history.pushState(null, '', saleEnquiryHref(value))}
+              >
+                {label}
+              </ShowroomQuickPill>
+            ))}
+          </ShowroomQuickPills>
+        ) : (
+          <ShowroomQuickPills label="Service filters">
+            {quickFilters.map(({ value, label }) => (
+              <ShowroomQuickPill
+                key={value}
+                active={quickFilter === value}
+                aria-pressed={quickFilter === value}
+                aria-label={
+                  value === 'all' ? 'All services (' + matchingServices.length + ')' : label
+                }
+                onClick={() => selectServiceFilter(value)}
+              >
+                {value === 'all' ? 'All (' + matchingServices.length + ')' : label}
+              </ShowroomQuickPill>
+            ))}
+          </ShowroomQuickPills>
+        )}
       </div>
       <div
         id="showroom-services"
@@ -328,84 +444,98 @@ export function ShowroomServicesScreen() {
         {...stylex.props(s.page, s.servicesPage)}
       >
         {overview && (
-          <p aria-live="polite" {...stylex.props(s.serviceCount)}>
+          <p aria-live="polite" {...stylex.props(ui.srOnly)}>
             {shown.length} {shown.length === 1 ? 'service' : 'services'}
           </p>
         )}
         {selected === 'import' || selected === 'sell' ? (
           <div {...stylex.props(s.serviceFlow, selected === 'sell' && s.saleFlow)}>
-            <ShowroomServiceRequest key={selected} kind={selected} />
-            {selected === 'import' && <ShowroomImportExamples />}
+            <ShowroomServiceRequest
+              key={selected}
+              kind={selected}
+              country={country}
+              saleType={saleType}
+            />
+            {selected === 'import' && <ShowroomImportExamples country={country} />}
           </div>
         ) : shown.length ? (
           <div {...stylex.props(s.serviceGrid, !overview && s.singleCategory)}>
-            {shown.map((service) => {
-              return (
+            {shown.map((service) =>
+              overview ? (
+                <Link
+                  key={service.id}
+                  data-showroom-service={service.id}
+                  href={
+                    service.details || service.category === 'import' || service.category === 'sell'
+                      ? serviceCategoryHref(service.category)
+                      : '/contact?service=' + service.id
+                  }
+                  aria-label={
+                    service.details ? 'View ' + service.title.toLowerCase() : service.action
+                  }
+                  aria-describedby={'showroom-service-' + service.id + '-copy'}
+                  {...stylex.props(s.serviceCard, s.serviceCardLink)}
+                >
+                  <h2 {...stylex.props(s.serviceTitle)}>{service.title}</h2>
+                  <span data-service-card-cue {...stylex.props(s.serviceCardCue)}>
+                    {service.details || service.category === 'import' || service.category === 'sell'
+                      ? 'View'
+                      : 'Enquire'}
+                  </span>
+                  <p
+                    id={'showroom-service-' + service.id + '-copy'}
+                    {...stylex.props(s.serviceCopy, s.serviceCardCopy)}
+                  >
+                    {service.copy}
+                  </p>
+                </Link>
+              ) : (
                 <section
                   key={service.id}
                   data-showroom-service={service.id}
-                  {...stylex.props(s.serviceCard, !overview && s.serviceDetail)}
+                  {...stylex.props(s.serviceCard, s.serviceDetail)}
                 >
-                  <div {...stylex.props(s.serviceBody, overview && s.serviceRowBody)}>
-                    <h2 {...stylex.props(overview ? s.serviceTitle : s.subTitle)}>
-                      {service.title}
-                    </h2>
-                    <p
-                      id={'showroom-service-' + service.id + '-copy'}
-                      {...stylex.props(overview ? s.serviceCopy : s.body)}
-                    >
+                  <div {...stylex.props(s.serviceBody)}>
+                    <h2 {...stylex.props(s.subTitle)}>{service.title}</h2>
+                    <p id={'showroom-service-' + service.id + '-copy'} {...stylex.props(s.body)}>
                       {service.copy}
                     </p>
                   </div>
-                  {overview ? (
+                  {service.details && (
+                    <dl {...stylex.props(s.serviceDetails)}>
+                      {service.details.map((detail) => (
+                        <div key={detail.label}>
+                          <dt {...stylex.props(s.detailTitle)}>{detail.label}</dt>
+                          <dd {...stylex.props(s.detailCopy)}>{detail.copy}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  )}
+                  <div {...stylex.props(s.serviceDetailAction)}>
                     <Link
-                      href={
-                        service.details ||
-                        service.category === 'import' ||
-                        service.category === 'sell'
-                          ? serviceCategoryHref(service.category)
-                          : '/contact?service=' + service.id
-                      }
-                      aria-label={
-                        service.details ? 'View ' + service.title.toLowerCase() : service.action
-                      }
-                      aria-describedby={'showroom-service-' + service.id + '-copy'}
+                      href={'/contact?service=' + service.id}
                       {...stylex.props(s.serviceAction)}
                     >
-                      {service.details ||
-                      service.category === 'import' ||
-                      service.category === 'sell'
-                        ? 'View'
-                        : 'Enquire'}
+                      <span
+                        data-service-action-surface
+                        {...stylex.props(s.serviceActionFace, s.serviceActionPrimary)}
+                      >
+                        {service.action}
+                      </span>
                     </Link>
-                  ) : (
-                    <>
-                      {service.details && (
-                        <dl {...stylex.props(s.serviceDetails)}>
-                          {service.details.map((detail) => (
-                            <div key={detail.label}>
-                              <dt {...stylex.props(s.detailTitle)}>{detail.label}</dt>
-                              <dd {...stylex.props(s.detailCopy)}>{detail.copy}</dd>
-                            </div>
-                          ))}
-                        </dl>
-                      )}
-                      <div {...stylex.props(s.serviceDetailAction)}>
-                        <Button href={'/contact?service=' + service.id} block>
-                          {service.action}
-                        </Button>
-                      </div>
-                    </>
-                  )}
+                  </div>
                 </section>
-              );
-            })}
+              ),
+            )}
           </div>
         ) : (
           <div {...stylex.props(ui.empty)}>
             <h2 {...stylex.props(ui.title)}>No services found</h2>
             <p>Try another search or browse all services.</p>
-            <Button variant="outline" onClick={() => search('')}>
+            <Button
+              variant="outline"
+              onClick={() => window.history.replaceState(null, '', '/services')}
+            >
               Show all services
             </Button>
           </div>
@@ -419,6 +549,36 @@ export function ShowroomServicesScreen() {
   );
 }
 
+function ShowroomContactAction({
+  href,
+  children,
+  extra = false,
+}: {
+  href: string | null;
+  children: ReactNode;
+  extra?: boolean;
+}) {
+  const face = (
+    <span {...stylex.props(s.contactActionFace, !href && s.contactActionUnavailable)}>
+      {children}
+    </span>
+  );
+  return href ? (
+    <a href={href} {...stylex.props(s.contactAction, extra && s.contactExtraAction)}>
+      {face}
+    </a>
+  ) : (
+    <button
+      type="button"
+      disabled
+      aria-describedby="contact-option-availability"
+      {...stylex.props(s.contactAction, extra && s.contactExtraAction)}
+    >
+      {face}
+    </button>
+  );
+}
+
 export function ShowroomContactScreen({
   vehicle,
   serviceId,
@@ -428,8 +588,8 @@ export function ShowroomContactScreen({
 }) {
   const { messageDrafts } = useAppState();
   const service = showroomService(serviceId);
-  const hasContactActions = Boolean(showroom.phone || showroom.email || showroom.directionsUrl);
   const hasContactDetails = Boolean(showroom.address || showroom.hours.length);
+  const unavailableContacts = !showroom.phone || !showroom.directionsUrl;
   const draftKey = vehicle?.id || 'showroom-' + (service?.id || 'general');
   const initial = vehicle
     ? `Hello, I'm interested in the ${vehicle.make} ${vehicle.model}. Could we arrange a viewing?`
@@ -442,146 +602,146 @@ export function ShowroomContactScreen({
   return (
     <>
       <Header home />
-      <div {...stylex.props(s.page)}>
-        <div {...stylex.props(s.contactContainer, !hasContactDetails && s.contactSingle)}>
-          <div {...stylex.props(s.pageHead)}>
-            <h1 {...stylex.props(s.pageTitle)}>Contact</h1>
-            <p {...stylex.props(s.body)}>Ask a question or arrange a viewing.</p>
-          </div>
-          {hasContactActions && (
-            <div {...stylex.props(s.contactActions)}>
-              {showroom.phone && (
-                <a
-                  href={'tel:' + showroom.phone}
-                  aria-label="Call the showroom"
-                  {...stylex.props(s.contactAction, s.contactPrimary)}
-                >
-                  <Phone size={22} strokeWidth={1.8} aria-hidden="true" />
-                  Call the showroom
-                </a>
-              )}
-              {(showroom.email || showroom.directionsUrl) && (
-                <div {...stylex.props(s.contactSecondary)}>
-                  {showroom.email && (
-                    <a
-                      href={'mailto:' + showroom.email}
-                      aria-label="Email the showroom"
-                      {...stylex.props(s.contactAction)}
-                    >
-                      <Mail size={20} strokeWidth={1.8} aria-hidden="true" />
-                      Email
-                    </a>
-                  )}
-                  {showroom.directionsUrl && (
-                    <a
-                      href={showroom.directionsUrl}
-                      aria-label="Directions to the showroom"
-                      {...stylex.props(s.contactAction)}
-                    >
-                      <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
-                      Directions
-                    </a>
-                  )}
-                </div>
+      <h1 {...stylex.props(ui.srOnly)}>Contact</h1>
+      <div {...stylex.props(s.contactPage)}>
+        <section aria-label="Showroom contact" {...stylex.props(s.contactIntro)}>
+          <div {...stylex.props(s.contactContainer)}>
+            <div role="group" aria-label="Contact options" {...stylex.props(s.contactActions)}>
+              <ShowroomContactAction href={showroom.phone ? 'tel:' + showroom.phone : null}>
+                <Phone size={20} strokeWidth={1.8} aria-hidden="true" />
+                Call us
+              </ShowroomContactAction>
+              <ShowroomContactAction href={showroom.directionsUrl}>
+                <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
+                Visit us
+              </ShowroomContactAction>
+              {showroom.email && (
+                <ShowroomContactAction href={'mailto:' + showroom.email} extra>
+                  <Mail size={20} strokeWidth={1.8} aria-hidden="true" />
+                  Email us
+                </ShowroomContactAction>
               )}
             </div>
-          )}
-          <div {...stylex.props(s.contactGrid, !hasContactDetails && s.singleColumn)}>
-            <section {...stylex.props(s.card)}>
-              <h2 {...stylex.props(s.subTitle)}>Enquiry</h2>
-              {(vehicle || service) && (
-                <div {...stylex.props(s.context)}>
-                  <div {...stylex.props(s.contextText)}>
-                    <p {...stylex.props(ui.small, ui.muted)}>Regarding</p>
-                    <p {...stylex.props(s.contextTitle)}>
-                      {vehicle ? vehicle.make + ' ' + vehicle.model : service?.title}
-                    </p>
-                  </div>
-                  <Link
-                    href={
-                      vehicle
-                        ? '/vehicle/' + vehicle.id
-                        : serviceCategoryHref(service?.category || 'services')
-                    }
-                    {...stylex.props(s.contextLink)}
-                  >
-                    {vehicle ? 'View car' : 'View service'}
-                  </Link>
-                </div>
-              )}
-              <form
-                {...stylex.props(s.form)}
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  saveMessageDraft(draftKey, message);
-                  notify('Enquiry draft saved on this device. Nothing was sent.');
-                  setSaved(true);
-                }}
+            {unavailableContacts && (
+              <p
+                id="contact-option-availability"
+                {...stylex.props(ui.small, ui.muted, s.contactAvailability)}
               >
-                <label {...stylex.props(ui.label)}>
-                  Message
-                  <textarea
-                    aria-label="Enquiry message"
-                    value={message}
-                    onChange={(event) => {
-                      setEdited(event.target.value);
-                      setSaved(false);
-                    }}
-                    placeholder={
-                      vehicle ? 'Ask about availability or a viewing…' : 'Tell us how we can help…'
-                    }
-                    required
-                    minLength={10}
-                    maxLength={4000}
-                    {...stylex.props(s.textArea)}
-                  />
-                </label>
-                <p {...stylex.props(ui.small, ui.muted)}>
-                  Preview: save your enquiry on this device.
-                </p>
-                <Button type="submit" block>
-                  Save enquiry draft
-                </Button>
-                {saved && (
-                  <p role="status" {...stylex.props(s.saved)}>
-                    Draft saved on this device. Nothing was sent.
-                  </p>
-                )}
-              </form>
-            </section>
-            {hasContactDetails && (
-              <section {...stylex.props(s.card)}>
-                <h2 {...stylex.props(s.subTitle)}>Showroom details</h2>
-                <dl {...stylex.props(s.info)}>
-                  {showroom.address && (
-                    <div {...stylex.props(s.infoRow)}>
-                      <span {...stylex.props(s.infoIcon)}>
-                        <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
-                      </span>
-                      <div>
-                        <dt {...stylex.props(s.detailTitle)}>Address</dt>
-                        <dd {...stylex.props(s.body)}>{showroom.address}</dd>
-                      </div>
-                    </div>
-                  )}
-                  {showroom.hours.length > 0 && (
-                    <div {...stylex.props(s.infoRow)}>
-                      <span {...stylex.props(s.infoIcon)}>
-                        <Clock3 size={20} strokeWidth={1.8} aria-hidden="true" />
-                      </span>
-                      <div>
-                        <dt {...stylex.props(s.detailTitle)}>Opening hours</dt>
-                        <dd {...stylex.props(s.body)}>
-                          {showroom.hours.map((hours) => (
-                            <p key={hours}>{hours}</p>
-                          ))}
-                        </dd>
-                      </div>
-                    </div>
-                  )}
-                </dl>
-              </section>
+                {!showroom.phone && !showroom.directionsUrl
+                  ? 'Phone and location details are unavailable in this preview.'
+                  : !showroom.phone
+                    ? 'Phone details are unavailable in this preview.'
+                    : 'Location details are unavailable in this preview.'}
+              </p>
             )}
+          </div>
+        </section>
+        <div {...stylex.props(s.page, s.contactBody)}>
+          <div {...stylex.props(s.contactContainer)}>
+            <div {...stylex.props(s.contactGrid)}>
+              <section aria-labelledby="showroom-enquiry-heading" {...stylex.props(s.card)}>
+                <h2 id="showroom-enquiry-heading" {...stylex.props(s.subTitle)}>
+                  Enquiry
+                </h2>
+                <p {...stylex.props(s.body)}>Ask a question or arrange a viewing.</p>
+                {(vehicle || service) && (
+                  <div {...stylex.props(s.context)}>
+                    <div {...stylex.props(s.contextText)}>
+                      <p {...stylex.props(ui.small, ui.muted)}>Regarding</p>
+                      <p {...stylex.props(s.contextTitle)}>
+                        {vehicle ? vehicle.make + ' ' + vehicle.model : service?.title}
+                      </p>
+                    </div>
+                    <Link
+                      href={
+                        vehicle
+                          ? '/vehicle/' + vehicle.id
+                          : serviceCategoryHref(service?.category || 'services')
+                      }
+                      {...stylex.props(s.contextLink)}
+                    >
+                      {vehicle ? 'View car' : 'View service'}
+                    </Link>
+                  </div>
+                )}
+                <form
+                  {...stylex.props(s.form)}
+                  onSubmit={(event) => {
+                    event.preventDefault();
+                    saveMessageDraft(draftKey, message);
+                    notify('Enquiry draft saved on this device. Nothing was sent.');
+                    setSaved(true);
+                  }}
+                >
+                  <label {...stylex.props(ui.label)}>
+                    Message
+                    <textarea
+                      aria-label="Enquiry message"
+                      value={message}
+                      onChange={(event) => {
+                        setEdited(event.target.value);
+                        setSaved(false);
+                      }}
+                      placeholder={
+                        vehicle
+                          ? 'Ask about availability or a viewing…'
+                          : 'Tell us how we can help…'
+                      }
+                      required
+                      minLength={10}
+                      maxLength={4000}
+                      {...stylex.props(s.textArea)}
+                    />
+                  </label>
+                  <p {...stylex.props(ui.small, ui.muted)}>
+                    Preview: save your enquiry on this device.
+                  </p>
+                  <button type="submit" {...stylex.props(s.serviceAction, s.contactSubmit)}>
+                    <span {...stylex.props(s.serviceActionFace, s.serviceActionPrimary)}>
+                      Save enquiry draft
+                    </span>
+                  </button>
+                  {saved && (
+                    <p role="status" {...stylex.props(s.saved)}>
+                      Draft saved on this device. Nothing was sent.
+                    </p>
+                  )}
+                </form>
+              </section>
+              {hasContactDetails && (
+                <section {...stylex.props(s.card)}>
+                  <h2 {...stylex.props(s.subTitle)}>Showroom details</h2>
+                  <dl {...stylex.props(s.info)}>
+                    {showroom.address && (
+                      <div {...stylex.props(s.infoRow)}>
+                        <span {...stylex.props(s.infoIcon)}>
+                          <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
+                        </span>
+                        <div>
+                          <dt {...stylex.props(s.detailTitle)}>Address</dt>
+                          <dd {...stylex.props(s.body)}>{showroom.address}</dd>
+                        </div>
+                      </div>
+                    )}
+                    {showroom.hours.length > 0 && (
+                      <div {...stylex.props(s.infoRow)}>
+                        <span {...stylex.props(s.infoIcon)}>
+                          <Clock3 size={20} strokeWidth={1.8} aria-hidden="true" />
+                        </span>
+                        <div>
+                          <dt {...stylex.props(s.detailTitle)}>Opening hours</dt>
+                          <dd {...stylex.props(s.body)}>
+                            {showroom.hours.map((hours) => (
+                              <p key={hours}>{hours}</p>
+                            ))}
+                          </dd>
+                        </div>
+                      </div>
+                    )}
+                  </dl>
+                </section>
+              )}
+            </div>
           </div>
         </div>
       </div>

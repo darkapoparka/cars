@@ -1,11 +1,13 @@
 'use client';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { Globe } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import {
   parseServiceRequest,
   normalizeServiceRequest,
+  seedServiceRequest,
   saleConditions,
   serializeServiceRequest,
   serviceRequestErrorStep,
@@ -22,25 +24,74 @@ import {
   type ServiceRequestValues,
 } from '@/lib/service-requests';
 import { saveMessageDraft } from '@/lib/store';
+import {
+  importCountries,
+  importCountryLabel,
+  saleEnquiryTypes,
+  type ImportCountry,
+  type SaleEnquiryType,
+} from '@/lib/showroom-services';
+import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
-  card: { backgroundColor: colors.background, borderRadius: 16, padding: 20, minWidth: 0 },
-  heading: { fontSize: 24, fontWeight: 700, lineHeight: '32px' },
-  copy: { color: colors.muted, fontSize: 16, lineHeight: '24px', marginTop: 8 },
-  overviewSteps: {
-    marginBlock: 20,
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-    gap: 12,
-    padding: 0,
-    listStyle: 'none',
-    fontSize: 13,
-    lineHeight: '20px',
-    color: colors.muted,
+  banner: { backgroundColor: colors.background, borderRadius: 16, padding: 16, minWidth: 0 },
+  importBanner: { borderWidth: 1, borderStyle: 'solid', borderColor: colors.line },
+  introRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
+  heading: {
+    fontSize: 18,
+    fontWeight: 600,
+    lineHeight: '26px',
+    minWidth: 0,
+    overflowWrap: 'anywhere',
   },
-  overviewStep: { display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 },
-  stepNumber: { fontSize: 16, fontWeight: 600, color: colors.text },
+  headingIcon: { color: colors.muted, flexShrink: 0 },
+  copy: { color: colors.muted, fontSize: 14, lineHeight: '22px', marginTop: 4 },
+  entry: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 12,
+    minHeight: 48,
+    width: '100%',
+    padding: 6,
+    paddingLeft: 12,
+    marginTop: 12,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 12,
+    backgroundColor: colors.controlSurface,
+    textAlign: 'left',
+    outlineColor: colors.accent,
+  },
+  entryText: {
+    flex: '1',
+    minWidth: 0,
+    fontSize: 14,
+    lineHeight: '22px',
+    color: colors.muted,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  entryValue: { color: colors.text },
+  entryAction: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+    minHeight: 32,
+    paddingBlock: 6,
+    paddingInline: 12,
+    borderRadius: 20,
+    backgroundColor: colors.accent,
+    color: '#fff',
+    fontSize: 14,
+    lineHeight: '20px',
+    fontWeight: 600,
+  },
+  choiceGroup: { borderWidth: 0, padding: 0, margin: 0, minWidth: 0 },
+  choiceLegend: { fontSize: 14, fontWeight: 500, lineHeight: '22px', marginBottom: 4 },
   header: {
     paddingInline: 16,
     paddingTop: 'max(8px, env(safe-area-inset-top))',
@@ -179,7 +230,15 @@ function persistDraft(kind: ServiceRequestKind, values: ServiceRequestValues) {
   }
 }
 
-export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
+export function ShowroomServiceRequest({
+  kind,
+  country = 'all',
+  saleType = 'buyout',
+}: {
+  kind: ServiceRequestKind;
+  country?: ImportCountry;
+  saleType?: SaleEnquiryType;
+}) {
   const params = useSearchParams();
   const open = params.get('request') === '1';
   const raw = useSyncExternalStore(
@@ -198,11 +257,15 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
   const errorFocus = useRef<ServiceRequestField | null>(null);
   const closing = useRef(false);
   const wasOpen = useRef(false);
+  const startContext = useRef({ country, saleType });
   const values = edited ?? parseServiceRequest(kind, raw);
   const importing = kind === 'import';
   const title = importing ? 'Import a car' : 'Sell your car';
   const steps = serviceRequestSteps[kind];
   const saved = status === 'saved';
+  const entrySummary =
+    values.vin || [values.make, values.model].filter(Boolean).join(' ') || 'VIN or vehicle details';
+  const entrySummaryId = 'service-request-' + kind + '-entry-summary';
 
   useEffect(() => {
     if (!open) {
@@ -227,7 +290,15 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
     overviewRef.current?.querySelector('button')?.focus({ preventScroll: true });
     setStep(0);
     setErrors({});
-    setStatus(null);
+    const next = seedServiceRequest(kind, values, {
+      country: country !== startContext.current.country || !values.country ? country : undefined,
+      saleType:
+        saleType !== startContext.current.saleType || !values.saleType ? saleType : undefined,
+    });
+    startContext.current = { country, saleType };
+    setEdited(next);
+    setStatus(persistDraft(kind, next) ? null : 'unavailable');
+    errorFocus.current = 'vin';
     closing.current = false;
     const url = new URL(window.location.href);
     url.searchParams.set('request', '1');
@@ -247,6 +318,7 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
     }
   }
   function change(key: ServiceRequestField, value: string) {
+    if (key === 'vin') value = value.toUpperCase();
     const next = { ...values, [key]: value };
     setEdited((current) => ({ ...(current ?? values), [key]: value }));
     setErrors((previous) => ({ ...previous, [key]: undefined }));
@@ -301,6 +373,8 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
           autoComplete={
             key === 'name' ? 'name' : key === 'email' ? 'email' : key === 'phone' ? 'tel' : 'off'
           }
+          autoCapitalize={key === 'vin' ? 'characters' : undefined}
+          spellCheck={key === 'vin' ? false : undefined}
           aria-invalid={Boolean(errors[key])}
           aria-describedby={errors[key] ? id + '-error' : undefined}
           {...stylex.props(ui.input, s.input, Boolean(errors[key]) && s.invalid)}
@@ -315,6 +389,16 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
   }
   const reviewRows = [
     ['Car', [values.make, values.model, !importing && values.year].filter(Boolean).join(' ')],
+    ...(values.vin ? [['VIN', values.vin]] : []),
+    ...(importing && values.country ? [['Import from', importCountryLabel(values.country)]] : []),
+    ...(!importing && values.saleType
+      ? [
+          [
+            'Sale type',
+            saleEnquiryTypes.find((type) => type.value === values.saleType)?.label || '',
+          ],
+        ]
+      : []),
     [
       importing ? 'Maximum budget' : 'Mileage',
       importing ? '€' + values.budget : values.mileage + ' km',
@@ -340,32 +424,44 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
       <section
         ref={overviewRef}
         aria-labelledby={'service-request-' + kind + '-heading'}
-        {...stylex.props(s.card)}
+        data-service-request-banner={kind}
+        {...stylex.props(s.banner, importing && s.importBanner)}
       >
-        <h2 id={'service-request-' + kind + '-heading'} {...stylex.props(s.heading)}>
-          {title}
-        </h2>
+        <div {...stylex.props(s.introRow)}>
+          <h2 id={'service-request-' + kind + '-heading'} {...stylex.props(s.heading)}>
+            {importing ? 'Import a vehicle' : title}
+          </h2>
+          {importing && (
+            <Globe
+              size={20}
+              strokeWidth={1.8}
+              aria-hidden="true"
+              {...stylex.props(s.headingIcon)}
+            />
+          )}
+        </div>
         <p {...stylex.props(s.copy)}>
-          {importing
-            ? 'Tell us what you’re looking for, or share a car you’ve found.'
-            : 'Share your car’s details for a direct purchase or part exchange enquiry.'}
+          {importing ? 'Choose a car or paste its VIN.' : 'Start a sale or part exchange enquiry.'}
         </p>
-        <ol aria-label="Enquiry steps" {...stylex.props(s.overviewSteps)}>
-          {(importing
-            ? ['Choose a car', 'Set your budget', 'Review details']
-            : ['Your car', 'Condition & price', 'Review details']
-          ).map((label, index) => (
-            <li key={label} {...stylex.props(s.overviewStep)}>
-              <span aria-hidden="true" {...stylex.props(s.stepNumber)}>
-                {index + 1}
-              </span>
-              {label}
-            </li>
-          ))}
-        </ol>
-        <Button block floating onClick={start}>
-          {importing ? 'Start import enquiry' : 'Start sale enquiry'}
-        </Button>
+        <button
+          type="button"
+          aria-label={importing ? 'Start import enquiry' : 'Start sale enquiry'}
+          aria-haspopup="dialog"
+          aria-describedby={entrySummaryId}
+          onClick={start}
+          {...stylex.props(s.entry)}
+        >
+          <span
+            id={entrySummaryId}
+            title={entrySummary}
+            {...stylex.props(s.entryText, Boolean(values.vin || values.make) && s.entryValue)}
+          >
+            {entrySummary}
+          </span>
+          <span aria-hidden="true" {...stylex.props(s.entryAction)}>
+            Start
+          </span>
+        </button>
       </section>
       <Modal open={open} onClose={close} label={title} flowSheet>
         <div {...stylex.props(s.header)}>
@@ -440,7 +536,7 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
               <>
                 <p {...stylex.props(s.stepCopy)}>
                   {step === 0
-                    ? 'Step 1 of 3 · Start with the car.'
+                    ? 'Step 1 of 3 · Add a VIN if available, then the car details.'
                     : step === 1
                       ? 'Step 2 of 3 · A few details to guide your enquiry.'
                       : 'Step 3 of 3 · Check your car details. Contact details are optional.'}
@@ -461,6 +557,7 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
                 <div {...stylex.props(s.fields)}>
                   {step === 0 && (
                     <>
+                      {field('vin', 'VIN (optional)', 'text', true, true)}
                       {field('make', 'Make')}
                       {field('model', 'Model')}
                       {!importing && field('year', 'Year', 'number')}
@@ -469,12 +566,42 @@ export function ShowroomServiceRequest({ kind }: { kind: ServiceRequestKind }) {
                   {step === 1 &&
                     (importing ? (
                       <>
+                        <fieldset {...stylex.props(s.choiceGroup, s.wide)}>
+                          <legend {...stylex.props(s.choiceLegend)}>Import from (optional)</legend>
+                          <ShowroomQuickPills label="Import country preference" inset={false}>
+                            {importCountries.map(({ value, label }) => (
+                              <ShowroomQuickPill
+                                key={value}
+                                active={(values.country || 'all') === value}
+                                aria-pressed={(values.country || 'all') === value}
+                                onClick={() => change('country', value === 'all' ? '' : value)}
+                              >
+                                {value === 'all' ? 'Any country' : label}
+                              </ShowroomQuickPill>
+                            ))}
+                          </ShowroomQuickPills>
+                        </fieldset>
                         {field('budget', 'Maximum budget (€)', 'number')}
                         {field('year', 'Minimum year (optional)', 'number', true)}
                         {field('listing', 'Listing link (optional)', 'url', true, true)}
                       </>
                     ) : (
                       <>
+                        <fieldset {...stylex.props(s.choiceGroup, s.wide)}>
+                          <legend {...stylex.props(s.choiceLegend)}>Sale type</legend>
+                          <ShowroomQuickPills label="Sale preference" inset={false}>
+                            {saleEnquiryTypes.map(({ value, label }) => (
+                              <ShowroomQuickPill
+                                key={value}
+                                active={values.saleType === value}
+                                aria-pressed={values.saleType === value}
+                                onClick={() => change('saleType', value)}
+                              >
+                                {label}
+                              </ShowroomQuickPill>
+                            ))}
+                          </ShowroomQuickPills>
+                        </fieldset>
                         {field('mileage', 'Mileage (km)', 'number')}
                         {field('price', 'Expected price (€) (optional)', 'number', true)}
                         <label {...stylex.props(ui.label, s.field, s.wide)}>
