@@ -13,12 +13,29 @@ async function home(n) {
 }
 const ten = await home(10),
   five = await home(5),
-  eight = await home(8);
+  eight = await home(8),
+  two = await home(2);
 const arrow = eight(".car-block-ten .details svg").first().clone();
+arrow.attr({
+  width: "20",
+  height: "20",
+  viewBox: "-1 -1 16 16",
+  "aria-hidden": "true",
+});
 arrow.find("defs").remove();
 arrow.find("g").removeAttr("clip-path");
-arrow.find("path").attr("fill", "currentColor");
+arrow.find("path").attr({
+  fill: "currentColor",
+  stroke: "currentColor",
+  "stroke-width": ".45",
+  "stroke-linejoin": "round",
+});
 const arrowHTML = arrow.prop("outerHTML");
+const searchIcon = ten(".layout-search .search-box svg").first().clone();
+searchIcon
+  .attr({ width: "22", height: "22", "aria-hidden": "true" })
+  .removeAttr("class");
+searchIcon.find("path").attr("fill", "currentColor");
 const dynamic = (html) =>
   html
     .replaceAll("__LOGO__", "{brand.logoDark}")
@@ -71,6 +88,8 @@ const search = five(".form-tab-pane").first().clone();
 search.removeAttr("id");
 search.find("form").attr("aria-label", "Find your next car");
 search.find("input[type=hidden]").remove();
+search.find(".select > span").eq(1).text("All Makes");
+search.find(".select > span").eq(2).text("All Models");
 const condition = search.find(".drop-menu").first();
 condition.find(".select > span").text("All Cars");
 condition
@@ -94,7 +113,12 @@ search
 search
   .find(".form-submit button")
   .removeAttr("aria-label")
-  .html('<i class="flaticon-search" aria-hidden="true"></i>Search cars');
+  .html(`${searchIcon.prop("outerHTML")}<span>Search cars</span>`);
+search
+  .find(".select > i")
+  .replaceWith(
+    '<svg class="curated-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+  );
 hero.find(".cus-container10").empty().append(search);
 // Keep the search in normal flow with the headline. The original Home 10
 // sibling form was pinned across the car at the bottom of the photograph.
@@ -145,74 +169,88 @@ brands.find(".cars-block-five").each((_, el) => {
   card.find("img").attr("alt", make).attr("loading", "lazy");
 });
 
-const benefits = five(".why-choose-us-section-three").clone();
-benefits.addClass("curated-benefits");
-benefits.find("h2").text("A Better Way To Find Your Next Car");
-const benefitsCopy = [
-  [
-    "Plan Your Budget",
-    "Explore prices and use the repayment calculator to work through your options.",
-  ],
-  [
-    "Find Your Fit",
-    "Search by make, model and price to find a car that suits your everyday life.",
-  ],
-  [
-    "Compare The Details",
-    "Save your favourites and compare the specifications side by side.",
-  ],
-  [
-    "Talk It Through",
-    "Ask questions about the car and arrange a viewing with the showroom.",
-  ],
+// Use the source buy/sell CTA cards, rather than turning the icon benefits
+// or testimonial components into service cards. All four actions are real routes.
+const services = five(".blog-section-two").clone().addClass("curated-services");
+services.attr("aria-labelledby", "curated-services-title");
+services
+  .find(".boxcar-container")
+  .prepend(
+    '<div class="boxcar-title text-center"><h2 id="curated-services-title">A Better Way To Find Your Next Car</h2><p>Buy, sell and plan your next move, all in one place.</p></div>',
+  );
+const sourceServiceCard = services.find(".blog-blockt-two").first().clone();
+const serviceIcons = [
+  five(".blog-section-two .hover-img svg").eq(0),
+  five(".blog-section-two .hover-img svg").eq(1),
+  five(".why-choose-us-section-three .icon-box svg").eq(2),
+  five(".why-choose-us-section-three .icon-box svg").eq(0),
 ];
-benefits.find(".choose-us-block").each((i, el) => {
-  eight(el).find(".title").text(benefitsCopy[i][0]);
-  eight(el).find(".text").text(benefitsCopy[i][1]);
-});
-
-const steps = eight(".boxcar-testimonial-section-four").clone();
-steps.addClass("curated-next-steps");
-steps.find(".boxcar-title h2").text("Your Next Car, Made Simple");
-steps
-  .find(".boxcar-title .text")
-  .text("From your first search to your next test drive.");
-steps.find(".stories-slider").removeClass("stories-slider");
-const stepCopy = [
+const serviceCopy = [
   [
-    "Find Your Favourite",
-    "Explore the cars, compare the details and build a shortlist that works for you.",
+    "Browse Cars",
+    "Find the right car for your lifestyle, from city hatchbacks to family SUVs.",
     "/inventory/",
-    "Browse cars",
+    "Explore cars",
   ],
   [
-    "Ask Us Anything",
-    "Want to know more about a car? Get in touch and talk through the details.",
-    "/contact/",
+    "Sell Your Car",
+    "Thinking of a change? Talk to the showroom about selling or part exchange.",
+    "/contact/?intent=sell",
     "Get in touch",
   ],
   [
-    "See It For Yourself",
-    "Arrange a viewing, take a closer look and decide whether it is the right fit.",
-    "/contact/?intent=viewing",
-    "Arrange a viewing",
+    "Compare Cars",
+    "Put your shortlisted cars side by side and take a closer look at the details.",
+    "/compare/",
+    "Compare cars",
+  ],
+  [
+    "Plan Your Budget",
+    "Explore an illustrative monthly payment before you take the next step.",
+    "/calculator/",
+    "Calculate payments",
   ],
 ];
-steps.find(".testimonial-block-four").each((i, el) => {
-  const card = eight(el);
-  if (i >= 3) {
-    card.remove();
-    return;
-  }
-  card.find(".icon").html(`<span class="curated-step-number">0${i + 1}</span>`);
-  card.find(".title").text(stepCopy[i][0]);
-  card.find(".text").text(stepCopy[i][1]);
+const serviceCards = serviceCopy.map(([title, copy, href, label], i) => {
+  const card = sourceServiceCard.clone();
+  card.attr("class", "blog-blockt-two curated-service-card");
+  card.find(".inner-box").toggleClass("two", i % 2 === 1);
+  card.find(".title").text(title);
+  card.find(".text").text(copy);
   card
-    .find(".auther-info")
-    .replaceWith(
-      `<a class="curated-step-link" href="${stepCopy[i][2]}">${stepCopy[i][3]} ${arrowHTML}</a>`,
-    );
+    .find(".read-more")
+    .attr("href", href)
+    .html(`<span>${label}</span>${arrowHTML}`);
+  card
+    .find(".hover-img")
+    .html(serviceIcons[i].prop("outerHTML"))
+    .prependTo(card.find(".inner-box"));
+  card
+    .find(".hover-img svg")
+    .attr({ width: "72", height: "72", "aria-hidden": "true" });
+  return outer(five, card);
 });
+services.find(".row").html(serviceCards.join("\n"));
+
+// Home 2 already has a photographic CTA designed for this purpose. Keep its
+// source image, overlay, title and button DOM in a centered dealer composition.
+const nextCar = two(".brand-boxcar-banner-section")
+  .clone()
+  .addClass("curated-next-car");
+nextCar.attr("aria-labelledby", "curated-next-car-title");
+nextCar
+  .find("h2")
+  .attr("id", "curated-next-car-title")
+  .text("Your Next Car, Made Simple");
+nextCar
+  .find("h2")
+  .after(
+    '<p class="text">Found something you like? Come and see it for yourself. Ask your questions, take a closer look and find your fit.</p>',
+  );
+nextCar
+  .find(".btn")
+  .attr("href", "/contact/?intent=viewing")
+  .html(`<span>Arrange a viewing</span>${arrowHTML}`);
 
 const blog = eight(".blog-section").clone();
 blog.addClass("curated-journal");
@@ -252,15 +290,15 @@ footer
     '<div class="copyright-text">© 2026 __NAME__. All rights reserved.</div><ul class="footer-nav"><li><a href="/terms/">Terms &amp; privacy</a></li></ul>',
   );
 
-const stock = `<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/">View all cars ${arrowHTML}</a></div></div></div></div></section>`;
+const stock = `<section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span>${arrowHTML}</a></div></div></div></div></section>`;
 let markup = `<div class="boxcar-wrapper cus-layout-home10 reference-home curated-home" data-reference-home="curated" data-curated-home use:referencePage>
 ${outer(ten, header)}
 ${outer(ten, hero)}
 ${outer(eight, types)}
 ${outer(eight, brands)}
 ${stock}
-${outer(five, benefits)}
-${outer(eight, steps)}
+${outer(five, services)}
+${outer(two, nextCar)}
 ${outer(eight, blog).replace("__BLOG_CARDS__", `{#each articles as article}${blogMarkup}{/each}`)}
 ${outer(eight, footer)}
 </div>`;
@@ -300,9 +338,10 @@ await fs.writeFile(
           "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
         inventory:
           "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
-        benefits: "Home 5 horizontal four-icon section",
-        nextSteps:
-          "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
+        services:
+          "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
+        nextCar:
+          "Home 2 original photographic CTA banner, centered dealer title and viewing action",
         journalAndFooter: "Home 8, shared articles and identity",
       },
       method:

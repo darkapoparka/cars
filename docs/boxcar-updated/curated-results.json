@@ -2,7 +2,7 @@
   "version": "2026.10.02-curated",
   "candidate": "templates/boxcar-updated",
   "preview": "http://127.0.0.1:6455/",
-  "recordedAt": "2026-10-02T10:08:52.451Z",
+  "recordedAt": "2026-10-02T10:41:02.049Z",
   "composition": {
     "header": "Home 10, centered dealer navigation, shared identity and contact action",
     "hero": "Home 10, single source photograph and centered Home 5 headline",
@@ -10,8 +10,8 @@
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
     "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
     "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
-    "benefits": "Home 5 horizontal four-icon section",
-    "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
+    "services": "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
+    "nextCar": "Home 2 original photographic CTA banner, centered dealer title and viewing action",
     "journalAndFooter": "Home 8, shared articles and identity"
   },
   "checks": {
@@ -23,11 +23,11 @@
     "domainAndAssets": {
       "status": "passed",
       "tests": 8,
-      "note": "Eight domain and local-image tests rerun for this desktop revision."
+      "note": "Eight domain and local-image tests rerun for the service-card and CTA correction."
     },
     "productionBuild": {
       "status": "passed",
-      "checkedAt": "2026-10-02T10:08:52.451Z",
+      "checkedAt": "2026-10-02T10:41:02.049Z",
       "modules": 153,
       "staticCuratedCSSMatchesSource": true
     },
@@ -38,12 +38,28 @@
     "preservedHomes": {
       "status": "passed",
       "files": 10
+    },
+    "ctaGeometry": {
+      "status": "passed",
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "widths": [
+        1440,
+        1024,
+        768,
+        390,
+        320,
+        304
+      ],
+      "note": "Search/CTA label and SVG centers, carousel icon centers, service card 4/2/1 columns and CTA baselines, viewport bounds and centered photo banner."
     }
   },
   "curated": {
     "chromium": {
       "engine": "chromium",
-      "checkedAt": "2026-10-02T10:04:50.247Z",
+      "checkedAt": "2026-10-02T10:35:38.610Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -53,7 +69,9 @@
         "Stock tabs, slider, saved state and detail/Back context",
         "Search sits below the headline, with a clean header and visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
-        "Mobile dealer navigation, buyer links and inner routes"
+        "Aligned button icons and four source service cards at desktop, tablet and phone widths",
+        "Service cards and showroom CTA open their intended destinations",
+        "Mobile dealer navigation and inner routes"
       ],
       "layouts": [
         {
@@ -85,9 +103,9 @@
               "height": 76
             },
             {
-              "left": 1096.78125,
+              "left": 1087.78125,
               "right": 1255,
-              "width": 158.21875,
+              "width": 167.21875,
               "height": 56
             }
           ],
@@ -101,32 +119,32 @@
           "controls": [
             {
               "left": 58,
-              "right": 245.453125,
-              "width": 187.453125,
+              "right": 243.203125,
+              "width": 185.203125,
               "height": 76
             },
             {
-              "left": 245.453125,
-              "right": 432.890625,
-              "width": 187.4375,
+              "left": 243.203125,
+              "right": 428.390625,
+              "width": 185.1875,
               "height": 76
             },
             {
-              "left": 432.890625,
-              "right": 620.34375,
-              "width": 187.453125,
+              "left": 428.390625,
+              "right": 613.59375,
+              "width": 185.203125,
               "height": 76
             },
             {
-              "left": 620.34375,
-              "right": 807.78125,
-              "width": 187.4375,
+              "left": 613.59375,
+              "right": 798.78125,
+              "width": 185.1875,
               "height": 76
             },
             {
-              "left": 807.78125,
+              "left": 798.78125,
               "right": 966,
-              "width": 158.21875,
+              "width": 167.21875,
               "height": 56
             }
           ],
@@ -205,7 +223,7 @@
               "left": 38,
               "right": 352,
               "width": 314,
-              "height": 50
+              "height": 52
             }
           ],
           "images": "loaded",
@@ -244,7 +262,7 @@
               "left": 38,
               "right": 282,
               "width": 244,
-              "height": 50
+              "height": 52
             }
           ],
           "images": "loaded",
@@ -256,7 +274,7 @@
     },
     "webkit": {
       "engine": "webkit",
-      "checkedAt": "2026-10-02T10:05:45.139Z",
+      "checkedAt": "2026-10-02T10:37:35.508Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -266,7 +284,9 @@
         "Stock tabs, slider, saved state and detail/Back context",
         "Search sits below the headline, with a clean header and visible dropdowns",
         "Photographic lifestyle choices open matching inventory",
-        "Mobile dealer navigation, buyer links and inner routes"
+        "Aligned button icons and four source service cards at desktop, tablet and phone widths",
+        "Service cards and showroom CTA open their intended destinations",
+        "Mobile dealer navigation and inner routes"
       ],
       "layouts": [
         {
@@ -298,9 +318,9 @@
               "height": 76
             },
             {
-              "left": 1095.328125,
+              "left": 1086.328125,
               "right": 1255,
-              "width": 159.671875,
+              "width": 168.671875,
               "height": 56
             }
           ],
@@ -314,32 +334,32 @@
           "controls": [
             {
               "left": 58,
-              "right": 245.078125,
-              "width": 187.078125,
+              "right": 242.828125,
+              "width": 184.828125,
               "height": 76
             },
             {
-              "left": 245.078125,
-              "right": 432.15625,
-              "width": 187.078125,
+              "left": 242.828125,
+              "right": 427.65625,
+              "width": 184.828125,
               "height": 76
             },
             {
-              "left": 432.15625,
-              "right": 619.234375,
-              "width": 187.078125,
+              "left": 427.65625,
+              "right": 612.484375,
+              "width": 184.828125,
               "height": 76
             },
             {
-              "left": 619.234375,
-              "right": 806.3125,
-              "width": 187.078125,
+              "left": 612.484375,
+              "right": 797.3125,
+              "width": 184.828125,
               "height": 76
             },
             {
-              "left": 806.328125,
+              "left": 797.328125,
               "right": 966,
-              "width": 159.671875,
+              "width": 168.671875,
               "height": 56
             }
           ],
@@ -418,7 +438,7 @@
               "left": 38,
               "right": 352,
               "width": 314,
-              "height": 50
+              "height": 52
             }
           ],
           "images": "loaded",
@@ -457,7 +477,7 @@
               "left": 38,
               "right": 282,
               "width": 244,
-              "height": 50
+              "height": 52
             }
           ],
           "images": "loaded",
@@ -508,15 +528,15 @@
     },
     {
       "file": "templates/boxcar-updated/.template/curated.json",
-      "sha256": "570b2f293297458dbca6b6937f762f43da21536584f3c4c8bd7ffd6a24082365"
+      "sha256": "971a4b11d6781afd71ac608662f90d6d9d37bfe5d2fca355088afd70a7b16c6a"
     },
     {
       "file": "templates/boxcar-updated/scripts/compose-curated.mjs",
-      "sha256": "ce62f1b6a99673df6de641ee09e6eef4e6706cb65edd6b43c164aafc57c560de"
+      "sha256": "42a8a9bd0a33dfaddad6bdb2fbbf3bc627cf50b099d4148632cb26c138daf8ae"
     },
     {
       "file": "templates/boxcar-updated/public/reference/curated.css",
-      "sha256": "a9c8809eb0d329c34e6a13b56782662b933c492b7620473a9cbe23350dc9da4a"
+      "sha256": "70c059a8fa235f97746437350fb8aa64bd39cd8b4750adb8d2798e922b8c0cd6"
     },
     {
       "file": "templates/boxcar-updated/src/App.svelte",
@@ -548,11 +568,11 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/interactions.ts",
-      "sha256": "600c39ff62615fd9802b3729e97b93435d0328087916fdc3da4d16a111110713"
+      "sha256": "b8dda9ccae3ec3744e8ed031d68725e5e7c8781f00cd5c48337b68488f17646f"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
-      "sha256": "c270325022998acbf882345ae255a8bc9ed3ffb6ef2817c5edbae7d78d82d459"
+      "sha256": "5afd1a1bee9bc77ae4add4942c4e1caba46d22dc06409e04728ef3d62794f494"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedStock.svelte",
@@ -560,11 +580,11 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedCarCard.svelte",
-      "sha256": "07ed88d49277a576c8ff93d7bce3186cce0ccd08db331deeba9b26369e157ef9"
+      "sha256": "aff47bccf9fb66525d125be3863807d6beb41ed01d093a126341272a4b568229"
     },
     {
       "file": "templates/boxcar-updated/scripts/curated-flows.mjs",
-      "sha256": "dcf4d3691e59286b0552e7f3fae6e0d41a54403eb254d1cfe1775b95b9d37336"
+      "sha256": "6920a718f44d29ff0753807df96d44649100da87946d8842fb673f2f26a8984d"
     },
     {
       "file": "templates/boxcar-updated/src/data/vehicles.json",
@@ -626,19 +646,27 @@
   "screenshots": [
     {
       "file": "docs/boxcar-updated/curated-desktop.png",
-      "sha256": "0de7eb18b428e0075c78e83811504c52d45d64f7dfeab2ba58f1ba5038b3c0e4"
+      "sha256": "70dc3f66b0f87f425a285d75b63f61246944de790a216510516113b21ac81250"
     },
     {
       "file": "docs/boxcar-updated/curated-desktop-full.png",
-      "sha256": "1600c5bfcf73bec5cc4fa75b54343b83dfc7a4953b593ae0041a7664d54939c7"
+      "sha256": "2144964102a9bbb045f3ad61abfee1cdb11aec071b845dbb49ac6f64c39a810c"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile.png",
-      "sha256": "dcbb85c5b572aa0476779fb08e23109cfad777350c6f8586c9245c5a6f8f7443"
+      "sha256": "3768168bac6393dc7a914b242a925a129b17b41dbcbe068bb2b6b50f95c26e4b"
     },
     {
       "file": "docs/boxcar-updated/curated-hero-search.png",
-      "sha256": "d27ea49a8c8abad8cc440ea97d90022f392428299ba4edd68b642f329f062d40"
+      "sha256": "7551d215e89568dc6df330b126502494a954b2be20fa78fc91c4201b9e12fb00"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-services.png",
+      "sha256": "e61b88a39abff4b17387c090d23d622a5ad6195ae0bac5611c520ec3b2c84c4f"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-next-car.png",
+      "sha256": "39b94ee861a07f3dcbc4bfc9967c647423fa9fd41bff2a346f3ca08c434abd67"
     }
   ],
   "boundaries": [
@@ -649,12 +677,12 @@
     "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
   ],
   "corrections": [
-    "Put the Home 5 white search pill directly beneath the headline in normal flow; remove the competing curated header keyword field.",
-    "Give the header centered dealer navigation and a readable contact action, overriding the inherited source margin and colour rules.",
-    "Show three large desktop stock cards with year/body/engine summaries, compact specifications and aligned price/detail actions.",
-    "Use the Home 10 photographic body choices and Home 8 brands in visible source-style tiles with working catalogue destinations.",
-    "Retain the Home 5 pale benefits container, balanced headings, finite stock carousel and working captured saved-car clicks.",
-    "Remove the inherited fixed phone dropdown height; fit default filter labels on one line and keep long selections within their cells.",
-    "Retain the corrected silver Bentley label and existing reference URL; preserve all ten original homepage components."
+    "Use the original search magnifier SVG at 22px, align it with a separate text span, and use SVG dropdown chevrons with compact default labels.",
+    "Align 20px diagonal arrow boxes with CTA labels and remove inherited vertical offsets and SVG margins.",
+    "Use centered 24px carousel arrows inside 48px source-style bordered buttons with visible disabled and keyboard states.",
+    "Replace the plain benefits row with Home 5 original pastel buy/sell CTA card DOM and SVGs, four centered service cards and working destinations.",
+    "Replace the numbered testimonial-shaped buying steps with Home 2 original photographic CTA DOM, a centered title and a viewing action.",
+    "Retain the headline search placement, centered header, photographic categories, brand tiles and finite stateful vehicle carousel.",
+    "Retain the corrected Bentley sample identity and all ten original homepage sources."
   ]
 }

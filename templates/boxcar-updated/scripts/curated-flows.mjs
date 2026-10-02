@@ -261,7 +261,7 @@ try {
             .evaluateAll((nodes) =>
               nodes.map((control) => {
                 const label = control.querySelector("span");
-                const arrow = control.querySelector("i");
+                const arrow = control.querySelector("svg");
                 const box = control
                   .closest(".form_boxes")
                   .getBoundingClientRect();
@@ -308,9 +308,9 @@ try {
           .nth(2)
           .locator(".select span")
           .innerText(),
-        "Any Models",
+        "All Models",
       );
-      await select(1, "Any Makes");
+      await select(1, "All Makes");
       await page
         .locator(".curated-banner .drop-menu")
         .nth(2)
@@ -323,7 +323,7 @@ try {
         true,
       );
       await page
-        .getByRole("option", { name: "Any Models", exact: true })
+        .getByRole("option", { name: "All Models", exact: true })
         .click();
       await select(1, "Audi");
       await select(2, "A8");
@@ -368,12 +368,12 @@ try {
     assert.equal(await control.getAttribute("aria-expanded"), "true");
     assert.equal(
       await menu
-        .getByRole("option", { name: "Any Makes", exact: true })
+        .getByRole("option", { name: "All Makes", exact: true })
         .evaluate((el) => el === document.activeElement),
       true,
     );
     await menu
-      .getByRole("option", { name: "Any Makes", exact: true })
+      .getByRole("option", { name: "All Makes", exact: true })
       .press("ArrowDown");
     await menu
       .getByRole("option", { name: "Audi", exact: true })
@@ -694,57 +694,242 @@ try {
     },
   );
   await step(
-    "Mobile dealer navigation, buyer links and inner routes",
+    "Aligned button icons and four source service cards at desktop, tablet and phone widths",
     async () => {
-      await home(320);
-      await page.getByRole("link", { name: "Open menu", exact: true }).click();
-      const menu = page.getByRole("dialog", { name: "Main menu" });
-      await menu.waitFor();
-      assert.equal(
-        await menu.getByRole("link", { name: "Home 01", exact: true }).count(),
-        0,
-      );
-      await menu.getByRole("link", { name: "Cars", exact: true }).click();
-      await page.waitForURL("**/inventory/");
-      await page
-        .getByRole("button", { name: "Open menu", exact: true })
-        .click();
-      const drawer = page.getByRole("dialog", { name: "Explore Boxcars" });
-      await drawer.waitFor();
-      assert.equal(
-        await drawer.getByText("Home designs", { exact: true }).count(),
-        0,
-      );
-      await drawer.getByRole("link", { name: "Home", exact: true }).click();
-      await page.waitForURL(base + "/");
-      await page.locator(".curated-home[data-ready=true]").waitFor();
-      for (const width of [1440, 320]) {
-        await page.setViewportSize({ width, height: 950 });
-        for (const route of [
-          "/about/",
-          "/contact/",
-          "/blog/choosing-your-next-car/",
-        ]) {
-          await page.goto(base + route, { waitUntil: "networkidle" });
-          assert.equal(await page.locator("main h1").count(), 1);
-          assert.ok(
-            await page.evaluate(
-              () =>
-                document.documentElement.scrollWidth <=
-                document.documentElement.clientWidth + 1,
+      for (const width of [1440, 1024, 768, 390, 320, 304]) {
+        await home(width);
+        const geometry = await page.evaluate(() => {
+          const rect = (el) => {
+            const r = el.getBoundingClientRect();
+            return {
+              left: r.left,
+              right: r.right,
+              top: r.top,
+              bottom: r.bottom,
+              width: r.width,
+              height: r.height,
+              cx: r.x + r.width / 2,
+              cy: r.y + r.height / 2,
+            };
+          };
+          const buttons = Array.from(
+            document.querySelectorAll(
+              ".curated-banner .form-submit button, .curated-stock-more a, #stock-all .slick-active .details, .curated-services .read-more, .curated-next-car .btn",
             ),
-            `${route} ${width}px overflow`,
+          ).map((el) => ({
+            name: el.textContent.trim(),
+            button: rect(el),
+            icon: rect(el.querySelector("svg")),
+            label: rect(el.querySelector("span")),
+          }));
+          const arrows = Array.from(
+            document.querySelectorAll("#stock-all .slick-arrow"),
+          ).map((el) => ({
+            button: rect(el),
+            icon: rect(el.querySelector("svg")),
+          }));
+          const cards = Array.from(
+            document.querySelectorAll(".curated-service-card"),
+          ).map((el) => ({
+            card: rect(el),
+            icon: rect(el.querySelector(".hover-img")),
+            title: rect(el.querySelector(".title")),
+            button: rect(el.querySelector(".read-more")),
+          }));
+          const banner = document.querySelector(".curated-next-car");
+          return {
+            client: document.documentElement.clientWidth,
+            scroll: document.documentElement.scrollWidth,
+            buttons,
+            arrows,
+            cards,
+            banner: rect(banner),
+            bannerTitle: rect(banner.querySelector("h2")),
+            oldReviewCards: document.querySelectorAll(
+              ".curated-home .testimonial-block-four",
+            ).length,
+          };
+        });
+        assert.ok(
+          geometry.scroll <= geometry.client + 1,
+          `${width}px document overflow`,
+        );
+        for (const { name, button, icon, label } of geometry.buttons) {
+          assert.ok(button.height >= 44, `${width}px ${name} button too small`);
+          assert.ok(
+            icon.width >= 20 && icon.height >= 20,
+            `${width}px ${name} icon too small`,
           );
-          assert.equal(
-            await page
-              .locator('footer [aria-label="Homepage designs"]')
-              .count(),
-            0,
+          assert.ok(
+            Math.abs(icon.cy - label.cy) <= 1,
+            `${width}px ${name} icon misaligned`,
           );
+          assert.ok(
+            icon.left >= button.left - 1 && icon.right <= button.right + 1,
+            `${width}px ${name} icon outside button`,
+          );
+          assert.ok(
+            label.left >= button.left - 1 && label.right <= button.right + 1,
+            `${width}px ${name} label outside button`,
+          );
+          assert.ok(
+            button.right <= geometry.client + 1 && button.left >= 0,
+            `${width}px ${name} outside viewport`,
+          );
+        }
+        for (const { button, icon } of geometry.arrows) {
+          assert.ok(button.width >= 44 && button.height >= 44);
+          assert.ok(
+            Math.abs(button.cx - icon.cx) <= 1 &&
+              Math.abs(button.cy - icon.cy) <= 1,
+            `${width}px carousel arrow is off center`,
+          );
+        }
+        assert.equal(geometry.cards.length, 4);
+        const firstRow = geometry.cards.filter(
+          ({ card }) => Math.abs(card.top - geometry.cards[0].card.top) < 2,
+        );
+        assert.equal(
+          firstRow.length,
+          width >= 1200 ? 4 : width >= 576 ? 2 : 1,
+          `${width}px service grid`,
+        );
+        for (const { card, icon, title, button } of geometry.cards) {
+          assert.ok(
+            Math.abs(card.cx - icon.cx) <= 1 &&
+              Math.abs(card.cx - title.cx) <= 1 &&
+              Math.abs(card.cx - button.cx) <= 1,
+            `${width}px service content is off center`,
+          );
+          assert.ok(
+            icon.bottom + 20 <= title.top,
+            `${width}px service icon touches title`,
+          );
+          assert.ok(
+            button.left >= card.left && button.right <= card.right,
+            `${width}px service button escapes card`,
+          );
+        }
+        assert.ok(
+          Math.max(...firstRow.map(({ button }) => button.bottom)) -
+            Math.min(...firstRow.map(({ button }) => button.bottom)) <=
+            1,
+          `${width}px service CTA row misaligned`,
+        );
+        assert.equal(geometry.oldReviewCards, 0);
+        assert.ok(
+          Math.abs(geometry.banner.cx - geometry.bannerTitle.cx) <= 1,
+          `${width}px next-car title misaligned`,
+        );
+        assert.ok(
+          geometry.banner.left >= 0 &&
+            geometry.banner.right <= geometry.client + 1,
+        );
+        if (engine === "chromium" && width === 1440) {
+          await page
+            .locator(".curated-services")
+            .screenshot({ path: path.join(evidence, "curated-services.png") });
+          await page
+            .locator(".curated-next-car")
+            .screenshot({ path: path.join(evidence, "curated-next-car.png") });
         }
       }
     },
   );
+  await step(
+    "Service cards and showroom CTA open their intended destinations",
+    async () => {
+      for (const width of [1440, 320]) {
+        for (const [selector, name, route] of [
+          [".curated-services", "Explore cars", "/inventory/"],
+          [".curated-services", "Get in touch", "/contact/?intent=sell"],
+          [".curated-services", "Compare cars", "/compare/"],
+          [".curated-services", "Calculate payments", "/calculator/"],
+          [
+            ".curated-next-car",
+            "Arrange a viewing",
+            "/contact/?intent=viewing",
+          ],
+        ]) {
+          await home(width);
+          await page
+            .locator(selector)
+            .getByRole("link", { name, exact: true })
+            .click();
+          await page.waitForURL(base + route);
+          assert.equal(await page.locator("main h1").count(), 1);
+          if (route.includes("intent=")) {
+            assert.equal(
+              await page
+                .getByRole("form", { name: "Enquiry form" })
+                .isVisible(),
+              true,
+            );
+            if (route.includes("sell")) {
+              assert.equal(
+                await page.locator("main h1").innerText(),
+                "Sell Your Car",
+              );
+              assert.equal(
+                await page.getByLabel("Car make and model").isVisible(),
+                true,
+              );
+            } else {
+              assert.equal(
+                await page.getByLabel("Your message").isVisible(),
+                true,
+              );
+            }
+          }
+        }
+      }
+    },
+  );
+  await step("Mobile dealer navigation and inner routes", async () => {
+    await home(320);
+    await page.getByRole("link", { name: "Open menu", exact: true }).click();
+    const menu = page.getByRole("dialog", { name: "Main menu" });
+    await menu.waitFor();
+    assert.equal(
+      await menu.getByRole("link", { name: "Home 01", exact: true }).count(),
+      0,
+    );
+    await menu.getByRole("link", { name: "Cars", exact: true }).click();
+    await page.waitForURL("**/inventory/");
+    await page.getByRole("button", { name: "Open menu", exact: true }).click();
+    const drawer = page.getByRole("dialog", { name: "Explore Boxcars" });
+    await drawer.waitFor();
+    assert.equal(
+      await drawer.getByText("Home designs", { exact: true }).count(),
+      0,
+    );
+    await drawer.getByRole("link", { name: "Home", exact: true }).click();
+    await page.waitForURL(base + "/");
+    await page.locator(".curated-home[data-ready=true]").waitFor();
+    for (const width of [1440, 320]) {
+      await page.setViewportSize({ width, height: 950 });
+      for (const route of [
+        "/about/",
+        "/contact/",
+        "/blog/choosing-your-next-car/",
+      ]) {
+        await page.goto(base + route, { waitUntil: "networkidle" });
+        assert.equal(await page.locator("main h1").count(), 1);
+        assert.ok(
+          await page.evaluate(
+            () =>
+              document.documentElement.scrollWidth <=
+              document.documentElement.clientWidth + 1,
+          ),
+          `${route} ${width}px overflow`,
+        );
+        assert.equal(
+          await page.locator('footer [aria-label="Homepage designs"]').count(),
+          0,
+        );
+      }
+    }
+  });
   assert.deepEqual(errors, []);
   await fs.writeFile(
     path.join(out, `${engine}-results.json`),

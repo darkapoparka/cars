@@ -25,6 +25,10 @@
     {
       "home": 8,
       "svelteSHA256": "20e147f7aed1f9fb2a76b38fc9f314376714ad006017a2ca74b88886997fddf8"
+    },
+    {
+      "home": 2,
+      "svelteSHA256": "c77416ab4e2475367ea5351eab482f43bfd44e97dc5f2a575c117757ca067bfa"
     }
   ],
   "composition": {
@@ -34,8 +38,8 @@
     "types": "Home 10 photographic body types, centered row with catalogue destinations",
     "brands": "Home 8 brand DOM in centered source-style tiles with catalogue destinations",
     "inventory": "Home 8 boxed shelf and card DOM, three desktop cards with compact specifications, shared catalogue and saved state",
-    "benefits": "Home 5 horizontal four-icon section",
-    "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
+    "services": "Home 5 pastel buy/sell CTA card DOM and original SVGs, four centered cards with inventory, sell enquiry, comparison and calculator destinations",
+    "nextCar": "Home 2 original photographic CTA banner, centered dealer title and viewing action",
     "journalAndFooter": "Home 8, shared articles and identity"
   },
   "method": "Compose preserved source DOM as compiled Svelte; scoped responsive CSS and native controls. No changes to the ten source homepage components."

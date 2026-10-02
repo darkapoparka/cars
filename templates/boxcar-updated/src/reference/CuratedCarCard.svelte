@@ -36,8 +36,8 @@
         }}
       >
         <svg
-          width="12"
-          height="12"
+          width="18"
+          height="18"
           viewBox="0 0 12 12"
           aria-hidden="true"
           fill={saved ? "currentColor" : "none"}
@@ -64,10 +64,10 @@
       <div class="btn-box">
         <small>{money(vehicle.price)}</small>
         <a href={detailHref(vehicle)} class="details">
-          View details
+          <span>View details</span>
           <svg
-            width="14"
-            height="14"
+            width="20"
+            height="20"
             viewBox="0 0 14 14"
             aria-hidden="true"
             fill="none"
@@ -75,7 +75,7 @@
             <path
               d="M1 13 13 1M5 1h8v8"
               stroke="currentColor"
-              stroke-width="1.2"
+              stroke-width="1.4"
               stroke-linecap="round"
               stroke-linejoin="round"
             />

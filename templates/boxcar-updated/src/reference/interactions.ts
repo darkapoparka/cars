@@ -613,6 +613,10 @@ export function referencePage(node: HTMLElement) {
                     ...config,
                     slidesToShow: 3,
                     infinite: false,
+                    prevArrow:
+                      '<button type="button" class="slick-prev" aria-label="Previous"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M19 12H5m7-7-7 7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+                    nextArrow:
+                      '<button type="button" class="slick-next" aria-label="Next"><svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
                     responsive: Array.isArray(config.responsive)
                       ? config.responsive.map((breakpoint) => ({
                           ...breakpoint,
