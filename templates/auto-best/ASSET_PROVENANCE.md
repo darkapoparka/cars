@@ -38,6 +38,7 @@ A filename does not prove a file is currently rendered. Component/data reference
 | [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
 | [Mobile Audi chrome mark](provenance/mobile-audi-chrome-2026-10-02.md) | Unchanged transparent Import-template source; mobile rings crop and desktop source preserved |
 | [Mobile Volkswagen badge](provenance/mobile-volkswagen-badge-2026-10-02.md) | Unchanged pinned Cardog emblem; curated mobile trio with existing Mercedes-Benz and BMW artwork |
+| [Mobile BMW roundel](provenance/mobile-bmw-roundel-2026-10-02.md) | Unchanged pinned Cardog vector for sharp mobile rendering; compact Mercedes label retains the canonical make filter |
 | [Editorial photos](provenance/editorial-photos-2026-09-08.md) | Photo sources and credits |
 | [Borderless editorial](provenance/borderless-editorial-2026-09-08.md) | Generated edits of photo inputs |
 

@@ -6,7 +6,7 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import DiscoveryAllTile from './DiscoveryAllTile.svelte';
-  import { brands, desktopBrands, homeBrandCards, mobileBrandArtwork, mobileFeaturedBrandLabels } from '$data/home';
+  import { brands, desktopBrands, homeBrandCards, mobileBrandArtwork, mobileBrandLabels, mobileFeaturedBrandLabels } from '$data/home';
   const mobileBrands = new Set<string>(mobileFeaturedBrandLabels);
   const desktopBrandLabels = new Set<string>(desktopBrands.map(brand => brand.label));
   type BrandArtwork = (typeof mobileBrandArtwork)[string];
@@ -55,7 +55,10 @@
                 </picture>
               </span>
             </span>
-            <strong>{brand.label}</strong>
+            <strong>
+              <span class="dn-brand-card__label--desktop">{brand.label}</span>
+              <span class="dn-brand-card__label--mobile">{mobileBrandLabels[brand.label] ?? brand.label}</span>
+            </strong>
           </a>
         {/each}
         <DiscoveryAllTile
@@ -85,6 +88,7 @@
   .dn-brand-card__image { display: flex; width: 100%; height: 52px; align-items: center; justify-content: center; margin-bottom: 12px; }
   .dn-brand-card__image img { position: absolute; width: var(--logo-image-width); max-width: none; height: auto; left: var(--logo-left); top: var(--logo-top); }
   .dn-brand-card strong { display: block; margin: 0; color: #24272c; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); }
+  .dn-brand-card__label--mobile { display: none; }
   .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
   .dn-brand-hero__cta:hover { background: var(--dn-surface-hover); }
   a:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
@@ -127,6 +131,8 @@
     .dn-brand-card--secondary,
     .dn-brand-card--desktop-only { display: none; }
     .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font: var(--dn-discovery-label-font); }
+    .dn-brand-card__label--desktop { display: none; }
+    .dn-brand-card__label--mobile { display: inline; }
     .dn-brand-card--additional { order: 2; }
   }
 

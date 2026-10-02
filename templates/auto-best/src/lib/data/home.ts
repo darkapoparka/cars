@@ -32,13 +32,16 @@ const brandArtwork = [
   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
-// Responsive artwork overrides retain the inherited Audi source unchanged.
-// Its measured rings bounds omit the wordmark in compact cards.
+// Mobile artwork overrides retain their supplied geometry and source colors.
+// Audi's measured rings bounds omit its inherited wordmark in compact cards.
 export const mobileBrandArtwork: Record<string, {
   image: string; width: number; height: number; bounds: readonly [number, number, number, number];
 }> = {
-  Audi: { image: '/assets/images/brand-curated/audi-rings-chrome-mobile.webp', width: 1800, height: 1200, bounds: [73, 90, 1726, 672] }
+  Audi: { image: '/assets/images/brand-curated/audi-rings-chrome-mobile.webp', width: 1800, height: 1200, bounds: [73, 90, 1726, 672] },
+  BMW: { image: '/assets/images/brand-curated/bmw-roundel-cardog-mobile.svg', width: 512, height: 512, bounds: [78, 78, 434, 434] }
 };
+
+export const mobileBrandLabels: Record<string, string> = { 'Mercedes-Benz': 'Mercedes' };
 
 // Desktop discovery retains the full template catalog.
 const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
