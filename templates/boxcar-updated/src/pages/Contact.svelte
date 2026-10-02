@@ -13,7 +13,7 @@
   );
 </script>
 
-<!-- Adapted from contact.html: title, wide visual, form and bordered contact column. -->
+<!-- Adapted from contact.html: shared banner, wide visual and joined contact panel. -->
 <section class="bc-inner contact-us-section has-page-banner">
   <PageBanner
     title={selling ? "Sell Your Car" : "Contact us"}
