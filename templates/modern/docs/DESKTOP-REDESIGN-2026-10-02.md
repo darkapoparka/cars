@@ -1,6 +1,27 @@
 # Modern desktop refresh
 
-## Current desktop control polish
+## Current category image pills and filled controls
+
+The desktop category row now sits immediately above vehicle search as four compact image pills. The selected pill uses a subtle grey fill and a short, centred red underline. The matching graphite car, truck, motorcycle, and van cutouts add category recognition without another heavy navigation bar. The existing category links continue to select the search category and retain the established URL behavior.
+
+Search and Make/Model/Price/Year use filled grey surfaces, consistent rounded corners, and aligned chevrons. Selected quick filters use a solid charcoal fill. Expanded filters follow the same treatment without the previous horizontal divider. Inventory Filters, sorting hover/open state, and grid/list controls use matching grey fills. The existing boxed inventory and header remain in place.
+
+The four transparent assets were generated with the built-in imagegen tool and copied into `apps/web/public/images/categories/desktop-category-*-v1.png`. The original generated outputs and existing category assets were preserved. [Asset manifest and exact prompts](assets/DESKTOP-CATEGORY-ARTWORK-2026-10-02.json) record the files and generation details. The desktop row renders the cutouts through the existing mount-aware Next Image wrapper at 72 by 44 CSS pixels. The existing desktop viewport hook prevents these images from mounting below 1024px; mobile category artwork was not replaced.
+
+Validation on 2 October 2026 with Node 22.23.2 and pnpm 11.4.0:
+
+- Web typecheck passed. The final isolated public-demo production build passed with `E2E_PUBLIC_RUN_ID=desktop-category-pills-final-local-20261002`. The final Web and Marketplace UI suites passed all 271 tests. Biome checked the three changed source files.
+- The in-app browser captured Home and inventory in Bulgarian and English at actual 1024, 1440, and 1920px widths. All twelve views had four loaded category images, a centred category row, no horizontal overflow, and no broken completed visible images.
+- Clicking Trucks completed navigation to `/en/trucks?category=truck`, selected the correct image pill, and displayed its 32px underline. The filled-control checks also verified a BMW draft stayed on Home until Search, returned five vehicles when submitted, expanded the advanced filter grid, and dismissed sorting with focus returned to the trigger.
+- Fresh mobile comparisons covered Bulgarian Home and inventory at 320 and 390px. All 302 persistent measured elements retained the same geometry, text, typography, foreground, and background. None of those views overflowed or mounted the new desktop category images. This is measured UI preservation, not a pixel-identical image-decoding claim.
+
+Current evidence is in ignored `runtime/desktop-category-pills-2026-10-02/`. Its mobile baseline is this pass's `runtime/desktop-filled-controls-2026-10-02/mobile-before.json`; the earlier filled-control interaction captures remain in that folder. Browser verification used the in-app browser; separate Playwright/WebKit suites were not rerun.
+
+Low free space interrupted the previous preview's image cache. The owned Modern preview was restarted on the same port with a fresh isolated cache. Temporary C-drive build attempts picked up an unrelated globally installed Next 15 package through the physical output path and failed metadata collection; those attempts are excluded from passing evidence. The final successful build used the normal project path and pinned Next 16.3.3. Automatic approval review blocked removal of the earlier completed build directory, so it was retained.
+
+Local preview: http://127.0.0.1:6482/bg/cars. Mobile rules, dealer identity, sample inventory, provider behavior, and unrelated working changes were preserved. Owner visual acceptance, template release selection, and dealer deployment remain separate.
+
+## Previous desktop control polish
 
 The owner rejected the boxed revision's header, category icons, tabs, filters, and sorting controls. The boxed inventory composition remains, with the desktop controls rebuilt as one consistent set. The header has centred navigation, a compact selected state, a clearly labelled BG/EN preference link, the actual showroom map link, and a quieter phone action. Category navigation uses compact text tabs before search. The quick filters use matching 44px fields with 10px corners, consistent borders, and restrained open/selected states. Expanded filters align in a four-column grid; draft status and reset share a deliberate footer.
 

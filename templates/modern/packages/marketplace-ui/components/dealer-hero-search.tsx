@@ -56,6 +56,7 @@ import {
 } from "./desktop-search-assistant";
 import { DesktopSearchFilterGrid } from "./desktop-search-filter-grid";
 import { MarketplaceMakeModelPicker } from "./marketplace-model-picker";
+import Image from "./public-image";
 
 const fieldClassName = `${desktopQuickFilterOptionClassName} ${styles.field}`;
 
@@ -171,6 +172,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               isBg={isBg}
               locale={locale}
               pathname={pathname}
+              showArtwork={isDesktop}
             />
           </nav>
           <div className={styles.searchRow}>
@@ -550,11 +552,13 @@ function VehicleCategoryTabs({
   isBg,
   locale,
   pathname,
+  showArtwork,
 }: {
   filters: MarketplaceSearchParams;
   isBg: boolean;
   locale?: string;
   pathname: string;
+  showArtwork: boolean;
 }) {
   return (
     <>
@@ -578,7 +582,22 @@ function VehicleCategoryTabs({
             prefetch={true}
             scroll={false}
           >
-            {getLocalizedDesktopCategoryLabel(category.id, isBg)}
+            <span aria-hidden="true" className={styles.categoryArtwork}>
+              {showArtwork ? (
+                <Image
+                  alt=""
+                  className={styles.categoryImage}
+                  data-slot="desktop-category-image"
+                  draggable={false}
+                  height={926}
+                  loading="eager"
+                  sizes="72px"
+                  src={`/images/categories/desktop-category-${category.id}-v1.png`}
+                  width={1698}
+                />
+              ) : null}
+            </span>
+            <span>{getLocalizedDesktopCategoryLabel(category.id, isBg)}</span>
           </Link>
         );
       })}

@@ -60,14 +60,13 @@
     padding-inline: 0.875rem;
     font-size: 0.875rem;
     font-weight: 500;
-    background: var(--panel);
-    border: 1px solid #e1e4e9;
-    border-radius: 0.625rem;
+    background: #e8ebf0;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
     box-shadow: none;
   }
   .filterButton:hover {
-    background: #f7f8fa;
-    border-color: #cbd0d8;
+    background: #dfe2e8;
   }
   .filterCount {
     display: inline-grid;
@@ -90,13 +89,13 @@
     cursor: pointer;
     background: transparent;
     border-color: transparent;
-    border-radius: 0.625rem;
+    border-radius: 0.75rem;
     box-shadow: none;
   }
   .sort:hover,
   .sort[data-state="open"] {
-    background: var(--panel);
-    border-color: #e1e4e9;
+    background: #e8ebf0;
+    border-color: transparent;
   }
   .sortLabel {
     font-weight: 400;
@@ -124,9 +123,9 @@
     justify-self: end;
     height: 2.75rem;
     padding: 0.25rem;
-    background: transparent;
-    border: 1px solid #e1e4e9;
-    border-radius: 0.625rem;
+    background: #e8ebf0;
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
   }
   .viewToggle button {
     width: 2.125rem;
@@ -140,7 +139,7 @@
   }
   .viewToggle button[aria-pressed="false"]:hover {
     color: var(--foreground);
-    background: var(--panel);
+    background: #dfe2e8;
   }
   .grid[data-view="grid"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
