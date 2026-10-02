@@ -4,7 +4,7 @@
 
 The ordinary native dealer publisher now applies Vercel asset planning automatically for Auto Best, Modern, Carwow, Import and App. This is not gated behind the separate Cloudflare `--local-assets` experiment. `package-dealer.mjs`, additive App packaging and the existing shared-media packaging entry point all use `vercel-asset-plan.mjs`. The source release lock and dealer refresh remain separate from publishing.
 
-The sequence is: retain source and customization; select exact-hash existing Blob media; evaluate each family's unused-asset policy; pool remaining duplicate binary media; seal the generated plan; build and validate every service. JavaScript, CSS and SVG are not relocated. Different bytes with the same filename remain different objects. Unknown or newly customized images are retained.
+The sequence is: retain source and customization; evaluate each family's unused-asset policy; select exact-hash existing Blob media for retained assets; pool remaining duplicate binary media; seal the generated plan; build and validate every service. JavaScript, CSS and SVG are not relocated. Different bytes with the same filename remain different objects. Unknown or newly customized images are retained.
 
 Pooled source objects live under `.cars-media/<dealer>/` in the generated publishing package, outside template/native/App source seals. Only the root Auto Best build materializes their immutable public paths under `/_cars/media/<dealer>/`. Exact Vercel Services rewrites point existing image URLs to that one root asset, preserving current mounted paths. Neither source adoption seals nor original application bytes are rewritten to conceal a packaging change.
 
@@ -89,3 +89,17 @@ node scripts/verify-template-assets-browser.mjs carwow http://127.0.0.1:8963 L:/
 ```
 
 The browser tool requires a new report directory outside the template. It checks viewport-intersecting images (not intentionally unloaded horizontal-carousel slides), language, headings, overflow, actual vehicle clicks, direct reloads, Back navigation, and failed asset requests across 320/390/1440px in EN/BG. Run families sequentially on an occupied development workstation; concurrent browsers/builds can exhaust memory and invalidate results. Do not classify an operating-system allocation failure as an application regression or silently count it as a pass.
+
+## Release hardening: one project, shared public storage
+
+One dealer keeps one Vercel project and one combined deployment. Its offered designs are separately built internal Services under the recorded mounts, not separate public projects. A fifth design adds a service only after its framework, localization, personalization and source-receipt integration is accepted. Admin stays a separate link. Do not build a database/backend per dealer merely to deliver public photographs.
+
+The existing shared Blob catalog delivers common artwork across dealers. Remaining duplicate public binaries share the dealer's root media pool. These are distinct levels of reuse: fleet-wide common assets and dealer-specific shared assets. Public storage must never contain customer records, private documents or credentials. New common artwork needs verified immutable catalog objects before externalization; it is not automatically uploaded by packaging.
+
+`applySharedMedia` now evaluates the existing family retention policies before assigning catalog rewrites. An obsolete image that is already in the catalog no longer consumes a deployment routing rule. A new consumer or changed dealer bytes still protects it. Nothing is deleted from the source tree or the remote store. This order also leaves more routing capacity for the fifth design.
+
+Fresh native packages split installation from compilation. Vercel's install command invokes `build-native-service.mjs install <family>` once with the existing complete dependency plan. The build invokes `<family> --installed`, verifies a local dependency-input receipt and the installed compiler, and skips the redundant second dependency installation. A changed lockfile, workspace package, missing compiler or failed reinstall invalidates reuse. The legacy one-argument command still installs its own dependencies. App continues to install once, explicitly including build-time dependencies. Receipts live only in the generated package's `.cars-build-assets/` directory.
+
+Publisher dry runs and package receipts now expose `assetDelivery`: local public source bytes, external reference bytes, reviewed unused bytes and eliminated local duplication. These quantities must balance. Existing externalization is not new savings and external storage remains billable separately. Source-asset estimates do not include compiled JavaScript/CSS or Functions. Next after-build reports now add `.next/static` client chunks to `deliveredStaticBytes`; Svelte's public output already contains its client code. The final combined Vercel output still requires its full output audit.
+
+No master preview, release selection, existing dealer source, remote media object, Vercel deployment or billing setting is changed by these build/publisher improvements. Later frontend changes and the selected fifth design require fresh exact-source release and combined-dealer acceptance. Template work-in-progress must not be blanket-staged into that release.

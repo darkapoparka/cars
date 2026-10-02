@@ -120,3 +120,35 @@ test('asset plans can be refreshed without stacking route wrappers or losing sou
   for (const [name, bytes] of original) if (name !== 'vercel.json') assert.deepEqual(files.get(name), bytes);
   const second = applyVercelAssets(files); assert.deepEqual(first, second);
 });
+
+test('storage summary separates external media, unused output and local duplication', () => {
+  const files=fixture();
+  const unused=b('obsolete artwork');
+  files.set('app/public/old.webp',unused);
+  files.set('app/public-assets.policy.json',b({schemaVersion:1,family:'app',candidates:[
+    {path:'old.webp',sha256:hash(unused),reason:'Reviewed obsolete image, source remains intact.'}
+  ]}));
+  const entry={service:'app',relative:'unique.png',bytes:files.get('app/public/unique.png').length,sha256:hash(files.get('app/public/unique.png'))};
+  files.set('.cars-shared-media.json',b({schemaVersion:1,dealer:'fixture-dealer',entries:[entry]}));
+  const {summary:s}=planVercelAssets(files);
+  assert.equal(s.unusedBytes,unused.length);
+  assert.equal(s.externalReferenceBytes,entry.bytes);
+  assert.equal(s.localDuplicateBytesAvoided,3*files.get('app/public/stock/car.webp').length);
+  assert.equal(s.inputBytes,s.outputBytes+s.externalReferenceBytes+s.unusedBytes+s.localDuplicateBytesAvoided);
+  assert.match(s.accounting,/excludes compiled client code/);
+});
+
+test('Next output accounting includes generated client JavaScript, not only public media', t => {
+  const files=fixture(); files.set('app/.next/static/chunks/page.js',b('compiled client code'));
+  applyVercelAssets(files); seal(files); const root=directory(t,files);
+  prepareServiceAssets('before','app',{packageRoot:root});
+  const report=prepareServiceAssets('after','app',{packageRoot:root});
+  assert.equal(report.clientCode.bytes,files.get('app/.next/static/chunks/page.js').length);
+  assert.equal(report.deliveredStaticBytes,report.public.bytes+report.clientCode.bytes);
+});
+test('large generated Next chunks fail the delivered-static budget', t => {
+  const files=fixture(); files.set('app/.next/static/chunks/page.js',Buffer.alloc(1024));
+  applyVercelAssets(files,{maxPublicBytes:512}); seal(files); const root=directory(t,files);
+  prepareServiceAssets('before','app',{packageRoot:root});
+  assert.throws(()=>prepareServiceAssets('after','app',{packageRoot:root}),/public output exceeds/);
+});

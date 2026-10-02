@@ -1,0 +1,636 @@
+{
+  "schemaVersion": 1,
+  "kind": "publisher-tooling-local-qa-not-template-release-approval",
+  "verifiedAt": "2026-10-02T10:06:57.911Z",
+  "baseObservedCommit": "6fd81a468f76b1fc1d577bd5f1cf6f758d4001dd",
+  "changes": [
+    "Reviewed-unused retention before shared Blob routing",
+    "Verified single native dependency installation for generated Vercel Services",
+    "Compatible App extension preserves current native helper",
+    "Separate public-source, external-reference, unused and deduplication byte accounting",
+    "Next emitted client chunks included in delivered-static checks"
+  ],
+  "checks": {
+    "workflowTests": {
+      "passed": 308,
+      "total": 308,
+      "command": "node --test --test-concurrency=1 scripts/*.test.mjs"
+    },
+    "workflowCheck": true,
+    "scopedWhitespaceCheck": true,
+    "templateAssetFixtureComparison": {
+      "revision": "b71ef63ce5ba916d0036ac24d34440e644294ad9",
+      "kind": "exact-template-source-asset-fixture-not-dealer-release-or-production-build",
+      "results": [
+        {
+          "configuration": [
+            "auto-best",
+            "modern",
+            "carwow",
+            "app"
+          ],
+          "beforeRules": 561,
+          "afterRules": 275,
+          "beforeMediaReferences": 548,
+          "afterMediaReferences": 262,
+          "publicBytesBefore": 29577364,
+          "publicBytesAfter": 29577364,
+          "unchangedSourceFiles": true
+        },
+        {
+          "configuration": [
+            "auto-best",
+            "import",
+            "carwow",
+            "app"
+          ],
+          "beforeRules": 947,
+          "afterRules": 579,
+          "beforeMediaReferences": 846,
+          "afterMediaReferences": 478,
+          "publicBytesBefore": 30414092,
+          "publicBytesAfter": 30414092,
+          "unchangedSourceFiles": true
+        }
+      ]
+    },
+    "existingDealerPublisherDryRuns": {
+      "tested": 25,
+      "passed": 24,
+      "sourceMode": "Existing committed four-design dealer inputs at each read; not one frozen new frontend/fifth-design release",
+      "outputDirectoriesCreated": 0,
+      "localPublicSourceBytes": {
+        "minimum": 30273979,
+        "maximum": 84737342,
+        "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history."
+      },
+      "holds": [
+        {
+          "slug": "navara-car",
+          "error": "Retained canonical source differs from b71ef63ce5ba916d0036ac24d34440e644294ad9: app/app/[locale]/page.tsx, app/components/DealerBrand.tsx, app/components/DiscoveryHeader.tsx, app/components/InventoryClient.tsx, app/components/ReferenceUI.tsx, app/components/VehicleCard.tsx, app/components/search-field.stylex.ts, app/lib/currency.ts (13 paths). Commit the scoped source first or select its exact --source-commit."
+        }
+      ],
+      "cases": [
+        {
+          "slug": "al-basma-motors",
+          "passed": true,
+          "independent": false,
+          "digest": "12065a5151b766d56fbe6ed963ff57d1ac7b547f57345ca61f884ba4076e5951",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 333824171,
+            "outputBytes": 40327289,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 6555362,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 293496882,
+            "pooledObjects": 59,
+            "pooledCopies": 218,
+            "unusedFiles": 0,
+            "routes": 774
+          }
+        },
+        {
+          "slug": "al-hamoor-al-thahabi",
+          "passed": true,
+          "independent": false,
+          "digest": "e1828ec91f83c5fb5f3cb4714bbe16d1e6c1c6b4180a0a80d224df6aaf799051",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 334075438,
+            "outputBytes": 40442867,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 6691051,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 293632571,
+            "pooledObjects": 52,
+            "pooledCopies": 186,
+            "unusedFiles": 0,
+            "routes": 742
+          }
+        },
+        {
+          "slug": "al-reef-used-cars",
+          "passed": true,
+          "independent": true,
+          "digest": "7f76440c022806e87e2a26e6e05a22e596b38e7a000f68c5ed3d566b2e3893f5",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 331446757,
+            "outputBytes": 39520167,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 4985070,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 291926590,
+            "pooledObjects": 21,
+            "pooledCopies": 94,
+            "unusedFiles": 0,
+            "routes": 650
+          }
+        },
+        {
+          "slug": "asko-96",
+          "passed": true,
+          "independent": false,
+          "digest": "9a36a95fa30f2a2151f49a9a1bfd9c0e523f5489ee4eadb18b4ac5c394b7f669",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 451963233,
+            "outputBytes": 69762665,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 95259048,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 382200568,
+            "pooledObjects": 68,
+            "pooledCopies": 257,
+            "unusedFiles": 0,
+            "routes": 813
+          }
+        },
+        {
+          "slug": "astracar",
+          "passed": true,
+          "independent": false,
+          "digest": "47f7b443875aa316df0941e173f6fe9fcede35b4801789fdc1a4b5dcbcb96778",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 353323072,
+            "outputBytes": 45262158,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 21119394,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 308060914,
+            "pooledObjects": 96,
+            "pooledCopies": 356,
+            "unusedFiles": 0,
+            "routes": 912
+          }
+        },
+        {
+          "slug": "autolife",
+          "passed": true,
+          "independent": false,
+          "digest": "f2ff5f14b7d5a96501d8587c848b050ad3bd0cceee6d65a6f18136e2c623e7bc",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 433047111,
+            "outputBytes": 60355449,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 85750142,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 372691662,
+            "pooledObjects": 64,
+            "pooledCopies": 285,
+            "unusedFiles": 0,
+            "routes": 841
+          }
+        },
+        {
+          "slug": "automarket-varna",
+          "passed": true,
+          "independent": false,
+          "digest": "a97a6ff19a6b0641951b1701634532112cb7f03265b1cf74f55e8cf413def8f2",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 449417847,
+            "outputBytes": 69306722,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 93169605,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 380111125,
+            "pooledObjects": 97,
+            "pooledCopies": 369,
+            "unusedFiles": 0,
+            "routes": 925
+          }
+        },
+        {
+          "slug": "avangard-auto",
+          "passed": true,
+          "independent": false,
+          "digest": "181f2e1b7f625634f0de51a9dda0e80e747a3cc59b2ff80cf837999e77e9e39f",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 335806972,
+            "outputBytes": 40696197,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 8169255,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 295110775,
+            "pooledObjects": 74,
+            "pooledCopies": 292,
+            "unusedFiles": 0,
+            "routes": 848
+          }
+        },
+        {
+          "slug": "champion-auto-pro",
+          "passed": true,
+          "independent": false,
+          "digest": "e27b6d3945a0e917761efeec67e8ec232a83e6577c65bc4ad4fac86653f16266",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 429742900,
+            "outputBytes": 64230154,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 78571226,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 365512746,
+            "pooledObjects": 76,
+            "pooledCopies": 290,
+            "unusedFiles": 0,
+            "routes": 846
+          }
+        },
+        {
+          "slug": "day-and-night-auto-group",
+          "passed": true,
+          "independent": false,
+          "digest": "1ae13bae2a0028734b7908b9f9a418f9405ea1dfb76df964b63f445aac17e353",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 330992562,
+            "outputBytes": 39319457,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 4731585,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 291673105,
+            "pooledObjects": 50,
+            "pooledCopies": 108,
+            "unusedFiles": 0,
+            "routes": 664
+          }
+        },
+        {
+          "slug": "eliqauto",
+          "passed": true,
+          "independent": false,
+          "digest": "f00bbb52085231ca6ac49aa5e926bba1cc51cdec3841842ccebf94a38916fe92",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 456651020,
+            "outputBytes": 84737342,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 84972158,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 371913678,
+            "pooledObjects": 117,
+            "pooledCopies": 444,
+            "unusedFiles": 0,
+            "routes": 1000
+          }
+        },
+        {
+          "slug": "elit-auto-import",
+          "passed": true,
+          "independent": false,
+          "digest": "65cbc79d4a7eee007d3f2bb2366f6591de6c4e20b9405235dce7721930126519",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 364727872,
+            "outputBytes": 47235971,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 30550381,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 317491901,
+            "pooledObjects": 90,
+            "pooledCopies": 352,
+            "unusedFiles": 0,
+            "routes": 908
+          }
+        },
+        {
+          "slug": "excellent-cars",
+          "passed": true,
+          "independent": false,
+          "digest": "0f891a027030906975986dcdd5bb6d36fb2db4928fdd40bbf6a777e678f8f4a8",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 408139715,
+            "outputBytes": 58865326,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 62332869,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 349274389,
+            "pooledObjects": 76,
+            "pooledCopies": 290,
+            "unusedFiles": 0,
+            "routes": 846
+          }
+        },
+        {
+          "slug": "f1rst-motors",
+          "passed": true,
+          "independent": false,
+          "digest": "7f2daba70a5f412b03219d2a7e50e2920a0eac741aa2891f59957a466331d547",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 330308626,
+            "outputBytes": 39313707,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 4053399,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 290994919,
+            "pooledObjects": 13,
+            "pooledCopies": 40,
+            "unusedFiles": 0,
+            "routes": 596
+          }
+        },
+        {
+          "slug": "isauto-varna",
+          "passed": true,
+          "independent": false,
+          "digest": "64709c781964fd156a8f23fdb72698d7780ffa3e66a46d468bbb59e856ffbbaf",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 333066906,
+            "outputBytes": 40009680,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 6115706,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 293057226,
+            "pooledObjects": 18,
+            "pooledCopies": 58,
+            "unusedFiles": 0,
+            "routes": 614
+          }
+        },
+        {
+          "slug": "ivo-auto",
+          "passed": true,
+          "independent": false,
+          "digest": "b0a924b9a216127a2e63885a21aa2a8327d723251a8875128e3b69bba741d77e",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 428744585,
+            "outputBytes": 58933837,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 82869228,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 369810748,
+            "pooledObjects": 64,
+            "pooledCopies": 286,
+            "unusedFiles": 0,
+            "routes": 842
+          }
+        },
+        {
+          "slug": "kg-team-auto",
+          "passed": true,
+          "independent": false,
+          "digest": "ebad3fc32083970de7d7248e433316e18a3a9acbd825869031a83472880f3d4d",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 394861266,
+            "outputBytes": 55680298,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 52239448,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 339180968,
+            "pooledObjects": 55,
+            "pooledCopies": 193,
+            "unusedFiles": 0,
+            "routes": 749
+          }
+        },
+        {
+          "slug": "legend-auto",
+          "passed": true,
+          "independent": false,
+          "digest": "69ca589dfbe6390d742b2961fe48298889ae6550d4426fc80377939d3ee6780c",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 426736442,
+            "outputBytes": 63650007,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 76144915,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 363086435,
+            "pooledObjects": 87,
+            "pooledCopies": 329,
+            "unusedFiles": 0,
+            "routes": 885
+          }
+        },
+        {
+          "slug": "navara-car",
+          "passed": false,
+          "independent": false
+        },
+        {
+          "slug": "outletcars-varna",
+          "passed": true,
+          "independent": false,
+          "digest": "05e8b84bd5020d313988e76f389ed06f28863c6d28434a7266d6123c0067a326",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 466949682,
+            "outputBytes": 33646290,
+            "externalReferenceBytes": 408210588,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 25092804,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 433303392,
+            "pooledObjects": 212,
+            "pooledCopies": 513,
+            "unusedFiles": 0,
+            "routes": 1367
+          }
+        },
+        {
+          "slug": "perfect-auto-varna",
+          "passed": true,
+          "independent": false,
+          "digest": "3b65006c9a896aa7eff6d7f15456e4e08a4a4fbe14555825ab9315e24a5a641b",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 367085181,
+            "outputBytes": 48646490,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 31497171,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 318438691,
+            "pooledObjects": 46,
+            "pooledCopies": 166,
+            "unusedFiles": 0,
+            "routes": 722
+          }
+        },
+        {
+          "slug": "priselci",
+          "passed": true,
+          "independent": false,
+          "digest": "70799c88b0820259d2475fe28b652842745620d9d7adfb0336235a1beab68338",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 469682254,
+            "outputBytes": 74189712,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 108551022,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 395492542,
+            "pooledObjects": 77,
+            "pooledCopies": 296,
+            "unusedFiles": 0,
+            "routes": 852
+          }
+        },
+        {
+          "slug": "promosale-varna",
+          "passed": true,
+          "independent": false,
+          "digest": "87aaec049b6427f02e13a2c5ef5ae8d78eb7d5cd288eb840af357337c9975d09",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 453106257,
+            "outputBytes": 30273979,
+            "externalReferenceBytes": 408210588,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 14621690,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 422832278,
+            "pooledObjects": 203,
+            "pooledCopies": 469,
+            "unusedFiles": 0,
+            "routes": 1323
+          }
+        },
+        {
+          "slug": "texas-drive-auto",
+          "passed": true,
+          "independent": false,
+          "digest": "0d14b71f13687655a0fe86aae6bf21998e77d7ffd574839e0b5b7934fda2778a",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 332190150,
+            "outputBytes": 39879615,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 5369015,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 292310535,
+            "pooledObjects": 17,
+            "pooledCopies": 52,
+            "unusedFiles": 0,
+            "routes": 608
+          }
+        },
+        {
+          "slug": "the-dealers-point",
+          "passed": true,
+          "independent": false,
+          "digest": "aee1e432b9f32a587b8ec8587a4f8587a4480d0d076500c52608c94fc327c571",
+          "assetDelivery": {
+            "provider": "vercel",
+            "projectMode": "services",
+            "designCount": 4,
+            "inputBytes": 330221293,
+            "outputBytes": 39361882,
+            "externalReferenceBytes": 286941520,
+            "unusedBytes": 0,
+            "localDuplicateBytesAvoided": 3917891,
+            "accounting": "Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.",
+            "excludedOrExternalBytes": 290859411,
+            "pooledObjects": 14,
+            "pooledCopies": 40,
+            "unusedFiles": 0,
+            "routes": 596
+          }
+        }
+      ]
+    }
+  },
+  "sourceFiles": {
+    "docs/PUBLIC-ASSET-PIPELINE.md": "2a9f82d33943e72e769cd37bf21f7fcde40807e1f73f83964452659109a51335",
+    "scripts/app-variant.test.mjs": "d974d42008009365a058f755cd505d6d1192e48cb829e82f1a4f496593279b71",
+    "scripts/native-build-install.test.mjs": "d6dfb005e02f6d7cc04450c2fdbfa3cb8144a56e9db1745a3ea249e1bf234251",
+    "scripts/native-localization.test.mjs": "92ce76f2bb3bf80c079e761352d81d2a544a50ca00f571334db828e7567643e4",
+    "scripts/package-dealer.mjs": "cbb1ac70bc5128c4bf76318c915d98366a6762041f0c85f71c062cae4dc68f3d",
+    "scripts/publishing/app-variant.mjs": "2635df2cec0f5219500536ba6b7e4e185eb6724b3d05fe76bfdec6851a9ef5b0",
+    "scripts/publishing/build-native-service.mjs": "fe0d4dbbe604744c442a413523c113a6ccf82c6e6def56ed9e31fef86b198529",
+    "scripts/publishing/shared-media.mjs": "1d09e9de867154eeb7c89e3b56d1b8519a3eaa1affe903ff310433fe3bcb1436",
+    "scripts/publishing/vercel-asset-plan.mjs": "c60df661893663e45bd8f20aea67c6b599ca54c0531b02cf1e605d94f23508bf",
+    "scripts/publishing/vercel-service-assets.mjs": "8707d88d02d96a84a22b489bc8c1bea4d369f9d9254b1130a9afb809d9ea21bc",
+    "scripts/shared-media.test.mjs": "01b91d2e904e641fbe4baeba27e89b8d7d6b111f1111acf4ff01bc5f9e86c553",
+    "scripts/vercel-assets.test.mjs": "4443f5510d9517934e2037968c61439494239d5f6c23f1c9bbbe89cbb52f75e9"
+  },
+  "scope": {
+    "templateUIEdited": false,
+    "dealerSourceEdited": false,
+    "independentSourceEdited": false,
+    "releaseLockChanged": false,
+    "fifthDesignPromoted": false,
+    "publishingRepositoryPushes": 0,
+    "deployments": 0,
+    "billingChanged": false,
+    "dnsChanged": false
+  },
+  "remaining": "Select and integrate the fifth design, reconcile active frontend/dealer work, refresh verified shared media for new common artwork, and run exact combined platform builds and hosted acceptance before fleet publication."
+}

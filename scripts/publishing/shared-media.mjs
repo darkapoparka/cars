@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {familyRetention} from './vercel-asset-plan.mjs';
 
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const roots={'auto-best':'auto-best/static/',modern:'modern/apps/web/public/',import:'import/static/',carwow:'carwow/static/',app:'app/public/'};
@@ -15,8 +16,10 @@ export function applySharedMedia(files,catalog){
  const entries=[],rewrites=[];
  for(const variant of manifest.variants){
   const prefix=roots[variant.key];if(!prefix)throw Error('Unsupported media service');
+  // Omit reviewed unused output before allocating external routing rules.
+  const omitted = new Set(familyRetention(files, variant.key).omitted.map(entry => entry.path));
   for(const [file,bytes]of files){
-   if(!file.startsWith(prefix))continue;
+   if(!file.startsWith(prefix) || omitted.has(file.slice(prefix.length)))continue;
    const digest=hash(bytes),asset=catalog[digest];if(!asset)continue;
    const relative=file.slice(prefix.length);
    if(!relative||relative.split('/').some(p=>!p||p==='.'||p==='..')||/[^a-zA-Z0-9/_.@-]/.test(relative))throw Error('Unsupported media URL path '+relative);
@@ -47,7 +50,9 @@ export function applySharedMedia(files,catalog){
  config.headers??=[];
  config.headers.push({source:'/(.*\\.(?:png|jpg|jpeg|webp|avif|gif|svg|woff|woff2|mp4|webm))',headers:[{key:'Cache-Control',value:'public, max-age=0, must-revalidate'},{key:'CDN-Cache-Control',value:'public, max-age=86400'},{key:'x-vercel-enable-rewrite-caching',value:'1'}]});
  files.set('vercel.json',Buffer.from(JSON.stringify(config,null,2)+'\n'));
- const receipt={schemaVersion:1,dealer:manifest.slug,entries,bytes:entries.reduce((n,e)=>n+e.bytes,0)};
+ const unique = new Map(entries.map(entry => [entry.sha256, entry.bytes]));
+ const receipt={schemaVersion:1,dealer:manifest.slug,entries,bytes:entries.reduce((n,e)=>n+e.bytes,0),
+  storage:{references:entries.length,uniqueObjects:unique.size,uniqueBytes:[...unique.values()].reduce((n,b)=>n+b,0)}};
  files.set('.cars-shared-media.json',Buffer.from(JSON.stringify(receipt,null,2)+'\n'));
  return receipt;
 }

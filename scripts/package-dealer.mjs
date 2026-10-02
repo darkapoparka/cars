@@ -152,6 +152,12 @@ function vercelConfiguration(manifest) {
     redirects: [{ source: '/variant-2', destination: manifest.variants[1].entry, permanent: false }, { source: '/variant-3', destination: '/variant-3/', permanent: false }],
     rewrites: [{ source: '/variant-2/(.*)', destination: { service: middleService } }, { source: '/variant-3/(.*)', destination: { service: 'carwow' } }, { source: '/(.*)', destination: { service: 'autobest' } }],
   };
+  if (native) for (const {key} of manifest.variants.filter(v => v.key !== 'app')) {
+    const name = key === 'auto-best' ? 'autobest' : key === 'import' ? 'importer' : key;
+    const helper = key === 'modern' ? '../../../scripts/build-native-service.mjs' : '../scripts/build-native-service.mjs';
+    configuration.services[name].installCommand = 'node ' + helper + ' install ' + key;
+    configuration.services[name].buildCommand = 'node ' + helper + ' ' + key + ' --installed';
+  }
   return manifest.packaging.version === APP_PACKAGING_VERSION ? appendAppService(configuration) : configuration;
 }
 
@@ -225,12 +231,16 @@ async function prepare({ source, manifest, sourceCommit, guidance, canonicalFile
     files.set('scripts/vercel-service-assets.mjs', await fs.readFile(new URL('./publishing/vercel-service-assets.mjs', import.meta.url)));
     files.set('scripts/vercel-output-budget.mjs', await fs.readFile(new URL('./publishing/vercel-output-budget.mjs', import.meta.url)));
   }
+  const assetDelivery = files.has('.cars-vercel-assets.json') ? {
+    provider: 'vercel', projectMode: 'services', designCount: manifest.variants.length,
+    ...JSON.parse(files.get('.cars-vercel-assets.json')).summary
+  } : null;
   const hashes = () => [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([name, content]) => ({ path: name, sha256: sha256(normalized(content)) }));
   const payload = hashes();
   const payloadDigest = sha256(JSON.stringify(payload));
-  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, payloadDigest, payload })));
+  files.set('.cars-package.json', Buffer.from(json({ schemaVersion: 1, manifest, sourceCommit, packagingVersion: manifest.packaging.version, assetDelivery, payloadDigest, payload })));
   const digest = sha256(JSON.stringify(hashes()));
-  return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, packagingVersion: manifest.packaging.version };
+  return { resolvedSource, files, digest, inputDigest, manifestInput, manifest, assetDelivery, packagingVersion: manifest.packaging.version };
 }
 
 async function validateDestination(source, destination) {
@@ -248,7 +258,7 @@ async function validateDestination(source, destination) {
 export async function planDealerPackage(options) {
   const prepared = await prepare(options);
   const destination = await validateDestination(prepared.resolvedSource, options.destination);
-  return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, packagingVersion: prepared.packagingVersion };
+  return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, assetDelivery: prepared.assetDelivery, packagingVersion: prepared.packagingVersion };
 }
 
 async function verifyPreparedSource(prepared) {
@@ -281,7 +291,7 @@ export async function packageDealer(options) {
     await fs.rename(destination, failed).catch(() => {});
     throw error;
   }
-  return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, packagingVersion: prepared.packagingVersion };
+  return { destination, files: [...prepared.files.keys()].sort(), digest: prepared.digest, assetDelivery: prepared.assetDelivery, packagingVersion: prepared.packagingVersion };
 }
 
 /** Use the CLI's exact committed-source checks for callers writing derived packages elsewhere. */

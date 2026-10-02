@@ -51,6 +51,14 @@ for (const middle of ['modern', 'import']) test(`native ${middle} trio packages 
   assert.equal(contract.defaultLocale, 'en'); assert.equal(contract.dealerCountry, 'AE'); assert.equal(contract.inventoryCurrency, 'AED');
   const vercel = JSON.parse(read(first, 'vercel.json'));
   assert.ok(vercel.services[middle === 'import' ? 'importer' : 'modern'].buildCommand.includes('build-native-service.mjs'));
+  for (const [service, settings] of Object.entries(vercel.services)) {
+    assert.match(settings.installCommand, /build-native-service\.mjs install /, service);
+    assert.match(settings.buildCommand, /--installed/, service);
+    assert.doesNotMatch(settings.buildCommand, /npm ci|pnpm install/, service);
+  }
+  assert.equal(result.assetDelivery.designCount, 3);
+  assert.equal(planned.assetDelivery.outputBytes, result.assetDelivery.outputBytes);
+  assert.equal(JSON.parse(read(first, '.cars-package.json')).assetDelivery.outputBytes, result.assetDelivery.outputBytes);
   assert.ok(!result.files.some(name => name.endsWith('/preview-paths.ts')));
   assert.equal(JSON.parse(read(first, '.cars-package.json')).sourceCommit, commit);
 });

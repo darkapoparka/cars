@@ -82,8 +82,12 @@ export function planVercelAssets(files, { maxPublicBytes = 384 * 1024 * 1024, ma
   const routes = aliases.length + config.rewrites.length + (config.headers?.length || 0) + (config.redirects?.length || 0) + 1;
   if (routes > maxRoutes) throw Error('Vercel route budget exceeded');
   const inputBytes = Object.values(family).reduce((n, f) => n + f.inputBytes, 0);
+  const externalReferenceBytes = Object.values(family).reduce((n, f) => n + f.externalBytes, 0);
+  const unusedBytes = removals.filter(e => e.reason === 'reviewed-unused').reduce((n,e) => n + e.bytes, 0);
+  const localDuplicateBytesAvoided = removals.filter(e => e.reason === 'shared-local').reduce((n,e) => n + e.bytes, 0) - objects.reduce((n,e) => n + e.bytes, 0);
+  if (outputBytes + externalReferenceBytes + unusedBytes + localDuplicateBytesAvoided !== inputBytes) throw Error('Asset storage accounting does not balance');
   return { schemaVersion: 1, dealer: manifest.slug, variants: manifest.variants, family, removals, objects, aliases,
-    limits: { maxPublicBytes, maxRoutes }, summary: { inputBytes, outputBytes, excludedOrExternalBytes: inputBytes - outputBytes, pooledObjects: objects.length, pooledCopies: pooled.size, unusedFiles: removals.filter(e => e.reason === 'reviewed-unused').length, routes } };
+    limits: { maxPublicBytes, maxRoutes }, summary: { inputBytes, outputBytes, externalReferenceBytes, unusedBytes, localDuplicateBytesAvoided, accounting: 'Public source assets only; excludes compiled client code, Functions, remote storage billing and deployment history.', excludedOrExternalBytes: inputBytes - outputBytes, pooledObjects: objects.length, pooledCopies: pooled.size, unusedFiles: removals.filter(e => e.reason === 'reviewed-unused').length, routes } };
 }
 
 /** The ordinary Vercel publisher installs this plan; it does not modify original app source files. */

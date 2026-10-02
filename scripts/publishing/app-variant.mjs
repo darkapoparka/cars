@@ -15,7 +15,7 @@ export function baseNativeManifest(manifest){
 export function appendAppService(config){
  const result=structuredClone(config);if(!result.services?.autobest||!result.services?.carwow)throw Error('Expected the existing dealer Services configuration');
  if(result.services.app)throw Error('App service already exists; use an explicit refresh');
- result.services.app={root:'app',framework:'nextjs',installCommand:'npm ci',buildCommand:'node ../scripts/build-app-service.mjs'};
+ result.services.app={root:'app',framework:'nextjs',installCommand:'npm ci --include=dev',buildCommand:'node ../scripts/build-app-service.mjs'};
  if(!Array.isArray(result.rewrites))throw Error('Missing existing service routes');
  const fallback=result.rewrites.findIndex(r=>r.source==='/(.*)');if(fallback<0)throw Error('Missing existing root service route');
  result.rewrites.splice(fallback,0,{source:'/variant-4',destination:{service:'app'}},{source:'/variant-4/(.*)',destination:{service:'app'}});
@@ -57,7 +57,11 @@ export function appendAppVariant({baseFiles,appFiles,template,sourceCommit,share
  const renderedSwitcher=sharedSwitcher.replace(boundary,()=>`const embeddedConfig = ${JSON.stringify(config).replace(/</g,'\u003c')};`);
  files.set(switcherName,Buffer.from(renderedSwitcher));
  const service=files.get('scripts/build-native-service.mjs')?.toString();
- if(service){const old="manifest.packaging?.version !== '2'";if(!service.includes(old))throw Error('Unrecognized native build manifest check');files.set('scripts/build-native-service.mjs',Buffer.from(service.replace(old,"!['2', '3'].includes(manifest.packaging?.version)")));}
+ if(service){
+  const old="manifest.packaging?.version !== '2'", current="!['2', '3'].includes(manifest.packaging?.version)";
+  if(service.includes(old)) files.set('scripts/build-native-service.mjs',Buffer.from(service.replace(old,current)));
+  else if(!service.includes(current)) throw Error('Unrecognized native build manifest check');
+ }
  files.set('scripts/build-app-service.mjs',Buffer.from("import {spawnSync} from 'node:child_process';\nimport path from 'node:path';\nconst cwd=path.resolve(import.meta.dirname,'../app');\nconst result=spawnSync(process.execPath,[path.join(cwd,'node_modules/next/dist/bin/next'),'build','--webpack'],{cwd,stdio:'inherit',env:{...process.env,NEXT_PUBLIC_BASE_PATH:'/variant-4'},windowsHide:true});\nif(result.error)throw result.error;process.exitCode=result.status??1;\n"));
  files.set('vercel.json',json(appendAppService(JSON.parse(files.get('vercel.json').toString()))));
  files.set('dealer.json',json(manifest));

@@ -149,3 +149,28 @@ test('shared media accepts already omitted Svelte output only with exact retenti
   await assert.rejects(pruneService('carwow', { packageRoot }), /differs from omission evidence/);
   assert.equal((await readFile(sourceFile)).toString(), 'customized dealer artwork');
 });
+
+test('reviewed unused files do not consume shared-media routes even when cataloged', () => {
+  const files = packageFiles();
+  const digest = sha256(mediaBytes);
+  for (const key of ['auto-best', 'modern']) {
+    files.set(`${key}/public-assets.policy.json`, Buffer.from(JSON.stringify({
+      schemaVersion: 1, family: key, keepPrefixes: [],
+      candidates: [{ path: 'dealer/shared.png', sha256: digest, reason: 'Reviewed obsolete sample artwork, source retained.' }],
+    })));
+  }
+  const catalog = { [digest]: { sha256: digest, bytes: mediaBytes.length, url: remoteUrl(digest), contentType: 'image/png' } };
+  const receipt = applySharedMedia(files, catalog);
+  assert.equal(receipt.entries.length, 0);
+  assert.deepEqual(files.get('auto-best/static/dealer/shared.png'), mediaBytes);
+  assert.equal(JSON.parse(files.get('vercel.json')).rewrites.length, 3);
+});
+
+test('a new consumer protects cataloged media from an obsolete-asset policy', () => {
+  const files = packageFiles(), digest = sha256(mediaBytes);
+  files.set('modern/public-assets.policy.json', Buffer.from(JSON.stringify({ schemaVersion: 1, family: 'modern',
+    candidates: [{ path: 'dealer/shared.png', sha256: digest, reason: 'Previously obsolete image; recheck consumers.' }] })));
+  files.set('modern/apps/web/app/page.tsx', Buffer.from('const image = "/dealer/shared.png";'));
+  const catalog = { [digest]: { sha256: digest, bytes: mediaBytes.length, url: remoteUrl(digest), contentType: 'image/png' } };
+  assert.equal(applySharedMedia(files, catalog).entries.length, 2);
+});

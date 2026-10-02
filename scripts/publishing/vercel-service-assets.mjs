@@ -108,7 +108,11 @@ export function prepareServiceAssets(phase, key, { packageRoot = path.resolve(im
     }
     report.runtime=isNext?auditNextTraces(serviceRoot,{traceRoot:key==='modern'?path.join(root,'modern'):serviceRoot,distDir}):auditVercelOutput(path.join(serviceRoot,'.vercel/output'));
     if(!report.runtime.passed) throw Error('Vercel runtime artifact failed storage/security budget: '+JSON.stringify(report.runtime));
-    if (report.public.bytes > plan.limits.maxPublicBytes) throw Error('Final Vercel service public output exceeds the deployment asset budget');
+    const clientRoot = isNext ? path.join(serviceRoot,distDir,'static') : null;
+    report.clientCode = clientRoot && fs.existsSync(clientRoot) ? publicStats(clientRoot) : {files:0,bytes:0};
+    // Svelte public output already includes compiled client code; Next public/ does not.
+    report.deliveredStaticBytes = report.public.bytes + report.clientCode.bytes;
+    if (report.deliveredStaticBytes > plan.limits.maxPublicBytes) throw Error('Final Vercel service public output exceeds the deployment asset budget');
     if (key === 'auto-best') for (const e of plan.objects) {
       const rel = 'auto-best/.vercel/output/static/' + e.publicPath.slice(roots['auto-best'].length + 1);
       const file = checkedFile(root, rel);

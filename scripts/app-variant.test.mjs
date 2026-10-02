@@ -28,3 +28,16 @@ test('App append re-plans a Vercel-optimized trio without nested build wrappers 
  assert.equal(JSON.parse(result.files.get('.cars-vercel-assets.json')).variants.length,4);
  assert.equal(result.files.get('carwow/static/dealer/logo.webp').toString(),'approved-logo');
 });
+
+test('App append keeps the current native install/build helper unchanged', () => {
+  const f=fixture();
+  const helper=bytes("if(!['2', '3'].includes(manifest.packaging?.version))throw Error('version'); // install proof");
+  f.baseFiles.set('scripts/build-native-service.mjs',helper);
+  const result=appendAppVariant(f);
+  assert.deepEqual(result.files.get('scripts/build-native-service.mjs'),helper);
+  assert.equal(JSON.parse(result.files.get('vercel.json')).services.app.installCommand,'npm ci --include=dev');
+});
+test('App append still rejects an unknown native build boundary', () => {
+  const f=fixture(); f.baseFiles.set('scripts/build-native-service.mjs',bytes('unknown custom build'));
+  assert.throws(()=>appendAppVariant(f),/Unrecognized native build manifest/);
+});
