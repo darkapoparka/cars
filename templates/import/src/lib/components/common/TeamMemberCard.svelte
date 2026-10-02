@@ -21,6 +21,7 @@
 <article
 	class="team-card"
 	class:team-card--mobile-compact={mobileCompact}
+	class:team-card--has-socials={socials.length > 0}
 	class:team-card--desktop-framed={desktopFramed}
 >
 	<img
@@ -193,6 +194,7 @@
 			align-items: center;
 			gap: var(--bc-space-3);
 			padding: var(--bc-space-4);
+			box-shadow: var(--bc-editorial-shadow);
 		}
 		.team-card--mobile-compact .team-card__portrait {
 			width: 64px;
@@ -205,8 +207,25 @@
 			gap: var(--bc-space-1);
 		}
 		.team-card--mobile-compact h3 {
+			grid-column: 1 / -1;
+			font-family: var(--bc-font-body);
 			font-size: var(--bc-mobile-card-title);
 			line-height: var(--bc-mobile-card-title-leading);
+		}
+		.team-card--mobile-compact p {
+			min-block-size: calc(var(--bc-mobile-body-leading) * 2);
+			align-content: center;
+			line-height: var(--bc-mobile-body-leading);
+		}
+		.team-card--mobile-compact.team-card--has-socials .team-card__body {
+			grid-template-columns: minmax(0, 1fr) var(--bc-control-height-primary);
+			column-gap: var(--bc-space-2);
+		}
+		.team-card--mobile-compact .team-card__socials {
+			display: block;
+			grid-column: 2;
+			grid-row: 2;
+			align-self: center;
 		}
 	}
 </style>

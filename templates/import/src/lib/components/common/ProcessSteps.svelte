@@ -118,18 +118,22 @@
 			gap: var(--bc-space-4);
 			padding: var(--bc-space-4);
 			border: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-panel);
+			border-radius: var(--bc-radius-section);
 			background: var(--bc-white);
+			box-shadow: var(--bc-editorial-shadow);
 		}
 		.process-steps--mobile-panel li {
-			grid-template-columns: var(--bc-control-height-secondary) minmax(0, 1fr);
+			grid-template-columns: var(--bc-space-8) minmax(0, 1fr);
 			padding: 0;
 			background: transparent;
 		}
 		.process-steps--mobile-panel .process-steps__number {
+			width: var(--bc-space-8);
+			height: var(--bc-space-8);
 			background: var(--bc-control);
 		}
 		.process-steps--mobile-panel h3 {
+			font-family: var(--bc-font-body);
 			font-size: var(--bc-mobile-card-title);
 			line-height: var(--bc-mobile-card-title-leading);
 		}

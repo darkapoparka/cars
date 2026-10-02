@@ -304,6 +304,15 @@
 	--bc-shadow-panel: 0 12px 34px rgb(28 28 28 / 0.12);
 	--bc-shadow-modal: 0 24px 80px rgb(28 28 28 / 0.16);
 
+	/* Opt-in editorial surfaces shared by About's desktop and mobile compositions. */
+	--bc-editorial-canvas: #f6f6f7;
+	--bc-editorial-border: #e5e5e7;
+	--bc-editorial-muted: #66676b;
+	--bc-editorial-hover: #eeeef0;
+	--bc-editorial-radius: var(--bc-radius-modal);
+	--bc-editorial-photo-radius: var(--bc-radius-panel);
+	--bc-editorial-shadow: 0 1px 2px rgb(23 25 28 / 0.04), 0 8px 24px rgb(23 25 28 / 0.025);
+
 	--bc-motion-fast: 150ms ease;
 	--bc-motion-hover: 140ms ease;
 	--bc-motion-standard: 220ms ease;
@@ -332,15 +341,15 @@
 		/* Calm editorial surfaces, adopted independently by desktop page compositions. */
 		--bc-desktop-editorial-width: 1120px;
 		--bc-desktop-editorial-action-width: 560px;
-		--bc-desktop-editorial-canvas: #f6f6f7;
-		--bc-desktop-editorial-border: #e5e5e7;
-		--bc-desktop-editorial-muted: #66676b;
-		--bc-desktop-editorial-hover: #eeeef0;
-		--bc-desktop-editorial-radius: var(--bc-radius-modal);
-		--bc-desktop-editorial-photo-radius: var(--bc-radius-panel);
+		--bc-desktop-editorial-canvas: var(--bc-editorial-canvas);
+		--bc-desktop-editorial-border: var(--bc-editorial-border);
+		--bc-desktop-editorial-muted: var(--bc-editorial-muted);
+		--bc-desktop-editorial-hover: var(--bc-editorial-hover);
+		--bc-desktop-editorial-radius: var(--bc-editorial-radius);
+		--bc-desktop-editorial-photo-radius: var(--bc-editorial-photo-radius);
 		--bc-desktop-editorial-portrait-height: 200px;
 		--bc-desktop-editorial-title: 1.75rem;
-		--bc-desktop-editorial-shadow: 0 1px 2px rgb(23 25 28 / 0.04), 0 8px 24px rgb(23 25 28 / 0.025);
+		--bc-desktop-editorial-shadow: var(--bc-editorial-shadow);
 	}
 }
 

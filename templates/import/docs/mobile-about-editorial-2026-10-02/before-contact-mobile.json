@@ -1,0 +1,138 @@
+{
+	"height": 900,
+	"images": [
+		{
+			"alt": "",
+			"loaded": true,
+			"src": "http://127.0.0.1:6790/assets/daynight/delivery/services/proof-studio-import-handoff-400.webp"
+		},
+		{
+			"alt": "Day Night Auto Group",
+			"loaded": true,
+			"src": "http://127.0.0.1:6790/assets/daynight/brand/daynight-logo-generated-600.webp"
+		},
+		{
+			"alt": "",
+			"loaded": true,
+			"src": "http://127.0.0.1:6790/assets/icons/brands/facebook.svg"
+		},
+		{
+			"alt": "",
+			"loaded": true,
+			"src": "http://127.0.0.1:6790/assets/icons/brands/instagram.svg"
+		},
+		{
+			"alt": "",
+			"loaded": true,
+			"src": "http://127.0.0.1:6790/assets/icons/brands/tiktok.svg"
+		}
+	],
+	"items": {
+		"#about-team": [],
+		".about-heading h2": [],
+		".about-team": [],
+		".contact-banner": [],
+		".contact-location": [],
+		".desktop-discovery-panel": [],
+		".mobile-page-hero": [
+			{
+				"bg": "rgb(9, 10, 11)",
+				"border": "rgb(255, 255, 255)",
+				"display": "block",
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"gap": "normal",
+				"grid": "none",
+				"h": 232,
+				"line": "26px",
+				"pad": "0px",
+				"radius": "0px",
+				"shadow": "none",
+				"size": "16px",
+				"text": "Контакти Огледи с предварителна уговорка Обади се Пиши ни",
+				"w": 320,
+				"weight": "400",
+				"x": 0,
+				"y": 0
+			}
+		],
+		".page-intro": [],
+		".page-intro h1": [],
+		".process-steps": [],
+		".process-steps h3": [],
+		".process-steps li": [],
+		".process-steps p": [],
+		".process-steps__number": [],
+		".team-card": [],
+		".team-card h3": [],
+		".team-card p": [],
+		".team-card__body": [],
+		".team-card__portrait": [],
+		".team-card__socials a": [],
+		"main": [
+			{
+				"bg": "rgba(0, 0, 0, 0)",
+				"border": "rgb(23, 25, 28)",
+				"display": "block",
+				"font": "\"Sofia Sans\", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+				"gap": "normal",
+				"grid": "none",
+				"h": 900,
+				"line": "26px",
+				"pad": "0px",
+				"radius": "0px",
+				"shadow": "none",
+				"size": "16px",
+				"text": "Контакти       Контакти Огледи с предварителна уговорка  0877 733 110 Изпрати запитване    Обади се 0877 733 110  Посети ни гр. София, Студентски град, ул. Атанас Манчев 18  Пиши ни Viber  Посети ни гр. София, Студентски град, ул. Атанас Манчев 18 Огледи с предварителна уговорка Как да стигнеш 0877 733 110  Изпрати запитване  Име * Телефон * Имейл (по желание) Съобщение Уебсайт  Демонстрационна заявка — използвай примерни данни. Поверителност Изпрати запитване         Контакти Огледи с предварителна уговорка Обади се Пиши ни  гр. София, Студентски град, ул. Атанас Манчев 18 Отвори карта  Изпрати запитване Последвай ни    <section class=\"site-container site-panel site-mobile-only svelte-1q7hdxq\"><a data-locale-selector=\"\" aria-label=\"Държава и език · Български\" href=\"/bg/locale-settings?returnTo=%2Fbg%2Fcontact\" class=\"svelte-1owvflw\"><!--[-1-->Държава и език · Български<!--]--></a><!----> <h2 class=\"svelte-1q7hdxq\">Изпрати запитване</h2> <!--$s13--><!--[-1--><form class=\"site-form svelte-1nf8iea\" method=\"POST\" action=\"/bg/contact\" aria-busy=\"false\"><input type=\"hidden\" name=\"source\" value=\"contact\" class=\"svelte-1nf8iea\"/><input type=\"hidden\" name=\"routePath\" value=\"/bg/contact\" class=\"svelte-1nf8iea\"/><!--[-1--><!--]--> <div class=\"site-fields svelte-1nf8iea\"><label class=\"site-field svelte-1nf8iea\" for=\"s13-name\"><span class=\"svelte-1nf8iea\">Име *</span><input id=\"s13-name\" name=\"name\" autocomplete=\"name\" required=\"\" minlength=\"2\" maxlength=\"160\" value=\"\" aria-invalid=\"false\" class=\"svelte-1nf8iea\"/><!--[-1--><!--]--></label> <label class=\"site-field svelte-1nf8iea\" for=\"s13-phone\"><span class=\"svelte-1nf8iea\">Телефон *</span><input id=\"s13-phone\" type=\"tel\" inputmode=\"tel\" name=\"phone\" autocomplete=\"tel\" required=\"\" minlength=\"5\" maxlength=\"60\" value=\"\" aria-invalid=\"false\" class=\"svelte-1nf8iea\"/><!--[-1--><!--]--></label> <label class=\"site-field site-field--wide svelte-1nf8iea\" for=\"s13-email\"><span class=\"svelte-1nf8iea\">Имейл (по желание)</span><input id=\"s13-email\" type=\"email\" name=\"email\" autocomplete=\"email\" maxlength=\"254\" value=\"\" aria-invalid=\"false\" class=\"svelte-1nf8iea\"/><!--[-1--><!--]--></label> <label class=\"site-field site-field--wide svelte-1nf8iea\" for=\"s13-message\"><span class=\"svelte-1nf8iea\">Съобщение</span><textarea id=\"s13-message\" name=\"message\" rows=\"4\" maxlength=\"5000\" aria-invalid=\"false\" class=\"svelte-1nf8iea\"></textarea></label></div> <label class=\"site-form-trap svelte-1nf8iea\" aria-hidden=\"true\">Уебсайт<input name=\"website\" tabindex=\"-1\" autocomplete=\"off\" class=\"svelte-1nf8iea\"/></label> <!--[-1--><!--]--> <p class=\"site-form-note svelte-1nf8iea\">Демонстрационна заявка — използвай примерни данни. <a href=\"/bg/privacy\" class=\"svelte-1nf8iea\">Поверителност</a></p> <!--[-1--><button type=\"submit\" class=\"site-action primary size-primary svelte-9fmx20\"><!---->Изпрати запитване<!----></button><!--]--><!----></form><!--]--><!----></section>",
+				"w": 320,
+				"weight": "400",
+				"x": 0,
+				"y": 0
+			}
+		]
+	},
+	"links": [
+		{
+			"href": "/bg",
+			"label": "Day Night Auto Group начало",
+			"text": ""
+		},
+		{
+			"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"label": "Карта",
+			"text": ""
+		},
+		{
+			"href": "tel:0877733110",
+			"label": null,
+			"text": "Обади се"
+		},
+		{
+			"href": "viber://chat?number=%2B359877733110",
+			"label": null,
+			"text": "Пиши ни"
+		},
+		{
+			"href": "https://www.google.com/maps/search/?api=1&query=%D0%B3%D1%80.%20%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%2C%20%D0%A1%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D1%81%D0%BA%D0%B8%20%D0%B3%D1%80%D0%B0%D0%B4%2C%20%D1%83%D0%BB.%20%D0%90%D1%82%D0%B0%D0%BD%D0%B0%D1%81%20%D0%9C%D0%B0%D0%BD%D1%87%D0%B5%D0%B2%2018",
+			"label": null,
+			"text": "Отвори карта"
+		},
+		{
+			"href": "https://www.facebook.com/deninoshtautogroup/?locale=bg_BG",
+			"label": "Facebook",
+			"text": ""
+		},
+		{
+			"href": "https://www.instagram.com/kristiankirilov13/",
+			"label": "Instagram",
+			"text": ""
+		},
+		{
+			"href": "https://www.tiktok.com/@kristiankirilov13",
+			"label": "TikTok",
+			"text": ""
+		}
+	],
+	"overflow": false,
+	"url": "http://127.0.0.1:6790/bg/contact",
+	"width": 320
+}

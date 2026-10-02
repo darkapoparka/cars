@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { desktopCopy } from '$lib/content/desktop-copy';
+	import { aboutPageCopy } from '$lib/content/about-page';
 	import DesktopHeroActions from '$lib/components/common/DesktopHeroActions.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
@@ -13,6 +14,7 @@
 	import TeamMemberCard from '$lib/components/common/TeamMemberCard.svelte';
 	let { data }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
+	const copy = $derived(aboutPageCopy[data.locale]);
 	const about = $derived(data.about);
 	const steps = $derived(
 		about.process.map((step) => ({
@@ -28,18 +30,16 @@
 {/snippet}
 
 <svelte:head
-	><title>{english ? 'About' : 'За нас'} — {data.site.identity.name}</title><meta
+	><title>{copy.pageTitle} — {data.site.identity.name}</title><meta
 		name="description"
 		content={about.hero.description}
 	/></svelte:head
 >
 <main id="main-content">
 	<PageIntro
-		title={english ? 'About us' : 'За нас'}
+		title={copy.title}
 		mobileAlign="center"
-		mobileDescription={english
-			? 'Car sourcing, import and checks before you buy.'
-			: 'Подбор, внос и проверка на автомобили.'}
+		mobileDescription={copy.mobileCaption}
 		description={about.hero.description}
 		desktopDescription={desktopCopy[data.locale].aboutCaption}
 		image={about.hero.image}
@@ -51,11 +51,10 @@
 				<Action
 					href={about.hero.actions?.[0]?.href ?? '/inventory'}
 					variant="secondary"
-					size="primary"
-					>{english ? 'Cars' : 'Коли'}<ArrowRight size={18} aria-hidden="true" /></Action
+					size="primary">{copy.mobileCars}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
 				<Action href={about.hero.actions?.[1]?.href ?? '/contact'} variant="glass" size="primary"
-					>{english ? 'Contact' : 'Контакти'}</Action
+					>{copy.mobileContact}</Action
 				>
 			</div>
 		{/snippet}
@@ -75,14 +74,14 @@
 	<div class="site-mobile-only">
 		<section class="site-section site-container site-stack">
 			<header class="about-heading">
-				<h2 class="site-heading">{english ? 'How we work' : 'Как работим'}</h2>
+				<h2 class="site-heading">{copy.processTitle}</h2>
 			</header>
 			{@render processSteps(true)}
 		</section>
 	</div>
 	<section class="site-section site-container site-stack" id="about-team">
 		<header class="about-heading">
-			<h2 class="site-heading">{english ? 'The team' : 'Екипът'}</h2>
+			<h2 class="site-heading">{copy.teamTitle}</h2>
 		</header>
 		<div class="about-team">
 			{#each about.consultants as person (person.slug)}<TeamMemberCard
@@ -95,7 +94,7 @@
 	<div class="site-desktop-only">
 		<section class="site-section site-container site-stack">
 			<header class="about-heading">
-				<h2 class="site-heading">{english ? 'How we work' : 'Как работим'}</h2>
+				<h2 class="site-heading">{copy.processTitle}</h2>
 			</header>
 			<DesktopProcess {steps} />
 		</section>
@@ -104,10 +103,7 @@
 		<ContactLocation {english} desktopFramed />
 	</section>
 	<section class="site-section site-container about-contact site-mobile-only">
-		<ContactBanner
-			{english}
-			title={english ? 'Visit ' + data.site.identity.name : 'Посети ' + data.site.identity.name}
-		/>
+		<ContactBanner {english} title={`${copy.visitLabel} ${data.site.identity.name}`} />
 		<div class="about-socials site-mobile-only"><SocialLinks /></div>
 	</section>
 </main>
@@ -127,6 +123,14 @@
 		gap: var(--bc-space-6);
 	}
 	@media (max-width: 767.98px) {
+		main {
+			--bc-bg-strong: var(--bc-editorial-canvas);
+			--bc-border: var(--bc-editorial-border);
+			--bc-copy: var(--bc-editorial-muted);
+			--bc-control: var(--bc-editorial-canvas);
+			--bc-surface-hover: var(--bc-editorial-hover);
+			background: var(--bc-editorial-canvas);
+		}
 		.about-mobile-actions {
 			display: flex;
 			gap: var(--bc-space-3);
@@ -136,6 +140,7 @@
 			border-radius: var(--bc-radius-pill);
 		}
 		.about-heading :global(.site-heading) {
+			font-family: var(--bc-font-body);
 			font-size: var(--bc-mobile-section-title);
 			line-height: var(--bc-mobile-section-title-leading);
 		}

@@ -24,6 +24,8 @@ npm run dev -- --host 127.0.0.1 --port 6790 --strictPort
 
 Shared customer typography follows [Typography](docs/TYPOGRAPHY.md).
 
+The accepted About styling, automotive reference boundaries and next full desktop audit are documented in [Desktop styling](docs/DESKTOP-STYLING.md), with a [copyable new-session prompt](docs/DESKTOP-POLISH-PROMPT.md).
+
 - `src/lib/config/dealer.ts` and validated `src/lib/config/site.ts`
 - `src/lib/content/`
 - `src/lib/data/daynight.ts` (compatibility/content facade)
