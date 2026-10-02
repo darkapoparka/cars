@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "family": "auto-best",
+  "keepPrefixes": [
+    "assets/images/brand/",
+    "assets/cars-responsive/"
+  ],
+  "candidates": [
+    {
+      "path": "assets/images/lead/auto-best-desktop-about-v1.webp",
+      "sha256": "c3d230f68404aacb24a71b53b17ec427d4e8df02bf96efbb0486efc55178be4f",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/auto-best-desktop-blog-v2.webp",
+      "sha256": "ce84022d5506cec82f09cb7b78f174626078590260af4907d1c7bfaa77200010",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/auto-best-desktop-contact-v1.webp",
+      "sha256": "2b5fe62011bd1fd7abd581ad1c0e74125bb3c6729d011a2115b81af93e8508ba",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/auto-best-desktop-contact-v2.webp",
+      "sha256": "99d53ff5d87cd8d3ddc4da8732a9ce2f17dc3c287b1eaa6e88f784850fc2e99d",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/auto-best-desktop-home-v1.webp",
+      "sha256": "5fa76b476a04ea05d608b559e384954399f8bfdcb793989937142b86309278f5",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/auto-best-desktop-inventory-v1.webp",
+      "sha256": "947e6376943aa6f60f8a5663472050676ddda81ee17a2befde3ab48963bf532e",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-guide-import.webp",
+      "sha256": "e0f7e8bc80f0ad8e2ffe947183db974b8481673771d31888a4d5d017fcf0a9f0",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-guide-inspection.webp",
+      "sha256": "93ba31dffd89b4e014fad2465645908c5624e4a512a8b87f6a0fb2d37e7aae02",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-guide-leasing.webp",
+      "sha256": "8ed8b3cc3fef615277afdb02c7f8bd2c8ce43a5f4825fa29b45689c06d9c7a2f",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-home-black-v1.webp",
+      "sha256": "42b8af4cbf13328e558cc151a91517dc0c365551c7da48c8bc574f1c7337ccaf",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-home-hero-v3.webp",
+      "sha256": "6496510def178620c33aa4403c7945b0dc9fa05e337aa489110b87d90686c135",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-mobile-import-v1.webp",
+      "sha256": "e6484f58df263c72973f2eff88bcad923dc53c6c9d75e46205a48baa4d76cd2b",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-mobile-sell-v1.webp",
+      "sha256": "bfb59bc91685cb9108afed45500a933bc6c719a6262877f310c396ec06cfe9c1",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/lead/day-night-sell-banner-v2.webp",
+      "sha256": "393fe03e5694f948ff56bf2b124734119a371fcaa4125a62b560322136d23f7f",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/section/bg-12.jpg",
+      "sha256": "6e83f0f876739eeed9397afc21d1adb2b80361cc4fd4bbfa40e9f8a011fcb620",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/section/car-slide1.png",
+      "sha256": "ed153a8fb949ed980c8858a318a011eed0652bb1ca61acb2e17839e20db0cd72",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/section/car-slide2.png",
+      "sha256": "deb4dd110aad16100226bb9584fa8bd8658d1526b644579ade21d1853178e279",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/section/car-slide3.png",
+      "sha256": "33b192810f31078c42ac072a65a7e4e3e14d12520bd7990b4870c21969de6f0a",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/body-wagon-v1.png",
+      "sha256": "5d70b2a70636d8700570c199589c6a7d714a7dab6021a6aefd0f8123c6da259b",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-action-finance-v2.webp",
+      "sha256": "5eb86ae2f5ba46ffca4696c2d69f8720fe71f49078db9f50e59f62fec84d1fbc",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-action-import-v2.webp",
+      "sha256": "60576791760395247bb7ca4dae1c77f81ce65112a5bbf28f7eeddd420cad6224",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-action-sell-v2.webp",
+      "sha256": "ced85c577171bd2db3b58b10c4b6e1196bd3816c3cd9b811a1069483677e1354",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-finance-scene-v1.webp",
+      "sha256": "0fab18b298f0a4bfbc1aa20075683f8d892acad8d13a1cf861774082a5fecf8e",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-section-body-v1.webp",
+      "sha256": "4b5d05edabd2c60e31c524653638e20dc3f625779dca1b03d61ca8f118b10f1c",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-section-brands-v1.webp",
+      "sha256": "074a01eb1a387fc079a73a84bfbc5a548680dbf1dcc7d0d6396de4da9eccf522",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-section-guides-v1.webp",
+      "sha256": "024b55715fb645e2ffafdfa75b1d747b647e7e91b3b1367cdc1547f8045a4063",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-section-inventory-v1.webp",
+      "sha256": "fbeef9aa8bd1659d6c9fbec1dc4d8d6df7668fc5ab70991879002fc14c2e2bba",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/home-sell-handover-v1.webp",
+      "sha256": "c8ec1a470c48e46425ea5fa8fb2c4dcc4a84fbaceb538f0009ab812cdec64488",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/pdp-finance-studio-v1.jpg",
+      "sha256": "736d46f01cbaf6f2b6a19fe2f9c30b08217429f392074bb36da0f36bb1bc8895",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/service-import-v1.webp",
+      "sha256": "354cdde3c4c0720c0dbb06c64e578489076998d8f90658e29223c294758674b1",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/service-import-v2.webp",
+      "sha256": "fc357ec27ddceba8ca3f2649ed648f3a5c979dcb167ea1165208c79d6d852091",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/service-sell-euros-v1.webp",
+      "sha256": "7bb887cc539229ca22f147d01f16f715cfab5e62389d868a986848a1f1d86a8f",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/service-sell-key-v1.png",
+      "sha256": "bfe86fb2f41f000da35e04e3d67f03336657ec9b9a3a311b7981912d7c4eed3e",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    },
+    {
+      "path": "assets/images/template/service-sell-v2.webp",
+      "sha256": "c6368b23831a28b284860ee630b14537dd2075afce3543c0afd7647b52d30140",
+      "reason": "Superseded template artwork reviewed against all source and public document dependencies; originals retained."
+    }
+  ]
+}

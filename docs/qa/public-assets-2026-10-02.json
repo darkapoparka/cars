@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "kind": "local-publication-asset-qa-not-release-approval",
+  "checkedAt": "2026-10-02T07:00:14.840Z",
+  "sourceBaseCommit": "b306bfb9429740a594b30b1a10dea6c68f75d381",
+  "frameworksPreserved": true,
+  "originalAssetsPreserved": true,
+  "templateResults": [
+    {
+      "family": "carwow",
+      "before": {
+        "files": 1038,
+        "bytes": 118801981,
+        "images": 681,
+        "svg": 136
+      },
+      "after": {
+        "files": 606,
+        "bytes": 19708296,
+        "images": 261,
+        "svg": 124
+      },
+      "omitted": 432,
+      "removedBytes": 99093685,
+      "protectedDerivatives": [
+        {
+          "path": "assets/images/home-videos/desktop/g-class.webp",
+          "reason": "format-variant:src/lib/data/daynight-videos.ts"
+        },
+        {
+          "path": "assets/images/home-videos/desktop/panamera.webp",
+          "reason": "format-variant:src/lib/data/daynight-videos.ts"
+        },
+        {
+          "path": "assets/images/home-videos/desktop/urus.webp",
+          "reason": "format-variant:src/lib/data/daynight-videos.ts"
+        }
+      ],
+      "browser": {
+        "passed": true,
+        "cases": 54,
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "bg",
+          "en"
+        ],
+        "completedAt": "2026-10-02T06:53:17.177Z",
+        "servedAssetRequests": 5851
+      },
+      "policyDigest": "bf4368ef24a10e5e8bfd9b1f91150c84a7c73c052adf0958bf97c504b71a0010",
+      "consumerDigest": "a3d38151c9c0ba57a4bc08da71fc30a45ec4ffa70c52db8499337abba46c0604"
+    },
+    {
+      "family": "auto-best",
+      "before": {
+        "files": 233,
+        "bytes": 21377978,
+        "images": 161,
+        "svg": 6
+      },
+      "after": {
+        "files": 200,
+        "bytes": 16765796,
+        "images": 128,
+        "svg": 6
+      },
+      "omitted": 33,
+      "removedBytes": 4612182,
+      "protectedDerivatives": [],
+      "browser": {
+        "passed": true,
+        "cases": 30,
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "bg",
+          "en"
+        ],
+        "completedAt": "2026-10-02T06:55:16.133Z",
+        "servedAssetRequests": 1339
+      },
+      "policyDigest": "104bf809e2815d4445f638e7052546970593a43416dfdd136ab9ea6998914ad9",
+      "consumerDigest": "ffc2ab15e86b7902b28bdf22d7ec727475fe4a17354734155928b4d226fd0634"
+    },
+    {
+      "family": "import",
+      "before": {
+        "files": 1140,
+        "bytes": 197150842,
+        "images": 788,
+        "svg": 123
+      },
+      "after": {
+        "files": 778,
+        "bytes": 111318809,
+        "images": 427,
+        "svg": 122
+      },
+      "omitted": 362,
+      "removedBytes": 85832033,
+      "protectedDerivatives": [
+        {
+          "path": "assets/daynight/services/sell-commerce-large.webp",
+          "reason": "computed:src/lib/components/home/HomeFiveActionBand.svelte"
+        },
+        {
+          "path": "assets/daynight/services/sell-commerce-small.webp",
+          "reason": "computed:src/lib/components/home/HomeFiveActionBand.svelte"
+        },
+        {
+          "path": "assets/daynight/services/sell-commerce.webp",
+          "reason": "computed:src/lib/components/home/HomeFiveActionBand.svelte"
+        }
+      ],
+      "browser": {
+        "passed": true,
+        "cases": 54,
+        "widths": [
+          320,
+          390,
+          1440
+        ],
+        "locales": [
+          "bg",
+          "en"
+        ],
+        "completedAt": "2026-10-02T06:57:30.077Z",
+        "servedAssetRequests": 3560
+      },
+      "policyDigest": "874f92d38e07edae0ec0eb99fd1314e98d3c828b3b8c6810fc2b76eccd832f1e",
+      "consumerDigest": "ed3e2d27d37747408327d028d8574ecf9fc3726994ef4304b98dda1f704b6520"
+    }
+  ],
+  "workflow": {
+    "tests": 273,
+    "passed": 273,
+    "failed": 0,
+    "command": "node --test --test-concurrency=1 scripts/*.test.mjs",
+    "checkWorkflow": "passed"
+  },
+  "browserMethod": "Production framework previews with every local public asset enforced from the actual Vercel adapter output; no fallback to source static originals.",
+  "sourceFiles": [
+    {
+      "path": "scripts/package-shared-media.mjs",
+      "sha256": "be32448a1e533b9c3a89239efe4776881bd5ef1769cdce0f739bb765191adc77"
+    },
+    {
+      "path": "scripts/publishing/public-asset-bundle.mjs",
+      "sha256": "8aef4df7ae8387ab0a439471e4b749b0f9a54bdf8125ce910e40389933a0df0f"
+    },
+    {
+      "path": "scripts/publishing/local-media-command.mjs",
+      "sha256": "7fa1af028ea0a543379f78d1ac1ed8507f442cac2cdf810e349ec1d375753ff7"
+    },
+    {
+      "path": "scripts/public-asset-bundle.test.mjs",
+      "sha256": "d4da9204495ab8efc8f62455f01e258661a8cf1e3eb712b6412882617f3cfec8"
+    },
+    {
+      "path": "scripts/verify-public-assets-http.mjs",
+      "sha256": "f260a73265d35af881d3d9c3ccbc2a04d01f681ebf33d9e70041022a80b16dd0"
+    },
+    {
+      "path": "scripts/refresh-client.test.mjs",
+      "sha256": "c40cffe7673f4c99fb79c0d6fc9d3e46e792a5b1de2a3e6520cb467f3a05ce31"
+    },
+    {
+      "path": "docs/PUBLIC-ASSET-PIPELINE.md",
+      "sha256": "1bff2ac8ee41fc4481c199a4144c876b69052a63a91dd26736bfc8a4ce9cc654"
+    },
+    {
+      "path": "scripts/publishing/public-asset-retention.mjs",
+      "sha256": "cb8fd52e4d4c49167e7d1f0212f969d758d2e1b8ebcfa7fab3e481fded51007e"
+    },
+    {
+      "path": "scripts/public-asset-retention.test.mjs",
+      "sha256": "ac1d67efc922dad6f7ab694fbd08830f87680b816deb7092cf15219aaa7cea7c"
+    },
+    {
+      "path": "templates/carwow/svelte.config.js",
+      "sha256": "e273cd5c8c5214a259a5d4b1c5c6f2b33c0ae089388f0c4ca22f52968a073437"
+    },
+    {
+      "path": "templates/carwow/public-assets.policy.json",
+      "sha256": "399ea89c2958044da6ef9dfa5bff2b703913b7c48ad5e749866f8a8a95f6605b"
+    },
+    {
+      "path": "templates/carwow/scripts/public-asset-retention.mjs",
+      "sha256": "cb8fd52e4d4c49167e7d1f0212f969d758d2e1b8ebcfa7fab3e481fded51007e"
+    },
+    {
+      "path": "templates/auto-best/svelte.config.js",
+      "sha256": "2a4e4021f4311f49d1641fcafbb5a1997b6993f45547c2f5474540a705be24b5"
+    },
+    {
+      "path": "templates/auto-best/public-assets.policy.json",
+      "sha256": "77fd08f843fc9b8cf9328852fcd3363d7dd82bd422438bc0d3a374b76f5d074b"
+    },
+    {
+      "path": "templates/auto-best/scripts/public-asset-retention.mjs",
+      "sha256": "cb8fd52e4d4c49167e7d1f0212f969d758d2e1b8ebcfa7fab3e481fded51007e"
+    },
+    {
+      "path": "templates/import/svelte.config.js",
+      "sha256": "c34c235409fb8fcbf6837790d807d77f81bf35616dda7b7172e250c43e49c009"
+    },
+    {
+      "path": "templates/import/public-assets.policy.json",
+      "sha256": "72b50e2b7551959b74e4f43b997bc9ac430d8d2e3dea0b0e898c4a6d434db809"
+    },
+    {
+      "path": "templates/import/scripts/public-asset-retention.mjs",
+      "sha256": "cb8fd52e4d4c49167e7d1f0212f969d758d2e1b8ebcfa7fab3e481fded51007e"
+    },
+    {
+      "path": "scripts/verify-template-assets-browser.mjs",
+      "sha256": "d992b846506d5f0e5c8dc928c38bfe964958d83d25f2482acbba31c8a309022d"
+    }
+  ],
+  "scope": {
+    "dealerRefresh": false,
+    "releaseLockChanged": false,
+    "liveDeployment": false,
+    "billingChanged": false,
+    "dnsChanged": false,
+    "serverCpuFix": false,
+    "vercel60GbMeterVerified": false
+  },
+  "reproduce": "docs/PUBLIC-ASSET-PIPELINE.md"
+}

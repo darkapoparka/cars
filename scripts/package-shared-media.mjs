@@ -1,3 +1,4 @@
+import { runLocalMediaCommand } from './publishing/local-media-command.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {ROOT,args,git,exportCommit,sha256,normalized,inside} from './lib/workflow.mjs';
@@ -31,8 +32,12 @@ export function packageSharedMedia({root=ROOT,slug,publishingCommit,sourceCommit
  return{slug,publishingCommit,sourceCommit,out,files:result.entries.length,bytes:result.bytes};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===import.meta.filename){
+ if(process.argv.includes('--local-assets')) {
+  runLocalMediaCommand(ROOT,process.argv.slice(2)).catch(e=>{console.error(e.message);process.exitCode=1;});
+ } else {
  try{
   if(process.argv.includes('--help'))console.log('Usage: node scripts/package-shared-media.mjs --client SLUG --publishing-commit SHA --source-commit SHA --out NEW-DERIVED-DIRECTORY --catalog JSON');
   else{const o=args(process.argv.slice(2),['client','publishing-commit','source-commit','out','catalog']);console.log(JSON.stringify(packageSharedMedia({slug:o.client,publishingCommit:o['publishing-commit'],sourceCommit:o['source-commit'],out:path.resolve(o.out),catalog:JSON.parse(fs.readFileSync(o.catalog,'utf8'))}),null,2));}
  }catch(e){console.error(e.message);process.exitCode=1;}
+ }
 }

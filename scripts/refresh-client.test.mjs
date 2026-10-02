@@ -44,7 +44,8 @@ function temporaryCandidate(templateKey, files) {
   const requiredConsumers = {
     'auto-best': [
       'localization/dealer.reviewed.json',
-      'src/lib/config/locale.ts'
+      'src/lib/config/locale.ts',
+      'src/lib/components/ui/HeroLocation.svelte'
     ],
     carwow: [
       'localization/dealer.reviewed.json',
@@ -172,7 +173,14 @@ test('Auto Best refresh keeps approved hero artwork and restores Navara dealer d
   );
   const autoBestHero = fs.readFileSync(path.join(root, 'src/lib/components/home/Hero.svelte'), 'utf8');
   assert.doesNotMatch(autoBestHero, /Студентски град/);
-  assert.match(autoBestHero, /i18n\.dealer\(['"]addressLine['"]\)/);
+  assert.match(autoBestHero, /<HeroLocation\s*\/>/);
+  const heroLocationPath = 'src/lib/components/ui/HeroLocation.svelte';
+  assert.equal(hash(path.join(root, heroLocationPath)), hash(path.join(template, heroLocationPath)),
+    'dealer refresh must preserve the extracted template-owned location component');
+  const heroLocation = fs.readFileSync(path.join(root, heroLocationPath), 'utf8');
+  assert.match(heroLocation, /i18n\.dealer\(['"]addressLine['"]\)/);
+  assert.match(heroLocation, /i18n\.dealer\(['"]city['"]\)/);
+  assert.doesNotMatch(heroLocation, /Студентски град/);
   assert.doesNotMatch(fs.readFileSync(path.join(root, 'src/routes/listing-detail-v1/[id]/+page.svelte'), 'utf8'), /Auto Best/);
   fs.rmSync(root, { recursive: true, force: true });
   fs.rmSync(legacyClient, { recursive: true, force: true });

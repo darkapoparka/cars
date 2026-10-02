@@ -1,0 +1,2213 @@
+{
+  "schemaVersion": 1,
+  "family": "carwow",
+  "review": "2026-10-02 asset publication cleanup; source originals retained",
+  "keepPrefixes": [
+    "assets/icons/",
+    "assets/images/brand/",
+    "assets/images/team/",
+    "assets/daynight/team/"
+  ],
+  "candidates": [
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-left-1x-flat-2400x1600.jpg",
+      "sha256": "f5ba2ea89c9f81f7d24cb81fbf210201b5877512e2fbe206d39ff216a03f8eb4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-left-2x-flat-4800x3200.jpg",
+      "sha256": "bc9de628e6d7fc7912f557ac7f93a318bc995e9def8cfc45247d74dec3da1b51",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-right-1x-flat-2400x1600.jpg",
+      "sha256": "152cf0f0d5923456f74d3b218a6301a90d4ee8db58973e9012a953ab67bdf74e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/audi-q5-silver-right-2x-flat-4800x3200.jpg",
+      "sha256": "55cb7a99031bd115e9fd81453ef64acfffa1f2c077444ffec826934b0a5f6f15",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-left-1x-flat-2400x1600.jpg",
+      "sha256": "e71fa40cd9ac5d4cdbe6decaa16353803e0b5a55120cc5a499b472f1eb9f8c66",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-left-2x-flat-4800x3200.jpg",
+      "sha256": "75cf14d31202dc84ab17f330bf50b33377c9a8b99bdbf83af645d035660c7f69",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-right-1x-flat-2400x1600.jpg",
+      "sha256": "215d8cd5c20746227a7f3e6a9558d2b074509d6739909fd01631a100b6882610",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/bmw-x5-dark-grey-right-2x-flat-4800x3200.jpg",
+      "sha256": "bbc66910b0db757418d29c6ec1a52ee69c46744ec131b9ad8786c6e3d7cc3dfb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-left-1x-flat-2400x1600.jpg",
+      "sha256": "5cd757aaf9e4e2c9022a6b28c72d786623c1f0f148bd371f956d85911ec105db",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-left-2x-flat-4800x3200.jpg",
+      "sha256": "1b37f35306caec98faa6b274a924259cf9578c34094d53011eb5590c01a34301",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-right-1x-flat-2400x1600.jpg",
+      "sha256": "323d964ba86359afa4f37daf5f14c5092a9344eb140be38a82721964efd3f624",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/mercedes-e-black-right-2x-flat-4800x3200.jpg",
+      "sha256": "8655119f031806f2cb724baefc32698c1bf2771e1c115fbd94555c702e6ed2aa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-left-1x-flat-2400x1600.jpg",
+      "sha256": "eb300ed2ac636ee22b0151b9bcd84f4a365a719151f13a2bb5a14ad36279ec37",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-left-2x-flat-4800x3200.jpg",
+      "sha256": "1832a5d14b5d3b7cb33cda0ac87dbb6195d3ed124bea20e37810532565d69fd5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-right-1x-flat-2400x1600.jpg",
+      "sha256": "33c9e3e3239b5fe2fd70f33008ebbf01b4e70d655c2f14bfabfb5ce58a9c89cc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/volvo-xc90-white-right-2x-flat-4800x3200.jpg",
+      "sha256": "b6dd64c5a2064131297d7cdebb6cf9f8cb7a564ac358070f357b0f84ade18b22",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-left-1x-flat-2400x1600.jpg",
+      "sha256": "3d0fd0e7f9dd18f3c5659aa99d53db0d7da4489b3ed26469322ca64eca19e2ad",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-left-2x-flat-4800x3200.jpg",
+      "sha256": "8cd2a8387c40b917dfa5e98df1d1bb143d1c58eb313e203cf3d644a23c160fba",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-right-1x-flat-2400x1600.jpg",
+      "sha256": "aca3150a6044f067edf3c6b7b2056539bff60e2022071af2f16dcaf0d4153dbb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/flat-jpg/vw-golf-compact-right-2x-flat-4800x3200.jpg",
+      "sha256": "fab279c71b28d96ef14670b41f59293e096af8204cd4fc0335399b50fd39a092",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/audi-q5-silver-right-1x-transparent-2400x1600.png",
+      "sha256": "b0087f4c6306e9e7a10140475b3d05683e2d3d36be37c57fa0c7369655fa7b05",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/bmw-x5-dark-grey-left-1x-transparent-2400x1600.png",
+      "sha256": "60d330e5537fc002c2bf8c44396ddd69b2c2a7d98ada08ae0d00be47d4b361d4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/mercedes-e-black-left-1x-transparent-2400x1600.png",
+      "sha256": "dc024333a2f9d22747f2869f8fb79841ce8f01f2c533a891a0989bcf31fcedf9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/mercedes-e-black-right-1x-transparent-2400x1600.png",
+      "sha256": "f0eafc3ee76c49ce14fed7b06812eeae1acdda1e574638eb69c893abd5c93394",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/volvo-xc90-white-left-1x-transparent-2400x1600.png",
+      "sha256": "7ccc0010f877cc7f06e1170269c99e7f221b5106dadb6962a73463f79bd48be9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/volvo-xc90-white-right-1x-transparent-2400x1600.png",
+      "sha256": "a73c26be17e05e8346b946e6adb6a559f665e32942df5b6e5fe2b0fde6fc499d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/vw-golf-compact-left-1x-transparent-2400x1600.png",
+      "sha256": "1a679787f399e759b3a36e35a325b0a442cb2a7e14a6cb40575c61b531a630c2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-png/vw-golf-compact-right-1x-transparent-2400x1600.png",
+      "sha256": "d09d2ba26d856201a72df32ad0ab7fbd287fa0dde9215336a4494bf74473418a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-webp/audi-q5-silver-left-hero-1200.webp",
+      "sha256": "b2bdbcb7192b9152b6ea1ec21eaca0ab266e94d3c939dd313caf55a3d42fd317",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-a-cutouts/transparent-webp/bmw-x5-dark-grey-right-hero-1200.webp",
+      "sha256": "770169640837990a7fec0ed2e3bcf009321faa5788a6072c405bfb9bd9fc53ea",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/about-lot-banner-1x-2400x1100.jpg",
+      "sha256": "32a12528ab1d48288ef4b17bfabf7562cebe2da8c64e736d1fa75e7f24a8cc5d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/about-lot-banner-2x-4800x2200.jpg",
+      "sha256": "d6273e65951bd79edfeed13a97ed20749d7ffa2b7879fa978ea81bd4b008680b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/budget-promo-tile-1x-1600x1000.jpg",
+      "sha256": "f54a6bbf6410beed66853c82968ebf536e1fdd757fd6719fdea9116aa893a23f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/budget-promo-tile-2x-3200x2000.jpg",
+      "sha256": "86217c7793839dc8374f3afe1bfaffc954a2c550318d21d3d23128cb39c479cb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/contact-showroom-entrance-banner-1x-2400x1100.jpg",
+      "sha256": "844a421a934fb77ce9f32b1c4eb88de0e3ce77376f1fe4f88750fccd00b72148",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/contact-showroom-entrance-banner-2x-4800x2200.jpg",
+      "sha256": "4ca6991261e17ff791ce3cd8aad389179f93b0500269f5f13bfe3b092def7a8c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/financing-consultation-banner-1x-2400x1100.jpg",
+      "sha256": "4fd8bdb52ff8425c5e7adb5f8bd07c3c20a0be34ca1ea9fb44c8e1378e3adc82",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/financing-consultation-banner-2x-4800x2200.jpg",
+      "sha256": "fc4ffecc3d67705635a0a1b2676726eb589e96d0b0ef86ee9c890cfbd89dc1d0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/home-desktop-hero-bg-1x-2400x1100.jpg",
+      "sha256": "57d9c3565ae4679dd8568f3216e6215d33627bc24068c651f757bd17b021272a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/home-desktop-hero-bg-2x-4800x2200.jpg",
+      "sha256": "82796c49e1791367f0fb1a85840a58281687a679efb6ca7f016727a9ab601b5a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/home-mobile-hero-1x-1080x1600.jpg",
+      "sha256": "cfe78db93816f44d8de4a17e1a654b830a35895be38822d7dd5962820998fa22",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/home-mobile-hero-2x-2160x3200.jpg",
+      "sha256": "e0eeb45dc1252129f7437886f3eb62fedfeddb30c67713dc005afdcce94fbc4f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/road-driving-plovdiv-banner-1x-2400x1100.jpg",
+      "sha256": "38ec574e681c6b108c07c3a5728ef02e922f1751c79c4ff4a80e3a9c1703ba13",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/road-driving-plovdiv-banner-2x-4800x2200.jpg",
+      "sha256": "8fbf09fd81055e97490e82950e5e94226672753770b1893d91eff880c5334fee",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/sell-consultation-banner-1x-2400x1100.jpg",
+      "sha256": "3725e49261621830a0aa59d384f757433e354f7b28807a193eeb771e3fe98840",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/sell-consultation-banner-2x-4800x2200.jpg",
+      "sha256": "bd305b9d988fec6c313a9d9fd1839febc045049eed540acee7fbbb0527d9cc73",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/sell-mobile-hero-1x-1080x1600.jpg",
+      "sha256": "820c1d1eeb9ccd1593a4518ea1be050f82d6e074b6d5466c49478b8365316931",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/sell-mobile-hero-2x-2160x3200.jpg",
+      "sha256": "291b7627b624f6304d1a106d9aae2534196c784ee66d7ad27408ff167b48f154",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/services-inspection-banner-1x-2400x1100.jpg",
+      "sha256": "c90deb593f36379a473816e1bf92223d91d48379bfddbc62b0b01b781411cdc5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/services-inspection-banner-2x-4800x2200.jpg",
+      "sha256": "906a6301d9769344ac6bd6d428ad38ec1945184985a17858cf9e759d3b15e0cd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/services-mobile-hero-1x-1080x1600.jpg",
+      "sha256": "55cb9d9583aec994da0f1bba02aa0a7a7ba1c67bc368d3e14d74f3d3dc43b550",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/services-mobile-hero-2x-2160x3200.jpg",
+      "sha256": "acd85a9b75f3f1b5c53c7eb144d85af94b7a53ce85d6ddc4aaedae94ab461341",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-customer-handoff-card-1x-1200x900.jpg",
+      "sha256": "a8a96cb7ea0a559b575b68a51be3ff01f66f25e3199fcc5a398bf39eccfb762d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-customer-handoff-card-2x-2400x1800.jpg",
+      "sha256": "eb16d64ed6c8464c2ef67d2a724f61e5037e572598d5febac68a14cf59295878",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-documents-card-1x-1200x900.jpg",
+      "sha256": "6f9dd01da1aced305b3a058ce55562853f15b7fea24dbdee4da4278dfd371a6a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-documents-card-2x-2400x1800.jpg",
+      "sha256": "661ecc05a28cee9ae90c2aa494a5b9199d56fcd9ae280b3da4124da2a03f348b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-evaluation-card-1x-1200x900.jpg",
+      "sha256": "a77f4a525ac38bf29a7a643eefb151585e550340d2669efe7ba690972bf6d28f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-evaluation-card-2x-2400x1800.jpg",
+      "sha256": "0373b688637c084b2bb65c017eaaf08353e5d01df85c01d799c4a551c05ffd79",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-sales-card-1x-1200x900.jpg",
+      "sha256": "cf350711e63eb2fc5f165d4f868b8143a9a51d9b88f96c54c60fea3db1716ee1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/team-sales-card-2x-2400x1800.jpg",
+      "sha256": "f2f1757afede6517aa3c64f92b59270ab399a168321131a94c1c04ed4338fb05",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/why-daynight-card-1x-1600x1000.jpg",
+      "sha256": "e90cce8a9e96b164bea4ea9f7b5b6b184b790487f1724b58a7d0180dc4e51746",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/jpg/why-daynight-card-2x-3200x2000.jpg",
+      "sha256": "fd83fca45db2fc7ec7f471eb57fc07121492db0980cc1e5c669b6f0ef0e2978c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/about-lot-banner-1x-2400x1100.webp",
+      "sha256": "a5541215dd58ace024352878a75c056294933067cc2a39a5c57c16935a1238da",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/about-lot-banner-2x-4800x2200.webp",
+      "sha256": "6a2f99e1a39af0879fea9396d089b6d651e33f5c95a4f53087a1b9303d6fa630",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/budget-promo-tile-1x-1600x1000.webp",
+      "sha256": "fd33fd74a4643b8e56d343aafb509ff01d54f8a3b7ac19cbf02f9d8fca1dec31",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/budget-promo-tile-2x-3200x2000.webp",
+      "sha256": "598ea0638000bb11334a23859529f0d87d192803f4174ac0f581b696f2881ab3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/contact-showroom-entrance-banner-2x-4800x2200.webp",
+      "sha256": "c7f003a4dd7184588f35237f9e2bebe5e38fb72be81a1610462ae748826b878a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/financing-consultation-banner-1x-2400x1100.webp",
+      "sha256": "550d7566631d9094533bd50d7649914e814cd4353caee8b8639f8749b54b3c30",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/financing-consultation-banner-2x-4800x2200.webp",
+      "sha256": "4d4f332ced8250fa7180dbc3518ca3e588cc1c3f968923191bdcef0a50e273c4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/home-desktop-hero-bg-1x-2400x1100.webp",
+      "sha256": "d9f959fbf8753bdec1907df98c7f835af811b0de2052912cc755f7c7dd52b8fd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/home-desktop-hero-bg-2x-4800x2200.webp",
+      "sha256": "c0c6fcfcafa6df867d749841852d6924419808b96374571801709a32d4030ec0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/home-mobile-hero-1x-1080x1600.webp",
+      "sha256": "a8d17fdba609ce751e8d9a32b5e2f31e52617827b8234eb787d109a32509ea35",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/home-mobile-hero-2x-2160x3200.webp",
+      "sha256": "7ca3bfdfee9c99d541f0680abecb86c51f2bef6979710e1f82b9c0cf09bc4163",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/road-driving-plovdiv-banner-1x-2400x1100.webp",
+      "sha256": "793db6b635c75fd0b387ad0cc2d0d48c5bc3ff6eeefd3fd4704eeea553c5cea9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/road-driving-plovdiv-banner-2x-4800x2200.webp",
+      "sha256": "e1c6a64edf616200dfe1787c11c587f45933dd539ed7ca3d65abf7016cfb2ddd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/sell-consultation-banner-1x-2400x1100.webp",
+      "sha256": "bb217f8e3e54aeb5e830ba0bdb5a3610f723772863c34ca5e0bb0c2f6896ca98",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/sell-consultation-banner-2x-4800x2200.webp",
+      "sha256": "2eb183412c7ee79dd2248f589d360c1e1d19d80222768d872abc55e35cabce4c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/sell-mobile-hero-1x-1080x1600.webp",
+      "sha256": "58b0303cff7985f2c8f40b9caa9d5ff6d0726fe8b2e027c109f0479a1fa39611",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/sell-mobile-hero-2x-2160x3200.webp",
+      "sha256": "406b557a489cfd9b3d4992607c3641061d5a36405d40bdf6268fb90edbb8dfd6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/services-inspection-banner-1x-2400x1100.webp",
+      "sha256": "e380378cb7f454ff905434e7db8ea213bcdcbda6092737f60a9e5aca09812976",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/services-inspection-banner-2x-4800x2200.webp",
+      "sha256": "ad05cb121f80985845068a6f84c01d8979d7c53a1de70ba7df9ab4cfd8971360",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/services-mobile-hero-1x-1080x1600.webp",
+      "sha256": "f17809fc1153956088e83cf0490c16ff5030b36435cd59cc278c6558f2da7b1a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/services-mobile-hero-2x-2160x3200.webp",
+      "sha256": "9087d989f5d744c686ad8b55eec8505aa91956450435ee7672d35631f9283b59",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-customer-handoff-card-1x-1200x900.webp",
+      "sha256": "70920c6ceb99ad372eb1da3155c9e6f7650b315eddfa04638d36f59477bd11fa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-customer-handoff-card-2x-2400x1800.webp",
+      "sha256": "6ca1921ea4ce6f013a8eb3e4a4e1a32ebe3a2a8b9ca84241b6b310d8ee506a24",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-documents-card-1x-1200x900.webp",
+      "sha256": "6f63f2af27d793006722f1bd4b655757b948d3ce315fb71dee38f80f541fd9f0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-documents-card-2x-2400x1800.webp",
+      "sha256": "7c09bef8a279a9a66f99f64d7da8ddec9d9832333218a0a1de19663406d9dd4c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-evaluation-card-1x-1200x900.webp",
+      "sha256": "5e59dcfca67ede7f93beab2ee233115bce66babb3007cda3f0eb526548273f0f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-evaluation-card-2x-2400x1800.webp",
+      "sha256": "08d33295c37e1911da54a3709224fc97cea4778b5e1adf030bb47d85ae5babbe",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-sales-card-1x-1200x900.webp",
+      "sha256": "1f802fc031d6a1292da65c761f609ef690a9efc320c256ac36ec5d8d80ebf65f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/team-sales-card-2x-2400x1800.webp",
+      "sha256": "2edd72456ea2b9972b14d3789ad1d4f70ab568591a8e1b8a925a49d7302d46b4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/why-daynight-card-1x-1600x1000.webp",
+      "sha256": "a28b91e979822bb7efd1249ac973a08b292f4b1e24a73776c6c5d408689ddf98",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight-auto-v3/class-b-banners/webp/why-daynight-card-2x-3200x2000.webp",
+      "sha256": "d08d0a07490d37a8d94ec32fd10c5d7bb269476d57a70b916f1280b59fe765ca",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-banner-night-v1.png",
+      "sha256": "83e142a31a874c5a6cc9b7882169eb26c567eff76600108fde803cdd3b997a14",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-banner-night-v1.webp",
+      "sha256": "48fc1150ffb8fca1c16fc1a3e4df2ed302b75ae4c0eea4ad64ac5c5312adcc5a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-banner-showroom-v2.png",
+      "sha256": "f5d743c7695b56de1bd816a5308211394b72effbf213cec1cde2782268767d34",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-banner-showroom-v2.webp",
+      "sha256": "b5b861a68cef8e90e753b27998405e784cf19af154861f6be4977336cda4c787",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-cutout-black-suv-v1.webp",
+      "sha256": "71b4419832c9135e26fd8c11a2125b95a000f40d71d0f93c909980323f67a88c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/daynight/inventory/inventory-cutout-silver-crossover-v1.webp",
+      "sha256": "8f416ff6f093cd6029f6c5e14596c160bf9b4d7ed5d6639a5b04de3fdb88f413",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-10.jpg",
+      "sha256": "c05bead09276c8099592dcf03afb80027b096e64b1c2c05e48566e49185c15eb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-11.jpg",
+      "sha256": "648e06db3f90517b569c5a8d3d773de5a8422c554963e71ebb4bdb374f160c13",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-3.webp",
+      "sha256": "7c2b2a345f0dc781a5e016bb5e338a4a984f8814ae73f8847dfb92d81135d63f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-5.png",
+      "sha256": "7309a7fd1ec2ab466e3178fad7dd4ecda45580f1e6a203161b24c8480d67c894",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-6.png",
+      "sha256": "660e7a2f4b7c451844dd3c414204ed71326c7db536a198718bfd368554d01000",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-7.png",
+      "sha256": "31a7434ca3d0345c2d05b3651d3932d536f33a119431e040fe300b2d8c9f989f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-8.png",
+      "sha256": "89f78c63efd8e762f15e1e9afd9a520da50dc681d7133893cab64ccc5aed5066",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/avatar-9.png",
+      "sha256": "c0bd3aacdf306d9243d3bed000eedd5c8c9de345a18b58e906e514afdc32cc87",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/client-1.png",
+      "sha256": "328c03eaec66940ed81b3218373c0734345e3f3fbef31e51a9ab13a02ae6468a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/client-2.png",
+      "sha256": "cef39fedb9f2a548fc7e682a2ba3e4e565e5465fc045084fefa8de81e46c8471",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/client-3.png",
+      "sha256": "d44718d9156c12eb7c9b60ccac379729d8c77bb43d5ff4ded3befd9ee91f30ec",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/client-4.png",
+      "sha256": "e842e8960a1d525e2144fb9ecaf90357f7d280dae04088e79c992b05085c951a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/coment-avatar-1.png",
+      "sha256": "42d68bafe369a930e8a1645a10a65bcdbc7c7379677243de35efcbc00d9b11dc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/coment-avatar-2.png",
+      "sha256": "924ef9ddafc0d55e9ea10996d87d794d2f26b1ba45897a16b9e5a431fe87492d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/avatar/contact-avatar-2.png",
+      "sha256": "b9897d50c16220a02a4a9629bba3f954a58936ea5303668c4d9fed305ea5bdcc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/background/bg-fixed.jpg",
+      "sha256": "2834c274bda1bafb6ea6b76d10d1b7a1815cd0edf503d229856218e78dfdd38d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/banner/bg-cta.jpg",
+      "sha256": "cda3ea56be6084ea6c5931b27e87cc1ff9e71e18b508dfa5fd8bb0278dc5d53b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/banner/bg-service-center.jpg",
+      "sha256": "a574339c7b962bf1903cf6c8a3f7db3b115722728bd1ad5b2616888b61939a37",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/banner/bg-video.jpg",
+      "sha256": "e102c2d638231336db6f4b9ab44ecc58d30aed948d8921760f1ff81d9ad3d27b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/banner/comming-soon.jpg",
+      "sha256": "01963b0ef78b7a33f2bd6b3de84d0ee07861e8133ca2b0a4ecd71e5dcc70a7d9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/blog-details-2.jpg",
+      "sha256": "7cb38f60e229508aca5575b0f0af74f1233895de1b529097475ec34a8b640c10",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/blog-details.jpg",
+      "sha256": "463629b8129fde8f3bd4ca1be9369ccc653714d1a573cd5abd216903ddf0768b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/comments-post-1.jpg",
+      "sha256": "a799a623c53a0d12c33a27b416ac8ed8dea9759f7dfd1cdb8f7ec8d38deed87f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/comments-post-2.jpg",
+      "sha256": "b6e58df447663760bd79276ffce03024970ed09318d70a8296d63cdbfb324fb6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/comments-post-3.jpg",
+      "sha256": "e136f7420873683ca58f15c5f34600ddfecc440ff1a1afad412aa4c582ca41ef",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/overlay-blogdetails.png",
+      "sha256": "bea71022186632fcc691565c5f86893119e7d5b9d215bf2bfbe8499da14671b4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-1.jpg",
+      "sha256": "64e33e1697d7a8096eaa1762b6c462f8a3fefb08cf04df5509b351c6cb092f5c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-10.jpg",
+      "sha256": "88af345c1b8cec4c653a3719bd2f40b10f5cb462e4e04117648901eb8aa3ff4f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-11.jpg",
+      "sha256": "8867d237e379357c83c56ee42dcda24479d8e2dc8cb19366953a863db409d8d8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-12.jpg",
+      "sha256": "e20c567952cd450b1bcb530eae5db5a216f1fbab8390225287b1dd6707c3125d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-13.jpg",
+      "sha256": "b4e93aadf8679a879608146a46952d208054c1906966f1edb205d4a79e150f08",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-14.jpg",
+      "sha256": "4cf594e06e78a6fbda5ce150edc5f6e3a7d52cf18e61cdd93a39ff8419383254",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-19.jpg",
+      "sha256": "a60e0107d8f0324c69087557c3b388958f113c5f2b72d6b3f74a34a156ebb3c4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-2.jpg",
+      "sha256": "be57c818f0cf8737f3ad654776fa28fccaf4f84fe28b348cc92be80ebb27f6f8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-22.jpg",
+      "sha256": "d059bdf1ac3a0ecba1adccfeb0bee6b325fe4b3a0d7643a6611555c5381be1df",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-25.jpg",
+      "sha256": "a294ea6c4d09bf3d02511e314c7cae23eff523945454620ba30b0172000aef57",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-26.jpg",
+      "sha256": "1ed9a9d2a922aa781dc6308bc1a2d2b236badb0940135c5c3c4bf1e3558fe56c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-27.jpg",
+      "sha256": "4ccb0b005f456e0ab5999fdc148bfdc6929e9c619f16308fa8ae95be81657c67",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-28.jpg",
+      "sha256": "d2d3ec50b6812a41d932b18910214289663b011777562cd72bbfd6ee4a3895c5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-3.jpg",
+      "sha256": "0799911536755887d0f0a217c670e8812d677a2a6102fa26dee4c3eb68793027",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-33.jpg",
+      "sha256": "72b96e77beff7012d5de0402d81a6202bb32ff343a5ace6387f48498ae405678",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-35.jpg",
+      "sha256": "c30841231239ddf25e5a7fac4d61c135cac9fa0053638e4397a5b031d3bc3789",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-36.jpg",
+      "sha256": "e13c5cbba9f7a06878d627420435f6bb06d1cfe8a0521d80ce197bde092a671e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-37.jpg",
+      "sha256": "af55c4943fbdf0af3d7d1abdc5c14b8621fe5d5c87db7c7f8f8d72f3819ca7f5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-38.jpg",
+      "sha256": "20990de72f7b090a468e19bedb55e08868a2a3ec65283572d65279e8cc7418d9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-39.jpg",
+      "sha256": "390de24694ac907e46da54217129cda7d8fd82ba0727fdd8c2f5cef2f3115e25",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-4.jpg",
+      "sha256": "4a6dbce94cd0be1b300746aef3d1c0f386155d4e8e668235f8fe2ba061f711dc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-40.jpg",
+      "sha256": "a03e784b307f9765b294feec26c4270a9db0bb7ced03ce6b3e2c69cb45017be0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-41.jpg",
+      "sha256": "ddd2b68492c907a2bbd2a91b2f7173621ccac858be026e5de9fa720f1a198b5b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-42.jpg",
+      "sha256": "56a8e627c7e26f531208e75a2a79fa67d6dcf10f7d538d4d8dae1d55fe120690",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-43.jpg",
+      "sha256": "c923285392e1d52dcb91c53a695c8746a051264b00dd03f4fbcab6c47dda3baf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-5.jpg",
+      "sha256": "3a3ff81da75d88df1d5421366a53ae6331b97afdf22291f4f3591f50b4838f79",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-6.jpg",
+      "sha256": "965ba030244d0a5c87f4032d23884def6398e8aff8086f01bc4a05b11d608524",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-7.jpg",
+      "sha256": "79c1af5a8bc47f7f355c9cd43f502a0728f7759e0df5abb7d78ff69a49cabb45",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-8.jpg",
+      "sha256": "c269676f31afe95e0bdeb492f07901546ec339fde56b0efe597a4c68b5b90a0b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/blog/post-9.jpg",
+      "sha256": "e7e2fe26df2483a4c94009f134ed2be271b53b317527d4443ae679ad8033ccee",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-coupe-v1.png",
+      "sha256": "46117902dd03430e5dd8ab9abf32eb4506c3654050627ad7f137c909b9ef09af",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-hatchback-v1.png",
+      "sha256": "ba5cc06b4621d12e688dd29292ddc6c7bdc69b03c0e97620667878512e44de77",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-mpv-v1.png",
+      "sha256": "333f3586a44512c32cf88612f0626604cbea4c0782a87038d87d10b0a8eadb11",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-sedan-v1.png",
+      "sha256": "773f397463475ba36875437dccf502b867266f5387f6b797ecdbfda33cd6f0ff",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-suv-v1.png",
+      "sha256": "fbe90202484d50f77f5c85a3ea20921265aaf43c4f562a0905faa3389ff95b06",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-types-sheet-v1.png",
+      "sha256": "4e900f60373dd28d5498ee8921406aa7056bba3070c261d1f6a8abaf4be4ddcc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/body-type/body-wagon-v1.png",
+      "sha256": "17b76364966ba752a89ef632303fb534ec621045a03470f920d929a4ad6535ea",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/budget/open-budget-supercar-v1.png",
+      "sha256": "c541776f3fecffae43294a26dcb62733374533a12e0e5cc93200cef6aa588d96",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-10.jpg",
+      "sha256": "495c3eff5d865ea6b6a6a1505d936e5c2582678fb4f1b89ce111bccaa26df125",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-11.jpg",
+      "sha256": "4bfd5723c90663872ba45d4226cde0f2b593551f10ed5c714a95929a81c43659",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-11.png",
+      "sha256": "bcc9ec5c5a58feb90ca36b5498c650c03b80b553535e7972689f06dcf8427b65",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-12.jpg",
+      "sha256": "7116ad571b1c0dd639ba065dcc503543a9cee5c650bff09106ef306ef81a5d6b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-12.png",
+      "sha256": "49a76af598f690cdaffcb87e7581fff607c89ccc79ffc7d1dcb82f05d69295e2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-13.jpg",
+      "sha256": "8387a7a59313fbfb640f1fdef956563844ec3086bb7cfa64568e6691d0dc74a1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-13.png",
+      "sha256": "fcaf41c758d8e1addfa9374c50537bbc4cfb59533be11db045194c7be0ed3dc5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-14.jpg",
+      "sha256": "79efc25c9c80e111c8ad32daf4b2fca02e399fc0ccab97d8006b5494fa694739",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-14.png",
+      "sha256": "02049cfbaac3975919b314411c79c826df94d1f1c0ea7aa75dc33d1bfd083c49",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-15.png",
+      "sha256": "cb7f86cd3cd94ca96531946ae8d6366f491a00638cce39d14404c93b98ecb905",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-16.png",
+      "sha256": "63b3bd19b1f61dff970f0e6b32f2c1ac29fe77a3dd19e7682d65f1718e7487c8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-17.png",
+      "sha256": "3a95240123dd886f08009812ee011f05af3df013f08177e37f47c33fa489dd83",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-18.png",
+      "sha256": "bbdbe3eefeb5de047deb148567c3340433bf89e6b03155795f6f55f019fc87b1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-19.png",
+      "sha256": "7c2a1d6ee009bd7deb4e1ce5c648a1355ed78cfd83265791745de5ff13e93034",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-2.jpg",
+      "sha256": "317a6358fd4a39c33b849b7b7849a1c1eae8010e72a718bdfeaaecdd84f6ffa6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-20.png",
+      "sha256": "1eaf8335a40aa996a59b5ac1bbce7888bf87be0f219cdce23e360d5b165fc556",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-21.png",
+      "sha256": "47638b7bbcb47664e079a5ef98724b916b1a535105a5963a364589bf025cfea3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-22.png",
+      "sha256": "9842e3f899e9ca5da9619d6ac70d51e80199ea2f61ee2571f74c76816c268e3a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-23.png",
+      "sha256": "37bdf7b38af65ee818255c049b3b6c563b9575fc3e0af1862a9422aa5741befa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-24.png",
+      "sha256": "c479124bdb4b1413a0f3a31a2400051eb0daf0ce2e6a66859c28d4f5c98b17ca",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-25.webp",
+      "sha256": "162a8ce8fbb13c89a0a7fabfbc8b158166e25e96ff0c25919f11a076b9c74904",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-26.webp",
+      "sha256": "1f6bf2481fa97cc3db595e79a7a2fdd5f47b3f3344462c6f2043599dbe09464c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-27.png",
+      "sha256": "9609987849c51c40763fde7ec30b0f14c5b041a0536b6c437e648639bb54bf39",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-28.png",
+      "sha256": "6c7c4d58264ade433ef785d946dca3e0db36df0dbf469f196164c2bb2147c9e5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-29.png",
+      "sha256": "2facb0e41f4ca2fb9417404a55e3652294d8f2ac862dc0faf696ec09ed05fab0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-3.jpg",
+      "sha256": "0d02052dc18f21ab71a358f8144a1bb864390321e73bc231c5b4b8c56a6f0a90",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-30.png",
+      "sha256": "5ef9aaca86f08e21de9262925b719d7571385311920627d5a2da8f5fac1e59c1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-31.png",
+      "sha256": "2039816b6e538633ef85ab660aa0ed4c734c49e2c2cc3a98e1cb45511da3ab75",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-33.png",
+      "sha256": "30b369c2d44f740920fa4ba989d9111b49ce1cb40fe1d4839565f89fa7490a0d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-34.png",
+      "sha256": "b2b3aa43731bad102f530c9727f180f8f11231c247f16490d634dad1752a9018",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-35.png",
+      "sha256": "997bc0814366da207127933d23c0e66d4633eeb0d61891e9a928f2dc0cc35e00",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-36.png",
+      "sha256": "89bfda535b1c516b6410eb8940433c7f5e5ca4c8d9384b51db954dbfb3ca31e3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-37.jpg",
+      "sha256": "f74b4b8a91b1bdcebfbf24ccf318b6b421f69fae086b1c0f34495b7ece0a0f93",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-38.jpg",
+      "sha256": "08c3b0d80833c1a3c62a10ab1a1f701d9298a1b329ac9a29a71dc495b2415677",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-39.jpg",
+      "sha256": "4260b800688630106043760ce8a26d4a789b28ff31200f08bc80c71cccb9b100",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-4.jpg",
+      "sha256": "4e97f86655980112ab504d9700ff19c739f5a5e68c5227ecff13f5e4a76800b0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-40.jpg",
+      "sha256": "6c68b75ecd7097fc92d1651119a49af46ced1e09ba9d0cf35923540e33ea45d2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-41.jpg",
+      "sha256": "eae9a8fdf32fcecca67ef34f0bae2307d29b7446c60a81abc5e2f06847bf00b7",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-42.jpg",
+      "sha256": "3a414cfb3888e88a05de02f2e92b20be1d78adb9b1259291f1f8c58101dd8ed4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-44.jpg",
+      "sha256": "91bbf604df5525e7b038fb6fdfd04e08f89c38e510284c3c7bd4d8b6729f9eca",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-45.jpg",
+      "sha256": "c8923e0a73572fbfd2f663ce7c4f8d2f23bd498b63cbb318b411baa32568b8f3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-46.jpg",
+      "sha256": "11cac5e3416fb14c382306c1a04c2060ecbc9a8aaafe456ff063ea60f6021e7a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-48.jpg",
+      "sha256": "42dfb8f230ffb1ce723781a48ce51eaded9926d435fef68aa69f8b8173d4e00f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-5.jpg",
+      "sha256": "f65f920fca1c46e85a43e417b407d7ab00b99ae1f90c13fac68581efe6f618f2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-50.jpg",
+      "sha256": "39797f8211e5c8e70b7a994fa2646bd253ee298c9ccc6fcdc1b569b0c2a95062",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-51.jpg",
+      "sha256": "06f63d1e23305676b4e1e95cb0b3fee1f907420cc270a50b3c8357730ed0ffb5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-52.jpg",
+      "sha256": "f17df589f11d444641b2b470a834d424c94802188c6973c69b006e674f24cae3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-54.jpg",
+      "sha256": "bbc6f21b0532e27ae4385f09b01fc17343bebf7a39d98b6b89184e0f77d0e91c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-55.jpg",
+      "sha256": "0fa4fdaebd42856dece30b03c4e8cc47c63d88556a2994217ae643f8c51516ab",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-56.jpg",
+      "sha256": "54d27531f188171d6040d81325b3c1d8212bb4cd591883484bf6b11d5b6261e4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-57.jpg",
+      "sha256": "b92afad34ff59aa2f32f80c897908974d1fcaa3a1e98540d71f6c6bb1b3ae6ce",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-58.jpg",
+      "sha256": "a9fb3a66036225eaa60163a5a352e90115b1fc8d5225654cd0d9bcaf8c1969b5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-59.jpg",
+      "sha256": "2d058f29fe8326883731e46be67f7ea0b2a4d57d788b6790bdbb4e9f84c33124",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-6.jpg",
+      "sha256": "725e66c1022ba66d50ea412f92031f904fac93d7f640becae25a9e68e86446d9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-60.jpg",
+      "sha256": "044d801e9e33c19ab924dfa3c4394fc83797447a50b7aae570b279dd68a5ef1d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-61.jpg",
+      "sha256": "26a70c0432cace5a2f9b7f69d2616c27dcdc4c50c06889581ea59024bab789c9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-62.jpg",
+      "sha256": "af5de4de9dec01028e4ad28e0a837f5f7fd7f84ff20bb1aa3f4ef7601c39546e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-7.jpg",
+      "sha256": "478bd98a5730c758ea26ae4cfcee501151ffa0b7169d4a140c515095e1c416b7",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-8.jpg",
+      "sha256": "8f503717442404bf6bf586e5c093effb09fb86470dab26b8be152649449e2e57",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/card-9.jpg",
+      "sha256": "5f8dcbd09b41147388345dff417d079731bc0f185dd2d7cada7b1d14fac4237f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/card/why-choose-us.webp",
+      "sha256": "f34c7bb3298c1f37e2911bb3d43c8ad78968b7464b5a116fca1f6455f76cd1fc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/chat/daynight-helper-helmet-v1.png",
+      "sha256": "c0e21cdabd285fa016fcb84f6051d4d5e685003c7db2d137696037db99f0b3e4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/dashboard/AddListing.svg",
+      "sha256": "b715249b6b527188456bd5b3b9ff15213c5ee67c57c1b832c003c566044a010c",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/ChangePassword.svg",
+      "sha256": "a9270584f67009b94788bffa8846d83e3604ebd8de31ebb0d8b4b50fe43a921e",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/Dashboard.svg",
+      "sha256": "b28f823ac78780fc63c17e32f26658b95b84b05f4db92c3e8eeae2f2ace1ce5f",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/Messages.svg",
+      "sha256": "c41e16f055435703396227ce33544da77eacb0f02c38de7e7a31715ca166101f",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/MyFavorites.svg",
+      "sha256": "878646bc67aa4d21efa24d1fa9929fd039fe70cbbce6b004ed044a37a79c8978",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/MyListing.svg",
+      "sha256": "fa3589a55d0485ace94e6c1808d7face9a0f81b39f45bcf327203fdd6039fcb6",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/MyProfile.svg",
+      "sha256": "a464e3dd325ca2266f3883896b7a77bde8b4dcf38cbe1f4243c0b3df651670d9",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/MyReviews.svg",
+      "sha256": "f4189e7efdcddc0c992d4fe5678d69b224f7c5c05548f70b306f93da951c60a9",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/car.svg",
+      "sha256": "282f59aa138c81306236fcc5cea9865bb94bb988f25808dda484969fb4754eae",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/card-2.png",
+      "sha256": "6ae070bcd5bf49cd900eb7d08bcc7740cd6df5b19f135be1be53c4d100e915a3",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/card-3.png",
+      "sha256": "b9fbdb5ee289e5f660b1e3bbc066dd05b5a6c289b667f77661d720ff253a16ec",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/card-4.jpg",
+      "sha256": "ed1a8d62761f2072c1881bff3d0672a30a4e10074074babd5541d70c977fe956",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/card-5.jpg",
+      "sha256": "51a69bf06682bb7476ffa7483eb71cb1c274906d48449cdd71d4f8d8817e89d0",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/chats.svg",
+      "sha256": "0c9b9743c5b844157c06441daa16e29a1a31d351b003f9863d1d2f9535825a24",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/clockCountdown.svg",
+      "sha256": "1f7d7ebba1b830d3cc19ad393b4647c0bbddf8834162064448f2effba1cfede3",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/dashboard/dashbroard_avatar.png",
+      "sha256": "85407453134e7d036cd60fc8981623672fbcb384c946c682dc216ef7a0b094ce",
+      "reason": "Retired legacy dashboard image; historical bookmarks now redirect to the native admin."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-estate-combi-1x-800x600.jpg",
+      "sha256": "0a0cbaa303e3f1daf84ef75f61e6255aabaa54e21a5e1ac7abfd5fc66f31b00d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-estate-combi-2x-1600x1200.jpg",
+      "sha256": "7e20438d6493b6054f4360770a3de528bd30d08750566668bb12af61cdd03bbc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-executive-sedan-1x-800x600.jpg",
+      "sha256": "542193d6c66cb0c31639df6e152ad6319647819215f097919b7d9acc07adb999",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-executive-sedan-2x-1600x1200.jpg",
+      "sha256": "f5791b1e5ee0207e389e6a87c4d4eecc79c2143ebe708c993906d72f44dc147f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-family-suv-1x-800x600.jpg",
+      "sha256": "f80264c670fc18a7f48648091c0727d86f1c6cb3ab1b1956dbbc1d01af9b90e3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-family-suv-2x-1600x1200.jpg",
+      "sha256": "e08e0eab8be4ae5fb7719a6d33c0a764d2f3bf93e1c50ef594cc8eba3759d3f1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-hatchback-1x-800x600.jpg",
+      "sha256": "b9fc05af32ec7e0993388d4237fdb3ab658be728114bd4e5fedd620e4a53854f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/category-hatchback-2x-1600x1200.jpg",
+      "sha256": "7746ad7e584f26b7f3376fbbcc7cdf2467a35205e90a19b42b41c0eec17dedee",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/desktop-home-hero-1x-2400x1100.jpg",
+      "sha256": "af3c14a122196c24b2da9111c43722f63fedfae62ab79c10a6fa7a360e3ecb1c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/desktop-home-hero-2x-4800x2200.jpg",
+      "sha256": "4dfa9027d7b78d2c086ae2d4669eca26c405b6e959474833a8c4719ec4d96976",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/sell-trade-in-banner-1x-1600x900.jpg",
+      "sha256": "4027e73063f27619cd5f54bcb798773fc1d55206227aed5ad9f10eff226a4e4a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/sell-trade-in-banner-2x-3200x1800.jpg",
+      "sha256": "609089aa3849df3c1e3a290d25c2e5b0d78151f518fb089fb1ee616a7376877f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/services-financing-strip-1x-2000x600.jpg",
+      "sha256": "0931cd87844a029bdc8277bf685c69075bea8d40be7fb1892694715aaf2cf9b2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/services-financing-strip-2x-4000x1200.jpg",
+      "sha256": "cc6189b34c725ac34ce7c898d1e2f70148daceca2ae5b5e77fa90858f987fa15",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/social-og-background-1x-1200x630.jpg",
+      "sha256": "dcfad09035a7191f7e98805c7cfcb29ce81fcab826498a77a3faa2db0de63348",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/jpg/social-og-background-2x-2400x1260.jpg",
+      "sha256": "c0b497f0c8fb8e36f0c6674ccc0f4d4d399e1884f2d2a301d631bbdfe13e0674",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/brands-in-stock-imagegen-v3.webp",
+      "sha256": "911e774b6de5915100cd3843eb55d85d92b4a17e8549fa3e5bc9c2514bed2155",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-estate-combi-1x-800x600.webp",
+      "sha256": "16e502e00ca13f847f295eea1b9f93a4fa5c451709d731c314e7196f58b0543f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-estate-combi-2x-1600x1200.webp",
+      "sha256": "ba664132f06e6e8e1d9de934ee3b4c64411f74d35a8e344f89bd254e5162e639",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-executive-sedan-1x-800x600.webp",
+      "sha256": "e906942afcf729a8213c7f7ad6c26a4fb7bb024bd021bed227cca2d10c3543e0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-executive-sedan-2x-1600x1200.webp",
+      "sha256": "16de2438fcf08541471add3d5dacf6e040045c200d185bce0c325bd29d419388",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-family-suv-1x-800x600.webp",
+      "sha256": "c84d33453070cb4475bdaf0cfc5b3a992e401e1538cbd727cdb39d8126e86315",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-family-suv-2x-1600x1200.webp",
+      "sha256": "f40fb98662b8d3556631d38d4cb9ef4892aff9a05f6392a6269ddab829957986",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-hatchback-1x-800x600.webp",
+      "sha256": "c3498ca4e9db94c37c3d3557c65f8f0eadcb9b7479b80cff1c7bfd4c25b47fba",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/category-hatchback-2x-1600x1200.webp",
+      "sha256": "598f759e16e0497160c48be641d96ef7317b94c4c5993a04d5925d2494b8399e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/desktop-home-hero-1x-2400x1100.webp",
+      "sha256": "fef3290222cede1570c4122bd4d2d2bf37e3f21d0394a121ae7791dfa3ab51d6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/desktop-home-hero-2x-4800x2200.webp",
+      "sha256": "a308885964117c9f570b29080965cdf2ed97895a8fdc70b1ead03d530932ec16",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/inventory-latest-front-v1.png",
+      "sha256": "2597ac94591d5cf96d5deaf5767560e0c68130bb1e97e3ffeb82c10279496905",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/inventory-latest-imagegen-v4.webp",
+      "sha256": "0e0db1699ac395c385d9eb12d796ed3488e3dd09c8e04bc1e44786b26c1d8d3c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/sell-trade-in-banner-1x-1600x900.webp",
+      "sha256": "e7cf96b794fec3c89a5861a44c5ea2d638c2c2e2e61fdae4d34f57433463043e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/sell-trade-in-banner-2x-3200x1800.webp",
+      "sha256": "724fa31673a11ce12a175e3b21239e45b17ac944b7cdd6a9473005f3dba69cfc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/services-financing-strip-1x-2000x600.webp",
+      "sha256": "a31951cceba13cde9c556a5ff6b54bb0fdf0e88312609ad2e7c12ac82c0242ae",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/services-financing-strip-2x-4000x1200.webp",
+      "sha256": "a0e6851957e77f5d125c616fbc6690f87f60bbb05d43b6e6a4f704fa12c116ea",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/social-og-background-1x-1200x630.webp",
+      "sha256": "54ede48b9d68af051ba2ed948d4ba3bf8f4686d639a6a9ca0060635897673b72",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/social-og-background-2x-2400x1260.webp",
+      "sha256": "918797b488ab3bdc265a5e89680ff70796741ba067edbf7ba8f8fd623856f0f5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/daynight-premium-banners/webp/vehicle-types-imagegen-v3.webp",
+      "sha256": "f3278953e36e64e8af1ac0fbbfbe618d7e288bc3ad86f1c922634859a0d9d6dd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-collection-v2.webp",
+      "sha256": "52ff01e7cec1bee5a0015f33a7b52afd2adc035d237ab9983bf19affc7568673",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-collection-v3.webp",
+      "sha256": "d7f885d979b4e09d50a345551ae74b3ea0f3132984852fd2943a034fe02841c9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-financing-v2.webp",
+      "sha256": "341b525d707f8a4f45c5b8f76942bb3325d8c23f177f1ecd7f6d27b572e5e323",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-financing-v3.webp",
+      "sha256": "d74a3228cc8a2118cac35ed95917b80650d85ff12d3e297456ab6d1c47bff123",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-financing-v4.webp",
+      "sha256": "b5f902bee6b3ab3046a62a27b0ea318aa1a8e89a8fd53609d0a3c1ff4895d4b5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-viewing-v2.webp",
+      "sha256": "17482680ff44f2a9d7965e211df39fe6913239796a7db892cc27a06ed2aec2dc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-viewing-v3.webp",
+      "sha256": "41ba58a222a250c7f00f27c375d6038dc61d080a309278b4af4f8c3ab48fa50d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/campaign-viewing-v4.webp",
+      "sha256": "b7b3cb7ce6100552adee349b7fd88400d778346065f26434b3ac22242d339c20",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/finance-documents-cutout-v5.webp",
+      "sha256": "5f3c21ccef488595060ca1fddcffe6d7295c7f89158eac0e5bc6cf5e2296787a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/inventory-studio-v1.webp",
+      "sha256": "954ec63682c1b78fa71b8140888eca224de3f3d15ddbd0e1277bcf12e48a331e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/kristian-original-instagram-DNyKbke2D83.jpg",
+      "sha256": "ec3066415967ad24e37cfd459b181b9ea3ab75cf0683ab25fd5c8c3cb3e096cc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/kristian-phone-cutout-v5.webp",
+      "sha256": "11c6429a02e3857dbdbda4b40bbf6e1a6d98c6bf5c4c8329fca367df97224da5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/kristian-real-white-shirt-cutout-v6.png",
+      "sha256": "0af52359dcd470a1a71c9953ed7a5ad310144cd3ce7c374ee8f4654c6686d6e3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/kristian-real-white-shirt-cutout-v6.webp",
+      "sha256": "4c0e417f3cd99362ac194711876be9384314b25307d0db1bb446022932cd0b94",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/phone-portrait-generated-v7.png",
+      "sha256": "fc204ea2d2447689e986a48bddd5e6857e3a2a9f6d4a8c3cdcbe0417fcf77db3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/sell-appraisal-v2-mobile.webp",
+      "sha256": "ff2ff4488d3d2d47c1d2b753762cdccf1ff55f3fd013292a7f44d5065d32aeda",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/sell-conversation-v2-mobile.webp",
+      "sha256": "389e1c20fdf2e20c81ceefb2361bcaa9b2b75d985cb4c8e5844184a2c64a8cf8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/sell-process-v1-mobile.webp",
+      "sha256": "ceea25426db7cfd32b360341891acf3a93a4e878c4991c328bb8ea5c4d5f9671",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/sell-studio-v2-mobile.webp",
+      "sha256": "64adb7277e88625ab6c4d6804766c08f46fa2f46259407b07ad22c0a313fc85d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-promos/sell-valuation-contact-v1.webp",
+      "sha256": "0333706b4b5201f8c97cc7964b02ddafc51904c26e1f601c2da50cff4ce8df9e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-videos/desktop/g-class.webp",
+      "sha256": "72118be379dbd794a17b0d0ddee7cd3a95d40daeb8d86459bae876e48c657c44",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-videos/desktop/panamera.webp",
+      "sha256": "b49aece2a8553a93da550f1f4d7719a3574141b0f53b11c23b18ff7b92038edc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home-videos/desktop/urus.webp",
+      "sha256": "2e08e2c1382b83dc54298baa079384bf7cefa9bdfdc4583d3d08e4a5ceb54180",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/banner-calulator.png",
+      "sha256": "df7df190de9116ea587491523a9a85b153ed19d2855bfef772017ed65b608864",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/banner-download-app.jpg",
+      "sha256": "c97d8454d626fcde42ac80753b854a1274167c76c095fa6d10e0b6624a1f2964",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-1.jpg",
+      "sha256": "41505cfe7a645930270d1e59e60c88aae1040c84a7d7e3d33d9dffad5734ceec",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-10.jpg",
+      "sha256": "1ddaf1d2e080902571ac30d43f630bfabd97f108f4da6b2813d1eb366b0e1ad6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-2.jpg",
+      "sha256": "8488eabd8f315b2a6219b2f6349fb20f1b320859f4469dd81c4e8ada923dc9b1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-3.jpg",
+      "sha256": "16af697824ebfc39aaa9411db5ca12534107a4904a00c82b73129a9977587f39",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-4.jpg",
+      "sha256": "af75e002f90af06fc656bb7884cceb932220db44b856b2297e95f12c27bb6219",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-5.jpg",
+      "sha256": "3cb8919b898c445d5b7fd9aee69b10a66c228faa7afd3a7796bc8e8ea0198336",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-6.jpg",
+      "sha256": "bb069446a5ceb7e2fdb2431ce1024e720c6d34c3dc099cef269090ccdae55035",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-7.jpg",
+      "sha256": "fe73560e5bc6742b8b56b1f6a6348c4261f94167c0bd717fb633e8fef35d9592",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-8.jpg",
+      "sha256": "fa3202d1a9d08b830984f445fff1667f899b163affdf598521092e60ca2701aa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/home-9.jpg",
+      "sha256": "6deb6c8f25b4d1d7e36c8a39ebbc801e6668e2eec5b8d1ea0ff707ee21fe7496",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/mobile/import-europe-road-v1.webp",
+      "sha256": "f40b203aef16064127957bd1050f273886a80f5d19f6707e344c3aa4bb8cf5ba",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/mobile/sell-trade-forecourt-v3.webp",
+      "sha256": "9cc5f1cbfe7737e6ee2f1e62940cb7428ce752fe79e82ca81015ee9c8c1d190e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/mobile/sell-trade-studio-v1.webp",
+      "sha256": "21e32b18ca468e61fba35b714072d08a737b88ce71c3c31d3a09e2097e95ed99",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home/mobile/sell-trade-studio-v2.webp",
+      "sha256": "40b2451c1871f104e9d4f66119511ee2d2e7b026b38aab698e508621e8d00ebf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/home2/daynight-buybox-blue-bg-v1.png",
+      "sha256": "cb9f46fd264563d26d9ff5209f3d6f7a6879230acf298a5975e4040a77dcae60",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-handoff-graphite-campaign-v2.webp",
+      "sha256": "f3da3f4070a2448ca79f919d926554aaf6e1f1efdd277735280cfc45971d6cc6",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-listing-review-banner-v1.webp",
+      "sha256": "5e781046c104818cd6d34c0fd0ca0cbd79a16932fd6edde49f5ae9f1e6070feb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-manual-art.webp",
+      "sha256": "9ce28d7b96add29919f42566a249f12440a91652d32744fae853da175dc5ae51",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-manual-banner-v3.webp",
+      "sha256": "f63c35d76a9ab6093208b36d85c6b894f6886a047bb0090e459443ced248a029",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-manual-banner-v4.webp",
+      "sha256": "6133988792285817c6d782857bd4331bae304e5a3982c4d1bed8e50598ebed1f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-manual-banner-v5.webp",
+      "sha256": "e77be7d997b9cdd5d4bf2dd4ee5772a6b042819dfd68f447a4047662016157e5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/import/import-review-red-campaign-v2.webp",
+      "sha256": "563824f65c3294450bc70ddae09dd1b2f08910cdccf2ec3bd2435bfc2a55d257",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-1.jpg",
+      "sha256": "483acf6e9d15efbe835537ee393dba14d8081701f608fed233a56867859066c0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-10.jpg",
+      "sha256": "58599b4787ed57a096501888a9c57b2e718c83bba2f61897d1fc97fce9b496cb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-11.jpg",
+      "sha256": "3ccac3be51dfbe65ddbfaa77d4416e4debacd1ba75b983fb3840145a1ca40b32",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-12.jpg",
+      "sha256": "82dd13ee4ab7a1ac534119d7030044bf1e604963d1143fdd8b1a63bbf26a52fb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-13.jpg",
+      "sha256": "4e64dcb2d04a4bb69121a54f9258072ead12df1381e5616ba88eca8671b855db",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-14.jpg",
+      "sha256": "39c47f827302434259de57dff9dd57721f980d368f59471e3f61b35073ac96dd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-15.jpg",
+      "sha256": "de317386354d4ecc7b33f6a9745b07770d28588e9ede6dc11b5cbdc90cd5260c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-16.jpg",
+      "sha256": "dacb596fb5e31c89cd566fd90f290b9b6441493ef8ae5284c04cf042053a1f31",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-17.jpg",
+      "sha256": "5b9b54fa1f3ff78d138155ac1548dd92ed1a81f2a606f13eb6cdabf497edaef9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-18.jpg",
+      "sha256": "54e988380f3e1075c900f49d5a9af7becbbd0c7c46243ad69bbb9ca3b20e1ae1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-19.jpg",
+      "sha256": "b080a140aa5d1c25a83fe13a99ac2542106a8925156276ce365b04eec65fc42c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-2.jpg",
+      "sha256": "f2f81de434c010274333fb689c6e017f54a4fb79d8fda162324cbb2d6ed354c4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-20.jpg",
+      "sha256": "06e9799401a8c95810c87ddbaf288687eb08102ab031b93e8f5dd50df16511d9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-21.jpg",
+      "sha256": "210871a1cc50a9a0d729a91f2bd96ee94f79c7c44f6cacaf9cacfa2929a1ba21",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-22.jpg",
+      "sha256": "230ebc8cc4cd1b10200e5679950ed40a289308032c4780254d59a46a100ae12c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-23.jpg",
+      "sha256": "aa0fd43d122ba26dcec7254276a67bc4acae58fcd3f08b05d338777c819a5682",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-24.jpg",
+      "sha256": "c08857e8a49b3b75e0817ef91b5d9c922318ea66aa12382767b956059f96d787",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-25.jpg",
+      "sha256": "d6cdabaf59ba44defd946a95c32f90c04a777804006162128291226537a5c317",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-26.jpg",
+      "sha256": "33f4625c47d90951ade210e3fe9bfe208dea8fa4f51437e7d0780d6e9908e836",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-3.jpg",
+      "sha256": "8d502deb1e06597e07d3abadcefe8b3915d8fa27dc7a10cf63d977d2e62710d3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-4.jpg",
+      "sha256": "8eff1e74059fba3d38dd7834e266520148c33cd431df80ebc0e852ecc7bf9142",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-5.jpg",
+      "sha256": "2ad6efe5e90608981734e1728b591c56763ee5ad5b3b6c4957b813d93bb95e2e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-6.jpg",
+      "sha256": "7a581f63ac6edc6479f8226848dfd4c7f3e3cb4b4db35e468336e8980af3b849",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-7.jpg",
+      "sha256": "8b7d9c78962cf806d422b2691208c2ca4c2e345c4dcf30c494526dafce079ee1",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-8.jpg",
+      "sha256": "10a013260512e0df08ccdaf111d70c8d9bc0f098ee4ce001ad7406b56e3d2dcc",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/inner-page/slide-listing-details-9.jpg",
+      "sha256": "dc684908d7140d8a01d2868becf75687e76d927f0522e8dd65dda244c9b9377f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/audi-q8-side-normalized.webp",
+      "sha256": "bb85d552e585db199a7f7936ec0a8994de461b4f02562c1c70bfac81278f2229",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/bmw-520i.webp",
+      "sha256": "6a4e0a0c691ce2a1ddfe23a84e54a8d0f9cdb5ce76f265bb4ab7a5e9a6645fa4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/bmw-x6-side-normalized.webp",
+      "sha256": "1f62c1a30bc4b43d6632926c2a97a21f9147a40ef4823ff6a9e7339d3a5edfca",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/chrysler-300c.webp",
+      "sha256": "9ce28f460564db119a1afdbaf8d499608f7707d40e309719bf530fe4421ec85b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/mercedes-e220d-side-normalized.webp",
+      "sha256": "c9d02fcc4fefb42cc3cfa610bd3785bcf520dc32597c4630c2db1a67dee4eb4b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/mercedes-e220d.webp",
+      "sha256": "302352dc665edebf04bf147c0025ad9af893ade9cdac3e93fa16436c1638bc0e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/megamenu/vw-touran-side-normalized.webp",
+      "sha256": "14a73fb82822b235810d38e639e37296280b69b44ebb806707571ec374904394",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/menu/showroom-menu-banner-v2.webp",
+      "sha256": "79cb35643a1ce3c77692fec6aafc9f1389aa061f222b6c0adf52efad91afab93",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-1.jpg",
+      "sha256": "47c6bd5603a4ba16c9d1d3d83d040cb1d8f9c79a1cabd8c7e36fb8bc3593acd5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-10.jpg",
+      "sha256": "8b5da11283519224bf8149da5105f5e373bd09e02b1822b75e17c9a3b9b59575",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-2.jpg",
+      "sha256": "d339fd66b6dd65966886b0109a32ff625181b3caf75f6b7373887ae6c2521a22",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-3.jpg",
+      "sha256": "ce53367971cf2ab4978508af23c1efd0af5fddfc93149873a72413f59e1bc082",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-4.jpg",
+      "sha256": "2b65cef49385a5b91e49538e35ed4316b26f24e9a8478fc5e6b5f81215551ec0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-5.jpg",
+      "sha256": "a622fb60f4c37e49acf7561dc7877320d21c8f330a46a7ed0c21b4a3d99dd89e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-6.jpg",
+      "sha256": "a3dcfe9dc60497338f879d0b7f797630070e5119d532cde9279fc9f317aececa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/banner-9.jpg",
+      "sha256": "800840feae01887116766f32d714b316b2e30749218be7b3fffeb987bd593b29",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/page-title-7.png",
+      "sha256": "9fd6a8133427da7967375b27e2b314ebf7e1cb8a9266e343f000b7d15901c534",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/page-title/page-title-8.png",
+      "sha256": "7dd59256db85937b90554c0981e74a1b772841ce1027d2e5c2babd16d93c1865",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/404.jpg",
+      "sha256": "7dd089b99f369e6f386837edc63e66abd0c014368f2e44868beddb63efc90d01",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/about-1.jpg",
+      "sha256": "42fdea6a0021464ffddf778ab9bff74cf4ddbea73a7013e3273b598650759c06",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/about-2.jpg",
+      "sha256": "46af65d7febac5553f3e7a29dc069f7e74d2734f55f4762b3a1a77193fcda83f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-1.png",
+      "sha256": "1291079c46bc0364671875d044d2c1ac8bc732b78d820b0c99b316736953952b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-2.png",
+      "sha256": "64100379fb0e91b719981dc9f8f354c21cde5cd34bb6d71b8fae52a3537f294a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-3.png",
+      "sha256": "d887b17515c1421ba550e2405a67e7704453e153747cbfb27bca7f8819b00e7e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-4.png",
+      "sha256": "fe5ce84cf6f9862e356d4a685c5b6c970031332f5da3cd203557bfd734dc94c0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-5.png",
+      "sha256": "e50f41bb6ed99f55bfd566e762698fa713b2d88037fbdafd71ab386b066628c5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-6.png",
+      "sha256": "b35363e4493c916f6f49362da32e6e850050baf95be383fb622dceb899dc88e9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-7.png",
+      "sha256": "101bba3402df936a7f6ac456c306531afe5488007e197ae9ab4b7125d176cf6b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/car-8.png",
+      "sha256": "61453013aca6e6b00e66475a1894bfb6bd72930110b02c6f8871e425a2a0d28c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/daynight-about-lot-v1.webp",
+      "sha256": "e93cb27b0d7a88e11a9d96538cd4bb63ff09954184887832766d389528ec7bd0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/daynight-about-showroom-suv-v1.webp",
+      "sha256": "e7ca42e782129882963d52acd7aff797df3f74a67b53a37f81bfcc52908e582e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/newletter.jpg",
+      "sha256": "899a3c2123e6268b593a821e1597d297750fda3eca6610268bc2e5914a3c1ad7",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/sale-agent-5.jpg",
+      "sha256": "79e5df74b5037d2ad57b79de3391173d4be32803624fcb866d17007aca6dbcd8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/sale-agent-7.jpg",
+      "sha256": "d8cf8e6ef7068cf0ede36b5f760d0c10644dcdf12e7f84643d0b1182f88ede96",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/sale-agent-9.jpg",
+      "sha256": "573ba85d4506a1456f09fc93c2e371c78820886d48f35f7d68dbc48df4acedb5",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/services-center.png",
+      "sha256": "f01a3fa6e508c5ebb5fd4d95e2f66931cb71e6c0040786c72ba5006aa9ee9c5a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/pages/volvo.png",
+      "sha256": "06cbf12fe77d6dc0ddafcded52dfe2671af9c62f99d542244ef97d8c8dfba6c9",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/kristian-trust-disclosure-list-v1.webp",
+      "sha256": "c49502db4bd44fc4bf22444fc144f2bd587d990e2fd6ba0f2043b302c3453cf8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-card-details-v1.webp",
+      "sha256": "6ac0cb336f98b36fc866744ca2c66716f12c7068376a4feab1f5336ac5699e29",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-card-final-v1.webp",
+      "sha256": "3d2ee17ea420214ef40b2b25f240c9582a1c3ff8a16f29e96d3176a82d9fe99c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-card-offer-v1.webp",
+      "sha256": "0a134d3ba20ad658456789229ed29f8ca7f58f62c77c1bb9fa94e96b5860f6d8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-card-photos-v1.webp",
+      "sha256": "d13da4b5cfc3a9506c6db23348816b72ad9f7690f4ca2893b02a04f469eddd44",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-describe-v1.png",
+      "sha256": "e7586a10aa16c960967fdba90511c33058a4c5d286571ad8eff80f1c12f5e16c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-disclosure-list-v1.webp",
+      "sha256": "da6237caf418b460d00e2311782656058171960b7be4c24eab36a9c700a48e83",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-offer-v1.png",
+      "sha256": "dee8c3a555d0b2a8f7892231379047e0ae3a2594dccadf08cf49a64057e8457f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/process-photos-v1.png",
+      "sha256": "94211f51c83f51e57a284c53347a0250eecdd3ffcdf6c56d195f713041f40dfa",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/sell-manual-art-v1.webp",
+      "sha256": "980921256b162aef96b87947ecef2a82d6fefdf7448fbea45e948c62820f1bfd",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/sell-manual-banner-v2.webp",
+      "sha256": "07940aefa1bc8a3b2b449c6b46dd07f9cb9d7e78f73b16d42396a0d19eeb5b03",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/sell-manual-banner-v3.webp",
+      "sha256": "599519f281b7179d52f84054ed56c1f0d089aef330177b0a8365f307d112286a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/sell-manual-banner-v4.webp",
+      "sha256": "3e9e10f08091bbf4d54862599083f5aafa9f83aeca5fa70ac9e3cdbd776a93a0",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/sell/valuation-trust-v2.webp",
+      "sha256": "6533a8482752fae2f0a404b283ca720a948d26d4fe8b525fa5ac67123e9093f8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-delivery-imagegen-v1.webp",
+      "sha256": "d0685ef1bd92867a7e792d6c2cf8cb035630aa75166ec850f971dc4b73850c84",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-documents-imagegen-v1.webp",
+      "sha256": "fc2b83970523b53da982ce1c65da700642259b0cc466d93816fc725e86d927e8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-financing-imagegen-v1.webp",
+      "sha256": "1509544ebb3ef8311d797c85de0b67a6c2ef4f16e1a0a2093b94e44014f3c539",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-inspection-imagegen-v1.webp",
+      "sha256": "69658c35f06ad1a69050b1c0f9c556bb213996cae4c81db659e83794361916ef",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-sourcing-imagegen-v1.webp",
+      "sha256": "bf30f1ea366085e95fa29886cfbcbd721e4887ae763596e8f36a1fc90c25dd7e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/service-card-trade-in-imagegen-v1.webp",
+      "sha256": "796f38cf33b6e3ef923f961c4935566741e845cb36a97664f7ebb1fccd12d74a",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/services/support-hero-v1.webp",
+      "sha256": "bfb05e55440fea8ec0ea67117e8a91a6a7f24b76fc1b6dd6547e79f0c131a76c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-1.png",
+      "sha256": "142a7b701c3c5d2a360a0700282eea5ccb19860b0d2c53e0494a6ebfc5a6ca7f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-2.png",
+      "sha256": "0b19a861c287e5d08f9e15ef3d64accee19d5db8d0a2eb39d17905580fa34adf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-3.png",
+      "sha256": "23d15c8cf5b32723a526010715566931901c691157dd192eea1f39787ff152ae",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-4.png",
+      "sha256": "30d8c74381dc87d197f25d939a2fba1292a99b4b37db3690c82ef8dbbc6dc003",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-5.png",
+      "sha256": "54e12652f43ac7e5ee45f7a8ab5cf9cb464c1c04447019004dcd580c921913a8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/checkout-6.png",
+      "sha256": "91a8633cf15cd0532c0672498c131899417589a1d5586068c1512715e7cb76bb",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-1.jpg",
+      "sha256": "c10277ca15da6654decbe649ad50044a186cda45dece3ac3916ff5c282cc5710",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-10.jpg",
+      "sha256": "49e95a171f29343041e9357c83f892db8af284038b5f8c3334fc5bf951905ab8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-11.jpg",
+      "sha256": "5142303994be0283eb4a53fe2ca2e55e9422eef758469e4c9fe3415e634946a2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-12.jpg",
+      "sha256": "ecdd4cbcd6b5df59879bc3fd32537195f88f4e743bb34df9c8558503b72a8e5f",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-13.jpg",
+      "sha256": "4441d298ed3616bf6f7781c27a2b6ea8fa6c6ba88ec40178ebc856a826ddef3e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-2.jpg",
+      "sha256": "4ae10006b21f4b97aa1d9e034d67eec0c017513c5f3c785485e8a0451d1dadc4",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-3.jpg",
+      "sha256": "eeacbfca140c516c67527661abb96d30ea22a0aef20b78fc0094ae498f13b5b2",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-4.jpg",
+      "sha256": "692dfba6d7667eb614cde328e0c21781251863ecd16bc56989a0bf89ee9aa1ef",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-5.jpg",
+      "sha256": "d3997e15b8cb4dd6f5ec27225adb1fda0ebbec19cb931d6669f539bd3b67a921",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-6.jpg",
+      "sha256": "9d310dd90cdda6dcab255a125639cf2273f324bb3cf73c9a6c9ecfbf65c172cf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-7.jpg",
+      "sha256": "2c825ddab5b120af035c21edeac10815a28ee868906daf38c149e981dd7aa51b",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-8.jpg",
+      "sha256": "08f92663ab3b2f25cc05817b6b6571362717d479b893beb476e00ba960c0277e",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "assets/images/shop/product-9.jpg",
+      "sha256": "c855029f83fbc5d689021bbacc415ca545609401c0ad621d47cc0cf20f3bf352",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-emblem-transparent.png",
+      "sha256": "03a5e8a5359cb7a3fd82c8ce99376b56259b4c22b8e7c258036250d428d512a3",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-helmet-emblem-v2-cropped.png",
+      "sha256": "ff5b37cb705577bba78b252583b051929abcd1a5ba778e066a155eb7d08c130d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-helmet-outline-dark.png",
+      "sha256": "78f80d5552200fc966c13d54309472ad11eff814338924faba09c2a6e7719bbf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-hero-banner-dealership-v1.webp",
+      "sha256": "297a4eafed5d45f7059be6ce047d625a758793fcabe2a6dd601c6ab9c53d1416",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-hero-mobile-search-composed.webp",
+      "sha256": "508500dc047dc9643c91b52b665a2dafe6260413e44ea97a67a09f11352e8a30",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-hero-search-composed.webp",
+      "sha256": "daee2709176e2fe7e220921e349e8331498ecf59f2a36a9e888dd1e5bd939bd8",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-og-share.png",
+      "sha256": "508540552e5b9deaae07ea91170fe6dee61ff27cd9c7ca7d74882c12702bffdf",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-wordmark-no-lines-dark.png",
+      "sha256": "9a5a75a67b0b254126a11f1a2d6131a292e7e068845ae505d94f3f3d2eec2b3d",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-wordmark-no-lines-light.png",
+      "sha256": "f2e17e655253797d6b33e386ecfe49719cbd584cf62c244a7d66f8723e913591",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "brand/daynight-wordmark.svg",
+      "sha256": "72e22286822679a4c4e418bf0d13db47a77d17cea5121fbbd10dc87cd300d4af",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "icons/apple-touch-icon.png",
+      "sha256": "c2c6d3a53302ff7104fbd60931aa8a82234d3251a7295aa3746352da6f6c268c",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "icons/icon-192.png",
+      "sha256": "80c4a84b0d36b0c220954912a1de28731cc0e5bf439e24a0c40d8ac12ecdff84",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    },
+    {
+      "path": "icons/icon-512.png",
+      "sha256": "42a90c1e99d59e8938cb688790e89b5de24de6322683b9fd683db2dbf40af2a7",
+      "reason": "Superseded template artwork or sample image; reviewed against runtime source and public document dependencies."
+    }
+  ]
+}

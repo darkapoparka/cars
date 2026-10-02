@@ -1,3 +1,4 @@
+import { withRetainedPublicAssets } from './scripts/public-asset-retention.mjs';
 import nodeAdapter from '@sveltejs/adapter-node';
 import vercelAdapter from '@sveltejs/adapter-vercel';
 
@@ -18,7 +19,7 @@ const config = {
 		// Deploy target is Vercel (project: daynight-preview). adapter-vercel emits the
 		// .vercel/output the platform serves, so SSR routes/APIs become serverless
 		// functions. (adapter-node is the swap-in for a self-hosted Node server.)
-		adapter: useNodePreviewAdapter ? nodeAdapter({ out: 'build' }) : vercelAdapter()
+		adapter: withRetainedPublicAssets(useNodePreviewAdapter ? nodeAdapter({ out: 'build' }) : vercelAdapter(), { root: import.meta.dirname })
 	}
 };
 
