@@ -1,10 +1,30 @@
 <script lang="ts">
+	import Gauge from '@lucide/svelte/icons/gauge';
+	import Calendar from '@lucide/svelte/icons/calendar';
+	import Fuel from '@lucide/svelte/icons/fuel';
+	import Palette from '@lucide/svelte/icons/palette';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Armchair from '@lucide/svelte/icons/armchair';
+	import Cog from '@lucide/svelte/icons/cog';
+	import Settings from '@lucide/svelte/icons/settings';
+	import QrCode from '@lucide/svelte/icons/qr-code';
 	import type { AuxeroVehicleDetailOverviewItem } from '$lib/server/vehicle-detail';
 	import { vehicleInformationCopy } from '$lib/content/vehicle-information';
 	import VehicleInformationSection from './VehicleInformationSection.svelte';
 	let { items, english = false }: { items: AuxeroVehicleDetailOverviewItem[]; english?: boolean } =
 		$props();
 	const copy = $derived(vehicleInformationCopy[english ? 'en' : 'bg']);
+	const icons = {
+		'icon-gauge.svg': Gauge,
+		'calendar.svg': Calendar,
+		'gaspump.svg': Fuel,
+		'palette.svg': Palette,
+		'MapPin.svg': MapPin,
+		'Seatbelt.svg': Armchair,
+		'Frame.svg': Cog,
+		'transmission-2.svg': Settings,
+		'QrCode.svg': QrCode
+	};
 	const primaryIcons = new Set([
 		'icon-gauge.svg',
 		'calendar.svg',
@@ -34,8 +54,11 @@
 			<VehicleInformationSection title={group.title}>
 				<dl>
 					{#each group.items as item (item.label)}
+						{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
 						<div class:vehicle-facts__row--reference={item.icon === 'QrCode.svg'}>
-							<dt>{item.label}</dt>
+							<dt>
+								<Icon size={18} strokeWidth={1.6} aria-hidden="true" /><span>{item.label}</span>
+							</dt>
 							<dd>{item.value || '—'}</dd>
 						</div>
 					{/each}
@@ -55,7 +78,7 @@
 	}
 	dl {
 		display: grid;
-		gap: var(--bc-space-2);
+		gap: var(--bc-space-4);
 		margin: 0;
 	}
 	dl > div {
@@ -67,8 +90,14 @@
 		line-height: var(--bc-leading-h7);
 	}
 	dt {
-		color: var(--bc-muted);
-		font-size: var(--bc-text-meta);
+		display: flex;
+		align-items: center;
+		gap: var(--bc-space-2);
+		color: var(--bc-copy);
+		font-size: var(--bc-text-label);
+	}
+	dt :global(svg) {
+		flex-shrink: 0;
 	}
 	dd {
 		margin: 0;
