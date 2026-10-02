@@ -1,0 +1,54 @@
+{
+	"cards": [
+		{
+			"cardHeight": 186.1875,
+			"context": "Избор на автомобил",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Подбрани коли"
+		},
+		{
+			"cardHeight": 186.1875,
+			"context": "Преди покупка",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Проверка на обява"
+		},
+		{
+			"cardHeight": 162,
+			"context": "Твоят автомобил",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Продажба на кола"
+		},
+		{
+			"cardHeight": 162,
+			"context": "След покупка",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Регистрация"
+		},
+		{
+			"cardHeight": 186.1875,
+			"context": "На място",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Огледи с уговорка"
+		},
+		{
+			"cardHeight": 186.1875,
+			"context": "Преди решение",
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Сравнение на модели"
+		}
+	],
+	"overflow": false,
+	"viewport": 320
+}

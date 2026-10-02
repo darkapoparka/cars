@@ -1,0 +1,60 @@
+{
+	"cards": [
+		{
+			"bodyWidth": 203,
+			"cardHeight": 164,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Подбрани коли"
+		},
+		{
+			"bodyWidth": 203,
+			"cardHeight": 164,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Проверка на обява"
+		},
+		{
+			"bodyWidth": 203,
+			"cardHeight": 162,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 32,
+			"title": "Продажба на кола"
+		},
+		{
+			"bodyWidth": 203,
+			"cardHeight": 162,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 32,
+			"title": "Регистрация"
+		},
+		{
+			"bodyWidth": 203,
+			"cardHeight": 164,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Огледи с уговорка"
+		},
+		{
+			"bodyWidth": 203,
+			"cardHeight": 164,
+			"cardWidth": 292,
+			"headingLines": 1,
+			"imageWidth": 87,
+			"summaryToButton": 8,
+			"title": "Сравнение на модели"
+		}
+	],
+	"overflow": false,
+	"viewport": 320
+}

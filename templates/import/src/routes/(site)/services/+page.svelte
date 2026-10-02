@@ -18,6 +18,7 @@
 				service.title,
 				service.description,
 				detail.summary,
+				detail.mobileContext,
 				detail.mobileTitle,
 				detail.mobileSummary,
 				...detail.includes

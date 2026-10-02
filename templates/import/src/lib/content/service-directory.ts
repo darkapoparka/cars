@@ -6,6 +6,7 @@ export type ServiceDetail = {
 	href: string;
 	action: string;
 	summary: string;
+	mobileContext: string;
 	mobileTitle?: string;
 	mobileSummary: string;
 	includes: string[];
@@ -51,6 +52,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		details: {
 			sourcing: {
 				summary: 'Подбор според твоя бюджет, изисквания и планове.',
+				mobileContext: 'Избор на автомобил',
 				mobileTitle: 'Подбрани коли',
 				mobileSummary: 'По бюджет и изисквания.',
 				href: '/inventory',
@@ -59,6 +61,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			'listing-check': {
 				summary: 'История, състояние и разходи — преди да решиш.',
+				mobileContext: 'Преди покупка',
 				mobileSummary: 'VIN, история и състояние.',
 				href: '/import',
 				action: 'Провери автомобил за внос',
@@ -66,6 +69,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			selling: {
 				summary: 'От оценката до правилния път за продажба.',
+				mobileContext: 'Твоят автомобил',
 				mobileTitle: 'Продажба на кола',
 				mobileSummary: 'Оценка и съдействие.',
 				href: '/sell-your-car',
@@ -77,6 +81,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			registration: {
 				summary: 'Съдействие с документите, регистрацията и предаването.',
+				mobileContext: 'След покупка',
 				mobileTitle: 'Регистрация',
 				mobileSummary: 'Документи и предаване.',
 				href: '/contact?topic=registration#contact-details',
@@ -88,6 +93,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			viewing: {
 				summary: 'Автомобил и консултант, подготвени за твоята среща.',
+				mobileContext: 'На място',
 				mobileSummary: 'С предварителна уговорка.',
 				href: '/contact#contact-details',
 				action: 'Виж контакти и адрес',
@@ -98,6 +104,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			comparison: {
 				summary: 'Цена, пробег и оборудване. Ясен избор между моделите.',
+				mobileContext: 'Преди решение',
 				mobileSummary: 'Цена, пробег и оборудване.',
 				href: '/compare',
 				action: 'Сравни автомобили',
@@ -124,6 +131,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		details: {
 			sourcing: {
 				summary: 'A shortlist shaped around your budget and plans.',
+				mobileContext: 'Find your car',
 				mobileSummary: 'Chosen for your budget.',
 				href: '/inventory',
 				action: 'Browse available cars',
@@ -134,6 +142,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			'listing-check': {
 				summary: 'History, condition and costs — before you decide.',
+				mobileContext: 'Before buying',
 				mobileSummary: 'VIN, history and condition.',
 				href: '/import',
 				action: 'Check a car for import',
@@ -141,6 +150,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			selling: {
 				summary: 'From the valuation to the right way to sell.',
+				mobileContext: 'Your car',
 				mobileSummary: 'Valuation and sales support.',
 				href: '/sell-your-car',
 				action: 'Explore selling options',
@@ -151,6 +161,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			registration: {
 				summary: 'Help with the paperwork, registration and handover.',
+				mobileContext: 'After buying',
 				mobileTitle: 'Registration',
 				mobileSummary: 'Paperwork and handover.',
 				href: '/contact?topic=registration#contact-details',
@@ -162,6 +173,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			viewing: {
 				summary: 'Your car and consultant, ready for your appointment.',
+				mobileContext: 'Visit us',
 				mobileTitle: 'Book a viewing',
 				mobileSummary: 'Arrange a viewing time.',
 				href: '/contact#contact-details',
@@ -173,6 +185,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 			},
 			comparison: {
 				summary: 'Price, mileage and equipment. Make an informed choice.',
+				mobileContext: 'Before you decide',
 				mobileSummary: 'Price, mileage, equipment.',
 				href: '/compare',
 				action: 'Compare cars',
