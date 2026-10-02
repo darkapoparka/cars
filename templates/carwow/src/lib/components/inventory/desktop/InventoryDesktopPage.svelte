@@ -109,7 +109,7 @@
 	}
 	.inventory-hero-controls {
 		display: grid;
-		gap: 16px;
+		gap: 12px;
 	}
 
 	.inventory-hero-controls__search {

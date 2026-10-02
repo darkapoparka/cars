@@ -282,9 +282,7 @@
 			aria-labelledby={`hero-intent-${activeIntent}`}
 		>
 			{#if activeIntent === 'buy'}
-				<label class="hero-intent__label hero-intent__label--search" for="hero-buy-query"
-					>{i18n.t('copy.d028fe65890c')}</label
-				>
+				<label class="sr-only" for="hero-buy-query">{i18n.t('copy.d028fe65890c')}</label>
 				<div class="hero-intent__row hero-intent__row--search">
 					<input
 						{@attach i18n.validation}
@@ -610,23 +608,24 @@
 		width: 100%;
 	}
 	.hero-intent__tabs {
-		display: flex;
-		justify-content: center;
-		gap: 24px;
-		border-bottom: 1px solid var(--discovery-control-border);
-		margin: 0 0 16px;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 4px;
+		width: min(100%, 360px);
+		padding: 4px;
+		border-radius: 10px;
+		background: var(--discovery-muted-surface);
+		margin: 0 auto 16px;
 	}
 	.hero-intent__tabs button {
 		background: transparent;
 		border: 0;
-		border-bottom: 3px solid transparent;
-		border-radius: 6px 6px 0 0;
+		border-radius: 6px;
 		color: var(--discovery-muted);
 		cursor: pointer;
 		font: var(--sa-weight-semibold) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
 		min-height: 44px;
-		margin-bottom: -1px;
 		padding: 0 16px;
 	}
 	.hero-intent__tabs button:hover {
@@ -638,14 +637,14 @@
 		opacity: 0.6;
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
-		border-bottom-color: var(--discovery-action);
-		color: var(--discovery-ink);
+		background: var(--discovery-action);
+		color: #fff;
 	}
 	.hero-intent__tabs button[aria-selected='true']:hover {
-		background: var(--discovery-muted-surface);
+		background: var(--discovery-action-hover);
 	}
 	.hero-intent__panel {
-		min-height: 140px;
+		min-height: 112px;
 	}
 	.hero-intent__label {
 		color: var(--sa-ink);
@@ -737,7 +736,7 @@
 		width: var(--discovery-search-action-size);
 		height: var(--discovery-search-action-size);
 		padding: 0;
-		border-radius: 50%;
+		border-radius: var(--discovery-control-radius);
 	}
 	@media (pointer: coarse) {
 		.hero-intent__tabs button {
@@ -746,15 +745,15 @@
 	}
 	.hero-intent__quick-fields {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 8px;
-		margin-top: 16px;
+		margin-top: 12px;
 	}
 	.hero-intent__filter {
 		align-items: center;
 		background: var(--discovery-filter-background);
 		border: 1px solid var(--discovery-filter-border);
-		border-radius: var(--discovery-pill-radius);
+		border-radius: var(--discovery-control-radius);
 		color: var(--discovery-filter-foreground);
 		cursor: pointer;
 		display: flex;

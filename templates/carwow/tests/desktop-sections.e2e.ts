@@ -18,8 +18,20 @@ for (const width of [992, 1280, 1440, 1920]) {
 			expect(tabs.width).toBeLessThan(panel.width * 0.75);
 			expect(Math.abs((tabs.left + tabs.right) / 2 - panel.x - panel.width / 2)).toBeLessThan(1);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
-				'border-bottom-color',
+				'background-color',
 				'rgb(23, 27, 30)'
+			);
+			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
+				'color',
+				'rgb(255, 255, 255)'
+			);
+			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
+				'border-bottom-width',
+				'0px'
+			);
+			await expect(page.locator('label[for="hero-buy-query"]')).toHaveCSS('width', '1px');
+			await expect(page.locator('#hero-buy-query')).toHaveAccessibleName(
+				locale === 'en' ? 'What car are you looking for?' : 'Какъв автомобил търсиш?'
 			);
 			await expect(page.locator('.hero-intent__row--search')).toHaveCSS(
 				'background-color',
@@ -108,17 +120,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 						)
 						.toBe(true);
 					const pills = page.locator('.blog-category-switch a, .blog-quick-topics a');
-					await expect
-						.poll(() =>
-							pills
-								.first()
-								.evaluate(
-									(pill) =>
-										parseFloat(getComputedStyle(pill).borderRadius) >=
-										pill.getBoundingClientRect().height / 2
-								)
-						)
-						.toBe(true);
+					await expect(pills.first()).toHaveCSS('border-radius', '8px');
 					await expect(pills.first()).toHaveCSS('background-color', 'rgb(23, 27, 30)');
 				}
 				if (width === 1440 && locale === 'en')
@@ -180,7 +182,9 @@ test('desktop blog pills preserve search and category filters, Back and reset', 
 	await expect(page).toHaveURL(
 		(url) => !url.searchParams.has('q') && url.searchParams.get('tag') === selectedTag
 	);
-	await page.locator('.blog-clear-filters').click();
+	const reset = page.locator('.blog-clear-filters');
+	await expect(reset).toHaveAttribute('href', '/en/blog');
+	await reset.click();
 	await expect(page).toHaveURL(/\/en\/blog$/);
 	await expect(page.locator('[data-daynight-article-card]')).toHaveCount(initialCount);
 });

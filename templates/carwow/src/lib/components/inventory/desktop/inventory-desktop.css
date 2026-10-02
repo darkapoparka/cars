@@ -3418,7 +3418,7 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	height: var(--discovery-search-action-size) !important;
 	padding: 0 !important;
 	background: var(--discovery-action) !important;
-	border-radius: 50% !important;
+	border-radius: var(--discovery-control-radius) !important;
 	color: #fff !important;
 	font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
 		var(--sa-font) !important;

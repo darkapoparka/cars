@@ -11,8 +11,7 @@
 	--sa-red-strong: #b70022;
 	--discovery-search-height: 54px;
 	--discovery-search-action-size: 44px;
-	--discovery-search-radius: 999px;
-	--discovery-pill-radius: 999px;
+	--discovery-search-radius: 12px;
 	--discovery-control-border: #d9dde1;
 	--discovery-border-hover: #9ca3af;
 	--discovery-canvas: #f4f6fa;
@@ -51,7 +50,7 @@ body.daynight-home-page
 	width: auto !important;
 	padding: 0 12px !important;
 	border: 1px solid var(--discovery-control-border) !important;
-	border-radius: var(--discovery-pill-radius) !important;
+	border-radius: var(--discovery-control-radius) !important;
 	background: var(--discovery-panel) !important;
 	background-image: none !important;
 	color: var(--discovery-ink) !important;

@@ -78,7 +78,7 @@
 <style>
 	.inventory-filter-triggers {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 8px;
 		background: transparent;
 		border-radius: 12px;
@@ -94,7 +94,7 @@
 		max-width: 208px;
 		padding: 0 14px;
 		border: 1px solid var(--discovery-filter-border);
-		border-radius: var(--discovery-pill-radius);
+		border-radius: var(--discovery-control-radius);
 		color: var(--discovery-filter-foreground);
 		background: var(--discovery-filter-background);
 		font: var(--sa-weight-medium) var(--sa-text-body-sm) / var(--sa-button-line-height)
