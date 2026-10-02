@@ -231,11 +231,11 @@
   "sourceHashes": [
     {
       "file": "templates/boxcar-updated/src/pages/About.svelte",
-      "sha256": "f2b35a896a67474d8d31835c5a81b9b76032116b4eca83facd821fb05167bb03"
+      "sha256": "875f4e695f659602204b44e30c450a35f48d29af7737e215a74c295e4e9f50c7"
     },
     {
       "file": "templates/boxcar-updated/src/pages/Contact.svelte",
-      "sha256": "0c6b924420a75076381b28b69e36298975e7d7bf50fc3b276ce58e6dee7e4bad"
+      "sha256": "01c18ffad910dfcc78bde5697890df588c36f960d2722efa055b8b039fa5f227"
     },
     {
       "file": "templates/boxcar-updated/src/pages/Content.svelte",
@@ -267,13 +267,21 @@
     },
     {
       "file": "templates/boxcar-updated/src/inner-pages.css",
-      "sha256": "441856d5b9cf2b1690a7790be6d08b5d962ba2a3de35b604d29cd94e1b725b44"
+      "sha256": "6ea289dbcc87000c83029d69cc32f7cf9ddb1cefe51cb6edeb5e7de3a752b9b7"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/SocialLinks.svelte",
+      "sha256": "694b41704f00f4b4b42d1579b752376b6654688e201456b2a820954323292838"
+    },
+    {
+      "file": "templates/boxcar-updated/src/data/brand.ts",
+      "sha256": "e9d3ca2875b4be290840326551123f83a3c9ddcafca1862754c552f161a6b430"
     }
   ],
   "screenshots": [
     {
       "file": "docs/boxcar-updated/about-desktop.png",
-      "sha256": "840a85ad35a1a14184389e2d78a08a8c6eaba5ac8172fff3c2ba1dff7651b618"
+      "sha256": "ea0d010de71bdf3a193a7e9188e1b0486f93531d60497a4ddcee7812509f2c44"
     },
     {
       "file": "docs/boxcar-updated/contact-desktop.png",
@@ -302,6 +310,14 @@
     {
       "file": "docs/boxcar-updated/about-intro.png",
       "sha256": "aa2fee4d7cfc9362de8fdb943c10dc00f72abc62953260215c5b3957b80b37a9"
+    },
+    {
+      "file": "docs/boxcar-updated/about-benefits.png",
+      "sha256": "8472e73f4c294c698589df802389bbfe0bb92eb43ccca191fccf15588c4f3eab"
+    },
+    {
+      "file": "docs/boxcar-updated/about-benefits-320.png",
+      "sha256": "2b5c16fb2f365dcc4f5c149ed183a07e522eea35ed5090ab631829fd5775873c"
     }
   ],
   "provenance": "templates/boxcar-updated/.template/inner-pages.json",
@@ -585,6 +601,290 @@
           "About FAQ and contact action at 320"
         ],
         "errors": []
+      }
+    }
+  },
+  "benefitAndContactRefinement": {
+    "recordedAt": "2026-10-02T12:53:04.459Z",
+    "scope": "Centered two-row benefits and optional dealer map/contact/social configuration; prior broader checks retain their timestamps.",
+    "checks": {
+      "svelte": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "productionBuild": {
+        "status": "passed",
+        "modules": 158
+      }
+    },
+    "engines": {
+      "chromium": {
+        "checkedAt": "2026-10-02T12:49:40.901Z",
+        "engine": "chromium",
+        "layouts": [
+          {
+            "label": "About benefits",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 1024,
+            "documentWidth": 1024,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 768,
+            "documentWidth": 768,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              3,
+              3,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "label": "Default contact",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Default contact",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Default contact",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": []
+          }
+        ],
+        "journeys": [
+          "Default contact hides unconfigured dealer links and previews locally at 1440",
+          "Default contact hides unconfigured dealer links and previews locally at 390",
+          "Default contact hides unconfigured dealer links and previews locally at 320",
+          "Configured map frame, directions, phone/email and five social links at 1440",
+          "Configured map frame, directions, phone/email and five social links at 390",
+          "Configured map frame, directions, phone/email and five social links at 320"
+        ],
+        "errors": [],
+        "posts": [],
+        "mapVerification": "Configured branch uses an isolated local frame and browser-only dealer fixture. No real dealer address/profile or third-party map availability was verified."
+      },
+      "webkit": {
+        "checkedAt": "2026-10-02T12:49:55.477Z",
+        "engine": "webkit",
+        "layouts": [
+          {
+            "label": "About benefits",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 1024,
+            "documentWidth": 1024,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 768,
+            "documentWidth": 768,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              3,
+              3,
+              2,
+              3
+            ]
+          },
+          {
+            "label": "About benefits",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": [],
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              3,
+              3,
+              3,
+              3
+            ]
+          },
+          {
+            "label": "Default contact",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Default contact",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Default contact",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 1440,
+            "documentWidth": 1440,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 390,
+            "documentWidth": 390,
+            "brokenImages": [],
+            "clippedControls": []
+          },
+          {
+            "label": "Configured contact fixture",
+            "width": 320,
+            "documentWidth": 320,
+            "brokenImages": [],
+            "clippedControls": []
+          }
+        ],
+        "journeys": [
+          "Default contact hides unconfigured dealer links and previews locally at 1440",
+          "Default contact hides unconfigured dealer links and previews locally at 390",
+          "Default contact hides unconfigured dealer links and previews locally at 320",
+          "Configured map frame, directions, phone/email and five social links at 1440",
+          "Configured map frame, directions, phone/email and five social links at 390",
+          "Configured map frame, directions, phone/email and five social links at 320"
+        ],
+        "errors": [],
+        "posts": [],
+        "mapVerification": "Configured branch uses an isolated local frame and browser-only dealer fixture. No real dealer address/profile or third-party map availability was verified."
       }
     }
   }

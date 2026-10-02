@@ -4,6 +4,13 @@ Candidate: `L:/CODEX/cars/templates/boxcar-updated` on Cars `main`, Node 22.23.2
 
 ## About, Contact and Cars correction
 
+The latest benefit/contact refinement puts the four benefits in two centered rows on desktop and tablet, with aligned descriptions and two lines per description at 1440 px. Phones retain one readable column. Contact now supports a verified dealer map and directions above the form, plus phone/email actions and labelled social links using the source brand-icon font. Unconfigured map, phone and social entries are hidden in the generic candidate; the About CTA remains the short route to Contact.
+
+Svelte/TypeScript passes with zero errors and warnings; the production build passes with 158 modules. Eleven focused layouts and six contact journeys pass per engine in Chrome and Playwright WebKit: benefits at 1440, 1024, 768, 390 and 320 px, and default/configured Contact at 1440, 390 and 320 px. The configured branch uses an isolated browser-only dealer fixture and local iframe response, verifying dimensions, directions and contact destinations, source icon loading and social link labels. It does not establish a real dealer location/profile or third-party map availability. Required fields and truthful local enquiry previews still pass; no browser errors or message requests were recorded.
+
+- [Two-row desktop benefits](about-benefits.png), [phone benefits](about-benefits-320.png)
+- [Dated focused results](inner-results.json) include this run separately from the earlier checks below.
+
 About and Contact now adapt the original [About HTML page](https://creativelayers.net/themes/boxcar-html/about.html) and [Contact HTML page](https://creativelayers.net/themes/boxcar-html/contact.html). About uses the five-image gallery, original blue/pink illustrated benefits, one centered page title with a short introduction, browsing/contact actions and native FAQ details. Contact uses the source's outlined form boxes and bordered contact column, with a showroom photo replacing the unrelated source map. All three routes share the existing header and the source DM Sans face. Scoped styles preserve the ten captured homepages. Dealer copy replaces lorem ipsum and invented statistics/reviews; forms remain truthful local previews.
 
 Cars retains its sidebar and three-column desktop stock grid, with cleaner labels, source specification glyphs, actual grid/list SVGs and 20 px detail arrows. A rendered journey caught stale card return URLs when the same vehicle remained mounted after a query/view change. Card destinations now derive from the current route, preserving the filtered list view after a detail visit.

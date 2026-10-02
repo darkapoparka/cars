@@ -79,8 +79,8 @@
     }
   ],
   "composition": {
-    "about": "One centered page title and a short dealer introduction above the original five-image galler-section and illustrated choose-us blocks. Dealer copy and browsing/contact actions replace source lorem ipsum, invented statistics, staff and reviews.",
-    "contact": "Adapted original title, form_boxes and bordered contact-column. Showroom photograph replaces unrelated demo map; required inputs and local enquiry preview retained.",
+    "about": "One centered page title above the original five-image galler-section. The four source illustrations form a centered two-column/two-row benefit grid on desktop/tablet, with balanced short descriptions; phones use one column. Dealer copy and browsing/contact actions replace source lorem ipsum, invented statistics, staff and reviews.",
+    "contact": "Adapted original title, form_boxes and bordered contact-column. Verified brand.showroomMap configuration supplies the iframe and directions; the generic candidate retains the showroom photograph. Verified phone/email and socialLinks configure contact actions and the original local brand-icon font. Empty map/phone/social fields stay hidden. Required inputs and truthful local enquiry preview retained.",
     "inventory": "Working Svelte sidebar and grid with source DM Sans, card typography and flaticon specification glyphs, aligned detail arrows, SVG grid/list controls and live query/view return URLs."
   },
   "evidence": "docs/boxcar-updated/inner-results.json",

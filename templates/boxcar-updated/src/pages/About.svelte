@@ -5,22 +5,22 @@
     [
       "choice",
       "Find your fit",
-      "Explore different makes, body styles and budgets to find the car that suits your everyday life.",
+      "Explore makes, body styles and budgets to find a car that fits your everyday life.",
     ],
     [
       "pricing",
       "See the details",
-      "Bring the price, mileage and specifications together before you make your shortlist.",
+      "Compare prices, mileage and specifications before you make your shortlist.",
     ],
     [
       "finance",
       "Plan your budget",
-      "Explore monthly payment estimates with our simple repayment calculator.",
+      "Estimate your monthly payments with our simple repayment calculator.",
     ],
     [
       "care",
       "Take the next step",
-      "Ask about your chosen car and arrange a closer look with the dealership.",
+      "Ask about your chosen car and arrange a closer look at the showroom.",
     ],
   ];
   const questions = [
