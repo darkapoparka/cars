@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { ArrowDownUp } from 'lucide-react';
+import { ArrowDownUp, SlidersHorizontal } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -75,13 +75,19 @@ const s = stylex.create({
     flexShrink: 0,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
+    borderColor: 'transparent',
     borderRadius: 24,
-    backgroundColor: colors.background,
+    backgroundColor: colors.controlSurface,
     color: colors.text,
     fontSize: 14,
     fontWeight: 500,
     whiteSpace: 'nowrap',
+  },
+  filterTrigger: {
+    borderRadius: 12,
+    backgroundColor: colors.text,
+    borderColor: colors.text,
+    color: colors.background,
   },
   filterCount: {
     display: 'inline-flex',
@@ -91,16 +97,16 @@ const s = stylex.create({
     minHeight: 20,
     paddingInline: 4,
     borderRadius: 20,
-    backgroundColor: colors.purple,
-    color: colors.background,
+    backgroundColor: '#db3000',
+    color: '#fff',
     fontSize: 12,
     fontWeight: 700,
     lineHeight: '20px',
   },
   selectedPill: {
-    backgroundColor: colors.assistant,
-    borderColor: colors.purpleLine,
-    color: colors.purple,
+    backgroundColor: colors.activeSurface,
+    borderColor: colors.accent,
+    color: colors.accent,
   },
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
   content: { backgroundColor: colors.stripe, paddingInline: 16, paddingBottom: 24 },
@@ -328,9 +334,9 @@ export function ShowroomInventoryScreen() {
             aria-describedby={activeFilterCount > 0 ? 'showroom-filter-count' : undefined}
             aria-haspopup="dialog"
             onClick={(event) => openSheet('all', event.currentTarget)}
-            {...stylex.props(s.pill, activeFilterCount > 0 && s.selectedPill)}
+            {...stylex.props(s.pill, s.filterTrigger)}
           >
-            <Icon name="filter" size={18} />
+            <SlidersHorizontal size={18} strokeWidth={2} aria-hidden="true" />
             Filters
             {activeFilterCount > 0 && (
               <>

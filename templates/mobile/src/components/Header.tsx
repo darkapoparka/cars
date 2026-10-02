@@ -2,6 +2,7 @@
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { IconButton } from './ui';
@@ -33,9 +34,20 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
   },
   backTitle: { paddingInline: 8 },
-  logo: { width: 124, height: 28, objectFit: 'contain' },
-  home: { paddingLeft: 16, paddingRight: 0 },
+  logo: { width: 176, height: 52, objectFit: 'contain', objectPosition: 'left center' },
+  home: { paddingLeft: 16, paddingRight: 8, backgroundColor: '#fff', color: '#1b1b21' },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
+  savedAction: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    color: 'inherit',
+    textDecoration: 'none',
+  },
+  savedActive: { color: '#db3000' },
   logoLink: {
     display: 'flex',
     alignItems: 'center',
@@ -54,7 +66,7 @@ const s = stylex.create({
     width: 16,
     height: 16,
     borderRadius: 20,
-    backgroundColor: colors.accent,
+    backgroundColor: '#db3000',
     color: '#fff',
     fontSize: 11,
     textAlign: 'center',
@@ -100,8 +112,9 @@ export function Header({
             <Image
               src={showroom.logo}
               alt={showroom.name}
-              width={124}
-              height={28}
+              width={176}
+              height={52}
+              sizes="176px"
               priority
               {...stylex.props(s.logo)}
             />
@@ -115,12 +128,19 @@ export function Header({
       {home ? (
         <div {...stylex.props(s.actions)}>
           <span {...stylex.props(s.relative)}>
-            <IconButton
+            <Link
               href="/car-park"
-              icon="heart"
-              label={'Saved cars' + (parked.length ? ', ' + parked.length + ' saved' : '')}
-              filled={parked.length > 0}
-            />
+              aria-label={'Saved cars' + (parked.length ? ', ' + parked.length + ' saved' : '')}
+              {...stylex.props(s.savedAction, parked.length > 0 && s.savedActive)}
+            >
+              <Heart
+                size={22}
+                strokeWidth={2}
+                fill={parked.length > 0 ? 'currentColor' : 'none'}
+                aria-hidden="true"
+                focusable="false"
+              />
+            </Link>
             {parked.length > 0 && (
               <span aria-hidden="true" {...stylex.props(s.badge)}>
                 {parked.length}

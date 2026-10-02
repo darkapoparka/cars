@@ -2,15 +2,15 @@
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { CarFront, Handshake, Phone, type LucideIcon } from 'lucide-react';
+import { Car, MessageCircle, Wrench, type LucideIcon } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 const tabs: [string, string, LucideIcon][] = [
-  ['/', 'Cars', CarFront],
-  ['/services', 'Services', Handshake],
-  ['/contact', 'Contact', Phone],
+  ['/', 'Cars', Car],
+  ['/services', 'Services', Wrench],
+  ['/contact', 'Contact', MessageCircle],
 ];
 const s = stylex.create({
   root: {
@@ -35,7 +35,9 @@ const s = stylex.create({
     gridTemplateColumns: 'repeat(3,1fr)',
     backgroundColor: colors.background,
     zIndex: 40,
-    boxShadow: '0 -3px 12px #00000004',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.stripe,
   },
   tab: {
     display: 'flex',
@@ -50,7 +52,15 @@ const s = stylex.create({
     fontWeight: 500,
     minWidth: 0,
   },
-  tabIcon: { display: 'flex' },
+  tabIcon: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 52,
+    height: 28,
+    borderRadius: 14,
+  },
+  activeIcon: { backgroundColor: colors.activeSurface },
   active: { color: colors.accent, fontWeight: 700 },
   toast: {
     position: 'fixed',
@@ -109,8 +119,8 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <span {...stylex.props(s.tabIcon)}>
-                <NavIcon size={24} strokeWidth={1.8} aria-hidden="true" focusable="false" />
+              <span {...stylex.props(s.tabIcon, pathname === href && s.activeIcon)}>
+                <NavIcon size={22} strokeWidth={2} aria-hidden="true" focusable="false" />
               </span>
               <span>{label}</span>
             </Link>

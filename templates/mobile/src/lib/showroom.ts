@@ -14,7 +14,7 @@ type ShowroomConfig = {
 // A neutral template placeholder. Add verified dealer details when personalizing.
 export const showroom: ShowroomConfig = {
   name: 'Your showroom',
-  logo: null,
+  logo: '/branding/showroom-placeholder-20261002.png',
   phone: null,
   email: null,
   address: null,
