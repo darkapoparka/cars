@@ -108,7 +108,7 @@
           </a>
         </div>{/if}{/key}
   </main>
-  {#if !design && !curated}<Footer home={0} />{/if}
+  {#if !design}<Footer />{/if}
   {#if selections.compare.length && !comparison}<aside
       class="compare-tray"
       aria-label="Selected cars"

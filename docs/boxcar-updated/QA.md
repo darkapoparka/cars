@@ -2,6 +2,18 @@
 
 Candidate: `L:/CODEX/cars/templates/boxcar-updated` on Cars `main`, Node 22.23.2. Local preview: [127.0.0.1:6455](http://127.0.0.1:6455/). The default `/` now opens the curated dealer homepage. The ten original HTML homes remain at `/home-1/` through `/home-10/`.
 
+## Home, inventory and shared footer refinement
+
+The current home goes directly from its hero/search to stock. The separate four car-type and five brand tiles were removed. One shared footer now serves the curated home and every supporting dealer page, with solid brand blue, rounded upper corners, the light source logo and stock/contact links. Inventory has a centered title, a white sidebar with lightly tinted fields, native dropdowns with chevrons inset 16 px, a grouped sort control and a segmented grid/list switch. Phone filters retain their collapsible panel.
+
+Svelte/TypeScript has zero errors and warnings, all eight domain/asset tests pass and the production build passes with 159 modules. Chrome and Playwright WebKit each pass 20 focused layouts across Home, Cars, About and Contact at 1440, 1024, 768, 390 and 320 px. Checks cover footer contrast/links/logo, shared layout, document bounds, centered inventory title and direct hero-to-stock composition. Two inventory journeys per engine verify native make/model selection, filtering, real price sort order, grid/list selection and detail/Back context. The twelve curated journeys and 42 shared-header states per engine also passed again, with the removed browse-tile journey replaced by footer stock links. All ten original homepage component hashes remain intact; no browser or local asset errors were recorded.
+
+- [Home stock flow](home-stock-flow.png), [rounded blue footer](dealer-footer.png), [phone footer](dealer-footer-320.png)
+- [Cars desktop](cars-desktop.png), [Cars at 320 px](cars-320.png)
+- [Dated refinement checks and current source hashes](dealer-polish-results.json)
+
+Earlier receipts below keep their original timestamps. This revision is local template polish; no dealer release or deployment was launched.
+
 ## About, Contact and Cars correction
 
 The latest correction restores four benefits in one desktop row. The requested two rows refer to the description text: concise copy and balanced wrapping keep every description to two natural lines, without clipping. Tablets retain two columns and phones one column. Six focused widths (1440, 1280, 1024, 768, 390 and 320 px) pass in Chrome and Playwright WebKit, checking columns, text lines, alignment, page bounds and image loading. Svelte/TypeScript passes with zero errors and warnings; the production build passes with 158 modules.
@@ -26,7 +38,7 @@ The subsequent About introduction correction removes the extra headline and spli
 
 These are adapted dealer compositions, not a pixel-parity claim for every original inner page. Local checks do not establish owner acceptance or dealer release/deployment.
 
-## Current curated homepage
+## Earlier curated homepage composition and checks
 
 The selected composition uses **Home 10's rounded photo hero, header and photographic body choices, Home 5's white pill search and pastel service cards, Home 8's centered brands, boxed vehicle cards, journal and footer, and Home 2's photographic CTA banner**. The desktop/tablet search is centered horizontally and vertically in the photograph with the hero title directly above; phone fields remain in normal flow. The header has centered Home / Cars / About / Contact navigation, Saved and a solid contact action. Four centered service cards adapt the original buy/sell card DOM and SVGs, with browsing, selling, comparison and calculator actions. The former testimonial-shaped buying steps are replaced by the source photo banner with a centered heading and viewing action. Brands and body choices have visible source-style tile borders. Latest stock shows eight compact cards in two rows of four on desktop, with one centered solid blue View all cars button and no carousel controls.
 

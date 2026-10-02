@@ -1,7 +1,6 @@
 <svelte:options preserveWhitespace={true} />
 <script lang="ts">
 import {referencePage} from './interactions';
-import {brand} from '../data/brand';
 import {vehicles} from '../lib/catalog';
 import {articles} from '../data/journal';
 import CuratedStock from './CuratedStock.svelte';
@@ -87,138 +86,6 @@ import CuratedStock from './CuratedStock.svelte';
             
         </div>  
         
-    </section>
-<section class="vehicles-section-two curated-types">
-        <div class="boxcar-container">
-            <div class="boxcar-title text-center">
-                <h2>A Car For Every Lifestyle</h2>
-            </div>
-            <div class="row">
-                
-                <div class="Vehicle-block col-sm-6 col-lg-3 col-md-3">
-                    <a class="inner-box" href="/inventory/?body=Sedan" aria-label="Browse Sedan cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/vehicles2-1.png" alt="" width="200" height="150"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Sedan</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="Vehicle-block col-sm-6 col-lg-3 col-md-3">
-                    <a class="inner-box" href="/inventory/?body=Coupe" aria-label="Browse Coupe cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/vehicles2-2.png" alt="" width="200" height="150"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Coupe</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="Vehicle-block col-sm-6 col-lg-3 col-md-3">
-                    <a class="inner-box" href="/inventory/?body=SUV" aria-label="Browse SUV cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/vehicles2-3.png" alt="" width="200" height="150"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">SUV</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                
-                
-                <div class="Vehicle-block col-sm-6 col-lg-3 col-md-3">
-                    <a class="inner-box" href="/inventory/?body=Hatchback" aria-label="Browse Hatchback cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/vehicles2-5.png" alt="" width="200" height="150"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Hatchback</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                
-            </div>
-        </div>
-    </section>
-<section class="boxcar-brand-section-five pt-0 curated-brands">
-        <div class="boxcar-container">
-            <div class="boxcar-title">
-                <h2 class="wow fadeInUp">Explore Our Brands</h2>
-                
-            </div>
-            <div class="right-box">
-                
-                <div class="cars-block-five">
-                    <a class="inner-box" href="/inventory/?make=Audi" aria-label="Browse Audi cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/brand5-1.png" alt="Audi" loading="lazy"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Audi</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="cars-block-five">
-                    <a class="inner-box" href="/inventory/?make=BMW" aria-label="Browse BMW cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/brand5-2.png" alt="BMW" loading="lazy"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">BMW</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                
-                
-                <div class="cars-block-five">
-                    <a class="inner-box" href="/inventory/?make=Mercedes-Benz" aria-label="Browse Mercedes-Benz cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/brand5-4.png" alt="Mercedes-Benz" loading="lazy"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Mercedes-Benz</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                
-                
-                
-                
-                <div class="cars-block-five">
-                    <a class="inner-box" href="/inventory/?make=Bentley" aria-label="Browse Bentley cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/brand5-7.png" alt="Bentley" loading="lazy"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Bentley</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="cars-block-five">
-                    <a class="inner-box" href="/inventory/?make=Nissan" aria-label="Browse Nissan cars">
-                        <div class="image-box">
-                            <figure class="image"><img src="/media/resource/brand5-8.png" alt="Nissan" loading="lazy"></figure>
-                        </div>
-                        <div class="content-box">
-                            <h6 class="title">Nissan</h6>
-                        </div>
-                    </a>
-                </div>
-                
-                
-                
-                
-            </div>
-        </div>
     </section>
 <section class="cars-section-ten v8 curated-stock" aria-labelledby="curated-stock-title"><div class="large-container"><div class="right-box"><div class="curated-stock-layout"><div class="boxcar-title text-center"><h2 id="curated-stock-title">Explore Our Latest Cars</h2><p class="curated-stock-note">{vehicles.length} sample vehicles to explore</p></div><CuratedStock /><div class="curated-stock-more"><a class="read-more" href="/inventory/"><span>View all cars</span></a></div></div></div></div></section>
 <section class="blog-section-two pt-0 curated-services" aria-labelledby="curated-services-title">
@@ -352,21 +219,5 @@ import CuratedStock from './CuratedStock.svelte';
                 </div>{/each}</div>
         </div>
     </section>
-<footer class="boxcar-footer footer-style-two v8">
-        <div class="widgets-section">
-            <div class="boxcar-container">
-                <div class="row">
-  <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><a class="curated-footer-logo" href="/" aria-label="{brand.name} home"><img src="{brand.logoDark}" alt="{brand.name}" width="108" height="28"></a><div class="widget-content"><p class="text">{brand.tagline}</p><p class="text">{brand.location}</p></div></div></div>
-  <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title">Find a car</h4><ul class="user-links style-two"><li><a href="/inventory/">Browse all cars</a></li><li><a href="/inventory/?condition=New">New cars</a></li><li><a href="/inventory/?condition=Used">Used cars</a></li><li><a href="/favorites/">Saved cars</a></li><li><a href="/compare/">Compare cars</a></li></ul></div></div>
-  <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title">Explore</h4><ul class="user-links style-two"><li><a href="/about/">About us</a></li><li><a href="/blog/">Buying advice</a></li><li><a href="/calculator/">Repayment calculator</a></li><li><a href="/faq/">Frequently asked questions</a></li></ul></div></div>
-  <div class="footer-column col-lg-3 col-md-6 col-sm-12"><div class="footer-widget links-widget"><h4 class="widget-title">Visit the showroom</h4><div class="widget-content"><p class="text">{brand.hours}</p><ul class="user-links style-two"><li><a href="/contact/">Get in touch</a></li><li><a href="/contact/?intent=viewing">Arrange a viewing</a></li></ul></div></div></div></div>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="boxcar-container">
-                <div class="inner-container"><div class="copyright-text">© 2026 {brand.name}. All rights reserved.</div><ul class="footer-nav"><li><a href="/terms/">Terms &amp; privacy</a></li></ul></div>
-            </div>
-        </div>
-    </footer>
+
 </div>

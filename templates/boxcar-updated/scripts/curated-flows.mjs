@@ -67,7 +67,7 @@ try {
     for (const width of [1440, 1024, 768, 390, 320]) {
       await home(width);
       // Exercise lazy sections as a visitor scrolls, after the page is already ready.
-      for (const section of [".curated-brands", ".curated-journal"]) {
+      for (const section of [".curated-stock", ".curated-journal"]) {
         await page.locator(section).scrollIntoViewIfNeeded();
         await page.waitForFunction(
           (selector) =>
@@ -116,7 +116,7 @@ try {
             client: el.clientWidth,
             text: el.textContent,
           })),
-          footer: Array.from(root.querySelectorAll("footer .text")).map(
+          footer: Array.from(document.querySelectorAll(".dealer-footer p")).map(
             (el) => ({
               text: el.textContent,
               color: getComputedStyle(el).color,
@@ -163,10 +163,10 @@ try {
           `${width}px broken badge: ${badge.text}`,
         );
       for (const line of state.footer)
-        assert.notEqual(
+        assert.equal(
           line.color,
           "rgb(255, 255, 255)",
-          `${width}px invisible footer text`,
+          `${width}px blue footer text must be white`,
         );
       for (const distance of state.headings)
         assert.ok(distance <= 2, `${width}px heading is not centered`);
@@ -710,19 +710,26 @@ try {
     },
   );
   await step(
-    "Photographic lifestyle choices open matching inventory",
+    "Home shows stock directly after the hero and footer links filter inventory",
     async () => {
       for (const width of [1440, 320]) {
-        for (const body of ["Sedan", "Coupe", "SUV", "Hatchback"]) {
+        for (const condition of ["New", "Used"]) {
           await home(width);
-          const choice = page.locator(".curated-types").getByRole("link", {
-            name: `Browse ${body} cars`,
+          assert.equal(
+            await page.locator(".curated-types, .curated-brands").count(),
+            0,
+          );
+          assert.equal(
+            await page.locator(".curated-banner + .curated-stock").count(),
+            1,
+          );
+          const choice = page.locator(".dealer-footer").getByRole("link", {
+            name: `${condition} cars`,
             exact: true,
           });
-          assert.equal(await choice.locator("img").count(), 1);
           await choice.click();
-          await page.waitForURL(`**/inventory/?body=${body}`);
-          const matches = catalog.filter((v) => v.body === body);
+          await page.waitForURL(`**/inventory/?condition=${condition}`);
+          const matches = catalog.filter((v) => v.condition === condition);
           await assertStock(matches.slice(0, 9));
           if (matches.length > 9) {
             await page

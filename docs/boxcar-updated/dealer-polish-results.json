@@ -1,0 +1,533 @@
+{
+  "recordedAt": "2026-10-02T14:01:34.124Z",
+  "preview": "http://127.0.0.1:6455/",
+  "scope": "Hero directly to stock; shared rounded blue dealer footer; centered inventory title, native inset dropdown arrows, grouped sort and view controls.",
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "domainAndAssets": {
+      "passed": 8
+    },
+    "productionBuild": {
+      "status": "passed",
+      "modules": 159
+    }
+  },
+  "engines": {
+    "chromium": {
+      "focused": {
+        "checkedAt": "2026-10-02T13:54:46.476Z",
+        "layouts": [
+          {
+            "route": "/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/about/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/contact/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/about/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/contact/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          }
+        ],
+        "footerStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)",
+          "leftRadius": "32px",
+          "rightRadius": "32px",
+          "columns": 4
+        },
+        "journeys": [
+          "1440px native filters, model reset, sort order, view and detail Back context",
+          "320px native filters, model reset, sort order, view and detail Back context"
+        ],
+        "errors": []
+      },
+      "curated": {
+        "checkedAt": "2026-10-02T13:53:03.183Z",
+        "journeys": [
+          "Original ten homepage sources remain intact",
+          "Curated layout at 1440, 1024, 768, 390 and 320px",
+          "Long selected filters stay within their rows at 390 and 320px",
+          "Search conditions, make/model resets, price and inventory URLs",
+          "Keyboard dropdowns, Escape and outside dismissal",
+          "Stock tabs, grid, saved state and detail/Back context",
+          "Search is centered in the hero below its headline, with visible dropdowns",
+          "Home shows stock directly after the hero and footer links filter inventory",
+          "Aligned button icons and four source service cards at desktop, tablet and phone widths",
+          "Service cards and showroom CTA open their intended destinations",
+          "Mobile dealer navigation and inner routes",
+          "One consistent dealer header across direct loads and navigation"
+        ],
+        "layoutWidths": [
+          1440,
+          1024,
+          768,
+          390,
+          320
+        ],
+        "sharedHeaderStates": 42,
+        "errors": []
+      }
+    },
+    "webkit": {
+      "focused": {
+        "checkedAt": "2026-10-02T13:56:49.707Z",
+        "layouts": [
+          {
+            "route": "/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 1440,
+            "documentWidth": 1440,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 1024,
+            "documentWidth": 1024,
+            "titleCenter": 0,
+            "footerColumns": 4,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/about/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/contact/",
+            "width": 768,
+            "documentWidth": 768,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "32px"
+          },
+          {
+            "route": "/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/about/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/contact/",
+            "width": 390,
+            "documentWidth": 390,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/inventory/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/about/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          },
+          {
+            "route": "/contact/",
+            "width": 320,
+            "documentWidth": 320,
+            "titleCenter": 0,
+            "footerColumns": 2,
+            "footerCornerRadius": "24px"
+          }
+        ],
+        "footerStyle": {
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)",
+          "leftRadius": "32px",
+          "rightRadius": "32px",
+          "columns": 4
+        },
+        "journeys": [
+          "1440px native filters, model reset, sort order, view and detail Back context",
+          "320px native filters, model reset, sort order, view and detail Back context"
+        ],
+        "errors": []
+      },
+      "curated": {
+        "checkedAt": "2026-10-02T13:57:40.708Z",
+        "journeys": [
+          "Original ten homepage sources remain intact",
+          "Curated layout at 1440, 1024, 768, 390 and 320px",
+          "Long selected filters stay within their rows at 390 and 320px",
+          "Search conditions, make/model resets, price and inventory URLs",
+          "Keyboard dropdowns, Escape and outside dismissal",
+          "Stock tabs, grid, saved state and detail/Back context",
+          "Search is centered in the hero below its headline, with visible dropdowns",
+          "Home shows stock directly after the hero and footer links filter inventory",
+          "Aligned button icons and four source service cards at desktop, tablet and phone widths",
+          "Service cards and showroom CTA open their intended destinations",
+          "Mobile dealer navigation and inner routes",
+          "One consistent dealer header across direct loads and navigation"
+        ],
+        "layoutWidths": [
+          1440,
+          1024,
+          768,
+          390,
+          320
+        ],
+        "sharedHeaderStates": 42,
+        "errors": []
+      }
+    }
+  },
+  "preservedSources": [
+    {
+      "home": 1,
+      "sha256": "5b070605fdce19ac8930d74c6f1860b444f097723a31eba483f61d9e91890194"
+    },
+    {
+      "home": 2,
+      "sha256": "c77416ab4e2475367ea5351eab482f43bfd44e97dc5f2a575c117757ca067bfa"
+    },
+    {
+      "home": 3,
+      "sha256": "7235569ce9c12b39e8867f1e3d11f8d6bad6e80f38ac1103fb2032f7f65fdaa6"
+    },
+    {
+      "home": 4,
+      "sha256": "be42f2be9565e18fb346b21dd4ed27e2799ffa86688ea7f0047977896fd0f205"
+    },
+    {
+      "home": 5,
+      "sha256": "6f9ff5a14e41deb8973db7216d3b9d4b39952ff474ba496d75d2192b33f2b76d"
+    },
+    {
+      "home": 6,
+      "sha256": "5f85c59950d3d9732df6b562aa3f143c6288c6a3ee22441faa893dc38767cba4"
+    },
+    {
+      "home": 7,
+      "sha256": "1f333c2b6e2a4ea6aad059900fc0d1abe32839a2f42c7e57c8a08537298da177"
+    },
+    {
+      "home": 8,
+      "sha256": "20e147f7aed1f9fb2a76b38fc9f314376714ad006017a2ca74b88886997fddf8"
+    },
+    {
+      "home": 9,
+      "sha256": "e8f23c16414a41f02482e74df7a48cf0376d1758e13ab957ed2e08dfbcaf2617"
+    },
+    {
+      "home": 10,
+      "sha256": "201830867dbc8fecb92e302dee5bc561ba59cddbdd39db67bd9b588db2a8ea6a"
+    }
+  ],
+  "sourceHashes": [
+    {
+      "file": "templates/boxcar-updated/src/App.svelte",
+      "sha256": "945f73a881a97a81e9f959c4ef1f76533eb6aef7e920a5a43df8e753404971ad"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/Footer.svelte",
+      "sha256": "506339a5ec257e9ad57455553e253fdfa77658e45df91d70079d19f8600b8bf3"
+    },
+    {
+      "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
+      "sha256": "682b9d5e084a2fb9b8e4881f8758eb825c2eb5f61da17d2c88b9f2ecbe29f31b"
+    },
+    {
+      "file": "templates/boxcar-updated/src/pages/Inventory.svelte",
+      "sha256": "04a63bbde460c2c7f2c32600420b70abf6aee51e39d934fb872e169795f43260"
+    },
+    {
+      "file": "templates/boxcar-updated/src/inner-pages.css",
+      "sha256": "cfc559df3fe14144248b222e9175ccfdff59048ec9d04c3750cd1efeab9a4a92"
+    },
+    {
+      "file": "templates/boxcar-updated/public/reference/curated.css",
+      "sha256": "8b03b530603c06f8667feb5dfa72689ceba43a8f5bab1f4dfaf0052d9f901b67"
+    },
+    {
+      "file": "templates/boxcar-updated/scripts/curated-flows.mjs",
+      "sha256": "917789e2d88ef002eeb6dff7b379bb903dbaeede8f4a4eb2ab63edc344146652"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/Header.svelte",
+      "sha256": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5"
+    },
+    {
+      "file": "templates/boxcar-updated/src/data/brand.ts",
+      "sha256": "e9d3ca2875b4be290840326551123f83a3c9ddcafca1862754c552f161a6b430"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/boxcar-updated/home-stock-flow.png",
+      "sha256": "9d92d571415a358532f904634ef8f67a4ba1b8ccf9e8bdca9c88027774799fe6"
+    },
+    {
+      "file": "docs/boxcar-updated/dealer-footer.png",
+      "sha256": "67ff44cf6f768eea1b61b0e33384a8159551d96ceca99e6fafb04440a13657eb"
+    },
+    {
+      "file": "docs/boxcar-updated/dealer-footer-320.png",
+      "sha256": "16413574f6a6e94d627120f7e66068a749c2f66e75a9499e11998ae8223ffaeb"
+    },
+    {
+      "file": "docs/boxcar-updated/cars-desktop.png",
+      "sha256": "9e7936105f1f93c4c4638a0f33f11aeba8c86a4aa628e950487b0d9b2accf864"
+    },
+    {
+      "file": "docs/boxcar-updated/cars-320.png",
+      "sha256": "84c7d11193678916c3db81a83316337ce8e90639efa833a8c1a051c0d0eac411"
+    }
+  ],
+  "boundaries": "Local template correction. Earlier receipts retain their timestamps. No dealer release, fleet propagation, deployment or whole-site original-template pixel-parity claim."
+}

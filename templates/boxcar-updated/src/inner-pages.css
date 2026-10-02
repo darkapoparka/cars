@@ -500,58 +500,77 @@
   margin-top: 20px;
 }
 .bc-inner.inventory-page .page-heading {
-  margin: 0 0 36px;
-  align-items: flex-start;
+  display: block;
+  margin: 0 0 44px;
+  text-align: center;
 }
 .bc-inner.inventory-page .page-heading h1 {
   margin: 0;
-  font-size: 36px;
+  font-size: 40px;
 }
 .bc-inner.inventory-page .page-heading p {
-  margin: 14px 0 0;
-}
-.bc-inner.inventory-page .page-heading .sample-note {
-  font-size: 12px;
-  line-height: 20px;
-  white-space: nowrap;
-  margin-top: 10px;
+  max-width: 620px;
+  margin: 14px auto 0;
+  text-wrap: balance;
 }
 .bc-inner .inventory-layout {
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 32px;
 }
 .bc-inner .inventory-filters {
-  background: #f9fbfc;
+  background: #fff;
+  border-color: #e1e5ed;
 }
 .bc-inner .inventory-filters > summary {
   background: transparent;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  padding: 20px;
+  padding: 18px 24px;
 }
 .bc-inner .inventory-filters form {
-  padding: 20px;
+  padding: 24px;
 }
 .bc-inner .inventory-filters form h2 {
   font-size: 18px;
-  margin: 0 0 18px;
+  margin: 0 0 24px;
 }
 .bc-inner .inventory-filters label {
   font-size: 13px;
-  margin-bottom: 14px;
-  color: #424a5b;
+  margin-bottom: 18px;
+  color: #667085;
   font-weight: 400;
 }
 .bc-inner .inventory-filters input,
 .bc-inner .inventory-filters select {
   margin-top: 6px;
   font-size: 15px;
-  padding: 11px 13px;
-  min-height: 48px;
-  border-radius: 12px;
+  padding: 12px 16px;
+  min-height: 50px;
+  border-radius: 10px;
+  border-color: #e1e5ed;
+  background-color: #f9fbfc;
+  color: #050b20;
 }
-.bc-inner .inventory-filters select {
-  padding-right: 28px;
+.bc-inner .inventory-filters select,
+.bc-inner .sort-label select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 44px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23050b20' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right 16px center;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+}
+.bc-inner .inventory-filters :is(input, select):focus-visible,
+.bc-inner .sort-label select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.bc-inner .inventory-filters > summary > svg:last-child {
+  transition: transform 0.2s;
+}
+.bc-inner .inventory-filters[open] > summary > svg:last-child {
+  transform: rotate(180deg);
 }
 .bc-inner .inventory-filters .button {
   margin-top: 6px;
@@ -571,23 +590,47 @@
 .bc-inner .results-toolbar p {
   font-size: 14px;
 }
+.bc-inner .inventory-note {
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #667085;
+  margin-top: 2px;
+}
 .bc-inner .results-toolbar > div {
   gap: 14px;
 }
 .bc-inner .sort-label {
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
   font-size: 14px;
-  gap: 10px;
+  gap: 0;
+  border: 1px solid #e1e5ed;
+  border-radius: 12px;
+  padding-left: 16px;
+  min-height: 48px;
+  background: #fff;
+}
+.bc-inner .sort-label > span {
+  color: #667085;
+  flex: none;
 }
 .bc-inner .sort-label select {
-  border: 1px solid #e1e1e1;
-  padding: 10px 28px 10px 12px;
+  border: 0;
+  padding: 10px 44px 10px 12px;
   border-radius: 12px;
-  width: 185px;
+  width: 190px;
+  background-color: transparent;
   min-height: 46px;
   font-size: 14px;
 }
 .bc-inner .view-toggle {
-  gap: 6px;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #e1e5ed;
+  border-radius: 12px;
+  background: #f9fbfc;
 }
 .bc-inner .view-toggle button {
   display: flex;
@@ -595,7 +638,15 @@
   justify-content: center;
   width: 44px;
   min-height: 44px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 0;
+  color: #667085;
+  background: transparent;
+}
+.bc-inner .view-toggle button.active {
+  color: var(--accent);
+  background: #fff;
+  box-shadow: 0 1px 4px #050b2014;
 }
 .bc-inner .inventory-grid {
   gap: 24px;
@@ -896,10 +947,10 @@
   .bc-inner .sort-label {
     flex: 1;
     min-width: 0;
-    gap: 8px;
+    gap: 0;
   }
   .bc-inner .sort-label select {
-    width: 185px;
+    width: 190px;
     max-width: 100%;
   }
   .bc-inner .inventory-grid {
@@ -970,14 +1021,26 @@
     line-height: 28px;
   }
   .bc-inner .sort-label {
-    display: block;
+    display: flex;
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
   .bc-inner .sort-label select {
-    width: 100%;
-    margin-top: 6px;
+    width: auto;
+    margin-top: 0;
   }
   .bc-inner .results-toolbar > div {
-    align-items: flex-end;
+    display: contents;
+  }
+  .bc-inner .results-toolbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+  }
+  .bc-inner .view-toggle {
+    grid-column: 2;
+    grid-row: 1;
   }
   .bc-inner .view-toggle {
     margin-bottom: 1px;

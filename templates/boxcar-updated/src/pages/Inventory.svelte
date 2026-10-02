@@ -76,10 +76,9 @@
         <p>
           {savedOnly
             ? "Your favourites, ready for a closer look."
-            : "Find your fit. Explore the cars, save your favourites and compare the details."}
+            : "Find your next car. Save your favourites and compare the details."}
         </p>
       </div>
-      <span class="sample-note">Sample inventory</span>
     </div>
     <div class="inventory-layout">
       <details class="inventory-filters" bind:open={filterOpen}>
@@ -188,10 +187,11 @@
             {results.length
               ? `Showing ${(page - 1) * 9 + 1}–${Math.min(page * 9, results.length)} of ${number(results.length)} cars`
               : "No matching cars"}
+            <span class="inventory-note">Sample inventory</span>
           </p>
           <div>
             <label class="sort-label">
-              Sort by
+              <span>Sort by</span>
               <select
                 aria-label="Sort by"
                 value={filters.sort}
