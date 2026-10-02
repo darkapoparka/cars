@@ -28,6 +28,8 @@ src/lib/styles/app.css is the only Tailwind generation entry. It includes shared
 
 Use Action for buttons/links, Modal for desktop dialogs, and the retained MobileSheet/mobile navigation primitives for touch overlays. Keep control roles compact; typography, radii and spacing changes must be reviewed visually rather than expanded globally. Do not remove legitimate layout-specific dimensions merely to obtain a zero-literal metric.
 
+About adopts the desktop editorial tokens without changing the other routes. Its team, process and location sections share one content width and neutral canvas. `TeamMemberCard` and `ContactLocation` expose an opt-in `desktopFramed` treatment for inset media and restrained card framing. `DesktopProcess` shares those surface tokens and uses compact neutral step markers. `DesktopDiscoveryPanel` accepts inherited surface, radius and padding variables with its original values as defaults; About uses them for its compact hero actions. The section headings use the body font, while `PageIntro` retains the common hero typography and anchor. All new visual rules are desktop-only; the mobile About composition and assets retain their existing owners.
+
 ## Deliberately retained legacy area
 
 Legacy account/agent and alternate-preview routes still use the Auxero compatibility modules. LegacyLayoutAssets isolates their CSS from the public route group. They are not dead files merely because the new storefront no longer imports them. Do not delete the renderer, .template-ref, licenses, or their assets until those last route consumers are migrated or explicitly retired with compatibility redirects. Native route dependencies are checked transitively by npm run check:architecture.

@@ -5,8 +5,11 @@
 	import { daynightContact } from '$lib/config/dealer';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import Action from '$lib/components/common/Action.svelte';
-	let { english = false, layout = 'split' }: { english?: boolean; layout?: 'split' | 'stacked' } =
-		$props();
+	let {
+		english = false,
+		layout = 'split',
+		desktopFramed = false
+	}: { english?: boolean; layout?: 'split' | 'stacked'; desktopFramed?: boolean } = $props();
 	const desktop = new MediaQuery('(min-width: 768px)', false);
 	const copy = $derived(dealerCopy[english ? 'en' : 'bg']);
 </script>
@@ -14,6 +17,7 @@
 <section
 	class="contact-location"
 	class:contact-location--stacked={layout === 'stacked'}
+	class:contact-location--desktop-framed={desktopFramed}
 	aria-label={english ? 'Our location' : 'Нашият адрес'}
 >
 	<div class="contact-location__info">
@@ -21,10 +25,20 @@
 		<p class="contact-location__address">{copy.address}</p>
 		<p class="contact-location__appointment">{copy.appointment}</p>
 		<div class="contact-location__actions">
-			<Action href={site.contact.mapHref} target="_blank" rel="noreferrer">
+			<Action
+				href={site.contact.mapHref}
+				variant={desktopFramed ? 'secondary' : 'primary'}
+				size={desktopFramed ? 'compact' : 'standard'}
+				target="_blank"
+				rel="noreferrer"
+			>
 				{english ? 'Get directions' : 'Как да стигнеш'}<ArrowUpRight size={18} aria-hidden="true" />
 			</Action>
-			<Action href={site.contact.phoneHref} variant="secondary">{site.contact.phone}</Action>
+			<Action
+				href={site.contact.phoneHref}
+				variant="secondary"
+				size={desktopFramed ? 'compact' : 'standard'}>{site.contact.phone}</Action
+			>
 		</div>
 	</div>
 	{#if desktop.current}
@@ -98,6 +112,34 @@
 	@media (max-width: 1023px) {
 		.contact-location__info {
 			padding: var(--bc-space-6);
+		}
+	}
+	@media (min-width: 768px) {
+		.contact-location--desktop-framed {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-2);
+			border-color: var(--bc-desktop-editorial-border);
+			border-radius: var(--bc-desktop-editorial-radius);
+			box-shadow: var(--bc-desktop-editorial-shadow);
+		}
+		.contact-location--desktop-framed .contact-location__info {
+			padding: var(--bc-space-6);
+		}
+		.contact-location--desktop-framed h2 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-editorial-title);
+		}
+		.contact-location--desktop-framed iframe {
+			border-radius: var(--bc-desktop-editorial-photo-radius);
+		}
+		.contact-location--desktop-framed .contact-location__appointment {
+			color: var(--bc-desktop-editorial-muted);
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1023px) {
+		.contact-location--desktop-framed {
+			grid-template-columns: minmax(0, 1fr);
 		}
 	}
 </style>

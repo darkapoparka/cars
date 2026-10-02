@@ -29,6 +29,8 @@ Desktop vehicle cards keep a single 18px title line with an ellipsis and the ful
 
 Desktop intro headings share `PageIntro` and start 32px below their frame's top edge. Heading width and scale, 16px spacing between heading/caption/actions, and 24px end padding belong to desktop hero tokens. The grid flows from that anchor; the height of route-specific controls does not vertically recenter the heading. Image hero frames retain their common responsive minimum height and grow when content needs room. Text-only intros share the same centered type and anchor. `mobileAlign` and the independent mobile hero compositions retain their existing behavior.
 
+About's desktop editorial treatment uses 28px body-font section headings, 20px team names, 18px process titles and 16px supporting copy. Its location actions use the existing compact 18px role and 44px targets. Hero headings retain the shared `PageIntro` contract. These roles are scoped to desktop; mobile typography is unchanged.
+
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.

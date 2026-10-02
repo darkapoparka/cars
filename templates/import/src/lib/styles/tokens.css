@@ -329,6 +329,18 @@
 		--bc-desktop-card-price: 26px;
 		--bc-desktop-team-width: 1056px;
 		--bc-desktop-team-image-height: 220px;
+		/* Calm editorial surfaces, adopted independently by desktop page compositions. */
+		--bc-desktop-editorial-width: 1120px;
+		--bc-desktop-editorial-action-width: 560px;
+		--bc-desktop-editorial-canvas: #f6f6f7;
+		--bc-desktop-editorial-border: #e5e5e7;
+		--bc-desktop-editorial-muted: #66676b;
+		--bc-desktop-editorial-hover: #eeeef0;
+		--bc-desktop-editorial-radius: var(--bc-radius-modal);
+		--bc-desktop-editorial-photo-radius: var(--bc-radius-panel);
+		--bc-desktop-editorial-portrait-height: 200px;
+		--bc-desktop-editorial-title: 1.75rem;
+		--bc-desktop-editorial-shadow: 0 1px 2px rgb(23 25 28 / 0.04), 0 8px 24px rgb(23 25 28 / 0.025);
 	}
 }
 

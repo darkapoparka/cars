@@ -4,10 +4,12 @@
 	import SocialLinks from './SocialLinks.svelte';
 	let {
 		person,
-		mobileCompact = false
+		mobileCompact = false,
+		desktopFramed = false
 	}: {
 		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials'>;
 		mobileCompact?: boolean;
+		desktopFramed?: boolean;
 	} = $props();
 	const socials = $derived(
 		person.socials
@@ -16,7 +18,11 @@
 	);
 </script>
 
-<article class="team-card" class:team-card--mobile-compact={mobileCompact}>
+<article
+	class="team-card"
+	class:team-card--mobile-compact={mobileCompact}
+	class:team-card--desktop-framed={desktopFramed}
+>
 	<img
 		class="team-card__portrait"
 		src={assetHref(person.image)}
@@ -111,6 +117,24 @@
 			transition:
 				opacity var(--bc-motion-standard),
 				transform var(--bc-motion-standard);
+		}
+		.team-card--desktop-framed {
+			padding: var(--bc-space-2);
+			border-color: var(--bc-desktop-editorial-border);
+			border-radius: var(--bc-desktop-editorial-radius);
+			box-shadow: var(--bc-desktop-editorial-shadow);
+		}
+		.team-card--desktop-framed .team-card__portrait {
+			border-radius: var(--bc-desktop-editorial-photo-radius);
+		}
+		.team-card--desktop-framed .team-card__body {
+			padding: var(--bc-space-4) var(--bc-space-3);
+		}
+		.team-card--desktop-framed .team-card__socials {
+			top: calc(
+				var(--bc-desktop-team-image-height) + var(--bc-space-2) - var(--bc-control-height-primary) -
+					var(--bc-space-3)
+			);
 		}
 	}
 	@media (min-width: 768px) and (hover: hover) and (pointer: fine) {

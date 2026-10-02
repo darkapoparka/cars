@@ -88,6 +88,7 @@
 			{#each about.consultants as person (person.slug)}<TeamMemberCard
 					{person}
 					mobileCompact
+					desktopFramed
 				/>{/each}
 		</div>
 	</section>
@@ -100,7 +101,7 @@
 		</section>
 	</div>
 	<section class="site-section site-container site-desktop-only">
-		<ContactLocation {english} />
+		<ContactLocation {english} desktopFramed />
 	</section>
 	<section class="site-section site-container about-contact site-mobile-only">
 		<ContactBanner
@@ -152,13 +153,31 @@
 		}
 	}
 	@media (min-width: 768px) {
-		#about-team {
-			padding-top: var(--bc-space-6);
+		main {
+			--bc-border: var(--bc-desktop-editorial-border);
+			--bc-copy: var(--bc-desktop-editorial-muted);
+			--bc-surface: var(--bc-desktop-editorial-canvas);
+			--bc-control: var(--bc-desktop-editorial-canvas);
+			--bc-surface-hover: var(--bc-desktop-editorial-hover);
+			--bc-desktop-action-panel-width: var(--bc-desktop-editorial-action-width);
+			--bc-desktop-team-image-height: var(--bc-desktop-editorial-portrait-height);
+			--desktop-discovery-padding: var(--bc-space-3);
+			--desktop-discovery-radius: var(--bc-desktop-editorial-radius);
+			--desktop-discovery-shadow: var(--bc-desktop-editorial-shadow);
+			background: var(--bc-desktop-editorial-canvas);
+		}
+		.site-section {
+			width: min(calc(100% - var(--bc-space-8) * 2), var(--bc-desktop-editorial-width));
+			padding-block: var(--bc-space-8);
+		}
+		.about-heading :global(.site-heading) {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-editorial-title);
+			line-height: var(--bc-leading-h4);
 		}
 		.about-team {
 			width: 100%;
-			max-width: var(--bc-desktop-team-width);
-			margin-inline: auto;
+			gap: var(--bc-space-4);
 		}
 	}
 </style>

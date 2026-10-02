@@ -19,15 +19,16 @@
 		width: 100%;
 		max-width: var(--bc-desktop-discovery-width);
 		margin-inline: auto;
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-section);
+		border: 1px solid var(--desktop-discovery-border, var(--bc-border));
+		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section));
 		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
 		text-align: start;
-		box-shadow: var(--bc-shadow-panel);
+		box-shadow: var(--desktop-discovery-shadow, var(--bc-shadow-panel));
 	}
 	.desktop-discovery-panel__header {
-		border-radius: var(--bc-radius-section) var(--bc-radius-section) 0 0;
+		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section))
+			var(--desktop-discovery-radius, var(--bc-radius-section)) 0 0;
 		background: var(--bc-control);
 	}
 	.desktop-discovery-panel__header :global(.mobile-mode-tabs--attached) {
@@ -54,7 +55,7 @@
 		gap: var(--bc-space-4);
 		min-width: 0;
 		min-height: var(--bc-desktop-discovery-panel-height);
-		padding: var(--bc-space-5);
+		padding: var(--desktop-discovery-padding, var(--bc-space-5));
 		border-radius: inherit;
 	}
 	.desktop-discovery-panel__body.has-header {

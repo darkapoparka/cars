@@ -53,6 +53,36 @@
 		font-size: var(--bc-text-body);
 		line-height: var(--bc-leading-body);
 	}
+	@media (min-width: 768px) {
+		.desktop-process {
+			gap: var(--bc-space-4);
+		}
+		li {
+			padding: var(--bc-space-5);
+			border-color: var(--bc-desktop-editorial-border);
+			border-radius: var(--bc-desktop-editorial-radius);
+			box-shadow: var(--bc-desktop-editorial-shadow);
+		}
+		.desktop-process__number {
+			display: grid;
+			place-items: center;
+			width: var(--bc-space-8);
+			height: var(--bc-space-8);
+			margin-bottom: var(--bc-space-2);
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-desktop-editorial-canvas);
+			color: var(--bc-desktop-editorial-muted);
+			font-size: var(--bc-text-body);
+			font-weight: var(--bc-weight-body);
+		}
+		h3 {
+			font-size: var(--bc-text-control);
+		}
+		p {
+			color: var(--bc-desktop-editorial-muted);
+			line-height: var(--bc-leading-body-lg);
+		}
+	}
 	@media (max-width: 1023px) {
 		.desktop-process {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
