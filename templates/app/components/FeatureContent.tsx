@@ -5,7 +5,7 @@ import {useState} from 'react';
 import Link from '@/components/AppLink';
 import Image from '@/components/AppImage';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowRight, Check, ChevronDown, Mail, MapPin, Phone} from 'lucide-react';
+import {ArrowRight, BadgePercent, Check, ChevronDown, FileText, Mail, MapPin, Phone} from 'lucide-react';
 import BrandCampaign from '@/components/BrandCampaign';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import {dealer} from '@/lib/dealer-config';
@@ -31,12 +31,12 @@ const steps = {
     ['happy-driving', 'Service record', 'Keep your workshop documents.'],
   ],
   finance: [
-    ['item1', 'Choose a car', 'Browse the available cars.'],
-    ['item2', 'Documents', 'Ask which documents you need.'],
-    ['item3', 'Finance terms', 'Discuss the deposit, term and rate.'],
+    ['item1', 'Choose your car', 'Browse the available cars.'],
+    ['item2', 'Prepare your documents', 'Ask which documents you need.'],
+    ['item3', 'Discuss the terms', 'Discuss the deposit, term and rate.'],
     ['item4', 'Compare offers', 'Check the payment and total cost.'],
     ['item5', 'Lender approval', 'Approval depends on the lender.'],
-    ['keys', 'Handover', 'Collect after the details are confirmed.'],
+    ['keys', 'Collect your car', 'Collect after the details are confirmed.'],
   ],
 };
 const packages = [
@@ -83,16 +83,25 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
       <h2 {...stylex.props(s.heading, t.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Your finance journey, step by step' : 'Car care, step by step')}</span><span {...stylex.props(s.mobileCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Finance steps' : 'Service steps')}</span></h2>
       {kind === 'finance' ? <ol data-finance-process aria-label={tx('Finance steps')} {...stylex.props(s.financeSteps)}>
         {steps.finance.map(([asset, title, copy], index) => <li key={asset} {...stylex.props(s.financeStep)}>
-          <Image src={showroom.artwork.financeSteps[index]} width={120} height={120} sizes="(max-width:767px) 88px, 112px" alt="" {...stylex.props(s.financeImage)}/>
+          <Image src={showroom.artwork.financeSteps[index]} width={100} height={100} sizes="100px" alt="" {...stylex.props(s.financeImage)}/>
           <div {...stylex.props(s.financeCopy)}>
-            <h3 {...stylex.props(s.processTitle, t.title)}>{index + 1}. {tx(title)}</h3>
+            <h3 {...stylex.props(s.processTitle, t.control)}>{tx(title)}</h3>
             <p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p>
           </div>
         </li>)}
       </ol> : kind === 'service' ? <ol data-service-process aria-label={tx('Service steps')} {...stylex.props(s.processSteps)}>{steps.service.map(([asset, title, copy], index) => <li key={asset} {...stylex.props(s.processStep)}><span aria-hidden="true" {...stylex.props(s.processNumber, t.title)}>{String(index + 1).padStart(2, '0')}</span><div><h3 {...stylex.props(s.processTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.processDescription, t.body)}>{tx(copy)}</p></div></li>)}</ol> : <div {...stylex.props(s.steps)}>{steps.sell.map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/sell-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle, t.title)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription, t.caption)}>{tx(copy)}</p></div></article>)}</div>}
     </section>
     {kind === 'sell' ? <BrandCampaign kind="sell" onAction={onStart}/> : kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
-    <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx(kind === 'finance' ? 'Before you apply' : 'A little more detail')}</h2>{(kind === 'finance' ? [['Which documents will I need?', 'Requirements vary by lender. Ask about proof of identity, income and any other documents before applying.'], ['Is this an approved finance offer?', 'No. The calculator is illustrative. Eligibility, rates and terms must be confirmed by the lender.']] : [['What happens next?', 'Tell the showroom what you need. Availability, pricing and any terms are confirmed before you commit.'], ['Can I visit in person?', 'Yes, explore the showroom information and arrange a suitable time to discuss your car.']]).map(([title, copy]) => <details key={title} {...stylex.props(s.faq)}><summary {...stylex.props(s.summary, t.control)}>{tx(title)}<ChevronDown size={18}/></summary><p {...stylex.props(s.faqCopy, t.caption)}>{tx(copy)}</p></details>)}</section>
+    {kind === 'finance' ? <section data-finance-documents {...stylex.props(s.section)}>
+      <h2 {...stylex.props(s.heading, t.heading)}><ResponsiveCopy full="Documents and terms" short="Documents"/></h2>
+      <p {...stylex.props(s.documentIntro, t.body)}>{tx('Requirements vary by lender.')}</p>
+      <div {...stylex.props(s.documentList)}>
+        {[{title: 'Required documents', Icon: FileText, copy: 'Confirm identity and income documents with your lender.'}, {title: 'Rates and approval', Icon: BadgePercent, copy: 'The lender confirms eligibility, rates and terms. Calculator results are estimates.'}].map(({title, Icon, copy}) => <details key={title} {...stylex.props(s.documentDisclosure)}>
+          <summary {...stylex.props(s.documentSummary, t.control)}><Icon size={22} aria-hidden="true" {...stylex.props(s.documentIcon)}/><span {...stylex.props(s.documentTitle)}>{tx(title)}</span><ChevronDown size={20} aria-hidden="true" {...stylex.props(s.documentIcon)}/></summary>
+          <p {...stylex.props(s.documentCopy, t.body)}>{tx(copy)}</p>
+        </details>)}
+      </div>
+    </section> : <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx('A little more detail')}</h2>{[['What happens next?', 'Tell the showroom what you need. Availability, pricing and any terms are confirmed before you commit.'], ['Can I visit in person?', 'Yes, explore the showroom information and arrange a suitable time to discuss your car.']].map(([title, copy]) => <details key={title} {...stylex.props(s.faq)}><summary {...stylex.props(s.summary, t.control)}>{tx(title)}<ChevronDown size={18}/></summary><p {...stylex.props(s.faqCopy, t.caption)}>{tx(copy)}</p></details>)}</section>}
     <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading, t.heading)}>{tx("Let’s talk about your car")}</h2><div {...stylex.props(s.contactGrid)}>{[['Call us', Phone], ['Email us', Mail], ['Visit us', MapPin]].map(([label, Icon]) => {const Symbol = Icon as typeof Phone; return label === 'Call us' && dealer.phoneE164 ? <a key={String(label)} href={'tel:' + dealer.phoneE164} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Email us' && dealer.email ? <a key={String(label)} href={'mailto:' + dealer.email} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></a> : label === 'Visit us' ? <Link key={String(label)} href="/stores" {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></Link> : <button type="button" key={String(label)} onClick={() => setInformation({title: String(label), description: dealer.phoneDisplay || dealer.email || 'Contact details are not configured for this template.'})} {...stylex.props(s.contact, t.control)}><Symbol size={25}/><span>{tx(String(label))}</span></button>;})}</div></section>
     {information ? <ReferenceInfoSheet {...information} onClose={() => setInformation(null)}/> : null}
   </>;
@@ -127,14 +136,21 @@ const s = stylex.create({
   stepTitle: {overflowWrap: 'anywhere'},
   stepDescription: {marginTop: 5, color: $.muted, overflowWrap: 'anywhere'},
   financeSteps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: {[media.mobile]: 12, default: 16}, margin: '16px 0 0', padding: 0, listStyle: 'none'},
-  financeStep: {display: 'grid', gridTemplateColumns: {[media.mobile]: '88px minmax(0,1fr)', default: '112px minmax(0,1fr)'}, alignItems: 'center', overflow: 'hidden', minHeight: 112, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 16, backgroundColor: '#fff'},
-  financeImage: {display: 'block', width: '100%', height: '100%', minHeight: 112, objectFit: 'cover', objectPosition: 'center', filter: 'grayscale(1)', backgroundColor: campaign.lightSurface},
-  financeCopy: {minWidth: 0, padding: {[media.mobile]: '14px 12px', default: '16px 14px'}},
+  financeStep: {display: 'grid', gridTemplateColumns: '100px minmax(0,1fr)', alignItems: 'center', overflow: 'hidden', minHeight: 102, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 13, backgroundColor: '#fff'},
+  financeImage: {display: 'block', alignSelf: 'end', width: 100, height: 100, objectFit: 'contain', objectPosition: 'left bottom'},
+  financeCopy: {minWidth: 0, padding: '12px'},
   processSteps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(3,minmax(0,1fr))'}, gap: 24, margin: '22px 0 0', padding: 0, listStyle: 'none'},
   processStep: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr)', alignItems: 'start', gap: 12},
   processNumber: {color: '#707079', fontVariantNumeric: 'tabular-nums'},
   processTitle: {textWrap: 'pretty'},
   processDescription: {marginTop: 5, color: $.muted, textWrap: 'pretty'},
+  documentIntro: {marginTop: 8, color: $.muted},
+  documentList: {marginTop: 16, overflow: 'hidden', borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 16},
+  documentDisclosure: {borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: campaign.lightBorder},
+  documentSummary: {display: 'flex', alignItems: 'center', gap: 12, minHeight: 64, padding: '14px 16px', color: $.ink, listStyle: 'none', cursor: 'pointer'},
+  documentTitle: {flexGrow: 1, minWidth: 0},
+  documentIcon: {flexShrink: 0},
+  documentCopy: {padding: '0 16px 18px 50px', color: $.muted},
   faq: {marginTop: 12, borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff'},
   summary: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 56, padding: '12px 15px', color: '#202024', cursor: 'pointer', listStyle: 'none'},
   faqCopy: {padding: '0 15px 15px', color: $.muted},

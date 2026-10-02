@@ -6,7 +6,6 @@ import {ArrowRight, Calculator, X} from 'lucide-react';
 import {useCopy} from '@/lib/locale';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
-import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import FinanceCalculator from './FinanceCalculator';
 import {useModal} from './useModal';
 
@@ -20,7 +19,7 @@ export default function FinanceCalculatorLauncher() {
     <section data-finance-calculator-feature aria-labelledby={id + '-launcher-title'} {...stylex.props(s.feature)}>
       <div><h2 id={id + '-launcher-title'} {...stylex.props(t.heading)}>{tx('Finance calculator')}</h2><p {...stylex.props(s.description, t.body)}>{tx('Explore your monthly payment.')}</p></div>
       <button type="button" data-finance-calculator-launcher aria-label={tx('Open finance calculator')} aria-haspopup="dialog" aria-expanded={open} aria-controls={id + '-dialog'} onClick={() => setOpen(true)} {...stylex.props(s.launcher, t.control)}>
-        <Calculator size={22} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Calculate')}<ArrowRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
+        <span {...stylex.props(s.launcherLabel)}><Calculator size={28} aria-hidden="true" {...stylex.props(s.icon)}/>{tx('Calculate')}</span><ArrowRight size={22} aria-hidden="true" {...stylex.props(s.icon)}/>
       </button>
     </section>
     <div hidden={!open} {...stylex.props(s.backdrop, !open && s.hidden)} onClick={event => {if (event.currentTarget === event.target) close();}}>
@@ -33,9 +32,10 @@ export default function FinanceCalculatorLauncher() {
 }
 
 const s = stylex.create({
-  feature: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', default: 'minmax(0,1fr) minmax(240px,320px)'}, alignItems: 'center', gap: {[media.mobile]: 18, default: 28}, marginTop: 20, padding: {[media.mobile]: 20, default: 28}, color: '#fff', borderRadius: 20, backgroundColor: campaign.surface},
-  description: {marginTop: 8, color: campaign.muted},
-  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 10, width: '100%', minHeight: 56, padding: '12px 20px', color: campaign.actionText, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#f0f0f2'}, cursor: 'pointer', outlineColor: '#fff', outlineOffset: 3},
+  feature: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'minmax(0,1fr)', default: 'minmax(0,1fr) minmax(240px,320px)'}, alignItems: 'center', gap: {[media.mobile]: 16, default: 28}, marginTop: 28, color: $.ink},
+  description: {marginTop: 6, color: $.muted},
+  launcher: {display: 'inline-flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, width: '100%', minHeight: 68, padding: '16px 20px', color: $.ink, borderWidth: 0, borderRadius: 16, backgroundColor: {default: '#eeedff', ':hover': '#e3e0fa'}, cursor: 'pointer', outlineColor: $.ink, outlineOffset: 3},
+  launcherLabel: {display: 'inline-flex', alignItems: 'center', gap: 12},
   icon: {flexShrink: 0},
   backdrop: {position: 'fixed', inset: 0, zIndex: 250, display: 'flex', alignItems: {[media.mobile]: 'flex-end', default: 'center'}, justifyContent: 'center', padding: {[media.mobile]: 0, default: 24}, backgroundColor: 'rgba(0,0,0,.58)'},
   hidden: {display: 'none'},

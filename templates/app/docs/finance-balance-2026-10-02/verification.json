@@ -1,0 +1,287 @@
+{
+  "responsive": [
+    {
+      "calculator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonBackground": "rgb(238, 237, 255)",
+        "buttonHeight": 68
+      },
+      "clientWidth": 305,
+      "columns": "281px",
+      "documents": [
+        {
+          "open": false,
+          "title": "Нужни документи"
+        },
+        {
+          "open": false,
+          "title": "Лихва и одобрение"
+        }
+      ],
+      "images": [
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        }
+      ],
+      "scrollWidth": 305,
+      "steps": 6,
+      "width": 320
+    },
+    {
+      "calculator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonBackground": "rgb(238, 237, 255)",
+        "buttonHeight": 68
+      },
+      "clientWidth": 375,
+      "columns": "351px",
+      "documents": [
+        {
+          "open": false,
+          "title": "Нужни документи"
+        },
+        {
+          "open": false,
+          "title": "Лихва и одобрение"
+        }
+      ],
+      "images": [
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        }
+      ],
+      "scrollWidth": 375,
+      "steps": 6,
+      "width": 390
+    },
+    {
+      "calculator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonBackground": "rgb(238, 237, 255)",
+        "buttonHeight": 68
+      },
+      "clientWidth": 1425,
+      "columns": "384px 384px 384px",
+      "documents": [
+        {
+          "open": false,
+          "title": "Нужни документи"
+        },
+        {
+          "open": false,
+          "title": "Лихва и одобрение"
+        }
+      ],
+      "images": [
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        }
+      ],
+      "scrollWidth": 1425,
+      "steps": 6,
+      "width": 1440
+    },
+    {
+      "calculator": {
+        "background": "rgba(0, 0, 0, 0)",
+        "buttonBackground": "rgb(238, 237, 255)",
+        "buttonHeight": 68
+      },
+      "clientWidth": 753,
+      "columns": "340.5px 340.5px",
+      "documents": [
+        {
+          "open": false,
+          "title": "Нужни документи"
+        },
+        {
+          "open": false,
+          "title": "Лихва и одобрение"
+        }
+      ],
+      "images": [
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        },
+        {
+          "filter": "none",
+          "fit": "contain",
+          "height": 100,
+          "loaded": true,
+          "width": 100
+        }
+      ],
+      "scrollWidth": 753,
+      "steps": 6,
+      "width": 768
+    }
+  ],
+  "calculatorInteraction": {
+    "monthly": "€ 554",
+    "overflow": false,
+    "price": "35000"
+  },
+  "english": {
+    "documentCopy": "Confirm identity and income documents with your lender.",
+    "documentOpen": true,
+    "overflow": false,
+    "titles": [
+      "Choose your car",
+      "Prepare documents",
+      "Discuss the terms",
+      "Compare offers",
+      "Lender approval",
+      "Collect your car"
+    ],
+    "width": 390
+  }
+}
