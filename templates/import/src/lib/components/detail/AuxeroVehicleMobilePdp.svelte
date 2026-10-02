@@ -813,6 +813,9 @@
 			background: #ffffff;
 			color: #1c1c1c;
 			box-shadow: 0 -20px 46px rgba(0, 0, 0, 0.22);
+			/* Match the resting snap before Vaul has measured the viewport. Dragging
+			   and settled snap points use Vaul's inline transform after hydration. */
+			transform: translateY(34dvh);
 			outline: 0;
 			padding: 7px 14px
 				calc(var(--daynight-mobile-pdp-snap-offset, 40dvh) + 12px + env(safe-area-inset-bottom));

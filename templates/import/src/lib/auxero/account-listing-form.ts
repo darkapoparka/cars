@@ -1,3 +1,5 @@
+import type { DayNightVehicleSubmissionRecord } from '$lib/types/account';
+
 export type AuxeroListingFormMode = 'clone-static' | 'create' | 'edit';
 
 export type AuxeroListingFormHiddenField = {
@@ -84,4 +86,17 @@ export type AuxeroAccountListingFormData = {
 	previewImage: AuxeroListingFormImage;
 	priceLabel: string;
 	sourceUrl: string;
+	submission?: Pick<
+		DayNightVehicleSubmissionRecord,
+		| 'id'
+		| 'status'
+		| 'title'
+		| 'expectedPrice'
+		| 'vin'
+		| 'mileage'
+		| 'message'
+		| 'previewImage'
+		| 'galleryImages'
+		| 'documents'
+	>;
 };

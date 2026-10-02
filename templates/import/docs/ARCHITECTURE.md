@@ -28,11 +28,15 @@ Use Action for buttons/links, Modal for desktop dialogs, and the retained Mobile
 
 Legacy account/agent and alternate-preview routes still use the Auxero compatibility modules. LegacyLayoutAssets isolates their CSS from the public route group. They are not dead files merely because the new storefront no longer imports them. Do not delete the renderer, .template-ref, licenses, or their assets until those last route consumers are migrated or explicitly retired with compatibility redirects. Native route dependencies are checked transitively by npm run check:architecture.
 
+Customer listing create/edit pages use `MobileAccountListingForm.svelte` below 768px inside the retained account shell. It edits the submission fields actually persisted by the existing page actions, with optional photos/documents and compact pinned actions. The desktop form remains in the compatibility renderer. Native form state preserves typed values on validation failure; successful uploads clear the file selections to prevent duplicate appends. Creation redirects to the saved record, including without JavaScript.
+
 ## Preview and live are different capabilities
 
 TEMPLATE_MODE defaults to preview. Database and AI credentials alone cannot enable live features. Preview stores synthetic requests and never claims notification delivery. Live inquiry storage requires its explicit configuration; storage failures do not silently fall back to demos.
 
 The file-backed CMS and uploads are demonstration features. Live-mode gates apply to both page actions and the filesystem service, not only JSON endpoints. Staff forms and public API parsing have bounded request sizes. Upload filename extensions must agree with the allowed media family. This is not a production malware-scanning or private-document service.
+
+`/uploads/cms/[...path]` serves allowed local demo photos/documents added after a build. The filesystem owner validates the full selection before creating a draft or writing an upload, and checks the resource namespace and media family when reading it. Delivery is disabled in live mode and returns private, uncached responses in preview.
 
 Configured live staff sessions still use the retained process-local session implementation. Durable/revocable production sessions, production upload storage and external notification/provider qualification remain release blockers for those capabilities. Do not advertise them as completed production integrations.
 

@@ -39,7 +39,7 @@
 		if (accountPath === '/account/listings/new')
 			return english ? 'Submit a car' : 'Подай автомобил';
 		if (accountPath.startsWith('/account/listings/edit/'))
-			return english ? 'Edit your car' : 'Редактирай автомобила';
+			return english ? 'Edit your car' : 'Редактирай обява';
 		if (accountPath === '/account/listings') return english ? 'Your cars' : 'Твоите автомобили';
 		if (accountPath.startsWith('/account/vehicles/'))
 			return english ? 'Your car' : 'Твоят автомобил';

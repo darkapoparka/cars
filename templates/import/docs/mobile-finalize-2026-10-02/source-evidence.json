@@ -1,0 +1,135 @@
+{
+	"source": "L:/CODEX/cars/templates/import",
+	"candidate": "C:/Users/radev/AppData/Local/Temp/cars-import-secondary-20261001-01a0f61f/candidate",
+	"baselineSnapshot": {
+		"source": "L:/CODEX/cars/templates/import",
+		"candidate": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-import-secondary-20261001-01a0f61f\\candidate",
+		"head": "a6ebad2f24773398aa424eff1ec4a9b5cae6b162",
+		"files": 2512,
+		"runtimeDigest": "580c3d536334f71605382d999f68df833c3782119ad40d68b1c2e89cc263e23a",
+		"changedFiles": 24,
+		"frozenAt": "2026-10-02T10:29:23.538Z"
+	},
+	"finalSnapshot": {
+		"source": "L:/CODEX/cars/templates/import",
+		"candidate": "C:\\Users\\radev\\AppData\\Local\\Temp\\cars-import-secondary-20261001-01a0f61f\\candidate",
+		"head": "4f5380858f71b4479f9f589ee0fdb4208d019b5d",
+		"files": 2530,
+		"runtimeDigest": "cf33fae34a9004f69b3e06e650b03f0199e8376b82456298728dd4fa11429fdb",
+		"changedFiles": 21,
+		"frozenAt": "2026-10-02T11:22:53.379Z",
+		"previousRuntimeDigest": "d08986f1e1daf38c26d07b465bdfd978af89e3d0f07d83a8f384dcb7a15a6f15",
+		"finalAdjustment": "Removed the font-preload trial. Other frozen app files are unchanged.",
+		"adjustedAt": "2026-10-02T11:40:57.453Z"
+	},
+	"taskFiles": [
+		{
+			"path": "src/lib/auxero/account-listing-form.ts",
+			"sha256": "89af7f63bc2ee28dc2a355a0239af7fb0cc1e2fffb91bda7c3fb6317438834ad"
+		},
+		{
+			"path": "src/lib/components/account/AccountListingFormTemplatePage.svelte",
+			"sha256": "f0656136f177e9443f0bb35eeacc8fad71f25e7ca20db6def9e12c2a1a475493"
+		},
+		{
+			"path": "src/lib/components/account/MobileAccountListingForm.svelte",
+			"sha256": "91dc64640a9da6e9c6a3d81e4c5f693b0184fddabac85250a8b9b50005e29eb5"
+		},
+		{
+			"path": "src/lib/components/detail/AuxeroVehicleMobilePdp.svelte",
+			"sha256": "6551a45d79f1428a251f4edb2e5d5e3c07cc4cea049ad85a9dc027f02384b87c"
+		},
+		{
+			"path": "src/lib/components/detail/VehicleDetailPage.svelte",
+			"sha256": "7e08cbf3bba28519a3e87a5d95e445f947f2ff5dcec831b5996342f3f122936b",
+			"workingTreeSha256": "ae3114cab709ca8d231404bf542e7def0a5d02a9ccebad584726aad372c417fa",
+			"preservedUnstagedEdit": "Another task removed the desktop breadcrumb. This mobile commit stages only the verified responsive-rendering changes from the frozen file."
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryMobilePage.svelte",
+			"sha256": "9756ed492c9a44b3ec6e81d56fc214a51e450c185f376d93d83da1bfaeecb04d"
+		},
+		{
+			"path": "src/lib/components/layout/AuxeroDashboardSlotShell.svelte",
+			"sha256": "c4e01093eff8f94cfce8d28c85167ba8ad7ae7a75a2648172985addc80785439"
+		},
+		{
+			"path": "src/lib/locale/LocalePreferences.svelte",
+			"sha256": "131faf7ce53102ec348b59aa2426706e09d297f46a9a0a05d5fef68253406cdd"
+		},
+		{
+			"path": "src/lib/server/account-listing-form-state.ts",
+			"sha256": "29d0c413b70616dbbd119b431a25cf4b437d70fad8d9064757d1a251d5c7fe92"
+		},
+		{
+			"path": "src/lib/server/cms-listing-form.ts",
+			"sha256": "76a78bfc8d7f3089cb70ea904674693ec6df71143d1f38f94f97cea2b1a1b57b"
+		},
+		{
+			"path": "src/lib/server/cms-persistence.ts",
+			"sha256": "c01535095683fa232447fa87426e3b4a849eb17ae7bd32765b24e3242d051148"
+		},
+		{
+			"path": "src/routes/account/listings/edit/[id]/+page.server.ts",
+			"sha256": "0adbc174d47e32036051c0d11480484643e3b0833548449b9c1abf43810a3f5d"
+		},
+		{
+			"path": "src/routes/account/listings/new/+page.server.ts",
+			"sha256": "e4d070f0e0c12001239aa929604f8e9121c9558571b80f13d1a917e3863b236f"
+		},
+		{
+			"path": "src/routes/uploads/cms/[...path]/+server.ts",
+			"sha256": "52991e172d376496966e6067f3fca9b8dec1869f03427891f6265cc580e8c5f4"
+		},
+		{
+			"path": "tests/mobile-finalize.e2e.ts",
+			"sha256": "01fdf16d492df1514b28ffcc0f0a742a63bfa29948afdef9baa0b3a555a82ef4"
+		}
+	],
+	"checks": {
+		"chromiumFullMobile": {
+			"passed": 193,
+			"skipped": 51
+		},
+		"chromiumNewSuite": {
+			"passed": 12,
+			"skipped": 8,
+			"projects": ["mobile", "desktop"]
+		},
+		"chromiumAffectedRoutes": {
+			"passed": 56
+		},
+		"webkit": {
+			"passed": 18
+		},
+		"desktopPatterns": {
+			"passed": 21
+		},
+		"finalDesktopDetail": {
+			"passed": 7
+		},
+		"finalEditorAfterRemovingPreloads": {
+			"passed": 10
+		},
+		"javascriptDisabledFirstPaint": {
+			"passed": 1
+		},
+		"units": {
+			"files": 18,
+			"passed": 124
+		},
+		"svelte": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"build": true,
+		"eslint": true,
+		"architecture": true,
+		"imageSignatures": true,
+		"fullVerify": {
+			"passed": false,
+			"existingFormattingFailures": 46
+		}
+	},
+	"scope": "Task-owned code matches the frozen production preview. This snapshot also includes preserved work by other tasks. This is not an immutable release/deployment receipt."
+}

@@ -222,6 +222,20 @@ export const accountListingFormData = (
 
 	return {
 		address,
+		submission: editSubmission
+			? {
+					id: editSubmission.id,
+					status: editSubmission.status,
+					title: editSubmission.title,
+					expectedPrice: editSubmission.expectedPrice,
+					vin: editSubmission.vin,
+					mileage: editSubmission.mileage,
+					message: editSubmission.message,
+					previewImage: editSubmission.previewImage,
+					galleryImages: editSubmission.galleryImages,
+					documents: editSubmission.documents
+				}
+			: undefined,
 		attachments: [
 			{ icon: '/assets/icons/pdf.svg', label: 'Information', type: 'PDF' },
 			{ icon: '/assets/icons/doc.svg', label: 'Information', type: 'Doc' }

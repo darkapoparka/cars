@@ -8,8 +8,8 @@ import {
 	renderAuxeroPageSlot
 } from '$lib/server/auxero-page';
 import { requireDayNightPageSession } from '$lib/server/auth';
-import { readInventoryListingFields } from '$lib/server/cms-listing-form';
-import { saveCmsUploadFiles } from '$lib/server/cms-persistence';
+import { readInventoryListingFields, submissionDraftValues } from '$lib/server/cms-listing-form';
+import { saveCmsUploadFiles, validateCmsUploadFiles } from '$lib/server/cms-persistence';
 import { listVehicleSubmissions, updateVehicleSubmission } from '$lib/server/inventory';
 
 export const load: PageServerLoad = ({ params, request, url }) => {
@@ -49,7 +49,7 @@ export const load: PageServerLoad = ({ params, request, url }) => {
 };
 
 export const actions: Actions = {
-	default: async ({ params, request, url }) => {
+	default: async ({ params, request, url, locals }) => {
 		requireDayNightPageSession(request, `account/listings/edit/${params.id}`, url.searchParams);
 		const existing = listVehicleSubmissions().find((submission) => submission.id === params.id);
 
@@ -59,7 +59,26 @@ export const actions: Actions = {
 
 		const formData = await request.formData();
 		const fields = readInventoryListingFields(formData);
+		const values = submissionDraftValues(fields);
+		if (!fields.title) {
+			return fail(400, {
+				values,
+				error:
+					locals.localeState.locale === 'en' ? 'Enter a make and model.' : 'Въведи марка и модел.'
+			});
+		}
 		const rawStatus = String(formData.get('listingStatus') ?? formData.get('status') ?? '').trim();
+		try {
+			validateCmsUploadFiles(formData);
+		} catch {
+			return fail(400, {
+				values,
+				error:
+					locals.localeState.locale === 'en'
+						? 'Use JPG, PNG or WebP up to 8 MB, or PDF/DOC documents up to 10 MB.'
+						: 'Използвай JPG, PNG или WebP до 8 MB, или PDF/DOC документи до 10 MB.'
+			});
+		}
 		const uploads = await saveCmsUploadFiles({ formData, recordId: existing.id });
 
 		updateVehicleSubmission({
@@ -74,5 +93,6 @@ export const actions: Actions = {
 			title: fields.title,
 			vin: fields.vin
 		});
+		return { saved: true, status: rawStatus === 'draft' ? 'draft' : 'submitted' };
 	}
 };

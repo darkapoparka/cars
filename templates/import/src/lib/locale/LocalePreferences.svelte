@@ -12,6 +12,7 @@
 	let ready = $state(false);
 	let error = $state(false);
 	let firstVisit = $state(false);
+	let contentOpen = $state(false);
 	let opener: HTMLElement | null = null;
 	let requestVersion = 0;
 	let pendingRequest: AbortController | null = null;
@@ -48,6 +49,7 @@
 		error = false;
 		locale = i18n.locale;
 		country = i18n.state.country;
+		contentOpen = true;
 		opener =
 			target ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
 		const version = requestVersion;
@@ -56,6 +58,7 @@
 	}
 	function close() {
 		dialog.close();
+		contentOpen = false;
 		if (opener?.isConnected && opener !== document.body && opener.getClientRects().length)
 			opener.focus({ preventScroll: true });
 		else i18n.restoreFocus();
@@ -140,49 +143,51 @@
 		void submit('dismiss');
 	}}
 >
-	<button
-		type="button"
-		class="cars-locale-close"
-		aria-label={i18n.t('close')}
-		onclick={() => submit('dismiss')}>×</button
-	>
-	<p class="cars-locale-eyebrow">{localeContract.dealerName}</p>
-	<h2 id="cars-locale-title">{i18n.t(firstVisit ? 'welcome' : 'title')}</h2>
-	<p id="cars-locale-description">{i18n.t('description')}</p>
-	<p class="cars-locale-suggestion">
-		{i18n.t('suggestion', {
-			country: regionNames.of(i18n.state.suggestedCountry) ?? i18n.state.suggestedCountry
-		})}
-	</p>
-	<form
-		onsubmit={(event) => {
-			event.preventDefault();
-			void submit('save');
-		}}
-		aria-busy={busy}
-	>
-		<label for="cars-locale-country">{i18n.t('country')}</label>
-		<select id="cars-locale-country" name="country" bind:value={country} required>
-			{#each regionOptions as code (code)}<option value={code}
-					>{regionNames.of(code) ?? code}{code === i18n.state.suggestedCountry
-						? ` — ${i18n.t('suggested')}`
-						: ''}</option
-				>{/each}
-		</select>
-		<label for="cars-locale-language">{i18n.t('language')}</label>
-		<select id="cars-locale-language" name="locale" bind:value={locale} required>
-			<option value="en" lang="en">English</option><option value="bg" lang="bg">Български</option>
-		</select>
-		<p class="cars-locale-facts">{i18n.t('facts')}</p>
-		<p class="cars-locale-unavailable">{i18n.t('available')}</p>
-		{#if error}<p role="alert" class="cars-locale-error">{i18n.t('error')}</p>{/if}
-		<div class="cars-locale-actions">
-			<button type="button" onclick={() => submit('dismiss')}>{i18n.t('dismiss')}</button>
-			<button type="submit" disabled={busy || !isLocale(locale)}
-				>{i18n.t(busy ? 'saving' : 'save')}</button
-			>
-		</div>
-	</form>
+	{#if contentOpen}
+		<button
+			type="button"
+			class="cars-locale-close"
+			aria-label={i18n.t('close')}
+			onclick={() => submit('dismiss')}>×</button
+		>
+		<p class="cars-locale-eyebrow">{localeContract.dealerName}</p>
+		<h2 id="cars-locale-title">{i18n.t(firstVisit ? 'welcome' : 'title')}</h2>
+		<p id="cars-locale-description">{i18n.t('description')}</p>
+		<p class="cars-locale-suggestion">
+			{i18n.t('suggestion', {
+				country: regionNames.of(i18n.state.suggestedCountry) ?? i18n.state.suggestedCountry
+			})}
+		</p>
+		<form
+			onsubmit={(event) => {
+				event.preventDefault();
+				void submit('save');
+			}}
+			aria-busy={busy}
+		>
+			<label for="cars-locale-country">{i18n.t('country')}</label>
+			<select id="cars-locale-country" name="country" bind:value={country} required>
+				{#each regionOptions as code (code)}<option value={code}
+						>{regionNames.of(code) ?? code}{code === i18n.state.suggestedCountry
+							? ` — ${i18n.t('suggested')}`
+							: ''}</option
+					>{/each}
+			</select>
+			<label for="cars-locale-language">{i18n.t('language')}</label>
+			<select id="cars-locale-language" name="locale" bind:value={locale} required>
+				<option value="en" lang="en">English</option><option value="bg" lang="bg">Български</option>
+			</select>
+			<p class="cars-locale-facts">{i18n.t('facts')}</p>
+			<p class="cars-locale-unavailable">{i18n.t('available')}</p>
+			{#if error}<p role="alert" class="cars-locale-error">{i18n.t('error')}</p>{/if}
+			<div class="cars-locale-actions">
+				<button type="button" onclick={() => submit('dismiss')}>{i18n.t('dismiss')}</button>
+				<button type="submit" disabled={busy || !isLocale(locale)}
+					>{i18n.t(busy ? 'saving' : 'save')}</button
+				>
+			</div>
+		</form>
+	{/if}
 </dialog>
 
 <style>

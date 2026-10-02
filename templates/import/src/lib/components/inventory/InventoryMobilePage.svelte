@@ -657,7 +657,7 @@
 
 			<section class="daynight-inventory-mobile__cards" aria-label={mobile.countLabel}>
 				{#each cards as card, index (card.slug)}
-					<MobileVehicleCard {card} priority={index < 3} />
+					<MobileVehicleCard {card} priority={index < 4} />
 				{:else}
 					<div class="daynight-inventory-mobile__empty">
 						<h2>{copy.emptyTitle}</h2>

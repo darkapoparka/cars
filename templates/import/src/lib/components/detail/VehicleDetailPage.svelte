@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { MediaQuery } from 'svelte/reactivity';
+	import { onMount } from 'svelte';
 	import Heart from '@lucide/svelte/icons/heart';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import type { AuxeroVehicleDetailData } from '$lib/server/vehicle-detail';
@@ -29,16 +30,23 @@
 		english?: boolean;
 	} = $props();
 	const mobile = new MediaQuery('(max-width: 767.98px)', false);
+	let hydrated = $state(false);
+	onMount(() => {
+		hydrated = true;
+	});
 	const garage = getGarageContext();
 	let inquiryOpen = $state(false);
 	const localeSuffix = $derived(english ? '?lang=en' : '');
 </script>
 
 <main id="main-content" class="detail-main">
-	{#if mobile.current}
-		<MobilePdp {detail} />
-	{:else}
-		<div class="site-container detail-page">
+	<!-- CSS selects the correct server-rendered composition before JavaScript is ready.
+	     Once hydrated, keep only the active composition and its interactive state. -->
+	{#if !hydrated || mobile.current}
+		<div class="detail-mobile"><MobilePdp {detail} /></div>
+	{/if}
+	{#if !hydrated || !mobile.current}
+		<div class="site-container detail-page detail-desktop">
 			<nav class="detail-breadcrumb" aria-label={english ? 'Breadcrumb' : 'Навигация'}>
 				<a href={linkHref('/inventory' + localeSuffix)}>{english ? 'Cars' : 'Автомобили'}</a>
 				<span aria-hidden="true">/</span><span>{detail.title}</span>
@@ -229,6 +237,9 @@
 		}
 	}
 	@media (min-width: 768px) {
+		.detail-mobile {
+			display: none;
+		}
 		.detail-main {
 			background: var(--bc-surface);
 		}
@@ -246,6 +257,9 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.detail-desktop {
+			display: none;
+		}
 		.detail-grid {
 			grid-template-columns: 1fr;
 		}
