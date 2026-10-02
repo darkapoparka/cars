@@ -530,17 +530,170 @@ test('all captured model families can be evaluated without recursive loops', () 
 
 import './native-listings.test.mjs';
 
-import { serviceCategoriesFor, showroomServices } from '../.qa/domain/showroom-services.mjs';
+import {
+  serviceCategoriesFor,
+  showroomServices,
+  searchShowroomServices,
+  serviceCategoryHref,
+  serviceSearchHref,
+} from '../.qa/domain/showroom-services.mjs';
+import {
+  emptyServiceRequest,
+  normalizeServiceRequest,
+  parseServiceRequest,
+  serializeServiceRequest,
+  serviceRequestStorageKey,
+  serviceRequestMessage,
+  validateServiceRequest,
+} from '../.qa/domain/service-requests.mjs';
 
 test('service tabs omit categories the dealer does not offer', () => {
   const general = showroomServices.filter((service) => service.category === 'services');
-  assert.deepEqual(serviceCategoriesFor(general), [{ value: 'services', label: 'All services' }]);
+  assert.deepEqual(serviceCategoriesFor(general), [{ value: 'services', label: 'All' }]);
   assert.deepEqual(
-    serviceCategoriesFor(showroomServices.filter((service) => service.category !== 'financing')),
+    serviceCategoriesFor(showroomServices.filter((service) => service.category !== 'import')),
     [
-      { value: 'services', label: 'All services' },
-      { value: 'parts', label: 'Parts' },
+      { value: 'services', label: 'All' },
+      { value: 'sell', label: 'Sell your car' },
     ],
   );
-  assert.deepEqual(serviceCategoriesFor([]), [{ value: 'services', label: 'All services' }]);
+  assert.deepEqual(serviceCategoriesFor([]), [{ value: 'services', label: 'All' }]);
+  assert.deepEqual(serviceCategoriesFor(showroomServices), [
+    { value: 'services', label: 'All' },
+    { value: 'import', label: 'Import' },
+    { value: 'sell', label: 'Sell your car' },
+  ]);
+});
+
+test('service search finds buyout and import offerings and keeps financing and parts in All', () => {
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, '  BUY OUT  ').map((service) => service.id),
+    ['sell'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'overseas').map((service) => service.id),
+    ['import'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'fínancing').map((service) => service.id),
+    ['financing'],
+  );
+  assert.deepEqual(searchShowroomServices(showroomServices, 'absent service'), []);
+  assert.deepEqual(searchShowroomServices(showroomServices, ''), showroomServices);
+  assert.ok(showroomServices.some((service) => service.id === 'parts'));
+});
+
+test('service search URLs encode text and retain existing finance/parts deep links', () => {
+  assert.equal(serviceCategoryHref('import'), '/services?tab=import');
+  assert.equal(serviceCategoryHref('sell'), '/services?tab=sell');
+  assert.equal(serviceCategoryHref('financing'), '/services?tab=financing');
+  assert.equal(serviceCategoryHref('parts'), '/services?tab=parts');
+  assert.equal(serviceSearchHref('   '), '/services');
+  const query = 'parts & accessories / въпрос';
+  assert.equal(
+    new URL(serviceSearchHref(query), 'https://example.test').searchParams.get('q'),
+    query,
+  );
+});
+
+test('import and sale drafts are isolated, normalized and round-trip independently', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    make: ' BMW ',
+    model: ' 540i ',
+    budget: '35000',
+    mileage: '80000',
+    price: '20000',
+    name: ' Alex ',
+  };
+  const raw = serializeServiceRequest('import', values);
+  const imported = parseServiceRequest('import', raw);
+  assert.equal(imported.make, 'BMW');
+  assert.equal(imported.name, 'Alex');
+  assert.equal(imported.budget, '35000');
+  assert.equal(imported.mileage, '');
+  assert.equal(imported.price, '');
+  assert.deepEqual(parseServiceRequest('sell', raw), emptyServiceRequest());
+  assert.notEqual(serviceRequestStorageKey('import'), serviceRequestStorageKey('sell'));
+  const sold = parseServiceRequest('sell', serializeServiceRequest('sell', values));
+  assert.equal(sold.mileage, '80000');
+  assert.equal(sold.budget, '');
+});
+
+test('malformed, outdated and unexpected service draft values fall back safely', () => {
+  for (const raw of [null, '', '{bad', 'null', '[]', '{"version":2,"kind":"import"}']) {
+    assert.deepEqual(parseServiceRequest('import', raw), emptyServiceRequest());
+  }
+  const input = {
+    make: ['BMW'],
+    model: 'x'.repeat(500),
+    message: 'x'.repeat(5000),
+    password: 'unexpected',
+    year: 2020,
+  };
+  const values = normalizeServiceRequest('sell', input);
+  assert.equal(values.make, '');
+  assert.equal(values.year, '');
+  assert.equal(values.model.length, 80);
+  assert.equal(values.message.length, 2000);
+  assert.equal(Object.hasOwn(values, 'password'), false);
+});
+
+test('import enquiries require car details and a positive budget and validate optional links', () => {
+  const values = { ...emptyServiceRequest(), make: 'BMW', model: '540i', budget: '35000.50' };
+  assert.deepEqual(validateServiceRequest('import', values, 2026), {});
+  assert.ok(validateServiceRequest('import', { ...values, budget: '0' }, 2026).budget);
+  assert.ok(validateServiceRequest('import', { ...values, budget: 'Infinity' }, 2026).budget);
+  assert.ok(validateServiceRequest('import', { ...values, model: '' }, 2026).model);
+  assert.ok(
+    validateServiceRequest('import', { ...values, listing: 'javascript:alert(1)' }, 2026).listing,
+  );
+  assert.ok(validateServiceRequest('import', { ...values, email: 'incomplete' }, 2026).email);
+  assert.deepEqual(
+    validateServiceRequest(
+      'import',
+      { ...values, year: '2027', listing: 'https://example.test/car' },
+      2026,
+    ),
+    {},
+  );
+});
+
+test('sale enquiries validate year and whole-kilometre mileage without inventing a valuation', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    make: 'BMW',
+    model: 'X3',
+    year: '2020',
+    mileage: '0',
+    condition: 'Good',
+  };
+  assert.deepEqual(validateServiceRequest('sell', values, 2026), {});
+  assert.ok(validateServiceRequest('sell', { ...values, year: '2028' }, 2026).year);
+  assert.ok(validateServiceRequest('sell', { ...values, mileage: '-1' }, 2026).mileage);
+  assert.ok(validateServiceRequest('sell', { ...values, mileage: '120.5' }, 2026).mileage);
+  assert.ok(
+    validateServiceRequest('sell', { ...values, condition: 'unrecognized' }, 2026).condition,
+  );
+  assert.equal(validateServiceRequest('sell', values, 2026).price, undefined);
+});
+
+test('service request summaries preserve the matching enquiry and omit unrelated fields', () => {
+  const values = {
+    ...emptyServiceRequest(),
+    make: 'BMW',
+    model: '540i',
+    budget: '35000',
+    mileage: '80000',
+    price: '22000',
+    message: 'Please discuss the options.',
+  };
+  const imported = serviceRequestMessage('import', values);
+  assert.match(imported, /^Car import enquiry/);
+  assert.match(imported, /Maximum budget \(EUR\): 35000/);
+  assert.doesNotMatch(imported, /Mileage|Expected price/);
+  const sold = serviceRequestMessage('sell', values);
+  assert.match(sold, /^Car sale \/ buyout enquiry/);
+  assert.match(sold, /Mileage \(km\): 80000/);
+  assert.doesNotMatch(sold, /Maximum budget/);
 });

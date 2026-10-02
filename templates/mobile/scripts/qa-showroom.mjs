@@ -408,70 +408,88 @@ async function run(name, engine) {
         .getByRole('tablist', { name: 'Service category' })
         .getByRole('tab')
         .allTextContents(),
-      ['All services', 'Financing', 'Parts'],
+      ['All', 'Import', 'Sell your car'],
     );
-    assert.equal(await page.locator('[data-showroom-service]').count(), 6);
+    assert.equal(await page.locator('[data-showroom-service]').count(), 8);
     assert.equal(await page.locator('[data-showroom-service] dl').count(), 0);
-    await page.getByRole('link', { name: 'View financing', exact: true }).click();
-    await selectedServiceTab('Financing');
-    assert.equal(await page.locator('[data-showroom-service]').count(), 1);
-    assert.equal(await page.locator('[data-showroom-service] dt').count(), 3);
-    assert.equal(
-      await page.getByRole('link', { name: 'Ask about financing', exact: true }).count(),
-      1,
+    await page.getByRole('searchbox', { name: 'Search services' }).fill('buy out');
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-showroom-service]').length === 1,
     );
-    assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
-    await page.getByRole('tab', { name: 'Financing', exact: true }).press('ArrowRight');
-    await selectedServiceTab('Parts');
+    assert.equal(await page.locator('[data-showroom-service="sell"]').count(), 1);
+    await page.reload({ waitUntil: 'load' });
     assert.equal(
-      await page.getByRole('tab', { name: 'Parts', exact: true }).getAttribute('aria-selected'),
+      await page.getByRole('searchbox', { name: 'Search services' }).inputValue(),
+      'buy out',
+    );
+    await page.getByRole('button', { name: 'Clear search', exact: true }).click();
+    await page.waitForFunction(
+      () => document.querySelectorAll('[data-showroom-service]').length === 8,
+    );
+    await page.getByRole('searchbox', { name: 'Search services' }).fill('nonexistent service');
+    await page.getByRole('heading', { name: 'No services found', exact: true }).waitFor();
+    await page.getByRole('button', { name: 'Show all services', exact: true }).click();
+    await selectedServiceTab('All');
+    check('Service search finds buyout, persists in the URL and recovers from empty results');
+    await page.getByRole('tab', { name: 'All', exact: true }).press('ArrowRight');
+    await selectedServiceTab('Import');
+    await page.getByRole('form', { name: 'Car import enquiry' }).waitFor();
+    assert.equal(await page.locator('[data-import-example]').count(), 2);
+    await page.getByRole('tab', { name: 'Import', exact: true }).press('ArrowRight');
+    await selectedServiceTab('Sell your car');
+    assert.equal(
+      await page
+        .getByRole('tab', { name: 'Sell your car', exact: true })
+        .getAttribute('aria-selected'),
       'true',
     );
-    assert.equal(await page.locator(':focus').getAttribute('id'), 'service-category-parts');
+    assert.equal(await page.locator(':focus').getAttribute('id'), 'service-category-sell');
     await page.reload({ waitUntil: 'load' });
-    await page.getByRole('heading', { name: 'Parts & accessories', exact: true }).waitFor();
+    await page.getByRole('heading', { name: 'Sell your car', exact: true }).waitFor();
     await settle();
     await page.goBack();
     await page.waitForFunction(
       () =>
-        document.querySelector('#service-category-financing')?.getAttribute('aria-selected') ===
+        document.querySelector('#service-category-import')?.getAttribute('aria-selected') ===
         'true',
     );
     await page.goForward();
     await page.waitForFunction(
       () =>
-        document.querySelector('#service-category-parts')?.getAttribute('aria-selected') === 'true',
+        document.querySelector('#service-category-sell')?.getAttribute('aria-selected') === 'true',
     );
-    await page.getByRole('tab', { name: 'Parts', exact: true }).press('Home');
-    await selectedServiceTab('All services');
+    await page.getByRole('tab', { name: 'Sell your car', exact: true }).press('Home');
+    await selectedServiceTab('All');
+    assert.equal(
+      await page.getByRole('tab', { name: 'All', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    await page.getByRole('tab', { name: 'All', exact: true }).press('End');
+    await selectedServiceTab('Sell your car');
     assert.equal(
       await page
-        .getByRole('tab', { name: 'All services', exact: true })
+        .getByRole('tab', { name: 'Sell your car', exact: true })
         .getAttribute('aria-selected'),
       'true',
     );
-    await page.getByRole('tab', { name: 'All services', exact: true }).press('End');
-    await selectedServiceTab('Parts');
-    assert.equal(
-      await page.getByRole('tab', { name: 'Parts', exact: true }).getAttribute('aria-selected'),
-      'true',
-    );
-    check('Service categories support keyboard focus, deep links, reload and Back/Forward');
+    check('All/Import/Sell tabs support keyboard focus, deep links, reload and Back/Forward');
     await go('/services?tab=unrecognized');
     assert.equal(
-      await page
-        .getByRole('tab', { name: 'All services', exact: true })
-        .getAttribute('aria-selected'),
+      await page.getByRole('tab', { name: 'All', exact: true }).getAttribute('aria-selected'),
       'true',
     );
     await page.getByRole('link', { name: 'Arrange a viewing', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('service'), 'viewing');
     await page.getByRole('link', { name: 'View service', exact: true }).click();
-    await selectedServiceTab('All services');
-    await page.getByRole('tab', { name: 'All services', exact: true }).waitFor();
+    await selectedServiceTab('All');
+    await page.getByRole('tab', { name: 'All', exact: true }).waitFor();
     check('Service buttons open the matching enquiry; unknown categories fall back safely');
-    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
+    await page.getByRole('link', { name: 'View financing', exact: true }).click();
+    await selectedServiceTab('All');
+    assert.equal(await page.locator('[data-showroom-service]').count(), 1);
+    assert.equal(await page.locator('[data-showroom-service] dt').count(), 3);
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.match(
@@ -501,12 +519,14 @@ async function run(name, engine) {
       financingDraft,
     );
     await page.getByRole('link', { name: 'View service', exact: true }).click();
-    await selectedServiceTab('Financing');
+    await selectedServiceTab('All');
     assert.equal(
-      await page.getByRole('tab', { name: 'Financing', exact: true }).getAttribute('aria-selected'),
+      await page.getByRole('tab', { name: 'All', exact: true }).getAttribute('aria-selected'),
       'true',
     );
-    await page.getByRole('tab', { name: 'Parts', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
+    await page.getByRole('tab', { name: 'All', exact: true }).click();
+    await page.getByRole('link', { name: 'View parts & accessories', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about parts', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.match(
@@ -518,7 +538,9 @@ async function run(name, engine) {
       .fill('Please check availability of replacement parts for my car.');
     await page.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
     await page.getByRole('link', { name: 'View service', exact: true }).click();
-    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'parts');
+    await page.getByRole('tab', { name: 'All', exact: true }).click();
+    await page.getByRole('link', { name: 'View financing', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
     assert.equal(
       await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
@@ -526,7 +548,55 @@ async function run(name, engine) {
     );
     assert.equal(sentRequests, 0);
     check(
-      'Finance and parts drafts persist independently; View service restores the selected category',
+      'Finance and parts drafts persist independently; View service retains their existing deep links',
+    );
+    await go('/services?tab=import');
+    await selectedServiceTab('Import');
+    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    await page.getByText('Enter a make.', { exact: true }).waitFor();
+    assert.equal(await page.locator(':focus').getAttribute('name'), 'make');
+    await page.getByLabel('Make', { exact: true }).fill('BMW');
+    await page.getByLabel('Model', { exact: true }).fill('X3');
+    await page.getByLabel('Maximum budget (€)', { exact: true }).fill('35000');
+    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    await page.getByText('Import draft saved on this device.', { exact: true }).waitFor();
+    assert.equal(sentRequests, 0);
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForFunction(
+      () => document.querySelector('input[name="budget"]')?.value === '35000',
+    );
+    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
+    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    await page.getByRole('link', { name: 'View enquiry draft', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('service'), 'import');
+    assert.match(
+      await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
+      /Maximum budget \(EUR\): 35000/,
+    );
+    await page.getByRole('link', { name: 'View service', exact: true }).click();
+    await selectedServiceTab('Import');
+    await page.getByRole('tab', { name: 'Sell your car', exact: true }).click();
+    await selectedServiceTab('Sell your car');
+    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), '');
+    await page.getByLabel('Make', { exact: true }).fill('Toyota');
+    await page.getByLabel('Model', { exact: true }).fill('Corolla');
+    await page.getByLabel('Year', { exact: true }).fill('2020');
+    await page.getByLabel('Mileage (km)', { exact: true }).fill('82000');
+    await page.getByRole('button', { name: 'Save sale draft', exact: true }).click();
+    await page.getByText('Sale draft saved on this device.', { exact: true }).waitFor();
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForFunction(
+      () => document.querySelector('input[name="model"]')?.value === 'Corolla',
+    );
+    await page.getByRole('tab', { name: 'Import', exact: true }).click();
+    await page.waitForFunction(() => document.querySelector('input[name="model"]')?.value === 'X3');
+    assert.equal(
+      await page.getByLabel('Maximum budget (€)', { exact: true }).inputValue(),
+      '35000',
+    );
+    assert.equal(sentRequests, 0);
+    check(
+      'Import/sale forms validate, persist independently, retain enquiry context and send no request',
     );
     await go('/vehicle/bmw-x6');
     await page.getByRole('link', { name: 'Enquire', exact: true }).click();
@@ -556,7 +626,7 @@ async function run(name, engine) {
             (route === '/' ? 'cars' : route.replaceAll('/', '-').slice(1)) + '-' + width,
           );
         }
-        for (const tab of ['financing', 'parts']) {
+        for (const tab of ['import', 'sell', 'financing', 'parts']) {
           await go('/services?tab=' + tab);
           await geometry(width + 'px service ' + tab);
           await capture('services-' + tab + '-' + width);
@@ -586,6 +656,8 @@ async function run(name, engine) {
       for (const route of [
         '/',
         '/services',
+        '/services?tab=import',
+        '/services?tab=sell',
         '/services?tab=financing',
         '/services?tab=parts',
         '/contact',

@@ -1,21 +1,39 @@
 const categoryOptions = [
-  { value: 'services', label: 'All services' },
-  { value: 'financing', label: 'Financing' },
-  { value: 'parts', label: 'Parts' },
+  { value: 'services', label: 'All' },
+  { value: 'import', label: 'Import' },
+  { value: 'sell', label: 'Sell your car' },
 ] as const;
 
-export type ServiceCategory = (typeof categoryOptions)[number]['value'];
+export type ServiceTab = (typeof categoryOptions)[number]['value'];
+export type ServiceCategory = ServiceTab | 'financing' | 'parts';
 export type ShowroomService = {
   id: string;
   category: ServiceCategory;
   title: string;
   copy: string;
   action: string;
+  keywords?: readonly string[];
   details?: readonly { label: string; copy: string }[];
 };
 
 // Example offerings; confirm availability when personalizing the dealer template.
 export const showroomServices: readonly ShowroomService[] = [
+  {
+    id: 'import',
+    category: 'import',
+    title: 'Import a car',
+    copy: 'Tell us the make, model and budget you have in mind.',
+    action: 'Start an import enquiry',
+    keywords: ['imports', 'overseas', 'sourcing', 'delivery'],
+  },
+  {
+    id: 'sell',
+    category: 'sell',
+    title: 'Sell your car',
+    copy: 'Ask about a direct purchase or a valuation for part exchange.',
+    action: 'Start a sale enquiry',
+    keywords: ['buyout', 'buy out', 'sell my car', 'valuation', 'purchase'],
+  },
   {
     id: 'viewing',
     category: 'services',
@@ -85,4 +103,23 @@ export function showroomService(id?: string) {
 
 export function serviceCategoryHref(category: ServiceCategory) {
   return category === 'services' ? '/services' : '/services?tab=' + category;
+}
+
+export function serviceSearchHref(query: string) {
+  const params = new URLSearchParams();
+  if (query.trim()) params.set('q', query);
+  return '/services' + (params.size ? '?' + params.toString() : '');
+}
+
+export function searchShowroomServices(services: readonly ShowroomService[], query: string) {
+  const fold = (value: string) =>
+    value
+      .normalize('NFKD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLocaleLowerCase();
+  const words = fold(query).trim().split(/\s+/).filter(Boolean);
+  return services.filter((service) => {
+    const text = fold([service.title, service.copy, ...(service.keywords || [])].join(' '));
+    return words.every((word) => text.includes(word));
+  });
 }

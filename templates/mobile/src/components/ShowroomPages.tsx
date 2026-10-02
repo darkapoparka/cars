@@ -11,14 +11,19 @@ import { restoreInventoryPosition, showroom, showroomInventoryHref } from '@/lib
 import {
   serviceCategories,
   serviceCategoryHref,
+  serviceSearchHref,
+  searchShowroomServices,
   showroomService,
   showroomServices,
-  type ServiceCategory,
+  type ServiceTab,
 } from '@/lib/showroom-services';
 import { notify, saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
+import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomServiceRequest } from './ShowroomServiceRequest';
+import { ShowroomImportExamples } from './ShowroomImportExamples';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { Button, ui } from './ui';
 
@@ -29,14 +34,34 @@ const s = stylex.create({
     backgroundColor: colors.stripe,
     minHeight: 'calc(100dvh - 124px)',
   },
-  servicesPage: { minHeight: 'calc(100dvh - 180px)' },
+  servicesPage: { minHeight: 'calc(100dvh - 242px)' },
   head: { paddingBlock: 12, marginBottom: 20, display: 'flex', flexDirection: 'column', gap: 8 },
   title: { fontSize: 28, lineHeight: '36px', fontWeight: 700 },
   intro: { fontSize: 16, lineHeight: '24px', color: colors.muted },
   pageHead: { display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 16 },
   pageTitle: { fontSize: 24, lineHeight: '32px', fontWeight: 700 },
   subTitle: { fontSize: 18, lineHeight: '24px', fontWeight: 700 },
-  tabs: { position: 'sticky', top: 60, zIndex: 25, backgroundColor: colors.background },
+  tabs: {
+    position: 'sticky',
+    top: 60,
+    zIndex: 25,
+    backgroundColor: colors.background,
+    paddingTop: 4,
+    paddingBottom: 6,
+  },
+  serviceCount: { fontSize: 14, lineHeight: '22px', color: colors.muted, marginBottom: 12 },
+  serviceFlow: {
+    display: 'grid',
+    gridTemplateColumns: {
+      default: 'minmax(0,1fr)',
+      '@media (min-width: 700px)': 'minmax(0,1.2fr) minmax(0,.8fr)',
+    },
+    alignItems: 'start',
+    gap: 20,
+    maxWidth: 1040,
+    marginInline: 'auto',
+  },
+  saleFlow: { gridTemplateColumns: 'minmax(0,1fr)', maxWidth: 620 },
   serviceGrid: {
     display: 'grid',
     gridTemplateColumns: { default: '1fr', '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))' },
@@ -262,19 +287,31 @@ export function SavedCarsScreen() {
 
 export function ShowroomServicesScreen() {
   const params = useSearchParams();
-  const selected =
-    serviceCategories.find(({ value }) => value === params.get('tab'))?.value || 'services';
-  const overview = selected === 'services';
-  function selectCategory(value: ServiceCategory) {
-    if (value === selected) return;
+  const query = params.get('q') || '';
+  const selected = query.trim()
+    ? 'services'
+    : serviceCategories.find(({ value }) => value === params.get('tab'))?.value || 'services';
+  // Existing Financing/Parts URLs continue to open their details from All.
+  const detail =
+    !query.trim() && ['financing', 'parts'].includes(params.get('tab') || '')
+      ? showroomService(params.get('tab') || '')
+      : undefined;
+  const overview = selected === 'services' && !detail;
+  const shown = overview ? searchShowroomServices(showroomServices, query) : detail ? [detail] : [];
+  function selectCategory(value: ServiceTab) {
+    if (value === selected && !query && !detail) return;
     window.history.pushState(null, '', serviceCategoryHref(value));
     window.scrollTo(0, 0);
+  }
+  function search(value: string) {
+    window.history.replaceState(null, '', serviceSearchHref(value));
   }
   return (
     <>
       <Header home />
       <h1 {...stylex.props(ui.srOnly)}>Services</h1>
       <div {...stylex.props(s.tabs)}>
+        <ShowroomSearch label="Search services" value={query} onChange={search} />
         <ShowroomTabs
           label="Service category"
           tabs={serviceCategories}
@@ -290,10 +327,19 @@ export function ShowroomServicesScreen() {
         aria-labelledby={'service-category-' + selected}
         {...stylex.props(s.page, s.servicesPage)}
       >
-        <div {...stylex.props(s.serviceGrid, !overview && s.singleCategory)}>
-          {showroomServices
-            .filter((service) => overview || service.category === selected)
-            .map((service) => {
+        {overview && (
+          <p aria-live="polite" {...stylex.props(s.serviceCount)}>
+            {shown.length} {shown.length === 1 ? 'service' : 'services'}
+          </p>
+        )}
+        {selected === 'import' || selected === 'sell' ? (
+          <div {...stylex.props(s.serviceFlow, selected === 'sell' && s.saleFlow)}>
+            <ShowroomServiceRequest key={selected} kind={selected} />
+            {selected === 'import' && <ShowroomImportExamples />}
+          </div>
+        ) : shown.length ? (
+          <div {...stylex.props(s.serviceGrid, !overview && s.singleCategory)}>
+            {shown.map((service) => {
               return (
                 <section
                   key={service.id}
@@ -314,7 +360,9 @@ export function ShowroomServicesScreen() {
                   {overview ? (
                     <Link
                       href={
-                        service.details
+                        service.details ||
+                        service.category === 'import' ||
+                        service.category === 'sell'
                           ? serviceCategoryHref(service.category)
                           : '/contact?service=' + service.id
                       }
@@ -324,7 +372,11 @@ export function ShowroomServicesScreen() {
                       aria-describedby={'showroom-service-' + service.id + '-copy'}
                       {...stylex.props(s.serviceAction)}
                     >
-                      {service.details ? 'View' : 'Enquire'}
+                      {service.details ||
+                      service.category === 'import' ||
+                      service.category === 'sell'
+                        ? 'View'
+                        : 'Enquire'}
                     </Link>
                   ) : (
                     <>
@@ -348,8 +400,20 @@ export function ShowroomServicesScreen() {
                 </section>
               );
             })}
-        </div>
-        <p {...stylex.props(s.note)}>Showroom template preview · Example services</p>
+          </div>
+        ) : (
+          <div {...stylex.props(ui.empty)}>
+            <h2 {...stylex.props(ui.title)}>No services found</h2>
+            <p>Try another search or browse all services.</p>
+            <Button variant="outline" onClick={() => search('')}>
+              Show all services
+            </Button>
+          </div>
+        )}
+        <p {...stylex.props(s.note)}>
+          Showroom template preview ·{' '}
+          {selected === 'import' ? 'Sample import gallery' : 'Example services'}
+        </p>
       </div>
     </>
   );

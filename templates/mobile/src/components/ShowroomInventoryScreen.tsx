@@ -23,6 +23,7 @@ import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomFilterSheet, type ShowroomSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { ShowroomTabs } from './ShowroomTabs';
+import { ShowroomSearch } from './ShowroomSearch';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
@@ -32,27 +33,6 @@ const s = stylex.create({
     zIndex: 25,
     backgroundColor: colors.background,
     paddingTop: 4,
-  },
-  search: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 10,
-    marginInline: 16,
-    paddingLeft: 16,
-    minHeight: 52,
-    backgroundColor: colors.surface,
-    borderRadius: 16,
-    color: colors.muted,
-  },
-  input: {
-    minWidth: 0,
-    width: '100%',
-    borderWidth: 0,
-    backgroundColor: 'transparent',
-    color: colors.text,
-    fontSize: 16,
-    paddingBlock: 14,
-    outlineOffset: 3,
   },
   filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 6, paddingLeft: 16 },
   filterScroll: {
@@ -82,12 +62,6 @@ const s = stylex.create({
     fontSize: 14,
     fontWeight: 500,
     whiteSpace: 'nowrap',
-  },
-  filterTrigger: {
-    borderRadius: 12,
-    backgroundColor: colors.text,
-    borderColor: colors.text,
-    color: colors.background,
   },
   filterCount: {
     display: 'inline-flex',
@@ -299,22 +273,11 @@ export function ShowroomInventoryScreen() {
     <>
       <Header home />
       <section aria-label="Find a vehicle" {...stylex.props(s.controls)}>
-        <div {...stylex.props(s.search)}>
-          <Icon name="search" size={22} />
-          <input
-            type="search"
-            aria-label="Search make or model"
-            placeholder="Search make or model"
-            value={filters.query}
-            onChange={(event) => change({ query: event.target.value })}
-            {...stylex.props(s.input)}
-          />
-          {filters.query ? (
-            <IconButton icon="close" label="Clear search" onClick={() => change({ query: '' })} />
-          ) : (
-            <span {...stylex.props(ui.pad)} />
-          )}
-        </div>
+        <ShowroomSearch
+          label="Search make or model"
+          value={filters.query}
+          onChange={(query) => change({ query })}
+        />
         <ShowroomTabs
           label="Vehicle category"
           tabs={showroomCategories.map(({ value, label, icon }) => ({
@@ -334,7 +297,7 @@ export function ShowroomInventoryScreen() {
             aria-describedby={activeFilterCount > 0 ? 'showroom-filter-count' : undefined}
             aria-haspopup="dialog"
             onClick={(event) => openSheet('all', event.currentTarget)}
-            {...stylex.props(s.pill, s.filterTrigger)}
+            {...stylex.props(s.pill, activeFilterCount > 0 && s.selectedPill)}
           >
             <SlidersHorizontal size={18} strokeWidth={2} aria-hidden="true" />
             Filters

@@ -2,15 +2,15 @@
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Car, MessageCircle, Wrench, type LucideIcon } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
-const tabs: [string, string, LucideIcon][] = [
-  ['/', 'Cars', Car],
-  ['/services', 'Services', Wrench],
-  ['/contact', 'Contact', MessageCircle],
+import { ShowroomNavIcon, type ShowroomNavIconName } from './ShowroomNavIcon';
+const tabs: [string, string, ShowroomNavIconName][] = [
+  ['/', 'Cars', 'cars'],
+  ['/services', 'Services', 'services'],
+  ['/contact', 'Contact', 'contact'],
 ];
 const s = stylex.create({
   root: {
@@ -37,7 +37,7 @@ const s = stylex.create({
     zIndex: 40,
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: colors.stripe,
+    borderTopColor: colors.line,
   },
   tab: {
     display: 'flex',
@@ -52,16 +52,7 @@ const s = stylex.create({
     fontWeight: 500,
     minWidth: 0,
   },
-  tabIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 52,
-    height: 28,
-    borderRadius: 14,
-  },
-  activeIcon: { backgroundColor: colors.activeSurface },
-  active: { color: colors.accent, fontWeight: 700 },
+  active: { color: colors.accent, fontWeight: 600 },
   toast: {
     position: 'fixed',
     left: '50%',
@@ -111,7 +102,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main id="main-content">{children}</main>
       {primary && (
         <nav aria-label="Main navigation" {...stylex.props(s.nav)}>
-          {tabs.map(([href, label, NavIcon]) => (
+          {tabs.map(([href, label, icon]) => (
             <Link
               key={href}
               href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
@@ -119,9 +110,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <span {...stylex.props(s.tabIcon, pathname === href && s.activeIcon)}>
-                <NavIcon size={22} strokeWidth={2} aria-hidden="true" focusable="false" />
-              </span>
+              <ShowroomNavIcon name={icon} />
               <span>{label}</span>
             </Link>
           ))}

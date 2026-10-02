@@ -1,5 +1,9 @@
 # Mobile showroom branding preview — 2 October 2026
 
+The navigation icons and contrasting Filters treatment below were revised later
+the same day. See [the current service-flow and control changes](mobile-service-flows-20261002.md).
+The generated logo and read-only dealer-project audit remain unchanged.
+
 ## Implemented direction
 
 The Mobile master at `templates/mobile` keeps Cars, Services and Contact as its
