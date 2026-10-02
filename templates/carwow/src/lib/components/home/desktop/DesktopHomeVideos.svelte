@@ -102,6 +102,9 @@
 		padding: 0 0 48px;
 	}
 	.home-videos__panel {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 		padding: 28px;
 		border: 1px solid var(--discovery-control-border);
 		border-radius: 12px;
@@ -138,6 +141,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: 16px;
+		margin-block: auto;
 	}
 	.home-video {
 		border-radius: 12px;
@@ -220,5 +224,10 @@
 		width: 100%;
 		height: 100%;
 		border: 0;
+	}
+	@media (max-width: 1199px) {
+		.home-videos__panel {
+			padding: 24px;
+		}
 	}
 </style>

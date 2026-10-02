@@ -4,7 +4,7 @@
 
 	import '$lib/styles/desktop-discovery.css';
 	import { onMount } from 'svelte';
-	import Plus from '@lucide/svelte/icons/plus';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 	import type { InventoryQuickFilterGroup } from '$lib/types/inventory';
 	import { getDesktopInventoryContext } from './desktop-inventory-context.svelte';
@@ -42,6 +42,13 @@
 			type="button"
 			disabled={!hydrated}
 			class:has-selection={selected.length > 0}
+			title={selected.length
+				? selected
+						.map((value) =>
+							i18n.spec(field.options.find((option) => option.value === value)?.label ?? value)
+						)
+						.join(', ')
+				: i18n.text(field.label)}
 			aria-haspopup="dialog"
 			onclick={(event) => openFromTrigger(event, field.name)}
 		>
@@ -53,7 +60,7 @@
 					: selected.length
 						? i18n.text(field.label) + ' (' + selected.length + ')'
 						: i18n.text(field.label)}</span
-			><Plus size={16} aria-hidden="true" />
+			><ChevronDown size={16} aria-hidden="true" />
 		</button>
 	{/each}
 	<button
@@ -70,9 +77,9 @@
 
 <style>
 	.inventory-filter-triggers {
-		display: grid;
-		grid-template-columns: repeat(5, minmax(0, 1fr));
-		gap: 12px;
+		display: flex;
+		justify-content: center;
+		gap: 8px;
 		background: transparent;
 		border-radius: 12px;
 		padding: 0;
@@ -80,13 +87,14 @@
 	button {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		gap: 12px;
-		height: 46px;
-		min-width: 0;
+		justify-content: center;
+		gap: 8px;
+		height: 40px;
+		min-width: 104px;
+		max-width: 208px;
 		padding: 0 14px;
 		border: 1px solid var(--discovery-filter-border);
-		border-radius: 8px;
+		border-radius: var(--discovery-pill-radius);
 		color: var(--discovery-filter-foreground);
 		background: var(--discovery-filter-background);
 		font: var(--sa-weight-medium) var(--sa-text-body-sm) / var(--sa-button-line-height)
@@ -127,10 +135,20 @@
 		justify-content: center;
 	}
 	.inventory-filter-triggers--sidebar {
+		display: grid;
 		grid-template-columns: minmax(0, 1fr);
 		padding: 20px;
 		border: 1px solid #e1e4e7;
 		align-self: start;
+	}
+	.inventory-filter-triggers--sidebar button {
+		max-width: none;
+		justify-content: space-between;
+	}
+	@media (pointer: coarse) {
+		button {
+			height: 44px;
+		}
 	}
 	h2 {
 		font: var(--sa-weight-strong) var(--sa-text-card-title)/1.2 var(--sa-font);

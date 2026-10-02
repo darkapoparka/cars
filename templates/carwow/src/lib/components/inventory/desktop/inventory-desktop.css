@@ -3369,8 +3369,8 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 }
 .inventory-refined .inventory-hero .daynight-yellow-route-hero__deck {
 	background: var(--discovery-panel) !important;
-	padding: 14px 18px !important;
-	border-radius: 12px;
+	padding: 20px 24px !important;
+	border-radius: 16px;
 }
 .inventory-refined .inventory-hero .daynight-inventory-searchbar__label {
 	position: absolute;
@@ -3387,7 +3387,7 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	gap: 4px;
 	background: #fff !important;
 	border: 1px solid var(--discovery-control-border) !important;
-	border-radius: var(--discovery-control-radius) !important;
+	border-radius: var(--discovery-search-radius) !important;
 	padding: 4px !important;
 }
 .inventory-refined .inventory-hero .daynight-inventory-search__input {
@@ -3398,8 +3398,8 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	width: 100% !important;
 	height: var(--discovery-search-action-size) !important;
 	border: 0 !important;
-	border-radius: 8px !important;
-	background: #fff !important;
+	border-radius: 0 !important;
+	background: transparent !important;
 	padding: 0 9px !important;
 	font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font) !important;
 	color: #171b1e !important;
@@ -3413,12 +3413,12 @@ body.inner-page .card-box.card-box-style-1 .card--img {
 	min-height: 0 !important;
 	position: static !important;
 	flex: 0 0 auto;
-	width: auto !important;
+	width: var(--discovery-search-action-size) !important;
 	min-width: var(--discovery-search-action-size);
 	height: var(--discovery-search-action-size) !important;
-	padding: 0 20px !important;
+	padding: 0 !important;
 	background: var(--discovery-action) !important;
-	border-radius: 5px !important;
+	border-radius: 50% !important;
 	color: #fff !important;
 	font: var(--sa-button-font-weight) var(--sa-button-font-size) / var(--sa-button-line-height)
 		var(--sa-font) !important;

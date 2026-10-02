@@ -67,7 +67,6 @@
 				headingId="daynight-inventory-title"
 				title={i18n.t('copy.3bce9c370af2')}
 				panel="light"
-				deckWidth="wide"
 				children={inventoryControls}
 			/>
 		</div>
@@ -110,7 +109,7 @@
 	}
 	.inventory-hero-controls {
 		display: grid;
-		gap: 12px;
+		gap: 16px;
 	}
 
 	.inventory-hero-controls__search {

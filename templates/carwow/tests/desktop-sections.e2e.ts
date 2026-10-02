@@ -10,11 +10,24 @@ for (const width of [992, 1280, 1440, 1920]) {
 			await expect(page.locator('.hero-intent')).toBeVisible();
 			const frame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
 			const panel = (await page.locator('.hero-intent').boundingBox())!;
-			const tabs = (await page.locator('.hero-intent__tabs').boundingBox())!;
+			const tabs = await page.locator('.hero-intent__tabs button').evaluateAll((buttons) => {
+				const first = buttons[0].getBoundingClientRect();
+				const last = buttons.at(-1)!.getBoundingClientRect();
+				return { left: first.left, right: last.right, width: last.right - first.left };
+			});
 			expect(tabs.width).toBeLessThan(panel.width * 0.75);
-			await expect(page.locator('#hero-buy-query')).toHaveCSS(
+			expect(Math.abs((tabs.left + tabs.right) / 2 - panel.x - panel.width / 2)).toBeLessThan(1);
+			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
+				'border-bottom-color',
+				'rgb(23, 27, 30)'
+			);
+			await expect(page.locator('.hero-intent__row--search')).toHaveCSS(
 				'background-color',
 				'rgb(255, 255, 255)'
+			);
+			await expect(page.locator('#hero-buy-query')).toHaveCSS(
+				'background-color',
+				'rgba(0, 0, 0, 0)'
 			);
 			for (const route of ['services', 'about', 'blog']) {
 				await page.goto(`/${locale}/${route}`);
@@ -95,7 +108,17 @@ for (const width of [992, 1280, 1440, 1920]) {
 						)
 						.toBe(true);
 					const pills = page.locator('.blog-category-switch a, .blog-quick-topics a');
-					await expect(pills.first()).toHaveCSS('border-radius', '8px');
+					await expect
+						.poll(() =>
+							pills
+								.first()
+								.evaluate(
+									(pill) =>
+										parseFloat(getComputedStyle(pill).borderRadius) >=
+										pill.getBoundingClientRect().height / 2
+								)
+						)
+						.toBe(true);
 					await expect(pills.first()).toHaveCSS('background-color', 'rgb(23, 27, 30)');
 				}
 				if (width === 1440 && locale === 'en')

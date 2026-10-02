@@ -7,7 +7,7 @@
 	import '$lib/styles/desktop-discovery.css';
 </script>
 
-<div class="daynight-home-inventory__pills">
+<div class="daynight-home-inventory__pills" role="group" aria-label={i18n.t('copy.0ff4d985dee2')}>
 	{#each desktopHomeInventoryPills as pill (pill.href)}
 		<a
 			class={['daynight-home-inventory__pill desktop-discovery-chip', pill.isActive && 'is-active']}

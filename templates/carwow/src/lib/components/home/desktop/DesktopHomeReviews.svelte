@@ -300,6 +300,7 @@
 		height: 32px;
 	}
 	.home-reviews-panel {
+		height: 100%;
 		padding: 28px;
 		border: 1px solid var(--discovery-control-border);
 		border-radius: 12px;

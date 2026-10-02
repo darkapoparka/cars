@@ -6,7 +6,7 @@ Updated 2026-10-02. Desktop refinement of the existing dealer site, with separat
 
 Yellow identifies brand surfaces and the hover state of light action controls. Panels are white; fields and control rails are light grey. Do not introduce cream, beige, warm-grey fills or brown-tinted borders into desktop controls.
 
-Warm yellow identifies the dealership. White groups a task. White provides a clean reading and input surface. Black submits the primary action and identifies the current mode or selected filter. Light neutral controls open filters without competing with the primary action. Red identifies meaningful status, errors and the approved Sell / trade-in promotional banner. Avoid introducing another accent or a different neutral palette per route.
+Warm yellow identifies the dealership. White groups a task. White provides a clean reading and input surface. Black submits the primary action and identifies selected filters; an ink underline identifies the current Home mode. Light neutral controls open filters without competing with the primary action. Red identifies meaningful status, errors and the approved Sell / trade-in promotional banner. Avoid introducing another accent or a different neutral palette per route.
 
 The paired homepage promotional banners use yellow with black text and a black CTA for Buy, and deep brand red (`--sa-red-strong`) with white text and a white CTA for Sell / trade-in. Check icons inherit the text color. Keep both banners flat, with matching geometry. The white Sell CTA uses the shared yellow hover; the black Buy CTA uses charcoal hover.
 
@@ -29,7 +29,7 @@ The previous mismatch was measurable: home and inventory shortcuts used differen
 | Canvas                   | `--discovery-canvas`                                   | `#f4f6fa`; cool light-grey discovery section         |
 | Task panel               | `--discovery-panel`                                    | `#ffffff`; hero task boxes and filter groups         |
 | Surface                  | `--discovery-surface`                                  | `#ffffff`; text fields, chips, vehicle cards         |
-| Quiet surface            | `--discovery-muted-surface`                            | `#f3f4f6`; segmented rail                            |
+| Quiet surface            | `--discovery-muted-surface`                            | `#f3f4f6`; supporting controls                       |
 | Text                     | `--discovery-ink`                                      | `#171b1e`                                            |
 | Secondary text           | `--discovery-muted`                                    | `#62676e`; readable placeholders and supporting text |
 | Border                   | `--discovery-control-border`                           | `#d9dde1`; neutral grey, 1px                         |
@@ -46,15 +46,15 @@ Desktop header utilities, including Sell, are icon-only: 24px outline icons insi
 
 ## Control families
 
-| Family              | Geometry                                                    | State and behavior                                                                                                                                                                |
-| ------------------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Task panel          | 12px radius; flat white                                     | Group one task. No shadow, glass, gradient or heavy black frame.                                                                                                                  |
-| Buy / Sell / Import | 36px tab, 42px rail; 15px semibold                          | Dark active tab identifies a mode. Arrow keys change mode; retain independent drafts. Coarse pointer tabs are at least 44px.                                                      |
-| Search              | 54px outer field; 8px radius; 44px trailing icon action     | White field, black action, white 20px Lucide Search icon. Accessible label and title are required. Home submits the query; inventory opens its shared search/filter dialog.       |
-| Filter trigger      | 46px high; 8px radius; 15px medium                          | Light neutral default with dark text/chevrons; yellow hover; black applied selection with white text/chevrons. Opens the existing filter interface.                               |
-| Shortcut chip       | 36px high; 8px radius; 14px medium; 12px horizontal padding | Text-only, white default, yellow hover, black active. Same class and state styling on home and inventory. At least 44px for coarse pointers.                                      |
-| Dialog field        | Light surface and neutral border; 8px radius                | Use the same neutral family for triggers and fields inside the dialog. Apply submits the draft; Escape cancels and returns focus.                                                 |
-| Vehicle card        | White, 12px radius, 1px neutral border                      | 4:3 photography, a single-line model name, four compact specification badges, then price and the bottom action. Retain white circular favorite/compare controls over photography. |
+| Family              | Geometry                                                          | State and behavior                                                                                                                                                                |
+| ------------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Task panel          | Home and inventory: 720px maximum, 16px radius, 20px/24px padding | Group one task. Other route panels retain their existing 12px corners. No shadow, glass, gradient or heavy black frame.                                                           |
+| Buy / Sell / Import | 44px tabs, 15px semibold, 3px ink underline                       | Underline identifies the current mode. Arrow keys change mode; retain independent drafts and equal panel heights.                                                                 |
+| Search              | 54px pill-shaped field; 44px circular trailing action             | White field, black action, white 20px Lucide Search icon. Accessible label and title are required. Home submits the query; inventory opens its shared search/filter dialog.       |
+| Filter trigger      | 40px pill; 15px medium; 104px minimum; sized to its label         | Light neutral default with dark text/chevrons; yellow hover; black applied selection with white text/chevrons. Opens the existing filter interface.                               |
+| Shortcut chip       | 40px pill; 14px medium; 12px horizontal padding                   | Text-only, white default, yellow hover, black active. Same class and state styling on home and inventory. At least 44px for coarse pointers.                                      |
+| Dialog field        | Light surface and neutral border; 8px radius                      | Use the same neutral family for triggers and fields inside the dialog. Apply submits the draft; Escape cancels and returns focus.                                                 |
+| Vehicle card        | White, 12px radius, 1px neutral border                            | 4:3 photography, a single-line model name, four compact specification badges, then price and the bottom action. Retain white circular favorite/compare controls over photography. |
 
 ## Typography, icons and spacing
 
@@ -64,7 +64,7 @@ Desktop header utilities, including Sell, are icon-only: 24px outline icons insi
 - Lucide supplies utility icons: 20px for search, 16px chevrons, 18px filter tools, consistent 2px stroke. Icons inherit their control color.
 - Shortcut text already explains the category. Do not add miniature car drawings, decorative price symbols, or mixed icon fonts.
 - Use 8px within small groups, 12–16px between control rows, and 24–36px between content groups. Preserve distinct mobile and desktop layouts.
-- Circles belong to icon actions over media; rounded rectangles belong to discovery controls. Status badges retain their own meaning.
+- Discovery search and filter shortcuts use rounded pills; circular icon actions submit search or act on media. Status badges retain their own meaning.
 
 ## Focus and effects
 
@@ -72,7 +72,8 @@ Desktop header utilities, including Sell, are icon-only: 24px outline icons insi
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------- |
 | Black primary CTA                                                              | Charcoal `--desktop-action-hover`, white text/icons                 |
 | White or light-grey button, filter, shortcut, inactive mode tab, photo utility | Brand yellow background and border, dark text/icons                 |
-| Selected filter, shortcut, mode tab or photo utility                           | Charcoal with white text/icons; remains visibly selected            |
+| Selected filter, shortcut or photo utility                                     | Charcoal with white text/icons; remains visibly selected            |
+| Selected Home mode tab                                                         | Quiet neutral fill; retain dark text and the ink underline          |
 | Header utility on yellow                                                       | Existing subtle ink-tinted background; keep the icon-only treatment |
 | Text input                                                                     | Keep its neutral fill; use the focus outline when editing           |
 | Vehicle card                                                                   | Neutral border emphasis; keep the card surface white                |
@@ -101,7 +102,7 @@ The standard desktop heroes share a 400px minimum height, 36px top padding, 32px
 
 Standard route task panels default to white with 20px padding. Compact panels keep that padding while using a narrower width. Reviews use 24px grid gaps and author rows aligned to the bottom of each card; the Home review heading has one 24px gap above its cards. Longer reading routes use the existing 76px section rhythm, with a 52px first-section inset. Preserve all mobile compositions and shared font/data assets when applying these desktop rules.
 
-Home's mode rail fits its three tabs and is centered within the task panel. Tabs have a 104px minimum width, without extra shadows. Keep the search input white inside its white frame. Newest cars has a centered title, a full-width nine-pill grid and a final inventory-browse tile, without a heading or footer CTA. Inventory uses a contained 1040px hero panel with a full-width search row, followed by one row of Make, Model, Price, Mileage and More filters. Fuel, transmission, availability and extras remain in the full filter dialog. The results toolbar owns a separate compact row of five car-type shortcuts: All, SUV, Sedan, Coupe and Van. Use 8px gaps and content-width chips, 12px below the count/sort toolbar. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and URL state. Other selected filters appear as removable tags above the results rather than permanent preset pills.
+Home's three mode tabs are centered above the search with a restrained baseline and active underline. Home and inventory share a 720px maximum white task panel, a rounded search field and a circular search action. Use 16px between search and the centered, compact filter row; do not stretch filters into large equal-width boxes. Keep all four Home filters, and Make, Model, Price, Mileage and More filters in inventory. Fuel, transmission, availability and extras remain in the full filter dialog. Newest cars retains its centered title, full-width nine-pill grid and final inventory-browse tile, without a heading or footer CTA. The results toolbar owns a separate compact row of five car-type shortcuts: All, SUV, Sedan, Coupe and Van. Use 8px gaps and content-width chips, 12px below the count/sort toolbar. Active shortcuts keep their black state and remove affordance; keyboard activation preserves focus and URL state. Other selected filters appear as removable tags above the results rather than permanent preset pills.
 
 The desktop header-search overlay uses the same complete 54px field frame, white input and 44px trailing action. `desktop-controls.css` owns this adapter inside the 992px media boundary. Keep the phone field and shared search submission/lifecycle unchanged.
 
@@ -116,6 +117,8 @@ Type and make headings are centered without a separate heading CTA. The last til
 The video group uses three equal 16:9 thumbnails in one row. The retained YouTube logo has substantial canvas padding; the desktop heading clips that padding with a proportional CSS window so the visible mark aligns with the heading's type. Both the wrapper and image explicitly inherit the heading font to retain those proportions. Leave the source asset unchanged. Thumbnail artwork carries its own text; video titles remain in accessible play/close/player labels, without captions below. Round and clip the media itself on all four corners. Cache the official 1280×720 thumbnails in the desktop-only asset directory, leave existing mobile images/data intact, and create the player only after activation.
 
 `DesktopServicesPage.svelte` uses five white service cards per row at desktop widths, with 16:9 images, 18px headings and two-line 14px description previews. All six services remain available. Hero shortcuts form two balanced rows of three compact links, and each card still opens the existing request form with its service selected.
+
+Home groups YouTube and testimonials in equal grid rows, allowing the taller content to set both panel heights. Both white panels stretch to their row and use matching 28px padding, or 24px at 992–1199px. Keep video thumbnails at 16:9, centered in the available content space; do not stretch media or clip review text to force a fixed height.
 
 `DesktopAboutPage.svelte` groups the first introduction below the hero inside a compact white panel, with centered copy and a 28px heading. Do not restore the oversized photo/text split. Team, contact and map content retain their functional compositions.
 

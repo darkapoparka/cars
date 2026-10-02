@@ -34,14 +34,23 @@
 				ctaLabel={i18n.t('copy.0adfd4e68815')}
 			/>
 			<DesktopHomeWhyDayNight showMetrics={false} variant="campaign-grid" />
-			<DesktopHomeVideos />
-			<DesktopHomeReviews
-				showActionCards={false}
-				showHeaderCta={true}
-				showBelowCta={false}
-				ctaLabel={i18n.text('Виж всички отзиви')}
-			/>
+			<div class="home-media-panels">
+				<DesktopHomeVideos />
+				<DesktopHomeReviews
+					showActionCards={false}
+					showHeaderCta={true}
+					showBelowCta={false}
+					ctaLabel={i18n.text('Виж всички отзиви')}
+				/>
+			</div>
 		</main>
 		<DesktopHomeFooter />
 	</div>
 </div>
+
+<style>
+	.home-media-panels {
+		display: grid;
+		grid-auto-rows: 1fr;
+	}
+</style>

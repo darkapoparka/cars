@@ -96,7 +96,7 @@
 			onclick={submit}
 		>
 			<Search size={20} strokeWidth={2} aria-hidden="true" />
-			<span>{i18n.t('copy.6517beda9674')}</span>
+			<span class="sr-only">{i18n.t('copy.6517beda9674')}</span>
 		</button>
 	</div>
 </div>
@@ -162,7 +162,7 @@
 	}
 
 	:global(.inventory-template-shell .daynight-inventory-search:focus-within) {
-		border-color: #b00000 !important;
+		border-color: var(--discovery-action) !important;
 		overflow: visible;
 	}
 
@@ -180,7 +180,7 @@
 			.daynight-inventory-search:focus-within
 			.daynight-inventory-search__input
 	) {
-		background: #fff !important;
+		background: transparent !important;
 		border-color: transparent !important;
 		box-shadow: none !important;
 		outline: 0 !important;
@@ -192,7 +192,7 @@
 			[data-daynight-inventory-layout]
 			.daynight-inventory-search__input:focus
 	) {
-		background: #fff !important;
+		background: transparent !important;
 		border-color: transparent !important;
 		box-shadow: none !important;
 		outline: 0 !important;
@@ -204,7 +204,7 @@
 			.daynight-inventory-search
 			.daynight-inventory-searchbar__submit:focus-visible
 	) {
-		outline: 2px solid #b00000 !important;
+		outline: 2px solid var(--discovery-action) !important;
 		outline-offset: 2px;
 	}
 </style>

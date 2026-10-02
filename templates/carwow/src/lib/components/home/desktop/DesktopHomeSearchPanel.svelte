@@ -303,7 +303,7 @@
 						title={i18n.t('copy.255bbb6ac445')}
 					>
 						<Search size={20} strokeWidth={2} aria-hidden="true" />
-						<span>{i18n.t('copy.6517beda9674')}</span>
+						<span class="sr-only">{i18n.t('copy.6517beda9674')}</span>
 					</button>
 				</div>
 				<div class="hero-intent__quick-fields">
@@ -322,7 +322,7 @@
 							<span>{i18n.spec(quickDisplayLabel(field))}</span>
 							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"
 								><path
-									d="M12 5v14M5 12h14"
+									d="m6 9 6 6 6-6"
 									stroke="currentColor"
 									stroke-width="2"
 									stroke-linecap="round"
@@ -602,34 +602,32 @@
 	/* The task panel owns its controls; legacy hero selectors do not style it. */
 	.hero-intent {
 		background: var(--discovery-panel);
-		border-radius: var(--discovery-panel-radius);
+		border-radius: 16px;
 		color: var(--sa-ink);
 		font-family: var(--sa-font);
-		padding: 20px;
+		padding: 20px 24px;
 		text-align: left;
 		width: 100%;
 	}
 	.hero-intent__tabs {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 4px;
-		padding: 3px;
-		background: var(--discovery-muted-surface);
-		border-radius: 8px;
-		margin: 0 auto 16px;
-		width: fit-content;
+		display: flex;
+		justify-content: center;
+		gap: 24px;
+		border-bottom: 1px solid var(--discovery-control-border);
+		margin: 0 0 16px;
 	}
 	.hero-intent__tabs button {
 		background: transparent;
 		border: 0;
-		border-radius: 6px;
-		color: #59616c;
+		border-bottom: 3px solid transparent;
+		border-radius: 6px 6px 0 0;
+		color: var(--discovery-muted);
 		cursor: pointer;
 		font: var(--sa-weight-semibold) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
-		min-height: 36px;
-		min-width: 104px;
-		padding: 0 18px;
+		min-height: 44px;
+		margin-bottom: -1px;
+		padding: 0 16px;
 	}
 	.hero-intent__tabs button:hover {
 		background: var(--discovery-light-hover);
@@ -640,11 +638,11 @@
 		opacity: 0.6;
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
-		background: var(--discovery-action);
-		color: #fff;
+		border-bottom-color: var(--discovery-action);
+		color: var(--discovery-ink);
 	}
 	.hero-intent__tabs button[aria-selected='true']:hover {
-		background: var(--discovery-action-hover);
+		background: var(--discovery-muted-surface);
 	}
 	.hero-intent__panel {
 		min-height: 140px;
@@ -716,7 +714,7 @@
 		height: var(--discovery-search-height);
 		padding: 4px;
 		border: 1px solid var(--discovery-control-border);
-		border-radius: var(--discovery-control-radius);
+		border-radius: var(--discovery-search-radius);
 		background: #fff;
 	}
 	.hero-intent__row--search:focus-within {
@@ -728,16 +726,18 @@
 		flex: 1;
 		height: var(--discovery-search-action-size);
 		border: 0;
+		border-radius: 0;
+		background: transparent;
 		padding: 0 9px;
 		outline: none;
 		box-shadow: none;
 	}
 	.hero-intent__row--search .hero-intent__submit {
 		flex: none;
-		width: auto;
+		width: var(--discovery-search-action-size);
 		height: var(--discovery-search-action-size);
-		padding: 0 20px;
-		border-radius: 5px;
+		padding: 0;
+		border-radius: 50%;
 	}
 	@media (pointer: coarse) {
 		.hero-intent__tabs button {
@@ -745,16 +745,16 @@
 		}
 	}
 	.hero-intent__quick-fields {
-		display: grid;
-		grid-template-columns: repeat(4, minmax(0, 1fr));
+		display: flex;
+		justify-content: center;
 		gap: 8px;
-		margin-top: 12px;
+		margin-top: 16px;
 	}
 	.hero-intent__filter {
 		align-items: center;
 		background: var(--discovery-filter-background);
 		border: 1px solid var(--discovery-filter-border);
-		border-radius: 8px;
+		border-radius: var(--discovery-pill-radius);
 		color: var(--discovery-filter-foreground);
 		cursor: pointer;
 		display: flex;
@@ -762,10 +762,11 @@
 		font-size: var(--sa-text-body-sm);
 		font-weight: var(--sa-weight-medium);
 		gap: 8px;
-		justify-content: space-between;
-		min-height: 46px;
-		min-width: 0;
-		padding: 8px 12px;
+		justify-content: center;
+		height: 40px;
+		min-width: 104px;
+		max-width: 176px;
+		padding: 0 14px;
 	}
 	.hero-intent__filter span {
 		overflow: hidden;
