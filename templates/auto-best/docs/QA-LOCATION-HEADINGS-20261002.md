@@ -4,7 +4,9 @@ About and general Contact use a plain, left aligned “Карта” / “Map”
 a muted address below it. PDP keeps “Местоположение” / “Location”. The mobile
 heading and address have no location icon. General Contact's mobile details card
 uses plain address, visit and phone rows with right arrows; the leading red icons
-are hidden. Desktop keeps its existing map composition and PDP address icon.
+are hidden. Mobile map directions are left aligned, with the arrow beside the
+label. About/Contact's map title, address and directions share the same left
+inset. Desktop keeps its existing map composition and PDP address icon.
 
 Earlier plain-heading verification at `http://127.0.0.1:6461`, using Node 22.20.0:
 
@@ -40,3 +42,14 @@ warnings. Current evidence is in `runtime/contact-simple-rows-20261002/`:
 `review-chromium.json`, `review-webkit.json`, `preview-390.png`, enlarged-text
 screenshots, `static-checks.log`, `check.log` and `build.log`. The new map label is
 owned by `localization/common.json`; its catalog and manifest were regenerated.
+
+The mobile directions alignment was verified in eight Chromium states and two
+Windows WebKit states. The checks cover Contact, About and PDP at 390px, BG/EN
+Contact at 320px with 200% text, the 991/992px boundary and desktop PDP at 1440px.
+Mobile text starts at the link's left padding and matches About/Contact's map
+heading. Arrow and label containment, the 44px minimum target, real directions
+URL, external-link attributes, focus outline and page overflow passed. Desktop
+PDP retains its centered map action. CSS policy, tokens, typography, Svelte check
+(zero errors/warnings) and the production build passed. Evidence is under
+`runtime/map-link-alignment-20261002/`: both `review-*.json` reports,
+`preview-390.png`, `static-checks.log`, `check.log` and `build.log`.
