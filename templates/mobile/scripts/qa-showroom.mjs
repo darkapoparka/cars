@@ -77,6 +77,9 @@ async function run(name, engine) {
       count,
     );
   }
+  async function selectedServiceTab(label) {
+    await page.getByRole('tab', { name: label, exact: true, selected: true }).waitFor();
+  }
   async function geometry(label) {
     const imageFailures = await page.locator('img').evaluateAll(async (images) => {
       // Below-fold showroom cards load lazily. Verify the assets after requesting them.
@@ -400,6 +403,64 @@ async function run(name, engine) {
     check('Saved cars persist on reload and can be removed without registration');
 
     await go('/services');
+    assert.deepEqual(
+      await page
+        .getByRole('tablist', { name: 'Service category' })
+        .getByRole('tab')
+        .allTextContents(),
+      ['Services', 'Financing', 'Parts'],
+    );
+    assert.equal(await page.locator('[data-showroom-service]').count(), 4);
+    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
+    await selectedServiceTab('Financing');
+    assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
+    await page.getByRole('tab', { name: 'Financing', exact: true }).press('ArrowRight');
+    await selectedServiceTab('Parts');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Parts', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    assert.equal(await page.locator(':focus').getAttribute('id'), 'service-category-parts');
+    await page.reload({ waitUntil: 'load' });
+    await page.getByRole('heading', { name: 'Parts & accessories', exact: true }).waitFor();
+    await settle();
+    await page.goBack();
+    await page.waitForFunction(
+      () =>
+        document.querySelector('#service-category-financing')?.getAttribute('aria-selected') ===
+        'true',
+    );
+    await page.goForward();
+    await page.waitForFunction(
+      () =>
+        document.querySelector('#service-category-parts')?.getAttribute('aria-selected') === 'true',
+    );
+    await page.getByRole('tab', { name: 'Parts', exact: true }).press('Home');
+    await selectedServiceTab('Services');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Services', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    await page.getByRole('tab', { name: 'Services', exact: true }).press('End');
+    await selectedServiceTab('Parts');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Parts', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    check('Service categories support keyboard focus, deep links, reload and Back/Forward');
+    await go('/services?tab=unrecognized');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Services', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    await page.locator('[data-showroom-service="viewing"]').click({ position: { x: 20, y: 20 } });
+    await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('service'), 'viewing');
+    await page.getByRole('link', { name: 'View service', exact: true }).click();
+    await selectedServiceTab('Services');
+    await page.getByRole('tab', { name: 'Services', exact: true }).waitFor();
+    check('Compact service cards open the matching enquiry; unknown categories fall back safely');
+    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.match(
@@ -415,6 +476,47 @@ async function run(name, engine) {
       .getByText('Draft saved on this device. Nothing was sent.', { exact: true })
       .waitFor();
     assert.equal(sentRequests, 0);
+    const financingDraft = 'Please discuss a deposit and payment options for my next car.';
+    await page.getByRole('textbox', { name: 'Enquiry message' }).fill(financingDraft);
+    await page.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
+    await page.reload({ waitUntil: 'load' });
+    await page.waitForFunction(
+      (expected) =>
+        document.querySelector('textarea[aria-label="Enquiry message"]')?.value === expected,
+      financingDraft,
+    );
+    assert.equal(
+      await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
+      financingDraft,
+    );
+    await page.getByRole('link', { name: 'View service', exact: true }).click();
+    await selectedServiceTab('Financing');
+    assert.equal(
+      await page.getByRole('tab', { name: 'Financing', exact: true }).getAttribute('aria-selected'),
+      'true',
+    );
+    await page.getByRole('tab', { name: 'Parts', exact: true }).click();
+    await page.getByRole('link', { name: 'Ask about parts', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
+    assert.match(
+      await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
+      /parts & accessories/,
+    );
+    await page
+      .getByRole('textbox', { name: 'Enquiry message' })
+      .fill('Please check availability of replacement parts for my car.');
+    await page.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
+    await page.getByRole('link', { name: 'View service', exact: true }).click();
+    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
+    await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
+    assert.equal(
+      await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
+      financingDraft,
+    );
+    assert.equal(sentRequests, 0);
+    check(
+      'Finance and parts drafts persist independently; View service restores the selected category',
+    );
     await go('/vehicle/bmw-x6');
     await page.getByRole('link', { name: 'Enquire', exact: true }).click();
     assert.match(
@@ -443,6 +545,11 @@ async function run(name, engine) {
             (route === '/' ? 'cars' : route.replaceAll('/', '-').slice(1)) + '-' + width,
           );
         }
+        for (const tab of ['financing', 'parts']) {
+          await go('/services?tab=' + tab);
+          await geometry(width + 'px service ' + tab);
+          await capture('services-' + tab + '-' + width);
+        }
       }
       await page.setViewportSize({ width: 320, height: 480 });
       await go('/');
@@ -465,7 +572,14 @@ async function run(name, engine) {
         await page.keyboard.press('Escape');
       }
       await page.setViewportSize({ width: 320, height: 700 });
-      for (const route of ['/', '/services', '/contact']) {
+      for (const route of [
+        '/',
+        '/services',
+        '/services?tab=financing',
+        '/services?tab=parts',
+        '/contact',
+        '/contact?service=parts',
+      ]) {
         await go(route);
         await page.evaluate(() => {
           const sizes = [...document.querySelectorAll('body *')].map((element) => [
@@ -479,7 +593,10 @@ async function run(name, engine) {
           }
         });
         await geometry('320px 200% text ' + route);
-        await capture((route === '/' ? 'cars' : route.slice(1)) + '-320-text200');
+        await capture(
+          (route === '/' ? 'cars' : route.slice(1).replaceAll('?', '-').replaceAll('=', '-')) +
+            '-320-text200',
+        );
       }
       check('320/390/1440px routes, short-height sheets and 200% text reflow');
     }

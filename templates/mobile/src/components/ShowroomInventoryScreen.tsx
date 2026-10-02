@@ -22,6 +22,7 @@ import { MakePicker } from './MakePicker';
 import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomFilterSheet, type ShowroomSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
+import { ShowroomTabs } from './ShowroomTabs';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
@@ -52,43 +53,6 @@ const s = stylex.create({
     fontSize: 16,
     paddingBlock: 14,
     outlineOffset: 3,
-  },
-  tabs: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(5,minmax(0,1fr))',
-    height: 48,
-    marginTop: 8,
-    backgroundColor: colors.background,
-    borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: colors.line,
-  },
-  tab: {
-    position: 'relative',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minWidth: 0,
-    paddingInline: 2,
-    borderWidth: 0,
-    backgroundColor: 'transparent',
-    color: colors.muted,
-    fontSize: 15,
-    fontWeight: 500,
-  },
-  chosenTab: {
-    color: colors.accent,
-    '::after': {
-      content: '""',
-      position: 'absolute',
-      bottom: 0,
-      left: 2,
-      right: 2,
-      height: 3,
-      borderTopLeftRadius: 3,
-      borderTopRightRadius: 3,
-      backgroundColor: colors.accent,
-    },
   },
   filterRow: { display: 'flex', alignItems: 'center', gap: 8, paddingBlock: 6, paddingLeft: 16 },
   filterScroll: {
@@ -345,43 +309,18 @@ export function ShowroomInventoryScreen() {
             <span {...stylex.props(ui.pad)} />
           )}
         </div>
-        <div role="tablist" aria-label="Vehicle category" {...stylex.props(s.tabs)}>
-          {showroomCategories.map(({ value, label, icon }, index) => (
-            <button
-              key={value}
-              type="button"
-              role="tab"
-              id={'category-' + value}
-              aria-controls="showroom-stock"
-              aria-label={label}
-              aria-selected={filters.category === value}
-              tabIndex={filters.category === value ? 0 : -1}
-              title={label}
-              onClick={() => selectCategory(value)}
-              onKeyDown={(event) => {
-                const next =
-                  event.key === 'ArrowRight'
-                    ? (index + 1) % showroomCategories.length
-                    : event.key === 'ArrowLeft'
-                      ? (index + showroomCategories.length - 1) % showroomCategories.length
-                      : event.key === 'Home'
-                        ? 0
-                        : event.key === 'End'
-                          ? showroomCategories.length - 1
-                          : null;
-                if (next === null) return;
-                event.preventDefault();
-                selectCategory(showroomCategories[next].value);
-                event.currentTarget.parentElement
-                  ?.querySelectorAll<HTMLButtonElement>('[role="tab"]')
-                  [next]?.focus({ preventScroll: true });
-              }}
-              {...stylex.props(s.tab, filters.category === value && s.chosenTab)}
-            >
-              <Icon name={icon} size={40} />
-            </button>
-          ))}
-        </div>
+        <ShowroomTabs
+          label="Vehicle category"
+          tabs={showroomCategories.map(({ value, label, icon }) => ({
+            value,
+            label,
+            content: <Icon name={icon} size={40} />,
+          }))}
+          selected={filters.category}
+          panelId="showroom-stock"
+          idPrefix="category-"
+          onChange={selectCategory}
+        />
         <div {...stylex.props(s.filterRow)}>
           <button
             type="button"

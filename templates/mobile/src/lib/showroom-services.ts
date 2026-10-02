@@ -1,0 +1,79 @@
+export const serviceCategories = [
+  { value: 'services', label: 'Services' },
+  { value: 'financing', label: 'Financing' },
+  { value: 'parts', label: 'Parts' },
+] as const;
+
+export type ServiceCategory = (typeof serviceCategories)[number]['value'];
+export type ShowroomService = {
+  id: string;
+  category: ServiceCategory;
+  title: string;
+  copy: string;
+  action: string;
+  details?: readonly { label: string; copy: string }[];
+};
+
+// Example offerings; confirm availability when personalizing the dealer template.
+export const showroomServices: readonly ShowroomService[] = [
+  {
+    id: 'viewing',
+    category: 'services',
+    title: 'Viewings & test drives',
+    copy: 'Choose a car and ask about a convenient time to see it.',
+    action: 'Arrange a viewing',
+  },
+  {
+    id: 'trade-in',
+    category: 'services',
+    title: 'Part exchange',
+    copy: 'Ask about a valuation towards your next car.',
+    action: 'Ask about part exchange',
+  },
+  {
+    id: 'sourcing',
+    category: 'services',
+    title: 'Find a car',
+    copy: 'Share your preferred make, model and budget.',
+    action: 'Ask us to find a car',
+  },
+  {
+    id: 'servicing',
+    category: 'services',
+    title: 'Servicing & repairs',
+    copy: 'Check the showroom’s maintenance and repair options.',
+    action: 'Ask about servicing',
+  },
+  {
+    id: 'financing',
+    category: 'financing',
+    title: 'Financing',
+    copy: 'Discuss payment options for your next car with the showroom.',
+    action: 'Ask about financing',
+    details: [
+      { label: 'Budget', copy: 'The car or price range you have in mind.' },
+      { label: 'Deposit', copy: 'Your preferred upfront amount or part exchange.' },
+      { label: 'Monthly payment', copy: 'Your preferred monthly budget.' },
+    ],
+  },
+  {
+    id: 'parts',
+    category: 'parts',
+    title: 'Parts & accessories',
+    copy: 'Ask about replacement parts and accessories for your vehicle.',
+    action: 'Ask about parts',
+    details: [
+      { label: 'Your vehicle', copy: 'Make, model and year.' },
+      { label: 'What you need', copy: 'The part name or accessory you are looking for.' },
+      { label: 'Availability', copy: 'Ask about supply and fitting options.' },
+    ],
+  },
+];
+
+export function showroomService(id?: string) {
+  return showroomServices.find((service) => service.id === id);
+}
+
+export function serviceCategoryHref(category: ServiceCategory) {
+  return category === 'services' ? '/services' : '/services?tab=' + category;
+}
