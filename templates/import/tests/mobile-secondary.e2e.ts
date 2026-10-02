@@ -351,3 +351,22 @@ test('account forms hydrate their mobile menu and preserve keyboard focus', asyn
 		await expect(menu).toBeFocused();
 	}
 });
+
+for (const route of ['/account', '/account/listings', '/account/messages']) {
+	test(`account language preferences open from the menu and restore focus: ${route}`, async ({
+		page
+	}) => {
+		await page.setViewportSize({ width: 320, height: 568 });
+		await visit(page, route + '?lang=en');
+		const menu = page.getByRole('button', { name: 'Menu', exact: true });
+		await menu.click();
+		await page.getByRole('link', { name: 'Country and language · English', exact: true }).click();
+		const preferences = page.locator('[data-locale-dialog]');
+		await expect(preferences).toBeVisible();
+		await expect(page.locator('.bc-mobile-sheet__content:visible')).toHaveCount(0);
+		await page.keyboard.press('Escape');
+		await expect(preferences).not.toBeVisible();
+		await expect(menu).toBeFocused();
+		await expect(page).toHaveURL(new RegExp(route + '\\?lang=en$'));
+	});
+}

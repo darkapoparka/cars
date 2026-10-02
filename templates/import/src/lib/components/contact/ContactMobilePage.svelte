@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
+	import { imageDelivery } from '$lib/utils/image-delivery';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import { nativeMessage } from '$lib/i18n/native';
 
@@ -29,6 +30,7 @@
 	const openForm = () => {
 		formOpen = true;
 	};
+	const heroDelivery = imageDelivery('/assets/daynight/proof-studio-import-handoff.webp');
 </script>
 
 <svelte:head>
@@ -36,6 +38,8 @@
 		rel="preload"
 		as="image"
 		href={assetHref('/assets/daynight/proof-studio-import-handoff.webp')}
+		imagesrcset={heroDelivery.srcset}
+		imagesizes="100vw"
 		media="(max-width: 767px)"
 		fetchpriority="high"
 	/>

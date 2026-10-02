@@ -56,8 +56,14 @@
 >
 	{#if vehicleArtwork}<HeroCars />{/if}
 	{#if image}<picture>
-			{#if desktopImage}<source media="(min-width: 768px)" srcset={assetHref(desktopImage)} />{/if}
-			<img src={assetHref(image)} alt="" width="1920" height="640" fetchpriority="high" /></picture
+			<source media="(min-width: 768px)" srcset={assetHref(desktopImage ?? image)} />
+			<img
+				src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"
+				alt=""
+				width="1920"
+				height="640"
+				fetchpriority="high"
+			/></picture
 		>{/if}
 	<div class="site-container site-intro__content">
 		<h1 id={titleId}>{title}</h1>

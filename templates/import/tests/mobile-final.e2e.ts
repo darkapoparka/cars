@@ -83,6 +83,10 @@ test('visible mobile inventory photos load delivery renditions and Contact prior
 	);
 	await expect(preload).toHaveAttribute('media', '(max-width: 767px)');
 	await expect(preload).toHaveAttribute('fetchpriority', 'high');
+	await expect(preload).toHaveAttribute(
+		'imagesrcset',
+		/delivery\/services\/proof-studio-import-handoff/
+	);
 });
 
 test('mobile comparison supports adding, removing and clearing cars', async ({ page }) => {
@@ -110,6 +114,32 @@ test('mobile comparison supports adding, removing and clearing cars', async ({ p
 	await expect(table.getByRole('columnheader')).toHaveCount(2);
 	await page.getByRole('button', { name: 'Clear comparison' }).click();
 	await expect(page.getByRole('heading', { name: 'Choose cars to compare' })).toBeVisible();
+});
+
+test('mobile service cards load delivery copies of every retained image', async ({ page }) => {
+	const oversizedOrDesktop: string[] = [];
+	page.on('request', (request) => {
+		if (
+			/\/services\/desktop\//.test(request.url()) ||
+			/\/(hero\/home-05-showroom-exterior|footer-premium-request-v2|cta\/premium-cars-banner-v2)\.webp$/.test(
+				request.url()
+			)
+		)
+			oversizedOrDesktop.push(request.url());
+	});
+	await visit(page, '/bg/services');
+	const photos = page.locator('.service-card img');
+	await expect(photos).toHaveCount(6);
+	for (const photo of await photos.all()) {
+		await photo.scrollIntoViewIfNeeded();
+		await expect
+			.poll(() => photo.evaluate((image: HTMLImageElement) => image.naturalWidth))
+			.toBeGreaterThan(0);
+		expect(await photo.evaluate((image: HTMLImageElement) => image.currentSrc)).toContain(
+			'/delivery/services/'
+		);
+	}
+	expect(oversizedOrDesktop).toEqual([]);
 });
 
 for (const width of [320, 390]) {

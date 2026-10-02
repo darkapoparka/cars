@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { routeParts } from '$lib/locale/core';
+	import LocalePreferences from '$lib/locale/LocalePreferences.svelte';
 	import { base } from '$app/paths';
 	import '$lib/styles/app.css';
 	import '$lib/styles/fonts.css';
@@ -49,6 +50,9 @@
 	<SiteHeader variant={page.url.pathname === '/' ? 'home' : 'light'} pathname={page.url.pathname} />
 	{@render children()}
 	<SiteFooter />
+{/if}
+{#if !nativeSite && routeParts(page.url.pathname).path.startsWith('/account')}
+	<LocalePreferences />
 {/if}
 {#if !detail && (!dashboard || routeParts(page.url.pathname).path === '/account/favorites')}
 	<MobileBottomNav pathname={routeParts(page.url.pathname).path} />

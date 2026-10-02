@@ -74,7 +74,10 @@
 				disabled={selected.length >= 4}
 				aria-haspopup="dialog"
 				aria-expanded={pickerOpen}
-				onclick={() => (pickerOpen = true)}
+				onclick={(event) => {
+					event.currentTarget.focus({ preventScroll: true });
+					pickerOpen = true;
+				}}
 				><Plus size={22} aria-hidden="true" /><span
 					>{english ? 'Add a car' : 'Добави автомобил'}</span
 				><small>{selected.length} / 4</small></button

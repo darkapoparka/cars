@@ -344,7 +344,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await page.locator('#locale-navigation-check').click();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.locator('h1')).toHaveText('About us');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('About us');
 	await expect(description).not.toHaveAttribute('content', originalDescription!);
 	expect(await description.getAttribute('content')).not.toMatch(/[А-Яа-я]/);
 	await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
@@ -361,7 +361,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	).toHaveAttribute('href', route('en', '/inventory?lang=en'));
 	await page.goBack();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'bg');
-	await expect(page.locator('h1')).toHaveText('За нас');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('За нас');
 	await expect(description).toHaveAttribute('content', originalDescription!);
 	await expect(page.locator('link[rel=canonical]')).toHaveAttribute(
 		'href',
@@ -373,7 +373,7 @@ test('client locale navigation and back update language, copy, SEO and links wit
 	);
 	await page.goForward();
 	await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-	await expect(page.locator('h1')).toHaveText('About us');
+	await expect(page.getByRole('heading', { level: 1 })).toHaveText('About us');
 	expect(
 		await page.evaluate(() =>
 			Boolean((window as Window & { localeNavigationSentinel?: boolean }).localeNavigationSentinel)

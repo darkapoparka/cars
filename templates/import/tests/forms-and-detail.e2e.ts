@@ -65,10 +65,16 @@ test('PDP opens the gallery and enquiry without legacy styles', async ({ page },
 	await expect(page.locator('script[data-daynight-runtime-replay]')).toHaveCount(0);
 });
 
-test('native route changes do not leave old modal or body cleanup behind', async ({ page }) => {
+test('native route changes do not leave old modal or body cleanup behind', async ({
+	page
+}, info) => {
 	await visit(page, '/inventory');
+	if (info.project.name === 'mobile') {
+		await page.getByRole('button', { name: 'Меню', exact: true }).click();
+	}
 	await page.locator('a[href="/bg/about"]:visible').first().click();
 	await expect(page).toHaveURL((url) => url.pathname === '/bg/about');
+	await expect(page.getByRole('dialog')).not.toBeVisible();
 	await expect(page.locator('link[data-legacy-styles]')).toHaveCount(0);
 	await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
 	expect(await page.evaluate(() => getComputedStyle(document.body).overflow)).not.toBe('hidden');

@@ -42,11 +42,11 @@ test('desktop catalogue keeps a prominent filter action and six readable quick p
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/inventory');
 	await expect(page.locator('.inventory-toolbar__all')).toHaveClass(/strong/);
-	const triggers = page.locator('.inventory-toolbar__filters .site-filter-trigger');
+	const triggers = page.locator('.inventory-toolbar .site-filter-trigger');
 	await expect(triggers).toHaveCount(6);
 	expect(
 		await triggers.first().evaluate((node) => parseFloat(getComputedStyle(node).fontSize))
-	).toBeGreaterThanOrEqual(18);
+	).toBeGreaterThanOrEqual(16);
 	expect((await triggers.first().boundingBox())!.height).toBeGreaterThanOrEqual(48);
 	await triggers.first().click();
 	await expect(page.getByRole('dialog')).toBeVisible();

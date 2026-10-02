@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
 	import { linkHref } from '$lib/utils/links';
+	import { imageDelivery } from '$lib/utils/image-delivery';
 	import type { AuxeroSupportService } from '$lib/content/services';
 	import { serviceArtwork, type ServiceDetail } from '$lib/content/service-directory';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
@@ -15,12 +16,18 @@
 		english?: boolean;
 		priority?: boolean;
 	} = $props();
+	const mobileImage = $derived(imageDelivery(service.image));
 </script>
 
 <article class="service-card">
 	<a href={linkHref(detail.href)}>
 		<picture>
 			<source media="(min-width: 768px)" srcset={assetHref(serviceArtwork[service.id])} />
+			{#if mobileImage.srcset}<source
+					media="(max-width: 767.98px)"
+					srcset={mobileImage.srcset}
+					sizes="320px"
+				/>{/if}
 			<img
 				src={assetHref(service.image)}
 				alt=""

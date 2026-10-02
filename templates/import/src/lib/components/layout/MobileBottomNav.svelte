@@ -140,7 +140,11 @@
 			aria-label={menuLabel}
 			aria-haspopup="dialog"
 			aria-expanded={menuOpen}
-			onclick={() => (menuOpen = true)}
+			onclick={(event) => {
+				// WebKit does not focus buttons on pointer activation.
+				event.currentTarget.focus({ preventScroll: true });
+				menuOpen = true;
+			}}
 		>
 			<span class="mobile-bottom-nav__icon" aria-hidden="true">
 				<MobileNavIcon name="menu" />

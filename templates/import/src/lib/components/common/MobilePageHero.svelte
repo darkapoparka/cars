@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import { assetHref } from '$lib/utils/assets';
+	import { imageDelivery } from '$lib/utils/image-delivery';
 	import MobileAppbar from '$lib/components/layout/MobileAppbar.svelte';
 	let {
 		title,
@@ -19,6 +20,7 @@
 		align?: 'start' | 'center';
 		actions?: Snippet;
 	} = $props();
+	const deliveryImage = $derived(image ? imageDelivery(image) : undefined);
 </script>
 
 <section
@@ -27,7 +29,11 @@
 	data-mobile-page-hero
 >
 	{#if image}<picture
-			><source media="(max-width: 767.98px)" srcset={assetHref(image)} /><img
+			><source
+				media="(max-width: 767.98px)"
+				srcset={deliveryImage?.srcset ?? assetHref(image)}
+				sizes="100vw"
+			/><img
 				class="mobile-page-hero__image"
 				src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'/%3E"
 				alt=""
