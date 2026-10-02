@@ -1,87 +1,105 @@
 <script lang="ts">
+  import type { Attachment } from 'svelte/attachments';
   import { getI18n } from '$lib/locale/context';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   const i18n = getI18n();
   const address = $derived(i18n.dealer('address'));
-  const directionsUrl = $derived(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`);
+  const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
+  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(coordinates)}`;
+  const mapUrl = $derived(`https://maps.google.com/maps?q=${encodeURIComponent(coordinates)}&z=16&hl=${i18n.locale}&output=embed`);
+  let mapReady = $state(false);
+
+  const observeMap: Attachment<HTMLDivElement> = node => {
+    if (!('IntersectionObserver' in window)) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      mapReady = true;
+      observer.disconnect();
+    }, { rootMargin: '240px 0px' });
+    observer.observe(node);
+    return () => observer.disconnect();
+  };
 </script>
 
 <div class="dn-showroom-map" role="group" aria-label={i18n.t('m_cd07db46b2c6', { p0: brand.name })}>
-  <div class="dn-showroom-map__place">
-    <span class="dn-showroom-map__pin" aria-hidden="true"><Icon name="map-pin" size={30} /></span>
-    <strong>{brand.name}</strong>
-    <span class="dn-showroom-map__address">{address}</span>
+  <div class="dn-showroom-map__canvas" {@attach observeMap}>
+    {#if mapReady}
+      <iframe
+        title={i18n.t('m_cd07db46b2c6', { p0: brand.name })}
+        src={mapUrl}
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    {:else}
+      <div class="dn-showroom-map__placeholder">
+        <strong>{brand.name}</strong>
+        <span>{address}</span>
+      </div>
+    {/if}
   </div>
-  <a class="dn-showroom-map__link" href={directionsUrl} target="_blank" rel="noopener noreferrer">
-    {i18n.t('m_7f22a6352074')} <Icon name="arrow-right" size={18} />
+  <a class="dn-showroom-map__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
+    {i18n.t('m_c95356784006')}
+    <span class="dn-showroom-map__arrow--mobile"><MobileActionIcon name="arrow" size={18} /></span>
+    <span class="dn-showroom-map__arrow--desktop"><Icon name="arrow-right" size={18} /></span>
   </a>
 </div>
 
 <style>
   .dn-showroom-map {
-    position: relative;
-    display: grid;
-    min-height: 260px;
-    place-items: center;
     overflow: hidden;
-    padding: 32px;
-    border: 1px solid #e6e8eb;
-    border-radius: 24px;
-    background: radial-gradient(circle at 50% 38%, #fff 0, #f4f6f8 55%, #e9edf1 100%);
-    text-align: center;
+    border: 1px solid var(--dn-line);
+    border-radius: var(--dn-radius-lg);
+    background: var(--dn-surface-raised);
   }
-  .dn-showroom-map::before {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(#dfe4e9 1px, transparent 1px), linear-gradient(90deg, #dfe4e9 1px, transparent 1px);
-    background-size: 36px 36px;
-    opacity: .38;
-    content: '';
+  .dn-showroom-map__canvas {
+    min-height: 280px;
+    background: var(--dn-surface-subtle);
   }
-  .dn-showroom-map__place {
-    position: relative;
+  iframe {
+    display: block;
+    width: 100%;
+    height: 280px;
+    border: 0;
+  }
+  .dn-showroom-map__placeholder {
     display: grid;
+    min-height: 280px;
+    align-content: center;
     justify-items: center;
-    gap: 8px;
-    max-width: 360px;
-    padding-bottom: 58px;
+    gap: var(--dn-space-2);
+    padding: var(--dn-space-6);
+    box-sizing: border-box;
+    color: var(--dn-muted);
+    font: var(--dn-body-font);
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+  .dn-showroom-map__placeholder strong {
     color: var(--dn-ink);
+    font-weight: var(--dn-weight-semibold);
   }
-  .dn-showroom-map__pin {
-    display: grid;
-    width: 54px;
-    height: 54px;
-    place-items: center;
-    border-radius: 50%;
-    background: #fff;
-    color: var(--dn-red);
-    box-shadow: 0 8px 24px rgba(18, 25, 38, .12);
-  }
-  .dn-showroom-map__place strong { font-size: var(--dn-text-lead); }
-  .dn-showroom-map__address { color: #545c67; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
-  .dn-showroom-map__link {
-    position: absolute;
-    right: 16px;
-    bottom: 16px;
-    left: 16px;
-    display: inline-flex;
-    min-height: 46px;
+  .dn-showroom-map__directions {
+    display: flex;
+    min-height: var(--dn-control-height-prominent);
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 0 18px;
-    border: 1px solid rgba(20, 23, 29, .1);
-    border-radius: var(--dn-radius-button);
-    background: #fff;
+    gap: var(--dn-space-2);
+    padding: var(--dn-space-3) var(--dn-space-4);
+    box-sizing: border-box;
+    border-top: 1px solid var(--dn-line);
     color: var(--dn-ink);
-    font-size: var(--dn-control-size);
-    font-weight: var(--dn-control-weight);
+    font: var(--dn-control-font);
+    text-align: center;
   }
-  .dn-showroom-map__link:hover { color: var(--dn-red); }
-  .dn-showroom-map__link:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
-  @media (max-width: 767px) {
-    .dn-showroom-map { min-height: 240px; padding: 24px; }
+  .dn-showroom-map__directions:hover { background: var(--dn-surface-hover); }
+  .dn-showroom-map__directions:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: -4px; }
+  .dn-showroom-map__arrow--desktop { display: none; }
+  @media (min-width: 992px) {
+    .dn-showroom-map__arrow--mobile { display: none; }
+    .dn-showroom-map__arrow--desktop { display: inline-flex; }
   }
 </style>

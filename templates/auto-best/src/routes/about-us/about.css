@@ -269,9 +269,6 @@
   }
 
   .dn-about-showroom.dn-section { padding: var(--dn-space-6) 0 var(--dn-space-8); }
-  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map { grid-template-columns: minmax(0, 1fr); gap: var(--dn-space-4); }
-  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__place { padding-bottom: 0; }
-  .dn-about-showroom .dn-about-showroom__mobile .dn-showroom-map__link { position: static; width: 100%; padding: var(--dn-space-2) var(--dn-space-3); }
 }
 
 @media (max-width: 767px) {

@@ -82,9 +82,13 @@ the active mobile category uses ink. Desktop Blog controls retain their own
 composition and accent selection.
 
 About's mobile location section shows `ShowroomMap.svelte` directly below the
-service cards. The card already provides the dealer, address and directions;
-it omits the duplicate visit heading and address/appointment paragraph.
-Its directions link flows after the address so enlarged text stays clear of it.
+service cards, without a duplicate visit heading. The shared About, Contact and
+vehicle-page map embeds Google Maps using `brand.showroomCoordinates` and the
+current locale. It mounts within 240px of the viewport, leaving hidden company
+maps unloaded on desktop. A 280px map area keeps the page stable while loading;
+the plain address fallback can grow with enlarged text. The directions action
+stays below the map and opens the same coordinates in Google Maps, including
+without JavaScript. Mobile uses the existing official Hugeicons arrow.
 
 Desktop inventory cards keep the existing five-column wide grid and 16px gutters.
 Model titles use one line with an ellipsis, while the heading tooltip, accessible
