@@ -55,7 +55,7 @@ returns to the selected section. Summary facts use semantic label/value pairs,
 smaller icons and shorter registration/owner labels; panel footers use 48px
 controls. Buying/Leasing uses native pressed buttons, and the lease entry opens
 the captured terms. Ratings, prices and finance terms remain sample data requiring
-dealer verification. Rendered acceptance is still pending.
+dealer verification. Owner visual acceptance and phone-browser checks remain pending.
 
 Services has three equal-width All / Import / Sell tabs that fill the viewport.
 Import uses a white starter card with a thin border, a small globe beside its
@@ -172,3 +172,22 @@ acceptance remain required before offering Mobile as a published dealer design.
 
 Read [the imported architecture reference](docs/REFERENCE-ARCHITECTURE.md) as
 historical donor context. New copy-specific results belong in Cars `docs/`.
+
+## Hosted test preview
+
+The standalone showroom candidate is available at
+[cars-template-mobile.vercel.app](https://cars-template-mobile.vercel.app/), with
+the [BMW X6 detail page](https://cars-template-mobile.vercel.app/vehicle/bmw-x6)
+ready for phone testing. Its private GitHub publishing mirror is
+[darkapoparka/cars-template-mobile](https://github.com/darkapoparka/cars-template-mobile).
+Vercel builds that repository on Node 22.x; its production branch is `main`.
+
+Cars `templates/mobile` remains the editable master. The publishing repository
+contains an exported source snapshot and `.cars-template-source.json` receipt.
+Update the master first and publish a scoped export through the existing Cars
+source utilities, preserving the mirror's history. The separate
+`darkapoparka/cars-app-mobile` marketplace project is independently maintained.
+
+[The deployment record](../../docs/mobile-template-vercel-20261003.md) identifies
+the exact deployed source and the focused live browser checks. This test preview
+does not select a dealer release or refresh existing dealer copies.
