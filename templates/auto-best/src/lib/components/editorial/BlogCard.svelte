@@ -7,6 +7,7 @@
   import { withListReturn } from '$data/journeys';
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import type { BlogPost } from '$data/editorial';
 
   let { post, returnTo, priority = false }: { post: BlogPost; returnTo?: string; priority?: boolean } = $props();
@@ -14,11 +15,10 @@
 
 <article id={`article-${post.id}`} class="dn-blog-card">
   <a class="dn-blog-card__link" href={i18n.href(withListReturn(resolve('/blog-detail/[id]', { id: String(post.id) }), returnTo))} aria-label={blogPostTitle(post, i18n.locale)}>
-    <span class="dn-blog-card__media">
+    <picture class="dn-blog-card__media">
+      <source media="(min-width: 992px)" srcset={imageSrcset(post.image) ?? post.image} sizes="33vw" />
       <img
-        src={post.image}
-        srcset={imageSrcset(post.image)}
-        sizes="(max-width: 767px) 108px, (max-width: 991px) 50vw, 33vw"
+        src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
         alt=""
         width="820"
         height="540"
@@ -26,10 +26,11 @@
         fetchpriority={priority ? 'high' : 'auto'}
         decoding="async"
       />
-    </span>
+    </picture>
     <span class="dn-blog-card__body">
       <span class="dn-blog-card__meta">
         <span class="dn-blog-card__category">{i18n.text(post.category)}</span>
+        <span class="dn-blog-card__mobile-arrow"><MobileActionIcon name="arrow" size={18} /></span>
       </span>
       <h2>{blogPostTitle(post, i18n.locale)}</h2>
       <span class="dn-blog-card__text">{blogPostSummary(post, i18n.locale)}</span>
@@ -153,6 +154,7 @@
   }
 
   .dn-blog-card__action { display: none; }
+  .dn-blog-card__mobile-arrow { display: none; }
 
   @media (min-width: 992px) {
     .dn-blog-card__media { height: 160px; flex-basis: 160px; }
@@ -163,14 +165,14 @@
     .dn-blog-card__action { display: inline-flex; min-height: 28px; align-items: center; gap: var(--dn-space-2); margin-top: auto; color: var(--dn-red); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 991px) {
     .dn-blog-card { border: 0; border-radius: var(--dn-radius-control); }
-    .dn-blog-card__link { display: grid; grid-template-columns: 108px minmax(0, 1fr); }
-    .dn-blog-card__media { height: 100%; min-height: 132px; }
-    .dn-blog-card__media img { height: 100%; }
-    .dn-blog-card__body { min-width: 0; min-height: 0; padding: var(--dn-space-3); }
-    .dn-blog-card__meta { min-height: 0; font: var(--dn-mobile-card-meta-font); }
-    h2 { margin: var(--dn-space-half) 0 var(--dn-space-2); font: var(--dn-mobile-card-title-font); }
+    .dn-blog-card__link { display: block; }
+    .dn-blog-card__media { display: none; }
+    .dn-blog-card__body { min-width: 0; min-height: 0; padding: var(--dn-space-4); }
+    .dn-blog-card__meta { min-height: var(--dn-space-5); justify-content: space-between; gap: var(--dn-space-3); font: var(--dn-mobile-card-meta-font); }
+    .dn-blog-card__mobile-arrow { display: inline-flex; flex-shrink: 0; color: var(--dn-ink); }
+    h2 { margin: var(--dn-space-1) 0 var(--dn-space-2); font: var(--dn-mobile-card-title-font); font-weight: var(--dn-weight-semibold); }
     .dn-blog-card__text { margin-top: 0; font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   }
 

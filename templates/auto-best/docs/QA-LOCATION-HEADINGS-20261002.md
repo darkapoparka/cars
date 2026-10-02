@@ -2,8 +2,9 @@
 
 About, Contact and PDP mobile maps now use an uninterrupted map canvas, with no
 title/address container above it or directions footer below it. A white rounded
-“Отвори картата” / “Open map” action floats at the bottom center, leaving room for
-the provider's right-side controls and bottom attribution. Its accessible label
+street-address link floats at the bottom left on one line, without an icon. Its
+width is capped and the text truncates before the provider's right-side controls,
+leaving room for bottom attribution. Its accessible label
 and hover title retain the dealer's full localized address; its link opens the
 configured showroom coordinates in Google Maps. General Contact's mobile
 details card keeps its short address, visit and phone rows with title-aligned
@@ -100,3 +101,12 @@ production build. Svelte check reported zero errors/warnings. Evidence is under
 `*-map-390.png` previews, `locales-test.log`, `static-checks.log`, `check.log`
 and `build.log`. The compact button copy is owned by `localization/common.json`;
 the generated catalog and manifest were rebuilt.
+
+The subsequent address pill uses the dealer's native compact address, with
+ellipsis and a full-address accessible label/hover title. Seventeen Chromium
+states cover the new Blog entry card plus Contact/About/PDP maps, BG/EN,
+320/390px, enlarged text, the 991/992px boundary and desktop retention. The pill
+starts 12px from the map's left edge, leaves at least 76px for the right controls,
+has no icon, and retains a 44px minimum target. The local Contact screenshot
+shows actual provider tiles. Evidence is under `runtime/blog-map-mobile-20261002/`;
+the accompanying Blog QA note records checks and interaction evidence.

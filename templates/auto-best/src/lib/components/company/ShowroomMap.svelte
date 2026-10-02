@@ -3,7 +3,6 @@
   import { getI18n } from '$lib/locale/context';
   import { brand } from '$config/brand';
   import Icon from '$components/ui/Icon.svelte';
-  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
 
   const i18n = getI18n();
   const address = $derived(i18n.dealer('address'));
@@ -49,8 +48,7 @@
       aria-label={`${i18n.t('action.openMap')}: ${address}`}
       title={address}
     >
-      <MobileActionIcon name="location" size={18} />
-      <span>{i18n.t('action.openMap')}</span>
+      <span>{i18n.dealer('addressShort')}</span>
     </a>
   </div>
   <a class="dn-showroom-map__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
@@ -116,29 +114,30 @@
   @media (max-width: 991px) {
     .dn-showroom-map__open {
       position: absolute;
-      inset-inline-start: 50%;
+      inset-inline-start: var(--dn-space-3);
       bottom: var(--dn-space-6);
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: var(--dn-space-2);
+      justify-content: flex-start;
       min-height: var(--dn-control-height-default);
       width: max-content;
-      max-width: calc(100% - 104px);
-      padding: var(--dn-space-2) var(--dn-space-4);
+      max-width: min(240px, calc(100% - 88px));
+      padding: var(--dn-space-2) var(--dn-space-3);
       box-sizing: border-box;
       border: 1px solid var(--dn-line);
       border-radius: var(--dn-pill);
       background: var(--dn-surface-raised);
       color: var(--dn-ink);
       box-shadow: var(--dn-card-hover-shadow);
-      font: var(--dn-control-font);
-      text-align: center;
-      transform: translateX(-50%);
+      font: var(--dn-overlay-value-font);
+      font-weight: var(--dn-weight-medium);
+      text-align: start;
     }
     .dn-showroom-map__open span {
       min-width: 0;
-      overflow-wrap: anywhere;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
     .dn-showroom-map__open:hover { background: var(--dn-surface-hover); }
     .dn-showroom-map__open:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }

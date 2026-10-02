@@ -56,6 +56,7 @@ const collection = '/assets/images/lead/day-night-collection-banner-v2.webp' as 
 const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const;
 const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
 const mobileContact = '/assets/images/template/contact-showroom-banner-v1.webp' as const;
+const mobileGuides = '/assets/images/template/blog-advice-banner-v1.webp' as const;
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -114,6 +115,10 @@ export const leadSite = {
       [mobileContact]: [
         { src: '/assets/images/template/contact-showroom-banner-v1-480.webp', width: 480 },
         { src: mobileContact, width: 960 }
+      ],
+      [mobileGuides]: [
+        { src: '/assets/images/template/blog-advice-banner-v1-480.webp', width: 480 },
+        { src: mobileGuides, width: 960 }
       ],
       '/assets/images/lead/day-night-stock-01.webp': [
         { src: '/assets/images/lead/day-night-stock-01-640.webp', width: 640 },
@@ -176,7 +181,7 @@ export const leadSite = {
       import: mobileImport,
       finance: '/assets/images/template/home-action-finance-v3.webp'
     },
-    blogHero: '/assets/images/lead/day-night-blog-hero-v2.webp',
+    blogHero: mobileGuides,
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
     sectionBanners: {
       graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
