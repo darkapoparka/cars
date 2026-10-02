@@ -321,13 +321,16 @@ the configured currency's narrow symbol and locale number formatting.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections share
 a restrained graphite banner with a centered white heading and white action.
-Their backgrounds use brushed panels, satin contours or fine perforated metal,
-with detail at the edges and a quiet center behind copy. The headers contain
+Featured inventory uses fine grain on a flat satin-metal surface. Body types
+keep satin contours; Brands and Advice keep their perforated texture. Each has
+subtle edge detail and a quiet center behind copy. The headers contain
 no vehicle or editorial object cutouts; the cards below supply the imagery.
 `leadSite.artwork.homeSectionBackgrounds` owns the four versioned WebP URLs.
 The Home route applies them only from 992px, so tablet and mobile do not request
 the artwork. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)
 record generation, delivery encodings and superseded advice illustrations.
+The [Featured texture prompt](../provenance/home-inventory-texture-2026-10-03.json)
+records its separate satin-metal replacement and retained previous artwork.
 All content sections use the shared 32px section padding, giving adjacent panels
 the same 64px gap. The white content panel overlaps its 164px banner by 24px,
 with rounded upper corners forming an inward curve at the join. Heading and

@@ -221,7 +221,7 @@ try {
               }
               if (route === '') {
                 for (const [selector, background] of [
-                  ['.dn-inventory__heading', 'home-section-inventory-backdrop-v1.webp'],
+                  ['.dn-inventory__heading', 'home-section-inventory-backdrop-v2.webp'],
                   ['.dn-body-types__heading', 'home-section-body-backdrop-v1.webp'],
                   ['.dn-brand-hero__copy', 'home-section-brands-backdrop-v1.webp'],
                   ['.dn-editorial__heading', 'home-section-guides-backdrop-v1.webp']

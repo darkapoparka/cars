@@ -12,7 +12,8 @@ const staticRoot = path.join(root, 'static');
 // The Home advice banner has a separate editorial plate.
 // Superseded advice illustrations remain retained for provenance.
 // The mobile BMW vector replaces the low-resolution bitmap at phone widths.
-const guardedMediaCount = 180;
+// Featured inventory replaces its sculpted panels with a flat satin-metal texture.
+const guardedMediaCount = 181;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
@@ -21,6 +22,7 @@ const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-
 retainedSourceAssets.add('/assets/images/template/home-section-guides-editorial-v2.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-guides-notebook-cutout-v3.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-guides-checklist-cutout-v3.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-inventory-backdrop-v1.webp');
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
 // Preserve the previous editorial hero photograph as source history.
