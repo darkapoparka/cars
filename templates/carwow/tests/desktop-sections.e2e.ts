@@ -29,12 +29,18 @@ for (const locale of ['en', 'bg']) {
 				await expect(primary).toHaveCSS('color', 'rgb(15, 20, 23)');
 				if (route === 'sell-your-car') {
 					const button = (await primary.boundingBox())!;
-					expect(
-						Math.abs(button.x + button.width / 2 - deckBox.x - deckBox.width / 2)
-					).toBeLessThan(1);
+					const entry = page.locator('#desktop-sell-hero-identity');
+					const field = (await entry.boundingBox())!;
+					expect(field.y).toBe(button.y);
+					expect(field.height).toBe(button.height);
+					expect(field.x).toBe(deckBox.x + 24);
+					expect(button.x + button.width).toBe(deckBox.x + deckBox.width - 24);
 					expect(button.width).toBeLessThan(400);
+					await entry.fill('PB 1234 AB');
 					await primary.press('Enter');
 					await expect(page.locator('.sell-modal')).toBeVisible();
+					await expect(page.locator('.sell-modal input[name="plate"]')).toHaveValue('PB 1234 AB');
+					await expect(page.locator('.sell-modal input[name="make"]')).toBeFocused();
 					await page.keyboard.press('Escape');
 					await expect(primary).toBeFocused();
 				} else {
@@ -117,7 +123,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 				'rgba(0, 0, 0, 0)'
 			);
 			for (const route of ['services', 'about', 'blog']) {
-				await page.goto(`/${locale}/${route}`);
+				await page.goto(`/${locale}/${route}`, { waitUntil: 'networkidle' });
 				await page.evaluate(() => document.fonts.ready);
 				const container = page.locator(
 					route === 'services'
@@ -206,9 +212,22 @@ for (const width of [992, 1280, 1440, 1920]) {
 							})
 						)
 						.toBe(true);
-					const pills = page.locator('.blog-category-switch a, .blog-quick-topics a');
-					await expect(pills.first()).toHaveCSS('border-radius', '8px');
-					await expect(pills.first()).toHaveCSS('background-color', 'rgb(245, 197, 66)');
+					const blogDeck = page.locator('.daynight-yellow-route-hero__deck');
+					const blogPanel = (await blogDeck.boundingBox())!;
+					expect(blogPanel.width).toBe(640);
+					expect(blogPanel.height).toBeLessThan(160);
+					const categories = page.locator('.blog-category-switch a');
+					await expect(categories).toHaveCount(3);
+					for (const category of await categories.all()) {
+						const categoryBox = (await category.boundingBox())!;
+						expect(Math.abs(categoryBox.width - blogPanel.width / 3)).toBeLessThan(1);
+						expect(categoryBox.height).toBe(52);
+					}
+					await expect(categories.first()).toHaveCSS('background-color', 'rgb(255, 255, 255)');
+					await expect(categories.first()).toHaveCSS('color', 'rgb(23, 27, 30)');
+					await expect(categories.nth(1)).toHaveCSS('color', 'rgb(255, 255, 255)');
+					await expect(blogDeck.locator('.blog-quick-topics')).toHaveCount(0);
+					await expect(page.locator('.blog-list .blog-quick-topics')).toBeVisible();
 				}
 				if (width === 1440 && locale === 'en')
 					await page.screenshot({ path: testInfo.outputPath(`${route}.png`) });
@@ -219,12 +238,50 @@ for (const width of [992, 1280, 1440, 1920]) {
 
 test('desktop service cards keep request preselection and navigation', async ({ page }) => {
 	await page.setViewportSize({ width: 1440, height: 1000 });
-	await page.goto('/en/services');
+	await page.goto('/en/services', { waitUntil: 'networkidle' });
 	await page.locator('.desktop-services-card').nth(4).click();
 	await expect(page.locator('#desktop-services-service')).toHaveValue('sourcing');
 	await expect(page).toHaveURL(/service=sourcing#services-request$/);
 	await expect(page.locator('.desktop-services-form')).toBeVisible();
 });
+
+for (const locale of ['en', 'bg']) {
+	test(`desktop Sell entry keeps VIN, keyboard focus and fallback data in ${locale}`, async ({
+		page
+	}) => {
+		await page.setViewportSize({ width: 1440, height: 1000 });
+		const leadRequests: string[] = [];
+		page.on('request', (request) => {
+			if (request.method() === 'POST' && request.url().includes('/api/leads')) {
+				leadRequests.push(request.url());
+			}
+		});
+		await page.goto(`/${locale}/sell-your-car`, { waitUntil: 'networkidle' });
+		const entry = page.locator('#desktop-sell-hero-identity');
+		await page
+			.locator('.sell-entry__mode')
+			.getByRole('button', { name: 'VIN', exact: true })
+			.click();
+		await expect(entry).toHaveAccessibleName('VIN');
+		await entry.fill('WBA12345678901234');
+		await entry.press('Enter');
+		const modal = page.locator('.sell-modal');
+		await expect(modal).toBeVisible();
+		await expect(modal.locator('input[name="vin"]')).toHaveValue('WBA12345678901234');
+		await expect(modal.locator('input[name="make"]')).toBeFocused();
+		await page.keyboard.press('Escape');
+		await expect(entry).toBeFocused();
+		await expect(entry).toHaveValue('WBA12345678901234');
+		await expect(page.locator('.sell-final .sell-action')).toHaveAttribute(
+			'href',
+			`/${locale}/sell-your-car/request?vin=WBA12345678901234`
+		);
+		await entry.fill('');
+		await entry.press('Enter');
+		await expect(modal.locator('input[name="vin"]')).toBeFocused();
+		expect(leadRequests).toEqual([]);
+	});
+}
 
 test('desktop blog pills preserve search and category filters, Back and reset', async ({
 	page
@@ -268,6 +325,27 @@ test('desktop blog pills preserve search and category filters, Back and reset', 
 	await page.goBack();
 	await expect(page).toHaveURL(
 		(url) => !url.searchParams.has('q') && url.searchParams.get('tag') === selectedTag
+	);
+	const allCategory = page
+		.locator('.blog-category-switch')
+		.getByRole('link', { name: 'All', exact: true });
+	await allCategory.click();
+	await expect(page).toHaveURL(
+		(url) => !url.searchParams.has('category') && url.searchParams.get('tag') === selectedTag
+	);
+	await expect(allCategory).toHaveAttribute('aria-current', 'true');
+	await page.locator('#blog-hero-search').fill('no-matching-article-9281');
+	await page.locator('#blog-hero-search').press('Enter');
+	await expect(page).toHaveURL((url) => url.searchParams.get('q') === 'no-matching-article-9281');
+	await page
+		.locator('.blog-category-switch')
+		.getByRole('link', { name: 'Selling', exact: true })
+		.click();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('q') === 'no-matching-article-9281' &&
+			url.searchParams.get('category') === 'Продажба' &&
+			url.searchParams.get('tag') === selectedTag
 	);
 	const reset = page.locator('.blog-clear-filters');
 	await expect(reset).toHaveAttribute('href', '/en/blog');

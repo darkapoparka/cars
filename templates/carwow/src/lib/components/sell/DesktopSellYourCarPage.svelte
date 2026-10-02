@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { getI18n } from '$lib/locale/context';
+	import { onMount } from 'svelte';
 	const i18n = getI18n();
 
 	import DesktopBrowseLink from '$lib/components/shared/DesktopBrowseLink.svelte';
@@ -31,6 +32,10 @@
 
 	let valuationDialog: HTMLDialogElement | undefined = $state();
 	let modalOpen = $state(false);
+	let entryReady = $state(false);
+	onMount(() => {
+		entryReady = true;
+	});
 	function handleModalKeydown(event: KeyboardEvent) {
 		if (event.key !== 'Tab' || !valuationDialog) return;
 		const controls = Array.from(
@@ -59,8 +64,23 @@
 		)
 			return;
 		event.preventDefault();
+		showValuation();
+	}
+	function startValuation(event: SubmitEvent) {
+		if (!valuationDialog) return;
+		event.preventDefault();
+		showValuation();
+	}
+	function showValuation() {
+		if (!valuationDialog || valuationDialog.open) return;
 		valuationDialog.showModal();
 		modalOpen = true;
+		const hasIdentity = (intakeMode === 'plate' ? plate : vin).trim().length > 0;
+		valuationDialog
+			.querySelector<HTMLInputElement>(
+				hasIdentity ? 'input[name="make"]' : `input[name="${intakeMode}"]`
+			)
+			?.focus();
 	}
 	$effect(() => {
 		if (!modalOpen) return;
@@ -71,11 +91,11 @@
 		};
 	});
 
-	let intakeMode = $state<IntakeMode>('plate');
-	let plate = $state('');
-	let vin = $state('');
 	const initialParam = (name: string) =>
 		browser ? (page.url.searchParams.get(name)?.trim() ?? '') : '';
+	let intakeMode = $state<IntakeMode>(initialParam('vin') ? 'vin' : 'plate');
+	let plate = $state(initialParam('plate'));
+	let vin = $state(initialParam('vin'));
 	let make = $state(initialParam('make'));
 	let model = $state(initialParam('model'));
 	let year = $state('');
@@ -159,13 +179,65 @@
 		title={i18n.t('copy.42b0d511b828')}
 	>
 		<div class="sell-intake-card">
-			<p>{i18n.t('copy.2366c40c8e45')}</p>
-			<a
-				class="sell-action desktop-primary-action"
-				href={i18n.href(resolve(leadPath))}
-				onclick={openValuation}
-				aria-haspopup="dialog">{i18n.t('copy.d915896778d0')} <ArrowRight size={18} /></a
+			<form
+				class="sell-entry"
+				action={i18n.href(resolve('/sell-your-car/request'))}
+				method="get"
+				onsubmit={startValuation}
 			>
+				<div class="sell-entry__mode" role="group" aria-label={i18n.t('copy.b440f50af2be')}>
+					<button
+						type="button"
+						disabled={!entryReady}
+						aria-pressed={intakeMode === 'plate'}
+						onclick={() => (intakeMode = 'plate')}>{i18n.t('copy.cabeddcf59bc')}</button
+					>
+					<button
+						type="button"
+						disabled={!entryReady}
+						aria-pressed={intakeMode === 'vin'}
+						onclick={() => (intakeMode = 'vin')}>{i18n.t('copy.5b86a75cae06')}</button
+					>
+				</div>
+				<label class="sell-entry__label" for="desktop-sell-hero-identity">
+					{intakeMode === 'plate' ? i18n.t('copy.cabeddcf59bc') : i18n.t('copy.5b86a75cae06')}
+				</label>
+				<div class="sell-entry__row">
+					{#if intakeMode === 'plate'}
+						<input
+							{@attach i18n.validation}
+							id="desktop-sell-hero-identity"
+							name="plate"
+							type="text"
+							bind:value={plate}
+							placeholder={i18n.t('copy.2f42adde453e')}
+							autocomplete="off"
+							autocapitalize="characters"
+							spellcheck={false}
+						/>
+					{:else}
+						<input
+							{@attach i18n.validation}
+							id="desktop-sell-hero-identity"
+							name="vin"
+							type="text"
+							bind:value={vin}
+							placeholder={i18n.t('copy.541194c2c29b')}
+							maxlength="17"
+							autocomplete="off"
+							autocapitalize="characters"
+							spellcheck={false}
+						/>
+					{/if}
+					<button class="sell-action desktop-primary-action" type="submit" aria-haspopup="dialog">
+						{i18n.t('copy.ffe5cca7d0b3')}
+						<ArrowRight size={18} />
+					</button>
+				</div>
+				{#if make}<input type="hidden" name="make" value={make} />{/if}
+				{#if model}<input type="hidden" name="model" value={model} />{/if}
+			</form>
+			<p>{i18n.t('copy.2366c40c8e45')}</p>
 		</div>
 	</DesktopYellowRouteHero>
 	<dialog
@@ -426,10 +498,79 @@
 		text-align: center;
 	}
 	.desktop-sell .sell-intake-card p {
-		margin: 0 auto 16px;
-		max-width: 52ch;
+		margin: 12px 0 0;
 		color: var(--desktop-hero-copy);
-		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
+		text-align: left;
+	}
+	.sell-entry {
+		margin: 0;
+		text-align: left;
+	}
+	.sell-entry__mode {
+		display: inline-flex;
+		gap: 4px;
+		margin-bottom: 12px;
+		padding: 3px;
+		border-radius: 8px;
+		background: #171b1e;
+	}
+	.sell-entry__mode button {
+		min-height: 32px;
+		padding: 0 12px;
+		border: 0;
+		border-radius: 6px;
+		background: transparent;
+		color: #fff;
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font);
+		cursor: pointer;
+	}
+	.sell-entry__mode button:hover {
+		background: #4b5256;
+	}
+	.sell-entry__mode button:disabled {
+		cursor: wait;
+		opacity: 0.6;
+	}
+	.sell-entry__mode button[aria-pressed='true'] {
+		background: #fff;
+		color: var(--sa-ink);
+	}
+	.sell-entry__mode button[aria-pressed='true']:hover {
+		background: #f3f4f6;
+	}
+	.sell-entry__row {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) auto;
+		align-items: center;
+		gap: 12px;
+	}
+	.sell-entry__row input {
+		width: 100%;
+		min-width: 0;
+		height: 48px;
+		padding: 0 16px;
+		border: 1px solid #d9dde1;
+		border-radius: 8px;
+		background: #fff;
+		color: var(--sa-ink);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
+		box-shadow: none;
+	}
+	.sell-entry__row input::placeholder {
+		color: #62676e;
+	}
+	.sell-entry__row button {
+		border: 0;
+		cursor: pointer;
+	}
+	.sell-entry__label {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
 	}
 	.sell-modal {
 		width: min(640px, calc(100vw - 48px));

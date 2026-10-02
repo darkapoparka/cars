@@ -23,6 +23,7 @@
 		secondaryHref,
 		sectionId,
 		deckWidth = 'standard',
+		deckLayout = 'standard',
 		artwork = 'cars',
 		children
 	}: {
@@ -35,6 +36,7 @@
 		secondaryHref?: HeroHref;
 		sectionId?: string;
 		deckWidth?: 'standard' | 'wide';
+		deckLayout?: 'standard' | 'segmented';
 		artwork?: 'cars' | 'contact' | 'services';
 		children?: Snippet;
 	} = $props();
@@ -44,7 +46,8 @@
 	id={sectionId}
 	class={[
 		'daynight-yellow-route-hero',
-		deckWidth === 'wide' && 'daynight-yellow-route-hero--deck-wide',
+		deckLayout === 'standard' && deckWidth === 'wide' && 'daynight-yellow-route-hero--deck-wide',
+		deckLayout === 'segmented' && 'daynight-yellow-route-hero--segmented',
 		artwork === 'contact' && 'daynight-yellow-route-hero--contact',
 		artwork === 'services' && 'daynight-yellow-route-hero--studio'
 	]}
@@ -73,7 +76,7 @@
 		{:else}
 			<DesktopHeroArtwork
 				variant={artwork === 'services' ? 'services' : 'cars'}
-				panelWidth={deckWidth === 'wide' ? 1040 : 720}
+				panelWidth={deckLayout === 'segmented' ? 640 : deckWidth === 'wide' ? 1040 : 720}
 			/>
 		{/if}
 	</div>
@@ -184,6 +187,11 @@
 
 	.daynight-yellow-route-hero--deck-wide .daynight-yellow-route-hero__deck {
 		max-width: 1040px;
+	}
+
+	.daynight-yellow-route-hero--segmented .daynight-yellow-route-hero__deck {
+		max-width: 640px;
+		padding: 0;
 	}
 
 	.daynight-yellow-route-hero__actions {

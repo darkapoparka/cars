@@ -32,6 +32,8 @@
 		'Марки'
 	];
 
+	const desktopCategories: DayNightArticleCategory[] = ['Покупка', 'Продажба'];
+
 	let { articles, filters }: { articles: DayNightArticle[]; filters: BlogFilters } = $props();
 
 	const normalizedFilters = $derived({
@@ -88,7 +90,7 @@
 			.slice(0, 12)
 			.map((tag) => ({ value: tag, label: tag, count: countTag(tag) }))
 	);
-	const heroTagOptions = $derived(
+	const quickTagOptions = $derived(
 		tagOptions
 			.filter((option) => !['покупка', 'продажба'].includes(normalize(option.value)))
 			.slice(0, 6)
@@ -201,26 +203,19 @@
 	<div class="blog-hero-controls">
 		<nav class="blog-category-switch" aria-label={i18n.t('copy.05f6c615a351')}>
 			<a
-				href={i18n.href(resolve('/blog'))}
-				class="desktop-discovery-chip"
-				class:is-active={!hasActiveFilters}
-				aria-current={!hasActiveFilters ? 'true' : undefined}>{i18n.t('copy.117d98cb652c')}</a
+				href={i18n.href(resolve(filterHref({ category: '' })))}
+				aria-current={!normalizedFilters.category ? 'true' : undefined}
+				>{i18n.t('copy.117d98cb652c')}</a
 			>
-			{#each categoryOptions as option (option.value)}
+			{#each desktopCategories as category (category)}
 				<a
-					href={i18n.href(
-						resolve(
-							filterHref({ category: isActiveFilter('category', option.value) ? '' : option.value })
-						)
-					)}
-					class="desktop-discovery-chip"
-					class:is-active={isActiveFilter('category', option.value)}
-					aria-current={isActiveFilter('category', option.value) ? 'true' : undefined}
-					>{i18n.text(option.label)}</a
+					href={i18n.href(resolve(filterHref({ category })))}
+					aria-current={isActiveFilter('category', category) ? 'true' : undefined}
+					>{i18n.text(category)}</a
 				>
 			{/each}
 		</nav>
-		<form action={resolve('/blog')} class="blog-hero-search" method="get">
+		<form action={i18n.href(resolve('/blog'))} class="blog-hero-search" method="get">
 			<label class="sr-only" for="blog-hero-search">{i18n.t('copy.c744f13b5bc2')}</label>
 			<div class="blog-hero-search__field">
 				<input
@@ -237,33 +232,45 @@
 				<input type="hidden" {name} {value} />
 			{/each}
 		</form>
-		<div class="blog-quick-row">
-			<nav class="blog-quick-topics" aria-label={i18n.t('copy.318780093288')}>
-				{#each heroTagOptions as option (option.value)}
-					<a
-						href={i18n.href(
-							resolve(filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value }))
-						)}
-						class="desktop-discovery-chip"
-						class:is-active={isActiveFilter('tag', option.value)}
-						aria-current={isActiveFilter('tag', option.value) ? 'true' : undefined}
-						>{i18n.text(option.label)}<span>{option.count}</span></a
-					>
-				{/each}
-			</nav>
-			<div class="blog-filter-status" aria-live="polite">
-				<span
-					>{visibleArticles.length}
-					{visibleArticles.length === 1
-						? i18n.t('copy.53e0a90d4d5b')
-						: i18n.t('copy.320493d7cb5d')}</span
+	</div>
+{/snippet}
+
+{#snippet blogResultControls()}
+	<div class="blog-quick-row">
+		<nav class="blog-quick-topics" aria-label={i18n.t('copy.318780093288')}>
+			{#each categoryOptions.filter((option) => !desktopCategories.includes(option.value)) as option (option.value)}
+				<a
+					href={i18n.href(resolve(filterHref({ category: option.value })))}
+					class="desktop-discovery-chip"
+					class:is-active={isActiveFilter('category', option.value)}
+					aria-current={isActiveFilter('category', option.value) ? 'true' : undefined}
+					>{i18n.text(option.label)}</a
 				>
-				{#if hasActiveFilters}
-					<a href={i18n.href(resolve('/blog'))} class="blog-clear-filters"
-						><X size={16} />{i18n.t('copy.fc38aced5a1d')}</a
-					>
-				{/if}
-			</div>
+			{/each}
+			{#each quickTagOptions as option (option.value)}
+				<a
+					href={i18n.href(
+						resolve(filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value }))
+					)}
+					class="desktop-discovery-chip"
+					class:is-active={isActiveFilter('tag', option.value)}
+					aria-current={isActiveFilter('tag', option.value) ? 'true' : undefined}
+					>{i18n.text(option.label)}<span>{option.count}</span></a
+				>
+			{/each}
+		</nav>
+		<div class="blog-filter-status" aria-live="polite">
+			<span
+				>{visibleArticles.length}
+				{visibleArticles.length === 1
+					? i18n.t('copy.53e0a90d4d5b')
+					: i18n.t('copy.320493d7cb5d')}</span
+			>
+			{#if hasActiveFilters}
+				<a href={i18n.href(resolve('/blog'))} class="blog-clear-filters"
+					><X size={16} />{i18n.t('copy.fc38aced5a1d')}</a
+				>
+			{/if}
 		</div>
 	</div>
 {/snippet}
@@ -283,11 +290,12 @@
 		<DesktopYellowRouteHero
 			headingId="blog-route-title"
 			title={i18n.t('copy.9651258a1b3e')}
-			deckWidth="wide"
+			deckLayout="segmented"
 			children={blogHeroControls}
 		/>
 		<section class="blog-list" aria-labelledby="blog-route-title">
 			<div class="blog-container" data-daynight-blog-index>
+				{@render blogResultControls()}
 				{#if !articles.length}
 					<div class="blog-empty" data-daynight-blog-empty>
 						<h2>{i18n.t('copy.16352908518e')}</h2>
@@ -326,10 +334,8 @@
 	}
 	.blog-hero-controls {
 		display: grid;
-		gap: 12px;
 		text-align: left;
 	}
-	.blog-category-switch,
 	.blog-quick-topics {
 		display: flex;
 		flex-wrap: wrap;
@@ -337,19 +343,44 @@
 		align-items: center;
 	}
 	.blog-category-switch {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		border-radius: 12px 12px 0 0;
+		background: var(--discovery-action);
+		overflow: hidden;
+	}
+	.blog-category-switch a {
+		display: flex;
+		align-items: center;
 		justify-content: center;
+		min-width: 0;
+		min-height: 52px;
+		padding: 0 20px;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: #fff;
+		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
+		white-space: nowrap;
+		transition: background-color 140ms ease;
 	}
-	.blog-hero-controls .desktop-discovery-chip.is-active {
-		background: var(--sa-yellow) !important;
-		border-color: var(--sa-yellow) !important;
-		color: var(--sa-ink) !important;
+	.blog-category-switch a:hover {
+		background: #4b5256;
 	}
-	.blog-hero-controls .desktop-discovery-chip.is-active:hover {
-		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
-		border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
+	.blog-category-switch a[aria-current='true'] {
+		background: var(--discovery-panel);
+		color: var(--discovery-ink);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.blog-category-switch a[aria-current='true']:hover {
+		background: var(--discovery-muted-surface);
+	}
+	.blog-category-switch a:focus-visible {
+		outline-offset: -4px !important;
 	}
 	.blog-hero-search {
 		margin: 0;
+		padding: 20px 40px 24px;
 	}
 	.blog-hero-search__field {
 		display: grid;
@@ -403,6 +434,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 12px;
+		margin-bottom: 20px;
 	}
 	.blog-quick-topics .desktop-discovery-chip span {
 		opacity: 0.7;
@@ -412,7 +444,7 @@
 		align-items: center;
 		gap: 12px;
 		margin-left: auto;
-		color: var(--desktop-hero-copy);
+		color: var(--discovery-muted);
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		white-space: nowrap;
 	}
@@ -432,7 +464,7 @@
 		border-color: var(--sa-yellow);
 	}
 	.blog-list {
-		padding: 36px 0 64px;
+		padding: 24px 0 64px;
 	}
 	.blog-container {
 		width: var(--desktop-content-width);
