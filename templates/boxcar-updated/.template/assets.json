@@ -1,0 +1,950 @@
+{
+  "captured": "2026-10-02",
+  "status": "Public preview reference assets; license scope requires owner review before commercial dealer reuse.",
+  "assets": [
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-1.png",
+      "local": "public/media/resource/brand-1.png",
+      "bytes": 4251,
+      "sha256": "5e314616b4895a985dda63f73570a0fe9cf4cc88664f35b98dd23fc493a99879"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-2.png",
+      "local": "public/media/resource/brand-2.png",
+      "bytes": 5121,
+      "sha256": "614b0917e4db2774b024227319b0c85838d92244520a8cf64363b4abd0ef9dfd"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-3.png",
+      "local": "public/media/resource/brand-3.png",
+      "bytes": 7540,
+      "sha256": "3cc7acf000d89074ac8b7df5d162b7653ff15e0046c5fd98b637418c80a99a1d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-4.png",
+      "local": "public/media/resource/brand-4.png",
+      "bytes": 5650,
+      "sha256": "627669d54a4f0e3f2b1c85f153c1d0adbd93e868d2c21b88cd5f7dfc3edfd8d3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-5.png",
+      "local": "public/media/resource/brand-5.png",
+      "bytes": 6294,
+      "sha256": "48d978f7cc24732c7bfadf2cb2dd5b894f015566fa8569358b8c13ea0175756b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand-6.png",
+      "local": "public/media/resource/brand-6.png",
+      "bytes": 6570,
+      "sha256": "e6098184aabd752422ca749b8e6d35e9a0273be38c5cf71abf4ff2a1b40b3fd0"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-1.jpg",
+      "local": "public/media/resource/shop3-1.jpg",
+      "bytes": 17039,
+      "sha256": "d7d16e95f076a35b76d2ca4a4ce775c332ae8bcd975980e92b26ba075ebb3519"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-2.jpg",
+      "local": "public/media/resource/shop3-2.jpg",
+      "bytes": 18431,
+      "sha256": "246aece45d557486f3d0419554df342bce6681eeb9d20d548fef501ddf297d01"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-3.jpg",
+      "local": "public/media/resource/shop3-3.jpg",
+      "bytes": 128719,
+      "sha256": "cda6b6cfdc38ba2a2027bd34b9fb2dc9f41e0b9f299b13d0a651443d50b19fde"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-4.jpg",
+      "local": "public/media/resource/shop3-4.jpg",
+      "bytes": 17365,
+      "sha256": "fed6f348b1ff3b58531c5458e6a764cdfa000f266f4eb5018909428b4ae49b91"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-5.jpg",
+      "local": "public/media/resource/shop3-5.jpg",
+      "bytes": 15111,
+      "sha256": "4f9a1de688eab157151c9cf6f273318a197b64293d31485aa77fec0edc404685"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing1-1.jpg",
+      "local": "public/media/resource/pricing1-1.jpg",
+      "bytes": 1052555,
+      "sha256": "828c9c4a5a06f547e302a7831a4a2208dc23361367e96e0225146e7a7895bc81"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop1-1.jpg",
+      "local": "public/media/resource/shop1-1.jpg",
+      "bytes": 21565,
+      "sha256": "4f8888b2566b22b193e441e7ce34d83bd2d22b1d00ee23d5849ecd0151bc5831"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop1-2.jpg",
+      "local": "public/media/resource/shop1-2.jpg",
+      "bytes": 163728,
+      "sha256": "ba2e7f56cba4995b78d1b38dc5ce0de8fdb2006243d3ca573f31047ec262e2c2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/test-1.jpg",
+      "local": "public/media/resource/test-1.jpg",
+      "bytes": 25522,
+      "sha256": "b0cd6f5b2933e7c8c3e5b4572e92e28c662b326a393dfb77ad37d5a666464271"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/blog-1.jpg",
+      "local": "public/media/resource/blog-1.jpg",
+      "bytes": 23744,
+      "sha256": "d99527c88a9347f3642b2ea8313dd1b7e21fe20ec1396045238347be3420a1af"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/blog-2.jpg",
+      "local": "public/media/resource/blog-2.jpg",
+      "bytes": 191433,
+      "sha256": "e1d85cee7744332f7bbe0009d28fbc72a62e675bf6a9bd8e1c65012405e5f424"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/blog-3.jpg",
+      "local": "public/media/resource/blog-3.jpg",
+      "bytes": 46067,
+      "sha256": "ac04314e14cc1c08db3d2cb47cc0104ead3f9094b0cd2a3de248cab1d4dab8b3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/bg-2.jpg",
+      "local": "public/media/banner/bg-2.jpg",
+      "bytes": 219251,
+      "sha256": "31ffabb08a935211784c6afd740960917ffa507bb4d2fb8a557d4d79febf1470"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-7.jpg",
+      "local": "public/media/resource/shop3-7.jpg",
+      "bytes": 13457,
+      "sha256": "98304809157233ac9e3ede54b4e23f8e177e1a0f3a6796866baf89de1d8cce4d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-8.jpg",
+      "local": "public/media/resource/shop3-8.jpg",
+      "bytes": 17570,
+      "sha256": "35b514b62a094234c0512f58c4faf69f2b174ec0b5fe4046bacfee71c0f44ffe"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop3-6.jpg",
+      "local": "public/media/resource/shop3-6.jpg",
+      "bytes": 14792,
+      "sha256": "6f344904524bbadf30b01ecbf36bbbc149ea6de7646c7bec01c23da29ee65a04"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing2-1.jpg",
+      "local": "public/media/resource/pricing2-1.jpg",
+      "bytes": 51659,
+      "sha256": "132621a5704e35a4bbd317dd717aba3c24b3ad589258e19d8321cb73edf9c595"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop5-1.jpg",
+      "local": "public/media/resource/shop5-1.jpg",
+      "bytes": 13457,
+      "sha256": "98304809157233ac9e3ede54b4e23f8e177e1a0f3a6796866baf89de1d8cce4d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop5-2.jpg",
+      "local": "public/media/resource/shop5-2.jpg",
+      "bytes": 25152,
+      "sha256": "f68ffaa3fc85a9020b0a75f70c9bc75c0213c859690a432edf3ffd5d3510d2e6"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop5-3.jpg",
+      "local": "public/media/resource/shop5-3.jpg",
+      "bytes": 63805,
+      "sha256": "0bf879d3fe3f207da7e846c6a9e7d8bd40fd482c900e20cb24ad195319cc0d95"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop5-4.jpg",
+      "local": "public/media/resource/shop5-4.jpg",
+      "bytes": 14349,
+      "sha256": "14e9e19c97dd195abf259cd11e49962c401182099261ff5280b9f66e069de83f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team1-1.jpg",
+      "local": "public/media/resource/team1-1.jpg",
+      "bytes": 14296,
+      "sha256": "de3a1c5d31d0413e2b7b4ce25ae2f98dc5069b5bdcd343b6540899ef0470c33b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team1-2.jpg",
+      "local": "public/media/resource/team1-2.jpg",
+      "bytes": 16316,
+      "sha256": "3dcb7eef2265d87aaa2c6a0bd8a739b23830e46e76d67b8f99f5b5258df013bd"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team1-3.jpg",
+      "local": "public/media/resource/team1-3.jpg",
+      "bytes": 16899,
+      "sha256": "644c81b12384b35a231ea048cbba5a5d3b7c6d24d636be04112ef2ba41e0fff2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team1-4.jpg",
+      "local": "public/media/resource/team1-4.jpg",
+      "bytes": 14192,
+      "sha256": "3176f1b919d79696d0a6576824cf289ec2a3caa1497f00d3488cbc467dc2a62f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/apple.png",
+      "local": "public/media/resource/apple.png",
+      "bytes": 575,
+      "sha256": "14c1903d807729acd6ff650630c2ca174153ed93b6c9bb65385b60c84ba3b7d9"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/play-2.png",
+      "local": "public/media/resource/play-2.png",
+      "bytes": 540,
+      "sha256": "3bdba7853a0eede97a1ef42fbf544c4b55f7a8485cf38be33f9c82d046d8461e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/iphone.png",
+      "local": "public/media/resource/iphone.png",
+      "bytes": 80915,
+      "sha256": "21a2319684b633a1cc4c8a60019e27ea4ab4c9a17f6a7a2dacb4d3987aced8e0"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/thumb1.jpg",
+      "local": "public/media/resource/thumb1.jpg",
+      "bytes": 1518,
+      "sha256": "75403f29b9de74969e3ac20c0fa9de9cd0845ebbf34de0e1e5e760ce7e6206b2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/thumb2.jpg",
+      "local": "public/media/resource/thumb2.jpg",
+      "bytes": 1714,
+      "sha256": "ab5041e560396141ced7303d558076944d6772420e97cf50a788ae3f5dd84931"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/thumb3.jpg",
+      "local": "public/media/resource/thumb3.jpg",
+      "bytes": 1956,
+      "sha256": "9e46b81e77e2aa3a2ac86aa408dfbe39fd1c371d5384e203c85cf51704df1360"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/bg-4-1.jpg",
+      "local": "public/media/banner/bg-4-1.jpg",
+      "bytes": 135043,
+      "sha256": "32efc3718c9403cfc60b7c0fe3f722f6aeab29ad41723734cf04b3654cf2d599"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop6-1.jpg",
+      "local": "public/media/resource/shop6-1.jpg",
+      "bytes": 16600,
+      "sha256": "e06987dd0ab9204ed1a90a417b3e0264f961b9e3cf4f69126342aad9c13ff439"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop6-2.jpg",
+      "local": "public/media/resource/shop6-2.jpg",
+      "bytes": 16314,
+      "sha256": "f43bf31c424e62b7015a48bbde3394a8ab342c3d62bc7ea83d110dfb0d9820be"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop6-3.jpg",
+      "local": "public/media/resource/shop6-3.jpg",
+      "bytes": 15009,
+      "sha256": "781b52bc86cbe0f7864bfe568d3b17092656b15ad52b1aafea8ad0e766d0a177"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/gallery1-1.jpg",
+      "local": "public/media/resource/gallery1-1.jpg",
+      "bytes": 61043,
+      "sha256": "caf65aeac866efb7feb48b6102bb27354b3921de2128a9ad2d3dcb0ebd1563db"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/gallery1-2.jpg",
+      "local": "public/media/resource/gallery1-2.jpg",
+      "bytes": 293671,
+      "sha256": "19e2f18a73ce4bcaf23b4c28ec2b6811215232a3ff576313803f1e9c16020f6f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/gallery1-3.jpg",
+      "local": "public/media/resource/gallery1-3.jpg",
+      "bytes": 28604,
+      "sha256": "f6402c9e8a33414758f1d0806ff22dc20baa2c3654de279ea4f363edd03a7950"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/gallery1-4.jpg",
+      "local": "public/media/resource/gallery1-4.jpg",
+      "bytes": 19613,
+      "sha256": "47bb66d32be6eac595763bfe754927e06cd96118cecd8817995c80f5cdb5b5a2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/gallery1-5.jpg",
+      "local": "public/media/resource/gallery1-5.jpg",
+      "bytes": 17205,
+      "sha256": "b1a5aa070eaacac27b6bbb86985d8e4ce09edd41f9c859ccd1eff8ed8e6197d1"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/arrow.svg",
+      "local": "public/media/arrow.svg",
+      "bytes": 555,
+      "sha256": "ee65e6b17b3d825d15418539f9fcac0999c53d89e0da1a8618d0e6684803ae2d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/loan-img.jpg",
+      "local": "public/media/resource/loan-img.jpg",
+      "bytes": 96734,
+      "sha256": "e732f00ca990f10fa72fbb553dadb66056324c21ba43be98bd2b56070ce67b8f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team6-1.jpg",
+      "local": "public/media/resource/team6-1.jpg",
+      "bytes": 22093,
+      "sha256": "95ba1f755eed9c283ab95f3f9a7a80234d6e7273e89bb5e4a081c5d5e0a8323e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team6-2.jpg",
+      "local": "public/media/resource/team6-2.jpg",
+      "bytes": 24439,
+      "sha256": "77d4fab7b3e71e433b26fa795cdb04d6eb2046bc386d5f2daecb4c9fbab2df1d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team6-3.jpg",
+      "local": "public/media/resource/team6-3.jpg",
+      "bytes": 25152,
+      "sha256": "51085cf596c1b929c4f3fe448d8c4fd179a41b989640ba44d07dddede9ca490e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team6-4.jpg",
+      "local": "public/media/resource/team6-4.jpg",
+      "bytes": 31911,
+      "sha256": "87b1ad9e3f199333e5fbee2558af04e0ef63356068ac893723414157d52f37cc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/apple-1.png",
+      "local": "public/media/resource/apple-1.png",
+      "bytes": 635,
+      "sha256": "9dbb7c596ab74784408dbdc37f72f5c0c93cad9f12324cfa33177ee81348993e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/play-2-1.png",
+      "local": "public/media/resource/play-2-1.png",
+      "bytes": 679,
+      "sha256": "353b567b3e0532c4c57414a190ec2bbbe4e4ff08ae5c7f2e5c3522ef3df6bd02"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/banner5-1.png",
+      "local": "public/media/banner/banner5-1.png",
+      "bytes": 268555,
+      "sha256": "e06866c521f95009e9e49b1552eee728ce2d244c1884de1f4d95bcecd51edfdd"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/testi3-1.png",
+      "local": "public/media/resource/testi3-1.png",
+      "bytes": 2414,
+      "sha256": "571400cd5faa39a212942894d26d3bb4e9e5a35168afcbed1642c4aa3ce421fb"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/testi3-2.png",
+      "local": "public/media/resource/testi3-2.png",
+      "bytes": 6078,
+      "sha256": "5d38891aaaf9f9b02398c2539e5f0d03d147ffc8a6b89ddd3315c9b70866daef"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/testi3-3.png",
+      "local": "public/media/resource/testi3-3.png",
+      "bytes": 3049,
+      "sha256": "71ce17e04b425b1f10e0dd1e6a374d730b877eaf0833337017dabe09a0047a14"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team2-1.jpg",
+      "local": "public/media/resource/team2-1.jpg",
+      "bytes": 13082,
+      "sha256": "d78d4a3e07ab1d05fde33af2af46c99ae7529fec242ee3abeea0a1a4ff9e8448"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team2-2.jpg",
+      "local": "public/media/resource/team2-2.jpg",
+      "bytes": 93956,
+      "sha256": "edd11bed2a5be65a9546e2edd63c2431ea0d941e168608798e704a972d0b90d6"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team2-3.jpg",
+      "local": "public/media/resource/team2-3.jpg",
+      "bytes": 13173,
+      "sha256": "d5cc3dd5204a8cf87e836573b78feed7420e44beaa0e12c386eaa520315102dd"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team2-4.jpg",
+      "local": "public/media/resource/team2-4.jpg",
+      "bytes": 11972,
+      "sha256": "2b089549ed0fb358a35f457bb306b2d7e9d0700bbff8ae5bac6879af200867d3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brandf.png",
+      "local": "public/media/resource/brandf.png",
+      "bytes": 67913,
+      "sha256": "568058426095e638015aad6664fe260c0008872b403f1e15bdf26d1bab8070bc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/dealer1-1.jpg",
+      "local": "public/media/resource/dealer1-1.jpg",
+      "bytes": 14294,
+      "sha256": "121b677594e89b9af96d0ed3c58cda8e4b094210ed9924a2b306b3fb0e17cab5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/dealer1-2.jpg",
+      "local": "public/media/resource/dealer1-2.jpg",
+      "bytes": 26655,
+      "sha256": "a9ace3f87cf6bfcaf791eea7051805488a3f37a65b9310a00b0e72c4f1baaf7b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/dealer1-3.jpg",
+      "local": "public/media/resource/dealer1-3.jpg",
+      "bytes": 21260,
+      "sha256": "61f019461c1c632b99d23eb0efc001ce18b3b4647e1ee60f5ebc7bc173d011a5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing4-1.jpg",
+      "local": "public/media/resource/pricing4-1.jpg",
+      "bytes": 61913,
+      "sha256": "eadabb6e997a64943e0999c6802e1ca2ad0f7aa4221dc2e9b172a522dc601486"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/search.png",
+      "local": "public/media/resource/search.png",
+      "bytes": 2940,
+      "sha256": "1b55f3ee523b047296bf72aa5e3fc6f6082302e00908ff8478c2c45e12baa5fe"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/comas.png",
+      "local": "public/media/resource/comas.png",
+      "bytes": 989,
+      "sha256": "f07be5f464ba9f0fdaecb5f72f9c5f964bae58ad48d97c7784818df612b09ee2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/test-auther-1.jpg",
+      "local": "public/media/resource/test-auther-1.jpg",
+      "bytes": 1693,
+      "sha256": "ded42738c82a344bcaed9326119d7022d3b015156de041416a322f2793db54a7"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/test-auther-2.jpg",
+      "local": "public/media/resource/test-auther-2.jpg",
+      "bytes": 1287,
+      "sha256": "5922e5ec87f6c2d704d2e49fc9a49c74539fd781a87d1102bc2399954264e879"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/test-auther-3.jpg",
+      "local": "public/media/resource/test-auther-3.jpg",
+      "bytes": 1831,
+      "sha256": "2d52f3e8b5fac415ab74762ab2c043524532c791012c63235f4c262f12181f25"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/bg-7.jpg",
+      "local": "public/media/banner/bg-7.jpg",
+      "bytes": 133128,
+      "sha256": "6d4108685b5dafa77ad33eff7a196835086692f49d5ef31a5e50558012fda489"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team3-1.jpg",
+      "local": "public/media/resource/team3-1.jpg",
+      "bytes": 17384,
+      "sha256": "fd3e4133ee763af9126c4ecc314d849592362b77659c118ea7f4cd98ed6289f5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team3-2.jpg",
+      "local": "public/media/resource/team3-2.jpg",
+      "bytes": 15254,
+      "sha256": "cad3855d765e0620c95e55d4b45a809e97ee3f81ef11f49edf76966ffb3a98a8"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team3-3.jpg",
+      "local": "public/media/resource/team3-3.jpg",
+      "bytes": 13804,
+      "sha256": "69ee7e3b3cc6c625af173a2d3566d0d20bb4306deba8da5c167a0359420ffdb1"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team3-4.jpg",
+      "local": "public/media/resource/team3-4.jpg",
+      "bytes": 9828,
+      "sha256": "f96c1adcb7fbf6c6100fc5adb6e140118168bb414f6c3546c969e4882b71c4c8"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team3-5.jpg",
+      "local": "public/media/resource/team3-5.jpg",
+      "bytes": 9148,
+      "sha256": "454131f265f8ee9112daecb3b0063d298e754e0f2dc9cff8532d8252712402a3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing7-1.jpg",
+      "local": "public/media/resource/pricing7-1.jpg",
+      "bytes": 21698,
+      "sha256": "bfdcce46b01a2ea73e19666203d26707b6200370ed3e5f144a59985a291ad63a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing7-2.jpg",
+      "local": "public/media/resource/pricing7-2.jpg",
+      "bytes": 16242,
+      "sha256": "844d028030d8bddba0945d002bad5d1833adb4d9c54dbc84ef158b6770143c4f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/service6.jpg",
+      "local": "public/media/resource/service6.jpg",
+      "bytes": 70032,
+      "sha256": "cbdcb5be5821aa0db7ce3c19c21116af57939b93f0e6e302d856d33694c6917d"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-1.png",
+      "local": "public/media/resource/brand5-1.png",
+      "bytes": 2861,
+      "sha256": "78413a8894ab5651db160cef427c05b34a817a900b194d253b9e5ed233d6f051"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-2.png",
+      "local": "public/media/resource/brand5-2.png",
+      "bytes": 3419,
+      "sha256": "47a27adc4e91fda8f48fa568ef6398be0eaa5df372f2bf15a1c59eeae84647d9"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-3.png",
+      "local": "public/media/resource/brand5-3.png",
+      "bytes": 4822,
+      "sha256": "0963fb0f7334b2d7abb500c46268623b939b9191c62fc05dae62b7446d1affc2"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-4.png",
+      "local": "public/media/resource/brand5-4.png",
+      "bytes": 3895,
+      "sha256": "95c70b0dc5b2165749a9c4a9e7d5a9ddfd88d3479f72adb7d78ba4f503c75547"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-5.png",
+      "local": "public/media/resource/brand5-5.png",
+      "bytes": 3601,
+      "sha256": "956f83ff616c4fff90db7bb87d74236b90d03f165467b5d7cbd256b420460c84"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-6.png",
+      "local": "public/media/resource/brand5-6.png",
+      "bytes": 3196,
+      "sha256": "16a9b293fdb3b8bb8b2be5ac79ad6a00bfba240568c4c2de99c479dc74a52b9a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-7.png",
+      "local": "public/media/resource/brand5-7.png",
+      "bytes": 5098,
+      "sha256": "d620c7adc918a1e7615a02b8d6ac3da81e72bf3f91730d1f8687a4ac7ef892ec"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-8.png",
+      "local": "public/media/resource/brand5-8.png",
+      "bytes": 2418,
+      "sha256": "234897b45a5b199014b22a3c7fdbf97ceff965262581fcf721314e940c594f85"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand5-9.png",
+      "local": "public/media/resource/brand5-9.png",
+      "bytes": 2445,
+      "sha256": "d2c1d7e843510807142d442c1debabdccd942ea34e799f2db3882fb428c06fc9"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/brand10-10.png",
+      "local": "public/media/resource/brand10-10.png",
+      "bytes": 3050,
+      "sha256": "82fe4ff4787df2799803c1034fd5caa7b11a7ecb1b18f70c96f718c04abf1444"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop8-1.jpg",
+      "local": "public/media/resource/shop8-1.jpg",
+      "bytes": 14239,
+      "sha256": "b578b596a52fab92ddec9ff7ad7591a6e82980a91b4c994688c27f86fb966c8f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/news1-1.png",
+      "local": "public/media/resource/news1-1.png",
+      "bytes": 44036,
+      "sha256": "618b809ee51ab3ac533eaf3bca018f6546073e2934959e9683f4ce4ff25cb593"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles1-1.png",
+      "local": "public/media/resource/vehicles1-1.png",
+      "bytes": 32769,
+      "sha256": "000a1d2fc15617befa96fdf18f2c778cebf18dd85046e495dc156e001a3e1e76"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles1-2.png",
+      "local": "public/media/resource/vehicles1-2.png",
+      "bytes": 28957,
+      "sha256": "e772a14dc3ade9c9ad171c280e6695a2da6a4636d20930147af576d08c1e83c7"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles1-3.png",
+      "local": "public/media/resource/vehicles1-3.png",
+      "bytes": 33117,
+      "sha256": "f0c8997a4a6e57b12e198404ec2b9c317ef91302e64f9df5c5c85549f10b2f6b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles1-4.png",
+      "local": "public/media/resource/vehicles1-4.png",
+      "bytes": 30248,
+      "sha256": "40d167ba7fe300184c59e88cecfcaee49957d1a8d7b2bc96cdb31e59e7e428a1"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles1-5.png",
+      "local": "public/media/resource/vehicles1-5.png",
+      "bytes": 25841,
+      "sha256": "987a5ef7cc5d2c31d639d8dcc958a80574150af0420822d31b7dcf37e6eabd62"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing9-1.jpg",
+      "local": "public/media/resource/pricing9-1.jpg",
+      "bytes": 19257,
+      "sha256": "919569fd090e9e4608b564c50d4b51b43114a724d902fee7b802188fef9b37b5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing9-2.jpg",
+      "local": "public/media/resource/pricing9-2.jpg",
+      "bytes": 10097,
+      "sha256": "8bbc5cdcd79b15e21e723356aad693357d3b69baaa1153c15bc30f4d5690eb91"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing9-3.jpg",
+      "local": "public/media/resource/pricing9-3.jpg",
+      "bytes": 17808,
+      "sha256": "c81838c4c2bbbc44333abf59d538a92cf7bdf2e9e13be9f6d784e91360cbf782"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/blog3-1.jpg",
+      "local": "public/media/resource/blog3-1.jpg",
+      "bytes": 27432,
+      "sha256": "edb011967595b9f4d0beb4fee65a2bd196bd263138358290fc93f597d3ab2018"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/blog3-2.jpg",
+      "local": "public/media/resource/blog3-2.jpg",
+      "bytes": 51416,
+      "sha256": "b81566ee776ec88003ef95be4e7290639735925e0b595a79f10e303d6c971ada"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop9-5.jpg",
+      "local": "public/media/resource/shop9-5.jpg",
+      "bytes": 15162,
+      "sha256": "6d9a3bdd2c7abe80014ae9aac883b4b9019e9355946895a397ac58edcd392039"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop9-6.jpg",
+      "local": "public/media/resource/shop9-6.jpg",
+      "bytes": 14712,
+      "sha256": "874f1fee8ff29b248726739ee313771f90938bb425dabe64db64017869cf8f28"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop9-7.jpg",
+      "local": "public/media/resource/shop9-7.jpg",
+      "bytes": 13451,
+      "sha256": "a3fe7395fd69af6656c4796a0775536e72b507625f2f51170d4b885c74e184ea"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/shop9-8.jpg",
+      "local": "public/media/resource/shop9-8.jpg",
+      "bytes": 17527,
+      "sha256": "aaa6c4a4a517767cc7d02ac362c826e77a9ad3f51639cb44efa949c58a30b074"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team4-1.jpg",
+      "local": "public/media/resource/team4-1.jpg",
+      "bytes": 21949,
+      "sha256": "35d6b14c30a2c04b03f94e512e44134b019c41485d8d55509fb975cba424e72a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team4-2.jpg",
+      "local": "public/media/resource/team4-2.jpg",
+      "bytes": 17371,
+      "sha256": "aeb40542b749f7a815739e72c88d42b16ac414be459ced57420c1cb0d13f22a5"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team4-3.jpg",
+      "local": "public/media/resource/team4-3.jpg",
+      "bytes": 19060,
+      "sha256": "0deae5f15ca0597019cd167f39fc9900365d94515b3992e6ba472091a13b9f68"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team4-4.jpg",
+      "local": "public/media/resource/team4-4.jpg",
+      "bytes": 21949,
+      "sha256": "35d6b14c30a2c04b03f94e512e44134b019c41485d8d55509fb975cba424e72a"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/team6-5.jpg",
+      "local": "public/media/resource/team6-5.jpg",
+      "bytes": 22549,
+      "sha256": "62bf4eb757f4956120ebbe28b1f72dc721459aec871f5be0b218523aafcbe185"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-1.png",
+      "local": "public/media/resource/vehicles2-1.png",
+      "bytes": 15147,
+      "sha256": "bcf42f63492767be39c50fd78e4c1f22efae22717c8287777357e740e6dd68a3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-2.png",
+      "local": "public/media/resource/vehicles2-2.png",
+      "bytes": 16268,
+      "sha256": "35982fc94e4f2a60e4b8c7282d19d71469f3810a9ede1e77846e86ad0f089863"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-3.png",
+      "local": "public/media/resource/vehicles2-3.png",
+      "bytes": 18531,
+      "sha256": "e7b512276be9959ce870b9af5b8318a51edb356da3c5fb21542c701ec30a66bc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-4.png",
+      "local": "public/media/resource/vehicles2-4.png",
+      "bytes": 19452,
+      "sha256": "e2af1b19409b50b99882897e1f8945a18077d9c42dfd5d6bf2df8a1d21316fb9"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-5.png",
+      "local": "public/media/resource/vehicles2-5.png",
+      "bytes": 18482,
+      "sha256": "30307dbe9e58c930e0cd049d308e6d8a83faecf62b150f3357bec190401c0f0f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/vehicles2-6.png",
+      "local": "public/media/resource/vehicles2-6.png",
+      "bytes": 17150,
+      "sha256": "ede554c4d536534bda092a2c89e942b6800c3853084aba1f86c1a00d6154a55c"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing5-1.jpg",
+      "local": "public/media/resource/pricing5-1.jpg",
+      "bytes": 56194,
+      "sha256": "0fe855a8ecc00a47819152d8761e42420aca5b1e664e7e2f836a03aefb50affc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/pricing6-1.jpg",
+      "local": "public/media/resource/pricing6-1.jpg",
+      "bytes": 53092,
+      "sha256": "af7b4f4d09c2b69c0ec4ed7a84352dcff12560f9b8f4cd830b67e5db838dc64e"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/logo.svg",
+      "local": "public/media/logo.svg",
+      "bytes": 2519,
+      "sha256": "94e537c9f33c2d67edbf3e77926b0daa09aa8a5ada5275bb937ba827df797350"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/logo2.svg",
+      "local": "public/media/logo2.svg",
+      "bytes": 2521,
+      "sha256": "bd7e1f2c80428d7831997b925c766fe62b46b03964a870c6d531e06b9a0f9d96"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/banner-page1.jpg",
+      "local": "public/media/banner/banner-page1.jpg",
+      "bytes": 174389,
+      "sha256": "578c36df87cabd5d6959fee2e5b0ad33c31c6c791eb08243c1590c347d6db78b"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/banner-hp3.jpg",
+      "local": "public/media/banner/banner-hp3.jpg",
+      "bytes": 106234,
+      "sha256": "77b9b89b195e87db7220dad8626588fd24b39da5fb048ab0f8673a61873bcba7"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/banner-six.png",
+      "local": "public/media/resource/banner-six.png",
+      "bytes": 674392,
+      "sha256": "289ceb8557e6b2a2546a634377fe83fbe82cd2a23e771907254cc98358f92ae6"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/background/banner-v8.jpg",
+      "local": "public/media/background/banner-v8.jpg",
+      "bytes": 36832,
+      "sha256": "948dde91977e938c14f8866d104653e17527a4c8d1f5226939c513c332a5c577"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/banner/banner-page9.jpg",
+      "local": "public/media/banner/banner-page9.jpg",
+      "bytes": 145062,
+      "sha256": "bf578346c11b693c2127fd3c22fe80cfa195ff497a3992ebf96aac646d94e084"
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2Yp2ywxg089UriI5-g4vlH9VoD8Cmcqbu0-K4.woff2",
+      "local": "public/media/fonts/dm-sans.woff2",
+      "bytes": 36932,
+      "sha256": "9fea608a947e67020c33cad9a6fe3d60c54119dfb8cff87768a8117a15ed7543"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/inventory1-1.jpg",
+      "local": "public/media/resource/inventory1-1.jpg",
+      "bytes": 378244,
+      "sha256": "27e534f6af8e5e7efeaed457b20b153922f02c1c5802f518b64691383d9147bc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/inventory1-2.jpg",
+      "local": "public/media/resource/inventory1-2.jpg",
+      "bytes": 106174,
+      "sha256": "5797c975cb8554f44799bcbc9e6f707db2fe4013db5c89e02caad1f4822112fc"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/inventory1-3.png",
+      "local": "public/media/resource/inventory1-3.png",
+      "bytes": 84054,
+      "sha256": "ca1d34b2e346ce9d1755438e386fab8bc563ba17149c679f528e8f6b4d15186f"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/inventory1-4.jpg",
+      "local": "public/media/resource/inventory1-4.jpg",
+      "bytes": 69725,
+      "sha256": "256365f3293a4fcaf5c76e7e540a24ab0b5eff9d231e656dcfaef2dc521c15b3"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/inventory1-5.png",
+      "local": "public/media/resource/inventory1-5.png",
+      "bytes": 111397,
+      "sha256": "1b7747951b789998dcaf8d2ac0cd901efa0f4f6022d41ba975b24aa5646f0380"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/0212dd260e92696d2a.jpg",
+      "local": "public/media/vehicles/0212dd260e92696d2a.jpg",
+      "bytes": 127018,
+      "sha256": "a7170fa4e5a22a8925771633713d0643c171c48f46eecab1e40abb81413093d2"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/0a545ac0958f5cb1cd.jpg",
+      "local": "public/media/vehicles/0a545ac0958f5cb1cd.jpg",
+      "bytes": 64586,
+      "sha256": "c72292f9415d3872f1ea345bc63d2dfcb5ea716183d5195e2cb0f8b5532b9a1a"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/0ce8c89bcc551b522f.jpg",
+      "local": "public/media/vehicles/0ce8c89bcc551b522f.jpg",
+      "bytes": 61110,
+      "sha256": "2606cf159ee6be646652ca4842900dccf18a74d385205141d72c67d3d83b4e9c"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/0e12a89ba2155113f5.jpg",
+      "local": "public/media/vehicles/0e12a89ba2155113f5.jpg",
+      "bytes": 63957,
+      "sha256": "55bfb6be4da3a961f08133907c17e4305b68949fada24274be7dadb9b361cba0"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/1860fd81918905911f.jpg",
+      "local": "public/media/vehicles/1860fd81918905911f.jpg",
+      "bytes": 80467,
+      "sha256": "149476ce069f934162656347afcd5f7ebd83b10d6de0053e113e8759a0bd34ee"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/1f49b2f52a683b55ad.jpg",
+      "local": "public/media/vehicles/1f49b2f52a683b55ad.jpg",
+      "bytes": 119643,
+      "sha256": "79993349223a9174057cb517e9f316531f97c2a09d968e3ede463be53fb962e2"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/30c9f5902904eab72c.jpg",
+      "local": "public/media/vehicles/30c9f5902904eab72c.jpg",
+      "bytes": 105326,
+      "sha256": "84d99f5574c52994e1f66954e5248a884121e45bd625202cfe2b3d3a8acf0a39"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/4e055a7ec63d4566ba.jpg",
+      "local": "public/media/vehicles/4e055a7ec63d4566ba.jpg",
+      "bytes": 44859,
+      "sha256": "d80fcbf228bf06dfdf89775f8b4eb6a930467d240be5f930ed6efec37b6f0c56"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/4f297758120f6fef78.jpg",
+      "local": "public/media/vehicles/4f297758120f6fef78.jpg",
+      "bytes": 65049,
+      "sha256": "c29529838aa647567c6f36679940c50396127f1f6e632d14364e96be10388aab"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/67e9aff5e37e2c60c1.jpg",
+      "local": "public/media/vehicles/67e9aff5e37e2c60c1.jpg",
+      "bytes": 65117,
+      "sha256": "1a7f82b624931a751eda933cfb15685b75437caf0dceb424bf94d1e8370deae9"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/6b1fbd6fbad2a88cf1.jpg",
+      "local": "public/media/vehicles/6b1fbd6fbad2a88cf1.jpg",
+      "bytes": 85867,
+      "sha256": "a9576880d0ac9279fa488d83a8ad4ea4b706d7f9b03cf5491b8b491ae178eb52"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/6c396ce7617b073763.jpg",
+      "local": "public/media/vehicles/6c396ce7617b073763.jpg",
+      "bytes": 92680,
+      "sha256": "d93e6293069eaf707b5def0e12cfea63e91dac83de65be3bb0c8bffabcd09aeb"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/744deedbf8c5bd1b7d.jpg",
+      "local": "public/media/vehicles/744deedbf8c5bd1b7d.jpg",
+      "bytes": 121964,
+      "sha256": "51323cfb35ca91dcce628f7d09905205ba7ec47175a20df526e76ae739f99e7a"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/b213dc4b7391716527.jpg",
+      "local": "public/media/vehicles/b213dc4b7391716527.jpg",
+      "bytes": 72366,
+      "sha256": "3b81be3384f07669ac965b6edf8ed1321a7543567ee798b981f09b13dd981cb7"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/cd42495e0570687011.jpg",
+      "local": "public/media/vehicles/cd42495e0570687011.jpg",
+      "bytes": 35610,
+      "sha256": "60f397df1c874fd742874ba0ab407b5919908a2c80320209d30f943becba4c4c"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/d38f4192abbac4fd97.jpg",
+      "local": "public/media/vehicles/d38f4192abbac4fd97.jpg",
+      "bytes": 55778,
+      "sha256": "3dee4fc73c39671990da98736a9c58c457c8c2a07080c65caf3846a8341a5bad"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/d4b1334d2109c04747.jpg",
+      "local": "public/media/vehicles/d4b1334d2109c04747.jpg",
+      "bytes": 54942,
+      "sha256": "b948db8e1211941e91b7bf9fbd82d7191702c4a60c5342e92e84c8b296f619b5"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/ee9f1ef6ba8473bc80.jpg",
+      "local": "public/media/vehicles/ee9f1ef6ba8473bc80.jpg",
+      "bytes": 45568,
+      "sha256": "2e1e0f2b9e6e4afb2204802b89264999854d69b0dfe6e51ddf60a5dd7cbdbe8f"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/f427bb3ce3455953f1.jpg",
+      "local": "public/media/vehicles/f427bb3ce3455953f1.jpg",
+      "bytes": 50936,
+      "sha256": "0a830ad3c9485ab4b35a3b4910e134829e2050943d7002d60351ef9180c9dc34"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/f4c0e252fa87ae7783.jpg",
+      "local": "public/media/vehicles/f4c0e252fa87ae7783.jpg",
+      "bytes": 41494,
+      "sha256": "57a5d0b4de9d0e8506ea1eaedfc64627421ea61837fdb356896079eb5bab5792"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/f4db4356ccdb16651a.jpg",
+      "local": "public/media/vehicles/f4db4356ccdb16651a.jpg",
+      "bytes": 54442,
+      "sha256": "ff172760cc4e51961795484f1c5f0167e9abf8761afb79d035d9c2ba52785564"
+    },
+    {
+      "source": "cars:templates/boxcar/public/assets/ff1a1faf2e9dc28a20.jpg",
+      "local": "public/media/vehicles/ff1a1faf2e9dc28a20.jpg",
+      "bytes": 59565,
+      "sha256": "c191f85491e2f743df56e8e5d244b7787191b6fb9e34db184321ea68435bc1ca"
+    },
+    {
+      "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/dmsans/OFL.txt",
+      "local": "public/media/fonts/OFL.txt",
+      "bytes": 4388,
+      "sha256": "7ec15e79c59bc14b86436a17e5eb7926b46cbcaeb08e1a7e6c110b415e6eb2a2",
+      "transformation": "LF line endings and trimmed trailing whitespace; license wording preserved."
+    },
+    {
+      "source": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwARZthTg.ttf",
+      "local": "public/media/fonts/dm-sans.ttf",
+      "bytes": 48200,
+      "sha256": "2a8e7f713ee79fbccdef3cef5c787aff47580299f7da60144961e7db2ec08211",
+      "usage": "Retained initial source font; runtime uses variable WOFF2."
+    }
+  ]
+}

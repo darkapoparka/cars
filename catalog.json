@@ -316,6 +316,86 @@
       "note": "Only Home 1 is currently implemented locally; other home menu entries alias it. Strong inventory and detail patterns; mobile needs compaction. Captured content and local behavior adapters."
     },
     {
+      "key": "boxcar-updated",
+      "name": "Boxcar Updated",
+      "aliases": [
+        "boxcars-updated",
+        "6455"
+      ],
+      "path": "templates/boxcar-updated",
+      "version": "2026.10.02-native-10-homes",
+      "family": "boxcar",
+      "stack": "vite-svelte",
+      "sourcePort": 6455,
+      "libraryPort": 6455,
+      "entry": "/",
+      "homes": [
+        {
+          "id": "home01",
+          "name": "Mountain",
+          "route": "/"
+        },
+        {
+          "id": "home02",
+          "name": "Featured",
+          "route": "/home-2/"
+        },
+        {
+          "id": "home03",
+          "name": "City",
+          "route": "/home-3/"
+        },
+        {
+          "id": "home04",
+          "name": "Luxury",
+          "route": "/home-4/"
+        },
+        {
+          "id": "home05",
+          "name": "Minimal",
+          "route": "/home-5/"
+        },
+        {
+          "id": "home06",
+          "name": "Showroom",
+          "route": "/home-6/"
+        },
+        {
+          "id": "home07",
+          "name": "Classic",
+          "route": "/home-7/"
+        },
+        {
+          "id": "home08",
+          "name": "Electric",
+          "route": "/home-8/"
+        },
+        {
+          "id": "home09",
+          "name": "Lifestyle",
+          "route": "/home-9/"
+        },
+        {
+          "id": "home10",
+          "name": "Touring",
+          "route": "/home-10/"
+        }
+      ],
+      "priority": "variant-library",
+      "readiness": "reference-content-candidate",
+      "reskinEffort": "dealer-adaptation-needed",
+      "brandFiles": [
+        "src/data/brand.ts",
+        "src/data/homes.ts",
+        "src/data/vehicles.json",
+        "src/data/journal.ts",
+        "public/media"
+      ],
+      "note": "Ten distinct native Svelte 5 home designs rebuilt from the Boxcar HTML public reference. Shared URL-driven inventory, vehicle details, saved cars, comparison, loan estimates and local enquiry previews. Sample inventory and reference assets require dealer personalization. See templates/boxcar-updated/TEMPLATE.md.",
+      "versionRole": "Local candidate; owner acceptance and an approved immutable release are separate.",
+      "sourceRepository": "darkapoparka/cars"
+    },
+    {
       "key": "rencar",
       "name": "Rencar",
       "aliases": [

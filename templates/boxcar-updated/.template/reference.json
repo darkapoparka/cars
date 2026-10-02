@@ -1,0 +1,215 @@
+{
+  "captured": "2026-10-02",
+  "edition": "Boxcar HTML public preview",
+  "item": "https://themeforest.net/item/boxcar-car-dealer-rental-listing-html-template/51590916",
+  "demo": "https://creativelayers.net/themes/boxcar-html/",
+  "method": "Inspect public DOM, section order, CSS geometry and local reference screenshots; author shared native Svelte components and application state.",
+  "homes": [
+    {
+      "id": 1,
+      "name": "Mountain",
+      "route": "/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index.html",
+      "sourceSha256": "ea2d31d619b32068b3ff82b5dfdcb1916443ca94b2331e12ef4b38cf96ad24af",
+      "sourceSections": [
+        "boxcar-banner-section-v1",
+        "boxcar-brand-section section-radius-top bg-1",
+        "cars-section-three",
+        "boxcar-pricing-section pb-0 pt-0",
+        "boxcar-fun-fact-section",
+        "why-choose-us-section",
+        "cars-section-two",
+        "cars-section",
+        "boxcar-testimonial-section home1",
+        "blog-section",
+        "blog-section-two pt-0 section-radius-bottom bg-white"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Featured",
+      "route": "/home-2/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-2.html",
+      "sourceSha256": "5fb38b67ef927be2fb4ad25b1603320c3b5ef54dc102995fa6636802aa08e144",
+      "sourceSections": [
+        "boxcar-banner-section-two",
+        "boxcar-brand-section",
+        "cars-section-four bg-1",
+        "boxcar-pricing-section-two pt-0 pb-0",
+        "why-choose-us-section",
+        "cars-section-three pt-0",
+        "boxcar-customers-section",
+        "boxcar-team-section",
+        "boxcar-inspiration-section pt-0",
+        "boxcar-service-section pt-0",
+        "boxcar-brand-section pt-0",
+        "brand-boxcar-banner-section"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "City",
+      "route": "/home-3/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-3.html",
+      "sourceSha256": "1f90851f971d4aeb24423af00553106eac37e6a1b263402574dd6f4d18c5d5c0",
+      "sourceSections": [
+        "boxcar-banner-section-v1 banner-style-three",
+        "cars-section-four section-tab-car",
+        "blog-section-two pt-0",
+        "why-choose-us-section pt-0",
+        "cars-section-five",
+        "testimonila-section-two",
+        "boxcar-brand-section pt-0",
+        "boxcar-pricing-section-three",
+        "boxcar-fun-fact-section",
+        "blog-section",
+        "banner-footer-section"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Luxury",
+      "route": "/home-4/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-4.html",
+      "sourceSha256": "68e89da293269569f9cde71c1804444b5f84a9b8b158a1ed0feea2e9102d90d0",
+      "sourceSections": [
+        "boxcar-banner-section-four",
+        "cars-section-six",
+        "why-choose-us-section-two cus-layout-1",
+        "car-galler-section",
+        "cars-section pt-0",
+        "boxcar-brand-section pt-0",
+        "calculater-section pt-0",
+        "boxcar-customers-section-two pt-0",
+        "boxcar-team-section",
+        "boxcar-service-section-two pt-0",
+        "blog-section pt-0"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Minimal",
+      "route": "/home-5/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-5.html",
+      "sourceSha256": "01c6c6d6d37879628f1c2ef675558042e6da9c96396b5b7f5779e4dc45edb7ff",
+      "sourceSections": [
+        " boxcar-banner-section-five",
+        "boxcar-brand-section-four",
+        "blog-section-two pt-0",
+        "cars-section-eight pt-0",
+        "why-choose-us-section-three pt-0",
+        "cars-section-seven pt-0",
+        "boxcar-inspiration-section pt-0",
+        "boxcar-testimonial-section-three",
+        "boxcar-team-section-two",
+        "blog-section pt-0",
+        "boxcar-brand-section-three"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Showroom",
+      "route": "/home-6/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-6.html",
+      "sourceSha256": "a6a64187ba43e1c115840e3c6f671cf799ab63862e5082857123b40bc9757e7c",
+      "sourceSections": [
+        "boxcar-banner-section-six",
+        "boxcar-brand-section pt-0",
+        "dealership-section pt-0",
+        "boxcar-pricing-section-four style-bg",
+        "boxcar-fun-fact-section",
+        "cars-section-three",
+        "boxcar-inspiration-section-two pt-0",
+        "why-choose-us-section v2 pt-0",
+        "boxcar-testimonial-section-four pt-0",
+        "boxcar-team-section pt-0",
+        "map-section"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Classic",
+      "route": "/home-7/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-7.html",
+      "sourceSha256": "0cc4ce4c8f4bb88d7cf9c3f75f8c71ea5aa85e27b6f1e3c31f1e00f760bb3068",
+      "sourceSections": [
+        "boxcar-banner-section-seven",
+        "filter-search-section",
+        "boxcar-team-section-three",
+        "why-choose-us-section-four",
+        "cars-section-nine",
+        "boxcar-pricing-section-four v7 pb-0 pt-0",
+        "boxcar-fun-fact-section",
+        "boxcar-testimonial-section-four v7",
+        "calculater-section pt-0 v2",
+        "boxcar-service-section v7 pt-0",
+        "boxcar-brand-section v7",
+        "blog-section"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Electric",
+      "route": "/home-8/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-8.html",
+      "sourceSha256": "b31412bbf54df598a3968b7ae2a4f11535c1bedb9954bb8fa7e99d5f2d01a25f",
+      "sourceSections": [
+        "boxcar-banner-section-v8",
+        "boxcar-brand-section-six",
+        "boxcar-brand-section-five pt-0",
+        "cars-section-ten v8 pt-0",
+        "why-choose-us-section pt-0",
+        "boxcar-fun-fact-section-two",
+        "cars-section-ten",
+        "boxcar-testimonial-section-four v8 pt-0",
+        "blog-section pt-0",
+        "news-letter-section pb-0 pt-0"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Lifestyle",
+      "route": "/home-9/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-9.html",
+      "sourceSha256": "adb3a532985e196e2f81c1e6b131bf0c83e31cccf25e481f561060e4a162a8ce",
+      "sourceSections": [
+        "boxcar-banner-section-nine",
+        "category-section",
+        "vehicles-section",
+        "boxcar-pricing-section-four v9 pb-0",
+        "boxcar-fun-fact-section-three",
+        "blog-section-three",
+        "cars-section-eleven pt-0",
+        "why-choose-us-section-five",
+        "boxcar-team-section-four",
+        "testimonila-section-two bg-1",
+        "blog-section",
+        "calculator-section-home9"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Touring",
+      "route": "/home-10/",
+      "source": "https://creativelayers.net/themes/boxcar-html/index-10.html",
+      "sourceSha256": "956779c95a29e70f39401932c6e9adb6c5c53abef61cdd166a69a868e18ee17a",
+      "sourceSections": [
+        "boxcar-banner-section-seven v10",
+        "vehicles-section-two",
+        "why-choose-us-section bg-1",
+        "cars-section-three",
+        "blog-section-two pt-0",
+        "cars-section-twelve pt-0",
+        "boxcar-pricing-section-five",
+        "boxcar-fun-fact-section-three",
+        "cars-section-twelve",
+        "testimonila-section-two bg-1",
+        "blog-section",
+        "boxcar-brand-section pt-0",
+        "boxcar-pricing-section-six bg-1"
+      ]
+    }
+  ],
+  "legacyInput": "templates/boxcar/public/assets for selected catalogue photos; copied independently and re-matched to actual pictured models.",
+  "licenseStatus": "No new ThemeForest purchase or multi-client license determination made. Existing entitlement and reference image rights need owner review before commercial reuse."
+}

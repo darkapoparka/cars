@@ -1,0 +1,2 @@
+# Preserve captured reference bytes so asset SHA-256 provenance survives checkout.
+public/media/** -text
