@@ -26,8 +26,8 @@ for (const width of [992, 1280, 1440, 1920]) {
 				'rgb(255, 255, 255)'
 			);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
-				'border-bottom-width',
-				'0px'
+				'border-width',
+				'1px'
 			);
 			await expect(page.locator('label[for="hero-buy-query"]')).toHaveCSS('width', '1px');
 			await expect(page.locator('#hero-buy-query')).toHaveAccessibleName(

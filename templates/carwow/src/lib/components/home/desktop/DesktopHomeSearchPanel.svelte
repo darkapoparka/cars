@@ -610,26 +610,24 @@
 	.hero-intent__tabs {
 		display: grid;
 		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 4px;
-		width: min(100%, 360px);
-		padding: 4px;
-		border-radius: 10px;
-		background: var(--discovery-muted-surface);
+		gap: 8px;
+		width: min(100%, 312px);
 		margin: 0 auto 16px;
 	}
 	.hero-intent__tabs button {
-		background: transparent;
-		border: 0;
-		border-radius: 6px;
-		color: var(--discovery-muted);
+		background: var(--discovery-surface);
+		border: 1px solid var(--discovery-control-border);
+		border-radius: var(--discovery-control-radius);
+		color: var(--discovery-ink);
 		cursor: pointer;
-		font: var(--sa-weight-semibold) var(--sa-text-body-sm)/1.2 var(--sa-font);
+		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
 		box-shadow: none;
 		min-height: 44px;
 		padding: 0 16px;
 	}
-	.hero-intent__tabs button:hover {
+	.hero-intent__tabs button:hover:not(:disabled) {
 		background: var(--discovery-light-hover);
+		border-color: var(--discovery-light-hover);
 		color: var(--sa-ink);
 	}
 	.hero-intent button:disabled {
@@ -638,10 +636,13 @@
 	}
 	.hero-intent__tabs button[aria-selected='true'] {
 		background: var(--discovery-action);
+		border-color: var(--discovery-action);
 		color: #fff;
+		font-weight: var(--sa-weight-semibold);
 	}
-	.hero-intent__tabs button[aria-selected='true']:hover {
+	.hero-intent__tabs button[aria-selected='true']:hover:not(:disabled) {
 		background: var(--discovery-action-hover);
+		border-color: var(--discovery-action-hover);
 	}
 	.hero-intent__panel {
 		min-height: 112px;
@@ -737,11 +738,6 @@
 		height: var(--discovery-search-action-size);
 		padding: 0;
 		border-radius: var(--discovery-control-radius);
-	}
-	@media (pointer: coarse) {
-		.hero-intent__tabs button {
-			min-height: 44px;
-		}
 	}
 	.hero-intent__quick-fields {
 		display: flex;
