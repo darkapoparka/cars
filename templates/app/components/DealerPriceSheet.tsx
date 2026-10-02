@@ -3,7 +3,7 @@
 import * as stylex from '@stylexjs/stylex';
 import {useState} from 'react';
 import {ChevronDown, X} from 'lucide-react';
-import {currency} from '@/lib/currency';
+import {CurrencyLabel} from '@/components/ReferenceUI';
 import {formatPrice, type Vehicle} from '@/lib/data';
 import {useCopy} from '@/lib/locale';
 import {useModal} from './useModal';
@@ -15,7 +15,7 @@ export default function DealerPriceSheet({vehicle, onClose, onEligibility}: {veh
   return <div {...stylex.props(s.backdrop)} onMouseDown={event => event.currentTarget === event.target && onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="price-information-title" {...stylex.props(s.sheet)}>
       <header {...stylex.props(s.header)}><h2 id="price-information-title" {...stylex.props(s.title)}>{tx('Price information')}</h2><button type="button" aria-label={tx('Close price information')} onClick={onClose} {...stylex.props(s.close)}><X size={22}/></button></header>
-      <div {...stylex.props(s.price)}><span>{tx('Advertised vehicle price')}</span><strong>{vehicle.priceOnRequest ? tx('Price on request') : formatPrice(vehicle.price) + ' ' + currency.code}</strong></div><p {...stylex.props(s.note)}>{tx('This is a dated listing sample, not a live quotation. Confirm price, availability, taxes and any additional fees directly with the dealer.')}</p><p {...stylex.props(s.note)}>{tx('No return period, warranty, insurance, registration charge or finance approval is promised by this preview.')}</p>
+      <div {...stylex.props(s.price)}><span>{tx('Advertised vehicle price')}</span><strong>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18}/>{formatPrice(vehicle.price)}</>}</strong></div><p {...stylex.props(s.note)}>{tx('This is a dated listing sample, not a live quotation. Confirm price, availability, taxes and any additional fees directly with the dealer.')}</p><p {...stylex.props(s.note)}>{tx('No return period, warranty, insurance, registration charge or finance approval is promised by this preview.')}</p>
       <button type="button" aria-expanded={paymentsOpen} aria-controls="vehicle-payment-options" onClick={()=>setPaymentsOpen(open=>!open)} {...stylex.props(s.payments)}>{tx('Payment options')}<ChevronDown size={18} aria-hidden="true" {...stylex.props(paymentsOpen&&s.expanded)}/></button>
       <div id="vehicle-payment-options" hidden={!paymentsOpen}>{paymentsOpen ? <FinanceCalculator initialPrice={vehicle.price || 25000}/> : null}</div>
       <button type="button" onClick={onEligibility} {...stylex.props(s.action)}>{tx('Ask the dealer')}</button>

@@ -8,6 +8,8 @@ import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import {ArrowRight,Heart,Info,Layers2,Play,Share2,X,MessageCircle} from 'lucide-react';
 import BackButton from '@/components/BackButton';
+import {CurrencyLabel} from '@/components/ReferenceUI';
+import {useInventoryBack} from '@/components/useInventoryHistory';
 import IconButton from '@/components/IconButton';
 import {STORAGE_KEY} from '@/components/VehicleCard';
 import VehicleComparison from '@/components/VehicleComparison';
@@ -44,7 +46,8 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const [enquiryIntent,setEnquiryIntent]=useState<'enquiry'|'viewing'>('enquiry');
  const panel=useModal(overlay==='warranty',()=>setOverlay(null));
  const title=`${vehicle.year} ${vehicle.make.toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
- const priceLabel=vehicle.priceOnRequest?tx('Price on request'):`${tx(formatPrice(vehicle.price))} ${tx(currency.code)}`;
+ const backToInventory=useInventoryBack();
+ const priceLabel=vehicle.priceOnRequest?tx('Price on request'):`${tx(currency.symbol)} ${tx(formatPrice(vehicle.price))}`;
  const fee=approvedReference?.convenienceFee??0;
  useEffect(()=>{recordVehicleView(vehicle.slug);},[vehicle.slug]);
  useEffect(()=>{
@@ -63,13 +66,13 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  return <div {...stylex.props(s.screen)}>
   <div data-vehicle-gallery {...stylex.props(s.gallery)} onTouchStart={e=>setSwipe(e.touches[0].clientX)} onTouchEnd={endSwipe}>
    <button type="button" onClick={()=>reference?.videoTour&&photo===0?setOverlay('tour'):openPhoto(photos)} aria-label={tx(reference?.videoTour&&photo===0?'Open vehicle video tour':'Open vehicle photo gallery')} {...stylex.props(s.imageButton)}><img src={assetPath(reference?.videoTour&&photo===0?reference.videoTour.poster:gallery[photo].image)} alt={vehicle.imagePlaceholder ? tx('Photo unavailable') : tx(title)} width={1365} height={768} fetchPriority="high" {...stylex.props(s.heroImage,vehicle.imagePlaceholder&&s.placeholderHero)}/>{vehicle.imagePlaceholder?<span {...stylex.props(s.photoUnavailable)}>{tx('Photo unavailable')}</span>:null}{reference?.videoTour&&photo===0?<span aria-hidden="true" {...stylex.props(s.tourShade)}/>:null}{reference?.videoTour&&photo===0?<span {...stylex.props(s.tourPlay)}><Play size={22} fill="currentColor"/></span>:null}</button>
-   <nav aria-label={tx('Vehicle actions')} {...stylex.props(s.heroActions)}><BackButton href="/cars" label="Back to cars" tone="photo"/><IconButton icon={Share2} label={tx('Share car')} onClick={share} tone="photo"/></nav>
+   <nav aria-label={tx('Vehicle actions')} {...stylex.props(s.heroActions)}><BackButton onClick={backToInventory} label="Back to cars" tone="photo"/><IconButton icon={Share2} label={tx('Share car')} onClick={share} tone="photo"/></nav>
    <button type="button" onClick={()=>setOverlay('similar')} {...stylex.props(s.similarButton)}><Layers2 size={17} aria-hidden="true"/>{tx("Similar Cars")}</button>
   </div>
   <div {...stylex.props(s.layout)}><main {...stylex.props(s.main)}>
    <header {...stylex.props(s.heading)}><h1 {...stylex.props(s.title)}>{tx(title)}</h1><IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/></header>
    <section id="price" aria-label={tx("Vehicle price")} {...stylex.props(s.priceCard)}>
-     <p {...stylex.props(s.price,vehicle.priceOnRequest&&s.requestPrice)}>{vehicle.priceOnRequest ? tx('Price on request') : <>{tx(formatPrice(vehicle.price))} <span {...stylex.props(s.currency)}>{tx(currency.code)}</span></>}</p>
+     <p {...stylex.props(s.price,vehicle.priceOnRequest&&s.requestPrice)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18}/>{tx(formatPrice(vehicle.price))}</>}</p>
    </section>
    <VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={()=>openEnquiry()}/></VehicleDetailTabs>
   </main><aside {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary)}>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.saveAction,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
@@ -105,7 +108,6 @@ title:{flexGrow:1,minWidth:0,paddingTop:8,fontFamily:$.fontDisplay,fontSize:{[me
 priceCard:{marginTop:2},
 price:{minWidth:0,fontFamily:$.fontSans,fontSize:{[media.mobile]:26,default:28},fontWeight:600,lineHeight:'36px',whiteSpace:'nowrap'},
 requestPrice:{fontSize:18,lineHeight:'24px',whiteSpace:'normal',textAlign:'left'},
-currency:{color:$.muted,fontSize:12,fontWeight:500},
 overviewText:{marginTop:5,color:'#727272',fontSize:13,fontWeight:400,lineHeight:1.6},
 sectionTabs:{display:{[media.mobile]:'none',default:'flex'},position:'fixed',top:{[media.desktop]:73,default:'env(safe-area-inset-top)'},left:0,right:0,zIndex:59,gap:9,overflowX:'auto',padding:'6px 22px 9px',backgroundColor:'#fff',scrollbarWidth:'none'},
 sectionTab:{fontFamily:$.fontDisplay,display:'grid',placeItems:'center',flexShrink:0,minHeight:44,padding:'7px 13px',color:'#202024',fontSize:14,lineHeight:'20px',fontWeight:500,borderColor:'#c4c4c4',borderStyle:'solid',borderWidth:1,borderRadius:999,backgroundColor:'#fff',cursor:'pointer'},

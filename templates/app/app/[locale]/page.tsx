@@ -76,12 +76,12 @@ export default function HomePage() {
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
-  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 170},
+  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, default: 170}},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: {[media.mobile]: 600, default: 500}, lineHeight: 1.35, letterSpacing: 0},
   recent: {marginTop: 27},
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
-  offers: {marginTop: 24},
-  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 14, marginTop: 14},
+  offers: {marginTop: {[media.mobile]: 16, default: 24}},
+  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 14, marginTop: {[media.mobile]: 10, default: 14}},
   inventoryHeading: {marginTop: {[media.mobile]: 0, default: 16}},
   inventoryLink: {minHeight: 44},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8}, borderTopWidth: {[media.mobile]: 0, default: 1}, borderTopStyle: 'solid', borderTopColor: '#e8e8eb'},

@@ -1,7 +1,7 @@
 'use client';
 import {useCopy} from '@/lib/locale';
 import DealerBrand from '@/components/DealerBrand';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import {MapPin, ArrowUpRight, Search} from 'lucide-react';
@@ -16,6 +16,17 @@ export default function DiscoveryHeader({active, hideMobileIdentity = false}: {a
   const tx = useCopy();
 
   const [compact, setCompact] = useState(false);
+  const header = useRef<HTMLElement>(null);
+  const spacer = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const element = header.current;
+    if (!element) return;
+    const observer = new ResizeObserver(() => {
+      if (spacer.current && element.dataset.compact === 'false') spacer.current.style.height = `${element.getBoundingClientRect().height}px`;
+    });
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
   useEffect(() => {
     const update = () => setCompact(window.innerWidth < 768 && window.scrollY > 90);
     const frame = requestAnimationFrame(update);
@@ -24,8 +35,8 @@ export default function DiscoveryHeader({active, hideMobileIdentity = false}: {a
     return () => {cancelAnimationFrame(frame); window.removeEventListener('scroll', update); window.removeEventListener('resize', update);};
   }, []);
   return <>
-    <div aria-hidden="true" {...stylex.props(s.spacer, hideMobileIdentity && s.spacerWithoutIdentity)} />
-    <header data-discovery-header data-compact={compact} {...stylex.props(s.header, compact && s.compact)}>
+    <div ref={spacer} aria-hidden="true" {...stylex.props(s.spacer, hideMobileIdentity && s.spacerWithoutIdentity)} />
+    <header ref={header} data-discovery-header data-compact={compact} {...stylex.props(s.header, compact && s.compact)}>
       <div {...stylex.props(s.inner, compact && s.innerCompact)}>
         <div {...stylex.props(s.identity, hideMobileIdentity && s.mobileIdentityHidden)}><Link href="/" {...stylex.props(s.wordmark)}><DealerBrand/></Link><Link href={showroom.locationHref} {...stylex.props(s.location)}><MapPin size={13}/>{tx(showroom.locationLabel)}<ArrowUpRight size={12}/></Link></div>
         <ServiceTabs active={active} compact={compact} />
@@ -53,7 +64,7 @@ const s = stylex.create({
   wordmark: {display: 'inline-flex', alignItems: 'center', minHeight: 44, fontSize: 21, fontWeight: 700, letterSpacing: '-.9px'},
   location: {display: 'inline-flex', alignItems: 'center', gap: 5, minHeight: 44, fontSize: 12, color: $.muted},
   spacer: {display: {[media.mobile]: 'block', default: 'none'}, height: 'calc(156px + env(safe-area-inset-top))'},
-  spacerWithoutIdentity: {height: 'calc(112px + env(safe-area-inset-top))'},
+  spacerWithoutIdentity: {height: 'calc(104px + env(safe-area-inset-top))'},
   header: {position: {[media.mobile]: 'fixed', default: 'relative'}, top: 0, left: 0, right: 0, zIndex: 70, color: $.ink, backgroundColor: '#fff'},
   compact: {boxShadow: '0 1px 0 rgba(20,20,24,.08)'},
   inner: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 'calc(12px + env(safe-area-inset-top))', default: 30}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: 12},

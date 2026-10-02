@@ -39,6 +39,7 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
     event.preventDefault();
     select(tabs[next]);
     buttons.current[next]?.focus();
+    buttons.current[next]?.scrollIntoView({block: 'nearest', inline: 'nearest', behavior: 'instant'});
   }
 
   return <div {...stylex.props(s.content)}>
@@ -84,10 +85,10 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
 
 const s = stylex.create({
   content: {marginTop: 8},
-  tabs: {position: 'relative', display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', paddingInline: 2, '::before': {content: '""', position: 'absolute', inset: '4px 0', borderRadius: $.radiusSm, backgroundColor: $.violetSoft, pointerEvents: 'none'}},
-  tab: {position: 'relative', display: 'grid', alignItems: 'center', minWidth: 0, minHeight: $.controlHeight, padding: '0 2px', color: $.muted, fontFamily: $.fontSans, fontSize: $.controlFontSize, fontWeight: 500, lineHeight: $.controlLineHeight, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: $.radiusSm, backgroundColor: 'transparent', outlineWidth: 2, outlineStyle: 'solid', outlineColor: {default: 'transparent', ':focus-visible': $.ink}, outlineOffset: -2, cursor: 'pointer'},
+  tabs: {position: 'relative', display: {[media.mobile]: 'flex', default: 'grid'}, minWidth: 0, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', paddingInline: 2, '::before': {content: '""', position: 'absolute', inset: '4px 0', borderRadius: $.radiusSm, backgroundColor: $.violetSoft, pointerEvents: 'none'}},
+  tab: {position: 'relative', display: 'grid', alignItems: 'center', flex: '1 0 auto', minWidth: {[media.mobile]: 'max-content', default: 0}, minHeight: $.controlHeight, padding: '4px 2px', color: $.muted, fontFamily: $.fontSans, fontSize: $.controlFontSize, fontWeight: 500, lineHeight: $.controlLineHeight, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: $.radiusSm, backgroundColor: 'transparent', outlineWidth: 2, outlineStyle: 'solid', outlineColor: {default: 'transparent', ':focus-visible': $.ink}, outlineOffset: -2, cursor: 'pointer'},
   selected: {color: $.ink},
-  tabLabel: {display: 'grid', placeItems: 'center', height: 'calc(' + $.controlCompactHeight + ' - 4px)', borderRadius: $.radiusXs, backgroundColor: {default: 'transparent', ':hover': $.line}},
+  tabLabel: {display: 'grid', placeItems: 'center', minHeight: 'calc(' + $.controlCompactHeight + ' - 4px)', padding: '4px 6px', borderRadius: $.radiusXs, backgroundColor: {default: 'transparent', ':hover': $.line}},
   selectedLabel: {backgroundColor: {default: $.surface, ':hover': $.surface}, boxShadow: '0 1px 3px rgba(0,0,0,0.08)'},
   mobileLabel: {display: {[media.mobile]: 'inline', default: 'none'}},
   wideLabel: {display: {[media.mobile]: 'none', default: 'inline'}},

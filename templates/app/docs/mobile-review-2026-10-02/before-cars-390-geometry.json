@@ -1,0 +1,476 @@
+{
+  "broken": [],
+  "facts": [
+    {
+      "sw": 239,
+      "tabIndex": 0,
+      "text": "50,000 км\nАвтоматик\nОтлично състояние",
+      "w": 183
+    },
+    {
+      "sw": 214,
+      "tabIndex": 0,
+      "text": "92,000 км\nАвтоматик\nКруиз контрол",
+      "w": 183
+    }
+  ],
+  "nodes": [
+    {
+      "items": [
+        {
+          "b": 68,
+          "font": "16px",
+          "gap": "normal",
+          "h": 68,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "sticky",
+          "pt": "0px",
+          "text": "Нашите автомобили",
+          "top": "0px",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "selector": "[data-page-header]"
+    },
+    {
+      "items": [
+        {
+          "b": 68,
+          "font": "16px",
+          "gap": "12px",
+          "h": 68,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Нашите автомобили",
+          "top": "auto",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "selector": "[data-page-header] > div"
+    },
+    {
+      "items": [
+        {
+          "b": 56,
+          "font": "16px",
+          "gap": "normal",
+          "h": 44,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Към началото",
+          "top": "auto",
+          "w": 44,
+          "weight": "400",
+          "x": 12,
+          "y": 12
+        },
+        {
+          "b": 56,
+          "font": "16px",
+          "gap": "normal",
+          "h": 44,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Запазени автомобили",
+          "top": "auto",
+          "w": 44,
+          "weight": "400",
+          "x": 334,
+          "y": 12
+        }
+      ],
+      "selector": "[data-page-header] a"
+    },
+    {
+      "items": [
+        {
+          "b": 116,
+          "font": "16px",
+          "gap": "8px",
+          "h": 44,
+          "line": "24px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "(48)\n48 автомобила",
+          "top": "auto",
+          "w": 366,
+          "weight": "400",
+          "x": 12,
+          "y": 72
+        },
+        {
+          "b": 0,
+          "font": "16px",
+          "gap": "8px",
+          "h": 0,
+          "line": "24px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "",
+          "top": "auto",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "selector": "[data-search-field]"
+    },
+    {
+      "items": [
+        {
+          "b": 114,
+          "font": "16px",
+          "gap": "normal",
+          "h": 40,
+          "line": "24px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "absolute",
+          "pt": "0px",
+          "text": "Търсене на автомобили",
+          "top": "0px",
+          "w": 134.484375,
+          "weight": "400",
+          "x": 53,
+          "y": 74
+        },
+        {
+          "b": 0,
+          "font": "16px",
+          "gap": "normal",
+          "h": 0,
+          "line": "24px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Търсене на марки в панела",
+          "top": "auto",
+          "w": 0,
+          "weight": "400",
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "selector": "[data-search-input]"
+    },
+    {
+      "items": [
+        {
+          "b": 106,
+          "font": "16px",
+          "gap": "normal",
+          "h": 24,
+          "line": "24px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "(48)\n48 автомобила",
+          "top": "auto",
+          "w": 29.046875,
+          "weight": "400",
+          "x": 191.484375,
+          "y": 82
+        }
+      ],
+      "selector": "[data-result-count]"
+    },
+    {
+      "items": [
+        {
+          "b": 172,
+          "font": "16px",
+          "gap": "6px",
+          "h": 56,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "6px",
+          "position": "sticky",
+          "pt": "6px",
+          "text": "Филтри\nПодреди\nМарка\nМодел\nБюджет\nОтстъпки\nГодина\nПробег\nТип купе\nГориво",
+          "top": "68px",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 116
+        }
+      ],
+      "selector": "nav[aria-label=\"Филтри за каталога\"]"
+    },
+    {
+      "items": [
+        {
+          "b": 166,
+          "font": "15px",
+          "gap": "normal",
+          "h": 44,
+          "line": "20px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Филтри",
+          "top": "auto",
+          "w": 92.5625,
+          "weight": "500",
+          "x": 12,
+          "y": 122
+        },
+        {
+          "b": 166,
+          "font": "15px",
+          "gap": "normal",
+          "h": 44,
+          "line": "20px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Подреди",
+          "top": "auto",
+          "w": 101.109375,
+          "weight": "500",
+          "x": 110.5625,
+          "y": 122
+        }
+      ],
+      "selector": "nav[aria-label=\"Филтри за каталога\"] button"
+    },
+    {
+      "items": [
+        {
+          "b": 162,
+          "font": "15px",
+          "gap": "5px",
+          "h": 36,
+          "line": "20px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Филтри",
+          "top": "auto",
+          "w": 92.5625,
+          "weight": "500",
+          "x": 12,
+          "y": 126
+        },
+        {
+          "b": 162,
+          "font": "15px",
+          "gap": "5px",
+          "h": 36,
+          "line": "20px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "Подреди",
+          "top": "auto",
+          "w": 101.109375,
+          "weight": "500",
+          "x": 110.5625,
+          "y": 126
+        }
+      ],
+      "selector": "nav[aria-label=\"Филтри за каталога\"] button > span"
+    },
+    {
+      "items": [
+        {
+          "b": 8486,
+          "font": "16px",
+          "gap": "24px",
+          "h": 8314,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "80px",
+          "position": "static",
+          "pt": "10px",
+          "text": "Toyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/мес.*\nприбл.\n\n50,",
+          "top": "auto",
+          "w": 390,
+          "weight": "400",
+          "x": 0,
+          "y": 172
+        }
+      ],
+      "selector": "main"
+    },
+    {
+      "items": [
+        {
+          "b": 339,
+          "font": "16px",
+          "gap": "normal",
+          "h": 157,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "relative",
+          "pt": "0px",
+          "text": "Toyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/мес.*\nприбл.\n\n50,",
+          "top": "0px",
+          "w": 366,
+          "weight": "400",
+          "x": 12,
+          "y": 182
+        }
+      ],
+      "selector": "article:first-of-type"
+    },
+    {
+      "items": [
+        {
+          "b": 338,
+          "font": "16px",
+          "gap": "10px",
+          "h": 155,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "10px",
+          "position": "relative",
+          "pt": "10px",
+          "text": "Toyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/мес.*\nприбл.\n\n50,",
+          "top": "0px",
+          "w": 364,
+          "weight": "400",
+          "x": 13,
+          "y": 183
+        }
+      ],
+      "selector": "article:first-of-type > div"
+    },
+    {
+      "items": [
+        {
+          "b": 228,
+          "font": "15px",
+          "gap": "normal",
+          "h": 21,
+          "line": "21px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "2024 FORTUNER",
+          "top": "auto",
+          "w": 182.640625,
+          "weight": "400",
+          "x": 184.359375,
+          "y": 207
+        }
+      ],
+      "selector": "article:first-of-type h3"
+    },
+    {
+      "items": [
+        {
+          "b": 279,
+          "font": "20px",
+          "gap": "1px",
+          "h": 27,
+          "line": "26px",
+          "mb": "0px",
+          "mt": "0px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "€\n94,099",
+          "top": "auto",
+          "w": 73.125,
+          "weight": "700",
+          "x": 184.359375,
+          "y": 252
+        }
+      ],
+      "selector": "article:first-of-type strong"
+    },
+    {
+      "items": [
+        {
+          "b": 328,
+          "font": "16px",
+          "gap": "4px",
+          "h": 22,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "8px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "50,000 км\nАвтоматик\nОтлично състояние",
+          "top": "auto",
+          "w": 182.640625,
+          "weight": "400",
+          "x": 184.359375,
+          "y": 306
+        },
+        {
+          "b": 498,
+          "font": "16px",
+          "gap": "4px",
+          "h": 22,
+          "line": "normal",
+          "mb": "0px",
+          "mt": "8px",
+          "pb": "0px",
+          "position": "static",
+          "pt": "0px",
+          "text": "92,000 км\nАвтоматик\nКруиз контрол",
+          "top": "auto",
+          "w": 182.640625,
+          "weight": "400",
+          "x": 184.359375,
+          "y": 476
+        }
+      ],
+      "selector": "[data-vehicle-facts]"
+    }
+  ],
+  "scrollWidth": 390,
+  "scrollY": 0,
+  "url": "http://127.0.0.1:6483/bg/cars",
+  "vw": 390
+}

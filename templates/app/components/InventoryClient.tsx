@@ -53,7 +53,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  function categoryLabel(tab:Tab){const label=tx(tab);return label==='EMI'?label:label.charAt(0)+label.slice(1).toLowerCase();}
  const modal=useModal(overlay!==null,close,{history:false});
  return <div {...stylex.props(s.screen)}>
-  <PageHeader title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>
+  <PageHeader compact title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>
   <div role="search" {...stylex.props(s.topInner)}><label data-search-field {...stylex.props(searchField.field)}>
     <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
     <span {...stylex.props(searchField.editableGroup)}>
@@ -90,10 +90,10 @@ function toggle(values:string[],value:string){return values.includes(value)?valu
 function titleCase(value:string){return value.toLowerCase().replace(/(^|\s)\S/g,letter=>letter.toUpperCase());}
 function discount(car:Vehicle){return (car.previousPrice??car.price)-car.price;}
 const s=stylex.create({
- screen:{minHeight:'100vh',paddingBottom:110,backgroundColor:'#fff'},
+ screen:{minHeight:'100vh',paddingBottom:{[media.mobile]:0,default:110},backgroundColor:'#fff'},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
- toolbar:{display:'flex',position:'sticky',top:{[media.desktop]:141,default:'calc(68px + env(safe-area-inset-top))'},zIndex:45,gap:6,overflowX:'auto',overscrollBehaviorX:'contain',maxWidth:$.content,marginInline:'auto',paddingBlock:{[media.mobile]:6,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
- content:{display:'grid',gridTemplateColumns:{[media.desktop]:'245px minmax(0,1fr)',default:'1fr'},gap:24,maxWidth:$.content,marginInline:'auto',paddingTop:10,paddingInline:{[media.mobile]:12,default:28},paddingBottom:80},
+ toolbar:{display:'flex',position:'sticky',top:{[media.mobile]:'calc(56px + env(safe-area-inset-top))',[media.desktop]:141,default:'calc(68px + env(safe-area-inset-top))'},zIndex:45,gap:{[media.mobile]:8,default:6},overflowX:'auto',overscrollBehaviorX:'contain',maxWidth:$.content,marginInline:'auto',paddingTop:{[media.mobile]:10,default:12},paddingBottom:{[media.mobile]:6,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},
+ content:{display:'grid',gridTemplateColumns:{[media.desktop]:'245px minmax(0,1fr)',default:'1fr'},gap:24,maxWidth:$.content,marginInline:'auto',paddingTop:{[media.mobile]:8,default:10},paddingInline:{[media.mobile]:12,default:28},paddingBottom:{[media.mobile]:16,default:80}},
  sidebar:{display:{[media.desktop]:'block',default:'none'},alignSelf:'start',position:'sticky',top:150,padding:18,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:18},
  sideTitle:{fontSize:20,fontWeight:500},
  results:{minWidth:0},

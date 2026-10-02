@@ -8,18 +8,16 @@ import * as stylex from '@stylexjs/stylex';
 import {ChevronRight, Search, X} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import MiniVehicleCard from '@/components/MiniVehicleCard';
+import {BrandEmblem} from '@/components/ReferenceUI';
 import {useRecentVehicles} from '@/components/useVehicleState';
 import {getVehicle, vehicles} from '@/lib/data';
 import { tokens as $} from '@/app/tokens.stylex';
 import {searchField} from '@/components/search-field.stylex';
 
-const popular = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz'];
-const priorityModels: Record<string, string[]> = {
-  Toyota: ['Yaris', 'RAV4', 'Prado', 'Corolla', 'Fortuner'],
-  Nissan: ['Sunny', 'Patrol', 'Altima', 'Kicks', 'X-Trail'],
-  Mitsubishi: ['Pajero', 'Attrage', 'Outlander', 'ASX', 'Xpander'],
-  BMW: ['X1', 'X2', 'X3', 'X5', '3 Series'],
-};
+const distinctNames = (values: string[]) => [...new Map(values.map(value => [value.trim().toLowerCase(), value.trim()])).values()].filter(Boolean);
+const stockedMakes = distinctNames(vehicles.map(vehicle => vehicle.make));
+const preferredMakes = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz'];
+const popular = [...preferredMakes.filter(make => stockedMakes.includes(make)), ...stockedMakes.filter(make => !preferredMakes.includes(make))].slice(0, 5);
 type Suggestion = {label: string; brand?: string; body?: string; query?: string};
 
 export default function SearchClient({initialQuery = ''}: {initialQuery?: string}) {
@@ -33,16 +31,17 @@ export default function SearchClient({initialQuery = ''}: {initialQuery?: string
   const suggestions = useMemo<Suggestion[]>(() => {
     const value = query.trim().toLowerCase();
     if (!value) return [];
-    const makes = [...new Set([...popular, ...vehicles.map(vehicle => vehicle.make)])];
+    const makes = distinctNames([...popular, ...stockedMakes]);
     const matchingMake = makes.find(make => make.toLowerCase().startsWith(value));
     if (matchingMake) {
-      const models = priorityModels[matchingMake] ?? [...new Set(vehicles.filter(vehicle => vehicle.make === matchingMake).map(vehicle => vehicle.model))];
+      const stock = vehicles.filter(vehicle => vehicle.make.trim().toLowerCase() === matchingMake.toLowerCase());
+      const models = distinctNames(stock.map(vehicle => vehicle.model));
+      const bodies = distinctNames(stock.map(vehicle => vehicle.body)).filter(body => body !== 'Not published');
       return [{label: matchingMake, brand: matchingMake},
-        {label: `${matchingMake} SUV`, brand: matchingMake, body: 'SUV'},
-        {label: `${matchingMake} ${tx('Sedan')}`, brand: matchingMake, body: 'Sedan'},
+        ...bodies.map(body => ({label: `${matchingMake} ${tx(body)}`, brand: matchingMake, body})),
         ...models.slice(0, 5).map(model => ({label: `${matchingMake} ${model}`, query: `${matchingMake} ${model}`}))];
     }
-    return [...new Map(vehicles.filter(vehicle => `${vehicle.make} ${vehicle.model}`.toLowerCase().includes(value)).map(vehicle => [`${vehicle.make} ${vehicle.model}`, {label: `${vehicle.make} ${vehicle.model}`, query: `${vehicle.make} ${vehicle.model}`}])).values()].slice(0, 8);
+    return [...new Map(vehicles.filter(vehicle => `${vehicle.make} ${vehicle.model}`.toLowerCase().includes(value)).map(vehicle => [`${vehicle.make} ${vehicle.model}`.toLowerCase(), {label: `${vehicle.make} ${vehicle.model}`, query: `${vehicle.make} ${vehicle.model}`}])).values()].slice(0, 8);
   }, [query, tx]);
   useEffect(() => {input.current?.focus({preventScroll: true});}, []);
   useEffect(() => {if (active >= 0) document.getElementById(`suggestion-${active}`)?.scrollIntoView({block: 'nearest', behavior: 'instant'});}, [active]);
@@ -73,7 +72,7 @@ export default function SearchClient({initialQuery = ''}: {initialQuery?: string
       {!suggestions.length ? <button type="button" onClick={() => choose()} {...stylex.props(s.suggestion)}><span {...stylex.props(s.suggestionIcon)}><Search size={18} strokeWidth={1.8} aria-hidden="true"/></span><span {...stylex.props(s.suggestionText)}>{tx("Search for “")}{tx(query)}{tx("”")}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.suggestionArrow)}/></button> : null}
     </div> : <>
       <Link href="/finance" {...stylex.props(s.loan)}><img src={assetPath("/reference-assets/loan-card.png")} width={30} height={28} alt="" /><span>{tx("Finance help")}</span><u>{tx("Explore")}</u><ChevronRight size={12} aria-hidden="true" /></Link>
-      <section {...stylex.props(s.popular)}><h2 {...stylex.props(s.title)}>{tx("Popular Brands")}</h2><div {...stylex.props(s.brands)}>{popular.map((brand, index) => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><img src={assetPath(`/reference-assets/continuation/search-circle-${index}.png`)} width={65} height={66} alt="" {...stylex.props(s.brandLogo)} /><span {...stylex.props(s.brandLabel)}>{brand === 'Mercedes-Benz' ? 'Mercedes' : brand}</span></button>)}</div></section>
+      {popular.length ? <section {...stylex.props(s.popular)}><h2 {...stylex.props(s.title)}>{tx("Popular Brands")}</h2><div {...stylex.props(s.brands)}>{popular.map(brand => <button type="button" key={brand} onClick={() => choose({label: brand, brand})} aria-label={tx(`Search ${brand}`)} {...stylex.props(s.brand)}><BrandEmblem make={brand}/><span {...stylex.props(s.brandLabel)}>{brand === 'Mercedes-Benz' ? 'Mercedes' : brand}</span></button>)}</div></section> : null}
       {recent.length ? <section {...stylex.props(s.recent)}><h2 {...stylex.props(s.title)}>{tx("Recently viewed cars")}</h2><div {...stylex.props(s.recentRail)}>{recent.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} />)}</div></section> : null}
     </>}
   </main></>;
@@ -84,8 +83,7 @@ const s = stylex.create({
   popular: {marginTop: 28},
   title: {fontSize: 18, fontWeight: 600, lineHeight: '24px'},
   brands: {display: 'flex', gap: 12, overflowX: 'auto', overscrollBehaviorX: 'contain', marginTop: 12, marginRight: -16, paddingTop: 4, paddingBottom: 4, paddingRight: 16, scrollbarWidth: 'none'},
-  brand: {display: 'flex', alignItems: 'center', flexDirection: 'column', flexShrink: 0, gap: 8, width: 76, minHeight: 96, padding: 0, color: $.ink, borderWidth: 0, borderRadius: 14, backgroundColor: 'transparent', cursor: 'pointer'},
-  brandLogo: {width: 65, height: 66, objectFit: 'contain'},
+  brand: {display: 'flex', alignItems: 'center', flexDirection: 'column', flexShrink: 0, gap: 8, width: 72, minHeight: 96, padding: 0, color: $.ink, borderWidth: 0, borderRadius: 14, backgroundColor: 'transparent', cursor: 'pointer'},
   brandLabel: {fontSize: 12, fontWeight: 500, lineHeight: '16px', whiteSpace: 'nowrap'},
   recent: {marginTop: 28},
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', overscrollBehaviorX: 'contain', marginTop: 12, marginRight: -16, paddingRight: 16, paddingBottom: 8, scrollbarWidth: 'none', fontFamily: $.fontSans},
