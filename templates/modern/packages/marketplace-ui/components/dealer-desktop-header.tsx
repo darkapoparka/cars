@@ -5,13 +5,13 @@ import {
   type PublicSiteConfig,
   publicSite,
 } from "@repo/marketplace/site-config";
-import { MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
-import { DealerDesktopLocaleMenu } from "./dealer-desktop-locale-menu";
 import { DealerNavigationLink } from "./dealer-navigation-link";
+import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import Image from "./public-image";
 
@@ -88,18 +88,6 @@ export const DealerDesktopHeader = ({
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
-            <DealerDesktopLocaleMenu locale={locale} />
-            <a
-              aria-label={
-                isBg
-                  ? `Обадете се на ${site.contact.phoneDisplay}`
-                  : `Call ${site.contact.phoneDisplay}`
-              }
-              href={withBasePath(site.contact.phoneHref)}
-            >
-              <Phone aria-hidden="true" size={18} strokeWidth={1.8} />
-              <span>{site.contact.phoneDisplay}</span>
-            </a>
             <a
               aria-label={
                 isBg
@@ -111,9 +99,29 @@ export const DealerDesktopHeader = ({
               rel="noreferrer"
               target="_blank"
             >
-              <MapPin aria-hidden="true" size={18} strokeWidth={1.8} />
               <span>{isBg ? "Шоурум" : "Showroom"}</span>
+              <ArrowUpRight aria-hidden="true" size={16} strokeWidth={1.8} />
             </a>
+            <a
+              aria-label={
+                isBg
+                  ? `Обадете се на ${site.contact.phoneDisplay}`
+                  : `Call ${site.contact.phoneDisplay}`
+              }
+              className={styles.phone}
+              href={withBasePath(site.contact.phoneHref)}
+            >
+              <Phone aria-hidden="true" size={16} strokeWidth={1.8} />
+              <span>{site.contact.phoneDisplay}</span>
+            </a>
+            <MarketplaceLocaleSwitchLink
+              className={styles.language}
+              label={isBg ? "Държава и език" : "Country and language"}
+              locale={locale}
+            >
+              {isBg ? "BG" : "EN"}
+              <ChevronDown aria-hidden="true" size={14} />
+            </MarketplaceLocaleSwitchLink>
           </div>
         </div>
       </header>

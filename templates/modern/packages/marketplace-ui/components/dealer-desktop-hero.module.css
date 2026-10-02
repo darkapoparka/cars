@@ -55,7 +55,7 @@
   .hero[data-variant="landing"],
   .hero[data-variant="inventory"] {
     gap: 0;
-    padding: 1.25rem 0 1rem;
+    padding: 0.5rem 0 1.25rem;
     background: var(--panel);
     border-bottom: 1px solid var(--border);
   }

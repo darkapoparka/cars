@@ -14,15 +14,7 @@ import {
   withSearchParamUpdates,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import {
-  Bike,
-  BusFront,
-  CarFront,
-  ChevronDown,
-  Search,
-  SlidersHorizontal,
-  Truck,
-} from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import type { ReactNode } from "react";
@@ -167,6 +159,20 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
             submit(query);
           }}
         >
+          <nav
+            aria-label={text(
+              "Категории превозни средства",
+              "Vehicle categories"
+            )}
+            className={styles.tabs}
+          >
+            <VehicleCategoryTabs
+              filters={filters}
+              isBg={isBg}
+              locale={locale}
+              pathname={pathname}
+            />
+          </nav>
           <div className={styles.searchRow}>
             <div className={styles.query}>
               <DesktopSearchAssistant
@@ -211,20 +217,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 : text("Търси", "Search")}
             </DesktopActionButton>
           </div>
-          <nav
-            aria-label={text(
-              "Категории превозни средства",
-              "Vehicle categories"
-            )}
-            className={styles.tabs}
-          >
-            <VehicleCategoryTabs
-              filters={filters}
-              isBg={isBg}
-              locale={locale}
-              pathname={pathname}
-            />
-          </nav>
           <div className={styles.fields}>
             <Button
               aria-expanded={makeModelStep === "make"}
@@ -341,7 +333,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 type="button"
                 variant="outline"
               >
-                <SlidersHorizontal aria-hidden="true" size={16} />
                 <span>
                   {text("Още филтри", "More filters")}
                   {advancedFilterCount ? ` (${advancedFilterCount})` : ""}
@@ -565,17 +556,9 @@ function VehicleCategoryTabs({
   locale?: string;
   pathname: string;
 }) {
-  const categoryIcons = {
-    car: CarFront,
-    lease: CarFront,
-    motorbike: Bike,
-    truck: Truck,
-    van: BusFront,
-  };
   return (
     <>
       {marketplaceCategorySelectorOptions.map((category) => {
-        const Icon = categoryIcons[category.id];
         return (
           <Link
             aria-current={filters.category === category.id ? "page" : undefined}
@@ -595,7 +578,6 @@ function VehicleCategoryTabs({
             prefetch={true}
             scroll={false}
           >
-            <Icon aria-hidden="true" size={18} />
             {getLocalizedDesktopCategoryLabel(category.id, isBg)}
           </Link>
         );

@@ -1,5 +1,12 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@repo/design-system/components/ui/select";
+import {
   filterLabels,
   type ListingViewMode,
   type MarketplaceSearchParams,
@@ -15,7 +22,7 @@ import {
 import styles from "./dealer-inventory.module.css";
 import { MarketplaceViewModeToggle } from "./desktop-marketplace-controls";
 
-/** The catalog owns results, sort and density. Home only introduces the stock. */
+/** Desktop catalogue controls share the same search and results on Home. */
 export function DealerInventorySummary({
   filters,
   locale,
@@ -34,6 +41,8 @@ export function DealerInventorySummary({
   onViewModeChange: (mode: ListingViewMode) => void;
 }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
+  const activeFilterCount = getActiveFilterChips(filters, locale).length;
+  const selectedSort = filters.sort ?? "recommended";
   return (
     <div className={styles.summary} data-slot="dealer-inventory-summary">
       <div className={styles.heading}>
@@ -52,28 +61,37 @@ export function DealerInventorySummary({
         >
           <SlidersHorizontal aria-hidden="true" size={16} />
           {isBg ? "Филтри" : "Filters"}
-          {getActiveFilterChips(filters, locale).length > 0
-            ? ` (${getActiveFilterChips(filters, locale).length})`
-            : ""}
+          {activeFilterCount > 0 ? (
+            <span className={styles.filterCount}>{activeFilterCount}</span>
+          ) : null}
         </Button>
-        <label className={styles.sort}>
-          <span>{isBg ? "Подреди по" : "Sort by"}</span>
-          <select
+        <Select
+          onValueChange={(sort) =>
+            onApply({ sort: sort as MarketplaceSearchParams["sort"] })
+          }
+          value={selectedSort}
+        >
+          <SelectTrigger
             aria-label={isBg ? "Подреждане" : "Sort order"}
-            onChange={(event) =>
-              onApply({
-                sort: event.target.value as MarketplaceSearchParams["sort"],
-              })
-            }
-            value={filters.sort}
+            className={styles.sort}
           >
+            <span className={styles.sortLabel}>
+              {isBg ? "Подреди:" : "Sort:"}
+            </span>
+            <SelectValue>
+              {isBg
+                ? marketplaceSortLabelsBg[selectedSort]
+                : filterLabels.sort[selectedSort]}
+            </SelectValue>
+          </SelectTrigger>
+          <SelectContent align="end" className={styles.sortMenu} sideOffset={6}>
             {sortOptions.map((sort) => (
-              <option key={sort} value={sort}>
+              <SelectItem className={styles.sortOption} key={sort} value={sort}>
                 {isBg ? marketplaceSortLabelsBg[sort] : filterLabels.sort[sort]}
-              </option>
+              </SelectItem>
             ))}
-          </select>
-        </label>
+          </SelectContent>
+        </Select>
       </div>
       <MarketplaceViewModeToggle
         className={styles.viewToggle}

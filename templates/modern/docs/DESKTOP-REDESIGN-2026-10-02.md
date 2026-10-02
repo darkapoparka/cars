@@ -1,6 +1,24 @@
 # Modern desktop refresh
 
-## Current desktop revision
+## Current desktop control polish
+
+The owner rejected the boxed revision's header, category icons, tabs, filters, and sorting controls. The boxed inventory composition remains, with the desktop controls rebuilt as one consistent set. The header has centred navigation, a compact selected state, a clearly labelled BG/EN preference link, the actual showroom map link, and a quieter phone action. Category navigation uses compact text tabs before search. The quick filters use matching 44px fields with 10px corners, consistent borders, and restrained open/selected states. Expanded filters align in a four-column grid; draft status and reset share a deliberate footer.
+
+Desktop sorting now uses the existing Radix Select from the design system. Its selected label renders immediately, its menu matches the surrounding controls, and selections keep the existing sort URL and inventory behavior. The grid/list toggle has a clear selected state. A desktop-only scroll-lock padding override prevents portalled menus from adding a second inset around the boxed page.
+
+Validation on 2 October 2026 with Node 22.23.2 and pnpm 11.4.0:
+
+- Web typecheck and the isolated public-demo production build passed (`E2E_PUBLIC_RUN_ID=desktop-controls-final-20261002`). All 271 Web and Marketplace UI unit tests passed. Biome checked the eight changed source files.
+- The in-app browser captured Home, inventory, listing, imports, sell, financing, and contact at actual 1024, 1440, and 1920px widths. All 21 captures had no horizontal overflow or broken completed visible images. English controls were also inspected at 1024px.
+- Browser interactions verified advanced filter expansion, a Diesel draft that stayed on Home until Search, seven resulting vehicles, reset, all twelve prices in ascending order, sort dismissal with focus returned to its trigger, list/grid switching, the full filters dialog, direct country/language preferences, and completed category navigation with the correct selected tab.
+- At 1440px, the body and main frame retained identical bounds before and during the open sort menu. Fresh navigation and interactions had no new application errors. Earlier CSS hot-refresh errors recovered after document navigation.
+- Fourteen actual mobile captures at 320 and 390px were compared with the previous boxed revision's valid mobile evidence. All 578 persistent measured elements retained their geometry, typography, text, foreground, and background; none of the routes overflowed. This is measured UI preservation, not a claim of identical image decoding. No mobile component or styling rule was changed by this control polish.
+
+Evidence is in ignored `runtime/desktop-controls-2026-10-02/`, including `modern-desktop-polished-1440.jpg`, the open sorting menu, route captures, and JSON measurements. The mobile comparison uses `runtime/desktop-boxed-2026-10-02/mobile-after.json` as its valid baseline. Preliminary captures which targeted the reference tab's viewport are explicitly excluded in the evidence note. Browser verification used the in-app browser; the separate Playwright/WebKit suites were not rerun.
+
+Local preview: http://127.0.0.1:6482/bg. Existing dealer identity, sample data, mobile presentation, and unrelated working changes were preserved. This is a local source revision; owner visual acceptance and template/dealer releases remain separate.
+
+## Previous boxed revision
 
 The owner selected the boxed showroom at http://127.0.0.1:6474/ as the stronger direction. Both that reference and the updated Boxcar preview at http://127.0.0.1:6455/ were inspected at desktop width. Modern now uses a centred 1248px outer frame on a grey canvas, a compact desktop navigation header, a full-width search field with an adjacent submit button, category tabs, and compact filter pills. The home route renders the existing inventory results with sorting and grid/list controls. Cards use larger 3:2 photographs, model headings, inline specifications, and clear prices. The grid uses two columns on smaller desktops and three from 1200px. Vehicle details and service pages share the same frame. Opening a modal preserves its horizontal position.
 
