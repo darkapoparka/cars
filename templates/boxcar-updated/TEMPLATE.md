@@ -10,7 +10,7 @@ The hero search uses the source magnifier SVG at 22 px, aligned with its text la
 
 The ten homepages preserve the original DOM structure, whitespace, section copy, photographs, SVGs, local fonts and layout CSS from the [Boxcar HTML public preview](https://creativelayers.net/themes/boxcar-html/). The captured markup is compiled into Svelte components. Native actions implement menus, tabs and search. A Svelte lifecycle action retains the source's **jQuery and Slick slider core** for faithful carousel behavior. Homepage modules load separately; this is not a complete rewrite of every vendor dependency.
 
-The ten original **HTML** homes remain separate design references. The existing `templates/boxcar` WordPress capture remains its own template. Inventory, vehicle details and other supporting routes retain the adapted Svelte layouts; they have not been ported to the original inner-page DOM. WordPress plugins, accounts and backend services are outside this candidate.
+The ten original **HTML** homes remain separate design references. The existing `templates/boxcar` WordPress capture remains its own template. About now adapts the original HTML inner-page introduction, five-image gallery and illustrated benefits; Contact adapts its title, form boxes and bordered contact column. Five original About photographs and four original SVG illustrations are local assets. These pages use scoped source-derived layout rules and dealer copy; they do not reproduce the source's invented statistics, staff identities or reviews. Contact uses a showroom photograph instead of the unrelated source map. Inventory keeps its working Svelte filters, with source card typography, the original specification icon font, proper grid/list icons and larger detail arrows. Vehicle details and the remaining supporting bodies keep their existing adapted layouts. WordPress plugins, accounts and backend services are outside this candidate.
 
 ## Internal homepage references
 
@@ -79,6 +79,8 @@ Set `BOXCAR_BROWSER=webkit` to repeat with Playwright WebKit. Comparison output 
 - `/calculator/`: amortized repayment estimates with zero-interest and full-deposit handling, valid-input checks and clear illustration copy.
 - `/contact/`, `/contact/?intent=sell`, `/about/`, `/blog/`, `/blog/<slug>/`, `/faq/`, `/terms/`: shared supporting journeys.
 
+The contact form preselects the selling/viewing subject from its entry URL. Required fields prevent empty previews; changing an input clears the feedback. Contact details stay illustrative and the form does not send or store a visitor's message. Inventory card destinations react to query changes, so filters, sorting, pagination and the selected grid/list view remain in the return URL even when the same card stays on screen.
+
 Enquiry and newsletter forms show a local preview. Contact input is not persisted or delivered. There is no WordPress, account, booking, finance provider or mail service attached to this candidate.
 
 ## Personalization boundaries
@@ -86,6 +88,8 @@ Enquiry and newsletter forms show a local preview. Contact input is not persiste
 `src/reference/CuratedHome.svelte`, `CuratedStock.svelte` and `CuratedCarCard.svelte` own the dealer homepage. `public/reference/curated.css` scopes its composition and responsive adjustments. `scripts/compose-curated.mjs` reproducibly selects the recorded source chunks, with the curated copy and bindings; it writes only the curated homepage and its provenance receipt. Update the composition script when changing generated homepage copy, then regenerate. Stock/card components remain directly editable.
 
 `src/components/Header.svelte` owns the shared dealer header and drawer; `src/App.svelte` mounts it outside the changing page content. `src/app.css` names the source font separately so the reference and adapted page font declarations cannot change header metrics. The composition generator does not emit a second header.
+
+`src/pages/About.svelte` and `Contact.svelte` own the dealer inner-page composition. `src/inner-pages.css` scopes their source-derived typography, gallery, illustrations and form geometry, plus the inventory polish. The boxed variant of `EnquiryForm.svelte` retains local preview behavior. `VehicleCard.svelte` binds its detail/return URL to the live route. [`.template/inner-pages.json`](.template/inner-pages.json) records the original HTML/CSS hashes, selected asset hashes, adaptations and final browser evidence.
 
 `src/reference/Home1.svelte` through `Home10.svelte` retain the original compositions. `public/reference/css/style.css`, the source theme variables and `public/media/` own their appearance. `src/reference/interactions.ts` supplies native controls; `src/reference/header-search.ts` binds the source-shaped header dropdown to the shared catalogue. `src/reference/carousel.ts` loads the two local slider dependencies and destroys sliders on unmount. Offscreen lazy images no longer delay slider initialization or Back restoration.
 

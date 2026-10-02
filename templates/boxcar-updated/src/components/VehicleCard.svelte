@@ -6,16 +6,18 @@
     toggleCompare,
   } from "../lib/state.svelte";
   import Icon from "./Icon.svelte";
+  import { route } from "../lib/router.svelte";
   let {
     vehicle,
     layout = "grid",
     dark = false,
   }: { vehicle: Vehicle; layout?: string; dark?: boolean } = $props();
+  let destination = $derived(detailHref(vehicle, route.path + route.search));
 </script>
 
 <article class="vehicle-card {layout}" class:dark data-vehicle-id={vehicle.id}>
   <div class="vehicle-image">
-    <a href={detailHref(vehicle)} tabindex="-1" aria-hidden="true">
+    <a href={destination} tabindex="-1" aria-hidden="true">
       <img
         src={vehicle.image}
         alt={vehicle.title}
@@ -41,19 +43,28 @@
     </button>
   </div>
   <div class="vehicle-content">
-    <h3><a href={detailHref(vehicle)}>{vehicle.title}</a></h3>
+    <h3><a href={destination}>{vehicle.title}</a></h3>
     <p class="vehicle-subtitle">
       {vehicle.year} · {vehicle.engine}L · {vehicle.condition}
     </p>
     <ul class="vehicle-specs">
-      <li><Icon name="speed" size={18} />{number(vehicle.mileage)} miles</li>
-      <li><Icon name="fuel" size={18} />{vehicle.fuel}</li>
-      <li><Icon name="gear" size={18} />{vehicle.transmission}</li>
+      <li>
+        <span class="boxcar-symbol" aria-hidden="true">&#xf106;</span>
+        {number(vehicle.mileage)} miles
+      </li>
+      <li>
+        <span class="boxcar-symbol" aria-hidden="true">&#xf107;</span>
+        {vehicle.fuel}
+      </li>
+      <li>
+        <span class="boxcar-symbol" aria-hidden="true">&#xf105;</span>
+        {vehicle.transmission}
+      </li>
     </ul>
     <div class="vehicle-bottom">
       <strong>{money(vehicle.price)}</strong>
-      <a class="detail-link" href={detailHref(vehicle)}>
-        View Details <Icon name="arrow" size={14} />
+      <a class="detail-link" href={destination}>
+        View Details <Icon name="arrow" size={20} />
       </a>
     </div>
     <button

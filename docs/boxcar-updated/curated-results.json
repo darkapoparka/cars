@@ -2,7 +2,7 @@
   "version": "2026.10.02-curated",
   "candidate": "templates/boxcar-updated",
   "preview": "http://127.0.0.1:6455/",
-  "recordedAt": "2026-10-02T11:47:51.455Z",
+  "recordedAt": "2026-10-02T12:22:14.512Z",
   "composition": {
     "header": "Shared Header.svelte, Home 10 centered dealer navigation and contact action across the curated home and all supporting pages",
     "hero": "Home 10, single source photograph; search centered horizontally and vertically with its headline directly above",
@@ -23,12 +23,13 @@
     "domainAndAssets": {
       "status": "passed",
       "tests": 8,
-      "note": "Eight domain and local-image tests retained from the compact stock-grid correction; this header revision changes presentation and navigation."
+      "note": "Eight domain and local-image tests rerun for the About/Contact/Cars correction. Final inner-page checks are recorded in inner-results.json.",
+      "checkedAt": "2026-10-02T12:22:14.512Z"
     },
     "productionBuild": {
       "status": "passed",
-      "checkedAt": "2026-10-02T11:47:51.455Z",
-      "modules": 154,
+      "checkedAt": "2026-10-02T12:22:14.512Z",
+      "modules": 156,
       "staticCuratedCSSMatchesSource": true
     },
     "regeneration": {
@@ -100,7 +101,7 @@
   "curated": {
     "chromium": {
       "engine": "chromium",
-      "checkedAt": "2026-10-02T11:46:26.913Z",
+      "checkedAt": "2026-10-02T12:10:37.928Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -570,7 +571,7 @@
     },
     "webkit": {
       "engine": "webkit",
-      "checkedAt": "2026-10-02T11:44:31.600Z",
+      "checkedAt": "2026-10-02T12:16:19.509Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -1091,7 +1092,7 @@
     },
     {
       "file": "templates/boxcar-updated/src/App.svelte",
-      "sha256": "e80c67e0af126ae0a4ebb3b2860eb2919607e746c8e6035b95e632f5c3bfb097"
+      "sha256": "f98db27e02a16d8f8d13fcf78e3e0a6923cab1e358f36fcd5529120f4d1f7eef"
     },
     {
       "file": "templates/boxcar-updated/src/components/Header.svelte",
@@ -1111,7 +1112,7 @@
     },
     {
       "file": "templates/boxcar-updated/src/pages/Content.svelte",
-      "sha256": "0c88b92322f5e65db5391136a8733de4a11d3732b6f299818cacb32c1723ebb9"
+      "sha256": "87a218a538cf06a1e82eaaf4bb87a24992650002b406d0309791e2bc2c92b2fd"
     },
     {
       "file": "templates/boxcar-updated/src/reference/ReferenceHome.svelte",
@@ -1205,7 +1206,7 @@
     },
     {
       "file": "docs/boxcar-updated/curated-desktop-full.png",
-      "sha256": "6c9c0c3da6556b2cddb26eb558261b7fc9de911565c02211eb7117a4efcea458"
+      "sha256": "19999d9e72bbf6393c41ce17c092246cbff6d949bace5cbd896886c93fb4d7c3"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile.png",
@@ -1213,11 +1214,11 @@
     },
     {
       "file": "docs/boxcar-updated/curated-stock.png",
-      "sha256": "c038948c556784200e3e83c28689d04dd6070cf38f0ba2a008526cd83c4675bb"
+      "sha256": "2555626df585ec95d6152763a6c386f869c4f6d61d233186c8de1581595d1de4"
     },
     {
       "file": "docs/boxcar-updated/curated-hero-search.png",
-      "sha256": "f3521dc277b95c4740b03c0cbfbdf00ea940b6e372cb98bab71920b72ef67485"
+      "sha256": "72aca519bc78fc131ff006d76f265263757bb8eb74f838b5d8c8b7606ddd21b1"
     },
     {
       "file": "docs/boxcar-updated/curated-services.png",
@@ -1229,11 +1230,11 @@
     },
     {
       "file": "docs/boxcar-updated/curated-contact-header.png",
-      "sha256": "225c60ab60720b4ad2ee35e9afdde92b3aa1a00322dd69a16cf42fd50e109028"
+      "sha256": "4392b1b8453904a30de6b80134c653e7554d4f11f51537bdcf93c56deb7bbb41"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile-header.png",
-      "sha256": "a39aa28cbae27b2e0404945c37dd67b23446b3e3ffba1bbf13cba03962a493c3"
+      "sha256": "dc1929d18029d87a7161a4e90af88a05fb89bab0e53cd8d124f404e205602383"
     }
   ],
   "boundaries": [
@@ -1244,6 +1245,7 @@
     "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
   ],
   "corrections": [
+    "Adapt original About gallery/illustrations and Contact outlined form/contact-column styling; polish source inventory icons and preserve live query/view return context. Final checks are recorded separately in inner-results.json.",
     "Mount one shared Home 10-style Header.svelte on the curated home and every supporting dealer page, with scoped geometry, source font under a distinct name, active links and one native mobile drawer.",
     "Use the original search magnifier SVG at 22px, align it with a separate text span, and use SVG dropdown chevrons with compact default labels.",
     "Align 20px diagonal arrow boxes with CTA labels and remove inherited vertical offsets and SVG margins.",

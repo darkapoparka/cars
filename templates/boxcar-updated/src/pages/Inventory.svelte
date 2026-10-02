@@ -64,14 +64,21 @@
   }
 </script>
 
-<div class="page-shell inventory-page">
+<div class="page-shell inventory-page bc-inner">
   <div class="container">
     <div class="breadcrumbs">
       <a href="/">Home</a>
       <span>/{savedOnly ? " Saved cars" : " Inventory"}</span>
     </div>
     <div class="page-heading">
-      <h1>{savedOnly ? "Your Saved Cars" : "New and Used Cars For Sale"}</h1>
+      <div>
+        <h1>{savedOnly ? "Your Saved Cars" : "Cars for sale"}</h1>
+        <p>
+          {savedOnly
+            ? "Your favourites, ready for a closer look."
+            : "Find your fit. Explore the cars, save your favourites and compare the details."}
+        </p>
+      </div>
       <span class="sample-note">Sample inventory</span>
     </div>
     <div class="inventory-layout">
@@ -164,7 +171,7 @@
           </div>
           {#if error}<p class="form-error" role="alert">{error}</p>{/if}
           <button class="button" type="submit">
-            <Icon name="search" size={18} />Search cars
+            <Icon name="search" size={22} />Search cars
           </button>
           <button
             class="reset-button"
@@ -205,7 +212,7 @@
                 aria-pressed={!rows}
                 onclick={() => update({}, false)}
               >
-                ▦
+                <Icon name="grid" size={20} />
               </button>
               <button
                 class:active={rows}
@@ -213,7 +220,7 @@
                 aria-pressed={rows}
                 onclick={() => update({}, true)}
               >
-                ☷
+                <Icon name="list" size={20} />
               </button>
             </div>
           </div>

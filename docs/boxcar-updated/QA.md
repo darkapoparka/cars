@@ -2,6 +2,21 @@
 
 Candidate: `L:/CODEX/cars/templates/boxcar-updated` on Cars `main`, Node 22.23.2. Local preview: [127.0.0.1:6455](http://127.0.0.1:6455/). The default `/` now opens the curated dealer homepage. The ten original HTML homes remain at `/home-1/` through `/home-10/`.
 
+## About, Contact and Cars correction
+
+About and Contact now adapt the original [About HTML page](https://creativelayers.net/themes/boxcar-html/about.html) and [Contact HTML page](https://creativelayers.net/themes/boxcar-html/contact.html). About uses the five-image gallery, original blue/pink illustrated benefits, balanced introduction, browsing/contact actions and native FAQ details. Contact uses the source's outlined form boxes and bordered contact column, with a showroom photo replacing the unrelated source map. All three routes share the existing header and the source DM Sans face. Scoped styles preserve the ten captured homepages. Dealer copy replaces lorem ipsum and invented statistics/reviews; forms remain truthful local previews.
+
+Cars retains its sidebar and three-column desktop stock grid, with cleaner labels, source specification glyphs, actual grid/list SVGs and 20 px detail arrows. A rendered journey caught stale card return URLs when the same vehicle remained mounted after a query/view change. Card destinations now derive from the current route, preserving the filtered list view after a detail visit.
+
+Final checks: Svelte/TypeScript has zero errors and warnings; eight domain/asset tests pass; the production build passes with 156 modules. Nine focused layouts and nine functional journeys pass **per engine** in Chrome and Playwright WebKit at 1440, 390 and 320 px. They cover page bounds, local images, source font, FAQ/actions, required contact inputs, preview/reset behavior, sell/viewing subjects, no saved contact data or message requests, filtering, grid/list view and detail/return context. The broader 59 supporting-page checks and twelve curated journeys also passed per engine in this session; their recorded timestamps distinguish those runs from the final focused checks. The 42 shared-header states per engine still match. No browser or local asset errors were recorded.
+
+- [About desktop](about-desktop.png), [About at 320 px](about-320.png)
+- [Contact desktop](contact-desktop.png), [Contact form and details](contact-form.png), [Contact at 320 px](contact-320.png)
+- [Cars desktop](cars-desktop.png), [Cars at 320 px](cars-320.png)
+- [Final checks and source hashes](inner-results.json), [original inner-page provenance](../../templates/boxcar-updated/.template/inner-pages.json)
+
+These are adapted dealer compositions, not a pixel-parity claim for every original inner page. Local checks do not establish owner acceptance or dealer release/deployment.
+
 ## Current curated homepage
 
 The selected composition uses **Home 10's rounded photo hero, header and photographic body choices, Home 5's white pill search and pastel service cards, Home 8's centered brands, boxed vehicle cards, journal and footer, and Home 2's photographic CTA banner**. The desktop/tablet search is centered horizontally and vertically in the photograph with the hero title directly above; phone fields remain in normal flow. The header has centered Home / Cars / About / Contact navigation, Saved and a solid contact action. Four centered service cards adapt the original buy/sell card DOM and SVGs, with browsing, selling, comparison and calculator actions. The former testimonial-shaped buying steps are replaced by the source photo banner with a centered heading and viewing action. Brands and body choices have visible source-style tile borders. Latest stock shows eight compact cards in two rows of four on desktop, with one centered solid blue View all cars button and no carousel controls.

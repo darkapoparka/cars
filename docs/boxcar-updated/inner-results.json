@@ -1,0 +1,305 @@
+{
+  "recordedAt": "2026-10-02T12:22:42.726Z",
+  "preview": "http://127.0.0.1:6455/",
+  "checks": {
+    "svelte": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "domainAndAssets": {
+      "passed": 8
+    },
+    "productionBuild": {
+      "status": "passed",
+      "modules": 156
+    },
+    "broaderSupportingPages": {
+      "chromium": {
+        "checkedAt": "2026-10-02T12:10:41.131Z",
+        "reports": 59,
+        "errors": []
+      },
+      "webkit": {
+        "checkedAt": "2026-10-02T12:14:07.783Z",
+        "reports": 59,
+        "errors": []
+      }
+    }
+  },
+  "engines": {
+    "chromium": {
+      "checkedAt": "2026-10-02T12:19:12.234Z",
+      "engine": "chromium",
+      "layouts": [
+        {
+          "name": "about",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "about",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "about",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        }
+      ],
+      "journeys": [
+        "About FAQ and contact destination at 1440",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 1440",
+        "Cars filter, list view, detail and return context at 1440",
+        "About FAQ and contact destination at 390",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 390",
+        "Cars filter, list view, detail and return context at 390",
+        "About FAQ and contact destination at 320",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 320",
+        "Cars filter, list view, detail and return context at 320"
+      ],
+      "errors": [],
+      "posts": []
+    },
+    "webkit": {
+      "checkedAt": "2026-10-02T12:19:18.510Z",
+      "engine": "webkit",
+      "layouts": [
+        {
+          "name": "about",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 1440,
+          "width": 1440,
+          "documentWidth": 1440,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "about",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 390,
+          "width": 390,
+          "documentWidth": 390,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "about",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "contact",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        },
+        {
+          "name": "cars",
+          "viewport": 320,
+          "width": 320,
+          "documentWidth": 320,
+          "brokenImages": [],
+          "clippedControls": [],
+          "font": "\"Boxcar Dealer\", Arial, sans-serif"
+        }
+      ],
+      "journeys": [
+        "About FAQ and contact destination at 1440",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 1440",
+        "Cars filter, list view, detail and return context at 1440",
+        "About FAQ and contact destination at 390",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 390",
+        "Cars filter, list view, detail and return context at 390",
+        "About FAQ and contact destination at 320",
+        "Contact required inputs, truthful preview, reset, sell/viewing intents and no saved contact data at 320",
+        "Cars filter, list view, detail and return context at 320"
+      ],
+      "errors": [],
+      "posts": []
+    }
+  },
+  "sourceHashes": [
+    {
+      "file": "templates/boxcar-updated/src/pages/About.svelte",
+      "sha256": "88fba91bdb326980645fa25f394680f99657456cfc13bcaf073361326137eee8"
+    },
+    {
+      "file": "templates/boxcar-updated/src/pages/Contact.svelte",
+      "sha256": "0c6b924420a75076381b28b69e36298975e7d7bf50fc3b276ce58e6dee7e4bad"
+    },
+    {
+      "file": "templates/boxcar-updated/src/pages/Content.svelte",
+      "sha256": "87a218a538cf06a1e82eaaf4bb87a24992650002b406d0309791e2bc2c92b2fd"
+    },
+    {
+      "file": "templates/boxcar-updated/src/pages/Inventory.svelte",
+      "sha256": "0271794659ccb81bfcb55fb0a144f1d73312594ad23b99f6b29e91df57a78ce7"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/EnquiryForm.svelte",
+      "sha256": "0ea8df6b51cdf56d178d2fa254191ea49b7a6a640a127452997594475f98128f"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/VehicleCard.svelte",
+      "sha256": "5e819a404c3032c2b64e1ad3588ea46d641fac754cea6eb9f86cba7dc41abb3a"
+    },
+    {
+      "file": "templates/boxcar-updated/src/components/Icon.svelte",
+      "sha256": "047b97a5af243b6301ed1c5dabe767448a3974b860b87555f45be6943fc49402"
+    },
+    {
+      "file": "templates/boxcar-updated/src/lib/catalog.ts",
+      "sha256": "a391eeb644ff1e510fb64e0c0e88e85ad4475fc4ec854b44bc11a19f7fb88372"
+    },
+    {
+      "file": "templates/boxcar-updated/src/App.svelte",
+      "sha256": "f98db27e02a16d8f8d13fcf78e3e0a6923cab1e358f36fcd5529120f4d1f7eef"
+    },
+    {
+      "file": "templates/boxcar-updated/src/inner-pages.css",
+      "sha256": "41b8bcd1391daf4a3e1fdc8bf5b1b70aed8fa8669945d03bb274772920b759f7"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "docs/boxcar-updated/about-desktop.png",
+      "sha256": "ed6b1c65d00fbfb200f929cc2c119537b8476dd6fd63f6d5ebd60e8b0efe6549"
+    },
+    {
+      "file": "docs/boxcar-updated/contact-desktop.png",
+      "sha256": "b539424363cf48114be183a201aa54b3b5e5cf574ea11776dad6c07b80bbb378"
+    },
+    {
+      "file": "docs/boxcar-updated/contact-form.png",
+      "sha256": "927473ed124f2caf65d89ff03ca70d9ce02bbb9c996d10e0dbefb33a386ced81"
+    },
+    {
+      "file": "docs/boxcar-updated/cars-desktop.png",
+      "sha256": "ee64ece00db2b1bbe020b5b78bdc0333b5b6fc73aa4165cc6ce7fdf0873b94cc"
+    },
+    {
+      "file": "docs/boxcar-updated/about-320.png",
+      "sha256": "938fc9437b8801ff3fe8c2c52157b28c72bd47fd516c2606ae1df54064909c56"
+    },
+    {
+      "file": "docs/boxcar-updated/contact-320.png",
+      "sha256": "2776e8c752b353262f7992d1c6637dbfa4a2b70c7163ffdfa4dcf6e85e75c6d0"
+    },
+    {
+      "file": "docs/boxcar-updated/cars-320.png",
+      "sha256": "23694ec83135ae7597670791a8495a5c5d29dfefefc2ff07434beeac64dcab37"
+    }
+  ],
+  "provenance": "templates/boxcar-updated/.template/inner-pages.json",
+  "ownerAcceptance": "pending"
+}

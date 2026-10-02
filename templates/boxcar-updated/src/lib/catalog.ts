@@ -47,6 +47,9 @@ export const number = (value: number) =>
   new Intl.NumberFormat("en-US").format(value);
 export const vehicleBySlug = (slug: string) =>
   vehicles.find((v) => v.slug === slug);
-export function detailHref(v: Vehicle) {
-  return `/vehicle/${v.slug}/?return=${encodeURIComponent(window.location.pathname + window.location.search)}`;
+export function detailHref(
+  v: Vehicle,
+  returnTo = window.location.pathname + window.location.search,
+) {
+  return `/vehicle/${v.slug}/?return=${encodeURIComponent(returnTo)}`;
 }

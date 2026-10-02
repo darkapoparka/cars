@@ -28,6 +28,8 @@
     left: "m15 6-6 6 6 6",
     right: "m9 6 6 6-6 6",
     phone: "M5 3h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2v4c-8 4-21-9-16-16",
+    grid: "M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z",
+    list: "M3 4h4v4H3zM11 6h10M3 10h4v4H3zM11 12h10M3 16h4v4H3zM11 18h10",
   };
 </script>
 

@@ -10,6 +10,7 @@
   import Icon from "./components/Icon.svelte";
   import ReferenceHome from "./reference/ReferenceHome.svelte";
   import nativeStyles from "./styles.css?url";
+  import innerStyles from "./inner-pages.css?url";
   import Inventory from "./pages/Inventory.svelte";
   import VehicleDetail from "./pages/VehicleDetail.svelte";
   import Compare from "./pages/Compare.svelte";
@@ -74,7 +75,8 @@
 </script>
 
 <svelte:head>
-  {#if !design && !curated}<link rel="stylesheet" href={nativeStyles} />{/if}
+  {#if !design && !curated}<link rel="stylesheet" href={nativeStyles} />
+    <link rel="stylesheet" href={innerStyles} />{/if}
   <title>{title}</title>
   <meta
     name="description"

@@ -1257,6 +1257,64 @@
       "sha256": "8def3b3368cc2573daf868320b89e41db322639d4842d83d4fe7d1d9da1423d7",
       "sourceSHA256": "79f03a85a65bfb89d9378a0529554de5aafadf1b3722ec454aa9516c4e60d34b",
       "transformation": "Original Slick core UMD statement; demo auto-initialization replaced by the Svelte lifecycle action."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/about-inner1-1.jpg",
+      "local": "public/media/resource/about-inner1-1.jpg",
+      "bytes": 10414,
+      "sha256": "8dc56f989c86b60598ba733ed9f9a53a2ba4d0518710efb74d0b26578beab9fa"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/about-inner1-2.jpg",
+      "local": "public/media/resource/about-inner1-2.jpg",
+      "bytes": 389421,
+      "sha256": "edef93c3bded0015a9117bd9a4ca86cb9ffff406455dc944920870a46cdb97ad"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/about-inner1-3.jpg",
+      "local": "public/media/resource/about-inner1-3.jpg",
+      "bytes": 252405,
+      "sha256": "fca9c589aaba8c116f36f5507812d125c9b1702c52d7f743374b4aa360d3be96"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/about-inner1-4.jpg",
+      "local": "public/media/resource/about-inner1-4.jpg",
+      "bytes": 79342,
+      "sha256": "b4bc085cbebee152058b788905cb86088eee7038daa8fd818c5a6c36822509dd"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/images/resource/about-inner1-5.jpg",
+      "local": "public/media/resource/about-inner1-5.jpg",
+      "bytes": 99255,
+      "sha256": "1de7c47facab4a7343f492e5d0e5feb5036aae357216ed2018d88aa423828ec0"
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/about.html#why-choose-us-section",
+      "local": "public/media/resource/boxcar-finance.svg",
+      "bytes": 2078,
+      "sha256": "91fa795cd229c09f7c01e7f9acad20636233193b0de4fde03d61864f7b35067e",
+      "transformation": "Extract source SVG artwork; restore SVG viewBox and clipPath attribute casing."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/about.html#why-choose-us-section",
+      "local": "public/media/resource/boxcar-choice.svg",
+      "bytes": 2383,
+      "sha256": "9d90ac9bf93a6dd8447157204481da0b238496cf593e9de49fbf904ef8e6dba8",
+      "transformation": "Extract source SVG artwork; restore SVG viewBox and clipPath attribute casing."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/about.html#why-choose-us-section",
+      "local": "public/media/resource/boxcar-pricing.svg",
+      "bytes": 2294,
+      "sha256": "d207933185937d7f8aa5c7df24bed72d8869b77f40daa5524c37e7817a0ecd6a",
+      "transformation": "Extract source SVG artwork; restore SVG viewBox and clipPath attribute casing."
+    },
+    {
+      "source": "https://creativelayers.net/themes/boxcar-html/about.html#why-choose-us-section",
+      "local": "public/media/resource/boxcar-care.svg",
+      "bytes": 1751,
+      "sha256": "cc8a7dca1f7ad305bbca73d5496dbed4330710fa540adab257ddb83d27232e30",
+      "transformation": "Extract source SVG artwork; restore SVG viewBox and clipPath attribute casing."
     }
   ]
 }
