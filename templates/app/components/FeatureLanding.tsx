@@ -1,6 +1,4 @@
 'use client';
-import {useCopy} from '@/lib/locale';
-
 import {useState} from 'react';
 import {useRouter} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
@@ -10,10 +8,8 @@ import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellIntent} from '@/components/SellEnquirySheet';
-import {ArrowRight, CarFront} from 'lucide-react';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
-import {typography as t} from '@/app/typography.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
@@ -23,8 +19,6 @@ const config = {
 } as const;
 
 export default function FeatureLanding({kind}: {kind: FeatureKind}) {
-  const tx = useCopy();
-
   const router = useRouter();
   const current = config[kind];
   const [loginOpen, setLoginOpen] = useState(false);
@@ -41,7 +35,6 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
     {kind === 'sell' ? <ShowroomBanner {...banner}/> : <ShowroomBanner {...banner} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/>}
     <main {...stylex.props(s.content)}>
       {kind === 'finance' ? <FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/> : null}
-      {kind === 'sell' ? <button type="button" aria-haspopup="dialog" onClick={() => start()} {...stylex.props(s.sellAction, t.control)}><CarFront size={21} aria-hidden="true"/><span>{tx('Request a valuation')}</span><ArrowRight size={19} aria-hidden="true" {...stylex.props(s.actionArrow)}/></button> : null}
       <FeatureContent kind={kind} onStart={start} />
     </main>
     <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
@@ -51,6 +44,4 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
 const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
-  sellAction: {display: 'flex', alignItems: 'center', gap: 12, width: '100%', minHeight: 54, marginTop: 14, padding: '12px 18px', color: '#fff', borderWidth: 0, borderRadius: 16, backgroundColor: '#262629', cursor: 'pointer'},
-  actionArrow: {marginLeft: 'auto', flexShrink: 0},
 });

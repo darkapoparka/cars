@@ -99,6 +99,6 @@ const s = stylex.create({
   equipment: {gridColumn: '1 / -1'},
   pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: {[media.mobile]: 12, default: 11}, fontWeight: 400, lineHeight: '16px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'normal', borderRadius: 6, backgroundColor: '#f4f4f4'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},
-  financeAction: {display: 'flex', alignItems: 'center', gap: 8, width: '100%', minHeight: 44, padding: '8px 12px', color: $.ink, borderWidth: 0, backgroundColor: {default: '#f3f2fa', ':hover': '#e9e7f5'}, textAlign: 'left', cursor: 'pointer'},
+  financeAction: {display: 'flex', alignItems: 'center', gap: 8, width: '100%', minHeight: 44, padding: '8px 12px', color: $.ink, borderWidth: 0, borderTopWidth: 1, borderTopStyle: 'solid', borderTopColor: '#ededee', backgroundColor: {default: '#f7f7f8', ':hover': '#efeff0'}, textAlign: 'left', cursor: 'pointer'},
   financeArrow: {marginLeft: 'auto', flexShrink: 0},
 });
