@@ -40,6 +40,7 @@ export interface LeadSiteConfig {
   readonly country: string;
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
+  readonly desktopAccent?: string;
   readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
   readonly financingArtworkPath: string;
@@ -98,6 +99,7 @@ export const leadSite: LeadSiteConfig = {
     },
   },
   accent: "#c40101",
+  desktopAccent: "#405ff2",
   address: "ул. „Атанас Манчев“ 18, Студентски град",
   city: "София",
   district: { bg: "Студентски град", en: "Studentski grad" },

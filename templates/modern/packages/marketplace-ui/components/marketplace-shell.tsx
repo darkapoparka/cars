@@ -412,6 +412,8 @@ export const MarketplaceShell = ({
             openMarketplaceOverlay(() => setFilterOpen(true))
           }
           onViewModeChange={changeViewMode}
+          searchListings={searchListings}
+          taxonomy={taxonomy}
           totalListings={totalListings}
           viewMode={viewMode}
         />

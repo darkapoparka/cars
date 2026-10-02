@@ -6,190 +6,373 @@
   .heroSearch {
     position: relative;
     z-index: var(--desktop-layer-raised);
-    width: var(--desktop-content-width);
-    margin-inline: auto;
-    margin-top: 0;
+    grid-row: 2;
+    justify-self: center;
+    width: min(calc(100% - 64px), 1090px);
+    margin: 0 auto;
   }
-
-  .serviceLinks {
-    display: grid;
-    align-items: stretch;
-  }
-
-  .serviceLinks a {
-    display: flex;
-    gap: calc(var(--spacing) * 3);
-    align-items: center;
-    min-width: 0;
-    color: inherit;
-    border-radius: var(--radius-lg);
-    transition:
-      color var(--duration-interaction),
-      background-color var(--duration-interaction),
-      border-color var(--duration-interaction);
-  }
-
-  .serviceLinks svg {
-    flex-shrink: 0;
-  }
-
-  .serviceLinks strong,
-  .serviceLinks small {
-    display: block;
-    line-height: calc(var(--spacing) * 5);
-  }
-
-  .serviceLinks strong {
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
-  }
-
-  .serviceLinks small {
-    margin-top: calc(var(--spacing) * 0.5);
-    font-size: var(--text-micro);
-    color: var(--muted-foreground);
-  }
-
-  .serviceLinks[data-placement="hero"] {
-    position: relative;
-    z-index: 1;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: min(100%, calc(var(--spacing) * 256));
-    margin-top: calc(var(--spacing) * 4);
-    color: var(--inverse-foreground);
-  }
-
-  .serviceLinks[data-placement="hero"] a {
-    min-height: calc(var(--spacing) * 14);
-    padding-inline: calc(var(--spacing) * 5);
-    border-left: var(--desktop-border-width) solid var(--inverse-border);
-  }
-
-  .serviceLinks[data-placement="hero"] a:first-child {
-    border-left: 0;
-  }
-
-  .serviceLinks[data-placement="hero"] small {
-    color: var(--inverse-muted);
-  }
-
-  .serviceLinks[data-placement="inventory"] {
-    grid-template-columns: repeat(
-        var(--desktop-service-columns),
-        minmax(0, 1fr)
-      );
-    gap: calc(var(--spacing) * 4);
-    margin-top: calc(var(--spacing) * 18);
-    color: var(--muted-foreground);
-  }
-
-  .serviceLinks[data-placement="inventory"] a {
-    min-height: calc(var(--spacing) * 24);
-    padding: calc(var(--spacing) * 5);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-vehicle);
-  }
-
-  .serviceLinks[data-placement="inventory"] strong {
-    color: var(--foreground);
-  }
-
-  .serviceLinks[data-placement="inventory"] svg {
-    width: calc(var(--spacing) * 7);
-    height: calc(var(--spacing) * 7);
-    color: var(--brand-text);
-  }
-
-  .serviceLinks[data-placement="inventory"] a:hover {
-    background: var(--control-hover);
-    border-color: var(--desktop-border-hover-soft);
-  }
-
-  .serviceLinks[data-placement="hero"] a:hover {
-    background: var(--desktop-inverse-soft);
-  }
-
-  .serviceLinks a:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--ring);
-    outline-offset: var(--desktop-focus-offset);
-  }
-
   .discoveryContent {
     display: block;
-    width: var(--desktop-content-width);
-    padding-block: calc(var(--spacing) * 18) calc(var(--spacing) * 20);
+    max-width: 1440px;
+    padding: 64px 24px 90px;
     margin-inline: auto;
   }
-
+  .stockPanel {
+    padding: 48px 32px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+  }
   .sectionHeading {
-    display: flex;
-    gap: calc(var(--spacing) * 6);
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: calc(var(--spacing) * 8);
+    margin-bottom: 36px;
+    text-align: center;
   }
-
-  .sectionHeading h2 {
+  .sectionHeading h2,
+  .journalHeading h2 {
     margin: 0;
-    font-size: var(--text-desktop-section);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-tight);
-    letter-spacing: var(--tracking-heading);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -1.2px;
   }
-
-  .sectionActions {
+  .sectionHeading p {
+    margin: 16px auto 0;
+    font-size: 15px;
+    line-height: 26px;
+    color: var(--muted-foreground);
+  }
+  .stockTabs {
+    position: relative;
     display: flex;
-    gap: calc(var(--spacing) * 2);
-    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: min(100%, 640px);
+    margin: 0 auto 32px;
   }
-
-  .sectionAction {
-    display: inline-flex;
-    gap: calc(var(--spacing) * 2.5);
+  .stockTabs::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--desktop-tab-rail-height);
+    content: "";
+    background: var(--desktop-tab-rail);
+    border-radius: 4px;
+  }
+  .stockTabs a {
+    position: relative;
+    display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    min-height: var(--control-height-lg);
-    padding-inline: calc(var(--spacing) * 4);
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
-    color: var(--foreground);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-pill);
+    min-height: 56px;
+    padding: 12px 16px 16px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
   }
-
-  .sectionAction:hover {
-    background: var(--control-hover);
+  .stockTabs a::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--desktop-tab-rail-height);
+    content: "";
+    background: transparent;
+    border-radius: 4px;
   }
-
-  .sectionAction:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--ring);
-    outline-offset: var(--desktop-focus-offset);
+  .stockTabs a:hover {
+    color: var(--brand-text);
+    background: var(--control);
   }
-
-  .sectionActions .arrow {
-    position: static;
-    width: var(--control-height-lg);
-    height: var(--control-height-lg);
-    background: var(--panel);
-    border-color: var(--border);
-    border-radius: var(--radius-pill);
-    translate: none;
+  .stockTabs a[aria-current="page"] {
+    color: var(--brand-text);
   }
-
-  .vehicleSlide {
-    display: flex;
-    flex-basis: var(--desktop-carousel-basis);
+  .stockTabs a[aria-current="page"]::after {
+    background: var(--brand);
+  }
+  .stockGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+  .stockGrid article {
     min-width: 0;
-    padding-left: calc(var(--spacing) * 6);
   }
-
-  .carouselTrack {
-    margin-left: calc(var(--spacing) * -6);
+  .primaryAction,
+  .bannerAction {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-height: 52px;
+    padding: 0 26px;
+    margin: 40px auto 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-radius: 12px;
   }
-
-  .vehicleSlide > article {
+  .primaryAction:hover {
+    background: var(--lead-site-accent-hover);
+  }
+  .servicesSection {
+    margin-top: 80px;
+  }
+  .serviceLinks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+  .serviceLinks a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 24px 32px;
+    color: var(--foreground);
+    text-align: center;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+  .serviceLinks a > span:not(.serviceArrow) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+  }
+  .serviceLinks strong {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .serviceLinks small {
+    max-width: 260px;
+    min-height: 48px;
+    margin: 12px 0 24px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #3e4557;
+    text-wrap: balance;
+  }
+  .serviceArt {
+    order: -1;
     width: 100%;
+    height: 152px;
+    margin-bottom: 24px;
+    object-fit: contain;
+  }
+  .serviceArrow {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 230px;
+    min-height: 48px;
+    padding: 12px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    color: white;
+    background: var(--brand);
+    border-radius: 12px;
+  }
+  .serviceLinks a:hover .serviceArrow {
+    background: var(--inverse);
+  }
+  .serviceLinks[data-placement="hero"] {
+    display: none;
+  }
+  .visitBanner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 400px;
+    padding: 64px;
+    margin-top: 80px;
+    overflow: hidden;
+    color: white;
+    background: var(--brand);
+    border-radius: 24px;
+    isolation: isolate;
+  }
+  .bannerImage {
+    z-index: -2;
+    object-fit: cover;
+    object-position: right center;
+  }
+  .visitBanner::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: "";
+    background: linear-gradient(90deg, rgb(5 11 32 / 16%), transparent 70%);
+  }
+  .visitBanner > div {
+    width: min(54%, 640px);
+    text-align: left;
+  }
+  .visitBanner h2 {
+    margin: 0;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: -1.2px;
+  }
+  .visitBanner p {
+    max-width: 510px;
+    margin: 20px 0 0;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .bannerAction {
+    min-height: 56px;
+    margin: 32px 0 0;
+    color: var(--brand-text);
+    background: white;
+  }
+  .bannerAction:hover {
+    color: var(--brand-text);
+    background: var(--control);
+  }
+  .journalSection {
+    margin-top: 80px;
+  }
+  .journalHeading {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+  .journalHeading > a {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 16px;
+    font-size: 15px;
+    color: var(--brand-text);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .journalGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+  }
+  .journalCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+  .journalImage {
+    position: relative;
+    flex-shrink: 0;
+    aspect-ratio: 1.6;
+    margin: 12px 12px 0;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .journalImage img {
+    object-fit: cover;
+    object-position: right center;
+  }
+  .journalCardBody {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px 24px 24px;
+  }
+  .journalCard p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    align-items: center;
+    margin: 0 0 12px;
+    font-size: 13px;
+    color: var(--muted-foreground);
+  }
+  .journalCategory {
+    padding: 4px 8px;
+    color: var(--brand-text);
+    background: var(--desktop-accent-soft);
+    border-radius: 6px;
+  }
+  .journalCard h3 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+  .journalAction {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+    padding-top: 16px;
+    margin-top: auto;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--brand-text);
+  }
+  .journalCard:hover,
+  .journalHeading > a:hover {
+    border-color: var(--brand);
+  }
+  .journalCard:hover h3 {
+    color: var(--brand-text);
+  }
+  .discoveryContent a:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 4px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .stockPanel {
+    padding-inline: 24px;
+  }
+  .stockGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .serviceLinks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .serviceLinks a {
+    padding: 24px;
+  }
+  .serviceLinks strong {
+    font-size: 22px;
+  }
+  .visitBanner {
+    padding-inline: 40px;
+  }
+  .visitBanner h2 {
+    font-size: 38px;
+  }
+  .journalCardBody {
+    padding-inline: 20px;
+  }
+  .journalCard h3 {
+    font-size: 19px;
+    line-height: 28px;
   }
 }

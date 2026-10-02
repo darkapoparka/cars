@@ -203,3 +203,138 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+@media (min-width: 1024px) {
+  .picker {
+    position: relative;
+    min-height: 0;
+  }
+  .trigger {
+    position: relative;
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr) auto;
+    gap: 24px;
+    height: 152px;
+    min-height: 0;
+    padding: 16px 24px 16px 16px;
+    overflow: hidden;
+    color: var(--foreground);
+    text-align: left;
+    background: var(--desktop-service-canvas);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .preview {
+    position: relative;
+    width: 160px;
+    height: 118px;
+  }
+  .emptyImage {
+    object-fit: contain;
+  }
+  .triggerCopy {
+    display: grid;
+    gap: 10px;
+    min-width: 0;
+  }
+  .trigger:hover {
+    background: var(--desktop-picker-hover);
+  }
+  .triggerCopy > strong {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+  }
+  .plus {
+    width: 44px;
+    height: 44px;
+    color: white;
+    background: var(--brand);
+    border: 0;
+    border-radius: 12px;
+  }
+  .hint {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--muted-foreground);
+  }
+  .selectedCard {
+    display: grid;
+    grid-template-columns: 160px minmax(0, 1fr) 224px;
+    gap: 24px;
+    align-items: center;
+    min-height: 152px;
+    padding: 16px;
+    overflow: hidden;
+    background: var(--desktop-service-canvas);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .cardHeader {
+    grid-row: 1;
+    grid-column: 2;
+    gap: 16px;
+    padding: 0;
+  }
+  .cardHeading {
+    min-width: 0;
+  }
+  .title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  .selectedMeta {
+    margin: 6px 0 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--muted-foreground);
+  }
+  .vehiclePrice {
+    margin: 8px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+  .media {
+    grid-row: 1;
+    grid-column: 1;
+    height: 118px;
+    min-height: 0;
+    background: var(--control);
+    border-radius: 10px;
+  }
+  .image {
+    object-fit: cover;
+  }
+  .selectedCard .clear {
+    width: 32px;
+    height: 32px;
+    color: var(--foreground);
+  }
+  .selectedCard .clear:hover {
+    background: var(--border);
+  }
+  .selectedCard .change {
+    width: 100%;
+    height: 52px;
+    padding-inline: 16px;
+    margin: 0;
+    font-size: 14px;
+    color: white;
+    background: var(--brand);
+    border: 0;
+    border-radius: 12px;
+  }
+  .selectedCard .change:hover {
+    color: white;
+    background: var(--lead-site-accent-hover);
+  }
+  .results article:has([data-vehicle-selected="true"]) {
+    border-color: var(--brand);
+  }
+  .results [data-vehicle-selected="true"] > span {
+    color: var(--brand-text);
+  }
+}

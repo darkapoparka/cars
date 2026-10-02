@@ -14,6 +14,7 @@ import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
+import { getPublicContentCards } from "@/lib/public-content-data";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
@@ -107,6 +108,19 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
           desktopDiscoverySlot={
             isDealershipSite ? (
               <DealerDesktopDiscoveryContent
+                articles={getPublicContentCards(normalizeSeoLocale(locale))
+                  .filter((item) => item.type === "article")
+                  .slice(0, 3)
+                  .map((item) => ({
+                    category: item.category,
+                    href: getLocalizedPath(
+                      normalizeSeoLocale(locale),
+                      `/blog/${item.slug}`
+                    ),
+                    image: item.image,
+                    meta: item.meta,
+                    title: item.title,
+                  }))}
                 currentPath={getLocalizedPath(
                   normalizeSeoLocale(locale),
                   "/cars"

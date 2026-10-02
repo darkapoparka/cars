@@ -15,8 +15,7 @@ import {
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { ChevronDown, Search } from "lucide-react";
-import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 import { useId, useState, useTransition } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
@@ -53,9 +52,27 @@ import {
 } from "./desktop-search-assistant";
 import { DesktopSearchFilterGrid } from "./desktop-search-filter-grid";
 import { MarketplaceMakeModelPicker } from "./marketplace-model-picker";
-import Image from "./public-image";
 
 const fieldClassName = `${desktopQuickFilterOptionClassName} ${styles.field}`;
+function getHeroCategoryLabel(
+  category: MarketplaceSearchParams["category"],
+  isBg: boolean
+) {
+  if (category === "car") {
+    return isBg ? "Автомобили" : "All Cars";
+  }
+  return getLocalizedDesktopCategoryLabel(category, isBg);
+}
+function getHeroPriceLabel(
+  filters: MarketplaceSearchParams,
+  isBg: boolean,
+  formatter: Intl.NumberFormat
+) {
+  if (filters.priceMin || filters.priceMax) {
+    return getDesktopPriceQuickFilterLabel(filters, isBg, formatter);
+  }
+  return isBg ? "Всяка цена" : "Any Price";
+}
 
 export interface DealerHeroSearchProps {
   assistantSlot?: ReactNode;
@@ -67,7 +84,7 @@ export interface DealerHeroSearchProps {
   taxonomy?: VehicleTaxonomyMakeOption[];
 }
 
-/** Shared desktop buy box keeps one draft until Search is submitted. */
+/** Both desktop search surfaces keep a draft until Search is submitted. */
 export function DealerHeroSearch(props: DealerHeroSearchProps) {
   const {
     filters: initialFilters,
@@ -79,7 +96,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
     taxonomy = fallbackVehicleTaxonomy,
   } = props;
   const router = useRouter();
-  const pathname = usePathname();
   const isDesktop = useDesktopMarketplaceViewport();
   const [filters, setFilters] = useState(initialFilters);
   const [advancedFiltersOpen, setAdvancedFiltersOpen] = useState(false);
@@ -157,22 +173,13 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
             submit(query);
           }}
         >
-          <nav
-            aria-label={text(
-              "Категории превозни средства",
-              "Vehicle categories"
-            )}
-            className={styles.tabs}
-          >
-            <VehicleCategoryTabs
-              filters={filters}
-              isBg={isBg}
-              locale={locale}
-              pathname={pathname}
-              showArtwork={isDesktop}
-            />
-          </nav>
+          <h2 className={styles.searchHeading}>
+            {text("Търсене на автомобили", "Search cars")}
+          </h2>
           <div className={styles.searchRow}>
+            <span className={styles.filterLabel}>
+              {text("Ключова дума", "Keyword")}
+            </span>
             <div className={styles.query}>
               <DesktopSearchAssistant
                 appearance="hero"
@@ -198,160 +205,204 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 scope="vehicles"
                 searchActionLabel={text("Покажи обявите", "Show results")}
               />
-              <Button
-                aria-label={
-                  pending
-                    ? text("Търсене…", "Searching…")
-                    : text("Търси автомобили", "Search cars")
-                }
-                className={styles.submit}
-                data-slot="desktop-hero-submit"
-                disabled={pending}
-                type="submit"
-                variant="ghost"
-              >
-                <Search aria-hidden="true" className="size-5" />
-                <span>{text("Търси автомобили", "Search cars")}</span>
-              </Button>
             </div>
           </div>
           <div className={styles.fields}>
             <div className={styles.primaryFields}>
-              <Button
-                aria-expanded={makeModelStep === "make"}
-                aria-haspopup="dialog"
-                aria-pressed={Boolean(filters.make)}
-                className={fieldClassName}
-                data-slot="desktop-hero-make"
-                onClick={() => openOverlay(() => setMakeModelStep("make"))}
-                type="button"
-                variant="outline"
-              >
-                <span>{filters.make || text("Марка", "Make")}</span>
-                <ChevronDown aria-hidden="true" className="size-4" />
-              </Button>
-              <Button
-                aria-expanded={makeModelStep === "model"}
-                aria-haspopup="dialog"
-                aria-pressed={Boolean(filters.model)}
-                className={fieldClassName}
-                data-slot="desktop-hero-model"
-                onClick={() => openOverlay(() => setMakeModelStep("model"))}
-                type="button"
-                variant="outline"
-              >
-                <span>{filters.model || text("Модел", "Model")}</span>
-                <ChevronDown aria-hidden="true" className="size-4" />
-              </Button>
-              <DesktopQuickRangeDialog
-                active={Boolean(filters.priceMin || filters.priceMax)}
-                className={fieldClassName}
-                dataSlot="desktop-hero-price"
-                description={text(
-                  "Изберете ценови диапазон.",
-                  "Choose a price range."
-                )}
-                formatValue={(value) =>
-                  `${numberFormatter.format(value)} ${currencyLabel}`
-                }
-                isBg={isBg}
-                label={getDesktopPriceQuickFilterLabel(
-                  filters,
-                  isBg,
-                  numberFormatter
-                )}
-                maximumLabel={text("Максимум", "Maximum")}
-                maximumPrefix={text("До", "Up to")}
-                minimumLabel={text("Минимум", "Minimum")}
-                onApply={({ minimum, maximum }) =>
-                  onApply({
-                    priceMin: minimum,
-                    priceMax: maximum,
-                    currency:
-                      minimum !== undefined || maximum !== undefined
-                        ? marketplaceSearchCurrency
-                        : undefined,
-                  })
-                }
-                presets={marketplacePricePresets.map((value) => ({
-                  label:
-                    text("До ", "Up to ") +
-                    numberFormatter.format(value) +
-                    " " +
-                    currencyLabel,
-                  value: [marketplacePriceRange[0], value],
-                }))}
-                quickSelectLabel={text("Бърз избор", "Quick select")}
-                range={marketplacePriceRange}
-                selectedMaximum={filters.priceMax}
-                selectedMinimum={filters.priceMin}
-                step={1000}
-                thumbLabels={[
-                  text("Минимална цена", "Minimum price"),
-                  text("Максимална цена", "Maximum price"),
-                ]}
-                title={text("Цена", "Price range")}
-              />
-              <DesktopQuickRangeDialog
-                active={
-                  filters.yearMin !== undefined || filters.yearMax !== undefined
-                }
-                className={fieldClassName}
-                dataSlot="desktop-hero-year"
-                description={text(
-                  "Изберете диапазон на годината.",
-                  "Choose a year range."
-                )}
-                formatValue={String}
-                isBg={isBg}
-                label={labels.year}
-                maximumLabel={text("До година", "To year")}
-                maximumPrefix={text("До", "Up to")}
-                minimumLabel={text("От година", "From year")}
-                onApply={({ minimum, maximum }) =>
-                  onApply({ yearMin: minimum, yearMax: maximum })
-                }
-                presets={[]}
-                quickSelectLabel={text("Бърз избор", "Quick select")}
-                range={marketplaceYearRange}
-                selectedMaximum={filters.yearMax}
-                selectedMinimum={filters.yearMin}
-                step={1}
-                thumbLabels={[
-                  text("От година", "From year"),
-                  text("До година", "To year"),
-                ]}
-                title={text("Година", "Year")}
-              />
-              <DesktopQuickRangeDialog
-                active={filters.mileageMax !== undefined}
-                className={fieldClassName}
-                dataSlot="desktop-hero-mileage"
-                description={text(
-                  "Задайте максимален пробег.",
-                  "Set a maximum mileage."
-                )}
-                formatValue={(value) =>
-                  `${numberFormatter.format(value)} ${text("км", "km")}`
-                }
-                isBg={isBg}
-                label={labels.mileage}
-                maximumLabel={text("Максимален пробег", "Maximum mileage")}
-                maximumOnly
-                maximumPrefix={text("До", "Up to")}
-                minimumLabel={text("Минимум", "Minimum")}
-                onApply={({ maximum }) => onApply({ mileageMax: maximum })}
-                presets={[]}
-                quickSelectLabel={text("Бърз избор", "Quick select")}
-                range={marketplaceMileageRange}
-                selectedMaximum={filters.mileageMax}
-                step={5000}
-                thumbLabels={[
-                  text("Минимален пробег", "Minimum mileage"),
-                  text("Максимален пробег", "Maximum mileage"),
-                ]}
-                title={text("Пробег", "Mileage")}
-              />
+              <div className={styles.filterField} data-field="category">
+                <span className={styles.filterLabel}>
+                  {text("Категория", "Vehicle type")}
+                </span>
+                <DesktopQuickFilterDialog
+                  active={filters.category !== "car"}
+                  anyLabel={text("Всички автомобили", "All Cars")}
+                  className={fieldClassName}
+                  dataSlot="desktop-hero-category"
+                  isBg={isBg}
+                  label={getHeroCategoryLabel(filters.category, isBg)}
+                  onSelect={(category) =>
+                    setFilters((current) =>
+                      withCategory(
+                        current,
+                        (category ||
+                          "car") as MarketplaceSearchParams["category"]
+                      )
+                    )
+                  }
+                  options={marketplaceCategorySelectorOptions.map(
+                    (category) => ({
+                      value: category.id,
+                      label: getLocalizedDesktopCategoryLabel(
+                        category.id,
+                        isBg
+                      ),
+                    })
+                  )}
+                  selected={filters.category}
+                  title={text("Категория превозно средство", "Vehicle type")}
+                />
+              </div>
+              <div className={styles.filterField} data-field="make">
+                <span className={styles.filterLabel}>
+                  {text("Марка", "Make")}
+                </span>
+                <Button
+                  aria-expanded={makeModelStep === "make"}
+                  aria-haspopup="dialog"
+                  aria-pressed={Boolean(filters.make)}
+                  className={fieldClassName}
+                  data-slot="desktop-hero-make"
+                  onClick={() => openOverlay(() => setMakeModelStep("make"))}
+                  type="button"
+                  variant="outline"
+                >
+                  <span>
+                    {filters.make || text("Всички марки", "All Makes")}
+                  </span>
+                  <ChevronDown aria-hidden="true" className="size-4" />
+                </Button>
+              </div>
+              <div className={styles.filterField} data-field="model">
+                <span className={styles.filterLabel}>
+                  {text("Модел", "Model")}
+                </span>
+                <Button
+                  aria-expanded={makeModelStep === "model"}
+                  aria-haspopup="dialog"
+                  aria-pressed={Boolean(filters.model)}
+                  className={fieldClassName}
+                  data-slot="desktop-hero-model"
+                  onClick={() => openOverlay(() => setMakeModelStep("model"))}
+                  type="button"
+                  variant="outline"
+                >
+                  <span>
+                    {filters.model || text("Всички модели", "All Models")}
+                  </span>
+                  <ChevronDown aria-hidden="true" className="size-4" />
+                </Button>
+              </div>
+              <div className={styles.filterField} data-field="price">
+                <span className={styles.filterLabel}>
+                  {text("Цена", "Price")}
+                </span>
+                <DesktopQuickRangeDialog
+                  active={Boolean(filters.priceMin || filters.priceMax)}
+                  className={fieldClassName}
+                  dataSlot="desktop-hero-price"
+                  description={text(
+                    "Изберете ценови диапазон.",
+                    "Choose a price range."
+                  )}
+                  formatValue={(value) =>
+                    `${numberFormatter.format(value)} ${currencyLabel}`
+                  }
+                  isBg={isBg}
+                  label={getHeroPriceLabel(filters, isBg, numberFormatter)}
+                  maximumLabel={text("Максимум", "Maximum")}
+                  maximumPrefix={text("До", "Up to")}
+                  minimumLabel={text("Минимум", "Minimum")}
+                  onApply={({ minimum, maximum }) =>
+                    onApply({
+                      priceMin: minimum,
+                      priceMax: maximum,
+                      currency:
+                        minimum !== undefined || maximum !== undefined
+                          ? marketplaceSearchCurrency
+                          : undefined,
+                    })
+                  }
+                  presets={marketplacePricePresets.map((value) => ({
+                    label:
+                      text("До ", "Up to ") +
+                      numberFormatter.format(value) +
+                      " " +
+                      currencyLabel,
+                    value: [marketplacePriceRange[0], value],
+                  }))}
+                  quickSelectLabel={text("Бърз избор", "Quick select")}
+                  range={marketplacePriceRange}
+                  selectedMaximum={filters.priceMax}
+                  selectedMinimum={filters.priceMin}
+                  step={1000}
+                  thumbLabels={[
+                    text("Минимална цена", "Minimum price"),
+                    text("Максимална цена", "Maximum price"),
+                  ]}
+                  title={text("Цена", "Price range")}
+                />
+              </div>
+              <div className={styles.filterField} data-field="year">
+                <span className={styles.filterLabel}>
+                  {text("Година", "Year")}
+                </span>
+                <DesktopQuickRangeDialog
+                  active={
+                    filters.yearMin !== undefined ||
+                    filters.yearMax !== undefined
+                  }
+                  className={fieldClassName}
+                  dataSlot="desktop-hero-year"
+                  description={text(
+                    "Изберете диапазон на годината.",
+                    "Choose a year range."
+                  )}
+                  formatValue={String}
+                  isBg={isBg}
+                  label={labels.year}
+                  maximumLabel={text("До година", "To year")}
+                  maximumPrefix={text("До", "Up to")}
+                  minimumLabel={text("От година", "From year")}
+                  onApply={({ minimum, maximum }) =>
+                    onApply({ yearMin: minimum, yearMax: maximum })
+                  }
+                  presets={[]}
+                  quickSelectLabel={text("Бърз избор", "Quick select")}
+                  range={marketplaceYearRange}
+                  selectedMaximum={filters.yearMax}
+                  selectedMinimum={filters.yearMin}
+                  step={1}
+                  thumbLabels={[
+                    text("От година", "From year"),
+                    text("До година", "To year"),
+                  ]}
+                  title={text("Година", "Year")}
+                />
+              </div>
+              <div className={styles.filterField} data-field="mileage">
+                <span className={styles.filterLabel}>
+                  {text("Пробег", "Mileage")}
+                </span>
+                <DesktopQuickRangeDialog
+                  active={filters.mileageMax !== undefined}
+                  className={fieldClassName}
+                  dataSlot="desktop-hero-mileage"
+                  description={text(
+                    "Задайте максимален пробег.",
+                    "Set a maximum mileage."
+                  )}
+                  formatValue={(value) =>
+                    `${numberFormatter.format(value)} ${text("км", "km")}`
+                  }
+                  isBg={isBg}
+                  label={labels.mileage}
+                  maximumLabel={text("Максимален пробег", "Maximum mileage")}
+                  maximumOnly
+                  maximumPrefix={text("До", "Up to")}
+                  minimumLabel={text("Минимум", "Minimum")}
+                  onApply={({ maximum }) => onApply({ mileageMax: maximum })}
+                  presets={[]}
+                  quickSelectLabel={text("Бърз избор", "Quick select")}
+                  range={marketplaceMileageRange}
+                  selectedMaximum={filters.mileageMax}
+                  step={5000}
+                  thumbLabels={[
+                    text("Минимален пробег", "Minimum mileage"),
+                    text("Максимален пробег", "Maximum mileage"),
+                  ]}
+                  title={text("Пробег", "Mileage")}
+                />
+              </div>
               {compact ? (
                 <Button
                   aria-controls={advancedFiltersId}
@@ -519,6 +570,20 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               />
             </div>
           </div>
+          <Button
+            aria-label={
+              pending
+                ? text("Търсене…", "Searching…")
+                : text("Търси автомобили", "Search cars")
+            }
+            className={styles.submit}
+            data-slot="desktop-hero-submit"
+            disabled={pending}
+            type="submit"
+          >
+            <Search aria-hidden="true" size={22} />
+            <span>{text("Търси автомобили", "Search cars")}</span>
+          </Button>
           <SearchDraftStatus
             filterCount={filterCount}
             isBg={isBg}
@@ -542,64 +607,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
         taxonomy={taxonomy}
       />
     </div>
-  );
-}
-
-function VehicleCategoryTabs({
-  filters,
-  isBg,
-  locale,
-  pathname,
-  showArtwork,
-}: {
-  filters: MarketplaceSearchParams;
-  isBg: boolean;
-  locale?: string;
-  pathname: string;
-  showArtwork: boolean;
-}) {
-  return (
-    <>
-      {marketplaceCategorySelectorOptions.map((category) => {
-        return (
-          <Link
-            aria-current={filters.category === category.id ? "page" : undefined}
-            href={buildMarketplaceSearchHref(
-              withCategory(filters, category.id),
-              getLocalizedPublicPath(locale, getCategoryPath(category.id))
-            )}
-            key={category.id}
-            onNavigate={(event) => {
-              if (
-                pathname.endsWith(getCategoryPath(category.id)) &&
-                filters.category === category.id
-              ) {
-                event.preventDefault();
-              }
-            }}
-            prefetch={true}
-            scroll={false}
-          >
-            <span aria-hidden="true" className={styles.categoryArtwork}>
-              {showArtwork ? (
-                <Image
-                  alt=""
-                  className={styles.categoryImage}
-                  data-slot="desktop-category-image"
-                  draggable={false}
-                  height={926}
-                  loading="eager"
-                  sizes="88px"
-                  src={`/images/categories/desktop-category-${category.id}-v1.png`}
-                  width={1698}
-                />
-              ) : null}
-            </span>
-            <span>{getLocalizedDesktopCategoryLabel(category.id, isBg)}</span>
-          </Link>
-        );
-      })}
-    </>
   );
 }
 

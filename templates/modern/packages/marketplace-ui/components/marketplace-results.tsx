@@ -7,7 +7,9 @@ import {
   type ListingViewMode,
   type MarketplaceSearchParams,
   type VehicleListing,
+  type VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
+import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useEffect } from "react";
 import { getAccountListingSaveFlowHref } from "../lib/account-save-flow";
@@ -18,6 +20,7 @@ import {
   shouldHideDesktopResultSummary,
 } from "../lib/marketplace-results-policy";
 import { getLocalizedPublicPath } from "../lib/public-path";
+import { DealerHeroSearch } from "./dealer-hero-search";
 import dealerStyles from "./dealer-inventory.module.css";
 import { DealerInventorySummary } from "./dealer-inventory-summary";
 import { ResultToolbar } from "./desktop-marketplace-controls";
@@ -35,6 +38,8 @@ export const MarketplaceResults = ({
   isBg,
   listings,
   locale,
+  searchListings,
+  taxonomy,
   onChooseCategory,
   onApply,
   onOpenFilters,
@@ -51,6 +56,8 @@ export const MarketplaceResults = ({
   isBg: boolean;
   listings: VehicleListing[];
   locale?: string;
+  searchListings?: readonly InventorySearchListing[];
+  taxonomy?: VehicleTaxonomyMakeOption[];
   onChooseCategory: () => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onOpenFilters: () => void;
@@ -88,6 +95,21 @@ export const MarketplaceResults = ({
       )}
       data-desktop-hidden={hideDesktop}
     >
+      {isDealershipSite && !hideDesktop && (
+        <aside
+          className={dealerStyles.sidebar}
+          data-slot="dealer-inventory-sidebar"
+        >
+          <DealerHeroSearch
+            compact
+            filters={filters}
+            key={JSON.stringify(filters)}
+            locale={locale}
+            searchListings={searchListings}
+            taxonomy={taxonomy}
+          />
+        </aside>
+      )}
       <div className="min-w-0">
         <p
           aria-live="polite"

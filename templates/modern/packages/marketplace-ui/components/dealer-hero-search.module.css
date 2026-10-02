@@ -10,7 +10,6 @@
     color: var(--foreground);
   }
   .desktopSearch .panel {
-    display: grid;
     min-height: 0;
     padding: 0;
     background: transparent;
@@ -18,257 +17,184 @@
     border-radius: 0;
     box-shadow: none;
   }
-  .form {
+  .form,
+  .fields,
+  .primaryFields,
+  .advancedFields {
     display: grid;
-    gap: 0;
+    gap: 20px;
     min-width: 0;
   }
-  .searchRow {
-    display: block;
+  .searchHeading {
+    margin: 0 0 4px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .searchRow,
+  .filterField {
+    display: grid;
+    gap: 8px;
     min-width: 0;
+  }
+  .filterLabel {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--muted-foreground);
   }
   .query {
     position: relative;
-    width: 100%;
     min-width: 0;
   }
   .query label {
-    height: calc(var(--spacing) * 16);
-    padding-inline: calc(var(--spacing) * 5) calc(var(--spacing) * 50);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-pill);
+    height: 52px;
+    padding-inline: 14px;
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     box-shadow: none;
   }
   .query label:focus-within {
     border-color: var(--ring);
   }
   .query input {
-    font-size: var(--text-compact-control);
+    font-size: 15px;
   }
-  .desktopSearch .submit {
-    position: absolute;
-    top: 50%;
-    right: calc(var(--spacing) * 2);
-    gap: calc(var(--spacing) * 2);
-    width: auto;
-    min-width: 0;
-    height: calc(var(--spacing) * 12);
-    min-height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 6);
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
-    color: var(--brand-foreground);
-    background: var(--brand);
-    border: 0;
-    border-radius: var(--radius-pill);
-    box-shadow: none;
-    transform: translateY(-50%);
-  }
-  .desktopSearch .submit:hover {
-    color: var(--brand-hover-foreground);
-    background: var(--lead-site-accent-hover);
-  }
-  .tabs {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-    gap: calc(var(--spacing) * 3);
-    align-items: center;
-    justify-self: center;
-    width: min(100%, var(--desktop-category-width));
-    margin: 0 0 calc(var(--spacing) * 6);
-    border-bottom: var(--desktop-border-width) solid var(--border);
-  }
-  .tabs a {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    gap: var(--spacing);
-    align-items: center;
-    justify-content: center;
-    min-height: calc(var(--spacing) * 21);
-    padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 3)
-      calc(var(--spacing) * 2.5);
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-medium);
-    color: var(--muted-foreground);
-    white-space: nowrap;
-    border-radius: 0;
-    transition: color var(--duration-interaction);
-  }
-  .tabs a:hover {
-    color: var(--foreground);
-  }
-  .tabs a[aria-current="page"] {
-    font-weight: var(--font-weight-semibold);
-    color: var(--foreground);
-  }
-  .tabs a[aria-current="page"]::after {
-    position: absolute;
-    right: 0;
-    bottom: calc(var(--desktop-border-width) * -1);
-    left: 0;
-    height: var(--desktop-focus-width);
-    content: "";
-    background: var(--brand);
-    border-radius: var(--desktop-focus-width);
-  }
-  .tabs a:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--ring);
-    outline-offset: var(--desktop-focus-offset);
-  }
-  .categoryArtwork {
-    display: block;
-    flex-shrink: 0;
-    width: var(--desktop-category-image-width);
-    height: var(--desktop-category-image-height);
-  }
-  .categoryImage {
-    width: 100%;
-    height: 100%;
-    user-select: none;
-    object-fit: contain;
-    opacity: var(--desktop-category-image-opacity);
-  }
-  .tabs a[aria-current="page"] .categoryImage,
-  .tabs a:hover .categoryImage {
-    opacity: 1;
-  }
-  .fields {
-    display: grid;
-    row-gap: calc(var(--spacing) * 2.5);
-    padding-top: calc(var(--spacing) * 4);
-  }
-  .primaryFields {
-    display: grid;
-    grid-auto-columns: minmax(0, 1fr);
-    grid-auto-flow: column;
-    gap: calc(var(--spacing) * 2.5);
-    align-items: center;
-  }
-  .fields .field {
-    display: flex;
-    gap: calc(var(--spacing) * 2.5);
-    align-items: center;
+  .desktopSearch .field {
     justify-content: space-between;
     width: 100%;
-    min-width: 0;
-    height: var(--desktop-filter-height);
-    min-height: var(--desktop-filter-height);
-    padding-inline: calc(var(--spacing) * 4);
-    font-size: var(--text-meta);
-    font-weight: var(--font-weight-normal);
+    height: 52px;
+    min-height: 52px;
+    padding-inline: 16px;
+    overflow: hidden;
+    font-size: 15px;
+    font-weight: 400;
     color: var(--foreground);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-desktop-control);
+    background: var(--control);
+    border: 1px solid var(--border);
+    border-radius: 12px;
     box-shadow: none;
-  }
-  .fields .field:hover {
-    background: var(--control-hover);
-    border-color: var(--desktop-border-hover);
   }
   .field > span {
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-    text-align: left;
     white-space: nowrap;
   }
-  :where(.fields .field) > svg {
+  .field svg {
     flex-shrink: 0;
-    width: calc(var(--spacing) * 4);
-    height: calc(var(--spacing) * 4);
-    color: var(--muted-foreground);
-    transition: transform var(--duration-interaction);
   }
-  .fields .field[aria-pressed="true"] {
-    color: var(--inverse-foreground);
-    background: var(--inverse);
-    border-color: transparent;
-  }
-  .fields .field[aria-pressed="true"] > svg {
-    color: var(--inverse-foreground);
-  }
-  .fields .field[aria-expanded="true"] > svg:last-child {
-    transform: rotate(180deg);
-  }
-  .fields .expandFilters {
-    gap: calc(var(--spacing) * 2.5);
-  }
-  .fields .expandFilters[aria-expanded="true"] {
+  .desktopSearch .field:hover,
+  .desktopSearch .field[aria-pressed="true"] {
     background: var(--control-hover);
-    border-color: transparent;
-  }
-  .advancedFields {
-    display: grid;
-    grid-template-columns: repeat(
-        var(--desktop-advanced-columns),
-        minmax(0, 1fr)
-      );
-    gap: calc(var(--spacing) * 2.5);
+    border-color: var(--border);
   }
   .advancedFields[hidden] {
     display: none;
   }
-  .desktopSearch[data-compact="true"] .advancedFields:not([hidden]) {
+  .desktopSearch .submit {
+    gap: 10px;
     width: 100%;
-    padding-top: calc(var(--spacing) * 4);
-    margin-top: var(--spacing);
+    height: 56px;
+    min-height: 56px;
+    padding-inline: 26px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border: 0;
+    border-radius: 12px;
+    box-shadow: none;
   }
-  .advancedFields .field {
-    width: 100%;
-    max-width: none;
-    border-radius: var(--radius-desktop-control);
+  .desktopSearch .submit:hover {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
   }
   .footer {
     display: flex;
-    gap: calc(var(--spacing) * 4);
+    gap: 8px;
     align-items: center;
     justify-content: space-between;
-    padding-top: calc(var(--spacing) * 3.5);
-  }
-  .draftStatus {
-    min-width: 0;
-    font-size: var(--text-card-spec);
+    font-size: 12px;
     color: var(--muted-foreground);
   }
   .textAction {
-    flex-shrink: 0;
-    height: calc(var(--spacing) * 7);
-    padding: 0 var(--spacing);
-    font-size: var(--text-card-spec);
-    color: var(--muted-foreground);
+    padding: 0;
+    font-size: 13px;
+    color: var(--brand-text);
   }
-
-  .desktopSearch[data-surface="hero"] {
-    max-width: 68rem;
-    padding: calc(var(--spacing) * 5);
-    margin-inline: auto;
+  .desktopSearch[data-surface="hero"] .form {
+    display: flex;
+    gap: 0;
+    align-items: center;
+    height: 76px;
+    padding: 10px;
     background: var(--panel);
-    border-radius: var(--radius-vehicle);
+    border-radius: 50px;
   }
-  .desktopSearch[data-surface="hero"] .tabs {
-    width: min(100%, 32rem);
-    margin-bottom: calc(var(--spacing) * 4);
-  }
-  .desktopSearch[data-surface="hero"] .tabs a {
-    min-height: calc(var(--spacing) * 10);
-    padding-block: var(--spacing) calc(var(--spacing) * 3);
-  }
-  .desktopSearch[data-surface="hero"] .categoryArtwork {
+  .desktopSearch[data-surface="hero"]
+    :is(
+      .searchHeading,
+      .searchRow,
+      .filterLabel,
+      .advancedFields,
+      .expandFilters,
+      .footer,
+      [data-field="year"],
+      [data-field="mileage"]
+    ) {
     display: none;
   }
-  .desktopSearch[data-surface="hero"] .query label {
-    background: var(--control);
-    border-color: transparent;
+  .desktopSearch[data-surface="hero"] :is(.fields, .primaryFields) {
+    display: contents;
+  }
+  .desktopSearch[data-surface="hero"] .filterField {
+    position: relative;
+    display: flex;
+    flex: 1 1 0;
+    height: 56px;
+  }
+  .desktopSearch[data-surface="hero"]
+    .filterField:is([data-field="year"], [data-field="mileage"]) {
+    display: none;
+  }
+  .desktopSearch[data-surface="hero"] .filterField + .filterField::before {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 0;
+    width: 1px;
+    content: "";
+    background: var(--border);
+  }
+  .desktopSearch[data-surface="hero"] .field {
+    height: 56px;
+    min-height: 56px;
+    padding-inline: 24px;
+    font-size: 15px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .desktopSearch[data-surface="hero"] .field:hover {
+    color: var(--brand-text);
+    background: transparent;
+  }
+  .desktopSearch[data-surface="hero"] .submit {
+    flex: 0 0 auto;
+    width: auto;
+    border-radius: 40px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .desktopSearch[data-surface="hero"] .fields .field {
-    gap: calc(var(--spacing) * 2);
-    padding-inline: calc(var(--spacing) * 2.5);
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .desktopSearch[data-surface="hero"] .field {
+    padding-inline: 14px;
+    font-size: 14px;
+  }
+  .desktopSearch[data-surface="hero"] .submit {
+    padding-inline: 20px;
+    font-size: 14px;
   }
 }

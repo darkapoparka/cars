@@ -9,85 +9,92 @@ const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("desktop home has a photographic hero and inner routes align their content", async ({
+test("desktop follows the Boxcars hero, stock and page proportions", async ({
   page,
 }) => {
-  test.setTimeout(120_000);
+  test.setTimeout(180_000);
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
     for (const locale of ["en", "bg"]) {
-      let reference: { x: number; width: number } | undefined;
-      let headerReference: { x: number; width: number } | undefined;
-      for (const path of ["", "/cars", "/sell", "/lease", "/imports"]) {
+      await page.goto(`/${locale}`);
+      const header = page.locator(
+        '[data-slot="dealer-desktop-header"]:visible'
+      );
+      const headerBox = await header.boundingBox();
+      expect(headerBox?.height).toBe(90);
+      expect(
+        await page
+          .locator("footer")
+          .evaluate((element) => getComputedStyle(element).borderRadius)
+      ).toBe("30px 30px 0px 0px");
+      const hero = page.locator('[data-slot="dealer-desktop-home-hero"]');
+      const heroBox = await hero.boundingBox();
+      expect(heroBox?.x).toBe(Math.max(24, (width - 1392) / 2));
+      expect(heroBox?.y).toBe(90);
+      expect(heroBox?.height).toBe(680);
+      expect(heroBox?.width).toBe(Math.min(width - 48, 1392));
+      expect(
+        await hero.evaluate(
+          (element) => getComputedStyle(element).backgroundImage
+        )
+      ).toContain("desktop-boxcars/hero.jpg");
+      const search = hero.locator("form");
+      expect((await search.boundingBox())?.height).toBe(76);
+      const stock = page.locator('[data-slot="home-stock-panel"]');
+      expect((await stock.boundingBox())?.y).toBe(834);
+      const stockGrid = page.locator('[data-slot="home-stock-grid"]');
+      expect(
+        await stockGrid.evaluate(
+          (element) =>
+            getComputedStyle(element).gridTemplateColumns.split(" ").length
+        )
+      ).toBe(width < 1280 ? 3 : 4);
+      await expect(stockGrid.locator("article")).toHaveCount(8);
+      if (width === 1440 && locale === "en") {
+        expect((await search.boundingBox())?.width).toBe(1090);
+        expect(
+          await hero
+            .locator("h1")
+            .evaluate((element) => getComputedStyle(element).fontSize)
+        ).toBe("70px");
+      }
+      for (const path of [
+        "/cars",
+        "/sell",
+        "/lease",
+        "/imports",
+        "/contact",
+        "/guides",
+        "/legal/terms",
+      ]) {
         await page.goto(`/${locale}${path}`);
         await expect(
           page.locator('[data-slot="public-route-loading-content"]')
         ).toBeHidden();
-        const hero = page.locator(desktopHeroSelector);
-        const panel = await hero
-          .locator("[data-desktop-action-panel]")
-          .boundingBox();
-        const headerFrame = await page
-          .locator('[data-slot="dealer-desktop-header"] > div')
-          .boundingBox();
-        const heading = await hero
-          .locator("h1")
-          .first()
-          .evaluate((element) => {
-            const box = element.parentElement?.getBoundingClientRect();
-            return box ? { x: box.x, width: box.width } : null;
-          });
-        if (!(panel && heading && headerFrame)) {
-          throw new Error(
-            "The desktop heading and action panel must be visible"
+        await expect(
+          page.locator(desktopHeroSelector).locator("h1").first()
+        ).toBeVisible();
+        expect(await header.boundingBox()).toEqual(headerBox);
+        if (path === "/cars") {
+          const sidebar = await page
+            .locator('[data-slot="dealer-inventory-sidebar"]')
+            .boundingBox();
+          const grid = page.locator('[data-slot="marketplace-listing-grid"]');
+          const gridBox = await grid.boundingBox();
+          expect(sidebar?.width).toBe(width < 1280 ? 240 : 280);
+          expect(gridBox?.x).toBeGreaterThan(
+            (sidebar?.x ?? 0) + (sidebar?.width ?? 0)
           );
-        }
-        expect(panel.width).toBeLessThanOrEqual(1280);
-        expect(panel.x).toBeGreaterThanOrEqual(24);
-        expect(panel.height).toBeGreaterThan(0);
-        expect(panel.height).toBeLessThan(600);
-        expect(panel.x).toBeGreaterThanOrEqual(headerFrame.x);
-        expect(panel.x + panel.width).toBeLessThanOrEqual(
-          headerFrame.x + headerFrame.width
-        );
-        if (path === "") {
-          await expect(hero.locator("h1").first()).toBeVisible();
           expect(
-            await hero.evaluate(
-              (element) => getComputedStyle(element).backgroundImage
+            await grid.evaluate(
+              (element) =>
+                getComputedStyle(element).gridTemplateColumns.split(" ").length
             )
-          ).toContain("url(");
-          await expect(
-            page.locator('[data-slot="dealer-desktop-discovery-content"]')
-          ).toBeVisible();
-          await expect(
-            page.locator('[data-slot="dealer-inventory-summary"]')
-          ).toBeHidden();
-        } else if (path === "/cars") {
-          const inventoryTitle = page.locator(
-            '[data-slot="dealer-inventory-summary"] h2'
-          );
-          await expect(inventoryTitle).toBeVisible();
-          expect((await inventoryTitle.boundingBox())?.x).toBeCloseTo(
-            panel.x,
-            0
-          );
-        } else {
-          await expect(hero.locator("h1").first()).toBeVisible();
-          expect(heading.x).toBeCloseTo(panel.x, 0);
-          expect(heading.width).toBeCloseTo(panel.width, 0);
-        }
-        if (path !== "" && reference) {
-          expect(panel.x).toBeCloseTo(reference.x, 0);
-          expect(panel.width).toBeCloseTo(reference.width, 0);
-        } else if (path !== "") {
-          reference = { x: panel.x, width: panel.width };
-        }
-        if (headerReference) {
-          expect(headerFrame.x).toBeCloseTo(headerReference.x, 0);
-          expect(headerFrame.width).toBeCloseTo(headerReference.width, 0);
-        } else {
-          headerReference = headerFrame;
+          ).toBe(width < 1280 ? 2 : 3);
+          if (width === 1440) {
+            expect(sidebar?.x).toBe(60);
+            expect(sidebar?.y).toBe(300);
+          }
         }
         expect(
           await page.evaluate(
@@ -120,7 +127,7 @@ test("desktop navigation keeps the header stable through loading", async ({
     ["sell", "Sell us your vehicle"],
     ["lease", "Vehicle financing"],
     ["imports", "Import a vehicle"],
-    ["home", "Find your next car"],
+    ["home", "Find Your Perfect Car"],
   ]) {
     await header.locator(`[data-marketplace-mode="${mode}"]`).click();
     await expect(
@@ -140,112 +147,69 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("home and inventory keep the same quick filters and submit their draft", async ({
+test("home search and inventory sidebar apply drafts without losing filters", async ({
   page,
 }) => {
+  test.setTimeout(120_000);
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto("/en");
-    await expect(
-      page.locator('[data-slot="public-route-loading-content"]')
-    ).toBeHidden();
-    const panel = page.locator('[data-slot="dealer-desktop-toolbar"]');
-    const home = await panel.boundingBox();
-    await expect(
-      page.locator('[data-slot="dealer-desktop-home-hero"] h1')
-    ).toBeVisible();
-    for (const slot of ["make", "model", "price", "year", "mileage"]) {
+    const home = page.locator('[data-slot="dealer-desktop-toolbar"]:visible');
+    for (const slot of ["category", "make", "model", "price"]) {
       await expect(
-        panel.locator(`[data-slot="desktop-hero-${slot}"]`)
+        home.locator(`[data-slot="desktop-hero-${slot}"]`)
       ).toBeVisible();
     }
-    await page.goto("/en/cars");
-    await expect(
-      page.locator('[data-slot="public-route-loading-content"]')
-    ).toBeHidden();
-    const inventory = await panel.boundingBox();
-    expect(home?.width).toBeGreaterThan(0);
-    expect(inventory?.width).toBeGreaterThan(0);
-    expect(inventory?.height).not.toBe(home?.height);
-    const controls = page.locator('[data-slot="desktop-results-controls"]');
-    await expect(controls).toBeVisible();
-    await expect(
-      panel.locator('[data-slot="desktop-results-controls"]')
-    ).toHaveCount(0);
-    const controlBox = await controls.boundingBox();
-    expect(controlBox?.y).toBeGreaterThan(
-      (inventory?.y ?? 0) + (inventory?.height ?? 0)
-    );
-    const summaryBox = await page
-      .locator('[data-slot="dealer-inventory-summary"]')
-      .boundingBox();
-    if (!(controlBox && summaryBox)) {
-      throw new Error("Inventory filter and sort controls must be visible");
+    for (const slot of ["year", "mileage"]) {
+      await expect(
+        home.locator(`[data-slot="desktop-hero-${slot}"]`)
+      ).toBeHidden();
     }
-    expect(controlBox.x).toBeGreaterThanOrEqual(summaryBox.x);
-    expect(controlBox.x + controlBox.width).toBeLessThanOrEqual(
-      summaryBox.x + summaryBox.width
-    );
-    expect(
-      Math.abs(
-        controlBox.y +
-          controlBox.height / 2 -
-          summaryBox.y -
-          summaryBox.height / 2
-      )
-    ).toBeLessThan(1);
-    const inputBox = await panel.locator("label").first().boundingBox();
-    const submitBox = await panel
-      .locator('[data-slot="desktop-hero-submit"]')
-      .boundingBox();
-    if (!(inputBox && submitBox)) {
-      throw new Error("Search input and submit action must be visible");
+    await home.locator('[data-slot="desktop-hero-price"]').click();
+    const dialog = page.getByRole("dialog");
+    await dialog
+      .getByRole("button", { name: "Up to 40,000 BGN", exact: true })
+      .click();
+    await dialog.getByRole("button", { name: "Apply", exact: true }).click();
+    expect(new URL(page.url()).pathname).toBe("/en");
+    await home.locator('[data-slot="desktop-hero-submit"]').click();
+    await expect.poll(() => new URL(page.url()).pathname).toBe("/en/cars");
+    await expect
+      .poll(() => new URL(page.url()).searchParams.get("priceMax"))
+      .toBe("40000");
+    const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
+    for (const slot of [
+      "category",
+      "make",
+      "model",
+      "price",
+      "year",
+      "mileage",
+    ]) {
+      await expect(
+        sidebar.locator(`[data-slot="desktop-hero-${slot}"]`)
+      ).toBeVisible();
     }
-    expect(submitBox.x).toBeGreaterThanOrEqual(inputBox.x);
-    expect(submitBox.x + submitBox.width).toBeLessThanOrEqual(
-      inputBox.x + inputBox.width
-    );
-    expect(submitBox.y).toBeGreaterThanOrEqual(inputBox.y);
-    expect(submitBox.y + submitBox.height).toBeLessThanOrEqual(
-      inputBox.y + inputBox.height
-    );
-    const bodyBox = await page.locator("body").boundingBox();
-    expect(bodyBox?.width).toBeCloseTo(
-      await page.evaluate(() =>
-        Number.parseFloat(getComputedStyle(document.documentElement).width)
-      ),
-      0
-    );
-    expect(bodyBox?.x).toBe(0);
+    await sidebar.getByRole("button", { name: moreFiltersPattern }).click();
+    await sidebar.locator('[data-slot="desktop-hero-fuel"]').click();
+    await dialog.getByRole("button", { name: "Diesel", exact: true }).click();
+    await dialog.getByRole("button", { name: "Apply", exact: true }).click();
+    await expect(page).not.toHaveURL(fuelQueryPattern);
+    await sidebar.locator('[data-slot="desktop-hero-submit"]').click();
+    await expect(page).toHaveURL(dieselResultsPattern);
+    expect(new URL(page.url()).searchParams.get("priceMax")).toBe("40000");
+    await sidebar.getByRole("button", { name: "Reset", exact: true }).click();
+    await sidebar.locator('[data-slot="desktop-hero-submit"]').click();
+    await expect(page).not.toHaveURL(fuelQueryPattern);
+    await expect
+      .poll(() => new URL(page.url()).searchParams.get("priceMax"))
+      .toBeNull();
     expect(
-      await page
-        .locator("body")
-        .evaluate((element) => getComputedStyle(element).boxShadow)
-    ).toBe("none");
-    const grid = page.locator('[data-slot="marketplace-listing-grid"]');
-    expect(
-      await grid.evaluate(
-        (element) =>
-          getComputedStyle(element).gridTemplateColumns.split(" ").length
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth
       )
-    ).toBe(width < 1200 ? 2 : 3);
+    ).toBe(true);
   }
-
-  await page.goto("/en");
-  await page.getByRole("button", { name: "More filters", exact: true }).click();
-  await page.locator('[data-slot="desktop-hero-fuel"]').click();
-  const dialog = page.getByRole("dialog");
-  await dialog.getByRole("button", { name: "Diesel", exact: true }).click();
-  await dialog.getByRole("button", { name: "Apply", exact: true }).click();
-  await page.locator('[data-slot="desktop-hero-submit"]').click();
-  await expect(page).toHaveURL(dieselResultsPattern);
-  await page.getByRole("button", { name: moreFiltersPattern }).click();
-  await expect(page.locator('[data-slot="desktop-hero-fuel"]')).toHaveText(
-    "Diesel"
-  );
-  await page.getByRole("button", { name: "Reset", exact: true }).click();
-  await page.locator('[data-slot="desktop-hero-submit"]').click();
-  await expect(page).not.toHaveURL(fuelQueryPattern);
 });
 
 test("desktop listing keeps the gallery, information and phone handoff usable", async ({
@@ -263,11 +227,15 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
     const titleBox = await title.boundingBox();
     const galleryBox = await gallery.boundingBox();
     const transactionBox = await transaction.boundingBox();
+    const purchaseBox = await page
+      .locator('[data-slot="listing-purchase-column"]')
+      .boundingBox();
     if (!(titleBox && galleryBox && transactionBox)) {
       throw new Error("Desktop vehicle information must be visible");
     }
     expect(titleBox.y + titleBox.height).toBeLessThan(galleryBox.y);
-    expect(transactionBox.y).toBeCloseTo(galleryBox.y, 0);
+    expect(purchaseBox?.y).toBeCloseTo(galleryBox.y, 0);
+    expect(transactionBox.y - (purchaseBox?.y ?? 0)).toBe(31);
     expect(transactionBox.x).toBeGreaterThan(galleryBox.x + galleryBox.width);
     await expect(transaction.locator('a[href^="tel:"]')).toBeVisible();
     const openPhoto = gallery.getByRole("button", {
@@ -298,6 +266,7 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
 test("financing selection and preferences survive navigation and clearing", async ({
   page,
 }) => {
+  test.setTimeout(120_000);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/en/lease");
   const selector = page.locator('[data-slot="lease-desktop-vehicle-trigger"]');

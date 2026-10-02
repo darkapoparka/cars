@@ -80,6 +80,20 @@ export const createPublicSiteConfig = (
         (config.artwork?.heroLeft || config.artwork?.heroRight
           ? undefined
           : defaultSiteArtwork.heroScene),
+      desktopHeroScene:
+        config.artwork?.desktopHeroScene ??
+        config.artwork?.heroScene ??
+        (config.artwork?.heroLeft || config.artwork?.heroRight
+          ? undefined
+          : defaultSiteArtwork.desktopHeroScene),
+      desktopFinanceHero:
+        config.artwork?.desktopFinanceHero ??
+        config.artwork?.financeHero ??
+        defaultSiteArtwork.desktopFinanceHero,
+      desktopVisitBanner:
+        config.artwork?.desktopVisitBanner ??
+        config.artwork?.contactHero ??
+        defaultSiteArtwork.desktopVisitBanner,
       bodyTypes: {
         ...defaultSiteArtwork.bodyTypes,
         ...config.artwork?.bodyTypes,

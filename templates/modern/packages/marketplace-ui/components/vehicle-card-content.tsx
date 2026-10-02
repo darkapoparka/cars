@@ -7,7 +7,10 @@ import {
   Boxes,
   Clock3,
   Factory,
+  Fuel,
+  Gauge,
   MapPin,
+  Settings2,
   ShieldCheck,
   Ship,
   Store,
@@ -638,7 +641,7 @@ const ShowroomVehicleCardContent = ({
       <div data-slot="showroom-vehicle-heading">
         <h3 data-slot="vehicle-card-title">{title}</h3>
         <p data-slot="showroom-vehicle-subtitle" title={heading.subtitle}>
-          {heading.subtitle}
+          {listing.spec.year} · {heading.subtitle}
         </p>
       </div>
       <ul
@@ -647,6 +650,9 @@ const ShowroomVehicleCardContent = ({
       >
         {facts.map((fact) => (
           <li data-fact={fact.id} key={fact.id}>
+            {fact.id === "mileage" && <Gauge aria-hidden size={18} />}
+            {fact.id === "fuel" && <Fuel aria-hidden size={18} />}
+            {fact.id === "transmission" && <Settings2 aria-hidden size={18} />}
             <span>{fact.value}</span>
           </li>
         ))}

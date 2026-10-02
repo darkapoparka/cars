@@ -1,4 +1,5 @@
 @import "@repo/design-system/styles/globals.css";
+@import "./desktop.css";
 @source "../../../../packages/marketplace-ui/**/*.{ts,tsx}";
 
 :root[data-site-kind="dealership"] {
@@ -24,10 +25,6 @@
   }
 
   :root[data-site-kind="dealership"] [data-slot="public-marketplace-frame"] {
-    border-radius: 0;
-  }
-
-  :root[data-site-kind="dealership"] [data-slot="public-marketplace-footer"] {
     border-radius: 0;
   }
 }

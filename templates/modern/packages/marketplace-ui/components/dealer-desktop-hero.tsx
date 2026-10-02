@@ -1,5 +1,7 @@
 import { withBasePath } from "@repo/internationalization/paths";
+import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
+import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-hero.module.css";
 import { DesktopActionPanel } from "./desktop-action-panel";
 
@@ -9,6 +11,7 @@ export interface DealerDesktopHeroProps {
   description?: string;
   eyebrow?: string;
   loading?: boolean;
+  locale?: string;
   sceneTone?: "standard" | "quiet";
   title: string;
   variant?: "landing" | "inventory" | "page" | "compact" | "service";
@@ -17,6 +20,7 @@ export interface DealerDesktopHeroProps {
 /** One desktop masthead surface. Pages supply context; mobile keeps its own chrome. */
 export function DealerDesktopHero({
   artwork,
+  locale,
   title,
   description,
   eyebrow,
@@ -25,7 +29,7 @@ export function DealerDesktopHero({
   variant = "page",
   children,
 }: DealerDesktopHeroProps) {
-  const isLanding = variant === "landing" || variant === "inventory";
+  const isLanding = variant === "landing";
   const titleId = isLanding ? "desktop-home-title" : "desktop-page-title";
   const content =
     variant === "service" ? (
@@ -51,6 +55,18 @@ export function DealerDesktopHero({
           : undefined
       }
     >
+      {!isLanding && (
+        <nav
+          aria-label={locale?.startsWith("bg") ? "Навигация" : "Breadcrumb"}
+          className={styles.breadcrumb}
+        >
+          <Link href={getLocalizedPublicPath(locale, "/")}>
+            {locale?.startsWith("bg") ? "Начало" : "Home"}
+          </Link>
+          <span aria-hidden="true">/</span>
+          <span>{title}</span>
+        </nav>
+      )}
       <div className={styles.copy}>
         {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
         <h1 className={loading ? styles.loadingTitle : undefined} id={titleId}>

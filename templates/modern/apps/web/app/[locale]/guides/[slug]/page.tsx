@@ -96,7 +96,10 @@ export default async function GuideOrArticlePage({
         locale={normalizedLocale}
         showMobileFooter={false}
       >
-        <main className="min-h-[100dvh] bg-background px-4 py-5 lg:px-6 lg:py-10">
+        <main
+          className="min-h-[100dvh] bg-background px-4 py-5 lg:px-6 lg:py-10"
+          data-slot="public-editorial-article"
+        >
           <article className="mx-auto max-w-3xl">
             <Link
               className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-2 font-semibold text-compact-control text-zinc-800 focus-visible:outline-2 focus-visible:outline-zinc-950"

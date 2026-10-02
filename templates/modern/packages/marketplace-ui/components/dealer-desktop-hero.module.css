@@ -7,6 +7,9 @@
 .copy {
   display: none;
 }
+.breadcrumb {
+  display: none;
+}
 
 @media (min-width: 1024px) {
   .hero,
@@ -16,11 +19,11 @@
     z-index: var(--desktop-layer-hero);
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 7);
+    gap: 0;
     align-items: center;
-    padding: calc(var(--spacing) * 14) 0 calc(var(--spacing) * 10);
+    padding: 44px 0 44px;
     color: var(--foreground);
-    background: var(--panel);
+    background: var(--desktop-canvas);
     isolation: isolate;
   }
   .copy {
@@ -30,12 +33,25 @@
     width: var(--desktop-content-width);
     text-align: left;
   }
+  .breadcrumb {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: var(--desktop-content-width);
+    min-height: 32px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .breadcrumb a {
+    color: var(--brand-text);
+  }
   .copy h1 {
     margin: 0;
     font-size: var(--text-desktop-hero);
-    font-weight: var(--font-weight-semibold);
-    line-height: var(--desktop-leading-display);
-    letter-spacing: var(--desktop-tracking-display);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
     text-wrap: balance;
   }
   .description {
@@ -53,30 +69,36 @@
     color: var(--muted-foreground);
   }
   .hero[data-variant="landing"] {
-    gap: calc(var(--spacing) * 9);
-    justify-content: center;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0;
     width: calc(100% - var(--layout-gutter) * 2);
-    max-width: var(--layout-wide-max);
-    min-height: 36rem;
-    padding: calc(var(--spacing) * 16) 0;
+    max-width: 1392px;
+    height: 680px;
+    min-height: 680px;
+    padding: 0;
     margin-inline: auto;
     color: var(--inverse-foreground);
     background-color: var(--inverse);
     background-image:
-      linear-gradient(rgb(0 0 0 / 24%), rgb(0 0 0 / 24%)),
+      linear-gradient(rgb(5 11 32 / 36%), rgb(5 11 32 / 36%)),
       var(--desktop-hero-scene, none);
     background-position: center;
     background-size: cover;
     border-radius: var(--radius-vehicle);
   }
   .hero[data-variant="landing"] .copy {
-    width: min(100% - calc(var(--spacing) * 12), 60rem);
+    grid-row: 1;
+    align-self: end;
+    justify-self: center;
+    width: min(100% - 48px, 1140px);
+    padding-bottom: 32px;
     text-align: center;
   }
   .hero[data-variant="landing"] h1 {
-    font-size: clamp(2.75rem, 4.5vw, 4.5rem);
-    line-height: 1.08;
-    letter-spacing: -0.04em;
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
   }
   .hero[data-variant="landing"] .description {
     max-width: none;
@@ -84,27 +106,55 @@
     color: var(--inverse-foreground);
   }
   .hero[data-variant="landing"] .eyebrow {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
     color: var(--inverse-foreground);
   }
   .hero[data-variant="inventory"] {
-    gap: 0;
-    padding: calc(var(--spacing) * 6) 0 calc(var(--spacing) * 8);
-    background: var(--panel);
-    border-bottom: var(--desktop-border-width) solid var(--border);
+    padding: 32px 0 36px;
+    background: var(--desktop-canvas);
   }
   .hero[data-variant="inventory"] .copy {
-    position: absolute;
-    width: var(--desktop-border-width);
-    height: var(--desktop-border-width);
-    overflow: hidden;
-    white-space: nowrap;
-    clip-path: inset(50%);
+    text-align: center;
+  }
+  .hero[data-variant="inventory"] .description {
+    max-width: none;
+    margin-top: 16px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .hero[data-variant="page"] .copy {
+    text-align: center;
+  }
+  .hero[data-variant="page"] .description {
+    max-width: 640px;
+    margin: 16px auto 0;
+    font-size: 16px;
+    line-height: 26px;
   }
   .serviceContent {
     position: relative;
     z-index: 1;
     width: 100%;
     color: var(--foreground);
+  }
+  .hero[data-variant="service"] .serviceContent {
+    margin-top: 36px;
+  }
+  .hero[data-variant="service"] {
+    padding-bottom: 56px;
+    background: var(--desktop-service-canvas);
+  }
+  .hero[data-variant="service"] .copy {
+    text-align: center;
+  }
+  .hero[data-variant="service"] .description {
+    max-width: 640px;
+    margin: 16px auto 0;
+    font-size: 16px;
+    line-height: 26px;
   }
   .loadingPanelFrame {
     position: relative;

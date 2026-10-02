@@ -37,12 +37,23 @@ export type PublicService = keyof z.infer<typeof publicServicesSchema>;
 
 export const publicArtworkSchema = z.object({
   heroScene: publicAssetPathSchema.optional(),
+  desktopHeroScene: publicAssetPathSchema.optional(),
   heroLeft: publicAssetPathSchema,
   heroRight: publicAssetPathSchema,
   contactHero: publicAssetPathSchema,
   sellHero: publicAssetPathSchema,
   importHero: publicAssetPathSchema,
   financeHero: publicAssetPathSchema,
+  desktopFinanceHero: publicAssetPathSchema.optional(),
+  desktopVisitBanner: publicAssetPathSchema.optional(),
+  desktopServices: z
+    .object({
+      browse: publicAssetPathSchema,
+      sell: publicAssetPathSchema,
+      finance: publicAssetPathSchema,
+      imports: publicAssetPathSchema,
+    })
+    .optional(),
   financePromotion: publicAssetPathSchema,
   bodyTypes: z.record(z.string(), publicAssetPathSchema),
   brands: z.record(z.string(), publicAssetPathSchema),

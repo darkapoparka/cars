@@ -310,7 +310,9 @@ export const PublicMarketplaceFrame = ({
         id="main-content"
         tabIndex={-1}
       >
-        {desktopIntro ? <DealerDesktopHero {...desktopIntro} /> : null}
+        {desktopIntro ? (
+          <DealerDesktopHero {...desktopIntro} locale={normalizedLocale} />
+        ) : null}
         {children}
       </div>
 

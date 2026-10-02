@@ -6,6 +6,7 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
@@ -64,6 +65,134 @@ export const generateMetadata = async ({
   });
 };
 
+function DesktopContact({
+  initialMessage,
+  intent,
+  locale,
+  submissionAvailable,
+}: {
+  initialMessage: string;
+  intent: "finance" | "general";
+  locale: "bg" | "en";
+  submissionAvailable: boolean;
+}) {
+  const copy = pageCopy[locale];
+  const services = copy.services.filter((service) =>
+    isPublicSitePathEnabled(service.href, publicSite)
+  );
+  const localize = (path: string) => getLocalizedPath(locale, path);
+  return (
+    <DealerDesktopHero
+      description={
+        locale === "bg"
+          ? "Свържете се с екипа за автомобил, оглед, внос или финансиране."
+          : "Talk to our team about a car, a viewing, importing or financing."
+      }
+      locale={locale}
+      title={locale === "bg" ? "За нас и контакти" : "About and Contact"}
+      variant="service"
+    >
+      <div className="hidden lg:block">
+        <div className={desktopStyles.heroContent}>
+          <section className={desktopStyles.showroomBanner}>
+            <Image
+              alt=""
+              fill
+              sizes="(min-width: 1440px) 1320px, 95vw"
+              src={publicSite.artwork.contactHero}
+            />
+            <div>
+              <h2>{leadSite.name}</h2>
+              <p>
+                {locale === "bg"
+                  ? "Вашият следващ автомобил. Нашият екип е тук, за да помогне."
+                  : "Your next car. Our team is here to help."}
+              </p>
+            </div>
+          </section>
+          <div className={desktopStyles.contactLayout}>
+            <section aria-label={copy.contactTitle}>
+              <h2 className={desktopStyles.sectionTitle}>
+                {locale === "bg" ? "Нека поговорим" : "Get in Touch"}
+              </h2>
+              <p className={desktopStyles.contactIntro}>
+                {locale === "bg"
+                  ? "Свържете се с екипа, за да обсъдим автомобил, оглед, внос или финансиране."
+                  : "Speak to our team about a car, a viewing, importing or financing."}
+              </p>
+              {submissionAvailable ? (
+                <PublicEnquiryForm
+                  initialMessage={initialMessage}
+                  intent={intent}
+                  locale={locale}
+                />
+              ) : (
+                <a
+                  className={desktopStyles.contactAction}
+                  href={withBasePath(leadSite.phoneHref)}
+                >
+                  <Phone aria-hidden size={18} />
+                  {locale === "bg" ? "Обадете се на екипа" : "Call Our Team"}
+                  <ArrowUpRight aria-hidden size={18} />
+                </a>
+              )}
+              <h3 className={desktopStyles.servicesTitle}>
+                {copy.servicesTitle}
+              </h3>
+              <div className={desktopStyles.serviceGrid}>
+                {services.map((service) => (
+                  <Link
+                    className={desktopStyles.serviceCard}
+                    href={localize(service.href)}
+                    key={service.href}
+                  >
+                    <strong>
+                      {service.title}
+                      <ArrowUpRight aria-hidden size={17} />
+                    </strong>
+                    <p>{service.description}</p>
+                  </Link>
+                ))}
+              </div>
+            </section>
+            <aside className={desktopStyles.contactDetails}>
+              <h2>
+                {locale === "bg" ? "Посетете автосалона" : "Visit the Showroom"}
+              </h2>
+              <a
+                className={desktopStyles.contactCard}
+                href={withBasePath(leadSite.phoneHref)}
+              >
+                <Phone aria-hidden size={24} strokeWidth={1.5} />
+                <span>
+                  <small>{locale === "bg" ? "Телефон" : "Phone"}</small>
+                  <strong>{leadSite.phoneDisplay}</strong>
+                </span>
+              </a>
+              <a
+                aria-label={copy.mapAction}
+                className={desktopStyles.contactCard}
+                href={withBasePath(leadSite.mapsUrl)}
+                rel="noreferrer"
+                target="_blank"
+              >
+                <MapPin aria-hidden size={24} strokeWidth={1.5} />
+                <span>
+                  <small>{copy.locationLabel}</small>
+                  <strong>
+                    {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
+                  </strong>
+                </span>
+                <ArrowUpRight aria-hidden size={18} />
+              </a>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </DealerDesktopHero>
+  );
+}
+
 export default async function ContactPage({
   params,
   searchParams,
@@ -94,7 +223,6 @@ export default async function ContactPage({
         request: financeContext,
       })
     : "";
-  const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const sellContext =
     getQueryValue(query, "intent") === "sell" ||
     getQueryValue(query, "topic") === "trade-in"
@@ -119,83 +247,17 @@ export default async function ContactPage({
     >
       <main className="bg-background text-zinc-950">
         <MobileAboutContact locale={normalizedLocale} services={services} />
-        <DealerDesktopHero
-          title={
-            normalizedLocale === "bg"
-              ? "За нас и контакти"
-              : "About and contact"
-          }
-          variant="service"
-        >
-          <div className="hidden lg:block">
-            <div
-              className={`${desktopStyles.content} ${desktopStyles.heroContent}`}
-            >
-              <section
-                aria-label={copy.contactTitle}
-                className={desktopStyles.panel}
-              >
-                <div className={desktopStyles.contactGrid}>
-                  <a
-                    className={desktopStyles.contactCard}
-                    href={withBasePath(leadSite.phoneHref)}
-                  >
-                    <Phone aria-hidden="true" size={28} strokeWidth={1.5} />
-                    <span>
-                      <small>
-                        {normalizedLocale === "bg" ? "Телефон" : "Phone"}
-                      </small>
-                      <strong>{leadSite.phoneDisplay}</strong>
-                    </span>
-                  </a>
-                  <a
-                    aria-label={copy.mapAction}
-                    className={desktopStyles.contactCard}
-                    href={withBasePath(leadSite.mapsUrl)}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <MapPin aria-hidden="true" size={28} strokeWidth={1.5} />
-                    <span>
-                      <small>{copy.locationLabel}</small>
-                      <strong>
-                        {getLeadCopy(locale).address},{" "}
-                        {getLeadCopy(locale).city}
-                      </strong>
-                    </span>
-                    <ArrowUpRight aria-hidden="true" size={18} />
-                  </a>
-                </div>
-                <h2 className={desktopStyles.sectionTitle}>
-                  {copy.servicesTitle}
-                </h2>
-                <div className={desktopStyles.serviceGrid}>
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <Link
-                        className={desktopStyles.serviceCard}
-                        href={localize(service.href)}
-                        key={service.href}
-                      >
-                        <Icon aria-hidden="true" size={26} strokeWidth={1.5} />
-                        <span>
-                          <strong>
-                            {service.title}
-                            <ArrowUpRight aria-hidden="true" size={17} />
-                          </strong>
-                          <p>{service.description}</p>
-                        </span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              </section>
-            </div>
-          </div>
-        </DealerDesktopHero>
+        <DesktopContact
+          initialMessage={initialMessage}
+          intent={financeContext ? "finance" : "general"}
+          locale={normalizedLocale}
+          submissionAvailable={submissionAvailable}
+        />
         {submissionAvailable && (
-          <div className="mx-auto max-w-2xl px-4 py-8" id="contact-form">
+          <div
+            className="mx-auto max-w-2xl px-4 py-8 lg:hidden"
+            id="contact-form"
+          >
             <PublicEnquiryForm
               initialMessage={initialMessage}
               intent={financeContext ? "finance" : "general"}

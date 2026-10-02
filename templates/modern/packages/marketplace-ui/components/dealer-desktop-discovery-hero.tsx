@@ -13,14 +13,16 @@ export function DealerDesktopDiscoveryHero({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <DealerDesktopHero
-      artwork={publicSite.artwork.heroScene}
-      description={
-        isBg
-          ? "Налични автомобили. Внос по заявка. Възможности за лизинг."
-          : "Available vehicles. Imports to order. Financing options."
+      artwork={
+        publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
       }
-      eyebrow={publicSite.identity.name}
-      title={isBg ? "Вашият следващ автомобил" : "Find your next car"}
+      eyebrow={
+        isBg
+          ? "Нови и употребявани автомобили на едно място."
+          : "Explore new and used cars, all in one place."
+      }
+      locale={locale}
+      title={isBg ? "Намерете своя автомобил" : "Find Your Perfect Car"}
       variant="landing"
     >
       <div className={styles.heroSearch}>
