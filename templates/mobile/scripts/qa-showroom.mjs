@@ -127,8 +127,8 @@ async function run(name, engine) {
     assert.ok(firstPhoto.y < 340, 'A car is visible below the compact controls');
     check('Cars is Home; three navigation destinations; stock visible on entry');
     const sortControl = page.getByRole('button', { name: 'Sort cars: Recommended', exact: true });
-    assert.match(await sortControl.innerText(), /Recommended/);
-    check('The sort control visibly names the current ordering');
+    assert.equal(await sortControl.innerText(), 'Sort');
+    check('The default Sort action keeps the full current ordering in its accessible label');
     await capture('cars-390');
     await page
       .locator('[data-showroom-vehicle]')

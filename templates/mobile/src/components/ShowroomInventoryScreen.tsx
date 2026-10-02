@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { ArrowDownUp } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -156,14 +157,12 @@ const s = stylex.create({
     gap: 6,
     minHeight: 44,
     maxWidth: '100%',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 12,
-    paddingInline: 10,
+    borderWidth: 0,
+    borderRadius: 8,
+    paddingInline: 4,
     paddingBlock: 6,
-    backgroundColor: colors.background,
-    color: colors.text,
+    backgroundColor: 'transparent',
+    color: colors.muted,
     fontSize: 14,
     fontWeight: 500,
   },
@@ -242,7 +241,7 @@ export function ShowroomInventoryScreen() {
   ].filter(Boolean).length;
   const sortLabel = showroomSorts.find(([value]) => value === sort)?.[1] || 'Recommended';
   const compactSortLabel = {
-    standard: 'Recommended',
+    standard: 'Sort',
     'price-asc': 'Price ↑',
     'price-desc': 'Price ↓',
     newest: 'Newest',
@@ -451,8 +450,8 @@ export function ShowroomInventoryScreen() {
               onClick={(event) => openSheet('sort', event.currentTarget)}
               {...stylex.props(s.sort)}
             >
+              <ArrowDownUp size={18} strokeWidth={1.8} aria-hidden="true" />
               {compactSortLabel}
-              <Icon name="down" size={16} />
             </button>
           </div>
         </div>

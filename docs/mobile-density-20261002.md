@@ -7,8 +7,10 @@ The inventory entry keeps search, the five native vehicle categories and their
 original grey rail/orange indicator. Filters now use the same outlined treatment
 as the quick pills, with a count of active criteria. Range bounds and multiple
 condition choices count as one criterion; the text search has its own clear control.
-The Make pill retains the make/model picker. Sorting visibly names the selected
-order in an outlined button.
+The Make pill retains the make/model picker. Sorting uses a quiet, borderless
+Sort action with an 18px arrow icon. Recommended remains in the sorting sheet;
+custom ordering appears as a short label such as Price ↑. The accessible label
+retains the full selected order, and the tap target remains 44px tall.
 
 The compact Clear control retains a 44px minimum target in both dimensions.
 Card bodies have smaller padding and gaps, a single-line equipment subtitle and
@@ -37,7 +39,7 @@ width in the 390px capture. The measured first car is BMW X6.
 - [Before at 320px](../runtime/mobile-density-20261002/before-320.jpg)
 - [After at 320px](../runtime/mobile-density-20261002/after-320.jpg)
 
-## Validation
+## Validation of the initial density pass
 
 Lint, TypeScript, 57 domain tests and the production build passed. The final
 production build ID is `AljNxQsRTbB0QN2ri5AbX`.
@@ -58,3 +60,15 @@ The final automated report and captures are in
 `runtime/mobile-density-20261002/qa/report.json`; matched captures are retained in
 `runtime/mobile-density-20261002/`. These are local template checks and do not
 select a dealer release or represent hosted acceptance.
+
+## Sort correction
+
+The follow-up removes the outlined Recommended button in favor of the quieter
+Sort action described above. Matched 390px captures and a 320px capture are in
+`runtime/mobile-sort-20261002/`; the existing density captures document the earlier pass.
+
+Lint, TypeScript, all 57 domain tests and the production build passed again.
+Build ID: `LK12DA4ywExpLZMvB4jhh`. The showroom suite passed all 38 Chromium and
+19 WebKit checks with no console/page errors, including custom sort labels,
+selection persistence, narrow sheets and large text. Report:
+`runtime/mobile-sort-20261002/qa/report.json`.
