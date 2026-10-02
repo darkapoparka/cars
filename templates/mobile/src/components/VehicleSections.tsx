@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useRef, useState } from 'react';
+import { Fragment, useRef, useState, type ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NativeDealerCards } from './NativeDealerCards';
@@ -30,18 +30,35 @@ const s = stylex.create({
     flexDirection: 'column',
     gap: 12,
   },
-  showroomBody: { paddingTop: 12, paddingBottom: 'calc(100px + env(safe-area-inset-bottom))' },
+  showroomBody: {
+    padding: 0,
+    paddingBottom: 'calc(100px + env(safe-area-inset-bottom))',
+    gap: 16,
+  },
+  sheet: {
+    position: 'relative',
+    marginTop: -20,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    backgroundColor: colors.background,
+    boxShadow: '0 -4px 16px #00000012',
+  },
   sectionNav: {
     position: 'sticky',
     top: 60,
     zIndex: 25,
-    paddingTop: 4,
-    marginBottom: 12,
     backgroundColor: colors.background,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     scrollMarginTop: 60,
   },
+  grip: {
+    display: 'flex',
+    height: 24,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  gripBar: { width: 36, height: 4, borderRadius: 4, backgroundColor: colors.line },
   panel: {
     display: 'flex',
     flexDirection: 'column',
@@ -49,6 +66,19 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: 2,
   },
+  showroomPanel: { gap: 0 },
+  showroomSection: {
+    borderWidth: 0,
+    borderRadius: 0,
+    overflow: 'visible',
+  },
+  showroomDivider: {
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.line,
+  },
+  showroomTitle: { borderBottomWidth: 0, paddingBottom: 0, marginBottom: 12, fontSize: 18 },
+  showroomFooter: { marginInline: 12 },
   featureValue: { fontWeight: 500 },
   featureTags: { marginBottom: 16 },
   card: {
@@ -221,10 +251,12 @@ export function VehicleSections({
   vehicle: v,
   onReport,
   showroomMode = false,
+  overview,
 }: {
   vehicle: Vehicle;
   onReport: () => void;
   showroomMode?: boolean;
+  overview?: ReactNode;
 }) {
   const section = useVehicleDetailSection();
   const navigation = useRef<HTMLDivElement>(null);
@@ -287,9 +319,16 @@ export function VehicleSections({
   ];
   return (
     <div {...stylex.props(s.body, showroomMode && s.showroomBody)}>
-      <section aria-label={showroomMode ? 'Vehicle information' : undefined}>
+      <section
+        aria-label={showroomMode ? 'Vehicle information' : undefined}
+        data-vehicle-detail-sheet={showroomMode ? '' : undefined}
+        {...stylex.props(showroomMode && s.sheet)}
+      >
         {showroomMode && (
           <div ref={navigation} data-vehicle-detail-nav {...stylex.props(s.sectionNav)}>
+            <span aria-hidden="true" {...stylex.props(s.grip)}>
+              <span {...stylex.props(s.gripBar)} />
+            </span>
             <ShowroomTabs
               label="Vehicle information"
               tabs={vehicleDetailSections}
@@ -297,6 +336,7 @@ export function VehicleSections({
               panelId={panelId}
               idPrefix={tabPrefix}
               layout="fill"
+              flush
               onChange={selectSection}
             />
           </div>
@@ -307,10 +347,19 @@ export function VehicleSections({
           aria-labelledby={showroomMode ? tabPrefix + section : undefined}
           tabIndex={showroomMode ? 0 : undefined}
           data-vehicle-detail-panel={showroomMode ? section : undefined}
-          {...stylex.props(s.panel)}
+          {...stylex.props(s.panel, showroomMode && s.showroomPanel)}
         >
+          {showDetails && overview}
           {showDetails && (
-            <section aria-label="Vehicle overview" {...stylex.props(s.card, s.pad)}>
+            <section
+              aria-label="Vehicle overview"
+              {...stylex.props(
+                s.card,
+                s.pad,
+                showroomMode && s.showroomSection,
+                showroomMode && s.showroomDivider,
+              )}
+            >
               <dl {...stylex.props(s.specs, showroomMode && s.showroomSpecs)}>
                 {spec.map(([icon, label, value]) => (
                   <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
@@ -361,9 +410,15 @@ export function VehicleSections({
             </section>
           )}
           {showDetails && (
-            <section {...stylex.props(s.card)}>
+            <section
+              {...stylex.props(
+                s.card,
+                showroomMode && s.showroomSection,
+                showroomMode && s.showroomDivider,
+              )}
+            >
               <div {...stylex.props(s.pad)}>
-                <h2 {...stylex.props(s.title)}>Technical data</h2>
+                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>Technical data</h2>
                 <table {...stylex.props(s.table)}>
                   <tbody>
                     {data.slice(0, 6).map(([label, value]) => (
@@ -391,14 +446,17 @@ export function VehicleSections({
             </section>
           )}
           {showroomMode && section === 'photos' && (
-            <section aria-label="Vehicle photos" {...stylex.props(s.card, s.pad)}>
+            <section
+              aria-label="Vehicle photos"
+              {...stylex.props(s.card, s.pad, s.showroomSection)}
+            >
               <GalleryScreen vehicle={v} embedded />
             </section>
           )}
           {showFeatures && (
-            <section {...stylex.props(s.card)}>
+            <section {...stylex.props(s.card, showroomMode && s.showroomSection)}>
               <div {...stylex.props(s.pad)}>
-                <h2 {...stylex.props(s.title)}>Features</h2>
+                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>Features</h2>
                 {showroomMode && v.specialFeatures && v.specialFeatures.length > 0 && (
                   <div {...stylex.props(s.tags, s.featureTags)}>
                     {v.specialFeatures.map((feature) => (
@@ -447,9 +505,17 @@ export function VehicleSections({
             </section>
           )}
           {showDetails && (
-            <section {...stylex.props(s.card)}>
+            <section
+              {...stylex.props(
+                s.card,
+                showroomMode && s.showroomSection,
+                showroomMode && s.showroomDivider,
+              )}
+            >
               <div {...stylex.props(s.pad)}>
-                <h2 {...stylex.props(s.title)}>Vehicle Description</h2>
+                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>
+                  Vehicle description
+                </h2>
                 <p {...stylex.props(s.description)}>
                   {v.attributes?.description
                     ? description
@@ -482,7 +548,7 @@ export function VehicleSections({
         </div>
       </section>
       {showroomMode ? (
-        <section {...stylex.props(s.card, ui.pad)}>
+        <section {...stylex.props(s.card, ui.pad, s.showroomFooter)}>
           <h2 {...stylex.props(s.title)}>{showroom.name}</h2>
           <p {...stylex.props(ui.text, ui.muted, ui.space)}>
             Ask about this car or arrange a viewing.
@@ -497,7 +563,7 @@ export function VehicleSections({
       ) : (
         <NativeDealerCards vehicle={v} />
       )}
-      <section {...stylex.props(s.card)}>
+      <section {...stylex.props(s.card, showroomMode && s.showroomFooter)}>
         <h2 {...stylex.props(s.title, s.pad)}>Similar vehicles</h2>
         <div {...stylex.props(s.carousel)}>
           {vehicles

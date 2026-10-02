@@ -38,13 +38,19 @@ Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
 The retained price rating sits opposite the price, with slimmer bars and a 44px
 details target. The finance entry uses a neutral rounded row and shorter label;
 48px Contact and Enquire actions use 15px medium text, with Enquire as the primary
-action. Price reductions use a small plain chip. The price, finance and contact
-block scrolls with the page. Once its actions pass the header, a compact price +
-Enquire bar appears at the bottom, with safe-area spacing and vehicle context.
-Below it, the rounded white panels are organized by three equal-width Details /
-Photos / Features underline tabs. The tab rail sticks beneath the header only
-within this information section; the page retains one browser scroll.
-Details keeps the mileage and other summary facts, technical data and description;
+action. Price reductions use a small plain chip. One raised white information
+sheet overlaps the photo by 20px, with rounded top corners and a small handle.
+Three equal-width Details / Photos / Features underline tabs sit at the sheet's
+entrance, before the title and price, so they remain visible on short phone screens.
+The handle and tab rail stick beneath the header within the information section;
+the page retains one browser scroll.
+Details contains the title, price, finance and contact block, mileage and other
+summary facts, technical data and description. These sections share one continuous
+white surface with dividers instead of separate rounded cards. Once the contact
+actions pass beneath the pinned rail, a compact price + Enquire bar appears at
+the bottom, with safe-area spacing and vehicle context. Photos and Features keep
+this contact bar visible while their content replaces Details.
+The resize-aware contact observer accounts for the pinned tab rail's actual height.
 All specifications still opens the existing dialog. Photos has an inline grid and
 the existing full-screen viewer. In this grid, browser Back closes the viewer,
 Forward reopens its last photo, and Escape returns focus to the opener. Features
@@ -189,5 +195,7 @@ source utilities, preserving the mirror's history. The separate
 `darkapoparka/cars-app-mobile` marketplace project is independently maintained.
 
 [The deployment record](../../docs/mobile-template-vercel-20261003.md) identifies
-the exact deployed source and the focused live browser checks. This test preview
-does not select a dealer release or refresh existing dealer copies.
+the initial deployed source and its focused live browser checks.
+[The drawer correction](../../docs/mobile-pdp-drawer-correction-20261003.md) records
+the subsequent owner-requested layout repair. This test preview does not select
+a dealer release or refresh existing dealer copies.

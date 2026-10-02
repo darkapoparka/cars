@@ -1140,7 +1140,7 @@ async function run(name, engine) {
           await page
             .locator('[data-vehicle-detail-nav]')
             .evaluate((element) => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
-          await page.locator('[data-vehicle-contact-dock]').waitFor();
+          if (section !== 'details') await page.locator('[data-vehicle-contact-dock]').waitFor();
           await geometry(width + 'px PDP ' + section);
           const tabs = await page
             .getByRole('tablist', { name: 'Vehicle information' })
@@ -1162,6 +1162,28 @@ async function run(name, engine) {
               1,
           );
           await capture('pdp-' + section + '-' + width);
+        }
+        if (width < 800) {
+          await page.setViewportSize({ width, height: 568 });
+          await go('/vehicle/bmw-x6');
+          const drawerEntry = await page
+            .locator('[data-vehicle-detail-sheet]')
+            .evaluate((sheet) => {
+              const photo = document
+                .querySelector('a[aria-label="Vehicle image"]')
+                .getBoundingClientRect();
+              const bounds = sheet.getBoundingClientRect();
+              const rail = sheet.querySelector('[role="tablist"]').getBoundingClientRect();
+              const facts = sheet.querySelector('section[aria-label="Vehicle overview"]');
+              return {
+                overlap: bounds.top < photo.bottom,
+                tabsVisible: rail.top >= 60 && rail.bottom < innerHeight,
+                flatFacts: getComputedStyle(facts).borderRadius === '0px',
+              };
+            });
+          assert.deepEqual(drawerEntry, { overlap: true, tabsVisible: true, flatFacts: true });
+          await capture('pdp-drawer-entry-' + width + 'x568');
+          await page.setViewportSize({ width, height: 844 });
         }
         for (const tab of ['import', 'sell', 'financing', 'parts']) {
           await go('/services?tab=' + tab);

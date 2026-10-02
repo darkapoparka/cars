@@ -60,7 +60,7 @@ const s = stylex.create({
   counter: {
     position: 'absolute',
     right: 12,
-    bottom: 12,
+    bottom: 28,
     width: 84,
     height: 32,
     display: 'flex',
@@ -264,15 +264,29 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   useEffect(() => {
     const target = actions.current;
     if (!target) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setContactDock(!entry.isIntersecting && entry.boundingClientRect.bottom <= 60);
-      },
-      { rootMargin: '-60px 0px 0px 0px' },
-    );
-    observer.observe(target);
-    return () => observer.disconnect();
-  }, [v.id]);
+    const navigation = target
+      .closest('[data-vehicle-detail-sheet]')
+      ?.querySelector<HTMLElement>('[data-vehicle-detail-nav]');
+    let observer: IntersectionObserver | undefined;
+    const observeActions = () => {
+      observer?.disconnect();
+      const stickyHeight = 60 + (navigation?.getBoundingClientRect().height || 0);
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setContactDock(!entry.isIntersecting && entry.boundingClientRect.bottom <= stickyHeight);
+        },
+        { rootMargin: '-' + stickyHeight + 'px 0px 0px 0px' },
+      );
+      observer.observe(target);
+    };
+    observeActions();
+    const resize = new ResizeObserver(observeActions);
+    if (navigation) resize.observe(navigation);
+    return () => {
+      observer?.disconnect();
+      resize.disconnect();
+    };
+  }, [v.id, section]);
   async function share() {
     try {
       await navigator.clipboard.writeText(window.location.href);
@@ -343,121 +357,132 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
           {photoIndex + 1} / {v.images.length}
         </span>
       </Link>
-      <section {...stylex.props(s.info)}>
-        <h1 {...stylex.props(s.model)}>
-          {v.make} {v.model}
-        </h1>
-        <p {...stylex.props(s.variant)}>{v.variant}</p>
-      </section>
-      {v.leaseTerms && (
-        <div {...stylex.props(s.paymentTabs)} role="group" aria-label="Payment type">
-          <button
-            type="button"
-            aria-pressed={!leasing}
-            onClick={() => setPaymentOverride('buy')}
-            {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
-          >
-            Buying
-          </button>
-          <button
-            type="button"
-            aria-pressed={leasing}
-            onClick={() => setPaymentOverride('lease')}
-            {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
-          >
-            Leasing
-          </button>
-        </div>
-      )}
-      <section aria-label="Vehicle price and contact" {...stylex.props(s.offer)}>
-        {leasing && v.leaseTerms ? (
+      <VehicleSections
+        key={v.id}
+        vehicle={v}
+        showroomMode
+        onReport={() => setReport(true)}
+        overview={
           <>
-            <div {...stylex.props(s.leasePrice)}>
-              <strong {...stylex.props(s.price)}>
-                {new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' }).format(
-                  v.monthly || 0,
-                )}
-              </strong>
-              <span {...stylex.props(s.leaseCopy)}>Monthly incl. VAT.</span>
-            </div>
-            <p {...stylex.props(s.leaseCopy)}>
-              {v.leaseTerms.months} months term •{' '}
-              {v.leaseTerms.annualMileage.toLocaleString('en-GB')} km per year,{' '}
-              {v.leaseTerms.customer}
-            </p>
-            <button
-              type="button"
-              aria-haspopup="dialog"
-              {...stylex.props(s.finance)}
-              onClick={() => setLeaseQuote(true)}
-            >
-              Leasing details
-              <Icon name="right" size={18} />
-            </button>
-          </>
-        ) : (
-          <>
-            <div {...stylex.props(s.priceRow)}>
-              <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
-              <button
-                type="button"
-                aria-label="Price rating details"
-                aria-haspopup="dialog"
-                onClick={() => setPriceInfo(true)}
-                {...stylex.props(s.ratingButton)}
-              >
-                <PriceRating veryGood={v.deal} detail />
-                <Icon name="info" size={14} />
-              </button>
-            </div>
-            {v.previousPrice && (
-              <p {...stylex.props(s.oldRow)}>
-                <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
-                <span {...stylex.props(s.discount)}>-{money(v.previousPrice - v.price)}</span>
-              </p>
+            <section {...stylex.props(s.info)}>
+              <h1 {...stylex.props(s.model)}>
+                {v.make} {v.model}
+              </h1>
+              <p {...stylex.props(s.variant)}>{v.variant}</p>
+            </section>
+            {v.leaseTerms && (
+              <div {...stylex.props(s.paymentTabs)} role="group" aria-label="Payment type">
+                <button
+                  type="button"
+                  aria-pressed={!leasing}
+                  onClick={() => setPaymentOverride('buy')}
+                  {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
+                >
+                  Buying
+                </button>
+                <button
+                  type="button"
+                  aria-pressed={leasing}
+                  onClick={() => setPaymentOverride('lease')}
+                  {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
+                >
+                  Leasing
+                </button>
+              </div>
             )}
-            <p {...stylex.props(s.priceNote)}>
-              {v.priceNote || money(v.price / 1.19) + ' Net, 19.00% VAT'}
-            </p>
-            <button
-              type="button"
-              aria-label={'Calculate financing, from ' + money(financeMonthly) + ' per month'}
-              aria-haspopup="dialog"
-              onClick={() => setFinance(true)}
-              {...stylex.props(s.finance)}
-            >
-              <span {...stylex.props(s.financeAmount)}>
-                from <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /
-                month
-              </span>
-              <span {...stylex.props(s.financeAction)}>
-                Financing <Icon name="right" size={18} />
-              </span>
-            </button>
+            <section aria-label="Vehicle price and contact" {...stylex.props(s.offer)}>
+              {leasing && v.leaseTerms ? (
+                <>
+                  <div {...stylex.props(s.leasePrice)}>
+                    <strong {...stylex.props(s.price)}>
+                      {new Intl.NumberFormat('en-IE', {
+                        style: 'currency',
+                        currency: 'EUR',
+                      }).format(v.monthly || 0)}
+                    </strong>
+                    <span {...stylex.props(s.leaseCopy)}>Monthly incl. VAT.</span>
+                  </div>
+                  <p {...stylex.props(s.leaseCopy)}>
+                    {v.leaseTerms.months} months term •{' '}
+                    {v.leaseTerms.annualMileage.toLocaleString('en-GB')} km per year,{' '}
+                    {v.leaseTerms.customer}
+                  </p>
+                  <button
+                    type="button"
+                    aria-haspopup="dialog"
+                    {...stylex.props(s.finance)}
+                    onClick={() => setLeaseQuote(true)}
+                  >
+                    Leasing details
+                    <Icon name="right" size={18} />
+                  </button>
+                </>
+              ) : (
+                <>
+                  <div {...stylex.props(s.priceRow)}>
+                    <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
+                    <button
+                      type="button"
+                      aria-label="Price rating details"
+                      aria-haspopup="dialog"
+                      onClick={() => setPriceInfo(true)}
+                      {...stylex.props(s.ratingButton)}
+                    >
+                      <PriceRating veryGood={v.deal} detail />
+                      <Icon name="info" size={14} />
+                    </button>
+                  </div>
+                  {v.previousPrice && (
+                    <p {...stylex.props(s.oldRow)}>
+                      <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
+                      <span {...stylex.props(s.discount)}>-{money(v.previousPrice - v.price)}</span>
+                    </p>
+                  )}
+                  <p {...stylex.props(s.priceNote)}>
+                    {v.priceNote || money(v.price / 1.19) + ' Net, 19.00% VAT'}
+                  </p>
+                  <button
+                    type="button"
+                    aria-label={'Calculate financing, from ' + money(financeMonthly) + ' per month'}
+                    aria-haspopup="dialog"
+                    onClick={() => setFinance(true)}
+                    {...stylex.props(s.finance)}
+                  >
+                    <span {...stylex.props(s.financeAmount)}>
+                      from{' '}
+                      <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /
+                      month
+                    </span>
+                    <span {...stylex.props(s.financeAction)}>
+                      Financing <Icon name="right" size={18} />
+                    </span>
+                  </button>
+                </>
+              )}
+              <div ref={actions} {...stylex.props(s.actions)}>
+                <button
+                  type="button"
+                  aria-haspopup="dialog"
+                  onClick={() => setContact(true)}
+                  {...stylex.props(s.action)}
+                >
+                  <span {...stylex.props(s.actionIcon)}>
+                    <Icon name="phone" size={18} />
+                  </span>
+                  Contact
+                </button>
+                <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
+                  <span {...stylex.props(s.actionIcon)}>
+                    <Icon name="mail" size={18} />
+                  </span>
+                  Enquire
+                </Link>
+              </div>
+            </section>
           </>
-        )}
-        <div ref={actions} {...stylex.props(s.actions)}>
-          <button
-            type="button"
-            aria-haspopup="dialog"
-            onClick={() => setContact(true)}
-            {...stylex.props(s.action)}
-          >
-            <span {...stylex.props(s.actionIcon)}>
-              <Icon name="phone" size={18} />
-            </span>
-            Contact
-          </button>
-          <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
-            <span {...stylex.props(s.actionIcon)}>
-              <Icon name="mail" size={18} />
-            </span>
-            Enquire
-          </Link>
-        </div>
-      </section>
-      <VehicleSections key={v.id} vehicle={v} showroomMode onReport={() => setReport(true)} />
-      {contactDock && (
+        }
+      />
+      {(contactDock || section !== 'details') && (
         <aside
           aria-label="Vehicle enquiry"
           data-vehicle-contact-dock

@@ -18,6 +18,7 @@ const s = stylex.create({
     boxShadow: '0 2px 3px #00000008',
   },
   fillRail: { paddingInline: 0, overflowX: 'visible' },
+  flushRail: { marginTop: 0, boxShadow: 'none' },
   tab: {
     position: 'relative',
     display: 'flex',
@@ -78,6 +79,7 @@ export function ShowroomTabs<T extends string>({
   idPrefix,
   variant = 'text',
   layout = 'scroll',
+  flush = false,
   onChange,
 }: {
   label: string;
@@ -87,6 +89,7 @@ export function ShowroomTabs<T extends string>({
   idPrefix: string;
   variant?: 'text' | 'icon';
   layout?: 'scroll' | 'fill';
+  flush?: boolean;
   onChange: (value: T) => void;
 }) {
   const activeTab = useRef<HTMLButtonElement | null>(null);
@@ -110,7 +113,7 @@ export function ShowroomTabs<T extends string>({
     <div
       role="tablist"
       aria-label={label}
-      {...stylex.props(s.rail, layout === 'fill' && s.fillRail)}
+      {...stylex.props(s.rail, layout === 'fill' && s.fillRail, flush && s.flushRail)}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
         <button
