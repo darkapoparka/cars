@@ -2,8 +2,8 @@
 
 PDP keeps its location title left aligned, with the official Hugeicons pin beside
 the title and a plain address below it. About and general Contact use the same
-compact title inside their mobile map cards, without repeating the visit/address
-introduction. Desktop keeps its existing map composition and PDP address icon.
+compact title and a single muted address line inside their mobile map cards.
+Desktop keeps its existing map composition and PDP address icon.
 
 Verified at `http://127.0.0.1:6461` using Node 22.20.0:
 
@@ -23,3 +23,21 @@ equivalents. Ignored local evidence is in `runtime/location-heading-20261002/`:
 `results-chromium.json`, `results-webkit.json`, map-ready screenshots, `check.log`
 and `build.log`. This verifies the local reusable template; no dealer refresh or
 deployment was performed.
+
+## Muted address follow-up
+
+The shared mobile map header now shows the localized dealer address below
+“Местоположение” / “Location”, using the muted 14px metadata role and the same
+left edge as the title. The address has no icon or appointment paragraph.
+
+- Ten Chromium checks cover About and general Contact at 320/390px in Bulgarian,
+  320px with 200% text, 320px in English and 1440px desktop visibility.
+- Two WebKit checks cover both pages at 320px with 200% text. Address wrapping,
+  spacing, containment, muted type, fixed map height and route status passed;
+  both real maps also rendered at 390px.
+- CSS policy, tokens, typography and Svelte check passed; Svelte reported zero
+  errors and warnings. The shared-checkout production build completed after this
+  component edit; its emitted map markup and stylesheet contain the address row.
+- Evidence: `runtime/location-subtitle-20261002/`. Its build log was copied from
+  `runtime/home-banner-inward-20261002/build.log` to preserve the single build
+  writer in this checkout.

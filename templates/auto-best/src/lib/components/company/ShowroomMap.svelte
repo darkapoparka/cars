@@ -28,10 +28,13 @@
 
 <div class="dn-showroom-map" role="group" aria-label={i18n.t('m_cd07db46b2c6', { p0: brand.name })}>
   {#if headingId}
-    <h2 class="dn-showroom-map__heading" id={headingId}>
-      <span class="dn-showroom-map__pin"><MobileActionIcon name="location" size={22} /></span>
-      <span>{i18n.t('m_15b61974b270')}</span>
-    </h2>
+    <div class="dn-showroom-map__header">
+      <h2 class="dn-showroom-map__heading" id={headingId}>
+        <span class="dn-showroom-map__pin"><MobileActionIcon name="location" size={22} /></span>
+        <span>{i18n.t('m_15b61974b270')}</span>
+      </h2>
+      <p class="dn-showroom-map__address">{address}</p>
+    </div>
   {/if}
   <div class="dn-showroom-map__canvas" {@attach observeMap}>
     {#if mapReady}
@@ -63,19 +66,28 @@
     border-radius: var(--dn-radius-lg);
     background: var(--dn-surface-raised);
   }
+  .dn-showroom-map__header {
+    padding: var(--dn-space-4);
+    overflow-wrap: anywhere;
+  }
   .dn-showroom-map__heading {
     display: flex;
     align-items: flex-start;
     gap: var(--dn-space-2);
     margin: 0;
-    padding: var(--dn-space-4);
     color: var(--dn-ink);
     font-size: var(--dn-text-card);
     font-weight: var(--dn-weight-semibold);
     line-height: var(--dn-leading-heading);
     letter-spacing: var(--dn-tracking-heading);
     text-align: left;
-    overflow-wrap: anywhere;
+  }
+  .dn-showroom-map__address {
+    margin: 7px 0 0;
+    color: var(--dn-muted);
+    font-size: var(--dn-text-meta);
+    line-height: var(--dn-leading-meta);
+    text-align: left;
   }
   .dn-showroom-map__pin {
     display: flex;
