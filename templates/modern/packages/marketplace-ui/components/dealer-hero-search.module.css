@@ -14,67 +14,80 @@
     gap: 1rem;
     align-content: start;
     min-height: 0;
-    padding: 1.25rem 1.5rem 1.5rem;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 1rem;
-  }
-  .desktopSearch[data-surface="hero"] .panel {
-    box-shadow: 0 12px 40px rgb(0 0 0 / 7%);
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
   .tabs {
     display: flex;
-    gap: 1.75rem;
+    gap: 2rem;
     width: fit-content;
     max-width: 100%;
-    border-bottom: 1px solid var(--border);
+  }
+  .desktopSearch[data-surface="hero"] .tabs {
+    margin-inline: auto;
   }
   .tabs a {
     display: inline-flex;
     gap: 0.5rem;
     align-items: center;
     justify-content: center;
-    min-height: 2.75rem;
+    min-height: 2.5rem;
     padding: 0 0.125rem;
-    margin-bottom: -1px;
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-medium);
+    font-size: 0.9375rem;
+    font-weight: 500;
     color: var(--muted-foreground);
     white-space: nowrap;
     border-bottom: 2px solid transparent;
     transition: color var(--duration-interaction);
   }
-  .tabs a:hover {
+  .tabs a:hover,
+  .tabs a[aria-current="page"] {
     color: var(--foreground);
   }
   .tabs a[aria-current="page"] {
-    color: var(--foreground);
     border-bottom-color: var(--brand);
   }
-  :where(.tabs a[aria-current="page"]) svg {
-    color: var(--brand-text);
+  :where(.tabs a) svg {
+    width: 1.125rem;
+    height: 1.125rem;
   }
   .form {
     display: grid;
-    gap: 0.75rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) 10rem 8rem;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgb(0 0 0 / 3%);
   }
   .searchRow,
   .query {
     position: relative;
     min-width: 0;
   }
+  .searchRow {
+    grid-column: 1 / -1;
+    order: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
   .query {
-    --control-height-search: 3rem;
+    --control-height-search: 3.5rem;
   }
   .query label {
-    padding-inline: 2.75rem 7.5rem;
-    background: var(--panel);
-    border: 1px solid var(--border);
+    padding-inline: 2.75rem 0.75rem;
+    background: transparent;
+    border: 0;
     border-radius: 0.5rem;
     box-shadow: none;
   }
   .query input {
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
   .searchIcon {
     position: absolute;
@@ -85,38 +98,43 @@
     transform: translateY(-50%);
   }
   .desktopSearch .submit {
-    position: absolute;
-    top: 0.375rem;
-    right: 0.375rem;
-    height: 2.25rem;
-    padding-inline: 0.875rem;
-    font-size: 0.8125rem;
-    border-radius: 0.375rem;
+    position: static;
+    order: 2;
+    height: 3.5rem;
+    min-height: 3.5rem;
+    padding-inline: 1.125rem;
+    font-size: 0.9375rem;
+    border-radius: 0.5rem;
   }
   .fields {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.75rem;
+    grid-column: 1 / -1;
+    gap: 0.5rem;
+    order: 2;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
   }
   .desktopSearch[data-compact="true"] .fields {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) minmax(9rem, 0.85fr);
+    display: contents;
   }
   .fields .field {
     display: flex;
     gap: 0.5rem;
     align-items: center;
     justify-content: space-between;
+    order: 1;
     width: 100%;
     min-width: 0;
-    height: 3rem;
-    min-height: 3rem;
-    padding-inline: 0.875rem;
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-medium);
+    height: 3.5rem;
+    min-height: 3.5rem;
+    padding-inline: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 400;
     color: var(--foreground);
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0.375rem;
     box-shadow: none;
   }
   .fields .field:hover {
@@ -139,14 +157,12 @@
   .fields .field[aria-pressed="true"] {
     color: var(--brand-text);
     background: color-mix(in srgb, var(--brand) 5%, var(--panel));
-    border-color: var(--brand);
   }
   .fields .field[aria-expanded="true"] > svg:last-child {
     transform: rotate(180deg);
   }
   .fields .expandFilters {
-    background: var(--control);
-    border-color: transparent;
+    font-weight: 500;
   }
   .advancedFields {
     display: contents;
@@ -158,7 +174,15 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column: 1 / -1;
-    gap: 0.75rem;
+    gap: 0.5rem;
+    order: 3;
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .advancedFields .field {
+    background: var(--control);
+    border: 0;
   }
   .footer {
     display: flex;
@@ -166,6 +190,9 @@
     gap: 1rem;
     align-items: center;
     justify-content: space-between;
+    order: 4;
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid var(--border);
   }
   .draftStatus {
     min-width: 0;
@@ -182,16 +209,28 @@
     color: var(--muted-foreground);
   }
 }
+
 @media (min-width: 1280px) {
   .desktopSearch[data-compact="true"] .form {
-    grid-template-columns: minmax(19rem, 2.5fr) repeat(4, minmax(0, 1fr)) minmax(
-        9rem,
-        1fr
-      );
-    align-items: start;
+    grid-template-columns: minmax(15rem, 1.8fr) repeat(4, minmax(0, 1fr)) 10rem 8rem;
+    gap: 0;
   }
   .desktopSearch[data-compact="true"] .fields {
     display: contents;
+  }
+  .desktopSearch[data-compact="true"] .searchRow {
+    grid-column: auto;
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .desktopSearch[data-compact="true"] .fields > .field,
+  .desktopSearch[data-compact="true"] .fields > :global(button) {
+    order: 1;
+    border-left: 1px solid var(--border);
+    border-radius: 0;
+  }
+  .desktopSearch[data-compact="true"] .submit {
+    order: 2;
   }
   .fields {
     grid-template-columns: repeat(6, minmax(0, 1fr));

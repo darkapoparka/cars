@@ -1,5 +1,15 @@
 # Modern desktop refresh
 
+## Current desktop revision
+
+The owner rejected the initial dark masthead. The revised desktop uses a light navigation header, a plain typographic hero, one integrated search row at 1280px and above, and two rows with matching keyboard order on narrower desktop screens. Vehicle cards have clearer specifications, quieter badges, stronger prices, and a labelled Details affordance. The hidden desktop header uses the normal logo appropriate to the lighter surface. Mobile components and styling below 1024px were preserved.
+
+The light draft was inspected at 1440px before the final card and narrower-desktop refinements. Typecheck, Biome for all ten changed source/test files, and 271 unit tests passed. The isolated production build passed. Final visual/interaction review and fresh mobile screenshot comparison are unfinished: the browser approval check rejected opening both Boxcar and the local Modern tab, reporting a blocked URL protocol. No alternate browser or browser automation was used to bypass that rejection. Local Boxcar reference screenshots informed the source revision.
+
+Local development preview remains http://127.0.0.1:6482/bg. The previous screenshot and browser-test evidence below belongs to the earlier revision, not this final draft. Owner visual acceptance and release selection are outstanding.
+
+## Initial implementation evidence
+
 The desktop layout at 1024px and above now uses a consistent 1280px content frame, a showroom hero with an overlapping search panel, quieter inventory cards, and a listing gallery aligned with the sticky price/contact panel. Boxcar informed the spacing and hierarchy; the Modern identity, existing imagery, data boundaries, URLs, and enquiry behavior remain in use. Service pages use the same frame and simpler headings/forms.
 
 Mobile components and styling below 1024px were preserved. The environment default assignment was also corrected to avoid invalid compiled public-origin assignments in the local preview; existing configured origins retain precedence.

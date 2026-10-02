@@ -8,9 +8,9 @@
     position: relative;
     z-index: 40;
     display: block;
-    color: var(--inverse-foreground);
-    background: var(--inverse);
-    border-bottom: 1px solid var(--inverse-border);
+    color: var(--foreground);
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
   }
   .header:has(
       [aria-controls="dealer-desktop-locale-menu"][aria-expanded="true"]
@@ -20,7 +20,7 @@
   .nav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 1rem;
+    gap: 1.5rem;
     align-items: center;
     width: min(calc(100% - 3rem), 80rem);
     min-height: var(--desktop-header-height);
@@ -30,13 +30,13 @@
     position: relative;
     display: block;
     justify-self: start;
-    width: 10.25rem;
-    height: 2.75rem;
+    width: 11.5rem;
+    height: 3.25rem;
     border-radius: var(--radius-sm);
   }
   .segments {
     display: flex;
-    gap: 0.5rem;
+    gap: 1.5rem;
     align-items: center;
     justify-content: center;
   }
@@ -44,28 +44,26 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.75rem;
-    padding-inline: 0.75rem;
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--inverse-muted);
-    border: 1px solid transparent;
-    border-radius: 0.5rem;
+    min-height: var(--desktop-header-height);
+    padding-inline: 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--muted-foreground);
+    border-bottom: 2px solid transparent;
     transition:
       color var(--duration-interaction),
-      background-color var(--duration-interaction);
+      border-color var(--duration-interaction);
   }
   .segments a:hover,
   .segments a[aria-current="page"] {
-    color: var(--inverse-foreground);
-    background: color-mix(in srgb, var(--inverse-foreground) 7%, transparent);
+    color: var(--foreground);
   }
   .segments a[aria-current="page"] {
-    font-weight: var(--font-weight-semibold);
+    border-bottom-color: var(--brand);
   }
   .contact {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.75rem;
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
@@ -77,35 +75,45 @@
     align-items: center;
     justify-content: center;
     min-height: 2.75rem;
-    padding-inline: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: var(--font-weight-medium);
+    padding-inline: 0.25rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
     white-space: nowrap;
     border-radius: 0.5rem;
-    transition: background-color var(--duration-interaction);
   }
   .contact a:hover {
-    background: var(--inverse-control);
+    color: var(--brand-text);
+  }
+  .contact button:hover {
+    background: var(--control);
   }
   .contact .showroom {
-    padding-inline: 0.875rem;
-    border: 1px solid var(--inverse-border);
+    padding-inline: 1rem;
+    color: var(--inverse-foreground);
+    background: var(--inverse);
+    border: 1px solid var(--inverse);
+    border-radius: 0.5rem;
+  }
+  .contact .showroom:hover {
+    color: var(--inverse-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
   }
   .header a:focus-visible {
-    outline: 2px solid var(--inverse-foreground);
+    outline: 2px solid var(--ring);
     outline-offset: 3px;
   }
 }
+
 @media (min-width: 1024px) and (max-width: 1199px) {
   .brand {
-    width: 9rem;
+    width: 9.5rem;
   }
   .segments {
-    gap: 0.125rem;
+    gap: 1rem;
   }
-  .segments a,
-  .contact a {
-    padding-inline: 0.5rem;
+  .contact {
+    gap: 0.5rem;
   }
   .contact a[href^="tel:"] span {
     display: none;

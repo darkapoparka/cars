@@ -1,4 +1,3 @@
-import { leadSite } from "@repo/marketplace";
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import {
@@ -13,8 +12,12 @@ export function DealerDesktopDiscoveryHero({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   return (
     <DealerDesktopHero
-      eyebrow={leadSite.name}
-      title={isBg ? "Намерете своя автомобил." : "Find Your Next Drive"}
+      description={
+        isBg
+          ? "Налични автомобили, внос и лизинг на едно място."
+          : "Browse our inventory, arrange an import or explore financing."
+      }
+      title={isBg ? "Намерете своя автомобил" : "Find your next car"}
       variant="landing"
     >
       <div className={styles.heroSearch}>

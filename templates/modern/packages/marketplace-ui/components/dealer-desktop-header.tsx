@@ -60,7 +60,7 @@ export const DealerDesktopHeader = ({
               fill
               priority
               sizes="220px"
-              src={site.identity.inverseLogo}
+              src={site.identity.logo}
             />
           </Link>
           <nav

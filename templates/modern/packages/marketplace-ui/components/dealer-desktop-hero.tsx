@@ -1,8 +1,6 @@
 import type { ReactNode } from "react";
-import { desktopBannerArtwork } from "../lib/desktop-banner-artwork";
 import styles from "./dealer-desktop-hero.module.css";
 import { DesktopActionPanel } from "./desktop-action-panel";
-import Image from "./public-image";
 
 export interface DealerDesktopHeroProps {
   children?: ReactNode;
@@ -43,18 +41,6 @@ export function DealerDesktopHero({
       }
       data-variant={variant}
     >
-      {variant === "landing" ? (
-        <div aria-hidden="true" className={styles.scene}>
-          <Image
-            alt=""
-            data-slot="desktop-hero-scene"
-            fill
-            sizes="(min-width: 1024px) 100vw, 0px"
-            src={desktopBannerArtwork.discovery}
-            unoptimized
-          />
-        </div>
-      ) : null}
       <div className={styles.copy}>
         {eyebrow && <p className={styles.eyebrow}>{eyebrow}</p>}
         <h1 className={loading ? styles.loadingTitle : undefined} id={titleId}>

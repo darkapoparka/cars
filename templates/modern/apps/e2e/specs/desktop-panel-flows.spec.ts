@@ -82,7 +82,7 @@ test("desktop navigation keeps the header stable through loading", async ({
     ["sell", "Sell us your vehicle"],
     ["lease", "Vehicle financing"],
     ["imports", "Import a vehicle"],
-    ["home", "Find Your Next Drive"],
+    ["home", "Find your next car"],
   ]) {
     await header.locator(`[data-marketplace-mode="${mode}"]`).click();
     await expect(

@@ -2,7 +2,7 @@ import { Badge } from "@repo/design-system/components/ui/badge";
 import { cn } from "@repo/design-system/lib/utils";
 import type { VehicleListing } from "@repo/marketplace";
 import {
-  ArrowRight,
+  ArrowUpRight,
   BadgeCheck,
   Boxes,
   CalendarDays,
@@ -649,7 +649,9 @@ const ShowroomVehicleCardContent = ({
     >
       <div data-slot="showroom-vehicle-heading">
         <h3 data-slot="vehicle-card-title">{heading.title}</h3>
-        <p data-slot="showroom-vehicle-subtitle">{heading.subtitle}</p>
+        <p data-slot="showroom-vehicle-subtitle" title={heading.subtitle}>
+          {heading.subtitle}
+        </p>
       </div>
       <ul
         aria-label={getVehicleCardCopy(locale).specs}
@@ -659,7 +661,7 @@ const ShowroomVehicleCardContent = ({
           const Icon = showroomFactIcons[fact.id];
           return (
             <li data-fact={fact.id} key={fact.id}>
-              <Icon aria-hidden="true" size={13} strokeWidth={1.6} />
+              <Icon aria-hidden="true" size={17} strokeWidth={1.6} />
               <span>{fact.value}</span>
             </li>
           );
@@ -672,7 +674,10 @@ const ShowroomVehicleCardContent = ({
           variant="comparison"
         />
         <span aria-hidden="true" data-slot="showroom-vehicle-open">
-          <ArrowRight size={17} />
+          <span>
+            {locale?.toLowerCase().startsWith("bg") ? "Детайли" : "Details"}
+          </span>
+          <ArrowUpRight size={17} />
         </span>
       </div>
     </Link>

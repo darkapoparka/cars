@@ -198,10 +198,7 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 locale={locale}
                 onQueryChange={setQuery}
                 onSearch={submit}
-                placeholder={text(
-                  "Марка, модел или ключова дума…",
-                  "Search by make, model or keyword…"
-                )}
+                placeholder={text("Марка или модел…", "Make or model…")}
                 query={query}
                 scope="vehicles"
                 searchActionLabel={text("Покажи обявите", "Show results")}
@@ -212,18 +209,6 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
                 size={19}
               />
             </div>
-            <DesktopActionButton
-              className={styles.submit}
-              data-slot="desktop-hero-submit"
-              disabled={pending}
-              inset
-              type="submit"
-            >
-              <Search aria-hidden="true" size={18} />
-              {pending
-                ? text("Търсене…", "Searching…")
-                : text("Търси", "Search")}
-            </DesktopActionButton>
           </div>
           <div className={styles.fields}>
             <Button
@@ -527,6 +512,15 @@ export function DealerHeroSearch(props: DealerHeroSearchProps) {
               />
             </div>
           </div>
+          <DesktopActionButton
+            className={styles.submit}
+            data-slot="desktop-hero-submit"
+            disabled={pending}
+            type="submit"
+          >
+            <Search aria-hidden="true" size={18} />
+            {pending ? text("Търсене…", "Searching…") : text("Търси", "Search")}
+          </DesktopActionButton>
           <SearchDraftStatus
             filterCount={filterCount}
             isBg={isBg}
