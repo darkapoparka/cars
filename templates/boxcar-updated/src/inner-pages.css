@@ -263,13 +263,6 @@
 .bc-about-faq details p {
   margin: 16px 0 0;
 }
-.bc-contact-visual {
-  height: 300px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 16px;
-  background: #050b20;
-}
 .bc-showroom-map {
   height: 360px;
   position: relative;
@@ -307,47 +300,6 @@
   border-color: #405ff2;
   color: #405ff2;
 }
-.bc-contact-visual > img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 55%;
-}
-.bc-contact-visual::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, #050b20b8, #050b2010 75%);
-}
-.bc-contact-visual > div {
-  position: absolute;
-  left: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  color: #fff;
-}
-.bc-contact-visual > div > span {
-  font-size: 15px;
-}
-.bc-contact-visual h2 {
-  margin: 12px 0 0;
-  color: inherit;
-  font-size: 38px;
-  line-height: 1.2;
-}
-.bc-contact-visual > small {
-  position: absolute;
-  right: 16px;
-  bottom: 12px;
-  z-index: 1;
-  font-size: 11px;
-  line-height: 20px;
-  color: #fff;
-  background: #050b20b3;
-  border-radius: 5px;
-  padding: 2px 8px;
-}
 .contact-us-section .bc-page-title {
   text-align: center;
 }
@@ -355,12 +307,15 @@
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
   gap: 0;
-  margin-top: 36px;
+  margin-top: 0;
   align-items: stretch;
   overflow: hidden;
   border: 1px solid #e4e7ee;
   border-radius: 24px;
   background: #fff;
+}
+.contact-us-section .bc-showroom-map + .calculater-sec {
+  margin-top: 36px;
 }
 .contact-us-section .calculater-sec > * {
   min-width: 0;
@@ -975,22 +930,15 @@
     font-size: 16px;
     line-height: 25px;
   }
-  .bc-contact-visual {
-    height: 240px;
-  }
   .bc-showroom-map {
     height: 280px;
   }
-  .bc-contact-visual > div {
-    left: 24px;
-  }
-  .bc-contact-visual h2 {
-    font-size: 30px;
-  }
   .contact-us-section .calculater-sec {
     grid-template-columns: 1fr;
-    margin-top: 24px;
     border-radius: 20px;
+  }
+  .contact-us-section .bc-showroom-map + .calculater-sec {
+    margin-top: 24px;
   }
   .contact-us-section .content-column h2 {
     font-size: 26px;
@@ -1062,17 +1010,6 @@
   .bc-actions {
     flex-direction: column;
     align-items: stretch;
-  }
-  .bc-contact-visual h2 {
-    font-size: 28px;
-  }
-  .bc-contact-visual > div > span {
-    font-size: 14px;
-  }
-  .bc-contact-visual > small {
-    right: 10px;
-    bottom: 10px;
-    font-size: 10px;
   }
   .bc-map-directions {
     right: 12px;

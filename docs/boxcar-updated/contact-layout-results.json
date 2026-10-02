@@ -1,0 +1,455 @@
+{
+  "checkedAt": "2026-10-02T21:21:05.012Z",
+  "clientDate": "2026-10-03",
+  "base": "http://127.0.0.1:6455",
+  "browser": "Codex IAB Chromium",
+  "passed": true,
+  "mapConfigured": false,
+  "liveMapVerified": false,
+  "layouts": [
+    {
+      "banner": {
+        "bottom": 270,
+        "height": 180,
+        "right": 1425,
+        "width": 1425,
+        "x": 0,
+        "y": 90
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 959.5,
+        "height": 660.5,
+        "right": 1371.5,
+        "width": 560.859375,
+        "x": 810.640625,
+        "y": 299
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 1425,
+      "form": {
+        "bottom": 959.5,
+        "height": 660.5,
+        "right": 810.640625,
+        "width": 757.140625,
+        "x": 53.5,
+        "y": 299
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 960.5,
+        "height": 662.5,
+        "right": 1372.5,
+        "width": 1320,
+        "x": 52.5,
+        "y": 298
+      },
+      "photoBanner": false,
+      "subject": "Buying a car",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1440
+    },
+    {
+      "banner": {
+        "bottom": 270,
+        "height": 180,
+        "right": 1009,
+        "width": 1009,
+        "x": 0,
+        "y": 90
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 946.1875,
+        "height": 647.1875,
+        "right": 968,
+        "width": 394.46875,
+        "x": 573.53125,
+        "y": 299
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 1009,
+      "form": {
+        "bottom": 946.1875,
+        "height": 647.1875,
+        "right": 573.53125,
+        "width": 532.53125,
+        "x": 41,
+        "y": 299
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 947.1875,
+        "height": 649.1875,
+        "right": 969,
+        "width": 929,
+        "x": 40,
+        "y": 298
+      },
+      "photoBanner": false,
+      "subject": "Buying a car",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1024
+    },
+    {
+      "banner": {
+        "bottom": 270,
+        "height": 180,
+        "right": 753,
+        "width": 753,
+        "x": 0,
+        "y": 90
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 1540.6875,
+        "height": 597.1875,
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 943.5
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 753,
+      "form": {
+        "bottom": 943.5,
+        "height": 644.5,
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 299
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 1541.6875,
+        "height": 1243.6875,
+        "right": 729,
+        "width": 705,
+        "x": 24,
+        "y": 298
+      },
+      "photoBanner": false,
+      "subject": "Buying a car",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 768
+    },
+    {
+      "banner": {
+        "bottom": 232,
+        "height": 156,
+        "right": 375,
+        "width": 375,
+        "x": 0,
+        "y": 76
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 1752.484375,
+        "height": 687.1875,
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 1065.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 375,
+      "form": {
+        "bottom": 1065.296875,
+        "height": 812.296875,
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 253
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 1753.484375,
+        "height": 1501.484375,
+        "right": 357,
+        "width": 339,
+        "x": 18,
+        "y": 252
+      },
+      "photoBanner": false,
+      "subject": "Buying a car",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 390
+    },
+    {
+      "banner": {
+        "bottom": 248,
+        "height": 172,
+        "right": 305,
+        "width": 305,
+        "x": 0,
+        "y": 76
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 1836.484375,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1107.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 305,
+      "form": {
+        "bottom": 1107.296875,
+        "height": 838.296875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 269
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 1837.484375,
+        "height": 1569.484375,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 268
+      },
+      "photoBanner": false,
+      "subject": "Buying a car",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 320
+    },
+    {
+      "banner": {
+        "bottom": 248,
+        "height": 172,
+        "right": 305,
+        "width": 305,
+        "x": 0,
+        "y": 76
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 1836.484375,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1107.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 305,
+      "form": {
+        "bottom": 1107.296875,
+        "height": 838.296875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 269
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 1837.484375,
+        "height": 1569.484375,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 268
+      },
+      "photoBanner": false,
+      "subject": "Arranging a viewing",
+      "title": "Contact us",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/?intent=viewing",
+      "width": 320
+    },
+    {
+      "banner": {
+        "bottom": 232,
+        "height": 156,
+        "right": 305,
+        "width": 305,
+        "x": 0,
+        "y": 76
+      },
+      "cards": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Showroom"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Opening hours"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "title": "Email"
+        }
+      ],
+      "clipped": [],
+      "details": {
+        "bottom": 2039.28125,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1310.09375
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "documentWidth": 305,
+      "form": {
+        "bottom": 1310.09375,
+        "height": 1057.09375,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 253
+      },
+      "mapCount": 0,
+      "overlay": false,
+      "panel": {
+        "bottom": 2040.28125,
+        "height": 1788.28125,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 252
+      },
+      "photoBanner": false,
+      "subject": "Selling a car",
+      "title": "Sell Your Car",
+      "titleCount": 1,
+      "url": "http://127.0.0.1:6455/contact/?intent=sell",
+      "width": 320
+    }
+  ],
+  "consoleErrors": [],
+  "screenshots": [
+    "contact-layout-desktop.jpg",
+    "contact-layout-320.jpg"
+  ],
+  "checks": [
+    "Redundant showroom photo banner removed",
+    "No empty map/photo space when location is unconfigured",
+    "Joined contact panel retains grey, white and blue surfaces",
+    "No horizontal overflow or clipped static copy",
+    "Viewing and selling headings/subjects and selling fields retained"
+  ],
+  "sourceHashes": {
+    "src/inner-pages.css": "d427e6561eaa6b95928cacc582ef0ed66e95c085a568d6bbdf9ad10359b205db",
+    "src/pages/Contact.svelte": "2dcfacab31e8818db128fcab5a35ee57bcc2470fa9f74cdd417daacf0b12581a",
+    "src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "src/components/PageBanner.svelte": "f92064f135fe23745251dc4430e7f02203b84b26352017cde73cacced6ff6ecd",
+    "src/data/brand.ts": "7648b4c7cc6afc15b640c35075c1b9c43b673e7698ac4f428bcc05ddc37d3a66",
+    "src/styles.css": "120dababa40b0716dc72752b386e5117700dfdfd70c9ec7d9c07f055bcbcbf0d"
+  },
+  "unchangedSources": [
+    "src/components/EnquiryForm.svelte",
+    "src/components/PageBanner.svelte",
+    "src/data/brand.ts",
+    "src/styles.css"
+  ],
+  "validation": {
+    "node": "22.23.2",
+    "check": "svelte-check: 0 errors, 0 warnings",
+    "build": "vite build: passed, 163 modules"
+  }
+}

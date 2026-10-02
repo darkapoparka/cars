@@ -13,7 +13,7 @@
   );
 </script>
 
-<!-- Adapted from contact.html: shared banner, wide visual and joined contact panel. -->
+<!-- Shared banner, optional verified showroom map and joined contact panel. -->
 <section class="bc-inner contact-us-section has-page-banner">
   <PageBanner
     title={selling ? "Sell Your Car" : "Contact us"}
@@ -41,22 +41,7 @@
           Get directions <Icon name="arrow" size={20} />
         </a>
       </section>
-    {:else}<div class="bc-contact-visual">
-        <img
-          src="/media/resource/about-inner1-3.jpg"
-          alt="Vehicles on display in the Boxcar reference showroom"
-          width="567"
-          height="300"
-        />
-        <div>
-          <span>{brand.name}</span>
-          <h2>
-            Good cars.
-            <br />
-            Great conversations.
-          </h2>
-        </div>
-      </div>{/if}
+    {/if}
     <div class="calculater-sec">
       <section class="content-column" aria-labelledby="contact-form-title">
         <div class="inner-column">
