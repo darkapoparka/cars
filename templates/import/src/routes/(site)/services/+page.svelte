@@ -4,6 +4,7 @@
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
 	import ServiceCard from '$lib/components/services/ServiceCard.svelte';
 	import SearchField from '$lib/components/common/SearchField.svelte';
+	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 
 	let { data }: PageProps = $props();
@@ -13,7 +14,14 @@
 	const matching = $derived(
 		data.services.filter((service) => {
 			const detail = data.directory.details[service.id];
-			return [service.title, service.description, ...detail.includes]
+			return [
+				service.title,
+				service.description,
+				detail.summary,
+				detail.mobileTitle,
+				detail.mobileSummary,
+				...detail.includes
+			]
 				.join(' ')
 				.toLocaleLowerCase()
 				.includes(normalizedQuery);
@@ -43,7 +51,11 @@
 		desktopDescription={data.directory.description}
 	>
 		{#snippet mobileActions()}<form role="search" method="GET">
-				<SearchField bind:value={query} label={data.directory.search} controls="service-results" />
+				<MobileSearchControl
+					bind:value={query}
+					label={data.directory.search}
+					controls="service-results"
+				/>
 			</form>{/snippet}
 		{#snippet desktopActions()}
 			<form class="service-search" role="search" method="GET">

@@ -184,10 +184,11 @@ for (const locale of ['en', 'bg']) {
 				titles
 					.filter((title) => {
 						const text = document.createRange();
-						text.selectNodeContents(title);
-						return text.getClientRects().length > 1;
+						const visibleTitle = title.querySelector('.service-card__mobile-copy')!;
+						text.selectNodeContents(visibleTitle);
+						return new Set([...text.getClientRects()].map((rect) => Math.round(rect.top))).size > 1;
 					})
-					.map((title) => title.textContent)
+					.map((title) => (title as HTMLElement).innerText)
 			);
 			expect(wrappedTitles, `${locale} service titles at ${width}px`).toEqual([]);
 			expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
@@ -195,11 +196,30 @@ for (const locale of ['en', 'bg']) {
 			);
 		}
 		await page.setViewportSize({ width: 320, height: 568 });
+		await search.fill(locale === 'en' ? 'Valuation' : 'Оценка');
+		await expect(page.locator('.service-card')).toHaveCount(1);
+		await expect(page.locator('.service-card > a')).toHaveAttribute(
+			'href',
+			`/${locale}/sell-your-car`
+		);
 		await search.fill('no matching service');
 		await expect(page.locator('.service-empty')).toBeVisible();
 		await page.locator('.service-empty button').click();
 		await expect(search).toBeEmpty();
 		await expect(page.locator('.service-card')).toHaveCount(6);
+		await search.fill('VIN');
+		await page
+			.getByRole('button', {
+				name: locale === 'en' ? 'Search services' : 'Търси услуга',
+				exact: true
+			})
+			.click();
+		await expect(page).toHaveURL(
+			(url) => url.pathname === `/${locale}/services` && url.searchParams.get('q') === 'VIN'
+		);
+		await expect(search).toHaveValue('VIN');
+		await expect(page.locator('.service-card')).toHaveCount(1);
+		await expect(page.locator('.service-card > a')).toHaveAttribute('href', `/${locale}/import`);
 	});
 
 	test(`${locale} mobile calculator summaries update and expose invalid amounts`, async ({
