@@ -17,40 +17,40 @@ import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 type Kind = 'sell' | 'finance' | 'service';
 const steps = {
   sell: [
-    ['sell-car-to-us', 'Sell to the showroom', 'Tell us about your car and arrange a valuation.'],
-    ['quick-vehicle-inspection', 'A closer look', 'Review the condition, mileage and service history together.'],
-    ['no-hidden-fees', 'Understand your offer', 'Discuss the valuation and any costs before deciding.'],
-    ['hassle-free-paperwork', 'Plan the handover', 'Get guidance on the documents and next steps.'],
+    ['sell-car-to-us', 'Car details', 'Make, mileage and photos.'],
+    ['quick-vehicle-inspection', 'Inspection', 'Condition and service history.'],
+    ['no-hidden-fees', 'Valuation', 'Discuss the price and terms.'],
+    ['hassle-free-paperwork', 'Documents', 'Agree the paperwork and handover.'],
   ],
   service: [
-    ['enter-car-details', 'Tell us about your car', 'Choose the make and model you drive.'],
-    ['select-car-service-package', 'Choose the care you need', 'Explore routine servicing, diagnostics or an inspection.'],
-    ['schedule-appointment', 'Arrange a suitable time', 'Confirm availability and pricing with the showroom.'],
-    ['car-service-at-fingertips', 'Stay in the loop', 'Discuss the work before it goes ahead.'],
-    ['delivery-and-payment', 'Review the work', 'Check the service details and final costs.'],
-    ['happy-driving', 'Back on the road', 'Keep your service records ready for your next visit.'],
+    ['enter-car-details', 'Car details', 'Choose the make and model.'],
+    ['select-car-service-package', 'Service selection', 'Servicing, diagnostics or an inspection.'],
+    ['schedule-appointment', 'Visit time', 'Confirm the time and price.'],
+    ['car-service-at-fingertips', 'Before the repair', 'Discuss the work with the workshop.'],
+    ['delivery-and-payment', 'After the repair', 'Review the work and costs.'],
+    ['happy-driving', 'Service record', 'Keep your workshop documents.'],
   ],
   finance: [
-    ['item1', 'Find your next car', 'Choose from the showroom collection.'],
-    ['item2', 'Prepare your documents', 'Ask which documents are needed for your circumstances.'],
-    ['item3', 'Explore your options', 'Discuss eligibility, deposit and payment terms.'],
-    ['item4', 'Review the details', 'Compare the total cost and the proposed monthly payments.'],
-    ['item5', 'Confirm the next steps', 'Any finance offer is subject to lender approval and terms.'],
-    ['keys', 'Plan your collection', 'Arrange a handover once the details are confirmed.'],
+    ['item1', 'Choose a car', 'Browse the available cars.'],
+    ['item2', 'Documents', 'Ask which documents you need.'],
+    ['item3', 'Finance terms', 'Discuss the deposit, term and rate.'],
+    ['item4', 'Compare offers', 'Check the payment and total cost.'],
+    ['item5', 'Lender approval', 'Approval depends on the lender.'],
+    ['keys', 'Handover', 'Collect after the details are confirmed.'],
   ],
 };
 const packages = [
-  {name: 'Routine service', mobileName: 'Servicing', label: 'Everyday care', mobileLabel: 'Routine care', image: showroom.artwork.servicePackages.routine, copy: 'Keep on top of the essentials.', mobileCopy: 'Care for the essentials.', checks: ['Oil and filter requirements', 'Fluid levels and safety checks', 'Tyres, brakes and lighting'], mobileChecks: ['Oil and filters', 'Safety checks', 'Tyres and brakes']},
-  {name: 'Comprehensive care', mobileName: 'Full inspection', label: 'A closer look', mobileLabel: 'Detailed checks', image: showroom.artwork.servicePackages.comprehensive, copy: 'Discuss a more detailed inspection.', mobileCopy: 'A closer look at your car.', checks: ['Diagnostic and condition checks', 'Suspension and braking system', 'Maintenance recommendations'], mobileChecks: ['Diagnostics', 'Suspension and brakes', 'Recommendations']},
+  {name: 'Routine service', mobileName: 'Servicing', image: showroom.artwork.servicePackages.routine, copy: 'Oil, filters and routine checks.', checks: ['Oil and filter requirements', 'Fluid levels and safety checks', 'Tyres, brakes and lighting'], mobileChecks: ['Oil and filters', 'Safety checks', 'Tyres and brakes']},
+  {name: 'Inspection and diagnostics', mobileName: 'Diagnostics', image: showroom.artwork.servicePackages.comprehensive, copy: 'Check your car and plan any work.', checks: ['Diagnostic and condition checks', 'Suspension and braking system', 'Maintenance recommendations'], mobileChecks: ['Diagnostics', 'Suspension and brakes', 'Recommendations']},
 ];
 const sellingMethods = [
-  {title: 'Sell to us', mobileTitle: 'Sell to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Inspection', 'Documents'], action: 'Get a valuation', mobileAction: 'Get valuation'},
+  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Inspection', 'Documents'], action: 'Get a valuation', mobileAction: 'Get valuation'},
   {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Next car', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Explore exchange'},
 ];
 const sellingGuides = [
-  {title: 'Car valuation', image: showroom.artwork.selling.valuation, description: 'Have your mileage, registration details and service records ready. The showroom will review your car’s condition and discuss a valuation before you decide.'},
-  {title: 'Service history', image: showroom.artwork.selling.history, description: 'Gather your service book, maintenance invoices and any warranty documents. Include both keys if you have them, and tell the showroom about any outstanding finance or known faults.'},
-  {title: 'Photo checklist', image: showroom.artwork.selling.photos, description: 'Photograph your car in daylight: front, rear, both sides, wheels, interior and dashboard mileage. Include clear photos of any damage so the showroom can understand its condition.'},
+  {title: 'Car valuation', mobileTitle: 'Valuation', image: showroom.artwork.selling.valuation, description: 'Have your mileage, registration details and service records ready. The showroom will review your car’s condition and discuss a valuation before you decide.'},
+  {title: 'Service history', mobileTitle: 'Service history', image: showroom.artwork.selling.history, description: 'Gather your service book, maintenance invoices and any warranty documents. Include both keys if you have them, and tell the showroom about any outstanding finance or known faults.'},
+  {title: 'Photo checklist', mobileTitle: 'Photos', image: showroom.artwork.selling.photos, description: 'Photograph your car in daylight: front, rear, both sides, wheels, interior and dashboard mileage. Include clear photos of any damage so the showroom can understand its condition.'},
 ];
 
 function ResponsiveCopy({full, short}: {full: string; short: string}) {
@@ -65,18 +65,17 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
   return <>
     {kind === 'sell' ? <section {...stylex.props(s.methods)} aria-label={tx("Ways to sell your car")}>
       {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} {...stylex.props(s.method)}>
-        <Image src={image} fill sizes="(max-width: 767px) 100vw, 50vw" alt={tx("")} {...stylex.props(s.methodArtwork)}/>
         <div {...stylex.props(s.methodCopy)}><h2 {...stylex.props(s.heading)}><ResponsiveCopy full={title} short={mobileTitle}/></h2>
           <ul {...stylex.props(s.methodPoints)}>{points.map((point, index) => <li key={point} {...stylex.props(s.methodPoint)}><Check size={15} {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={point} short={mobilePoints[index]}/></li>)}</ul>
-          <button type="button" onClick={onStart} {...stylex.props(s.methodAction)}><ResponsiveCopy full={action} short={mobileAction}/><ArrowRight size={15} {...stylex.props(s.pointIcon)}/></button>
         </div>
+        <div {...stylex.props(s.methodMedia)}><Image src={image} fill sizes="(max-width: 767px) 100vw, 50vw" alt="" {...stylex.props(s.methodArtwork)}/><button type="button" onClick={onStart} {...stylex.props(s.methodAction)}><ResponsiveCopy full={action} short={mobileAction}/><ArrowRight size={15} {...stylex.props(s.pointIcon)}/></button></div>
       </article>)}
     </section> : null}
-    {kind === 'sell' ? <section {...stylex.props(s.section)} aria-label={tx("Selling guides")}><h2 {...stylex.props(s.heading)}>{tx("Get ready to sell")}</h2><div {...stylex.props(s.toolsRail)}>{sellingGuides.map(({title, image, description}) => <button key={title} type="button" onClick={() => setInformation({title, description})} {...stylex.props(s.tool)}><Image src={image} width={600} height={450} sizes="238px" alt={tx("")} {...stylex.props(s.toolImage)}/><span {...stylex.props(s.toolLabel)}>{tx(title)}<ArrowRight size={17}/></span></button>)}</div></section> : null}
-    {kind === 'service' ? <section aria-label={tx("Service options")} {...stylex.props(s.plans)}>{packages.map(({name, mobileName, label, mobileLabel, image, copy, mobileCopy, checks, mobileChecks}) => <article key={name} {...stylex.props(s.plan)}>
-      <header {...stylex.props(s.planHeader)}><Image src={image} fill sizes="(max-width: 767px) 100vw, 600px" alt={tx("")} {...stylex.props(s.planArtwork)}/><div {...stylex.props(s.planCopy)}><h2 {...stylex.props(s.planTitle)}><ResponsiveCopy full={name} short={mobileName}/></h2><span {...stylex.props(s.pill)}><ResponsiveCopy full={label} short={mobileLabel}/></span><p {...stylex.props(s.planDescription)}><ResponsiveCopy full={copy} short={mobileCopy}/></p></div></header>
+    {kind === 'sell' ? <section {...stylex.props(s.section)} aria-label={tx("Selling guides")}><h2 {...stylex.props(s.heading)}>{tx("Before you sell")}</h2><div {...stylex.props(s.toolsRail)}>{sellingGuides.map(({title, mobileTitle, image, description}) => <button key={title} type="button" onClick={() => setInformation({title, description})} {...stylex.props(s.tool)}><Image src={image} width={600} height={450} sizes="238px" alt="" {...stylex.props(s.toolImage)}/><span {...stylex.props(s.toolLabel)}><ResponsiveCopy full={title} short={mobileTitle}/><ArrowRight size={17} {...stylex.props(s.pointIcon)}/></span></button>)}</div></section> : null}
+    {kind === 'service' ? <section aria-label={tx("Service options")} {...stylex.props(s.plans)}>{packages.map(({name, mobileName, image, copy, checks, mobileChecks}) => <article key={name} {...stylex.props(s.plan)}>
+      <header {...stylex.props(s.planHeader)}><Image src={image} fill sizes="(max-width: 767px) 100vw, 600px" alt="" {...stylex.props(s.planArtwork)}/><div {...stylex.props(s.planCopy)}><h2 {...stylex.props(s.planTitle)}><ResponsiveCopy full={name} short={mobileName}/></h2><p {...stylex.props(s.planDescription)}>{tx(copy)}</p></div></header>
       <ul {...stylex.props(s.checks)}>{checks.map((check, index) => <li key={check} {...stylex.props(s.check)}><Check size={16} {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={check} short={mobileChecks[index]}/></li>)}</ul>
-      <button type="button" onClick={() => setInformation({title: name, description: `${tx(copy)} ${checks.map(check => tx(check)).join(', ')}. ${tx('Available work, intervals and pricing depend on your car. Confirm the package with the showroom before booking.')}`})} {...stylex.props(s.outline)}>{tx("Learn more")}<ArrowRight size={17} {...stylex.props(s.pointIcon)}/></button>
+      <button type="button" aria-label={`${tx('More details')}: ${tx(name)}`} onClick={() => setInformation({title: name, description: `${tx(copy)} ${checks.map(check => tx(check)).join(', ')}. ${tx('Available work, intervals and pricing depend on your car. Confirm the package with the showroom before booking.')}`})} {...stylex.props(s.outline)}>{tx("View more")}<ArrowRight size={17} {...stylex.props(s.pointIcon)}/></button>
     </article>)}</section> : null}
     {kind === 'finance' ? <><FinanceCalculator/><BrandCampaign kind="finance" onAction={onStart}/></> : null}
     <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Your finance journey, step by step' : 'Car care, step by step')}</span><span {...stylex.props(s.mobileCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Finance steps' : 'Service steps')}</span></h2><div {...stylex.props(s.steps)}>{steps[kind].map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/${kind}-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription)}>{tx(copy)}</p></div></article>)}</div></section>
@@ -90,30 +89,30 @@ const s = stylex.create({
   heading: {color: '#202024', fontSize: {[media.mobile]: 19, default: 26}, fontWeight: 600, lineHeight: 1.25, overflowWrap: 'anywhere'},
   section: {marginTop: 28},
   methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 30},
-  method: {position: 'relative', overflow: 'hidden', width: '100%', minHeight: {[media.mobile]: 230, default: 270}, borderRadius: 20, backgroundColor: '#fff'},
-  methodArtwork: {objectFit: 'contain', objectPosition: 'right bottom', fontSize: 12, maskImage: {[media.mobile]: 'linear-gradient(to bottom,transparent 0,transparent 9em,#000 12em)', default: 'none'}},
-  methodCopy: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: {[media.mobile]: '100%', default: '60%'}, minHeight: {[media.mobile]: 230, default: 270}, padding: {[media.mobile]: 16, default: '26px 0 26px 22px'}},
-  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '14px 0', listStyle: 'none'},
+  method: {position: 'relative', overflow: 'hidden', width: '100%', minHeight: {[media.mobile]: 0, default: 270}, borderRadius: 20, backgroundColor: '#fff'},
+  methodMedia: {position: {[media.mobile]: 'relative', default: 'absolute'}, inset: {[media.mobile]: 'auto', default: 0}, height: {[media.mobile]: 'auto', default: '100%'}, aspectRatio: {[media.mobile]: '3 / 2', default: 'auto'}},
+  methodArtwork: {objectFit: 'contain', objectPosition: 'right bottom'},
+  methodCopy: {position: 'relative', zIndex: 1, width: {[media.mobile]: '100%', default: '60%'}, padding: {[media.mobile]: '16px 16px 0', default: '26px 0 26px 22px'}},
+  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
   methodPoint: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
-  methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 44, maxWidth: '100%', marginTop: {[media.mobile]: 'auto', default: 0}, padding: '8px 10px', color: campaign.lightInk, fontSize: {[media.mobile]: 12, default: 14}, fontWeight: 600, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},
+  methodAction: {position: 'absolute', zIndex: 2, left: {[media.mobile]: 16, default: 22}, top: {[media.mobile]: 12, default: 'auto'}, bottom: {[media.mobile]: 'auto', default: 26}, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 44, maxWidth: 'calc(100% - 32px)', padding: '8px 10px', color: campaign.lightInk, fontSize: {[media.mobile]: 12, default: 14}, fontWeight: 600, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},
   toolsRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 14, paddingBottom: 8, scrollSnapType: 'x mandatory', scrollbarWidth: 'none'},
   tool: {display: 'flex', flexDirection: 'column', gap: 10, flex: '0 0 238px', padding: 0, borderWidth: 0, backgroundColor: 'transparent', textAlign: 'left', cursor: 'pointer', scrollSnapAlign: 'start'},
-  toolImage: {display: 'block', width: '100%', height: 'auto', aspectRatio: '4 / 3', borderRadius: 15},
+  toolImage: {display: 'block', width: '100%', height: 'auto', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 15},
   toolLabel: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', color: '#202024', fontSize: 16, fontWeight: 500},
   plans: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 32},
   plan: {overflow: 'hidden', paddingBottom: 16, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 20, backgroundColor: '#fff'},
   planHeader: {position: 'relative', isolation: 'isolate', overflow: 'hidden', minHeight: {default: 'clamp(180px, 20vw, 240px)', [media.mobile]: 'clamp(160px, 46.15vw, 180px)'}, color: '#fff', backgroundColor: '#171719'},
   planArtwork: {objectFit: 'cover', objectPosition: 'center'},
   planCopy: {position: 'relative', zIndex: 1, padding: {[media.mobile]: 16, default: 24}},
-  pill: {display: 'inline-block', marginTop: 10, padding: '4px 8px', color: '#fff', fontSize: 12, fontWeight: 500, lineHeight: '18px', borderRadius: 9, backgroundColor: 'rgba(255,255,255,.12)'},
   planTitle: {margin: 0, color: '#fff', fontSize: {[media.mobile]: 20, default: 'clamp(20px, 1.8vw, 26px)'}, fontWeight: 600, lineHeight: 1.2, letterSpacing: '-.02em', textShadow: '0 1px 8px rgba(0,0,0,.2)'},
-  planDescription: {maxWidth: {[media.mobile]: '70%', default: '52%'}, marginTop: 8, color: '#dedee3', fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
+  planDescription: {display: {[media.mobile]: 'none', default: 'block'}, maxWidth: '52%', marginTop: 8, color: '#dedee3', fontSize: 14, lineHeight: 1.5},
   checks: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', gap: {[media.mobile]: '8px 12px', default: 14}, margin: 0, padding: {[media.mobile]: 16, default: 20}, listStyle: 'none'},
   check: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
   outline: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, width: 'calc(100% - 32px)', margin: '12px 16px 0', padding: '8px 10px', color: campaign.lightInk, fontSize: 14, fontWeight: 600, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 13, backgroundColor: '#fff', cursor: 'pointer'},
   steps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 12, marginTop: 14},
-  step: {display: 'grid', gridTemplateColumns: 'min(100px,25%) minmax(0,1fr)', alignItems: 'center', minHeight: 102, overflow: 'hidden', borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 13, backgroundColor: '#fff'},
+  step: {display: 'grid', gridTemplateColumns: 'min(100px,30%) minmax(0,1fr)', alignItems: 'center', minHeight: 102, overflow: 'hidden', borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 13, backgroundColor: '#fff'},
   stepImage: {width: '100%', height: 'auto', aspectRatio: '1', objectFit: 'cover'},
   stepCopy: {padding: 12},
   stepTitle: {fontSize: 15, fontWeight: 600, lineHeight: 1.35, overflowWrap: 'anywhere'},

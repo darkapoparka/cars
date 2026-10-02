@@ -1,0 +1,1756 @@
+{
+  "layouts": [
+    {
+      "name": "bg-sell-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Оценка\nПреглед\nДокументи",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 62.671875,
+              "scrollWidth": 63
+            },
+            {
+              "text": "Преглед",
+              "width": 68.015625,
+              "scrollWidth": 68
+            },
+            {
+              "text": "Документи",
+              "width": 83.921875,
+              "scrollWidth": 84
+            }
+          ]
+        },
+        {
+          "text": "Оценка\nСледваща кола\nДоплащане",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 62.671875,
+              "scrollWidth": 63
+            },
+            {
+              "text": "Следваща кола",
+              "width": 108.765625,
+              "scrollWidth": 109
+            },
+            {
+              "text": "Доплащане",
+              "width": 87,
+              "scrollWidth": 87
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преглед",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Оценка",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        },
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        }
+      ]
+    },
+    {
+      "name": "bg-sell-320-text200",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": true,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Оценка\nПреглед\nДокументи",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 104.34375,
+              "scrollWidth": 104
+            },
+            {
+              "text": "Преглед",
+              "width": 115.03125,
+              "scrollWidth": 115
+            },
+            {
+              "text": "Документи",
+              "width": 146.828125,
+              "scrollWidth": 147
+            }
+          ]
+        },
+        {
+          "text": "Оценка\nСледваща кола\nДоплащане",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 104.34375,
+              "scrollWidth": 104
+            },
+            {
+              "text": "Следваща кола",
+              "width": 196.515625,
+              "scrollWidth": 197
+            },
+            {
+              "text": "Доплащане",
+              "width": 153,
+              "scrollWidth": 153
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преглед",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Оценка",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        },
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        }
+      ]
+    },
+    {
+      "name": "bg-finance-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Изберете автомобил",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Условия",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Сравнете офертите",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Одобрение",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Предаване",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-finance-320-text200",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": true,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Изберете автомобил",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Условия",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Сравнете офертите",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Одобрение",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Предаване",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-service-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Масло и филтри\nБезопасност\nГуми и спирачки",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Масло и филтри",
+              "width": 113.953125,
+              "scrollWidth": 114
+            },
+            {
+              "text": "Безопасност",
+              "width": 94.421875,
+              "scrollWidth": 94
+            },
+            {
+              "text": "Гуми и спирачки",
+              "width": 115.5625,
+              "scrollWidth": 116
+            }
+          ]
+        },
+        {
+          "text": "Диагностика\nОкачване и спирачки\nПрепоръки",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Диагностика",
+              "width": 95.28125,
+              "scrollWidth": 95
+            },
+            {
+              "text": "Окачване и спирачки",
+              "width": 142.6875,
+              "scrollWidth": 143
+            },
+            {
+              "text": "Препоръки",
+              "width": 85.03125,
+              "scrollWidth": 85
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Избор на услуга",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Удобен час",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преди ремонта",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "След ремонта",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Сервизна история",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-service-320-text200",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": true,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Масло и филтри\nБезопасност\nГуми и спирачки",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Масло и филтри",
+              "width": 205.90625,
+              "scrollWidth": 206
+            },
+            {
+              "text": "Безопасност",
+              "width": 166.84375,
+              "scrollWidth": 167
+            },
+            {
+              "text": "Гуми и спирачки",
+              "width": 209.125,
+              "scrollWidth": 209
+            }
+          ]
+        },
+        {
+          "text": "Диагностика\nОкачване и спирачки\nПрепоръки",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Диагностика",
+              "width": 168.546875,
+              "scrollWidth": 169
+            },
+            {
+              "text": "Окачване и спирачки",
+              "width": 262,
+              "scrollWidth": 262
+            },
+            {
+              "text": "Препоръки",
+              "width": 148.0625,
+              "scrollWidth": 148
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Избор на услуга",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Удобен час",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преди ремонта",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "След ремонта",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Сервизна история",
+          "lines": 2,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-sell-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Оценка\nПреглед\nДокументи",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 62.671875,
+              "scrollWidth": 63
+            },
+            {
+              "text": "Преглед",
+              "width": 68.015625,
+              "scrollWidth": 68
+            },
+            {
+              "text": "Документи",
+              "width": 83.921875,
+              "scrollWidth": 84
+            }
+          ]
+        },
+        {
+          "text": "Оценка\nСледваща кола\nДоплащане",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Оценка",
+              "width": 62.671875,
+              "scrollWidth": 63
+            },
+            {
+              "text": "Следваща кола",
+              "width": 108.765625,
+              "scrollWidth": 109
+            },
+            {
+              "text": "Доплащане",
+              "width": 87,
+              "scrollWidth": 87
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преглед",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Оценка",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 1.5,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": true
+        },
+        {
+          "mask": "none",
+          "ratio": 1.5,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": true
+        }
+      ]
+    },
+    {
+      "name": "bg-finance-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Изберете автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Условия",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Сравнете офертите",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Одобрение",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Предаване",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-service-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Масло и филтри\nБезопасност\nГуми и спирачки",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Масло и филтри",
+              "width": 113.953125,
+              "scrollWidth": 114
+            },
+            {
+              "text": "Безопасност",
+              "width": 94.421875,
+              "scrollWidth": 94
+            },
+            {
+              "text": "Гуми и спирачки",
+              "width": 115.5625,
+              "scrollWidth": 116
+            }
+          ]
+        },
+        {
+          "text": "Диагностика\nОкачване и спирачки\nПрепоръки",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Диагностика",
+              "width": 95.28125,
+              "scrollWidth": 95
+            },
+            {
+              "text": "Окачване и спирачки",
+              "width": 142.6875,
+              "scrollWidth": 143
+            },
+            {
+              "text": "Препоръки",
+              "width": 85.03125,
+              "scrollWidth": 85
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Избор на услуга",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Удобен час",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преди ремонта",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "След ремонта",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Сервизна история",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-sell-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Оценка на автомобила\nПреглед на състоянието\nСъдействие с документите",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Оценка на автомобила",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Преглед на състоянието",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Съдействие с документите",
+              "width": 328.390625,
+              "scrollWidth": 328
+            }
+          ]
+        },
+        {
+          "text": "Оценете автомобила си\nОткрийте следващия си автомобил\nПланирайте смяната",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Оценете автомобила си",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Открийте следващия си автомобил",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Планирайте смяната",
+              "width": 328.390625,
+              "scrollWidth": 328
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преглед",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Оценка",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 2.162962962962963,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": false
+        },
+        {
+          "mask": "none",
+          "ratio": 2.162962962962963,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": false
+        }
+      ]
+    },
+    {
+      "name": "bg-finance-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Изберете автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Документи",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Условия",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Сравнете офертите",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Одобрение",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Предаване",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "bg-service-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Изисквания за масло и филтри\nНива на течности и проверки за безопасност\nГуми, спирачки и светлини",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Изисквания за масло и филтри",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Нива на течности и проверки за безопасност",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Гуми, спирачки и светлини",
+              "width": 542,
+              "scrollWidth": 542
+            }
+          ]
+        },
+        {
+          "text": "Диагностика и проверка на състоянието\nОкачване и спирачна система\nПрепоръки за поддръжка",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Диагностика и проверка на състоянието",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Окачване и спирачна система",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Препоръки за поддръжка",
+              "width": 542,
+              "scrollWidth": 542
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Автомобил",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Избор на услуга",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Удобен час",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Преди ремонта",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "След ремонта",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Сервизна история",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-sell-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Valuation\nInspection\nDocuments",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Valuation",
+              "width": 75.046875,
+              "scrollWidth": 75
+            },
+            {
+              "text": "Inspection",
+              "width": 79.984375,
+              "scrollWidth": 80
+            },
+            {
+              "text": "Documents",
+              "width": 85.5,
+              "scrollWidth": 86
+            }
+          ]
+        },
+        {
+          "text": "Valuation\nNext car\nUpgrade",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Valuation",
+              "width": 75.046875,
+              "scrollWidth": 75
+            },
+            {
+              "text": "Next car",
+              "width": 69.578125,
+              "scrollWidth": 70
+            },
+            {
+              "text": "Upgrade",
+              "width": 69.234375,
+              "scrollWidth": 69
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Inspection",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Valuation",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        },
+        {
+          "mask": "none",
+          "ratio": 1.500039591416581,
+          "naturalRatio": 1.5023474178403755,
+          "startsBelowCopy": true
+        }
+      ]
+    },
+    {
+      "name": "en-finance-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Choose a car",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Finance terms",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Compare offers",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Lender approval",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Handover",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-service-320",
+      "width": 320,
+      "scrollWidth": 320,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Oil and filters\nSafety checks\nTyres and brakes",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Oil and filters",
+              "width": 97.875,
+              "scrollWidth": 98
+            },
+            {
+              "text": "Safety checks",
+              "width": 103,
+              "scrollWidth": 103
+            },
+            {
+              "text": "Tyres and brakes",
+              "width": 118.78125,
+              "scrollWidth": 119
+            }
+          ]
+        },
+        {
+          "text": "Diagnostics\nSuspension and brakes\nRecommendations",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Diagnostics",
+              "width": 88.609375,
+              "scrollWidth": 89
+            },
+            {
+              "text": "Suspension and brakes",
+              "width": 153.640625,
+              "scrollWidth": 154
+            },
+            {
+              "text": "Recommendations",
+              "width": 127.53125,
+              "scrollWidth": 128
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Service selection",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Visit time",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Before the repair",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "After the repair",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Service record",
+          "lines": 1,
+          "imageWidth": 88.1875,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-sell-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Valuation\nInspection\nDocuments",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Valuation",
+              "width": 75.046875,
+              "scrollWidth": 75
+            },
+            {
+              "text": "Inspection",
+              "width": 79.984375,
+              "scrollWidth": 80
+            },
+            {
+              "text": "Documents",
+              "width": 85.5,
+              "scrollWidth": 86
+            }
+          ]
+        },
+        {
+          "text": "Valuation\nNext car\nUpgrade",
+          "rows": 1,
+          "items": [
+            {
+              "text": "Valuation",
+              "width": 75.046875,
+              "scrollWidth": 75
+            },
+            {
+              "text": "Next car",
+              "width": 69.578125,
+              "scrollWidth": 70
+            },
+            {
+              "text": "Upgrade",
+              "width": 69.234375,
+              "scrollWidth": 69
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Inspection",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Valuation",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 1.5,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": true
+        },
+        {
+          "mask": "none",
+          "ratio": 1.5,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": true
+        }
+      ]
+    },
+    {
+      "name": "en-finance-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Choose a car",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Finance terms",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Compare offers",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Lender approval",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Handover",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-service-390",
+      "width": 390,
+      "scrollWidth": 390,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Oil and filters\nSafety checks\nTyres and brakes",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Oil and filters",
+              "width": 97.875,
+              "scrollWidth": 98
+            },
+            {
+              "text": "Safety checks",
+              "width": 103,
+              "scrollWidth": 103
+            },
+            {
+              "text": "Tyres and brakes",
+              "width": 118.78125,
+              "scrollWidth": 119
+            }
+          ]
+        },
+        {
+          "text": "Diagnostics\nSuspension and brakes\nRecommendations",
+          "rows": 2,
+          "items": [
+            {
+              "text": "Diagnostics",
+              "width": 88.609375,
+              "scrollWidth": 89
+            },
+            {
+              "text": "Suspension and brakes",
+              "width": 153.640625,
+              "scrollWidth": 154
+            },
+            {
+              "text": "Recommendations",
+              "width": 127.53125,
+              "scrollWidth": 128
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Service selection",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Visit time",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Before the repair",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "After the repair",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Service record",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-sell-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Car valuation\nCondition review\nGuided paperwork",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Car valuation",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Condition review",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Guided paperwork",
+              "width": 328.390625,
+              "scrollWidth": 328
+            }
+          ]
+        },
+        {
+          "text": "Value your car\nFind your next car\nPlan your upgrade",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Value your car",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Find your next car",
+              "width": 328.390625,
+              "scrollWidth": 328
+            },
+            {
+              "text": "Plan your upgrade",
+              "width": 328.390625,
+              "scrollWidth": 328
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "sell",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Inspection",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Valuation",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": [
+        {
+          "mask": "none",
+          "ratio": 2.162962962962963,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": false
+        },
+        {
+          "mask": "none",
+          "ratio": 2.162962962962963,
+          "naturalRatio": 1.5,
+          "startsBelowCopy": false
+        }
+      ]
+    },
+    {
+      "name": "en-finance-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [],
+      "campaigns": [
+        {
+          "kind": "finance",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Choose a car",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Documents",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Finance terms",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Compare offers",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Lender approval",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Handover",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        }
+      ],
+      "methodMedia": []
+    },
+    {
+      "name": "en-service-1440",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "largeText": false,
+      "clipped": [],
+      "lists": [
+        {
+          "text": "Oil and filter requirements\nFluid levels and safety checks\nTyres, brakes and lighting",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Oil and filter requirements",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Fluid levels and safety checks",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Tyres, brakes and lighting",
+              "width": 542,
+              "scrollWidth": 542
+            }
+          ]
+        },
+        {
+          "text": "Diagnostic and condition checks\nSuspension and braking system\nMaintenance recommendations",
+          "rows": 3,
+          "items": [
+            {
+              "text": "Diagnostic and condition checks",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Suspension and braking system",
+              "width": 542,
+              "scrollWidth": 542
+            },
+            {
+              "text": "Maintenance recommendations",
+              "width": 542,
+              "scrollWidth": 542
+            }
+          ]
+        }
+      ],
+      "campaigns": [
+        {
+          "kind": "care",
+          "buttonContained": true
+        }
+      ],
+      "visibleHeaderLogos": 0,
+      "steps": [
+        {
+          "title": "Car details",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Service selection",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Visit time",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 252
+        },
+        {
+          "title": "Before the repair",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "After the repair",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        },
+        {
+          "title": "Service record",
+          "lines": 1,
+          "imageWidth": 100,
+          "naturalWidth": 360
+        }
+      ],
+      "methodMedia": []
+    }
+  ],
+  "interactions": [
+    "Buy retains its dealer banner logo; all four mobile service-tab headers omit duplicate identity.",
+    "Finance: clear/retype fields, live estimates, zero interest, all term options retained, keyboard deposit, decimal rate, blur bounds, estimate details.",
+    "Finance enquiry opens/closes and returns keyboard focus; no message sent.",
+    "Both service details retain full descriptions and checks, close correctly and restore focus.",
+    "Sell and Service start with the selected make; browser Back restores the landing route.",
+    "Shared calculator fits and works inside PDP payment options at 320px."
+  ],
+  "errors": []
+}

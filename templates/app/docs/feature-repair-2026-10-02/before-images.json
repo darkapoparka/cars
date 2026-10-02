@@ -1,0 +1,390 @@
+[
+  {
+    "route": "sell",
+    "width": 320,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-sell-car-to-us.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 102,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-quick-vehicle-inspection.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 104.8125,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-no-hidden-fees.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 104.8125,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-hassle-free-paperwork.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 104.8125,
+        "grid": "73.5px 220.5px"
+      }
+    ]
+  },
+  {
+    "route": "service",
+    "width": 320,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-enter-car-details.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 106.875,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-select-car-service-package.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 125.0625,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-schedule-appointment.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 102,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-car-service-at-fingertips.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 102,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-delivery-and-payment.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 102,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-happy-driving.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 104.8125,
+        "grid": "73.5px 220.5px"
+      }
+    ]
+  },
+  {
+    "route": "finance",
+    "width": 320,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item1.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 106.875,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item2.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 106.875,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item3.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 125.0625,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item4.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 106.875,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item5.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 125.0625,
+        "grid": "73.5px 220.5px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-keys.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 73.5,
+        "height": 73.5,
+        "parentWidth": 296,
+        "parentHeight": 102,
+        "grid": "73.5px 220.5px"
+      }
+    ]
+  },
+  {
+    "route": "sell",
+    "width": 390,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-sell-car-to-us.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-quick-vehicle-inspection.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-no-hidden-fees.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/sell-hassle-free-paperwork.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      }
+    ]
+  },
+  {
+    "route": "service",
+    "width": 390,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-enter-car-details.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-select-car-service-package.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-schedule-appointment.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-car-service-at-fingertips.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-delivery-and-payment.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/service-happy-driving.png",
+        "complete": true,
+        "naturalWidth": 360,
+        "naturalHeight": 360,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      }
+    ]
+  },
+  {
+    "route": "finance",
+    "width": 390,
+    "images": [
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item1.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 106.875,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item2.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item3.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 104.8125,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item4.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-item5.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      },
+      {
+        "src": "http://127.0.0.1:6483/reference-assets/continuation/finance-keys.png",
+        "complete": true,
+        "naturalWidth": 252,
+        "naturalHeight": 252,
+        "width": 91,
+        "height": 91,
+        "parentWidth": 366,
+        "parentHeight": 102,
+        "grid": "91px 273px"
+      }
+    ]
+  }
+]

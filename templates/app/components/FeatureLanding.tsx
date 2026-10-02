@@ -16,8 +16,8 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
   sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', copy: 'A simple way to sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Sell your car', mobileCta: 'Ask about selling'},
-  finance: {mobileTitle: 'Car finance.', title: 'Finance your next car.', copy: 'Payment options for your next car.', mobileCopy: 'Explore payment options.', cta: 'Get assistance', mobileCta: 'Ask about finance'},
-  service: {mobileTitle: 'Car care.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Vehicle care options.', cta: 'Book a service', mobileCta: 'Ask about service'},
+  finance: {mobileTitle: 'Car finance.', title: 'Finance your next car.', copy: 'Payment options for your next car.', mobileCopy: 'Payment options', cta: 'Get assistance', mobileCta: 'Ask us'},
+  service: {mobileTitle: 'Car services.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Servicing and diagnostics.', cta: 'Book a service', mobileCta: 'Choose a service'},
 } as const;
 const sellBrands = [['Toyota', 'sell-brand-1'], ['Honda', 'sell-brand-2'], ['Nissan', 'sell-brand-3'], ['Mercedes', 'sell-brand-4'], ['BMW', 'sell-brand-5'], ['Audi', 'sell-brand-6'], ['Ford', 'sell-brand-7'], ['Kia', 'sell-brand-8'], ['Hyundai', 'brand-hyundai']] as const;
 const serviceBrands = [['Toyota', 'sell-brand-1'], ['Honda', 'sell-brand-2'], ['Nissan', 'sell-brand-3'], ['Hyundai', 'brand-hyundai'], ['BMW', 'sell-brand-5'], ['Chevrolet', 'brand-chevrolet'], ['Ford', 'sell-brand-7'], ['Kia', 'sell-brand-8'], ['Mercedes', 'sell-brand-4']] as const;
@@ -37,7 +37,7 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
     router.push(`/${kind}/details${params}`);
   }
   return <div {...stylex.props(s.screen)}>
-    <DiscoveryHeader active={kind} />
+    <DiscoveryHeader active={kind} hideMobileIdentity />
     <ShowroomBanner title={tx(current.title)} mobileTitle={current.mobileTitle} description={tx(current.copy)} mobileDescription={current.mobileCopy} action={current.cta} mobileAction={current.mobileCta} image={showroom.artwork.heroes[kind]} colourful onClick={() => start()} />
     <main {...stylex.props(s.content)}>
       <section aria-label={tx(kind === 'finance' ? 'Finance options' : 'Choose your brand')} {...stylex.props(s.firstSection)}>{kind !== 'finance' ? <h2 {...stylex.props(s.heading)}>{tx("Choose your brand")}</h2> : null}
@@ -59,7 +59,7 @@ const s = stylex.create({
   brandName: {minHeight: 20, lineHeight: '20px'},
   benefits: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12},
   benefit: {position: 'relative', aspectRatio: {[media.mobile]: '1.25', default: '1.5'}, padding: 0, overflow: 'hidden', textAlign: 'left', color: $.text, borderWidth: 0, borderRadius: 16, backgroundColor: '#f9f9f9', cursor: 'pointer'},
-  benefitArt: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'fill'},
+  benefitArt: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right bottom'},
   benefitTitle: {position: 'relative', zIndex: 1, minHeight: '100%', padding: {[media.mobile]: '12px 12px 64px', default: '24px 24px 90px'}, fontSize: {[media.mobile]: 15, default: 25}, fontWeight: 600, lineHeight: 1.3, whiteSpace: 'normal', textWrap: 'balance', letterSpacing: 0, overflowWrap: 'anywhere'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},

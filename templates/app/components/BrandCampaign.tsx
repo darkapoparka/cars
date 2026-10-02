@@ -12,7 +12,7 @@ type Kind = 'sell' | 'care' | 'finance';
 const campaigns = {
   sell: {title: 'Your next chapter.', mobileTitle: 'Your next car.', copy: 'Sell or part-exchange with the showroom.', mobileCopy: 'Sell or exchange.', action: 'Start with a valuation', mobileAction: 'Get valuation', href: '/sell/details'},
   care: {title: 'A little care. A better drive.', mobileTitle: 'Car care.', copy: 'Maintenance, inspections and advice for the road ahead.', mobileCopy: 'Servicing and inspections.', action: 'Explore car care', mobileAction: 'View services', href: '/service/details'},
-  finance: {title: 'Make the numbers work.', mobileTitle: 'Plan your budget.', copy: 'Explore deposits, payment terms and your next steps.', mobileCopy: 'Choose a deposit and term.', action: 'Discuss your options', mobileAction: 'Discuss finance', href: '/finance'},
+  finance: {title: 'Make the numbers work.', mobileTitle: 'Plan your budget.', copy: 'Explore deposits, payment terms and your next steps.', mobileCopy: 'Choose a deposit and term.', action: 'Discuss your options', mobileAction: 'Ask us', href: '/finance'},
 } as const;
 
 /** Original campaign compositions with readable, editable dealer copy. */
