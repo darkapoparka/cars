@@ -305,6 +305,14 @@ the configured currency's narrow symbol and locale number formatting.
 
 **YouTube.** The mobile video section is a rounded black container with a simple YouTube title and image-led video items. Its outgoing channel link, thumbnails and click-to-play player come from different parts of the implementation.
 
+## Article cards
+
+Desktop article titles on Home and Blog use the shared card type and leading,
+with a minimum space of two lines. Short titles leave the second line empty so
+summaries align; longer titles can grow without clipping. Keep the existing
+article order and natural wrapping rather than grouping by title length or
+inserting manual breaks. Mobile titles retain their natural height.
+
 ## Inventory and vehicle cards
 
 Mobile inventory starts with a rounded search field and compact filter/sort controls, followed by one horizontal quick-filter rail. Make and model stay together in that rail. Active chips expose removal; selectors retain a dropdown affordance. The filter sheet contains the deeper options.

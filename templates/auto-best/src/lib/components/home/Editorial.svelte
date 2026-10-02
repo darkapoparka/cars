@@ -443,7 +443,7 @@
     .dn-editorial-item__badge { display: none; }
     .dn-editorial-item__content { display: flex; flex: 1; flex-direction: column; padding: var(--dn-space-4); }
     .dn-editorial-item__meta { margin-bottom: var(--dn-space-1); }
-    .dn-editorial-item h3 { margin-bottom: 6px; }
+    .dn-editorial-item h3 { min-height: 2lh; margin-bottom: 6px; line-height: var(--dn-leading-card); }
     .dn-editorial-item__summary { margin-bottom: var(--dn-space-2); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
     .dn-editorial-item__action { display: inline-flex; min-height: 28px; align-items: center; gap: var(--dn-space-2); margin-top: auto; color: var(--dn-red); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
 
