@@ -10,7 +10,7 @@ Runtime media is stored under `static/`; its public URL omits that directory nam
 | Vehicle photography | Inventory records and `assets/images/lead/day-night-stock-*` | Source/sample stock photos; some fixtures reuse images |
 | Hero cutouts | `vehicle-artwork.ts`, `HeroVehicles`, `VehicleCutout` | Generated vehicles with measured visible bounds |
 | Service/menu illustrations | `feature-artwork.ts`, `service-artwork.ts` | Generated conceptual service imagery |
-| Home section backgrounds | `leadSite.artwork.homeSectionBackgrounds`, `homeSectionCutouts`, Home route | Generated graphite backdrops; advice layers transparent notebook/pen and checklist cutouts with complete outlines. [Prompts and provenance](provenance/home-section-backgrounds-2026-10-02.json) retain the previous advice plate. Inventory vehicle cutouts remain separate. |
+| Home section backgrounds | `leadSite.artwork.homeSectionBackgrounds`, Home route | Four generated graphite textures share a quiet center and restrained edge detail, without car or editorial object overlays. [Prompts and provenance](provenance/home-section-backgrounds-2026-10-02.json) retain the superseded advice plate and transparent cutouts. |
 | Body/brand discovery | `home.ts`, `assets/images/icon-box`, `assets/images/partner` | Category art and marque graphics |
 | Editorial images | `editorial.ts`, `assets/images/blog` | Mixed reference and photo-derived imagery; see credits |
 | Videos | `videos.ts`, local thumbnails | Selected third-party YouTube content |

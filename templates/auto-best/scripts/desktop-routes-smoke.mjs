@@ -220,9 +220,15 @@ try {
                 await page.evaluate(() => scrollTo(0, 0));
               }
               if (route === '') {
-                for (const heading of await page.locator('.dn-inventory__heading, .dn-editorial__heading').all()) {
-                  assert.equal(await heading.locator('.dn-campaign-vehicles--section').count(), 1, 'Dark section banners reuse the reviewed car artwork');
-                  assert.equal(await heading.locator('.dn-vehicle-cutout').count(), 2, 'Each section banner has one vehicle pair');
+                for (const [selector, background] of [
+                  ['.dn-inventory__heading', 'home-section-inventory-backdrop-v1.webp'],
+                  ['.dn-body-types__heading', 'home-section-body-backdrop-v1.webp'],
+                  ['.dn-brand-hero__copy', 'home-section-brands-backdrop-v1.webp'],
+                  ['.dn-editorial__heading', 'home-section-guides-backdrop-v1.webp']
+                ]) {
+                  const heading = page.locator(selector);
+                  assert.equal(await heading.locator('.dn-campaign-vehicles, .dn-vehicle-cutout').count(), 0, 'Home section headers leave vehicle imagery to the cards');
+                  assert.match(await heading.evaluate(e => getComputedStyle(e).backgroundImage), new RegExp(background.replaceAll('.', '\\.')), 'Home section banners use their configured graphite backgrounds');
                 }
                 for (const section of await page.locator('.dn-home-content-section').all()) assert.equal(await section.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Home sections use one canvas');
                 for (const card of await page.locator('.dn-vehicle-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Vehicle cards remain white');

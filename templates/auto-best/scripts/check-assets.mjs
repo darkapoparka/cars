@@ -10,14 +10,16 @@ const staticRoot = path.join(root, 'static');
 // Four generated Home section backdrops extend the guarded media inventory.
 // The mobile Volkswagen badge is a curated Home shortcut.
 // The Home advice banner has a separate editorial plate.
-// Advice uses two transparent editorial cutouts over its graphite backdrop.
+// Superseded advice illustrations remain retained for provenance.
 const guardedMediaCount = 179;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
-// Previous full-frame advice artwork is retained; desktop now layers editorial cutouts.
+// Home section banners use graphite textures; earlier advice artwork is retained.
 retainedSourceAssets.add('/assets/images/template/home-section-guides-editorial-v2.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-guides-notebook-cutout-v3.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-guides-checklist-cutout-v3.webp');
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
 // Preserve the previous editorial hero photograph as source history.

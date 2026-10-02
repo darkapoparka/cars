@@ -127,8 +127,9 @@ It also verifies
 single-line desktop card titles with complete accessible labels and compact
 title-to-specifications spacing, one selected raster scene request on About and
 Contact, and distinct original car pairs on Home, Inventory and Blog. Mobile
-requests none of these desktop scenes. Home's dark inventory/editorial section
-banners reuse the original cutouts. The suite also checks
+requests none of these desktop scenes. Home's four desktop section banners
+use their configured graphite textures without vehicle or editorial
+object overlays. The suite also checks
 title/description/control separation, real Onest
 glyph rendering (including Cyrillic), visible images, page overflow and runtime
 errors. Desktop content canvases are light grey with white cards;

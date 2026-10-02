@@ -320,27 +320,20 @@ the configured currency's narrow symbol and locale number formatting.
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections share
-one charcoal banner, a white heading and a white action. Inventory keeps its
-existing car cutouts over a brushed graphite background. Body types use
-sculpted satin contours and brands use fine perforated metal. Advice has its
-own low-angle notebook/pen and checklist cutouts, layered separately over the
-graphite backdrop. Both keep complete outlines and natural proportions; their
-width grows from 164px to 250px with the viewport, with side clearance and a
-24px lower inset. They use the same isolated-object composition as inventory
-while distinguishing reading from browsing cars. `leadSite.artwork.homeSectionCutouts`
-owns their transparent WebP sources. Each keeps detail
-at the edges and a quiet center behind copy. `CampaignVehiclePair` disables
-its native dots, arcs and gradient only in Home inventory, letting the
-background sit behind the unchanged car pair. `leadSite.artwork.homeSectionBackgrounds` owns the
-versioned WebP URLs; the Home route applies them only from 992px, so tablet and
-mobile do not request the artwork. Their original framing and rounded panel
-joins stay intact. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)
-record generation and delivery encodings. All content sections use the shared 32px section
-padding, giving adjacent panels the same 64px gap. The white content panel
-overlaps its banner by 24px, with rounded upper corners forming an inward curve
-at the join. Heading and action are centered within the visible banner above
-that overlap, with equal clearance above and below. The optional video section
-uses the same banner geometry. Mobile retains its compact section headings.
+a restrained graphite banner with a centered white heading and white action.
+Their backgrounds use brushed panels, satin contours or fine perforated metal,
+with detail at the edges and a quiet center behind copy. The headers contain
+no vehicle or editorial object cutouts; the cards below supply the imagery.
+`leadSite.artwork.homeSectionBackgrounds` owns the four versioned WebP URLs.
+The Home route applies them only from 992px, so tablet and mobile do not request
+the artwork. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)
+record generation, delivery encodings and superseded advice illustrations.
+All content sections use the shared 32px section padding, giving adjacent panels
+the same 64px gap. The white content panel overlaps its 164px banner by 24px,
+with rounded upper corners forming an inward curve at the join. Heading and
+action are centered within the visible banner above that overlap, with equal
+clearance above and below. The optional video section uses the same banner
+geometry. Mobile retains its compact section headings.
 
 Home groups curated previews inside these panels. Inventory and Blog put their
 full result grids directly on the shared grey canvas, with controls in their
