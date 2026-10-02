@@ -3,6 +3,7 @@
   import EnquiryForm from "../components/EnquiryForm.svelte";
   import Icon from "../components/Icon.svelte";
   import SocialLinks from "../components/SocialLinks.svelte";
+  import PageBanner from "../components/PageBanner.svelte";
   import { route } from "../lib/router.svelte";
   let { selling = false }: { selling?: boolean } = $props();
   let subject = $derived(
@@ -13,14 +14,15 @@
 </script>
 
 <!-- Adapted from contact.html: title, wide visual, form and bordered contact column. -->
-<section class="bc-inner contact-us-section">
+<section class="bc-inner contact-us-section has-page-banner">
+  <PageBanner
+    title={selling ? "Sell Your Car" : "Contact us"}
+    breadcrumb={selling ? "Sell your car" : "Contact"}
+    description={selling
+      ? "Tell us about your car and your next step."
+      : "Questions about a car or a viewing? Let’s talk."}
+  />
   <div class="bc-container">
-    <nav class="bc-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span>/</span>
-      <span aria-current="page">Contact</span>
-    </nav>
-    <h1 class="bc-page-title">{selling ? "Sell Your Car" : "Contact us"}</h1>
     {#if brand.showroomMap}
       <section class="bc-showroom-map" aria-label="Showroom map">
         <iframe

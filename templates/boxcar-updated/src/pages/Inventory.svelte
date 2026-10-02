@@ -11,6 +11,7 @@
   import { selections } from "../lib/state.svelte";
   import VehicleCard from "../components/VehicleCard.svelte";
   import Icon from "../components/Icon.svelte";
+  import PageBanner from "../components/PageBanner.svelte";
   let { savedOnly = false }: { savedOnly?: boolean } = $props();
   let filters = $derived(parseFilters(route.search));
   let draft = $state<Filters>({ ...emptyFilters }),
@@ -76,36 +77,15 @@
 
 <div
   class="page-shell inventory-page bc-inner"
-  class:has-inventory-banner={!savedOnly}
+  class:has-page-banner={!savedOnly}
 >
   {#if !savedOnly}
-    <section class="inventory-banner" aria-labelledby="inventory-title">
-      <div class="bc-container inventory-banner-inner">
-        <div class="inventory-banner-copy">
-          <nav class="breadcrumbs" aria-label="Breadcrumb">
-            <a href="/">Home</a>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page">Cars</span>
-          </nav>
-          <div class="page-heading">
-            <div>
-              <h1 id="inventory-title">Cars for sale</h1>
-              <p>
-                Find your next car. Save your favourites and compare the
-                details.
-              </p>
-            </div>
-          </div>
-        </div>
-        <img
-          class="inventory-banner-art"
-          src="/media/services/boxcar-browse-v1.webp"
-          alt=""
-          width="720"
-          height="405"
-        />
-      </div>
-    </section>
+    <PageBanner
+      title="Cars for sale"
+      breadcrumb="Cars"
+      description="Find your next car. Save your favourites and compare the details."
+      headingId="inventory-title"
+    />
   {/if}
   <div class="container">
     {#if savedOnly}

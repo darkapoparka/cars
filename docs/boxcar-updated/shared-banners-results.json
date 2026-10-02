@@ -1,0 +1,3682 @@
+{
+  "checkedAt": "2026-10-02T20:23:21.882Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 440,
+        "right": 1380,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/?intent=sell",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Sell Your Car",
+      "titleCount": 1,
+      "breadcrumb": "Sell your car",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/?intent=viewing",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1241,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 320,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1241,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 1161,
+        "height": 440,
+        "right": 1201,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1241,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 1161,
+        "height": 300,
+        "right": 1201,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 250,
+        "height": 986.890625,
+        "right": 290,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 944,
+        "height": 380,
+        "right": 984,
+        "bottom": 678
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 944,
+        "height": 300,
+        "right": 984,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 56,
+        "right": 744,
+        "bottom": 354
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 380,
+        "right": 744,
+        "bottom": 678
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 300,
+        "right": 744,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 354,
+        "height": 132,
+        "right": 372,
+        "bottom": 228
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 56,
+        "right": 372,
+        "bottom": 324
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 354,
+        "height": 132,
+        "right": 372,
+        "bottom": 228
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 504,
+        "right": 372,
+        "bottom": 772
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 156,
+        "right": 390,
+        "bottom": 232
+      },
+      "copy": {
+        "x": 18,
+        "y": 101,
+        "width": 354,
+        "height": 106,
+        "right": 372,
+        "bottom": 207
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 252,
+        "width": 354,
+        "height": 240,
+        "right": 372,
+        "bottom": 492
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 470,
+        "right": 302,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 508
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 200,
+      "route": "/inventory/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 446.671875,
+        "right": 320,
+        "bottom": 522.671875
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 406.671875,
+        "right": 302,
+        "bottom": 502.671875
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 542.671875,
+        "width": 284,
+        "height": 74,
+        "right": 302,
+        "bottom": 616.671875
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.6,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 200,
+      "route": "/about/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 446.671875,
+        "right": 320,
+        "bottom": 522.671875
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 406.671875,
+        "right": 302,
+        "bottom": 502.671875
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 542.671875,
+        "width": 284,
+        "height": 470,
+        "right": 302,
+        "bottom": 1012.671875
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.6,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 200,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 399.078125,
+        "right": 320,
+        "bottom": 475.078125
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 359.078125,
+        "right": 302,
+        "bottom": 455.078125
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 495.078125,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 735.078125
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.6,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/?intent=sell",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 156,
+        "right": 320,
+        "bottom": 232
+      },
+      "copy": {
+        "x": 18,
+        "y": 101,
+        "width": 284,
+        "height": 106,
+        "right": 302,
+        "bottom": 207
+      },
+      "title": "Sell Your Car",
+      "titleCount": 1,
+      "breadcrumb": "Sell your car",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 252,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 492
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/?intent=viewing",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 508
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 440,
+        "right": 1380,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/?intent=sell",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Sell Your Car",
+      "titleCount": 1,
+      "breadcrumb": "Sell your car",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "route": "/contact/?intent=viewing",
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 470,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 970,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 60,
+        "y": 298,
+        "width": 1320,
+        "height": 300,
+        "right": 1380,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 52,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 352,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 1088,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1388,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1241,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 320,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1241,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 1161,
+        "height": 440,
+        "right": 1201,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1241,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 370.5,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 1161,
+        "height": 300,
+        "right": 1201,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 32,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 332,
+          "bottom": 262
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": true,
+          "x": 909,
+          "y": 93.25,
+          "width": 300,
+          "height": 168.75,
+          "right": 1209,
+          "bottom": 262
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 250,
+        "height": 986.890625,
+        "right": 290,
+        "bottom": 1284.890625
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 944,
+        "height": 380,
+        "right": 984,
+        "bottom": 678
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 262,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 762,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 40,
+        "y": 298,
+        "width": 944,
+        "height": 300,
+        "right": 984,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 56,
+        "right": 744,
+        "bottom": 354
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 380,
+        "right": 744,
+        "bottom": 678
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "copy": {
+        "x": 134,
+        "y": 121,
+        "width": 500,
+        "height": 118,
+        "right": 634,
+        "bottom": 239
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 300,
+        "right": 744,
+        "bottom": 598
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 15,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 354,
+        "height": 132,
+        "right": 372,
+        "bottom": 228
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 56,
+        "right": 372,
+        "bottom": 324
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 354,
+        "height": 132,
+        "right": 372,
+        "bottom": 228
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 504,
+        "right": 372,
+        "bottom": 772
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 156,
+        "right": 390,
+        "bottom": 232
+      },
+      "copy": {
+        "x": 18,
+        "y": 101,
+        "width": 354,
+        "height": 106,
+        "right": 372,
+        "bottom": 207
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 252,
+        "width": 354,
+        "height": 240,
+        "right": 372,
+        "bottom": 492
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "route": "/inventory/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "route": "/about/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 470,
+        "right": 302,
+        "bottom": 738
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 508
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 200,
+      "route": "/inventory/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 446.6875,
+        "right": 320,
+        "bottom": 522.6875
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 406.6875,
+        "right": 302,
+        "bottom": 502.6875
+      },
+      "title": "Cars for sale",
+      "titleCount": 1,
+      "breadcrumb": "Cars",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 542.6875,
+        "width": 284,
+        "height": 74,
+        "right": 302,
+        "bottom": 616.6875
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.599998,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 200,
+      "route": "/about/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 446.6875,
+        "right": 320,
+        "bottom": 522.6875
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 406.6875,
+        "right": 302,
+        "bottom": 502.6875
+      },
+      "title": "About Boxcars",
+      "titleCount": 1,
+      "breadcrumb": "About us",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 542.6875,
+        "width": 284,
+        "height": 470,
+        "right": 302,
+        "bottom": 1012.6875
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.599998,
+      "galleryImages": 5,
+      "benefits": 4,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 200,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 399.09375,
+        "right": 320,
+        "bottom": 475.09375
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 359.09375,
+        "right": 302,
+        "bottom": 455.09375
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 495.09375,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 735.09375
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 28,
+      "descriptionLine": 47.599998,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/?intent=sell",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 156,
+        "right": 320,
+        "bottom": 232
+      },
+      "copy": {
+        "x": 18,
+        "y": 101,
+        "width": 284,
+        "height": 106,
+        "right": 302,
+        "bottom": 207
+      },
+      "title": "Sell Your Car",
+      "titleCount": 1,
+      "breadcrumb": "Sell your car",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 252,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 492
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "route": "/contact/?intent=viewing",
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "copy": {
+        "x": 18,
+        "y": 96,
+        "width": 284,
+        "height": 132,
+        "right": 302,
+        "bottom": 228
+      },
+      "title": "Contact us",
+      "titleCount": 1,
+      "breadcrumb": "Contact",
+      "home": "/",
+      "next": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 240,
+        "right": 302,
+        "bottom": 508
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "images": [
+        {
+          "class": "banner-car banner-car-left svelte-lgqbin",
+          "src": "/media/banners/boxcar-estate-right-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        {
+          "class": "banner-car banner-car-right svelte-lgqbin",
+          "src": "/media/banners/boxcar-suv-left-v1.webp",
+          "alt": "",
+          "loaded": true,
+          "visible": false,
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      ],
+      "clipped": [],
+      "descriptionFont": 14,
+      "descriptionLine": 26,
+      "galleryImages": 0,
+      "benefits": 0,
+      "overlay": false
+    }
+  ],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "passed": [
+        "Header/mobile navigation connects banner pages",
+        "Viewing subject preserved",
+        "Selling heading and form preserved",
+        "Required fields and truthful local preview preserved",
+        "Editing clears preview",
+        "Breadcrumb opens homepage",
+        "Saved heading preserved"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "passed": [
+        "Header/mobile navigation connects banner pages",
+        "Viewing subject preserved",
+        "Selling heading and form preserved",
+        "Required fields and truthful local preview preserved",
+        "Editing clears preview",
+        "Breadcrumb opens homepage",
+        "Saved heading preserved"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "passed": [
+        "Header/mobile navigation connects banner pages",
+        "Viewing subject preserved",
+        "Selling heading and form preserved",
+        "Required fields and truthful local preview preserved",
+        "Editing clears preview",
+        "Breadcrumb opens homepage",
+        "Saved heading preserved"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "passed": [
+        "Header/mobile navigation connects banner pages",
+        "Viewing subject preserved",
+        "Selling heading and form preserved",
+        "Required fields and truthful local preview preserved",
+        "Editing clears preview",
+        "Breadcrumb opens homepage",
+        "Saved heading preserved"
+      ]
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "sourceHashes": {
+    "src/components/PageBanner.svelte": "f92064f135fe23745251dc4430e7f02203b84b26352017cde73cacced6ff6ecd",
+    "src/pages/Inventory.svelte": "b660ccf560124a5fad82b7560e1d41b3799329a06c3a2ae62ce2e3c2a6cb4af7",
+    "src/pages/About.svelte": "a9a3d9bef8d0dde640ef466d25f2a85206bc50e1f3e04a6f57a6ab0e05452c55",
+    "src/pages/Contact.svelte": "c05c269dce81c0e61de5c60900bd1d1ea59559e091a4ec96528a9498fd9b5cc0",
+    "src/inner-pages.css": "47f1c510ab45d1b78bba149b15e8ebc3b6526ca6b89f0ddefd1a4019c19f0154",
+    "src/styles.css": "120dababa40b0716dc72752b386e5117700dfdfd70c9ec7d9c07f055bcbcbf0d",
+    "src/components/VehicleCard.svelte": "6dab2785561c2a36733097dd994c8ed18fe9dd7f1fdd487fe3ce74d9d54fbc20",
+    "src/components/Header.svelte": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5",
+    "src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "src/lib/router.svelte.ts": "72158282e18add988b385ba2ab6d011c0a72d617994c39a48bd2091de6913dc7",
+    "src/lib/state.svelte.ts": "e43e38b82cb06072e1d067f15f092a5eb2da3b591d73c946354d388f16eadfd5",
+    "public/media/services/boxcar-browse-v1.webp": "86eb4da0d3a26bc5a6b2cbaa486c1771f1792dae63e6dd31cadd02667fdcccae",
+    "public/media/banners/boxcar-estate-right-v1.webp": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+    "public/media/banners/boxcar-suv-left-v1.webp": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f"
+  },
+  "unchangedSources": [
+    "src/styles.css",
+    "src/components/VehicleCard.svelte",
+    "src/lib/router.svelte.ts",
+    "src/lib/state.svelte.ts",
+    "public/media/services/boxcar-browse-v1.webp",
+    "src/pages/VehicleDetail.svelte",
+    "src/components/Header.svelte",
+    "src/pages/Compare.svelte",
+    "src/components/Footer.svelte",
+    "src/components/EnquiryForm.svelte",
+    "src/data/brand.ts",
+    "src/reference/CuratedHome.svelte"
+  ],
+  "assets": [
+    {
+      "source": "C:/Users/radev/.codex/generated_images/01a0f987-7986-7983-bb45-6c1286ac06ad/exec-cf7426ed-2a90-4055-b21c-49f75b17b3e4.png",
+      "file": "boxcar-estate-right-v1.webp",
+      "direction": "right",
+      "position": "left",
+      "crop": {
+        "left": 37,
+        "top": 134,
+        "width": 1578,
+        "height": 736
+      },
+      "bytes": 58860,
+      "sha256": "d2d3deacbc9f566a22783f2a5eab6335473bf2e47c627261e8895dbff6fece70",
+      "sourceSha256": "5f378068be7a11aaf6b035f483002d1ccd658c5bae4f57b99da72e68fc1cc6ed",
+      "width": 720,
+      "height": 405,
+      "hasAlpha": true
+    },
+    {
+      "source": "C:/Users/radev/.codex/generated_images/01a0f987-7986-7983-bb45-6c1286ac06ad/exec-8694386b-5355-4be5-a4ad-29c2b55840d8.png",
+      "file": "boxcar-suv-left-v1.webp",
+      "direction": "left",
+      "position": "right",
+      "crop": {
+        "left": 81,
+        "top": 99,
+        "width": 1526,
+        "height": 769
+      },
+      "bytes": 65004,
+      "sha256": "5c0c6062ef8af622fd852a7a43b2dfc989d6836f1528698b51d88f9352640f2f",
+      "sourceSha256": "b11b365e42dbf4ca52dee1932d80ca831fa58adb5bc26822dc6d7988a2c31de3",
+      "width": 720,
+      "height": 405,
+      "hasAlpha": true
+    }
+  ],
+  "passed": true,
+  "completedAt": "2026-10-02T20:25:50.953Z"
+}

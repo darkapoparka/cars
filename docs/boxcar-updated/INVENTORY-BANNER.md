@@ -2,6 +2,8 @@
 
 Updated locally on 2 October 2026, [inventory on port 6455](http://127.0.0.1:6455/inventory/).
 
+The subsequent [shared banner refinement](SHARED-BANNERS.md) replaces the grouped right-side illustration with two individual inward-facing cutouts and applies the same banner to About and Contact. This page's screenshots and receipt record the preceding inventory-only version.
+
 Inventory now opens with a shallow full-width pale blue banner. Its centered Cars for sale title, concise introduction and compact Home / Cars breadcrumb sit against a soft gradient and decorative circular shapes. The existing generated Browse Cars cutout appears on wide desktops, clear of the copy; it is hidden below 1241 px. The banner is 180 px high on wide screens and grows naturally for larger text. Filters and stock remain 20–28 px beneath it on the existing grey canvas, with white inventory panels.
 
 The cutout is decorative marketing artwork with empty alt text, not a stock photograph or a new promotional offer. It reuses `public/media/services/boxcar-browse-v1.webp`; [existing generation provenance](../../templates/boxcar-updated/provenance/service-art-2026-10-02.md) applies. No new asset or image-generation call was needed. Saved cars retains its earlier centered heading on grey. The homepage, original ten reference homes and other supporting-page sources were not changed.

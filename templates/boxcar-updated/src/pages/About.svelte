@@ -1,6 +1,7 @@
 <script lang="ts">
   import { brand } from "../data/brand";
   import Icon from "../components/Icon.svelte";
+  import PageBanner from "../components/PageBanner.svelte";
   const benefits = [
     [
       "choice",
@@ -40,19 +41,13 @@
 </script>
 
 <!-- Boxcar gallery and illustrations with one centered dealer introduction. -->
-<section class="bc-inner about-inner-one">
+<section class="bc-inner about-inner-one has-page-banner">
+  <PageBanner
+    title={`About ${brand.name}`}
+    breadcrumb="About us"
+    description="Browse our cars and compare your favourites before your next viewing."
+  />
   <div class="bc-container">
-    <nav class="bc-breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span>/</span>
-      <span aria-current="page">About us</span>
-    </nav>
-    <div class="bc-about-intro">
-      <h1 class="bc-page-title">About {brand.name}</h1>
-      <p>
-        Browse our cars and compare your favourites before your next viewing.
-      </p>
-    </div>
     <div class="galler-section" aria-label="Showroom photo gallery">
       <div class="exp-block">
         <div class="exp-box">
