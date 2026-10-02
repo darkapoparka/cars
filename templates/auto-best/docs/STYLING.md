@@ -264,8 +264,10 @@ The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte
 
 From 992px, Home and Inventory share a 56px native facet-select frame (58px including
 the enclosing border). The value uses a 12px top inset, bringing it closer to the
-small caption at the existing 8px anchor. Typography, full-field click targets and
-native selection behavior stay intact; smaller breakpoints retain their own geometry.
+small caption at the existing 8px anchor. The shared select chevron sits at the
+field's center plus half that inset, aligning it with the selected value. The
+same inset owns both positions. Typography, full-field click targets and native
+selection behavior stay intact; smaller breakpoints retain their own geometry.
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 

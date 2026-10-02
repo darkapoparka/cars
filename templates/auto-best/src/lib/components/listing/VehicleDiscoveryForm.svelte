@@ -160,7 +160,8 @@
     .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
-    .dn-discovery__facets select { height: 56px; padding-top: var(--dn-space-3); }
+    .dn-discovery__facets { --dn-discovery-value-inset: var(--dn-space-3); }
+    .dn-discovery .dn-discovery__facets label > select { height: 56px; padding-top: var(--dn-discovery-value-inset); background-position-y: calc(50% + var(--dn-discovery-value-inset) / 2); }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
   }
