@@ -11,6 +11,10 @@ export type AuxeroAgentCard = {
 	active: boolean;
 	emailHref: string;
 	image: string;
+	desktopPortrait?: {
+		position: string;
+		scale?: number;
+	};
 	management?: {
 		assignedLeadsHref: '/admin/inquiries?role=admin';
 		assignedLeadsLabel: string;

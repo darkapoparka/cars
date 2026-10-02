@@ -85,7 +85,12 @@ test('About opens with the team and retains accessible social destinations', asy
 	for (const link of await socials.all()) {
 		await expect(link).toHaveAttribute('href', /^https:/);
 		expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(48);
-		await expect(link.locator('img')).toHaveAttribute('src', /assets\/icons\/brands\//);
+		if (info.project.name === 'desktop') {
+			await expect(link.locator('svg')).toBeVisible();
+			await expect(link.locator('svg')).toHaveAttribute('aria-hidden', 'true');
+		} else {
+			await expect(link.locator('img')).toHaveAttribute('src', /assets\/icons\/brands\//);
+		}
 	}
 });
 
@@ -102,7 +107,11 @@ test('Contact pairs the framed location with a usable form and reflows at narrow
 	expect(map.x + map.width).toBeLessThan(bounds!.x);
 	expect(Math.abs(map.y - bounds!.y)).toBeLessThan(1);
 	expect(Math.abs(bounds!.x + bounds!.width - parent!.x - parent!.width)).toBeLessThan(1);
-	await expect(page.locator('.contact-channel')).toHaveCount(3);
+	await expect(page.locator('#contact-details .contact-intake-grid')).toBeVisible();
+	await expect(page.locator('.contact-channel')).toHaveCount(0);
+	await expect(page.locator('.site-intro a[href^="tel:"]')).toHaveCount(1);
+	await expect(page.locator('.site-intro a[href="#contact-enquiry"]')).toBeVisible();
+	await expect(page.locator('.site-intro__desktop-secondary a')).toHaveCount(2);
 	expect(
 		await page.locator('.site-intro__content').evaluate((node) => getComputedStyle(node).textAlign)
 	).toBe('center');

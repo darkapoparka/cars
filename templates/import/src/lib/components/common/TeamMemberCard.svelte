@@ -7,7 +7,7 @@
 		mobileCompact = false,
 		desktopFramed = false
 	}: {
-		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials'>;
+		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials' | 'desktopPortrait'>;
 		mobileCompact?: boolean;
 		desktopFramed?: boolean;
 	} = $props();
@@ -24,14 +24,18 @@
 	class:team-card--has-socials={socials.length > 0}
 	class:team-card--desktop-framed={desktopFramed}
 >
-	<img
-		class="team-card__portrait"
-		src={assetHref(person.image)}
-		alt={person.name}
-		width="600"
-		height="700"
-		loading="lazy"
-	/>
+	<div class="team-card__media">
+		<img
+			class="team-card__portrait"
+			style:--team-portrait-position={person.desktopPortrait?.position}
+			style:--team-portrait-scale={person.desktopPortrait?.scale}
+			src={assetHref(person.image)}
+			alt={person.name}
+			width="600"
+			height="700"
+			loading="lazy"
+		/>
+	</div>
 	<div class="team-card__body">
 		<h3>{person.name}</h3>
 		<p>{person.title}</p>
@@ -52,6 +56,9 @@
 		height: 360px;
 		object-fit: cover;
 		object-position: top;
+	}
+	.team-card__media {
+		display: contents;
 	}
 	.team-card__body {
 		display: grid;
@@ -86,9 +93,17 @@
 		.team-card:focus-within {
 			box-shadow: var(--bc-shadow-card);
 		}
-		.team-card__portrait {
+		.team-card__media {
+			display: block;
+			flex-shrink: 0;
+			overflow: hidden;
 			height: var(--bc-desktop-team-image-height);
-			object-position: center 25%;
+		}
+		.team-card__portrait {
+			height: 100%;
+			object-position: var(--team-portrait-position, center 25%);
+			transform: scale(var(--team-portrait-scale, 1));
+			transform-origin: var(--team-portrait-position, center 25%);
 		}
 		.team-card__body {
 			flex: 1;
@@ -125,7 +140,8 @@
 			border-radius: var(--bc-desktop-editorial-radius);
 			box-shadow: var(--bc-desktop-editorial-shadow);
 		}
-		.team-card--desktop-framed .team-card__portrait {
+		.team-card--desktop-framed .team-card__media {
+			--team-portrait-position: center 10%;
 			border-radius: var(--bc-desktop-editorial-photo-radius);
 		}
 		.team-card--desktop-framed .team-card__body {

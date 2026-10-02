@@ -69,7 +69,7 @@
 			</DesktopHeroActions>
 		{/snippet}
 		{#snippet desktopSecondaryActions()}
-			<SocialLinks links={data.site.socials} tone="dark" />
+			<SocialLinks links={data.site.socials} tone="glass" />
 		{/snippet}
 	</PageIntro>
 	<div class="site-mobile-only">

@@ -9,7 +9,9 @@
 	import Action from '$lib/components/common/Action.svelte';
 	let { site, locale }: { site: SiteConfig; locale: Locale } = $props();
 	const copy = $derived(contactDesktopCopy[locale]);
-	const message = $derived(desktopContactChannels(site, locale)[2]);
+	const message = $derived(
+		desktopContactChannels(site, locale).find((channel) => channel.kind === 'message')
+	);
 </script>
 
 <div class="contact-hero-details">
@@ -26,9 +28,11 @@
 		>
 			{copy.directions}<ArrowUpRight size={18} aria-hidden="true" />
 		</Action>
-		<Action href={message.href} variant="glass" size="compact">
-			<MessageCircle size={18} aria-hidden="true" />{message.title} · {message.text}
-		</Action>
+		{#if message}
+			<Action href={message.href} variant="glass" size="compact">
+				<MessageCircle size={18} aria-hidden="true" />{message.title} · {message.text}
+			</Action>
+		{/if}
 	</div>
 </div>
 

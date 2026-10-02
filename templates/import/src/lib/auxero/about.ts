@@ -129,7 +129,8 @@ export const auxeroAboutContent: AuxeroAboutContent = {
 					label: 'Кристиян Кирилов в Instagram'
 				}
 			],
-			image: '/assets/daynight/team/kristian-kirilov-public.jpg'
+			image: '/assets/daynight/team/kristian-kirilov-public.jpg',
+			desktopPortrait: { position: '60% top', scale: 1.65 }
 		},
 		{
 			...agentCardsFromAgents(agents)[1],

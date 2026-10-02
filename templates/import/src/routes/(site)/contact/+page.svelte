@@ -12,15 +12,13 @@
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
 	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
 	import ContactHeroDetails from '$lib/components/contact/ContactHeroDetails.svelte';
-	import ImageLinkBanner from '$lib/components/common/ImageLinkBanner.svelte';
-	import { desktopContactChannels, contactDesktopCopy } from '$lib/content/contact-desktop';
+	import { contactDesktopCopy } from '$lib/content/contact-desktop';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 	const copy = $derived(contactDesktopCopy[data.locale]);
-	const channels = $derived(desktopContactChannels(data.site, data.locale));
 </script>
 
 <svelte:head>
@@ -50,27 +48,7 @@
 				<ContactHeroDetails site={data.site} locale={data.locale} />
 			{/snippet}
 		</PageIntro>
-		<section
-			class="site-section site-container contact-overview"
-			id="contact-details"
-			aria-label={copy.details}
-		>
-			<div class="contact-channels">
-				{#each channels as channel (channel.href)}
-					<ImageLinkBanner
-						class="contact-channel"
-						channel={channel.kind}
-						href={channel.href}
-						image={channel.image}
-						external={channel.external}
-					>
-						{#snippet heading()}<h2 class="contact-channel-title">{channel.title}</h2>{/snippet}
-						{channel.text}
-					</ImageLinkBanner>
-				{/each}
-			</div>
-		</section>
-		<section class="site-section contact-intake">
+		<section class="site-section contact-intake" id="contact-details" aria-label={copy.details}>
 			<div class="site-container contact-intake-grid">
 				<ContactLocation {english} layout="stacked" desktopFramed />
 				<div class="contact-form-panel" id="contact-enquiry">
@@ -115,24 +93,8 @@
 </main>
 
 <style>
-	.contact-overview {
-		display: grid;
-		gap: var(--bc-space-6);
-		padding-block: var(--bc-space-6);
-	}
-	.contact-channels {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: var(--bc-space-5);
-	}
-	.contact-channel-title {
-		margin: 0;
-		font: var(--bc-weight-heading) var(--bc-desktop-service-title)/var(--bc-leading-h4)
-			var(--bc-font-body);
-		color: var(--bc-white);
-	}
 	.contact-intake {
-		padding-top: var(--bc-space-2);
+		padding-block: var(--bc-space-8);
 	}
 	.contact-intake-grid {
 		display: grid;

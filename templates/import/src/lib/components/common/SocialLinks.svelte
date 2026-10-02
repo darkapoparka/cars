@@ -4,13 +4,35 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { site, type SocialLink } from '$lib/config/site';
+	import { siteShellCopy } from '$lib/content/site-shell';
+	import {
+		Facebook01Icon,
+		InstagramIcon,
+		TiktokIcon,
+		YoutubeIcon
+	} from '@hugeicons/core-free-icons';
+	const brandIcons = {
+		facebook: Facebook01Icon,
+		instagram: InstagramIcon,
+		tiktok: TiktokIcon,
+		youtube: YoutubeIcon
+	};
+	const svgAttributes = (attributes: Record<string, string | number>) =>
+		Object.fromEntries(
+			Object.entries(attributes)
+				.filter(([name]) => name !== 'key')
+				.map(([name, value]) => [
+					name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`),
+					value
+				])
+		);
 	let {
 		links = site.socials ?? [],
 		tone = 'light',
 		align = 'center'
 	}: {
 		links?: readonly SocialLink[];
-		tone?: 'light' | 'dark';
+		tone?: 'light' | 'dark' | 'glass';
 		align?: 'start' | 'center';
 	} = $props();
 </script>
@@ -19,8 +41,9 @@
 	<nav
 		class="social-links"
 		class:social-links--dark={tone === 'dark'}
+		class:social-links--glass={tone === 'glass'}
 		class:social-links--start={align === 'start'}
-		aria-label={page.data.locale === 'en' ? 'Social media' : 'Социални мрежи'}
+		aria-label={siteShellCopy[page.data.locale === 'en' ? 'en' : 'bg'].socialMedia}
 	>
 		{#each links as link (link.platform)}
 			<a
@@ -30,12 +53,20 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<img
-					src={assetHref(base + '/assets/icons/brands/' + link.platform + '.svg')}
-					alt=""
-					width="24"
-					height="24"
-				/>
+				{#if tone === 'glass'}
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						{#each brandIcons[link.platform] as [tag, attributes], index (index)}
+							<svelte:element this={tag} {...svgAttributes(attributes)} />
+						{/each}
+					</svg>
+				{:else}
+					<img
+						src={assetHref(base + '/assets/icons/brands/' + link.platform + '.svg')}
+						alt=""
+						width="24"
+						height="24"
+					/>
+				{/if}
 			</a>
 		{/each}
 	</nav>
@@ -77,10 +108,22 @@
 		background: var(--bc-white);
 		color: var(--bc-ink);
 	}
-	.social-links img {
+	.social-links img,
+	.social-links svg {
 		width: 24px;
 		height: 24px;
 		display: block;
 		object-fit: contain;
+	}
+	@media (min-width: 768px) {
+		.social-links--glass a {
+			border: 1px solid var(--bc-glass-border);
+			background: var(--bc-glass-surface);
+			color: var(--bc-white);
+		}
+		.social-links--glass a:hover {
+			border-color: var(--bc-white);
+			background: var(--bc-glass-hover);
+		}
 	}
 </style>

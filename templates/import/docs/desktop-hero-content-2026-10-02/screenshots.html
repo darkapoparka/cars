@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Import — About and Contact hero comparison</title>
+		<title>Import — final desktop polish comparison</title>
 		<style>
 			:root {
 				color-scheme: light;
@@ -84,10 +84,11 @@
 		</style>
 	</head>
 	<body>
-		<h1>About and Contact — black right-hand actions</h1>
+		<h1>Final desktop polish — About and Contact</h1>
 		<p>
-			Grey before, black after. Matched screenshots at 1440px. Select a route and language; click
-			either image to inspect it at full size.
+			Calmer social icons and portrait crops on About; a direct location and enquiry layout on
+			Contact. Matched screenshots at 1440 × 1000. Select a route and language, or inspect the
+			full-page captures below.
 		</p>
 		<nav aria-label="Screenshot comparisons">
 			<button type="button" data-pair="about-bg" aria-pressed="true">About · BG</button>
@@ -98,29 +99,49 @@
 		<div class="pairs">
 			<figure>
 				<figcaption>Before</figcaption>
-				<a id="before-link" href="action-update/before/about-bg.png" target="_blank" rel="noopener"
+				<a
+					id="before-link"
+					href="final-polish-2026-10-03/before/about-bg.png"
+					target="_blank"
+					rel="noopener"
 					><img
 						id="before-image"
-						src="action-update/before/about-bg.png"
+						src="final-polish-2026-10-03/before/about-bg.png"
 						alt="About BG before"
 						width="1440"
-						height="680"
+						height="1000"
 				/></a>
 			</figure>
 			<figure>
 				<figcaption>After</figcaption>
-				<a id="after-link" href="action-update/after/about-bg.png" target="_blank" rel="noopener"
+				<a
+					id="after-link"
+					href="final-polish-2026-10-03/after/about-bg.png"
+					target="_blank"
+					rel="noopener"
 					><img
 						id="after-image"
-						src="action-update/after/about-bg.png"
+						src="final-polish-2026-10-03/after/about-bg.png"
 						alt="About BG after"
 						width="1440"
-						height="680"
+						height="1000"
 				/></a>
 			</figure>
 		</div>
 		<footer>
-			<a class="receipt" href="action-update/README.md">Verification receipt</a
+			<a class="receipt" href="final-polish-2026-10-03/README.md">Verification receipt</a
+			><a
+				id="before-full"
+				href="final-polish-2026-10-03/before/about-bg-full.png"
+				target="_blank"
+				rel="noopener"
+				>Before · full page</a
+			><a
+				id="after-full"
+				href="final-polish-2026-10-03/after/about-bg-full.png"
+				target="_blank"
+				rel="noopener"
+				>After · full page</a
 			><a href="http://127.0.0.1:6790/bg/about">Live About</a
 			><a href="http://127.0.0.1:6790/bg/contact">Live Contact</a>
 		</footer>
@@ -131,10 +152,11 @@
 						.querySelectorAll('[data-pair]')
 						.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
 					for (const phase of ['before', 'after']) {
-						const source = `action-update/${phase}/${button.dataset.pair}.png`;
+						const source = `final-polish-2026-10-03/${phase}/${button.dataset.pair}.png`;
 						document.getElementById(`${phase}-image`).src = source;
 						document.getElementById(`${phase}-image`).alt = `${button.textContent} ${phase}`;
 						document.getElementById(`${phase}-link`).href = source;
+						document.getElementById(`${phase}-full`).href = source.replace('.png', '-full.png');
 					}
 				});
 			});
