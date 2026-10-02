@@ -304,7 +304,7 @@ try {
         await ready("/inventory/?make=Audi&sort=price-low");
         const first = page.locator("main [data-vehicle-id]").first();
         const title = await first.locator("h3").innerText();
-        await first.getByRole("link", { name: "View Details" }).click();
+        await first.locator(".vehicle-card-link").click();
         await page.waitForURL("**/vehicle/**");
         assert.equal(await page.locator("main h1").innerText(), title);
         await page.goBack();
@@ -316,7 +316,7 @@ try {
         await page
           .locator("main [data-vehicle-id]")
           .first()
-          .getByRole("link", { name: "View Details" })
+          .locator(".vehicle-card-link")
           .click();
         await page.getByRole("link", { name: "Back to results" }).click();
         await page.waitForURL("**/inventory/?make=Audi&sort=price-low");
@@ -400,12 +400,12 @@ try {
           await page
             .locator("main [data-vehicle-id]")
             .nth(i)
-            .getByRole("button", { name: "Compare", exact: true })
+            .getByRole("button", { name: /^Compare / })
             .click();
         await page
           .locator("main [data-vehicle-id]")
           .nth(4)
-          .getByRole("button", { name: "Compare", exact: true })
+          .getByRole("button", { name: /^Compare / })
           .click();
         await page
           .getByRole("status")

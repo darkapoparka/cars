@@ -1052,6 +1052,27 @@ main:focus {
   background: white;
   position: relative;
 }
+.vehicle-card-link {
+  position: static;
+}
+.vehicle-card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 16px;
+}
+.vehicle-card-link:focus-visible {
+  outline: none;
+}
+.vehicle-card-link:focus-visible::after {
+  outline: 2px solid var(--accent);
+  outline-offset: -3px;
+}
+.vehicle-card .save-button,
+.vehicle-card .compare-button {
+  z-index: 2;
+}
 .vehicle-image {
   position: relative;
   aspect-ratio: 1.5;
@@ -1161,16 +1182,31 @@ main:focus {
   min-height: 40px;
 }
 .compare-button {
-  font-size: 0.75rem;
-  display: flex;
+  position: relative;
+  font-size: 0.8125rem;
+  display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 5px;
-  min-height: 30px;
-  padding: 4px 0;
+  margin: 0;
+  padding: 6px 0;
   color: #667085;
 }
 .compare-button[aria-pressed="true"] {
+  color: var(--accent);
+}
+.vehicle-card-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+.vehicle-card .vehicle-card-actions .compare-button {
+  min-height: 44px;
+  max-width: 100%;
+}
+.vehicle-card-cue {
+  display: inline-flex;
   color: var(--accent);
 }
 .shelf-tabs {
@@ -2982,7 +3018,7 @@ main:focus {
     padding: 20px;
   }
   .row .vehicle-bottom {
-    display: block;
+    display: flex;
   }
   .row .vehicle-bottom .detail-link {
     display: flex;

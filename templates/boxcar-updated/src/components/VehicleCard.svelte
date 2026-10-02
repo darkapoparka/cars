@@ -13,19 +13,18 @@
     dark = false,
   }: { vehicle: Vehicle; layout?: string; dark?: boolean } = $props();
   let destination = $derived(detailHref(vehicle, route.path + route.search));
+  let compared = $derived(selections.compare.includes(vehicle.id));
 </script>
 
 <article class="vehicle-card {layout}" class:dark data-vehicle-id={vehicle.id}>
   <div class="vehicle-image">
-    <a href={destination} tabindex="-1" aria-hidden="true">
-      <img
-        src={vehicle.image}
-        alt={vehicle.title}
-        loading="lazy"
-        width="660"
-        height="440"
-      />
-    </a>
+    <img
+      src={vehicle.image}
+      alt={vehicle.title}
+      loading="lazy"
+      width="660"
+      height="440"
+    />
     {#if vehicle.badge}<span
         class="vehicle-badge"
         class:green={vehicle.badge === "Great Price"}
@@ -43,7 +42,7 @@
     </button>
   </div>
   <div class="vehicle-content">
-    <h3><a href={destination}>{vehicle.title}</a></h3>
+    <h3><a class="vehicle-card-link" href={destination}>{vehicle.title}</a></h3>
     <p class="vehicle-subtitle">
       {vehicle.year} · {vehicle.engine}L · {vehicle.condition}
     </p>
@@ -63,18 +62,21 @@
     </ul>
     <div class="vehicle-bottom">
       <strong>{money(vehicle.price)}</strong>
-      <a class="detail-link" href={destination}>
-        View Details <Icon name="arrow" size={20} />
-      </a>
+      <div class="vehicle-card-actions">
+        <button
+          class="compare-button"
+          aria-label={compared
+            ? `Remove ${vehicle.title} from comparison`
+            : `Compare ${vehicle.title}`}
+          aria-pressed={compared}
+          onclick={() => toggleCompare(vehicle.id)}
+        >
+          <Icon name="compare" size={18} />{compared ? "Compared" : "Compare"}
+        </button>
+        <span class="vehicle-card-cue" aria-hidden="true">
+          <Icon name="arrow" size={20} />
+        </span>
+      </div>
     </div>
-    <button
-      class="compare-button"
-      aria-pressed={selections.compare.includes(vehicle.id)}
-      onclick={() => toggleCompare(vehicle.id)}
-    >
-      <Icon name="compare" size={14} />{selections.compare.includes(vehicle.id)
-        ? "Remove from comparison"
-        : "Compare"}
-    </button>
   </div>
 </article>

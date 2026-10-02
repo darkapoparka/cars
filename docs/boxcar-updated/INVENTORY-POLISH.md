@@ -2,6 +2,10 @@
 
 Completed locally on 2 October 2026 in `L:/CODEX/cars/templates/boxcar-updated`, preview [inventory on port 6455](http://127.0.0.1:6455/inventory/).
 
+The later [card-action refinement](CARD-ACTIONS.md) replaces the separate Details and full-width Compare buttons described here with one clickable card surface and compact inline Compare. Its receipt records the updated component and stylesheet hashes.
+
+The subsequent [inventory banner refinement](INVENTORY-BANNER.md) adds a shallow pale blue heading banner while retaining the grey canvas and white inventory panels.
+
 Inventory and Saved cars now share a soft grey canvas, a compact centered heading and separate white filter, result-toolbar and vehicle-card surfaces. The sidebar fields use a grey fill and native select arrows inset 16 px. A shorter default value avoids repeating the field label. Sort choices use concise labels, the selected grid/list control is solid blue, and mobile filters open in a white panel. Crossing the desktop breakpoint reopens the sidebar so a filter panel closed on a phone cannot leave an empty desktop column.
 
 Car cards retain the original Boxcar specification glyphs and photography. Their specifications sit in one grey panel instead of between separator lines. Prices sit beside a visible pale blue View Details button; Compare has a neutral button with a distinct selected state. Normal narrow-phone cards retain one row of specification icons. Enlarged text can wrap rather than clip. The redundant Sample inventory caption is removed; the shared footer retains its existing concise sample/preview disclosure.

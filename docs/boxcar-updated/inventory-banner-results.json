@@ -1,0 +1,3299 @@
+{
+  "checkedAt": "2026-10-02T19:54:39.332Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "title": {
+        "x": 410,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 1030,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 470,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 970,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 1088,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1388,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.5,
+            "y": 772.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 816.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.828125,
+            "y": 772.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 816.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.171875,
+            "y": 772.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1334,
+            "bottom": 816.8125
+          },
+          "width": 325.34375
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.5,
+            "y": 1229.625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1273.625
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.828125,
+            "y": 1229.625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 1273.625
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.171875,
+            "y": 1229.625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1334,
+            "bottom": 1273.625
+          },
+          "width": 325.34375
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.5,
+            "y": 1686.4375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1730.4375
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.828125,
+            "y": 1686.4375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 1730.4375
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.171875,
+            "y": 1686.4375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1334,
+            "bottom": 1730.4375
+          },
+          "width": 325.34375
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1241,
+      "scale": 100,
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "title": {
+        "x": 310.5,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 930.5,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 370.5,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 909,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1209,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 40,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 320,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.5,
+            "y": 739.6875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 783.6875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.828125,
+            "y": 739.6875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 783.6875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.171875,
+            "y": 759.1875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1155,
+            "bottom": 803.1875
+          },
+          "width": 272.34375
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.5,
+            "y": 1182.875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 1226.875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.828125,
+            "y": 1182.875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 1226.875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.171875,
+            "y": 1182.875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1155,
+            "bottom": 1226.875
+          },
+          "width": 272.34375
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.5,
+            "y": 1606.5625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 1650.5625
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.828125,
+            "y": 1606.5625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 1650.5625
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.171875,
+            "y": 1626.0625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1155,
+            "bottom": 1670.0625
+          },
+          "width": 272.34375
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "scale": 100,
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "title": {
+        "x": 202,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 822,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 262,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 762,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 40,
+        "y": 298,
+        "width": 250,
+        "height": 986.890625,
+        "right": 290,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.171875,
+            "y": 772.609375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 593,
+            "bottom": 816.609375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.171875,
+            "y": 772.609375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 938,
+            "bottom": 816.609375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.171875,
+            "y": 1229.21875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 593,
+            "bottom": 1273.21875
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.171875,
+            "y": 1229.21875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 938,
+            "bottom": 1273.21875
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.171875,
+            "y": 1685.828125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 593,
+            "bottom": 1729.828125
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.171875,
+            "y": 1685.828125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 938,
+            "bottom": 1729.828125
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.171875,
+            "y": 2142.4375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 593,
+            "bottom": 2186.4375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.171875,
+            "y": 2142.4375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 938,
+            "bottom": 2186.4375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.171875,
+            "y": 2599.046875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 593,
+            "bottom": 2643.046875
+          },
+          "width": 325
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "scale": 100,
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "title": {
+        "x": 74,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 694,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 134,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 634,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 56,
+        "right": 744,
+        "bottom": 354
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.171875,
+            "y": 868.234375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 328,
+            "bottom": 912.234375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.171875,
+            "y": 868.234375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 698,
+            "bottom": 912.234375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.171875,
+            "y": 1340.46875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 328,
+            "bottom": 1384.46875
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.171875,
+            "y": 1340.46875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 698,
+            "bottom": 1384.46875
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.171875,
+            "y": 1812.703125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 328,
+            "bottom": 1856.703125
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.171875,
+            "y": 1812.703125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 698,
+            "bottom": 1856.703125
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.171875,
+            "y": 2284.9375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 328,
+            "bottom": 2328.9375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.171875,
+            "y": 2284.9375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 698,
+            "bottom": 2328.9375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.171875,
+            "y": 2757.171875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 328,
+            "bottom": 2801.171875
+          },
+          "width": 350
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "scale": 100,
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 354,
+        "height": 40,
+        "right": 372,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 354,
+        "height": 52,
+        "right": 372,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 56,
+        "right": 372,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 907.734375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 951.734375
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 1384.46875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 1428.46875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 1861.203125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 1905.203125
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 2337.9375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 2381.9375
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 2814.671875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 2858.671875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 3291.40625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 3335.40625
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 3768.140625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 3812.140625
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 4244.875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 4288.875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.171875,
+            "y": 4721.609375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 324,
+            "bottom": 4765.609375
+          },
+          "width": 354
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 40,
+        "right": 302,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 284,
+        "height": 52,
+        "right": 302,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 863.984375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 907.984375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 1296.96875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 1340.96875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 1729.953125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 1773.953125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 2162.9375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 2206.9375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 2595.921875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 2639.921875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 3028.90625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 3072.90625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 3461.890625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 3505.890625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 3894.875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 3938.875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 4347.359375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 4391.359375
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 200,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 344,
+        "right": 320,
+        "bottom": 420
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 160,
+        "right": 302,
+        "bottom": 288
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 296,
+        "width": 284,
+        "height": 104,
+        "right": 302,
+        "bottom": 400
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 440,
+        "width": 284,
+        "height": 74,
+        "right": 302,
+        "bottom": 514
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 1415.671875,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 1461.671875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 2238.53125,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 2284.53125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 3061.390625,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 3107.390625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 3783.46875,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 3829.46875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 4606.328125,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 4652.328125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 5378.796875,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 5424.796875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 6100.875,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 6146.875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 6873.34375,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 6919.34375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 7645.8125,
+            "width": 136.5625,
+            "height": 46,
+            "right": 174.5625,
+            "bottom": 7691.8125
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 305,
+      "scale": 100,
+      "documentWidth": 305,
+      "clientWidth": 305,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 305,
+        "height": 172,
+        "right": 305,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 269,
+        "height": 40,
+        "right": 287,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 269,
+        "height": 52,
+        "right": 287,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 269,
+        "height": 56,
+        "right": 287,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 854.609375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 898.609375
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 1278.21875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 1322.21875
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 1746.515625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 1790.515625
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 2170.125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 2214.125
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 2618.921875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 2662.921875
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 3042.53125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 3086.53125
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 3466.140625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 3510.140625
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 3889.75,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 3933.75
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.171875,
+            "y": 4332.859375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 239,
+            "bottom": 4376.859375
+          },
+          "width": 269
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "scale": 100,
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "title": {
+        "x": 410,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 1030,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 470,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 970,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 1088,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1388,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.5,
+            "y": 840.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 884.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.828125,
+            "y": 840.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 884.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.171875,
+            "y": 840.8125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 1334,
+            "bottom": 884.8125
+          },
+          "width": 325.34375
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.5,
+            "y": 1297.625,
+            "width": 81.828125,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1341.625
+          },
+          "width": 325.328125
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "scale": 100,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 40,
+        "right": 302,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 284,
+        "height": 52,
+        "right": 302,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 931.984375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 975.984375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 1364.96875,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 1408.96875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 1797.953125,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 1841.953125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.171875,
+            "y": 2230.9375,
+            "width": 81.828125,
+            "height": 44,
+            "right": 254,
+            "bottom": 2274.9375
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "title": {
+        "x": 410,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 1030,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 470,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 970,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 1088,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1388,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.484375,
+            "y": 772.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 816.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.8125,
+            "y": 772.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 816.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.140625,
+            "y": 772.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1333.984375,
+            "bottom": 816.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.484375,
+            "y": 1229.625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1273.625
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.8125,
+            "y": 1229.625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 1273.625
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.140625,
+            "y": 1229.625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1333.984375,
+            "bottom": 1273.625
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.484375,
+            "y": 1686.4375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1730.4375
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.8125,
+            "y": 1686.4375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 1730.4375
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.140625,
+            "y": 1686.4375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1333.984375,
+            "bottom": 1730.4375
+          },
+          "width": 325.328125
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1241,
+      "scale": 100,
+      "documentWidth": 1241,
+      "clientWidth": 1241,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1241,
+        "height": 180,
+        "right": 1241,
+        "bottom": 270
+      },
+      "title": {
+        "x": 310.5,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 930.5,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 370.5,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 870.5,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 909,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1209,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 40,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 320,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.484375,
+            "y": 739.6875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 783.6875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.8125,
+            "y": 739.6875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 783.6875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.140625,
+            "y": 759.1875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1154.984375,
+            "bottom": 803.1875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.484375,
+            "y": 1182.875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 1226.875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.8125,
+            "y": 1182.875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 1226.875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.140625,
+            "y": 1182.875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1154.984375,
+            "bottom": 1226.875
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 488.484375,
+            "y": 1606.5625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 570.328125,
+            "bottom": 1650.5625
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 780.8125,
+            "y": 1606.5625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 862.65625,
+            "bottom": 1650.5625
+          },
+          "width": 272.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1073.140625,
+            "y": 1626.0625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1154.984375,
+            "bottom": 1670.0625
+          },
+          "width": 272.328125
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "scale": 100,
+      "documentWidth": 1024,
+      "clientWidth": 1024,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1024,
+        "height": 180,
+        "right": 1024,
+        "bottom": 270
+      },
+      "title": {
+        "x": 202,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 822,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 262,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 762,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 40,
+        "y": 298,
+        "width": 250,
+        "height": 986.890625,
+        "right": 290,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.15625,
+            "y": 772.609375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 593,
+            "bottom": 816.609375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.15625,
+            "y": 772.609375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 938,
+            "bottom": 816.609375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.15625,
+            "y": 1229.21875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 593,
+            "bottom": 1273.21875
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.15625,
+            "y": 1229.21875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 938,
+            "bottom": 1273.21875
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.15625,
+            "y": 1685.828125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 593,
+            "bottom": 1729.828125
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.15625,
+            "y": 1685.828125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 938,
+            "bottom": 1729.828125
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.15625,
+            "y": 2142.4375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 593,
+            "bottom": 2186.4375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 856.15625,
+            "y": 2142.4375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 938,
+            "bottom": 2186.4375
+          },
+          "width": 325
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 511.15625,
+            "y": 2599.046875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 593,
+            "bottom": 2643.046875
+          },
+          "width": 325
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "scale": 100,
+      "documentWidth": 768,
+      "clientWidth": 768,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 768,
+        "height": 180,
+        "right": 768,
+        "bottom": 270
+      },
+      "title": {
+        "x": 74,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 694,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 134,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 634,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 24,
+        "y": 298,
+        "width": 720,
+        "height": 56,
+        "right": 744,
+        "bottom": 354
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.15625,
+            "y": 868.234375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 328,
+            "bottom": 912.234375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.15625,
+            "y": 868.234375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 698,
+            "bottom": 912.234375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.15625,
+            "y": 1340.46875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 328,
+            "bottom": 1384.46875
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.15625,
+            "y": 1340.46875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 698,
+            "bottom": 1384.46875
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.15625,
+            "y": 1812.703125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 328,
+            "bottom": 1856.703125
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.15625,
+            "y": 1812.703125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 698,
+            "bottom": 1856.703125
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.15625,
+            "y": 2284.9375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 328,
+            "bottom": 2328.9375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 616.15625,
+            "y": 2284.9375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 698,
+            "bottom": 2328.9375
+          },
+          "width": 350
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 246.15625,
+            "y": 2757.171875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 328,
+            "bottom": 2801.171875
+          },
+          "width": 350
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "scale": 100,
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 390,
+        "height": 172,
+        "right": 390,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 354,
+        "height": 40,
+        "right": 372,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 354,
+        "height": 52,
+        "right": 372,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 354,
+        "height": 56,
+        "right": 372,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 907.734375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 951.734375
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 1384.46875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 1428.46875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 1861.203125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 1905.203125
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 2337.9375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 2381.9375
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 2814.671875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 2858.671875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 3291.40625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 3335.40625
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 3768.140625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 3812.140625
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 4244.875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 4288.875
+          },
+          "width": 354
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 242.15625,
+            "y": 4721.609375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 324,
+            "bottom": 4765.609375
+          },
+          "width": 354
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 40,
+        "right": 302,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 284,
+        "height": 52,
+        "right": 302,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 863.984375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 907.984375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 1296.96875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 1340.96875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 1729.953125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 1773.953125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 2162.9375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 2206.9375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 2595.921875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 2639.921875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 3028.90625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 3072.90625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 3461.890625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 3505.890625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 3894.875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 3938.875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 4347.359375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 4391.359375
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 200,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 344,
+        "right": 320,
+        "bottom": 420
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 160,
+        "right": 302,
+        "bottom": 288
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 296,
+        "width": 284,
+        "height": 104,
+        "right": 302,
+        "bottom": 400
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 440,
+        "width": 284,
+        "height": 74,
+        "right": 302,
+        "bottom": 514
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 1440.671875,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 1486.671875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 2263.53125,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 2309.53125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 3086.390625,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 3132.390625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 3858.859375,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 3904.859375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 4681.71875,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 4727.71875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 5454.1875,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 5500.1875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 6176.265625,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 6222.265625
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 6948.734375,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 6994.734375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 38,
+            "y": 7721.203125,
+            "width": 137.671875,
+            "height": 46,
+            "right": 175.671875,
+            "bottom": 7767.203125
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 305,
+      "scale": 100,
+      "documentWidth": 305,
+      "clientWidth": 305,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 305,
+        "height": 172,
+        "right": 305,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 269,
+        "height": 40,
+        "right": 287,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 269,
+        "height": 52,
+        "right": 287,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 269,
+        "height": 56,
+        "right": 287,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 854.609375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 898.609375
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 1278.21875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 1322.21875
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 1746.515625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 1790.515625
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 2170.125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 2214.125
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 2618.921875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 2662.921875
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 3042.53125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 3086.53125
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 3466.140625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 3510.140625
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 3889.75,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 3933.75
+          },
+          "width": 269
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 157.15625,
+            "y": 4332.859375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 239,
+            "bottom": 4376.859375
+          },
+          "width": 269
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "scale": 100,
+      "documentWidth": 1440,
+      "clientWidth": 1440,
+      "banner": {
+        "x": 0,
+        "y": 90,
+        "width": 1440,
+        "height": 180,
+        "right": 1440,
+        "bottom": 270
+      },
+      "title": {
+        "x": 410,
+        "y": 153,
+        "width": 620,
+        "height": 50,
+        "right": 1030,
+        "bottom": 203
+      },
+      "subtitle": {
+        "x": 470,
+        "y": 213,
+        "width": 500,
+        "height": 26,
+        "right": 970,
+        "bottom": 239
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": true,
+        "loaded": true,
+        "alt": "",
+        "x": 1088,
+        "y": 93.25,
+        "width": 300,
+        "height": 168.75,
+        "right": 1388,
+        "bottom": 262
+      },
+      "filters": {
+        "x": 60,
+        "y": 298,
+        "width": 280,
+        "height": 986.890625,
+        "right": 340,
+        "bottom": 1284.890625
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.484375,
+            "y": 840.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 884.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 906.8125,
+            "y": 840.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 988.65625,
+            "bottom": 884.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 1252.140625,
+            "y": 840.8125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 1333.984375,
+            "bottom": 884.8125
+          },
+          "width": 325.328125
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 561.484375,
+            "y": 1297.625,
+            "width": 81.84375,
+            "height": 44,
+            "right": 643.328125,
+            "bottom": 1341.625
+          },
+          "width": 325.328125
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "scale": 100,
+      "documentWidth": 320,
+      "clientWidth": 320,
+      "banner": {
+        "x": 0,
+        "y": 76,
+        "width": 320,
+        "height": 172,
+        "right": 320,
+        "bottom": 248
+      },
+      "title": {
+        "x": 18,
+        "y": 128,
+        "width": 284,
+        "height": 40,
+        "right": 302,
+        "bottom": 168
+      },
+      "subtitle": {
+        "x": 18,
+        "y": 176,
+        "width": 284,
+        "height": 52,
+        "right": 302,
+        "bottom": 228
+      },
+      "background": "linear-gradient(110deg, rgb(228, 234, 255) 0%, rgb(238, 241, 255) 55%, rgb(230, 237, 255) 100%)",
+      "titleCount": 1,
+      "breadcrumb": "Home / Cars",
+      "art": {
+        "visible": false,
+        "loaded": true,
+        "alt": "",
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "filters": {
+        "x": 18,
+        "y": 268,
+        "width": 284,
+        "height": 56,
+        "right": 302,
+        "bottom": 324
+      },
+      "cards": [
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 931.984375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 975.984375
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 1364.96875,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 1408.96875
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 1797.953125,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 1841.953125
+          },
+          "width": 284
+        },
+        {
+          "links": 1,
+          "details": false,
+          "compare": {
+            "x": 172.15625,
+            "y": 2230.9375,
+            "width": 81.84375,
+            "height": 44,
+            "right": 254,
+            "bottom": 2274.9375
+          },
+          "width": 284
+        }
+      ],
+      "clipped": [],
+      "overlay": false
+    }
+  ],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "passed": [
+        "Make filter and query",
+        "Compact Compare independent",
+        "Card opens PDP and keeps filtered return",
+        "Breadcrumb opens working homepage",
+        "Saved cars heading preserved"
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "passed": [
+        "Make filter and query",
+        "Compact Compare independent",
+        "Card opens PDP and keeps filtered return",
+        "Breadcrumb opens working homepage",
+        "Saved cars heading preserved"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "passed": [
+        "Make filter and query",
+        "Compact Compare independent",
+        "Card opens PDP and keeps filtered return",
+        "Breadcrumb opens working homepage",
+        "Saved cars heading preserved"
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "passed": [
+        "Make filter and query",
+        "Compact Compare independent",
+        "Card opens PDP and keeps filtered return",
+        "Breadcrumb opens working homepage",
+        "Saved cars heading preserved"
+      ]
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/pages/Inventory.svelte": "5b5d624b4cfcdea4f45ff842997a786376789783dd33979920d9cc35228c3683",
+    "src/inner-pages.css": "fa9341d152f96546f4e67d6f784fbe89c7bdcb21ab828ca2d6ef97bbb56e1d3c",
+    "src/styles.css": "120dababa40b0716dc72752b386e5117700dfdfd70c9ec7d9c07f055bcbcbf0d",
+    "src/components/VehicleCard.svelte": "6dab2785561c2a36733097dd994c8ed18fe9dd7f1fdd487fe3ce74d9d54fbc20",
+    "src/lib/router.svelte.ts": "72158282e18add988b385ba2ab6d011c0a72d617994c39a48bd2091de6913dc7",
+    "src/lib/state.svelte.ts": "e43e38b82cb06072e1d067f15f092a5eb2da3b591d73c946354d388f16eadfd5",
+    "public/media/services/boxcar-browse-v1.webp": "86eb4da0d3a26bc5a6b2cbaa486c1771f1792dae63e6dd31cadd02667fdcccae"
+  },
+  "unchangedSources": [
+    "src/components/VehicleCard.svelte",
+    "src/styles.css",
+    "src/lib/router.svelte.ts",
+    "src/lib/state.svelte.ts",
+    "src/pages/VehicleDetail.svelte",
+    "src/components/Header.svelte",
+    "src/pages/Contact.svelte",
+    "src/pages/About.svelte",
+    "src/pages/Compare.svelte",
+    "src/components/Footer.svelte",
+    "src/components/EnquiryForm.svelte",
+    "src/data/brand.ts",
+    "src/reference/CuratedHome.svelte"
+  ],
+  "passed": true,
+  "completedAt": "2026-10-02T19:55:07.172Z"
+}

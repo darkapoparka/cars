@@ -74,23 +74,53 @@
 
 <svelte:window onresize={resizeFilters} />
 
-<div class="page-shell inventory-page bc-inner">
-  <div class="container">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span aria-hidden="true">/</span>
-      <span aria-current="page">{savedOnly ? "Saved cars" : "Inventory"}</span>
-    </nav>
-    <div class="page-heading">
-      <div>
-        <h1>{savedOnly ? "Your Saved Cars" : "Cars for sale"}</h1>
-        <p>
-          {savedOnly
-            ? "Your favourites, ready for a closer look."
-            : "Find your next car. Save your favourites and compare the details."}
-        </p>
+<div
+  class="page-shell inventory-page bc-inner"
+  class:has-inventory-banner={!savedOnly}
+>
+  {#if !savedOnly}
+    <section class="inventory-banner" aria-labelledby="inventory-title">
+      <div class="bc-container inventory-banner-inner">
+        <div class="inventory-banner-copy">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span aria-hidden="true">/</span>
+            <span aria-current="page">Cars</span>
+          </nav>
+          <div class="page-heading">
+            <div>
+              <h1 id="inventory-title">Cars for sale</h1>
+              <p>
+                Find your next car. Save your favourites and compare the
+                details.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          class="inventory-banner-art"
+          src="/media/services/boxcar-browse-v1.webp"
+          alt=""
+          width="720"
+          height="405"
+        />
       </div>
-    </div>
+    </section>
+  {/if}
+  <div class="container">
+    {#if savedOnly}
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">Saved cars</span>
+      </nav>
+      <div class="page-heading">
+        <div>
+          <h1>Your Saved Cars</h1>
+          <p>Your favourites, ready for a closer look.</p>
+        </div>
+      </div>
+    {/if}
     <div class="inventory-layout">
       <details class="inventory-filters" bind:open={filterOpen}>
         <summary>
