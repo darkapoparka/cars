@@ -6,17 +6,18 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import DiscoveryAllTile from './DiscoveryAllTile.svelte';
-  import { brands, desktopBrands } from '$data/home';
+  import { brands, desktopBrands, mobileBrandArtwork } from '$data/home';
   const mobileBrands = new Set(
     [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
       .slice(0, 3)
       .map((brand) => brand.label)
   );
-  const logoWidth = (brand: (typeof brands)[number], opticalHeight: number, maxWidth: number) => Math.round(Math.min(
+  type BrandArtwork = (typeof mobileBrandArtwork)[string];
+  const logoWidth = (brand: BrandArtwork, opticalHeight: number, maxWidth: number) => Math.round(Math.min(
     maxWidth,
     opticalHeight * (brand.bounds[2] - brand.bounds[0]) / (brand.bounds[3] - brand.bounds[1])
   ));
-  const mobileLogoWidth = (brand: (typeof brands)[number]) => logoWidth(brand, 46, 84);
+  const mobileLogoWidth = (brand: BrandArtwork) => logoWidth(brand, 46, 104);
   const desktopLogoWidth = (brand: (typeof brands)[number]) => logoWidth(brand, 60, 116);
   let expanded = $state(false);
 </script>
@@ -35,9 +36,27 @@
     <div class="dn-brand-panel dn-home-section-panel">
       <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(desktopBrands.length, 6))}>
         {#each desktopBrands as brand (brand.label)}
+          {@const mobile = mobileBrandArtwork[brand.label] ?? brand}
           <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
             <span class="dn-brand-card__image">
-              <span class="dn-brand-card__frame" style:--logo-mobile-width={`${mobileLogoWidth(brand)}px`} style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`} style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`} style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`} style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}><img src={brand.image} alt={i18n.t("m_f6e3b3cf6fb0", { p0: brand.label })} loading="lazy" decoding="async" width={brand.width} height={brand.height} /></span>
+              <span class="dn-brand-card__frame"
+                style:--logo-tablet-width={`${logoWidth(brand, 46, 84)}px`}
+                style:--logo-mobile-width={`${mobileLogoWidth(mobile)}px`}
+                style:--logo-desktop-width={`${desktopLogoWidth(brand)}px`}
+                style:--logo-ratio={`${brand.bounds[2] - brand.bounds[0]} / ${brand.bounds[3] - brand.bounds[1]}`}
+                style:--logo-image-width={`${brand.width / (brand.bounds[2] - brand.bounds[0]) * 100}%`}
+                style:--logo-left={`${-brand.bounds[0] / (brand.bounds[2] - brand.bounds[0]) * 100}%`}
+                style:--logo-top={`${-brand.bounds[1] / (brand.bounds[3] - brand.bounds[1]) * 100}%`}
+                style:--logo-mobile-ratio={`${mobile.bounds[2] - mobile.bounds[0]} / ${mobile.bounds[3] - mobile.bounds[1]}`}
+                style:--logo-mobile-image-width={`${mobile.width / (mobile.bounds[2] - mobile.bounds[0]) * 100}%`}
+                style:--logo-mobile-left={`${-mobile.bounds[0] / (mobile.bounds[2] - mobile.bounds[0]) * 100}%`}
+                style:--logo-mobile-top={`${-mobile.bounds[1] / (mobile.bounds[3] - mobile.bounds[1]) * 100}%`}
+              >
+                <picture>
+                  <source media="(max-width: 767px)" srcset={mobile.image} width={mobile.width} height={mobile.height} />
+                  <img src={brand.image} alt={i18n.t("m_f6e3b3cf6fb0", { p0: brand.label })} loading="lazy" decoding="async" width={brand.width} height={brand.height} />
+                </picture>
+              </span>
             </span>
             <strong>{brand.label}</strong>
           </a>
@@ -54,7 +73,7 @@
 </section>
 
 <style>
-  .dn-brand-card__frame { display: block; position: relative; width: var(--logo-mobile-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
+  .dn-brand-card__frame { display: block; position: relative; width: var(--logo-tablet-width); aspect-ratio: var(--logo-ratio); overflow: hidden; }
 
   .dn-brand-section { padding: 32px 0; background: #fff; }
   .dn-brand-shell { padding: 0; border-radius: 20px; background: var(--dn-home-panel); }
@@ -102,7 +121,8 @@
     .dn-brand-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
     .dn-brand-card { display: grid; min-height: var(--dn-discovery-tile-height); grid-template-rows: var(--dn-discovery-media-height) auto; gap: var(--dn-space-2); padding: var(--dn-discovery-tile-padding); border-radius: 14px; background: var(--dn-mobile-surface); }
     .dn-brand-card__image { height: var(--dn-discovery-media-height); align-self: center; margin: 0; }
-    .dn-brand-card__frame { width: var(--logo-mobile-width); }
+    .dn-brand-card__frame { width: var(--logo-mobile-width); aspect-ratio: var(--logo-mobile-ratio); }
+    .dn-brand-card__image img { width: var(--logo-mobile-image-width); left: var(--logo-mobile-left); top: var(--logo-mobile-top); }
     .dn-brand-card--secondary,
     .dn-brand-card--desktop-only { display: none; }
     .dn-brand-card strong { align-self: end; overflow-wrap: anywhere; font: var(--dn-discovery-label-font); }

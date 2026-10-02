@@ -6,7 +6,8 @@ const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
 // Includes the reviewed 960px and 480px Contact and advice banner encodings.
-const guardedMediaCount = 170;
+// The mobile Audi chrome mark is a separate responsive source.
+const guardedMediaCount = 171;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.

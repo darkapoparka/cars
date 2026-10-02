@@ -32,6 +32,14 @@ const brandArtwork = [
   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
+// Mobile uses the inherited chrome rings alongside the chrome star and BMW roundel.
+// The unchanged source includes a wordmark; measured rings bounds keep the card compact.
+export const mobileBrandArtwork: Record<string, {
+  image: string; width: number; height: number; bounds: readonly [number, number, number, number];
+}> = {
+  Audi: { image: '/assets/images/brand-curated/audi-rings-chrome-mobile.webp', width: 1800, height: 1200, bounds: [73, 90, 1726, 672] }
+};
+
 // Desktop discovery retains the full template catalog; mobile shortcuts follow stock.
 const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
 export const desktopBodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({

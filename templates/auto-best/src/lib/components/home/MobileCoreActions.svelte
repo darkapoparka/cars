@@ -88,10 +88,6 @@
       isolation: isolate;
     }
 
-    .dn-mobile-core-card--blue .dn-mobile-core-card__art { background: color-mix(in srgb, var(--dn-theme-action-blue-start) 6%, var(--dn-surface-subtle)); }
-    .dn-mobile-core-card--red .dn-mobile-core-card__art { background: var(--dn-surface-subtle); }
-    .dn-mobile-core-card--ice .dn-mobile-core-card__art { background: color-mix(in srgb, var(--dn-theme-action-ice-start) 50%, var(--dn-surface-subtle)); }
-
     .dn-mobile-core-card__copy {
       position: relative;
       display: flex;

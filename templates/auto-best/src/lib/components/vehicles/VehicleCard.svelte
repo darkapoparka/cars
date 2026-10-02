@@ -376,6 +376,11 @@
       line-height: var(--dn-leading-meta);
     }
 
+    .dn-vehicle-card__badge--year {
+      background: var(--dn-white);
+      color: var(--dn-ink);
+    }
+
     .dn-vehicle-card__make {
       font: var(--dn-mobile-card-meta-font);
     }
