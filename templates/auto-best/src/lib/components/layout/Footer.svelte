@@ -43,18 +43,23 @@
 
 {#if showActions}
   <section class="dn-footer-actions" class:dn-footer-actions--desktop-hidden={hideDesktopActions} aria-label={i18n.t("m_920d4a55469d")}>
-    <div class="container dn-footer-actions__grid">
-      {#each actions as action (action.href)}
-        <a href={i18n.href(resolve(action.href))}>
-          <span class="dn-footer-actions__icon" aria-hidden="true">
-            <OriginalActionIcon name={action.icon} />
-          </span>
-          <span>
-            <strong>{action.title}</strong>
-            <small>{action.description}</small>
-          </span>
-        </a>
-      {/each}
+    <div class="container">
+      <div class="dn-footer-actions__panel">
+        <h2 class="dn-footer-actions__heading">{i18n.t("m_920d4a55469d")}</h2>
+        <div class="dn-footer-actions__grid">
+          {#each actions as action (action.href)}
+            <a href={i18n.href(resolve(action.href))}>
+              <span class="dn-footer-actions__icon" aria-hidden="true">
+                <OriginalActionIcon name={action.icon} />
+              </span>
+              <span>
+                <strong>{action.title}</strong>
+                <small>{action.description}</small>
+              </span>
+            </a>
+          {/each}
+        </div>
+      </div>
     </div>
   </section>
 {/if}
@@ -99,6 +104,7 @@
 
 <style>
   .dn-footer-actions { padding-block: var(--dn-space-6); background: var(--dn-surface); color: var(--dn-ink); }
+  .dn-footer-actions__heading { display: none; }
   .dn-footer-actions__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--dn-space-4); }
   .dn-footer-actions__grid > a { display: grid; min-width: 0; min-height: 112px; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); text-decoration: none; }
   .dn-footer-actions__icon { display: grid; width: 48px; height: 48px; place-items: center; color: var(--dn-red); }
@@ -109,6 +115,13 @@
   .dn-footer-actions a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; border-radius: var(--dn-radius); }
   @media (min-width: 992px) {
     .dn-footer-actions--desktop-hidden { display: none; }
+    .dn-footer-actions { padding-block: var(--dn-space-8); background: var(--dn-surface-canvas); }
+    .dn-footer-actions__panel { padding: var(--dn-space-8); border-radius: var(--dn-radius-lg); background: var(--dn-white); }
+    .dn-footer-actions__heading { display: block; margin: 0 0 var(--dn-space-6); font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
+    .dn-footer-actions__grid > a { border: 0; background: var(--dn-surface-subtle); }
+  }
+  @media (min-width: 992px) and (max-width: 1359px) {
+    .dn-footer-actions__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (min-width: 768px) and (hover: hover) {
     .dn-footer-actions__grid > a { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }

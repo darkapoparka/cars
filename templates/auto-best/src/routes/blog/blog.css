@@ -127,7 +127,7 @@
 }
 
 @media (min-width: 992px) {
-  .dn-blog-index { background: var(--dn-surface-canvas); }
+  .dn-blog-index { padding-bottom: var(--dn-space-8); background: var(--dn-surface-canvas); }
 }
 
 .dn-blog-index > .container {

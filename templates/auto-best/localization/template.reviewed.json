@@ -1110,5 +1110,149 @@
     "bg": "за вашия автомобил.",
     "disposition": "translate",
     "notes": "Second line of the authored general contact introduction; not independent human linguistic review. src/lib/components/company/ContactHero.svelte"
+  },
+  {
+    "key": "blog.testDrive.title",
+    "source": "Пробно шофиране",
+    "en": "Test drive",
+    "bg": "Пробно шофиране",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.testDrive.summary",
+    "source": "Проверете удобството, управлението и поведението на автомобила в движение.",
+    "en": "Check comfort, handling and how the car behaves on the road.",
+    "bg": "Проверете удобството, управлението и поведението на автомобила в движение.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.testDrive.route.title",
+    "source": "Подгответе удобен маршрут",
+    "en": "Plan a useful route",
+    "bg": "Подгответе удобен маршрут",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.testDrive.route.copy",
+    "source": "Уговорете пробното шофиране предварително и уточнете подходящ маршрут. Настройте седалката и огледалата, проверете видимостта и помислете дали автомобилът е удобен за ежедневните ви пътувания.",
+    "en": "Arrange the test drive in advance and agree on a suitable route. Adjust the seat and mirrors, check visibility and consider whether the car is comfortable for your daily journeys.",
+    "bg": "Уговорете пробното шофиране предварително и уточнете подходящ маршрут. Настройте седалката и огледалата, проверете видимостта и помислете дали автомобилът е удобен за ежедневните ви пътувания.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.testDrive.notes.title",
+    "source": "Запишете наблюденията си",
+    "en": "Note what you notice",
+    "bg": "Запишете наблюденията си",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.testDrive.notes.copy",
+    "source": "Обърнете внимание на управлението, спирането, превключването и необичайни шумове или вибрации. Запишете конкретните въпроси за разговора с екипа; при съмнения уговорете независим технически преглед.",
+    "en": "Pay attention to steering, braking, gear changes and any unusual noises or vibrations. Write down specific questions for the team; if you have concerns, arrange an independent technical inspection.",
+    "bg": "Обърнете внимание на управлението, спирането, превключването и необичайни шумове или вибрации. Запишете конкретните въпроси за разговора с екипа; при съмнения уговорете независим технически преглед.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.title",
+    "source": "Сервизна история",
+    "en": "Service history",
+    "bg": "Сервизна история",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.summary",
+    "source": "Проверете наличните записи за обслужване и уточнете следващите стъпки.",
+    "en": "Review the available service records and clarify the next steps.",
+    "bg": "Проверете наличните записи за обслужване и уточнете следващите стъпки.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.records.title",
+    "source": "Сверете датите и пробега",
+    "en": "Compare dates and mileage",
+    "bg": "Сверете датите и пробега",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.records.copy",
+    "source": "Поискайте наличните сервизни записи и фактури и ги сравнете по дата, пробег и описание на извършената работа. Ако има пропуски или разминавания, отбележете ги и поискайте пояснение за конкретния автомобил.",
+    "en": "Ask for the available service records and invoices, then compare their dates, mileage and descriptions of the work carried out. Note any gaps or inconsistencies and ask for clarification about the specific car.",
+    "bg": "Поискайте наличните сервизни записи и фактури и ги сравнете по дата, пробег и описание на извършената работа. Ако има пропуски или разминавания, отбележете ги и поискайте пояснение за конкретния автомобил.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.maintenance.title",
+    "source": "Планирайте следващото обслужване",
+    "en": "Plan the next service",
+    "bg": "Планирайте следващото обслужване",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.serviceHistory.maintenance.copy",
+    "source": "Уточнете какво е обслужено наскоро и кои консумативи предстоят според наличната история и указанията за модела. Когато записите са непълни, обсъдете начален технически преглед със сервиз по ваш избор.",
+    "en": "Clarify what has been serviced recently and which consumables are due based on the available history and the model's guidance. If records are incomplete, discuss an initial technical inspection with a workshop of your choice.",
+    "bg": "Уточнете какво е обслужено наскоро и кои консумативи предстоят според наличната история и указанията за модела. Когато записите са непълни, обсъдете начален технически преглед със сервиз по ваш избор.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.title",
+    "source": "Избор на двигател",
+    "en": "Choosing an engine",
+    "bg": "Избор на двигател",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.summary",
+    "source": "Изберете гориво и мощност според маршрутите, пробега и разходите си.",
+    "en": "Choose fuel and power to suit your routes, mileage and running costs.",
+    "bg": "Изберете гориво и мощност според маршрутите, пробега и разходите си.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.routes.title",
+    "source": "Започнете от ежедневните маршрути",
+    "en": "Start with your daily routes",
+    "bg": "Започнете от ежедневните маршрути",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.routes.copy",
+    "source": "Помислете колко често шофирате в града, колко дълги пътувания правите и какъв товар превозвате. Използвайте тези навици, за да сравните подходящите двигатели за избрания модел.",
+    "en": "Consider how often you drive in the city, how many long journeys you make and what loads you carry. Use those habits to compare suitable engines for your chosen model.",
+    "bg": "Помислете колко често шофирате в града, колко дълги пътувания правите и какъв товар превозвате. Използвайте тези навици, за да сравните подходящите двигатели за избрания модел.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.costs.title",
+    "source": "Сравнете общите разходи",
+    "en": "Compare overall running costs",
+    "bg": "Сравнете общите разходи",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "blog.engineChoice.costs.copy",
+    "source": "Освен заявения разход на гориво, включете обслужване, застраховки и необходимите консумативи. Проверете данните за конкретната версия и обсъдете поддръжката, преди да ограничите избора си до едно гориво.",
+    "en": "Alongside the stated fuel consumption, account for servicing, insurance and necessary consumables. Check the details of the specific version and discuss maintenance before narrowing your choice to one fuel type.",
+    "bg": "Освен заявения разход на гориво, включете обслужване, застраховки и необходимите консумативи. Проверете данните за конкретната версия и обсъдете поддръжката, преди да ограничите избора си до едно гориво.",
+    "disposition": "translate",
+    "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
   }
 ]

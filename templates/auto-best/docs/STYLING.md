@@ -314,6 +314,18 @@ with "How to choose a car" starting the short-title row. Four columns start at
 English. Smaller desktops use two columns. Titles can grow with enlarged text;
 mobile cards retain their existing presentation.
 
+The default twelve guides fill three rows of four on wide desktops. They share
+one index with search and category filters; pagination is unnecessary at this
+size. Every card links to its complete localized guide.
+
+## Footer service strip
+
+On desktop, the four existing service shortcuts sit inside one white rounded
+panel headed "Next steps". Subtle inner card surfaces and the existing red icons
+follow the other information panels. Four columns start at 1360px; smaller
+desktops use two columns to leave enough room for the labels. Destinations,
+route-specific visibility and the tablet/mobile presentation are preserved.
+
 ## Inventory and vehicle cards
 
 Mobile inventory starts with a rounded search field and compact filter/sort controls, followed by one horizontal quick-filter rail. Make and model stay together in that rail. Active chips expose removal; selectors retain a dropdown affordance. The filter sheet contains the deeper options.
