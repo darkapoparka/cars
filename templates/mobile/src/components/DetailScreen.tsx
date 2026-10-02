@@ -9,6 +9,7 @@ import type { Vehicle } from '@/lib/types';
 import { money } from '@/lib/search';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
 import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/showroom';
+import { vehicleGalleryHref } from '@/lib/vehicle-detail-navigation';
 import { VehicleSections } from './VehicleSections';
 import { Header } from './Header';
 import { Icon } from './Icon';
@@ -16,6 +17,7 @@ import { Button, IconButton, Modal, ui } from './ui';
 import { ContactSheet } from './ContactSheet';
 import { FinanceCalculator } from './FinanceCalculator';
 import { PriceRating } from './VehicleCard';
+import { useVehicleDetailSection } from './useVehicleDetailSection';
 const s = stylex.create({
   paymentTabs: {
     display: 'grid',
@@ -72,10 +74,7 @@ const s = stylex.create({
     color: '#fff',
   },
   info: { paddingInline: 16, paddingTop: 16 },
-  stickyPrice: {
-    position: 'sticky',
-    top: 60,
-    zIndex: 26,
+  offer: {
     backgroundColor: colors.background,
     paddingInline: 16,
     paddingBottom: 16,
@@ -155,6 +154,39 @@ const s = stylex.create({
     borderColor: colors.accent,
     color: '#fff',
   },
+  contactDock: {
+    position: 'fixed',
+    bottom: 0,
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: '100%',
+    maxWidth: 1100,
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) auto',
+    alignItems: 'center',
+    gap: 12,
+    padding: 12,
+    paddingInline: 16,
+    paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
+    backgroundColor: colors.background,
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.line,
+    boxShadow: '0 -3px 12px #00000008',
+    zIndex: 38,
+  },
+  dockPrice: {
+    display: 'flex',
+    alignItems: 'baseline',
+    flexWrap: 'wrap',
+    gap: 4,
+    minWidth: 0,
+    fontSize: 20,
+    fontWeight: 700,
+    lineHeight: '28px',
+    overflowWrap: 'anywhere',
+  },
+  dockPeriod: { fontSize: 12, fontWeight: 400, lineHeight: '18px', color: colors.muted },
   actionIcon: { display: 'inline-flex', flexShrink: 0 },
   financeAmount: {
     display: 'inline-flex',
@@ -210,6 +242,9 @@ const s = stylex.create({
 });
 export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   const router = useRouter();
+  const section = useVehicleDetailSection();
+  const actions = useRef<HTMLDivElement>(null);
+  const [contactDock, setContactDock] = useState(false);
   const { parked, filters, photoIndexes } = useAppState();
   const photoIndex = Math.min(v.images.length - 1, Math.max(0, photoIndexes[v.id] || 0));
   const photoGesture = useRef({ x: 0, y: 0, moved: false });
@@ -226,6 +261,18 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   const [priceInfo, setPriceInfo] = useState(false);
   const [report, setReport] = useState(false);
   useEffect(() => markViewed(v.id), [v.id]);
+  useEffect(() => {
+    const target = actions.current;
+    if (!target) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setContactDock(!entry.isIntersecting && entry.boundingClientRect.bottom <= 60);
+      },
+      { rootMargin: '-60px 0px 0px 0px' },
+    );
+    observer.observe(target);
+    return () => observer.disconnect();
+  }, [v.id]);
   async function share() {
     try {
       await navigator.clipboard.writeText(window.location.href);
@@ -256,7 +303,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
         />
       </Header>
       <Link
-        href={'/vehicle/' + v.id + '/gallery'}
+        href={vehicleGalleryHref(v.id, section)}
         {...stylex.props(s.hero)}
         aria-label="Vehicle image"
         onPointerDown={(event) => {
@@ -322,7 +369,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
           </button>
         </div>
       )}
-      <section aria-label="Vehicle price and contact" {...stylex.props(s.stickyPrice)}>
+      <section aria-label="Vehicle price and contact" {...stylex.props(s.offer)}>
         {leasing && v.leaseTerms ? (
           <>
             <div {...stylex.props(s.leasePrice)}>
@@ -389,7 +436,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
             </button>
           </>
         )}
-        <div {...stylex.props(s.actions)}>
+        <div ref={actions} {...stylex.props(s.actions)}>
           <button
             type="button"
             aria-haspopup="dialog"
@@ -409,7 +456,26 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
           </Link>
         </div>
       </section>
-      <VehicleSections vehicle={v} showroomMode onReport={() => setReport(true)} />
+      <VehicleSections key={v.id} vehicle={v} showroomMode onReport={() => setReport(true)} />
+      {contactDock && (
+        <aside
+          aria-label="Vehicle enquiry"
+          data-vehicle-contact-dock
+          {...stylex.props(s.contactDock)}
+        >
+          <strong {...stylex.props(s.dockPrice)}>
+            {money(leasing ? v.monthly || 0 : v.price)}
+            {leasing && <span {...stylex.props(s.dockPeriod)}> / month</span>}
+          </strong>
+          <Link
+            href={'/contact?vehicle=' + v.id}
+            aria-label={'Enquire about ' + v.make + ' ' + v.model}
+            {...stylex.props(s.action, s.enquire)}
+          >
+            Enquire
+          </Link>
+        </aside>
+      )}
       <ContactSheet vehicle={v} open={contact} onClose={() => setContact(false)} />
       <Modal open={finance} onClose={() => setFinance(false)} title="Calculate Financing">
         <FinanceCalculator vehicle={v} onClose={() => setFinance(false)} />

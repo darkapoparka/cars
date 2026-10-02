@@ -5,12 +5,18 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { lockDocumentScroll } from '@/lib/scroll-lock';
 import { clampPhotoPan } from '@/lib/gallery';
+import {
+  vehicleGalleryReturnHref,
+  vehiclePhotoViewerIndex,
+  vehiclePhotoViewerState,
+} from '@/lib/vehicle-detail-navigation';
 import { setVehiclePhoto } from '@/lib/store';
 import type { Vehicle } from '@/lib/types';
 import { Header } from './Header';
 import { Button } from './ui';
 import { Icon } from './Icon';
 import { ContactSheet } from './ContactSheet';
+import { useVehicleGalleryReturnSection } from './useVehicleDetailSection';
 const s = stylex.create({
   grid: {
     display: 'grid',
@@ -32,6 +38,9 @@ const s = stylex.create({
     borderRadius: 8,
     overflow: 'hidden',
   },
+  embeddedGrid: { padding: 0, gap: 8 },
+  singlePhoto: { gridTemplateColumns: 'minmax(0,1fr)' },
+  embeddedTile: { borderWidth: 0, borderRadius: 12 },
   photo: { objectFit: 'cover' },
   footer: {
     position: 'fixed',
@@ -109,7 +118,14 @@ const s = stylex.create({
     backgroundColor: '#090a0d',
   },
 });
-export function GalleryScreen({ vehicle: v }: { vehicle: Vehicle }) {
+export function GalleryScreen({
+  vehicle: v,
+  embedded = false,
+}: {
+  vehicle: Vehicle;
+  embedded?: boolean;
+}) {
+  const returnSection = useVehicleGalleryReturnSection();
   const [index, setIndex] = useState<number | null>(null);
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
@@ -119,8 +135,37 @@ export function GalleryScreen({ vehicle: v }: { vehicle: Vehicle }) {
   const gesture = useRef({ x: 0, y: 0, distance: 0, scale: 1, panX: 0, panY: 0, multi: false });
   const open = index !== null;
   useEffect(() => {
-    if (index !== null) setVehiclePhoto(v.id, index);
-  }, [index, v.id]);
+    if (index === null) return;
+    setVehiclePhoto(v.id, index);
+    if (embedded && vehiclePhotoViewerIndex(window.history.state, v.id, v.images.length) !== null) {
+      window.history.replaceState(
+        vehiclePhotoViewerState(window.history.state, v.id, index),
+        '',
+        window.location.href,
+      );
+    }
+  }, [index, v.id, embedded, v.images.length]);
+  useEffect(() => {
+    if (!embedded) return;
+    function restoreViewer() {
+      const saved = vehiclePhotoViewerIndex(window.history.state, v.id, v.images.length);
+      if (saved !== null) {
+        setIndex(saved);
+        setZoom(1);
+        setPan({ x: 0, y: 0 });
+      } else {
+        const wasOpen = ref.current?.open;
+        ref.current?.close();
+        setIndex(null);
+        setZoom(1);
+        setPan({ x: 0, y: 0 });
+        if (wasOpen && opener.current?.isConnected) opener.current.focus({ preventScroll: true });
+      }
+    }
+    restoreViewer();
+    window.addEventListener('popstate', restoreViewer);
+    return () => window.removeEventListener('popstate', restoreViewer);
+  }, [embedded, v.id, v.images.length]);
   function resetZoom() {
     setZoom(1);
     setPan({ x: 0, y: 0 });
@@ -130,6 +175,10 @@ export function GalleryScreen({ vehicle: v }: { vehicle: Vehicle }) {
     resetZoom();
   }
   function close() {
+    if (embedded && vehiclePhotoViewerIndex(window.history.state, v.id, v.images.length) !== null) {
+      window.history.back();
+      return;
+    }
     ref.current?.close();
     setIndex(null);
     resetZoom();
@@ -174,8 +223,20 @@ export function GalleryScreen({ vehicle: v }: { vehicle: Vehicle }) {
   }, [open, v.images.length]);
   return (
     <>
-      <Header title={v.images.length + ' Images'} back={'/vehicle/' + v.id} />
-      <div {...stylex.props(s.grid)}>
+      {!embedded && (
+        <Header
+          title={v.images.length + ' Images'}
+          back={vehicleGalleryReturnHref(v.id, returnSection)}
+        />
+      )}
+      <div
+        data-gallery-inline={embedded || undefined}
+        {...stylex.props(
+          s.grid,
+          embedded && s.embeddedGrid,
+          embedded && v.images.length === 1 && s.singlePhoto,
+        )}
+      >
         {v.images.map((src, i) => (
           <button
             type="button"
@@ -183,30 +244,42 @@ export function GalleryScreen({ vehicle: v }: { vehicle: Vehicle }) {
             aria-label={'Open vehicle image ' + (i + 1)}
             onClick={(event) => {
               opener.current = event.currentTarget;
+              if (embedded)
+                window.history.pushState(
+                  vehiclePhotoViewerState(window.history.state, v.id, i),
+                  '',
+                  window.location.href,
+                );
               setIndex(i);
               resetZoom();
             }}
-            {...stylex.props(s.tile)}
+            {...stylex.props(s.tile, embedded && s.embeddedTile)}
           >
             <Image
               src={src}
               alt={v.make + ' ' + v.model + ' photo ' + (i + 1)}
               fill
-              sizes="(min-width:800px) 33vw, 50vw"
+              sizes={
+                embedded && v.images.length === 1
+                  ? '(min-width:1100px) 1068px, 100vw'
+                  : '(min-width:800px) 33vw, 50vw'
+              }
               {...stylex.props(s.photo)}
             />
           </button>
         ))}
       </div>
-      <div {...stylex.props(s.footer)}>
-        <Button icon="phone" onClick={() => setContact(true)}>
-          Call
-        </Button>
-        <Button icon="mail" href={'/vehicle/' + v.id + '/message'}>
-          E-mail
-        </Button>
-      </div>
-      <ContactSheet vehicle={v} open={contact} onClose={() => setContact(false)} />
+      {!embedded && (
+        <div {...stylex.props(s.footer)}>
+          <Button icon="phone" onClick={() => setContact(true)}>
+            Call
+          </Button>
+          <Button icon="mail" href={'/vehicle/' + v.id + '/message'}>
+            E-mail
+          </Button>
+        </div>
+      )}
+      {!embedded && <ContactSheet vehicle={v} open={contact} onClose={() => setContact(false)} />}
       {index !== null && (
         <dialog
           ref={ref}

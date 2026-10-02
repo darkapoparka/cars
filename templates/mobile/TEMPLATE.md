@@ -38,12 +38,24 @@ Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
 The retained price rating sits opposite the price, with slimmer bars and a 44px
 details target. The finance entry uses a neutral rounded row and shorter label;
 48px Contact and Enquire actions use 15px medium text, with Enquire as the primary
-action. Price reductions use a small plain chip. The rounded white stats panels
-and their technical-data and feature dialogs remain. Summary facts use semantic
-label/value pairs, smaller icons and shorter registration/owner labels; panel
-footers use 48px controls. Buying/Leasing uses native pressed buttons, and the
-lease entry opens the captured terms. Ratings, prices and finance terms remain
-sample data requiring dealer verification. Rendered acceptance is still pending.
+action. Price reductions use a small plain chip. The price, finance and contact
+block scrolls with the page. Once its actions pass the header, a compact price +
+Enquire bar appears at the bottom, with safe-area spacing and vehicle context.
+Below it, the rounded white panels are organized by three equal-width Details /
+Photos / Features underline tabs. The tab rail sticks beneath the header only
+within this information section; the page retains one browser scroll.
+Details keeps the mileage and other summary facts, technical data and description;
+All specifications still opens the existing dialog. Photos has an inline grid and
+the existing full-screen viewer. In this grid, browser Back closes the viewer,
+Forward reopens its last photo, and Escape returns focus to the opener. Features
+shows all equipment inline, including the retained highlight badges.
+Tab selection replaces the URL fragment and preserves router state and the
+inventory Back entry. Selected sections survive reload; the separate gallery
+returns to the selected section. Summary facts use semantic label/value pairs,
+smaller icons and shorter registration/owner labels; panel footers use 48px
+controls. Buying/Leasing uses native pressed buttons, and the lease entry opens
+the captured terms. Ratings, prices and finance terms remain sample data requiring
+dealer verification. Rendered acceptance is still pending.
 
 Services has three equal-width All / Import / Sell tabs that fill the viewport.
 Import uses a white starter card with a thin border, a small globe beside its

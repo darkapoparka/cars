@@ -1,5 +1,5 @@
 'use client';
-import { Fragment, useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NativeDealerCards } from './NativeDealerCards';
@@ -10,12 +10,16 @@ import { colors } from '@/styles/tokens.stylex';
 import { number } from '@/lib/search';
 import { vehicles } from '@/lib/catalog';
 import { showroom } from '@/lib/showroom';
+import { vehicleDetailSections, type VehicleDetailSection } from '@/lib/vehicle-detail-navigation';
 import { Button, Modal, ui } from './ui';
 import { Icon, type IconName } from './Icon';
 import { RatingStars } from './RatingStars';
 import { AssistantPanel } from './AssistantEntry';
 import { VehicleCard } from './VehicleCard';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
+import { GalleryScreen } from './GalleryScreen';
+import { ShowroomTabs } from './ShowroomTabs';
+import { selectVehicleDetailSection, useVehicleDetailSection } from './useVehicleDetailSection';
 const s = stylex.create({
   body: {
     backgroundColor: colors.surface,
@@ -26,6 +30,27 @@ const s = stylex.create({
     flexDirection: 'column',
     gap: 12,
   },
+  showroomBody: { paddingTop: 12, paddingBottom: 'calc(100px + env(safe-area-inset-bottom))' },
+  sectionNav: {
+    position: 'sticky',
+    top: 60,
+    zIndex: 25,
+    paddingTop: 4,
+    marginBottom: 12,
+    backgroundColor: colors.background,
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    scrollMarginTop: 60,
+  },
+  panel: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: 12,
+    outlineColor: colors.accent,
+    outlineOffset: 2,
+  },
+  featureValue: { fontWeight: 500 },
+  featureTags: { marginBottom: 16 },
   card: {
     backgroundColor: colors.background,
     borderWidth: 1,
@@ -201,6 +226,18 @@ export function VehicleSections({
   onReport: () => void;
   showroomMode?: boolean;
 }) {
+  const section = useVehicleDetailSection();
+  const navigation = useRef<HTMLDivElement>(null);
+  const panelId = 'vehicle-detail-panel-' + v.id;
+  const tabPrefix = 'vehicle-detail-tab-' + v.id + '-';
+  const showDetails = !showroomMode || section === 'details';
+  const showFeatures = !showroomMode || section === 'features';
+  function selectSection(value: VehicleDetailSection) {
+    selectVehicleDetailSection(value);
+    requestAnimationFrame(() =>
+      navigation.current?.scrollIntoView({ block: 'start', behavior: 'instant' }),
+    );
+  }
   const [technical, setTechnical] = useState(false);
   const [features, setFeatures] = useState(false);
   const [description, setDescription] = useState(false);
@@ -249,144 +286,200 @@ export function VehicleSections({
     ),
   ];
   return (
-    <div {...stylex.props(s.body)}>
-      <section {...stylex.props(s.card, s.pad)}>
-        <dl {...stylex.props(s.specs, showroomMode && s.showroomSpecs)}>
-          {spec.map(([icon, label, value]) => (
-            <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
-              <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
-                <span {...stylex.props(ui.orange, s.specIcon)}>
-                  <Icon name={icon} size={showroomMode ? 24 : 28} />
-                </span>
-                {label}
-              </dt>
-              <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>{value}</dd>
-            </div>
-          ))}
-        </dl>
-        {!showroomMode && <AssistantPanel detail />}
-        {!showroomMode && (
-          <button
-            type="button"
-            onClick={() =>
-              document
-                .getElementById('about-dealer-' + v.id)
-                ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }
-            {...stylex.props(s.seller)}
-          >
-            <DealerLogo id={v.id} size={40} />
-            <div>
-              <p>{v.dealer}</p>
-              <p {...stylex.props(s.stars)}>
-                <RatingStars rating={v.rating} />{' '}
-                <span {...stylex.props(s.label)}>({v.reviews})</span>
-              </p>
-              <span {...stylex.props(ui.orange)}>About this dealer</span>
-            </div>
-          </button>
-        )}
-        {v.specialFeatures && (
-          <div {...stylex.props(ui.space)}>
-            <strong>Special features according to dealer</strong>
-            <div {...stylex.props(s.tags)}>
-              {v.specialFeatures.map((feature) => (
-                <span key={feature} {...stylex.props(ui.badge)}>
-                  {feature}
-                </span>
-              ))}
-            </div>
+    <div {...stylex.props(s.body, showroomMode && s.showroomBody)}>
+      <section aria-label={showroomMode ? 'Vehicle information' : undefined}>
+        {showroomMode && (
+          <div ref={navigation} data-vehicle-detail-nav {...stylex.props(s.sectionNav)}>
+            <ShowroomTabs
+              label="Vehicle information"
+              tabs={vehicleDetailSections}
+              selected={section}
+              panelId={panelId}
+              idPrefix={tabPrefix}
+              layout="fill"
+              onChange={selectSection}
+            />
           </div>
         )}
-      </section>
-      <section {...stylex.props(s.card)}>
-        <div {...stylex.props(s.pad)}>
-          <h2 {...stylex.props(s.title)}>Technical data</h2>
-          <table {...stylex.props(s.table)}>
-            <tbody>
-              {data.slice(0, 6).map(([label, value]) => (
-                <tr key={label} {...stylex.props(s.row)}>
-                  <th scope="row" {...stylex.props(s.cell, s.key)}>
-                    {label}
-                  </th>
-                  <td {...stylex.props(s.cell)}>{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        <button
-          type="button"
-          aria-expanded={technical}
-          aria-label="Show more technical data"
-          aria-haspopup="dialog"
-          onClick={() => setTechnical(true)}
-          {...stylex.props(s.more, showroomMode && s.showroomMore)}
+        <div
+          id={showroomMode ? panelId : undefined}
+          role={showroomMode ? 'tabpanel' : undefined}
+          aria-labelledby={showroomMode ? tabPrefix + section : undefined}
+          tabIndex={showroomMode ? 0 : undefined}
+          data-vehicle-detail-panel={showroomMode ? section : undefined}
+          {...stylex.props(s.panel)}
         >
-          {showroomMode ? 'All specifications' : 'Show more'}
-          {showroomMode && <Icon name="right" size={18} />}
-        </button>
-      </section>
-      <section {...stylex.props(s.card)}>
-        <div {...stylex.props(s.pad)}>
-          <h2 {...stylex.props(s.title)}>Features</h2>
-          <table {...stylex.props(s.table)}>
-            <tbody>
-              {v.features.slice(0, 6).map((feature) => (
-                <tr key={feature} {...stylex.props(s.row)}>
-                  <th scope="row" {...stylex.props(s.cell, s.key, s.featuresLabel)}>
-                    {feature}
-                  </th>
-                  <td {...stylex.props(s.cell, s.check)}>
-                    <Icon name="check" size={18} />
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {v.features.length > 6 && (
-          <button
-            type="button"
-            aria-expanded={features}
-            aria-label="Show more features"
-            aria-haspopup="dialog"
-            onClick={() => setFeatures(true)}
-            {...stylex.props(s.more, showroomMode && s.showroomMore)}
-          >
-            {showroomMode ? 'All features' : 'Show more'}
-            {showroomMode && <Icon name="right" size={18} />}
-          </button>
-        )}
-      </section>
-      <section {...stylex.props(s.card)}>
-        <div {...stylex.props(s.pad)}>
-          <h2 {...stylex.props(s.title)}>Vehicle Description</h2>
-          <p {...stylex.props(s.description)}>
-            {v.attributes?.description
-              ? description
-                ? v.attributes.description
-                : v.attributes.description.slice(0, 600)
-              : v.make + ' ' + v.model + '\n' + v.variant}
-          </p>
-          {description && (
-            <p {...stylex.props(ui.small, ui.muted, ui.space)}>
-              Captured vehicle example. Supplementary specifications are local fixtures, not a
-              verified current sales offer.
-            </p>
+          {showDetails && (
+            <section aria-label="Vehicle overview" {...stylex.props(s.card, s.pad)}>
+              <dl {...stylex.props(s.specs, showroomMode && s.showroomSpecs)}>
+                {spec.map(([icon, label, value]) => (
+                  <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
+                    <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
+                      <span {...stylex.props(ui.orange, s.specIcon)}>
+                        <Icon name={icon} size={showroomMode ? 24 : 28} />
+                      </span>
+                      {label}
+                    </dt>
+                    <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>{value}</dd>
+                  </div>
+                ))}
+              </dl>
+              {!showroomMode && <AssistantPanel detail />}
+              {!showroomMode && (
+                <button
+                  type="button"
+                  onClick={() =>
+                    document
+                      .getElementById('about-dealer-' + v.id)
+                      ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                  }
+                  {...stylex.props(s.seller)}
+                >
+                  <DealerLogo id={v.id} size={40} />
+                  <div>
+                    <p>{v.dealer}</p>
+                    <p {...stylex.props(s.stars)}>
+                      <RatingStars rating={v.rating} />{' '}
+                      <span {...stylex.props(s.label)}>({v.reviews})</span>
+                    </p>
+                    <span {...stylex.props(ui.orange)}>About this dealer</span>
+                  </div>
+                </button>
+              )}
+              {!showroomMode && v.specialFeatures && (
+                <div {...stylex.props(ui.space)}>
+                  <strong>Special features according to dealer</strong>
+                  <div {...stylex.props(s.tags)}>
+                    {v.specialFeatures.map((feature) => (
+                      <span key={feature} {...stylex.props(ui.badge)}>
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
+          {showDetails && (
+            <section {...stylex.props(s.card)}>
+              <div {...stylex.props(s.pad)}>
+                <h2 {...stylex.props(s.title)}>Technical data</h2>
+                <table {...stylex.props(s.table)}>
+                  <tbody>
+                    {data.slice(0, 6).map(([label, value]) => (
+                      <tr key={label} {...stylex.props(s.row)}>
+                        <th scope="row" {...stylex.props(s.cell, s.key)}>
+                          {label}
+                        </th>
+                        <td {...stylex.props(s.cell)}>{value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <button
+                type="button"
+                aria-expanded={technical}
+                aria-label="Show more technical data"
+                aria-haspopup="dialog"
+                onClick={() => setTechnical(true)}
+                {...stylex.props(s.more, showroomMode && s.showroomMore)}
+              >
+                {showroomMode ? 'All specifications' : 'Show more'}
+                {showroomMode && <Icon name="right" size={18} />}
+              </button>
+            </section>
+          )}
+          {showroomMode && section === 'photos' && (
+            <section aria-label="Vehicle photos" {...stylex.props(s.card, s.pad)}>
+              <GalleryScreen vehicle={v} embedded />
+            </section>
+          )}
+          {showFeatures && (
+            <section {...stylex.props(s.card)}>
+              <div {...stylex.props(s.pad)}>
+                <h2 {...stylex.props(s.title)}>Features</h2>
+                {showroomMode && v.specialFeatures && v.specialFeatures.length > 0 && (
+                  <div {...stylex.props(s.tags, s.featureTags)}>
+                    {v.specialFeatures.map((feature) => (
+                      <span key={feature} {...stylex.props(ui.badge)}>
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                {!v.features.length && <p {...stylex.props(ui.muted)}>No features listed.</p>}
+                <table {...stylex.props(s.table)}>
+                  <tbody>
+                    {(showroomMode ? v.features : v.features.slice(0, 6)).map((feature) => (
+                      <tr key={feature} {...stylex.props(s.row)}>
+                        <th
+                          scope="row"
+                          {...stylex.props(
+                            s.cell,
+                            s.key,
+                            showroomMode && s.featureValue,
+                            s.featuresLabel,
+                          )}
+                        >
+                          {feature}
+                        </th>
+                        <td {...stylex.props(s.cell, s.check)}>
+                          <Icon name="check" size={18} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {!showroomMode && v.features.length > 6 && (
+                <button
+                  type="button"
+                  aria-expanded={features}
+                  aria-label="Show more features"
+                  aria-haspopup="dialog"
+                  onClick={() => setFeatures(true)}
+                  {...stylex.props(s.more)}
+                >
+                  Show more
+                </button>
+              )}
+            </section>
+          )}
+          {showDetails && (
+            <section {...stylex.props(s.card)}>
+              <div {...stylex.props(s.pad)}>
+                <h2 {...stylex.props(s.title)}>Vehicle Description</h2>
+                <p {...stylex.props(s.description)}>
+                  {v.attributes?.description
+                    ? description
+                      ? v.attributes.description
+                      : v.attributes.description.slice(0, 600)
+                    : v.make + ' ' + v.model + '\n' + v.variant}
+                </p>
+                {description && (
+                  <p {...stylex.props(ui.small, ui.muted, ui.space)}>
+                    Captured vehicle example. Supplementary specifications are local fixtures, not a
+                    verified current sales offer.
+                  </p>
+                )}
+              </div>
+              {(!showroomMode || (v.attributes?.description?.length || 0) > 600) && (
+                <button
+                  type="button"
+                  aria-expanded={description}
+                  aria-label={
+                    description ? 'Show less vehicle description' : 'Show more vehicle description'
+                  }
+                  onClick={() => setDescription(!description)}
+                  {...stylex.props(s.more, showroomMode && s.showroomMore)}
+                >
+                  {description ? 'Show less' : 'Show more'}
+                </button>
+              )}
+            </section>
           )}
         </div>
-        <button
-          type="button"
-          aria-expanded={description}
-          aria-label={
-            description ? 'Show less vehicle description' : 'Show more vehicle description'
-          }
-          onClick={() => setDescription(!description)}
-          {...stylex.props(s.more, showroomMode && s.showroomMore)}
-        >
-          {description ? 'Show less' : 'Show more'}
-        </button>
       </section>
       {showroomMode ? (
         <section {...stylex.props(s.card, ui.pad)}>

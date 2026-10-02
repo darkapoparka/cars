@@ -14,7 +14,84 @@ import {
 import { answerLocally } from '../.qa/domain/assistant.mjs';
 import { createInitialState, decodeState } from '../.qa/domain/persistence.mjs';
 import { showroomMakeOptions } from '../.qa/domain/make-picker-options.mjs';
+import {
+  vehicleDetailSection,
+  vehicleDetailHashSection,
+  vehicleDetailSectionHref,
+  vehicleGalleryHref,
+  vehicleGalleryReturnHref,
+  vehiclePhotoViewerState,
+  vehiclePhotoViewerIndex,
+} from '../.qa/domain/vehicle-detail-navigation.mjs';
 const filters = (patch) => ({ ...structuredClone(defaultFilters), ...patch });
+
+test('PDP sections accept only known views and unknown fragments show details', () => {
+  for (const section of ['details', 'photos', 'features']) {
+    assert.equal(vehicleDetailSection(section), section);
+    assert.equal(vehicleDetailHashSection('#' + section), section);
+  }
+  for (const value of [null, undefined, {}, 'unknown', 'Photos', '#photos'])
+    assert.equal(vehicleDetailSection(value), 'details');
+  assert.equal(vehicleDetailHashSection('#unknown'), 'details');
+});
+
+test('PDP section links retain route and query context while replacing the fragment', () => {
+  const original = 'http://127.0.0.1:6474/vehicle/bmw-x6?context=stock#features';
+  assert.equal(
+    vehicleDetailSectionHref(original, 'photos'),
+    '/vehicle/bmw-x6?context=stock#photos',
+  );
+  assert.equal(vehicleDetailSectionHref(original, 'details'), '/vehicle/bmw-x6?context=stock');
+});
+
+test('Gallery links return to the selected PDP section and reject an external return target', () => {
+  assert.equal(
+    vehicleGalleryHref('bmw-x6', 'photos'),
+    '/vehicle/bmw-x6/gallery?returnSection=photos',
+  );
+  assert.equal(vehicleGalleryHref('bmw-x6', 'details'), '/vehicle/bmw-x6/gallery');
+  assert.equal(vehicleGalleryReturnHref('bmw-x6', 'photos'), '/vehicle/bmw-x6#photos');
+  assert.equal(vehicleGalleryReturnHref('bmw-x6', 'https://example.com'), '/vehicle/bmw-x6');
+  assert.equal(vehicleGalleryReturnHref('bmw/x 6', 'features'), '/vehicle/bmw%2Fx%206#features');
+});
+
+test('Photo history keeps router context without mutating the previous entry', () => {
+  const before = { __NA: true, tree: ['vehicle'], scroll: 540 };
+  const after = vehiclePhotoViewerState(before, 'bmw-x6', 2);
+  assert.deepEqual(before, { __NA: true, tree: ['vehicle'], scroll: 540 });
+  assert.equal(after.__NA, true);
+  assert.equal(after.tree, before.tree);
+  assert.equal(after.scroll, 540);
+  assert.equal(vehiclePhotoViewerIndex(after, 'bmw-x6', 20), 2);
+  assert.deepEqual(vehiclePhotoViewerState(null, 'bmw-x6', 0), {
+    carsMobilePhotoViewer: { vehicleId: 'bmw-x6', index: 0 },
+  });
+});
+
+test('Restored photo state rejects stale vehicles, invalid indices and invalid image counts', () => {
+  const valid = vehiclePhotoViewerState({}, 'bmw-x6', 3);
+  assert.equal(vehiclePhotoViewerIndex(valid, 'bmw-x6', 20), 3);
+  assert.equal(vehiclePhotoViewerIndex(valid, 'bmw-x3', 20), null);
+  for (const index of [-1, 20, 1.5, Infinity, NaN, '3', null])
+    assert.equal(
+      vehiclePhotoViewerIndex(
+        { carsMobilePhotoViewer: { vehicleId: 'bmw-x6', index } },
+        'bmw-x6',
+        20,
+      ),
+      null,
+    );
+  for (const count of [0, -1, NaN, Infinity, 0.5])
+    assert.equal(vehiclePhotoViewerIndex(valid, 'bmw-x6', count), null);
+  for (const state of [
+    null,
+    {},
+    [],
+    { carsMobilePhotoViewer: null },
+    { carsMobilePhotoViewer: '3' },
+  ])
+    assert.equal(vehiclePhotoViewerIndex(state, 'bmw-x6', 20), null);
+});
 test('default search returns the captured cars', () =>
   assert.equal(filterVehicles(vehicles, filters({})).length, 4));
 test('search text matches multiple non-adjacent words', () =>

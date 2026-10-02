@@ -567,6 +567,11 @@ async function run(name, engine) {
     await page.getByRole('link', { name: 'BMW X6', exact: true }).click();
     await page.locator('header').getByRole('heading', { name: 'BMW X6', exact: true }).waitFor();
     const detailHistoryLength = await page.evaluate(() => history.length);
+    await page.getByRole('tab', { name: 'Photos', exact: true }).click();
+    await page.getByRole('tabpanel', { name: 'Photos', exact: true }).waitFor();
+    await page.getByRole('tab', { name: 'Features', exact: true }).click();
+    await page.getByRole('tabpanel', { name: 'Features', exact: true }).waitFor();
+    assert.equal(await page.evaluate(() => history.length), detailHistoryLength);
     await page.getByRole('button', { name: 'Go back', exact: true }).click();
     await page.locator('header').getByRole('heading', { name: 'BMW 540', exact: true }).waitFor();
     await page.getByRole('button', { name: 'Go back', exact: true }).click();
@@ -1017,6 +1022,91 @@ async function run(name, engine) {
     await enquiry.waitFor({ state: 'hidden' });
     check('Unavailable draft storage retains in-memory values and never reports a successful save');
     await go('/vehicle/bmw-x6');
+    const detailTabs = page.getByRole('tablist', { name: 'Vehicle information', exact: true });
+    assert.deepEqual(await detailTabs.getByRole('tab').allTextContents(), [
+      'Details',
+      'Photos',
+      'Features',
+    ]);
+    await page.getByRole('tabpanel', { name: 'Details', exact: true }).waitFor();
+    const pdpHistoryLength = await page.evaluate(() => history.length);
+    await detailTabs.getByRole('tab', { name: 'Photos', exact: true }).click();
+    const photosPanel = page.getByRole('tabpanel', { name: 'Photos', exact: true });
+    await photosPanel.waitFor();
+    assert.equal(new URL(page.url()).hash, '#photos');
+    assert.equal(await page.evaluate(() => history.length), pdpHistoryLength);
+    const photoCount = await photosPanel
+      .getByRole('button', { name: /^Open vehicle image / })
+      .count();
+    assert.ok(photoCount > 2);
+    const secondPhoto = photosPanel.getByRole('button', {
+      name: 'Open vehicle image 2',
+      exact: true,
+    });
+    await secondPhoto.click();
+    const photoViewer = page.getByRole('dialog', { name: 'Vehicle photo viewer', exact: true });
+    await photoViewer.waitFor();
+    assert.equal(await photoViewer.locator('output').innerText(), '2 / ' + photoCount);
+    await photoViewer.getByRole('button', { name: 'Next photo', exact: true }).click();
+    await page.waitForFunction(() => history.state?.carsMobilePhotoViewer?.index === 2);
+    assert.equal(await photoViewer.locator('output').innerText(), '3 / ' + photoCount);
+    await page.goBack();
+    await photoViewer.waitFor({ state: 'hidden' });
+    assert.equal(new URL(page.url()).hash, '#photos');
+    await page.waitForFunction(
+      () => document.activeElement?.getAttribute('aria-label') === 'Open vehicle image 2',
+    );
+    await page.goForward();
+    await photoViewer.waitFor();
+    assert.equal(await photoViewer.locator('output').innerText(), '3 / ' + photoCount);
+    await page.keyboard.press('Escape');
+    await photoViewer.waitFor({ state: 'hidden' });
+    assert.equal(await page.evaluate(() => document.body.style.overflow), '');
+    await detailTabs.getByRole('tab', { name: 'Photos', exact: true }).focus();
+    await page.keyboard.press('End');
+    const featuresPanel = page.getByRole('tabpanel', { name: 'Features', exact: true });
+    await featuresPanel.waitFor();
+    assert.equal(new URL(page.url()).hash, '#features');
+    assert.ok((await featuresPanel.locator('table tbody tr').count()) > 6);
+    assert.equal(
+      await featuresPanel.getByRole('button', { name: /All features|Show more features/ }).count(),
+      0,
+    );
+    await page.reload({ waitUntil: 'load' });
+    await page.getByRole('tab', { name: 'Features', exact: true, selected: true }).waitFor();
+    await detailTabs.getByRole('tab', { name: 'Features', exact: true }).focus();
+    await page.keyboard.press('Home');
+    await page.getByRole('tabpanel', { name: 'Details', exact: true }).waitFor();
+    assert.equal(new URL(page.url()).hash, '');
+    const specifications = page.getByRole('button', {
+      name: 'Show more technical data',
+      exact: true,
+    });
+    await specifications.click();
+    const technicalDialog = page.getByRole('dialog', { name: 'Technical data', exact: true });
+    await technicalDialog.waitFor();
+    await page.keyboard.press('Escape');
+    await technicalDialog.waitFor({ state: 'hidden' });
+    await page.waitForFunction(
+      () => document.activeElement?.getAttribute('aria-label') === 'Show more technical data',
+    );
+    await page.locator('[data-vehicle-contact-dock]').waitFor();
+    await page.getByRole('link', { name: 'Enquire about BMW X6', exact: true }).click();
+    assert.match(
+      await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
+      /BMW X6/,
+    );
+    check(
+      'PDP sections preserve inventory Back; inline photos support Back/Forward, Escape and focus return; equipment stays inline and the dock keeps vehicle context',
+    );
+    await go('/vehicle/bmw-x6#photos');
+    await page.getByRole('tab', { name: 'Photos', exact: true, selected: true }).waitFor();
+    await page.getByRole('link', { name: 'Vehicle image', exact: true }).click();
+    assert.equal(new URL(page.url()).searchParams.get('returnSection'), 'photos');
+    await page.getByRole('link', { name: 'Go back', exact: true }).click();
+    await page.getByRole('tabpanel', { name: 'Photos', exact: true }).waitFor();
+    check('Standalone gallery returns to the selected PDP section');
+    await go('/vehicle/bmw-x6');
     await page.getByRole('link', { name: 'Enquire', exact: true }).click();
     assert.match(
       await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
@@ -1043,6 +1133,35 @@ async function run(name, engine) {
           await capture(
             (route === '/' ? 'cars' : route.replaceAll('/', '-').slice(1)) + '-' + width,
           );
+        }
+        for (const section of ['details', 'photos', 'features']) {
+          await go('/vehicle/bmw-x6' + (section === 'details' ? '' : '#' + section));
+          await page.locator('[data-vehicle-detail-panel="' + section + '"]').waitFor();
+          await page
+            .locator('[data-vehicle-detail-nav]')
+            .evaluate((element) => element.scrollIntoView({ block: 'start', behavior: 'instant' }));
+          await page.locator('[data-vehicle-contact-dock]').waitFor();
+          await geometry(width + 'px PDP ' + section);
+          const tabs = await page
+            .getByRole('tablist', { name: 'Vehicle information' })
+            .getByRole('tab')
+            .evaluateAll((elements) =>
+              elements.map((element) => {
+                const rect = element.getBoundingClientRect();
+                return {
+                  left: rect.left,
+                  right: rect.right,
+                  width: rect.width,
+                  height: rect.height,
+                };
+              }),
+            );
+          assert.ok(tabs.every((tab) => tab.left >= 0 && tab.right <= width && tab.height >= 48));
+          assert.ok(
+            Math.max(...tabs.map((tab) => tab.width)) - Math.min(...tabs.map((tab) => tab.width)) <
+              1,
+          );
+          await capture('pdp-' + section + '-' + width);
         }
         for (const tab of ['import', 'sell', 'financing', 'parts']) {
           await go('/services?tab=' + tab);
