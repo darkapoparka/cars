@@ -1215,7 +1215,7 @@
 		align-items: center;
 		gap: var(--bc-space-2);
 		border: 0;
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-radius-control);
 		background: var(--bc-white);
 		padding: 0 var(--bc-space-3);
 		appearance: none;

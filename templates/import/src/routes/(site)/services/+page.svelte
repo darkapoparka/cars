@@ -187,7 +187,7 @@
 		}
 		.service-mobile-filters :global(.site-action) {
 			flex: 0 0 auto;
-			border-radius: var(--bc-radius-pill);
+			border-radius: var(--bc-radius-control);
 			padding-inline: var(--bc-space-3);
 			font-size: var(--bc-mobile-label);
 			white-space: nowrap;

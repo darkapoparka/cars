@@ -2099,7 +2099,7 @@
 			flex: 0 0 auto;
 			padding: 0 12px;
 			border: 0;
-			border-radius: var(--bc-radius-pill);
+			border-radius: var(--bc-radius-control);
 			background: var(--bc-card-bg);
 			box-shadow: none;
 			color: var(--bc-ink);
