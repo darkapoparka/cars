@@ -42,11 +42,7 @@
       <ContactSocialChannels />
       <div class="dn-contact-location dn-contact-location--general" aria-labelledby="contact-location-title">
         <div class="dn-contact-location__card">
-          <div class="dn-contact-location__heading">
-            <h2 id="contact-location-title">{i18n.t("m_8647c430b400", { p0: i18n.dealer('city') })}</h2>
-            <p>{i18n.dealer('address')} · {i18n.dealer('appointment')}</p>
-          </div>
-          <ShowroomMap />
+          <ShowroomMap headingId="contact-location-title" />
         </div>
       </div>
     {:else}

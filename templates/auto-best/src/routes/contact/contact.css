@@ -694,7 +694,6 @@
     border-radius: var(--dn-radius-lg);
     background: var(--dn-surface-raised);
   }
-  .dn-contact-section--general .dn-contact-location__heading { display: none; }
   .dn-contact-section--general .dn-contact-location__card .dn-showroom-map {
     border: 0;
     border-radius: 0;

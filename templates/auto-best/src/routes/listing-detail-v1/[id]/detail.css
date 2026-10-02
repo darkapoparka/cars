@@ -303,6 +303,9 @@
   flex: 0 0 auto;
 }
 
+.dn-detail-location-card__pin { display: none; }
+.dn-detail-location-card__address-pin { display: flex; flex: 0 0 auto; }
+
 .dn-detail-sidebar {
   display: grid;
   gap: 20px;
@@ -510,6 +513,27 @@
   .dn-detail-finance-card { grid-row: 5; }
   .dn-detail-dealer { grid-row: 6; }
   #location { grid-row: 7; }
+  .dn-detail-location-card__header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 12px;
+  }
+  .dn-detail-location-card__header h2 {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--dn-space-2);
+    font-size: var(--dn-text-card);
+    text-align: left;
+  }
+  .dn-detail-location-card__pin {
+    display: flex;
+    height: 1lh;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+  .dn-detail-location-card__address-pin { display: none; }
+  .dn-detail-location-card__header p { text-align: left; }
   .dn-detail-sidebar { position: static; }
   .dn-detail-summary { position: static; min-height: 0; }
   .dn-detail-related__list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -802,16 +826,6 @@
 
   .dn-detail-dealer h2 { font-size: var(--dn-text-lead); }
   .dn-detail-dealer__details { margin-top: 14px; gap: 10px; }
-
-  .dn-detail-location-card__header {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 7px;
-    margin-bottom: 12px;
-  }
-
-  .dn-detail-location-card__header h2 { font-size: var(--dn-text-card); }
-  .dn-detail-location-card__header p { text-align: left; }
 
   .dn-detail-related {
     margin: 12px 12px 0;
