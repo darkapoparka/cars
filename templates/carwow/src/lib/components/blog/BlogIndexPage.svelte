@@ -161,6 +161,11 @@
 	function isActiveFilter(name: keyof BlogFilters, value: string) {
 		return normalize(filters[name]) === normalize(value);
 	}
+
+	function topicLabel(value: string) {
+		const label = i18n.text(value);
+		return label.charAt(0).toLocaleUpperCase(i18n.locale) + label.slice(1);
+	}
 </script>
 
 {#snippet articleMeta(article: DayNightArticle)}
@@ -241,10 +246,10 @@
 			{#each categoryOptions.filter((option) => !desktopCategories.includes(option.value)) as option (option.value)}
 				<a
 					href={i18n.href(resolve(filterHref({ category: option.value })))}
-					class="desktop-discovery-chip"
+					class="blog-topic-pill"
 					class:is-active={isActiveFilter('category', option.value)}
 					aria-current={isActiveFilter('category', option.value) ? 'true' : undefined}
-					>{i18n.text(option.label)}</a
+					>{topicLabel(option.label)}</a
 				>
 			{/each}
 			{#each quickTagOptions as option (option.value)}
@@ -252,10 +257,10 @@
 					href={i18n.href(
 						resolve(filterHref({ tag: isActiveFilter('tag', option.value) ? '' : option.value }))
 					)}
-					class="desktop-discovery-chip"
+					class="blog-topic-pill"
 					class:is-active={isActiveFilter('tag', option.value)}
 					aria-current={isActiveFilter('tag', option.value) ? 'true' : undefined}
-					>{i18n.text(option.label)}<span>{option.count}</span></a
+					>{topicLabel(option.label)}</a
 				>
 			{/each}
 		</nav>
@@ -435,9 +440,34 @@
 		justify-content: space-between;
 		gap: 12px;
 		margin-bottom: 20px;
+		padding: 12px 16px;
+		border-radius: 12px;
+		background: var(--discovery-panel);
 	}
-	.blog-quick-topics .desktop-discovery-chip span {
-		opacity: 0.7;
+	.blog-topic-pill {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 0;
+		height: 40px;
+		padding: 0 16px;
+		border: 0;
+		border-radius: 999px;
+		background: var(--discovery-muted-surface);
+		color: var(--discovery-ink);
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font);
+		white-space: nowrap;
+		transition: background-color 140ms ease;
+	}
+	.blog-topic-pill:hover {
+		background: #e8ebee;
+	}
+	.blog-topic-pill.is-active {
+		background: var(--sa-yellow);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.blog-topic-pill.is-active:hover {
+		background: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink));
 	}
 	.blog-filter-status {
 		display: flex;
@@ -452,16 +482,15 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 6px;
-		min-height: 36px;
+		min-height: 40px;
 		padding: 0 12px;
-		border: 1px solid var(--discovery-control-border);
-		border-radius: 8px;
+		border: 0;
+		border-radius: 999px;
 		color: var(--sa-ink);
-		background: #fff;
+		background: transparent;
 	}
 	.blog-clear-filters:hover {
-		background: var(--sa-yellow);
-		border-color: var(--sa-yellow);
+		background: var(--discovery-muted-surface);
 	}
 	.blog-list {
 		padding: 24px 0 64px;

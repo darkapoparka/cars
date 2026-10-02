@@ -13,7 +13,6 @@
 		FileCheck2,
 		Clock3
 	} from '@lucide/svelte';
-	import SiteChromeIcon from '$lib/components/layout/SiteChromeIcon.svelte';
 	import { resolve } from '$app/paths';
 	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 	import LazyMapEmbed from '$lib/components/shared/map/LazyMapEmbed.svelte';
@@ -77,30 +76,56 @@
 		title={i18n.t('pattern.558d5da46c92', { v0: daynightSite.shortName })}
 	>
 		<div class="about-hero-panel">
-			<div class="about-hero-primary">
-				<strong>{i18n.t('copy.3667f9f676c2')}</strong>
-				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/inventory'))}
-					>{i18n.t('copy.f20a4411e8d6')}</a
+			<div class="about-hero-details">
+				<a
+					class="about-hero-location"
+					href={i18n.href(daynightSite.mapUrl)}
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					<MapPin size={18} aria-hidden="true" />{i18n.dealer('locationShort')}
+				</a>
+				<span class="about-hero-hours">{i18n.text(daynightSite.hoursLabel)}</span>
+			</div>
+			<div class="about-hero-actions">
+				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+					>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} aria-hidden="true" /></a
+				>
+				<a class="about-hero-browse" href={i18n.href(resolve('/inventory'))}
+					>{i18n.t('copy.f20a4411e8d6')} <ArrowRight size={18} aria-hidden="true" /></a
 				>
 			</div>
 			<nav class="about-hero-contact" aria-label={i18n.t('copy.3618c24ea260')}>
-				<a href={i18n.href(daynightSite.mapUrl)} target="_blank" rel="noopener noreferrer"
-					><MapPin size={18} />{i18n.dealer('locationShort')}</a
+				<a href={i18n.href(daynightSite.phoneHref)}
+					><Phone size={18} aria-hidden="true" />{daynightSite.phoneLabel}</a
 				>
-				<a href={i18n.href(daynightSite.phoneHref)}><Phone size={18} />{daynightSite.phoneLabel}</a>
 				<div class="about-hero-socials">
 					<a
 						href="https://www.facebook.com/61566304063141/"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label={i18n.t('copy.d41f5b4977ee')}><SiteChromeIcon name="facebook" /></a
+						aria-label={i18n.t('copy.d41f5b4977ee')}
 					>
+						<img
+							src={i18n.asset(resolve('/assets/icons/input-facebook.svg'))}
+							alt=""
+							width="24"
+							height="24"
+						/>
+					</a>
 					<a
 						href="https://www.instagram.com/daynight.auto.plovdiv/"
 						target="_blank"
 						rel="noopener noreferrer"
-						aria-label={i18n.t('copy.bad57ef7837c')}><SiteChromeIcon name="instagram" /></a
+						aria-label={i18n.t('copy.bad57ef7837c')}
 					>
+						<img
+							src={i18n.asset(resolve('/assets/icons/input-instagram.svg'))}
+							alt=""
+							width="24"
+							height="24"
+						/>
+					</a>
 					<a
 						href={i18n.href(youtubeChannelUrl)}
 						target="_blank"
@@ -285,65 +310,98 @@
 		padding: 0;
 	}
 
-	.about-hero-primary {
+	.about-hero-details {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
+		justify-items: center;
+		gap: 6px;
+	}
+	.about-page .about-hero-location {
+		display: inline-flex;
 		align-items: center;
-		gap: 16px;
-	}
-
-	.about-hero-primary strong {
+		gap: 8px;
+		color: #fff;
 		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.35 var(--sa-font);
-		text-align: left;
 	}
-
-	.about-hero-primary .sa-cta {
-		min-width: 190px;
+	.about-hero-location:hover {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+	.about-hero-hours {
+		color: var(--desktop-hero-copy);
+		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
+	}
+	.about-hero-actions {
+		display: flex;
+		justify-content: center;
+		gap: 12px;
+	}
+	.about-hero-actions > a {
+		flex: 1 1 0;
+		min-width: 0;
+		max-width: 240px;
+	}
+	.about-page .about-hero-browse {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		min-height: 48px;
+		padding: 0 22px;
+		border: 1px solid #899298;
+		border-radius: 8px;
+		background: transparent;
+		color: #fff;
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.3 var(--sa-font);
+		white-space: nowrap;
+	}
+	.about-page .about-hero-browse:hover {
+		border-color: #e2e5e7;
+		background: #4b5256;
 	}
 
 	.about-hero-contact {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+		display: flex;
 		align-items: center;
-		gap: 10px;
+		justify-content: center;
+		gap: 20px;
 	}
 
 	.about-page .about-hero-contact a {
 		display: inline-flex;
-		min-height: 44px;
+		min-height: 40px;
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		border: 1px solid var(--desktop-control-border);
-		border-radius: 8px;
-		background: var(--desktop-field);
-		color: var(--sa-ink);
-		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.35 var(--sa-font);
-		padding: 0 12px;
+		border: 0;
+		border-radius: 999px;
+		background: transparent;
+		color: var(--desktop-hero-copy);
+		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
+		padding: 0 8px;
 	}
 
 	.about-hero-contact > a:hover,
 	.about-hero-contact > a:focus-visible,
 	.about-hero-socials a:hover,
 	.about-hero-socials a:focus-visible {
-		border-color: var(--desktop-secondary-hover);
-		background: var(--desktop-secondary-hover);
+		background: #4b5256;
 	}
 
 	.about-hero-socials {
 		display: flex;
-		gap: 8px;
+		gap: 4px;
 	}
 
-	.about-hero-socials a {
-		width: 44px;
+	.about-page .about-hero-socials a {
+		width: 40px;
 		padding: 0;
-		border-radius: 50%;
-		background: #fff;
 	}
 
-	.about-hero-socials img {
-		filter: brightness(0);
+	.about-hero-socials :global(img) {
+		width: 18px;
+		height: 18px;
+		object-fit: contain;
+		filter: brightness(0) invert(1);
 	}
 	.about-social-row {
 		display: flex;
@@ -392,9 +450,8 @@
 		padding-inline: 22px;
 	}
 	.about-story {
-		background: #fff;
-		border: 1px solid var(--desktop-control-border);
-		border-radius: 12px;
+		background: transparent;
+		border: 0;
 	}
 	.about-text-link {
 		display: inline-flex;
@@ -407,9 +464,9 @@
 		margin-top: 20px;
 	}
 	.about-story > div {
-		max-width: 920px;
+		max-width: 860px;
 		margin-inline: auto;
-		padding: 32px;
+		padding: 0;
 		text-align: center;
 	}
 	.about-story h2 {

@@ -190,9 +190,28 @@ for (const width of [992, 1280, 1440, 1920]) {
 				} else if (route === 'about') {
 					await expect(container.locator('img')).toHaveCount(0);
 					expect(box.height).toBeLessThan(360);
-					for (const link of await page.locator('.about-hero-contact > a').all()) {
-						await expect(link).toHaveCSS('color', 'rgb(15, 20, 23)');
-					}
+					await expect(container).toHaveCSS('border-width', '0px');
+					const aboutHero = page.locator('.about-hero-panel');
+					const visitAction = aboutHero.locator('.sa-cta-primary');
+					const browseAction = aboutHero.locator('.about-hero-browse');
+					await expect(visitAction).toHaveAttribute('href', `/${locale}/contact`);
+					await expect(browseAction).toHaveAttribute('href', `/${locale}/inventory`);
+					await expect(visitAction).toHaveCSS('color', 'rgb(15, 20, 23)');
+					await expect(browseAction).toHaveCSS('color', 'rgb(255, 255, 255)');
+					const visitBox = (await visitAction.boundingBox())!;
+					const browseBox = (await browseAction.boundingBox())!;
+					expect(visitBox.y).toBe(browseBox.y);
+					expect(visitBox.height).toBe(48);
+					expect(browseBox.height).toBe(48);
+					await expect(aboutHero.locator('.about-hero-location')).toHaveAttribute(
+						'href',
+						/google\.com\/maps/
+					);
+					await expect(aboutHero.locator('.about-hero-contact > a')).toHaveAttribute(
+						'href',
+						/^tel:/
+					);
+					await expect(aboutHero.locator('.about-hero-socials a')).toHaveCount(3);
 				} else {
 					await expect(page.locator('.blog-featured-card, .blog-magazine')).toHaveCount(0);
 					await expect
@@ -228,6 +247,11 @@ for (const width of [992, 1280, 1440, 1920]) {
 					await expect(categories.nth(1)).toHaveCSS('color', 'rgb(255, 255, 255)');
 					await expect(blogDeck.locator('.blog-quick-topics')).toHaveCount(0);
 					await expect(page.locator('.blog-list .blog-quick-topics')).toBeVisible();
+					const topics = page.locator('.blog-quick-topics a');
+					await expect(topics.first()).toHaveCSS('border-radius', '999px');
+					await expect(topics.first()).toHaveCSS('height', '40px');
+					await expect(topics.first()).toHaveCSS('background-color', 'rgb(243, 244, 246)');
+					await expect(topics.first()).not.toHaveText(/\d/);
 				}
 				if (width === 1440 && locale === 'en')
 					await page.screenshot({ path: testInfo.outputPath(`${route}.png`) });
