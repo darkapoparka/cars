@@ -5,10 +5,11 @@ running at `http://127.0.0.1:6474/` with Node 22.20.0.
 
 The existing Cars/Services tab rail is retained. The first service category is
 now **All services**, showing all six example offerings as compact rows with a
-title, description, icon and chevron. The repeated red enquiry links are removed
-from the overview. Each whole row remains tappable, and its heading/description
-remain separate accessible content. Financing and Parts open their detail tabs,
-with one full-width enquiry action in each.
+title, description and outlined Enquire or View button. Leading icon tiles and
+chevrons are removed. Each action has a minimum 44px height and a service-specific
+accessible name. Buttons wrap below the copy when the row cannot fit them beside
+it. The headings and descriptions remain separate accessible content. Financing
+and Parts open their detail tabs, with one full-width enquiry action in each.
 
 Category tabs are derived from the service list: removing an unavailable Financing
 or Parts offering also removes that tab. Deep-link values and return URLs remain
@@ -23,7 +24,7 @@ contexts and no transmission claim.
 ## Checks and remaining evidence
 
 Lint, TypeScript, all 58 domain tests and the isolated production build passed
-(build ID `f4S-gFcGOzZK3n3Lc6OL0`).
+(build ID `VnqNbyUIQKAKgRPnn8-5A`, after the button/icon refinement).
 The showroom browser suite was updated for All services, overview/detail
 navigation and the single detail action, and its syntax check passed.
 

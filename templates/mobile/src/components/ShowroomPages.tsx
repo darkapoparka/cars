@@ -2,20 +2,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import {
-  ArrowLeftRight,
-  CalendarDays,
-  ChevronRight,
-  Clock3,
-  Mail,
-  MapPin,
-  Package,
-  Phone,
-  Search,
-  WalletCards,
-  Wrench,
-  type LucideIcon,
-} from 'lucide-react';
+import { Clock3, Mail, MapPin, Phone } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -35,14 +22,6 @@ import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { Button, ui } from './ui';
 
-const serviceIcons: Record<string, LucideIcon> = {
-  financing: WalletCards,
-  'trade-in': ArrowLeftRight,
-  sourcing: Search,
-  viewing: CalendarDays,
-  servicing: Wrench,
-  parts: Package,
-};
 const s = stylex.create({
   page: {
     padding: 16,
@@ -67,9 +46,8 @@ const s = stylex.create({
     marginInline: 'auto',
   },
   serviceCard: {
-    position: 'relative',
-    display: 'grid',
-    gridTemplateColumns: '40px minmax(0,1fr) 20px',
+    display: 'flex',
+    flexWrap: 'wrap',
     alignItems: 'center',
     gap: 12,
     backgroundColor: colors.background,
@@ -78,15 +56,9 @@ const s = stylex.create({
     paddingInline: 14,
     minWidth: 0,
   },
-  serviceRow: {
-    backgroundColor: { default: colors.background, ':hover': colors.panel },
-    outlineStyle: { default: 'none', ':focus-within': 'solid' },
-    outlineWidth: 2,
-    outlineColor: colors.accent,
-    outlineOffset: 2,
-  },
   serviceDetail: {
-    gridTemplateColumns: '40px minmax(0,1fr)',
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr)',
     alignItems: 'start',
     borderRadius: 16,
     padding: 20,
@@ -99,17 +71,29 @@ const s = stylex.create({
     gap: 4,
     minWidth: 0,
   },
+  serviceRowBody: { flex: '1 1 180px' },
   serviceTitle: { fontSize: 16, lineHeight: '22px', fontWeight: 600 },
   serviceCopy: { fontSize: 14, lineHeight: '20px', color: colors.muted },
   serviceAction: {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: 44,
-    color: colors.muted,
+    minWidth: 80,
+    flexShrink: 0,
+    paddingBlock: 10,
+    paddingInline: 12,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 8,
+    backgroundColor: { default: colors.background, ':hover': colors.stripe },
+    color: colors.text,
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: '20px',
     textDecoration: 'none',
-    outlineStyle: 'none',
-    '::after': { content: '""', position: 'absolute', inset: 0, borderRadius: 12 },
+    outlineColor: colors.accent,
   },
   serviceDetailAction: { gridColumn: '1 / -1', marginTop: 4 },
   serviceDetails: {
@@ -148,16 +132,6 @@ const s = stylex.create({
     alignItems: 'flex-start',
     gap: 14,
     minWidth: 0,
-  },
-  icon: {
-    color: colors.muted,
-    backgroundColor: colors.stripe,
-    width: 40,
-    height: 40,
-    borderRadius: 10,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   body: { fontSize: 15, lineHeight: '22px', color: colors.muted },
   contactActions: {
@@ -320,17 +294,13 @@ export function ShowroomServicesScreen() {
           {showroomServices
             .filter((service) => overview || service.category === selected)
             .map((service) => {
-              const ServiceIcon = serviceIcons[service.id] || Wrench;
               return (
                 <section
                   key={service.id}
                   data-showroom-service={service.id}
-                  {...stylex.props(s.serviceCard, overview ? s.serviceRow : s.serviceDetail)}
+                  {...stylex.props(s.serviceCard, !overview && s.serviceDetail)}
                 >
-                  <span {...stylex.props(s.icon)}>
-                    <ServiceIcon size={22} strokeWidth={1.8} aria-hidden="true" />
-                  </span>
-                  <div {...stylex.props(s.serviceBody)}>
+                  <div {...stylex.props(s.serviceBody, overview && s.serviceRowBody)}>
                     <h2 {...stylex.props(overview ? s.serviceTitle : s.subTitle)}>
                       {service.title}
                     </h2>
@@ -348,13 +318,13 @@ export function ShowroomServicesScreen() {
                           ? serviceCategoryHref(service.category)
                           : '/contact?service=' + service.id
                       }
+                      aria-label={
+                        service.details ? 'View ' + service.title.toLowerCase() : service.action
+                      }
                       aria-describedby={'showroom-service-' + service.id + '-copy'}
                       {...stylex.props(s.serviceAction)}
                     >
-                      <span {...stylex.props(ui.srOnly)}>
-                        {service.details ? 'View ' + service.title.toLowerCase() : service.action}
-                      </span>
-                      <ChevronRight size={20} strokeWidth={1.8} aria-hidden="true" />
+                      {service.details ? 'View' : 'Enquire'}
                     </Link>
                   ) : (
                     <>

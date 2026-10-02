@@ -464,13 +464,13 @@ async function run(name, engine) {
         .getAttribute('aria-selected'),
       'true',
     );
-    await page.locator('[data-showroom-service="viewing"]').click({ position: { x: 20, y: 20 } });
+    await page.getByRole('link', { name: 'Arrange a viewing', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('service'), 'viewing');
     await page.getByRole('link', { name: 'View service', exact: true }).click();
     await selectedServiceTab('All services');
     await page.getByRole('tab', { name: 'All services', exact: true }).waitFor();
-    check('Compact service cards open the matching enquiry; unknown categories fall back safely');
+    check('Service buttons open the matching enquiry; unknown categories fall back safely');
     await page.getByRole('tab', { name: 'Financing', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
