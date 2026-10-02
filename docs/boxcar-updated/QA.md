@@ -4,30 +4,31 @@ Candidate: `L:/CODEX/cars/templates/boxcar-updated` on Cars `main`, Node 22.23.2
 
 ## Current curated homepage
 
-The selected composition uses **Home 10's rounded photo hero and header, Home 5's white pill search and four-icon benefits, and Home 8's centered type/brand rows, boxed vehicle shelf, dark rounded cards, journal and footer**. It follows a centered section flow. The dark cards describe three buying steps rather than showing copied customer testimonials. Dealer navigation is Home / Cars / About / Contact; supporting navigation also exposes buying advice, saved cars and comparison.
+The selected composition uses **Home 10's rounded photo hero, header and photographic body choices, Home 5's white pill search and four-icon benefits, and Home 8's centered brands, boxed vehicle shelf, dark rounded cards, journal and footer**. It follows a centered section flow. The dark cards describe three buying steps rather than showing copied customer testimonials. Dealer navigation is Home / Cars / About / Contact; supporting navigation also exposes buying advice, saved cars and comparison.
 
 The composition selects the preserved original DOM, SVGs, photographs and layout CSS, then binds dealer identity, articles and the 17 sample vehicles through shared data. There are no inflated stock totals or borrowed reviews on the curated page. Supporting inventory/detail pages remain the adapted Svelte layouts. This is a new combination of source sections; the original-home pixel comparison is not a pixel-parity claim for the combined page.
 
 | Check                        | Result                                                     |
 | ---------------------------- | ---------------------------------------------------------- |
 | Svelte / TypeScript          | 0 errors, 0 warnings                                       |
-| Domain / asset suite         | 8 / 8 pass, run earlier in this task                       |
+| Domain / asset suite         | 8 / 8 pass, rerun for the styling correction                |
 | Production build             | Pass; curated home and ten reference homes load separately |
 | Composition regeneration     | Identical curated source and provenance bytes              |
 | Preserved original sources   | Ten Svelte hashes still match the original port receipt    |
-| Curated browser journeys     | Eight pass in Chrome and eight in Playwright WebKit        |
+| Curated browser journeys     | Nine pass in Chrome and nine in Playwright WebKit          |
 | Responsive layouts           | 1440, 1024, 768, 390 and 320 px in both engines            |
-| Original reference journeys  | Eight pass per engine, including all ten header searches   |
+| Original reference journeys  | Earlier eight per engine retained; not rerun for this correction |
 | Browser / local asset errors | None in either curated run                                 |
 
-The curated checks cover lazy images, visible desktop navigation, centered headings, readable footer copy and article badges, and document width. Every catalogue make/model combination is selected at 390 and 320 px to check label and arrow bounds. Source-style carousel arrows are centered, at least 44 px high and separate from View all cars. The stock shelf is finite; it does not clone Svelte save buttons. Its clipped viewport prevents WebKit's native focus scrolling from moving the slider track.
+The curated checks cover lazy images, visible desktop navigation, centered headings, readable footer copy and article badges, and document width. Every catalogue make/model combination is selected at 390 and 320 px to check label and arrow bounds. Source-style carousel arrows are centered, at least 44 px high and separate from View all cars. The stock shelf is finite; it does not clone Svelte save buttons. Its clipped viewport prevents WebKit's native focus scrolling from moving the slider track. Save buttons handle clicks before Slick's delegated list handler can consume them, including after switching stock tabs.
 
-Search checks cover condition, make/model reset, restoring Any choices, price and the resulting inventory URLs/data. Keyboard checks cover dropdown selection, Escape and dismissal. Stock checks cover condition tabs, slide movement, bookmark clicks, Space activation, browser storage, the correct detail destination and Back/scroll restoration. The stock test waits for the selected panel's visible fade and layout to complete before clicking its save control. Header suggestions use six real sample cars at 1440 px and retain neutral pointer focus. Ordinary mobile menus, buyer-step links and inventory/about/contact/article routes are checked at desktop and 320 px.
+Search checks cover condition, make/model reset, restoring Any choices, price and the resulting inventory URLs/data. Keyboard checks cover dropdown selection, Escape and dismissal. Stock checks cover condition tabs, slide movement, bookmark clicks, Space activation, browser storage, the correct detail destination and Back/scroll restoration. The stock test waits for the selected panel's visible fade and layout to complete before clicking its save control. Header suggestions use six real sample cars at 1440 px and retain neutral pointer focus. Both idle and typed header text have at least 4.5:1 computed contrast against the field, and focusing it preserves its width. Each photographic body choice opens its matching inventory at desktop and 320 px; the SUV check covers both result pages. Ordinary mobile menus, buyer-step links and inventory/about/contact/article routes are checked at desktop and 320 px.
 
-The final visual review inspected desktop and phone output, including selected Mercedes-Benz, the stock controls, dark buying cards, journal badges and footer. The long-label line height, carousel/link overlap and WebKit focus shift found during this review were corrected. The retained screenshots and machine-readable receipt are current:
+The first composition was visually rejected by the owner despite its functional checks. The correction replaces the tiny Home 8 category SVGs with Home 10's original car photographs, gives the previously bare header field a visible neutral surface and dark text, and restores Home 5's pale rounded benefits container. The original banner's longer selectors had been overriding the curated mobile size and content width; the scoped selectors now apply and centered headings use balanced wrapping. A Bentley photograph incorrectly labelled Mercedes-Benz GLC is corrected to Bentley Bentayga — Silver while retaining its existing URL. The retained screenshots and machine-readable receipt describe this corrected local candidate; owner visual acceptance remains open:
 
 - [Curated desktop homepage](curated-desktop.png)
 - [Curated mobile homepage](curated-mobile.png)
+- [Readable header query and suggestions](curated-header-search.png)
 - [Curated checks and source hashes](curated-results.json)
 - [Composition and personalization boundaries](../../templates/boxcar-updated/TEMPLATE.md)
 

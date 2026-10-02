@@ -2,12 +2,13 @@
   "version": "2026.10.02-curated",
   "candidate": "templates/boxcar-updated",
   "preview": "http://127.0.0.1:6455/",
-  "recordedAt": "2026-10-02T08:48:23.499Z",
+  "recordedAt": "2026-10-02T09:24:55.386Z",
   "composition": {
     "header": "Home 10, simplified dealer navigation and shared identity",
     "hero": "Home 10, single source photograph and centered Home 5 headline",
     "search": "Home 5 white pill DOM, four working filters and visible search label",
-    "typesAndBrands": "Home 8, centered rows with catalogue destinations",
+    "types": "Home 10 photographic body types, centered row with catalogue destinations",
+    "brands": "Home 8 centered brand row with catalogue destinations",
     "inventory": "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
     "benefits": "Home 5 horizontal four-icon section",
     "nextSteps": "Home 8 dark rounded card section, buyer steps instead of fixture reviews",
@@ -22,11 +23,11 @@
     "domainAndAssets": {
       "status": "passed",
       "tests": 8,
-      "note": "Existing suite ran earlier in this task; domain and asset inputs were not changed."
+      "note": "Eight domain and local-image tests rerun after the catalogue label correction."
     },
     "productionBuild": {
       "status": "passed",
-      "checkedAt": "2026-10-02T08:39:35.421Z",
+      "checkedAt": "2026-10-02T09:21:44.436Z",
       "modules": 153
     },
     "regeneration": {
@@ -41,7 +42,7 @@
   "curated": {
     "chromium": {
       "engine": "chromium",
-      "checkedAt": "2026-10-02T08:38:12.933Z",
+      "checkedAt": "2026-10-02T09:22:05.966Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -49,7 +50,8 @@
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
         "Stock tabs, slider, saved state and detail/Back context",
-        "Header suggestions at 1440px keep neutral pointer focus",
+        "Header search stays visible and readable before and during use at 1440px",
+        "Photographic lifestyle choices open matching inventory",
         "Mobile dealer navigation, buyer links and inner routes"
       ],
       "layouts": [
@@ -253,7 +255,7 @@
     },
     "webkit": {
       "engine": "webkit",
-      "checkedAt": "2026-10-02T08:43:01.921Z",
+      "checkedAt": "2026-10-02T09:22:44.413Z",
       "passed": [
         "Original ten homepage sources remain intact",
         "Curated layout at 1440, 1024, 768, 390 and 320px",
@@ -261,7 +263,8 @@
         "Search conditions, make/model resets, price and inventory URLs",
         "Keyboard dropdowns, Escape and outside dismissal",
         "Stock tabs, slider, saved state and detail/Back context",
-        "Header suggestions at 1440px keep neutral pointer focus",
+        "Header search stays visible and readable before and during use at 1440px",
+        "Photographic lifestyle choices open matching inventory",
         "Mobile dealer navigation, buyer links and inner routes"
       ],
       "layouts": [
@@ -494,7 +497,8 @@
         "Newsletter is a local preview, with no fake send result"
       ],
       "failures": []
-    }
+    },
+    "note": "Earlier reference journeys retained with their recorded timestamps; not rerun for the curated styling correction."
   },
   "sourceHashes": [
     {
@@ -503,15 +507,15 @@
     },
     {
       "file": "templates/boxcar-updated/.template/curated.json",
-      "sha256": "3e775ea51ab50da42d5fed7e10e1b000d04df2025d2b75a4e5ec0de46965418a"
+      "sha256": "87be82fa068ee429059ef455bd57054499efc2a17cb89e109598e34102d1a557"
     },
     {
       "file": "templates/boxcar-updated/scripts/compose-curated.mjs",
-      "sha256": "70ff69dd86ad4e10b015c43e42b6c024eaa50079327035eaafc654a300547eb7"
+      "sha256": "8708b9277ee16fc9b142111bf06590415a91e9e288fc9b824ff90f7fc8ff5737"
     },
     {
       "file": "templates/boxcar-updated/public/reference/curated.css",
-      "sha256": "b0a66aeb0a678b07e3c1490307948d26d6cb6559f5c1a4d159357da9d923bda3"
+      "sha256": "ee50cb386b9d0b69d0fbc3241fbf7ecbc5151a8dc830cdd3c9f84ba6620ce1db"
     },
     {
       "file": "templates/boxcar-updated/src/App.svelte",
@@ -547,7 +551,7 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedHome.svelte",
-      "sha256": "15fe0e0580237ad510091d0a52ac21973dbcc56f770fa01c1a592960d5a5a062"
+      "sha256": "0e8a86cc896b944e81d77b47be2c743578b04a9784f7cb662a1d9d760b4aeee7"
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedStock.svelte",
@@ -555,7 +559,15 @@
     },
     {
       "file": "templates/boxcar-updated/src/reference/CuratedCarCard.svelte",
-      "sha256": "a4760330a054464cd5141da0cf7fcadee7cd51acc3c5b79173e1b8a39b3fabe5"
+      "sha256": "b89a07dbf14b7f42d242dbad376b1752b9738e16e3115508735b2c5be5dafee6"
+    },
+    {
+      "file": "templates/boxcar-updated/scripts/curated-flows.mjs",
+      "sha256": "0b6315909dd340caa0ca266805bc39d8420f1f64ac77cdf89197e0d5777fea28"
+    },
+    {
+      "file": "templates/boxcar-updated/src/data/vehicles.json",
+      "sha256": "407bc8723c1a36ab1918e5ce6a343160ba7a551b21754a79860513e2ffd1de03"
     }
   ],
   "originalHashes": [
@@ -613,11 +625,15 @@
   "screenshots": [
     {
       "file": "docs/boxcar-updated/curated-desktop.png",
-      "sha256": "a701894cfd56bcc72a253fdc807b142172d810986caa51cfb89647a14c257010"
+      "sha256": "129d26820ddd4ac2bb72d9b3b656d75dabb4784383f0745273fc4e6bfa812183"
     },
     {
       "file": "docs/boxcar-updated/curated-mobile.png",
-      "sha256": "cb10ad7815bfe0a056105f679b6b3b210610a88b7e49bb586f21ffa1774ae9bf"
+      "sha256": "001d9d84558fd0c34c3a8d13ce984946ba934f66bcff24edfa8be7dc14d70b61"
+    },
+    {
+      "file": "docs/boxcar-updated/curated-header-search.png",
+      "sha256": "7b393131ffc07dc026a484ebe13cfe12ef5e31266fd9fea6717e24abbfb7380e"
     }
   ],
   "boundaries": [
@@ -626,5 +642,12 @@
     "Local sample catalogue and preview forms; no hosted deployment or dealer refresh was launched.",
     "Physical Safari/iPhone, 200-percent text and owner visual acceptance remain unverified.",
     "Approved release, mounted-route/generator support, locale/units and personalized dealer pilot remain separate promotion work."
+  ],
+  "corrections": [
+    "Give the header a visible neutral field, dark typed text and stable focus width; test idle and active contrast.",
+    "Replace Home 8 tiny lifestyle SVGs with Home 10 photographic body choices and verify their filtered inventory across both pages.",
+    "Restore the Home 5 pale rounded benefits container; correct banner selector specificity and balance centered headline wrapping.",
+    "Handle curated saved-car clicks in capture before Slick can consume them; verify pointer and keyboard saved state after switching tabs.",
+    "Correct the silver Bentley photo label and catalogue make/model while preserving its existing reference URL."
   ]
 }

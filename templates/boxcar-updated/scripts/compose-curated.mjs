@@ -113,25 +113,26 @@ search
   .html('<i class="flaticon-search" aria-hidden="true"></i>Search cars');
 hero.find(".cus-container10").empty().append(search);
 
-const types = eight(".boxcar-brand-section-six").clone();
+const types = ten(".vehicles-section-two").clone();
 types.addClass("curated-types");
 types.find(".boxcar-title h2").text("A Car For Every Lifestyle");
-types.find(".btn-title").remove();
-types.find(".cars-block-six").each((_, el) => {
-  const card = eight(el),
-    name = card.find("h6").text().trim();
-  if (
-    !["SUV", "Sedan", "Hatchback", "Coupe", "Hybrid", "Convertible"].includes(
-      name,
-    )
-  ) {
+types.find(".Vehicle-block").each((_, el) => {
+  const card = ten(el);
+  const originalName = card.find("h6").text().trim();
+  const name = originalName === "HRV" ? "Hatchback" : originalName;
+  if (!["SUV", "Sedan", "Hatchback", "Coupe"].includes(name)) {
     card.remove();
     return;
   }
-  card
-    .find("a")
-    .attr("href", `/inventory/?${name === "Hybrid" ? "fuel" : "body"}=${name}`)
-    .attr("aria-label", `Browse ${name} cars`);
+  card.removeClass("col-lg-2 col-md-6").addClass("col-lg-3 col-md-3");
+  card.find("h6").text(name);
+  card.find("img").attr("width", "200").attr("height", "150");
+  const inner = card.find(".inner-box");
+  const imageLink = inner.find(".image a");
+  imageLink.replaceWith(imageLink.html());
+  inner.replaceWith(
+    `<a class="inner-box" href="/inventory/?body=${name}" aria-label="Browse ${name} cars">${inner.html()}</a>`,
+  );
 });
 
 const brands = eight(".boxcar-brand-section-five").clone();
@@ -302,7 +303,9 @@ await fs.writeFile(
         hero: "Home 10, single source photograph and centered Home 5 headline",
         search:
           "Home 5 white pill DOM, four working filters and visible search label",
-        typesAndBrands: "Home 8, centered rows with catalogue destinations",
+        types:
+          "Home 10 photographic body types, centered row with catalogue destinations",
+        brands: "Home 8 centered brand row with catalogue destinations",
         inventory:
           "Home 8 boxed shelf and card DOM, shared catalogue and saved state",
         benefits: "Home 5 horizontal four-icon section",

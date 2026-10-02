@@ -214,6 +214,10 @@ try {
         path: path.join(out, `${engine}-${width}.png`),
         fullPage: true,
       });
+      if (width === 320)
+        await page.screenshot({
+          path: path.join(out, `${engine}-320-top.png`),
+        });
       if (engine === "chromium" && [1440, 390].includes(width))
         await page.screenshot({
           path: path.join(
@@ -512,13 +516,55 @@ try {
     },
   );
   await step(
-    "Header suggestions at 1440px keep neutral pointer focus",
+    "Header search stays visible and readable before and during use at 1440px",
     async () => {
       await home();
       const input = page.getByRole("combobox", {
         name: "Search cars",
         exact: true,
       });
+      const appearance = () =>
+        input.evaluate((el) => {
+          const style = getComputedStyle(el);
+          const luminance = (color) => {
+            const channels = color
+              .match(/[\d.]+/g)
+              .slice(0, 3)
+              .map(Number)
+              .map((n) => {
+                const value = n / 255;
+                return value <= 0.04045
+                  ? value / 12.92
+                  : ((value + 0.055) / 1.055) ** 2.4;
+              });
+            return (
+              channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
+            );
+          };
+          const background = luminance(style.backgroundColor);
+          const contrast = (color) => {
+            const text = luminance(color);
+            return (
+              (Math.max(text, background) + 0.05) /
+              (Math.min(text, background) + 0.05)
+            );
+          };
+          return {
+            width: el.getBoundingClientRect().width,
+            height: el.getBoundingClientRect().height,
+            border: Number.parseFloat(style.borderTopWidth),
+            textContrast: contrast(style.color),
+            placeholderContrast: contrast(
+              getComputedStyle(el, "::placeholder").color,
+            ),
+          };
+        });
+      const idle = await appearance();
+      assert.ok(idle.border >= 1 && idle.width >= 250 && idle.height >= 44);
+      assert.ok(
+        idle.textContrast >= 4.5 && idle.placeholderContrast >= 4.5,
+        "Header search is unreadable before focus",
+      );
       await input.click();
       const popup = page.locator(".box-content-search.active");
       await popup.waitFor();
@@ -528,11 +574,50 @@ try {
         "none",
       );
       await input.fill("Audi A8");
+      const active = await appearance();
+      assert.ok(
+        active.textContrast >= 4.5,
+        "Typed header search is unreadable",
+      );
+      assert.ok(
+        Math.abs(active.width - idle.width) <= 1,
+        "Header shifts on focus",
+      );
       assert.equal(await popup.getByRole("option").count(), 1);
+      if (engine === "chromium")
+        await page.screenshot({
+          path: path.join(evidence, "curated-header-search.png"),
+        });
       await input.press("ArrowDown");
       await input.press("Enter");
       await page.waitForURL("**/vehicle/audi-a8/**");
       assert.equal(await page.locator("main h1").innerText(), "Audi A8");
+    },
+  );
+  await step(
+    "Photographic lifestyle choices open matching inventory",
+    async () => {
+      for (const width of [1440, 320]) {
+        for (const body of ["Sedan", "Coupe", "SUV", "Hatchback"]) {
+          await home(width);
+          const choice = page.locator(".curated-types").getByRole("link", {
+            name: `Browse ${body} cars`,
+            exact: true,
+          });
+          assert.equal(await choice.locator("img").count(), 1);
+          await choice.click();
+          await page.waitForURL(`**/inventory/?body=${body}`);
+          const matches = catalog.filter((v) => v.body === body);
+          await assertStock(matches.slice(0, 9));
+          if (matches.length > 9) {
+            await page
+              .getByRole("button", { name: "Next page", exact: true })
+              .click();
+            await page.waitForURL("**&page=2");
+            await assertStock(matches.slice(9));
+          }
+        }
+      }
     },
   );
   await step(

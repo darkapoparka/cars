@@ -29,7 +29,11 @@
         aria-pressed={saved}
         onmousedowncapture={(event) => event.stopPropagation()}
         ontouchstartcapture={(event) => event.stopPropagation()}
-        onclick={() => toggleFavorite(vehicle.id)}
+        onclickcapture={(event) => {
+          // Handle the real button before Slick's list click handler can consume it.
+          event.stopPropagation();
+          toggleFavorite(vehicle.id);
+        }}
       >
         <svg
           width="12"

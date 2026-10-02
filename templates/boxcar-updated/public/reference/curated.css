@@ -13,12 +13,18 @@
 .curated-home .boxcar-header .right-box { gap: 24px; }
 .curated-home .boxcar-header .box-account { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .curated-home .boxcar-header .layout-search { display: block; }
-.curated-home .boxcar-header .layout-search .show-search { width: 265px; }
+.curated-home .boxcar-header.v10 .layout-search { width: 300px; margin-right: 0; }
+.curated-home .boxcar-header.v10 .layout-search .search-box .show-search { width: 100%; height: 48px; line-height: 46px; padding: 0 18px 0 46px; color: #050b20; background: #f7f8fa; border: 1px solid #d8dde5; border-radius: 12px; }
+.curated-home .boxcar-header.v10 .layout-search .search-box .show-search::placeholder { color: #505b6d; opacity: 1; }
+.curated-home .boxcar-header.v10 .layout-search .search-box .icon { left: 17px; }
+.curated-home .boxcar-header.v10 .layout-search.active .search-box .show-search { width: 100%; color: #050b20; background: #fff; border-color: #050b20; border-radius: 12px 12px 0 0; }
+.curated-home .boxcar-header.v10 .layout-search .box-content-search { width: 380px; left: auto; right: 0; border: 1px solid #d8dde5; border-radius: 12px 0 12px 12px; box-shadow: 0 16px 40px #050b201a; }
 .curated-home .boxcar-header .header-btn-two { white-space: nowrap; }
 .curated-home .boxcar-banner-section-seven .banner-slide { position: relative; height: auto; min-height: 0; }
 .curated-home .boxcar-banner-section-seven .banner-slide > img { width: 100%; height: clamp(480px, 38vw, 650px); object-fit: cover; object-position: center; }
-.curated-home .boxcar-banner-section-seven .banner-slide .right-box { top: 36%; }
-.curated-home .boxcar-banner-section-seven .banner-slide .content-box h1 { font-size: clamp(44px, 4.5vw, 70px); line-height: 1.12; }
+.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { top: 36%; }
+.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { max-width: 100%; }
+.curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box h1 { font-size: clamp(44px, 4.5vw, 70px); line-height: 1.12; text-wrap: balance; }
 .curated-home .boxcar-banner-section-seven .form-tab-content { bottom: 52px; }
 .curated-home .boxcar-banner-section-seven .cus-container10 { max-width: 1130px; padding: 0 20px; margin: auto; }
 .curated-home .boxcar-banner-section-seven form { min-height: 76px; padding: 0 10px; border-radius: 50px; background: #fff; box-shadow: 0 16px 40px #050b201a; flex-wrap: nowrap; }
@@ -34,9 +40,15 @@
 .curated-home .boxcar-banner-section-seven .form-submit button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 56px; line-height: 24px; padding: 0 26px; border-radius: 50px; background: var(--theme-color1); color: #fff; border: 0; }
 .curated-home .boxcar-banner-section-seven .form-submit button i { top: 0; margin: 0; }
 .curated-home .boxcar-title { text-align: center; }
+.curated-home .boxcar-title h2 { text-wrap: balance; }
 .curated-home .curated-types { padding: 90px 0 64px; }
-.curated-home .curated-types .right-box { justify-content: center; gap: 20px; flex-wrap: wrap; overflow: visible; }
-.curated-home .curated-types .cars-block-six { width: auto; flex: 1; max-width: 180px; margin: 0; }
+.curated-home .curated-types .boxcar-title { margin-bottom: 12px; }
+.curated-home .curated-types .row { max-width: 1120px; margin: 0 auto; justify-content: center; }
+.curated-home .curated-types .Vehicle-block .inner-box { display: block; border-radius: 16px; padding: 0 12px 18px; transition: background-color .2s; }
+.curated-home .curated-types .Vehicle-block .inner-box:hover { background: #f7f8fa; }
+.curated-home .curated-types .Vehicle-block .image { max-width: 230px; margin: 0 auto; }
+.curated-home .curated-types .Vehicle-block .image img { width: 100%; height: auto; }
+.curated-home .curated-types .Vehicle-block .content-box { top: -8px; }
 .curated-home .curated-brands { padding: 0 0 80px; }
 .curated-home .curated-brands .right-box { display: flex; justify-content: center; flex-wrap: wrap; gap: 36px; }
 .curated-home .curated-brands .cars-block-five { width: 150px; margin: 0; }
@@ -66,7 +78,7 @@
 .curated-home .curated-stock-more .read-more { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 13px 26px; border: 1px solid #050b20; border-radius: 12px; color: #050b20; font-size: 15px; }
 .curated-home .curated-stock-more .read-more:hover { background: #050b20; color: white; }
 .curated-home .curated-benefits { padding: 0 0 80px; }
-.curated-home .curated-benefits .right-box { padding: 0 48px; background: transparent; }
+.curated-home .curated-benefits .right-box { padding: 72px 48px 40px; background: #f9fbfc; border-radius: 16px; }
 .curated-home .curated-benefits .choose-us-block .inner-box { text-align: center; }
 .curated-home .curated-benefits .choose-us-block .icon-box { margin: 0 auto 24px; }
 .curated-home .curated-next-steps { padding: 0 0 90px; }
@@ -95,11 +107,9 @@
   .curated-home .boxcar-header .nav-out-bar { display: none !important; }
   .curated-home .boxcar-header .mobile-navigation { display: block; }
   .curated-home .curated-stock .right-box { padding: 56px 24px; }
-  .curated-home .curated-benefits .right-box { padding: 0 15px; }
+  .curated-home .curated-benefits .right-box { padding: 56px 24px 24px; }
   .curated-home .curated-next-steps .right-box { padding: 56px 24px; }
   .curated-home .curated-next-steps .testimonial-block-four { margin-bottom: 24px; }
-  .curated-home .curated-types .right-box { gap: 14px; }
-  .curated-home .curated-types .cars-block-six { flex: 0 0 calc(33.333% - 10px); max-width: none; }
   .curated-home .boxcar-banner-section-seven .form-tab-content { bottom: 32px; }
   .curated-home .boxcar-banner-section-seven form .drop-menu .select { padding: 0 14px; font-size: 14px; }
   .curated-home .boxcar-banner-section-seven .form-submit button { padding: 0 20px; }
@@ -111,11 +121,11 @@
   .curated-home .boxcar-header .box-account { font-size: 14px; }
   .curated-home .boxcar-banner-section-seven .banner-slide > img { height: 390px; object-position: 52% center; }
   .curated-home .boxcar-banner-section-seven .banner-slide { min-height: 0; height: auto; }
-  .curated-home .boxcar-banner-section-seven .banner-slide .right-box { top: 35%; padding: 0 12px; }
+  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box { top: 35%; padding: 0 12px; }
   .curated-home .boxcar-banner-section-seven .banner-slide .right-box .boxcar-container { padding: 0; }
-  .curated-home .boxcar-banner-section-seven .banner-slide .content-box { max-width: 440px; margin: auto; }
-  .curated-home .boxcar-banner-section-seven .banner-slide .content-box .sub-title { font-size: 14px; line-height: 22px; margin-bottom: 16px; max-width: 270px; }
-  .curated-home .boxcar-banner-section-seven .banner-slide .content-box h1 { font-size: clamp(30px, 7.6vw, 42px); padding: 0 10px; }
+  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box { max-width: 440px; margin: auto; }
+  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box .sub-title { font-size: 14px; line-height: 22px; margin-bottom: 16px; max-width: 270px; }
+  .curated-home .boxcar-banner-section-seven .banner-slider-v7 .banner-slide .right-box .content-box h1 { font-size: clamp(30px, 7.6vw, 42px); padding: 0 10px; }
   .curated-home .boxcar-banner-section-seven .form-tab-content { position: relative; bottom: auto; margin-top: -26px; z-index: 100; }
   .curated-home .boxcar-banner-section-seven .cus-container10 { padding: 0 14px; max-width: 580px; }
   .curated-home .boxcar-banner-section-seven form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; height: auto; padding: 8px; border-radius: 16px; margin: 0; }
@@ -128,9 +138,11 @@
   .curated-home .boxcar-banner-section-seven .form_boxes:nth-child(even) .dropdown { right: 0; left: auto; }
   .curated-home .boxcar-title h2 { font-size: 28px; line-height: 36px; }
   .curated-home .curated-types { padding: 56px 0 48px; }
-  .curated-home .curated-types .boxcar-title { margin-bottom: 26px; }
-  .curated-home .curated-types .right-box { gap: 12px; }
-  .curated-home .curated-types .cars-block-six { flex: 0 0 calc(50% - 6px); }
+  .curated-home .curated-types .boxcar-title { margin-bottom: 12px; }
+  .curated-home .curated-types .row { margin: 0 -6px; }
+  .curated-home .curated-types .Vehicle-block { width: 50%; padding: 0 6px; margin-bottom: 8px; }
+  .curated-home .curated-types .Vehicle-block .inner-box { padding: 0 0 14px; }
+  .curated-home .curated-types .Vehicle-block .content-box .title { font-size: 16px; }
   .curated-home .curated-brands { padding-bottom: 48px; }
   .curated-home .curated-brands .right-box { gap: 28px 18px; }
   .curated-home .curated-brands .cars-block-five { width: calc(33.333% - 12px); }
@@ -144,6 +156,7 @@
   .curated-home .curated-stock .car-block-ten .image-box span { top: 12px; left: 12px; }
   .curated-home .curated-stock .car-block-ten .icon-box { top: 12px; right: 12px; width: 44px; height: 44px; }
   .curated-home .curated-benefits { padding-bottom: 40px; }
+  .curated-home .curated-benefits .right-box { padding: 40px 24px 16px; }
   .curated-home .curated-benefits .choose-us-block { margin-bottom: 24px; }
   .curated-home .curated-benefits .choose-us-block .inner-box .text { max-width: 340px; margin: auto; }
   .curated-home .curated-next-steps { padding-bottom: 56px; }
