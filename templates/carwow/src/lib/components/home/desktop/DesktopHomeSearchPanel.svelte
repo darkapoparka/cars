@@ -260,7 +260,11 @@
 		{/each}
 	{/if}
 	{#if showKeywordSearch}
-		<div class="hero-intent__tabs" role="tablist" aria-label={i18n.t('copy.5a80de742e54')}>
+		<div
+			class="hero-intent__tabs desktop-hero-controls desktop-hero-selector"
+			role="tablist"
+			aria-label={i18n.t('copy.5a80de742e54')}
+		>
 			{#each intents as intent, index (intent.value)}
 				<button
 					type="button"
@@ -279,17 +283,17 @@
 		</div>
 		<div
 			id="hero-intent-panel"
-			class="hero-intent__panel"
+			class="hero-intent__panel desktop-hero-panel-body"
 			role="tabpanel"
 			aria-labelledby={`hero-intent-${activeIntent}`}
 		>
 			{#if activeIntent === 'buy'}
 				<label class="sr-only" for="hero-buy-query">{i18n.t('copy.d028fe65890c')}</label>
-				<div class="hero-intent__row hero-intent__row--search">
+				<div class="hero-intent__row--search desktop-hero-search-field">
 					<input
 						{@attach i18n.validation}
 						id="hero-buy-query"
-						class="hero-intent__input"
+						class="hero-intent__input desktop-hero-search-input"
 						type="search"
 						name="q"
 						autocomplete="off"
@@ -297,7 +301,7 @@
 						bind:value={keywordQuery}
 					/>
 					<button
-						class="hero-intent__submit"
+						class="hero-intent__submit desktop-hero-search-action"
 						type="submit"
 						aria-label={i18n.t('pattern.bcc5755f99f8', { v0: matchingVehicleCount })}
 						title={i18n.t('copy.255bbb6ac445')}
@@ -608,46 +612,12 @@
 		text-align: left;
 		width: 100%;
 	}
-	.hero-intent__tabs {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		background: var(--discovery-action);
-		border-radius: var(--discovery-panel-radius) var(--discovery-panel-radius) 0 0;
-		overflow: hidden;
-	}
-	.hero-intent__tabs button {
-		background: transparent;
-		border: 0;
-		border-radius: 0;
-		color: #fff;
-		cursor: pointer;
-		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
-		box-shadow: none;
-		min-height: 52px;
-		min-width: 0;
-		padding: 0 20px;
-		white-space: nowrap;
-		transition: background-color 140ms ease;
-	}
-	.hero-intent__tabs button:hover:not(:disabled) {
-		background: #4b5256;
-	}
 	.hero-intent button:disabled {
 		cursor: wait;
 		opacity: 0.6;
 	}
-	.hero-intent__tabs button[aria-selected='true'] {
-		background: var(--discovery-panel);
-		color: var(--discovery-ink);
-		font-weight: var(--sa-weight-semibold);
-	}
-	.hero-intent__tabs button[aria-selected='true']:hover:not(:disabled) {
-		background: var(--discovery-muted-surface);
-	}
 	.hero-intent__panel {
 		color: #fff;
-		min-height: 156px;
-		padding: 20px 40px 24px;
 	}
 	.hero-intent__label {
 		color: #fff;
@@ -709,38 +679,6 @@
 	.hero-intent__submit:hover {
 		background: color-mix(in srgb, var(--sa-yellow) 88%, #fff);
 	}
-	.hero-intent__row--search {
-		display: flex;
-		align-items: center;
-		gap: 4px;
-		height: var(--discovery-search-height);
-		padding: 4px;
-		border: 1px solid var(--discovery-control-border);
-		border-radius: var(--discovery-search-radius);
-		background: #fff;
-	}
-	.hero-intent__row--search:focus-within {
-		border-color: var(--sa-yellow);
-		outline: 2px solid var(--sa-yellow);
-		outline-offset: 2px;
-	}
-	.hero-intent .hero-intent__row--search .hero-intent__input {
-		flex: 1;
-		height: var(--discovery-search-action-size);
-		border: 0;
-		border-radius: 0;
-		background: transparent;
-		padding: 0 15px;
-		outline: none;
-		box-shadow: none;
-	}
-	.hero-intent__row--search .hero-intent__submit {
-		flex: none;
-		width: var(--discovery-search-action-size);
-		height: var(--discovery-search-action-size);
-		padding: 0;
-		border-radius: var(--discovery-search-action-radius);
-	}
 	.hero-intent__quick-fields {
 		display: flex;
 		justify-content: center;
@@ -798,13 +736,10 @@
 		color: #fff;
 		font-size: var(--sa-text-caption);
 		line-height: 20px;
-		margin: 12px 0 0;
+		margin: var(--desktop-home-hint-gap, 12px) 0 0;
 	}
 	.hero-intent :is(button, input):focus-visible {
 		outline: 2px solid var(--sa-yellow);
 		outline-offset: 3px;
-	}
-	.hero-intent__tabs button:focus-visible {
-		outline-offset: -4px;
 	}
 </style>

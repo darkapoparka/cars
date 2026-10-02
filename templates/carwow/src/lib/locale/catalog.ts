@@ -130,6 +130,9 @@ export const en = {
 	'presentation.sell': 'Sell my car',
 	'presentation.reviews': 'Read reviews',
 	'presentation.electric': 'Electric',
+	'sell.desktop.heroHint': 'Selling or trading in? Start with a registration or VIN.',
+	'about.desktop.intro':
+		'Choose a car, arrange a viewing or talk to our team about selling and trading in.',
 	'copy.3667f9f676c2': 'Find your next car',
 	'copy.f20a4411e8d6': 'View cars',
 	'copy.3618c24ea260': 'Contact and social media',
@@ -517,7 +520,7 @@ export const en = {
 	'copy.0ad21a92df5d': 'Takes a few minutes',
 	'copy.26557fae2714': 'Choose a car type',
 	'copy.de22b27028ed': 'Choose a make',
-	'copy.701fdf103815': 'Browse. Buy. Sell. All in one place.',
+	'copy.701fdf103815': 'Browse. Buy. Sell.',
 	'copy.d18c10af8d31': 'Open Google Maps',
 	'copy.a7527162fd17': 'Checked cars.',
 	'copy.e96bc0675bcf': 'Confirm actual terms.',
@@ -1973,6 +1976,9 @@ export const bg = {
 	'presentation.sell': 'Продай кола',
 	'presentation.reviews': 'Отзиви',
 	'presentation.electric': 'Електромобили',
+	'sell.desktop.heroHint': 'Продажба или бартер? Започни с номер или VIN.',
+	'about.desktop.intro':
+		'Избери автомобил, уговори оглед или обсъди продажба и бартер с нашия екип.',
 	'copy.3667f9f676c2': 'Намери следващия си автомобил',
 	'copy.f20a4411e8d6': 'Виж автомобилите',
 	'copy.3618c24ea260': 'Контакти и социални мрежи',
@@ -2359,7 +2365,7 @@ export const bg = {
 	'copy.0ad21a92df5d': 'Отнема няколко минути',
 	'copy.26557fae2714': 'Избери тип автомобил',
 	'copy.de22b27028ed': 'Избери марка',
-	'copy.701fdf103815': 'Разгледай. Купи. Продай. На едно място.',
+	'copy.701fdf103815': 'Разгледай. Купи. Продай.',
 	'copy.d18c10af8d31': 'Отвори Google Maps',
 	'copy.a7527162fd17': 'Проверени автомобили.',
 	'copy.e96bc0675bcf': 'Потвърдете реалните условия.',
@@ -3700,6 +3706,12 @@ export const bg = {
 	'dealer.shortName': 'Day Night Auto'
 } as const;
 export const sourceKeys = {
+	'Продажба или бартер? Започни с номер или VIN.': 'sell.desktop.heroHint',
+	'Selling or trading in? Start with a registration or VIN.': 'sell.desktop.heroHint',
+	'Избери автомобил, уговори оглед или обсъди продажба и бартер с нашия екип.':
+		'about.desktop.intro',
+	'Choose a car, arrange a viewing or talk to our team about selling and trading in.':
+		'about.desktop.intro',
 	'Намери следващия си автомобил': 'copy.3667f9f676c2',
 	'Find your next car': 'copy.bb7c0e3ca487',
 	'Виж автомобилите': 'copy.f20a4411e8d6',
@@ -4463,8 +4475,8 @@ export const sourceKeys = {
 	'Choose a car type': 'copy.26557fae2714',
 	'Избери марка': 'copy.de22b27028ed',
 	'Choose a make': 'copy.de22b27028ed',
-	'Разгледай. Купи. Продай. На едно място.': 'copy.701fdf103815',
-	'Browse. Buy. Sell. All in one place.': 'copy.701fdf103815',
+	'Разгледай. Купи. Продай.': 'copy.701fdf103815',
+	'Browse. Buy. Sell.': 'copy.701fdf103815',
 	'Отвори Google Maps': 'copy.d18c10af8d31',
 	'Open Google Maps': 'copy.d18c10af8d31',
 	'Проверени автомобили.': 'copy.a7527162fd17',

@@ -10,7 +10,7 @@
 		desktopOnlySrcset
 	} from '$lib/utils/desktop-only-assets';
 	import DesktopHomeSearchPanel from './DesktopHomeSearchPanel.svelte';
-	import DesktopHeroArtwork from '$lib/components/layout/DesktopHeroArtwork.svelte';
+	import DesktopYellowRouteHero from '$lib/components/layout/DesktopYellowRouteHero.svelte';
 
 	let {
 		vehicles,
@@ -26,23 +26,18 @@
 </script>
 
 {#if variant === 'cutouts'}
-	<section
-		class="daynight-home-hero daynight-home-hero--cutouts"
-		aria-labelledby="daynight-home-hero-title"
+	<DesktopYellowRouteHero
+		headingId="daynight-home-hero-title"
+		title={i18n.t('copy.701fdf103815')}
+		deckLayout="segmented"
 	>
-		<DesktopHeroArtwork panelWidth={640} />
-		<div class="daynight-home-hero__stage">
-			<h1 id="daynight-home-hero-title" class="daynight-home-hero__title">
-				{i18n.t('copy.701fdf103815')}
-			</h1>
-			<DesktopHomeSearchPanel
-				{vehicles}
-				showCondition={false}
-				showSearchCopy={false}
-				showKeywordSearch
-			/>
-		</div>
-	</section>
+		<DesktopHomeSearchPanel
+			{vehicles}
+			showCondition={false}
+			showSearchCopy={false}
+			showKeywordSearch
+		/>
+	</DesktopYellowRouteHero>
 {:else}
 	<section class="daynight-home-hero">
 		<div class="daynight-home-hero__visual" aria-hidden="true">

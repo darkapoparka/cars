@@ -1,5 +1,21 @@
 [
 	{
+		"key": "sell.desktop.heroHint",
+		"source": "Продажба или бартер? Започни с номер или VIN.",
+		"en": "Selling or trading in? Start with a registration or VIN.",
+		"bg": "Продажба или бартер? Започни с номер или VIN.",
+		"disposition": "translate",
+		"notes": "Desktop-only Sell hero helper. Existing mobile copy is retained."
+	},
+	{
+		"key": "about.desktop.intro",
+		"source": "Избери автомобил, уговори оглед или обсъди продажба и бартер с нашия екип.",
+		"en": "Choose a car, arrange a viewing or talk to our team about selling and trading in.",
+		"bg": "Избери автомобил, уговори оглед или обсъди продажба и бартер с нашия екип.",
+		"disposition": "translate",
+		"notes": "Concise desktop About introduction. Existing mobile copy is retained."
+	},
+	{
 		"key": "copy.3667f9f676c2",
 		"source": "Намери следващия си автомобил",
 		"en": "Find your next car",
@@ -2961,9 +2977,9 @@
 	},
 	{
 		"key": "copy.701fdf103815",
-		"source": "Разгледай. Купи. Продай. На едно място.",
-		"en": "Browse. Buy. Sell. All in one place.",
-		"bg": "Разгледай. Купи. Продай. На едно място.",
+		"source": "Разгледай. Купи. Продай.",
+		"en": "Browse. Buy. Sell.",
+		"bg": "Разгледай. Купи. Продай.",
 		"disposition": "translate",
 		"notes": "Carwow native template copy. Independent linguistic review pending."
 	},

@@ -16,7 +16,7 @@ for (const locale of ['en', 'bg']) {
 				const heroBox = (await hero.boundingBox())!;
 				const deckBox = (await deck.boundingBox())!;
 				expect(heroBox.height).toBe(400);
-				expect(deckBox.width).toBe(720);
+				expect(deckBox.width).toBe(route === 'sell-your-car' ? 640 : 720);
 				expect(Math.abs(deckBox.x + deckBox.width / 2 - width / 2)).toBeLessThan(1);
 				const primary = deck.locator('.sa-cta-primary, .desktop-primary-action');
 				await expect(primary).toHaveCSS('background-color', 'rgb(245, 197, 66)');
@@ -33,9 +33,10 @@ for (const locale of ['en', 'bg']) {
 					const field = (await entry.boundingBox())!;
 					expect(field.y).toBe(button.y);
 					expect(field.height).toBe(button.height);
-					expect(field.x).toBe(deckBox.x + 24);
-					expect(button.x + button.width).toBe(deckBox.x + deckBox.width - 24);
-					expect(button.width).toBeLessThan(400);
+					expect(field.x).toBe(deckBox.x + 29);
+					expect(button.x + button.width).toBe(deckBox.x + deckBox.width - 29);
+					expect(button.width).toBe(44);
+					expect(button.height).toBe(44);
 					await entry.fill('PB 1234 AB');
 					await primary.press('Enter');
 					await expect(page.locator('.sell-modal')).toBeVisible();
@@ -80,6 +81,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 			await page.evaluate(() => document.fonts.ready);
 			const frame = (await page.locator('.daynight-home-inventory__body').boundingBox())!;
 			const panel = (await page.locator('.hero-intent').boundingBox())!;
+			expect(panel.height).toBe(174);
 			const tabHeader = (await page.locator('.hero-intent__tabs').boundingBox())!;
 			expect(Math.abs(tabHeader.x - panel.x)).toBeLessThan(1);
 			expect(Math.abs(tabHeader.y - panel.y)).toBeLessThan(1);
@@ -97,6 +99,15 @@ for (const width of [992, 1280, 1440, 1920]) {
 			expect(Math.abs(tabs.width - panel.width)).toBeLessThan(1);
 			for (const tabWidth of tabs.widths)
 				expect(Math.abs(tabWidth - panel.width / 3)).toBeLessThan(1);
+			for (const intent of ['sell', 'import', 'buy']) {
+				await page.locator(`#hero-intent-${intent}`).click();
+				const intentBox = (await page.locator('.hero-intent').boundingBox())!;
+				expect(intentBox.y, `${locale} ${intent} panel keeps its position`).toBe(panel.y);
+				expect(intentBox.height, `${locale} ${intent} panel keeps its compact height`).toBe(
+					panel.height
+				);
+			}
+			await page.mouse.move(0, 0);
 			expect(Math.abs((tabs.left + tabs.right) / 2 - panel.x - panel.width / 2)).toBeLessThan(1);
 			await expect(page.locator('.hero-intent__tabs button[aria-selected="true"]')).toHaveCSS(
 				'background-color',
@@ -192,12 +203,17 @@ for (const width of [992, 1280, 1440, 1920]) {
 					expect(box.height).toBeLessThan(360);
 					await expect(container).toHaveCSS('border-width', '0px');
 					const aboutHero = page.locator('.about-hero-panel');
+					const aboutHeroBox = (await aboutHero.boundingBox())!;
+					expect(aboutHeroBox.width).toBe(640);
+					expect(aboutHeroBox.height).toBe(174);
+					expect((await aboutHero.locator('.about-hero-contact').boundingBox())!.height).toBe(44);
 					const visitAction = aboutHero.locator('.sa-cta-primary');
 					const browseAction = aboutHero.locator('.about-hero-browse');
 					await expect(visitAction).toHaveAttribute('href', `/${locale}/contact`);
 					await expect(browseAction).toHaveAttribute('href', `/${locale}/inventory`);
 					await expect(visitAction).toHaveCSS('color', 'rgb(15, 20, 23)');
-					await expect(browseAction).toHaveCSS('color', 'rgb(255, 255, 255)');
+					await expect(browseAction).toHaveCSS('color', 'rgb(23, 27, 30)');
+					await expect(browseAction).toHaveCSS('background-color', 'rgb(255, 255, 255)');
 					const visitBox = (await visitAction.boundingBox())!;
 					const browseBox = (await browseAction.boundingBox())!;
 					expect(visitBox.y).toBe(browseBox.y);
@@ -240,7 +256,7 @@ for (const width of [992, 1280, 1440, 1920]) {
 					for (const category of await categories.all()) {
 						const categoryBox = (await category.boundingBox())!;
 						expect(Math.abs(categoryBox.width - blogPanel.width / 3)).toBeLessThan(1);
-						expect(categoryBox.height).toBe(52);
+						expect(categoryBox.height).toBe(44);
 					}
 					await expect(categories.first()).toHaveCSS('background-color', 'rgb(255, 255, 255)');
 					await expect(categories.first()).toHaveCSS('color', 'rgb(23, 27, 30)');
@@ -281,6 +297,14 @@ for (const locale of ['en', 'bg']) {
 			}
 		});
 		await page.goto(`/${locale}/sell-your-car`, { waitUntil: 'networkidle' });
+		const modeBar = page.locator('.sell-entry__mode');
+		const modeBarBox = (await modeBar.boundingBox())!;
+		expect(modeBarBox.width).toBe(640);
+		expect(modeBarBox.height).toBe(44);
+		expect((await page.locator('.sell-intake-card').boundingBox())!.height).toBe(174);
+		for (const mode of await modeBar.getByRole('button').all()) {
+			expect((await mode.boundingBox())!.width).toBe(modeBarBox.width / 2);
+		}
 		const entry = page.locator('#desktop-sell-hero-identity');
 		await page
 			.locator('.sell-entry__mode')

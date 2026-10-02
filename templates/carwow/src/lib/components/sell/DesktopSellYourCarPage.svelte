@@ -177,6 +177,7 @@
 		sectionId="sell-intake"
 		headingId="daynight-sell-title"
 		title={i18n.t('copy.42b0d511b828')}
+		deckLayout="segmented"
 	>
 		<div class="sell-intake-card">
 			<form
@@ -185,7 +186,11 @@
 				method="get"
 				onsubmit={startValuation}
 			>
-				<div class="sell-entry__mode" role="group" aria-label={i18n.t('copy.b440f50af2be')}>
+				<div
+					class="sell-entry__mode desktop-hero-controls desktop-hero-selector desktop-hero-selector--pair"
+					role="group"
+					aria-label={i18n.t('copy.b440f50af2be')}
+				>
 					<button
 						type="button"
 						disabled={!entryReady}
@@ -199,45 +204,54 @@
 						onclick={() => (intakeMode = 'vin')}>{i18n.t('copy.5b86a75cae06')}</button
 					>
 				</div>
-				<label class="sell-entry__label" for="desktop-sell-hero-identity">
-					{intakeMode === 'plate' ? i18n.t('copy.cabeddcf59bc') : i18n.t('copy.5b86a75cae06')}
-				</label>
-				<div class="sell-entry__row">
-					{#if intakeMode === 'plate'}
-						<input
-							{@attach i18n.validation}
-							id="desktop-sell-hero-identity"
-							name="plate"
-							type="text"
-							bind:value={plate}
-							placeholder={i18n.t('copy.2f42adde453e')}
-							autocomplete="off"
-							autocapitalize="characters"
-							spellcheck={false}
-						/>
-					{:else}
-						<input
-							{@attach i18n.validation}
-							id="desktop-sell-hero-identity"
-							name="vin"
-							type="text"
-							bind:value={vin}
-							placeholder={i18n.t('copy.541194c2c29b')}
-							maxlength="17"
-							autocomplete="off"
-							autocapitalize="characters"
-							spellcheck={false}
-						/>
-					{/if}
-					<button class="sell-action desktop-primary-action" type="submit" aria-haspopup="dialog">
-						{i18n.t('copy.ffe5cca7d0b3')}
-						<ArrowRight size={18} />
-					</button>
+				<div class="sell-entry__body desktop-hero-panel-body">
+					<label class="sell-entry__label" for="desktop-sell-hero-identity">
+						{intakeMode === 'plate' ? i18n.t('copy.cabeddcf59bc') : i18n.t('copy.5b86a75cae06')}
+					</label>
+					<div class="sell-entry__row desktop-hero-search-field">
+						{#if intakeMode === 'plate'}
+							<input
+								{@attach i18n.validation}
+								id="desktop-sell-hero-identity"
+								class="desktop-hero-search-input"
+								name="plate"
+								type="text"
+								bind:value={plate}
+								placeholder={i18n.t('copy.2f42adde453e')}
+								autocomplete="off"
+								autocapitalize="characters"
+								spellcheck={false}
+							/>
+						{:else}
+							<input
+								{@attach i18n.validation}
+								id="desktop-sell-hero-identity"
+								class="desktop-hero-search-input"
+								name="vin"
+								type="text"
+								bind:value={vin}
+								placeholder={i18n.t('copy.541194c2c29b')}
+								maxlength="17"
+								autocomplete="off"
+								autocapitalize="characters"
+								spellcheck={false}
+							/>
+						{/if}
+						<button
+							class="desktop-hero-search-action desktop-primary-action"
+							type="submit"
+							aria-haspopup="dialog"
+							aria-label={i18n.t('copy.ffe5cca7d0b3')}
+							title={i18n.t('copy.ffe5cca7d0b3')}
+						>
+							<ArrowRight size={20} aria-hidden="true" />
+						</button>
+					</div>
+					<p>{i18n.t('sell.desktop.heroHint')}</p>
+					{#if make}<input type="hidden" name="make" value={make} />{/if}
+					{#if model}<input type="hidden" name="model" value={model} />{/if}
 				</div>
-				{#if make}<input type="hidden" name="make" value={make} />{/if}
-				{#if model}<input type="hidden" name="model" value={model} />{/if}
 			</form>
-			<p>{i18n.t('copy.2366c40c8e45')}</p>
 		</div>
 	</DesktopYellowRouteHero>
 	<dialog
@@ -498,7 +512,7 @@
 		text-align: center;
 	}
 	.desktop-sell .sell-intake-card p {
-		margin: 12px 0 0;
+		margin: 0;
 		color: var(--desktop-hero-copy);
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.5 var(--sa-font);
 		text-align: left;
@@ -507,62 +521,10 @@
 		margin: 0;
 		text-align: left;
 	}
-	.sell-entry__mode {
-		display: inline-flex;
-		gap: 4px;
-		margin-bottom: 12px;
-		padding: 3px;
-		border-radius: 8px;
-		background: #171b1e;
-	}
-	.sell-entry__mode button {
-		min-height: 32px;
-		padding: 0 12px;
-		border: 0;
-		border-radius: 6px;
-		background: transparent;
-		color: #fff;
-		font: var(--sa-weight-medium) var(--sa-text-caption)/1.2 var(--sa-font);
-		cursor: pointer;
-	}
-	.sell-entry__mode button:hover {
-		background: #4b5256;
-	}
-	.sell-entry__mode button:disabled {
-		cursor: wait;
-		opacity: 0.6;
-	}
-	.sell-entry__mode button[aria-pressed='true'] {
-		background: #fff;
-		color: var(--sa-ink);
-	}
-	.sell-entry__mode button[aria-pressed='true']:hover {
-		background: #f3f4f6;
-	}
-	.sell-entry__row {
+	.sell-entry__body {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) auto;
-		align-items: center;
+		align-content: center;
 		gap: 12px;
-	}
-	.sell-entry__row input {
-		width: 100%;
-		min-width: 0;
-		height: 48px;
-		padding: 0 16px;
-		border: 1px solid #d9dde1;
-		border-radius: 8px;
-		background: #fff;
-		color: var(--sa-ink);
-		font: var(--sa-weight-regular) var(--sa-text-base)/1.4 var(--sa-font);
-		box-shadow: none;
-	}
-	.sell-entry__row input::placeholder {
-		color: #62676e;
-	}
-	.sell-entry__row button {
-		border: 0;
-		cursor: pointer;
 	}
 	.sell-entry__label {
 		position: absolute;
@@ -823,8 +785,9 @@
 	.sell-step {
 		min-width: 0;
 		text-align: center;
-		background: #f3f4f5;
-		border-radius: 16px;
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 12px;
 		padding: 24px 20px;
 	}
 	.sell-step__marker {
@@ -910,7 +873,8 @@
 		gap: 10px;
 	}
 	.sell-faq details {
-		background: #f7f7f5;
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
 		padding-inline: 24px;
 	}

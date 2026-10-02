@@ -74,28 +74,13 @@
 	<DesktopYellowRouteHero
 		headingId="daynight-about-title"
 		title={i18n.t('pattern.558d5da46c92', { v0: daynightSite.shortName })}
+		deckLayout="segmented"
 	>
 		<div class="about-hero-panel">
-			<div class="about-hero-details">
-				<a
-					class="about-hero-location"
-					href={i18n.href(daynightSite.mapUrl)}
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					<MapPin size={18} aria-hidden="true" />{i18n.dealer('locationShort')}
-				</a>
-				<span class="about-hero-hours">{i18n.text(daynightSite.hoursLabel)}</span>
-			</div>
-			<div class="about-hero-actions">
-				<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
-					>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} aria-hidden="true" /></a
-				>
-				<a class="about-hero-browse" href={i18n.href(resolve('/inventory'))}
-					>{i18n.t('copy.f20a4411e8d6')} <ArrowRight size={18} aria-hidden="true" /></a
-				>
-			</div>
-			<nav class="about-hero-contact" aria-label={i18n.t('copy.3618c24ea260')}>
+			<nav
+				class="about-hero-contact desktop-hero-controls"
+				aria-label={i18n.t('copy.3618c24ea260')}
+			>
 				<a href={i18n.href(daynightSite.phoneHref)}
 					><Phone size={18} aria-hidden="true" />{daynightSite.phoneLabel}</a
 				>
@@ -141,6 +126,29 @@
 					</a>
 				</div>
 			</nav>
+			<div class="about-hero-body desktop-hero-panel-body">
+				<div class="about-hero-details">
+					<a
+						class="about-hero-location"
+						href={i18n.href(daynightSite.mapUrl)}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<MapPin size={18} aria-hidden="true" />{i18n.dealer('locationShort')}
+					</a>
+					<span class="about-hero-hours">{i18n.text(daynightSite.hoursLabel)}</span>
+				</div>
+				<div class="about-hero-actions">
+					<a class="sa-cta sa-cta-primary" href={i18n.href(resolve('/contact'))}
+						>{i18n.t('copy.d117eaf5db9d')} <ArrowRight size={18} aria-hidden="true" /></a
+					>
+					<a
+						class="about-hero-browse sa-cta sa-cta-secondary"
+						href={i18n.href(resolve('/inventory'))}
+						>{i18n.t('copy.f20a4411e8d6')} <ArrowRight size={18} aria-hidden="true" /></a
+					>
+				</div>
+			</div>
 		</div>
 	</DesktopYellowRouteHero>
 
@@ -151,18 +159,7 @@
 					{i18n.t('copy.8e364ad977c2')}
 					{i18n.t('copy.26f103de55d7')}
 				</h2>
-				<p>
-					{daynightSite.shortName}
-					{i18n.t('copy.6e5947b6b2ee')}
-					{i18n.dealer('city')}{i18n.t('copy.c2bf91e6c61c')}
-				</p>
-				<p>
-					{i18n.t('copy.054350d6d3b9')}
-				</p>
-				<DesktopBrowseLink
-					href={i18n.href(resolve('/contact'))}
-					label={i18n.t('copy.0a896165cc28')}
-				/>
+				<p>{i18n.t('about.desktop.intro')}</p>
 			</div>
 		</div>
 	</section>
@@ -306,21 +303,25 @@
 <style>
 	.about-hero-panel {
 		display: grid;
-		gap: 12px;
 		padding: 0;
 	}
 
+	.about-hero-body {
+		display: grid;
+		align-content: center;
+		gap: 12px;
+	}
 	.about-hero-details {
 		display: grid;
 		justify-items: center;
-		gap: 6px;
+		gap: 4px;
 	}
 	.about-page .about-hero-location {
 		display: inline-flex;
 		align-items: center;
 		gap: 8px;
 		color: #fff;
-		font: var(--sa-weight-semibold) var(--sa-text-lg)/1.35 var(--sa-font);
+		font: var(--sa-weight-semibold) var(--sa-text-base)/1.35 var(--sa-font);
 	}
 	.about-hero-location:hover {
 		text-decoration: underline;
@@ -331,53 +332,44 @@
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 	}
 	.about-hero-actions {
-		display: flex;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 12px;
 	}
 	.about-hero-actions > a {
-		flex: 1 1 0;
-		min-width: 0;
-		max-width: 240px;
-	}
-	.about-page .about-hero-browse {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		gap: 12px;
+		min-width: 0;
 		min-height: 48px;
-		padding: 0 22px;
-		border: 1px solid #899298;
+		padding: 0 20px;
+		border: 1px solid var(--desktop-control-border);
 		border-radius: 8px;
-		background: transparent;
-		color: #fff;
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.3 var(--sa-font);
 		white-space: nowrap;
-	}
-	.about-page .about-hero-browse:hover {
-		border-color: #e2e5e7;
-		background: #4b5256;
 	}
 
 	.about-hero-contact {
 		display: flex;
 		align-items: center;
-		justify-content: center;
-		gap: 20px;
+		justify-content: space-between;
+		gap: 12px;
+		padding: 0 12px 0 24px;
 	}
 
 	.about-page .about-hero-contact a {
 		display: inline-flex;
-		min-height: 40px;
+		min-height: var(--desktop-hero-tab-height);
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
 		border: 0;
-		border-radius: 999px;
+		border-radius: 0;
 		background: transparent;
-		color: var(--desktop-hero-copy);
-		font: var(--sa-weight-medium) var(--sa-text-caption)/1.35 var(--sa-font);
-		padding: 0 8px;
+		color: #fff;
+		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
+		padding: 0 12px;
 	}
 
 	.about-hero-contact > a:hover,
@@ -386,14 +378,17 @@
 	.about-hero-socials a:focus-visible {
 		background: #4b5256;
 	}
+	.about-hero-contact a:focus-visible {
+		outline-offset: -4px !important;
+	}
 
 	.about-hero-socials {
 		display: flex;
-		gap: 4px;
+		gap: 0;
 	}
 
 	.about-page .about-hero-socials a {
-		width: 40px;
+		width: var(--desktop-hero-tab-height);
 		padding: 0;
 	}
 
@@ -460,9 +455,6 @@
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		min-height: 44px;
 	}
-	.about-story :global(.desktop-browse-link) {
-		margin-top: 20px;
-	}
 	.about-story > div {
 		max-width: 860px;
 		margin-inline: auto;
@@ -495,7 +487,8 @@
 		gap: 20px;
 	}
 	.about-team-card {
-		background: #25292b;
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
 		border-radius: 12px;
 		overflow: hidden;
 		display: grid;
@@ -524,7 +517,7 @@
 	}
 	.about-team-card h3 {
 		font: var(--sa-weight-strong) var(--sa-text-lg)/1.3 var(--sa-font);
-		color: #fff;
+		color: var(--sa-ink);
 		margin: 0;
 	}
 	.about-team-card__contact {
@@ -542,7 +535,7 @@
 		justify-content: center;
 		font: var(--sa-weight-semibold) var(--sa-text-base)/1.4 var(--sa-font);
 		color: var(--sa-ink);
-		background: #fff;
+		background: var(--desktop-field);
 		border-radius: 8px;
 		padding-inline: 8px;
 	}
@@ -556,7 +549,7 @@
 		grid-column: 1;
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
 		margin: 6px 0 0;
-		color: #d9dcde;
+		color: #62676e;
 	}
 	.about-page .about-demo-label {
 		font: var(--sa-weight-regular) var(--sa-text-caption)/1.4 var(--sa-font);
@@ -582,7 +575,8 @@
 		justify-content: center;
 		gap: 8px;
 		border-radius: 8px;
-		background: #e9ecee;
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
 		padding: 12px 8px;
 		min-height: 64px;
 		font: var(--sa-button-font-weight) var(--sa-text-caption)/1.4 var(--sa-font);
@@ -636,7 +630,8 @@
 		padding-bottom: 48px;
 	}
 	.about-page .about-team-card h3 a:hover {
-		color: var(--sa-yellow);
+		text-decoration: underline;
+		text-underline-offset: 4px;
 	}
 	.about-text-link:hover {
 		text-decoration: underline;

@@ -33,8 +33,12 @@ test('sell carries make and model into the existing desktop intake', async ({ pa
 	await page.locator('#hero-sell-model').fill('320d Touring');
 	await page.locator('.hero-intent__submit').click();
 	await expect(page).toHaveURL(/\/sell-your-car\?make=BMW&model=320d\+Touring$/);
-	await expect(page.locator('.desktop-sell input[name="make"]')).toHaveValue('BMW');
-	await expect(page.locator('.desktop-sell input[name="model"]')).toHaveValue('320d Touring');
+	await expect(page.locator('.sell-entry input[type="hidden"][name="make"]')).toHaveValue('BMW');
+	await expect(page.locator('.sell-entry input[type="hidden"][name="model"]')).toHaveValue(
+		'320d Touring'
+	);
+	await expect(page.locator('.sell-modal input[name="make"]')).toHaveValue('BMW');
+	await expect(page.locator('.sell-modal input[name="model"]')).toHaveValue('320d Touring');
 });
 
 test('import validates a URL and carries it into the existing request', async ({ page }) => {

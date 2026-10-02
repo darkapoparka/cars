@@ -1,12 +1,58 @@
 /* Shared content frame for the desktop storefront routes. */
 @media (min-width: 992px) {
 	:root {
+		--desktop-canvas: #f4f6fa;
 		--desktop-content-max: 1320px;
 		--desktop-content-gutters: 80px;
 		--desktop-content-width: min(
 			calc(100% - var(--desktop-content-gutters)),
 			var(--desktop-content-max)
 		);
+	}
+
+	/* Adapt the retained route roots to one canvas; cards and nested controls
+	   keep their own reading, form and muted surface roles. */
+	body:has(.site-chrome[data-daynight-site-chrome]),
+	body:has(.site-chrome[data-daynight-site-chrome]) #main-content,
+	body:has(.site-chrome[data-daynight-site-chrome])
+		:is(
+			.blog-page,
+			.blog-article-page,
+			.reviews-page,
+			.calculator-page,
+			.compare-page,
+			.terms-page,
+			.dealer-page,
+			.team-page,
+			.team-member-page,
+			.financing-page,
+			.faq-page,
+			.background-light
+		) {
+		background: var(--desktop-canvas);
+	}
+	body:has(.site-chrome[data-daynight-site-chrome]) .financing-page section.bg-white,
+	body:has(.site-chrome[data-daynight-site-chrome]) .faq-page > section.bg-white,
+	body:has(.site-chrome[data-daynight-site-chrome]) .terms-page > .terms-main,
+	body:has(.site-chrome[data-daynight-site-chrome])
+		.contact-page-root
+		:is(.daynight-contact-primary, .daynight-contact-map) {
+		background: var(--desktop-canvas);
+	}
+	body:has(.site-chrome[data-daynight-site-chrome]) .compare-page .compare-empty {
+		background: var(--desktop-panel);
+		border-color: var(--desktop-control-border);
+		border-radius: 12px;
+	}
+	body:has(.site-chrome[data-daynight-site-chrome]) .terms-page .terms-content {
+		background: var(--desktop-panel);
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 12px;
+		padding: 28px;
+	}
+	body:has(.site-chrome[data-daynight-site-chrome]) .compare-page .compare-empty__mark {
+		background: var(--desktop-field);
+		color: var(--desktop-action);
 	}
 }
 @media (min-width: 992px) and (max-width: 1199px) {

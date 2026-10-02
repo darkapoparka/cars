@@ -83,11 +83,11 @@
 
 	<div class="daynight-yellow-route-hero__content">
 		<h1 id={headingId}>{title}</h1>
-		{#if copy}
-			<p>{copy}</p>
-		{/if}
 		{#if children || (primaryLabel && primaryHref)}
 			<div class="daynight-yellow-route-hero__deck">
+				{#if copy}
+					<p class="daynight-yellow-route-hero__copy">{copy}</p>
+				{/if}
 				{#if children}
 					{@render children()}
 				{:else if primaryLabel && primaryHref}
@@ -109,6 +109,8 @@
 					</div>
 				{/if}
 			</div>
+		{:else if copy}
+			<p>{copy}</p>
 		{/if}
 	</div>
 </section>
@@ -210,9 +212,37 @@
 	/* Primary actions are yellow on charcoal. Keep this exception within the
   * desktop hero so forms, cards and mobile retain their own button roles. */
 	@media (min-width: 992px) {
+		/* Reserve heading space instead of centring a variable-height panel group.
+		 * Every route starts its panel at the accepted inventory position. */
 		.daynight-yellow-route-hero__content {
+			display: grid;
+			grid-template-rows: minmax(var(--desktop-hero-heading-space), max-content) auto;
+			align-content: start;
+			justify-items: center;
+			row-gap: var(--desktop-hero-panel-gap);
 			min-height: var(--desktop-hero-height);
-			justify-content: center;
+		}
+
+		h1 {
+			align-self: end;
+		}
+
+		.daynight-yellow-route-hero__deck {
+			display: grid;
+			align-content: center;
+			gap: 12px;
+			min-height: var(--desktop-hero-panel-min-height);
+			margin: 0 auto !important;
+		}
+
+		.daynight-yellow-route-hero--segmented .daynight-yellow-route-hero__deck {
+			display: block;
+		}
+
+		.daynight-yellow-route-hero__copy {
+			margin: 0 auto !important;
+			color: var(--desktop-hero-copy);
+			font-weight: var(--sa-weight-regular);
 		}
 
 		.daynight-yellow-route-hero__deck :global(.sa-cta.sa-cta-primary),
@@ -229,7 +259,8 @@
 			border-color: color-mix(in srgb, var(--sa-yellow) 92%, var(--sa-ink)) !important;
 			color: var(--sa-ink) !important;
 		}
-		.daynight-yellow-route-hero__deck :global(:is(a, button, input, select):focus-visible) {
+		.daynight-yellow-route-hero__deck
+			:global(:is(a, button, input:not(.desktop-hero-search-input), select):focus-visible) {
 			outline: 2px solid var(--sa-yellow) !important;
 			outline-offset: 3px !important;
 		}

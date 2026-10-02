@@ -18,6 +18,17 @@ html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
 		--desktop-hero-padding-top: 32px;
 		--desktop-hero-padding-bottom: 32px;
 		--desktop-hero-panel-gap: 24px;
+		--desktop-hero-heading-space: max(
+			110px,
+			calc(var(--sa-text-desktop-hero-title) * var(--desktop-hero-title-leading) * 2)
+		);
+		--desktop-hero-panel-min-height: 146px;
+		--desktop-hero-tab-height: 44px;
+		--desktop-hero-input-height: 54px;
+		--desktop-hero-action-size: 44px;
+		--desktop-hero-panel-body-height: 130px;
+		--desktop-hero-panel-body-padding: 12px 24px;
+		--desktop-home-hint-gap: 8px;
 		--desktop-hero-title-leading: 1.12;
 		--desktop-hero-title-tracking: -0.04em;
 		--desktop-action: #171b1e;
@@ -29,6 +40,119 @@ html:has(.site-chrome[data-daynight-site-chrome])::-webkit-scrollbar {
 		--desktop-secondary-hover: var(--sa-yellow);
 		--desktop-control-border: #d9dde1;
 		--desktop-focus: #171b1e;
+	}
+
+	/* Hero selectors share one attached bar, including route links and input modes. */
+	.desktop-hero-controls {
+		min-height: var(--desktop-hero-tab-height);
+		border-radius: 12px 12px 0 0;
+		background: var(--desktop-action);
+		overflow: hidden;
+	}
+	.desktop-hero-selector {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+	.desktop-hero-selector--pair {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.desktop-hero-selector > :is(a, button) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 0;
+		min-height: var(--desktop-hero-tab-height);
+		padding: 0 20px;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: #fff;
+		font: var(--sa-weight-medium) var(--sa-text-body-sm)/1.2 var(--sa-font);
+		white-space: nowrap;
+		box-shadow: none;
+		cursor: pointer;
+		transition: background-color 140ms ease;
+	}
+	.desktop-hero-selector > :is(a, button):hover:not(:disabled) {
+		background: #4b5256;
+	}
+	.desktop-hero-selector > button:disabled {
+		cursor: wait;
+		opacity: 0.6;
+	}
+	.desktop-hero-selector
+		> :is([aria-selected='true'], [aria-pressed='true'], [aria-current='true']) {
+		background: #fff;
+		color: var(--desktop-action);
+		font-weight: var(--sa-weight-semibold);
+	}
+	.desktop-hero-selector
+		> :is([aria-selected='true'], [aria-pressed='true'], [aria-current='true']):hover:not(
+			:disabled
+		) {
+		background: var(--desktop-field);
+	}
+	.desktop-hero-controls.desktop-hero-selector > :is(a, button):focus-visible {
+		outline: 2px solid var(--sa-yellow);
+		outline-offset: -4px !important;
+	}
+	.desktop-hero-panel-body {
+		min-height: var(--desktop-hero-panel-body-height);
+		padding: var(--desktop-hero-panel-body-padding);
+	}
+	.desktop-hero-search-field {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		height: var(--desktop-hero-input-height);
+		padding: 4px;
+		border: 1px solid var(--desktop-control-border);
+		border-radius: 999px;
+		background: #fff;
+	}
+	.desktop-hero-search-field:focus-within {
+		border-color: var(--sa-yellow);
+		outline: 2px solid var(--sa-yellow);
+		outline-offset: 2px;
+	}
+	.desktop-hero-search-field > input.desktop-hero-search-input,
+	.hero-intent .desktop-hero-search-field > input.desktop-hero-search-input {
+		flex: 1;
+		width: 100%;
+		min-width: 0;
+		height: var(--desktop-hero-action-size);
+		margin: 0;
+		padding: 0 15px;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: var(--sa-ink);
+		font: var(--sa-weight-regular) var(--sa-text-base)/1.5 var(--sa-font);
+		outline: none;
+		box-shadow: none;
+	}
+	.desktop-hero-search-input::placeholder {
+		color: #62676e;
+		opacity: 1;
+	}
+	.desktop-hero-search-field > button.desktop-hero-search-action,
+	.hero-intent .desktop-hero-search-field > button.desktop-hero-search-action {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: none;
+		width: var(--desktop-hero-action-size);
+		height: var(--desktop-hero-action-size);
+		min-height: var(--desktop-hero-action-size);
+		padding: 0;
+		border: 0;
+		border-radius: 50%;
+		background: var(--sa-yellow);
+		color: var(--desktop-action);
+		cursor: pointer;
+	}
+	.desktop-hero-search-action:hover {
+		background: color-mix(in srgb, var(--sa-yellow) 88%, #fff);
 	}
 
 	body .sa-cta.sa-cta-primary,

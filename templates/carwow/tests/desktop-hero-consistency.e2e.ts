@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 const routes = [
-	'',
 	'/inventory',
+	'',
 	'/services',
 	'/about',
 	'/blog',
@@ -42,15 +42,17 @@ for (const locale of ['en', 'bg']) {
 	});
 
 	for (const width of [992, 1280, 1440, 1920]) {
-		test(`desktop route heroes match Home geometry in ${locale} at ${width}px`, async ({
+		test(`desktop route heroes share the Cars panel position in ${locale} at ${width}px`, async ({
 			page
 		}) => {
 			test.setTimeout(90_000);
 			await page.setViewportSize({ width, height: 1000 });
-			let reference: { height: number; titleFont: string } | undefined;
+			let reference:
+				| { height: number; titleFont: string; panelTop: number; titleBottom: number }
+				| undefined;
 			for (const route of routes) {
 				await page.goto(`/${locale}${route}`);
-				const hero = page.locator('.daynight-home-hero--cutouts, .daynight-yellow-route-hero');
+				const hero = page.locator('.daynight-yellow-route-hero');
 				await expect(hero).toBeVisible();
 				await page.evaluate(async () => {
 					await document.fonts.ready;
@@ -62,32 +64,45 @@ for (const locale of ['en', 'bg']) {
 				const geometry = await hero.evaluateAll(([element]) => {
 					const box = element.getBoundingClientRect();
 					const title = element.querySelector('h1')!;
-					const content = element.querySelector(
-						'.daynight-home-hero__stage, .daynight-yellow-route-hero__content'
-					)!;
+					const content = element.querySelector('.daynight-yellow-route-hero__content')!;
+					const panel = element.querySelector('.daynight-yellow-route-hero__deck')!;
 					const titleBox = title.getBoundingClientRect();
 					const contentBottom = content.lastElementChild!.getBoundingClientRect().bottom;
 					return {
 						height: box.height,
 						topSpace: titleBox.top - box.top,
 						bottomSpace: box.bottom - contentBottom,
+						panelTop: panel.getBoundingClientRect().top - box.top,
+						titleBottom: titleBox.bottom - box.top,
 						titleFont: getComputedStyle(title).font,
 						contentContained: content.getBoundingClientRect().bottom <= box.bottom + 1
 					};
 				});
 				reference ??= geometry;
-				expect(reference.height, `/${locale} Home hero height`).toBe(400);
+				expect(reference.height, `/${locale}/inventory hero height`).toBe(400);
 				expect(
-					Math.abs(geometry.height - reference.height),
-					`/${locale}${route} height ${geometry.height}px; Home ${reference.height}px`
+					Math.abs(reference.panelTop - (width === 1920 ? 185 : 166)),
+					`/${locale}/inventory panel position allows two title lines`
 				).toBeLessThan(1);
 				expect(
-					Math.abs(geometry.topSpace - geometry.bottomSpace),
-					`/${locale}${route} title and panel are vertically centred`
+					Math.abs(geometry.height - reference.height),
+					`/${locale}${route} height ${geometry.height}px; Cars ${reference.height}px`
+				).toBeLessThan(1);
+				expect(
+					Math.abs(geometry.panelTop - reference.panelTop),
+					`/${locale}${route} panel starts at the Cars position`
+				).toBeLessThan(1);
+				expect(
+					Math.abs(geometry.titleBottom - reference.titleBottom),
+					`/${locale}${route} heading ends above the shared panel gap`
 				).toBeLessThan(1);
 				expect(
 					geometry.topSpace,
 					`/${locale}${route} header breathing room`
+				).toBeGreaterThanOrEqual(32);
+				expect(
+					geometry.bottomSpace,
+					`/${locale}${route} panel bottom breathing room`
 				).toBeGreaterThanOrEqual(32);
 				expect(geometry.titleFont, `/${locale}${route} title typography`).toBe(reference.titleFont);
 				expect(geometry.contentContained, `/${locale}${route} content fits`).toBe(true);

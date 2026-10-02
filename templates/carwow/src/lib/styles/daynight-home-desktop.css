@@ -31,27 +31,12 @@
 		outline: 2px solid var(--desktop-focus, #171b1e);
 		outline-offset: 3px;
 	}
-	/* Yellow stage and its centered task panel. Cutouts sit outside the controls. */
+	/* The cutout composition uses DesktopYellowRouteHero. These rules retain /home1. */
 	.daynight-home-shell .daynight-home-hero {
 		background: var(--sa-yellow);
 		position: relative;
 		isolation: isolate;
 		overflow: hidden;
-	}
-	.daynight-home-shell .daynight-home-hero--cutouts {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: var(--desktop-hero-height);
-		padding: var(--desktop-hero-padding-top) 40px var(--desktop-hero-padding-bottom);
-	}
-	.daynight-home-shell .daynight-home-hero__stage {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		position: relative;
-		z-index: 1;
 	}
 	.daynight-home-shell .daynight-home-hero__title {
 		color: var(--sa-ink);
@@ -61,9 +46,6 @@
 		line-height: var(--desktop-hero-title-leading);
 		margin: 0 0 var(--desktop-hero-panel-gap);
 		text-align: center;
-	}
-	.daynight-home-shell .daynight-home-hero__stage > form {
-		width: min(100%, 640px);
 	}
 	/* Photo composition retained for /home1. */
 	.daynight-home-shell--home1 .daynight-home-hero__visual {
