@@ -8,9 +8,10 @@
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import MobileNavIcon from './MobileNavIcon.svelte';
+  import ContactSocialChannels from '$components/company/ContactSocialChannels.svelte';
   import { brand } from '$config/brand';
 
-  let { showActions = true, showMobileFooter = false, observeFooter }: { showActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
+  let { showActions = true, socialActions = false, showMobileFooter = false, observeFooter }: { showActions?: boolean; socialActions?: boolean; showMobileFooter?: boolean; observeFooter: Attachment<HTMLElement> } = $props();
   const phoneLinkAttributes = { href: brand.phoneHref } as const;
 
   const actions = $derived([
@@ -42,7 +43,8 @@
 </script>
 
 {#if showActions}
-  <section class="dn-footer-actions" aria-label={i18n.t("m_920d4a55469d")}>
+  {#if socialActions}<ContactSocialChannels />{/if}
+  <section class="dn-footer-actions" class:dn-footer-actions--contact={socialActions} aria-label={i18n.t("m_920d4a55469d")}>
     <div class="container dn-footer-actions__grid">
       {#each actions as action (action.href)}
         <a href={i18n.href(resolve(action.href))}>
@@ -107,6 +109,9 @@
   .dn-footer-actions small { display: block; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-footer-actions a:hover strong { color: var(--dn-red); }
   .dn-footer-actions a:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; border-radius: var(--dn-radius); }
+  @media (min-width: 992px) {
+    .dn-footer-actions--contact { display: none; }
+  }
   @media (min-width: 768px) and (hover: hover) {
     .dn-footer-actions__grid > a { transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease; }
     .dn-footer-actions__grid > a:hover { transform: translateY(-2px); border-color: var(--dn-line-strong); box-shadow: var(--dn-card-hover-shadow); }

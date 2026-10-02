@@ -57,5 +57,5 @@
   <a class="dn-skip-link" href="#main-content">{i18n.t("m_ac576a66d456")}</a>
   <Header presentation={presentation.header} {mobileFooterVisible} />
   <main id="main-content" data-layout={presentation.mainLayout} tabindex="-1">{@render children()}</main>
-  <Footer showActions={presentation.showFooterActions} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
+  <Footer showActions={presentation.showFooterActions} socialActions={presentation.route === 'contact' && presentation.contactTopic === 'general'} showMobileFooter={presentation.showMobileFooter} {observeFooter} />
 </div>

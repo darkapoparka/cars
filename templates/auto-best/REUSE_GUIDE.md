@@ -54,6 +54,8 @@ Start with verified business name, usable logo, phone, location and destinations
 
 Update both textual address and `showroomCoordinates`; changing only the address will not move the map pin. Set the actual social profiles and review all displayed video records. A new YouTube channel URL does not replace the inherited thumbnail/video selection.
 
+General Contact uses the configured Facebook, YouTube and Instagram URLs in its desktop social row above the footer. In preview mode, empty URLs display labelled, noninteractive sample profiles. Published mode omits them; with no configured profiles, the entire row is omitted. Keep real dealer destinations in `brand.ts`. The hero, visit panel and mobile social controls continue to show only configured profiles.
+
 ## Inventory
 
 Replace sample records with the client inventory. Keep stable positive numeric IDs, correct title/make/body, numeric year/mileage/price and appropriate photos. The application derives formatted values and detail URLs. Use only equipment supported by the record; the source template equipment array is not a specification for every client vehicle.

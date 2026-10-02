@@ -511,5 +511,13 @@
   "inventory.budget.accessible": {
     "en": "Vehicles up to {amount}",
     "bg": "Автомобили до {amount}"
+  },
+  "contact.social.title": {
+    "en": "Social media",
+    "bg": "Социални мрежи"
+  },
+  "contact.social.placeholder": {
+    "en": "Sample profile",
+    "bg": "Примерен профил"
   }
 }

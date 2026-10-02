@@ -139,8 +139,14 @@ actions. The map mounts after desktop hydration and is absent from mobile DOM;
 the suite waits for that mount. Live provider rendering needs separate visual
 inspection and is not established by the iframe URL assertion.
 Inventory shows its concise count below the hero title,
-with applied and zero-result cases checked in BG/EN. Only configured social profiles
-are rendered. It warms lazy images before saving full-page 1440px/390px captures under
+with applied and zero-result cases checked in BG/EN. Hero and map social controls
+render only configured profiles. General Contact replaces the desktop footer's
+service cards with Facebook, YouTube and Instagram channels. Preview-only empty
+profiles are labelled samples and have no link or keyboard action; published
+pages omit missing profiles and omit the section if none are configured.
+Check the row at 992px and 1440px, with normal and enlarged text, in BG/EN;
+configured links need platform labels, keyboard focus and safe external targets.
+It warms lazy images before saving full-page 1440px/390px captures under
 `artifacts/desktop-routes-smoke/`. Search, filter drafts, sticky controls, keyboard
 focus and article return behavior remain covered by desktop-discovery and journey
 suites. See [desktop route audit](DESKTOP-ROUTE-AUDIT.md) for the styling contract.
