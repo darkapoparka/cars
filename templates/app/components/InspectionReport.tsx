@@ -18,14 +18,16 @@ function Checkpoint({item,direct}: {item:ReferenceCheckpoint;direct:boolean}) {
   const passed=item.status===1;
   return <><div data-inspection-status={item.status??'unknown'} data-inspection-name={item.name} {...stylex.props(s.row,direct&&s.directRow,item.remarks.length>0&&s.rowWithFinding)}><span>{tx(item.name)}</span>{item.value?<span {...stylex.props(s.metric)}>{tx(item.value)}</span>:item.remarks.length?<span aria-label={tx("Imperfection recorded")} {...stylex.props(s.findingIcon)}><Info size={20}/></span>:<span aria-label={tx(passed?'Passed in captured report':'No pass result recorded')} {...stylex.props(s.passed,!passed&&s.unrated)}>{passed?<Check size={16} strokeWidth={1.7}/>:'−'}</span>}</div>{item.remarks.length?<div {...stylex.props(s.findingText)}><h4 {...stylex.props(s.findingLabel)}>{tx("Imperfection")}</h4>{item.remarks.map((remark,index)=><p key={index}>{tx(remark)}</p>)}</div>:null}</>;
 }
-function Section({section}: {section:ReferenceInspectionSection}) {
+export function InspectionSection({section,embedded=false}: {section:ReferenceInspectionSection;embedded?:boolean}) {
   const tx = useCopy();
 
-  const [expanded,setExpanded]=useState(false);
+  const [expanded,setExpanded]=useState(embedded);
+  const Heading=embedded?'h3':'h2';
+  const GroupHeading=embedded?'h4':'h3';
   const Icon=sectionIcons[section.title]??CarFront;
   const limit=['Exterior','Electricals, Controls & Lights'].includes(section.title)?6:section.groups.length;
   const groups=expanded?section.groups:section.groups.slice(0,limit);
-  return <section {...stylex.props(s.card)}><h2 {...stylex.props(s.cardHeading)}><Icon size={23} strokeWidth={1.2}/>{tx(section.title)}</h2>{groups.map((group,index)=><div key={index}>{group.heading?<h3 {...stylex.props(s.groupHeading)}>{tx(group.heading)}</h3>:null}{group.items.map((item,ordinal)=><Checkpoint key={item.name+'-'+ordinal} item={item} direct={!group.heading}/>)}</div>)}{section.groups.length>limit?<button type="button" onClick={()=>setExpanded(value=>!value)} aria-expanded={expanded} {...stylex.props(s.expand)}>{tx(expanded?'SEE LESS':'SEE MORE')}<ChevronDown size={17} {...stylex.props(expanded&&s.rotated)}/></button>:null}</section>;
+  return <section {...stylex.props(s.card)}><Heading {...stylex.props(s.cardHeading)}><Icon size={23} strokeWidth={1.2}/>{tx(section.title)}</Heading>{groups.map((group,index)=><div key={index}>{group.heading?<GroupHeading {...stylex.props(s.groupHeading)}>{tx(group.heading)}</GroupHeading>:null}{group.items.map((item,ordinal)=><Checkpoint key={item.name+'-'+ordinal} item={item} direct={!group.heading}/>)}</div>)}{section.groups.length>limit?<button type="button" onClick={()=>setExpanded(value=>!value)} aria-expanded={expanded} {...stylex.props(s.expand)}>{tx(expanded?'SEE LESS':'SEE MORE')}<ChevronDown size={17} {...stylex.props(expanded&&s.rotated)}/></button>:null}</section>;
 }
 /** This is the observed inspection snapshot, not an inspection performed by this application. */
 export default function InspectionReport({vehicle,capturedSections}: {vehicle: Vehicle;capturedSections:ReferenceInspectionSection[]}) {
@@ -37,7 +39,7 @@ export default function InspectionReport({vehicle,capturedSections}: {vehicle: V
   return <main {...stylex.props(s.page)}>
     <PageHeader title={tx("Inspection report")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to car")}/>
     <div {...stylex.props(s.content)}><section {...stylex.props(s.intro)}><h2 {...stylex.props(s.vehicleTitle)}>{tx(vehicle.year)} {tx(vehicle.make.toUpperCase())} {tx(vehicle.model.toUpperCase())}</h2><p {...stylex.props(s.trim)}>{tx(vehicle.trim.split(' • ')[0])} {tx(" | ")}{tx(vehicle.engine)}</p><img src={assetPath(vehicle.image)} width={1155} height={651} alt={tx(vehicleTitle)} {...stylex.props(s.car)} /><div {...stylex.props(s.inspectionStatement)}><span {...stylex.props(s.inspectionIcon)}>{approved?<ShieldCheck size={43} fill="#50b67f" color="#fff" />:<Info size={32}/>}</span><p>{tx(approved?"Review the recorded condition details for this demo vehicle.":"No verified inspection report is available for this sample car.")}</p></div></section>
-      {approved?<><h2 {...stylex.props(s.reportHeading)}>{tx("YOUR CAR CONDITION REPORT")}</h2>{capturedSections.map(section => <Section key={section.title} section={section} />)}<p {...stylex.props(s.referenceNote)}>{tx("Archived inspection data for this demo vehicle. The recorded checkpoints and findings come from this vehicle’s captured listing. This application has not independently inspected or certified the vehicle.")}</p></>:null}
+      {approved?<><h2 {...stylex.props(s.reportHeading)}>{tx("YOUR CAR CONDITION REPORT")}</h2>{capturedSections.map(section => <InspectionSection key={section.title} section={section} />)}<p {...stylex.props(s.referenceNote)}>{tx("Archived inspection data for this demo vehicle. The recorded checkpoints and findings come from this vehicle’s captured listing. This application has not independently inspected or certified the vehicle.")}</p></>:null}
     </div>
     <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     <LoginSheet vehicleTitle={vehicleTitle} open={login} onClose={() => setLogin(false)} />

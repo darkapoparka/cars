@@ -1,0 +1,40 @@
+{
+  "StartedUtc": "2026-10-02T01:55:07.5215898Z",
+  "FinishedUtc": "2026-10-02T02:02:02.2087367Z",
+  "ExitCode": 0,
+  "SourceChanged": [],
+  "Files": [
+    {
+      "Path": "components/DealerEnquirySheet.tsx",
+      "Hash": "C31672F0AF85AC3D029F19E2D527F4448D7F3D0F64F333730A043E15BC8561A0"
+    },
+    {
+      "Path": "components/InspectionReport.tsx",
+      "Hash": "E7B675F401A65EF65BCE0CDCEA25C4F36076AA6D94AF22A0CDEEC4F87BEA4EFF"
+    },
+    {
+      "Path": "components/VehicleBelowFold.tsx",
+      "Hash": "46E49B6F2273DDDEFE61C8CDE9B0C98EAE9C2249CFD5C25E1520422BE61950F0"
+    },
+    {
+      "Path": "components/VehicleDetailClient.tsx",
+      "Hash": "B3F08896F75CC4636095A2DD080F2453A504FCB12A0F33CC3A750D0A6E436CCE"
+    },
+    {
+      "Path": "components/VehicleRecordsSheet.tsx",
+      "Hash": "A007865F62ACED2E689D475D8B23922F8BB10F90FC5A5E89FBD9AB65CE6B4183"
+    },
+    {
+      "Path": "components/VehicleServiceHistory.tsx",
+      "Hash": "4310533F814C3B3317A8AE92DFD70771C9F62DA611FA2A0B736AA0F887CE0997"
+    },
+    {
+      "Path": "lib/locales/bg.json",
+      "Hash": "4B736D9D1ED3157129352D40C0B9A8BDA7857ADF78FC0377A193A5947870CCB4"
+    },
+    {
+      "Path": "lib/locales/en.json",
+      "Hash": "5340DC0C76E090DAF7FCF26BC2BA0488E2589D65CF0BBEA4E9A1F6DACCF2A6B4"
+    }
+  ]
+}

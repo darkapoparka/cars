@@ -1,0 +1,880 @@
+{
+  "Cases": [
+    {
+      "Case": "320-normal-condition",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 930.03125,
+          "height": 1211,
+          "left": 16,
+          "right": 304,
+          "top": -280.96875,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 740,
+          "buttons": [
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 47.625,
+                "right": 65.625,
+                "top": 703,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Запази",
+              "top": 690,
+              "width": 143
+            },
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 203.28125,
+                "right": 221.28125,
+                "top": 703,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Оглед",
+              "top": 690,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 683,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -237.96875,
+          "height": 27,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -264.96875,
+          "width": 288
+        },
+        "width": 320
+      },
+      "Dialog": {
+        "body": {
+          "height": 298,
+          "scrollHeight": 298
+        },
+        "close": {
+          "bottom": 425,
+          "height": 44,
+          "left": 256,
+          "right": 300,
+          "top": 381,
+          "width": 44,
+          "x": 256,
+          "y": 381
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 740,
+          "height": 375,
+          "left": 0,
+          "right": 320,
+          "top": 365,
+          "width": 320,
+          "x": 0,
+          "y": 365
+        },
+        "text": "Състояние\n\n2024 Toyota FORTUNER\n\nНяма предоставен доклад\n\nНяма наличен доклад от проверка. Попитайте продавача за състоянието на автомобила.\n\nПоискайте информация за автомобила",
+        "viewport": 320,
+        "width": 320
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "condition"
+      }
+    },
+    {
+      "Case": "320-normal-service-history",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 740,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 930.03125,
+          "height": 1211,
+          "left": 16,
+          "right": 304,
+          "top": -280.96875,
+          "width": 288
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 740,
+          "buttons": [
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 47.625,
+                "right": 65.625,
+                "top": 703,
+                "width": 18
+              },
+              "left": 12,
+              "right": 155,
+              "text": "Запази",
+              "top": 690,
+              "width": 143
+            },
+            {
+              "bottom": 734,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 721,
+                "height": 18,
+                "left": 203.28125,
+                "right": 221.28125,
+                "top": 703,
+                "width": 18
+              },
+              "left": 163,
+              "right": 308,
+              "text": "Оглед",
+              "top": 690,
+              "width": 145
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 320,
+          "top": 683,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -237.96875,
+          "height": 27,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -264.96875,
+          "width": 288
+        },
+        "width": 320
+      },
+      "Dialog": {
+        "body": {
+          "height": 280,
+          "scrollHeight": 280
+        },
+        "close": {
+          "bottom": 443,
+          "height": 44,
+          "left": 256,
+          "right": 300,
+          "top": 399,
+          "width": 44,
+          "x": 256,
+          "y": 399
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 740,
+          "height": 357,
+          "left": 0,
+          "right": 320,
+          "top": 383,
+          "width": 320,
+          "x": 0,
+          "y": 383
+        },
+        "text": "Сервизна история\n\n2024 Toyota FORTUNER\n\nНяма предоставена сервизна история\n\nНяма налични сервизни документи. Поискайте ги от продавача.\n\nПоискайте сервизна история",
+        "viewport": 320,
+        "width": 320
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "service-history"
+      }
+    },
+    {
+      "Case": "390-normal-condition",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 982.421875,
+          "height": 1211,
+          "left": 16,
+          "right": 374,
+          "top": -228.578125,
+          "width": 358
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 844,
+          "buttons": [
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 65.125,
+                "right": 83.125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 12,
+              "right": 190,
+              "text": "Запази",
+              "top": 794,
+              "width": 178
+            },
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 255.78125,
+                "right": 273.78125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 198,
+              "right": 378,
+              "text": "Оглед",
+              "top": 794,
+              "width": 180
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 390,
+          "top": 787,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "title": {
+          "bottom": -185.578125,
+          "height": 27,
+          "left": 16,
+          "right": 374,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -212.578125,
+          "width": 358
+        },
+        "width": 390
+      },
+      "Dialog": {
+        "body": {
+          "height": 256,
+          "scrollHeight": 256
+        },
+        "close": {
+          "bottom": 571,
+          "height": 44,
+          "left": 326,
+          "right": 370,
+          "top": 527,
+          "width": 44,
+          "x": 326,
+          "y": 527
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 844,
+          "height": 333,
+          "left": 0,
+          "right": 390,
+          "top": 511,
+          "width": 390,
+          "x": 0,
+          "y": 511
+        },
+        "text": "Състояние\n\n2024 Toyota FORTUNER\n\nНяма предоставен доклад\n\nНяма наличен доклад от проверка. Попитайте продавача за състоянието на автомобила.\n\nПоискайте информация за автомобила",
+        "viewport": 390,
+        "width": 390
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "condition"
+      }
+    },
+    {
+      "Case": "390-normal-service-history",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 844,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 982.421875,
+          "height": 1211,
+          "left": 16,
+          "right": 374,
+          "top": -228.578125,
+          "width": 358
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 844,
+          "buttons": [
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 65.125,
+                "right": 83.125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 12,
+              "right": 190,
+              "text": "Запази",
+              "top": 794,
+              "width": 178
+            },
+            {
+              "bottom": 838,
+              "font": "14px",
+              "height": 44,
+              "icon": {
+                "bottom": 825,
+                "height": 18,
+                "left": 255.78125,
+                "right": 273.78125,
+                "top": 807,
+                "width": 18
+              },
+              "left": 198,
+              "right": 378,
+              "text": "Оглед",
+              "top": 794,
+              "width": 180
+            }
+          ],
+          "height": 57,
+          "left": 0,
+          "reserved": 73,
+          "right": 390,
+          "top": 787,
+          "width": 390
+        },
+        "scrollWidth": 390,
+        "title": {
+          "bottom": -185.578125,
+          "height": 27,
+          "left": 16,
+          "right": 374,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -212.578125,
+          "width": 358
+        },
+        "width": 390
+      },
+      "Dialog": {
+        "body": {
+          "height": 256,
+          "scrollHeight": 256
+        },
+        "close": {
+          "bottom": 571,
+          "height": 44,
+          "left": 326,
+          "right": 370,
+          "top": 527,
+          "width": 44,
+          "x": 326,
+          "y": 527
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 844,
+          "height": 333,
+          "left": 0,
+          "right": 390,
+          "top": 511,
+          "width": 390,
+          "x": 0,
+          "y": 511
+        },
+        "text": "Сервизна история\n\n2024 Toyota FORTUNER\n\nНяма предоставена сервизна история\n\nНяма налични сервизни документи. Поискайте ги от продавача.\n\nПоискайте сервизна история",
+        "viewport": 390,
+        "width": 390
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "service-history"
+      }
+    },
+    {
+      "Case": "1440-normal-condition",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1285.65625,
+          "height": 1433,
+          "left": 128,
+          "right": 952,
+          "top": -147.34375,
+          "width": 824
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": -96.34375,
+          "height": 35,
+          "left": 128,
+          "right": 952,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -131.34375,
+          "width": 824
+        },
+        "width": 1440
+      },
+      "Dialog": {
+        "body": {
+          "height": 256,
+          "scrollHeight": 256
+        },
+        "close": {
+          "bottom": 393.5,
+          "height": 44,
+          "left": 981,
+          "right": 1025,
+          "top": 349.5,
+          "width": 44,
+          "x": 981,
+          "y": 349.5
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 666.5,
+          "height": 333,
+          "left": 395,
+          "right": 1045,
+          "top": 333.5,
+          "width": 650,
+          "x": 395,
+          "y": 333.5
+        },
+        "text": "Състояние\n\n2024 Toyota FORTUNER\n\nНяма предоставен доклад\n\nНяма наличен доклад от проверка. Попитайте продавача за състоянието на автомобила.\n\nПоискайте информация за автомобила",
+        "viewport": 1440,
+        "width": 1440
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "condition"
+      }
+    },
+    {
+      "Case": "1440-normal-service-history",
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 1000,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1285.65625,
+          "height": 1433,
+          "left": 128,
+          "right": 952,
+          "top": -147.34375,
+          "width": 824
+        },
+        "modal": null,
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": null,
+        "scrollWidth": 1440,
+        "title": {
+          "bottom": -96.34375,
+          "height": 35,
+          "left": 128,
+          "right": 952,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -131.34375,
+          "width": 824
+        },
+        "width": 1440
+      },
+      "Dialog": {
+        "body": {
+          "height": 234,
+          "scrollHeight": 234
+        },
+        "close": {
+          "bottom": 404.5,
+          "height": 44,
+          "left": 981,
+          "right": 1025,
+          "top": 360.5,
+          "width": 44,
+          "x": 981,
+          "y": 360.5
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 655.5,
+          "height": 311,
+          "left": 395,
+          "right": 1045,
+          "top": 344.5,
+          "width": 650,
+          "x": 395,
+          "y": 344.5
+        },
+        "text": "Сервизна история\n\n2024 Toyota FORTUNER\n\nНяма предоставена сервизна история\n\nНяма налични сервизни документи. Поискайте ги от продавача.\n\nПоискайте сервизна история",
+        "viewport": 1440,
+        "width": 1440
+      },
+      "Closed": {
+        "locked": "",
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "section": "service-history"
+      }
+    },
+    {
+      "Case": "320-large-bg",
+      "Dialog": {
+        "body": {
+          "height": 297,
+          "scrollHeight": 728
+        },
+        "close": {
+          "bottom": 132.40625,
+          "height": 44,
+          "left": 256,
+          "right": 300,
+          "top": 88.40625,
+          "width": 44,
+          "x": 256,
+          "y": 88.40625
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 480,
+          "height": 441.59375,
+          "left": 0,
+          "right": 320,
+          "top": 38.40625,
+          "width": 320,
+          "x": 0,
+          "y": 38.40625
+        },
+        "text": "Сервизна история\n\n2024 Toyota FORTUNER\n\nНяма предоставена сервизна история\n\nНяма налични сервизни документи. Поискайте ги от продавача.\n\nПоискайте сервизна история",
+        "viewport": 320,
+        "width": 320
+      },
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1053.921875,
+          "height": 2222.890625,
+          "left": 16,
+          "right": 304,
+          "top": -1168.96875,
+          "width": 288
+        },
+        "modal": {
+          "bottom": 480,
+          "height": 441.59375,
+          "left": 0,
+          "right": 320,
+          "top": 38.40625,
+          "width": 320
+        },
+        "path": "/bg/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 422,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 409,
+                "height": 18,
+                "left": 85.3125,
+                "right": 103.3125,
+                "top": 391,
+                "width": 18
+              },
+              "left": 12,
+              "right": 308,
+              "text": "Запазено",
+              "top": 378,
+              "width": 296
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 108.078125,
+                "right": 126.078125,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 308,
+              "text": "Оглед",
+              "top": 430,
+              "width": 296
+            }
+          ],
+          "height": 109,
+          "left": 0,
+          "reserved": 125,
+          "right": 320,
+          "top": 371,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -1044.96875,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -1152.96875,
+          "width": 288
+        },
+        "width": 320
+      },
+      "RequestReachable": true
+    },
+    {
+      "Case": "320-large-en",
+      "Dialog": {
+        "body": {
+          "height": 297,
+          "scrollHeight": 676
+        },
+        "close": {
+          "bottom": 132.40625,
+          "height": 44,
+          "left": 256,
+          "right": 300,
+          "top": 88.40625,
+          "width": 44,
+          "x": 256,
+          "y": 88.40625
+        },
+        "focusInside": true,
+        "locked": true,
+        "overflows": [],
+        "rect": {
+          "bottom": 480,
+          "height": 441.59375,
+          "left": 0,
+          "right": 320,
+          "top": 38.40625,
+          "width": 320,
+          "x": 0,
+          "y": 38.40625
+        },
+        "text": "Service History\n\n2024 Toyota FORTUNER\n\nNo service records supplied\n\nService records are not available for this car. Request them from the dealer.\n\nRequest service history",
+        "viewport": 320,
+        "width": 320
+      },
+      "Pdp": {
+        "brokenVisibleImages": [],
+        "cards": [],
+        "header": null,
+        "height": 480,
+        "horizontalClips": [],
+        "languages": [],
+        "main": {
+          "bottom": 1021.953125,
+          "height": 2169.921875,
+          "left": 16,
+          "right": 304,
+          "top": -1147.96875,
+          "width": 288
+        },
+        "modal": {
+          "bottom": 480,
+          "height": 441.59375,
+          "left": 0,
+          "right": 320,
+          "top": 38.40625,
+          "width": 320
+        },
+        "path": "/en/cars/2024-toyota-fortuner-exr",
+        "purchase": {
+          "bottom": 480,
+          "buttons": [
+            {
+              "bottom": 422,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 409,
+                "height": 18,
+                "left": 103.34375,
+                "right": 121.34375,
+                "top": 391,
+                "width": 18
+              },
+              "left": 12,
+              "right": 308,
+              "text": "Saved",
+              "top": 378,
+              "width": 296
+            },
+            {
+              "bottom": 474,
+              "font": "28px",
+              "height": 44,
+              "icon": {
+                "bottom": 461,
+                "height": 18,
+                "left": 91.625,
+                "right": 109.625,
+                "top": 443,
+                "width": 18
+              },
+              "left": 12,
+              "right": 308,
+              "text": "Viewing",
+              "top": 430,
+              "width": 296
+            }
+          ],
+          "height": 109,
+          "left": 0,
+          "reserved": 125,
+          "right": 320,
+          "top": 371,
+          "width": 320
+        },
+        "scrollWidth": 320,
+        "title": {
+          "bottom": -1023.96875,
+          "height": 108,
+          "left": 16,
+          "right": 304,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "top": -1131.96875,
+          "width": 288
+        },
+        "width": 320
+      },
+      "RequestReachable": true
+    }
+  ],
+  "BrowserErrors": [],
+  "ServiceDraftContext": "passed",
+  "Viewing": "passed",
+  "TabTrap": "passed",
+  "RequestReachability": [
+    {
+      "action": {
+        "bottom": 456.40625,
+        "height": 156,
+        "left": 20,
+        "right": 300,
+        "top": 300.40625,
+        "width": 280,
+        "x": 20,
+        "y": 300.40625
+      },
+      "locale": "bg",
+      "reachable": true
+    },
+    {
+      "action": {
+        "bottom": 456.40625,
+        "height": 112,
+        "left": 20,
+        "right": 300,
+        "top": 344.40625,
+        "width": 280,
+        "x": 20,
+        "y": 344.40625
+      },
+      "locale": "en",
+      "reachable": true
+    }
+  ]
+}

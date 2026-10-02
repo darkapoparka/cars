@@ -7,13 +7,15 @@ import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
 import {useModal} from './useModal';
 import {media, tokens as $} from '@/app/tokens.stylex';
-function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
+export type DealerEnquiryIntent='enquiry'|'viewing'|'condition'|'service-history';
+function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
   const tx = useCopy(), locale = useLocale();
   const panel = useModal(open, onClose);
   const [message, setMessage] = useState(() => {
     const subject = vehicleTitle || (locale === 'bg' ? 'вашите автомобили' : 'your cars');
     const greeting = intent === 'viewing' ? (locale === 'bg' ? 'Здравейте, искам да уговоря оглед на ' : 'Hello, I would like to arrange a viewing of ') : (locale === 'bg' ? 'Здравейте, интересувам се от ' : 'Hello, I would like to enquire about ');
-    return greeting + subject + '.\n' + (typeof window === 'undefined' ? '' : window.location.href);
+    const request=intent==='condition'?tx('Please share the inspection report and current condition details.'):intent==='service-history'?tx('Please share the service history and supporting documents.'):'';
+    return greeting + subject + '.\n' + (request?request+'\n':'') + (typeof window === 'undefined' ? '' : window.location.href);
   });
   const [status, setStatus] = useState('');
   const mail = dealer.email ? `mailto:${dealer.email}?subject=${encodeURIComponent(vehicleTitle || dealer.name)}&body=${encodeURIComponent(message)}` : '';
@@ -36,7 +38,7 @@ function DealerEnquiryContent({open, onClose, vehicleTitle, intent = 'enquiry'}:
     </section>
   </div>;
 }
-export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: 'enquiry' | 'viewing'}) {
+export default function DealerEnquirySheet(props: {open: boolean; onClose: () => void; vehicleTitle?: string; intent?: DealerEnquiryIntent}) {
   const locale = useLocale();
   return props.open ? <DealerEnquiryContent key={locale + ':' + (props.vehicleTitle || '') + ':' + (props.intent || 'enquiry')} {...props}/> : null;
 }

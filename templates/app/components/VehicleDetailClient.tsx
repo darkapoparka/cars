@@ -6,14 +6,14 @@ import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {ArrowRight,Heart,Info,Layers2,Play,Share2,X,MessageCircle} from 'lucide-react';
+import {ArrowRight,CalendarDays,Heart,Info,Layers2,Play,Share2,X,MessageCircle} from 'lucide-react';
 import BackButton from '@/components/BackButton';
 import {CurrencyLabel} from '@/components/ReferenceUI';
 import {useInventoryBack} from '@/components/useInventoryHistory';
 import IconButton from '@/components/IconButton';
 import VehicleComparison from '@/components/VehicleComparison';
 import SimilarVehiclesSheet from '@/components/SimilarVehiclesSheet';
-import LoginSheet from '@/components/DealerEnquirySheet';
+import LoginSheet,{type DealerEnquiryIntent} from '@/components/DealerEnquirySheet';
 import VehicleBelowFold from '@/components/VehicleBelowFold';
 import VehicleDetailTabs from '@/components/VehicleDetailTabs';
 import VehiclePriceSheet from '@/components/DealerPriceSheet';
@@ -44,7 +44,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const [photo,setPhoto]=useState(0),[login,setLogin]=useState(false),[overlay,setOverlay]=useState<Overlay>(null),[shared,setShared]=useState(''),[scrolled,setScrolled]=useState(false),[activeSection,setActiveSection]=useState('price'),[swipe,setSwipe]=useState<number|null>(null);
  const [gallerySelection,setGallerySelection]=useState<{photos:GalleryPhoto[];index:number}|null>(null);
  const [informationVisible,setInformationVisible]=useState(true);
- const [enquiryIntent,setEnquiryIntent]=useState<'enquiry'|'viewing'>('enquiry');
+ const [enquiryIntent,setEnquiryIntent]=useState<DealerEnquiryIntent>('enquiry');
  const panel=useModal(overlay==='warranty',()=>setOverlay(null));
  const title=`${vehicle.year} ${vehicle.make.toUpperCase()} ${vehicle.model.toUpperCase()} ${vehicle.trim.split(' • ')[0]}`;
  const backToInventory=useInventoryBack();
@@ -69,7 +69,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  function nextPhoto(direction:number){setPhoto(current=>(current+direction+gallery.length)%gallery.length);}
  function endSwipe(event:TouchEvent){if(swipe!==null&&Math.abs(event.changedTouches[0].clientX-swipe)>40)nextPhoto(event.changedTouches[0].clientX<swipe?1:-1);setSwipe(null);}
  function openPhoto(selectedPhotos:GalleryPhoto[],index=0){setGallerySelection({photos:selectedPhotos,index});setOverlay('gallery');}
- function openEnquiry(intent:'enquiry'|'viewing'='enquiry'){setEnquiryIntent(intent);setLogin(true);}
+ function openEnquiry(intent:DealerEnquiryIntent='enquiry'){setEnquiryIntent(intent);setLogin(true);}
  function jump(id:string){const target=document.getElementById(id);if(target){const offset=innerWidth>=1100?144:68;window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}else if(id==='similar-cars'){setOverlay('similar');}}
  return <div {...stylex.props(s.screen)}>
   <div data-vehicle-gallery {...stylex.props(s.gallery)} onTouchStart={e=>setSwipe(e.touches[0].clientX)} onTouchEnd={endSwipe}>
@@ -83,13 +83,13 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
      <p {...stylex.props(s.price,vehicle.priceOnRequest&&s.requestPrice)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18}/>{tx(formatPrice(vehicle.price))}</>}</p>
      <IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/>
    </section>
-   <VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={()=>openEnquiry()}/></VehicleDetailTabs>
-  </main><aside {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary)}>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.saveAction,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
+   <VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={intent=>openEnquiry(intent)}/></VehicleDetailTabs>
+  </main><aside {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2><p {...stylex.props(s.desktopPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button></aside></div>
   {dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
   {scrolled&&informationVisible?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],['Car Condition','condition'],['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
   <div {...stylex.props(s.floating)}><button type="button" onClick={()=>openEnquiry()} aria-label={tx("Contact the dealer")} {...stylex.props(s.whatsapp)}><span {...stylex.props(s.whatsappInner)}><MessageCircle size={24}/></span></button></div>
   <div ref={purchaseSpace} aria-hidden="true" {...stylex.props(s.purchaseSpace)}/>
-  <footer ref={purchaseBar} {...stylex.props(s.purchase)}><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.mobileCta,s.mobileSecondary,s.saveAction)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'} {...stylex.props(s.saveIcon)}/><span>{tx(saved?'Vehicle saved':'Save vehicle')}</span></button><button type="button" onClick={()=>setOverlay('viewing')} aria-label={tx("Arrange a viewing")} {...stylex.props(s.primary,s.mobileCta)}><span {...stylex.props(s.mobileLabel)}>{tx("Viewing")}</span><span {...stylex.props(s.wideLabel)}>{tx("Arrange viewing")}</span></button></footer>
+  <footer ref={purchaseBar} {...stylex.props(s.purchase)}><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.mobileCta,s.mobileSecondary,s.actionWithIcon)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'} {...stylex.props(s.actionIcon)}/><span>{tx(saved?'Vehicle saved':'Save vehicle')}</span></button><button type="button" onClick={()=>setOverlay('viewing')} aria-label={tx("Arrange a viewing")} {...stylex.props(s.primary,s.mobileCta,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/><span {...stylex.props(s.mobileLabel)}>{tx("Viewing")}</span><span {...stylex.props(s.wideLabel)}>{tx("Arrange viewing")}</span></button></footer>
   {message?<div role={saveError?'alert':'status'} {...stylex.props(s.toast)}><span {...stylex.props(s.toastText)}>{tx(message)}</span><button type="button" aria-label={tx("Dismiss message")} onClick={()=>{setShared('');clearError();}} {...stylex.props(s.toastClose)}><X size={17}/></button></div>:null}
   {overlay==='price'?<VehiclePriceSheet vehicle={vehicle} convenienceFee={fee} onClose={()=>setOverlay(null)} onEligibility={()=>{setOverlay(null);openEnquiry();}}/>:null}
   {overlay==='viewing'?<VehicleViewingSheet vehicleTitle={title} onClose={()=>setOverlay(null)} onRequest={()=>{setOverlay(null);openEnquiry('viewing');}}/>:null}
@@ -132,8 +132,8 @@ desktopPrice:{marginTop:20,fontSize:25,fontWeight:600},
 floating:{display:{[media.mobile]:'none',default:'flex'},flexDirection:'column',gap:16,position:'fixed',right:22,bottom:110,zIndex:55},
 whatsapp:{display:'grid',placeItems:'center',width:44,height:44,padding:0,color:'#fff',borderColor:'#262629',borderStyle:'solid',borderWidth:1,borderRadius:'50%',backgroundColor:'#fff',cursor:'pointer'},
 whatsappInner:{display:'grid',placeItems:'center',width:30,height:30,borderRadius:'50%',backgroundColor:'#262629'},
-saveAction:{gap:7},
-saveIcon:{flexShrink:0},
+actionWithIcon:{gap:7},
+actionIcon:{flexShrink:0},
 purchaseSpace:{display:{[media.desktop]:'none',default:'block'},height:'calc(72px + env(safe-area-inset-bottom))'},
 purchase:{display:{[media.desktop]:'none',default:'flex'},flexWrap:'wrap',gap:8,position:'fixed',left:0,right:0,bottom:0,zIndex:80,minHeight:{[media.mobile]:52,default:60},padding:{[media.mobile]:'6px 12px calc(6px + env(safe-area-inset-bottom))',default:'8px 18px calc(8px + env(safe-area-inset-bottom))'},borderTopColor:$.line,borderTopStyle:'solid',borderTopWidth:1,backgroundColor:$.surface},
 mobileCta:{flex:'1 1 0',minWidth:'max-content',maxWidth:'100%',minHeight:$.controlHeight,fontSize:$.controlFontSize,lineHeight:$.controlLineHeight,whiteSpace:'normal',borderRadius:$.radiusSm},
