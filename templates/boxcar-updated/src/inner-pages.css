@@ -184,9 +184,8 @@
 }
 .bc-benefit-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 44px 64px;
-  max-width: 960px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
   margin-inline: auto;
 }
 .bc-benefit-grid .inner-box {
@@ -211,8 +210,9 @@
   line-height: 28px;
 }
 .bc-benefit-grid p {
-  max-width: 360px;
+  max-width: 280px;
   margin: 0 auto;
+  text-wrap: balance;
 }
 .bc-about-cta {
   background: #eef1fb;

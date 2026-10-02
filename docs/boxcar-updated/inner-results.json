@@ -231,7 +231,7 @@
   "sourceHashes": [
     {
       "file": "templates/boxcar-updated/src/pages/About.svelte",
-      "sha256": "875f4e695f659602204b44e30c450a35f48d29af7737e215a74c295e4e9f50c7"
+      "sha256": "1dc0f23c5acba6da47a356f6f89c96b37c1c6417e997c792d158552f851cebc0"
     },
     {
       "file": "templates/boxcar-updated/src/pages/Contact.svelte",
@@ -267,7 +267,7 @@
     },
     {
       "file": "templates/boxcar-updated/src/inner-pages.css",
-      "sha256": "6ea289dbcc87000c83029d69cc32f7cf9ddb1cefe51cb6edeb5e7de3a752b9b7"
+      "sha256": "9dcf022d5d8d98f13f9fc9020e9e3917c9797c19019b9c3ef9cefec578439204"
     },
     {
       "file": "templates/boxcar-updated/src/components/SocialLinks.svelte",
@@ -281,7 +281,7 @@
   "screenshots": [
     {
       "file": "docs/boxcar-updated/about-desktop.png",
-      "sha256": "ea0d010de71bdf3a193a7e9188e1b0486f93531d60497a4ddcee7812509f2c44"
+      "sha256": "f170ecb6380c443f6a7dc3908e1217d57ad468ab6f31918c188978907895b2bc"
     },
     {
       "file": "docs/boxcar-updated/contact-desktop.png",
@@ -313,11 +313,11 @@
     },
     {
       "file": "docs/boxcar-updated/about-benefits.png",
-      "sha256": "8472e73f4c294c698589df802389bbfe0bb92eb43ccca191fccf15588c4f3eab"
+      "sha256": "6bf2ec5cf3ebc5d7b0ae19f1d796a4d35c38d2571ff0340c7ea119dd1fe44a95"
     },
     {
       "file": "docs/boxcar-updated/about-benefits-320.png",
-      "sha256": "2b5c16fb2f365dcc4f5c149ed183a07e522eea35ed5090ab631829fd5775873c"
+      "sha256": "a0305511a4670a0777cfcef065b2cda398a571c58288afd3b5552fa4c15e3caf"
     }
   ],
   "provenance": "templates/boxcar-updated/.template/inner-pages.json",
@@ -885,6 +885,276 @@
         "errors": [],
         "posts": [],
         "mapVerification": "Configured branch uses an isolated local frame and browser-only dealer fixture. No real dealer address/profile or third-party map availability was verified."
+      }
+    }
+  },
+  "benefitTextCorrection": {
+    "recordedAt": "2026-10-02T13:29:37.146Z",
+    "scope": "Restore four benefits in one desktop row. Two lines refer to the description text. Tablet and phone layouts remain responsive; prior Contact and broader checks retain their timestamps.",
+    "checks": {
+      "svelte": {
+        "errors": 0,
+        "warnings": 0
+      },
+      "productionBuild": {
+        "status": "passed",
+        "modules": 158
+      }
+    },
+    "engines": {
+      "chromium": {
+        "checkedAt": "2026-10-02T13:27:34.234Z",
+        "engine": "chromium",
+        "layouts": [
+          {
+            "width": 1440,
+            "documentWidth": 1440,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1074,
+              1074,
+              1074,
+              1074
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 1280,
+            "documentWidth": 1280,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1074,
+              1074,
+              1074,
+              1074
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 1024,
+            "documentWidth": 1024,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1014,
+              1014,
+              1014,
+              1014
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 768,
+            "documentWidth": 768,
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1014,
+              1014,
+              1226,
+              1226
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 390,
+            "documentWidth": 390,
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1000,
+              1116,
+              1232,
+              1348
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 320,
+            "documentWidth": 320,
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              966,
+              1082,
+              1198,
+              1314
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          }
+        ],
+        "errors": []
+      },
+      "webkit": {
+        "checkedAt": "2026-10-02T13:27:39.918Z",
+        "engine": "webkit",
+        "layouts": [
+          {
+            "width": 1440,
+            "documentWidth": 1440,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1074,
+              1074,
+              1074,
+              1074
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 1280,
+            "documentWidth": 1280,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1074,
+              1074,
+              1074,
+              1074
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 1024,
+            "documentWidth": 1024,
+            "columns": 4,
+            "rows": 1,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1014,
+              1014,
+              1014,
+              1014
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 768,
+            "documentWidth": 768,
+            "columns": 2,
+            "rows": 2,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1014,
+              1014,
+              1226,
+              1226
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 390,
+            "documentWidth": 390,
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              1000,
+              1116,
+              1232,
+              1348
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          },
+          {
+            "width": 320,
+            "documentWidth": 320,
+            "columns": 1,
+            "rows": 4,
+            "descriptionLines": [
+              2,
+              2,
+              2,
+              2
+            ],
+            "descriptionY": [
+              966,
+              1082,
+              1198,
+              1314
+            ],
+            "brokenImages": [],
+            "clippedCards": 0
+          }
+        ],
+        "errors": []
       }
     }
   }
