@@ -1,0 +1,53 @@
+{
+  "status": "passed",
+  "evidenceLevel": "Reconstructed historical summary",
+  "originalVerificationDate": "2026-10-02",
+  "reconstructedAt": "2026-10-02T17:57:29.819Z",
+  "note": "The later copy/navigation verifier accidentally overwrote the original detailed JSON. Its complete passed result has been preserved as copy-navigation-results.json. This historical summary records facts confirmed by the original tool output, COMPACT-PDP.md, original screenshots and retained pre-cleanup source files; original per-route measurements are no longer available.",
+  "base": "http://127.0.0.1:6455",
+  "summary": {
+    "layouts": 26,
+    "catalogue": 68,
+    "galleries": 4,
+    "journeys": 4,
+    "errors": 0
+  },
+  "engines": [
+    "chromium",
+    "webkit"
+  ],
+  "widths": [
+    1440,
+    1024,
+    768,
+    390,
+    320
+  ],
+  "largeText": {
+    "width": 320,
+    "rootTextPercent": 200
+  },
+  "measuredHeading": {
+    "engine": "chromium",
+    "width": 1440,
+    "cardWidth": 928,
+    "defaultHeight": 116.69,
+    "selectedHeight": 116.69
+  },
+  "sourceHashes": {
+    "src/pages/VehicleDetail.svelte": "b98f6e5ceca888decfd657d24bcafe5d82a1ebaa57063ba8794aa12c2eead63e",
+    "src/styles.css": "1036a48dbd3d7e43228580f4e73c04e3e7a5e6aa13c82c378e99ccd643718923",
+    "src/inner-pages.css": "4de1c229636e61f8313ca471e70a47ee1df65fc7ea53ce41f78c76d207ce19f4",
+    "src/components/Header.svelte": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5",
+    "src/pages/Contact.svelte": "01c18ffad910dfcc78bde5697890df588c36f960d2722efa055b8b039fa5f227",
+    "src/pages/About.svelte": "1dc0f23c5acba6da47a356f6f89c96b37c1c6417e997c792d158552f851cebc0"
+  },
+  "evidence": [
+    "COMPACT-PDP.md",
+    "pdp-compact-1440.png",
+    "pdp-compact-320.png",
+    "pdp-thumbnails-1440.png",
+    "pdp-thumbnails-320.png"
+  ],
+  "latestDetailedReceipt": "copy-navigation-results.json"
+}

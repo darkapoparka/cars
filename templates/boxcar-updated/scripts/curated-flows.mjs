@@ -67,7 +67,7 @@ try {
     for (const width of [1440, 1024, 768, 390, 320]) {
       await home(width);
       // Exercise lazy sections as a visitor scrolls, after the page is already ready.
-      for (const section of [".curated-stock", ".curated-journal"]) {
+      for (const section of [".curated-stock", ".curated-services", ".curated-journal"]) {
         await page.locator(section).scrollIntoViewIfNeeded();
         await page.waitForFunction(
           (selector) =>
@@ -743,7 +743,7 @@ try {
     },
   );
   await step(
-    "Aligned button icons and four source service cards at desktop, tablet and phone widths",
+    "Aligned button icons and four service cards at desktop, tablet and phone widths",
     async () => {
       for (const width of [1440, 1024, 768, 390, 320, 304]) {
         await home(width);

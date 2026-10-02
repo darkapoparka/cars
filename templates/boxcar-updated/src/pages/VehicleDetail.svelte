@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { brand } from "../data/brand";
   import { showDialog } from "../lib/dialog";
   import { type Vehicle, money, number, vehicles } from "../lib/catalog";
   import { safeReturn } from "../lib/domain";
@@ -12,6 +11,7 @@
   import EnquiryForm from "../components/EnquiryForm.svelte";
   import LoanCalculator from "../components/LoanCalculator.svelte";
   import VehicleCard from "../components/VehicleCard.svelte";
+  import ShowroomCard from "../components/ShowroomCard.svelte";
   import Icon from "../components/Icon.svelte";
   let { vehicle }: { vehicle: Vehicle } = $props();
   let photo = $state(0),
@@ -62,50 +62,51 @@
 
 <div class="page-shell detail-page">
   <div class="container">
-    <div class="breadcrumbs">
-      <a href={back}>
-        Back to {back.startsWith("/favorites")
-          ? "saved cars"
-          : back.startsWith("/home") || back === "/"
-            ? "home"
-            : "results"}
+    <nav class="detail-navigation" aria-label="Vehicle navigation">
+      <a class="detail-back" href={back}>
+        <Icon name="left" size={18} />
+        <span>
+          Back to {back.startsWith("/favorites")
+            ? "saved cars"
+            : back.startsWith("/home") || back === "/"
+              ? "home"
+              : "results"}
+        </span>
       </a>
-      <Icon name="right" size={13} />
-      <span>{vehicle.title}</span>
-    </div>
-    <div class="detail-heading">
-      <div>
-        <h1>{vehicle.title}</h1>
-        <p>
-          {vehicle.year} · {vehicle.engine}L · {vehicle.transmission} · {vehicle.condition}
-        </p>
-      </div>
-      <div class="detail-actions">
-        <button
-          class="button outline"
-          aria-pressed={selections.favorites.includes(vehicle.id)}
-          onclick={() => toggleFavorite(vehicle.id)}
-        >
-          <Icon name="bookmark" size={18} />{selections.favorites.includes(
-            vehicle.id,
-          )
-            ? "Saved"
-            : "Save car"}
-        </button>
-        <button
-          class="button outline"
-          aria-pressed={selections.compare.includes(vehicle.id)}
-          onclick={() => toggleCompare(vehicle.id)}
-        >
-          <Icon name="compare" size={18} />{selections.compare.includes(
-            vehicle.id,
-          )
-            ? "Remove comparison"
-            : "Compare"}
-        </button>
-      </div>
-    </div>
+    </nav>
     <div class="detail-layout">
+      <header class="detail-heading">
+        <div>
+          <h1>{vehicle.title}</h1>
+          <p>
+            {vehicle.year} · {vehicle.engine}L · {vehicle.transmission} · {vehicle.condition}
+          </p>
+        </div>
+        <div class="detail-actions">
+          <button
+            class="button outline"
+            aria-pressed={selections.favorites.includes(vehicle.id)}
+            onclick={() => toggleFavorite(vehicle.id)}
+          >
+            <Icon name="bookmark" size={18} />
+            <span>
+              {selections.favorites.includes(vehicle.id) ? "Saved" : "Save car"}
+            </span>
+          </button>
+          <button
+            class="button outline"
+            aria-pressed={selections.compare.includes(vehicle.id)}
+            onclick={() => toggleCompare(vehicle.id)}
+          >
+            <Icon name="compare" size={18} />
+            <span>
+              {selections.compare.includes(vehicle.id)
+                ? "Remove comparison"
+                : "Compare"}
+            </span>
+          </button>
+        </div>
+      </header>
       <div class="detail-main">
         <div class="vehicle-gallery">
           <button
@@ -156,7 +157,6 @@
               </button>{/each}
           </div>
         </div>
-        <p class="sample-note">Model photo previews · sample specifications</p>
         <section class="detail-section">
           <h2>Car Overview</h2>
           <dl class="overview-grid">
@@ -170,13 +170,12 @@
           <h2>Description</h2>
           <p>
             Explore this {vehicle.year}
-            {vehicle.title} in our sample inventory. The overview brings the key specifications
-            together so you can compare it with the other cars on your shortlist.
+            {vehicle.title}. Review its key specifications and compare it with
+            the other cars on your shortlist.
           </p>
           <p>
-            Before buying a vehicle, confirm its specification, condition,
-            service record and availability with the seller. These listings
-            demonstrate the browsing experience.
+            Contact the showroom for more information about its specification,
+            condition, service history or availability.
           </p>
         </section>
         <section class="detail-section">
@@ -187,36 +186,38 @@
               </li>{/each}
           </ul>
         </section>
+        <div class="mobile-showroom">
+          <ShowroomCard />
+        </div>
         <details class="detail-finance">
           <summary>Finance estimate <Icon name="chevron" size={18} /></summary>
           <LoanCalculator startPrice={vehicle.price} />
         </details>
       </div>
       <aside class="detail-sidebar">
-        <div class="price-panel">
-          {#if vehicle.badge}<span class="vehicle-badge">
-              {vehicle.badge}
-            </span>{/if}
-          <strong>{money(vehicle.price)}</strong>
-          <p class="sample-note">Sample listing · demo enquiry</p>
-          <button
-            class="button"
-            onclick={(event) => showDialog(enquiry, event)}
-          >
-            Enquire about this car <Icon name="arrow" size={16} />
-          </button>
-          <a
-            class="button outline"
-            href={`/calculator/?price=${vehicle.price}`}
-          >
-            Calculate repayments <Icon name="arrow" size={16} />
-          </a>
-          <div class="seller-info">
-            <h3>{brand.name} Showroom</h3>
-            <p>Explore the vehicle and prepare your questions for a viewing.</p>
-            <a href="/contact/">
-              Contact & visiting information <Icon name="arrow" size={14} />
+        <div class="detail-sidebar-stack">
+          <div class="price-panel">
+            {#if vehicle.badge}<span class="vehicle-badge">
+                {vehicle.badge}
+              </span>{/if}
+            <strong>{money(vehicle.price)}</strong>
+            <button
+              class="button"
+              onclick={(event) => showDialog(enquiry, event)}
+            >
+              <span>Enquire about this car</span>
+              <Icon name="arrow" size={20} />
+            </button>
+            <a
+              class="button outline"
+              href={`/calculator/?price=${vehicle.price}`}
+            >
+              <span>Calculate repayments</span>
+              <Icon name="arrow" size={20} />
             </a>
+          </div>
+          <div class="seller-info">
+            <ShowroomCard />
           </div>
         </div>
       </aside>

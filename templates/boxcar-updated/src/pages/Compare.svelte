@@ -50,7 +50,7 @@
       >
         <table class="comparison-table">
           <caption class="sr-only">
-            Compare {selected.length} selected sample vehicles
+            Compare {selected.length} selected vehicles
           </caption>
           <thead>
             <tr>
@@ -92,10 +92,7 @@
           </tbody>
         </table>
       </div>
-      <p class="fine-print">
-        Sample specifications. Confirm the details with the seller before
-        buying.
-      </p>{:else}<div class="empty-state">
+    {:else}<div class="empty-state">
         <Icon name="compare" size={48} />
         <h2>Build your comparison</h2>
         <p>Select Compare on a car to add it here.</p>

@@ -1,0 +1,687 @@
+{
+  "checkedAt": "2026-10-02T16:19:52.021Z",
+  "routes": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "bmw-8-series",
+      "title": "BMW 8 Series",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "mercedes-glc",
+      "title": "Bentley Bentayga — Silver",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "bentley-bentayga-bronze",
+      "title": "Bentley Bentayga — Bronze",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "nissan-qashqai",
+      "title": "Nissan Qashqai",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "bentley-bentayga-amber",
+      "title": "Bentley Bentayga — Amber",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "range-rover-blue",
+      "title": "Range Rover — Blue",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "audi-a8",
+      "title": "Audi A8",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "volvo-xc90-grey",
+      "title": "Volvo XC90 — Grey",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "audi-a5-cabriolet",
+      "title": "Audi A5 Cabriolet",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "range-rover-evoque",
+      "title": "Range Rover Evoque",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "mini-cooper",
+      "title": "MINI Cooper",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "bentley-bentayga-blue",
+      "title": "Bentley Bentayga — Blue",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "mercedes-s-class",
+      "title": "Mercedes-Benz S-Class",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "porsche-cayenne",
+      "title": "Porsche Cayenne",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "range-rover-ocean",
+      "title": "Range Rover — Ocean",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "mercedes-e-class",
+      "title": "Mercedes-Benz E-Class",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "slug": "volvo-xc90-recharge",
+      "title": "Volvo XC90 Recharge",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "bmw-8-series",
+      "title": "BMW 8 Series",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "mercedes-glc",
+      "title": "Bentley Bentayga — Silver",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "bentley-bentayga-bronze",
+      "title": "Bentley Bentayga — Bronze",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "nissan-qashqai",
+      "title": "Nissan Qashqai",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "bentley-bentayga-amber",
+      "title": "Bentley Bentayga — Amber",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "range-rover-blue",
+      "title": "Range Rover — Blue",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "audi-a8",
+      "title": "Audi A8",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "volvo-xc90-grey",
+      "title": "Volvo XC90 — Grey",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "audi-a5-cabriolet",
+      "title": "Audi A5 Cabriolet",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "range-rover-evoque",
+      "title": "Range Rover Evoque",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "mini-cooper",
+      "title": "MINI Cooper",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "bentley-bentayga-blue",
+      "title": "Bentley Bentayga — Blue",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "mercedes-s-class",
+      "title": "Mercedes-Benz S-Class",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "porsche-cayenne",
+      "title": "Porsche Cayenne",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "range-rover-ocean",
+      "title": "Range Rover — Ocean",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "mercedes-e-class",
+      "title": "Mercedes-Benz E-Class",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "slug": "volvo-xc90-recharge",
+      "title": "Volvo XC90 Recharge",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "bmw-8-series",
+      "title": "BMW 8 Series",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "mercedes-glc",
+      "title": "Bentley Bentayga — Silver",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "bentley-bentayga-bronze",
+      "title": "Bentley Bentayga — Bronze",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "nissan-qashqai",
+      "title": "Nissan Qashqai",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "bentley-bentayga-amber",
+      "title": "Bentley Bentayga — Amber",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "range-rover-blue",
+      "title": "Range Rover — Blue",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "audi-a8",
+      "title": "Audi A8",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "volvo-xc90-grey",
+      "title": "Volvo XC90 — Grey",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "audi-a5-cabriolet",
+      "title": "Audi A5 Cabriolet",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "range-rover-evoque",
+      "title": "Range Rover Evoque",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "mini-cooper",
+      "title": "MINI Cooper",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "bentley-bentayga-blue",
+      "title": "Bentley Bentayga — Blue",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "mercedes-s-class",
+      "title": "Mercedes-Benz S-Class",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "porsche-cayenne",
+      "title": "Porsche Cayenne",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "range-rover-ocean",
+      "title": "Range Rover — Ocean",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "mercedes-e-class",
+      "title": "Mercedes-Benz E-Class",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "slug": "volvo-xc90-recharge",
+      "title": "Volvo XC90 Recharge",
+      "documentWidth": 1440,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "bmw-8-series",
+      "title": "BMW 8 Series",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "mercedes-glc",
+      "title": "Bentley Bentayga — Silver",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "bentley-bentayga-bronze",
+      "title": "Bentley Bentayga — Bronze",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "nissan-qashqai",
+      "title": "Nissan Qashqai",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "bentley-bentayga-amber",
+      "title": "Bentley Bentayga — Amber",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "range-rover-blue",
+      "title": "Range Rover — Blue",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "audi-a8",
+      "title": "Audi A8",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "volvo-xc90-grey",
+      "title": "Volvo XC90 — Grey",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "audi-a5-cabriolet",
+      "title": "Audi A5 Cabriolet",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "range-rover-evoque",
+      "title": "Range Rover Evoque",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "mini-cooper",
+      "title": "MINI Cooper",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "bentley-bentayga-blue",
+      "title": "Bentley Bentayga — Blue",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "mercedes-s-class",
+      "title": "Mercedes-Benz S-Class",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "porsche-cayenne",
+      "title": "Porsche Cayenne",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "range-rover-ocean",
+      "title": "Range Rover — Ocean",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "mercedes-e-class",
+      "title": "Mercedes-Benz E-Class",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "slug": "volvo-xc90-recharge",
+      "title": "Volvo XC90 Recharge",
+      "documentWidth": 320,
+      "showrooms": 1,
+      "clipped": [],
+      "overlay": false
+    }
+  ],
+  "errors": [],
+  "status": "passed"
+}

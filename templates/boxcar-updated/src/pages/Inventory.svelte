@@ -16,7 +16,8 @@
   let draft = $state<Filters>({ ...emptyFilters }),
     error = $state(""),
     rows = $state(new URLSearchParams(route.search).get("view") === "rows");
-  let filterOpen = $state(window.innerWidth >= 1000);
+  let desktopFilters = window.innerWidth >= 1000;
+  let filterOpen = $state(desktopFilters);
   let available = $derived(
     savedOnly
       ? vehicles.filter((v) => selections.favorites.includes(v.id))
@@ -45,6 +46,13 @@
     error = "";
     rows = new URLSearchParams(route.search).get("view") === "rows";
   });
+  function resizeFilters() {
+    const desktop = window.innerWidth >= 1000;
+    if (desktop !== desktopFilters) {
+      filterOpen = desktop;
+      desktopFilters = desktop;
+    }
+  }
   function update(next: Partial<Filters>, view = rows) {
     const query = new URLSearchParams(filterQuery({ ...filters, ...next }));
     if (view) query.set("view", "rows");
@@ -64,12 +72,15 @@
   }
 </script>
 
+<svelte:window onresize={resizeFilters} />
+
 <div class="page-shell inventory-page bc-inner">
   <div class="container">
-    <div class="breadcrumbs">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="/">Home</a>
-      <span>/{savedOnly ? " Saved cars" : " Inventory"}</span>
-    </div>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">{savedOnly ? "Saved cars" : "Inventory"}</span>
+    </nav>
     <div class="page-heading">
       <div>
         <h1>{savedOnly ? "Your Saved Cars" : "Cars for sale"}</h1>
@@ -101,7 +112,7 @@
             <label>
               Condition
               <select aria-label="Condition" bind:value={draft.condition}>
-                <option value="">Any Condition</option>
+                <option value="">Any</option>
                 <option>New</option>
                 <option>Used</option>
               </select>
@@ -113,35 +124,35 @@
                 bind:value={draft.make}
                 onchange={() => (draft.model = "")}
               >
-                <option value="">Any Makes</option>
+                <option value="">Any</option>
                 {#each makes as make}<option>{make}</option>{/each}
               </select>
             </label>
             <label>
               Model
               <select aria-label="Model" bind:value={draft.model}>
-                <option value="">Any Models</option>
+                <option value="">Any</option>
                 {#each models as model}<option>{model}</option>{/each}
               </select>
             </label>
             <label>
               Body type
               <select aria-label="Body type" bind:value={draft.body}>
-                <option value="">Any Body</option>
+                <option value="">Any</option>
                 {#each bodies as body}<option>{body}</option>{/each}
               </select>
             </label>
             <label>
               Fuel type
               <select aria-label="Fuel type" bind:value={draft.fuel}>
-                <option value="">Any Fuel</option>
+                <option value="">Any</option>
                 {#each fuels as fuel}<option>{fuel}</option>{/each}
               </select>
             </label>
             <label>
               Year from
               <select aria-label="Year from" bind:value={draft.year}>
-                <option value="">Any Year</option>
+                <option value="">Any</option>
                 {#each [...new Set(vehicles.map((v) => v.year))].sort((a, b) => b - a) as year}<option
                     value={year}
                   >
@@ -187,7 +198,6 @@
             {results.length
               ? `Showing ${(page - 1) * 9 + 1}–${Math.min(page * 9, results.length)} of ${number(results.length)} cars`
               : "No matching cars"}
-            <span class="inventory-note">Sample inventory</span>
           </p>
           <div>
             <label class="sort-label">
@@ -199,10 +209,10 @@
                   update({ sort: e.currentTarget.value, page: 1 })}
               >
                 <option value="recommended">Recommended</option>
-                <option value="price-low">Price: low to high</option>
-                <option value="price-high">Price: high to low</option>
-                <option value="newest">Year: newest first</option>
-                <option value="mileage">Mileage: lowest first</option>
+                <option value="price-low">Lowest price</option>
+                <option value="price-high">Highest price</option>
+                <option value="newest">Newest first</option>
+                <option value="mileage">Lowest mileage</option>
               </select>
             </label>
             <div class="view-toggle" aria-label="Inventory view">

@@ -1,0 +1,1178 @@
+{
+  "checkedAt": "2026-10-02T14:32:28.414Z",
+  "base": "http://127.0.0.1:6455",
+  "sourceHashes": {
+    "src/reference/CuratedHome.svelte": "f8a19397792ef9ae1e3f6c3ba833af6f74bf32698e37b7b5316a723fd8fc8077",
+    "src/reference/CuratedServices.svelte": "a2dc17872465b7d666582e8c9cda4fd72f3b19efe2305640af14dc6d57e7ab19",
+    "public/reference/curated.css": "e0b945decc31839c8f5d8abb04d3f1dd681ed95b983659e0b8f278dc532be5f8",
+    "public/media/services/boxcar-browse-v1.webp": "86eb4da0d3a26bc5a6b2cbaa486c1771f1792dae63e6dd31cadd02667fdcccae",
+    "public/media/services/boxcar-sell-v1.webp": "15fdd070272fe07c63e1235fc52b1091bb1cc106003d9954c414cf30076c55c5",
+    "public/media/services/boxcar-compare-v1.webp": "09f4d8c44d25ac564f2595c50fa706f5d02eb0a4590940124a4f2baacbc87388",
+    "public/media/services/boxcar-budget-v1.webp": "45265b95baed9abfa0082387c4828989c33149c88bc0777428fb55b93e60bb27"
+  },
+  "assets": [
+    {
+      "key": "browse",
+      "output": "public/media/services/boxcar-browse-v1.webp",
+      "width": 720,
+      "height": 405,
+      "bytes": 49552,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "86eb4da0d3a26bc5a6b2cbaa486c1771f1792dae63e6dd31cadd02667fdcccae",
+      "crop": {
+        "left": 11,
+        "top": 284,
+        "width": 1518,
+        "height": 484
+      }
+    },
+    {
+      "key": "sell",
+      "output": "public/media/services/boxcar-sell-v1.webp",
+      "width": 720,
+      "height": 405,
+      "bytes": 64730,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "15fdd070272fe07c63e1235fc52b1091bb1cc106003d9954c414cf30076c55c5",
+      "crop": {
+        "left": 72,
+        "top": 194,
+        "width": 1373,
+        "height": 721
+      }
+    },
+    {
+      "key": "compare",
+      "output": "public/media/services/boxcar-compare-v1.webp",
+      "width": 720,
+      "height": 405,
+      "bytes": 44998,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "09f4d8c44d25ac564f2595c50fa706f5d02eb0a4590940124a4f2baacbc87388",
+      "crop": {
+        "left": 9,
+        "top": 321,
+        "width": 1520,
+        "height": 460
+      }
+    },
+    {
+      "key": "budget",
+      "output": "public/media/services/boxcar-budget-v1.webp",
+      "width": 720,
+      "height": 405,
+      "bytes": 63118,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255,
+      "sha256": "45265b95baed9abfa0082387c4828989c33149c88bc0777428fb55b93e60bb27",
+      "crop": {
+        "left": 31,
+        "top": 245,
+        "width": 1478,
+        "height": 661
+      }
+    }
+  ],
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 24,
+            "right": 354,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 48,
+            "right": 330,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 59,
+            "right": 319,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 74,
+            "right": 304,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 378,
+            "right": 708,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 402,
+            "right": 684,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 413,
+            "right": 673,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 428,
+            "right": 658,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 732,
+            "right": 1062,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 756,
+            "right": 1038,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 767,
+            "right": 1027,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 782,
+            "right": 1012,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 1086,
+            "right": 1416,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 1110,
+            "right": 1392,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 1121,
+            "right": 1381,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 1136,
+            "right": 1366,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": -380,
+            "bottom": 18,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": -352,
+            "bottom": -200,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": -132,
+            "bottom": -84,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": -60,
+            "bottom": -10,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 59,
+            "bottom": 457,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 87,
+            "bottom": 239,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 307,
+            "bottom": 355,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 379,
+            "bottom": 429,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 498,
+            "bottom": 896,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 526,
+            "bottom": 678,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 746,
+            "bottom": 794,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 818,
+            "bottom": 868,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 937,
+            "bottom": 1335,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 965,
+            "bottom": 1117,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 1185,
+            "bottom": 1233,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 1257,
+            "bottom": 1307,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "client": 320,
+      "scroll": 320,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": -379.5,
+            "bottom": 18.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": -351.5,
+            "bottom": -199.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": -131.5,
+            "bottom": -83.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": -59.5,
+            "bottom": -9.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 59.5,
+            "bottom": 457.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 87.5,
+            "bottom": 239.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 307.5,
+            "bottom": 355.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 379.5,
+            "bottom": 429.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 498.5,
+            "bottom": 896.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 526.5,
+            "bottom": 678.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 746.5,
+            "bottom": 794.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 818.5,
+            "bottom": 868.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 937.5,
+            "bottom": 1335.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 965.5,
+            "bottom": 1117.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 1185.5,
+            "bottom": 1233.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 1257.5,
+            "bottom": 1307.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "client": 1440,
+      "scroll": 1440,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 24,
+            "right": 354,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 48,
+            "right": 330,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 59,
+            "right": 319,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 74,
+            "right": 304,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 378,
+            "right": 708,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 402,
+            "right": 684,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 413,
+            "right": 673,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 428,
+            "right": 658,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 732,
+            "right": 1062,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 756,
+            "right": 1038,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 767,
+            "right": 1027,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 782,
+            "right": 1012,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 1086,
+            "right": 1416,
+            "top": 294.65625,
+            "bottom": 692.65625,
+            "width": 330,
+            "height": 398
+          },
+          "art": {
+            "left": 1110,
+            "right": 1392,
+            "top": 318.65625,
+            "bottom": 470.65625,
+            "width": 282,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 1121,
+            "right": 1381,
+            "top": 538.65625,
+            "bottom": 586.65625,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 1136,
+            "right": 1366,
+            "top": 610.65625,
+            "bottom": 660.65625,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "client": 390,
+      "scroll": 390,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": -380,
+            "bottom": 18,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": -352,
+            "bottom": -200,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": -132,
+            "bottom": -84,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": -60,
+            "bottom": -10,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 59,
+            "bottom": 457,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 87,
+            "bottom": 239,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 307,
+            "bottom": 355,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 379,
+            "bottom": 429,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 498,
+            "bottom": 896,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 526,
+            "bottom": 678,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 746,
+            "bottom": 794,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 818,
+            "bottom": 868,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 14,
+            "right": 376,
+            "top": 937,
+            "bottom": 1335,
+            "width": 362,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 352,
+            "top": 965,
+            "bottom": 1117,
+            "width": 314,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 65,
+            "right": 325,
+            "top": 1185,
+            "bottom": 1233,
+            "width": 260,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 80,
+            "right": 310,
+            "top": 1257,
+            "bottom": 1307,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "client": 320,
+      "scroll": 320,
+      "cards": [
+        {
+          "key": "browse",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": -379.5,
+            "bottom": 18.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": -351.5,
+            "bottom": -199.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": -131.5,
+            "bottom": -83.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": -59.5,
+            "bottom": -9.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/inventory/"
+        },
+        {
+          "key": "sell",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 59.5,
+            "bottom": 457.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 87.5,
+            "bottom": 239.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 307.5,
+            "bottom": 355.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 379.5,
+            "bottom": 429.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/contact/?intent=sell"
+        },
+        {
+          "key": "compare",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 498.5,
+            "bottom": 896.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 526.5,
+            "bottom": 678.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 746.5,
+            "bottom": 794.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 818.5,
+            "bottom": 868.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/compare/"
+        },
+        {
+          "key": "budget",
+          "card": {
+            "left": 14,
+            "right": 306,
+            "top": 937.5,
+            "bottom": 1335.5,
+            "width": 292,
+            "height": 398
+          },
+          "art": {
+            "left": 38,
+            "right": 282,
+            "top": 965.5,
+            "bottom": 1117.5,
+            "width": 244,
+            "height": 152
+          },
+          "image": {
+            "complete": true,
+            "width": 720,
+            "height": 405,
+            "fit": "contain"
+          },
+          "text": {
+            "left": 38,
+            "right": 282,
+            "top": 1185.5,
+            "bottom": 1233.5,
+            "width": 244,
+            "height": 48
+          },
+          "textLineHeight": 24,
+          "button": {
+            "left": 45,
+            "right": 275,
+            "top": 1257.5,
+            "bottom": 1307.5,
+            "width": 230,
+            "height": 50
+          },
+          "href": "/calculator/"
+        }
+      ]
+    }
+  ],
+  "curatedJourneys": {
+    "chromium": {
+      "checkedAt": "2026-10-02T14:26:30.383Z",
+      "passed": 12,
+      "errors": []
+    },
+    "webkit": {
+      "checkedAt": "2026-10-02T14:29:43.702Z",
+      "passed": 12,
+      "errors": []
+    }
+  },
+  "errors": []
+}

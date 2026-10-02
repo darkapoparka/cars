@@ -1,0 +1,2912 @@
+{
+  "checkedAt": "2026-10-02T16:17:27.163Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "visibleCards": 1,
+      "card": {
+        "x": 1054,
+        "y": 691.046875,
+        "width": 292,
+        "height": 309.34375,
+        "right": 1346,
+        "bottom": 1000.390625
+      },
+      "image": {
+        "x": 1054,
+        "y": 691.046875,
+        "width": 292,
+        "height": 164.25,
+        "right": 1346,
+        "bottom": 855.296875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 1030,
+        "y": 312.359375,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 643.046875
+      },
+      "gallery": {
+        "x": 70,
+        "y": 312.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 955.46875
+      },
+      "features": {
+        "x": 70,
+        "y": 1623.453125,
+        "width": 928,
+        "height": 189.578125,
+        "right": 998,
+        "bottom": 1813.03125
+      },
+      "finance": {
+        "x": 70,
+        "y": 1841.03125,
+        "width": 928,
+        "height": 91,
+        "right": 998,
+        "bottom": 1932.03125
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 1060,
+            "y": 490.546875,
+            "width": 280,
+            "height": 54.25,
+            "right": 1340,
+            "bottom": 544.796875
+          },
+          "label": {
+            "x": 1105.9375,
+            "y": 507.546875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 1262.046875,
+            "bottom": 527.796875
+          },
+          "icon": {
+            "x": 1274.046875,
+            "y": 507.671875,
+            "width": 20,
+            "height": 20,
+            "right": 1294.046875,
+            "bottom": 527.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 1060,
+            "y": 558.796875,
+            "width": 280,
+            "height": 54.25,
+            "right": 1340,
+            "bottom": 613.046875
+          },
+          "label": {
+            "x": 1106.15625,
+            "y": 575.796875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 1261.84375,
+            "bottom": 596.046875
+          },
+          "icon": {
+            "x": 1273.84375,
+            "y": 575.921875,
+            "width": 20,
+            "height": 20,
+            "right": 1293.84375,
+            "bottom": 595.921875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 1054,
+            "y": 950.390625,
+            "width": 292,
+            "height": 50,
+            "right": 1346,
+            "bottom": 1000.390625
+          },
+          "label": {
+            "x": 1102.515625,
+            "y": 965.265625,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 1265.46875,
+            "bottom": 985.515625
+          },
+          "icon": {
+            "x": 1277.46875,
+            "y": 965.390625,
+            "width": 20,
+            "height": 20,
+            "right": 1297.46875,
+            "bottom": 985.390625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "visibleCards": 1,
+      "card": {
+        "x": 718,
+        "y": 679.046875,
+        "width": 252,
+        "height": 309.9375,
+        "right": 970,
+        "bottom": 988.984375
+      },
+      "image": {
+        "x": 718,
+        "y": 679.046875,
+        "width": 252,
+        "height": 141.75,
+        "right": 970,
+        "bottom": 820.796875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 694,
+        "y": 312.359375,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 631.046875
+      },
+      "gallery": {
+        "x": 30,
+        "y": 312.359375,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 781.5
+      },
+      "features": {
+        "x": 30,
+        "y": 1476.484375,
+        "width": 634,
+        "height": 189.578125,
+        "right": 664,
+        "bottom": 1666.0625
+      },
+      "finance": {
+        "x": 30,
+        "y": 1694.0625,
+        "width": 634,
+        "height": 91,
+        "right": 664,
+        "bottom": 1785.0625
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 718,
+            "y": 484.546875,
+            "width": 252,
+            "height": 54.25,
+            "right": 970,
+            "bottom": 538.796875
+          },
+          "label": {
+            "x": 749.9375,
+            "y": 501.546875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 906.046875,
+            "bottom": 521.796875
+          },
+          "icon": {
+            "x": 918.046875,
+            "y": 501.671875,
+            "width": 20,
+            "height": 20,
+            "right": 938.046875,
+            "bottom": 521.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 718,
+            "y": 552.796875,
+            "width": 252,
+            "height": 54.25,
+            "right": 970,
+            "bottom": 607.046875
+          },
+          "label": {
+            "x": 750.15625,
+            "y": 569.796875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 905.84375,
+            "bottom": 590.046875
+          },
+          "icon": {
+            "x": 917.84375,
+            "y": 569.921875,
+            "width": 20,
+            "height": 20,
+            "right": 937.84375,
+            "bottom": 589.921875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 718,
+            "y": 938.984375,
+            "width": 252,
+            "height": 50,
+            "right": 970,
+            "bottom": 988.984375
+          },
+          "label": {
+            "x": 746.515625,
+            "y": 953.859375,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 909.46875,
+            "bottom": 974.109375
+          },
+          "icon": {
+            "x": 921.46875,
+            "y": 953.984375,
+            "width": 20,
+            "height": 20,
+            "right": 941.46875,
+            "bottom": 973.984375
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "viewport": 768,
+      "documentWidth": 768,
+      "visibleCards": 1,
+      "card": {
+        "x": 492,
+        "y": 724.078125,
+        "width": 222,
+        "height": 311.5625,
+        "right": 714,
+        "bottom": 1035.640625
+      },
+      "image": {
+        "x": 492,
+        "y": 724.078125,
+        "width": 222,
+        "height": 124.875,
+        "right": 714,
+        "bottom": 848.953125,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 468,
+        "y": 373.390625,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 676.078125
+      },
+      "gallery": {
+        "x": 30,
+        "y": 373.390625,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 711.765625
+      },
+      "features": {
+        "x": 30,
+        "y": 1677.75,
+        "width": 413,
+        "height": 229.96875,
+        "right": 443,
+        "bottom": 1907.71875
+      },
+      "finance": {
+        "x": 30,
+        "y": 1935.71875,
+        "width": 413,
+        "height": 91,
+        "right": 443,
+        "bottom": 2026.71875
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 488,
+            "y": 533.578125,
+            "width": 230,
+            "height": 54.25,
+            "right": 718,
+            "bottom": 587.828125
+          },
+          "label": {
+            "x": 508.9375,
+            "y": 550.578125,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 665.046875,
+            "bottom": 570.828125
+          },
+          "icon": {
+            "x": 677.046875,
+            "y": 550.703125,
+            "width": 20,
+            "height": 20,
+            "right": 697.046875,
+            "bottom": 570.703125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 488,
+            "y": 601.828125,
+            "width": 230,
+            "height": 54.25,
+            "right": 718,
+            "bottom": 656.078125
+          },
+          "label": {
+            "x": 509.15625,
+            "y": 618.828125,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 664.84375,
+            "bottom": 639.078125
+          },
+          "icon": {
+            "x": 676.84375,
+            "y": 618.953125,
+            "width": 20,
+            "height": 20,
+            "right": 696.84375,
+            "bottom": 638.953125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 492,
+            "y": 967.140625,
+            "width": 222,
+            "height": 68.5,
+            "right": 714,
+            "bottom": 1035.640625
+          },
+          "label": {
+            "x": 507,
+            "y": 981.140625,
+            "width": 160,
+            "height": 40.5,
+            "right": 667,
+            "bottom": 1021.640625
+          },
+          "icon": {
+            "x": 679,
+            "y": 991.390625,
+            "width": 20,
+            "height": 20,
+            "right": 699,
+            "bottom": 1011.390625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "viewport": 390,
+      "documentWidth": 390,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 2216.84375,
+        "width": 314,
+        "height": 321.71875,
+        "right": 352,
+        "bottom": 2538.5625
+      },
+      "image": {
+        "x": 38,
+        "y": 2216.84375,
+        "width": 314,
+        "height": 176.625,
+        "right": 352,
+        "bottom": 2393.46875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 366.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 625.796875
+      },
+      "gallery": {
+        "x": 16,
+        "y": 660.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 995.5
+      },
+      "features": {
+        "x": 16,
+        "y": 1886.890625,
+        "width": 358,
+        "height": 283.953125,
+        "right": 374,
+        "bottom": 2170.84375
+      },
+      "finance": {
+        "x": 16,
+        "y": 2588.5625,
+        "width": 358,
+        "height": 69,
+        "right": 374,
+        "bottom": 2657.5625
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 2488.5625,
+            "width": 314,
+            "height": 50,
+            "right": 352,
+            "bottom": 2538.5625
+          },
+          "label": {
+            "x": 97.515625,
+            "y": 2503.4375,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 260.46875,
+            "bottom": 2523.6875
+          },
+          "icon": {
+            "x": 272.46875,
+            "y": 2503.5625,
+            "width": 20,
+            "height": 20,
+            "right": 292.46875,
+            "bottom": 2523.5625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 483.296875,
+            "width": 314,
+            "height": 54.25,
+            "right": 352,
+            "bottom": 537.546875
+          },
+          "label": {
+            "x": 100.9375,
+            "y": 500.296875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 257.046875,
+            "bottom": 520.546875
+          },
+          "icon": {
+            "x": 269.046875,
+            "y": 500.421875,
+            "width": 20,
+            "height": 20,
+            "right": 289.046875,
+            "bottom": 520.421875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 549.546875,
+            "width": 314,
+            "height": 54.25,
+            "right": 352,
+            "bottom": 603.796875
+          },
+          "label": {
+            "x": 101.15625,
+            "y": 566.546875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 256.84375,
+            "bottom": 586.796875
+          },
+          "icon": {
+            "x": 268.84375,
+            "y": 566.671875,
+            "width": 20,
+            "height": 20,
+            "right": 288.84375,
+            "bottom": 586.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "viewport": 320,
+      "documentWidth": 320,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 2247.84375,
+        "width": 244,
+        "height": 305.4375,
+        "right": 282,
+        "bottom": 2553.28125
+      },
+      "image": {
+        "x": 38,
+        "y": 2247.84375,
+        "width": 244,
+        "height": 137.25,
+        "right": 282,
+        "bottom": 2385.09375,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 366.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 625.796875
+      },
+      "gallery": {
+        "x": 16,
+        "y": 660.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 945.5
+      },
+      "features": {
+        "x": 16,
+        "y": 1917.890625,
+        "width": 288,
+        "height": 283.953125,
+        "right": 304,
+        "bottom": 2201.84375
+      },
+      "finance": {
+        "x": 16,
+        "y": 2603.28125,
+        "width": 288,
+        "height": 69,
+        "right": 304,
+        "bottom": 2672.28125
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 2503.28125,
+            "width": 244,
+            "height": 50,
+            "right": 282,
+            "bottom": 2553.28125
+          },
+          "label": {
+            "x": 62.515625,
+            "y": 2518.15625,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 225.46875,
+            "bottom": 2538.40625
+          },
+          "icon": {
+            "x": 237.46875,
+            "y": 2518.28125,
+            "width": 20,
+            "height": 20,
+            "right": 257.46875,
+            "bottom": 2538.28125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 483.296875,
+            "width": 244,
+            "height": 54.25,
+            "right": 282,
+            "bottom": 537.546875
+          },
+          "label": {
+            "x": 65.9375,
+            "y": 500.296875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 222.046875,
+            "bottom": 520.546875
+          },
+          "icon": {
+            "x": 234.046875,
+            "y": 500.421875,
+            "width": 20,
+            "height": 20,
+            "right": 254.046875,
+            "bottom": 520.421875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 549.546875,
+            "width": 244,
+            "height": 54.25,
+            "right": 282,
+            "bottom": 603.796875
+          },
+          "label": {
+            "x": 66.15625,
+            "y": 566.546875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 221.84375,
+            "bottom": 586.796875
+          },
+          "icon": {
+            "x": 233.84375,
+            "y": 566.671875,
+            "width": 20,
+            "height": 20,
+            "right": 253.84375,
+            "bottom": 586.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "viewport": 320,
+      "documentWidth": 320,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 4991.0625,
+        "width": 244,
+        "height": 534.8125,
+        "right": 282,
+        "bottom": 5525.875
+      },
+      "image": {
+        "x": 38,
+        "y": 4991.0625,
+        "width": 244,
+        "height": 137.25,
+        "right": 282,
+        "bottom": 5128.3125,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 774.6875,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1277.78125
+      },
+      "gallery": {
+        "x": 16,
+        "y": 1312.78125,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1597.484375
+      },
+      "features": {
+        "x": 16,
+        "y": 4501.078125,
+        "width": 288,
+        "height": 443.984375,
+        "right": 304,
+        "bottom": 4945.0625
+      },
+      "finance": {
+        "x": 16,
+        "y": 5575.875,
+        "width": 288,
+        "height": 156,
+        "right": 304,
+        "bottom": 5731.875
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 5416.875,
+            "width": 244,
+            "height": 109,
+            "right": 282,
+            "bottom": 5525.875
+          },
+          "label": {
+            "x": 53,
+            "y": 5430.875,
+            "width": 182,
+            "height": 81,
+            "right": 235,
+            "bottom": 5511.875
+          },
+          "icon": {
+            "x": 247,
+            "y": 5461.375,
+            "width": 20,
+            "height": 20,
+            "right": 267,
+            "bottom": 5481.375
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 973.28125,
+            "width": 244,
+            "height": 155.5,
+            "right": 282,
+            "bottom": 1128.78125
+          },
+          "label": {
+            "x": 51,
+            "y": 990.28125,
+            "width": 186,
+            "height": 121.5,
+            "right": 237,
+            "bottom": 1111.78125
+          },
+          "icon": {
+            "x": 249,
+            "y": 1041.03125,
+            "width": 20,
+            "height": 20,
+            "right": 269,
+            "bottom": 1061.03125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 1140.78125,
+            "width": 244,
+            "height": 115,
+            "right": 282,
+            "bottom": 1255.78125
+          },
+          "label": {
+            "x": 51,
+            "y": 1157.78125,
+            "width": 186,
+            "height": 81,
+            "right": 237,
+            "bottom": 1238.78125
+          },
+          "icon": {
+            "x": 249,
+            "y": 1188.28125,
+            "width": 20,
+            "height": 20,
+            "right": 269,
+            "bottom": 1208.28125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "visibleCards": 1,
+      "card": {
+        "x": 1054,
+        "y": 691.046875,
+        "width": 292,
+        "height": 309.34375,
+        "right": 1346,
+        "bottom": 1000.390625
+      },
+      "image": {
+        "x": 1054,
+        "y": 691.046875,
+        "width": 292,
+        "height": 164.25,
+        "right": 1346,
+        "bottom": 855.296875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 1030,
+        "y": 312.359375,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 643.046875
+      },
+      "gallery": {
+        "x": 70,
+        "y": 312.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 955.46875
+      },
+      "features": {
+        "x": 70,
+        "y": 1623.453125,
+        "width": 928,
+        "height": 189.578125,
+        "right": 998,
+        "bottom": 1813.03125
+      },
+      "finance": {
+        "x": 70,
+        "y": 1841.03125,
+        "width": 928,
+        "height": 91,
+        "right": 998,
+        "bottom": 1932.03125
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 1060,
+            "y": 490.546875,
+            "width": 280,
+            "height": 54.25,
+            "right": 1340,
+            "bottom": 544.796875
+          },
+          "label": {
+            "x": 1105.9375,
+            "y": 507.546875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 1262.046875,
+            "bottom": 527.796875
+          },
+          "icon": {
+            "x": 1274.046875,
+            "y": 507.671875,
+            "width": 20,
+            "height": 20,
+            "right": 1294.046875,
+            "bottom": 527.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 1060,
+            "y": 558.796875,
+            "width": 280,
+            "height": 54.25,
+            "right": 1340,
+            "bottom": 613.046875
+          },
+          "label": {
+            "x": 1106.15625,
+            "y": 575.796875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 1261.84375,
+            "bottom": 596.046875
+          },
+          "icon": {
+            "x": 1273.84375,
+            "y": 575.921875,
+            "width": 20,
+            "height": 20,
+            "right": 1293.84375,
+            "bottom": 595.921875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 1054,
+            "y": 950.390625,
+            "width": 292,
+            "height": 50,
+            "right": 1346,
+            "bottom": 1000.390625
+          },
+          "label": {
+            "x": 1102.515625,
+            "y": 965.265625,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 1265.46875,
+            "bottom": 985.515625
+          },
+          "icon": {
+            "x": 1277.46875,
+            "y": 965.390625,
+            "width": 20,
+            "height": 20,
+            "right": 1297.46875,
+            "bottom": 985.390625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "visibleCards": 1,
+      "card": {
+        "x": 718,
+        "y": 679.046875,
+        "width": 252,
+        "height": 309.9375,
+        "right": 970,
+        "bottom": 988.984375
+      },
+      "image": {
+        "x": 718,
+        "y": 679.046875,
+        "width": 252,
+        "height": 141.75,
+        "right": 970,
+        "bottom": 820.796875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 694,
+        "y": 312.359375,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 631.046875
+      },
+      "gallery": {
+        "x": 30,
+        "y": 312.359375,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 781.5
+      },
+      "features": {
+        "x": 30,
+        "y": 1476.484375,
+        "width": 634,
+        "height": 189.578125,
+        "right": 664,
+        "bottom": 1666.0625
+      },
+      "finance": {
+        "x": 30,
+        "y": 1694.0625,
+        "width": 634,
+        "height": 91,
+        "right": 664,
+        "bottom": 1785.0625
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 718,
+            "y": 484.546875,
+            "width": 252,
+            "height": 54.25,
+            "right": 970,
+            "bottom": 538.796875
+          },
+          "label": {
+            "x": 749.9375,
+            "y": 501.546875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 906.046875,
+            "bottom": 521.796875
+          },
+          "icon": {
+            "x": 918.046875,
+            "y": 501.671875,
+            "width": 20,
+            "height": 20,
+            "right": 938.046875,
+            "bottom": 521.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 718,
+            "y": 552.796875,
+            "width": 252,
+            "height": 54.25,
+            "right": 970,
+            "bottom": 607.046875
+          },
+          "label": {
+            "x": 750.15625,
+            "y": 569.796875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 905.84375,
+            "bottom": 590.046875
+          },
+          "icon": {
+            "x": 917.84375,
+            "y": 569.921875,
+            "width": 20,
+            "height": 20,
+            "right": 937.84375,
+            "bottom": 589.921875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 718,
+            "y": 938.984375,
+            "width": 252,
+            "height": 50,
+            "right": 970,
+            "bottom": 988.984375
+          },
+          "label": {
+            "x": 746.515625,
+            "y": 953.859375,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 909.46875,
+            "bottom": 974.109375
+          },
+          "icon": {
+            "x": 921.46875,
+            "y": 953.984375,
+            "width": 20,
+            "height": 20,
+            "right": 941.46875,
+            "bottom": 973.984375
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "viewport": 768,
+      "documentWidth": 768,
+      "visibleCards": 1,
+      "card": {
+        "x": 492,
+        "y": 724.078125,
+        "width": 222,
+        "height": 311.5625,
+        "right": 714,
+        "bottom": 1035.640625
+      },
+      "image": {
+        "x": 492,
+        "y": 724.078125,
+        "width": 222,
+        "height": 124.875,
+        "right": 714,
+        "bottom": 848.953125,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 468,
+        "y": 373.390625,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 676.078125
+      },
+      "gallery": {
+        "x": 30,
+        "y": 373.390625,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 711.765625
+      },
+      "features": {
+        "x": 30,
+        "y": 1677.75,
+        "width": 413,
+        "height": 229.96875,
+        "right": 443,
+        "bottom": 1907.71875
+      },
+      "finance": {
+        "x": 30,
+        "y": 1935.71875,
+        "width": 413,
+        "height": 91,
+        "right": 443,
+        "bottom": 2026.71875
+      },
+      "actions": [
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 488,
+            "y": 533.578125,
+            "width": 230,
+            "height": 54.25,
+            "right": 718,
+            "bottom": 587.828125
+          },
+          "label": {
+            "x": 508.9375,
+            "y": 550.578125,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 665.046875,
+            "bottom": 570.828125
+          },
+          "icon": {
+            "x": 677.046875,
+            "y": 550.703125,
+            "width": 20,
+            "height": 20,
+            "right": 697.046875,
+            "bottom": 570.703125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 488,
+            "y": 601.828125,
+            "width": 230,
+            "height": 54.25,
+            "right": 718,
+            "bottom": 656.078125
+          },
+          "label": {
+            "x": 509.15625,
+            "y": 618.828125,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 664.84375,
+            "bottom": 639.078125
+          },
+          "icon": {
+            "x": 676.84375,
+            "y": 618.953125,
+            "width": 20,
+            "height": 20,
+            "right": 696.84375,
+            "bottom": 638.953125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        },
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 492,
+            "y": 967.140625,
+            "width": 222,
+            "height": 68.5,
+            "right": 714,
+            "bottom": 1035.640625
+          },
+          "label": {
+            "x": 507,
+            "y": 981.140625,
+            "width": 160,
+            "height": 40.5,
+            "right": 667,
+            "bottom": 1021.640625
+          },
+          "icon": {
+            "x": 679,
+            "y": 991.390625,
+            "width": 20,
+            "height": 20,
+            "right": 699,
+            "bottom": 1011.390625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "seller-info",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "viewport": 390,
+      "documentWidth": 390,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 2216.84375,
+        "width": 314,
+        "height": 321.71875,
+        "right": 352,
+        "bottom": 2538.5625
+      },
+      "image": {
+        "x": 38,
+        "y": 2216.84375,
+        "width": 314,
+        "height": 176.625,
+        "right": 352,
+        "bottom": 2393.46875,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 366.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 625.796875
+      },
+      "gallery": {
+        "x": 16,
+        "y": 660.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 995.5
+      },
+      "features": {
+        "x": 16,
+        "y": 1886.890625,
+        "width": 358,
+        "height": 283.953125,
+        "right": 374,
+        "bottom": 2170.84375
+      },
+      "finance": {
+        "x": 16,
+        "y": 2588.5625,
+        "width": 358,
+        "height": 69,
+        "right": 374,
+        "bottom": 2657.5625
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 2488.5625,
+            "width": 314,
+            "height": 50,
+            "right": 352,
+            "bottom": 2538.5625
+          },
+          "label": {
+            "x": 97.515625,
+            "y": 2503.4375,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 260.46875,
+            "bottom": 2523.6875
+          },
+          "icon": {
+            "x": 272.46875,
+            "y": 2503.5625,
+            "width": 20,
+            "height": 20,
+            "right": 292.46875,
+            "bottom": 2523.5625
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 483.296875,
+            "width": 314,
+            "height": 54.25,
+            "right": 352,
+            "bottom": 537.546875
+          },
+          "label": {
+            "x": 100.9375,
+            "y": 500.296875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 257.046875,
+            "bottom": 520.546875
+          },
+          "icon": {
+            "x": 269.046875,
+            "y": 500.421875,
+            "width": 20,
+            "height": 20,
+            "right": 289.046875,
+            "bottom": 520.421875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 549.546875,
+            "width": 314,
+            "height": 54.25,
+            "right": 352,
+            "bottom": 603.796875
+          },
+          "label": {
+            "x": 101.15625,
+            "y": 566.546875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 256.84375,
+            "bottom": 586.796875
+          },
+          "icon": {
+            "x": 268.84375,
+            "y": 566.671875,
+            "width": 20,
+            "height": 20,
+            "right": 288.84375,
+            "bottom": 586.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "viewport": 320,
+      "documentWidth": 320,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 2247.84375,
+        "width": 244,
+        "height": 305.4375,
+        "right": 282,
+        "bottom": 2553.28125
+      },
+      "image": {
+        "x": 38,
+        "y": 2247.84375,
+        "width": 244,
+        "height": 137.25,
+        "right": 282,
+        "bottom": 2385.09375,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 366.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 625.796875
+      },
+      "gallery": {
+        "x": 16,
+        "y": 660.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 945.5
+      },
+      "features": {
+        "x": 16,
+        "y": 1917.890625,
+        "width": 288,
+        "height": 283.953125,
+        "right": 304,
+        "bottom": 2201.84375
+      },
+      "finance": {
+        "x": 16,
+        "y": 2603.28125,
+        "width": 288,
+        "height": 69,
+        "right": 304,
+        "bottom": 2672.28125
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 2503.28125,
+            "width": 244,
+            "height": 50,
+            "right": 282,
+            "bottom": 2553.28125
+          },
+          "label": {
+            "x": 62.515625,
+            "y": 2518.15625,
+            "width": 162.953125,
+            "height": 20.25,
+            "right": 225.46875,
+            "bottom": 2538.40625
+          },
+          "icon": {
+            "x": 237.46875,
+            "y": 2518.28125,
+            "width": 20,
+            "height": 20,
+            "right": 257.46875,
+            "bottom": 2538.28125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 483.296875,
+            "width": 244,
+            "height": 54.25,
+            "right": 282,
+            "bottom": 537.546875
+          },
+          "label": {
+            "x": 65.9375,
+            "y": 500.296875,
+            "width": 156.109375,
+            "height": 20.25,
+            "right": 222.046875,
+            "bottom": 520.546875
+          },
+          "icon": {
+            "x": 234.046875,
+            "y": 500.421875,
+            "width": 20,
+            "height": 20,
+            "right": 254.046875,
+            "bottom": 520.421875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 549.546875,
+            "width": 244,
+            "height": 54.25,
+            "right": 282,
+            "bottom": 603.796875
+          },
+          "label": {
+            "x": 66.15625,
+            "y": 566.546875,
+            "width": 155.6875,
+            "height": 20.25,
+            "right": 221.84375,
+            "bottom": 586.796875
+          },
+          "icon": {
+            "x": 233.84375,
+            "y": 566.671875,
+            "width": 20,
+            "height": 20,
+            "right": 253.84375,
+            "bottom": 586.671875
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "viewport": 320,
+      "documentWidth": 320,
+      "visibleCards": 1,
+      "card": {
+        "x": 38,
+        "y": 4991.0625,
+        "width": 244,
+        "height": 534.8125,
+        "right": 282,
+        "bottom": 5525.875
+      },
+      "image": {
+        "x": 38,
+        "y": 4991.0625,
+        "width": 244,
+        "height": 137.25,
+        "right": 282,
+        "bottom": 5128.3125,
+        "loaded": true,
+        "naturalWidth": 960,
+        "naturalHeight": 540
+      },
+      "price": {
+        "x": 16,
+        "y": 774.6875,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1277.78125
+      },
+      "gallery": {
+        "x": 16,
+        "y": 1312.78125,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1597.484375
+      },
+      "features": {
+        "x": 16,
+        "y": 4501.078125,
+        "width": 288,
+        "height": 443.984375,
+        "right": 304,
+        "bottom": 4945.0625
+      },
+      "finance": {
+        "x": 16,
+        "y": 5575.875,
+        "width": 288,
+        "height": 156,
+        "right": 304,
+        "bottom": 5731.875
+      },
+      "actions": [
+        {
+          "text": "Contact the showroom",
+          "box": {
+            "x": 38,
+            "y": 5416.875,
+            "width": 244,
+            "height": 109,
+            "right": 282,
+            "bottom": 5525.875
+          },
+          "label": {
+            "x": 53,
+            "y": 5430.875,
+            "width": 182,
+            "height": 81,
+            "right": 235,
+            "bottom": 5511.875
+          },
+          "icon": {
+            "x": 247,
+            "y": 5461.375,
+            "width": 20,
+            "height": 20,
+            "right": 267,
+            "bottom": 5481.375
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(64, 95, 242)",
+          "background": "rgb(238, 242, 255)",
+          "contrastRatio": 4.539542856173424,
+          "hoverContrastRatio": 5.850042698866665
+        },
+        {
+          "text": "Enquire about this car",
+          "box": {
+            "x": 38,
+            "y": 973.28125,
+            "width": 244,
+            "height": 155.5,
+            "right": 282,
+            "bottom": 1128.78125
+          },
+          "label": {
+            "x": 51,
+            "y": 990.28125,
+            "width": 186,
+            "height": 121.5,
+            "right": 237,
+            "bottom": 1111.78125
+          },
+          "icon": {
+            "x": 249,
+            "y": 1041.03125,
+            "width": 20,
+            "height": 20,
+            "right": 269,
+            "bottom": 1061.03125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(64, 95, 242)"
+        },
+        {
+          "text": "Calculate repayments",
+          "box": {
+            "x": 38,
+            "y": 1140.78125,
+            "width": 244,
+            "height": 115,
+            "right": 282,
+            "bottom": 1255.78125
+          },
+          "label": {
+            "x": 51,
+            "y": 1157.78125,
+            "width": 186,
+            "height": 81,
+            "right": 237,
+            "bottom": 1238.78125
+          },
+          "icon": {
+            "x": 249,
+            "y": 1188.28125,
+            "width": 20,
+            "height": 20,
+            "right": 269,
+            "bottom": 1208.28125
+          },
+          "labelOverflow": false,
+          "centerDifference": 0,
+          "color": "rgb(5, 11, 32)",
+          "background": "rgba(0, 0, 0, 0)"
+        }
+      ],
+      "brokenImages": [],
+      "overlay": false,
+      "surfaces": {
+        "canvas": "rgb(245, 246, 248)",
+        "panels": [
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-section",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "mobile-showroom",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "detail-finance",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          },
+          {
+            "className": "price-panel",
+            "background": "rgb(255, 255, 255)",
+            "border": "0px",
+            "radius": "16px"
+          }
+        ],
+        "relatedSpecs": [
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          },
+          {
+            "className": "vehicle-specs",
+            "background": "rgb(245, 246, 248)",
+            "border": "0px",
+            "radius": "10px"
+          }
+        ],
+        "clipped": []
+      }
+    }
+  ],
+  "financeStates": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "documentWidth": 1440,
+      "panelRight": 998,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "documentWidth": 1024,
+      "panelRight": 664,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "documentWidth": 768,
+      "panelRight": 443,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "documentWidth": 390,
+      "panelRight": 374,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "documentWidth": 320,
+      "panelRight": 304,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "documentWidth": 320,
+      "panelRight": 304,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "documentWidth": 1440,
+      "panelRight": 998,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "documentWidth": 1024,
+      "panelRight": 664,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "documentWidth": 768,
+      "panelRight": 443,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "documentWidth": 390,
+      "panelRight": 374,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "documentWidth": 320,
+      "panelRight": 304,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "documentWidth": 320,
+      "panelRight": 304,
+      "clipped": [],
+      "monthly": "$2,449.50",
+      "resultBackground": "rgb(245, 246, 248)"
+    }
+  ],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "enquiry": "open, correct vehicle, close, focus restored",
+      "calculator": "vehicle price retained",
+      "showroomContact": "viewing subject preselected",
+      "gallery": "open and Escape close"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "enquiry": "open, correct vehicle, close, focus restored",
+      "calculator": "vehicle price retained",
+      "showroomContact": "viewing subject preselected",
+      "gallery": "open and Escape close"
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "gallery": "Multi-photo vehicle next/selected thumbnail retained"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "enquiry": "open, correct vehicle, close, focus restored",
+      "calculator": "vehicle price retained",
+      "showroomContact": "viewing subject preselected",
+      "gallery": "open and Escape close"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "enquiry": "open, correct vehicle, close, focus restored",
+      "calculator": "vehicle price retained",
+      "showroomContact": "viewing subject preselected",
+      "gallery": "open and Escape close"
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "gallery": "Multi-photo vehicle next/selected thumbnail retained"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/pages/VehicleDetail.svelte": "0d03bfeb68ad2f9417cf83f2ec6ee03b6fb7f3a59eac998de64754dec24973c6",
+    "src/components/ShowroomCard.svelte": "e2d3d789b2a7f47f8267412f7c6724cbad975ca70ab2799c8e0eed84777d0e04",
+    "src/data/brand.ts": "4ebb81b7540825a7432889661d41233f6ba58892bceec5889d5485e09d47c5f2",
+    "src/styles.css": "c17388fcd7f54e4d0ed07e2e610dd71d38b7b55280dc1402f7853a72ba5263e2",
+    "public/media/showroom/boxcars-showroom-v1.webp": "e99d17ec055e879d1dae4abf171a5fdad0f9025ef2763d43f1651a5fdf25c1b9"
+  },
+  "unchangedHomeSources": [
+    "src/reference/CuratedHome.svelte",
+    "src/reference/CuratedServices.svelte",
+    "public/reference/curated.css",
+    "public/media/services/boxcar-browse-v1.webp",
+    "public/media/services/boxcar-sell-v1.webp",
+    "public/media/services/boxcar-compare-v1.webp",
+    "public/media/services/boxcar-budget-v1.webp",
+    "src/reference/Home1.svelte",
+    "src/reference/Home2.svelte",
+    "src/reference/Home3.svelte",
+    "src/reference/Home4.svelte",
+    "src/reference/Home5.svelte",
+    "src/reference/Home6.svelte",
+    "src/reference/Home7.svelte",
+    "src/reference/Home8.svelte",
+    "src/reference/Home9.svelte",
+    "src/reference/Home10.svelte"
+  ],
+  "status": "passed"
+}

@@ -62,11 +62,13 @@
 .curated-home .curated-services .boxcar-title p { margin: 14px 0 0; color: #667085; font-size: 16px; line-height: 26px; }
 .curated-home .curated-services .row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; }
 .curated-home .curated-services .curated-service-card { padding: 0; min-width: 0; }
-.curated-home .curated-services .inner-box { display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; padding: 32px 24px; }
-.curated-home .curated-services .hover-img { position: static; display: grid; place-items: center; width: 72px; height: 72px; margin: 0 0 24px; }
-.curated-home .curated-services .hover-img svg { display: block; width: 72px; height: 72px; }
+.curated-home .curated-services .inner-box { display: flex; flex-direction: column; align-items: center; text-align: center; height: 100%; padding: 24px 24px 32px; background: #edf3ff; }
+.curated-home .curated-services [data-service=sell] .inner-box,
+.curated-home .curated-services [data-service=budget] .inner-box { background: #f5f6f8; }
+.curated-home .curated-services .hover-img { position: static; display: grid; place-items: center; width: 100%; height: 152px; margin: 0 0 24px; }
+.curated-home .curated-services .hover-img img { display: block; width: 100%; height: 100%; max-width: 300px; object-fit: contain; }
 .curated-home .curated-services .inner-box .title { margin: 0 0 12px; font-size: 24px; line-height: 32px; font-weight: 500; }
-.curated-home .curated-services .inner-box .text { margin: 0 0 24px; font-size: 15px; line-height: 24px; color: #3e4557; max-width: 260px; flex: 1; }
+.curated-home .curated-services .inner-box .text { margin: 0 0 24px; font-size: 15px; line-height: 24px; color: #3e4557; max-width: 260px; flex: 1; text-wrap: balance; }
 .curated-home .curated-services .inner-box .read-more { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 12px 18px; min-height: 48px; width: 100%; max-width: 230px; font-size: 15px; font-weight: 500; line-height: 24px; border: 1px solid transparent; }
 .curated-home .curated-services .inner-box .read-more svg { position: static; margin: 0; }
 .curated-home .curated-services .inner-box .read-more:hover { color: #fff; background: #050b20; }

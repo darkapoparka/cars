@@ -54,7 +54,6 @@
             Great conversations.
           </h2>
         </div>
-        <small>Sample showroom photograph</small>
       </div>{/if}
     <div class="calculater-sec">
       <section class="content-column" aria-labelledby="contact-form-title">
@@ -83,10 +82,11 @@
           <div class="content-box">
             <span class="icon"><Icon name="location" size={26} /></span>
             <h3>Showroom</h3>
-            <p>{brand.showroomMap?.address || brand.location}</p>
-            {#if !brand.showroomMap}<small>
-                Example location for this template.
-              </small>{/if}
+            <p>
+              {brand.showroomMap?.address ||
+                brand.location ||
+                "Contact us for visiting information."}
+            </p>
           </div>
           <div class="content-box">
             <span class="icon"><Icon name="clock" size={26} /></span>
@@ -103,9 +103,6 @@
                   {brand.contactEmail}
                 </a>{/if}
             </p>
-            {#if brand.contactEmail === "hello@example.com"}<small>
-                Example email address.
-              </small>{/if}
           </div>
           {#if brand.phone}
             <div class="content-box">
@@ -131,9 +128,6 @@
               can help with your enquiry.
             </p>
           </div>
-          <p class="bc-contact-note">
-            Demo business details · enquiries are previews.
-          </p>
         </div>
       </aside>
     </div>

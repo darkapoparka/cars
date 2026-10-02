@@ -1,0 +1,4037 @@
+{
+  "checkedAt": "2026-10-02T17:50:44.328Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 626.890625,
+        "height": 68.6875,
+        "right": 720.890625,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 740.890625,
+        "y": 221.34375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 740.890625,
+          "y": 221.34375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 850.875,
+          "bottom": 265.34375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 858.875,
+          "y": 221.34375,
+          "width": 115.125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 569.671875,
+        "height": 68.6875,
+        "right": 663.671875,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 683.671875,
+        "y": 221.34375,
+        "width": 290.328125,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 683.671875,
+          "y": 221.34375,
+          "width": 94,
+          "height": 44,
+          "right": 777.671875,
+          "bottom": 265.34375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 785.671875,
+          "y": 221.34375,
+          "width": 188.328125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "multi-photo",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 626.890625,
+        "height": 68.6875,
+        "right": 720.890625,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 740.890625,
+        "y": 221.34375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 210,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 316,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 334,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 440,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 458,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 564,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 582,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 688,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 740.890625,
+          "y": 221.34375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 850.875,
+          "bottom": 265.34375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 858.875,
+          "y": 221.34375,
+          "width": 115.125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 634,
+        "height": 154.1875,
+        "right": 664,
+        "bottom": 339.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 332.890625,
+        "height": 106.1875,
+        "right": 386.890625,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 406.890625,
+        "y": 240.09375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 640,
+        "bottom": 284.09375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 493.140625,
+        "right": 664,
+        "bottom": 856.328125
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 754.328125,
+        "width": 634,
+        "height": 102,
+        "right": 664,
+        "bottom": 856.328125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 375.140625,
+        "right": 664,
+        "bottom": 738.328125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 770.328125,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 840.328125
+        }
+      ],
+      "price": {
+        "x": 694,
+        "y": 185,
+        "width": 300,
+        "height": 290.296875,
+        "right": 994,
+        "bottom": 475.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 405.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 406.890625,
+          "y": 240.09375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 516.875,
+          "bottom": 284.09375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 524.875,
+          "y": 240.09375,
+          "width": 115.125,
+          "height": 44,
+          "right": 640,
+          "bottom": 284.09375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 634,
+        "height": 154.1875,
+        "right": 664,
+        "bottom": 339.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 275.671875,
+        "height": 106.1875,
+        "right": 329.671875,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 349.671875,
+        "y": 240.09375,
+        "width": 290.328125,
+        "height": 44,
+        "right": 640,
+        "bottom": 284.09375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 493.140625,
+        "right": 664,
+        "bottom": 856.328125
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 754.328125,
+        "width": 634,
+        "height": 102,
+        "right": 664,
+        "bottom": 856.328125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 375.140625,
+        "right": 664,
+        "bottom": 738.328125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 770.328125,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 840.328125
+        }
+      ],
+      "price": {
+        "x": 694,
+        "y": 185,
+        "width": 300,
+        "height": 290.296875,
+        "right": 994,
+        "bottom": 475.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 405.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 349.671875,
+          "y": 240.09375,
+          "width": 94,
+          "height": 44,
+          "right": 443.671875,
+          "bottom": 284.09375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 451.671875,
+          "y": 240.09375,
+          "width": 188.328125,
+          "height": 44,
+          "right": 640,
+          "bottom": 284.09375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 413,
+        "height": 214.1875,
+        "right": 443,
+        "bottom": 399.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 365,
+        "height": 106.1875,
+        "right": 419,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 185.890625,
+        "y": 331.1875,
+        "width": 233.109375,
+        "height": 44,
+        "right": 419,
+        "bottom": 375.1875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 362.375,
+        "right": 443,
+        "bottom": 785.5625
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 683.5625,
+        "width": 413,
+        "height": 102,
+        "right": 443,
+        "bottom": 785.5625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 244.375,
+        "right": 443,
+        "bottom": 667.5625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 699.5625,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 769.5625
+        }
+      ],
+      "price": {
+        "x": 468,
+        "y": 185,
+        "width": 270,
+        "height": 274.296875,
+        "right": 738,
+        "bottom": 459.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 277.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 185.890625,
+          "y": 331.1875,
+          "width": 109.984375,
+          "height": 44,
+          "right": 295.875,
+          "bottom": 375.1875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 303.875,
+          "y": 331.1875,
+          "width": 115.125,
+          "height": 44,
+          "right": 419,
+          "bottom": 375.1875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 413,
+        "height": 214.1875,
+        "right": 443,
+        "bottom": 399.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 365,
+        "height": 106.1875,
+        "right": 419,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 128.671875,
+        "y": 331.1875,
+        "width": 290.328125,
+        "height": 44,
+        "right": 419,
+        "bottom": 375.1875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 362.375,
+        "right": 443,
+        "bottom": 785.5625
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 683.5625,
+        "width": 413,
+        "height": 102,
+        "right": 443,
+        "bottom": 785.5625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 244.375,
+        "right": 443,
+        "bottom": 667.5625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 699.5625,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 769.5625
+        }
+      ],
+      "price": {
+        "x": 468,
+        "y": 185,
+        "width": 270,
+        "height": 274.296875,
+        "right": 738,
+        "bottom": 459.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 277.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 128.671875,
+          "y": 331.1875,
+          "width": 94,
+          "height": 44,
+          "right": 222.671875,
+          "bottom": 375.1875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 230.671875,
+          "y": 331.1875,
+          "width": 188.328125,
+          "height": 44,
+          "right": 419,
+          "bottom": 375.1875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 208.6875,
+        "right": 374,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 318,
+        "height": 108.6875,
+        "right": 354,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 318,
+        "height": 44,
+        "right": 354,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 358.703125,
+        "right": 374,
+        "bottom": 994.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 907.890625,
+        "width": 358,
+        "height": 87,
+        "right": 374,
+        "bottom": 994.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 255.703125,
+        "right": 374,
+        "bottom": 891.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 923.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 978.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 358,
+        "height": 218.5,
+        "right": 374,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 102.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 151.609375,
+          "height": 44,
+          "right": 187.609375,
+          "bottom": 349.6875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.609375,
+          "y": 305.6875,
+          "width": 156.390625,
+          "height": 44,
+          "right": 354,
+          "bottom": 349.6875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 208.6875,
+        "right": 374,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 318,
+        "height": 108.6875,
+        "right": 354,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 318,
+        "height": 44,
+        "right": 354,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 358.703125,
+        "right": 374,
+        "bottom": 994.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 907.890625,
+        "width": 358,
+        "height": 87,
+        "right": 374,
+        "bottom": 994.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 255.703125,
+        "right": 374,
+        "bottom": 891.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 923.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 978.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 358,
+        "height": 218.5,
+        "right": 374,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 102.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 110.203125,
+          "height": 44,
+          "right": 146.203125,
+          "bottom": 349.6875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 305.6875,
+          "width": 197.796875,
+          "height": 44,
+          "right": 354,
+          "bottom": 349.6875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 247.4375,
+        "right": 304,
+        "bottom": 408.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 147.4375,
+        "right": 284,
+        "bottom": 328.4375
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 344.4375,
+        "width": 248,
+        "height": 44,
+        "right": 284,
+        "bottom": 388.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 674.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 983.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 896.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 983.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 674.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 880.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 912.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 967.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 432.4375,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 650.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 344.4375,
+          "width": 116.609375,
+          "height": 44,
+          "right": 152.609375,
+          "bottom": 388.4375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 344.4375,
+          "width": 121.390625,
+          "height": 44,
+          "right": 284,
+          "bottom": 388.4375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 301.4375,
+        "right": 304,
+        "bottom": 462.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 147.4375,
+        "right": 284,
+        "bottom": 328.4375
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 344.4375,
+        "width": 248,
+        "height": 98,
+        "right": 284,
+        "bottom": 442.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 728.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1037.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 950.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1037.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 728.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 934.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 966.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1021.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 486.4375,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 704.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 344.4375,
+          "width": 248,
+          "height": 44,
+          "right": 284,
+          "bottom": 388.4375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 398.4375,
+          "width": 248,
+          "height": 44,
+          "right": 284,
+          "bottom": 442.4375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 176.1875,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 682.25
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 196.1875,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 482.96875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 498.96875,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 662.25
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1440.453125
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1353.453125,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1440.453125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1337.453125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1369.453125,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1424.453125
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 706.25,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1107.75
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 249.4375,
+        "height": 59.1875,
+        "right": 265.4375,
+        "bottom": 160.1875,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 19.28125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 498.96875,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 558.0625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 568.0625,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 662.25,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "phase": "Back to saved cars",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 215.375,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 721.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 235.375,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 522.15625
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 538.15625,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 701.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1170.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1479.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1392.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1479.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1170.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1376.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1408.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1463.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 745.4375,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1146.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 288,
+        "height": 98.375,
+        "right": 304,
+        "bottom": 199.375,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to saved cars",
+        "href": "/favorites/",
+        "centerDifference": 0,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 538.15625,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 597.25,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 607.25,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 701.4375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "phase": "Back to home",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 176.1875,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 682.25
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 196.1875,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 482.96875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 498.96875,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 662.25
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1440.453125
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1353.453125,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1440.453125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1337.453125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1369.453125,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1424.453125
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 706.25,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1107.75
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 235.890625,
+        "height": 59.1875,
+        "right": 251.890625,
+        "bottom": 160.1875,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to home",
+        "href": "/",
+        "centerDifference": 26.0546875,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 498.96875,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 558.0625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 568.0625,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 662.25,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "multi-photo",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 208.6875,
+        "right": 304,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 108.6875,
+        "right": 284,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 248,
+        "height": 44,
+        "right": 284,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 944.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 857.890625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 944.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 841.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 127,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 208,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 222,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 303,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 317,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 398,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 412,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 493,
+          "bottom": 928.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 116.609375,
+          "height": 44,
+          "right": 152.609375,
+          "bottom": 349.6875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 305.6875,
+          "width": 121.390625,
+          "height": 44,
+          "right": 284,
+          "bottom": 349.6875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 626.890625,
+        "height": 68.6875,
+        "right": 720.890625,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 740.890625,
+        "y": 221.34375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 740.890625,
+          "y": 221.34375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 850.875,
+          "bottom": 265.34375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 858.875,
+          "y": 221.34375,
+          "width": 115.125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 569.671875,
+        "height": 68.6875,
+        "right": 663.671875,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 683.671875,
+        "y": 221.34375,
+        "width": 290.328125,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 683.671875,
+          "y": 221.34375,
+          "width": 94,
+          "height": 44,
+          "right": 777.671875,
+          "bottom": 265.34375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 785.671875,
+          "y": 221.34375,
+          "width": 188.328125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "multi-photo",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 185,
+        "width": 928,
+        "height": 116.6875,
+        "right": 998,
+        "bottom": 301.6875
+      },
+      "titleBounds": {
+        "x": 94,
+        "y": 209,
+        "width": 626.890625,
+        "height": 68.6875,
+        "right": 720.890625,
+        "bottom": 277.6875
+      },
+      "actionBounds": {
+        "x": 740.890625,
+        "y": 221.34375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 974,
+        "bottom": 265.34375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 667.109375,
+        "right": 998,
+        "bottom": 992.796875
+      },
+      "thumbnailTray": {
+        "x": 70,
+        "y": 890.796875,
+        "width": 928,
+        "height": 102,
+        "right": 998,
+        "bottom": 992.796875,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 70,
+        "y": 325.6875,
+        "width": 928,
+        "height": 549.109375,
+        "right": 998,
+        "bottom": 874.796875
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 86,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 192,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 210,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 316,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 334,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 440,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 458,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 564,
+          "bottom": 976.796875
+        },
+        {
+          "loaded": true,
+          "x": 582,
+          "y": 906.796875,
+          "width": 106,
+          "height": 70,
+          "right": 688,
+          "bottom": 976.796875
+        }
+      ],
+      "price": {
+        "x": 1030,
+        "y": 185,
+        "width": 340,
+        "height": 302.296875,
+        "right": 1370,
+        "bottom": 487.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 70,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 223.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 573.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 740.890625,
+          "y": 221.34375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 850.875,
+          "bottom": 265.34375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 858.875,
+          "y": 221.34375,
+          "width": 115.125,
+          "height": 44,
+          "right": 974,
+          "bottom": 265.34375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 634,
+        "height": 154.1875,
+        "right": 664,
+        "bottom": 339.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 332.890625,
+        "height": 106.1875,
+        "right": 386.890625,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 406.890625,
+        "y": 240.09375,
+        "width": 233.109375,
+        "height": 44,
+        "right": 640,
+        "bottom": 284.09375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 493.140625,
+        "right": 664,
+        "bottom": 856.328125
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 754.328125,
+        "width": 634,
+        "height": 102,
+        "right": 664,
+        "bottom": 856.328125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 375.140625,
+        "right": 664,
+        "bottom": 738.328125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 770.328125,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 840.328125
+        }
+      ],
+      "price": {
+        "x": 694,
+        "y": 185,
+        "width": 300,
+        "height": 290.296875,
+        "right": 994,
+        "bottom": 475.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 405.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 406.890625,
+          "y": 240.09375,
+          "width": 109.984375,
+          "height": 44,
+          "right": 516.875,
+          "bottom": 284.09375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 524.875,
+          "y": 240.09375,
+          "width": 115.125,
+          "height": 44,
+          "right": 640,
+          "bottom": 284.09375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 634,
+        "height": 154.1875,
+        "right": 664,
+        "bottom": 339.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 275.671875,
+        "height": 106.1875,
+        "right": 329.671875,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 349.671875,
+        "y": 240.09375,
+        "width": 290.328125,
+        "height": 44,
+        "right": 640,
+        "bottom": 284.09375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 493.140625,
+        "right": 664,
+        "bottom": 856.328125
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 754.328125,
+        "width": 634,
+        "height": 102,
+        "right": 664,
+        "bottom": 856.328125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 363.1875,
+        "width": 634,
+        "height": 375.140625,
+        "right": 664,
+        "bottom": 738.328125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 770.328125,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 840.328125
+        }
+      ],
+      "price": {
+        "x": 694,
+        "y": 185,
+        "width": 300,
+        "height": 290.296875,
+        "right": 994,
+        "bottom": 475.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 405.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 349.671875,
+          "y": 240.09375,
+          "width": 94,
+          "height": 44,
+          "right": 443.671875,
+          "bottom": 284.09375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 451.671875,
+          "y": 240.09375,
+          "width": 188.328125,
+          "height": 44,
+          "right": 640,
+          "bottom": 284.09375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 413,
+        "height": 214.1875,
+        "right": 443,
+        "bottom": 399.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 365,
+        "height": 106.1875,
+        "right": 419,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 185.890625,
+        "y": 331.1875,
+        "width": 233.109375,
+        "height": 44,
+        "right": 419,
+        "bottom": 375.1875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 362.375,
+        "right": 443,
+        "bottom": 785.5625
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 683.5625,
+        "width": 413,
+        "height": 102,
+        "right": 443,
+        "bottom": 785.5625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 244.375,
+        "right": 443,
+        "bottom": 667.5625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 699.5625,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 769.5625
+        }
+      ],
+      "price": {
+        "x": 468,
+        "y": 185,
+        "width": 270,
+        "height": 274.296875,
+        "right": 738,
+        "bottom": 459.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 277.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 185.890625,
+          "y": 331.1875,
+          "width": 109.984375,
+          "height": 44,
+          "right": 295.875,
+          "bottom": 375.1875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 303.875,
+          "y": 331.1875,
+          "width": 115.125,
+          "height": 44,
+          "right": 419,
+          "bottom": 375.1875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 185,
+        "width": 413,
+        "height": 214.1875,
+        "right": 443,
+        "bottom": 399.1875
+      },
+      "titleBounds": {
+        "x": 54,
+        "y": 209,
+        "width": 365,
+        "height": 106.1875,
+        "right": 419,
+        "bottom": 315.1875
+      },
+      "actionBounds": {
+        "x": 128.671875,
+        "y": 331.1875,
+        "width": 290.328125,
+        "height": 44,
+        "right": 419,
+        "bottom": 375.1875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 362.375,
+        "right": 443,
+        "bottom": 785.5625
+      },
+      "thumbnailTray": {
+        "x": 30,
+        "y": 683.5625,
+        "width": 413,
+        "height": 102,
+        "right": 443,
+        "bottom": 785.5625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 30,
+        "y": 423.1875,
+        "width": 413,
+        "height": 244.375,
+        "right": 443,
+        "bottom": 667.5625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 46,
+          "y": 699.5625,
+          "width": 106,
+          "height": 70,
+          "right": 152,
+          "bottom": 769.5625
+        }
+      ],
+      "price": {
+        "x": 468,
+        "y": 185,
+        "width": 270,
+        "height": 274.296875,
+        "right": 738,
+        "bottom": 459.296875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 30,
+        "y": 125,
+        "width": 153.71875,
+        "height": 44,
+        "right": 183.71875,
+        "bottom": 169,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 277.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 128.671875,
+          "y": 331.1875,
+          "width": 94,
+          "height": 44,
+          "right": 222.671875,
+          "bottom": 375.1875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 230.671875,
+          "y": 331.1875,
+          "width": 188.328125,
+          "height": 44,
+          "right": 419,
+          "bottom": 375.1875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 208.6875,
+        "right": 374,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 318,
+        "height": 108.6875,
+        "right": 354,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 318,
+        "height": 44,
+        "right": 354,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 358.703125,
+        "right": 374,
+        "bottom": 994.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 907.890625,
+        "width": 358,
+        "height": 87,
+        "right": 374,
+        "bottom": 994.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 255.703125,
+        "right": 374,
+        "bottom": 891.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 923.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 978.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 358,
+        "height": 218.5,
+        "right": 374,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 102.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 151.625,
+          "height": 44,
+          "right": 187.625,
+          "bottom": 349.6875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.625,
+          "y": 305.6875,
+          "width": 156.390625,
+          "height": 44,
+          "right": 354.015625,
+          "bottom": 349.6875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 358,
+        "height": 208.6875,
+        "right": 374,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 318,
+        "height": 108.6875,
+        "right": 354,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 318,
+        "height": 44,
+        "right": 354,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 358.703125,
+        "right": 374,
+        "bottom": 994.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 907.890625,
+        "width": 358,
+        "height": 87,
+        "right": 374,
+        "bottom": 994.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 358,
+        "height": 255.703125,
+        "right": 374,
+        "bottom": 891.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 923.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 978.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 358,
+        "height": 218.5,
+        "right": 374,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 102.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 110.203125,
+          "height": 44,
+          "right": 146.203125,
+          "bottom": 349.6875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 305.6875,
+          "width": 197.796875,
+          "height": 44,
+          "right": 354,
+          "bottom": 349.6875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 247.4375,
+        "right": 304,
+        "bottom": 408.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 147.4375,
+        "right": 284,
+        "bottom": 328.4375
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 344.4375,
+        "width": 248,
+        "height": 44,
+        "right": 284,
+        "bottom": 388.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 674.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 983.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 896.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 983.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 674.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 880.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 912.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 967.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 432.4375,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 650.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 344.4375,
+          "width": 116.625,
+          "height": 44,
+          "right": 152.625,
+          "bottom": 388.4375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 344.4375,
+          "width": 121.390625,
+          "height": 44,
+          "right": 284.015625,
+          "bottom": 388.4375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 301.4375,
+        "right": 304,
+        "bottom": 462.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 147.4375,
+        "right": 284,
+        "bottom": 328.4375
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 344.4375,
+        "width": 248,
+        "height": 98,
+        "right": 284,
+        "bottom": 442.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 728.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1037.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 950.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1037.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 728.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 934.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 966.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1021.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 486.4375,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 704.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 344.4375,
+          "width": 248,
+          "height": 44,
+          "right": 284,
+          "bottom": 388.4375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 398.4375,
+          "width": 248,
+          "height": 44,
+          "right": 284,
+          "bottom": 442.4375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 176.1875,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 682.25
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 196.1875,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 482.96875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 498.96875,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 662.25
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1440.453125
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1353.453125,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1440.453125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1337.453125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1369.453125,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1424.453125
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 706.25,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1107.75
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 249.4375,
+        "height": 59.1875,
+        "right": 265.4375,
+        "bottom": 160.1875,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 19.28125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 498.96875,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 558.0625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 568.0625,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 662.25,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "phase": "Back to saved cars",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 215.375,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 721.4375
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 235.375,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 522.15625
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 538.15625,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 701.4375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1170.9375,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1479.640625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1392.640625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1479.640625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1170.9375,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1376.640625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1408.640625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1463.640625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 745.4375,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1146.9375
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 288,
+        "height": 98.375,
+        "right": 304,
+        "bottom": 199.375,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to saved cars",
+        "href": "/favorites/",
+        "centerDifference": 0,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 538.15625,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 597.25,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 607.25,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 701.4375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "phase": "Back to home",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 176.1875,
+        "width": 288,
+        "height": 506.0625,
+        "right": 304,
+        "bottom": 682.25
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 196.1875,
+        "width": 248,
+        "height": 286.78125,
+        "right": 284,
+        "bottom": 482.96875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 498.96875,
+        "width": 248,
+        "height": 163.28125,
+        "right": 284,
+        "bottom": 662.25
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 1440.453125
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 1353.453125,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 1440.453125,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 1131.75,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 1337.453125
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 1369.453125,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 1424.453125
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 706.25,
+        "width": 288,
+        "height": 401.5,
+        "right": 304,
+        "bottom": 1107.75
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 235.890625,
+        "height": 59.1875,
+        "right": 251.890625,
+        "bottom": 160.1875,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to home",
+        "href": "/",
+        "centerDifference": 26.0546875,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 498.96875,
+          "width": 248,
+          "height": 59.09375,
+          "right": 284,
+          "bottom": 558.0625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 36,
+          "y": 568.0625,
+          "width": 248,
+          "height": 94.1875,
+          "right": 284,
+          "bottom": 662.25,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "multi-photo",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 161,
+        "width": 288,
+        "height": 208.6875,
+        "right": 304,
+        "bottom": 369.6875
+      },
+      "titleBounds": {
+        "x": 36,
+        "y": 181,
+        "width": 248,
+        "height": 108.6875,
+        "right": 284,
+        "bottom": 289.6875
+      },
+      "actionBounds": {
+        "x": 36,
+        "y": 305.6875,
+        "width": 248,
+        "height": 44,
+        "right": 284,
+        "bottom": 349.6875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 288,
+        "height": 308.703125,
+        "right": 304,
+        "bottom": 944.890625
+      },
+      "thumbnailTray": {
+        "x": 16,
+        "y": 857.890625,
+        "width": 288,
+        "height": 87,
+        "right": 304,
+        "bottom": 944.890625,
+        "background": "rgb(255, 255, 255)",
+        "radius": "16px",
+        "overflow": "auto"
+      },
+      "mainPhoto": {
+        "x": 16,
+        "y": 636.1875,
+        "width": 288,
+        "height": 205.703125,
+        "right": 304,
+        "bottom": 841.890625
+      },
+      "thumbnails": [
+        {
+          "loaded": true,
+          "x": 32,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 113,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 127,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 208,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 222,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 303,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 317,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 398,
+          "bottom": 928.890625
+        },
+        {
+          "loaded": true,
+          "x": 412,
+          "y": 873.890625,
+          "width": 81,
+          "height": 55,
+          "right": 493,
+          "bottom": 928.890625
+        }
+      ],
+      "price": {
+        "x": 16,
+        "y": 393.6875,
+        "width": 288,
+        "height": 218.5,
+        "right": 304,
+        "bottom": 612.1875
+      },
+      "sampleCaptions": 0,
+      "navigation": {
+        "x": 16,
+        "y": 101,
+        "width": 153.71875,
+        "height": 44,
+        "right": 169.71875,
+        "bottom": 145,
+        "background": "rgb(255, 255, 255)",
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 67.140625,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 36,
+          "y": 305.6875,
+          "width": 116.625,
+          "height": 44,
+          "right": 152.625,
+          "bottom": 349.6875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 305.6875,
+          "width": 121.390625,
+          "height": 44,
+          "right": 284.015625,
+          "bottom": 349.6875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    }
+  ],
+  "galleries": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "photos": 5,
+      "next": "Updates image and selection",
+      "keyboard": "Last thumbnail scrolls into the white tray with a visible focus ring",
+      "lightbox": "Selected photo and Escape close"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "photos": 5,
+      "next": "Updates image and selection",
+      "keyboard": "Last thumbnail scrolls into the white tray with a visible focus ring",
+      "lightbox": "Selected photo and Escape close"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "photos": 5,
+      "next": "Updates image and selection",
+      "keyboard": "Last thumbnail scrolls into the white tray with a visible focus ring",
+      "lightbox": "Selected photo and Escape close"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "photos": 5,
+      "next": "Updates image and selection",
+      "keyboard": "Last thumbnail scrolls into the white tray with a visible focus ring",
+      "lightbox": "Selected photo and Escape close"
+    }
+  ],
+  "catalogue": [],
+  "supporting": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/about/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/contact/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": "Preview enquiry"
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/compare/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/about/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": "Preview enquiry"
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/compare/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/about/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/contact/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": "Preview enquiry"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/compare/",
+      "documentWidth": 1440,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/about/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/contact/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": "Preview enquiry"
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/compare/",
+      "documentWidth": 320,
+      "decorativeCopy": "Clean",
+      "footerDisclosure": "One",
+      "contactPreview": null
+    }
+  ],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle, honest local preview response and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle, honest local preview response and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle, honest local preview response and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle, honest local preview response and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/pages/VehicleDetail.svelte": "05440fecda45d9d58ab871d1a3fa3a27cfbcd2092317ce1fbaa28040c63eb5dc",
+    "src/styles.css": "6112aaf2fe45b400a898caa931db9dd86c79746999b668549c32e83ddcb42e13",
+    "src/inner-pages.css": "4de1c229636e61f8313ca471e70a47ee1df65fc7ea53ce41f78c76d207ce19f4",
+    "src/components/Header.svelte": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5",
+    "src/pages/Contact.svelte": "cc8a5581f5ce9afb2d58ea14746c2b9f467e44d908c87f41723236f4cdd3c577",
+    "src/pages/About.svelte": "f797e85d161b77f8fb3053798d537ec8481b6d9701109961b4330e1ee04e5429",
+    "src/pages/Compare.svelte": "dcddbda96aab2a819e9a6b587851e3dcfbfaac09cf9ffa6cccbf351836b808c1",
+    "src/components/Footer.svelte": "e99a7c3b93e8c97ddc80b88be8bd58896eb1e43b7a39ccd0b22c358a08250bea",
+    "src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "src/data/brand.ts": "7648b4c7cc6afc15b640c35075c1b9c43b673e7698ac4f428bcc05ddc37d3a66",
+    "src/reference/CuratedHome.svelte": "3d94afebfcfe6f4a9e461cbc712bcc0680c5cc6e53d2ebac1d665504390a87f8"
+  },
+  "unchangedHomeSources": [
+    "src/reference/CuratedServices.svelte",
+    "public/reference/curated.css",
+    "public/media/services/boxcar-browse-v1.webp",
+    "public/media/services/boxcar-sell-v1.webp",
+    "public/media/services/boxcar-compare-v1.webp",
+    "public/media/services/boxcar-budget-v1.webp",
+    "src/reference/Home1.svelte",
+    "src/reference/Home2.svelte",
+    "src/reference/Home3.svelte",
+    "src/reference/Home4.svelte",
+    "src/reference/Home5.svelte",
+    "src/reference/Home6.svelte",
+    "src/reference/Home7.svelte",
+    "src/reference/Home8.svelte",
+    "src/reference/Home9.svelte",
+    "src/reference/Home10.svelte"
+  ],
+  "priorFullResults": "compact-pdp-results.json",
+  "status": "passed"
+}

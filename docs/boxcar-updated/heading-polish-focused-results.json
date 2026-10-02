@@ -1,0 +1,1554 @@
+{
+  "checkedAt": "2026-10-02T16:54:20.007Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 104.859375,
+          "height": 48,
+          "right": 204.859375,
+          "bottom": 377.359375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 216.859375,
+          "y": 329.359375,
+          "width": 205.921875,
+          "height": 48,
+          "right": 422.78125,
+          "bottom": 377.359375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 430.71875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 382.71875,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 430.71875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 430.71875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 382.71875,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 430.71875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 414.78125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 366.78125,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 414.78125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 414.78125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 366.78125,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 414.78125,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 147.609375,
+          "height": 48,
+          "right": 187.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.609375,
+          "y": 307.90625,
+          "width": 152.390625,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 106.203125,
+          "height": 48,
+          "right": 146.203125,
+          "bottom": 355.90625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 307.90625,
+          "width": 193.796875,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 318.859375,
+        "right": 304,
+        "bottom": 473.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 780.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1065.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 497.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 756.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 401.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 449.859375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 164.59375,
+        "width": 288,
+        "height": 516.296875,
+        "right": 304,
+        "bottom": 680.890625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1231.984375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1516.6875
+      },
+      "price": {
+        "x": 16,
+        "y": 704.890625,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1207.984375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 493.609375,
+          "width": 240,
+          "height": 59.09375,
+          "right": 280,
+          "bottom": 552.703125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 562.703125,
+          "width": 240,
+          "height": 94.1875,
+          "right": 280,
+          "bottom": 656.890625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 104.859375,
+          "height": 48,
+          "right": 204.859375,
+          "bottom": 377.359375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 216.859375,
+          "y": 329.359375,
+          "width": 205.921875,
+          "height": 48,
+          "right": 422.78125,
+          "bottom": 377.359375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 430.71875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 382.71875,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 430.71875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 430.71875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 382.71875,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 430.71875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 414.78125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 366.78125,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 414.78125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 414.78125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 366.78125,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 414.78125,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 147.625,
+          "height": 48,
+          "right": 187.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.625,
+          "y": 307.90625,
+          "width": 152.390625,
+          "height": 48,
+          "right": 350.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 106.203125,
+          "height": 48,
+          "right": 146.203125,
+          "bottom": 355.90625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 307.90625,
+          "width": 193.796875,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 318.859375,
+        "right": 304,
+        "bottom": 473.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 780.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1065.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 497.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 756.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 401.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 449.859375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 164.59375,
+        "width": 288,
+        "height": 516.296875,
+        "right": 304,
+        "bottom": 680.890625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1231.984375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1516.6875
+      },
+      "price": {
+        "x": 16,
+        "y": 704.890625,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1207.984375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 493.609375,
+          "width": 240,
+          "height": 59.09375,
+          "right": 280,
+          "bottom": 552.703125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 562.703125,
+          "width": 240,
+          "height": 94.1875,
+          "right": 280,
+          "bottom": 656.890625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    }
+  ],
+  "catalogue": [],
+  "supporting": [],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/pages/VehicleDetail.svelte": "b98f6e5ceca888decfd657d24bcafe5d82a1ebaa57063ba8794aa12c2eead63e",
+    "src/styles.css": "f8db1eefe03ed034918ccb988e63a260fdff4fdde909f5abe0e5697d765be223",
+    "src/inner-pages.css": "4de1c229636e61f8313ca471e70a47ee1df65fc7ea53ce41f78c76d207ce19f4",
+    "src/components/Header.svelte": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5",
+    "src/pages/Contact.svelte": "01c18ffad910dfcc78bde5697890df588c36f960d2722efa055b8b039fa5f227",
+    "src/pages/About.svelte": "1dc0f23c5acba6da47a356f6f89c96b37c1c6417e997c792d158552f851cebc0"
+  },
+  "unchangedHomeSources": [
+    "src/reference/CuratedHome.svelte",
+    "src/reference/CuratedServices.svelte",
+    "public/reference/curated.css",
+    "public/media/services/boxcar-browse-v1.webp",
+    "public/media/services/boxcar-sell-v1.webp",
+    "public/media/services/boxcar-compare-v1.webp",
+    "public/media/services/boxcar-budget-v1.webp",
+    "src/reference/Home1.svelte",
+    "src/reference/Home2.svelte",
+    "src/reference/Home3.svelte",
+    "src/reference/Home4.svelte",
+    "src/reference/Home5.svelte",
+    "src/reference/Home6.svelte",
+    "src/reference/Home7.svelte",
+    "src/reference/Home8.svelte",
+    "src/reference/Home9.svelte",
+    "src/reference/Home10.svelte"
+  ],
+  "priorFullResults": "heading-polish-results.json",
+  "status": "passed"
+}

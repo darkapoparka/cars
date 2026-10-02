@@ -1,0 +1,78 @@
+{
+  "reviewedAt": "2026-10-02",
+  "route": "/vehicle/<slug>/",
+  "sourceEdition": "Boxcar HTML public preview",
+  "sourceIndex": "https://creativelayers.net/themes/boxcar-html/",
+  "reviewedLayouts": [
+    {
+      "variant": 1,
+      "url": "https://creativelayers.net/themes/boxcar-html/inventory-page-single.html",
+      "composition": "Title and price above a wide gallery collage."
+    },
+    {
+      "variant": 2,
+      "url": "https://creativelayers.net/themes/boxcar-html/inventory-page-single-v2.html",
+      "composition": "Large gallery on the left and purchase/dealer cards on the right."
+    },
+    {
+      "variant": 3,
+      "url": "https://creativelayers.net/themes/boxcar-html/inventory-page-single-v3.html",
+      "composition": "Photo on the left, title/price and a long divided overview on the right."
+    },
+    {
+      "variant": 4,
+      "url": "https://creativelayers.net/themes/boxcar-html/inventory-page-single-v4.html",
+      "composition": "Grey canvas with white content cards and a right purchase/overview column."
+    },
+    {
+      "variant": 5,
+      "url": "https://creativelayers.net/themes/boxcar-html/inventory-page-single-v5.html",
+      "composition": "Wide photographic carousel with the title beneath it."
+    }
+  ],
+  "selection": {
+    "surfaceReference": 4,
+    "reason": "White grouped cards on a soft grey canvas match the requested reduction of separator lines. The existing left gallery and separate purchase/showroom sidebar work with one-photo samples and keep vehicle enquiry close to the photo.",
+    "method": "Visual review of all five author demos, then direct adaptation of the existing Svelte PDP. No claim of a complete V4 DOM clone.",
+    "originalImport": "The existing reference archive contains the first Inventory Single layout. The prior template documentation described the working PDP as adapted Svelte; it did not record a best-of-five selection.",
+    "sections": [
+      "Compact white title card with Save/Compare on the right at desktop widths, gallery-column width and top alignment with purchase card",
+      "Vehicle gallery and a separate rounded white thumbnail tray with contained horizontal scrolling",
+      "White overview card with responsive specifications",
+      "White description card",
+      "White feature card",
+      "Separate white purchase and showroom cards on desktop",
+      "Showroom after features on phones",
+      "White finance card with grey fields/result",
+      "White related-car cards with grey specification groups"
+    ],
+    "preserved": [
+      "Configured identity and illustrative showroom artwork",
+      "Local enquiry preview and dialog focus restoration",
+      "Vehicle price passed to calculator",
+      "Viewing intent passed to contact",
+      "Gallery controls and native saved/compare state",
+      "White Back button above the title retains filtered inventory, saved and home return URLs",
+      "Sample information is consolidated in the footer; enquiry actions still describe their local preview behavior",
+      "Curated homepage service cards and ten original homepage references"
+    ]
+  },
+  "sourceFiles": [
+    "src/pages/VehicleDetail.svelte",
+    "src/styles.css",
+    "src/inner-pages.css"
+  ],
+  "evidence": [
+    "docs/boxcar-updated/COPY-NAVIGATION.md",
+    "docs/boxcar-updated/copy-navigation-results.json",
+    "docs/boxcar-updated/COMPACT-PDP.md",
+    "docs/boxcar-updated/compact-pdp-results.json",
+    "docs/boxcar-updated/PDP-SURFACES.md",
+    "docs/boxcar-updated/HEADING-POLISH.md",
+    "docs/boxcar-updated/heading-polish-results.json",
+    "docs/boxcar-updated/heading-polish-focused-results.json",
+    "docs/boxcar-updated/pdp-surfaces-results.json",
+    "docs/boxcar-updated/pdp-catalogue-results.json"
+  ],
+  "status": "Local candidate polish; owner visual acceptance and approved template release remain separate."
+}

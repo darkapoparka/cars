@@ -34,7 +34,7 @@
     ],
     [
       "How do I arrange a viewing?",
-      "Open Contact and prepare an enquiry about the car you have in mind. This demonstration previews the message; it does not send it or book a viewing.",
+      "Open Contact and prepare an enquiry with the car's make and model and your preferred visiting time.",
     ],
   ];
 </script>
@@ -114,7 +114,6 @@
         </div>
       </div>
     </div>
-    <p class="bc-gallery-note">Photographs from the Boxcar template preview.</p>
     <section class="why-choose-us-section" aria-labelledby="about-benefits">
       <div class="boxcar-title">
         <h2 id="about-benefits">A simpler way to find your next car</h2>

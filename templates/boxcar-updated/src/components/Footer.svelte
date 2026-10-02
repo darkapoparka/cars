@@ -16,7 +16,9 @@
           <img src={brand.logoLight} alt={brand.name} width="132" height="32" />
         </a>
         <p>{brand.tagline}</p>
-        <p>{brand.location}</p>
+        {#if brand.showroomMap?.address || brand.location}
+          <p>{brand.showroomMap?.address || brand.location}</p>
+        {/if}
       </div>
       <nav aria-label="Find a car">
         <h3>Find a car</h3>

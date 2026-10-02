@@ -11,6 +11,7 @@ export type ShowroomMap = {
   embedUrl: string;
   directionsUrl: string;
 };
+export type ShowroomBanner = { src: string; alt: string };
 
 export const brand = {
   name: "Boxcars",
@@ -22,8 +23,13 @@ export const brand = {
   formMode: "preview" as const,
   contactEmail: "hello@example.com",
   phone: "",
-  location: "Demo showroom",
+  location: "",
   hours: "Monday–Saturday, 9am–6pm",
+  // Generated demo concept. Replace with a permitted dealer photo or set null.
+  showroomBanner: {
+    src: "/media/showroom/boxcars-showroom-v1.webp",
+    alt: "Illustrative showroom concept with a white estate and a slate-blue SUV",
+  } as ShowroomBanner | null,
   // Add verified dealer details during personalization. Empty fields stay hidden.
   showroomMap: null as ShowroomMap | null,
   socialLinks: [] as SocialLink[],

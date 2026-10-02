@@ -1,0 +1,6751 @@
+{
+  "checkedAt": "2026-10-02T16:48:02.301Z",
+  "base": "http://127.0.0.1:6455",
+  "layouts": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 104.859375,
+          "height": 48,
+          "right": 204.859375,
+          "bottom": 377.359375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 216.859375,
+          "y": 329.359375,
+          "width": 205.921875,
+          "height": 48,
+          "right": 422.78125,
+          "bottom": 377.359375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 430.71875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 382.71875,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 430.71875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 430.71875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 382.71875,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 430.71875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 414.78125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 366.78125,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 414.78125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 414.78125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 366.78125,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 414.78125,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 147.609375,
+          "height": 48,
+          "right": 187.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.609375,
+          "y": 307.90625,
+          "width": 152.390625,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 106.203125,
+          "height": 48,
+          "right": 146.203125,
+          "bottom": 355.90625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 307.90625,
+          "width": 193.796875,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 318.859375,
+        "right": 304,
+        "bottom": 473.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 780.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1065.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 497.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 756.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 401.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 449.859375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 164.59375,
+        "width": 288,
+        "height": 636.90625,
+        "right": 304,
+        "bottom": 801.5
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1352.59375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1637.296875
+      },
+      "price": {
+        "x": 16,
+        "y": 825.5,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1328.59375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 614.21875,
+          "width": 240,
+          "height": 59.09375,
+          "right": 280,
+          "bottom": 673.3125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 683.3125,
+          "width": 240,
+          "height": 94.1875,
+          "right": 280,
+          "bottom": 777.5,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 104.859375,
+          "height": 48,
+          "right": 204.859375,
+          "bottom": 377.359375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 216.859375,
+          "y": 329.359375,
+          "width": 205.921875,
+          "height": 48,
+          "right": 422.78125,
+          "bottom": 377.359375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 430.71875,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 382.71875,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 430.71875,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 1024,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 634,
+        "height": 273.71875,
+        "right": 664,
+        "bottom": 460.71875
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 484.71875,
+        "width": 634,
+        "height": 469.140625,
+        "right": 664,
+        "bottom": 953.859375
+      },
+      "price": {
+        "x": 694,
+        "y": 187,
+        "width": 300,
+        "height": 318.6875,
+        "right": 994,
+        "bottom": 505.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 382.71875,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 430.71875,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 382.71875,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 430.71875,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 121.984375,
+          "height": 48,
+          "right": 181.984375,
+          "bottom": 414.78125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 193.984375,
+          "y": 366.78125,
+          "width": 127.484375,
+          "height": 48,
+          "right": 321.46875,
+          "bottom": 414.78125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 768,
+      "heading": {
+        "x": 30,
+        "y": 187,
+        "width": 413,
+        "height": 257.78125,
+        "right": 443,
+        "bottom": 444.78125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 30,
+        "y": 468.78125,
+        "width": 413,
+        "height": 338.375,
+        "right": 443,
+        "bottom": 807.15625
+      },
+      "price": {
+        "x": 468,
+        "y": 187,
+        "width": 270,
+        "height": 302.6875,
+        "right": 738,
+        "bottom": 489.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 60,
+          "y": 366.78125,
+          "width": 104.859375,
+          "height": 48,
+          "right": 164.859375,
+          "bottom": 414.78125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 176.859375,
+          "y": 366.78125,
+          "width": 205.921875,
+          "height": 48,
+          "right": 382.78125,
+          "bottom": 414.78125,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 147.625,
+          "height": 48,
+          "right": 187.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 197.625,
+          "y": 307.90625,
+          "width": 152.390625,
+          "height": 48,
+          "right": 350.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 390,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 358,
+        "height": 224.90625,
+        "right": 374,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 358,
+        "height": 334.703125,
+        "right": 374,
+        "bottom": 1021.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 358,
+        "height": 258.890625,
+        "right": 374,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 106.203125,
+          "height": 48,
+          "right": 146.203125,
+          "bottom": 355.90625,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 156.203125,
+          "y": 307.90625,
+          "width": 193.796875,
+          "height": 48,
+          "right": 350,
+          "bottom": 355.90625,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "default",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 318.859375,
+        "right": 304,
+        "bottom": 473.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 780.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1065.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 497.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 756.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 401.859375,
+          "width": 240,
+          "height": 48,
+          "right": 280,
+          "bottom": 449.859375,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 200,
+      "phase": "selected",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 164.59375,
+        "width": 288,
+        "height": 636.90625,
+        "right": 304,
+        "bottom": 801.5
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 1352.59375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1637.296875
+      },
+      "price": {
+        "x": 16,
+        "y": 825.5,
+        "width": 288,
+        "height": 503.09375,
+        "right": 304,
+        "bottom": 1328.59375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 614.21875,
+          "width": 240,
+          "height": 59.09375,
+          "right": 280,
+          "bottom": 673.3125,
+          "text": "Saved",
+          "pressed": "true",
+          "labelOverflow": false
+        },
+        {
+          "x": 40,
+          "y": 683.3125,
+          "width": 240,
+          "height": 94.1875,
+          "right": 280,
+          "bottom": 777.5,
+          "text": "Remove comparison",
+          "pressed": "true",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    }
+  ],
+  "catalogue": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bmw-8-series",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "BMW 8 Series",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-glc",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Silver",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-bronze",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "nissan-qashqai",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Nissan Qashqai",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-amber",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Amber",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-blue",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Blue",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "audi-a8",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A8",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "volvo-xc90-grey",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 — Grey",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "audi-a5-cabriolet",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A5 Cabriolet",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 281.890625,
+        "right": 1370,
+        "bottom": 468.890625
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-evoque",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover Evoque",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mini-cooper",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "MINI Cooper",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 281.890625,
+        "right": 1370,
+        "bottom": 468.890625
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-blue",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Blue",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-s-class",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz S-Class",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "porsche-cayenne",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Porsche Cayenne",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-ocean",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Ocean",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-e-class",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz E-Class",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "volvo-xc90-recharge",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bmw-8-series",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "BMW 8 Series",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-glc",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Silver",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-bronze",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "nissan-qashqai",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Nissan Qashqai",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-amber",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Amber",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-blue",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Blue",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "audi-a8",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A8",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "volvo-xc90-grey",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 — Grey",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "audi-a5-cabriolet",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A5 Cabriolet",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-evoque",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover Evoque",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mini-cooper",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "MINI Cooper",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-blue",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Blue",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-s-class",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz S-Class",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "porsche-cayenne",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Porsche Cayenne",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-ocean",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Ocean",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-e-class",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz E-Class",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "textScale": 100,
+      "phase": "volvo-xc90-recharge",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.609375,
+          "height": 48,
+          "right": 152.609375,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.609375,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bmw-8-series",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "BMW 8 Series",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-glc",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Silver",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-bronze",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "nissan-qashqai",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Nissan Qashqai",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-amber",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Amber",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-blue",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Blue",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "audi-a8",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A8",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "volvo-xc90-grey",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 — Grey",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "audi-a5-cabriolet",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A5 Cabriolet",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 281.890625,
+        "right": 1370,
+        "bottom": 468.890625
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-evoque",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover Evoque",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mini-cooper",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "MINI Cooper",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 281.890625,
+        "right": 1370,
+        "bottom": 468.890625
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "bentley-bentayga-blue",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Blue",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-s-class",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz S-Class",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "porsche-cayenne",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Porsche Cayenne",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "range-rover-ocean",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Ocean",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "mercedes-e-class",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz E-Class",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "textScale": 100,
+      "phase": "volvo-xc90-recharge",
+      "documentWidth": 1440,
+      "heading": {
+        "x": 70,
+        "y": 187,
+        "width": 928,
+        "height": 220.359375,
+        "right": 998,
+        "bottom": 407.359375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 70,
+        "y": 431.359375,
+        "width": 928,
+        "height": 643.109375,
+        "right": 998,
+        "bottom": 1074.46875
+      },
+      "price": {
+        "x": 1030,
+        "y": 187,
+        "width": 340,
+        "height": 330.6875,
+        "right": 1370,
+        "bottom": 517.6875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 100,
+          "y": 329.359375,
+          "width": 121.984375,
+          "height": 48,
+          "right": 221.984375,
+          "bottom": 377.359375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 233.984375,
+          "y": 329.359375,
+          "width": 127.484375,
+          "height": 48,
+          "right": 361.46875,
+          "bottom": 377.359375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bmw-8-series",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "BMW 8 Series",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-glc",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Silver",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-bronze",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Bronze",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "nissan-qashqai",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Nissan Qashqai",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-amber",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Amber",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-blue",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Blue",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "audi-a8",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A8",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "volvo-xc90-grey",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 — Grey",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "audi-a5-cabriolet",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Audi A5 Cabriolet",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-evoque",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover Evoque",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mini-cooper",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 188.953125,
+        "right": 304,
+        "bottom": 343.953125
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "MINI Cooper",
+      "gallery": {
+        "x": 16,
+        "y": 650.84375,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 935.546875
+      },
+      "price": {
+        "x": 16,
+        "y": 367.953125,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 626.84375
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 271.953125,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 319.953125,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 271.953125,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 319.953125,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "bentley-bentayga-blue",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 260.859375,
+        "right": 304,
+        "bottom": 415.859375
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Bentley Bentayga — Blue",
+      "gallery": {
+        "x": 16,
+        "y": 722.75,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 1007.453125
+      },
+      "price": {
+        "x": 16,
+        "y": 439.859375,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 698.75
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 343.859375,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 391.859375,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 343.859375,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 391.859375,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-s-class",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz S-Class",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "porsche-cayenne",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Porsche Cayenne",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "range-rover-ocean",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Range Rover — Ocean",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "mercedes-e-class",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Mercedes-Benz E-Class",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "textScale": 100,
+      "phase": "volvo-xc90-recharge",
+      "documentWidth": 320,
+      "heading": {
+        "x": 16,
+        "y": 155,
+        "width": 288,
+        "height": 224.90625,
+        "right": 304,
+        "bottom": 379.90625
+      },
+      "headingBackground": "rgb(255, 255, 255)",
+      "headingBorder": "0px",
+      "title": "Volvo XC90 Recharge",
+      "gallery": {
+        "x": 16,
+        "y": 686.796875,
+        "width": 288,
+        "height": 284.703125,
+        "right": 304,
+        "bottom": 971.5
+      },
+      "price": {
+        "x": 16,
+        "y": 403.90625,
+        "width": 288,
+        "height": 258.890625,
+        "right": 304,
+        "bottom": 662.796875
+      },
+      "navigation": {
+        "text": "Back to results",
+        "href": "/inventory/",
+        "centerDifference": 0.0078125,
+        "items": 1
+      },
+      "actions": [
+        {
+          "x": 40,
+          "y": 307.90625,
+          "width": 112.625,
+          "height": 48,
+          "right": 152.625,
+          "bottom": 355.90625,
+          "text": "Save car",
+          "pressed": "false",
+          "labelOverflow": false
+        },
+        {
+          "x": 162.625,
+          "y": 307.90625,
+          "width": 117.390625,
+          "height": 48,
+          "right": 280.015625,
+          "bottom": 355.90625,
+          "text": "Compare",
+          "pressed": "false",
+          "labelOverflow": false
+        }
+      ],
+      "clipped": [],
+      "showrooms": 1,
+      "overlay": false
+    }
+  ],
+  "supporting": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0078125
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0078125
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 1024,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0078125
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 768,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0078125
+    },
+    {
+      "engine": "chromium",
+      "width": 390,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0078125
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/favorites/",
+      "title": "Your Saved Cars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/compare/",
+      "title": "Compare Cars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/calculator/",
+      "title": "Auto Loan Calculator",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/blog/",
+      "title": "Our Journal",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/faq/",
+      "title": "Frequently Asked Questions",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "route": "/terms/",
+      "title": "Terms & Privacy",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/favorites/",
+      "title": "Your Saved Cars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/compare/",
+      "title": "Compare Cars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/calculator/",
+      "title": "Auto Loan Calculator",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/blog/",
+      "title": "Our Journal",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/faq/",
+      "title": "Frequently Asked Questions",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "route": "/terms/",
+      "title": "Terms & Privacy",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 1024,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 1024,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0.0000152587890625
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 768,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 768,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 390,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 390,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/about/",
+      "title": "About Boxcars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/contact/",
+      "title": "Contact us",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/contact/?intent=sell",
+      "title": "Sell Your Car",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": 0
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/inventory/",
+      "title": "Cars for sale",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/favorites/",
+      "title": "Your Saved Cars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/compare/",
+      "title": "Compare Cars",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/calculator/",
+      "title": "Auto Loan Calculator",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/blog/",
+      "title": "Our Journal",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/faq/",
+      "title": "Frequently Asked Questions",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "route": "/terms/",
+      "title": "Terms & Privacy",
+      "documentWidth": 1440,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/favorites/",
+      "title": "Your Saved Cars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "center",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/compare/",
+      "title": "Compare Cars",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/calculator/",
+      "title": "Auto Loan Calculator",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/blog/",
+      "title": "Our Journal",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/faq/",
+      "title": "Frequently Asked Questions",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "route": "/terms/",
+      "title": "Terms & Privacy",
+      "documentWidth": 320,
+      "crumbCenterDifference": 0.0078125,
+      "titleAlign": "start",
+      "titleCenterDifference": null
+    }
+  ],
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "chromium",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    },
+    {
+      "engine": "webkit",
+      "width": 1440,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": null
+    },
+    {
+      "engine": "webkit",
+      "width": 320,
+      "back": "Filter context retained",
+      "enquiry": "Correct vehicle and focus restored",
+      "calculator": "Price retained",
+      "contact": "Viewing intent retained",
+      "gallery": "Open/Escape close",
+      "largeTextFinance": "Fits"
+    }
+  ],
+  "errors": [],
+  "sourceHashes": {
+    "src/pages/VehicleDetail.svelte": "b98f6e5ceca888decfd657d24bcafe5d82a1ebaa57063ba8794aa12c2eead63e",
+    "src/styles.css": "0dd808c0ffe836af4d913e74bf4230a36089646585bdd1a08c47d0f3eb3e0292",
+    "src/inner-pages.css": "4de1c229636e61f8313ca471e70a47ee1df65fc7ea53ce41f78c76d207ce19f4",
+    "src/components/Header.svelte": "9b035332ba2b6f43398f0b27391bd9cf08cf41ceff417b4418d206287daff2f5",
+    "src/pages/Contact.svelte": "01c18ffad910dfcc78bde5697890df588c36f960d2722efa055b8b039fa5f227",
+    "src/pages/About.svelte": "1dc0f23c5acba6da47a356f6f89c96b37c1c6417e997c792d158552f851cebc0"
+  },
+  "unchangedHomeSources": [
+    "src/reference/CuratedHome.svelte",
+    "src/reference/CuratedServices.svelte",
+    "public/reference/curated.css",
+    "public/media/services/boxcar-browse-v1.webp",
+    "public/media/services/boxcar-sell-v1.webp",
+    "public/media/services/boxcar-compare-v1.webp",
+    "public/media/services/boxcar-budget-v1.webp",
+    "src/reference/Home1.svelte",
+    "src/reference/Home2.svelte",
+    "src/reference/Home3.svelte",
+    "src/reference/Home4.svelte",
+    "src/reference/Home5.svelte",
+    "src/reference/Home6.svelte",
+    "src/reference/Home7.svelte",
+    "src/reference/Home8.svelte",
+    "src/reference/Home9.svelte",
+    "src/reference/Home10.svelte"
+  ],
+  "status": "passed"
+}

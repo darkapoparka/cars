@@ -106,7 +106,6 @@
         : "How can we help?"}
     ></textarea>
   </label>
-  <p class="fine-print">Demo enquiry · no message is sent.</p>
   <button class="button" type="submit">
     Preview enquiry <Icon name="arrow" size={20} />
   </button>
