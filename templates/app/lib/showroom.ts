@@ -50,7 +50,7 @@ export const showroom = {
     {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp'},
     {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp'},
   ],
-  // Enquiry origins chosen by the dealer; these are not overseas stock feeds.
+  // Countries used by the import listing filters and enquiry form.
   importCountries: [
     {code: 'DE', name: 'Germany'},
     {code: 'CA', name: 'Canada'},

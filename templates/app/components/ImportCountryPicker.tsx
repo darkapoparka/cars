@@ -1,28 +1,52 @@
 'use client';
 
-import {useId, useState} from 'react';
-import {ArrowRight, Globe2, X} from 'lucide-react';
+import {useId, useRef, useState} from 'react';
+import {ArrowRight, Search, X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {showroom} from '@/lib/showroom';
-import {dealer} from '@/lib/dealer-config';
+import {dealer, isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
+import {importListings, type ImportListing} from '@/lib/import-inventory';
+import VehicleCard from './VehicleCard';
 import DealerEnquirySheet from './DealerEnquirySheet';
 import {useModal} from './useModal';
+import {searchField} from './search-field.stylex';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
-/** Select an enquiry origin, then prepare a local draft for this dealer. */
+/** Search import listings, filter by country and prepare a local enquiry. */
 export default function ImportCountryPicker() {
   const tx = useCopy(), id = useId();
+  const searchInput = useRef<HTMLInputElement>(null);
+  const [query, setQuery] = useState('');
+  const [filterCountry, setFilterCountry] = useState('all');
+  const [selectedListing, setSelectedListing] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
   const [origin, setOrigin] = useState<string>(showroom.importCountries[0]?.code || 'other');
   const [details, setDetails] = useState({country: '',model: '',budget: '',listing: ''});
   const [enquiry, setEnquiry] = useState<string | null>(null);
   const country = showroom.importCountries.find(item => item.code === origin);
+  const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const visible = importListings.filter(listing => {
+    const vehicle = listing.vehicle;
+    const originName = showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode;
+    const terms = [vehicle.make, vehicle.model, vehicle.trim, String(vehicle.year), vehicle.fuel, originName].flatMap(term => [term, tx(term)]).join(' ').toLocaleLowerCase();
+    return (filterCountry === 'all' || filterCountry === listing.countryCode) && words.every(word => terms.includes(word));
+  });
   function close() {setEnquiry(null); setOpen(false);}
   const panel = useModal(open, close);
-  function choose(code: string) {setOrigin(code); setEnquiry(null); setOpen(true);}
+  function choose(listing: ImportListing) {
+    if (selectedListing !== listing.vehicle.slug) {
+      setSelectedListing(listing.vehicle.slug);
+      const knownCountry = showroom.importCountries.find(item => item.code === listing.countryCode);
+      setOrigin(knownCountry ? listing.countryCode : 'other');
+      setDetails({country: knownCountry ? '' : listing.countryCode, model: `${listing.vehicle.year} ${listing.vehicle.make} ${listing.vehicle.model}`, budget: String(listing.vehicle.price), listing: listing.vehicle.sourceUrl || ''});
+    }
+    setEnquiry(null); setOpen(true);
+  }
+  function clearSearch() {setQuery(''); searchInput.current?.focus();}
+  function showAll() {setFilterCountry('all'); clearSearch();}
   function update(field: keyof typeof details, value: string) {setDetails(previous => ({...previous,[field]: value}));}
   function prepare() {
     const lines = [tx('Country') + ': ' + (country ? tx(country.name) : details.country.trim())];
@@ -33,12 +57,19 @@ export default function ImportCountryPicker() {
   }
 
   return <>
-    <section data-import-countries aria-labelledby={id + '-heading'} {...stylex.props(s.discovery)}>
-      <h2 id={id + '-heading'} {...stylex.props(t.title)}>{tx('Import to order')}</h2>
+    <section data-import-countries aria-label={tx('Import cars')} {...stylex.props(s.discovery)}>
+      <div role="search"><div data-search-field {...stylex.props(searchField.field,s.search)}>
+        <Search aria-hidden="true" {...stylex.props(searchField.icon)}/>
+        <input ref={searchInput} type="search" aria-label={tx('Search import cars')} placeholder={tx(showroom.mobileSearchPlaceholder)} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input,s.searchInput)}/>
+        <span aria-hidden="true" {...stylex.props(searchField.count)}>({visible.length})</span>
+        {query ? <button type="button" aria-label={tx('Clear search')} onClick={clearSearch} {...stylex.props(searchField.clear,s.clear)}><X size={18} aria-hidden="true"/></button> : null}
+      </div></div>
       <div role="group" aria-label={tx('Import country')} {...stylex.props(s.pills)}>
-        {showroom.importCountries.map(item => <button key={item.code} type="button" aria-label={tx('Import from') + ' ' + tx(item.name)} aria-haspopup="dialog" aria-controls={id + '-dialog'} aria-expanded={open && origin === item.code} onClick={() => choose(item.code)} {...stylex.props(s.pill,t.caption)}>{tx(item.name)}</button>)}
-        <button type="button" aria-haspopup="dialog" aria-controls={id + '-dialog'} aria-expanded={open && origin === 'other'} onClick={() => choose('other')} {...stylex.props(s.pill,t.caption)}><Globe2 size={16} aria-hidden="true"/>{tx('Other country')}</button>
+        {[{code: 'all', name: 'All'}, ...showroom.importCountries].map(item => <button key={item.code} type="button" aria-pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)} {...stylex.props(s.pill,t.caption,filterCountry === item.code && s.selectedPill)}>{tx(item.name)}</button>)}
       </div>
+      <div {...stylex.props(s.resultsHeader)}><h2 {...stylex.props(t.title)}>{tx('Import cars')}</h2>{!isDealer ? <span {...stylex.props(s.demo,t.caption)}>{tx('Demo listings')}</span> : null}</div>
+      <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
+      {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
     </section>
     {open ? <div {...stylex.props(s.backdrop)} onMouseDown={event => event.target === event.currentTarget && close()}>
       <section id={id + '-dialog'} ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby={id + '-title'} {...stylex.props(s.sheet)}>
@@ -58,9 +89,19 @@ export default function ImportCountryPicker() {
 }
 
 const s = stylex.create({
-  discovery: {marginTop: 24,color: $.ink},
-  pills: {display: 'flex',flexWrap: 'wrap',gap: 8,marginTop: 12},
-  pill: {display: 'inline-flex',alignItems: 'center',justifyContent: 'center',gap: 6,minHeight: 44,padding: '10px 14px',color: $.ink,borderWidth: 1,borderStyle: 'solid',borderColor: '#e6e6e9',borderRadius: 30,backgroundColor: {default: '#f5f5f6',':hover': '#eaeaec'},cursor: 'pointer'},
+  discovery: {marginTop: {[media.mobile]: 16,default: 24},color: $.ink,minWidth: 0},
+  search: {minHeight: 48,outline: {default: 'none',':focus-within': '2px solid #242428'},outlineOffset: 2},
+  searchInput: {minHeight: 44,appearance: {default: 'auto','::-webkit-search-cancel-button': 'none'}},
+  clear: {width: 44,height: 44},
+  pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',marginTop: 8,paddingBlock: 3,scrollbarWidth: 'none'},
+  pill: {display: 'inline-flex',alignItems: 'center',justifyContent: 'center',flexShrink: 0,minHeight: 44,padding: '10px 14px',color: $.ink,borderWidth: 1,borderStyle: 'solid',borderColor: '#e6e6e9',borderRadius: 30,backgroundColor: {default: '#f5f5f6',':hover': '#eaeaec'},cursor: 'pointer',outline: {default: 'none',':focus-visible': '2px solid #242428'},outlineOffset: -3},
+  selectedPill: {color: '#fff',borderColor: $.ink,backgroundColor: {default: $.ink,':hover': '#353539'},outlineColor: {':focus-visible': '#fff'}},
+  resultsHeader: {display: 'flex',alignItems: 'center',justifyContent: 'space-between',gap: 12,marginTop: 18,marginBottom: 12},
+  demo: {padding: '3px 8px',color: $.muted,borderRadius: 6,backgroundColor: '#f2f2f4'},
+  listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: 12},
+  empty: {display: 'grid',justifyItems: 'start',gap: 12,padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
+  reset: {display: 'inline-flex',alignItems: 'center',gap: 8,minHeight: 44,padding: '8px 12px',color: '#fff',borderWidth: 0,borderRadius: 12,backgroundColor: $.ink,cursor: 'pointer'},
+  srOnly: {position: 'absolute',width: 1,height: 1,padding: 0,margin: -1,overflow: 'hidden',clip: 'rect(0,0,0,0)',whiteSpace: 'nowrap',borderWidth: 0},
   backdrop: {position: 'fixed',inset: 0,zIndex: 240,display: 'flex',alignItems: {[media.mobile]: 'flex-end',default: 'center'},justifyContent: 'center',padding: {[media.mobile]: 0,default: 24},backgroundColor: 'rgba(0,0,0,.48)'},
   sheet: {width: '100%',maxWidth: 560,maxHeight: '92dvh',overflowY: 'auto',padding: {[media.mobile]: '20px 20px calc(24px + env(safe-area-inset-bottom))',default: 28},color: $.ink,backgroundColor: '#fff',borderRadius: 24,outlineStyle: 'none'},
   header: {display: 'flex',alignItems: 'center',justifyContent: 'space-between',gap: 12},
