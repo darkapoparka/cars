@@ -22,10 +22,10 @@ export default function VehicleVisitBanner() {
 }
 
 const s = stylex.create({
-  banner: {display:'flex',alignItems:'center',position:'relative',isolation:'isolate',minHeight:{[media.mobile]:140,default:180},overflow:'hidden',borderRadius:20,fontFamily:$.fontSans,color:$.surface,backgroundColor:campaign.surface,outlineOffset:3},
-  image: {position:'absolute',right:0,bottom:0,height:'100%',width:'auto',maxWidth:'none',maskImage:'linear-gradient(to right,transparent,#000 35%)'},
-  copy: {position:'relative',zIndex:1,width:'100%',padding:16},
-  title: {maxWidth:'70%',fontSize:{[media.mobile]:20,default:26},fontWeight:600,lineHeight:1.2,textWrap:'balance'},
-  description: {maxWidth:'62%',marginTop:6,color:campaign.muted,fontSize:13,lineHeight:'19px'},
-  action: {display:'inline-flex',alignItems:'center',gap:6,minHeight:36,marginTop:10,padding:'6px 12px',color:campaign.actionText,fontSize:13,fontWeight:600,lineHeight:'20px',borderRadius:10,backgroundColor:$.surface},
+  banner: {display:'flex',alignItems:'center',position:'relative',isolation:'isolate',minHeight:{[media.mobile]:0,default:180},overflow:'hidden',borderRadius:20,fontFamily:$.fontSans,color:$.surface,backgroundColor:campaign.surface,outlineOffset:3},
+  image: {position:'absolute',right:0,bottom:0,height:{[media.mobile]:'auto',default:'100%'},width:{[media.mobile]:'100%',default:'auto'},maxWidth:'none',maskImage:'linear-gradient(to right,transparent,#000 35%)'},
+  copy: {position:'relative',zIndex:1,width:'100%',padding:18},
+  title: {maxWidth:'75%',fontSize:{[media.mobile]:24,default:26},fontWeight:600,lineHeight:1.2,textWrap:'pretty'},
+  description: {maxWidth:'65%',marginTop:8,color:campaign.muted,fontSize:15,lineHeight:1.4},
+  action: {display:'inline-flex',alignItems:'center',gap:8,minHeight:44,marginTop:16,padding:'10px 18px',color:campaign.actionText,fontSize:16,fontWeight:500,lineHeight:1.4,borderRadius:30,backgroundColor:$.surface},
 });

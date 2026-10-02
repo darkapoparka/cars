@@ -32,17 +32,17 @@ export default function BrandCampaign({kind, onAction}: {kind: Kind; onAction?: 
   </section>;
 }
 const s = stylex.create({
-  campaign: {position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', width: '100%', aspectRatio: {[media.mobile]: 'auto', default: '1'}, minHeight: 350, maxWidth: 680, marginInline: 'auto', marginTop: 28, overflow: 'hidden', borderRadius: 20, color: '#fff', backgroundColor: theme.surface},
-  wide: {aspectRatio: {[media.mobile]: 'auto', default: '2'}, minHeight: 220, maxWidth: 'none'},
+  campaign: {position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', width: '100%', aspectRatio: '1', minHeight: {[media.mobile]: 0, default: 350}, maxWidth: 680, marginInline: 'auto', marginTop: 28, overflow: 'hidden', borderRadius: 20, color: '#fff', backgroundColor: theme.surface},
+  wide: {aspectRatio: {[media.mobile]: 'auto', default: '2'}, minHeight: {[media.mobile]: 0, default: 220}, maxWidth: 'none'},
   art: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},
   copy: {position: 'relative', zIndex: 1, padding: {[media.mobile]: 20, default: 32}},
   sellCopy: {marginTop: 'auto'},
   financeCopy: {padding: {[media.mobile]: 18, default: 28}},
   brand: {fontSize: 12, fontWeight: 600, letterSpacing: '.03em'},
-  title: {maxWidth: 440, marginTop: 8, fontSize: {[media.mobile]: 23, default: 32}, fontWeight: 650, lineHeight: 1.12, letterSpacing: '-.025em', overflowWrap: 'anywhere'},
-  description: {maxWidth: 350, marginTop: 9, color: theme.muted, fontSize: {[media.mobile]: 13, default: 16}, lineHeight: 1.4},
+  title: {maxWidth: 440, marginTop: 8, fontSize: {[media.mobile]: 26, default: 32}, fontWeight: 600, lineHeight: 1.15, letterSpacing: '-.02em', textWrap: 'pretty'},
+  description: {maxWidth: 350, marginTop: 9, color: theme.muted, fontSize: {[media.mobile]: 15, default: 16}, lineHeight: 1.4},
   shortDescription: {maxWidth: {[media.mobile]: '70%', default: '55%'}},
-  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 16, padding: '10px 16px', color: theme.actionText, fontSize: 13, fontWeight: 600, lineHeight: 1.5, borderWidth: 0, borderRadius: 14, backgroundColor: '#fff', cursor: 'pointer'},
+  action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 16, padding: '10px 18px', color: theme.actionText, fontSize: 16, fontWeight: 500, lineHeight: 1.4, borderWidth: 0, borderRadius: 30, backgroundColor: '#fff', cursor: 'pointer'},
   icon: {flexShrink: 0},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},

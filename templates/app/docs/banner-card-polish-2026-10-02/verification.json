@@ -1,0 +1,436 @@
+{
+  "date": "2026-10-02",
+  "origin": "http://127.0.0.1:6483",
+  "runtime": "Node 22.20.0",
+  "build": {
+    "command": "npm run check",
+    "distDir": ".next-build-check",
+    "exitCode": 0,
+    "staticPages": 407
+  },
+  "views": [
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 178,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [
+        [
+          201.890625,
+          232.890625,
+          263.890625
+        ],
+        [
+          444.390625,
+          475.390625,
+          506.390625
+        ]
+      ],
+      "overflow": false,
+      "route": "/bg/sell",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [
+        [
+          395.890625,
+          428.28125,
+          460.671875
+        ],
+        [
+          395.890625,
+          428.28125,
+          460.671875
+        ]
+      ],
+      "overflow": false,
+      "route": "/bg/sell",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [
+        [
+          257.890625,
+          288.890625,
+          319.890625
+        ],
+        [
+          500.390625,
+          531.390625,
+          562.390625
+        ]
+      ],
+      "overflow": false,
+      "route": "/bg/sell",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/finance",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/service",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": null,
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 232,
+        "titleSize": "30px"
+      },
+      "clientWidth": 753,
+      "documentWidth": 753,
+      "methodRows": [
+        [
+          800.890625,
+          833.28125,
+          865.671875
+        ],
+        [
+          1064.5625,
+          1096.953125,
+          1129.34375
+        ]
+      ],
+      "overflow": false,
+      "route": "/bg/sell",
+      "visibleBrokenImages": [],
+      "width": 768
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/finance",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 178,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/service",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": null,
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 178,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [
+        [
+          649.890625,
+          680.890625,
+          711.890625
+        ],
+        [
+          892.390625,
+          923.390625,
+          954.390625
+        ]
+      ],
+      "overflow": false,
+      "route": "/en/sell",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/finance",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 178,
+        "titleSize": "24px"
+      },
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/service",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": null,
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en",
+      "visibleBrokenImages": [],
+      "width": 320
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [
+        [
+          628.890625,
+          659.890625,
+          690.890625
+        ],
+        [
+          871.390625,
+          902.390625,
+          933.390625
+        ]
+      ],
+      "overflow": false,
+      "route": "/en/sell",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/finance",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 157,
+        "titleSize": "24px"
+      },
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/service",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": null,
+      "clientWidth": 375,
+      "documentWidth": 375,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en",
+      "visibleBrokenImages": [],
+      "width": 390
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/finance",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/service",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [
+        [
+          845.890625,
+          878.28125,
+          910.671875
+        ],
+        [
+          845.890625,
+          878.28125,
+          910.671875
+        ]
+      ],
+      "overflow": false,
+      "route": "/en/sell",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/finance",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": {
+        "ctaSize": "16px",
+        "height": 248,
+        "titleSize": "36px"
+      },
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en/service",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "clientWidth": 1425,
+      "documentWidth": 1425,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/en",
+      "visibleBrokenImages": [],
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "clientWidth": 305,
+      "documentWidth": 305,
+      "methodRows": [],
+      "overflow": false,
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "visibleBrokenImages": [],
+      "width": 320
+    }
+  ],
+  "interactions": {
+    "sellHero": "opens /bg/sell/details",
+    "exchangeCard": "opens /bg/sell/details",
+    "servicePackage": "full Bulgarian description opens; Escape closes the sheet and returns focus",
+    "financeHero": "opens the dealer enquiry draft; Escape closes it",
+    "homeCarousel": "pagination selects the finance and exchange cards",
+    "detailVisit": "opens /bg/stores"
+  },
+  "browserConsoleErrors": [],
+  "ownerVisualAcceptance": "pending"
+}

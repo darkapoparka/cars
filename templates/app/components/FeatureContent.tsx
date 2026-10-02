@@ -44,8 +44,8 @@ const packages = [
   {name: 'Inspection and diagnostics', mobileName: 'Diagnostics', copy: 'Check your car and plan any work.', checks: ['Diagnostic and condition checks', 'Suspension and braking system', 'Maintenance recommendations'], mobileChecks: ['Computer check', 'Suspension and brakes', 'Recommendations']},
 ];
 const sellingMethods = [
-  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Car check', 'Documents'], action: 'Get a valuation', mobileAction: 'Get valuation'},
-  {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Choice', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Explore exchange'},
+  {title: 'Sell your car to us', mobileTitle: 'Sell your car to us', image: showroom.artwork.selling.direct, points: ['Car valuation', 'Condition review', 'Guided paperwork'], mobilePoints: ['Valuation', 'Car check', 'Documents'], action: 'Get a valuation', mobileAction: 'Valuation'},
+  {title: 'Part-exchange', mobileTitle: 'Exchange', image: showroom.artwork.selling.exchange, points: ['Value your car', 'Find your next car', 'Plan your upgrade'], mobilePoints: ['Valuation', 'Choice', 'Upgrade'], action: 'Explore trade-in', mobileAction: 'Exchange'},
 ];
 const sellingGuides = [
   {title: 'Car valuation', mobileTitle: 'Valuation', image: showroom.artwork.selling.valuation, description: 'Have your mileage, registration details and service records ready. The showroom will review your car’s condition and discuss a valuation before you decide.'},
@@ -64,19 +64,19 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
   const [information, setInformation] = useState<{title: string; description: string} | null>(null);
   return <>
     {kind === 'sell' ? <section {...stylex.props(s.methods)} aria-label={tx("Ways to sell your car")}>
-      {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} {...stylex.props(s.method)}>
+      {sellingMethods.map(({title, mobileTitle, image, points, mobilePoints, action, mobileAction}) => <article key={title} data-selling-method {...stylex.props(s.method)}>
         <div {...stylex.props(s.methodMedia)}><Image src={image} width={1536} height={1024} sizes="(max-width: 767px) 100vw, 50vw" alt="" {...stylex.props(s.methodArtwork)}/></div>
-        <div {...stylex.props(s.methodCopy)}><h2 {...stylex.props(s.heading)}><ResponsiveCopy full={title} short={mobileTitle}/></h2>
-          <ul {...stylex.props(s.methodPoints)}>{points.map((point, index) => <li key={point} {...stylex.props(s.methodPoint)}><Check size={15} {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={point} short={mobilePoints[index]}/></li>)}</ul>
-          <button type="button" onClick={onStart} {...stylex.props(s.methodAction)}><ResponsiveCopy full={action} short={mobileAction}/><ArrowRight size={15} {...stylex.props(s.pointIcon)}/></button>
+        <div {...stylex.props(s.methodCopy)}><h2 {...stylex.props(s.heading, s.methodTitle)}><ResponsiveCopy full={title} short={mobileTitle}/></h2>
+          <ul {...stylex.props(s.methodPoints)}>{points.map((point, index) => <li key={point} {...stylex.props(s.methodPoint)}><Check size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={point} short={mobilePoints[index]}/></li>)}</ul>
+          <button type="button" onClick={onStart} aria-label={tx(action)} {...stylex.props(s.methodAction)}>{tx(mobileAction)}<ArrowRight size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/></button>
         </div>
       </article>)}
     </section> : null}
     {kind === 'sell' ? <section {...stylex.props(s.section)} aria-label={tx("Selling guides")}><h2 {...stylex.props(s.heading)}>{tx("Before you sell")}</h2><div {...stylex.props(s.toolsRail)}>{sellingGuides.map(({title, mobileTitle, image, description}) => <button key={title} type="button" onClick={() => setInformation({title, description})} {...stylex.props(s.tool)}><Image src={image} width={600} height={450} sizes="238px" alt="" {...stylex.props(s.toolImage)}/><span {...stylex.props(s.toolLabel)}><ResponsiveCopy full={title} short={mobileTitle}/><ArrowRight size={17} {...stylex.props(s.pointIcon)}/></span></button>)}</div></section> : null}
     {kind === 'service' ? <section aria-label={tx("Service options")} {...stylex.props(s.plans)}>{packages.map(({name, mobileName, copy, checks, mobileChecks}) => <article key={name} {...stylex.props(s.plan)}>
       <h2 {...stylex.props(s.planTitle)}><ResponsiveCopy full={name} short={mobileName}/></h2>
-      <ul {...stylex.props(s.checks)}>{checks.map((check, index) => <li key={check} {...stylex.props(s.check)}><Check size={16} {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={check} short={mobileChecks[index]}/></li>)}</ul>
-      <button type="button" aria-label={`${tx('More details')}: ${tx(name)}`} onClick={() => setInformation({title: name, description: `${tx(copy)} ${checks.map(check => tx(check)).join(', ')}. ${tx('Available work, intervals and pricing depend on your car. Confirm the package with the showroom before booking.')}`})} {...stylex.props(s.outline)}>{tx("View more")}<ArrowRight size={17} {...stylex.props(s.pointIcon)}/></button>
+      <ul {...stylex.props(s.checks)}>{checks.map((check, index) => <li key={check} {...stylex.props(s.check)}><Check size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/><ResponsiveCopy full={check} short={mobileChecks[index]}/></li>)}</ul>
+      <button type="button" aria-label={`${tx('More details')}: ${tx(name)}`} onClick={() => setInformation({title: name, description: `${tx(copy)} ${checks.map(check => tx(check)).join(', ')}. ${tx('Available work, intervals and pricing depend on your car. Confirm the package with the showroom before booking.')}`})} {...stylex.props(s.packageAction)}>{tx("View more")}<ArrowRight size={18} aria-hidden="true" {...stylex.props(s.pointIcon)}/></button>
     </article>)}</section> : null}
     {kind === 'finance' ? <><FinanceCalculator/><BrandCampaign kind="finance" onAction={onStart}/></> : null}
     <section {...stylex.props(s.section)}><h2 {...stylex.props(s.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Your finance journey, step by step' : 'Car care, step by step')}</span><span {...stylex.props(s.mobileCopy)}>{tx(kind === 'sell' ? `Selling with ${showroom.name}` : kind === 'finance' ? 'Finance steps' : 'Service steps')}</span></h2><div {...stylex.props(s.steps)}>{steps[kind].map(([asset, title, copy]) => <article key={asset} {...stylex.props(s.step)}><img src={assetPath(`/reference-assets/continuation/${kind}-${asset}.png`)} width={100} height={100} alt={tx("")} loading="lazy" {...stylex.props(s.stepImage)}/><div {...stylex.props(s.stepCopy)}><h3 {...stylex.props(s.stepTitle)}>{tx(title)}</h3><p {...stylex.props(s.stepDescription)}>{tx(copy)}</p></div></article>)}</div></section>
@@ -87,38 +87,39 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: ()
   </>;
 }
 const s = stylex.create({
-  heading: {color: '#202024', fontSize: {[media.mobile]: 19, default: 26}, fontWeight: 600, lineHeight: 1.25, overflowWrap: 'anywhere'},
+  heading: {color: '#202024', fontSize: {[media.mobile]: 22, default: 26}, fontWeight: 600, lineHeight: 1.25, textWrap: 'pretty'},
   section: {marginTop: 28},
-  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 30},
-  method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', aspectRatio: {[media.mobile]: '3 / 2', default: 'auto'}, minHeight: {[media.mobile]: 'max(196px, 16em)', default: 270}, fontSize: {[media.mobile]: 12, default: 14}, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 20, backgroundColor: '#fff'},
+  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 30},
+  method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', borderRadius: 20, backgroundColor: campaign.lightSurface},
   methodMedia: {position: 'absolute', inset: 0},
-  methodArtwork: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: {[media.mobile]: 'cover', default: 'contain'}, objectPosition: 'right bottom', pointerEvents: 'none'},
-  methodCopy: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: {[media.mobile]: '100%', default: '60%'}, minHeight: {[media.mobile]: 0, default: 270}, padding: {[media.mobile]: 16, default: '26px 0 26px 22px'}},
-  methodPoints: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', maxWidth: {[media.mobile]: 148, default: '100%'}, gap: {[media.mobile]: '8px 12px', default: 12}, padding: 0, margin: '12px 0 0', listStyle: 'none'},
-  methodPoint: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
+  methodArtwork: {position: 'absolute', right: 0, bottom: 0, width: {[media.mobile]: '100%', default: 'auto'}, height: '100%', objectFit: {[media.mobile]: 'cover', default: 'contain'}, objectPosition: 'right bottom', maskImage: 'linear-gradient(to right,transparent,#000 48%)', pointerEvents: 'none'},
+  methodCopy: {position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%', padding: {[media.mobile]: 20, default: 26}},
+  methodTitle: {maxWidth: {[media.mobile]: '85%', default: '70%'}},
+  methodPoints: {display: 'grid', maxWidth: {[media.mobile]: '65%', default: '62%'}, gap: 10, padding: 0, margin: '14px 0 0', listStyle: 'none'},
+  methodPoint: {display: 'flex', alignItems: 'center', gap: 8, color: '#414147', fontSize: {[media.mobile]: 15, default: 16}, lineHeight: 1.4},
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
-  methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 5, minHeight: 44, maxWidth: '100%', marginTop: {[media.mobile]: 14, default: 'auto'}, padding: '8px 10px', color: campaign.lightInk, fontSize: {[media.mobile]: 12, default: 14}, fontWeight: 600, lineHeight: 1.5, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightInk, borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},
+  methodAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, maxWidth: '100%', marginTop: 18, padding: '10px 18px', color: campaign.lightInk, fontSize: 16, fontWeight: 500, lineHeight: 1.4, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#fafafa'}, boxShadow: '0 2px 8px rgba(0,0,0,.04)', cursor: 'pointer'},
   toolsRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 14, paddingBottom: 8, scrollSnapType: 'x mandatory', scrollbarWidth: 'none'},
   tool: {display: 'flex', flexDirection: 'column', gap: 10, flex: '0 0 238px', padding: 0, borderWidth: 0, backgroundColor: 'transparent', textAlign: 'left', cursor: 'pointer', scrollSnapAlign: 'start'},
   toolImage: {display: 'block', width: '100%', height: 'auto', aspectRatio: '4 / 3', objectFit: 'cover', borderRadius: 15},
   toolLabel: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', color: '#202024', fontSize: 16, fontWeight: 500},
   plans: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: 32},
-  plan: {overflow: 'hidden', padding: {[media.mobile]: 16, default: 22}, borderWidth: 1, borderStyle: 'solid', borderColor: campaign.lightBorder, borderRadius: 16, backgroundColor: '#f7f7f8'},
-  planTitle: {margin: 0, color: campaign.lightInk, fontSize: {[media.mobile]: 18, default: 22}, fontWeight: 600, lineHeight: 1.3},
-  checks: {display: {[media.mobile]: 'flex', default: 'grid'}, flexWrap: 'wrap', gap: {[media.mobile]: '8px 12px', default: 14}, margin: '14px 0 0', padding: 0, listStyle: 'none'},
-  check: {display: 'flex', alignItems: 'center', gap: 6, color: campaign.lightMuted, fontSize: {[media.mobile]: 12, default: 14}, lineHeight: 1.5},
-  outline: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, width: '100%', marginTop: 16, padding: '8px 10px', color: campaign.lightInk, fontSize: 14, fontWeight: 600, borderWidth: 1, borderStyle: 'solid', borderColor: '#d6d6db', borderRadius: 10, backgroundColor: '#fff', cursor: 'pointer'},
+  plan: {overflow: 'hidden', padding: {[media.mobile]: 20, default: 26}, borderRadius: 20, backgroundColor: campaign.lightSurface},
+  planTitle: {margin: 0, color: campaign.lightInk, fontSize: {[media.mobile]: 22, default: 26}, fontWeight: 600, lineHeight: 1.25},
+  checks: {display: 'grid', gap: 10, margin: '14px 0 0', padding: 0, listStyle: 'none'},
+  check: {display: 'flex', alignItems: 'center', gap: 8, color: '#414147', fontSize: {[media.mobile]: 15, default: 16}, lineHeight: 1.4},
+  packageAction: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, marginTop: 18, padding: '10px 18px', color: campaign.lightInk, fontSize: 16, fontWeight: 500, lineHeight: 1.4, borderWidth: 0, borderRadius: 30, backgroundColor: {default: '#fff', ':hover': '#fafafa'}, cursor: 'pointer'},
   steps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 12, marginTop: 14},
   step: {display: 'grid', gridTemplateColumns: 'min(100px,30%) minmax(0,1fr)', alignItems: 'center', minHeight: 102, overflow: 'hidden', borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 13, backgroundColor: '#fff'},
   stepImage: {width: '100%', height: 'auto', aspectRatio: '1', objectFit: 'cover'},
   stepCopy: {padding: 12},
-  stepTitle: {fontSize: 15, fontWeight: 600, lineHeight: 1.35, overflowWrap: 'anywhere'},
-  stepDescription: {marginTop: 4, color: $.muted, fontSize: 13, lineHeight: 1.4, overflowWrap: 'anywhere'},
+  stepTitle: {fontSize: 16, fontWeight: 600, lineHeight: 1.35, overflowWrap: 'anywhere'},
+  stepDescription: {marginTop: 5, color: $.muted, fontSize: 14, lineHeight: 1.45, overflowWrap: 'anywhere'},
   faq: {marginTop: 12, borderColor: campaign.lightBorder, borderStyle: 'solid', borderWidth: 1, borderRadius: 12, backgroundColor: '#fff'},
-  summary: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 56, padding: '12px 15px', color: '#202024', fontSize: 14, fontWeight: 500, cursor: 'pointer', listStyle: 'none'},
-  faqCopy: {padding: '0 15px 15px', color: $.muted, fontSize: 13, lineHeight: '20px'},
+  summary: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, minHeight: 56, padding: '12px 15px', color: '#202024', fontSize: 16, fontWeight: 500, cursor: 'pointer', listStyle: 'none'},
+  faqCopy: {padding: '0 15px 15px', color: $.muted, fontSize: 14, lineHeight: 1.5},
   contactGrid: {display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 12, marginTop: 14},
-  contact: {display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 10, minHeight: 100, padding: 12, color: campaign.lightInk, fontSize: 14, borderWidth: 0, borderRadius: 18, backgroundColor: campaign.lightSurface, cursor: 'pointer'},
+  contact: {display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', gap: 10, minHeight: 100, padding: 12, color: campaign.lightInk, fontSize: 15, borderWidth: 0, borderRadius: 18, backgroundColor: campaign.lightSurface, cursor: 'pointer'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });

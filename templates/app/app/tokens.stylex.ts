@@ -36,11 +36,11 @@ export const tokens = stylex.defineVars({
   controlIconSize: '18px',
   controlFontSize: '14px',
   controlLineHeight: '20px',
-  bannerPadding: '16px',
-  bannerTitleSize: '20px',
-  bannerTitleLineHeight: '24px',
-  bannerCopySize: '13px',
-  bannerCopyLineHeight: '18px',
+  bannerPadding: '20px',
+  bannerTitleSize: '24px',
+  bannerTitleLineHeight: '28px',
+  bannerCopySize: '15px',
+  bannerCopyLineHeight: '21px',
 });
 
 // The retained Geist/Poppins subsets have no Cyrillic. Use one complete family

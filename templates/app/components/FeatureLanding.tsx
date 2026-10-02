@@ -15,7 +15,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
-  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', copy: 'A simple way to sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Sell your car', mobileCta: 'Ask about selling'},
+  sell: {mobileTitle: 'Sell to us.', title: 'Sell your car.', copy: 'A simple way to sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Get a valuation', mobileCta: 'Valuation'},
   finance: {mobileTitle: 'Car finance.', title: 'Finance your next car.', copy: 'Payment options for your next car.', mobileCopy: 'Payment options', cta: 'Get assistance', mobileCta: 'Ask us'},
   service: {mobileTitle: 'Car services.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Servicing and diagnostics.', cta: 'Book a service', mobileCta: 'Choose a service'},
 } as const;
@@ -52,15 +52,15 @@ const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 170, backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
   firstSection: {paddingTop: 20},
-  heading: {fontSize: 14, color: $.muted, fontWeight: 500, lineHeight: 1.4},
+  heading: {fontSize: 16, color: $.text, fontWeight: 500, lineHeight: 1.4},
   brands: {display: 'grid', gridAutoFlow: 'column', gridTemplateRows: 'repeat(2,auto)', gridAutoColumns: {[media.mobile]: 'max(83px,6em)', default: 110}, columnGap: 14, rowGap: 18, overflowX: 'auto', marginTop: 14, marginRight: {[media.mobile]: -12, default: 0}, fontSize: 14, scrollbarWidth: 'none'},
   brand: {display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, padding: 0, color: $.text, fontSize: 14, fontWeight: 500, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer'},
   brandImage: {width: '100%', height: 68, objectFit: 'contain'},
   brandName: {minHeight: 20, lineHeight: '20px'},
-  benefits: {display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12},
+  benefits: {display: 'grid', gridTemplateColumns: {[media.mobile]: 'repeat(2,minmax(0,1fr))', [media.tablet]: 'repeat(2,minmax(0,1fr))', default: 'repeat(4,minmax(0,1fr))'}, gap: 12},
   benefit: {position: 'relative', aspectRatio: {[media.mobile]: '1.25', default: '1.5'}, padding: 0, overflow: 'hidden', textAlign: 'left', color: $.text, borderWidth: 0, borderRadius: 16, backgroundColor: '#f9f9f9', cursor: 'pointer'},
   benefitArt: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right bottom'},
-  benefitTitle: {position: 'relative', zIndex: 1, minHeight: '100%', padding: {[media.mobile]: '12px 12px 64px', default: '24px 24px 90px'}, fontSize: {[media.mobile]: 15, default: 25}, fontWeight: 600, lineHeight: 1.3, whiteSpace: 'normal', textWrap: 'balance', letterSpacing: 0, overflowWrap: 'anywhere'},
+  benefitTitle: {position: 'relative', zIndex: 1, minHeight: '100%', padding: {[media.mobile]: '14px 10px 64px', default: '18px 18px 64px'}, fontSize: {[media.mobile]: 18, default: 25}, fontWeight: 600, lineHeight: 1.25, whiteSpace: 'normal', textWrap: 'pretty', letterSpacing: '-.01em', overflowWrap: 'anywhere'},
   desktopCopy: {display: {[media.mobile]: 'none', default: 'inline'}},
   mobileCopy: {display: {[media.mobile]: 'inline', default: 'none'}},
 });
