@@ -38,6 +38,9 @@
 </section>
 
 <style>
+	.vehicle-facts {
+		container: vehicle-facts / inline-size;
+	}
 	dl {
 		display: grid;
 		margin: 0;
@@ -75,5 +78,18 @@
 		font-size: var(--bc-text-label);
 		font-weight: var(--bc-weight-heading);
 		overflow-wrap: anywhere;
+	}
+	@container vehicle-facts (min-width: 40rem) {
+		dl {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			column-gap: var(--bc-space-8);
+		}
+		dl > div:nth-child(2) {
+			padding-top: 0;
+		}
+		dl > div:nth-last-child(-n + 2) {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
 	}
 </style>

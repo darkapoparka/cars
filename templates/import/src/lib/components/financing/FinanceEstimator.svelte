@@ -7,9 +7,16 @@
 	let {
 		initialPrice = 30000,
 		english = false,
+		layout = 'full',
 		banner,
 		inquiryHref = '/contact?service=financing'
-	}: { initialPrice?: number; english?: boolean; banner?: string; inquiryHref?: string } = $props();
+	}: {
+		initialPrice?: number;
+		english?: boolean;
+		layout?: 'full' | 'sidebar';
+		banner?: string;
+		inquiryHref?: string;
+	} = $props();
 	// svelte-ignore state_referenced_locally
 	let price = $state(initialPrice);
 	// svelte-ignore state_referenced_locally
@@ -31,6 +38,7 @@
 
 <section
 	class="site-panel finance-estimator"
+	class:finance-estimator--sidebar={layout === 'sidebar'}
 	aria-label={english ? 'Monthly payment calculator' : 'Калкулатор за месечна вноска'}
 >
 	{#if banner}<img
@@ -43,7 +51,7 @@
 		/>{/if}
 	<h2>{english ? 'Calculate your payment' : 'Изчисли месечна вноска'}</h2>
 	<div class="site-fields">
-		<label class="site-field"
+		<label class="site-field" class:site-field--wide={layout === 'sidebar'}
 			><span>{english ? 'Vehicle price' : 'Цена на автомобила'} ({site.locale.currency})</span
 			><input
 				type="number"
@@ -54,7 +62,7 @@
 				bind:value={price}
 			/></label
 		>
-		<label class="site-field"
+		<label class="site-field" class:site-field--wide={layout === 'sidebar'}
 			><span>{english ? 'Down payment' : 'Първоначална вноска'} ({site.locale.currency})</span
 			><input
 				type="number"
@@ -153,6 +161,27 @@
 	.finance-estimator__total dd {
 		color: var(--bc-accent);
 		font: var(--bc-weight-heading) 2rem/1.2 var(--bc-font-heading);
+	}
+	.finance-estimator--sidebar {
+		gap: var(--bc-space-4);
+	}
+	.finance-estimator--sidebar .site-field:not(.site-field--wide) {
+		grid-row: span 2;
+		grid-template-rows: subgrid;
+	}
+	.finance-estimator--sidebar dl > div {
+		gap: var(--bc-space-3);
+	}
+	.finance-estimator--sidebar dt,
+	.finance-estimator--sidebar dd {
+		font-size: var(--bc-text-label);
+	}
+	.finance-estimator--sidebar .finance-estimator__total {
+		display: grid;
+		gap: var(--bc-space-2);
+	}
+	.finance-estimator--sidebar .finance-estimator__total dd {
+		font-size: var(--bc-text-h3);
 	}
 	@media (min-width: 768px) {
 		dt,

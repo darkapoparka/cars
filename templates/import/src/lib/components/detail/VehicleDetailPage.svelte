@@ -82,6 +82,7 @@
 						<h2>{english ? 'Description' : 'Описание'}</h2>
 						<p class="detail-description">{detail.description}</p>
 					</section>
+					<VehicleFacts items={detail.overviewItems} {english} />
 					{#each detail.featureTabs.filter((tab) => tab.items.length) as tab (tab.label)}
 						<section class="site-panel">
 							<h2>{tab.label}</h2>
@@ -90,21 +91,10 @@
 							</ul>
 						</section>
 					{/each}
-					<div id="vehicle-finance" tabindex="-1">
-						<FinanceEstimator
-							banner="/assets/daynight/pdp/financing-banner.webp"
-							initialPrice={price}
-							{english}
-							inquiryHref={'/contact?vehicle=' +
-								detail.slug +
-								'&service=financing' +
-								(english ? '&lang=en' : '')}
-						/>
-					</div>
 				</div>
 				<aside
 					class="detail-summary site-stack"
-					aria-label={english ? 'Price and vehicle details' : 'Цена и данни за автомобила'}
+					aria-label={english ? 'Price, financing and viewing' : 'Цена, финансиране и оглед'}
 				>
 					{#key detail.slug}<VehiclePurchasePanel
 							{detail}
@@ -112,8 +102,19 @@
 							{english}
 							oninquiry={() => (inquiryOpen = true)}
 						/>{/key}
+					<div id="vehicle-finance" tabindex="-1">
+						{#key detail.slug}<FinanceEstimator
+								layout="sidebar"
+								banner="/assets/daynight/pdp/financing-banner.webp"
+								initialPrice={price}
+								{english}
+								inquiryHref={'/contact?vehicle=' +
+									detail.slug +
+									'&service=financing' +
+									(english ? '&lang=en' : '')}
+							/>{/key}
+					</div>
 					<VehicleDealerBanner {english} />
-					<VehicleFacts items={detail.overviewItems} {english} />
 				</aside>
 			</div>
 			{#if related.length}
