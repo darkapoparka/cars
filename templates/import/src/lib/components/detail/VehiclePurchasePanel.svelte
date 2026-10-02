@@ -29,16 +29,9 @@
 			: null
 	);
 	const money = (value: number) => formatMoney(value, english ? 'en' : 'bg');
-	const overviewSummary = $derived(
-		detail.overviewItems
-			.slice(0, 4)
-			.map((item) => item.value)
-			.join(' · ')
-	);
 </script>
 
 <section class="purchase-panel" aria-label={english ? 'Price and viewing' : 'Цена и оглед'}>
-	<p class="purchase-summary">{overviewSummary}</p>
 	<Tabs.Root value="cash">
 		<Tabs.List class="purchase-tabs" aria-label={english ? 'Payment options' : 'Начин на плащане'}>
 			<Tabs.Trigger value="cash" class="purchase-tab"
@@ -116,13 +109,6 @@
 		background: var(--bc-surface-raised);
 		padding: var(--bc-space-6);
 		min-width: 0;
-	}
-	.purchase-summary {
-		margin: 0 0 var(--bc-space-4);
-		color: var(--bc-copy);
-		font-size: var(--bc-text-label);
-		line-height: var(--bc-leading-label);
-		text-wrap: pretty;
 	}
 	:global(.purchase-tabs) {
 		display: flex;

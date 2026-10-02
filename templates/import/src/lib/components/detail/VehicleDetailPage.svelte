@@ -42,33 +42,41 @@
 				<a href={linkHref('/inventory' + localeSuffix)}>{english ? 'Cars' : 'Автомобили'}</a>
 				<span aria-hidden="true">/</span><span>{detail.title}</span>
 			</nav>
-			<header class="detail-heading">
-				<h1>{detail.title}</h1>
-				<div class="detail-utilities">
-					<Action
-						variant="quiet"
-						size="compact"
-						aria-pressed={garage.isFavorite(detail.slug)}
-						onclick={() => garage.toggleFavorite(detail.slug)}
-					>
-						<Heart
-							size={18}
-							aria-hidden="true"
-							fill={garage.isFavorite(detail.slug) ? 'currentColor' : 'none'}
-						/>{english ? 'Save' : 'Запази'}
-					</Action>
-					<Action
-						variant="quiet"
-						size="compact"
-						aria-pressed={garage.isCompared(detail.slug)}
-						onclick={() => garage.toggleCompare(detail.slug)}
-					>
-						<ArrowLeftRight size={18} aria-hidden="true" />{english ? 'Compare' : 'Сравни'}
-					</Action>
-				</div>
-			</header>
 			<div class="detail-grid">
-				<div class="site-stack">
+				<div class="detail-gallery-column site-stack">
+					<header class="detail-heading">
+						<h1>{detail.title}</h1>
+						<div class="detail-utilities">
+							<Action
+								class="detail-utility"
+								variant="secondary"
+								size="compact"
+								aria-label={english ? 'Save' : 'Запази'}
+								title={english ? 'Save' : 'Запази'}
+								aria-pressed={garage.isFavorite(detail.slug)}
+								onclick={() => garage.toggleFavorite(detail.slug)}
+							>
+								<Heart
+									size={18}
+									aria-hidden="true"
+									fill={garage.isFavorite(detail.slug) ? 'currentColor' : 'none'}
+								/><span class="detail-utility-label">{english ? 'Save' : 'Запази'}</span>
+							</Action>
+							<Action
+								class="detail-utility"
+								variant="secondary"
+								size="compact"
+								aria-label={english ? 'Compare' : 'Сравни'}
+								title={english ? 'Compare' : 'Сравни'}
+								aria-pressed={garage.isCompared(detail.slug)}
+								onclick={() => garage.toggleCompare(detail.slug)}
+							>
+								<ArrowLeftRight size={18} aria-hidden="true" /><span class="detail-utility-label"
+									>{english ? 'Compare' : 'Сравни'}</span
+								>
+							</Action>
+						</div>
+					</header>
 					<VehicleGallery images={detail.galleryImages} title={detail.title} {english} />
 					<section class="site-panel detail-description-card">
 						<h2>{english ? 'Description' : 'Описание'}</h2>
@@ -156,11 +164,13 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: var(--bc-space-6);
-		margin-bottom: var(--bc-space-6);
 		padding: var(--bc-space-5) var(--bc-space-6);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
+	}
+	.detail-gallery-column {
+		container: vehicle-gallery / inline-size;
 	}
 	h1 {
 		min-width: 0;
@@ -172,6 +182,9 @@
 		display: flex;
 		flex-shrink: 0;
 		gap: var(--bc-space-2);
+	}
+	.detail-utilities :global(.detail-utility[aria-pressed='true']) {
+		background: var(--bc-control-active);
 	}
 	.detail-description-card {
 		background: #fff;
@@ -204,6 +217,20 @@
 	}
 	#vehicle-finance {
 		scroll-margin-top: var(--bc-space-6);
+	}
+	@container vehicle-gallery (max-width: 40rem) {
+		.detail-heading {
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-4);
+		}
+		.detail-utility-label {
+			display: none;
+		}
+		.detail-utilities :global(.detail-utility) {
+			width: var(--bc-control-height-compact);
+			min-height: var(--bc-control-height-compact);
+			padding: 0;
+		}
 	}
 	@media (min-width: 768px) {
 		.detail-main {
