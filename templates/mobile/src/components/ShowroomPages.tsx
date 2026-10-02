@@ -2,7 +2,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { Clock3, Mail, MapPin, Phone } from 'lucide-react';
+import { ChevronRight, Clock3, Mail, MapPin, Phone } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -76,7 +76,7 @@ const s = stylex.create({
       default: 'minmax(0,1fr)',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
     },
-    alignItems: 'start',
+    alignItems: 'stretch',
     gap: 8,
     maxWidth: 1040,
     marginInline: 'auto',
@@ -84,7 +84,7 @@ const s = stylex.create({
   serviceCard: {
     display: 'grid',
     gridTemplateColumns: 'minmax(0,1fr) auto',
-    alignItems: 'center',
+    alignItems: 'start',
     columnGap: 8,
     rowGap: 4,
     backgroundColor: colors.background,
@@ -94,9 +94,14 @@ const s = stylex.create({
     minWidth: 0,
   },
   serviceCardLink: {
+    gridTemplateRows: 'auto 1fr',
     color: colors.text,
     textDecoration: 'none',
-    backgroundColor: { default: colors.background, ':hover': colors.panel },
+    backgroundColor: {
+      default: colors.background,
+      ':hover': colors.panel,
+      ':active': colors.controlSurface,
+    },
     outlineColor: colors.accent,
     outlineOffset: 3,
   },
@@ -106,17 +111,19 @@ const s = stylex.create({
     alignItems: 'center',
     justifyContent: 'center',
     justifySelf: 'end',
+    gap: 3,
     minHeight: 28,
     paddingBlock: 4,
-    paddingInline: 9,
+    paddingInline: 8,
     borderRadius: 14,
     backgroundColor: colors.controlSurface,
-    color: colors.muted,
+    color: colors.text,
     fontSize: 12,
     fontWeight: 500,
     lineHeight: '20px',
     whiteSpace: 'nowrap',
   },
+  serviceCardChevron: { flexShrink: 0, color: colors.muted },
   serviceDetail: {
     display: 'grid',
     gridTemplateColumns: 'minmax(0,1fr)',
@@ -133,7 +140,13 @@ const s = stylex.create({
     gap: 4,
     minWidth: 0,
   },
-  serviceTitle: { fontSize: 16, lineHeight: '22px', fontWeight: 600, overflowWrap: 'anywhere' },
+  serviceTitle: {
+    paddingBlock: 3,
+    fontSize: 16,
+    lineHeight: '22px',
+    fontWeight: 600,
+    overflowWrap: 'anywhere',
+  },
   serviceCopy: { fontSize: 14, lineHeight: '20px', color: colors.muted, overflowWrap: 'anywhere' },
   serviceAction: {
     display: 'inline-flex',
@@ -481,6 +494,12 @@ export function ShowroomServicesScreen() {
                     {service.details || service.category === 'import' || service.category === 'sell'
                       ? 'View'
                       : 'Enquire'}
+                    <ChevronRight
+                      size={12}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                      {...stylex.props(s.serviceCardChevron)}
+                    />
                   </span>
                   <p
                     id={'showroom-service-' + service.id + '-copy'}

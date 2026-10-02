@@ -25,6 +25,13 @@ this is not a template release or dealer deployment.
   description. A smaller 28px View/Enquire cue sits at top right, while the
   description takes the full row below. The All quick pill contains the matching
   service count: All (8) initially. A separate visible count row is removed.
+- The service-directory follow-up keeps clean white cards. Six descriptions are
+  shortened, with make/model, direct-sale and vehicle search aliases retained.
+  The top-right cue uses darker text and a small 12px chevron. Heading padding
+  aligns the cue to the first title line when a title wraps. Desktop pairs use
+  stretched cards with their content at the top; pressed cards have a neutral
+  surface response. No generated service banners or images were added. Real
+  dealer photography can support a later showroom or import-story section.
 - Detail CTAs use their natural width, with rounded 36px painted faces inside
   44px link targets. Starter entries keep 48px native button
   targets and use smaller 32px Start faces; enquiry step controls are retained.
@@ -89,30 +96,36 @@ this is not a template release or dealer deployment.
 
 Using `L:/Toolchains/Node/22.20.0/node.exe` in `templates/mobile`:
 
-These checks cover the final compact card, search, starter-entry and focus pass.
+These checks cover the compact card, search, starter-entry and focus pass and
+the subsequent service-directory refinement.
 
 - ESLint over `src`, with zero warnings: passed.
 - TypeScript `--noEmit`: passed.
 - Domain tests: all 80 passed, including country filtering, sale type,
   optional VIN validation, immutable context seeding and legacy draft recovery.
-- Prettier for the changed source, tests and browser script: passed.
-- `node --check scripts/qa-showroom.mjs`: passed.
+- Prettier for both source files changed in the service-directory refinement:
+  passed. Tests and the browser script were unchanged in this follow-up.
+- `node --check scripts/qa-showroom.mjs`: passed in the preceding compact pass.
 - The earlier standard `.next-review` production check stopped at its disk-space guard
   before invoking the build because C: had less than 1 GiB free. The latest production
   build passed using `NEXT_DIST_DIR=.next-overlay-card-tabs-20261002` and
   `NEXT_WEBPACK_CACHE_DIR=L:/CODEX/cars/runtime/mobile-services-hierarchy-20261002/webpack-production-card-tabs`,
   with `node scripts/review-preview.mjs build`: 50 static pages, build ID
-  `kLEyPcy86w-cwVc2b3Zvv`. This includes compact 16:10 cards, outline Save controls,
+  `8ORnXFzymdWX47IzJX4pS`. This includes the service-directory refinement,
+  compact 16:10 cards, outline Save controls,
   single-clear search, keyboard behavior, starter summaries and focus/safe-area
   refinements, together with the previous Home, Services and Contact changes.
 - `node scripts/workspace-doctor.mjs --fetch`: completed. Cars was zero ahead and
-  zero behind at the final pre-commit check; local `main` and fetched `origin/main`
-  matched. Other dirty template work and Admin's four-ahead/four-behind state
-  were preserved; this inspection does not claim the entire workspace is clean.
+  zero behind at the check. A subsequent fetch confirmed local `main` and
+  `origin/main` matched at `3f891e7e59edc607cad0c90d63063252c996a976` before the
+  follow-up commit. That intervening commit did not overlap Mobile or this report.
+  Other dirty template work and Admin's four-ahead/four-behind state were
+  preserved; this inspection does not claim the entire workspace is clean.
 - After the latest build and preview restart, status-only HTTP HEAD requests on
-  `http://127.0.0.1:6474` all returned 200 for 12 routes: Home, Make and Year filter
-  URLs, Services, Import, Germany and Canada import URLs, Sell, the direct Sell
-  overlay URL, Contact, BMW X6 detail and Car park. No response body was inspected.
+  `http://127.0.0.1:6474` all returned 200 for seven routes: Home, Services,
+  Germany Import, Sell, Financing, Parts and Contact. No response body was
+  inspected. The preceding compact pass also checked the filter URLs, Canada
+  Import, direct Sell overlay URL, BMW X6 detail and Car park.
 
 The existing browser suite now includes the new country and sale entry flows,
 draft resume behavior and pill geometry contracts. It was syntax checked only:
@@ -128,7 +141,7 @@ The previous owned preview listener was stopped after verifying its executable,
 command and port. The owned preview was restarted through
 `scripts/review-preview.mjs` with `.next-preview-6474` and the L: cache at
 `runtime/mobile-services-hierarchy-20261002/webpack-dev-card-tabs`. The listener
-was PID 25700 after the final card/search refinement and remains running.
+was PID 46348 after the service-directory refinement and remains running.
 
 The alternate build's generated TypeScript paths were removed after verifying
 they were the only additions, and the original `tsconfig.json` bytes were restored.
@@ -145,8 +158,8 @@ The recovery copies remain at
 
 The pre-Contact source recovery file remains at
 `runtime/mobile-services-hierarchy-20261002/ShowroomPages-before-contact-20261002-180311.tsx`.
-The final workspace fetch log is
-`runtime/mobile-services-hierarchy-20261002/workspace-doctor-final-polish.txt`.
+The latest workspace fetch log is
+`runtime/mobile-services-hierarchy-20261002/workspace-doctor-service-cards.txt`.
 
 ## Source handoff
 
@@ -186,8 +199,25 @@ templates/mobile/src/lib/showroom-services.ts
 templates/mobile/tests/domain.test.mjs
 ```
 
-The source commit message is `Refine Mobile showroom controls and enquiry layouts`.
-Verify its exact path scope and preservation of unrelated staged file IDs before
-non-force pushing `main`; verify the resulting commit on `origin/main` afterwards.
-Rendered acceptance remains a separate outstanding check. Mobile remains a local
-candidate: this pass does not promote a template release or deploy dealer copies.
+The preceding change was committed as
+`ea30a060be3b77fa23c9db45ca42281303ca8141`,
+`Refine Mobile showroom controls and enquiry layouts`. Its 18-path scope and
+preservation of the unrelated staged file IDs were verified, followed by a
+non-force push and remote-main verification.
+
+The service-directory follow-up is based on the fetched
+`3f891e7e59edc607cad0c90d63063252c996a976`. It owns only these four paths:
+
+```text
+docs/mobile-services-hierarchy-20261002.md
+templates/mobile/TEMPLATE.md
+templates/mobile/src/components/ShowroomPages.tsx
+templates/mobile/src/lib/showroom-services.ts
+```
+
+No paths were staged at the follow-up integration check. Use the native scoped
+`git commit --only` procedure and preserve any subsequently staged foreign work.
+Final tool output records the resulting commit and non-force push verification.
+The preview's generated `next-env.d.ts` path changes remain outside the source
+commit. Rendered acceptance remains a separate outstanding check. Mobile remains
+a local candidate: this pass does not promote a release or deploy dealer copies.

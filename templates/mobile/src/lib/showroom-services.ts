@@ -75,7 +75,7 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'import',
     category: 'import',
     title: 'Import a car',
-    copy: 'Tell us the make, model and budget you have in mind.',
+    copy: 'Source a car abroad to match your budget.',
     action: 'Start an import enquiry',
     keywords: [
       'imports',
@@ -83,6 +83,8 @@ export const showroomServices: readonly ShowroomService[] = [
       'sourcing',
       'delivery',
       'VIN',
+      'make',
+      'model',
       ...importCountries
         .filter((country) => country.value !== 'all')
         .map((country) => country.label),
@@ -92,15 +94,24 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'sell',
     category: 'sell',
     title: 'Sell your car',
-    copy: 'Ask about a direct purchase or a valuation for part exchange.',
+    copy: 'Ask for a buyout or part exchange valuation.',
     action: 'Start a sale enquiry',
-    keywords: ['buyout', 'buy out', 'sell my car', 'valuation', 'purchase', 'VIN', 'part exchange'],
+    keywords: [
+      'buyout',
+      'buy out',
+      'direct sale',
+      'sell my car',
+      'valuation',
+      'purchase',
+      'VIN',
+      'part exchange',
+    ],
   },
   {
     id: 'viewing',
     category: 'services',
     title: 'Viewings & test drives',
-    copy: 'Arrange a time to see a car or take a test drive.',
+    copy: 'Arrange a car viewing or test drive.',
     action: 'Arrange a viewing',
   },
   {
@@ -121,14 +132,14 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'servicing',
     category: 'services',
     title: 'Servicing & repairs',
-    copy: 'Ask about maintenance and repair options.',
+    copy: 'Ask about maintenance and repairs.',
     action: 'Ask about servicing',
   },
   {
     id: 'financing',
     category: 'financing',
     title: 'Financing',
-    copy: 'Discuss payment options for your next car with the showroom.',
+    copy: 'Discuss payment options for your next car.',
     action: 'Ask about financing',
     details: [
       { label: 'Budget', copy: 'The car or price range you have in mind.' },
@@ -140,8 +151,9 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'parts',
     category: 'parts',
     title: 'Parts & accessories',
-    copy: 'Ask about replacement parts and accessories for your vehicle.',
+    copy: 'Ask about replacement parts and accessories.',
     action: 'Ask about parts',
+    keywords: ['vehicle'],
     details: [
       { label: 'Your vehicle', copy: 'Make, model and year.' },
       { label: 'What you need', copy: 'The part name or accessory you are looking for.' },

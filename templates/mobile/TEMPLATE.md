@@ -53,7 +53,10 @@ lighter 32px outlined faces inside 48px targets, with neutral filled selection
 and a stronger selected border.
 Make/Model view selectors retain their 36px faces and 48px targets.
 Each service overview card is one native link, with a smaller 28px View/Enquire
-cue at top right and its description across the full width below. The All pill
+cue with a small right chevron at top right and its description across the full
+width below. Cues align with the first title line, including wrapped titles;
+paired desktop cards use equal heights. Short descriptions keep this service
+directory compact without promotional imagery. The All pill
 includes the service count, updated for the search query; no separate count row
 appears above the cards. Service detail CTAs have 36px painted faces inside 44px
 targets and use their natural width. Starter entries keep 48px targets with a
