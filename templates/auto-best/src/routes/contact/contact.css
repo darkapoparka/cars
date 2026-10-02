@@ -674,7 +674,20 @@
   .dn-contact-section--general .dn-contact-card__heading { display: none; }
   .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
   .dn-contact-section--general .dn-contact-location { margin-top: var(--dn-space-6); }
-  .dn-contact-section--general .dn-contact-location__heading { margin-bottom: var(--dn-space-4); }
+  .dn-contact-section--general .dn-contact-location__card {
+    overflow: hidden;
+    border: 1px solid var(--dn-line);
+    border-radius: var(--dn-radius-lg);
+    background: var(--dn-surface-raised);
+  }
+  .dn-contact-section--general .dn-contact-location__heading {
+    margin: 0;
+    padding: var(--dn-space-5) var(--dn-space-4);
+  }
+  .dn-contact-section--general .dn-contact-location__card .dn-showroom-map {
+    border: 0;
+    border-radius: 0;
+  }
 }
 
 @container (max-width: 18rem) {

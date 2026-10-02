@@ -89,6 +89,9 @@ maps unloaded on desktop. A 280px map area keeps the page stable while loading;
 the plain address fallback can grow with enlarged text. The directions action
 stays below the map and opens the same coordinates in Google Maps, including
 without JavaScript. Mobile uses the existing official Hugeicons arrow.
+General Contact groups its visit heading, address and appointment text above the
+map inside one white card below 992px. The outer card owns the border and rounded
+corners; the embedded map has a straight top edge beneath the visit details.
 
 Desktop inventory cards keep the existing five-column wide grid and 16px gutters.
 Model titles use one line with an ellipsis, while the heading tooltip, accessible
