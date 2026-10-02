@@ -11,6 +11,7 @@ import {CarFront, Check, ChevronRight, ClipboardList, Info, Music2, ShieldCheck}
 import StructuralSummary from '@/components/StructuralSummary';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import type {ReferenceVehicleDetail} from '@/lib/reference-types';
+import {getVehicleServiceHistory} from '@/lib/vehicle-service-history';
 import VehicleRecordsSheet from '@/components/VehicleRecordsSheet';
 import VehicleFinanceSection from '@/components/VehicleFinanceSection';
 import OwnershipPanel from '@/components/OwnershipPanel';
@@ -61,6 +62,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
   const [information,setInformation]=useState<{title:string;description:string}|null>(null);
   const [record,setRecord]=useState<'condition'|'service-history'|null>(null);
   const hasDetails=Boolean(reference)||fortuner;
+  const serviceHistory=getVehicleServiceHistory(vehicle.slug,reference?.serviceRecords);
   const comparison=reference?.priceComparison??(fortuner?{cars24Price:94099,marketPrice:104000,newCarPrice:127000,totalSavings:9901}:undefined);
   const comparedPrices=comparison?[['Showroom price',comparison.cars24Price,72],['Market price',comparison.marketPrice,93],...(comparison.newCarPrice?[['New car price',comparison.newCarPrice,150]]:[])]:[];
   const structural=Boolean(reference?.structuralClear&&reference.vin);
@@ -86,13 +88,13 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
       <Link href={`/cars/${vehicle.slug}/features`} {...stylex.props(s.allFeatures)}>{tx('View all features')}<ChevronRight size={18} aria-hidden="true"/></Link>
     </section>
     <div {...stylex.props(s.recordGroup)}>
-      <RecordRow id="condition" title="Car Condition" status={reference?.inspection.length?'View inspection report':'No report'} icon={<CarFront size={21}/>} open={record==='condition'} onOpen={()=>setRecord('condition')}/>
-      <RecordRow id="service-history" title="Service History" status={reference?.serviceRecords.length?'View service records':'No records'} icon={<ClipboardList size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
+      {reference?.inspection.length?<RecordRow id="condition" title="Inspection report" status="View inspection report" icon={<CarFront size={21}/>} open={record==='condition'} onOpen={()=>setRecord('condition')}/>:null}
+      <RecordRow id="service-history" title="Service History" status={serviceHistory.isSample?'Sample records':serviceHistory.records.length?'View service records':'No records'} icon={<ClipboardList size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
     </div>
     {hasDetails?<VehicleFinanceSection vehicle={vehicle} onLogin={onLogin}/>:null}
     <div {...stylex.props(s.promotions)}><VehicleVisitBanner/><OwnershipPanel compact/></div>
     {information?<ReferenceInfoSheet title={tx(information.title)} description={tx(information.description)} onClose={()=>setInformation(null)}/>:null}
-    {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} reference={reference} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
+    {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} reference={reference} serviceHistory={serviceHistory} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
   </>;
 }
 const s=stylex.create({

@@ -7,12 +7,14 @@ import VehicleServiceHistory from '@/components/VehicleServiceHistory';
 import {useModal} from '@/components/useModal';
 import {useCopy} from '@/lib/locale';
 import type {ReferenceVehicleDetail} from '@/lib/reference-types';
+import type {VehicleServiceHistoryData} from '@/lib/vehicle-service-history';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
-export default function VehicleRecordsSheet({kind,vehicleTitle,reference,onClose,onRequest}: {
+export default function VehicleRecordsSheet({kind,vehicleTitle,reference,serviceHistory,onClose,onRequest}: {
   kind:'condition'|'service-history';
   vehicleTitle:string;
   reference?:ReferenceVehicleDetail;
+  serviceHistory:VehicleServiceHistoryData;
   onClose:()=>void;
   onRequest:()=>void;
 }) {
@@ -20,21 +22,23 @@ export default function VehicleRecordsSheet({kind,vehicleTitle,reference,onClose
   const panel=useModal(true,onClose);
   const condition=kind==='condition';
   const inspection=reference?.inspection??[];
-  const records=reference?.serviceRecords??[];
+  const records=serviceHistory.records;
+  const sample=!condition&&serviceHistory.isSample;
   const hasRecords=condition?inspection.length>0:records.length>0;
 
   return <div {...stylex.props(s.backdrop)} onMouseDown={event=>event.currentTarget===event.target&&onClose()}>
     <section ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-labelledby="vehicle-records-title" {...stylex.props(s.sheet)}>
       <header {...stylex.props(s.header)}>
-        <h2 id="vehicle-records-title" {...stylex.props(s.title)}>{tx(condition?'Car Condition':'Service History')}</h2>
+        <h2 id="vehicle-records-title" {...stylex.props(s.title)}>{tx(condition?'Inspection report':'Service History')}</h2>
         <button type="button" aria-label={tx('Close information')} onClick={onClose} {...stylex.props(s.close)}><X size={22} aria-hidden="true"/></button>
       </header>
       <div {...stylex.props(s.body)}>
         <p {...stylex.props(s.vehicle)}>{vehicleTitle}</p>
+        {sample?<p {...stylex.props(s.sample)}>{tx('Sample history')}</p>:null}
         {hasRecords?<>
-          <p {...stylex.props(s.copy)}>{tx(condition?'Recorded inspection details from this car’s captured listing.':'Recorded service visits from this car’s captured listing.')}</p>
+          {sample?null:<p {...stylex.props(s.copy)}>{tx(condition?'Recorded inspection details from this car’s captured listing.':'Recorded service visits from this car’s captured listing.')}</p>}
           {condition?inspection.map(section=><InspectionSection key={section.title} section={section} embedded/>):<VehicleServiceHistory records={records} due={reference?.serviceDue??null} embedded/>}
-          <p {...stylex.props(s.note)}>{tx('These are archived listing records. Confirm the current condition and complete documentation with the dealer.')}</p>
+          <p {...stylex.props(s.note)}>{tx(sample?'Illustrative records. Request this car’s actual service documents from the dealer.':'These are archived listing records. Confirm the current condition and complete documentation with the dealer.')}</p>
         </>:<div {...stylex.props(s.empty)}>
           <h3 {...stylex.props(s.emptyTitle)}>{tx(condition?'No inspection report supplied':'No service records supplied')}</h3>
           <p {...stylex.props(s.copy)}>{tx(condition?'An inspection report is not available for this car. Ask the dealer for its current condition.':'Service records are not available for this car. Request them from the dealer.')}</p>
@@ -53,6 +57,7 @@ const s=stylex.create({
   close:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
   body:{minHeight:0,overflowY:'auto',overscrollBehaviorY:'contain',padding:'16px 20px calc(24px + env(safe-area-inset-bottom))'},
   vehicle:{color:$.muted,fontSize:13,fontWeight:400,lineHeight:'20px',overflowWrap:'anywhere'},
+  sample:{display:'inline-block',maxWidth:'100%',marginTop:12,padding:'5px 9px',color:$.ink,fontSize:12,fontWeight:500,lineHeight:'18px',borderRadius:$.radiusXs,backgroundColor:$.surfaceAlt},
   copy:{marginTop:8,color:$.muted,fontSize:14,fontWeight:400,lineHeight:'22px'},
   empty:{marginTop:20,padding:16,borderRadius:$.radiusMd,backgroundColor:$.surfaceAlt},
   emptyTitle:{fontSize:16,fontWeight:500,lineHeight:'24px'},

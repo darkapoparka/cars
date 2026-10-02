@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "sampleVisits": 3,
+  "providedRecordsOverrideSamples": true,
+  "unknownVehicleHasNoSamples": true,
+  "dealerModeHasNoSamples": true,
+  "bulgarianDateAndKilometres": true,
+  "emptyStateHasNoDefaults": true,
+  "scope": "Domain and static content checks; styles separately verified in Chromium."
+}

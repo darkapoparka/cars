@@ -1,0 +1,40 @@
+{
+  "StartedUtc": "2026-10-02T02:31:18.3072525Z",
+  "FinishedUtc": "2026-10-02T02:33:06.0198556Z",
+  "ExitCode": 0,
+  "SourceChanged": [],
+  "Files": [
+    {
+      "Path": "components/VehicleBelowFold.tsx",
+      "Hash": "C8D37EDDC20612992CC7FF27EB4D04FBA7850B06D984EB9CF112977C315888EC"
+    },
+    {
+      "Path": "components/VehicleDetailClient.tsx",
+      "Hash": "47014DAA8E2943D3E119CAB1DCEB93F89FFAFB09FB8D885A19E405E0F1ECD06E"
+    },
+    {
+      "Path": "components/VehicleRecordsSheet.tsx",
+      "Hash": "D09CDF2611E0EBCF400F63D5C68232355CD46BE2D1722D751A5881CA55FEBD14"
+    },
+    {
+      "Path": "components/VehicleServiceHistory.tsx",
+      "Hash": "6B2422D0A207C4BAA5DDBEDED94D46C8DA4BBF65796448799959694045D7E147"
+    },
+    {
+      "Path": "lib/reference-types.ts",
+      "Hash": "186DDEFF5316EC7F1025AB86828E6B6F274882E95125ECBFAECCA0BDEF441EF4"
+    },
+    {
+      "Path": "lib/vehicle-service-history.ts",
+      "Hash": "6D1479A6F140E03C8D7BA58ED33D8218E5E91349125DFC516818B904D360E7BD"
+    },
+    {
+      "Path": "lib/locales/bg.json",
+      "Hash": "12D9B36A402629D87273AC0D00FA3CA885493D85D8522BF00CAA8F41B0138A50"
+    },
+    {
+      "Path": "lib/locales/en.json",
+      "Hash": "EDF65AC7056932E44E1A9545E79D512D267CD7F92BA6522DB15280F93DE979D2"
+    }
+  ]
+}
