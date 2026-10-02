@@ -231,7 +231,7 @@
   "sourceHashes": [
     {
       "file": "templates/boxcar-updated/src/pages/About.svelte",
-      "sha256": "88fba91bdb326980645fa25f394680f99657456cfc13bcaf073361326137eee8"
+      "sha256": "f2b35a896a67474d8d31835c5a81b9b76032116b4eca83facd821fb05167bb03"
     },
     {
       "file": "templates/boxcar-updated/src/pages/Contact.svelte",
@@ -267,13 +267,13 @@
     },
     {
       "file": "templates/boxcar-updated/src/inner-pages.css",
-      "sha256": "41b8bcd1391daf4a3e1fdc8bf5b1b70aed8fa8669945d03bb274772920b759f7"
+      "sha256": "441856d5b9cf2b1690a7790be6d08b5d962ba2a3de35b604d29cd94e1b725b44"
     }
   ],
   "screenshots": [
     {
       "file": "docs/boxcar-updated/about-desktop.png",
-      "sha256": "ed6b1c65d00fbfb200f929cc2c119537b8476dd6fd63f6d5ebd60e8b0efe6549"
+      "sha256": "840a85ad35a1a14184389e2d78a08a8c6eaba5ac8172fff3c2ba1dff7651b618"
     },
     {
       "file": "docs/boxcar-updated/contact-desktop.png",
@@ -289,7 +289,7 @@
     },
     {
       "file": "docs/boxcar-updated/about-320.png",
-      "sha256": "938fc9437b8801ff3fe8c2c52157b28c72bd47fd516c2606ae1df54064909c56"
+      "sha256": "1f973cf9f5837607a4a20da87f196176756122f44ad4a32403b8b55ba6c57a93"
     },
     {
       "file": "docs/boxcar-updated/contact-320.png",
@@ -298,8 +298,294 @@
     {
       "file": "docs/boxcar-updated/cars-320.png",
       "sha256": "23694ec83135ae7597670791a8495a5c5d29dfefefc2ff07434beeac64dcab37"
+    },
+    {
+      "file": "docs/boxcar-updated/about-intro.png",
+      "sha256": "aa2fee4d7cfc9362de8fdb943c10dc00f72abc62953260215c5b3957b80b37a9"
     }
   ],
   "provenance": "templates/boxcar-updated/.template/inner-pages.json",
-  "ownerAcceptance": "pending"
+  "ownerAcceptance": "pending",
+  "aboutIntroCorrection": {
+    "recordedAt": "2026-10-02T12:36:35.998Z",
+    "scope": "Only the About introduction was changed; the previous nine-layout inner-page and broader checks retain their recorded timestamps.",
+    "checks": {
+      "svelte": {
+        "checkedAt": "2026-10-02T12:36:35.998Z",
+        "errors": 0,
+        "warnings": 0
+      },
+      "productionBuild": {
+        "checkedAt": "2026-10-02T12:36:35.998Z",
+        "status": "passed",
+        "modules": 156
+      }
+    },
+    "engines": {
+      "chromium": {
+        "checkedAt": "2026-10-02T12:35:26.137Z",
+        "engine": "chromium",
+        "layouts": [
+          {
+            "viewport": 1440,
+            "documentWidth": 1440,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 380,
+              "y": 186,
+              "width": 680,
+              "height": 90,
+              "right": 1060
+            },
+            "container": {
+              "x": 60,
+              "y": 134,
+              "width": 1320,
+              "height": 1699.78125,
+              "right": 1380
+            },
+            "paragraph": {
+              "x": 420,
+              "y": 250,
+              "width": 600,
+              "height": 26,
+              "right": 1020
+            },
+            "gallery": {
+              "x": 60,
+              "y": 320,
+              "width": 1320,
+              "height": 440,
+              "right": 1380
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          },
+          {
+            "viewport": 390,
+            "documentWidth": 390,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 18,
+              "y": 148,
+              "width": 354,
+              "height": 104.390625,
+              "right": 372
+            },
+            "container": {
+              "x": 18,
+              "y": 100,
+              "width": 354,
+              "height": 2079.375,
+              "right": 372
+            },
+            "paragraph": {
+              "x": 18,
+              "y": 200.390625,
+              "width": 354,
+              "height": 52,
+              "right": 372
+            },
+            "gallery": {
+              "x": 18,
+              "y": 282.390625,
+              "width": 354,
+              "height": 504,
+              "right": 372
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          },
+          {
+            "viewport": 320,
+            "documentWidth": 320,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 18,
+              "y": 148,
+              "width": 284,
+              "height": 104.390625,
+              "right": 302
+            },
+            "container": {
+              "x": 18,
+              "y": 100,
+              "width": 284,
+              "height": 2156.171875,
+              "right": 302
+            },
+            "paragraph": {
+              "x": 18,
+              "y": 200.390625,
+              "width": 284,
+              "height": 52,
+              "right": 302
+            },
+            "gallery": {
+              "x": 18,
+              "y": 282.390625,
+              "width": 284,
+              "height": 470,
+              "right": 302
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          }
+        ],
+        "journeys": [
+          "About FAQ and contact action at 1440",
+          "About FAQ and contact action at 390",
+          "About FAQ and contact action at 320"
+        ],
+        "errors": []
+      },
+      "webkit": {
+        "checkedAt": "2026-10-02T12:35:30.242Z",
+        "engine": "webkit",
+        "layouts": [
+          {
+            "viewport": 1440,
+            "documentWidth": 1440,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 380,
+              "y": 186,
+              "width": 680,
+              "height": 90,
+              "right": 1060
+            },
+            "container": {
+              "x": 60,
+              "y": 134,
+              "width": 1320,
+              "height": 1699.78125,
+              "right": 1380
+            },
+            "paragraph": {
+              "x": 420,
+              "y": 250,
+              "width": 600,
+              "height": 26,
+              "right": 1020
+            },
+            "gallery": {
+              "x": 60,
+              "y": 320,
+              "width": 1320,
+              "height": 440,
+              "right": 1380
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          },
+          {
+            "viewport": 390,
+            "documentWidth": 390,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 18,
+              "y": 148,
+              "width": 354,
+              "height": 104.390625,
+              "right": 372
+            },
+            "container": {
+              "x": 18,
+              "y": 100,
+              "width": 354,
+              "height": 2079.375,
+              "right": 372
+            },
+            "paragraph": {
+              "x": 18,
+              "y": 200.390625,
+              "width": 354,
+              "height": 52,
+              "right": 372
+            },
+            "gallery": {
+              "x": 18,
+              "y": 282.390625,
+              "width": 354,
+              "height": 504,
+              "right": 372
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          },
+          {
+            "viewport": 320,
+            "documentWidth": 320,
+            "h1Count": 1,
+            "extraIntroHeadings": 0,
+            "heading": "About Boxcars",
+            "headingAlign": "center",
+            "paragraphAlign": "center",
+            "intro": {
+              "x": 18,
+              "y": 148,
+              "width": 284,
+              "height": 104.390625,
+              "right": 302
+            },
+            "container": {
+              "x": 18,
+              "y": 100,
+              "width": 284,
+              "height": 2156.171875,
+              "right": 302
+            },
+            "paragraph": {
+              "x": 18,
+              "y": 200.390625,
+              "width": 284,
+              "height": 52,
+              "right": 302
+            },
+            "gallery": {
+              "x": 18,
+              "y": 282.390625,
+              "width": 284,
+              "height": 470,
+              "right": 302
+            },
+            "brokenImages": [],
+            "clippedControls": [],
+            "font": "\"Boxcar Dealer\", Arial, sans-serif"
+          }
+        ],
+        "journeys": [
+          "About FAQ and contact action at 1440",
+          "About FAQ and contact action at 390",
+          "About FAQ and contact action at 320"
+        ],
+        "errors": []
+      }
+    }
+  }
 }

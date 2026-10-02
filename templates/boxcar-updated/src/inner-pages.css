@@ -90,21 +90,20 @@
   font-weight: 500;
   color: #405ff2;
 }
-.about-inner-one .upper-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 90px;
-  align-items: start;
-  margin-bottom: 54px;
+.about-inner-one .bc-breadcrumb {
+  justify-content: center;
 }
-.about-inner-one .upper-box h2 {
-  max-width: 480px;
-  font-size: 40px;
-  line-height: 1.3;
-  margin: 0;
+.bc-about-intro {
+  max-width: 680px;
+  margin: 0 auto 44px;
+  text-align: center;
 }
-.about-inner-one .upper-box p {
-  margin: 0 0 18px;
+.bc-about-intro .bc-page-title {
+  margin-bottom: 16px;
+}
+.bc-about-intro p {
+  max-width: 600px;
+  margin: 0 auto;
 }
 .about-inner-one .galler-section {
   display: grid;
@@ -644,9 +643,6 @@
   font-family: "Boxcar Dealer", Arial, sans-serif;
 }
 @media (max-width: 1199px) {
-  .about-inner-one .upper-box {
-    gap: 48px;
-  }
   .about-inner-one .galler-section {
     height: 380px;
     grid-template-columns: 1.1fr 2fr 2fr;
@@ -734,13 +730,11 @@
   .bc-inner h2 {
     font-size: 26px;
   }
-  .about-inner-one .upper-box {
-    grid-template-columns: 1fr;
-    gap: 22px;
+  .bc-about-intro {
     margin-bottom: 30px;
   }
-  .about-inner-one .upper-box h2 {
-    font-size: 30px;
+  .bc-about-intro .bc-page-title {
+    margin-bottom: 14px;
   }
   .about-inner-one .galler-section {
     height: auto;

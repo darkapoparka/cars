@@ -39,7 +39,7 @@
   ];
 </script>
 
-<!-- Adapted from about.html's upper-box, five-image gallery and benefit blocks. -->
+<!-- Boxcar gallery and illustrations with one centered dealer introduction. -->
 <section class="bc-inner about-inner-one">
   <div class="bc-container">
     <nav class="bc-breadcrumb" aria-label="Breadcrumb">
@@ -47,30 +47,11 @@
       <span>/</span>
       <span aria-current="page">About us</span>
     </nav>
-    <h1 class="bc-page-title">About {brand.name}</h1>
-    <div class="upper-box">
-      <div class="boxcar-title">
-        <h2>
-          A better experience.
-          <br />
-          A car that fits you.
-        </h2>
-      </div>
-      <div class="content-box">
-        <p>
-          Finding your next car should feel exciting. Explore the options at
-          your own pace, get a clear view of the details and build a shortlist
-          that feels right for you.
-        </p>
-        <p>
-          From the first search to a closer look, {brand.name} brings everything together.
-          Browse by make or body style, save your favourites and compare them side
-          by side.
-        </p>
-        <a class="bc-text-link" href="/inventory/">
-          Explore our cars <Icon name="arrow" size={20} />
-        </a>
-      </div>
+    <div class="bc-about-intro">
+      <h1 class="bc-page-title">About {brand.name}</h1>
+      <p>
+        Browse our cars and compare your favourites before your next viewing.
+      </p>
     </div>
     <div class="galler-section" aria-label="Showroom photo gallery">
       <div class="exp-block">
