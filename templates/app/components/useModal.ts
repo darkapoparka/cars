@@ -60,7 +60,7 @@ export function useModal(active: boolean, onClose: () => void, options: {history
       if (!isTop()) return;
       if (event.key === 'Escape') {event.preventDefault(); event.stopPropagation(); close.current(); return;}
       if (event.key !== 'Tab' || !panel.current) return;
-      const controls = [...panel.current.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),textarea:not(:disabled),[tabindex="0"]')]
+      const controls = [...panel.current.querySelectorAll<HTMLElement>('button:not(:disabled),a[href],input:not(:disabled),select:not(:disabled),textarea:not(:disabled),summary,[tabindex="0"]')]
         .filter(element => element.getClientRects().length > 0 && getComputedStyle(element).visibility !== 'hidden');
       const first = controls[0], last = controls.at(-1);
       if (!first || !last) {event.preventDefault(); panel.current.focus(); return;}

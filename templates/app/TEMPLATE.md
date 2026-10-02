@@ -14,6 +14,8 @@ The first Buy/home banner uses `DealerHomeBanner`: the configured dealer's retai
 
 Every later App dealer refresh must retain that lead's logo, actual contact data, listing currency and assets. See [App branding and refresh preflight](../../docs/APP-VARIANT.md). Template edits and local preview changes are separate from committed source, receipt regeneration and deployment.
 
+**Care and finance correction — 2 October 2026:** The lower Car care campaign follows its short heading, sentence and white action rather than a square image ratio: about 160px tall at 320px and 390px, with proportional artwork at the right. Service instructions are a plain ordered list with visible 01–06 numbers, 18px headings and 15px descriptions; they have no card borders, illustrations or interactive controls. Wider screens use two or three columns. Finance uses a compact charcoal calculator button with a white Calculate pill. It opens a bottom sheet on phones and a centered dialog on larger screens, with a prominent monthly estimate, 16px inputs and 14px labels. Keep entered values when closing and reopening, and use the shared modal boundary for focus, Escape, Back and scroll locking. The secondary finance campaign also follows its content height. The calculator remains illustrative; the separate vehicle-price sheet retains its embedded calculator. See [focused verification](docs/care-finance-refinement-2026-10-02/README.md).
+
 Key: `app` · family: `dealer-webapp` · status: `reference-content-candidate`.
 
 ## Ownership and current state

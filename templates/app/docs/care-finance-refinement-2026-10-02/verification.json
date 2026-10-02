@@ -1,0 +1,641 @@
+{
+  "checkedAt": "2026-10-02",
+  "preview": "http://127.0.0.1:6483",
+  "views": [
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 320,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 0,
+        "outputs": [
+          "€ 658",
+          "€ 6,300 · 21%"
+        ],
+        "scrollableBody": false,
+        "top": 166.609375,
+        "values": [
+          "30000",
+          "0",
+          "3",
+          "21"
+        ],
+        "width": 320
+      },
+      "documentWidth": 320,
+      "height": 720,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 315.484375,
+        "width": 296
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 320,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 666.390625,
+        "left": 0,
+        "outputs": [
+          "€ 658",
+          "€ 6,300 · 21%"
+        ],
+        "scrollableBody": false,
+        "top": 53.609375,
+        "values": [
+          "30000",
+          "0",
+          "3",
+          "21"
+        ],
+        "width": 320
+      },
+      "documentWidth": 320,
+      "height": 720,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 315.484375,
+        "width": 296
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 305,
+      "dialog": null,
+      "documentWidth": 305,
+      "height": 720,
+      "launcher": {
+        "expanded": "false",
+        "height": 160.5,
+        "left": 12,
+        "top": 303.484375,
+        "width": 281
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 320,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 456,
+        "left": 0,
+        "outputs": [
+          "€ 658",
+          "€ 6,300 · 21%"
+        ],
+        "scrollableBody": true,
+        "top": 24,
+        "values": [
+          "30000",
+          "0",
+          "3",
+          "21"
+        ],
+        "width": 320
+      },
+      "documentWidth": 320,
+      "height": 480,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 189.484375,
+        "width": 296
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 375,
+      "dialog": null,
+      "documentWidth": 375,
+      "height": 844,
+      "launcher": {
+        "expanded": "false",
+        "height": 160.5,
+        "left": 12,
+        "top": 211.484375,
+        "width": 351
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 390
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 390,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 0,
+        "outputs": [
+          "€ 396",
+          "€ 5,000 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 290.609375,
+        "values": [
+          "25000",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 390
+      },
+      "documentWidth": 390,
+      "height": 844,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 377.484375,
+        "width": 366
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 390
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": {
+        "cta": "Виж услугите",
+        "height": 159.890625,
+        "left": 12,
+        "title": "Грижа за колата.",
+        "top": 602.3125,
+        "width": 351
+      },
+      "clientWidth": 375,
+      "dialog": null,
+      "documentWidth": 375,
+      "height": 844,
+      "launcher": null,
+      "overflow": false,
+      "process": {
+        "columns": "351px",
+        "height": 436.125,
+        "interactive": 0,
+        "items": 6,
+        "left": 12,
+        "top": 138.1875,
+        "width": 351
+      },
+      "route": "/bg/service",
+      "width": 390
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": {
+        "cta": "Виж услугите",
+        "height": 159.890625,
+        "left": 12,
+        "title": "Грижа за колата.",
+        "top": 221.3125,
+        "width": 281
+      },
+      "clientWidth": 305,
+      "dialog": null,
+      "documentWidth": 305,
+      "height": 720,
+      "launcher": null,
+      "overflow": false,
+      "process": {
+        "columns": "281px",
+        "height": 458.625,
+        "interactive": 0,
+        "items": 6,
+        "left": 12,
+        "top": -265.3125,
+        "width": 281
+      },
+      "route": "/bg/service",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": {
+        "cta": "Виж услугите",
+        "height": 159.890625,
+        "left": 12,
+        "title": "Грижа за колата.",
+        "top": 626.3125,
+        "width": 351
+      },
+      "clientWidth": 375,
+      "dialog": null,
+      "documentWidth": 375,
+      "height": 844,
+      "launcher": null,
+      "overflow": false,
+      "process": {
+        "columns": "351px",
+        "height": 436.125,
+        "interactive": 0,
+        "items": 6,
+        "left": 12,
+        "top": 162.1875,
+        "width": 351
+      },
+      "route": "/bg/service",
+      "width": 390
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": {
+        "cta": "Виж услугите",
+        "height": 184.1875,
+        "left": 120.5,
+        "title": "Грижа за колата.",
+        "top": 406.9375,
+        "width": 1184
+      },
+      "clientWidth": 1425,
+      "dialog": null,
+      "documentWidth": 1425,
+      "height": 1000,
+      "launcher": null,
+      "overflow": false,
+      "process": {
+        "columns": "378.656px 378.672px 378.656px",
+        "height": 129.375,
+        "interactive": 0,
+        "items": 6,
+        "left": 120.5,
+        "top": 249.5625,
+        "width": 1184
+      },
+      "route": "/bg/service",
+      "width": 1440
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 1425,
+      "dialog": null,
+      "documentWidth": 1425,
+      "height": 1000,
+      "launcher": {
+        "expanded": "false",
+        "height": 118.25,
+        "left": 120.5,
+        "top": 292.328125,
+        "width": 1184
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 1440
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 1440,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 440,
+        "outputs": [
+          "€ 396",
+          "€ 5,000 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 223.296875,
+        "values": [
+          "25000",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 560
+      },
+      "documentWidth": 1440,
+      "height": 1000,
+      "launcher": {
+        "expanded": "true",
+        "height": 118.25,
+        "left": 128,
+        "top": 473.328125,
+        "width": 1184
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 1440
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 820,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 130,
+        "outputs": [
+          "€ 396",
+          "€ 5,000 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 223.296875,
+        "values": [
+          "25000",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 560
+      },
+      "documentWidth": 820,
+      "height": 1000,
+      "launcher": {
+        "expanded": "true",
+        "height": 118.25,
+        "left": 28,
+        "top": 482.6875,
+        "width": 764
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 820
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 320,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 0,
+        "outputs": [
+          "€ 396",
+          "€ 5,000 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 166.609375,
+        "values": [
+          "25000",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 320
+      },
+      "documentWidth": 320,
+      "height": 720,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 301.1875,
+        "width": 296
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/en/finance",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": {
+        "cta": "View services",
+        "height": 159.890625,
+        "left": 12,
+        "title": "Car care.",
+        "top": 278.015625,
+        "width": 281
+      },
+      "clientWidth": 305,
+      "dialog": null,
+      "documentWidth": 305,
+      "height": 720,
+      "launcher": null,
+      "overflow": false,
+      "process": {
+        "columns": "281px",
+        "height": 481.125,
+        "interactive": 0,
+        "items": 6,
+        "left": 12,
+        "top": -231.109375,
+        "width": 281
+      },
+      "route": "/en/service",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 320,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 662.390625,
+        "left": 0,
+        "outputs": [
+          "€ 1,491",
+          "€ 18,820 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 57.609375,
+        "values": [
+          "94099",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 320
+      },
+      "documentWidth": 320,
+      "height": 720,
+      "launcher": null,
+      "overflow": false,
+      "process": null,
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "width": 320
+    },
+    {
+      "bodyOverflow": "",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 375,
+      "dialog": null,
+      "documentWidth": 375,
+      "height": 844,
+      "launcher": {
+        "expanded": "false",
+        "height": 160.5,
+        "left": 12,
+        "top": 177.484375,
+        "width": 351
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 390
+    },
+    {
+      "bodyOverflow": "hidden",
+      "brokenImages": [],
+      "care": null,
+      "clientWidth": 390,
+      "dialog": {
+        "fieldFonts": [
+          "14px",
+          "14px",
+          "14px",
+          "14px"
+        ],
+        "height": 553.390625,
+        "left": 0,
+        "outputs": [
+          "€ 396",
+          "€ 5,000 · 20%"
+        ],
+        "scrollableBody": false,
+        "top": 290.609375,
+        "values": [
+          "25000",
+          "7",
+          "5",
+          "20"
+        ],
+        "width": 390
+      },
+      "documentWidth": 390,
+      "height": 844,
+      "launcher": {
+        "expanded": "true",
+        "height": 160.5,
+        "left": 12,
+        "top": 377.484375,
+        "width": 366
+      },
+      "overflow": false,
+      "process": null,
+      "route": "/bg/finance",
+      "width": 390
+    }
+  ],
+  "interactions": {
+    "serviceBannerDestination": "/bg/service/details",
+    "calculatorChangedInputs": {
+      "price": 30000,
+      "annualRate": 7,
+      "years": 3,
+      "depositPercent": 21,
+      "monthly": 732
+    },
+    "zeroInterest": {
+      "price": 30000,
+      "years": 3,
+      "depositPercent": 21,
+      "monthly": 658,
+      "totalWithDeposit": 30000
+    },
+    "valuesRetainedOnReopen": true,
+    "escapeCloses": true,
+    "backClosesWithoutLeavingFinance": true,
+    "closeButtonRestoresFocus": true,
+    "backdropRestoresFocusAndScroll": true,
+    "tabWrapsBetweenCloseAndSummary": true,
+    "backgroundInertWhileOpen": true,
+    "backgroundRestoredOnClose": true,
+    "shortScreenBodyScrollable": true,
+    "vehiclePriceCalculatorCheckedAt320": true
+  },
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "result": "passed"
+  },
+  "source": {
+    "repository": "L:/CODEX/cars",
+    "branch": "main",
+    "baseHead": "4f5380858f71b4479f9f589ee0fdb4208d019b5d"
+  }
+}

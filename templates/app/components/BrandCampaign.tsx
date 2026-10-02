@@ -21,23 +21,28 @@ export default function BrandCampaign({kind, onAction}: {kind: Kind; onAction?: 
 
   const campaign = campaigns[kind];
   function copy(full: string, short: string) {return <><span {...stylex.props(s.desktopCopy)}>{tx(full)}</span><span {...stylex.props(s.mobileCopy)}>{tx(short)}</span></>;}
-  return <section data-brand-campaign={kind} {...stylex.props(s.campaign, kind === 'finance' && s.wide)}>
-    <Image src={showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art)} />
-    <div {...stylex.props(s.copy, kind === 'sell' && s.sellCopy, kind === 'finance' && s.financeCopy)}>
-      {kind !== 'sell' ? <p {...stylex.props(s.brand)}>{tx(showroom.name)}{tx(kind === 'care' ? ' Car Care' : ' Finance')}</p> : null}
-      <h2 {...stylex.props(s.title)}>{copy(campaign.title, campaign.mobileTitle)}</h2>
-      <p {...stylex.props(s.description, kind === 'finance' && s.shortDescription)}>{copy(campaign.copy, campaign.mobileCopy)}</p>
-      {onAction ? <button type="button" onClick={onAction} {...stylex.props(s.action)}>{copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></button> : <Link href={campaign.href} {...stylex.props(s.action)}>{copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></Link>}
+  return <section data-brand-campaign={kind} {...stylex.props(s.campaign, kind === 'finance' && s.wide, kind === 'care' && s.care)}>
+    <Image src={showroom.artwork.campaigns[kind]} width={1080} height={kind === 'finance' ? 540 : 1080} alt={tx("")} sizes="(max-width:767px) 100vw, 680px" {...stylex.props(s.art, kind === 'care' && s.careArt, kind === 'finance' && s.financeArt)} />
+    <div {...stylex.props(s.copy, kind === 'sell' && s.sellCopy, kind === 'finance' && s.financeCopy, kind === 'care' && s.careCopy)}>
+      {kind === 'finance' ? <p {...stylex.props(s.brand)}>{tx(showroom.name)}{tx(' Finance')}</p> : null}
+      <h2 {...stylex.props(s.title, kind === 'care' && s.careTitle)}>{kind === 'care' ? tx(campaign.mobileTitle) : copy(campaign.title, campaign.mobileTitle)}</h2>
+      <p {...stylex.props(s.description, kind === 'finance' && s.shortDescription)}>{kind === 'care' ? tx(campaign.mobileCopy) : copy(campaign.copy, campaign.mobileCopy)}</p>
+      {onAction ? <button type="button" onClick={onAction} {...stylex.props(s.action)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></button> : <Link href={campaign.href} {...stylex.props(s.action)}>{kind !== 'sell' ? tx(campaign.mobileAction) : copy(campaign.action, campaign.mobileAction)}<ArrowRight size={17} {...stylex.props(s.icon)}/></Link>}
     </div>
   </section>;
 }
 const s = stylex.create({
   campaign: {position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', width: '100%', aspectRatio: '1', minHeight: {[media.mobile]: 0, default: 350}, maxWidth: 680, marginInline: 'auto', marginTop: 28, overflow: 'hidden', borderRadius: 20, color: '#fff', backgroundColor: theme.surface},
-  wide: {aspectRatio: {[media.mobile]: 'auto', default: '2'}, minHeight: {[media.mobile]: 0, default: 220}, maxWidth: 'none'},
+  wide: {aspectRatio: 'auto', minHeight: 0, maxWidth: 'none'},
+  care: {aspectRatio: 'auto', minHeight: 0, maxWidth: 'none'},
   art: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},
+  careArt: {top: 'auto', left: 'auto', right: 0, bottom: 0, width: 'auto', height: {[media.mobile]: '125%', default: '170%'}, objectFit: 'contain', maskImage: 'linear-gradient(to right,transparent,#000 52%)'},
+  financeArt: {left: 'auto', width: 'auto', objectFit: 'contain', maskImage: 'linear-gradient(to right,transparent,#000 32%)'},
   copy: {position: 'relative', zIndex: 1, padding: {[media.mobile]: 20, default: 32}},
   sellCopy: {marginTop: 'auto'},
   financeCopy: {padding: {[media.mobile]: 18, default: 28}},
+  careCopy: {width: {[media.mobile]: '100%', default: '65%'}, padding: {[media.mobile]: 20, default: 28}},
+  careTitle: {marginTop: 0},
   brand: {fontSize: 12, fontWeight: 600, letterSpacing: '.03em'},
   title: {maxWidth: 440, marginTop: 8, fontSize: {[media.mobile]: 26, default: 32}, fontWeight: 600, lineHeight: 1.15, letterSpacing: '-.02em', textWrap: 'pretty'},
   description: {maxWidth: 350, marginTop: 9, color: theme.muted, fontSize: {[media.mobile]: 15, default: 16}, lineHeight: 1.4},
