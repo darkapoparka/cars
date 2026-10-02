@@ -1,6 +1,14 @@
 <script lang="ts">
   import type { SocialLink, SocialPlatform } from "../data/brand";
-  let { links }: { links: SocialLink[] } = $props();
+  let {
+    links,
+    previewPlatforms = [],
+  }: { links: SocialLink[]; previewPlatforms?: SocialPlatform[] } = $props();
+  let items = $derived(
+    links.length
+      ? links
+      : previewPlatforms.map((platform) => ({ platform, url: null })),
+  );
   const platforms: Record<SocialPlatform, { label: string; glyph: string }> = {
     facebook: { label: "Facebook", glyph: "\uf39e" },
     instagram: { label: "Instagram", glyph: "\uf16d" },
@@ -10,16 +18,31 @@
   };
 </script>
 
-<nav class="bc-social-links" aria-label="Social media">
-  {#each links as { platform, url }}
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <span class="bc-social-symbol" aria-hidden="true">
-        {platforms[platform].glyph}
+{#snippet platformLabel(platform: SocialPlatform)}
+  <span class="bc-social-symbol" aria-hidden="true">
+    {platforms[platform].glyph}
+  </span>
+  <span>{platforms[platform].label}</span>
+{/snippet}
+
+<div class="bc-social-links" role="group" aria-label="Social media">
+  {#each items as { platform, url }}
+    {#if url}
+      <a
+        class="bc-social-item"
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {@render platformLabel(platform)}
+      </a>
+    {:else}
+      <span class="bc-social-item">
+        {@render platformLabel(platform)}
       </span>
-      {platforms[platform].label}
-    </a>
+    {/if}
   {/each}
-</nav>
+</div>
 
 <style>
   @font-face {
@@ -34,36 +57,40 @@
     flex-wrap: wrap;
     gap: 10px;
   }
-  a {
+  .bc-social-item {
     display: inline-flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 9px;
-    min-height: 44px;
-    border: 1px solid #e1e1e1;
-    border-radius: 10px;
-    padding: 9px 14px;
+    gap: 6px;
+    min-width: 48px;
     color: #050b20;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 12px;
+    line-height: 20px;
     font-weight: 500;
     text-decoration: none;
   }
   a:hover {
-    border-color: #405ff2;
     color: #405ff2;
+  }
+  a:hover .bc-social-symbol {
     background: #eef1fb;
   }
   a:focus-visible {
     outline: 2px solid #050b20;
     outline-offset: 3px;
+    border-radius: 12px;
   }
   .bc-social-symbol {
+    display: grid;
+    place-items: center;
     font-family: "Boxcar Social";
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 400;
-    width: 20px;
-    line-height: 20px;
-    text-align: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #f2f4f7;
+    line-height: 1;
   }
 </style>

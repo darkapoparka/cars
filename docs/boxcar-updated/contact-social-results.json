@@ -1,0 +1,418 @@
+{
+  "date": "2026-10-03",
+  "baseUrl": "http://127.0.0.1:6455/",
+  "browser": "Chromium in-app browser",
+  "change": "Replace the blue viewing note with a white social card and neutral original brand icons.",
+  "checks": {
+    "svelteCheck": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "viteBuild": {
+      "passed": true,
+      "modules": 163
+    }
+  },
+  "consoleErrors": [],
+  "profileUrlsConfigured": false,
+  "defaultIconsAreStatic": true,
+  "states": [
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "757.141px 560.859px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 925.75,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 992.515625,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 1050.8125,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 674.1875,
+        "height": 184,
+        "right": 1331.5,
+        "width": 480.859375,
+        "x": 850.640625,
+        "y": 490.1875
+      },
+      "socialLinks": [],
+      "subject": "Buying a car",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1440
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "267px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 116.109375,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 182.875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 241.171875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 1500.484375,
+        "height": 208,
+        "right": 264,
+        "width": 223,
+        "x": 41,
+        "y": 1292.484375
+      },
+      "socialLinks": [],
+      "subject": "Buying a car",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 320
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "337px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 120.109375,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 186.875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 245.171875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 678.484375,
+        "height": 184,
+        "right": 330,
+        "width": 285,
+        "x": 45,
+        "y": 494.484375
+      },
+      "socialLinks": [],
+      "subject": "Buying a car",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 390
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "703px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 132.109375,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 198.875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 257.171875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 576.6875,
+        "height": 184,
+        "right": 696,
+        "width": 639,
+        "x": 57,
+        "y": 392.6875
+      },
+      "socialLinks": [],
+      "subject": "Buying a car",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 768
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "532.531px 394.469px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 680.640625,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 747.40625,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 805.703125,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 428.1875,
+        "height": 184,
+        "right": 936,
+        "width": 330.46875,
+        "x": 605.53125,
+        "y": 244.1875
+      },
+      "socialLinks": [],
+      "subject": "Buying a car",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1024
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "267px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 116.109375,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 182.875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 241.171875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 2150.484375,
+        "height": 208,
+        "right": 264,
+        "width": 223,
+        "x": 41,
+        "y": 1942.484375
+      },
+      "socialLinks": [],
+      "subject": "Arranging a viewing",
+      "url": "http://127.0.0.1:6455/contact/?intent=viewing",
+      "width": 320
+    },
+    {
+      "buttonBackground": "rgb(64, 95, 242)",
+      "buttonText": "Preview enquiry",
+      "columns": "267px",
+      "detailsBackground": "rgb(242, 244, 247)",
+      "fontLoaded": true,
+      "height": 1000,
+      "infoCards": 3,
+      "mapCount": 1,
+      "oldViewingBlock": 0,
+      "oldViewingHeading": false,
+      "overflow": false,
+      "platforms": [
+        {
+          "height": 74,
+          "label": " Facebook",
+          "right": 116.109375,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 55.109375
+        },
+        {
+          "height": 74,
+          "label": " Instagram",
+          "right": 182.875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 56.765625
+        },
+        {
+          "height": 74,
+          "label": " YouTube",
+          "right": 241.171875,
+          "symbolFont": "\"Boxcar Social\"",
+          "symbolWidth": 48,
+          "tag": "SPAN",
+          "width": 48.296875
+        }
+      ],
+      "socialBackground": "rgb(255, 255, 255)",
+      "socialCard": {
+        "bottom": 2353.28125,
+        "height": 208,
+        "right": 264,
+        "width": 223,
+        "x": 41,
+        "y": 2145.28125
+      },
+      "socialLinks": [],
+      "subject": "Selling a car",
+      "url": "http://127.0.0.1:6455/contact/?intent=sell",
+      "width": 320
+    }
+  ],
+  "screenshots": [
+    "docs/boxcar-updated/contact-social-desktop.jpg",
+    "docs/boxcar-updated/contact-social-320.jpg"
+  ],
+  "scope": "Local template candidate; configured social profile destinations were not tested. No dealer deployment or release-pin change.",
+  "sourceHashes": {
+    "templates/boxcar-updated/src/pages/Contact.svelte": "d2ad8b9c706f6ee06c7d2e080c9683329e54ebe04057467d4f60185c5f9c2f82",
+    "templates/boxcar-updated/src/components/SocialLinks.svelte": "822824cf0da55c4b5befb1356a110ccdb350b3575c2ef04c6926b1cca9e55942",
+    "templates/boxcar-updated/src/inner-pages.css": "e6bbb66fe3b10f3ae15eaab023e17d8f29e2b7934180b0b18f744dc722eaa43d",
+    "templates/boxcar-updated/src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "templates/boxcar-updated/src/data/brand.ts": "471d4dcd65b979826c31d465e593a48146800449f7e56a097368360d228bb7af"
+  }
+}

@@ -386,32 +386,18 @@
   color: #405ff2;
 }
 .bc-contact-social {
-  margin-top: 30px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 12px;
 }
 .contact-us-section .bc-contact-social h3 {
   font-size: 17px;
-  margin-bottom: 14px;
+  margin-bottom: 6px;
 }
-.bc-visit {
-  background: #f9fbfc;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 30px;
-}
-.contact-us-section .bc-visit {
-  background: var(--accent, #405ff2);
-  color: #fff;
-  border-radius: 16px;
-  margin-top: 20px;
-}
-.contact-us-section .bc-visit h3 {
-  color: inherit;
-  font-size: 17px;
-  margin-bottom: 8px;
-}
-.contact-us-section .bc-visit p {
-  color: inherit;
-  margin: 0;
+.contact-us-section .bc-contact-social p {
+  color: #667085;
+  margin: 0 0 16px;
   font-size: 14px;
   line-height: 24px;
 }

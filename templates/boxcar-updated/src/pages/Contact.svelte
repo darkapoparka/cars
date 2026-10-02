@@ -57,7 +57,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          {map.linkText} <Icon name="arrow" size={20} />
+          {map.linkText}
+          <Icon name="arrow" size={20} />
         </a>
       </section>
     {/if}
@@ -121,18 +122,13 @@
               </p>
             </div>
           {/if}
-          {#if brand.socialLinks.length}
-            <div class="bc-contact-social">
-              <h3>Follow us</h3>
-              <SocialLinks links={brand.socialLinks} />
-            </div>
-          {/if}
-          <div class="bc-visit">
-            <h3>Planning a viewing?</h3>
-            <p>
-              Include the car’s make and model in your message so the dealership
-              can help with your enquiry.
-            </p>
+          <div class="bc-contact-social">
+            <h3>Follow us</h3>
+            <p>New arrivals and showroom updates.</p>
+            <SocialLinks
+              links={brand.socialLinks}
+              previewPlatforms={["facebook", "instagram", "youtube"]}
+            />
           </div>
         </div>
       </aside>
