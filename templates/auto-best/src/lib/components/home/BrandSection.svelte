@@ -6,19 +6,16 @@
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
   import DiscoveryAllTile from './DiscoveryAllTile.svelte';
-  import { brands, desktopBrands, mobileBrandArtwork } from '$data/home';
-  const mobileBrands = new Set(
-    [...brands.filter((brand) => brand.count > 0), ...brands.filter((brand) => brand.count <= 0)]
-      .slice(0, 3)
-      .map((brand) => brand.label)
-  );
+  import { brands, desktopBrands, homeBrandCards, mobileBrandArtwork, mobileFeaturedBrandLabels } from '$data/home';
+  const mobileBrands = new Set<string>(mobileFeaturedBrandLabels);
+  const desktopBrandLabels = new Set<string>(desktopBrands.map(brand => brand.label));
   type BrandArtwork = (typeof mobileBrandArtwork)[string];
   const logoWidth = (brand: BrandArtwork, opticalHeight: number, maxWidth: number) => Math.round(Math.min(
     maxWidth,
     opticalHeight * (brand.bounds[2] - brand.bounds[0]) / (brand.bounds[3] - brand.bounds[1])
   ));
   const mobileLogoWidth = (brand: BrandArtwork) => logoWidth(brand, 46, 104);
-  const desktopLogoWidth = (brand: (typeof brands)[number]) => logoWidth(brand, 60, 116);
+  const desktopLogoWidth = (brand: BrandArtwork) => logoWidth(brand, 60, 116);
   let expanded = $state(false);
 </script>
 
@@ -35,9 +32,9 @@
     </div>
     <div class="dn-brand-panel dn-home-section-panel">
       <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(desktopBrands.length, 6))}>
-        {#each desktopBrands as brand (brand.label)}
+        {#each homeBrandCards as brand (brand.label)}
           {@const mobile = mobileBrandArtwork[brand.label] ?? brand}
-          <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
+          <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0 && !mobileBrands.has(brand.label)} class:dn-brand-card--mobile-only={!desktopBrandLabels.has(brand.label)} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
             <span class="dn-brand-card__image">
               <span class="dn-brand-card__frame"
                 style:--logo-tablet-width={`${logoWidth(brand, 46, 84)}px`}
@@ -91,6 +88,10 @@
   .dn-brand-card:hover, .dn-brand-card:focus-visible { box-shadow: var(--dn-card-hover-shadow); }
   .dn-brand-hero__cta:hover { background: var(--dn-surface-hover); }
   a:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+
+  @media (min-width: 768px) {
+    .dn-brand-card--mobile-only { display: none; }
+  }
 
   @media (min-width: 768px) and (max-width: 1199px) {
     .dn-brand-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }

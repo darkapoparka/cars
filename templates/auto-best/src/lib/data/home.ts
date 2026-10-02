@@ -32,15 +32,15 @@ const brandArtwork = [
   { label: 'BMW', image: '/assets/images/partner/parner12.png', width: 140, height: 80, bounds: [33, 3, 107, 77] }
 ] as const;
 
-// Mobile uses the inherited chrome rings alongside the chrome star and BMW roundel.
-// The unchanged source includes a wordmark; measured rings bounds keep the card compact.
+// Responsive artwork overrides retain the inherited Audi source unchanged.
+// Its measured rings bounds omit the wordmark in compact cards.
 export const mobileBrandArtwork: Record<string, {
   image: string; width: number; height: number; bounds: readonly [number, number, number, number];
 }> = {
   Audi: { image: '/assets/images/brand-curated/audi-rings-chrome-mobile.webp', width: 1800, height: 1200, bounds: [73, 90, 1726, 672] }
 };
 
-// Desktop discovery retains the full template catalog; mobile shortcuts follow stock.
+// Desktop discovery retains the full template catalog.
 const enabledBodyTypes = new Set(['Sedan', 'Hatchback', 'Pickup Truck', 'SUV', 'Wagon', 'Convertible', 'Coupe', 'Sportback']);
 export const desktopBodyTypes = bodyArtwork.filter(item => enabledBodyTypes.has(item.query)).map(item => ({
   ...item, label: bodyLabel(item.query), count: featuredVehicles.filter(vehicle => vehicle.body === item.query).length
@@ -50,6 +50,17 @@ export const desktopBrands = brandArtwork.map(item => ({
 }));
 export const bodyTypes = desktopBodyTypes.filter(item => item.count > 0);
 export const brands = desktopBrands.filter(item => item.count > 0);
+
+// Mobile Home features three round emblems; the full inventory remains available.
+export const mobileFeaturedBrandLabels = ['Mercedes-Benz', 'BMW', 'Volkswagen'] as const;
+export const homeBrandCards = [
+  ...desktopBrands,
+  {
+    label: 'Volkswagen', image: '/assets/images/brand-curated/volkswagen-badge-cardog.svg',
+    width: 512, height: 512, bounds: [79, 78, 434, 433] as const,
+    count: featuredVehicles.filter(vehicle => vehicle.make === 'Volkswagen').length
+  }
+];
 
 const editorialSummaries: Record<number, string> = {
   1: 'История, документи и техническо състояние.',
