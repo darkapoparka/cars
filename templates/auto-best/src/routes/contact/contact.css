@@ -687,6 +687,11 @@
   .dn-contact-section--general .dn-contact-card { margin-top: var(--dn-space-4); border-radius: var(--dn-radius-lg); }
   .dn-contact-section--general .dn-contact-card__heading { display: none; }
   .dn-contact-section--general .dn-contact-card__links { margin-top: 0; }
+  .dn-contact-intent--general .dn-contact-card__link {
+    grid-template-columns: minmax(0, 1fr) 20px;
+    gap: var(--dn-space-4);
+  }
+  .dn-contact-intent--general .dn-contact-card__icon { display: none; }
   .dn-contact-section--general .dn-contact-location { margin-top: var(--dn-space-6); }
   .dn-contact-section--general .dn-contact-location__card {
     overflow: hidden;

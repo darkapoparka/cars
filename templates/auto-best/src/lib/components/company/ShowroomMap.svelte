@@ -30,7 +30,7 @@
   {#if headingId}
     <div class="dn-showroom-map__header">
       <h2 class="dn-showroom-map__heading" id={headingId}>
-        {i18n.t('m_15b61974b270')}
+        {i18n.t('label.map')}
       </h2>
       <p class="dn-showroom-map__address">{address}</p>
     </div>

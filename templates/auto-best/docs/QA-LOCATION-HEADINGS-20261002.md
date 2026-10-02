@@ -1,10 +1,12 @@
 # Mobile location headings — 2 October 2026
 
-PDP, About and general Contact use a plain, left aligned “Местоположение” heading
-with a muted address below it. The mobile heading and address have no location
-icon. Desktop keeps its existing map composition and PDP address icon.
+About and general Contact use a plain, left aligned “Карта” / “Map” heading with
+a muted address below it. PDP keeps “Местоположение” / “Location”. The mobile
+heading and address have no location icon. General Contact's mobile details card
+uses plain address, visit and phone rows with right arrows; the leading red icons
+are hidden. Desktop keeps its existing map composition and PDP address icon.
 
-Verified at `http://127.0.0.1:6461` using Node 22.20.0:
+Earlier plain-heading verification at `http://127.0.0.1:6461`, using Node 22.20.0:
 
 - Nine Chromium rendered states cover all three routes at 390px, 320px with 200%
   text, and 1440px desktop.
@@ -22,3 +24,19 @@ remains in `runtime/location-heading-20261002/` and
 
 Coordinates, map loading and directions links are unchanged. This verifies the
 local reusable template; no dealer refresh or deployment was performed.
+
+The shorter map labels and plain Contact rows were then verified against the
+same preview in twelve Chromium states and two Windows WebKit states. Coverage
+includes BG/EN Contact at 390px and 320px with 200% text, Contact's 991/992px
+transition, desktop at 1440px, both About translations, and PDP heading/address
+retention. Row links, right-arrow containment, readable copy, focus outlines and
+page overflow passed. Sequential Tab order passed in Chromium; Windows WebKit
+focus states were checked directly because its native Tab behavior skips anchors
+in a minimal HTML fixture too. The 390px preview confirms the live map rendered.
+
+CSS policy, tokens, typography, deterministic locale compilation, locale source
+audit and the production build passed. Svelte check reported zero errors and
+warnings. Current evidence is in `runtime/contact-simple-rows-20261002/`:
+`review-chromium.json`, `review-webkit.json`, `preview-390.png`, enlarged-text
+screenshots, `static-checks.log`, `check.log` and `build.log`. The new map label is
+owned by `localization/common.json`; its catalog and manifest were regenerated.
