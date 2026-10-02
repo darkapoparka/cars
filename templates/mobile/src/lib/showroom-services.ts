@@ -1,10 +1,10 @@
-export const serviceCategories = [
-  { value: 'services', label: 'Services' },
+const categoryOptions = [
+  { value: 'services', label: 'All services' },
   { value: 'financing', label: 'Financing' },
   { value: 'parts', label: 'Parts' },
 ] as const;
 
-export type ServiceCategory = (typeof serviceCategories)[number]['value'];
+export type ServiceCategory = (typeof categoryOptions)[number]['value'];
 export type ShowroomService = {
   id: string;
   category: ServiceCategory;
@@ -20,14 +20,14 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'viewing',
     category: 'services',
     title: 'Viewings & test drives',
-    copy: 'Choose a car and ask about a convenient time to see it.',
+    copy: 'Arrange a time to see a car or take a test drive.',
     action: 'Arrange a viewing',
   },
   {
     id: 'trade-in',
     category: 'services',
     title: 'Part exchange',
-    copy: 'Ask about a valuation towards your next car.',
+    copy: 'Get a valuation towards your next car.',
     action: 'Ask about part exchange',
   },
   {
@@ -41,7 +41,7 @@ export const showroomServices: readonly ShowroomService[] = [
     id: 'servicing',
     category: 'services',
     title: 'Servicing & repairs',
-    copy: 'Check the showroom’s maintenance and repair options.',
+    copy: 'Ask about maintenance and repair options.',
     action: 'Ask about servicing',
   },
   {
@@ -69,6 +69,15 @@ export const showroomServices: readonly ShowroomService[] = [
     ],
   },
 ];
+
+export function serviceCategoriesFor(services: readonly ShowroomService[]) {
+  return categoryOptions.filter(
+    ({ value }) => value === 'services' || services.some((service) => service.category === value),
+  );
+}
+
+// Removing an unavailable offering also removes its category tab.
+export const serviceCategories = serviceCategoriesFor(showroomServices);
 
 export function showroomService(id?: string) {
   return showroomServices.find((service) => service.id === id);

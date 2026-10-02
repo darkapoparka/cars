@@ -408,11 +408,18 @@ async function run(name, engine) {
         .getByRole('tablist', { name: 'Service category' })
         .getByRole('tab')
         .allTextContents(),
-      ['Services', 'Financing', 'Parts'],
+      ['All services', 'Financing', 'Parts'],
     );
-    assert.equal(await page.locator('[data-showroom-service]').count(), 4);
-    await page.getByRole('tab', { name: 'Financing', exact: true }).click();
+    assert.equal(await page.locator('[data-showroom-service]').count(), 6);
+    assert.equal(await page.locator('[data-showroom-service] dl').count(), 0);
+    await page.getByRole('link', { name: 'View financing', exact: true }).click();
     await selectedServiceTab('Financing');
+    assert.equal(await page.locator('[data-showroom-service]').count(), 1);
+    assert.equal(await page.locator('[data-showroom-service] dt').count(), 3);
+    assert.equal(
+      await page.getByRole('link', { name: 'Ask about financing', exact: true }).count(),
+      1,
+    );
     assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
     await page.getByRole('tab', { name: 'Financing', exact: true }).press('ArrowRight');
     await selectedServiceTab('Parts');
@@ -436,12 +443,14 @@ async function run(name, engine) {
         document.querySelector('#service-category-parts')?.getAttribute('aria-selected') === 'true',
     );
     await page.getByRole('tab', { name: 'Parts', exact: true }).press('Home');
-    await selectedServiceTab('Services');
+    await selectedServiceTab('All services');
     assert.equal(
-      await page.getByRole('tab', { name: 'Services', exact: true }).getAttribute('aria-selected'),
+      await page
+        .getByRole('tab', { name: 'All services', exact: true })
+        .getAttribute('aria-selected'),
       'true',
     );
-    await page.getByRole('tab', { name: 'Services', exact: true }).press('End');
+    await page.getByRole('tab', { name: 'All services', exact: true }).press('End');
     await selectedServiceTab('Parts');
     assert.equal(
       await page.getByRole('tab', { name: 'Parts', exact: true }).getAttribute('aria-selected'),
@@ -450,15 +459,17 @@ async function run(name, engine) {
     check('Service categories support keyboard focus, deep links, reload and Back/Forward');
     await go('/services?tab=unrecognized');
     assert.equal(
-      await page.getByRole('tab', { name: 'Services', exact: true }).getAttribute('aria-selected'),
+      await page
+        .getByRole('tab', { name: 'All services', exact: true })
+        .getAttribute('aria-selected'),
       'true',
     );
     await page.locator('[data-showroom-service="viewing"]').click({ position: { x: 20, y: 20 } });
     await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('service'), 'viewing');
     await page.getByRole('link', { name: 'View service', exact: true }).click();
-    await selectedServiceTab('Services');
-    await page.getByRole('tab', { name: 'Services', exact: true }).waitFor();
+    await selectedServiceTab('All services');
+    await page.getByRole('tab', { name: 'All services', exact: true }).waitFor();
     check('Compact service cards open the matching enquiry; unknown categories fall back safely');
     await page.getByRole('tab', { name: 'Financing', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();

@@ -529,3 +529,18 @@ test('all captured model families can be evaluated without recursive loops', () 
 });
 
 import './native-listings.test.mjs';
+
+import { serviceCategoriesFor, showroomServices } from '../.qa/domain/showroom-services.mjs';
+
+test('service tabs omit categories the dealer does not offer', () => {
+  const general = showroomServices.filter((service) => service.category === 'services');
+  assert.deepEqual(serviceCategoriesFor(general), [{ value: 'services', label: 'All services' }]);
+  assert.deepEqual(
+    serviceCategoriesFor(showroomServices.filter((service) => service.category !== 'financing')),
+    [
+      { value: 'services', label: 'All services' },
+      { value: 'parts', label: 'Parts' },
+    ],
+  );
+  assert.deepEqual(serviceCategoriesFor([]), [{ value: 'services', label: 'All services' }]);
+});
