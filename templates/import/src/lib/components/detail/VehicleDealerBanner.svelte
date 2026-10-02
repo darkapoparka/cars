@@ -33,7 +33,7 @@
 		<p>{copy.appointment}</p>
 	</div>
 	<span class="dealer-banner__address">
-		<MapPin size={18} aria-hidden="true" />
+		<span class="dealer-banner__map-icon"><MapPin size={18} aria-hidden="true" /></span>
 		<span>{copy.address}</span>
 		<ArrowUpRight size={18} aria-hidden="true" />
 	</span>
@@ -84,27 +84,33 @@
 	}
 	.dealer-banner__identity p {
 		margin: 0;
-		font-size: var(--bc-text-meta);
-		line-height: var(--bc-leading-label);
+		font-size: var(--bc-text-body-lg);
+		line-height: var(--bc-leading-body-lg);
 		color: var(--bc-white);
 	}
 	.dealer-banner__address {
 		display: grid;
 		grid-template-columns: auto minmax(0, 1fr) auto;
-		align-items: start;
-		gap: var(--bc-space-2);
+		align-items: center;
+		gap: var(--bc-space-3);
 		font-size: var(--bc-text-label);
-		line-height: var(--bc-leading-label);
+		line-height: var(--bc-leading-h7);
+		font-weight: var(--bc-weight-body);
 	}
-	.dealer-banner__address :global(svg) {
-		margin-top: var(--bc-space-1);
+	.dealer-banner__map-icon {
+		display: grid;
+		place-items: center;
+		width: var(--bc-space-8);
+		height: var(--bc-space-8);
+		border-radius: var(--bc-radius-pill);
+		background: color-mix(in srgb, var(--bc-white) 12%, transparent);
 	}
 	.dealer-banner:hover,
 	.dealer-banner:focus-visible {
 		color: var(--bc-white);
 	}
-	.dealer-banner:hover .dealer-banner__address > span,
-	.dealer-banner:focus-visible .dealer-banner__address > span {
+	.dealer-banner:hover .dealer-banner__address > span:not(.dealer-banner__map-icon),
+	.dealer-banner:focus-visible .dealer-banner__address > span:not(.dealer-banner__map-icon) {
 		text-decoration: underline;
 		text-underline-offset: var(--bc-space-1);
 	}

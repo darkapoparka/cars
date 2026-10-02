@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
 	import { formatMoney } from '$lib/i18n/formatting';
 	import { assetHref } from '$lib/utils/assets';
 	import { estimateFinance } from '$lib/domain/finance';
@@ -17,6 +18,7 @@
 		banner?: string;
 		inquiryHref?: string;
 	} = $props();
+	const termLabelId = $props.id();
 	// svelte-ignore state_referenced_locally
 	let price = $state(initialPrice);
 	// svelte-ignore state_referenced_locally
@@ -73,11 +75,16 @@
 				bind:value={downPayment}
 			/></label
 		>
-		<label class="site-field"
-			><span>{english ? 'Term (months)' : 'Срок (месеци)'}</span><select bind:value={months}
+		<label class="site-field finance-estimator__term"
+			><span id={layout === 'sidebar' ? termLabelId : undefined}
+				>{english ? 'Term (months)' : 'Срок (месеци)'}</span
+			><select bind:value={months} aria-labelledby={layout === 'sidebar' ? termLabelId : undefined}
 				>{#each [12, 24, 36, 48, 60, 72, 84, 96] as term (term)}<option value={term}>{term}</option
 					>{/each}</select
-			></label
+			>
+			{#if layout === 'sidebar'}
+				<ChevronDown size={18} aria-hidden="true" class="finance-estimator__chevron" />
+			{/if}</label
 		>
 		<label class="site-field"
 			><span>{english ? 'Annual interest (%)' : 'Годишна лихва (%)'}</span><input
@@ -183,7 +190,34 @@
 	.finance-estimator--sidebar .finance-estimator__total dd {
 		font-size: var(--bc-text-h3);
 	}
+	.finance-estimator :global(.finance-estimator__chevron) {
+		display: none;
+	}
 	@media (min-width: 768px) {
+		.finance-estimator--sidebar .finance-estimator__term select {
+			grid-column: 1;
+			grid-row: 2;
+			appearance: none;
+			padding-inline-end: calc(var(--bc-space-4) + var(--bc-space-6));
+		}
+		.finance-estimator--sidebar :global(.finance-estimator__chevron) {
+			display: block;
+			grid-column: 1;
+			grid-row: 2;
+			align-self: center;
+			justify-self: end;
+			margin-inline-end: var(--bc-space-4);
+			color: var(--bc-copy);
+			pointer-events: none;
+		}
+		.finance-estimator--sidebar input[type='number'] {
+			appearance: textfield;
+		}
+		.finance-estimator--sidebar input[type='number']::-webkit-inner-spin-button,
+		.finance-estimator--sidebar input[type='number']::-webkit-outer-spin-button {
+			margin: 0;
+			appearance: none;
+		}
 		dt,
 		dd {
 			font-size: var(--bc-text-body-lg);
