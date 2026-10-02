@@ -1,6 +1,6 @@
 <script lang="ts">
   import VehicleCutout from './VehicleCutout.svelte';
-  import { heroVehiclePairs, vehicleArtwork, type HeroVehiclePair } from '$data/vehicle-artwork';
+  import { desktopVehicleOpticalScale, heroVehiclePairs, vehicleArtwork, type HeroVehiclePair } from '$data/vehicle-artwork';
 
   let { pair, framing = 'hero', priority = false }: {
     pair: HeroVehiclePair;
@@ -18,12 +18,12 @@
   {#each sides as side, index (side)}
     {@const vehicle = heroVehiclePairs[pair][index]}
     {@const artwork = vehicleArtwork[vehicle]}
-    {@const bodyHeight = artwork.bounds[3] - artwork.bounds[1]}
+    {@const normalizationHeight = (artwork.bounds[3] - artwork.bounds[1]) / (desktopVehicleOpticalScale[vehicle] ?? 1)}
     <div class="dn-campaign-vehicles__car dn-campaign-vehicles__car--{side}" data-vehicle={vehicle}
-      style:--art-width-ratio={artwork.width / bodyHeight}
-      style:--art-height-ratio={artwork.height / bodyHeight}
-      style:--art-bottom-ratio={artwork.bounds[3] / bodyHeight}
-      style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / bodyHeight}>
+      style:--art-width-ratio={artwork.width / normalizationHeight}
+      style:--art-height-ratio={artwork.height / normalizationHeight}
+      style:--art-bottom-ratio={artwork.bounds[3] / normalizationHeight}
+      style:--art-front-ratio={(artwork.width - artwork.bounds[0]) / normalizationHeight}>
       <VehicleCutout media="(min-width: 992px)" {vehicle} eager={priority} />
     </div>
   {/each}

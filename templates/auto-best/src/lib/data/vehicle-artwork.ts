@@ -17,6 +17,12 @@ export const vehicleArtwork = {
 } as const;
 
 export type Vehicle = LeadVehicleArtwork;
+
+// Height matching makes the taller G-Class too narrow beside the Urus.
+export const desktopVehicleOpticalScale: Readonly<Partial<Record<Vehicle, number>>> = {
+  gclass: 1.18
+};
+
 export const heroVehiclePairs = leadSite.artwork.heroVehiclePairs;
 export type HeroVehiclePair = LeadHeroVehiclePair;
 
