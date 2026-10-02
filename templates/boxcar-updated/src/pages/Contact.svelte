@@ -11,9 +11,28 @@
       ? "Arranging a viewing"
       : "Buying a car",
   );
+  let map = $derived(
+    brand.showroomMap
+      ? {
+          embedUrl: brand.showroomMap.embedUrl,
+          url: brand.showroomMap.directionsUrl,
+          title: `${brand.name} showroom location`,
+          label: "Showroom map",
+          linkText: "Get directions",
+        }
+      : brand.previewCityMap
+        ? {
+            embedUrl: brand.previewCityMap.embedUrl,
+            url: brand.previewCityMap.mapUrl,
+            title: `${brand.previewCityMap.name} city map`,
+            label: `${brand.previewCityMap.name} city map`,
+            linkText: `${brand.previewCityMap.name} · View map`,
+          }
+        : null,
+  );
 </script>
 
-<!-- Shared banner, optional verified showroom map and joined contact panel. -->
+<!-- Shared banner, location map and joined contact panel. -->
 <section class="bc-inner contact-us-section has-page-banner">
   <PageBanner
     title={selling ? "Sell Your Car" : "Contact us"}
@@ -23,22 +42,22 @@
       : "Questions about a car or a viewing? Let’s talk."}
   />
   <div class="bc-container">
-    {#if brand.showroomMap}
-      <section class="bc-showroom-map" aria-label="Showroom map">
+    {#if map}
+      <section class="bc-showroom-map" aria-label={map.label}>
         <iframe
-          src={brand.showroomMap.embedUrl}
-          title={`${brand.name} showroom location`}
+          src={map.embedUrl}
+          title={map.title}
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           allowfullscreen
         ></iframe>
         <a
           class="bc-map-directions"
-          href={brand.showroomMap.directionsUrl}
+          href={map.url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          Get directions <Icon name="arrow" size={20} />
+          {map.linkText} <Icon name="arrow" size={20} />
         </a>
       </section>
     {/if}

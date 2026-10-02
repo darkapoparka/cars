@@ -11,6 +11,7 @@ export type ShowroomMap = {
   embedUrl: string;
   directionsUrl: string;
 };
+export type CityMap = { name: string; embedUrl: string; mapUrl: string };
 export type ShowroomBanner = { src: string; alt: string };
 
 export const brand = {
@@ -32,5 +33,12 @@ export const brand = {
   } as ShowroomBanner | null,
   // Add verified dealer details during personalization. Empty fields stay hidden.
   showroomMap: null as ShowroomMap | null,
+  // City preview only; a verified showroomMap takes priority during personalization.
+  previewCityMap: {
+    name: "Varna",
+    embedUrl:
+      "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+    mapUrl: "https://www.openstreetmap.org/#map=13/43.20/27.91",
+  } as CityMap | null,
   socialLinks: [] as SocialLink[],
 };

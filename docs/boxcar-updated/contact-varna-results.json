@@ -1,0 +1,441 @@
+{
+  "date": "2026-10-03",
+  "baseUrl": "http://127.0.0.1:6455/",
+  "provider": "OpenStreetMap",
+  "city": "Varna",
+  "cityPreview": true,
+  "actualShowroomConfigured": false,
+  "liveMapVisuallyVerified": true,
+  "zoomVerified": {
+    "before": 13,
+    "afterZoomIn": 14,
+    "resetTo": 13
+  },
+  "attributionUnobscuredVisually": true,
+  "checks": {
+    "svelteCheck": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "viteBuild": {
+      "passed": true,
+      "modules": 163
+    }
+  },
+  "consoleErrors": [],
+  "browser": "Chromium in-app browser",
+  "states": [
+    {
+      "columns": "267px",
+      "details": {
+        "bottom": 2140.484375,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1411.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1411.296875,
+        "height": 838.296875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 573
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 548,
+        "height": 280,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 268
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 331,
+        "height": 50,
+        "right": 223.828125,
+        "width": 192.828125,
+        "x": 31,
+        "y": 281
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 2141.484375,
+        "height": 1569.484375,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 572
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Buying a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 320
+    },
+    {
+      "columns": "337px",
+      "details": {
+        "bottom": 2056.484375,
+        "height": 687.1875,
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 1369.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1369.296875,
+        "height": 812.296875,
+        "right": 356,
+        "width": 337,
+        "x": 19,
+        "y": 557
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 532,
+        "height": 280,
+        "right": 357,
+        "width": 339,
+        "x": 18,
+        "y": 252
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 315,
+        "height": 50,
+        "right": 223.828125,
+        "width": 192.828125,
+        "x": 31,
+        "y": 265
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 2057.484375,
+        "height": 1501.484375,
+        "right": 357,
+        "width": 339,
+        "x": 18,
+        "y": 556
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Buying a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 390
+    },
+    {
+      "columns": "703px",
+      "details": {
+        "bottom": 1936.6875,
+        "height": 597.1875,
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 1339.5
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1339.5,
+        "height": 644.5,
+        "right": 728,
+        "width": 703,
+        "x": 25,
+        "y": 695
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 658,
+        "height": 360,
+        "right": 729,
+        "width": 705,
+        "x": 24,
+        "y": 298
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 369,
+        "height": 50,
+        "right": 237.828125,
+        "width": 192.828125,
+        "x": 45,
+        "y": 319
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 1937.6875,
+        "height": 1243.6875,
+        "right": 729,
+        "width": 705,
+        "x": 24,
+        "y": 694
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Buying a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 768
+    },
+    {
+      "columns": "532.531px 394.469px",
+      "details": {
+        "bottom": 1342.1875,
+        "height": 647.1875,
+        "right": 968,
+        "width": 394.46875,
+        "x": 573.53125,
+        "y": 695
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1342.1875,
+        "height": 647.1875,
+        "right": 573.53125,
+        "width": 532.53125,
+        "x": 41,
+        "y": 695
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 658,
+        "height": 360,
+        "right": 969,
+        "width": 929,
+        "x": 40,
+        "y": 298
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 369,
+        "height": 50,
+        "right": 253.828125,
+        "width": 192.828125,
+        "x": 61,
+        "y": 319
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 1343.1875,
+        "height": 649.1875,
+        "right": 969,
+        "width": 929,
+        "x": 40,
+        "y": 694
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Buying a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1024
+    },
+    {
+      "columns": "757.141px 560.859px",
+      "details": {
+        "bottom": 1355.5,
+        "height": 660.5,
+        "right": 1371.5,
+        "width": 560.859375,
+        "x": 810.640625,
+        "y": 695
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1355.5,
+        "height": 660.5,
+        "right": 810.640625,
+        "width": 757.140625,
+        "x": 53.5,
+        "y": 695
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 658,
+        "height": 360,
+        "right": 1372.5,
+        "width": 1320,
+        "x": 52.5,
+        "y": 298
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 369,
+        "height": 50,
+        "right": 266.328125,
+        "width": 192.828125,
+        "x": 73.5,
+        "y": 319
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 1356.5,
+        "height": 662.5,
+        "right": 1372.5,
+        "width": 1320,
+        "x": 52.5,
+        "y": 694
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Buying a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/",
+      "width": 1440
+    },
+    {
+      "columns": "267px",
+      "details": {
+        "bottom": 2140.484375,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1411.296875
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1411.296875,
+        "height": 838.296875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 573
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 548,
+        "height": 280,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 268
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 331,
+        "height": 50,
+        "right": 223.828125,
+        "width": 192.828125,
+        "x": 31,
+        "y": 281
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 2141.484375,
+        "height": 1569.484375,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 572
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Arranging a viewing",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/?intent=viewing",
+      "width": 320
+    },
+    {
+      "columns": "267px",
+      "details": {
+        "bottom": 2343.28125,
+        "height": 729.1875,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 1614.09375
+      },
+      "detailsBackground": "rgb(242, 244, 247)",
+      "embedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=27.87%2C43.18%2C27.95%2C43.22&layer=mapnik",
+      "footerHasVarna": false,
+      "form": {
+        "bottom": 1614.09375,
+        "height": 1057.09375,
+        "right": 286,
+        "width": 267,
+        "x": 19,
+        "y": 557
+      },
+      "height": 1000,
+      "infoCards": 3,
+      "linkText": "Varna · View map",
+      "map": {
+        "bottom": 532,
+        "height": 280,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 252
+      },
+      "mapCount": 1,
+      "mapLink": "https://www.openstreetmap.org/#map=13/43.20/27.91",
+      "mapLinkBox": {
+        "bottom": 315,
+        "height": 50,
+        "right": 223.828125,
+        "width": 192.828125,
+        "x": 31,
+        "y": 265
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 2344.28125,
+        "height": 1788.28125,
+        "right": 287,
+        "width": 269,
+        "x": 18,
+        "y": 556
+      },
+      "showroomText": "Showroom Contact us for visiting information.",
+      "subject": "Selling a car",
+      "title": "Varna city map",
+      "url": "http://127.0.0.1:6455/contact/?intent=sell",
+      "width": 320
+    }
+  ],
+  "screenshots": [
+    "docs/boxcar-updated/contact-varna-desktop.jpg",
+    "docs/boxcar-updated/contact-varna-390.jpg",
+    "docs/boxcar-updated/contact-varna-320.jpg"
+  ],
+  "scope": "Local template candidate; city preview has no dealer pin or address. No release or dealer deployment.",
+  "sourceHashes": {
+    "templates/boxcar-updated/src/data/brand.ts": "471d4dcd65b979826c31d465e593a48146800449f7e56a097368360d228bb7af",
+    "templates/boxcar-updated/src/pages/Contact.svelte": "7b0af181f53550b1eef182e89c4b383b279ae8707bebb9f94b8cb92bd9d3ab7d",
+    "templates/boxcar-updated/src/inner-pages.css": "2bf0456ec71431aa077faf02592a6dfeded00331bf3bba59e37cd2a67128009f",
+    "templates/boxcar-updated/src/components/EnquiryForm.svelte": "62f29479a58933266017ab372feac9a2584187de60dad65cb22ca4291bd3d1f3",
+    "templates/boxcar-updated/src/components/Footer.svelte": "e99a7c3b93e8c97ddc80b88be8bd58896eb1e43b7a39ccd0b22c358a08250bea"
+  }
+}
