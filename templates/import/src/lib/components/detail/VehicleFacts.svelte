@@ -9,6 +9,7 @@
 	import Settings from '@lucide/svelte/icons/settings';
 	import QrCode from '@lucide/svelte/icons/qr-code';
 	import type { AuxeroVehicleDetailOverviewItem } from '$lib/server/vehicle-detail';
+	import VehicleInformationSection from './VehicleInformationSection.svelte';
 	let { items, english = false }: { items: AuxeroVehicleDetailOverviewItem[]; english?: boolean } =
 		$props();
 	const icons = {
@@ -48,8 +49,7 @@
 <div class="vehicle-facts">
 	<div class="vehicle-facts__panels">
 		{#each groups as group (group.id)}
-			<section class="site-panel vehicle-facts__panel">
-				<h2>{group.title}</h2>
+			<VehicleInformationSection title={group.title}>
 				<dl>
 					{#each group.items as item (item.label)}
 						{@const Icon = icons[item.icon as keyof typeof icons] ?? Cog}
@@ -61,7 +61,7 @@
 						</div>
 					{/each}
 				</dl>
-			</section>
+			</VehicleInformationSection>
 		{/each}
 	</div>
 </div>
@@ -73,14 +73,7 @@
 	.vehicle-facts__panels {
 		display: grid;
 		align-items: start;
-		gap: var(--bc-space-6);
-	}
-	.vehicle-facts__panel {
-		border: 0;
-	}
-	.vehicle-facts__panel > h2 {
-		margin-bottom: var(--bc-space-5);
-		font: var(--bc-weight-heading) var(--bc-text-h5) / var(--bc-leading-h5) var(--bc-font-body);
+		gap: var(--bc-space-8);
 	}
 	dl {
 		display: grid;
