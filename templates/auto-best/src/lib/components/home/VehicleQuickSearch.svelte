@@ -172,7 +172,6 @@
   <span class="dn-quick-search__label-full">{i18n.t("m_6d382243bfbe")}</span>
   <span class="dn-quick-search__label-mobile" aria-hidden="true">{i18n.t("m_cb8bed4ff8b8")}</span>
   <span class="dn-quick-search__hint" aria-hidden="true">{i18n.t("m_933643dcad14")}</span>
-  <span class="dn-quick-search__open-arrow" aria-hidden="true"><MobileActionIcon name="arrow" size={16} /></span>
 </button>
 
 <dialog onkeydown={trapDialogTab}
@@ -356,8 +355,7 @@
   }
 
   .dn-quick-search__label-mobile,
-  .dn-quick-search__search-mobile,
-  .dn-quick-search__open-arrow {
+  .dn-quick-search__search-mobile {
     display: none;
   }
 
@@ -441,11 +439,9 @@
   }
 
   @media (max-width: 767px) {
-    .dn-quick-search__trigger { grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
+    .dn-quick-search__trigger { grid-template-columns: auto minmax(0, 1fr); gap: var(--dn-space-2); padding-inline: var(--dn-space-3); }
     .dn-quick-search__search-desktop { display: none; }
     .dn-quick-search__search-mobile { display: grid; place-items: center; }
-    .dn-quick-search__open-arrow { display: grid; width: var(--dn-space-8); height: var(--dn-space-8); place-items: center; border-radius: var(--dn-pill); background: var(--dn-ink); }
-    .dn-quick-search__trigger .dn-quick-search__open-arrow :global(.dn-icon) { color: var(--dn-white); }
     .dn-quick-search__label-full {
       display: none;
     }
