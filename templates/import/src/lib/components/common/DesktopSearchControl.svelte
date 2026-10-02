@@ -9,6 +9,7 @@
 		placeholder = label,
 		actionLabel,
 		name = 'keyword',
+		controls,
 		href,
 		expanded = false,
 		onopen,
@@ -20,6 +21,7 @@
 		placeholder?: string;
 		actionLabel: string;
 		name?: string;
+		controls?: string;
 		href?: string;
 		expanded?: boolean;
 		onopen?: () => void;
@@ -37,6 +39,7 @@
 			aria-label={value ? label + ': ' + value : label}
 			aria-haspopup="dialog"
 			aria-expanded={expanded}
+			aria-controls={controls}
 			onclick={onopen}
 		>
 			<span>{value || placeholder}</span>
@@ -50,6 +53,7 @@
 			{name}
 			bind:value
 			{placeholder}
+			aria-controls={controls}
 			autocomplete="off"
 		/>
 	{/if}

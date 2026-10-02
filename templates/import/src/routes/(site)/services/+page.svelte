@@ -3,7 +3,8 @@
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ContactBanner from '$lib/components/common/ContactBanner.svelte';
 	import ServiceCard from '$lib/components/services/ServiceCard.svelte';
-	import SearchField from '$lib/components/common/SearchField.svelte';
+	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
+	import DesktopSearchControl from '$lib/components/common/DesktopSearchControl.svelte';
 	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 
@@ -59,21 +60,28 @@
 				/>
 			</form>{/snippet}
 		{#snippet desktopActions()}
-			<form class="service-search" role="search" method="GET">
-				<SearchField bind:value={query} label={data.directory.search} controls="service-results" />
-			</form>
-		{/snippet}
-		{#snippet desktopSecondaryActions()}
-			<div class="service-quick-filters" role="group" aria-label={data.directory.quickLabel}>
-				{#each data.directory.quickFilters as filter (filter.query)}
-					<Action
-						variant="glass"
-						size="compact"
-						aria-pressed={normalizedQuery === filter.query.toLocaleLowerCase()}
-						onclick={() => (query = filter.query)}>{filter.label}</Action
-					>
-				{/each}
-			</div>
+			<DesktopDiscoveryPanel>
+				<form class="service-search" role="search" method="GET">
+					<DesktopSearchControl
+						bind:value={query}
+						name="q"
+						label={data.directory.search}
+						actionLabel={english ? 'Search' : 'Търси'}
+						controls="service-results"
+					/>
+				</form>
+				<div class="service-quick-filters" role="group" aria-label={data.directory.quickLabel}>
+					{#each data.directory.quickFilters as filter (filter.query)}
+						<Action
+							variant="secondary"
+							size="compact"
+							aria-pressed={normalizedQuery === filter.query.toLocaleLowerCase()}
+							aria-controls="service-results"
+							onclick={() => (query = filter.query)}>{filter.label}</Action
+						>
+					{/each}
+				</div>
+			</DesktopDiscoveryPanel>
 		{/snippet}
 	</PageIntro>
 	<div class="site-mobile-only">
@@ -118,17 +126,23 @@
 <style>
 	.service-quick-filters {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		flex-wrap: wrap;
 		gap: var(--bc-space-2);
 	}
 	.service-quick-filters :global(.site-action) {
+		flex: 1 1 0;
+		min-width: max-content;
 		border-radius: var(--bc-radius-pill);
 		padding-inline: var(--bc-space-4);
 	}
+	.service-quick-filters :global(.site-action[aria-pressed='true']) {
+		background: var(--bc-accent-tint);
+		color: var(--bc-accent);
+		border-color: var(--bc-accent-tint);
+	}
 	.service-search {
 		width: 100%;
-		max-width: var(--bc-desktop-service-search-width);
 	}
 	.service-results-heading {
 		align-items: center;
