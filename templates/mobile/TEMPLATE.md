@@ -14,15 +14,16 @@ The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & mo
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
-capped at 288px with at least 16px side gutters, 20px corners and a restrained
-shadow. At normal text size it is 62px tall. Three equal targets place each icon
-above its label.
-Original Lucide icons from the retained `lucide-react` package render at 24px
+capped at 232px with at least 16px side gutters, 26px corners and a restrained
+shadow. At normal text size it is 52px tall. The three links sit in one row;
+the active destination expands to show its icon and label, while the other two
+remain icon buttons with explicit accessible names and title labels.
+Original Lucide icons from the retained `lucide-react` package render at 22px
 with a consistent 1.8px outline: a front-view car, a wrench and a phone.
-Darker text and a short neutral underline mark the current destination.
-The icon geometry and weight stay consistent. Links have at least 52px height,
-retain their labels and keyboard focus rings, and use `aria-current`.
-Labels use 13px text; icons sit directly above them. The dock floats 10px
+The active destination has a neutral dark fill and contrasting icon and text.
+The icon geometry and weight stay consistent. Links have at least 44px height,
+retain their keyboard focus rings, and use `aria-current`.
+The active label uses 13px text beside its icon. The dock floats 10px
 above the bottom safe area; page clearance and toast offsets
 account for its height. Vehicle detail retains its own enquiry footer.
 The formerly used Phosphor source and MIT license remain under

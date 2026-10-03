@@ -22,7 +22,7 @@ const s = stylex.create({
     position: 'relative',
   },
   primary: {
-    paddingBottom: 'calc(5rem + env(safe-area-inset-bottom))',
+    paddingBottom: 'calc(4.5rem + env(safe-area-inset-bottom))',
     backgroundColor: colors.stripe,
   },
   nav: {
@@ -31,63 +31,55 @@ const s = stylex.create({
     left: '50%',
     transform: 'translateX(-50%)',
     width: 'calc(100% - 32px)',
-    maxWidth: 288,
+    maxWidth: 232,
     padding: 4,
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-    gap: 2,
+    display: 'flex',
+    gap: 4,
     backgroundColor: colors.background,
     zIndex: 40,
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 20,
-    boxShadow: '0 4px 16px #17202b12, 0 1px 3px #17202b08',
+    borderRadius: 26,
+    boxShadow: '0 3px 16px #17202b14',
   },
   tab: {
-    position: 'relative',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 3,
+    gap: 8,
     color: colors.muted,
     textDecoration: 'none',
     fontSize: 13,
-    lineHeight: '16px',
+    lineHeight: '18px',
     fontWeight: 500,
     minWidth: 0,
-    minHeight: 52,
+    minHeight: 44,
+    flexGrow: 1,
+    flexShrink: 1,
+    flexBasis: 0,
     paddingBlock: 4,
-    borderRadius: 14,
+    paddingInline: 8,
+    borderRadius: 22,
     textAlign: 'center',
     overflowWrap: 'anywhere',
     outlineColor: colors.text,
-    outlineOffset: -4,
+    outlineOffset: -3,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     opacity: { default: 1, ':active': 0.7 },
     transition: 'background-color 140ms, color 140ms',
   },
   active: {
-    color: colors.text,
+    flexGrow: 2.25,
+    backgroundColor: { default: colors.text, ':hover': colors.text },
+    color: colors.background,
     fontWeight: 600,
-    '::after': {
-      content: '""',
-      position: 'absolute',
-      bottom: 1,
-      left: '50%',
-      transform: 'translateX(-50%)',
-      width: 16,
-      height: 2,
-      borderRadius: 1,
-      backgroundColor: colors.text,
-    },
+    outlineColor: colors.background,
   },
+  label: { minWidth: 0, overflowWrap: 'anywhere' },
   toast: {
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)',
-    bottom: 'calc(84px + env(safe-area-inset-bottom))',
+    bottom: 'calc(74px + env(safe-area-inset-bottom))',
     maxWidth: 'calc(100% - 32px)',
     width: 'max-content',
     zIndex: 120,
@@ -137,11 +129,13 @@ export function AppShell({ children }: { children: ReactNode }) {
               key={href}
               href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
               prefetch={href === '/' ? false : undefined}
+              aria-label={label}
+              title={label}
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
               <ShowroomNavIcon name={icon} />
-              <span>{label}</span>
+              {pathname === href && <span {...stylex.props(s.label)}>{label}</span>}
             </Link>
           ))}
         </nav>
