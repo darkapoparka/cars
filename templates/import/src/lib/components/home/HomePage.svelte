@@ -123,6 +123,7 @@
 			<div class="home-reviews" tabindex="0" role="region" aria-label={copy.reviews}>
 				{#each data.reviewItems as review (review.name)}<ReviewCard
 						{review}
+						{english}
 						compactRole={copy.customer}
 					/>{/each}
 				<HomeBrowseCard href={localized('/reviews')} label={copy.viewAll} context={copy.reviews} />

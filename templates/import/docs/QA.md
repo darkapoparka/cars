@@ -28,6 +28,8 @@ On the tested routes, exercise navigation, mobile menu/open-close behavior, one 
 
 ## Visual/content checks
 
+For [desktop testimonial labels](desktop-review-labels-2026-10-04/README.md), verify Home and Reviews in BG/EN at 768/1024/1440/1920px. Every role beneath a name must be one fully visible line, use its typed category and render without JavaScript. Keep original mobile role text and Home's compact labels; compare matched Home/Reviews/About screenshots and complete-page presentation at 320/390px, including the About trial.
+
 - Correct dealer logo and favicon; no stretched or low-quality placeholder identity.
 - No inherited dealer name, phone, address, domain, map, social account, testimonial, watermark or metadata.
 - Inventory photos/titles/specs/prices/statuses agree with the sourced fact pack.

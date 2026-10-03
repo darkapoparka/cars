@@ -1,10 +1,12 @@
 import { daynightContact } from '$lib/data/daynight';
+import type { ReviewRoleKind } from '$lib/content/reviews';
 
 export type AuxeroReviewCard = {
 	avatar: string;
 	id: string;
 	name: string;
 	role: string;
+	roleKind?: ReviewRoleKind;
 	stars: number;
 	text: string;
 };
@@ -23,36 +25,42 @@ const baseReviews = [
 		avatar: '/assets/images/avatar/avatar-1.webp',
 		name: 'Aleksandar Vytev',
 		role: 'Препоръка във Facebook',
+		roleKind: 'customer',
 		text: 'Процесът по покупка и доставка следваше плана, който беше обяснен преди да започнем.'
 	},
 	{
 		avatar: '/assets/images/avatar/avatar-2.webp',
 		name: 'Krasimir Georgiev',
 		role: 'Предаване на клиентски автомобил',
+		roleKind: 'purchase',
 		text: 'Колата, която купих чрез Day Night Auto, дойде точно както беше уговорено. Бих ги избрал отново.'
 	},
 	{
 		avatar: '/assets/images/avatar/avatar-5.webp',
 		name: 'Zhivko Zaimov',
 		role: 'Клиент с подбор на автомобили',
+		roleKind: 'purchase',
 		text: 'Всяка стъпка беше обяснена ясно: снимки преди покупка, Carfax контекст и без скрити такси.'
 	},
 	{
 		avatar: '/assets/images/avatar/avatar-3.webp',
 		name: 'Asen Hristov',
 		role: 'Потвърден купувач',
+		roleKind: 'purchase',
 		text: 'Това, което поръчах, е това, което пристигна. Важното беше автомобил без скрити проблеми.'
 	},
 	{
 		avatar: '/assets/images/avatar/avatar-6.webp',
 		name: 'Stanislav Stefanov Kyumyurdzhiev',
 		role: 'Отзив за доставка',
+		roleKind: 'delivery',
 		text: 'Получих автомобила в уговорения срок и без изненадващи такси.'
 	},
 	{
 		avatar: '/assets/images/avatar/client-3.webp',
 		name: 'Day Night Auto client',
 		role: 'Оглед по уговорка',
+		roleKind: 'viewing',
 		text: 'Документите, сервизният контекст и състоянието на автомобила бяха готови, когато дойдох да видя колата.'
 	}
 ] as const;

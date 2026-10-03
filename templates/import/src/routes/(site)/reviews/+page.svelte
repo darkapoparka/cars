@@ -23,7 +23,10 @@
 				{copy.sampleDisclosure}
 			</p>{/if}
 		<div class="reviews-grid">
-			{#each data.reviews as review (review.id)}<ReviewCard {review} />{/each}
+			{#each data.reviews as review (review.id)}<ReviewCard
+					{review}
+					english={data.locale === 'en'}
+				/>{/each}
 		</div>
 		<Action href={daynightContact.reviewsHref} variant="secondary" target="_blank" rel="noreferrer"
 			>{copy.facebook}</Action

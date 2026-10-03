@@ -1,5 +1,6 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
 import { homeBrowseArtwork } from '$lib/content/home-discovery';
+import type { ReviewRoleKind } from '$lib/content/reviews';
 import type { BlogPost } from '$lib/data/blog';
 import { vehicles as inventoryVehicles } from '$lib/data/vehicles';
 import type { Vehicle } from '$lib/data/vehicles';
@@ -25,6 +26,7 @@ export type HomeFiveReview = {
 	avatar: string;
 	name: string;
 	role: string;
+	roleKind?: ReviewRoleKind;
 	text: string;
 };
 
@@ -725,18 +727,21 @@ export const homeFiveReviewItems: HomeFiveReview[] = [
 	{
 		name: 'Aleksandar Vytev',
 		role: 'Клиент на Day Night Auto',
+		roleKind: 'customer',
 		avatar: '/assets/images/avatar/avatar-1.webp',
 		text: 'Екипът ми обясни историята на автомобила, транспорта и стъпките по регистрацията, преди да поема ангажимент. Предаването беше спокойно и прозрачно.'
 	},
 	{
 		name: 'Krasimir Georgiev',
 		role: 'Клиент с внос',
+		roleKind: 'import',
 		avatar: '/assets/images/avatar/avatar-2.webp',
 		text: 'Day Night Auto запазиха разговора практичен: снимки, документи, пробег и разходите, които имат значение преди доставка.'
 	},
 	{
 		name: 'Iliyan Petrov',
 		role: 'Продава клиентски автомобил',
+		roleKind: 'sale',
 		avatar: '/assets/images/avatar/avatar-3.webp',
 		text: 'Изпратих данните за колата и получих ясна обратна връзка за цената, документите и най-добрия начин да представя автомобила.'
 	}
