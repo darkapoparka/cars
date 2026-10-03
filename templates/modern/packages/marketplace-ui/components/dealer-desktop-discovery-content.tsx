@@ -1,16 +1,12 @@
-import {
-  buildMarketplaceSearchHref,
-  getListingPath,
-  type VehicleListing,
-} from "@repo/marketplace";
+import type { VehicleListing } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
 import { DealerDesktopServiceLinks } from "./dealer-desktop-service-links";
+import { DealerDesktopStock } from "./dealer-desktop-stock";
 import Image from "./public-image";
-import { VehicleCard } from "./vehicle-card";
 
 export interface DealerDesktopJournalCard {
   category: string;
@@ -42,71 +38,12 @@ export const DealerDesktopDiscoveryContent = ({
       className={styles.discoveryContent}
       data-slot="dealer-desktop-discovery-content"
     >
-      <section
-        aria-labelledby="desktop-inventory-heading"
-        className={styles.stockPanel}
-        data-slot="home-stock-panel"
-      >
-        <div className={styles.sectionHeading}>
-          <h2 id="desktop-inventory-heading">
-            {text(
-              "Разгледайте най-новите автомобили",
-              "Explore Our Latest Cars"
-            )}
-          </h2>
-          <p>
-            {text(
-              `${totalListings} автомобила за разглеждане`,
-              `${totalListings} cars to explore`
-            )}
-          </p>
-        </div>
-        <nav
-          aria-label={text("Разгледайте автомобилите", "Browse inventory")}
-          className={styles.stockTabs}
-        >
-          <Link aria-current="page" href={currentPath}>
-            {text("Всички автомобили", "All Vehicles")}
-          </Link>
-          <Link
-            href={buildMarketplaceSearchHref(
-              { category: "car", sort: "newest" },
-              currentPath
-            )}
-          >
-            {text("Най-нови", "Newest Arrivals")}
-          </Link>
-          <Link
-            href={buildMarketplaceSearchHref(
-              { category: "car", sort: "price_asc" },
-              currentPath
-            )}
-          >
-            {text("По цена", "By Price")}
-          </Link>
-        </nav>
-        <div className={styles.stockGrid} data-slot="home-stock-grid">
-          {listings.slice(0, 8).map((listing) => (
-            <VehicleCard
-              density="compact"
-              desktopHeadingLevel={3}
-              desktopImageSizes="(max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px"
-              desktopLayout="grid"
-              desktopSurface="landing"
-              href={path(getListingPath(listing))}
-              key={listing.id}
-              listing={listing}
-              locale={locale}
-              presentation="showroom"
-              priority={false}
-              viewMode="grid"
-            />
-          ))}
-        </div>
-        <Link className={styles.primaryAction} href={currentPath}>
-          {text("Виж всички автомобили", "View all cars")}
-        </Link>
-      </section>
+      <DealerDesktopStock
+        currentPath={currentPath}
+        listings={listings}
+        locale={locale}
+        totalListings={totalListings}
+      />
       <section
         aria-labelledby="desktop-services-heading"
         className={styles.servicesSection}

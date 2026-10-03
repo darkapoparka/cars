@@ -34,6 +34,11 @@
   --desktop-surface-hover-shadow: 0 8px 24px rgb(5 11 32 / 6%);
   --desktop-tab-rail: #e2e6ed;
   --desktop-tab-rail-height: 4px;
+  --desktop-tab-count-background: color-mix(
+    in srgb,
+    currentcolor 10%,
+    transparent
+  );
   --desktop-frame-border: #dce0e6;
   --desktop-frame-shadow: 0 12px 48px rgb(31 40 58 / 5%);
   --desktop-border-width: 1px;

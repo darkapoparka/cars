@@ -114,7 +114,9 @@ test("narrow desktop related cards keep price actions and facts inside each card
           const price = row
             ?.querySelector('[data-slot="vehicle-card-price"]')
             ?.getBoundingClientRect();
-          const action = row?.querySelector("a")?.getBoundingClientRect();
+          const action = row
+            ?.querySelector('[data-slot="showroom-vehicle-open"]')
+            ?.getBoundingClientRect();
           const overlaps =
             price &&
             action &&
@@ -138,5 +140,68 @@ test("narrow desktop related cards keep price actions and facts inside each card
       );
       expect(collisions).toEqual([]);
     }
+  }
+});
+
+test("home stock tabs filter in place and support keyboard browsing", async ({
+  page,
+}) => {
+  for (const locale of ["bg", "en"]) {
+    await page.goto(`/${locale}`);
+    const stock = page.locator('[data-slot="home-stock-panel"]');
+    const tabs = stock.getByRole("tablist");
+    const all = tabs.getByRole("tab", {
+      name: locale === "bg" ? "Всички" : "All",
+      exact: true,
+    });
+    const recommended = tabs.getByRole("tab", {
+      name: locale === "bg" ? "Препоръчани" : "Recommended",
+      exact: true,
+    });
+    const recent = tabs.getByRole("tab", {
+      name: locale === "bg" ? "Последно добавени" : "Recently added",
+      exact: true,
+    });
+    const cards = stock.locator(
+      '[data-slot="home-stock-grid"] article:visible'
+    );
+    await expect(tabs.getByRole("tab")).toHaveCount(3);
+    await expect(all).toHaveAttribute("aria-selected", "true");
+    await expect(cards).toHaveCount(8);
+    const initialTitles = await cards
+      .locator('[data-slot="vehicle-card-title"]:visible')
+      .allTextContents();
+    await recommended.click();
+    await expect(recommended).toHaveAttribute("aria-selected", "true");
+    await expect(cards).toHaveCount(3);
+    await expect(
+      cards.locator('[data-slot="vehicle-card-media-badges"]')
+    ).toHaveCount(3);
+    await expect(page).toHaveURL(new RegExp(`/${locale}$`));
+    await recent.click();
+    await expect(cards).toHaveCount(8);
+    expect(
+      await cards
+        .locator('[data-slot="vehicle-card-title"]:visible')
+        .allTextContents()
+    ).not.toEqual(initialTitles);
+    await expect(stock.getByRole("status")).toContainText("8");
+    await all.focus();
+    await page.keyboard.press("ArrowRight");
+    await expect(recommended).toBeFocused();
+    await expect(recommended).toHaveAttribute("aria-selected", "true");
+    await expect(cards).toHaveCount(3);
+    await page.keyboard.press("End");
+    await expect(recent).toBeFocused();
+    await page.keyboard.press("Home");
+    await expect(all).toBeFocused();
+    await expect(cards).toHaveCount(8);
+    await expect(page).toHaveURL(new RegExp(`/${locale}$`));
+    await expect(
+      stock.getByRole("link", {
+        name: locale === "bg" ? "Виж всички автомобили" : "View all cars",
+        exact: true,
+      })
+    ).toHaveAttribute("href", `/${locale}/cars`);
   }
 });

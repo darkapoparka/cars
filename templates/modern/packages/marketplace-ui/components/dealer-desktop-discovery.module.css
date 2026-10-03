@@ -54,56 +54,63 @@
     font-size: calc(var(--spacing) * 3.5);
     line-height: calc(var(--spacing) * 6);
   }
+  .stockSwitch {
+    gap: 0;
+  }
   .stockTabs {
-    position: relative;
     display: flex;
-    gap: calc(var(--spacing) * 8);
+    flex-wrap: wrap;
+    gap: var(--spacing);
     justify-content: center;
-    width: 100%;
+    width: fit-content;
+    height: auto;
+    padding: var(--spacing);
     margin: 0 auto calc(var(--spacing) * 6);
-  }
-  .stockTabs::before {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: calc(var(--spacing) * 0.25);
-    content: "";
-    background: var(--desktop-tab-rail);
-    border-radius: calc(var(--spacing) * 1);
-  }
-  .stockTabs a {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(var(--spacing) * 11);
-    padding: 0 0 calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 3.75);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 6.5);
-    text-align: center;
-    border-radius: calc(var(--spacing) * 3) calc(var(--spacing) * 3) 0 0;
-  }
-  .stockTabs a::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: calc(var(--spacing) * 0.5);
-    content: "";
-    background: transparent;
-    border-radius: calc(var(--spacing) * 1);
-  }
-  .stockTabs a:hover {
-    color: var(--brand-text);
     background: var(--control);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: var(--radius-pill);
   }
-  .stockTabs a[aria-current="page"] {
+  .stockTabs button {
+    flex: initial;
+    gap: calc(var(--spacing) * 2);
+    height: auto;
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4.5);
+    font-size: calc(var(--spacing) * 4);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--desktop-prose-text);
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-pill);
+    box-shadow: none;
+  }
+  .stockTabs button:hover {
     color: var(--brand-text);
+    background: var(--panel);
   }
-  .stockTabs a[aria-current="page"]::after {
+  .stockTabs button[data-state="active"] {
+    color: var(--brand-foreground);
     background: var(--brand);
+  }
+  .stockTabs button:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--spacing) * 0.75);
+  }
+  .stockTabCount {
+    min-width: calc(var(--spacing) * 5.5);
+    padding: 0 calc(var(--spacing) * 1.25);
+    font-size: calc(var(--spacing) * 3);
+    font-variant-numeric: tabular-nums;
+    line-height: calc(var(--spacing) * 5);
+    background: var(--desktop-tab-count-background);
+    border-radius: var(--radius-pill);
+  }
+  .stockTabs button[data-state="active"] .stockTabCount {
+    background: var(--lead-site-accent-hover);
+  }
+  .stockView {
+    min-width: 0;
   }
   .stockGrid {
     display: grid;

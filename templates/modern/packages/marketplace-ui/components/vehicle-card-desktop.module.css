@@ -346,15 +346,28 @@
     outline-offset: calc(var(--spacing) * -0.5);
   }
   .card[data-presentation="showroom"][data-desktop-surface="landing"]
+    [data-slot="vehicle-card-content"] {
+    padding: calc(var(--spacing) * 4);
+  }
+  .card[data-presentation="showroom"][data-desktop-surface="landing"]
+    [data-slot="vehicle-card-title"] {
+    min-height: 0;
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+  .card[data-presentation="showroom"][data-desktop-surface="landing"]
+    [data-slot="showroom-vehicle-subtitle"] {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .card[data-presentation="showroom"][data-desktop-surface="landing"]
     [data-slot="showroom-vehicle-facts"] {
     display: flex;
     flex-wrap: wrap;
-    gap: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+    gap: calc(var(--spacing) * 1.5);
     padding: 0;
-    margin-bottom: calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 3.25);
-    line-height: calc(var(--spacing) * 5.5);
-    color: var(--muted-foreground);
+    margin-bottom: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3);
+    line-height: calc(var(--spacing) * 4.5);
+    color: var(--desktop-prose-text);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -362,15 +375,18 @@
   .card[data-presentation="showroom"][data-desktop-surface="landing"]
     [data-slot="showroom-vehicle-facts"]
     li {
-    display: block;
+    display: flex;
+    min-height: calc(var(--spacing) * 6.5);
+    padding: var(--spacing) calc(var(--spacing) * 2);
     text-align: left;
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 1.5);
   }
   .card[data-presentation="showroom"][data-desktop-surface="landing"]
     [data-slot="showroom-vehicle-facts"]
     li:not([data-fact="year"])
     ~ li::before {
-    margin-right: calc(var(--spacing) * 2);
-    content: "·";
+    content: none;
   }
   .card[data-presentation="showroom"][data-desktop-surface="landing"]
     [data-slot="showroom-vehicle-facts"]
@@ -385,6 +401,23 @@
   .card[data-presentation="showroom"][data-desktop-surface="landing"]
     [data-slot="vehicle-card-price"] {
     font-size: calc(var(--spacing) * 5);
+  }
+  .card[data-presentation="showroom"][data-desktop-surface="landing"]
+    [data-slot="showroom-vehicle-open"] {
+    min-height: calc(var(--spacing) * 9);
+    padding-inline: calc(var(--spacing) * 2.5);
+    font-size: calc(var(--spacing) * 3.25);
+    font-weight: var(--font-weight-medium);
+    color: var(--desktop-prose-text);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 2);
+  }
+  .card[data-presentation="showroom"][data-desktop-surface="landing"]
+    [data-slot="vehicle-card-content"]:hover
+    [data-slot="showroom-vehicle-open"] {
+    color: var(--brand-text);
+    background: var(--control);
   }
 }
 

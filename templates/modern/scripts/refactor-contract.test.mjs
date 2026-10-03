@@ -80,7 +80,14 @@ test("desktop collection composition enters the shell through a server-created s
     "packages/marketplace-ui/components/dealer-desktop-discovery-content.tsx"
   );
   assert.ok(!content.includes('"use client"'));
-  assert.ok(content.includes("<VehicleCard"));
+  assert.ok(content.includes("<DealerDesktopStock"));
+  const stock = read(
+    "packages/marketplace-ui/components/dealer-desktop-stock.tsx"
+  );
+  assert.ok(stock.startsWith('"use client";'));
+  assert.ok(stock.includes("<VehicleCard"));
+  assert.ok(!stock.includes("process.env."));
+  assert.ok(!stock.includes("@repo/database"));
   assert.ok(
     !files.includes(
       "packages/marketplace-ui/components/desktop-landing-vehicle-card.tsx"
