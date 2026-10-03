@@ -1,3 +1,4 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   createMarketplaceSearchParams,
@@ -5,7 +6,7 @@ import {
   parseMarketplaceSearchParams,
 } from "@repo/marketplace";
 import { getLeadCopy } from "@repo/marketplace/lead-copy";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import { MarketplaceShell } from "@repo/marketplace-ui";
 import { DealerDesktopDiscoveryContent } from "@repo/marketplace-ui/components/dealer-desktop-discovery-content";
 import { log } from "@repo/observability/log";
@@ -13,6 +14,7 @@ import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import type { Metadata } from "next";
 import { redirect, unstable_rethrow } from "next/navigation";
 import { Suspense } from "react";
+import { preload } from "react-dom";
 import { getPublicAppBaseUrl } from "@/lib/public-app-url";
 import { getPublicContentCards } from "@/lib/public-content-data";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
@@ -99,6 +101,15 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     if (pageRedirect) {
       redirect(pageRedirect);
     }
+    const desktopHeroArtwork =
+      publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene;
+    if (isDealershipSite && !hasSearchCriteria && desktopHeroArtwork) {
+      preload(withBasePath(desktopHeroArtwork), {
+        as: "image",
+        fetchPriority: "high",
+        media: "(min-width: 1024px)",
+      });
+    }
 
     return (
       <>
@@ -111,13 +122,13 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
                 articles={getPublicContentCards(normalizeSeoLocale(locale))
                   .filter((item) => item.type === "article")
                   .slice(0, 3)
-                  .map((item) => ({
+                  .map((item, index) => ({
                     category: item.category,
                     href: getLocalizedPath(
                       normalizeSeoLocale(locale),
                       `/blog/${item.slug}`
                     ),
-                    image: item.image,
+                    image: `/desktop-boxcars/journal-${index + 1}.jpg`,
                     meta: item.meta,
                     title: item.title,
                   }))}

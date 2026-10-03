@@ -1,25 +1,14 @@
 "use client";
 
-import type { VehicleListing } from "@repo/marketplace";
 import { Bookmark, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useId, useRef, useSyncExternalStore } from "react";
-import {
-  formatVehicleCardMoney,
-  getShowroomVehicleHeading,
-} from "../lib/vehicle-card-policy";
+import type { DesktopSavedCar } from "../lib/desktop-saved-car";
 import styles from "./desktop-saved-cars.module.css";
 import Image from "./public-image";
 
-interface SavedCar {
-  href: string;
-  id: string;
-  image: string;
-  price: string;
-  title: string;
-}
 const storageKey = "modern-desktop-saved-cars-v1";
-const empty: SavedCar[] = [];
+const empty: DesktopSavedCar[] = [];
 let snapshot = empty;
 let initialized = false;
 const listeners = new Set<() => void>();
@@ -29,7 +18,7 @@ function readSavedCars() {
     return Array.isArray(value)
       ? value
           .filter(
-            (car): car is SavedCar =>
+            (car): car is DesktopSavedCar =>
               car &&
               [car.id, car.title, car.href, car.image, car.price].every(
                 (v) => typeof v === "string"
@@ -70,7 +59,7 @@ function subscribe(listener: () => void) {
     }
   };
 }
-function toggleCar(car: SavedCar) {
+function toggleCar(car: DesktopSavedCar) {
   const current = getSnapshot();
   snapshot = current.some((item) => item.id === car.id)
     ? current.filter((item) => item.id !== car.id)
@@ -90,38 +79,27 @@ function useSavedCars() {
 
 /** Boxcar's bookmark action, isolated from the existing mobile card and account routes. */
 export function DesktopSaveCarButton({
-  listing,
-  href,
+  car,
   locale,
   presentation = "bookmark",
 }: {
-  listing: VehicleListing;
-  href: string;
+  car: DesktopSavedCar;
   locale?: string;
   presentation?: "bookmark" | "action";
 }) {
-  const saved = useSavedCars().some((car) => car.id === listing.id);
+  const saved = useSavedCars().some((savedCar) => savedCar.id === car.id);
   const isBg = locale?.startsWith("bg");
-  const heading = getShowroomVehicleHeading(listing, locale);
   const saveLabel = isBg ? "Запази" : "Save";
   const removeLabel = isBg ? "Премахни" : "Unsave";
   const savedLabel = isBg ? "Запазен" : "Saved";
   return (
     <button
-      aria-label={`${saved ? removeLabel : saveLabel} ${heading.title}`}
+      aria-label={`${saved ? removeLabel : saveLabel} ${car.title}`}
       aria-pressed={saved}
       className={styles.bookmark}
       data-presentation={presentation}
       data-slot="desktop-save-car"
-      onClick={() =>
-        toggleCar({
-          id: listing.id,
-          title: heading.title,
-          href,
-          image: listing.images[0]?.url ?? "",
-          price: formatVehicleCardMoney(listing.price, "comparison", locale),
-        })
-      }
+      onClick={() => toggleCar(car)}
       type="button"
     >
       <Bookmark aria-hidden fill={saved ? "currentColor" : "none"} size={18} />

@@ -5,7 +5,7 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { MarketplaceLocaleSwitchLink } from "@repo/marketplace-ui";
-import { DesktopSavedCars } from "@repo/marketplace-ui/components/dealer-desktop-header";
+import { DesktopSavedCars } from "@repo/marketplace-ui/components/desktop-saved-cars";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight } from "lucide-react";

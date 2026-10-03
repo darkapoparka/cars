@@ -14,6 +14,8 @@ This is a **template master**, not a sendable dealer demo. The baseline intentio
 
 The current desktop Home uses the finalized Boxcar Home 10 direction through native Next.js/React components: a contained 1320 px frame, compact photographic hero, white search bar and stock immediately below. Existing mobile presentation is preserved below 1024 px. [Final implementation and QA](docs/HOME10-DESKTOP-FINAL-2026-10-03.md) records the current geometry, screenshots and checks.
 
+Modern uses Tailwind CSS v4 for its shared styling system, with CSS Modules and shared tokens for desktop composition. The [desktop Next.js code review](docs/DESKTOP-NEXT-CODE-REVIEW-2026-10-03.md) records the current framework versions, component and image-loading improvements, and mobile preservation evidence.
+
 ## Install and run
 ```text
 corepack enable && pnpm install --frozen-lockfile && pnpm --filter @repo/database build

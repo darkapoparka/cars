@@ -11,7 +11,7 @@ test("desktop shortlist persists, updates across tabs and closes below its break
   await expect(bookmark).toHaveAttribute("aria-pressed", "false");
   await bookmark.click();
   await expect(bookmark).toHaveAttribute("aria-pressed", "true");
-  const saved = page.locator('header [data-slot="desktop-saved-cars"]');
+  const saved = page.locator('header [data-slot="desktop-saved-cars"]:visible');
   await expect(saved).toHaveText("Saved (1)");
   await page.reload();
   await expect(saved).toHaveText("Saved (1)");
@@ -29,6 +29,23 @@ test("desktop shortlist persists, updates across tabs and closes below its break
     .click();
   await expect(saved).toHaveText("Saved");
   await second.close();
+  await page.goto("/en/listing/bmw-x5-m50d-sofia-2020");
+  const detailBookmark = page.locator(
+    '[data-slot="desktop-save-car"][data-presentation="action"]:visible'
+  );
+  await expect(detailBookmark).toHaveAttribute("aria-pressed", "false");
+  await detailBookmark.click();
+  await expect(detailBookmark).toHaveAttribute("aria-pressed", "true");
+  await saved.click();
+  await expect(dialog.locator("article")).toHaveCount(1);
+  await expect(dialog.locator("article a")).toHaveAttribute(
+    "href",
+    "/en/listing/bmw-x5-m50d-sofia-2020"
+  );
+  await expect(dialog.locator("article h3")).toContainText("BMW X5");
+  await dialog.getByRole("button", { name: "Remove", exact: true }).click();
+  await page.keyboard.press("Escape");
+  await page.goto("/en");
   await saved.click();
   await expect(
     dialog.getByText("Bookmark a car to keep your shortlist here.")
@@ -39,6 +56,41 @@ test("desktop shortlist persists, updates across tabs and closes below its break
     page.locator('[data-slot="dealer-desktop-header"]')
   ).toBeHidden();
   await expect(page.locator('[data-slot="dealer-bottom-nav"]')).toBeVisible();
+});
+
+test("the desktop hero preloads only at desktop widths", async ({ page }) => {
+  const heroRequests: string[] = [];
+  page.on("request", (request) => {
+    if (request.url().includes("/desktop-boxcars/hero.jpg")) {
+      heroRequests.push(request.url());
+    }
+  });
+  for (const width of [320, 390, 1023]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/en");
+    await expect(
+      page.locator('[data-slot="public-route-loading-content"]')
+    ).toBeHidden();
+    await expect(
+      page.locator(
+        'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
+      )
+    ).toHaveAttribute("media", "(min-width: 1024px)");
+  }
+  expect(heroRequests).toEqual([]);
+  for (const width of [1024, 1280, 1440, 1920]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.reload();
+    await expect(
+      page.locator('[data-slot="dealer-desktop-home-hero"]:visible')
+    ).toBeVisible();
+    await expect.poll(() => heroRequests.length).toBeGreaterThan(0);
+    const preload = page.locator(
+      'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
+    );
+    await expect(preload).toHaveCount(1);
+    await expect(preload).toHaveAttribute("fetchpriority", "high");
+  }
 });
 
 test("desktop enquiry previews locally, preserves viewing intent and clears stale feedback", async ({

@@ -8,6 +8,7 @@ import {
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { getListingDetailCopy } from "../lib/listing-detail-policy";
 import { formatListingMonthlyEstimate } from "../lib/listing-financing";
 import {
@@ -60,8 +61,11 @@ export const DesktopListingSummaryHeader = ({
           </div>
           <div data-slot="listing-title-actions">
             <DesktopSaveCarButton
-              href={getLocalizedPublicPath(locale, getListingPath(listing))}
-              listing={listing}
+              car={createDesktopSavedCar(
+                listing,
+                getLocalizedPublicPath(locale, getListingPath(listing)),
+                locale
+              )}
               locale={locale}
               presentation="action"
             />

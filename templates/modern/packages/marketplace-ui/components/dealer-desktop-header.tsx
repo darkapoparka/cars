@@ -61,8 +61,8 @@ export const DealerDesktopHeader = ({
             <Image
               alt=""
               className="object-contain object-left"
+              fetchPriority="high"
               fill
-              priority
               sizes="220px"
               src={site.identity.logo}
             />

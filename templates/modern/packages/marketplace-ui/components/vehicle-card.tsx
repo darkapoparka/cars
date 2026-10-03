@@ -7,6 +7,7 @@ import { localizeListingCopy } from "@repo/marketplace/listing-copy";
 import { Heart, Images } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { createDesktopSavedCar } from "../lib/desktop-saved-car";
 import { rememberInventoryReturn } from "../lib/inventory-return";
 import {
   mobileVehicleCardClassName,
@@ -40,6 +41,7 @@ export type {
 export const VehicleCard = ({
   density = "default",
   desktopHeadingLevel = 2,
+  desktopImageSizes,
   desktopLayout = "list",
   href,
   listing: sourceListing,
@@ -67,6 +69,17 @@ export const VehicleCard = ({
       ? vehicleCardPlaceholder
       : primaryImage.url;
   const copy = getVehicleCardCopy(locale);
+  let imageSizes = getVehicleCardImageSizes(
+    isCompact,
+    isGrid,
+    isDesktopComparison
+  );
+  if (presentation === "showroom") {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 45vw, 400px`;
+  }
+  if (desktopImageSizes) {
+    imageSizes = `(max-width: 1023px) ${mobileVehicleCardImageSizes}, ${desktopImageSizes}`;
+  }
 
   return (
     <article
@@ -117,15 +130,7 @@ export const VehicleCard = ({
             }}
             onLoad={() => setImageLoaded(true)}
             referrerPolicy="no-referrer"
-            sizes={
-              presentation === "showroom"
-                ? `(max-width: 1023px) ${mobileVehicleCardImageSizes}, (max-width: 1199px) 45vw, 400px`
-                : getVehicleCardImageSizes(
-                    isCompact,
-                    isGrid,
-                    isDesktopComparison
-                  )
-            }
+            sizes={imageSizes}
             src={imageSource}
             unoptimized={imageSource.startsWith("data:")}
           />
@@ -134,8 +139,7 @@ export const VehicleCard = ({
         <VehicleCardMediaBadges listing={listing} locale={locale} />
         {presentation === "showroom" && !saveHref && (
           <DesktopSaveCarButton
-            href={listingHref}
-            listing={listing}
+            car={createDesktopSavedCar(listing, listingHref, locale)}
             locale={locale}
           />
         )}

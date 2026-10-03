@@ -90,6 +90,7 @@ export const DealerDesktopDiscoveryContent = ({
             <VehicleCard
               density="compact"
               desktopHeadingLevel={3}
+              desktopImageSizes="(max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px"
               desktopLayout="grid"
               href={path(getListingPath(listing))}
               key={listing.id}
@@ -131,7 +132,7 @@ export const DealerDesktopDiscoveryContent = ({
           className={styles.bannerImage}
           fill
           loading="lazy"
-          sizes="(min-width: 1440px) 1392px, 100vw"
+          sizes="(min-width: 1400px) 1320px, calc(100vw - 80px)"
           src={
             publicSite.artwork.desktopVisitBanner ??
             publicSite.artwork.contactHero
@@ -170,7 +171,7 @@ export const DealerDesktopDiscoveryContent = ({
             </h2>
           </div>
           <div className={styles.journalGrid}>
-            {articles.slice(0, 3).map((article, index) => (
+            {articles.slice(0, 3).map((article) => (
               <Link
                 className={styles.journalCard}
                 href={article.href}
@@ -180,8 +181,8 @@ export const DealerDesktopDiscoveryContent = ({
                   <Image
                     alt=""
                     fill
-                    sizes="(min-width: 1440px) 448px, 33vw"
-                    src={`/desktop-boxcars/journal-${index + 1}.jpg`}
+                    sizes="(min-width: 1400px) 420px, calc((100vw - 140px) / 3)"
+                    src={article.image}
                   />
                 </div>
                 <div className={styles.journalCardBody}>

@@ -85,6 +85,35 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
         )
       ).toBe(width < 1200 ? 3 : 4);
       await expect(stockGrid.locator("article")).toHaveCount(8);
+      const imageSizes = await stockGrid
+        .locator("article img")
+        .first()
+        .evaluate((image) => {
+          const img = image as HTMLImageElement;
+          const entry = img.sizes.split(",").find((candidate) => {
+            const size = candidate.trim();
+            return (
+              !size.startsWith("(") ||
+              window.matchMedia(size.slice(0, size.indexOf(")") + 1)).matches
+            );
+          });
+          const size = entry?.trim() ?? "0px";
+          const length = size.startsWith("(")
+            ? size.slice(size.indexOf(")") + 1).trim()
+            : size;
+          const probe = document.createElement("div");
+          probe.style.cssText = `position:absolute;visibility:hidden;width:${length};`;
+          document.body.appendChild(probe);
+          const hintedWidth = probe.getBoundingClientRect().width;
+          probe.remove();
+          return {
+            hintedWidth,
+            renderedWidth: img.getBoundingClientRect().width,
+          };
+        });
+      expect(
+        Math.abs(imageSizes.hintedWidth - imageSizes.renderedWidth)
+      ).toBeLessThanOrEqual(2);
       expect(
         (await stockGrid.locator("article").first().boundingBox())?.y
       ).toBeLessThan(900);
@@ -276,9 +305,11 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto("/en/listing/bmw-x5-m50d-sofia-2020");
-    const title = page.locator('[data-slot="listing-title-panel"]');
-    const gallery = page.locator('[data-slot="listing-gallery"]');
-    const transaction = page.locator('[data-slot="listing-transaction-card"]');
+    const title = page.locator('[data-slot="listing-title-panel"]:visible');
+    const gallery = page.locator('[data-slot="listing-gallery"]:visible');
+    const transaction = page.locator(
+      '[data-slot="listing-transaction-card"]:visible'
+    );
     await expect(title.getByRole("heading", { level: 1 })).toHaveText(
       "2020 BMW X5 M50d"
     );
@@ -286,7 +317,7 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
     const galleryBox = await gallery.boundingBox();
     const transactionBox = await transaction.boundingBox();
     const purchaseBox = await page
-      .locator('[data-slot="listing-purchase-column"]')
+      .locator('[data-slot="listing-purchase-column"]:visible')
       .boundingBox();
     if (!(titleBox && galleryBox && transactionBox)) {
       throw new Error("Desktop vehicle information must be visible");
@@ -307,7 +338,7 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
     await expect(page.getByRole("dialog")).toBeHidden();
     await expect(openPhoto).toBeFocused();
     const sections = page.locator(
-      '[data-slot="listing-details-sections-desktop"]'
+      '[data-slot="listing-details-sections-desktop"]:visible'
     );
     for (const slot of [
       "information",
@@ -320,7 +351,9 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
       ).toBeVisible();
     }
     const relatedSave = page
-      .locator('[data-slot="listing-related"] [data-slot="desktop-save-car"]')
+      .locator(
+        '[data-slot="listing-related"] [data-slot="desktop-save-car"]:visible'
+      )
       .first();
     const previouslySaved = await relatedSave.getAttribute("aria-pressed");
     await relatedSave.click();
