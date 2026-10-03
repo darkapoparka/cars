@@ -1,0 +1,416 @@
+{
+  "bg390": [
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Вижте колите",
+        "width": 156.75,
+        "x": -931,
+        "y": 512
+      },
+      "card": {
+        "height": 180,
+        "width": 319,
+        "x": -949,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Сравни колите.",
+        "width": 108.21875,
+        "x": -931,
+        "y": 474
+      },
+      "href": "/bg/cars",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 56,
+        "rawWidth": 137.0625,
+        "text": "Разгледайте колите.",
+        "width": 212.25,
+        "x": -931,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Попитай ни",
+        "width": 139.3125,
+        "x": -600,
+        "y": 484
+      },
+      "card": {
+        "height": 180,
+        "width": 319,
+        "x": -618,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Аванс и срок.",
+        "width": 96.015625,
+        "x": -600,
+        "y": 446
+      },
+      "href": "/bg/finance",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 28,
+        "rawWidth": 177.828125,
+        "text": "Нека стане ваш.",
+        "width": 177.828125,
+        "x": -600,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Оценка",
+        "width": 108.5625,
+        "x": -269,
+        "y": 484
+      },
+      "card": {
+        "height": 180,
+        "width": 319,
+        "x": -287,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Продажба или замяна.",
+        "width": 161.640625,
+        "x": -269,
+        "y": 446
+      },
+      "href": "/bg/sell",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 28,
+        "rawWidth": 212.25,
+        "text": "Време за промяна?",
+        "width": 212.25,
+        "x": -269,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Посетете ни",
+        "width": 144.078125,
+        "x": 62,
+        "y": 484
+      },
+      "card": {
+        "height": 180,
+        "width": 319,
+        "x": 44,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Ела на място.",
+        "width": 96.234375,
+        "x": 62,
+        "y": 446
+      },
+      "href": "/bg/stores",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 28,
+        "rawWidth": 180.46875,
+        "text": "Вижте на място.",
+        "width": 180.46875,
+        "x": 62,
+        "y": 412
+      }
+    }
+  ],
+  "bg320": [
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Вижте колите",
+        "width": 156,
+        "x": 30,
+        "y": 512
+      },
+      "card": {
+        "height": 202,
+        "width": 249,
+        "x": 12,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Сравни колите.",
+        "width": 108.21875,
+        "x": 30,
+        "y": 474
+      },
+      "href": "/bg/cars",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 56,
+        "rawWidth": 137.0625,
+        "text": "Разгледайте колите.",
+        "width": 159.75,
+        "x": 30,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Попитай ни",
+        "width": 138.5625,
+        "x": 291,
+        "y": 512
+      },
+      "card": {
+        "height": 202,
+        "width": 249,
+        "x": 273,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Аванс и срок.",
+        "width": 96.015625,
+        "x": 291,
+        "y": 474
+      },
+      "href": "/bg/finance",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 56,
+        "rawWidth": 121.203125,
+        "text": "Нека стане ваш.",
+        "width": 159.75,
+        "x": 291,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Оценка",
+        "width": 107.8125,
+        "x": 552,
+        "y": 534
+      },
+      "card": {
+        "height": 202,
+        "width": 249,
+        "x": 534,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Продажба или замяна.",
+        "width": 138.4375,
+        "x": 552,
+        "y": 474
+      },
+      "href": "/bg/sell",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 56,
+        "rawWidth": 106.75,
+        "text": "Време за промяна?",
+        "width": 159.75,
+        "x": 552,
+        "y": 412
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Посетете ни",
+        "width": 143.328125,
+        "x": 813,
+        "y": 512
+      },
+      "card": {
+        "height": 202,
+        "width": 249,
+        "x": 795,
+        "y": 394
+      },
+      "copy": {
+        "font": "15px / 22px Roboto, Arial, sans-serif",
+        "height": 22,
+        "text": "Ела на място.",
+        "width": 96.234375,
+        "x": 813,
+        "y": 474
+      },
+      "href": "/bg/stores",
+      "title": {
+        "font": "600 24px / 28px Roboto, Arial, sans-serif",
+        "height": 56,
+        "rawWidth": 101.78125,
+        "text": "Вижте на място.",
+        "width": 159.75,
+        "x": 813,
+        "y": 412
+      }
+    }
+  ],
+  "bg1440": [
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Разгледайте автомобилите",
+        "width": 269.484375,
+        "x": 145.5,
+        "y": 734
+      },
+      "card": {
+        "height": 202,
+        "width": 586,
+        "x": 120.5,
+        "y": 601
+      },
+      "copy": {
+        "font": "16px / 24px Roboto, Arial, sans-serif",
+        "height": 48,
+        "text": "Сравнете колите.\nИзберете своята.",
+        "width": 130.140625,
+        "x": 145.5,
+        "y": 670
+      },
+      "href": "/bg/cars",
+      "title": {
+        "font": "600 28px / 34px Roboto, Arial, sans-serif",
+        "height": 34,
+        "rawWidth": 261.09375,
+        "text": "Разгледайте колите.",
+        "width": 261.09375,
+        "x": 145.5,
+        "y": 626
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Разгледайте финансирането",
+        "width": 278.9375,
+        "x": 743.5,
+        "y": 710
+      },
+      "card": {
+        "height": 202,
+        "width": 586,
+        "x": 718.5,
+        "y": 601
+      },
+      "copy": {
+        "font": "16px / 24px Roboto, Arial, sans-serif",
+        "height": 24,
+        "text": "Обсъдете финансирането с нашия екип.",
+        "width": 302.15625,
+        "x": 743.5,
+        "y": 670
+      },
+      "href": "/bg/finance",
+      "title": {
+        "font": "600 28px / 34px Roboto, Arial, sans-serif",
+        "height": 34,
+        "rawWidth": 207.453125,
+        "text": "Нека стане ваш.",
+        "width": 207.453125,
+        "x": 743.5,
+        "y": 626
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Оценете автомобила си",
+        "width": 242.609375,
+        "x": 145.5,
+        "y": 924
+      },
+      "card": {
+        "height": 178,
+        "width": 586,
+        "x": 120.5,
+        "y": 815
+      },
+      "copy": {
+        "font": "16px / 24px Roboto, Arial, sans-serif",
+        "height": 24,
+        "text": "Продайте или заменете автомобила си.",
+        "width": 299.046875,
+        "x": 145.5,
+        "y": 884
+      },
+      "href": "/bg/sell",
+      "title": {
+        "font": "600 28px / 34px Roboto, Arial, sans-serif",
+        "height": 34,
+        "rawWidth": 247.609375,
+        "text": "Време за промяна?",
+        "width": 247.609375,
+        "x": 145.5,
+        "y": 840
+      }
+    },
+    {
+      "action": {
+        "font": "500 16px / 24px Roboto, Arial, sans-serif",
+        "height": 44,
+        "text": "Планирайте посещение",
+        "width": 241.703125,
+        "x": 743.5,
+        "y": 924
+      },
+      "card": {
+        "height": 178,
+        "width": 586,
+        "x": 718.5,
+        "y": 815
+      },
+      "copy": {
+        "font": "16px / 24px Roboto, Arial, sans-serif",
+        "height": 24,
+        "text": "Открийте своя фаворит. Посетете ни.",
+        "width": 281.40625,
+        "x": 743.5,
+        "y": 884
+      },
+      "href": "/bg/stores",
+      "title": {
+        "font": "600 28px / 34px Roboto, Arial, sans-serif",
+        "height": 34,
+        "rawWidth": 210.546875,
+        "text": "Вижте на място.",
+        "width": 210.546875,
+        "x": 743.5,
+        "y": 840
+      }
+    }
+  ]
+}

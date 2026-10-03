@@ -1,0 +1,119 @@
+[
+  {
+    "route": "buy",
+    "size": 1440,
+    "clientWidth": 1425,
+    "firstSell": null,
+    "firstService": null,
+    "hero": null,
+    "home": {
+      "height": 142,
+      "visible": true,
+      "width": 1184,
+      "x": 120.5,
+      "y": 223
+    },
+    "mobile": null,
+    "scrollWidth": 1425,
+    "scrollY": 0,
+    "search": [
+      {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "height": 44,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 381
+      }
+    ],
+    "viewport": 1440
+  },
+  {
+    "route": "sell",
+    "size": 1440,
+    "clientWidth": 1425,
+    "firstSell": {
+      "height": 250,
+      "visible": true,
+      "width": 584,
+      "x": 120.5,
+      "y": 239
+    },
+    "firstService": null,
+    "hero": null,
+    "home": null,
+    "mobile": null,
+    "scrollWidth": 1425,
+    "scrollY": 0,
+    "search": [],
+    "viewport": 1440
+  },
+  {
+    "route": "finance",
+    "size": 1440,
+    "clientWidth": 1425,
+    "firstSell": null,
+    "firstService": null,
+    "hero": {
+      "height": 248,
+      "visible": true,
+      "width": 1184,
+      "x": 120.5,
+      "y": 223
+    },
+    "home": null,
+    "mobile": null,
+    "scrollWidth": 1425,
+    "scrollY": 0,
+    "search": [
+      {
+        "height": 48,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 501
+      }
+    ],
+    "viewport": 1440
+  },
+  {
+    "route": "service",
+    "size": 1440,
+    "clientWidth": 1425,
+    "firstSell": null,
+    "firstService": {
+      "height": 477,
+      "visible": true,
+      "width": 582,
+      "x": 120.5,
+      "y": 623
+    },
+    "hero": {
+      "height": 248,
+      "visible": true,
+      "width": 1184,
+      "x": 120.5,
+      "y": 223
+    },
+    "home": null,
+    "mobile": null,
+    "scrollWidth": 1425,
+    "scrollY": 0,
+    "search": [
+      {
+        "height": 48,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 501
+      }
+    ],
+    "viewport": 1440
+  }
+]

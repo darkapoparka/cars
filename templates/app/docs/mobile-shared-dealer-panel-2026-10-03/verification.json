@@ -1,0 +1,1023 @@
+{
+  "date": "2026-10-03",
+  "startedAt": "2026-10-03T03:44:42.722Z",
+  "verifiedAt": "2026-10-03T04:03:41.192Z",
+  "runtime": "Node 22.20.0, existing Next dev on 6483",
+  "build": "npm run check; NEXT_DIST_DIR=.next-build-check; passed ESLint, TypeScript and 407-page build",
+  "checks": [
+    {
+      "check": "Sell header opens sale form",
+      "pass": true
+    },
+    {
+      "check": "Sell Escape returns focus to header",
+      "pass": true
+    },
+    {
+      "check": "Leasing header opens calculator",
+      "pass": true
+    },
+    {
+      "check": "Calculator Back returns focus to header",
+      "pass": true
+    },
+    {
+      "check": "Buy control opens stock search",
+      "pass": true
+    },
+    {
+      "check": "Services Bulgarian search filters actual cards",
+      "pass": true
+    },
+    {
+      "check": "Services query and category combine with shareable URL",
+      "pass": true
+    },
+    {
+      "check": "Services empty reset clears filters and focuses visible banner search",
+      "pass": true
+    },
+    {
+      "check": "Services clear restores both cards and input focus",
+      "pass": true
+    },
+    {
+      "check": "Services card opens a non-submitting enquiry with service prefilled",
+      "pass": true
+    },
+    {
+      "check": "Sell drawer fits 320px",
+      "pass": true
+    },
+    {
+      "check": "Sell Back returns focus at 320px",
+      "pass": true
+    },
+    {
+      "check": "Sell process guidance still contains three steps",
+      "pass": true
+    },
+    {
+      "check": "Scrolled service tabs remain compact",
+      "pass": true
+    },
+    {
+      "check": "Services keeps query across desktop and phone search placements",
+      "pass": true
+    },
+    {
+      "check": "sell desktop banner and content geometry preserved",
+      "pass": true
+    },
+    {
+      "check": "finance desktop banner and content geometry preserved",
+      "pass": true
+    },
+    {
+      "check": "buy desktop banner and content geometry preserved",
+      "pass": true
+    },
+    {
+      "check": "Services desktop banner and content geometry preserved",
+      "pass": true
+    },
+    {
+      "check": "Services restores search and category from shared URL",
+      "pass": true
+    },
+    {
+      "check": "Service clear preserves category",
+      "pass": true
+    },
+    {
+      "check": "bg service 390px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg sell 390px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg finance 390px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg buy 390px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg service 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg sell 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg finance 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "bg buy 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "en sell 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "en finance 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "en service 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "en buy 320px panel and control align",
+      "pass": true
+    },
+    {
+      "check": "Longest Bulgarian action stays on one line at 320px",
+      "pass": true
+    }
+  ],
+  "geometry": [
+    {
+      "route": "service",
+      "size": 390,
+      "clientWidth": 375,
+      "firstSell": null,
+      "firstService": {
+        "height": 343.5,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 342
+      },
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 321,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 390,
+      "control": {
+        "height": 44,
+        "width": 321,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 85.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "viewportArtworkLoaded": true
+    },
+    {
+      "route": "sell",
+      "size": 390,
+      "clientWidth": 375,
+      "firstSell": {
+        "height": 238,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 276
+      },
+      "firstService": null,
+      "hero": null,
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "search": [],
+      "viewport": 390,
+      "control": {
+        "height": 44,
+        "width": 321,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 85.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "viewportArtworkLoaded": true
+    },
+    {
+      "route": "finance",
+      "size": 390,
+      "clientWidth": 375,
+      "firstSell": null,
+      "firstService": null,
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 48,
+          "visible": true,
+          "width": 351,
+          "x": 12,
+          "y": 278
+        }
+      ],
+      "viewport": 390,
+      "control": {
+        "height": 44,
+        "width": 321,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 85.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "viewportArtworkLoaded": true
+    },
+    {
+      "route": "buy",
+      "size": 390,
+      "clientWidth": 375,
+      "firstSell": null,
+      "firstService": null,
+      "hero": null,
+      "home": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 375,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 321,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 390,
+      "control": {
+        "height": 44,
+        "width": 321,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 85.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "viewportArtworkLoaded": true
+    },
+    {
+      "route": "service",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": {
+        "height": 308.5,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 342
+      },
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 251,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "sell",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": {
+        "height": 238,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 276
+      },
+      "firstService": null,
+      "hero": null,
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "finance",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": null,
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 48,
+          "visible": true,
+          "width": 281,
+          "x": 12,
+          "y": 278
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "buy",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": null,
+      "hero": null,
+      "home": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 251,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": false
+    },
+    {
+      "route": "sell",
+      "locale": "en",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": {
+        "height": 238,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 276
+      },
+      "firstService": null,
+      "hero": null,
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "finance",
+      "locale": "en",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": null,
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 48,
+          "visible": true,
+          "width": 281,
+          "x": 12,
+          "y": 278
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "service",
+      "locale": "en",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": {
+        "height": 308.5,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 342
+      },
+      "hero": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "home": null,
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 251,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "buy",
+      "locale": "en",
+      "size": 320,
+      "clientWidth": 305,
+      "firstSell": null,
+      "firstService": null,
+      "hero": null,
+      "home": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "mobile": {
+        "height": 150,
+        "visible": true,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "scrollWidth": 305,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 44,
+          "visible": true,
+          "width": 251,
+          "x": 27,
+          "y": 197
+        },
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "viewport": 320,
+      "control": {
+        "height": 44,
+        "width": 251,
+        "x": 27,
+        "y": 197
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 68,
+        "width": 204,
+        "x": 50.5,
+        "y": 121
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": false
+    },
+    {
+      "route": "service",
+      "size": 1440,
+      "clientWidth": 1425,
+      "firstSell": null,
+      "firstService": {
+        "height": 477,
+        "visible": true,
+        "width": 582,
+        "x": 120.5,
+        "y": 623
+      },
+      "hero": {
+        "height": 248,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "home": null,
+      "mobile": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 48,
+          "visible": true,
+          "width": 1184,
+          "x": 120.5,
+          "y": 501
+        }
+      ],
+      "viewport": 1440,
+      "control": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "sell",
+      "size": 1440,
+      "clientWidth": 1425,
+      "firstSell": {
+        "height": 250,
+        "visible": true,
+        "width": 584,
+        "x": 120.5,
+        "y": 239
+      },
+      "firstService": null,
+      "hero": null,
+      "home": null,
+      "mobile": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "search": [],
+      "viewport": 1440,
+      "control": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "finance",
+      "size": 1440,
+      "clientWidth": 1425,
+      "firstSell": null,
+      "firstService": null,
+      "hero": {
+        "height": 248,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "home": null,
+      "mobile": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 48,
+          "visible": true,
+          "width": 1184,
+          "x": 120.5,
+          "y": 501
+        }
+      ],
+      "viewport": 1440,
+      "control": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 1,
+      "layoutImagesLoaded": true
+    },
+    {
+      "route": "buy",
+      "size": 1440,
+      "clientWidth": 1425,
+      "firstSell": null,
+      "firstService": null,
+      "hero": null,
+      "home": {
+        "height": 142,
+        "visible": true,
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "mobile": {
+        "height": 0,
+        "visible": false,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "scrollWidth": 1425,
+      "scrollY": 0,
+      "search": [
+        {
+          "height": 0,
+          "visible": false,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "height": 44,
+          "visible": true,
+          "width": 1184,
+          "x": 120.5,
+          "y": 381
+        }
+      ],
+      "viewport": 1440,
+      "control": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "headingCount": 1,
+      "logo": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "logoLoaded": true,
+      "logoSrc": "/identity/drive24/logo-dark-v2.webp",
+      "visibleSearchInputs": 0,
+      "layoutImagesLoaded": true
+    }
+  ],
+  "console": [
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-03T03:49:32.772Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ]
+}

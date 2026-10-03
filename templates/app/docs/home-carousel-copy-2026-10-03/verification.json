@@ -1,0 +1,404 @@
+{
+  "checkedAt": "2026-10-03T04:48:21.148Z",
+  "checks": [
+    {
+      "name": "bg-390 four consistent cards",
+      "passed": true,
+      "details": [
+        {
+          "title": "Избери кола.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Лизинг.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Продай колата си.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Вижте на място.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "bg-320 four consistent cards",
+      "passed": true,
+      "details": [
+        {
+          "title": "Избери кола.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Лизинг.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Продай колата си.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Вижте на място.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Roboto, Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "en-320 four consistent cards",
+      "passed": true,
+      "details": [
+        {
+          "title": "Choose a car.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Finance.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Sell your car.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "See it in person.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "en-390 four consistent cards",
+      "passed": true,
+      "details": [
+        {
+          "title": "Choose a car.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Finance.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "Sell your car.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        },
+        {
+          "title": "See it in person.",
+          "titleLines": 1,
+          "copyLines": 2,
+          "height": 174,
+          "ctaOffset": 112,
+          "font": "14px / 20px Geist, Roboto, Arial, sans-serif"
+        }
+      ]
+    },
+    {
+      "name": "Finance pagination selects second slide",
+      "passed": true,
+      "details": "true"
+    },
+    {
+      "name": "Sell pagination selects third slide",
+      "passed": true
+    },
+    {
+      "name": "Visit pagination selects fourth slide",
+      "passed": true
+    },
+    {
+      "name": "BG390 final artwork and page fit",
+      "passed": true
+    },
+    {
+      "name": "BG320 final no page overflow",
+      "passed": true
+    },
+    {
+      "name": "EN320 final no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Keyboard Browse cars reaches destination",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/en/cars",
+        "content": "Toyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/mo*\nest.\n\n50,000 km\nAuto\nGreat c"
+      }
+    },
+    {
+      "name": "Keyboard Explore finance reaches destination",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/en/finance",
+        "content": "(5)\nAll\nGermany\nCanada\nUSA\nItaly\nNetherlands\nImport cars: 5\nCanada\n\nToyota\n\n2021 RAV4\n\nHyb"
+      }
+    },
+    {
+      "name": "Keyboard Value your car reaches destination",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/en/sell",
+        "content": "Sell your car to us\nValuation\nCheck\nDocuments\nRequest a valuation\nExchange\nValuation\nChoic"
+      }
+    },
+    {
+      "name": "Keyboard Plan your visit reaches destination",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/en/stores",
+        "content": "Drive24\n\nYour next car.\nDrive24\nContact details are not configured for this template.\n\nArr"
+      }
+    },
+    {
+      "name": "EN390 final no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Desktop geometry, copy and type match baseline",
+      "passed": true
+    },
+    {
+      "name": "Tablet CTA remains inside every card",
+      "passed": true,
+      "details": [
+        {
+          "action": {
+            "font": "500 16px / 24px Roboto, Arial, sans-serif",
+            "height": 44,
+            "text": "Разгледайте автомобилите",
+            "width": 260.015625,
+            "x": 44,
+            "y": 726.84375
+          },
+          "card": {
+            "height": 238.84375,
+            "width": 342.5,
+            "x": 28,
+            "y": 572
+          },
+          "copy": {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 48,
+            "text": "Сравнете колите.\nИзберете своята.",
+            "width": 130.140625,
+            "x": 44,
+            "y": 662.84375
+          },
+          "href": "/bg/cars",
+          "title": {
+            "font": "600 28px / 34px Roboto, Arial, sans-serif",
+            "height": 68,
+            "rawWidth": 159.90625,
+            "text": "Разгледайте колите.",
+            "width": 179.21875,
+            "x": 44,
+            "y": 588
+          }
+        },
+        {
+          "action": {
+            "font": "500 16px / 24px Roboto, Arial, sans-serif",
+            "height": 44,
+            "text": "Разгледайте финансирането",
+            "width": 269.46875,
+            "x": 398.5,
+            "y": 750.84375
+          },
+          "card": {
+            "height": 238.84375,
+            "width": 342.5,
+            "x": 382.5,
+            "y": 572
+          },
+          "copy": {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 72,
+            "text": "Обсъдете финансирането с нашия екип.",
+            "width": 179.21875,
+            "x": 398.5,
+            "y": 662.84375
+          },
+          "href": "/bg/finance",
+          "title": {
+            "font": "600 28px / 34px Roboto, Arial, sans-serif",
+            "height": 68,
+            "rawWidth": 141.40625,
+            "text": "Нека стане ваш.",
+            "width": 179.21875,
+            "x": 398.5,
+            "y": 588
+          }
+        },
+        {
+          "action": {
+            "font": "500 16px / 24px Roboto, Arial, sans-serif",
+            "height": 44,
+            "text": "Оценете автомобила си",
+            "width": 233.140625,
+            "x": 44,
+            "y": 977.6875
+          },
+          "card": {
+            "height": 214.84375,
+            "width": 342.5,
+            "x": 28,
+            "y": 822.84375
+          },
+          "copy": {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 48,
+            "text": "Продайте или заменете автомобила си.",
+            "width": 179.21875,
+            "x": 44,
+            "y": 913.6875
+          },
+          "href": "/bg/sell",
+          "title": {
+            "font": "600 28px / 34px Roboto, Arial, sans-serif",
+            "height": 68,
+            "rawWidth": 124.53125,
+            "text": "Време за промяна?",
+            "width": 179.21875,
+            "x": 44,
+            "y": 838.84375
+          }
+        },
+        {
+          "action": {
+            "font": "500 16px / 24px Roboto, Arial, sans-serif",
+            "height": 44,
+            "text": "Планирайте посещение",
+            "width": 232.234375,
+            "x": 398.5,
+            "y": 977.6875
+          },
+          "card": {
+            "height": 214.84375,
+            "width": 342.5,
+            "x": 382.5,
+            "y": 822.84375
+          },
+          "copy": {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 48,
+            "text": "Открийте своя фаворит. Посетете ни.",
+            "width": 179.21875,
+            "x": 398.5,
+            "y": 913.6875
+          },
+          "href": "/bg/stores",
+          "title": {
+            "font": "600 28px / 34px Roboto, Arial, sans-serif",
+            "height": 68,
+            "rawWidth": 118.75,
+            "text": "Вижте на място.",
+            "width": 179.21875,
+            "x": 398.5,
+            "y": 838.84375
+          }
+        }
+      ]
+    },
+    {
+      "name": "No new browser runtime errors",
+      "passed": true,
+      "details": [
+        {
+          "level": "warn",
+          "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+          "timestamp": "2026-10-03T04:32:11.293Z",
+          "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+        },
+        {
+          "level": "warn",
+          "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+          "timestamp": "2026-10-03T04:33:29.431Z",
+          "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "distDir": ".next-build-check",
+    "passed": true,
+    "pages": 407
+  },
+  "logs": [
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-03T04:32:11.293Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    },
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-03T04:33:29.431Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ]
+}

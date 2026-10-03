@@ -1,12 +1,13 @@
 'use client';
 import {useCopy} from '@/lib/locale';
-import {Suspense, useState} from 'react';
+import {useState} from 'react';
 import Image from '@/components/AppImage';
 import * as stylex from '@stylexjs/stylex';
 import {ArrowLeftRight, ArrowRight, Camera, ClipboardCheck, FileText, Search, ShieldCheck} from 'lucide-react';
 import BrandCampaign from '@/components/BrandCampaign';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import ServiceCatalogue from '@/components/ServiceCatalogue';
+import type {ServiceSearchState} from '@/components/ServiceSearchField';
 import type {SellIntent} from '@/components/SellEnquirySheet';
 import {showroom} from '@/lib/showroom';
 import {media} from '@/app/tokens.stylex';
@@ -34,7 +35,7 @@ function ResponsiveCopy({full, short}: {full: string; short: string}) {
   return <><span {...stylex.props(s.desktopCopy)}>{tx(full)}</span><span {...stylex.props(s.mobileCopy)}>{tx(short)}</span></>;
 }
 
-export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: (intent?: SellIntent) => void}) {
+export default function FeatureContent({kind, onStart, serviceSearch}: {kind: Kind; onStart: (intent?: SellIntent) => void; serviceSearch?: ServiceSearchState}) {
   const tx = useCopy();
 
   const [information, setInformation] = useState<{title: string; description: string; steps?: typeof sellingSteps} | null>(null);
@@ -68,7 +69,7 @@ export default function FeatureContent({kind, onStart}: {kind: Kind; onStart: (i
         </button></li>)}</ul>
       </section>
     </> : null}
-    {kind === 'service' ? <Suspense fallback={null}><ServiceCatalogue/></Suspense> : null}
+    {kind === 'service' && serviceSearch ? <ServiceCatalogue searchState={serviceSearch}/> : null}
     {kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
     {information ? <ReferenceInfoSheet {...information} onClose={() => setInformation(null)}/> : null}
   </>;
