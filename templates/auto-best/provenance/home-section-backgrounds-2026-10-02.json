@@ -14,7 +14,8 @@
       "width": 2172,
       "height": 724,
       "bytes": 45896,
-      "format": "WebP"
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
     },
     {
       "name": "brands",
@@ -24,7 +25,8 @@
       "width": 2172,
       "height": 724,
       "bytes": 87308,
-      "format": "WebP"
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
     },
     {
       "name": "inventory",
@@ -35,7 +37,8 @@
       "width": 2172,
       "height": 724,
       "bytes": 24984,
-      "format": "WebP"
+      "format": "WebP",
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
     },
     {
       "name": "guides",
@@ -47,7 +50,7 @@
       "height": 724,
       "bytes": 82630,
       "format": "WebP",
-      "runtimeStatus": "Active Home advice background without editorial object overlays; shares the restrained texture pattern of the other three section banners."
+      "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
     },
     {
       "name": "guides-editorial",
@@ -61,7 +64,7 @@
       "height": 724,
       "bytes": 65284,
       "format": "WebP",
-      "runtimeStatus": "Superseded; Home advice now uses the original graphite backdrop alone. Retained as source provenance."
+      "runtimeStatus": "Superseded; Home advice now uses the shared graphite-dot background. Retained as source provenance."
     },
     {
       "name": "guides-notebook-cutout",

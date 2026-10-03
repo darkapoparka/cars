@@ -7,22 +7,24 @@ const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
 // Includes the reviewed 960px and 480px Contact and advice banner encodings.
 // The mobile Audi chrome mark is a separate responsive source.
-// Four generated Home section backdrops extend the guarded media inventory.
+// Rejected Home section textures remain archived for provenance.
 // The mobile Volkswagen badge is a curated Home shortcut.
 // The Home advice banner has a separate editorial plate.
 // Superseded advice illustrations remain retained for provenance.
 // The mobile BMW vector replaces the low-resolution bitmap at phone widths.
-// Featured inventory replaces its sculpted panels with a flat satin-metal texture.
-const guardedMediaCount = 181;
+// One shared graphite-dot background replaces the separate Home section materials.
+const guardedMediaCount = 182;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
-// Home section banners use graphite textures; earlier advice artwork is retained.
+// Earlier Home section and advice artwork is retained without runtime requests.
 retainedSourceAssets.add('/assets/images/template/home-section-guides-editorial-v2.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-guides-notebook-cutout-v3.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-guides-checklist-cutout-v3.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-inventory-backdrop-v1.webp');
+for (const name of ['body', 'brands', 'guides']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-backdrop-v1.webp`);
+retainedSourceAssets.add('/assets/images/template/home-section-inventory-backdrop-v2.webp');
 // The solid About banner no longer requests this photograph; retain its source provenance.
 retainedSourceAssets.add('/assets/images/section/bg-12.jpg');
 // Preserve the previous editorial hero photograph as source history.

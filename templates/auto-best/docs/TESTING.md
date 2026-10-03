@@ -128,8 +128,11 @@ single-line desktop card titles with complete accessible labels and compact
 title-to-specifications spacing, one selected raster scene request on About and
 Contact, and distinct original car pairs on Home, Inventory and Blog. Mobile
 requests none of these desktop scenes. Home's four desktop section banners
-use their configured graphite textures without vehicle or editorial
-object overlays. The suite also checks
+use one common graphite-dot background with no object overlays; mobile does not
+request this background. Home and Inventory also reuse this background behind
+their original vehicle pairs, without native dots or red-curve decorations.
+Check unchanged car, title and discovery-control geometry and background decoding.
+The suite also checks
 title/description/control separation, real Onest
 glyph rendering (including Cyrillic), visible images, page overflow and runtime
 errors. Desktop content canvases are light grey with white cards;

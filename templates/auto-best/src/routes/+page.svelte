@@ -22,11 +22,7 @@
   <meta name="description" content={i18n.t("m_ed2d6b74bc69", { p0: i18n.dealer('city') })} />
 </svelte:head>
 
-<div class="dn-home-page"
-  style:--dn-home-body-background={`url("${leadSite.artwork.homeSectionBackgrounds.body}")`}
-  style:--dn-home-brands-background={`url("${leadSite.artwork.homeSectionBackgrounds.brands}")`}
-  style:--dn-home-inventory-background={`url("${leadSite.artwork.homeSectionBackgrounds.inventory}")`}
-  style:--dn-home-guides-background={`url("${leadSite.artwork.homeSectionBackgrounds.guides}")`}>
+<div class="dn-home-page" style:--dn-home-section-background={`url("${leadSite.artwork.discoveryBackground}")`}>
   <div class="dn-home-slot dn-home-slot--hero"><Hero /></div>
   <div class="dn-home-slot dn-home-slot--search"><SearchBox /></div>
   <div class="dn-home-slot dn-home-slot--mobile-actions"><MobileCoreActions /></div>
@@ -138,14 +134,11 @@
     .dn-home-page :global(:is(.dn-home-section-heading--branded, .dn-home-section-heading--banner) > p) { color: var(--dn-text-on-ink); }
 
     .dn-home-page :global(:is(.dn-body-types__heading, .dn-brand-hero__copy, .dn-inventory__heading, .dn-editorial__heading)) {
+      background-image: var(--dn-home-section-background);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
-    .dn-home-page :global(.dn-body-types__heading) { background-image: var(--dn-home-body-background); }
-    .dn-home-page :global(.dn-brand-hero__copy) { background-image: var(--dn-home-brands-background); }
-    .dn-home-page :global(.dn-inventory__heading) { background-image: var(--dn-home-inventory-background); }
-    .dn-home-page :global(.dn-editorial__heading) { background-image: var(--dn-home-guides-background); }
 
     .dn-home-page :global(.dn-home-section-heading--light) {
       background: var(--dn-surface-raised);

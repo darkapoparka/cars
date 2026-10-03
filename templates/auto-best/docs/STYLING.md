@@ -21,7 +21,11 @@ currency formatter and symbol. EUR renders as `€` with the locale's number gro
 ## Desktop route composition
 
 Home and Inventory frame their search panels with the original inward-facing
-vehicle pairs through `CampaignVehiclePair.svelte`. About and Contact use the
+vehicle pairs through `CampaignVehiclePair.svelte`. `DesktopHeroScene.svelte`
+reuses `leadSite.artwork.discoveryBackground` behind these two pairs and disables
+their native dot and red-curve decoration through the existing `decoration` prop.
+It uses the same graphite artwork as the four Home section headers from 992px.
+About and Contact use the
 approved larger car scenes through `DesktopHeroScene.svelte`, giving their simpler
 introductions more presence. Blog keeps its original vehicle pair. All use the same
 black palette, subtle halftone dots and restrained red accents. The warm About photograph and
@@ -320,17 +324,14 @@ the configured currency's narrow symbol and locale number formatting.
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
 **Section introductions.** Desktop inventory/body/brand/editorial sections share
-a restrained graphite banner with a centered white heading and white action.
-Featured inventory uses fine grain on a flat satin-metal surface. Body types
-keep satin contours; Brands and Advice keep their perforated texture. Each has
-subtle edge detail and a quiet center behind copy. The headers contain
-no vehicle or editorial object cutouts; the cards below supply the imagery.
-`leadSite.artwork.homeSectionBackgrounds` owns the four versioned WebP URLs.
-The Home route applies them only from 992px, so tablet and mobile do not request
-the artwork. [Background provenance and prompts](../provenance/home-section-backgrounds-2026-10-02.json)
-record generation, delivery encodings and superseded advice illustrations.
-The [Featured texture prompt](../provenance/home-inventory-texture-2026-10-03.json)
-records its separate satin-metal replacement and retained previous artwork.
+one graphite background with fine dots fading toward a quiet center and soft
+edge lighting. `leadSite.artwork.discoveryBackground` owns its single WebP URL.
+The Home route applies it at the same scale and position from 992px, with a
+centered white heading and white action; mobile does not request it. The cards
+below supply the imagery. [Shared background and exact prompt](../provenance/home-shared-background-2026-10-03.json)
+record its generation and delivery. The [original backgrounds](../provenance/home-section-backgrounds-2026-10-02.json)
+and [Featured texture](../provenance/home-inventory-texture-2026-10-03.json)
+remain archived without runtime requests.
 All content sections use the shared 32px section padding, giving adjacent panels
 the same 64px gap. The white content panel overlaps its 164px banner by 24px,
 with rounded upper corners forming an inward curve at the join. Heading and

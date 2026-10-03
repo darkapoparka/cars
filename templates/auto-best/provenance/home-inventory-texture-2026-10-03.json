@@ -13,5 +13,6 @@
   "bytes": 41152,
   "format": "WebP",
   "delivery": "Full-frame WebP quality 84, effort 6; no crop, compositing or pixel retouching.",
-  "integration": "Existing configured CSS center/cover background only from 992px. Heading, action, section height and curved content-panel join are unchanged. Advice, Body Types, Brands and route heroes retain their existing artwork."
+  "integration": "Archived asset only. The four Home section headers use one common graphite-dot background; this earlier texture has no runtime requests. Generated source, dimensions, delivery and original prompt are retained.",
+  "runtimeStatus": "Superseded on 2026-10-03; retained as source provenance without runtime requests. Home section headers use the shared graphite-dot background recorded in home-shared-background-2026-10-03.json."
 }

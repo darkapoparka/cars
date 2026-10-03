@@ -38,7 +38,7 @@ type LeadSiteConfig = {
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
-    homeSectionBackgrounds: { body: SiteAssetPath; brands: SiteAssetPath; inventory: SiteAssetPath; guides: SiteAssetPath };
+    discoveryBackground: SiteAssetPath;
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -188,12 +188,7 @@ export const leadSite = {
       graphite: '/assets/images/lead/auto-best-banner-graphite-v1.png',
       crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
     },
-    homeSectionBackgrounds: {
-      body: '/assets/images/template/home-section-body-backdrop-v1.webp',
-      brands: '/assets/images/template/home-section-brands-backdrop-v1.webp',
-      inventory: '/assets/images/template/home-section-inventory-backdrop-v2.webp',
-      guides: '/assets/images/template/home-section-guides-backdrop-v1.webp'
-    },
+    discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
     home: {
       collection,
       sell: mobileSell,

@@ -140,6 +140,11 @@ try {
               } else {
                 const pair = { '': ['gclass', 'urus'], 'listing-grid': ['golf', 'a45'], blog: ['m5', 'e63'] }[route];
                 assert.deepEqual(geometry.cutouts.map(car => car.vehicle), pair, 'Each destination has its own reviewed car pair');
+                if (route === '' || route === 'listing-grid') {
+                  const discoveryScene = page.locator('.dn-desktop-hero-scene');
+                  assert.equal(await discoveryScene.locator('.dn-campaign-vehicles__dots, .dn-campaign-vehicles__arc').count(), 0, 'Home and Inventory omit their old native decoration');
+                  assert.match(await discoveryScene.evaluate(scene => getComputedStyle(scene).backgroundImage), /home-section-shared-backdrop-v1\.webp/, 'Discovery heroes reuse the shared graphite background');
+                }
                 for (const car of geometry.cutouts) {
                   assert.match(car.src, new RegExp(`day-night-cutout-${car.vehicle}-v1\\.webp`), 'The original cutout source is used without generated props');
                   assert(Math.abs(car.width / car.height - 1000 / 667) < .01, 'Vehicles keep their natural proportions');
@@ -220,16 +225,16 @@ try {
                 await page.evaluate(() => scrollTo(0, 0));
               }
               if (route === '') {
-                for (const [selector, background] of [
-                  ['.dn-inventory__heading', 'home-section-inventory-backdrop-v2.webp'],
-                  ['.dn-body-types__heading', 'home-section-body-backdrop-v1.webp'],
-                  ['.dn-brand-hero__copy', 'home-section-brands-backdrop-v1.webp'],
-                  ['.dn-editorial__heading', 'home-section-guides-backdrop-v1.webp']
-                ]) {
+                const sectionBannerSurfaces = new Set();
+                for (const selector of ['.dn-inventory__heading', '.dn-body-types__heading', '.dn-brand-hero__copy', '.dn-editorial__heading']) {
                   const heading = page.locator(selector);
                   assert.equal(await heading.locator('.dn-campaign-vehicles, .dn-vehicle-cutout').count(), 0, 'Home section headers leave vehicle imagery to the cards');
-                  assert.match(await heading.evaluate(e => getComputedStyle(e).backgroundImage), new RegExp(background.replaceAll('.', '\\.')), 'Home section banners use their configured graphite backgrounds');
+                  const surface = await heading.evaluate(e => ({ image: getComputedStyle(e).backgroundImage, color: getComputedStyle(e).backgroundColor }));
+                  assert.match(surface.image, /home-section-shared-backdrop-v1\.webp/, 'Home section banners use the same graphite-dot background');
+                  assert.equal(surface.color, 'rgb(21, 24, 29)', 'Home section banners use the shared charcoal surface');
+                  sectionBannerSurfaces.add(surface.image);
                 }
+                assert.equal(sectionBannerSurfaces.size, 1, 'Every Home section banner uses one common background');
                 for (const section of await page.locator('.dn-home-content-section').all()) assert.equal(await section.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Home sections use one canvas');
                 for (const card of await page.locator('.dn-vehicle-card').all()) assert.equal(await card.evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(255, 255, 255)', 'Vehicle cards remain white');
                 for (const card of await page.locator('.dn-body-type, .dn-brand-card').filter({ visible: true }).all()) {
