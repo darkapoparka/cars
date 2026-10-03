@@ -404,7 +404,7 @@
 	@media (min-width: 768px) {
 		.hfp__field--prominent {
 			border-color: var(--bc-border);
-			background: var(--bc-surface);
+			background: var(--bc-control);
 			border-radius: var(--desktop-discovery-control-radius, var(--bc-radius-md));
 		}
 		.hfp__field--prominent .hfp__value {

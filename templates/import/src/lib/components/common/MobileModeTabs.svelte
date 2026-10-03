@@ -218,4 +218,12 @@
 		background: var(--bc-accent);
 		border-radius: var(--bc-radius-pill);
 	}
+	@media (min-width: 768px) {
+		.mobile-mode-tabs--panel button:hover {
+			background: var(--bc-control);
+		}
+		.mobile-mode-tabs--panel button:focus-visible {
+			outline-color: var(--bc-focus);
+		}
+	}
 </style>

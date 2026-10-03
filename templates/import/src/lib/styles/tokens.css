@@ -328,11 +328,8 @@
 	.site-shell,
 	.site-dialog {
 		--bc-desktop-canvas: #f2f4f7;
-		--bc-desktop-panel-surface: color-mix(
-			in srgb,
-			var(--bc-surface-raised) 55%,
-			var(--bc-desktop-canvas)
-		);
+		--bc-desktop-panel-surface: var(--bc-surface-raised);
+		--bc-desktop-control-surface: var(--bc-desktop-canvas);
 		--bc-desktop-hero-surface: var(--bc-desktop-canvas);
 		--bc-desktop-hero-ink: var(--bc-ink);
 		--bc-desktop-hero-copy: var(--bc-description-copy);
@@ -351,9 +348,9 @@
 		--bc-desktop-control-radius: var(--bc-radius-lg);
 		--bc-bg: var(--bc-desktop-canvas);
 		--bc-bg-strong: var(--bc-desktop-canvas);
-		--bc-surface: var(--bc-desktop-panel-surface);
+		--bc-surface: var(--bc-desktop-control-surface);
 		--bc-surface-soft: var(--bc-desktop-panel-surface);
-		--bc-control: var(--bc-desktop-panel-surface);
+		--bc-control: var(--bc-desktop-control-surface);
 		--bc-surface-hover: var(--bc-editorial-hover);
 		--bc-border: var(--bc-editorial-border);
 		--bc-border-strong: color-mix(
@@ -370,11 +367,11 @@
 		--bc-desktop-media-radius: var(--bc-editorial-photo-radius);
 		--bc-desktop-card-heading: var(--bc-text-h5);
 		--desktop-discovery-radius: var(--bc-radius-panel);
-		--desktop-discovery-shadow: none;
+		--desktop-discovery-shadow: var(--bc-shadow-subtle);
 		--desktop-discovery-surface: var(--bc-desktop-panel-surface);
 		--desktop-discovery-ink: var(--bc-ink);
 		--desktop-discovery-copy: var(--bc-description-copy);
-		--desktop-discovery-border: var(--bc-border-strong);
+		--desktop-discovery-border: var(--bc-editorial-border);
 	}
 	.site-shell {
 		--bc-text-meta: 0.875rem;

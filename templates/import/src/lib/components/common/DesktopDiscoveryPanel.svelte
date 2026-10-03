@@ -52,4 +52,10 @@
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}
+	@media (min-width: 768px) {
+		.desktop-discovery-panel {
+			--bc-control: var(--bc-desktop-control-surface, var(--bc-surface-raised));
+			--bc-border: var(--bc-border-strong);
+		}
+	}
 </style>
