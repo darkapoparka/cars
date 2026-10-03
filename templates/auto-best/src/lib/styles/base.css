@@ -16,6 +16,29 @@ body { margin: 0; color: var(--dn-ink); background: var(--dn-surface-raised); fo
 a { color: inherit; text-decoration: none; }
 button, input, select, textarea { font: inherit; }
 button { font: var(--dn-control-font); }
+/* Article reading actions stay within the card's single link. */
+@media (min-width: 992px) {
+  .dn-article-action {
+    align-self: flex-start;
+    min-height: var(--dn-control-height-compact);
+    align-items: center;
+    justify-content: center;
+    gap: var(--dn-space-2);
+    margin-top: auto;
+    padding: var(--dn-space-2) var(--dn-space-5);
+    border-radius: var(--dn-radius-button);
+    background: var(--dn-ink);
+    color: var(--dn-white);
+    font: var(--dn-control-font);
+    white-space: nowrap;
+    transition: background-color 160ms ease-out;
+  }
+  .dn-article-action > svg { flex: none; }
+  a:focus-visible .dn-article-action { background: var(--dn-ink-hover); }
+}
+@media (min-width: 992px) and (hover: hover) and (pointer: fine) {
+  a:hover .dn-article-action { background: var(--dn-ink-hover); }
+}
 /* One browser-independent frame for close, back and clear icon controls. */
 .dn-icon-button { display: inline-grid; place-items: center; flex: 0 0 auto; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); min-width: var(--dn-control-hit-height); min-height: var(--dn-control-hit-height); padding: var(--dn-compact-control-inset); box-sizing: border-box; appearance: none; border: 0; border-radius: var(--dn-pill); background-clip: content-box; color: inherit; cursor: pointer; touch-action: manipulation; }
 .dn-icon-button > svg { display: block; flex: none; pointer-events: none; }
