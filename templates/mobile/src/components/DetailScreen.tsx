@@ -1,7 +1,6 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
 import { localizeVehicle } from '@/lib/vehicle-copy';
-import { LanguageSwitcher } from './LanguageSwitcher';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -77,6 +76,40 @@ const s = stylex.create({
     color: '#fff',
   },
   info: { paddingInline: 16, paddingTop: 16 },
+  purchaseHeading: {
+    display: { default: 'block', '@media (min-width: 360px) and (max-width: 699px)': 'flex' },
+    flexWrap: 'wrap',
+    alignItems: 'flex-start',
+    columnGap: 16,
+    rowGap: 8,
+    padding: { default: 0, '@media (max-width: 699px)': '16px 16px 0' },
+  },
+  purchaseIdentity: {
+    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
+    paddingTop: { default: 16, '@media (max-width: 699px)': 0 },
+    flexBasis: 'max-content',
+    flexGrow: 1,
+    flexShrink: 1,
+    minWidth: 0,
+    maxWidth: '100%',
+  },
+  purchasePrice: {
+    display: 'flex',
+    flexDirection: 'column',
+    flexShrink: 0,
+    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
+    marginLeft: { default: 0, '@media (min-width: 360px) and (max-width: 699px)': 'auto' },
+  },
+  purchasePriceRow: {
+    flexDirection: { default: 'row', '@media (min-width: 360px) and (max-width: 699px)': 'column' },
+    alignItems: {
+      default: 'center',
+      '@media (min-width: 360px) and (max-width: 699px)': 'flex-end',
+    },
+    gap: { default: 8, '@media (min-width: 360px) and (max-width: 699px)': 0 },
+    marginTop: { default: 10, '@media (min-width: 360px) and (max-width: 699px)': 0 },
+    marginBottom: { default: 2, '@media (min-width: 360px) and (max-width: 699px)': 0 },
+  },
   offer: {
     backgroundColor: colors.background,
     paddingInline: 16,
@@ -168,9 +201,12 @@ const s = stylex.create({
     gridTemplateColumns: 'minmax(0,1fr) auto',
     alignItems: 'center',
     gap: 12,
-    padding: 12,
+    paddingBlock: { default: 12, '@media (max-width: 699px)': 6 },
     paddingInline: 16,
-    paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
+    paddingBottom: {
+      default: 'calc(12px + env(safe-area-inset-bottom))',
+      '@media (max-width: 699px)': 'calc(6px + env(safe-area-inset-bottom))',
+    },
     backgroundColor: colors.background,
     borderTopWidth: 1,
     borderTopStyle: 'solid',
@@ -184,12 +220,19 @@ const s = stylex.create({
     flexWrap: 'wrap',
     gap: 4,
     minWidth: 0,
-    fontSize: 20,
+    fontSize: { default: 20, '@media (max-width: 699px)': 18 },
     fontWeight: 700,
-    lineHeight: '28px',
+    lineHeight: { default: '28px', '@media (max-width: 699px)': '24px' },
     overflowWrap: 'anywhere',
   },
   dockPeriod: { fontSize: 12, fontWeight: 400, lineHeight: '18px', color: colors.muted },
+  dockAction: {
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    paddingBlock: { default: 12, '@media (max-width: 699px)': 10 },
+    fontSize: { default: 15, '@media (max-width: 699px)': 14 },
+    lineHeight: { default: '22px', '@media (max-width: 699px)': '20px' },
+    borderRadius: { default: 12, '@media (max-width: 699px)': 10 },
+  },
   actionIcon: { display: 'inline-flex', flexShrink: 0 },
   financeAmount: {
     display: 'inline-flex',
@@ -302,6 +345,21 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
       notify(t('Copy the vehicle link from your browser’s address bar.'));
     }
   }
+  const purchasePrice = (
+    <div {...stylex.props(s.priceRow, !v.leaseTerms && s.purchasePriceRow)}>
+      <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
+      <button
+        type="button"
+        aria-label={t('Price rating details')}
+        aria-haspopup="dialog"
+        onClick={() => setPriceInfo(true)}
+        {...stylex.props(s.ratingButton)}
+      >
+        <PriceRating veryGood={v.deal} detail />
+        <Icon name="info" size={14} />
+      </button>
+    </div>
+  );
   return (
     <>
       <Header
@@ -322,7 +380,6 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
             href={'/vehicle/' + v.id + '/checklist'}
           />
         </span>
-        <LanguageSwitcher />
         <IconButton
           icon="heart"
           label={parked.includes(v.id) ? t('Remove from saved cars') : t('Save car')}
@@ -378,12 +435,15 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
         onReport={() => setReport(true)}
         overview={
           <>
-            <section {...stylex.props(s.info)}>
-              <h1 {...stylex.props(s.model)}>
-                {v.make} {v.model}
-              </h1>
-              <p {...stylex.props(s.variant)}>{v.variant}</p>
-            </section>
+            <div {...stylex.props(!v.leaseTerms && s.purchaseHeading)}>
+              <section {...stylex.props(s.info, !v.leaseTerms && s.purchaseIdentity)}>
+                <h1 {...stylex.props(s.model)}>
+                  {v.make} {v.model}
+                </h1>
+                <p {...stylex.props(s.variant)}>{v.variant}</p>
+              </section>
+              {!v.leaseTerms && <div {...stylex.props(s.purchasePrice)}>{purchasePrice}</div>}
+            </div>
             {v.leaseTerms && (
               <div {...stylex.props(s.paymentTabs)} role="group" aria-label={t('Payment type')}>
                 <button
@@ -427,19 +487,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                 </>
               ) : (
                 <>
-                  <div {...stylex.props(s.priceRow)}>
-                    <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
-                    <button
-                      type="button"
-                      aria-label={t('Price rating details')}
-                      aria-haspopup="dialog"
-                      onClick={() => setPriceInfo(true)}
-                      {...stylex.props(s.ratingButton)}
-                    >
-                      <PriceRating veryGood={v.deal} detail />
-                      <Icon name="info" size={14} />
-                    </button>
-                  </div>
+                  {v.leaseTerms && purchasePrice}
                   {v.previousPrice && (
                     <p {...stylex.props(s.oldRow)}>
                       <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
@@ -513,7 +561,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
           <Link
             href={'/contact?vehicle=' + v.id}
             aria-label={t('Enquire about this car') + ': ' + v.make + ' ' + v.model}
-            {...stylex.props(s.action, s.enquire)}
+            {...stylex.props(s.action, s.enquire, s.dockAction)}
           >
             {t('Enquire')}
           </Link>

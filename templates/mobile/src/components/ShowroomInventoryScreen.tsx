@@ -231,7 +231,7 @@ export function ShowroomInventoryScreen() {
   ];
   return (
     <>
-      <Header home />
+      <Header home showLanguageSwitcher />
       <section aria-label={t('Find a vehicle')} {...stylex.props(s.controls)}>
         <ShowroomSearch
           label={t('Search make or model')}

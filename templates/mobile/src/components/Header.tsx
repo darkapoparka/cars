@@ -87,6 +87,7 @@ export function Header({
   back,
   children,
   home = false,
+  showLanguageSwitcher = false,
   onBack,
   backIcon = 'back',
 }: {
@@ -94,6 +95,7 @@ export function Header({
   back?: string;
   children?: ReactNode;
   home?: boolean;
+  showLanguageSwitcher?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
 }) {
@@ -137,7 +139,7 @@ export function Header({
       )}
       {home ? (
         <div {...stylex.props(s.actions)}>
-          <LanguageSwitcher />
+          {showLanguageSwitcher && <LanguageSwitcher />}
           <span {...stylex.props(s.relative)}>
             <Link
               href="/car-park"
