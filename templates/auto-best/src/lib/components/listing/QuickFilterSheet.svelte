@@ -193,6 +193,38 @@
   @media (max-width: 767px) {
     .dn-quick-sheet { inset: auto 0 0; width: 100%; max-height: calc(100dvh - max(24px, env(safe-area-inset-top))); margin: 0; border-radius: 24px 24px 0 0; }
     form { max-height: calc(100dvh - max(24px, env(safe-area-inset-top))); }
+    .choice { padding-block: var(--dn-space-2); }
+    .choice > span { min-width: 0; overflow-wrap: anywhere; }
+    .choice:has(:checked) { background: var(--dn-white); }
+    .choice input {
+      display: grid;
+      place-content: center;
+      padding: 0;
+      appearance: none;
+      border: 1.5px solid var(--dn-line-strong);
+      border-radius: 50%;
+      background: var(--dn-white);
+      color: var(--dn-white);
+      cursor: pointer;
+    }
+    .choice input[type='checkbox'] { border-radius: var(--dn-radius-xs); }
+    .choice input::before {
+      width: 6px;
+      height: 10px;
+      border: solid currentColor;
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+      transform: rotate(45deg);
+      content: '';
+    }
+    .choice input:checked { border-color: var(--dn-red); background: var(--dn-red); }
+    .choice input:checked::before { opacity: 1; }
+    .choice input:focus-visible { outline: none; }
+  }
+  @media (max-width: 767px) and (forced-colors: active) {
+    .choice input, .choice input:checked { appearance: auto; border: revert; background: revert; color: revert; }
+    .choice input::before { content: none; }
+    .choice input:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
   }
   @media (max-width: 767px) {
     .dn-quick-sheet.full-screen { inset: 0; height: 100dvh; max-height: 100dvh; border-radius: 0; }
