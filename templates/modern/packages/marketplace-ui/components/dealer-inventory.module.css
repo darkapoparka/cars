@@ -11,18 +11,18 @@
   .results {
     display: grid;
     grid-template-columns: 280px minmax(0, 1fr);
-    gap: 32px;
+    gap: 24px;
     align-items: start;
     width: var(--desktop-content-width);
     max-width: none;
-    padding: 24px 0 90px;
+    padding: 28px 0 90px;
     margin-inline: auto;
   }
   .sidebar {
     display: block;
-    padding: 24px;
+    padding: 22px;
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: 0;
     border-radius: 16px;
     box-shadow: var(--desktop-surface-shadow);
   }
@@ -35,11 +35,11 @@
     grid-template-columns: minmax(0, 1fr) auto auto;
     gap: 16px;
     align-items: center;
-    min-height: 84px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
+    min-height: 80px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
     background: var(--panel);
-    border: 1px solid var(--border);
+    border: 0;
     border-radius: 16px;
     box-shadow: var(--desktop-surface-shadow);
   }
@@ -57,8 +57,8 @@
     clip: rect(0, 0, 0, 0);
   }
   .heading output {
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     line-height: 26px;
     color: var(--foreground);
   }
@@ -136,7 +136,7 @@
   }
   .grid[data-view="grid"] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 24px;
+    gap: 20px;
     align-items: stretch;
     width: 100%;
     max-width: none;

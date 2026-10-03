@@ -64,7 +64,7 @@ export function DealerDesktopServiceLinks({
           {
             path: "/cars?sort=newest",
             icon: CarFront,
-            title: text("Всички автомобили", "Browse inventory"),
+            title: text("Разгледайте автомобили", "Browse Cars"),
             detail: text(
               "Открийте автомобил за вашия бюджет и начин на живот.",
               "Find the car that fits your lifestyle and budget."
@@ -73,28 +73,28 @@ export function DealerDesktopServiceLinks({
           {
             path: "/sell",
             icon: Tag,
-            title: text("Продай или замени", "Sell or trade"),
+            title: text("Продайте автомобила си", "Sell Your Car"),
             detail: text(
               "Обсъдете продажба или замяна с нашия екип.",
               "Talk to our team about selling or part exchange."
             ),
           },
           {
-            path: "/lease",
-            icon: HandCoins,
-            title: text("Финансиране", "Financing options"),
-            detail: text(
-              "Изчислете ориентировъчна месечна вноска.",
-              "Estimate a monthly payment before your next step."
-            ),
-          },
-          {
             path: "/imports",
             icon: Ship,
-            title: text("Внос на автомобил", "Import a vehicle"),
+            title: text("Внос на автомобил", "Import a Car"),
             detail: text(
               "Намерете и внесете автомобил по ваш избор.",
               "Explore the options for importing your next car."
+            ),
+          },
+          {
+            path: "/lease",
+            icon: HandCoins,
+            title: text("Планирайте бюджета си", "Plan Your Budget"),
+            detail: text(
+              "Изчислете ориентировъчна месечна вноска.",
+              "Estimate a monthly payment before your next step."
             ),
           },
         ];

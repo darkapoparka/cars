@@ -11,7 +11,7 @@ export const defaultSiteArtwork: PublicSiteArtwork = {
   importHero: "/lead-import-hero-v1.webp",
   financeHero: "/images/lease/day-night-mobile-studio-v2.webp",
   desktopFinanceHero: "/desktop-boxcars/finance.jpg",
-  desktopVisitBanner: "/desktop-boxcars/showroom-blue-v1.webp",
+  desktopVisitBanner: "/desktop-boxcars/viewing.jpg",
   desktopServices: {
     browse: "/desktop-boxcars/service-browse.webp",
     sell: "/desktop-boxcars/service-sell.webp",

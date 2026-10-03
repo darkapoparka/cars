@@ -30,8 +30,8 @@ export const DealerDesktopToolbar = ({
       <DealerDesktopHero
         description={
           locale?.startsWith("bg")
-            ? "Намерете следващия си автомобил. Разгледайте наличностите и сравнете детайлите."
-            : "Find your next car. Browse our inventory and compare the details."
+            ? "Открийте автомобил. Запазете и сравнете избора си."
+            : "Find your next car. Save your favourites and compare the details."
         }
         locale={locale}
         title={getMarketplaceResultTitle(filters, locale)}

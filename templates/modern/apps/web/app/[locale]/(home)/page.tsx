@@ -127,6 +127,7 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
                 )}
                 listings={listings}
                 locale={locale}
+                totalListings={totalListings}
               />
             ) : undefined
           }

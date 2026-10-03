@@ -8,6 +8,7 @@ const desktop = localFont({
   variable: "--font-desktop",
   weight: "100 1000",
   preload: false,
+  adjustFontFallback: false,
 });
 
 const inter = Inter({

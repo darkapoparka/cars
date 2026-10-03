@@ -11,6 +11,7 @@ type DesktopListingTabId =
 type MobileListingTabId = "overview" | "details";
 
 interface ListingDetailsTabsProps {
+  readonly desktopLayout?: "tabs" | "sections";
   readonly equipment: ReactNode;
   readonly information: ReactNode;
   readonly locale?: string;
@@ -36,6 +37,7 @@ const getTabCopy = (locale?: string) => {
 };
 
 export const ListingDetailsTabs = ({
+  desktopLayout = "tabs",
   equipment,
   information,
   locale,
@@ -185,57 +187,69 @@ export const ListingDetailsTabs = ({
         ))}
       </div>
 
-      <div
-        className="hidden overflow-hidden rounded-xl border border-border bg-card lg:block"
-        data-slot="listing-details-tabs-desktop"
-      >
+      {desktopLayout === "sections" ? (
         <div
-          aria-label={copy.ariaLabel}
-          className="flex max-w-full items-center gap-2 overflow-x-auto px-4 pt-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          role="tablist"
+          className="hidden lg:block"
+          data-slot="listing-details-sections-desktop"
         >
-          {desktopTabs.map((tab) => {
-            const isActive = desktopActiveTab === tab.id;
-
-            return (
-              <button
-                aria-controls={`listing-desktop-panel-${tab.id}`}
-                aria-selected={isActive}
-                className={`inline-flex h-9 shrink-0 items-center rounded-full border px-4 text-compact-control transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
-                  isActive
-                    ? "border-border bg-control font-semibold text-foreground shadow-sm"
-                    : "border-border bg-background font-medium text-muted-foreground hover:bg-control/70 hover:text-foreground"
-                }`}
-                id={`listing-desktop-tab-${tab.id}`}
-                key={tab.id}
-                onClick={() => setDesktopActiveTab(tab.id)}
-                onKeyDown={(event) => handleDesktopKeyDown(event, tab.id)}
-                ref={(element) => {
-                  desktopTabRefs.current[tab.id] = element;
-                }}
-                role="tab"
-                tabIndex={isActive ? 0 : -1}
-                type="button"
-              >
-                {tab.label}
-              </button>
-            );
-          })}
+          {information}
+          {overview}
+          {specifications}
+          {equipment}
         </div>
-
-        {desktopTabs.map((tab) => (
+      ) : (
+        <div
+          className="hidden overflow-hidden rounded-xl border border-border bg-card lg:block"
+          data-slot="listing-details-tabs-desktop"
+        >
           <div
-            aria-labelledby={`listing-desktop-tab-${tab.id}`}
-            className="px-4 pt-4 pb-4"
-            hidden={desktopActiveTab !== tab.id}
-            id={`listing-desktop-panel-${tab.id}`}
-            key={tab.id}
-            role="tabpanel"
+            aria-label={copy.ariaLabel}
+            className="flex max-w-full items-center gap-2 overflow-x-auto px-4 pt-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            role="tablist"
           >
-            {desktopPanels[tab.id]}
+            {desktopTabs.map((tab) => {
+              const isActive = desktopActiveTab === tab.id;
+
+              return (
+                <button
+                  aria-controls={`listing-desktop-panel-${tab.id}`}
+                  aria-selected={isActive}
+                  className={`inline-flex h-9 shrink-0 items-center rounded-full border px-4 text-compact-control transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-inset ${
+                    isActive
+                      ? "border-border bg-control font-semibold text-foreground shadow-sm"
+                      : "border-border bg-background font-medium text-muted-foreground hover:bg-control/70 hover:text-foreground"
+                  }`}
+                  id={`listing-desktop-tab-${tab.id}`}
+                  key={tab.id}
+                  onClick={() => setDesktopActiveTab(tab.id)}
+                  onKeyDown={(event) => handleDesktopKeyDown(event, tab.id)}
+                  ref={(element) => {
+                    desktopTabRefs.current[tab.id] = element;
+                  }}
+                  role="tab"
+                  tabIndex={isActive ? 0 : -1}
+                  type="button"
+                >
+                  {tab.label}
+                </button>
+              );
+            })}
           </div>
-        ))}
-      </div>
+
+          {desktopTabs.map((tab) => (
+            <div
+              aria-labelledby={`listing-desktop-tab-${tab.id}`}
+              className="px-4 pt-4 pb-4"
+              hidden={desktopActiveTab !== tab.id}
+              id={`listing-desktop-panel-${tab.id}`}
+              key={tab.id}
+              role="tabpanel"
+            >
+              {desktopPanels[tab.id]}
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };

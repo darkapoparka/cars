@@ -55,6 +55,7 @@ export const ListingDetailContent = ({
   return (
     <>
       <ListingDetailsTabs
+        desktopLayout={isDealershipSite ? "sections" : "tabs"}
         equipment={<ListingEquipment listing={listing} locale={locale} />}
         information={<ListingSpecs listing={listing} locale={locale} />}
         locale={locale}

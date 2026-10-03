@@ -1,5 +1,10 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import { formatMoney, leadSite, type VehicleListing } from "@repo/marketplace";
+import {
+  formatMoney,
+  getListingPath,
+  leadSite,
+  type VehicleListing,
+} from "@repo/marketplace";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { ArrowLeft, ArrowUpRight, MapPin, ShieldCheck } from "lucide-react";
 import Link from "next/link";
@@ -19,6 +24,9 @@ import {
   type ListingOrganizationRole,
 } from "../lib/listing-truth";
 import { getLocalizedMarketplaceCityName } from "../lib/marketplace-control-copy";
+import { getLocalizedPublicPath } from "../lib/public-path";
+import { getShowroomVehicleHeading } from "../lib/vehicle-card-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
 import { ListingActions } from "./listing-actions";
 import { ListingBackLink } from "./listing-back-link";
 
@@ -37,6 +45,37 @@ export const DesktopListingSummaryHeader = ({
 }) => {
   const copy = getListingDetailCopy(locale);
   const physicalLocation = getPhysicalVehicleLocation(listing);
+
+  if (isDealershipSite) {
+    return (
+      <div className="hidden lg:block" data-slot="listing-summary-header">
+        <ListingBackLink data-slot="listing-desktop-back" href={backHref}>
+          <ArrowLeft aria-hidden size={18} />
+          {copy.backToSearch}
+        </ListingBackLink>
+        <header data-slot="listing-title-panel">
+          <div>
+            <h1>{listing.title}</h1>
+            <p>{getShowroomVehicleHeading(listing, locale).subtitle}</p>
+          </div>
+          <div data-slot="listing-title-actions">
+            <DesktopSaveCarButton
+              href={getLocalizedPublicPath(locale, getListingPath(listing))}
+              listing={listing}
+              locale={locale}
+              presentation="action"
+            />
+            <ListingActions
+              listingTitle={listing.title}
+              listingUrl={listingUrl}
+              locale={locale}
+              saveHref={saveHref}
+            />
+          </div>
+        </header>
+      </div>
+    );
+  }
 
   return (
     <header

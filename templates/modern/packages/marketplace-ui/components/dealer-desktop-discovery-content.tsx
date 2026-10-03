@@ -1,7 +1,6 @@
 import {
   buildMarketplaceSearchHref,
   getListingPath,
-  leadSite,
   type VehicleListing,
 } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
@@ -27,11 +26,13 @@ export const DealerDesktopDiscoveryContent = ({
   currentPath,
   listings,
   locale,
+  totalListings = listings.length,
 }: {
   articles?: readonly DealerDesktopJournalCard[];
   currentPath: string;
   listings: readonly VehicleListing[];
   locale?: string;
+  totalListings?: number;
 }) => {
   const isBg = locale?.startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
@@ -48,16 +49,17 @@ export const DealerDesktopDiscoveryContent = ({
       >
         <div className={styles.sectionHeading}>
           <h2 id="desktop-inventory-heading">
-            {text("Разгледайте нашите автомобили", "Explore Our Vehicles")}
+            {text(
+              "Разгледайте най-новите автомобили",
+              "Explore Our Latest Cars"
+            )}
           </h2>
-          {leadSite.staticDemoMode && (
-            <p>
-              {text(
-                "Показани са примерни автомобили.",
-                "Sample vehicles shown."
-              )}
-            </p>
-          )}
+          <p>
+            {text(
+              `${totalListings} автомобила за разглеждане`,
+              `${totalListings} cars to explore`
+            )}
+          </p>
         </div>
         <nav
           aria-label={text("Разгледайте автомобилите", "Browse inventory")}
@@ -100,8 +102,7 @@ export const DealerDesktopDiscoveryContent = ({
           ))}
         </div>
         <Link className={styles.primaryAction} href={currentPath}>
-          {text("Виж всички автомобили", "View All Vehicles")}
-          <ArrowUpRight aria-hidden size={18} />
+          {text("Виж всички автомобили", "View all cars")}
         </Link>
       </section>
       <section
@@ -111,14 +112,14 @@ export const DealerDesktopDiscoveryContent = ({
         <div className={styles.sectionHeading}>
           <h2 id="desktop-services-heading">
             {text(
-              "Повече от покупка на автомобил",
-              "Everything You Need for Your Next Car"
+              "По-лесен път към следващия ви автомобил",
+              "A Better Way To Find Your Next Car"
             )}
           </h2>
           <p>
             {text(
-              "Открийте автомобил, обсъдете финансиране или ни поверете продажбата и вноса.",
-              "Find a car, explore financing, or talk to our team about selling and importing."
+              "Покупка, продажба и планиране на следващата стъпка — на едно място.",
+              "Buy, sell and plan your next move, all in one place."
             )}
           </p>
         </div>
@@ -139,18 +140,21 @@ export const DealerDesktopDiscoveryContent = ({
         <div>
           <h2>
             {text(
-              "Вашият следващ автомобил започва тук",
-              "Your Next Car Starts Here"
+              "Следващият ви автомобил. По-лесно.",
+              "Your Next Car, Made Simple"
             )}
           </h2>
           <p>
             {text(
-              "Разгледайте автомобилите онлайн или се свържете с екипа за оглед и повече информация.",
-              "Explore our cars online or speak to the team to arrange a viewing and discuss the details."
+              "Харесахте автомобил? Елате да го видите. Задайте въпросите си и открийте дали е подходящ за вас.",
+              "Found something you like? Come and see it for yourself. Ask your questions, take a closer look and find your fit."
             )}
           </p>
-          <Link className={styles.bannerAction} href={path("/contact")}>
-            {text("Свържете се с нас", "Get in Touch")}
+          <Link
+            className={styles.bannerAction}
+            href={path("/contact?intent=viewing")}
+          >
+            {text("Уговорете оглед", "Arrange a viewing")}
             <ArrowUpRight aria-hidden size={18} />
           </Link>
         </div>
@@ -162,15 +166,11 @@ export const DealerDesktopDiscoveryContent = ({
         >
           <div className={styles.journalHeading}>
             <h2 id="desktop-journal-heading">
-              {text("Полезно за вашия автомобил", "Latest News & Advice")}
+              {text("Съвети за пътя напред", "Advice For The Road Ahead")}
             </h2>
-            <Link href={path("/blog")}>
-              {text("Всички статии", "View All Articles")}
-              <ArrowUpRight aria-hidden size={18} />
-            </Link>
           </div>
           <div className={styles.journalGrid}>
-            {articles.slice(0, 3).map((article) => (
+            {articles.slice(0, 3).map((article, index) => (
               <Link
                 className={styles.journalCard}
                 href={article.href}
@@ -181,7 +181,7 @@ export const DealerDesktopDiscoveryContent = ({
                     alt=""
                     fill
                     sizes="(min-width: 1440px) 448px, 33vw"
-                    src={article.image}
+                    src={`/desktop-boxcars/journal-${index + 1}.jpg`}
                   />
                 </div>
                 <div className={styles.journalCardBody}>
@@ -192,10 +192,6 @@ export const DealerDesktopDiscoveryContent = ({
                     <span>{article.meta}</span>
                   </p>
                   <h3>{article.title}</h3>
-                  <span className={styles.journalAction}>
-                    {text("Прочети статията", "Read Article")}
-                    <ArrowUpRight aria-hidden size={18} />
-                  </span>
                 </div>
               </Link>
             ))}

@@ -6,11 +6,10 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
-import Image from "@repo/marketplace-ui/components/public-image";
-import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowUpRight, MapPin, Phone } from "lucide-react";
+import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
+import { normalizeSeoLocale } from "@repo/seo/metadata";
+import { ArrowUpRight, CarFront, Mail, MapPin, Phone } from "lucide-react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import {
   createPublicLocalizedMetadata,
@@ -19,12 +18,13 @@ import {
 import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { parseSellVehicleDraft } from "@/lib/sell-vehicle-draft";
+import desktopStyles from "../components/boxcar-desktop-pages.module.css";
+import { DesktopContactPreviewForm } from "../components/desktop-contact-preview-form";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import {
   buildFinancingContactMessage,
   parseFinancingRequestHref,
 } from "../components/mobile-financing-policy";
-import desktopStyles from "../components/public-desktop-layout.module.css";
 import { PublicEnquiryForm } from "../components/public-enquiry-form";
 import { PublicMarketplaceFrame } from "../components/public-marketplace-frame";
 import { pageCopy } from "./copy";
@@ -70,123 +70,153 @@ function DesktopContact({
   intent,
   locale,
   submissionAvailable,
+  subject,
 }: {
   initialMessage: string;
   intent: "finance" | "general";
   locale: "bg" | "en";
   submissionAvailable: boolean;
+  subject?: "viewing";
 }) {
-  const copy = pageCopy[locale];
-  const services = copy.services.filter((service) =>
-    isPublicSitePathEnabled(service.href, publicSite)
-  );
-  const localize = (path: string) => getLocalizedPath(locale, path);
+  const bg = locale === "bg";
+  const text = (bulgarian: string, english: string) =>
+    bg ? bulgarian : english;
   return (
     <DealerDesktopHero
-      description={
-        locale === "bg"
-          ? "Свържете се с екипа за автомобил, оглед, внос или финансиране."
-          : "Talk to our team about a car, a viewing, importing or financing."
-      }
+      description={text(
+        "Въпроси за автомобил или оглед? Нека поговорим.",
+        "Questions about a car or a viewing? Let’s talk."
+      )}
       locale={locale}
-      title={locale === "bg" ? "За нас и контакти" : "About and Contact"}
+      title={text("Свържете се с нас", "Contact us")}
       variant="service"
     >
-      <div className="hidden lg:block">
-        <div className={desktopStyles.heroContent}>
-          <section className={desktopStyles.showroomBanner}>
-            <Image
-              alt=""
-              fill
-              sizes="(min-width: 1440px) 1320px, 95vw"
-              src={publicSite.artwork.contactHero}
-            />
-            <div>
-              <h2>{leadSite.name}</h2>
-              <p>
-                {locale === "bg"
-                  ? "Вашият следващ автомобил. Нашият екип е тук, за да помогне."
-                  : "Your next car. Our team is here to help."}
-              </p>
-            </div>
-          </section>
-          <div className={desktopStyles.contactLayout}>
-            <section aria-label={copy.contactTitle}>
-              <h2 className={desktopStyles.sectionTitle}>
-                {locale === "bg" ? "Нека поговорим" : "Get in Touch"}
-              </h2>
-              <p className={desktopStyles.contactIntro}>
-                {locale === "bg"
-                  ? "Свържете се с екипа, за да обсъдим автомобил, оглед, внос или финансиране."
-                  : "Speak to our team about a car, a viewing, importing or financing."}
-              </p>
-              {submissionAvailable ? (
-                <PublicEnquiryForm
-                  initialMessage={initialMessage}
-                  intent={intent}
-                  locale={locale}
-                />
-              ) : (
-                <a
-                  className={desktopStyles.contactAction}
-                  href={withBasePath(leadSite.phoneHref)}
-                >
-                  <Phone aria-hidden size={18} />
-                  {locale === "bg" ? "Обадете се на екипа" : "Call Our Team"}
-                  <ArrowUpRight aria-hidden size={18} />
-                </a>
+      <div className={desktopStyles.content}>
+        <section
+          aria-label={text("Карта на автосалона", "Showroom map")}
+          className={desktopStyles.map}
+        >
+          <iframe
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            src={leadSite.mapsEmbedUrl}
+            title={text("Местоположение на автосалона", "Showroom location")}
+          />
+          <a
+            className={desktopStyles.directions}
+            href={withBasePath(leadSite.mapsUrl)}
+            rel="noreferrer"
+            target="_blank"
+          >
+            {text("Как да ни намерите", "Get directions")}
+            <ArrowUpRight aria-hidden size={20} />
+          </a>
+        </section>
+        <div className={desktopStyles.contact}>
+          <section aria-labelledby="desktop-contact-form-title">
+            <h2 id="desktop-contact-form-title">
+              {text("Нека поговорим", "Get in touch")}
+            </h2>
+            <p className={desktopStyles.intro}>
+              {text(
+                "Въпрос за автомобил, оглед или следващата стъпка? Започнете разговора тук.",
+                "A question about a car, a viewing or your next step? Start the conversation here."
               )}
-              <h3 className={desktopStyles.servicesTitle}>
-                {copy.servicesTitle}
-              </h3>
-              <div className={desktopStyles.serviceGrid}>
-                {services.map((service) => (
-                  <Link
-                    className={desktopStyles.serviceCard}
-                    href={localize(service.href)}
-                    key={service.href}
+            </p>
+            {submissionAvailable ? (
+              <PublicEnquiryForm
+                initialMessage={initialMessage}
+                intent={intent}
+                locale={locale}
+              />
+            ) : (
+              <DesktopContactPreviewForm
+                initialMessage={initialMessage}
+                intent={intent}
+                locale={locale}
+                subject={subject}
+              />
+            )}
+          </section>
+          <aside
+            aria-labelledby="desktop-contact-details-title"
+            className={desktopStyles.details}
+          >
+            <h2 id="desktop-contact-details-title">
+              {text("Данни за контакт", "Contact details")}
+            </h2>
+            <p className={desktopStyles.intro}>
+              {text(
+                "Открийте любимия си автомобил онлайн и го разгледайте на място.",
+                "Find your favourite car online, then take a closer look in person."
+              )}
+            </p>
+            <div className={desktopStyles.contactCard}>
+              <MapPin aria-hidden size={26} />
+              <div>
+                <h3>{text("Автосалон", "Showroom")}</h3>
+                <p>
+                  <a
+                    href={withBasePath(leadSite.mapsUrl)}
+                    rel="noreferrer"
+                    target="_blank"
                   >
-                    <strong>
-                      {service.title}
-                      <ArrowUpRight aria-hidden size={17} />
-                    </strong>
-                    <p>{service.description}</p>
-                  </Link>
-                ))}
-              </div>
-            </section>
-            <aside className={desktopStyles.contactDetails}>
-              <h2>
-                {locale === "bg" ? "Посетете автосалона" : "Visit the Showroom"}
-              </h2>
-              <a
-                className={desktopStyles.contactCard}
-                href={withBasePath(leadSite.phoneHref)}
-              >
-                <Phone aria-hidden size={24} strokeWidth={1.5} />
-                <span>
-                  <small>{locale === "bg" ? "Телефон" : "Phone"}</small>
-                  <strong>{leadSite.phoneDisplay}</strong>
-                </span>
-              </a>
-              <a
-                aria-label={copy.mapAction}
-                className={desktopStyles.contactCard}
-                href={withBasePath(leadSite.mapsUrl)}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <MapPin aria-hidden size={24} strokeWidth={1.5} />
-                <span>
-                  <small>{copy.locationLabel}</small>
-                  <strong>
                     {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
-                  </strong>
-                </span>
-                <ArrowUpRight aria-hidden size={18} />
-              </a>
-            </aside>
-          </div>
+                  </a>
+                </p>
+              </div>
+            </div>
+            <div className={desktopStyles.contactCard}>
+              <Phone aria-hidden size={26} />
+              <div>
+                <h3>{text("Телефон", "Phone")}</h3>
+                <p>
+                  <a href={withBasePath(leadSite.phoneHref)}>
+                    {leadSite.phoneDisplay}
+                  </a>
+                </p>
+              </div>
+            </div>
+            {leadSite.email && (
+              <div className={desktopStyles.contactCard}>
+                <Mail aria-hidden size={26} />
+                <div>
+                  <h3>{text("Имейл", "Email")}</h3>
+                  <p>
+                    <a href={`mailto:${leadSite.email}`}>{leadSite.email}</a>
+                  </p>
+                </div>
+              </div>
+            )}
+            <div className={desktopStyles.contactCard}>
+              <CarFront aria-hidden size={26} />
+              <div>
+                <h3>{text("Уговорете оглед", "Arrange a viewing")}</h3>
+                <p>
+                  {text(
+                    "Обадете се, за да обсъдим автомобила и удобен час за посещение.",
+                    "Call to discuss your car and a convenient time to visit."
+                  )}
+                </p>
+              </div>
+            </div>
+            {Object.values(publicSite.contact.socialLinks).some(Boolean) && (
+              <div className={desktopStyles.social}>
+                <h3>{text("Последвайте ни", "Follow us")}</h3>
+                <p>
+                  {text(
+                    "Нови автомобили и новини от автосалона.",
+                    "New arrivals and showroom updates."
+                  )}
+                </p>
+                <DealerSocialLinks
+                  isBg={bg}
+                  links={publicSite.contact.socialLinks}
+                />
+              </div>
+            )}
+          </aside>
         </div>
       </div>
     </DealerDesktopHero>
@@ -251,6 +281,9 @@ export default async function ContactPage({
           initialMessage={initialMessage}
           intent={financeContext ? "finance" : "general"}
           locale={normalizedLocale}
+          subject={
+            getQueryValue(query, "intent") === "viewing" ? "viewing" : undefined
+          }
           submissionAvailable={submissionAvailable}
         />
         {submissionAvailable && (

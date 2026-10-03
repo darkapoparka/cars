@@ -1,0 +1,123 @@
+.bookmark,
+.saved,
+.dialog {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .bookmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: #050b20;
+    cursor: pointer;
+    background: white;
+    border: 0;
+    border-radius: 50%;
+  }
+  .bookmark:hover,
+  .bookmark[aria-pressed="true"] {
+    color: var(--brand);
+  }
+  .bookmark[data-presentation="action"] {
+    position: static;
+    display: inline-flex;
+    gap: 8px;
+    width: auto;
+    padding: 0 14px;
+    font-size: 14px;
+    font-weight: 400;
+    background: var(--control);
+    border-radius: 12px;
+  }
+  .saved {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    min-height: 48px;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .saved:hover {
+    color: var(--brand);
+  }
+  .dialog[open] {
+    display: block;
+    width: min(100% - 80px, 1040px);
+    max-height: 80dvh;
+    padding: 32px;
+    margin: auto;
+    overflow: auto;
+    color: var(--foreground);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+  }
+  .dialog::backdrop {
+    background: rgb(5 11 32 / 55%);
+  }
+  .heading {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  .heading button {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    background: var(--control);
+    border-radius: 50%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .grid article {
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .grid img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  .grid h3,
+  .grid p {
+    margin: 12px 18px;
+    font-size: 18px;
+  }
+  .grid h3 {
+    font-weight: 500;
+  }
+  .grid button {
+    min-height: 44px;
+    padding: 0 18px;
+    color: var(--brand-text);
+    cursor: pointer;
+  }
+  .bookmark:focus-visible,
+  .saved:focus-visible,
+  .dialog :is(a, button):focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+}

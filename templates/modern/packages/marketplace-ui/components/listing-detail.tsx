@@ -113,13 +113,15 @@ export const ListingDetail = ({
           "mx-auto max-w-[96rem] lg:px-6 lg:py-4 xl:px-10"
         )}
       >
-        <DesktopListingSummaryHeader
-          backHref={backHref}
-          listing={listing}
-          listingUrl={listingUrl}
-          locale={locale}
-          saveHref={saveHref}
-        />
+        {isDealershipSite ? null : (
+          <DesktopListingSummaryHeader
+            backHref={backHref}
+            listing={listing}
+            listingUrl={listingUrl}
+            locale={locale}
+            saveHref={saveHref}
+          />
+        )}
         <div
           className={cn(
             desktopStyles.columns,
@@ -127,6 +129,15 @@ export const ListingDetail = ({
           )}
         >
           <div className="min-w-0">
+            {isDealershipSite ? (
+              <DesktopListingSummaryHeader
+                backHref={backHref}
+                listing={listing}
+                listingUrl={listingUrl}
+                locale={locale}
+                saveHref={saveHref}
+              />
+            ) : null}
             <div className="relative w-full">
               <ListingGallery
                 badges={galleryBadges}

@@ -1,19 +1,23 @@
+"use client";
+
 import { cn } from "@repo/design-system/lib/utils";
-import { withBasePath } from "@repo/internationalization/paths";
+import { withoutBasePath } from "@repo/internationalization/paths";
 import {
   isPublicSitePathEnabled,
   type PublicSiteConfig,
   publicSite,
 } from "@repo/marketplace/site-config";
-import { ArrowUpRight, ChevronDown, Phone } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
 import { DealerNavigationLink } from "./dealer-navigation-link";
-import { MarketplaceLocaleSwitchLink } from "./marketplace-locale-switch-link";
+import { DesktopSavedCars } from "./desktop-saved-cars";
 import type { MarketplaceMode } from "./marketplace-masthead";
 import Image from "./public-image";
+
+export { DesktopSavedCars } from "./desktop-saved-cars";
 
 /** Desktop-only dealership navigation, shared by inventory and service routes. */
 export const DealerDesktopHeader = ({
@@ -31,13 +35,13 @@ export const DealerDesktopHeader = ({
   site?: PublicSiteConfig;
   layout?: "default" | "showroom";
 }) => {
+  const pathname = withoutBasePath(usePathname());
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const destinations = [
     { id: "home", path: "/", label: isBg ? "Начало" : "Home" },
-    { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Inventory" },
-    { id: "sell", path: "/sell", label: isBg ? "Продай" : "Sell" },
-    { id: "imports", path: "/imports", label: isBg ? "Внос" : "Import" },
-    { id: "lease", path: "/lease", label: isBg ? "Лизинг" : "Financing" },
+    { id: "buy", path: "/cars", label: isBg ? "Автомобили" : "Cars" },
+    { id: "about", path: "/about", label: isBg ? "За нас" : "About us" },
+    { id: "contact", path: "/contact", label: isBg ? "Контакти" : "Contact" },
   ];
 
   return (
@@ -76,7 +80,11 @@ export const DealerDesktopHeader = ({
               .map((destination) => (
                 <DealerNavigationLink
                   aria-current={
-                    activeMode === destination.id ? "page" : undefined
+                    pathname ===
+                      getLocalizedPublicPath(locale, destination.path) ||
+                    (destination.id === "buy" && activeMode === "buy")
+                      ? "page"
+                      : undefined
                   }
                   data-marketplace-mode={destination.id}
                   data-slot="marketplace-mode-action"
@@ -88,46 +96,13 @@ export const DealerDesktopHeader = ({
               ))}
           </nav>
           <div className={cn(styles.contact, "dealer-desktop-contact")}>
-            <a
-              aria-label={
-                isBg
-                  ? `Шоурум: ${site.contact.address}`
-                  : `Showroom: ${site.contact.address}`
-              }
-              className={cn(styles.showroom, "dealer-desktop-showroom")}
-              href={withBasePath(site.contact.mapsUrl)}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <span>{isBg ? "Шоурум" : "Showroom"}</span>
-              <ArrowUpRight
-                aria-hidden="true"
-                className="size-4 [stroke-width:var(--desktop-icon-stroke)]"
-              />
-            </a>
-            <a
-              aria-label={
-                isBg
-                  ? `Обадете се на ${site.contact.phoneDisplay}`
-                  : `Call ${site.contact.phoneDisplay}`
-              }
+            <DesktopSavedCars locale={locale} />
+            <Link
               className={styles.phone}
-              href={withBasePath(site.contact.phoneHref)}
+              href={getLocalizedPublicPath(locale, "/contact")}
             >
-              <Phone
-                aria-hidden="true"
-                className="size-4 [stroke-width:var(--desktop-icon-stroke)]"
-              />
-              <span>{site.contact.phoneDisplay}</span>
-            </a>
-            <MarketplaceLocaleSwitchLink
-              className={styles.language}
-              label={isBg ? "Държава и език" : "Country and language"}
-              locale={locale}
-            >
-              {isBg ? "BG" : "EN"}
-              <ChevronDown aria-hidden="true" className="size-3.5" />
-            </MarketplaceLocaleSwitchLink>
+              {isBg ? "Свържете се" : "Contact us"}
+            </Link>
           </div>
         </div>
       </header>

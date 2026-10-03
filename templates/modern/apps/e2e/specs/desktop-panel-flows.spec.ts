@@ -22,31 +22,43 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       );
       const headerBox = await header.boundingBox();
       expect(headerBox?.height).toBe(90);
-      expect(headerBox?.x).toBe(Math.max(24, (width - 1392) / 2));
-      expect(headerBox?.y).toBe(24);
-      expect(headerBox?.width).toBe(Math.min(width - 48, 1392));
+      expect(headerBox?.x).toBe(0);
+      expect(headerBox?.y).toBe(0);
+      expect(headerBox?.width).toBe(width);
       expect(
         await page
           .locator("footer")
           .evaluate((element) => getComputedStyle(element).borderRadius)
-      ).toBe("30px 30px 0px 0px");
+      ).toBe("32px 32px 0px 0px");
       const hero = page.locator('[data-slot="dealer-desktop-home-hero"]');
       const heroBox = await hero.boundingBox();
       expect(heroBox?.x).toBe(Math.max(24, (width - 1392) / 2));
-      expect(heroBox?.y).toBe(114);
+      expect(heroBox?.y).toBe(90);
       expect(heroBox?.height).toBe(680);
       expect(heroBox?.width).toBe(Math.min(width - 48, 1392));
-      expect(headerBox?.x).toBe(heroBox?.x);
-      expect(headerBox?.width).toBe(heroBox?.width);
+      const navBox = await header.locator(".dealer-desktop-nav").boundingBox();
+      expect(navBox?.x).toBe(heroBox?.x);
+      expect(navBox?.width).toBe(heroBox?.width);
       expect((headerBox?.y ?? 0) + (headerBox?.height ?? 0)).toBe(heroBox?.y);
       expect(
         await header.evaluate(
           (element) => getComputedStyle(element).borderRadius
         )
-      ).toBe("20px 20px 0px 0px");
+      ).toBe("0px");
       expect(
         await hero.evaluate((element) => getComputedStyle(element).borderRadius)
-      ).toBe("0px 0px 20px 20px");
+      ).toBe("20px");
+      const main = page.locator('[data-slot="marketplace-main"]');
+      expect(
+        await main.evaluate(
+          (element) => getComputedStyle(element).backgroundColor
+        )
+      ).toBe("rgb(255, 255, 255)");
+      expect(
+        await main.evaluate(
+          (element) => getComputedStyle(element).backgroundImage
+        )
+      ).toBe("none");
       expect(
         await hero.evaluate(
           (element) => getComputedStyle(element).backgroundImage
@@ -55,14 +67,14 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       const search = hero.locator("form");
       expect((await search.boundingBox())?.height).toBe(76);
       const stock = page.locator('[data-slot="home-stock-panel"]');
-      expect((await stock.boundingBox())?.y).toBe(858);
+      expect((await stock.boundingBox())?.y).toBe(834);
       const stockGrid = page.locator('[data-slot="home-stock-grid"]');
       expect(
         await stockGrid.evaluate(
           (element) =>
             getComputedStyle(element).gridTemplateColumns.split(" ").length
         )
-      ).toBe(width < 1280 ? 3 : 4);
+      ).toBe(width < 1200 ? 3 : 4);
       await expect(stockGrid.locator("article")).toHaveCount(8);
       if (width === 1440 && locale === "en") {
         expect((await search.boundingBox())?.width).toBe(1090);
@@ -78,6 +90,7 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
         "/lease",
         "/imports",
         "/contact",
+        "/about",
         "/guides",
         "/legal/terms",
       ]) {
@@ -107,7 +120,7 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe(60);
-            expect(sidebar?.y).toBe(348);
+            expect(sidebar?.y).toBe(298);
           }
         }
         expect(
@@ -129,6 +142,12 @@ test("desktop navigation keeps the header stable through loading", async ({
     page.locator('[data-slot="public-route-loading-content"]')
   ).toBeHidden();
   const header = page.locator('[data-slot="dealer-desktop-header"]:visible');
+  await expect(header).toBeVisible();
+  await expect(
+    page.locator(
+      '[data-slot="dealer-desktop-toolbar"] [data-slot="desktop-search-query"] input'
+    )
+  ).toBeEnabled();
   const initial = await header.boundingBox();
   let documents = 0;
   page.on("request", (request) => {
@@ -138,12 +157,25 @@ test("desktop navigation keeps the header stable through loading", async ({
   });
   for (const [mode, title] of [
     ["buy", "Cars for sale"],
-    ["sell", "Sell us your vehicle"],
-    ["lease", "Vehicle financing"],
-    ["imports", "Import a vehicle"],
+    ["about", "About Day & Night"],
+    ["contact", "Contact us"],
     ["home", "Find Your Perfect Car"],
   ]) {
     await header.locator(`[data-marketplace-mode="${mode}"]`).click();
+    await expect(
+      page.locator(desktopHeroSelector).locator("h1").first()
+    ).toHaveText(title);
+    await expect(
+      page.locator('[data-slot="public-route-loading-content"]')
+    ).toBeHidden();
+    expect(await header.boundingBox()).toEqual(initial);
+  }
+  for (const [path, title] of [
+    ["sell", "Sell us your vehicle"],
+    ["lease", "Vehicle financing"],
+    ["imports", "Import a vehicle"],
+  ]) {
+    await page.locator(`footer a[href="/en/${path}"]`).click();
     await expect(
       page.locator(desktopHeroSelector).locator("h1").first()
     ).toHaveText(title);
@@ -232,7 +264,7 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
     await page.goto("/en/listing/bmw-x5-m50d-sofia-2020");
-    const title = page.locator('[data-slot="listing-summary-header"]');
+    const title = page.locator('[data-slot="listing-title-panel"]');
     const gallery = page.locator('[data-slot="listing-gallery"]');
     const transaction = page.locator('[data-slot="listing-transaction-card"]');
     await expect(title.getByRole("heading", { level: 1 })).toHaveText(
@@ -248,8 +280,9 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
       throw new Error("Desktop vehicle information must be visible");
     }
     expect(titleBox.y + titleBox.height).toBeLessThan(galleryBox.y);
-    expect(purchaseBox?.y).toBeCloseTo(galleryBox.y, 0);
-    expect(transactionBox.y - (purchaseBox?.y ?? 0)).toBe(31);
+    expect(transactionBox.y).toBe(titleBox.y);
+    expect(transactionBox.y - (purchaseBox?.y ?? 0)).toBe(60);
+    expect(titleBox.x + titleBox.width).toBeLessThan(transactionBox.x);
     expect(transactionBox.x).toBeGreaterThan(galleryBox.x + galleryBox.width);
     await expect(transaction.locator('a[href^="tel:"]')).toBeVisible();
     const openPhoto = gallery.getByRole("button", {
@@ -261,18 +294,27 @@ test("desktop listing keeps the gallery, information and phone handoff usable", 
     await page.keyboard.press("Escape");
     await expect(page.getByRole("dialog")).toBeHidden();
     await expect(openPhoto).toBeFocused();
-    const sections = page.locator('[data-slot="listing-details-tabs-desktop"]');
-    await sections
-      .getByRole("tab", { name: "Information", exact: true })
-      .click();
-    await expect(sections.locator('[role="tabpanel"]:visible')).toHaveAttribute(
-      "id",
-      "listing-desktop-panel-information"
+    const sections = page.locator(
+      '[data-slot="listing-details-sections-desktop"]'
     );
-    await page.keyboard.press("ArrowRight");
-    await expect(sections.locator('[role="tabpanel"]:visible')).toHaveAttribute(
-      "id",
-      "listing-desktop-panel-specifications"
+    for (const slot of [
+      "information",
+      "description",
+      "specifications",
+      "equipment",
+    ]) {
+      await expect(
+        sections.locator(`[data-slot="listing-${slot}"]`)
+      ).toBeVisible();
+    }
+    const relatedSave = page
+      .locator('[data-slot="listing-related"] [data-slot="desktop-save-car"]')
+      .first();
+    const previouslySaved = await relatedSave.getAttribute("aria-pressed");
+    await relatedSave.click();
+    await expect(relatedSave).toHaveAttribute(
+      "aria-pressed",
+      previouslySaved === "true" ? "false" : "true"
     );
   }
 });
@@ -283,7 +325,9 @@ test("financing selection and preferences survive navigation and clearing", asyn
   test.setTimeout(120_000);
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("/en/lease");
-  const selector = page.locator('[data-slot="lease-desktop-vehicle-trigger"]');
+  const selector = page.locator(
+    '[data-slot="lease-desktop-vehicle-trigger"]:visible'
+  );
   await expect(selector).toHaveAttribute("data-selected", "false");
   await expect(
     page.locator('[data-slot="finance-actions"] button')
@@ -372,6 +416,9 @@ test("financing selection and preferences survive navigation and clearing", asyn
   await expect(flexible).toBeChecked();
   await expect(term).toBeChecked();
   await page.reload();
+  await expect(
+    page.locator('[data-slot="public-route-loading-content"]')
+  ).toBeHidden();
   await expect(selector).toHaveAttribute("data-selected", "false");
 });
 

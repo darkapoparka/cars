@@ -230,26 +230,28 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: 16px;
-    padding: 20px;
+    gap: 0;
+    padding: 18px;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-heading"] {
     min-height: 0;
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-title"] {
     display: block;
+    min-height: 48px;
+    margin-bottom: 4px;
     overflow: visible;
-    font-size: 19px;
-    font-weight: 600;
-    line-height: 28px;
-    letter-spacing: -0.3px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0;
   }
   .card[data-presentation="showroom"] [data-slot="showroom-vehicle-subtitle"] {
-    margin-top: 6px;
+    margin: 0 0 10px;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 20px;
     color: var(--muted-foreground);
     white-space: nowrap;
   }
@@ -285,14 +287,16 @@
     gap: 8px;
     align-items: center;
     justify-content: space-between;
-    padding: 0;
+    min-height: 57px;
+    padding: 12px 0 0;
     margin-top: auto;
+    border-top: 1px solid #e1e1e1;
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-price"] {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 30px;
-    letter-spacing: -0.5px;
+    letter-spacing: 0;
   }
   .card[data-presentation="showroom"]
     [data-slot="showroom-vehicle-price-row"]
@@ -307,12 +311,12 @@
     flex-shrink: 0;
     gap: 6px;
     align-items: center;
-    min-height: 40px;
-    padding-inline: 10px;
+    min-height: 44px;
+    padding-inline: 0;
     font-size: 14px;
     color: var(--brand-text);
-    background: var(--desktop-accent-soft);
-    border-radius: 10px;
+    background: transparent;
+    border-radius: 0;
   }
   .card[data-presentation="showroom"] [data-slot="vehicle-card-media-badges"] {
     top: 14px;
@@ -339,8 +343,11 @@
     [data-slot="showroom-vehicle-facts"] {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 12px;
-    padding: 0 0 16px;
+    gap: 6px 8px;
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 22px;
     color: var(--muted-foreground);
     background: transparent;
     border: 0;
@@ -352,6 +359,14 @@
     li {
     display: block;
     text-align: left;
+  }
+  :global([data-slot="home-stock-grid"])
+    .card[data-presentation="showroom"]
+    [data-slot="showroom-vehicle-facts"]
+    li:not([data-fact="year"])
+    ~ li::before {
+    margin-right: 8px;
+    content: "·";
   }
   :global([data-slot="home-stock-grid"])
     .card[data-presentation="showroom"]

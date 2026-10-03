@@ -5,6 +5,7 @@ import {
   type VehicleListing,
 } from "@repo/marketplace";
 import { localizeListingCopy } from "@repo/marketplace/listing-copy";
+import { isDealershipSite } from "@repo/marketplace/site-config";
 import { Car, MapPin, Truck } from "lucide-react";
 import Link from "next/link";
 import {
@@ -36,6 +37,20 @@ const DesktopRelatedListingCard = ({
   const approximatePrice = getApproximateConvertedPrice(listing);
   const physicalLocation = getPhysicalVehicleLocation(listing);
   const deliveryTruth = getDeliveryTruth(listing, locale);
+
+  if (isDealershipSite) {
+    return (
+      <VehicleCard
+        desktopHeadingLevel={3}
+        desktopLayout="grid"
+        href={href}
+        listing={listing}
+        locale={locale}
+        presentation="showroom"
+        viewMode="grid"
+      />
+    );
+  }
 
   return (
     <article className="overflow-hidden rounded-lg border border-border bg-card">

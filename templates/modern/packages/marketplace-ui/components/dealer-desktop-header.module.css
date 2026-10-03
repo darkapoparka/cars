@@ -4,48 +4,34 @@
 
 @media (min-width: 1024px) {
   .header {
-    --desktop-header-border-height: calc(var(--desktop-border-width) * 2);
     position: relative;
     z-index: var(--desktop-layer-header);
     display: block;
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-showroom-max);
-    margin: 24px auto 0;
+    width: 100%;
     color: var(--foreground);
     background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: var(--radius-desktop-frame);
-    box-shadow: var(--desktop-surface-shadow);
-  }
-  .header:has(+ [data-slot="dealer-desktop-home-hero"]) {
-    --desktop-header-border-height: var(--desktop-border-width);
-    border-bottom: 0;
-    border-radius: var(--radius-desktop-frame) var(--radius-desktop-frame) 0 0;
-    box-shadow: none;
   }
   .nav {
     display: grid;
-    grid-template-columns: var(--desktop-logo-width) minmax(0, 1fr) auto;
-    gap: calc(var(--spacing) * 6);
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 32px;
     align-items: center;
-    width: min(calc(100% - 48px), var(--desktop-content-max));
-    min-height: calc(
-      var(--desktop-header-height) -
-      var(--desktop-header-border-height)
-    );
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    min-height: var(--desktop-header-height);
     margin-inline: auto;
   }
   .brand {
     position: relative;
     display: block;
     justify-self: start;
-    width: var(--desktop-logo-width);
+    width: 160px;
     height: calc(var(--spacing) * 12);
     border-radius: var(--radius-sm);
   }
   .segments {
     display: flex;
-    gap: calc(var(--spacing) * 3);
+    gap: 32px;
     align-items: center;
     justify-content: center;
   }
@@ -54,9 +40,10 @@
     align-items: center;
     justify-content: center;
     min-height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 2);
-    font-size: var(--text-compact-control);
+    padding-inline: 0;
+    font-size: 15px;
     font-weight: var(--font-weight-medium);
+    line-height: 24px;
     color: var(--foreground);
     white-space: nowrap;
     transition:
@@ -72,7 +59,7 @@
   }
   .contact {
     display: flex;
-    gap: calc(var(--spacing) * 2);
+    gap: 28px;
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
@@ -106,7 +93,7 @@
   .contact .phone {
     gap: calc(var(--spacing) * 2.5);
     height: calc(var(--spacing) * 12);
-    padding-inline: calc(var(--spacing) * 5);
+    padding-inline: 24px;
     color: var(--brand-foreground);
     background: var(--brand);
   }
@@ -133,26 +120,21 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .nav {
-    grid-template-columns: var(--desktop-logo-compact-width) minmax(0, 1fr) auto;
-    gap: calc(var(--spacing) * 4);
+    gap: 24px;
   }
   .brand {
-    width: var(--desktop-logo-compact-width);
+    width: 140px;
   }
   .segments {
-    gap: 0;
+    gap: 24px;
   }
   .segments a {
-    padding-inline: calc(var(--spacing) * 3);
+    padding-inline: 0;
   }
   .contact {
     gap: calc(var(--spacing) * 2);
   }
-  .contact a[href^="tel:"] span {
-    display: none;
-  }
   .contact .phone {
-    width: calc(var(--spacing) * 11);
-    padding: 0;
+    padding-inline: 24px;
   }
 }

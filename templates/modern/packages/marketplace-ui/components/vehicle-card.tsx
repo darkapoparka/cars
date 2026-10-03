@@ -23,6 +23,7 @@ import {
   getVehicleCardViewListingLabel,
   vehicleCardPlaceholder,
 } from "../lib/vehicle-card-view-policy";
+import { DesktopSaveCarButton } from "./desktop-saved-cars";
 import Image from "./public-image";
 import {
   VehicleCardContent,
@@ -131,6 +132,13 @@ export const VehicleCard = ({
         </Link>
 
         <VehicleCardMediaBadges listing={listing} locale={locale} />
+        {presentation === "showroom" && !saveHref && (
+          <DesktopSaveCarButton
+            href={listingHref}
+            listing={listing}
+            locale={locale}
+          />
+        )}
 
         {listing.images.length > 1 ? (
           <span className="pointer-events-none absolute bottom-1.5 left-1.5 z-10 flex h-6 items-center gap-1 rounded-md bg-black/65 px-2 font-medium text-micro text-white lg:right-2 lg:bottom-2 lg:left-auto">

@@ -85,8 +85,7 @@
       var(--desktop-hero-scene, none);
     background-position: center;
     background-size: cover;
-    border-radius: 0 0 var(--radius-desktop-frame) var(--radius-desktop-frame);
-    box-shadow: var(--desktop-surface-shadow);
+    border-radius: var(--radius-desktop-frame);
   }
   .hero[data-variant="landing"] .copy {
     grid-row: 1;
@@ -99,7 +98,7 @@
   .hero[data-variant="landing"] h1 {
     font-size: clamp(44px, 5vw, 70px);
     line-height: 1.12;
-    letter-spacing: -0.025em;
+    letter-spacing: normal;
   }
   .hero[data-variant="landing"] .description {
     max-width: none;
@@ -185,6 +184,99 @@
     height: calc(var(--spacing) * 14);
     background: var(--control);
     border-radius: calc(var(--spacing) * 2);
+  }
+}
+
+/* The curated Boxcar banner is desktop only; mobile retains its existing chrome. */
+@media (min-width: 1024px) {
+  .hero:not([data-variant="landing"]) {
+    padding: 0;
+    background: var(--desktop-surface);
+  }
+  .banner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 180px;
+    padding: 20px 24px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #e4eaff 0%, #eef1ff 55%, #e6edff 100%);
+    isolation: isolate;
+  }
+  .banner::before {
+    position: absolute;
+    top: -205px;
+    left: max(-120px, calc((100% - 1320px) / 2 - 170px));
+    width: 440px;
+    height: 440px;
+    pointer-events: none;
+    content: "";
+    background: #405ff20a;
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 56px #405ff206,
+      0 0 0 112px #405ff204;
+  }
+  .banner::after {
+    position: absolute;
+    top: 0;
+    right: max(40px, calc((100% - 1320px) / 2));
+    left: max(40px, calc((100% - 1320px) / 2));
+    height: 100%;
+    pointer-events: none;
+    content: "";
+    background-image:
+      var(--desktop-page-car-left), var(--desktop-page-car-right);
+    background-repeat: no-repeat;
+    background-position:
+      left -8px bottom 8px,
+      right -8px bottom 8px;
+    background-size: 300px auto;
+  }
+  .hero:not([data-variant="landing"]) .breadcrumb {
+    position: relative;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 24px;
+    padding: 0;
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #596582;
+  }
+  .hero:not([data-variant="landing"]) .copy {
+    width: min(100%, 500px);
+    min-height: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .hero:not([data-variant="landing"]) .copy h1 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+  }
+  .hero:not([data-variant="landing"]) .description {
+    max-width: 500px;
+    margin: 10px auto 0;
+    font-size: 15px;
+    line-height: 26px;
+    color: #465270;
+  }
+  .hero[data-variant="service"] .serviceContent {
+    padding: 28px 0 90px;
+    margin: 0;
+    background: var(--desktop-surface);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1240px) {
+  .banner::after {
+    display: none;
   }
 }
 

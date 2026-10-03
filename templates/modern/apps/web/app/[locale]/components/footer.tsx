@@ -20,6 +20,7 @@ import {
   MapPin,
 } from "lucide-react";
 import Link from "next/link";
+import { DealerDesktopFooter } from "./dealer-desktop-footer";
 import desktopStyles from "./public-desktop-layout.module.css";
 
 interface FooterProps {
@@ -175,6 +176,9 @@ export const Footer = ({ locale }: FooterProps) => {
   const isBg = normalizedLocale === "bg";
   const localize = (path: string) => getLocalizedPath(normalizedLocale, path);
   const currentYear = new Date().getFullYear();
+  if (isDealershipSite) {
+    return <DealerDesktopFooter locale={locale} />;
+  }
 
   const groups = getFooterGroups(isBg, localize)
     .map((group) => ({
