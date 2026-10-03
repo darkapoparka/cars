@@ -4,31 +4,29 @@ import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
 import {ArrowUpDown, SlidersHorizontal} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
-import {media, tokens as $} from '@/app/tokens.stylex';
+import {pillStyles as pill} from '@/components/pill.stylex';
 
 type Props = {
   label: string;
   icon?: 'filter' | 'sort';
   selected?: boolean;
+  pressed?: boolean;
 } & ({href: string; onClick?: never} | {href?: never; onClick: () => void});
 
-/** One compact control treatment for Home shortcuts and inventory actions. */
-export default function FilterPill({label, icon, selected = false, href, onClick}: Props) {
+/** One compact treatment for drawer actions and inline quick filters. */
+export default function FilterPill({label, icon, selected = false, pressed, href, onClick}: Props) {
   const tx = useCopy();
 
-  const content = <span {...stylex.props(s.surface, selected && s.selected)}>
+  const content = <span {...stylex.props(pill.surface, (pressed ?? selected) && pill.selected)}>
     {icon === 'filter' ? <SlidersHorizontal size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : icon === 'sort' ? <ArrowUpDown size={16} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)}/> : null}
     <span>{tx(label)}</span>
   </span>;
-  const props = stylex.props(s.pill);
+  const props = stylex.props(pill.control, (pressed ?? selected) && pill.selectedControl);
   return href
     ? <Link href={href} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} {...props}>{content}</Link>
-    : <button type="button" onClick={onClick} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} aria-haspopup="dialog" {...props}>{content}</button>;
+    : <button type="button" onClick={onClick} aria-label={selected ? `${tx(label)}: ${tx('Applied')}` : tx(label)} aria-pressed={pressed} aria-haspopup={pressed === undefined ? 'dialog' : undefined} {...props}>{content}</button>;
 }
 
 const s = stylex.create({
-  pill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, minHeight: 44, padding: 0, color: $.ink, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '20px', whiteSpace: 'nowrap', borderWidth: 0, borderRadius: 9999, backgroundColor: 'transparent', cursor: 'pointer'},
-  surface: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 6, default: 5}, minHeight: {[media.mobile]: 40, default: 36}, paddingInline: {[media.mobile]: 12, default: 8}, borderWidth: 1, borderStyle: 'solid', borderColor: '#e6e6e9', borderRadius: 9999, backgroundColor: {default: '#fff', ':hover': '#f4f4f5'}},
-  selected: {color: '#fff', borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': $.violetDark}},
   icon: {flexShrink: 0},
 });

@@ -9,6 +9,7 @@ import {useCopy} from '@/lib/locale';
 import {serviceOptions} from '@/lib/service-catalogue';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
+import FilterPill from '@/components/FilterPill';
 
 export default function ServiceCatalogue({searchState}: {searchState: ServiceSearchState}) {
   const tx = useCopy();
@@ -23,7 +24,7 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
   return <section aria-label={tx('Service options')} {...stylex.props(s.catalogue)}>
     <div {...stylex.props(s.desktopSearch)}><ServiceSearchField state={searchState}/></div>
     <div role="group" aria-label={tx('Service categories')} {...stylex.props(s.pills)}>
-      {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <button key={option.id} type="button" aria-pressed={category === option.id} onClick={() => update(query, option.id)} {...stylex.props(s.pill, t.caption, category === option.id && s.selectedPill)}>{tx(option.label)}</button>)}
+      {[{id: 'all', label: 'All'}, ...serviceOptions].map(option => <FilterPill key={option.id} label={option.label} pressed={category === option.id} onClick={() => update(query, option.id)}/>)}
     </div>
     <span role="status" {...stylex.props(s.srOnly)}>{visible.length} {tx('Service options')}</span>
     {visible.length > 0 ? <div {...stylex.props(s.cards)}>{visible.map(option => <Link key={option.id} href={`/service/details?service=${option.id}`} aria-label={`${tx('Choose a service')}: ${tx(option.label)}`} data-service-card={option.id} {...stylex.props(s.card)}>
@@ -40,8 +41,6 @@ const s = stylex.create({
   catalogue: {marginTop: {[media.mobile]: 16, default: 24}},
   desktopSearch: {display: {[media.mobile]: 'none', default: 'block'}},
   pills: {display: 'flex', gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, default: 10}, paddingBlock: 3, scrollbarWidth: 'none'},
-  pill: {flexShrink: 0, minWidth: 44, minHeight: 44, padding: {[media.mobile]: '8px 7px', default: '8px 12px'}, color: $.ink, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 9999, backgroundColor: {default: $.surfaceAlt, ':hover': '#eaeaed'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: -3, cursor: 'pointer'},
-  selectedPill: {color: '#fff', borderColor: $.ink, backgroundColor: {default: $.ink, ':hover': '#353539'}, outlineColor: {':focus-visible': '#fff'}},
   cards: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: 14, default: 20}, marginTop: 14},
   card: {display: 'flex', flexDirection: 'column', minWidth: 0, overflow: 'hidden', color: $.ink, textDecoration: 'none', borderRadius: 20, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 3},
   image: {display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 1', objectFit: 'cover', objectPosition: 'center 55%'},

@@ -14,6 +14,7 @@ import {useModal} from './useModal';
 import {searchField} from './search-field.stylex';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
+import FilterPill from '@/components/FilterPill';
 
 /** Search import listings, filter by country and prepare a local enquiry. */
 export default function ImportCountryPicker() {
@@ -65,7 +66,7 @@ export default function ImportCountryPicker() {
         {query ? <button type="button" aria-label={tx('Clear search')} onClick={clearSearch} {...stylex.props(searchField.clear,s.clear)}><X size={18} aria-hidden="true"/></button> : null}
       </div></div>
       <div role="group" aria-label={tx('Import country')} {...stylex.props(s.pills)}>
-        {[{code: 'all', name: 'All'}, ...showroom.importCountries].map(item => <button key={item.code} type="button" aria-pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)} {...stylex.props(s.pill,t.caption,filterCountry === item.code && s.selectedPill)}>{tx(item.name)}</button>)}
+        {[{code: 'all', name: 'All'}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)}/>)}
       </div>
       <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
       {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
@@ -93,8 +94,6 @@ const s = stylex.create({
   searchInput: {minHeight: 44,appearance: {default: 'auto','::-webkit-search-cancel-button': 'none'}},
   clear: {width: 44,height: 44},
   pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',marginTop: 8,paddingBlock: 3,scrollbarWidth: 'none'},
-  pill: {display: 'inline-flex',alignItems: 'center',justifyContent: 'center',flexShrink: 0,minHeight: 44,padding: '10px 14px',color: $.ink,borderWidth: 1,borderStyle: 'solid',borderColor: '#e6e6e9',borderRadius: 30,backgroundColor: {default: '#f5f5f6',':hover': '#eaeaec'},cursor: 'pointer',outline: {default: 'none',':focus-visible': '2px solid #242428'},outlineOffset: -3},
-  selectedPill: {color: '#fff',borderColor: $.ink,backgroundColor: {default: $.ink,':hover': '#353539'},outlineColor: {':focus-visible': '#fff'}},
   listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: 12,marginTop: 12},
   empty: {display: 'grid',justifyItems: 'start',gap: 12,marginTop: 12,padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
   reset: {display: 'inline-flex',alignItems: 'center',gap: 8,minHeight: 44,padding: '8px 12px',color: '#fff',borderWidth: 0,borderRadius: 12,backgroundColor: $.ink,cursor: 'pointer'},

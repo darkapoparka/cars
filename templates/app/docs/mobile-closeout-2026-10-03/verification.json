@@ -1,0 +1,4503 @@
+{
+  "checkedAt": "2026-10-03T17:17:19.116Z",
+  "preview": "http://127.0.0.1:6483",
+  "sourceHead": "f615f5d485908a22d3410525914b0dbd9a8acb31",
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "passed": true,
+    "pages": 407
+  },
+  "totals": {
+    "assertions": 140,
+    "passed": 140,
+    "mobileRenders": 40,
+    "tabletRenders": 4,
+    "desktopRenders": 3
+  },
+  "checks": [
+    {
+      "name": "Cars initial result count matches 48-card catalogue",
+      "passed": true,
+      "details": {
+        "count": 48
+      }
+    },
+    {
+      "name": "Cars 390 fits viewport and visible photos load",
+      "passed": true
+    },
+    {
+      "name": "Toyota search filters stock and updates count",
+      "passed": true,
+      "details": {
+        "count": 9,
+        "status": "(9)\n9 автомобила",
+        "url": "http://127.0.0.1:6483/bg/cars"
+      }
+    },
+    {
+      "name": "Filter drawer fits 320px",
+      "passed": true,
+      "details": {
+        "clientWidth": 320,
+        "height": 844,
+        "scrollWidth": 320,
+        "width": 320,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "name": "Brand selection applies to catalogue",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/bg/cars"
+      }
+    },
+    {
+      "name": "Filter Escape restores keyboard focus",
+      "passed": true,
+      "details": "Марка: Приложено"
+    },
+    {
+      "name": "Price sorting orders actual results",
+      "passed": true,
+      "details": {
+        "prices": [
+          31599,
+          53599,
+          64699,
+          94099,
+          94199,
+          98499,
+          175999,
+          201999,
+          224599
+        ],
+        "url": "http://127.0.0.1:6483/bg/cars"
+      }
+    },
+    {
+      "name": "Detail opens real selected stock record",
+      "passed": true
+    },
+    {
+      "name": "Detail and fixed actions fit 320px",
+      "passed": true
+    },
+    {
+      "name": "Viewing draft contains selected vehicle and URL",
+      "passed": true,
+      "details": "Здравейте, искам да уговоря оглед на 2024 TOYOTA FORTUNER EXR.\nhttp://127.0.0.1:6483/bg/cars/2024-toyota-fortuner-exr"
+    },
+    {
+      "name": "Enquiry draft stays editable and fits 320px",
+      "passed": true
+    },
+    {
+      "name": "Gallery opens with modal focus",
+      "passed": true,
+      "details": {
+        "dialog": "Преглед на снимки",
+        "focusRole": "dialog"
+      }
+    },
+    {
+      "name": "Gallery advances photograph and counter",
+      "passed": true,
+      "details": "Увеличи\nОтпред вдясно\n2 / 18"
+    },
+    {
+      "name": "Detail Back restores filtered and sorted inventory",
+      "passed": true,
+      "details": {
+        "count": 9,
+        "prices": [
+          31599,
+          53599,
+          64699,
+          94099,
+          94199,
+          98499,
+          175999,
+          201999,
+          224599
+        ]
+      }
+    },
+    {
+      "name": "Saved car persists after page reload",
+      "passed": true
+    },
+    {
+      "name": "Saved card and removal action fit 320px",
+      "passed": true
+    },
+    {
+      "name": "Removing last saved car restores empty action and focus",
+      "passed": true,
+      "details": {
+        "tag": "A",
+        "text": "Разгледайте автомобилите"
+      }
+    },
+    {
+      "name": "Menu links and language choices fit 320px",
+      "passed": true
+    },
+    {
+      "name": "Language switch produces English navigation",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/en/more",
+        "navigationLabel": "App navigation",
+        "note": "Corrected the test selector after inspecting the English accessibility label."
+      }
+    },
+    {
+      "name": "Sell 320 has one dealer panel and no page overflow",
+      "passed": true
+    },
+    {
+      "name": "Sell form fits 320px and uses 16px inputs",
+      "passed": true
+    },
+    {
+      "name": "Sale and exchange selection retains typed vehicle",
+      "passed": true
+    },
+    {
+      "name": "Exchange draft contains typed vehicle and intent",
+      "passed": true,
+      "details": "Здравейте, искам да обсъдя Toyota Corolla\nЗапитване за замяна.\nhttp://127.0.0.1:6483/bg/sell"
+    },
+    {
+      "name": "Nested enquiry traps keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "Browser Back dismisses only the top enquiry",
+      "passed": true
+    },
+    {
+      "name": "Sell guidance drawer exposes three steps",
+      "passed": true
+    },
+    {
+      "name": "Leasing 320 country controls have 44px targets",
+      "passed": true
+    },
+    {
+      "name": "Canada country filter selects its actual example",
+      "passed": true
+    },
+    {
+      "name": "Country and search combine to show a real empty state",
+      "passed": true
+    },
+    {
+      "name": "Import empty reset clears country and query",
+      "passed": true
+    },
+    {
+      "name": "Calculator updates its illustrative monthly estimate",
+      "passed": true,
+      "details": {
+        "before": "€ 396",
+        "after": "€ 475"
+      }
+    },
+    {
+      "name": "Calculator retains inputs after reopen",
+      "passed": true,
+      "details": {
+        "value": "30000"
+      }
+    },
+    {
+      "name": "Selected mobile pill focus fits within the scroll rail",
+      "passed": true,
+      "details": {
+        "button": {
+          "height": 44,
+          "y": 337
+        },
+        "color": "rgb(255, 255, 255)",
+        "focusVisible": true,
+        "offset": -5,
+        "rail": {
+          "height": 50,
+          "y": 334
+        }
+      }
+    },
+    {
+      "name": "Services 320 has one useful search and no document overflow",
+      "passed": true,
+      "details": {
+        "clientWidth": 305,
+        "controls": [
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 86,
+            "label": "Купи",
+            "tag": "A",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 86,
+            "label": "Продай",
+            "tag": "A",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 86,
+            "label": "Лизинг",
+            "tag": "A",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 86,
+            "label": "Услуги",
+            "tag": "A",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          },
+          {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 40,
+            "label": "Търси услуга",
+            "tag": "INPUT",
+            "width": 197,
+            "x": 68,
+            "y": 199
+          },
+          {
+            "font": "500 15px / 20px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Всички",
+            "tag": "BUTTON",
+            "width": 76.984375,
+            "x": 12,
+            "y": 281
+          },
+          {
+            "font": "500 15px / 20px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Обслужване",
+            "tag": "BUTTON",
+            "width": 113.984375,
+            "x": 96.984375,
+            "y": 281
+          },
+          {
+            "font": "500 15px / 20px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Диагностика",
+            "tag": "BUTTON",
+            "width": 117.484375,
+            "x": 218.96875,
+            "y": 281
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 308.5,
+            "label": "Избери услуга: Обслужване",
+            "tag": "A",
+            "width": 281,
+            "x": 12,
+            "y": 342
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 308.5,
+            "label": "Избери услуга: Диагностика",
+            "tag": "A",
+            "width": 281,
+            "x": 12,
+            "y": 664.5
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Начало",
+            "tag": "A",
+            "width": 44,
+            "x": 61.5,
+            "y": 785
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Автомобили",
+            "tag": "A",
+            "width": 44,
+            "x": 107.5,
+            "y": 785
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Запазени",
+            "tag": "A",
+            "width": 44,
+            "x": 153.5,
+            "y": 785
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Още",
+            "tag": "A",
+            "width": 44,
+            "x": 199.5,
+            "y": 785
+          }
+        ],
+        "heading": [
+          {
+            "height": 1,
+            "text": "Сервизни услуги",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ],
+        "height": 844,
+        "images": [
+          {
+            "alt": "",
+            "height": 53.760005950927734,
+            "loaded": true,
+            "width": 65.239990234375,
+            "x": 11.505001068115234,
+            "y": 36.119998931884766
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 58.25,
+            "x": 87.25,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 58.25,
+            "x": 159.5,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 58.25,
+            "x": 231.75,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 148,
+            "loaded": true,
+            "width": 279,
+            "x": 13,
+            "y": 107
+          },
+          {
+            "alt": "Drive24",
+            "height": 68,
+            "loaded": true,
+            "width": 204,
+            "x": 50.5,
+            "y": 121
+          },
+          {
+            "alt": "",
+            "height": 140.5,
+            "loaded": true,
+            "width": 281,
+            "x": 12,
+            "y": 342
+          },
+          {
+            "alt": "",
+            "height": 140.5,
+            "loaded": true,
+            "width": 281,
+            "x": 12,
+            "y": 664.5
+          }
+        ],
+        "scrollWidth": 305,
+        "width": 320,
+        "testCorrection": "Use clientWidth because this desktop browser renders a 15px vertical scrollbar."
+      }
+    },
+    {
+      "name": "Services category filters real options",
+      "passed": true,
+      "details": {
+        "status": "1 Възможности за обслужване"
+      }
+    },
+    {
+      "name": "Combined service filters show truthful zero results",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Service reset clears category and query",
+      "passed": true,
+      "details": {
+        "status": "2 Възможности за обслужване"
+      }
+    },
+    {
+      "name": "Service enquiry form fits 320 with readable input type",
+      "passed": true,
+      "details": {
+        "clientWidth": 320,
+        "controls": [
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Към началото",
+            "tag": "A",
+            "width": 44,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 50,
+            "label": null,
+            "tag": "INPUT",
+            "width": 276,
+            "x": 22,
+            "y": 251.28125
+          },
+          {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 50,
+            "label": null,
+            "tag": "INPUT",
+            "width": 276,
+            "x": 22,
+            "y": 346.28125
+          },
+          {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 146,
+            "label": "Периодично обслужване",
+            "tag": "TEXTAREA",
+            "width": 276,
+            "x": 22,
+            "y": 441.28125
+          },
+          {
+            "font": "500 15px Roboto, Arial, sans-serif",
+            "height": 48,
+            "label": "Подготви запитване",
+            "tag": "BUTTON",
+            "width": 276,
+            "x": 22,
+            "y": 607.28125
+          }
+        ],
+        "heading": [
+          {
+            "height": 24,
+            "text": "Запитване за сервиз",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ],
+        "height": 844,
+        "images": [],
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "name": "Service selection and vehicle reach the editable enquiry draft",
+      "passed": true,
+      "details": {
+        "draft": "Здравейте, интересувам се от Toyota Corolla\nЗапитване за сервиз\nПериодично обслужване.\nhttp://127.0.0.1:6483/bg/service/details?service=routine"
+      }
+    },
+    {
+      "name": "Home search opens with keyboard focus and fits 320",
+      "passed": true,
+      "details": {
+        "clientWidth": 320,
+        "controls": [
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Към автомобилите",
+            "tag": "A",
+            "width": 44,
+            "x": 12,
+            "y": 12
+          },
+          {
+            "font": "16px / 24px Roboto, Arial, sans-serif",
+            "height": 40,
+            "label": "Търсете по марка или модел",
+            "tag": "INPUT",
+            "width": 234,
+            "x": 57,
+            "y": 78
+          },
+          {
+            "font": "14px Roboto, Arial, sans-serif",
+            "height": 51,
+            "label": "ФинансиранеВижте",
+            "tag": "A",
+            "width": 288,
+            "x": 16,
+            "y": 129
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 96,
+            "label": "Търсете Nissan",
+            "tag": "BUTTON",
+            "width": 72,
+            "x": 16,
+            "y": 248
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 96,
+            "label": "Търсете Toyota",
+            "tag": "BUTTON",
+            "width": 72,
+            "x": 100,
+            "y": 248
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 96,
+            "label": "Търсете Mitsubishi",
+            "tag": "BUTTON",
+            "width": 72,
+            "x": 184,
+            "y": 248
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 96,
+            "label": "Търсете MG",
+            "tag": "BUTTON",
+            "width": 72,
+            "x": 268,
+            "y": 248
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 96,
+            "label": "Търсете Mercedes-Benz",
+            "tag": "BUTTON",
+            "width": 72,
+            "x": 352,
+            "y": 248
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 108,
+            "label": "Разгледайте 2024 Toyota FORTUNER",
+            "tag": "A",
+            "width": 190,
+            "x": 17,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Запази автомобила",
+            "tag": "BUTTON",
+            "width": 44,
+            "x": 163,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 89,
+            "label": "2024 Toyota FORTUNER€94,099€1,430/мес.*",
+            "tag": "A",
+            "width": 190,
+            "x": 17,
+            "y": 521
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 108,
+            "label": "Разгледайте 2025 Toyota VELOZ",
+            "tag": "A",
+            "width": 190,
+            "x": 221,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Запази автомобила",
+            "tag": "BUTTON",
+            "width": 44,
+            "x": 367,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 89,
+            "label": "2025 Toyota VELOZ€64,699€984/мес.*",
+            "tag": "A",
+            "width": 190,
+            "x": 221,
+            "y": 521
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 108,
+            "label": "Разгледайте 2023 BMW X3",
+            "tag": "A",
+            "width": 190,
+            "x": 425,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 44,
+            "label": "Запази автомобила",
+            "tag": "BUTTON",
+            "width": 44,
+            "x": 571,
+            "y": 413
+          },
+          {
+            "font": "16px Roboto, Arial, sans-serif",
+            "height": 89,
+            "label": "2023 BMW X3€173,900€2,635/мес.*",
+            "tag": "A",
+            "width": 190,
+            "x": 425,
+            "y": 521
+          }
+        ],
+        "heading": [
+          {
+            "height": 24,
+            "text": "Търсене",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ],
+        "height": 844,
+        "images": [
+          {
+            "alt": "",
+            "height": 28,
+            "loaded": true,
+            "width": 30,
+            "x": 31,
+            "y": 140.5
+          },
+          {
+            "alt": "",
+            "height": 72,
+            "loaded": true,
+            "width": 72,
+            "x": 16,
+            "y": 248
+          },
+          {
+            "alt": "",
+            "height": 72,
+            "loaded": true,
+            "width": 72,
+            "x": 100,
+            "y": 248
+          },
+          {
+            "alt": "Toyota FORTUNER",
+            "height": 108,
+            "loaded": true,
+            "width": 190,
+            "x": 17,
+            "y": 413
+          },
+          {
+            "alt": "Toyota VELOZ",
+            "height": 108,
+            "loaded": true,
+            "width": 190,
+            "x": 221,
+            "y": 413
+          }
+        ],
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "name": "Home model suggestion applies to actual catalogue results",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:6483/bg/cars?q=Toyota+Fortuner",
+        "count": 3,
+        "headings": [
+          "2024 FORTUNER",
+          "2024 FORTUNER",
+          "2024 Fortuner"
+        ],
+        "testCorrection": "Compare case-insensitively because configured fixture models retain their original casing."
+      }
+    },
+    {
+      "name": "/bg at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 68,
+            "text": "",
+            "width": 204,
+            "x": 50.5,
+            "y": 121
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/cars at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg/cars at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Нашите автомобили",
+            "width": 169,
+            "x": 68,
+            "y": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/saved at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/bg/saved at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Запазени автомобили",
+            "width": 240,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/sell at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg/sell at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Продай колата си.",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/finance at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg/finance at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Калкулатор",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/service at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg/service at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Сервизни услуги",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/more at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/bg/more at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Меню",
+            "width": 150,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/search at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/bg/search at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Търсене",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/stores at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/bg/stores at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Посетете ни",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/cars/2024-toyota-fortuner-exr at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/bg/cars/2024-toyota-fortuner-exr at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 27,
+            "text": "2024 TOYOTA FORTUNER EXR",
+            "width": 273,
+            "x": 16,
+            "y": 298.625
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 68,
+            "text": "",
+            "width": 204,
+            "x": 85.5,
+            "y": 121
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/sell at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg/sell at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Продай колата си.",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/finance at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg/finance at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Калкулатор",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/service at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg/service at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Сервизни услуги",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/cars at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg/cars at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Нашите автомобили",
+            "width": 239,
+            "x": 68,
+            "y": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/saved at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/bg/saved at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Запазени автомобили",
+            "width": 310,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/more at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/bg/more at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Меню",
+            "width": 220,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/search at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/bg/search at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Търсене",
+            "width": 310,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/stores at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/bg/stores at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Посетете ни",
+            "width": 310,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/cars/2024-toyota-fortuner-exr at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/bg/cars/2024-toyota-fortuner-exr at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 27,
+            "text": "2024 TOYOTA FORTUNER EXR",
+            "width": 343,
+            "x": 16,
+            "y": 342.375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 68,
+            "text": "",
+            "width": 204,
+            "x": 50.5,
+            "y": 121
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/sell at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en/sell at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Sell your car.",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/finance at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en/finance at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Finance calculator",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/service at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en/service at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Car services.",
+            "width": 1,
+            "x": 152,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/cars at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en/cars at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Our cars",
+            "width": 169,
+            "x": 68,
+            "y": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/saved at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/en/saved at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Saved cars",
+            "width": 240,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/more at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/en/more at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Menu",
+            "width": 150,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/search at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/en/search at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Search",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/stores at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 320,
+        "scrollWidth": 320
+      }
+    },
+    {
+      "name": "/en/stores at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Visit showroom",
+            "width": 240,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/cars/2024-toyota-fortuner-exr at 320px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "clientWidth": 305,
+        "scrollWidth": 305
+      }
+    },
+    {
+      "name": "/en/cars/2024-toyota-fortuner-exr at 320px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 27,
+            "text": "2024 TOYOTA FORTUNER EXR",
+            "width": 273,
+            "x": 16,
+            "y": 298.625
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/en at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 68,
+            "text": "",
+            "width": 204,
+            "x": 85.5,
+            "y": 121
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/sell at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/en/sell at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Sell your car.",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/finance at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/en/finance at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Finance calculator",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/service at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Car services.",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ],
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "testCorrection": "Read the settled document after direct navigation; initial measurement occurred during route loading."
+      }
+    },
+    {
+      "name": "/en/service at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Car services.",
+            "width": 1,
+            "x": 187,
+            "y": 154.5
+          }
+        ],
+        "clientWidth": 375,
+        "scrollWidth": 375,
+        "testCorrection": "Read the settled document after direct navigation; initial measurement occurred during route loading."
+      }
+    },
+    {
+      "name": "/en/cars at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/en/cars at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Our cars",
+            "width": 239,
+            "x": 68,
+            "y": 16
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/saved at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/en/saved at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Saved cars",
+            "width": 310,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/more at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/en/more at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24.296875,
+            "text": "Menu",
+            "width": 220,
+            "x": 68,
+            "y": 15.84375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/search at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/en/search at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Search",
+            "width": 310,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/stores at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "/en/stores at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Visit showroom",
+            "width": 310,
+            "x": 68,
+            "y": 22
+          }
+        ]
+      }
+    },
+    {
+      "name": "/en/cars/2024-toyota-fortuner-exr at 390px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "clientWidth": 375,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "name": "/en/cars/2024-toyota-fortuner-exr at 390px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 27,
+            "text": "2024 TOYOTA FORTUNER EXR",
+            "width": 343,
+            "x": 16,
+            "y": 342.375
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/cars at 1440px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "/bg/cars at 1440px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 24,
+            "text": "Нашите автомобили",
+            "width": 1072,
+            "x": 176.5,
+            "y": 95
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/finance at 1440px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "/bg/finance at 1440px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 44,
+            "text": "КалкулаторКалкулатор",
+            "width": 722.796875,
+            "x": 156.5,
+            "y": 277
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/service at 1440px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "clientWidth": 1425,
+        "scrollWidth": 1425
+      }
+    },
+    {
+      "name": "/bg/service at 1440px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 44,
+            "text": "Погрижете се за автомобила си.Сервизни услуги",
+            "width": 722.796875,
+            "x": 156.5,
+            "y": 265
+          }
+        ]
+      }
+    },
+    {
+      "name": "Shared selected pill focus is contained on desktop too",
+      "passed": true,
+      "details": {
+        "color": "rgb(255, 255, 255)",
+        "focus": true,
+        "offset": "-5px",
+        "targetHeight": 44
+      }
+    },
+    {
+      "name": "/bg at 768px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "clientWidth": 753,
+        "scrollWidth": 753
+      }
+    },
+    {
+      "name": "/bg at 768px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 80,
+            "text": "",
+            "width": 256,
+            "x": 160.78125,
+            "y": 225
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/sell at 768px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "clientWidth": 753,
+        "scrollWidth": 753
+      }
+    },
+    {
+      "name": "/bg/sell at 768px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 1,
+            "text": "Продай колата си.",
+            "width": 1,
+            "x": 27,
+            "y": 209
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/finance at 768px has no document overflow",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "clientWidth": 753,
+        "scrollWidth": 753
+      }
+    },
+    {
+      "name": "/bg/finance at 768px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 36,
+            "text": "КалкулаторКалкулатор",
+            "width": 416.640625,
+            "x": 56,
+            "y": 244
+          }
+        ]
+      }
+    },
+    {
+      "name": "/bg/service at 768px has no document overflow",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 72,
+            "text": "Погрижете се за автомобила си.Сервизни услуги",
+            "width": 416.640625,
+            "x": 56,
+            "y": 222
+          }
+        ],
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "testCorrection": "Read settled layout after direct navigation."
+      }
+    },
+    {
+      "name": "/bg/service at 768px renders a page heading",
+      "passed": true,
+      "details": {
+        "heading": [
+          {
+            "height": 72,
+            "text": "Погрижете се за автомобила си.Сервизни услуги",
+            "width": 416.640625,
+            "x": 56,
+            "y": 222
+          }
+        ],
+        "clientWidth": 753,
+        "scrollWidth": 753,
+        "testCorrection": "Read settled layout after direct navigation."
+      }
+    },
+    {
+      "name": "Final Services phone assets are loaded",
+      "passed": true,
+      "details": {
+        "images": [
+          {
+            "alt": "",
+            "height": 53.760005950927734,
+            "loaded": true,
+            "width": 84.83999633789062,
+            "x": 10.454998016357422,
+            "y": 36.119998931884766
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 75.75,
+            "x": 104.75,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 75.75,
+            "x": 194.5,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 48,
+            "loaded": true,
+            "width": 75.75,
+            "x": 284.25,
+            "y": 39
+          },
+          {
+            "alt": "",
+            "height": 148,
+            "loaded": true,
+            "width": 349,
+            "x": 13,
+            "y": 107
+          },
+          {
+            "alt": "Drive24",
+            "height": 68,
+            "loaded": true,
+            "width": 204,
+            "x": 85.5,
+            "y": 121
+          },
+          {
+            "alt": "",
+            "height": 175.5,
+            "loaded": true,
+            "width": 351,
+            "x": 12,
+            "y": 342
+          },
+          {
+            "alt": "",
+            "height": 175.5,
+            "loaded": true,
+            "width": 351,
+            "x": 12,
+            "y": 699.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "Inline pills have 44px targets and pressed semantics",
+      "passed": true,
+      "details": [
+        {
+          "name": "Всички",
+          "popup": null,
+          "pressed": "true",
+          "surface": 40,
+          "target": 44
+        },
+        {
+          "name": "Обслужване",
+          "popup": null,
+          "pressed": "false",
+          "surface": 40,
+          "target": 44
+        },
+        {
+          "name": "Диагностика",
+          "popup": null,
+          "pressed": "false",
+          "surface": 40,
+          "target": 44
+        }
+      ]
+    },
+    {
+      "name": "Final unselected pill focus remains visible at 320px",
+      "passed": true,
+      "details": {
+        "color": "rgb(39, 39, 43)",
+        "focus": true,
+        "offset": "-5px"
+      }
+    },
+    {
+      "name": "Final unselected pill focus remains visible at 390px",
+      "passed": true,
+      "details": {
+        "color": "rgb(39, 39, 43)",
+        "focus": true,
+        "offset": "-5px"
+      }
+    }
+  ],
+  "layouts": [
+    {
+      "route": "/bg",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 68,
+          "text": "",
+          "width": 204,
+          "x": 50.5,
+          "y": 121
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 249,
+          "height": 140.0625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 249,
+          "height": 140.0625
+        },
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/bg/cars",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Нашите автомобили",
+          "width": 169,
+          "x": 68,
+          "y": 16
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2025 Toyota VELOZ",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2022 Kia SELTOS",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/bg/saved",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Запазени автомобили",
+          "width": 240,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": []
+    },
+    {
+      "route": "/bg/sell",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Продай колата си.",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 182.640625,
+          "height": 238
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 182.640625,
+          "height": 238
+        }
+      ]
+    },
+    {
+      "route": "/bg/finance",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Калкулатор",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        }
+      ]
+    },
+    {
+      "route": "/bg/service",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Сервизни услуги",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 281,
+          "height": 140.5
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 281,
+          "height": 140.5
+        }
+      ]
+    },
+    {
+      "route": "/bg/more",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Меню",
+          "width": 150,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 78,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "route": "/bg/search",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Търсене",
+          "width": 240,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 30,
+          "height": 28
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "Toyota FORTUNER",
+          "loaded": true,
+          "width": 190,
+          "height": 108
+        }
+      ]
+    },
+    {
+      "route": "/bg/stores",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Посетете ни",
+          "width": 240,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Илюстративно изображение на автокъща",
+          "loaded": true,
+          "width": 296,
+          "height": 148
+        }
+      ]
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 27,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "width": 273,
+          "x": 16,
+          "y": 298.625
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 TOYOTA FORTUNER EXR",
+          "loaded": true,
+          "width": 305,
+          "height": 190.625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.65625,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.671875,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.671875,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "route": "/bg",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 68,
+          "text": "",
+          "width": 204,
+          "x": 85.5,
+          "y": 121
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 319,
+          "height": 179.4375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 319,
+          "height": 179.4375
+        },
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/bg/sell",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Продай колата си.",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 228.140625,
+          "height": 238
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 228.140625,
+          "height": 238
+        }
+      ]
+    },
+    {
+      "route": "/bg/finance",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Калкулатор",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        }
+      ]
+    },
+    {
+      "route": "/bg/service",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Сервизни услуги",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 351,
+          "height": 175.5
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 351,
+          "height": 175.5
+        }
+      ]
+    },
+    {
+      "route": "/bg/cars",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Нашите автомобили",
+          "width": 239,
+          "x": 68,
+          "y": 16
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2025 Toyota VELOZ",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2022 Kia SELTOS",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/bg/saved",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Запазени автомобили",
+          "width": 310,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": []
+    },
+    {
+      "route": "/bg/more",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Меню",
+          "width": 220,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 78,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "route": "/bg/search",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Търсене",
+          "width": 310,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 30,
+          "height": 28
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "Toyota FORTUNER",
+          "loaded": true,
+          "width": 190,
+          "height": 108
+        }
+      ]
+    },
+    {
+      "route": "/bg/stores",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Посетете ни",
+          "width": 310,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Илюстративно изображение на автокъща",
+          "loaded": true,
+          "width": 366,
+          "height": 183
+        }
+      ]
+    },
+    {
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 27,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "width": 343,
+          "x": 16,
+          "y": 342.375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 TOYOTA FORTUNER EXR",
+          "loaded": true,
+          "width": 375,
+          "height": 234.375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "route": "/en",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 68,
+          "text": "",
+          "width": 204,
+          "x": 50.5,
+          "y": 121
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 249,
+          "height": 140.0625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 249,
+          "height": 140.0625
+        },
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/en/sell",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Sell your car.",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 182.640625,
+          "height": 238
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 182.640625,
+          "height": 238
+        }
+      ]
+    },
+    {
+      "route": "/en/finance",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Finance calculator",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 116
+        }
+      ]
+    },
+    {
+      "route": "/en/service",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Car services.",
+          "width": 1,
+          "x": 152,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 65.239990234375,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 58.25,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 279,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 281,
+          "height": 140.5
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 281,
+          "height": 140.5
+        }
+      ]
+    },
+    {
+      "route": "/en/cars",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Our cars",
+          "width": 169,
+          "x": 68,
+          "y": 16
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2025 Toyota VELOZ",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        },
+        {
+          "alt": "2022 Kia SELTOS",
+          "loaded": true,
+          "width": 113.953125,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/en/saved",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Saved cars",
+          "width": 240,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": []
+    },
+    {
+      "route": "/en/more",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Menu",
+          "width": 150,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 78,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "route": "/en/search",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Search",
+          "width": 240,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 30,
+          "height": 28
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "Toyota FORTUNER",
+          "loaded": true,
+          "width": 190,
+          "height": 108
+        }
+      ]
+    },
+    {
+      "route": "/en/stores",
+      "width": 320,
+      "clientWidth": 320,
+      "scrollWidth": 320,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Visit showroom",
+          "width": 240,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Illustrative showroom artwork",
+          "loaded": true,
+          "width": 296,
+          "height": 148
+        }
+      ]
+    },
+    {
+      "route": "/en/cars/2024-toyota-fortuner-exr",
+      "width": 320,
+      "clientWidth": 305,
+      "scrollWidth": 305,
+      "heading": [
+        {
+          "height": 27,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "width": 273,
+          "x": 16,
+          "y": 298.625
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 TOYOTA FORTUNER EXR",
+          "loaded": true,
+          "width": 305,
+          "height": 190.625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.65625,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.671875,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 85.671875,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "route": "/en",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 68,
+          "text": "",
+          "width": 204,
+          "x": 85.5,
+          "y": 121
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 319,
+          "height": 179.4375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 319,
+          "height": 179.4375
+        },
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/en/sell",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Sell your car.",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 228.140625,
+          "height": 238
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 228.140625,
+          "height": 238
+        }
+      ]
+    },
+    {
+      "route": "/en/finance",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Finance calculator",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 144.75,
+          "height": 116
+        }
+      ]
+    },
+    {
+      "route": "/en/service",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Car services.",
+          "width": 1,
+          "x": 187,
+          "y": 154.5
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 84.83999633789062,
+          "height": 53.760005950927734
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 75.75,
+          "height": 48
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 349,
+          "height": 148
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 204,
+          "height": 68
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 351,
+          "height": 175.5
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 351,
+          "height": 175.5
+        }
+      ]
+    },
+    {
+      "route": "/en/cars",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Our cars",
+          "width": 239,
+          "x": 68,
+          "y": 16
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2025 Toyota VELOZ",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        },
+        {
+          "alt": "2022 Kia SELTOS",
+          "loaded": true,
+          "width": 144.75,
+          "height": 135
+        }
+      ]
+    },
+    {
+      "route": "/en/saved",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Saved cars",
+          "width": 310,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": []
+    },
+    {
+      "route": "/en/more",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24.296875,
+          "text": "Menu",
+          "width": 220,
+          "x": 68,
+          "y": 15.84375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 78,
+          "height": 26
+        }
+      ]
+    },
+    {
+      "route": "/en/search",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Search",
+          "width": 310,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 30,
+          "height": 28
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 72,
+          "height": 72
+        },
+        {
+          "alt": "Toyota FORTUNER",
+          "loaded": true,
+          "width": 190,
+          "height": 108
+        }
+      ]
+    },
+    {
+      "route": "/en/stores",
+      "width": 390,
+      "clientWidth": 390,
+      "scrollWidth": 390,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Visit showroom",
+          "width": 310,
+          "x": 68,
+          "y": 22
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Illustrative showroom artwork",
+          "loaded": true,
+          "width": 366,
+          "height": 183
+        }
+      ]
+    },
+    {
+      "route": "/en/cars/2024-toyota-fortuner-exr",
+      "width": 390,
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "heading": [
+        {
+          "height": 27,
+          "text": "2024 TOYOTA FORTUNER EXR",
+          "width": 343,
+          "x": 16,
+          "y": 342.375
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "2024 TOYOTA FORTUNER EXR",
+          "loaded": true,
+          "width": 375,
+          "height": 234.375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 109,
+          "height": 80
+        }
+      ]
+    },
+    {
+      "route": "/bg/cars",
+      "width": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "heading": [
+        {
+          "height": 24,
+          "text": "Нашите автомобили",
+          "width": 1072,
+          "x": 176.5,
+          "y": 95
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "2024 Toyota FORTUNER",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        },
+        {
+          "alt": "2023 Suzuki Ciaz",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        },
+        {
+          "alt": "2025 Toyota VELOZ",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        },
+        {
+          "alt": "2022 Kia SELTOS",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        },
+        {
+          "alt": "2024 Toyota LAND CRUISER",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        },
+        {
+          "alt": "2023 Suzuki GRAND VITARA",
+          "loaded": true,
+          "width": 165.75,
+          "height": 161
+        }
+      ]
+    },
+    {
+      "route": "/bg/finance",
+      "width": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "heading": [
+        {
+          "height": 44,
+          "text": "КалкулаторКалкулатор",
+          "width": 722.796875,
+          "x": 156.5,
+          "y": 277
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 496,
+          "height": 248
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 218.390625,
+          "height": 142
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 218.390625,
+          "height": 142
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 218.390625,
+          "height": 142
+        },
+        {
+          "alt": "2021 Volkswagen Golf",
+          "loaded": true,
+          "width": 218.390625,
+          "height": 142
+        }
+      ]
+    },
+    {
+      "route": "/bg/service",
+      "width": 1440,
+      "clientWidth": 1425,
+      "scrollWidth": 1425,
+      "heading": [
+        {
+          "height": 44,
+          "text": "Погрижете се за автомобила си.Сервизни услуги",
+          "width": 722.796875,
+          "x": 156.5,
+          "y": 265
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 1184,
+          "height": 248
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 582,
+          "height": 291
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 582,
+          "height": 291
+        }
+      ]
+    },
+    {
+      "route": "/bg",
+      "width": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "heading": [
+        {
+          "height": 80,
+          "text": "",
+          "width": 256,
+          "x": 160.78125,
+          "y": 225
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 695,
+          "height": 140
+        },
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 240,
+          "height": 80
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 108,
+          "height": 108
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 342.5,
+          "height": 238.84375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 342.5,
+          "height": 238.84375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 342.5,
+          "height": 214.84375
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 342.5,
+          "height": 214.84375
+        }
+      ]
+    },
+    {
+      "route": "/bg/sell",
+      "width": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "heading": [
+        {
+          "height": 1,
+          "text": "Продай колата си.",
+          "width": 1,
+          "x": 27,
+          "y": 209
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 453.046875,
+          "height": 250
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 453.046875,
+          "height": 250
+        }
+      ]
+    },
+    {
+      "route": "/bg/finance",
+      "width": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "heading": [
+        {
+          "height": 36,
+          "text": "КалкулаторКалкулатор",
+          "width": 416.640625,
+          "x": 56,
+          "y": 244
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 464,
+          "height": 232
+        },
+        {
+          "alt": "2021 Toyota RAV4",
+          "loaded": true,
+          "width": 140,
+          "height": 142
+        },
+        {
+          "alt": "2022 Tesla Model 3",
+          "loaded": true,
+          "width": 140,
+          "height": 142
+        },
+        {
+          "alt": "2020 BMW 320i",
+          "loaded": true,
+          "width": 140,
+          "height": 142
+        },
+        {
+          "alt": "2021 Volkswagen Golf",
+          "loaded": true,
+          "width": 140,
+          "height": 142
+        }
+      ]
+    },
+    {
+      "route": "/bg/service",
+      "width": 768,
+      "clientWidth": 753,
+      "scrollWidth": 753,
+      "heading": [
+        {
+          "height": 72,
+          "text": "Погрижете се за автомобила си.Сервизни услуги",
+          "width": 416.640625,
+          "x": 56,
+          "y": 222
+        }
+      ],
+      "visibleImages": [
+        {
+          "alt": "Drive24",
+          "loaded": true,
+          "width": 96,
+          "height": 32
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 160,
+          "height": 65.265625
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 697,
+          "height": 248
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 338.5,
+          "height": 169.25
+        },
+        {
+          "alt": "",
+          "loaded": true,
+          "width": 338.5,
+          "height": 169.25
+        }
+      ]
+    }
+  ],
+  "browserWarningsAndErrors": [],
+  "boundary": "Local preview and build. No external enquiry sent; no hosted or physical-device acceptance claimed. The shared index lock cleared before scoped source handoff without removal or bypass.",
+  "integrationBase": "94d83cf84adfee24837362501a99811ea6c2de5b"
+}
