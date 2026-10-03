@@ -13,7 +13,7 @@ app.html
       Footer
 ```
 
-`src/app.html` supplies the document language, viewport and icon. `src/routes/+layout.svelte` imports the self-hosted Onest font and `src/app.css`, computes canonical/noindex metadata, and renders the shared shell. `SiteShell.svelte` supplies the skip link, header, main landmark and footer. The layout chooses footer variants by route.
+`src/app.html` supplies the document language, viewport and icon. `src/routes/+layout.svelte` imports `src/app.css`, computes canonical/noindex metadata, and renders the shared shell. The shared CSS tokens register the locally bundled Inter v4.1 variable font. `SiteShell.svelte` supplies the skip link, header, main landmark and footer. The layout chooses footer variants by route.
 
 Each route owns its page composition and `<svelte:head>` metadata. Its `+page.ts`, where present, resolves URL state into typed page data. The first response contains server-rendered content; SvelteKit navigation updates the route without rebuilding a separate application shell. See [SvelteKit loading](https://svelte.dev/docs/kit/load) for framework behavior.
 

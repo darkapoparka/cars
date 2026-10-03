@@ -1,3 +1,12 @@
+/* Pinned official Inter v4.1; Vite bundles this local file with a content hash. */
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('./fonts/InterVariable-v4.1.woff2') format('woff2');
+}
+
 :root {
   /* Foundation colors and semantic surface roles. */
   --dn-focus: #0b57d0;
@@ -111,7 +120,7 @@
   --dn-home-search-muted: #d4d8df;
   --dn-home-cta-gap: var(--dn-space-4);
   /* Foundation typography. */
-  --dn-font: 'Onest Variable', "Segoe UI", Arial, sans-serif;
+  --dn-font: 'Inter Variable', "Segoe UI", Arial, sans-serif;
   --dn-text-caption: 0.75rem;
   --dn-text-badge: var(--dn-text-meta);
   --dn-text-meta: 0.875rem;
@@ -147,9 +156,9 @@
   --dn-control-size: var(--dn-text-body);
   --dn-control-weight: var(--dn-weight-medium);
   --dn-control-font: var(--dn-control-weight) var(--dn-control-size) / var(--dn-leading-control) var(--dn-font);
-  --dn-body-font: var(--dn-weight-regular) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
+  --dn-body-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
   --dn-tab-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
-  --dn-entry-font: var(--dn-weight-regular) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
+  --dn-entry-font: var(--dn-weight-ui) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
   --dn-cta-size: var(--dn-text-lead);
   --dn-cta-weight: var(--dn-weight-medium);
   --dn-cta-leading: var(--dn-leading-control);
@@ -161,7 +170,7 @@
   --dn-mobile-card-title-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
   --dn-mobile-card-meta-font: var(--dn-weight-regular) var(--dn-text-caption) / var(--dn-leading-meta) var(--dn-font);
   --dn-mobile-card-spec-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-badge) var(--dn-font);
-  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
+  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-control) var(--dn-font);
   --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
 
   /* Mobile body-style and brand tiles share media and label geometry. */
@@ -207,7 +216,7 @@
   --dn-control-icon-size: 18px;
   --dn-entry-action-icon-size: 15px;
   --dn-entry-segment-width: min(240px, calc(100% - var(--dn-space-6)));
-  --dn-entry-action-width: min(11.25rem, 100%);
+  --dn-entry-action-width: min(13rem, 100%);
   --dn-segment-surface: var(--dn-home-panel);
   --dn-segment-selected: var(--dn-surface-raised);
 }

@@ -14,7 +14,7 @@ const check = (name, run) => !caseFilter || caseFilter.test(name) ? suite.check(
 
 async function settleHeroFonts(page) {
   // Vite registers imported font-face CSS after the initial HTML is available.
-  await page.waitForFunction(() => [...document.fonts].some(font => font.family.includes('Onest')));
+  await page.waitForFunction(() => [...document.fonts].some(font => font.family.includes('Inter') && font.status === 'loaded'));
   await page.evaluate(async () => {
     const heading = document.querySelector('.dn-route-hero h1');
     // Load the actual heading glyphs before sampling CDP font usage after route changes.
@@ -290,7 +290,7 @@ try {
               const { root } = await cdp.send('DOM.getDocument');
               const { nodeId } = await cdp.send('DOM.querySelector', { nodeId: root.nodeId, selector: '.dn-route-hero h1' });
               const { fonts } = await cdp.send('CSS.getPlatformFontsForNode', { nodeId });
-              assert(fonts.length && fonts.every(font => font.familyName.includes('Onest')), `Headings render in bundled Onest: ${JSON.stringify(fonts)}`);
+              assert(fonts.length && fonts.every(font => font.familyName.includes('Inter')), `Headings render in bundled Inter: ${JSON.stringify(fonts)}`);
               await cdp.detach();
             }
             if (width < 992) assert.equal(await page.locator('.dn-desktop-showroom iframe').count(), 0, 'Mobile does not request the desktop map');

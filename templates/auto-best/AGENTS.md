@@ -23,7 +23,11 @@ Before accepting a clone, inspect both variants on their actual backgrounds at m
 
 ### Navigation icons
 
-Do not use Lucide in this template. The owner rejected that library on 30 September 2026 and requested a real replacement library instead of project-drawn SVGs. Mobile header, menu, dock and inventory toolbar use official Hugeicons Stroke Rounded geometry through `MobileActionIcon.svelte`; preserve the pinned source and MIT notice in `provenance/hugeicons.md`. Do not change icon families again without an explicit owner request. Mobile styling requests do not authorize desktop changes; keep mobile renderers separate from desktop/footer consumers. Use recognizable destination glyphs and retain localized labels, focus and hit areas.
+Use **Material Symbols Sharp** for mobile header, menu, dock, inventory and existing mobile-action consumers through `MobileActionIcon.svelte`. The owner requested this replacement on 3 October 2026 and explicitly rejected Phosphor; Lucide remains rejected. Use the pinned official 400-weight, optical-size-24 SVG geometry and its designed outline/fill variants. Do not draw paths, add arbitrary strokes, mix mobile icon families or change the family without another explicit owner request. Keep [the pinned sources and Apache 2.0 notice](provenance/material-symbols.md), including the historical Hugeicons notices. Mobile styling requests do not authorize desktop changes; keep mobile renderers separate from desktop/footer consumers. Retain recognizable glyphs, localized labels, focus and hit areas.
+
+### Typography
+
+Use **Inter v4.1** from the locally bundled, reviewed variable WOFF2 and the shared `--dn-font` token. Body/entry roles use 450, controls 500 and headings/prices 600. Keep the pinned [font provenance and OFL notice](provenance/inter.md), real BG/EN document language and required Ѝ/ѝ coverage. Do not replace the family, add a remote font service or introduce component-local font families without an explicit owner request. Typography validation also checks the visual-system pins. Recheck wrapping and 320/390px controls whenever font roles change.
 
 ### Working changes
 

@@ -310,14 +310,14 @@
 
           <div class="dn-mobile-controls">
             <a class="dn-mobile-control" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
-              <MobileNavIcon name="location" size={22} strokeWidth={2} />
+              <MobileNavIcon name="location" size={22} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
               aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}
             >
-              <MobileNavIcon name="phoneCall" size={22} strokeWidth={2} />
+              <MobileNavIcon name="phoneCall" size={22} />
             </a>
             {#if vehicleDetailHeader}
             <button
@@ -359,7 +359,7 @@
           href={i18n.href(resolve('/'))}
           aria-current={presentation.mobileNavigation.home ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="home" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="home" active={presentation.mobileNavigation.home} /></span>
           <span class="dn-mobile-bottom-nav__label">{i18n.t("m_3a78695388b3")}</span>
         </a>
         <a
@@ -367,7 +367,7 @@
           href={i18n.href(resolve('/listing-grid'))}
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" active={presentation.mobileNavigation.listing} /></span>
           <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.carsCompact")}</span>
         </a>
         <a
@@ -375,7 +375,7 @@
           href={i18n.href(resolve('/contact?topic=trade-in'))}
           aria-current={presentation.mobileNavigation.tradeIn ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="sell" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="sell" active={presentation.mobileNavigation.tradeIn} /></span>
           <span class="dn-mobile-bottom-nav__label">{i18n.t("nav.sellCompact")}</span>
         </a>
         <a
@@ -383,7 +383,7 @@
           href={i18n.href(resolve('/contact?topic=import'))}
           aria-current={presentation.mobileNavigation.import ? 'page' : undefined}
         >
-          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="import" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="import" active={presentation.mobileNavigation.import} /></span>
           <span class="dn-mobile-bottom-nav__label">{i18n.t("m_2cff9baabf56")}</span>
         </a>
         <button
@@ -394,7 +394,7 @@
           aria-haspopup="dialog"
           onclick={openMobile}
         >
-          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" /></span>
+          <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="menu" active={mobileOpen || presentation.mobileNavigation.menu} /></span>
           <span class="dn-mobile-bottom-nav__label">{i18n.t("m_99af6606ff9d")}</span>
         </button>
       </nav>

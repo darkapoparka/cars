@@ -50,6 +50,7 @@ async function visit(directory) {
 }
 
 await visit('src');
+await import('./check-visual-system.mjs');
 if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);

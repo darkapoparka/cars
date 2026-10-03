@@ -179,7 +179,8 @@ try {
             const box = card.getBoundingClientRect();
             const copy = card.querySelector('.dn-mobile-core-card__copy').getBoundingClientRect();
             const art = card.querySelector('.feature-artwork').getBoundingClientRect();
-            return art.top >= copy.bottom + 4 && art.bottom <= box.bottom && art.left >= box.left && art.right <= box.right;
+            const clearOfCopy = art.bottom <= copy.top - 4 || art.top >= copy.bottom + 4;
+            return clearOfCopy && art.top >= box.top && art.bottom <= box.bottom && art.left >= box.left && art.right <= box.right;
           }));
           assert(homeArt.every(Boolean), 'Service artwork stays inside its card and clear of the text');
           const actionImages = await page.locator('.dn-mobile-core-card img').evaluateAll(images => images.map(image => image.getAttribute('src')));
@@ -259,9 +260,13 @@ try {
           });
           assert(dockStyle.left <= 1 && Math.abs(dockStyle.right - dockStyle.viewport) <= 1 && dockStyle.radius === '0px' && dockStyle.shadow === 'none' && dockStyle.background === 'rgb(255, 255, 255)',
             'The dock is a flat white bar spanning the mobile viewport');
-          assert.equal(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels use the strong ink color');
-          assert.equal(await dock.locator('svg[data-icon-family="hugeicons-rounded"][viewBox="0 0 24 24"][fill="none"]').count(), 5,
-            'All five mobile dock glyphs use official Hugeicons Stroke Rounded geometry');
+          assert.notEqual(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels stay quieter than body ink');
+          assert.equal(await dock.locator('svg[data-icon-family="material-symbols-sharp"][viewBox="0 -960 960 960"][fill="currentColor"]').count(), 5,
+            'All five mobile dock glyphs use official Material Symbols Sharp geometry');
+          assert.equal(await dock.locator('a[aria-current="page"] svg[data-icon-state="filled"]').count(), 1,
+            'The active destination uses the official filled variant');
+          assert.equal(await dock.locator('a:not([aria-current="page"]) svg[data-icon-state="outlined"]').count(), 3,
+            'Inactive destinations use official outlined variants');
           assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');
           await alignedDock(page);
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
@@ -270,7 +275,7 @@ try {
           await fits(page.locator('.dn-mobile-menu__contact a'));
           const localeControl = page.locator('.dn-mobile-menu [data-locale-selector]');
           await fits(localeControl);
-          assert.equal(await localeControl.locator('svg[data-icon-family="hugeicons-rounded"]').count(), 2,
+          assert.equal(await localeControl.locator('svg[data-icon-family="material-symbols-sharp"]').count(), 2,
             'Country and language has a globe and chevron in the same mobile icon family');
           assert(await localeControl.evaluate(el => el.getBoundingClientRect().height >= 44 && getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)'),
             'Country and language is a visible full-row control');
@@ -426,7 +431,7 @@ try {
             await fits(guide);
             assert.equal(await guide.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)',
               'Process guidance uses a compact white card below the form');
-            assert.equal(await guide.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
+            assert.equal(await guide.locator('[data-icon-family="material-symbols-sharp"]').count(), 1);
             assert(await guide.locator('.dn-service-process-preview__copy').innerText());
             const entryBeforeGuide = await field.innerText();
             await guide.click();
@@ -479,16 +484,18 @@ try {
         } else await capture('detail');
         if (width < 768) {
           await visit('/blog');
-          const articleStyles = await page.locator('.dn-blog-search input').evaluate(input => ({
+          await page.locator('.dn-blog-search-trigger').click();
+          const articleQuery = page.locator('#dn-blog-search-query');
+          const articleStyles = await articleQuery.evaluate(input => ({
             size: getComputedStyle(input).fontSize, border: getComputedStyle(input).borderWidth,
-            height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('form')).padding
+            height: input.getBoundingClientRect().height, frame: getComputedStyle(input.closest('.dn-mobile-overlay-search')).padding
           }));
-          assert.deepEqual(articleStyles, { size: '18px', border: '0px', height: 44, frame: '0px' },
-            'Article search shares the mobile input system without a second frame');
-          assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '500');
+          assert.deepEqual(articleStyles, { size: '18px', border: '0px', height: 44, frame: '0px 4px 0px 16px' },
+            'Article search uses the shared mobile overlay field');
+          assert.equal(await page.locator('.dn-blog-card h2').first().evaluate(title => getComputedStyle(title).fontWeight), '600');
           await capture('articles');
-          await page.locator('#dn-blog-search').fill(locale === 'bg' ? 'внос' : 'import');
-          await page.locator('#dn-blog-search').press('Enter');
+          await articleQuery.fill(locale === 'bg' ? 'внос' : 'import');
+          await articleQuery.press('Enter');
           await page.waitForURL(url => url.searchParams.has('q'));
           assert(await page.locator('.dn-blog-card').count() > 0, 'Article search returns matching cards');
         }

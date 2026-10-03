@@ -1,6 +1,6 @@
 # Styling and visual system
 
-Auto Best combines an image-led automotive layout, Onest typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
+Auto Best combines an image-led automotive layout, Inter typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
 At desktop widths, the vehicle detail preview uses a 16:10 frame. `VehiclePhoto.svelte`
 opens the full, uncropped photograph in a native dialog with keyboard focus containment,
@@ -240,7 +240,9 @@ Shared neutral interface values such as ink, muted text, lines, raised surfaces 
 
 ## Typography
 
-The root layout imports `@fontsource-variable/onest`. `--dn-font` is `Onest Variable`, followed by Segoe UI, Arial and sans-serif. Fonts are bundled with the application.
+Shared `tokens.css` registers the pinned local Inter v4.1 WOFF2. `--dn-font` is `Inter Variable`, followed by Segoe UI, Arial and sans-serif. Vite bundles the reviewed Latin/Cyrillic subset with a content hash. Both weight and optical-size axes and all OpenType layout features are retained, without an external font service. Body/entry roles use 450, controls 500 and headings/prices 600; existing 400-weight metadata remains quieter. Required Bulgarian characters include Ѝ/ѝ, although the file has no dedicated Bulgarian alternates. Keep real BG/EN language tags and [font provenance/license](../provenance/inter.md).
+
+Mobile card prices use the 1.3 control line height, including the 20px Home price role, so glyph metrics fit at 200% text size.
 
 | Token | Size | Typical use |
 | --- | --- | --- |
@@ -313,7 +315,7 @@ Keep `scrollbar-gutter: stable` on the root element. Classic desktop scrollbars 
 
 Additional 359/374/380px and 1199px rules handle particular text, grid and control constraints. These are local breakpoints, not separate site themes. Safe-area insets supplement the fixed mobile navigation and sheet footers. The normal dock and vehicle-detail action bar are separate layouts with different height tokens.
 
-The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte` delegates to the mobile-only `MobileActionIcon.svelte` renderer for five official Hugeicons Stroke Rounded glyphs in a 24px frame with 1.8px rendered strokes; source and MIT license are recorded in [Hugeicons provenance](../provenance/hugeicons.md). All icons and captions share their baselines, including Sell. Each glyph sits in a 40px by 28px pill frame; the active destination paints only this frame with the neutral selection surface and uses charcoal icon/text. Inactive items use the muted text token. All normal phone widths, including 320px, show the same caption labels and destination order across Home, inventory, Sell and Import. Labels do not disappear after a timer. Only dock content widths of 15rem or less use accessible icons alone, supporting enlarged text. Labels use the compact caption role, with semibold on the active destination. Every link keeps at least a 44px target. The shared dock-height token also reserves page and overlay space; the vehicle-detail Call/Viewing action bar remains its contextual layout.
+The mobile dock is a flat white bar spanning the viewport. `BottomNavIcon.svelte` delegates to the mobile-only `MobileActionIcon.svelte` renderer for five official Material Symbols Sharp glyphs in a 24px frame, using the designed 400-weight outline and fill variants; source and Apache 2.0 license are recorded in [Material provenance](../provenance/material-symbols.md). Active destinations use the upstream filled variant; no CSS stroke is added. All icons and captions share their baselines, including Sell. Each glyph sits in a 40px by 28px pill frame; the active destination paints only this frame with the neutral selection surface and uses charcoal icon/text. Inactive items use the muted text token. All normal phone widths, including 320px, show the same caption labels and destination order across Home, inventory, Sell and Import. Labels do not disappear after a timer. Only dock content widths of 15rem or less use accessible icons alone, supporting enlarged text. Labels use the compact caption role, with semibold on the active destination. Every link keeps at least a 44px target. The shared dock-height token also reserves page and overlay space; the vehicle-detail Call/Viewing action bar remains its contextual layout.
 
 The mobile menu uses plain navigation rows on white, with the neutral selection surface and charcoal text on the current destination, including general Contact. Mobile selected-state surfaces and borders use neutral tokens below 992px. Its Call action is primary and its address shortcut uses the pale secondary surface. The vehicle-detail bar follows the same priority: red Call and pale Viewing. Both reuse the shared compact-control role, with a 44px target and 40px paint at normal text size, and allow enlarged labels to wrap. Menu triggers announce a dialog, and Escape restores focus to the opener. Advice keeps its image-free mobile list cards; their 20px corners, faint border and subtle shadow reuse the shared white-card treatment.
 
@@ -406,7 +408,7 @@ General Contact combines contact actions with a contained map section. About and
 
 Stock images use photo framing; decorative cutouts use proportion-preserving containment. `VehicleCutout`, `HeroVehicles`, `ArtworkRegion` and `FeatureArtwork` interpret the data modules. A bounds tuple describes visible artwork; a crop tuple describes a viewport into a larger image. Their numeric meanings are documented in [Data](DATA.md).
 
-`Icon.svelte`, `MobileNavIcon.svelte` and the service/social icon components are existing native SVG renderers. Reuse their names and visual weight for an established action. Adding an icon font or a second icon library is unnecessary for ordinary customization.
+`Icon.svelte`, `MobileActionIcon.svelte` and the service/social icon components are existing native SVG renderers. Mobile actions stay with the pinned Material Symbols Sharp family. Reuse their names and visual weight for an established action. Adding an icon font or a second icon library is unnecessary for ordinary customization.
 
 ## Interaction styling
 

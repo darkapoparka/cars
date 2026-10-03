@@ -15,7 +15,7 @@ Mobile listing badges use four equal cells and compact localized labels on one t
 | <code>npm run check:architecture</code> | Native source architecture checks |
 | <code>npm run check:css-policy</code> | Reject fragile selectors, invalid standalone-CSS <code>:global(...)</code>, and dealer artwork/palette leakage |
 | `npm run check:tokens` | Validate token aliases, reference cycles, source usage and shared control-height overrides |
-| `npm run check:typography` | Reject local typography values outside the shared token owner |
+| `npm run check:typography` | Reject local typography values outside the shared token owner and verify pinned Inter / Material Symbols sources |
 | `npm run smoke:typography` | Current Sell/Import flows, entry tabs, action hierarchy and clipped controls at 320/390/768/1440px |
 | `npm run smoke:phase4` | Phase 4 discovery-draft, shell/navigation, focus, return-state and breakpoint contracts |
 | `npm run check:assets` | Static media and source-reference checks |
@@ -68,7 +68,7 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/service-entry-overlay-smoke.mjs` | Mobile Sell/Import single-field entry, immediate criteria editor, full-screen geometry, shared close target, Save/Cancel/Escape, draft persistence, invalid URLs, contact/review continuation, 200% text and text spacing; white guide cards with centered arrows, compact entry tabs, accessible titles, 26px header glyphs, focus containment/return, backdrop/drag/keyboard dismissal and release at the desktop breakpoint |
 | `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
-| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and two-line models with complete accessible labels, plain price hierarchy, equal card heights and right-column two-by-two badges with one text line, long Tesla/electric/petrol-LPG layout fixtures, 52px pale borderless entry fields and pointer/keyboard focus, 22px header glyphs, inventory search and quick filters matching Home pill size with 44px targets, flat white dock with official Hugeicons Stroke Rounded icons and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title, white service guide cards and drawer focus/dismissal |
+| `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and two-line models with complete accessible labels, plain price hierarchy, equal card heights and right-column two-by-two badges with one text line, long Tesla/electric/petrol-LPG layout fixtures, 52px pale borderless entry fields and pointer/keyboard focus, 22px header glyphs, inventory search and quick filters matching Home pill size with 44px targets, flat white dock with official Material Symbols Sharp outline/fill states and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title, white service guide cards and drawer focus/dismissal |
 | `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy, and checks equal inventory card heights |
 | `scripts/desktop-discovery-smoke.mjs` | Seven single-line native filters with field-name placeholders and permanent accessible labels on Home and inventory, applied URL state, dependent model reset and sticky-control behavior |
 | `scripts/desktop-routes-smoke.mjs` | Localized route geometry, individual campaign artwork within a shared frame, compact search-title spacing, plain About subtitle, unified Blog search/category panel and native GET filtering, About panels, discovery-tile hover, showroom actions and desktop-only map mounting |
@@ -140,7 +140,7 @@ the matching desktop front-facing cutouts. Check equal main-car visible areas,
 tyre baselines, clear separation from copy and unchanged Import/Leasing destinations.
 Their desktop-only picture sources must not request the new assets on mobile.
 The suite also checks
-title/description/control separation, real Onest
+title/description/control separation, real Inter
 glyph rendering (including Cyrillic), visible images, page overflow and runtime
 errors. Desktop content canvases are light grey with white cards;
 all heroes use white headings on dark campaign artwork. About shares the black

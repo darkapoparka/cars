@@ -47,9 +47,9 @@ The dated records preserve historical filenames and generation descriptions; cur
 
 ## Icons and font
 
-Icon history includes Phosphor, Hugeicons and Simple Icons. The components determine which geometry is rendered. Retained notices are [Phosphor](provenance/phosphor-icons-LICENSE.txt), [Hugeicons](provenance/hugeicons-LICENSE.txt) and [Simple Icons](provenance/simple-icons-LICENSE.md). These notices are preserved as received.
+Mobile navigation/actions now use [official Material Symbols Sharp](provenance/material-symbols.md). Icon history includes Phosphor, Hugeicons and Simple Icons. The components determine which geometry is rendered. Retained notices are [Phosphor](provenance/phosphor-icons-LICENSE.txt), [Hugeicons](provenance/hugeicons-LICENSE.txt) and [Simple Icons](provenance/simple-icons-LICENSE.md). These notices are preserved as received.
 
-Onest is bundled by `@fontsource-variable/onest`. The inherited source record identifies its SIL Open Font License; see [SOURCE_LICENSE.md](SOURCE_LICENSE.md) and the installed package metadata.
+Inter v4.1 is bundled locally under SIL Open Font License 1.1. See [font provenance](provenance/inter.md), the [subset manifest](provenance/inter.json), retained [license](provenance/inter-OFL.txt), and [SOURCE_LICENSE.md](SOURCE_LICENSE.md).
 
 ## Replacing media
 

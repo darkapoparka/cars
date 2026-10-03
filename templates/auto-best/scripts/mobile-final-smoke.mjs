@@ -29,9 +29,11 @@ try {
           const box = card.getBoundingClientRect();
           const copy = card.querySelector('.dn-mobile-core-card__copy').getBoundingClientRect();
           const art = card.querySelector('.feature-artwork').getBoundingClientRect();
-          return { separated: art.top >= copy.bottom + 7, fits: card.scrollWidth <= card.clientWidth + 1 && art.bottom <= box.bottom };
+          return { text: card.textContent.trim(), separated: art.bottom <= copy.top - 7 || art.top >= copy.bottom + 7,
+            fits: card.scrollWidth <= card.clientWidth + 1 && copy.bottom <= box.bottom + 1 && art.top >= box.top - 1 && art.bottom <= box.bottom + 1 && art.left >= box.left - 1 && art.right <= box.right + 1,
+            gap: copy.top - art.bottom, bounds: {card: box.toJSON(), art: art.toJSON(), copy: copy.toJSON()} };
         }));
-        assert(cards.every(card => card.separated && card.fits), '200% service text must not clip or overlap artwork');
+        assert(cards.every(card => card.separated && card.fits), `200% service text must not clip or overlap artwork: ${JSON.stringify(cards.filter(card => !card.separated || !card.fits))}`);
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), '200% page reflows');
         const nav = await page.locator('.dn-mobile-bottom-nav').evaluate(element => {
           const bounds = element.getBoundingClientRect();

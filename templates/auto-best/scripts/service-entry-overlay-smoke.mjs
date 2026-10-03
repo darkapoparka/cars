@@ -37,7 +37,7 @@ async function guideCheck(page, locale, width, topic) {
   const trigger = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
   const draft = await serviceEntry(page).locator('.dn-service-entry__field').innerText();
   assert.equal(await trigger.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)');
-  assert.equal(await trigger.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
+  assert.equal(await trigger.locator('[data-icon-family="material-symbols-sharp"]').count(), 1);
   const cardLayout = await trigger.evaluate(button => {
     const box = button.getBoundingClientRect(), arrow = button.querySelector('svg').getBoundingClientRect();
     return { corner: parseFloat(getComputedStyle(button).borderRadius), arrowOffset: arrow.y + arrow.height / 2 - box.y - box.height / 2 };
