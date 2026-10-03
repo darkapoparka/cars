@@ -211,7 +211,7 @@ try {
           assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
           const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));
-          assert.deepEqual(headerIcons, [26, 26], 'Header location and phone glyphs remain legible within 44px targets');
+          assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs remain balanced within 44px targets');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
           assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '18px',
