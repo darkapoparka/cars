@@ -1,5 +1,7 @@
 # Boxcar desktop port — 3 October 2026
 
+The initial port below was followed by the same-day [Home 10 desktop refinement](HOME10-DESKTOP-FINAL-2026-10-03.md). That final implementation replaces the homepage frame, hero height and stock spacing recorded here; the supporting desktop components and preserved mobile design remain in place.
+
 The reusable Modern master now uses the curated templates/boxcar-updated desktop composition from the owner's reference at http://127.0.0.1:6455/. The Svelte reference was adapted into Modern's existing Next.js and React components, with Modern's configured dealer identity, actual inventory data, contacts, locale and supported services.
 
 ## Desktop implementation

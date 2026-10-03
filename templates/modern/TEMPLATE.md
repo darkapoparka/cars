@@ -1,7 +1,7 @@
 # Template reference — Modern
 
 ## Identity
-- Repository: `darkapoparka/cars-template-modern`
+- Repository: `darkapoparka/cars` · authoritative master: `templates/modern`
 - Key: `modern`
 - Portfolio role: **core**
 - Design position: premium minimal / inventory-first showroom
@@ -11,6 +11,8 @@
 - Suggested standalone review port: `6462`
 
 This is a **template master**, not a sendable dealer demo. The baseline intentionally preserves source/sample material for design fidelity; every lead copy requires a complete identity and content sweep.
+
+The current desktop Home uses the finalized Boxcar Home 10 direction through native Next.js/React components: a contained 1320 px frame, compact photographic hero, white search bar and stock immediately below. Existing mobile presentation is preserved below 1024 px. [Final implementation and QA](docs/HOME10-DESKTOP-FINAL-2026-10-03.md) records the current geometry, screenshots and checks.
 
 ## Install and run
 ```text

@@ -19,11 +19,11 @@
 
 :root {
   --desktop-frame-max: 78rem;
-  --desktop-showroom-max: 1392px;
-  --desktop-home-hero-height: 680px;
+  --desktop-showroom-max: 1320px;
+  --desktop-home-hero-height: clamp(460px, 38vw, 520px);
   --desktop-content-max: 82.5rem;
   --desktop-content-width: min(calc(100% - 5rem), var(--desktop-content-max));
-  --desktop-frame-width: calc(100% - var(--layout-gutter) * 2);
+  --desktop-frame-width: var(--desktop-content-width);
   --desktop-frame-min-height: calc(100dvh - var(--layout-gutter) * 2);
   --desktop-canvas: #f5f6f8;
   --desktop-surround: var(--desktop-canvas);

@@ -9,7 +9,7 @@ const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("desktop follows the Boxcars hero, stock and page proportions", async ({
+test("desktop keeps the Home 10 frame and stock visible below its search", async ({
   page,
 }) => {
   test.setTimeout(180_000);
@@ -32,10 +32,14 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       ).toBe("32px 32px 0px 0px");
       const hero = page.locator('[data-slot="dealer-desktop-home-hero"]');
       const heroBox = await hero.boundingBox();
-      expect(heroBox?.x).toBe(Math.max(24, (width - 1392) / 2));
+      expect(heroBox?.x).toBeGreaterThanOrEqual(40);
       expect(heroBox?.y).toBe(90);
-      expect(heroBox?.height).toBe(680);
-      expect(heroBox?.width).toBe(Math.min(width - 48, 1392));
+      expect(heroBox?.height).toBeGreaterThanOrEqual(460);
+      expect(heroBox?.height).toBeLessThanOrEqual(520);
+      expect(heroBox?.width).toBeLessThanOrEqual(1320);
+      expect((heroBox?.x ?? 0) + (heroBox?.width ?? 0)).toBeLessThanOrEqual(
+        width - 40
+      );
       const navBox = await header.locator(".dealer-desktop-nav").boundingBox();
       expect(navBox?.x).toBe(heroBox?.x);
       expect(navBox?.width).toBe(heroBox?.width);
@@ -67,7 +71,12 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
       const search = hero.locator("form");
       expect((await search.boundingBox())?.height).toBe(76);
       const stock = page.locator('[data-slot="home-stock-panel"]');
-      expect((await stock.boundingBox())?.y).toBe(834);
+      const stockBox = await stock.boundingBox();
+      expect(stockBox?.x).toBe(heroBox?.x);
+      expect(stockBox?.width).toBe(heroBox?.width);
+      expect(stockBox?.y).toBeGreaterThan(
+        (heroBox?.y ?? 0) + (heroBox?.height ?? 0)
+      );
       const stockGrid = page.locator('[data-slot="home-stock-grid"]');
       expect(
         await stockGrid.evaluate(
@@ -76,13 +85,16 @@ test("desktop follows the Boxcars hero, stock and page proportions", async ({
         )
       ).toBe(width < 1200 ? 3 : 4);
       await expect(stockGrid.locator("article")).toHaveCount(8);
+      expect(
+        (await stockGrid.locator("article").first().boundingBox())?.y
+      ).toBeLessThan(900);
       if (width === 1440 && locale === "en") {
         expect((await search.boundingBox())?.width).toBe(1090);
         expect(
           await hero
             .locator("h1")
             .evaluate((element) => getComputedStyle(element).fontSize)
-        ).toBe("70px");
+        ).toBe("60px");
       }
       for (const path of [
         "/cars",
