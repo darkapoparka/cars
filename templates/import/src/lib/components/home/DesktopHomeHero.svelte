@@ -146,8 +146,8 @@
 		<DesktopDiscoveryPanel class="home-hero__box">
 			{#snippet header()}
 				<ModeTabs
-					surface="light"
-					appearance="attached"
+					surface="dark"
+					appearance="segmented"
 					value={mode}
 					onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
 					idPrefix="home-mode"
@@ -316,7 +316,7 @@
 		display: inline-flex;
 		align-items: center;
 		min-height: var(--bc-control-height-standard);
-		color: var(--bc-copy);
+		color: var(--desktop-discovery-copy, var(--bc-copy));
 		font-size: var(--bc-text-filter);
 		text-underline-offset: 4px;
 	}
@@ -329,7 +329,7 @@
 	.home-hero__finance p {
 		margin: 0;
 		font-size: var(--bc-text-body-lg);
-		color: var(--bc-copy);
+		color: var(--desktop-discovery-copy, var(--bc-copy));
 	}
 	.home-hero__intent-actions {
 		display: flex;

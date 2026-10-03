@@ -102,6 +102,7 @@
 	.inventory-toolbar__active .inventory-toolbar__clear {
 		background: transparent;
 		border-color: transparent;
+		color: var(--desktop-discovery-copy, var(--bc-ink));
 		text-decoration: underline;
 		text-underline-offset: var(--bc-space-1);
 	}

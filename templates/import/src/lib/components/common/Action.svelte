@@ -89,6 +89,7 @@
 	}
 	.strong {
 		background: var(--bc-ink);
+		border-color: var(--action-strong-border, transparent);
 		color: var(--bc-white);
 	}
 	.strong:hover {

@@ -21,7 +21,7 @@
 		label: string;
 		idPrefix?: string;
 		surface?: 'dark' | 'light';
-		appearance?: 'underline' | 'attached';
+		appearance?: 'underline' | 'attached' | 'segmented';
 		onchange?: (value: string) => void;
 	} = $props();
 
@@ -57,6 +57,7 @@
 	class="mobile-mode-tabs"
 	class:mobile-mode-tabs--light={surface === 'light'}
 	class:mobile-mode-tabs--attached={appearance === 'attached'}
+	class:mobile-mode-tabs--segmented={appearance === 'segmented'}
 	style:--mobile-mode-count={options.length}
 	role="tablist"
 	aria-label={label}
@@ -188,5 +189,32 @@
 	}
 	.mobile-mode-tabs--attached button:focus-visible {
 		outline-offset: -4px !important;
+	}
+	.mobile-mode-tabs--segmented {
+		gap: var(--bc-space-2);
+		border: 0;
+	}
+	.mobile-mode-tabs--segmented button {
+		align-items: center;
+		gap: var(--bc-space-2);
+		height: auto;
+		min-height: var(--bc-control-height-primary);
+		padding: var(--bc-space-2) var(--bc-space-4);
+		border: 1px solid transparent;
+		border-radius: var(--bc-radius-pill);
+		color: var(--bc-dark-muted);
+		font-size: var(--mode-tab-font-size, var(--bc-text-mode-tab));
+	}
+	.mobile-mode-tabs--segmented button:hover {
+		background: var(--bc-glass-surface);
+		color: var(--bc-white);
+	}
+	.mobile-mode-tabs--segmented button.active {
+		background: var(--bc-dark-surface);
+		border-color: var(--bc-glass-border);
+		color: var(--bc-white);
+	}
+	.mobile-mode-tabs--segmented button.active::after {
+		display: none;
 	}
 </style>

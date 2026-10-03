@@ -33,6 +33,8 @@ Desktop intro headings share `PageIntro` and start 32px below their frame's top 
 
 The public desktop editorial theme shares About's 28px body-font section headings, 20px panel/team/article headings, 18px process titles and 16px supporting copy. Vehicle-card titles retain their explicit 18px role and prices retain their stronger scale. Location actions use the existing compact 18px role and 44px targets. Hero headings retain the shared `PageIntro` contract. The separately requested mobile About trial uses body-font section headings at 22px/28px, names and process titles at 18px/24px, and copy at 16px/24px. Its hero retains the existing heading font and scale. Social targets remain 48px. [Desktop styling](DESKTOP-STYLING.md) records the accepted reference and rollout boundaries; [the desktop receipt](desktop-editorial-2026-10-02/README.md) records verification.
 
+Home's desktop discovery header opts into the segmented `MobileModeTabs` appearance with 20px/400 labels, 48px targets and a rounded black selected surface with a visible border. Selection retains the same text weight and keyboard contract. The frame and helper text use the desktop discovery theme aliases; light input typography and the mobile tab variants retain their existing values. See [the charcoal receipt](desktop-hero-content-2026-10-02/charcoal-2026-10-03/README.md).
+
 Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them with native selects to simplify implementation. The all-filters dialog has one scrolling body and a persistent action footer.
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.

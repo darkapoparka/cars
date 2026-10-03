@@ -16,37 +16,22 @@
 
 <style>
 	.desktop-discovery-panel {
+		--action-strong-border: var(--desktop-discovery-border, transparent);
 		width: 100%;
 		max-width: var(--bc-desktop-discovery-width);
 		margin-inline: auto;
 		border: 1px solid var(--desktop-discovery-border, var(--bc-border));
 		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section));
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
+		background: var(--desktop-discovery-surface, var(--bc-surface-raised));
+		color: var(--desktop-discovery-ink, var(--bc-ink));
 		text-align: start;
 		box-shadow: var(--desktop-discovery-shadow, var(--bc-shadow-panel));
 	}
 	.desktop-discovery-panel__header {
 		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section))
 			var(--desktop-discovery-radius, var(--bc-radius-section)) 0 0;
-		background: var(--bc-control);
-	}
-	.desktop-discovery-panel__header :global(.mobile-mode-tabs--attached) {
-		margin: 0;
-		border: 0;
-		border-radius: inherit;
-		background: transparent;
-	}
-	.desktop-discovery-panel__header :global(.mobile-mode-tabs--attached button) {
-		color: var(--bc-copy);
-	}
-	.desktop-discovery-panel__header :global(.mobile-mode-tabs--attached button:hover) {
-		background: var(--bc-control-hover);
-		color: var(--bc-ink);
-	}
-	.desktop-discovery-panel__header :global(.mobile-mode-tabs--attached button.active) {
-		background: var(--bc-surface-raised);
-		color: var(--bc-ink);
+		padding: var(--bc-space-3) var(--bc-space-5) 0;
+		background: inherit;
 	}
 	.desktop-discovery-panel__body {
 		--desktop-discovery-control-radius: var(--bc-radius-pill);
@@ -59,6 +44,8 @@
 		border-radius: inherit;
 	}
 	.desktop-discovery-panel__body.has-header {
+		min-height: calc(var(--bc-desktop-discovery-panel-height) - var(--bc-space-2));
+		padding-top: var(--bc-space-3);
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
 	}

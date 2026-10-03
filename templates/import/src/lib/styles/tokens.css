@@ -344,6 +344,10 @@
 		--bc-desktop-card-heading: var(--bc-text-h5);
 		--desktop-discovery-radius: var(--bc-editorial-radius);
 		--desktop-discovery-shadow: var(--bc-editorial-shadow);
+		--desktop-discovery-surface: var(--bc-dark-hover);
+		--desktop-discovery-ink: var(--bc-white);
+		--desktop-discovery-copy: var(--bc-dark-muted);
+		--desktop-discovery-border: var(--bc-glass-surface);
 	}
 	.site-shell {
 		--bc-text-meta: 0.875rem;

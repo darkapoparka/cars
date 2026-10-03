@@ -19,7 +19,9 @@ The Treido reference source is `L:/PLATFORMS/treido-eu-global/app/apps/web/src/f
 
 ## Keep the automotive identity
 
-The requested About/Contact hero follow-up uses `PageIntro`'s existing secondary-actions slot below the white primary action panel: configured social icons on About; address, directions and message shortcuts on Contact. Use existing tokens and contact/content owners, retain the shared title/artwork anchors and preserve mobile. See [the hero follow-up receipt](desktop-hero-content-2026-10-02/README.md).
+The owner subsequently accepted the [charcoal discovery frame](desktop-hero-content-2026-10-02/charcoal-2026-10-03/README.md), requesting cleaner Home mode tabs. From 768px, Home, Inventory, Services and the compact About/Contact action panels reuse the existing dark/glass palette through four theme aliases. Search fields and filter pills stay light, red actions retain their roles, and the right About/Contact action stays black with a subtle frame border. Home uses an explicit segmented `MobileModeTabs` appearance: rounded active choice, readable 20px/400 labels and 48px targets. Preserve the common hero frame/title anchors and independent mobile variants; light body cards continue to use the accepted About editorial surfaces.
+
+The requested About/Contact hero follow-up uses `PageIntro`'s existing secondary-actions slot below the compact primary action panel: configured social icons on About; address, directions and message shortcuts on Contact. Use existing tokens and contact/content owners, retain the shared title/artwork anchors and preserve mobile. See [the hero follow-up receipt](desktop-hero-content-2026-10-02/README.md).
 
 About and Contact pair the red left hero action with the existing `Action` `strong` variant on the right: the shared ink surface and white text. Grey secondary actions retain their existing roles elsewhere. [The action-color receipt](desktop-hero-content-2026-10-02/action-update/README.md) records this follow-up and mobile preservation.
 
