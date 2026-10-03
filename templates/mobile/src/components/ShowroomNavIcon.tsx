@@ -6,8 +6,8 @@ const icons = { cars: Car, services: Wrench, contact: MessageCircle } as const;
 const s = stylex.create({
   icon: {
     display: 'block',
-    width: 22,
-    height: 22,
+    width: 20,
+    height: 20,
     flexShrink: 0,
   },
 });
@@ -18,7 +18,7 @@ export function ShowroomNavIcon({ name }: { name: ShowroomNavIconName }) {
   const NavigationIcon = icons[name];
   return (
     <NavigationIcon
-      size={22}
+      size={20}
       strokeWidth={1.8}
       aria-hidden="true"
       focusable="false"

@@ -15,6 +15,7 @@ const s = stylex.create({
     paddingBlock: 4,
     minWidth: 0,
   },
+  backdrop: { backgroundColor: colors.stripe },
   flush: { paddingInline: 0, paddingBlock: 0 },
   button: {
     display: 'inline-flex',
@@ -65,7 +66,11 @@ export function ShowroomQuickPills({
   inset?: boolean;
 }) {
   return (
-    <div role="group" aria-label={label} {...stylex.props(s.row, !inset && s.flush)}>
+    <div
+      role="group"
+      aria-label={label}
+      {...stylex.props(s.row, inset && s.backdrop, !inset && s.flush)}
+    >
       {children}
     </div>
   );

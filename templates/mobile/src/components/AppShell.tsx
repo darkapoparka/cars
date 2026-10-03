@@ -22,60 +22,69 @@ const s = stylex.create({
     position: 'relative',
   },
   primary: {
-    paddingBottom: 'calc(6rem + env(safe-area-inset-bottom))',
+    paddingBottom: 'calc(5rem + env(safe-area-inset-bottom))',
     backgroundColor: colors.stripe,
   },
   nav: {
     position: 'fixed',
-    bottom: 'calc(12px + env(safe-area-inset-bottom))',
+    bottom: 'calc(10px + env(safe-area-inset-bottom))',
     left: '50%',
     transform: 'translateX(-50%)',
     width: 'calc(100% - 32px)',
-    maxWidth: 360,
+    maxWidth: 248,
     padding: 4,
     display: 'grid',
     gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-    gap: 4,
+    gap: 2,
     backgroundColor: colors.background,
     zIndex: 40,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 26,
-    boxShadow: '0 8px 28px #17202b14, 0 2px 6px #17202b08',
+    borderRadius: 27,
+    boxShadow: '0 4px 18px #17202b12',
   },
   tab: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 3,
+    gap: 2,
     color: colors.muted,
-    backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     textDecoration: 'none',
     fontSize: 12,
-    lineHeight: '16px',
+    lineHeight: '14px',
     fontWeight: 500,
     minWidth: 0,
-    minHeight: 56,
-    paddingBlock: 6,
-    paddingInline: 8,
-    borderRadius: 21,
+    minHeight: 44,
+    paddingBlock: 2,
+    borderRadius: 22,
     textAlign: 'center',
     overflowWrap: 'anywhere',
     outlineColor: colors.text,
     outlineOffset: -4,
+    opacity: { default: 1, ':active': 0.7 },
+  },
+  iconSurface: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 36,
+    height: 24,
+    flexShrink: 0,
+    borderRadius: 12,
+    backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     transition: 'background-color 140ms, color 140ms',
   },
-  active: {
-    color: colors.text,
+  active: { color: colors.text },
+  activeIcon: {
     backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
   },
   toast: {
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)',
-    bottom: 'calc(100px + env(safe-area-inset-bottom))',
+    bottom: 'calc(84px + env(safe-area-inset-bottom))',
     maxWidth: 'calc(100% - 32px)',
     width: 'max-content',
     zIndex: 120,
@@ -128,7 +137,9 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <ShowroomNavIcon name={icon} />
+              <span {...stylex.props(s.iconSurface, pathname === href && s.activeIcon)}>
+                <ShowroomNavIcon name={icon} />
+              </span>
               <span>{label}</span>
             </Link>
           ))}
