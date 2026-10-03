@@ -6,16 +6,39 @@ test.beforeEach(({ isMobile }) => {
 	test.skip(Boolean(isMobile));
 });
 
-test('reference-style icon tabs connect to compact fields without changing the mobile tab variant', async ({
+test('desktop artwork tabs connect to compact fields without changing the mobile tab variant', async ({
 	page
 }) => {
 	await visit(page, '/');
 	const box = page.locator('.home-hero__box');
 	const tabs = box.getByRole('tab');
 	await expect(tabs).toHaveCount(4);
-	await expect(box.locator('.mode-tab-icon svg')).toHaveCount(4);
+	const artwork = box.locator('.mode-tab-artwork img');
+	await expect(artwork).toHaveCount(4);
 	for (const width of [768, 1024, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 900 });
+		await expect
+			.poll(() =>
+				artwork.evaluateAll((images) =>
+					images.every((node) => {
+						const image = node as HTMLImageElement;
+						const bounds = image.getBoundingClientRect();
+						const target = image.closest('button')!.getBoundingClientRect();
+						return (
+							image.complete &&
+							image.naturalWidth > 1 &&
+							image.alt === '' &&
+							bounds.width >= 40 &&
+							bounds.height >= 40 &&
+							bounds.x >= target.x &&
+							bounds.right <= target.right &&
+							bounds.y >= target.y &&
+							bounds.bottom <= target.bottom
+						);
+					})
+				)
+			)
+			.toBe(true);
 		const metrics = await box.locator('.hfp__field').evaluateAll((nodes) =>
 			nodes.map((n) => ({
 				height: n.getBoundingClientRect().height,

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
+	import { assetHref, emptyImage } from '$lib/utils/assets';
 	type MobileModeOption = {
+		artwork?: { src: string; width: number; height: number };
 		icon?: Component<{ size?: number; strokeWidth?: number }>;
 		label: string;
 		panelId?: string;
@@ -69,6 +71,7 @@
 			data-mode={option.value}
 			role="tab"
 			class:active={value === option.value}
+			class:has-artwork={Boolean(option.artwork)}
 			aria-selected={value === option.value}
 			aria-controls={option.panelId}
 			tabindex={value === option.value ? 0 : -1}
@@ -76,7 +79,22 @@
 			onkeydown={(event) => handleKeydown(event, index)}
 		>
 			<span class="mode-tab-content">
-				{#if option.icon}{@const Icon = option.icon}<span class="mode-tab-icon" aria-hidden="true"
+				{#if option.artwork}
+					<span class="mode-tab-icon mode-tab-artwork" aria-hidden="true">
+						<picture>
+							<source media="(min-width: 768px)" srcset={assetHref(option.artwork.src)} />
+							<img
+								src={emptyImage}
+								width={option.artwork.width}
+								height={option.artwork.height}
+								alt=""
+								decoding="async"
+							/>
+						</picture>
+					</span>
+				{:else if option.icon}{@const Icon = option.icon}<span
+						class="mode-tab-icon"
+						aria-hidden="true"
 						><Icon
 							size={appearance === 'panel' ? 22 : 19}
 							strokeWidth={appearance === 'panel' ? 2 : 1.75}
@@ -227,6 +245,17 @@
 		border-radius: var(--bc-radius-pill);
 	}
 	@media (min-width: 768px) {
+		.mobile-mode-tabs--panel .mode-tab-artwork,
+		.mobile-mode-tabs--panel .mode-tab-artwork picture,
+		.mobile-mode-tabs--panel .mode-tab-artwork img {
+			display: block;
+			width: var(--bc-mode-tab-artwork-size);
+			height: var(--bc-mode-tab-artwork-size);
+			object-fit: contain;
+		}
+		.mobile-mode-tabs--panel button.has-artwork {
+			min-height: calc(var(--bc-mode-tab-artwork-size) + var(--bc-space-4));
+		}
 		.mobile-mode-tabs--panel .mode-tab-content {
 			position: relative;
 			display: inline-flex;
@@ -252,6 +281,9 @@
 		}
 		.mobile-mode-tabs--panel button.active .mode-tab-icon {
 			color: var(--bc-accent);
+		}
+		.mobile-mode-tabs--panel button.has-artwork.active .mode-tab-content::after {
+			bottom: calc(var(--bc-space-2) * -1);
 		}
 		.mobile-mode-tabs--panel button:hover {
 			background: var(--bc-control);

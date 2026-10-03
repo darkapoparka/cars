@@ -6,11 +6,7 @@
 	} from '$lib/auxero/home-five';
 	import Search from '@lucide/svelte/icons/search';
 	import CarFront from '@lucide/svelte/icons/car-front';
-	import Car from '@lucide/svelte/icons/car';
-	import Percent from '@lucide/svelte/icons/percent';
 	import HandCoins from '@lucide/svelte/icons/hand-coins';
-	import Tag from '@lucide/svelte/icons/tag';
-	import Globe from '@lucide/svelte/icons/globe';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import Banknote from '@lucide/svelte/icons/banknote';
 	import Gauge from '@lucide/svelte/icons/gauge';
@@ -23,7 +19,7 @@
 	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import { linkHref } from '$lib/utils/links';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import { homeHeroModes, desktopHomeCopy } from '$lib/content/home-discovery';
+	import { homeHeroModes, desktopHomeCopy, homeModeArtwork } from '$lib/content/home-discovery';
 	let {
 		hero,
 		english = false
@@ -156,20 +152,25 @@
 						{
 							value: 'buy',
 							label: copy.buy,
-							icon: Car,
+							artwork: homeModeArtwork.buy,
 							panelId: 'home-entry'
 						},
 						{
 							value: 'finance',
 							label: copy.finance,
-							icon: Percent,
+							artwork: homeModeArtwork.finance,
 							panelId: 'home-entry'
 						},
-						{ value: 'sell', label: copy.sell, icon: Tag, panelId: 'home-entry' },
+						{
+							value: 'sell',
+							label: copy.sell,
+							artwork: homeModeArtwork.sell,
+							panelId: 'home-entry'
+						},
 						{
 							value: 'import',
 							label: copy.import,
-							icon: Globe,
+							artwork: homeModeArtwork.import,
 							panelId: 'home-entry'
 						}
 					]}
