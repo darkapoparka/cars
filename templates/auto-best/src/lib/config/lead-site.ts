@@ -38,6 +38,7 @@ type LeadSiteConfig = {
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     desktopActionScenes: { import: SiteAssetPath; finance: SiteAssetPath };
     desktopServiceCards: Record<'inspection' | 'import' | 'leasing' | 'trade-in', SiteAssetPath>;
+    serviceIllustrations: Record<'collection' | 'showroom' | 'sell' | 'import' | 'finance' | 'car' | 'overview', SiteAssetPath>;
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
@@ -61,6 +62,17 @@ const mobileSell = '/assets/images/template/service-sell-front-v3.webp' as const
 const mobileImport = '/assets/images/template/service-import-front-v3.webp' as const;
 const mobileContact = '/assets/images/template/contact-showroom-banner-v1.webp' as const;
 const mobileGuides = '/assets/images/template/blog-advice-banner-v1.webp' as const;
+
+// One approved silver family feeds Home, About, menus and service journeys.
+const serviceIllustrations = {
+  collection: '/assets/images/template/home-collection-silver-v1.webp',
+  showroom: '/assets/images/template/desktop-service-inspection-v2.webp',
+  sell: '/assets/images/template/service-valuation-silver-v2.webp',
+  import: '/assets/images/template/desktop-service-import-v2.webp',
+  finance: '/assets/images/template/service-leasing-silver-v3.webp',
+  car: '/assets/images/template/service-car-silver-v2.webp',
+  overview: '/assets/images/template/home-services-silver-v1.webp'
+} as const satisfies LeadSiteConfig['artwork']['serviceIllustrations'];
 
 const vehicleCutouts = {
   silver: '/assets/images/lead/day-night-cutout-silver-v1.webp?v=profile-1',
@@ -172,30 +184,31 @@ export const leadSite = {
     contactHero: {
       desktop: '/assets/images/lead/day-night-contact-hero-v2.webp',
       generalMobile: mobileContact,
-      sellMobile: '/assets/images/lead/day-night-sell-banner-v1.webp',
-      importMobile: '/assets/images/lead/day-night-import-banner-v1.webp',
+      sellMobile: serviceIllustrations.sell,
+      importMobile: serviceIllustrations.import,
       support: '/assets/images/lead/day-night-contact-phone-red-v1.webp'
     },
     serviceBanners: {
-      sell: '/assets/images/template/service-sell-banner-v1.webp',
-      import: '/assets/images/template/service-import-banner-v1.webp'
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import
     },
     serviceBackground: '/assets/images/template/home-section-body-backdrop-v1.webp',
     homeActionScenes: {
-      sell: mobileSell,
-      import: mobileImport,
-      finance: '/assets/images/template/home-action-finance-v3.webp'
+      sell: serviceIllustrations.sell,
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
     },
     desktopActionScenes: {
-      import: '/assets/images/template/home-import-front-v4.webp',
-      finance: '/assets/images/template/home-finance-front-v4.webp'
+      import: serviceIllustrations.import,
+      finance: serviceIllustrations.finance
     },
     desktopServiceCards: {
-      inspection: '/assets/images/template/desktop-service-inspection-v2.webp',
-      import: '/assets/images/template/desktop-service-import-v2.webp',
-      leasing: '/assets/images/template/desktop-service-leasing-v2.webp',
-      'trade-in': '/assets/images/template/desktop-service-trade-in-v1.webp'
+      inspection: serviceIllustrations.showroom,
+      import: serviceIllustrations.import,
+      leasing: serviceIllustrations.finance,
+      'trade-in': serviceIllustrations.sell
     },
+    serviceIllustrations,
     blogHero: mobileGuides,
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',
     sectionBanners: {
@@ -204,10 +217,10 @@ export const leadSite = {
     },
     discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
     home: {
-      collection,
-      sell: mobileSell,
-      sellCompact: mobileSell,
-      import: mobileImport
+      collection: serviceIllustrations.collection,
+      sell: serviceIllustrations.sell,
+      sellCompact: serviceIllustrations.sell,
+      import: serviceIllustrations.import
     },
     routeHero: {
       standard: {

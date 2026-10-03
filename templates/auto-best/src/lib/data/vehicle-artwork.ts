@@ -1,4 +1,5 @@
 import { leadSite, type LeadHeroVehiclePair, type LeadVehicleArtwork } from '$config/lead-site';
+import { frameIllustration, serviceIllustrationArtwork } from '$data/feature-artwork';
 
 // Alpha bounds measured at opacity > 128; preserve natural proportions when aligning artwork.
 export const vehicleArtwork = {
@@ -58,7 +59,7 @@ export type MobileHeroScene = keyof typeof mobileHeroArtwork;
 
 // The exact same central vehicle is rendered in both service heroes. Only side details change.
 export const mobileServiceArtwork = {
-  car: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [298.5, 0, 600, 400] },
+  car: frameIllustration(serviceIllustrationArtwork.car, 600 / 400),
   sell: {
     left: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [0, 0, 300, 400] },
     right: { src: mobileHeroArtwork.sell.src, width: 1200, height: 400, crop: [900, 0, 300, 400] }
@@ -70,5 +71,5 @@ export const mobileServiceArtwork = {
 } as const;
 
 export const mobileHeroRegions = {
-  home: { src: leadSite.artwork.mobileHero.home, width: 1200, height: 660, crop: [8, 110, 1170, 443] }
+  home: frameIllustration(serviceIllustrationArtwork.collection, 1170 / 443)
 } as const;

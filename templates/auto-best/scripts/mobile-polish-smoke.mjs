@@ -164,6 +164,8 @@ try {
       };
       try {
         await visit('/');
+        if (width >= 768) assert.equal(await page.locator('.dn-mobile-services').isVisible(), false,
+          'The service overview does not change the desktop Home composition');
         if (width < 768) {
           const homeCopy = await page.locator('.dn-mobile-core-card strong, .dn-mobile-core-card small, #featured-title').evaluateAll(elements => elements.map(el => {
             const box = el.getBoundingClientRect();
@@ -185,9 +187,21 @@ try {
           assert(homeArt.every(Boolean), 'Service artwork stays inside its card and clear of the text');
           const actionImages = await page.locator('.dn-mobile-core-card img').evaluateAll(images => images.map(image => image.getAttribute('src')));
           assert.equal(new Set(actionImages).size, 4, 'Each service has distinct imagery');
-          assert.match(actionImages[1], /service-sell-front-v3/);
-          assert.match(actionImages[2], /service-import-front-v3/);
-          assert.match(actionImages[3], /home-action-finance-v3/);
+          assert.match(actionImages[0], /home-collection-silver-v1/);
+          assert.match(actionImages[1], /service-valuation-silver-v2/);
+          assert.match(actionImages[2], /desktop-service-import-v2/);
+          assert.match(actionImages[3], /service-leasing-silver-v3/);
+          const services = page.locator('.dn-mobile-services__card');
+          await fits(services);
+          assert.equal(await services.getAttribute('href'), `/${locale}/about-us#process`,
+            'The service overview reaches the existing localized service section');
+          const placement = await services.evaluate(card => {
+            const box = card.getBoundingClientRect();
+            const brands = document.querySelector('.dn-brand-section').getBoundingClientRect();
+            const advice = document.querySelector('.dn-editorial').getBoundingClientRect();
+            return box.left >= 0 && box.right <= innerWidth && box.top >= brands.bottom && box.bottom <= advice.top;
+          });
+          assert(placement, 'The overview fits between brands and advice without widening the page');
           await capture('home');
           await page.locator('.dn-mobile-core-actions').scrollIntoViewIfNeeded();
           await capture('home-actions');

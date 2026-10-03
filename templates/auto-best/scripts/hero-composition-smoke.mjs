@@ -9,7 +9,7 @@ try {
     const page=await browser.newPage({viewport:{width,height:844},reducedMotion:'reduce'});
     await page.context().addCookies([{name:'cars_locale',value:locale,url:base},{name:'cars_prompt',value:'v1',url:base}]);
     const errors=[];page.on('pageerror',e=>errors.push(e.message));
-    let sellCarPixels, sellCarBox;
+    let sellCarRendering, sellCarBox;
     for(const topic of ['home','trade-in','import']) {
       await page.goto(`${base}/${locale}${topic==='home'?'':'/contact?topic='+topic}`,{waitUntil:'networkidle',timeout:60000});
       const hero=page.locator(width<768?'.dn-hero-vehicles':'.dn-desktop-hero-scene').first();
@@ -26,17 +26,21 @@ try {
         if(topic!=='home') {
           const car=main.locator('.dn-hero-vehicles__shared-car');
           const carImage=car.locator('img');
-          assert.match(await carImage.evaluate(e=>e.currentSrc),/\/service-sell-front-v3(?:-480)?\.webp$/,'Both routes use the exact same car source or its reviewed responsive rendition');
+          assert.match(await carImage.evaluate(e=>e.currentSrc),/\/service-car-silver-v2\.webp$/,'Both routes use the exact same approved silver estate cutout');
           const carBox=await car.boundingBox();
-          const pixels=await car.screenshot({path:`${output}/${locale}-${width}-${topic}-car.png`});
-          if(topic==='trade-in') { sellCarPixels=pixels;sellCarBox=carBox; }
+          await car.screenshot({path:`${output}/${locale}-${width}-${topic}-car.png`});
+          const rendering=await carImage.evaluate(async image=>{
+            const canvas=document.createElement('canvas');canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;
+            const context=canvas.getContext('2d');context.drawImage(image,0,0);
+            const pixels=context.getImageData(0,0,canvas.width,canvas.height).data;
+            const digest=await crypto.subtle.digest('SHA-256',pixels);
+            return {pixels:[...new Uint8Array(digest)],dimensions:[canvas.width,canvas.height],imageStyle:image.getAttribute('style'),frameStyle:image.closest('.dn-artwork-region').getAttribute('style')};
+          });
+          if(topic==='trade-in') { sellCarRendering=rendering;sellCarBox=carBox; }
           else {
             assert.deepEqual(carBox,sellCarBox,'Car position and size do not move between Sell and Import');
-            const difference=await page.evaluate(async ({before,after})=>{
-              const decode=async (base64)=>{const image=new Image();image.src='data:image/png;base64,'+base64;await image.decode();const canvas=document.createElement('canvas');canvas.width=image.width;canvas.height=image.height;const ctx=canvas.getContext('2d');ctx.drawImage(image,0,0);return ctx.getImageData(0,0,image.width,image.height).data;};
-              const a=await decode(before),b=await decode(after);let changed=0,maxDelta=0;for(let i=0;i<a.length;i++){const delta=Math.abs(a[i]-b[i]);if(delta){changed++;maxDelta=Math.max(maxDelta,delta);}}return {ratio:changed/a.length,maxDelta};
-            },{before:sellCarPixels.toString('base64'),after:pixels.toString('base64')});
-            assert(difference.ratio<.001&&difference.maxDelta<=1,JSON.stringify({message:'Car pixels differ',locale,width,difference}));
+            // Compare the transparent car itself; each journey owns its background.
+            assert.deepEqual(rendering,sellCarRendering,'Both services render identical car pixels and crop styles');
           }
           for(const img of await main.locator('.dn-hero-vehicles__detail img').all()) {
             assert.match(await img.evaluate(e=>e.currentSrc),new RegExp('/service-'+(topic==='trade-in'?'sell':'import')+'-front-v3(?:-480)?\\.webp$'),'Only supporting artwork changes by service');

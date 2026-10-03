@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-10-03T23:49:29.908Z",
+  "runtime": "Node 22.20.0",
+  "command": "npm run validate",
+  "passed": true,
+  "svelte": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "productionBuild": "passed",
+  "browserCases": {
+    "hero": 8,
+    "mobilePolish": 8,
+    "desktop": 8,
+    "passed": 24
+  },
+  "nativeBeforeAfter": {
+    "aboutCards": "same frames",
+    "homeCards": "same frames",
+    "homeHero": "same frame",
+    "sellHeroAndForm": "same frames",
+    "consoleErrorsAndWarnings": 0
+  },
+  "scope": "Local working checkout; includes pre-existing desktop/content drafts. Scoped integration excludes those drafts. Not a template promotion or dealer deployment."
+}

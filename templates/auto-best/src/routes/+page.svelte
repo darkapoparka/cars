@@ -9,6 +9,7 @@
   import BodyTypes from '$components/home/BodyTypes.svelte';
   import InventorySection from '$components/home/InventorySection.svelte';
   import BrandSection from '$components/home/BrandSection.svelte';
+  import MobileServicesOverview from '$components/home/MobileServicesOverview.svelte';
   import Editorial from '$components/home/Editorial.svelte';
   import TrustActions from '$components/home/TrustActions.svelte';
   import VideoSection from '$components/home/VideoSection.svelte';
@@ -30,6 +31,7 @@
   <div class="dn-home-slot dn-home-slot--inventory"><InventorySection /></div>
   <div class="dn-home-slot dn-home-slot--body"><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands"><BrandSection /></div>
+  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
   <div class="dn-home-slot dn-home-slot--editorial"><Editorial /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>

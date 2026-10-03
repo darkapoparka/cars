@@ -7,15 +7,14 @@
   import { getVehicleArtworkRatios } from '$data/vehicle-artwork';
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { serviceArtwork } from '$data/service-artwork';
-  import { featureArtwork } from '$data/feature-artwork';
-  import { leadSite } from '$config/lead-site';
+  import { featureArtwork, homeActionArtwork, illustrationVehicleArtwork } from '$data/feature-artwork';
   import OriginalActionIcon from '$components/ui/icons/OriginalActionIcon.svelte';
   let { group, variant = 'banners', mobileArtwork = true }: { group: 'browse' | 'ownership' | 'all'; variant?: 'banners' | 'cards'; mobileArtwork?: boolean } = $props();
 
   const actions = [
     {
       title: 'Вижте колекцията',
-      artwork: { src: leadSite.artwork.home.collection, width: 1200, height: 668, bounds: [21, 122, 1172, 552], view: 'front-pair' },
+      artwork: illustrationVehicleArtwork(homeActionArtwork.collection, 'front-pair'),
       tone: 'black',
       mobileTitle: 'Автомобили',
       mobileCta: 'Разгледай',
@@ -27,7 +26,7 @@
     },
     {
       title: 'Продажба или бартер',
-      artwork: { src: leadSite.artwork.home.sellCompact, width: 1200, height: 400, bounds: [0, 0, 1200, 400], view: 'front-service' },
+      artwork: illustrationVehicleArtwork(homeActionArtwork.sell, 'front-service'),
       tone: 'red',
       mobileTitle: 'Продай/Бартер',
       mobileCta: 'Заяви оценка',
@@ -39,7 +38,7 @@
     },
     {
       title: 'Внос по заявка',
-      artwork: { src: leadSite.artwork.desktopActionScenes.import, width: 1536, height: 1024, bounds: [32, 144, 1498, 927], normalizationBounds: [357, 148, 1199, 928], view: 'front-service' },
+      artwork: illustrationVehicleArtwork(homeActionArtwork.import, 'front-service'),
       tone: 'red',
       mobileTitle: 'Внос по заявка',
       mobileCta: 'Заяви внос',
@@ -51,7 +50,7 @@
     },
     {
       title: 'Собствен лизинг',
-      artwork: { src: leadSite.artwork.desktopActionScenes.finance, width: 1536, height: 1024, bounds: [45, 161, 1503, 945], normalizationBounds: [263, 161, 1281, 940], view: 'front-service' },
+      artwork: illustrationVehicleArtwork(homeActionArtwork.finance, 'front-service'),
       tone: 'black',
       mobileTitle: 'Лизинг',
       mobileCta: 'Виж условия',

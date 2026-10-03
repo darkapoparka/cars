@@ -8,11 +8,11 @@
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { vehicleArtwork } from '$data/vehicle-artwork';
   import { featuredVehicles } from '$data/inventory';
-  import { leadSite } from '$config/lead-site';
+  import { homeActionArtwork } from '$data/feature-artwork';
 
   const vehicleCount = (count: number) => i18n.t("m_8cbaa55a52ef", { p0: count, p1: count === 1 ? i18n.t("m_2b2961a431b2") : i18n.t("m_1f58b1e965af") });
 
-  const allArtwork = { src: leadSite.artwork.home.collection, width: 1200, height: 668, crop: [0, 96, 1200, 500] as const };
+  const allArtwork = homeActionArtwork.collection;
 
   const budgetTiles = [
     {
