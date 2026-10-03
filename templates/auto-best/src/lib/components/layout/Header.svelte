@@ -310,14 +310,14 @@
 
           <div class="dn-mobile-controls">
             <a class="dn-mobile-control" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
-              <MobileNavIcon name="location" size={22} />
+              <MobileNavIcon name="location" size={26} />
             </a>
             <a
               class="dn-mobile-control dn-mobile-control--call"
               {...phoneLinkAttributes}
               aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}
             >
-              <MobileNavIcon name="phone" size={22} />
+              <MobileNavIcon name="phone" size={26} />
             </a>
             {#if vehicleDetailHeader}
             <button

@@ -71,10 +71,10 @@ try {
           return await checkReflow(page);
         } finally { await page.close(); }
       });
-      for (const name of ['filters', 'home-make', 'make', 'preferences', 'import', 'sell']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
+      for (const name of ['filters', 'home-make', 'make', 'preferences', 'import', 'sell', 'import-guide', 'sell-guide']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
         const page = await context.newPage();
         page.setDefaultNavigationTimeout(60000);
-        const route = name === 'make' ? '/listing-grid' : name === 'import' ? '/contact?topic=import' : name === 'sell' ? '/contact?topic=trade-in' : '';
+        const route = name === 'make' ? '/listing-grid' : name.startsWith('import') ? '/contact?topic=import' : name.startsWith('sell') ? '/contact?topic=trade-in' : '';
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });
           if (name === 'filters' || name === 'home-make') {
@@ -87,6 +87,8 @@ try {
             const trigger = page.locator('.dn-mobile-bottom-nav button');
             await trigger.click();
             await page.locator('.dn-mobile-menu [data-locale-selector]').click();
+          } else if (name.endsWith('-guide')) {
+            await page.locator('.dn-service-guide button[aria-haspopup=dialog]').click();
           } else {
             const fields = name === 'import' ? { link: 'https://example.com/vehicle' } : { make: 'Audi', model: 'A6', year: '2020', mileage: '85000' };
             await fillServiceEntry(page, fields);

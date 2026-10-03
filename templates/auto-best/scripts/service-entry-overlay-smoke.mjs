@@ -28,6 +28,76 @@ async function editorReflow(page) {
     } finally { await style.evaluate(element => element.remove()); }
   }
 }
+async function guideCheck(page, locale, width, topic) {
+  const header = await page.locator('.dn-mobile-control').evaluateAll(actions => actions.map(action => {
+    const box = action.getBoundingClientRect(), icon = action.querySelector('svg').getBoundingClientRect();
+    return { width: box.width, height: box.height, icon: icon.width };
+  }));
+  assert.deepEqual(header, [{ width: 44, height: 44, icon: 26 }, { width: 44, height: 44, icon: 26 }]);
+  const trigger = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
+  const draft = await serviceEntry(page).locator('.dn-service-entry__field').innerText();
+  assert.equal(await trigger.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)');
+  assert.equal(await trigger.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
+  const cardLayout = await trigger.evaluate(button => {
+    const box = button.getBoundingClientRect(), arrow = button.querySelector('svg').getBoundingClientRect();
+    return { corner: parseFloat(getComputedStyle(button).borderRadius), arrowOffset: arrow.y + arrow.height / 2 - box.y - box.height / 2 };
+  });
+  assert(cardLayout.corner >= 16 && Math.abs(cardLayout.arrowOffset) <= 1, 'The white guide card centers its arrow beside both copy lines');
+  const entryLayout = await serviceEntry(page).evaluate(entry => {
+    const tabs = entry.querySelector('.dn-service-entry__choices').getBoundingClientRect();
+    const field = entry.querySelector('.dn-service-entry__field').getBoundingClientRect();
+    const title = document.querySelector('#service-form-title');
+    return { tabWidth: tabs.width, fieldWidth: field.width, centerOffset: tabs.x + tabs.width / 2 - field.x - field.width / 2, titleClip: getComputedStyle(title).clipPath };
+  });
+  assert(entryLayout.tabWidth < entryLayout.fieldWidth && Math.abs(entryLayout.centerOffset) <= 1, 'Mobile service tabs stay compact and centered above the field');
+  assert.equal(entryLayout.titleClip, 'inset(50%)', 'The form keeps its accessible title without a visible mobile heading');
+  const preview = await trigger.locator('.dn-service-process-preview__copy').evaluate(copy => {
+    const box = copy.getBoundingClientRect();
+    return { height: box.height, lineHeight: parseFloat(getComputedStyle(copy).lineHeight), fits: copy.scrollWidth <= copy.clientWidth + 1 };
+  });
+  assert(preview.fits && preview.height <= preview.lineHeight + 1, 'The supporting explanation fits one complete line at phone widths');
+  await trigger.click();
+  const info = page.locator(topic === 'trade-in' ? '#tradein-info-dialog' : '#import-info-dialog');
+  assert(await info.isVisible());
+  assert.equal(await info.locator('li').count(), 6);
+  assert(await info.locator('h2').evaluate(heading => heading === document.activeElement));
+  assert.equal(await page.locator('.dn-mobile-bottom-nav').isVisible(), false);
+  assert.equal(await page.evaluate(() => getComputedStyle(document.body).overflow), 'hidden');
+  await page.keyboard.press('Tab');
+  await page.keyboard.press('Shift+Tab');
+  assert(await info.evaluate(dialog => dialog.contains(document.activeElement)));
+  await page.screenshot({ path: `${output}/${locale}-${width}-${topic}-guide.png` });
+  await page.keyboard.press('Escape');
+  assert.equal(await info.isVisible(), false);
+  assert(await trigger.evaluate(button => button === document.activeElement));
+  assert(await page.locator('.dn-mobile-bottom-nav').isVisible());
+  await trigger.click();
+  await info.locator('header button').click();
+  assert.equal(await info.isVisible(), false);
+  await trigger.click();
+  await info.locator('footer button').click();
+  assert.equal(await info.isVisible(), false);
+  await trigger.click();
+  const box = await info.boundingBox();
+  assert(box.y > 24);
+  await page.mouse.click(8, 8);
+  assert.equal(await info.isVisible(), false, 'Tapping the backdrop dismisses the guide');
+  await trigger.click();
+  const handle = await info.locator('[class*="__grabber"]').boundingBox();
+  await page.mouse.move(handle.x + handle.width / 2, handle.y + handle.height / 2);
+  await page.mouse.down();
+  await page.mouse.move(handle.x + handle.width / 2, handle.y + handle.height / 2 + 100, { steps: 5 });
+  await page.mouse.up();
+  assert.equal(await info.isVisible(), false, 'Dragging down dismisses the guide');
+  await trigger.click();
+  await info.locator('[class*="__grabber"]').press('Enter');
+  assert.equal(await info.isVisible(), false, 'The drag handle also supports keyboard dismissal');
+  await trigger.click();
+  await page.setViewportSize({ width: 768, height: 844 });
+  assert.equal(await info.isVisible(), false, 'Entering the desktop service layout releases the modal');
+  await page.setViewportSize({ width, height: 844 });
+  assert.equal(await serviceEntry(page).locator('.dn-service-entry__field').innerText(), draft, 'Reading guidance preserves saved car details');
+}
 try {
   for (const locale of ['bg', 'en']) for (const width of [320, 390, 430]) await suite.check(`${locale} ${width} service entry overlays`, async () => {
     const page = await browser.newPage({ viewport: { width, height: 844 }, reducedMotion: 'reduce' });
@@ -37,6 +107,7 @@ try {
     await page.context().addCookies([{ name: 'cars_prompt', value: 'v1', url: base }, { name: 'cars_locale', value: locale, url: base }]);
     try {
       await page.goto(`${base}/${locale}/contact?topic=trade-in`, { waitUntil: 'networkidle' });
+      await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' });
       const sell = serviceEntry(page), sellField = sell.locator('.dn-service-entry__field');
       assert.equal(await sell.locator('input:visible,textarea:visible').count(), 0);
       assert.equal(await sellField.count(), 1);
@@ -58,6 +129,7 @@ try {
       await editor.locator('[name=model]').fill('Discarded');
       await editor.locator('.dn-service-editor__cancel').click();
       assert.match(await sellField.innerText(), /Audi A6/);
+      await guideCheck(page, locale, width, 'trade-in');
       await page.screenshot({ path: `${output}/${locale}-${width}-sell.png` });
       await serviceAction(page).click();
       await fullscreen(page, '.dn-tradein-dialog[open]');
@@ -70,6 +142,7 @@ try {
       assert(await serviceAction(page).evaluate(action => action === document.activeElement));
 
       await page.goto(`${base}/${locale}/contact?topic=import`, { waitUntil: 'networkidle' });
+      await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' });
       const entry = serviceEntry(page), field = entry.locator('.dn-service-entry__field');
       assert.equal(await entry.locator('input:visible,textarea:visible').count(), 0);
       await field.click();
@@ -88,6 +161,7 @@ try {
       await fillServiceEntry(page, { make: 'BMW', model: 'X5', budget: '40000', year: '2022' });
       assert.match(await field.innerText(), /BMW X5 2022/);
       await page.setViewportSize({ width, height: 844 });
+      await guideCheck(page, locale, width, 'import');
       await page.screenshot({ path: `${output}/${locale}-${width}-import.png` });
       await field.click();
       await fullscreen(page, '.dn-service-editor[open]');

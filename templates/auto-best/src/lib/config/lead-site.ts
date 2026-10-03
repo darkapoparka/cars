@@ -34,6 +34,7 @@ type LeadSiteConfig = {
     desktopHeroScenes: Record<HeroVehiclePair, DesktopHeroArtwork>;
     contactHero: { desktop: SiteAssetPath; generalMobile: SiteAssetPath; sellMobile: SiteAssetPath; importMobile: SiteAssetPath; support: SiteAssetPath };
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
+    serviceBackground: SiteAssetPath;
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
@@ -177,6 +178,7 @@ export const leadSite = {
       sell: '/assets/images/template/service-sell-banner-v1.webp',
       import: '/assets/images/template/service-import-banner-v1.webp'
     },
+    serviceBackground: '/assets/images/template/home-section-body-backdrop-v1.webp',
     homeActionScenes: {
       sell: mobileSell,
       import: mobileImport,

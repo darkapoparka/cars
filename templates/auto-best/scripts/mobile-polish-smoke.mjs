@@ -211,7 +211,7 @@ try {
           assert(search.labelFits, 'The default make/model prompt fits on one line without truncation');
           assert.equal(search.tapHighlight, 'rgba(0, 0, 0, 0)', 'Taps do not paint a native blue overlay');
           const headerIcons = await page.locator('.dn-mobile-control svg').evaluateAll(icons => icons.map(icon => icon.getBoundingClientRect().width));
-          assert.deepEqual(headerIcons, [22, 22], 'Header location and phone glyphs stay proportionate to the wordmark');
+          assert.deepEqual(headerIcons, [26, 26], 'Header location and phone glyphs remain legible within 44px targets');
           await fits(page.locator('.dn-mobile-control'));
           await page.locator('.dn-quick-search__trigger').click();
           assert.equal(await page.locator('#quick-search-input').evaluate(input => getComputedStyle(input).fontSize), '18px',
@@ -421,29 +421,36 @@ try {
             })));
             assert(editorFields.every(input => input.height === 44 && input.font === '18px'));
             await page.keyboard.press('Escape');
-            const banner = page.locator('.dn-service-banner');
-            await banner.scrollIntoViewIfNeeded();
-            await banner.locator('img').evaluate(image => image.decode());
-            assert(await banner.isVisible());
-            await fits(banner.locator('a'));
-            const callControl = await compactControl(banner.locator('a'), { icon: true });
-            assert(callControl.width < 180, 'Call uses its content width rather than the full entry CTA width');
-            assert.match(await banner.locator('a').getAttribute('href'), /^tel:/);
-            assert.equal(await banner.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
-            assert(await banner.locator('img').evaluate(image => image.naturalWidth > 1));
-            assert(await banner.locator('h2').evaluate(heading => {
-              const box = heading.getBoundingClientRect();
-              return box.height <= parseFloat(getComputedStyle(heading).lineHeight) + 1;
-            }), 'The service banner heading uses the full card width and fits one line');
-            const bannerLayout = await banner.evaluate(card => {
-              const copy = card.querySelector('p').getBoundingClientRect(), action = card.querySelector('a').getBoundingClientRect();
-              const box = card.getBoundingClientRect();
-              return { gap: action.top - copy.bottom, height: box.height, bottom: box.bottom - action.bottom };
-            });
-            assert(bannerLayout.gap >= 12 && bannerLayout.gap <= 16 && Math.abs(bannerLayout.bottom - 16) <= 1 && bannerLayout.height < 180,
-              `Banner CTA follows its text in the smaller card: ${JSON.stringify(bannerLayout)}`);
+            const guide = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
+            await guide.scrollIntoViewIfNeeded();
+            await fits(guide);
+            assert.equal(await guide.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)',
+              'Process guidance uses a compact white card below the form');
+            assert.equal(await guide.locator('[data-icon-family="hugeicons-rounded"]').count(), 1);
+            assert(await guide.locator('.dn-service-process-preview__copy').innerText());
+            const entryBeforeGuide = await field.innerText();
+            await guide.click();
+            const info = page.locator(topic === 'trade-in' ? '#tradein-info-dialog' : '#import-info-dialog');
+            assert(await info.isVisible());
+            assert.equal(await info.locator('li').count(), 6, 'The guide explains preparation and three service steps');
+            assert(await info.locator('h2').evaluate(heading => heading === document.activeElement));
+            assert.equal(await page.locator('.dn-mobile-bottom-nav').isVisible(), false);
+            await page.keyboard.press('Tab');
+            await page.keyboard.press('Shift+Tab');
+            assert(await info.evaluate(dialog => dialog.contains(document.activeElement)), 'Focus remains in the guide');
+            await page.keyboard.press('Escape');
+            assert.equal(await info.isVisible(), false);
+            assert(await guide.evaluate(button => button === document.activeElement), 'Escape returns focus to the guide card');
+            assert(await page.locator('.dn-mobile-bottom-nav').isVisible());
+            await guide.click();
+            await info.locator('footer button').click();
+            assert.equal(await info.isVisible(), false);
+            assert.equal(await field.innerText(), entryBeforeGuide, 'Reading guidance preserves the enquiry draft');
+            await guide.click();
+            await info.locator('header button').click();
+            assert.equal(await info.isVisible(), false);
           } else {
-            assert.equal(await page.locator('.dn-service-banner').isVisible(), false);
+            assert.equal(await page.locator('.dn-service-guide').isVisible(), false);
             await fits(page.locator('.dn-service-faq summary'));
             await page.locator('.dn-service-faq summary').first().click();
             assert.equal(await page.locator('.dn-service-faq details[open]').count(), 1);

@@ -5,6 +5,11 @@
 
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+  import ServiceProcessPreview from './ServiceProcessPreview.svelte';
+
+  let { inlineEntry = false }: { inlineEntry?: boolean } = $props();
+  const steps = [1, 2, 3] as const;
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -60,24 +65,32 @@
     else dragOffset = 0;
   }
 </script>
-<div class="dn-tradein-info-drawer">
+<svelte:window onresize={() => { if (inlineEntry && window.innerWidth >= 768) closeDrawer(); }} />
+<div class="dn-tradein-info-drawer" class:dn-tradein-info-drawer--inline={inlineEntry}>
   <button
     class="dn-tradein-info-drawer__peek"
     type="button"
     bind:this={trigger}
     aria-haspopup="dialog"
+    aria-controls="tradein-info-dialog"
     onclick={openDrawer}
     onpointerdown={startPeekDrag}
     onpointerup={endPeekDrag}
   >
-    <span class="dn-tradein-info-drawer__handle" aria-hidden="true"></span>
-    <span>{i18n.t("m_15f4f5be4ade")}</span>
-    <Icon name="chevron-down" size={16} />
+    {#if inlineEntry}
+      <ServiceProcessPreview service="sell" />
+    {:else}
+      <span class="dn-tradein-info-drawer__handle" aria-hidden="true"></span>
+      <span>{i18n.t("m_15f4f5be4ade")}</span>
+      <Icon name="chevron-down" size={16} />
+    {/if}
   </button>
 </div>
 
 <dialog onkeydown={trapDialogTab}
   class="dn-tradein-info-dialog"
+  id="tradein-info-dialog"
+  class:dn-tradein-info-dialog--inline={inlineEntry}
   bind:this={dialog}
   aria-labelledby="tradein-info-title"
   onclose={handleClose}
@@ -88,6 +101,7 @@
       class="dn-tradein-info-sheet__grabber"
       type="button"
       aria-label={i18n.t("m_be060a506520")}
+      onclick={(event) => { if (event.detail === 0) closeDrawer(); }}
       onpointerdown={startSheetDrag}
       onpointermove={moveSheetDrag}
       onpointerup={endSheetDrag}
@@ -97,7 +111,7 @@
     <header class="dn-tradein-info-sheet__header">
       <h2 id="tradein-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_15f4f5be4ade")}</h2>
       <button class="dn-tradein-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
-        <Icon name="x" size={21} />
+        {#if inlineEntry}<MobileActionIcon name="close" size={24} />{:else}<Icon name="x" size={21} />{/if}
       </button>
     </header>
 
@@ -114,14 +128,21 @@
       <section class="dn-tradein-info-group dn-tradein-info-process" aria-labelledby="tradein-next-title">
         <h3 id="tradein-next-title">{i18n.t("m_f388d3f655d4")}</h3>
         <ol class="dn-tradein-info-steps">
-          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_c04a33c821e7")}</strong></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_39dffe73a926")}</strong></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_40e24d85be1c")}</strong></p></li>
+          {#if inlineEntry}
+            {#each steps as number (number)}
+              <li><span aria-hidden="true">{number}.</span><p><strong>{i18n.t(`service.sell.step${number}.copy`)}</strong></p></li>
+            {/each}
+          {:else}
+            <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_c04a33c821e7")}</strong></p></li>
+            <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_39dffe73a926")}</strong></p></li>
+            <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_40e24d85be1c")}</strong></p></li>
+          {/if}
         </ol>
       </section>
 
+      {#if inlineEntry}<p class="dn-tradein-info-demo">{i18n.t('service.demo')}</p>{/if}
       <footer class="dn-tradein-info-actions">
-        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} <Icon name="arrow-right" size={18} /></button>
+        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} {#if inlineEntry}<MobileActionIcon name="arrow" size={18} />{:else}<Icon name="arrow-right" size={18} />{/if}</button>
       </footer>
     </div>
   </div>
@@ -147,6 +168,7 @@
     cursor: pointer;
   }
   .dn-tradein-info-drawer__peek :global(svg) { transform: rotate(180deg); }
+  .dn-tradein-info-drawer__peek:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
   .dn-tradein-info-drawer__handle { display: none; }
 
   :global(body:has(.dn-tradein-info-dialog[open])) { overflow: hidden; }
@@ -296,8 +318,20 @@
     .dn-tradein-info-group { gap: var(--dn-space-2); }
     .dn-tradein-info-list, .dn-tradein-info-steps { gap: var(--dn-space-3); }
     .dn-tradein-info-list > li { min-height: 0; }
+    .dn-tradein-info-drawer--inline { position: static; width: 100%; margin: 0; transform: none; }
+    .dn-tradein-info-drawer--inline .dn-tradein-info-drawer__peek { display: flex; width: 100%; padding: var(--dn-space-4); border: 0; border-radius: var(--dn-radius-lg); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-card-shadow); text-align: left; }
+    .dn-tradein-info-drawer--inline .dn-tradein-info-drawer__peek :global(svg) { transform: none; }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-sheet__header h2 { white-space: normal; }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-process { padding: 0; background: transparent; }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-process :is(h3, strong),
+    .dn-tradein-info-dialog--inline .dn-tradein-info-process li > span { color: var(--dn-ink); }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-steps li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: var(--dn-space-2); }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-steps li > span { margin: 0; }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-steps strong { font-weight: var(--dn-weight-regular); }
+    .dn-tradein-info-dialog--inline .dn-tradein-info-actions button { width: min(280px, 100%); padding: var(--dn-space-3) var(--dn-space-4); white-space: normal; }
   }
 
+  .dn-tradein-info-demo { margin: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
   .dn-tradein-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }
   .dn-tradein-info-process :is(h3, strong) { color: var(--dn-white); }
   .dn-tradein-info-process li > span { color: var(--dn-white); }

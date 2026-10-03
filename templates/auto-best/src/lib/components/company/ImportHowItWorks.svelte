@@ -5,6 +5,11 @@
 
   import { tick } from 'svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
+  import ServiceProcessPreview from './ServiceProcessPreview.svelte';
+
+  let { inlineEntry = false }: { inlineEntry?: boolean } = $props();
+  const steps = [1, 2, 3] as const;
 
   let dialog: HTMLDialogElement;
   let trigger: HTMLButtonElement;
@@ -62,25 +67,33 @@
   }
 </script>
 
-<div class="dn-import-info-drawer">
+<svelte:window onresize={() => { if (inlineEntry && window.innerWidth >= 768) closeDrawer(); }} />
+<div class="dn-import-info-drawer" class:dn-import-info-drawer--inline={inlineEntry}>
   <button
     class="dn-import-info-drawer__peek"
     type="button"
     bind:this={trigger}
     aria-haspopup="dialog"
-    aria-label={i18n.t("m_0dc54277231e")}
+    aria-label={inlineEntry ? undefined : i18n.t("m_0dc54277231e")}
+    aria-controls="import-info-dialog"
     onclick={openDrawer}
     onpointerdown={startPeekDrag}
     onpointerup={endPeekDrag}
   >
-    <span class="dn-import-info-drawer__handle" aria-hidden="true"></span>
-    <span>{i18n.t("m_15f4f5be4ade")}</span>
-    <Icon name="chevron-down" size={16} />
+    {#if inlineEntry}
+      <ServiceProcessPreview service="import" />
+    {:else}
+      <span class="dn-import-info-drawer__handle" aria-hidden="true"></span>
+      <span>{i18n.t("m_15f4f5be4ade")}</span>
+      <Icon name="chevron-down" size={16} />
+    {/if}
   </button>
 </div>
 
 <dialog onkeydown={trapDialogTab}
   class="dn-import-info-dialog"
+  id="import-info-dialog"
+  class:dn-import-info-dialog--inline={inlineEntry}
   bind:this={dialog}
   aria-labelledby="import-info-title"
   onclose={handleClose}
@@ -91,6 +104,7 @@
       class="dn-import-info-sheet__grabber"
       type="button"
       aria-label={i18n.t("m_be060a506520")}
+      onclick={(event) => { if (event.detail === 0) closeDrawer(); }}
       onpointerdown={startSheetDrag}
       onpointermove={moveSheetDrag}
       onpointerup={endSheetDrag}
@@ -98,9 +112,9 @@
     ><span></span></button>
 
     <header class="dn-import-info-sheet__header">
-      <h2 id="import-info-title" tabindex="-1" bind:this={heading}>{i18n.t("m_0dc54277231e")}</h2>
+      <h2 id="import-info-title" tabindex="-1" bind:this={heading}>{i18n.t(inlineEntry ? 'm_15f4f5be4ade' : 'm_0dc54277231e')}</h2>
       <button class="dn-import-info-sheet__close dn-icon-button" type="button" aria-label={i18n.t("m_7d9eb7acb13e")} onclick={closeDrawer}>
-        <Icon name="x" size={21} />
+        {#if inlineEntry}<MobileActionIcon name="close" size={24} />{:else}<Icon name="x" size={21} />{/if}
       </button>
     </header>
 
@@ -117,14 +131,21 @@
       <section class="dn-import-info-group dn-import-info-process" aria-labelledby="import-next-title">
         <h3 id="import-next-title">{i18n.t("m_f388d3f655d4")}</h3>
         <ol class="dn-import-info-steps">
-          <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_e1acf5864937")}</strong></p></li>
-          <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_66f7d8b839bb")}</strong></p></li>
-          <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_8f02b9b0cf35")}</strong></p></li>
+          {#if inlineEntry}
+            {#each steps as number (number)}
+              <li><span aria-hidden="true">{number}.</span><p><strong>{i18n.t(`service.import.step${number}.copy`)}</strong></p></li>
+            {/each}
+          {:else}
+            <li><span aria-hidden="true">1.</span><p><strong>{i18n.t("m_e1acf5864937")}</strong></p></li>
+            <li><span aria-hidden="true">2.</span><p><strong>{i18n.t("m_66f7d8b839bb")}</strong></p></li>
+            <li><span aria-hidden="true">3.</span><p><strong>{i18n.t("m_8f02b9b0cf35")}</strong></p></li>
+          {/if}
         </ol>
       </section>
 
+      {#if inlineEntry}<p class="dn-import-info-demo">{i18n.t('service.demo')}</p>{/if}
       <footer class="dn-import-info-actions">
-        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} <Icon name="arrow-right" size={18} /></button>
+        <button type="button" onclick={closeDrawer}>{i18n.t("m_ed51f4a53cda")} {#if inlineEntry}<MobileActionIcon name="arrow" size={18} />{:else}<Icon name="arrow-right" size={18} />{/if}</button>
       </footer>
     </div>
   </div>
@@ -296,8 +317,20 @@
     .dn-import-info-group { gap: var(--dn-space-2); }
     .dn-import-info-list, .dn-import-info-steps { gap: var(--dn-space-3); }
     .dn-import-info-list > li { min-height: 0; }
+    .dn-import-info-drawer--inline { position: static; width: 100%; margin: 0; transform: none; }
+    .dn-import-info-drawer--inline .dn-import-info-drawer__peek { display: flex; width: 100%; padding: var(--dn-space-4); border: 0; border-radius: var(--dn-radius-lg); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-card-shadow); text-align: left; }
+    .dn-import-info-drawer--inline .dn-import-info-drawer__peek :global(svg) { transform: none; }
+    .dn-import-info-dialog--inline .dn-import-info-sheet__header h2 { white-space: normal; }
+    .dn-import-info-dialog--inline .dn-import-info-process { padding: 0; background: transparent; }
+    .dn-import-info-dialog--inline .dn-import-info-process :is(h3, strong),
+    .dn-import-info-dialog--inline .dn-import-info-process li > span { color: var(--dn-ink); }
+    .dn-import-info-dialog--inline .dn-import-info-steps li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: var(--dn-space-2); }
+    .dn-import-info-dialog--inline .dn-import-info-steps li > span { margin: 0; }
+    .dn-import-info-dialog--inline .dn-import-info-steps strong { font-weight: var(--dn-weight-regular); }
+    .dn-import-info-dialog--inline .dn-import-info-actions button { width: min(280px, 100%); padding: var(--dn-space-3) var(--dn-space-4); white-space: normal; }
   }
 
+  .dn-import-info-demo { margin: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
   .dn-import-info-process { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-ink); }
   .dn-import-info-process :is(h3, strong) { color: var(--dn-white); }
   .dn-import-info-process li > span { color: var(--dn-white); }
