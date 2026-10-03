@@ -5,7 +5,15 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopSocialLinks from './DesktopSocialLinks.svelte';
 
-  let { id, showSocialProfiles = true }: { id: string; showSocialProfiles?: boolean } = $props();
+  let {
+    id,
+    showSocialProfiles = true,
+    showPhoneAction = true
+  }: {
+    id: string;
+    showSocialProfiles?: boolean;
+    showPhoneAction?: boolean;
+  } = $props();
   const i18n = getI18n();
   const desktop = new MediaQuery('(min-width: 992px)', false);
   const coordinates = `${brand.showroomCoordinates.latitude},${brand.showroomCoordinates.longitude}`;
@@ -27,9 +35,11 @@
       </div>
     </dl>
     <div class="dn-desktop-showroom__actions">
-      <a class="dn-desktop-showroom__call" href={brand.phoneHref} aria-label={i18n.t('m_772c70f449af', { p0: brand.phone })}>
-        <Icon name="phone" size={18} />{brand.phone}
-      </a>
+      {#if showPhoneAction}
+        <a class="dn-desktop-showroom__call" href={brand.phoneHref} aria-label={i18n.t('m_772c70f449af', { p0: brand.phone })}>
+          <Icon name="phone" size={18} />{brand.phone}
+        </a>
+      {/if}
       <a class="dn-desktop-showroom__directions" href={directionsUrl} target="_blank" rel="noopener noreferrer">
         {i18n.t('m_c95356784006')}<Icon name="arrow-right" size={18} />
       </a>

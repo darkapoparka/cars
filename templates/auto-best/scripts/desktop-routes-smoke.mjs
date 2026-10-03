@@ -255,7 +255,7 @@ try {
                 const showroom = page.locator('.dn-desktop-showroom');
                 await showroom.locator('iframe').waitFor({ state: 'attached' });
                 assert(await showroom.isVisible(), 'Desktop uses one contact-and-map panel');
-                assert.equal(await showroom.locator('a[href^="tel:"]').count(), 1, 'Showroom has one primary phone action');
+                assert.equal(await showroom.locator('a[href^="tel:"]').count(), route === 'contact' ? 1 : 0, 'About keeps directions only; Contact retains its phone action');
                 assert.equal(await showroom.locator('iframe').count(), 1, 'Map is mounted on desktop');
                 assert.match(await showroom.locator('iframe').getAttribute('src'), /maps\.google\.com\/maps\?q=42\.648551,23\.341905/, 'Map uses the configured showroom coordinates');
                 for (const link of await showroom.locator('a[target="_blank"]').all()) assert.match(await link.getAttribute('rel'), /noopener/, 'External links isolate their browsing context');

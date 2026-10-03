@@ -56,7 +56,7 @@
 
 <section class="dn-about-showroom dn-section" aria-label={i18n.t("m_931269cbffaa")}>
   <div class="container">
-    <DesktopShowroom id="about-showroom-desktop-title" />
+    <DesktopShowroom id="about-showroom-desktop-title" showPhoneAction={false} />
     <div class="dn-about-showroom__card dn-about-showroom__mobile">
       <ShowroomMap />
     </div>
