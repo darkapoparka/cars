@@ -31,7 +31,7 @@ import { Button, IconButton, Modal, ui } from './ui';
 const s = stylex.create({
   categoryImage: {
     display: 'block',
-    width: 40,
+    width: 64,
     height: 40,
     objectFit: 'contain',
     flexShrink: 0,
@@ -247,9 +247,9 @@ export function ShowroomInventoryScreen() {
               <Image
                 src={image}
                 alt=""
-                width={40}
+                width={64}
                 height={40}
-                sizes="40px"
+                sizes="64px"
                 loading="eager"
                 draggable={false}
                 {...stylex.props(s.categoryImage)}

@@ -14,15 +14,15 @@ The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & mo
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
-capped at 248px with at least 16px side gutters, rounded corners and a restrained
-shadow. At normal text size it is 54px tall. Three equal targets place each icon
+capped at 288px with at least 16px side gutters, 20px corners and a restrained
+shadow. At normal text size it is 62px tall. Three equal targets place each icon
 above its label.
-Original Lucide icons from the retained `lucide-react` package render at 20px
-with a consistent 1.8px outline: a side-view car, a wrench and a conversation
-bubble. A small neutral grey capsule behind the icon and darker text mark the current destination;
-the icon geometry and weight stay consistent. Links have at least 44px height,
+Original Lucide icons from the retained `lucide-react` package render at 24px
+with a consistent 1.8px outline: a front-view car, a wrench and a phone.
+Darker text and a short neutral underline mark the current destination.
+The icon geometry and weight stay consistent. Links have at least 52px height,
 retain their labels and keyboard focus rings, and use `aria-current`.
-The selected icon capsule is 36px wide and 24px tall inside its 44px target. The dock floats 10px
+Labels use 13px text; icons sit directly above them. The dock floats 10px
 above the bottom safe area; page clearance and toast offsets
 account for its height. Vehicle detail retains its own enquiry footer.
 The formerly used Phosphor source and MIT license remain under
@@ -92,9 +92,12 @@ editor tabs scroll horizontally at their own widths. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills sit on the same grey background as the listings below,
-without a separate white strip. Their white 32px outlined faces sit inside 48px
-targets. Selected pills keep their white
-background, with darker text and a stronger border.
+without a separate white strip. Their white 40px outlined faces use 15px text
+inside 48px targets. Selected pills keep their white background, with darker
+text and a stronger border.
+Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
+the 52px rail height and horizontal scrolling. Their original pixels and alpha
+are preserved.
 Make/Model view selectors retain their 36px faces and 48px targets.
 Each service overview card is one native link, with a smaller 28px View/Enquire
 cue with a small right chevron at top right and its description across the full

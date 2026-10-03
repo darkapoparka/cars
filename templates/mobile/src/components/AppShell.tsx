@@ -31,7 +31,7 @@ const s = stylex.create({
     left: '50%',
     transform: 'translateX(-50%)',
     width: 'calc(100% - 32px)',
-    maxWidth: 248,
+    maxWidth: 288,
     padding: 4,
     display: 'grid',
     gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
@@ -41,44 +41,47 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 27,
-    boxShadow: '0 4px 18px #17202b12',
+    borderRadius: 20,
+    boxShadow: '0 4px 16px #17202b12, 0 1px 3px #17202b08',
   },
   tab: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 2,
+    gap: 3,
     color: colors.muted,
     textDecoration: 'none',
-    fontSize: 12,
-    lineHeight: '14px',
+    fontSize: 13,
+    lineHeight: '16px',
     fontWeight: 500,
     minWidth: 0,
-    minHeight: 44,
-    paddingBlock: 2,
-    borderRadius: 22,
+    minHeight: 52,
+    paddingBlock: 4,
+    borderRadius: 14,
     textAlign: 'center',
     overflowWrap: 'anywhere',
     outlineColor: colors.text,
     outlineOffset: -4,
-    opacity: { default: 1, ':active': 0.7 },
-  },
-  iconSurface: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 36,
-    height: 24,
-    flexShrink: 0,
-    borderRadius: 12,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
+    opacity: { default: 1, ':active': 0.7 },
     transition: 'background-color 140ms, color 140ms',
   },
-  active: { color: colors.text },
-  activeIcon: {
-    backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
+  active: {
+    color: colors.text,
+    fontWeight: 600,
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 1,
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: 16,
+      height: 2,
+      borderRadius: 1,
+      backgroundColor: colors.text,
+    },
   },
   toast: {
     position: 'fixed',
@@ -137,9 +140,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <span {...stylex.props(s.iconSurface, pathname === href && s.activeIcon)}>
-                <ShowroomNavIcon name={icon} />
-              </span>
+              <ShowroomNavIcon name={icon} />
               <span>{label}</span>
             </Link>
           ))}

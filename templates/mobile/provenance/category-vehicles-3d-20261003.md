@@ -6,9 +6,11 @@ style, camera and lighting reference for all four new assets. The tool did not
 expose a selectable model version.
 
 These are illustrative template assets. Full-resolution PNG originals and alpha
-are preserved; no software image edits were applied. All five category tabs use
-contained 40 x 40 image boxes within their existing 52px targets. The neutral
-underline and tab layout remain the accepted preview geometry.
+are preserved; no software image edits were applied. The initial preview used
+contained 40 x 40 image boxes. The owner's later readability correction on
+2026-10-03 enlarges every consumer to 64 x 40 within 88px-wide, 52px-high tabs.
+The neutral underline and horizontal scrolling are retained. This source change
+does not establish browser visual acceptance.
 
 ## Selected assets
 
@@ -62,4 +64,3 @@ Edit target: the first generated e-bike. This changed the framing to keep the
 handlebars and tyres inside the image while preserving the realistic finish.
 
 Edit target: the supplied realistic silver electric bicycle cutout. Keep the same bicycle design, silver frame, integrated battery, dark components, realistic materials, studio lighting, side profile facing right and genuinely transparent background. Change only the framing: reduce the bicycle slightly within the canvas and add clear transparent padding on EVERY side so the full handlebar, brake levers and cables are comfortably visible, both tyres are entirely visible, and nothing touches or crosses the canvas edges. At least 6 percent clear padding above the highest handlebar part and below the tyres. Keep a wide canvas, with the bicycle centered. Do not crop any vehicle part, stretch the wheels, change perspective, add scenery, cast a shadow outside the bicycle, add text/logos, or turn it into a drawing. Preserve the photorealistic 3D product-cutout appearance.
-

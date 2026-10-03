@@ -44,7 +44,7 @@ const s = stylex.create({
     paddingBlock: 10,
     fontSize: 16,
   },
-  iconTab: { minWidth: 76, paddingInline: 18 },
+  iconTab: { minWidth: 88, paddingInline: 12 },
   neutralTab: { outlineColor: colors.text },
   fillTab: {
     flexGrow: 1,

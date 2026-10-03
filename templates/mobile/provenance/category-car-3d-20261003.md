@@ -8,7 +8,9 @@ The tool did not expose a selectable model version.
 - PNG dimensions: 1774 x 887, with verified transparency.
 - SHA-256: `881186633f93018fde1b7311825dc406a353dda1661400e1cbbbdd8833a26243`
 - Consumer: the Cars category button in `ShowroomInventoryScreen.tsx`.
-- Display: contained within the existing 40 x 40 icon box and 52px tab target.
+- Initial preview: contained within a 40 x 40 icon box and 52px tab target.
+- Readability correction on 2026-10-03: contained 64 x 40 image box within an
+  88px-wide, 52px-high tab, matching the other vehicle categories.
 
 The generated asset is illustrative template imagery. The original generated
 PNG is preserved locally; this copy retains its original pixels and alpha.
