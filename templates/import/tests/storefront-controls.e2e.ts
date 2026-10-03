@@ -58,7 +58,7 @@ test('all-brands tile renders an icon, not an empty image, and preserves locale'
 	page
 }) => {
 	await visit(page, '/?lang=en');
-	const all = page.locator('.home-brands .home-browse-all');
+	const all = page.getByRole('link', { name: /^All brands(?::|$)/ });
 	await expect(all).toHaveCount(1);
 	await expect(all.locator('svg')).toHaveCount(1);
 	await expect(all.locator('img')).toHaveCount(0);

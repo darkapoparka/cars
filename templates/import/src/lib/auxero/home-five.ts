@@ -191,6 +191,7 @@ export type HomeFiveModalsData = {
 };
 
 export type HomeFiveTypeCard = {
+	allTile?: boolean;
 	bodyType: string;
 	href: `/inventory${string}` | '/import';
 	image: string;
@@ -889,6 +890,7 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 		href: '/inventory?bodyType=Cabriolet'
 	},
 	{
+		allTile: true,
 		label: 'View all',
 		image: '/assets/daynight/body-types/all-cars-front.webp',
 		bodyType: 'View all',

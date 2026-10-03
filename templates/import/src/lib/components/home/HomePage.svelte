@@ -52,7 +52,15 @@
 			{mobile.current ? copy.mobileMakes : copy.browseMakes}
 		</h2>
 		<div class="home-brands">
-			{#each data.brands as brand (brand.query)}<a
+			{#each data.brands as brand (brand.query)}
+				{#if brand.allTile}<HomeBrowseCard
+						href={localized(brand.href ?? '/inventory')}
+						label={brand.name}
+						context={copy.browseMakes}
+						desktopOnly
+					/>{/if}
+				<a
+					class:home-mobile-browse={brand.allTile}
 					class:home-browse-all={brand.allTile}
 					aria-label={brand.allTile ? brand.name : undefined}
 					href={href(brand.href ?? '/inventory?brand=' + encodeURIComponent(brand.query))}
@@ -78,7 +86,15 @@
 			{mobile.current ? copy.mobileTypes : copy.browseTypes}
 		</h2>
 		<div class="home-types">
-			{#each data.types as type (type.bodyType)}<a
+			{#each data.types as type (type.bodyType)}
+				{#if type.allTile}<HomeBrowseCard
+						href={localized(type.href)}
+						label={type.label}
+						context={copy.browseTypes}
+						desktopOnly
+					/>{/if}
+				<a
+					class:home-mobile-browse={type.allTile}
 					class:home-browse-all={!type.image}
 					href={href(type.href)}
 					>{#if type.image}<img
@@ -170,6 +186,10 @@
 		background: var(--bc-surface);
 		border-color: var(--bc-border-strong);
 	}
+	.home-brands .home-mobile-browse,
+	.home-types .home-mobile-browse {
+		display: none;
+	}
 	.home-brands img {
 		height: 60px;
 		width: 100px;
@@ -226,6 +246,10 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.home-brands .home-mobile-browse,
+		.home-types .home-mobile-browse {
+			display: grid;
+		}
 		.site-section {
 			padding-block: 20px 12px;
 		}

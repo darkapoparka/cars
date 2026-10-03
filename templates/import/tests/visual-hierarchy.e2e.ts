@@ -9,7 +9,13 @@ test('desktop browse cards finish the Home grids and follow native destinations'
 	await visit(page, '/');
 	for (const width of [768, 1024, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 1000 });
-		for (const selector of ['.home-vehicles', '.home-reviews', '.home-news']) {
+		for (const selector of [
+			'.home-vehicles',
+			'.home-brands',
+			'.home-types',
+			'.home-reviews',
+			'.home-news'
+		]) {
 			const grid = page.locator(selector);
 			const card = grid.getByRole('link').last();
 			await expect(card).toBeVisible();
@@ -29,6 +35,8 @@ test('desktop browse cards finish the Home grids and follow native destinations'
 	await expect(page.locator('.home-section-action')).toHaveCount(0);
 	for (const [selector, path] of [
 		['.home-vehicles', 'inventory'],
+		['.home-brands', 'inventory'],
+		['.home-types', 'inventory'],
 		['.home-reviews', 'reviews'],
 		['.home-news', 'blog']
 	]) {
@@ -53,6 +61,8 @@ for (const locale of ['bg', 'en']) {
 			const page = await context.newPage();
 			for (const [selector, destination] of [
 				['.home-vehicles', 'inventory'],
+				['.home-brands', 'inventory'],
+				['.home-types', 'inventory'],
 				['.home-reviews', 'reviews'],
 				['.home-news', 'blog']
 			]) {
