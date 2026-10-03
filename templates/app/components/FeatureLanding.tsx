@@ -10,6 +10,7 @@ import ImportCountryPicker from '@/components/ImportCountryPicker';
 import LoginSheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellIntent} from '@/components/SellEnquirySheet';
 import {showroom} from '@/lib/showroom';
+import {useCopy} from '@/lib/locale';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
@@ -20,6 +21,7 @@ const config = {
 } as const;
 
 export default function FeatureLanding({kind}: {kind: FeatureKind}) {
+  const tx = useCopy();
   const router = useRouter();
   const current = config[kind];
   const [loginOpen, setLoginOpen] = useState(false);
@@ -33,8 +35,9 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
   }
   return <div {...stylex.props(s.screen)}>
     <DiscoveryHeader active={kind} hideMobileIdentity />
-    <ShowroomBanner {...banner} compactCopy={kind === 'sell'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'sell' || kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/>
+    {kind !== 'sell' ? <ShowroomBanner {...banner} compactCopy={kind === 'service'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/> : null}
     <main {...stylex.props(s.content)}>
+      {kind === 'sell' ? <h1 {...stylex.props(s.srOnly)}>{tx(current.title)}</h1> : null}
       {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/></> : null}
       <FeatureContent kind={kind} onStart={start} />
     </main>
@@ -45,4 +48,5 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
 const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
+  srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', borderWidth: 0},
 });

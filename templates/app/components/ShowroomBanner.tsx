@@ -48,7 +48,7 @@ const s = stylex.create({
   colourAction: {color: campaign.actionText, backgroundColor: '#fff'},
   compactScrim: {position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: {[media.mobile]: 'linear-gradient(90deg,rgba(23,23,25,.9),rgba(23,23,25,.32) 70%,transparent)', default: 'linear-gradient(90deg,rgba(23,23,25,.5),transparent 65%)'}},
   compactTitle: {maxWidth: '100%'},
-  compactDescription: {maxWidth: '100%'},
+  compactDescription: {maxWidth: {[media.mobile]: '100%', default: 280}},
   banner: {position: 'relative', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: {[media.mobile]: 0, [media.tablet]: 232, default: 248}, padding: {[media.mobile]: $.bannerPadding, [media.tablet]: 28, default: '28px 36px'}, overflow: 'hidden', color: $.ink, backgroundColor: $.bannerSurface},
   staticBanner: {minHeight: {[media.mobile]: 160, [media.tablet]: 232, default: 248}},
   copy: {position: 'relative', zIndex: 1, width: {[media.mobile]: '100%', default: '65%'}, minWidth: 0},

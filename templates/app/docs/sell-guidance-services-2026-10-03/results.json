@@ -1,0 +1,439 @@
+{
+  "date": "2026-10-03",
+  "baseCommit": "95a7998cc9d2b0368f734d0e231bf12b6ed14728",
+  "runtime": "Node 22.20.0",
+  "build": "npm run check passed: ESLint, TypeScript, Next webpack build; 407 static pages",
+  "repairedDuringDevelopment": "Added missing useCopy binding for the accessible Sell page heading after the initial render check caught tx being undefined.",
+  "finalConsoleWindowStart": "2026-10-03T03:03:37.810Z",
+  "finalConsoleLogs": [],
+  "bannerBaselines": [
+    {
+      "action": {
+        "height": 44,
+        "width": 124.0625,
+        "x": 32,
+        "y": 200
+      },
+      "banner": {
+        "height": 158,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "description": {
+        "height": 22,
+        "width": 202.140625,
+        "x": 32,
+        "y": 162
+      },
+      "route": "/bg/finance",
+      "title": {
+        "height": 28,
+        "width": 264.34375,
+        "x": 32,
+        "y": 126
+      },
+      "viewport": 390
+    },
+    {
+      "action": {
+        "height": 44,
+        "width": 167.578125,
+        "x": 32,
+        "y": 200
+      },
+      "banner": {
+        "height": 158,
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "description": {
+        "height": 22,
+        "width": 202.140625,
+        "x": 32,
+        "y": 162
+      },
+      "route": "/bg/service",
+      "title": {
+        "height": 28,
+        "width": 264.34375,
+        "x": 32,
+        "y": 126
+      },
+      "viewport": 390
+    },
+    {
+      "action": {
+        "height": 44,
+        "width": 167.578125,
+        "x": 32,
+        "y": 222
+      },
+      "banner": {
+        "height": 180,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "description": {
+        "height": 44,
+        "width": 156.640625,
+        "x": 32,
+        "y": 162
+      },
+      "route": "/bg/service",
+      "title": {
+        "height": 28,
+        "width": 204.84375,
+        "x": 32,
+        "y": 126
+      },
+      "viewport": 320
+    },
+    {
+      "action": {
+        "height": 44,
+        "width": 124.0625,
+        "x": 32,
+        "y": 200
+      },
+      "banner": {
+        "height": 158,
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "description": {
+        "height": 22,
+        "width": 156.640625,
+        "x": 32,
+        "y": 162
+      },
+      "route": "/bg/finance",
+      "title": {
+        "height": 28,
+        "width": 204.84375,
+        "x": 32,
+        "y": 126
+      },
+      "viewport": 320
+    }
+  ],
+  "checks": [
+    {
+      "check": "Services at 320px",
+      "layout": {
+        "action": {
+          "height": 44,
+          "width": 167.578125,
+          "x": 32,
+          "y": 200
+        },
+        "banner": {
+          "height": 158,
+          "width": 281,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 305,
+        "description": {
+          "height": 22,
+          "width": 241,
+          "x": 32,
+          "y": 162
+        },
+        "route": "/bg/service",
+        "scrollWidth": 305,
+        "title": {
+          "height": 28,
+          "width": 241,
+          "x": 32,
+          "y": 126
+        },
+        "viewport": 320
+      },
+      "passed": true
+    },
+    {
+      "check": "Sell at 320px",
+      "layout": {
+        "clientWidth": 305,
+        "detailTarget": {
+          "height": 44,
+          "width": 111.09375,
+          "x": 163.90625,
+          "y": 644
+        },
+        "firstCard": {
+          "height": 238,
+          "width": 281,
+          "x": 12,
+          "y": 116
+        },
+        "guides": [
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px",
+            "rect": {
+              "height": 72,
+              "width": 281,
+              "x": 12,
+              "y": 828
+            }
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px",
+            "rect": {
+              "height": 72,
+              "width": 281,
+              "x": 12,
+              "y": 901
+            }
+          },
+          {
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px",
+            "rect": {
+              "height": 72,
+              "width": 281,
+              "x": 12,
+              "y": 974
+            }
+          }
+        ],
+        "process": {
+          "height": 130,
+          "width": 281,
+          "x": 12,
+          "y": 632
+        },
+        "route": "/bg/sell",
+        "scrollWidth": 305,
+        "stepLinks": 0,
+        "steps": [
+          {
+            "height": 44,
+            "width": 71,
+            "x": 30,
+            "y": 700
+          },
+          {
+            "height": 44,
+            "width": 71,
+            "x": 117,
+            "y": 700
+          },
+          {
+            "height": 44,
+            "width": 71,
+            "x": 204,
+            "y": 700
+          }
+        ],
+        "topBannerCount": 0,
+        "viewport": 320
+      },
+      "passed": true
+    },
+    {
+      "check": "Process drawer has all three detailed steps",
+      "passed": true
+    },
+    {
+      "check": "Process Escape restores focus",
+      "passed": true
+    },
+    {
+      "check": "Valuation guide opens its existing information",
+      "passed": true
+    },
+    {
+      "check": "Сервизна история Документи и двата ключа drawer and close",
+      "passed": true
+    },
+    {
+      "check": "Снимки Отвън, отвътре и пробег drawer and close",
+      "passed": true
+    },
+    {
+      "check": "Sale card opens the sale form",
+      "passed": true
+    },
+    {
+      "check": "Exchange card opens the exchange form",
+      "passed": true
+    },
+    {
+      "check": "Sell at 390px",
+      "layout": {
+        "bannerCount": 0,
+        "clientWidth": 375,
+        "guideRows": [
+          72,
+          72,
+          72
+        ],
+        "processHeight": 130,
+        "scrollWidth": 375,
+        "stepHeadings": [
+          "Данни",
+          "Оценка",
+          "Условия"
+        ],
+        "viewport": 390
+      },
+      "passed": true
+    },
+    {
+      "check": "Services at 390px",
+      "layout": {
+        "action": {
+          "height": 44,
+          "width": 167.578125,
+          "x": 32,
+          "y": 200
+        },
+        "banner": {
+          "height": 158,
+          "width": 351,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 375,
+        "description": {
+          "height": 22,
+          "width": 311,
+          "x": 32,
+          "y": 162
+        },
+        "route": "/bg/service",
+        "scrollWidth": 375,
+        "title": {
+          "height": 28,
+          "width": 311,
+          "x": 32,
+          "y": 126
+        },
+        "viewport": 390
+      },
+      "passed": true
+    },
+    {
+      "check": "Services primary action reaches editable enquiry draft",
+      "passed": true
+    },
+    {
+      "check": "Leasing 390px geometry matches baseline",
+      "passed": true,
+      "layout": {
+        "action": {
+          "height": 44,
+          "width": 124.0625,
+          "x": 32,
+          "y": 200
+        },
+        "banner": {
+          "height": 158,
+          "width": 351,
+          "x": 12,
+          "y": 106
+        },
+        "description": {
+          "height": 22,
+          "width": 202.140625,
+          "x": 32,
+          "y": 162
+        },
+        "route": "/bg/finance",
+        "title": {
+          "height": 28,
+          "width": 264.34375,
+          "x": 32,
+          "y": 126
+        },
+        "viewport": 390
+      }
+    },
+    {
+      "check": "Desktop Sell keeps two cards side by side",
+      "layout": {
+        "bannerCount": 0,
+        "cards": [
+          {
+            "height": 250,
+            "width": 584,
+            "x": 120.5,
+            "y": 239
+          },
+          {
+            "height": 250,
+            "width": 584,
+            "x": 720.5,
+            "y": 239
+          }
+        ],
+        "clientWidth": 1425,
+        "processHeight": 130,
+        "scrollWidth": 1425,
+        "viewport": 1440
+      },
+      "passed": true
+    },
+    {
+      "check": "Desktop process dialog centered",
+      "passed": true,
+      "layout": {
+        "height": 343.5625,
+        "viewport": 1440,
+        "width": 650,
+        "x": 395,
+        "y": 328.21875
+      }
+    },
+    {
+      "check": "Desktop Services layout",
+      "layout": {
+        "bannerHeight": 248,
+        "clientWidth": 1425,
+        "scrollWidth": 1425,
+        "titleHeight": 44,
+        "viewport": 1440
+      },
+      "passed": true
+    },
+    {
+      "check": "English Services at 320px",
+      "layout": {
+        "bannerHeight": 158,
+        "clientWidth": 305,
+        "descriptionHeight": 22,
+        "scrollWidth": 305,
+        "titleHeight": 28,
+        "viewport": 320
+      },
+      "passed": true
+    },
+    {
+      "check": "English Sell at 320px",
+      "layout": {
+        "bannerCount": 0,
+        "clientWidth": 305,
+        "processHeight": 130,
+        "scrollWidth": 305,
+        "stepHeights": [
+          20,
+          20,
+          20
+        ],
+        "viewport": 320
+      },
+      "passed": true
+    },
+    {
+      "check": "No final browser errors or warnings after the locale binding fix",
+      "passed": true
+    }
+  ]
+}
