@@ -31,14 +31,29 @@ export const showroomSorts = [
 ] as const;
 
 export const showroomCategories = [
-  { value: 'car', label: 'Cars', singular: 'car', plural: 'cars', icon: 'car' },
-  { value: 'bike', label: 'Motorbikes', singular: 'motorbike', plural: 'motorbikes', icon: 'bike' },
+  {
+    value: 'car',
+    label: 'Cars',
+    singular: 'car',
+    plural: 'cars',
+    icon: 'car',
+    image: '/categories/car-realistic-20261003-v1.png',
+  },
+  {
+    value: 'bike',
+    label: 'Motorbikes',
+    singular: 'motorbike',
+    plural: 'motorbikes',
+    icon: 'bike',
+    image: '/categories/motorbike-realistic-20261003-v1.png',
+  },
   {
     value: 'electric-bike',
     label: 'E-bikes',
     singular: 'e-bike',
     plural: 'e-bikes',
     icon: 'electric',
+    image: '/categories/ebike-realistic-20261003-v1.png',
   },
   {
     value: 'motorhome',
@@ -46,6 +61,7 @@ export const showroomCategories = [
     singular: 'motorhome',
     plural: 'motorhomes',
     icon: 'motorhome',
+    image: '/categories/motorhome-realistic-20261003-v1.png',
   },
   {
     value: 'truck',
@@ -53,6 +69,7 @@ export const showroomCategories = [
     singular: 'vehicle',
     plural: 'vehicles',
     icon: 'truck',
+    image: '/categories/truck-realistic-20261003-v1.png',
   },
 ] as const;
 

@@ -29,7 +29,7 @@ import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
-  categoryCar: {
+  categoryImage: {
     display: 'block',
     width: 40,
     height: 40,
@@ -240,24 +240,21 @@ export function ShowroomInventoryScreen() {
           label="Vehicle category"
           variant="icon"
           tone="neutral"
-          tabs={showroomCategories.map(({ value, label, icon }) => ({
+          tabs={showroomCategories.map(({ value, label, image }) => ({
             value,
             label,
-            content:
-              value === 'car' ? (
-                <Image
-                  src="/categories/car-realistic-20261003-v1.png"
-                  alt=""
-                  width={40}
-                  height={40}
-                  sizes="40px"
-                  loading="eager"
-                  draggable={false}
-                  {...stylex.props(s.categoryCar)}
-                />
-              ) : (
-                <Icon name={icon} size={40} />
-              ),
+            content: (
+              <Image
+                src={image}
+                alt=""
+                width={40}
+                height={40}
+                sizes="40px"
+                loading="eager"
+                draggable={false}
+                {...stylex.props(s.categoryImage)}
+              />
+            ),
           }))}
           selected={filters.category}
           panelId="showroom-stock"

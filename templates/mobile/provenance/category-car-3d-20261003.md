@@ -12,7 +12,9 @@ The tool did not expose a selectable model version.
 
 The generated asset is illustrative template imagery. The original generated
 PNG is preserved locally; this copy retains its original pixels and alpha.
-Other category assets remain the retained native vector icons.
+The remaining category tabs use the matching generated set documented in
+[Category vehicle assets](category-vehicles-3d-20261003.md). Retained vector glyphs
+remain available to other consumers.
 
 ## Generation prompt
 
