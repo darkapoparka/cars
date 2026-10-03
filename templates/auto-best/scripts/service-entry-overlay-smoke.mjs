@@ -29,11 +29,24 @@ async function editorReflow(page) {
   }
 }
 async function guideCheck(page, locale, width, topic) {
+  const pageEnd = await page.locator('.dn-service-landing').evaluate(landing => {
+    const canvas = landing.getBoundingClientRect(), paint = getComputedStyle(landing, '::before');
+    const dock = document.querySelector('.dn-mobile-bottom-nav').getBoundingClientRect();
+    const guide = document.querySelector('.dn-service-guide').getBoundingClientRect();
+    return { documentEnd: document.documentElement.scrollHeight, canvasEnd: canvas.bottom + scrollY,
+      paintEnd: canvas.bottom + scrollY - parseFloat(paint.bottom), guideEnd: guide.bottom + scrollY,
+      dockHeight: dock.height, image: paint.backgroundImage };
+  });
+  assert(Math.abs(pageEnd.canvasEnd - pageEnd.documentEnd) <= 1 && pageEnd.paintEnd >= pageEnd.documentEnd - 1,
+    `The service background reaches the page end without an exposed shell strip: ${JSON.stringify(pageEnd)}`);
+  assert(pageEnd.guideEnd <= pageEnd.documentEnd - pageEnd.dockHeight,
+    'The final guide card can scroll completely above the fixed dock');
+  assert.match(pageEnd.image, /url\(/, 'The retained service artwork still supplies the background');
   const header = await page.locator('.dn-mobile-control').evaluateAll(actions => actions.map(action => {
     const box = action.getBoundingClientRect(), icon = action.querySelector('svg').getBoundingClientRect();
     return { width: box.width, height: box.height, icon: icon.width };
   }));
-  assert.deepEqual(header, [{ width: 44, height: 44, icon: 26 }, { width: 44, height: 44, icon: 26 }]);
+  assert.deepEqual(header, [{ width: 44, height: 44, icon: 22 }, { width: 44, height: 44, icon: 22 }]);
   const trigger = page.locator('.dn-service-guide button[aria-haspopup=dialog]');
   const draft = await serviceEntry(page).locator('.dn-service-entry__field').innerText();
   assert.equal(await trigger.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)');

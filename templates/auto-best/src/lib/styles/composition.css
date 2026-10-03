@@ -342,7 +342,9 @@
 }
 
 @media (max-width: 767px) {
-  .dn-app-shell[data-mobile-bottom='footer'] { padding-bottom: 0; }
+  /* Service pages reserve dock clearance inside their painted canvas. */
+  .dn-app-shell[data-mobile-bottom='footer'],
+  .dn-app-shell[data-journey='workflow'] { padding-bottom: 0; }
 }
 @media (min-width: 992px) {
   .dn-app-shell .dn-body-types.dn-section { padding-top: 48px; }

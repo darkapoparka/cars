@@ -56,7 +56,7 @@
   p { margin: 0; padding: 0 var(--dn-space-4) var(--dn-space-4); color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
   @media (max-width: 767px) {
     .dn-service-landing--import { --dn-workflow-canvas: var(--dn-theme-hero-surface-mid); }
-    .dn-service-landing { position: relative; isolation: isolate; min-height: calc(100svh - var(--dn-mobile-nav-height)); }
+    .dn-service-landing { position: relative; isolation: isolate; min-height: 100svh; padding-bottom: calc(var(--dn-space-8) + var(--dn-space-2) + var(--dn-mobile-nav-height) + env(safe-area-inset-bottom)); }
     .dn-service-landing::before { content: ''; position: absolute; z-index: -1; inset: auto 0 0; height: min(400px, 100%); background-image: linear-gradient(var(--dn-mobile-canvas), color-mix(in srgb, var(--dn-mobile-canvas) 92%, transparent) 40%), var(--dn-service-backdrop); background-size: 100% 100%, auto 100%; background-position: center, left bottom; background-repeat: no-repeat; pointer-events: none; }
     .dn-service-card { width: calc(100% - 24px); margin-top: -52px;  }
     .dn-service-faq { display: none; }
