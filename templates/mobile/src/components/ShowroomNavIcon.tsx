@@ -1,38 +1,29 @@
 import * as stylex from '@stylexjs/stylex';
-import { phosphorNavigationIcons } from './icons/phosphor/navigation';
+import { Car, MessageCircle, Wrench } from 'lucide-react';
+
+const icons = { cars: Car, services: Wrench, contact: MessageCircle } as const;
 
 const s = stylex.create({
   icon: {
     display: 'block',
-    width: 24,
-    height: 24,
+    width: 22,
+    height: 22,
     flexShrink: 0,
   },
 });
 
-export type ShowroomNavIconName = 'cars' | 'services' | 'contact';
+export type ShowroomNavIconName = keyof typeof icons;
 
-export function ShowroomNavIcon({
-  name,
-  active = false,
-}: {
-  name: ShowroomNavIconName;
-  active?: boolean;
-}) {
-  const weight = active ? 'fill' : 'regular';
+export function ShowroomNavIcon({ name }: { name: ShowroomNavIconName }) {
+  const NavigationIcon = icons[name];
   return (
-    <svg
-      width={24}
-      height={24}
-      viewBox="0 0 256 256"
-      fill="currentColor"
+    <NavigationIcon
+      size={22}
+      strokeWidth={1.8}
       aria-hidden="true"
       focusable="false"
-      data-icon-family="phosphor"
-      data-icon-weight={weight}
+      data-icon-family="lucide"
       {...stylex.props(s.icon)}
-    >
-      <path d={phosphorNavigationIcons[name][weight]} />
-    </svg>
+    />
   );
 }

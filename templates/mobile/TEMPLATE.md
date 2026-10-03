@@ -13,11 +13,17 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
-The bottom navigation is Cars / Services / Contact, using original 24px Phosphor
-glyphs: a front-facing car with headlights, a wrench and a conversation bubble.
-Inactive destinations use the regular glyph; the current one uses its filled
-version in the showroom accent. The source is pinned with its MIT license under
-`src/components/icons/phosphor/`. Saved cars live in the header
+The bottom navigation is a centered floating Cars / Services / Contact dock,
+capped at 360px with 16px side gutters, rounded corners and a restrained shadow.
+Original Lucide icons from the retained `lucide-react` package render at 22px
+with a consistent 1.8px outline: a side-view car, a wrench and a conversation
+bubble. A neutral grey capsule and darker text mark the current destination;
+the icon geometry and weight stay consistent. Links have at least 56px height,
+retain their labels and keyboard focus rings, and use `aria-current`.
+The dock floats 12px above the bottom safe area; page clearance and toast offsets
+account for its height. Vehicle detail retains its own enquiry footer.
+The formerly used Phosphor source and MIT license remain under
+`src/components/icons/phosphor/` as provenance. Saved cars live in the header
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
@@ -106,8 +112,9 @@ topic. Both searches preserve drafts until applied and support Close, Escape and
 browser Back. Search uses one custom Clear action, suppresses the browser's extra
 search adornments and provides a Search keyboard action. Enter applies the search;
 composition input is preserved. Opening Cars search focuses the input once;
-switching filter tabs retains their keyboard navigation. Pill, tab and bottom-navigation focus
-rings use the showroom accent and sit inside their targets. Toasts account for
+switching filter tabs retains their keyboard navigation. Pill and tab focus
+rings use the showroom accent; the dock uses the neutral text color. All sit
+inside their targets. Toasts account for
 the phone's bottom safe area.
 Inventory cards keep two subtext rows: one variant line and one year/mileage/
 fuel/transmission line. Automatic is shortened to Auto in the compact facts;

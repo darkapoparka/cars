@@ -217,12 +217,12 @@ async function run(name, engine) {
       ['Cars', 'Services', 'Contact'],
     );
     const navigation = page.getByRole('navigation', { name: 'Main navigation' });
-    assert.equal(await navigation.locator('svg[data-icon-family="phosphor"]').count(), 3);
-    assert.deepEqual(
+    assert.equal(await navigation.locator('svg[data-icon-family="lucide"]').count(), 3);
+    assert.equal(
       await navigation
-        .locator('svg')
-        .evaluateAll((icons) => icons.map((icon) => icon.dataset.iconWeight)),
-      ['fill', 'regular', 'regular'],
+        .getByRole('link', { name: 'Cars', exact: true })
+        .getAttribute('aria-current'),
+      'page',
     );
     assert.equal(await page.getByRole('link', { name: 'Profile', exact: true }).count(), 0);
     const firstPhoto = await page
