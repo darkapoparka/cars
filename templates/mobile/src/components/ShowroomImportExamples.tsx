@@ -1,7 +1,10 @@
+'use client';
+import { useLocale } from '@/lib/use-locale';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
+import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
 import { importCountryLabel, importExamplesFor, type ImportCountry } from '@/lib/showroom-services';
 
 const s = stylex.create({
@@ -39,9 +42,10 @@ const s = stylex.create({
 });
 
 export function ShowroomImportExamples({ country = 'all' }: { country?: ImportCountry }) {
+  const { t } = useLocale();
   return (
-    <section aria-label="Example imports" {...stylex.props(s.section)}>
-      <h2 {...stylex.props(s.heading)}>Example imports</h2>
+    <section aria-label={t('Example imports')} {...stylex.props(s.section)}>
+      <h2 {...stylex.props(s.heading)}>{t('Example imports')}</h2>
       <div {...stylex.props(s.grid)}>
         {importExamplesFor(country).map((example) => {
           const vehicle = vehicles.find((vehicle) => vehicle.id === example.vehicleId);
@@ -55,20 +59,20 @@ export function ShowroomImportExamples({ country = 'all' }: { country?: ImportCo
             >
               <div {...stylex.props(s.photo)}>
                 <Image
-                  src={vehicle.images[0]}
+                  src={showroomVehiclePhotos(vehicle)[0]}
                   alt={vehicle.make + ' ' + vehicle.model}
                   fill
                   sizes="(max-width: 699px) calc(100vw - 32px), (max-width: 1071px) calc((100vw - 44px) / 2), 514px"
                   {...stylex.props(s.image)}
                 />
-                <span {...stylex.props(s.badge)}>{importCountryLabel(example.country)}</span>
+                <span {...stylex.props(s.badge)}>{t(importCountryLabel(example.country))}</span>
               </div>
               <div {...stylex.props(s.body)}>
                 <h3 {...stylex.props(s.title)}>
                   {vehicle.make} {vehicle.model}
                 </h3>
                 <p {...stylex.props(s.copy)}>
-                  {vehicle.year} · {vehicle.fuel}
+                  {vehicle.year} · {t(vehicle.fuel)}
                 </p>
               </div>
             </article>

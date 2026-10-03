@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
@@ -323,6 +324,7 @@ const s = stylex.create({
 });
 
 export function SavedCarsScreen() {
+  const { t, locale } = useLocale();
   const { parked, filters, inventorySort } = useAppState();
   const saved = vehicles.filter((vehicle) => parked.includes(vehicle.id));
   useEffect(restoreInventoryPosition, []);
@@ -331,11 +333,15 @@ export function SavedCarsScreen() {
       <Header home />
       <div {...stylex.props(s.page)}>
         <div {...stylex.props(s.head)}>
-          <h1 {...stylex.props(s.title)}>Saved cars</h1>
+          <h1 {...stylex.props(s.title)}>{t('Saved cars')}</h1>
           <p {...stylex.props(s.intro)}>
             {saved.length
-              ? saved.length + (saved.length === 1 ? ' car' : ' cars') + ' saved on this device.'
-              : 'Keep the cars you like in one place.'}
+              ? locale === 'bg'
+                ? saved.length +
+                  (saved.length === 1 ? ' кола е запазена' : ' коли са запазени') +
+                  ' на това устройство.'
+                : saved.length + (saved.length === 1 ? ' car' : ' cars') + ' saved on this device.'
+              : t('Keep the cars you like in one place.')}
           </p>
         </div>
         {saved.length ? (
@@ -347,9 +353,9 @@ export function SavedCarsScreen() {
         ) : (
           <div {...stylex.props(ui.empty)}>
             <Icon name="heart" size={44} />
-            <h2 {...stylex.props(ui.title)}>Your shortlist starts here</h2>
-            <p>Tap the heart on a car to save it for later.</p>
-            <Button href={showroomInventoryHref(filters, inventorySort)}>Browse cars</Button>
+            <h2 {...stylex.props(ui.title)}>{t('Your shortlist starts here')}</h2>
+            <p>{t('Tap the heart on a car to save it for later.')}</p>
+            <Button href={showroomInventoryHref(filters, inventorySort)}>{t('Browse cars')}</Button>
           </div>
         )}
       </div>
@@ -358,6 +364,7 @@ export function SavedCarsScreen() {
 }
 
 export function ShowroomServicesScreen() {
+  const { t } = useLocale();
   const params = useSearchParams();
   const query = params.get('q') || '';
   const searching = params.get('search') === '1';
@@ -414,11 +421,11 @@ export function ShowroomServicesScreen() {
   return (
     <>
       <Header home />
-      <h1 {...stylex.props(ui.srOnly)}>Services</h1>
+      <h1 {...stylex.props(ui.srOnly)}>{t('Services')}</h1>
       <div {...stylex.props(s.tabs)}>
-        <ShowroomSearch label="Search services" value={query} onOpen={openSearch} />
+        <ShowroomSearch label={t('Search services')} value={query} onOpen={openSearch} />
         <ShowroomTabs
-          label="Service category"
+          label={t('Service category')}
           tabs={serviceCategories}
           selected={selected}
           panelId="showroom-services"
@@ -427,7 +434,7 @@ export function ShowroomServicesScreen() {
           onChange={selectCategory}
         />
         {selected === 'import' ? (
-          <ShowroomQuickPills label="Import countries">
+          <ShowroomQuickPills label={t('Import countries')}>
             {importCountries.map(({ value, label }) => (
               <ShowroomQuickPill
                 key={value}
@@ -435,12 +442,12 @@ export function ShowroomServicesScreen() {
                 aria-pressed={country === value}
                 onClick={() => window.history.pushState(null, '', importCountryHref(value))}
               >
-                {label}
+                {t(label)}
               </ShowroomQuickPill>
             ))}
           </ShowroomQuickPills>
         ) : selected === 'sell' ? (
-          <ShowroomQuickPills label="Sale type">
+          <ShowroomQuickPills label={t('Sale type')}>
             {saleEnquiryTypes.map(({ value, label }) => (
               <ShowroomQuickPill
                 key={value}
@@ -448,23 +455,23 @@ export function ShowroomServicesScreen() {
                 aria-pressed={saleType === value}
                 onClick={() => window.history.pushState(null, '', saleEnquiryHref(value))}
               >
-                {label}
+                {t(label)}
               </ShowroomQuickPill>
             ))}
           </ShowroomQuickPills>
         ) : (
-          <ShowroomQuickPills label="Service filters">
+          <ShowroomQuickPills label={t('Service filters')}>
             {quickFilters.map(({ value, label }) => (
               <ShowroomQuickPill
                 key={value}
                 active={quickFilter === value}
                 aria-pressed={quickFilter === value}
                 aria-label={
-                  value === 'all' ? 'All services (' + matchingServices.length + ')' : label
+                  value === 'all' ? t('All services') + ' (' + matchingServices.length + ')' : label
                 }
                 onClick={() => selectServiceFilter(value)}
               >
-                {value === 'all' ? 'All (' + matchingServices.length + ')' : label}
+                {value === 'all' ? t('All') + ' (' + matchingServices.length + ')' : label}
               </ShowroomQuickPill>
             ))}
           </ShowroomQuickPills>
@@ -478,7 +485,7 @@ export function ShowroomServicesScreen() {
       >
         {overview && (
           <p aria-live="polite" {...stylex.props(ui.srOnly)}>
-            {shown.length} {shown.length === 1 ? 'service' : 'services'}
+            {shown.length} {shown.length === 1 ? t('service') : t('services')}
           </p>
         )}
         {selected === 'import' || selected === 'sell' ? (
@@ -504,16 +511,18 @@ export function ShowroomServicesScreen() {
                       : '/contact?service=' + service.id
                   }
                   aria-label={
-                    service.details ? 'View ' + service.title.toLowerCase() : service.action
+                    service.details
+                      ? t('View ') + t(service.title).toLowerCase()
+                      : t(service.action)
                   }
                   aria-describedby={'showroom-service-' + service.id + '-copy'}
                   {...stylex.props(s.serviceCard, s.serviceCardLink)}
                 >
-                  <h2 {...stylex.props(s.serviceTitle)}>{service.title}</h2>
+                  <h2 {...stylex.props(s.serviceTitle)}>{t(service.title)}</h2>
                   <span data-service-card-cue {...stylex.props(s.serviceCardCue)}>
                     {service.details || service.category === 'import' || service.category === 'sell'
-                      ? 'View'
-                      : 'Enquire'}
+                      ? t('View')
+                      : t('Enquire')}
                     <ChevronRight
                       size={12}
                       strokeWidth={1.8}
@@ -525,7 +534,7 @@ export function ShowroomServicesScreen() {
                     id={'showroom-service-' + service.id + '-copy'}
                     {...stylex.props(s.serviceCopy, s.serviceCardCopy)}
                   >
-                    {service.copy}
+                    {t(service.copy)}
                   </p>
                 </Link>
               ) : (
@@ -535,17 +544,17 @@ export function ShowroomServicesScreen() {
                   {...stylex.props(s.serviceCard, s.serviceDetail)}
                 >
                   <div {...stylex.props(s.serviceBody)}>
-                    <h2 {...stylex.props(s.subTitle)}>{service.title}</h2>
+                    <h2 {...stylex.props(s.subTitle)}>{t(service.title)}</h2>
                     <p id={'showroom-service-' + service.id + '-copy'} {...stylex.props(s.body)}>
-                      {service.copy}
+                      {t(service.copy)}
                     </p>
                   </div>
                   {service.details && (
                     <dl {...stylex.props(s.serviceDetails)}>
                       {service.details.map((detail) => (
                         <div key={detail.label}>
-                          <dt {...stylex.props(s.detailTitle)}>{detail.label}</dt>
-                          <dd {...stylex.props(s.detailCopy)}>{detail.copy}</dd>
+                          <dt {...stylex.props(s.detailTitle)}>{t(detail.label)}</dt>
+                          <dd {...stylex.props(s.detailCopy)}>{t(detail.copy)}</dd>
                         </div>
                       ))}
                     </dl>
@@ -559,7 +568,7 @@ export function ShowroomServicesScreen() {
                         data-service-action-surface
                         {...stylex.props(s.serviceActionFace, s.serviceActionPrimary)}
                       >
-                        {service.action}
+                        {t(service.action)}
                       </span>
                     </Link>
                   </div>
@@ -569,19 +578,19 @@ export function ShowroomServicesScreen() {
           </div>
         ) : (
           <div {...stylex.props(ui.empty)}>
-            <h2 {...stylex.props(ui.title)}>No services found</h2>
-            <p>Try another search or browse all services.</p>
+            <h2 {...stylex.props(ui.title)}>{t('No services found')}</h2>
+            <p>{t('Try another search or browse all services.')}</p>
             <Button
               variant="outline"
               onClick={() => window.history.replaceState(null, '', '/services')}
             >
-              Show all services
+              {t('Show all services')}
             </Button>
           </div>
         )}
         <p {...stylex.props(s.note)}>
-          Showroom template preview ·{' '}
-          {selected === 'import' ? 'Sample import gallery' : 'Example services'}
+          {t('Showroom template preview ·')}{' '}
+          {selected === 'import' ? t('Sample import gallery') : t('Example services')}
         </p>
       </div>
       {searching && (
@@ -628,15 +637,20 @@ export function ShowroomContactScreen({
   vehicle?: Vehicle;
   serviceId?: string;
 }) {
+  const { t, locale } = useLocale();
   const { messageDrafts } = useAppState();
   const service = showroomService(serviceId);
   const hasContactDetails = Boolean(showroom.address || showroom.hours.length);
   const unavailableContacts = !showroom.phone || !showroom.directionsUrl;
   const draftKey = vehicle?.id || 'showroom-' + (service?.id || 'general');
   const initial = vehicle
-    ? `Hello, I'm interested in the ${vehicle.make} ${vehicle.model}. Could we arrange a viewing?`
+    ? locale === 'bg'
+      ? `Здравейте, интересувам се от ${vehicle.make} ${vehicle.model}. Можем ли да уговорим оглед?`
+      : `Hello, I'm interested in the ${vehicle.make} ${vehicle.model}. Could we arrange a viewing?`
     : service
-      ? `Hello, I'd like to ask about ${service.title.toLowerCase()}.`
+      ? locale === 'bg'
+        ? `Здравейте, искам да попитам за ${t(service.title).toLowerCase()}.`
+        : `Hello, I'd like to ask about ${service.title.toLowerCase()}.`
       : '';
   const [edited, setEdited] = useState<string | null>(null);
   const [saved, setSaved] = useState(false);
@@ -644,23 +658,23 @@ export function ShowroomContactScreen({
   return (
     <>
       <Header home />
-      <h1 {...stylex.props(ui.srOnly)}>Contact</h1>
+      <h1 {...stylex.props(ui.srOnly)}>{t('Contact')}</h1>
       <div {...stylex.props(s.contactPage)}>
-        <section aria-label="Showroom contact" {...stylex.props(s.contactIntro)}>
+        <section aria-label={t('Showroom contact')} {...stylex.props(s.contactIntro)}>
           <div {...stylex.props(s.contactContainer)}>
-            <div role="group" aria-label="Contact options" {...stylex.props(s.contactActions)}>
+            <div role="group" aria-label={t('Contact options')} {...stylex.props(s.contactActions)}>
               <ShowroomContactAction href={showroom.phone ? 'tel:' + showroom.phone : null}>
                 <Phone size={20} strokeWidth={1.8} aria-hidden="true" />
-                Call us
+                {t('Call us')}
               </ShowroomContactAction>
               <ShowroomContactAction href={showroom.directionsUrl}>
                 <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
-                Visit us
+                {t('Visit us')}
               </ShowroomContactAction>
               {showroom.email && (
                 <ShowroomContactAction href={'mailto:' + showroom.email} extra>
                   <Mail size={20} strokeWidth={1.8} aria-hidden="true" />
-                  Email us
+                  {t('Email us')}
                 </ShowroomContactAction>
               )}
             </div>
@@ -670,10 +684,10 @@ export function ShowroomContactScreen({
                 {...stylex.props(ui.small, ui.muted, s.contactAvailability)}
               >
                 {!showroom.phone && !showroom.directionsUrl
-                  ? 'Phone and location details are unavailable in this preview.'
+                  ? t('Phone and location details are unavailable in this preview.')
                   : !showroom.phone
-                    ? 'Phone details are unavailable in this preview.'
-                    : 'Location details are unavailable in this preview.'}
+                    ? t('Phone details are unavailable in this preview.')
+                    : t('Location details are unavailable in this preview.')}
               </p>
             )}
           </div>
@@ -683,15 +697,19 @@ export function ShowroomContactScreen({
             <div {...stylex.props(s.contactGrid)}>
               <section aria-labelledby="showroom-enquiry-heading" {...stylex.props(s.card)}>
                 <h2 id="showroom-enquiry-heading" {...stylex.props(s.subTitle)}>
-                  Enquiry
+                  {t('Enquiry')}
                 </h2>
-                <p {...stylex.props(s.body)}>Ask a question or arrange a viewing.</p>
+                <p {...stylex.props(s.body)}>{t('Ask a question or arrange a viewing.')}</p>
                 {(vehicle || service) && (
                   <div {...stylex.props(s.context)}>
                     <div {...stylex.props(s.contextText)}>
-                      <p {...stylex.props(ui.small, ui.muted)}>Regarding</p>
+                      <p {...stylex.props(ui.small, ui.muted)}>{t('Regarding')}</p>
                       <p {...stylex.props(s.contextTitle)}>
-                        {vehicle ? vehicle.make + ' ' + vehicle.model : service?.title}
+                        {vehicle
+                          ? vehicle.make + ' ' + vehicle.model
+                          : service?.title
+                            ? t(service.title)
+                            : ''}
                       </p>
                     </div>
                     <Link
@@ -702,7 +720,7 @@ export function ShowroomContactScreen({
                       }
                       {...stylex.props(s.contextLink)}
                     >
-                      {vehicle ? 'View car' : 'View service'}
+                      {vehicle ? t('View car') : t('View service')}
                     </Link>
                   </div>
                 )}
@@ -711,14 +729,14 @@ export function ShowroomContactScreen({
                   onSubmit={(event) => {
                     event.preventDefault();
                     saveMessageDraft(draftKey, message);
-                    notify('Enquiry draft saved on this device. Nothing was sent.');
+                    notify(t('Enquiry draft saved on this device. Nothing was sent.'));
                     setSaved(true);
                   }}
                 >
                   <label {...stylex.props(ui.label)}>
-                    Message
+                    {t('Message')}
                     <textarea
-                      aria-label="Enquiry message"
+                      aria-label={t('Enquiry message')}
                       value={message}
                       onChange={(event) => {
                         setEdited(event.target.value);
@@ -726,8 +744,8 @@ export function ShowroomContactScreen({
                       }}
                       placeholder={
                         vehicle
-                          ? 'Ask about availability or a viewing…'
-                          : 'Tell us how we can help…'
+                          ? t('Ask about availability or a viewing…')
+                          : t('Tell us how we can help…')
                       }
                       required
                       minLength={10}
@@ -736,23 +754,23 @@ export function ShowroomContactScreen({
                     />
                   </label>
                   <p {...stylex.props(ui.small, ui.muted)}>
-                    Preview: save your enquiry on this device.
+                    {t('Preview: save your enquiry on this device.')}
                   </p>
                   <button type="submit" {...stylex.props(s.serviceAction, s.contactSubmit)}>
                     <span {...stylex.props(s.serviceActionFace, s.serviceActionPrimary)}>
-                      Save enquiry draft
+                      {t('Save enquiry draft')}
                     </span>
                   </button>
                   {saved && (
                     <p role="status" {...stylex.props(s.saved)}>
-                      Draft saved on this device. Nothing was sent.
+                      {t('Draft saved on this device. Nothing was sent.')}
                     </p>
                   )}
                 </form>
               </section>
               {hasContactDetails && (
                 <section {...stylex.props(s.card)}>
-                  <h2 {...stylex.props(s.subTitle)}>Showroom details</h2>
+                  <h2 {...stylex.props(s.subTitle)}>{t('Showroom details')}</h2>
                   <dl {...stylex.props(s.info)}>
                     {showroom.address && (
                       <div {...stylex.props(s.infoRow)}>
@@ -760,7 +778,7 @@ export function ShowroomContactScreen({
                           <MapPin size={20} strokeWidth={1.8} aria-hidden="true" />
                         </span>
                         <div>
-                          <dt {...stylex.props(s.detailTitle)}>Address</dt>
+                          <dt {...stylex.props(s.detailTitle)}>{t('Address')}</dt>
                           <dd {...stylex.props(s.body)}>{showroom.address}</dd>
                         </div>
                       </div>
@@ -771,7 +789,7 @@ export function ShowroomContactScreen({
                           <Clock3 size={20} strokeWidth={1.8} aria-hidden="true" />
                         </span>
                         <div>
-                          <dt {...stylex.props(s.detailTitle)}>Opening hours</dt>
+                          <dt {...stylex.props(s.detailTitle)}>{t('Opening hours')}</dt>
                           <dd {...stylex.props(s.body)}>
                             {showroom.hours.map((hours) => (
                               <p key={hours}>{hours}</p>

@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { AppShell } from '@/components/AppShell';
 import './globals.css';
 export const metadata: Metadata = {
-  title: { default: 'Cars — Your showroom', template: '%s — Your showroom' },
+  title: { default: 'Коли — Вашият автосалон', template: '%s — Вашият автосалон' },
   description:
     'Browse cars, explore showroom services and contact the dealer. Showroom template with sample inventory.',
   robots: { index: false, follow: false },
@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="bg">
       <body>
         <AppShell>{children}</AppShell>
       </body>

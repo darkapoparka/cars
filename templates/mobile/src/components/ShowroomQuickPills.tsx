@@ -3,6 +3,7 @@
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { useLocale } from '@/lib/use-locale';
 
 const s = stylex.create({
   row: {
@@ -65,10 +66,11 @@ export function ShowroomQuickPills({
   children: ReactNode;
   inset?: boolean;
 }) {
+  const { t } = useLocale();
   return (
     <div
       role="group"
-      aria-label={label}
+      aria-label={t(label)}
       {...stylex.props(s.row, inset && s.backdrop, !inset && s.flush)}
     >
       {children}
@@ -84,10 +86,16 @@ export function ShowroomQuickPill({
   children: ReactNode;
   active?: boolean;
 }) {
+  const { t } = useLocale();
   return (
-    <button type="button" {...props} {...stylex.props(s.button)}>
+    <button
+      type="button"
+      {...props}
+      aria-label={props['aria-label'] ? t(props['aria-label']) : undefined}
+      {...stylex.props(s.button)}
+    >
       <span data-pill-surface {...stylex.props(s.face, active && s.active)}>
-        {children}
+        {typeof children === 'string' ? t(children) : children}
       </span>
     </button>
   );

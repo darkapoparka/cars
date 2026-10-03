@@ -1,4 +1,7 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
+import { localizeVehicle } from '@/lib/vehicle-copy';
+import { LanguageSwitcher } from './LanguageSwitcher';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,7 +9,6 @@ import { useRouter } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import type { Vehicle } from '@/lib/types';
-import { money } from '@/lib/search';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
 import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/showroom';
 import { vehicleGalleryHref } from '@/lib/vehicle-detail-navigation';
@@ -19,6 +21,7 @@ import { FinanceCalculator } from './FinanceCalculator';
 import { PriceRating } from './VehicleCard';
 import { useVehicleDetailSection } from './useVehicleDetailSection';
 const s = stylex.create({
+  referenceAction: { display: { default: 'contents', '@media (max-width: 699px)': 'none' } },
   paymentTabs: {
     display: 'grid',
     gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
@@ -240,7 +243,9 @@ const s = stylex.create({
     lineHeight: '18px',
   },
 });
-export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
+export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
+  const { t, locale, money, number } = useLocale();
+  const v = localizeVehicle(vehicle, locale);
   const router = useRouter();
   const section = useVehicleDetailSection();
   const actions = useRef<HTMLDivElement>(null);
@@ -289,10 +294,12 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
   }, [v.id, section]);
   async function share() {
     try {
-      await navigator.clipboard.writeText(window.location.href);
-      notify('Vehicle link copied');
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', locale);
+      await navigator.clipboard.writeText(url.href);
+      notify(t('Vehicle link copied'));
     } catch {
-      notify('Copy the vehicle link from your browser’s address bar.');
+      notify(t('Copy the vehicle link from your browser’s address bar.'));
     }
   }
   return (
@@ -307,11 +314,18 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
           else router.replace(href, { scroll: false });
         }}
       >
-        <IconButton icon="share" label="Share via" onClick={share} />
-        <IconButton icon="checklist" label="Checklist" href={'/vehicle/' + v.id + '/checklist'} />
+        <IconButton icon="share" label={t('Share via')} onClick={share} />
+        <span {...stylex.props(s.referenceAction)}>
+          <IconButton
+            icon="checklist"
+            label={t('Checklist')}
+            href={'/vehicle/' + v.id + '/checklist'}
+          />
+        </span>
+        <LanguageSwitcher />
         <IconButton
           icon="heart"
-          label={parked.includes(v.id) ? 'Remove from saved cars' : 'Save car'}
+          label={parked.includes(v.id) ? t('Remove from saved cars') : t('Save car')}
           filled={parked.includes(v.id)}
           onClick={() => togglePark(v.id)}
         />
@@ -319,7 +333,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
       <Link
         href={vehicleGalleryHref(v.id, section)}
         {...stylex.props(s.hero)}
-        aria-label="Vehicle image"
+        aria-label={t('Vehicle image')}
         onPointerDown={(event) => {
           photoGesture.current = { x: event.clientX, y: event.clientY, moved: false };
         }}
@@ -371,14 +385,14 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
               <p {...stylex.props(s.variant)}>{v.variant}</p>
             </section>
             {v.leaseTerms && (
-              <div {...stylex.props(s.paymentTabs)} role="group" aria-label="Payment type">
+              <div {...stylex.props(s.paymentTabs)} role="group" aria-label={t('Payment type')}>
                 <button
                   type="button"
                   aria-pressed={!leasing}
                   onClick={() => setPaymentOverride('buy')}
                   {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
                 >
-                  Buying
+                  {t('Buying')}
                 </button>
                 <button
                   type="button"
@@ -386,26 +400,20 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
                   onClick={() => setPaymentOverride('lease')}
                   {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
                 >
-                  Leasing
+                  {t('Leasing')}
                 </button>
               </div>
             )}
-            <section aria-label="Vehicle price and contact" {...stylex.props(s.offer)}>
+            <section aria-label={t('Vehicle price and contact')} {...stylex.props(s.offer)}>
               {leasing && v.leaseTerms ? (
                 <>
                   <div {...stylex.props(s.leasePrice)}>
-                    <strong {...stylex.props(s.price)}>
-                      {new Intl.NumberFormat('en-IE', {
-                        style: 'currency',
-                        currency: 'EUR',
-                      }).format(v.monthly || 0)}
-                    </strong>
-                    <span {...stylex.props(s.leaseCopy)}>Monthly incl. VAT.</span>
+                    <strong {...stylex.props(s.price)}>{money(v.monthly || 0)}</strong>
+                    <span {...stylex.props(s.leaseCopy)}>{t('Monthly incl. VAT.')}</span>
                   </div>
                   <p {...stylex.props(s.leaseCopy)}>
-                    {v.leaseTerms.months} months term •{' '}
-                    {v.leaseTerms.annualMileage.toLocaleString('en-GB')} km per year,{' '}
-                    {v.leaseTerms.customer}
+                    {v.leaseTerms.months} {t('months')} · {number(v.leaseTerms.annualMileage)}{' '}
+                    {t('km per year')} · {t(v.leaseTerms.customer)}
                   </p>
                   <button
                     type="button"
@@ -413,7 +421,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
                     {...stylex.props(s.finance)}
                     onClick={() => setLeaseQuote(true)}
                   >
-                    Leasing details
+                    {t('Leasing details')}
                     <Icon name="right" size={18} />
                   </button>
                 </>
@@ -423,7 +431,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
                     <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
                     <button
                       type="button"
-                      aria-label="Price rating details"
+                      aria-label={t('Price rating details')}
                       aria-haspopup="dialog"
                       onClick={() => setPriceInfo(true)}
                       {...stylex.props(s.ratingButton)}
@@ -439,22 +447,32 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
                     </p>
                   )}
                   <p {...stylex.props(s.priceNote)}>
-                    {v.priceNote || money(v.price / 1.19) + ' Net, 19.00% VAT'}
+                    {v.priceNote ||
+                      money(v.price / 1.19) +
+                        (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
                   </p>
                   <button
                     type="button"
-                    aria-label={'Calculate financing, from ' + money(financeMonthly) + ' per month'}
+                    aria-label={
+                      t('Calculate Financing') +
+                      ': ' +
+                      t('From') +
+                      ' ' +
+                      money(financeMonthly) +
+                      t(' per month')
+                    }
                     aria-haspopup="dialog"
                     onClick={() => setFinance(true)}
                     {...stylex.props(s.finance)}
                   >
                     <span {...stylex.props(s.financeAmount)}>
-                      from{' '}
-                      <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /
-                      month
+                      {t('from')}{' '}
+                      <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /{' '}
+                      {t('month')}
                     </span>
                     <span {...stylex.props(s.financeAction)}>
-                      Financing <Icon name="right" size={18} />
+                      {t('Financing ')}
+                      <Icon name="right" size={18} />
                     </span>
                   </button>
                 </>
@@ -469,13 +487,13 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
                   <span {...stylex.props(s.actionIcon)}>
                     <Icon name="phone" size={18} />
                   </span>
-                  Contact
+                  {t('Contact')}
                 </button>
                 <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
                   <span {...stylex.props(s.actionIcon)}>
                     <Icon name="mail" size={18} />
                   </span>
-                  Enquire
+                  {t('Enquire')}
                 </Link>
               </div>
             </section>
@@ -484,53 +502,57 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
       />
       {(contactDock || section !== 'details') && (
         <aside
-          aria-label="Vehicle enquiry"
+          aria-label={t('Vehicle enquiry')}
           data-vehicle-contact-dock
           {...stylex.props(s.contactDock)}
         >
           <strong {...stylex.props(s.dockPrice)}>
             {money(leasing ? v.monthly || 0 : v.price)}
-            {leasing && <span {...stylex.props(s.dockPeriod)}> / month</span>}
+            {leasing && <span {...stylex.props(s.dockPeriod)}> / {t('month')}</span>}
           </strong>
           <Link
             href={'/contact?vehicle=' + v.id}
-            aria-label={'Enquire about ' + v.make + ' ' + v.model}
+            aria-label={t('Enquire about this car') + ': ' + v.make + ' ' + v.model}
             {...stylex.props(s.action, s.enquire)}
           >
-            Enquire
+            {t('Enquire')}
           </Link>
         </aside>
       )}
       <ContactSheet vehicle={v} open={contact} onClose={() => setContact(false)} />
-      <Modal open={finance} onClose={() => setFinance(false)} title="Calculate Financing">
+      <Modal open={finance} onClose={() => setFinance(false)} title={t('Calculate Financing')}>
         <FinanceCalculator vehicle={v} onClose={() => setFinance(false)} />
       </Modal>
-      <Modal open={leaseQuote} onClose={() => setLeaseQuote(false)} title="Leasing details">
+      <Modal open={leaseQuote} onClose={() => setLeaseQuote(false)} title={t('Leasing details')}>
         <div {...stylex.props(ui.column)}>
           <strong>
             {v.make} {v.model}
           </strong>
-          <p>{v.monthly} € per month, including VAT.</p>
           <p>
-            {v.leaseTerms?.months} months · {v.leaseTerms?.annualMileage.toLocaleString('en-GB')} km
-            per year · {v.leaseTerms?.deposit} € initial payment.
+            {money(v.monthly || 0)} {t('per month, including VAT.')}
+          </p>
+          <p>
+            {v.leaseTerms?.months} {t('months')} · {number(v.leaseTerms?.annualMileage || 0)}{' '}
+            {t('km per year')} · {money(v.leaseTerms?.deposit || 0)} {t('initial payment')}
           </p>
           <p {...stylex.props(ui.small, ui.muted)}>
-            Captured reference quote only. Live lease calculation and finance applications are not
-            connected; no request is sent.
+            {t(
+              'Captured reference quote only. Live lease calculation and finance applications are not connected; no request is sent.',
+            )}
           </p>
-          <Button onClick={() => setLeaseQuote(false)}>Close</Button>
+          <Button onClick={() => setLeaseQuote(false)}>{t('Close')}</Button>
         </div>
       </Modal>
-      <Modal open={priceInfo} onClose={() => setPriceInfo(false)} title="Price rating">
+      <Modal open={priceInfo} onClose={() => setPriceInfo(false)} title={t('Price rating')}>
         <div {...stylex.props(ui.column)}>
           <PriceRating veryGood={v.deal} />
           <p>
-            The rating and advertised price are reproduced from the captured reference listing. They
-            are not a current market valuation.
+            {t(
+              'The rating and advertised price are reproduced from the captured reference listing. They are not a current market valuation.',
+            )}
           </p>
           <Button onClick={() => setPriceInfo(false)} block>
-            Close
+            {t('Close')}
           </Button>
         </div>
       </Modal>
@@ -540,7 +562,7 @@ export function DetailScreen({ vehicle: v }: { vehicle: Vehicle }) {
             This listing is a local captured example. Reporting to the marketplace is not connected.
           </p>
           <Button onClick={() => setReport(false)} block>
-            Close
+            {t('Close')}
           </Button>
         </div>
       </Modal>

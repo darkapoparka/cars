@@ -1,4 +1,5 @@
 'use client';
+import { hydrateLocale, useLocale } from '@/lib/use-locale';
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -6,6 +7,8 @@ import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
+import { translate } from '@/lib/locale';
+import { getVehicle } from '@/lib/catalog';
 import { ShowroomNavIcon, type ShowroomNavIconName } from './ShowroomNavIcon';
 const tabs: [string, string, ShowroomNavIconName][] = [
   ['/', 'Cars', 'cars'],
@@ -95,6 +98,7 @@ const s = stylex.create({
 });
 const subscribeReady = () => () => {};
 export function AppShell({ children }: { children: ReactNode }) {
+  const { t, locale } = useLocale();
   const pathname = usePathname();
   const ready = useSyncExternalStore(
     subscribeReady,
@@ -105,9 +109,40 @@ export function AppShell({ children }: { children: ReactNode }) {
   const primary = tabs.some(([href]) => href === pathname) || pathname === '/car-park';
   useEffect(() => {
     hydrateStore();
+    hydrateLocale();
     window.addEventListener('storage', syncStorage);
-    return () => window.removeEventListener('storage', syncStorage);
+    window.addEventListener('storage', hydrateLocale);
+    window.addEventListener('popstate', hydrateLocale);
+    return () => {
+      window.removeEventListener('storage', syncStorage);
+      window.removeEventListener('storage', hydrateLocale);
+      window.removeEventListener('popstate', hydrateLocale);
+    };
   }, []);
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    const vehicle = pathname.startsWith('/vehicle/')
+      ? getVehicle(pathname.split('/')[2])
+      : undefined;
+    const page = vehicle
+      ? vehicle.make + ' ' + vehicle.model
+      : pathname === '/services'
+        ? 'Services'
+        : pathname === '/contact'
+          ? 'Contact'
+          : pathname === '/car-park'
+            ? 'Saved cars'
+            : 'Cars';
+    const title = translate(page, locale) + ' — ' + translate('Your showroom', locale);
+    const syncTitle = () => {
+      if (document.title !== title) document.title = title;
+    };
+    syncTitle();
+    // Streamed route metadata can arrive after the locale effect.
+    const observer = new MutationObserver(syncTitle);
+    observer.observe(document.head, { childList: true, subtree: true, characterData: true });
+    return () => observer.disconnect();
+  }, [locale, pathname, ready]);
   useEffect(() => {
     if (!state.toast) return;
     const timer = setTimeout(() => patchState({ toast: '' }), 3500);
@@ -119,30 +154,30 @@ export function AppShell({ children }: { children: ReactNode }) {
       {...stylex.props(s.root, primary && s.primary, state.theme === 'dark' && darkTheme)}
     >
       <a href="#main-content" {...stylex.props(s.skip)}>
-        Skip to content
+        {t('Skip to content')}
       </a>
       <main id="main-content">{children}</main>
       {primary && (
-        <nav aria-label="Main navigation" {...stylex.props(s.nav)}>
+        <nav aria-label={t('Main navigation')} {...stylex.props(s.nav)}>
           {tabs.map(([href, label, icon]) => (
             <Link
               key={href}
               href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
               prefetch={href === '/' ? false : undefined}
-              aria-label={label}
-              title={label}
+              aria-label={t(label)}
+              title={t(label)}
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
               <ShowroomNavIcon name={icon} />
-              {pathname === href && <span {...stylex.props(s.label)}>{label}</span>}
+              {pathname === href && <span {...stylex.props(s.label)}>{t(label)}</span>}
             </Link>
           ))}
         </nav>
       )}
       {state.toast && (
         <div role="status" {...stylex.props(s.toast)}>
-          {state.toast}
+          {t(state.toast)}
         </div>
       )}
     </div>

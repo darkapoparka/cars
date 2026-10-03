@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
@@ -6,7 +7,6 @@ import { colors } from '@/styles/tokens.stylex';
 import { patchState, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { Button, CheckRow, Modal, ui } from './ui';
-import { Icon } from './Icon';
 const s = stylex.create({
   background: { minHeight: 'calc(100dvh - 60px)', backgroundColor: colors.surface, padding: 16 },
   notification: {
@@ -43,6 +43,7 @@ const s = stylex.create({
   demo: { paddingBlock: 24, fontSize: 12, lineHeight: '20px', color: colors.muted },
 });
 export function NativeNotificationSettings() {
+  const { t } = useLocale();
   const { notifications, theme } = useAppState();
   const [settings, setSettings] = useState(false);
   return (
@@ -95,7 +96,7 @@ export function NativeNotificationSettings() {
             Dark appearance
           </CheckRow>
           <Button onClick={() => setSettings(false)} block>
-            Done
+            {t('Done')}
           </Button>
         </div>
       </Modal>
@@ -103,39 +104,28 @@ export function NativeNotificationSettings() {
   );
 }
 export function NativeLanguageSettings() {
-  const [settings, setSettings] = useState(false);
+  const { t, locale, setLocale } = useLocale();
   return (
     <>
-      <Header title="Language" back="/profile" />
+      <Header title={t('Language')} back="/" />
       <div {...stylex.props(s.background)}>
         <section {...stylex.props(s.card)}>
-          <p>
-            The app follows your device&apos;s language settings. Changes take effect after
-            restarting the app.
-          </p>
-          <div {...stylex.props(ui.row)}>
-            <Icon name="info" size={22} />
-            <p>
-              Supported languages: <strong>English, German</strong>
-            </p>
+          <p>{t('Choose your language. The change applies immediately.')}</p>
+          <div role="group" aria-label={t('Language')} {...stylex.props(ui.column)}>
+            {(['bg', 'en'] as const).map((language) => (
+              <button
+                key={language}
+                type="button"
+                aria-pressed={locale === language}
+                onClick={() => setLocale(language)}
+                {...stylex.props(ui.input)}
+              >
+                {language === 'bg' ? 'Български' : 'English'} {locale === language ? '✓' : ''}
+              </button>
+            ))}
           </div>
-          <p>You can also set the language just for this app.</p>
-          <Button icon="settings" onClick={() => setSettings(true)} block>
-            Open Language Settings
-          </Button>
         </section>
       </div>
-      <Modal open={settings} onClose={() => setSettings(false)} title="Language Settings">
-        <div {...stylex.props(ui.column)}>
-          <p>
-            The native app delegates this screen to Android. This browser reconstruction currently
-            follows the captured English reference; German content has not been reconstructed.
-          </p>
-          <Button onClick={() => setSettings(false)} block>
-            Keep English
-          </Button>
-        </div>
-      </Modal>
     </>
   );
 }

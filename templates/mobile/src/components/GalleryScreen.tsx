@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
@@ -12,6 +13,7 @@ import {
 } from '@/lib/vehicle-detail-navigation';
 import { setVehiclePhoto } from '@/lib/store';
 import type { Vehicle } from '@/lib/types';
+import { localizeVehicle } from '@/lib/vehicle-copy';
 import { Header } from './Header';
 import { Button } from './ui';
 import { Icon } from './Icon';
@@ -119,12 +121,14 @@ const s = stylex.create({
   },
 });
 export function GalleryScreen({
-  vehicle: v,
+  vehicle,
   embedded = false,
 }: {
   vehicle: Vehicle;
   embedded?: boolean;
 }) {
+  const { t, locale } = useLocale();
+  const v = localizeVehicle(vehicle, locale);
   const returnSection = useVehicleGalleryReturnSection();
   const [index, setIndex] = useState<number | null>(null);
   const [zoom, setZoom] = useState(1);
@@ -225,7 +229,7 @@ export function GalleryScreen({
     <>
       {!embedded && (
         <Header
-          title={v.images.length + ' Images'}
+          title={v.images.length + t(' Images')}
           back={vehicleGalleryReturnHref(v.id, returnSection)}
         />
       )}
@@ -241,7 +245,7 @@ export function GalleryScreen({
           <button
             type="button"
             key={src}
-            aria-label={'Open vehicle image ' + (i + 1)}
+            aria-label={t('Open vehicle image') + ' ' + (i + 1)}
             onClick={(event) => {
               opener.current = event.currentTarget;
               if (embedded)
@@ -257,7 +261,7 @@ export function GalleryScreen({
           >
             <Image
               src={src}
-              alt={v.make + ' ' + v.model + ' photo ' + (i + 1)}
+              alt={v.make + ' ' + v.model + ' · ' + t('photo') + ' ' + (i + 1)}
               fill
               sizes={
                 embedded && v.images.length === 1
@@ -272,10 +276,10 @@ export function GalleryScreen({
       {!embedded && (
         <div {...stylex.props(s.footer)}>
           <Button icon="phone" onClick={() => setContact(true)}>
-            Call
+            {t('Call')}
           </Button>
           <Button icon="mail" href={'/vehicle/' + v.id + '/message'}>
-            E-mail
+            {t('E-mail')}
           </Button>
         </div>
       )}
@@ -283,7 +287,7 @@ export function GalleryScreen({
       {index !== null && (
         <dialog
           ref={ref}
-          aria-label="Vehicle photo viewer"
+          aria-label={t('Vehicle photo viewer')}
           onCancel={(event) => {
             event.preventDefault();
             event.stopPropagation();
@@ -293,7 +297,7 @@ export function GalleryScreen({
         >
           <button
             type="button"
-            aria-label="Close photo viewer"
+            aria-label={t('Close photo viewer')}
             onClick={close}
             {...stylex.props(s.round, s.close)}
           >
@@ -376,7 +380,7 @@ export function GalleryScreen({
           >
             <Image
               src={v.images[index]}
-              alt={v.make + ' ' + v.model + ' photo ' + (index + 1)}
+              alt={v.make + ' ' + v.model + ' · ' + t('photo') + ' ' + (index + 1)}
               fill
               sizes="100vw"
               draggable={false}
@@ -386,7 +390,7 @@ export function GalleryScreen({
           <div {...stylex.props(s.viewerFooter)}>
             <button
               type="button"
-              aria-label="Previous photo"
+              aria-label={t('Previous photo')}
               onClick={() => move(-1)}
               {...stylex.props(s.round)}
             >
@@ -397,7 +401,7 @@ export function GalleryScreen({
             </output>
             <button
               type="button"
-              aria-label="Next photo"
+              aria-label={t('Next photo')}
               onClick={() => move(1)}
               {...stylex.props(s.round)}
             >

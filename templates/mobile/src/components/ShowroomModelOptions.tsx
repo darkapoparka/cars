@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 
 import { useId, useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
@@ -32,10 +33,11 @@ function ModelCheckbox({
   mixed?: boolean;
   onChange: (checked: boolean) => void;
 }) {
+  const { t } = useLocale();
   return (
     <input
       type="checkbox"
-      aria-label={name}
+      aria-label={t(name)}
       data-model-key={modelKey}
       checked={checked}
       ref={(element) => {
@@ -66,6 +68,7 @@ export function ShowroomModelOptions({
   onToggleFamily: (name: string) => void;
   onToggleExcluded: () => void;
 }) {
+  const { t } = useLocale();
   const optionsId = useId();
   const [optionsOpen, setOptionsOpen] = useState(false);
   const [searchExpansion, setSearchExpansion] = useState({ query: '', collapsed: [] as string[] });
@@ -93,7 +96,7 @@ export function ShowroomModelOptions({
       : !draft.selected.length;
     return (
       <label {...stylex.props(s.choice, parent && s.childChoice)}>
-        <span {...stylex.props(s.name)}>{name || 'Any model'}</span>
+        <span {...stylex.props(s.name)}>{name || t('Any model')}</span>
         <span {...stylex.props(s.checkTarget)}>
           <ModelCheckbox
             name={name || 'Any model'}
@@ -109,11 +112,14 @@ export function ShowroomModelOptions({
   function variantField(model: string, group?: NativeModelGroup) {
     return (
       <label {...stylex.props(s.variantField)}>
-        <span>{model ? modelLabel(model) + ' variant' : 'Variant'} (optional)</span>
+        <span>
+          {model ? modelLabel(model) + ' · ' + t('Variant') : t('Variant')}
+          {t(' (optional)')}
+        </span>
         <input
-          aria-label={model ? 'Variant for ' + modelLabel(model) : 'Variant'}
+          aria-label={model ? t('Variant') + ': ' + modelLabel(model) : t('Variant')}
           value={modelVariantFor(draft, model, group)}
-          placeholder="Variant or trim"
+          placeholder={t('Variant or trim')}
           maxLength={200}
           autoComplete="off"
           onChange={(event) => onChange(setModelVariant(draft, model, event.target.value, group))}
@@ -132,10 +138,10 @@ export function ShowroomModelOptions({
           return (
             <div key={key} data-model-node={key} {...stylex.props(s.group)}>
               <label {...stylex.props(s.choice)}>
-                <span {...stylex.props(s.name)}>{group.name}</span>
+                <span {...stylex.props(s.name)}>{t(group.name)}</span>
                 <span {...stylex.props(s.checkTarget)}>
                   <ModelCheckbox
-                    name={group.name}
+                    name={t(group.name)}
                     modelKey={key}
                     checked={draft.selected.includes(key)}
                     onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
@@ -160,7 +166,7 @@ export function ShowroomModelOptions({
             <div {...stylex.props(s.familyRow)}>
               <button
                 type="button"
-                aria-label={(show ? 'Collapse ' : 'Expand ') + group.name}
+                aria-label={t(show ? 'Collapse' : 'Expand') + ' ' + t(group.name)}
                 aria-expanded={show}
                 aria-controls={childrenId}
                 onClick={() => {
@@ -178,14 +184,14 @@ export function ShowroomModelOptions({
                 }}
                 {...stylex.props(s.familyButton)}
               >
-                <span {...stylex.props(s.name)}>{group.name}</span>
+                <span {...stylex.props(s.name)}>{t(group.name)}</span>
                 <span aria-hidden="true" {...stylex.props(s.chevron)}>
                   <Icon name={show ? 'up' : 'down'} size={18} />
                 </span>
               </button>
               <label {...stylex.props(s.checkTarget)}>
                 <ModelCheckbox
-                  name={group.name}
+                  name={t(group.name)}
                   modelKey={key}
                   checked={checked}
                   mixed={mixed}
@@ -209,7 +215,7 @@ export function ShowroomModelOptions({
       })}
       {q && !visibleGroups.length && (
         <p role="status" {...stylex.props(s.empty)}>
-          No models found
+          {t('No models found')}
         </p>
       )}
       <details
@@ -218,9 +224,11 @@ export function ShowroomModelOptions({
         {...stylex.props(s.options)}
       >
         <summary {...stylex.props(s.summary)}>
-          <span {...stylex.props(s.name)}>More options</span>
+          <span {...stylex.props(s.name)}>{t('More options')}</span>
           {activeOptions > 0 && (
-            <span {...stylex.props(s.activeCount)}>{activeOptions} active</span>
+            <span {...stylex.props(s.activeCount)}>
+              {activeOptions} {t('active')}
+            </span>
           )}
           <span aria-hidden="true" {...stylex.props(s.chevron)}>
             <Icon name={optionsOpen ? 'up' : 'down'} size={18} />
@@ -230,12 +238,12 @@ export function ShowroomModelOptions({
           <button
             type="button"
             role="switch"
-            aria-label="Exclude make"
+            aria-label={t('Exclude make')}
             aria-checked={excluded}
             onClick={onToggleExcluded}
             {...stylex.props(s.excludeRow)}
           >
-            <span {...stylex.props(s.name)}>Exclude this selection</span>
+            <span {...stylex.props(s.name)}>{t('Exclude this selection')}</span>
             <span aria-hidden="true" {...stylex.props(s.switch, excluded && s.switchOn)}>
               <span {...stylex.props(s.thumb)} />
             </span>

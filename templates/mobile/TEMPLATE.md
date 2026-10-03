@@ -41,7 +41,8 @@ choices have aligned labels and selection controls, with expandable families.
 Optional variants and exclusion live in a collapsed More options section.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Long vehicle names wrap within the card; inventory keeps its
-two single-line subtext rows. Photo save actions use the same outline-heart family
+two subtext rows on desktop. Mobile facts wrap so mileage, fuel and transmission
+remain readable at 320px. Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
 
 Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
@@ -124,10 +125,27 @@ switching filter tabs retains their keyboard navigation. Pill and tab focus
 rings use the showroom accent; the dock uses the neutral text color. All sit
 inside their targets. Toasts account for
 the phone's bottom safe area.
-Inventory cards keep two subtext rows: one variant line and one year/mileage/
-fuel/transmission line. Automatic is shortened to Auto in the compact facts;
-the full values remain in the detail page and the facts tooltip. Long rows
-truncate rather than creating a third line.
+Inventory cards keep a variant line and a year/mileage/fuel/transmission row.
+Mobile facts wrap naturally rather than clipping the transmission. Desktop keeps
+its original single-line facts. English Automatic is shortened to Auto in compact
+facts; full values remain in the detail page and the facts tooltip.
+
+Bulgarian is the default language. The mobile header's BG/EN control switches the
+showroom, filters, details, equipment, service forms and enquiry UI immediately.
+The choice persists on the device; `?lang=bg` and `?lang=en` override it for shared
+links. Language settings use the same store. Vehicle filter identifiers and user
+messages remain unchanged. Bulgarian search matches translated fuels, body types
+and services. Display copy replaces German listing advertisements with factual
+vehicle summaries; the captured reference data remains intact.
+Showroom cards and galleries use the actual vehicle photos and omit captured
+German finance, sale and testimonial slides. Original assets stay in the reference
+catalog; verified dealer photos are still required for a real proposal.
+Mobile uses locally bundled Manrope Latin and Cyrillic subsets under their OFL
+license, keeping Bulgarian labels, model names and prices in one family. The
+BG/EN header action has a transparent background and a 44px touch target. Mobile
+vehicle detail ends on a white surface with dividers around contact and related
+cars, without outer card frames. Header, font and surface changes stay below
+700px; desktop retains its original typography and framed detail footer.
 
 Contact puts rounded grey Call us / Visit us actions on a white strip below the
 logo header. A white enquiry card sits in the grey section below, centered within
@@ -190,7 +208,7 @@ marketplace screenshot contracts do not establish showroom acceptance.
 
 The catalog registers a working library candidate. No dealer release is selected,
 and the existing dealer generator and default design sets remain as recorded.
-Dealer mounting, personalization adapters, localization and exact-source release
+Dealer mounting, personalization adapters and exact-source release
 acceptance remain required before offering Mobile as a published dealer design.
 
 Read [the imported architecture reference](docs/REFERENCE-ARCHITECTURE.md) as

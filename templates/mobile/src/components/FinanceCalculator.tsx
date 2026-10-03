@@ -1,8 +1,9 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
-import { money, paymentEstimate } from '@/lib/search';
+import { paymentEstimate } from '@/lib/search';
 import type { Vehicle } from '@/lib/types';
 import { Button, ui } from './ui';
 const s = stylex.create({
@@ -24,6 +25,7 @@ export function FinanceCalculator({
   vehicle: Vehicle;
   onClose?: () => void;
 }) {
+  const { t, money } = useLocale();
   const [deposit, setDeposit] = useState(Math.round(v.price * 0.2));
   const [months, setMonths] = useState(60);
   const [rate, setRate] = useState(7.9);
@@ -34,14 +36,15 @@ export function FinanceCalculator({
         {v.make} {v.model}
       </h3>
       <div {...stylex.props(ui.center)}>
-        <p {...stylex.props(ui.muted)}>Estimated monthly payment</p>
+        <p {...stylex.props(ui.muted)}>{t('Estimated monthly payment')}</p>
         <p {...stylex.props(s.price)}>
           {money(payment)}
-          <span {...stylex.props(ui.text)}> mth.</span>
+          <span {...stylex.props(ui.text)}>{t(' mth.')}</span>
         </p>
       </div>
       <label {...stylex.props(ui.label)}>
-        Down payment <strong>{money(deposit)}</strong>
+        {t('Down payment ')}
+        <strong>{money(deposit)}</strong>
         <input
           type="range"
           min={0}
@@ -53,25 +56,26 @@ export function FinanceCalculator({
         />
       </label>
       <label {...stylex.props(ui.label)}>
-        Term
+        {t('Term')}
         <select
-          aria-label="Term"
+          aria-label={t('Term')}
           value={months}
           onChange={(e) => setMonths(Number(e.target.value))}
           {...stylex.props(ui.input)}
         >
           {[12, 24, 36, 48, 60, 72, 84, 96].map((m) => (
             <option key={m} value={m}>
-              {m} months
+              {m}
+              {t(' months')}
             </option>
           ))}
         </select>
       </label>
       <label {...stylex.props(ui.label)}>
-        Assumed annual interest rate (%)
+        {t('Assumed annual interest rate (%)')}
         <input
           type="number"
-          aria-label="Assumed annual interest rate (%)"
+          aria-label={t('Assumed annual interest rate (%)')}
           min="0"
           max="30"
           step="0.1"
@@ -81,20 +85,21 @@ export function FinanceCalculator({
         />
       </label>
       <div {...stylex.props(s.summary)}>
-        <span>Vehicle price</span>
+        <span>{t('Vehicle price')}</span>
         <strong>{money(v.price)}</strong>
-        <span>Loan amount</span>
+        <span>{t('Loan amount')}</span>
         <strong>{money(v.price - deposit)}</strong>
-        <span>Total instalments</span>
+        <span>{t('Total instalments')}</span>
         <strong>{money(payment * months)}</strong>
       </div>
       <p {...stylex.props(ui.small, ui.muted)}>
-        Illustrative local calculator using an assumed rate, not a finance offer or application.
-        Excludes lender fees and any balloon payment.
+        {t(
+          'Illustrative local calculator using an assumed rate, not a finance offer or application. Excludes lender fees and any balloon payment.',
+        )}
       </p>
       {onClose && (
         <Button variant="purple" onClick={onClose} block>
-          Done
+          {t('Done')}
         </Button>
       )}
     </div>

@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, type ReactNode } from 'react';
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
@@ -285,6 +286,8 @@ export function Button({
   dense?: boolean;
   floating?: boolean;
 }) {
+  const { t } = useLocale();
+  const copy = typeof children === 'string' ? t(children) : children;
   const attrs = stylex.props(
     s.button,
     s[variant],
@@ -295,12 +298,18 @@ export function Button({
     disabled && s.disabled,
   );
   return href && !disabled ? (
-    <Link href={href} {...attrs} aria-label={label}>
-      {icon && <Icon name={icon} size={floating ? 24 : 16} />} {children}
+    <Link href={href} {...attrs} aria-label={label ? t(label) : undefined}>
+      {icon && <Icon name={icon} size={floating ? 24 : 16} />} {copy}
     </Link>
   ) : (
-    <button {...attrs} type={type} disabled={disabled} onClick={onClick} aria-label={label}>
-      {icon && <Icon name={icon} size={floating ? 24 : 16} />} {children}
+    <button
+      {...attrs}
+      type={type}
+      disabled={disabled}
+      onClick={onClick}
+      aria-label={label ? t(label) : undefined}
+    >
+      {icon && <Icon name={icon} size={floating ? 24 : 16} />} {copy}
     </button>
   );
 }
@@ -317,8 +326,9 @@ export function IconButton({
   href?: string;
   filled?: boolean;
 }) {
+  const { t } = useLocale();
   return href ? (
-    <Link href={href} {...stylex.props(s.icon)} aria-label={label}>
+    <Link href={href} {...stylex.props(s.icon)} aria-label={t(label)}>
       <Icon name={icon} filled={filled} />
     </Link>
   ) : (
@@ -326,7 +336,7 @@ export function IconButton({
       type="button"
       {...stylex.props(s.icon)}
       onClick={onClick}
-      aria-label={label}
+      aria-label={t(label)}
       aria-pressed={icon === 'heart' ? filled : undefined}
     >
       <Icon name={icon} filled={filled} />
@@ -349,6 +359,7 @@ export function CheckRow({
   checked: boolean;
   onChange: (checked: boolean) => void;
 }) {
+  const { t } = useLocale();
   return (
     <label {...stylex.props(s.checkRow)}>
       <input
@@ -357,7 +368,7 @@ export function CheckRow({
         onChange={(e) => onChange(e.target.checked)}
         {...stylex.props(s.checkbox, controls.checkbox)}
       />
-      <span>{children}</span>
+      <span>{typeof children === 'string' ? t(children) : children}</span>
     </label>
   );
 }
@@ -398,6 +409,7 @@ export function Modal({
   pickerHeight?: number;
   label?: string;
 }) {
+  const { t } = useLocale();
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     if (!open) return;
@@ -434,7 +446,7 @@ export function Modal({
         picker && s.pickerDialog,
         picker && pickerHeight !== undefined && s.pickerHeight(pickerHeight),
       )}
-      aria-label={label || title || 'Options'}
+      aria-label={t(label || title || 'Options')}
       onCancel={(e) => {
         e.preventDefault();
         e.stopPropagation();
@@ -457,7 +469,7 @@ export function Modal({
         <h2
           {...stylex.props(s.modalTitle, sorting && s.sortingTitle, selection && s.selectionTitle)}
         >
-          {title}
+          {t(title)}
         </h2>
       )}
       {children}

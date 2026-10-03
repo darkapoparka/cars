@@ -1,3 +1,4 @@
+import { translate } from './locale';
 const categoryOptions = [
   { value: 'services', label: 'All' },
   { value: 'import', label: 'Import' },
@@ -210,7 +211,8 @@ export function searchShowroomServices(services: readonly ShowroomService[], que
       .toLocaleLowerCase();
   const words = fold(query).trim().split(/\s+/).filter(Boolean);
   return services.filter((service) => {
-    const text = fold([service.title, service.copy, ...(service.keywords || [])].join(' '));
+    const phrases = [service.title, service.copy, ...(service.keywords || [])];
+    const text = fold([...phrases, ...phrases.map((phrase) => translate(phrase, 'bg'))].join(' '));
     return words.every((word) => text.includes(word));
   });
 }

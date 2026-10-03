@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,6 +10,7 @@ import { IconButton } from './ui';
 import type { IconName } from './Icon';
 import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
+import { LanguageSwitcher } from './LanguageSwitcher';
 const s = stylex.create({
   header: {
     height: 60,
@@ -34,7 +36,12 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
   },
   backTitle: { paddingInline: 8 },
-  logo: { width: 176, height: 52, objectFit: 'contain', objectPosition: 'left center' },
+  logo: {
+    width: { default: 176, '@media (max-width: 699px)': 152 },
+    height: { default: 52, '@media (max-width: 699px)': 'auto' },
+    objectFit: 'contain',
+    objectPosition: 'left center',
+  },
   home: { paddingLeft: 16, paddingRight: 8, backgroundColor: '#fff', color: '#1b1b21' },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
   savedAction: {
@@ -90,6 +97,7 @@ export function Header({
   onBack?: () => void;
   backIcon?: IconName;
 }) {
+  const { t } = useLocale();
   const { parked, filters, inventorySort } = useAppState();
   return (
     <header {...stylex.props(s.header, home && s.home)}>
@@ -98,7 +106,7 @@ export function Header({
           href={onBack ? undefined : back}
           onClick={onBack}
           icon={backIcon}
-          label={backIcon === 'close' ? 'Close' : 'Go back'}
+          label={backIcon === 'close' ? t('Close') : t('Go back')}
         />
       )}
       {home ? (
@@ -106,12 +114,12 @@ export function Header({
           href={showroomInventoryHref(filters, inventorySort)}
           prefetch={false}
           {...stylex.props(s.logoLink)}
-          aria-label={showroom.name + ' cars'}
+          aria-label={t(showroom.name) + ' · ' + t('Cars')}
         >
           {showroom.logo ? (
             <Image
               src={showroom.logo}
-              alt={showroom.name}
+              alt={t(showroom.name)}
               width={176}
               height={52}
               sizes="176px"
@@ -119,18 +127,21 @@ export function Header({
               {...stylex.props(s.logo)}
             />
           ) : (
-            <span {...stylex.props(s.placeholder)}>{showroom.name}</span>
+            <span {...stylex.props(s.placeholder)}>{t(showroom.name)}</span>
           )}
         </Link>
       ) : (
-        <h1 {...stylex.props(s.title, Boolean(back || onBack) && s.backTitle)}>{title}</h1>
+        <h1 {...stylex.props(s.title, Boolean(back || onBack) && s.backTitle)}>
+          {title ? t(title) : title}
+        </h1>
       )}
       {home ? (
         <div {...stylex.props(s.actions)}>
+          <LanguageSwitcher />
           <span {...stylex.props(s.relative)}>
             <Link
               href="/car-park"
-              aria-label={'Saved cars' + (parked.length ? ', ' + parked.length + ' saved' : '')}
+              aria-label={t('Saved cars') + (parked.length ? ', ' + parked.length : '')}
               {...stylex.props(s.savedAction, parked.length > 0 && s.savedActive)}
             >
               <Heart

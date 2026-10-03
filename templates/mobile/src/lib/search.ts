@@ -2,6 +2,7 @@ import type { Filters, Vehicle } from './types';
 import { modelGroupsFor } from './native-taxonomy';
 import { defaultFilters } from './types';
 import { normalizeFilters } from './filters';
+import { translate } from './locale';
 export { normalizeFilters } from './filters';
 function matchesModel(vehicle: Vehicle, model: string): boolean {
   const literal = (name: string) =>
@@ -103,7 +104,8 @@ export function filterVehicles(vehicles: Vehicle[], input: Filters): Vehicle[] {
   const f = normalizeFilters(input);
   const terms = f.query.toLowerCase().split(/\s+/).filter(Boolean);
   return vehicles.filter((v) => {
-    const text = `${v.make} ${v.model} ${v.variant} ${v.fuel} ${v.body}`.toLowerCase();
+    const text =
+      `${v.make} ${v.model} ${v.variant} ${v.fuel} ${v.body} ${translate(v.fuel, 'bg')} ${translate(v.body, 'bg')} ${translate(v.transmission, 'bg')}`.toLowerCase();
     return (
       v.category === f.category &&
       (!f.makes.length || f.makes.includes(v.make)) &&

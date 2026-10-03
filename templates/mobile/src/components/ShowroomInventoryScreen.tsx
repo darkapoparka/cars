@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
@@ -7,7 +8,7 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
 import { defaultFilters, type Filters } from '@/lib/types';
-import { filterVehicles, money, parseFilters, sortVehicles } from '@/lib/search';
+import { filterVehicles, parseFilters, sortVehicles } from '@/lib/search';
 import { patchState, switchVehicleCategory } from '@/lib/store';
 import {
   restoreInventoryPosition,
@@ -93,6 +94,7 @@ const s = stylex.create({
 });
 
 export function ShowroomInventoryScreen() {
+  const { t, locale, money } = useLocale();
   const params = useSearchParams();
   const query = params.toString();
   const filters = showroomFilters(parseFilters(query));
@@ -185,16 +187,16 @@ export function ShowroomInventoryScreen() {
       ? filters.minPrice && filters.maxPrice
         ? money(Number(filters.minPrice)) + '–' + money(Number(filters.maxPrice))
         : filters.maxPrice
-          ? 'Up to ' + money(Number(filters.maxPrice))
-          : 'From ' + money(Number(filters.minPrice))
+          ? t('Up to') + ' ' + money(Number(filters.maxPrice))
+          : t('From') + ' ' + money(Number(filters.minPrice))
       : 'Price';
   const yearLabel =
     filters.minYear || filters.maxYear
       ? filters.minYear && filters.maxYear
         ? filters.minYear + '–' + filters.maxYear
         : filters.minYear
-          ? 'From ' + filters.minYear
-          : 'To ' + filters.maxYear
+          ? t('From') + ' ' + filters.minYear
+          : t('To') + ' ' + filters.maxYear
       : 'Year';
   const pills: { key: ShowroomFilterTab; label: string; active: boolean; name: string }[] = [
     {
@@ -221,7 +223,7 @@ export function ShowroomInventoryScreen() {
     },
     {
       key: 'fuel',
-      label: filters.fuel.join(', ') || 'Fuel',
+      label: filters.fuel.map(t).join(', ') || 'Fuel',
       active: Boolean(filters.fuel.length),
       name: 'Fuel',
     },
@@ -230,14 +232,14 @@ export function ShowroomInventoryScreen() {
   return (
     <>
       <Header home />
-      <section aria-label="Find a vehicle" {...stylex.props(s.controls)}>
+      <section aria-label={t('Find a vehicle')} {...stylex.props(s.controls)}>
         <ShowroomSearch
-          label="Search make or model"
+          label={t('Search make or model')}
           value={filters.query}
           onOpen={(button) => openSheet('search', button)}
         />
         <ShowroomTabs
-          label="Vehicle category"
+          label={t('Vehicle category')}
           variant="icon"
           tone="neutral"
           tabs={showroomCategories.map(({ value, label, image }) => ({
@@ -261,23 +263,25 @@ export function ShowroomInventoryScreen() {
           idPrefix="category-"
           onChange={selectCategory}
         />
-        <ShowroomQuickPills label="Quick filters">
+        <ShowroomQuickPills label={t('Quick filters')}>
           <ShowroomQuickPill
-            aria-label={'Sort ' + category.plural + ': ' + sortLabel}
+            aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
             aria-haspopup="dialog"
             aria-expanded={sorting}
             active={sort !== 'standard'}
             onClick={(event) => openSheet('sort', event.currentTarget)}
           >
             <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
-            {compactSortLabel}
+            {t(compactSortLabel)}
           </ShowroomQuickPill>
           {pills.map((pill) => (
             <ShowroomQuickPill
               key={pill.key}
               type="button"
               data-quick-filter={pill.key}
-              aria-label={pill.name + ' filters' + (pill.active ? ': ' + pill.label : '')}
+              aria-label={
+                t(pill.name) + ' · ' + t('Filters') + (pill.active ? ': ' + t(pill.label) : '')
+              }
               aria-haspopup="dialog"
               aria-describedby={
                 pill.key === 'more' && otherFilterCount > 0 ? 'showroom-filter-count' : undefined
@@ -285,7 +289,7 @@ export function ShowroomInventoryScreen() {
               onClick={(event) => openSheet(pill.key, event.currentTarget)}
               active={pill.active}
             >
-              <span {...stylex.props(s.pillText)}>{pill.label}</span>
+              <span {...stylex.props(s.pillText)}>{t(pill.label)}</span>
               {pill.key === 'more' && otherFilterCount > 0 && (
                 <>
                   <span aria-hidden="true" {...stylex.props(s.filterCount)}>
@@ -300,8 +304,8 @@ export function ShowroomInventoryScreen() {
             </ShowroomQuickPill>
           ))}
           {active && (
-            <ShowroomQuickPill aria-label="Clear filters" onClick={reset}>
-              Clear
+            <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
+              {t('Clear')}
               <Icon name="close" size={14} />
             </ShowroomQuickPill>
           )}
@@ -314,7 +318,7 @@ export function ShowroomInventoryScreen() {
         {...stylex.props(s.content)}
       >
         <h1 aria-live="polite" {...stylex.props(ui.srOnly)}>
-          {results.length} {results.length === 1 ? category.singular : category.plural}
+          {results.length} {t(results.length === 1 ? category.singular : category.plural)}
         </h1>
         {results.length ? (
           <div {...stylex.props(s.grid)}>
@@ -327,20 +331,26 @@ export function ShowroomInventoryScreen() {
             <Icon name={category.icon} size={40} />
             <h2 {...stylex.props(ui.title)}>
               {stock.length
-                ? 'No ' + category.plural + ' match these filters'
-                : 'No ' + category.plural + ' listed yet'}
+                ? locale === 'bg'
+                  ? 'Няма резултати за тези филтри'
+                  : 'No ' + category.plural + ' match these filters'
+                : locale === 'bg'
+                  ? 'Все още няма предложения в тази категория'
+                  : 'No ' + category.plural + ' listed yet'}
             </h2>
             <p>
               {stock.length
-                ? 'Try another make, a wider budget or fewer filters.'
-                : 'Choose another vehicle category to browse this showroom’s inventory.'}
+                ? t('Try another make, a wider budget or fewer filters.')
+                : t('Choose another vehicle category to browse this showroom’s inventory.')}
             </p>
             <Button onClick={stock.length ? reset : () => selectCategory('car')}>
-              {stock.length ? 'Show all ' + category.plural : 'View cars'}
+              {stock.length
+                ? t('Show') + ' ' + t('All').toLowerCase() + ' ' + t(category.plural)
+                : t('View cars')}
             </Button>
           </div>
         )}
-        <p {...stylex.props(s.note)}>Sample inventory · Showroom template preview</p>
+        <p {...stylex.props(s.note)}>{t('Sample inventory · Showroom template preview')}</p>
       </section>
       {sheet && (
         <ShowroomFilterSheet
@@ -351,10 +361,13 @@ export function ShowroomInventoryScreen() {
           onTabChange={selectFilterTab}
         />
       )}
-      <Modal open={sorting} onClose={close} label={'Sort ' + category.plural}>
+      <Modal open={sorting} onClose={close} label={t('Sort') + ' · ' + t(category.plural)}>
         <div {...stylex.props(s.modalHead)}>
-          <h2 {...stylex.props(ui.title)}>Sort {category.plural}</h2>
-          <IconButton icon="close" label="Close sorting" onClick={close} />
+          <h2 {...stylex.props(ui.title)}>
+            {t('Sort ')}
+            {t(category.plural)}
+          </h2>
+          <IconButton icon="close" label={t('Close sorting')} onClick={close} />
         </div>
         {showroomSorts.map(([value, label]) => (
           <label key={value} {...stylex.props(s.sortOption)}>
@@ -368,7 +381,7 @@ export function ShowroomInventoryScreen() {
               }}
               {...stylex.props(s.radio)}
             />
-            {label}
+            {t(label)}
           </label>
         ))}
       </Modal>

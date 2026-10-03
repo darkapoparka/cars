@@ -1,9 +1,10 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
-import { filterVehicles, money } from '@/lib/search';
+import { filterVehicles } from '@/lib/search';
 import { showroomCategory } from '@/lib/showroom';
 import {
   resetShowroomFilterDraft,
@@ -101,9 +102,10 @@ function Choices({
   filters: Filters;
   onChange: (patch: Partial<Filters>) => void;
 }) {
+  const { t } = useLocale();
   return (
     <fieldset {...stylex.props(s.group)}>
-      <legend {...stylex.props(s.fieldTitle)}>{title}</legend>
+      <legend {...stylex.props(s.fieldTitle)}>{t(title)}</legend>
       {options.map((value) => (
         <CheckRow
           key={value}
@@ -136,6 +138,7 @@ export function ShowroomFilterSheet({
   onApply: (filters: Filters) => void;
   onClose: () => void;
 }) {
+  const { t, money } = useLocale();
   const [draft, setDraft] = useState(() => structuredClone(filters));
   const [resetVersion, setResetVersion] = useState(0);
   const editorRef = useRef<HTMLDivElement>(null);
@@ -166,14 +169,14 @@ export function ShowroomFilterSheet({
     setDraft((current) => updateShowroomFilterDraft(current, patch));
   }
   return (
-    <Modal open onClose={onClose} label="Search and filters" flowSheet>
+    <Modal open onClose={onClose} label={t('Search and filters')} flowSheet>
       <div ref={editorRef} {...stylex.props(s.editor)}>
         <div {...stylex.props(s.heading)}>
-          <IconButton icon="close" label="Close filters" onClick={onClose} />
-          <h2 {...stylex.props(s.title)}>{sheet === 'search' ? 'Search' : 'Filters'}</h2>
+          <IconButton icon="close" label={t('Close filters')} onClick={onClose} />
+          <h2 {...stylex.props(s.title)}>{sheet === 'search' ? t('Search') : t('Filters')}</h2>
           <IconButton
             icon="reset"
-            label="Reset"
+            label={t('Reset')}
             onClick={() => {
               setDraft(resetShowroomFilterDraft(draft));
               setResetVersion((current) => current + 1);
@@ -182,7 +185,7 @@ export function ShowroomFilterSheet({
         </div>
         <div {...stylex.props(s.tabs)}>
           <ShowroomTabs
-            label="Filter sections"
+            label={t('Filter sections')}
             tabs={showroomFilterTabs}
             selected={sheet}
             panelId="showroom-filter-options"
@@ -230,20 +233,20 @@ export function ShowroomFilterSheet({
               {sheet === 'search' && (
                 <>
                   <ShowroomSearchField
-                    label="Search make or model"
+                    label={t('Search make or model')}
                     value={draft.query}
                     onChange={(query) => change({ query })}
                     onSubmit={() => onApply(draft)}
                   />
                   <div {...stylex.props(s.suggestions)}>
                     <h3 {...stylex.props(s.copy)}>
-                      {draft.query.trim() ? 'Matching vehicles' : 'In this showroom'}
+                      {draft.query.trim() ? t('Matching vehicles') : t('In this showroom')}
                     </h3>
                     {matches.slice(0, 6).map((vehicle) => (
                       <button
                         key={vehicle.id}
                         type="button"
-                        aria-label={'Search for ' + vehicle.make + ' ' + vehicle.model}
+                        aria-label={t('Search') + ': ' + vehicle.make + ' ' + vehicle.model}
                         onClick={() => change({ query: vehicle.make + ' ' + vehicle.model })}
                         {...stylex.props(s.suggestion)}
                       >
@@ -254,7 +257,9 @@ export function ShowroomFilterSheet({
                       </button>
                     ))}
                     {!count && (
-                      <p {...stylex.props(s.copy)}>Try another search or adjust the filter tabs.</p>
+                      <p {...stylex.props(s.copy)}>
+                        {t('Try another search or adjust the filter tabs.')}
+                      </p>
                     )}
                   </div>
                 </>
@@ -262,7 +267,7 @@ export function ShowroomFilterSheet({
               {sheet === 'price' && (
                 <RangeField
                   comfortable
-                  label="Price"
+                  label={t('Price')}
                   floor={0}
                   ceiling={100000}
                   step={500}
@@ -275,7 +280,7 @@ export function ShowroomFilterSheet({
               {sheet === 'year' && (
                 <RangeField
                   comfortable
-                  label="Year"
+                  label={t('Year')}
                   floor={1980}
                   ceiling={new Date().getFullYear() + 1}
                   min={draft.minYear}
@@ -286,18 +291,20 @@ export function ShowroomFilterSheet({
               {sheet === 'fuel' &&
                 (fuels.length ? (
                   <Choices
-                    title="Fuel"
+                    title={t('Fuel')}
                     field="fuel"
                     options={fuels}
                     filters={draft}
                     onChange={change}
                   />
                 ) : (
-                  <p {...stylex.props(s.copy)}>No fuel options in this category’s inventory yet.</p>
+                  <p {...stylex.props(s.copy)}>
+                    {t('No fuel options in this category’s inventory yet.')}
+                  </p>
                 ))}
               {sheet === 'condition' && (
                 <Choices
-                  title="Condition"
+                  title={t('Condition')}
                   field="condition"
                   options={['Used', 'New']}
                   filters={draft}
@@ -308,7 +315,7 @@ export function ShowroomFilterSheet({
                 <>
                   <RangeField
                     comfortable
-                    label="Mileage"
+                    label={t('Mileage')}
                     floor={0}
                     ceiling={200000}
                     step={5000}
@@ -319,7 +326,7 @@ export function ShowroomFilterSheet({
                   />
                   {transmissions.length > 0 && (
                     <Choices
-                      title="Transmission"
+                      title={t('Transmission')}
                       field="transmission"
                       options={transmissions}
                       filters={draft}
@@ -328,7 +335,7 @@ export function ShowroomFilterSheet({
                   )}
                   {bodies.length > 0 && (
                     <Choices
-                      title="Body type"
+                      title={t('Body type')}
                       field="body"
                       options={bodies}
                       filters={draft}
@@ -343,7 +350,8 @@ export function ShowroomFilterSheet({
         <div data-filter-footer {...stylex.props(s.footer)}>
           <Button block floating onClick={() => onApply(draft)}>
             <span aria-live="polite" aria-atomic="true">
-              Show {count} {count === 1 ? category.singular : category.plural}
+              {t('Show ')}
+              {count} {t(count === 1 ? category.singular : category.plural)}
             </span>
           </Button>
         </div>

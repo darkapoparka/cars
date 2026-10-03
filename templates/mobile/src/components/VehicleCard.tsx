@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -180,6 +181,7 @@ export function PriceRating({
   detail?: boolean;
   list?: boolean;
 }) {
+  const { t } = useLocale();
   return (
     <span {...stylex.props(s.rating, detail && s.detailRating)}>
       <span {...stylex.props(s.bars)}>
@@ -195,7 +197,7 @@ export function PriceRating({
           />
         ))}
       </span>
-      {veryGood ? 'Very good price' : 'Good price'}
+      {t(veryGood ? 'Very good price' : 'Good price')}
     </span>
   );
 }

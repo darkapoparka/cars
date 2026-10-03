@@ -4,6 +4,7 @@ import {
   type ImportCountry,
   type SaleEnquiryType,
 } from './showroom-services';
+import { translate, type Locale } from './locale';
 
 export type ServiceRequestKind = 'import' | 'sell';
 
@@ -194,7 +195,11 @@ export function serviceRequestErrorStep(kind: ServiceRequestKind, errors: Servic
   return (first < 0 ? 0 : first) as ServiceRequestStep;
 }
 
-export function serviceRequestMessage(kind: ServiceRequestKind, values: ServiceRequestValues) {
+export function serviceRequestMessage(
+  kind: ServiceRequestKind,
+  values: ServiceRequestValues,
+  locale: Locale = 'en',
+) {
   const fields = normalizeServiceRequest(kind, values);
   const rows: [string, string][] = [
     ['VIN', fields.vin],
@@ -225,7 +230,16 @@ export function serviceRequestMessage(kind: ServiceRequestKind, values: ServiceR
     ['Message', fields.message],
   ];
   return [
-    kind === 'import' ? 'Car import enquiry' : 'Car sale / buyout enquiry',
-    ...rows.filter(([, value]) => value).map(([label, value]) => label + ': ' + value),
+    translate(kind === 'import' ? 'Car import enquiry' : 'Car sale / buyout enquiry', locale),
+    ...rows
+      .filter(([, value]) => value)
+      .map(
+        ([label, value]) =>
+          translate(label, locale) +
+          ': ' +
+          (['Import country', 'Sale type', 'Condition'].includes(label)
+            ? translate(value, locale)
+            : value),
+      ),
   ].join('\n');
 }

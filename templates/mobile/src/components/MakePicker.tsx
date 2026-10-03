@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState, type Ref } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
@@ -60,15 +61,16 @@ function SelectionButton({
   buttonRef?: Ref<HTMLButtonElement>;
   onClick: () => void;
 }) {
+  const { t } = useLocale();
   return (
     <button
       ref={buttonRef}
       type="button"
       disabled={disabled}
-      aria-label={label + ': ' + value}
+      aria-label={t(label) + ': ' + t(value)}
       aria-controls="showroom-make-model-options"
       aria-expanded={active}
-      title={disabled ? 'Choose a make first' : value}
+      title={disabled ? t('Choose a make first') : t(value)}
       onClick={onClick}
       {...stylex.props(s.selector)}
     >
@@ -80,9 +82,9 @@ function SelectionButton({
           disabled && s.selectorDisabled,
         )}
       >
-        <span {...stylex.props(s.selectorLabel)}>{label}</span>
+        <span {...stylex.props(s.selectorLabel)}>{t(label)}</span>
         <span {...stylex.props(s.selectorValue)}>
-          <span {...stylex.props(s.selectorText)}>{value}</span>
+          <span {...stylex.props(s.selectorText)}>{t(value)}</span>
           <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
             <Icon name={active ? 'up' : 'down'} size={14} />
           </span>
@@ -111,6 +113,7 @@ export function MakePicker({
   availableMakes,
   embedded = false,
 }: Props) {
+  const { t } = useLocale();
   const state = useAppState();
   const filters = suppliedFilters || state.filters;
   const changeFilters = onApply || updateFilters;
@@ -301,9 +304,9 @@ export function MakePicker({
     return (
       <div {...stylex.props(s.variantBox)}>
         <input
-          aria-label={model ? 'Variant for ' + modelLabel(model) : 'Variant'}
+          aria-label={model ? 'Variant for ' + modelLabel(model) : t('Variant')}
           value={modelVariantFor(draft, model, group)}
-          placeholder="Variant e.g. GTI (optional)"
+          placeholder={t('Variant e.g. GTI (optional)')}
           maxLength={200}
           autoComplete="off"
           onChange={(event) => {
@@ -357,12 +360,12 @@ export function MakePicker({
           <span aria-hidden="true" {...stylex.props(s.arrow)} />
         )}
         <label {...stylex.props(s.choice)}>
-          <span>{name || 'Any'}</span>
+          <span>{name || t('Any')}</span>
           <span {...stylex.props(s.checkTarget)}>
             <input
               type="checkbox"
               data-model-key={key}
-              aria-label={name || 'Any'}
+              aria-label={name || t('Any')}
               checked={checked}
               ref={(element) => {
                 if (element) element.indeterminate = Boolean(partial);
@@ -381,11 +384,11 @@ export function MakePicker({
   }
   const excludeToggle = (
     <label {...stylex.props(s.toggle)}>
-      Exclude
+      {t('Exclude')}
       <button
         type="button"
         role="switch"
-        aria-label="Exclude make"
+        aria-label={t('Exclude make')}
         aria-checked={exclude}
         onClick={toggleExcluded}
         {...stylex.props(s.switch, exclude && s.switchOn)}
@@ -399,7 +402,7 @@ export function MakePicker({
       {embedded ? (
         <div {...stylex.props(s.selectors)}>
           <SelectionButton
-            label="Make"
+            label={t('Make')}
             value={make || 'Any'}
             active={!modelsVisible}
             onClick={() => {
@@ -409,7 +412,7 @@ export function MakePicker({
           />
           <SelectionButton
             buttonRef={modelSelectorRef}
-            label="Model"
+            label={t('Model')}
             value={make ? modelSummary : 'Any'}
             active={modelsVisible}
             disabled={!make}
@@ -421,7 +424,7 @@ export function MakePicker({
         </div>
       ) : (
         <div {...stylex.props(s.header)}>
-          <h2 {...stylex.props(s.title)}>{make || 'Make'}</h2>
+          <h2 {...stylex.props(s.title)}>{make || t('Make')}</h2>
           {excludeToggle}
         </div>
       )}
@@ -439,9 +442,13 @@ export function MakePicker({
         )}
         <input
           ref={searchRef}
-          aria-label={modelsVisible ? 'Search models' : 'Search makes'}
+          aria-label={modelsVisible ? t('Search models') : t('Search makes')}
           placeholder={
-            embedded ? (modelsVisible ? 'Search ' + make + ' models' : 'Search makes') : 'Search…'
+            embedded
+              ? modelsVisible
+                ? t('Search models') + ' · ' + make
+                : t('Search makes')
+              : t('Search…')
           }
           autoComplete="off"
           value={query}
@@ -456,7 +463,7 @@ export function MakePicker({
         {query && (
           <button
             type="button"
-            aria-label="Clear search"
+            aria-label={t('Clear search')}
             onClick={() => {
               setQuery('');
               searchRef.current?.focus();
@@ -530,7 +537,7 @@ export function MakePicker({
                 })}
                 {q && !visibleGroups.length && (
                   <p role="status" {...stylex.props(ui.srOnly)}>
-                    No models found
+                    {t('No models found')}
                   </p>
                 )}
               </>
@@ -574,12 +581,12 @@ export function MakePicker({
                           )}
                         >
                           <span>
-                            {selected?.excluded ? 'Exclude ' : ''}
-                            {embedded && name === 'Any' ? 'Any make' : name}
+                            {selected?.excluded ? t('Exclude ') : ''}
+                            {embedded && name === 'Any' ? t('Any make') : t(name)}
                           </span>
                           {selected && (
                             <span {...stylex.props(s.selectionSummary)}>
-                              {selected.summary === 'Any' ? 'All models' : selected.summary}
+                              {selected.summary === 'Any' ? t('All models') : selected.summary}
                             </span>
                           )}
                         </span>
@@ -610,7 +617,7 @@ export function MakePicker({
                   })}
                   {!section.names.length && (
                     <p role="status" {...stylex.props(embedded ? s.empty : ui.srOnly)}>
-                      No makes found
+                      {t('No makes found')}
                     </p>
                   )}
                 </section>
@@ -623,7 +630,7 @@ export function MakePicker({
       {!embedded && (
         <div {...stylex.props(s.footer)}>
           <button type="button" onClick={onClose} {...stylex.props(s.action)}>
-            Cancel
+            {t('Cancel')}
           </button>
           {make && (
             <button type="button" onClick={apply} {...stylex.props(s.action)}>
@@ -642,7 +649,7 @@ export function MakePicker({
       pickerHeight={contentHeight}
       open={open}
       onClose={onClose}
-      label={make ? make + ' models' : 'Make'}
+      label={make ? make + ' · ' + t('Models') : t('Make')}
     >
       {content}
     </Modal>

@@ -2,6 +2,9 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import ts from 'typescript';
 const files = [
   'types',
+  'messages.bg',
+  'locale',
+  'vehicle-copy',
   'gallery',
   'filters',
   'catalog',
@@ -30,7 +33,7 @@ for (const file of files) {
     compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.ES2022 },
   });
   const moduleText = outputText
-    .replace(/from ['"]\.\/([\w-]+)['"]/g, "from './$1.mjs'")
+    .replace(/from ['"]\.\/([\w.-]+)['"]/g, "from './$1.mjs'")
     .replace(/from ['"](.+?)\.json['"]/g, "from '$1.mjs'");
   await writeFile(`.qa/domain/${file}.mjs`, moduleText);
 }

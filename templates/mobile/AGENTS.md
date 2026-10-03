@@ -8,8 +8,9 @@ Retain Next.js App Router, React, TypeScript and StyleX. Use Node 22.x and the
 retained npm lockfile. Keep filter/domain/storage logic separate from screens.
 Preserve the copied native composition unless the owner requests adaptation.
 
-This is a local reference candidate. It retains mobile.de branding and captured
-sample seller/listing facts; personalize them before dealer use. Do not connect
+This is a showroom candidate with Bulgarian and English UI and captured sample
+listing facts. Some reference photos contain donor branding; personalize assets
+and verified vehicle/contact data before dealer use. Do not connect
 demo actions to real sellers, collect passwords, or imply that messages, finance
 applications, appointments or vehicle publication were transmitted.
 

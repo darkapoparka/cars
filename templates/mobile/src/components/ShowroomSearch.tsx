@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
@@ -76,17 +77,18 @@ export function ShowroomSearch({
   value: string;
   onOpen: (button: HTMLButtonElement) => void;
 }) {
+  const { t } = useLocale();
   return (
     <button
       type="button"
-      aria-label={label}
+      aria-label={t(label)}
       aria-haspopup="dialog"
       title={value || undefined}
       onClick={(event) => onOpen(event.currentTarget)}
       {...stylex.props(s.search, s.trigger)}
     >
       <Icon name="search" size={20} />
-      <span {...stylex.props(s.text, Boolean(value) && s.value)}>{value || label}</span>
+      <span {...stylex.props(s.text, Boolean(value) && s.value)}>{value || t(label)}</span>
     </button>
   );
 }
@@ -104,6 +106,7 @@ export function ShowroomSearchField({
   onSubmit: () => void;
   autoFocus?: boolean;
 }) {
+  const { t } = useLocale();
   const input = useRef<HTMLInputElement>(null);
   useEffect(() => {
     if (!autoFocus) return;
@@ -121,8 +124,8 @@ export function ShowroomSearchField({
         autoComplete="off"
         autoCapitalize="none"
         spellCheck={false}
-        aria-label={label}
-        placeholder={label}
+        aria-label={t(label)}
+        placeholder={t(label)}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         onKeyDown={(event) => {
@@ -136,7 +139,7 @@ export function ShowroomSearchField({
       {value && (
         <button
           type="button"
-          aria-label="Clear search"
+          aria-label={t('Clear search')}
           onClick={() => {
             onChange('');
             input.current?.focus();

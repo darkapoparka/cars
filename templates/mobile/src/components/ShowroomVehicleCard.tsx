@@ -5,7 +5,8 @@ import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import type { Vehicle } from '@/lib/types';
-import { money, number } from '@/lib/search';
+import { useLocale } from '@/lib/use-locale';
+import { localizeVehicle } from '@/lib/vehicle-copy';
 import { rememberInventory } from '@/lib/showroom';
 import { togglePark, useAppState } from '@/lib/store';
 
@@ -68,11 +69,15 @@ const s = stylex.create({
     color: colors.muted,
     fontSize: 14,
     lineHeight: '20px',
-    whiteSpace: 'nowrap',
+    whiteSpace: { default: 'nowrap', '@media (max-width: 699px)': 'normal' },
+    display: { default: 'block', '@media (max-width: 699px)': 'flex' },
+    flexWrap: 'wrap',
+    columnGap: 6,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
   price: { fontSize: 23, lineHeight: '30px', fontWeight: 700, marginTop: 4 },
+  fact: { whiteSpace: 'nowrap' },
 });
 
 export function ShowroomVehicleCard({
@@ -82,25 +87,27 @@ export function ShowroomVehicleCard({
   vehicle: Vehicle;
   priority?: boolean;
 }) {
+  const { t, locale, number, money } = useLocale();
+  const displayVehicle = localizeVehicle(vehicle, locale);
   const { parked } = useAppState();
   const saved = parked.includes(vehicle.id);
   const name = vehicle.make + ' ' + vehicle.model;
   const href = '/vehicle/' + vehicle.id;
   const specs = [
     String(vehicle.year),
-    number(vehicle.mileage) + ' km',
-    vehicle.fuel,
-    vehicle.transmission,
+    number(vehicle.mileage) + ' ' + t('km'),
+    t(vehicle.fuel),
+    t(vehicle.transmission),
   ];
   const compactSpecs = [
     ...specs.slice(0, 3),
-    vehicle.transmission === 'Automatic' ? 'Auto' : vehicle.transmission,
+    t(vehicle.transmission === 'Automatic' ? 'Auto' : vehicle.transmission),
   ];
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
       <div {...stylex.props(s.photo)}>
         <Image
-          src={vehicle.images[0]}
+          src={displayVehicle.images[0]}
           alt={name}
           fill
           priority={priority}
@@ -114,18 +121,27 @@ export function ShowroomVehicleCard({
             {name}
           </Link>
         </h2>
-        <p title={vehicle.variant} {...stylex.props(s.variant)}>
-          {vehicle.variant}
+        <p title={displayVehicle.variant} {...stylex.props(s.variant)}>
+          {displayVehicle.variant}
         </p>
         <p title={specs.join(' · ')} {...stylex.props(s.specs)}>
-          {compactSpecs.join(' · ')}
+          {compactSpecs.map((fact, index) => (
+            <span key={index} {...stylex.props(s.fact)}>
+              {index > 0 ? ' · ' : ''}
+              {fact}
+            </span>
+          ))}
         </p>
         <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
       </div>
       <span {...stylex.props(s.save)}>
         <button
           type="button"
-          aria-label={(saved ? 'Remove ' : 'Save ') + name + (saved ? ' from saved cars' : '')}
+          aria-label={
+            (locale === 'bg' ? (saved ? 'Премахни ' : 'Запази ') : saved ? 'Remove ' : 'Save ') +
+            name +
+            (saved ? (locale === 'bg' ? ' от запазените' : ' from saved cars') : '')
+          }
           aria-pressed={saved}
           onClick={() => togglePark(vehicle.id)}
           {...stylex.props(s.saveButton, saved && s.savedButton)}

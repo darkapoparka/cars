@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
@@ -73,17 +74,18 @@ export function ShowroomServiceSearchSheet({
   onApply: (query: string) => void;
   onClose: () => void;
 }) {
+  const { t } = useLocale();
   const [draft, setDraft] = useState(value);
   const matches = searchShowroomServices(showroomServices, draft);
   return (
-    <Modal open onClose={onClose} label="Search services" flowSheet>
+    <Modal open onClose={onClose} label={t('Search services')} flowSheet>
       <div {...stylex.props(s.heading)}>
-        <IconButton icon="close" label="Close service search" onClick={onClose} />
-        <h2 {...stylex.props(s.title)}>Search services</h2>
+        <IconButton icon="close" label={t('Close service search')} onClick={onClose} />
+        <h2 {...stylex.props(s.title)}>{t('Search services')}</h2>
       </div>
       <div data-service-search-body {...stylex.props(s.body)}>
         <ShowroomSearchField
-          label="Search services"
+          label={t('Search services')}
           value={draft}
           onChange={setDraft}
           onSubmit={() => onApply(draft)}
@@ -91,28 +93,29 @@ export function ShowroomServiceSearchSheet({
         />
         <div {...stylex.props(s.list)}>
           <h3 {...stylex.props(s.copy)}>
-            {draft.trim() ? 'Matching services' : 'Browse services'}
+            {draft.trim() ? t('Matching services') : t('Browse services')}
           </h3>
           {matches.map((service) => (
             <button
               key={service.id}
               type="button"
-              onClick={() => onApply(service.title)}
+              onClick={() => onApply(t(service.title))}
               {...stylex.props(s.choice)}
             >
-              {service.title}
+              {t(service.title)}
               <ChevronRight size={16} strokeWidth={1.8} aria-hidden {...stylex.props(s.icon)} />
             </button>
           ))}
           {!matches.length && (
-            <p {...stylex.props(s.copy)}>Try another word or browse all services.</p>
+            <p {...stylex.props(s.copy)}>{t('Try another word or browse all services.')}</p>
           )}
         </div>
       </div>
       <div data-service-search-footer {...stylex.props(s.footer)}>
         <Button block floating onClick={() => onApply(draft)}>
           <span aria-live="polite" aria-atomic="true">
-            Show {matches.length} {matches.length === 1 ? 'service' : 'services'}
+            {t('Show ')}
+            {matches.length} {matches.length === 1 ? t('service') : t('services')}
           </span>
         </Button>
       </div>

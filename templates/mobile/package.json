@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src",
     "check": "npm run lint && npm run typecheck && npm test && npm run build",
-    "test": "node scripts/prepare-domain-tests.mjs && node --test tests/domain.test.mjs",
+    "test": "node scripts/prepare-domain-tests.mjs && node --test tests/domain.test.mjs tests/localization.test.mjs",
     "qa:browser": "node scripts/qa-final-release.mjs",
     "qa:showroom": "node scripts/qa-showroom.mjs",
     "format": "prettier --write src tests scripts/capture-web.mjs scripts/prepare-domain-tests.mjs",

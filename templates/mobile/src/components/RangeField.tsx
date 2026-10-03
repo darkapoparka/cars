@@ -1,8 +1,8 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useRef, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
-import { number } from '@/lib/search';
 const s = stylex.create({
   root: { minWidth: 0, paddingInline: 4 },
   head: {
@@ -129,13 +129,14 @@ export function RangeField({
   comfortable = false,
   onChange,
 }: Props) {
+  const { t, number } = useLocale();
   const drag = useRef<{ id: number; side: 'from' | 'to' } | null>(null);
   const low = min ? Math.max(floor, Math.min(ceiling, Number(min))) : floor;
   const high = max ? Math.max(low, Math.min(ceiling, Number(max))) : ceiling;
   const summary =
     !min && !max
-      ? 'Any'
-      : `${min ? number(low) : 'Any'} – ${max ? number(high) : 'Any'}${unit ? ' ' + unit : ''}`;
+      ? t('Any')
+      : `${min ? number(low) : t('Any')} – ${max ? number(high) : 'Any'}${unit ? ' ' + t(unit) : ''}`;
   const from = (value: string) => {
     if (value === '' || /^\d+$/.test(value))
       onChange(value, max && value && Number(value) > Number(max) ? value : max);
@@ -165,23 +166,23 @@ export function RangeField({
     return (
       <>
         <input
-          aria-label={label + ' ' + side}
+          aria-label={t(label) + ' ' + t(side)}
           inputMode="numeric"
           type="text"
           maxLength={9}
           value={side === 'from' ? min : max}
           onChange={(event) => (side === 'from' ? from : to)(event.target.value)}
-          placeholder={comfortable ? 'Any' : side}
+          placeholder={comfortable ? t('Any') : t(side)}
           {...stylex.props(s.input, comfortable && s.comfortableText)}
         />
-        {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{unit}</span>}
+        {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{t(unit)}</span>}
       </>
     );
   }
   return (
     <div {...stylex.props(s.root, comfortable && s.comfortableRoot)}>
       <div {...stylex.props(s.head)}>
-        <h3 {...stylex.props(s.title)}>{label}</h3>
+        <h3 {...stylex.props(s.title)}>{t(label)}</h3>
         <output {...stylex.props(s.summary)}>{summary}</output>
       </div>
       <div
@@ -218,7 +219,7 @@ export function RangeField({
         />
         <input
           type="range"
-          aria-label={label + ' minimum slider'}
+          aria-label={t(label) + ' · ' + t('From')}
           min={floor}
           max={ceiling}
           step={step}
@@ -234,7 +235,7 @@ export function RangeField({
         />
         <input
           type="range"
-          aria-label={label + ' maximum slider'}
+          aria-label={t(label) + ' · ' + t('To')}
           min={floor}
           max={ceiling}
           step={step}
@@ -253,7 +254,7 @@ export function RangeField({
         <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
           {comfortable ? (
             <>
-              <span {...stylex.props(s.fieldLabel)}>From</span>
+              <span {...stylex.props(s.fieldLabel)}>{t('From')}</span>
               <span {...stylex.props(s.valueRow)}>{numericInput('from')}</span>
             </>
           ) : (
@@ -263,7 +264,7 @@ export function RangeField({
         <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
           {comfortable ? (
             <>
-              <span {...stylex.props(s.fieldLabel)}>To</span>
+              <span {...stylex.props(s.fieldLabel)}>{t('To')}</span>
               <span {...stylex.props(s.valueRow)}>{numericInput('to')}</span>
             </>
           ) : (

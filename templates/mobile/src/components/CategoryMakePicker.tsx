@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
@@ -125,6 +126,7 @@ export function CategoryMakePicker({
   onApply?: (patch: Partial<Filters>) => void;
   embedded?: boolean;
 }) {
+  const { t } = useLocale();
   const state = useAppState();
   const filters = suppliedFilters || state.filters;
   const changeFilters = onApply || updateFilters;
@@ -186,11 +188,11 @@ export function CategoryMakePicker({
           </button>
         </div>
         <label {...stylex.props(s.label)}>
-          Model (optional)
+          {t('Model (optional)')}
           <input
             aria-label={'Model for ' + (isExcluded ? 'excluded ' : '') + make}
             value={(isExcluded ? draft.excludedMakeVariants : draft.makeVariants)[make] || ''}
-            placeholder="Any"
+            placeholder={t('Any')}
             maxLength={200}
             onChange={(event) =>
               changeDraft({
@@ -207,7 +209,7 @@ export function CategoryMakePicker({
   const content = (
     <>
       <h2 {...stylex.props(s.title, screen === 'summary' && s.summaryTitle)}>
-        {screen === 'summary' ? 'Make, Model' : 'Make'}
+        {screen === 'summary' ? t('Make, Model') : t('Make')}
       </h2>
       <div {...stylex.props(s.content)}>
         {screen === 'summary' ? (
@@ -222,9 +224,11 @@ export function CategoryMakePicker({
               }}
               {...stylex.props(s.row, s.action)}
             >
-              Add vehicle
+              {t('Add vehicle')}
             </button>
-            {excludedNames.length > 0 && <h3 {...stylex.props(s.excluded)}>Excluded vehicles</h3>}
+            {excludedNames.length > 0 && (
+              <h3 {...stylex.props(s.excluded)}>{t('Excluded vehicles')}</h3>
+            )}
             {excludedNames.map((make) => selection(make, true))}
             <button
               type="button"
@@ -235,13 +239,13 @@ export function CategoryMakePicker({
               }}
               {...stylex.props(s.row, s.action)}
             >
-              Exclude vehicle
+              {t('Exclude vehicle')}
             </button>
           </>
         ) : (
           <>
             <button type="button" onClick={() => choose('Any')} {...stylex.props(s.row)}>
-              Any
+              {t('Any')}
               {!editingMake && <Icon name="check" size={20} />}
             </button>
             {letters.map((letter) => (

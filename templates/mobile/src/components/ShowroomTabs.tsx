@@ -2,6 +2,7 @@
 import { useEffect, useRef, type ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { useLocale } from '@/lib/use-locale';
 
 const s = stylex.create({
   rail: {
@@ -99,6 +100,8 @@ export function ShowroomTabs<T extends string>({
   flush?: boolean;
   onChange: (value: T) => void;
 }) {
+  const { t, locale } = useLocale();
+  const tabText = (text: string) => (locale === 'bg' && text === 'Features' ? 'Екстри' : t(text));
   const activeTab = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
     const tab = activeTab.current;
@@ -119,7 +122,7 @@ export function ShowroomTabs<T extends string>({
   return (
     <div
       role="tablist"
-      aria-label={label}
+      aria-label={t(label)}
       {...stylex.props(s.rail, layout === 'fill' && s.fillRail, flush && s.flushRail)}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
@@ -129,10 +132,10 @@ export function ShowroomTabs<T extends string>({
           role="tab"
           id={idPrefix + value}
           aria-controls={panelId}
-          aria-label={tabLabel}
+          aria-label={tabText(tabLabel)}
           aria-selected={selected === value}
           tabIndex={selected === value ? 0 : -1}
-          title={tabLabel}
+          title={tabText(tabLabel)}
           ref={selected === value ? activeTab : undefined}
           onClick={() => onChange(value)}
           onKeyDown={(event) => {
@@ -164,7 +167,7 @@ export function ShowroomTabs<T extends string>({
             selected === value && variant === 'text' && s.selectedText,
           )}
         >
-          {content ?? tabLabel}
+          {content ?? tabText(tabLabel)}
         </button>
       ))}
     </div>

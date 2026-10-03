@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { Fragment, useRef, useState, type ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,7 +8,7 @@ import { DealerLogo } from './DealerLogo';
 import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { colors } from '@/styles/tokens.stylex';
-import { number } from '@/lib/search';
+import { localizeSpecification } from '@/lib/vehicle-copy';
 import { vehicles } from '@/lib/catalog';
 import { showroom } from '@/lib/showroom';
 import { vehicleDetailSections, type VehicleDetailSection } from '@/lib/vehicle-detail-navigation';
@@ -31,6 +32,7 @@ const s = stylex.create({
     gap: 12,
   },
   showroomBody: {
+    backgroundColor: { default: colors.surface, '@media (max-width: 699px)': colors.background },
     padding: 0,
     paddingBottom: 'calc(100px + env(safe-area-inset-bottom))',
     gap: 16,
@@ -78,7 +80,23 @@ const s = stylex.create({
     borderTopColor: colors.line,
   },
   showroomTitle: { borderBottomWidth: 0, paddingBottom: 0, marginBottom: 12, fontSize: 18 },
-  showroomFooter: { marginInline: 12 },
+  showroomFooter: {
+    marginInline: { default: 12, '@media (max-width: 699px)': 0 },
+    borderWidth: { default: 1, '@media (max-width: 699px)': 0 },
+    borderTopWidth: 1,
+    borderRadius: { default: 16, '@media (max-width: 699px)': 0 },
+  },
+  showroomFooterTitle: {
+    borderBottomWidth: { default: 1, '@media (max-width: 699px)': 0 },
+    fontSize: { default: 16, '@media (max-width: 699px)': 18 },
+    marginBottom: { default: 8, '@media (max-width: 699px)': 0 },
+  },
+  showroomContactTitle: { paddingBottom: { default: 8, '@media (max-width: 699px)': 0 } },
+  showroomCarousel: {
+    scrollbarWidth: { default: 'auto', '@media (max-width: 699px)': 'none' },
+    padding: { default: 16, '@media (max-width: 699px)': '0 16px 16px' },
+    scrollPaddingInline: { default: 0, '@media (max-width: 699px)': 16 },
+  },
   featureValue: { fontWeight: 500 },
   featureTags: { marginBottom: 16 },
   card: {
@@ -258,6 +276,7 @@ export function VehicleSections({
   showroomMode?: boolean;
   overview?: ReactNode;
 }) {
+  const { t, locale, number } = useLocale();
   const section = useVehicleDetailSection();
   const navigation = useRef<HTMLDivElement>(null);
   const panelId = 'vehicle-detail-panel-' + v.id;
@@ -280,7 +299,7 @@ export function VehicleSections({
   const [features, setFeatures] = useState(false);
   const [description, setDescription] = useState(false);
   const spec: [IconName, string, string][] = [
-    ['mileage', 'Mileage', number(v.mileage) + ' km'],
+    ['mileage', 'Mileage', number(v.mileage) + ' ' + t('km')],
     ...(v.mileage > 0
       ? [
           ['date', showroomMode ? 'First registered' : 'First Registration', v.registration] as [
@@ -290,7 +309,7 @@ export function VehicleSections({
           ],
         ]
       : []),
-    ['gauge', 'Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)'],
+    ['gauge', 'Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' ' + t('hp') + ')'],
     ...(v.attributes?.hideOwners
       ? []
       : [
@@ -311,8 +330,8 @@ export function VehicleSections({
       : []),
     ...(v.attributes?.trimLine ? [['Trim line', v.attributes.trimLine] as [string, string]] : []),
     ...(v.attributes?.origin ? [['Origin', v.attributes.origin] as [string, string]] : []),
-    ['Mileage', number(v.mileage) + ' km'],
-    ['Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' hp)'],
+    ['Mileage', number(v.mileage) + ' ' + t('km')],
+    ['Power', Math.round(v.power / 1.36) + ' kW (' + v.power + ' ' + t('hp') + ')'],
     ['Fuel', v.fuel],
     ['Transmission', v.transmission],
     ['First Registration', v.registration],
@@ -326,7 +345,7 @@ export function VehicleSections({
   return (
     <div {...stylex.props(s.body, showroomMode && s.showroomBody)}>
       <section
-        aria-label={showroomMode ? 'Vehicle information' : undefined}
+        aria-label={showroomMode ? t('Vehicle information') : undefined}
         data-vehicle-detail-sheet={showroomMode ? '' : undefined}
         {...stylex.props(showroomMode && s.sheet)}
       >
@@ -336,7 +355,7 @@ export function VehicleSections({
               <span {...stylex.props(s.gripBar)} />
             </span>
             <ShowroomTabs
-              label="Vehicle information"
+              label={t('Vehicle information')}
               tabs={vehicleDetailSections}
               selected={section}
               panelId={panelId}
@@ -358,7 +377,7 @@ export function VehicleSections({
           {showDetails && overview}
           {showDetails && (
             <section
-              aria-label="Vehicle overview"
+              aria-label={t('Vehicle overview')}
               {...stylex.props(
                 s.card,
                 s.pad,
@@ -373,9 +392,11 @@ export function VehicleSections({
                       <span {...stylex.props(ui.orange, s.specIcon)}>
                         <Icon name={icon} size={showroomMode ? 24 : 28} />
                       </span>
-                      {label}
+                      {t(label)}
                     </dt>
-                    <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>{value}</dd>
+                    <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>
+                      {localizeSpecification(value, locale)}
+                    </dd>
                   </div>
                 ))}
               </dl>
@@ -403,11 +424,11 @@ export function VehicleSections({
               )}
               {!showroomMode && v.specialFeatures && (
                 <div {...stylex.props(ui.space)}>
-                  <strong>Special features according to dealer</strong>
+                  <strong>{t('Special features according to dealer')}</strong>
                   <div {...stylex.props(s.tags)}>
                     {v.specialFeatures.map((feature) => (
                       <span key={feature} {...stylex.props(ui.badge)}>
-                        {feature}
+                        {t(feature)}
                       </span>
                     ))}
                   </div>
@@ -424,15 +445,17 @@ export function VehicleSections({
               )}
             >
               <div {...stylex.props(s.pad)}>
-                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>Technical data</h2>
+                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>
+                  {t('Technical data')}
+                </h2>
                 <table {...stylex.props(s.table)}>
                   <tbody>
                     {data.slice(0, 6).map(([label, value]) => (
                       <tr key={label} {...stylex.props(s.row)}>
                         <th scope="row" {...stylex.props(s.cell, s.key)}>
-                          {label}
+                          {t(label)}
                         </th>
-                        <td {...stylex.props(s.cell)}>{value}</td>
+                        <td {...stylex.props(s.cell)}>{localizeSpecification(value, locale)}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -441,19 +464,19 @@ export function VehicleSections({
               <button
                 type="button"
                 aria-expanded={technical}
-                aria-label="Show more technical data"
+                aria-label={t('Show more technical data')}
                 aria-haspopup="dialog"
                 onClick={() => setTechnical(true)}
                 {...stylex.props(s.more, showroomMode && s.showroomMore)}
               >
-                {showroomMode ? 'All specifications' : 'Show more'}
+                {showroomMode ? t('All specifications') : t('Show more')}
                 {showroomMode && <Icon name="right" size={18} />}
               </button>
             </section>
           )}
           {showroomMode && section === 'photos' && (
             <section
-              aria-label="Vehicle photos"
+              aria-label={t('Vehicle photos')}
               {...stylex.props(s.card, s.pad, s.showroomSection)}
             >
               <GalleryScreen vehicle={v} embedded />
@@ -462,17 +485,19 @@ export function VehicleSections({
           {showFeatures && (
             <section {...stylex.props(s.card, showroomMode && s.showroomSection)}>
               <div {...stylex.props(s.pad)}>
-                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>Features</h2>
+                <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>{t('Features')}</h2>
                 {showroomMode && v.specialFeatures && v.specialFeatures.length > 0 && (
                   <div {...stylex.props(s.tags, s.featureTags)}>
                     {v.specialFeatures.map((feature) => (
                       <span key={feature} {...stylex.props(ui.badge)}>
-                        {feature}
+                        {t(feature)}
                       </span>
                     ))}
                   </div>
                 )}
-                {!v.features.length && <p {...stylex.props(ui.muted)}>No features listed.</p>}
+                {!v.features.length && (
+                  <p {...stylex.props(ui.muted)}>{t('No features listed.')}</p>
+                )}
                 <table {...stylex.props(s.table)}>
                   <tbody>
                     {(showroomMode ? v.features : v.features.slice(0, 6)).map((feature) => (
@@ -486,7 +511,7 @@ export function VehicleSections({
                             s.featuresLabel,
                           )}
                         >
-                          {feature}
+                          {t(feature)}
                         </th>
                         <td {...stylex.props(s.cell, s.check)}>
                           <Icon name="check" size={18} />
@@ -500,12 +525,12 @@ export function VehicleSections({
                 <button
                   type="button"
                   aria-expanded={features}
-                  aria-label="Show more features"
+                  aria-label={t('Show more features')}
                   aria-haspopup="dialog"
                   onClick={() => setFeatures(true)}
                   {...stylex.props(s.more)}
                 >
-                  Show more
+                  {t('Show more')}
                 </button>
               )}
             </section>
@@ -520,7 +545,7 @@ export function VehicleSections({
             >
               <div {...stylex.props(s.pad)}>
                 <h2 {...stylex.props(s.title, showroomMode && s.showroomTitle)}>
-                  Vehicle description
+                  {t('Vehicle description')}
                 </h2>
                 <p {...stylex.props(s.description)}>
                   {v.attributes?.description
@@ -531,8 +556,9 @@ export function VehicleSections({
                 </p>
                 {description && (
                   <p {...stylex.props(ui.small, ui.muted, ui.space)}>
-                    Captured vehicle example. Supplementary specifications are local fixtures, not a
-                    verified current sales offer.
+                    {t(
+                      'Captured vehicle example. Supplementary specifications are local fixtures, not a verified current sales offer.',
+                    )}
                   </p>
                 )}
               </div>
@@ -541,12 +567,14 @@ export function VehicleSections({
                   type="button"
                   aria-expanded={description}
                   aria-label={
-                    description ? 'Show less vehicle description' : 'Show more vehicle description'
+                    description
+                      ? t('Show less vehicle description')
+                      : t('Show more vehicle description')
                   }
                   onClick={() => setDescription(!description)}
                   {...stylex.props(s.more, showroomMode && s.showroomMore)}
                 >
-                  {description ? 'Show less' : 'Show more'}
+                  {description ? t('Show less') : t('Show more')}
                 </button>
               )}
             </section>
@@ -555,14 +583,16 @@ export function VehicleSections({
       </section>
       {showroomMode ? (
         <section {...stylex.props(s.card, ui.pad, s.showroomFooter)}>
-          <h2 {...stylex.props(s.title)}>{showroom.name}</h2>
+          <h2 {...stylex.props(s.title, s.showroomFooterTitle, s.showroomContactTitle)}>
+            {t(showroom.name)}
+          </h2>
           <p {...stylex.props(ui.text, ui.muted, ui.space)}>
-            Ask about this car or arrange a viewing.
+            {t('Ask about this car or arrange a viewing.')}
           </p>
           <div {...stylex.props(ui.space)}>
             <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.contactAction)}>
               <Icon name="mail" size={18} />
-              Contact the showroom
+              {t('Contact the showroom')}
             </Link>
           </div>
         </section>
@@ -570,8 +600,10 @@ export function VehicleSections({
         <NativeDealerCards vehicle={v} />
       )}
       <section {...stylex.props(s.card, showroomMode && s.showroomFooter)}>
-        <h2 {...stylex.props(s.title, s.pad)}>Similar vehicles</h2>
-        <div {...stylex.props(s.carousel)}>
+        <h2 {...stylex.props(s.title, s.pad, showroomMode && s.showroomFooterTitle)}>
+          {t('Similar vehicles')}
+        </h2>
+        <div {...stylex.props(s.carousel, showroomMode && s.showroomCarousel)}>
           {vehicles
             .filter((other) => other.id !== v.id)
             .map((other) =>
@@ -592,11 +624,11 @@ export function VehicleSections({
       )}
       <p {...stylex.props(ui.small, ui.muted, ui.center)}>
         {showroomMode
-          ? 'Sample vehicle · Showroom template preview'
+          ? t('Sample vehicle · Showroom template preview')
           : 'Local reference · No live seller connection'}
       </p>
-      <Modal table open={technical} onClose={() => setTechnical(false)} label="Technical data">
-        <h2 {...stylex.props(s.modalTitle)}>Technical data</h2>
+      <Modal table open={technical} onClose={() => setTechnical(false)} label={t('Technical data')}>
+        <h2 {...stylex.props(s.modalTitle)}>{t('Technical data')}</h2>
         <div {...stylex.props(s.modalScroll)}>
           <table {...stylex.props(s.table)}>
             <tbody>
@@ -604,9 +636,11 @@ export function VehicleSections({
                 <Fragment key={label}>
                   <tr {...stylex.props(s.row)}>
                     <th scope="row" {...stylex.props(s.cell, s.modalCell, s.modalKey)}>
-                      {label}
+                      {t(label)}
                     </th>
-                    <td {...stylex.props(s.cell, s.modalCell)}>{value}</td>
+                    <td {...stylex.props(s.cell, s.modalCell)}>
+                      {localizeSpecification(value, locale)}
+                    </td>
                   </tr>
                   {v.technicalDiagrams?.[label] && (
                     <tr>
@@ -631,11 +665,11 @@ export function VehicleSections({
           onClick={() => setTechnical(false)}
           {...stylex.props(s.more, s.modalClose)}
         >
-          Close
+          {t('Close')}
         </button>
       </Modal>
-      <Modal table open={features} onClose={() => setFeatures(false)} label="Features">
-        <h2 {...stylex.props(s.modalTitle)}>Features</h2>
+      <Modal table open={features} onClose={() => setFeatures(false)} label={t('Features')}>
+        <h2 {...stylex.props(s.modalTitle)}>{t('Features')}</h2>
         <div {...stylex.props(s.modalScroll)}>
           <table {...stylex.props(s.table)}>
             <tbody>
@@ -645,7 +679,7 @@ export function VehicleSections({
                     scope="row"
                     {...stylex.props(s.cell, s.modalCell, s.modalKey, s.featuresLabel)}
                   >
-                    {feature}
+                    {t(feature)}
                   </th>
                   <td {...stylex.props(s.cell, s.modalCell, s.check)}>
                     <Icon name="check" size={18} />
@@ -660,7 +694,7 @@ export function VehicleSections({
           onClick={() => setFeatures(false)}
           {...stylex.props(s.more, s.modalClose)}
         >
-          Close
+          {t('Close')}
         </button>
       </Modal>
     </div>

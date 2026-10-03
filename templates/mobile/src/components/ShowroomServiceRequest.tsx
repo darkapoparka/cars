@@ -1,4 +1,5 @@
 'use client';
+import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Globe } from 'lucide-react';
@@ -239,6 +240,7 @@ export function ShowroomServiceRequest({
   country?: ImportCountry;
   saleType?: SaleEnquiryType;
 }) {
+  const { t, locale, number } = useLocale();
   const params = useSearchParams();
   const open = params.get('request') === '1';
   const raw = useSyncExternalStore(
@@ -264,7 +266,9 @@ export function ShowroomServiceRequest({
   const steps = serviceRequestSteps[kind];
   const saved = status === 'saved';
   const entrySummary =
-    values.vin || [values.make, values.model].filter(Boolean).join(' ') || 'VIN or vehicle details';
+    values.vin ||
+    [values.make, values.model].filter(Boolean).join(' ') ||
+    t('VIN or vehicle details');
   const entrySummaryId = 'service-request-' + kind + '-entry-summary';
 
   useEffect(() => {
@@ -349,7 +353,7 @@ export function ShowroomServiceRequest({
     const numeric = type === 'number';
     return (
       <label htmlFor={id} {...stylex.props(ui.label, s.field, wide && s.wide)}>
-        {label}
+        {t(label)}
         <input
           id={id}
           name={key}
@@ -381,12 +385,19 @@ export function ShowroomServiceRequest({
         />
         {errors[key] && (
           <span id={id + '-error'} {...stylex.props(s.error)}>
-            {errors[key]}
+            {t(errors[key]!)}
           </span>
         )}
       </label>
     );
   }
+  const amount = (value: string) =>
+    new Intl.NumberFormat(locale === 'bg' ? 'bg-BG' : 'en-IE', {
+      style: 'currency',
+      currency: 'EUR',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2,
+    }).format(Number(value));
   const reviewRows = [
     ['Car', [values.make, values.model, !importing && values.year].filter(Boolean).join(' ')],
     ...(values.vin ? [['VIN', values.vin]] : []),
@@ -401,10 +412,10 @@ export function ShowroomServiceRequest({
       : []),
     [
       importing ? 'Maximum budget' : 'Mileage',
-      importing ? '€' + values.budget : values.mileage + ' km',
+      importing ? amount(values.budget) : number(Number(values.mileage)) + ' ' + t('km'),
     ],
     ...(importing && values.year ? [['Minimum year', values.year]] : []),
-    ...(!importing && values.price ? [['Expected price', '€' + values.price]] : []),
+    ...(!importing && values.price ? [['Expected price', amount(values.price)]] : []),
     ...(!importing && values.condition ? [['Condition', values.condition]] : []),
     ...(importing && values.listing ? [['Listing link', values.listing]] : []),
   ];
@@ -429,7 +440,7 @@ export function ShowroomServiceRequest({
       >
         <div {...stylex.props(s.introRow)}>
           <h2 id={'service-request-' + kind + '-heading'} {...stylex.props(s.heading)}>
-            {importing ? 'Import a vehicle' : title}
+            {importing ? t('Import a vehicle') : t(title)}
           </h2>
           {importing && (
             <Globe
@@ -441,11 +452,13 @@ export function ShowroomServiceRequest({
           )}
         </div>
         <p {...stylex.props(s.copy)}>
-          {importing ? 'Choose a car or paste its VIN.' : 'Start a sale or part exchange enquiry.'}
+          {importing
+            ? t('Choose a car or paste its VIN.')
+            : t('Start a sale or part exchange enquiry.')}
         </p>
         <button
           type="button"
-          aria-label={importing ? 'Start import enquiry' : 'Start sale enquiry'}
+          aria-label={importing ? t('Start import enquiry') : t('Start sale enquiry')}
           aria-haspopup="dialog"
           aria-describedby={entrySummaryId}
           onClick={start}
@@ -459,17 +472,17 @@ export function ShowroomServiceRequest({
             {entrySummary}
           </span>
           <span aria-hidden="true" {...stylex.props(s.entryAction)}>
-            Start
+            {t('Start')}
           </span>
         </button>
       </section>
-      <Modal open={open} onClose={close} label={title} flowSheet>
+      <Modal open={open} onClose={close} label={t(title)} flowSheet>
         <div {...stylex.props(s.header)}>
           <div {...stylex.props(s.headerRow)}>
-            <h2 {...stylex.props(s.title)}>{title}</h2>
-            <IconButton icon="close" label="Close enquiry" onClick={close} />
+            <h2 {...stylex.props(s.title)}>{t(title)}</h2>
+            <IconButton icon="close" label={t('Close enquiry')} onClick={close} />
           </div>
-          <ol aria-label="Enquiry progress" {...stylex.props(s.progress)}>
+          <ol aria-label={t('Enquiry progress')} {...stylex.props(s.progress)}>
             {steps.map(({ label }, index) => (
               <li
                 key={label}
@@ -480,14 +493,14 @@ export function ShowroomServiceRequest({
                   aria-hidden="true"
                   {...stylex.props(s.rail, (index <= step || saved) && s.filledRail)}
                 />
-                {label}
+                {t(label)}
               </li>
             ))}
           </ol>
         </div>
         <form
           ref={formRef}
-          aria-label={importing ? 'Car import enquiry' : 'Car sale enquiry'}
+          aria-label={importing ? t('Car import enquiry') : t('Car sale enquiry')}
           noValidate
           {...stylex.props(s.form)}
           onSubmit={(event) => {
@@ -511,44 +524,52 @@ export function ShowroomServiceRequest({
               setStatus('unavailable');
               return;
             }
-            saveMessageDraft('showroom-' + kind, serviceRequestMessage(kind, normalized));
+            saveMessageDraft('showroom-' + kind, serviceRequestMessage(kind, normalized, locale));
             setEdited(normalized);
             setStatus('saved');
           }}
         >
           <div ref={bodyRef} data-service-request-body {...stylex.props(s.body)}>
             <h3 ref={headingRef} tabIndex={-1} {...stylex.props(s.stepHeading)}>
-              {saved ? 'Draft saved' : stepTitle}
+              {saved ? t('Draft saved') : t(stepTitle)}
             </h3>
             {saved ? (
               <div {...stylex.props(s.success)}>
                 <p role="status">
-                  {importing ? 'Import' : 'Sale'} draft saved on this device. Nothing was sent.
+                  {t(
+                    importing
+                      ? 'Import draft saved on this device. Nothing was sent.'
+                      : 'Sale draft saved on this device. Nothing was sent.',
+                  )}
                 </p>
                 <p {...stylex.props(ui.text, ui.muted)}>
-                  Your enquiry is ready to review on the Contact page.
+                  {t('Your enquiry is ready to review on the Contact page.')}
                 </p>
                 <Button href={'/contact?service=' + kind} block floating>
-                  View enquiry draft
+                  {t('View enquiry draft')}
                 </Button>
               </div>
             ) : (
               <>
                 <p {...stylex.props(s.stepCopy)}>
                   {step === 0
-                    ? 'Step 1 of 3 · Add a VIN if available, then the car details.'
+                    ? t('Step 1 of 3 · Add a VIN if available, then the car details.')
                     : step === 1
-                      ? 'Step 2 of 3 · A few details to guide your enquiry.'
-                      : 'Step 3 of 3 · Check your car details. Contact details are optional.'}
+                      ? t('Step 2 of 3 · A few details to guide your enquiry.')
+                      : t('Step 3 of 3 · Check your car details. Contact details are optional.')}
                 </p>
                 {step === 2 && (
-                  <section aria-label="Car details summary" {...stylex.props(s.review)}>
-                    <h4 {...stylex.props(s.reviewHeading)}>Your enquiry</h4>
+                  <section aria-label={t('Car details summary')} {...stylex.props(s.review)}>
+                    <h4 {...stylex.props(s.reviewHeading)}>{t('Your enquiry')}</h4>
                     <dl {...stylex.props(s.reviewRows)}>
                       {reviewRows.map(([label, value]) => (
                         <div key={label} {...stylex.props(s.reviewRow)}>
-                          <dt {...stylex.props(s.reviewLabel)}>{label}</dt>
-                          <dd {...stylex.props(s.reviewValue)}>{value}</dd>
+                          <dt {...stylex.props(s.reviewLabel)}>{t(label)}</dt>
+                          <dd {...stylex.props(s.reviewValue)}>
+                            {['Import from', 'Sale type', 'Condition'].includes(label)
+                              ? t(value)
+                              : value}
+                          </dd>
                         </div>
                       ))}
                     </dl>
@@ -557,18 +578,20 @@ export function ShowroomServiceRequest({
                 <div {...stylex.props(s.fields)}>
                   {step === 0 && (
                     <>
-                      {field('vin', 'VIN (optional)', 'text', true, true)}
-                      {field('make', 'Make')}
-                      {field('model', 'Model')}
-                      {!importing && field('year', 'Year', 'number')}
+                      {field('vin', t('VIN (optional)'), 'text', true, true)}
+                      {field('make', t('Make'))}
+                      {field('model', t('Model'))}
+                      {!importing && field('year', t('Year'), 'number')}
                     </>
                   )}
                   {step === 1 &&
                     (importing ? (
                       <>
                         <fieldset {...stylex.props(s.choiceGroup, s.wide)}>
-                          <legend {...stylex.props(s.choiceLegend)}>Import from (optional)</legend>
-                          <ShowroomQuickPills label="Import country preference" inset={false}>
+                          <legend {...stylex.props(s.choiceLegend)}>
+                            {t('Import from (optional)')}
+                          </legend>
+                          <ShowroomQuickPills label={t('Import country preference')} inset={false}>
                             {importCountries.map(({ value, label }) => (
                               <ShowroomQuickPill
                                 key={value}
@@ -576,20 +599,20 @@ export function ShowroomServiceRequest({
                                 aria-pressed={(values.country || 'all') === value}
                                 onClick={() => change('country', value === 'all' ? '' : value)}
                               >
-                                {value === 'all' ? 'Any country' : label}
+                                {value === 'all' ? t('Any country') : t(label)}
                               </ShowroomQuickPill>
                             ))}
                           </ShowroomQuickPills>
                         </fieldset>
-                        {field('budget', 'Maximum budget (€)', 'number')}
-                        {field('year', 'Minimum year (optional)', 'number', true)}
-                        {field('listing', 'Listing link (optional)', 'url', true, true)}
+                        {field('budget', t('Maximum budget (€)'), 'number')}
+                        {field('year', t('Minimum year (optional)'), 'number', true)}
+                        {field('listing', t('Listing link (optional)'), 'url', true, true)}
                       </>
                     ) : (
                       <>
                         <fieldset {...stylex.props(s.choiceGroup, s.wide)}>
-                          <legend {...stylex.props(s.choiceLegend)}>Sale type</legend>
-                          <ShowroomQuickPills label="Sale preference" inset={false}>
+                          <legend {...stylex.props(s.choiceLegend)}>{t('Sale type')}</legend>
+                          <ShowroomQuickPills label={t('Sale preference')} inset={false}>
                             {saleEnquiryTypes.map(({ value, label }) => (
                               <ShowroomQuickPill
                                 key={value}
@@ -602,10 +625,10 @@ export function ShowroomServiceRequest({
                             ))}
                           </ShowroomQuickPills>
                         </fieldset>
-                        {field('mileage', 'Mileage (km)', 'number')}
-                        {field('price', 'Expected price (€) (optional)', 'number', true)}
+                        {field('mileage', t('Mileage (km)'), 'number')}
+                        {field('price', t('Expected price (€) (optional)'), 'number', true)}
                         <label {...stylex.props(ui.label, s.field, s.wide)}>
-                          Condition (optional)
+                          {t('Condition (optional)')}
                           <select
                             name="condition"
                             value={values.condition}
@@ -618,14 +641,16 @@ export function ShowroomServiceRequest({
                               Boolean(errors.condition) && s.invalid,
                             )}
                           >
-                            <option value="">Select condition</option>
+                            <option value="">{t('Select condition')}</option>
                             {saleConditions.map((condition) => (
-                              <option key={condition}>{condition}</option>
+                              <option key={condition} value={condition}>
+                                {t(condition)}
+                              </option>
                             ))}
                           </select>
                           {errors.condition && (
                             <span id="sale-condition-error" {...stylex.props(s.error)}>
-                              {errors.condition}
+                              {t(errors.condition!)}
                             </span>
                           )}
                         </label>
@@ -633,11 +658,11 @@ export function ShowroomServiceRequest({
                     ))}
                   {step === 2 && (
                     <>
-                      {field('name', 'Name (optional)', 'text', true, true)}
-                      {field('phone', 'Phone (optional)', 'tel', true)}
-                      {field('email', 'Email (optional)', 'email', true)}
+                      {field('name', t('Name (optional)'), 'text', true, true)}
+                      {field('phone', t('Phone (optional)'), 'tel', true)}
+                      {field('email', t('Email (optional)'), 'email', true)}
                       <label {...stylex.props(ui.label, s.field, s.wide)}>
-                        Anything else? (optional)
+                        {t('Anything else? (optional)')}
                         <textarea
                           name="message"
                           value={values.message}
@@ -655,13 +680,13 @@ export function ShowroomServiceRequest({
           <div data-service-request-footer {...stylex.props(s.footer)}>
             {status === 'unavailable' && (
               <p role="alert" {...stylex.props(s.error)}>
-                Saving is unavailable. Keep this sheet open to retain your details.
+                {t('Saving is unavailable. Keep this sheet open to retain your details.')}
               </p>
             )}
             <div {...stylex.props(s.actions, (step === 0 || saved) && s.singleAction)}>
               {saved ? (
                 <Button block floating variant="outline" onClick={close}>
-                  Done
+                  {t('Done')}
                 </Button>
               ) : (
                 <>
@@ -674,16 +699,20 @@ export function ShowroomServiceRequest({
                         setStep(step === 2 ? 1 : 0);
                       }}
                     >
-                      Back
+                      {t('Back')}
                     </button>
                   )}
                   <Button type="submit" block floating>
-                    {step < 2 ? 'Continue' : importing ? 'Save import draft' : 'Save sale draft'}
+                    {step < 2
+                      ? t('Continue')
+                      : importing
+                        ? t('Save import draft')
+                        : t('Save sale draft')}
                   </Button>
                 </>
               )}
             </div>
-            <p {...stylex.props(s.note)}>Draft only · Nothing is sent.</p>
+            <p {...stylex.props(s.note)}>{t('Draft only · Nothing is sent.')}</p>
           </div>
         </form>
       </Modal>
