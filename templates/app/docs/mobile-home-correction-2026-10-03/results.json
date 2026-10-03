@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-03",
+  "baseCommit": "db65c48c89e3c5e0bf1252957ab31114d057e633",
+  "runtime": "Node 22.20.0",
+  "build": "npm run check passed (eslint, TypeScript, webpack build; 407 static pages)",
+  "checks": [
+    {
+      "route": "/bg",
+      "width": 390,
+      "layout": {
+        "banner": {
+          "height": 150,
+          "width": 351,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 375,
+        "inventoryRow": false,
+        "logo": {
+          "height": 68,
+          "width": 204,
+          "x": 85.5,
+          "y": 121
+        },
+        "logoLoaded": true,
+        "nextRegion": "Изберете марка",
+        "scrollWidth": 375,
+        "search": {
+          "height": 44,
+          "width": 321,
+          "x": 27,
+          "y": 197
+        },
+        "searchHref": "/bg/search",
+        "searchLabel": "Търсене на автомобили · 48 автомобила",
+        "viewport": 390,
+        "visibleContacts": 0,
+        "visibleInventoryHeading": false,
+        "visibleSearchCount": 1
+      },
+      "assertions": {
+        "noHorizontalOverflow": true,
+        "logoCentered": true,
+        "logoLoaded": true,
+        "searchInsideBanner": true,
+        "searchHas44pxTarget": true,
+        "oneVisibleSearch": true,
+        "noMobileContacts": true,
+        "noInventoryRow": true
+      },
+      "passed": true
+    },
+    {
+      "check": "Embedded search keyboard action",
+      "passed": true
+    },
+    {
+      "route": "/bg",
+      "width": 320,
+      "layout": {
+        "banner": {
+          "height": 150,
+          "width": 281,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 305,
+        "inventoryRow": false,
+        "logo": {
+          "height": 68,
+          "width": 204,
+          "x": 50.5,
+          "y": 121
+        },
+        "logoLoaded": true,
+        "scrollWidth": 305,
+        "search": {
+          "height": 44,
+          "width": 251,
+          "x": 27,
+          "y": 197
+        },
+        "tabLinks": [
+          {
+            "rect": {
+              "height": 86,
+              "width": 64.25,
+              "x": 12,
+              "y": 8
+            },
+            "text": "Купи"
+          },
+          {
+            "rect": {
+              "height": 86,
+              "width": 64.25,
+              "x": 84.25,
+              "y": 8
+            },
+            "text": "Продай"
+          },
+          {
+            "rect": {
+              "height": 86,
+              "width": 64.25,
+              "x": 156.5,
+              "y": 8
+            },
+            "text": "Лизинг"
+          },
+          {
+            "rect": {
+              "height": 86,
+              "width": 64.25,
+              "x": 228.75,
+              "y": 8
+            },
+            "text": "Услуги"
+          }
+        ],
+        "viewport": 320,
+        "visibleContacts": 0,
+        "visibleInventoryHeading": false,
+        "visibleSearchCount": 1
+      },
+      "assertions": {
+        "noHorizontalOverflow": true,
+        "logoCentered": true,
+        "logoLoaded": true,
+        "searchInsideBanner": true,
+        "searchHas44pxTarget": true,
+        "oneVisibleSearch": true,
+        "noMobileContacts": true,
+        "noInventoryRow": true
+      },
+      "passed": true
+    },
+    {
+      "check": "Desktop geometry matches before",
+      "passed": true,
+      "before": {
+        "banner": {
+          "height": 142,
+          "width": 1184,
+          "x": 120.5,
+          "y": 223
+        },
+        "clientWidth": 1425,
+        "contact": {
+          "height": 44,
+          "width": 143.421875,
+          "x": 784.78125,
+          "y": 272
+        },
+        "inventory": {
+          "height": 33.75,
+          "width": 146.46875,
+          "x": 120.5,
+          "y": 1014.125
+        },
+        "logo": {
+          "height": 80,
+          "width": 256,
+          "x": 496.78125,
+          "y": 254
+        },
+        "search": [
+          {
+            "height": 44,
+            "width": 1184,
+            "x": 120.5,
+            "y": 381
+          }
+        ],
+        "width": 1440
+      },
+      "after": {
+        "banner": {
+          "height": 142,
+          "width": 1184,
+          "x": 120.5,
+          "y": 223
+        },
+        "clientWidth": 1425,
+        "contact": {
+          "height": 44,
+          "width": 143.421875,
+          "x": 784.78125,
+          "y": 272
+        },
+        "inventory": {
+          "height": 33.75,
+          "width": 146.46875,
+          "x": 120.5,
+          "y": 1014.125
+        },
+        "logo": {
+          "height": 80,
+          "width": 256,
+          "x": 496.78125,
+          "y": 254
+        },
+        "search": [
+          {
+            "height": 44,
+            "width": 1184,
+            "x": 120.5,
+            "y": 381
+          }
+        ],
+        "width": 1440
+      }
+    },
+    {
+      "check": "No captured browser errors or warnings",
+      "passed": true
+    }
+  ]
+}

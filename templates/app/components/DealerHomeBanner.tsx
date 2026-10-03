@@ -34,10 +34,10 @@ export default function DealerHomeBanner() {
 const s = stylex.create({
   banner: {position: 'relative', overflow: 'hidden', backgroundColor: '#171719', color: '#fff', borderWidth: 1, borderStyle: 'solid', borderColor: '#303034', borderRadius: 20},
   backdrop: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: .65, pointerEvents: 'none'},
-  content: {position: 'relative', display: {[media.mobile]: 'grid', default: 'flex'}, gridTemplateColumns: 'minmax(0,1fr) auto', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 12, default: 32}, padding: {[media.mobile]: '12px 14px 4px', default: '24px 28px'}, minHeight: {[media.mobile]: 0, default: 140}},
-  brand: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, width: {[media.mobile]: '100%', default: 256}, maxWidth: {[media.mobile]: 128, default: '100%'}, minWidth: 0, margin: 0, padding: 0, color: '#fff'},
+  content: {position: 'relative', display: 'flex', flexDirection: {[media.mobile]: 'column', default: 'row'}, alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 0, default: 32}, padding: {[media.mobile]: '14px 16px 8px', default: '24px 28px'}, minHeight: {[media.mobile]: 0, default: 140}},
+  brand: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, width: {[media.mobile]: 204, default: 256}, maxWidth: '100%', minWidth: 0, margin: 0, padding: 0, color: '#fff'},
   mobileSearch: {position: 'relative', display: {[media.mobile]: 'block', default: 'none'}, padding: '0 14px 14px'},
-  actions: {display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0px 8px', maxWidth: {[media.mobile]: 'min(48vw,180px)', default: '100%'}},
+  actions: {display: {[media.mobile]: 'none', default: 'flex'}, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0px 8px', maxWidth: '100%'},
   action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: $.controlHeight, maxWidth: '100%', padding: 0, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer', color: {default: '#303036', ':hover': '#000'}, borderRadius: 999, outline: {default: 'none', ':focus-visible': '2px solid #fff'}, outlineOffset: 2},
   contactPill: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 6, minHeight: 34, padding: '6px 12px', color: 'inherit', borderRadius: 999, backgroundColor: '#fff', overflowWrap: 'anywhere'},
 });
