@@ -20,21 +20,24 @@ currency formatter and symbol. EUR renders as `€` with the locale's number gro
 
 ## Desktop route composition
 
-Home and Inventory frame their search panels with the original inward-facing
+Home, Inventory and Advice frame their search panels with the original inward-facing
 vehicle pairs through `CampaignVehiclePair.svelte`. `DesktopHeroScene.svelte`
-reuses `leadSite.artwork.discoveryBackground` behind these two pairs and disables
+reuses `leadSite.artwork.discoveryBackground` behind these three pairs and disables
 their native dot and red-curve decoration through the existing `decoration` prop.
 It uses the same graphite artwork as the four Home section headers from 992px.
 About and Contact use the
 approved larger car scenes through `DesktopHeroScene.svelte`, giving their simpler
-introductions more presence. Blog keeps its original vehicle pair. All use the same
+introductions more presence. Blog keeps its original vehicle pair over the shared background. All use the same
 black palette, subtle halftone dots and restrained red accents. The warm About photograph and
 the distorted Blog/Contact props are retained as provenance only. White headings,
 red primary actions and white search panels share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
 entries use the Contact scene. All desktop
-route heroes share a 540px frame. Home, Inventory, Blog and service entries start
-their introductions at 200px and their controls at 340px. About and general
+route heroes share a 540px frame. Home, Inventory and Blog omit their supplementary
+desktop line and position the title 28px above the unchanged search panel at 340px.
+Below 1200px, those titles use the 32px compact section role to clear the side cars;
+wider desktop uses the 48px hero role. Service introductions remain at 200px.
+About and general
 Contact start their page label at the same 200px anchor, followed by a stronger
 two-line introduction. Their headlines use the 56px role, or 48px below 1200px.
 About keeps its plain location subtitle 8px below the title. Actions flow 24px
@@ -55,6 +58,15 @@ Home action banners and vehicle menu cards share this rule, with a frame size fo
 each placement and no model-specific scale boosts. Taller bodies remain taller
 and shorter in length without stretching. Tyre baselines and front-edge anchors
 remain aligned; the cars stay at the outer edges, leaving the copy and controls clear.
+Home's Import banner uses the brand red surface and Leasing uses graphite, with
+matching white copy and white actions. `leadSite.artwork.desktopActionScenes`
+selects their separate transparent, front-facing G-Class/logistics and Urus/finance
+compositions. The optional `normalizationBounds` in `getVehicleArtworkRatios`
+sizes the main vehicles by equal visible area while the full composition bounds
+anchor their supporting props. This avoids making the car smaller because a ship
+or percentage symbol widens the image. Their 234px frames and copy/action
+baselines remain shared. Desktop picture sources keep these assets out of mobile
+requests; existing mobile action and service artwork remains configured separately.
 Below 1200px, search-hero cutouts sit above the panel's outer corners so the wider
 panel does not hide them. Home, Inventory and Blog share this placement;
 section banners keep their smaller frame.
@@ -66,9 +78,10 @@ fixed image box and flex alignment so decoding or route typography does not move
 it within the shared header. Blog category pills use the subtle surface inside
 the white panel; the active and hovered category uses the brand accent.
 
-`HeroLocation.svelte` owns Home's white 14px location badge and About's plain
-18px location subtitle below its title. Both show the configured city and street
-address, with a localized directions label and full address hover title.
+`HeroLocation.svelte` owns About's plain 18px location subtitle below its title,
+with the configured city and street address, a localized directions label and
+full address hover title. Home omits its desktop location line; the header keeps
+the business address available.
 `DesktopShowroom.svelte`
 owns the shared About/Contact visit panel:
 address and appointment copy, one primary call action, directions, configured

@@ -4,7 +4,7 @@
 
   let { scene }: { scene: keyof typeof leadSite.artwork.desktopHeroScenes } = $props();
   const artwork = $derived(leadSite.artwork.desktopHeroScenes[scene]);
-  const discoveryBackground = $derived(artwork.kind === 'vehicles' && (scene === 'home' || scene === 'inventory'));
+  const discoveryBackground = $derived(artwork.kind === 'vehicles' && (scene === 'home' || scene === 'inventory' || scene === 'blog'));
 </script>
 
 <div class="dn-desktop-hero-scene" class:dn-desktop-hero-scene--discovery={discoveryBackground}

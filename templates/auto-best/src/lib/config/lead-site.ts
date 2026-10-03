@@ -36,6 +36,7 @@ type LeadSiteConfig = {
     serviceBanners: { sell: SiteAssetPath; import: SiteAssetPath };
     serviceBackground: SiteAssetPath;
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
+    desktopActionScenes: { import: SiteAssetPath; finance: SiteAssetPath };
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
@@ -183,6 +184,10 @@ export const leadSite = {
       sell: mobileSell,
       import: mobileImport,
       finance: '/assets/images/template/home-action-finance-v3.webp'
+    },
+    desktopActionScenes: {
+      import: '/assets/images/template/home-import-front-v4.webp',
+      finance: '/assets/images/template/home-finance-front-v4.webp'
     },
     blogHero: mobileGuides,
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',

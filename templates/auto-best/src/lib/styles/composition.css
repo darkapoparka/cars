@@ -204,6 +204,14 @@
     --dn-route-hero-overlay: rgba(10, 12, 16, 0.56);
   }
 
+  .dn-route-hero--search {
+    --dn-route-hero-content-top: calc(var(--dn-route-hero-control-top) - var(--dn-space-7) - var(--dn-text-hero) * var(--dn-leading-section));
+  }
+
+  .dn-app-shell .dn-route-hero.dn-route-hero--search .dn-route-hero__copy > p {
+    display: none;
+  }
+
   .dn-route-hero--company {
     /* Enlarged type also increases clearance below the desktop header. */
     --dn-route-hero-content-top: max(200px, 12.5rem);
@@ -351,6 +359,12 @@
   }
   .dn-route-hero--company .dn-route-hero__copy h1 {
     font-size: var(--dn-text-hero);
+  }
+  .dn-route-hero--search {
+    --dn-route-hero-content-top: calc(var(--dn-route-hero-control-top) - var(--dn-space-7) - var(--dn-text-section-compact) * var(--dn-leading-section));
+  }
+  .dn-route-hero--search .dn-route-hero__copy h1 {
+    font-size: var(--dn-text-section-compact);
   }
 }
 

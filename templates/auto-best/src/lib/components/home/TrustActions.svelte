@@ -4,7 +4,7 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  import { getVehicleArtworkRatios, vehicleArtwork } from '$data/vehicle-artwork';
+  import { getVehicleArtworkRatios } from '$data/vehicle-artwork';
   import ArtworkRegion from '$components/ui/ArtworkRegion.svelte';
   import { serviceArtwork } from '$data/service-artwork';
   import { featureArtwork } from '$data/feature-artwork';
@@ -39,7 +39,7 @@
     },
     {
       title: 'Внос по заявка',
-      artwork: { ...vehicleArtwork.gclass, view: 'side-profile' },
+      artwork: { src: leadSite.artwork.desktopActionScenes.import, width: 1536, height: 1024, bounds: [32, 144, 1498, 927], normalizationBounds: [357, 148, 1199, 928], view: 'front-service' },
       tone: 'red',
       mobileTitle: 'Внос по заявка',
       mobileCta: 'Заяви внос',
@@ -51,7 +51,7 @@
     },
     {
       title: 'Собствен лизинг',
-      artwork: { ...vehicleArtwork.urus, view: 'side-profile' },
+      artwork: { src: leadSite.artwork.desktopActionScenes.finance, width: 1536, height: 1024, bounds: [45, 161, 1503, 945], normalizationBounds: [263, 161, 1281, 940], view: 'front-service' },
       tone: 'black',
       mobileTitle: 'Лизинг',
       mobileCta: 'Виж условия',
@@ -62,8 +62,8 @@
       icon: 'finance'
     }
   ] as const;
-  const artworkFrameWidth = Math.max(...actions.map(action => getVehicleArtworkRatios(action.artwork).width));
   const visibleActions = $derived(group === 'all' ? actions : group === 'browse' ? actions.slice(0, 2) : actions.slice(2));
+  const artworkFrameWidth = $derived(Math.max(...visibleActions.map(action => getVehicleArtworkRatios(action.artwork).width)));
 </script>
 
 <section class="dn-home-content-section" class:dn-trust-actions={variant === 'banners'} class:dn-home-services={variant === 'cards'} data-banner-group={variant === 'banners' ? group : undefined} aria-label={variant === 'cards' ? i18n.t("m_5dfe5d699973") : group === 'browse' ? i18n.t("m_d064a1978f8f") : i18n.t("m_5526464e7543")}>
@@ -89,7 +89,10 @@
                 style:--art-bottom={ratios.bottom}
                 style:--art-right={ratios.right}
                 style:--art-frame-width={artworkFrameWidth}>
-                <img class="dn-trust-card__lineup" data-view={art.view} src={art.src} alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
+                <picture>
+                  <source media="(min-width: 992px)" srcset={art.src} />
+                  <img class="dn-trust-card__lineup" data-view={art.view} src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="" width={art.width} height={art.height} loading="lazy" decoding="async" />
+                </picture>
               </div>
             {/if}
             {#if mobileArtwork && variant === 'banners' && group === 'browse'}
@@ -147,7 +150,11 @@
   @media (min-width: 992px) {
     .dn-trust-card { min-height: var(--dn-home-banner-height); padding: var(--dn-home-banner-padding); border-radius: var(--dn-radius-lg); background: var(--dn-theme-hero-surface-deep); }
     .dn-trust-card--red { background: var(--dn-surface-raised); color: var(--dn-ink); }
-    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red { background: var(--dn-theme-action-ice-start); color: var(--dn-theme-action-ice-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red { background: var(--dn-theme-campaign-accent); color: var(--dn-white); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red p { color: var(--dn-text-on-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red .dn-trust-card__action { background: var(--dn-white); color: var(--dn-ink); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red .dn-trust-card__action:hover { background: var(--dn-surface-hover); }
+    .dn-trust-actions[data-banner-group='ownership'] .dn-trust-card--red a:focus-visible { outline-color: var(--dn-white); }
     .dn-trust-card--red p { color: var(--dn-muted); }
     .dn-trust-card--red .dn-trust-card__action { background: var(--dn-red); color: var(--dn-white); }
     .dn-trust-card--red .dn-trust-card__action:hover { background: var(--dn-red-hover); }

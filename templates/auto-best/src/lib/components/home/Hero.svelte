@@ -14,7 +14,7 @@
   <link rel="preload" as="image" href={mobileHeroRegions.home.src} imagesrcset={imageSrcset(mobileHeroRegions.home.src)} imagesizes={mobileHeroSizes} media="(max-width: 767px)" fetchpriority="high" />
 </svelte:head>
 
-<section class="dn-hero dn-route-hero dn-route-hero--campaign dn-discovery-hero" aria-labelledby="home-hero-title">
+<section class="dn-hero dn-route-hero dn-route-hero--campaign dn-route-hero--search dn-discovery-hero" aria-labelledby="home-hero-title">
   <DesktopHeroScene scene="home" />
   <HeroVehicles pair="home" mobile desktop={false} />
   <div class="container dn-hero__inner dn-route-hero__layout">

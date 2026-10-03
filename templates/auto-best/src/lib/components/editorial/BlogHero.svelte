@@ -17,7 +17,7 @@
   const mobile = new MediaQuery('(max-width: 991px)', false);
 </script>
 
-<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign" aria-label={i18n.t('m_572cd72feb9a')}>
+<section class="dn-blog-hero dn-route-hero dn-route-hero--studio dn-route-hero--campaign dn-route-hero--search" aria-label={i18n.t('m_572cd72feb9a')}>
   <DesktopHeroScene scene="blog" />
   <picture class="dn-blog-hero__artwork" aria-hidden="true">
     <source media="(max-width: 991px)" srcset={imageSrcset(leadSite.artwork.blogHero) ?? leadSite.artwork.blogHero} sizes="(max-width: 383px) calc(100vw - 24px), 360px" />

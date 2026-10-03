@@ -20,11 +20,13 @@ export type Vehicle = LeadVehicleArtwork;
 
 // A shared size unit gives every cutout the same visible bounding-box area.
 // Transparent margins do not affect scale; the original proportions and anchors remain intact.
-export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[] }) {
+export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[]; normalizationBounds?: readonly number[] }) {
   const [left, top, right, bottom] = artwork.bounds;
   const bodyWidth = right - left;
   const bodyHeight = bottom - top;
-  const size = Math.sqrt(bodyWidth * bodyHeight);
+  // A service composition can size its main car independently of its small side props.
+  const [sizeLeft, sizeTop, sizeRight, sizeBottom] = artwork.normalizationBounds ?? artwork.bounds;
+  const size = Math.sqrt((sizeRight - sizeLeft) * (sizeBottom - sizeTop));
   return {
     width: artwork.width / size,
     height: artwork.height / size,

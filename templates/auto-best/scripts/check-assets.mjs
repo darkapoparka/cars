@@ -13,7 +13,8 @@ const staticRoot = path.join(root, 'static');
 // Superseded advice illustrations remain retained for provenance.
 // The mobile BMW vector replaces the low-resolution bitmap at phone widths.
 // One shared graphite-dot background replaces the separate Home section materials.
-const guardedMediaCount = 182;
+// Matching desktop Import/Leasing cutouts retain their full transparent canvases.
+const guardedMediaCount = 184;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
