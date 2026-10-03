@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import { ArrowDownUp } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
@@ -28,6 +29,13 @@ import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
+  categoryCar: {
+    display: 'block',
+    width: 40,
+    height: 40,
+    objectFit: 'contain',
+    flexShrink: 0,
+  },
   controls: {
     position: 'sticky',
     top: 60,
@@ -231,10 +239,25 @@ export function ShowroomInventoryScreen() {
         <ShowroomTabs
           label="Vehicle category"
           variant="icon"
+          tone="neutral"
           tabs={showroomCategories.map(({ value, label, icon }) => ({
             value,
             label,
-            content: <Icon name={icon} size={40} />,
+            content:
+              value === 'car' ? (
+                <Image
+                  src="/categories/car-realistic-20261003-v1.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  sizes="40px"
+                  loading="eager"
+                  draggable={false}
+                  {...stylex.props(s.categoryCar)}
+                />
+              ) : (
+                <Icon name={icon} size={40} />
+              ),
           }))}
           selected={filters.category}
           panelId="showroom-stock"

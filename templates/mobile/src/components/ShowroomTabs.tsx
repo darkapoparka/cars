@@ -45,6 +45,7 @@ const s = stylex.create({
     fontSize: 16,
   },
   iconTab: { minWidth: 76, paddingInline: 18 },
+  neutralTab: { outlineColor: colors.text },
   fillTab: {
     flexGrow: 1,
     flexShrink: 1,
@@ -69,6 +70,10 @@ const s = stylex.create({
     },
   },
   selectedText: { fontWeight: 600 },
+  selectedNeutral: {
+    color: colors.text,
+    '::after': { backgroundColor: colors.text },
+  },
 });
 
 export function ShowroomTabs<T extends string>({
@@ -78,6 +83,7 @@ export function ShowroomTabs<T extends string>({
   panelId,
   idPrefix,
   variant = 'text',
+  tone = 'accent',
   layout = 'scroll',
   flush = false,
   onChange,
@@ -88,6 +94,7 @@ export function ShowroomTabs<T extends string>({
   panelId: string;
   idPrefix: string;
   variant?: 'text' | 'icon';
+  tone?: 'accent' | 'neutral';
   layout?: 'scroll' | 'fill';
   flush?: boolean;
   onChange: (value: T) => void;
@@ -148,10 +155,12 @@ export function ShowroomTabs<T extends string>({
           }}
           {...stylex.props(
             s.tab,
+            tone === 'neutral' && s.neutralTab,
             variant === 'text' && s.textTab,
             variant === 'icon' && s.iconTab,
             layout === 'fill' && s.fillTab,
             selected === value && s.selected,
+            selected === value && tone === 'neutral' && s.selectedNeutral,
             selected === value && variant === 'text' && s.selectedText,
           )}
         >
