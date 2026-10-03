@@ -75,10 +75,15 @@
 			onclick={() => activate(option.value)}
 			onkeydown={(event) => handleKeydown(event, index)}
 		>
-			{#if option.icon}{@const Icon = option.icon}<span class="mode-tab-icon" aria-hidden="true"
-					><Icon size={19} strokeWidth={1.75} /></span
-				>{/if}
-			{option.label}
+			<span class="mode-tab-content">
+				{#if option.icon}{@const Icon = option.icon}<span class="mode-tab-icon" aria-hidden="true"
+						><Icon
+							size={appearance === 'panel' ? 22 : 19}
+							strokeWidth={appearance === 'panel' ? 2 : 1.75}
+						/></span
+					>{/if}
+				{option.label}
+			</span>
 		</button>
 	{/each}
 </div>
@@ -159,6 +164,9 @@
 		display: inline-flex;
 		flex: 0 0 auto;
 	}
+	.mode-tab-content {
+		display: contents;
+	}
 	.mobile-mode-tabs--attached {
 		border: 1px solid var(--bc-dark-border);
 		border-bottom: 0;
@@ -219,6 +227,32 @@
 		border-radius: var(--bc-radius-pill);
 	}
 	@media (min-width: 768px) {
+		.mobile-mode-tabs--panel .mode-tab-content {
+			position: relative;
+			display: inline-flex;
+			align-items: center;
+			gap: var(--bc-space-2);
+			white-space: nowrap;
+		}
+		.mobile-mode-tabs--panel button {
+			transition:
+				background var(--bc-motion-fast),
+				color var(--bc-motion-fast);
+		}
+		.mobile-mode-tabs--panel button.active::after {
+			display: none;
+		}
+		.mobile-mode-tabs--panel button.active .mode-tab-content::after {
+			position: absolute;
+			inset: auto 0 calc(var(--bc-space-3) * -1);
+			height: 3px;
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-accent);
+			content: '';
+		}
+		.mobile-mode-tabs--panel button.active .mode-tab-icon {
+			color: var(--bc-accent);
+		}
 		.mobile-mode-tabs--panel button:hover {
 			background: var(--bc-control);
 		}

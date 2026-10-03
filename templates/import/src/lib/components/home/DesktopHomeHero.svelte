@@ -6,9 +6,11 @@
 	} from '$lib/auxero/home-five';
 	import Search from '@lucide/svelte/icons/search';
 	import CarFront from '@lucide/svelte/icons/car-front';
+	import Car from '@lucide/svelte/icons/car';
+	import Percent from '@lucide/svelte/icons/percent';
 	import HandCoins from '@lucide/svelte/icons/hand-coins';
 	import Tag from '@lucide/svelte/icons/tag';
-	import Ship from '@lucide/svelte/icons/ship';
+	import Globe from '@lucide/svelte/icons/globe';
 	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
 	import Banknote from '@lucide/svelte/icons/banknote';
 	import Gauge from '@lucide/svelte/icons/gauge';
@@ -154,20 +156,20 @@
 						{
 							value: 'buy',
 							label: copy.buy,
-							icon: CarFront,
+							icon: Car,
 							panelId: 'home-entry'
 						},
 						{
 							value: 'finance',
 							label: copy.finance,
-							icon: HandCoins,
+							icon: Percent,
 							panelId: 'home-entry'
 						},
 						{ value: 'sell', label: copy.sell, icon: Tag, panelId: 'home-entry' },
 						{
 							value: 'import',
 							label: copy.import,
-							icon: Ship,
+							icon: Globe,
 							panelId: 'home-entry'
 						}
 					]}

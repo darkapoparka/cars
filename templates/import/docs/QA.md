@@ -28,6 +28,8 @@ On the tested routes, exercise navigation, mobile menu/open-close behavior, one 
 
 ## Visual/content checks
 
+For [desktop Home tabs](desktop-home-tabs-2026-10-04/README.md), check all four modes in BG/EN at 768/1024/1440/1920px. Confirm equal 48px targets, fully contained icon/label groups, one selected underline following its content, visible neutral hover and red keyboard focus. Exercise Arrow keys, Home/End, selected panel labels and finance/import/sell destinations. Check the native Buy fallback without JavaScript. Match Home/Sell/Import/About at 320/390px against before screenshots and complete-page presentation. Article cards remain single native links with text-and-arrow cues.
+
 For [desktop testimonial labels](desktop-review-labels-2026-10-04/README.md), verify Home and Reviews in BG/EN at 768/1024/1440/1920px. Every role beneath a name must be one fully visible line, use its typed category and render without JavaScript. Keep original mobile role text and Home's compact labels; compare matched Home/Reviews/About screenshots and complete-page presentation at 320/390px, including the About trial.
 
 - Correct dealer logo and favicon; no stretched or low-quality placeholder identity.
