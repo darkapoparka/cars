@@ -1,4 +1,5 @@
 import { daynightAssets, daynightBrand, daynightContact, mainNavigation } from '$lib/data/daynight';
+import { homeBrowseArtwork } from '$lib/content/home-discovery';
 import type { BlogPost } from '$lib/data/blog';
 import { vehicles as inventoryVehicles } from '$lib/data/vehicles';
 import type { Vehicle } from '$lib/data/vehicles';
@@ -892,7 +893,7 @@ export const homeFiveTypeCards: HomeFiveTypeCard[] = [
 	{
 		allTile: true,
 		label: 'View all',
-		image: '/assets/daynight/body-types/all-cars-front.webp',
+		image: homeBrowseArtwork.inventory.src,
 		bodyType: 'View all',
 		href: '/inventory'
 	}

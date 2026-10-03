@@ -3,10 +3,11 @@
 Generated with the built-in image generation tool on 30 September 2026 for the owner's requested three front-facing cars. This is illustrative category artwork, not an inventory listing photograph.
 
 - Workspace asset: `static/assets/daynight/body-types/all-cars-front.webp`
-- Consumer: `src/lib/auxero/home-five.ts`, rendered by `src/lib/components/home/HomePage.svelte`
+- Asset and dimensions owner: `homeBrowseArtwork.inventory` in `src/lib/content/home-discovery.ts`.
+- Consumers: the retained mobile body-type View all tile through `src/lib/auxero/home-five.ts`, and the desktop inventory browse card through the optional `artwork` prop on `src/lib/components/home/HomeBrowseCard.svelte`, both composed by `HomePage.svelte`.
 - Original retained at `C:/Users/radev/.codex/generated_images/01a0f0be-6d76-7612-9860-81094b9562f8/exec-7e2c7c7e-bee0-407f-bb17-87fc18d8523b.png`
 - Export: transparent WebP, 720 x 264, 47,404 bytes. Sharp trimmed the transparent margin, resized and encoded the asset while preserving alpha.
-- The View all card uses the same white surface as other vehicle types and retains its unfiltered inventory destination.
+- Both View all destinations retain their white surface and unfiltered inventory link. The taller desktop inventory card media-gates this decorative illustration from 768px; actual featured listing photographs retain their inventory data owner. The image file is unchanged. [The follow-up receipt](../desktop-inventory-browse-artwork-2026-10-03/README.md) records the new consumer and mobile preservation.
 
 ## Exact prompt
 

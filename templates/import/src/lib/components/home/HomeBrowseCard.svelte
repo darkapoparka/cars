@@ -1,12 +1,20 @@
 <script lang="ts">
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import { assetHref, emptyImage } from '$lib/utils/assets';
 	import { linkHref } from '$lib/utils/links';
 	let {
 		href,
 		label,
 		context,
+		artwork,
 		desktopOnly = false
-	}: { href: string; label: string; context?: string; desktopOnly?: boolean } = $props();
+	}: {
+		href: string;
+		label: string;
+		context?: string;
+		artwork?: { src: string; width: number; height: number };
+		desktopOnly?: boolean;
+	} = $props();
 </script>
 
 <a
@@ -15,6 +23,19 @@
 	href={linkHref(href)}
 	aria-label={context ? `${label}: ${context}` : label}
 >
+	{#if artwork}
+		<picture class="home-browse-card__artwork" aria-hidden="true">
+			<source media="(min-width: 768px)" srcset={assetHref(artwork.src)} />
+			<img
+				src={emptyImage}
+				alt=""
+				width={artwork.width}
+				height={artwork.height}
+				loading="lazy"
+				decoding="async"
+			/>
+		</picture>
+	{/if}
 	<ArrowRight size={32} aria-hidden="true" /><strong>{label}</strong>
 </a>
 
@@ -42,12 +63,24 @@
 		outline: 2px solid var(--bc-accent);
 		outline-offset: -3px;
 	}
+	.home-browse-card__artwork {
+		display: none;
+	}
 	@media (max-width: 767.98px) {
 		.home-browse-card--desktop-only {
 			display: none;
 		}
 	}
 	@media (min-width: 768px) {
+		.home-browse-card__artwork {
+			display: block;
+			width: 100%;
+		}
+		.home-browse-card__artwork img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
 		.home-browse-card {
 			gap: var(--bc-space-5);
 			min-height: 160px;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { homeDiscoveryCopy } from '$lib/content/home-discovery';
+	import { homeBrowseArtwork, homeDiscoveryCopy } from '$lib/content/home-discovery';
 	import { assetHref } from '$lib/utils/assets';
 	import { MediaQuery } from 'svelte/reactivity';
 	import type { homePageData } from '$lib/server/home';
@@ -41,6 +41,7 @@
 					href={localized('/inventory')}
 					label={copy.viewAll}
 					context={data.copy.featuredTitle}
+					artwork={homeBrowseArtwork.inventory}
 					desktopOnly
 				/>
 			</div>

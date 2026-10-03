@@ -1,6 +1,15 @@
 import type { Locale } from '$lib/locale/core';
 import { editorialCopy } from './editorial';
 
+/** Decorative browse artwork; listing photography retains its inventory owner. */
+export const homeBrowseArtwork = {
+	inventory: {
+		src: '/assets/daynight/body-types/all-cars-front.webp',
+		width: 720,
+		height: 264
+	}
+} as const;
+
 export const homeHeroModes = {
 	buy: { title: { bg: 'Купи автомобил', en: 'Buy a car' }, action: '/inventory' },
 	finance: { title: { bg: 'Автомобил на лизинг', en: 'Finance a car' }, action: '/financing' },

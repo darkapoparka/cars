@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { assetHref } from '$lib/utils/assets';
+	import { assetHref, emptyImage } from '$lib/utils/assets';
 	import { desktopHeroArtwork } from '$lib/content/desktop-hero-artwork';
-	// Hidden desktop compositions must not download decorative vehicle artwork on phones.
-	const emptyImage = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 </script>
 
 <div class="hero-cars" aria-hidden="true">
