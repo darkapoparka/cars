@@ -39,6 +39,8 @@ Preserve the homepage logo/model dialogs and mobile drawers. Do not replace them
 
 Placeholders inherit input typography. A search input inside a decorated wrapper uses a visible focus ring on that wrapper. Verify selected states, placeholder styles and keyboard focus in the browser.
 
+Desktop hero entry text uses the existing 20px/400 entry role and control leading across Home Buy/Sell/Import, Inventory and Services. Home's panel tabs explicitly use the same 20px entry token; the general desktop mode-tab token stays at 22px for its other consumers. Primary actions use 20px/400, compact actions and form values use 18px/400, and dense Inventory filter labels use 16px/400. Selection uses the red underline, hover uses the neutral surface and keyboard focus uses its red outline; a second underline on an unselected hover would obscure the current mode. See [the discovery typography receipt](desktop-discovery-type-2026-10-04/README.md).
+
 Mobile inventory search uses the 18px input scale and shows the current filtered result count, including zero. Long queries truncate before the count. Search and filter rows have an 8px gap; the sticky toolbar owns the single 12px gap before the first vehicle card. Home Buy/Import and service entry tabs use the same 20px mode-tab token, 400 weight and 44px targets.
 
 Test matching roles across home, inventory, About, Contact and conversion routes at 390px and 1440px, plus intermediate-width reflow. The typography-contact test suite checks action size and weight, picker selection, social links and Contact alignment. Existing suites cover selection persistence, drawers, navigation and focus.

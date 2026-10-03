@@ -1,0 +1,24 @@
+{
+	"baselineImportCommit": "ea0e9676ce2588833b07849dcf42658d30111a7c",
+	"frozenPathCount": 1683,
+	"frozenManifestSha256": "9962526ebda48dc7d6ea11ae0425e5a90777f396634d863a2f775e09be19d54b",
+	"frozenManifest": "L:/CODEX/cars/templates/import/runtime/desktop-discovery-type-2026-10-04/evidence/source-manifest.json",
+	"lockfile": {
+		"path": "package-lock.json",
+		"sha256": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c"
+	},
+	"changedSource": [
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "610d4d74a934b239ca9364a6de4ce9959bef89cede5dfa860f8ca864a31a3b78"
+		},
+		{
+			"path": "src/lib/components/home/DesktopHomeHero.svelte",
+			"sha256": "d0caa77980b58bf741f092071721c55507533c87175989dc874be2d0474d3b62"
+		},
+		{
+			"path": "tests/desktop-search.e2e.ts",
+			"sha256": "8794655bbd7c1f165d8cc7aa100cd55f65aa1113037e9eb0a55d872ba9a9e7fa"
+		}
+	]
+}

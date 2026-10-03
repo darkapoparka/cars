@@ -281,9 +281,9 @@
 		border-radius: var(--bc-radius-md);
 		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
-		font-size: var(--bc-text-search-trigger);
+		font-size: var(--bc-text-entry);
 		font-weight: var(--bc-weight-control);
-		line-height: var(--bc-leading-search);
+		line-height: var(--bc-leading-control);
 		text-align: left;
 	}
 	.home-hero__intent-field input {
@@ -294,7 +294,7 @@
 		background: transparent;
 		border: 0;
 		color: var(--bc-ink);
-		font-size: var(--bc-text-filter);
+		font: inherit;
 	}
 	.home-hero__intent-field:focus-within {
 		outline: 2px solid var(--bc-focus);

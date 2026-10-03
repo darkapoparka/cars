@@ -229,7 +229,7 @@
 		border: 1px solid transparent;
 		border-radius: var(--bc-radius-md);
 		color: var(--desktop-discovery-copy, var(--bc-dark-muted));
-		font-size: var(--mode-tab-font-size, var(--bc-text-mode-tab));
+		font-size: var(--mode-tab-font-size, var(--bc-text-entry));
 	}
 	.mobile-mode-tabs--panel button:hover {
 		background: var(--bc-surface-raised);

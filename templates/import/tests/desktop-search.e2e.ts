@@ -17,6 +17,10 @@ test('desktop artwork tabs connect to compact fields without changing the mobile
 	await expect(artwork).toHaveCount(4);
 	for (const width of [768, 1024, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 900 });
+		for (const tab of await tabs.all()) {
+			await expect(tab).toHaveCSS('font-size', '20px');
+			await expect(tab).toHaveCSS('font-weight', '400');
+		}
 		await expect
 			.poll(() =>
 				artwork.evaluateAll((images) =>
@@ -66,8 +70,10 @@ test('desktop artwork tabs connect to compact fields without changing the mobile
 	);
 	await box.getByRole('tab', { name: 'Внос', exact: true }).click();
 	await expect(page.locator('#home-query')).toHaveAttribute('name', 'vehicle');
+	await expect(page.locator('#home-query')).toHaveCSS('font-size', '20px');
 	await box.getByRole('tab', { name: 'Продай', exact: true }).click();
 	await expect(page.locator('#home-query')).toHaveAttribute('name', 'vin');
+	await expect(page.locator('#home-query')).toHaveCSS('font-size', '20px');
 });
 
 test('search entry opens a focused dialog with one intact focus outline and pinned actions', async ({

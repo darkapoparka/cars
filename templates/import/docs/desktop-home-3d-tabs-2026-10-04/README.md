@@ -6,7 +6,7 @@ The owner rejected the Home line icons and explicitly requested generated 3D ass
 
 ## Ownership and screenshots
 
-Typed homeModeArtwork records in content/home-discovery.ts own paths and dimensions. MobileModeTabs renders decorative, media-gated pictures and owns native tab behavior, hover, focus and selected underline. One theme token sizes the artwork at 48px; equal targets grow to 66px including padding and borders, and the red underline follows the artwork-and-label group. Existing 20px/400 labels and mode actions stay intact. Other consumers keep their existing icon defaults. No new dependency or route was introduced.
+Typed homeModeArtwork records in content/home-discovery.ts own paths and dimensions. MobileModeTabs renders decorative, media-gated pictures and owns native tab behavior, hover, focus and selected underline. One theme token sizes the artwork at 48px; equal targets grow to 66px including padding and borders, and the red underline follows the artwork-and-label group. The recorded browser metrics resolve the labels to the default desktop mode-tab token (22px/400). The [typography follow-up](../desktop-discovery-type-2026-10-04/README.md) corrects the panel labels to the intended 20px; mode actions stay intact. Other consumers keep their existing icon defaults. No new dependency or route was introduced.
 
 The four 192px transparent WebP images total 43676 bytes. Original generated PNGs are preserved in runtime and at their recorded Codex paths. The available built-in image generator does not expose a model selector; no 2.5 model claim is made. Source activation starts at 768px, with the existing transparent fallback below it.
 
