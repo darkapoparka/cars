@@ -58,19 +58,49 @@
     gap: 0;
   }
   .stockTabs {
-    display: flex;
-    flex-wrap: wrap;
+    position: relative;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     gap: var(--spacing);
     justify-content: center;
     width: fit-content;
+    max-width: 100%;
     height: auto;
     padding: var(--spacing);
     margin: 0 auto calc(var(--spacing) * 6);
     background: var(--control);
     border: var(--desktop-border-width) solid var(--border);
     border-radius: var(--radius-pill);
+    isolation: isolate;
+  }
+  .stockIndicator {
+    position: absolute;
+    top: var(--spacing);
+    bottom: var(--spacing);
+    left: var(--spacing);
+    z-index: 0;
+    width: calc(
+      (
+        100% -
+        var(--spacing) *
+        2 -
+        var(--spacing) *
+        (var(--stock-tab-count) - 1)
+      ) /
+      var(--stock-tab-count)
+    );
+    pointer-events: none;
+    background: var(--brand);
+    border-radius: var(--radius-pill);
+    transform: translateX(
+      calc(var(--stock-active-index) * (100% + var(--spacing)))
+    );
+    transition: transform var(--duration-interaction) ease-out;
   }
   .stockTabs button {
+    position: relative;
+    z-index: 1;
     flex: initial;
     gap: calc(var(--spacing) * 2);
     height: auto;
@@ -91,7 +121,7 @@
   }
   .stockTabs button[data-state="active"] {
     color: var(--brand-foreground);
-    background: var(--brand);
+    background: transparent;
   }
   .stockTabs button:focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
@@ -385,6 +415,9 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
+  .stockTabs button {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .stockGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: calc(var(--spacing) * 5);
@@ -412,5 +445,12 @@
   .journalCard h3 {
     font-size: calc(var(--spacing) * 4.75);
     line-height: calc(var(--spacing) * 7);
+  }
+}
+
+@media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+  .stockIndicator,
+  .stockTabs button {
+    transition: none;
   }
 }

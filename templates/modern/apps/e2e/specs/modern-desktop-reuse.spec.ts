@@ -159,7 +159,7 @@ test("home stock tabs filter in place and support keyboard browsing", async ({
       exact: true,
     });
     const recent = tabs.getByRole("tab", {
-      name: locale === "bg" ? "Последно добавени" : "Recently added",
+      name: locale === "bg" ? "Последни" : "Recently added",
       exact: true,
     });
     const cards = stock.locator(
@@ -203,5 +203,85 @@ test("home stock tabs filter in place and support keyboard browsing", async ({
         exact: true,
       })
     ).toHaveAttribute("href", `/${locale}/cars`);
+  }
+});
+
+test("home stock rail follows selection and respects reduced motion", async ({
+  page,
+}) => {
+  for (const width of [1024, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto("/bg");
+    await page.evaluate(() => document.fonts.ready);
+    const tabs = page.locator('[data-slot="home-stock-tabs"]');
+    await expect(tabs.getByRole("tab")).toHaveCount(3);
+    const motionProbe = tabs.evaluate(async (rail) => {
+      const indicator = rail.querySelector<HTMLElement>(
+        '[data-slot="home-stock-indicator"]'
+      );
+      const buttons = rail.querySelectorAll<HTMLButtonElement>('[role="tab"]');
+      if (!indicator || buttons.length !== 3) {
+        throw new Error("Stock rail is missing");
+      }
+      const start = indicator.getBoundingClientRect().left;
+      const samples: number[] = [];
+      for (let frame = 0; frame < 120; frame += 1) {
+        await new Promise<void>((resolve) =>
+          requestAnimationFrame(() => resolve())
+        );
+        const left = indicator.getBoundingClientRect().left;
+        samples.push(left);
+        if (
+          buttons[1].getAttribute("aria-selected") === "true" &&
+          Math.abs(left - buttons[1].getBoundingClientRect().left) < 0.5
+        ) {
+          break;
+        }
+      }
+      const selected = buttons[1].getBoundingClientRect();
+      const active = indicator.getBoundingClientRect();
+      return {
+        movedBetweenTabs: samples.some(
+          (left) => left > start + 1 && left < selected.left - 1
+        ),
+        alignment: Math.max(
+          Math.abs(active.left - selected.left),
+          Math.abs(active.top - selected.top),
+          Math.abs(active.width - selected.width),
+          Math.abs(active.height - selected.height)
+        ),
+      };
+    });
+    const [motion] = await Promise.all([
+      motionProbe,
+      tabs.getByRole("tab", { name: "Препоръчани", exact: true }).click(),
+    ]);
+    expect(motion.movedBetweenTabs).toBe(true);
+    expect(motion.alignment).toBeLessThan(1);
+    await expect(
+      tabs.getByRole("tab", { name: "Препоръчани", exact: true })
+    ).toHaveAttribute("aria-selected", "true");
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    await tabs.getByRole("tab", { name: "Последни", exact: true }).click();
+    const reduced = await tabs.evaluate((rail) => {
+      const indicator = rail.querySelector<HTMLElement>(
+        '[data-slot="home-stock-indicator"]'
+      );
+      const selected = rail.querySelector('[role="tab"][aria-selected="true"]');
+      if (!(indicator && selected)) {
+        throw new Error("Stock rail is missing");
+      }
+      return {
+        duration: getComputedStyle(indicator).transitionDuration,
+        alignment: Math.abs(
+          indicator.getBoundingClientRect().left -
+            selected.getBoundingClientRect().left
+        ),
+      };
+    });
+    expect(Number.parseFloat(reduced.duration)).toBeLessThan(0.001);
+    expect(reduced.alignment).toBeLessThan(1);
+    await expect(page).toHaveURL((url) => url.pathname === "/bg");
   }
 });

@@ -8,7 +8,7 @@ import {
 } from "@repo/design-system/components/ui/tabs";
 import { getListingPath, type VehicleListing } from "@repo/marketplace";
 import Link from "next/link";
-import { useState } from "react";
+import { type CSSProperties, useState } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-discovery.module.css";
 import { VehicleCard } from "./vehicle-card";
@@ -18,7 +18,7 @@ const stockLabels = {
   new: ["Нови", "New"],
   used: ["Употребявани", "Used"],
   recommended: ["Препоръчани", "Recommended"],
-  recent: ["Последно добавени", "Recently added"],
+  recent: ["Последни", "Recently added"],
 } as const;
 
 interface StockView {
@@ -129,7 +129,18 @@ export function DealerDesktopStock({
             aria-label={text("Разгледайте автомобилите", "Browse inventory")}
             className={styles.stockTabs}
             data-slot="home-stock-tabs"
+            style={
+              {
+                "--stock-tab-count": views.length,
+                "--stock-active-index": views.indexOf(selected),
+              } as CSSProperties
+            }
           >
+            <span
+              aria-hidden="true"
+              className={styles.stockIndicator}
+              data-slot="home-stock-indicator"
+            />
             {views.map((view) => (
               <TabsTrigger key={view.id} value={view.id}>
                 {stockLabels[view.id][isBg ? 0 : 1]}
