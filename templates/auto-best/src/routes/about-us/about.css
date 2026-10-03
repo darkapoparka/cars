@@ -51,14 +51,37 @@
   .dn-about-process .dn-about-section-heading h2 { font-size: var(--dn-text-section-compact); }
   .dn-about-process .dn-about-section-heading > p { margin: var(--dn-space-3) 0 0; }
   .dn-about-process .dn-about-services { gap: 24px; margin-top: 32px; }
-  .dn-about-process .dn-about-service-card { min-height: 272px; padding: 24px; border: 0; background: var(--dn-surface-subtle); }
-  .dn-about-process .dn-about-service-card:hover, .dn-about-process .dn-about-service-card:focus-within { background: var(--dn-surface-raised); }
+  .dn-about-process .dn-about-service-card { min-height: 272px; padding: 24px; border: 0; background: var(--dn-surface-subtle); transition: background-color 160ms ease, box-shadow 160ms ease; }
+  .dn-about-process .dn-about-service-card:hover,
+  .dn-about-process .dn-about-service-card:focus-within { background: var(--dn-surface-raised); box-shadow: var(--dn-card-hover-shadow); }
   .dn-about-process .dn-about-service-card__icon { width: 44px; height: 44px; margin-bottom: 20px; }
   .dn-about-process .dn-about-service-card__icon svg { width: 44px; height: 44px; }
   .dn-about-process .dn-about-service-card h3 { font-size: var(--dn-text-card); }
   .dn-about-process .dn-about-service-card p { margin: 12px 0 24px; font-size: var(--dn-text-body); line-height: var(--dn-leading-body); }
-  .dn-about-process .dn-about-service-card > a { min-height: 44px; padding: 8px 12px; font-size: var(--dn-control-size); font-weight: var(--dn-control-weight); line-height: var(--dn-leading-control); }
+  .dn-about-process .dn-about-service-card > a {
+    width: fit-content;
+    max-width: 100%;
+    min-height: var(--dn-control-height-compact);
+    align-self: flex-start;
+    gap: var(--dn-space-2);
+    padding: var(--dn-space-2) var(--dn-space-5);
+    border: 0;
+    background: var(--dn-ink);
+    color: var(--dn-white);
+    font: var(--dn-control-font);
+    transition: background-color 160ms ease, color 160ms ease;
+  }
+  .dn-about-process .dn-about-service-card > a > svg { flex: none; }
+  .dn-about-process .dn-about-service-card:focus-within > a { background: var(--dn-red); }
   .dn-about-process .dn-about-service-card > a:focus-visible { outline: 2px solid var(--dn-red); outline-offset: 3px; }
+}
+
+@media (min-width: 992px) and (hover: hover) {
+  .dn-about-process .dn-about-service-card:hover > a {
+    border-color: var(--dn-red);
+    background: var(--dn-red);
+    color: var(--dn-white);
+  }
 }
 
 .dn-about-process > .container,
