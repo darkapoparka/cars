@@ -21,18 +21,20 @@ type Props = {
   colourful?: boolean;
   opensDialog?: boolean;
   containArtwork?: boolean;
+  compactCopy?: boolean;
 } & ({action: string; href: string; onClick?: never} | {action: string; href?: never; onClick: () => void} | {action?: never; href?: never; onClick?: never});
 
 /** Shared content-sized composition for every showroom hero and artwork theme. */
-export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false, opensDialog = false, containArtwork = false}: Props) {
+export default function ShowroomBanner({title, mobileTitle, description, mobileDescription, action, mobileAction, image, href, onClick, colourful = false, opensDialog = false, containArtwork = false, compactCopy = false}: Props) {
   const tx = useCopy();
 
   return <ShowroomBannerFrame><section data-showroom-banner {...stylex.props(s.banner, !action && s.staticBanner, colourful && s.colourful)}>
     {!colourful && image !== showroom.promotion.image ? <Image src={showroom.promotion.image} alt={tx("")} width={1774} height={887} sizes="(max-width: 767px) 100vw, 600px" priority {...stylex.props(s.image)} /> : null}
     <Image src={image} alt={tx("")} width={1774} height={887} sizes="(max-width: 767px) 100vw, 600px" priority {...stylex.props(s.image, colourful && s.colourImage, containArtwork && s.containedImage)} />
+    {compactCopy ? <div aria-hidden="true" {...stylex.props(s.compactScrim)}/> : null}
     <div {...stylex.props(s.copy)}>
-      <h1 {...stylex.props(s.title, !action && s.staticTitle, t.hero)}><span {...stylex.props(Boolean(mobileTitle) && s.desktopCopy)}>{tx(title)}</span>{mobileTitle ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileTitle)}</span> : null}</h1>
-      <p {...stylex.props(s.description, t.body, colourful && s.colourDescription)}><span {...stylex.props(Boolean(mobileDescription) && s.desktopCopy)}>{tx(description)}</span>{mobileDescription ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileDescription)}</span> : null}</p>
+      <h1 {...stylex.props(s.title, !action && s.staticTitle, t.hero, compactCopy && s.compactTitle)}><span {...stylex.props(Boolean(mobileTitle) && s.desktopCopy)}>{tx(title)}</span>{mobileTitle ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileTitle)}</span> : null}</h1>
+      <p {...stylex.props(s.description, t.body, colourful && s.colourDescription, compactCopy && s.compactDescription)}><span {...stylex.props(Boolean(mobileDescription) && s.desktopCopy)}>{tx(description)}</span>{mobileDescription ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileDescription)}</span> : null}</p>
       {action ? href ? <Link href={href} aria-label={tx(action)} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></Link> : <button type="button" onClick={onClick} aria-label={tx(action)} aria-haspopup={opensDialog ? 'dialog' : undefined} {...stylex.props(s.action, t.control, colourful && s.colourAction)}><span {...stylex.props(Boolean(mobileAction) && s.desktopCopy)}>{tx(action)}</span>{mobileAction ? <span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span> : null}<ArrowRight size={16} aria-hidden="true" /></button> : null}
     </div>
   </section></ShowroomBannerFrame>;
@@ -44,6 +46,9 @@ const s = stylex.create({
   containedImage: {width: {[media.mobile]: '100%', default: 'auto'}, height: {[media.mobile]: 'auto', default: '100%'}, objectFit: 'contain', objectPosition: 'right bottom'},
   colourDescription: {color: campaign.muted, maxWidth: {[media.mobile]: '65%', default: 280}},
   colourAction: {color: campaign.actionText, backgroundColor: '#fff'},
+  compactScrim: {position: 'absolute', inset: 0, pointerEvents: 'none', backgroundImage: {[media.mobile]: 'linear-gradient(90deg,rgba(23,23,25,.9),rgba(23,23,25,.32) 70%,transparent)', default: 'linear-gradient(90deg,rgba(23,23,25,.5),transparent 65%)'}},
+  compactTitle: {maxWidth: '100%'},
+  compactDescription: {maxWidth: '100%'},
   banner: {position: 'relative', isolation: 'isolate', display: 'flex', alignItems: 'center', minHeight: {[media.mobile]: 0, [media.tablet]: 232, default: 248}, padding: {[media.mobile]: $.bannerPadding, [media.tablet]: 28, default: '28px 36px'}, overflow: 'hidden', color: $.ink, backgroundColor: $.bannerSurface},
   staticBanner: {minHeight: {[media.mobile]: 160, [media.tablet]: 232, default: 248}},
   copy: {position: 'relative', zIndex: 1, width: {[media.mobile]: '100%', default: '65%'}, minWidth: 0},

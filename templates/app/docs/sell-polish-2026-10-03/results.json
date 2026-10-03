@@ -1,0 +1,261 @@
+{
+  "createdAt": "2026-10-03T00:52:50.936Z",
+  "base": "http://127.0.0.1:6483",
+  "browser": "Codex In-app Browser",
+  "viewports": [
+    {
+      "width": 320,
+      "height": 844
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1000
+    },
+    {
+      "width": 1440,
+      "height": 1000
+    }
+  ],
+  "checks": [
+    {
+      "name": "BG Sell at 320: no overflow, one-line title and subtext, images loaded",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "contentWidth": 305,
+        "descriptionHeight": 22,
+        "descriptionLineHeight": "22px",
+        "scrollWidth": 305,
+        "title": "Продай колата си.",
+        "titleHeight": 28,
+        "titleLineHeight": "28px",
+        "width": 320
+      }
+    },
+    {
+      "name": "Empty form stays in car details and requires make/model",
+      "passed": true,
+      "details": {
+        "dialogs": 1,
+        "required": true,
+        "valid": false
+      }
+    },
+    {
+      "name": "Trade-in draft includes entered car details and truthful non-submitting disclosure",
+      "passed": true,
+      "details": {
+        "disclosure": "Drive24\n\nЗапитване за замяна\n\nТози демо сайт само подготвя запитване. Тук не се правят резервации и покупки и не се изпращат съобщения.\n\nЧернова на запитването\nКопирай черновата\n\nЗа този демо сайт няма потвърден канал за контакт.\n\nАвтокъщата потвърждава цената и условията.",
+        "draft": "Здравейте, искам да обсъдя Toyota Corolla\nЗапитване за замяна\nГодина: 2019\nПробег (км): 85000\nСервизна история. За замяна с комби..\nhttp://127.0.0.1:6483/bg/sell",
+        "title": "Запитване за замяна"
+      }
+    },
+    {
+      "name": "Nested sheets close with Escape and restore hero focus/scroll",
+      "passed": true,
+      "details": {
+        "dialogs": 0,
+        "focused": "Поискай оценка",
+        "scrollLocked": ""
+      }
+    },
+    {
+      "name": "Trade-in card opens the correct intent and retains entered car details",
+      "passed": true,
+      "details": {
+        "make": "Toyota",
+        "selected": "Замяна"
+      }
+    },
+    {
+      "name": "Browser Back dismisses the trade-in sheet without leaving Sell",
+      "passed": true
+    },
+    {
+      "name": "Shift+Tab from the dialog wraps to the final form control",
+      "passed": true,
+      "details": {
+        "focused": "Подготви запитване"
+      }
+    },
+    {
+      "name": "Sale card activates with the keyboard and opens sale intent",
+      "passed": true,
+      "details": {
+        "make": "Toyota",
+        "selected": "Продай"
+      }
+    },
+    {
+      "name": "Sale form prepares a selling draft",
+      "passed": true
+    },
+    {
+      "name": "Valuation guide opens readable Bulgarian detail",
+      "passed": true
+    },
+    {
+      "name": "Service-history guide opens the existing detail",
+      "passed": true
+    },
+    {
+      "name": "Photo guide opens the existing detail",
+      "passed": true
+    },
+    {
+      "name": "BG Sell at 390: no overflow, one-line title and subtext, images loaded",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "descriptionHeight": 22,
+        "descriptionLineHeight": "22px",
+        "scrollWidth": 390,
+        "titleHeight": 28,
+        "titleLineHeight": "28px",
+        "width": 390
+      }
+    },
+    {
+      "name": "BG Sell at 768: no overflow or broken images",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "scrollWidth": 768,
+        "width": 768
+      }
+    },
+    {
+      "name": "BG Sell at 1440: no overflow, one-line title and subtext, images loaded",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "descriptionHeight": 24,
+        "descriptionLineHeight": "24px",
+        "scrollWidth": 1440,
+        "titleHeight": 44,
+        "titleLineHeight": "44px",
+        "width": 1440
+      }
+    },
+    {
+      "name": "Desktop valuation opens a contained centered dialog",
+      "passed": true,
+      "details": {
+        "height": 1000,
+        "rect": {
+          "bottom": 794.5,
+          "height": 589,
+          "left": 440,
+          "right": 1000,
+          "top": 205.5,
+          "width": 560,
+          "x": 440,
+          "y": 205.5
+        },
+        "width": 1440
+      }
+    },
+    {
+      "name": "EN Sell at 320: no overflow, one-line title and subtext, images loaded",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "descriptionHeight": 22,
+        "descriptionLineHeight": "22px",
+        "scrollWidth": 305,
+        "title": "Sell your car.",
+        "titleHeight": 28,
+        "titleLineHeight": "28px",
+        "width": 320
+      }
+    },
+    {
+      "name": "English hero opens the localized sale form",
+      "passed": true
+    },
+    {
+      "name": "English trade-in card opens exchange intent",
+      "passed": true
+    },
+    {
+      "name": "Finance shared banner regression: calculator CTA, no Sell content or overflow",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "buttons": [
+          "Изчисли",
+          "Всички",
+          "Германия",
+          "Канада",
+          "САЩ",
+          "Италия",
+          "Нидерландия",
+          "Канада",
+          "Toyota\n\n2021 RAV4\n\nHybrid AWD\n\n€\n19,800",
+          "САЩ",
+          "Tesla\n\n2022 Model 3\n\nLong Range\n\n€\n22,900",
+          "Германия",
+          "BMW\n\n2020 320i\n\nSport Line\n\n€\n21,500",
+          "Италия",
+          "Volkswagen\n\n2021 Golf\n\n1.5 TSI\n\n€\n16,400",
+          "Нидерландия",
+          "Audi\n\n2020 A4 Avant\n\n35 TDI\n\n€\n20,700",
+          "Попитай ни"
+        ],
+        "hasSellSteps": false,
+        "scrollWidth": 375,
+        "title": "Калкулатор",
+        "width": 390
+      }
+    },
+    {
+      "name": "Finance calculator still opens from its existing CTA",
+      "passed": true
+    },
+    {
+      "name": "Services shared banner regression: existing CTA, no Sell content or overflow",
+      "passed": true,
+      "details": {
+        "brokenImages": [],
+        "buttons": [
+          "Избери услуга",
+          "Всички",
+          "Обслужване",
+          "Диагностика",
+          "Виж услугите"
+        ],
+        "hasSellSteps": false,
+        "scrollWidth": 375,
+        "title": "Сервизни услуги",
+        "width": 390
+      }
+    },
+    {
+      "name": "Services CTA still opens its existing request page",
+      "passed": true
+    },
+    {
+      "name": "Affected browser routes show no console errors",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "browserErrors": [],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "result": "passed",
+    "staticPages": 407
+  },
+  "source": {
+    "root": "L:/CODEX/cars/templates/app",
+    "branch": "main",
+    "baselineHead": "6a8cf208b3493128299f7ed8a8587694a1647b13",
+    "commit": "not created: existing Cars index.lock preserved"
+  }
+}

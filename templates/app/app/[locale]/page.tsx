@@ -41,11 +41,15 @@ export default function HomePage() {
   return <div {...stylex.props(s.screen)}>
     <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
-    <ShowroomSearch />
+    <ShowroomSearch desktopOnly />
+    <div data-home-inventory-nav {...stylex.props(s.collectionHeading, s.mobileInventoryNav)}>
+      <h2 {...stylex.props(s.heading)}>{tx('Available cars')}</h2>
+      <Link href="/cars" aria-label={tx('View all cars')} {...stylex.props(s.collectionLink, s.inventoryLink)}>{tx('View all')}<ArrowRight size={15} aria-hidden="true"/></Link>
+    </div>
     <main {...stylex.props(s.content)}>
       <BrandRow showTitle={false} />
       <section aria-label={tx('Your showroom, your way')} {...stylex.props(s.offers)}><ShowroomHighlights /></section>
-      <section aria-labelledby="home-inventory-heading">
+      <section aria-label={tx('Available cars')}>
         <div {...stylex.props(s.collectionHeading, s.inventoryHeading)}>
           <h2 id="home-inventory-heading" {...stylex.props(s.heading)}>{tx('Available cars')}</h2>
           <Link href="/cars" aria-label={tx('View all cars')} {...stylex.props(s.collectionLink, s.inventoryLink)}>{tx('View all')}<ArrowRight size={15} aria-hidden="true"/></Link>
@@ -82,7 +86,8 @@ const s = stylex.create({
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: {[media.mobile]: 16, default: 24}},
   feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 14, marginTop: {[media.mobile]: 10, default: 14}},
-  inventoryHeading: {marginTop: {[media.mobile]: 0, default: 16}},
+  mobileInventoryNav: {display: {[media.mobile]: 'flex', default: 'none'}, maxWidth: $.content, marginInline: 'auto', paddingInline: 12, minHeight: 44},
+  inventoryHeading: {display: {[media.mobile]: 'none', default: 'flex'}, marginTop: {[media.mobile]: 0, default: 16}},
   inventoryLink: {minHeight: 44},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8}, borderTopWidth: {[media.mobile]: 0, default: 1}, borderTopStyle: 'solid', borderTopColor: '#e8e8eb'},
   mobileCollectionBanner: {display: {[media.mobile]: 'block', default: 'none'}, position: 'relative', height: 156, overflow: 'hidden', color: '#fff', borderRadius: 18, backgroundColor: '#242428'},

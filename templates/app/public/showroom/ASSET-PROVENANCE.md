@@ -2,6 +2,10 @@
 
 Generated on 2026-09-26 with the built-in image generation tool. Model/version selection was not exposed. These are synthetic demo illustrations, not real dealer stock photography or financial endorsements. Original generation files are retained; runtime files are copies and served through Next Image.
 
+## Mobile service navigation - 3 October 2026
+
+The owner's mobile tab polish uses original generated Sell, Leasing and Services product cutouts. [Originals and exact built-in imagegen prompts](navigation/MOBILE-PROMPTS-2026-10-03.md) record the key, calculator/key and complete wheel/wrench assets. Transparent WebP derivatives are 480 x 320 at quality 85. Buy retains its existing car; desktop retains the previous artwork through responsive picture sources. These are navigation illustrations and contain no dealer or manufacturer identity.
+
 ## Service card photographs - 2 October 2026
 
 The owner requested original generated imagery for the Services cards. [Service originals and exact prompts](services/PROMPTS.md) record the maintenance and diagnostics series, created with the built-in image generation tool. Model selection was not exposed. PNG originals are retained alongside optimized WebP copies; these illustrative scenes do not depict the actual dealer team or facilities.

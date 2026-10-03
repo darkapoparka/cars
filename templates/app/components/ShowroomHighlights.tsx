@@ -28,8 +28,8 @@ export default function ShowroomHighlights() {
     setActive(index);
   }
   return <div role="region" aria-label={tx("Explore the showroom")} aria-roledescription="carousel">
-    <div ref={rail} onScroll={syncPage} {...stylex.props(s.rail)}>{showroom.highlights.map(({title, mobileTitle, copy, mobileCopy, href, image, action, mobileAction}) => <Link href={href} key={image} aria-label={tx(action)} {...stylex.props(s.card)}>
-    <Image src={image} alt={tx("")} width={1672} height={941} sizes="(max-width: 767px) calc(100vw - 56px), 600px" {...stylex.props(s.artwork)}/>
+    <div ref={rail} onScroll={syncPage} {...stylex.props(s.rail)}>{showroom.highlights.map(({title, mobileTitle, copy, mobileCopy, href, image, action, mobileAction}, index) => <Link href={href} key={image} aria-label={tx(action)} {...stylex.props(s.card)}>
+    <Image src={image} alt={tx("")} width={1672} height={941} loading={index === 0 ? 'eager' : 'lazy'} sizes="(max-width: 767px) calc(100vw - 56px), 600px" {...stylex.props(s.artwork)}/>
     <div {...stylex.props(s.content)}><h2 {...stylex.props(s.title, t.heading)}><span {...stylex.props(s.desktopCopy)}>{tx(title)}</span><span {...stylex.props(s.mobileCopy)}>{tx(mobileTitle)}</span></h2><p {...stylex.props(s.copy, t.body)}><span {...stylex.props(s.desktopCopy)}>{tx(copy)}</span><span {...stylex.props(s.mobileCopy)}>{tx(mobileCopy)}</span></p><span {...stylex.props(s.action, t.control)}><span {...stylex.props(s.desktopCopy)}>{tx(action)}</span><span {...stylex.props(s.mobileCopy)}>{tx(mobileAction)}</span><ArrowRight aria-hidden="true" {...stylex.props(s.arrow)}/></span></div>
   </Link>)}</div>
     <div aria-label={tx("Choose a promotion")} {...stylex.props(s.pagination)}>{showroom.highlights.map((item, index) => <button key={item.href} type="button" aria-label={`${index + 1}: ${tx(item.action)}`} aria-current={active === index ? 'true' : undefined} onClick={() => select(index)} {...stylex.props(s.pageButton)}><span {...stylex.props(s.pageDot, active === index && s.pageDotActive)}/></button>)}</div>

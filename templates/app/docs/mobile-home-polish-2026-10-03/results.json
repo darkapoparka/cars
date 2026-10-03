@@ -1,0 +1,1256 @@
+{
+  "date": "2026-10-03",
+  "origin": "http://127.0.0.1:6483",
+  "checks": [
+    {
+      "name": "BG Home 320 final has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Home 320 final has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Home 390 settled final has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Home 390 settled final has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Home 768 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Home 768 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Home 1440 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Home 1440 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "EN Home 320 final has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "EN Home 320 final has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG leasing 320 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG leasing 320 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG leasing 390 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG leasing 390 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Sell 320 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Sell 320 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Sell 390 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Sell 390 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Services 320 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Services 320 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Services 390 has no page overflow",
+      "pass": true
+    },
+    {
+      "name": "BG Services 390 has four usable tab targets",
+      "pass": true
+    },
+    {
+      "name": "BG Home 320 final groups search and identity",
+      "pass": true
+    },
+    {
+      "name": "BG Home 320 final shows all navigation images",
+      "pass": true
+    },
+    {
+      "name": "BG Home 390 settled final groups search and identity",
+      "pass": true
+    },
+    {
+      "name": "BG Home 390 settled final shows all navigation images",
+      "pass": true
+    },
+    {
+      "name": "EN Home 320 final groups search and identity",
+      "pass": true
+    },
+    {
+      "name": "EN Home 320 final shows all navigation images",
+      "pass": true
+    },
+    {
+      "name": "Scrolled header is 52px with 44px targets",
+      "pass": true
+    },
+    {
+      "name": "Desktop retains original artwork and discovery order",
+      "pass": true
+    },
+    {
+      "name": "Import title and demo badge are absent",
+      "pass": true
+    },
+    {
+      "name": "Leasing country and search combine",
+      "pass": true
+    },
+    {
+      "name": "Leasing empty reset restores five examples",
+      "pass": true
+    },
+    {
+      "name": "Import enquiry retains selected country model and price",
+      "pass": true
+    },
+    {
+      "name": "Import draft discloses that nothing is sent",
+      "pass": true
+    },
+    {
+      "name": "Calculator stays illustrative",
+      "pass": true
+    },
+    {
+      "name": "Sell hero works by keyboard and selects Sale",
+      "pass": true
+    },
+    {
+      "name": "Services search combines with category",
+      "pass": true
+    },
+    {
+      "name": "Services reaches the selected enquiry route",
+      "pass": true
+    },
+    {
+      "name": "Home search reaches nine Toyota results",
+      "pass": true
+    },
+    {
+      "name": "Home View all reaches 48 unfiltered results",
+      "pass": true
+    },
+    {
+      "name": "Location Escape restores focus",
+      "pass": true
+    },
+    {
+      "name": "First visible campaign image loads eagerly",
+      "pass": true
+    },
+    {
+      "name": "Browser has no console errors",
+      "pass": true
+    }
+  ],
+  "records": [
+    {
+      "case": "Home location drawer",
+      "text": "Drive24\n\nПосетете ни\n\nDrive24\n\nСвържете се с търговеца за адреса на автокъщата."
+    },
+    {
+      "case": "Home location Escape and focus",
+      "data": {
+        "dialogs": 0,
+        "focus": "Посетете ни · Посетете ни",
+        "overflow": ""
+      }
+    },
+    {
+      "case": "Embedded Home search opens search",
+      "url": "http://127.0.0.1:6483/bg/search"
+    },
+    {
+      "case": "Home search Toyota filters inventory",
+      "url": "http://127.0.0.1:6483/bg/cars?brand=Toyota",
+      "result": "(9)\n9 автомобила",
+      "cars": 9
+    },
+    {
+      "case": "Leasing removed heading and badge",
+      "data": {
+        "cards": 5,
+        "clientWidth": 375,
+        "hasDemoBadge": false,
+        "headings": [
+          "Нужда от помощ?"
+        ],
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "case": "Leasing country plus search",
+      "count": 1,
+      "status": "Коли за внос: 1"
+    },
+    {
+      "case": "Leasing empty results",
+      "status": "Коли за внос: 0",
+      "reset": true
+    },
+    {
+      "case": "Leasing empty reset restores all",
+      "cards": 5,
+      "selected": "true"
+    },
+    {
+      "case": "Import enquiry selected-car prefill",
+      "data": {
+        "inputs": [
+          {
+            "label": "Държава\nГермания\nКанада\nСАЩ\nИталия\nНидерландия\nДруга държава",
+            "value": "CA"
+          },
+          {
+            "label": "Марка и модел (по желание)",
+            "value": "2021 Toyota RAV4"
+          },
+          {
+            "label": "Бюджет (€, по желание)",
+            "value": "19800"
+          },
+          {
+            "label": "Линк към обява (по желание)",
+            "value": ""
+          }
+        ],
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    {
+      "case": "Import draft disclosure",
+      "text": "Drive24\n\nЗапитване за внос\n\nТози демо сайт само подготвя запитване. Тук не се правят резервации и покупки и не се изпращат съобщения.\n\nЧернова на запитването\nКопирай черновата\n\nЗа този демо сайт няма потвърден канал за контакт.\n\nАвтокъщата потвърждава цената и условията."
+    },
+    {
+      "case": "BG leasing 390",
+      "data": {
+        "articles": 5,
+        "clientWidth": 375,
+        "header": {
+          "height": 102,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Нужда от помощ?"
+        ],
+        "scrollWidth": 375,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Калкулатор",
+            "width": 264.34375,
+            "x": 32,
+            "y": 99
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "case": "BG leasing 320",
+      "data": {
+        "articles": 5,
+        "clientWidth": 305,
+        "header": {
+          "height": 102,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Нужда от помощ?"
+        ],
+        "scrollWidth": 305,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Калкулатор",
+            "width": 204.84375,
+            "x": 32,
+            "y": 64
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "case": "Leasing calculator 320",
+      "text": "Калкулатор\nИзбери кола\n€ 396\n/ мес.\nОбщо с аванс: € 28,761\n\nПримерни суми, не оферта.\n\nЦена на автомобила (€)\nГод. лихва (%)\nСрок\n1 година\n2 години\n3 години\n4 години\n5 години\n6 години\n7 години\nСамоучастие\n€ 5,000 · 20%\nЗа изчислението"
+    },
+    {
+      "case": "BG Sell 320",
+      "data": {
+        "articles": 2,
+        "clientWidth": 305,
+        "header": {
+          "height": 102,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Продай ни колата",
+          "Замяна",
+          "Как работи",
+          "Преди продажбата"
+        ],
+        "scrollWidth": 305,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Продай колата си.",
+            "width": 241,
+            "x": 32,
+            "y": 126
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "case": "Sell hero keyboard action",
+      "dialog": "Drive24\n\nТвоята кола\nПродай\nЗамяна\nМарка\nМодел\nГодина\nПробег (км)\nДопълнително (по желание)\n\nАвтокъщата потвърждава оценката след преглед на колата.\n\nПодготви запитване",
+      "saleSelected": "true"
+    },
+    {
+      "case": "BG Sell 390",
+      "data": {
+        "articles": 2,
+        "clientWidth": 375,
+        "header": {
+          "height": 102,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Продай ни колата",
+          "Замяна",
+          "Как работи",
+          "Преди продажбата"
+        ],
+        "scrollWidth": 375,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Продай колата си.",
+            "width": 311,
+            "x": 32,
+            "y": 126
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "case": "BG Services 390",
+      "data": {
+        "articles": 0,
+        "clientWidth": 375,
+        "header": {
+          "height": 102,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Обслужване",
+          "Диагностика",
+          "Грижа за колата."
+        ],
+        "scrollWidth": 375,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Сервизни услуги",
+            "width": 264.34375,
+            "x": 32,
+            "y": 126
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "case": "BG Services 320",
+      "data": {
+        "articles": 0,
+        "clientWidth": 305,
+        "header": {
+          "height": 102,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "headings": [
+          "Обслужване",
+          "Диагностика",
+          "Грижа за колата."
+        ],
+        "scrollWidth": 305,
+        "tabs": [
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "label": "Купи",
+            "loaded": true,
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "label": "Продай",
+            "loaded": true,
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "active": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "label": "Лизинг",
+            "loaded": true,
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "active": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "label": "Услуги",
+            "loaded": true,
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "title": [
+          {
+            "height": 28,
+            "text": "Сервизни услуги",
+            "width": 204.84375,
+            "x": 32,
+            "y": 126
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "case": "Services search and category",
+      "status": "1 Възможности за обслужване",
+      "diagnosticsVisible": 1,
+      "servicingVisible": 0
+    },
+    {
+      "case": "Services diagnostics enquiry route",
+      "url": "http://127.0.0.1:6483/bg/service/details?service=diagnostics",
+      "text": "За вашия автомобил\n\nПодгответе чернова за разговор с продавача. Това не създава оценка, резервация или поръчка за услуга.\n\nМарка\nМодел\nГодина, пробег и какво ви е необходимо\nПодготви запитване\n\nПотвърдете наличните услуги, цените и условията директно с продавача."
+    },
+    {
+      "case": "BG Home 320 final",
+      "data": {
+        "banner": {
+          "bottom": 226,
+          "height": 120,
+          "width": 281,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 305,
+        "compact": "false",
+        "header": {
+          "bottom": 102,
+          "height": 102,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "inventoryFeedHeadingVisible": false,
+        "inventoryNav": {
+          "bottom": 276,
+          "height": 44,
+          "width": 305,
+          "x": 0,
+          "y": 232
+        },
+        "inventoryNavVisible": true,
+        "location": {
+          "bottom": 163,
+          "height": 44,
+          "width": 143.421875,
+          "x": 134.578125,
+          "y": 119
+        },
+        "logo": {
+          "bottom": 156.921875,
+          "height": 31.859375,
+          "width": 95.578125,
+          "x": 27,
+          "y": 125.0625
+        },
+        "scrollWidth": 305,
+        "search": {
+          "bottom": 211,
+          "height": 44,
+          "width": 251,
+          "x": 27,
+          "y": 167
+        },
+        "searchFont": "16px",
+        "searchInsideBanner": true,
+        "searchText": "Марка или модел\n(48)",
+        "searchWeight": "400",
+        "tabs": [
+          {
+            "bottom": 94,
+            "current": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true,
+            "name": "Купи",
+            "width": 64.25,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Продай",
+            "width": 64.25,
+            "x": 84.25,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Лизинг",
+            "width": 64.25,
+            "x": 156.5,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Услуги",
+            "width": 64.25,
+            "x": 228.75,
+            "y": 8
+          }
+        ],
+        "visibleSearches": 1,
+        "width": 320
+      }
+    },
+    {
+      "case": "Mobile compact scrolled header",
+      "data": {
+        "clientWidth": 305,
+        "compact": "true",
+        "height": 52,
+        "scrollWidth": 305,
+        "scrollY": 2443,
+        "tabs": [
+          {
+            "height": 44,
+            "label": "Купи",
+            "width": 64.25
+          },
+          {
+            "height": 44,
+            "label": "Продай",
+            "width": 64.25
+          },
+          {
+            "height": 44,
+            "label": "Лизинг",
+            "width": 64.25
+          },
+          {
+            "height": 44,
+            "label": "Услуги",
+            "width": 64.25
+          }
+        ]
+      }
+    },
+    {
+      "case": "BG Home 768",
+      "data": {
+        "banner": {
+          "bottom": 336,
+          "height": 142,
+          "width": 697,
+          "x": 28,
+          "y": 194
+        },
+        "clientWidth": 753,
+        "compact": "false",
+        "header": {
+          "bottom": 190,
+          "height": 190,
+          "width": 753,
+          "x": 0,
+          "y": 0
+        },
+        "inventoryFeedHeadingVisible": true,
+        "inventoryNav": {
+          "bottom": 0,
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "inventoryNavVisible": false,
+        "location": {
+          "bottom": 287,
+          "height": 44,
+          "width": 143.421875,
+          "x": 448.78125,
+          "y": 243
+        },
+        "logo": {
+          "bottom": 305,
+          "height": 80,
+          "width": 240,
+          "x": 168.78125,
+          "y": 225
+        },
+        "scrollWidth": 753,
+        "search": {
+          "bottom": 396,
+          "height": 44,
+          "width": 697,
+          "x": 28,
+          "y": 352
+        },
+        "searchFont": "16px",
+        "searchInsideBanner": false,
+        "searchText": "Марка или модел\n(48)",
+        "searchWeight": "400",
+        "tabs": [
+          {
+            "bottom": 178,
+            "current": "page",
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=256&q=75",
+            "loaded": true,
+            "name": "Купи",
+            "width": 162.25,
+            "x": 28,
+            "y": 74
+          },
+          {
+            "bottom": 178,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fsedan.png&w=256&q=75",
+            "loaded": true,
+            "name": "Продай",
+            "width": 162.25,
+            "x": 206.25,
+            "y": 74
+          },
+          {
+            "bottom": 178,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v4.webp&w=256&q=75",
+            "loaded": true,
+            "name": "Лизинг",
+            "width": 162.25,
+            "x": 384.5,
+            "y": 74
+          },
+          {
+            "bottom": 178,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v3.webp&w=256&q=75",
+            "loaded": true,
+            "name": "Услуги",
+            "width": 162.25,
+            "x": 562.75,
+            "y": 74
+          }
+        ],
+        "visibleSearches": 1,
+        "width": 768
+      }
+    },
+    {
+      "case": "BG Home 1440",
+      "data": {
+        "banner": {
+          "bottom": 365,
+          "height": 142,
+          "width": 1184,
+          "x": 120.5,
+          "y": 223
+        },
+        "clientWidth": 1425,
+        "compact": "false",
+        "header": {
+          "bottom": 219,
+          "height": 146,
+          "width": 1425,
+          "x": 0,
+          "y": 73
+        },
+        "inventoryFeedHeadingVisible": true,
+        "inventoryNav": {
+          "bottom": 0,
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "inventoryNavVisible": false,
+        "location": {
+          "bottom": 316,
+          "height": 44,
+          "width": 143.421875,
+          "x": 784.78125,
+          "y": 272
+        },
+        "logo": {
+          "bottom": 334,
+          "height": 80,
+          "width": 240,
+          "x": 504.78125,
+          "y": 254
+        },
+        "scrollWidth": 1425,
+        "search": {
+          "bottom": 425,
+          "height": 44,
+          "width": 1184,
+          "x": 120.5,
+          "y": 381
+        },
+        "searchFont": "16px",
+        "searchInsideBanner": false,
+        "searchText": "Марка или модел\n(48)",
+        "searchWeight": "400",
+        "tabs": [
+          {
+            "bottom": 207,
+            "current": "page",
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=256&q=75",
+            "loaded": true,
+            "name": "Купи",
+            "width": 284,
+            "x": 120.5,
+            "y": 103
+          },
+          {
+            "bottom": 207,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fsedan.png&w=256&q=75",
+            "loaded": true,
+            "name": "Продай",
+            "width": 284,
+            "x": 420.5,
+            "y": 103
+          },
+          {
+            "bottom": 207,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v4.webp&w=256&q=75",
+            "loaded": true,
+            "name": "Лизинг",
+            "width": 284,
+            "x": 720.5,
+            "y": 103
+          },
+          {
+            "bottom": 207,
+            "current": null,
+            "height": 104,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v3.webp&w=256&q=75",
+            "loaded": true,
+            "name": "Услуги",
+            "width": 284,
+            "x": 1020.5,
+            "y": 103
+          }
+        ],
+        "visibleSearches": 1,
+        "width": 1440
+      }
+    },
+    {
+      "case": "Home View all opens full inventory",
+      "url": "http://127.0.0.1:6483/bg/cars",
+      "result": "(48)\n48 автомобила"
+    },
+    {
+      "case": "EN Home 320 final",
+      "data": {
+        "banner": {
+          "bottom": 226,
+          "height": 120,
+          "width": 281,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 305,
+        "firstCampaignLoading": "eager",
+        "location": {
+          "bottom": 163,
+          "height": 44,
+          "width": 112.515625,
+          "x": 165.484375,
+          "y": 119
+        },
+        "locationText": "Visit us",
+        "logo": {
+          "bottom": 162.078125,
+          "height": 42.15625,
+          "width": 126.484375,
+          "x": 27,
+          "y": 119.921875
+        },
+        "scrollWidth": 305,
+        "search": {
+          "bottom": 211,
+          "height": 44,
+          "width": 251,
+          "x": 27,
+          "y": 167
+        },
+        "searchFont": "16px",
+        "searchInsideBanner": true,
+        "searchWeight": "400",
+        "tabs": [
+          {
+            "height": 86,
+            "label": "Buy",
+            "loaded": true,
+            "width": 64.25
+          },
+          {
+            "height": 86,
+            "label": "Sell",
+            "loaded": true,
+            "width": 64.25
+          },
+          {
+            "height": 86,
+            "label": "Finance",
+            "loaded": true,
+            "width": 64.25
+          },
+          {
+            "height": 86,
+            "label": "Services",
+            "loaded": true,
+            "width": 64.25
+          }
+        ],
+        "visibleSearches": 1,
+        "width": 320
+      }
+    },
+    {
+      "case": "BG Home 390 settled final",
+      "data": {
+        "banner": {
+          "bottom": 226,
+          "height": 120,
+          "width": 351,
+          "x": 12,
+          "y": 106
+        },
+        "clientWidth": 375,
+        "compact": "false",
+        "header": {
+          "bottom": 102,
+          "height": 102,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "inventoryFeedHeadingVisible": false,
+        "inventoryNav": {
+          "bottom": 276,
+          "height": 44,
+          "width": 375,
+          "x": 0,
+          "y": 232
+        },
+        "inventoryNavVisible": true,
+        "location": {
+          "bottom": 163,
+          "height": 44,
+          "width": 143.421875,
+          "x": 204.578125,
+          "y": 119
+        },
+        "logo": {
+          "bottom": 162.328125,
+          "height": 42.65625,
+          "width": 128,
+          "x": 27,
+          "y": 119.671875
+        },
+        "scrollWidth": 375,
+        "search": {
+          "bottom": 211,
+          "height": 44,
+          "width": 321,
+          "x": 27,
+          "y": 167
+        },
+        "searchFont": "16px",
+        "searchInsideBanner": true,
+        "searchText": "Марка или модел\n(48)",
+        "searchWeight": "400",
+        "tabs": [
+          {
+            "bottom": 94,
+            "current": "page",
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+            "loaded": true,
+            "name": "Купи",
+            "width": 81.75,
+            "x": 12,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Продай",
+            "width": 81.75,
+            "x": 101.75,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Лизинг",
+            "width": 81.75,
+            "x": 191.5,
+            "y": 8
+          },
+          {
+            "bottom": 94,
+            "current": null,
+            "height": 86,
+            "image": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+            "loaded": true,
+            "name": "Услуги",
+            "width": 81.75,
+            "x": 281.25,
+            "y": 8
+          }
+        ],
+        "visibleSearches": 1,
+        "width": 390
+      }
+    }
+  ],
+  "console": [
+    {
+      "level": "warn",
+      "message": "Image with src \"/showroom/black/home-collection-v1.png\" was detected as the Largest Contentful Paint (LCP). Please add the `loading=\"eager\"` property if this image is above the fold.\nRead more: https://nextjs.org/docs/app/api-reference/components/image#loading",
+      "timestamp": "2026-10-03T01:45:28.522Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "result": "passed",
+    "staticPages": 407
+  },
+  "notes": [
+    "Dev previews use .next; build validation uses a separate output directory.",
+    "An initial LCP warning prompted eager loading for the first Home carousel image.",
+    "Network-idle waits are unreliable with this development server; DOM, loaded image state and screenshots establish readiness."
+  ],
+  "capture": {
+    "finance390": {
+      "headerBottom": 102,
+      "images": true,
+      "scrollY": 0,
+      "titleTop": 126
+    }
+  }
+}

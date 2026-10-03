@@ -14,7 +14,7 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
-  sell: {mobileTitle: 'Time for a change?', title: 'Time for a change?', copy: 'Sell or part-exchange your car.', mobileCopy: 'Sell or part-exchange.', cta: 'Request a valuation', mobileCta: 'Request a valuation'},
+  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', copy: 'Sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Request a valuation', mobileCta: 'Request a valuation'},
   finance: {mobileTitle: 'Finance calculator', title: 'Finance calculator', copy: 'Explore your monthly payment.', mobileCopy: 'Monthly payment', cta: 'Calculate', mobileCta: 'Calculate'},
   service: {mobileTitle: 'Car services.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Servicing and diagnostics.', cta: 'Book a service', mobileCta: 'Choose a service'},
 } as const;
@@ -33,7 +33,7 @@ export default function FeatureLanding({kind}: {kind: FeatureKind}) {
   }
   return <div {...stylex.props(s.screen)}>
     <DiscoveryHeader active={kind} hideMobileIdentity />
-    {kind === 'sell' ? <ShowroomBanner {...banner}/> : <ShowroomBanner {...banner} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/>}
+    <ShowroomBanner {...banner} compactCopy={kind === 'sell'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'sell' || kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/>
     <main {...stylex.props(s.content)}>
       {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/></> : null}
       <FeatureContent kind={kind} onStart={start} />

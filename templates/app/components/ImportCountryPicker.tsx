@@ -5,7 +5,7 @@ import {ArrowRight, Search, X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {showroom} from '@/lib/showroom';
-import {dealer, isDealer} from '@/lib/dealer-config';
+import {dealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import {importListings, type ImportListing} from '@/lib/import-inventory';
 import VehicleCard from './VehicleCard';
@@ -67,7 +67,6 @@ export default function ImportCountryPicker() {
       <div role="group" aria-label={tx('Import country')} {...stylex.props(s.pills)}>
         {[{code: 'all', name: 'All'}, ...showroom.importCountries].map(item => <button key={item.code} type="button" aria-pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)} {...stylex.props(s.pill,t.caption,filterCountry === item.code && s.selectedPill)}>{tx(item.name)}</button>)}
       </div>
-      <div {...stylex.props(s.resultsHeader)}><h2 {...stylex.props(t.title)}>{tx('Import cars')}</h2>{!isDealer ? <span {...stylex.props(s.demo,t.caption)}>{tx('Demo listings')}</span> : null}</div>
       <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
       {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
     </section>
@@ -96,10 +95,8 @@ const s = stylex.create({
   pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',marginTop: 8,paddingBlock: 3,scrollbarWidth: 'none'},
   pill: {display: 'inline-flex',alignItems: 'center',justifyContent: 'center',flexShrink: 0,minHeight: 44,padding: '10px 14px',color: $.ink,borderWidth: 1,borderStyle: 'solid',borderColor: '#e6e6e9',borderRadius: 30,backgroundColor: {default: '#f5f5f6',':hover': '#eaeaec'},cursor: 'pointer',outline: {default: 'none',':focus-visible': '2px solid #242428'},outlineOffset: -3},
   selectedPill: {color: '#fff',borderColor: $.ink,backgroundColor: {default: $.ink,':hover': '#353539'},outlineColor: {':focus-visible': '#fff'}},
-  resultsHeader: {display: 'flex',alignItems: 'center',justifyContent: 'space-between',gap: 12,marginTop: 18,marginBottom: 12},
-  demo: {padding: '3px 8px',color: $.muted,borderRadius: 6,backgroundColor: '#f2f2f4'},
-  listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: 12},
-  empty: {display: 'grid',justifyItems: 'start',gap: 12,padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
+  listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: 12,marginTop: 12},
+  empty: {display: 'grid',justifyItems: 'start',gap: 12,marginTop: 12,padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
   reset: {display: 'inline-flex',alignItems: 'center',gap: 8,minHeight: 44,padding: '8px 12px',color: '#fff',borderWidth: 0,borderRadius: 12,backgroundColor: $.ink,cursor: 'pointer'},
   srOnly: {position: 'absolute',width: 1,height: 1,padding: 0,margin: -1,overflow: 'hidden',clip: 'rect(0,0,0,0)',whiteSpace: 'nowrap',borderWidth: 0},
   backdrop: {position: 'fixed',inset: 0,zIndex: 240,display: 'flex',alignItems: {[media.mobile]: 'flex-end',default: 'center'},justifyContent: 'center',padding: {[media.mobile]: 0,default: 24},backgroundColor: 'rgba(0,0,0,.48)'},

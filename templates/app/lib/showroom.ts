@@ -45,10 +45,10 @@ export const showroom = {
     mobileAction: 'Visit showroom',
   },
   services: [
-    {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png'},
-    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png'},
-    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp'},
-    {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp'},
+    {key: 'buy', label: 'Buy', href: '/', image: '/cutouts/buy-sedan-v1.png', mobileImage: '/cutouts/buy-sedan-v1.png'},
+    {key: 'sell', label: 'Sell', href: '/sell', image: '/cutouts/sedan.png', mobileImage: '/showroom/navigation/sell-v2.webp'},
+    {key: 'finance', label: 'Finance', href: '/finance', image: '/showroom/navigation/finance-v4.webp', mobileImage: '/showroom/navigation/finance-v5.webp'},
+    {key: 'service', label: 'Services', href: '/service', image: '/showroom/navigation/service-v3.webp', mobileImage: '/showroom/navigation/service-v4.webp'},
   ],
   // Countries used by the import listing filters and enquiry form.
   importCountries: [
