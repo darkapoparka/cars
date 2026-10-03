@@ -8,15 +8,25 @@ import { prepareReferenceAssets } from './prepare-reference-assets.mjs';
 const mode = process.argv[2];
 if (!['dev', 'build', 'start'].includes(mode)) throw new Error('Expected dev, build or start');
 const root = fileURLToPath(new URL('../', import.meta.url));
-const defaultDevDir =
-  process.platform === 'win32' &&
-  fs.existsSync(path.join(root, '.next')) &&
-  fs.lstatSync(path.join(root, '.next')).isSymbolicLink()
-    ? '.next-preview-6474'
-    : '.next';
-const distDir =
+const requestedDistDir =
   process.env.NEXT_DIST_DIR ||
-  (mode === 'dev' ? defaultDevDir : process.env.VERCEL ? '.next' : '.next-review');
+  (mode === 'dev' ? '.next' : process.env.VERCEL ? '.next' : '.next-review');
+const requestedDistPath = path.resolve(root, requestedDistDir);
+const needsPhysicalDevOutput =
+  mode === 'dev' &&
+  process.platform === 'win32' &&
+  fs.existsSync(requestedDistPath) &&
+  fs.lstatSync(requestedDistPath).isSymbolicLink();
+const distDir = needsPhysicalDevOutput ? '.next-preview-6474' : requestedDistDir;
+if (needsPhysicalDevOutput) {
+  const fallbackPath = path.join(root, distDir);
+  if (fs.existsSync(fallbackPath) && fs.lstatSync(fallbackPath).isSymbolicLink()) {
+    throw new Error(
+      'Windows dev route output must use a physical directory; fallback is a junction',
+    );
+  }
+  console.warn(`Windows dev output ${requestedDistDir} is a junction; using ${distDir}`);
+}
 const env = { ...process.env, NEXT_DIST_DIR: distDir };
 // Next's relative client entries need the project-facing dependency paths on Windows.
 // Preserve junction paths when dependencies live on another drive.

@@ -157,8 +157,10 @@ From this directory run `npm ci`, then `npm run check`.
 `npm run dev` uses the same port; run one mode at a time.
 Dev and production share the preview launcher, which preserves project-facing
 dependency paths for Windows junctions on another drive. Dev writes to `.next`;
-on Windows an existing `.next` junction selects the physical `.next-preview-6474`
-fallback. The local production build writes to `.next-review`. For dependencies on
+on Windows an existing dev-output junction selects the physical `.next-preview-6474`
+fallback, including when `NEXT_DIST_DIR` explicitly points at the junction.
+The launcher refuses a junction at the fallback too, keeping dev routes readable.
+The local production build writes to `.next-review`. For dependencies on
 another drive, the launcher also supplies an external `NEXT_WEBPACK_CACHE_DIR`
 for dev. Route output stays on the source drive while large webpack caches use
 the dependency cache location. Explicit cache paths and `NEXT_DIST_DIR` remain supported.
