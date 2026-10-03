@@ -47,7 +47,10 @@ const s = stylex.create({
     backgroundColor: colors.stripe,
     minHeight: 'calc(100dvh - 124px)',
   },
-  servicesPage: { minHeight: 'calc(100dvh - 242px)' },
+  servicesPage: {
+    minHeight: 'calc(100dvh - 242px)',
+    paddingTop: { default: 16, '@media (max-width: 699px)': 8 },
+  },
   head: { paddingBlock: 12, marginBottom: 20, display: 'flex', flexDirection: 'column', gap: 8 },
   title: { fontSize: 28, lineHeight: '36px', fontWeight: 700 },
   intro: { fontSize: 16, lineHeight: '24px', color: colors.muted },

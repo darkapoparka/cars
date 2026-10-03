@@ -59,7 +59,12 @@ const s = stylex.create({
     lineHeight: '20px',
   },
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
-  content: { backgroundColor: colors.stripe, paddingInline: 16, paddingTop: 12, paddingBottom: 24 },
+  content: {
+    backgroundColor: colors.stripe,
+    paddingInline: 16,
+    paddingTop: { default: 12, '@media (max-width: 699px)': 8 },
+    paddingBottom: 24,
+  },
   grid: {
     display: 'grid',
     gap: 14,
