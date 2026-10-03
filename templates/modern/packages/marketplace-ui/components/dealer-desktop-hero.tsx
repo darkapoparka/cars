@@ -8,6 +8,7 @@ import styles from "./dealer-desktop-hero.module.css";
 import { DesktopActionPanel } from "./desktop-action-panel";
 
 export interface DealerDesktopHeroProps {
+  appearance?: "banner" | "photo";
   artwork?: string;
   children?: ReactNode;
   description?: string;
@@ -21,6 +22,7 @@ export interface DealerDesktopHeroProps {
 
 /** One desktop masthead surface. Pages supply context; mobile keeps its own chrome. */
 export function DealerDesktopHero({
+  appearance,
   artwork,
   locale,
   title,
@@ -59,6 +61,7 @@ export function DealerDesktopHero({
     <section
       aria-labelledby={titleId}
       className={styles.hero}
+      data-appearance={appearance}
       data-loading={loading || undefined}
       data-scene-tone={sceneTone}
       data-slot={
@@ -82,7 +85,7 @@ export function DealerDesktopHero({
       {isLanding ? (
         heading
       ) : (
-        <div className={styles.banner}>
+        <div className={styles.banner} data-slot="dealer-desktop-hero-banner">
           <nav
             aria-label={locale?.startsWith("bg") ? "Навигация" : "Breadcrumb"}
             className={styles.breadcrumb}

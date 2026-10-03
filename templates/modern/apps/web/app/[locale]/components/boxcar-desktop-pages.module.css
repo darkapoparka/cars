@@ -214,10 +214,12 @@
   }
   .gallery {
     display: grid;
-    grid-template-columns: 0.95fr 2.3fr 2.3fr;
+    grid-template-columns:
+      minmax(calc(var(--spacing) * 53), 0.95fr) minmax(0, 2.3fr)
+      minmax(0, 2.3fr);
     gap: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 110);
-    margin-top: calc(var(--spacing) * 7);
+    margin-top: calc(var(--spacing) * 10);
   }
   .gallery figure {
     position: relative;
@@ -265,7 +267,11 @@
   }
   .chapter h2 {
     margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 2.5);
-    font-size: calc(var(--spacing) * 7.5);
+    font-size: clamp(
+      calc(var(--spacing) * 6),
+      2.1vw,
+      calc(var(--spacing) * 7.5)
+    );
     font-weight: var(--font-weight-bold);
     line-height: var(--desktop-leading-tight);
     letter-spacing: calc(var(--spacing) * -0.125);

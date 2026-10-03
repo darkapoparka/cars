@@ -68,25 +68,6 @@
     line-height: var(--desktop-leading-copy);
     color: var(--muted-foreground);
   }
-  .hero:is([data-variant="landing"], [data-variant="inventory"]) {
-    width: var(--desktop-frame-width);
-    max-width: var(--desktop-showroom-max);
-    padding: 0;
-    margin-inline: auto;
-    color: var(--inverse-foreground);
-    background-color: var(--inverse);
-    background-image:
-      linear-gradient(
-        180deg,
-        var(--desktop-hero-overlay-top) 0%,
-        var(--desktop-hero-overlay-middle) 55%,
-        var(--desktop-hero-overlay-bottom) 100%
-      ),
-      var(--desktop-hero-scene, none);
-    background-position: center;
-    background-size: cover;
-    border-radius: var(--radius-desktop-frame);
-  }
   .hero[data-variant="landing"] {
     display: grid;
     grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
@@ -288,34 +269,68 @@
     margin: 0;
     background: var(--desktop-surface);
   }
-  .hero[data-variant="inventory"] .banner {
+  .hero:is([data-variant="landing"], [data-variant="inventory"]),
+  .hero[data-appearance="photo"] .banner {
+    width: var(--desktop-frame-width);
+    max-width: var(--desktop-showroom-max);
+    padding: 0;
+    margin-inline: auto;
+    color: var(--inverse-foreground);
+    background-color: var(--inverse);
+    background-image:
+      linear-gradient(
+        180deg,
+        var(--desktop-hero-overlay-top) 0%,
+        var(--desktop-hero-overlay-middle) 55%,
+        var(--desktop-hero-overlay-bottom) 100%
+      ),
+      var(--desktop-hero-scene, none);
+    background-position: center;
+    background-size: cover;
+    border-radius: var(--radius-desktop-frame);
+  }
+  .hero[data-variant="inventory"] .banner,
+  .hero[data-appearance="photo"] .banner {
     min-height: calc(var(--spacing) * 56);
     padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+  }
+  .hero[data-variant="inventory"] .banner {
     background: transparent;
   }
-  .hero[data-variant="inventory"] {
+  .hero[data-variant="inventory"],
+  .hero[data-appearance="photo"] .banner {
     background-position: center 95%;
   }
-  .hero[data-variant="inventory"] .banner::before,
-  .hero[data-variant="inventory"] .banner::after {
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .banner::before,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .banner::after {
     display: none;
   }
-  .hero[data-variant="inventory"] .copy {
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .copy {
     width: min(100%, calc(var(--spacing) * 225));
   }
-  .hero[data-variant="inventory"] .breadcrumb,
-  .hero[data-variant="inventory"] .breadcrumb a,
-  .hero[data-variant="inventory"] .description {
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .breadcrumb a,
+  .hero:is([data-variant="inventory"], [data-appearance="photo"]) .description {
     color: var(--inverse-foreground);
   }
-  .hero[data-variant="inventory"] .breadcrumb a:hover {
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .breadcrumb
+    a:hover {
     text-decoration: underline;
     text-underline-offset: var(--spacing);
   }
-  .hero[data-variant="inventory"] .breadcrumb a:focus-visible {
+  .hero:is([data-variant="inventory"], [data-appearance="photo"])
+    .breadcrumb
+    a:focus-visible {
     outline: var(--desktop-focus-width) solid currentcolor;
     outline-offset: var(--desktop-focus-offset);
     border-radius: var(--radius-sm);
+  }
+  .hero[data-appearance="photo"][data-variant="service"] .serviceContent {
+    padding-top: 0;
+    margin-top: calc(var(--spacing) * 10);
   }
 }
 

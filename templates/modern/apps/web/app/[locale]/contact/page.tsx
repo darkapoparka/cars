@@ -83,6 +83,10 @@ function DesktopContact({
     bg ? bulgarian : english;
   return (
     <DealerDesktopHero
+      appearance="photo"
+      artwork={
+        publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+      }
       description={text(
         "Въпроси за автомобил или оглед? Нека поговорим.",
         "Questions about a car or a viewing? Let’s talk."

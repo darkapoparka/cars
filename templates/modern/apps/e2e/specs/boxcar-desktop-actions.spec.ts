@@ -67,14 +67,14 @@ test("the desktop hero preloads only at desktop widths", async ({ page }) => {
   });
   for (const width of [320, 390, 1023]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const path of ["/en", "/en/cars"]) {
+    for (const path of ["/en", "/en/cars", "/en/about", "/en/contact"]) {
       await page.goto(path, { waitUntil: "domcontentloaded" });
       await expect(
         page.locator('[data-slot="public-route-loading-content"]')
       ).toBeHidden();
       await expect(
         page.locator(
-          '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]'
+          '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"][data-variant="inventory"], [data-slot="dealer-desktop-context-hero"][data-appearance="photo"] h1'
         )
       ).toBeHidden();
       await expect(
@@ -87,11 +87,11 @@ test("the desktop hero preloads only at desktop widths", async ({ page }) => {
   expect(heroRequests).toEqual([]);
   for (const width of [1024, 1280, 1440, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    for (const path of ["/en", "/en/cars"]) {
+    for (const path of ["/en", "/en/cars", "/en/about", "/en/contact"]) {
       await page.goto(path, { waitUntil: "domcontentloaded" });
       await expect(
         page.locator(
-          '[data-slot="dealer-desktop-home-hero"]:visible, [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]:visible'
+          '[data-slot="dealer-desktop-home-hero"]:visible, [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]:visible, [data-slot="dealer-desktop-context-hero"][data-appearance="photo"] h1:visible'
         )
       ).toBeVisible();
       await expect.poll(() => heroRequests.length).toBeGreaterThan(0);

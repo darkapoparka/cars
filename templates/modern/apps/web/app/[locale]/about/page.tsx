@@ -114,6 +114,10 @@ export default async function AboutPage({ params }: AboutProps) {
           )}
         />
         <DealerDesktopHero
+          appearance="photo"
+          artwork={
+            publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+          }
           description={text(
             "Разгледайте автомобилите и сравнете избора си преди следващия оглед.",
             "Browse our cars and compare your favourites before your next viewing."

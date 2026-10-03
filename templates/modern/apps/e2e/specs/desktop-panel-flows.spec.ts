@@ -15,7 +15,7 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
   test.setTimeout(180_000);
   for (const width of [1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: 1000 });
-    for (const locale of ["en", "bg"]) {
+    for (const locale of ["en", "bg"] as const) {
       await page.goto(`/${locale}`);
       const header = page.locator(
         '[data-slot="dealer-desktop-header"]:visible'
@@ -182,6 +182,58 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
           if (width === 1440) {
             expect(sidebar?.x).toBe((panel?.x ?? 0) + 24);
             expect(sidebar?.y).toBe((panel?.y ?? 0) + 24);
+          }
+        }
+        if (path === "/about" || path === "/contact") {
+          const banner = page.locator(
+            '[data-slot="dealer-desktop-context-hero"][data-appearance="photo"] [data-slot="dealer-desktop-hero-banner"]'
+          );
+          const bannerBox = await banner.boundingBox();
+          expect(bannerBox?.x).toBe(heroBox?.x);
+          expect(bannerBox?.width).toBe(heroBox?.width);
+          expect(bannerBox?.height).toBe(224);
+          expect(
+            await banner.evaluate(
+              (element) => getComputedStyle(element).backgroundImage
+            )
+          ).toContain("desktop-boxcars/hero.jpg");
+          const contentLabel =
+            path === "/about"
+              ? {
+                  bg: "Илюстративна галерия на автосалон",
+                  en: "Illustrative showroom gallery",
+                }
+              : { bg: "Карта на автосалона", en: "Showroom map" };
+          const contentBox = await page
+            .getByRole("region", { name: contentLabel[locale], exact: true })
+            .boundingBox();
+          expect(contentBox?.x).toBe(heroBox?.x);
+          expect(contentBox?.width).toBe(heroBox?.width);
+          expect(contentBox?.y).toBe(
+            (bannerBox?.y ?? 0) + (bannerBox?.height ?? 0) + 40
+          );
+          if (path === "/about") {
+            await page.evaluate(() => document.fonts.ready);
+            const chapterHeading = page
+              .getByRole("region", { name: contentLabel[locale], exact: true })
+              .getByRole("heading", { level: 2 });
+            expect(
+              await chapterHeading.evaluate((heading) => {
+                const tile = heading.parentElement?.getBoundingClientRect();
+                if (!tile) {
+                  return false;
+                }
+                const range = document.createRange();
+                range.selectNodeContents(heading);
+                return [...range.getClientRects()].every(
+                  (rect) =>
+                    rect.left >= tile.left &&
+                    rect.right <= tile.right &&
+                    rect.top >= tile.top &&
+                    rect.bottom <= tile.bottom
+                );
+              })
+            ).toBe(true);
           }
         }
         expect(
