@@ -15,7 +15,7 @@ async function fits(locator) {
     if (el.scrollWidth > el.clientWidth + 1) problems.push('horizontal clipping');
     if (box.height < 44) problems.push('touch target below 44px');
     const minimumIcon = 15;
-    for (const svg of el.querySelectorAll('svg')) if (svg.checkVisibility() && svg.getBoundingClientRect().width < minimumIcon) problems.push('collapsed icon');
+    for (const icon of el.querySelectorAll('svg, .dn-generated-nav-icon')) if (icon.checkVisibility() && icon.getBoundingClientRect().width < minimumIcon) problems.push('collapsed icon');
     return problems.length ? [{ text: el.textContent.trim(), problems }] : [];
   }));
   assert.deepEqual(failures, []);
@@ -38,7 +38,7 @@ async function compactControl(locator, { icon = false } = {}) {
 }
 async function alignedDock(page) {
   const alignment = await page.locator('.dn-mobile-bottom-nav a,.dn-mobile-bottom-nav button').evaluateAll(controls => controls.map(control => {
-    const icon = control.querySelector('svg').getBoundingClientRect();
+    const icon = control.querySelector('.dn-generated-nav-icon').getBoundingClientRect();
     const label = control.querySelector('.dn-mobile-bottom-nav__label').getBoundingClientRect();
     return { iconTop: icon.top, labelTop: label.top, transform: getComputedStyle(control).transform };
   }));
@@ -261,13 +261,18 @@ try {
           assert(dockStyle.left <= 1 && Math.abs(dockStyle.right - dockStyle.viewport) <= 1 && dockStyle.radius === '0px' && dockStyle.shadow === 'none' && dockStyle.background === 'rgb(255, 255, 255)',
             'The dock is a flat white bar spanning the mobile viewport');
           assert.notEqual(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels stay quieter than body ink');
-          assert.equal(await dock.locator('svg[data-icon-family="material-symbols-sharp"][viewBox="0 -960 960 960"][fill="currentColor"]').count(), 5,
-            'All five mobile dock glyphs use official Material Symbols Sharp geometry');
-          assert.equal(await dock.locator('a[aria-current="page"] svg[data-icon-state="filled"]').count(), 1,
-            'The active destination uses the official filled variant');
-          assert.equal(await dock.locator('a:not([aria-current="page"]) svg[data-icon-state="outlined"]').count(), 3,
-            'Inactive destinations use official outlined variants');
-          assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');
+          assert.equal(await dock.locator('.dn-generated-nav-icon[data-icon-family="imagegen-generated-nav"]').count(), 5,
+            'All five mobile dock glyphs use the requested generated set');
+          assert.equal(await dock.locator('a[aria-current="page"] [data-icon-active="true"]').count(), 1,
+            'The active destination retains its artwork and existing selection highlight');
+          assert.equal(await dock.locator('a:not([aria-current="page"]) [data-icon-active="false"]').count(), 3,
+            'Inactive destinations retain the same artwork');
+          const glyphs = await dock.locator('.dn-generated-nav-icon').evaluateAll(icons => icons.map(icon => {
+            const box = icon.getBoundingClientRect(), style = getComputedStyle(icon);
+            return { width: box.width, height: box.height, mask: style.maskImage, mode: style.maskMode, color: style.color, paint: style.backgroundColor };
+          }));
+          assert(glyphs.every(icon => icon.width === 24 && icon.height === 24 && icon.mode === 'alpha' && icon.mask.includes('generated-bottom-nav-v3.png') && icon.paint === icon.color),
+            'Every generated glyph keeps its 24px frame, alpha mask and destination color');
           await alignedDock(page);
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');
@@ -275,7 +280,7 @@ try {
           await fits(page.locator('.dn-mobile-menu__contact a'));
           const localeControl = page.locator('.dn-mobile-menu [data-locale-selector]');
           await fits(localeControl);
-          assert.equal(await localeControl.locator('svg[data-icon-family="material-symbols-sharp"]').count(), 2,
+          assert.equal(await localeControl.locator('svg[data-icon-family="fluent-system-regular"]').count(), 2,
             'Country and language has a globe and chevron in the same mobile icon family');
           assert(await localeControl.evaluate(el => el.getBoundingClientRect().height >= 44 && getComputedStyle(el).backgroundColor !== 'rgba(0, 0, 0, 0)'),
             'Country and language is a visible full-row control');
@@ -431,7 +436,7 @@ try {
             await fits(guide);
             assert.equal(await guide.evaluate(button => getComputedStyle(button).backgroundColor), 'rgb(255, 255, 255)',
               'Process guidance uses a compact white card below the form');
-            assert.equal(await guide.locator('[data-icon-family="material-symbols-sharp"]').count(), 1);
+            assert.equal(await guide.locator('[data-icon-family="fluent-system-regular"]').count(), 1);
             assert(await guide.locator('.dn-service-process-preview__copy').innerText());
             const entryBeforeGuide = await field.innerText();
             await guide.click();
