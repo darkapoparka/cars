@@ -13,6 +13,18 @@ Passing a build is necessary but not sufficient. A lead variant must also be ins
 - `npm run build`
 - `npm run test:e2e`
 
+## Incremental desktop polish
+
+The owner requested useful implementation before lengthy verification after the small 4 October typography follow-up. Continue from the current source and [desktop styling contract](DESKTOP-STYLING.md), keeping mobile independent. Scale evidence to the actual changes rather than repeating the entire historical audit for each adjustment.
+
+1. Capture matched before views for a meaningful group of affected desktop routes/states. Inspect existing owners and fix the highest-value inconsistencies first.
+2. While iterating, use the live preview, focused keyboard/action checks and scoped format/lint where useful. Compare BG/EN and the widths affected by the change. Reuse valid installed dependencies; a small CSS edit does not require another fresh install.
+3. At the group's closeout, capture matched after views and mobile preservation at 320/390px for affected consumers. Include About when shared theme or shell owners change. Exercise selection, focus, dismissals, native destinations and URL/history behavior where relevant.
+4. Run the relevant existing browser suites and one grouped Svelte, scoped format/lint, architecture/assets and production build check. Run existing units for changed rules, content contracts or behavior. Use isolated frozen QA output when the live preview owns the checkout's output. Broaden or repeat checks only for new changes, failures or unresolved concerns.
+5. Record actual results, remaining defects and the scoped main commit/push. Documentation-only updates require formatting, diff and referenced-file checks; they do not require a new application build.
+
+Keep the full matrix below for full audits and release qualification. Existing unrelated failures remain explicit: the 4 October typography receipt records formatting issues in `public-assets.policy.json`, `scripts/public-asset-retention.mjs` and `svelte.config.js`; verify their current state before reporting them again.
+
 ## Browser matrix
 
 Automated Chromium projects cover **390px** and **1440px**. The inventory reflow contract additionally checks **768px**, **1024px** and **1920px**. Browser/real-device visual acceptance remains separate. Minimum route set:
