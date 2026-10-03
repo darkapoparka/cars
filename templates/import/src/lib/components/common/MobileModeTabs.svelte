@@ -21,7 +21,7 @@
 		label: string;
 		idPrefix?: string;
 		surface?: 'dark' | 'light';
-		appearance?: 'underline' | 'attached' | 'segmented';
+		appearance?: 'underline' | 'attached' | 'panel';
 		onchange?: (value: string) => void;
 	} = $props();
 
@@ -57,7 +57,7 @@
 	class="mobile-mode-tabs"
 	class:mobile-mode-tabs--light={surface === 'light'}
 	class:mobile-mode-tabs--attached={appearance === 'attached'}
-	class:mobile-mode-tabs--segmented={appearance === 'segmented'}
+	class:mobile-mode-tabs--panel={appearance === 'panel'}
 	style:--mobile-mode-count={options.length}
 	role="tablist"
 	aria-label={label}
@@ -190,31 +190,32 @@
 	.mobile-mode-tabs--attached button:focus-visible {
 		outline-offset: -4px !important;
 	}
-	.mobile-mode-tabs--segmented {
+	.mobile-mode-tabs--panel {
 		gap: var(--bc-space-2);
 		border: 0;
 	}
-	.mobile-mode-tabs--segmented button {
+	.mobile-mode-tabs--panel button {
 		align-items: center;
 		gap: var(--bc-space-2);
 		height: auto;
 		min-height: var(--bc-control-height-primary);
 		padding: var(--bc-space-2) var(--bc-space-4);
 		border: 1px solid transparent;
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-radius-md);
 		color: var(--bc-dark-muted);
 		font-size: var(--mode-tab-font-size, var(--bc-text-mode-tab));
 	}
-	.mobile-mode-tabs--segmented button:hover {
+	.mobile-mode-tabs--panel button:hover {
 		background: var(--bc-glass-surface);
 		color: var(--bc-white);
 	}
-	.mobile-mode-tabs--segmented button.active {
-		background: var(--bc-dark-surface);
-		border-color: var(--bc-glass-border);
+	.mobile-mode-tabs--panel button.active {
+		background: transparent;
 		color: var(--bc-white);
 	}
-	.mobile-mode-tabs--segmented button.active::after {
-		display: none;
+	.mobile-mode-tabs--panel button.active::after {
+		inset: auto var(--bc-space-4) 0;
+		background: var(--bc-accent-bright);
+		border-radius: var(--bc-radius-pill);
 	}
 </style>

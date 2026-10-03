@@ -30,7 +30,7 @@
 		<FeaturedMobile vehicles={data.mobileFeatured} copy={data.copy} compactDesktop />
 	</div>
 	<div class="home-desktop-entry">
-		<DesktopHero hero={data.hero} {english} discoveryLinks={data.discoveryLinks} />
+		<DesktopHero hero={data.hero} {english} />
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
 				<h2 class="site-heading home-section-title">{data.copy.featuredTitle}</h2>

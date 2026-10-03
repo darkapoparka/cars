@@ -354,7 +354,7 @@
 		--bc-desktop-page-hero-height: 400px;
 		--bc-desktop-hero-title: clamp(2.25rem, 3vw, 2.75rem);
 		--bc-desktop-hero-title-width: 32ch;
-		--bc-desktop-hero-padding-start: var(--bc-space-8);
+		--bc-desktop-hero-padding-start: calc(var(--bc-space-8) + var(--bc-space-6));
 		--bc-desktop-hero-padding-end: var(--bc-space-6);
 		--bc-desktop-hero-gap: var(--bc-space-4);
 		--bc-desktop-section-title: var(--bc-desktop-editorial-title);

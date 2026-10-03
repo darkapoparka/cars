@@ -1,5 +1,4 @@
 import type { Locale } from '$lib/locale/core';
-import type { Vehicle } from '$lib/types/vehicle';
 import { editorialCopy } from './editorial';
 
 export const homeHeroModes = {
@@ -36,29 +35,6 @@ export const homeDiscoveryCopy = {
 	}
 } as const satisfies Record<Locale, Record<string, string>>;
 
-/** Public discovery links share the inventory's URL contract and actual stock values. */
-export function homeDiscoveryLinks(vehicles: readonly Vehicle[], locale: Locale) {
-	const english = locale === 'en';
-	const links = [
-		{ label: english ? 'All cars' : 'Всички автомобили', href: '/inventory' },
-		{
-			label: english ? 'SUVs' : 'SUV',
-			href: '/inventory?body=SUV',
-			available: vehicles.some((v) => v.bodyType === 'SUV')
-		},
-		{
-			label: english ? 'Under €20,000' : 'До 20 000 €',
-			href: '/inventory?maxPrice=20000',
-			available: vehicles.some((v) => v.price <= 20000)
-		},
-		{ label: english ? 'Finance' : 'Лизинг', href: '/financing' },
-		{ label: english ? 'Import a car' : 'Внос по заявка', href: '/import' }
-	];
-	return links
-		.filter((link) => link.available !== false)
-		.map(({ label, href }) => ({ label, href }));
-}
-
 /** Desktop entry labels; route/query and stock rules retain their current owners. */
 export const desktopHomeCopy = {
 	bg: {
@@ -83,8 +59,7 @@ export const desktopHomeCopy = {
 		chooseCar: 'Избери автомобил',
 		continue: 'Продължи',
 		withoutListing: 'Нямам линк — търся автомобил',
-		manualCar: 'Въведи марка и модел вместо VIN',
-		quickSearch: 'Бързо търсене'
+		manualCar: 'Въведи марка и модел вместо VIN'
 	},
 	en: {
 		mileageUpTo: 'Mileage up to',
@@ -108,7 +83,6 @@ export const desktopHomeCopy = {
 		chooseCar: 'Choose a car',
 		continue: 'Continue',
 		withoutListing: 'Find a car without a listing',
-		manualCar: 'Enter make and model instead',
-		quickSearch: 'Quick car searches'
+		manualCar: 'Enter make and model instead'
 	}
 } as const satisfies Record<Locale, Record<string, string>>;

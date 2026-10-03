@@ -162,7 +162,7 @@ test('header search reuses the same focused result dialog', async ({ page }) => 
 	await expect(opener).toBeFocused();
 });
 
-test('home Search follows the selected filters directly and discovery pills open real results', async ({
+test('home Search follows selected filters and newest vehicles retains the inventory entry', async ({
 	page
 }) => {
 	await visit(page, '/');
@@ -180,10 +180,12 @@ test('home Search follows the selected filters directly and discovery pills open
 	await expect(page.locator('.vehicle-search-dialog')).not.toBeVisible();
 	await expect(page.locator('main .site-vehicle-card').first()).toContainText('BMW');
 	await visit(page, '/');
-	await page
-		.getByRole('navigation', { name: 'Бързо търсене' })
-		.getByRole('link', { name: 'SUV', exact: true })
-		.click();
-	await expect(page).toHaveURL((url) => url.searchParams.get('body') === 'SUV');
+	await expect(page.getByRole('navigation', { name: 'Бързо търсене' })).toHaveCount(0);
+	const stock = page.locator('.home-desktop-entry');
+	await expect(stock.locator('.home-vehicles .site-vehicle-card')).toHaveCount(4);
+	await stock.getByRole('link', { name: 'Виж всички', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) => url.pathname === '/bg/inventory' && !url.searchParams.has('brand')
+	);
 	await expect(page.locator('main .site-vehicle-card').first()).toBeVisible();
 });

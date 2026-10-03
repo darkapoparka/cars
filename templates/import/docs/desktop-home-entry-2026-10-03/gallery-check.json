@@ -1,0 +1,360 @@
+{
+  "status": 200,
+  "pairs": 22,
+  "images": 44,
+  "narrowViewerOverflow": false,
+  "states": [
+    {
+      "locale": "bg",
+      "id": "home-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "home-finance-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-finance-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-finance-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "home-sell-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-sell-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-sell-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "home-import-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-import-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-import-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "inventory-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-inventory-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-inventory-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "services-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-services-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-services-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "about-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-about-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-about-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "contact-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-contact-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-contact-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "sell-your-car-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-sell-your-car-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-sell-your-car-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "financing-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-financing-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-financing-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "bg",
+      "id": "import-bg-1440",
+      "images": [
+        {
+          "source": "home-entry-before-import-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-import-bg-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "home-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "home-finance-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-finance-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-finance-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "home-sell-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-sell-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-sell-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "home-import-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-home-import-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-home-import-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "inventory-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-inventory-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-inventory-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "services-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-services-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-services-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "about-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-about-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-about-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "contact-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-contact-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-contact-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "sell-your-car-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-sell-your-car-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-sell-your-car-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "financing-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-financing-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-financing-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    },
+    {
+      "locale": "en",
+      "id": "import-en-1440",
+      "images": [
+        {
+          "source": "home-entry-before-import-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        },
+        {
+          "source": "home-entry-after-import-en-1440.png",
+          "width": 1440,
+          "height": 1000
+        }
+      ]
+    }
+  ]
+}

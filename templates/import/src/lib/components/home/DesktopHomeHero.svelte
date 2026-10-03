@@ -24,12 +24,10 @@
 	import { homeHeroModes, desktopHomeCopy } from '$lib/content/home-discovery';
 	let {
 		hero,
-		english = false,
-		discoveryLinks
+		english = false
 	}: {
 		hero: HomeFiveHeroData;
 		english?: boolean;
-		discoveryLinks: { label: string; href: string }[];
 	} = $props();
 	const copy = $derived(desktopHomeCopy[english ? 'en' : 'bg']);
 	let modeOverride = $state<HomeFiveHeroActionMode | 'finance' | null>(null);
@@ -147,7 +145,7 @@
 			{#snippet header()}
 				<ModeTabs
 					surface="dark"
-					appearance="segmented"
+					appearance="panel"
 					value={mode}
 					onchange={(value) => (modeOverride = value as HomeFiveHeroActionMode | 'finance')}
 					idPrefix="home-mode"
@@ -233,15 +231,6 @@
 				{/if}
 			</div>
 		</DesktopDiscoveryPanel>
-	{/snippet}
-	{#snippet desktopSecondaryActions()}
-		<nav class="home-quick-links" aria-label={copy.quickSearch}>
-			{#each discoveryLinks as link (link.href)}<Action
-					href={link.href}
-					variant="glass"
-					size="compact">{link.label}</Action
-				>{/each}
-		</nav>
 	{/snippet}
 </PageIntro>
 <VehicleSearchDialog
@@ -336,15 +325,6 @@
 		gap: var(--bc-space-3);
 		flex-wrap: wrap;
 		justify-content: center;
-	}
-	.home-quick-links {
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		gap: var(--bc-space-2);
-	}
-	.home-quick-links :global(.site-action) {
-		border-radius: var(--bc-radius-pill);
 	}
 	@media (max-width: 900px) {
 		.home-hero__filters {
