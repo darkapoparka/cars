@@ -41,7 +41,7 @@ const s = stylex.create({
     borderStyle: 'solid',
     borderColor: colors.line,
     borderRadius: 20,
-    backgroundColor: { default: colors.background, ':active': colors.controlSurface },
+    backgroundColor: colors.background,
     color: colors.muted,
     fontSize: 14,
     fontWeight: 500,
@@ -49,7 +49,6 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
   },
   active: {
-    backgroundColor: colors.controlSurface,
     borderColor: colors.muted,
     color: colors.text,
     fontWeight: 600,

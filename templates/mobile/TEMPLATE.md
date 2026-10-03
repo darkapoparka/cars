@@ -89,8 +89,8 @@ editor tabs scroll horizontally at their own widths. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills use
-lighter 32px outlined faces inside 48px targets, with neutral filled selection
-and a stronger selected border.
+white 32px outlined faces inside 48px targets. Selected pills keep their white
+background, with darker text and a stronger border.
 Make/Model view selectors retain their 36px faces and 48px targets.
 Each service overview card is one native link, with a smaller 28px View/Enquire
 cue with a small right chevron at top right and its description across the full
