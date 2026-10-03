@@ -36,12 +36,18 @@ test('image banners do not underline their titles or action copy', async ({ page
 	).toBe(true);
 });
 
-test('desktop catalogue keeps a prominent filter action and six readable quick pills', async ({
+test('desktop catalogue keeps an accessible filter action and six readable quick pills', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/inventory');
-	await expect(page.locator('.inventory-toolbar__all')).toHaveClass(/strong/);
+	const allFilters = page.getByRole('button', { name: 'Всички филтри', exact: true });
+	await expect(allFilters).toBeVisible();
+	expect((await allFilters.boundingBox())!.height).toBeGreaterThanOrEqual(48);
+	await allFilters.click();
+	await expect(page.getByRole('dialog')).toBeVisible();
+	await page.keyboard.press('Escape');
+	await expect(allFilters).toBeFocused();
 	const triggers = page.locator('.inventory-toolbar .site-filter-trigger');
 	await expect(triggers).toHaveCount(6);
 	expect(

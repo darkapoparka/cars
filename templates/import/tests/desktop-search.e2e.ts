@@ -182,8 +182,11 @@ test('home Search follows selected filters and newest vehicles retains the inven
 	await visit(page, '/');
 	await expect(page.getByRole('navigation', { name: 'Бързо търсене' })).toHaveCount(0);
 	const stock = page.locator('.home-desktop-entry');
-	await expect(stock.locator('.home-vehicles .site-vehicle-card')).toHaveCount(4);
-	await stock.getByRole('link', { name: 'Виж всички', exact: true }).click();
+	await expect(stock.locator('.home-vehicles .site-vehicle-card')).toHaveCount(3);
+	await stock
+		.locator('.home-vehicles')
+		.getByRole('link', { name: /^Виж всички:/ })
+		.click();
 	await expect(page).toHaveURL(
 		(url) => url.pathname === '/bg/inventory' && !url.searchParams.has('brand')
 	);

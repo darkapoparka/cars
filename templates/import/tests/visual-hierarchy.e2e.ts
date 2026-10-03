@@ -2,24 +2,70 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
-test('desktop section actions follow the content rather than competing with headings', async ({
+test('desktop browse cards finish the Home grids and follow native destinations', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/');
-	const section = page.locator('section').filter({ has: page.locator('.home-vehicles') });
-	const heading = await section.locator('h2').first().boundingBox();
-	const grid = await section.locator('.home-vehicles').boundingBox();
-	const action = section.locator('.home-section-action a');
-	const box = await action.boundingBox();
-	expect(heading && grid && box).toBeTruthy();
-	expect(box!.y).toBeGreaterThanOrEqual(grid!.y + grid!.height);
-	expect(Math.abs(box!.x + box!.width / 2 - (grid!.x + grid!.width / 2))).toBeLessThan(2);
-	expect(await action.evaluate((e) => getComputedStyle(e).backgroundColor)).not.toBe(
-		'rgba(0, 0, 0, 0)'
-	);
-	expect(await section.locator('.home-section-heading .site-action').count()).toBe(0);
+	for (const width of [768, 1024, 1440, 1920]) {
+		await page.setViewportSize({ width, height: 1000 });
+		for (const selector of ['.home-vehicles', '.home-reviews', '.home-news']) {
+			const grid = page.locator(selector);
+			const card = grid.getByRole('link').last();
+			await expect(card).toBeVisible();
+			const bounds = await grid.boundingBox();
+			const box = await card.boundingBox();
+			expect(box!.x).toBeGreaterThanOrEqual(bounds!.x);
+			expect(box!.y + box!.height).toBeLessThanOrEqual(bounds!.y + bounds!.height + 1);
+			expect(box!.height).toBeGreaterThan(100);
+			await card.focus();
+			await expect(card).toBeFocused();
+		}
+		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+			true
+		);
+	}
+	await expect(page.locator('.home-section-heading .site-action')).toHaveCount(0);
+	await expect(page.locator('.home-section-action')).toHaveCount(0);
+	for (const [selector, path] of [
+		['.home-vehicles', 'inventory'],
+		['.home-reviews', 'reviews'],
+		['.home-news', 'blog']
+	]) {
+		await page.locator(selector).getByRole('link').last().press('Enter');
+		await expect(page).toHaveURL(new RegExp(`/bg/${path}$`));
+		await page.goBack();
+		await expect(page.locator(selector)).toBeVisible();
+	}
 });
+
+for (const locale of ['bg', 'en']) {
+	test(`${locale}: Home browse cards work without JavaScript`, async ({
+		browser,
+		baseURL
+	}, info) => {
+		test.skip(info.project.name !== 'desktop');
+		const context = await browser.newContext({
+			javaScriptEnabled: false,
+			viewport: { width: 1440, height: 1000 }
+		});
+		try {
+			const page = await context.newPage();
+			for (const [selector, destination] of [
+				['.home-vehicles', 'inventory'],
+				['.home-reviews', 'reviews'],
+				['.home-news', 'blog']
+			]) {
+				await page.goto(`${baseURL}/${locale}`);
+				await page.locator(selector).getByRole('link').last().click();
+				await expect(page).toHaveURL((url) => url.pathname === `/${locale}/${destination}`);
+				if (locale === 'en') expect(new URL(page.url()).searchParams.get('lang')).toBe('en');
+			}
+		} finally {
+			await context.close();
+		}
+	});
+}
 
 test('desktop detail restores a title above the gallery and operable payment tabs', async ({
 	page

@@ -7,6 +7,7 @@
 	import DesktopFilterPicker from './DesktopFilterPicker.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import Modal from '$lib/components/common/Modal.svelte';
+	import { inventoryDialogCopy } from '$lib/content/inventory-desktop-controls';
 	import { linkHref } from '$lib/utils/links';
 	import {
 		inventoryFilterParam,
@@ -29,6 +30,7 @@
 		allOpen?: boolean;
 		activeFilter?: AuxeroInventoryFilter | null;
 	} = $props();
+	const copy = $derived(inventoryDialogCopy[english ? 'en' : 'bg']);
 	let cleared = $state(false);
 	let draft = $state<Record<string, string[]>>({});
 	let keyword = $state('');
@@ -183,8 +185,8 @@
 				min && values[0]
 					? `${format(min)} – ${format(values[0])}`
 					: min
-						? `${english ? 'From' : 'От'} ${format(min)}`
-						: `${english ? 'Up to' : 'До'} ${format(values[0])}`;
+						? `${copy.from} ${format(min)}`
+						: `${copy.upTo} ${format(values[0])}`;
 			return `${range} ${filter.numericInput.unit}`;
 		}
 		return values
@@ -233,14 +235,14 @@
 		event.preventDefault();
 		(currentFilter?.numericInput ? rangePicker : picker)?.focusSearch();
 	}}
-	title={english ? 'Filters' : 'Филтри'}
+	title={copy.filters}
 	wide
 	class="inventory-filters-dialog desktop-filter-dialog"
 >
 	{#snippet headerActions()}
 		{#if currentFilter && (draft[currentFilter.id]?.length || minimums[currentFilter.id])}
 			<button type="button" class="inventory-all__clear-category" onclick={clearCategory}
-				>{english ? 'Clear selection' : 'Изчисти избора'}</button
+				>{copy.clearSelection}</button
 			>
 		{/if}
 	{/snippet}
@@ -270,7 +272,7 @@
 			class="inventory-all__navigation"
 			role="tablist"
 			aria-orientation="horizontal"
-			aria-label={english ? 'Filters' : 'Филтри'}
+			aria-label={copy.filters}
 		>
 			<button
 				type="button"
@@ -282,7 +284,7 @@
 				onclick={() => chooseFilter(null)}
 				onkeydown={(event) => navigateFilters(event, 0)}
 			>
-				<span>{english ? 'Search' : 'Търсене'}</span>{#if keyword}<small>{keyword}</small>{/if}
+				<span>{copy.search}</span>{#if keyword}<small>{keyword}</small>{/if}
 			</button>
 			{#each orderedFilters as filter, index (filter.id)}
 				<button
@@ -337,14 +339,8 @@
 			{:else}
 				<div class="filter-fields">
 					<label class="inventory-all__search filter-control">
-						<Search size={20} aria-hidden="true" /><span class="sr-only"
-							>{english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}</span
-						>
-						<input
-							type="search"
-							bind:value={keyword}
-							placeholder={english ? 'Make, model or keyword' : 'Марка, модел или ключова дума'}
-						/>
+						<Search size={20} aria-hidden="true" /><span class="sr-only">{copy.keyword}</span>
+						<input type="search" bind:value={keyword} placeholder={copy.keyword} />
 					</label>
 				</div>
 			{/if}
@@ -353,13 +349,7 @@
 	{#snippet footer()}
 		<div class="inventory-all__actions">
 			<span class="sr-only" aria-live="polite"
-				>{counting
-					? ''
-					: resultCount === null
-						? ''
-						: english
-							? `${resultCount} matching cars`
-							: `${resultCount} намерени автомобила`}</span
+				>{counting ? '' : resultCount === null ? '' : copy.matchingCount(resultCount)}</span
 			>
 			{#if (!cleared && desktop.activeFilters) || keyword || Object.values(draft).some((values) => values.length) || Object.values(minimums).some(Boolean)}
 				<Action
@@ -373,14 +363,11 @@
 				>
 			{/if}
 			{#if resultCount === 0}<p class="inventory-all__empty">
-					{english
-						? 'No cars match. Adjust or clear your filters.'
-						: 'Няма автомобили. Променете или изчистете филтрите.'}
+					{copy.emptySelection}
 				</p>{/if}
 			<Action class="inventory-all__apply" type="submit" form={formId} aria-busy={counting}
-				>{english ? 'Show cars' : 'Покажи автомобили'}<span
-					class="inventory-all__count"
-					aria-hidden="true">{counting ? '…' : (resultCount ?? '')}</span
+				>{copy.showCars}<span class="inventory-all__count" aria-hidden="true"
+					>{counting ? '…' : (resultCount ?? '')}</span
 				></Action
 			>
 		</div>
@@ -398,16 +385,6 @@
 		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
 	}
-	:global(.inventory-filters-dialog .site-dialog__icon) {
-		width: var(--bc-control-height-standard);
-		height: var(--bc-control-height-standard);
-		color: var(--bc-ink);
-		background: transparent;
-		border-radius: var(--bc-radius-pill);
-	}
-	:global(.inventory-filters-dialog .site-dialog__icon:hover) {
-		background: var(--bc-bg-strong);
-	}
 	:global(.site-dialog.inventory-filters-dialog .site-dialog__body) {
 		flex: 1;
 		padding: 0;
@@ -416,10 +393,6 @@
 	:global(.site-dialog.inventory-filters-dialog .site-dialog__footer) {
 		padding: var(--bc-space-3) var(--bc-space-6);
 		background: var(--bc-surface-raised);
-	}
-	:global(.site-dialog.inventory-filters-dialog .site-dialog__footer .site-action) {
-		min-height: var(--bc-control-height-primary);
-		font-size: var(--bc-text-cta);
 	}
 	.inventory-all__form {
 		display: grid;

@@ -103,6 +103,7 @@
 	--bc-z-popover: 1100;
 	--bc-z-overlay: 1400;
 	--bc-z-dialog: 1401;
+	--bc-backdrop: rgb(9 10 11 / 0.48);
 	--bc-desktop-header-height: 94px;
 	--bc-form-gap: 16px;
 	--bc-desktop-section-title: clamp(2rem, 2.5vw, 2.25rem);

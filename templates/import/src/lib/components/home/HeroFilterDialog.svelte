@@ -463,6 +463,9 @@
 			border-color: transparent;
 			box-shadow: none;
 		}
+		.hfp__option[aria-pressed='true'] {
+			background: var(--bc-accent-tint);
+		}
 		.hfp__chip .hfp__option-label {
 			flex: 1;
 		}

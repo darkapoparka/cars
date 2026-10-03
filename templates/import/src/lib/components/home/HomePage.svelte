@@ -6,7 +6,7 @@
 	import { linkHref } from '$lib/utils/links';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import ReviewCard from '$lib/components/reviews/ReviewCard.svelte';
-	import Action from '$lib/components/common/Action.svelte';
+	import HomeBrowseCard from './HomeBrowseCard.svelte';
 	import VehicleCard from '$lib/components/inventory/VehicleCard.svelte';
 	import DesktopHero from './DesktopHomeHero.svelte';
 	import MobileHero from './HomeFiveHero.svelte';
@@ -36,12 +36,13 @@
 				<h2 class="site-heading home-section-title">{data.copy.featuredTitle}</h2>
 			</header>
 			<div class="home-vehicles">
-				{#each data.featured.slice(0, 4) as card (card.slug)}<VehicleCard {card} {english} />{/each}
-			</div>
-			<div class="home-section-action">
-				<Action href={localized('/inventory')} variant="strong"
-					>{copy.viewAll}<ArrowRight size={18} aria-hidden="true" /></Action
-				>
+				{#each data.featured.slice(0, 3) as card (card.slug)}<VehicleCard {card} {english} />{/each}
+				<HomeBrowseCard
+					href={localized('/inventory')}
+					label={copy.viewAll}
+					context={data.copy.featuredTitle}
+					desktopOnly
+				/>
 			</div>
 		</section>
 	</div>
@@ -107,14 +108,7 @@
 						{review}
 						compactRole={copy.customer}
 					/>{/each}
-				<a class="home-rail-end" href={href('/reviews')}
-					><ArrowRight size={32} aria-hidden="true" /><strong>{copy.viewAll}</strong></a
-				>
-			</div>
-			<div class="home-section-action home-desktop-action">
-				<Action href={localized('/reviews')} variant="strong"
-					>{copy.viewAll}<ArrowRight size={18} aria-hidden="true" /></Action
-				>
+				<HomeBrowseCard href={localized('/reviews')} label={copy.viewAll} context={copy.reviews} />
 			</div>
 		</section>
 	{/if}
@@ -129,22 +123,12 @@
 		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
 		<div class="home-news" tabindex="0" role="region" aria-label={copy.guides}>
 			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} compact />{/each}
-			<a class="home-rail-end" href={href('/blog')}
-				><ArrowRight size={32} aria-hidden="true" /><strong>{copy.allGuides}</strong></a
-			>
-		</div>
-		<div class="home-section-action home-desktop-action">
-			<Action href={localized('/blog')} variant="strong"
-				>{copy.allGuides}<ArrowRight size={18} aria-hidden="true" /></Action
-			>
+			<HomeBrowseCard href={localized('/blog')} label={copy.allGuides} context={copy.guides} />
 		</div>
 	</section>
 </main>
 
 <style>
-	.home-rail-end {
-		display: none;
-	}
 	.home-mobile-entry,
 	.home-brands .browse-label-short {
 		display: none;
@@ -159,11 +143,6 @@
 	}
 	.home-section-title {
 		text-align: center;
-	}
-	.home-section-action {
-		display: flex;
-		justify-content: center;
-		padding-top: var(--bc-space-2);
 	}
 	.home-vehicles {
 		display: grid;
@@ -213,7 +192,7 @@
 	.home-reviews,
 	.home-news {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(4, minmax(0, 1fr));
 		gap: var(--bc-space-5);
 	}
 	@media (min-width: 768px) {
@@ -234,7 +213,9 @@
 		}
 	}
 	@media (max-width: 1100px) {
-		.home-vehicles {
+		.home-vehicles,
+		.home-reviews,
+		.home-news {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 		.home-types {
@@ -245,33 +226,6 @@
 		}
 	}
 	@media (max-width: 767.98px) {
-		.home-desktop-action {
-			display: none;
-		}
-		.home-rail-end {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 16px;
-			min-width: 0;
-			padding: 24px;
-			border: 1px solid var(--bc-border);
-			border-radius: var(--bc-radius-panel);
-			background: var(--bc-surface-raised);
-			color: var(--bc-ink);
-			text-decoration: none;
-			scroll-snap-align: start;
-			font-size: 18px;
-		}
-		.home-rail-end:hover {
-			border-color: var(--bc-border-strong);
-		}
-		.home-rail-end:focus-visible {
-			outline: 2px solid var(--bc-accent);
-			outline-offset: -3px;
-		}
-
 		.site-section {
 			padding-block: 20px 12px;
 		}
@@ -287,9 +241,6 @@
 		}
 		.home-news :global(.article-card__body > p) {
 			display: none;
-		}
-		.home-section-action {
-			padding-top: 0;
 		}
 
 		.home-vehicles,

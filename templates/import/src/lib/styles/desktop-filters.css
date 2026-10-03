@@ -91,7 +91,7 @@
 	}
 	.desktop-filter-dialog .filter-choice:has(:checked) {
 		border-color: var(--bc-accent);
-		background: color-mix(in srgb, var(--bc-accent) 8%, var(--bc-surface-raised));
+		background: var(--bc-accent-tint);
 		font-weight: var(--bc-weight-control);
 	}
 	.desktop-filter-dialog .filter-choice img {

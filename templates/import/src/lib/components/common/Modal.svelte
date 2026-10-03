@@ -91,7 +91,7 @@
 		position: fixed;
 		inset: 0;
 		z-index: calc(var(--bc-z-overlay) + var(--bits-dialog-depth, 0) * 2);
-		background: rgb(9 10 11 / 0.48);
+		background: var(--bc-backdrop);
 	}
 	:global(.site-dialog) {
 		position: fixed;
@@ -189,7 +189,7 @@
 		}
 		:global(.site-dialog__title) {
 			font-family: var(--bc-font-body);
-			font-size: var(--bc-desktop-editorial-title);
+			font-size: var(--bc-desktop-card-heading);
 			line-height: var(--bc-leading-h4);
 		}
 	}
@@ -212,11 +212,9 @@
 	}
 	:global(.site-dialog--filter) .site-dialog__footer {
 		padding: var(--bc-space-5) var(--bc-space-6) var(--bc-space-6);
-	}
-	:global(.site-dialog--filter) .site-dialog__footer :global(.site-action) {
-		font-size: var(--bc-text-control);
-		border-radius: var(--bc-radius-md);
-		min-height: var(--bc-control-height-standard);
+		--action-text: var(--bc-text-control);
+		--action-radius: var(--bc-radius-md);
+		--action-height: var(--bc-control-height-standard);
 	}
 	:global(.site-dialog--filter) .site-dialog__footer :global(.primary) {
 		padding-inline: var(--bc-space-8);
@@ -238,9 +236,15 @@
 		color: var(--bc-ink);
 	}
 	@media (min-width: 768px) {
-		:global(.site-dialog__title) {
-			font-family: var(--bc-font-body);
-			line-height: var(--bc-leading-h4);
+		.site-dialog__footer,
+		:global(.site-dialog--filter) .site-dialog__footer {
+			--action-height: var(--bc-control-height-primary);
+			--action-text: var(--bc-text-control);
+			--action-radius: var(--bc-radius-md);
+		}
+		:global(.site-dialog__icon) {
+			width: var(--bc-control-height-primary);
+			height: var(--bc-control-height-primary);
 		}
 		:global(.site-dialog:not(.site-dialog--filter):not(.site-dialog--muted)) {
 			padding: 0;
@@ -257,6 +261,7 @@
 			padding: var(--bc-space-4) var(--bc-space-6) var(--bc-space-6);
 		}
 		.site-dialog__header :global(.bc-mobile-icon-action) {
+			--bc-mobile-icon-action-hit-size: var(--bc-control-height-primary);
 			--bc-mobile-icon-surface: transparent;
 			--bc-mobile-icon-border: none;
 			border-radius: var(--bc-radius-md);
@@ -281,8 +286,6 @@
 		}
 		:global(.filter-picker-dialog) .site-dialog__footer :global(.site-action) {
 			min-width: 96px;
-			font-size: var(--bc-text-control);
-			border-radius: var(--bc-radius-md);
 		}
 	}
 </style>
