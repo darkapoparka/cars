@@ -92,6 +92,7 @@ export const DealerDesktopDiscoveryContent = ({
               desktopHeadingLevel={3}
               desktopImageSizes="(max-width: 1199px) calc((100vw - 184px) / 3), (max-width: 1399px) calc((100vw - 216px) / 4), 296px"
               desktopLayout="grid"
+              desktopSurface="landing"
               href={path(getListingPath(listing))}
               key={listing.id}
               listing={listing}

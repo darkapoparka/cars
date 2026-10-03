@@ -212,68 +212,72 @@
   .trigger {
     position: relative;
     display: grid;
-    grid-template-columns: 160px minmax(0, 1fr) auto;
-    gap: 24px;
-    height: 152px;
+    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) auto;
+    gap: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 38);
     min-height: 0;
-    padding: 16px 24px 16px 16px;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 6)
+      calc(var(--spacing) * 4) calc(var(--spacing) * 4);
     overflow: hidden;
     color: var(--foreground);
     text-align: left;
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
   }
   .preview {
     position: relative;
-    width: 160px;
-    height: 118px;
+    width: calc(var(--spacing) * 40);
+    height: calc(var(--spacing) * 29.5);
   }
   .emptyImage {
     object-fit: contain;
   }
   .triggerCopy {
     display: grid;
-    gap: 10px;
+    gap: calc(var(--spacing) * 2.5);
     min-width: 0;
   }
   .trigger:hover {
     background: var(--desktop-picker-hover);
   }
   .triggerCopy > strong {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
+    font-size: calc(var(--spacing) * 6);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 8);
   }
   .plus {
-    width: 44px;
-    height: 44px;
-    color: white;
+    width: calc(var(--spacing) * 11);
+    height: calc(var(--spacing) * 11);
+    color: var(--desktop-surface);
     background: var(--brand);
     border: 0;
-    border-radius: 12px;
+    border-radius: calc(var(--spacing) * 3);
   }
   .hint {
-    font-size: 15px;
-    line-height: 24px;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6);
     color: var(--muted-foreground);
   }
   .selectedCard {
     display: grid;
-    grid-template-columns: 160px minmax(0, 1fr) 224px;
-    gap: 24px;
+    grid-template-columns: calc(var(--spacing) * 40) minmax(0, 1fr) calc(
+        var(--spacing) *
+        56
+      );
+    gap: calc(var(--spacing) * 6);
     align-items: center;
-    min-height: 152px;
-    padding: 16px;
+    min-height: calc(var(--spacing) * 38);
+    padding: calc(var(--spacing) * 4);
     overflow: hidden;
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
   }
   .cardHeader {
     grid-row: 1;
     grid-column: 2;
-    gap: 16px;
+    gap: calc(var(--spacing) * 4);
     padding: 0;
   }
   .cardHeading {
@@ -281,36 +285,36 @@
   }
   .title {
     display: block;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
   }
   .selectedMeta {
-    margin: 6px 0 0;
-    font-size: 14px;
-    line-height: 22px;
+    margin: calc(var(--spacing) * 1.5) 0 0;
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 5.5);
     color: var(--muted-foreground);
   }
   .vehiclePrice {
-    margin: 8px 0 0;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
+    margin: calc(var(--spacing) * 2) 0 0;
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 7);
   }
   .media {
     grid-row: 1;
     grid-column: 1;
-    height: 118px;
+    height: calc(var(--spacing) * 29.5);
     min-height: 0;
     background: var(--control);
-    border-radius: 10px;
+    border-radius: calc(var(--spacing) * 2.5);
   }
   .image {
     object-fit: cover;
   }
   .selectedCard .clear {
-    width: 32px;
-    height: 32px;
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
     color: var(--foreground);
   }
   .selectedCard .clear:hover {
@@ -318,17 +322,17 @@
   }
   .selectedCard .change {
     width: 100%;
-    height: 52px;
-    padding-inline: 16px;
+    height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 4);
     margin: 0;
-    font-size: 14px;
-    color: white;
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--desktop-surface);
     background: var(--brand);
     border: 0;
-    border-radius: 12px;
+    border-radius: calc(var(--spacing) * 3);
   }
   .selectedCard .change:hover {
-    color: white;
+    color: var(--desktop-surface);
     background: var(--lead-site-accent-hover);
   }
   .results article:has([data-vehicle-selected="true"]) {

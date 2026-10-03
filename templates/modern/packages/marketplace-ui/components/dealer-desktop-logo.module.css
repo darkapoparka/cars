@@ -1,0 +1,12 @@
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--text-desktop-wordmark);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--desktop-leading-none);
+  text-transform: uppercase;
+  letter-spacing: var(--desktop-wordmark-tracking);
+  white-space: nowrap;
+}

@@ -1,4 +1,5 @@
 import { withBasePath } from "@repo/internationalization/paths";
+import { publicSite } from "@repo/marketplace/site-config";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
@@ -61,8 +62,12 @@ export function DealerDesktopHero({
           ...(artwork
             ? { "--desktop-hero-scene": `url("${withBasePath(artwork)}")` }
             : {}),
-          "--desktop-page-car-left": `url("${withBasePath("/desktop-boxcars/banner-estate-right.webp")}")`,
-          "--desktop-page-car-right": `url("${withBasePath("/desktop-boxcars/banner-suv-left.webp")}")`,
+          ...(publicSite.artwork.desktopPageBanner
+            ? {
+                "--desktop-page-car-left": `url("${withBasePath(publicSite.artwork.desktopPageBanner.left)}")`,
+                "--desktop-page-car-right": `url("${withBasePath(publicSite.artwork.desktopPageBanner.right)}")`,
+              }
+            : {}),
         } as CSSProperties
       }
     >

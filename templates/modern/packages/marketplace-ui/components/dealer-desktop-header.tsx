@@ -12,10 +12,10 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
+import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import { DealerNavigationLink } from "./dealer-navigation-link";
 import { DesktopSavedCars } from "./desktop-saved-cars";
 import type { MarketplaceMode } from "./marketplace-masthead";
-import Image from "./public-image";
 
 export { DesktopSavedCars } from "./desktop-saved-cars";
 
@@ -54,18 +54,11 @@ export const DealerDesktopHeader = ({
       >
         <div className={cn(styles.nav, "dealer-desktop-nav")}>
           <Link
-            aria-label={isBg ? "Начало" : "Home"}
+            aria-label={`${site.identity.desktopPreview?.name ?? site.identity.name} ${isBg ? "начало" : "home"}`}
             className={cn(styles.brand, "dealer-desktop-brand relative")}
             href={homeHref ?? getLocalizedPublicPath(locale, "/")}
           >
-            <Image
-              alt=""
-              className="object-contain object-left"
-              fetchPriority="high"
-              fill
-              sizes="220px"
-              src={site.identity.logo}
-            />
+            <DealerDesktopLogo className={styles.logo} site={site} />
           </Link>
           <nav
             aria-label={

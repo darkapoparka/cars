@@ -22,25 +22,25 @@
   .primaryFields,
   .advancedFields {
     display: grid;
-    gap: 20px;
+    gap: calc(var(--spacing) * 5);
     min-width: 0;
   }
   .searchHeading {
-    margin: 0 0 4px;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
+    margin: 0 0 calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 5);
+    font-weight: var(--font-weight-bold);
+    line-height: calc(var(--spacing) * 6);
   }
   .searchRow,
   .filterField {
     display: grid;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     min-width: 0;
   }
   .filterLabel {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 5);
     color: var(--muted-foreground);
   }
   .query {
@@ -48,32 +48,32 @@
     min-width: 0;
   }
   .query label {
-    height: 52px;
-    padding-inline: 14px;
+    height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 3.5);
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }
   .query label:focus-within {
     border-color: var(--ring);
   }
   .query input {
-    font-size: 15px;
+    font-size: calc(var(--spacing) * 3.75);
   }
   .desktopSearch .field {
     justify-content: space-between;
     width: 100%;
-    height: 52px;
-    min-height: 52px;
-    padding-inline: 16px;
+    height: calc(var(--spacing) * 13);
+    min-height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 4);
     overflow: hidden;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-normal);
     color: var(--foreground);
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }
   .field > span {
@@ -94,17 +94,17 @@
     display: none;
   }
   .desktopSearch .submit {
-    gap: 10px;
+    gap: calc(var(--spacing) * 2.5);
     width: 100%;
-    height: 56px;
-    min-height: 56px;
-    padding-inline: 26px;
-    font-size: 15px;
-    font-weight: 500;
+    height: calc(var(--spacing) * 14);
+    min-height: calc(var(--spacing) * 14);
+    padding-inline: calc(var(--spacing) * 6.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
     color: var(--brand-foreground);
     background: var(--brand);
     border: 0;
-    border-radius: 12px;
+    border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }
   .desktopSearch .submit:hover {
@@ -113,25 +113,25 @@
   }
   .footer {
     display: flex;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: calc(var(--spacing) * 3);
     color: var(--muted-foreground);
   }
   .textAction {
     padding: 0;
-    font-size: 13px;
+    font-size: calc(var(--spacing) * 3.25);
     color: var(--brand-text);
   }
   .desktopSearch[data-surface="hero"] .form {
     display: flex;
     gap: 0;
     align-items: center;
-    height: 76px;
-    padding: 10px;
+    height: calc(var(--spacing) * 19);
+    padding: calc(var(--spacing) * 2.5);
     background: var(--panel);
-    border-radius: 50px;
+    border-radius: calc(var(--spacing) * 12.5);
   }
   .desktopSearch[data-surface="hero"]
     :is(
@@ -153,7 +153,7 @@
     position: relative;
     display: flex;
     flex: 1 1 0;
-    height: 56px;
+    height: calc(var(--spacing) * 14);
   }
   .desktopSearch[data-surface="hero"]
     .filterField:is([data-field="year"], [data-field="mileage"]) {
@@ -161,18 +161,18 @@
   }
   .desktopSearch[data-surface="hero"] .filterField + .filterField::before {
     position: absolute;
-    top: 10px;
-    bottom: 10px;
+    top: calc(var(--spacing) * 2.5);
+    bottom: calc(var(--spacing) * 2.5);
     left: 0;
-    width: 1px;
+    width: calc(var(--spacing) * 0.25);
     content: "";
     background: var(--border);
   }
   .desktopSearch[data-surface="hero"] .field {
-    height: 56px;
-    min-height: 56px;
-    padding-inline: 24px;
-    font-size: 15px;
+    height: calc(var(--spacing) * 14);
+    min-height: calc(var(--spacing) * 14);
+    padding-inline: calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.75);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -184,17 +184,17 @@
   .desktopSearch[data-surface="hero"] .submit {
     flex: 0 0 auto;
     width: auto;
-    border-radius: 40px;
+    border-radius: calc(var(--spacing) * 10);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .desktopSearch[data-surface="hero"] .field {
-    padding-inline: 14px;
-    font-size: 14px;
+    padding-inline: calc(var(--spacing) * 3.5);
+    font-size: calc(var(--spacing) * 3.5);
   }
   .desktopSearch[data-surface="hero"] .submit {
-    padding-inline: 20px;
-    font-size: 14px;
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: calc(var(--spacing) * 3.5);
   }
 }

@@ -4,6 +4,10 @@ import type { PublicSiteArtwork } from "@repo/marketplace-domain/site-config";
 export const defaultSiteArtwork: PublicSiteArtwork = {
   heroScene: "/lead-car-showroom-scene-v3.webp",
   desktopHeroScene: "/desktop-boxcars/hero.jpg",
+  desktopPageBanner: {
+    left: "/desktop-boxcars/banner-estate-right.webp",
+    right: "/desktop-boxcars/banner-suv-left.webp",
+  },
   heroLeft: "/lead-car-graphite-v3.webp",
   heroRight: "/lead-car-silver-v3.webp",
   contactHero: "/day-night-contact-hero-v1.webp",

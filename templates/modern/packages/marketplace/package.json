@@ -30,6 +30,7 @@
     "./types": "./types.ts",
     "./inventory-search": "./inventory-search.ts",
     "./site-config": "./site-config.ts",
+    "./public-images": "./public-images.ts",
     "./lead-workflow": "./lead-workflow.ts",
     "./lead-copy": "./lead-copy.ts",
     "./listing-copy": "./listing-copy.ts"

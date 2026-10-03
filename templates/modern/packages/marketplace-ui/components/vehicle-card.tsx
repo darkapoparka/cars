@@ -43,6 +43,7 @@ export const VehicleCard = ({
   desktopHeadingLevel = 2,
   desktopImageSizes,
   desktopLayout = "list",
+  desktopSurface = "inventory",
   href,
   listing: sourceListing,
   locale,
@@ -94,6 +95,7 @@ export const VehicleCard = ({
           "lg:grid lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-0 xl:grid-cols-[15rem_minmax(0,1fr)]",
         isDesktopComparison && "lg:flex lg:flex-col lg:gap-0"
       )}
+      data-desktop-surface={desktopSurface}
       data-presentation={presentation}
       data-slot="vehicle-card"
       data-view-mode={viewMode}

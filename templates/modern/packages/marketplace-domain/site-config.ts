@@ -38,6 +38,9 @@ export type PublicService = keyof z.infer<typeof publicServicesSchema>;
 export const publicArtworkSchema = z.object({
   heroScene: publicAssetPathSchema.optional(),
   desktopHeroScene: publicAssetPathSchema.optional(),
+  desktopPageBanner: z
+    .object({ left: publicAssetPathSchema, right: publicAssetPathSchema })
+    .optional(),
   heroLeft: publicAssetPathSchema,
   heroRight: publicAssetPathSchema,
   contactHero: publicAssetPathSchema,
@@ -71,6 +74,16 @@ export const publicSiteSchema = z
       logo: publicAssetPathSchema,
       inverseLogo: publicAssetPathSchema,
       icon: publicAssetPathSchema,
+      desktopPreview: z
+        .object({
+          name: z.string().trim().min(1).max(120),
+          shortName: z.string().trim().min(1).max(60),
+          tagline: z.object({
+            bg: z.string().trim().max(300),
+            en: z.string().trim().max(300),
+          }),
+        })
+        .optional(),
     }),
     contact: z.object({
       address: z.string().trim().min(1).max(300),

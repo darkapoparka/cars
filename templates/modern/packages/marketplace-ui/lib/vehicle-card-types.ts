@@ -18,6 +18,7 @@ export interface VehicleCardProps {
   desktopHeadingLevel?: 2 | 3;
   desktopImageSizes?: string;
   desktopLayout?: "list" | "grid";
+  desktopSurface?: "landing" | "inventory";
   href?: string;
   listing: VehicleListing;
   locale?: string;

@@ -16,6 +16,8 @@ The current desktop Home uses the finalized Boxcar Home 10 direction through nat
 
 Modern uses Tailwind CSS v4 for its shared styling system, with CSS Modules and shared tokens for desktop composition. The [desktop Next.js code review](docs/DESKTOP-NEXT-CODE-REVIEW-2026-10-03.md) records the current framework versions, component and image-loading improvements, and mobile preservation evidence.
 
+The desktop master uses a Modern wordmark through the optional `desktopPreviewIdentity` in `lead-site.ts`. Its `sourceSlug` guard applies only to this static master; Cars client adaptation changes the dealer slug and automatically restores that client's configured logo, inverse logo and identity. Existing mobile identity and composition remain unchanged. [Reusable configuration](docs/SITE-CONFIGURATION.md) documents the artwork and shortlist boundaries.
+
 ## Install and run
 ```text
 corepack enable && pnpm install --frozen-lockfile && pnpm --filter @repo/database build

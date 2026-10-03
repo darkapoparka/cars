@@ -5,8 +5,8 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { MarketplaceLocaleSwitchLink } from "@repo/marketplace-ui";
+import { DealerDesktopLogo } from "@repo/marketplace-ui/components/dealer-desktop-logo";
 import { DesktopSavedCars } from "@repo/marketplace-ui/components/desktop-saved-cars";
-import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -19,6 +19,10 @@ export function DealerDesktopFooter({ locale }: { locale: string }) {
   const text = (bulgarian: string, english: string) =>
     bg ? bulgarian : english;
   const path = (href: string) => getLocalizedPath(normalized, href);
+  const identity = publicSite.identity.desktopPreview ?? publicSite.identity;
+  const tagline = publicSite.identity.desktopPreview
+    ? publicSite.identity.desktopPreview.tagline[normalized]
+    : getLeadCopy(locale).tagline;
   const groups = [
     {
       title: text("Открийте автомобил", "Find a car"),
@@ -46,18 +50,12 @@ export function DealerDesktopFooter({ locale }: { locale: string }) {
         <div className={styles.grid}>
           <div className={styles.brand}>
             <Link
-              aria-label={`${leadSite.name} ${text("начало", "home")}`}
+              aria-label={`${identity.name} ${text("начало", "home")}`}
               href={path("/")}
             >
-              <Image
-                alt=""
-                className={styles.logo}
-                height={32}
-                src={publicSite.identity.inverseLogo}
-                width={132}
-              />
+              <DealerDesktopLogo className={styles.logo} inverse />
             </Link>
-            <p>{getLeadCopy(locale).tagline}</p>
+            <p>{tagline}</p>
           </div>
           {groups.map((group, index) => (
             <nav aria-label={group.title} key={group.title}>
@@ -93,7 +91,7 @@ export function DealerDesktopFooter({ locale }: { locale: string }) {
         </div>
         <div className={styles.bottom}>
           <span>
-            © {new Date().getFullYear()} {leadSite.name}.{" "}
+            © {new Date().getFullYear()} {identity.name}.{" "}
             {text("Всички права запазени.", "All rights reserved.")}
           </span>
           <div>
@@ -112,8 +110,8 @@ export function DealerDesktopFooter({ locale }: { locale: string }) {
         {leadSite.staticDemoMode && (
           <p className={styles.note}>
             {text(
-              "Демо шаблон · примерни автомобили. Свържете се с екипа за актуална наличност.",
-              "Template preview · sample vehicles. Contact the team for current availability."
+              "Демо шаблон · примерни автомобили и данни за контакт. Запитванията са само локален преглед.",
+              "Template preview · sample vehicles and contact details. Enquiries are local previews."
             )}
           </p>
         )}

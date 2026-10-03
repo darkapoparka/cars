@@ -1,33 +1,37 @@
 "use client";
 
+import { publicBasePath } from "@repo/internationalization/paths";
+import { publicSite } from "@repo/marketplace/site-config";
 import { Bookmark, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useId, useRef, useSyncExternalStore } from "react";
-import type { DesktopSavedCar } from "../lib/desktop-saved-car";
+import {
+  type DesktopSavedCar,
+  getDesktopSavedCarsStorageKey,
+  legacyDesktopSavedCarsStorageKey,
+  parseDesktopSavedCars,
+} from "../lib/desktop-saved-car";
+import { getLocalizedPublicPath } from "../lib/public-path";
+import { formatVehicleCardMoney } from "../lib/vehicle-card-policy";
 import styles from "./desktop-saved-cars.module.css";
 import Image from "./public-image";
 
-const storageKey = "modern-desktop-saved-cars-v1";
+const storageKey = getDesktopSavedCarsStorageKey(publicSite.identity.slug);
+const canReadLegacyStorage =
+  Boolean(publicSite.identity.desktopPreview) && !publicBasePath;
 const empty: DesktopSavedCar[] = [];
 let snapshot = empty;
 let initialized = false;
 const listeners = new Set<() => void>();
 function readSavedCars() {
   try {
-    const value: unknown = JSON.parse(localStorage.getItem(storageKey) ?? "[]");
-    return Array.isArray(value)
-      ? value
-          .filter(
-            (car): car is DesktopSavedCar =>
-              car &&
-              [car.id, car.title, car.href, car.image, car.price].every(
-                (v) => typeof v === "string"
-              ) &&
-              car.href.startsWith("/") &&
-              !car.href.startsWith("//")
-          )
-          .slice(0, 100)
-      : empty;
+    const serialized = localStorage.getItem(storageKey);
+    return parseDesktopSavedCars(
+      serialized ??
+        (canReadLegacyStorage
+          ? localStorage.getItem(legacyDesktopSavedCarsStorageKey)
+          : null)
+    );
   } catch {
     return empty;
   }
@@ -40,7 +44,11 @@ function getSnapshot() {
   return snapshot;
 }
 function onStorage(event: StorageEvent) {
-  if (event.key === storageKey || event.key === null) {
+  if (
+    event.key === storageKey ||
+    event.key === null ||
+    (canReadLegacyStorage && event.key === legacyDesktopSavedCarsStorageKey)
+  ) {
     snapshot = readSavedCars();
     for (const listener of listeners) {
       listener();
@@ -118,17 +126,39 @@ export function DesktopSavedCars({ locale }: { locale?: string }) {
   const isBg = locale?.startsWith("bg");
   useEffect(() => {
     const desktop = window.matchMedia("(min-width: 1024px)");
+    const shortlist = dialog.current;
     const closeOnMobile = () => {
       if (!desktop.matches) {
         dialog.current?.close();
       }
     };
+    // A native dialog already supports Escape and the keyboard-operated close button.
+    // Backdrop clicks target the dialog but land outside its visible bounds.
+    const closeOnBackdrop = (event: MouseEvent) => {
+      if (!shortlist || event.target !== shortlist) {
+        return;
+      }
+      const bounds = shortlist.getBoundingClientRect();
+      if (
+        event.clientX < bounds.left ||
+        event.clientX > bounds.right ||
+        event.clientY < bounds.top ||
+        event.clientY > bounds.bottom
+      ) {
+        shortlist.close();
+      }
+    };
     desktop.addEventListener("change", closeOnMobile);
-    return () => desktop.removeEventListener("change", closeOnMobile);
+    shortlist?.addEventListener("click", closeOnBackdrop);
+    return () => {
+      desktop.removeEventListener("change", closeOnMobile);
+      shortlist?.removeEventListener("click", closeOnBackdrop);
+    };
   }, []);
   return (
     <>
       <button
+        aria-haspopup="dialog"
         className={styles.saved}
         data-slot="desktop-saved-cars"
         onClick={() => dialog.current?.showModal()}
@@ -171,12 +201,19 @@ export function DesktopSavedCars({ locale }: { locale?: string }) {
           <div className={styles.grid}>
             {saved.map((car) => (
               <article key={car.id}>
-                <Link href={car.href} onClick={() => dialog.current?.close()}>
+                <Link
+                  href={getLocalizedPublicPath(locale, car.href)}
+                  onClick={() => dialog.current?.close()}
+                >
                   {car.image && (
                     <Image alt="" height={280} src={car.image} width={420} />
                   )}
                   <h3>{car.title}</h3>
-                  <p>{car.price}</p>
+                  <p>
+                    {car.money
+                      ? formatVehicleCardMoney(car.money, "comparison", locale)
+                      : car.price}
+                  </p>
                 </Link>
                 <button onClick={() => toggleCar(car)} type="button">
                   {isBg ? "Премахни" : "Remove"}

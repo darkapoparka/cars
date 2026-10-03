@@ -36,6 +36,8 @@ export default async function AboutPage({ params }: AboutProps) {
   const { locale } = await params;
   const normalized = normalizeSeoLocale(locale);
   const bg = normalized === "bg";
+  const desktopIdentity =
+    publicSite.identity.desktopPreview ?? publicSite.identity;
   const text = (bulgarian: string, english: string) =>
     bg ? bulgarian : english;
   const path = (href: string) => getLocalizedPath(normalized, href);
@@ -118,8 +120,8 @@ export default async function AboutPage({ params }: AboutProps) {
           )}
           locale={normalized}
           title={text(
-            `За ${leadSite.shortName}`,
-            `About ${leadSite.shortName}`
+            `За ${desktopIdentity.shortName}`,
+            `About ${desktopIdentity.shortName}`
           )}
           variant="page"
         />
@@ -133,7 +135,7 @@ export default async function AboutPage({ params }: AboutProps) {
           >
             <div className={styles.galleryLeft}>
               <div className={styles.chapter}>
-                <span>{leadSite.shortName}</span>
+                <span>{desktopIdentity.shortName}</span>
                 <h2>
                   {text("Следващата ви", "Your next")}
                   <br />

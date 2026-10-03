@@ -18,11 +18,15 @@ pnpm --filter web exec next dev -H 127.0.0.1 -p 6462
 ```
 These values are for local review, not hosted production configuration. Do not invent provider credentials.
 
+On Windows, the web configuration uses one image-encoder worker and disables the native libvips operation cache to prevent AVIF stalls under concurrent local browser checks. AVIF/WebP formats, source assets and responsive image hints stay intact. Verify cold and repeated optimized transparent PNG requests with an AVIF `Accept` header, then inspect header icons and ordinary route loading after runtime changes. A warm image cache alone can hide an encoder problem. Other operating systems retain the existing optimizer settings.
+
 For Vercel static-demo deployments, the web app derives the deployment HTTPS origin from Vercel-provided metadata and intentionally collapses web/app/api public origins to that one host. This exception is enabled only when `leadSite.staticDemoMode` is true; full production mode still requires distinct real service origins.
 
 ## Framework checks
 - `pnpm --filter web typecheck`
 - `pnpm --filter web build  # with the documented preview environment`
+
+For desktop changes, also run `pnpm refactor:contracts`, `pnpm release:preflight:contracts` and `pnpm release:preflight:test`. The desktop browser suites are `desktop-panel-flows.spec.ts`, `boxcar-desktop-actions.spec.ts` and `modern-desktop-reuse.spec.ts`; qualify Chromium and WebKit against the same production output. Review complete pages at 1024, 1280, 1440 and 1920 px, plus BG/EN routes, keyboard focus, shortlist persistence, gallery dismissal and local-only form states. Capture 320/390 px and the 1023 px boundary before and after a desktop-only change to prove mobile preservation. None of these local checks replace mounted/public release evidence or owner visual acceptance.
 
 ## Browser matrix
 Test at **390px** and **1440px**. Minimum route set:

@@ -4,107 +4,112 @@
 @media (min-width: 1024px) {
   .footer {
     display: block;
-    color: #fff;
+    color: var(--desktop-surface);
     background: var(--brand);
-    border-radius: 32px 32px 0 0;
+    border-radius: calc(var(--spacing) * 8) calc(var(--spacing) * 8) 0 0;
   }
   .frame {
-    width: min(1320px, calc(100% - 80px));
+    width: min(
+      var(--desktop-showroom-max),
+      calc(100% - calc(var(--spacing) * 20))
+    );
     margin-inline: auto;
   }
   .grid {
     display: grid;
     grid-template-columns: 1.2fr 1fr 1fr 1.1fr;
-    gap: 48px;
-    padding: 64px 0 48px;
+    gap: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 16) 0 calc(var(--spacing) * 12);
   }
   .grid > * {
     min-width: 0;
   }
   .logo {
     display: block;
-    width: 132px;
-    height: 32px;
-    margin-bottom: 20px;
+    width: calc(var(--spacing) * 33);
+    height: calc(var(--spacing) * 8);
+    margin-bottom: calc(var(--spacing) * 5);
     object-fit: contain;
     object-position: left;
   }
   .grid h2 {
-    margin: 0 0 24px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 26px;
+    margin: 0 0 calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 4.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .grid p {
-    margin: 0 0 20px;
-    font-size: 15px;
-    line-height: 26px;
+    margin: 0 0 calc(var(--spacing) * 5);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .contact > a,
   .grid nav > a {
     display: flex;
     align-items: center;
     width: fit-content;
-    min-height: 32px;
-    margin-bottom: 4px;
-    font-size: 15px;
-    line-height: 24px;
+    min-height: calc(var(--spacing) * 8);
+    margin-bottom: calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6);
   }
   .grid :global([data-slot="desktop-saved-cars"]) {
-    min-height: 32px;
-    margin-bottom: 4px;
-    font-size: 15px;
-    font-weight: 400;
+    min-height: calc(var(--spacing) * 8);
+    margin-bottom: calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-normal);
   }
   .grid :global([data-slot="desktop-saved-cars"]) > svg {
     display: none;
   }
   .contact .cta {
     display: inline-flex;
-    gap: 12px;
+    gap: calc(var(--spacing) * 3);
     align-items: center;
     justify-content: center;
-    min-height: 48px;
-    padding: 12px 20px;
-    margin: 4px 0 12px;
-    font-weight: 500;
+    min-height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 5);
+    margin: calc(var(--spacing) * 1) 0 calc(var(--spacing) * 3);
+    font-weight: var(--font-weight-medium);
     color: var(--brand-text);
-    background: white;
-    border-radius: 12px;
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 3);
   }
   .bottom {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 6);
     align-items: center;
     justify-content: space-between;
-    padding: 24px 0 16px;
-    font-size: 14px;
-    line-height: 24px;
-    border-top: 1px solid rgb(255 255 255 / 18%);
+    padding: calc(var(--spacing) * 6) 0 calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
+    border-top: var(--desktop-border-width) solid var(--desktop-inverse-divider);
   }
   .bottom > div {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 6);
   }
   .note {
-    padding: 0 0 24px;
+    padding: 0 0 calc(var(--spacing) * 6);
     margin: 0;
-    font-size: 11px;
-    line-height: 20px;
-    color: rgb(255 255 255 / 85%);
+    font-size: calc(var(--spacing) * 2.75);
+    line-height: calc(var(--spacing) * 5);
+    color: var(--desktop-surface);
   }
   .footer a:hover,
   .footer button:hover {
-    color: white;
+    color: var(--desktop-surface);
     text-decoration: underline;
   }
   .contact .cta:hover {
     color: var(--brand-text);
     text-decoration: none;
-    background: #f0f3ff;
+    background: var(--control-hover);
   }
   .footer :is(a, button):focus-visible {
-    outline: 2px solid white;
-    outline-offset: 4px;
+    outline: var(--desktop-focus-width) solid var(--desktop-surface);
+    outline-offset: calc(var(--spacing) * 1);
   }
 }

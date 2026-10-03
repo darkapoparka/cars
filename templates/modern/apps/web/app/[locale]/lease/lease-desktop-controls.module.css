@@ -2,7 +2,7 @@
   .desktopControls {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    gap: 28px;
+    gap: calc(var(--spacing) * 7);
     min-width: 0;
   }
   .desktopControls > [data-slot="lease-desktop-picker"] {
@@ -11,17 +11,17 @@
   .preferences {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 32px;
+    gap: calc(var(--spacing) * 5) calc(var(--spacing) * 8);
     align-content: start;
     min-width: 0;
   }
   .desktopControls .preferences .heading {
     grid-column: 1 / -1;
     margin: 0;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 32px;
-    letter-spacing: -0.4px;
+    font-size: calc(var(--spacing) * 6);
+    font-weight: var(--font-weight-semibold);
+    line-height: calc(var(--spacing) * 8);
+    letter-spacing: calc(var(--spacing) * -0.1);
   }
   .choiceField {
     min-width: 0;
@@ -31,13 +31,13 @@
   }
   .choiceField legend {
     padding: 0;
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: 400;
+    margin-bottom: calc(var(--spacing) * 2.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-normal);
   }
   .choices {
     display: flex;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
   }
   .choice {
     position: relative;
@@ -62,14 +62,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 52px;
-    padding-inline: 4px;
-    font-size: 14px;
-    font-weight: 400;
+    height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 1);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-normal);
     color: var(--foreground);
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
   }
   .choice input:checked + span {
     color: var(--brand-foreground);
@@ -80,90 +80,96 @@
     border-color: var(--brand);
   }
   .choice input:focus-visible + span {
-    outline: 2px solid var(--brand);
-    outline-offset: 2px;
+    outline: var(--desktop-focus-width) solid var(--brand);
+    outline-offset: calc(var(--spacing) * 0.5);
   }
   .note {
     grid-column: 1 / -1;
     margin: 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
     color: var(--muted-foreground);
   }
   .summary {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) 240px;
-    gap: 24px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) calc(
+        var(--spacing) *
+        60
+      );
+    gap: calc(var(--spacing) * 6);
     align-items: center;
     min-width: 0;
-    padding: 24px;
+    padding: calc(var(--spacing) * 6);
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 16px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
   }
   .principal {
     display: grid;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     min-width: 0;
   }
   .principal > span {
-    font-size: 15px;
+    font-size: calc(var(--spacing) * 3.75);
     color: var(--muted-foreground);
   }
   .principal strong {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: calc(var(--spacing) * 8);
+    font-weight: var(--font-weight-semibold);
     font-variant-numeric: tabular-nums;
-    line-height: 40px;
-    letter-spacing: -0.6px;
+    line-height: calc(var(--spacing) * 10);
+    letter-spacing: calc(var(--spacing) * -0.15);
   }
   .principal small {
-    font-size: 13px;
+    font-size: calc(var(--spacing) * 3.25);
     color: var(--muted-foreground);
   }
   .breakdown {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
+    gap: calc(var(--spacing) * 4);
     padding: 0;
     margin: 0;
   }
   .breakdown > div {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     min-width: 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
   }
   .breakdown dt {
     color: var(--muted-foreground);
   }
   .breakdown dd {
     margin: 0;
-    font-weight: 500;
+    font-weight: var(--font-weight-medium);
     text-align: left;
   }
   .actions :is(a, button) {
     width: 100%;
-    min-height: 52px;
-    padding-inline: 20px;
-    font-size: 15px;
-    border-radius: 12px;
+    min-height: calc(var(--spacing) * 13);
+    padding-inline: calc(var(--spacing) * 5);
+    font-size: calc(var(--spacing) * 3.75);
+    border-radius: calc(var(--spacing) * 3);
   }
 }
 @media (min-width: 1024px) and (max-width: 1279px) {
   .desktopControls {
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
   }
   .summary {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) 240px;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) calc(
+        var(--spacing) *
+        60
+      );
+    gap: calc(var(--spacing) * 5);
   }
   .principal strong {
-    font-size: 28px;
+    font-size: calc(var(--spacing) * 7);
   }
   .choice span {
-    font-size: 13px;
+    font-size: calc(var(--spacing) * 3.25);
   }
 }

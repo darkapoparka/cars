@@ -41,6 +41,13 @@ export interface LeadSiteConfig {
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
   readonly desktopAccent?: string;
+  /** Source-bound master wordmark; dealer adaptation changes the slug and disables it. */
+  readonly desktopPreviewIdentity?: {
+    readonly sourceSlug: string;
+    readonly label: string;
+    readonly wordmark: string;
+    readonly copy: Readonly<Record<"bg" | "en", string>>;
+  };
   readonly district: { readonly bg: string; readonly en: string };
   readonly email: string;
   readonly financingArtworkPath: string;
@@ -100,6 +107,15 @@ export const leadSite: LeadSiteConfig = {
   },
   accent: "#c40101",
   desktopAccent: "#405ff2",
+  desktopPreviewIdentity: {
+    sourceSlug: "day-night-auto-group",
+    label: "Modern",
+    wordmark: "Modern",
+    copy: {
+      bg: "Открийте следващия си автомобил.",
+      en: "Find your next car.",
+    },
+  },
   address: "ул. „Атанас Манчев“ 18, Студентски град",
   city: "София",
   district: { bg: "Студентски град", en: "Studentski grad" },

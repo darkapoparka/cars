@@ -14,7 +14,7 @@
   .nav {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 32px;
+    gap: calc(var(--spacing) * 8);
     align-items: center;
     width: var(--desktop-frame-width);
     max-width: var(--desktop-showroom-max);
@@ -25,13 +25,20 @@
     position: relative;
     display: block;
     justify-self: start;
-    width: 160px;
+    width: calc(var(--spacing) * 40);
     height: calc(var(--spacing) * 12);
     border-radius: var(--radius-sm);
   }
+  .logo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left;
+  }
   .segments {
     display: flex;
-    gap: 32px;
+    gap: calc(var(--spacing) * 8);
     align-items: center;
     justify-content: center;
   }
@@ -41,9 +48,9 @@
     justify-content: center;
     min-height: calc(var(--spacing) * 12);
     padding-inline: 0;
-    font-size: 15px;
+    font-size: calc(var(--spacing) * 3.75);
     font-weight: var(--font-weight-medium);
-    line-height: 24px;
+    line-height: calc(var(--spacing) * 6);
     color: var(--foreground);
     white-space: nowrap;
     transition:
@@ -59,7 +66,7 @@
   }
   .contact {
     display: flex;
-    gap: 28px;
+    gap: calc(var(--spacing) * 7);
     align-items: center;
     justify-content: flex-end;
     justify-self: end;
@@ -93,7 +100,7 @@
   .contact .phone {
     gap: calc(var(--spacing) * 2.5);
     height: calc(var(--spacing) * 12);
-    padding-inline: 24px;
+    padding-inline: calc(var(--spacing) * 6);
     color: var(--brand-foreground);
     background: var(--brand);
   }
@@ -120,13 +127,13 @@
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .nav {
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
   }
   .brand {
-    width: 140px;
+    width: calc(var(--spacing) * 35);
   }
   .segments {
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
   }
   .segments a {
     padding-inline: 0;
@@ -135,6 +142,6 @@
     gap: calc(var(--spacing) * 2);
   }
   .contact .phone {
-    padding-inline: 24px;
+    padding-inline: calc(var(--spacing) * 6);
   }
 }

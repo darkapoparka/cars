@@ -15,6 +15,7 @@
   --text-desktop-fine: 0.6875rem;
   --text-desktop-tiny: 0.625rem;
   --text-desktop-finance: 1.625rem;
+  --text-desktop-wordmark: 1.75rem;
 }
 
 :root {
@@ -159,4 +160,40 @@
   :root {
     --desktop-carousel-basis: calc(100% / 3);
   }
+}
+
+/* Curated dealership desktop surfaces; values preserve the reviewed Boxcars composition. */
+:root {
+  --desktop-banner-start: #e4eaff;
+  --desktop-banner-center: #eef1ff;
+  --desktop-banner-end: #e6edff;
+  --desktop-banner-orbit: #405ff20a;
+  --desktop-banner-orbit-middle: #405ff206;
+  --desktop-banner-orbit-outer: #405ff204;
+  --desktop-breadcrumb-text: #596582;
+  --desktop-description-text: #465270;
+  --desktop-surface-subtle: #f9fbfc;
+  --desktop-preview-surface: #edf3ff;
+  --desktop-prose-text: #3e4557;
+  --desktop-control-border: #e1e1e1;
+  --desktop-panel-border: #e4e7ee;
+  --desktop-support-surface: #f2f4f7;
+  --desktop-about-surface: #eef1fb;
+  --desktop-hero-overlay-top: rgb(5 11 32 / 40%);
+  --desktop-hero-overlay-middle: rgb(5 11 32 / 28%);
+  --desktop-hero-overlay-bottom: rgb(5 11 32 / 16%);
+  --desktop-heading-tracking: -0.02em;
+  --desktop-wordmark-tracking: 0.08em;
+  --desktop-artwork-overlay: rgb(5 11 32 / 70%);
+  --desktop-dialog-backdrop: rgb(5 11 32 / 55%);
+  --desktop-inverse-divider: rgb(255 255 255 / 18%);
+  --desktop-inverse-muted: rgb(255 255 255 / 85%);
+  --desktop-direction-shadow-color: rgb(5 11 32 / 10%);
+  --desktop-form-focus-ring: color-mix(
+    in srgb,
+    var(--desktop-brand) 15%,
+    transparent
+  );
+  --desktop-icon-overlay: rgb(5 11 32 / 80%);
+  --desktop-artwork-shadow-color: rgb(5 11 32 / 15%);
 }

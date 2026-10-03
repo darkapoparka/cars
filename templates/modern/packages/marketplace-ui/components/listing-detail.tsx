@@ -141,6 +141,11 @@ export const ListingDetail = ({
             <div className="relative w-full">
               <ListingGallery
                 badges={galleryBadges}
+                desktopImageSizes={
+                  isDealershipSite
+                    ? "(max-width: 1399px) calc(100vw - 452px), 948px"
+                    : undefined
+                }
                 images={listing.images}
                 key={listing.id}
                 locale={locale}

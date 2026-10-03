@@ -8,89 +8,92 @@
     z-index: var(--desktop-layer-raised);
     grid-row: 2;
     justify-self: center;
-    width: min(calc(100% - 64px), 1090px);
+    width: min(
+      calc(100% - calc(var(--spacing) * 16)),
+      calc(var(--spacing) * 272.5)
+    );
     margin: 0 auto;
   }
   .discoveryContent {
     display: block;
     width: var(--desktop-frame-width);
     max-width: var(--desktop-showroom-max);
-    padding: 40px 0 72px;
+    padding: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 18);
     margin-inline: auto;
   }
   .stockPanel {
-    padding: 28px 32px;
-    background: #f9fbfc;
+    padding: calc(var(--spacing) * 7) calc(var(--spacing) * 8);
+    background: var(--desktop-surface-subtle);
     border: 0;
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
   }
   .sectionHeading {
-    margin-bottom: 20px;
+    margin-bottom: calc(var(--spacing) * 5);
     text-align: center;
   }
   .sectionHeading h2,
   .journalHeading h2 {
     margin: 0;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 44px;
+    font-size: calc(var(--spacing) * 9);
+    font-weight: var(--font-weight-bold);
+    line-height: calc(var(--spacing) * 11);
     letter-spacing: normal;
   }
   .sectionHeading p {
-    margin: 12px auto 0;
-    font-size: 15px;
-    line-height: 26px;
+    margin: calc(var(--spacing) * 3) auto 0;
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6.5);
     color: var(--muted-foreground);
   }
   .stockPanel .sectionHeading h2 {
-    font-size: 32px;
-    line-height: 40px;
+    font-size: calc(var(--spacing) * 8);
+    line-height: calc(var(--spacing) * 10);
   }
   .stockPanel .sectionHeading p {
-    margin-top: 8px;
-    font-size: 14px;
-    line-height: 24px;
+    margin-top: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.5);
+    line-height: calc(var(--spacing) * 6);
   }
   .stockTabs {
     position: relative;
     display: flex;
-    gap: 32px;
+    gap: calc(var(--spacing) * 8);
     justify-content: center;
     width: 100%;
-    margin: 0 auto 24px;
+    margin: 0 auto calc(var(--spacing) * 6);
   }
   .stockTabs::before {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 1px;
+    height: calc(var(--spacing) * 0.25);
     content: "";
     background: var(--desktop-tab-rail);
-    border-radius: 4px;
+    border-radius: calc(var(--spacing) * 1);
   }
   .stockTabs a {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 44px;
-    padding: 0 0 16px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 26px;
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 0 calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6.5);
     text-align: center;
-    border-radius: 12px 12px 0 0;
+    border-radius: calc(var(--spacing) * 3) calc(var(--spacing) * 3) 0 0;
   }
   .stockTabs a::after {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: calc(var(--spacing) * 0.5);
     content: "";
     background: transparent;
-    border-radius: 4px;
+    border-radius: calc(var(--spacing) * 1);
   }
   .stockTabs a:hover {
     color: var(--brand-text);
@@ -105,7 +108,7 @@
   .stockGrid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
     align-items: stretch;
   }
   .stockGrid article {
@@ -114,53 +117,54 @@
   .primaryAction,
   .bannerAction {
     display: flex;
-    gap: 10px;
+    gap: calc(var(--spacing) * 2.5);
     align-items: center;
     justify-content: center;
     width: fit-content;
-    min-width: 200px;
-    min-height: 52px;
-    padding: 0 26px;
-    margin: 32px auto 0;
-    font-size: 15px;
-    font-weight: 500;
+    min-width: calc(var(--spacing) * 50);
+    min-height: calc(var(--spacing) * 13);
+    padding: 0 calc(var(--spacing) * 6.5);
+    margin: calc(var(--spacing) * 8) auto 0;
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
     color: var(--brand-foreground);
     background: var(--brand);
-    border-radius: 12px;
+    border-radius: calc(var(--spacing) * 3);
   }
   .primaryAction:hover {
     background: var(--lead-site-accent-hover);
   }
   .servicesSection {
-    margin-top: 90px;
+    margin-top: calc(var(--spacing) * 22.5);
   }
   .servicesSection .sectionHeading {
-    margin-bottom: 40px;
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .servicesSection .sectionHeading p {
-    margin-top: 14px;
-    font-size: 16px;
+    margin-top: calc(var(--spacing) * 3.5);
+    font-size: calc(var(--spacing) * 4);
   }
   .serviceLinks {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
     align-items: stretch;
   }
   .serviceLinks a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 24px 24px 32px;
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 6)
+      calc(var(--spacing) * 8);
     color: var(--foreground);
     text-align: center;
-    background: #edf3ff;
+    background: var(--desktop-preview-surface);
     border: 0;
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
     box-shadow: none;
   }
-  .serviceLinks a:nth-child(even) {
-    background: #f5f6f8;
+  .serviceLinks a[data-tone="quiet"] {
+    background: var(--desktop-canvas);
   }
   .serviceLinks a > span:not(.serviceArrow) {
     display: flex;
@@ -169,41 +173,41 @@
     align-items: center;
   }
   .serviceLinks strong {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
+    font-size: calc(var(--spacing) * 6);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 8);
   }
   .serviceLinks small {
-    max-width: 260px;
-    min-height: 48px;
-    margin: 12px 0 24px;
-    font-size: 15px;
-    line-height: 24px;
-    color: #3e4557;
+    max-width: calc(var(--spacing) * 65);
+    min-height: calc(var(--spacing) * 12);
+    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.75);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--desktop-prose-text);
     text-wrap: balance;
   }
   .serviceArt {
     order: -1;
     width: 100%;
-    height: 152px;
-    margin-bottom: 24px;
+    height: calc(var(--spacing) * 38);
+    margin-bottom: calc(var(--spacing) * 6);
     object-fit: contain;
   }
   .serviceArrow {
     display: flex;
-    gap: 10px;
+    gap: calc(var(--spacing) * 2.5);
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 230px;
-    min-height: 48px;
-    padding: 12px 18px;
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 24px;
-    color: white;
+    max-width: calc(var(--spacing) * 57.5);
+    min-height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 4.5);
+    font-size: calc(var(--spacing) * 3.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6);
+    color: var(--desktop-surface);
     background: var(--brand);
-    border-radius: 12px;
+    border-radius: calc(var(--spacing) * 3);
   }
   .serviceLinks a:hover .serviceArrow {
     background: var(--inverse);
@@ -220,12 +224,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 96px 24px;
-    margin-top: 90px;
+    padding: calc(var(--spacing) * 24) calc(var(--spacing) * 6);
+    margin-top: calc(var(--spacing) * 22.5);
     overflow: hidden;
-    color: white;
+    color: var(--desktop-surface);
     background: var(--brand);
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
     isolation: isolate;
   }
   .bannerImage {
@@ -238,58 +242,58 @@
     inset: 0;
     z-index: -1;
     content: "";
-    background: rgb(5 11 32 / 70%);
+    background: var(--desktop-artwork-overlay);
   }
   .visitBanner > div {
-    width: min(100%, 760px);
+    width: min(100%, calc(var(--spacing) * 190));
     text-align: center;
   }
   .visitBanner h2 {
     margin: 0;
-    font-size: 52px;
-    font-weight: 500;
-    line-height: 1.15;
-    letter-spacing: -1.2px;
+    font-size: calc(var(--spacing) * 13);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--desktop-leading-display);
+    letter-spacing: calc(var(--spacing) * -0.3);
   }
   .visitBanner p {
-    max-width: 540px;
-    margin: 20px auto 0;
-    font-size: 16px;
-    line-height: 26px;
+    max-width: calc(var(--spacing) * 135);
+    margin: calc(var(--spacing) * 5) auto 0;
+    font-size: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 6.5);
   }
   .bannerAction {
-    min-height: 56px;
-    margin: 32px auto 0;
+    min-height: calc(var(--spacing) * 14);
+    margin: calc(var(--spacing) * 8) auto 0;
     color: var(--foreground);
-    background: white;
+    background: var(--desktop-surface);
   }
   .bannerAction:hover {
     color: var(--brand-text);
     background: var(--control);
   }
   .journalSection {
-    margin-top: 90px;
+    margin-top: calc(var(--spacing) * 22.5);
   }
   .journalHeading {
-    margin-bottom: 50px;
+    margin-bottom: calc(var(--spacing) * 12.5);
     text-align: center;
   }
   .journalHeading > a {
     display: flex;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
-    min-height: 44px;
-    padding: 0 16px;
-    font-size: 15px;
+    min-height: calc(var(--spacing) * 11);
+    padding: 0 calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.75);
     color: var(--brand-text);
     background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
   }
   .journalGrid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
+    gap: calc(var(--spacing) * 7.5);
     align-items: stretch;
   }
   .journalCard {
@@ -309,7 +313,7 @@
     aspect-ratio: 3 / 2;
     margin: 0;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
   }
   .journalImage img {
     object-fit: cover;
@@ -319,42 +323,42 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: 20px 0 0;
+    padding: calc(var(--spacing) * 5) 0 0;
   }
   .journalCard p {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 12px;
+    gap: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
     align-items: center;
-    margin: 0 0 12px;
-    font-size: 13px;
+    margin: 0 0 calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.25);
     color: var(--muted-foreground);
   }
   .journalCategory {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    padding: 6px 14px;
+    top: calc(var(--spacing) * 5);
+    left: calc(var(--spacing) * 5);
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3.5);
     color: var(--foreground);
-    background: white;
-    border-radius: 16px;
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 4);
   }
   .journalCard h3 {
     margin: 0;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 28px;
+    font-size: calc(var(--spacing) * 4.75);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 7);
   }
   .journalAction {
     display: flex;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: space-between;
-    min-height: 40px;
-    padding-top: 16px;
+    min-height: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 4);
     margin-top: auto;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
     color: var(--brand-text);
   }
   .journalCard:hover,
@@ -368,37 +372,38 @@
     box-shadow: none;
   }
   .discoveryContent a:focus-visible {
-    outline: 2px solid var(--ring);
-    outline-offset: 4px;
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: calc(var(--spacing) * 1);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
   .stockGrid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: calc(var(--spacing) * 5);
   }
   .serviceLinks {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
   }
   .serviceLinks a {
-    padding: 24px 24px 32px;
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 6)
+      calc(var(--spacing) * 8);
   }
   .serviceLinks strong {
-    font-size: 24px;
+    font-size: calc(var(--spacing) * 6);
   }
   .visitBanner {
-    padding-inline: 24px;
+    padding-inline: calc(var(--spacing) * 6);
   }
   .visitBanner h2 {
-    font-size: 52px;
+    font-size: calc(var(--spacing) * 13);
   }
   .journalCardBody {
     padding-inline: 0;
   }
   .journalCard h3 {
-    font-size: 19px;
-    line-height: 28px;
+    font-size: calc(var(--spacing) * 4.75);
+    line-height: calc(var(--spacing) * 7);
   }
 }

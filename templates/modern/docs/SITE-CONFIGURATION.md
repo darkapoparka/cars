@@ -22,6 +22,12 @@ Enabled locales are currently the implemented `bg` and `en` dictionaries. A new 
 
 Artwork paths must be validated local absolute paths. Configure a real inverse logo when needed rather than recoloring a customer's bitmap through CSS. `site-artwork.ts` contains reusable fallback artwork, not verified customer identity. All generated originals and the six optimized derivative records are preserved under `provenance/assets/`.
 
+The optional `desktopPreviewIdentity` uses `sourceSlug`, `label`, `wordmark` and localized `copy`. It supplies the Modern wordmark only when the authoring slug still matches `sourceSlug` and static demo mode is enabled. Client adaptation replaces the dealer slug, so desktop automatically consumes the ordinary `name`, `shortName`, `logoPath` and `logoInversePath` fields. The preview fields deliberately avoid those scalar names to preserve Cars' existing adaptation boundary. Mobile continues to use the ordinary identity.
+
+Desktop banner cutouts use optional `artwork.desktopPageBanner.left` and `.right` paths. They follow the same validation and mounted asset handling as other artwork. The showroom card's `desktopSurface` selects its landing or inventory presentation locally; styling does not reach into a parent container.
+
+Desktop shortlist storage is scoped by dealer slug and public base path. The standalone master can read the old unscoped key without deleting it; personalized or mounted copies ignore it. Persisted records are untrusted: only native listing links, unique identities and configured image origins survive parsing. Numeric prices are formatted for the active locale, and saved links follow that locale. This is a device-local shortlist, not an account or hosted service. The public optimizer and thumbnail parser share the remote image allowlist in `packages/marketplace/public-images.ts`.
+
 The optional `artwork.heroScene` is a pre-optimized decorative desktop asset shared by landing and service heroes. Supply a suitably sized WebP (the master uses 2172 × 724 pixels, about 149 KB); it is served directly to preserve its prepared quality. Keep uncompressed originals in provenance, not the served tree. Custom left/right cutouts still disable the default scene through the existing configuration projection. Compact editorial/legal heroes deliberately omit decorative photography.
 
 ## Live dealership binding

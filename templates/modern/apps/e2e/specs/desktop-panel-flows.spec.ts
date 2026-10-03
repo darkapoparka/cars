@@ -198,7 +198,7 @@ test("desktop navigation keeps the header stable through loading", async ({
   });
   for (const [mode, title] of [
     ["buy", "Cars for sale"],
-    ["about", "About Day & Night"],
+    ["about", "About Modern"],
     ["contact", "Contact us"],
     ["home", "Find Your Perfect Car"],
   ]) {

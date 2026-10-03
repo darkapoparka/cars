@@ -10,20 +10,20 @@
   }
   .results {
     display: grid;
-    grid-template-columns: 280px minmax(0, 1fr);
-    gap: 24px;
+    grid-template-columns: calc(var(--spacing) * 70) minmax(0, 1fr);
+    gap: calc(var(--spacing) * 6);
     align-items: start;
     width: var(--desktop-content-width);
     max-width: none;
-    padding: 28px 0 90px;
+    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
     margin-inline: auto;
   }
   .sidebar {
     display: block;
-    padding: 22px;
+    padding: calc(var(--spacing) * 5.5);
     background: var(--panel);
     border: 0;
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
     box-shadow: var(--desktop-surface-shadow);
   }
   .filterBar {
@@ -33,14 +33,14 @@
   .summary {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
-    gap: 16px;
+    gap: calc(var(--spacing) * 4);
     align-items: center;
-    min-height: 80px;
-    padding: 14px 16px;
-    margin-bottom: 20px;
+    min-height: calc(var(--spacing) * 20);
+    padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--spacing) * 5);
     background: var(--panel);
     border: 0;
-    border-radius: 16px;
+    border-radius: calc(var(--spacing) * 4);
     box-shadow: var(--desktop-surface-shadow);
   }
   .heading {
@@ -48,8 +48,8 @@
   }
   .heading h2 {
     position: absolute;
-    width: 1px;
-    height: 1px;
+    width: calc(var(--spacing) * 0.25);
+    height: calc(var(--spacing) * 0.25);
     padding: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -57,14 +57,14 @@
     clip: rect(0, 0, 0, 0);
   }
   .heading output {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 26px;
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    line-height: calc(var(--spacing) * 6.5);
     color: var(--foreground);
   }
   .controls {
     display: flex;
-    gap: 8px;
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-self: end;
   }
@@ -72,18 +72,18 @@
     display: none;
   }
   .sort {
-    gap: 6px;
-    width: 256px;
-    height: 48px;
-    min-height: 48px;
-    padding-inline: 16px;
-    font-size: 14px;
-    font-weight: 400;
+    gap: calc(var(--spacing) * 1.5);
+    width: calc(var(--spacing) * 64);
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-normal);
     color: var(--foreground);
     cursor: pointer;
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }
   .sort:hover,
@@ -91,39 +91,39 @@
     background: var(--control);
   }
   .sortLabel {
-    font-weight: 400;
+    font-weight: var(--font-weight-normal);
     color: var(--muted-foreground);
   }
   .sortMenu {
-    min-width: 256px;
-    padding: 4px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    min-width: calc(var(--spacing) * 64);
+    padding: calc(var(--spacing) * 1);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
     box-shadow: var(--elevation-overlay);
   }
   .sortOption {
-    min-height: 40px;
-    padding-left: 12px;
-    font-size: 14px;
-    border-radius: 8px;
+    min-height: calc(var(--spacing) * 10);
+    padding-left: calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.5);
+    border-radius: calc(var(--spacing) * 2);
   }
   .sortOption[data-state="checked"] {
     color: var(--foreground);
     background: var(--control);
   }
   .viewToggle {
-    gap: 2px;
+    gap: calc(var(--spacing) * 0.5);
     justify-self: end;
-    height: 48px;
-    padding: 4px;
+    height: calc(var(--spacing) * 12);
+    padding: calc(var(--spacing) * 1);
     background: var(--control);
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 3);
   }
   .viewToggle button {
-    width: 38px;
-    height: 38px;
-    border-radius: 8px;
+    width: calc(var(--spacing) * 9.5);
+    height: calc(var(--spacing) * 9.5);
+    border-radius: calc(var(--spacing) * 2);
     box-shadow: none;
   }
   .viewToggle button[aria-pressed="true"] {
@@ -136,36 +136,36 @@
   }
   .grid[data-view="grid"] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: calc(var(--spacing) * 5);
     align-items: stretch;
     width: 100%;
     max-width: none;
   }
   .grid[data-view="list"] {
     grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    gap: calc(var(--spacing) * 6);
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {
   .results {
-    grid-template-columns: 240px minmax(0, 1fr);
-    gap: 24px;
+    grid-template-columns: calc(var(--spacing) * 60) minmax(0, 1fr);
+    gap: calc(var(--spacing) * 6);
   }
   .sidebar {
-    padding: 20px;
+    padding: calc(var(--spacing) * 5);
   }
   .grid[data-view="grid"] {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .sort {
-    width: 216px;
+    width: calc(var(--spacing) * 54);
   }
   .summary {
-    gap: 12px;
-    padding-inline: 16px;
+    gap: calc(var(--spacing) * 3);
+    padding-inline: calc(var(--spacing) * 4);
   }
   .heading output {
-    font-size: 16px;
+    font-size: calc(var(--spacing) * 4);
   }
 }

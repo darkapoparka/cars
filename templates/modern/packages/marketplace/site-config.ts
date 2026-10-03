@@ -12,6 +12,20 @@ export type {
 } from "@repo/marketplace-domain/site-config";
 export { isPublicSitePathEnabled } from "@repo/marketplace-domain/site-config";
 
+const getDesktopPreviewIdentity = (
+  config: LeadSiteConfig
+): PublicSiteConfig["identity"]["desktopPreview"] => {
+  const preview = config.desktopPreviewIdentity;
+  if (!config.staticDemoMode || preview?.sourceSlug !== config.slug) {
+    return undefined;
+  }
+  return {
+    name: preview.label,
+    shortName: preview.wordmark,
+    tagline: preview.copy,
+  };
+};
+
 /** Translate the existing Cars adaptation contract once, at the configuration boundary. */
 export const createPublicSiteConfig = (
   config: LeadSiteConfig
@@ -33,6 +47,7 @@ export const createPublicSiteConfig = (
       logo: config.logoPath,
       inverseLogo: config.logoInversePath ?? config.logoPath,
       icon: config.iconPath ?? config.logoPath,
+      desktopPreview: getDesktopPreviewIdentity(config),
     },
     contact: {
       address: config.address,

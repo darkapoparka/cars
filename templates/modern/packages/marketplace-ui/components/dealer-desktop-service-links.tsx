@@ -103,8 +103,12 @@ export function DealerDesktopServiceLinks({
   );
   return (
     <div className={styles.serviceLinks} data-placement={placement}>
-      {enabled.map(({ path, icon: Icon, title, detail }) => (
-        <Link href={getLocalizedPublicPath(locale, path)} key={path}>
+      {enabled.map(({ path, icon: Icon, title, detail }, index) => (
+        <Link
+          data-tone={index % 2 === 1 ? "quiet" : "default"}
+          href={getLocalizedPublicPath(locale, path)}
+          key={path}
+        >
           {placement === "hero" && (
             <Icon
               aria-hidden="true"
