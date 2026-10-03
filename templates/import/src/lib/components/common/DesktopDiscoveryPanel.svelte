@@ -17,8 +17,11 @@
 <style>
 	.desktop-discovery-panel {
 		--action-strong-border: var(--desktop-discovery-border, transparent);
+		--bc-border: var(--desktop-discovery-border);
+		--bc-control: var(--bc-surface-raised);
+		--bc-surface: var(--bc-surface-raised);
 		width: 100%;
-		max-width: var(--bc-desktop-discovery-width);
+		max-width: var(--hero-panel-width, var(--bc-desktop-discovery-width));
 		margin-inline: auto;
 		border: 1px solid var(--desktop-discovery-border, var(--bc-border));
 		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section));
@@ -34,7 +37,7 @@
 		background: inherit;
 	}
 	.desktop-discovery-panel__body {
-		--desktop-discovery-control-radius: var(--bc-radius-pill);
+		--desktop-discovery-control-radius: var(--bc-desktop-control-radius);
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);

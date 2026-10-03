@@ -69,7 +69,7 @@
 			min-height: var(--bc-control-height-primary);
 			min-width: 0;
 			max-width: min(100%, 240px);
-			border-radius: var(--bc-radius-pill);
+			border-radius: var(--bc-desktop-control-radius);
 			border-color: var(--bc-border);
 			background: var(--bc-control);
 			padding-inline: var(--bc-space-3);

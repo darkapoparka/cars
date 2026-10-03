@@ -21,6 +21,8 @@
 	<PageIntro
 		{title}
 		image="/assets/daynight/services/evaluate-link-service.webp"
+		vehicleArtwork
+		artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 		description={copy.heroDescription}
 	/>
 	<section class="site-section site-container finance-page">

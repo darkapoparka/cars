@@ -243,6 +243,11 @@
 />
 
 <style>
+	@media (min-width: 768px) {
+		:global(.home-hero) {
+			--bc-desktop-discovery-width: var(--bc-container-narrow);
+		}
+	}
 	.home-hero__panel {
 		display: grid;
 		align-content: center;

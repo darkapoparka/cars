@@ -162,14 +162,11 @@
 		main {
 			--bc-border: var(--bc-desktop-editorial-border);
 			--bc-copy: var(--bc-desktop-editorial-muted);
-			--bc-surface: var(--bc-desktop-editorial-canvas);
-			--bc-control: var(--bc-desktop-editorial-canvas);
+			--bc-surface: var(--bc-desktop-panel-surface);
+			--bc-control: var(--bc-desktop-panel-surface);
 			--bc-surface-hover: var(--bc-desktop-editorial-hover);
 			--bc-desktop-action-panel-width: var(--bc-desktop-editorial-action-width);
 			--bc-desktop-team-image-height: var(--bc-desktop-editorial-portrait-height);
-			--desktop-discovery-padding: var(--bc-space-3);
-			--desktop-discovery-radius: var(--bc-desktop-editorial-radius);
-			--desktop-discovery-shadow: var(--bc-desktop-editorial-shadow);
 			background: var(--bc-desktop-editorial-canvas);
 		}
 		.site-section {

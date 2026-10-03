@@ -108,15 +108,15 @@
 		background: var(--bc-dark-hover);
 	}
 	.glass {
-		background: var(--bc-glass-surface);
-		border-color: var(--bc-glass-border);
-		color: var(--bc-white);
+		background: var(--action-glass-surface, var(--bc-glass-surface));
+		border-color: var(--action-glass-border, var(--bc-glass-border));
+		color: var(--action-glass-ink, var(--bc-white));
 		backdrop-filter: blur(12px);
 	}
 	.glass:hover,
 	.glass[aria-pressed='true'] {
-		background: var(--bc-glass-hover);
-		border-color: var(--bc-white);
+		background: var(--action-glass-hover, var(--bc-glass-hover));
+		border-color: var(--action-glass-hover-border, var(--bc-white));
 	}
 	.size-compact {
 		font-size: var(--bc-text-control);

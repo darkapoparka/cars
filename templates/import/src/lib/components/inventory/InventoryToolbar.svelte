@@ -48,7 +48,7 @@
 				onopen={() => onopen(filter)}
 			/>{/each}
 		<Action
-			variant="strong"
+			variant="secondary"
 			size="compact"
 			class="inventory-toolbar__all"
 			aria-haspopup="dialog"
@@ -116,6 +116,8 @@
 	@media (min-width: 768px) {
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			font-size: var(--bc-text-label);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-desktop-control-radius);
 		}
 	}
 	@media (min-width: 901px) {

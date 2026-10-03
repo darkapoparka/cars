@@ -77,7 +77,7 @@
 		min-height: var(--bc-control-height-hero);
 		padding: var(--bc-space-1);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-desktop-control-radius, var(--bc-radius-pill));
 		background: var(--bc-control);
 		color: var(--bc-ink);
 		transition: border-color var(--bc-motion-fast);
@@ -99,7 +99,7 @@
 		min-width: 0;
 		padding: 0 var(--bc-space-3);
 		border: 0;
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-desktop-control-radius, var(--bc-radius-pill));
 		background: transparent;
 		color: inherit;
 		font: inherit;

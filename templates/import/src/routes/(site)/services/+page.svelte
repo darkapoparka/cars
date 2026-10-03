@@ -48,7 +48,8 @@
 		mobileTitle={data.directory.pageTitle}
 		mobileAlign="center"
 		image="/assets/daynight/services/premium-cars-banner-generated.webp"
-		desktopImage="/assets/daynight/banners/services-studio-desktop.webp"
+		vehicleArtwork
+		artworkPanelWidth="var(--bc-desktop-service-search-width)"
 		desktopDescription={data.directory.description}
 	>
 		{#snippet mobileActions()}<form role="search" method="GET">
@@ -132,8 +133,8 @@
 	.service-quick-filters :global(.site-action) {
 		flex: 1 1 0;
 		min-width: max-content;
-		border-radius: var(--bc-radius-pill);
-		padding-inline: var(--bc-space-4);
+		border-radius: var(--bc-desktop-control-radius);
+		padding-inline: var(--bc-space-3);
 	}
 	.service-quick-filters :global(.site-action[aria-pressed='true']) {
 		background: var(--bc-accent-tint);

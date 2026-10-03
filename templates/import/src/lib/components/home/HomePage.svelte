@@ -221,23 +221,16 @@
 		.home-types a {
 			align-content: center;
 			gap: var(--bc-space-3);
-			padding: var(--bc-space-5);
-			border-radius: var(--bc-desktop-card-radius);
-			box-shadow: var(--bc-editorial-shadow);
+			padding: var(--bc-space-4);
+			border-radius: var(--bc-radius-panel);
 		}
 		.home-brands strong,
 		.home-types strong {
-			font: var(--bc-weight-heading) var(--bc-text-entry)/var(--bc-leading-control)
+			font: var(--bc-weight-control) var(--bc-text-control)/var(--bc-leading-control)
 				var(--bc-font-body);
 		}
 		.home-brands > a > span {
 			font-size: var(--bc-text-label);
-		}
-		.home-brands img {
-			height: 68px;
-		}
-		.home-types img {
-			height: 140px;
 		}
 	}
 	@media (max-width: 1100px) {

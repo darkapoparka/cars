@@ -131,8 +131,8 @@
 
 <style>
 	.site-header {
-		background: var(--bc-mobile-dark);
-		color: var(--bc-white);
+		background: var(--bc-desktop-hero-surface, var(--bc-mobile-dark));
+		color: var(--bc-desktop-hero-ink, var(--bc-white));
 	}
 	.site-header__inner {
 		display: grid;
@@ -177,12 +177,12 @@
 		border: 0;
 		padding: 0;
 		border-radius: var(--bc-radius-md);
-		color: var(--bc-dark-muted);
+		color: var(--bc-desktop-hero-copy, var(--bc-dark-muted));
 		text-decoration: none;
 	}
 	:global(.site-header__icon:hover) {
-		background: var(--bc-dark-hover);
-		color: var(--bc-white);
+		background: var(--bc-desktop-hero-hover, var(--bc-dark-hover));
+		color: var(--bc-desktop-hero-ink, var(--bc-white));
 	}
 	:global(.site-language) {
 		display: grid;
@@ -215,7 +215,7 @@
 		min-width: 19px;
 		height: 19px;
 		padding-inline: 4px;
-		border: 2px solid var(--bc-mobile-dark);
+		border: 2px solid var(--bc-desktop-hero-surface, var(--bc-mobile-dark));
 		border-radius: var(--bc-radius-pill);
 		background: var(--bc-accent);
 		color: var(--bc-white);

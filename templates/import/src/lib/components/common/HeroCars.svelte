@@ -39,10 +39,10 @@
 	}
 	@media (min-width: 1200px) {
 		.hero-cars {
-			--car-height: clamp(120px, 11.111vw, 190px);
 			--car-baseline: calc(100% - var(--bc-space-8));
 			--side-room: calc(
-				(100% - var(--hero-panel-width, var(--bc-desktop-discovery-width))) / 2 - var(--bc-space-6)
+				(100cqw - var(--hero-panel-width, var(--bc-desktop-discovery-width))) / 2 -
+					var(--bc-space-6)
 			);
 			display: block;
 			position: absolute;
@@ -52,6 +52,10 @@
 			pointer-events: none;
 		}
 		.hero-cars__car {
+			--car-height: min(
+				clamp(120px, 11.111vw, 190px),
+				calc(var(--side-room) / var(--art-width-ratio))
+			);
 			position: absolute;
 			top: calc(var(--car-baseline) - var(--car-height) * var(--art-bottom-ratio));
 			width: calc(var(--car-height) * var(--art-width-ratio));

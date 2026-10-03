@@ -117,13 +117,13 @@
 	}
 	@media (min-width: 768px) {
 		.social-links--glass a {
-			border: 1px solid var(--bc-glass-border);
-			background: var(--bc-glass-surface);
-			color: var(--bc-white);
+			border: 1px solid var(--bc-desktop-hero-quiet-border);
+			background: var(--bc-desktop-hero-quiet-surface);
+			color: var(--bc-desktop-hero-ink);
 		}
 		.social-links--glass a:hover {
-			border-color: var(--bc-white);
-			background: var(--bc-glass-hover);
+			border-color: var(--bc-desktop-hero-copy);
+			background: var(--bc-desktop-hero-quiet-hover);
 		}
 	}
 </style>

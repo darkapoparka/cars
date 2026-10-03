@@ -202,20 +202,20 @@
 		padding: var(--bc-space-2) var(--bc-space-4);
 		border: 1px solid transparent;
 		border-radius: var(--bc-radius-md);
-		color: var(--bc-dark-muted);
+		color: var(--desktop-discovery-copy, var(--bc-dark-muted));
 		font-size: var(--mode-tab-font-size, var(--bc-text-mode-tab));
 	}
 	.mobile-mode-tabs--panel button:hover {
-		background: var(--bc-glass-surface);
-		color: var(--bc-white);
+		background: var(--bc-surface-raised);
+		color: var(--desktop-discovery-ink, var(--bc-white));
 	}
 	.mobile-mode-tabs--panel button.active {
 		background: transparent;
-		color: var(--bc-white);
+		color: var(--desktop-discovery-ink, var(--bc-white));
 	}
 	.mobile-mode-tabs--panel button.active::after {
 		inset: auto var(--bc-space-4) 0;
-		background: var(--bc-accent-bright);
+		background: var(--bc-accent);
 		border-radius: var(--bc-radius-pill);
 	}
 </style>

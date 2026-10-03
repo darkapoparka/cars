@@ -128,6 +128,13 @@
 	}
 	@media (min-width: 768px) {
 		.site-intro {
+			--action-glass-surface: var(--bc-desktop-hero-quiet-surface);
+			--action-glass-hover: var(--bc-desktop-hero-quiet-hover);
+			--action-glass-border: var(--bc-desktop-hero-quiet-border);
+			--action-glass-ink: var(--bc-desktop-hero-ink);
+			--action-glass-hover-border: var(--bc-desktop-hero-copy);
+			background: var(--bc-desktop-hero-surface);
+			color: var(--bc-desktop-hero-ink);
 			padding-block: var(--bc-desktop-hero-padding-start) var(--bc-desktop-hero-padding-end);
 			text-align: center;
 		}
@@ -140,6 +147,12 @@
 		}
 		.site-intro--cars::after {
 			display: none;
+		}
+		.site-intro--cars {
+			container-type: inline-size;
+		}
+		.site-intro--image:not(.site-intro--cars) {
+			color: var(--bc-white);
 		}
 		h1 {
 			max-width: var(--bc-desktop-hero-title-width);
@@ -155,7 +168,7 @@
 			margin: 0 auto;
 			font-size: var(--bc-text-body);
 			line-height: var(--bc-leading-body-lg);
-			color: inherit;
+			color: var(--bc-desktop-hero-copy);
 		}
 		.site-intro__desktop-actions {
 			display: flex;

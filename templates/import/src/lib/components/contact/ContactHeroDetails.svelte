@@ -42,7 +42,7 @@
 		justify-items: center;
 		gap: var(--bc-space-3);
 		width: min(100%, var(--bc-desktop-action-panel-width));
-		color: var(--bc-white);
+		color: var(--bc-desktop-hero-copy, var(--bc-white));
 	}
 	.contact-hero-details__address {
 		display: flex;
@@ -63,6 +63,6 @@
 		gap: var(--bc-space-3);
 	}
 	.contact-hero-details__actions :global(.site-action) {
-		border-radius: var(--bc-radius-pill);
+		border-radius: var(--bc-desktop-control-radius, var(--bc-radius-pill));
 	}
 </style>
