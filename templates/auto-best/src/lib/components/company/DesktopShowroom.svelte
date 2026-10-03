@@ -131,11 +131,12 @@
       background: var(--dn-red-hover);
     }
     .dn-desktop-showroom__directions {
-      background: var(--dn-surface-subtle);
-      color: var(--dn-ink);
+      background: var(--dn-ink);
+      color: var(--dn-white);
     }
-    .dn-desktop-showroom__directions:hover {
-      background: var(--dn-surface-hover);
+    .dn-desktop-showroom__directions:hover,
+    .dn-desktop-showroom__directions:focus-visible {
+      background: var(--dn-red);
     }
     .dn-desktop-showroom a:focus-visible {
       outline: 3px solid var(--dn-focus);

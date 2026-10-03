@@ -37,6 +37,7 @@ type LeadSiteConfig = {
     serviceBackground: SiteAssetPath;
     homeActionScenes: { sell: SiteAssetPath; import: SiteAssetPath; finance: SiteAssetPath };
     desktopActionScenes: { import: SiteAssetPath; finance: SiteAssetPath };
+    desktopServiceCards: Record<'inspection' | 'import' | 'leasing' | 'trade-in', SiteAssetPath>;
     blogHero: SiteAssetPath;
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
@@ -188,6 +189,12 @@ export const leadSite = {
     desktopActionScenes: {
       import: '/assets/images/template/home-import-front-v4.webp',
       finance: '/assets/images/template/home-finance-front-v4.webp'
+    },
+    desktopServiceCards: {
+      inspection: '/assets/images/template/desktop-service-inspection-v1.webp',
+      import: '/assets/images/template/desktop-service-import-v1.webp',
+      leasing: '/assets/images/template/desktop-service-leasing-v1.webp',
+      'trade-in': '/assets/images/template/desktop-service-trade-in-v1.webp'
     },
     blogHero: mobileGuides,
     editorialBanner: '/assets/images/lead/day-night-editorial-banner-v2.webp',

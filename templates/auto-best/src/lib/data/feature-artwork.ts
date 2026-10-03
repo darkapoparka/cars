@@ -15,6 +15,13 @@ export const featureArtwork = {
   inspection: { src: leadSite.artwork.routeHero.standard.guide, width: 1200, height: 800, crop: [0, 30, 1200, 667] },
 } as const satisfies Record<string, FeatureArtwork>;
 
+// Desktop service menus share the About illustrations; mobile actions retain their own artwork.
+export const desktopServiceArtwork = {
+  showroom: { src: leadSite.artwork.desktopServiceCards.inspection, width: 800, height: 533, crop: [-35, -23, 870, 580] },
+  import: { src: leadSite.artwork.desktopServiceCards.import, width: 800, height: 533, crop: [0, 0, 800, 533] },
+  finance: { src: leadSite.artwork.desktopServiceCards.leasing, width: 800, height: 533, crop: [0, 0, 800, 533] },
+} as const satisfies Record<string, FeatureArtwork>;
+
 // Photo-derived menu vignettes are separate from both service art and blog-listing photos.
 export const editorialArtwork = {
   inspection: { src: '/assets/images/template/menu-editorial-inspection-v1.webp', width: 1536, height: 1024, crop: [0, 0, 1536, 1024] },

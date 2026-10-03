@@ -1,6 +1,6 @@
 import { brand } from '$config/brand';
 import type { Vehicle } from '$data/vehicle-artwork';
-import { editorialArtwork, featureArtwork, type FeatureArtwork } from '$data/feature-artwork';
+import { desktopServiceArtwork, editorialArtwork, type FeatureArtwork } from '$data/feature-artwork';
 
 export type NavigationHref =
   | '/'
@@ -96,9 +96,9 @@ export const navigation: NavigationItem[] = [
       title: brand.name,
       description: 'Научете повече за екипа, процеса на работа и начините за покупка.',
       features: [
-        { id: 'about-showroom', tone: 'ink', artwork: featureArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
-        { id: 'about-import', artwork: featureArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
-        { id: 'about-leasing', tone: 'ink', artwork: featureArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
+        { id: 'about-showroom', tone: 'ink', artwork: desktopServiceArtwork.showroom, title: 'Шоурум и подбор', detail: `Подбрани автомобили в ${brand.city}.`, href: '/about-us' },
+        { id: 'about-import', artwork: desktopServiceArtwork.import, tone: 'red', title: 'Внос по заявка', detail: 'Доставка по ваши критерии.', href: '/contact?topic=import' },
+        { id: 'about-leasing', tone: 'ink', artwork: desktopServiceArtwork.finance, title: 'Собствен лизинг', detail: 'Обсъдете условията директно с екипа.', href: '/contact?topic=leasing' }
       ],
       groups: [
         {
