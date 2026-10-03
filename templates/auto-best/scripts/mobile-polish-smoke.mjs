@@ -15,7 +15,7 @@ async function fits(locator) {
     if (el.scrollWidth > el.clientWidth + 1) problems.push('horizontal clipping');
     if (box.height < 44) problems.push('touch target below 44px');
     const minimumIcon = 15;
-    for (const icon of el.querySelectorAll('svg, .dn-generated-nav-icon')) if (icon.checkVisibility() && icon.getBoundingClientRect().width < minimumIcon) problems.push('collapsed icon');
+    for (const icon of el.querySelectorAll('svg')) if (icon.checkVisibility() && icon.getBoundingClientRect().width < minimumIcon) problems.push('collapsed icon');
     return problems.length ? [{ text: el.textContent.trim(), problems }] : [];
   }));
   assert.deepEqual(failures, []);
@@ -38,7 +38,7 @@ async function compactControl(locator, { icon = false } = {}) {
 }
 async function alignedDock(page) {
   const alignment = await page.locator('.dn-mobile-bottom-nav a,.dn-mobile-bottom-nav button').evaluateAll(controls => controls.map(control => {
-    const icon = control.querySelector('.dn-generated-nav-icon').getBoundingClientRect();
+    const icon = control.querySelector('svg').getBoundingClientRect();
     const label = control.querySelector('.dn-mobile-bottom-nav__label').getBoundingClientRect();
     return { iconTop: icon.top, labelTop: label.top, transform: getComputedStyle(control).transform };
   }));
@@ -261,18 +261,13 @@ try {
           assert(dockStyle.left <= 1 && Math.abs(dockStyle.right - dockStyle.viewport) <= 1 && dockStyle.radius === '0px' && dockStyle.shadow === 'none' && dockStyle.background === 'rgb(255, 255, 255)',
             'The dock is a flat white bar spanning the mobile viewport');
           assert.notEqual(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels stay quieter than body ink');
-          assert.equal(await dock.locator('.dn-generated-nav-icon[data-icon-family="imagegen-generated-nav"]').count(), 5,
-            'All five mobile dock glyphs use the requested generated set');
+          assert.equal(await dock.locator('svg[data-icon-family="fluent-system-regular"][data-icon-state="regular"][viewBox="0 0 24 24"][fill="currentColor"]').count(), 5,
+            'All five mobile dock glyphs use official Fluent Regular geometry');
           assert.equal(await dock.locator('a[aria-current="page"] [data-icon-active="true"]').count(), 1,
-            'The active destination retains its artwork and existing selection highlight');
+            'The active destination retains Regular geometry and its existing selection highlight');
           assert.equal(await dock.locator('a:not([aria-current="page"]) [data-icon-active="false"]').count(), 3,
-            'Inactive destinations retain the same artwork');
-          const glyphs = await dock.locator('.dn-generated-nav-icon').evaluateAll(icons => icons.map(icon => {
-            const box = icon.getBoundingClientRect(), style = getComputedStyle(icon);
-            return { width: box.width, height: box.height, mask: style.maskImage, mode: style.maskMode, color: style.color, paint: style.backgroundColor };
-          }));
-          assert(glyphs.every(icon => icon.width === 24 && icon.height === 24 && icon.mode === 'alpha' && icon.mask.includes('generated-bottom-nav-v3.png') && icon.paint === icon.color),
-            'Every generated glyph keeps its 24px frame, alpha mask and destination color');
+            'Inactive destinations retain the same Regular geometry');
+          assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');
           await alignedDock(page);
           for (const pill of await page.locator('.dn-search__mobile-shortcuts a').all()) await compactControl(pill);
           const trigger = page.locator('.dn-mobile-bottom-nav button');

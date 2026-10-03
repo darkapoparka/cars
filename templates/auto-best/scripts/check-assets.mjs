@@ -14,7 +14,7 @@ const staticRoot = path.join(root, 'static');
 // The mobile BMW vector replaces the low-resolution bitmap at phone widths.
 // One shared graphite-dot background replaces the separate Home section materials.
 // Matching desktop Import/Leasing cutouts retain their full transparent canvases.
-// One transparent generated sprite supplies the five bottom-navbar glyphs.
+// The rejected generated dock trial remains archived for provenance.
 // Four transparent desktop service illustrations complement the retained mobile icons.
 const guardedMediaCount = 189;
 // Preserve the two earlier local Home scene options for provenance.
@@ -59,6 +59,7 @@ retainedSourceAssets.add('/assets/images/template/service-import-v2.webp');
 retainedSourceAssets.add('/assets/images/template/pdp-finance-studio-v1.jpg');
 // Original low-resolution body illustrations remain available as source references.
 for (const number of [1, 2, 3, 8]) retainedSourceAssets.add(`/assets/images/icon-box/car-list${number}.png`);
+retainedSourceAssets.add('/assets/images/template/generated-bottom-nav-v3.png');
 const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
 const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico|auto-best-icon\.svg)/gi;

@@ -1,8 +1,8 @@
-# Generated bottom-navbar implementation
+# Generated bottom-navbar trial history
 
-The refined v3 set is now the default bottom navbar in the canonical Auto Best source. Open [Bulgarian Home](http://127.0.0.1:6461/bg) or [English Home](http://127.0.0.1:6461/en); no preview query or development-only branch is required.
+The owner rejected the refined v3 set on 4 October 2026. The canonical Auto Best source now uses official Fluent Regular SVGs in its bottom navbar. The implementation and verification below describe the previous generated trial and preserve its evidence; they do not represent current visual acceptance.
 
-`src/lib/components/layout/BottomNavIcon.svelte` renders Home, Cars, Sell, Import and Menu from `static/assets/images/template/generated-bottom-nav-v3.png`. The reviewed PNG is unchanged and pinned by `provenance/generated-bottom-nav.json`. Five alpha-mask windows share one scale and center their measured bounds inside 24px frames. Existing destination colors, active pills, labels, links, focus and touch areas remain with the header. Other mobile actions retain Fluent Regular, and typography retains Inter.
+During the trial, `src/lib/components/layout/BottomNavIcon.svelte` rendered Home, Cars, Sell, Import and Menu from `static/assets/images/template/generated-bottom-nav-v3.png`. The archived PNG is unchanged and pinned by `provenance/generated-bottom-nav.json`. Five alpha-mask windows shared one scale and centered their measured bounds inside 24px frames. Existing destination colors, active pills, labels, links, focus and touch areas stayed with the header. Other mobile actions used Fluent Regular, and typography retained Inter.
 
 ## Verification
 
