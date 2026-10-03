@@ -42,7 +42,7 @@ const s = stylex.create({
     objectFit: 'contain',
     objectPosition: 'left center',
   },
-  home: { paddingLeft: 16, paddingRight: 8, backgroundColor: '#fff', color: '#1b1b21' },
+  home: { paddingLeft: 16, paddingRight: 8, color: colors.text },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
   savedAction: {
     display: 'inline-flex',

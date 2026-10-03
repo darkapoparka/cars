@@ -26,7 +26,6 @@ const s = stylex.create({
   },
   primary: {
     paddingBottom: 'calc(4.5rem + env(safe-area-inset-bottom))',
-    backgroundColor: colors.stripe,
   },
   nav: {
     position: 'fixed',

@@ -60,7 +60,7 @@ const s = stylex.create({
   },
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
   content: {
-    backgroundColor: colors.stripe,
+    backgroundColor: colors.background,
     paddingInline: 16,
     paddingTop: { default: 12, '@media (max-width: 699px)': 8 },
     paddingBottom: 24,

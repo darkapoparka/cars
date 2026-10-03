@@ -1,0 +1,395 @@
+[
+  {
+    "name": "contact-390-bg",
+    "requestedWidth": 390,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 390,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Контакт с автосалона",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(240, 242, 245)",
+        "name": "Текст на запитването",
+        "role": null,
+        "tag": "TEXTAREA"
+      }
+    ],
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "name": "cars-390-bg",
+    "requestedWidth": 390,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 390,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Намерете автомобил",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Вид превозно средство",
+        "role": "tablist",
+        "tag": "DIV"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": "tabpanel",
+        "tag": "SECTION"
+      }
+    ],
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "name": "services-390-bg",
+    "requestedWidth": 390,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 390,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Вид услуга",
+        "role": "tablist",
+        "tag": "DIV"
+      }
+    ],
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "name": "price-390-bg",
+    "requestedWidth": 390,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 390,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Намерете автомобил",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Вид превозно средство",
+        "role": "tablist",
+        "tag": "DIV"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": "tabpanel",
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Търсене и филтри",
+        "role": null,
+        "tag": "DIALOG"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Раздели на филтрите",
+        "role": "tablist",
+        "tag": "DIV"
+      },
+      {
+        "background": "rgb(240, 242, 245)",
+        "name": "Търсене на марка",
+        "role": null,
+        "tag": "INPUT"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Цена · От",
+        "role": null,
+        "tag": "INPUT"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Цена · До",
+        "role": null,
+        "tag": "INPUT"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Цена от",
+        "role": null,
+        "tag": "INPUT"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Цена до",
+        "role": null,
+        "tag": "INPUT"
+      }
+    ],
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "contact-320-en",
+    "requestedWidth": 320,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 320,
+    "lang": "en",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Showroom contact",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(240, 242, 245)",
+        "name": "Enquiry message",
+        "role": null,
+        "tag": "TEXTAREA"
+      }
+    ],
+    "overflow": false,
+    "width": 305
+  },
+  {
+    "name": "cars-320-en",
+    "requestedWidth": 320,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 320,
+    "lang": "en",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Find a vehicle",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Vehicle category",
+        "role": "tablist",
+        "tag": "DIV"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": "tabpanel",
+        "tag": "SECTION"
+      }
+    ],
+    "overflow": false,
+    "width": 305
+  },
+  {
+    "name": "services-320-en",
+    "requestedWidth": 320,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 320,
+    "lang": "en",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Service category",
+        "role": "tablist",
+        "tag": "DIV"
+      }
+    ],
+    "overflow": false,
+    "width": 305
+  },
+  {
+    "name": "contact-1440-bg",
+    "requestedWidth": 1440,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 1440,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Контакт с автосалона",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(240, 242, 245)",
+        "name": "Текст на запитването",
+        "role": null,
+        "tag": "TEXTAREA"
+      }
+    ],
+    "overflow": false,
+    "width": 1425
+  },
+  {
+    "name": "detail-390-bg",
+    "requestedWidth": 390,
+    "canvas": "rgb(255, 255, 255)",
+    "height": 844,
+    "hydrated": "true",
+    "innerWidth": 390,
+    "lang": "bg",
+    "nodes": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "HEADER"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Информация за автомобила",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": "Информация за автомобила",
+        "role": "tablist",
+        "tag": "DIV"
+      },
+      {
+        "background": "rgba(0, 0, 0, 0)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Цена и контакт",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": "Основни данни",
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "name": null,
+        "role": null,
+        "tag": "SECTION"
+      }
+    ],
+    "overflow": false,
+    "width": 375
+  }
+]

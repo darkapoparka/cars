@@ -1,0 +1,386 @@
+[
+  {
+    "name": "services-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      }
+    ],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "cars-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      }
+    ],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 1774
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 1774
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 1774
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 1774
+      },
+      {
+        "alt": "",
+        "complete": true,
+        "naturalWidth": 1774
+      },
+      {
+        "alt": "BMW X6",
+        "complete": true,
+        "naturalWidth": 1280
+      },
+      {
+        "alt": "BMW 540",
+        "complete": true,
+        "naturalWidth": 1280
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "contact-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "SECTION"
+      }
+    ],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "import-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "ARTICLE"
+      }
+    ],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      },
+      {
+        "alt": "BMW 540",
+        "complete": true,
+        "naturalWidth": 1280
+      },
+      {
+        "alt": "BMW X3",
+        "complete": true,
+        "naturalWidth": 1280
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "sell-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "financing-390-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "SECTION"
+      }
+    ],
+    "clientWidth": 375,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 390
+  },
+  {
+    "name": "services-320-en",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      }
+    ],
+    "clientWidth": 305,
+    "images": [
+      {
+        "alt": "Your showroom",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "en",
+    "overflow": false,
+    "width": 320
+  },
+  {
+    "name": "services-1440-bg",
+    "canvas": "rgb(255, 255, 255)",
+    "cards": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "border": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "tag": "A"
+      }
+    ],
+    "clientWidth": 1425,
+    "images": [
+      {
+        "alt": "Вашият автосалон",
+        "complete": true,
+        "naturalWidth": 2162
+      }
+    ],
+    "lang": "bg",
+    "overflow": false,
+    "width": 1440
+  }
+]

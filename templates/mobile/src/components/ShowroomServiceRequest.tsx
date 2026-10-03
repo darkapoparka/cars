@@ -36,8 +36,15 @@ import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
-  banner: { backgroundColor: colors.background, borderRadius: 16, padding: 16, minWidth: 0 },
-  importBanner: { borderWidth: 1, borderStyle: 'solid', borderColor: colors.line },
+  banner: {
+    backgroundColor: colors.background,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 16,
+    padding: 16,
+    minWidth: 0,
+  },
   introRow: { display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 },
   heading: {
     fontSize: 18,
@@ -436,7 +443,7 @@ export function ShowroomServiceRequest({
         ref={overviewRef}
         aria-labelledby={'service-request-' + kind + '-heading'}
         data-service-request-banner={kind}
-        {...stylex.props(s.banner, importing && s.importBanner)}
+        {...stylex.props(s.banner)}
       >
         <div {...stylex.props(s.introRow)}>
           <h2 id={'service-request-' + kind + '-heading'} {...stylex.props(s.heading)}>

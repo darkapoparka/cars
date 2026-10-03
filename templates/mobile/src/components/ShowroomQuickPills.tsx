@@ -17,7 +17,7 @@ const s = stylex.create({
     paddingBottom: 4,
     minWidth: 0,
   },
-  backdrop: { backgroundColor: colors.stripe },
+  backdrop: { backgroundColor: colors.background },
   flush: { paddingInline: 0, paddingTop: 0, paddingBottom: 0 },
   button: {
     display: 'inline-flex',
@@ -44,7 +44,7 @@ const s = stylex.create({
     borderStyle: 'solid',
     borderColor: colors.line,
     borderRadius: 20,
-    backgroundColor: colors.background,
+    backgroundColor: colors.controlSurface,
     color: colors.muted,
     fontSize: 15,
     fontWeight: 500,

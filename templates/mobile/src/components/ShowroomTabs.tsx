@@ -12,7 +12,7 @@ const s = stylex.create({
     minHeight: 52,
     marginTop: 8,
     paddingInline: 16,
-    backgroundColor: colors.background,
+    backgroundColor: 'transparent',
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
     borderBottomColor: colors.line,

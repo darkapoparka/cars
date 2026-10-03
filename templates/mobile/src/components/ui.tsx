@@ -39,7 +39,7 @@ export const ui = stylex.create({
     borderStyle: 'solid',
     borderColor: '#818592',
     borderRadius: 8,
-    backgroundColor: colors.background,
+    backgroundColor: colors.controlSurface,
     color: colors.text,
     fontSize: 16,
     outlineOffset: 3,
@@ -108,7 +108,7 @@ const s = stylex.create({
   floating: { minHeight: 48, borderRadius: 24, paddingInline: 24 },
   dense: { minHeight: 36, paddingBlock: 6 },
   disabled: {
-    backgroundColor: '#f2f3f6',
+    backgroundColor: colors.controlSurface,
     borderColor: '#c7cbd3',
     color: '#b0b6c0',
     opacity: 1,
@@ -192,7 +192,7 @@ const s = stylex.create({
   materialDialog: {
     padding: 0,
     maxWidth: 360,
-    backgroundColor: '#fdfcff',
+    backgroundColor: colors.background,
     '::backdrop': { backgroundColor: 'rgba(0,0,0,.33)' },
   },
   flowSheet: {

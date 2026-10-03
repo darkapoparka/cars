@@ -75,7 +75,7 @@ const s = stylex.create({
     borderRadius: 8,
     minHeight: 44,
     paddingBlock: 10,
-    backgroundColor: colors.background,
+    backgroundColor: colors.controlSurface,
     color: colors.muted,
     paddingInline: 12,
     gap: 8,

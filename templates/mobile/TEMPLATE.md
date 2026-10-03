@@ -31,6 +31,17 @@ The formerly used Phosphor source and MIT license remain under
 and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
+Backgrounds use the same roles across routes and viewport sizes:
+`colors.background` for the continuous white page canvas, header, sticky page
+controls, cards, information surfaces and overlays; `colors.controlSurface` for
+fields, filter pills and secondary actions. Tab rails inherit their owning page
+or sheet surface. No route adds its own neutral palette. The document background
+uses the same white page token, including outside the centered desktop frame.
+White service, vehicle and import cards, Contact panels and enquiry starters use
+the same 1px `colors.line` border. This keeps distinct groups visible on the white
+canvas without adding another background color or shadow. Existing corner radii
+and padding remain.
+
 Home search and filter pills open one editor with the same underline tabs: Search,
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
@@ -75,8 +86,8 @@ the captured terms. Ratings, prices and finance terms remain sample data requiri
 dealer verification. Owner visual acceptance and phone-browser checks remain pending.
 
 Services has three equal-width All / Import / Sell tabs that fill the viewport.
-Import uses a white starter card with a thin border, a small globe beside its
-heading and a neutral entry area; Sell keeps its white starter box. Their compact entry
+Import and Sell use white starter cards with the same thin border. Import puts
+a small globe beside its heading and a neutral entry area. Their compact entry
 buttons open a three-step enquiry sheet at the optional VIN field. Under the tabs,
 secondary pills filter services, example import
 countries or sale purpose. Country and sale type prefill new enquiries; resumed
@@ -93,9 +104,9 @@ Underline tabs keep 52px targets and use a wider 3px active rail. Home and filte
 editor tabs scroll horizontally at their own widths. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
-Home and service pills sit on the same grey background as the listings below,
-without a separate white strip. Their white 40px outlined faces use 15px text
-inside 48px targets. Selected pills keep their white background, with darker
+Home and service pills sit on the same white canvas as the listings below.
+Their grey 40px outlined faces use 15px text
+inside 48px targets. Selected pills keep their grey background, with darker
 text and a stronger border.
 Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
 the 52px rail height and horizontal scrolling. Their original pixels and alpha
@@ -144,11 +155,11 @@ Mobile uses locally bundled Manrope Latin and Cyrillic subsets under their OFL
 license, keeping Bulgarian labels, model names and prices in one family. The
 BG/EN header action has a transparent background and a 44px touch target. Mobile
 vehicle detail ends on a white surface with dividers around contact and related
-cars, without outer card frames. Header, font and surface changes stay below
+cars, without outer card frames. The mobile font and flat detail footer stay below
 700px; desktop retains its original typography and framed detail footer.
 
-Contact puts rounded grey Call us / Visit us actions on a white strip below the
-logo header. A white enquiry card sits in the grey section below, centered within
+Contact puts rounded grey Call us / Visit us actions on the shared white page
+canvas below the logo header. The enquiry form sits in a white outlined card, centered within
 620px on wider screens. Verified phone and directions enable the native links;
 missing details show inactive preview actions. Email is offered when configured.
 The compact Save enquiry draft button retains local storage and native validation.

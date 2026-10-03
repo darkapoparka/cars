@@ -1,0 +1,342 @@
+[
+  {
+    "name": "contact-390-bg",
+    "requestedWidth": 390,
+    "metrics": {
+      "height": 844,
+      "lang": "bg",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 100,
+          "label": "Контакт с автосалона",
+          "tag": "SECTION",
+          "width": 375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 363,
+          "label": "showroom-enquiry-heading",
+          "tag": "SECTION",
+          "width": 343
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 120,
+          "label": "Текст на запитването",
+          "tag": "TEXTAREA",
+          "width": 311
+        }
+      ],
+      "width": 375
+    }
+  },
+  {
+    "name": "cars-390-bg",
+    "requestedWidth": 390,
+    "metrics": {
+      "height": 844,
+      "lang": "bg",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 165,
+          "label": "Намерете автомобил",
+          "tag": "SECTION",
+          "width": 375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Вид превозно средство",
+          "tag": "DIV",
+          "width": 375
+        },
+        {
+          "background": "rgb(245, 247, 250)",
+          "height": 1503.5,
+          "label": "category-car",
+          "tag": "SECTION",
+          "width": 375
+        }
+      ],
+      "width": 375
+    }
+  },
+  {
+    "name": "services-390-bg",
+    "requestedWidth": 390,
+    "metrics": {
+      "height": 844,
+      "lang": "bg",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 375
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Вид услуга",
+          "tag": "DIV",
+          "width": 375
+        }
+      ],
+      "width": 375
+    }
+  },
+  {
+    "name": "price-390-bg",
+    "requestedWidth": 390,
+    "metrics": {
+      "height": 844,
+      "lang": "bg",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 390
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 165,
+          "label": "Намерете автомобил",
+          "tag": "SECTION",
+          "width": 390
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Вид превозно средство",
+          "tag": "DIV",
+          "width": 390
+        },
+        {
+          "background": "rgb(245, 247, 250)",
+          "height": 1541,
+          "label": "category-car",
+          "tag": "SECTION",
+          "width": 390
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 844,
+          "label": "Търсене и филтри",
+          "tag": "DIALOG",
+          "width": 390
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Раздели на филтрите",
+          "tag": "DIV",
+          "width": 390
+        },
+        {
+          "background": "rgb(240, 242, 245)",
+          "height": 0,
+          "label": "Търсене на марка",
+          "tag": "INPUT",
+          "width": 0
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 0,
+          "label": null,
+          "tag": "SECTION",
+          "width": 0
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 56,
+          "label": "Цена · От",
+          "tag": "INPUT",
+          "width": 342
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 56,
+          "label": "Цена · До",
+          "tag": "INPUT",
+          "width": 342
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 24,
+          "label": "Цена от",
+          "tag": "INPUT",
+          "width": 120.609375
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "height": 24,
+          "label": "Цена до",
+          "tag": "INPUT",
+          "width": 120.609375
+        }
+      ],
+      "width": 390
+    }
+  },
+  {
+    "name": "contact-320-en",
+    "requestedWidth": 320,
+    "metrics": {
+      "height": 844,
+      "lang": "en",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 305
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 120,
+          "label": "Showroom contact",
+          "tag": "SECTION",
+          "width": 305
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 365,
+          "label": "showroom-enquiry-heading",
+          "tag": "SECTION",
+          "width": 273
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 120,
+          "label": "Enquiry message",
+          "tag": "TEXTAREA",
+          "width": 241
+        }
+      ],
+      "width": 305
+    }
+  },
+  {
+    "name": "cars-320-en",
+    "requestedWidth": 320,
+    "metrics": {
+      "height": 844,
+      "lang": "en",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 305
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 165,
+          "label": "Find a vehicle",
+          "tag": "SECTION",
+          "width": 305
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Vehicle category",
+          "tag": "DIV",
+          "width": 305
+        },
+        {
+          "background": "rgb(245, 247, 250)",
+          "height": 1328.5,
+          "label": "category-car",
+          "tag": "SECTION",
+          "width": 305
+        }
+      ],
+      "width": 305
+    }
+  },
+  {
+    "name": "services-320-en",
+    "requestedWidth": 320,
+    "metrics": {
+      "height": 844,
+      "lang": "en",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 305
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 53,
+          "label": "Service category",
+          "tag": "DIV",
+          "width": 305
+        }
+      ],
+      "width": 305
+    }
+  },
+  {
+    "name": "contact-1440-bg",
+    "requestedWidth": 1440,
+    "metrics": {
+      "height": 844,
+      "lang": "bg",
+      "sections": [
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 60,
+          "label": null,
+          "tag": "HEADER",
+          "width": 1100
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 100,
+          "label": "Контакт с автосалона",
+          "tag": "SECTION",
+          "width": 1100
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 343,
+          "label": "showroom-enquiry-heading",
+          "tag": "SECTION",
+          "width": 620
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 120,
+          "label": "Текст на запитването",
+          "tag": "TEXTAREA",
+          "width": 588
+        }
+      ],
+      "width": 1425
+    }
+  }
+]
