@@ -7,10 +7,7 @@ import {
   Boxes,
   Clock3,
   Factory,
-  Fuel,
-  Gauge,
   MapPin,
-  Settings2,
   ShieldCheck,
   Ship,
   Store,
@@ -51,7 +48,6 @@ import {
 } from "../lib/vehicle-card-policy";
 import type {
   VehicleCardPriceInsight,
-  VehicleCardProps,
   VehicleCardTrustSignal,
 } from "../lib/vehicle-card-types";
 import {
@@ -622,12 +618,10 @@ const ComparisonVehicleCardContent = ({
 
 /** Compact desktop presentation using the same title, price, media and fact policies as other cards. */
 const ShowroomVehicleCardContent = ({
-  compactFacts,
   listing,
   listingHref,
   locale,
 }: {
-  compactFacts: boolean;
   listing: VehicleListing;
   listingHref: string;
   locale?: string;
@@ -653,20 +647,13 @@ const ShowroomVehicleCardContent = ({
       >
         {facts.map((fact) => (
           <li
-            aria-label={
-              compactFacts && fact.displayValue ? fact.value : undefined
-            }
+            aria-label={fact.displayValue ? fact.value : undefined}
             data-fact={fact.id}
             key={fact.id}
             title={fact.value}
           >
-            {fact.id === "mileage" && <Gauge aria-hidden size={18} />}
-            {fact.id === "fuel" && <Fuel aria-hidden size={18} />}
-            {fact.id === "transmission" && <Settings2 aria-hidden size={18} />}
-            <span
-              aria-hidden={compactFacts && fact.displayValue ? true : undefined}
-            >
-              {compactFacts ? (fact.displayValue ?? fact.value) : fact.value}
+            <span aria-hidden={fact.displayValue ? true : undefined}>
+              {fact.displayValue ?? fact.value}
             </span>
           </li>
         ))}
@@ -756,7 +743,6 @@ const ListVehicleCardContent = ({
 
 export const VehicleCardContent = ({
   desktopHeadingLevel,
-  desktopSurface = "inventory",
   isDesktopComparison,
   listing,
   listingHref,
@@ -768,7 +754,6 @@ export const VehicleCardContent = ({
   variant,
 }: {
   desktopHeadingLevel: 2 | 3;
-  desktopSurface?: VehicleCardProps["desktopSurface"];
   isDesktopComparison: boolean;
   listing: VehicleListing;
   listingHref: string;
@@ -783,7 +768,6 @@ export const VehicleCardContent = ({
   if (presentation === "showroom") {
     desktopContent = (
       <ShowroomVehicleCardContent
-        compactFacts={desktopSurface === "landing"}
         listing={listing}
         listingHref={listingHref}
         locale={locale}

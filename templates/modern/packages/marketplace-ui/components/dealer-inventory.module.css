@@ -15,8 +15,11 @@
     align-items: start;
     width: var(--desktop-content-width);
     max-width: none;
-    padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
+    padding: calc(var(--spacing) * 6);
+    margin-block: calc(var(--spacing) * 10) calc(var(--spacing) * 18);
     margin-inline: auto;
+    background: var(--desktop-surface-subtle);
+    border-radius: calc(var(--spacing) * 4);
   }
   .sidebar {
     display: block;

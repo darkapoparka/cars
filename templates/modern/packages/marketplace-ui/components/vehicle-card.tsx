@@ -185,7 +185,6 @@ export const VehicleCard = ({
 
       <VehicleCardContent
         desktopHeadingLevel={desktopHeadingLevel}
-        desktopSurface={desktopSurface}
         isDesktopComparison={isDesktopComparison}
         listing={listing}
         listingHref={listingHref}

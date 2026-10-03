@@ -6,6 +6,7 @@ import type {
   VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import { publicSite } from "@repo/marketplace/site-config";
 import type { ReactNode } from "react";
 import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-policy";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
@@ -28,6 +29,9 @@ export const DealerDesktopToolbar = ({
   return (
     <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
       <DealerDesktopHero
+        artwork={
+          publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+        }
         description={
           locale?.startsWith("bg")
             ? "Открийте автомобил. Запазете и сравнете избора си."

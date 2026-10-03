@@ -67,29 +67,40 @@ test("the desktop hero preloads only at desktop widths", async ({ page }) => {
   });
   for (const width of [320, 390, 1023]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.goto("/en");
-    await expect(
-      page.locator('[data-slot="public-route-loading-content"]')
-    ).toBeHidden();
-    await expect(
-      page.locator(
-        'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
-      )
-    ).toHaveAttribute("media", "(min-width: 1024px)");
+    for (const path of ["/en", "/en/cars"]) {
+      await page.goto(path, { waitUntil: "domcontentloaded" });
+      await expect(
+        page.locator('[data-slot="public-route-loading-content"]')
+      ).toBeHidden();
+      await expect(
+        page.locator(
+          '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]'
+        )
+      ).toBeHidden();
+      await expect(
+        page.locator(
+          'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
+        )
+      ).toHaveAttribute("media", "(min-width: 1024px)");
+    }
   }
   expect(heroRequests).toEqual([]);
   for (const width of [1024, 1280, 1440, 1920]) {
     await page.setViewportSize({ width, height: 900 });
-    await page.reload();
-    await expect(
-      page.locator('[data-slot="dealer-desktop-home-hero"]:visible')
-    ).toBeVisible();
-    await expect.poll(() => heroRequests.length).toBeGreaterThan(0);
-    const preload = page.locator(
-      'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
-    );
-    await expect(preload).toHaveCount(1);
-    await expect(preload).toHaveAttribute("fetchpriority", "high");
+    for (const path of ["/en", "/en/cars"]) {
+      await page.goto(path, { waitUntil: "domcontentloaded" });
+      await expect(
+        page.locator(
+          '[data-slot="dealer-desktop-home-hero"]:visible, [data-slot="dealer-desktop-context-hero"][data-variant="inventory"]:visible'
+        )
+      ).toBeVisible();
+      await expect.poll(() => heroRequests.length).toBeGreaterThan(0);
+      const preload = page.locator(
+        'head link[rel="preload"][as="image"][href$="/desktop-boxcars/hero.jpg"]'
+      );
+      await expect(preload).toHaveCount(1);
+      await expect(preload).toHaveAttribute("fetchpriority", "high");
+    }
   }
 });
 

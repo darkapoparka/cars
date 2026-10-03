@@ -68,14 +68,9 @@
     line-height: var(--desktop-leading-copy);
     color: var(--muted-foreground);
   }
-  .hero[data-variant="landing"] {
-    display: grid;
-    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
-    gap: 0;
+  .hero:is([data-variant="landing"], [data-variant="inventory"]) {
     width: var(--desktop-frame-width);
     max-width: var(--desktop-showroom-max);
-    height: var(--desktop-home-hero-height);
-    min-height: var(--desktop-home-hero-height);
     padding: 0;
     margin-inline: auto;
     color: var(--inverse-foreground);
@@ -91,6 +86,13 @@
     background-position: center;
     background-size: cover;
     border-radius: var(--radius-desktop-frame);
+  }
+  .hero[data-variant="landing"] {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 0;
+    height: var(--desktop-home-hero-height);
+    min-height: var(--desktop-home-hero-height);
   }
   .hero[data-variant="landing"] .copy {
     grid-row: 1;
@@ -120,19 +122,6 @@
     font-weight: var(--font-weight-normal);
     line-height: calc(var(--spacing) * 6);
     color: var(--inverse-foreground);
-  }
-  .hero[data-variant="inventory"] {
-    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 9);
-    background: var(--desktop-surface);
-  }
-  .hero[data-variant="inventory"] .copy {
-    text-align: center;
-  }
-  .hero[data-variant="inventory"] .description {
-    max-width: none;
-    margin-top: calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 3.75);
-    line-height: calc(var(--spacing) * 6.5);
   }
   .hero[data-variant="page"] .copy {
     text-align: center;
@@ -198,7 +187,7 @@
 
 /* The curated Boxcar banner is desktop only; mobile retains its existing chrome. */
 @media (min-width: 1024px) {
-  .hero:not([data-variant="landing"]) {
+  .hero:not([data-variant="landing"], [data-variant="inventory"]) {
     padding: 0;
     background: var(--desktop-surface);
   }
@@ -298,6 +287,35 @@
     padding: calc(var(--spacing) * 7) 0 calc(var(--spacing) * 22.5);
     margin: 0;
     background: var(--desktop-surface);
+  }
+  .hero[data-variant="inventory"] .banner {
+    min-height: calc(var(--spacing) * 56);
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+    background: transparent;
+  }
+  .hero[data-variant="inventory"] {
+    background-position: center 95%;
+  }
+  .hero[data-variant="inventory"] .banner::before,
+  .hero[data-variant="inventory"] .banner::after {
+    display: none;
+  }
+  .hero[data-variant="inventory"] .copy {
+    width: min(100%, calc(var(--spacing) * 225));
+  }
+  .hero[data-variant="inventory"] .breadcrumb,
+  .hero[data-variant="inventory"] .breadcrumb a,
+  .hero[data-variant="inventory"] .description {
+    color: var(--inverse-foreground);
+  }
+  .hero[data-variant="inventory"] .breadcrumb a:hover {
+    text-decoration: underline;
+    text-underline-offset: var(--spacing);
+  }
+  .hero[data-variant="inventory"] .breadcrumb a:focus-visible {
+    outline: var(--desktop-focus-width) solid currentcolor;
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: var(--radius-sm);
   }
 }
 

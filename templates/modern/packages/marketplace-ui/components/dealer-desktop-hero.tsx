@@ -2,6 +2,7 @@ import { withBasePath } from "@repo/internationalization/paths";
 import { publicSite } from "@repo/marketplace/site-config";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
+import { preload } from "react-dom";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-hero.module.css";
 import { DesktopActionPanel } from "./desktop-action-panel";
@@ -30,6 +31,13 @@ export function DealerDesktopHero({
   variant = "page",
   children,
 }: DealerDesktopHeroProps) {
+  if (artwork) {
+    preload(withBasePath(artwork), {
+      as: "image",
+      fetchPriority: "high",
+      media: "(min-width: 1024px)",
+    });
+  }
   const isLanding = variant === "landing";
   const titleId = isLanding ? "desktop-home-title" : "desktop-page-title";
   const heading = (

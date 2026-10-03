@@ -144,6 +144,26 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
         ).toBeVisible();
         expect(await header.boundingBox()).toEqual(headerBox);
         if (path === "/cars") {
+          const inventoryHero = page.locator(
+            '[data-slot="dealer-desktop-context-hero"][data-variant="inventory"]'
+          );
+          const inventoryHeroBox = await inventoryHero.boundingBox();
+          expect(inventoryHeroBox?.x).toBe(heroBox?.x);
+          expect(inventoryHeroBox?.width).toBe(heroBox?.width);
+          expect(inventoryHeroBox?.height).toBeLessThan(heroBox?.height ?? 0);
+          expect(
+            await inventoryHero.evaluate(
+              (element) => getComputedStyle(element).backgroundImage
+            )
+          ).toContain("desktop-boxcars/hero.jpg");
+          const panel = await page
+            .locator('[data-slot="dealer-inventory-panel"]:visible')
+            .boundingBox();
+          expect(panel?.x).toBe(heroBox?.x);
+          expect(panel?.width).toBe(heroBox?.width);
+          expect(panel?.y).toBeGreaterThan(
+            (inventoryHeroBox?.y ?? 0) + (inventoryHeroBox?.height ?? 0)
+          );
           const sidebar = await page
             .locator('[data-slot="dealer-inventory-sidebar"]')
             .boundingBox();
@@ -160,8 +180,8 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
             )
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
-            expect(sidebar?.x).toBe(60);
-            expect(sidebar?.y).toBe(298);
+            expect(sidebar?.x).toBe((panel?.x ?? 0) + 24);
+            expect(sidebar?.y).toBe((panel?.y ?? 0) + 24);
           }
         }
         expect(

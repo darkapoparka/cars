@@ -28,6 +28,12 @@ import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
 import { VehicleCard } from "./vehicle-card";
 
+// Dealer grid: frame gutters, panel padding, sidebar, grid gaps and card borders.
+const dealerImageSizes = {
+  grid: "(max-width: 1279px) calc((100vw - 416px) / 2), (max-width: 1399px) calc((100vw - 478px) / 3), 308px",
+  list: "272px",
+} as const;
+
 export const MarketplaceResults = ({
   activeFilterCount,
   appBaseUrl,
@@ -94,6 +100,7 @@ export const MarketplaceResults = ({
         hideDesktop && "lg:hidden"
       )}
       data-desktop-hidden={hideDesktop}
+      data-slot={isDealershipSite ? "dealer-inventory-panel" : undefined}
     >
       {isDealershipSite && !hideDesktop && (
         <aside
@@ -163,6 +170,9 @@ export const MarketplaceResults = ({
               {listings.map((listing, index) => (
                 <VehicleCard
                   density="compact"
+                  desktopImageSizes={
+                    isDealershipSite ? dealerImageSizes[viewMode] : undefined
+                  }
                   desktopLayout={viewMode}
                   href={buildMarketplaceSearchHref(
                     { deliverTo: filters.deliverTo },

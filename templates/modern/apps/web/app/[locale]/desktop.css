@@ -48,7 +48,10 @@
   }
 
   :root[data-site-kind="dealership"]
-    [data-slot="marketplace-main"]:has([data-slot="dealer-desktop-home-hero"]) {
+    [data-slot="marketplace-main"]:has(
+      [data-slot="dealer-desktop-home-hero"],
+      [data-slot="dealer-desktop-inventory-hero"]
+    ) {
     --background: var(--desktop-surface);
     background: var(--background);
   }

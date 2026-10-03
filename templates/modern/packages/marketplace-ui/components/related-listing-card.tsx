@@ -42,6 +42,7 @@ const DesktopRelatedListingCard = ({
     return (
       <VehicleCard
         desktopHeadingLevel={3}
+        desktopImageSizes="(max-width: 1199px) calc((100vw - 126px) / 3), (max-width: 1399px) calc((100vw - 148px) / 4), 313px"
         desktopLayout="grid"
         href={href}
         listing={listing}
