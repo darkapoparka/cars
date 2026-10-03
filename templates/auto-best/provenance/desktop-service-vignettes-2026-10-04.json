@@ -1,0 +1,86 @@
+[
+  {
+    "key": "inspection",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-d3804862-9711-466b-be10-343103782427.png",
+    "destination": "static/assets/images/template/desktop-service-inspection-v2.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bytes": 42786,
+    "sourceSha256": "42970c956437450742e58cbeb2fad33cce79bc0aa4aa0421b06aab4f970703e9",
+    "sha256": "75167a9e93b1b989b0394407397206a4c099e956b9f62e509db990674ef18526",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "import",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-6ee4ef30-7221-46b1-aa7e-0e6da05a040a.png",
+    "destination": "static/assets/images/template/desktop-service-import-v2.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bytes": 64582,
+    "sourceSha256": "c974977058916a59d092c26800406991dc0523cbcdf4c734bc28ba8cbb68633d",
+    "sha256": "f36eac9acd99f7dade5ce3832fcf12f1f3a6f59ce98be1144357c7c607a44c7a",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  },
+  {
+    "key": "leasing",
+    "source": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-45b86ace-9cf5-4cb6-abc5-d8a32f30fb53.png",
+    "destination": "static/assets/images/template/desktop-service-leasing-v2.webp",
+    "sourceDimensions": [
+      1536,
+      1024
+    ],
+    "dimensions": [
+      800,
+      533
+    ],
+    "hasAlpha": true,
+    "alphaRange": [
+      0,
+      255
+    ],
+    "bytes": 65374,
+    "sourceSha256": "41f59276cb2a41273fd5165f192588e717a999976da1f4359c9775cf0343be23",
+    "sha256": "475231e17474849de57c912c684b97f6dc000b715d6a1c1e2eaf431e3a8de3ad",
+    "encoding": {
+      "resizeWidth": 800,
+      "quality": 90,
+      "alphaQuality": 100,
+      "effort": 6,
+      "preserveFullCanvas": true
+    }
+  }
+]

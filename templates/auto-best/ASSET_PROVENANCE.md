@@ -36,6 +36,7 @@ A filename does not prove a file is currently rendered. Component/data reference
 | [Mobile cutout](provenance/mobile-service-cutout-2026-09-10.md) | Later mobile cutout treatment |
 | [Service cards](provenance/service-cards-2026-09-10.md) | Service-card imagery |
 | [Desktop service illustrations](provenance/desktop-service-cards-2026-10-03.md) | Four coordinated generated cutouts for the About service cards; mobile icons and source PNGs are retained. |
+| [Desktop service vignettes](provenance/desktop-service-vignettes-2026-10-04.md) | Reception and car-with-container revisions plus aligned leasing artwork; shared by desktop About cards and navigation. |
 | [Homepage brand marks](provenance/homepage-brand-marks-2026-09-15.md) | Curated Land Rover, Mercedes-Benz and Audi card assets, source limits and optical sizing |
 | [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
 | [Mobile Audi chrome mark](provenance/mobile-audi-chrome-2026-10-02.md) | Unchanged transparent Import-template source; mobile rings crop and desktop source preserved |

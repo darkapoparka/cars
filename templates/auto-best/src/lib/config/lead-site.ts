@@ -191,9 +191,9 @@ export const leadSite = {
       finance: '/assets/images/template/home-finance-front-v4.webp'
     },
     desktopServiceCards: {
-      inspection: '/assets/images/template/desktop-service-inspection-v1.webp',
-      import: '/assets/images/template/desktop-service-import-v1.webp',
-      leasing: '/assets/images/template/desktop-service-leasing-v1.webp',
+      inspection: '/assets/images/template/desktop-service-inspection-v2.webp',
+      import: '/assets/images/template/desktop-service-import-v2.webp',
+      leasing: '/assets/images/template/desktop-service-leasing-v2.webp',
       'trade-in': '/assets/images/template/desktop-service-trade-in-v1.webp'
     },
     blogHero: mobileGuides,

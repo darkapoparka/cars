@@ -16,7 +16,7 @@ const staticRoot = path.join(root, 'static');
 // Matching desktop Import/Leasing cutouts retain their full transparent canvases.
 // The rejected generated dock trial remains archived for provenance.
 // Four transparent desktop service illustrations complement the retained mobile icons.
-const guardedMediaCount = 189;
+const guardedMediaCount = 192;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
@@ -60,6 +60,8 @@ retainedSourceAssets.add('/assets/images/template/pdp-finance-studio-v1.jpg');
 // Original low-resolution body illustrations remain available as source references.
 for (const number of [1, 2, 3, 8]) retainedSourceAssets.add(`/assets/images/icon-box/car-list${number}.png`);
 retainedSourceAssets.add('/assets/images/template/generated-bottom-nav-v3.png');
+// Earlier showroom, cargo-ship and left-facing leasing concepts remain available for provenance.
+for (const name of ['inspection', 'import', 'leasing']) retainedSourceAssets.add(`/assets/images/template/desktop-service-${name}-v1.webp`);
 const sourceExtension = /\.(?:css|html|js|svelte|ts)$/i;
 const mediaExtension = /\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)$/i;
 const publicAssetReference = /\/(?:assets\/[A-Za-z0-9._@%+~/-]+\.(?:avif|eot|gif|ico|jpe?g|mp4|png|svg|ttf|webm|webp|woff2?)|favicon\.ico|auto-best-icon\.svg)/gi;
