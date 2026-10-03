@@ -16,7 +16,7 @@ Runtime media is stored under `static/`; its public URL omits that directory nam
 | Editorial images | `editorial.ts`, `assets/images/blog` | Mixed reference and photo-derived imagery; see credits |
 | Videos | `videos.ts`, local thumbnails | Selected third-party YouTube content |
 | Detail/enquiry banners | Current working-preview component references | Some generated images contain baked text or identity |
-| Optional team/partners | `demo-content.ts` and related components | Sample presentation, disabled by default |
+| Optional team/partners | `demo-content.ts` and related components | Sample presentation; team is enabled in desktop preview, partners remain disabled |
 | Icons | Native SVG components | Retained source notices below |
 
 A filename does not prove a file is currently rendered. Component/data references and `npm run check:assets` determine active ownership. Older revisions may contain intentionally retained source assets.

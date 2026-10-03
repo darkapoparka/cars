@@ -1594,8 +1594,8 @@
   {
     "key": "m_572cd72feb9a",
     "source": "Guides",
-    "en": "Guides",
-    "bg": "Съвети",
+    "en": "Advice & articles",
+    "bg": "Съвети и статии",
     "disposition": "translate",
     "notes": "Public display copy. Source: auto-best/src/lib/components/editorial/BlogHero.svelte:24, auto-best/src/lib/components/layout/Footer.svelte:73, auto-best/src/lib/data/home.ts:52, auto-best/src/lib/data/navigation.ts:128"
   },
@@ -5682,8 +5682,8 @@
   {
     "key": "m_64f627bafdc8",
     "source": "Guides — {p0}",
-    "en": "Guides — {p0}",
-    "bg": "Съвети — {p0}",
+    "en": "Advice & articles — {p0}",
+    "bg": "Съвети и статии — {p0}",
     "disposition": "translate",
     "notes": "Added complete markup message; prefer it over translating sentence fragments independently. auto-best/src/routes/blog/+page.svelte:14; {p0}=brand.name."
   },

@@ -14,7 +14,7 @@ export const template: TemplatePresentation = {
   canonicalOrigin: null,
   verifiedIdentity: false,
   verifiedInventory: false,
-  sections: { demoTeam: false, demoPartners: false }
+  sections: { demoTeam: true, demoPartners: false }
 };
 
 export function canIndex() {

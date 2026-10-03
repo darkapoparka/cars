@@ -551,5 +551,15 @@
   "contact.social.placeholder": {
     "en": "Sample profile",
     "bg": "Примерен профил"
+  },
+  "company.team.title": { "en": "Our team", "bg": "Нашият екип" },
+  "company.team.demo": { "en": "Demo profiles", "bg": "Демонстрационни профили" },
+  "company.team.contact": { "en": "Contact", "bg": "Контакт" },
+  "company.team.sales": { "en": "Sales", "bg": "Продажби" },
+  "company.team.import": { "en": "Vehicle imports", "bg": "Внос на автомобили" },
+  "company.team.finance": { "en": "Financing", "bg": "Финансиране" },
+  "company.team.support": {
+    "en": "Customer support",
+    "bg": "Обслужване на клиенти"
   }
 }

@@ -21,7 +21,7 @@ These are code-level configuration modules. Native English/Bulgarian localizatio
 
 ## Defaults that matter when copying
 
-The template starts in preview/noindex mode. Sample team and partner sections are disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
+The template starts in preview/noindex mode. About Us shows a clearly marked demo team on desktop; sample partners remain disabled. Published mode requires sample sections to be disabled. Vehicle records are sample data unless explicitly verified by the implementation. The brand name does not make the existing phone, map, social accounts, video selection or inventory generic.
 
 A client copy retains the application structure and changes its content and relevant imagery. A template version should be identified by its actual source commit, not an old date embedded in an inherited manifest. Historical `.template` records describe acquisition/copy operations rather than an application release service.
 

@@ -15,7 +15,7 @@ export const demoWorkflowShowcases = {
 type DemoTeamMember = {
   id: string;
   name: string;
-  role: string;
+  role: 'company.team.sales' | 'company.team.import' | 'company.team.finance' | 'company.team.support';
   image: string;
 };
 
@@ -37,25 +37,25 @@ export const demoTeamMembers: DemoTeamMember[] = [
   {
     id: 'arlene-mccoy',
     name: 'Arlene McCoy',
-    role: 'Консултант · демо',
+    role: 'company.team.sales',
     image: '/assets/images/img-box/team1.jpg'
   },
   {
     id: 'ronald-richards',
     name: 'Ronald Richards',
-    role: 'Консултант · демо',
+    role: 'company.team.import',
     image: '/assets/images/img-box/team2.jpg'
   },
   {
     id: 'leslie-alexander',
     name: 'Leslie Alexander',
-    role: 'Консултант · демо',
+    role: 'company.team.finance',
     image: '/assets/images/img-box/team3.jpg'
   },
   {
     id: 'cody-fisher',
     name: 'Cody Fisher',
-    role: 'Консултант · демо',
+    role: 'company.team.support',
     image: '/assets/images/img-box/team4.jpg'
   }
 ];

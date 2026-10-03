@@ -52,7 +52,6 @@
   </EntryCard>
 </div>
 <AboutProcess />
-{#if template.sections.demoTeam}<AboutTeam />{/if}
 {#if template.sections.demoPartners}<AboutPartners />{/if}
 
 <section class="dn-about-showroom dn-section" aria-label={i18n.t("m_931269cbffaa")}>
@@ -63,3 +62,4 @@
     </div>
   </div>
 </section>
+{#if template.sections.demoTeam}<AboutTeam />{/if}
