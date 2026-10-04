@@ -355,7 +355,10 @@ async function run(name, engine) {
     );
     await page.keyboard.press('Escape');
     await page.locator('[data-quick-filter="more"]').click();
-    await page.getByRole('button', { name: 'Reset', exact: true }).click();
+    await page
+      .locator('dialog[open]')
+      .getByRole('button', { name: 'Clear filters', exact: true })
+      .click();
     await page.getByRole('button', { name: 'Show 0 motorbikes', exact: true }).click();
     assert.equal(new URL(page.url()).searchParams.get('category'), 'bike');
     assert.equal(new URL(page.url()).searchParams.has('makes'), false);
@@ -366,7 +369,7 @@ async function run(name, engine) {
     await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
     check(
-      'Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category',
+      'Category-specific make/model and filter snapshots survive switching, reload and navigation; Clear keeps the category',
     );
 
     await page.locator('[data-quick-filter="more"]').click();
@@ -401,7 +404,7 @@ async function run(name, engine) {
       await page.locator('[data-quick-filter="more"]').getAttribute('aria-describedby'),
       null,
     );
-    check('Filter count reflects an applied condition and clears with Reset');
+    check('Filter count reflects an applied condition and clears with Clear filters');
     check('Used/New condition choices live in Filters and work separately or together');
 
     await page.locator('[data-quick-filter="price"]').click();
@@ -469,7 +472,7 @@ async function run(name, engine) {
     check('Make/model stays inside one editor across tabs; Escape restores each opener');
 
     await page.locator('[data-quick-filter="make"]').click();
-    assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
+    assert.equal(await page.getByRole('button', { name: 'Back: Makes', exact: true }).count(), 0);
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
     const modelOptions = page.locator('[data-showroom-model-options]');
     assert.equal(
@@ -521,7 +524,10 @@ async function run(name, engine) {
       .locator('[data-make-option="BMW"]')
       .getByRole('button', { name: /BMW.*X6/ })
       .waitFor();
-    await page.getByRole('button', { name: 'Model: X6', exact: true }).click();
+    await page
+      .locator('[data-make-option="BMW"]')
+      .getByRole('button', { name: /BMW.*X6/ })
+      .click();
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     assert.equal(await page.getByRole('checkbox', { name: 'X6', exact: true }).isChecked(), true);
     await page.getByRole('button', { name: 'Back: Makes', exact: true }).click();
@@ -529,7 +535,7 @@ async function run(name, engine) {
       .locator('[data-make-option="BMW"]')
       .getByRole('button', { name: 'Remove make: BMW', exact: true })
       .click();
-    assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
+    assert.equal(await page.getByRole('button', { name: 'Back: Makes', exact: true }).count(), 0);
     await page
       .locator('[data-make-option="BMW"]')
       .getByRole('button', { name: 'BMW', exact: true })
@@ -543,7 +549,7 @@ async function run(name, engine) {
       'bmw-x6',
     );
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
-    check('Linked Make/Model selectors retain model choices and filter the showroom stock');
+    check('Brand rows and model back navigation retain choices and filter the showroom stock');
     await page.locator('[data-quick-filter="make"]').click();
     await page.getByRole('button', { name: 'BMW', exact: true }).first().click();
     await page.locator('[data-showroom-model-options] summary').click();

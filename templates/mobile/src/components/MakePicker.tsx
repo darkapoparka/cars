@@ -1,6 +1,6 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
-import { useEffect, useRef, useState, type Ref } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { controls } from '@/styles/controls.stylex';
@@ -47,63 +47,6 @@ export function BrandLogo({ make, size = 40 }: { make: string; size?: number }) 
     <span aria-hidden="true" {...stylex.props(s.fallback)} />
   );
 }
-function SelectionButton({
-  label,
-  value,
-  active,
-  back = false,
-  disabled = false,
-  buttonRef,
-  onClick,
-}: {
-  label: string;
-  value: string;
-  active: boolean;
-  back?: boolean;
-  disabled?: boolean;
-  buttonRef?: Ref<HTMLButtonElement>;
-  onClick: () => void;
-}) {
-  const { t } = useLocale();
-  const accessibleLabel = back ? t('Back') + ': ' + t('Makes') : t(label) + ': ' + t(value);
-  return (
-    <button
-      ref={buttonRef}
-      type="button"
-      disabled={disabled}
-      aria-label={accessibleLabel}
-      aria-controls="showroom-make-model-options"
-      aria-expanded={active}
-      title={disabled ? t('Choose a make first') : back ? accessibleLabel : t(value)}
-      onClick={onClick}
-      {...stylex.props(s.selector)}
-    >
-      <span
-        data-pill-surface
-        {...stylex.props(
-          s.selectorSurface,
-          active && s.selectorActive,
-          disabled && s.selectorDisabled,
-        )}
-      >
-        {back && (
-          <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-            <Icon name="back" size={16} />
-          </span>
-        )}
-        <span {...stylex.props(s.selectorLabel)}>{t(label)}</span>
-        <span {...stylex.props(s.selectorValue)}>
-          <span {...stylex.props(s.selectorText)}>{t(value)}</span>
-          {!back && (
-            <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-              <Icon name={active ? 'up' : 'down'} size={14} />
-            </span>
-          )}
-        </span>
-      </span>
-    </button>
-  );
-}
 type Props = {
   open: boolean;
   onClose: () => void;
@@ -137,8 +80,7 @@ export function MakePicker({
   const [expanded, setExpanded] = useState<string[]>([]);
   const listRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
-  const makeSelectorRef = useRef<HTMLButtonElement>(null);
-  const modelSelectorRef = useRef<HTMLButtonElement>(null);
+  const pickerHeadingRef = useRef<HTMLHeadingElement>(null);
   const modelsVisible = Boolean(make) && (!embedded || selector === 'model');
   const selectedMakes = [
     ...filters.makes.map((name) => ({ name, excluded: false })),
@@ -148,12 +90,8 @@ export function MakePicker({
     excluded,
     summary: makeSelectionSummary(filters, name, excluded),
   }));
-  const currentSelection = selectedMakes.find(
-    (selection) => selection.name === make && selection.excluded === exclude,
-  );
   const removeLabel = (name: string, excluded: boolean) =>
     t(excluded ? 'Remove excluded make' : 'Remove make') + ': ' + name;
-  const modelSummary = draft.selected.length ? draft.selected.map(modelLabel).join(', ') : 'Any';
   const groups = modelGroupsFor(make);
   const q = query.trim().toLocaleLowerCase();
   const visibleGroups = groups.filter(
@@ -235,7 +173,7 @@ export function MakePicker({
     setDraft(next);
     if (embedded) {
       applyDraft(name, next, mode);
-      requestAnimationFrame(() => modelSelectorRef.current?.focus({ preventScroll: true }));
+      requestAnimationFrame(() => pickerHeadingRef.current?.focus({ preventScroll: true }));
     }
   }
   function editSelectedMake(name: string, excluded: boolean) {
@@ -245,7 +183,7 @@ export function MakePicker({
     setQuery('');
     setExpanded([]);
     setDraft(modelDraftFor(filters, name, excluded));
-    requestAnimationFrame(() => modelSelectorRef.current?.focus({ preventScroll: true }));
+    requestAnimationFrame(() => pickerHeadingRef.current?.focus({ preventScroll: true }));
   }
   function removeSelectedMake(name: string, excluded: boolean) {
     changeFilters(removeMakeSelection(filters, name, excluded));
@@ -261,7 +199,7 @@ export function MakePicker({
       const row = [
         ...(listRef.current?.querySelectorAll<HTMLElement>('[data-make-option]') || []),
       ].find((element) => element.dataset.makeOption === name);
-      const target = row?.querySelector<HTMLButtonElement>('button') || makeSelectorRef.current;
+      const target = row?.querySelector<HTMLButtonElement>('button') || pickerHeadingRef.current;
       target?.focus({ preventScroll: true });
     });
   }
@@ -410,45 +348,27 @@ export function MakePicker({
   const content = (
     <>
       {embedded ? (
-        <div {...stylex.props(s.selectors)}>
-          <div {...stylex.props(s.makeSelector)}>
-            <SelectionButton
-              buttonRef={makeSelectorRef}
-              label={t('Make')}
-              value={make || 'Any'}
-              active={!modelsVisible}
-              back={modelsVisible}
+        <div {...stylex.props(s.pickerNavigation)}>
+          {modelsVisible && (
+            <button
+              type="button"
+              aria-label={t('Back') + ': ' + t('Makes')}
               onClick={() => {
                 setSelector('make');
                 setQuery('');
+                requestAnimationFrame(() =>
+                  pickerHeadingRef.current?.focus({ preventScroll: true }),
+                );
               }}
-            />
-            {currentSelection && (
-              <button
-                type="button"
-                aria-label={removeLabel(make, exclude)}
-                title={removeLabel(make, exclude)}
-                onClick={() => removeSelectedMake(make, exclude)}
-                {...stylex.props(s.removeCurrentMake)}
-              >
-                <span {...stylex.props(s.removeSurface)}>
-                  <Icon name="close" size={14} />
-                  {t('Remove')}
-                </span>
-              </button>
-            )}
-          </div>
-          <SelectionButton
-            buttonRef={modelSelectorRef}
-            label={t('Model')}
-            value={make ? modelSummary : 'Any'}
-            active={modelsVisible}
-            disabled={!make}
-            onClick={() => {
-              setSelector('model');
-              setQuery('');
-            }}
-          />
+              {...stylex.props(s.backToMakes)}
+            >
+              <Icon name="back" size={18} />
+              {t('Makes')}
+            </button>
+          )}
+          <h3 ref={pickerHeadingRef} tabIndex={-1} {...stylex.props(s.pickerHeading)}>
+            {modelsVisible ? make + ' · ' + t('Models') : t('Makes')}
+          </h3>
         </div>
       ) : (
         <div {...stylex.props(s.header)}>

@@ -25,7 +25,8 @@ import { Button, CheckRow, IconButton, Modal } from './ui';
 const s = stylex.create({
   editor: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0, minWidth: 0 },
   heading: {
-    display: 'flex',
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr)',
     alignItems: 'center',
     gap: 8,
     paddingInline: { default: 12, '@media (min-width: 700px)': 16 },
@@ -36,9 +37,20 @@ const s = stylex.create({
     fontSize: 20,
     fontWeight: 700,
     lineHeight: '28px',
-    flex: '1',
     minWidth: 0,
     textAlign: 'center',
+  },
+  clearFilters: {
+    justifySelf: 'end',
+    minHeight: 48,
+    paddingInline: 8,
+    borderWidth: 0,
+    borderRadius: 8,
+    backgroundColor: 'transparent',
+    color: { default: colors.muted, ':hover': colors.text },
+    fontSize: 14,
+    fontWeight: 600,
+    lineHeight: '20px',
   },
   tabs: { flexShrink: 0 },
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
@@ -87,6 +99,35 @@ const s = stylex.create({
   group: { borderWidth: 0, padding: 0, minWidth: 0 },
   fieldTitle: { fontSize: 18, fontWeight: 600, lineHeight: '26px', marginBottom: 12 },
   copy: { color: colors.muted, fontSize: 14, lineHeight: '22px' },
+  budgetPresets: {
+    display: 'grid',
+    gridTemplateColumns: {
+      default: 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 700px)': 'repeat(4,minmax(0,1fr))',
+    },
+    gap: 8,
+    paddingInline: 4,
+  },
+  budgetPreset: {
+    minWidth: 0,
+    minHeight: 48,
+    paddingInline: 8,
+    paddingBlock: 8,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 12,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.stripe },
+    color: colors.text,
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: '20px',
+  },
+  budgetPresetSelected: {
+    backgroundColor: { default: colors.text, ':hover': colors.text },
+    borderColor: colors.text,
+    color: colors.background,
+  },
   searchPanel: { gap: 16 },
   suggestions: { display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 },
   suggestion: {
@@ -221,14 +262,17 @@ export function ShowroomFilterSheet({
         <div {...stylex.props(s.heading)}>
           <IconButton icon="close" label={t('Close filters')} onClick={onClose} />
           <h2 {...stylex.props(s.title)}>{sheet === 'search' ? t('Search') : t('Filters')}</h2>
-          <IconButton
-            icon="reset"
-            label={t('Reset')}
+          <button
+            type="button"
+            aria-label={t('Clear filters')}
             onClick={() => {
               setDraft(resetShowroomFilterDraft(draft));
               setResetVersion((current) => current + 1);
             }}
-          />
+            {...stylex.props(s.clearFilters)}
+          >
+            {t('Clear')}
+          </button>
         </div>
         <div {...stylex.props(s.tabs)}>
           <ShowroomTabs
@@ -332,17 +376,35 @@ export function ShowroomFilterSheet({
                 </>
               )}
               {sheet === 'price' && (
-                <RangeField
-                  comfortable
-                  label={t('Price')}
-                  floor={0}
-                  ceiling={100000}
-                  step={500}
-                  unit="€"
-                  min={draft.minPrice}
-                  max={draft.maxPrice}
-                  onChange={(minPrice, maxPrice) => change({ minPrice, maxPrice })}
-                />
+                <>
+                  <RangeField
+                    comfortable
+                    label={t('Price')}
+                    floor={0}
+                    ceiling={100000}
+                    step={500}
+                    unit="€"
+                    min={draft.minPrice}
+                    max={draft.maxPrice}
+                    onChange={(minPrice, maxPrice) => change({ minPrice, maxPrice })}
+                  />
+                  <div role="group" aria-label={t('Price')} {...stylex.props(s.budgetPresets)}>
+                    {['', '40000', '60000', '100000'].map((maxPrice) => {
+                      const selected = !Number(draft.minPrice) && draft.maxPrice === maxPrice;
+                      return (
+                        <button
+                          key={maxPrice}
+                          type="button"
+                          aria-pressed={selected}
+                          onClick={() => change({ minPrice: '', maxPrice })}
+                          {...stylex.props(s.budgetPreset, selected && s.budgetPresetSelected)}
+                        >
+                          {maxPrice ? t('Up to') + ' ' + money(Number(maxPrice)) : t('Any')}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </>
               )}
               {sheet === 'year' && (
                 <RangeField

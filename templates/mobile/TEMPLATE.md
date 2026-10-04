@@ -66,11 +66,13 @@ Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
-On phones, compact Make/Model controls switch views; selected makes remain editable. Model
-choices have aligned labels and selection controls, with expandable families.
+On phones, choosing or editing a brand opens its models directly. A single Makes
+back action and brand heading replace the two view selectors; their navigation
+row keeps a constant height. Model choices have aligned labels and selection
+controls, with expandable families.
 The phone model list names its brand in the All models row. Unchecking that row
-removes the brand and returns focus to its brand choice. The brand selector has
-a back arrow that returns to brands while retaining model selections and clearing
+removes the brand and returns focus to its brand choice. The Makes back action
+returns to brands while retaining model selections and clearing
 the model search. Search suggestions show a right arrow beside their prices;
 selecting a suggestion still edits the draft until Show cars applies it.
 Desktop uses separate brand and model panels with independent search fields.
@@ -80,8 +82,13 @@ Removing a brand clears its model criteria and search, then returns keyboard
 focus to that brand's checkbox. Make and Model use equal-width panels with
 matching search fields and a simple gap between them. Model dividers use the
 quiet stripe token on desktop, with rounded row hover
-feedback; phones retain their existing rows and selector layout.
+feedback. Phones use their own full-width brand and model rows.
 Optional variants and exclusion live in a collapsed More options section.
+Price shortcuts offer Any and upper limits of EUR 40,000, 60,000 and 100,000.
+They replace both price bounds; custom ranges clear the shortcut highlight.
+The labelled Clear action resets every draft section while preserving its vehicle
+category. Show applies the cleared draft; closing cancels it. Both actions retain
+their positions as the match count and selected filter section change.
 At 700px and wider, this filter editor is capped at 820px with 24px viewport
 gutters. Seven 16px tabs share a fixed 56px height, a quiet background and an
 inset underline. Their weight stays constant on selection, and their widths
@@ -170,7 +177,7 @@ use a near-black fill with white labels and icons.
 Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
 the 52px rail height and horizontal scrolling. Their original pixels and alpha
 are preserved.
-Make/Model view selectors retain their 36px faces and 48px targets.
+The phone Makes back action and price shortcuts retain 48px targets.
 Each service overview card is one native link, with a smaller 28px View/Enquire
 cue with a small right chevron at top right and its description across the full
 width below. Cues align with the first title line, including wrapped titles;
