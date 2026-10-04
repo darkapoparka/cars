@@ -2,7 +2,12 @@
 	import type { Component } from 'svelte';
 	import { assetHref, emptyImage } from '$lib/utils/assets';
 	type MobileModeOption = {
-		artwork?: { src: string; width: number; height: number; scale?: number };
+		artwork?: {
+			src: string;
+			width: number;
+			height: number;
+			sources?: readonly { src: string; density: number }[];
+		};
 		icon?: Component<{ size?: number; strokeWidth?: number }>;
 		label: string;
 		panelId?: string;
@@ -82,14 +87,18 @@
 				{#if option.artwork}
 					<span class="mode-tab-icon mode-tab-artwork" aria-hidden="true">
 						<picture>
-							<source media="(min-width: 768px)" srcset={assetHref(option.artwork.src)} />
+							<source
+								media="(min-width: 768px)"
+								srcset={option.artwork.sources
+									?.map((source) => `${assetHref(source.src)} ${source.density}x`)
+									.join(', ') ?? assetHref(option.artwork.src)}
+							/>
 							<img
 								src={emptyImage}
 								width={option.artwork.width}
 								height={option.artwork.height}
 								alt=""
 								decoding="async"
-								style:--mode-artwork-scale={option.artwork.scale ?? 1}
 							/>
 						</picture>
 					</span>
@@ -256,9 +265,6 @@
 		}
 		.mobile-mode-tabs--panel button.has-artwork {
 			min-height: calc(var(--bc-mode-tab-artwork-size) + var(--bc-space-4));
-		}
-		.mobile-mode-tabs--panel .mode-tab-artwork img {
-			transform: scale(var(--mode-artwork-scale, 1));
 		}
 		.mobile-mode-tabs--panel .mode-tab-content {
 			position: relative;

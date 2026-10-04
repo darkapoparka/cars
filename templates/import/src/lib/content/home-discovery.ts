@@ -17,21 +17,23 @@ export const homeHeroModes = {
 	import: { title: { bg: 'Внеси автомобил', en: 'Import a car' }, action: '/import' }
 } as const;
 
-/** Generated decorative desktop cutouts; real inventory photography is separate. */
+/** Density-sized decorative cutouts; alpha and optical sizing are baked into the assets. */
+const modeArtwork = (mode: keyof typeof homeHeroModes) => ({
+	src: `/assets/daynight/home-modes/${mode}-graphite-v2-96.webp`,
+	width: 96,
+	height: 96,
+	sources: [1, 2, 3].map((density) => ({
+		src: `/assets/daynight/home-modes/${mode}-graphite-v2-${48 * density}.webp`,
+		density
+	}))
+});
+
 export const homeModeArtwork = {
-	buy: { src: '/assets/daynight/home-modes/buy-3d-v1.webp', width: 192, height: 192 },
-	finance: {
-		src: '/assets/daynight/home-modes/finance-3d-v1.webp',
-		width: 192,
-		height: 192,
-		scale: 0.86
-	},
-	sell: { src: '/assets/daynight/home-modes/sell-3d-v1.webp', width: 192, height: 192 },
-	import: { src: '/assets/daynight/home-modes/import-3d-v1.webp', width: 192, height: 192 }
-} as const satisfies Record<
-	keyof typeof homeHeroModes,
-	{ src: string; width: number; height: number; scale?: number }
->;
+	buy: modeArtwork('buy'),
+	finance: modeArtwork('finance'),
+	sell: modeArtwork('sell'),
+	import: modeArtwork('import')
+} as const;
 
 export const homeDiscoveryCopy = {
 	bg: {
