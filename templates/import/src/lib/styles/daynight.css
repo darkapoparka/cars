@@ -150,9 +150,9 @@ body :is(input, textarea)::placeholder {
 	summary,
 	[tabindex]:not([tabindex='-1'])
 ):focus-visible {
-	outline: 3px solid var(--bc-focus) !important;
-	outline-offset: 3px !important;
-	box-shadow: 0 0 0 2px var(--bc-focus-contrast) !important;
+	outline: var(--control-focus-outline, 3px solid var(--bc-focus)) !important;
+	outline-offset: var(--control-focus-offset, 3px) !important;
+	box-shadow: var(--control-focus-shadow, 0 0 0 2px var(--bc-focus-contrast)) !important;
 }
 
 .sr-only {

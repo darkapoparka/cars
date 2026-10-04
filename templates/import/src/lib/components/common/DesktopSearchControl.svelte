@@ -113,13 +113,13 @@
 		color: var(--bc-copy);
 		opacity: 1;
 	}
-	button:focus-visible {
-		outline-offset: -2px !important;
-		box-shadow: none !important;
+	button.desktop-search-control__entry {
+		--control-focus-offset: -2px;
+		--control-focus-shadow: none;
 	}
-	input:focus-visible {
-		outline: none !important;
-		box-shadow: none !important;
+	input.desktop-search-control__entry {
+		--control-focus-outline: none;
+		--control-focus-shadow: none;
 	}
 	span {
 		overflow: hidden;
@@ -146,7 +146,6 @@
 			/* Inset the round surface while retaining the shared 44px click target. */
 			padding: var(--bc-space-1);
 			border: 0;
-			border-radius: var(--bc-radius-pill);
 			background-clip: content-box;
 		}
 		.placeholder,

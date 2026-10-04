@@ -36,7 +36,8 @@
 			/>
 		</picture>
 	{/if}
-	<ArrowRight size={32} aria-hidden="true" /><strong>{label}</strong>
+	<ArrowRight class="home-browse-card__arrow" size={32} aria-hidden="true" /><strong>{label}</strong
+	>
 </a>
 
 <style>
@@ -58,10 +59,6 @@
 	}
 	.home-browse-card:hover {
 		border-color: var(--bc-border-strong);
-	}
-	.home-browse-card:focus-visible {
-		outline: 2px solid var(--bc-accent);
-		outline-offset: -3px;
 	}
 	.home-browse-card__artwork {
 		display: none;
@@ -93,13 +90,13 @@
 			font: var(--bc-weight-control) var(--bc-text-h5)/var(--bc-leading-h5) var(--bc-font-body);
 			text-align: center;
 		}
-		.home-browse-card :global(svg) {
+		.home-browse-card :global(.home-browse-card__arrow) {
 			width: var(--bc-control-height-primary);
 			height: var(--bc-control-height-primary);
 			padding: var(--bc-space-3);
 			border-radius: var(--bc-radius-pill);
-			background: var(--bc-control);
-			color: var(--bc-accent);
+			background: var(--bc-ink);
+			color: var(--bc-white);
 		}
 		.home-browse-card:hover {
 			background: var(--bc-surface-hover);

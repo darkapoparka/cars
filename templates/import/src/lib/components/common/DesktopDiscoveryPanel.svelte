@@ -16,6 +16,7 @@
 
 <style>
 	.desktop-discovery-panel {
+		--desktop-discovery-inset: var(--bc-space-5);
 		--action-strong-border: var(--desktop-discovery-border, transparent);
 		--bc-border: var(--desktop-discovery-border);
 		--bc-control: var(--bc-surface-raised);
@@ -33,7 +34,7 @@
 	.desktop-discovery-panel__header {
 		border-radius: var(--desktop-discovery-radius, var(--bc-radius-section))
 			var(--desktop-discovery-radius, var(--bc-radius-section)) 0 0;
-		padding: var(--bc-space-3) var(--bc-space-5) 0;
+		padding: var(--bc-space-3) var(--desktop-discovery-inset) 0;
 		background: inherit;
 	}
 	.desktop-discovery-panel__body {
@@ -43,7 +44,7 @@
 		gap: var(--bc-space-4);
 		min-width: 0;
 		min-height: var(--bc-desktop-discovery-panel-height);
-		padding: var(--desktop-discovery-padding, var(--bc-space-5));
+		padding: var(--desktop-discovery-padding, var(--desktop-discovery-inset));
 		border-radius: inherit;
 	}
 	.desktop-discovery-panel__body.has-header {
@@ -54,8 +55,12 @@
 	}
 	@media (min-width: 768px) {
 		.desktop-discovery-panel {
+			--desktop-discovery-inset: var(--bc-space-6);
 			--bc-control: var(--bc-desktop-control-surface, var(--bc-surface-raised));
 			--bc-border: var(--desktop-discovery-border, var(--bc-editorial-border));
+		}
+		.desktop-discovery-panel__header {
+			padding-top: var(--bc-space-4);
 		}
 	}
 </style>

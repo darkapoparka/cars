@@ -256,7 +256,10 @@
 		display: grid;
 		align-content: center;
 		gap: var(--bc-space-4);
-		min-height: calc(var(--bc-desktop-discovery-panel-height) - 2 * var(--bc-space-5));
+		min-height: calc(
+			var(--bc-desktop-discovery-panel-height) - 2 *
+				var(--desktop-discovery-inset, var(--bc-space-5))
+		);
 	}
 	.home-hero__panel:focus-visible {
 		outline-offset: 4px !important;
