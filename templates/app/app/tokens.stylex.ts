@@ -30,6 +30,7 @@ export const tokens = stylex.defineVars({
   radiusMd: '18px',
   radiusLg: '24px',
   radiusXl: '32px',
+  radiusPill: '999px',
   content: '1240px',
   controlHeight: '44px',
   controlCompactHeight: '36px',

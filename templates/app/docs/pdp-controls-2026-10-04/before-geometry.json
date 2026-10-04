@@ -1,0 +1,106 @@
+[
+  {
+    "actions": [
+      {
+        "height": 44,
+        "radius": "12px",
+        "text": "Запази автомобила",
+        "width": 170.5,
+        "x": 12,
+        "y": 794
+      },
+      {
+        "height": 44,
+        "radius": "12px",
+        "text": "Уговорете оглед",
+        "width": 172.5,
+        "x": 190.5,
+        "y": 794
+      }
+    ],
+    "details": {
+      "albums": 3,
+      "equipment": 3,
+      "specifications": 6
+    },
+    "equipmentAction": {
+      "background": "rgb(230, 230, 233)",
+      "color": "rgb(32, 32, 36)",
+      "height": 44,
+      "href": "/bg/cars/2023-suzuki-ciaz-glx/features",
+      "radius": "12px",
+      "width": 311,
+      "x": 32,
+      "y": 437.375
+    },
+    "history": {
+      "height": 72,
+      "iconClass": "lucide lucide-clipboard-list",
+      "radius": "18px",
+      "text": "Сервизна историяНяма данни",
+      "width": 343,
+      "x": 16,
+      "y": 521.375
+    },
+    "overflow": false,
+    "ownershipBanners": 0,
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "visitBanners": 1
+  },
+  {
+    "actions": [
+      {
+        "height": 48,
+        "radius": "17px",
+        "text": "Уговорете оглед",
+        "width": 284,
+        "x": 997.5,
+        "y": 294.59375
+      },
+      {
+        "height": 48,
+        "radius": "17px",
+        "text": "Запази автомобила",
+        "width": 284,
+        "x": 997.5,
+        "y": 350.59375
+      }
+    ],
+    "details": {
+      "albums": 3,
+      "equipment": 3,
+      "specifications": 6
+    },
+    "equipmentAction": {
+      "background": "rgb(220, 220, 224)",
+      "color": "rgb(32, 32, 36)",
+      "height": 44,
+      "href": "/bg/cars/2023-suzuki-ciaz-glx/features",
+      "radius": "12px",
+      "width": 792,
+      "x": 136.5,
+      "y": 507.65625
+    },
+    "history": {
+      "height": 72,
+      "iconClass": "lucide lucide-clipboard-list",
+      "radius": "18px",
+      "text": "Сервизна историяНяма данни",
+      "width": 824,
+      "x": 120.5,
+      "y": 591.65625
+    },
+    "overflow": false,
+    "ownershipBanners": 0,
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewport": {
+      "height": 900,
+      "width": 1440
+    },
+    "visitBanners": 1
+  }
+]

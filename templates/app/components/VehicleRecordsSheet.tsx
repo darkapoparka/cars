@@ -62,6 +62,6 @@ const s=stylex.create({
   empty:{marginTop:20,padding:16,borderRadius:$.radiusMd,backgroundColor:$.surfaceAlt},
   emptyTitle:{fontSize:16,fontWeight:500,lineHeight:'24px'},
   note:{marginTop:20,color:$.muted,fontSize:12,fontWeight:400,lineHeight:'18px'},
-  request:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,width:'100%',minHeight:48,marginTop:20,padding:'12px 16px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'22px',textAlign:'left',borderWidth:0,borderRadius:$.radiusSm,backgroundColor:{default:$.line,':hover':'#dcdce0'},outlineOffset:3,cursor:'pointer'},
+  request:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,width:'100%',minHeight:48,marginTop:20,padding:'12px 16px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'22px',textAlign:'left',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3,cursor:'pointer'},
   arrow:{flexShrink:0},
 });

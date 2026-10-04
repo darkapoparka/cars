@@ -1,0 +1,114 @@
+[
+  {
+    "details": {
+      "albums": 3,
+      "equipment": 3,
+      "serviceHistory": true,
+      "specifications": 6
+    },
+    "overflow": false,
+    "ownership": {
+      "action": {
+        "height": 44,
+        "radius": "10px",
+        "text": "Разгледайте подробноститеНаучете повече",
+        "width": 141.234375,
+        "x": 32,
+        "y": 686.171875
+      },
+      "height": 140,
+      "width": 343,
+      "x": 16,
+      "y": 611.171875
+    },
+    "ownershipCount": 1,
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewingAction": [
+      {
+        "height": 0,
+        "text": "Уговорете оглед",
+        "width": 0,
+        "x": 0,
+        "y": 0
+      }
+    ],
+    "viewport": {
+      "height": 844,
+      "width": 390
+    },
+    "visit": {
+      "action": {
+        "height": 44,
+        "radius": "30px",
+        "text": "Посетете ни",
+        "width": 151.328125,
+        "x": 34,
+        "y": 529.171875
+      },
+      "height": 153.796875,
+      "href": "/bg/stores",
+      "imageReady": true,
+      "radius": "20px",
+      "width": 343,
+      "x": 16,
+      "y": 437.375
+    },
+    "visitCount": 1
+  },
+  {
+    "details": {
+      "albums": 3,
+      "equipment": 3,
+      "serviceHistory": true,
+      "specifications": 6
+    },
+    "overflow": false,
+    "ownership": {
+      "action": {
+        "height": 44,
+        "radius": "13px",
+        "text": "Разгледайте подробноститеНаучете повече",
+        "width": 204.84375,
+        "x": 148.5,
+        "y": 743.65625
+      },
+      "height": 310,
+      "width": 824,
+      "x": 120.5,
+      "y": 533.65625
+    },
+    "ownershipCount": 1,
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewingAction": [
+      {
+        "height": 48,
+        "text": "Уговорете оглед",
+        "width": 284,
+        "x": 997.5,
+        "y": 294.59375
+      }
+    ],
+    "viewport": {
+      "height": 900,
+      "width": 1440
+    },
+    "visit": {
+      "action": {
+        "height": 44,
+        "radius": "30px",
+        "text": "Посетете ни",
+        "width": 151.328125,
+        "x": 138.5,
+        "y": 435.75
+      },
+      "height": 180,
+      "href": "/bg/stores",
+      "imageReady": true,
+      "radius": "20px",
+      "width": 824,
+      "x": 120.5,
+      "y": 329.65625
+    },
+    "visitCount": 1
+  }
+]

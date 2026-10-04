@@ -7,15 +7,13 @@ import {dealer,isDealer} from '@/lib/dealer-config';
 import {currency} from '@/lib/currency';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
-import {CarFront, Check, ChevronRight, ClipboardList, Info, Music2, ShieldCheck} from 'lucide-react';
+import {CarFront, Check, ChevronRight, ClipboardCheck, History, Info, Music2, ShieldCheck} from 'lucide-react';
 import StructuralSummary from '@/components/StructuralSummary';
 import ReferenceInfoSheet from '@/components/ReferenceInfoSheet';
 import type {ReferenceVehicleDetail} from '@/lib/reference-types';
 import {getVehicleServiceHistory} from '@/lib/vehicle-service-history';
 import VehicleRecordsSheet from '@/components/VehicleRecordsSheet';
 import VehicleFinanceSection from '@/components/VehicleFinanceSection';
-import OwnershipPanel from '@/components/OwnershipPanel';
-import VehicleVisitBanner from '@/components/VehicleVisitBanner';
 import {formatPrice, type Vehicle} from '@/lib/data';
 import {media,tokens as $} from '@/app/tokens.stylex';
 
@@ -89,10 +87,9 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
     </section>
     <div {...stylex.props(s.recordGroup)}>
       {reference?.inspection.length?<RecordRow id="condition" title="Inspection report" status="View inspection report" icon={<CarFront size={21}/>} open={record==='condition'} onOpen={()=>setRecord('condition')}/>:null}
-      <RecordRow id="service-history" title="Service History" status={serviceHistory.isSample?'Sample records':serviceHistory.records.length?'View service records':'No records'} icon={<ClipboardList size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
+      <RecordRow id="service-history" title="Service History" status={serviceHistory.isSample?'Sample records':serviceHistory.records.length?'View service records':'No records'} icon={serviceHistory.records.length&&!serviceHistory.isSample?<ClipboardCheck size={21}/>:<History size={21}/>} open={record==='service-history'} onOpen={()=>setRecord('service-history')}/>
     </div>
     {hasDetails?<VehicleFinanceSection vehicle={vehicle} onLogin={onLogin}/>:null}
-    <div {...stylex.props(s.promotions)}><VehicleVisitBanner/><OwnershipPanel compact/></div>
     {information?<ReferenceInfoSheet title={tx(information.title)} description={tx(information.description)} onClose={()=>setInformation(null)}/>:null}
     {record?<VehicleRecordsSheet kind={record} vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} reference={reference} serviceHistory={serviceHistory} onClose={()=>setRecord(null)} onRequest={()=>{setRecord(null);onLogin(record);}}/>:null}
   </>;
@@ -100,7 +97,6 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
 const s=stylex.create({
 overview: {scrollMarginTop: 152, marginTop: 16},
 overviewDetails: {marginTop: 12, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-promotions: {marginTop: 24},
 overviewRow: {display: 'grid', gridTemplateColumns: '38px minmax(0,1fr)', alignItems: 'center', gap: 12, minHeight: 58, paddingBlock: 8},
 overviewIcon: {display: 'grid', placeItems: 'center', width: 38, height: 38, color: $.ink, borderRadius: '50%', backgroundColor: $.surfaceAlt},
 rowCopy: {minWidth: 0},
@@ -128,7 +124,7 @@ featuresAfterSummary:{marginTop:16},
 specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',default:'22px'},overflowWrap:'anywhere'},
 specInfo:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
 features: {scrollMarginTop: 152, marginTop: 16, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
-allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:600,lineHeight:'20px',borderRadius:$.radiusSm,backgroundColor:{default:$.line,':hover':'#dcdce0'},outlineOffset:3},
+allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'20px',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3},
 sectionHeading: {color: $.ink, fontFamily: $.fontSans, fontSize: 18, fontWeight: 600, lineHeight: '26px', overflowWrap: 'anywhere'},
 featureHighlights: {display: 'grid', gridTemplateColumns: {[media.mobile]:'1fr',default:'repeat(2,minmax(0,1fr))'}, gap: 8, margin: '12px 0 0', padding: 0, listStyle:'none', color: $.ink, fontFamily: $.fontSans, fontSize: 14, lineHeight: '21px'},
 featureItem: {display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, minHeight: 44, padding: '10px 12px', borderRadius: $.radiusSm, backgroundColor: $.surface, overflowWrap: 'anywhere'},
@@ -136,7 +132,7 @@ featureCheck: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 18, 
 recordGroup: {display:'grid',gap:8,marginTop:24},
 recordSection: {scrollMarginTop:152},
 recordRow: {display:'grid',gridTemplateColumns:'36px minmax(0,1fr) 20px',alignItems:'center',gap:12,width:'100%',minHeight:72,padding:12,textAlign:'left',color:$.ink,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:$.radiusMd,backgroundColor:{default:$.surfaceAlt,':hover':$.line},outlineOffset:3,cursor:'pointer'},
-recordIcon: {display:'grid',placeItems:'center',width:36,height:36,borderRadius:$.radiusSm,backgroundColor:$.surface},
+recordIcon: {display:'grid',placeItems:'center',width:36,height:36,borderRadius:'50%',backgroundColor:$.surface},
 recordTitle: {display:'block',fontFamily:$.fontSans,fontSize:16,fontWeight:500,lineHeight:'22px'},
 recordStatus: {display:'block',marginTop:2,color:$.muted,fontFamily:$.fontSans,fontSize:13,fontWeight:400,lineHeight:'18px'}
 });
