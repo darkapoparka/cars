@@ -52,7 +52,7 @@ export default function HomePage() {
           <h2 id="home-inventory-heading" {...stylex.props(s.heading)}>{tx('Available cars')}</h2>
           <Link href="/cars" aria-label={tx('View all cars')} {...stylex.props(s.collectionLink, s.inventoryLink)}>{tx('View all')}<ArrowRight size={15} aria-hidden="true"/></Link>
         </div>
-        <div {...stylex.props(s.feed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} showDiscount={false} />)}</div>
+        <div {...stylex.props(s.feed)}>{firstFeed.map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</div>
       </section>
       {recent.length ? <section {...stylex.props(s.recent)}>
         <h2 {...stylex.props(s.heading)}>{tx("Recently viewed cars")}</h2>
@@ -70,7 +70,7 @@ export default function HomePage() {
           <div {...stylex.props(s.dealsRail)}>{collectionVehicles.map(vehicle => <MiniVehicleCard key={vehicle.slug} vehicle={vehicle} featured />)}</div>
         </div>
       </section> : null}
-      <section aria-label={tx("More cars")} {...stylex.props(s.feed)}>{moreFeed.slice(0, visibleCount).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} showDiscount={false} />)}</section>
+      <section aria-label={tx("More cars")} {...stylex.props(s.feed)}>{moreFeed.slice(0, visibleCount).map(vehicle => <VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile showDiscount={false} />)}</section>
       <div ref={sentinel} aria-hidden="true" {...stylex.props(s.sentinel)} />
       <Link href="/cars" {...stylex.props(s.browse)}>{tx("View all cars")}</Link>
     </main>
@@ -78,12 +78,12 @@ export default function HomePage() {
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
-  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, default: 170}},
+  content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, [media.desktop]: 48, default: 170}},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: {[media.mobile]: 600, default: 500}, lineHeight: 1.35, letterSpacing: 0},
   recent: {marginTop: 27},
   recentRail: {display: 'flex', gap: 12, overflowX: 'auto', marginTop: 12, paddingBottom: 6, scrollbarWidth: 'none'},
   offers: {marginTop: {[media.mobile]: $.mobileBrandGap, default: 24}},
-  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
+  feed: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 14}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 14}},
   inventoryHeading: {display: {[media.mobile]: 'none', default: 'flex'}, marginTop: {[media.mobile]: 0, default: 16}},
   inventoryLink: {minHeight: 44},
   hotDeals: {marginTop: {[media.mobile]: 24, default: 26}, paddingTop: {[media.mobile]: 0, default: 18}, paddingBottom: {[media.mobile]: 0, default: 8}, borderTopWidth: {[media.mobile]: 0, default: 1}, borderTopStyle: 'solid', borderTopColor: '#e8e8eb'},
@@ -95,7 +95,7 @@ const s = stylex.create({
   collectionBannerArrow: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 32, height: 32, color: '#1b1b1d', borderRadius: 16, backgroundColor: '#fff'},
   desktopCollection: {display: {[media.mobile]: 'none', default: 'block'}},
   collectionHeading: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10},
-  collectionLink: {display: 'inline-flex', alignItems: 'center', flexShrink: 0, gap: 4, minHeight: 36, color: $.ink, fontSize: 13, fontWeight: 600, textDecoration: 'none'},
+  collectionLink: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 4, minHeight: {[media.desktop]: 44, default: 36}, paddingInline: {[media.desktop]: 14, default: 0}, color: $.ink, fontSize: {[media.desktop]: 14, default: 13}, fontWeight: {[media.desktop]: 400, default: 600}, borderWidth: {[media.desktop]: 1, default: 0}, borderStyle: 'solid', borderColor: $.line, borderRadius: {[media.desktop]: 999, default: 0}, backgroundColor: {default: 'transparent', ':hover': {[media.desktop]: $.surfaceAlt}}, textDecoration: 'none'},
   caption: {marginTop: 2, color: $.muted, fontSize: 12, lineHeight: '18px'},
   dealsRail: {display: 'flex', gap: 12, overflowX: 'auto', overscrollBehaviorX: 'contain', marginTop: 14, marginRight: {[media.mobile]: -12, default: 0}, paddingRight: {[media.mobile]: 12, default: 0}, paddingBottom: 8, scrollbarWidth: 'none'},
   sentinel: {height: 1},

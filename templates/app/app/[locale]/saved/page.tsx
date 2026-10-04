@@ -52,7 +52,7 @@ function SavedCar({vehicle}: {vehicle: Vehicle}) {
     });
   }
   return <div {...stylex.props(styles.savedCar)}>
-    <VehicleCard vehicle={vehicle}/>
+    <VehicleCard vehicle={vehicle} desktopTile/>
     <button type="button" data-saved-remove onClick={removeCar} aria-label={tx(`Remove ${vehicle.make} ${vehicle.model} from saved cars`)} {...stylex.props(styles.remove)}><Trash2 size={16} aria-hidden="true"/>{tx('Remove')}</button>
     {error ? <p role="alert" {...stylex.props(styles.error)}>{tx(error)}</p> : null}
   </div>;

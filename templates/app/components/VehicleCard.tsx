@@ -15,7 +15,7 @@ export const STORAGE_KEY = SAVED_KEY;
 function factOverflow(element: HTMLElement) {
   return (element.scrollLeft > 1 ? 1 : 0) | (element.scrollLeft + element.clientWidth < element.scrollWidth - 1 ? 2 : 0);
 }
-function VehicleCard({vehicle, showDiscount = false, finance, importListing}: {vehicle: Vehicle; showDiscount?: boolean; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}}) {
+function VehicleCard({vehicle, showDiscount = false, desktopTile = false, finance, importListing}: {vehicle: Vehicle; showDiscount?: boolean; desktopTile?: boolean; finance?: {monthly: number; onCalculate: () => void}; importListing?: {country: string; onEnquire: () => void}}) {
   const tx = useCopy();
   const factRow = useRef<HTMLDivElement>(null);
   const [overflow, setOverflow] = useState(0);
@@ -45,21 +45,21 @@ function VehicleCard({vehicle, showDiscount = false, finance, importListing}: {v
     {importListing ? <span data-import-origin {...stylex.props(s.originBadge)}><Globe2 size={13} aria-hidden="true"/>{importListing.country}</span> : badge ? <span {...stylex.props(s.rate, /coming/i.test(badge) && s.coming)}>{tx(badge)}</span> : null}
   </>;
   const details = <>
-    <p data-vehicle-make {...stylex.props(s.make, importListing && s.importText)}>{tx(vehicle.make)}</p>
-    <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
+    <p data-vehicle-make {...stylex.props(s.make, desktopTile && s.tileText, importListing && s.importText)}>{tx(vehicle.make)}</p>
+    <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
     {!finance && vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
-  return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
-    <div {...stylex.props(s.main)}>
-      {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.photo)}>{photo}</Link>}
-      <div {...stylex.props(s.info)}>
+  return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
+    <div {...stylex.props(s.main, desktopTile && s.tileMain)}>
+      {importListing ? <button type="button" aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.photo,desktopTile && s.tilePhoto,s.importAction)}>{photo}</button> : <Link href={href} aria-label={tx(`View ${vehicle.year} ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.photo,desktopTile && s.tilePhoto)}>{photo}</Link>}
+      <div {...stylex.props(s.info, desktopTile && s.tileInfo)}>
         {importListing ? <button type="button" data-import-listing-action aria-haspopup="dialog" aria-label={importAction} onClick={importListing.onEnquire} {...stylex.props(s.details,s.importAction)}>{details}</button> : <Link href={href} {...stylex.props(s.details)}>{details}</Link>}
         <div {...stylex.props(s.facts)}><div ref={factRow} data-vehicle-facts role="group" tabIndex={0} aria-label={tx('Specifications')} onScroll={event => setOverflow(factOverflow(event.currentTarget))} {...stylex.props(s.meta)}>{facts.map((item, index) => <span key={`${item}-${index}`} title={tx(item)} {...stylex.props(s.pill, index === 2 && s.equipment)}>{index === 1 && item === 'Automatic' ? tx('Auto') : tx(item)}</span>)}</div>{overflow & 1 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueLeft)}/> : null}{overflow & 2 ? <span aria-hidden="true" {...stylex.props(s.factCue, s.factCueRight)}/> : null}</div>
         {benefits.length ? <div {...stylex.props(s.benefits)}><span {...stylex.props(s.benefitLabel)}>{tx('Example benefits')}</span><div {...stylex.props(s.benefitRow)}>{benefits.map(item => <span key={item} {...stylex.props(s.benefitChip)}>{tx(item)}</span>)}</div></div> : null}
       </div>
-      {!importListing ? <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button> : null}
+      {!importListing ? <button type="button" onClick={toggle} aria-pressed={saved} aria-label={tx(saved ? `Remove ${vehicle.make} ${vehicle.model} from saved cars` : `Save ${vehicle.make} ${vehicle.model}`)} {...stylex.props(s.heart, desktopTile && s.tileHeart, saved && s.heartSaved)}><Heart size={22} strokeWidth={1.3} fill={saved ? 'currentColor' : '#fafafa'} /></button> : null}
     </div>
     {finance ? <button type="button" data-finance-car-payment aria-label={`${tx('Estimate payment')}: ${vehicle.year} ${vehicle.make} ${vehicle.model}`} onClick={finance.onCalculate} {...stylex.props(s.financeAction, t.control)}><Calculator size={20} aria-hidden="true"/><span><CurrencyLabel size={16}/>{formatPrice(Math.round(finance.monthly))}{tx('/mo*')}</span><ChevronRight size={18} aria-hidden="true" {...stylex.props(s.financeArrow)}/></button> : null}
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
@@ -71,6 +71,12 @@ const s = stylex.create({
   card: {position: 'relative', minWidth: 0, overflow: 'hidden', borderColor: '#e7e7ea', borderStyle: 'solid', borderWidth: 1, borderRadius: 17, backgroundColor: '#fff', boxShadow: '0 3px 12px rgba(0,0,0,.035)'},
   main: {position: 'relative', display: 'grid', gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: 10, padding: {[media.mobile]: 10, default: 12}},
   photo: {position: 'relative', alignSelf: 'stretch', display: 'block', overflow: 'hidden', borderRadius: 10},
+  tileMain: {gridTemplateColumns: {[media.mobile]: '44% minmax(0,1fr)', [media.desktop]: 'minmax(0,1fr)', default: 'minmax(140px,39%) minmax(0,1fr)'}, gap: {[media.desktop]: 0, default: 10}, padding: {[media.mobile]: 10, [media.desktop]: 0, default: 12}},
+  tilePhoto: {aspectRatio: {[media.desktop]: '16 / 9', default: 'auto'}, borderRadius: {[media.desktop]: 0, default: 10}},
+  tileInfo: {padding: {[media.desktop]: 12, default: 0}},
+  tileText: {paddingRight: {[media.mobile]: 0, [media.desktop]: 0, default: 28}},
+  tileTitle: {paddingRight: {[media.mobile]: 0, [media.desktop]: 0, default: 22}, display: {[media.mobile]: 'block', [media.desktop]: 'block', default: '-webkit-box'}, whiteSpace: {[media.mobile]: 'nowrap', [media.desktop]: 'nowrap', default: 'normal'}},
+  tileHeart: {top: {[media.desktop]: 10, default: 3}, right: {[media.desktop]: 10, default: 1}, borderWidth: {[media.desktop]: 1, default: 0}, borderStyle: 'solid', borderColor: {[media.desktop]: $.line, default: 'transparent'}, borderRadius: {[media.desktop]: 999, default: 0}, backgroundColor: {[media.desktop]: '#fff', default: 'transparent'}, boxShadow: {[media.desktop]: '0 2px 8px rgba(0,0,0,.08)', default: 'none'}},
   image: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},
   placeholderImage: {objectFit: 'contain', padding: 14, backgroundColor: '#f0f2f4'},
   placeholderLabel: {position: 'absolute', left: 8, right: 8, bottom: 7, padding: '3px 6px', color: '#555b62', fontSize: 9, fontWeight: 600, lineHeight: '13px', textAlign: 'center', borderRadius: 999, backgroundColor: 'rgba(255,255,255,.94)'},

@@ -24,6 +24,8 @@ Cars24's retained reference uses consistent circular slots, a centered emblem an
 
 ## Card composition
 
-Keep regular-weight titles, clear euro prices and larger photos. The current mobile image occupies 44% of the card's content width. Following the latest owner correction on 1 October, mobile uses a single-line title with ellipsis and removes the card wishlist button and its reserved title space. Facts stay on the right in one horizontally swipeable, keyboard-scrollable row; preserve full text rather than wrapping or dropping equipment. Desktop retains its wishlist button and two fact rows. Keep facts beside the photo.
+Keep regular-weight titles, clear euro prices and larger photos. The current mobile image occupies 44% of the card's content width. Following the owner correction on 1 October, mobile uses a single-line title with ellipsis and removes the card wishlist button and its reserved title space. Mobile facts stay on the right in one horizontally swipeable, keyboard-scrollable row; preserve full text rather than wrapping or dropping equipment. Tablet keeps its existing horizontal cards.
+
+Following the owner's desktop correction on 4 October, Home, Cars and Saved use photo-first cards from 1100px: landscape 16:9 photo, visible wishlist button over the photo, and title, price and two fact rows beneath. Home shows four per row; Cars shows three beside filters below 1400px and four at wider sizes. Other card consumers retain their existing composition. Desktop keeps the white logo header with button-shaped controls on the right and removes only centered text navigation; Home search moves inside the dealer banner.
 
 Keep polish scoped. Use the original Cars24 captures as evidence for a specific improvement; do not copy unrelated marketplace claims, login prompts, campaign guarantees or another dealer's identity.

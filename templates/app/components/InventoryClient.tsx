@@ -73,7 +73,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   <main {...stylex.props(s.content)}><aside {...stylex.props(s.sidebar)}><h2 {...stylex.props(s.sideTitle)}>{tx("Filter cars")}</h2><label data-search-field {...stylex.props(searchField.field)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label>{makes.filter(make=>make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><CheckRow key={make} label={tx(make)} checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make)})}/>)}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>
    <section aria-label={tx('Available cars')} aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
-    {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle}/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
+    {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
   </main>
@@ -99,7 +99,7 @@ const s=stylex.create({
  results:{minWidth:0},
  luxeBrands:{marginTop:-2,marginBottom:28},
  inventoryNotice:{marginTop:20,paddingTop:16,color:$.muted,fontSize:13,lineHeight:'20px',borderTopWidth:1,borderTopStyle:'solid',borderTopColor:$.line},
- grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
+ grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr','@media (min-width: 1100px) and (max-width: 1399px)':'repeat(3,minmax(0,1fr))','@media (min-width: 1400px)':'repeat(4,minmax(0,1fr))',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
  empty:{display:'flex',alignItems:'center',flexDirection:'column',gap:16,padding:'50px 20px',textAlign:'center',color:$.muted},
  reset:{display:'block',width:'100%',minHeight:44,marginTop:20,color:$.violet,fontSize:14,fontWeight:500,borderColor:$.violet,borderWidth:1,borderStyle:'solid',borderRadius:12,backgroundColor:'#fff',cursor:'pointer'},
  filterOverlay:{display:'flex',flexDirection:'column',position:'fixed',inset:0,zIndex:200,color:$.ink,backgroundColor:'#fff',outlineStyle:'none'},

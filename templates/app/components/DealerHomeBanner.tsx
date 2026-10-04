@@ -29,13 +29,15 @@ export default function DealerHomeBanner() {
         {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} {...stylex.props(s.action)}><span data-dealer-contact-pill {...stylex.props(s.contactPill, t.caption)}><Phone size={15} strokeWidth={1.75} aria-hidden="true"/><span>{tx('Call us')}</span></span></a> : null}
       </div>
     </div>
+    <div data-dealer-banner-search {...stylex.props(s.searchControl)}><ShowroomSearchField onDark/></div>
   </section></ShowroomBannerFrame></div><DealerLocationSheet open={locationOpen} onClose={() => setLocationOpen(false)}/></>;
 }
 const s = stylex.create({
   desktopOnly: {display: {[media.mobile]: 'none', default: 'block'}},
   banner: {position: 'relative', overflow: 'hidden', backgroundColor: '#171719', color: '#fff', borderWidth: 1, borderStyle: 'solid', borderColor: '#303034', borderRadius: 20},
   backdrop: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: .65, pointerEvents: 'none'},
-  content: {position: 'relative', display: 'flex', flexDirection: {[media.mobile]: 'column', default: 'row'}, alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 0, default: 32}, padding: {[media.mobile]: '14px 16px 8px', default: '24px 28px'}, minHeight: {[media.mobile]: 0, default: 140}},
+  content: {position: 'relative', display: 'flex', flexDirection: {[media.mobile]: 'column', default: 'row'}, alignItems: 'center', justifyContent: 'center', gap: {[media.mobile]: 0, default: 32}, padding: {[media.mobile]: '14px 16px 8px', [media.desktop]: '20px 28px 12px', default: '24px 28px'}, minHeight: {[media.mobile]: 0, [media.desktop]: 108, default: 140}},
+  searchControl: {position: 'relative', display: {[media.desktop]: 'block', default: 'none'}, padding: '0 28px 22px'},
   brand: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, width: {[media.mobile]: 204, default: 256}, maxWidth: '100%', minWidth: 0, margin: 0, padding: 0, color: '#fff'},
   actions: {display: {[media.mobile]: 'none', default: 'flex'}, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: '0px 8px', maxWidth: '100%'},
   action: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minHeight: $.controlHeight, maxWidth: '100%', padding: 0, borderWidth: 0, backgroundColor: 'transparent', cursor: 'pointer', color: {default: '#303036', ':hover': '#000'}, borderRadius: 999, outline: {default: 'none', ':focus-visible': '2px solid #fff'}, outlineOffset: 2},

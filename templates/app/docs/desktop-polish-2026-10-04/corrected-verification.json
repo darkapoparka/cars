@@ -1,0 +1,503 @@
+{
+  "checks": [
+    "bg Home 1100: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "bg Home 1280: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "bg Home 1440: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "bg Home 1920: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "en Home 1100: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "en Home 1280: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "en Home 1440: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "en Home 1920: logo header, right buttons, four photo-first cards, banner search, dock hidden, no overflow",
+    "Cars 1100: 3 photo-first cards alongside filters, no overflow",
+    "Cars 1280: 3 photo-first cards alongside filters, no overflow",
+    "Cars 1440: 4 photo-first cards alongside filters, no overflow",
+    "Cars 1920: 4 photo-first cards alongside filters, no overflow",
+    "Desktop route /cars",
+    "Desktop route /sell",
+    "Desktop route /finance",
+    "Desktop route /service",
+    "Desktop route /saved",
+    "Desktop route /more",
+    "Desktop route /stores",
+    "Desktop route /cars/2024-toyota-fortuner-exr",
+    "Hamburger menu and return Home",
+    "Location drawer Escape and focus return",
+    "Banner search filters actual inventory",
+    "Card wishlist and right-side Saved navigation"
+  ],
+  "errors": [],
+  "preservation": [
+    {
+      "name": "home",
+      "width": 320,
+      "changedPixels": 13672,
+      "changedPixelsOutsidePhotos": 1,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/sell-brand-1.png",
+          "x": 12,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/sell-brand-8.png",
+          "x": 176,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-nissan.png",
+          "x": 258,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9714841126.jpg",
+          "x": 23,
+          "y": 579,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+          "x": 23,
+          "y": 748,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "cars",
+      "width": 320,
+      "changedPixels": 27270,
+      "changedPixelsOutsidePhotos": 1,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/catalog/9714841126.jpg",
+          "x": 23,
+          "y": 179,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+          "x": 23,
+          "y": 348,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718403147.jpg",
+          "x": 23,
+          "y": 517,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718423696.jpg",
+          "x": 23,
+          "y": 686,
+          "width": 120.546875,
+          "height": 135,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "sell",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "finance",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "service",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "menu",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "saved",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "detail",
+      "width": 320,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+          "x": 0,
+          "y": 0,
+          "width": 320,
+          "height": 200,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+          "x": 16,
+          "y": 212,
+          "width": 90.65625,
+          "height": 74,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+          "x": 114.65625,
+          "y": 212,
+          "width": 90.671875,
+          "height": 74,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+          "x": 213.328125,
+          "y": 212,
+          "width": 90.671875,
+          "height": 74,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/sell-brand-1.png",
+          "x": 12,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/sell-brand-8.png",
+          "x": 176,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-nissan.png",
+          "x": 258,
+          "y": 268,
+          "width": 72,
+          "height": 72,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9714841126.jpg",
+          "x": 23,
+          "y": 579,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+          "x": 23,
+          "y": 748,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "cars",
+      "width": 390,
+      "changedPixels": 11918,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/catalog/9714841126.jpg",
+          "x": 23,
+          "y": 179,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+          "x": 23,
+          "y": 348,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718403147.jpg",
+          "x": 23,
+          "y": 517,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718423696.jpg",
+          "x": 23,
+          "y": 686,
+          "width": 151.359375,
+          "height": 135,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "sell",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "finance",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "service",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "menu",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "saved",
+      "width": 390,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": []
+    },
+    {
+      "name": "detail",
+      "width": 390,
+      "changedPixels": 58291,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 243.75,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+          "x": 16,
+          "y": 255.75,
+          "width": 114,
+          "height": 74,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+          "x": 138,
+          "y": 255.75,
+          "width": 114,
+          "height": 74,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+          "x": 260,
+          "y": 255.75,
+          "width": 114,
+          "height": 74,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "home",
+      "width": 1099,
+      "changedPixels": 0,
+      "changedPixelsOutsidePhotos": 0,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/sell-brand-1.png",
+          "x": 28,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/sell-brand-8.png",
+          "x": 268,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-nissan.png",
+          "x": 388,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-mercedes.png",
+          "x": 748,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-bmw.png",
+          "x": 868,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/brand-audi.png",
+          "x": 988,
+          "y": 410,
+          "width": 108,
+          "height": 108,
+          "objectFit": "cover"
+        }
+      ]
+    },
+    {
+      "name": "cars",
+      "width": 1099,
+      "changedPixels": 105400,
+      "changedPixelsOutsidePhotos": 6,
+      "significantChangedPixelsOutsidePhotos": 0,
+      "photos": [
+        {
+          "src": "/reference-assets/catalog/9714841126.jpg",
+          "x": 41,
+          "y": 207,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+          "x": 561.5,
+          "y": 207,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718403147.jpg",
+          "x": 41,
+          "y": 407,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718423696.jpg",
+          "x": 561.5,
+          "y": 407,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718425910.jpg",
+          "x": 41,
+          "y": 607,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9718424077.jpg",
+          "x": 561.5,
+          "y": 607,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9714841440.jpg",
+          "x": 41,
+          "y": 807,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        },
+        {
+          "src": "/reference-assets/catalog/9714842271.jpg",
+          "x": 561.5,
+          "y": 807,
+          "width": 187.78125,
+          "height": 161,
+          "objectFit": "cover"
+        }
+      ]
+    }
+  ]
+}

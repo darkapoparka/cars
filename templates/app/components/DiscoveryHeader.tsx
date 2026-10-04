@@ -55,8 +55,8 @@ const s = stylex.create({
   spacerWithoutIdentity: {height: 'calc(102px + env(safe-area-inset-top))'},
   header: {position: {[media.mobile]: 'fixed', default: 'relative'}, top: 0, left: 0, right: 0, zIndex: 70, color: $.ink, backgroundColor: '#fff'},
   compact: {boxShadow: '0 1px 0 rgba(20,20,24,.08)'},
-  inner: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 'calc(8px + env(safe-area-inset-top))', default: 30}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 8, default: 12}},
+  inner: {maxWidth: $.content, marginInline: 'auto', paddingTop: {[media.mobile]: 'calc(8px + env(safe-area-inset-top))', [media.desktop]: 16, default: 30}, paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 8, default: 12}},
   innerCompact: {paddingTop: {[media.mobile]: 'calc(4px + env(safe-area-inset-top))', default: 18}, paddingBottom: 4},
   searchWrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 10},
-  desktopSearchOnly: {display: {[media.mobile]: 'none', default: 'block'}},
+  desktopSearchOnly: {display: {[media.mobile]: 'none', [media.desktop]: 'none', default: 'block'}},
 });
