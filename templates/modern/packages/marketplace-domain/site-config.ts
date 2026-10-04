@@ -62,6 +62,10 @@ export const publicArtworkSchema = z.object({
   brands: z.record(z.string(), publicAssetPathSchema),
 });
 export type PublicSiteArtwork = z.infer<typeof publicArtworkSchema>;
+export const publicInventoryFilterLayoutSchema = z.enum(["quick", "sidebar"]);
+export type PublicInventoryFilterLayout = z.infer<
+  typeof publicInventoryFilterLayoutSchema
+>;
 
 export const publicSiteSchema = z
   .object({
@@ -121,6 +125,9 @@ export const publicSiteSchema = z
     }),
     services: publicServicesSchema,
     categories: z.array(publicVehicleCategorySchema).min(1).max(4),
+    inventory: z
+      .object({ desktopFilterLayout: publicInventoryFilterLayoutSchema })
+      .optional(),
     theme: z.object({
       accent: brandColorSchema,
       colorMode: z.literal("light"),

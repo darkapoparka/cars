@@ -1,5 +1,6 @@
 "use client";
 
+import { publicBasePath } from "@repo/internationalization/paths";
 import {
   buildMarketplaceSearchHref,
   fallbackVehicleTaxonomy,
@@ -12,8 +13,12 @@ import {
   type VehicleTaxonomyMakeOption,
   withSearchParamUpdates,
 } from "@repo/marketplace";
+import {
+  getInventoryLayoutCookieName,
+  type PublicInventoryFilterLayout,
+} from "@repo/marketplace/inventory-presentation";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
-import { isDealershipSite } from "@repo/marketplace/site-config";
+import { isDealershipSite, publicSite } from "@repo/marketplace/site-config";
 import { usePathname, useRouter } from "next/navigation";
 import {
   type ReactNode,
@@ -41,6 +46,7 @@ import type { MarketplaceModelInventoryCount } from "../lib/model-picker-options
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { BottomMarketplaceNav } from "./dealer-bottom-nav";
 import { DesktopMarketplaceBar } from "./desktop-discovery-bar";
+import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 import { getActiveFilterChips } from "./desktop-marketplace-controls";
 import { MarketplaceCategoryPicker } from "./marketplace-category-picker";
 import { MarketplaceFullFilterOverlay } from "./marketplace-full-filter-overlay";
@@ -64,6 +70,7 @@ interface MarketplaceShellProps {
   desktopDiscoverySlot?: ReactNode;
   desktopSearchVariant?: "discovery" | "results";
   filters: MarketplaceSearchParams;
+  initialDesktopFilterLayout?: PublicInventoryFilterLayout;
   inventoryFacets?: {
     categoryCounts?: {
       category: VehicleCategory;
@@ -119,6 +126,8 @@ export const MarketplaceShell = ({
   defaultViewMode = "list",
   filters: initialFilters,
   inventoryFacets,
+  initialDesktopFilterLayout = publicSite.inventory?.desktopFilterLayout ??
+    "quick",
   listings,
   searchListings = listings,
   locale,
@@ -130,6 +139,30 @@ export const MarketplaceShell = ({
   const [filters, setFilters] = useState(initialFilters);
   const filtersRef = useRef(initialFilters);
   const [query, setQuery] = useState(initialFilters.q ?? "");
+  const [desktopFilterLayout, setDesktopFilterLayout] = useState(
+    initialDesktopFilterLayout
+  );
+  const changeDesktopFilterLayout = async (
+    nextLayout: PublicInventoryFilterLayout
+  ) => {
+    setDesktopFilterLayout(nextLayout);
+    try {
+      if ("cookieStore" in window) {
+        await window.cookieStore.set({
+          name: getInventoryLayoutCookieName(publicSite.identity.slug),
+          value: nextLayout,
+          path: publicBasePath || "/",
+          expires: Date.now() + 31_536_000_000,
+          sameSite: "lax",
+        });
+        return;
+      }
+      // biome-ignore lint/suspicious/noDocumentCookie: Older browsers and non-secure dealer previews need the same bounded preference fallback.
+      document.cookie = `${getInventoryLayoutCookieName(publicSite.identity.slug)}=${nextLayout}; Path=${publicBasePath || "/"}; Max-Age=31536000; SameSite=Lax${location.protocol === "https:" ? "; Secure" : ""}`;
+    } catch {
+      // Filtering remains usable when the browser blocks preference storage.
+    }
+  };
   const [categoryOpen, setCategoryOpen] = useState(false);
   const [makeModelOpen, setMakeModelOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -137,6 +170,8 @@ export const MarketplaceShell = ({
     "auto" | "make" | "model"
   >("auto");
   const [filterOpen, setFilterOpen] = useState(false);
+  const [desktopFilterEntry, setDesktopFilterEntry] =
+    useState<DesktopFullFilterEntry>("vehicle");
   const [activeQuickFilter, setActiveQuickFilter] =
     useState<QuickFilterKey | null>(null);
   const [isNavigating, startTransition] = useTransition();
@@ -398,6 +433,7 @@ export const MarketplaceShell = ({
           activeFilterCount={activeFilterChips.length}
           appBaseUrl={appUrl}
           currentPath={currentPath}
+          desktopFilterLayout={desktopFilterLayout}
           desktopSearchVariant={desktopSearchVariant}
           filters={filters}
           hideDesktop={showDealerDesktopLanding}
@@ -408,8 +444,31 @@ export const MarketplaceShell = ({
           onChooseCategory={() =>
             openMarketplaceOverlay(() => setCategoryOpen(true))
           }
+          onClearFilters={clearFilters}
+          onDesktopFilterLayoutChange={changeDesktopFilterLayout}
+          onOpenFilterSection={(section) =>
+            openMarketplaceOverlay(() => {
+              setDesktopFilterEntry(section);
+              setFilterOpen(true);
+            })
+          }
           onOpenFilters={() =>
-            openMarketplaceOverlay(() => setFilterOpen(true))
+            openMarketplaceOverlay(() => {
+              setDesktopFilterEntry("vehicle");
+              setFilterOpen(true);
+            })
+          }
+          onOpenMake={() =>
+            openMarketplaceOverlay(() => {
+              setDesktopFilterEntry("make");
+              setFilterOpen(true);
+            })
+          }
+          onOpenModel={() =>
+            openMarketplaceOverlay(() => {
+              setDesktopFilterEntry("model");
+              setFilterOpen(true);
+            })
           }
           onViewModeChange={changeViewMode}
           searchListings={searchListings}
@@ -481,7 +540,13 @@ export const MarketplaceShell = ({
         />
         <MarketplaceFullFilterOverlay
           filters={filters}
+          initialDesktopEntry={desktopFilterEntry}
           locale={locale}
+          modelCounts={
+            inventoryFacets?.status === "exact"
+              ? inventoryFacets.modelCounts
+              : undefined
+          }
           onApply={commitFilters}
           onDesktopApply={commitDesktopFilters}
           onOpenChange={setFilterOpen}

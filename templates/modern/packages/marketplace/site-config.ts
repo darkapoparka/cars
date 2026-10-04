@@ -84,6 +84,9 @@ export const createPublicSiteConfig = (
       "van",
       "motorbike",
     ],
+    inventory: {
+      desktopFilterLayout: config.desktopInventoryFilterLayout ?? "quick",
+    },
     theme: { accent: config.accent, colorMode: config.colorMode ?? "light" },
     artwork: {
       ...defaultSiteArtwork,

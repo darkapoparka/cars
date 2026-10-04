@@ -116,7 +116,11 @@ export const DesktopQuickFilterButton = ({
       )}
       data-clearable={Boolean(active && onClear)}
       data-slot="desktop-quick-filter"
-      onClick={onOpen}
+      onClick={(event) => {
+        // Safari needs an explicit focus target for the shared overlay coordinator.
+        event.currentTarget.focus({ preventScroll: true });
+        onOpen();
+      }}
       type="button"
       variant={active ? "default" : "secondary"}
     >
@@ -155,6 +159,7 @@ export const DesktopQuickFilterDialog = ({
   label,
   title,
   onClear,
+  onOpen,
   onSelect,
   options,
   selected,
@@ -169,6 +174,7 @@ export const DesktopQuickFilterDialog = ({
   label: string;
   title: string;
   onClear?: () => void;
+  onOpen?: () => void;
   onSelect: (value: string | undefined) => void;
   options: DesktopQuickOption[];
   selected?: string;
@@ -188,6 +194,21 @@ export const DesktopQuickFilterDialog = ({
     onSelect(draftSelected);
     setOpen(false);
   };
+
+  if (onOpen) {
+    return (
+      <DesktopQuickFilterButton
+        active={active}
+        ariaLabel={label}
+        className={className}
+        elevated={elevated}
+        isBg={isBg}
+        label={label}
+        onClear={onClear}
+        onOpen={onOpen}
+      />
+    );
+  }
 
   const trigger = (
     <DialogTrigger asChild>
@@ -346,6 +367,7 @@ export const DesktopQuickRangeDialog = ({
   minimumLabel,
   onClear,
   onApply,
+  onOpen,
   presets,
   quickSelectLabel,
   range,
@@ -370,6 +392,7 @@ export const DesktopQuickRangeDialog = ({
   minimumLabel: string;
   onClear?: () => void;
   onApply: (value: { maximum?: number; minimum?: number }) => void;
+  onOpen?: () => void;
   presets: readonly NumericRangePreset[];
   quickSelectLabel: string;
   range: NumericRangeValue;
@@ -401,6 +424,21 @@ export const DesktopQuickRangeDialog = ({
     onApply({ maximum, minimum });
     setOpen(false);
   };
+
+  if (onOpen) {
+    return (
+      <DesktopQuickFilterButton
+        active={active}
+        ariaLabel={label}
+        className={className}
+        elevated={elevated}
+        isBg={isBg}
+        label={label}
+        onClear={onClear}
+        onOpen={onOpen}
+      />
+    );
+  }
 
   const trigger = (
     <DialogTrigger asChild>

@@ -7,6 +7,19 @@ const dealer = (overrides: Partial<typeof leadSite> = {}) =>
   createPublicSiteConfig({ ...leadSite, ...overrides });
 
 describe("public dealership configuration", () => {
+  it("supports a dealer-specific desktop filter layout and rejects unknown layouts", () => {
+    expect(dealer().inventory?.desktopFilterLayout).toBe("quick");
+    expect(
+      dealer({ desktopInventoryFilterLayout: "sidebar" }).inventory
+        ?.desktopFilterLayout
+    ).toBe("sidebar");
+    expect(() =>
+      publicSiteSchema.parse({
+        ...dealer(),
+        inventory: { desktopFilterLayout: "unknown" },
+      })
+    ).toThrow();
+  });
   it("keeps the desktop master wordmark separate from mobile and dealer identities", () => {
     const master = dealer();
     expect(master.identity.name).toBe(leadSite.name);

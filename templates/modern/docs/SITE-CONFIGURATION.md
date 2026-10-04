@@ -34,6 +34,14 @@ Desktop shortlist storage is scoped by dealer slug and public base path. The sta
 
 The optional `artwork.heroScene` is a pre-optimized decorative desktop asset shared by landing and service heroes. Supply a suitably sized WebP (the master uses 2172 × 724 pixels, about 149 KB); it is served directly to preserve its prepared quality. Keep uncompressed originals in provenance, not the served tree. Custom left/right cutouts still disable the default scene through the existing configuration projection. Compact editorial/legal heroes deliberately omit decorative photography.
 
+## Desktop inventory filters
+
+The optional `desktopInventoryFilterLayout` authoring setting accepts `"quick"` or `"sidebar"`; the master and older configurations default to `"quick"`. `publicSite.inventory.desktopFilterLayout` is the validated projection. This setting changes desktop presentation from 1024 px only. The inventory has one shared frame below the unchanged photo hero. Its top row contains the result count, Quick/Sidebar selection, sorting and Grid/List controls. Quick adds rounded neutral filter buttons below that row and uses a full-width vehicle grid; Sidebar retains the white filter panel and narrower grid. The toolbar has no additional card or brand-colored container.
+
+Make and Model open the shared searchable picker. On desktop it uses the same moving segmented rail pattern as Home, with dependent Make, Model and available Body style stages. Model stays disabled until a make is selected. The dialog keeps its own draft until Show results; dismissal discards that draft, choosing a different make clears its model/body selection, and returning to the same make preserves the selection. Empty searches provide a clear-search action. The desktop dialog presentation is isolated from the existing mobile overlay.
+
+The visitor can switch either way without changing search criteria or discarding an unsubmitted sidebar draft. Quick buttons open one accessible full filter dialog at the requested section, including Make/Model, numeric ranges and all other supported filters. Its controlled draft survives section changes; Show results commits it once. Typed ranges commit before navigation unmounts their panel. Sidebar retains its existing draft controls. Both layouts use the same URL search state. A one-year `modern-inventory-layout-v1-<dealer slug>` cookie, scoped to the configured public base path, remembers the choice; the inventory route reads and validates it before rendering. Invalid values fall back to the dealer default, and blocked preference storage does not block filtering. The cookie contains only a presentation choice. [Current options qualification](DESKTOP-INVENTORY-OPTIONS-2026-10-04.md) covers the desktop dialog and mobile preservation; local preview qualification does not establish mounted-client or release acceptance.
+
 ## Live dealership binding
 
 The following server variables are documented in `apps/web/.env.example`:

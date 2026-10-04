@@ -1,4 +1,5 @@
 import type {
+  PublicInventoryFilterLayout,
   PublicSiteArtwork,
   PublicSiteConfig,
 } from "@repo/marketplace-domain/site-config";
@@ -41,6 +42,7 @@ export interface LeadSiteConfig {
   readonly countryCode: string;
   readonly currency: LeadSiteCurrency;
   readonly desktopAccent?: string;
+  readonly desktopInventoryFilterLayout?: PublicInventoryFilterLayout;
   /** Source-bound master wordmark; dealer adaptation changes the slug and disables it. */
   readonly desktopPreviewIdentity?: {
     readonly sourceSlug: string;
@@ -107,6 +109,7 @@ export const leadSite: LeadSiteConfig = {
   },
   accent: "#c40101",
   desktopAccent: "#405ff2",
+  desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
     label: "Modern",

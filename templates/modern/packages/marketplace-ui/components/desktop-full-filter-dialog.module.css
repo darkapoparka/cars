@@ -1,0 +1,158 @@
+@media (min-width: 1024px) {
+  .dialog {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: min(calc(var(--spacing) * 256), calc(100vw - var(--spacing) * 16));
+    max-width: none;
+    height: min(calc(var(--spacing) * 208), calc(100dvh - var(--spacing) * 16));
+    padding: 0;
+    overflow: hidden;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+    box-shadow: var(--elevation-overlay);
+  }
+  .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing) * 4);
+    align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
+    text-align: left;
+    border-bottom: var(--desktop-border-width) solid var(--border);
+  }
+  .close {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+    padding: 0;
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 2);
+    box-shadow: none;
+  }
+  .close:hover {
+    background: var(--control-hover);
+  }
+  .workspace {
+    display: grid;
+    flex: 1;
+    grid-template-columns: calc(var(--spacing) * 55) minmax(0, 1fr);
+    gap: 0;
+    min-height: 0;
+  }
+  .navigation {
+    min-height: 0;
+    background: var(--desktop-surface-subtle);
+    border-right: var(--desktop-border-width) solid var(--border);
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+    width: 100%;
+    height: auto;
+    padding: calc(var(--spacing) * 4);
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+  }
+  .menuItem {
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(var(--spacing) * 11);
+    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--foreground);
+    background: transparent;
+    border: 0;
+    border-radius: calc(var(--spacing) * 2);
+    box-shadow: none;
+  }
+  .menuItem[data-state="active"] {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    box-shadow: none;
+  }
+  .menuItem[data-state="inactive"]:hover {
+    background: var(--control-hover);
+  }
+  .summary {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: calc(var(--spacing) * 3);
+    font-weight: var(--font-weight-normal);
+    line-height: calc(var(--spacing) * 4);
+    white-space: nowrap;
+  }
+  .content {
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  .content[data-state="active"] {
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(var(--spacing) * 6);
+  }
+  .content :global(button.border-primary[aria-pressed="true"]) {
+    color: var(--brand-foreground);
+    background: var(--brand);
+    border-color: var(--brand);
+  }
+  .content :global(button.border-primary[aria-pressed="true"]:hover) {
+    color: var(--brand-hover-foreground);
+    background: var(--lead-site-accent-hover);
+  }
+  .options {
+    padding: 0 calc(var(--spacing) * 2) calc(var(--spacing) * 6);
+  }
+  .optionsHeading {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+  }
+  .optionsHeading button {
+    height: calc(var(--spacing) * 9);
+    box-shadow: none;
+  }
+  .keyword {
+    display: grid;
+    gap: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 4);
+  }
+  .keyword input {
+    height: calc(var(--spacing) * 11);
+    background: var(--control);
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--spacing) * 3);
+    justify-content: flex-end;
+    padding: calc(var(--spacing) * 4) calc(var(--spacing) * 6);
+    background: var(--panel);
+    border-top: var(--desktop-border-width) solid var(--border);
+  }
+  .reset,
+  .apply {
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 6);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: none;
+  }
+  .apply {
+    min-width: calc(var(--spacing) * 56);
+  }
+}

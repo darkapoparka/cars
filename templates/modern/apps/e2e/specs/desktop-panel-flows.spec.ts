@@ -9,13 +9,12 @@ const moreFiltersPattern = /More filters/;
 const desktopHeroSelector =
   '[data-slot="dealer-desktop-home-hero"], [data-slot="dealer-desktop-context-hero"]';
 
-test("desktop keeps the Home 10 frame and stock visible below its search", async ({
-  page,
-}) => {
-  test.setTimeout(180_000);
-  for (const width of [1024, 1440, 1920]) {
-    await page.setViewportSize({ width, height: 1000 });
-    for (const locale of ["en", "bg"] as const) {
+for (const width of [1024, 1440, 1920]) {
+  for (const locale of ["en", "bg"] as const) {
+    test(`desktop keeps the Home 10 frame and stock visible below its search (${locale}, ${width}px)`, async ({
+      page,
+    }) => {
+      await page.setViewportSize({ width, height: 1000 });
       await page.goto(`/${locale}`);
       const header = page.locator(
         '[data-slot="dealer-desktop-header"]:visible'
@@ -164,10 +163,29 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
           expect(panel?.y).toBeGreaterThan(
             (inventoryHeroBox?.y ?? 0) + (inventoryHeroBox?.height ?? 0)
           );
+          const layout = page.locator('[data-slot="dealer-inventory-filters"]');
+          await expect(
+            layout.getByRole("button", {
+              name: locale === "bg" ? "Бързи филтри" : "Quick filters",
+              exact: true,
+            })
+          ).toHaveAttribute("aria-pressed", "true");
+          const grid = page.locator('[data-slot="marketplace-listing-grid"]');
+          expect(
+            await grid.evaluate(
+              (element) =>
+                getComputedStyle(element).gridTemplateColumns.split(" ").length
+            )
+          ).toBe(width < 1280 ? 3 : 4);
+          await layout
+            .getByRole("button", {
+              name: locale === "bg" ? "Страничен панел" : "Sidebar",
+              exact: true,
+            })
+            .click();
           const sidebar = await page
             .locator('[data-slot="dealer-inventory-sidebar"]')
             .boundingBox();
-          const grid = page.locator('[data-slot="marketplace-listing-grid"]');
           const gridBox = await grid.boundingBox();
           expect(sidebar?.width).toBe(width < 1280 ? 240 : 280);
           expect(gridBox?.x).toBeGreaterThan(
@@ -181,8 +199,17 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe((panel?.x ?? 0) + 24);
-            expect(sidebar?.y).toBe((panel?.y ?? 0) + 24);
+            const layoutBox = await layout.boundingBox();
+            expect(sidebar?.y).toBe(
+              (layoutBox?.y ?? 0) + (layoutBox?.height ?? 0) + 24
+            );
           }
+          await layout
+            .getByRole("button", {
+              name: locale === "bg" ? "Бързи филтри" : "Quick filters",
+              exact: true,
+            })
+            .click();
         }
         if (path === "/about" || path === "/contact") {
           const banner = page.locator(
@@ -213,27 +240,35 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
             (bannerBox?.y ?? 0) + (bannerBox?.height ?? 0) + 40
           );
           if (path === "/about") {
-            await page.evaluate(() => document.fonts.ready);
-            const chapterHeading = page
-              .getByRole("region", { name: contentLabel[locale], exact: true })
-              .getByRole("heading", { level: 2 });
-            expect(
-              await chapterHeading.evaluate((heading) => {
-                const tile = heading.parentElement?.getBoundingClientRect();
-                if (!tile) {
-                  return false;
-                }
-                const range = document.createRange();
-                range.selectNodeContents(heading);
-                return [...range.getClientRects()].every(
-                  (rect) =>
-                    rect.left >= tile.left &&
-                    rect.right <= tile.right &&
-                    rect.top >= tile.top &&
-                    rect.bottom <= tile.bottom
+            const gallery = page.getByRole("region", {
+              name: contentLabel[locale],
+              exact: true,
+            });
+            await expect(gallery.locator("figure")).toHaveCount(4);
+            const photos = await gallery
+              .locator("figure")
+              .evaluateAll((figures) =>
+                figures.map((figure) => {
+                  const { x, y, width, height } =
+                    figure.getBoundingClientRect();
+                  return { x, y, width, height };
+                })
+              );
+            for (const [index, photo] of photos.entries()) {
+              expect(photo.y).toBe(photos[0]?.y);
+              expect(photo.width).toBe(photos[0]?.width);
+              expect(photo.height).toBe(photos[0]?.height);
+              expect(photo.width / photo.height).toBeCloseTo(1.5, 3);
+              if (index > 0) {
+                const previous = photos[index - 1];
+                expect(photo.x).toBeGreaterThan(
+                  (previous?.x ?? 0) + (previous?.width ?? 0)
                 );
-              })
-            ).toBe(true);
+              }
+            }
+            await expect(
+              page.locator('[data-slot="about-benefits"]').getByRole("listitem")
+            ).toHaveCount(4);
           }
         }
         expect(
@@ -242,9 +277,9 @@ test("desktop keeps the Home 10 frame and stock visible below its search", async
           )
         ).toBe(true);
       }
-    }
+    });
   }
-});
+}
 
 test("desktop navigation keeps the header stable through loading", async ({
   page,
@@ -336,6 +371,10 @@ test("home search and inventory sidebar apply drafts without losing filters", as
     await expect
       .poll(() => new URL(page.url()).searchParams.get("priceMax"))
       .toBe("40000");
+    await page
+      .locator('[data-slot="dealer-inventory-filters"]')
+      .getByRole("button", { name: "Sidebar", exact: true })
+      .click();
     const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
     for (const slot of [
       "category",

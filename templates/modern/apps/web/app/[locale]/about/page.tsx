@@ -6,7 +6,7 @@ import {
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import Image from "@repo/marketplace-ui/components/public-image";
 import { getLocalizedPath, normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowUpRight, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import Link from "next/link";
 import { createPublicLocalizedMetadata } from "@/lib/public-metadata";
 import { requirePublicSitePath } from "@/lib/public-site-access";
@@ -41,9 +41,33 @@ export default async function AboutPage({ params }: AboutProps) {
   const text = (bulgarian: string, english: string) =>
     bg ? bulgarian : english;
   const path = (href: string) => getLocalizedPath(normalized, href);
+  const gallery = [
+    {
+      image: 1,
+      alt: text(
+        "Предаване на ключ за автомобил",
+        "A car key being handed to a customer"
+      ),
+    },
+    {
+      image: 2,
+      alt: text("Консултант в автосалон", "A representative in a showroom"),
+    },
+    {
+      image: 3,
+      alt: text("Автомобили в светъл автосалон", "Cars in a bright showroom"),
+    },
+    {
+      image: 5,
+      alt: text(
+        "Ръкостискане при предаване на автомобил",
+        "A handshake at a vehicle handover"
+      ),
+    },
+  ];
   const benefits = [
     {
-      icon: "choice",
+      artwork: "choice",
       title: text("Открийте своя автомобил", "Find your fit"),
       detail: text(
         "Разгледайте марки и бюджети и открийте подходящия автомобил.",
@@ -51,7 +75,7 @@ export default async function AboutPage({ params }: AboutProps) {
       ),
     },
     {
-      icon: "pricing",
+      artwork: "details",
       title: text("Вижте детайлите", "See the details"),
       detail: text(
         "Сравнете цена, пробег и характеристики преди избора си.",
@@ -59,7 +83,7 @@ export default async function AboutPage({ params }: AboutProps) {
       ),
     },
     {
-      icon: "finance",
+      artwork: "budget",
       title: text("Планирайте бюджета си", "Plan your budget"),
       detail: text(
         "Разгледайте възможностите за финансиране и месечните вноски.",
@@ -67,7 +91,7 @@ export default async function AboutPage({ params }: AboutProps) {
       ),
     },
     {
-      icon: "care",
+      artwork: "viewing",
       title: text("Направете следващата стъпка", "Take the next step"),
       detail: text(
         "Попитайте за автомобил и уговорете оглед на място.",
@@ -136,92 +160,48 @@ export default async function AboutPage({ params }: AboutProps) {
               "Illustrative showroom gallery"
             )}
             className={styles.gallery}
+            data-slot="about-gallery"
           >
-            <div className={styles.galleryLeft}>
-              <div className={styles.chapter}>
-                <span>{desktopIdentity.shortName}</span>
-                <h2>
-                  {text("Следващата ви", "Your next")}
-                  <br />
-                  {text("глава.", "chapter.")}
-                </h2>
-                <Link
-                  aria-label={text("Открийте автомобил", "Find your next car")}
-                  href={path("/cars")}
-                >
-                  <ArrowUpRight aria-hidden size={28} />
-                </Link>
-              </div>
-              <figure>
+            {gallery.map((photo) => (
+              <figure key={photo.image}>
                 <Image
-                  alt={text(
-                    "Предаване на ключ за автомобил",
-                    "A car key being handed to a customer"
-                  )}
+                  alt={photo.alt}
+                  className={
+                    photo.image === 2 ? styles.galleryPortrait : undefined
+                  }
                   fill
-                  sizes="220px"
-                  src="/desktop-boxcars/about-1.jpg"
+                  sizes="(min-width: 1400px) 312px, (min-width: 1024px) calc((100vw - 152px) / 4), 100vw"
+                  src={`/desktop-boxcars/about-${photo.image}.jpg`}
                 />
               </figure>
-            </div>
-            <figure>
-              <Image
-                alt={text(
-                  "Консултант в автосалон",
-                  "A representative in a showroom"
-                )}
-                fill
-                sizes="550px"
-                src="/desktop-boxcars/about-2.jpg"
-              />
-            </figure>
-            <div className={styles.galleryRight}>
-              <figure>
-                <Image
-                  alt={text(
-                    "Автомобили в светъл автосалон",
-                    "Cars in a bright showroom"
-                  )}
-                  fill
-                  sizes="550px"
-                  src="/desktop-boxcars/about-3.jpg"
-                />
-              </figure>
-              <div className={styles.galleryPair}>
-                {[4, 5].map((number) => (
-                  <figure key={number}>
-                    <Image
-                      alt=""
-                      fill
-                      sizes="300px"
-                      src={`/desktop-boxcars/about-${number}.jpg`}
-                    />
-                  </figure>
-                ))}
-              </div>
-            </div>
+            ))}
           </section>
-          <section className={styles.benefits}>
-            <h2>
+          <section
+            aria-labelledby="about-benefits-title"
+            className={styles.benefits}
+            data-slot="about-benefits"
+          >
+            <h2 id="about-benefits-title">
               {text(
                 "По-лесен път към следващия ви автомобил",
                 "A simpler way to find your next car"
               )}
             </h2>
-            <div className={styles.benefitGrid}>
+            <ul className={styles.benefitGrid}>
               {benefits.map((benefit) => (
-                <div key={benefit.icon}>
+                <li key={benefit.artwork}>
                   <Image
                     alt=""
-                    height={60}
-                    src={`/desktop-boxcars/about-${benefit.icon}.svg`}
-                    width={60}
+                    height={384}
+                    src={`/images/about/blue-${benefit.artwork}-v1.webp`}
+                    unoptimized
+                    width={384}
                   />
                   <h3>{benefit.title}</h3>
                   <p>{benefit.detail}</p>
-                </div>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
           <section className={styles.aboutAction}>
             <h2>

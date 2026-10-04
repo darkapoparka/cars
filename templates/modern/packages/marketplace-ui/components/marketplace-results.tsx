@@ -9,6 +9,7 @@ import {
   type VehicleListing,
   type VehicleTaxonomyMakeOption,
 } from "@repo/marketplace";
+import type { PublicInventoryFilterLayout } from "@repo/marketplace/inventory-presentation";
 import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
 import { isDealershipSite } from "@repo/marketplace/site-config";
 import { useEffect } from "react";
@@ -22,7 +23,8 @@ import {
 import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerHeroSearch } from "./dealer-hero-search";
 import dealerStyles from "./dealer-inventory.module.css";
-import { DealerInventorySummary } from "./dealer-inventory-summary";
+import { DealerInventoryFilters } from "./dealer-inventory-filters";
+import type { DesktopFullFilterSection } from "./desktop-full-filter-dialog";
 import { ResultToolbar } from "./desktop-marketplace-controls";
 import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
@@ -30,7 +32,10 @@ import { VehicleCard } from "./vehicle-card";
 
 // Dealer grid: frame gutters, panel padding, sidebar, grid gaps and card borders.
 const dealerImageSizes = {
-  grid: "(max-width: 1279px) calc((100vw - 416px) / 2), (max-width: 1399px) calc((100vw - 478px) / 3), 308px",
+  sidebar:
+    "(max-width: 1279px) calc((100vw - 416px) / 2), (max-width: 1399px) calc((100vw - 478px) / 3), 308px",
+  quick:
+    "(max-width: 1279px) calc((100vw - 174px) / 3), (max-width: 1399px) calc((100vw - 196px) / 4), 301px",
   list: "272px",
 } as const;
 
@@ -39,6 +44,7 @@ export const MarketplaceResults = ({
   appBaseUrl,
   currentPath,
   desktopSearchVariant,
+  desktopFilterLayout,
   filters,
   hideDesktop = false,
   isBg,
@@ -48,7 +54,12 @@ export const MarketplaceResults = ({
   taxonomy,
   onChooseCategory,
   onApply,
+  onClearFilters,
+  onDesktopFilterLayoutChange,
+  onOpenMake,
+  onOpenModel,
   onOpenFilters,
+  onOpenFilterSection,
   onViewModeChange,
   totalListings,
   viewMode,
@@ -57,6 +68,7 @@ export const MarketplaceResults = ({
   appBaseUrl: string;
   currentPath: string;
   desktopSearchVariant: "discovery" | "results";
+  desktopFilterLayout: PublicInventoryFilterLayout;
   filters: MarketplaceSearchParams;
   hideDesktop?: boolean;
   isBg: boolean;
@@ -66,7 +78,12 @@ export const MarketplaceResults = ({
   taxonomy?: VehicleTaxonomyMakeOption[];
   onChooseCategory: () => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+  onClearFilters: () => void;
+  onDesktopFilterLayoutChange: (layout: PublicInventoryFilterLayout) => void;
+  onOpenMake: () => void;
+  onOpenModel: () => void;
   onOpenFilters: () => void;
+  onOpenFilterSection: (section: DesktopFullFilterSection) => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   totalListings: number;
   viewMode: ListingViewMode;
@@ -100,12 +117,32 @@ export const MarketplaceResults = ({
         hideDesktop && "lg:hidden"
       )}
       data-desktop-hidden={hideDesktop}
+      data-filter-layout={isDealershipSite ? desktopFilterLayout : undefined}
       data-slot={isDealershipSite ? "dealer-inventory-panel" : undefined}
     >
+      {isDealershipSite && !hideDesktop ? (
+        <DealerInventoryFilters
+          filterCount={activeFilterCount}
+          filters={filters}
+          layout={desktopFilterLayout}
+          locale={locale}
+          onApply={onApply}
+          onClearFilters={onClearFilters}
+          onLayoutChange={onDesktopFilterLayoutChange}
+          onOpenFilters={onOpenFilters}
+          onOpenMake={onOpenMake}
+          onOpenModel={onOpenModel}
+          onOpenSection={onOpenFilterSection}
+          onViewModeChange={onViewModeChange}
+          totalListings={totalListings}
+          viewMode={viewMode}
+        />
+      ) : null}
       {isDealershipSite && !hideDesktop && (
         <aside
           className={dealerStyles.sidebar}
           data-slot="dealer-inventory-sidebar"
+          hidden={desktopFilterLayout !== "sidebar"}
         >
           <DealerHeroSearch
             compact
@@ -127,17 +164,6 @@ export const MarketplaceResults = ({
         >
           {totalListings} {totalListings === 1 ? singularLabel : pluralLabel}
         </p>
-        {isDealershipSite && (
-          <DealerInventorySummary
-            filters={filters}
-            locale={locale}
-            onApply={onApply}
-            onOpenFilters={onOpenFilters}
-            onViewModeChange={onViewModeChange}
-            totalListings={totalListings}
-            viewMode={viewMode}
-          />
-        )}
         <div className={isDealershipSite ? "lg:hidden" : undefined}>
           <ResultToolbar
             filters={filters}
@@ -171,7 +197,11 @@ export const MarketplaceResults = ({
                 <VehicleCard
                   density="compact"
                   desktopImageSizes={
-                    isDealershipSite ? dealerImageSizes[viewMode] : undefined
+                    isDealershipSite
+                      ? dealerImageSizes[
+                          viewMode === "list" ? "list" : desktopFilterLayout
+                        ]
+                      : undefined
                   }
                   desktopLayout={viewMode}
                   href={buildMarketplaceSearchHref(

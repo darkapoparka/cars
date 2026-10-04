@@ -29,6 +29,7 @@
     "./search-params": "./search-params.ts",
     "./types": "./types.ts",
     "./inventory-search": "./inventory-search.ts",
+    "./inventory-presentation": "./inventory-presentation.ts",
     "./site-config": "./site-config.ts",
     "./public-images": "./public-images.ts",
     "./lead-workflow": "./lead-workflow.ts",

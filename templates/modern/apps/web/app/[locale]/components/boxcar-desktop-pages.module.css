@@ -214,17 +214,15 @@
   }
   .gallery {
     display: grid;
-    grid-template-columns:
-      minmax(calc(var(--spacing) * 53), 0.95fr) minmax(0, 2.3fr)
-      minmax(0, 2.3fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: calc(var(--spacing) * 6);
-    height: calc(var(--spacing) * 110);
     margin-top: calc(var(--spacing) * 10);
   }
   .gallery figure {
     position: relative;
     min-width: 0;
     min-height: 0;
+    aspect-ratio: 3 / 2;
     margin: 0;
     overflow: hidden;
     border-radius: calc(var(--spacing) * 4);
@@ -234,60 +232,14 @@
     height: 100%;
     object-fit: cover;
   }
-  .galleryLeft {
-    display: grid;
-    grid-template-rows: 1.2fr 1fr;
-    gap: calc(var(--spacing) * 6);
-    min-height: 0;
-  }
-  .galleryRight {
-    display: grid;
-    grid-template-rows: 1.15fr 1fr;
-    gap: calc(var(--spacing) * 6);
-    min-height: 0;
-  }
-  .galleryPair {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: calc(var(--spacing) * 6);
-    min-height: 0;
-  }
-  .chapter {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: calc(var(--spacing) * 6);
-    color: var(--desktop-surface);
-    background: var(--brand);
-    border-radius: calc(var(--spacing) * 4);
-  }
-  .gallery .chapter span {
-    font-size: calc(var(--spacing) * 3.5);
-    line-height: calc(var(--spacing) * 5.5);
-  }
-  .chapter h2 {
-    margin: calc(var(--spacing) * 3) 0 calc(var(--spacing) * 2.5);
-    font-size: clamp(
-      calc(var(--spacing) * 6),
-      2.1vw,
-      calc(var(--spacing) * 7.5)
-    );
-    font-weight: var(--font-weight-bold);
-    line-height: var(--desktop-leading-tight);
-    letter-spacing: calc(var(--spacing) * -0.125);
-  }
-  .chapter a {
-    display: grid;
-    place-items: center;
-    width: calc(var(--spacing) * 11);
-    height: calc(var(--spacing) * 11);
-    margin-top: auto;
+  .gallery .galleryPortrait {
+    object-position: center 28%;
   }
   .benefits {
-    padding: calc(var(--spacing) * 19.5) 0;
+    padding: calc(var(--spacing) * 16) 0;
   }
   .benefits > h2 {
-    margin-bottom: calc(var(--spacing) * 10);
+    margin-bottom: calc(var(--spacing) * 8);
     font-size: calc(var(--spacing) * 8);
     font-weight: var(--font-weight-bold);
     line-height: var(--desktop-leading-section);
@@ -296,20 +248,32 @@
   }
   .benefitGrid {
     display: grid;
+    grid-template-rows: auto auto auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 9);
+    row-gap: calc(var(--spacing) * 4);
+    column-gap: calc(var(--spacing) * 6);
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
-  .benefitGrid > div {
+  .benefitGrid > li {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    min-width: 0;
+    padding: calc(var(--spacing) * 6) calc(var(--spacing) * 5);
     text-align: center;
+    background: var(--desktop-support-surface);
+    border-radius: calc(var(--spacing) * 4);
   }
   .benefitGrid img {
-    width: calc(var(--spacing) * 15);
-    height: calc(var(--spacing) * 15);
-    margin: 0 auto calc(var(--spacing) * 6);
+    width: 100%;
+    height: calc(var(--spacing) * 36);
+    margin: 0;
     object-fit: contain;
   }
   .benefitGrid h3 {
-    margin: 0 0 calc(var(--spacing) * 3);
+    margin: 0;
     font-size: calc(var(--spacing) * 5);
     font-weight: var(--font-weight-medium);
     line-height: calc(var(--spacing) * 7);
@@ -318,12 +282,14 @@
     margin: 0;
     font-size: calc(var(--spacing) * 3.75);
     line-height: calc(var(--spacing) * 6.5);
+    color: var(--muted-foreground);
     text-wrap: balance;
   }
   .aboutAction {
     padding: calc(var(--spacing) * 12) calc(var(--spacing) * 7);
+    color: var(--desktop-surface);
     text-align: center;
-    background: var(--desktop-about-surface);
+    background: var(--brand);
     border-radius: calc(var(--spacing) * 4);
   }
   .aboutAction h2 {
@@ -355,6 +321,14 @@
     background: var(--desktop-surface);
     border: var(--desktop-border-width) solid var(--foreground);
     border-radius: calc(var(--spacing) * 3);
+  }
+  .aboutActions :is(.contactAction, .secondaryAction) {
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-color: var(--desktop-surface);
+  }
+  .aboutActions :is(.contactAction, .secondaryAction):hover {
+    background: var(--desktop-surface-subtle);
   }
   .aboutFaq {
     max-width: calc(var(--spacing) * 205);
@@ -401,5 +375,8 @@
   .content :is(a, button):focus-visible {
     outline: var(--desktop-focus-width) solid var(--ring);
     outline-offset: calc(var(--spacing) * 1);
+  }
+  .aboutAction a:focus-visible {
+    outline-color: var(--desktop-surface);
   }
 }

@@ -93,6 +93,21 @@
     transparent
   );
   --desktop-accent-soft: color-mix(in srgb, var(--brand) 8%, var(--panel));
+  --desktop-filter-selected-background: color-mix(
+    in srgb,
+    var(--brand) 10%,
+    var(--panel)
+  );
+  --desktop-filter-selected-border: color-mix(
+    in srgb,
+    var(--brand) 25%,
+    var(--border)
+  );
+  --desktop-filter-selected-text: color-mix(
+    in srgb,
+    var(--brand-text) 85%,
+    var(--foreground)
+  );
   --desktop-picker-hover: color-mix(in srgb, var(--brand) 3%, var(--panel));
   --desktop-success-hover: color-mix(in srgb, var(--success) 12%, transparent);
   --desktop-success-soft: color-mix(in srgb, var(--success) 6%, var(--panel));
