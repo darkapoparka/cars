@@ -21,7 +21,7 @@
   <meta name="description" content={i18n.t("m_ab0bddd89743", { p0: i18n.dealer('city') })} />
 </svelte:head>
 
-<VehicleSearchDialog filters={draftFilters} desktopTabs>
+<VehicleSearchDialog filters={draftFilters} desktopPickers>
 {#snippet children(openFilters, filtersOpen)}
 <div class="dn-listing-stage" data-layout="hero-discovery" data-active-filters={activeFilterCount(data.filters) > 0 || Boolean(data.filters.q)}>
   <ListingHero count={data.vehicles.length} />

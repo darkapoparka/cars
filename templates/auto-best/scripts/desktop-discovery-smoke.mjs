@@ -1,4 +1,4 @@
-import { appPath, returningPage } from './locale-smoke-fixture.mjs';
+import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { launchBrowser, previewUrl } from './browser.mjs';
@@ -7,102 +7,6 @@ const output = 'artifacts/desktop-discovery-smoke';
 await mkdir(output, { recursive: true });
 const browser = await launchBrowser();
 const results = [];
-
-async function home(page) {
-  const form = page.locator('.dn-discovery');
-  const bar = page.locator('.dn-discovery-sticky');
-  const submit = form.locator('.dn-discovery__submit');
-  assert.equal(await bar.isVisible(), false);
-  assert.equal(await submit.innerText(), '');
-  assert.equal(await submit.getAttribute('aria-label'), 'Търсете');
-  assert.equal((await submit.boundingBox()).width, 48);
-  assert.equal(await form.locator('.dn-discovery__filters, .dn-discovery__actions').count(), 0);
-  const formHeight = (await form.boundingBox()).height;
-  const searchHeight = (await form.locator('.dn-discovery__search').boundingBox()).height;
-  assert(formHeight >= searchHeight + 52 && formHeight <= 154);
-  assert.equal(await form.locator('.dn-discovery__facets > label').count(), 7);
-  const emptyLabels = { type: 'Тип', make: 'Марка', model: 'Модел', body: 'Купе', price_max: 'Бюджет', year_min: 'Година', mileage_max: 'Пробег' };
-  for (const label of await form.locator('.dn-discovery__facets > label').all()) {
-    const select = label.locator('select');
-    assert.equal(await select.locator('option:checked').innerText(), emptyLabels[await select.getAttribute('name')]);
-    assert((await label.boundingBox()).height >= 44);
-  }
-  const widths = await form.locator('.dn-discovery__facets select').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
-  assert(Math.max(...widths) - Math.min(...widths) < 1);
-  await form.locator('select[name=make]').selectOption('Audi');
-  await form.locator('select[name=model]').selectOption({ index: 1 });
-  await form.locator('select[name=make]').selectOption('BMW');
-  assert.equal(await form.locator('select[name=model]').inputValue(), '');
-  await form.locator('select[name=make]').selectOption('Audi');
-  await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
-  assert.equal(await bar.isVisible(), false, 'Home keeps its existing non-sticky discovery form');
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-  await submit.click();
-  await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
-  assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
-}
-
-async function listing(page, width) {
-  const search = page.locator('.dn-desktop-listing-search');
-  const tools = page.locator('.dn-desktop-listing-tools');
-  const dialog = page.getByRole('dialog', { name: 'Търсене на автомобили' });
-  const opener = search.getByRole('button', { name: 'Марка', exact: true });
-  assert.equal(await search.locator('.dn-desktop-listing-search__facets button').count(), 7);
-  assert.equal(await page.locator('.dn-discovery-sticky').isVisible(), false);
-  const heroHeight = (await page.locator('.dn-listing-stage').boundingBox()).height;
-  await opener.click();
-  await dialog.waitFor({ state: 'visible' });
-  assert.equal(await dialog.getByRole('tab', { name: 'Марка', exact: true }).getAttribute('aria-selected'), 'true');
-  await dialog.getByRole('button', { name: 'Audi', exact: true }).click();
-  await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
-  await dialog.getByRole('button', { name: 'RS Q8', exact: true }).click();
-  await dialog.getByRole('tab', { name: 'Марка', exact: true }).click();
-  await dialog.getByRole('button', { name: 'BMW', exact: true }).click();
-  assert.equal(await dialog.locator('select[name=model]').inputValue(), '', 'Changing make clears an incompatible model');
-  assert.equal(await dialog.getByRole('button', { name: 'Покажете 2 автомобила', exact: true }).filter({ visible: true }).count(), 1);
-  await page.keyboard.press('Escape');
-  await dialog.waitFor({ state: 'hidden' });
-  await page.waitForFunction(() => document.activeElement?.getAttribute('aria-label') === 'Марка');
-  assert.equal(new URL(page.url()).search, '', 'Cancel discards the draft');
-  await opener.click();
-  assert.equal(await dialog.locator('select[name=make]').inputValue(), '');
-  await dialog.getByRole('tab', { name: 'Бюджет', exact: true }).click();
-  await dialog.getByRole('spinbutton', { name: /Цена от/ }).fill('100000');
-  await dialog.getByRole('spinbutton', { name: /Цена до/ }).fill('50000');
-  assert.equal(await dialog.locator('.dn-listing-filter__dialog-submit').isEnabled(), false);
-  assert(await dialog.getByRole('alert').isVisible());
-  await dialog.getByRole('button', { name: 'Изчисти', exact: true }).filter({ visible: true }).click();
-  await dialog.getByRole('tab', { name: 'Бюджет', exact: true }).press('ArrowUp');
-  assert.equal(await dialog.getByRole('tab', { name: 'Купе', exact: true }).getAttribute('aria-selected'), 'true');
-  await dialog.getByRole('tab', { name: 'Марка', exact: true }).click();
-  await dialog.getByRole('button', { name: 'BMW', exact: true }).click();
-  await dialog.locator('.dn-listing-filter__dialog-submit').click();
-  await page.waitForURL(url => url.searchParams.get('make') === 'BMW');
-  assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
-  assert.equal((await page.locator('.dn-listing-stage').boundingBox()).height, heroHeight, 'Applied chips do not expand the hero');
-  await tools.locator('summary').click();
-  await tools.getByRole('link', { name: 'Цена: висока към ниска', exact: true }).click();
-  await page.waitForURL(url => url.searchParams.get('sort') === 'price-desc');
-  assert.equal(new URL(page.url()).searchParams.get('make'), 'BMW', 'Sort preserves filters');
-  const titles = await page.locator('.dn-listing-results .dn-vehicle-card h2').allTextContents();
-  assert.match(titles[0], /xDrive/);
-  await page.evaluate(() => window.scrollTo({ top: 650, behavior: 'instant' }));
-  assert(Math.abs((await tools.boundingBox()).y - 12) <= 1, 'The same filter/sort controls remain sticky');
-  await tools.locator('summary').click();
-  await page.keyboard.press('Escape');
-  assert.equal(await tools.locator('details').getAttribute('open'), null);
-  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
-  await page.getByRole('link', { name: 'Премахнете BMW', exact: true }).filter({ visible: true }).click();
-  await page.waitForURL(url => !url.searchParams.has('make'));
-  assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-desc');
-  assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 7);
-  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
-  await page.screenshot({ path: `${output}/listing-${width}.png` });
-  await page.setViewportSize({ width: 390, height: 844 });
-  assert.equal(await tools.isVisible(), false, 'Desktop toolbar is absent on mobile');
-  assert.equal(await search.isVisible(), false, 'Mobile keeps its original filters');
-}
-
 try {
   for (const width of [1024, 1440, 1920]) {
     for (const route of ['/', '/listing-grid']) {
@@ -110,11 +14,148 @@ try {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
-      if (route === '/') await home(page);
-      else await listing(page, width);
+      const form = page.locator('.dn-discovery');
+      const bar = page.locator('.dn-discovery-sticky');
+      assert.equal(await bar.isVisible(), false);
+      const submit = form.locator('.dn-discovery__submit');
+      assert.equal(await submit.innerText(), '');
+      assert.equal(await submit.getAttribute('aria-label'), 'Търсете');
+      assert.equal((await submit.boundingBox()).width, 48);
+      if (route === '/') {
+        assert.equal(await form.locator('.dn-discovery__filters, .dn-discovery__actions').count(), 0);
+        const formHeight = Math.round((await form.boundingBox()).height);
+        const searchHeight = (await form.locator('.dn-discovery__search').boundingBox()).height;
+        assert(formHeight >= searchHeight + 44 + 8 && formHeight <= 154, `Home discovery panel must fit its search row, full-size filters and row spacing without excess height, got ${formHeight}px`);
+      } else {
+        assert.equal(await form.locator('.dn-discovery__filters').count(), 0);
+        const resultFilter = page.locator('.dn-listing-results__filters');
+        assert.equal(await resultFilter.innerText(), 'Филтри');
+        assert.equal(await resultFilter.evaluate(el => getComputedStyle(el).backgroundColor), 'rgb(32, 35, 41)');
+        assert.equal(await resultFilter.evaluate(el => getComputedStyle(el).color), 'rgb(255, 255, 255)');
+        const filterBox = await resultFilter.boundingBox();
+        const sortBox = await page.locator('.dn-listing-sort').boundingBox();
+        assert.equal(filterBox.height, sortBox.height);
+        assert.equal(filterBox.y, sortBox.y);
+        const toolbarGap = Number.parseFloat(await page.locator('.dn-listing-results__tools').evaluate(el => getComputedStyle(el).columnGap));
+        assert.equal(sortBox.x - filterBox.x - filterBox.width, toolbarGap);
+        if (width === 1440) await page.locator('.dn-listing-results__heading').screenshot({ path: `${output}/cars-results-toolbar.png` });
+        await resultFilter.click();
+        await page.locator('#dn-listing-filter-dialog').waitFor({ state: 'visible' });
+        await page.keyboard.press('Escape');
+        await page.waitForFunction(() => document.querySelector('.dn-listing-results__filters').getAttribute('aria-expanded') === 'false');
+        assert.equal(await resultFilter.evaluate(el => el === document.activeElement), true);
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+      }
+      assert.equal(await form.locator('.dn-discovery__search .dn-discovery__filters').count(), 0);
+      assert.equal(await form.locator('.dn-discovery__toolbar select').count(), 0, 'Vehicle type shares the facet row on Home and inventory');
+      if (route === '/') {
+      assert.equal(await form.locator('.dn-discovery__facets > label').count(), 7);
+      const emptyLabels = { type: 'Тип', make: 'Марка', model: 'Модел', body: 'Купе', price_max: 'Бюджет', year_min: 'Година', mileage_max: 'Пробег' };
+      for (const label of await form.locator('.dn-discovery__facets > label').all()) {
+        const select = label.locator('select');
+        const name = await select.getAttribute('name');
+        const accessibleName = await label.locator('span').innerText();
+        assert.equal(await form.getByRole('combobox', { name: accessibleName, exact: true }).count(), 1, 'Native filters retain permanent accessible names');
+        assert.equal(await select.locator('option:checked').innerText(), emptyLabels[name], 'Unset native filters show the field name on one line');
+        assert((await label.boundingBox()).height >= 44, 'The wrapping label retains the full filter click target, including its border');
+      }
+      const facetWidths = await form.locator('.dn-discovery__facets select').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
+      assert.ok(Math.max(...facetWidths) - Math.min(...facetWidths) < 1);
+      if (width === 1440 && route === '/listing-grid') await form.screenshot({ path: `${output}/cars-search-panel.png` });
+      await form.locator('select[name=make]').selectOption('Audi');
+      const model = form.locator('select[name=model]');
+      await model.selectOption({ index: 1 });
+      await form.locator('select[name=make]').selectOption('BMW');
+      await page.waitForFunction(() => document.querySelector('.dn-discovery select[name=model]').selectedIndex === 0);
+      assert.equal(await model.inputValue(), '');
+      assert.equal(await model.locator('option:checked').innerText(), 'Модел', 'Changing make restores a visibly selected model placeholder');
+      await form.locator('select[name=make]').selectOption('');
+      assert.equal(await form.locator('select[name=make] option:checked').innerText(), 'Марка', 'Resetting make restores its field name');
+      await form.locator('select[name=make]').selectOption('Audi');
+      } else {
+        const buttons = form.locator('.dn-discovery__facet-buttons button');
+        assert.equal(await buttons.count(), 7);
+        assert.equal(await form.locator('select:visible').count(), 0, 'Inventory desktop facets open focused selection views');
+        const widths = await buttons.evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
+        assert(Math.max(...widths) - Math.min(...widths) < 1);
+        for (const button of await buttons.all()) assert((await button.boundingBox()).height >= 44);
+        const dialog = page.locator('#dn-listing-filter-dialog');
+        await form.locator('[data-facet=make]').click();
+        await dialog.waitFor({ state: 'visible' });
+        assert.equal(await dialog.locator('select:visible').count(), 0);
+        const search = dialog.getByRole('searchbox', { name: 'Търсете марка' });
+        assert.equal(await search.evaluate(el => el === document.activeElement), true);
+        await search.fill('zzzznomatch');
+        assert(await dialog.getByText('Няма съвпадения', { exact: true }).isVisible());
+        await search.fill('audi');
+        await dialog.getByRole('radio', { name: 'Audi', exact: true }).click();
+        assert.equal(await dialog.getByRole('tab', { name: 'Модел', exact: true }).getAttribute('aria-selected'), 'true');
+        assert.equal(await dialog.getByRole('radio', { name: 'X6 M Sport', exact: true }).count(), 0);
+        await dialog.getByRole('radio', { name: 'RS 6 Avant', exact: true }).click();
+        await dialog.getByRole('tab', { name: 'Марка', exact: true }).click();
+        await dialog.getByRole('radio', { name: 'BMW', exact: true }).click();
+        assert.equal(await dialog.locator('input[type=hidden][name=model]').inputValue(), '', 'Changing make clears its incompatible model');
+        await page.keyboard.press('Escape');
+        assert.equal(new URL(page.url()).searchParams.get('make'), null, 'Closing the outer window discards the pending choice');
+        await form.locator('[data-facet=make]').click();
+        await dialog.getByRole('radio', { name: 'Audi', exact: true }).click();
+        await dialog.getByRole('button', { name: 'Назад към филтрите', exact: true }).click();
+        assert.equal(await dialog.locator('input[type=hidden][name=make]').inputValue(), 'Audi');
+        assert.equal(await dialog.locator('[data-desktop-key=make]').evaluate(el => el === document.activeElement), true, 'Back returns focus to the overview field');
+        if (width === 1440) await dialog.screenshot({ path: `${output}/cars-search-menu.png` });
+        await dialog.locator('.dn-listing-filter__dialog-submit').click();
+        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        assert.equal(new URL(page.url()).searchParams.has('dn-picker-choice'), false, 'Picker-only controls never become URL state');
+        assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
+      }
+      if (width === 1440) await page.screenshot({ path: `${output}/${route === '/' ? 'home' : 'cars'}-top.png` });
+      if (route === '/') {
+        await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
+        assert.equal(await bar.isVisible(), false, 'Home discovery intentionally stays in the hero instead of becoming sticky');
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+        await form.locator('.dn-discovery__submit').click();
+        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
+      } else {
+        await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
+        await bar.waitFor({ state: 'visible' });
+        if (width === 1440) await bar.screenshot({ path: `${output}/cars-sticky-bar.png` });
+        assert.match(await bar.innerText(), /Audi/);
+        const box = await bar.boundingBox();
+        assert.equal(box.y, 12);
+        assert(box.width <= 800 && box.height <= 70 && box.x >= 0 && box.x + box.width <= width);
+        if (width === 1440) await page.screenshot({ path: `${output}/cars-sticky.png` });
+        const filters = bar.locator('.dn-discovery-sticky__filters');
+        await filters.click();
+        const dialog = page.locator('#dn-listing-filter-dialog');
+        await dialog.waitFor({ state: 'visible' });
+        assert.equal(await dialog.locator('input[type=hidden][name=make]').inputValue(), 'Audi');
+        await page.keyboard.press('Escape');
+        await page.waitForFunction(() => document.querySelector('.dn-discovery-sticky__filters').getAttribute('aria-expanded') === 'false');
+        await dialog.waitFor({ state: 'hidden' });
+        await bar.waitFor({ state: 'visible' });
+        await page.waitForFunction(() => document.querySelector('.dn-discovery-sticky__filters') === document.activeElement);
+        await bar.locator('.dn-discovery-sticky__keyword').click();
+        await dialog.waitFor({ state: 'visible' });
+        await page.waitForFunction(() => document.querySelector('#dn-listing-filter-dialog input[name=q]') === document.activeElement);
+        await page.keyboard.press('Escape');
+        await page.waitForFunction(() => document.querySelector('.dn-discovery-sticky__filters').getAttribute('aria-expanded') === 'false');
+        await page.waitForFunction(() => document.activeElement?.classList.contains('dn-discovery-sticky__keyword'));
+        await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+        await bar.waitFor({ state: 'hidden' });
+        await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
+        await bar.waitFor({ state: 'visible' });
+        await bar.locator('.dn-discovery-sticky__submit').click();
+        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
+        await page.setViewportSize({ width: 390, height: 844 });
+        await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
+        assert.equal(await bar.isVisible(), false, 'Desktop sticky bar must not appear on mobile');
+      }
       assert.deepEqual(errors, []);
       results.push({ route, width, passed: true });
-      console.log(`PASS desktop discovery ${route} ${width}px`);
+      await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
+      console.log(`PASS desktop icon/visible filters/sticky draft and focus ${route} ${width}px`);
       await page.close();
     }
   }
@@ -123,5 +164,5 @@ try {
   throw error;
 } finally {
   await browser.close();
-  await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), base, results }, null, 2));
+  await writeFile(`${output}/report.json`, JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { listingFacetOptionLabel } from '$data/listing-draft';
+  import { listingFacetOptionLabel, listingFacetTitle, listingFacetSummary, listingDraftFromFilters, type ListingFacetField } from '$data/listing-draft';
   import { specificationLabel } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
@@ -27,7 +27,8 @@
     normalizeListingMakeTransition
   } from '$data/listing-draft';
 
-  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума' }: {
+  let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума', modalFacets = false }: {
+    modalFacets?: boolean;
     showFilterAction?: boolean;
     enableSticky?: boolean;
     keywordPlaceholder?: string;
@@ -40,9 +41,11 @@
   let model = $derived(filters.model);
   let pending = $derived(filters);
   let pinned = $state(false);
+  let modalReady = $state(false);
   let stickyBar = $state<HTMLDivElement>();
   const attachSticky: Attachment<HTMLDivElement> = node => { stickyBar = node; return () => { stickyBar = undefined; }; };
   const observePanel: Attachment<HTMLFormElement> = node => {
+    modalReady = true;
     if (!enableSticky) { pinned = false; return; }
     const desktop = window.matchMedia('(min-width: 992px)');
     const update = () => {
@@ -67,6 +70,15 @@
   let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
   let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
   let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
+  const facetFields = ['type', 'make', 'model', 'body', 'price', 'year', 'mileage_max'] satisfies readonly ListingFacetField[];
+  const facetKeys = ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max'];
+  const appliedDraft = $derived(listingDraftFromFilters(filters));
+  function facetValue(field: ListingFacetField) {
+    if (field === 'price') return filters.priceMax ? formatPrice(filters.priceMax, i18n.locale) : listingFacetTitle(field, i18n.locale);
+    if (field === 'year') return filters.yearMin ? String(filters.yearMin) : listingFacetTitle(field, i18n.locale);
+    if (field === 'mileage_max') return filters.mileageMax ? listingFacetSummary(field, appliedDraft, i18n.locale) : listingFacetTitle(field, i18n.locale);
+    return filters[field as 'type' | 'make' | 'model' | 'body'] ? listingFacetSummary(field, appliedDraft, i18n.locale) : field === 'body' ? i18n.t('inventory.facet.bodyShort') : listingFacetTitle(field, i18n.locale);
+  }
 
   function updateDraft(event: Event) {
     pending = normalizeListingMakeTransition(pending, listingFiltersFromFormData(new FormData(event.currentTarget as HTMLFormElement)));
@@ -96,7 +108,14 @@
       <button class="dn-discovery__submit" type="submit" aria-label={i18n.t("m_49c266baaaa7")} title={i18n.t("m_49c266baaaa7")}><Icon name="search" size={21} /></button>
     </div>
   </div>
-  <div class="dn-discovery__facets">
+  {#if modalFacets && modalReady}
+    <div class="dn-discovery__facet-buttons">
+      {#each facetFields as field, index (field)}
+        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
+      {/each}
+    </div>
+  {/if}
+  <div class="dn-discovery__facets" class:dn-discovery__facets--fallback={modalFacets && modalReady}>
     <label><span class="dn-sr-only">{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{value ? listingFacetOptionLabel('type', value, i18n.locale) : i18n.t('inventory.facet.type')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t('inventory.facet.make')}</option>{/each}</select></label>
     <label><span class="dn-sr-only">{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t('inventory.facet.model')}</option>{/each}</select></label>
@@ -134,6 +153,7 @@
   .dn-discovery__submit { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-red); color: white; cursor: pointer; }
   .dn-discovery__submit:hover { background: var(--dn-red-hover); }
   .dn-discovery__facets { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
+  .dn-discovery__facet-buttons { display: none; }
   .dn-discovery__facets label { position: relative; display: grid; min-width: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
   .dn-discovery .dn-discovery__facets label > select { width: 100%; min-width: 0; height: 64px; padding: 0 var(--dn-space-8) 0 var(--dn-space-3); border: 0; border-radius: inherit; background-color: transparent; background-position: right var(--dn-space-2) center; color: var(--dn-ink); font: var(--dn-control-font); text-overflow: ellipsis; cursor: pointer; }
   .dn-discovery__facets label:hover { background: var(--dn-surface-hover); }
@@ -160,12 +180,15 @@
     .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
+    .dn-discovery__facets--fallback { display: none; }
+    .dn-discovery__facet-buttons { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
+    .dn-discovery__facet-buttons button { display: flex; min-width: 0; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-control-prominent); text-align: left; cursor: pointer; }
+    .dn-discovery__facet-buttons span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .dn-discovery__facet-buttons :global(svg) { flex: 0 0 16px; color: var(--dn-muted); }
+    .dn-discovery__facet-buttons button:hover { background: var(--dn-surface-hover); }
     .dn-discovery .dn-discovery__facets label { min-height: var(--dn-control-height-default); box-sizing: border-box; }
-    .dn-discovery .dn-discovery__facets label > select { height: auto; min-height: calc(var(--dn-control-height-default) - 2px); padding-block: var(--dn-space-2); font-size: var(--dn-text-lead); }
+    .dn-discovery .dn-discovery__facets label > select { height: auto; min-height: calc(var(--dn-control-height-default) - 2px); padding-block: var(--dn-space-2); font-size: var(--dn-text-control-prominent); }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
-  }
-  @media (min-width: 1200px) {
-    .dn-discovery .dn-discovery__facets label > select { font-size: var(--dn-text-card); }
   }
 </style>

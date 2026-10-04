@@ -7,7 +7,8 @@
   const i18n = getI18n();
 
   import { preserveScrollOffset } from '$lib/ui/overlay';
-  import { onDestroy, type Snippet } from 'svelte';
+  import { onDestroy, tick, type Snippet } from 'svelte';
+  import { formatPrice } from '$lib/locale/core';
   import { resolve } from '$app/paths';
   import {
     bodyLabel,
@@ -33,11 +34,10 @@
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
-  import DesktopFilterWorkspace from './DesktopFilterWorkspace.svelte';
+  import DesktopFilterPicker from './DesktopFilterPicker.svelte';
   import type { Attachment } from 'svelte/attachments';
 
-  let { filters, children, desktopTabs = false }: { filters: ListingFilters; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]>; desktopTabs?: boolean } = $props();
-  let activeDesktopField = $state('make');
+  let { filters, children, desktopPickers = false }: { filters: ListingFilters; desktopPickers?: boolean; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
   onDestroy(() => releaseOffset?.(false));
 
@@ -53,11 +53,21 @@
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
   let activeChoice = $state<string>();
+  type DesktopField = Exclude<ListingFacetField, 'sort' | 'equipment'>;
+  let desktopChoice = $state<DesktopField>();
+  let desktopMatches = $state(false);
+  const desktopMode = $derived(desktopPickers && desktopMatches);
+  let pickerTrigger: HTMLButtonElement | undefined;
+  let pickerFocusField = '';
   let returnFocus: HTMLButtonElement | undefined;
 
   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
     filterDialog = node;
-    return () => { if (filterDialog === node) filterDialog = undefined; };
+    const media = window.matchMedia('(min-width: 992px)');
+    const update = () => { desktopMatches = media.matches; if (!media.matches) desktopChoice = undefined; };
+    update();
+    media.addEventListener('change', update);
+    return () => { media.removeEventListener('change', update); if (filterDialog === node) filterDialog = undefined; };
   };
   const attachDialogSearch: Attachment<HTMLInputElement> = (node) => {
     dialogSearch = node;
@@ -99,22 +109,73 @@
 
   const resetDraft = () => { draft = emptyListingDraft(filters.sort); };
 
+  const desktopFields = [
+    { key: 'type', field: 'type', title: 'inventory.facet.type' },
+    { key: 'make', field: 'make', title: 'm_ccdd25d4230f' },
+    { key: 'model', field: 'model', title: 'm_5e2c614c23f0' },
+    { key: 'body', field: 'body', title: 'm_191c24bf12d5' },
+    { key: 'condition', field: 'condition', title: 'm_39b36d38d6eb' },
+    { key: 'price_min', field: 'price', title: 'm_94470b41eead' },
+    { key: 'price_max', field: 'price', title: 'm_363c4f34635c' },
+    { key: 'year_min', field: 'year', title: 'm_349ee8568241' },
+    { key: 'year_max', field: 'year', title: 'm_07339ff9faf8' },
+    { key: 'mileage_max', field: 'mileage_max', title: 'm_5679c2543732' },
+    { key: 'fuel', field: 'fuel', title: 'm_a80f942f4112' },
+    { key: 'transmission', field: 'transmission', title: 'm_3e10134259ab' },
+    { key: 'version', field: 'version', title: 'm_1f46b4649491' }
+  ] as const;
+  function desktopValue(key: string, field: DesktopField) {
+    if (key === 'price_min') return draft.priceMin ? formatPrice(Number(draft.priceMin), i18n.locale) : i18n.t('inventory.range.unlimited');
+    if (key === 'price_max') return draft.priceMax ? formatPrice(Number(draft.priceMax), i18n.locale) : i18n.t('inventory.range.unlimited');
+    if (key === 'year_min') return draft.yearMin || i18n.t('inventory.range.unlimited');
+    if (key === 'year_max') return draft.yearMax || i18n.t('inventory.range.unlimited');
+    return listingFacetSummary(field, draft, i18n.locale);
+  }
+  function resolveDesktopField(field?: string): DesktopField | undefined {
+    if (!field) return undefined;
+    if (field.startsWith('price')) return 'price';
+    if (field.startsWith('year')) return 'year';
+    return desktopFields.find(item => item.field === field)?.field;
+  }
+  async function focusDesktopPicker() {
+    await tick();
+    const rangeInputs = filterDialog?.querySelectorAll<HTMLInputElement>('.picker .range input');
+    const target = pickerFocusField.endsWith('_min') || pickerFocusField.endsWith('_max')
+      ? rangeInputs?.[pickerFocusField.endsWith('_max') ? 1 : 0]
+      : filterDialog?.querySelector<HTMLElement>('[data-picker-initial]');
+    target?.focus({ preventScroll: true });
+  }
+  function selectDesktopField(field: DesktopField) {
+    desktopChoice = field;
+    pickerFocusField = '';
+    void focusDesktopPicker();
+  }
+  function openDesktopChoice(event: MouseEvent, field: DesktopField, key: string) {
+    pickerTrigger = event.currentTarget as HTMLButtonElement;
+    pickerFocusField = key;
+    desktopChoice = field;
+    void focusDesktopPicker();
+  }
+  async function backToDesktopFilters() {
+    const field = desktopChoice;
+    desktopChoice = undefined;
+    await tick();
+    const target = pickerTrigger?.isConnected ? pickerTrigger : filterDialog?.querySelector<HTMLButtonElement>(`[data-desktop-field="${field}"]`);
+    target?.focus({ preventScroll: true });
+  }
+
   const openFilters = (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
     initializeDraft();
-    activeDesktopField = field === 'year_min' || field === 'year_max' ? 'year'
-      : field === 'price_min' || field === 'price_max' ? 'price'
-      : field && field !== 'q' ? field : 'make';
+    pickerTrigger = desktopMode && field ? filterDialog?.querySelector<HTMLButtonElement>(`[data-desktop-key="${field}"]`) ?? undefined : undefined;
+    pickerFocusField = field ?? '';
+    desktopChoice = desktopMode ? resolveDesktopField(field) : undefined;
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
     filterDialog?.showModal();
     requestAnimationFrame(() => {
+      if (desktopMode && desktopChoice) { void focusDesktopPicker(); return; }
       const compact = window.matchMedia('(max-width: 767px)').matches;
-      if (desktopTabs && window.matchMedia('(min-width: 992px)').matches) {
-        const target = field === 'q' ? dialogSearch : filterDialog?.querySelector<HTMLElement>('[role="tab"][aria-selected="true"]');
-        target?.focus();
-        return;
-      }
       const target = field
         ? filterDialog?.querySelector<HTMLSelectElement>(`select[name="${field}"]`)
         : compact
@@ -130,7 +191,10 @@
     if (event.key === 'Escape') { event.preventDefault(); closeFilters(); }
   };
   const handleDialogSubmit = () => { closeFilters(); };
-  const handleClear = () => { resetDraft(); closeFilters(); };
+  const handleClear = (event: MouseEvent) => {
+    if (desktopMode) { event.preventDefault(); resetDraft(); void tick().then(() => desktopChoice ? focusDesktopPicker() : dialogSearch?.focus()); }
+    else { resetDraft(); closeFilters(); }
+  };
   const restorePage = () => {
     filtersOpen = false;
     releaseOffset?.();
@@ -145,7 +209,7 @@
     };
     setTimeout(() => requestAnimationFrame(restoreFocus), 0);
   };
-  const cleanFormData = (event: FormDataEvent) => cleanListingFormData(event.formData);
+  const cleanFormData = (event: FormDataEvent) => { event.formData.delete('dn-picker-choice'); cleanListingFormData(event.formData); };
 </script>
 
 {@render children(openFilters, filtersOpen)}
@@ -154,7 +218,7 @@
 {#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
-  class:dn-listing-filter__dialog--tabbed={desktopTabs}
+  class:dn-listing-filter__dialog--picker={desktopMode && Boolean(desktopChoice)}
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
   {@attach attachFilterDialog}
@@ -177,7 +241,7 @@
     </header>
 
     <div class="dn-listing-filter__dialog-content">
-      <div class="dn-listing-filter__dialog-search dn-mobile-overlay-search" role="search">
+      <div class="dn-listing-filter__dialog-search dn-mobile-overlay-search" class:dn-listing-filter__dialog-search--hidden={desktopMode && Boolean(desktopChoice)} role="search">
         <label class="dn-sr-only" for="dn-listing-dialog-query">{i18n.t("m_0ae7a3ecbc83")}</label>
         <Icon name="search" size={18} />
         <input {@attach i18n.validation} id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draft.q} onkeydown={handleSearchKeydown} type="search" name="q" placeholder={i18n.t("m_cb8bed4ff8b8")} autocomplete="off" />
@@ -192,14 +256,24 @@
         </button>
       </div>
 
-      {#if desktopTabs}<DesktopFilterWorkspace bind:draft bind:active={activeDesktopField} />{/if}
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
           <button class="dn-mobile-overlay-row" type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
         {/each}
       </div>
-      <div class="dn-listing-filter__filter-groups">
+      {#if desktopMode && desktopChoice}
+        <DesktopFilterPicker field={desktopChoice} bind:draft onBack={backToDesktopFilters} onFieldChange={selectDesktopField} />
+      {/if}
+      <div class="dn-listing-filter__filter-groups" class:dn-listing-filter__filter-groups--hidden={desktopMode && Boolean(desktopChoice)}>
         <div class="dn-listing-filter__core-grid">
+          {#if desktopMode}
+            {#each desktopFields as item (item.key)}
+              <div class="dn-desktop-filter-field">
+                <span class="dn-listing-filter__field-label" id={`dn-desktop-label-${item.key}`}>{i18n.t(item.title)}</span>
+                <button class="dn-desktop-filter-choice" data-desktop-field={item.field} data-desktop-key={item.key} type="button" aria-labelledby={`dn-desktop-label-${item.key} dn-desktop-value-${item.key}`} onclick={event => openDesktopChoice(event, item.field, item.key)}><span id={`dn-desktop-value-${item.key}`}>{desktopValue(item.key, item.field)}</span><Icon name="arrow-right" size={16} /></button>
+              </div>
+            {/each}
+          {:else}
           <label>
             <span class="dn-listing-filter__field-label">{i18n.t('inventory.facet.type')}</span>
             <select {@attach i18n.validation} name="type" aria-label={i18n.t('inventory.facet.type')} bind:value={draft.type}>
@@ -225,10 +299,10 @@
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">{listingFacetTitle('body', i18n.locale)}</span>
-            <select {@attach i18n.validation} name="body" aria-label={listingFacetTitle('body', i18n.locale)} bind:value={draft.body}>
+            <span class="dn-listing-filter__field-label">{i18n.t("m_191c24bf12d5")}</span>
+            <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={draft.body}>
               {#each listingFilterOptions.bodies as option (option)}
-                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || listingFacetTitle('body', i18n.locale)}</option>
+                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_191c24bf12d5")}</option>
               {/each}
             </select>
           </label>
@@ -309,6 +383,7 @@
               {/each}
             </select>
           </label>
+          {/if}
         </div>
 
         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
@@ -331,13 +406,17 @@
           {hasInvalidPriceRange ? i18n.t("m_2157bc34d38a") : i18n.t("m_e35acfc7ae2e")}
         </p>
       {/if}
-      {#if desktopTabs}<button class="dn-listing-filter__desktop-clear" type="button" onclick={resetDraft} disabled={!hasLiveFilters}>{i18n.t("action.clearShort")}</button>{/if}
       {#if hasLiveFilters}<a class="dn-listing-filter__clear dn-mobile-overlay-clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
       <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
         <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
         <span class="dn-listing-filter__submit-compact">{i18n.t("action.showCount", { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
       </button>
+      {#if desktopMode}
+        {#each desktopFields as item (item.key)}
+          <input type="hidden" name={item.key} value={item.key === 'price_min' ? draft.priceMin : item.key === 'price_max' ? draft.priceMax : item.key === 'year_min' ? draft.yearMin : item.key === 'year_max' ? draft.yearMax : item.field === 'mileage_max' ? draft.mileageMax : draft[item.field as Exclude<DesktopField, 'price' | 'year' | 'mileage_max'>]} />
+        {/each}
+      {/if}
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
     </footer>
   </form>
@@ -346,19 +425,16 @@
 </QuickFilterSheet>
 
 <style>
-  .dn-listing-filter__desktop-clear { display: none; }
-  @media (min-width: 992px) {
-    .dn-listing-filter__dialog.dn-listing-filter__dialog--tabbed { width: min(1120px, calc(100vw - 48px)); height: min(750px, calc(100dvh - 64px)); max-height: none; }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-panel { height: 100%; max-height: none; }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-content { flex: 1; overflow: hidden; padding-bottom: 0; }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__filter-groups { display: none; }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__inline-submit,
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__clear { display: none; }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-search { padding-right: var(--dn-space-4); }
-    .dn-listing-filter__dialog--tabbed .dn-listing-filter__desktop-clear { display: inline-flex; align-items: center; min-height: var(--dn-control-height-default); margin-right: auto; padding: 0 var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
-    .dn-listing-filter__desktop-clear:disabled { opacity: .5; cursor: default; }
-    .dn-listing-filter__desktop-clear:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
-  }
+  .dn-desktop-filter-field { min-width: 0; }
+  .dn-desktop-filter-choice { display: flex; width: 100%; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid #dfe2e6; border-radius: var(--dn-radius-control); background: #f5f6f7; color: var(--dn-ink); font: var(--dn-entry-font); text-align: left; cursor: pointer; }
+  .dn-desktop-filter-choice span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dn-desktop-filter-choice :global(svg) { flex: 0 0 auto; color: var(--dn-muted); }
+  .dn-desktop-filter-choice:hover { background: var(--dn-surface-hover); }
+  .dn-desktop-filter-choice:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-listing-filter__dialog--picker .dn-listing-filter__dialog-panel { min-height: min(440px, calc(100dvh - 48px)); }
+  .dn-listing-filter__dialog--picker .dn-listing-filter__dialog-content { flex: 1; }
+  .dn-listing-filter__dialog-content .dn-listing-filter__dialog-search--hidden,
+  .dn-listing-filter__filter-groups--hidden { display: none !important; }
   .dn-listing-filter__submit-compact { display: none; }
   .dn-mobile-filter-fields { display: none; }
   label {

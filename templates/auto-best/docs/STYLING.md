@@ -46,10 +46,19 @@ stays 540px with the default content; enlarged type or longer business names can
 increase its height so content and actions remain readable. Enlarged type also
 increases the company introduction's clearance below the header.
 Home and Inventory use the same search-panel bounds, padding and
-radius. Their native desktop facets use a 44px field face with 20px labels;
-at compact desktop widths below 1200px, the labels use the 18px role so the
-seven field names remain visible. The wrapping label owns the full click target,
-including the border. Mobile and tablet controls retain their existing roles.
+radius. Desktop facets retain the 44px control target and the shared
+prominent-control type. The whole field opens its control, including the border.
+Mobile and tablet controls retain their existing roles.
+Inventory's desktop facet buttons open the existing search window directly at
+the selected field. Its overview retains the original field grid and equipment
+choices. Each field opens a focused view within that same dialog; Make and Model
+share two underline tabs, searchable radio choices and available-result counts.
+Choosing a make with the pointer opens its models. Keyboard arrow selection
+stays within the Make radio group. Back retains the outer draft; closing the
+window discards it, and the result action applies it. Budget/year use paired
+number inputs and mileage uses a number input with optional limits. Short
+selection views fit their content. Home and widths below 992px retain native
+facets and the existing mobile sheets.
 Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
 across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop
