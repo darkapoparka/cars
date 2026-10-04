@@ -186,7 +186,7 @@
   <div class="dn-quick-search__panel">
     <header class="dn-quick-search__header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset dn-mobile-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>
+        <button class="dn-quick-search__reset dn-icon-button" type="button" aria-label={i18n.t('action.clearShort')} title={i18n.t('action.clearShort')} disabled={!hasFilters} onclick={resetSearch}><MobileActionIcon name="reset" size={22} /></button>
       {:else}
         <button
           class="dn-quick-search__back dn-icon-button"
@@ -492,7 +492,10 @@
       letter-spacing: var(--dn-tracking-heading);
     }
 
-    .dn-quick-search__reset { display: inline-flex; justify-self: start; }
+    .dn-quick-search__reset { display: inline-grid; justify-self: start; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); cursor: pointer; }
+    .dn-quick-search__reset:disabled { color: var(--dn-muted); cursor: default; }
+    .dn-quick-search__reset:enabled:hover { background: var(--dn-surface-hover); }
+    .dn-quick-search__reset:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
 
     .dn-quick-search__back {
       display: inline-grid;

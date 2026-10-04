@@ -6,7 +6,7 @@
   "license": "MIT",
   "licenseUrl": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/LICENSE",
   "noticeUrl": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/NOTICE",
-  "moduleSha256": "030f42dfb6f66f0d776246cea6290782d4925e0864a8b9885af7860896282210",
+  "moduleSha256": "a24a98df223b0b5621a5c5cccb9fd4c0d970019ad98c9faa8478e43f985f7bb7",
   "names": {
     "home": "ic_fluent_home_24_regular",
     "cars": "ic_fluent_vehicle_car_24_regular",
@@ -23,7 +23,8 @@
     "language": "ic_fluent_globe_24_regular",
     "article": "ic_fluent_document_text_24_regular",
     "company": "ic_fluent_building_24_regular",
-    "arrow": "ic_fluent_arrow_right_24_regular"
+    "arrow": "ic_fluent_arrow_right_24_regular",
+    "reset": "ic_fluent_arrow_counterclockwise_24_regular"
   },
   "sources": {
     "ic_fluent_home_24_regular": {
@@ -205,6 +206,19 @@
       "paths": [
         {
           "d": "M13.2673 4.20889C12.9674 3.9232 12.4926 3.93475 12.2069 4.23467C11.9212 4.5346 11.9328 5.00933 12.2327 5.29502L18.4841 11.2496H3.75C3.33579 11.2496 3 11.5854 3 11.9996C3 12.4138 3.33579 12.7496 3.75 12.7496H18.4842L12.2327 18.7043C11.9328 18.99 11.9212 19.4648 12.2069 19.7647C12.4926 20.0646 12.9674 20.0762 13.2673 19.7905L20.6862 12.7238C20.8551 12.5629 20.9551 12.3576 20.9861 12.1443C20.9952 12.0975 21 12.0491 21 11.9996C21 11.9501 20.9952 11.9016 20.986 11.8547C20.955 11.6415 20.855 11.4364 20.6862 11.2756L13.2673 4.20889Z"
+        }
+      ]
+    },
+    "ic_fluent_arrow_counterclockwise_24_regular": {
+      "title": "Arrow Counterclockwise",
+      "symbol": "ic_fluent_arrow_counterclockwise_24_regular",
+      "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/assets/Arrow%20Counterclockwise/SVG/ic_fluent_arrow_counterclockwise_24_regular.svg",
+      "sha256": "ca716b401557bc94f2a25c40e4f073f2ca936ae0e91ec12beeeba66037267212",
+      "geometrySha256": "b1941a55dd8c228bc2241fa87bba9c9eaa0c6924f06cb5fe04f6f50e7d402b80",
+      "viewBox": "0 0 24 24",
+      "paths": [
+        {
+          "d": "M12 4.5C16.1421 4.5 19.5 7.85786 19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 11.6236 4.52772 11.2538 4.58123 10.8923C4.64845 10.4382 4.31609 10 3.85708 10C3.48623 10 3.161 10.2562 3.10471 10.6228C3.03576 11.0718 3 11.5317 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C9.69494 3 7.59227 3.86656 6 5.29168V4.25C6 3.83579 5.66421 3.5 5.25 3.5C4.83579 3.5 4.5 3.83579 4.5 4.25V7.25C4.5 7.66421 4.83579 8 5.25 8H8.25C8.66421 8 9 7.66421 9 7.25C9 6.83579 8.66421 6.5 8.25 6.5H6.90093C8.23907 5.25883 10.0309 4.5 12 4.5Z"
         }
       ]
     }

@@ -11,7 +11,7 @@ The owner rejected the Material Symbols Sharp implementation after seeing the ac
 - Geometry and original-source hashes: [manifest](fluent-icons.json).
 - Delivered module: `src/lib/components/layout/fluent-mobile.ts`.
 
-Sixteen established action roles use fourteen upstream SVGs. Home, Vehicle Car, Tag, Globe and Navigation serve the five dock destinations. Location, Call, Search, Options, Arrow Sort, Dismiss, Document Text, Building and Arrow Right serve existing actions. Phone roles share Call; import and language roles share Globe.
+Seventeen established action roles use fifteen upstream SVGs. Home, Vehicle Car, Tag, Globe and Navigation serve the five dock destinations. Location, Call, Search, Options, Arrow Sort, Dismiss, Document Text, Building and Arrow Right serve existing actions. Arrow Counterclockwise serves the mobile quick-search reset action. Phone roles share Call; import and language roles share Globe.
 
 Only the original fixed paint color is replaced with `currentColor`; path data, native view boxes and any path winding rules are preserved. Active and inactive destinations use identical Regular geometry. The existing neutral selection surface, charcoal color, semibold caption and `aria-current` convey selection. No artificial strokes, path edits, icon font or additional package dependency are introduced.
 
