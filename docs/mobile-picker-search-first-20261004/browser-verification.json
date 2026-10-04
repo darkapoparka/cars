@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-04T10:56:05.336Z",
+  "preview": "http://127.0.0.1:6474/?lang=bg&filter=make",
+  "build": {
+    "passed": true,
+    "distDir": ".next-picker-search-first-20261004",
+    "buildId": "BlNqBWrZVLql7dNwll3qs",
+    "node": "22.20.0"
+  },
+  "validation": {
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainTests": 92
+  },
+  "passed": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "after-makes-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "after-models-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "before-makes-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "before-models-390.jpg",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "boundary": "Mobile candidate source and local preview; no release selection or dealer deployment"
+}

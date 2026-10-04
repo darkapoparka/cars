@@ -28,8 +28,6 @@ for (const [engineName, engine] of engines) {
         back: bg ? 'Назад: Марки' : 'Back: Makes',
         modelSearch: bg ? 'Търсене на модел' : 'Search models',
         makeSearch: bg ? 'Търсене на марка' : 'Search makes',
-        makesHeading: bg ? 'Марки' : 'Makes',
-        modelsHeading: bg ? 'BMW · Модели' : 'BMW · Models',
         allMakes: bg ? 'Всички марки' : 'Any make',
         anyModel: bg ? 'Всички модели' : 'Any model',
         expandSeries: bg ? 'Разгъни 1 серия' : 'Expand 1 Series',
@@ -98,7 +96,13 @@ for (const [engineName, engine] of engines) {
             assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 0);
             assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
-            await page.getByRole('heading', { name: labels.makesHeading, exact: true }).waitFor();
+            assert.equal(
+              await page
+                .locator('#showroom-filter-options')
+                .getByRole('heading', { level: 3 })
+                .count(),
+              0,
+            );
             assert.equal(
               await page.getByRole('button', { name: labels.back, exact: true }).count(),
               0,
@@ -124,10 +128,16 @@ for (const [engineName, engine] of engines) {
             await bmw.click({ position: { x: 2, y: 28 } });
             const allModels = page.getByRole('checkbox', { name: labels.allBmw, exact: true });
             await allModels.waitFor();
-            await page.getByRole('heading', { name: labels.modelsHeading, exact: true }).waitFor();
             assert.equal(
-              await page.getByRole('button', { name: labels.back, exact: true }).isVisible(),
-              true,
+              await page
+                .locator('#showroom-filter-options')
+                .getByRole('heading', { level: 3 })
+                .count(),
+              0,
+            );
+            assert.equal(
+              await page.getByRole('button', { name: labels.back, exact: true }).count(),
+              0,
             );
             assert.equal(
               await allModels.evaluate(
@@ -149,6 +159,10 @@ for (const [engineName, engine] of engines) {
               labels.modelSearch,
             );
             assert.equal(await allModels.isChecked(), true);
+            assert.equal(
+              await allModels.evaluate((element) => element === document.activeElement),
+              true,
+            );
             assert.equal(
               await allModels.evaluate((element) => getComputedStyle(element).borderRadius),
               '50%',
@@ -209,14 +223,9 @@ for (const [engineName, engine] of engines) {
             await series.check();
             assert.equal(await allModels.isChecked(), false);
             await page.getByRole('textbox', { name: labels.modelSearch, exact: true }).fill('120');
-            await page.getByRole('button', { name: labels.back, exact: true }).click();
-            assert.equal(
-              await page
-                .getByRole('textbox', { name: labels.makeSearch, exact: true })
-                .inputValue(),
-              '',
-            );
-            await page.getByRole('button', { name: /^BMW/ }).first().click();
+            await page
+              .getByRole('button', { name: bg ? 'Изчисти търсенето' : 'Clear search', exact: true })
+              .click();
             assert.equal(
               await page
                 .getByRole('textbox', { name: labels.modelSearch, exact: true })
@@ -226,14 +235,26 @@ for (const [engineName, engine] of engines) {
             assert.equal(await series.isChecked(), true);
             await allModels.check();
             assert.equal(await series.isChecked(), false);
-            await page.getByRole('button', { name: labels.back, exact: true }).click();
-            assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
+            await allModels.click();
+            await page.getByRole('textbox', { name: labels.makeSearch, exact: true }).waitFor();
             assert.equal(
-              await allMakes
-                .locator(':scope > span:last-child')
-                .evaluate((element) => getComputedStyle(element).backgroundColor),
-              'rgba(0, 0, 0, 0)',
+              await page
+                .getByRole('textbox', { name: labels.makeSearch, exact: true })
+                .inputValue(),
+              '',
             );
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
+            await bmw.click();
+            await page.getByRole('button', { name: labels.apply }).click();
+            await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+            assert.equal(new URL(page.url()).searchParams.get('makes'), 'BMW');
+            await page.goto(base + '/?lang=' + locale + '&makes=BMW&filter=make');
+            await page.locator('[data-hydrated="true"]').waitFor();
+            await page.getByRole('textbox', { name: labels.modelSearch, exact: true }).waitFor();
+            assert.equal(await allModels.isChecked(), true);
+            await allModels.press('Space');
+            await page.getByRole('textbox', { name: labels.makeSearch, exact: true }).waitFor();
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
             // The reset preset clears brand/model criteria, including taps on its padding.
             await allMakes.click({ position: { x: 2, y: 24 } });
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
@@ -272,7 +293,7 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search draft/apply, white reset rows with aligned selection circles, heading/back navigation without selector pills, disclosure arrows beside family names, full-row taps and mixed selection'
+                ? 'Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection'
                 : 'Desktop search draft/apply, square checkboxes and trailing disclosure arrows',
           });
         } finally {

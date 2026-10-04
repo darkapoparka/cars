@@ -73,15 +73,13 @@ export function MakePicker({
   const changeFilters = onApply || updateFilters;
   const initialMode = initialExclude || filters.excludedMakes.includes(initialMake);
   const [make, setMake] = useState(initialMake);
-  const [selector, setSelector] = useState<'make' | 'model'>(initialMake ? 'model' : 'make');
   const [exclude, setExclude] = useState(initialMode);
   const [query, setQuery] = useState('');
   const [draft, setDraft] = useState(() => modelDraftFor(filters, initialMake, initialMode));
   const [expanded, setExpanded] = useState<string[]>([]);
   const listRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
-  const pickerHeadingRef = useRef<HTMLHeadingElement>(null);
-  const modelsVisible = Boolean(make) && (!embedded || selector === 'model');
+  const modelsVisible = Boolean(make);
   const selectedMakes = [
     ...filters.makes.map((name) => ({ name, excluded: false })),
     ...excludedMakeNames(filters).map((name) => ({ name, excluded: true })),
@@ -151,13 +149,19 @@ export function MakePicker({
     : 132 + sections.reduce((height, group) => height + 53 + group.names.length * 65, 0) + 76;
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = 0;
-  }, [make, query, modelsVisible]);
+  }, [make, query]);
+  function focusModelSelection() {
+    requestAnimationFrame(() =>
+      listRef.current
+        ?.querySelector<HTMLInputElement>('input[type="checkbox"]')
+        ?.focus({ preventScroll: true }),
+    );
+  }
   function chooseMake(name: string, mode = exclude) {
     if (name === 'Any') {
       changeFilters(clearMakeSelections());
       if (embedded) {
         setMake('');
-        setSelector('make');
         setQuery('');
         setExclude(false);
         setDraft({ selected: [], variants: {} });
@@ -165,7 +169,6 @@ export function MakePicker({
       return;
     }
     setMake(name);
-    setSelector('model');
     setExclude(mode);
     setQuery('');
     setExpanded([]);
@@ -173,23 +176,21 @@ export function MakePicker({
     setDraft(next);
     if (embedded) {
       applyDraft(name, next, mode);
-      requestAnimationFrame(() => pickerHeadingRef.current?.focus({ preventScroll: true }));
+      focusModelSelection();
     }
   }
   function editSelectedMake(name: string, excluded: boolean) {
     setMake(name);
-    setSelector('model');
     setExclude(excluded);
     setQuery('');
     setExpanded([]);
     setDraft(modelDraftFor(filters, name, excluded));
-    requestAnimationFrame(() => pickerHeadingRef.current?.focus({ preventScroll: true }));
+    focusModelSelection();
   }
   function removeSelectedMake(name: string, excluded: boolean) {
     changeFilters(removeMakeSelection(filters, name, excluded));
     if (name === make && excluded === exclude) {
       setMake('');
-      setSelector('make');
       setExclude(false);
       setQuery('');
       setExpanded([]);
@@ -199,7 +200,9 @@ export function MakePicker({
       const row = [
         ...(listRef.current?.querySelectorAll<HTMLElement>('[data-make-option]') || []),
       ].find((element) => element.dataset.makeOption === name);
-      const target = row?.querySelector<HTMLButtonElement>('button') || pickerHeadingRef.current;
+      const target =
+        row?.querySelector<HTMLButtonElement>('button') ||
+        listRef.current?.querySelector<HTMLButtonElement>('button');
       target?.focus({ preventScroll: true });
     });
   }
@@ -347,30 +350,7 @@ export function MakePicker({
   );
   const content = (
     <>
-      {embedded ? (
-        <div {...stylex.props(s.pickerNavigation)}>
-          {modelsVisible && (
-            <button
-              type="button"
-              aria-label={t('Back') + ': ' + t('Makes')}
-              onClick={() => {
-                setSelector('make');
-                setQuery('');
-                requestAnimationFrame(() =>
-                  pickerHeadingRef.current?.focus({ preventScroll: true }),
-                );
-              }}
-              {...stylex.props(s.backToMakes)}
-            >
-              <Icon name="back" size={18} />
-              {t('Makes')}
-            </button>
-          )}
-          <h3 ref={pickerHeadingRef} tabIndex={-1} {...stylex.props(s.pickerHeading)}>
-            {modelsVisible ? make + ' · ' + t('Models') : t('Makes')}
-          </h3>
-        </div>
-      ) : (
+      {!embedded && (
         <div {...stylex.props(s.header)}>
           <h2 {...stylex.props(s.title)}>{make || t('Make')}</h2>
           {excludeToggle}
