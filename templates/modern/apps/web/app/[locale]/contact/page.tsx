@@ -208,10 +208,7 @@ function DesktopContact({
               <div>
                 <h3>{text("Уговорете оглед", "Arrange a viewing")}</h3>
                 <p>
-                  {text(
-                    "Обадете се, за да обсъдим автомобила и удобен час за посещение.",
-                    "Call to discuss your car and a convenient time to visit."
-                  )}
+                  {text("Обадете се за удобен час.", "Call to book a viewing.")}
                 </p>
               </div>
             </div>
