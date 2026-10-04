@@ -88,6 +88,30 @@ try {
         const frame = await dialog.boundingBox();
         const footer = await dialog.locator('.dn-search-footer').boundingBox();
         assert(frame.width >= 600 && frame.width <= 680 && frame.height < 560);
+        assert((await dialog.locator('.dn-search-apply').boundingBox()).height >= 44);
+        const assertStableFrame = async scope => {
+          const current = await dialog.boundingBox();
+          assert(Math.abs(current.y - frame.y) < 1 && Math.abs(current.height - frame.height) < 1, `${scope} keeps the same dialog frame`);
+          assert(Math.abs((await dialog.locator('.dn-search-footer').boundingBox()).y - footer.y) < 1, `${scope} keeps the action in place`);
+        };
+        await dialog.locator('.dn-search-back').click();
+        await assertStableFrame('Overview');
+        for (const field of ['model', 'price', 'type', 'body', 'year', 'mileage_max', 'fuel', 'transmission', 'condition', 'version', 'equipment', 'make']) {
+          await dialog.locator(`[data-field=${field}]`).click();
+          await assertStableFrame(field);
+          if (field !== 'make') await dialog.locator('.dn-search-back').click();
+        }
+        if (width === 1440) {
+          await page.setViewportSize({ width, height: 400 });
+          const shortFrame = await dialog.boundingBox();
+          assert(shortFrame.y + shortFrame.height <= 376, 'Short windows retain room below the dialog');
+          const shortFooter = await dialog.locator('.dn-search-footer').boundingBox();
+          assert(shortFooter.y + shortFooter.height <= 376, 'Apply remains visible in a short window');
+          const scroll = await dialog.locator('.dn-search-results').evaluate(el => ({ height: el.clientHeight, content: el.scrollHeight }));
+          assert(scroll.content > scroll.height, 'Choices scroll within the available result area');
+          await page.setViewportSize({ width, height: 900 });
+          await assertStableFrame('Restored window');
+        }
         const search = dialog.getByRole('combobox');
         assert.equal(await search.evaluate(el => el === document.activeElement), true);
         await search.fill('zzzznomatch');
@@ -109,16 +133,34 @@ try {
         await dialog.waitFor({ state: 'hidden' });
         assert.equal(new URL(page.url()).searchParams.get('make'), null, 'Close discards changes without submitting the form');
         await form.locator('[data-facet=model]').click();
+        await dialog.getByRole('combobox').fill('RS6');
+        assert(await dialog.locator('.dn-search-row[data-value="model:RS 6 Avant"]').isVisible(), 'Compact model names tolerate spacing');
         await dialog.locator('.dn-search-row[data-value="model:RS 6 Avant"]').click();
+        await dialog.getByRole('combobox').fill('coupe');
+        assert(await dialog.locator('.dn-search-row[data-value="model:GLE Coupé"]').isVisible(), 'Model search tolerates accents');
         await dialog.locator('.dn-search-row[data-value="model:GLE Coupé"]').click();
         await dialog.locator('.dn-search-apply').click();
         await page.waitForURL(url => url.searchParams.get('model') === 'GLE Coupé');
         assert.equal(new URL(page.url()).searchParams.get('make'), 'Mercedes-Benz');
         await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
         await form.locator('.dn-discovery__keyword').click();
+        const allCarsLabel = await dialog.locator('.dn-search-apply').innerText();
         await dialog.getByRole('combobox').fill('BMW');
+        assert.equal(await dialog.locator('.dn-search-apply').innerText(), allCarsLabel, 'Choice search does not silently change the applied keyword or count');
+        assert.equal(await dialog.locator('input[type=hidden][name=q]').count(), 0);
         assert(await dialog.locator('.dn-search-row[data-value="make:BMW"]').isVisible(), 'Global search finds makes directly');
         assert(await dialog.locator('.dn-search-row[data-value="model:X6 M Sport"]').isVisible(), 'Global search also finds models by make');
+        await dialog.locator('.dn-search-row[data-value=keyword]').click();
+        await dialog.locator('.dn-search-apply').click();
+        await page.waitForURL(url => url.searchParams.get('q') === 'BMW');
+        assert.equal(new URL(page.url()).searchParams.get('make'), null, 'The keyword command applies only the explicit query');
+        await form.locator('.dn-discovery__keyword').click();
+        await dialog.getByRole('combobox').fill('Audi');
+        assert.equal(await dialog.locator('input[type=hidden][name=q]').inputValue(), 'BMW', 'Browsing suggestions preserves an existing keyword');
+        await page.keyboard.press('Escape');
+        await page.goto(`${base}${route}`, { waitUntil: 'networkidle' });
+        await form.locator('.dn-discovery__keyword').click();
+        await dialog.getByRole('combobox').fill('BMW');
         await dialog.locator('.dn-search-row[data-value="make:BMW"]').click();
         await dialog.locator('[data-field=model]').click();
         assert.equal(await dialog.locator('.dn-search-row[data-value="model:RS 6 Avant"]').count(), 0, 'Model choices respect the draft make');

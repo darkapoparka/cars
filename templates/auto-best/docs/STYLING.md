@@ -57,8 +57,12 @@ same window scoped to its field, with a left Back control and one visible field
 title. Selected filters form editable/removable tokens; Add filter returns to
 the overview without discarding the draft. There are no nested desktop dialogs.
 Bits UI supplies the Command keyboard behavior and Dialog focus/scroll handling.
-The window has a fixed top anchor and reserves each field's result height while
-searching. Make and Model remain single choices; equipment supports multiple
+The window keeps the same top anchor and 280px result area across every field,
+the overview and search states. Short windows shrink that scrollable area while
+retaining the header and footer. Content shares a 24px inset; Show cars has a
+44px target and a stable width, and tokens keep their removal controls visible.
+Choice search tolerates accents and model spacing. Typing only narrows suggestions;
+the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
 choices. Model respects the opening make and a uniquely owned model can infer
 its make. Changing make clears an incompatible model. Budget/year use paired
 number inputs; mileage has an input and presets. Invalid ranges block Show cars.
