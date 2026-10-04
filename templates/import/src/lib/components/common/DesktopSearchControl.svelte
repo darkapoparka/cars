@@ -8,6 +8,7 @@
 		label,
 		placeholder = label,
 		actionLabel,
+		showActionLabel = false,
 		name = 'keyword',
 		controls,
 		href,
@@ -20,6 +21,7 @@
 		label: string;
 		placeholder?: string;
 		actionLabel: string;
+		showActionLabel?: boolean;
 		name?: string;
 		controls?: string;
 		href?: string;
@@ -29,7 +31,10 @@
 	} = $props();
 </script>
 
-<div class={['desktop-search-control', className]}>
+<div
+	class={['desktop-search-control', className]}
+	class:desktop-search-control--labeled={showActionLabel}
+>
 	{#if onopen}
 		<button
 			{id}
@@ -65,6 +70,7 @@
 		class="desktop-search-control__action"
 	>
 		<Search size={20} aria-hidden="true" />
+		{#if showActionLabel}<span>{actionLabel}</span>{/if}
 	</Action>
 </div>
 
@@ -133,5 +139,11 @@
 		height: var(--bc-control-height-standard);
 		padding: 0;
 		border-radius: var(--bc-radius-pill);
+	}
+	.desktop-search-control--labeled :global(.desktop-search-control__action) {
+		width: auto;
+		height: var(--bc-control-height-primary);
+		gap: var(--bc-space-2);
+		padding-inline: var(--bc-space-4);
 	}
 </style>

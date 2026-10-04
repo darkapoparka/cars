@@ -329,9 +329,9 @@
 	   the independently owned legacy/admin shells retain their existing values. */
 	.site-shell,
 	.site-dialog {
-		--bc-desktop-canvas: #f2f4f7;
+		--bc-desktop-canvas: #fafbfc;
 		--bc-desktop-panel-surface: var(--bc-surface-raised);
-		--bc-desktop-control-surface: var(--bc-desktop-canvas);
+		--bc-desktop-control-surface: #f2f4f7;
 		--bc-desktop-hero-surface: #e5edf4;
 		--bc-desktop-hero-ink: var(--bc-ink);
 		--bc-desktop-hero-copy: var(--bc-description-copy);

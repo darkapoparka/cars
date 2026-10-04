@@ -190,6 +190,7 @@
 						value={keyword}
 						label={copy.search}
 						actionLabel={copy.searchAction}
+						showActionLabel
 						href={searchHref}
 						expanded={searchOpen}
 						onopen={() => (searchOpen = true)}

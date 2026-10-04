@@ -22,26 +22,6 @@
 	const english = $derived(page.data.locale === 'en');
 	const copy = $derived(siteShellCopy[english ? 'en' : 'bg']);
 
-	const groups = $derived<Record<string, { label: string; href: string }[]>>({
-		'/inventory': [
-			{ href: '/inventory', label: copy.allCars },
-			{ href: '/compare', label: copy.compareCars },
-			{ href: '/account/favorites', label: copy.savedCars }
-		],
-		'/services': [
-			{ href: '/services', label: copy.allServices },
-			{ href: '/import', label: copy.importCar },
-			{ href: '/sell-your-car', label: copy.sellCar },
-			{ href: '/financing', label: copy.financing },
-			{ href: '/calculator', label: copy.calculator }
-		],
-		'/about': [
-			{ href: '/about', label: copy.aboutUs },
-			{ href: '/blog', label: copy.guides },
-			{ href: '/reviews', label: copy.reviews },
-			{ href: '/faqs', label: copy.questions }
-		]
-	});
 	const localizedHref = (href: string) =>
 		english ? href + (href.includes('?') ? '&' : '?') + 'lang=en' : href;
 </script>
@@ -61,10 +41,6 @@
 			{#each siteNavigation as item (item.href)}<NavigationMenu
 					label={english ? publicNavigationEnglish[item.href] : item.label}
 					href={localizedHref(item.href)}
-					links={(groups[item.href] ?? []).map((link) => ({
-						...link,
-						href: localizedHref(link.href)
-					}))}
 					active={item.matchPrefixes.some(
 						(prefix) =>
 							routeParts(page.url.pathname).path === prefix ||
@@ -165,7 +141,7 @@
 	}
 	.site-header__nav {
 		justify-self: center;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-6);
 	}
 	:global(.site-header__icon) {
 		position: relative;

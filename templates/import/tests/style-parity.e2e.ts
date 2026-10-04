@@ -1,28 +1,32 @@
 import { expect, test } from '@playwright/test';
 import { visit } from './helpers';
 
-test('desktop navigation is centered and its dropdown aligns with the complete item', async ({
+test('desktop navigation is centered and follows direct localized links by keyboard', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
-	await visit(page, '/');
-	for (const width of [1280, 1440, 1920]) {
-		await page.setViewportSize({ width, height: 1000 });
-		const nav = await page.locator('.site-header__nav').boundingBox();
-		const header = await page.locator('.site-header__inner').boundingBox();
-		expect(Math.abs(nav!.x + nav!.width / 2 - header!.x - header!.width / 2)).toBeLessThan(2);
+	for (const locale of ['bg', 'en']) {
+		await visit(page, `/${locale}`);
+		const nav = page.locator('.site-header__nav');
+		await expect(nav.getByRole('link')).toHaveCount(5);
+		await expect(nav.getByRole('button')).toHaveCount(0);
+		for (const width of [1280, 1440, 1920]) {
+			await page.setViewportSize({ width, height: 1000 });
+			const navBounds = (await nav.boundingBox())!;
+			const header = (await page.locator('.site-header__inner').boundingBox())!;
+			expect(
+				Math.abs(navBounds.x + navBounds.width / 2 - header.x - header.width / 2)
+			).toBeLessThan(2);
+		}
+		const services = nav.getByRole('link', {
+			name: locale === 'en' ? 'Services' : 'Услуги',
+			exact: true
+		});
+		await services.focus();
+		await services.press('Enter');
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}/services`);
+		await expect(services).toHaveAttribute('aria-current', 'page');
 	}
-	await page.setViewportSize({ width: 1440, height: 1000 });
-	const item = page
-		.locator('.site-nav-item')
-		.filter({ has: page.locator('a[href="/bg/services"]') });
-	await item.getByRole('button').click();
-	const popover = page.locator('.site-nav-popover');
-	await expect(popover).toBeVisible();
-	expect(Math.abs((await popover.boundingBox())!.x - (await item.boundingBox())!.x)).toBeLessThan(
-		2
-	);
-	await page.keyboard.press('Escape');
 });
 
 test('image banners do not underline their titles or action copy', async ({ page }) => {

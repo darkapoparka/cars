@@ -404,11 +404,33 @@
 	@media (min-width: 768px) {
 		.hfp__field--prominent {
 			border-color: var(--bc-border);
-			background: var(--bc-control);
+			background: var(--bc-surface-raised);
 			border-radius: var(--desktop-discovery-control-radius, var(--bc-radius-md));
+			transition:
+				background var(--bc-motion-fast),
+				border-color var(--bc-motion-fast),
+				color var(--bc-motion-fast);
+		}
+		.hfp__field--prominent:hover,
+		.hfp--open .hfp__field--prominent {
+			border-color: var(--bc-ink);
+			background: var(--bc-control);
+		}
+		.hfp__field--compact.hfp__field--prominent.hfp__field--selected {
+			border-color: var(--bc-accent);
+			background: var(--bc-accent);
+			color: var(--bc-accent-contrast);
+		}
+		.hfp__field--compact.hfp__field--prominent.hfp__field--selected:hover {
+			border-color: var(--bc-accent-hover);
+			background: var(--bc-accent-hover);
 		}
 		.hfp__field--prominent .hfp__value {
 			font-weight: var(--bc-weight-control);
+		}
+		.hfp__field--prominent.hfp__field--selected .hfp__value,
+		.hfp__field--prominent.hfp__field--selected :global(svg) {
+			color: inherit;
 		}
 		.hfp__search:focus-within {
 			outline-offset: 0;

@@ -20,12 +20,17 @@ export const homeHeroModes = {
 /** Generated decorative desktop cutouts; real inventory photography is separate. */
 export const homeModeArtwork = {
 	buy: { src: '/assets/daynight/home-modes/buy-3d-v1.webp', width: 192, height: 192 },
-	finance: { src: '/assets/daynight/home-modes/finance-3d-v1.webp', width: 192, height: 192 },
+	finance: {
+		src: '/assets/daynight/home-modes/finance-3d-v1.webp',
+		width: 192,
+		height: 192,
+		scale: 0.86
+	},
 	sell: { src: '/assets/daynight/home-modes/sell-3d-v1.webp', width: 192, height: 192 },
 	import: { src: '/assets/daynight/home-modes/import-3d-v1.webp', width: 192, height: 192 }
 } as const satisfies Record<
 	keyof typeof homeHeroModes,
-	{ src: string; width: number; height: number }
+	{ src: string; width: number; height: number; scale?: number }
 >;
 
 export const homeDiscoveryCopy = {

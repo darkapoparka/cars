@@ -44,8 +44,6 @@
 				</Popover.Content></Popover.Portal
 			>
 		</Popover.Root>
-	{:else}
-		<span class="site-nav-slot" aria-hidden="true"></span>
 	{/if}
 </div>
 
@@ -75,10 +73,6 @@
 	}
 	.site-nav-item > a:hover {
 		color: var(--bc-desktop-hero-ink, var(--bc-white));
-	}
-	.site-nav-slot {
-		width: 28px;
-		flex: 0 0 28px;
 	}
 	:global(.site-nav-toggle) {
 		display: grid;

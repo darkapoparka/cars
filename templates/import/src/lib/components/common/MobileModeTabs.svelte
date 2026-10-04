@@ -2,7 +2,7 @@
 	import type { Component } from 'svelte';
 	import { assetHref, emptyImage } from '$lib/utils/assets';
 	type MobileModeOption = {
-		artwork?: { src: string; width: number; height: number };
+		artwork?: { src: string; width: number; height: number; scale?: number };
 		icon?: Component<{ size?: number; strokeWidth?: number }>;
 		label: string;
 		panelId?: string;
@@ -89,6 +89,7 @@
 								height={option.artwork.height}
 								alt=""
 								decoding="async"
+								style:--mode-artwork-scale={option.artwork.scale ?? 1}
 							/>
 						</picture>
 					</span>
@@ -255,6 +256,9 @@
 		}
 		.mobile-mode-tabs--panel button.has-artwork {
 			min-height: calc(var(--bc-mode-tab-artwork-size) + var(--bc-space-4));
+		}
+		.mobile-mode-tabs--panel .mode-tab-artwork img {
+			transform: scale(var(--mode-artwork-scale, 1));
 		}
 		.mobile-mode-tabs--panel .mode-tab-content {
 			position: relative;

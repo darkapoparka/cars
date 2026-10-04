@@ -2,12 +2,12 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
-test('header reserves the same trailing slot without inventing Home or Contact menus', async ({
+test('direct header navigation fits without menu controls or empty arrow slots', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/');
-	await expect(page.locator('.site-nav-item .site-nav-slot')).toHaveCount(2);
+	await expect(page.locator('.site-nav-item .site-nav-slot, .site-nav-toggle')).toHaveCount(0);
 	for (const width of [768, 1024, 1200, 1280, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 1000 });
 		const boxes = await page.evaluate(() => {
@@ -24,13 +24,8 @@ test('header reserves the same trailing slot without inventing Home or Contact m
 		expect(overlap(boxes.nav, boxes.logo)).toBe(false);
 		expect(overlap(boxes.nav, boxes.actions)).toBe(false);
 	}
-	await expect(
-		page.locator('.site-nav-item').filter({ hasText: 'Начало' }).getByRole('button')
-	).toHaveCount(0);
-	const widths = await page
-		.locator('.site-nav-slot, .site-nav-toggle')
-		.evaluateAll((nodes) => nodes.map((node) => node.getBoundingClientRect().width));
-	expect(Math.max(...widths) - Math.min(...widths)).toBeLessThan(1);
+	await expect(page.locator('.site-header__nav').getByRole('button')).toHaveCount(0);
+	await expect(page.locator('.site-header__nav').getByRole('link')).toHaveCount(5);
 });
 
 test('desktop buying panel contrasts with its hero without shrinking the tabs', async ({
