@@ -40,7 +40,15 @@ const s = stylex.create({
   },
   tabs: { flexShrink: 0 },
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
-  makePanel: { display: 'flex', flex: '1', minHeight: 0, minWidth: 0 },
+  makePanel: {
+    display: 'flex',
+    flex: '1',
+    minHeight: 0,
+    minWidth: 0,
+    width: '100%',
+    maxWidth: { default: 'none', '@media (min-width: 700px)': 760 },
+    marginInline: 'auto',
+  },
   hidden: { display: 'none' },
   fields: {
     flex: '1',
@@ -52,6 +60,27 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     gap: 28,
+  },
+  readableFields: {
+    width: '100%',
+    maxWidth: { default: 'none', '@media (min-width: 700px)': 760 },
+    marginInline: 'auto',
+  },
+  moreFields: {
+    display: { default: 'flex', '@media (min-width: 700px)': 'grid' },
+    gridTemplateColumns: {
+      default: 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 1000px)': 'repeat(3,minmax(0,1fr))',
+    },
+    alignContent: { default: 'normal', '@media (min-width: 700px)': 'start' },
+  },
+  moreRange: {
+    minWidth: 0,
+    gridColumn: {
+      default: 'auto',
+      '@media (min-width: 700px)': '1 / -1',
+      '@media (min-width: 1000px)': 'auto',
+    },
   },
   group: { borderWidth: 0, padding: 0, minWidth: 0 },
   fieldTitle: { fontSize: 18, fontWeight: 600, lineHeight: '26px', marginBottom: 12 },
@@ -87,7 +116,10 @@ const s = stylex.create({
     borderTopWidth: 1,
     borderTopStyle: 'solid',
     borderTopColor: colors.line,
+    display: { default: 'block', '@media (min-width: 700px)': 'flex' },
+    justifyContent: 'flex-end',
   },
+  footerAction: { width: { default: '100%', '@media (min-width: 700px)': 240 } },
 });
 function Choices({
   title,
@@ -169,7 +201,7 @@ export function ShowroomFilterSheet({
     setDraft((current) => updateShowroomFilterDraft(current, patch));
   }
   return (
-    <Modal open onClose={onClose} label={t('Search and filters')} flowSheet>
+    <Modal open onClose={onClose} label={t('Search and filters')} flowSheet wide>
       <div ref={editorRef} {...stylex.props(s.editor)}>
         <div {...stylex.props(s.heading)}>
           <IconButton icon="close" label={t('Close filters')} onClick={onClose} />
@@ -190,6 +222,7 @@ export function ShowroomFilterSheet({
             selected={sheet}
             panelId="showroom-filter-options"
             idPrefix="filter-section-"
+            layout="desktop-fill"
             onChange={onTabChange}
           />
         </div>
@@ -228,7 +261,11 @@ export function ShowroomFilterSheet({
             <div
               ref={fieldsRef}
               data-filter-scroll
-              {...stylex.props(s.fields, sheet === 'search' && s.searchPanel)}
+              {...stylex.props(
+                s.fields,
+                sheet === 'more' ? s.moreFields : s.readableFields,
+                sheet === 'search' && s.searchPanel,
+              )}
             >
               {sheet === 'search' && (
                 <>
@@ -313,17 +350,19 @@ export function ShowroomFilterSheet({
               )}
               {sheet === 'more' && (
                 <>
-                  <RangeField
-                    comfortable
-                    label={t('Mileage')}
-                    floor={0}
-                    ceiling={200000}
-                    step={5000}
-                    unit="km"
-                    min={draft.minMileage}
-                    max={draft.maxMileage}
-                    onChange={(minMileage, maxMileage) => change({ minMileage, maxMileage })}
-                  />
+                  <div {...stylex.props(s.moreRange)}>
+                    <RangeField
+                      comfortable
+                      label={t('Mileage')}
+                      floor={0}
+                      ceiling={200000}
+                      step={5000}
+                      unit="km"
+                      min={draft.minMileage}
+                      max={draft.maxMileage}
+                      onChange={(minMileage, maxMileage) => change({ minMileage, maxMileage })}
+                    />
+                  </div>
                   {transmissions.length > 0 && (
                     <Choices
                       title={t('Transmission')}
@@ -348,12 +387,14 @@ export function ShowroomFilterSheet({
           )}
         </div>
         <div data-filter-footer {...stylex.props(s.footer)}>
-          <Button block floating onClick={() => onApply(draft)}>
-            <span aria-live="polite" aria-atomic="true">
-              {t('Show ')}
-              {count} {t(count === 1 ? category.singular : category.plural)}
-            </span>
-          </Button>
+          <div {...stylex.props(s.footerAction)}>
+            <Button block floating onClick={() => onApply(draft)}>
+              <span aria-live="polite" aria-atomic="true">
+                {t('Show ')}
+                {count} {t(count === 1 ? category.singular : category.plural)}
+              </span>
+            </Button>
+          </div>
         </div>
       </div>
     </Modal>

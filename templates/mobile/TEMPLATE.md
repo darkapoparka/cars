@@ -68,6 +68,14 @@ taxonomy and selection logic power a dedicated showroom list inside that editor.
 Compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
 Optional variants and exclusion live in a collapsed More options section.
+At 700px and wider, this filter editor uses the site's 1100px width cap with
+24px viewport gutters. All seven tabs share the available width. Its height is
+capped at 640px or the viewport minus 48px, with options scrolling above the
+fixed footer. Search, make/model and single-setting panels retain a readable
+760px content cap. More groups mileage, transmission and body type into three
+columns from 1000px; below that, mileage spans two columns. The desktop apply
+action is 240px wide. Phones retain the full-screen editor, scrolling tabs,
+stacked settings and full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Inventory photos sit inside a 12px white frame with 10px
 inner corners. The title and price share a wrapping row; the trim stays below,
@@ -127,8 +135,9 @@ Underline tabs use a raised white strip without a full-width border. The 12%
 shadow with a 4px drop and 8px blur provides elevation. The rail paints above
 following content so its shadow stays visible. Flush detail tabs remove the top
 margin and keep the same elevation.
-The 52px targets and 3px active underline remain. Home and filter
-editor tabs scroll horizontally at their own widths. Services distributes its
+The 52px targets and 3px active underline remain. Home tabs scroll horizontally
+at their own widths. Filter editor tabs scroll on phones and share the dialog
+width on desktop. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills sit on the same white canvas as the listings below.

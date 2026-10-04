@@ -213,6 +213,13 @@ const s = stylex.create({
     overflow: 'hidden',
     '::backdrop': { backgroundColor: 'rgba(0,0,0,.4)' },
   },
+  wideFlowSheet: {
+    maxWidth: { default: 640, '@media (min-width: 700px)': 1100 },
+    height: {
+      default: '100dvh',
+      '@media (min-width: 700px)': 'min(640px, calc(100dvh - 48px))',
+    },
+  },
   wideDialog: { width: 'calc(100% - 48px)', padding: 0 },
   pickerHeight: (height: number) => ({ height: `min(${height}px, calc(100dvh - 44px))` }),
   pickerDialog: {
@@ -443,6 +450,7 @@ export function Modal({
         sorting && s.sortingDialog,
         fullScreen && s.fullScreenDialog,
         flowSheet && s.flowSheet,
+        flowSheet && wide && s.wideFlowSheet,
         material && s.materialDialog,
         selection && s.selectionDialog,
         picker && s.pickerDialog,

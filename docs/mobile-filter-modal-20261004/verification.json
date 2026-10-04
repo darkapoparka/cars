@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-04T04:50:43.946Z",
+  "base": "http://127.0.0.1:6474",
+  "passed": true,
+  "checks": [
+    "All seven BG mobile filter sections retain identical geometry at 320/390px with no image difference above 2/255 rendering tolerance. Services search remains unchanged.",
+    "All seven EN sections and BG search/More fit the desktop dialog; seven tabs remain visible at 700/1024/1440/1920px, with no horizontal scroll or overflow.",
+    "chromium: BG/EN tab keyboard navigation, draft retention across sections, real filter application, Escape/focus return and browser Back cancellation passed. Short viewports retain reachable options/footer, and the Sort dialog keeps its 480px cap.",
+    "webkit: BG/EN tab keyboard navigation, draft retention across sections, real filter application, Escape/focus return and browser Back cancellation passed. Short viewports retain reachable options/footer, and the Sort dialog keeps its 480px cap."
+  ]
+}

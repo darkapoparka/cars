@@ -1,0 +1,300 @@
+{
+  "cases": 32,
+  "mobileCases": 16,
+  "mobileChangedPixels": 0,
+  "beforeDesktop": {
+    "width": 1440,
+    "tab": "more",
+    "locale": "bg",
+    "status": 200,
+    "errors": [],
+    "dialog": {
+      "x": 400,
+      "y": 70,
+      "width": 640,
+      "height": 760,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "rgba(0, 0, 0, 0.267) 0px 16px 60px 0px",
+      "background": "rgb(255, 255, 255)"
+    },
+    "rail": {
+      "x": 400,
+      "y": 134,
+      "width": 640,
+      "height": 53,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(255, 255, 255)"
+    },
+    "railScroll": {
+      "width": 640,
+      "scrollWidth": 694,
+      "left": 38
+    },
+    "tabs": [
+      {
+        "label": "Търсене",
+        "x": 378,
+        "y": 134,
+        "width": 95.3125,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Марка и модел",
+        "x": 473.3125,
+        "y": 134,
+        "width": 141.9375,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Цена",
+        "x": 615.25,
+        "y": 134,
+        "width": 72,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Година",
+        "x": 687.25,
+        "y": 134,
+        "width": 84.15625,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Гориво",
+        "x": 771.40625,
+        "y": 134,
+        "width": 83.546875,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Състояние",
+        "x": 854.953125,
+        "y": 134,
+        "width": 112.9375,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Още",
+        "x": 967.890625,
+        "y": 134,
+        "width": 72,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "fields": {
+      "x": 400,
+      "y": 187,
+      "width": 640,
+      "height": 566,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    "columns": "none",
+    "footer": {
+      "x": 400,
+      "y": 753,
+      "width": 640,
+      "height": 77,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(255, 255, 255)"
+    },
+    "apply": {
+      "x": 416,
+      "y": 766,
+      "width": 608,
+      "height": 48,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(219, 48, 0)"
+    },
+    "pageOverflow": false,
+    "dialogOverflow": false
+  },
+  "afterDesktop": {
+    "width": 1440,
+    "tab": "more",
+    "locale": "bg",
+    "status": 200,
+    "errors": [],
+    "dialog": {
+      "x": 170,
+      "y": 130,
+      "width": 1100,
+      "height": 640,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "rgba(0, 0, 0, 0.267) 0px 16px 60px 0px",
+      "background": "rgb(255, 255, 255)"
+    },
+    "rail": {
+      "x": 170,
+      "y": 194,
+      "width": 1100,
+      "height": 53,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(255, 255, 255)"
+    },
+    "railScroll": {
+      "width": 1100,
+      "scrollWidth": 1100,
+      "left": 0
+    },
+    "tabs": [
+      {
+        "label": "Търсене",
+        "x": 186,
+        "y": 194,
+        "width": 152.5625,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Марка и модел",
+        "x": 338.5625,
+        "y": 194,
+        "width": 152.578125,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Цена",
+        "x": 491.140625,
+        "y": 194,
+        "width": 152.5625,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Година",
+        "x": 643.703125,
+        "y": 194,
+        "width": 152.578125,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Гориво",
+        "x": 796.28125,
+        "y": 194,
+        "width": 152.5625,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Състояние",
+        "x": 948.84375,
+        "y": 194,
+        "width": 152.578125,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      },
+      {
+        "label": "Още",
+        "x": 1101.421875,
+        "y": 194,
+        "width": 152.578125,
+        "height": 52,
+        "font": "\"Mobile Base\", Arial, sans-serif",
+        "fontSize": "16px",
+        "shadow": "none",
+        "background": "rgba(0, 0, 0, 0)"
+      }
+    ],
+    "fields": {
+      "x": 170,
+      "y": 247,
+      "width": 1100,
+      "height": 446,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    "columns": "334.656px 334.672px 334.656px",
+    "footer": {
+      "x": 170,
+      "y": 693,
+      "width": 1100,
+      "height": 77,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(255, 255, 255)"
+    },
+    "apply": {
+      "x": 1014,
+      "y": 706,
+      "width": 240,
+      "height": 48,
+      "font": "\"Mobile Base\", Arial, sans-serif",
+      "fontSize": "14px",
+      "shadow": "none",
+      "background": "rgb(219, 48, 0)"
+    },
+    "pageOverflow": false,
+    "dialogOverflow": false
+  },
+  "checks": [
+    "ESLint passed",
+    "TypeScript passed",
+    "91 domain/localization tests passed",
+    "Production build passed",
+    "Chromium and WebKit interactions passed"
+  ]
+}

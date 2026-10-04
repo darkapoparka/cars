@@ -24,6 +24,7 @@ const s = stylex.create({
     borderBottomColor: colors.line,
   },
   fillRail: { paddingInline: 0, overflowX: 'visible' },
+  desktopFillRail: { overflowX: { default: 'auto', '@media (min-width: 700px)': 'visible' } },
   flushRail: { marginTop: 0 },
   tab: {
     position: 'relative',
@@ -60,6 +61,15 @@ const s = stylex.create({
     paddingInline: 8,
     whiteSpace: 'normal',
     overflowWrap: 'anywhere',
+  },
+  desktopFillTab: {
+    flexGrow: { default: 0, '@media (min-width: 700px)': 1 },
+    flexShrink: { default: 0, '@media (min-width: 700px)': 1 },
+    flexBasis: { default: 'auto', '@media (min-width: 700px)': 0 },
+    minWidth: { default: 72, '@media (min-width: 700px)': 0 },
+    paddingInline: { default: 16, '@media (min-width: 700px)': 12 },
+    whiteSpace: { default: 'nowrap', '@media (min-width: 700px)': 'normal' },
+    overflowWrap: { default: 'normal', '@media (min-width: 700px)': 'anywhere' },
   },
   selected: {
     color: colors.accent,
@@ -101,7 +111,7 @@ export function ShowroomTabs<T extends string>({
   idPrefix: string;
   variant?: 'text' | 'icon';
   tone?: 'accent' | 'neutral';
-  layout?: 'scroll' | 'fill';
+  layout?: 'scroll' | 'fill' | 'desktop-fill';
   flush?: boolean;
   onChange: (value: T) => void;
 }) {
@@ -128,7 +138,12 @@ export function ShowroomTabs<T extends string>({
     <div
       role="tablist"
       aria-label={t(label)}
-      {...stylex.props(s.rail, layout === 'fill' && s.fillRail, flush && s.flushRail)}
+      {...stylex.props(
+        s.rail,
+        layout === 'fill' && s.fillRail,
+        layout === 'desktop-fill' && s.desktopFillRail,
+        flush && s.flushRail,
+      )}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
         <button
@@ -167,6 +182,7 @@ export function ShowroomTabs<T extends string>({
             variant === 'text' && s.textTab,
             variant === 'icon' && s.iconTab,
             layout === 'fill' && s.fillTab,
+            layout === 'desktop-fill' && s.desktopFillTab,
             selected === value && s.selected,
             selected === value && tone === 'neutral' && s.selectedNeutral,
             selected === value && variant === 'text' && s.selectedText,
