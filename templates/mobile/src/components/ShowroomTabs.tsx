@@ -71,6 +71,8 @@ const s = stylex.create({
     overflowWrap: 'anywhere',
   },
   desktopFillTab: {
+    outlineColor: { default: colors.accent, '@media (min-width: 700px)': colors.text },
+    outlineOffset: { default: -3, '@media (min-width: 700px)': -5 },
     flexGrow: { default: 0, '@media (min-width: 700px)': 1 },
     flexShrink: { default: 0, '@media (min-width: 700px)': 1 },
     flexBasis: 'auto',

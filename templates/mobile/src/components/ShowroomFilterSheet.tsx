@@ -48,7 +48,7 @@ const s = stylex.create({
     borderRadius: 8,
     backgroundColor: 'transparent',
     color: { default: colors.muted, ':hover': colors.text },
-    fontSize: 14,
+    fontSize: { default: 14, '@media (min-width: 700px)': 15 },
     fontWeight: 600,
     lineHeight: '20px',
   },
@@ -97,6 +97,34 @@ const s = stylex.create({
     },
   },
   group: { borderWidth: 0, padding: 0, minWidth: 0 },
+  choiceList: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { default: 0, '@media (min-width: 700px)': 8 },
+  },
+  desktopChoice: {
+    paddingInline: { default: 0, '@media (min-width: 700px)': 12 },
+    borderRadius: { default: 0, '@media (min-width: 700px)': 12 },
+    backgroundColor: {
+      default: 'transparent',
+      '@media (min-width: 700px)': { default: colors.stripe, ':hover': colors.controlSurface },
+    },
+  },
+  desktopChoiceSelected: {
+    backgroundColor: { default: 'transparent', '@media (min-width: 700px)': colors.controlSurface },
+  },
+  desktopCheckbox: {
+    borderColor: {
+      default: '#808592',
+      ':checked': colors.deepPurple,
+      '@media (min-width: 700px)': { default: colors.muted, ':checked': colors.text },
+    },
+    backgroundColor: {
+      default: colors.background,
+      ':checked': colors.deepPurple,
+      '@media (min-width: 700px)': { default: colors.background, ':checked': colors.text },
+    },
+  },
   fieldTitle: { fontSize: 18, fontWeight: 600, lineHeight: '26px', marginBottom: 12 },
   copy: { color: colors.muted, fontSize: 14, lineHeight: '22px' },
   budgetPresets: {
@@ -119,7 +147,7 @@ const s = stylex.create({
     borderRadius: 12,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.stripe },
     color: colors.text,
-    fontSize: 14,
+    fontSize: { default: 14, '@media (min-width: 700px)': 16 },
     fontWeight: 500,
     lineHeight: '20px',
   },
@@ -164,8 +192,11 @@ const s = stylex.create({
     display: { default: 'block', '@media (min-width: 700px)': 'flex' },
     justifyContent: 'flex-end',
   },
-  footerAction: { width: { default: '100%', '@media (min-width: 700px)': 200 } },
+  footerAction: { width: { default: '100%', '@media (min-width: 700px)': 240 } },
   footerButton: {
+    fontSize: { default: 14, '@media (min-width: 700px)': 16 },
+    lineHeight: { default: '20px', '@media (min-width: 700px)': '24px' },
+    paddingInline: { default: 24, '@media (min-width: 700px)': 16 },
     transition: {
       default: 'filter 120ms, transform 120ms',
       '@media (min-width: 700px)': 'none',
@@ -194,21 +225,25 @@ function Choices({
   return (
     <fieldset {...stylex.props(s.group)}>
       <legend {...stylex.props(s.fieldTitle)}>{t(title)}</legend>
-      {options.map((value) => (
-        <CheckRow
-          key={value}
-          checked={filters[field].includes(value)}
-          onChange={(checked) =>
-            onChange({
-              [field]: checked
-                ? [...filters[field], value]
-                : filters[field].filter((choice) => choice !== value),
-            })
-          }
-        >
-          {value}
-        </CheckRow>
-      ))}
+      <div {...stylex.props(s.choiceList)}>
+        {options.map((value) => (
+          <CheckRow
+            key={value}
+            xstyle={[s.desktopChoice, filters[field].includes(value) && s.desktopChoiceSelected]}
+            checkboxStyle={s.desktopCheckbox}
+            checked={filters[field].includes(value)}
+            onChange={(checked) =>
+              onChange({
+                [field]: checked
+                  ? [...filters[field], value]
+                  : filters[field].filter((choice) => choice !== value),
+              })
+            }
+          >
+            {value}
+          </CheckRow>
+        ))}
+      </div>
     </fieldset>
   );
 }

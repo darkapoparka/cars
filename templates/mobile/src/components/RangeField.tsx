@@ -95,6 +95,12 @@ const s = stylex.create({
   },
   unit: { fontSize: 14, flexShrink: 0 },
   comfortableRoot: { fontSize: 16 },
+  comfortableTitle: {
+    fontSize: { default: 16, '@media (min-width: 700px)': 18 },
+    fontWeight: { default: 500, '@media (min-width: 700px)': 600 },
+    lineHeight: { default: '24px', '@media (min-width: 700px)': '26px' },
+  },
+  comfortableSummary: { fontSize: { default: 14, '@media (min-width: 700px)': 15 } },
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
     minHeight: 64,
@@ -185,8 +191,8 @@ export function RangeField({
   return (
     <div {...stylex.props(s.root, comfortable && s.comfortableRoot)}>
       <div {...stylex.props(s.head)}>
-        <h3 {...stylex.props(s.title)}>{t(label)}</h3>
-        <output {...stylex.props(s.summary)}>{summary}</output>
+        <h3 {...stylex.props(s.title, comfortable && s.comfortableTitle)}>{t(label)}</h3>
+        <output {...stylex.props(s.summary, comfortable && s.comfortableSummary)}>{summary}</output>
       </div>
       <div
         data-range-track={label}

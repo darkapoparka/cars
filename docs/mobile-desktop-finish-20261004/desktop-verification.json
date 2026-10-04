@@ -1,0 +1,576 @@
+{
+  "date": "2026-10-04",
+  "template": "Mobile",
+  "scope": "desktop filters at 700px and wider",
+  "matrix": [
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Търсене",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Марка и модел",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Цена",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Година",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Гориво",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Състояние",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "bg",
+      "tab": "Още",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Search",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Make & model",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Price",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Year",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Fuel",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "Condition",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 960,
+      "lang": "en",
+      "tab": "More",
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 140
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 743
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Търсене",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Марка и модел",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Цена",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Година",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Гориво",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Състояние",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "bg",
+      "tab": "Още",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Search",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Make & model",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Price",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Year",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Fuel",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "Condition",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    },
+    {
+      "width": 700,
+      "height": 600,
+      "lang": "en",
+      "tab": "More",
+      "dialog": {
+        "height": 552,
+        "width": 652,
+        "x": 24,
+        "y": 24
+      },
+      "footer": {
+        "height": 77,
+        "width": 652,
+        "x": 24,
+        "y": 499
+      },
+      "passed": true
+    }
+  ],
+  "interactions": [
+    "All models unchecked removes BMW",
+    "Remove clears the model panel and selection",
+    "Selecting 120 updates the BMW summary and family mixed state",
+    "Variant edits survive exclusion toggle",
+    "Searching X6 and applying returns one matching listing",
+    "Price changes stay in the draft until Show",
+    "Escape cancels the price draft and returns focus to the Price pill",
+    "Clear resets the draft; Close retains the original applied X6 filter"
+  ],
+  "backdropBlur": "blur(8px)",
+  "consoleErrors": [],
+  "modelControls": {
+    "equalPaneWidths": true,
+    "alignedModelCheckboxes": true,
+    "selectedModelSummary": "BMW120",
+    "mixedFamilyAccessible": true,
+    "allModelsRemovesBMW": true,
+    "shortWindowOptionalHeading": {
+      "dialog": {
+        "height": 552,
+        "y": 24
+      },
+      "extras": {
+        "height": 125.265625,
+        "y": 333.734375
+      },
+      "input": {
+        "height": 48,
+        "y": 398.734375
+      },
+      "summary": {
+        "height": 48,
+        "y": 333.734375
+      }
+    }
+  }
+}

@@ -378,19 +378,23 @@ export function CheckRow({
   children,
   checked,
   onChange,
+  xstyle,
+  checkboxStyle,
 }: {
   children: ReactNode;
   checked: boolean;
   onChange: (checked: boolean) => void;
+  xstyle?: stylex.StyleXStyles;
+  checkboxStyle?: stylex.StyleXStyles;
 }) {
   const { t } = useLocale();
   return (
-    <label {...stylex.props(s.checkRow)}>
+    <label {...stylex.props(s.checkRow, xstyle)}>
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        {...stylex.props(s.checkbox, controls.checkbox)}
+        {...stylex.props(s.checkbox, controls.checkbox, checkboxStyle)}
       />
       <span>{typeof children === 'string' ? t(children) : children}</span>
     </label>

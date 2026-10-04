@@ -5,11 +5,12 @@ import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
 import { showroomMakeOptions } from '@/lib/make-picker-options';
-import { modelGroupsFor } from '@/lib/native-taxonomy';
+import { modelGroupsFor, modelLabel } from '@/lib/native-taxonomy';
 import {
   applyMakeSelection,
   clearMakeSelections,
   excludedMakeNames,
+  modelsForMake,
   removeMakeSelection,
 } from '@/lib/make-selection';
 import { modelDraftFor, selectedModelVariants, type ModelDraft } from '@/lib/model-picker';
@@ -154,6 +155,11 @@ export function ShowroomDesktopMakeModel({
             const selection = selections.find((item) => item.name === name);
             const checked = name === 'Any' ? !selections.length : Boolean(selection);
             const active = current?.name === name;
+            const selectedModels = selection
+              ? modelsForMake(filters, name, selection.excluded).map((model) =>
+                  t(modelLabel(model)),
+                )
+              : [];
             return (
               <div
                 key={name}
@@ -170,7 +176,15 @@ export function ShowroomDesktopMakeModel({
                   />
                   {name !== 'Any' && <BrandLogo make={name} size={28} />}
                   <span {...stylex.props(s.makeName)}>
-                    {name === 'Any' ? t('Any make') : name}
+                    <span>{name === 'Any' ? t('Any make') : name}</span>
+                    {selection && (
+                      <span
+                        title={selectedModels.join(', ') || t('All models')}
+                        {...stylex.props(s.selectionSummary)}
+                      >
+                        {selectedModels.join(', ') || t('All models')}
+                      </span>
+                    )}
                     {selection?.excluded && (
                       <span {...stylex.props(s.excluded)}>{t('Excluded')}</span>
                     )}
@@ -229,6 +243,7 @@ export function ShowroomDesktopMakeModel({
               expanded={expanded}
               excluded={current.excluded}
               onChange={applyDraft}
+              onRemoveMake={() => remove(current.name)}
               onToggleFamily={(name) =>
                 setExpanded((values) =>
                   values.includes(name)

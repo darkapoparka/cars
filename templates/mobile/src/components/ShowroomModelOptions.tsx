@@ -19,18 +19,21 @@ import {
 import { Icon } from './Icon';
 import { ui } from './ui';
 import { modelOptionStyles as s } from './showroom-model-options.stylex';
+import { desktopModelOptions as ds } from './desktop-model-options.stylex';
 
 function ModelCheckbox({
   name,
   modelKey,
   checked,
   mixed = false,
+  desktop = false,
   onChange,
 }: {
   name: string;
   modelKey: string;
   checked: boolean;
   mixed?: boolean;
+  desktop?: boolean;
   onChange: (checked: boolean) => void;
 }) {
   const { t } = useLocale();
@@ -44,7 +47,13 @@ function ModelCheckbox({
         if (element) element.indeterminate = mixed;
       }}
       onChange={(event) => onChange(event.target.checked)}
-      {...stylex.props(controls.checkbox, s.checkbox, mixed && s.mixed)}
+      {...stylex.props(
+        controls.checkbox,
+        s.checkbox,
+        mixed && s.mixed,
+        desktop && ds.checkbox,
+        desktop && mixed && ds.mixed,
+      )}
     />
   );
 }
@@ -101,16 +110,26 @@ export function ShowroomModelOptions({
       ? draft.selected.includes(key) || Boolean(parent && draft.selected.includes(parent.name))
       : !draft.selected.length;
     return (
-      <label {...stylex.props(s.choice, !desktop && !name && s.allChoice, parent && s.childChoice)}>
+      <label
+        {...stylex.props(
+          s.choice,
+          !desktop && !name && s.allChoice,
+          parent && s.childChoice,
+          desktop && ds.choice,
+          desktop && parent && ds.childChoice,
+          desktop && checked && ds.selected,
+        )}
+      >
         <span {...stylex.props(s.name)}>
           {name || make || t('Any model')}
           {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}
         </span>
-        <span {...stylex.props(s.checkTarget)}>
+        <span {...stylex.props(s.checkTarget, desktop && ds.checkTarget)}>
           <ModelCheckbox
             name={name || (make ? make + ' · ' + t('All models') : 'Any model')}
             modelKey={key}
             checked={checked}
+            desktop={desktop}
             onChange={(next) => {
               if (!name && !next && onRemoveMake) onRemoveMake();
               else onChange(toggleModelDraft(draft, key, next, groups, parent?.name));
@@ -125,11 +144,17 @@ export function ShowroomModelOptions({
     return (
       <label {...stylex.props(s.variantField)}>
         <span>
-          {model ? modelLabel(model) + ' · ' + t('Variant') : t('Variant')}
+          {model
+            ? (desktop ? t(modelLabel(model)) : modelLabel(model)) + ' · ' + t('Variant')
+            : t('Variant')}
           {t(' (optional)')}
         </span>
         <input
-          aria-label={model ? t('Variant') + ': ' + modelLabel(model) : t('Variant')}
+          aria-label={
+            model
+              ? t('Variant') + ': ' + (desktop ? t(modelLabel(model)) : modelLabel(model))
+              : t('Variant')
+          }
           value={modelVariantFor(draft, model, group)}
           placeholder={t('Variant or trim')}
           maxLength={200}
@@ -148,19 +173,26 @@ export function ShowroomModelOptions({
       {...stylex.props(desktop && s.desktopOptions)}
     >
       <div {...stylex.props(desktop ? s.desktopChoices : s.phoneChoices)}>
-        {!q && <div {...stylex.props(s.group)}>{modelChoice('')}</div>}
+        {!q && <div {...stylex.props(s.group, desktop && ds.group)}>{modelChoice('')}</div>}
         {visibleGroups.map((group) => {
           const key = modelNodeKey(group, groups);
           if (!group.children.length) {
             return (
-              <div key={key} data-model-node={key} {...stylex.props(s.group)}>
-                <label {...stylex.props(s.choice)}>
+              <div key={key} data-model-node={key} {...stylex.props(s.group, desktop && ds.group)}>
+                <label
+                  {...stylex.props(
+                    s.choice,
+                    desktop && ds.choice,
+                    desktop && draft.selected.includes(key) && ds.selected,
+                  )}
+                >
                   <span {...stylex.props(s.name)}>{t(group.name)}</span>
-                  <span {...stylex.props(s.checkTarget)}>
+                  <span {...stylex.props(s.checkTarget, desktop && ds.checkTarget)}>
                     <ModelCheckbox
                       name={t(group.name)}
                       modelKey={key}
                       checked={draft.selected.includes(key)}
+                      desktop={desktop}
                       onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
                     />
                   </span>
@@ -179,8 +211,14 @@ export function ShowroomModelOptions({
             : expanded.includes(group.name);
           const childrenId = optionsId + '-' + encodeURIComponent(key);
           return (
-            <div key={key} data-model-node={key} {...stylex.props(s.group)}>
-              <div {...stylex.props(s.familyRow)}>
+            <div key={key} data-model-node={key} {...stylex.props(s.group, desktop && ds.group)}>
+              <div
+                {...stylex.props(
+                  s.familyRow,
+                  desktop && ds.familyRow,
+                  desktop && (checked || mixed) && ds.selected,
+                )}
+              >
                 <button
                   type="button"
                   aria-label={t(show ? 'Collapse' : 'Expand') + ' ' + t(group.name)}
@@ -199,19 +237,20 @@ export function ShowroomModelOptions({
                         };
                       });
                   }}
-                  {...stylex.props(s.familyButton)}
+                  {...stylex.props(s.familyButton, desktop && ds.familyButton)}
                 >
                   <span {...stylex.props(s.name, s.familyName)}>{t(group.name)}</span>
                   <span aria-hidden="true" {...stylex.props(s.chevron)}>
                     <Icon name={show ? 'up' : 'down'} size={18} />
                   </span>
                 </button>
-                <label {...stylex.props(s.checkTarget)}>
+                <label {...stylex.props(s.checkTarget, desktop && ds.checkTarget)}>
                   <ModelCheckbox
                     name={t(group.name)}
                     modelKey={key}
                     checked={checked}
                     mixed={mixed}
+                    desktop={desktop}
                     onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
                   />
                 </label>
@@ -239,9 +278,9 @@ export function ShowroomModelOptions({
       <details
         open={optionsOpen}
         onToggle={(event) => setOptionsOpen(event.currentTarget.open)}
-        {...stylex.props(s.options, desktop && s.desktopExtras)}
+        {...stylex.props(s.options, desktop && s.desktopExtras, desktop && ds.extras)}
       >
-        <summary {...stylex.props(s.summary)}>
+        <summary {...stylex.props(s.summary, desktop && ds.summary)}>
           <span {...stylex.props(s.name)}>{t('More options')}</span>
           {activeOptions > 0 && (
             <span {...stylex.props(s.activeCount)}>
@@ -252,14 +291,14 @@ export function ShowroomModelOptions({
             <Icon name={optionsOpen ? 'up' : 'down'} size={18} />
           </span>
         </summary>
-        <div {...stylex.props(s.optionFields)}>
+        <div {...stylex.props(s.optionFields, desktop && ds.optionFields)}>
           <button
             type="button"
             role="switch"
             aria-label={t('Exclude make')}
             aria-checked={excluded}
             onClick={onToggleExcluded}
-            {...stylex.props(s.excludeRow)}
+            {...stylex.props(s.excludeRow, desktop && ds.excludeRow)}
           >
             <span {...stylex.props(s.name)}>{t('Exclude this selection')}</span>
             <span aria-hidden="true" {...stylex.props(s.switch, excluded && s.switchOn)}>

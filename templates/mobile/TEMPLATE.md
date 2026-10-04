@@ -79,10 +79,11 @@ Desktop uses separate brand and model panels with independent search fields.
 Brand checkboxes select and deselect directly; a separate edit action opens an
 existing brand's models. A labelled Remove action stays beside the model heading.
 Removing a brand clears its model criteria and search, then returns keyboard
-focus to that brand's checkbox. Make and Model use equal-width panels with
-matching search fields and a simple gap between them. Model dividers use the
-quiet stripe token on desktop, with rounded row hover
-feedback. Phones use their own full-width brand and model rows.
+focus to that brand's checkbox. Unchecking All models also removes the brand.
+Make and Model use equal-width panels with quiet backgrounds, matching search
+fields, 18px headings and 16px model rows. Selected brands summarize their models;
+model checkboxes align on the left and selected rows use a neutral surface.
+Phones use their own full-width brand and model rows.
 Optional variants and exclusion live in a collapsed More options section.
 Price shortcuts offer Any and upper limits of EUR 40,000, 60,000 and 100,000.
 They replace both price bounds; custom ranges clear the shortcut highlight.
@@ -94,15 +95,17 @@ gutters. Seven 16px tabs share a fixed 56px height, a quiet background and an
 inset underline. Their weight stays constant on selection, and their widths
 follow their labels so larger text fits without shifting neighboring tabs.
 Long labels can wrap at spaces. Search fields use a light surface and border;
-selected brands have a warm surface, aligned 20px checkboxes and a visible Remove
-action. The desktop apply button stays stationary with instant hover feedback.
+brands have aligned 20px checkboxes and a visible Remove action. A quiet inset
+outline retains keyboard focus. The desktop apply button stays stationary with
+instant hover feedback.
 The dialog has a fixed height of 680px or the viewport minus 48px, so tab changes,
 selections, searches and family expansion cannot recenter the frame. Only the
 inner content scrolls above the fixed footer. The model list and its always
 reachable More options disclosure have their own bounded scrolling areas.
 More puts mileage across the first row, with transmission
-and body type in two columns below. Desktop content has 24px gutters and a 200px
-apply action. The native backdrop uses an 8px blur with a light 22% dim on desktop.
+and body type in two columns below. Rounded selection rows share a quiet surface.
+Desktop content has 24px gutters and a 240px apply action with 16px text.
+The native backdrop uses an 8px blur with a light 22% dim on desktop.
 Phones retain the full-screen editor, scrolling tabs, stacked settings and
 full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
