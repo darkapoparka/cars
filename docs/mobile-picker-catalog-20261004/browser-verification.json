@@ -1,0 +1,117 @@
+{
+  "checkedAt": "2026-10-04T12:05:49.224Z",
+  "preview": "http://127.0.0.1:6474/?lang=bg&filter=make",
+  "build": {
+    "completedAt": "2026-10-04T15:02:26.1554755+03:00",
+    "result": "passed",
+    "node": "22.20.0",
+    "buildId": "-tsX0v5ThDf1j-aqPd7Ha",
+    "distDir": ".next-picker-catalog-20261004",
+    "pages": 51
+  },
+  "validation": {
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainTests": 95
+  },
+  "passed": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "makes-after-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "makes-before-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "models-after-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "models-before-390.jpg",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "boundary": "Mobile candidate source and local preview; no release selection or dealer deployment"
+}

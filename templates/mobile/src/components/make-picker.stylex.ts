@@ -76,7 +76,7 @@ export const pickerStyles = stylex.create({
   },
   selectedMark: { borderColor: colors.accent, backgroundColor: colors.accent },
   makeName: { flex: '1', minWidth: 0 },
-  selectedCopy: {
+  optionCopy: {
     display: 'flex',
     flexDirection: 'column',
     gap: 2,

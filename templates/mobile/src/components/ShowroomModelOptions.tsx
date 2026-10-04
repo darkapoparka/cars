@@ -22,6 +22,7 @@ import { modelOptionStyles as s } from './showroom-model-options.stylex';
 import { desktopModelOptions as ds } from './desktop-model-options.stylex';
 
 function ModelCheckbox({
+  id,
   name,
   modelKey,
   checked,
@@ -29,6 +30,7 @@ function ModelCheckbox({
   desktop = false,
   onChange,
 }: {
+  id?: string;
   name: string;
   modelKey: string;
   checked: boolean;
@@ -39,6 +41,7 @@ function ModelCheckbox({
   const { t } = useLocale();
   return (
     <input
+      id={id}
       type="checkbox"
       aria-label={t(name)}
       data-model-key={modelKey}
@@ -68,6 +71,7 @@ export function ShowroomModelOptions({
   desktop = false,
   onChange,
   onRemoveMake,
+  onBack,
   onToggleFamily,
   onToggleExcluded,
 }: {
@@ -80,6 +84,7 @@ export function ShowroomModelOptions({
   desktop?: boolean;
   onChange: (draft: ModelDraft) => void;
   onRemoveMake?: () => void;
+  onBack?: () => void;
   onToggleFamily: (name: string) => void;
   onToggleExcluded: () => void;
 }) {
@@ -109,6 +114,47 @@ export function ShowroomModelOptions({
     const checked = name
       ? draft.selected.includes(key) || Boolean(parent && draft.selected.includes(parent.name))
       : !draft.selected.length;
+    const inputId = !name && onBack ? optionsId + '-all' : undefined;
+    const copy = (
+      <span {...stylex.props(s.name)}>
+        {name || make || t('Any model')}
+        {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}
+      </span>
+    );
+    const checkbox = (
+      <ModelCheckbox
+        id={inputId}
+        name={name || (make ? make + ' · ' + t('All models') : 'Any model')}
+        modelKey={key}
+        checked={checked}
+        desktop={desktop}
+        onChange={(next) => {
+          if (!name && !next && onRemoveMake) onRemoveMake();
+          else onChange(toggleModelDraft(draft, key, next, groups, parent?.name));
+        }}
+      />
+    );
+    if (!name && make && onBack && !desktop) {
+      return (
+        <div {...stylex.props(s.familyRow, s.allChoice)}>
+          <label htmlFor={inputId} {...stylex.props(s.choice, s.allMakeLabel)}>
+            {copy}
+          </label>
+          <button
+            type="button"
+            aria-label={t('Back') + ': ' + t('Makes')}
+            onClick={onBack}
+            {...stylex.props(s.backButton)}
+          >
+            <Icon name="left" size={18} />
+            {t('Back')}
+          </button>
+          <label htmlFor={inputId} {...stylex.props(s.checkTarget)}>
+            {checkbox}
+          </label>
+        </div>
+      );
+    }
     return (
       <label
         {...stylex.props(
@@ -120,22 +166,8 @@ export function ShowroomModelOptions({
           desktop && checked && ds.selected,
         )}
       >
-        <span {...stylex.props(s.name)}>
-          {name || make || t('Any model')}
-          {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}
-        </span>
-        <span {...stylex.props(s.checkTarget, desktop && ds.checkTarget)}>
-          <ModelCheckbox
-            name={name || (make ? make + ' · ' + t('All models') : 'Any model')}
-            modelKey={key}
-            checked={checked}
-            desktop={desktop}
-            onChange={(next) => {
-              if (!name && !next && onRemoveMake) onRemoveMake();
-              else onChange(toggleModelDraft(draft, key, next, groups, parent?.name));
-            }}
-          />
-        </span>
+        {copy}
+        <span {...stylex.props(s.checkTarget, desktop && ds.checkTarget)}>{checkbox}</span>
       </label>
     );
   }
@@ -173,7 +205,9 @@ export function ShowroomModelOptions({
       {...stylex.props(desktop && s.desktopOptions)}
     >
       <div {...stylex.props(desktop ? s.desktopChoices : s.phoneChoices)}>
-        {!q && <div {...stylex.props(s.group, desktop && ds.group)}>{modelChoice('')}</div>}
+        {(!q || Boolean(make && onBack && !desktop)) && (
+          <div {...stylex.props(s.group, desktop && ds.group)}>{modelChoice('')}</div>
+        )}
         {visibleGroups.map((group) => {
           const key = modelNodeKey(group, groups);
           if (!group.children.length) {

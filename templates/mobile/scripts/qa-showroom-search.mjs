@@ -1,10 +1,16 @@
 import assert from 'node:assert/strict';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium, webkit } from 'playwright';
 
 const base = process.env.QA_URL || 'http://127.0.0.1:6474';
 const output = path.resolve(process.env.QA_OUTPUT || '../../runtime/mobile-showroom-search');
+const makeCatalog = JSON.parse(
+  await readFile(new URL('../src/lib/native-data/makes.json', import.meta.url), 'utf8'),
+)
+  .car.map(({ name }) => name)
+  .filter((name) => name !== 'Other');
+const catalogMakeCount = new Set(makeCatalog).size;
 const engines = [
   ['chromium', chromium],
   ['webkit', webkit],
@@ -67,7 +73,7 @@ for (const [engineName, engine] of engines) {
           await page.getByRole('button', { name: labels.search + ': BMW X6', exact: true }).click();
           assert.equal(await page.getByRole('searchbox').inputValue(), 'BMW X6');
           assert.equal(new URL(page.url()).searchParams.get('query'), null);
-          await page.getByRole('button', { name: labels.apply }).click();
+          await page.locator('dialog[open]').getByRole('button', { name: labels.apply }).click();
           await page.locator('dialog[open]').waitFor({ state: 'hidden' });
           assert.equal(new URL(page.url()).searchParams.get('query'), 'BMW X6');
           assert.equal(await page.locator('[data-showroom-vehicle]').count(), 1);
@@ -90,12 +96,43 @@ for (const [engineName, engine] of engines) {
                 };
               }),
             );
-            assert.equal(rowLayout.length, 2);
+            assert.equal(rowLayout.length, catalogMakeCount + 1);
+            assert.deepEqual(
+              rowLayout.slice(0, 2).map(({ name }) => name),
+              ['Any', 'BMW'],
+            );
             assert.ok(rowLayout.every((row) => row.border === '0px' && row.buttonBorder === '0px'));
             assert.ok(rowLayout.every((row) => row.buttonHeight >= 48));
             assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 0);
             assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
+            const catalogSummary = String(catalogMakeCount) + (bg ? ' марки' : ' makes');
+            const summary = allMakes.getByText(catalogSummary, { exact: true });
+            assert.ok(await summary.isVisible());
+            assert.equal(
+              await allMakes.getAttribute('aria-describedby'),
+              await summary.getAttribute('id'),
+            );
+            const makeSearch = page.getByRole('textbox', { name: labels.makeSearch, exact: true });
+            await makeSearch.fill('audi');
+            assert.equal(await makeRows.count(), 1);
+            await page.getByRole('button', { name: 'Audi', exact: true }).click();
+            const allAudi = page.getByRole('checkbox', {
+              name: bg ? 'Audi · Всички модели' : 'Audi · All models',
+              exact: true,
+            });
+            assert.equal(await allAudi.isChecked(), true);
+            assert.ok(
+              await page
+                .locator('dialog[open]')
+                .getByRole('button', { name: bg ? /^Покажи 0 кол/ : 'Show 0 cars' })
+                .isVisible(),
+            );
+            assert.equal(new URL(page.url()).searchParams.get('makes'), null);
+            await allAudi.click();
+            await makeSearch.waitFor();
+            assert.equal(await makeSearch.inputValue(), '');
+            assert.equal(await makeRows.count(), catalogMakeCount + 1);
             assert.equal(
               await page
                 .locator('#showroom-filter-options')
@@ -137,7 +174,7 @@ for (const [engineName, engine] of engines) {
             );
             assert.equal(
               await page.getByRole('button', { name: labels.back, exact: true }).count(),
-              0,
+              1,
             );
             assert.equal(
               await allModels.evaluate(
@@ -217,6 +254,40 @@ for (const [engineName, engine] of engines) {
               .click({ position: { x: 16, y: 26 } });
             assert.equal(await model120.isChecked(), true);
             assert.equal(await series.evaluate((element) => element.indeterminate), true);
+            const back = page.getByRole('button', { name: labels.back, exact: true });
+            assert.ok(
+              await back.evaluate((element) => element.getBoundingClientRect().height >= 44),
+            );
+            const modelSearch = page.getByRole('textbox', {
+              name: labels.modelSearch,
+              exact: true,
+            });
+            assert.deepEqual(
+              await modelSearch.evaluate((element) => {
+                const box = element.getBoundingClientRect();
+                return { left: box.left, width: box.width };
+              }),
+              { left: 16, width: width - 32 },
+            );
+            await modelSearch.fill('120');
+            assert.ok(await back.isVisible());
+            await back.click();
+            await makeSearch.waitFor();
+            assert.equal(await makeSearch.inputValue(), '');
+            const selectedBmw = page
+              .locator('[data-make-option="BMW"]')
+              .getByRole('button')
+              .first();
+            assert.ok((await selectedBmw.innerText()).includes('120'));
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
+            assert.equal(
+              await selectedBmw.evaluate((element) => element === document.activeElement),
+              true,
+            );
+            assert.equal(new URL(page.url()).searchParams.get('makes'), null);
+            await selectedBmw.click();
+            await page.getByRole('button', { name: labels.expandSeries, exact: true }).click();
+            assert.equal(await model120.isChecked(), true);
             await model120.press('Space');
             assert.equal(await model120.isChecked(), false);
             assert.equal(await series.evaluate((element) => element.indeterminate), false);
@@ -245,7 +316,7 @@ for (const [engineName, engine] of engines) {
             );
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
             await bmw.click();
-            await page.getByRole('button', { name: labels.apply }).click();
+            await page.locator('dialog[open]').getByRole('button', { name: labels.apply }).click();
             await page.locator('dialog[open]').waitFor({ state: 'hidden' });
             assert.equal(new URL(page.url()).searchParams.get('makes'), 'BMW');
             await page.goto(base + '/?lang=' + locale + '&makes=BMW&filter=make');
@@ -261,7 +332,7 @@ for (const [engineName, engine] of engines) {
             await bmw.click();
             assert.equal(await allModels.isChecked(), true);
             await allModels.press('Space');
-            await page.getByRole('button', { name: labels.apply }).click();
+            await page.locator('dialog[open]').getByRole('button', { name: labels.apply }).click();
             await page.locator('dialog[open]').waitFor({ state: 'hidden' });
             assert.equal(new URL(page.url()).searchParams.get('makes'), null);
             assert.equal(new URL(page.url()).searchParams.get('makeModels'), null);
@@ -293,7 +364,7 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search-first brand/model lists without headings or breadcrumbs, aligned selection circles, deselect-to-return with keyboard focus, full-row taps and mixed selection'
+                ? 'Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection'
                 : 'Desktop search draft/apply, square checkboxes and trailing disclosure arrows',
           });
         } finally {

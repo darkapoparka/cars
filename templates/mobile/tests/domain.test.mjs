@@ -117,6 +117,15 @@ test('make choices retain removable criteria outside stock and search finds sele
   assert.deepEqual(showroomMakeOptions(['BMW'], [], 'audi'), []);
   assert.deepEqual(showroomMakeOptions(['BMW'], [], 'any make'), ['Any']);
 });
+test('the optional make catalog fills the picker without duplicating stock or hiding selections', () => {
+  const names = showroomMakeOptions(['BMW'], ['Unlisted make', 'Audi'], '', nativeCarMakes);
+  assert.deepEqual(names.slice(0, 2), ['Any', 'BMW']);
+  assert.equal(names.length, new Set(nativeCarMakes).size + 2);
+  assert.equal(new Set(names).size, names.length);
+  assert.ok(nativeCarMakes.every((make) => names.includes(make)));
+  assert.equal(names.at(-1), 'Unlisted make');
+  assert.deepEqual(showroomMakeOptions(['BMW'], [], ' audi ', nativeCarMakes), ['Audi']);
+});
 test('BMW model families select the correct series', () => {
   assert.deepEqual(
     filterVehicles(vehicles, filters({ models: ['5 Series'] })).map((v) => v.id),
@@ -125,6 +134,61 @@ test('BMW model families select the correct series', () => {
   assert.deepEqual(
     filterVehicles(vehicles, filters({ models: ['X3'] })).map((v) => v.id),
     ['bmw-x3'],
+  );
+});
+test('BMW families stay together and grouping electric models preserves every model key', () => {
+  const groups = modelGroupsFor('BMW');
+  assert.deepEqual(
+    groups.filter((group) => group.children.length).map((group) => group.name),
+    [
+      '1 Series',
+      '2 Series',
+      '3 Series',
+      '4 Series',
+      '5 Series',
+      '6 Series',
+      '7 Series',
+      'M Models',
+      'X Series',
+      'i Models',
+      'Z Series',
+    ],
+  );
+  const leaves = (catalog) =>
+    catalog.flatMap((group) => (group.children.length ? group.children : [group.name])).sort();
+  assert.deepEqual(leaves(groups), leaves(carModelGroups.BMW));
+  assert.equal(new Set(groups.map((group) => group.name)).size, groups.length);
+});
+test('BMW electric family filters match its leaves and partial selection retains older leaf criteria', () => {
+  const groups = modelGroupsFor('BMW');
+  const electric = groups.find((group) => group.name === 'i Models');
+  const catalog = [
+    { ...vehicles[0], id: 'electric', model: 'i4', variant: '' },
+    { ...vehicles[0], id: 'electric-suv', model: 'iX', variant: '' },
+    { ...vehicles[0], id: 'suv', model: 'X3', variant: '' },
+  ];
+  const family = filters({ makes: ['BMW'], makeModels: { BMW: ['i Models'] } });
+  assert.deepEqual(
+    filterVehicles(catalog, family).map((vehicle) => vehicle.id),
+    ['electric', 'electric-suv'],
+  );
+  assert.deepEqual(parseFilters(serializeFilters(family)), family);
+  assert.deepEqual(
+    filterVehicles(catalog, filters({ makes: ['BMW'], makeModels: { BMW: ['i4'] } })).map(
+      (vehicle) => vehicle.id,
+    ),
+    ['electric'],
+  );
+  const partial = toggleModelDraft(
+    { selected: ['i Models'], variants: {} },
+    'i4',
+    false,
+    groups,
+    'i Models',
+  );
+  assert.deepEqual(
+    partial.selected,
+    electric.children.filter((name) => name !== 'i4'),
   );
 });
 test('budget, registration and mileage filters combine', () =>
@@ -505,7 +569,12 @@ import {
   modelVariantFor,
 } from '../.qa/domain/model-picker.mjs';
 import { excludedMakeNames, makeSelectionSummary } from '../.qa/domain/make-selection.mjs';
-import { modelGroupsFor, carModelGroups, modelNodeKey } from '../.qa/domain/native-taxonomy.mjs';
+import {
+  modelGroupsFor,
+  carModelGroups,
+  modelNodeKey,
+  nativeCarMakes,
+} from '../.qa/domain/native-taxonomy.mjs';
 test('per-model variants combine with OR rather than leaking across sibling models', () => {
   const f = filters({
     makes: ['BMW'],

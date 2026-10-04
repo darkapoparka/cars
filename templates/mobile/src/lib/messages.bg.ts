@@ -564,6 +564,7 @@ export const bgMessages: Record<string, string> = {
   photo: 'снимка',
   Other: 'Други',
   'M Models': 'M модели',
+  'i Models': 'i модели',
   Cancel: 'Отказ',
   'More options': 'Още опции',
   'Up to': 'До',

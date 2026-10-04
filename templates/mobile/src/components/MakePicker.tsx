@@ -1,6 +1,6 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { controls } from '@/styles/controls.stylex';
@@ -37,6 +37,8 @@ import { Icon } from './Icon';
 import { PickerScrollbar } from './PickerScrollbar';
 import { ShowroomModelOptions } from './ShowroomModelOptions';
 import { pickerStyles as s } from './make-picker.stylex';
+const catalogMakeCount = new Set(allMakes).size;
+
 export function BrandLogo({ make, size = 40 }: { make: string; size?: number }) {
   const src =
     makeImages[make] ||
@@ -67,7 +69,8 @@ export function MakePicker({
   availableMakes,
   embedded = false,
 }: Props) {
-  const { t } = useLocale();
+  const { t, locale, number } = useLocale();
+  const makeSummaryId = useId();
   const state = useAppState();
   const filters = suppliedFilters || state.filters;
   const changeFilters = onApply || updateFilters;
@@ -117,6 +120,7 @@ export function MakePicker({
               availableMakes,
               selectedMakes.map(({ name }) => name),
               q,
+              allMakes,
             ),
           },
         ]
@@ -196,6 +200,17 @@ export function MakePicker({
       setExpanded([]);
       setDraft({ selected: [], variants: {} });
     }
+    focusMakeSelection(name);
+  }
+  function returnToMakes() {
+    const previousMake = make;
+    setMake('');
+    setExclude(false);
+    setQuery('');
+    setExpanded([]);
+    focusMakeSelection(previousMake);
+  }
+  function focusMakeSelection(name: string) {
     requestAnimationFrame(() => {
       const row = [
         ...(listRef.current?.querySelectorAll<HTMLElement>('[data-make-option]') || []),
@@ -421,6 +436,7 @@ export function MakePicker({
                 excluded={exclude}
                 onChange={changeDraft}
                 onRemoveMake={() => removeSelectedMake(make, exclude)}
+                onBack={returnToMakes}
                 onToggleFamily={(name) =>
                   setExpanded((current) =>
                     current.includes(name)
@@ -478,6 +494,7 @@ export function MakePicker({
                 <section key={section.title || 'matches'}>
                   {section.title && <h3 {...stylex.props(s.group)}>{section.title}</h3>}
                   {section.names.map((name, index) => {
+                    const isAllMakes = embedded && name === 'Any';
                     const selected = embedded
                       ? selectedMakes.find(
                           (selection) => selection.name === name && selection.excluded === exclude,
@@ -489,9 +506,9 @@ export function MakePicker({
                       <button
                         type="button"
                         key={name}
-                        aria-pressed={
-                          embedded && name === 'Any' ? !selectedMakes.length : undefined
-                        }
+                        aria-label={isAllMakes ? t('Any make') : undefined}
+                        aria-describedby={isAllMakes ? makeSummaryId : undefined}
+                        aria-pressed={isAllMakes ? !selectedMakes.length : undefined}
                         onClick={() =>
                           selected
                             ? editSelectedMake(name, selected.excluded)
@@ -500,26 +517,29 @@ export function MakePicker({
                         {...stylex.props(
                           s.make,
                           embedded && s.embeddedMake,
-                          embedded && name === 'Any' && s.allMakes,
+                          isAllMakes && s.allMakes,
                           sectionIndex === sections.length - 1 &&
                             index === section.names.length - 1 &&
                             !embedded &&
                             s.lastMake,
                         )}
                       >
-                        {(name !== 'Any' || !embedded) && (
-                          <BrandLogo make={name} size={embedded ? 32 : 40} />
-                        )}
+                        {!isAllMakes && <BrandLogo make={name} size={embedded ? 32 : 40} />}
                         <span
                           {...stylex.props(
                             embedded && s.makeName,
-                            Boolean(selected) && s.selectedCopy,
+                            (Boolean(selected) || isAllMakes) && s.optionCopy,
                           )}
                         >
                           <span>
                             {selected?.excluded ? t('Exclude ') : ''}
-                            {embedded && name === 'Any' ? t('Any make') : t(name)}
+                            {isAllMakes ? t('Any make') : t(name)}
                           </span>
+                          {isAllMakes && (
+                            <span id={makeSummaryId} {...stylex.props(s.selectionSummary)}>
+                              {number(catalogMakeCount)} {t('Makes').toLocaleLowerCase(locale)}
+                            </span>
+                          )}
                           {selected && (
                             <span {...stylex.props(s.selectionSummary)}>
                               {selected.summary === 'Any' ? t('All models') : selected.summary}
@@ -527,7 +547,7 @@ export function MakePicker({
                           )}
                         </span>
                         {embedded &&
-                          (selected || name === 'Any' ? (
+                          (selected || isAllMakes ? (
                             <span
                               aria-hidden="true"
                               {...stylex.props(s.selectionMark, isSelected && s.selectedMark)}

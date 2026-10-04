@@ -3,6 +3,17 @@ import makeData from './native-data/makes.json';
 import type { Filters, VehicleCategory } from './types';
 export type NativeModelGroup = { name: string; children: string[] };
 export const carModelGroups: Record<string, NativeModelGroup[]> = modelData;
+const bmwCatalog = carModelGroups.BMW;
+const bmwElectricModels = bmwCatalog.filter(
+  (group) => !group.children.length && /^i(?:\d|X)/.test(group.name),
+);
+// Keep recognizable families first while preserving every captured leaf model and its key.
+const bmwModelGroups: NativeModelGroup[] = [
+  ...bmwCatalog.filter((group) => group.children.length && group.name !== 'Z Series'),
+  { name: 'i Models', children: bmwElectricModels.map((group) => group.name) },
+  ...bmwCatalog.filter((group) => group.name === 'Z Series'),
+  ...bmwCatalog.filter((group) => !group.children.length && !bmwElectricModels.includes(group)),
+];
 export const nativeCarMakes = makeData.car
   .map((make) => make.name)
   .filter((name) => name !== 'Other');
@@ -39,7 +50,7 @@ export function nativeMakesFor(filters: Pick<Filters, 'category' | 'details'>): 
   return makeData[nativeCategoryKey(filters)].map((make) => make.name);
 }
 export function modelGroupsFor(make: string): NativeModelGroup[] {
-  return carModelGroups[make] || [];
+  return make === 'BMW' ? bmwModelGroups : carModelGroups[make] || [];
 }
 
 /** Some native families contain a leaf with exactly the same name (for example Continental). */
