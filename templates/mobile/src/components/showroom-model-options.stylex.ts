@@ -30,8 +30,7 @@ export const modelOptionStyles = stylex.create({
     display: 'flex',
     alignItems: 'center',
     minHeight: { default: 52, '@media (min-width: 700px)': 44 },
-    // Reserve the disclosure column so plain model names align with family names.
-    paddingLeft: { default: 34, '@media (min-width: 700px)': 8 },
+    paddingLeft: 8,
     fontSize: { default: 16, '@media (min-width: 700px)': 14 },
     lineHeight: { default: '24px', '@media (min-width: 700px)': '22px' },
     color: colors.text,
@@ -50,10 +49,11 @@ export const modelOptionStyles = stylex.create({
     backgroundColor: { default: colors.stripe, ':active': colors.controlSurface },
   },
   childChoice: {
-    paddingLeft: { default: 50, '@media (min-width: 700px)': 24 },
+    paddingLeft: 24,
     fontWeight: 400,
   },
   name: { flex: '1', minWidth: 0, overflowWrap: 'anywhere', textAlign: 'left' },
+  familyName: { flex: { default: '0 1 auto', '@media (min-width: 700px)': '1' } },
   allModelCopy: { display: 'block', fontSize: 13, lineHeight: '20px', color: colors.muted },
   checkTarget: {
     display: 'flex',
@@ -108,7 +108,6 @@ export const modelOptionStyles = stylex.create({
     display: 'flex',
     color: colors.muted,
     flexShrink: 0,
-    order: { default: -1, '@media (min-width: 700px)': 0 },
   },
   children: { paddingBottom: 4 },
   options: { marginTop: 12 },

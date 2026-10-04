@@ -132,12 +132,16 @@ for (const [engineName, engine] of engines) {
               const circle = button.parentElement.querySelector('input').getBoundingClientRect();
               return {
                 nameLeft: name.left,
+                nameRight: name.right,
+                arrowLeft: arrow.left,
                 arrowRight: arrow.right,
+                circleLeft: circle.left,
                 arrowCenterY: arrow.top + arrow.height / 2,
                 circleCenterY: circle.top + circle.height / 2,
               };
             });
-            assert.ok(familyLayout.arrowRight < familyLayout.nameLeft);
+            assert.equal(familyLayout.arrowLeft - familyLayout.nameRight, 8);
+            assert.ok(familyLayout.arrowRight < familyLayout.circleLeft);
             assert.equal(familyLayout.arrowCenterY, familyLayout.circleCenterY);
             const plainNameLeft = await page
               .locator(
@@ -224,7 +228,7 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation'
+                ? 'Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation'
                 : 'Desktop search draft/apply, square checkboxes and trailing disclosure arrows',
           });
         } finally {

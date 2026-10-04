@@ -1,0 +1,136 @@
+{
+  "checkedAt": "2026-10-04T09:22:20.822Z",
+  "preview": "http://127.0.0.1:6474/?lang=bg&filter=make",
+  "build": {
+    "passed": true,
+    "distDir": ".next-picker-inline-arrows-20261004",
+    "buildId": "Mw4Y_e7Rk4LRdRM8A2-gp",
+    "node": "22.20.0",
+    "pages": 51
+  },
+  "validation": {
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainTests": 92
+  },
+  "passed": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "after-desktop-1440.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "after-expanded-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "after-makes-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "after-models-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "before-desktop-1440.jpg",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "before-expanded-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "before-makes-390.jpg",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "file": "before-models-390.jpg",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "boundary": "Mobile candidate source and local preview; no release selection or dealer deployment"
+}

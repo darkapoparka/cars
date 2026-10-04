@@ -201,7 +201,7 @@ export function ShowroomModelOptions({
                   }}
                   {...stylex.props(s.familyButton)}
                 >
-                  <span {...stylex.props(s.name)}>{t(group.name)}</span>
+                  <span {...stylex.props(s.name, s.familyName)}>{t(group.name)}</span>
                   <span aria-hidden="true" {...stylex.props(s.chevron)}>
                     <Icon name={show ? 'up' : 'down'} size={18} />
                   </span>
