@@ -1,0 +1,907 @@
+{
+  "date": "2026-10-05",
+  "template": "Mobile",
+  "baselineHead": "9aedff510e86f767278c46a9cbd2348dad07d334",
+  "sourceHashes": {
+    "ShowroomInventoryScreen.tsx": "01fed77bb0d5d78e905859d8874adb1151617f356063503f8243dd6941da080b",
+    "ShowroomDesktopHero.tsx": "6396f5d3d5dc2a07ae8c9299d0cf2710c4730574b1f300c9e90937325b5fb4b0",
+    "ShowroomFilterSheet.tsx": "20491015cab1ae3f55d85f4e65bb83bee3c192f885a7d66b54486951e5a38112"
+  },
+  "scope": "Desktop banner followed by a vehicle type rail and separate quick-filter rail; named filter grid areas",
+  "build": {
+    "node": "22.20.0",
+    "dist": ".next-desktop-rails-20261005",
+    "production": "passed",
+    "routes": 51,
+    "lint": "passed",
+    "typecheck": "passed",
+    "retainedTests": {
+      "code": 0,
+      "tests": 95,
+      "passed": 95,
+      "failed": 0
+    }
+  },
+  "desktop": {
+    "checks": [
+      "chromium 1023x768: desktop breakpoint and no horizontal overflow",
+      "chromium 1024x768: desktop breakpoint and no horizontal overflow",
+      "chromium 1024x768: 280px banner, types below banner, pills in second rail, four compact cards",
+      "chromium 1024x768: category rail selects stock and returns to cars",
+      "chromium 1024x768: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "chromium 1024x768: make/model apply and reload",
+      "chromium 1024x768: draft cancel, focus restoration, clear and real budget filtering",
+      "chromium 1024x768: Enter, Escape and search results",
+      "chromium 1024x768: results action, detail route and filtered Back",
+      "chromium 1280x720: desktop breakpoint and no horizontal overflow",
+      "chromium 1280x720: 280px banner, types below banner, pills in second rail, four compact cards",
+      "chromium 1280x720: category rail selects stock and returns to cars",
+      "chromium 1280x720: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "chromium 1280x720: make/model apply and reload",
+      "chromium 1280x720: draft cancel, focus restoration, clear and real budget filtering",
+      "chromium 1280x720: Enter, Escape and search results",
+      "chromium 1280x720: results action, detail route and filtered Back",
+      "chromium 1440x960: desktop breakpoint and no horizontal overflow",
+      "chromium 1440x960: 280px banner, types below banner, pills in second rail, four compact cards",
+      "chromium 1440x960: category rail selects stock and returns to cars",
+      "chromium 1440x960: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "chromium 1440x960: make/model apply and reload",
+      "chromium 1440x960: draft cancel, focus restoration, clear and real budget filtering",
+      "chromium 1440x960: Enter, Escape and search results",
+      "chromium 1440x960: results action, detail route and filtered Back",
+      "chromium 1920x1080: desktop breakpoint and no horizontal overflow",
+      "chromium 1920x1080: 280px banner, types below banner, pills in second rail, four compact cards",
+      "chromium 1920x1080: category rail selects stock and returns to cars",
+      "chromium 1920x1080: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "chromium 1920x1080: make/model apply and reload",
+      "chromium 1920x1080: draft cancel, focus restoration, clear and real budget filtering",
+      "chromium 1920x1080: Enter, Escape and search results",
+      "chromium 1920x1080: results action, detail route and filtered Back",
+      "chromium 1024x600: desktop breakpoint and no horizontal overflow",
+      "chromium 1024x600: 280px banner, types below banner, pills in second rail, four compact cards",
+      "chromium 1024x600: category rail selects stock and returns to cars",
+      "chromium 1024x600: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "chromium 1024x600: make/model apply and reload",
+      "chromium 1024x600: draft cancel, focus restoration, clear and real budget filtering",
+      "chromium 1024x600: Enter, Escape and search results",
+      "chromium 1024x600: results action, detail route and filtered Back",
+      "webkit 1023x768: desktop breakpoint and no horizontal overflow",
+      "webkit 1024x768: desktop breakpoint and no horizontal overflow",
+      "webkit 1024x768: 280px banner, types below banner, pills in second rail, four compact cards",
+      "webkit 1024x768: category rail selects stock and returns to cars",
+      "webkit 1024x768: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "webkit 1024x768: make/model apply and reload",
+      "webkit 1024x768: draft cancel, focus restoration, clear and real budget filtering",
+      "webkit 1024x768: Enter, Escape and search results",
+      "webkit 1024x768: results action, detail route and filtered Back",
+      "webkit 1280x720: desktop breakpoint and no horizontal overflow",
+      "webkit 1280x720: 280px banner, types below banner, pills in second rail, four compact cards",
+      "webkit 1280x720: category rail selects stock and returns to cars",
+      "webkit 1280x720: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "webkit 1280x720: make/model apply and reload",
+      "webkit 1280x720: draft cancel, focus restoration, clear and real budget filtering",
+      "webkit 1280x720: Enter, Escape and search results",
+      "webkit 1280x720: results action, detail route and filtered Back",
+      "webkit 1440x960: desktop breakpoint and no horizontal overflow",
+      "webkit 1440x960: 280px banner, types below banner, pills in second rail, four compact cards",
+      "webkit 1440x960: category rail selects stock and returns to cars",
+      "webkit 1440x960: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "webkit 1440x960: make/model apply and reload",
+      "webkit 1440x960: draft cancel, focus restoration, clear and real budget filtering",
+      "webkit 1440x960: Enter, Escape and search results",
+      "webkit 1440x960: results action, detail route and filtered Back",
+      "webkit 1920x1080: desktop breakpoint and no horizontal overflow",
+      "webkit 1920x1080: 280px banner, types below banner, pills in second rail, four compact cards",
+      "webkit 1920x1080: category rail selects stock and returns to cars",
+      "webkit 1920x1080: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "webkit 1920x1080: make/model apply and reload",
+      "webkit 1920x1080: draft cancel, focus restoration, clear and real budget filtering",
+      "webkit 1920x1080: Enter, Escape and search results",
+      "webkit 1920x1080: results action, detail route and filtered Back",
+      "webkit 1024x600: desktop breakpoint and no horizontal overflow",
+      "webkit 1024x600: 280px banner, types below banner, pills in second rail, four compact cards",
+      "webkit 1024x600: category rail selects stock and returns to cars",
+      "webkit 1024x600: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+      "webkit 1024x600: make/model apply and reload",
+      "webkit 1024x600: draft cancel, focus restoration, clear and real budget filtering",
+      "webkit 1024x600: Enter, Escape and search results",
+      "webkit 1024x600: results action, detail route and filtered Back"
+    ],
+    "passed": 82,
+    "errors": [],
+    "geometry": [
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 768,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "categories": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 409,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 267.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 519,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 770.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "height": 720,
+        "hero": {
+          "x": 106,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 90,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 90,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 106,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 376.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 647,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 917.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "hero": {
+          "x": 186,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 170,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 170,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 186,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 456.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 727,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 997.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "hero": {
+          "x": 426,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 410,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 410,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 426,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 696.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 967,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 1237.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "categories": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 409,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 267.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 519,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 770.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 768,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "categories": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 409,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 267.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 519,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 770.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "height": 720,
+        "hero": {
+          "x": 106,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 90,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 90,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 106,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 376.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 647,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 917.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "hero": {
+          "x": 186,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 170,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 170,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 186,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 456.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 727,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 997.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "hero": {
+          "x": 426,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "categories": {
+          "x": 410,
+          "y": 348,
+          "width": 1100,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 410,
+          "y": 409,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 426,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 696.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 967,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          },
+          {
+            "x": 1237.5,
+            "y": 554,
+            "width": 256.5,
+            "height": 295.0625
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "categories": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 60
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 409,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 267.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 519,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          },
+          {
+            "x": 770.5,
+            "y": 554,
+            "width": 237.5,
+            "height": 283.1875
+          }
+        ]
+      }
+    ]
+  },
+  "phone": {
+    "cases": 48,
+    "exactMatches": 38,
+    "knownConcurrentPickerChanges": [
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Назад: Марки",
+            "field": "horizontal position",
+            "before": 133.86,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Back: Makes",
+            "field": "horizontal position",
+            "before": 99.66,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Назад: Марки",
+            "field": "horizontal position",
+            "before": 133.86,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Back: Makes",
+            "field": "horizontal position",
+            "before": 99.66,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Назад: Марки",
+            "field": "horizontal position",
+            "before": 133.86,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Back: Makes",
+            "field": "horizontal position",
+            "before": 99.66,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Назад: Марки",
+            "field": "horizontal position",
+            "before": 133.86,
+            "after": 24
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "make",
+        "changes": [
+          {
+            "tag": "DIALOG",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "DIV",
+            "field": "Back / BMW text order"
+          },
+          {
+            "tag": "BUTTON",
+            "label": "Back: Makes",
+            "field": "horizontal position",
+            "before": 99.66,
+            "after": 24
+          }
+        ]
+      }
+    ],
+    "initialTabScrollOffsets": [
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "more",
+        "initialOffset": -23,
+        "settledComparison": "identical after aligning the selected More tab on both rails"
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "more",
+        "initialOffset": 13,
+        "settledComparison": "identical after aligning the selected More tab on both rails"
+      }
+    ],
+    "settledMoreComparisons": [
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      }
+    ],
+    "unexpectedDifferences": [],
+    "errors": [],
+    "scope": "Eight make views differ only in the separately requested phone Back button x-position and associated parent text ordering. Two initial More captures had different horizontal rail scroll offsets; all four More views match after equal scroll positioning. All other sampled geometry, styles, content and control state match.",
+    "concurrentFiles": [
+      "src/components/ShowroomModelOptions.tsx",
+      "src/components/showroom-model-options.stylex.ts"
+    ],
+    "ownedFiles": [
+      "src/components/ShowroomInventoryScreen.tsx",
+      "src/components/ShowroomDesktopHero.tsx",
+      "src/components/ShowroomFilterSheet.tsx"
+    ]
+  },
+  "captureHealth": [
+    {
+      "phase": "before",
+      "states": 8,
+      "errors": [],
+      "status": "all HTTP 200; no overflow or broken images"
+    },
+    {
+      "phase": "after",
+      "states": 8,
+      "errors": [],
+      "status": "all HTTP 200; no overflow or broken images"
+    }
+  ],
+  "overlayPixels": [
+    {
+      "lang": "bg",
+      "state": "make",
+      "changedChannels": 1104
+    },
+    {
+      "lang": "bg",
+      "state": "price",
+      "changedChannels": 0
+    },
+    {
+      "lang": "bg",
+      "state": "more",
+      "changedChannels": 0
+    },
+    {
+      "lang": "en",
+      "state": "make",
+      "changedChannels": 1104
+    },
+    {
+      "lang": "en",
+      "state": "price",
+      "changedChannels": 0
+    },
+    {
+      "lang": "en",
+      "state": "more",
+      "changedChannels": 0
+    }
+  ],
+  "preview": "http://127.0.0.1:6478/",
+  "publication": "Local review and scoped source commit only; release lock and dealer sites unchanged."
+}

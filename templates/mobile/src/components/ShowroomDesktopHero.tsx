@@ -13,7 +13,6 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 24,
     minHeight: 280,
-    order: 2,
     marginInline: 16,
     marginTop: 8,
     marginBottom: 0,

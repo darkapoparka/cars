@@ -45,6 +45,7 @@ const s = stylex.create({
     minWidth: 0,
     gridTemplateColumns: '164px minmax(0,1fr)',
     gridTemplateRows: 'auto minmax(0,1fr) auto',
+    gridTemplateAreas: '"heading heading" "tabs panel" "footer footer"',
   },
   heading: {
     display: 'grid',
@@ -62,7 +63,7 @@ const s = stylex.create({
     paddingTop: { default: 'max(8px, env(safe-area-inset-top))', '@media (min-width: 1024px)': 12 },
     paddingBottom: { default: 0, '@media (min-width: 1024px)': 12 },
     flexShrink: 0,
-    gridColumn: '1 / -1',
+    gridArea: 'heading',
     borderBottomWidth: { default: 0, '@media (min-width: 1024px)': 1 },
     borderBottomStyle: 'solid',
     borderBottomColor: colors.line,
@@ -95,15 +96,14 @@ const s = stylex.create({
     gridColumn: { default: null, '@media (min-width: 1024px)': 2 },
     gridRow: { default: null, '@media (min-width: 1024px)': 1 },
   },
-  tabs: { flexShrink: 0, minHeight: 0, gridColumn: 1, gridRow: 2 },
+  tabs: { flexShrink: 0, minHeight: 0, gridArea: 'tabs' },
   panel: {
     flex: '1',
     minHeight: 0,
     minWidth: 0,
     display: 'flex',
     flexDirection: 'column',
-    gridColumn: 2,
-    gridRow: 2,
+    gridArea: 'panel',
   },
   makePanel: {
     display: 'flex',
@@ -250,7 +250,7 @@ const s = stylex.create({
   suggestionArrow: { display: 'flex', color: colors.muted },
   suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
   footer: {
-    gridColumn: '1 / -1',
+    gridArea: 'footer',
     flexShrink: 0,
     paddingInline: { default: 16, '@media (min-width: 700px)': 24 },
     paddingTop: 12,

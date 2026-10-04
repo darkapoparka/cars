@@ -31,13 +31,11 @@ import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
-  desktopFlow: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
-    flexDirection: 'column',
-  },
   categoryBar: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    order: 1,
+    borderBottomWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
   },
   categoryChoice: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
@@ -79,7 +77,6 @@ const s = stylex.create({
   },
   quickBar: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    order: 3,
     position: { default: 'static', '@media (min-width: 1024px)': 'sticky' },
     top: 0,
     zIndex: 25,
@@ -105,7 +102,6 @@ const s = stylex.create({
   },
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
   content: {
-    order: 4,
     backgroundColor: colors.background,
     scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 96 },
     paddingInline: 16,
@@ -283,7 +279,7 @@ export function ShowroomInventoryScreen() {
     { key: 'more', label: 'More', active: otherFilterCount > 0, name: 'More' },
   ];
   return (
-    <div {...stylex.props(s.desktopFlow)}>
+    <>
       <Header home showLanguageSwitcher sticky={false} />
       <ShowroomDesktopHero
         query={filters.query}
@@ -482,6 +478,6 @@ export function ShowroomInventoryScreen() {
           </label>
         ))}
       </Modal>
-    </div>
+    </>
   );
 }
