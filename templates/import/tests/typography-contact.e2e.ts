@@ -2,38 +2,68 @@ import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { visit } from './helpers';
 
-test('public typography loads the actual Sofia Sans Latin and Cyrillic faces', async ({ page }) => {
-	const fontResponses: Array<{ url: string; status: number }> = [];
-	page.on('response', (response) => {
-		if (/sofia-sans\/.*\.woff2/.test(response.url())) {
-			fontResponses.push({ url: response.url(), status: response.status() });
+for (const locale of ['en', 'bg']) {
+	test(`public typography loads the actual Sofia Sans Latin and Cyrillic faces (${locale})`, async ({
+		page
+	}, info) => {
+		const fontResponses: Array<{ url: string; status: number }> = [];
+		page.on('response', (response) => {
+			if (/sofia-sans\/.*\.woff2/.test(response.url())) {
+				fontResponses.push({ url: response.url(), status: response.status() });
+			}
+		});
+		await visit(page, `/${locale}/sell-your-car`);
+		const delivery = await page.evaluate(async () => {
+			const faces = await Promise.all(
+				['400', '600', '700'].map(async (weight) => {
+					const loaded = await document.fonts.load(`${weight} 20px "Sofia Sans"`, 'Buy Купи');
+					return loaded.map(({ family, weight, status }) => ({ family, weight, status }));
+				})
+			);
+			return {
+				faces: faces.flat(),
+				preloaded: performance
+					.getEntriesByType('resource')
+					.filter((entry) => entry.name.includes('/fonts/sofia-sans/SofiaSans-'))
+					.filter((entry) => (entry as PerformanceResourceTiming).initiatorType === 'link')
+					.map((entry) => entry.name.split('/').pop())
+			};
+		});
+		for (const weight of ['400', '600', '700']) {
+			const faces = delivery.faces.filter((face) => face.weight === weight);
+			expect(faces.length).toBeGreaterThanOrEqual(2);
+			for (const face of faces) {
+				expect(face).toEqual({ family: 'Sofia Sans', weight, status: 'loaded' });
+			}
 		}
+		if (info.project.name === 'desktop') {
+			for (const weight of ['Regular', 'SemiBold', 'Bold']) {
+				expect(delivery.preloaded).toContain(`SofiaSans-${weight}.latin.woff2`);
+				if (locale === 'bg')
+					expect(delivery.preloaded).toContain(`SofiaSans-${weight}.cyrillic.woff2`);
+			}
+		} else {
+			expect(delivery.preloaded, 'Desktop font preloads must not run on mobile').toEqual([]);
+		}
+		expect(fontResponses.length).toBeGreaterThan(0);
+		expect(
+			fontResponses,
+			'Font assets must load or revalidate successfully from public URLs'
+		).toEqual(
+			expect.arrayContaining([
+				expect.objectContaining({ url: expect.stringContaining('SofiaSans-Regular.latin.woff2') }),
+				expect.objectContaining({
+					url: expect.stringContaining('SofiaSans-Regular.cyrillic.woff2')
+				})
+			])
+		);
+		expect(
+			fontResponses.every(
+				({ url, status }) => [200, 304].includes(status) && !url.includes('/static/')
+			)
+		).toBe(true);
 	});
-	await visit(page, '/en/sell-your-car');
-	const faces = await page.evaluate(async () => {
-		const loaded = await document.fonts.load('400 20px "Sofia Sans"', 'Buy Купи');
-		return loaded.map(({ family, weight, status }) => ({ family, weight, status }));
-	});
-	expect(faces.length).toBeGreaterThanOrEqual(2);
-	for (const face of faces) {
-		expect(face).toEqual({ family: 'Sofia Sans', weight: '400', status: 'loaded' });
-	}
-	expect(fontResponses.length).toBeGreaterThan(0);
-	expect(
-		fontResponses,
-		'Font assets must load or revalidate successfully from public URLs'
-	).toEqual(
-		expect.arrayContaining([
-			expect.objectContaining({ url: expect.stringContaining('SofiaSans-Regular.latin.woff2') }),
-			expect.objectContaining({ url: expect.stringContaining('SofiaSans-Regular.cyrillic.woff2') })
-		])
-	);
-	expect(
-		fontResponses.every(
-			({ url, status }) => [200, 304].includes(status) && !url.includes('/static/')
-		)
-	).toBe(true);
-});
+}
 
 test('public actions share a readable control weight', async ({ page }, info) => {
 	for (const route of ['/', '/inventory', '/about', '/contact', '/services', '/financing']) {

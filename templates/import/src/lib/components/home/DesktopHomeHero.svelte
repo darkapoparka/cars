@@ -189,8 +189,8 @@
 						class="home-hero__search"
 						value={keyword}
 						label={copy.search}
+						placeholder={copy.searchPlaceholder}
 						actionLabel={copy.searchAction}
-						showActionLabel
 						href={searchHref}
 						expanded={searchOpen}
 						onopen={() => (searchOpen = true)}

@@ -8,7 +8,6 @@
 		label,
 		placeholder = label,
 		actionLabel,
-		showActionLabel = false,
 		name = 'keyword',
 		controls,
 		href,
@@ -21,7 +20,6 @@
 		label: string;
 		placeholder?: string;
 		actionLabel: string;
-		showActionLabel?: boolean;
 		name?: string;
 		controls?: string;
 		href?: string;
@@ -31,10 +29,7 @@
 	} = $props();
 </script>
 
-<div
-	class={['desktop-search-control', className]}
-	class:desktop-search-control--labeled={showActionLabel}
->
+<div class={['desktop-search-control', className]}>
 	{#if onopen}
 		<button
 			{id}
@@ -70,7 +65,6 @@
 		class="desktop-search-control__action"
 	>
 		<Search size={20} aria-hidden="true" />
-		{#if showActionLabel}<span>{actionLabel}</span>{/if}
 	</Action>
 </div>
 
@@ -140,10 +134,24 @@
 		padding: 0;
 		border-radius: var(--bc-radius-pill);
 	}
-	.desktop-search-control--labeled :global(.desktop-search-control__action) {
-		width: auto;
-		height: var(--bc-control-height-primary);
-		gap: var(--bc-space-2);
-		padding-inline: var(--bc-space-4);
+	@media (min-width: 768px) {
+		.desktop-search-control {
+			min-height: var(--bc-control-height-primary);
+			padding-block: 0;
+		}
+		.desktop-search-control__entry {
+			font-size: var(--bc-text-search);
+		}
+		.desktop-search-control :global(.desktop-search-control__action) {
+			/* Inset the round surface while retaining the shared 44px click target. */
+			padding: var(--bc-space-1);
+			border: 0;
+			border-radius: var(--bc-radius-pill);
+			background-clip: content-box;
+		}
+		.placeholder,
+		input::placeholder {
+			color: var(--bc-subtle);
+		}
 	}
 </style>

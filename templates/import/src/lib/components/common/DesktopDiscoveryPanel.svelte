@@ -55,7 +55,7 @@
 	@media (min-width: 768px) {
 		.desktop-discovery-panel {
 			--bc-control: var(--bc-desktop-control-surface, var(--bc-surface-raised));
-			--bc-border: var(--bc-border-strong);
+			--bc-border: var(--desktop-discovery-border, var(--bc-editorial-border));
 		}
 	}
 </style>
