@@ -39,7 +39,7 @@ Do not assume these are the only identity consumers. Search every retained route
 
 ### Dealer logos: replace the configuration, preserve the banners
 
-`import` is the internal template family ID, not the dealer's trading name or release version. The master displays a generated **IMPORT TEMPLATE** placeholder. Every dealer proposal must replace it with that lead's permitted, recognizable logo, following [Lead build guardrails](../../docs/LEAD-BUILD-GUARDRAILS.md). Keep the family ID and the legacy `daynightBrand` / `daynightAssets` export names for publisher compatibility.
+`import` is the internal template family ID, not the dealer's trading name or release version. The master displays a generated **IMPORT** placeholder. Every dealer proposal must replace it with that lead's permitted, recognizable logo, following [Lead build guardrails](../../docs/LEAD-BUILD-GUARDRAILS.md). Keep the family ID and the legacy `daynightBrand` / `daynightAssets` export names for publisher compatibility.
 
 Save the lead's transparent PNG/WebP inside the copied application's `static/brand/`, then set its actual public paths in `src/lib/config/dealer.ts`:
 
@@ -57,7 +57,7 @@ Use the same path for both when one logo works on both surfaces. The filename an
 
 `site.identity.logo` maps to the light-background treatment; `site.identity.logoOnDark` maps to the dark-background treatment. The desktop header, mobile app bar, navigation menu, footer, vehicle dealer banner and Home Sell/Finance banners consume this configuration. Banner artwork remains separate from the logo overlay: do not bake the dealer logo into it or replace strings in individual components. The existing Import refresh adapter fills `logoDark` / `logoLight` from the dealer profile; still verify the rendered result and replace the favicon.
 
-Before a dealer build is complete, inspect light and dark surfaces, the compact 112 × 32 desktop banner slot, mobile headers/menu at 320/390 px, the footer and a real vehicle detail page. Confirm the logo loads without clipping, stretching or excess transparent padding, and search reachable identity/metadata for `IMPORT TEMPLATE`, `import-template.demo` and inherited sample branding. No template placeholder may remain in the delivered dealer identity. Record the exact source release in lineage metadata rather than adding a version number to the logo artwork.
+Before a dealer build is complete, inspect light and dark surfaces, the compact 112 × 32 desktop banner slot, mobile headers/menu at 320/390 px, the footer and a real vehicle detail page. Confirm the logo loads without clipping, stretching or excess transparent padding, and search reachable dealer identity/metadata for the `IMPORT` placeholder, `import.demo` and inherited sample branding. No template placeholder may remain in the delivered dealer identity. Record the exact source release in lineage metadata rather than adding a version number to the logo artwork.
 
 ## Representative QA routes
 

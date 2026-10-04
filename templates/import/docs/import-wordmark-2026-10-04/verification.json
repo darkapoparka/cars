@@ -1,0 +1,189 @@
+{
+	"date": "2026-10-04",
+	"scope": "Remove TEMPLATE subtitle from logo and visible identity; retain configured reusable logo overlays",
+	"runtime": "Node 24.21.0",
+	"source": {
+		"path": "src/lib/config/dealer.ts",
+		"sha256": "2583f106f71141b227e8e71e6496713b63caee629661c8571c01cbdd65e39c6c"
+	},
+	"asset": {
+		"path": "static/brand/import-logo-v2.webp",
+		"width": 600,
+		"height": 164,
+		"hasAlpha": true,
+		"alphaRange": {
+			"min": 0,
+			"max": 255
+		},
+		"bytes": 25934,
+		"sha256": "9983ef23aba5049fe69f11e21533d0946473a07935e19ceff7ce4de3eb7cdade"
+	},
+	"checks": {
+		"typecheck": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"siteConfigUnit": {
+			"passed": 16
+		},
+		"imageSignatures": {
+			"checked": 958
+		},
+		"build": {
+			"exitCode": 0,
+			"note": "Existing Tailwind @reference compatibility warnings"
+		},
+		"scopedEslint": "passed",
+		"scopedPrettier": "passed",
+		"workflowCheck": "passed",
+		"workspaceDoctor": "Fetched before integration; unrelated shared changes preserved"
+	},
+	"rendered": {
+		"desktop": {
+			"bannerLogos": [
+				{
+					"height": 32,
+					"loaded": true,
+					"src": "/brand/import-logo-v2.webp",
+					"width": 112
+				},
+				{
+					"height": 32,
+					"loaded": true,
+					"src": "/brand/import-logo-v2.webp",
+					"width": 112
+				}
+			],
+			"namedLogos": [
+				{
+					"alt": "Import",
+					"loaded": true
+				},
+				{
+					"alt": "Import",
+					"loaded": true
+				},
+				{
+					"alt": "Import",
+					"loaded": true
+				},
+				{
+					"alt": "Import",
+					"loaded": true
+				}
+			],
+			"overflow": false,
+			"scrollY": 665,
+			"title": "Import — Автомобили и внос по заявка",
+			"url": "http://127.0.0.1:6790/bg",
+			"width": 1440
+		},
+		"mobile": [
+			{
+				"locale": "bg",
+				"width": 320,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false
+				},
+				"menu": {
+					"logos": [
+						{
+							"alt": "Import",
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					]
+				}
+			},
+			{
+				"locale": "bg",
+				"width": 390,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false
+				},
+				"menu": {
+					"logos": [
+						{
+							"alt": "Import",
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					]
+				}
+			},
+			{
+				"locale": "en",
+				"width": 320,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false
+				},
+				"menu": {
+					"logos": [
+						{
+							"alt": "Import",
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					]
+				}
+			},
+			{
+				"locale": "en",
+				"width": 390,
+				"header": {
+					"logos": [
+						{
+							"alt": "Import",
+							"height": 45.90625,
+							"loaded": true,
+							"width": 168
+						}
+					],
+					"overflow": false
+				},
+				"menu": {
+					"logos": [
+						{
+							"alt": "Import",
+							"contained": true,
+							"height": 48,
+							"loaded": true,
+							"width": 180
+						}
+					]
+				}
+			}
+		]
+	},
+	"preservation": "Same 600x164 asset ratio, same banner logo slots, unchanged wheel favicon and banner artwork; previous logo/provenance retained; no component, publisher, release lock or client changes"
+}

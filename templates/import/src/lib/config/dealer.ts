@@ -20,10 +20,10 @@ export const daynightContact = {
 } as const;
 
 export const daynightBrand = {
-	name: 'Import Template',
-	displayName: 'IMPORT TEMPLATE',
-	bulgarianName: 'Import Template',
-	domain: 'import-template.demo',
+	name: 'Import',
+	displayName: 'IMPORT',
+	bulgarianName: 'Import',
+	domain: 'import.demo',
 	tagline: 'Демонстрационен шаблон за автомобилен търговец',
 	legalNote:
 		'Reusable template preview with sample content; replace identity, contacts and inventory before creating a dealer proposal.'
@@ -34,8 +34,8 @@ const contactVisitBanner = '/assets/daynight/banners/contact-visit-desktop-v3.we
 export const daynightAssets = {
 	// Dealer copies replace these paths once; shared headers, footers and banners reuse them.
 	// The suffix names the background: logoDark is for dark surfaces, logoLight for light ones.
-	logoDark: '/brand/import-template-logo-v1.webp',
-	logoLight: '/brand/import-template-logo-v1.webp',
+	logoDark: '/brand/import-logo-v2.webp',
+	logoLight: '/brand/import-logo-v2.webp',
 	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
 	homeHeroSlides: [],
 	footerImage: '/assets/daynight/footer-premium-request-v2.webp',
