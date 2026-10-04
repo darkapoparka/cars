@@ -49,23 +49,24 @@ Home and Inventory use the same search-panel bounds, padding and
 radius. Desktop facets retain the 44px control target and the shared
 prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
-Inventory's seven desktop shortcuts and search/filter buttons open one 680px
-search dialog, owned by `DesktopVehicleSearch.svelte`. Its unboxed search
-header finds makes, models and filter values directly. The overview exposes
+Inventory's seven desktop shortcuts and search/filter buttons open one 880px
+search dialog, owned by `DesktopVehicleSearch.svelte`. Its inset search
+field finds makes, models and filter values directly. The overview exposes
 all twelve filters as two columns of plain command rows. A shortcut opens the
 same window scoped to its field, with a left Back control and one visible field
 title. Selected filters form editable/removable tokens; Add filter returns to
 the overview without discarding the draft. There are no nested desktop dialogs.
 Bits UI supplies the Command keyboard behavior and Dialog focus/scroll handling.
-The window keeps the same top anchor and 280px result area across every field,
+The window keeps the same top anchor and 328px result area across every field,
 the overview and search states. Short windows shrink that scrollable area while
-retaining the header and footer. Content shares a 24px inset; Show cars has a
-44px target and a stable width, and tokens keep their removal controls visible.
+retaining the header and footer. Content shares a 32px inset; Show cars has a
+52px target and a stable width, and tokens keep their removal controls visible.
 The dialog uses shared sheet/control radii and surface/shadow roles; its
 actions and filter tokens follow the pill family. Selected values and presets
 use charcoal with white text. Neutral command focus stays light, and the white
-footer keeps the primary action distinct. Range headings omit the search divider;
-token keyboard focus stays visible outside clipped values.
+footer keeps the primary action distinct. The header, footer and scope title have
+no separator rules; spacing carries the hierarchy. Command rows have a 52px target.
+Token keyboard focus stays visible outside clipped values.
 Add filter stays pinned beside the horizontally scrollable token list. Edited
 values reveal their token automatically without shifting the row or dialog.
 A selected make exposes a direct Model action while keeping the make choices open.
@@ -73,6 +74,12 @@ Range inputs show units beside their values and an unrestricted placeholder;
 choice search with no results offers Clear search. Keyboard focus remains visible
 on a selected charcoal choice. Number inputs retain their native arrow-key editing
 without invoking Command list navigation.
+The current filter has an explicit Clear filter action; Clear all resets the
+whole draft while retaining sort. Token removal remains available for any one
+filter. Clearing a make also clears its model and releases the model list scope;
+clearing all releases the scope too. Both actions retain the current dialog view.
+The reference direction uses the current [shadcn-Svelte Command dialog](https://www.shadcn-svelte.com/docs/components/command)
+and [Linear filters](https://linear.app/docs/filters), adapted to the existing Cars tokens.
 Choice search tolerates accents and model spacing. Typing only narrows suggestions;
 the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
 choices. Model respects the opening make and a uniquely owned model can infer

@@ -104,8 +104,12 @@
   async function focusSearch() { await tick(); (range ? rangeInput : searchInput)?.focus({ preventScroll: true }); }
   function browse(item?: Field) { field = item; revealField = item; modelMake = draft.make; search = ''; commandValue = ''; void focusSearch(); }
   function select(item: Choice) {
-    if (isSelected(item) && item.field !== 'equipment') clear(item.field);
-    else draft = candidate(item);
+    if (isSelected(item) && item.field !== 'equipment') {
+      if (!field) search = '';
+      clear(item.field);
+      return;
+    }
+    draft = candidate(item);
     revealField = item.field;
     // Selecting a value keeps the dialog open, including equipment multi-selection.
     if (!field) { search = ''; commandValue = ''; }
@@ -118,6 +122,16 @@
     else if (item === 'mileage_max') draft = { ...draft, mileageMax: '' };
     else if (item === 'equipment') draft = { ...draft, equipment: [] };
     else draft = { ...draft, [item]: '' };
+    if (item === 'make') modelMake = '';
+    commandValue = '';
+    void focusSearch();
+  }
+  function clearAll() {
+    draft = emptyListingDraft(filters.sort);
+    modelMake = '';
+    search = '';
+    commandValue = '';
+    void focusSearch();
   }
   function apply(event: SubmitEvent) {
     if (invalidRange) { event.preventDefault(); return; }
@@ -150,11 +164,14 @@
             {#if field}
               <button class="dn-search-back" type="button" aria-label={i18n.t('m_a779c56e526e')} title={i18n.t('m_3deeda2a1ebe')} onclick={() => browse()}><Icon name="arrow-left" size={18} /></button>
               <span class="dn-search-scope">{title}</span>
-            {:else}<span class="dn-search-symbol"><Icon name="search" size={21} /></span>{/if}
+            {/if}
             {#if !range}
-              <Command.Input class="dn-search-input" bind:ref={searchInput} bind:value={search} aria-label={field ? title : i18n.t('inventory.search.placeholder')} placeholder={field ? i18n.t('inventory.search.within') : i18n.t('inventory.search.placeholder')} autocomplete="off" onkeydown={keyboard} />
+              <div class="dn-search-query">
+                <span class="dn-search-symbol"><Icon name="search" size={19} /></span>
+                <Command.Input class="dn-search-input" bind:ref={searchInput} bind:value={search} aria-label={field ? title : i18n.t('inventory.search.placeholder')} placeholder={field ? i18n.t('inventory.search.within') : i18n.t('inventory.search.placeholder')} autocomplete="off" onkeydown={keyboard} />
+                {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} title={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
+              </div>
             {:else}<span class="dn-search-range-space"></span>{/if}
-            {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} title={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
             <Dialog.Close class="dn-search-icon dn-search-close" type="button" aria-label={i18n.t('m_84305a580997')} title={i18n.t('m_84305a580997')}><Icon name="x" size={19} /></Dialog.Close>
           </div>
 
@@ -236,7 +253,6 @@
                   {/each}
                 </div>
               {/if}
-              <button class="dn-search-unlimited" type="button" onclick={() => field && clear(field)}>{i18n.t('inventory.range.unlimited')}</button>
               {#if invalidRange}<p class="dn-search-range-error" role="alert">{i18n.t(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax) ? 'm_2157bc34d38a' : 'm_e35acfc7ae2e')}</p>{/if}
             </div>
           {:else}
@@ -286,8 +302,16 @@
           {/if}
         </Command.Root>
         <footer class="dn-search-footer">
-          <div class="dn-search-hints" aria-hidden="true">{#if !range}<span><kbd>↑</kbd><kbd>↓</kbd>{i18n.t('inventory.search.navigate')}</span><span><kbd>↵</kbd>{i18n.t('inventory.search.select')}</span>{/if}</div>
-          {#if activeFields.length || draft.q}<button class="dn-search-reset" type="button" onclick={() => { draft = emptyListingDraft(filters.sort); search = ''; void focusSearch(); }}>{i18n.t('action.clearShort')}</button>{/if}
+          <div class="dn-search-actions">
+            {#if field && activeFields.includes(field)}
+              <button class="dn-search-clear-field" type="button" aria-label={`${i18n.t('inventory.search.clearFilter')}: ${title}`} onclick={() => field && clear(field)}>{i18n.t('inventory.search.clearFilter')}</button>
+            {/if}
+            {#if activeFields.length || draft.q}
+              <button class="dn-search-reset" type="button" onclick={clearAll}>{i18n.t('inventory.search.clearAll')}</button>
+            {:else if !range}
+              <div class="dn-search-hints" aria-hidden="true"><span><kbd>↑↓</kbd>{i18n.t('inventory.search.navigate')}</span><span><kbd>↵</kbd>{i18n.t('inventory.search.select')}</span></div>
+            {/if}
+          </div>
           <button class="dn-search-apply" type="submit" disabled={invalidRange} aria-live="polite">{matching === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: matching })}<Icon name="arrow-right" size={16} /></button>
         </footer>
         {#each hiddenFields as [name, value], index (`${name}-${value}-${index}`)}<input type="hidden" {name} {value} />{/each}
@@ -299,20 +323,21 @@
 <style>
   :global(.dn-search-sr-only) { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
   :global(.dn-search-overlay) { position: fixed; inset: 0; z-index: 11000; background: rgb(18 20 25 / .32); backdrop-filter: blur(2px); }
-  :global(.dn-search-dialog) { --dn-search-top: min(128px, 15dvh); display: flex; position: fixed; z-index: 11001; top: var(--dn-search-top); left: 50%; width: min(680px, calc(100vw - 64px)); max-height: calc(100dvh - var(--dn-search-top) - 24px); overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sheet); background: var(--dn-surface-raised); color: var(--dn-ink); box-shadow: var(--dn-shadow); transform: translateX(-50%); }
+  :global(.dn-search-dialog) { --dn-search-top: min(128px, 15dvh); display: flex; position: fixed; z-index: 11001; top: var(--dn-search-top); left: 50%; width: min(880px, calc(100vw - 64px)); max-height: calc(100dvh - var(--dn-search-top) - 24px); overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sheet); background: var(--dn-surface-raised); color: var(--dn-ink); box-shadow: var(--dn-shadow); transform: translateX(-50%); }
   form { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 0; margin: 0; }
   :global(.dn-search-command) { display: flex; flex: 1; flex-direction: column; min-height: 0; }
-  .dn-search-header { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); height: 72px; padding: 0 var(--dn-space-6); border-bottom: 1px solid var(--dn-line); }
-  .dn-search-symbol { display: flex; color: var(--dn-muted); }
-  .dn-search-scope { flex-shrink: 0; padding-right: var(--dn-space-4); border-right: 1px solid var(--dn-line); font-size: var(--dn-text-control-prominent); font-weight: var(--dn-weight-semibold); }
-  .dn-search-header[data-range='true'] .dn-search-scope { padding-right: 0; border-right: 0; }
+  .dn-search-header { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-4); height: 80px; padding: 0 var(--dn-space-8); }
+  .dn-search-query { display: flex; flex: 1; align-items: center; gap: var(--dn-space-3); min-width: 0; height: var(--dn-control-height-default); padding-inline: var(--dn-space-3); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
+  .dn-search-query:has(:global(.dn-search-input:focus-visible)) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-search-symbol { display: flex; flex-shrink: 0; color: var(--dn-muted); }
+  .dn-search-scope { flex-shrink: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); }
   :global(.dn-search-input) { width: 100%; min-width: 0; height: 100%; padding: 0; border: 0; outline: 0; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); box-shadow: none; }
   :global(.dn-search-input::placeholder) { color: var(--dn-muted); }
   .dn-search-range-space { flex: 1; }
   .dn-search-back, .dn-search-icon, :global(.dn-search-close) { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-back { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-search-icon:hover, .dn-search-back:hover, :global(.dn-search-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-2); height: 56px; padding: 0 var(--dn-space-6); }
+  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-2); height: 56px; padding: 0 var(--dn-space-8); }
   .dn-search-token-window { position: relative; flex: 1; min-width: 0; }
   .dn-search-token-window[data-scrolled='true']::before { content: ''; position: absolute; inset: 0 auto 0 0; z-index: 1; width: var(--dn-space-8); background: linear-gradient(to right, var(--dn-surface-raised) var(--dn-space-3), transparent); }
   .dn-search-token-window:has(button:focus-visible)::before { display: none; }
@@ -332,10 +357,10 @@
   .dn-search-token button:hover, .dn-search-add:hover { background: var(--dn-surface-hover); }
   .dn-search-token:has(button:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .dn-search-token button:focus-visible { outline: 0; background: var(--dn-surface-hover); }
-  :global(.dn-search-results) { flex: 1 1 280px; height: 280px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); scrollbar-width: thin; }
+  :global(.dn-search-results) { flex: 1 1 328px; height: 328px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-6); scrollbar-width: thin; }
   :global(.dn-search-group-title) { padding: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
-  :global(.dn-search-field-grid[data-grid='true']) { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--dn-space-4); }
-  :global(.dn-search-row) { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-2); border-block: var(--dn-space-half) solid transparent; border-radius: var(--dn-radius-control); background-clip: padding-box; outline: 0; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
+  :global(.dn-search-field-grid[data-grid='true']) { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--dn-space-6); }
+  :global(.dn-search-row) { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-prominent); padding: var(--dn-space-2); border-block: var(--dn-space-half) solid transparent; border-radius: var(--dn-radius-control); background-clip: padding-box; outline: 0; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
   :global(.dn-search-row[data-selected]) { background-color: var(--dn-surface-subtle); }
   :global(.dn-search-row > span:not(.dn-search-check):not(.dn-search-row-count)) { flex: 1; min-width: 0; }
   :global(.dn-search-row[aria-checked='true'] > .dn-search-row-label) { font-weight: var(--dn-weight-semibold); }
@@ -352,7 +377,7 @@
   .dn-search-empty p { margin: 0; }
   .dn-search-empty button { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-empty button:hover { background: var(--dn-surface-subtle); }
-  .dn-search-range { padding: var(--dn-space-6); }
+  .dn-search-range { padding: var(--dn-space-6) var(--dn-space-8); }
   .dn-search-range-fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-4); }
   label { display: grid; gap: var(--dn-space-2); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
   label > span { color: var(--dn-ink); }
@@ -366,16 +391,16 @@
   .dn-search-presets button { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-presets button:hover { background: var(--dn-surface-subtle); }
   .dn-search-presets button[data-active='true'] { border-color: var(--dn-ink-strong); background: var(--dn-ink-strong); color: var(--dn-white); }
-  .dn-search-unlimited { min-height: var(--dn-control-height-compact); margin-top: var(--dn-space-3); padding: var(--dn-space-2) 0; border: 0; background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-unlimited:hover { color: var(--dn-ink); text-decoration: underline; text-underline-offset: var(--dn-space-1); }
-  .dn-search-footer { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); min-height: 72px; padding: var(--dn-space-3) var(--dn-space-6); border-top: 1px solid var(--dn-line); background: var(--dn-surface-raised); }
+  .dn-search-footer { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-4); min-height: 80px; padding: var(--dn-space-3) var(--dn-space-8); background: var(--dn-surface-raised); }
+  .dn-search-actions { display: flex; flex: 1; align-items: center; gap: var(--dn-space-2); min-width: 0; }
   .dn-search-range-error { margin: var(--dn-space-3) 0 0; color: var(--dn-red); font-size: var(--dn-text-meta); }
   .dn-search-hints { display: flex; flex: 1; align-items: center; gap: var(--dn-space-3); color: var(--dn-muted); font-size: var(--dn-text-meta); }
   .dn-search-hints > span { display: flex; align-items: center; gap: var(--dn-space-1); }
-  kbd { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-xs); background: var(--dn-surface-subtle); font: inherit; }
-  .dn-search-reset { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-reset:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
-  .dn-search-apply { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-width: 272px; min-height: var(--dn-control-height-default); margin-left: auto; padding: 10px var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-ink-strong); color: var(--dn-white); font: var(--dn-control-font); white-space: nowrap; cursor: pointer; }
+  kbd { color: var(--dn-ink); font: inherit; }
+  .dn-search-clear-field, .dn-search-reset { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-clear-field { padding-inline: var(--dn-space-3); background: var(--dn-surface-subtle); color: var(--dn-ink); }
+  .dn-search-clear-field:hover, .dn-search-reset:hover { background: var(--dn-surface-hover); color: var(--dn-ink); }
+  .dn-search-apply { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-width: 272px; min-height: var(--dn-control-height-prominent); margin-left: auto; padding: 10px var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-ink-strong); color: var(--dn-white); font: var(--dn-control-font); white-space: nowrap; cursor: pointer; }
   .dn-search-apply:hover { background: var(--dn-ink-hover); }
   .dn-search-apply:disabled { opacity: .45; cursor: not-allowed; }
   button:focus-visible, input[type='number']:focus-visible, :global(.dn-search-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
