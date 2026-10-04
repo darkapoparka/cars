@@ -234,3 +234,9 @@
   --dn-locale-tracking: 0.06em;
   --dn-weight-bold: 700;
 }
+
+/* Resolve action defaults where the dealer's accent is applied. */
+.dn-app-shell {
+  --dn-primary-action-surface: var(--dn-red);
+  --dn-primary-action-surface-hover: var(--dn-red-hover);
+}

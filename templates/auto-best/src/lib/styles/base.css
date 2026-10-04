@@ -64,12 +64,12 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog .dn-mobile-overlay-footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-overlay-gutter) max(var(--dn-space-3), env(safe-area-inset-bottom)); background: var(--dn-white); }
   .dn-app-shell dialog .dn-mobile-overlay-clear { display: inline-flex; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-clear:disabled { color: var(--dn-muted); cursor: default; }
-  .dn-app-shell dialog .dn-mobile-overlay-action { display: inline-flex; flex: 1; min-width: 0; min-height: var(--dn-overlay-control-height); height: auto; align-items: center; justify-content: center; gap: var(--dn-overlay-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); text-align: center; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-action { display: inline-flex; flex: 1; min-width: 0; min-height: var(--dn-overlay-control-height); height: auto; align-items: center; justify-content: center; gap: var(--dn-overlay-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); text-align: center; white-space: normal; overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-action:disabled { background: var(--dn-line); color: var(--dn-muted); cursor: not-allowed; }
   .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear, .dn-mobile-overlay-action):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   @media (hover: hover) and (pointer: fine) {
     .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear):enabled:not([aria-pressed='true']):hover { background: var(--dn-surface-hover); }
-    .dn-app-shell dialog .dn-mobile-overlay-action:enabled:hover { background: var(--dn-red-hover); }
+    .dn-app-shell dialog .dn-mobile-overlay-action:enabled:hover { background: var(--dn-primary-action-surface-hover); }
   }
 }
 .dn-app-shell .dn-compact-control { position: relative; z-index: 0; isolation: isolate; display: inline-flex; min-height: var(--dn-entry-action-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-compact-control-ink, var(--dn-ink)); font: var(--dn-compact-control-font); text-decoration: none; white-space: nowrap; }
@@ -77,8 +77,8 @@ button { font: var(--dn-control-font); }
 .dn-app-shell .dn-entry-action { display: flex; width: var(--dn-entry-action-width); padding: var(--dn-space-2) var(--dn-entry-action-padding-inline); white-space: normal; text-align: center; }
 .dn-app-shell .dn-entry-action > svg { width: var(--dn-entry-action-icon-size); height: var(--dn-entry-action-icon-size); flex: none; }
 .dn-app-shell .dn-quick-pill { flex: 0 0 auto; padding: 0 var(--dn-compact-control-padding-inline); }
-.dn-app-shell .dn-compact-primary { --dn-compact-control-surface: var(--dn-red); --dn-compact-control-ink: var(--dn-white); font-weight: var(--dn-cta-weight); }
-.dn-app-shell .dn-compact-primary:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-red-hover); }
+.dn-app-shell .dn-compact-primary { --dn-compact-control-surface: var(--dn-primary-action-surface); --dn-compact-control-ink: var(--dn-white); font-weight: var(--dn-cta-weight); }
+.dn-app-shell .dn-compact-primary:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-primary-action-surface-hover); }
 .dn-app-shell .dn-compact-pill { --dn-compact-control-surface: var(--dn-white); --dn-compact-control-ink: #30363f; }
 .dn-app-shell .dn-compact-pill:is(:hover, :focus-visible) { --dn-compact-control-surface: var(--dn-surface-hover); }
 h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }

@@ -260,13 +260,13 @@
     padding: 0 var(--dn-space-5);
     border: 0;
     border-radius: var(--dn-radius-button);
-    background: var(--dn-red);
+    background: var(--dn-primary-action-surface);
     color: var(--dn-white);
     font: var(--dn-control-font);
     white-space: nowrap;
     cursor: pointer;
   }
-  .dn-tradein-info-actions button:hover { background: var(--dn-red-hover); }
+  .dn-tradein-info-actions button:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-tradein-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
   @media (max-width: 767px) {

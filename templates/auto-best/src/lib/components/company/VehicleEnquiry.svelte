@@ -335,8 +335,8 @@
     .dn-enquiry-entry--import { text-align: left; }
   }
   button { cursor: pointer; font: inherit; }
-  .dn-enquiry-primary { min-width: 0; overflow-wrap: anywhere; display: flex; width: 100%; min-height: var(--dn-control-height-default); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2) var(--dn-space-5); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
-  .dn-enquiry-primary:hover { background: var(--dn-red-hover); }
+  .dn-enquiry-primary { min-width: 0; overflow-wrap: anywhere; display: flex; width: 100%; min-height: var(--dn-control-height-default); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2) var(--dn-space-5); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-primary-action-surface); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
+  .dn-enquiry-primary:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-enquiry-primary:disabled { opacity: .6; cursor: wait; }
   .dn-enquiry-contact { display: flex; width: fit-content; min-height: var(--dn-control-height-default); align-items: center; justify-content: center; margin: 8px auto 0; padding: 0 var(--dn-space-5); border-radius: var(--dn-radius-button); background: #f2f3f5; color: #24272c; font: var(--dn-compact-control-font); }
   .dn-enquiry-import-segments { width: var(--dn-entry-segment-width); margin: 0 auto var(--dn-space-3); }

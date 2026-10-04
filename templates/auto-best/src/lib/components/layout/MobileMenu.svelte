@@ -70,6 +70,9 @@
         <p class="dn-mobile-menu__address">{i18n.dealer('addressLine')}</p>
       </dialog>
 <style>
+  @media (max-width: 767px) {
+    .dn-mobile-menu { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); }
+  }
   .dn-mobile-menu { position: fixed; inset: auto 0 0; width: 100%; max-width: none; max-height: calc(100dvh - 68px); margin: 0; padding: var(--dn-space-4) var(--dn-space-5) calc(var(--dn-space-5) + env(safe-area-inset-bottom)); overflow-y: auto; border: 0; border-radius: var(--dn-space-6) var(--dn-space-6) 0 0; background: var(--dn-white); color: var(--dn-ink); }
   .dn-mobile-menu[open] { display: flex; flex-direction: column; }
   .dn-mobile-menu::backdrop { background: rgb(10 13 18 / .54); }

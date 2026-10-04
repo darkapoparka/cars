@@ -55,6 +55,7 @@
   li span { display: grid; place-items: center; flex: 0 0 24px; height: 24px; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); font-weight: var(--dn-weight-medium); }
   p { margin: 0; padding: 0 var(--dn-space-4) var(--dn-space-4); color: var(--dn-muted); font-size: var(--dn-text-caption); line-height: var(--dn-leading-body); }
   @media (max-width: 767px) {
+    .dn-service-landing { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); }
     .dn-service-landing--import { --dn-workflow-canvas: var(--dn-theme-hero-surface-mid); }
     .dn-service-landing { position: relative; isolation: isolate; min-height: 100svh; padding-bottom: calc(var(--dn-space-8) + var(--dn-space-2) + var(--dn-mobile-nav-height) + env(safe-area-inset-bottom)); }
     .dn-service-landing::before { content: ''; position: absolute; z-index: -1; inset: auto 0 0; height: min(400px, 100%); background-image: linear-gradient(var(--dn-mobile-canvas), color-mix(in srgb, var(--dn-mobile-canvas) 92%, transparent) 40%), var(--dn-service-backdrop); background-size: 100% 100%, auto 100%; background-position: center, left bottom; background-repeat: no-repeat; pointer-events: none; }

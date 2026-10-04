@@ -105,6 +105,6 @@
   footer { display: flex; flex-shrink: 0; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-4) max(var(--dn-space-3), env(safe-area-inset-bottom)); border-top: 1px solid var(--dn-line); }
   footer button { min-width: 0; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-5); border: 0; border-radius: var(--dn-radius-button); overflow-wrap: anywhere; cursor: pointer; }
   .dn-service-editor__cancel { background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); }
-  .dn-service-editor__save { background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); }
+  .dn-service-editor__save { background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); }
   .dn-service-editor :is(button,input,textarea):focus-visible, .dn-service-entry__field:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 </style>

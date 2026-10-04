@@ -1,0 +1,917 @@
+{
+  "scope": "Mobile import, sell, and menu primary actions",
+  "nativeFrame": {
+    "height": 884,
+    "scrollY": 0,
+    "width": 360
+  },
+  "before": {
+    "import": {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 76,
+            "right": 284,
+            "top": 337,
+            "width": 208,
+            "x": 76,
+            "y": 337
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви внос",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "menu": {
+      "actions": [
+        {
+          "class": "dn-mobile-menu__call dn-compact-control dn-compact-primary svelte-qitr32",
+          "href": "tel:+359879824625",
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 557,
+            "height": 44,
+            "left": 20,
+            "right": 174,
+            "top": 513,
+            "width": 154,
+            "x": 20,
+            "y": 513
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Обади се",
+          "type": null
+        }
+      ],
+      "dialog": "dn-mobile-menu svelte-qitr32",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sell": {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 76,
+            "right": 284,
+            "top": 337,
+            "width": 208,
+            "x": 76,
+            "y": 337
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви оценка",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sellDesktop": {
+      "actions": [
+        {
+          "class": "dn-compact-control dn-entry-action dn-compact-primary dn-service-entry__submit svelte-129q5jg",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 807.796875,
+            "height": 44,
+            "left": 608.5,
+            "right": 816.5,
+            "top": 763.796875,
+            "width": 208,
+            "x": 608.5,
+            "y": 763.796875
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви оценка",
+          "type": "submit"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "importDesktop": {
+      "actions": [
+        {
+          "class": "dn-compact-control dn-entry-action dn-compact-primary dn-service-entry__submit svelte-129q5jg",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 645.796875,
+            "height": 44,
+            "left": 608.5,
+            "right": 816.5,
+            "top": 601.796875,
+            "width": 208,
+            "x": 608.5,
+            "y": 601.796875
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви внос",
+          "type": "submit"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    }
+  },
+  "after": {
+    "import": {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 76,
+            "right": 284,
+            "top": 337,
+            "width": 208,
+            "x": 76,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви внос",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "menu": {
+      "actions": [
+        {
+          "class": "dn-mobile-menu__call dn-compact-control dn-compact-primary svelte-qitr32",
+          "href": "tel:+359879824625",
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 557,
+            "height": 44,
+            "left": 20,
+            "right": 174,
+            "top": 513,
+            "width": 154,
+            "x": 20,
+            "y": 513
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Обади се",
+          "type": null
+        }
+      ],
+      "dialog": "dn-mobile-menu svelte-qitr32",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "importEditor": {
+      "actions": [
+        {
+          "class": "dn-service-editor__save svelte-t7pafn",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 872,
+            "height": 44,
+            "left": 232.453125,
+            "right": 344,
+            "top": 828,
+            "width": 111.546875,
+            "x": 232.453125,
+            "y": 828
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Запазете",
+          "type": "submit"
+        }
+      ],
+      "dialog": "dn-service-editor svelte-t7pafn",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "importGuide": {
+      "actions": [
+        {
+          "class": "svelte-w9or0i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 868,
+            "height": 44.796875,
+            "left": 40,
+            "right": 320,
+            "top": 823.203125,
+            "width": 280,
+            "x": 40,
+            "y": 823.203125
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Към запитването",
+          "type": "button"
+        }
+      ],
+      "dialog": "dn-import-info-dialog svelte-w9or0i dn-import-info-dialog--inline",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sell": {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 76,
+            "right": 284,
+            "top": 337,
+            "width": 208,
+            "x": 76,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви оценка",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sellEditor": {
+      "actions": [
+        {
+          "class": "dn-service-editor__save svelte-t7pafn",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 872,
+            "height": 44,
+            "left": 232.453125,
+            "right": 344,
+            "top": 828,
+            "width": 111.546875,
+            "x": 232.453125,
+            "y": 828
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Запазете",
+          "type": "submit"
+        }
+      ],
+      "dialog": "dn-service-editor svelte-t7pafn",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sellGuide": {
+      "actions": [
+        {
+          "class": "svelte-ecogp8",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 868,
+            "height": 44.796875,
+            "left": 40,
+            "right": 320,
+            "top": 823.203125,
+            "width": 280,
+            "x": 40,
+            "y": 823.203125
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Към запитването",
+          "type": "button"
+        }
+      ],
+      "dialog": "dn-tradein-info-dialog svelte-ecogp8 dn-tradein-info-dialog--inline",
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 884,
+        "width": 360
+      }
+    },
+    "sellDesktop": {
+      "actions": [
+        {
+          "class": "dn-compact-control dn-entry-action dn-compact-primary dn-service-entry__submit svelte-129q5jg",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 807.796875,
+            "height": 44,
+            "left": 608.5,
+            "right": 816.5,
+            "top": 763.796875,
+            "width": 208,
+            "x": 608.5,
+            "y": 763.796875
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви оценка",
+          "type": "submit"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "importDesktop": {
+      "actions": [
+        {
+          "class": "dn-compact-control dn-entry-action dn-compact-primary dn-service-entry__submit svelte-129q5jg",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 645.796875,
+            "height": 44,
+            "left": 608.5,
+            "right": 816.5,
+            "top": 601.796875,
+            "width": 208,
+            "x": 608.5,
+            "y": 601.796875
+          },
+          "surface": "rgb(196, 1, 1)",
+          "text": "Заяви внос",
+          "type": "submit"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 1000,
+        "width": 1440
+      }
+    },
+    "enMenu320": {
+      "actions": [
+        {
+          "class": "dn-mobile-menu__call dn-compact-control dn-compact-primary svelte-qitr32",
+          "href": "tel:+359879824625",
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 496,
+            "height": 44,
+            "left": 20,
+            "right": 154,
+            "top": 452,
+            "width": 134,
+            "x": 20,
+            "y": 452
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Call",
+          "type": null
+        }
+      ],
+      "dialog": "dn-mobile-menu svelte-qitr32",
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    "enMenuFocus": {
+      "active": "dn-mobile-menu__call dn-compact-control dn-compact-primary svelte-qitr32",
+      "focusVisible": true,
+      "outline": "solid",
+      "surface": "rgb(41, 46, 54)"
+    }
+  },
+  "widthCases": [
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 56,
+            "right": 264,
+            "top": 337,
+            "width": 208,
+            "x": 56,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви оценка",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 91,
+            "right": 299,
+            "top": 337,
+            "width": 208,
+            "x": 91,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви оценка",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 111,
+            "right": 319,
+            "top": 337,
+            "width": 208,
+            "x": 111,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви оценка",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 430
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 56,
+            "right": 264,
+            "top": 337,
+            "width": 208,
+            "x": 56,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви внос",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 91,
+            "right": 299,
+            "top": 337,
+            "width": 208,
+            "x": 91,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви внос",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 111,
+            "right": 319,
+            "top": 337,
+            "width": 208,
+            "x": 111,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Заяви внос",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "bg",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/bg/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 430
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 56,
+            "right": 264,
+            "top": 337,
+            "width": 208,
+            "x": 56,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request valuation",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 91,
+            "right": 299,
+            "top": 337,
+            "width": 208,
+            "x": 91,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request valuation",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-a4dc9i",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 111,
+            "right": 319,
+            "top": 337,
+            "width": 208,
+            "x": 111,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request valuation",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=trade-in",
+      "viewport": {
+        "height": 844,
+        "width": 430
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 56,
+            "right": 264,
+            "top": 337,
+            "width": 208,
+            "x": 56,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request import",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 91,
+            "right": 299,
+            "top": 337,
+            "width": 208,
+            "x": 91,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request import",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "actions": [
+        {
+          "class": "dn-service-entry__submit dn-compact-control dn-entry-action dn-compact-primary svelte-1q8alqz",
+          "href": null,
+          "ink": "rgb(255, 255, 255)",
+          "radius": "999px",
+          "rect": {
+            "bottom": 381,
+            "height": 44,
+            "left": 111,
+            "right": 319,
+            "top": 337,
+            "width": 208,
+            "x": 111,
+            "y": 337
+          },
+          "surface": "rgb(20, 23, 29)",
+          "text": "Request import",
+          "type": "button"
+        }
+      ],
+      "dialog": null,
+      "locale": "en",
+      "overflow": 0,
+      "scrollY": 0,
+      "url": "/en/contact?topic=import",
+      "viewport": {
+        "height": 844,
+        "width": 430
+      }
+    }
+  ],
+  "closedImportFooterStyles": [
+    {
+      "ink": "rgb(255, 255, 255)",
+      "surface": "rgb(20, 23, 29)",
+      "text": "Продължете"
+    }
+  ],
+  "checks": {
+    "tokens": "passed",
+    "cssPolicy": "passed",
+    "typography": "passed",
+    "svelte": "0 errors, 0 warnings",
+    "build": "passed"
+  },
+  "notes": [
+    "Action rectangles, rounding, labels, and targets match the native before state.",
+    "Desktop retains configured dealer accent rgb(196, 1, 1), rather than the root fallback color.",
+    "Early English observations occurred before styles finished loading; the settled 320/390/430px rerun passed."
+  ],
+  "earlyLoadingObservations": [
+    {
+      "url": "/en/contact?topic=import",
+      "width": 320,
+      "overflow": 1863,
+      "surface": "rgb(240, 240, 240)"
+    },
+    {
+      "url": "/en/contact?topic=import",
+      "width": 390,
+      "overflow": 1793,
+      "surface": "rgb(240, 240, 240)"
+    }
+  ]
+}

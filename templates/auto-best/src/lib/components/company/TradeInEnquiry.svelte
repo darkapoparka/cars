@@ -347,7 +347,7 @@
   .dn-tradein-reference-hint { margin: var(--dn-space-2) 0 0; color: var(--dn-muted); font-size: var(--dn-text-meta); line-height: var(--dn-leading-meta); }
   .dn-tradein-review-reference { overflow-wrap: anywhere; }
   .dn-tradein-start { margin: 14px auto 0; }
-  .dn-tradein-primary:is(:hover,:focus-visible) { background: var(--dn-red-hover); }
+  .dn-tradein-primary:is(:hover,:focus-visible) { background: var(--dn-primary-action-surface-hover); }
   :global(body:has(.dn-tradein-dialog[open])) { position: fixed; top: var(--dn-tradein-scroll,0); width: 100%; overflow: hidden; }
   .dn-tradein-dialog { width: min(640px,calc(100% - 32px)); max-width: none; max-height: calc(100dvh - 40px); margin: auto; padding: 0; border: 0; border-radius: 22px; background: #fff; color: #202329; overflow: hidden; }
   .dn-tradein-dialog::backdrop { background: rgba(7,9,12,.68); backdrop-filter: blur(2px); }
@@ -410,7 +410,7 @@
   .dn-tradein-feedback { margin: 12px 0 0; padding: 11px 12px; border-radius: 10px; background: #f0f2f4; color: #424850; font-size: var(--dn-text-meta); line-height: var(--dn-leading-body); }
   .dn-tradein-footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: 10px; padding: 14px 24px; border-top: 1px solid #e7e9ec; background: #fff; }
   .dn-tradein-back { min-width: 0; max-width: 100%; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); align-items: center; gap: var(--dn-entry-action-gap); padding: 0 4px; border: 0; background: transparent; color: #30343a; font: var(--dn-compact-control-font); }
-  .dn-tradein-primary { min-width: 0; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); flex: 1 1 8rem; align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-red); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
+  .dn-tradein-primary { min-width: 0; overflow-wrap: anywhere; display: flex; min-height: var(--dn-control-height-default); flex: 1 1 8rem; align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-primary-action-surface); color: #fff; font-size: var(--dn-cta-size); font-weight: var(--dn-cta-weight); line-height: var(--dn-leading-control); }
   .dn-tradein-primary:disabled { opacity: .6; cursor: wait; }
 
   :global(.dn-contact-intent--tradein .dn-contact-workflow-title),

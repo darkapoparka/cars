@@ -138,8 +138,8 @@
   footer { display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-6); border-top: 1px solid var(--dn-line); }
   footer button { min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-6); border: 0; border-radius: var(--dn-radius-button); cursor: pointer; }
   .dn-entry-editor-cancel { background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); }
-  .dn-entry-editor-save { min-width: 132px; background: var(--dn-red); color: var(--dn-white); font: var(--dn-overlay-action-font); }
-  .dn-entry-editor-save:hover { background: var(--dn-red-hover); }
+  .dn-entry-editor-save { min-width: 132px; background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); }
+  .dn-entry-editor-save:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-entry-editor :is(button,input,textarea):focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
   @media (max-width: 767px) {
     .dn-entry-editor-trigger { height: var(--dn-entry-action-height); min-height: var(--dn-entry-action-height); }

@@ -4,8 +4,8 @@
     "en",
     "bg"
   ],
-  "messages": 1067,
-  "catalogSha256": "41f4dd0bf3e7bea2f6b9dee932556624261c055f7b532dd2604a8212221e1386",
+  "messages": 1068,
+  "catalogSha256": "fa34565e752ef1b20fcd7bb334d2c933c81bddc867d5ac2f829ff805916a34e4",
   "sources": [
     "localization/common.json",
     "localization/catalog.reviewed.json",
@@ -13,7 +13,7 @@
     "localization/dealer.reviewed.json"
   ],
   "sourceSha256": {
-    "localization/common.json": "f1bf0a7ba169e7a39b9169c12574a6eb8242d1280b5147c4944bbb36912399c7",
+    "localization/common.json": "bf33a71c9d1ee7f265db44ce208bb4b4f1d5ee65177e1a6895e05778544c6b58",
     "localization/catalog.reviewed.json": "e6efa2f35f2511fd36fd080a96c08a6c541235277db2a06527d6e51f85a0ceee",
     "localization/template.reviewed.json": "860c5356d3d4b88bfe321770f7f1935cc0189bb762829aab879851bd7f87732f",
     "localization/dealer.reviewed.json": "26b9efbe79b547ee75735a8fa9f81e2e03d4e90f9e2e630bb01f7ce17cec2e72"

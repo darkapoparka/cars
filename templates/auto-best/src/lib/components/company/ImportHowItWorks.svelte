@@ -256,13 +256,13 @@
     padding: 0 var(--dn-space-5);
     border: 0;
     border-radius: var(--dn-radius-button);
-    background: var(--dn-red);
+    background: var(--dn-primary-action-surface);
     color: var(--dn-white);
     font: var(--dn-control-font);
     white-space: nowrap;
     cursor: pointer;
   }
-  .dn-import-info-actions button:hover { background: var(--dn-red-hover); }
+  .dn-import-info-actions button:hover { background: var(--dn-primary-action-surface-hover); }
   .dn-import-info-actions button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
 
   .dn-import-info-prepare { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-mobile-canvas); color: var(--dn-ink); gap: var(--dn-space-3); }
