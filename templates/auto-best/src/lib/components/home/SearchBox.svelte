@@ -156,6 +156,10 @@
       --dn-compact-control-surface: var(--dn-ink-deep);
     }
 
+    .dn-search__buy :global(.dn-search__mobile-all) {
+      --dn-entry-action-width: fit-content;
+    }
+
     .dn-search-wrap :global(.dn-search__mobile-all:is(:hover, :focus-visible)) {
       --dn-compact-control-surface: var(--dn-ink-hover);
     }
