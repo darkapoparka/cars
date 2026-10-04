@@ -23,6 +23,10 @@ const s = stylex.create({
     maxWidth: 1100,
     marginInline: 'auto',
     position: 'relative',
+    boxShadow: {
+      default: 'none',
+      '@media (min-width: 700px)': '0 0 0 1px rgba(23, 32, 43, 0.08)',
+    },
   },
   primary: {
     paddingBottom: 'calc(4.5rem + env(safe-area-inset-bottom))',

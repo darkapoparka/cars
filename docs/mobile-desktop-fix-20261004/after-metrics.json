@@ -1,0 +1,1222 @@
+{
+  "at": "2026-10-04T03:54:13.041Z",
+  "base": "http://127.0.0.1:6476",
+  "results": [
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 320,
+      "file": "after-bmw-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 1669,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 32,
+      "significantPixels": 0,
+      "maxChannelDelta": 1
+    },
+    {
+      "name": "cars",
+      "route": "/",
+      "width": 320,
+      "file": "after-cars-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 1669,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 177,
+      "significantPixels": 0,
+      "maxChannelDelta": 2
+    },
+    {
+      "name": "cars-pinned",
+      "route": "/",
+      "width": 320,
+      "scroll": 250,
+      "file": "after-cars-pinned-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": -250,
+        "width": 320,
+        "height": 1669,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 8,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 250,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "services",
+      "route": "/services",
+      "width": 320,
+      "file": "after-services-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 1272,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 150,
+      "significantPixels": 0,
+      "maxChannelDelta": 2
+    },
+    {
+      "name": "import",
+      "route": "/services?tab=import",
+      "width": 320,
+      "file": "after-import-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 1653,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 33,
+      "significantPixels": 0,
+      "maxChannelDelta": 1
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 320,
+      "file": "after-contact-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 908,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "detail",
+      "route": "/vehicle/bmw-x6",
+      "width": 320,
+      "file": "after-detail-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 2212.875,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [
+        {
+          "x": 0,
+          "y": 266.5,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 8,
+      "significantPixels": 0,
+      "maxChannelDelta": 1
+    },
+    {
+      "name": "filter",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 320,
+      "filter": true,
+      "file": "after-filter-320.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 1669,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 320,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        },
+        {
+          "x": 0,
+          "y": 64,
+          "width": 320,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 390,
+      "file": "after-bmw-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1844,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "cars",
+      "route": "/",
+      "width": 390,
+      "file": "after-cars-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1844,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "cars-pinned",
+      "route": "/",
+      "width": 390,
+      "scroll": 250,
+      "file": "after-cars-pinned-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": -250,
+        "width": 390,
+        "height": 1844,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 8,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 250,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "services",
+      "route": "/services",
+      "width": 390,
+      "file": "after-services-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1128,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 205,
+      "significantPixels": 0,
+      "maxChannelDelta": 2
+    },
+    {
+      "name": "import",
+      "route": "/services?tab=import",
+      "width": 390,
+      "file": "after-import-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1806,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 54,
+      "significantPixels": 0,
+      "maxChannelDelta": 1
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 390,
+      "file": "after-contact-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 908,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "detail",
+      "route": "/vehicle/bmw-x6",
+      "width": 390,
+      "file": "after-detail-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 2207.171875,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [
+        {
+          "x": 0,
+          "y": 310.796875,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "filter",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 390,
+      "filter": true,
+      "file": "after-filter-390.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 1844,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 390,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        },
+        {
+          "x": 0,
+          "y": 64,
+          "width": 390,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 699,
+      "file": "after-bmw-699.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(255, 255, 255)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 699,
+        "height": 2616.5,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 699,
+        "height": 124,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile UI\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 699,
+          "height": 52,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+          "borderBottom": "0px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile UI\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": [],
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 700,
+      "file": "after-bmw-700.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 700,
+        "height": 1063.25,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 700,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 700,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 1024,
+      "file": "after-bmw-1024.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 0,
+        "y": 0,
+        "width": 1024,
+        "height": 1265.75,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 0,
+        "y": 108,
+        "width": 1024,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 0,
+          "y": 116,
+          "width": 1024,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 1440,
+      "file": "after-bmw-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 1313.25,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 170,
+        "y": 108,
+        "width": 1100,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 170,
+          "y": 116,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "bmw",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 1920,
+      "file": "after-bmw-1920.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 410,
+        "y": 0,
+        "width": 1100,
+        "height": 1313.25,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 410,
+        "y": 108,
+        "width": 1100,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 410,
+          "y": 116,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "bmw-pinned",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 1440,
+      "scroll": 250,
+      "file": "after-bmw-pinned-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": -250,
+        "width": 1100,
+        "height": 1313.25,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 170,
+          "y": 8,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 250,
+      "brokenImages": []
+    },
+    {
+      "name": "services",
+      "route": "/services",
+      "width": 1440,
+      "file": "after-services-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 955,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 170,
+        "y": 108,
+        "width": 1100,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 170,
+          "y": 116,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "contact",
+      "route": "/contact",
+      "width": 1440,
+      "file": "after-contact-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 908,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "detail",
+      "route": "/vehicle/bmw-x6",
+      "width": 1440,
+      "file": "after-detail-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 2633.46875,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": null,
+      "tabs": [
+        {
+          "x": 170,
+          "y": 760.09375,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    },
+    {
+      "name": "filter",
+      "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+      "width": 1440,
+      "filter": true,
+      "file": "after-filter-1440.png",
+      "status": 200,
+      "errors": [],
+      "canvas": "rgb(245, 247, 250)",
+      "shell": {
+        "x": 170,
+        "y": 0,
+        "width": 1100,
+        "height": 1313.25,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(23, 32, 43, 0.08) 0px 0px 0px 1px",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "controls": {
+        "x": 170,
+        "y": 108,
+        "width": 1100,
+        "height": 117,
+        "background": "rgb(255, 255, 255)",
+        "shadow": "none",
+        "borderBottom": "0px",
+        "borderColor": "rgb(27, 27, 33)",
+        "font": "\"Mobile Base\", Arial, sans-serif"
+      },
+      "tabs": [
+        {
+          "x": 170,
+          "y": 116,
+          "width": 1100,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        },
+        {
+          "x": 400,
+          "y": 134,
+          "width": 640,
+          "height": 53,
+          "background": "rgb(255, 255, 255)",
+          "shadow": "none",
+          "borderBottom": "1px",
+          "borderColor": "rgb(213, 218, 224)",
+          "font": "\"Mobile Base\", Arial, sans-serif"
+        }
+      ],
+      "overflow": false,
+      "scrollY": 0,
+      "brokenImages": []
+    }
+  ]
+}

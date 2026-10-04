@@ -1,0 +1,11 @@
+{
+  "at": "2026-10-04T04:00:07.977Z",
+  "base": "http://127.0.0.1:6474",
+  "passed": true,
+  "checks": [
+    "All captured mobile routes retain identical geometry at 320/390/699, with zero changed pixels above 2/255 channel rendering tolerance. Raw differences and maximum deltas are recorded in after-metrics.json.",
+    "Desktop at 700/1024/1440/1920 keeps the centered frame and flat tabs; routes have no errors, overflow or broken visible images.",
+    "chromium: BG/EN category keyboard navigation, retained BMW filters, search Escape/focus return, sticky controls and 320/390/699/700/1440/1920 breakpoint checks passed.",
+    "webkit: BG/EN category keyboard navigation, retained BMW filters, search Escape/focus return, sticky controls and 320/390/699/700/1440/1920 breakpoint checks passed."
+  ]
+}
