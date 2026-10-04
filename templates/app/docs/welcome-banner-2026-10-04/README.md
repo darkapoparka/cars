@@ -1,5 +1,7 @@
 # Optional welcome banner — 4 October 2026
 
+This is the preserved floating-banner trial. The owner rejected it. The current greeting is a smaller [inline welcome utility row](../welcome-inline-2026-10-04/README.md) above the dealer panel. Preview links below now show that replacement.
+
 The first welcome trial interrupted browsing with a dimmed page, repeated dealer logo, mandatory language choice and a full-width action. Home now has a compact, nonmodal greeting using the configured dealer name, a quiet localized browse link and a small close circle. Both controls retain 44px targets. Language remains available in the existing menu.
 
 The inspected greeting is 92px high, down from the 268px sheet, with 18px corners, a white surface, a light border and a restrained shadow. It floats above the phone/tablet navigation with 84px plus safe-area bottom clearance; at desktop widths it sits at the bottom right with a 360px width. The page keeps its search, navigation, scrolling and normal keyboard focus. Long dealer names can wrap rather than clipping.

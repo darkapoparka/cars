@@ -1,13 +1,11 @@
 'use client';
 
 import {useEffect, useSyncExternalStore} from 'react';
-import {createPortal} from 'react-dom';
-import {ArrowRight, X} from 'lucide-react';
+import {X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
-import Link from '@/components/AppLink';
 import {dealer} from '@/lib/dealer-config';
-import {useCopy} from '@/lib/locale';
-import {basePath} from '@/lib/paths';
+import {useCopy, useLocale} from '@/lib/locale';
+import {basePath, browserPath} from '@/lib/paths';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 const dismissalKey = `cars-app:welcome:v1:${dealer.id}:${basePath || '/'}`;
@@ -48,9 +46,11 @@ function dismissWelcome() {
 
 const serverSnapshot = () => false;
 
-/** Optional first-visit greeting that leaves browsing and focus uninterrupted. */
+/** Optional welcome and locale utility row in the homepage's normal flow. */
 export default function WelcomeBanner() {
   const tx = useCopy();
+  const locale = useLocale();
+  const alternateLocale = dealer.enabledLocales.find(language => language !== locale);
   const pending = useSyncExternalStore(subscribe, pendingWelcome, serverSnapshot);
   const open = Boolean(dealer.welcomeEnabled && pending);
   useEffect(() => {
@@ -63,17 +63,18 @@ export default function WelcomeBanner() {
   }, [open]);
   if (!open) return null;
 
-  return createPortal(<div data-welcome-banner role="region" aria-labelledby="welcome-title" {...stylex.props(s.banner)}>
-    <button type="button" onClick={dismissWelcome} aria-label={tx('Close welcome')} {...stylex.props(s.close)}><span {...stylex.props(s.closeSurface)}><X size={16} aria-hidden="true"/></span></button>
-    <h2 id="welcome-title" {...stylex.props(s.title)}>{tx('Welcome to {dealerName}').replace('{dealerName}', dealer.name)}</h2>
-    <Link href="/cars" onClick={dismissWelcome} {...stylex.props(s.browse)}>{tx('Start browsing')}<ArrowRight size={15} aria-hidden="true"/></Link>
-  </div>, document.body);
+  return <div {...stylex.props(s.wrap)}><div data-welcome-banner role="region" aria-labelledby="welcome-title" {...stylex.props(s.banner)}>
+    <p id="welcome-title" {...stylex.props(s.title)}>{tx('Welcome to {dealerName}').replace('{dealerName}', dealer.name)}</p>
+    {alternateLocale ? <a href={browserPath('/', alternateLocale) + (previewRequested() ? '?welcome=1' : '')} lang={alternateLocale} hrefLang={alternateLocale} aria-label={alternateLocale === 'bg' ? 'Български' : 'English'} {...stylex.props(s.language)}><span {...stylex.props(s.languageLabel)}>{alternateLocale === 'bg' ? 'БГ' : 'EN'}</span></a> : null}
+    <button type="button" onClick={dismissWelcome} aria-label={tx('Close welcome')} {...stylex.props(s.close)}><X size={15} aria-hidden="true"/></button>
+  </div></div>;
 }
 
 const s = stylex.create({
-  banner: {position: 'fixed', zIndex: 90, right: {[media.mobile]: 12, default: 24}, left: {[media.mobile]: 12, default: 'auto'}, bottom: {[media.desktop]: 24, default: 'calc(84px + env(safe-area-inset-bottom))'}, width: {[media.mobile]: 'auto', default: 360}, maxWidth: 'calc(100vw - 24px)', padding: '14px 16px 10px', color: $.ink, fontFamily: $.fontSans, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: $.radiusMd, backgroundColor: $.surface, boxShadow: '0 4px 24px rgba(12,12,16,.1)'},
-  close: {position: 'absolute', top: 4, right: 4, display: 'grid', placeItems: 'center', width: 44, height: 44, padding: 0, color: $.muted, borderWidth: 0, borderRadius: $.radiusPill, backgroundColor: 'transparent', cursor: 'pointer', outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
-  closeSurface: {display: 'grid', placeItems: 'center', width: 28, height: 28, borderRadius: $.radiusPill, backgroundColor: {default: $.surfaceAlt, ':hover': $.line}},
-  title: {paddingInlineEnd: 36, fontSize: 16, fontWeight: 600, lineHeight: '22px', overflowWrap: 'anywhere'},
-  browse: {display: 'inline-flex', alignItems: 'center', gap: 7, minHeight: 44, color: $.muted, fontSize: 14, fontWeight: 400, lineHeight: '20px', textDecorationLine: {default: 'none', ':hover': 'underline'}, textUnderlineOffset: 4, borderRadius: $.radiusXs, outlineOffset: 2, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
+  wrap: {width: '100%', maxWidth: $.content, marginInline: 'auto', marginTop: 4, marginBottom: 8, paddingInline: {[media.mobile]: 12, default: 28}},
+  banner: {display: 'flex', alignItems: 'center', gap: 0, minHeight: 44, paddingInlineStart: 12, color: $.muted, fontFamily: $.fontSans, borderRadius: $.radiusSm, backgroundColor: $.surfaceAlt},
+  title: {flexGrow: 1, minWidth: 0, margin: 0, paddingBlock: 8, fontSize: 14, fontWeight: 400, lineHeight: '20px', overflowWrap: 'anywhere'},
+  language: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, color: $.ink, borderRadius: $.radiusPill, outlineOffset: -4, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
+  languageLabel: {display: 'grid', placeItems: 'center', minWidth: 30, minHeight: 26, paddingInline: 6, fontSize: 12, fontWeight: 400, lineHeight: '16px', borderRadius: $.radiusPill, backgroundColor: {default: $.surface, ':hover': $.line}},
+  close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, color: $.muted, borderWidth: 0, borderRadius: $.radiusPill, backgroundColor: {default: 'transparent', ':hover': $.line}, cursor: 'pointer', outlineOffset: -4, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
 });

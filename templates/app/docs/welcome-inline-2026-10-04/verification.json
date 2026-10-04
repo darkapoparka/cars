@@ -1,0 +1,255 @@
+{
+  "startedAt": "2026-10-04T09:50:48.228Z",
+  "layouts": [
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "bg",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "English",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Затвори приветствието",
+          "width": 44
+        }
+      ],
+      "viewport": 320
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "bg",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "English",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Затвори приветствието",
+          "width": 44
+        }
+      ],
+      "viewport": 390
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 697,
+        "x": 28,
+        "y": 194
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "bg",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "English",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Затвори приветствието",
+          "width": 44
+        }
+      ],
+      "viewport": 768
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "bg",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "English",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Затвори приветствието",
+          "width": 44
+        }
+      ],
+      "viewport": 1440
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 281,
+        "x": 12,
+        "y": 106
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "en",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "Български",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Close welcome",
+          "width": 44
+        }
+      ],
+      "viewport": 320
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 351,
+        "x": 12,
+        "y": 106
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "en",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "Български",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Close welcome",
+          "width": 44
+        }
+      ],
+      "viewport": 390
+    },
+    {
+      "banner": {
+        "height": 44,
+        "position": "static",
+        "width": 1184,
+        "x": 120.5,
+        "y": 223
+      },
+      "dealerGap": 12,
+      "greetingHeight": 36,
+      "locale": "en",
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "label": "Български",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "label": "Close welcome",
+          "width": 44
+        }
+      ],
+      "viewport": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "name": "Visible language link switches Home and document language",
+      "alternate": "Български",
+      "greeting": "Welcome to Drive24",
+      "locale": "en",
+      "url": "http://127.0.0.1:6483/en?welcome=1"
+    },
+    {
+      "name": "Page keyboard navigation stays available",
+      "greetingOpen": true,
+      "href": "#app-content"
+    },
+    {
+      "name": "Welcome scrolls out of view",
+      "scrollY": 506,
+      "welcomeBottom": -356
+    },
+    {
+      "name": "Close dismisses the inline greeting and clears review flag",
+      "closed": true,
+      "url": "http://127.0.0.1:6483/en"
+    },
+    {
+      "name": "Settled reload remembers dismissal",
+      "closed": true,
+      "hydrated": true,
+      "url": "http://127.0.0.1:6483/en"
+    },
+    {
+      "name": "An open drawer keeps ownership of Escape",
+      "before": {
+        "modal": true,
+        "welcome": true
+      },
+      "after": {
+        "modalClosed": true,
+        "welcomeRemains": true
+      }
+    },
+    {
+      "name": "Escape dismisses the inline welcome with no active drawer",
+      "closed": true,
+      "url": "http://127.0.0.1:6483/en"
+    }
+  ],
+  "consoleErrors": [],
+  "finishedAt": "2026-10-04T09:56:15.585Z",
+  "check": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "passed": true,
+    "generatedPages": 407
+  }
+}
