@@ -88,12 +88,27 @@ try {
         await search.fill('zzzznomatch');
         assert(await dialog.getByText('Няма съвпадения', { exact: true }).isVisible());
         await search.fill('audi');
+        const pickerFrame = await dialog.boundingBox();
+        const pickerFooter = await dialog.locator('.dn-listing-filter__dialog-footer').boundingBox();
         await dialog.getByRole('radio', { name: 'Audi', exact: true }).click();
         assert.equal(await dialog.getByRole('tab', { name: 'Марка', exact: true }).getAttribute('aria-selected'), 'true', 'Picking a choice keeps its view open');
         assert.equal(await dialog.getByRole('tab').count(), 12, 'Each filter is reachable without returning to the overview');
         await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
         assert.equal(await dialog.getByRole('tab', { name: 'Модел', exact: true }).getAttribute('aria-selected'), 'true');
         assert.equal(await dialog.getByRole('heading', { level: 2 }).innerText(), 'Модел', 'The active filter is the window title');
+        for (const tab of await dialog.getByRole('tab').all()) {
+          await tab.click();
+          const frame = await dialog.boundingBox();
+          const footer = await dialog.locator('.dn-listing-filter__dialog-footer').boundingBox();
+          assert(Math.abs(frame.y - pickerFrame.y) < 1 && Math.abs(frame.height - pickerFrame.height) < 1, 'Switching filters retains the window position and height');
+          assert(Math.abs(footer.y - pickerFooter.y) < 1, 'The result action stays in place');
+          assert((await tab.boundingBox()).height >= 52, 'Filter tabs have a full prominent control target');
+          assert(Number.parseFloat(await tab.evaluate(el => getComputedStyle(el).fontSize)) >= 16, 'Filter tabs retain readable desktop type');
+        }
+        const backBox = await dialog.getByRole('button', { name: 'Назад към филтрите', exact: true }).boundingBox();
+        const titleBox = await dialog.getByRole('heading', { level: 2 }).boundingBox();
+        assert(backBox.x + backBox.width <= titleBox.x, 'Back appears to the left of the active title');
+        await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
         assert.equal(await dialog.getByRole('radio', { name: 'X6 M Sport', exact: true }).count(), 0);
         await dialog.getByRole('radio', { name: 'RS 6 Avant', exact: true }).click();
         await dialog.getByRole('tab', { name: 'Марка', exact: true }).click();
@@ -104,6 +119,8 @@ try {
         await form.locator('[data-facet=make]').click();
         await dialog.getByRole('radio', { name: 'Audi', exact: true }).click();
         await dialog.getByRole('button', { name: 'Назад към филтрите', exact: true }).click();
+        const overviewFrame = await dialog.boundingBox();
+        assert(Math.abs(overviewFrame.y - pickerFrame.y) < 1 && Math.abs(overviewFrame.height - pickerFrame.height) < 1, 'Returning to the overview keeps the same window frame');
         assert.equal(await dialog.locator('input[type=hidden][name=make]').inputValue(), 'Audi');
         assert.equal(await dialog.locator('[data-desktop-key=make]').evaluate(el => el === document.activeElement), true, 'Back returns focus to the overview field');
         if (width === 1440) await dialog.screenshot({ path: `${output}/cars-search-menu.png` });

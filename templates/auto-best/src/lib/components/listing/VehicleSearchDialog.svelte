@@ -161,8 +161,11 @@
     const field = desktopChoice;
     desktopChoice = undefined;
     await tick();
+    const content = filterDialog?.querySelector<HTMLDivElement>('.dn-listing-filter__dialog-content');
+    if (content) content.scrollTop = 0;
     const target = pickerTrigger?.isConnected ? pickerTrigger : filterDialog?.querySelector<HTMLButtonElement>(`[data-desktop-field="${field}"]`);
     target?.focus({ preventScroll: true });
+    target?.scrollIntoView({ block: 'nearest' });
   }
 
   const openFilters = (event: MouseEvent, field?: string) => {
@@ -174,6 +177,8 @@
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
     filterDialog?.showModal();
+    const content = filterDialog?.querySelector<HTMLDivElement>('.dn-listing-filter__dialog-content');
+    if (desktopMode && content) content.scrollTop = 0;
     requestAnimationFrame(() => {
       if (desktopMode && desktopChoice) { void focusDesktopPicker(); return; }
       const compact = window.matchMedia('(max-width: 767px)').matches;
@@ -219,6 +224,7 @@
 {#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
+  class:dn-listing-filter__dialog--desktop={desktopMode}
   class:dn-listing-filter__dialog--picker={desktopMode && Boolean(desktopChoice)}
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
@@ -235,10 +241,10 @@
     onformdata={cleanFormData}
   >
     <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header">
-      <h2 id="dn-listing-filter-title" tabindex="-1" data-picker-initial={desktopMode && desktopChoice && desktopChoice !== 'make' && desktopChoice !== 'model' ? true : undefined}><span class="dn-listing-filter__title-desktop">{desktopMode && desktopChoice ? listingFacetTitle(desktopChoice, i18n.locale) : i18n.t("m_32729e44de2d")}</span><span class="dn-listing-filter__title-mobile">{i18n.t("m_546ebb8eb993")}</span></h2>
       {#if desktopMode && desktopChoice}
         <button class="dn-listing-filter__back" type="button" aria-label={i18n.t('m_a779c56e526e')} onclick={backToDesktopFilters}><Icon name="arrow-left" size={18} />{i18n.t('m_76900f1bfd16')}</button>
       {/if}
+      <h2 id="dn-listing-filter-title" tabindex="-1" data-picker-initial={desktopMode && desktopChoice && desktopChoice !== 'make' && desktopChoice !== 'model' ? true : undefined}><span class="dn-listing-filter__title-desktop">{desktopMode && desktopChoice ? listingFacetTitle(desktopChoice, i18n.locale) : i18n.t("m_32729e44de2d")}</span><span class="dn-listing-filter__title-mobile">{i18n.t("m_546ebb8eb993")}</span></h2>
       <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t("m_2b3fff4a027c")} onclick={closeFilters}>
         <Icon name="x" />
       </button>
@@ -435,12 +441,9 @@
   .dn-desktop-filter-choice :global(svg) { flex: 0 0 auto; color: var(--dn-muted); }
   .dn-desktop-filter-choice:hover { background: var(--dn-surface-hover); }
   .dn-desktop-filter-choice:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-  .dn-listing-filter__dialog--picker .dn-listing-filter__dialog-panel { min-height: min(440px, calc(100dvh - 48px)); }
-  .dn-listing-filter__dialog--picker .dn-listing-filter__dialog-content { flex: 1; }
-  .dn-listing-filter__back { display: inline-flex; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-height-default); margin-inline-start: auto; padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
+  .dn-listing-filter__back { display: inline-flex; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
   .dn-listing-filter__back:hover { background: var(--dn-surface-hover); }
   .dn-listing-filter__back:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-  .dn-listing-filter__dialog--picker .dn-listing-filter__close { margin-left: 0; }
   .dn-listing-filter__dialog-content .dn-listing-filter__dialog-search--hidden,
   .dn-listing-filter__filter-groups--hidden { display: none !important; }
   .dn-listing-filter__submit-compact { display: none; }
@@ -774,6 +777,20 @@
     background: #c9cdd3;
     color: #6f7580;
     cursor: not-allowed;
+  }
+
+  @media (min-width: 992px) {
+    .dn-listing-filter__dialog--desktop { height: min(720px, calc(100dvh - 64px)); max-height: calc(100dvh - 64px); }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-panel { height: 100%; max-height: none; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-header { display: grid; grid-template-columns: 112px minmax(0, 1fr) 112px; grid-template-areas: 'back title close'; padding: var(--dn-space-6) var(--dn-space-8) var(--dn-space-4); }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-header h2 { grid-area: title; text-align: center; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__back { grid-area: back; justify-self: start; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__close { grid-area: close; justify-self: end; margin-left: 0; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-content { flex: 1; scrollbar-gutter: stable; padding: var(--dn-space-4) var(--dn-space-8) var(--dn-space-6); }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-footer { display: grid; flex: 0 0 92px; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--dn-space-6); padding: var(--dn-space-4) var(--dn-space-8) var(--dn-space-6); border-top: 1px solid var(--dn-line); }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__clear { grid-column: 1; grid-row: 1; justify-self: start; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__range-error { grid-column: 2; grid-row: 1; }
+    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-submit { grid-column: 3; grid-row: 1; height: var(--dn-control-height-prominent); }
   }
 
   @media (max-width: 991px) {

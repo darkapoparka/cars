@@ -52,15 +52,22 @@ Mobile and tablet controls retain their existing roles.
 Inventory's desktop facet buttons open the existing search window directly at
 the selected field. Its overview retains the original field grid and equipment
 choices. Each field opens a focused view within that same dialog. The active
-field becomes the window title, with a grey Back button and one compact underline
-row for every filter, including Equipment. Make and Model use searchable radio
+field becomes the centered window title, with a grey Back button on the left.
+All twelve filters, including Equipment, use two equal rows of underline tabs
+with 17px type and 52px targets. The listing dialog keeps a 720px frame, capped
+to the viewport with 32px clearance, across the overview and every selector.
+Header, tabs, content and footer share 32px side padding; selection grids use
+three equal columns, and paired range inputs fill the same content width.
+Scrolling stays inside the body with a reserved scrollbar gutter; the footer
+and result action stay in place, including for invalid ranges. Make and Model use
+searchable radio
 choices and available-result counts. Selecting a value keeps its view open;
 tabs move between fields while retaining every pending choice. Equipment allows
 multiple checked choices. Arrow keys, Home and End navigate the tabs. Back retains
 the outer draft and returns to the original overview field; closing the
 window discards it, and the result action applies it. Budget/year use paired
-number inputs and mileage uses a number input with optional limits. Short
-selection views fit their content. Home and widths below 992px retain native
+number inputs and mileage uses a number input with optional limits. Home and
+widths below 992px retain native
 facets and the existing mobile sheets.
 Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
