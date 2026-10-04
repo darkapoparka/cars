@@ -127,7 +127,7 @@
       <Dialog.Description class="dn-search-sr-only">{i18n.t('inventory.search.placeholder')}</Dialog.Description>
       <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={event => cleanListingFormData(event.formData)}>
         <Command.Root class="dn-search-command" shouldFilter={false} columns={!field && !search ? 2 : 1} loop bind:value={commandValue} label={title}>
-          <div class="dn-search-header" role="presentation" onkeydown={controlKeyboard}>
+          <div class="dn-search-header" data-range={range} role="presentation" onkeydown={controlKeyboard}>
             {#if field}
               <button class="dn-search-back" type="button" aria-label={i18n.t('m_a779c56e526e')} title={i18n.t('m_3deeda2a1ebe')} onclick={() => browse()}><Icon name="arrow-left" size={18} /></button>
               <span class="dn-search-scope">{title}</span>
@@ -179,7 +179,7 @@
                     </Command.Item>
                   {/if}
                   {#each choices as item (`${item.field}:${item.value}`)}
-                    <Command.Item class="dn-search-row" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}>
+                    <Command.Item class="dn-search-row dn-search-choice" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}>
                       <span class="dn-search-row-label">{item.label}{#if item.make && !modelMake}<small>{item.make}</small>{/if}</span>
                       <span class="dn-search-row-count">{choiceCount(item)}</span><span class="dn-search-check" data-checked={isSelected(item)}>✓</span>
                     </Command.Item>
@@ -190,7 +190,7 @@
                     <Command.Group>
                       <Command.GroupHeading class="dn-search-group-title">{i18n.t('inventory.search.matches')}</Command.GroupHeading>
                       <Command.GroupItems>{#each searchChoices as item (`${item.field}:${item.value}`)}
-                        <Command.Item class="dn-search-row" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}><span>{item.label}</span><small>{listingFacetTitle(item.field, i18n.locale)}{item.make ? ' · ' + item.make : ''}</small><span class="dn-search-check" data-checked={isSelected(item)}>✓</span></Command.Item>
+                        <Command.Item class="dn-search-row dn-search-choice" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}><span class="dn-search-row-label">{item.label}</span><small>{listingFacetTitle(item.field, i18n.locale)}{item.make ? ' · ' + item.make : ''}</small><span class="dn-search-check" data-checked={isSelected(item)}>✓</span></Command.Item>
                       {/each}</Command.GroupItems>
                     </Command.Group>
                   {/if}
@@ -223,60 +223,68 @@
 
 <style>
   :global(.dn-search-sr-only) { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-  :global(.dn-search-overlay) { position: fixed; inset: 0; z-index: 11000; background: rgb(18 20 25 / .32); backdrop-filter: blur(3px); }
-  :global(.dn-search-dialog) { --dn-search-top: min(128px, 15dvh); display: flex; position: fixed; z-index: 11001; top: var(--dn-search-top); left: 50%; width: min(680px, calc(100vw - 64px)); max-height: calc(100dvh - var(--dn-search-top) - 24px); overflow: hidden; border: 1px solid rgb(0 0 0 / .08); border-radius: 16px; background: var(--dn-white); color: var(--dn-ink); box-shadow: 0 24px 80px rgb(0 0 0 / .2), 0 2px 8px rgb(0 0 0 / .06); transform: translateX(-50%); }
+  :global(.dn-search-overlay) { position: fixed; inset: 0; z-index: 11000; background: rgb(18 20 25 / .32); backdrop-filter: blur(2px); }
+  :global(.dn-search-dialog) { --dn-search-top: min(128px, 15dvh); display: flex; position: fixed; z-index: 11001; top: var(--dn-search-top); left: 50%; width: min(680px, calc(100vw - 64px)); max-height: calc(100dvh - var(--dn-search-top) - 24px); overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-sheet); background: var(--dn-surface-raised); color: var(--dn-ink); box-shadow: var(--dn-shadow); transform: translateX(-50%); }
   form { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 0; margin: 0; }
   :global(.dn-search-command) { display: flex; flex: 1; flex-direction: column; min-height: 0; }
-  .dn-search-header { display: flex; flex-shrink: 0; align-items: center; gap: 12px; height: 72px; padding: 0 24px; border-bottom: 1px solid var(--dn-line); }
-  .dn-search-symbol { color: var(--dn-muted); }
-  .dn-search-scope { flex-shrink: 0; padding-right: 16px; border-right: 1px solid var(--dn-line); font-size: var(--dn-text-control-prominent); font-weight: var(--dn-weight-semibold); }
+  .dn-search-header { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); height: 72px; padding: 0 var(--dn-space-6); border-bottom: 1px solid var(--dn-line); }
+  .dn-search-symbol { display: flex; color: var(--dn-muted); }
+  .dn-search-scope { flex-shrink: 0; padding-right: var(--dn-space-4); border-right: 1px solid var(--dn-line); font-size: var(--dn-text-control-prominent); font-weight: var(--dn-weight-semibold); }
+  .dn-search-header[data-range='true'] .dn-search-scope { padding-right: 0; border-right: 0; }
   :global(.dn-search-input) { width: 100%; min-width: 0; height: 100%; padding: 0; border: 0; outline: 0; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); box-shadow: none; }
   :global(.dn-search-input::placeholder) { color: var(--dn-muted); }
   .dn-search-range-space { flex: 1; }
-  .dn-search-back, .dn-search-icon, :global(.dn-search-close) { display: grid; flex: 0 0 40px; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 8px; background: transparent; color: var(--dn-muted); cursor: pointer; }
+  .dn-search-back, .dn-search-icon, :global(.dn-search-close) { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-back { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-search-icon:hover, .dn-search-back:hover, :global(.dn-search-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: 8px; height: 56px; overflow-x: auto; padding: 0 24px; scrollbar-width: thin; }
+  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-2); height: 56px; overflow-x: auto; padding: 0 var(--dn-space-6); scrollbar-width: thin; }
   .dn-search-section-title { color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
-  .dn-search-add { display: flex; flex: 0 0 auto; align-items: center; gap: 6px; height: 36px; padding: 0 10px; border: 1px solid var(--dn-line); border-radius: 6px; background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-add { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-2); height: var(--dn-control-height-compact); padding: 0 var(--dn-space-3); border: 1px solid transparent; border-radius: var(--dn-radius-button); background: var(--dn-surface-subtle); color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-add > span { font-size: var(--dn-text-card); line-height: var(--dn-leading-control); }
-  .dn-search-token { display: flex; flex: 0 0 auto; align-items: center; max-width: 330px; height: 36px; overflow: hidden; border: 1px solid var(--dn-line); border-radius: 6px; background: var(--dn-surface-subtle); }
-  .dn-search-token button { display: flex; align-items: center; gap: 8px; min-width: 0; height: 100%; padding: 0 10px; border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); white-space: nowrap; cursor: pointer; }
+  .dn-search-token { display: flex; flex: 0 0 auto; align-items: center; max-width: 330px; height: var(--dn-control-height-compact); overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); }
+  .dn-search-token button { display: flex; align-items: center; gap: var(--dn-space-2); min-width: 0; height: 100%; padding: 0 var(--dn-space-3); border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); white-space: nowrap; cursor: pointer; }
   .dn-search-token-edit { flex: 1; }
-  .dn-search-token .dn-search-token-remove { flex: 0 0 36px; justify-content: center; padding: 0; }
+  .dn-search-token .dn-search-token-remove { flex: 0 0 var(--dn-control-height-compact); justify-content: center; padding: 0; }
   .dn-search-token-label { flex-shrink: 0; color: var(--dn-muted); font-weight: var(--dn-weight-ui); }
   .dn-search-token-value { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
   .dn-search-token button:hover, .dn-search-add:hover { background: var(--dn-surface-hover); }
-  :global(.dn-search-results) { flex: 1 1 280px; height: 280px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 8px; scrollbar-width: thin; }
-  :global(.dn-search-group-title) { padding: 8px 16px; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
-  :global(.dn-search-field-grid[data-grid='true']) { display: grid; grid-template-columns: 1fr 1fr; column-gap: 16px; }
-  :global(.dn-search-row) { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 10px 16px; border-radius: 8px; outline: 0; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
-  :global(.dn-search-row[data-selected]) { background: var(--dn-surface-subtle); }
+  .dn-search-token:has(button:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  .dn-search-token button:focus-visible { outline: 0; background: var(--dn-surface-hover); }
+  :global(.dn-search-results) { flex: 1 1 280px; height: 280px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); scrollbar-width: thin; }
+  :global(.dn-search-group-title) { padding: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
+  :global(.dn-search-field-grid[data-grid='true']) { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--dn-space-4); }
+  :global(.dn-search-row) { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-2); border-block: var(--dn-space-half) solid transparent; border-radius: var(--dn-radius-control); background-clip: padding-box; outline: 0; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
+  :global(.dn-search-row[data-selected]) { background-color: var(--dn-surface-subtle); }
   :global(.dn-search-row > span:not(.dn-search-check):not(.dn-search-row-count)) { flex: 1; min-width: 0; }
   :global(.dn-search-row[aria-checked='true'] > .dn-search-row-label) { font-weight: var(--dn-weight-semibold); }
   :global(.dn-search-row small) { overflow: hidden; color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-ui); text-overflow: ellipsis; white-space: nowrap; }
-  .dn-search-row-label { display: flex; align-items: center; gap: 12px; }
+  :global(.dn-search-row[data-field] > svg) { flex-shrink: 0; color: var(--dn-muted); }
+  .dn-search-row-label { display: flex; align-items: center; gap: var(--dn-space-3); }
   .dn-search-row-count { color: var(--dn-muted); font-size: var(--dn-text-meta); font-variant-numeric: tabular-nums; }
-  .dn-search-check { flex: 0 0 16px; color: var(--dn-ink); visibility: hidden; }
+  .dn-search-check { display: grid; flex: 0 0 20px; place-items: center; color: inherit; visibility: hidden; }
   .dn-search-check[data-checked='true'] { visibility: visible; }
-  .dn-search-empty { margin: 32px 12px; color: var(--dn-muted); text-align: center; font-size: var(--dn-text-meta); }
-  .dn-search-range { padding: 24px; }
-  .dn-search-range-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  label { display: grid; gap: 10px; font: var(--dn-control-font); font-size: var(--dn-text-meta); }
+  :global(.dn-search-choice[aria-checked='true']) { background-color: var(--dn-ink-strong); color: var(--dn-white); }
+  :global(.dn-search-choice[aria-checked='true'] small), :global(.dn-search-choice[aria-checked='true'] .dn-search-row-count) { color: var(--dn-text-on-ink); }
+  .dn-search-empty { margin: var(--dn-space-8) var(--dn-space-3); color: var(--dn-muted); text-align: center; font-size: var(--dn-text-meta); }
+  .dn-search-range { padding: var(--dn-space-6); }
+  .dn-search-range-fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-4); }
+  label { display: grid; gap: var(--dn-space-2); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
   label span { color: var(--dn-muted); }
-  input[type='number'] { width: 100%; height: 48px; padding: 0 12px; border: 1px solid var(--dn-line); border-radius: 8px; background: var(--dn-white); color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); }
-  .dn-search-presets { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-  .dn-search-presets button { min-height: 40px; padding: 8px 12px; border: 1px solid var(--dn-line); border-radius: 6px; background: transparent; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-presets button[data-active='true'] { border-color: var(--dn-ink); background: var(--dn-surface-subtle); }
-  .dn-search-unlimited { min-height: 40px; margin-top: 12px; padding: 8px 0; border: 0; background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-footer { display: flex; flex-shrink: 0; align-items: center; gap: 12px; min-height: 72px; padding: 12px 24px; border-top: 1px solid var(--dn-line); background: var(--dn-surface-subtle); }
-  .dn-search-range-error { margin: 12px 0 0; color: var(--dn-red); font-size: var(--dn-text-meta); }
-  .dn-search-hints { display: flex; flex: 1; align-items: center; gap: 14px; color: var(--dn-muted); font-size: var(--dn-text-meta); }
-  .dn-search-hints > span { display: flex; align-items: center; gap: 4px; }
-  kbd { display: grid; place-items: center; width: 18px; height: 18px; border: 1px solid var(--dn-line); border-radius: 4px; background: var(--dn-white); font: inherit; }
-  .dn-search-reset { min-height: 40px; padding: 8px; border: 0; background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-reset:hover { color: var(--dn-ink); }
-  .dn-search-apply { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: 12px; min-width: 272px; min-height: 44px; margin-left: auto; padding: 10px 16px; border: 0; border-radius: 8px; background: var(--dn-ink); color: var(--dn-white); font: var(--dn-control-font); white-space: nowrap; cursor: pointer; }
+  input[type='number'] { width: 100%; height: var(--dn-control-height-default); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); }
+  .dn-search-presets { display: flex; flex-wrap: wrap; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+  .dn-search-presets button { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-presets button:hover { background: var(--dn-surface-subtle); }
+  .dn-search-presets button[data-active='true'] { border-color: var(--dn-ink-strong); background: var(--dn-ink-strong); color: var(--dn-white); }
+  .dn-search-unlimited { min-height: var(--dn-control-height-compact); margin-top: var(--dn-space-3); padding: var(--dn-space-2) 0; border: 0; background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-unlimited:hover { color: var(--dn-ink); text-decoration: underline; text-underline-offset: var(--dn-space-1); }
+  .dn-search-footer { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); min-height: 72px; padding: var(--dn-space-3) var(--dn-space-6); border-top: 1px solid var(--dn-line); background: var(--dn-surface-raised); }
+  .dn-search-range-error { margin: var(--dn-space-3) 0 0; color: var(--dn-red); font-size: var(--dn-text-meta); }
+  .dn-search-hints { display: flex; flex: 1; align-items: center; gap: var(--dn-space-3); color: var(--dn-muted); font-size: var(--dn-text-meta); }
+  .dn-search-hints > span { display: flex; align-items: center; gap: var(--dn-space-1); }
+  kbd { display: grid; place-items: center; width: 20px; height: 20px; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-xs); background: var(--dn-surface-subtle); font: inherit; }
+  .dn-search-reset { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-reset:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
+  .dn-search-apply { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-width: 272px; min-height: var(--dn-control-height-default); margin-left: auto; padding: 10px var(--dn-space-4); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-ink-strong); color: var(--dn-white); font: var(--dn-control-font); white-space: nowrap; cursor: pointer; }
   .dn-search-apply:hover { background: var(--dn-ink-hover); }
   .dn-search-apply:disabled { opacity: .45; cursor: not-allowed; }
   button:focus-visible, input[type='number']:focus-visible, :global(.dn-search-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }

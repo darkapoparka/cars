@@ -61,6 +61,11 @@ The window keeps the same top anchor and 280px result area across every field,
 the overview and search states. Short windows shrink that scrollable area while
 retaining the header and footer. Content shares a 24px inset; Show cars has a
 44px target and a stable width, and tokens keep their removal controls visible.
+The dialog uses shared sheet/control radii and surface/shadow roles; its
+actions and filter tokens follow the pill family. Selected values and presets
+use charcoal with white text. Neutral command focus stays light, and the white
+footer keeps the primary action distinct. Range headings omit the search divider;
+token keyboard focus stays visible outside clipped values.
 Choice search tolerates accents and model spacing. Typing only narrows suggestions;
 the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
 choices. Model respects the opening make and a uniquely owned model can infer
