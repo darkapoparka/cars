@@ -7,6 +7,7 @@
 		action,
 		href,
 		image,
+		logo,
 		compact = false,
 		onclick
 	}: {
@@ -15,6 +16,7 @@
 		action: string;
 		href: string;
 		image: string;
+		logo?: string;
 		compact?: boolean;
 		onclick?: (event: MouseEvent) => void;
 	} = $props();
@@ -22,6 +24,7 @@
 
 <a class="commerce-banner" class:commerce-banner--compact={compact} {href} {onclick}>
 	<img
+		class="commerce-banner__image"
 		src={assetHref(`${image}.webp`)}
 		srcset={`${assetHref(`${image}-small.webp`)} 360w, ${assetHref(`${image}.webp`)} 720w, ${assetHref(`${image}-large.webp`)} 1080w`}
 		sizes={compact
@@ -34,6 +37,18 @@
 		decoding="async"
 	/>
 	<div class="commerce-banner__copy">
+		{#if logo}
+			<img
+				class="commerce-banner__logo"
+				src={assetHref(logo)}
+				alt=""
+				aria-hidden="true"
+				width="112"
+				height="32"
+				loading="lazy"
+				decoding="async"
+			/>
+		{/if}
 		<h3>{title}</h3>
 		{#if body}<p>{body}</p>{/if}
 		<span class="commerce-banner__action">{action}<ArrowRight size={18} aria-hidden="true" /></span>
@@ -54,7 +69,7 @@
 		color: var(--bc-white);
 		text-decoration: none;
 	}
-	img {
+	.commerce-banner__image {
 		position: absolute;
 		inset: 0;
 		z-index: -1;
@@ -62,6 +77,9 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: right center;
+	}
+	.commerce-banner__logo {
+		display: none;
 	}
 	.commerce-banner__copy {
 		display: flex;
@@ -118,6 +136,14 @@
 		font-size: 22px;
 	}
 	@media (min-width: 768px) {
+		.commerce-banner__logo {
+			display: block;
+			width: 112px;
+			height: 32px;
+			flex: none;
+			object-fit: contain;
+			object-position: left center;
+		}
 		.commerce-banner:not(.commerce-banner--compact) {
 			aspect-ratio: auto;
 			min-height: 260px;

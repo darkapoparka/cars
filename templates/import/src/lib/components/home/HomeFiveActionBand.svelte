@@ -2,6 +2,7 @@
 	import { linkHref as resolve } from '$lib/utils/links';
 	import type { HomePageCopy } from '$lib/i18n/messages';
 	import CommerceBanner from '$lib/components/common/CommerceBanner.svelte';
+	import { site } from '$lib/config/site';
 	let {
 		copy,
 		variant = 'guidance'
@@ -48,6 +49,7 @@
 	>
 		{#if variant !== 'consultation'}
 			<CommerceBanner
+				logo={ownership ? site.identity.logoOnDark : undefined}
 				title={firstTitle}
 				body={ownership
 					? english
@@ -67,6 +69,7 @@
 		{/if}
 		{#if variant !== 'selection'}
 			<CommerceBanner
+				logo={ownership ? site.identity.logoOnDark : undefined}
 				title={secondTitle}
 				body={ownership
 					? english

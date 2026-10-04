@@ -176,7 +176,7 @@ test('desktop commerce actions and article covers load', async ({ page }, info) 
 		await expect
 			.poll(() =>
 				campaign
-					.locator('img')
+					.locator('.commerce-banner__image')
 					.evaluate((image: HTMLImageElement) => image.complete && image.naturalWidth > 0)
 			)
 			.toBe(true);
