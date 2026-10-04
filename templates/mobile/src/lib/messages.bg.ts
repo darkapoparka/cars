@@ -13,6 +13,8 @@ export const bgMessages: Record<string, string> = {
   'Skip to content': 'Към съдържанието',
   'Find a vehicle': 'Намерете автомобил',
   'Vehicle category': 'Вид превозно средство',
+  'Vehicle type': 'Вид',
+  Gearbox: 'Скоростна кутия',
   Motorbikes: 'Мотоциклети',
   'E-bikes': 'Електрически велосипеди',
   Motorhomes: 'Кемпери',

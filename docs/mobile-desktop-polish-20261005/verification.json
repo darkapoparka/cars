@@ -1,0 +1,1887 @@
+{
+  "date": "2026-10-05",
+  "template": "Mobile",
+  "preview": "http://127.0.0.1:6478/",
+  "scope": "Desktop styling above 1024px. Retained vehicle type inside search, the 280px hero, one quick-filter row, sorting beside results and four inventory columns.",
+  "changes": [
+    "Shared hero field styles and breakpoint-based menu dismissal",
+    "Lighter pills and restrained selected surfaces",
+    "Grouped range fields, balanced make/model panes and consistent filter actions",
+    "Filter styles separated from editor behavior; sorting extracted into its own component"
+  ],
+  "sourceHashes": {
+    "src/components/ShowroomDesktopHero.tsx": "8b1e895f93fb133f37090233739503c01aee11533a3c37cdb22018d84e73c282",
+    "src/components/ShowroomDesktopType.tsx": "e945426cee3b1306258ebabb10c183bd94429537d5ad6617943332ae1c914283",
+    "src/components/ShowroomInventoryScreen.tsx": "34b5dec0a9351fbd30355611c219df5d11bcca7d5b9d9ea49a42b8f63171a394",
+    "src/components/ShowroomFilterSheet.tsx": "4a44bdfc54586674a47a6fe91d160f2a10c9b4b8f236357f2b26c26c893910c0",
+    "src/components/ShowroomQuickPills.tsx": "413b35d9734969b8c3b9701bc15c230bdde7e0b098169c5bda85f8d3ad53468f",
+    "src/components/ShowroomTabs.tsx": "66f75c18e4e0dba6fb692ce6bd86cc42038bdb7365fa70d8e5a3bf36d9587953",
+    "src/components/showroom-desktop-make-model.stylex.ts": "66abddd0b38452cee4badabd23a1b1c3fa263a4e44c471b952c4169e7e36aa0c",
+    "src/components/ShowroomSortDialog.tsx": "4a699509ad9b6e8f95ca3e3446572ae7bec88c4f292e15f456ff9a257b8fe155",
+    "src/components/showroom-filter-sheet.stylex.ts": "775b4b361f87ed16804a54fa62a9db5c5f987d58db9fdd21122a69d6398cb4f8",
+    "src/components/showroom-desktop-controls.stylex.ts": "31a3289eb28ebca4dfc8c634c2771add5130deb00a9b4c52930328235bc310d3",
+    "src/lib/messages.bg.ts": "3ca6a9f30bc33c4ab477266740616a91576d9d14a53b24dd1eba2485782efa8e"
+  },
+  "checks": {
+    "node": "22.20.0",
+    "lint": "passed",
+    "typecheck": "passed",
+    "retainedTests": {
+      "code": 0,
+      "tests": 95,
+      "passed": 95,
+      "failed": 0
+    },
+    "productionBuild": "passed",
+    "output": ".next-desktop-polish-20261005",
+    "routes": 51
+  },
+  "desktop": {
+    "base": "http://127.0.0.1:6496",
+    "checks": [
+      "chromium 1023x768: responsive boundary and no page overflow",
+      "chromium 1024x768: responsive boundary and no page overflow",
+      "chromium 1024x768: type in search box, four quick filters, four cards and stock sorting",
+      "chromium 1024x768: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "chromium 1024x768: actual category selection, honest empty stock and focus return",
+      "chromium 1024x768: open desktop menu closes when resized to phone",
+      "chromium 1280x720: responsive boundary and no page overflow",
+      "chromium 1280x720: type in search box, four quick filters, four cards and stock sorting",
+      "chromium 1280x720: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "chromium 1280x720: actual category selection, honest empty stock and focus return",
+      "chromium 1280x720: open desktop menu closes when resized to phone",
+      "chromium 1440x960: responsive boundary and no page overflow",
+      "chromium 1440x960: type in search box, four quick filters, four cards and stock sorting",
+      "chromium 1440x960: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "chromium 1440x960: actual category selection, honest empty stock and focus return",
+      "chromium: gearbox shortcut selects and applies real transmission criteria",
+      "chromium: searchable make/model picker, price cancel/apply, applied chips and per-category criteria survive reload",
+      "chromium: stock sorting, retained keyword search, browse and filtered detail Back",
+      "chromium 1440x960: open desktop menu closes when resized to phone",
+      "chromium 1920x1080: responsive boundary and no page overflow",
+      "chromium 1920x1080: type in search box, four quick filters, four cards and stock sorting",
+      "chromium 1920x1080: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "chromium 1920x1080: actual category selection, honest empty stock and focus return",
+      "chromium 1920x1080: open desktop menu closes when resized to phone",
+      "chromium 1024x600: responsive boundary and no page overflow",
+      "chromium 1024x600: type in search box, four quick filters, four cards and stock sorting",
+      "chromium 1024x600: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "chromium 1024x600: actual category selection, honest empty stock and focus return",
+      "chromium 1024x600: open desktop menu closes when resized to phone",
+      "webkit 1023x768: responsive boundary and no page overflow",
+      "webkit 1024x768: responsive boundary and no page overflow",
+      "webkit 1024x768: type in search box, four quick filters, four cards and stock sorting",
+      "webkit 1024x768: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "webkit 1024x768: actual category selection, honest empty stock and focus return",
+      "webkit 1024x768: open desktop menu closes when resized to phone",
+      "webkit 1280x720: responsive boundary and no page overflow",
+      "webkit 1280x720: type in search box, four quick filters, four cards and stock sorting",
+      "webkit 1280x720: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "webkit 1280x720: actual category selection, honest empty stock and focus return",
+      "webkit 1280x720: open desktop menu closes when resized to phone",
+      "webkit 1440x960: responsive boundary and no page overflow",
+      "webkit 1440x960: type in search box, four quick filters, four cards and stock sorting",
+      "webkit 1440x960: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "webkit 1440x960: actual category selection, honest empty stock and focus return",
+      "webkit: gearbox shortcut selects and applies real transmission criteria",
+      "webkit: searchable make/model picker, price cancel/apply, applied chips and per-category criteria survive reload",
+      "webkit: stock sorting, retained keyword search, browse and filtered detail Back",
+      "webkit 1440x960: open desktop menu closes when resized to phone",
+      "webkit 1920x1080: responsive boundary and no page overflow",
+      "webkit 1920x1080: type in search box, four quick filters, four cards and stock sorting",
+      "webkit 1920x1080: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "webkit 1920x1080: actual category selection, honest empty stock and focus return",
+      "webkit 1920x1080: open desktop menu closes when resized to phone",
+      "webkit 1024x600: responsive boundary and no page overflow",
+      "webkit 1024x600: type in search box, four quick filters, four cards and stock sorting",
+      "webkit 1024x600: menu fits viewport; arrows, Home/End, Escape, Tab and outside dismissal",
+      "webkit 1024x600: actual category selection, honest empty stock and focus return",
+      "webkit 1024x600: open desktop menu closes when resized to phone"
+    ],
+    "geometry": [
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 768,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 253.5,
+            "bottom": 788.1875,
+            "left": 16
+          },
+          {
+            "x": 267.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 505,
+            "bottom": 788.1875,
+            "left": 267.5
+          },
+          {
+            "x": 519,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 756.5,
+            "bottom": 788.1875,
+            "left": 519
+          },
+          {
+            "x": 770.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 1008,
+            "bottom": 788.1875,
+            "left": 770.5
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1280,
+        "height": 720,
+        "hero": {
+          "x": 106,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 90,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 106,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 362.5,
+            "bottom": 800.0625,
+            "left": 106
+          },
+          {
+            "x": 376.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 633,
+            "bottom": 800.0625,
+            "left": 376.5
+          },
+          {
+            "x": 647,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 903.5,
+            "bottom": 800.0625,
+            "left": 647
+          },
+          {
+            "x": 917.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1174,
+            "bottom": 800.0625,
+            "left": 917.5
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "hero": {
+          "x": 186,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 170,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          },
+          {
+            "x": 456.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 713,
+            "bottom": 800.0625,
+            "left": 456.5
+          },
+          {
+            "x": 727,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 983.5,
+            "bottom": 800.0625,
+            "left": 727
+          },
+          {
+            "x": 997.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1254,
+            "bottom": 800.0625,
+            "left": 997.5
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "hero": {
+          "x": 426,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 410,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 426,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 682.5,
+            "bottom": 800.0625,
+            "left": 426
+          },
+          {
+            "x": 696.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 953,
+            "bottom": 800.0625,
+            "left": 696.5
+          },
+          {
+            "x": 967,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1223.5,
+            "bottom": 800.0625,
+            "left": 967
+          },
+          {
+            "x": 1237.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1494,
+            "bottom": 800.0625,
+            "left": 1237.5
+          }
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 253.5,
+            "bottom": 788.1875,
+            "left": 16
+          },
+          {
+            "x": 267.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 505,
+            "bottom": 788.1875,
+            "left": 267.5
+          },
+          {
+            "x": 519,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 756.5,
+            "bottom": 788.1875,
+            "left": 519
+          },
+          {
+            "x": 770.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 1008,
+            "bottom": 788.1875,
+            "left": 770.5
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 768,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 253.5,
+            "bottom": 788.1875,
+            "left": 16
+          },
+          {
+            "x": 267.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 505,
+            "bottom": 788.1875,
+            "left": 267.5
+          },
+          {
+            "x": 519,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 756.5,
+            "bottom": 788.1875,
+            "left": 519
+          },
+          {
+            "x": 770.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 1008,
+            "bottom": 788.1875,
+            "left": 770.5
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1280,
+        "height": 720,
+        "hero": {
+          "x": 106,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 90,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 106,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 362.5,
+            "bottom": 800.0625,
+            "left": 106
+          },
+          {
+            "x": 376.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 633,
+            "bottom": 800.0625,
+            "left": 376.5
+          },
+          {
+            "x": 647,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 903.5,
+            "bottom": 800.0625,
+            "left": 647
+          },
+          {
+            "x": 917.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1174,
+            "bottom": 800.0625,
+            "left": 917.5
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "hero": {
+          "x": 186,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 170,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          },
+          {
+            "x": 456.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 713,
+            "bottom": 800.0625,
+            "left": 456.5
+          },
+          {
+            "x": 727,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 983.5,
+            "bottom": 800.0625,
+            "left": 727
+          },
+          {
+            "x": 997.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1254,
+            "bottom": 800.0625,
+            "left": 997.5
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "hero": {
+          "x": 426,
+          "y": 68,
+          "width": 1068,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 410,
+          "y": 348,
+          "width": 1100,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 426,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 682.5,
+            "bottom": 800.0625,
+            "left": 426
+          },
+          {
+            "x": 696.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 953,
+            "bottom": 800.0625,
+            "left": 696.5
+          },
+          {
+            "x": 967,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1223.5,
+            "bottom": 800.0625,
+            "left": 967
+          },
+          {
+            "x": 1237.5,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 1494,
+            "bottom": 800.0625,
+            "left": 1237.5
+          }
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "hero": {
+          "x": 16,
+          "y": 68,
+          "width": 992,
+          "height": 280
+        },
+        "quickFilters": {
+          "x": 0,
+          "y": 348,
+          "width": 1024,
+          "height": 81
+        },
+        "cards": [
+          {
+            "x": 16,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 253.5,
+            "bottom": 788.1875,
+            "left": 16
+          },
+          {
+            "x": 267.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 505,
+            "bottom": 788.1875,
+            "left": 267.5
+          },
+          {
+            "x": 519,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 756.5,
+            "bottom": 788.1875,
+            "left": 519
+          },
+          {
+            "x": 770.5,
+            "y": 505,
+            "width": 237.5,
+            "height": 283.1875,
+            "top": 505,
+            "right": 1008,
+            "bottom": 788.1875,
+            "left": 770.5
+          }
+        ]
+      }
+    ],
+    "errors": []
+  },
+  "captures": {
+    "before": {
+      "phase": "before",
+      "base": "http://127.0.0.1:6478",
+      "states": [
+        {
+          "lang": "bg",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "types",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "filtered",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "make",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "price",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "more",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "sort",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "types",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "filtered",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "make",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "price",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "more",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "sort",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        }
+      ],
+      "errors": []
+    },
+    "after": {
+      "phase": "after",
+      "base": "http://127.0.0.1:6496",
+      "states": [
+        {
+          "lang": "bg",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "types",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "filtered",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "make",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "price",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "more",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "bg",
+          "state": "sort",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "types",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "filtered",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "make",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "price",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "more",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "sort",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        }
+      ],
+      "errors": []
+    }
+  },
+  "phone": {
+    "cases": 56,
+    "widths": [
+      320,
+      390
+    ],
+    "browsers": [
+      "Chromium",
+      "WebKit"
+    ],
+    "locales": [
+      "bg",
+      "en"
+    ],
+    "differences": [],
+    "errors": [],
+    "pixels": [
+      {
+        "key": "chromium-bg-320-home",
+        "changedChannels": 109648
+      },
+      {
+        "key": "chromium-bg-320-make",
+        "changedChannels": 1672
+      },
+      {
+        "key": "chromium-bg-320-price",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-detail",
+        "changedChannels": 10
+      },
+      {
+        "key": "chromium-en-320-home",
+        "changedChannels": 36404
+      },
+      {
+        "key": "chromium-en-320-make",
+        "changedChannels": 5818
+      },
+      {
+        "key": "chromium-en-320-price",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-detail",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-home",
+        "changedChannels": 101205
+      },
+      {
+        "key": "chromium-bg-390-make",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-price",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-detail",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-home",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-make",
+        "changedChannels": 1882
+      },
+      {
+        "key": "chromium-en-390-price",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-detail",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-sort",
+        "changedChannels": 7730
+      },
+      {
+        "key": "chromium-en-320-sort",
+        "changedChannels": 7967
+      },
+      {
+        "key": "chromium-bg-390-sort",
+        "changedChannels": 1432
+      },
+      {
+        "key": "chromium-en-390-sort",
+        "changedChannels": 3
+      }
+    ],
+    "note": "Matched rendered geometry, text, control state and sampled styles. Pixel statistics are recorded separately; this is not a blanket pixel-identical claim."
+  },
+  "sharedCheckout": {
+    "excludedPhoneFiles": [
+      "src/components/ShowroomModelOptions.tsx",
+      "src/components/showroom-model-options.stylex.ts"
+    ],
+    "note": "Separate phone model-selector edits occurred in the shared checkout during this task. These files were preserved and excluded from the desktop commit scope. Phone make comparisons use the unselected make list; model Back-row changes belong to their independent owner."
+  },
+  "delivery": "Validated local production preview and tested desktop source. Template release and dealer publication remain separate."
+}

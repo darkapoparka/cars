@@ -3,7 +3,10 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
+import type { VehicleCategory } from '@/lib/types';
 import { Icon } from './Icon';
+import { ShowroomDesktopType } from './ShowroomDesktopType';
+import { desktopSearchStyles as field } from './showroom-desktop-controls.stylex';
 
 const s = stylex.create({
   hero: {
@@ -42,40 +45,14 @@ const s = stylex.create({
   description: { marginTop: 12, fontSize: 15, lineHeight: '24px', textWrap: 'balance' },
   search: {
     display: 'grid',
-    gridTemplateColumns: 'minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, .85fr) auto',
+    gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
     alignItems: 'center',
     width: '100%',
     padding: 6,
     borderRadius: 16,
     color: colors.text,
     backgroundColor: colors.background,
-    boxShadow: '0 8px 32px rgba(14, 25, 36, .16)',
-  },
-  field: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: 12,
-    minWidth: 0,
-    minHeight: 56,
-    paddingInline: 16,
-    paddingBlock: 6,
-    borderWidth: 0,
-    borderRadius: 10,
-    backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
-    color: colors.text,
-    textAlign: 'left',
-    outlineColor: colors.accent,
-    outlineOffset: -3,
-  },
-  divided: { borderLeftWidth: 1, borderLeftStyle: 'solid', borderLeftColor: colors.line },
-  fieldCopy: { flex: '1', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 3 },
-  fieldLabel: { color: colors.muted, fontSize: 12, lineHeight: '18px' },
-  value: {
-    fontSize: 15,
-    lineHeight: '22px',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
+    boxShadow: '0 8px 24px rgba(14, 25, 36, .12)',
   },
   submit: {
     display: 'flex',
@@ -98,26 +75,29 @@ const s = stylex.create({
 });
 
 export function ShowroomDesktopHero({
+  category,
   query,
   makeLabel,
   priceLabel,
   resultLabel,
   sheet,
+  onSelectCategory,
   onOpen,
   onBrowse,
 }: {
+  category: VehicleCategory;
   query: string;
   makeLabel: string;
   priceLabel: string;
   resultLabel: string;
   sheet: ShowroomFilterTab | null;
+  onSelectCategory: (category: VehicleCategory) => void;
   onOpen: (tab: ShowroomFilterTab, button: HTMLButtonElement) => void;
   onBrowse: () => void;
 }) {
   const { t } = useLocale();
   const fields = [
-    { tab: 'search', label: 'Search', value: query || t('Search make or model') },
-    { tab: 'make', label: 'Make & model', value: makeLabel },
+    { tab: 'make', label: 'Make & model', value: query || makeLabel },
     { tab: 'price', label: 'Price', value: priceLabel },
   ] as const;
   return (
@@ -135,7 +115,8 @@ export function ShowroomDesktopHero({
         </p>
       </div>
       <div role="group" aria-label={t('Find a vehicle')} {...stylex.props(s.search)}>
-        {fields.map(({ tab, label, value }, index) => (
+        <ShowroomDesktopType category={category} onSelect={onSelectCategory} />
+        {fields.map(({ tab, label, value }) => (
           <button
             key={tab}
             type="button"
@@ -144,14 +125,13 @@ export function ShowroomDesktopHero({
             aria-haspopup="dialog"
             aria-expanded={sheet === tab}
             onClick={(event) => onOpen(tab, event.currentTarget)}
-            {...stylex.props(s.field, index > 0 && s.divided)}
+            {...stylex.props(field.field, field.divided, sheet === tab && field.open)}
           >
-            {tab === 'search' && <Icon name="search" size={20} />}
-            <span {...stylex.props(s.fieldCopy)}>
-              <span {...stylex.props(s.fieldLabel)}>{t(label)}</span>
-              <span {...stylex.props(s.value)}>{value}</span>
+            <span {...stylex.props(field.copy)}>
+              <span {...stylex.props(field.label)}>{t(label)}</span>
+              <span {...stylex.props(field.value)}>{value}</span>
             </span>
-            {tab !== 'search' && <Icon name="down" size={16} />}
+            <Icon name="down" size={16} />
           </button>
         ))}
         <button type="button" data-desktop-browse onClick={onBrowse} {...stylex.props(s.submit)}>

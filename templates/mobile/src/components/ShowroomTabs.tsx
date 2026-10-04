@@ -233,7 +233,7 @@ const s = stylex.create({
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 700px)': colors.activeSurface,
-      '@media (min-width: 1024px)': '#fff0eb',
+      '@media (min-width: 1024px)': colors.activeSurface,
     },
     '::after': { height: { default: 3, '@media (min-width: 1024px)': 0 } },
   },
