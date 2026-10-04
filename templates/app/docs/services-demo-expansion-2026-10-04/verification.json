@@ -1,0 +1,2053 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6483",
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "exitCode": 0
+  },
+  "layouts": [
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Масло и филтри"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Безопасност"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Гуми и спирачки"
+            }
+          ],
+          "demo": null,
+          "height": 477,
+          "id": "routine",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": -412
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Обслужване",
+            "width": 159.34375,
+            "x": 144.5,
+            "y": -94
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": -412
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Компютърна проверка"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Окачване и спирачки"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Препоръки"
+            }
+          ],
+          "demo": null,
+          "height": 477,
+          "id": "diagnostics",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 722.5,
+            "y": -412
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Диагностика",
+            "width": 164.515625,
+            "x": 746.5,
+            "y": -94
+          },
+          "width": 582,
+          "x": 722.5,
+          "y": -412
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Грайфер и налягане"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Баланс на колелата"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Съвет за гумите"
+            }
+          ],
+          "demo": "Демо",
+          "height": 477,
+          "id": "tyres",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": 85
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Гуми",
+            "width": 62.28125,
+            "x": 144.5,
+            "y": 403
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": 85
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Накладки и дискове"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Спирачна система"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Нужни ремонти"
+            }
+          ],
+          "demo": "Демо",
+          "height": 477,
+          "id": "brakes",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 722.5,
+            "y": 85
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Спирачки",
+            "width": 123.453125,
+            "x": 746.5,
+            "y": 403
+          },
+          "width": 582,
+          "x": 722.5,
+          "y": 85
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Проверка на охлаждането"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Филтър за купето"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Проверка на системата"
+            }
+          ],
+          "demo": "Демо",
+          "height": 477,
+          "id": "air-conditioning",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": 582
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Климатик",
+            "width": 127.078125,
+            "x": 144.5,
+            "y": 900
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": 582
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "Всички",
+            "width": 68.984375,
+            "x": 120.5,
+            "y": -473
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Обслужване",
+            "width": 105.984375,
+            "x": 197.484375,
+            "y": -473
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Диагностика",
+            "width": 109.484375,
+            "x": 311.46875,
+            "y": -473
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Гуми",
+            "width": 52.453125,
+            "x": 428.953125,
+            "y": -473
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Спирачки",
+            "width": 86.5625,
+            "x": 489.40625,
+            "y": -473
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Климатик",
+            "width": 88.375,
+            "x": 583.96875,
+            "y": -473
+          }
+        ],
+        "height": 50,
+        "scrollLeft": 0,
+        "scrollWidth": 1184,
+        "width": 1184,
+        "x": 120.5,
+        "y": -476
+      },
+      "url": "http://127.0.0.1:6483/bg/service",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Масло и филтри"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Безопасност"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Гуми и спирачки"
+            }
+          ],
+          "demo": null,
+          "height": 308.5,
+          "id": "routine",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 320
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Обслужване",
+            "width": 136.578125,
+            "x": 30,
+            "y": 484.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 320
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Компютърна проверка"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Окачване и спирачки"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Препоръки"
+            }
+          ],
+          "demo": null,
+          "height": 308.5,
+          "id": "diagnostics",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 640.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Диагностика",
+            "width": 141.015625,
+            "x": 30,
+            "y": 805
+          },
+          "width": 281,
+          "x": 12,
+          "y": 640.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Грайфер и налягане"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Баланс на колелата"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Съвет за гумите"
+            }
+          ],
+          "demo": "Демо",
+          "height": 308.5,
+          "id": "tyres",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 961
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Гуми",
+            "width": 53.390625,
+            "x": 30,
+            "y": 1125.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 961
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Накладки и дискове"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Спирачна система"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Нужни ремонти"
+            }
+          ],
+          "demo": "Демо",
+          "height": 308.5,
+          "id": "brakes",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 1281.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Спирачки",
+            "width": 105.8125,
+            "x": 30,
+            "y": 1446
+          },
+          "width": 281,
+          "x": 12,
+          "y": 1281.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Проверка на охлаждането"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Филтър за купето"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Проверка на системата"
+            }
+          ],
+          "demo": "Демо",
+          "height": 308.5,
+          "id": "air-conditioning",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 1602
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Климатик",
+            "width": 108.921875,
+            "x": 30,
+            "y": 1766.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 1602
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "Всички",
+            "width": 76.984375,
+            "x": 12,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Обслужване",
+            "width": 113.984375,
+            "x": 96.984375,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Диагностика",
+            "width": 117.484375,
+            "x": 218.96875,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Гуми",
+            "width": 60.453125,
+            "x": 344.453125,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Спирачки",
+            "width": 94.5625,
+            "x": 412.90625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Климатик",
+            "width": 96.375,
+            "x": 515.46875,
+            "y": 266
+          }
+        ],
+        "height": 44,
+        "scrollLeft": 0,
+        "scrollWidth": 600,
+        "width": 281,
+        "x": 12,
+        "y": 266
+      },
+      "url": "http://127.0.0.1:6483/bg/service",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Масло и филтри"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Безопасност"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Гуми и спирачки"
+            }
+          ],
+          "demo": null,
+          "height": 343.5,
+          "id": "routine",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 320
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Обслужване",
+            "width": 136.578125,
+            "x": 30,
+            "y": 519.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 320
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Компютърна проверка"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Окачване и спирачки"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Препоръки"
+            }
+          ],
+          "demo": null,
+          "height": 343.5,
+          "id": "diagnostics",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 675.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Диагностика",
+            "width": 141.015625,
+            "x": 30,
+            "y": 875
+          },
+          "width": 351,
+          "x": 12,
+          "y": 675.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Грайфер и налягане"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Баланс на колелата"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Съвет за гумите"
+            }
+          ],
+          "demo": "Демо",
+          "height": 343.5,
+          "id": "tyres",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1031
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Гуми",
+            "width": 53.390625,
+            "x": 30,
+            "y": 1230.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1031
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Накладки и дискове"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Спирачна система"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Нужни ремонти"
+            }
+          ],
+          "demo": "Демо",
+          "height": 343.5,
+          "id": "brakes",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1386.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Спирачки",
+            "width": 105.8125,
+            "x": 30,
+            "y": 1586
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1386.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Проверка на охлаждането"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Филтър за купето"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Проверка на системата"
+            }
+          ],
+          "demo": "Демо",
+          "height": 343.5,
+          "id": "air-conditioning",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1742
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Климатик",
+            "width": 108.921875,
+            "x": 30,
+            "y": 1941.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1742
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "Всички",
+            "width": 76.984375,
+            "x": 12,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Обслужване",
+            "width": 113.984375,
+            "x": 96.984375,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Диагностика",
+            "width": 117.484375,
+            "x": 218.96875,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Гуми",
+            "width": 60.453125,
+            "x": 344.453125,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Спирачки",
+            "width": 94.5625,
+            "x": 412.90625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Климатик",
+            "width": 96.375,
+            "x": 515.46875,
+            "y": 266
+          }
+        ],
+        "height": 44,
+        "scrollLeft": 0,
+        "scrollWidth": 600,
+        "width": 351,
+        "x": 12,
+        "y": 266
+      },
+      "url": "http://127.0.0.1:6483/bg/service",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Масло и филтри"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Безопасност"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Гуми и спирачки"
+            }
+          ],
+          "demo": null,
+          "height": 355.25,
+          "id": "routine",
+          "image": {
+            "height": 169.25,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 338.5,
+            "x": 28,
+            "y": 594
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Обслужване",
+            "width": 159.34375,
+            "x": 52,
+            "y": 790.25
+          },
+          "width": 338.5,
+          "x": 28,
+          "y": 594
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Компютърна проверка"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Окачване и спирачки"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Препоръки"
+            }
+          ],
+          "demo": null,
+          "height": 355.25,
+          "id": "diagnostics",
+          "image": {
+            "height": 169.25,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 338.5,
+            "x": 386.5,
+            "y": 594
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Диагностика",
+            "width": 164.515625,
+            "x": 410.5,
+            "y": 790.25
+          },
+          "width": 338.5,
+          "x": 386.5,
+          "y": 594
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Грайфер и налягане"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Баланс на колелата"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Съвет за гумите"
+            }
+          ],
+          "demo": "Демо",
+          "height": 355.25,
+          "id": "tyres",
+          "image": {
+            "height": 169.25,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 338.5,
+            "x": 28,
+            "y": 969.25
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Гуми",
+            "width": 62.28125,
+            "x": 52,
+            "y": 1165.5
+          },
+          "width": 338.5,
+          "x": 28,
+          "y": 969.25
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Накладки и дискове"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Спирачна система"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Нужни ремонти"
+            }
+          ],
+          "demo": "Демо",
+          "height": 355.25,
+          "id": "brakes",
+          "image": {
+            "height": 169.25,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 338.5,
+            "x": 386.5,
+            "y": 969.25
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Спирачки",
+            "width": 123.453125,
+            "x": 410.5,
+            "y": 1165.5
+          },
+          "width": 338.5,
+          "x": 386.5,
+          "y": 969.25
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Проверка на охлаждането"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Филтър за купето"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Проверка на системата"
+            }
+          ],
+          "demo": "Демо",
+          "height": 355.25,
+          "id": "air-conditioning",
+          "image": {
+            "height": 169.25,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 338.5,
+            "x": 28,
+            "y": 1344.5
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Климатик",
+            "width": 127.078125,
+            "x": 52,
+            "y": 1540.75
+          },
+          "width": 338.5,
+          "x": 28,
+          "y": 1344.5
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "Всички",
+            "width": 68.984375,
+            "x": 28,
+            "y": 533
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Обслужване",
+            "width": 105.984375,
+            "x": 104.984375,
+            "y": 533
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Диагностика",
+            "width": 109.484375,
+            "x": 218.96875,
+            "y": 533
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Гуми",
+            "width": 52.453125,
+            "x": 336.453125,
+            "y": 533
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Спирачки",
+            "width": 86.5625,
+            "x": 396.90625,
+            "y": 533
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Климатик",
+            "width": 88.375,
+            "x": 491.46875,
+            "y": 533
+          }
+        ],
+        "height": 50,
+        "scrollLeft": 0,
+        "scrollWidth": 697,
+        "width": 697,
+        "x": 28,
+        "y": 530
+      },
+      "url": "http://127.0.0.1:6483/bg/service",
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Oil and filters"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Safety checks"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tyres and brakes"
+            }
+          ],
+          "demo": null,
+          "height": 308.5,
+          "id": "routine",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 320
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Servicing",
+            "width": 106.109375,
+            "x": 30,
+            "y": 484.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 320
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Computer check"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Suspension and brakes"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Advice"
+            }
+          ],
+          "demo": null,
+          "height": 308.5,
+          "id": "diagnostics",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 640.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Diagnostics",
+            "width": 134.453125,
+            "x": 30,
+            "y": 805
+          },
+          "width": 281,
+          "x": 12,
+          "y": 640.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tread and pressure"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Wheel balancing"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tyre advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 308.5,
+          "id": "tyres",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 961
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Tyres",
+            "width": 62.453125,
+            "x": 30,
+            "y": 1125.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 961
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Pads and discs"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Brake condition"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Repair advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 308.5,
+          "id": "brakes",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 1281.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Brakes",
+            "width": 79.328125,
+            "x": 30,
+            "y": 1446
+          },
+          "width": 281,
+          "x": 12,
+          "y": 1281.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Cooling check"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Cabin filter"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "System inspection"
+            }
+          ],
+          "demo": "Demo",
+          "height": 308.5,
+          "id": "air-conditioning",
+          "image": {
+            "height": 140.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 281,
+            "x": 12,
+            "y": 1602
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Air con",
+            "width": 78.78125,
+            "x": 30,
+            "y": 1766.5
+          },
+          "width": 281,
+          "x": 12,
+          "y": 1602
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "All",
+            "width": 45.5,
+            "x": 12,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Servicing",
+            "width": 93.40625,
+            "x": 65.5,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Diagnostics",
+            "width": 111.421875,
+            "x": 166.90625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Tyres",
+            "width": 65.4375,
+            "x": 286.328125,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Brakes",
+            "width": 76.3125,
+            "x": 359.765625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Air con",
+            "width": 76.25,
+            "x": 444.078125,
+            "y": 266
+          }
+        ],
+        "height": 44,
+        "scrollLeft": 0,
+        "scrollWidth": 508,
+        "width": 281,
+        "x": 12,
+        "y": 266
+      },
+      "url": "http://127.0.0.1:6483/en/service",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Oil and filters"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Safety checks"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tyres and brakes"
+            }
+          ],
+          "demo": null,
+          "height": 343.5,
+          "id": "routine",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 320
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Servicing",
+            "width": 106.109375,
+            "x": 30,
+            "y": 519.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 320
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Computer check"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Suspension and brakes"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Advice"
+            }
+          ],
+          "demo": null,
+          "height": 343.5,
+          "id": "diagnostics",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 675.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Diagnostics",
+            "width": 134.453125,
+            "x": 30,
+            "y": 875
+          },
+          "width": 351,
+          "x": 12,
+          "y": 675.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tread and pressure"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Wheel balancing"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Tyre advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 343.5,
+          "id": "tyres",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1031
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Tyres",
+            "width": 62.453125,
+            "x": 30,
+            "y": 1230.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1031
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Pads and discs"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Brake condition"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Repair advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 343.5,
+          "id": "brakes",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1386.5
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Brakes",
+            "width": 79.328125,
+            "x": 30,
+            "y": 1586
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1386.5
+        },
+        {
+          "checks": [
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Cooling check"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "Cabin filter"
+            },
+            {
+              "height": 22,
+              "lineHeight": "22px",
+              "text": "System inspection"
+            }
+          ],
+          "demo": "Demo",
+          "height": 343.5,
+          "id": "air-conditioning",
+          "image": {
+            "height": 175.5,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 351,
+            "x": 12,
+            "y": 1742
+          },
+          "title": {
+            "height": 28,
+            "lineHeight": "28px",
+            "text": "Air con",
+            "width": 78.78125,
+            "x": 30,
+            "y": 1941.5
+          },
+          "width": 351,
+          "x": 12,
+          "y": 1742
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "All",
+            "width": 45.5,
+            "x": 12,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Servicing",
+            "width": 93.40625,
+            "x": 65.5,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Diagnostics",
+            "width": 111.421875,
+            "x": 166.90625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Tyres",
+            "width": 65.4375,
+            "x": 286.328125,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Brakes",
+            "width": 76.3125,
+            "x": 359.765625,
+            "y": 266
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Air con",
+            "width": 76.25,
+            "x": 444.078125,
+            "y": 266
+          }
+        ],
+        "height": 44,
+        "scrollLeft": 0,
+        "scrollWidth": 508,
+        "width": 351,
+        "x": 12,
+        "y": 266
+      },
+      "url": "http://127.0.0.1:6483/en/service",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "cards": [
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Oil and filters"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Safety checks"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Tyres and brakes"
+            }
+          ],
+          "demo": null,
+          "height": 477,
+          "id": "routine",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": 623
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Servicing",
+            "width": 123.796875,
+            "x": 144.5,
+            "y": 941
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": 623
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Computer check"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Suspension and brakes"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Advice"
+            }
+          ],
+          "demo": null,
+          "height": 477,
+          "id": "diagnostics",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 722.5,
+            "y": 623
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Diagnostics",
+            "width": 156.859375,
+            "x": 746.5,
+            "y": 941
+          },
+          "width": 582,
+          "x": 722.5,
+          "y": 623
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Tread and pressure"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Wheel balancing"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Tyre advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 477,
+          "id": "tyres",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": 1120
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Tyres",
+            "width": 72.859375,
+            "x": 144.5,
+            "y": 1438
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": 1120
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Pads and discs"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Brake condition"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Repair advice"
+            }
+          ],
+          "demo": "Demo",
+          "height": 477,
+          "id": "brakes",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 722.5,
+            "y": 1120
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Brakes",
+            "width": 92.546875,
+            "x": 746.5,
+            "y": 1438
+          },
+          "width": 582,
+          "x": 722.5,
+          "y": 1120
+        },
+        {
+          "checks": [
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Cooling check"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "Cabin filter"
+            },
+            {
+              "height": 24,
+              "lineHeight": "24px",
+              "text": "System inspection"
+            }
+          ],
+          "demo": "Demo",
+          "height": 477,
+          "id": "air-conditioning",
+          "image": {
+            "height": 291,
+            "objectFit": "cover",
+            "ready": true,
+            "width": 582,
+            "x": 120.5,
+            "y": 1617
+          },
+          "title": {
+            "height": 34,
+            "lineHeight": "34px",
+            "text": "Air con",
+            "width": 91.90625,
+            "x": 144.5,
+            "y": 1935
+          },
+          "width": 582,
+          "x": 120.5,
+          "y": 1617
+        }
+      ],
+      "overflow": false,
+      "pills": {
+        "buttons": [
+          {
+            "height": 44,
+            "pressed": "true",
+            "text": "All",
+            "width": 37.5,
+            "x": 120.5,
+            "y": 562
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Servicing",
+            "width": 85.40625,
+            "x": 166,
+            "y": 562
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Diagnostics",
+            "width": 103.421875,
+            "x": 259.40625,
+            "y": 562
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Tyres",
+            "width": 57.4375,
+            "x": 370.828125,
+            "y": 562
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Brakes",
+            "width": 68.3125,
+            "x": 436.265625,
+            "y": 562
+          },
+          {
+            "height": 44,
+            "pressed": "false",
+            "text": "Air con",
+            "width": 68.25,
+            "x": 512.578125,
+            "y": 562
+          }
+        ],
+        "height": 50,
+        "scrollLeft": 0,
+        "scrollWidth": 1184,
+        "width": 1184,
+        "x": 120.5,
+        "y": 559
+      },
+      "url": "http://127.0.0.1:6483/en/service",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    }
+  ],
+  "interactions": [
+    {
+      "locale": "bg",
+      "service": "tyres",
+      "query": "налягане",
+      "filteredIds": [
+        "tyres"
+      ],
+      "returnUrl": "http://127.0.0.1:6483/bg/service?category=tyres&q=%D0%BD%D0%B0%D0%BB%D1%8F%D0%B3%D0%B0%D0%BD%D0%B5",
+      "draft": {
+        "prefill": "Гуми и джанти",
+        "url": "http://127.0.0.1:6483/bg/service/details?service=tyres"
+      }
+    },
+    {
+      "locale": "bg",
+      "service": "brakes",
+      "query": "накладки",
+      "filteredIds": [
+        "brakes"
+      ],
+      "draft": {
+        "overflow": false,
+        "prefill": "Проверка на спирачките",
+        "url": "http://127.0.0.1:6483/bg/service/details?service=brakes"
+      },
+      "back": {
+        "query": "накладки",
+        "url": "http://127.0.0.1:6483/bg/service?category=brakes&q=%D0%BD%D0%B0%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8"
+      }
+    },
+    {
+      "locale": "bg",
+      "service": "air-conditioning",
+      "query": "филтър",
+      "filteredIds": [
+        "air-conditioning"
+      ],
+      "draft": {
+        "overflow": false,
+        "prefill": "Обслужване на климатик",
+        "url": "http://127.0.0.1:6483/bg/service/details?service=air-conditioning"
+      },
+      "back": {
+        "query": "филтър",
+        "url": "http://127.0.0.1:6483/bg/service?category=air-conditioning&q=%D1%84%D0%B8%D0%BB%D1%82%D1%8A%D1%80"
+      }
+    },
+    {
+      "test": "keyboard reaches last mobile pill",
+      "result": {
+        "button": {
+          "width": 96.375,
+          "x": 196.46875
+        },
+        "outline": "rgb(39, 39, 43) solid 2px",
+        "railWidth": 281,
+        "scrollLeft": 319,
+        "text": "Климатик",
+        "viewport": 320
+      }
+    },
+    {
+      "test": "empty search",
+      "cards": 0
+    },
+    {
+      "locale": "en",
+      "service": "tyres",
+      "query": "pressure",
+      "filteredIds": [
+        "tyres"
+      ],
+      "draft": {
+        "overflow": false,
+        "prefill": "Tyres and wheel care",
+        "url": "http://127.0.0.1:6483/en/service/details?service=tyres"
+      },
+      "back": {
+        "query": "pressure",
+        "url": "http://127.0.0.1:6483/en/service?category=tyres&q=pressure"
+      },
+      "keyboard": true
+    },
+    {
+      "locale": "en",
+      "service": "brakes",
+      "query": "pads",
+      "filteredIds": [
+        "brakes"
+      ],
+      "draft": {
+        "overflow": false,
+        "prefill": "Brake inspection",
+        "url": "http://127.0.0.1:6483/en/service/details?service=brakes"
+      },
+      "back": {
+        "query": "pads",
+        "url": "http://127.0.0.1:6483/en/service?category=brakes&q=pads"
+      },
+      "keyboard": false
+    },
+    {
+      "locale": "en",
+      "service": "air-conditioning",
+      "query": "cooling",
+      "filteredIds": [
+        "air-conditioning"
+      ],
+      "draft": {
+        "overflow": false,
+        "prefill": "Air conditioning service",
+        "url": "http://127.0.0.1:6483/en/service/details?service=air-conditioning"
+      },
+      "back": {
+        "query": "cooling",
+        "url": "http://127.0.0.1:6483/en/service?category=air-conditioning&q=cooling"
+      },
+      "keyboard": false
+    }
+  ],
+  "failures": [],
+  "logs": [
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-04T06:21:30.875Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ]
+}

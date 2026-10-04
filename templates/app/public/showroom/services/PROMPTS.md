@@ -1,5 +1,7 @@
 # Service card artwork - 2 October 2026
 
+The owner's 4 October expansion adds three matching demo illustrations: tyres, brakes and air conditioning. See [the selected files and exact new prompts](DEMO-PROMPTS-2026-10-04.md).
+
 Generated in built-in image_gen mode at the owner's request. The tool did not expose a model version, so no Image Gen 2.5 version is asserted. These original illustrative scenes do not depict the dealer's actual team or facilities. No external dealer, stock photo, logo or reference app asset was used.
 
 Originals: maintenance-v1.png and diagnostics-v1.png (1536 x 1024). Runtime assets: maintenance-v1.webp and diagnostics-v1.webp (1200 x 800, WebP quality 82). Sharp only resized and encoded the original images; no creative edit or compositing was applied. The originals remain preserved both here and at the tool's generated_images destination.
@@ -31,4 +33,3 @@ Composition/framing: tight editorial crop, three-quarter camera angle, tablet an
 Lighting/mood: soft daylight with controlled workshop reflections, crisp tactile details, calm professional quality, restrained color matching a maintenance image.
 Constraints: no words, labels, logos, car emblems, badges, watermark, promotional text or website UI. No identifiable business or staff. No messy clutter. This is standalone original illustration photography for a dealer website.
 ```
-

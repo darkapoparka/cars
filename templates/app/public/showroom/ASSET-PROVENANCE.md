@@ -10,6 +10,10 @@ The owner's mobile tab polish uses original generated Sell, Leasing and Services
 
 The owner requested original generated imagery for the Services cards. [Service originals and exact prompts](services/PROMPTS.md) record the maintenance and diagnostics series, created with the built-in image generation tool. Model selection was not exposed. PNG originals are retained alongside optimized WebP copies; these illustrative scenes do not depict the actual dealer team or facilities.
 
+## Demo service photographs - 4 October 2026
+
+The owner's catalogue expansion adds tyre care, brake inspection and air conditioning examples. [Selected assets and exact generation/edit prompts](services/DEMO-PROMPTS-2026-10-04.md) record the built-in image_gen work. The three new cards use a compact Demo / Демо badge. Selected PNG originals are retained alongside WebP copies; these scenes do not establish actual facilities or service availability. The tyre illustration received one valve-connection correction. No third-party photographic asset was used.
+
 ## finance
 
 File: finance-v2.png
