@@ -1,0 +1,47 @@
+{
+	"date": "2026-10-04",
+	"source": "Canonical Import main checkout; verified in the existing Codex in-app browser tab.",
+	"observedBefore": {
+		"route": "/bg/about",
+		"width": 360,
+		"process": "Text-only mobile panel; artwork and team actions were desktop-only."
+	},
+	"observedAfter": {
+		"bgWidths": [320, 360, 390, 1440],
+		"enWidths": [320],
+		"mobileBannerCount": 4,
+		"mobileImagesDecoded": 4,
+		"imageNaturalWidth": 900,
+		"mobileColumns": 2,
+		"desktopColumnsAt1440": 4,
+		"horizontalOverflow": false,
+		"teamContactButtons": 3,
+		"contactButtonHeight": 36,
+		"bgDestination": "/bg/contact",
+		"enDestination": "/en/contact",
+		"viewportOverrideReset": true,
+		"finalRoute": "/bg/about"
+	},
+	"validation": {
+		"scopedEslint": "passed",
+		"svelteCheck": "0 errors, 0 warnings",
+		"isolatedProductionBuild": "passed",
+		"qaWorkspace": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+		"node": "24.21.0",
+		"limits": "Local source and preview verification; no template promotion or dealer deployment."
+	},
+	"sources": [
+		{
+			"path": "src/lib/components/common/ProcessSteps.svelte",
+			"sha256": "672c9aba8484d8bf9bf7f26aec51ce767b5422a23823506f8b3ddb35281ea23b"
+		},
+		{
+			"path": "src/lib/components/common/TeamMemberCard.svelte",
+			"sha256": "d1d068285f997d9899fab3eeacb1a479e8f18674792a0fae53d2d94af8052b2c"
+		},
+		{
+			"path": "src/routes/(site)/about/+page.svelte",
+			"sha256": "5ed6fae2564d7cdfdff93d70777ee63e45578e431d20c84bebffaa53bc339070"
+		}
+	]
+}

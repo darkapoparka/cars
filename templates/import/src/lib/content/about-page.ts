@@ -38,8 +38,8 @@ export const aboutPageCopy: Record<Locale, AboutPageCopy> = {
 };
 
 export const aboutProcessArtwork = [
-	{ src: '/assets/daynight/banners/about-request-v1.webp' },
-	{ src: '/assets/daynight/services/desktop/inspection-reference-v4.webp' },
-	{ src: '/assets/daynight/services/desktop/comparison-reference-v4.webp' },
-	{ src: '/assets/daynight/services/desktop/selling-reference-v4.webp' }
+	{ src: '/assets/process/request-neutral-v1.webp' },
+	{ src: '/assets/process/inspection-neutral-v1.webp' },
+	{ src: '/assets/process/decision-neutral-v1.webp' },
+	{ src: '/assets/process/handover-neutral-v1.webp' }
 ] as const;

@@ -4,6 +4,7 @@
 		steps,
 		horizontal = false,
 		mobilePanel = false,
+		mobileBanners = false,
 		editorial = false
 	}: {
 		steps: readonly {
@@ -14,6 +15,7 @@
 		}[];
 		horizontal?: boolean;
 		mobilePanel?: boolean;
+		mobileBanners?: boolean;
 		editorial?: boolean;
 	} = $props();
 </script>
@@ -22,19 +24,23 @@
 	class="process-steps"
 	class:process-steps--horizontal={horizontal}
 	class:process-steps--mobile-panel={mobilePanel}
+	class:process-steps--mobile-banners={mobileBanners}
 	class:desktop-process={editorial}
-	class:process-steps--banners={editorial && steps.some((step) => step.artwork)}
+	class:process-steps--banners={(editorial || mobileBanners) && steps.some((step) => step.artwork)}
 	style:--step-count={steps.length}
 >
 	{#each steps as step, index (step.title)}<li>
-			{#if editorial && step.artwork}
+			{#if (editorial || mobileBanners) && step.artwork}
 				<picture class="process-steps__artwork">
-					<source media="(min-width: 768px)" srcset={assetHref(step.artwork.src)} />
+					<source
+						media={mobileBanners ? '(max-width: 767.98px)' : '(min-width: 768px)'}
+						srcset={assetHref(step.artwork.src)}
+					/>
 					<img src={emptyImage} alt="" width="900" height="600" loading="lazy" />
 				</picture>
 			{/if}
 			<span class="process-steps__number" aria-hidden="true"
-				>{editorial ? String(index + 1).padStart(2, '0') : index + 1}</span
+				>{editorial || mobileBanners ? String(index + 1).padStart(2, '0') : index + 1}</span
 			>
 			<div>
 				<h3>{step.title}</h3>
@@ -223,6 +229,54 @@
 		.process-steps--mobile-panel p {
 			font-size: var(--bc-mobile-body);
 			line-height: var(--bc-mobile-body-leading);
+		}
+		.process-steps--mobile-banners {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: var(--bc-space-3);
+			padding: 0;
+			border: 0;
+			background: transparent;
+			box-shadow: none;
+		}
+		.process-steps--mobile-banners li {
+			position: relative;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto 1fr;
+			gap: 0;
+			overflow: hidden;
+			border-radius: var(--bc-radius-panel);
+			background: var(--bc-ink);
+			color: var(--bc-white);
+		}
+		.process-steps--mobile-banners .process-steps__artwork {
+			display: block;
+		}
+		.process-steps--mobile-banners .process-steps__artwork img {
+			display: block;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 3 / 2;
+			object-fit: cover;
+		}
+		.process-steps--mobile-banners .process-steps__number {
+			position: absolute;
+			top: var(--bc-space-2);
+			left: var(--bc-space-2);
+			background: var(--bc-white);
+			color: var(--bc-ink);
+			font-variant-numeric: tabular-nums;
+		}
+		.process-steps--mobile-banners li > div {
+			display: grid;
+			align-content: start;
+			gap: var(--bc-space-2);
+			padding: var(--bc-space-3);
+		}
+		.process-steps--mobile-banners h3 {
+			margin: 0;
+		}
+		.process-steps--mobile-banners p {
+			color: var(--bc-white);
 		}
 	}
 </style>

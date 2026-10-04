@@ -8,12 +8,12 @@
 		person,
 		mobileCompact = false,
 		desktopFramed = false,
-		desktopAction
+		action
 	}: {
 		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials' | 'desktopPortrait'>;
 		mobileCompact?: boolean;
 		desktopFramed?: boolean;
-		desktopAction?: { href: string; label: string };
+		action?: { href: string; label: string };
 	} = $props();
 	const socials = $derived(
 		person.socials
@@ -27,7 +27,7 @@
 	class:team-card--mobile-compact={mobileCompact}
 	class:team-card--has-socials={socials.length > 0}
 	class:team-card--desktop-framed={desktopFramed}
-	class:team-card--has-action={!!desktopAction}
+	class:team-card--has-action={!!action}
 >
 	<div class="team-card__media">
 		<img
@@ -45,14 +45,14 @@
 		<h3>{person.name}</h3>
 		<p>{person.title}</p>
 		{#if socials.length}<div class="team-card__socials"><SocialLinks links={socials} /></div>{/if}
-		{#if desktopAction}
+		{#if action}
 			<div class="team-card__action">
 				<Action
-					href={desktopAction.href}
+					href={action.href}
 					variant="strong"
 					size="compact"
-					aria-label={`${desktopAction.label}: ${person.name}`}
-					>{desktopAction.label}<ArrowRight size={18} aria-hidden="true" /></Action
+					aria-label={`${action.label}: ${person.name}`}
+					>{action.label}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
 			</div>
 		{/if}
@@ -96,7 +96,12 @@
 		display: contents;
 	}
 	.team-card__action {
-		display: none;
+		--action-height: var(--bc-control-height-compact);
+		--action-text: var(--bc-text-body);
+		--action-radius: var(--bc-radius-pill);
+		--bc-control-x: var(--bc-space-3);
+		display: block;
+		padding-top: var(--bc-space-2);
 	}
 	@media (min-width: 768px) {
 		.team-card {
@@ -168,14 +173,6 @@
 		}
 		.team-card--desktop-framed.team-card--has-action .team-card__body {
 			grid-template-rows: auto 1fr auto;
-		}
-		.team-card__action {
-			--action-height: var(--bc-control-height-compact);
-			--action-text: var(--bc-text-body);
-			--action-radius: var(--bc-radius-pill);
-			--bc-control-x: var(--bc-space-3);
-			display: block;
-			padding-top: var(--bc-space-2);
 		}
 		.team-card--desktop-framed .team-card__socials {
 			top: calc(
@@ -272,6 +269,9 @@
 			grid-column: 2;
 			grid-row: 2;
 			align-self: center;
+		}
+		.team-card__action {
+			grid-column: 1 / -1;
 		}
 	}
 </style>

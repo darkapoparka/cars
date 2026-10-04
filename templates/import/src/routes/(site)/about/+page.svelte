@@ -27,7 +27,7 @@
 </script>
 
 {#snippet processSteps(mobilePanel: boolean)}
-	<ProcessSteps {steps} horizontal {mobilePanel} />
+	<ProcessSteps {steps} horizontal {mobilePanel} mobileBanners />
 {/snippet}
 
 <svelte:head
@@ -90,7 +90,7 @@
 					{person}
 					mobileCompact
 					desktopFramed
-					desktopAction={{
+					action={{
 						href: about.hero.actions?.[1]?.href ?? '/contact',
 						label: copy.teamContact
 					}}
