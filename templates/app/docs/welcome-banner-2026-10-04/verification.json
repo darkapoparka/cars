@@ -1,0 +1,260 @@
+{
+  "startedAt": "2026-10-04T09:31:26.505Z",
+  "layouts": [
+    {
+      "banner": {
+        "height": 92,
+        "width": 281,
+        "x": 12,
+        "y": 668
+      },
+      "focus": "BODY",
+      "headingHeight": 22,
+      "locale": "bg",
+      "navTop": 782,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Затвори приветствието",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Разгледай колите",
+          "width": 139.3125
+        }
+      ],
+      "viewport": 320
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 351,
+        "x": 12,
+        "y": 668
+      },
+      "focus": "BODY",
+      "headingHeight": 22,
+      "locale": "bg",
+      "navTop": 782,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Затвори приветствието",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Разгледай колите",
+          "width": 139.3125
+        }
+      ],
+      "viewport": 390
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 360,
+        "x": 369,
+        "y": 668
+      },
+      "headingHeight": 22,
+      "locale": "bg",
+      "navGap": 22,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Затвори приветствието",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Разгледай колите",
+          "width": 139.3125
+        }
+      ],
+      "viewport": 768
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 360,
+        "x": 1041,
+        "y": 784
+      },
+      "focus": "BODY",
+      "headingHeight": 22,
+      "locale": "bg",
+      "navTop": 0,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Затвори приветствието",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Разгледай колите",
+          "width": 139.3125
+        }
+      ],
+      "viewport": 1440
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 281,
+        "x": 12,
+        "y": 668
+      },
+      "headingHeight": 22,
+      "locale": "en",
+      "navGap": 22,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Close welcome",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Start browsing",
+          "width": 119.46875
+        }
+      ],
+      "viewport": 320
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 351,
+        "x": 12,
+        "y": 668
+      },
+      "headingHeight": 22,
+      "locale": "en",
+      "navGap": 22,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Close welcome",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Start browsing",
+          "width": 119.46875
+        }
+      ],
+      "viewport": 390
+    },
+    {
+      "banner": {
+        "height": 92,
+        "width": 360,
+        "x": 1041,
+        "y": 784
+      },
+      "headingHeight": 22,
+      "locale": "en",
+      "navGap": null,
+      "noInert": true,
+      "noModal": true,
+      "noOverflow": true,
+      "targets": [
+        {
+          "height": 44,
+          "text": "Close welcome",
+          "width": 44
+        },
+        {
+          "height": 44,
+          "text": "Start browsing",
+          "width": 119.46875
+        }
+      ],
+      "viewport": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "name": "Background scrolling stays available",
+      "inert": false,
+      "scrollY": 338,
+      "stillPresent": true
+    },
+    {
+      "name": "Close dismisses and clears preview",
+      "closed": true,
+      "url": "http://127.0.0.1:6483/bg"
+    },
+    {
+      "name": "Dismissal survives a settled Home reload",
+      "closed": true,
+      "hydrated": true,
+      "url": "http://127.0.0.1:6483/bg"
+    },
+    {
+      "name": "Escape dismisses without adding history",
+      "closed": true,
+      "noModal": true,
+      "url": "http://127.0.0.1:6483/en"
+    },
+    {
+      "name": "Tab starts on the page, without welcome focus trapping",
+      "bannerOpen": true,
+      "focus": "Skip to content",
+      "href": "#app-content"
+    },
+    {
+      "name": "Escape belongs to an open drawer",
+      "before": {
+        "banner": true,
+        "modal": true
+      },
+      "after": {
+        "bannerRemains": true,
+        "modalClosed": true,
+        "url": "http://127.0.0.1:6483/en?welcome=1"
+      }
+    },
+    {
+      "name": "Keyboard browse action opens the localized inventory",
+      "bannerClosed": true,
+      "listingLinks": 96,
+      "url": "http://127.0.0.1:6483/en/cars"
+    },
+    {
+      "name": "Back after browsing returns to a dismissed Home",
+      "closed": true,
+      "hydrated": true,
+      "url": "http://127.0.0.1:6483/en"
+    }
+  ],
+  "consoleErrors": [],
+  "check": {
+    "node": "22.20.0",
+    "command": "npm run check",
+    "passed": true,
+    "generatedPages": 407
+  },
+  "finishedAt": "2026-10-04T09:41:35.685Z"
+}

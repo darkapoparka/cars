@@ -1,0 +1,792 @@
+{
+  "firstVisit": {
+    "dialog": {
+      "backgroundIsolated": true,
+      "controls": [
+        {
+          "current": null,
+          "height": 44,
+          "href": null,
+          "label": "Затвори приветствието",
+          "text": "",
+          "width": 44,
+          "x": 328,
+          "y": 570
+        },
+        {
+          "current": null,
+          "height": 44,
+          "href": "/en",
+          "label": null,
+          "text": "English",
+          "width": 70.0625,
+          "x": 104.984375,
+          "y": 702
+        },
+        {
+          "current": "true",
+          "height": 44,
+          "href": "/bg",
+          "label": null,
+          "text": "Български",
+          "width": 109.953125,
+          "x": 175.046875,
+          "y": 702
+        },
+        {
+          "current": null,
+          "height": 48,
+          "href": "/bg/cars",
+          "label": null,
+          "text": "Разгледай колите",
+          "width": 326,
+          "x": 32,
+          "y": 764
+        }
+      ],
+      "description": "Изберете език.",
+      "focusedInside": true,
+      "height": 268,
+      "logoLoaded": true,
+      "logoSource": "/identity/drive24/logo-light-v2.webp",
+      "title": "Добре дошли в Drive24",
+      "width": 366,
+      "x": 12,
+      "y": 564
+    },
+    "lang": "bg",
+    "open": true,
+    "overflow": false,
+    "scrollLocked": true,
+    "url": "http://127.0.0.1:6483/bg",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  "responsive": [
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 790,
+            "y": 232
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 549.984375,
+            "y": 364
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 620.046875,
+            "y": 364
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 360,
+            "x": 460,
+            "y": 426
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 400,
+        "x": 440,
+        "y": 226
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 720,
+        "width": 1280
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 258,
+            "y": 570
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 69.984375,
+            "y": 702
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 140.046875,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 256,
+            "x": 32,
+            "y": 764
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 296,
+        "x": 12,
+        "y": 564
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 328,
+            "y": 570
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 104.984375,
+            "y": 702
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 175.046875,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 326,
+            "x": 32,
+            "y": 764
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 366,
+        "x": 12,
+        "y": 564
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 534,
+            "y": 384
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 293.984375,
+            "y": 516
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 364.046875,
+            "y": 516
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 360,
+            "x": 204,
+            "y": 578
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 400,
+        "x": 184,
+        "y": 378
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 870,
+            "y": 322
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 629.984375,
+            "y": 454
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 700.046875,
+            "y": 454
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 360,
+            "x": 540,
+            "y": 516
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 400,
+        "x": 520,
+        "y": 316
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Close welcome",
+            "text": "",
+            "width": 44,
+            "x": 870,
+            "y": 322
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 89.734375,
+            "x": 628.65625,
+            "y": 454
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 92.953125,
+            "x": 718.390625,
+            "y": 454
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/en/cars",
+            "label": null,
+            "text": "Start browsing",
+            "width": 360,
+            "x": 540,
+            "y": 516
+          }
+        ],
+        "description": "Choose your language.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Welcome to Drive24",
+        "width": 400,
+        "x": 520,
+        "y": 316
+      },
+      "lang": "en",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Close welcome",
+            "text": "",
+            "width": 44,
+            "x": 258,
+            "y": 570
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 89.734375,
+            "x": 68.65625,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 92.953125,
+            "x": 158.390625,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/en/cars",
+            "label": null,
+            "text": "Start browsing",
+            "width": 256,
+            "x": 32,
+            "y": 764
+          }
+        ],
+        "description": "Choose your language.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Welcome to Drive24",
+        "width": 296,
+        "x": 12,
+        "y": 564
+      },
+      "lang": "en",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Close welcome",
+            "text": "",
+            "width": 44,
+            "x": 328,
+            "y": 570
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 89.734375,
+            "x": 103.65625,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 92.953125,
+            "x": 193.390625,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/en/cars",
+            "label": null,
+            "text": "Start browsing",
+            "width": 326,
+            "x": 32,
+            "y": 764
+          }
+        ],
+        "description": "Choose your language.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Welcome to Drive24",
+        "width": 366,
+        "x": 12,
+        "y": 564
+      },
+      "lang": "en",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  ],
+  "responsiveAssertions": [
+    {
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "width": 1280,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "interactions": {
+    "languageSwitch": {
+      "url": "http://127.0.0.1:6483/en?welcome=1",
+      "lang": "en"
+    },
+    "tabToClose": true,
+    "focusWrapped": true,
+    "escape": {
+      "dialog": null,
+      "lang": "en",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "afterReload": {
+      "dialog": null,
+      "lang": "en",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "previewReopened": true,
+    "primary": {
+      "dialogOpen": false,
+      "inertElements": 0,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/en/cars",
+      "vehicleCards": 92
+    },
+    "afterBack": {
+      "dialog": null,
+      "lang": "en",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/en",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "closeButton": {
+      "dialog": null,
+      "lang": "bg",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/bg",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "reopenedAfterClose": {
+      "dialog": {
+        "backgroundIsolated": true,
+        "controls": [
+          {
+            "current": null,
+            "height": 44,
+            "href": null,
+            "label": "Затвори приветствието",
+            "text": "",
+            "width": 44,
+            "x": 328,
+            "y": 570
+          },
+          {
+            "current": null,
+            "height": 44,
+            "href": "/en?welcome=1",
+            "label": null,
+            "text": "English",
+            "width": 70.0625,
+            "x": 104.984375,
+            "y": 702
+          },
+          {
+            "current": "true",
+            "height": 44,
+            "href": "/bg?welcome=1",
+            "label": null,
+            "text": "Български",
+            "width": 109.953125,
+            "x": 175.046875,
+            "y": 702
+          },
+          {
+            "current": null,
+            "height": 48,
+            "href": "/bg/cars",
+            "label": null,
+            "text": "Разгледай колите",
+            "width": 326,
+            "x": 32,
+            "y": 764
+          }
+        ],
+        "description": "Изберете език.",
+        "focusedInside": true,
+        "height": 268,
+        "logoLoaded": true,
+        "logoSource": "/identity/drive24/logo-light-v2.webp",
+        "title": "Добре дошли в Drive24",
+        "width": 366,
+        "x": 12,
+        "y": 564
+      },
+      "lang": "bg",
+      "open": true,
+      "overflow": false,
+      "scrollLocked": true,
+      "url": "http://127.0.0.1:6483/bg?welcome=1",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "backdrop": {
+      "dialog": null,
+      "lang": "bg",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/bg",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    "afterBackdropReload": {
+      "dialog": null,
+      "lang": "bg",
+      "open": false,
+      "overflow": false,
+      "scrollLocked": false,
+      "url": "http://127.0.0.1:6483/bg",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    }
+  },
+  "behaviorPassed": true,
+  "consoleErrors": [],
+  "check": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "status": "passed",
+    "pages": 407
+  }
+}

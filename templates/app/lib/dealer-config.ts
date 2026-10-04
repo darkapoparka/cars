@@ -9,6 +9,7 @@ export type DealerConfiguration = {
   mapsUrl: string; website: string; whatsappUrl: string;
   services: string[]; observedAt: string; inventoryNotice: string; previewNotice: string;
   referenceClaimsApproved?: boolean;
+  welcomeEnabled?: boolean;
 };
 /** Generated dealer.json is the public content boundary, never private CRM data. */
 export const dealer = configuration as DealerConfiguration;

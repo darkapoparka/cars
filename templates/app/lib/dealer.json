@@ -6,6 +6,7 @@
   "logo": {"light": "/identity/drive24/logo-light-v2.webp", "dark": "/identity/drive24/logo-dark-v2.webp", "icon": "/icon.svg"},
   "defaultLocale": "en",
   "enabledLocales": ["en", "bg"],
+  "welcomeEnabled": true,
   "country": "BG",
   "currency": "EUR",
   "city": "",

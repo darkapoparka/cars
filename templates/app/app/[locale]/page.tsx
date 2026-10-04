@@ -6,6 +6,7 @@ import * as stylex from '@stylexjs/stylex';
 import DiscoveryHeader, {ShowroomSearch} from '@/components/DiscoveryHeader';
 import MiniVehicleCard from '@/components/MiniVehicleCard';
 import ShowroomHighlights from '@/components/ShowroomHighlights';
+import WelcomeBanner from '@/components/WelcomeBanner';
 
 import VehicleCard from '@/components/VehicleCard';
 import {BrandRow, ShowroomPromotion} from '@/components/ReferenceUI';
@@ -39,6 +40,7 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, [visibleCount]);
   return <div {...stylex.props(s.screen)}>
+    <WelcomeBanner/>
     <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
     <ShowroomSearch desktopOnly />
