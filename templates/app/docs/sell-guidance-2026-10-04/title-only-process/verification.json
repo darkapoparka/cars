@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-04",
+  "origin": "http://127.0.0.1:6483",
+  "requirement": "Only a step number and one title line, with no inline subtext; preserve detailed View steps drawer.",
+  "checks": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "height": 884,
+      "overflow": false,
+      "panelHeight": 226,
+      "subtextCount": 0,
+      "actionHeight": 44,
+      "steps": [
+        {
+          "title": "Данни за колата",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Оглед и оценка",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Продажба или замяна",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        }
+      ],
+      "guidesHeight": 192
+    },
+    {
+      "locale": "bg",
+      "width": 360,
+      "height": 884,
+      "overflow": false,
+      "panelHeight": 226,
+      "subtextCount": 0,
+      "actionHeight": 44,
+      "steps": [
+        {
+          "title": "Данни за колата",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Оглед и оценка",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Продажба или замяна",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        }
+      ],
+      "guidesHeight": 192
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "height": 884,
+      "overflow": false,
+      "panelHeight": 226,
+      "subtextCount": 0,
+      "actionHeight": 44,
+      "steps": [
+        {
+          "title": "Данни за колата",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Оглед и оценка",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Продажба или замяна",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        }
+      ],
+      "guidesHeight": 192
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "panelHeight": 140,
+      "subtextCount": 0,
+      "actionHeight": 44,
+      "steps": [
+        {
+          "title": "Данни за колата",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Оглед и оценка",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Продажба или замяна",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        }
+      ],
+      "guidesHeight": 112
+    },
+    {
+      "locale": "en",
+      "width": 768,
+      "height": 884,
+      "overflow": false,
+      "panelHeight": 140,
+      "subtextCount": 0,
+      "actionHeight": 44,
+      "steps": [
+        {
+          "title": "Your car details",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Review and valuation",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        },
+        {
+          "title": "Sale or trade-in",
+          "lines": 1,
+          "height": 36,
+          "textOverflow": false
+        }
+      ],
+      "guidesHeight": 202
+    }
+  ],
+  "initialTabletFailure": {
+    "locale": "bg",
+    "width": 768,
+    "title": "Продажба или замяна",
+    "availableWidth": 149.671875,
+    "textWidth": 169,
+    "correction": "Use max-content tracks and space-between at the tablet breakpoint."
+  },
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "passed": true,
+    "staticPages": 407,
+    "dist": ".next-build-check"
+  },
+  "verificationLimits": "The browser connection repeatedly timed out after the phone captures and corrected English tablet check. Final Bulgarian tablet recheck, drawer recheck, console inspection, preview locale and viewport reset could not be confirmed.",
+  "baseline": "Before screenshots reuse the prior compact-panel captures at the same viewport sizes."
+}
