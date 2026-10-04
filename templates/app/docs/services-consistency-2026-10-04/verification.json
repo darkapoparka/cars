@@ -1,0 +1,386 @@
+{
+  "date": "2026-10-04",
+  "route": "http://127.0.0.1:6483/bg/service",
+  "layout": [
+    {
+      "cards": [
+        {
+          "background": "rgb(237, 237, 240)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 477,
+          "href": "/bg/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 291,
+          "imageReady": true,
+          "imageWidth": 582,
+          "title": "Обслужване",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 582
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 477,
+          "href": "/bg/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 291,
+          "imageReady": true,
+          "imageWidth": 582,
+          "title": "Диагностика",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 582
+        }
+      ],
+      "careBanners": 0,
+      "height": 900,
+      "scrollWidth": 1425,
+      "url": "http://127.0.0.1:6483/bg/service",
+      "width": 1440
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 343.5,
+          "href": "/bg/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 175.5,
+          "imageReady": true,
+          "imageWidth": 351,
+          "title": "Обслужване",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 351
+        },
+        {
+          "background": "rgb(237, 237, 240)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 343.5,
+          "href": "/bg/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 175.5,
+          "imageReady": true,
+          "imageWidth": 351,
+          "title": "Диагностика",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 351
+        }
+      ],
+      "careBanners": 0,
+      "height": 884,
+      "scrollWidth": 375,
+      "url": "http://127.0.0.1:6483/bg/service",
+      "width": 390
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 308.5,
+          "href": "/bg/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 140.5,
+          "imageReady": true,
+          "imageWidth": 281,
+          "title": "Обслужване",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 281
+        },
+        {
+          "background": "rgb(237, 237, 240)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 308.5,
+          "href": "/bg/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 140.5,
+          "imageReady": true,
+          "imageWidth": 281,
+          "title": "Диагностика",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 281
+        }
+      ],
+      "careBanners": 0,
+      "height": 884,
+      "scrollWidth": 305,
+      "url": "http://127.0.0.1:6483/bg/service",
+      "width": 320
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 355.25,
+          "href": "/bg/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 169.25,
+          "imageReady": true,
+          "imageWidth": 338.5,
+          "title": "Обслужване",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 338.5
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 355.25,
+          "href": "/bg/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 169.25,
+          "imageReady": true,
+          "imageWidth": 338.5,
+          "title": "Диагностика",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 338.5
+        }
+      ],
+      "careBanners": 0,
+      "height": 884,
+      "scrollWidth": 753,
+      "url": "http://127.0.0.1:6483/bg/service",
+      "width": 768
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 308.5,
+          "href": "/en/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 140.5,
+          "imageReady": true,
+          "imageWidth": 281,
+          "title": "Servicing",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 281
+        },
+        {
+          "background": "rgb(237, 237, 240)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 308.5,
+          "href": "/en/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 140.5,
+          "imageReady": true,
+          "imageWidth": 281,
+          "title": "Diagnostics",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 281
+        }
+      ],
+      "careBanners": 0,
+      "height": 884,
+      "scrollWidth": 305,
+      "url": "http://127.0.0.1:6483/en/service",
+      "width": 320
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 343.5,
+          "href": "/en/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 175.5,
+          "imageReady": true,
+          "imageWidth": 351,
+          "title": "Servicing",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 351
+        },
+        {
+          "background": "rgb(237, 237, 240)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 343.5,
+          "href": "/en/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 175.5,
+          "imageReady": true,
+          "imageWidth": 351,
+          "title": "Diagnostics",
+          "titleFontSize": "24px",
+          "titleHeight": 28,
+          "titleLineHeight": "28px",
+          "width": 351
+        }
+      ],
+      "careBanners": 0,
+      "height": 884,
+      "scrollWidth": 375,
+      "url": "http://127.0.0.1:6483/en/service",
+      "width": 390
+    },
+    {
+      "cards": [
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 477,
+          "href": "/en/service/details?service=routine",
+          "id": "routine",
+          "imageHeight": 291,
+          "imageReady": true,
+          "imageWidth": 582,
+          "title": "Servicing",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 582
+        },
+        {
+          "background": "rgb(246, 246, 247)",
+          "borderRadius": "20px",
+          "checks": 3,
+          "height": 477,
+          "href": "/en/service/details?service=diagnostics",
+          "id": "diagnostics",
+          "imageHeight": 291,
+          "imageReady": true,
+          "imageWidth": 582,
+          "title": "Diagnostics",
+          "titleFontSize": "28px",
+          "titleHeight": 34,
+          "titleLineHeight": "34px",
+          "width": 582
+        }
+      ],
+      "careBanners": 0,
+      "height": 900,
+      "scrollWidth": 1425,
+      "url": "http://127.0.0.1:6483/en/service",
+      "width": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "case": "old-care-action",
+      "label": "Виж услугите",
+      "destination": "http://127.0.0.1:6483/bg/service/details",
+      "observed": "Generic service enquiry form"
+    },
+    {
+      "cards": [
+        "diagnostics"
+      ],
+      "careBanners": 0,
+      "case": "bg-diagnostics-filter",
+      "url": "http://127.0.0.1:6483/bg/service?category=diagnostics"
+    },
+    {
+      "cards": 0,
+      "careBanners": 0,
+      "case": "bg-search-filter-empty",
+      "resetLabel": "Виж всички услуги",
+      "url": "http://127.0.0.1:6483/bg/service?category=diagnostics&q=%D0%BC%D0%B0%D1%81%D0%BB%D0%BE"
+    },
+    {
+      "cards": 2,
+      "case": "bg-empty-reset",
+      "focusLabel": "Търси услуга",
+      "search": "",
+      "url": "http://127.0.0.1:6483/bg/service"
+    },
+    {
+      "cards": [
+        "routine"
+      ],
+      "case": "bg-oil-search",
+      "url": "http://127.0.0.1:6483/bg/service?q=%D0%BC%D0%B0%D1%81%D0%BB%D0%BE"
+    },
+    {
+      "case": "bg-servicing-keyboard-destination",
+      "notes": "Периодично обслужване",
+      "url": "http://127.0.0.1:6483/bg/service/details?service=routine"
+    },
+    {
+      "cards": [
+        "routine"
+      ],
+      "case": "bg-back-restores-search",
+      "search": "масло",
+      "url": "http://127.0.0.1:6483/bg/service?q=%D0%BC%D0%B0%D1%81%D0%BB%D0%BE"
+    },
+    {
+      "case": "bg-card-keyboard-focus",
+      "focusVisible": true,
+      "href": "/bg/service/details?service=diagnostics",
+      "outline": "rgb(36, 36, 40) solid 2px",
+      "outlineOffset": "3px"
+    },
+    {
+      "cards": [
+        "diagnostics"
+      ],
+      "case": "en-computer-search",
+      "url": "http://127.0.0.1:6483/en/service?q=computer"
+    },
+    {
+      "case": "en-diagnostics-destination",
+      "heading": "Vehicle service enquiry",
+      "notes": "Inspection and diagnostics",
+      "url": "http://127.0.0.1:6483/en/service/details?service=diagnostics"
+    },
+    {
+      "cards": [
+        "diagnostics"
+      ],
+      "case": "en-back-restores-search",
+      "search": "computer",
+      "url": "http://127.0.0.1:6483/en/service?q=computer"
+    }
+  ],
+  "layoutFailures": [],
+  "consoleErrorsAndWarnings": [],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "exitCode": 0,
+    "staticPages": 407
+  },
+  "notes": [
+    "Two localized selector guesses were corrected using the actual accessibility tree; their resulting empty-state and enquiry checks passed.",
+    "Category pills use the shared horizontal scrolling strip.",
+    "No enquiry was submitted.",
+    "Temporary viewport overrides were reset and the Bulgarian Services page was restored."
+  ]
+}

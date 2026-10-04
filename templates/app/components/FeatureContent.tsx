@@ -56,7 +56,6 @@ export default function FeatureContent({kind, onStart, serviceSearch}: {kind: Ki
       </div>
     : null}
     {kind === 'service' && serviceSearch ? <ServiceCatalogue searchState={serviceSearch}/> : null}
-    {kind === 'service' ? <BrandCampaign kind="care" onAction={onStart}/> : null}
     {informationOpen ? <ReferenceInfoSheet title="How it works" description="Sell or part-exchange." steps={sellingSteps} guidance={{title: 'Before you sell', items: sellingGuides}} onClose={() => setInformationOpen(false)}/> : null}
   </>;
 }
