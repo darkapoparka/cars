@@ -319,7 +319,9 @@ async function run(name, engine) {
     );
     assert.equal(await message.inputValue(), enquiry);
     await page.getByRole('navigation').getByRole('link', { name: 'Cars', exact: true }).click();
+    await page.locator('#showroom-stock').waitFor();
     await page.getByRole('navigation').getByRole('link', { name: 'Contact', exact: true }).click();
+    await page.waitForURL((url) => url.pathname === '/contact');
     assert.equal(await message.inputValue(), enquiry);
     await page.evaluate(() => {
       window.__qaWrites = [];

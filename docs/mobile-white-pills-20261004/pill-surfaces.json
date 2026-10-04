@@ -1,0 +1,68 @@
+{
+  "active390": [
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Подреждане"
+    },
+    {
+      "background": "rgb(27, 27, 33)",
+      "border": "rgb(27, 27, 33)",
+      "faceHeight": 40,
+      "shadow": "none",
+      "targetHeight": 48,
+      "text": "BMW"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Цена"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Година"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Гориво"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Още"
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "faceHeight": 40,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "targetHeight": 48,
+      "text": "Изчисти"
+    }
+  ],
+  "width320": {
+    "pageWidth": 305,
+    "viewport": 320
+  },
+  "width1440": {
+    "pageWidth": 1425,
+    "viewport": 1440
+  }
+}

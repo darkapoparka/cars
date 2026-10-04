@@ -41,10 +41,11 @@ sort and scroll position. The native make/model picker and range controls remain
 Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
-fields and secondary actions. Quick-filter pills use the light control token with
-a thin neutral border when inactive. Applied or selected pills invert the
+fields and secondary actions. Inactive quick-filter pills use the white page token
+with a soft shadow and transparent border. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
-matches the fill. Both states retain the same geometry and 48px targets.
+matches the fill, without a shadow. Both states retain the same geometry and
+48px targets.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
