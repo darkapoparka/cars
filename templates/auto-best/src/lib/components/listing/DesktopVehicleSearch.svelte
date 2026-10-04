@@ -22,6 +22,9 @@
   let search = $state('');
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
+  let tokenList = $state<HTMLDivElement | null>(null);
+  let tokenScrolled = $state(false);
+  let revealField = $state<Field | 'q'>();
   let commandValue = $state('');
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
   const title = $derived(field ? listingFacetTitle(field, i18n.locale) : i18n.t('m_3deeda2a1ebe'));
@@ -53,7 +56,19 @@
       modelMake = draft.make;
       search = '';
       commandValue = '';
+      revealField = field;
+      tokenScrolled = false;
     });
+  });
+
+  $effect(() => {
+    const target = revealField;
+    if (!open || !tokenList || !target) return;
+    // Follow the edited value without scrolling the fixed dialog or its actions.
+    const value = target === 'q' ? draft.q : listingFacetSummary(target, draft, i18n.locale);
+    if (!value) return;
+    void tick().then(() => tokenList?.querySelector(`[data-token="${target}"]`)
+      ?.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'instant' }));
   });
 
   function matches(value: string) {
@@ -87,10 +102,11 @@
     return filterListingVehicles(listingVehicles, listingFiltersFromDraft(candidate(item)), i18n.locale).length;
   }
   async function focusSearch() { await tick(); (range ? rangeInput : searchInput)?.focus({ preventScroll: true }); }
-  function browse(item?: Field) { field = item; modelMake = draft.make; search = ''; commandValue = ''; void focusSearch(); }
+  function browse(item?: Field) { field = item; revealField = item; modelMake = draft.make; search = ''; commandValue = ''; void focusSearch(); }
   function select(item: Choice) {
     if (isSelected(item) && item.field !== 'equipment') clear(item.field);
     else draft = candidate(item);
+    revealField = item.field;
     // Selecting a value keeps the dialog open, including equipment multi-selection.
     if (!field) { search = ''; commandValue = ''; }
     void focusSearch();
@@ -115,7 +131,10 @@
     if (event.key === 'Backspace' && !search && field && event.target === searchInput) browse();
   }
   function controlKeyboard(event: KeyboardEvent) {
-    if (event.key === 'Enter' && event.target instanceof Element && (event.target.closest('button') || event.target.matches('input[type="number"]'))) event.stopPropagation();
+    if (!(event.target instanceof Element)) return;
+    const numeric = event.target.matches('input[type="number"]');
+    if (numeric && ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)
+      || event.key === 'Enter' && (numeric || event.target.closest('button'))) event.stopPropagation();
   }
 </script>
 
@@ -142,23 +161,74 @@
           <div class="dn-search-tokens" role="toolbar" tabindex="-1" aria-label={i18n.t('m_3deeda2a1ebe')} onkeydown={controlKeyboard}>
             {#if showAddFilter}<button class="dn-search-add" type="button" onclick={() => browse()}><span aria-hidden="true">+</span>{i18n.t('inventory.search.addFilter')}</button>
             {:else}<span class="dn-search-section-title">{i18n.t('m_546ebb8eb993')}</span>{/if}
-            {#if draft.q}
-              <div class="dn-search-token"><button class="dn-search-token-edit" type="button" title={draft.q} onclick={() => { browse(); search = draft.q; }}><span class="dn-search-token-value">{draft.q}</span></button><button class="dn-search-token-remove" type="button" aria-label={`${i18n.t('action.clearShort')}: ${draft.q}`} onclick={() => clear('q')}><Icon name="x" size={14} /></button></div>
+            <div class="dn-search-token-window" data-scrolled={tokenScrolled}>
+              <div class="dn-search-token-list" bind:this={tokenList} onscroll={event => tokenScrolled = event.currentTarget.scrollLeft > 1}>
+                {#if draft.q}
+                  <div class="dn-search-token" data-token="q">
+                    <button class="dn-search-token-edit" type="button" title={draft.q} onclick={() => { browse(); search = draft.q; }}>
+                      <span class="dn-search-token-value">{draft.q}</span>
+                    </button>
+                    <button class="dn-search-token-remove" type="button" aria-label={`${i18n.t('action.clearShort')}: ${draft.q}`} onclick={() => clear('q')}><Icon name="x" size={14} /></button>
+                  </div>
+                {/if}
+                {#each activeFields as item (item)}
+                  <div class="dn-search-token" data-token={item}>
+                    <button class="dn-search-token-edit" type="button" title={`${listingFacetTitle(item, i18n.locale)}: ${listingFacetSummary(item, draft, i18n.locale)}`} onclick={() => browse(item)}>
+                      <span class="dn-search-token-label">{listingFacetTitle(item, i18n.locale)}</span>
+                      <span class="dn-search-token-value">{listingFacetSummary(item, draft, i18n.locale)}</span>
+                    </button>
+                    <button class="dn-search-token-remove" type="button" aria-label={`${i18n.t('action.clearShort')}: ${listingFacetTitle(item, i18n.locale)}`} onclick={() => clear(item)}><Icon name="x" size={14} /></button>
+                  </div>
+                {/each}
+              </div>
+            </div>
+            {#if field === 'make' && draft.make}
+              <button class="dn-search-next" type="button" onclick={() => browse('model')}>{listingFacetTitle('model', i18n.locale)}<Icon name="arrow-right" size={16} /></button>
             {/if}
-            {#each activeFields as item (item)}
-              <div class="dn-search-token"><button class="dn-search-token-edit" type="button" title={`${listingFacetTitle(item, i18n.locale)}: ${listingFacetSummary(item, draft, i18n.locale)}`} onclick={() => browse(item)}><span class="dn-search-token-label">{listingFacetTitle(item, i18n.locale)}</span><span class="dn-search-token-value">{listingFacetSummary(item, draft, i18n.locale)}</span></button><button class="dn-search-token-remove" type="button" aria-label={`${i18n.t('action.clearShort')}: ${listingFacetTitle(item, i18n.locale)}`} onclick={() => clear(item)}><Icon name="x" size={14} /></button></div>
-            {/each}
           </div>
 
           {#if range}
             <div class="dn-search-results dn-search-range" role="presentation" onkeydown={controlKeyboard}>
               {#if field === 'mileage_max'}
-                <label><span>{listingFacetTitle('mileage_max', i18n.locale)} · {i18n.t('inventory.search.kilometres')}</span><input {@attach i18n.validation} type="number" min="0" step="1" bind:this={rangeInput} bind:value={() => draft.mileageMax, value => draft.mileageMax = value?.toString() ?? ''} /></label>
+                <label>
+                  <span>{listingFacetTitle('mileage_max', i18n.locale)}</span>
+                  <span class="dn-search-range-control">
+                    <input {@attach i18n.validation} type="number" min="0" step="1"
+                      aria-label={`${listingFacetTitle('mileage_max', i18n.locale)} · ${i18n.t('inventory.search.kilometres')}`}
+                      placeholder={i18n.t('inventory.range.unlimited')} data-unit="true" bind:this={rangeInput}
+                      bind:value={() => draft.mileageMax, value => draft.mileageMax = value?.toString() ?? ''} />
+                    <span class="dn-search-unit" aria-hidden="true">{i18n.t('inventory.search.kilometres')}</span>
+                  </span>
+                </label>
                 <div class="dn-search-presets">{#each listingFilterOptions.mileages.filter(Boolean) as value (value)}<button type="button" data-active={draft.mileageMax === value} onclick={() => draft.mileageMax = value}>{new Intl.NumberFormat(i18n.locale).format(Number(value))} {i18n.t('inventory.search.kilometres')}</button>{/each}</div>
               {:else}
                 <div class="dn-search-range-fields">
-                  <label><span>{i18n.t(field === 'price' ? 'm_94470b41eead' : 'm_349ee8568241')}{field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}</span><input {@attach i18n.validation} type="number" min="0" step="1" bind:this={rangeInput} bind:value={() => field === 'price' ? draft.priceMin : draft.yearMin, value => { if (field === 'price') draft.priceMin = value?.toString() ?? ''; else draft.yearMin = value?.toString() ?? ''; }} /></label>
-                  <label><span>{i18n.t(field === 'price' ? 'm_363c4f34635c' : 'm_07339ff9faf8')}{field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}</span><input {@attach i18n.validation} type="number" min="0" step="1" bind:value={() => field === 'price' ? draft.priceMax : draft.yearMax, value => { if (field === 'price') draft.priceMax = value?.toString() ?? ''; else draft.yearMax = value?.toString() ?? ''; }} /></label>
+                  <label>
+                    <span>{i18n.t(field === 'price' ? 'm_94470b41eead' : 'm_349ee8568241')}</span>
+                    <span class="dn-search-range-control">
+                      <input {@attach i18n.validation} type="number" min="0" step="1"
+                        aria-label={`${i18n.t(field === 'price' ? 'm_94470b41eead' : 'm_349ee8568241')}${field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}`}
+                        placeholder={i18n.t('inventory.range.unlimited')} data-unit={field === 'price'} bind:this={rangeInput}
+                        bind:value={() => field === 'price' ? draft.priceMin : draft.yearMin, value => {
+                          if (field === 'price') draft.priceMin = value?.toString() ?? '';
+                          else draft.yearMin = value?.toString() ?? '';
+                        }} />
+                      {#if field === 'price'}<span class="dn-search-unit" aria-hidden="true">{currencySymbol(i18n.locale)}</span>{/if}
+                    </span>
+                  </label>
+                  <label>
+                    <span>{i18n.t(field === 'price' ? 'm_363c4f34635c' : 'm_07339ff9faf8')}</span>
+                    <span class="dn-search-range-control">
+                      <input {@attach i18n.validation} type="number" min="0" step="1"
+                        aria-label={`${i18n.t(field === 'price' ? 'm_363c4f34635c' : 'm_07339ff9faf8')}${field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}`}
+                        placeholder={i18n.t('inventory.range.unlimited')} data-unit={field === 'price'}
+                        bind:value={() => field === 'price' ? draft.priceMax : draft.yearMax, value => {
+                          if (field === 'price') draft.priceMax = value?.toString() ?? '';
+                          else draft.yearMax = value?.toString() ?? '';
+                        }} />
+                      {#if field === 'price'}<span class="dn-search-unit" aria-hidden="true">{currencySymbol(i18n.locale)}</span>{/if}
+                    </span>
+                  </label>
                 </div>
                 <div class="dn-search-presets">
                   {#each (field === 'price' ? ['30000', '50000', '70000', '100000'] : ['2020', '2021', '2022', '2023']) as value (value)}
@@ -184,7 +254,12 @@
                       <span class="dn-search-row-count">{choiceCount(item)}</span><span class="dn-search-check" data-checked={isSelected(item)}>✓</span>
                     </Command.Item>
                   {/each}
-                  {#if !choices.length}<p class="dn-search-empty" role="status">{i18n.t('inventory.search.empty')}</p>{/if}
+                  {#if !choices.length}
+                    <div class="dn-search-empty">
+                      <Icon name="search" size={24} /><p role="status">{i18n.t('inventory.search.empty')}</p>
+                      {#if search}<button type="button" onkeydown={controlKeyboard} onclick={() => { search = ''; void focusSearch(); }}>{i18n.t('inventory.search.clearQuery')}</button>{/if}
+                    </div>
+                  {/if}
                 {:else}
                   {#if searchChoices.length}
                     <Command.Group>
@@ -203,7 +278,7 @@
                     </Command.Group>
                   {/if}
                   {#if search.trim()}
-                    <Command.Item class="dn-search-row dn-search-keyword" value="keyword" onSelect={() => { draft.q = search.trim(); search = ''; commandValue = ''; }}><Icon name="search" size={17} /><span>{i18n.t('inventory.search.keyword', { query: search.trim() })}</span><small>{i18n.t('inventory.search.keywordLabel')}</small></Command.Item>
+                    <Command.Item class="dn-search-row dn-search-keyword" value="keyword" onSelect={() => { draft.q = search.trim(); revealField = 'q'; search = ''; commandValue = ''; }}><Icon name="search" size={17} /><span>{i18n.t('inventory.search.keyword', { query: search.trim() })}</span><small>{i18n.t('inventory.search.keywordLabel')}</small></Command.Item>
                   {/if}
                 {/if}
               </Command.Viewport>
@@ -237,7 +312,14 @@
   .dn-search-back, .dn-search-icon, :global(.dn-search-close) { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-back { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-search-icon:hover, .dn-search-back:hover, :global(.dn-search-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-2); height: 56px; overflow-x: auto; padding: 0 var(--dn-space-6); scrollbar-width: thin; }
+  .dn-search-tokens { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-2); height: 56px; padding: 0 var(--dn-space-6); }
+  .dn-search-token-window { position: relative; flex: 1; min-width: 0; }
+  .dn-search-token-window[data-scrolled='true']::before { content: ''; position: absolute; inset: 0 auto 0 0; z-index: 1; width: var(--dn-space-8); background: linear-gradient(to right, var(--dn-surface-raised) var(--dn-space-3), transparent); }
+  .dn-search-token-window:has(button:focus-visible)::before { display: none; }
+  .dn-search-token-list { display: flex; align-items: center; gap: var(--dn-space-2); min-width: 0; height: 56px; overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: var(--dn-space-1); padding-inline: var(--dn-space-1); scrollbar-width: none; }
+  .dn-search-token-list::-webkit-scrollbar { display: none; }
+  .dn-search-next { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-2); height: var(--dn-control-height-compact); padding: 0 var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-next:hover { background: var(--dn-surface-subtle); }
   .dn-search-section-title { color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
   .dn-search-add { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-2); height: var(--dn-control-height-compact); padding: 0 var(--dn-space-3); border: 1px solid transparent; border-radius: var(--dn-radius-button); background: var(--dn-surface-subtle); color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-add > span { font-size: var(--dn-text-card); line-height: var(--dn-leading-control); }
@@ -264,13 +346,22 @@
   .dn-search-check { display: grid; flex: 0 0 20px; place-items: center; color: inherit; visibility: hidden; }
   .dn-search-check[data-checked='true'] { visibility: visible; }
   :global(.dn-search-choice[aria-checked='true']) { background-color: var(--dn-ink-strong); color: var(--dn-white); }
+  :global(.dn-search-command:has(.dn-search-input:focus-visible) .dn-search-choice[aria-checked='true'][data-selected]) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   :global(.dn-search-choice[aria-checked='true'] small), :global(.dn-search-choice[aria-checked='true'] .dn-search-row-count) { color: var(--dn-text-on-ink); }
-  .dn-search-empty { margin: var(--dn-space-8) var(--dn-space-3); color: var(--dn-muted); text-align: center; font-size: var(--dn-text-meta); }
+  .dn-search-empty { display: grid; justify-items: center; gap: var(--dn-space-3); padding: var(--dn-space-8) var(--dn-space-3); color: var(--dn-muted); text-align: center; font-size: var(--dn-text-meta); }
+  .dn-search-empty p { margin: 0; }
+  .dn-search-empty button { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-empty button:hover { background: var(--dn-surface-subtle); }
   .dn-search-range { padding: var(--dn-space-6); }
   .dn-search-range-fields { display: grid; grid-template-columns: 1fr 1fr; gap: var(--dn-space-4); }
   label { display: grid; gap: var(--dn-space-2); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
-  label span { color: var(--dn-muted); }
-  input[type='number'] { width: 100%; height: var(--dn-control-height-default); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); }
+  label > span { color: var(--dn-ink); }
+  .dn-search-range-control { position: relative; display: block; }
+  .dn-search-unit { position: absolute; top: 50%; right: var(--dn-space-3); color: var(--dn-muted); transform: translateY(-50%); pointer-events: none; }
+  input[type='number'] { width: 100%; height: var(--dn-control-height-default); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-control-prominent); appearance: textfield; }
+  input[type='number'][data-unit='true'] { padding-right: var(--dn-control-height-compact); }
+  input[type='number']::placeholder { color: var(--dn-muted); font-size: var(--dn-text-meta); }
+  input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button { margin: 0; appearance: none; }
   .dn-search-presets { display: flex; flex-wrap: wrap; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
   .dn-search-presets button { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-presets button:hover { background: var(--dn-surface-subtle); }

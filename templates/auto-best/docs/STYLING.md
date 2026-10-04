@@ -66,6 +66,13 @@ actions and filter tokens follow the pill family. Selected values and presets
 use charcoal with white text. Neutral command focus stays light, and the white
 footer keeps the primary action distinct. Range headings omit the search divider;
 token keyboard focus stays visible outside clipped values.
+Add filter stays pinned beside the horizontally scrollable token list. Edited
+values reveal their token automatically without shifting the row or dialog.
+A selected make exposes a direct Model action while keeping the make choices open.
+Range inputs show units beside their values and an unrestricted placeholder;
+choice search with no results offers Clear search. Keyboard focus remains visible
+on a selected charcoal choice. Number inputs retain their native arrow-key editing
+without invoking Command list navigation.
 Choice search tolerates accents and model spacing. Typing only narrows suggestions;
 the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
 choices. Model respects the opening make and a uniquely owned model can infer
