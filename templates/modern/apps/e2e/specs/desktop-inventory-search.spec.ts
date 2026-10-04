@@ -19,7 +19,7 @@ test.beforeEach(async ({ context, baseURL, page }) => {
 });
 
 for (const locale of ["bg", "en"] as const) {
-  test(`inventory controls center Filters and Sort and keep preview choices secondary (${locale})`, async ({
+  test(`inventory banner centers Filters and Sort and keeps display choices in a floating menu (${locale})`, async ({
     page,
   }) => {
     const isBg = locale === "bg";
@@ -28,28 +28,45 @@ for (const locale of ["bg", "en"] as const) {
       await page.goto(`/${locale}/cars`);
       const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
       const bar = page.locator('[data-slot="dealer-inventory-filters"]');
-      const controls = bar.locator('[data-slot="desktop-results-controls"]');
+      const controls = hero.locator('[data-slot="desktop-results-controls"]');
       const filters = controls.locator('[data-slot="desktop-primary-control"]');
+      await expect(filters).toHaveCount(1);
       await expect(filters).toBeVisible();
+      await page.evaluate(() => document.fonts.ready);
       await expect(controls.getByRole("combobox")).toBeVisible();
       await expect(
-        hero.locator('[data-slot="desktop-primary-control"]')
+        bar.locator('[data-slot="desktop-primary-control"]')
       ).toHaveCount(0);
-      const frame = await bar.boundingBox();
+      const frame = await hero.boundingBox();
       const box = await controls.boundingBox();
+      const search = await hero
+        .locator('[data-slot="dealer-inventory-search"]')
+        .boundingBox();
       expect(
         frame &&
           box &&
           Math.abs(box.x + box.width / 2 - frame.x - frame.width / 2)
       ).toBeLessThan(1);
-      const view = await bar
-        .getByRole("button", {
+      expect(box?.y).toBeGreaterThan((search?.y ?? 0) + (search?.height ?? 0));
+      expect((box?.y ?? 0) + (box?.height ?? 0)).toBeLessThan(
+        (frame?.y ?? 0) + (frame?.height ?? 0)
+      );
+      const count = hero.locator('[data-slot="dealer-inventory-count"]');
+      await expect(count).toHaveClass("sr-only");
+      expect((await count.boundingBox())?.width).toBeLessThanOrEqual(1);
+      const view = bar.locator('[data-slot="dealer-inventory-preview"]');
+      const beforeScroll = await view.boundingBox();
+      await page.evaluate(() => scrollTo(0, 300));
+      await expect
+        .poll(async () => (await view.boundingBox())?.y)
+        .toBe(beforeScroll?.y);
+      await view.click();
+      await expect(
+        page.getByRole("menuitemradio", {
           name: isBg ? "Изглед в решетка" : "Grid view",
           exact: true,
         })
-        .boundingBox();
-      expect(view?.x).toBeGreaterThan((box?.x ?? 0) + (box?.width ?? 0));
-      await bar.locator('[data-slot="dealer-inventory-preview"]').click();
+      ).toHaveAttribute("aria-checked", "true");
       await expect(
         page.getByRole("menuitemradio", {
           name: isBg ? "Бързи филтри" : "Quick filters",
@@ -218,7 +235,7 @@ for (const locale of ["bg", "en"] as const) {
       .toBeNull();
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
     expect(new URL(page.url()).searchParams.get("fuel")).toBe("diesel");
-    const allFilters = bar.locator('[data-slot="desktop-primary-control"]');
+    const allFilters = hero.locator('[data-slot="desktop-primary-control"]');
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(

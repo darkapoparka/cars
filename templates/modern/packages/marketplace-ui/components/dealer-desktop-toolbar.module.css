@@ -10,6 +10,8 @@
   .content {
     position: relative;
     z-index: var(--desktop-layer-raised);
+    display: grid;
+    gap: calc(var(--spacing) * 4);
     width: min(100%, calc(var(--spacing) * 285));
   }
 }

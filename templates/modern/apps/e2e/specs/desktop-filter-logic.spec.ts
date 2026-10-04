@@ -30,7 +30,7 @@ test.beforeEach(async ({ baseURL, context, page }) => {
 async function openFilters(page: Page, locale: string, query: string) {
   await page.goto(`/${locale}/cars?${query}`);
   const trigger = page.locator(
-    '[data-slot="dealer-inventory-filters"] [data-slot="desktop-primary-control"]'
+    '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
   );
   await trigger.click();
   const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');

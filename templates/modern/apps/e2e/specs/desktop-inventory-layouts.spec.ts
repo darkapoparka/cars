@@ -1,7 +1,10 @@
 import { expect, test } from "@playwright/test";
 import { getInventoryLayoutCookieName } from "@repo/marketplace/inventory-presentation";
 import { publicSite } from "@repo/marketplace/site-config";
-import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
+import {
+  selectInventoryFilterLayout,
+  selectInventoryViewMode,
+} from "../fixtures/inventory-preview";
 
 const layoutCookie = getInventoryLayoutCookieName(publicSite.identity.slug);
 const stageLabels = {
@@ -44,11 +47,11 @@ for (const locale of ["bg", "en"] as const) {
     await page.goto(`/${locale}/cars?priceMax=150000`);
     const bar = page.locator('[data-slot="dealer-inventory-filters"]');
     const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
-    const summary = bar.locator('[data-slot="dealer-inventory-summary"]');
+    const summary = hero.locator('[data-slot="dealer-inventory-summary"]');
     await expect(summary).toBeVisible();
     await expect(summary.getByRole("combobox")).toHaveCount(1);
     await expect(
-      summary.locator('[data-slot="dealer-inventory-preview"]')
+      bar.locator('[data-slot="dealer-inventory-preview"]')
     ).toBeVisible();
     await expect(
       hero.locator('[data-slot="dealer-inventory-search"]')
@@ -182,7 +185,7 @@ for (const locale of ["bg", "en"] as const) {
     await page.goto(`/${locale}/cars?sort=price_asc`);
     const original = page.url();
     const makeTrigger = page.locator(
-      '[data-slot="dealer-inventory-filters"] [data-slot="desktop-primary-control"]'
+      '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
     );
     const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     const navigation = dialog.locator(
@@ -312,12 +315,7 @@ for (const locale of ["bg", "en"] as const) {
       .locator('[data-slot="dealer-inventory-count"]')
       .textContent();
     const initialVehicles = await grid.locator("article").allTextContents();
-    await summary
-      .getByRole("button", {
-        name: isBg ? "Списъчен изглед" : "List view",
-        exact: true,
-      })
-      .click();
+    await selectInventoryViewMode(page, "list", locale);
     await expect(grid).toHaveAttribute("data-view", "list");
     await selectInventoryFilterLayout(page, "sidebar", locale);
     await expect(sidebar).toBeVisible();
@@ -400,7 +398,7 @@ for (const locale of ["bg", "en"] as const) {
       sidebar.locator('[data-slot="desktop-hero-make"]')
     ).toContainText("BMW");
     await selectInventoryFilterLayout(page, "quick", locale);
-    const allFilters = bar.locator('[data-slot="desktop-primary-control"]');
+    const allFilters = hero.locator('[data-slot="desktop-primary-control"]');
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(fullDialog).toBeVisible();

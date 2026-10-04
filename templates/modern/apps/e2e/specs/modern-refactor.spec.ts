@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 import { createBrandTheme } from "@repo/design-system/lib/brand-theme";
+import { selectInventoryViewMode } from "../fixtures/inventory-preview";
 import {
   expectNoHorizontalOverflow,
   settleModernPage,
@@ -616,20 +617,20 @@ test("catalog sort, density and reset retain the browsing route", async ({
   await settleModernPage(page);
   const summary = page.locator('[data-slot="dealer-inventory-summary"]');
   const count = await summary.locator("output").innerText();
-  await summary.getByRole("combobox").selectOption("price_asc");
+  await summary.getByRole("combobox").click();
+  await page.getByRole("option", { name: "Цена нагоре", exact: true }).click();
   await expect
     .poll(() => new URL(page.url()).searchParams.get("sort"))
     .toBe("price_asc");
   expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
   await page.reload();
-  await expect(summary.getByRole("combobox")).toHaveValue("price_asc");
+  await expect(summary.getByRole("combobox")).toContainText("Цена нагоре");
   await expect(summary.locator("output")).toHaveText(count);
-  const toggles = summary.locator("fieldset button");
-  await toggles.nth(0).click();
+  await selectInventoryViewMode(page, "list", "bg");
   await expect(
     page.locator('[data-slot="marketplace-listing-grid"]')
   ).toHaveAttribute("data-view", "list");
-  await toggles.nth(1).click();
+  await selectInventoryViewMode(page, "grid", "bg");
   await expect(
     page.locator('[data-slot="marketplace-listing-grid"]')
   ).toHaveAttribute("data-view", "grid");
@@ -739,10 +740,7 @@ test("catalog list mode retains showroom card hierarchy", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("/cars");
   await settleModernPage(page);
-  await page
-    .locator('[data-slot="dealer-inventory-summary"] fieldset button')
-    .first()
-    .click();
+  await selectInventoryViewMode(page, "list", "bg");
   const card = page
     .locator('[data-slot="marketplace-listing-grid"] article')
     .first();

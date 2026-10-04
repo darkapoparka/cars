@@ -115,16 +115,13 @@ export const MarketplaceResults = ({
     >
       {isDealershipSite && !hideDesktop ? (
         <DealerInventoryFilters
-          filterCount={activeFilterCount}
           filters={filters}
           layout={desktopFilterLayout}
           locale={locale}
           onApply={onApply}
           onClearFilters={onClearFilters}
           onLayoutChange={onDesktopFilterLayoutChange}
-          onOpenFilters={onOpenFilters}
           onViewModeChange={onViewModeChange}
-          totalListings={totalListings}
           viewMode={viewMode}
         />
       ) : null}

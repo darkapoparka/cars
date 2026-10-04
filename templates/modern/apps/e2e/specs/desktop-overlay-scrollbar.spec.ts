@@ -21,7 +21,7 @@ test.beforeEach(async ({ context, baseURL, page }) => {
 const frameSelectors = [
   '[data-slot="dealer-desktop-header"]',
   '[data-slot="dealer-desktop-inventory-hero"]',
-  '[data-slot="dealer-inventory-filters"]',
+  '[data-slot="dealer-inventory-panel"]',
 ];
 
 for (const locale of ["bg", "en"] as const) {
@@ -46,6 +46,7 @@ for (const locale of ["bg", "en"] as const) {
       }
       const hero = page.locator('[data-slot="dealer-inventory-search"]');
       const bar = page.locator('[data-slot="dealer-inventory-filters"]');
+      const summary = page.locator('[data-slot="dealer-inventory-summary"]');
       const overlays = [
         {
           trigger: hero.getByRole("button", {
@@ -73,11 +74,11 @@ for (const locale of ["bg", "en"] as const) {
           content: '[data-slot="desktop-focused-filter-dialog"]',
         },
         {
-          trigger: bar.locator('[data-slot="desktop-primary-control"]'),
+          trigger: summary.locator('[data-slot="desktop-primary-control"]'),
           content: '[data-slot="desktop-full-filter-dialog"]',
         },
         {
-          trigger: bar.getByRole("combobox"),
+          trigger: summary.getByRole("combobox"),
           content: '[data-slot="select-content"]',
         },
         {

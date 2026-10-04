@@ -7,52 +7,41 @@ import {
 } from "@repo/design-system/components/ui/select";
 import {
   filterLabels,
-  type ListingViewMode,
   type MarketplaceSearchParams,
   sortOptions,
 } from "@repo/marketplace";
 import { SlidersHorizontal } from "lucide-react";
-import type { ReactNode } from "react";
 import { marketplaceSortLabelsBg } from "../lib/marketplace-filter-config";
-import {
-  formatVehicleCount,
-  getMarketplaceResultTitle,
-} from "../lib/marketplace-results-toolbar-policy";
+import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
-import { MarketplaceViewModeToggle } from "./desktop-marketplace-controls";
 
-/** Desktop catalogue controls share the same search and results on Home. */
+/** The inventory banner owns filtering, sorting and the live result announcement. */
 export function DealerInventorySummary({
-  children,
   filterCount,
   filters,
   locale,
   totalListings,
-  viewMode,
   onApply,
   onOpenFilters,
-  onViewModeChange,
 }: {
-  children?: ReactNode;
   filterCount: number;
   filters: MarketplaceSearchParams;
   locale?: string;
   totalListings: number;
-  viewMode: ListingViewMode;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onOpenFilters: () => void;
-  onViewModeChange: (mode: ListingViewMode) => void;
 }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const selectedSort = filters.sort ?? "recommended";
   return (
     <div className={styles.summary} data-slot="dealer-inventory-summary">
-      <div className={styles.heading}>
-        <h2>{getMarketplaceResultTitle(filters, locale)}</h2>
-        <output aria-live="polite" data-slot="dealer-inventory-count">
-          {formatVehicleCount(totalListings, filters.category, locale)}
-        </output>
-      </div>
+      <output
+        aria-live="polite"
+        className="sr-only"
+        data-slot="dealer-inventory-count"
+      >
+        {formatVehicleCount(totalListings, filters.category, locale)}
+      </output>
       <div className={styles.controls} data-slot="desktop-results-controls">
         <button
           aria-haspopup="dialog"
@@ -98,15 +87,6 @@ export function DealerInventorySummary({
             ))}
           </SelectContent>
         </Select>
-      </div>
-      <div className={styles.displayControls}>
-        <MarketplaceViewModeToggle
-          className={styles.viewToggle}
-          locale={locale}
-          onViewModeChange={onViewModeChange}
-          viewMode={viewMode}
-        />
-        {children}
       </div>
     </div>
   );

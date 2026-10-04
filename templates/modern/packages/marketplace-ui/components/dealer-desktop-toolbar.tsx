@@ -6,6 +6,7 @@ import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-po
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
 import { DealerInventorySearch } from "./dealer-inventory-search";
+import { DealerInventorySummary } from "./dealer-inventory-summary";
 import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 export type DealerDesktopToolbarProps = {
   filters: MarketplaceSearchParams;
@@ -14,6 +15,10 @@ export type DealerDesktopToolbarProps = {
   | { loading: true; onOpenSection?: never }
   | {
       loading?: false;
+      filterCount: number;
+      totalListings: number;
+      onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+      onOpenFilters: () => void;
       onOpenSection: (section: DesktopFullFilterEntry) => void;
     }
 );
@@ -47,6 +52,16 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
             locale={locale}
             onOpenSection={openSection}
           />
+          {!props.loading && (
+            <DealerInventorySummary
+              filterCount={props.filterCount}
+              filters={filters}
+              locale={locale}
+              onApply={props.onApply}
+              onOpenFilters={props.onOpenFilters}
+              totalListings={props.totalListings}
+            />
+          )}
         </div>
       </DealerDesktopHero>
     </div>
