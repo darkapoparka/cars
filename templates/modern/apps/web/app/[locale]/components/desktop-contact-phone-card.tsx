@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@repo/design-system/components/ui/tooltip";
 import { Check, Copy, Phone } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import styles from "./boxcar-desktop-pages.module.css";
@@ -70,31 +75,34 @@ export function DesktopContactPhoneCard({
       <a className={styles.contactCardMain} href={phoneHref}>
         <Phone aria-hidden size={26} />
         <div>
-          <h3 className={styles.phoneTitle}>
-            <span className={styles.phoneTitleRest}>
-              {isBg ? "Телефон" : "Phone"}
-            </span>
-            <span className={styles.phoneTitleActive}>
-              {isBg ? "Обадете се" : "Call us"}
-            </span>
-          </h3>
+          <h3>{isBg ? "Телефон" : "Phone"}</h3>
           <p ref={numberRef}>{phoneDisplay}</p>
         </div>
       </a>
-      <button
-        aria-label={feedback || copyLabel}
-        className={styles.copyPhone}
-        data-copy-state={copyState}
-        onClick={copyNumber}
-        title={feedback || copyLabel}
-        type="button"
-      >
-        {copyState === "copied" ? (
-          <Check aria-hidden size={18} />
-        ) : (
-          <Copy aria-hidden size={18} />
-        )}
-      </button>
+      <Tooltip delayDuration={300}>
+        <TooltipTrigger asChild>
+          <button
+            aria-label={feedback || copyLabel}
+            className={styles.copyPhone}
+            data-copy-state={copyState}
+            onClick={copyNumber}
+            type="button"
+          >
+            {copyState === "copied" ? (
+              <Check aria-hidden size={18} />
+            ) : (
+              <Copy aria-hidden size={18} />
+            )}
+          </button>
+        </TooltipTrigger>
+        <TooltipContent
+          data-slot="desktop-contact-copy-tooltip"
+          side="top"
+          sideOffset={6}
+        >
+          {feedback || copyLabel}
+        </TooltipContent>
+      </Tooltip>
       <output aria-live="polite" className="sr-only">
         {feedback}
       </output>

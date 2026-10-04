@@ -2,7 +2,7 @@ import { expect, test } from "@playwright/test";
 
 const showroomNames = { bg: /Автосалон/, en: /Showroom/ };
 const viewingNames = { bg: /Уговорете оглед/, en: /Arrange a viewing/ };
-const callNames = { bg: /Обадете се/, en: /Call us/ };
+const callNames = { bg: /Телефон/, en: /Phone/ };
 
 test.use({ launchOptions: { ignoreDefaultArgs: ["--hide-scrollbars"] } });
 
@@ -88,10 +88,10 @@ for (const locale of ["bg", "en"] as const) {
     await phone.scrollIntoViewIfNeeded();
     const before = await phone.boundingBox();
     await phone.hover();
-    await expect(phone).toHaveCSS("background-color", "rgb(5, 11, 32)");
-    await expect(phone).toHaveCSS("color", "rgb(255, 255, 255)");
+    await expect(phone).toHaveCSS("background-color", "rgb(255, 255, 255)");
+    await expect(phone).toHaveCSS("color", "rgb(5, 11, 32)");
     await expect(
-      phone.getByText(locale === "bg" ? "Обадете се" : "Call us", {
+      phone.getByText(locale === "bg" ? "Телефон" : "Phone", {
         exact: true,
       })
     ).toBeVisible();
@@ -101,7 +101,7 @@ for (const locale of ["bg", "en"] as const) {
     await call.focus();
     await expect(call).toBeFocused();
     await expect(call).toHaveAccessibleName(callNames[locale]);
-    await expect(phone).toHaveCSS("background-color", "rgb(5, 11, 32)");
+    await expect(phone).toHaveCSS("background-color", "rgb(255, 255, 255)");
     expect(
       Number.parseFloat(
         await call.evaluate(
@@ -111,13 +111,28 @@ for (const locale of ["bg", "en"] as const) {
     ).toBeGreaterThan(0);
     await page.keyboard.press("Tab");
     await expect(copy).toBeFocused();
-    await expect(copy).toHaveCSS("outline-color", "rgb(255, 255, 255)");
+    await expect(copy).toHaveCSS("outline-color", "rgb(64, 95, 242)");
     expect(
       Number.parseFloat(
         await copy.evaluate((element) => getComputedStyle(element).outlineWidth)
       )
     ).toBeGreaterThan(0);
     expect(await phone.boundingBox()).toEqual(before);
+    await expect(page.getByRole("tooltip")).toHaveText(
+      locale === "bg" ? "Копирайте номера" : "Copy phone number"
+    );
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("tooltip")).toBeHidden();
+    await expect(copy).toBeFocused();
+    await page.mouse.move(0, 0);
+    await call.focus();
+    await copy.hover();
+    await expect(page.getByRole("tooltip")).toHaveText(
+      locale === "bg" ? "Копирайте номера" : "Copy phone number"
+    );
+    expect(await phone.boundingBox()).toEqual(before);
+    await page.mouse.move(0, 0, { steps: 5 });
+    await expect(page.getByRole("tooltip")).toBeHidden();
     expect(page.url()).toBe(new URL(`/${locale}/contact`, page.url()).href);
   });
 

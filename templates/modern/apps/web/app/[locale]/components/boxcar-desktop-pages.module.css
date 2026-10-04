@@ -112,6 +112,8 @@
     color: var(--foreground);
     background: var(--desktop-surface);
     border-radius: calc(var(--spacing) * 4);
+    box-shadow: var(--desktop-surface-shadow);
+    transition: box-shadow var(--duration-interaction);
   }
   .contactCard > svg,
   .contactCardMain > svg {
@@ -138,11 +140,10 @@
     text-decoration: none;
   }
   :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) {
-    color: var(--brand-foreground);
-    background: var(--foreground);
+    box-shadow: var(--desktop-surface-hover-shadow);
   }
-  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) svg {
-    color: currentcolor;
+  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) h3 {
+    color: var(--brand-text);
   }
   .contactCard > .cardArrow {
     position: absolute;
@@ -168,19 +169,6 @@
     content: "";
     border-radius: inherit;
   }
-  .phoneTitle {
-    display: grid;
-  }
-  .phoneTitle > span {
-    grid-area: 1 / 1;
-  }
-  .phoneTitleActive,
-  .phoneCard:is(:hover, :focus-within) .phoneTitleRest {
-    visibility: hidden;
-  }
-  .phoneCard:is(:hover, :focus-within) .phoneTitleActive {
-    visibility: visible;
-  }
   .copyPhone {
     position: relative;
     z-index: var(--desktop-layer-raised);
@@ -197,9 +185,8 @@
     border: 0;
     border-radius: calc(var(--spacing) * 3);
   }
-  .phoneCard:is(:hover, :focus-within) .copyPhone {
-    color: var(--brand-foreground);
-    background: var(--desktop-inverse-soft);
+  .copyPhone:is(:hover, :focus-visible) {
+    background: var(--desktop-accent-soft);
   }
   .social {
     padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
@@ -480,9 +467,11 @@
   .details a:focus-visible {
     outline-color: var(--ring);
   }
-  .details .contactCardLink:focus-visible,
-  .details .copyPhone:focus-visible {
+  .details .contactCardLink:focus-visible {
     outline-color: var(--brand-foreground);
+  }
+  .details .copyPhone:focus-visible {
+    outline-color: var(--brand);
   }
   .details .contactCardMain:focus-visible {
     outline: 0;
@@ -490,5 +479,10 @@
   .contactCardMain:focus-visible::after {
     outline: var(--desktop-focus-width) solid var(--brand-foreground);
     outline-offset: calc(var(--spacing) * 1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .contactCard {
+    transition: none;
   }
 }
