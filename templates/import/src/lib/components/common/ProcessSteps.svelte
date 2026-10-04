@@ -1,11 +1,17 @@
 <script lang="ts">
+	import { assetHref, emptyImage } from '$lib/utils/assets';
 	let {
 		steps,
 		horizontal = false,
 		mobilePanel = false,
 		editorial = false
 	}: {
-		steps: readonly { title: string; text: string; mobileText?: string }[];
+		steps: readonly {
+			title: string;
+			text: string;
+			mobileText?: string;
+			artwork?: { src: string };
+		}[];
 		horizontal?: boolean;
 		mobilePanel?: boolean;
 		editorial?: boolean;
@@ -17,9 +23,16 @@
 	class:process-steps--horizontal={horizontal}
 	class:process-steps--mobile-panel={mobilePanel}
 	class:desktop-process={editorial}
+	class:process-steps--banners={editorial && steps.some((step) => step.artwork)}
 	style:--step-count={steps.length}
 >
 	{#each steps as step, index (step.title)}<li>
+			{#if editorial && step.artwork}
+				<picture class="process-steps__artwork">
+					<source media="(min-width: 768px)" srcset={assetHref(step.artwork.src)} />
+					<img src={emptyImage} alt="" width="900" height="600" loading="lazy" />
+				</picture>
+			{/if}
 			<span class="process-steps__number" aria-hidden="true"
 				>{editorial ? String(index + 1).padStart(2, '0') : index + 1}</span
 			>
@@ -37,6 +50,9 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+	.process-steps__artwork {
+		display: none;
 	}
 	li {
 		display: grid;
@@ -122,6 +138,49 @@
 		.process-steps--horizontal p {
 			font-size: var(--bc-text-body);
 			line-height: var(--bc-leading-body-lg);
+		}
+		.process-steps--banners li {
+			position: relative;
+			gap: 0;
+			padding: 0;
+			overflow: hidden;
+			grid-template-rows: auto auto 1fr;
+			border-color: var(--bc-ink);
+			background: var(--bc-ink);
+			color: var(--bc-white);
+		}
+		.process-steps--banners .process-steps__artwork {
+			display: block;
+		}
+		.process-steps__artwork img {
+			display: block;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 3 / 2;
+			object-fit: cover;
+		}
+		.process-steps--banners .process-steps__number {
+			position: absolute;
+			top: var(--bc-space-3);
+			left: var(--bc-space-3);
+			margin: 0;
+			background: var(--bc-white);
+			color: var(--bc-ink);
+		}
+		.process-steps--banners h3 {
+			padding: var(--bc-space-4) var(--bc-space-4) var(--bc-space-2);
+			font-size: var(--bc-text-cta);
+			line-height: var(--bc-leading-h5);
+		}
+		.process-steps--banners p {
+			padding: 0 var(--bc-space-4) var(--bc-space-4);
+			color: var(--bc-white);
+			line-height: var(--bc-leading-body);
+		}
+	}
+	@media (min-width: 768px) and (max-width: 1199px) {
+		.process-steps--banners {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
 		}
 	}
 	@media (max-width: 575px) {

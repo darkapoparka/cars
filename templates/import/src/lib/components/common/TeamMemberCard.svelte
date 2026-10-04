@@ -2,14 +2,18 @@
 	import { assetHref } from '$lib/utils/assets';
 	import type { AuxeroAgentCard } from '$lib/auxero/agents';
 	import SocialLinks from './SocialLinks.svelte';
+	import Action from './Action.svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	let {
 		person,
 		mobileCompact = false,
-		desktopFramed = false
+		desktopFramed = false,
+		desktopAction
 	}: {
 		person: Pick<AuxeroAgentCard, 'name' | 'title' | 'image' | 'socials' | 'desktopPortrait'>;
 		mobileCompact?: boolean;
 		desktopFramed?: boolean;
+		desktopAction?: { href: string; label: string };
 	} = $props();
 	const socials = $derived(
 		person.socials
@@ -23,6 +27,7 @@
 	class:team-card--mobile-compact={mobileCompact}
 	class:team-card--has-socials={socials.length > 0}
 	class:team-card--desktop-framed={desktopFramed}
+	class:team-card--has-action={!!desktopAction}
 >
 	<div class="team-card__media">
 		<img
@@ -40,6 +45,17 @@
 		<h3>{person.name}</h3>
 		<p>{person.title}</p>
 		{#if socials.length}<div class="team-card__socials"><SocialLinks links={socials} /></div>{/if}
+		{#if desktopAction}
+			<div class="team-card__action">
+				<Action
+					href={desktopAction.href}
+					variant="strong"
+					size="compact"
+					aria-label={`${desktopAction.label}: ${person.name}`}
+					>{desktopAction.label}<ArrowRight size={18} aria-hidden="true" /></Action
+				>
+			</div>
+		{/if}
 	</div>
 </article>
 
@@ -78,6 +94,9 @@
 	}
 	.team-card__socials {
 		display: contents;
+	}
+	.team-card__action {
+		display: none;
 	}
 	@media (min-width: 768px) {
 		.team-card {
@@ -146,6 +165,17 @@
 		}
 		.team-card--desktop-framed .team-card__body {
 			padding: var(--bc-space-4) var(--bc-space-3);
+		}
+		.team-card--desktop-framed.team-card--has-action .team-card__body {
+			grid-template-rows: auto 1fr auto;
+		}
+		.team-card__action {
+			--action-height: var(--bc-control-height-compact);
+			--action-text: var(--bc-text-body);
+			--action-radius: var(--bc-radius-pill);
+			--bc-control-x: var(--bc-space-3);
+			display: block;
+			padding-top: var(--bc-space-2);
 		}
 		.team-card--desktop-framed .team-card__socials {
 			top: calc(

@@ -8,6 +8,7 @@ type AboutPageCopy = {
 	mobileContact: string;
 	processTitle: string;
 	teamTitle: string;
+	teamContact: string;
 	visitLabel: string;
 };
 
@@ -20,6 +21,7 @@ export const aboutPageCopy: Record<Locale, AboutPageCopy> = {
 		mobileContact: 'Контакти',
 		processTitle: 'Как работим',
 		teamTitle: 'Екипът',
+		teamContact: 'Свържи се',
 		visitLabel: 'Посети'
 	},
 	en: {
@@ -30,6 +32,14 @@ export const aboutPageCopy: Record<Locale, AboutPageCopy> = {
 		mobileContact: 'Contact',
 		processTitle: 'How we work',
 		teamTitle: 'The team',
+		teamContact: 'Contact',
 		visitLabel: 'Visit'
 	}
 };
+
+export const aboutProcessArtwork = [
+	{ src: '/assets/daynight/banners/about-request-v1.webp' },
+	{ src: '/assets/daynight/services/desktop/inspection-reference-v4.webp' },
+	{ src: '/assets/daynight/services/desktop/comparison-reference-v4.webp' },
+	{ src: '/assets/daynight/services/desktop/selling-reference-v4.webp' }
+] as const;

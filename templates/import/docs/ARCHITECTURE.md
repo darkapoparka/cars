@@ -54,6 +54,8 @@ The separately requested mobile About trial opts into the retained `--bc-editori
 
 `TeamMemberCard` clips desktop portraits within its existing media frame. Optional `desktopPortrait` position/scale metadata belongs to the existing `AuxeroAgentCard` and About content. The wrapper uses `display: contents` below desktop, preserving the mobile trial's image/grid geometry; original photograph files are unchanged.
 
+About supplies `TeamMemberCard`'s optional `desktopAction` from its configured contact destination and typed BG/EN label. It composes the shared `Action` with the same 36px black pill treatment as Services; the mobile card remains unchanged. `aboutProcessArtwork` in `content/about-page.ts` maps the existing four process steps to request, inspection, comparison and handover imagery. `DesktopProcess` still delegates its ordered list to `ProcessSteps`; the editorial artwork variant adds full-width photos, numbered markers and charcoal captions, with four wide-desktop columns and two narrower columns. Desktop picture sources use the shared transparent fallback below 768px. New artwork and the complete built-in imagegen prompt are recorded in [About process assets](assets/ABOUT-PROCESS-2026-10-04.json).
+
 ## Deliberately retained legacy area
 
 Legacy account/agent and alternate-preview routes still use the Auxero compatibility modules. LegacyLayoutAssets isolates their CSS from the public route group. They are not dead files merely because the new storefront no longer imports them. Do not delete the renderer, .template-ref, licenses, or their assets until those last route consumers are migrated or explicitly retired with compatibility redirects. Native route dependencies are checked transitively by npm run check:architecture.

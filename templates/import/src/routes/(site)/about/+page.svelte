@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageProps } from './$types';
 	import { desktopCopy } from '$lib/content/desktop-copy';
-	import { aboutPageCopy } from '$lib/content/about-page';
+	import { aboutPageCopy, aboutProcessArtwork } from '$lib/content/about-page';
 	import DesktopHeroActions from '$lib/components/common/DesktopHeroActions.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
 	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
@@ -17,10 +17,11 @@
 	const copy = $derived(aboutPageCopy[data.locale]);
 	const about = $derived(data.about);
 	const steps = $derived(
-		about.process.map((step) => ({
+		about.process.map((step, index) => ({
 			title: step.title.replace(/^\d+\.\s*/, ''),
 			text: step.description,
-			mobileText: step.mobileDescription
+			mobileText: step.mobileDescription,
+			artwork: aboutProcessArtwork[index]
 		}))
 	);
 </script>
@@ -89,6 +90,10 @@
 					{person}
 					mobileCompact
 					desktopFramed
+					desktopAction={{
+						href: about.hero.actions?.[1]?.href ?? '/contact',
+						label: copy.teamContact
+					}}
 				/>{/each}
 		</div>
 	</section>
