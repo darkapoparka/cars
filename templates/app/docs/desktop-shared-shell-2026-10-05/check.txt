@@ -1,0 +1,68 @@
+
+> cars-app@0.1.0 check
+> npm run lint && npm run typecheck && npm run build
+
+
+> cars-app@0.1.0 lint
+> eslint .
+
+
+> cars-app@0.1.0 typecheck
+> tsc --noEmit
+
+
+> cars-app@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.3.6 (webpack)
+- Environments: .env.local
+✓ Running next.config.js took 34ms
+
+  Creating an optimized production build ...
+  Disabled SWC as replacement for Babel because of custom Babel configuration "babel.config.js" https://nextjs.org/docs/messages/swc-disabled
+  `compiler` options in `next.config.js` will be ignored while using Babel https://nextjs.org/docs/messages/ignored-compiler-options
+  Using external babel configuration from L:\CODEX\cars\templates\app\babel.config.js
+  Disabled SWC as replacement for Babel because of custom Babel configuration "babel.config.js" https://nextjs.org/docs/messages/swc-disabled
+  `compiler` options in `next.config.js` will be ignored while using Babel https://nextjs.org/docs/messages/ignored-compiler-options
+  Disabled SWC as replacement for Babel because of custom Babel configuration "babel.config.js" https://nextjs.org/docs/messages/swc-disabled
+  `compiler` options in `next.config.js` will be ignored while using Babel https://nextjs.org/docs/messages/ignored-compiler-options
+  Using external babel configuration from L:\CODEX\cars\templates\app\babel.config.js
+✓ Compiled successfully in 25.2s
+  Running TypeScript ...
+  Finished TypeScript in 11.5s ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/407) ...
+  Generating static pages using 11 workers (101/407)
+  Generating static pages using 11 workers (203/407)
+  Generating static pages using 11 workers (305/407)
+✓ Generating static pages using 11 workers (407/407) in 1215ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ƒ /
+├ ƒ /_not-found
+├ ƒ /[locale]
+├ ƒ /[locale]/benefits/[kind]
+├ ƒ /[locale]/cars
+├ ƒ /[locale]/cars/[slug]
+├ ƒ /[locale]/cars/[slug]/features
+├ ƒ /[locale]/cars/[slug]/gallery
+├ ƒ /[locale]/cars/[slug]/inspection
+├ ƒ /[locale]/finance
+├ ƒ /[locale]/luxe
+├ ƒ /[locale]/more
+├ ƒ /[locale]/saved
+├ ƒ /[locale]/search
+├ ƒ /[locale]/sell
+├ ƒ /[locale]/sell/details
+├ ƒ /[locale]/service
+├ ƒ /[locale]/service/details
+├ ƒ /[locale]/stores
+└ ○ /manifest.webmanifest
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

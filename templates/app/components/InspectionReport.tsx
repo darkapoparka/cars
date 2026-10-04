@@ -9,7 +9,7 @@ import LoginSheet from '@/components/DealerEnquirySheet';
 import type {ReferenceCheckpoint,ReferenceInspectionSection} from '@/lib/reference-types';
 import type {Vehicle} from '@/lib/data';
 import {dealer} from '@/lib/dealer-config';
-import {tokens as $} from '@/app/tokens.stylex';
+import {media,tokens as $} from '@/app/tokens.stylex';
 
 const sectionIcons:Record<string,typeof CarFront>={'Exterior':CarFront,'Engine & Transmission':Cog,'Steering, Suspension & Brakes':Wrench,'Electricals, Controls & Lights':Zap,'Interiors & Luggage':Armchair,'Tyres':CircleGauge};
 function Checkpoint({item,direct}: {item:ReferenceCheckpoint;direct:boolean}) {
@@ -41,7 +41,7 @@ export default function InspectionReport({vehicle,capturedSections}: {vehicle: V
     <div {...stylex.props(s.content)}><section {...stylex.props(s.intro)}><h2 {...stylex.props(s.vehicleTitle)}>{tx(vehicle.year)} {tx(vehicle.make.toUpperCase())} {tx(vehicle.model.toUpperCase())}</h2><p {...stylex.props(s.trim)}>{tx(vehicle.trim.split(' • ')[0])} {tx(" | ")}{tx(vehicle.engine)}</p><img src={assetPath(vehicle.image)} width={1155} height={651} alt={tx(vehicleTitle)} {...stylex.props(s.car)} /><div {...stylex.props(s.inspectionStatement)}><span {...stylex.props(s.inspectionIcon)}>{approved?<ShieldCheck size={43} fill="#50b67f" color="#fff" />:<Info size={32}/>}</span><p>{tx(approved?"Review the recorded condition details for this demo vehicle.":"No verified inspection report is available for this sample car.")}</p></div></section>
       {approved?<><h2 {...stylex.props(s.reportHeading)}>{tx("YOUR CAR CONDITION REPORT")}</h2>{capturedSections.map(section => <InspectionSection key={section.title} section={section} />)}<p {...stylex.props(s.referenceNote)}>{tx("Archived inspection data for this demo vehicle. The recorded checkpoints and findings come from this vehicle’s captured listing. This application has not independently inspected or certified the vehicle.")}</p></>:null}
     </div>
-    <footer {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
+    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     <LoginSheet vehicleTitle={vehicleTitle} open={login} onClose={() => setLogin(false)} />
   </main>;
 }
@@ -70,6 +70,6 @@ const s = stylex.create({
   expand: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 7, width: '100%', minHeight: 40, marginBottom: -6, padding: '8px 12px', color: '#f17100', fontSize: 14, fontWeight: 400, borderWidth: 0, backgroundColor: '#fff', cursor: 'pointer'},
   rotated: {transform: 'rotate(180deg)'},
   referenceNote: {marginTop: 36, color: '#727272', fontSize: 11, lineHeight: '18px'},
-  footer: {position: 'fixed', right: 0, bottom: 0, left: 0, zIndex: 101, padding: '17px 22px 28px', backgroundColor: '#f9f9fa'},
+  footer: {position: 'fixed', right: {[media.desktop]:$.desktopShellInset,default:0}, bottom: 0, left: {[media.desktop]:$.desktopShellInset,default:0}, zIndex: 101, padding: '17px 22px 28px', backgroundColor: '#f9f9fa'},
   book: {width: '100%', minHeight: 54, padding: '10px 12px', color: '#fff', fontSize: 18, fontWeight: 600, lineHeight: '26px', borderWidth: 0, borderRadius: 8, backgroundColor: $.violet, cursor: 'pointer'},
 });

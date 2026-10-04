@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "bg PDP 1100: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "bg PDP 1280: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "bg PDP 1440: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "bg PDP 1920: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "en PDP 1100: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "en PDP 1280: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "en PDP 1440: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "en PDP 1920: shell, hierarchy, unique price/title, sticky actions and Price navigation",
+    "Skip to content focuses the visible main landmark",
+    "Albums, arrow-key photos, zoom and focus return",
+    "Information/photo tab keyboard navigation",
+    "Relocated price information opens and returns focus",
+    "Service records preserve disclosure and focus",
+    "Viewing action prepares the existing enquiry draft",
+    "Save persists to Saved through the header",
+    "Equipment search and clear",
+    "Full gallery categories and photo viewer",
+    "PDP Back preserves the filtered inventory",
+    "Preserved menu/header and Home navigation"
+  ],
+  "errors": []
+}

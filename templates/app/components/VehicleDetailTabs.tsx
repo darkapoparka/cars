@@ -84,7 +84,7 @@ export default function VehicleDetailTabs({photos, children, onOpenPhoto, onInfo
 }
 
 const s = stylex.create({
-  content: {marginTop: 8},
+  content: {marginTop: {[media.desktop]: 20, default: 8}},
   tabs: {position: 'relative', display: {[media.mobile]: 'flex', default: 'grid'}, minWidth: 0, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', paddingInline: 2, '::before': {content: '""', position: 'absolute', inset: '4px 0', borderRadius: $.radiusSm, backgroundColor: $.violetSoft, pointerEvents: 'none'}},
   tab: {position: 'relative', display: 'grid', alignItems: 'center', flex: '1 0 auto', minWidth: {[media.mobile]: 'max-content', default: 0}, minHeight: $.controlHeight, padding: '4px 2px', color: $.muted, fontFamily: $.fontSans, fontSize: $.controlFontSize, fontWeight: 500, lineHeight: $.controlLineHeight, whiteSpace: 'nowrap', borderWidth: 0, borderRadius: $.radiusSm, backgroundColor: 'transparent', outlineWidth: 2, outlineStyle: 'solid', outlineColor: {default: 'transparent', ':focus-visible': $.ink}, outlineOffset: -2, cursor: 'pointer'},
   selected: {color: $.ink},

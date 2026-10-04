@@ -26,6 +26,7 @@ export default function AppShell({children}: {children:ReactNode}){
   }
   return <div data-keyboard-navigation="false" onKeyDownCapture={event => {if (event.key === 'Tab') event.currentTarget.dataset.keyboardNavigation = 'true';}} onPointerDownCapture={event => {event.currentTarget.dataset.keyboardNavigation = 'false';}} {...stylex.props(s.app)}>
     <a href="#app-content" onClick={skipNavigation} {...stylex.props(s.skip)}>{tx('Skip to content')}</a>
+    <div data-desktop-shell {...stylex.props(s.pageShell)}>
     <header data-desktop-header {...stylex.props(s.desktopHeader)}><div {...stylex.props(s.headerInner)}>
       <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
       <nav data-desktop-tools aria-label={tx("Primary navigation")} {...stylex.props(s.actions)}>
@@ -35,6 +36,7 @@ export default function AppShell({children}: {children:ReactNode}){
       </nav>
     </div></header>
     <div id="app-content" {...stylex.props(s.main,hideMobileNav&&s.mainWithoutNav)}>{tx(children)}</div>
+    </div>
     {!hideMobileNav?<nav aria-label={tx("App navigation")} {...stylex.props(s.bottomNav)}>{showroom.navigation.map(item=>{
       const active=item.href==='/'?pathname==='/':pathname.startsWith(item.href);
       return <Link key={item.label} href={item.href} aria-label={tx(item.label)} title={tx(item.label)} aria-current={active?'page':undefined} {...stylex.props(s.bottomLink,active&&s.bottomLinkActive)}><ShowroomIcon name={item.icon} size={22} strokeWidth={active?2:1.65}/></Link>;
@@ -43,9 +45,10 @@ export default function AppShell({children}: {children:ReactNode}){
 }
 
 const s=stylex.create({
- app:{minHeight:'100vh',overflowX:'clip',color:$.text,backgroundColor:'#fff',fontFamily:$.fontSans},
+ app:{minHeight:'100vh',overflowX:'clip',color:$.text,backgroundColor:{[media.desktop]:$.rail,default:'#fff'},fontFamily:$.fontSans},
+ pageShell:{display:{[media.desktop]:'block',default:'contents'},width:{[media.desktop]:'100%',default:'auto'},maxWidth:$.content,minHeight:{[media.desktop]:'100svh',default:0},marginInline:'auto',borderLeftWidth:{[media.desktop]:1,default:0},borderRightWidth:{[media.desktop]:1,default:0},borderLeftStyle:{[media.desktop]:'solid',default:'none'},borderRightStyle:{[media.desktop]:'solid',default:'none'},borderColor:$.line,backgroundColor:{[media.desktop]:$.surface,default:'transparent'}},
  skip:{position:'fixed',top:8,left:12,zIndex:300,display:'flex',alignItems:'center',minHeight:44,paddingInline:16,color:$.ink,fontSize:14,fontWeight:500,borderRadius:12,backgroundColor:'#fff',boxShadow:$.shadowStrong,transform:{default:'translateY(-150%)',':focus':'translateY(0)'}},
- main:{minHeight:{[media.desktop]:'calc(100svh - 72px)',default:'100svh'},paddingBottom:{[media.desktop]:0,default:'calc(80px + env(safe-area-inset-bottom))'}},
+ main:{minHeight:{[media.desktop]:'calc(100svh - 73px)',default:'100svh'},paddingBottom:{[media.desktop]:0,default:'calc(80px + env(safe-area-inset-bottom))'}},
  mainWithoutNav:{paddingBottom:0},
  desktopHeader:{display:{[media.desktop]:'block',default:'none'},position:'sticky',top:0,zIndex:90,borderBottomColor:$.line,borderBottomStyle:'solid',borderBottomWidth:1,backgroundColor:'rgba(255,255,255,.97)',backdropFilter:'blur(16px)'},
  headerInner:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:24,width:'100%',maxWidth:$.content,minHeight:72,marginInline:'auto',paddingInline:28},

@@ -1,0 +1,1120 @@
+[
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1440,
+    "height": 1000,
+    "file": "pdp-1440-after.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 121.5,
+        "y": 201,
+        "width": 822,
+        "height": 462.484375
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 129.5,
+        "y": 209,
+        "width": 806,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 121.5,
+        "y": 675.484375,
+        "width": 822,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 121.5,
+        "y": 122,
+        "width": 822,
+        "height": 35
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 121.5,
+        "y": 769.484375,
+        "width": 822,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 121.5,
+        "y": 829.484375,
+        "width": 822,
+        "height": 212
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 137.5,
+        "y": 845.484375,
+        "width": 790,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Цена на автомобила",
+        "x": 996.5,
+        "y": 157,
+        "width": 126.046875,
+        "height": 20
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 121.5,
+        "y": 201,
+        "width": 822,
+        "height": 462.484375
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 121.5,
+        "y": 675.484375,
+        "width": 268.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 398.15625,
+        "y": 675.484375,
+        "width": 268.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 674.828125,
+        "y": 675.484375,
+        "width": 268.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-details",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1440,
+    "height": 1000,
+    "file": "pdp-details-1440-after.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 432,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 121.5,
+        "y": -231,
+        "width": 822,
+        "height": 462.484375
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 121.5,
+        "y": 243.484375,
+        "width": 822,
+        "height": 74
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 121.5,
+        "y": 337.484375,
+        "width": 822,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 121.5,
+        "y": 397.484375,
+        "width": 822,
+        "height": 212
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 137.5,
+        "y": 413.484375,
+        "width": 790,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 121.5,
+        "y": 625.484375,
+        "width": 822,
+        "height": 222
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 137.5,
+        "y": 641.484375,
+        "width": 790,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "Сервизна историяПримерни записи",
+        "x": 121.5,
+        "y": 871.484375,
+        "width": 822,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 121.5,
+        "y": 871.484375,
+        "width": 822,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "Цена на автомобила",
+        "x": 996.5,
+        "y": 183,
+        "width": 126.046875,
+        "height": 20
+      },
+      {
+        "tag": "NAV",
+        "text": "ЦенаОбща информацияОборудванеСервизна историяПодобни автомобили",
+        "x": 0,
+        "y": 73,
+        "width": 1425,
+        "height": 60
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 121.5,
+        "y": -231,
+        "width": 822,
+        "height": 462.484375
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 121.5,
+        "y": 243.484375,
+        "width": 268.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 398.15625,
+        "y": 243.484375,
+        "width": 268.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 674.828125,
+        "y": 243.484375,
+        "width": 268.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-en",
+    "path": "/en/cars/2024-toyota-fortuner-exr",
+    "width": 1280,
+    "height": 1000,
+    "file": "pdp-en-1280-after.png",
+    "errors": [],
+    "documentWidth": 1265,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Menu",
+        "x": 1074.90625,
+        "y": 14,
+        "width": 149.59375,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "Similar1 / 18",
+        "x": 53,
+        "y": 201,
+        "width": 799,
+        "height": 449.546875
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 61,
+        "y": 209,
+        "width": 783,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Exteriors6 photosInteriors7 photosDetails5 photos",
+        "x": 53,
+        "y": 662.546875,
+        "width": 799,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 53,
+        "y": 122,
+        "width": 799,
+        "height": 35
+      },
+      {
+        "tag": "DIV",
+        "text": "InfoInformationExteriorsInteriors",
+        "x": 53,
+        "y": 756.546875,
+        "width": 799,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "SpecificationsEngine2.7LGearboxAutomaticBody TypeSUVFuel TypePetrolColorGreyDistance driven50,000 km",
+        "x": 53,
+        "y": 816.546875,
+        "width": 799,
+        "height": 212
+      },
+      {
+        "tag": "H2",
+        "text": "Specifications",
+        "x": 69,
+        "y": 832.546875,
+        "width": 767,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Vehicle price",
+        "x": 905,
+        "y": 157,
+        "width": 79.09375,
+        "height": 20
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 53,
+        "y": 201,
+        "width": 799,
+        "height": 449.546875
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 53,
+        "y": 662.546875,
+        "width": 261,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 322,
+        "y": 662.546875,
+        "width": 261,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 591,
+        "y": 662.546875,
+        "width": 261,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "height": 844,
+    "file": "pdp-320-after.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 304,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": 212,
+        "width": 288,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 302,
+        "width": 288,
+        "height": 27
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 16,
+        "y": 359,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 411,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 16,
+        "y": 471,
+        "width": 288,
+        "height": 240
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 483,
+        "width": 264,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 16,
+        "y": 727,
+        "width": 288,
+        "height": 274
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 743,
+        "width": 256,
+        "height": 26
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 787,
+        "width": 320,
+        "height": 57
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 16,
+        "y": 212,
+        "width": 90.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 114.65625,
+        "y": 212,
+        "width": 90.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 213.328125,
+        "y": 212,
+        "width": 90.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-details",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "height": 844,
+    "file": "pdp-details-320-after.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 284,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": -72,
+        "width": 288,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 27
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 16,
+        "y": 75,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 127,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 16,
+        "y": 187,
+        "width": 288,
+        "height": 240
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 199,
+        "width": 264,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 16,
+        "y": 443,
+        "width": 288,
+        "height": 274
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 459,
+        "width": 256,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 741,
+        "width": 288,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 741,
+        "width": 288,
+        "height": 72
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 787,
+        "width": 320,
+        "height": 57
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 16,
+        "y": -72,
+        "width": 90.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 114.65625,
+        "y": -72,
+        "width": 90.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 213.328125,
+        "y": -72,
+        "width": 90.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 390,
+    "height": 844,
+    "file": "pdp-390-after.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 243.75
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 374,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": 255.75,
+        "width": 358,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 345.75,
+        "width": 358,
+        "height": 27
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 16,
+        "y": 402.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 454.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 16,
+        "y": 514.75,
+        "width": 358,
+        "height": 240
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 526.75,
+        "width": 334,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 16,
+        "y": 770.75,
+        "width": 358,
+        "height": 274
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 786.75,
+        "width": 326,
+        "height": 26
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 787,
+        "width": 390,
+        "height": 57
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 243.75
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 16,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 138,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 260,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-details",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 390,
+    "height": 844,
+    "file": "pdp-details-390-after.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 328,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": -72.25,
+        "width": 358,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 17.75,
+        "width": 358,
+        "height": 27
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 16,
+        "y": 74.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 126.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 16,
+        "y": 186.75,
+        "width": 358,
+        "height": 240
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 198.75,
+        "width": 334,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 16,
+        "y": 442.75,
+        "width": 358,
+        "height": 274
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 458.75,
+        "width": 326,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 740.75,
+        "width": 358,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 740.75,
+        "width": 358,
+        "height": 72
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 787,
+        "width": 390,
+        "height": 57
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 16,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 138,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 260,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1099,
+    "height": 900,
+    "file": "pdp-1099-after.png",
+    "errors": [],
+    "documentWidth": 1084,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 1084,
+        "height": 609.890625
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 1068,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 28,
+        "y": 621.890625,
+        "width": 1028,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 28,
+        "y": 711.890625,
+        "width": 1028,
+        "height": 35
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 28,
+        "y": 776.890625,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 28,
+        "y": 828.890625,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 28,
+        "y": 888.890625,
+        "width": 1028,
+        "height": 288
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 839,
+        "width": 1084,
+        "height": 61
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 0,
+        "y": 0,
+        "width": 1084,
+        "height": 609.890625
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 28,
+        "y": 621.890625,
+        "width": 337.328125,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 373.328125,
+        "y": 621.890625,
+        "width": 337.34375,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 718.671875,
+        "y": 621.890625,
+        "width": 337.328125,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-details",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1099,
+    "height": 900,
+    "file": "pdp-details-1099-after.png",
+    "errors": [],
+    "documentWidth": 1084,
+    "scrollY": 628,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 28,
+        "y": -6.109375,
+        "width": 1028,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 28,
+        "y": 83.890625,
+        "width": 1028,
+        "height": 35
+      },
+      {
+        "tag": "SECTION",
+        "text": "€94,099",
+        "x": 28,
+        "y": 148.890625,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 28,
+        "y": 200.890625,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "SECTION",
+        "text": "ХарактеристикиДвигател2.7LСкоростиАвтоматичнаТип купеSUVГоривоБензинЦвятСивПробег50,000 км",
+        "x": 28,
+        "y": 260.890625,
+        "width": 1028,
+        "height": 288
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 44,
+        "y": 276.890625,
+        "width": 996,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "ОборудванеПредни фарове за мъглаКруиз контролЗаден парктроникЦялото оборудване",
+        "x": 28,
+        "y": 564.890625,
+        "width": 1028,
+        "height": 222
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 44,
+        "y": 580.890625,
+        "width": 996,
+        "height": 26
+      },
+      {
+        "tag": "SECTION",
+        "text": "Сервизна историяПримерни записи",
+        "x": 28,
+        "y": 810.890625,
+        "width": 1028,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 28,
+        "y": 810.890625,
+        "width": 1028,
+        "height": 72
+      },
+      {
+        "tag": "NAV",
+        "text": "ЦенаОбща информацияОборудванеСервизна историяПодобни автомобили",
+        "x": 0,
+        "y": 0,
+        "width": 1084,
+        "height": 59
+      },
+      {
+        "tag": "FOOTER",
+        "text": "ЗапазиОгледУговорете оглед",
+        "x": 0,
+        "y": 839,
+        "width": 1084,
+        "height": 61
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "x": 28,
+        "y": -6.109375,
+        "width": 337.328125,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "x": 373.328125,
+        "y": -6.109375,
+        "width": 337.34375,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "x": 718.671875,
+        "y": -6.109375,
+        "width": 337.328125,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  }
+]
