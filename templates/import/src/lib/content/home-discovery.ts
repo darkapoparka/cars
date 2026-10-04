@@ -18,19 +18,22 @@ export const homeHeroModes = {
 } as const;
 
 /** Density-sized decorative cutouts; alpha and optical sizing are baked into the assets. */
-const modeArtwork = (mode: keyof typeof homeHeroModes) => ({
-	src: `/assets/daynight/home-modes/${mode}-graphite-v2-96.webp`,
-	width: 96,
+const modeArtwork = (
+	mode: keyof typeof homeHeroModes,
+	{ version = 'v2', width = 48 }: { version?: 'v2' | 'v3'; width?: number } = {}
+) => ({
+	src: `/assets/daynight/home-modes/${mode}-graphite-${version}-${width * 2}.webp`,
+	width: width * 2,
 	height: 96,
 	sources: [1, 2, 3].map((density) => ({
-		src: `/assets/daynight/home-modes/${mode}-graphite-v2-${48 * density}.webp`,
+		src: `/assets/daynight/home-modes/${mode}-graphite-${version}-${width * density}.webp`,
 		density
 	}))
 });
 
 export const homeModeArtwork = {
-	buy: modeArtwork('buy'),
-	finance: modeArtwork('finance'),
+	buy: modeArtwork('buy', { version: 'v3', width: 64 }),
+	finance: modeArtwork('finance', { version: 'v3' }),
 	sell: modeArtwork('sell'),
 	import: modeArtwork('import')
 } as const;

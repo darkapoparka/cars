@@ -85,7 +85,11 @@
 		>
 			<span class="mode-tab-content">
 				{#if option.artwork}
-					<span class="mode-tab-icon mode-tab-artwork" aria-hidden="true">
+					<span
+						class="mode-tab-icon mode-tab-artwork"
+						style:--mode-artwork-aspect={option.artwork.width / option.artwork.height}
+						aria-hidden="true"
+					>
 						<picture>
 							<source
 								media="(min-width: 768px)"
@@ -259,7 +263,7 @@
 		.mobile-mode-tabs--panel .mode-tab-artwork picture,
 		.mobile-mode-tabs--panel .mode-tab-artwork img {
 			display: block;
-			width: var(--bc-mode-tab-artwork-size);
+			width: calc(var(--bc-mode-tab-artwork-size) * var(--mode-artwork-aspect, 1));
 			height: var(--bc-mode-tab-artwork-size);
 			object-fit: contain;
 		}

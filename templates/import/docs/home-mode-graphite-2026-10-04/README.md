@@ -1,5 +1,7 @@
 # Home graphite artwork — 4 October 2026
 
+The original v2 generation and verification are recorded below. [The subsequent sizing correction](../home-mode-sizing-2026-10-04/README.md) keeps this artwork but gives Buy a wider 64×48px footprint and reduces the Leasing symbol. Home now uses their v3 variants; Sell and Import retain v2.
+
 Home's four desktop mode illustrations now use graphite and polished silver. Buy keeps its complete sedan, Sell its blank tag and Import its globe/orbit. Leasing is mostly graphite with a thin red side edge on its diagonal percent bar. All four retain the established 3D composition and lighting.
 
 The assets share a 48px CSS slot. Transparent bounds and visible alpha area are normalized during export, preserving aspect ratio and keeping the open percent symbol balanced against the car and globe. The former Leasing-only CSS scale is removed.

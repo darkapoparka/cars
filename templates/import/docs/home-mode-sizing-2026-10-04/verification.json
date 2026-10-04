@@ -1,0 +1,65 @@
+{
+	"date": "2026-10-04",
+	"node": "L:/Toolchains/Node/24.21.0/node.exe",
+	"workspace": "C:/Users/radev/.codex/tmp/cars-import-desktop-continuation-2026-10-04-qa",
+	"sources": [
+		{
+			"path": "src/lib/content/home-discovery.ts",
+			"sha256": "9a1caf8b00ad1aa9c0790cb21aecec9fdd4aac2947f06e56a915b1d76cc7addc"
+		},
+		{
+			"path": "src/lib/components/common/MobileModeTabs.svelte",
+			"sha256": "c56820cafd7beda1a48ed986e188c9c2b7b4271c75fa6047b1862f65c86f99e4"
+		}
+	],
+	"checks": [
+		{
+			"script": "check",
+			"exitCode": 0,
+			"seconds": 41
+		},
+		{
+			"script": "build",
+			"exitCode": 0,
+			"seconds": 98
+		}
+	],
+	"browserTests": {
+		"baseURL": "http://127.0.0.1:4197",
+		"results": [
+			{
+				"name": "desktop-artwork",
+				"args": [
+					"tests/desktop-search.e2e.ts",
+					"--project=desktop",
+					"--grep",
+					"desktop artwork tabs"
+				],
+				"exitCode": 0,
+				"summary": ["  1 passed (10.3s)"]
+			},
+			{
+				"name": "mobile-preservation",
+				"args": [
+					"tests/commerce-banners.e2e.ts",
+					"--project=mobile",
+					"--grep",
+					"commerce banners and menu work"
+				],
+				"exitCode": 0,
+				"summary": ["  4 passed (22.8s)"]
+			}
+		]
+	},
+	"sourceChecks": {
+		"eslint": "passed",
+		"assetSignatures": 976,
+		"architecture": {
+			"nativeRoutes": 57,
+			"reachableModules": 230,
+			"tailwindEntries": 1
+		}
+	},
+	"observations": "browser.json",
+	"scope": "Correct Home car and Leasing optical sizing; preserve mobile, Sell and Import artwork"
+}
