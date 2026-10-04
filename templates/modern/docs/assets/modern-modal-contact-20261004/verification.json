@@ -278,6 +278,15 @@
       "unexpected": 0,
       "flaky": 0
     },
+    "portableStats": {
+      "startTime": "2026-10-04T07:55:20.220Z",
+      "duration": 77405.864,
+      "expected": 4,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "regressionOwnsScrollbarAndVisitorSetup": true,
     "cases": [
       {
         "file": "boxcar-desktop-actions.spec.ts",
@@ -409,28 +418,28 @@
         "file": "desktop-overlay-scrollbar.spec.ts",
         "title": "desktop overlays preserve page geometry with visible scrollbars (bg)",
         "project": "scrollbar-chromium",
-        "run": "gutter-aware recheck",
+        "run": "self-contained overlay check on canonical preview",
         "status": "passed"
       },
       {
         "file": "desktop-overlay-scrollbar.spec.ts",
         "title": "desktop overlays preserve page geometry with visible scrollbars (en)",
         "project": "scrollbar-chromium",
-        "run": "gutter-aware recheck",
+        "run": "self-contained overlay check on canonical preview",
         "status": "passed"
       },
       {
         "file": "desktop-overlay-scrollbar.spec.ts",
         "title": "desktop overlays preserve page geometry with visible scrollbars (bg)",
         "project": "scrollbar-webkit",
-        "run": "gutter-aware recheck",
+        "run": "self-contained overlay check on canonical preview",
         "status": "passed"
       },
       {
         "file": "desktop-overlay-scrollbar.spec.ts",
         "title": "desktop overlays preserve page geometry with visible scrollbars (en)",
         "project": "scrollbar-webkit",
-        "run": "gutter-aware recheck",
+        "run": "self-contained overlay check on canonical preview",
         "status": "passed"
       },
       {

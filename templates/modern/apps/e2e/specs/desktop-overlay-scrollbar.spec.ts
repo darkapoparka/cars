@@ -1,5 +1,23 @@
 import { expect, test } from "@playwright/test";
 
+test.use({ launchOptions: { ignoreDefaultArgs: ["--hide-scrollbars"] } });
+
+test.beforeEach(async ({ context, baseURL, page }) => {
+  // biome-ignore lint/suspicious/noSkippedTests: This regression is scoped to desktop projects.
+  test.skip(
+    (page.viewportSize()?.width ?? 0) < 1024,
+    "Desktop scrollbar gutter"
+  );
+  if (!baseURL) {
+    throw new Error("Scrollbar regression requires a preview origin");
+  }
+  const response = await context.request.post("/api/preferences", {
+    headers: { origin: new URL(baseURL).origin },
+    data: { action: "dismiss", locale: "bg", country: "BG", returnTo: "/cars" },
+  });
+  expect(response.status()).toBe(200);
+});
+
 const frameSelectors = [
   '[data-slot="dealer-desktop-header"]',
   '[data-slot="dealer-desktop-inventory-hero"]',
