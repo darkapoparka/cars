@@ -1,0 +1,387 @@
+{
+  "checkedAt": "2026-10-04T23:39:53.228Z",
+  "preview": "http://127.0.0.1:6474/?lang=bg&makes=BMW&filter=make",
+  "before": {
+    "centerSteps": [
+      60,
+      52,
+      52
+    ],
+    "gaps": [
+      8,
+      0,
+      0
+    ],
+    "headerMarginBottom": "8px",
+    "rows": [
+      {
+        "bottom": 236,
+        "centerY": 210,
+        "height": 52,
+        "top": 184
+      },
+      {
+        "bottom": 296,
+        "centerY": 270,
+        "height": 52,
+        "top": 244
+      },
+      {
+        "bottom": 348,
+        "centerY": 322,
+        "height": 52,
+        "top": 296
+      },
+      {
+        "bottom": 400,
+        "centerY": 374,
+        "height": 52,
+        "top": 348
+      }
+    ]
+  },
+  "browser": "Codex In-app Browser",
+  "locale": "bg",
+  "checks": [
+    {
+      "centerSteps": [
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52
+      ],
+      "gaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "headerMarginBottom": "0px",
+      "overflow": false,
+      "rows": [
+        {
+          "bottom": 236,
+          "centerY": 210,
+          "height": 52,
+          "key": "BMW",
+          "top": 184
+        },
+        {
+          "bottom": 288,
+          "centerY": 262,
+          "height": 52,
+          "key": "1 Series",
+          "top": 236
+        },
+        {
+          "bottom": 340,
+          "centerY": 314,
+          "height": 52,
+          "key": "2 Series",
+          "top": 288
+        },
+        {
+          "bottom": 392,
+          "centerY": 366,
+          "height": 52,
+          "key": "3 Series",
+          "top": 340
+        },
+        {
+          "bottom": 444,
+          "centerY": 418,
+          "height": 52,
+          "key": "4 Series",
+          "top": 392
+        },
+        {
+          "bottom": 496,
+          "centerY": 470,
+          "height": 52,
+          "key": "5 Series",
+          "top": 444
+        },
+        {
+          "bottom": 548,
+          "centerY": 522,
+          "height": 52,
+          "key": "6 Series",
+          "top": 496
+        },
+        {
+          "bottom": 600,
+          "centerY": 574,
+          "height": 52,
+          "key": "7 Series",
+          "top": 548
+        },
+        {
+          "bottom": 652,
+          "centerY": 626,
+          "height": 52,
+          "key": "M Models",
+          "top": 600
+        },
+        {
+          "bottom": 704,
+          "centerY": 678,
+          "height": 52,
+          "key": "X Series",
+          "top": 652
+        },
+        {
+          "bottom": 756,
+          "centerY": 730,
+          "height": 52,
+          "key": "i Models",
+          "top": 704
+        },
+        {
+          "bottom": 808,
+          "centerY": 782,
+          "height": 52,
+          "key": "Z Series",
+          "top": 756
+        },
+        {
+          "bottom": 860,
+          "centerY": 834,
+          "height": 52,
+          "key": "2002",
+          "top": 808
+        },
+        {
+          "bottom": 912,
+          "centerY": 886,
+          "height": 52,
+          "key": "840",
+          "top": 860
+        },
+        {
+          "bottom": 964,
+          "centerY": 938,
+          "height": 52,
+          "key": "850",
+          "top": 912
+        },
+        {
+          "bottom": 1016,
+          "centerY": 990,
+          "height": 52,
+          "key": "Other",
+          "top": 964
+        }
+      ],
+      "width": 320
+    },
+    {
+      "centerSteps": [
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52,
+        52
+      ],
+      "gaps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "headerMarginBottom": "0px",
+      "overflow": false,
+      "rows": [
+        {
+          "bottom": 236,
+          "centerY": 210,
+          "height": 52,
+          "key": "BMW",
+          "top": 184
+        },
+        {
+          "bottom": 288,
+          "centerY": 262,
+          "height": 52,
+          "key": "1 Series",
+          "top": 236
+        },
+        {
+          "bottom": 340,
+          "centerY": 314,
+          "height": 52,
+          "key": "2 Series",
+          "top": 288
+        },
+        {
+          "bottom": 392,
+          "centerY": 366,
+          "height": 52,
+          "key": "3 Series",
+          "top": 340
+        },
+        {
+          "bottom": 444,
+          "centerY": 418,
+          "height": 52,
+          "key": "4 Series",
+          "top": 392
+        },
+        {
+          "bottom": 496,
+          "centerY": 470,
+          "height": 52,
+          "key": "5 Series",
+          "top": 444
+        },
+        {
+          "bottom": 548,
+          "centerY": 522,
+          "height": 52,
+          "key": "6 Series",
+          "top": 496
+        },
+        {
+          "bottom": 600,
+          "centerY": 574,
+          "height": 52,
+          "key": "7 Series",
+          "top": 548
+        },
+        {
+          "bottom": 652,
+          "centerY": 626,
+          "height": 52,
+          "key": "M Models",
+          "top": 600
+        },
+        {
+          "bottom": 704,
+          "centerY": 678,
+          "height": 52,
+          "key": "X Series",
+          "top": 652
+        },
+        {
+          "bottom": 756,
+          "centerY": 730,
+          "height": 52,
+          "key": "i Models",
+          "top": 704
+        },
+        {
+          "bottom": 808,
+          "centerY": 782,
+          "height": 52,
+          "key": "Z Series",
+          "top": 756
+        },
+        {
+          "bottom": 860,
+          "centerY": 834,
+          "height": 52,
+          "key": "2002",
+          "top": 808
+        },
+        {
+          "bottom": 912,
+          "centerY": 886,
+          "height": 52,
+          "key": "840",
+          "top": 860
+        },
+        {
+          "bottom": 964,
+          "centerY": 938,
+          "height": 52,
+          "key": "850",
+          "top": 912
+        },
+        {
+          "bottom": 1016,
+          "centerY": 990,
+          "height": 52,
+          "key": "Other",
+          "top": 964
+        }
+      ],
+      "width": 390
+    },
+    {
+      "width": 1440,
+      "mobileBackCount": 0,
+      "desktopModelOptions": true,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "build": {
+    "buildId": "pYVrTk46SGAQSCglRv5Wf",
+    "distDir": ".next-picker-back-left-20261005",
+    "node": "v22.20.0",
+    "passed": true,
+    "prerenderedRoutes": 41
+  },
+  "validation": {
+    "changedComponentLint": true,
+    "formatting": true,
+    "domainTests": 95,
+    "buildTypecheck": true
+  },
+  "screenshots": [
+    {
+      "file": "before-320.jpg",
+      "width": 320,
+      "height": 844
+    },
+    {
+      "file": "after-320.jpg",
+      "width": 320,
+      "height": 844
+    }
+  ],
+  "passed": true,
+  "boundary": "Mobile candidate source and local preview; no release selection or dealer deployment"
+}

@@ -255,14 +255,25 @@ for (const [engineName, engine] of engines) {
             assert.equal(await model120.isChecked(), true);
             assert.equal(await series.evaluate((element) => element.indeterminate), true);
             const back = page.getByRole('button', { name: labels.back, exact: true });
-            const backPosition = await back.evaluate((button) => ({
-              right: button.getBoundingClientRect().right,
-              makeLeft: button.parentElement.querySelector('label').getBoundingClientRect().left,
-            }));
-            assert.ok(backPosition.right <= backPosition.makeLeft, 'Back precedes the make label');
-            assert.ok(
-              await back.evaluate((element) => element.getBoundingClientRect().height >= 44),
-            );
+            const backLayout = await back.evaluate((button) => {
+              const target = button.getBoundingClientRect();
+              const arrow = button.firstElementChild.getBoundingClientRect();
+              const name = button.lastElementChild.getBoundingClientRect();
+              const selection = button.parentElement.querySelector('label').getBoundingClientRect();
+              return {
+                width: target.width,
+                height: target.height,
+                gap: name.left - arrow.right,
+                nameCenterY: name.top + name.height / 2,
+                arrowCenterY: arrow.top + arrow.height / 2,
+                right: target.right,
+                selectionLeft: selection.left,
+              };
+            });
+            assert.ok(backLayout.width >= 44 && backLayout.height >= 44);
+            assert.equal(backLayout.gap, 8);
+            assert.equal(backLayout.nameCenterY, backLayout.arrowCenterY);
+            assert.ok(backLayout.right <= backLayout.selectionLeft);
             const modelSearch = page.getByRole('textbox', {
               name: labels.modelSearch,
               exact: true,
@@ -274,25 +285,29 @@ for (const [engineName, engine] of engines) {
               }),
               { left: 16, width: width - 32 },
             );
-            await modelSearch.fill('120');
-            assert.ok(await back.isVisible());
-            await back.click();
-            await makeSearch.waitFor();
-            assert.equal(await makeSearch.inputValue(), '');
             const selectedBmw = page
               .locator('[data-make-option="BMW"]')
               .getByRole('button')
               .first();
-            assert.ok((await selectedBmw.innerText()).includes('120'));
-            assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
-            assert.equal(
-              await selectedBmw.evaluate((element) => element === document.activeElement),
-              true,
-            );
-            assert.equal(new URL(page.url()).searchParams.get('makes'), null);
-            await selectedBmw.click();
-            await page.getByRole('button', { name: labels.expandSeries, exact: true }).click();
-            assert.equal(await model120.isChecked(), true);
+            for (const target of [
+              back.getByText('BMW', { exact: true }),
+              back.locator(':scope > span:first-child'),
+            ]) {
+              await modelSearch.fill('120');
+              await target.click();
+              await makeSearch.waitFor();
+              assert.equal(await makeSearch.inputValue(), '');
+              assert.ok((await selectedBmw.innerText()).includes('120'));
+              assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
+              assert.equal(
+                await selectedBmw.evaluate((element) => element === document.activeElement),
+                true,
+              );
+              assert.equal(new URL(page.url()).searchParams.get('makes'), null);
+              await selectedBmw.click();
+              await page.getByRole('button', { name: labels.expandSeries, exact: true }).click();
+              assert.equal(await model120.isChecked(), true);
+            }
             await model120.press('Space');
             assert.equal(await model120.isChecked(), false);
             assert.equal(await series.evaluate((element) => element.indeterminate), false);

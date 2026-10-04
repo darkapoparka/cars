@@ -115,12 +115,7 @@ export function ShowroomModelOptions({
       ? draft.selected.includes(key) || Boolean(parent && draft.selected.includes(parent.name))
       : !draft.selected.length;
     const inputId = !name && onBack ? optionsId + '-all' : undefined;
-    const copy = (
-      <span {...stylex.props(s.name)}>
-        {name || make || t('Any model')}
-        {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}
-      </span>
-    );
+    const copy = <span {...stylex.props(s.name)}>{name || make || t('Any model')}</span>;
     const checkbox = (
       <ModelCheckbox
         id={inputId}
@@ -136,18 +131,16 @@ export function ShowroomModelOptions({
     );
     if (!name && make && onBack && !desktop) {
       return (
-        <div {...stylex.props(s.familyRow, s.allChoice)}>
+        <div {...stylex.props(s.familyRow)}>
           <button
             type="button"
             aria-label={t('Back') + ': ' + t('Makes')}
             onClick={onBack}
-            {...stylex.props(s.backButton)}
+            {...stylex.props(s.familyButton)}
           >
             <Icon name="back" size={20} />
-          </button>
-          <label htmlFor={inputId} {...stylex.props(s.choice, s.allMakeLabel)}>
             {copy}
-          </label>
+          </button>
           <label htmlFor={inputId} {...stylex.props(s.checkTarget)}>
             {checkbox}
           </label>
