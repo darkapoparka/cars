@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: min(calc(var(--spacing) * 280), calc(100vw - var(--spacing) * 16));
+    width: min(calc(var(--spacing) * 240), calc(100vw - var(--spacing) * 16));
     max-width: none;
     height: min(calc(var(--spacing) * 185), calc(100dvh - var(--spacing) * 16));
     padding: 0;
@@ -194,12 +194,27 @@
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
   }
-  .groupGrid
-    .options:is(
-      [data-filter-section="price"],
-      [data-filter-section="category"]
-    ) {
+  .groupGrid .options[data-filter-section="category"] {
     grid-column: 1 / -1;
+  }
+  .groupGrid:has(> [data-filter-section="price"]) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .groupGrid :global([data-slot="numeric-range-presets"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .groupGrid
+    .options[data-filter-section="price"]
+    :global(label > span[aria-hidden="true"]) {
+    font-size: calc(var(--spacing) * 3.5);
+    white-space: nowrap;
+  }
+  .groupGrid
+    .options[data-filter-section="mileage"]
+    :global(div:has(> [data-slot="numeric-range-summary"])) {
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
   }
   .groupGrid :global([data-slot="marketplace-category-options"]) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
