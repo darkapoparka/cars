@@ -49,9 +49,10 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); letter-spacing: var(--dn-tracking-heading); overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-header > .dn-overlay-close { margin-inline-start: auto; }
   .dn-app-shell dialog .dn-mobile-overlay-search { display: flex; min-height: var(--dn-overlay-control-height); align-items: center; gap: var(--dn-entry-icon-gap); padding: 0 var(--dn-space-1) 0 var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-entry-prominent-surface); color: var(--dn-muted); box-shadow: none; }
-  .dn-app-shell dialog .dn-mobile-overlay-search:focus-within { border: 0; outline: 2px solid var(--dn-focus); outline-offset: 2px; box-shadow: none; }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field):focus-within { border: 0; outline: 1px solid var(--dn-focus); outline-offset: -1px; box-shadow: none; }
   .dn-app-shell dialog .dn-mobile-overlay-search > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); }
   .dn-app-shell dialog .dn-mobile-overlay-search input[type='search'] { flex: 1; width: 100%; min-width: 0; height: var(--dn-overlay-control-height); padding: 0; border: 0; outline: 0; background: transparent; box-shadow: none; color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field) input[type='search']:focus-visible { outline: none; box-shadow: none; }
 
   /* Shared mobile filter rows, choices and actions; labels stay quieter than input text. */
   .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-align: left; cursor: pointer; }
@@ -105,6 +106,9 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
   }
   .dn-app-shell :is(a, button, input, select, textarea, summary) { -webkit-tap-highlight-color: transparent; }
   .dn-app-shell .dn-entry-field { border: 0; border-radius: var(--dn-radius-control); box-shadow: none; }
+  .dn-app-shell .dn-entry-field:is(:focus-visible, :focus-within) { outline: 1px solid var(--dn-focus); outline-offset: -1px; }
+  .dn-app-shell .dn-entry-field .dn-entry-field__input:focus-visible { outline: none; box-shadow: none; }
+  .dn-app-shell button.dn-entry-field:focus-visible { outline-width: 2px; outline-offset: -2px; }
   .dn-app-shell button.dn-entry-field:focus:not(:focus-visible) { outline: none; }
   .dn-app-shell .dn-entry-field--prominent {
     --dn-entry-height: var(--dn-control-height-prominent);

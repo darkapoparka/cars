@@ -105,7 +105,7 @@
     </header>
     {#if searchable}
       <div class="search-wrap">
-        <div class:dn-mobile-overlay-search={fullScreen} class="search-field">
+        <div class:dn-mobile-overlay-search={fullScreen} class="search-field dn-mobile-search-field">
           <Icon name="search" size={18} />
           <input {@attach i18n.validation} type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
           {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t("m_c8191190a026")} onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
