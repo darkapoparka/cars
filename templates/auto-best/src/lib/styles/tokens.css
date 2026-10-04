@@ -187,6 +187,8 @@
   --dn-selection-line: color-mix(in srgb, var(--dn-red) 28%, var(--dn-white));
   --dn-mobile-selection-surface: var(--dn-home-panel);
   --dn-mobile-selection-line: var(--dn-line-strong);
+  --dn-mobile-filter-selection-surface: color-mix(in srgb, var(--dn-ink-strong) 10%, var(--dn-white));
+  --dn-mobile-selection-accent: var(--dn-ink-strong);
   --dn-overlay-header-padding: max(var(--dn-space-3), env(safe-area-inset-top)) var(--dn-space-4) var(--dn-space-3);
   --dn-overlay-gutter: var(--dn-space-4);
   --dn-overlay-gap: var(--dn-space-2);
