@@ -1,0 +1,373 @@
+{
+  "date": "2026-10-04",
+  "origin": "http://127.0.0.1:6483",
+  "requirement": "At most two visible description lines per step; phone summaries deliberately use two full lines.",
+  "checks": [
+    {
+      "overflow": false,
+      "path": "/bg/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Марка, модел, година\nи пробег.",
+          "height": 69,
+          "lines": 2,
+          "title": "Данни за колата",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Оглед на колата\nи обсъждане на цена.",
+          "height": 69,
+          "lines": 2,
+          "title": "Оглед и оценка",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Уточнете условията\nи документите.",
+          "height": 69,
+          "lines": 2,
+          "title": "Продажба или замяна",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "path": "/bg/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Марка, модел, година\nи пробег.",
+          "height": 69,
+          "lines": 2,
+          "title": "Данни за колата",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Оглед на колата\nи обсъждане на цена.",
+          "height": 69,
+          "lines": 2,
+          "title": "Оглед и оценка",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Уточнете условията\nи документите.",
+          "height": 69,
+          "lines": 2,
+          "title": "Продажба или замяна",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "path": "/bg/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Марка, модел, година\nи пробег.",
+          "height": 69,
+          "lines": 2,
+          "title": "Данни за колата",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Оглед на колата\nи обсъждане на цена.",
+          "height": 69,
+          "lines": 2,
+          "title": "Оглед и оценка",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Уточнете условията\nи документите.",
+          "height": 69,
+          "lines": 2,
+          "title": "Продажба или замяна",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "path": "/bg/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Марка, модел, година\nи пробег.",
+          "height": 95,
+          "lines": 2,
+          "title": "Данни за колата",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Оглед на колата\nи обсъждане на цена.",
+          "height": 95,
+          "lines": 2,
+          "title": "Оглед и оценка",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Уточнете условията\nи документите.",
+          "height": 95,
+          "lines": 2,
+          "title": "Продажба или замяна",
+          "titleLines": 2,
+          "whiteSpace": "normal"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "path": "/bg/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Марка, модел, година\nи пробег.",
+          "height": 51,
+          "lines": 1,
+          "title": "Данни за колата",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Оглед на колата\nи обсъждане на цена.",
+          "height": 51,
+          "lines": 1,
+          "title": "Оглед и оценка",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Уточнете условията\nи документите.",
+          "height": 51,
+          "lines": 1,
+          "title": "Продажба или замяна",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        }
+      ],
+      "width": 1440
+    },
+    {
+      "interaction": "full explanation retained",
+      "paragraphs": [
+        "Марка, модел, година и пробег.",
+        "Автокъщата проверява състоянието и потвърждава цената.",
+        "Уточнявате условията и документите с автокъщата."
+      ]
+    },
+    {
+      "overflow": false,
+      "path": "/en/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Make, model, year\nand mileage.",
+          "height": 69,
+          "lines": 2,
+          "title": "Your car details",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "We check your car\nand discuss a price.",
+          "height": 69,
+          "lines": 2,
+          "title": "Review and valuation",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Agree the terms\nand documents.",
+          "height": 69,
+          "lines": 2,
+          "title": "Sale or trade-in",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 320
+    },
+    {
+      "overflow": false,
+      "path": "/en/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Make, model, year\nand mileage.",
+          "height": 69,
+          "lines": 2,
+          "title": "Your car details",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "We check your car\nand discuss a price.",
+          "height": 69,
+          "lines": 2,
+          "title": "Review and valuation",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Agree the terms\nand documents.",
+          "height": 69,
+          "lines": 2,
+          "title": "Sale or trade-in",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 360
+    },
+    {
+      "overflow": false,
+      "path": "/en/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Make, model, year\nand mileage.",
+          "height": 69,
+          "lines": 2,
+          "title": "Your car details",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "We check your car\nand discuss a price.",
+          "height": 69,
+          "lines": 2,
+          "title": "Review and valuation",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        },
+        {
+          "clipped": false,
+          "copy": "Agree the terms\nand documents.",
+          "height": 69,
+          "lines": 2,
+          "title": "Sale or trade-in",
+          "titleLines": 1,
+          "whiteSpace": "pre-line"
+        }
+      ],
+      "width": 390
+    },
+    {
+      "overflow": false,
+      "path": "/en/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Make, model, year\nand mileage.",
+          "height": 95,
+          "lines": 2,
+          "title": "Your car details",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "We check your car\nand discuss a price.",
+          "height": 95,
+          "lines": 2,
+          "title": "Review and valuation",
+          "titleLines": 2,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Agree the terms\nand documents.",
+          "height": 95,
+          "lines": 2,
+          "title": "Sale or trade-in",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        }
+      ],
+      "width": 768
+    },
+    {
+      "overflow": false,
+      "path": "/en/sell",
+      "steps": [
+        {
+          "clipped": false,
+          "copy": "Make, model, year\nand mileage.",
+          "height": 51,
+          "lines": 1,
+          "title": "Your car details",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "We check your car\nand discuss a price.",
+          "height": 51,
+          "lines": 1,
+          "title": "Review and valuation",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        },
+        {
+          "clipped": false,
+          "copy": "Agree the terms\nand documents.",
+          "height": 51,
+          "lines": 1,
+          "title": "Sale or trade-in",
+          "titleLines": 1,
+          "whiteSpace": "normal"
+        }
+      ],
+      "width": 1440
+    }
+  ],
+  "failures": 0,
+  "check": {
+    "command": "npm run check",
+    "runtime": "Node 22.20.0",
+    "distDir": ".next-build-check",
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "staticPages": 407
+  },
+  "browserLogs": [
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-04T03:43:01.529Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ]
+}

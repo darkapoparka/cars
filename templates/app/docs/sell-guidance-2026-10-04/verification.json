@@ -1,0 +1,541 @@
+{
+  "date": "2026-10-04",
+  "origin": "http://127.0.0.1:6483",
+  "canonicalSource": "L:/CODEX/cars/templates/app",
+  "runtime": "Node 22.20.0",
+  "check": {
+    "command": "npm run check",
+    "distDir": ".next-build-check",
+    "lint": "passed",
+    "typecheck": "passed",
+    "build": "passed",
+    "staticPages": 407
+  },
+  "checks": [
+    {
+      "interaction": "desktop process drawer",
+      "visible": true,
+      "allHeadings": 4
+    },
+    {
+      "interaction": "process Escape restores focus",
+      "result": {
+        "activeText": "Виж стъпките",
+        "bodyOverflow": "hidden auto",
+        "dialogCount": 0
+      }
+    },
+    {
+      "interaction": "valuation advice",
+      "content": "Оценка на автомобила\n\nПодгответе пробега, регистрационните данни и сервизната история. Автокъщата ще прегледа състоянието на автомобила и ще обсъди оценка, преди да решите."
+    },
+    {
+      "interaction": "service history advice",
+      "content": "Сервизна история\n\nПодгответе сервизната книжка, фактурите за поддръжка и гаранционните документи. Вземете двата ключа, ако ги имате, и уведомете автокъщата за непогасено финансиране или известни неизправности."
+    },
+    {
+      "interaction": "photo advice",
+      "content": "Списък за снимките\n\nСнимайте автомобила на дневна светлина: отпред, отзад, от двете страни, джантите, салона и километража. Добавете ясни снимки на повредите, за да може автокъщата да прецени състоянието."
+    },
+    {
+      "interaction": "advice Escape restores focus",
+      "result": {
+        "activeText": "Списък за снимкитеСнимкиОтвън, отвътре и пробег",
+        "dialogs": 0
+      }
+    },
+    {
+      "interaction": "keyboard focus on first guide",
+      "result": {
+        "offset": "2px",
+        "outline": "rgb(38, 38, 41) solid 2px",
+        "text": "Оценка на автомобилаОценкаДанни и състояние"
+      }
+    },
+    {
+      "interaction": "mobile Enter opens advice",
+      "visible": true
+    },
+    {
+      "interaction": "mobile Back dismisses advice",
+      "result": {
+        "active": "Оценка на автомобилаОценкаДанни и състояние",
+        "dialogs": 0,
+        "url": "/bg/sell"
+      }
+    },
+    {
+      "interaction": "bg-320 process sheet",
+      "result": {
+        "height": 388.34375,
+        "overflow": false
+      },
+      "allHeadings": 4
+    },
+    {
+      "view": "bg-768",
+      "metrics": {
+        "clipped": [],
+        "documentWidth": 753,
+        "guideColumns": "697px",
+        "images": [
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-direct-v1.png&w=3840&q=75"
+          },
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-exchange-v1.png&w=3840&q=75"
+          }
+        ],
+        "overflow": false,
+        "processHeight": 223,
+        "stepColumns": "197.656px 197.672px 197.672px",
+        "steps": [
+          {
+            "rect": {
+              "bottom": 489,
+              "height": 115,
+              "left": 52,
+              "right": 249.65625,
+              "top": 374,
+              "width": 197.65625,
+              "x": 52,
+              "y": 374
+            },
+            "text": "01Данни за колатаМарка, модел, година и пробег."
+          },
+          {
+            "rect": {
+              "bottom": 489,
+              "height": 115,
+              "left": 277.65625,
+              "right": 475.328125,
+              "top": 374,
+              "width": 197.671875,
+              "x": 277.65625,
+              "y": 374
+            },
+            "text": "02Оглед и оценкаАвтокъщата проверява състоянието и потвърждава цената."
+          },
+          {
+            "rect": {
+              "bottom": 489,
+              "height": 115,
+              "left": 503.328125,
+              "right": 701,
+              "top": 374,
+              "width": 197.671875,
+              "x": 503.328125,
+              "y": 374
+            },
+            "text": "03Продажба или замянаУточнявате условията и документите с автокъщата."
+          }
+        ],
+        "targetSizes": [
+          {
+            "height": 44,
+            "name": "Виж стъпките",
+            "width": 131.09375
+          },
+          {
+            "height": 88,
+            "name": "Оценка на автомобилаОценкаДанни и състояние",
+            "width": 697
+          },
+          {
+            "height": 88,
+            "name": "Сервизна историяСервизна историяДокументи и двата ключа",
+            "width": 697
+          },
+          {
+            "height": 88,
+            "name": "Списък за снимкитеСнимкиОтвън, отвътре и пробег",
+            "width": 697
+          }
+        ],
+        "width": 768
+      }
+    },
+    {
+      "interaction": "process drawer numbered steps",
+      "stepHeadings": [
+        "Данни за колата",
+        "Оглед и оценка",
+        "Продажба или замяна"
+      ],
+      "count": 3
+    },
+    {
+      "view": "en-320",
+      "metrics": {
+        "clipped": [],
+        "documentWidth": 305,
+        "guideColumns": "281px",
+        "images": [
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-direct-v1.png&w=3840&q=75"
+          },
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-exchange-v1.png&w=3840&q=75"
+          }
+        ],
+        "overflow": false,
+        "processHeight": 373,
+        "stepColumns": "245px",
+        "steps": [
+          {
+            "rect": {
+              "bottom": 217,
+              "height": 69,
+              "left": 30,
+              "right": 275,
+              "top": 148,
+              "width": 245,
+              "x": 30,
+              "y": 148
+            },
+            "text": "01Your car detailsShare make, model, year and mileage."
+          },
+          {
+            "rect": {
+              "bottom": 328,
+              "height": 89,
+              "left": 30,
+              "right": 275,
+              "top": 239,
+              "width": 245,
+              "x": 30,
+              "y": 239
+            },
+            "text": "02Review and valuationThe dealer reviews the condition and confirms the price."
+          },
+          {
+            "rect": {
+              "bottom": 419,
+              "height": 69,
+              "left": 30,
+              "right": 275,
+              "top": 350,
+              "width": 245,
+              "x": 30,
+              "y": 350
+            },
+            "text": "03Sale or trade-inAgree the terms and paperwork with the dealer."
+          }
+        ],
+        "targetSizes": [
+          {
+            "height": 44,
+            "name": "View steps",
+            "width": 112.53125
+          },
+          {
+            "height": 88,
+            "name": "Car valuationValuationDetails and condition",
+            "width": 281
+          },
+          {
+            "height": 88,
+            "name": "Service historyService historyRecords and both keys",
+            "width": 281
+          },
+          {
+            "height": 100,
+            "name": "Photo checklistPhotosExterior, interior and mileage",
+            "width": 281
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "interaction": "sale card selects sale",
+      "selection": [
+        {
+          "selected": "true",
+          "text": "Продай"
+        },
+        {
+          "selected": "false",
+          "text": "Замяна"
+        }
+      ]
+    },
+    {
+      "interaction": "exchange card selects exchange",
+      "selection": [
+        {
+          "selected": "false",
+          "text": "Продай"
+        },
+        {
+          "selected": "true",
+          "text": "Замяна"
+        }
+      ]
+    },
+    {
+      "view": "bg-320",
+      "metrics": {
+        "clipped": [],
+        "documentWidth": 305,
+        "guideColumns": "281px",
+        "images": [
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-direct-v1.png&w=3840&q=75"
+          },
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-exchange-v1.png&w=3840&q=75"
+          }
+        ],
+        "overflow": false,
+        "processHeight": 373,
+        "stepColumns": "245px",
+        "steps": [
+          {
+            "rect": {
+              "bottom": 726,
+              "height": 69,
+              "left": 30,
+              "right": 275,
+              "top": 657,
+              "width": 245,
+              "x": 30,
+              "y": 657
+            },
+            "text": "01Данни за колатаМарка, модел, година и пробег."
+          },
+          {
+            "rect": {
+              "bottom": 837,
+              "height": 89,
+              "left": 30,
+              "right": 275,
+              "top": 748,
+              "width": 245,
+              "x": 30,
+              "y": 748
+            },
+            "text": "02Оглед и оценкаАвтокъщата проверява състоянието и потвърждава цената."
+          },
+          {
+            "rect": {
+              "bottom": 928,
+              "height": 69,
+              "left": 30,
+              "right": 275,
+              "top": 859,
+              "width": 245,
+              "x": 30,
+              "y": 859
+            },
+            "text": "03Продажба или замянаУточнявате условията и документите с автокъщата."
+          }
+        ],
+        "targetSizes": [
+          {
+            "height": 44,
+            "name": "Виж стъпките",
+            "width": 131.09375
+          },
+          {
+            "height": 88,
+            "name": "Оценка на автомобилаОценкаДанни и състояние",
+            "width": 281
+          },
+          {
+            "height": 100,
+            "name": "Сервизна историяСервизна историяДокументи и двата ключа",
+            "width": 281
+          },
+          {
+            "height": 88,
+            "name": "Списък за снимкитеСнимкиОтвън, отвътре и пробег",
+            "width": 281
+          }
+        ],
+        "width": 320
+      }
+    },
+    {
+      "view": "bg-390",
+      "metrics": {
+        "clipped": [],
+        "documentWidth": 375,
+        "guideColumns": "351px",
+        "images": [
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-direct-v1.png&w=3840&q=75"
+          },
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-exchange-v1.png&w=3840&q=75"
+          }
+        ],
+        "overflow": false,
+        "processHeight": 333,
+        "stepColumns": "315px",
+        "steps": [
+          {
+            "rect": {
+              "bottom": 166,
+              "height": 49,
+              "left": 30,
+              "right": 345,
+              "top": 117,
+              "width": 315,
+              "x": 30,
+              "y": 117
+            },
+            "text": "01Данни за колатаМарка, модел, година и пробег."
+          },
+          {
+            "rect": {
+              "bottom": 257,
+              "height": 69,
+              "left": 30,
+              "right": 345,
+              "top": 188,
+              "width": 315,
+              "x": 30,
+              "y": 188
+            },
+            "text": "02Оглед и оценкаАвтокъщата проверява състоянието и потвърждава цената."
+          },
+          {
+            "rect": {
+              "bottom": 348,
+              "height": 69,
+              "left": 30,
+              "right": 345,
+              "top": 279,
+              "width": 315,
+              "x": 30,
+              "y": 279
+            },
+            "text": "03Продажба или замянаУточнявате условията и документите с автокъщата."
+          }
+        ],
+        "targetSizes": [
+          {
+            "height": 44,
+            "name": "Виж стъпките",
+            "width": 131.09375
+          },
+          {
+            "height": 88,
+            "name": "Оценка на автомобилаОценкаДанни и състояние",
+            "width": 351
+          },
+          {
+            "height": 88,
+            "name": "Сервизна историяСервизна историяДокументи и двата ключа",
+            "width": 351
+          },
+          {
+            "height": 88,
+            "name": "Списък за снимкитеСнимкиОтвън, отвътре и пробег",
+            "width": 351
+          }
+        ],
+        "width": 390
+      }
+    },
+    {
+      "view": "bg-1440",
+      "metrics": {
+        "clipped": [],
+        "documentWidth": 1425,
+        "guideColumns": "386.656px 386.672px 386.656px",
+        "images": [
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-direct-v1.png&w=3840&q=75"
+          },
+          {
+            "loaded": true,
+            "source": "/_next/image?url=%2Fshowroom%2Fblack%2Fsell-exchange-v1.png&w=3840&q=75"
+          }
+        ],
+        "overflow": false,
+        "processHeight": 179,
+        "stepColumns": "360px 360px 360px",
+        "steps": [
+          {
+            "rect": {
+              "bottom": 595,
+              "height": 71,
+              "left": 144.5,
+              "right": 504.5,
+              "top": 524,
+              "width": 360,
+              "x": 144.5,
+              "y": 524
+            },
+            "text": "01Данни за колатаМарка, модел, година и пробег."
+          },
+          {
+            "rect": {
+              "bottom": 595,
+              "height": 71,
+              "left": 532.5,
+              "right": 892.5,
+              "top": 524,
+              "width": 360,
+              "x": 532.5,
+              "y": 524
+            },
+            "text": "02Оглед и оценкаАвтокъщата проверява състоянието и потвърждава цената."
+          },
+          {
+            "rect": {
+              "bottom": 595,
+              "height": 71,
+              "left": 920.5,
+              "right": 1280.5,
+              "top": 524,
+              "width": 360,
+              "x": 920.5,
+              "y": 524
+            },
+            "text": "03Продажба или замянаУточнявате условията и документите с автокъщата."
+          }
+        ],
+        "targetSizes": [
+          {
+            "height": 44,
+            "name": "Виж стъпките",
+            "width": 131.09375
+          },
+          {
+            "height": 88,
+            "name": "Оценка на автомобилаОценкаДанни и състояние",
+            "width": 386.65625
+          },
+          {
+            "height": 88,
+            "name": "Сервизна историяСервизна историяДокументи и двата ключа",
+            "width": 386.671875
+          },
+          {
+            "height": 88,
+            "name": "Списък за снимкитеСнимкиОтвън, отвътре и пробег",
+            "width": 386.65625
+          }
+        ],
+        "width": 1440
+      }
+    },
+    {
+      "interaction": "final browser console",
+      "entries": []
+    }
+  ],
+  "layoutFailures": 0
+}

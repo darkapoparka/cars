@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-04",
+  "origin": "http://127.0.0.1:6483",
+  "requirement": "Compact black Before you sell panel with single-line drawer buttons; preserve two-line phone process summaries.",
+  "checks": [
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Оценка",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Сервизна история",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Снимки",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 884,
+      "locale": "bg",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 192,
+      "stepLines": [
+        2,
+        2,
+        2
+      ],
+      "width": 320
+    },
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Оценка",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Сервизна история",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Снимки",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 884,
+      "locale": "bg",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 192,
+      "stepLines": [
+        2,
+        2,
+        2
+      ],
+      "width": 360
+    },
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Оценка",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Сервизна история",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Снимки",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 884,
+      "locale": "bg",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 192,
+      "stepLines": [
+        2,
+        2,
+        2
+      ],
+      "width": 390
+    },
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Оценка на автомобила",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Сервизна история",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Списък за снимките",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 884,
+      "locale": "bg",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 202,
+      "stepLines": [
+        2,
+        2,
+        2
+      ],
+      "width": 768
+    },
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Оценка на автомобила",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Сервизна история",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Списък за снимките",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 900,
+      "locale": "bg",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 112,
+      "stepLines": [
+        1,
+        1,
+        1
+      ],
+      "width": 1440
+    },
+    {
+      "buttons": [
+        {
+          "height": 44,
+          "label": "Valuation",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Service history",
+          "textClipped": false,
+          "labelLines": 1
+        },
+        {
+          "height": 44,
+          "label": "Photos",
+          "textClipped": false,
+          "labelLines": 1
+        }
+      ],
+      "height": 884,
+      "locale": "en",
+      "overflow": false,
+      "panelBackground": "rgb(23, 23, 25)",
+      "panelHeight": 192,
+      "stepLines": [
+        2,
+        2,
+        2
+      ],
+      "width": 320
+    }
+  ],
+  "interactions": [
+    {
+      "dialog": "Оценка на автомобила\n\nПодгответе пробега, регистрационните данни и сервизната история. Автокъщата ще прегледа състоянието на автомобила и ще обсъди оценка, преди да решите.",
+      "overflow": false
+    },
+    {
+      "closed": true,
+      "focus": "Оценка",
+      "outline": "rgb(255, 255, 255) solid 2px"
+    },
+    {
+      "dialog": "Сервизна история\n\nПодгответе сервизната книжка, фактурите за поддръжка и гаранционните документи. Вземете двата ключа, ако ги имате, и уведомете автокъщата за непогасено финансиране или известни неизправности."
+    },
+    {
+      "closed": true,
+      "focus": "Сервизна история",
+      "url": "/bg/sell"
+    },
+    {
+      "dialog": "Списък за снимките\n\nСнимайте автомобила на дневна светлина: отпред, отзад, от двете страни, джантите, салона и километража. Добавете ясни снимки на повредите, за да може автокъщата да прецени състоянието."
+    },
+    {
+      "closed": true,
+      "focus": "Снимки"
+    },
+    {
+      "locale": "en",
+      "processDialog": "How it works\n\nSell or part-exchange.\n\nYour car details\n\nShare make, model, year and mileage.\n\nReview and valuation\n\nThe dealer reviews the condition and confirms the price.\n\nSale or trade-in\n\nAgree the terms and paperwork with the dealer.",
+      "stepCount": 3
+    }
+  ],
+  "browserDiagnostics": []
+}
