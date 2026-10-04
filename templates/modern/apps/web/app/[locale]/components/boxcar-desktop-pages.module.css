@@ -104,17 +104,18 @@
     display: flex;
     gap: calc(var(--spacing) * 4.5);
     align-items: flex-start;
-    padding: calc(var(--spacing) * 4.5) 0;
-    margin-bottom: 0;
+    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
+    margin-bottom: calc(var(--spacing) * 3);
     font-size: calc(var(--spacing) * 3.75);
     line-height: calc(var(--spacing) * 6.5);
-    border-bottom: var(--desktop-border-width) solid
-      var(--desktop-inverse-divider);
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 4);
   }
   .contactCard > svg {
     flex: none;
     margin-top: calc(var(--spacing) * 0.5);
-    color: inherit;
+    color: var(--brand);
   }
   .contactCard h3 {
     margin: 0 0 calc(var(--spacing) * 1);
@@ -127,12 +128,16 @@
     overflow-wrap: anywhere;
   }
   .contactCard a:hover {
+    color: var(--brand);
     text-decoration: underline;
     text-underline-offset: calc(var(--spacing) * 1);
   }
   .social {
-    padding-top: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
     margin-top: auto;
+    color: var(--foreground);
+    background: var(--desktop-surface);
+    border-radius: calc(var(--spacing) * 4);
   }
   .social h3 {
     font-size: calc(var(--spacing) * 3.75);
@@ -142,7 +147,7 @@
     margin: calc(var(--spacing) * 1) 0 calc(var(--spacing) * 4);
     font-size: calc(var(--spacing) * 3.5);
     line-height: calc(var(--spacing) * 6);
-    color: inherit;
+    color: var(--muted-foreground);
   }
   .form {
     display: grid;
@@ -404,6 +409,6 @@
     outline-color: var(--desktop-surface);
   }
   .details a:focus-visible {
-    outline-color: var(--brand-foreground);
+    outline-color: var(--ring);
   }
 }
