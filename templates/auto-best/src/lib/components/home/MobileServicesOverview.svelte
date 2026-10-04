@@ -76,7 +76,7 @@
     .dn-mobile-services__card .dn-mobile-services__cta {
       --dn-compact-control-surface: var(--dn-ink);
       --dn-compact-control-ink: var(--dn-white);
-      --dn-compact-control-padding-inline: calc(var(--dn-space-1) + var(--dn-space-half));
+      --dn-compact-control-padding-inline: var(--dn-space-3);
       --dn-compact-control-inset: calc(var(--dn-space-1) + var(--dn-space-half));
       --dn-entry-action-height: var(--dn-control-height-compact);
       --dn-entry-action-gap: var(--dn-space-1);
