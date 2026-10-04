@@ -15,8 +15,11 @@
 	import NavigationMenu from './NavigationMenu.svelte';
 	import MobileAppbar from './MobileAppbar.svelte';
 	import VehicleSearchDialog from '$lib/components/inventory/VehicleSearchDialog.svelte';
+	import { parseInventoryQuery, serializeInventoryQuery } from '$lib/domain/inventory-query';
 	let { mobile = true }: { mobile?: boolean } = $props();
 	let searchOpen = $state(false);
+	let searchKeyword = $state('');
+	let searchParams = $state('');
 	const garage = getGarageContext();
 	const countId = $props.id();
 	const english = $derived(page.data.locale === 'en');
@@ -24,6 +27,24 @@
 
 	const localizedHref = (href: string) =>
 		english ? href + (href.includes('?') ? '&' : '?') + 'lang=en' : href;
+
+	function openSearch() {
+		const params =
+			routeParts(page.url.pathname).path === '/inventory'
+				? serializeInventoryQuery(parseInventoryQuery(page.url.searchParams), page.url.searchParams)
+				: new URLSearchParams();
+		searchParams = params.toString();
+		searchKeyword = params.get('keyword') ?? '';
+		searchOpen = true;
+	}
+
+	function clearSearch() {
+		const params = new URLSearchParams(searchParams);
+		searchParams = serializeInventoryQuery(
+			{ ...parseInventoryQuery(params), filters: {} },
+			params
+		).toString();
+	}
 </script>
 
 {#if mobile}<div class="site-mobile-only"><MobileAppbar surface="dark" /></div>{/if}
@@ -66,7 +87,7 @@
 			<button
 				class="site-header__icon"
 				type="button"
-				onclick={() => (searchOpen = true)}
+				onclick={openSearch}
 				aria-label={copy.search}
 				title={copy.search}
 				aria-haspopup="dialog"
@@ -103,7 +124,13 @@
 		</div>
 	</div>
 </header>
-<VehicleSearchDialog bind:open={searchOpen} {english} />
+<VehicleSearchDialog
+	bind:open={searchOpen}
+	bind:keyword={searchKeyword}
+	{searchParams}
+	{english}
+	onclear={clearSearch}
+/>
 
 <style>
 	.site-header {

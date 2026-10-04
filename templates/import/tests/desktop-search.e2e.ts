@@ -191,7 +191,7 @@ test('header search reuses the same focused result dialog', async ({ page }) => 
 	await expect(opener).toBeFocused();
 });
 
-test('inventory type shortcuts preserve search context and share the existing type picker', async ({
+test('inventory type shortcuts and header search preserve filters without a hero search row', async ({
 	page
 }) => {
 	await visit(
@@ -220,16 +220,36 @@ test('inventory type shortcuts preserve search context and share the existing ty
 		'aria-current',
 		'page'
 	);
-	const search = page.locator('.inventory-hero__search');
+	await expect(page.locator('.inventory-hero__search')).toHaveCount(0);
+	const opener = page
+		.locator('.site-header')
+		.getByRole('button', { name: 'Search cars', exact: true });
+	await opener.click();
+	const search = page.locator('.vehicle-search-dialog');
+	await expect(search.getByRole('searchbox')).toBeFocused();
 	await search.getByRole('searchbox').fill('X5');
-	await search.getByRole('button', { name: 'Search', exact: true }).click();
+	await expect(search.locator('.vehicle-search__results li').first()).toContainText('BMW X5');
+	await search.getByRole('searchbox').press('Enter');
 	await expect(page).toHaveURL(
 		(url) =>
 			url.searchParams.get('keyword') === 'X5' &&
 			url.searchParams.get('body') === 'SUV' &&
-			url.searchParams.get('brand') === 'BMW'
+			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('maxPrice') === '100000' &&
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('view') === '3' &&
+			url.searchParams.get('layout') === 'dashboard' &&
+			url.searchParams.get('marker') === 'keep'
 	);
 	await expect(page.locator('main .site-vehicle-card').first()).toContainText('BMW X5');
+	await opener.click();
+	await expect(search.getByRole('searchbox')).toHaveValue('X5');
+	await search.getByRole('searchbox').fill('discarded draft');
+	await page.keyboard.press('Escape');
+	await expect(opener).toBeFocused();
+	await opener.click();
+	await expect(search.getByRole('searchbox')).toHaveValue('X5');
+	await page.keyboard.press('Escape');
 	await types.getByRole('link', { name: 'All cars', exact: true }).click();
 	await expect(page).toHaveURL(
 		(url) =>
@@ -247,6 +267,38 @@ test('inventory type shortcuts preserve search context and share the existing ty
 	await expect(picker).toContainText('SUV');
 	await page.keyboard.press('Escape');
 	await expect(page.getByRole('button', { name: 'Type', exact: true })).toBeFocused();
+});
+
+test('header search can clear inventory filters while retaining display and locale settings', async ({
+	page
+}) => {
+	await visit(
+		page,
+		'/inventory?lang=en&brand=BMW&body=SUV&keyword=X5&sort=lowest-price&view=3&layout=dashboard&marker=keep'
+	);
+	await page
+		.locator('.site-header')
+		.getByRole('button', { name: 'Search cars', exact: true })
+		.click();
+	const dialog = page.locator('.vehicle-search-dialog');
+	await expect(dialog.getByRole('searchbox')).toHaveValue('X5');
+	await dialog
+		.locator('.vehicle-search__actions')
+		.getByRole('button', { name: 'Clear', exact: true })
+		.click();
+	await expect(dialog.getByRole('searchbox')).toHaveValue('');
+	await dialog.getByRole('searchbox').press('Enter');
+	await expect(page).toHaveURL(
+		(url) =>
+			url.pathname === '/en/inventory' &&
+			!url.searchParams.has('brand') &&
+			!url.searchParams.has('body') &&
+			!url.searchParams.get('keyword') &&
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('view') === '3' &&
+			url.searchParams.get('layout') === 'dashboard' &&
+			url.searchParams.get('marker') === 'keep'
+	);
 });
 
 test('home Search follows selected filters and newest vehicles retains the inventory entry', async ({

@@ -9,7 +9,6 @@
 	import type { InventoryMobileData } from '$lib/server/inventory-options-mobile';
 	import type { AuxeroInventoryVehicleCard } from '$lib/domain/vehicle-card';
 	import type { InventoryCopy, Locale } from '$lib/i18n/messages';
-	import { linkHref } from '$lib/utils/links';
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
 	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
@@ -18,10 +17,8 @@
 	import VehicleCard from './VehicleCard.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import DesktopSearchControl from '$lib/components/common/DesktopSearchControl.svelte';
 	import DesktopDiscoveryPanel from '$lib/components/common/DesktopDiscoveryPanel.svelte';
 	import InventorySidebar from './InventorySidebar.svelte';
-	import { parseInventoryQuery, serializeInventoryQuery } from '$lib/domain/inventory-query';
 	let {
 		cards,
 		desktop,
@@ -56,13 +53,7 @@
 	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
 	let dialog = $state<InventoryFiltersDialog>();
 	const openFilters = (filter?: AuxeroInventoryFilter) => dialog?.openFilters(filter);
-	const searchState = $derived(parseInventoryQuery(page.url.searchParams));
 	const typeFilter = $derived(desktop.filters.find((filter) => filter.name === 'bodyType'));
-	const searchHiddenInputs = $derived(
-		[...serializeInventoryQuery(searchState, page.url.searchParams)].filter(
-			([name]) => name !== 'keyword'
-		)
-	);
 </script>
 
 <main id="main-content">
@@ -74,22 +65,10 @@
 			desktopDescription={desktop.subtitle}
 		>
 			{#snippet desktopActions()}
-				<DesktopDiscoveryPanel>
-					{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
-					<form action={linkHref('/inventory')} role="search" class="inventory-hero__search">
-						{#each searchHiddenInputs as [name, value], index (index)}<input
-								type="hidden"
-								{name}
-								{value}
-							/>{/each}
-						<DesktopSearchControl
-							name="keyword"
-							value={searchState.filters.keyword ?? ''}
-							label={desktop.searchLabel}
-							placeholder={controlsCopy.searchPlaceholder}
-							actionLabel={english ? 'Search' : 'Търси'}
-						/>
-					</form>
+				<DesktopDiscoveryPanel class="inventory-discovery">
+					{#snippet header()}
+						{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
+					{/snippet}
 					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
 				</DesktopDiscoveryPanel>
 			{/snippet}
@@ -148,12 +127,6 @@
 </main>
 
 <style>
-	form[role='search'] {
-		min-width: 0;
-	}
-	.inventory-hero__search {
-		text-align: start;
-	}
 	.inventory-results__layout,
 	.inventory-results__content {
 		min-width: 0;
@@ -228,6 +201,11 @@
 	.inventory-more span {
 		color: var(--bc-muted);
 		font-size: var(--bc-text-label);
+	}
+	@media (min-width: 768px) {
+		:global(.inventory-discovery) {
+			--bc-desktop-discovery-panel-height: 0px;
+		}
 	}
 	@media (min-width: 768px) and (max-width: 1199px) {
 		.inventory-grid[data-view] {
