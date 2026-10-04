@@ -95,7 +95,7 @@ const s = stylex.create({
   },
   specs: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     gap: 4,
     marginTop: 2,
   },
@@ -107,6 +107,7 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
   },
   fact: {
+    minWidth: 0,
     paddingInline: 6,
     paddingBlock: 2,
     borderRadius: 4,
@@ -115,6 +116,8 @@ const s = stylex.create({
     fontSize: 12,
     lineHeight: '18px',
     whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
   },
 });
 
@@ -131,13 +134,7 @@ export function ShowroomVehicleCard({
   const saved = parked.includes(vehicle.id);
   const name = vehicle.make + ' ' + vehicle.model;
   const href = '/vehicle/' + vehicle.id;
-  const specs = [
-    String(vehicle.year),
-    number(vehicle.mileage) + ' ' + t('km'),
-    t(vehicle.fuel),
-    number(vehicle.power) + ' ' + t('hp'),
-    t(vehicle.transmission),
-  ];
+  const specs = [String(vehicle.year), number(vehicle.mileage) + ' ' + t('km'), t(vehicle.fuel)];
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
       <div {...stylex.props(s.photo)}>
@@ -191,7 +188,7 @@ export function ShowroomVehicleCard({
         </p>
         <p title={specs.join(' · ')} {...stylex.props(s.specs)}>
           {specs.map((fact) => (
-            <span key={fact} {...stylex.props(s.fact)}>
+            <span key={fact} title={fact} {...stylex.props(s.fact)}>
               {fact}
             </span>
           ))}

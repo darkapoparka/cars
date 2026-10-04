@@ -1,0 +1,601 @@
+{
+  "before": {
+    "at390": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 39.9375,
+            "y": 523.125
+          },
+          {
+            "text": "18 500 км",
+            "width": 64.28125,
+            "y": 523.125
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 523.125
+          },
+          {
+            "text": "286 к.с.",
+            "width": 54.34375,
+            "y": 523.125
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 523.125
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-x6",
+        "width": 343,
+        "y": 240
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2024",
+            "width": 39.84375,
+            "y": 855.25
+          },
+          {
+            "text": "33 987 км",
+            "width": 64.765625,
+            "y": 855.25
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 855.25
+          },
+          {
+            "text": "303 к.с.",
+            "width": 53.671875,
+            "y": 855.25
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 855.25
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-540",
+        "width": 343,
+        "y": 572.125
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 39.9375,
+            "y": 1187.375
+          },
+          {
+            "text": "0 км",
+            "width": 35.984375,
+            "y": 1187.375
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 1187.375
+          },
+          {
+            "text": "197 к.с.",
+            "width": 51.078125,
+            "y": 1187.375
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 1187.375
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-x3",
+        "width": 343,
+        "y": 904.25
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2026",
+            "width": 40.453125,
+            "y": 1519.5
+          },
+          {
+            "text": "0 км",
+            "width": 35.984375,
+            "y": 1519.5
+          },
+          {
+            "text": "Бензин",
+            "width": 54.890625,
+            "y": 1519.5
+          },
+          {
+            "text": "170 к.с.",
+            "width": 51.109375,
+            "y": 1519.5
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 1519.5
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-120",
+        "width": 343,
+        "y": 1236.375
+      }
+    ],
+    "at320": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 39.9375,
+            "y": 479.375
+          },
+          {
+            "text": "18 500 км",
+            "width": 64.28125,
+            "y": 479.375
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 479.375
+          },
+          {
+            "text": "286 к.с.",
+            "width": 54.34375,
+            "y": 479.375
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 505.375
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 300.375,
+        "id": "bmw-x6",
+        "width": 273,
+        "y": 240
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2024",
+            "width": 39.84375,
+            "y": 793.75
+          },
+          {
+            "text": "33 987 км",
+            "width": 64.765625,
+            "y": 793.75
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 793.75
+          },
+          {
+            "text": "303 к.с.",
+            "width": 53.671875,
+            "y": 793.75
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 819.75
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 300.375,
+        "id": "bmw-540",
+        "width": 273,
+        "y": 554.375
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 39.9375,
+            "y": 1108.125
+          },
+          {
+            "text": "0 км",
+            "width": 35.984375,
+            "y": 1108.125
+          },
+          {
+            "text": "Дизел",
+            "width": 48.078125,
+            "y": 1108.125
+          },
+          {
+            "text": "197 к.с.",
+            "width": 51.078125,
+            "y": 1108.125
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 1134.125
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 300.375,
+        "id": "bmw-x3",
+        "width": 273,
+        "y": 868.75
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2026",
+            "width": 40.453125,
+            "y": 1422.5
+          },
+          {
+            "text": "0 км",
+            "width": 35.984375,
+            "y": 1422.5
+          },
+          {
+            "text": "Бензин",
+            "width": 54.890625,
+            "y": 1422.5
+          },
+          {
+            "text": "170 к.с.",
+            "width": 51.109375,
+            "y": 1422.5
+          },
+          {
+            "text": "Автоматик",
+            "width": 81.875,
+            "y": 1448.5
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 300.375,
+        "id": "bmw-120",
+        "width": 273,
+        "y": 1183.125
+      }
+    ]
+  },
+  "after": {
+    "at390": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 41.328125,
+            "y": 523.125
+          },
+          {
+            "text": "18 500 км",
+            "width": 69.0625,
+            "y": 523.125
+          },
+          {
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 523.125
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-x6",
+        "width": 343,
+        "y": 240
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2024",
+            "width": 41.78125,
+            "y": 855.25
+          },
+          {
+            "text": "33 987 км",
+            "width": 70.984375,
+            "y": 855.25
+          },
+          {
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 855.25
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-540",
+        "width": 343,
+        "y": 572.125
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2025",
+            "width": 41.328125,
+            "y": 1187.375
+          },
+          {
+            "text": "0 км",
+            "width": 38.703125,
+            "y": 1187.375
+          },
+          {
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 1187.375
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-x3",
+        "width": 343,
+        "y": 904.25
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "text": "2026",
+            "width": 41.65625,
+            "y": 1519.5
+          },
+          {
+            "text": "0 км",
+            "width": 38.703125,
+            "y": 1519.5
+          },
+          {
+            "text": "Бензин",
+            "width": 53.90625,
+            "y": 1519.5
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 318.125,
+        "id": "bmw-120",
+        "width": 343,
+        "y": 1236.375
+      }
+    ],
+    "at320": [
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "readable": true,
+            "text": "2025",
+            "width": 41.328125,
+            "y": 479.375
+          },
+          {
+            "readable": true,
+            "text": "18 500 км",
+            "width": 69.0625,
+            "y": 479.375
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 479.375
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 274.375,
+        "id": "bmw-x6",
+        "width": 273,
+        "y": 240
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "readable": true,
+            "text": "2024",
+            "width": 41.78125,
+            "y": 767.75
+          },
+          {
+            "readable": true,
+            "text": "33 987 км",
+            "width": 70.984375,
+            "y": 767.75
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 767.75
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 274.375,
+        "id": "bmw-540",
+        "width": 273,
+        "y": 528.375
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "readable": true,
+            "text": "2025",
+            "width": 41.328125,
+            "y": 1056.125
+          },
+          {
+            "readable": true,
+            "text": "0 км",
+            "width": 38.703125,
+            "y": 1056.125
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "width": 48.765625,
+            "y": 1056.125
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 274.375,
+        "id": "bmw-x3",
+        "width": 273,
+        "y": 816.75
+      },
+      {
+        "background": "rgb(255, 255, 255)",
+        "badges": [
+          {
+            "readable": true,
+            "text": "2026",
+            "width": 41.65625,
+            "y": 1344.5
+          },
+          {
+            "readable": true,
+            "text": "0 км",
+            "width": 38.703125,
+            "y": 1344.5
+          },
+          {
+            "readable": true,
+            "text": "Бензин",
+            "width": 53.90625,
+            "y": 1344.5
+          }
+        ],
+        "font": "\"Mobile UI\", Arial, sans-serif",
+        "height": 274.375,
+        "id": "bmw-120",
+        "width": 273,
+        "y": 1105.125
+      }
+    ]
+  },
+  "sharedViews": {
+    "saved": [
+      {
+        "badges": [
+          {
+            "readable": true,
+            "text": "2025",
+            "y": 451.375
+          },
+          {
+            "readable": true,
+            "text": "18 500 км",
+            "y": 451.375
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "y": 451.375
+          }
+        ],
+        "height": 274.375,
+        "id": "bmw-x6"
+      }
+    ],
+    "related": [
+      {
+        "badges": [
+          {
+            "readable": true,
+            "text": "2024",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "33 987 км",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "y": 657.375
+          }
+        ],
+        "height": 279.375,
+        "id": "bmw-540"
+      },
+      {
+        "badges": [
+          {
+            "readable": true,
+            "text": "2025",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "0 км",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "Дизел",
+            "y": 657.375
+          }
+        ],
+        "height": 279.375,
+        "id": "bmw-x3"
+      },
+      {
+        "badges": [
+          {
+            "readable": true,
+            "text": "2026",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "0 км",
+            "y": 657.375
+          },
+          {
+            "readable": true,
+            "text": "Бензин",
+            "y": 657.375
+          }
+        ],
+        "height": 279.375,
+        "id": "bmw-120"
+      }
+    ]
+  },
+  "heightReductionAt320": 26,
+  "mobileFont": "Inter v4.1",
+  "fontAlias": "Mobile UI",
+  "desktopFont": "unchanged",
+  "fontSha256": "b13b7d28b8dac8d22e9d5411707ae293315c4fc31615b253914d06361947de90"
+}

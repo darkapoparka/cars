@@ -149,6 +149,30 @@ async function run(name, engine) {
             0,
             `${locale} ${width} ${route} visible images`,
           );
+          const badgeRows = await page.locator('[data-showroom-vehicle]').evaluateAll((cards) =>
+            cards.map((card) => {
+              const row = card.querySelector('p[title]:last-child');
+              const bounds = row.getBoundingClientRect();
+              const badges = [...row.children];
+              const first = badges[0].getBoundingClientRect();
+              return (
+                badges.length === 3 &&
+                badges.every((badge) => {
+                  const rect = badge.getBoundingClientRect();
+                  return (
+                    Math.abs(rect.top - first.top) < 1 &&
+                    rect.left >= bounds.left &&
+                    rect.right <= bounds.right &&
+                    badge.scrollWidth <= badge.clientWidth
+                  );
+                })
+              );
+            }),
+          );
+          assert.ok(
+            badgeRows.every(Boolean),
+            `${locale} ${width} ${route}: all vehicle cards have one readable badge row`,
+          );
           if (!route.startsWith('/vehicle/')) {
             const positions = await dockGeometry(locale);
             if (dockPositions)
@@ -220,7 +244,7 @@ async function run(name, engine) {
       .last()
       .locator('span')
       .allTextContents();
-    assert.deepEqual(facts, ['2025', '18 500 км', 'Дизел', '286 к.с.', 'Автоматик']);
+    assert.deepEqual(facts, ['2025', '18 500 км', 'Дизел']);
     assert.equal(
       await page
         .locator('[data-showroom-vehicle]')
@@ -264,7 +288,7 @@ async function run(name, engine) {
     assert.equal(new URL(page.url()).searchParams.get('lang'), 'bg');
     assert.equal(await search.evaluate((element) => element === document.activeElement), true);
     check(
-      'Narrow BG cards keep paired facts; search fits and Escape cancels the draft and returns focus',
+      'Narrow BG cards keep one row of core facts; search fits and Escape cancels the draft and returns focus',
     );
 
     viewport = { width: 390, height: 844 };

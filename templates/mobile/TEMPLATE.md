@@ -86,8 +86,10 @@ full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Inventory photos sit inside a 12px white frame with 10px
 inner corners. The title and price share a wrapping row; the trim stays below,
-followed by compact year, mileage, fuel, power and transmission badges. Long
-vehicle names and the factual badges wrap within the card at 320px.
+followed by one compact row of year, mileage and fuel badges. The row stays
+single-line across inventory, Saved and related cars. Long future values can
+truncate with their full text retained in the badge title; vehicle names can wrap.
+Power and transmission remain in the vehicle details.
 Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
 
@@ -178,11 +180,6 @@ switching filter tabs retains their keyboard navigation. Pill and tab focus
 rings use the showroom accent; the dock uses the neutral text color. All sit
 inside their targets. Toasts account for
 the phone's bottom safe area.
-Inventory cards keep a variant line and two compact year/mileage and
-fuel/transmission pairs. Facts wrap as whole pairs on narrow cards, avoiding
-leading separators and clipped transmission labels. English Automatic is shortened to Auto in compact
-facts; full values remain in the detail page and the facts tooltip.
-
 Bulgarian is the default language. The mobile header's BG/EN control switches the
 showroom, filters, details, equipment, service forms and enquiry UI immediately.
 The choice persists on the device; `?lang=bg` and `?lang=en` override it for shared
@@ -193,8 +190,11 @@ vehicle summaries; the captured reference data remains intact.
 Showroom cards and galleries use the actual vehicle photos and omit captured
 German finance, sale and testimonial slides. Original assets stay in the reference
 catalog; verified dealer photos are still required for a real proposal.
-Mobile uses locally bundled Manrope Latin and Cyrillic subsets under their OFL
-license, keeping Bulgarian labels, model names and prices in one family. The
+Mobile uses the locally bundled Inter v4.1 Latin/Cyrillic variable font under its
+OFL license, keeping Bulgarian labels, model names and prices in one family. Its
+upright Cyrillic forms replace the rounded Manrope treatment. Font provenance,
+coverage and the retained license live in `public/fonts/inter-v4.1.json` and
+`public/fonts/inter-OFL.txt`. The
 BG/EN header action has a transparent background and a 44px touch target. Mobile
 vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
