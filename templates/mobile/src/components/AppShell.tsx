@@ -3,18 +3,18 @@ import { hydrateLocale, useLocale } from '@/lib/use-locale';
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { CarFront, LayoutGrid, MessageSquare } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
-import { hydrateStore, patchState, syncStorage, useAppState } from '@/lib/store';
+import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { translate } from '@/lib/locale';
 import { getVehicle } from '@/lib/catalog';
-import { ShowroomNavIcon, type ShowroomNavIconName } from './ShowroomNavIcon';
-const tabs: [string, string, ShowroomNavIconName][] = [
-  ['/', 'Cars', 'cars'],
-  ['/services', 'Services', 'services'],
-  ['/contact', 'Contact', 'contact'],
-];
+const tabs = [
+  ['/', 'Cars', CarFront],
+  ['/services', 'Services', LayoutGrid],
+  ['/contact', 'Contact', MessageSquare],
+] as const;
 const s = stylex.create({
   root: {
     backgroundColor: colors.background,
@@ -33,36 +33,37 @@ const s = stylex.create({
     left: '50%',
     transform: 'translateX(-50%)',
     width: 'calc(100% - 32px)',
-    maxWidth: 232,
-    padding: 4,
+    maxWidth: 204,
+    padding: 1,
     display: 'flex',
-    gap: 4,
+    gap: 2,
     backgroundColor: colors.background,
     zIndex: 40,
-    borderRadius: 26,
-    boxShadow: '0 3px 16px #17202b14',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 24,
+    boxShadow: '0 2px 12px #17202b12',
   },
   tab: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
+    gap: 2,
     color: colors.muted,
+    fontSize: '0.75rem',
+    lineHeight: 1.2,
+    fontWeight: 600,
     textDecoration: 'none',
-    fontSize: 13,
-    lineHeight: '18px',
-    fontWeight: 500,
     minWidth: 0,
     minHeight: 44,
     flexGrow: 1,
     flexShrink: 1,
     flexBasis: 0,
-    paddingBlock: 4,
-    paddingInline: 8,
+    paddingBlock: 2,
+    paddingInline: 4,
     borderRadius: 22,
-    textAlign: 'center',
-    overflowWrap: 'anywhere',
     outlineColor: colors.text,
     outlineOffset: -3,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
@@ -70,18 +71,16 @@ const s = stylex.create({
     transition: 'background-color 140ms, color 140ms',
   },
   active: {
-    flexGrow: 2.25,
-    backgroundColor: { default: colors.text, ':hover': colors.text },
-    color: colors.background,
-    fontWeight: 600,
-    outlineColor: colors.background,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.controlSurface },
+    color: colors.text,
   },
-  label: { minWidth: 0, overflowWrap: 'anywhere' },
+  icon: { width: 20, height: 20, display: 'block', flexShrink: 0 },
+  label: { minWidth: 0, maxWidth: '100%', overflowWrap: 'anywhere' },
   toast: {
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)',
-    bottom: 'calc(74px + env(safe-area-inset-bottom))',
+    bottom: 'calc(4rem + 10px + env(safe-area-inset-bottom))',
     maxWidth: 'calc(100% - 32px)',
     width: 'max-content',
     zIndex: 120,
@@ -144,7 +143,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   }, [locale, pathname, ready]);
   useEffect(() => {
     if (!state.toast) return;
-    const timer = setTimeout(() => patchState({ toast: '' }), 3500);
+    const timer = setTimeout(() => notify(''), 3500);
     return () => clearTimeout(timer);
   }, [state.toast]);
   return (
@@ -158,18 +157,22 @@ export function AppShell({ children }: { children: ReactNode }) {
       <main id="main-content">{children}</main>
       {primary && (
         <nav aria-label={t('Main navigation')} {...stylex.props(s.nav)}>
-          {tabs.map(([href, label, icon]) => (
+          {tabs.map(([href, label, NavigationIcon]) => (
             <Link
               key={href}
               href={href === '/' ? showroomInventoryHref(state.filters, state.inventorySort) : href}
               prefetch={href === '/' ? false : undefined}
-              aria-label={t(label)}
-              title={t(label)}
               aria-current={pathname === href ? 'page' : undefined}
               {...stylex.props(s.tab, pathname === href && s.active)}
             >
-              <ShowroomNavIcon name={icon} />
-              {pathname === href && <span {...stylex.props(s.label)}>{t(label)}</span>}
+              <NavigationIcon
+                size={20}
+                strokeWidth={1.8}
+                aria-hidden="true"
+                focusable="false"
+                {...stylex.props(s.icon)}
+              />
+              <span {...stylex.props(s.label)}>{t(label)}</span>
             </Link>
           ))}
         </nav>

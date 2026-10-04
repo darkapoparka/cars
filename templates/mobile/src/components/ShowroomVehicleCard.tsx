@@ -72,12 +72,9 @@ const s = stylex.create({
     color: colors.muted,
     fontSize: 14,
     lineHeight: '20px',
-    whiteSpace: { default: 'nowrap', '@media (max-width: 699px)': 'normal' },
-    display: { default: 'block', '@media (max-width: 699px)': 'flex' },
+    display: 'flex',
     flexWrap: 'wrap',
-    columnGap: 6,
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
+    columnGap: 12,
   },
   price: { fontSize: 23, lineHeight: '30px', fontWeight: 700, marginTop: 4 },
   fact: { whiteSpace: 'nowrap' },
@@ -128,12 +125,8 @@ export function ShowroomVehicleCard({
           {displayVehicle.variant}
         </p>
         <p title={specs.join(' · ')} {...stylex.props(s.specs)}>
-          {compactSpecs.map((fact, index) => (
-            <span key={index} {...stylex.props(s.fact)}>
-              {index > 0 ? ' · ' : ''}
-              {fact}
-            </span>
-          ))}
+          <span {...stylex.props(s.fact)}>{compactSpecs.slice(0, 2).join(' · ')}</span>
+          <span {...stylex.props(s.fact)}>{compactSpecs.slice(2).join(' · ')}</span>
         </p>
         <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
       </div>

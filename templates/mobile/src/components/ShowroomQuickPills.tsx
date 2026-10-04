@@ -20,6 +20,7 @@ const s = stylex.create({
   backdrop: { backgroundColor: colors.background },
   flush: { paddingInline: 0, paddingTop: 0, paddingBottom: 0 },
   button: {
+    position: 'relative',
     display: 'inline-flex',
     alignItems: 'center',
     minHeight: 48,
@@ -44,7 +45,7 @@ const s = stylex.create({
     borderStyle: 'solid',
     borderColor: colors.line,
     borderRadius: 20,
-    backgroundColor: colors.controlSurface,
+    backgroundColor: colors.background,
     color: colors.muted,
     fontSize: 15,
     fontWeight: 500,
@@ -52,8 +53,9 @@ const s = stylex.create({
     whiteSpace: 'nowrap',
   },
   active: {
-    borderColor: colors.muted,
-    color: colors.text,
+    borderColor: colors.text,
+    backgroundColor: colors.text,
+    color: colors.background,
     fontWeight: 600,
   },
 });

@@ -95,6 +95,15 @@
   input[type='checkbox'] {
     accent-color: #db3000;
   }
+  /* Overlapping range inputs show keyboard focus on the active thumb. */
+  [data-range-track] input[type='range']:focus-visible::-webkit-slider-thumb {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  [data-range-track] input[type='range']:focus-visible::-moz-range-thumb {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
   @media (prefers-reduced-motion: reduce) {
     *,
     *::before,

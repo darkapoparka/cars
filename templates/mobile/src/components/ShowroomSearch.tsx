@@ -3,6 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { controls } from '@/styles/controls.stylex';
 import { Icon } from './Icon';
 
 const s = stylex.create({
@@ -47,8 +48,7 @@ const s = stylex.create({
     lineHeight: '24px',
     paddingBlock: 10,
     paddingRight: 12,
-    outlineColor: colors.accent,
-    outlineOffset: 3,
+    outlineWidth: 0,
     '::-webkit-search-cancel-button': { WebkitAppearance: 'none' },
     '::-webkit-search-decoration': { WebkitAppearance: 'none' },
   },
@@ -64,7 +64,9 @@ const s = stylex.create({
     borderRadius: 12,
     backgroundColor: 'transparent',
     color: colors.muted,
-    outlineColor: colors.accent,
+    outlineColor: colors.text,
+    outlineWidth: 2,
+    outlineOffset: -3,
   },
 });
 
@@ -114,7 +116,7 @@ export function ShowroomSearchField({
     return () => cancelAnimationFrame(frame);
   }, [autoFocus]);
   return (
-    <div {...stylex.props(s.search)}>
+    <div {...stylex.props(s.search, controls.fieldFocus)}>
       <Icon name="search" size={20} />
       <input
         ref={input}

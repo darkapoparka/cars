@@ -42,7 +42,9 @@ export const ui = stylex.create({
     backgroundColor: colors.controlSurface,
     color: colors.text,
     fontSize: 16,
-    outlineOffset: 3,
+    outlineColor: colors.text,
+    outlineWidth: 2,
+    outlineOffset: 2,
   },
   label: { display: 'flex', flexDirection: 'column', gap: 8, fontSize: 14, fontWeight: 500 },
   divider: { height: 1, backgroundColor: colors.line, borderWidth: 0, marginBlock: 16 },
@@ -447,6 +449,13 @@ export function Modal({
         picker && pickerHeight !== undefined && s.pickerHeight(pickerHeight),
       )}
       aria-label={t(label || title || 'Options')}
+      onKeyDown={(event) => {
+        // Search inputs consume native Escape to clear their value before a dialog can cancel.
+        if (event.key !== 'Escape' || event.nativeEvent.isComposing) return;
+        event.preventDefault();
+        event.stopPropagation();
+        onClose();
+      }}
       onCancel={(e) => {
         e.preventDefault();
         e.stopPropagation();

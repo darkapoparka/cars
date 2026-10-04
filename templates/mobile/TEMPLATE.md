@@ -14,16 +14,19 @@ The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & mo
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
-capped at 232px with at least 16px side gutters, 26px corners and a restrained
-shadow. At normal text size it is 52px tall. The three links sit in one row;
-the active destination expands to show its icon and label, while the other two
-remain icon buttons with explicit accessible names and title labels.
-Original Lucide icons from the retained `lucide-react` package render at 22px
-with a consistent 1.8px outline: a front-view car, a wrench and a phone.
-The active destination has a neutral dark fill and contrasting icon and text.
-The icon geometry and weight stay consistent. Links have at least 44px height,
+capped at 204px with at least 16px side gutters, 24px corners and a restrained
+shadow. At normal text size it is 48px tall. The three equal-width links retain
+their positions across routes and show a small icon above a persistent label.
+Visible localized text provides each link's accessible name; decorative SVGs
+are hidden from assistive technology. The active destination has a subtle
+neutral fill and stronger text color.
+Links have at least 44px height,
 retain their keyboard focus rings, and use `aria-current`.
-The active label uses 13px text beside its icon. The dock floats 10px
+The existing Lucide package supplies 20px car-front, service-grid and message
+glyphs with a consistent 1.8px stroke. Labels use 0.75rem text and may wrap
+when enlarged. The preceding cutout experiment remains archived locally,
+outside the runtime assets.
+The dock floats 10px
 above the bottom safe area; page clearance and toast offsets
 account for its height. Vehicle detail retains its own enquiry footer.
 The formerly used Phosphor source and MIT license remain under
@@ -34,13 +37,24 @@ sort and scroll position. The native make/model picker and range controls remain
 Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
-fields, filter pills and secondary actions. Tab rails inherit their owning page
-or sheet surface. No route adds its own neutral palette. The document background
+fields and secondary actions. Quick-filter pills use the white page token with
+a thin neutral border when inactive. Applied or selected pills invert the
+existing text/page tokens for a near-black fill and white text; their border
+matches the fill. Both states retain the same geometry and 48px targets.
+Tab rails use the same page
+or sheet surface token. No route adds its own neutral palette. The document background
 uses the same white page token, including outside the centered desktop frame.
 White service, vehicle and import cards, Contact panels and enquiry starters use
 the same 1px `colors.line` border. This keeps distinct groups visible on the white
 canvas without adding another background color or shadow. Existing corner radii
 and padding remain.
+
+Overlay text fields use a neutral 2px focus outline. Composite search and numeric
+fields outline their complete rounded container; their inner inputs have no
+separate outline. Range keyboard focus identifies the active thumb. Price, year
+and mileage cards are 64px tall at normal text size, retain 16px values and keep
+both bounds side by side at 320px. They stack when enlarged text needs more width.
+Orange remains the primary action, selected range and validation-error color.
 
 Home search and filter pills open one editor with the same underline tabs: Search,
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
@@ -100,7 +114,11 @@ Import and Sell starter headings use the same 18px size. The entry summary stays
 on one line and exposes its full value through an accessible description and
 tooltip. Native 48px entry targets and smaller Start faces are retained.
 
-Underline tabs keep 52px targets and use a wider 3px active rail. Home and filter
+Underline tabs use a raised white strip without a full-width border. The 12%
+shadow with a 4px drop and 8px blur provides elevation. The rail paints above
+following content so its shadow stays visible. Flush detail tabs remove the top
+margin and keep the same elevation.
+The 52px targets and 3px active underline remain. Home and filter
 editor tabs scroll horizontally at their own widths. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
@@ -136,9 +154,9 @@ switching filter tabs retains their keyboard navigation. Pill and tab focus
 rings use the showroom accent; the dock uses the neutral text color. All sit
 inside their targets. Toasts account for
 the phone's bottom safe area.
-Inventory cards keep a variant line and a year/mileage/fuel/transmission row.
-Mobile facts wrap naturally rather than clipping the transmission. Desktop keeps
-its original single-line facts. English Automatic is shortened to Auto in compact
+Inventory cards keep a variant line and two compact year/mileage and
+fuel/transmission pairs. Facts wrap as whole pairs on narrow cards, avoiding
+leading separators and clipped transmission labels. English Automatic is shortened to Auto in compact
 facts; full values remain in the detail page and the facts tooltip.
 
 Bulgarian is the default language. The mobile header's BG/EN control switches the
@@ -168,6 +186,18 @@ The imported marketplace screens and taxonomy remain reference source. Old
 `/search` and `/results` entry links resolve to Cars. Fixture data and local storage
 keep the template usable without a live dealer service. Contact saves local enquiry
 drafts and never claims to have sent an enquiry.
+
+Draft saves report actual storage success. If device storage is unavailable,
+Contact retains edits in the current session and explains that they were not
+persisted. Import/Sell confirms both its form and the Contact draft before
+showing a saved stage. Toasts are transient and do not trigger storage writes.
+Validation errors describe fields without changing their accessible names.
+Escape cancels filled search editors and returns focus; composition input is
+preserved. All specifications establishes its opener before displaying the dialog,
+so focus returns correctly in WebKit as well as Chromium. Active filter counters
+stay within the scrolling pill row.
+The favicon reuses the neutral car interface icon, rendered in dark ink on a
+white tile at 16, 32 and 48 pixels; native mask assets remain intact.
 
 Next.js 16, React, TypeScript and StyleX are preserved with the original dependency
 versions. Required fonts, native SVGs, vehicle photographs, data catalogs, domain
@@ -216,6 +246,8 @@ Preserve truthful demo responses. Example services require dealer confirmation.
 Run `npm run qa:showroom` against port 6474 after lint, typecheck, domain tests and
 the production build. This adaptation has its own browser checks; historical
 marketplace screenshot contracts do not establish showroom acceptance.
+Run `npm run qa:polish` for Bulgarian/English reflow, Escape, validation and
+storage-failure/retry regressions in Chromium and WebKit.
 
 The catalog registers a working library candidate. No dealer release is selected,
 and the existing dealer generator and default design sets remain as recorded.

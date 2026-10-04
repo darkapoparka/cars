@@ -359,8 +359,8 @@ export function ShowroomServiceRequest({
     const id = 'service-request-' + kind + '-' + key;
     const numeric = type === 'number';
     return (
-      <label htmlFor={id} {...stylex.props(ui.label, s.field, wide && s.wide)}>
-        {t(label)}
+      <div {...stylex.props(ui.label, s.field, wide && s.wide)}>
+        <label htmlFor={id}>{t(label)}</label>
         <input
           id={id}
           name={key}
@@ -395,7 +395,7 @@ export function ShowroomServiceRequest({
             {t(errors[key]!)}
           </span>
         )}
-      </label>
+      </div>
     );
   }
   const amount = (value: string) =>
@@ -531,9 +531,12 @@ export function ShowroomServiceRequest({
               setStatus('unavailable');
               return;
             }
-            saveMessageDraft('showroom-' + kind, serviceRequestMessage(kind, normalized, locale));
+            const persisted = saveMessageDraft(
+              'showroom-' + kind,
+              serviceRequestMessage(kind, normalized, locale),
+            );
             setEdited(normalized);
-            setStatus('saved');
+            setStatus(persisted ? 'saved' : 'unavailable');
           }}
         >
           <div ref={bodyRef} data-service-request-body {...stylex.props(s.body)}>
@@ -634,9 +637,12 @@ export function ShowroomServiceRequest({
                         </fieldset>
                         {field('mileage', t('Mileage (km)'), 'number')}
                         {field('price', t('Expected price (€) (optional)'), 'number', true)}
-                        <label {...stylex.props(ui.label, s.field, s.wide)}>
-                          {t('Condition (optional)')}
+                        <div {...stylex.props(ui.label, s.field, s.wide)}>
+                          <label htmlFor="service-request-sell-condition">
+                            {t('Condition (optional)')}
+                          </label>
                           <select
+                            id="service-request-sell-condition"
                             name="condition"
                             value={values.condition}
                             onChange={(event) => change('condition', event.target.value)}
@@ -660,7 +666,7 @@ export function ShowroomServiceRequest({
                               {t(errors.condition!)}
                             </span>
                           )}
-                        </label>
+                        </div>
                       </>
                     ))}
                   {step === 2 && (

@@ -1,0 +1,73 @@
+[
+  {
+    "route": "services",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "overflow": false,
+    "selected": "Огледи",
+    "targetHeight": 48,
+    "width": 390
+  },
+  {
+    "route": "services",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "overflow": false,
+    "selected": "Огледи",
+    "targetHeight": 48,
+    "width": 320
+  },
+  {
+    "route": "services",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "overflow": false,
+    "selected": "Огледи",
+    "targetHeight": 48,
+    "width": 1440
+  },
+  {
+    "route": "cars",
+    "locale": "bg",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "iconColor": "rgb(255, 255, 255)",
+    "label": "Цена · Филтри: До 55 000 €",
+    "overflow": false,
+    "targetHeight": 48,
+    "width": 1440
+  },
+  {
+    "route": "cars",
+    "locale": "bg",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "iconColor": "rgb(255, 255, 255)",
+    "label": "Цена · Филтри: До 55 000 €",
+    "overflow": false,
+    "targetHeight": 48,
+    "width": 390
+  },
+  {
+    "route": "cars",
+    "locale": "bg",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "iconColor": "rgb(255, 255, 255)",
+    "label": "Цена · Филтри: До 55 000 €",
+    "overflow": false,
+    "targetHeight": 48,
+    "width": 320
+  },
+  {
+    "route": "cars",
+    "locale": "en",
+    "color": "rgb(255, 255, 255)",
+    "fill": "rgb(27, 27, 33)",
+    "iconColor": "rgb(255, 255, 255)",
+    "label": "Price · Filters: Up to €55,000",
+    "overflow": false,
+    "targetHeight": 48,
+    "width": 320
+  }
+]

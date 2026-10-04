@@ -22,7 +22,7 @@ export const bgMessages: Record<string, string> = {
   motorhomes: 'кемпера',
   vehicle: 'автомобил',
   vehicles: 'автомобила',
-  'Search make or model': 'Търсене по марка или модел',
+  'Search make or model': 'Марка или модел',
   'Search and filters': 'Търсене и филтри',
   Search: 'Търсене',
   'Search…': 'Търсене…',
@@ -279,6 +279,8 @@ export const bgMessages: Record<string, string> = {
     'Можете да прегледате запитването в раздел Контакт.',
   'Saving is unavailable. Keep this sheet open to retain your details.':
     'Запазването е недостъпно. Оставете този прозорец отворен, за да запазите въведеното.',
+  'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.':
+    'Запазването е недостъпно. Черновата е налична само в тази сесия. Не е изпратена.',
   Enquiry: 'Запитване',
   Message: 'Съобщение',
   'Enquiry message': 'Текст на запитването',

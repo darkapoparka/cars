@@ -1,6 +1,12 @@
 import * as stylex from '@stylexjs/stylex';
 import { colors } from './tokens.stylex';
 export const controls = stylex.create({
+  fieldFocus: {
+    outlineColor: colors.text,
+    outlineWidth: 2,
+    outlineOffset: 2,
+    outlineStyle: { default: 'none', ':focus-within': 'solid' },
+  },
   radio: {
     appearance: 'none',
     width: 20,

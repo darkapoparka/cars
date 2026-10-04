@@ -2,8 +2,8 @@
 
 `navigation.ts` retains unmodified path data from the official Phosphor core
 SVG assets used by the former bottom bar. The adjacent `LICENSE` retains the
-MIT license. The floating dock now uses the installed `lucide-react` package
-through `ShowroomNavIcon.tsx`; these paths are preserved as source provenance.
+MIT license. The floating dock now uses Lucide glyphs and visible labels in
+AppShell; these previously explored icon paths are preserved as source provenance.
 
 Reviewed on 2 October 2026. Pinned upstream commit:
 `2b75f3ad12b420c9504ef05df8d2564a28f8500e`.

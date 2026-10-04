@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     'Browse cars, explore showroom services and contact the dealer. Showroom template with sample inventory.',
   robots: { index: false, follow: false },
   applicationName: 'Cars Mobile',
-  icons: { icon: '/icons/native-vector/car.svg' },
 };
 export const viewport: Viewport = {
   width: 'device-width',

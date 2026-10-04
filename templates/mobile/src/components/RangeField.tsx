@@ -3,6 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useRef, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { controls } from '@/styles/controls.stylex';
 const s = stylex.create({
   root: { minWidth: 0, paddingInline: 4 },
   head: {
@@ -37,6 +38,8 @@ const s = stylex.create({
     height: 56,
     appearance: 'none',
     backgroundColor: 'transparent',
+    color: colors.text,
+    outlineWidth: 0,
     pointerEvents: 'none',
     margin: 0,
     '::-webkit-slider-thumb': {
@@ -87,20 +90,20 @@ const s = stylex.create({
     backgroundColor: 'transparent',
     color: colors.text,
     fontSize: 14,
-    outlineOffset: 3,
+    outlineWidth: 0,
     '::-webkit-inner-spin-button': { appearance: 'none' },
   },
   unit: { fontSize: 14, flexShrink: 0 },
   comfortableRoot: { fontSize: 16 },
-  comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,10em),1fr))' },
+  comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
-    minHeight: 72,
+    minHeight: 64,
     borderRadius: 12,
     borderColor: colors.line,
     flexDirection: 'column',
     alignItems: 'stretch',
-    gap: 4,
-    padding: 12,
+    gap: 2,
+    paddingBlock: 8,
   },
   fieldLabel: { fontSize: 13, lineHeight: '18px', fontWeight: 500, color: colors.muted },
   valueRow: { display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 },
@@ -136,7 +139,7 @@ export function RangeField({
   const summary =
     !min && !max
       ? t('Any')
-      : `${min ? number(low) : t('Any')} – ${max ? number(high) : 'Any'}${unit ? ' ' + t(unit) : ''}`;
+      : `${min ? number(low) : t('Any')} – ${max ? number(high) : t('Any')}${unit ? ' ' + t(unit) : ''}`;
   const from = (value: string) => {
     if (value === '' || /^\d+$/.test(value))
       onChange(value, max && value && Number(value) > Number(max) ? value : max);
@@ -251,7 +254,7 @@ export function RangeField({
         />
       </div>
       <div {...stylex.props(s.inputs, comfortable && s.comfortableInputs)}>
-        <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
+        <label {...stylex.props(s.field, comfortable && s.comfortableField, controls.fieldFocus)}>
           {comfortable ? (
             <>
               <span {...stylex.props(s.fieldLabel)}>{t('From')}</span>
@@ -261,7 +264,7 @@ export function RangeField({
             numericInput('from')
           )}
         </label>
-        <label {...stylex.props(s.field, comfortable && s.comfortableField)}>
+        <label {...stylex.props(s.field, comfortable && s.comfortableField, controls.fieldFocus)}>
           {comfortable ? (
             <>
               <span {...stylex.props(s.fieldLabel)}>{t('To')}</span>

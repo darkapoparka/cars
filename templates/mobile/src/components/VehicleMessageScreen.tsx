@@ -184,8 +184,7 @@ export function VehicleMessageScreen({ vehicle: v }: { vehicle: Vehicle }) {
         id="vehicle-message-form"
         onSubmit={(event) => {
           event.preventDefault();
-          saveMessageDraft(v.id, message);
-          setSent(true);
+          setSent(saveMessageDraft(v.id, message));
         }}
         {...stylex.props(s.form)}
       >

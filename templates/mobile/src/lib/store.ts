@@ -31,16 +31,19 @@ export function syncStorage(event: StorageEvent) {
     emit();
   }
 }
-export function patchState(patch: Partial<State>) {
+export function patchState(patch: Partial<State>): boolean {
   // Child route effects may run before AppShell: hydrate before any first write.
   ensureHydrated();
   state = { ...state, ...patch };
+  let persisted = false;
   try {
     localStorage.setItem(key, JSON.stringify({ ...state, toast: '' }));
+    persisted = true;
   } catch {
     /* Storage can be unavailable in private browsing. */
   }
   emit();
+  return persisted;
 }
 function subscribe(listener: () => void) {
   listeners.add(listener);
@@ -96,15 +99,23 @@ export function markViewed(id: string) {
   if (state.viewed[0] !== id)
     patchState({ viewed: [id, ...state.viewed.filter((value) => value !== id)].slice(0, 20) });
 }
-export function saveMessageDraft(id: string, message: string) {
+export function saveMessageDraft(id: string, message: string): boolean {
   ensureHydrated();
-  patchState({
+  const persisted = patchState({
     messageDrafts: { ...state.messageDrafts, [id]: message.trim().slice(0, 4000) },
-    toast: 'Message saved as a local draft. Nothing was sent.',
   });
+  notify(
+    persisted
+      ? 'Message saved as a local draft. Nothing was sent.'
+      : 'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.',
+  );
+  return persisted;
 }
 export function notify(toast: string) {
-  patchState({ toast });
+  // Transient feedback does not need a storage write.
+  ensureHydrated();
+  state = { ...state, toast };
+  emit();
 }
 
 /** Remember the active image across gallery and detail navigation. */

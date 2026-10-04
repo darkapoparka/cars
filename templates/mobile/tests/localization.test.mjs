@@ -12,7 +12,7 @@ test('Bulgarian is the default; only Bulgarian and English are selectable', () =
   assert.equal(defaultLocale, 'bg');
   assert.ok(validLocale('bg') && validLocale('en'));
   for (const value of ['de', null, '', {}, 'BG']) assert.equal(validLocale(value), false);
-  assert.equal(translate('Search make or model', 'bg'), 'Търсене по марка или модел');
+  assert.equal(translate('Search make or model', 'bg'), 'Марка или модел');
   assert.equal(translate('Search make or model', 'en'), 'Search make or model');
   assert.equal(translate('BMW', 'bg'), 'BMW');
   assert.match(localeMoney(73937, 'bg'), /73\s937\s€/);

@@ -6,20 +6,19 @@ import { useLocale } from '@/lib/use-locale';
 
 const s = stylex.create({
   rail: {
+    position: 'relative',
+    zIndex: 1,
     display: 'flex',
     overflowX: 'auto',
     scrollbarWidth: 'none',
     minHeight: 52,
     marginTop: 8,
     paddingInline: 16,
-    backgroundColor: 'transparent',
-    borderBottomWidth: 1,
-    borderBottomStyle: 'solid',
-    borderBottomColor: colors.line,
-    boxShadow: '0 2px 3px #00000008',
+    backgroundColor: colors.background,
+    boxShadow: '0 4px 8px rgba(23, 32, 43, 0.12)',
   },
   fillRail: { paddingInline: 0, overflowX: 'visible' },
-  flushRail: { marginTop: 0, boxShadow: 'none' },
+  flushRail: { marginTop: 0 },
   tab: {
     position: 'relative',
     display: 'flex',

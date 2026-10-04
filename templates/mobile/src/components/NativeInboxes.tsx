@@ -98,7 +98,9 @@ export function NativeMessages() {
   );
 }
 export function NativeNotifications() {
-  useEffect(() => patchState({ readWelcome: true }), []);
+  useEffect(() => {
+    patchState({ readWelcome: true });
+  }, []);
   return (
     <>
       <Header title="Notifications" back="/">

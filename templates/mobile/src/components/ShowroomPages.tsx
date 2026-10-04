@@ -28,7 +28,7 @@ import {
   type ServiceTab,
   type ServiceQuickFilter,
 } from '@/lib/showroom-services';
-import { notify, saveMessageDraft, useAppState } from '@/lib/store';
+import { saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
 import { Icon } from './Icon';
 import { ShowroomTabs } from './ShowroomTabs';
@@ -65,10 +65,7 @@ const s = stylex.create({
   },
   serviceFlow: {
     display: 'grid',
-    gridTemplateColumns: {
-      default: 'minmax(0,1fr)',
-      '@media (min-width: 700px)': 'minmax(0,1fr)',
-    },
+    gridTemplateColumns: 'minmax(0,1fr)',
     alignItems: 'start',
     gap: 20,
     maxWidth: 1040,
@@ -330,6 +327,7 @@ const s = stylex.create({
   },
   form: { width: '100%', display: 'flex', flexDirection: 'column', gap: 12 },
   saved: { color: colors.green, fontSize: 14, lineHeight: '22px' },
+  saveUnavailable: { color: colors.text },
 });
 
 export function SavedCarsScreen() {
@@ -662,7 +660,7 @@ export function ShowroomContactScreen({
         : `Hello, I'd like to ask about ${service.title.toLowerCase()}.`
       : '';
   const [edited, setEdited] = useState<string | null>(null);
-  const [saved, setSaved] = useState(false);
+  const [saveStatus, setSaveStatus] = useState<'saved' | 'unavailable' | null>(null);
   const message = edited ?? messageDrafts[draftKey] ?? initial;
   return (
     <>
@@ -737,9 +735,7 @@ export function ShowroomContactScreen({
                   {...stylex.props(s.form)}
                   onSubmit={(event) => {
                     event.preventDefault();
-                    saveMessageDraft(draftKey, message);
-                    notify(t('Enquiry draft saved on this device. Nothing was sent.'));
-                    setSaved(true);
+                    setSaveStatus(saveMessageDraft(draftKey, message) ? 'saved' : 'unavailable');
                   }}
                 >
                   <label {...stylex.props(ui.label)}>
@@ -749,7 +745,7 @@ export function ShowroomContactScreen({
                       value={message}
                       onChange={(event) => {
                         setEdited(event.target.value);
-                        setSaved(false);
+                        setSaveStatus(null);
                       }}
                       placeholder={
                         vehicle
@@ -770,9 +766,16 @@ export function ShowroomContactScreen({
                       {t('Save enquiry draft')}
                     </span>
                   </button>
-                  {saved && (
-                    <p role="status" {...stylex.props(s.saved)}>
-                      {t('Draft saved on this device. Nothing was sent.')}
+                  {saveStatus && (
+                    <p
+                      role="status"
+                      {...stylex.props(s.saved, saveStatus === 'unavailable' && s.saveUnavailable)}
+                    >
+                      {t(
+                        saveStatus === 'saved'
+                          ? 'Draft saved on this device. Nothing was sent.'
+                          : 'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.',
+                      )}
                     </p>
                   )}
                 </form>

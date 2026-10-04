@@ -139,7 +139,9 @@ export function ResultsScreen({ query }: { query: string }) {
   const [saveOpen, setSaveOpen] = useState(false);
   const [about, setAbout] = useState(false);
   const results = sortVehicles(filterVehicles(vehicles, filters), sort);
-  useEffect(() => patchState({ filters }), [filters]);
+  useEffect(() => {
+    patchState({ filters });
+  }, [filters]);
   function change(patch: Partial<Filters>) {
     const next = { ...filters, ...patch };
     patchState({ filters: next });

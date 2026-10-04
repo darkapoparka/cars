@@ -75,40 +75,67 @@ const s = stylex.create({
     fontWeight: 500,
     color: '#fff',
   },
-  info: { paddingInline: 16, paddingTop: 16 },
-  purchaseHeading: {
-    display: { default: 'block', '@media (min-width: 360px) and (max-width: 699px)': 'flex' },
-    flexWrap: 'wrap',
-    alignItems: 'flex-start',
-    columnGap: 16,
-    rowGap: 8,
-    padding: { default: 0, '@media (max-width: 699px)': '16px 16px 0' },
+  overview: { display: 'contents' },
+  purchaseSummary: {
+    display: { default: 'contents', '@media (max-width: 699px)': 'grid' },
+    gridTemplateColumns: 'minmax(0,1fr) auto',
+    alignItems: 'baseline',
+    columnGap: 12,
+    rowGap: 2,
+    padding: { default: 0, '@media (max-width: 699px)': 16 },
   },
-  purchaseIdentity: {
-    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
-    paddingTop: { default: 16, '@media (max-width: 699px)': 0 },
-    flexBasis: 'max-content',
-    flexGrow: 1,
-    flexShrink: 1,
-    minWidth: 0,
+  info: { paddingInline: 16, paddingTop: 16 },
+  leaseInfo: {
+    display: { default: 'block', '@media (max-width: 699px)': 'flex' },
+    flexWrap: 'wrap',
+    alignItems: 'baseline',
+    columnGap: 8,
+    rowGap: 4,
+  },
+  purchaseInfo: {
+    display: { default: 'block', '@media (max-width: 699px)': 'contents' },
+  },
+  purchaseModel: { gridColumn: '1', gridRow: '1', minWidth: 0 },
+  purchaseVariant: { gridColumn: '1 / -1', gridRow: '3', minWidth: 0 },
+  purchaseOffer: {
+    display: { default: 'flex', '@media (max-width: 699px)': 'contents' },
+  },
+  purchaseControl: { gridColumn: '1 / -1' },
+  purchasePaymentTabs: { marginInline: { default: 16, '@media (max-width: 699px)': 0 } },
+  purchaseRating: {
+    gridColumn: '1',
+    gridRow: '2',
+    justifySelf: { default: 'end', '@media (max-width: 699px)': 'start' },
+    minHeight: { default: 44, '@media (max-width: 699px)': 24 },
+    marginLeft: { default: 'auto', '@media (max-width: 699px)': 0 },
+    paddingInline: { default: 6, '@media (max-width: 699px)': 0 },
+    paddingBlock: { default: 4, '@media (max-width: 699px)': 0 },
+    textAlign: 'left',
+  },
+  purchaseAmount: {
+    display: { default: 'contents', '@media (max-width: 699px)': 'flex' },
+    flexDirection: 'column',
+    alignItems: { default: 'stretch', '@media (max-width: 699px)': 'flex-end' },
+    justifyContent: 'flex-end',
+    gridColumn: '2',
+    gridRow: '1 / 3',
+    alignSelf: { default: 'auto', '@media (max-width: 699px)': 'start' },
+    flexShrink: 0,
     maxWidth: '100%',
   },
-  purchasePrice: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexShrink: 0,
-    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
-    marginLeft: { default: 0, '@media (min-width: 360px) and (max-width: 699px)': 'auto' },
-  },
   purchasePriceRow: {
-    flexDirection: { default: 'row', '@media (min-width: 360px) and (max-width: 699px)': 'column' },
-    alignItems: {
-      default: 'center',
-      '@media (min-width: 360px) and (max-width: 699px)': 'flex-end',
-    },
-    gap: { default: 8, '@media (min-width: 360px) and (max-width: 699px)': 0 },
-    marginTop: { default: 10, '@media (min-width: 360px) and (max-width: 699px)': 0 },
-    marginBottom: { default: 2, '@media (min-width: 360px) and (max-width: 699px)': 0 },
+    display: { default: 'flex', '@media (max-width: 699px)': 'contents' },
+  },
+  mobilePreviousPrice: {
+    display: { default: 'none', '@media (max-width: 699px)': 'block' },
+    marginTop: { default: 0, '@media (max-width: 699px)': 2 },
+  },
+  mobileOldPrice: {
+    fontSize: 12,
+    lineHeight: '18px',
+  },
+  desktopPreviousPrice: {
+    display: { default: 'flex', '@media (max-width: 699px)': 'none' },
   },
   offer: {
     backgroundColor: colors.background,
@@ -117,13 +144,22 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
   },
-  model: { fontSize: 24, fontWeight: 700, lineHeight: '30px', overflowWrap: 'anywhere' },
+  model: {
+    fontSize: 24,
+    fontWeight: 700,
+    lineHeight: '30px',
+    overflowWrap: 'anywhere',
+    flexShrink: 0,
+    maxWidth: '100%',
+  },
   variant: {
     fontSize: 14,
     lineHeight: '20px',
     color: colors.muted,
-    marginTop: 4,
+    marginTop: { default: 4, '@media (max-width: 699px)': 0 },
     overflowWrap: 'anywhere',
+    flexShrink: 0,
+    maxWidth: '100%',
   },
   price: { fontFamily: 'var(--font-base)', fontSize: 24, fontWeight: 700, lineHeight: '32px' },
   priceRow: {
@@ -135,7 +171,16 @@ const s = stylex.create({
     marginTop: 10,
     marginBottom: 2,
   },
-  priceNote: { fontSize: 12, lineHeight: '18px', color: colors.muted },
+  priceNote: { fontSize: 12, lineHeight: '18px', color: colors.muted, gridColumn: '1 / -1' },
+  mobileDeliveryNote: { display: { default: 'block', '@media (max-width: 699px)': 'none' } },
+  desktopPriceRating: { display: { default: 'contents', '@media (max-width: 699px)': 'none' } },
+  mobilePriceRating: {
+    display: { default: 'none', '@media (max-width: 699px)': 'block' },
+    fontSize: 13,
+    fontWeight: 500,
+    lineHeight: '20px',
+    color: colors.green,
+  },
   finance: {
     display: 'flex',
     alignItems: 'center',
@@ -171,7 +216,7 @@ const s = stylex.create({
     gap: 8,
     minHeight: 48,
     paddingBlock: 12,
-    paddingInline: 12,
+    paddingInline: { default: 12, '@media (max-width: 359px)': 8 },
     borderRadius: 12,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -346,16 +391,28 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
     }
   }
   const purchasePrice = (
-    <div {...stylex.props(s.priceRow, !v.leaseTerms && s.purchasePriceRow)}>
-      <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
+    <div {...stylex.props(s.priceRow, s.purchasePriceRow)}>
+      <div {...stylex.props(s.purchaseAmount)}>
+        <strong {...stylex.props(s.price)}>{money(v.price)}</strong>
+        {v.previousPrice && (
+          <p {...stylex.props(s.mobilePreviousPrice)}>
+            <del {...stylex.props(s.old, s.mobileOldPrice)}>{money(v.previousPrice)}</del>
+          </p>
+        )}
+      </div>
       <button
         type="button"
         aria-label={t('Price rating details')}
         aria-haspopup="dialog"
         onClick={() => setPriceInfo(true)}
-        {...stylex.props(s.ratingButton)}
+        {...stylex.props(s.ratingButton, s.purchaseRating)}
       >
-        <PriceRating veryGood={v.deal} detail />
+        <span {...stylex.props(s.desktopPriceRating)}>
+          <PriceRating veryGood={v.deal} detail />
+        </span>
+        <span {...stylex.props(s.mobilePriceRating)}>
+          {t(v.deal ? 'Very good price' : 'Good price')}
+        </span>
         <Icon name="info" size={14} />
       </button>
     </div>
@@ -434,18 +491,23 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
         showroomMode
         onReport={() => setReport(true)}
         overview={
-          <>
-            <div {...stylex.props(!v.leaseTerms && s.purchaseHeading)}>
-              <section {...stylex.props(s.info, !v.leaseTerms && s.purchaseIdentity)}>
-                <h1 {...stylex.props(s.model)}>
-                  {v.make} {v.model}
-                </h1>
-                <p {...stylex.props(s.variant)}>{v.variant}</p>
-              </section>
-              {!v.leaseTerms && <div {...stylex.props(s.purchasePrice)}>{purchasePrice}</div>}
-            </div>
+          <div {...stylex.props(s.overview, !leasing && s.purchaseSummary)}>
+            <section {...stylex.props(s.info, leasing ? s.leaseInfo : s.purchaseInfo)}>
+              <h1 {...stylex.props(s.model, !leasing && s.purchaseModel)}>
+                {v.make} {v.model}
+              </h1>
+              <p {...stylex.props(s.variant, !leasing && s.purchaseVariant)}>{v.variant}</p>
+            </section>
             {v.leaseTerms && (
-              <div {...stylex.props(s.paymentTabs)} role="group" aria-label={t('Payment type')}>
+              <div
+                {...stylex.props(
+                  s.paymentTabs,
+                  !leasing && s.purchaseControl,
+                  !leasing && s.purchasePaymentTabs,
+                )}
+                role="group"
+                aria-label={t('Payment type')}
+              >
                 <button
                   type="button"
                   aria-pressed={!leasing}
@@ -464,7 +526,10 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                 </button>
               </div>
             )}
-            <section aria-label={t('Vehicle price and contact')} {...stylex.props(s.offer)}>
+            <section
+              aria-label={t('Vehicle price and contact')}
+              {...stylex.props(s.offer, !leasing && s.purchaseOffer)}
+            >
               {leasing && v.leaseTerms ? (
                 <>
                   <div {...stylex.props(s.leasePrice)}>
@@ -487,14 +552,19 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                 </>
               ) : (
                 <>
-                  {v.leaseTerms && purchasePrice}
+                  {purchasePrice}
                   {v.previousPrice && (
-                    <p {...stylex.props(s.oldRow)}>
+                    <p {...stylex.props(s.oldRow, s.desktopPreviousPrice)}>
                       <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
                       <span {...stylex.props(s.discount)}>-{money(v.previousPrice - v.price)}</span>
                     </p>
                   )}
-                  <p {...stylex.props(s.priceNote)}>
+                  <p
+                    {...stylex.props(
+                      s.priceNote,
+                      v.priceNote === t('may include delivery costs') && s.mobileDeliveryNote,
+                    )}
+                  >
                     {v.priceNote ||
                       money(v.price / 1.19) +
                         (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
@@ -511,7 +581,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                     }
                     aria-haspopup="dialog"
                     onClick={() => setFinance(true)}
-                    {...stylex.props(s.finance)}
+                    {...stylex.props(s.finance, s.purchaseControl)}
                   >
                     <span {...stylex.props(s.financeAmount)}>
                       {t('from')}{' '}
@@ -525,7 +595,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                   </button>
                 </>
               )}
-              <div ref={actions} {...stylex.props(s.actions)}>
+              <div ref={actions} {...stylex.props(s.actions, !leasing && s.purchaseControl)}>
                 <button
                   type="button"
                   aria-haspopup="dialog"
@@ -545,7 +615,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                 </Link>
               </div>
             </section>
-          </>
+          </div>
         }
       />
       {(contactDock || section !== 'details') && (

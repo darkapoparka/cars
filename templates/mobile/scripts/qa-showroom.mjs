@@ -9,13 +9,11 @@ const output = path.resolve(
 );
 await mkdir(output, { recursive: true });
 const report = { at: new Date().toISOString(), base, checks: [], errors: [], captures: [] };
-const engines =
-  process.env.QA_ENGINE === 'chromium'
-    ? [['chromium', chromium]]
-    : [
-        ['chromium', chromium],
-        ['webkit', webkit],
-      ];
+const engines = [
+  ['chromium', chromium],
+  ['webkit', webkit],
+].filter(([name]) => !process.env.QA_ENGINE || process.env.QA_ENGINE === name);
+assert.ok(engines.length, 'QA_ENGINE must be chromium or webkit');
 
 async function run(name, engine) {
   const browser = await engine.launch({
@@ -28,16 +26,22 @@ async function run(name, engine) {
     hasTouch: true,
   });
   const page = await context.newPage();
+  let closing = false;
+  // This suite asserts English labels independently of the default Bulgarian preference.
+  await context.addInitScript(() => localStorage.setItem('cars-mobile-language', 'en'));
   page.setDefaultTimeout(12000);
   const pending = new Set();
-  page.on('request', (request) => pending.add(request));
+  page.on('request', (request) => {
+    // Speculative route prefetches are not a readiness condition for the active page.
+    if (request.headers()['next-router-prefetch'] !== '1') pending.add(request);
+  });
   page.on('requestfinished', (request) => pending.delete(request));
   page.on('requestfailed', (request) => pending.delete(request));
-  page.on('pageerror', (error) =>
-    report.errors.push({ engine: name, url: page.url(), message: error.message }),
-  );
+  page.on('pageerror', (error) => {
+    if (!closing) report.errors.push({ engine: name, url: page.url(), message: error.message });
+  });
   page.on('console', (message) => {
-    if (message.type() === 'error')
+    if (!closing && message.type() === 'error')
       report.errors.push({
         engine: name,
         url: page.url(),
@@ -47,9 +51,8 @@ async function run(name, engine) {
   });
   const check = (description) => report.checks.push({ engine: name, description });
   async function settle() {
-    // Let Next's visible-link prefetches finish before the harness replaces the document.
-    // WebKit can otherwise report cancelled same-origin fetches as access-control errors.
-    // Track requests directly: a cached SPA Back has no new document-load idle event.
+    // Settle active-page resources before replacing the document. A cached SPA Back
+    // has no new load event, and production prefetch streams may remain suspended.
     const deadline = Date.now() + 20000;
     let quietSince = null;
     while (Date.now() < deadline) {
@@ -67,7 +70,8 @@ async function run(name, engine) {
   async function go(route) {
     await settle();
     const response = await page.goto(base + route, { waitUntil: 'load', timeout: 30000 });
-    assert.equal(response.status(), 200, route);
+    if (response) assert.ok([200, 304].includes(response.status()), route + ' HTTP status');
+    else assert.equal(page.url(), new URL(route, base).href, route + ' same-document navigation');
     await page.locator('[data-hydrated="true"]').waitFor();
     await page.evaluate(() => document.fonts.ready);
   }
@@ -93,6 +97,17 @@ async function run(name, engine) {
   }
   async function selectedServiceTab(label) {
     await page.getByRole('tab', { name: label, exact: true, selected: true }).waitFor();
+  }
+  async function tabWithinDialog(key) {
+    await page.keyboard.press(key);
+    // Native dialogs can include one browser-chrome stop at a boundary. Background
+    // content stays inert; the next Tab must return to the open dialog.
+    if (await page.evaluate(() => document.activeElement === document.body))
+      await page.keyboard.press(key);
+    assert.equal(
+      await page.evaluate(() => Boolean(document.activeElement?.closest('dialog')?.open)),
+      true,
+    );
   }
   async function geometry(label) {
     const imageFailures = await page.locator('img').evaluateAll(async (images) => {
@@ -204,11 +219,7 @@ async function run(name, engine) {
         face: button.querySelector('[data-pill-surface]').getBoundingClientRect().height,
       })),
     );
-    assert(
-      quickPillSizes.every(
-        ({ target, face }) => target >= 48 && face >= 32 && face <= 36 && face < target,
-      ),
-    );
+    assert(quickPillSizes.every(({ target, face }) => target >= 48 && face >= 40 && face < target));
     assert.deepEqual(
       await page
         .getByRole('navigation', { name: 'Main navigation' })
@@ -217,7 +228,9 @@ async function run(name, engine) {
       ['Cars', 'Services', 'Contact'],
     );
     const navigation = page.getByRole('navigation', { name: 'Main navigation' });
-    assert.equal(await navigation.locator('svg[data-icon-family="lucide"]').count(), 3);
+    assert.equal(await navigation.locator('svg').count(), 3);
+    assert.equal(await navigation.locator('img').count(), 0);
+    assert.equal(await navigation.getByRole('img').count(), 0, 'Icons are decorative');
     assert.equal(
       await navigation
         .getByRole('link', { name: 'Cars', exact: true })
@@ -232,7 +245,7 @@ async function run(name, engine) {
       .boundingBox();
     assert.ok(firstPhoto.y < 340, 'A car is visible below the compact controls');
     check('Cars is Home; three navigation destinations; stock visible on entry');
-    const sortControl = page.getByRole('button', { name: 'Sort cars: Recommended', exact: true });
+    const sortControl = page.getByRole('button', { name: 'Sort · cars: Recommended', exact: true });
     assert.equal(await sortControl.innerText(), 'Sort');
     check('The default Sort action keeps the full current ordering in its accessible label');
     await capture('cars-390');
@@ -348,7 +361,9 @@ async function run(name, engine) {
     assert.equal(new URL(page.url()).searchParams.has('makes'), false);
     await page.getByRole('button', { name: 'View cars', exact: true }).click();
     await cars(1);
+    await page.getByRole('button', { name: 'Search make or model', exact: true }).click();
     await page.getByRole('button', { name: 'Clear search', exact: true }).click();
+    await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
     check(
       'Category-specific make/model and filter snapshots survive switching, reload and navigation; Reset keeps the category',
@@ -363,6 +378,7 @@ async function run(name, engine) {
       (await page.locator('#showroom-filter-count').textContent()).trim(),
       '1 active filter',
     );
+    await geometry('Active filter count stays inside the scrolling pill row');
     await page.locator('[data-quick-filter="more"]').click();
     await page.getByRole('tab', { name: 'Condition', exact: true }).click();
     await page.getByRole('checkbox', { name: 'Used', exact: true }).uncheck();
@@ -375,6 +391,11 @@ async function run(name, engine) {
     await page.getByRole('button', { name: 'Show 4 cars', exact: true }).click();
     await cars(4);
     await page.getByRole('button', { name: 'Clear filters', exact: true }).click();
+    // Clearing Used + New leaves the same four cars. Wait for the filter state,
+    // rather than an unchanged result count, before opening a new editor.
+    await page
+      .getByRole('button', { name: 'Clear filters', exact: true })
+      .waitFor({ state: 'hidden' });
     await cars(4);
     assert.equal(
       await page.locator('[data-quick-filter="more"]').getAttribute('aria-describedby'),
@@ -438,6 +459,7 @@ async function run(name, engine) {
     for (const key of ['price', 'year', 'fuel']) {
       await page.locator('[data-quick-filter="' + key + '"]').click();
       await page.keyboard.press('Escape');
+      await page.locator('dialog[open]').waitFor({ state: 'hidden' });
       assert.equal(await page.locator('dialog[open]').count(), 0);
       assert.equal(
         await page.evaluate(() => document.activeElement?.getAttribute('data-quick-filter')),
@@ -538,11 +560,11 @@ async function run(name, engine) {
       'Include/exclude switching clears the opposite scope and exclusions remain visible on Home',
     );
 
-    await page.getByRole('button', { name: /^Sort cars:/ }).click();
+    await page.getByRole('button', { name: /^Sort · cars:/ }).click();
     await page.getByRole('radio', { name: 'Price: low to high', exact: true }).click();
     assert.match(
       await page
-        .getByRole('button', { name: 'Sort cars: Price: low to high', exact: true })
+        .getByRole('button', { name: 'Sort · cars: Price: low to high', exact: true })
         .innerText(),
       /Price ↑/,
     );
@@ -789,6 +811,7 @@ async function run(name, engine) {
     check('Service buttons open the matching enquiry; unknown categories fall back safely');
     await page.getByRole('link', { name: 'View financing', exact: true }).click();
     await selectedServiceTab('All');
+    await page.getByRole('link', { name: 'Ask about financing', exact: true }).waitFor();
     assert.equal(await page.locator('[data-showroom-service]').count(), 1);
     assert.equal(await page.locator('[data-showroom-service] dt').count(), 3);
     assert.equal(new URL(page.url()).searchParams.get('tab'), 'financing');
@@ -840,10 +863,12 @@ async function run(name, engine) {
       .fill('Please check availability of replacement parts for my car.');
     await page.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
     await page.getByRole('link', { name: 'View service', exact: true }).click();
+    await page.getByRole('link', { name: 'Ask about parts', exact: true }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('tab'), 'parts');
     await page.getByRole('tab', { name: 'All', exact: true }).click();
     await page.getByRole('link', { name: 'View financing', exact: true }).click();
     await page.getByRole('link', { name: 'Ask about financing', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.equal(
       await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
       financingDraft,
@@ -865,9 +890,9 @@ async function run(name, engine) {
     await page.waitForFunction(() => document.activeElement?.getAttribute('name') === 'vin');
     await page.getByLabel('VIN (optional)', { exact: true }).fill('WBA12345678901234');
     await page.getByRole('button', { name: 'Continue', exact: true }).focus();
-    await page.keyboard.press('Tab');
+    await tabWithinDialog('Tab');
     assert.equal(await page.locator(':focus').getAttribute('aria-label'), 'Close enquiry');
-    await page.keyboard.press('Shift+Tab');
+    await tabWithinDialog('Shift+Tab');
     assert.equal(await page.locator(':focus').innerText(), 'Continue');
     assert.equal(new URL(page.url()).searchParams.get('request'), '1');
     assert.equal(
@@ -876,6 +901,8 @@ async function run(name, engine) {
     );
     await continueRequest();
     await page.getByText('Enter a make.', { exact: true }).waitFor();
+    // Validation focus follows the rendered error on the next animation frame.
+    await page.locator('input[name="make"]:focus').waitFor();
     assert.equal(await page.locator(':focus').getAttribute('name'), 'make');
     await page.getByLabel('Make', { exact: true }).fill('BMW');
     await page.getByLabel('Model', { exact: true }).fill('X3');
@@ -884,6 +911,7 @@ async function run(name, engine) {
     assert.equal(await page.getByLabel('Email (optional)', { exact: true }).count(), 0);
     await continueRequest();
     await page.getByText('Enter a budget greater than zero.', { exact: true }).waitFor();
+    await page.locator('input[name="budget"]:focus').waitFor();
     assert.equal(await page.locator(':focus').getAttribute('name'), 'budget');
     await page.getByLabel('Maximum budget (€)', { exact: true }).fill('35000');
     await page.getByRole('button', { name: 'Back', exact: true }).click();
@@ -918,6 +946,7 @@ async function run(name, engine) {
     await page.getByLabel('Email (optional)', { exact: true }).fill('invalid');
     await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
     await page.getByText('Enter a valid email address.', { exact: true }).waitFor();
+    await page.locator('input[name="email"]:focus').waitFor();
     assert.equal(await page.locator(':focus').getAttribute('name'), 'email');
     await page.getByLabel('Email (optional)', { exact: true }).fill('');
     await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
@@ -936,6 +965,7 @@ async function run(name, engine) {
     await continueRequest();
     await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
     await page.getByRole('link', { name: 'View enquiry draft', exact: true }).click();
+    await page.getByRole('textbox', { name: 'Enquiry message' }).waitFor();
     assert.equal(new URL(page.url()).searchParams.get('service'), 'import');
     assert.match(
       await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
@@ -1099,7 +1129,7 @@ async function run(name, engine) {
       () => document.activeElement?.getAttribute('aria-label') === 'Show more technical data',
     );
     await page.locator('[data-vehicle-contact-dock]').waitFor();
-    await page.getByRole('link', { name: 'Enquire about BMW X6', exact: true }).click();
+    await page.getByRole('link', { name: 'Enquire about this car: BMW X6', exact: true }).click();
     assert.match(
       await page.getByRole('textbox', { name: 'Enquiry message' }).inputValue(),
       /BMW X6/,
@@ -1110,6 +1140,7 @@ async function run(name, engine) {
     await go('/vehicle/bmw-x6#photos');
     await page.getByRole('tab', { name: 'Photos', exact: true, selected: true }).waitFor();
     await page.getByRole('link', { name: 'Vehicle image', exact: true }).click();
+    await page.waitForURL((url) => url.searchParams.get('returnSection') === 'photos');
     assert.equal(new URL(page.url()).searchParams.get('returnSection'), 'photos');
     await page.getByRole('link', { name: 'Go back', exact: true }).click();
     await page.getByRole('tabpanel', { name: 'Photos', exact: true }).waitFor();
@@ -1249,7 +1280,7 @@ async function run(name, engine) {
       }
       await page.setViewportSize({ width: 320, height: 480 });
       await go('/');
-      for (const label of ['More filters', 'Price filters', 'Sort cars: Recommended']) {
+      for (const label of ['More · Filters', 'Price · Filters', 'Sort · cars: Recommended']) {
         await page.getByRole('button', { name: label, exact: true }).click();
         const dialog = page.locator('dialog[open]');
         const box = await dialog.boundingBox();
@@ -1340,7 +1371,11 @@ async function run(name, engine) {
     console.log(
       name + ': ' + report.checks.filter((item) => item.engine === name).length + ' checks passed',
     );
+  } catch (error) {
+    await page.screenshot({ path: path.join(output, name + '-failure.png') });
+    throw error;
   } finally {
+    closing = true;
     await browser.close();
   }
 }

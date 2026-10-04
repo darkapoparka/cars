@@ -466,7 +466,10 @@ export function VehicleSections({
                 aria-expanded={technical}
                 aria-label={t('Show more technical data')}
                 aria-haspopup="dialog"
-                onClick={() => setTechnical(true)}
+                onClick={(event) => {
+                  event.currentTarget.focus({ preventScroll: true });
+                  setTechnical(true);
+                }}
                 {...stylex.props(s.more, showroomMode && s.showroomMore)}
               >
                 {showroomMode ? t('All specifications') : t('Show more')}
