@@ -166,7 +166,6 @@
 
     .dn-search-wrap :global(.dn-quick-search__trigger) {
       padding-block: var(--dn-space-2);
-      border-radius: var(--dn-radius);
     }
 
     .dn-search-wrap :global(.dn-quick-search__label-mobile) {
@@ -202,7 +201,7 @@
 
     .dn-search__import-field { position: relative; display: block; min-width: 0; }
     .dn-search__import-icon { position: absolute; z-index: 1; top: 0; bottom: 0; left: var(--dn-space-3); display: grid; place-items: center; color: var(--dn-entry-prominent-muted); pointer-events: none; }
-    .dn-search__import-field :global(.dn-entry-input) { padding-inline-start: calc(var(--dn-space-3) + 22px + var(--dn-space-2)); border-radius: var(--dn-radius); }
+    .dn-search__import-field :global(.dn-entry-input) { padding-inline-start: calc(var(--dn-space-3) + 22px + var(--dn-space-2)); }
 
     .dn-search__import-error {
       margin: 0;

@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6, strong, b { font-weight: var(--dn-weight-semibold); }
     box-shadow: none;
   }
   .dn-app-shell input.dn-entry-field--prominent::placeholder { color: var(--dn-entry-prominent-muted); opacity: 1; }
-  .dn-app-shell .dn-entry-card .dn-entry-field--prominent { --dn-entry-height: var(--dn-control-height-entry-mobile); }
+  .dn-app-shell .dn-entry-card .dn-entry-field--prominent { --dn-entry-height: var(--dn-control-height-entry-mobile); border-radius: var(--dn-pill); }
   @media (hover: hover) and (pointer: fine) {
     .dn-app-shell .dn-entry-field--prominent:hover { background: var(--dn-entry-hover-surface); }
   }
