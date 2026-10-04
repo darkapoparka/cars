@@ -1,0 +1,54 @@
+{
+  "body": {
+    "background": "rgba(0, 0, 0, 0)",
+    "color": "rgb(27, 27, 33)",
+    "height": 106,
+    "width": 341
+  },
+  "canvas": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(27, 27, 33)",
+    "height": 1390.5,
+    "width": 375
+  },
+  "card": {
+    "background": "rgb(255, 255, 255)",
+    "color": "rgb(27, 27, 33)",
+    "height": 318.125,
+    "width": 343
+  },
+  "facts": ["2025", "18 500 км", "Дизел", "286 к.с.", "Автоматик"],
+  "overflow": false,
+  "photo": {
+    "background": "rgb(230, 234, 240)",
+    "color": "rgb(27, 27, 33)",
+    "height": 198.125,
+    "width": 317
+  },
+  "pills": [
+    {
+      "background": "rgb(240, 242, 245)",
+      "color": "rgb(27, 27, 33)",
+      "height": 40,
+      "width": 144.109375
+    },
+    {
+      "background": "rgb(27, 27, 33)",
+      "color": "rgb(255, 255, 255)",
+      "height": 40,
+      "width": 86.578125
+    },
+    {
+      "background": "rgb(240, 242, 245)",
+      "color": "rgb(27, 27, 33)",
+      "height": 40,
+      "width": 87.234375
+    }
+  ],
+  "scrollY": 0,
+  "url": "http://127.0.0.1:6474/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}

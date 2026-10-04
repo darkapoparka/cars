@@ -41,13 +41,13 @@ sort and scroll position. The native make/model picker and range controls remain
 Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
-fields and secondary actions. Quick-filter pills use the white page token with
+fields and secondary actions. Quick-filter pills use the light control token with
 a thin neutral border when inactive. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
 matches the fill. Both states retain the same geometry and 48px targets.
 Tab rails use the same page
-or sheet surface token. No route adds its own neutral palette. The document background
-uses the same white page token, including outside the centered desktop frame.
+or sheet surface token. No route adds its own neutral palette. The centered desktop
+frame keeps the white page token, with the existing stripe token outside it.
 White service, vehicle and import cards, Contact panels and enquiry starters use
 the same 1px `colors.line` border. This keeps distinct groups visible on the white
 canvas without adding another background color or shadow. Existing corner radii
@@ -69,9 +69,11 @@ Compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
 Optional variants and exclusion live in a collapsed More options section.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
-12px body padding. Long vehicle names wrap within the card; inventory keeps its
-two subtext rows on desktop. Mobile facts wrap so mileage, fuel and transmission
-remain readable at 320px. Photo save actions use the same outline-heart family
+12px body padding. Inventory photos sit inside a 12px white frame with 10px
+inner corners. The title and price share a wrapping row; the trim stays below,
+followed by compact year, mileage, fuel, power and transmission badges. Long
+vehicle names and the factual badges wrap within the card at 320px.
+Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
 
 Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.

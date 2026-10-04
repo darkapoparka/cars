@@ -220,7 +220,27 @@ async function run(name, engine) {
       .last()
       .locator('span')
       .allTextContents();
-    assert.deepEqual(facts, ['2025 · 18 500 км', 'Дизел · Автоматик']);
+    assert.deepEqual(facts, ['2025', '18 500 км', 'Дизел', '286 к.с.', 'Автоматик']);
+    assert.equal(
+      await page
+        .locator('[data-showroom-vehicle]')
+        .first()
+        .locator('p[title]')
+        .last()
+        .evaluate((element) => {
+          const bounds = element.getBoundingClientRect();
+          return [...element.children].every((fact) => {
+            const rect = fact.getBoundingClientRect();
+            return (
+              rect.left >= bounds.left &&
+              rect.right <= bounds.right &&
+              fact.scrollWidth <= fact.clientWidth
+            );
+          });
+        }),
+      true,
+      'Every factual badge stays readable inside the narrow card',
+    );
     const search = page.getByRole('button', { name: 'Марка или модел', exact: true });
     assert.equal(
       await search

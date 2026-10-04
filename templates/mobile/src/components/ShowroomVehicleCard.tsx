@@ -21,7 +21,15 @@ const s = stylex.create({
     borderRadius: 16,
     overflow: 'hidden',
   },
-  photo: { position: 'relative', aspectRatio: '16 / 10', backgroundColor: colors.surface },
+  photo: {
+    position: 'relative',
+    aspectRatio: '16 / 10',
+    margin: 12,
+    marginBottom: 0,
+    borderRadius: 10,
+    overflow: 'hidden',
+    backgroundColor: colors.surface,
+  },
   link: {
     textDecoration: 'none',
     '::after': { content: '""', position: 'absolute', inset: 0, borderRadius: 16 },
@@ -44,7 +52,7 @@ const s = stylex.create({
     borderRadius: 24,
     backgroundColor: 'transparent',
     color: colors.text,
-    outlineColor: colors.accent,
+    outlineColor: colors.text,
     outlineOffset: -2,
     opacity: { default: 1, ':active': 0.75 },
   },
@@ -58,8 +66,24 @@ const s = stylex.create({
     borderRadius: 18,
     backgroundColor: colors.background,
   },
-  body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 3 },
-  title: { fontSize: 18, lineHeight: '24px', fontWeight: 700, overflowWrap: 'anywhere' },
+  body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 6 },
+  heading: {
+    display: 'flex',
+    alignItems: 'baseline',
+    justifyContent: 'space-between',
+    flexWrap: 'wrap',
+    columnGap: 12,
+    rowGap: 4,
+  },
+  title: {
+    minWidth: 0,
+    flexGrow: 1,
+    flexBasis: 120,
+    fontSize: 18,
+    lineHeight: '24px',
+    fontWeight: 700,
+    overflowWrap: 'anywhere',
+  },
   variant: {
     color: colors.muted,
     fontSize: 14,
@@ -69,15 +93,28 @@ const s = stylex.create({
     textOverflow: 'ellipsis',
   },
   specs: {
-    color: colors.muted,
-    fontSize: 14,
-    lineHeight: '20px',
     display: 'flex',
     flexWrap: 'wrap',
-    columnGap: 12,
+    gap: 4,
+    marginTop: 2,
   },
-  price: { fontSize: 23, lineHeight: '30px', fontWeight: 700, marginTop: 4 },
-  fact: { whiteSpace: 'nowrap' },
+  price: {
+    fontSize: 20,
+    lineHeight: '26px',
+    fontWeight: 700,
+    fontVariantNumeric: 'tabular-nums',
+    whiteSpace: 'nowrap',
+  },
+  fact: {
+    paddingInline: 6,
+    paddingBlock: 2,
+    borderRadius: 4,
+    backgroundColor: colors.controlSurface,
+    color: colors.muted,
+    fontSize: 12,
+    lineHeight: '18px',
+    whiteSpace: 'nowrap',
+  },
 });
 
 export function ShowroomVehicleCard({
@@ -97,11 +134,8 @@ export function ShowroomVehicleCard({
     String(vehicle.year),
     number(vehicle.mileage) + ' ' + t('km'),
     t(vehicle.fuel),
+    number(vehicle.power) + ' ' + t('hp'),
     t(vehicle.transmission),
-  ];
-  const compactSpecs = [
-    ...specs.slice(0, 3),
-    t(vehicle.transmission === 'Automatic' ? 'Auto' : vehicle.transmission),
   ];
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
@@ -111,48 +145,57 @@ export function ShowroomVehicleCard({
           alt={name}
           fill
           priority={priority}
-          sizes="(max-width: 699px) calc(100vw - 32px), 520px"
+          sizes="(max-width: 699px) calc(100vw - 56px), 520px"
           {...stylex.props(s.image)}
         />
+        <span {...stylex.props(s.save)}>
+          <button
+            type="button"
+            aria-label={
+              (locale === 'bg' ? (saved ? 'Премахни ' : 'Запази ') : saved ? 'Remove ' : 'Save ') +
+              name +
+              (saved ? (locale === 'bg' ? ' от запазените' : ' from saved cars') : '')
+            }
+            aria-pressed={saved}
+            onClick={() => togglePark(vehicle.id)}
+            {...stylex.props(s.saveButton, saved && s.savedButton)}
+          >
+            <span {...stylex.props(s.saveFace)}>
+              <Heart
+                size={22}
+                strokeWidth={1.8}
+                fill={saved ? 'currentColor' : 'none'}
+                aria-hidden="true"
+                focusable="false"
+              />
+            </span>
+          </button>
+        </span>
       </div>
       <div {...stylex.props(s.body)}>
-        <h2 {...stylex.props(s.title)}>
-          <Link href={href} onClick={() => rememberInventory(vehicle.id)} {...stylex.props(s.link)}>
-            {name}
-          </Link>
-        </h2>
+        <div {...stylex.props(s.heading)}>
+          <h2 {...stylex.props(s.title)}>
+            <Link
+              href={href}
+              onClick={() => rememberInventory(vehicle.id)}
+              {...stylex.props(s.link)}
+            >
+              {name}
+            </Link>
+          </h2>
+          <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
+        </div>
         <p title={displayVehicle.variant} {...stylex.props(s.variant)}>
           {displayVehicle.variant}
         </p>
         <p title={specs.join(' · ')} {...stylex.props(s.specs)}>
-          <span {...stylex.props(s.fact)}>{compactSpecs.slice(0, 2).join(' · ')}</span>
-          <span {...stylex.props(s.fact)}>{compactSpecs.slice(2).join(' · ')}</span>
+          {specs.map((fact) => (
+            <span key={fact} {...stylex.props(s.fact)}>
+              {fact}
+            </span>
+          ))}
         </p>
-        <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
       </div>
-      <span {...stylex.props(s.save)}>
-        <button
-          type="button"
-          aria-label={
-            (locale === 'bg' ? (saved ? 'Премахни ' : 'Запази ') : saved ? 'Remove ' : 'Save ') +
-            name +
-            (saved ? (locale === 'bg' ? ' от запазените' : ' from saved cars') : '')
-          }
-          aria-pressed={saved}
-          onClick={() => togglePark(vehicle.id)}
-          {...stylex.props(s.saveButton, saved && s.savedButton)}
-        >
-          <span {...stylex.props(s.saveFace)}>
-            <Heart
-              size={22}
-              strokeWidth={1.8}
-              fill={saved ? 'currentColor' : 'none'}
-              aria-hidden="true"
-              focusable="false"
-            />
-          </span>
-        </button>
-      </span>
     </article>
   );
 }
