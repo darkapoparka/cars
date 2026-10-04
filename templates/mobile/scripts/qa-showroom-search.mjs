@@ -28,6 +28,8 @@ for (const [engineName, engine] of engines) {
         back: bg ? 'Назад: Марки' : 'Back: Makes',
         modelSearch: bg ? 'Търсене на модел' : 'Search models',
         makeSearch: bg ? 'Търсене на марка' : 'Search makes',
+        makesHeading: bg ? 'Марки' : 'Makes',
+        modelsHeading: bg ? 'BMW · Модели' : 'BMW · Models',
         allMakes: bg ? 'Всички марки' : 'Any make',
         anyModel: bg ? 'Всички модели' : 'Any model',
         expandSeries: bg ? 'Разгъни 1 серия' : 'Expand 1 Series',
@@ -96,10 +98,22 @@ for (const [engineName, engine] of engines) {
             assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 0);
             assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
+            await page.getByRole('heading', { name: labels.makesHeading, exact: true }).waitFor();
             assert.equal(
-              await allMakes.evaluate((element) => getComputedStyle(element).borderRadius),
-              '12px',
+              await page.getByRole('button', { name: labels.back, exact: true }).count(),
+              0,
             );
+            assert.equal(await page.getByRole('button', { name: /^(Модел|Model):/ }).count(), 0);
+            assert.equal(
+              await allMakes.evaluate((element) => getComputedStyle(element).backgroundColor),
+              'rgba(0, 0, 0, 0)',
+            );
+            const allMakesCircleX = await allMakes
+              .locator(':scope > span:last-child')
+              .evaluate((element) => {
+                const box = element.getBoundingClientRect();
+                return box.left + box.width / 2;
+              });
             assert.equal(
               await allMakes
                 .locator(':scope > span:last-child')
@@ -110,6 +124,30 @@ for (const [engineName, engine] of engines) {
             await bmw.click({ position: { x: 2, y: 28 } });
             const allModels = page.getByRole('checkbox', { name: labels.allBmw, exact: true });
             await allModels.waitFor();
+            await page.getByRole('heading', { name: labels.modelsHeading, exact: true }).waitFor();
+            assert.equal(
+              await page.getByRole('button', { name: labels.back, exact: true }).isVisible(),
+              true,
+            );
+            assert.equal(
+              await allModels.evaluate(
+                (element) => getComputedStyle(element.closest('label')).backgroundColor,
+              ),
+              'rgba(0, 0, 0, 0)',
+            );
+            assert.equal(
+              await allModels.evaluate((element) => {
+                const box = element.getBoundingClientRect();
+                return box.left + box.width / 2;
+              }),
+              allMakesCircleX,
+            );
+            assert.equal(
+              await page
+                .getByRole('textbox', { name: labels.modelSearch, exact: true })
+                .getAttribute('placeholder'),
+              labels.modelSearch,
+            );
             assert.equal(await allModels.isChecked(), true);
             assert.equal(
               await allModels.evaluate((element) => getComputedStyle(element).borderRadius),
@@ -190,6 +228,12 @@ for (const [engineName, engine] of engines) {
             assert.equal(await series.isChecked(), false);
             await page.getByRole('button', { name: labels.back, exact: true }).click();
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
+            assert.equal(
+              await allMakes
+                .locator(':scope > span:last-child')
+                .evaluate((element) => getComputedStyle(element).backgroundColor),
+              'rgba(0, 0, 0, 0)',
+            );
             // The reset preset clears brand/model criteria, including taps on its padding.
             await allMakes.click({ position: { x: 2, y: 24 } });
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
@@ -228,7 +272,7 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search draft/apply, compact brand reset, disclosure arrows beside family names, aligned model names, full-row taps, mixed selection and brand back navigation'
+                ? 'Search draft/apply, white reset rows with aligned selection circles, heading/back navigation without selector pills, disclosure arrows beside family names, full-row taps and mixed selection'
                 : 'Desktop search draft/apply, square checkboxes and trailing disclosure arrows',
           });
         } finally {

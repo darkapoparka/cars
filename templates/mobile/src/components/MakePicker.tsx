@@ -392,11 +392,7 @@ export function MakePicker({
           ref={searchRef}
           aria-label={modelsVisible ? t('Search models') : t('Search makes')}
           placeholder={
-            embedded
-              ? modelsVisible
-                ? t('Search models') + ' · ' + make
-                : t('Search makes')
-              : t('Search…')
+            embedded ? (modelsVisible ? t('Search models') : t('Search makes')) : t('Search…')
           }
           autoComplete="off"
           value={query}
@@ -427,7 +423,11 @@ export function MakePicker({
           id={embedded ? 'showroom-make-model-options' : make ? undefined : 'car-make-list'}
           ref={listRef}
           data-picker-scroll={modelsVisible ? 'models' : 'makes'}
-          {...stylex.props(s.list, !modelsVisible && s.makeList, embedded && s.embeddedList)}
+          {...stylex.props(
+            s.list,
+            !embedded && !modelsVisible && s.makeList,
+            embedded && s.embeddedList,
+          )}
         >
           {modelsVisible ? (
             embedded ? (
@@ -503,6 +503,8 @@ export function MakePicker({
                           (selection) => selection.name === name && selection.excluded === exclude,
                         ) || selectedMakes.find((selection) => selection.name === name)
                       : undefined;
+                    const isSelected =
+                      Boolean(selected) || (name === 'Any' && !selectedMakes.length);
                     const option = (
                       <button
                         type="button"
@@ -545,13 +547,16 @@ export function MakePicker({
                           )}
                         </span>
                         {embedded &&
-                          (selected || (name === 'Any' && !selectedMakes.length) ? (
-                            <span aria-hidden="true" {...stylex.props(s.selectedMark)}>
-                              <Icon name="check" size={14} />
+                          (selected || name === 'Any' ? (
+                            <span
+                              aria-hidden="true"
+                              {...stylex.props(s.selectionMark, isSelected && s.selectedMark)}
+                            >
+                              {isSelected && <Icon name="check" size={14} />}
                             </span>
-                          ) : name !== 'Any' ? (
+                          ) : (
                             <Icon name="right" size={18} />
-                          ) : null)}
+                          ))}
                       </button>
                     );
                     return embedded ? (

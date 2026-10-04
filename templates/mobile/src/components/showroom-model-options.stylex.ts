@@ -42,12 +42,7 @@ export const modelOptionStyles = stylex.create({
       ':active': colors.controlSurface,
     },
   },
-  allChoice: {
-    paddingLeft: 12,
-    marginBottom: 8,
-    borderRadius: 12,
-    backgroundColor: { default: colors.stripe, ':active': colors.controlSurface },
-  },
+  allChoice: { marginBottom: 8 },
   childChoice: {
     paddingLeft: 24,
     fontWeight: 400,
