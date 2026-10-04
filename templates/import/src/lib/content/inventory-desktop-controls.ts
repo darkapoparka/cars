@@ -15,7 +15,7 @@ type InventoryDesktopControlsCopy = {
 
 export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopControlsCopy> = {
 	bg: {
-		searchPlaceholder: 'Ключова дума, екстри...',
+		searchPlaceholder: 'Търси автомобил…',
 		typeLabel: 'Тип',
 		typeNavigation: 'Тип автомобил',
 		allTypes: 'Всички',
@@ -27,7 +27,7 @@ export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopContro
 		hideFilterPanel: 'Скрий панела с филтри'
 	},
 	en: {
-		searchPlaceholder: 'Keyword, features...',
+		searchPlaceholder: 'Search cars…',
 		typeLabel: 'Type',
 		typeNavigation: 'Vehicle type',
 		allTypes: 'All cars',

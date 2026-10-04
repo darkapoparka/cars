@@ -44,22 +44,24 @@
 <style>
 	.inventory-types {
 		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
 		gap: var(--bc-space-2);
-		border-bottom: 1px solid var(--bc-border);
+		min-width: 0;
 	}
 	a {
-		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: var(--bc-space-3);
-		flex: 1;
+		gap: var(--bc-space-2);
 		min-width: 0;
-		min-height: 64px;
-		padding: var(--bc-space-2) var(--bc-space-3) var(--bc-space-4);
-		border-radius: var(--bc-desktop-control-radius) var(--bc-desktop-control-radius) 0 0;
+		min-height: var(--bc-control-height-standard);
+		padding: var(--bc-space-1) var(--bc-space-3);
+		border: 1px solid var(--bc-border-strong);
+		border-radius: var(--bc-radius-pill);
+		background: var(--bc-surface-raised);
 		color: var(--bc-copy);
-		font-size: var(--bc-text-search);
+		font-size: var(--bc-text-label);
 		font-weight: var(--bc-weight-control);
 		text-decoration: none;
 	}
@@ -68,20 +70,15 @@
 		color: var(--bc-ink);
 	}
 	a[aria-current='page'] {
+		border-color: var(--bc-ink);
+		background: var(--bc-surface-hover);
 		color: var(--bc-ink);
-	}
-	a[aria-current='page']::after {
-		content: '';
-		position: absolute;
-		inset: auto var(--bc-space-3) -1px;
-		height: 2px;
-		background: var(--bc-ink);
 	}
 	picture,
 	img {
 		display: block;
-		width: 64px;
-		height: 48px;
+		width: 40px;
+		height: 28px;
 		flex: none;
 		object-fit: contain;
 	}
@@ -89,17 +86,5 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
-	@media (max-width: 1023px) {
-		a {
-			gap: var(--bc-space-2);
-			padding-inline: var(--bc-space-2);
-			font-size: var(--bc-text-label);
-		}
-		picture,
-		img {
-			width: 48px;
-			height: 40px;
-		}
 	}
 </style>

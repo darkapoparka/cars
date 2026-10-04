@@ -12,6 +12,7 @@
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
 	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
+	import InventorySearch from './InventorySearch.svelte';
 	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
@@ -66,10 +67,11 @@
 		>
 			{#snippet desktopActions()}
 				<DesktopDiscoveryPanel class="inventory-discovery">
-					{#snippet header()}
-						{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
-					{/snippet}
 					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
+					<div class="inventory-discovery__secondary">
+						{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
+						<InventorySearch {english} />
+					</div>
 				</DesktopDiscoveryPanel>
 			{/snippet}
 		</PageIntro>
@@ -127,6 +129,13 @@
 </main>
 
 <style>
+	.inventory-discovery__secondary {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: var(--bc-space-3) var(--bc-space-4);
+		min-width: 0;
+	}
 	.inventory-results__layout,
 	.inventory-results__content {
 		min-width: 0;
