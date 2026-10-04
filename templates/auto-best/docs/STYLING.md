@@ -49,21 +49,23 @@ Home and Inventory use the same search-panel bounds, padding and
 radius. Desktop facets retain the 44px control target and the shared
 prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
-Inventory's desktop facet buttons open a compact 440px dialog for that field.
-`DesktopFilterPicker.svelte` supplies its search input and 44px selection rows,
-with a check mark for the current choice. Make/Model include available-result
-counts; Model scopes its choices to the opening Make. Search reserves the
-field's list height so typing does not move the header or Apply action. Arrow
-keys move from search into the native radio choices; Enter selects a match.
-Budget/year use paired number inputs; mileage offers an input and preset limits.
-Apply on the page updates the filtered URL, preserving the other applied fields.
-The larger search menu retains its field grid and multi-select equipment.
-Its field buttons open the same compact dialog above the overview. Apply keeps
-that edit in the menu's pending draft; Escape, outside click and Close cancel
-only that edit and restore focus to its field. The overview stays in place and
-its result action applies the complete draft. The compact dialog has one field
-title and no navigation tabs. Home and widths below 992px keep their existing
-native facets and mobile sheets.
+Inventory's seven desktop shortcuts and search/filter buttons open one 680px
+search dialog, owned by `DesktopVehicleSearch.svelte`. Its unboxed search
+header finds makes, models and filter values directly. The overview exposes
+all twelve filters as two columns of plain command rows. A shortcut opens the
+same window scoped to its field, with a left Back control and one visible field
+title. Selected filters form editable/removable tokens; Add filter returns to
+the overview without discarding the draft. There are no nested desktop dialogs.
+Bits UI supplies the Command keyboard behavior and Dialog focus/scroll handling.
+The window has a fixed top anchor and reserves each field's result height while
+searching. Make and Model remain single choices; equipment supports multiple
+choices. Model respects the opening make and a uniquely owned model can infer
+its make. Changing make clears an incompatible model. Budget/year use paired
+number inputs; mileage has an input and presets. Invalid ranges block Show cars.
+Show cars applies the complete draft to the existing GET URL, retaining sort;
+Escape, Close and outside click discard it and restore the opener's focus.
+The sticky opener hides while the dialog is open and returns at the same scroll
+position. Home and widths below 992px retain their native facets/mobile sheets.
 Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
 across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop

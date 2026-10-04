@@ -60,7 +60,7 @@
   };
   $effect(() => {
     if (!stickyBar) return;
-    if (pinned) stickyBar.showPopover();
+    if (pinned && !filtersOpen) stickyBar.showPopover();
     else stickyBar.hidePopover();
   });
   let models = $derived(listingModelsForMake(make));
@@ -111,7 +111,7 @@
   {#if modalFacets && modalReady}
     <div class="dn-discovery__facet-buttons">
       {#each facetFields as field, index (field)}
-        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-desktop-picker-dialog" onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
+        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
       {/each}
     </div>
   {/if}
@@ -182,7 +182,7 @@
   @media (min-width: 992px) {
     .dn-discovery__facets--fallback { display: none; }
     .dn-discovery__facet-buttons { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .dn-discovery__facet-buttons button { display: flex; min-width: 0; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-control-prominent); text-align: left; cursor: pointer; }
+    .dn-discovery__facet-buttons button { display: flex; min-width: 0; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); text-align: left; cursor: pointer; }
     .dn-discovery__facet-buttons span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .dn-discovery__facet-buttons :global(svg) { flex: 0 0 16px; color: var(--dn-muted); }
     .dn-discovery__facet-buttons button:hover { background: var(--dn-surface-hover); }

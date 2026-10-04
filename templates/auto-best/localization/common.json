@@ -1,4 +1,60 @@
 {
+  "inventory.search.placeholder": {
+    "en": "Search makes, models or filters…",
+    "bg": "Търси марка, модел или филтър…"
+  },
+  "inventory.search.within": {
+    "en": "Search…",
+    "bg": "Търси…"
+  },
+  "inventory.search.addFilter": {
+    "en": "Add filter",
+    "bg": "Добави филтър"
+  },
+  "inventory.search.clearQuery": {
+    "en": "Clear search",
+    "bg": "Изчисти търсенето"
+  },
+  "inventory.search.empty": {
+    "en": "No matches found",
+    "bg": "Няма съвпадения"
+  },
+  "inventory.search.matches": {
+    "en": "Matches",
+    "bg": "Съвпадения"
+  },
+  "inventory.search.keyword": {
+    "en": "Search for “{query}”",
+    "bg": "Търси „{query}“"
+  },
+  "inventory.search.keywordLabel": {
+    "en": "Keyword",
+    "bg": "Ключова дума"
+  },
+  "inventory.search.navigate": {
+    "en": "Navigate",
+    "bg": "Навигация"
+  },
+  "inventory.search.select": {
+    "en": "Select",
+    "bg": "Избери"
+  },
+  "inventory.search.any": {
+    "en": "Any",
+    "bg": "Без ограничение"
+  },
+  "inventory.search.upTo": {
+    "en": "Up to {value} {currency}",
+    "bg": "До {value} {currency}"
+  },
+  "inventory.search.fromYear": {
+    "en": "From {year}",
+    "bg": "От {year}"
+  },
+  "inventory.search.kilometres": {
+    "en": "km",
+    "bg": "км"
+  },
   "label.map": {
     "en": "Map",
     "bg": "Карта"

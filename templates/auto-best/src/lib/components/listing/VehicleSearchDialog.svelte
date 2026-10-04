@@ -7,8 +7,7 @@
   const i18n = getI18n();
 
   import { preserveScrollOffset } from '$lib/ui/overlay';
-  import { onDestroy, tick, type Snippet } from 'svelte';
-  import { formatPrice } from '$lib/locale/core';
+  import { onDestroy, onMount, type Snippet } from 'svelte';
   import { resolve } from '$app/paths';
   import {
     bodyLabel,
@@ -34,7 +33,7 @@
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
-  import DesktopFilterPicker from './DesktopFilterPicker.svelte';
+  import DesktopVehicleSearch from './DesktopVehicleSearch.svelte';
   import type { Attachment } from 'svelte/attachments';
 
   let { filters, children, desktopPickers = false }: { filters: ListingFilters; desktopPickers?: boolean; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
@@ -53,34 +52,25 @@
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
   let activeChoice = $state<string>();
-  type DesktopField = Exclude<ListingFacetField, 'sort'>;
-  let desktopChoice = $state<DesktopField>();
   let desktopMatches = $state(false);
   const desktopMode = $derived(desktopPickers && desktopMatches);
-  let desktopPickerDialog = $state<HTMLDialogElement>();
-  let filterForm = $state<HTMLFormElement>();
-  let pickerTrigger: HTMLButtonElement | undefined;
-  let pickerFocusField = '';
-  let pickerSnapshot: ListingDraft | undefined;
-  let pickerFromOverview = false;
-  let returnFocus: HTMLButtonElement | undefined;
+  let desktopInitialField = $state<string>();
+  let returnFocus = $state<HTMLButtonElement>();
 
-  const attachDesktopPicker: Attachment<HTMLDialogElement> = node => {
-    desktopPickerDialog = node;
-    return () => { if (desktopPickerDialog === node) desktopPickerDialog = undefined; };
-  };
-  const attachFilterForm: Attachment<HTMLFormElement> = node => {
-    filterForm = node;
-    return () => { if (filterForm === node) filterForm = undefined; };
-  };
+  onMount(() => {
+    const media = window.matchMedia('(min-width: 992px)');
+    const update = () => {
+      if (desktopMatches !== media.matches && filtersOpen) closeFilters();
+      desktopMatches = media.matches;
+    };
+    update();
+    media.addEventListener('change', update);
+    return () => media.removeEventListener('change', update);
+  });
 
   const attachFilterDialog: Attachment<HTMLDialogElement> = (node) => {
     filterDialog = node;
-    const media = window.matchMedia('(min-width: 992px)');
-    const update = () => { desktopMatches = media.matches; if (!media.matches) cancelDesktopPicker(); };
-    update();
-    media.addEventListener('change', update);
-    return () => { media.removeEventListener('change', update); if (filterDialog === node) filterDialog = undefined; };
+    return () => { if (filterDialog === node) filterDialog = undefined; };
   };
   const attachDialogSearch: Attachment<HTMLInputElement> = (node) => {
     dialogSearch = node;
@@ -122,91 +112,13 @@
 
   const resetDraft = () => { draft = emptyListingDraft(filters.sort); };
 
-  const desktopFields = [
-    { key: 'type', field: 'type', title: 'inventory.facet.type' },
-    { key: 'make', field: 'make', title: 'm_ccdd25d4230f' },
-    { key: 'model', field: 'model', title: 'm_5e2c614c23f0' },
-    { key: 'body', field: 'body', title: 'm_191c24bf12d5' },
-    { key: 'condition', field: 'condition', title: 'm_39b36d38d6eb' },
-    { key: 'price_min', field: 'price', title: 'm_94470b41eead' },
-    { key: 'price_max', field: 'price', title: 'm_363c4f34635c' },
-    { key: 'year_min', field: 'year', title: 'm_349ee8568241' },
-    { key: 'year_max', field: 'year', title: 'm_07339ff9faf8' },
-    { key: 'mileage_max', field: 'mileage_max', title: 'm_5679c2543732' },
-    { key: 'fuel', field: 'fuel', title: 'm_a80f942f4112' },
-    { key: 'transmission', field: 'transmission', title: 'm_3e10134259ab' },
-    { key: 'version', field: 'version', title: 'm_1f46b4649491' }
-  ] as const;
-  function desktopValue(key: string, field: DesktopField) {
-    if (key === 'price_min') return draft.priceMin ? formatPrice(Number(draft.priceMin), i18n.locale) : i18n.t('inventory.range.unlimited');
-    if (key === 'price_max') return draft.priceMax ? formatPrice(Number(draft.priceMax), i18n.locale) : i18n.t('inventory.range.unlimited');
-    if (key === 'year_min') return draft.yearMin || i18n.t('inventory.range.unlimited');
-    if (key === 'year_max') return draft.yearMax || i18n.t('inventory.range.unlimited');
-    return listingFacetSummary(field, draft, i18n.locale);
-  }
-  function resolveDesktopField(field?: string): DesktopField | undefined {
-    if (!field) return undefined;
-    if (field.startsWith('price')) return 'price';
-    if (field.startsWith('year')) return 'year';
-    return desktopFields.find(item => item.field === field)?.field;
-  }
-  async function focusDesktopPicker() {
-    await tick();
-    const target = pickerFocusField.endsWith('_max')
-      ? desktopPickerDialog?.querySelector<HTMLElement>('[data-picker-max]') ?? desktopPickerDialog?.querySelector<HTMLElement>('[data-picker-initial]')
-      : desktopPickerDialog?.querySelector<HTMLElement>('[data-picker-initial]');
-    target?.focus({ preventScroll: true });
-  }
-  async function openDesktopChoice(event: MouseEvent, field: DesktopField, key: string) {
-    pickerTrigger = event.currentTarget as HTMLButtonElement;
-    pickerFocusField = key;
-    pickerFromOverview = Boolean(filterDialog?.open);
-    pickerSnapshot = { ...draft, equipment: [...draft.equipment] };
-    desktopChoice = field;
-    await tick();
-    desktopPickerDialog?.showModal();
-    void focusDesktopPicker();
-  }
-  function cancelDesktopPicker() {
-    if (!desktopPickerDialog?.open) return;
-    if (pickerSnapshot) draft = pickerSnapshot;
-    desktopPickerDialog.close();
-  }
-  function restoreDesktopPicker() {
-    desktopChoice = undefined;
-    pickerSnapshot = undefined;
-    if (pickerFromOverview) pickerTrigger?.focus({ preventScroll: true });
-    else restorePage();
-  }
-  async function applyDesktopPicker(event: SubmitEvent) {
-    event.preventDefault();
-    if (hasInvalidRange) return;
-    desktopPickerDialog?.close();
-    if (!pickerFromOverview) {
-      await tick();
-      filterForm?.requestSubmit();
-    }
-  }
-  function clearDesktopField() {
-    if (!desktopChoice) return;
-    if (desktopChoice === 'make') draft = withListingMake(draft, '');
-    else if (desktopChoice === 'price') draft = { ...draft, priceMin: '', priceMax: '' };
-    else if (desktopChoice === 'year') draft = { ...draft, yearMin: '', yearMax: '' };
-    else if (desktopChoice === 'mileage_max') draft = { ...draft, mileageMax: '' };
-    else if (desktopChoice === 'equipment') draft = { ...draft, equipment: [] };
-    else draft = { ...draft, [desktopChoice]: '' };
-  }
-
   const openFilters = (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
+    if (desktopMode) { desktopInitialField = field; filtersOpen = true; return; }
     initializeDraft();
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
-    const desktopField = desktopMode ? resolveDesktopField(field) : undefined;
-    if (desktopField) { void openDesktopChoice(event, desktopField, field ?? desktopField); return; }
     filterDialog?.showModal();
-    const content = filterDialog?.querySelector<HTMLDivElement>('.dn-listing-filter__dialog-content');
-    if (desktopMode && content) content.scrollTop = 0;
     requestAnimationFrame(() => {
       const compact = window.matchMedia('(max-width: 767px)').matches;
       const target = field
@@ -217,16 +129,15 @@
       target?.focus();
     });
   };
-  const closeFilters = () => { cancelDesktopPicker(); if (filterDialog?.open) filterDialog.close(); };
+  const closeFilters = () => { if (desktopMode) filtersOpen = false; else if (filterDialog?.open) filterDialog.close(); };
   const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeFilters(); };
   const handleCancel = (event: Event) => { event.preventDefault(); closeFilters(); };
   const handleSearchKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Escape') { event.preventDefault(); closeFilters(); }
   };
   const handleDialogSubmit = () => { closeFilters(); };
-  const handleClear = (event: MouseEvent) => {
-    if (desktopMode) { event.preventDefault(); resetDraft(); void tick().then(() => dialogSearch?.focus()); }
-    else { resetDraft(); closeFilters(); }
+  const handleClear = () => {
+    resetDraft(); closeFilters();
   };
   const restorePage = () => {
     filtersOpen = false;
@@ -242,16 +153,18 @@
     };
     setTimeout(() => requestAnimationFrame(restoreFocus), 0);
   };
-  const cleanFormData = (event: FormDataEvent) => { event.formData.delete('dn-picker-choice'); cleanListingFormData(event.formData); };
+  const cleanFormData = (event: FormDataEvent) => { cleanListingFormData(event.formData); };
 </script>
 
 {@render children(openFilters, filtersOpen)}
+{#if desktopMode}
+  <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopInitialField} {returnFocus} />
+{:else}
 
 <QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
 {#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
-  class:dn-listing-filter__dialog--desktop={desktopMode}
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
   {@attach attachFilterDialog}
@@ -265,7 +178,6 @@
     action={i18n.href(resolve('/listing-grid'))}
     onsubmit={handleDialogSubmit}
     onformdata={cleanFormData}
-    {@attach attachFilterForm}
   >
     <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header">
       <h2 id="dn-listing-filter-title" tabindex="-1"><span class="dn-listing-filter__title-desktop">{i18n.t("m_32729e44de2d")}</span><span class="dn-listing-filter__title-mobile">{i18n.t("m_546ebb8eb993")}</span></h2>
@@ -297,14 +209,6 @@
       </div>
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
-          {#if desktopMode}
-            {#each desktopFields as item (item.key)}
-              <div class="dn-desktop-filter-field">
-                <span class="dn-listing-filter__field-label" id={`dn-desktop-label-${item.key}`}>{i18n.t(item.title)}</span>
-                <button class="dn-desktop-filter-choice" data-desktop-field={item.field} data-desktop-key={item.key} type="button" aria-haspopup="dialog" aria-controls="dn-desktop-picker-dialog" aria-expanded={desktopChoice === item.field} aria-labelledby={`dn-desktop-label-${item.key} dn-desktop-value-${item.key}`} onclick={event => openDesktopChoice(event, item.field, item.key)}><span id={`dn-desktop-value-${item.key}`}>{desktopValue(item.key, item.field)}</span><Icon name="arrow-right" size={16} /></button>
-              </div>
-            {/each}
-          {:else}
           <label>
             <span class="dn-listing-filter__field-label">{i18n.t('inventory.facet.type')}</span>
             <select {@attach i18n.validation} name="type" aria-label={i18n.t('inventory.facet.type')} bind:value={draft.type}>
@@ -414,7 +318,6 @@
               {/each}
             </select>
           </label>
-          {/if}
         </div>
 
         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
@@ -443,11 +346,6 @@
         <span class="dn-listing-filter__submit-compact">{i18n.t("action.showCount", { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
       </button>
-      {#if desktopMode}
-        {#each desktopFields as item (item.key)}
-          <input type="hidden" name={item.key} value={item.key === 'price_min' ? draft.priceMin : item.key === 'price_max' ? draft.priceMax : item.key === 'year_min' ? draft.yearMin : item.key === 'year_max' ? draft.yearMax : item.field === 'mileage_max' ? draft.mileageMax : draft[item.field as Exclude<DesktopField, 'price' | 'year' | 'mileage_max' | 'equipment'>]} />
-        {/each}
-      {/if}
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
     </footer>
   </form>
@@ -455,47 +353,9 @@
 {/snippet}
 </QuickFilterSheet>
 
-<dialog class="dn-desktop-picker-dialog" id="dn-desktop-picker-dialog" aria-labelledby="dn-desktop-picker-title" {@attach attachDesktopPicker} onkeydown={event => { if (event.key === 'Escape') { event.preventDefault(); cancelDesktopPicker(); } else containDialogTab(event, event.currentTarget); }} oncancel={event => { event.preventDefault(); cancelDesktopPicker(); }} onclick={event => { if (event.target === event.currentTarget) cancelDesktopPicker(); }} onclose={restoreDesktopPicker}>
-  <form class="dn-desktop-picker-panel" onsubmit={applyDesktopPicker}>
-    <header class="dn-desktop-picker-header">
-      <h2 id="dn-desktop-picker-title">{desktopChoice ? listingFacetTitle(desktopChoice, i18n.locale) : ''}</h2>
-      <button class="dn-icon-button dn-desktop-picker-close" type="button" aria-label={i18n.t('m_84305a580997')} onclick={cancelDesktopPicker}><Icon name="x" size={18} /></button>
-    </header>
-    {#if desktopChoice}
-      {#key desktopChoice}<DesktopFilterPicker field={desktopChoice} bind:draft />{/key}
-    {/if}
-    <footer class="dn-desktop-picker-footer">
-      {#if hasInvalidRange}<p role="alert">{hasInvalidPriceRange ? i18n.t('m_2157bc34d38a') : i18n.t('m_e35acfc7ae2e')}</p>{/if}
-      <button class="dn-desktop-picker-clear" type="button" onclick={clearDesktopField}>{i18n.t('action.clearShort')}</button>
-      <button class="dn-desktop-picker-apply" type="submit" disabled={hasInvalidRange}>{i18n.t('m_31e392d1c037')}</button>
-    </footer>
-  </form>
-</dialog>
+{/if}
 
 <style>
-  .dn-desktop-filter-field { min-width: 0; }
-  .dn-desktop-filter-choice { display: flex; width: 100%; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid #dfe2e6; border-radius: var(--dn-radius-control); background: #f5f6f7; color: var(--dn-ink); font: var(--dn-entry-font); text-align: left; cursor: pointer; }
-  .dn-desktop-filter-choice span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  .dn-desktop-filter-choice :global(svg) { flex: 0 0 auto; color: var(--dn-muted); }
-  .dn-desktop-filter-choice:hover { background: var(--dn-surface-hover); }
-  .dn-desktop-filter-choice:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
-  .dn-desktop-picker-dialog { position: fixed; inset: min(160px, 18dvh) auto auto 50%; width: min(440px, calc(100vw - 48px)); max-width: none; max-height: calc(82dvh - 32px); margin: 0; padding: 0; overflow: hidden; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-lg); background: var(--dn-white); color: var(--dn-ink); box-shadow: 0 16px 64px rgb(0 0 0 / .18); transform: translateX(-50%); }
-  .dn-desktop-picker-dialog::backdrop { background: rgb(8 10 14 / .3); }
-  .dn-desktop-picker-panel { display: flex; max-height: calc(82dvh - 32px); flex-direction: column; margin: 0; }
-  .dn-desktop-picker-panel :global(.picker) { min-height: 0; overflow-y: auto; }
-  .dn-desktop-picker-header { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-4) var(--dn-space-2) var(--dn-space-6); }
-  .dn-desktop-picker-header h2 { margin: 0; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
-  .dn-desktop-picker-close { border: 0; background: transparent; color: var(--dn-muted); cursor: pointer; }
-  .dn-desktop-picker-close:hover { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  .dn-desktop-picker-footer { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-space-4); border-top: 1px solid var(--dn-line); }
-  .dn-desktop-picker-footer p { flex: 1 1 100%; margin: 0; color: var(--dn-red); font-size: var(--dn-text-meta); }
-  .dn-desktop-picker-footer button { min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); font: var(--dn-control-font); cursor: pointer; }
-  .dn-desktop-picker-clear { background: transparent; color: var(--dn-muted); }
-  .dn-desktop-picker-clear:hover { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  .dn-desktop-picker-apply { background: var(--dn-red); color: var(--dn-white); }
-  .dn-desktop-picker-apply:hover { background: var(--dn-red-hover); }
-  .dn-desktop-picker-apply:disabled { background: var(--dn-surface-subtle); color: var(--dn-muted); cursor: not-allowed; }
-  .dn-desktop-picker-dialog button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .dn-listing-filter__submit-compact { display: none; }
   .dn-mobile-filter-fields { display: none; }
   label {
@@ -524,10 +384,10 @@
   }
 
   @media (min-width: 768px) {
-    :global(html:has(.dn-listing-filter__dialog[open], .dn-desktop-picker-dialog[open])) { overflow-y: scroll; }
+    :global(html:has(.dn-listing-filter__dialog[open])) { overflow-y: scroll; }
   }
 
-  :global(body:has(.dn-listing-filter__dialog[open], .dn-desktop-picker-dialog[open])) {
+  :global(body:has(.dn-listing-filter__dialog[open])) {
     position: fixed;
     top: var(--dn-dialog-scroll-offset, 0);
     right: 0;
@@ -829,19 +689,7 @@
     cursor: not-allowed;
   }
 
-  @media (min-width: 992px) {
-    .dn-listing-filter__dialog--desktop { max-height: calc(100dvh - 64px); }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-panel { max-height: calc(100dvh - 64px); }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-header { padding: var(--dn-space-6) var(--dn-space-8) var(--dn-space-4); }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-content { flex: 1; scrollbar-gutter: stable; padding: var(--dn-space-4) var(--dn-space-8) var(--dn-space-6); }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-footer { display: grid; flex: 0 0 auto; grid-template-columns: auto minmax(0, 1fr) auto; gap: var(--dn-space-6); padding: var(--dn-space-4) var(--dn-space-8) var(--dn-space-6); border-top: 1px solid var(--dn-line); }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__clear { grid-column: 1; grid-row: 1; justify-self: start; }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__range-error { grid-column: 2; grid-row: 1; }
-    .dn-listing-filter__dialog--desktop .dn-listing-filter__dialog-submit { grid-column: 3; grid-row: 1; height: var(--dn-control-height-prominent); }
-  }
-
   @media (max-width: 991px) {
-    .dn-desktop-picker-dialog { display: none; }
     .dn-listing-filter__core-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
