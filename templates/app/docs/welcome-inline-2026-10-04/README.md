@@ -1,5 +1,7 @@
 # Inline welcome utility row — 4 October 2026
 
+Superseded by the [bottom sheet and compact promotion correction](../welcome-promotions-2026-10-04/README.md). The owner rejected the inline row because its runtime appearance shifted the page. The captures below preserve that trial.
+
 The owner rejected the floating greeting because its treatment was worse. Home now puts the optional welcome in normal document flow, after the discovery tabs and before the dealer panel. A single 44px row contains the configured dealer name in regular 14px text, a small alternate-language pill and close. It uses the shared page gutters, a quiet grey surface and 12px separation from the adjacent phone sections. There is no repeated logo, extra browse action, floating card or backdrop.
 
 The language link uses the configured enabled locales and the existing localized Home route. BG shows EN with the native accessible name English; EN shows БГ with the native accessible name Български. Single-locale configurations omit the language link. Both controls retain 44px targets. The row scrolls with the page and leaves the inventory and bottom navigation unobstructed.

@@ -40,8 +40,8 @@ export default function HomePage() {
     return () => observer.disconnect();
   }, [visibleCount]);
   return <div {...stylex.props(s.screen)}>
-    <DiscoveryHeader active="buy" hideMobileIdentity />
     <WelcomeBanner/>
+    <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
     <ShowroomSearch desktopOnly />
     <main {...stylex.props(s.content)}>
