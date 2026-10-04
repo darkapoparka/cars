@@ -17,8 +17,9 @@ const s = stylex.create({
     backgroundColor: colors.background,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
+    borderColor: 'transparent',
     borderRadius: 16,
+    boxShadow: '0 1px 4px rgba(27, 27, 33, 0.08)',
     overflow: 'hidden',
   },
   photo: {

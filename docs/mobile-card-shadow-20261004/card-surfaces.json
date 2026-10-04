@@ -1,0 +1,99 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "locale": "bg",
+  "route": "/?makes=BMW&makeModels=%7B%22BMW%22%3A%5B%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D",
+  "sameGeometry": true,
+  "before": [
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(213, 218, 224)",
+      "height": 318.125,
+      "id": "bmw-x6",
+      "shadow": "none",
+      "width": 343,
+      "x": 16,
+      "y": 240
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(213, 218, 224)",
+      "height": 318.125,
+      "id": "bmw-540",
+      "shadow": "none",
+      "width": 343,
+      "x": 16,
+      "y": 572.125
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(213, 218, 224)",
+      "height": 318.125,
+      "id": "bmw-x3",
+      "shadow": "none",
+      "width": 343,
+      "x": 16,
+      "y": 904.25
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(213, 218, 224)",
+      "height": 318.125,
+      "id": "bmw-120",
+      "shadow": "none",
+      "width": 343,
+      "x": 16,
+      "y": 1236.375
+    }
+  ],
+  "after": [
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "height": 318.125,
+      "id": "bmw-x6",
+      "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 4px 0px",
+      "width": 343,
+      "x": 16,
+      "y": 240
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "height": 318.125,
+      "id": "bmw-540",
+      "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 4px 0px",
+      "width": 343,
+      "x": 16,
+      "y": 572.125
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "height": 318.125,
+      "id": "bmw-x3",
+      "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 4px 0px",
+      "width": 343,
+      "x": 16,
+      "y": 904.25
+    },
+    {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgba(0, 0, 0, 0)",
+      "height": 318.125,
+      "id": "bmw-120",
+      "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 4px 0px",
+      "width": 343,
+      "x": 16,
+      "y": 1236.375
+    }
+  ],
+  "sharedViews": ["inventory", "saved", "related"],
+  "narrowViewport": {
+    "width": 320,
+    "documentWidth": 305
+  },
+  "desktopCardWidth": 527
+}

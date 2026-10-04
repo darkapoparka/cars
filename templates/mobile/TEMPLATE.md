@@ -49,10 +49,10 @@ matches the fill, without a shadow. Both states retain the same geometry and
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
-White service, vehicle and import cards, Contact panels and enquiry starters use
-the same 1px `colors.line` border. This keeps distinct groups visible on the white
-canvas without adding another background color or shadow. Existing corner radii
-and padding remain.
+White vehicle cards use a shallow neutral shadow and a transparent border,
+retaining their geometry while separating each listing from the white canvas.
+Service and import cards, Contact panels and enquiry starters retain the same
+1px `colors.line` border. Existing corner radii and padding remain.
 
 Overlay text fields use a neutral 2px focus outline. Composite search and numeric
 fields outline their complete rounded container; their inner inputs have no
