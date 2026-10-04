@@ -1,6 +1,6 @@
 import { Button } from "@repo/design-system/components/ui/button";
 import type { MarketplaceSearchParams } from "@repo/marketplace";
-import { ChevronDown, Search, SlidersHorizontal } from "lucide-react";
+import { ChevronDown, Search } from "lucide-react";
 import type { MouseEvent } from "react";
 import { getDesktopPriceQuickFilterLabel } from "../lib/desktop-filter-policy";
 import searchStyles from "./dealer-hero-search.module.css";
@@ -53,13 +53,11 @@ function SearchField({
 /** Home's search styling with the inventory's existing filter controller. */
 export function DealerInventorySearch({
   disabled = false,
-  filterCount,
   filters,
   locale,
   onOpenSection,
 }: {
   disabled?: boolean;
-  filterCount: number;
   filters: MarketplaceSearchParams;
   locale?: string;
   onOpenSection: (section: DesktopFullFilterEntry) => void;
@@ -127,23 +125,6 @@ export function DealerInventorySearch({
           </Button>
         </fieldset>
       </div>
-      <button
-        aria-haspopup="dialog"
-        aria-label={text("Филтри", "Filters")}
-        className={styles.filters}
-        data-slot="desktop-primary-control"
-        disabled={disabled}
-        onClick={(event) =>
-          openFromButton(event, () => onOpenSection("vehicle"))
-        }
-        type="button"
-      >
-        <SlidersHorizontal aria-hidden="true" size={20} />
-        <span>{text("Филтри", "Filters")}</span>
-        {filterCount > 0 ? (
-          <span className={styles.badge}>{filterCount}</span>
-        ) : null}
-      </button>
     </div>
   );
 }

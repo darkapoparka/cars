@@ -11,10 +11,9 @@ export type DealerDesktopToolbarProps = {
   filters: MarketplaceSearchParams;
   locale?: string;
 } & (
-  | { loading: true; filterCount?: never; onOpenSection?: never }
+  | { loading: true; onOpenSection?: never }
   | {
       loading?: false;
-      filterCount: number;
       onOpenSection: (section: DesktopFullFilterEntry) => void;
     }
 );
@@ -44,7 +43,6 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
         <div className={styles.content}>
           <DealerInventorySearch
             disabled={props.loading}
-            filterCount={props.loading ? 0 : props.filterCount}
             filters={filters}
             locale={locale}
             onOpenSection={openSection}

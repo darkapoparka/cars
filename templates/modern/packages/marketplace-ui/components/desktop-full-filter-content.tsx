@@ -39,13 +39,13 @@ export function DesktopFullFilterContent({
   section,
   taxonomy,
   vehicleInitialStep,
+  showHeading = true,
 }: DesktopFullFilterDraftProps & {
   resetVersion: number;
   section: DesktopFullFilterSection;
   vehicleInitialStep: "auto" | "make" | "model";
+  showHeading?: boolean;
 }) {
-  const keywordId = useId();
-  const copy = getMarketplaceControlCopy(locale);
   if (section === "vehicle") {
     return (
       <DesktopMakeModelFields
@@ -59,6 +59,32 @@ export function DesktopFullFilterContent({
       />
     );
   }
+  return (
+    <ScrollArea className="min-h-0 flex-1">
+      <DesktopFullFilterSectionFields
+        draft={draft}
+        locale={locale}
+        onChange={onChange}
+        section={section}
+        showHeading={showHeading}
+      />
+    </ScrollArea>
+  );
+}
+
+/** Shared fields; the grouped dialog owns scrolling rather than each card. */
+export function DesktopFullFilterSectionFields({
+  draft,
+  locale,
+  onChange,
+  section,
+  showHeading = true,
+}: Pick<DesktopFullFilterDraftProps, "draft" | "locale" | "onChange"> & {
+  section: Exclude<DesktopFullFilterSection, "vehicle">;
+  showHeading?: boolean;
+}) {
+  const keywordId = useId();
+  const copy = getMarketplaceControlCopy(locale);
   let options: ReactNode;
   if (section === "search") {
     options = (
@@ -100,8 +126,8 @@ export function DesktopFullFilterContent({
     section !== "category" &&
     Boolean(getDesktopFullFilterSummary(section, draft, locale));
   return (
-    <ScrollArea className="min-h-0 flex-1">
-      <div className={styles.options}>
+    <section className={styles.options} data-filter-section={section}>
+      {showHeading ? (
         <div className={styles.optionsHeading}>
           <h2 className="text-card-title-lg">{label}</h2>
           {hasSelection ? (
@@ -117,8 +143,8 @@ export function DesktopFullFilterContent({
             </Button>
           ) : null}
         </div>
-        {options}
-      </div>
-    </ScrollArea>
+      ) : null}
+      {options}
+    </section>
   );
 }

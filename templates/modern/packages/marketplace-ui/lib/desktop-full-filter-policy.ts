@@ -24,6 +24,43 @@ export type DesktopFullFilterEntry =
   | "make"
   | "model";
 
+export const desktopFullFilterGroups = [
+  {
+    id: "vehicle",
+    bg: "Автомобил",
+    en: "Vehicle",
+    sections: ["vehicle", "search"],
+  },
+  {
+    id: "budget",
+    bg: "Цена и година",
+    en: "Price and year",
+    sections: ["price", "year", "mileage"],
+  },
+  {
+    id: "details",
+    bg: "Характеристики",
+    en: "Specifications",
+    sections: ["category", "body", "fuel", "transmission", "seller"],
+  },
+  {
+    id: "location",
+    bg: "Местоположение",
+    en: "Location",
+    sections: ["location", "origin", "deliver-to"],
+  },
+] as const;
+export type DesktopFullFilterGroup =
+  (typeof desktopFullFilterGroups)[number]["id"];
+
+export function getDesktopFullFilterGroup(section: DesktopFullFilterSection) {
+  return (
+    desktopFullFilterGroups.find((group) =>
+      (group.sections as readonly DesktopFullFilterSection[]).includes(section)
+    )?.id ?? "vehicle"
+  );
+}
+
 export function getDesktopFullFilterLabel(
   section: DesktopFullFilterSection,
   locale?: string

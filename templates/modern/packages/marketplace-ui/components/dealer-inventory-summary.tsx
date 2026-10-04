@@ -11,6 +11,7 @@ import {
   type MarketplaceSearchParams,
   sortOptions,
 } from "@repo/marketplace";
+import { SlidersHorizontal } from "lucide-react";
 import type { ReactNode } from "react";
 import { marketplaceSortLabelsBg } from "../lib/marketplace-filter-config";
 import {
@@ -23,19 +24,23 @@ import { MarketplaceViewModeToggle } from "./desktop-marketplace-controls";
 /** Desktop catalogue controls share the same search and results on Home. */
 export function DealerInventorySummary({
   children,
+  filterCount,
   filters,
   locale,
   totalListings,
   viewMode,
   onApply,
+  onOpenFilters,
   onViewModeChange,
 }: {
   children?: ReactNode;
+  filterCount: number;
   filters: MarketplaceSearchParams;
   locale?: string;
   totalListings: number;
   viewMode: ListingViewMode;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+  onOpenFilters: () => void;
   onViewModeChange: (mode: ListingViewMode) => void;
 }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
@@ -48,8 +53,24 @@ export function DealerInventorySummary({
           {formatVehicleCount(totalListings, filters.category, locale)}
         </output>
       </div>
-      {children}
       <div className={styles.controls} data-slot="desktop-results-controls">
+        <button
+          aria-haspopup="dialog"
+          className={styles.filters}
+          data-slot="desktop-primary-control"
+          onClick={(event) => {
+            // Safari needs an explicit focus target for dialog dismissal.
+            event.currentTarget.focus({ preventScroll: true });
+            onOpenFilters();
+          }}
+          type="button"
+        >
+          <SlidersHorizontal aria-hidden="true" size={18} />
+          <span>{isBg ? "Филтри" : "Filters"}</span>
+          {filterCount > 0 ? (
+            <span className={styles.filterBadge}>{filterCount}</span>
+          ) : null}
+        </button>
         <Select
           onValueChange={(sort) =>
             onApply({ sort: sort as MarketplaceSearchParams["sort"] })
@@ -78,12 +99,15 @@ export function DealerInventorySummary({
           </SelectContent>
         </Select>
       </div>
-      <MarketplaceViewModeToggle
-        className={styles.viewToggle}
-        locale={locale}
-        onViewModeChange={onViewModeChange}
-        viewMode={viewMode}
-      />
+      <div className={styles.displayControls}>
+        <MarketplaceViewModeToggle
+          className={styles.viewToggle}
+          locale={locale}
+          onViewModeChange={onViewModeChange}
+          viewMode={viewMode}
+        />
+        {children}
+      </div>
     </div>
   );
 }

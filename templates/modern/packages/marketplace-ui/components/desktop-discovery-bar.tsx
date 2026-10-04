@@ -154,7 +154,6 @@ export const DesktopMarketplaceBar = ({
           <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (
           <DealerDesktopToolbar
-            filterCount={filterCount}
             filters={filters}
             locale={locale}
             onOpenSection={onOpenFilterSection}

@@ -10,7 +10,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@repo/design-system/components/ui/dialog";
-import { ScrollArea } from "@repo/design-system/components/ui/scroll-area";
 import {
   Tabs,
   TabsContent,
@@ -20,11 +19,13 @@ import {
 import { X } from "lucide-react";
 import { useRef, useState } from "react";
 import {
+  clearDesktopFullFilterSection,
   type DesktopFullFilterEntry,
+  type DesktopFullFilterGroup,
   type DesktopFullFilterSection,
-  desktopFullFilterSections,
+  desktopFullFilterGroups,
+  getDesktopFullFilterGroup,
   getDesktopFullFilterLabel,
-  getDesktopFullFilterSummary,
 } from "../lib/desktop-full-filter-policy";
 import { getMarketplaceControlCopy } from "../lib/marketplace-control-copy";
 import {
@@ -32,51 +33,30 @@ import {
   type DesktopFullFilterDraftProps,
 } from "./desktop-full-filter-content";
 import styles from "./desktop-full-filter-dialog.module.css";
+import { DesktopFullFilterGroupContent } from "./desktop-full-filter-group";
 
 export type {
   DesktopFullFilterEntry,
   DesktopFullFilterSection,
 } from "../lib/desktop-full-filter-policy";
 
-function DesktopFullFilterNavigation({
-  draft,
-  locale,
-}: Pick<DesktopFullFilterDraftProps, "draft" | "locale">) {
+function getDialogPresentation(entry: DesktopFullFilterEntry, locale?: string) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
-  return (
-    <ScrollArea className={styles.navigation}>
-      <TabsList
-        aria-label={isBg ? "Всички филтри" : "All filters"}
-        className={styles.menu}
-        data-slot="desktop-full-filter-navigation"
-        onPointerDownCapture={() => {
-          // Range fields commit on blur before a tab can unmount their panel.
-          const input = document.activeElement;
-          if (input instanceof HTMLInputElement && input.type === "number") {
-            input.blur();
-          }
-        }}
-      >
-        {desktopFullFilterSections.map((id) => {
-          const label = getDesktopFullFilterLabel(id, locale);
-          const summary = getDesktopFullFilterSummary(id, draft, locale);
-          return (
-            <TabsTrigger
-              aria-label={(isBg ? "Филтър: " : "Filter: ") + label}
-              className={styles.menuItem}
-              key={id}
-              value={id}
-            >
-              <span>{label}</span>
-              {summary ? (
-                <span className={styles.summary}>{summary}</span>
-              ) : null}
-            </TabsTrigger>
-          );
-        })}
-      </TabsList>
-    </ScrollArea>
-  );
+  const section: DesktopFullFilterSection =
+    entry === "make" || entry === "model" ? "vehicle" : entry;
+  const focused = ["make", "model", "price", "search"].includes(entry);
+  let title = isBg ? "Филтри за автомобили" : "Vehicle filters";
+  if (focused) {
+    title = getDesktopFullFilterLabel(section, locale);
+    if (entry === "make") {
+      title = isBg ? "Марка" : "Make";
+    }
+    if (entry === "model") {
+      title = isBg ? "Модел" : "Model";
+    }
+  }
+  const initialStep: "make" | "model" = entry === "model" ? "model" : "make";
+  return { focused, initialStep, isBg, section, title };
 }
 
 export function DesktopFullFilterDialog({
@@ -100,26 +80,48 @@ export function DesktopFullFilterDialog({
   open: boolean;
 }) {
   const copy = getMarketplaceControlCopy(locale);
-  const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
-  const [section, setSection] = useState<DesktopFullFilterSection>(
-    initialEntry === "make" || initialEntry === "model"
-      ? "vehicle"
-      : initialEntry
+  const { focused, initialStep, isBg, section, title } = getDialogPresentation(
+    initialEntry,
+    locale
+  );
+  const [group, setGroup] = useState<DesktopFullFilterGroup>(
+    getDesktopFullFilterGroup(section)
   );
   const [vehicleVisited, setVehicleVisited] = useState(false);
   const [resetVersion, setResetVersion] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
-  let vehicleInitialStep: "auto" | "make" | "model" = "make";
-  if (vehicleVisited) {
-    vehicleInitialStep = "auto";
-  } else if (initialEntry === "model") {
-    vehicleInitialStep = "model";
-  }
+  const vehicleInitialStep = vehicleVisited ? "auto" : initialStep;
+
+  // Numeric ranges commit on blur before pointer navigation unmounts their group.
+  const commitActiveInput = () => {
+    const input = document.activeElement;
+    if (input instanceof HTMLInputElement && input.type === "number") {
+      input.blur();
+    }
+  };
+  const fieldProps = { draft, locale, onChange };
+  const vehicleProps: DesktopFullFilterDraftProps & {
+    resetVersion: number;
+    vehicleInitialStep: "auto" | "make" | "model";
+  } = {
+    ...fieldProps,
+    modelCounts,
+    resetVersion,
+    taxonomy,
+    vehicleInitialStep,
+  };
+
   return (
     <Dialog onOpenChange={onOpenChange} open={open}>
       <DialogContent
         className={styles.dialog}
-        data-slot="desktop-full-filter-dialog"
+        data-filter-entry={initialEntry}
+        data-focused={focused}
+        data-slot={
+          focused
+            ? "desktop-focused-filter-dialog"
+            : "desktop-full-filter-dialog"
+        }
         onOpenAutoFocus={(event) => {
           event.preventDefault();
           const target =
@@ -135,11 +137,9 @@ export function DesktopFullFilterDialog({
         showCloseButton={false}
       >
         <DialogHeader className={styles.header}>
-          <DialogTitle className="text-dialog-title">
-            {isBg ? "Филтри за автомобили" : "Vehicle filters"}
-          </DialogTitle>
+          <DialogTitle className="text-dialog-title">{title}</DialogTitle>
           <DialogDescription className="sr-only">
-            {copy.fullFilterDescription}
+            {focused ? copy.quickFilterDescription : copy.fullFilterDescription}
           </DialogDescription>
           <DialogClose asChild>
             <Button
@@ -153,51 +153,76 @@ export function DesktopFullFilterDialog({
             </Button>
           </DialogClose>
         </DialogHeader>
-        <Tabs
-          className={styles.workspace}
-          onValueChange={(value) => {
-            setSection(value as DesktopFullFilterSection);
-            if (value === "vehicle") {
-              setVehicleVisited(true);
-            }
-          }}
-          orientation="vertical"
-          value={section}
-        >
-          <DesktopFullFilterNavigation draft={draft} locale={locale} />
-          {desktopFullFilterSections.map((id) => (
-            <TabsContent
-              className={styles.content}
-              data-slot="desktop-full-filter-content"
-              key={id}
-              value={id}
+        {focused ? (
+          <div
+            className={styles.focusedContent}
+            data-slot="desktop-full-filter-content"
+          >
+            <DesktopFullFilterContent
+              {...vehicleProps}
+              section={section}
+              showHeading={false}
+            />
+          </div>
+        ) : (
+          <Tabs
+            className={styles.workspace}
+            onValueChange={(value) => {
+              setGroup(value as DesktopFullFilterGroup);
+              if (value === "vehicle") {
+                setVehicleVisited(true);
+              }
+            }}
+            value={group}
+          >
+            <TabsList
+              aria-label={isBg ? "Групи филтри" : "Filter groups"}
+              className={styles.menu}
+              data-slot="desktop-full-filter-navigation"
+              onPointerDownCapture={commitActiveInput}
             >
-              {section === id ? (
-                <DesktopFullFilterContent
-                  draft={draft}
-                  locale={locale}
-                  modelCounts={modelCounts}
-                  onChange={onChange}
-                  resetVersion={resetVersion}
-                  section={id}
-                  taxonomy={taxonomy}
-                  vehicleInitialStep={vehicleInitialStep}
-                />
-              ) : null}
-            </TabsContent>
-          ))}
-        </Tabs>
+              {desktopFullFilterGroups.map((item) => (
+                <TabsTrigger
+                  className={styles.menuItem}
+                  key={item.id}
+                  value={item.id}
+                >
+                  {isBg ? item.bg : item.en}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+            {desktopFullFilterGroups.map((item) => (
+              <TabsContent
+                className={styles.content}
+                data-slot="desktop-full-filter-content"
+                key={item.id}
+                value={item.id}
+              >
+                {group === item.id ? (
+                  <DesktopFullFilterGroupContent
+                    {...vehicleProps}
+                    group={item}
+                  />
+                ) : null}
+              </TabsContent>
+            ))}
+          </Tabs>
+        )}
         <DialogFooter className={styles.footer}>
           <Button
             className={styles.reset}
             data-slot="desktop-full-filter-reset"
             onClick={() => {
-              onReset();
+              if (focused) {
+                onChange(clearDesktopFullFilterSection(section, draft));
+              } else {
+                onReset();
+              }
               setResetVersion((value) => value + 1);
             }}
             variant="secondary"
           >
-            {copy.actions.reset}
+            {focused ? copy.actions.clear : copy.actions.reset}
           </Button>
           <Button className={styles.apply} onClick={onApply}>
             {applyLabel ?? copy.actions.showResults}

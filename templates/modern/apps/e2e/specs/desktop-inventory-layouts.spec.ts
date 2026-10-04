@@ -1,8 +1,8 @@
 import { expect, test } from "@playwright/test";
 import { getInventoryLayoutCookieName } from "@repo/marketplace/inventory-presentation";
 import { publicSite } from "@repo/marketplace/site-config";
+import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
 
-const enteredPriceSummaryPattern = /150\D?000/;
 const layoutCookie = getInventoryLayoutCookieName(publicSite.identity.slug);
 const stageLabels = {
   bg: { make: /^Марка/, model: /^Модел/, body: /^Каросерия/ },
@@ -35,8 +35,6 @@ test.beforeEach(async ({ page, context, baseURL }) => {
 
 for (const locale of ["bg", "en"] as const) {
   const isBg = locale === "bg";
-  const quickLabel = isBg ? "Бързи филтри" : "Quick filters";
-  const sidebarLabel = isBg ? "Страничен панел" : "Sidebar";
   const applyLabel = isBg ? "Покажи обявите" : "Show results";
 
   test(`desktop search keeps one control surface and cancels make/model drafts (${locale})`, async ({
@@ -50,7 +48,7 @@ for (const locale of ["bg", "en"] as const) {
     await expect(summary).toBeVisible();
     await expect(summary.getByRole("combobox")).toHaveCount(1);
     await expect(
-      summary.getByRole("button", { name: sidebarLabel, exact: true })
+      summary.locator('[data-slot="dealer-inventory-preview"]')
     ).toBeVisible();
     await expect(
       hero.locator('[data-slot="dealer-inventory-search"]')
@@ -61,7 +59,7 @@ for (const locale of ["bg", "en"] as const) {
       exact: true,
     });
     await trigger.click();
-    const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
+    const dialog = page.locator('[data-slot="desktop-focused-filter-dialog"]');
     const modelTab = dialog.getByRole("tab", {
       name: stageLabels[locale].model,
     });
@@ -121,7 +119,7 @@ for (const locale of ["bg", "en"] as const) {
       .locator('[data-slot="dealer-desktop-inventory-hero"]')
       .getByRole("button", { name: isBg ? "Марка" : "Make", exact: true })
       .click();
-    const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
+    const dialog = page.locator('[data-slot="desktop-focused-filter-dialog"]');
     await dialog.getByRole("button", { name: "Audi", exact: true }).click();
     const makeTab = dialog.getByRole("tab", {
       name: stageLabels[locale].make,
@@ -183,29 +181,27 @@ for (const locale of ["bg", "en"] as const) {
   }) => {
     await page.goto(`/${locale}/cars?sort=price_asc`);
     const original = page.url();
-    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
-    const makeTrigger = hero.getByRole("button", {
-      name: isBg ? "Марка" : "Make",
-      exact: true,
-    });
+    const makeTrigger = page.locator(
+      '[data-slot="dealer-inventory-filters"] [data-slot="desktop-primary-control"]'
+    );
     const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     const navigation = dialog.locator(
       '[data-slot="desktop-full-filter-navigation"]'
     );
     const priceTab = navigation.getByRole("tab", {
-      name: isBg ? "Филтър: Ценови диапазон" : "Filter: Price range",
+      name: isBg ? "Цена и година" : "Price and year",
       exact: true,
     });
     const fuelTab = navigation.getByRole("tab", {
-      name: isBg ? "Филтър: Гориво" : "Filter: Fuel type",
+      name: isBg ? "Характеристики" : "Specifications",
       exact: true,
     });
     const transmissionTab = navigation.getByRole("tab", {
-      name: isBg ? "Филтър: Скоростна кутия" : "Filter: Transmission",
+      name: isBg ? "Характеристики" : "Specifications",
       exact: true,
     });
     const vehicleTab = navigation.getByRole("tab", {
-      name: isBg ? "Филтър: Марка и модел" : "Filter: Make and model",
+      name: isBg ? "Автомобил" : "Vehicle",
       exact: true,
     });
     const maximum = dialog.getByRole("spinbutton", {
@@ -215,7 +211,7 @@ for (const locale of ["bg", "en"] as const) {
     const apply = dialog.getByRole("button", { name: applyLabel, exact: true });
     for (const commit of [false, true]) {
       await makeTrigger.click();
-      await expect(navigation.getByRole("tab")).toHaveCount(13);
+      await expect(navigation.getByRole("tab")).toHaveCount(4);
       await expect(
         dialog.getByRole("button", {
           name: isBg ? "Всички марки" : "All makes",
@@ -223,7 +219,7 @@ for (const locale of ["bg", "en"] as const) {
         })
       ).toHaveAttribute("aria-pressed", "true");
       await dialog.getByRole("button", { name: "BMW", exact: true }).click();
-      await dialog.getByRole("searchbox").fill("X5");
+      await dialog.getByRole("searchbox").first().fill("X5");
       await dialog.locator('[data-slot="model-option"]').click();
       await priceTab.click();
       await maximum.fill("150000");
@@ -231,7 +227,9 @@ for (const locale of ["bg", "en"] as const) {
         await maximum.press("Tab");
       }
       await fuelTab.click();
-      await expect(priceTab).toContainText(enteredPriceSummaryPattern);
+      await priceTab.click();
+      await expect(maximum).toHaveValue("150000");
+      await fuelTab.click();
       await dialog
         .getByRole("button", { name: isBg ? "Дизел" : "Diesel", exact: true })
         .click();
@@ -300,9 +298,7 @@ for (const locale of ["bg", "en"] as const) {
     const summary = page.locator('[data-slot="dealer-inventory-summary"]');
     const grid = page.locator('[data-slot="marketplace-listing-grid"]');
     const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
-    const quick = bar.getByRole("button", { name: quickLabel, exact: true });
-    const panel = bar.getByRole("button", { name: sidebarLabel, exact: true });
-    await expect(quick).toHaveAttribute("aria-pressed", "true");
+    await expect(bar).toHaveAttribute("data-filter-layout", "quick");
     await expect(sidebar).toBeHidden();
     const initialUrl = page.url();
     const initialCount = await summary
@@ -316,9 +312,9 @@ for (const locale of ["bg", "en"] as const) {
       })
       .click();
     await expect(grid).toHaveAttribute("data-view", "list");
-    await panel.click();
+    await selectInventoryFilterLayout(page, "sidebar", locale);
     await expect(sidebar).toBeVisible();
-    await expect(panel).toHaveAttribute("aria-pressed", "true");
+    await expect(bar).toHaveAttribute("data-filter-layout", "sidebar");
     expect(page.url()).toBe(initialUrl);
     expect(await grid.locator("article").allTextContents()).toEqual(
       initialVehicles
@@ -329,10 +325,10 @@ for (const locale of ["bg", "en"] as const) {
     const keyword = sidebar.locator('[data-slot="desktop-search-query"] input');
     await keyword.fill("X5");
     await page.keyboard.press("Escape");
-    await quick.click();
+    await selectInventoryFilterLayout(page, "quick", locale);
     await expect(sidebar).toBeHidden();
     await expect(grid).toHaveAttribute("data-view", "list");
-    await panel.click();
+    await selectInventoryFilterLayout(page, "sidebar", locale);
     await expect(keyword).toHaveValue("X5");
     expect(page.url()).toBe(initialUrl);
     await expect
@@ -345,7 +341,7 @@ for (const locale of ["bg", "en"] as const) {
       .toBe("sidebar");
     const response = await page.reload();
     expect(await response?.text()).toContain('data-filter-layout="sidebar"');
-    await expect(panel).toHaveAttribute("aria-pressed", "true");
+    await expect(bar).toHaveAttribute("data-filter-layout", "sidebar");
     await expect(sidebar).toBeVisible();
     await expect(grid).toHaveAttribute("data-view", "list");
     expect(page.url()).toBe(initialUrl);
@@ -363,7 +359,7 @@ for (const locale of ["bg", "en"] as const) {
       exact: true,
     });
     await price.click();
-    const range = page.locator('[data-slot="desktop-full-filter-dialog"]');
+    const range = page.locator('[data-slot="desktop-focused-filter-dialog"]');
     await range
       .getByRole("spinbutton", {
         name: isBg ? "Максимална цена" : "Maximum price",
@@ -391,13 +387,13 @@ for (const locale of ["bg", "en"] as const) {
       .poll(() => new URL(page.url()).searchParams.get("make"))
       .toBe("BMW");
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
-    await bar.getByRole("button", { name: sidebarLabel, exact: true }).click();
+    await selectInventoryFilterLayout(page, "sidebar", locale);
     const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
     await expect(
       sidebar.locator('[data-slot="desktop-hero-make"]')
     ).toContainText("BMW");
-    await bar.getByRole("button", { name: quickLabel, exact: true }).click();
-    const allFilters = hero.locator('[data-slot="desktop-primary-control"]');
+    await selectInventoryFilterLayout(page, "quick", locale);
+    const allFilters = bar.locator('[data-slot="desktop-primary-control"]');
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(fullDialog).toBeVisible();
@@ -440,10 +436,8 @@ test("desktop inventory ignores invalid presentation preferences", async ({
   const response = await page.goto("/en/cars");
   expect(await response?.text()).toContain('data-filter-layout="quick"');
   await expect(
-    page
-      .locator('[data-slot="dealer-inventory-filters"]')
-      .getByRole("button", { name: "Quick filters", exact: true })
-  ).toHaveAttribute("aria-pressed", "true");
+    page.locator('[data-slot="dealer-inventory-filters"]')
+  ).toHaveAttribute("data-filter-layout", "quick");
 });
 
 test("desktop inventory remains usable when preference storage is blocked", async ({
@@ -460,12 +454,11 @@ test("desktop inventory remains usable when preference storage is blocked", asyn
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/en/cars");
-  const bar = page.locator('[data-slot="dealer-inventory-filters"]');
-  await bar.getByRole("button", { name: "Sidebar", exact: true }).click();
+  await selectInventoryFilterLayout(page, "sidebar");
   await expect(
     page.locator('[data-slot="dealer-inventory-sidebar"]')
   ).toBeVisible();
-  await bar.getByRole("button", { name: "Quick filters", exact: true }).click();
+  await selectInventoryFilterLayout(page, "quick");
   await expect(
     page.locator('[data-slot="dealer-inventory-sidebar"]')
   ).toBeHidden();
@@ -474,7 +467,7 @@ test("desktop inventory remains usable when preference storage is blocked", asyn
     .getByRole("button", { name: "Price", exact: true })
     .click();
   await expect(
-    page.locator('[data-slot="desktop-full-filter-dialog"]')
+    page.locator('[data-slot="desktop-focused-filter-dialog"]')
   ).toBeVisible();
   await page.keyboard.press("Escape");
   expect(errors).toEqual([]);

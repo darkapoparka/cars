@@ -44,42 +44,35 @@
     --inventory-grid-columns: 4;
     grid-template-columns: minmax(0, 1fr);
   }
-  .layoutToggle {
-    display: inline-flex;
+  .previewTrigger {
+    display: grid;
     flex: none;
-    gap: calc(var(--spacing) * 1);
-    min-width: 0;
-    padding: calc(var(--spacing) * 1);
-    margin: 0;
-    color: var(--foreground);
-    background: var(--control);
-    border: 0;
+    place-items: center;
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+    color: var(--muted-foreground);
+    cursor: pointer;
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 3);
   }
-  .layoutToggle button {
-    display: inline-flex;
-    gap: calc(var(--spacing) * 2);
-    align-items: center;
-    justify-content: center;
-    min-height: calc(var(--spacing) * 10);
-    padding: calc(var(--spacing) * 2) calc(var(--spacing) * 3);
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-medium);
-    line-height: calc(var(--spacing) * 6);
-    cursor: pointer;
-    border-radius: calc(var(--spacing) * 2);
-  }
-  .layoutToggle button[aria-pressed="true"] {
-    color: var(--brand-foreground);
-    background: var(--brand);
-  }
-  .layoutToggle button[aria-pressed="false"]:hover {
+  .previewTrigger:hover,
+  .previewTrigger[data-state="open"] {
+    color: var(--foreground);
     background: var(--control-hover);
   }
-  .layoutToggle button:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--foreground);
-    outline-offset: var(--desktop-focus-offset);
+  .previewMenu {
+    min-width: calc(var(--spacing) * 56);
+    padding: calc(var(--spacing) * 2);
+    border-radius: calc(var(--spacing) * 3);
   }
+  .previewMenu [role="menuitemradio"] {
+    gap: calc(var(--spacing) * 2);
+    min-height: calc(var(--spacing) * 11);
+    border-radius: calc(var(--spacing) * 2);
+  }
+  .previewTrigger:focus-visible,
+  .filters:focus-visible,
   .activeFilter:focus-visible,
   .clearFilters:focus-visible {
     outline: var(--desktop-focus-width) solid var(--foreground);
@@ -134,7 +127,7 @@
   }
   .summary {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
     gap: calc(var(--spacing) * 3);
     align-items: center;
     min-height: calc(var(--spacing) * 12);
@@ -160,6 +153,46 @@
   }
   .controls {
     display: flex;
+    gap: var(--spacing);
+    align-items: center;
+    justify-self: center;
+    padding: var(--spacing);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .filters {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    justify-content: center;
+    min-width: calc(var(--spacing) * 30);
+    height: calc(var(--spacing) * 11);
+    padding-inline: calc(var(--spacing) * 4);
+    font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
+    color: var(--brand-foreground);
+    cursor: pointer;
+    background: var(--brand);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .filters:hover {
+    background: var(--lead-site-accent-hover);
+  }
+  .filterBadge {
+    display: grid;
+    place-items: center;
+    min-width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+    padding-inline: var(--spacing);
+    font-size: calc(var(--spacing) * 3);
+    color: var(--brand-text);
+    background: var(--panel);
+    border-radius: calc(var(--spacing) * 5);
+  }
+  .displayControls {
+    display: flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-self: end;
@@ -167,15 +200,15 @@
   .sort {
     gap: calc(var(--spacing) * 1.5);
     width: calc(var(--spacing) * 64);
-    height: calc(var(--spacing) * 12);
-    min-height: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 11);
+    min-height: calc(var(--spacing) * 11);
     padding-inline: calc(var(--spacing) * 4);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-normal);
     color: var(--foreground);
     cursor: pointer;
     background: var(--control);
-    border: var(--desktop-border-width) solid var(--border);
+    border: 0;
     border-radius: calc(var(--spacing) * 3);
     box-shadow: none;
   }

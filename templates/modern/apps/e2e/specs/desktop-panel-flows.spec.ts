@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
 
 const dieselResultsPattern = /\/en\/cars\?.*fuel=diesel/;
 const fuelQueryPattern = /fuel=/;
@@ -164,12 +165,7 @@ for (const width of [1024, 1440, 1920]) {
             (inventoryHeroBox?.y ?? 0) + (inventoryHeroBox?.height ?? 0)
           );
           const layout = page.locator('[data-slot="dealer-inventory-filters"]');
-          await expect(
-            layout.getByRole("button", {
-              name: locale === "bg" ? "Бързи филтри" : "Quick filters",
-              exact: true,
-            })
-          ).toHaveAttribute("aria-pressed", "true");
+          await expect(layout).toHaveAttribute("data-filter-layout", "quick");
           const grid = page.locator('[data-slot="marketplace-listing-grid"]');
           expect(
             await grid.evaluate(
@@ -177,12 +173,7 @@ for (const width of [1024, 1440, 1920]) {
                 getComputedStyle(element).gridTemplateColumns.split(" ").length
             )
           ).toBe(width < 1280 ? 3 : 4);
-          await layout
-            .getByRole("button", {
-              name: locale === "bg" ? "Страничен панел" : "Sidebar",
-              exact: true,
-            })
-            .click();
+          await selectInventoryFilterLayout(page, "sidebar", locale);
           const sidebar = await page
             .locator('[data-slot="dealer-inventory-sidebar"]')
             .boundingBox();
@@ -204,12 +195,7 @@ for (const width of [1024, 1440, 1920]) {
               (layoutBox?.y ?? 0) + (layoutBox?.height ?? 0) + 24
             );
           }
-          await layout
-            .getByRole("button", {
-              name: locale === "bg" ? "Бързи филтри" : "Quick filters",
-              exact: true,
-            })
-            .click();
+          await selectInventoryFilterLayout(page, "quick", locale);
         }
         if (path === "/about" || path === "/contact") {
           const banner = page.locator(
@@ -371,10 +357,7 @@ test("home search and inventory sidebar apply drafts without losing filters", as
     await expect
       .poll(() => new URL(page.url()).searchParams.get("priceMax"))
       .toBe("40000");
-    await page
-      .locator('[data-slot="dealer-inventory-filters"]')
-      .getByRole("button", { name: "Sidebar", exact: true })
-      .click();
+    await selectInventoryFilterLayout(page, "sidebar");
     const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
     for (const slot of [
       "category",

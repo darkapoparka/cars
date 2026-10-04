@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { selectInventoryFilterLayout } from "../fixtures/inventory-preview";
 
 test("desktop category drafts preserve filters and browser Back context", async ({
   page,
@@ -14,10 +15,7 @@ test("desktop category drafts preserve filters and browser Back context", async 
   await page.goto(
     "/bg/cars?make=BMW&model=X5&priceMax=100000&yearMin=2010&sort=newest"
   );
-  await page
-    .locator('[data-slot="dealer-inventory-filters"]')
-    .getByRole("button", { name: "Страничен панел", exact: true })
-    .click();
+  await selectInventoryFilterLayout(page, "sidebar", "bg");
   const sidebar = page.locator('[data-slot="dealer-inventory-sidebar"]');
   const submit = sidebar.locator('[data-slot="desktop-hero-submit"]');
   await expect(submit).toBeEnabled();
