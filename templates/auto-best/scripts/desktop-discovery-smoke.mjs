@@ -89,7 +89,11 @@ try {
         assert(await dialog.getByText('Няма съвпадения', { exact: true }).isVisible());
         await search.fill('audi');
         await dialog.getByRole('radio', { name: 'Audi', exact: true }).click();
+        assert.equal(await dialog.getByRole('tab', { name: 'Марка', exact: true }).getAttribute('aria-selected'), 'true', 'Picking a choice keeps its view open');
+        assert.equal(await dialog.getByRole('tab').count(), 12, 'Each filter is reachable without returning to the overview');
+        await dialog.getByRole('tab', { name: 'Модел', exact: true }).click();
         assert.equal(await dialog.getByRole('tab', { name: 'Модел', exact: true }).getAttribute('aria-selected'), 'true');
+        assert.equal(await dialog.getByRole('heading', { level: 2 }).innerText(), 'Модел', 'The active filter is the window title');
         assert.equal(await dialog.getByRole('radio', { name: 'X6 M Sport', exact: true }).count(), 0);
         await dialog.getByRole('radio', { name: 'RS 6 Avant', exact: true }).click();
         await dialog.getByRole('tab', { name: 'Марка', exact: true }).click();

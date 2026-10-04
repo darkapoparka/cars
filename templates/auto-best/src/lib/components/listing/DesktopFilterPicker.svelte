@@ -4,7 +4,7 @@
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
   import { templateMessage } from '$lib/i18n/presentation';
-  import { filterListingVehicles, listingFilterOptions, listingModelsForMake, listingTypeCount, listingVehicles } from '$data/listing';
+  import { filterListingVehicles, listingFilterOptions, listingModelsForMake, listingVehicles } from '$data/listing';
   import {
     listingFacetOptions,
     listingFacetOptionLabel,
@@ -16,19 +16,19 @@
     type ListingFacetField
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
+  import type { VehicleEquipment } from '$data/inventory';
 
-  type Field = Exclude<ListingFacetField, 'sort' | 'equipment'>;
-  let { field, draft = $bindable(), onBack, onFieldChange }: {
+  type Field = Exclude<ListingFacetField, 'sort'>;
+  const fields: readonly Field[] = ['make', 'model', 'type', 'body', 'price', 'year', 'mileage_max', 'fuel', 'transmission', 'condition', 'version', 'equipment'];
+  let { field, draft = $bindable(), onFieldChange }: {
     field: Field;
     draft: ListingDraft;
-    onBack: () => void;
     onFieldChange: (field: Field) => void;
   } = $props();
   const i18n = getI18n();
   let pickerRoot: HTMLDivElement;
   const attachRoot: Attachment<HTMLDivElement> = node => { pickerRoot = node; };
   let search = $state('');
-  let advanceMake = false;
   $effect(() => { field; search = ''; });
   const vehicleIdentity = $derived(field === 'make' || field === 'model');
   const range = $derived(field === 'price' || field === 'year');
@@ -39,22 +39,32 @@
   const groups = $derived(field === 'model' && !draft.make
     ? listingFilterOptions.makes.filter(Boolean).map(make => ({ make, options: choices.filter(option => option && listingModelsForMake(make).includes(option)) })).filter(group => group.options.length)
     : [{ make: '', options: choices.filter(Boolean) }]);
-  const selected = (option: string) => field !== 'price' && field !== 'year' && field !== 'mileage_max' && draft[field] === option;
+  const selected = (option: string) => field === 'equipment' ? draft.equipment.includes(option as VehicleEquipment) : field !== 'price' && field !== 'year' && field !== 'mileage_max' && draft[field] === option;
+  const hasSelection = (tab: Field) => tab === 'price' ? Boolean(draft.priceMin || draft.priceMax)
+    : tab === 'year' ? Boolean(draft.yearMin || draft.yearMax)
+    : tab === 'mileage_max' ? Boolean(draft.mileageMax)
+    : tab === 'equipment' ? draft.equipment.length > 0 : Boolean(draft[tab]);
   const optionLabel = (option: string) => !option && vehicleIdentity ? listingFacetSummary(field, { ...draft, make: field === 'make' ? '' : draft.make, model: '' }, i18n.locale) : listingFacetOptionLabel(field, option, i18n.locale);
   function choiceCount(option: string) {
-    const candidate = field === 'make' ? withListingMake(draft, option) : { ...draft, model: option };
+    const candidate = field === 'type' ? { ...draft, type: option as ListingDraft['type'] } : field === 'make' ? withListingMake(draft, option) : { ...draft, model: option };
     return filterListingVehicles(listingVehicles, listingFiltersFromDraft(candidate), i18n.locale).length;
+  }
+  async function clearSearch() {
+    search = '';
+    await tick();
+    pickerRoot?.querySelector<HTMLInputElement>('input[type="search"]')?.focus({ preventScroll: true });
   }
   const minimum = () => field === 'price' ? draft.priceMin : draft.yearMin;
   const maximum = () => field === 'price' ? draft.priceMax : draft.yearMax;
   function setMinimum(value: string) { if (field === 'price') draft.priceMin = value; else draft.yearMin = value; }
   function setMaximum(value: string) { if (field === 'price') draft.priceMax = value; else draft.yearMax = value; }
   async function choose(option: string) {
+    if (field === 'equipment') {
+      draft = { ...draft, equipment: selected(option) ? draft.equipment.filter(value => value !== option) : [...draft.equipment, option as VehicleEquipment] };
+      return;
+    }
     if (field === 'make') {
       draft = withListingMake(draft, option);
-      const advance = advanceMake;
-      advanceMake = false;
-      if (option && advance) onFieldChange('model');
       return;
     }
     if (field === 'model' && option && !draft.make) {
@@ -69,7 +79,8 @@
     if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
     event.preventDefault();
     const tabs = (event.currentTarget as HTMLElement).closest('[role="tablist"]');
-    const next = event.key === 'Home' ? 'make' : event.key === 'End' ? 'model' : field === 'make' ? 'model' : 'make';
+    const index = fields.indexOf(field);
+    const next = fields[event.key === 'Home' ? 0 : event.key === 'End' ? fields.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + fields.length) % fields.length];
     onFieldChange(next);
     await tick();
     tabs?.querySelector<HTMLButtonElement>(`[data-picker-tab="${next}"]`)?.focus();
@@ -81,18 +92,13 @@
 </script>
 
 <div class="picker" {@attach attachRoot}>
-  <div class="toolbar">
-    <button class="back" type="button" onclick={onBack}><Icon name="arrow-left" size={18} />{i18n.t('m_a779c56e526e')}</button>
-    {#if vehicleIdentity}
-      <div class="tabs" role="tablist" aria-label={i18n.t('m_0ae7a3ecbc83')}>
-        {#each ['make', 'model'] as tab}
-          <button class="tab" type="button" role="tab" id={`dn-picker-tab-${tab}`} data-picker-tab={tab} aria-selected={field === tab} aria-controls={`dn-picker-panel-${tab}`} tabindex={field === tab ? 0 : -1} onclick={() => onFieldChange(tab as Field)} onkeydown={tabKeydown}>{listingFacetTitle(tab as Field, i18n.locale)}</button>
-        {/each}
-      </div>
-    {:else}
-      <h3 id="dn-desktop-picker-title" tabindex="-1" data-picker-initial>{title}</h3>
-    {/if}
-    {#if field === 'model' && draft.make}<button class="make-context" type="button" aria-label={`${i18n.t('m_d73ca16bbc17')}: ${draft.make}`} onclick={() => onFieldChange('make')}>{draft.make}<Icon name="arrow-left" size={16} /></button>{/if}
+  <div class="tabs" role="tablist" aria-label={i18n.t('m_546ebb8eb993')}>
+    {#each fields as tab (tab)}
+      <button class="tab" type="button" role="tab" id={`dn-picker-tab-${tab}`} data-picker-tab={tab} aria-selected={field === tab} aria-controls={`dn-picker-panel-${tab}`} tabindex={field === tab ? 0 : -1} title={listingFacetSummary(tab, draft, i18n.locale)} onclick={() => onFieldChange(tab)} onkeydown={tabKeydown}>
+        {listingFacetTitle(tab, i18n.locale)}
+        {#if hasSelection(tab)}<span class="selection-indicator" aria-hidden="true"></span>{/if}
+      </button>
+    {/each}
   </div>
 
   {#snippet contents()}
@@ -100,7 +106,8 @@
       <div class="search">
         <Icon name="search" size={20} />
         <input id="dn-desktop-picker-search" data-picker-initial type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
-        {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t('m_c8191190a026')} onclick={() => search = ''}><Icon name="x" size={18} /></button>{/if}
+        {#if field === 'model' && draft.make}<span class="make-context">{draft.make}</span>{/if}
+        {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t('m_c8191190a026')} onclick={clearSearch}><Icon name="x" size={18} /></button>{/if}
       </div>
     {/if}
     {#if range}
@@ -116,7 +123,7 @@
       <fieldset class="choices" class:identity={vehicleIdentity}><legend class="dn-sr-only">{title}</legend>
         {#if choices.includes('')}{@render choice('')}{/if}
         {#each groups as group (group.make)}
-          {#if group.make}<h4 class="group-title">{group.make}</h4>{/if}
+          {#if group.make}<h3 class="group-title">{group.make}</h3>{/if}
           {#each group.options as option (option)}{@render choice(option)}{/each}
         {/each}
       </fieldset>
@@ -124,37 +131,29 @@
     {/if}
   {/snippet}
 
-  {#if vehicleIdentity}
-    {#each ['make', 'model'] as tab}
-      <div id={`dn-picker-panel-${tab}`} role="tabpanel" aria-labelledby={`dn-picker-tab-${tab}`} hidden={field !== tab} tabindex="0">{#if field === tab}{@render contents()}{/if}</div>
-    {/each}
-  {:else}
-    <div aria-labelledby="dn-desktop-picker-title">{@render contents()}</div>
-  {/if}
+  {#each fields as tab (tab)}
+    <div id={`dn-picker-panel-${tab}`} role="tabpanel" aria-labelledby={`dn-picker-tab-${tab}`} hidden={field !== tab} tabindex="0">{#if field === tab}{@render contents()}{/if}</div>
+  {/each}
 </div>
 
 {#snippet choice(option: string)}
-  <label class="choice" class:selected={selected(option)} onpointerdown={() => advanceMake = true}>
-    <input type="radio" name="dn-picker-choice" value={option} aria-label={optionLabel(option)} checked={selected(option)} onchange={() => choose(option)} onkeydown={() => advanceMake = false} onclick={event => { if (field === 'make' && option && selected(option) && event.detail > 0) onFieldChange('model'); }} />
+  <label class="choice" class:selected={selected(option)}>
+    <input type={field === 'equipment' ? 'checkbox' : 'radio'} name="dn-picker-choice" value={option} aria-label={optionLabel(option)} checked={selected(option)} onchange={() => choose(option)} />
     <span>{optionLabel(option)}</span>
-    {#if field === 'type'}<span class="count" aria-hidden="true">{listingTypeCount(option)}</span>{:else if vehicleIdentity}<span class="count" aria-hidden="true">{choiceCount(option)}</span>{/if}
+    {#if field === 'type' || vehicleIdentity}<span class="count" aria-hidden="true">{choiceCount(option)}</span>{/if}
   </label>
 {/snippet}
 
 <style>
   .picker { min-width: 0; }
-  .toolbar { display: flex; align-items: center; gap: var(--dn-space-7); margin-bottom: var(--dn-space-6); min-height: var(--dn-control-height-default); }
   button { font: var(--dn-control-font); cursor: pointer; }
-  .back, .make-context { display: inline-flex; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-height-default); padding: 0 var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: var(--dn-surface-panel); color: var(--dn-ink); }
-  .back:hover, .make-context:hover { background: var(--dn-surface-hover); }
-  .back { margin-inline-start: calc(-1 * var(--dn-space-3)); background: transparent; color: var(--dn-muted); }
-  .make-context { margin-inline-start: auto; }
-  .tabs { display: flex; align-self: stretch; gap: var(--dn-space-6); }
-  .tab { position: relative; min-width: 80px; padding: var(--dn-space-2) 0; border: 0; background: transparent; color: var(--dn-muted); font-size: var(--dn-text-lead); }
+  .make-context { flex: 0 0 auto; margin-inline: var(--dn-space-2); color: var(--dn-muted); font: var(--dn-control-font); }
+  .tabs { position: sticky; top: 0; z-index: 1; display: flex; gap: var(--dn-space-4); max-width: 100%; margin-bottom: var(--dn-space-6); overflow-x: auto; border-bottom: 1px solid var(--dn-line); background: var(--dn-white); scrollbar-width: thin; }
+  .tab { position: relative; display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: var(--dn-space-2); min-width: var(--dn-control-height-default); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-1); border: 0; background: transparent; color: var(--dn-muted); font-size: var(--dn-text-meta); white-space: nowrap; }
   .tab[aria-selected='true'] { color: var(--dn-ink); font-weight: var(--dn-weight-semibold); }
   .tab[aria-selected='true']::after { position: absolute; inset: auto 0 0; height: 2px; border-radius: var(--dn-pill); background: var(--dn-ink); content: ''; }
-  h3 { margin: 0; font-size: var(--dn-text-lead); font-weight: var(--dn-weight-semibold); }
-  h3:focus { outline: none; }
+  .selection-indicator { width: 4px; height: 4px; border-radius: var(--dn-pill); background: var(--dn-red); }
+  .tab:focus-visible { outline-offset: -3px; }
   .search { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-prominent); margin-bottom: var(--dn-space-6); padding-inline: var(--dn-space-4) var(--dn-space-2); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-muted); }
   .search input { flex: 1; min-width: 0; min-height: var(--dn-control-height-prominent); padding: 0; border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); outline: none; }
   .search:focus-within { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
@@ -167,6 +166,7 @@
   .choice.selected { border-color: var(--dn-selection-line); background: var(--dn-selection-surface); }
   .choice input { appearance: none; flex: 0 0 18px; width: 18px; height: 18px; margin: 0; border: 1px solid var(--dn-line-strong); border-radius: var(--dn-pill); background: var(--dn-white); }
   .choice input:checked { border: 5px solid var(--dn-red); }
+  .choice input[type='checkbox'] { appearance: auto; border: revert; border-radius: 0; accent-color: var(--dn-red); }
   .choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .count { margin-inline-start: auto; color: var(--dn-muted); font-size: var(--dn-text-meta); }
   .group-title { grid-column: 1 / -1; margin: var(--dn-space-3) 0 0; font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); }
@@ -180,5 +180,6 @@
   button:focus-visible, .range input:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .empty { margin-top: var(--dn-space-6); color: var(--dn-muted); font: var(--dn-body-font); }
   .empty p { margin: var(--dn-space-2) 0 0; }
+  @media (max-width: 1199px) { .tabs, .tab { gap: var(--dn-space-1); } }
   @media (forced-colors: active) { .choice input, .choice input:checked { appearance: auto; border: revert; background: revert; } }
 </style>

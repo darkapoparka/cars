@@ -51,10 +51,13 @@ prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
 Inventory's desktop facet buttons open the existing search window directly at
 the selected field. Its overview retains the original field grid and equipment
-choices. Each field opens a focused view within that same dialog; Make and Model
-share two underline tabs, searchable radio choices and available-result counts.
-Choosing a make with the pointer opens its models. Keyboard arrow selection
-stays within the Make radio group. Back retains the outer draft; closing the
+choices. Each field opens a focused view within that same dialog. The active
+field becomes the window title, with a grey Back button and one compact underline
+row for every filter, including Equipment. Make and Model use searchable radio
+choices and available-result counts. Selecting a value keeps its view open;
+tabs move between fields while retaining every pending choice. Equipment allows
+multiple checked choices. Arrow keys, Home and End navigate the tabs. Back retains
+the outer draft and returns to the original overview field; closing the
 window discards it, and the result action applies it. Budget/year use paired
 number inputs and mileage uses a number input with optional limits. Short
 selection views fit their content. Home and widths below 992px retain native
