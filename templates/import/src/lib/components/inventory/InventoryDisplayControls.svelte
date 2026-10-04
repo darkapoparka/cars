@@ -122,8 +122,8 @@
 		align-items: center;
 		gap: var(--bc-space-2);
 		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-pill);
-		min-height: var(--bc-control-height-standard);
+		border-radius: var(--bc-desktop-control-radius);
+		min-height: var(--bc-control-height-primary);
 		padding: 0 var(--bc-space-4);
 		background: var(--bc-surface-raised);
 		color: var(--bc-ink);
@@ -136,10 +136,16 @@
 	.inventory-menu {
 		position: relative;
 	}
+	summary :global(svg) {
+		flex-shrink: 0;
+	}
 	summary:hover,
 	.inventory-menu[open] summary {
 		background: var(--bc-surface);
-		border-color: var(--bc-ink);
+		border-color: var(--bc-border-strong);
+	}
+	.inventory-menu[open] summary :global(svg:last-child) {
+		transform: rotate(180deg);
 	}
 	summary::-webkit-details-marker {
 		display: none;
@@ -149,12 +155,14 @@
 		right: 0;
 		top: calc(100% + var(--bc-space-2));
 		z-index: 90;
-		min-width: max-content;
+		width: max-content;
+		min-width: 240px;
+		max-width: min(360px, calc(100vw - var(--bc-page-x) * 2));
 		padding: var(--bc-space-2);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-panel);
 		background: var(--bc-surface-raised);
-		box-shadow: var(--bc-shadow-panel);
+		box-shadow: var(--bc-shadow-card);
 		display: grid;
 	}
 	.inventory-menu form {
@@ -166,7 +174,7 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: var(--bc-space-4);
-		min-height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-primary);
 		padding: var(--bc-space-2) var(--bc-space-3);
 		border-radius: var(--bc-radius-md);
 		text-decoration: none;
@@ -179,10 +187,19 @@
 		font-weight: var(--bc-weight-control);
 	}
 	.inventory-menu a:hover,
-	.inventory-menu a[aria-current='true'],
-	.inventory-menu :global(.inventory-sort__option:hover),
-	.inventory-menu :global(.inventory-sort__option[aria-pressed='true']) {
+	.inventory-menu :global(.inventory-sort__option:hover) {
 		background: var(--bc-surface-hover);
+	}
+	.inventory-menu a[aria-current='true'],
+	.inventory-menu :global(.inventory-sort__option[aria-pressed='true']) {
+		background: var(--bc-accent-tint);
+		color: var(--bc-accent);
+	}
+	summary:focus-visible,
+	.inventory-menu a:focus-visible,
+	.inventory-menu :global(.inventory-sort__option:focus-visible) {
+		outline: 2px solid var(--bc-focus);
+		outline-offset: 2px;
 	}
 	.inventory-view__layout {
 		margin-top: var(--bc-space-2);
@@ -195,6 +212,6 @@
 		font-weight: var(--bc-weight-control);
 		border-radius: var(--bc-radius-md);
 		padding-inline: var(--bc-space-3);
-		white-space: nowrap;
+		white-space: normal;
 	}
 </style>

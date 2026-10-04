@@ -65,7 +65,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		],
 		details: {
 			sourcing: {
-				summary: 'Автомобил според твоя бюджет.',
+				summary: 'Избор според бюджета.',
 				mobileContext: 'Избор на автомобил',
 				mobileTitle: 'Подбрани коли',
 				mobileSummary: 'Подбор по бюджет',
@@ -74,7 +74,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				includes: ['Избор според бюджет и изисквания', 'История, оборудване и крайна цена']
 			},
 			'listing-check': {
-				summary: 'История и разходи преди покупка.',
+				summary: 'VIN, история и разходи.',
 				mobileContext: 'Преди покупка',
 				mobileSummary: 'VIN и история',
 				href: '/import',
@@ -82,7 +82,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				includes: ['Преглед на обява или VIN', 'Уточняване на история и разходи за внос']
 			},
 			selling: {
-				summary: 'Оценка и подготовка за продажба.',
+				summary: 'Оценка и продажба.',
 				mobileContext: 'Твоят автомобил',
 				mobileTitle: 'Продажба на кола',
 				mobileSummary: 'Оценка и продажба',
@@ -94,7 +94,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			registration: {
-				summary: 'Документи, регистрация и предаване.',
+				summary: 'Документи и КАТ.',
 				mobileContext: 'След покупка',
 				mobileTitle: 'Регистрация',
 				mobileSummary: 'Документи за КАТ',
@@ -106,7 +106,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			viewing: {
-				summary: 'Удобен час за подготвен оглед.',
+				summary: 'Оглед с уговорка.',
 				mobileContext: 'На място',
 				mobileSummary: 'Час за оглед',
 				href: '/contact#contact-details',
@@ -117,7 +117,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			comparison: {
-				summary: 'Цена, пробег и оборудване.',
+				summary: 'Цена и оборудване.',
 				mobileContext: 'Преди решение',
 				mobileSummary: 'Цена и оборудване',
 				href: '/compare',
@@ -148,7 +148,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 		],
 		details: {
 			sourcing: {
-				summary: 'A car that fits your budget.',
+				summary: 'Cars within your budget.',
 				mobileContext: 'Find your car',
 				mobileSummary: 'Selection by budget',
 				href: '/inventory',
@@ -159,7 +159,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			'listing-check': {
-				summary: 'History and costs before buying.',
+				summary: 'VIN, history and costs.',
 				mobileContext: 'Before buying',
 				mobileSummary: 'VIN and history',
 				href: '/import',
@@ -167,7 +167,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				includes: ['Review a listing or VIN', 'Discuss the history and import costs']
 			},
 			selling: {
-				summary: 'Valuation and preparation for sale.',
+				summary: 'Valuation and sale.',
 				mobileContext: 'Your car',
 				mobileSummary: 'Valuation and sale',
 				href: '/sell-your-car',
@@ -178,7 +178,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			registration: {
-				summary: 'Paperwork, registration and handover.',
+				summary: 'Registration paperwork.',
 				mobileContext: 'After buying',
 				mobileTitle: 'Registration',
 				mobileSummary: 'Registration docs',
@@ -190,7 +190,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			viewing: {
-				summary: 'A prepared car at a time that suits you.',
+				summary: 'Viewings by appointment.',
 				mobileContext: 'Visit us',
 				mobileTitle: 'Book a viewing',
 				mobileSummary: 'Viewing appointment',
@@ -202,7 +202,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			comparison: {
-				summary: 'Price, mileage and equipment.',
+				summary: 'Price and equipment.',
 				mobileContext: 'Before you decide',
 				mobileSummary: 'Price and equipment',
 				href: '/compare',

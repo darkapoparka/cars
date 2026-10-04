@@ -332,7 +332,7 @@
 		--bc-desktop-canvas: #f2f4f7;
 		--bc-desktop-panel-surface: var(--bc-surface-raised);
 		--bc-desktop-control-surface: var(--bc-desktop-canvas);
-		--bc-desktop-hero-surface: var(--bc-desktop-canvas);
+		--bc-desktop-hero-surface: #e5edf4;
 		--bc-desktop-hero-ink: var(--bc-ink);
 		--bc-desktop-hero-copy: var(--bc-description-copy);
 		--bc-desktop-hero-hover: color-mix(in srgb, var(--bc-ink) 6%, var(--bc-desktop-hero-surface));

@@ -15,6 +15,8 @@ Passing a build is necessary but not sufficient. A lead variant must also be ins
 
 ## Incremental desktop polish
 
+The [desktop continuation receipt](desktop-continuation-2026-10-04/README.md) covers Inventory Sort/View keyboard dismissal and GET preservation, sidebar disclosure/selection states, PDP gallery/payment/enquiry behavior and 768–1023px reflow, Import/Sell modes and validation, paired Financing controls, Compare removal and FAQ disclosures. Check BG/EN at 768/1024/1440/1920px for clipped controls and horizontal overflow. For mobile preservation, load the actual Latin/Cyrillic fonts before matched 320/390px captures, compare complete-page computed presentation, and record exclusions for external images/maps separately.
+
 The owner requested useful implementation before lengthy verification after the small 4 October typography follow-up. Continue from the current source and [desktop styling contract](DESKTOP-STYLING.md), keeping mobile independent. Scale evidence to the actual changes rather than repeating the entire historical audit for each adjustment.
 
 1. Capture matched before views for a meaningful group of affected desktop routes/states. Inspect existing owners and fix the highest-value inconsistencies first.
@@ -52,6 +54,8 @@ For [desktop testimonial labels](desktop-review-labels-2026-10-04/README.md), ve
 - Currency, units, language and finance wording match the dealer's market.
 
 ## Runtime truthfulness
+
+For the [4 October tinted hero follow-up](tinted-heroes-2026-10-04/README.md), verify the actual desktop hero frame on all `PageIntro` routes and the article header. About and Contact must contain their primary and secondary destinations inside `DesktopDiscoveryPanel`. Check the tinted hero against the grey header/body and white panels, long BG/EN labels, shared heading anchors, artwork clearance and native links at 768/1024/1440/1920px. Compare matched mobile captures and visible presentation at 320/390px; mobile stays independent. An HTTP error page or a Vite overlay is a failed capture, even when its console is silent. Keep before/after production output separate from mutable development output.
 
 Check console/page errors. Forms, chat widgets and calculators may be demo interactions; record that clearly unless real delivery/integration is configured and tested. A localhost 200 response is not a deploy verification.
 

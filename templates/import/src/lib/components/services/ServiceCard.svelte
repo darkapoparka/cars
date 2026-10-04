@@ -182,22 +182,27 @@
 		}
 		p {
 			margin: 0;
+			width: 100%;
 			font-size: var(--bc-text-body);
-			min-height: calc(2em * var(--bc-leading-body));
+			line-height: var(--bc-leading-body);
+			min-height: calc(1em * var(--bc-leading-body));
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
 		}
 		.service-card__cta {
 			min-height: var(--bc-control-height-compact);
 			align-self: start;
-			padding: 0;
-			background: transparent;
-			color: var(--bc-accent);
-			border-radius: 0;
-			font-size: var(--bc-text-control);
+			padding: 0 var(--bc-space-3);
+			background: var(--bc-ink);
+			color: var(--bc-white);
+			border-radius: var(--bc-radius-pill);
+			font-size: var(--bc-text-body);
 			font-weight: var(--bc-weight-action);
 		}
 		a:hover .service-card__cta {
-			background: transparent;
-			color: var(--bc-accent-hover);
+			background: var(--bc-ink-soft);
+			color: var(--bc-white);
 		}
 	}
 	@media (max-width: 767.98px) {

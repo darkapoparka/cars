@@ -238,7 +238,12 @@
 	}
 </script>
 
-<div class="sell-flow" class:sell-flow--embedded={embedded} bind:this={wizardRoot}>
+<div
+	class="sell-flow"
+	class:sell-flow--embedded={embedded}
+	class:desktop-intake={embedded}
+	bind:this={wizardRoot}
+>
 	{#if submitted}
 		<section class="sell-flow__success" role="status">
 			<span class="sell-flow__success-icon"><Check size={25} strokeWidth={2.5} /></span>
@@ -247,7 +252,7 @@
 			<button type="button" onclick={requestClose}>{nt('ui49')}</button>
 		</section>
 	{:else}
-		<header class="sell-flow__header">
+		<header class="sell-flow__header" data-intake-header>
 			<button type="button" class="sell-flow__close" aria-label={nt('ui33')} onclick={requestClose}>
 				<X size={21} strokeWidth={2.3} />
 			</button>
@@ -271,7 +276,7 @@
 		<div class="sell-flow__body" bind:this={bodyElement}>
 			{#if step === 0}
 				<section class="sell-flow__section" aria-labelledby="sell-flow-car-title">
-					<div class="sell-flow__intro">
+					<div class="sell-flow__intro" data-intake-intro>
 						<h3 id="sell-flow-car-title">{nt('ui168')}</h3>
 						<p>
 							{manualEntry ? nt('ui169') : nt('ui170')}
@@ -279,7 +284,7 @@
 					</div>
 
 					{#if !manualEntry}
-						<label class="sell-field sell-field--wide">
+						<label data-intake-field class="sell-field sell-field--wide">
 							<span>VIN</span>
 							<input
 								id="sell-flow-vin"
@@ -291,9 +296,9 @@
 						</label>
 					{/if}
 
-					<fieldset class="sell-fieldset">
+					<fieldset class="sell-fieldset" data-intake-field>
 						<legend>{nt('ui171')}</legend>
-						<div class="sell-brand-rail">
+						<div class="sell-brand-rail" data-intake-choices>
 							{#each makeOptions as option (option)}
 								<button
 									type="button"
@@ -307,7 +312,7 @@
 						</div>
 					</fieldset>
 					<div class="sell-field-grid">
-						<label class="sell-field">
+						<label data-intake-field class="sell-field">
 							<span>{nt('ui172')}</span>
 							<input
 								id="sell-flow-model"
@@ -317,7 +322,7 @@
 								autocomplete="off"
 							/>
 						</label>
-						<label class="sell-field">
+						<label data-intake-field class="sell-field">
 							<span>{nt('ui173')}</span>
 							<input
 								bind:value={year}
@@ -329,14 +334,14 @@
 						</label>
 					</div>
 
-					<label class="sell-field sell-field--wide">
+					<label data-intake-field class="sell-field sell-field--wide">
 						<span>{nt('ui75')}</span>
 						<input bind:value={mileage} type="text" inputmode="numeric" placeholder={nt('ui174')} />
 					</label>
 				</section>
 			{:else}
 				<section class="sell-flow__section" aria-labelledby="sell-flow-contact-title">
-					<div class="sell-flow__intro">
+					<div class="sell-flow__intro" data-intake-intro>
 						<h3 id="sell-flow-contact-title">{nt('ui175')}</h3>
 						<p>{nt('ui176')}</p>
 					</div>
@@ -346,7 +351,7 @@
 						<button type="button" onclick={goBack}>{nt('ui177')}</button>
 					</div>
 
-					<label class="sell-field sell-field--wide">
+					<label data-intake-field class="sell-field sell-field--wide">
 						<span>{nt('ui178')}</span>
 						<input
 							id="sell-flow-phone"
@@ -360,16 +365,16 @@
 					</label>
 
 					<div class="sell-field-grid">
-						<label class="sell-field">
+						<label data-intake-field class="sell-field">
 							<span>{nt('ui179')}</span>
 							<input bind:value={price} type="text" inputmode="numeric" placeholder="EUR" />
 						</label>
-						<label class="sell-field">
+						<label data-intake-field class="sell-field">
 							<span>{nt('ui180')}</span>
 							<input bind:value={location} type="text" autocomplete="address-level2" />
 						</label>
 					</div>
-					<label class="sell-field sell-field--wide sell-field--notes">
+					<label data-intake-field class="sell-field sell-field--wide sell-field--notes">
 						<span>{nt('ui181')}</span>
 						<textarea bind:value={notes} rows="3" placeholder={nt('ui182')}></textarea>
 					</label>
@@ -385,12 +390,24 @@
 
 		<footer class="sell-flow__footer">
 			{#if step === 1}
-				<button type="button" class="sell-flow__back" onclick={goBack} disabled={submitting}>
+				<button
+					type="button"
+					class="sell-flow__back"
+					data-intake-back
+					onclick={goBack}
+					disabled={submitting}
+				>
 					<ArrowLeft size={18} strokeWidth={2.4} />
 					{nt('ui183')}
 				</button>
 			{/if}
-			<button type="button" class="sell-flow__next" onclick={goNext} disabled={submitting}>
+			<button
+				type="button"
+				class="sell-flow__next"
+				data-intake-next
+				onclick={goNext}
+				disabled={submitting}
+			>
 				{submitting ? nt('ui184') : step === 0 ? nt('ui185') : nt('ui186')}
 				<ArrowRight size={18} strokeWidth={2.4} />
 			</button>
@@ -832,51 +849,5 @@
 	.sell-flow--embedded .sell-flow__success {
 		min-height: 320px;
 		padding: 0;
-	}
-	@media (min-width: 768px) {
-		.sell-flow--embedded .sell-flow__header span {
-			font-size: var(--bc-text-label);
-		}
-		.sell-flow--embedded .sell-flow__intro h3 {
-			font-size: var(--bc-text-h4);
-			line-height: var(--bc-leading-h4);
-		}
-		.sell-flow--embedded .sell-flow__intro p {
-			font-size: var(--bc-text-prose);
-			line-height: var(--bc-leading-body-lg);
-		}
-		.sell-flow--embedded .sell-field > span,
-		.sell-flow--embedded .sell-fieldset legend {
-			color: var(--bc-ink);
-			font-size: var(--bc-text-control);
-			line-height: var(--bc-leading-label);
-		}
-		.sell-flow--embedded .sell-field input,
-		.sell-flow--embedded .sell-field textarea {
-			border-color: var(--bc-route-pill-border);
-			background: var(--bc-surface);
-		}
-		.sell-flow--embedded .sell-field input {
-			height: var(--bc-control-height-primary);
-		}
-		.sell-flow--embedded .sell-field input::placeholder,
-		.sell-flow--embedded .sell-field textarea::placeholder {
-			color: var(--bc-copy);
-			opacity: 1;
-		}
-		.sell-flow--embedded .sell-brand-rail {
-			gap: var(--bc-space-2);
-		}
-		.sell-flow--embedded .sell-brand-rail button {
-			min-height: var(--bc-control-height-standard);
-			border-radius: var(--bc-radius-md);
-		}
-		.sell-flow--embedded .sell-brand-rail button:not(.active) {
-			background: var(--bc-bg-strong);
-		}
-		.sell-flow--embedded .sell-flow__next {
-			min-height: var(--bc-control-height-primary);
-			border-radius: var(--bc-radius-control);
-		}
 	}
 </style>

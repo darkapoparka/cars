@@ -5,6 +5,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import type { AuxeroVehicleDetailData } from '$lib/server/vehicle-detail';
 	import { site } from '$lib/config/site';
+	import { vehicleInformationCopy, vehiclePurchaseCopy } from '$lib/content/vehicle-information';
 	import { estimateFinance } from '$lib/domain/finance';
 	import Action from '$lib/components/common/Action.svelte';
 	let {
@@ -29,71 +30,63 @@
 			: null
 	);
 	const money = (value: number) => formatMoney(value, english ? 'en' : 'bg');
+	const copy = $derived(vehiclePurchaseCopy[english ? 'en' : 'bg']);
+	const informationCopy = $derived(vehicleInformationCopy[english ? 'en' : 'bg']);
 </script>
 
-<section class="purchase-panel" aria-label={english ? 'Price and viewing' : 'Цена и оглед'}>
+<section class="purchase-panel" aria-label={copy.label}>
 	<Tabs.Root value="cash">
-		<Tabs.List class="purchase-tabs" aria-label={english ? 'Payment options' : 'Начин на плащане'}>
-			<Tabs.Trigger value="cash" class="purchase-tab"
-				>{english ? 'Cash price' : 'В брой'}</Tabs.Trigger
-			>
+		<Tabs.List class="purchase-tabs" aria-label={copy.paymentOptions}>
+			<Tabs.Trigger value="cash" class="purchase-tab">{copy.cash}</Tabs.Trigger>
 			{#if estimate}<Tabs.Trigger value="finance" class="purchase-tab"
-					>{english ? 'Financing' : 'Финансиране'}</Tabs.Trigger
+					>{copy.financing}</Tabs.Trigger
 				>{/if}
 		</Tabs.List>
 		<Tabs.Content value="cash" class="purchase-content">
 			<div class="purchase-price">
-				<span>{english ? 'Vehicle price' : 'Цена на автомобила'}</span><strong
-					>{detail.priceLabel}</strong
-				>
+				<span>{copy.price}</span><strong>{detail.priceLabel}</strong>
 			</div>
 			{#if !english && detail.priceBgn}<p class="purchase-secondary-price">
 					{detail.priceBgn}
 				</p>{/if}
 			{#if estimate}<a class="purchase-finance-link" href="#vehicle-finance"
-					>{money(estimate.monthly)}{english
-						? '/mo. · Calculate payment'
-						: '/мес. · Изчисли вноска'}<ArrowRight size={16} aria-hidden="true" /></a
+					>{money(estimate.monthly)}{copy.monthlyUnit} · {copy.calculatePayment}<ArrowRight
+						size={16}
+						aria-hidden="true"
+					/></a
 				>{/if}
 		</Tabs.Content>
 		{#if estimate}<Tabs.Content value="finance" class="purchase-content">
 				<div class="purchase-price">
-					<span>{english ? 'Illustrative monthly payment' : 'Ориентировъчна месечна вноска'}</span
-					><strong>{money(estimate.monthly)}<small>{english ? '/mo.' : '/мес.'}</small></strong>
+					<span>{copy.monthly}</span><strong
+						>{money(estimate.monthly)}<small>{copy.monthlyUnit}</small></strong
+					>
 				</div>
 				<dl class="purchase-terms">
 					<div>
-						<dt>{english ? 'Term' : 'Срок'}</dt>
-						<dd>{site.finance.months} {english ? 'months' : 'месеца'}</dd>
+						<dt>{copy.term}</dt>
+						<dd>{site.finance.months} {copy.months}</dd>
 					</div>
 					<div>
-						<dt>{english ? 'Down payment' : 'Първоначална вноска'}</dt>
+						<dt>{copy.deposit}</dt>
 						<dd>{site.finance.downPaymentPercent}%</dd>
 					</div>
 					<div>
-						<dt>{english ? 'Annual interest' : 'Годишна лихва'}</dt>
+						<dt>{copy.interest}</dt>
 						<dd>{site.finance.annualRate}%</dd>
 					</div>
 				</dl>
 				<a class="purchase-finance-link" href="#vehicle-finance"
-					>{english ? 'Adjust the calculation' : 'Промени изчислението'}<ArrowRight
-						size={16}
-						aria-hidden="true"
-					/></a
+					>{copy.adjust}<ArrowRight size={16} aria-hidden="true" /></a
 				>
 				<p class="purchase-note">
-					{english
-						? 'Illustrative calculation, not a credit offer. Fees and insurance are not included.'
-						: 'Примерно изчисление, не кредитна оферта. Без такси и застраховки.'}
+					{copy.disclosure}
 				</p>
 			</Tabs.Content>{/if}
 	</Tabs.Root>
 	<div class="purchase-actions">
 		<Action size="primary" onclick={oninquiry}
-			>{english ? 'Enquire about this car' : 'Запитване за автомобила'}<ArrowRight
-				size={18}
-				aria-hidden="true"
-			/></Action
+			>{informationCopy.inquiry}<ArrowRight size={18} aria-hidden="true" /></Action
 		>
 		<Action href={site.contact.phoneHref} variant="strong"
 			><Phone size={18} aria-hidden="true" />{site.contact.phone}</Action

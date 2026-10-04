@@ -1,0 +1,184 @@
+{
+	"date": "2026-10-04",
+	"source": "src/lib/components/detail/VehicleDetailPage.svelte",
+	"sourceSha256": "e1cdec72cc240c4fc6f1e45561fdfa9a9a28ff45d155a1bc9dd74a7834bfe2f5",
+	"runtime": "Node 24.21.0",
+	"checks": {
+		"svelte": {
+			"errors": 0,
+			"warnings": 0
+		},
+		"scopedEslint": "pass",
+		"scopedPrettier": "pass",
+		"productionBuild": "pass"
+	},
+	"buildLogSha256": "7224d457461e0c5de3677c59a6015c6590fe9a1390a3209e2e4e124824e45549",
+	"desktop": [
+		{
+			"locale": "bg",
+			"boxes": [
+				{
+					"bottom": 2599.734375,
+					"height": 290,
+					"top": 2309.734375
+				},
+				{
+					"bottom": 2839.734375,
+					"height": 220,
+					"top": 2619.734375
+				}
+			],
+			"overflow": false,
+			"width": 768
+		},
+		{
+			"locale": "en",
+			"boxes": [
+				{
+					"bottom": 2507.046875,
+					"height": 290,
+					"top": 2217.046875
+				},
+				{
+					"bottom": 2747.046875,
+					"height": 220,
+					"top": 2527.046875
+				}
+			],
+			"overflow": false,
+			"width": 768
+		},
+		{
+			"locale": "bg",
+			"boxes": [
+				{
+					"bottom": 1955.5625,
+					"height": 290,
+					"top": 1665.5625
+				},
+				{
+					"bottom": 1955.5625,
+					"height": 290,
+					"top": 1665.5625
+				}
+			],
+			"overflow": false,
+			"width": 1024
+		},
+		{
+			"locale": "en",
+			"boxes": [
+				{
+					"bottom": 1925.875,
+					"height": 290,
+					"top": 1635.875
+				},
+				{
+					"bottom": 1925.875,
+					"height": 290,
+					"top": 1635.875
+				}
+			],
+			"overflow": false,
+			"width": 1024
+		},
+		{
+			"locale": "bg",
+			"boxes": [
+				{
+					"bottom": 1687.125,
+					"height": 220,
+					"top": 1467.125
+				},
+				{
+					"bottom": 1687.125,
+					"height": 220,
+					"top": 1467.125
+				}
+			],
+			"overflow": false,
+			"width": 1440
+		},
+		{
+			"locale": "en",
+			"boxes": [
+				{
+					"bottom": 1672.296875,
+					"height": 234.859375,
+					"top": 1437.4375
+				},
+				{
+					"bottom": 1672.296875,
+					"height": 234.859375,
+					"top": 1437.4375
+				}
+			],
+			"overflow": false,
+			"width": 1440
+		},
+		{
+			"locale": "bg",
+			"boxes": [
+				{
+					"bottom": 1687.125,
+					"height": 220,
+					"top": 1467.125
+				},
+				{
+					"bottom": 1687.125,
+					"height": 220,
+					"top": 1467.125
+				}
+			],
+			"overflow": false,
+			"width": 1920
+		},
+		{
+			"locale": "en",
+			"boxes": [
+				{
+					"bottom": 1672.296875,
+					"height": 234.859375,
+					"top": 1437.4375
+				},
+				{
+					"bottom": 1672.296875,
+					"height": 234.859375,
+					"top": 1437.4375
+				}
+			],
+			"overflow": false,
+			"width": 1920
+		}
+	],
+	"expandedEquipment": {
+		"width": 1440,
+		"locale": "bg",
+		"items": 18,
+		"equipmentHeight": 386,
+		"bannerHeight": 386,
+		"edgesMatch": true
+	},
+	"mobile": {
+		"cases": [
+			{
+				"width": 320,
+				"height": 900,
+				"changedPixels": 3186
+			},
+			{
+				"width": 390,
+				"height": 900,
+				"changedPixels": 368
+			}
+		],
+		"interpretation": "Independent mobile PDP unchanged; visual comparison passes. Pixel differences are confined to vehicle-photo rasterization, so exact pixel equality is not claimed."
+	},
+	"heroStudy": {
+		"prototypeOnly": true,
+		"variants": ["Tinted frame", "Continuous grey", "White band"],
+		"pages": ["Home", "Inventory", "Contact", "FAQ"],
+		"fragmentBytes": 270843
+	},
+	"integration": "Pending shared Git index lock coordination; no source promotion or deployment."
+}

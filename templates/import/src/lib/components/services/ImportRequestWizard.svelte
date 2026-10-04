@@ -280,7 +280,12 @@
 	};
 </script>
 
-<div class="bc-import-wizard" class:bc-import-wizard--embedded={embedded} bind:this={wizardRoot}>
+<div
+	class="bc-import-wizard"
+	class:bc-import-wizard--embedded={embedded}
+	class:desktop-intake={embedded}
+	bind:this={wizardRoot}
+>
 	{#if submitted}
 		<div class="bc-import-wizard__success" role="status">
 			<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
@@ -291,7 +296,7 @@
 			<button type="button" onclick={requestClose}>{nt('ui33')}</button>
 		</div>
 	{:else}
-		<header class="bc-import-wizard__header">
+		<header class="bc-import-wizard__header" data-intake-header>
 			<div>
 				<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
 				<h2>{stepLabels[step]}</h2>
@@ -316,7 +321,7 @@
 
 		<div class="bc-import-wizard__body">
 			{#if step === 0}
-				<div class="bc-import-wizard__intro">
+				<div class="bc-import-wizard__intro" data-intake-intro>
 					<h3>{nt('ui217')}</h3>
 					<p>{nt('ui218')}</p>
 				</div>
@@ -342,7 +347,7 @@
 						</button>
 					</div>{/if}
 
-				<div class="bc-import-wizard__fields">
+				<div class="bc-import-wizard__fields" data-intake-fields>
 					{#if intent === 'listing'}
 						<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
 							<span>{nt('ui222')}</span>
@@ -357,7 +362,7 @@
 					{/if}
 					<fieldset class="bc-import-wizard__field--wide">
 						<legend>{nt('ui224')}</legend>
-						<div class="bc-import-wizard__country-grid">
+						<div class="bc-import-wizard__country-grid" data-intake-choices>
 							{#each importCountries as country (country.value)}
 								<button
 									type="button"
@@ -412,11 +417,11 @@
 					{/if}
 				</div>
 			{:else if step === 1}
-				<div class="bc-import-wizard__intro">
+				<div class="bc-import-wizard__intro" data-intake-intro>
 					<h3>{nt('ui227')}</h3>
 					<p>{nt('ui228')}</p>
 				</div>
-				<div class="bc-import-wizard__fields">
+				<div class="bc-import-wizard__fields" data-intake-fields>
 					<label for={fieldId('year')}>
 						<span>{nt('ui130')}</span>
 						<input
@@ -440,7 +445,7 @@
 					</label>
 					<fieldset class="bc-import-wizard__field--wide">
 						<legend>{nt('ui230')}</legend>
-						<div class="bc-import-wizard__chips">
+						<div class="bc-import-wizard__chips" data-intake-choices>
 							{#each timeframeOptions as option (option)}
 								<button
 									type="button"
@@ -454,7 +459,7 @@
 					</fieldset>
 					<fieldset class="bc-import-wizard__field--wide">
 						<legend>{nt('ui61')}</legend>
-						<div class="bc-import-wizard__chips">
+						<div class="bc-import-wizard__chips" data-intake-choices>
 							{#each importFuels as option (option)}
 								<button
 									type="button"
@@ -468,7 +473,7 @@
 					</fieldset>
 					<fieldset class="bc-import-wizard__field--wide">
 						<legend>{nt('ui231')}</legend>
-						<div class="bc-import-wizard__chips">
+						<div class="bc-import-wizard__chips" data-intake-choices>
 							{#each importTransmissions as option (option)}
 								<button
 									type="button"
@@ -487,12 +492,12 @@
 					</label>
 				</div>
 			{:else}
-				<div class="bc-import-wizard__intro">
+				<div class="bc-import-wizard__intro" data-intake-intro>
 					<h3>{nt('ui41')}</h3>
 					<p>{nt('ui234')}</p>
 					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
 				</div>
-				<div class="bc-import-wizard__fields">
+				<div class="bc-import-wizard__fields" data-intake-fields>
 					<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
 						<span>{nt('ui178')}</span>
 						<input
@@ -537,12 +542,24 @@
 		{#if submitError}<p class="bc-import-wizard__error" role="alert">{submitError}</p>{/if}
 		<footer class="bc-import-wizard__nav" aria-busy={submitting}>
 			{#if step > 0}
-				<button type="button" class="bc-import-wizard__back" onclick={goBack} disabled={submitting}>
+				<button
+					type="button"
+					class="bc-import-wizard__back"
+					data-intake-back
+					onclick={goBack}
+					disabled={submitting}
+				>
 					<ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />
 					{nt('ui183')}
 				</button>
 			{/if}
-			<button type="button" class="bc-import-wizard__next" disabled={submitting} onclick={goNext}>
+			<button
+				type="button"
+				class="bc-import-wizard__next"
+				data-intake-next
+				disabled={submitting}
+				onclick={goNext}
+			>
 				{submitting ? nt('ui184') : step < stepLabels.length - 1 ? nt('ui185') : nt('ui237')}
 				<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
 			</button>
@@ -1125,56 +1142,5 @@
 	.bc-import-wizard--embedded .bc-import-wizard__success {
 		min-height: 320px;
 		align-content: center;
-	}
-	@media (min-width: 768px) {
-		.bc-import-wizard--embedded .bc-import-wizard__header p {
-			font-size: var(--bc-text-label);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__intro h3 {
-			font-size: var(--bc-text-h4);
-			line-height: var(--bc-leading-h4);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__intro p {
-			font-size: var(--bc-text-prose);
-			line-height: var(--bc-leading-body-lg);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields span,
-		.bc-import-wizard--embedded .bc-import-wizard__fields legend {
-			color: var(--bc-ink);
-			font-size: var(--bc-text-control);
-			line-height: var(--bc-leading-label);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields input,
-		.bc-import-wizard--embedded .bc-import-wizard__fields select,
-		.bc-import-wizard--embedded .bc-import-wizard__fields textarea {
-			border-color: var(--bc-route-pill-border);
-			background: var(--bc-surface);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields input,
-		.bc-import-wizard--embedded .bc-import-wizard__fields select {
-			height: var(--bc-control-height-primary);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__fields input::placeholder,
-		.bc-import-wizard--embedded .bc-import-wizard__fields textarea::placeholder {
-			color: var(--bc-copy);
-			opacity: 1;
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__country-grid,
-		.bc-import-wizard--embedded .bc-import-wizard__chips {
-			gap: var(--bc-space-2);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__country-grid button,
-		.bc-import-wizard--embedded .bc-import-wizard__chips button {
-			min-height: var(--bc-control-height-standard);
-			border-radius: var(--bc-radius-md);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__country-grid button:not(.active),
-		.bc-import-wizard--embedded .bc-import-wizard__chips button:not(.active) {
-			background: var(--bc-bg-strong);
-		}
-		.bc-import-wizard--embedded .bc-import-wizard__next {
-			min-height: var(--bc-control-height-primary);
-			border-radius: var(--bc-radius-control);
-		}
 	}
 </style>

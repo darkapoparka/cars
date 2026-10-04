@@ -188,6 +188,13 @@
 		display: none;
 	}
 	@media (min-width: 768px) {
+		.finance-estimator__banner {
+			border-radius: var(--bc-desktop-media-radius);
+		}
+		.site-field {
+			grid-row: span 2;
+			grid-template-rows: subgrid;
+		}
 		.finance-estimator--sidebar .finance-estimator__term select {
 			grid-column: 1;
 			grid-row: 2;

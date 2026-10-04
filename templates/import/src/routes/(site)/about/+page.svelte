@@ -60,6 +60,9 @@
 		{/snippet}
 		{#snippet desktopActions()}
 			<DesktopHeroActions>
+				{#snippet secondaryActions()}
+					<SocialLinks links={data.site.socials} tone="glass" />
+				{/snippet}
 				<Action href={about.hero.actions?.[0]?.href ?? '/inventory'} size="primary"
 					>{desktopCopy[data.locale].aboutCars}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
@@ -67,9 +70,6 @@
 					>{desktopCopy[data.locale].aboutContact}</Action
 				>
 			</DesktopHeroActions>
-		{/snippet}
-		{#snippet desktopSecondaryActions()}
-			<SocialLinks links={data.site.socials} tone="glass" />
 		{/snippet}
 	</PageIntro>
 	<div class="site-mobile-only">

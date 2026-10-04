@@ -76,7 +76,7 @@ test('About opens with the team and retains accessible social destinations', asy
 	await expect(page.locator('.about-team article')).toHaveCount(3);
 	const socials = page.locator(
 		info.project.name === 'desktop'
-			? '.site-intro .social-links a:visible'
+			? '.desktop-hero-action-panel .social-links a:visible'
 			: '.about-socials .social-links a:visible'
 	);
 	if (info.project.name === 'desktop')
@@ -109,9 +109,12 @@ test('Contact pairs the framed location with a usable form and reflows at narrow
 	expect(Math.abs(bounds!.x + bounds!.width - parent!.x - parent!.width)).toBeLessThan(1);
 	await expect(page.locator('#contact-details .contact-intake-grid')).toBeVisible();
 	await expect(page.locator('.contact-channel')).toHaveCount(0);
-	await expect(page.locator('.site-intro a[href^="tel:"]')).toHaveCount(1);
-	await expect(page.locator('.site-intro a[href="#contact-enquiry"]')).toBeVisible();
-	await expect(page.locator('.site-intro__desktop-secondary a')).toHaveCount(2);
+	const heroPanel = page.locator('.desktop-hero-action-panel .desktop-discovery-panel');
+	await expect(heroPanel).toBeVisible();
+	await expect(heroPanel.locator('a[href^="tel:"]')).toHaveCount(1);
+	await expect(heroPanel.locator('a[href="#contact-enquiry"]')).toBeVisible();
+	await expect(heroPanel.locator('.contact-hero-details')).toBeVisible();
+	await expect(page.locator('.desktop-hero-actions__secondary a')).toHaveCount(2);
 	expect(
 		await page.locator('.site-intro__content').evaluate((node) => getComputedStyle(node).textAlign)
 	).toBe('center');

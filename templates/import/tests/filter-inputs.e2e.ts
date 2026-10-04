@@ -104,12 +104,19 @@ test('desktop categories stay readable and stationary across viewport sizes', as
 				.evaluateAll((nodes) =>
 					nodes.map((node) => ({
 						text: node.textContent,
+						compactAction: node.matches('.inventory-all__apply'),
 						size: parseFloat(getComputedStyle(node).fontSize),
+						height: node.getBoundingClientRect().height,
 						overflows: node.scrollWidth > node.clientWidth + 1
 					}))
 				);
 			for (const metric of metrics) {
-				expect(metric.size, `${width}: ${metric.text}`).toBeGreaterThanOrEqual(20);
+				if (metric.compactAction) {
+					expect(metric.size, `${width}: ${metric.text}`).toBe(18);
+					expect(metric.height, `${width}: ${metric.text}`).toBeGreaterThanOrEqual(48);
+				} else {
+					expect(metric.size, `${width}: ${metric.text}`).toBeGreaterThanOrEqual(20);
+				}
 				expect(metric.overflows, `${width}: ${metric.text}`).toBe(false);
 			}
 		}

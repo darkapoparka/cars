@@ -271,6 +271,8 @@
 		}
 		.filter-group__search {
 			min-height: var(--bc-control-height-primary);
+			border-color: var(--bc-border-strong);
+			border-radius: var(--bc-desktop-control-radius);
 			background: var(--bc-surface);
 		}
 		.filter-group__options {
@@ -282,11 +284,20 @@
 			border-color: transparent;
 			background: transparent;
 		}
-		.filter-group__option:hover,
+		.filter-group__option:hover {
+			border-color: transparent;
+			background: var(--bc-surface-hover);
+			box-shadow: none;
+		}
 		.filter-group__option:has(input:checked) {
 			border-color: transparent;
-			background: var(--bc-bg-strong);
+			background: var(--bc-accent-tint);
+			color: var(--bc-accent);
 			box-shadow: none;
+		}
+		.filter-group__option:has(input:focus-visible) {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: 2px;
 		}
 	}
 </style>

@@ -83,6 +83,19 @@
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-text-entry);
 		}
+		summary:hover {
+			background: var(--bc-surface-hover);
+		}
+		summary:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: -3px;
+		}
+		summary span {
+			flex-shrink: 0;
+			width: var(--bc-space-6);
+			text-align: center;
+			color: var(--bc-copy);
+		}
 		p {
 			font-size: var(--bc-text-prose);
 		}

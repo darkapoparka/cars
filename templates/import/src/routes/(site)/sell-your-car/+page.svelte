@@ -6,7 +6,7 @@
 		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import type { PageProps } from './$types';
 	import PageIntro from '$lib/components/common/PageIntro.svelte';
-	import ProcessSteps from '$lib/components/common/ProcessSteps.svelte';
+	import ServiceIntakeFrame from '$lib/components/services/ServiceIntakeFrame.svelte';
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import Action from '$lib/components/common/Action.svelte';
 	import SellCarWizard from '$lib/components/sell-your-car/SellCarWizard.svelte';
@@ -39,47 +39,35 @@
 			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 			description={copy.heroDescription}
 		/>
-		<section class="site-section">
-			<div class="site-container sell-page">
-				<div class="site-panel site-stack service-intake">
-					<ModeTabs
-						bind:value={mode}
-						surface="light"
-						label={copy.identification}
-						idPrefix="desktop-sell-mode"
-						options={[
-							{ value: 'vin', label: copy.vin, panelId: 'desktop-sell-intake' },
-							{
-								value: 'manual',
-								label: copy.makeModel,
-								panelId: 'desktop-sell-intake'
-							}
-						]}
-					/>
-					<div
-						id="desktop-sell-intake"
-						role="tabpanel"
-						aria-labelledby={'desktop-sell-mode-' + mode}
-					>
-						{#key mode + session}<SellCarWizard
-								initial={{ vin: data.vin }}
-								manualEntry={mode === 'manual'}
-								embedded
-								onclose={() => (session += 1)}
-							/>{/key}
-					</div>
-				</div>
-				<div class="service-process">
-					<h2 class="site-heading">
-						{copy.process}
-					</h2>
-					<ProcessSteps steps={data.steps} horizontal /><Action
-						href={data.site.contact.phoneHref}
-						variant="secondary">{copy.contact} · {data.site.contact.phone}</Action
-					>
-				</div>
+		<ServiceIntakeFrame
+			steps={data.steps}
+			processTitle={copy.process}
+			actionHref={data.site.contact.phoneHref}
+			actionLabel={copy.contact + ' · ' + data.site.contact.phone}
+		>
+			<ModeTabs
+				bind:value={mode}
+				surface="light"
+				label={copy.identification}
+				idPrefix="desktop-sell-mode"
+				options={[
+					{ value: 'vin', label: copy.vin, panelId: 'desktop-sell-intake' },
+					{
+						value: 'manual',
+						label: copy.makeModel,
+						panelId: 'desktop-sell-intake'
+					}
+				]}
+			/>
+			<div id="desktop-sell-intake" role="tabpanel" aria-labelledby={'desktop-sell-mode-' + mode}>
+				{#key mode + session}<SellCarWizard
+						initial={{ vin: data.vin }}
+						manualEntry={mode === 'manual'}
+						embedded
+						onclose={() => (session += 1)}
+					/>{/key}
 			</div>
-		</section>
+		</ServiceIntakeFrame>
 	</div>
 	<div class="site-mobile-only">
 		<h1 class="sr-only">{title}</h1>
@@ -100,25 +88,5 @@
 		padding: var(--bc-space-4);
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-surface);
-	}
-	.sell-page {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr);
-		gap: var(--bc-section-sm);
-	}
-	.service-intake {
-		width: min(100%, 860px);
-		margin-inline: auto;
-		padding: var(--bc-space-8);
-	}
-	.service-process {
-		display: grid;
-		gap: var(--bc-space-6);
-	}
-	.service-process > h2 {
-		text-align: center;
-	}
-	.service-process > :global(.site-action) {
-		justify-self: center;
 	}
 </style>

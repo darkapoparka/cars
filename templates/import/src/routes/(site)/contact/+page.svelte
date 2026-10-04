@@ -36,6 +36,9 @@
 		>
 			{#snippet desktopActions()}
 				<DesktopHeroActions>
+					{#snippet secondaryActions()}
+						<ContactHeroDetails site={data.site} locale={data.locale} />
+					{/snippet}
 					<Action href={data.site.contact.phoneHref} size="primary"
 						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
 					>
@@ -43,9 +46,6 @@
 						>{desktopCopy[data.locale].contactEnquiry}</Action
 					>
 				</DesktopHeroActions>
-			{/snippet}
-			{#snippet desktopSecondaryActions()}
-				<ContactHeroDetails site={data.site} locale={data.locale} />
 			{/snippet}
 		</PageIntro>
 		<section class="site-section contact-intake" id="contact-details" aria-label={copy.details}>

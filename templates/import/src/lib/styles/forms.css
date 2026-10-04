@@ -95,12 +95,124 @@
 	.site-field input,
 	.site-field select,
 	.site-field textarea {
-		border-color: var(--bc-border);
+		border-color: var(--bc-border-strong);
 		background: var(--bc-surface);
+	}
+	.site-field :is(input, select, textarea):focus-visible {
+		outline: 2px solid var(--bc-focus);
+		outline-offset: 2px;
 	}
 	.site-field input::placeholder,
 	.site-field textarea::placeholder {
 		color: var(--bc-copy);
+	}
+
+	/* Both embedded service wizards share native form roles; their mobile
+	   composition and state controllers stay with the individual components. */
+	.site-shell .site-desktop-only .desktop-intake {
+		min-height: 0;
+	}
+	.site-shell .desktop-intake [data-intake-header] :is(p, span) {
+		font-size: var(--bc-text-label);
+		font-weight: var(--bc-weight-control);
+	}
+	.site-shell .site-desktop-only .desktop-intake [data-intake-header] h2,
+	.site-shell .site-desktop-only .desktop-intake [data-intake-intro] h3 {
+		font-family: var(--bc-font-body);
+		font-size: var(--bc-desktop-card-heading);
+		line-height: var(--bc-leading-h4);
+	}
+	.site-shell .desktop-intake [data-intake-intro] p {
+		font-size: var(--bc-text-prose);
+		line-height: var(--bc-leading-body-lg);
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields] > label, [data-intake-fields] > fieldset) {
+		gap: var(--bc-space-2);
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is(
+			[data-intake-field] > span,
+			[data-intake-field] legend,
+			[data-intake-fields] span,
+			[data-intake-fields] legend
+		) {
+		color: var(--bc-ink);
+		font-size: var(--bc-text-label);
+		line-height: var(--bc-leading-label);
+		font-weight: var(--bc-weight-control);
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields])
+		:is(input, select, textarea) {
+		min-height: var(--bc-control-height-primary);
+		border: 1px solid var(--bc-border-strong);
+		border-radius: var(--bc-desktop-control-radius);
+		padding: var(--bc-space-2) var(--bc-space-3);
+		background: var(--bc-control);
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+		line-height: var(--bc-leading-control);
+		box-shadow: none;
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields])
+		textarea {
+		min-height: 104px;
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields])
+		:is(input, textarea)::placeholder {
+		color: var(--bc-copy);
+		opacity: 1;
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields])
+		:is(input, select, textarea):focus-visible {
+		outline: 2px solid var(--bc-focus);
+		outline-offset: 2px;
+	}
+	.site-shell .desktop-intake [data-intake-choices] {
+		gap: var(--bc-space-2);
+		flex-wrap: wrap;
+	}
+	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button {
+		min-height: var(--bc-control-height-primary);
+		border: 1px solid transparent;
+		border-radius: var(--bc-desktop-control-radius);
+		padding-inline: var(--bc-space-3);
+		background: var(--bc-control);
+		color: var(--bc-ink);
+		font-size: var(--bc-text-control);
+		font-weight: var(--bc-weight-control);
+	}
+	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button:hover {
+		background: var(--bc-surface-hover);
+	}
+	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button[aria-pressed='true'] {
+		background: var(--bc-accent-tint);
+		color: var(--bc-accent);
+	}
+	.site-shell .site-desktop-only .desktop-intake :is([data-intake-next], [data-intake-back]) {
+		min-height: var(--bc-control-height-primary);
+		border-radius: var(--bc-desktop-control-radius);
+		font-weight: var(--bc-weight-action);
+	}
+	.site-shell .site-desktop-only .desktop-intake [data-intake-next] {
+		font-size: var(--bc-text-cta);
 	}
 }
 @media (max-width: 479px) {

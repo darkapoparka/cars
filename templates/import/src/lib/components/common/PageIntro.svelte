@@ -135,12 +135,17 @@
 			--action-glass-hover-border: var(--bc-desktop-hero-copy);
 			background: var(--bc-desktop-hero-surface);
 			color: var(--bc-desktop-hero-ink);
+			width: min(calc(100% - var(--bc-page-x) * 2), var(--bc-container-page));
+			margin-inline: auto;
+			border-radius: var(--bc-desktop-card-radius);
+			overflow: hidden;
 			padding-block: var(--bc-desktop-hero-padding-start) var(--bc-desktop-hero-padding-end);
 			text-align: center;
 		}
 		.site-intro__content {
 			display: grid;
 			gap: var(--bc-desktop-hero-gap);
+			width: calc(100% - var(--bc-space-6) * 2);
 		}
 		.site-intro--image::after {
 			background: linear-gradient(180deg, rgb(9 10 11 / 0.62), rgb(9 10 11 / 0.72));
@@ -152,6 +157,7 @@
 			container-type: inline-size;
 		}
 		.site-intro--image:not(.site-intro--cars) {
+			--bc-desktop-hero-copy: var(--bc-white);
 			color: var(--bc-white);
 		}
 		h1 {

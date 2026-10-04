@@ -31,13 +31,15 @@
 			>{/snippet}</MobilePageHero
 	>
 	<article class="site-container article-page">
-		<div class="site-desktop-only">
-			<Action href={'/blog' + (english ? '?lang=en' : '')} variant="quiet"
-				>← {copy.allGuides}</Action
-			>
-		</div>
-		<h1>{data.post.title}</h1>
-		<p class="article-meta">{data.post.category} · {data.post.date}</p>
+		<header class="article-hero">
+			<div class="site-desktop-only">
+				<Action href={'/blog' + (english ? '?lang=en' : '')} variant="quiet"
+					>← {copy.allGuides}</Action
+				>
+			</div>
+			<h1>{data.post.title}</h1>
+			<p class="article-meta">{data.post.category} · {data.post.date}</p>
+		</header>
 		<img
 			class="article-cover"
 			src={assetHref(data.post.image)}
@@ -59,6 +61,9 @@
 </main>
 
 <style>
+	.article-hero {
+		display: contents;
+	}
 	.article-page {
 		max-width: var(--bc-container-narrow);
 		padding-block: var(--bc-section-sm);
@@ -92,6 +97,13 @@
 		gap: var(--bc-space-6);
 	}
 	@media (min-width: 768px) {
+		.article-hero {
+			display: block;
+			padding: var(--bc-space-6);
+			margin-bottom: var(--bc-space-6);
+			border-radius: var(--bc-desktop-media-radius);
+			background: var(--bc-desktop-hero-surface);
+		}
 		.article-page {
 			margin-block: var(--bc-space-8);
 			padding: var(--bc-space-8);

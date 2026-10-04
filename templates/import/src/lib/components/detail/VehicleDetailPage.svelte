@@ -6,6 +6,8 @@
 	import type { AuxeroVehicleDetailData } from '$lib/server/vehicle-detail';
 	import type { AuxeroInventoryVehicleCard } from '$lib/domain/vehicle-card';
 	import { getGarageContext } from '$lib/state/garage.svelte';
+	import { vehicleInformationCopy } from '$lib/content/vehicle-information';
+	import { vehicleCardCopy } from '$lib/content/vehicle-card';
 	import Action from '$lib/components/common/Action.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import Modal from '$lib/components/common/Modal.svelte';
@@ -34,6 +36,9 @@
 		hydrated = true;
 	});
 	const garage = getGarageContext();
+	const copy = $derived(vehicleInformationCopy[english ? 'en' : 'bg']);
+	const cardCopy = $derived(vehicleCardCopy[english ? 'en' : 'bg']);
+	const equipmentTabs = $derived(detail.featureTabs.filter((tab) => tab.items.length));
 	let inquiryOpen = $state(false);
 </script>
 
@@ -54,8 +59,8 @@
 								class="detail-utility"
 								variant="secondary"
 								size="compact"
-								aria-label={english ? 'Save' : 'Запази'}
-								title={english ? 'Save' : 'Запази'}
+								aria-label={cardCopy.save.trim()}
+								title={cardCopy.save.trim()}
 								aria-pressed={garage.isFavorite(detail.slug)}
 								onclick={() => garage.toggleFavorite(detail.slug)}
 							>
@@ -63,41 +68,26 @@
 									size={18}
 									aria-hidden="true"
 									fill={garage.isFavorite(detail.slug) ? 'currentColor' : 'none'}
-								/><span class="detail-utility-label">{english ? 'Save' : 'Запази'}</span>
+								/><span class="detail-utility-label">{cardCopy.save.trim()}</span>
 							</Action>
 							<Action
 								class="detail-utility"
 								variant="secondary"
 								size="compact"
-								aria-label={english ? 'Compare' : 'Сравни'}
-								title={english ? 'Compare' : 'Сравни'}
+								aria-label={cardCopy.compare.trim()}
+								title={cardCopy.compare.trim()}
 								aria-pressed={garage.isCompared(detail.slug)}
 								onclick={() => garage.toggleCompare(detail.slug)}
 							>
 								<ArrowLeftRight size={18} aria-hidden="true" /><span class="detail-utility-label"
-									>{english ? 'Compare' : 'Сравни'}</span
+									>{cardCopy.compare.trim()}</span
 								>
 							</Action>
 						</div>
 					</header>
 					<VehicleGallery images={detail.galleryImages} title={detail.title} {english} />
-					<section class="site-panel detail-description-card">
-						<h2>{english ? 'Description' : 'Описание'}</h2>
-						<p class="detail-description">{detail.description}</p>
-					</section>
-					<div class="detail-information">
-						<VehicleFacts items={detail.overviewItems} {english} />
-						{#key detail.slug}
-							{#each detail.featureTabs.filter((tab) => tab.items.length) as tab (tab.label)}
-								<VehicleEquipment title={tab.label} items={tab.items} {english} />
-							{/each}
-						{/key}
-					</div>
 				</div>
-				<aside
-					class="detail-summary site-stack"
-					aria-label={english ? 'Price, financing and viewing' : 'Цена, финансиране и оглед'}
-				>
+				<aside class="detail-summary site-stack" aria-label={copy.summary}>
 					{#key detail.slug}<VehiclePurchasePanel
 							{detail}
 							{price}
@@ -116,13 +106,32 @@
 									(english ? '&lang=en' : '')}
 							/>{/key}
 					</div>
-					<VehicleDealerBanner {english} />
+					{#if !equipmentTabs.length}<VehicleDealerBanner {english} />{/if}
 				</aside>
+				<div class="detail-content-column site-stack">
+					<section class="site-panel detail-description-card">
+						<h2>{copy.description}</h2>
+						<p class="detail-description">{detail.description}</p>
+					</section>
+					<div class="detail-information">
+						<VehicleFacts items={detail.overviewItems} {english} />
+					</div>
+				</div>
+				{#if equipmentTabs.length}
+					<div class="detail-equipment-column">
+						{#key detail.slug}
+							{#each equipmentTabs as tab (tab.label)}
+								<VehicleEquipment title={tab.label} items={tab.items} {english} />
+							{/each}
+						{/key}
+					</div>
+					<div class="detail-dealer"><VehicleDealerBanner {english} /></div>
+				{/if}
 			</div>
 			{#if related.length}
 				<section class="site-section site-stack">
 					<h2 class="site-heading detail-related-title">
-						{english ? 'Similar cars' : 'Подобни автомобили'}
+						{copy.similar}
 					</h2>
 					<div class="detail-related">
 						{#each related as card (card.slug)}<VehicleCard {card} {english} />{/each}
@@ -132,11 +141,7 @@
 		</div>
 	{/if}
 </main>
-<Modal
-	bind:open={inquiryOpen}
-	title={english ? 'Enquire about this car' : 'Запитване за автомобила'}
-	description={detail.title}
->
+<Modal bind:open={inquiryOpen} title={copy.inquiry} description={detail.title}>
 	<LeadForm {english} source="vehicle-detail" vehicleSlug={detail.slug} />
 </Modal>
 
@@ -149,6 +154,31 @@
 		grid-template-columns: minmax(0, 1fr) minmax(300px, 370px);
 		align-items: start;
 		gap: var(--bc-space-8);
+		row-gap: var(--bc-space-6);
+	}
+	.detail-summary {
+		grid-column: 2;
+		grid-row: 1 / span 2;
+	}
+	.detail-content-column {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.detail-equipment-column {
+		grid-column: 1;
+		grid-row: 3;
+		display: grid;
+		align-self: stretch;
+		gap: var(--bc-space-6);
+	}
+	.detail-dealer {
+		grid-column: 2;
+		grid-row: 3;
+		display: grid;
+		align-self: stretch;
+	}
+	.detail-dealer :global(.dealer-banner) {
+		border-radius: var(--bc-desktop-card-radius);
 	}
 	.detail-heading {
 		display: flex;
@@ -213,8 +243,8 @@
 			display: none;
 		}
 		.detail-utilities :global(.detail-utility) {
-			width: var(--bc-control-height-compact);
-			min-height: var(--bc-control-height-compact);
+			width: var(--bc-control-height-primary);
+			min-height: var(--bc-control-height-primary);
 			padding: 0;
 		}
 	}
@@ -223,6 +253,19 @@
 			border-radius: var(--bc-desktop-card-radius);
 			box-shadow: var(--bc-editorial-shadow);
 		}
+		h1 {
+			font-family: var(--bc-font-body);
+			font-size: var(--bc-desktop-section-title);
+			line-height: var(--bc-leading-h4);
+			text-wrap: pretty;
+		}
+		.detail-utilities :global(.detail-utility) {
+			min-height: var(--bc-control-height-primary);
+		}
+		.detail-utilities :global(.detail-utility[aria-pressed='true']) {
+			background: var(--bc-accent-tint);
+			color: var(--bc-accent);
+		}
 		.detail-mobile {
 			display: none;
 		}
@@ -230,16 +273,36 @@
 			background: var(--bc-surface);
 		}
 	}
-	@media (max-width: 1023px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
 		.detail-grid {
-			grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+			grid-template-columns: minmax(0, 1fr);
 			gap: var(--bc-space-5);
+		}
+		.detail-summary {
+			grid-column: 1;
+			grid-row: auto;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-rows: auto 1fr;
+			align-items: start;
+		}
+		#vehicle-finance {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+		}
+		.detail-summary :global(.dealer-banner) {
+			grid-column: 1;
+			grid-row: 2;
+		}
+		.detail-content-column {
+			grid-row: auto;
+		}
+		.detail-equipment-column,
+		.detail-dealer {
+			grid-column: 1;
+			grid-row: auto;
 		}
 		.detail-related {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
-		}
-		h1 {
-			font-size: var(--bc-text-h4);
 		}
 	}
 	@media (max-width: 767.98px) {

@@ -240,12 +240,34 @@
 		border-bottom: 0;
 	}
 	@media (min-width: 768px) {
+		.compare-controls {
+			width: min(100%, var(--bc-container-narrow));
+			margin-inline: auto;
+			padding: var(--bc-space-6);
+			border: 1px solid var(--bc-border);
+			border-radius: var(--bc-desktop-card-radius);
+			background: var(--bc-card-bg);
+			box-shadow: var(--bc-editorial-shadow);
+		}
+		.compare-controls label {
+			max-width: none;
+		}
 		.compare-scroll {
 			border-radius: var(--bc-desktop-card-radius);
 			box-shadow: var(--bc-editorial-shadow);
 		}
+		thead th {
+			width: auto;
+		}
+		th:first-child {
+			width: 160px;
+			min-width: 160px;
+			max-width: 160px;
+		}
 		thead img {
+			height: 160px;
 			border-radius: var(--bc-desktop-media-radius);
+			background: var(--bc-card-media);
 		}
 		thead th a {
 			font-size: var(--bc-desktop-card-title);
@@ -255,6 +277,15 @@
 		td {
 			font-size: var(--bc-text-body);
 			line-height: var(--bc-leading-body);
+		}
+		thead :global(.site-action) {
+			--action-text: var(--bc-text-control);
+		}
+		tbody tr:first-child td {
+			font-size: var(--bc-desktop-card-price);
+			font-weight: var(--bc-weight-heading);
+			font-variant-numeric: tabular-nums;
+			white-space: nowrap;
 		}
 	}
 	@media (max-width: 767.98px) {

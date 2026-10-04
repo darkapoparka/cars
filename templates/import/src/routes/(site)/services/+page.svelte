@@ -115,7 +115,7 @@
 			{@const detail = data.directory.details[service.id]}
 			<ServiceCard {service} {detail} {english} priority={index < 3} />
 		{/each}
-		{#if !matching.length}<div class="service-empty">
+		{#if !matching.length}<div class="service-empty site-empty-state">
 				<p>{data.directory.empty}</p>
 				<Action variant="secondary" onclick={() => (query = '')}>{data.directory.clear}</Action>
 			</div>{/if}
@@ -176,6 +176,9 @@
 		}
 	}
 	@media (min-width: 768px) {
+		.service-empty p {
+			margin: 0;
+		}
 		.service-results-heading {
 			display: flex;
 		}

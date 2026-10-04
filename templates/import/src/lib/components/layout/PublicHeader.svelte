@@ -131,7 +131,7 @@
 
 <style>
 	.site-header {
-		background: var(--bc-desktop-hero-surface, var(--bc-mobile-dark));
+		background: var(--bc-desktop-canvas, var(--bc-mobile-dark));
 		color: var(--bc-desktop-hero-ink, var(--bc-white));
 	}
 	.site-header__inner {
@@ -215,7 +215,7 @@
 		min-width: 19px;
 		height: 19px;
 		padding-inline: 4px;
-		border: 2px solid var(--bc-desktop-hero-surface, var(--bc-mobile-dark));
+		border: 2px solid var(--bc-desktop-canvas, var(--bc-mobile-dark));
 		border-radius: var(--bc-radius-pill);
 		background: var(--bc-accent);
 		color: var(--bc-white);

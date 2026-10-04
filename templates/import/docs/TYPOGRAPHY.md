@@ -1,5 +1,7 @@
 # Typography contract
 
+The [desktop continuation](desktop-continuation-2026-10-04/README.md) applies the established roles to the vehicle title (28px/600 body font), Inventory sidebar heading (20px/600), embedded Import/Sell panel headings (20px/600), field labels (16px/400), values and choices (18px/400), and primary wizard actions (20px/400). Save/Compare, Inventory display menus and embedded intake fields/actions keep 48px targets. Compare prices retain their separate emphasized role and tabular numbers; Remove uses the compact action role. Desktop Financing pairs align label and control tracks through subgrid rather than reducing type.
+
 Public copy uses self-hosted Sofia Sans. Hero headings use Sofia Sans SemiCondensed; public desktop section and panel headings use the body font. Keep the admin font configuration isolated.
 
 The root layout bundles `src/lib/styles/fonts.css` with the shared styles, avoiding a separate blocking font CSS request. It references fonts through their public `/fonts/sofia-sans/` URLs; importing a stylesheet from `static/` can produce forbidden development asset paths. Latin and Cyrillic delivery subsets retain the original glyph metrics; the original full fonts remain the fallback for other scripts. The SIL OFL license and a compatible relative-path stylesheet stay beside all font files. To regenerate these assets and both stylesheet copies, install FontTools 4.66.1 and Brotli 1.2.0 in an isolated Python environment and run `python scripts/subset-fonts.py`. Python is only needed for asset maintenance.
