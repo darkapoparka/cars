@@ -53,7 +53,8 @@
 	}
 	.site-filter-trigger[data-active='true'] {
 		border-color: var(--bc-accent);
-		color: var(--bc-accent);
+		background: var(--bc-accent);
+		color: var(--bc-accent-contrast);
 	}
 	.filter-trigger-label {
 		min-width: 0;
@@ -85,12 +86,15 @@
 		}
 		.site-filter-trigger[data-active='true'] {
 			border-color: var(--bc-accent);
-			background: var(--bc-accent-soft);
+			background: var(--bc-accent);
 		}
 		.site-filter-trigger :global(svg) {
 			width: var(--bc-space-4);
 			height: var(--bc-space-4);
 			color: var(--bc-muted);
+		}
+		.site-filter-trigger[data-active='true'] :global(svg) {
+			color: var(--bc-accent-contrast);
 		}
 	}
 </style>

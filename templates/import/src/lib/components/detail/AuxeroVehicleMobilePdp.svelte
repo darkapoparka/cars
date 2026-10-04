@@ -1294,14 +1294,14 @@
 		}
 
 		.daynight-mobile-pdp__inquiry-submit:focus-visible {
-			background: #b9161c;
-			outline: 0;
+			background: var(--bc-accent-hover);
+			outline: 3px solid var(--bc-focus);
+			outline-offset: 2px;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-mobile-pdp__inquiry-submit:hover {
-				background: #b9161c;
-				outline: 0;
+				background: var(--bc-accent-hover);
 			}
 		}
 
@@ -1323,7 +1323,7 @@
 		}
 
 		.daynight-mobile-pdp__inquiry-status :global(svg) {
-			color: #b9161c;
+			color: var(--bc-accent);
 		}
 
 		.daynight-mobile-pdp__inquiry-call {

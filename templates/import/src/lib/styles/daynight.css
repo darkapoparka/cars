@@ -245,7 +245,7 @@ body[class*='auxero-template-'] .rating-box__bar {
 
 .bc-focus-ring:focus-visible {
 	outline-color: var(--bc-focus);
-	box-shadow: 0 0 0 4px rgb(185 22 28 / 0.24);
+	box-shadow: 0 0 0 4px color-mix(in srgb, var(--bc-focus) 24%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -73,8 +73,8 @@ export const isPrimaryNavActive = (pathname: string, item: (typeof mainNavigatio
 	);
 
 export const dealerTheme = {
-	accent: '#b9161c',
-	accentHover: '#8f1016',
+	accent: '#17191c',
+	accentHover: '#34383d',
 	accentContrast: '#ffffff'
 } as const;
 

@@ -360,7 +360,7 @@
 	@media (min-width: 768px) {
 		.daynight-card-price__amount {
 			border-radius: 8px;
-			background: rgb(185 22 28 / 0.12);
+			background: var(--bc-accent-tint);
 			color: var(--bc-ink);
 			padding: 1px 8px;
 			transition:
@@ -408,7 +408,7 @@
 			.daynight-card-soft-hover:focus-within {
 				background-color: var(--bc-white);
 				border-color: var(--bc-border-strong) !important;
-				box-shadow: inset 0 0 0 1px rgb(185 22 28 / 0.2) !important;
+				box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--bc-accent) 20%, transparent) !important;
 				transform: none;
 			}
 
@@ -435,7 +435,7 @@
 
 			.daynight-card-soft-hover:hover .daynight-card-price__amount,
 			.daynight-card-soft-hover:focus-within .daynight-card-price__amount {
-				background-color: rgb(185 22 28 / 0.14);
+				background-color: color-mix(in srgb, var(--bc-accent) 14%, transparent);
 				color: var(--bc-ink);
 			}
 		}

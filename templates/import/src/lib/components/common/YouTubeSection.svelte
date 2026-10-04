@@ -196,7 +196,7 @@
 		height: 44px;
 		margin: auto;
 		border-radius: 12px;
-		background: #ff0033;
+		background: var(--bc-accent);
 		color: #fff;
 	}
 	.daynight-youtube__watch {
@@ -226,7 +226,7 @@
 		outline-offset: -4px;
 	}
 	.daynight-youtube__poster:hover .daynight-youtube__play {
-		background: #d9002b;
+		background: var(--bc-accent-hover);
 	}
 	@media (max-width: 767px) {
 		.daynight-youtube {

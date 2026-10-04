@@ -425,8 +425,8 @@
 		color: var(--bc-ink);
 	}
 	.inventory-all__navigation button[aria-selected='true'] {
-		background: var(--bc-bg-strong);
-		color: var(--bc-ink);
+		background: var(--bc-accent);
+		color: var(--bc-accent-contrast);
 	}
 	.inventory-all__navigation button:focus-visible,
 	.inventory-all__clear-category:focus-visible {

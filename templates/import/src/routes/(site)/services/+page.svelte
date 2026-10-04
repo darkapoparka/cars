@@ -137,9 +137,9 @@
 		padding-inline: var(--bc-space-3);
 	}
 	.service-quick-filters :global(.site-action[aria-pressed='true']) {
-		background: var(--bc-accent-tint);
-		color: var(--bc-accent);
-		border-color: var(--bc-accent-tint);
+		background: var(--bc-accent);
+		color: var(--bc-accent-contrast);
+		border-color: var(--bc-accent);
 	}
 	.service-search {
 		width: 100%;

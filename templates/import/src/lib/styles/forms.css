@@ -203,8 +203,9 @@
 		background: var(--bc-surface-hover);
 	}
 	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button[aria-pressed='true'] {
-		background: var(--bc-accent-tint);
-		color: var(--bc-accent);
+		background: var(--bc-accent);
+		color: var(--bc-accent-contrast);
+		border-color: var(--bc-accent);
 	}
 	.site-shell .site-desktop-only .desktop-intake :is([data-intake-next], [data-intake-back]) {
 		min-height: var(--bc-control-height-primary);

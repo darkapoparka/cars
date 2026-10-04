@@ -991,7 +991,11 @@
 		left: 4%;
 		height: 118px;
 		border-radius: 999px;
-		background: radial-gradient(ellipse at center, rgb(227 6 47 / 0.32), transparent 68%);
+		background: radial-gradient(
+			ellipse at center,
+			color-mix(in srgb, var(--bc-accent) 32%, transparent),
+			transparent 68%
+		);
 		content: '';
 		filter: blur(2px);
 		opacity: 0.8;
@@ -1634,7 +1638,12 @@
 			overflow: hidden;
 			border-radius: 12px;
 			background:
-				linear-gradient(135deg, rgb(185 22 28 / 0.16), rgb(5 5 5 / 0.08)), var(--bc-surface);
+				linear-gradient(
+					135deg,
+					color-mix(in srgb, var(--bc-accent) 16%, transparent),
+					rgb(5 5 5 / 0.08)
+				),
+				var(--bc-surface);
 		}
 
 		.daynight-mobile-location-map::before,
