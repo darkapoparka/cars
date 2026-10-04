@@ -1,6 +1,6 @@
 @media (min-width: 1024px) {
   :root[data-site-kind="dealership"] {
-    scrollbar-gutter: auto;
+    scrollbar-gutter: stable;
   }
 
   :root[data-site-kind="dealership"] body {

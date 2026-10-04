@@ -6,6 +6,7 @@ import {
   publicSite,
 } from "@repo/marketplace/site-config";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
+import { DealerDesktopLogo } from "@repo/marketplace-ui/components/dealer-desktop-logo";
 import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
 import { normalizeSeoLocale } from "@repo/seo/metadata";
 import { ArrowUpRight, CarFront, Mail, MapPin, Phone } from "lucide-react";
@@ -117,8 +118,16 @@ function DesktopContact({
             <ArrowUpRight aria-hidden size={20} />
           </a>
         </section>
-        <div className={desktopStyles.contact}>
-          <section aria-labelledby="desktop-contact-form-title">
+        <div
+          className={desktopStyles.contact}
+          data-slot="desktop-contact-panel"
+        >
+          <section
+            aria-labelledby="desktop-contact-form-title"
+            className={desktopStyles.contactForm}
+            data-slot="desktop-contact-form-panel"
+          >
+            <DealerDesktopLogo className={desktopStyles.contactLogo} />
             <h2 id="desktop-contact-form-title">
               {text("Нека поговорим", "Get in touch")}
             </h2>
@@ -146,6 +155,7 @@ function DesktopContact({
           <aside
             aria-labelledby="desktop-contact-details-title"
             className={desktopStyles.details}
+            data-slot="desktop-contact-details"
           >
             <h2 id="desktop-contact-details-title">
               {text("Данни за контакт", "Contact details")}

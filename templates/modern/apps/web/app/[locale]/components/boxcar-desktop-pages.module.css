@@ -59,6 +59,21 @@
     min-width: 0;
     padding: calc(var(--spacing) * 10);
   }
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactLogo {
+    --text-desktop-wordmark: calc(var(--spacing) * 5);
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    max-width: calc(var(--spacing) * 36);
+    height: calc(var(--spacing) * 7);
+    margin-bottom: calc(var(--spacing) * 6);
+    object-fit: contain;
+    object-position: left center;
+  }
   .contact h2 {
     margin: 0 0 calc(var(--spacing) * 3.5);
     font-size: calc(var(--spacing) * 7.5);
@@ -73,7 +88,10 @@
     line-height: calc(var(--spacing) * 6.5);
   }
   .details {
-    background: var(--desktop-support-surface);
+    display: flex;
+    flex-direction: column;
+    color: var(--brand-foreground);
+    background: var(--brand);
   }
   .details h2 {
     margin-bottom: calc(var(--spacing) * 3);
@@ -86,17 +104,17 @@
     display: flex;
     gap: calc(var(--spacing) * 4.5);
     align-items: flex-start;
-    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
-    margin-bottom: calc(var(--spacing) * 3);
+    padding: calc(var(--spacing) * 4.5) 0;
+    margin-bottom: 0;
     font-size: calc(var(--spacing) * 3.75);
     line-height: calc(var(--spacing) * 6.5);
-    background: var(--desktop-surface);
-    border-radius: calc(var(--spacing) * 4);
+    border-bottom: var(--desktop-border-width) solid
+      var(--desktop-inverse-divider);
   }
   .contactCard > svg {
     flex: none;
     margin-top: calc(var(--spacing) * 0.5);
-    color: var(--brand);
+    color: inherit;
   }
   .contactCard h3 {
     margin: 0 0 calc(var(--spacing) * 1);
@@ -109,12 +127,12 @@
     overflow-wrap: anywhere;
   }
   .contactCard a:hover {
-    color: var(--brand);
+    text-decoration: underline;
+    text-underline-offset: calc(var(--spacing) * 1);
   }
   .social {
-    padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
-    background: var(--desktop-surface);
-    border-radius: calc(var(--spacing) * 4);
+    padding-top: calc(var(--spacing) * 6);
+    margin-top: auto;
   }
   .social h3 {
     font-size: calc(var(--spacing) * 3.75);
@@ -124,11 +142,15 @@
     margin: calc(var(--spacing) * 1) 0 calc(var(--spacing) * 4);
     font-size: calc(var(--spacing) * 3.5);
     line-height: calc(var(--spacing) * 6);
-    color: var(--muted-foreground);
+    color: inherit;
   }
   .form {
     display: grid;
     gap: calc(var(--spacing) * 5);
+  }
+  .contactForm .form {
+    flex: 1;
+    grid-template-rows: auto minmax(0, 1fr) auto;
   }
   .fields {
     display: grid;
@@ -166,10 +188,12 @@
     min-height: calc(var(--spacing) * 6);
   }
   .form textarea {
+    height: 100%;
     min-height: calc(var(--spacing) * 37.5);
     resize: vertical;
   }
   .form .message {
+    grid-template-rows: auto minmax(calc(var(--spacing) * 37.5), 1fr);
     padding-block: calc(var(--spacing) * 2.5) calc(var(--spacing) * 4);
   }
   .submit,
@@ -378,5 +402,8 @@
   }
   .aboutAction a:focus-visible {
     outline-color: var(--desktop-surface);
+  }
+  .details a:focus-visible {
+    outline-color: var(--brand-foreground);
   }
 }

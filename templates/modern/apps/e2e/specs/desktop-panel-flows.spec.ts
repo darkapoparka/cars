@@ -17,6 +17,9 @@ for (const width of [1024, 1440, 1920]) {
     }) => {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(`/${locale}`);
+      const pageWidth = await page
+        .locator("body")
+        .evaluate((element) => element.getBoundingClientRect().width);
       const header = page.locator(
         '[data-slot="dealer-desktop-header"]:visible'
       );
@@ -24,7 +27,7 @@ for (const width of [1024, 1440, 1920]) {
       expect(headerBox?.height).toBe(90);
       expect(headerBox?.x).toBe(0);
       expect(headerBox?.y).toBe(0);
-      expect(headerBox?.width).toBe(width);
+      expect(headerBox?.width).toBe(pageWidth);
       expect(
         await page
           .locator("footer")
@@ -38,7 +41,7 @@ for (const width of [1024, 1440, 1920]) {
       expect(heroBox?.height).toBeLessThanOrEqual(520);
       expect(heroBox?.width).toBeLessThanOrEqual(1320);
       expect((heroBox?.x ?? 0) + (heroBox?.width ?? 0)).toBeLessThanOrEqual(
-        width - 40
+        pageWidth - 40
       );
       const navBox = await header.locator(".dealer-desktop-nav").boundingBox();
       expect(navBox?.x).toBe(heroBox?.x);
@@ -122,8 +125,11 @@ for (const width of [1024, 1440, 1920]) {
         expect(
           await hero
             .locator("h1")
-            .evaluate((element) => getComputedStyle(element).fontSize)
-        ).toBe("60px");
+            .evaluate((element) =>
+              Number.parseFloat(getComputedStyle(element).fontSize)
+            )
+          // The OS gutter slightly trims the width used by responsive vw type.
+        ).toBeCloseTo(60, 0);
       }
       for (const path of [
         "/cars",

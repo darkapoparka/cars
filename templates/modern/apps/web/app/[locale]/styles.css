@@ -33,7 +33,8 @@
   @media (min-width: 1024px) {
     :root[data-site-kind="dealership"] body[data-scroll-locked] {
       padding: 0 !important;
-      margin-right: auto !important;
+      /* The root gutter owns scrollbar space, including nested overlays. */
+      margin-right: 0 !important;
     }
   }
 }
