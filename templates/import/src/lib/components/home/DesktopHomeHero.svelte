@@ -5,11 +5,7 @@
 		HomeFiveHeroSelect
 	} from '$lib/auxero/home-five';
 	import Search from '@lucide/svelte/icons/search';
-	import CarFront from '@lucide/svelte/icons/car-front';
 	import HandCoins from '@lucide/svelte/icons/hand-coins';
-	import LayoutGrid from '@lucide/svelte/icons/layout-grid';
-	import Banknote from '@lucide/svelte/icons/banknote';
-	import Gauge from '@lucide/svelte/icons/gauge';
 	import { SvelteURLSearchParams } from 'svelte/reactivity';
 	import VehicleSearchDialog from '$lib/components/inventory/VehicleSearchDialog.svelte';
 	import ModeTabs from '$lib/components/common/MobileModeTabs.svelte';
@@ -102,7 +98,6 @@
 			searchable
 			compact
 			prominent
-			icon={LayoutGrid}
 			isEnglish={english}
 			dialogTitle={copy.chooseMake}
 		/>{/if}
@@ -114,7 +109,6 @@
 			searchable
 			compact
 			prominent
-			icon={CarFront}
 			isEnglish={english}
 			dialogTitle={copy.chooseModel}
 		/>{/if}
@@ -124,7 +118,6 @@
 			mode="single"
 			compact
 			prominent
-			icon={Banknote}
 			isEnglish={english}
 		/>{/if}
 	<HeroFilterDialog
@@ -133,7 +126,6 @@
 		mode="single"
 		compact
 		prominent
-		icon={Gauge}
 		isEnglish={english}
 	/>
 {/snippet}

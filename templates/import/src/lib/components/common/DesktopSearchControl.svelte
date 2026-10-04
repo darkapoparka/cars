@@ -30,33 +30,41 @@
 </script>
 
 <div class={['desktop-search-control', className]}>
-	{#if onopen}
-		<button
-			{id}
-			class="desktop-search-control__entry"
-			class:placeholder={!value}
-			type="button"
-			aria-label={value ? label + ': ' + value : label}
-			aria-haspopup="dialog"
-			aria-expanded={expanded}
-			aria-controls={controls}
-			onclick={onopen}
-		>
-			<span>{value || placeholder}</span>
-		</button>
-	{:else}
-		<label class="sr-only" for={id}>{label}</label>
-		<input
-			{id}
-			class="desktop-search-control__entry"
-			type="search"
-			{name}
-			bind:value
-			{placeholder}
-			aria-controls={controls}
-			autocomplete="off"
-		/>
-	{/if}
+	<div class="desktop-search-control__field">
+		{#if onopen}
+			<button
+				{id}
+				class="desktop-search-control__entry"
+				class:placeholder={!value}
+				type="button"
+				aria-label={value ? label + ': ' + value : label}
+				aria-haspopup="dialog"
+				aria-expanded={expanded}
+				aria-controls={controls}
+				onclick={onopen}
+			>
+				<span class="desktop-search-control__leading-icon" aria-hidden="true"
+					><Search size={20} /></span
+				>
+				<span>{value || placeholder}</span>
+			</button>
+		{:else}
+			<label class="desktop-search-control__leading-icon" for={id} aria-hidden="true"
+				><Search size={20} /></label
+			>
+			<label class="sr-only" for={id}>{label}</label>
+			<input
+				{id}
+				class="desktop-search-control__entry"
+				type="search"
+				{name}
+				bind:value
+				{placeholder}
+				aria-controls={controls}
+				autocomplete="off"
+			/>
+		{/if}
+	</div>
 	<Action
 		{href}
 		type="submit"
@@ -64,7 +72,8 @@
 		title={actionLabel}
 		class="desktop-search-control__action"
 	>
-		<Search size={20} aria-hidden="true" />
+		<span class="desktop-search-control__action-icon" aria-hidden="true"><Search size={20} /></span>
+		<span class="desktop-search-control__action-label" aria-hidden="true">{actionLabel}</span>
 	</Action>
 </div>
 
@@ -126,6 +135,18 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
+	.desktop-search-control__action-label {
+		display: none;
+	}
+	.desktop-search-control__field {
+		display: contents;
+	}
+	.desktop-search-control__leading-icon {
+		display: none;
+	}
+	.desktop-search-control__action-icon {
+		display: flex;
+	}
 	.desktop-search-control :global(.desktop-search-control__action) {
 		align-self: center;
 		flex: none;
@@ -137,16 +158,64 @@
 	@media (min-width: 768px) {
 		.desktop-search-control {
 			min-height: var(--bc-control-height-primary);
-			padding-block: 0;
+			gap: var(--bc-space-3);
+			padding: 0;
+			border: 0;
+			background: transparent;
+		}
+		.desktop-search-control:has(input:focus-visible) {
+			outline: none;
+		}
+		.desktop-search-control__field {
+			display: flex;
+			align-items: center;
+			flex: 1;
+			min-width: 0;
+			min-height: var(--bc-control-height-primary);
+			border: 1px solid var(--bc-border-strong);
+			border-radius: var(--bc-desktop-control-radius);
+			background: var(--bc-surface-raised);
+		}
+		.desktop-search-control__field:hover {
+			border-color: var(--bc-ink);
+		}
+		.desktop-search-control__field:focus-within {
+			border-color: var(--bc-focus);
+		}
+		.desktop-search-control__field:has(input:focus-visible) {
+			outline: 3px solid var(--bc-focus);
+			outline-offset: 3px;
+		}
+		.desktop-search-control__leading-icon {
+			display: flex;
+			flex: none;
+			color: var(--bc-muted);
+		}
+		label.desktop-search-control__leading-icon {
+			margin-left: var(--bc-space-4);
 		}
 		.desktop-search-control__entry {
+			align-self: stretch;
+			gap: var(--bc-space-3);
 			font-size: var(--bc-text-search);
 		}
+		button.desktop-search-control__entry {
+			padding-inline: var(--bc-space-4);
+		}
 		.desktop-search-control :global(.desktop-search-control__action) {
-			/* Inset the round surface while retaining the shared 44px click target. */
-			padding: var(--bc-space-1);
+			width: auto;
+			min-height: var(--bc-control-height-primary);
+			padding: 0 var(--bc-space-6);
 			border: 0;
-			background-clip: content-box;
+			border-radius: var(--bc-desktop-control-radius);
+			background-clip: border-box;
+			font-size: var(--bc-text-search);
+		}
+		.desktop-search-control__action-icon {
+			display: none;
+		}
+		.desktop-search-control__action-label {
+			display: inline;
 		}
 		.placeholder,
 		input::placeholder {

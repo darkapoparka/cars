@@ -2,6 +2,9 @@ import type { Locale } from '$lib/locale/core';
 
 type InventoryDesktopControlsCopy = {
 	searchPlaceholder: string;
+	typeLabel: string;
+	typeNavigation: string;
+	allTypes: string;
 	allFilters: string;
 	removeFilter: string;
 	vehicleNoun: (count: number) => string;
@@ -13,6 +16,9 @@ type InventoryDesktopControlsCopy = {
 export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopControlsCopy> = {
 	bg: {
 		searchPlaceholder: 'Ключова дума, екстри...',
+		typeLabel: 'Тип',
+		typeNavigation: 'Тип автомобил',
+		allTypes: 'Всички',
 		allFilters: 'Всички филтри',
 		removeFilter: 'Премахни филтър: ',
 		vehicleNoun: (count) => (count === 1 ? 'автомобил' : 'автомобила'),
@@ -22,6 +28,9 @@ export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopContro
 	},
 	en: {
 		searchPlaceholder: 'Keyword, features...',
+		typeLabel: 'Type',
+		typeNavigation: 'Vehicle type',
+		allTypes: 'All cars',
 		allFilters: 'All filters',
 		removeFilter: 'Remove filter: ',
 		vehicleNoun: (count) => (count === 1 ? 'car' : 'cars'),
@@ -29,6 +38,13 @@ export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopContro
 		showFilterPanel: 'Show filter panel',
 		hideFilterPanel: 'Hide filter panel'
 	}
+};
+
+/** Retained template artwork for body types present in the inventory options. */
+export const inventoryTypeArtwork: Record<string, string> = {
+	Sedan: '/assets/daynight/home-modes/buy-graphite-v3-192.webp',
+	SUV: '/assets/daynight/home2/home2-hero-suv.webp',
+	Cabriolet: '/assets/images/card/card-34.webp'
 };
 
 type InventoryDialogCopy = {

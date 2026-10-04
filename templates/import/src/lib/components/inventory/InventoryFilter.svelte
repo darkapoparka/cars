@@ -71,13 +71,13 @@
 			min-width: 0;
 			max-width: min(100%, 240px);
 			border-radius: var(--bc-desktop-control-radius);
-			border-color: var(--bc-border);
-			background: var(--bc-control);
+			border-color: var(--bc-border-strong);
+			background: var(--bc-surface-raised);
 			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);
 		}
 		.filter-trigger-label {
-			text-align: center;
+			text-align: start;
 		}
 		.site-filter-trigger:hover,
 		.site-filter-trigger[aria-expanded='true'] {

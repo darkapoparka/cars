@@ -403,9 +403,10 @@
 	}
 	@media (min-width: 768px) {
 		.hfp__field--prominent {
-			border-color: var(--bc-border);
+			border-color: var(--bc-border-strong);
 			background: var(--bc-surface-raised);
 			border-radius: var(--desktop-discovery-control-radius, var(--bc-radius-md));
+			padding-inline: var(--bc-space-4);
 			transition:
 				background var(--bc-motion-fast),
 				border-color var(--bc-motion-fast),
@@ -427,6 +428,11 @@
 		}
 		.hfp__field--prominent .hfp__value {
 			font-weight: var(--bc-weight-control);
+		}
+		.hfp__field--prominent > :global(svg) {
+			width: 18px;
+			height: 18px;
+			color: var(--bc-muted);
 		}
 		.hfp__field--prominent.hfp__field--selected .hfp__value,
 		.hfp__field--prominent.hfp__field--selected :global(svg) {

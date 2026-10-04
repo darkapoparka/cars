@@ -42,7 +42,7 @@
 <div class="inventory-toolbar">
 	<div class="inventory-toolbar__row">
 		{#each quickFilters as filter (filter.id)}<InventoryFilter
-				{filter}
+				filter={filter.name === 'bodyType' ? { ...filter, label: controlsCopy.typeLabel } : filter}
 				summary={appliedRangeSummary(filter)}
 				expanded={allOpen && activeFilter?.id === filter.id}
 				onopen={() => onopen(filter)}

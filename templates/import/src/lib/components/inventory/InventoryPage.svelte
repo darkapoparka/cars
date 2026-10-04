@@ -12,6 +12,7 @@
 	import { linkHref } from '$lib/utils/links';
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
+	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
 	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
@@ -56,6 +57,7 @@
 	let dialog = $state<InventoryFiltersDialog>();
 	const openFilters = (filter?: AuxeroInventoryFilter) => dialog?.openFilters(filter);
 	const searchState = $derived(parseInventoryQuery(page.url.searchParams));
+	const typeFilter = $derived(desktop.filters.find((filter) => filter.name === 'bodyType'));
 	const searchHiddenInputs = $derived(
 		[...serializeInventoryQuery(searchState, page.url.searchParams)].filter(
 			([name]) => name !== 'keyword'
@@ -73,6 +75,7 @@
 		>
 			{#snippet desktopActions()}
 				<DesktopDiscoveryPanel>
+					{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
 					<form action={linkHref('/inventory')} role="search" class="inventory-hero__search">
 						{#each searchHiddenInputs as [name, value], index (index)}<input
 								type="hidden"

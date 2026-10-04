@@ -191,6 +191,64 @@ test('header search reuses the same focused result dialog', async ({ page }) => 
 	await expect(opener).toBeFocused();
 });
 
+test('inventory type shortcuts preserve search context and share the existing type picker', async ({
+	page
+}) => {
+	await visit(
+		page,
+		'/inventory?lang=en&brand=BMW&bodyType=Sedan&maxPrice=100000&sort=lowest-price&view=3&layout=dashboard&marker=keep'
+	);
+	const types = page.getByRole('navigation', { name: 'Vehicle type', exact: true });
+	await expect(types.getByRole('link', { name: 'Sedan', exact: true })).toHaveAttribute(
+		'aria-current',
+		'page'
+	);
+	await types.getByRole('link', { name: 'SUV', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.pathname === '/en/inventory' &&
+			url.searchParams.get('body') === 'SUV' &&
+			!url.searchParams.has('bodyType') &&
+			url.searchParams.get('brand') === 'BMW' &&
+			url.searchParams.get('maxPrice') === '100000' &&
+			url.searchParams.get('sort') === 'lowest-price' &&
+			url.searchParams.get('view') === '3' &&
+			url.searchParams.get('layout') === 'dashboard' &&
+			url.searchParams.get('marker') === 'keep'
+	);
+	await expect(types.getByRole('link', { name: 'SUV', exact: true })).toHaveAttribute(
+		'aria-current',
+		'page'
+	);
+	const search = page.locator('.inventory-hero__search');
+	await search.getByRole('searchbox').fill('X5');
+	await search.getByRole('button', { name: 'Search', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) =>
+			url.searchParams.get('keyword') === 'X5' &&
+			url.searchParams.get('body') === 'SUV' &&
+			url.searchParams.get('brand') === 'BMW'
+	);
+	await expect(page.locator('main .site-vehicle-card').first()).toContainText('BMW X5');
+	await types.getByRole('link', { name: 'All cars', exact: true }).click();
+	await expect(page).toHaveURL(
+		(url) =>
+			!url.searchParams.has('body') &&
+			url.searchParams.get('keyword') === 'X5' &&
+			url.searchParams.get('brand') === 'BMW'
+	);
+	await expect(types.getByRole('link', { name: 'All cars', exact: true })).toHaveAttribute(
+		'aria-current',
+		'page'
+	);
+	await page.getByRole('button', { name: 'Type', exact: true }).click();
+	const picker = page.locator('.inventory-filters-dialog');
+	await expect(picker).toBeVisible();
+	await expect(picker).toContainText('SUV');
+	await page.keyboard.press('Escape');
+	await expect(page.getByRole('button', { name: 'Type', exact: true })).toBeFocused();
+});
+
 test('home Search follows selected filters and newest vehicles retains the inventory entry', async ({
 	page
 }) => {
