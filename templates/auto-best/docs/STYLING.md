@@ -49,26 +49,21 @@ Home and Inventory use the same search-panel bounds, padding and
 radius. Desktop facets retain the 44px control target and the shared
 prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
-Inventory's desktop facet buttons open the existing search window directly at
-the selected field. Its overview retains the original field grid and equipment
-choices. Each field opens a focused view within that same dialog. The active
-field becomes the centered window title, with a grey Back button on the left.
-All twelve filters, including Equipment, use two equal rows of underline tabs
-with 17px type and 52px targets. The listing dialog keeps a 720px frame, capped
-to the viewport with 32px clearance, across the overview and every selector.
-Header, tabs, content and footer share 32px side padding; selection grids use
-three equal columns, and paired range inputs fill the same content width.
-Scrolling stays inside the body with a reserved scrollbar gutter; the footer
-and result action stay in place, including for invalid ranges. Make and Model use
-searchable radio
-choices and available-result counts. Selecting a value keeps its view open;
-tabs move between fields while retaining every pending choice. Equipment allows
-multiple checked choices. Arrow keys, Home and End navigate the tabs. Back retains
-the outer draft and returns to the original overview field; closing the
-window discards it, and the result action applies it. Budget/year use paired
-number inputs and mileage uses a number input with optional limits. Home and
-widths below 992px retain native
-facets and the existing mobile sheets.
+Inventory's desktop facet buttons open a compact 440px dialog for that field.
+`DesktopFilterPicker.svelte` supplies its search input and 44px selection rows,
+with a check mark for the current choice. Make/Model include available-result
+counts; Model scopes its choices to the opening Make. Search reserves the
+field's list height so typing does not move the header or Apply action. Arrow
+keys move from search into the native radio choices; Enter selects a match.
+Budget/year use paired number inputs; mileage offers an input and preset limits.
+Apply on the page updates the filtered URL, preserving the other applied fields.
+The larger search menu retains its field grid and multi-select equipment.
+Its field buttons open the same compact dialog above the overview. Apply keeps
+that edit in the menu's pending draft; Escape, outside click and Close cancel
+only that edit and restore focus to its field. The overview stays in place and
+its result action applies the complete draft. The compact dialog has one field
+title and no navigation tabs. Home and widths below 992px keep their existing
+native facets and mobile sheets.
 Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
 across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop

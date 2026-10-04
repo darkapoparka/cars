@@ -111,7 +111,7 @@
   {#if modalFacets && modalReady}
     <div class="dn-discovery__facet-buttons">
       {#each facetFields as field, index (field)}
-        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
+        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-desktop-picker-dialog" onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
       {/each}
     </div>
   {/if}
