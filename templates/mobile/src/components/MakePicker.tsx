@@ -601,7 +601,11 @@ export function MakePicker({
                             s.lastMake,
                         )}
                       >
-                        {(name !== 'Any' || !embedded) && (
+                        {embedded && name === 'Any' ? (
+                          <span aria-hidden="true" {...stylex.props(s.allMakesIcon)}>
+                            <Icon name="grid" size={20} />
+                          </span>
+                        ) : (
                           <BrandLogo make={name} size={embedded ? 32 : 40} />
                         )}
                         <span
@@ -623,7 +627,7 @@ export function MakePicker({
                         {embedded &&
                           (selected || (name === 'Any' && !selectedMakes.length) ? (
                             <span aria-hidden="true" {...stylex.props(s.selectedMark)}>
-                              <Icon name="check" size={20} />
+                              <Icon name="check" size={14} />
                             </span>
                           ) : (
                             <Icon name="right" size={18} />

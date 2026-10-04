@@ -105,8 +105,7 @@ export const pickerStyles = stylex.create({
     paddingInline: 8,
     gap: 12,
     borderWidth: 0,
-    // The native button's bottom border otherwise doubles the showroom row divider.
-    borderBottomWidth: { default: 1, '@media (min-width: 700px)': 0 },
+    borderBottomWidth: 0,
     minWidth: 0,
     flex: '1',
     backgroundColor: {
@@ -119,11 +118,30 @@ export const pickerStyles = stylex.create({
   makeOption: {
     display: 'flex',
     alignItems: 'center',
-    borderBottomWidth: 1,
+    borderBottomWidth: { default: 0, '@media (min-width: 700px)': 1 },
     borderBottomStyle: 'solid',
-    borderBottomColor: { default: colors.line, '@media (min-width: 700px)': colors.stripe },
+    borderBottomColor: colors.stripe,
   },
-  selectedMark: { display: 'flex', color: colors.accent, flexShrink: 0 },
+  allMakesIcon: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 32,
+    height: 32,
+    flexShrink: 0,
+    color: colors.muted,
+  },
+  selectedMark: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 20,
+    height: 20,
+    borderRadius: '50%',
+    backgroundColor: colors.accent,
+    color: '#fff',
+    flexShrink: 0,
+  },
   makeName: { flex: '1', minWidth: 0 },
   selectedCopy: {
     display: 'flex',

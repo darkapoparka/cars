@@ -28,6 +28,9 @@ for (const [engineName, engine] of engines) {
         back: bg ? 'Назад: Марки' : 'Back: Makes',
         modelSearch: bg ? 'Търсене на модел' : 'Search models',
         makeSearch: bg ? 'Търсене на марка' : 'Search makes',
+        allMakes: bg ? 'Всички марки' : 'Any make',
+        anyModel: bg ? 'Всички модели' : 'Any model',
+        expandSeries: bg ? 'Разгъни 1 серия' : 'Expand 1 Series',
         series: bg ? '1 серия' : '1 Series',
         apply: bg ? /^Покажи \d+ кол/ : /^Show \d+ cars?$/,
         close: bg ? 'Затвори филтрите' : 'Close filters',
@@ -73,10 +76,47 @@ for (const [engineName, engine] of engines) {
           await page.locator('[data-hydrated="true"]').waitFor();
           if (width < 700) {
             const bmw = page.getByRole('button', { name: 'BMW', exact: true });
-            await bmw.click();
+            const allMakes = page.getByRole('button', { name: labels.allMakes, exact: true });
+            const makeRows = page.locator('[data-make-option]');
+            const rowLayout = await makeRows.evaluateAll((rows) =>
+              rows.map((row) => {
+                const button = row.querySelector('button');
+                const logo = button.children[0].getBoundingClientRect();
+                return {
+                  border: getComputedStyle(row).borderBottomWidth,
+                  buttonBorder: getComputedStyle(button).borderBottomWidth,
+                  logoWidth: logo.width,
+                  textLeft: button.children[1].getBoundingClientRect().left,
+                  buttonHeight: button.getBoundingClientRect().height,
+                };
+              }),
+            );
+            assert.equal(rowLayout.length, 2);
+            assert.ok(rowLayout.every((row) => row.border === '0px' && row.buttonBorder === '0px'));
+            assert.ok(rowLayout.every((row) => row.logoWidth === 32 && row.buttonHeight >= 48));
+            assert.equal(rowLayout[0].textLeft, rowLayout[1].textLeft);
+            assert.equal(
+              await allMakes
+                .locator(':scope > span:last-child')
+                .evaluate((element) => getComputedStyle(element).borderRadius),
+              '50%',
+            );
+            // Tap row padding, outside the logo and text, to exercise the full hit target.
+            await bmw.click({ position: { x: 2, y: 28 } });
             const allModels = page.getByRole('checkbox', { name: labels.allBmw, exact: true });
             await allModels.waitFor();
             assert.equal(await allModels.isChecked(), true);
+            assert.equal(
+              await allModels.evaluate((element) => getComputedStyle(element).borderRadius),
+              '50%',
+            );
+            assert.ok(
+              await page
+                .locator('[data-showroom-model-options] [data-model-node]')
+                .evaluateAll((rows) =>
+                  rows.every((row) => getComputedStyle(row).borderBottomWidth === '0px'),
+                ),
+            );
             await allModels.press('Space');
             await page.getByRole('textbox', { name: labels.makeSearch, exact: true }).waitFor();
             assert.equal(await allModels.count(), 0);
@@ -84,6 +124,18 @@ for (const [engineName, engine] of engines) {
 
             await bmw.click();
             const series = page.getByRole('checkbox', { name: labels.series, exact: true });
+            await page.getByRole('button', { name: labels.expandSeries, exact: true }).click();
+            assert.equal(await series.isChecked(), false);
+            const model120 = page.getByRole('checkbox', { name: '120', exact: true });
+            await page
+              .locator('label')
+              .filter({ has: model120 })
+              .click({ position: { x: 16, y: 26 } });
+            assert.equal(await model120.isChecked(), true);
+            assert.equal(await series.evaluate((element) => element.indeterminate), true);
+            await model120.press('Space');
+            assert.equal(await model120.isChecked(), false);
+            assert.equal(await series.evaluate((element) => element.indeterminate), false);
             await series.check();
             assert.equal(await allModels.isChecked(), false);
             await page.getByRole('textbox', { name: labels.modelSearch, exact: true }).fill('120');
@@ -110,6 +162,13 @@ for (const [engineName, engine] of engines) {
             assert.equal(new URL(page.url()).searchParams.get('makes'), null);
             assert.equal(new URL(page.url()).searchParams.get('makeModels'), null);
           } else {
+            await page.getByRole('checkbox', { name: 'BMW', exact: true }).check();
+            const allModels = page.getByRole('checkbox', { name: labels.anyModel, exact: true });
+            await allModels.waitFor();
+            assert.equal(
+              await allModels.evaluate((element) => getComputedStyle(element).borderRadius),
+              '5px',
+            );
             await page.getByRole('button', { name: labels.close, exact: true }).click();
           }
           assert.equal(
@@ -122,8 +181,8 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections'
-                : 'Desktop search arrows and draft/apply behavior',
+                ? 'Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation'
+                : 'Desktop search draft/apply and preserved square model checkboxes',
           });
         } finally {
           await context.close();

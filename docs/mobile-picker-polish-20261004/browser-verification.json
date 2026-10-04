@@ -1,0 +1,127 @@
+{
+  "at": "2026-10-04T08:00:22.4024671Z",
+  "passed": true,
+  "build": {
+    "at": "2026-10-04T07:54:47.2000157Z",
+    "passed": true,
+    "distDir": ".next-picker-polish-20261004",
+    "buildId": "omSnDY7P4NKNvLvSUlWz7",
+    "sourceChecks": [
+      "lint",
+      "TypeScript",
+      "92 domain/localization tests",
+      "touched file formatting",
+      "QA script syntax"
+    ]
+  },
+  "browserCases": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply and preserved square model checkboxes"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply and preserved square model checkboxes"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply and preserved square model checkboxes"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply and preserved square model checkboxes"
+    }
+  ],
+  "screenshots": [
+    {
+      "view": "makes-390",
+      "width": 390,
+      "height": 844,
+      "changedPixels": 12055
+    },
+    {
+      "view": "models-390",
+      "width": 390,
+      "height": 844,
+      "changedPixels": 29672
+    },
+    {
+      "view": "desktop-1440",
+      "width": 1440,
+      "height": 900,
+      "changedPixels": 811
+    }
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:6474/?lang=bg&filter=make",
+    "verified": true,
+    "makeRows": [
+      {
+        "border": "0px",
+        "make": "Any",
+        "height": 56
+      },
+      {
+        "border": "0px",
+        "make": "BMW",
+        "height": 56
+      }
+    ]
+  }
+}

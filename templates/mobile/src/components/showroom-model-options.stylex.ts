@@ -22,9 +22,9 @@ export const modelOptionStyles = stylex.create({
     borderTopColor: colors.stripe,
   },
   group: {
-    borderBottomWidth: 1,
+    borderBottomWidth: { default: 0, '@media (min-width: 700px)': 1 },
     borderBottomStyle: 'solid',
-    borderBottomColor: { default: colors.line, '@media (min-width: 700px)': colors.stripe },
+    borderBottomColor: colors.stripe,
   },
   choice: {
     display: 'flex',
@@ -55,6 +55,7 @@ export const modelOptionStyles = stylex.create({
     cursor: 'pointer',
   },
   checkbox: {
+    borderRadius: { default: '50%', '@media (min-width: 700px)': 5 },
     borderColor: { default: colors.muted, ':checked': colors.accent },
     backgroundColor: { default: colors.background, ':checked': colors.accent },
   },
