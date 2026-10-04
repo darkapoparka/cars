@@ -1,0 +1,2233 @@
+{
+  "date": "2026-10-04",
+  "url": "http://127.0.0.1:6474/",
+  "frameChecks": [
+    {
+      "label": "1440 BG tab Търсене",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Цена",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Година",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Гориво",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Състояние",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 BG tab Още",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "BMW selected",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "family expanded",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "model search",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "X6 selected",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "More options opened",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "variant entered",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "exclude selection",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "BMW removed",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "BMW checkbox deselected",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Цена",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Година",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Гориво",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Състояние",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Още",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 BG tab Търсене",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 unchecked",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 checked",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "700x500 More options",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Цена",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Година",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Гориво",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Състояние",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Още",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Търсене",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 BG tab Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 reset",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 no brand matches",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Търсене",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Цена",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Година",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Гориво",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Състояние",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Още",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 BG Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 options opened",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 700x500 variant reachable",
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 24
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Search",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Price",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Year",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Fuel",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Condition",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN More",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN Make & model",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 EN X6 with variant",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final price edited",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final remove preserves budget",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Търсене",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Цена",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Година",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Гориво",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Състояние",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Още",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1920 BG Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Търсене",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Цена",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Година",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Гориво",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Състояние",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Още",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BG Марка и модел",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final 1440 BMW selected",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final direct BMW deselection",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG model search",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG X6 selected",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG More options",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG variant",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG exclusion",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "final BG removal",
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    }
+  ],
+  "flows": [
+    {
+      "label": "Escape discards make draft and preserves budget",
+      "closed": true,
+      "focusReturned": "make",
+      "makes": null,
+      "price": "20000"
+    },
+    {
+      "label": "Back discards make draft and preserves budget",
+      "closed": true,
+      "makes": null,
+      "price": "20000"
+    },
+    {
+      "label": "Apply after removal preserved budget",
+      "minPrice": "20000",
+      "makes": null,
+      "models": null
+    }
+  ],
+  "phoneGeometryMatches": true,
+  "consoleErrors": []
+}

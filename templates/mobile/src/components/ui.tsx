@@ -215,8 +215,11 @@ const s = stylex.create({
   },
   wideFlowSheet: {
     maxWidth: { default: 640, '@media (min-width: 700px)': 820 },
-    // Native modal insets stretch an auto height; use the content's intrinsic size on desktop.
-    height: { default: '100dvh', '@media (min-width: 700px)': 'fit-content' },
+    // Keep the frame stable across tabs; each panel owns its scrolling content.
+    height: {
+      default: '100dvh',
+      '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
+    },
     maxHeight: {
       default: '100dvh',
       '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',

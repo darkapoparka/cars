@@ -19,6 +19,7 @@ import { updateFilters, useAppState } from '@/lib/store';
 import type { Filters } from '@/lib/types';
 import {
   applyMakeSelection,
+  clearMakeSelections,
   excludedMakeNames,
   makeSelectionSummary,
   removeMakeSelection,
@@ -205,17 +206,7 @@ export function MakePicker({
   }, [make, query, modelsVisible]);
   function chooseMake(name: string, mode = exclude) {
     if (name === 'Any') {
-      changeFilters({
-        makes: [],
-        excludedMakes: [],
-        models: [],
-        makeModels: {},
-        excludedModels: {},
-        makeVariants: {},
-        excludedMakeVariants: {},
-        modelVariants: {},
-        excludedModelVariants: {},
-      });
+      changeFilters(clearMakeSelections());
       if (embedded) {
         setMake('');
         setSelector('make');

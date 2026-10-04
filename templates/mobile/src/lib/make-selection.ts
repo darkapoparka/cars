@@ -1,5 +1,19 @@
 import type { Filters } from './types';
 import { modelLabel } from './native-taxonomy';
+/** Clear make/model criteria without changing the budget or other filter sections. */
+export function clearMakeSelections(): Partial<Filters> {
+  return {
+    makes: [],
+    excludedMakes: [],
+    models: [],
+    makeModels: {},
+    excludedModels: {},
+    makeVariants: {},
+    excludedMakeVariants: {},
+    modelVariants: {},
+    excludedModelVariants: {},
+  };
+}
 /** Legacy unscoped URLs remain readable; new edits are always scoped to their make. */
 export function modelsForMake(filters: Filters, make: string, exclude = false): string[] {
   if (exclude) return filters.excludedModels[make] || [];

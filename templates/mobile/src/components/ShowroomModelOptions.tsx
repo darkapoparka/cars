@@ -55,6 +55,7 @@ export function ShowroomModelOptions({
   query,
   expanded,
   excluded,
+  desktop = false,
   onChange,
   onToggleFamily,
   onToggleExcluded,
@@ -64,6 +65,7 @@ export function ShowroomModelOptions({
   query: string;
   expanded: string[];
   excluded: boolean;
+  desktop?: boolean;
   onChange: (draft: ModelDraft) => void;
   onToggleFamily: (name: string) => void;
   onToggleExcluded: () => void;
@@ -130,98 +132,104 @@ export function ShowroomModelOptions({
   }
 
   return (
-    <div data-showroom-model-options>
-      {!q && <div {...stylex.props(s.group)}>{modelChoice('')}</div>}
-      {visibleGroups.map((group) => {
-        const key = modelNodeKey(group, groups);
-        if (!group.children.length) {
+    <div
+      data-showroom-model-options={desktop ? undefined : ''}
+      data-desktop-model-options={desktop ? '' : undefined}
+      {...stylex.props(desktop && s.desktopOptions)}
+    >
+      <div {...stylex.props(desktop ? s.desktopChoices : s.phoneChoices)}>
+        {!q && <div {...stylex.props(s.group)}>{modelChoice('')}</div>}
+        {visibleGroups.map((group) => {
+          const key = modelNodeKey(group, groups);
+          if (!group.children.length) {
+            return (
+              <div key={key} data-model-node={key} {...stylex.props(s.group)}>
+                <label {...stylex.props(s.choice)}>
+                  <span {...stylex.props(s.name)}>{t(group.name)}</span>
+                  <span {...stylex.props(s.checkTarget)}>
+                    <ModelCheckbox
+                      name={t(group.name)}
+                      modelKey={key}
+                      checked={draft.selected.includes(key)}
+                      onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
+                    />
+                  </span>
+                </label>
+              </div>
+            );
+          }
+          const checked =
+            draft.selected.includes(key) ||
+            group.children.every((name) => draft.selected.includes(modelLeafKey(name, group)));
+          const mixed =
+            !checked &&
+            group.children.some((name) => draft.selected.includes(modelLeafKey(name, group)));
+          const show = q
+            ? !collapsedSearchGroups.includes(group.name)
+            : expanded.includes(group.name);
+          const childrenId = optionsId + '-' + encodeURIComponent(key);
           return (
             <div key={key} data-model-node={key} {...stylex.props(s.group)}>
-              <label {...stylex.props(s.choice)}>
-                <span {...stylex.props(s.name)}>{t(group.name)}</span>
-                <span {...stylex.props(s.checkTarget)}>
+              <div {...stylex.props(s.familyRow)}>
+                <button
+                  type="button"
+                  aria-label={t(show ? 'Collapse' : 'Expand') + ' ' + t(group.name)}
+                  aria-expanded={show}
+                  aria-controls={childrenId}
+                  onClick={() => {
+                    if (!q) onToggleFamily(group.name);
+                    else
+                      setSearchExpansion((current) => {
+                        const collapsed = current.query === q ? current.collapsed : [];
+                        return {
+                          query: q,
+                          collapsed: collapsed.includes(group.name)
+                            ? collapsed.filter((name) => name !== group.name)
+                            : [...collapsed, group.name],
+                        };
+                      });
+                  }}
+                  {...stylex.props(s.familyButton)}
+                >
+                  <span {...stylex.props(s.name)}>{t(group.name)}</span>
+                  <span aria-hidden="true" {...stylex.props(s.chevron)}>
+                    <Icon name={show ? 'up' : 'down'} size={18} />
+                  </span>
+                </button>
+                <label {...stylex.props(s.checkTarget)}>
                   <ModelCheckbox
                     name={t(group.name)}
                     modelKey={key}
-                    checked={draft.selected.includes(key)}
+                    checked={checked}
+                    mixed={mixed}
                     onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
                   />
-                </span>
-              </label>
+                </label>
+              </div>
+              <div id={childrenId} hidden={!show} {...stylex.props(s.children)}>
+                {show &&
+                  group.children
+                    .filter(
+                      (name) =>
+                        !q ||
+                        group.name.toLocaleLowerCase().includes(q) ||
+                        name.toLocaleLowerCase().includes(q),
+                    )
+                    .map((name) => <div key={name}>{modelChoice(name, group)}</div>)}
+              </div>
             </div>
           );
-        }
-        const checked =
-          draft.selected.includes(key) ||
-          group.children.every((name) => draft.selected.includes(modelLeafKey(name, group)));
-        const mixed =
-          !checked &&
-          group.children.some((name) => draft.selected.includes(modelLeafKey(name, group)));
-        const show = q
-          ? !collapsedSearchGroups.includes(group.name)
-          : expanded.includes(group.name);
-        const childrenId = optionsId + '-' + encodeURIComponent(key);
-        return (
-          <div key={key} data-model-node={key} {...stylex.props(s.group)}>
-            <div {...stylex.props(s.familyRow)}>
-              <button
-                type="button"
-                aria-label={t(show ? 'Collapse' : 'Expand') + ' ' + t(group.name)}
-                aria-expanded={show}
-                aria-controls={childrenId}
-                onClick={() => {
-                  if (!q) onToggleFamily(group.name);
-                  else
-                    setSearchExpansion((current) => {
-                      const collapsed = current.query === q ? current.collapsed : [];
-                      return {
-                        query: q,
-                        collapsed: collapsed.includes(group.name)
-                          ? collapsed.filter((name) => name !== group.name)
-                          : [...collapsed, group.name],
-                      };
-                    });
-                }}
-                {...stylex.props(s.familyButton)}
-              >
-                <span {...stylex.props(s.name)}>{t(group.name)}</span>
-                <span aria-hidden="true" {...stylex.props(s.chevron)}>
-                  <Icon name={show ? 'up' : 'down'} size={18} />
-                </span>
-              </button>
-              <label {...stylex.props(s.checkTarget)}>
-                <ModelCheckbox
-                  name={t(group.name)}
-                  modelKey={key}
-                  checked={checked}
-                  mixed={mixed}
-                  onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups))}
-                />
-              </label>
-            </div>
-            <div id={childrenId} hidden={!show} {...stylex.props(s.children)}>
-              {show &&
-                group.children
-                  .filter(
-                    (name) =>
-                      !q ||
-                      group.name.toLocaleLowerCase().includes(q) ||
-                      name.toLocaleLowerCase().includes(q),
-                  )
-                  .map((name) => <div key={name}>{modelChoice(name, group)}</div>)}
-            </div>
-          </div>
-        );
-      })}
-      {q && !visibleGroups.length && (
-        <p role="status" {...stylex.props(s.empty)}>
-          {t('No models found')}
-        </p>
-      )}
+        })}
+        {q && !visibleGroups.length && (
+          <p role="status" {...stylex.props(s.empty)}>
+            {t('No models found')}
+          </p>
+        )}
+      </div>
       <details
         open={optionsOpen}
         onToggle={(event) => setOptionsOpen(event.currentTarget.open)}
-        {...stylex.props(s.options)}
+        {...stylex.props(s.options, desktop && s.desktopExtras)}
       >
         <summary {...stylex.props(s.summary)}>
           <span {...stylex.props(s.name)}>{t('More options')}</span>

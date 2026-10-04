@@ -325,9 +325,24 @@ test('photo state rejects invalid indexes and preserves read notification state'
 
 import {
   applyMakeSelection,
+  clearMakeSelections,
   modelsForMake,
   removeMakeSelection,
 } from '../.qa/domain/make-selection.mjs';
+test('Any make clears scoped model and exclusion criteria while retaining other filters', () => {
+  const budget = filters({ minPrice: '20000', maxPrice: '50000', fuel: ['Diesel'] });
+  let selected = {
+    ...budget,
+    ...applyMakeSelection(budget, 'BMW', ['X6'], false, 'M Sport', { X6: 'M Sport' }),
+  };
+  selected = {
+    ...selected,
+    ...applyMakeSelection(selected, 'Audi', ['A3'], true, 'Sportback', { A3: 'Sportback' }),
+  };
+  const cleared = { ...selected, ...clearMakeSelections() };
+  assert.deepEqual(parseFilters(serializeFilters(cleared)), budget);
+  assert.deepEqual(filterVehicles(vehicles, cleared), filterVehicles(vehicles, budget));
+});
 test('make-scoped model selections combine with OR across makes', () => {
   let f = filters({});
   f = { ...f, ...applyMakeSelection(f, 'BMW', ['X6'], false) };

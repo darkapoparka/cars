@@ -1259,6 +1259,21 @@ async function run(name, engine) {
         await page.setViewportSize({ width, height: width === 1440 ? 1000 : 844 });
         await go('/');
         await page.locator('[data-quick-filter="make"]').click();
+        const frame = await page.locator('dialog[open]').boundingBox();
+        const footerFrame = await page.locator('[data-filter-footer]').boundingBox();
+        const assertStableFrame = async (label) => {
+          if (width < 700) return;
+          assert.deepEqual(
+            await page.locator('dialog[open]').boundingBox(),
+            frame,
+            label + ' dialog',
+          );
+          assert.deepEqual(
+            await page.locator('[data-filter-footer]').boundingBox(),
+            footerFrame,
+            label + ' footer',
+          );
+        };
         for (const section of [
           'Search',
           'Make & model',
@@ -1271,12 +1286,37 @@ async function run(name, engine) {
           await page.getByRole('tab', { name: section, exact: true }).click();
           assert.equal(await page.locator('dialog[open]').count(), 1);
           await filterGeometry(width + 'px filter ' + section);
+          await assertStableFrame(section);
           await capture(
             'filters-' +
               section.toLowerCase().replaceAll(' ', '-').replaceAll('&', 'and') +
               '-' +
               width,
           );
+        }
+        if (width >= 700) {
+          await page.getByRole('tab', { name: 'Make & model', exact: true }).click();
+          const desktop = page.locator('[data-desktop-make-model]');
+          const make = desktop.getByRole('checkbox', { name: 'BMW', exact: true });
+          await make.check();
+          await assertStableFrame('make selected');
+          await desktop.getByRole('button', { name: 'Expand X Series', exact: true }).click();
+          await assertStableFrame('family expanded');
+          await desktop.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
+          await desktop.getByRole('checkbox', { name: 'X6', exact: true }).check();
+          await assertStableFrame('model selected');
+          await desktop.locator('summary').click();
+          await desktop
+            .getByRole('textbox', { name: 'Variant: X Series', exact: true })
+            .fill('M Sport');
+          await assertStableFrame('variant edited');
+          await desktop.getByRole('button', { name: 'Remove make: BMW', exact: true }).click();
+          assert.equal(
+            await desktop.getByRole('textbox', { name: 'Search models', exact: true }).inputValue(),
+            '',
+          );
+          assert.equal(await make.isChecked(), false);
+          await assertStableFrame('make removed');
         }
         await page.keyboard.press('Escape');
         await page.locator('dialog[open]').waitFor({ state: 'hidden' });

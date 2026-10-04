@@ -15,6 +15,7 @@ import {
 import { colors } from '@/styles/tokens.stylex';
 import { RangeField } from './RangeField';
 import { MakePicker } from './MakePicker';
+import { ShowroomDesktopMakeModel } from './ShowroomDesktopMakeModel';
 import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearchField } from './ShowroomSearch';
@@ -42,14 +43,17 @@ const s = stylex.create({
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
   makePanel: {
     display: 'flex',
-    flex: { default: '1', '@media (min-width: 700px)': '0 1 auto' },
+    flex: '1',
     minHeight: 0,
     minWidth: 0,
     width: '100%',
-    height: { default: 'auto', '@media (min-width: 700px)': 'min(420px, calc(100dvh - 240px))' },
-    paddingInline: { default: 0, '@media (min-width: 700px)': 8 },
-    paddingBottom: { default: 0, '@media (min-width: 700px)': 8 },
     marginInline: 'auto',
+  },
+  mobileMakePicker: {
+    display: { default: 'flex', '@media (min-width: 700px)': 'none' },
+    flex: '1',
+    minHeight: 0,
+    minWidth: 0,
   },
   hidden: { display: 'none' },
   fields: {
@@ -234,16 +238,26 @@ export function ShowroomFilterSheet({
             {...stylex.props(s.makePanel, sheet !== 'make' && s.hidden)}
           >
             {draft.category === 'car' ? (
-              <MakePicker
-                key={resetVersion}
-                embedded
-                open
-                initialMake={draft.makes.length === 1 ? draft.makes[0] : ''}
-                availableMakes={stockMakes}
-                filters={draft}
-                onApply={change}
-                onClose={onClose}
-              />
+              <>
+                <div {...stylex.props(s.mobileMakePicker)}>
+                  <MakePicker
+                    key={resetVersion}
+                    embedded
+                    open
+                    initialMake={draft.makes.length === 1 ? draft.makes[0] : ''}
+                    availableMakes={stockMakes}
+                    filters={draft}
+                    onApply={change}
+                    onClose={onClose}
+                  />
+                </div>
+                <ShowroomDesktopMakeModel
+                  key={resetVersion}
+                  availableMakes={stockMakes}
+                  filters={draft}
+                  onChange={change}
+                />
+              </>
             ) : (
               <CategoryMakePicker
                 key={resetVersion}

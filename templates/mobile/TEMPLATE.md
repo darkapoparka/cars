@@ -66,19 +66,23 @@ Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
-Compact Make/Model controls switch views; selected makes remain editable. Model
+On phones, compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
-On desktop, the selected Make control has a separate, labelled Remove action
-that stays available while browsing models. Removing a make clears its model
-search and selections, then returns keyboard focus to the make list. Brand and
+Desktop uses separate brand and model panels with independent search fields.
+Brand checkboxes select and deselect directly; a separate edit action opens an
+existing brand's models. A labelled Remove action stays beside the model heading.
+Removing a brand clears its model criteria and search, then returns keyboard
+focus to that brand's checkbox. Brand and
 model dividers use the quiet stripe token on desktop, with rounded row hover
 feedback; phones retain their existing rows and selector layout.
 Optional variants and exclusion live in a collapsed More options section.
 At 700px and wider, this filter editor is capped at 820px with 24px viewport
 gutters. Seven compact tabs fit the available width and wrap labels at spaces.
-The dialog uses its content height, at most 680px or the viewport minus 48px,
-with options scrolling above the fixed footer. The make/model list retains a
-bounded scrolling area. More puts mileage across the first row, with transmission
+The dialog has a fixed height of 680px or the viewport minus 48px, so tab changes,
+selections, searches and family expansion cannot recenter the frame. Only the
+inner content scrolls above the fixed footer. The model list and its always
+reachable More options disclosure have their own bounded scrolling areas.
+More puts mileage across the first row, with transmission
 and body type in two columns below. Desktop content has 24px gutters and a 200px
 apply action. The native backdrop uses an 8px blur with a light 22% dim on desktop.
 Phones retain the full-screen editor, scrolling tabs, stacked settings and
