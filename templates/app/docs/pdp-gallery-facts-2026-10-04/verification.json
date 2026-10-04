@@ -1,0 +1,761 @@
+{
+  "after": [
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Екстериор, 6 снимки",
+          "width": 269.328125,
+          "x": 120.5,
+          "y": 512.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Интериор, 7 снимки",
+          "width": 269.34375,
+          "x": 397.828125,
+          "y": 512.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Детайли, 5 снимки",
+          "width": 269.328125,
+          "x": 675.171875,
+          "y": 512.65625
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 47.15625,
+        "x": 1273.34375,
+        "y": 457.65625
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 270,
+      "similar": {
+        "height": 44,
+        "label": "Подобни автомобили",
+        "surface": {
+          "height": 28,
+          "width": 85.5,
+          "x": 104.5,
+          "y": 455.65625
+        },
+        "text": "Подобни",
+        "width": 85.5,
+        "x": 104.5,
+        "y": 447.65625
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 км",
+            "title": "Пробег: 92,000 км",
+            "width": 74.984375,
+            "x": 120.5,
+            "y": 645.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Автоматична",
+            "title": "Скорости: Автоматична",
+            "width": 97.25,
+            "x": 201.484375,
+            "y": 645.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Бензин",
+            "title": "Гориво: Бензин",
+            "width": 60.1875,
+            "x": 304.734375,
+            "y": 645.65625
+          }
+        ],
+        "height": 26,
+        "text": "92,000 кмАвтоматичнаБензин",
+        "width": 824,
+        "x": 120.5,
+        "y": 645.65625
+      },
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Екстериор, 6 снимки",
+          "width": 109,
+          "x": 16,
+          "y": 246.375
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Интериор, 7 снимки",
+          "width": 109,
+          "x": 133,
+          "y": 246.375
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Детайли, 5 снимки",
+          "width": 109,
+          "x": 250,
+          "y": 246.375
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 47.15625,
+        "x": 315.84375,
+        "y": 191.375
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 0,
+      "similar": {
+        "height": 44,
+        "label": "Подобни автомобили",
+        "surface": {
+          "height": 28,
+          "width": 85.5,
+          "x": 12,
+          "y": 189.375
+        },
+        "text": "Подобни",
+        "width": 85.5,
+        "x": 12,
+        "y": 181.375
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 км",
+            "title": "Пробег: 92,000 км",
+            "width": 74.984375,
+            "x": 16,
+            "y": 371.375
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Автоматична",
+            "title": "Скорости: Автоматична",
+            "width": 97.25,
+            "x": 96.984375,
+            "y": 371.375
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Бензин",
+            "title": "Гориво: Бензин",
+            "width": 60.1875,
+            "x": 200.234375,
+            "y": 371.375
+          }
+        ],
+        "height": 26,
+        "text": "92,000 кмАвтоматичнаБензин",
+        "width": 343,
+        "x": 16,
+        "y": 371.375
+      },
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Екстериор, 6 снимки",
+          "width": 85.65625,
+          "x": 16,
+          "y": 202.625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Интериор, 7 снимки",
+          "width": 85.671875,
+          "x": 109.65625,
+          "y": 202.625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Детайли, 5 снимки",
+          "width": 85.671875,
+          "x": 203.328125,
+          "y": 202.625
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 47.15625,
+        "x": 245.84375,
+        "y": 147.625
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 0,
+      "similar": {
+        "height": 44,
+        "label": "Подобни автомобили",
+        "surface": {
+          "height": 28,
+          "width": 85.5,
+          "x": 12,
+          "y": 145.625
+        },
+        "text": "Подобни",
+        "width": 85.5,
+        "x": 12,
+        "y": 137.625
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 км",
+            "title": "Пробег: 92,000 км",
+            "width": 74.984375,
+            "x": 16,
+            "y": 327.625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Автоматична",
+            "title": "Скорости: Автоматична",
+            "width": 97.25,
+            "x": 96.984375,
+            "y": 327.625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Бензин",
+            "title": "Гориво: Бензин",
+            "width": 60.1875,
+            "x": 200.234375,
+            "y": 327.625
+          }
+        ],
+        "height": 26,
+        "text": "92,000 кмАвтоматичнаБензин",
+        "width": 273,
+        "x": 16,
+        "y": 327.625
+      },
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Екстериор, 6 снимки",
+          "width": 227,
+          "x": 28,
+          "y": 435.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Интериор, 7 снимки",
+          "width": 227,
+          "x": 263,
+          "y": 435.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Детайли, 5 снимки",
+          "width": 227,
+          "x": 498,
+          "y": 435.65625
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 47.15625,
+        "x": 693.84375,
+        "y": 380.65625
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 0,
+      "similar": {
+        "height": 44,
+        "label": "Подобни автомобили",
+        "surface": {
+          "height": 28,
+          "width": 85.5,
+          "x": 12,
+          "y": 378.65625
+        },
+        "text": "Подобни",
+        "width": 85.5,
+        "x": 12,
+        "y": 370.65625
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 км",
+            "title": "Пробег: 92,000 км",
+            "width": 74.984375,
+            "x": 28,
+            "y": 568.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Автоматична",
+            "title": "Скорости: Автоматична",
+            "width": 97.25,
+            "x": 108.984375,
+            "y": 568.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Бензин",
+            "title": "Гориво: Бензин",
+            "width": 60.1875,
+            "x": 212.234375,
+            "y": 568.65625
+          }
+        ],
+        "height": 26,
+        "text": "92,000 кмАвтоматичнаБензин",
+        "width": 697,
+        "x": 28,
+        "y": 568.65625
+      },
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Exteriors, 6 photos",
+          "width": 109,
+          "x": 16,
+          "y": 246.375
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Interiors, 7 photos",
+          "width": 109,
+          "x": 133,
+          "y": 246.375
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Details, 5 photos",
+          "width": 109,
+          "x": 250,
+          "y": 246.375
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 43.578125,
+        "x": 319.421875,
+        "y": 191.375
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 0,
+      "similar": {
+        "height": 44,
+        "label": "Similar Cars",
+        "surface": {
+          "height": 28,
+          "width": 76.40625,
+          "x": 12,
+          "y": 189.375
+        },
+        "text": "Similar",
+        "width": 76.40625,
+        "x": 12,
+        "y": 181.375
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 km",
+            "title": "Mileage: 92,000 km",
+            "width": 82.3125,
+            "x": 16,
+            "y": 371.375
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Automatic",
+            "title": "Gearbox: Automatic",
+            "width": 79.53125,
+            "x": 104.3125,
+            "y": 371.375
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Petrol",
+            "title": "Fuel Type: Petrol",
+            "width": 52.75,
+            "x": 189.84375,
+            "y": 371.375
+          }
+        ],
+        "height": 26,
+        "text": "92,000 kmAutomaticPetrol",
+        "width": 343,
+        "x": 16,
+        "y": 371.375
+      },
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Exteriors, 6 photos",
+          "width": 85.65625,
+          "x": 16,
+          "y": 202.625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Interiors, 7 photos",
+          "width": 85.671875,
+          "x": 109.65625,
+          "y": 202.625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Details, 5 photos",
+          "width": 85.671875,
+          "x": 203.328125,
+          "y": 202.625
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 43.578125,
+        "x": 249.421875,
+        "y": 147.625
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 0,
+      "similar": {
+        "height": 44,
+        "label": "Similar Cars",
+        "surface": {
+          "height": 28,
+          "width": 76.40625,
+          "x": 12,
+          "y": 145.625
+        },
+        "text": "Similar",
+        "width": 76.40625,
+        "x": 12,
+        "y": 137.625
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 km",
+            "title": "Mileage: 92,000 km",
+            "width": 82.3125,
+            "x": 16,
+            "y": 327.625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Automatic",
+            "title": "Gearbox: Automatic",
+            "width": 79.53125,
+            "x": 104.3125,
+            "y": 327.625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Petrol",
+            "title": "Fuel Type: Petrol",
+            "width": 52.75,
+            "x": 189.84375,
+            "y": 327.625
+          }
+        ],
+        "height": 26,
+        "text": "92,000 kmAutomaticPetrol",
+        "width": 273,
+        "x": 16,
+        "y": 327.625
+      },
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 844,
+        "width": 320
+      }
+    },
+    {
+      "albums": [
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Exteriors, 6 photos",
+          "width": 269.328125,
+          "x": 120.5,
+          "y": 512.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Interiors, 7 photos",
+          "width": 269.34375,
+          "x": 397.828125,
+          "y": 512.65625
+        },
+        {
+          "height": 76,
+          "imageReady": true,
+          "label": "Details, 5 photos",
+          "width": 269.328125,
+          "x": 675.171875,
+          "y": 512.65625
+        }
+      ],
+      "counter": {
+        "height": 24,
+        "text": "1 / 18",
+        "width": 43.578125,
+        "x": 1276.921875,
+        "y": 457.65625
+      },
+      "heroReady": true,
+      "overflow": false,
+      "scrollY": 270,
+      "similar": {
+        "height": 44,
+        "label": "Similar Cars",
+        "surface": {
+          "height": 28,
+          "width": 76.40625,
+          "x": 104.5,
+          "y": 455.65625
+        },
+        "text": "Similar",
+        "width": 76.40625,
+        "x": 104.5,
+        "y": 447.65625
+      },
+      "summary": {
+        "badges": [
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "92,000 km",
+            "title": "Mileage: 92,000 km",
+            "width": 82.3125,
+            "x": 120.5,
+            "y": 645.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Automatic",
+            "title": "Gearbox: Automatic",
+            "width": 79.53125,
+            "x": 208.8125,
+            "y": 645.65625
+          },
+          {
+            "background": "rgb(246, 246, 247)",
+            "height": 26,
+            "radius": "6px",
+            "text": "Petrol",
+            "title": "Fuel Type: Petrol",
+            "width": 52.75,
+            "x": 294.34375,
+            "y": 645.65625
+          }
+        ],
+        "height": 26,
+        "text": "92,000 kmAutomaticPetrol",
+        "width": 824,
+        "x": 120.5,
+        "y": 645.65625
+      },
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "viewport": {
+        "height": 900,
+        "width": 1440
+      }
+    }
+  ],
+  "responsiveAssertions": [
+    {
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+      "width": 768,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "url": "http://127.0.0.1:6483/en/cars/2023-suzuki-ciaz-glx",
+      "width": 1440,
+      "passed": true
+    }
+  ],
+  "interactions": {
+    "albums": [
+      {
+        "button": "Екстериор, 6 снимки",
+        "counter": "1 / 6",
+        "imageAlt": "Екстериор",
+        "imageReady": true,
+        "name": "Преглед на снимки",
+        "next": {
+          "counter": "2 / 6",
+          "imageAlt": "Отпред вдясно",
+          "imageReady": true,
+          "name": "Преглед на снимки"
+        },
+        "focusRestored": true
+      },
+      {
+        "button": "Интериор, 7 снимки",
+        "counter": "1 / 7",
+        "imageAlt": "Централна конзола",
+        "imageReady": true,
+        "name": "Преглед на снимки",
+        "focusRestored": true
+      },
+      {
+        "button": "Детайли, 5 снимки",
+        "counter": "1 / 5",
+        "imageAlt": "1.5 L, 4 Cyl Engine",
+        "imageReady": true,
+        "name": "Преглед на снимки",
+        "focusRestored": true
+      }
+    ],
+    "similarKeyboard": {
+      "focused": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "2px"
+    },
+    "similarOpened": true,
+    "similarFocusRestored": true
+  },
+  "consoleErrors": [],
+  "check": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "status": "passed",
+    "pages": 407
+  }
+}

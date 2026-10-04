@@ -32,7 +32,7 @@ export default function VehiclePhotoAlbums({photos, onOpenPhoto}: {
 
 const s = stylex.create({
   albums: {display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 12},
-  album: {position: 'relative', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-start', flex: '1 1 0', minWidth: 'max-content', maxWidth: '100%', minHeight: 80, padding: 8, overflow: 'hidden', color: '#fff', textAlign: 'left', fontFamily: $.fontSans, borderWidth: 0, borderRadius: 8, backgroundColor: $.ink, cursor: 'pointer', outlineOffset: 3},
+  album: {position: 'relative', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-start', flex: '1 1 0', minWidth: 'max-content', maxWidth: '100%', minHeight: 74, padding: 8, overflow: 'hidden', color: '#fff', textAlign: 'left', fontFamily: $.fontSans, borderWidth: 0, borderRadius: 8, backgroundColor: $.ink, cursor: 'pointer', outlineOffset: 3},
   image: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},
   shade: {position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(180deg,transparent,rgba(0,0,0,.8))', pointerEvents: 'none'},
   caption: {position: 'relative', display: 'grid', gap: 2},

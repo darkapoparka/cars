@@ -1,0 +1,132 @@
+[
+  {
+    "albums": [
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Екстериор, 6 снимки",
+        "width": 109,
+        "x": 16,
+        "y": 246.375
+      },
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Интериор, 7 снимки",
+        "width": 109,
+        "x": 133,
+        "y": 246.375
+      },
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Детайли, 5 снимки",
+        "width": 109,
+        "x": 250,
+        "y": 246.375
+      }
+    ],
+    "counter": {
+      "height": 24,
+      "text": "1 / 18",
+      "width": 47.15625,
+      "x": 315.84375,
+      "y": 191.375
+    },
+    "heroReady": true,
+    "overflow": false,
+    "scrollY": 0,
+    "similar": {
+      "height": 44,
+      "label": "Подобни автомобили",
+      "surface": {
+        "height": 44,
+        "width": 180.4375,
+        "x": 12,
+        "y": 181.375
+      },
+      "text": "Подобни автомобили",
+      "width": 180.4375,
+      "x": 12,
+      "y": 181.375
+    },
+    "summary": {
+      "badges": [],
+      "height": 20,
+      "text": "92,000 км · Автоматична · Бензин",
+      "width": 343,
+      "x": 16,
+      "y": 373.375
+    },
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "albums": [
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Екстериор, 6 снимки",
+        "width": 269.328125,
+        "x": 120.5,
+        "y": 512.65625
+      },
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Интериор, 7 снимки",
+        "width": 269.34375,
+        "x": 397.828125,
+        "y": 512.65625
+      },
+      {
+        "height": 80,
+        "imageReady": true,
+        "label": "Детайли, 5 снимки",
+        "width": 269.328125,
+        "x": 675.171875,
+        "y": 512.65625
+      }
+    ],
+    "counter": {
+      "height": 24,
+      "text": "1 / 18",
+      "width": 47.15625,
+      "x": 1273.34375,
+      "y": 457.65625
+    },
+    "heroReady": true,
+    "overflow": false,
+    "scrollY": 270,
+    "similar": {
+      "height": 44,
+      "label": "Подобни автомобили",
+      "surface": {
+        "height": 44,
+        "width": 180.4375,
+        "x": 104.5,
+        "y": 447.65625
+      },
+      "text": "Подобни автомобили",
+      "width": 180.4375,
+      "x": 104.5,
+      "y": 447.65625
+    },
+    "summary": {
+      "badges": [],
+      "height": 20,
+      "text": "92,000 км · Автоматична · Бензин",
+      "width": 824,
+      "x": 120.5,
+      "y": 647.65625
+    },
+    "url": "http://127.0.0.1:6483/bg/cars/2023-suzuki-ciaz-glx",
+    "viewport": {
+      "height": 900,
+      "width": 1440
+    }
+  }
+]
