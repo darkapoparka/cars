@@ -30,6 +30,8 @@ For desktop changes, also run `pnpm refactor:contracts`, `pnpm release:preflight
 
 ## Browser matrix
 
+[Current inventory control polish](DESKTOP-INVENTORY-CONTROL-POLISH-2026-10-05.md) records the smaller secondary controls, keyboard focus against the photograph, all six sort labels in both locales at 1024 px, and the floating menu in a 600 px-high window.
+
 Desktop overlays must also be checked with an actual scrollbar: Chromium's default headless launch hides it, so use `launchOptions: { ignoreDefaultArgs: ["--hide-scrollbars"] }` for this regression. `desktop-overlay-scrollbar.spec.ts` samples header, banner and controls during opening and verifies dismissal and restored focus for Make, Model, Price, Search, Filters, Sort and template preview at 1024, 1440 and 1920 px in BG/EN. A stable root gutter owns the reserved space; locked body styles must not add a second compensation. Frame width assertions use the available body width, including the OS gutter. Inspect native Saved and gallery dialogs too. On Contact, check equal-height columns, the compact configured logo, white cards with the standard soft hover against the brand-color pane, and the existing local-preview form. Run `desktop-contact-card-actions.spec.ts` for full-surface links, copy success/fallback, the static phone heading and copy-tooltip hover, keyboard focus and Escape dismissal. [Modal/Contact evidence](DESKTOP-MODAL-CONTACT-POLISH-2026-10-04.md) records the scrollbar reproduction, qualification and mobile preservation.
 
 Test at **390px** and **1440px**. Minimum route set:

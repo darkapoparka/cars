@@ -47,15 +47,15 @@
     align-items: center;
     justify-content: center;
     min-width: calc(var(--spacing) * 13);
-    height: calc(var(--spacing) * 13);
-    padding-inline: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 3.5);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-medium);
     color: var(--foreground);
     cursor: pointer;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 7);
+    border-radius: calc(var(--spacing) * 6);
     box-shadow: var(--elevation-overlay);
   }
   .previewTrigger:hover,
@@ -134,35 +134,37 @@
   }
   .controls {
     display: flex;
-    gap: var(--spacing);
+    gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-self: center;
-    padding: var(--spacing);
-    background: var(--panel);
-    border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 4);
   }
   .filters {
     display: inline-flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
     justify-content: center;
-    min-width: calc(var(--spacing) * 30);
-    height: calc(var(--spacing) * 11);
-    padding-inline: calc(var(--spacing) * 4);
+    min-width: calc(var(--spacing) * 26);
+    height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 3.5);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-medium);
     color: var(--foreground);
     cursor: pointer;
-    background: var(--control);
-    border: 0;
-    border-radius: calc(var(--spacing) * 3);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 5);
   }
   .filters:hover {
     background: var(--control-hover);
   }
   .filters svg {
     color: var(--brand);
+  }
+  .filters:focus-visible,
+  .sort:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--panel);
+    outline-offset: var(--desktop-focus-offset);
+    box-shadow: 0 0 0 var(--desktop-focus-width) var(--brand);
   }
   .filterBadge {
     display: grid;
@@ -172,7 +174,7 @@
     padding-inline: var(--spacing);
     font-size: calc(var(--spacing) * 3);
     color: var(--brand-text);
-    background: var(--panel);
+    background: var(--desktop-accent-soft);
     border-radius: calc(var(--spacing) * 5);
   }
   .displayControls {
@@ -185,23 +187,24 @@
   .sort {
     gap: calc(var(--spacing) * 1.5);
     width: calc(var(--spacing) * 64);
-    height: calc(var(--spacing) * 11);
-    min-height: calc(var(--spacing) * 11);
-    padding-inline: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 10);
+    min-height: calc(var(--spacing) * 10);
+    padding-inline: calc(var(--spacing) * 3.5);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-normal);
     color: var(--foreground);
     cursor: pointer;
-    background: var(--control);
-    border: 0;
-    border-radius: calc(var(--spacing) * 3);
+    background: var(--panel);
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 5);
     box-shadow: none;
   }
   .sort:hover,
   .sort[data-state="open"] {
-    background: var(--control);
+    background: var(--control-hover);
   }
   .sortLabel {
+    flex-shrink: 0;
     font-weight: var(--font-weight-normal);
     color: var(--muted-foreground);
   }
@@ -249,8 +252,5 @@
   }
   .results[data-filter-layout="quick"] {
     --inventory-grid-columns: 3;
-  }
-  .sort {
-    width: calc(var(--spacing) * 54);
   }
 }
