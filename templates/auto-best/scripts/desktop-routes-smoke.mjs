@@ -334,8 +334,10 @@ try {
             }
             if (route === 'listing-grid' && width === 1440) {
               const count = page.locator('.dn-listing-hero__copy p');
-              await page.locator('.dn-discovery select[name=make]').selectOption('Audi');
-              await page.locator('.dn-discovery__submit').click();
+              await page.locator('.dn-desktop-listing-search').getByRole('button', { name: locale === 'bg' ? 'Марка' : 'Make', exact: true }).click();
+              const listingDialog = page.locator('#dn-listing-filter-dialog');
+              await listingDialog.getByRole('button', { name: 'Audi', exact: true }).click();
+              await listingDialog.locator('.dn-listing-filter__dialog-submit').click();
               await page.waitForURL(url => url.searchParams.get('make') === 'Audi', { waitUntil: 'domcontentloaded' });
               assert(new URL(page.url()).pathname.startsWith(`/${locale}/`), 'Search preserves the chosen language');
               assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);

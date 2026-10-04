@@ -33,9 +33,11 @@
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
+  import DesktopFilterWorkspace from './DesktopFilterWorkspace.svelte';
   import type { Attachment } from 'svelte/attachments';
 
-  let { filters, children }: { filters: ListingFilters; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
+  let { filters, children, desktopTabs = false }: { filters: ListingFilters; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]>; desktopTabs?: boolean } = $props();
+  let activeDesktopField = $state('make');
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
   onDestroy(() => releaseOffset?.(false));
 
@@ -100,11 +102,19 @@
   const openFilters = (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
     initializeDraft();
+    activeDesktopField = field === 'year_min' || field === 'year_max' ? 'year'
+      : field === 'price_min' || field === 'price_max' ? 'price'
+      : field && field !== 'q' ? field : 'make';
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
     filterDialog?.showModal();
     requestAnimationFrame(() => {
       const compact = window.matchMedia('(max-width: 767px)').matches;
+      if (desktopTabs && window.matchMedia('(min-width: 992px)').matches) {
+        const target = field === 'q' ? dialogSearch : filterDialog?.querySelector<HTMLElement>('[role="tab"][aria-selected="true"]');
+        target?.focus();
+        return;
+      }
       const target = field
         ? filterDialog?.querySelector<HTMLSelectElement>(`select[name="${field}"]`)
         : compact
@@ -144,6 +154,7 @@
 {#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
+  class:dn-listing-filter__dialog--tabbed={desktopTabs}
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
   {@attach attachFilterDialog}
@@ -181,6 +192,7 @@
         </button>
       </div>
 
+      {#if desktopTabs}<DesktopFilterWorkspace bind:draft bind:active={activeDesktopField} />{/if}
       <div class="dn-mobile-filter-fields">
         {#each mobileFields as item (item.field)}
           <button class="dn-mobile-overlay-row" type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
@@ -213,10 +225,10 @@
             </select>
           </label>
           <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_191c24bf12d5")}</span>
-            <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={draft.body}>
+            <span class="dn-listing-filter__field-label">{listingFacetTitle('body', i18n.locale)}</span>
+            <select {@attach i18n.validation} name="body" aria-label={listingFacetTitle('body', i18n.locale)} bind:value={draft.body}>
               {#each listingFilterOptions.bodies as option (option)}
-                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_191c24bf12d5")}</option>
+                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || listingFacetTitle('body', i18n.locale)}</option>
               {/each}
             </select>
           </label>
@@ -319,6 +331,7 @@
           {hasInvalidPriceRange ? i18n.t("m_2157bc34d38a") : i18n.t("m_e35acfc7ae2e")}
         </p>
       {/if}
+      {#if desktopTabs}<button class="dn-listing-filter__desktop-clear" type="button" onclick={resetDraft} disabled={!hasLiveFilters}>{i18n.t("action.clearShort")}</button>{/if}
       {#if hasLiveFilters}<a class="dn-listing-filter__clear dn-mobile-overlay-clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
       <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
         <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
@@ -333,6 +346,19 @@
 </QuickFilterSheet>
 
 <style>
+  .dn-listing-filter__desktop-clear { display: none; }
+  @media (min-width: 992px) {
+    .dn-listing-filter__dialog.dn-listing-filter__dialog--tabbed { width: min(1120px, calc(100vw - 48px)); height: min(750px, calc(100dvh - 64px)); max-height: none; }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-panel { height: 100%; max-height: none; }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-content { flex: 1; overflow: hidden; padding-bottom: 0; }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__filter-groups { display: none; }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__inline-submit,
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__clear { display: none; }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__dialog-search { padding-right: var(--dn-space-4); }
+    .dn-listing-filter__dialog--tabbed .dn-listing-filter__desktop-clear { display: inline-flex; align-items: center; min-height: var(--dn-control-height-default); margin-right: auto; padding: 0 var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
+    .dn-listing-filter__desktop-clear:disabled { opacity: .5; cursor: default; }
+    .dn-listing-filter__desktop-clear:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 3px; }
+  }
   .dn-listing-filter__submit-compact { display: none; }
   .dn-mobile-filter-fields { display: none; }
   label {

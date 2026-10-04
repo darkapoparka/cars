@@ -29,6 +29,7 @@
   import MobileNavIcon from '$components/layout/MobileActionIcon.svelte';
   import QuickFilterSheet from './QuickFilterSheet.svelte';
   import VehicleDiscoveryForm from './VehicleDiscoveryForm.svelte';
+  import DesktopListingSearch from './DesktopListingSearch.svelte';
 
   interface Props {
     filters: ListingFilters;
@@ -88,7 +89,10 @@
 <section class="dn-listing-filter-wrap" data-slot="listing-filters" aria-label={i18n.t("m_6f8428de4166")}>
   <div class="container">
     <div class="dn-listing-filter">
-      <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} /></div>
+      <div class="dn-listing-desktop-discovery">
+        <DesktopListingSearch {filters} {openFilters} {filtersOpen} />
+        <div class="dn-listing-tablet-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} enableSticky={false} /></div>
+      </div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
       <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
@@ -408,6 +412,7 @@
   }
 
   @media (min-width: 992px) {
+    .dn-listing-tablet-discovery, .dn-listing-filter__quick-row { display: none; }
     .dn-listing-filter-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); top: var(--dn-route-hero-control-top); margin-top: 0; }
     .dn-listing-filter-wrap > .container { width: var(--dn-discovery-width); }
     .dn-listing-filter { border-radius: var(--dn-discovery-radius); box-shadow: 0 12px 32px rgb(32 35 41 / 6%); }

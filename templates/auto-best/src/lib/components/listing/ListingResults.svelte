@@ -5,6 +5,7 @@
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
+  import DesktopListingTools from './DesktopListingTools.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import { activeFilterCount, listingHiddenFields, listingFilterOptions, type ListingFilters } from '$data/listing';
   import type { Vehicle } from '$data/inventory';
@@ -35,6 +36,7 @@
 
 <section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
   <div class="container">
+    <DesktopListingTools {filters} count={vehicles.length} {openFilters} {filtersOpen} />
     <h1 id="listing-results-title" class="dn-sr-only dn-listing-results__mobile-title">{i18n.t("m_065a8285dddf")}</h1>
     <div class="dn-listing-results__heading">
       <div class="dn-listing-results__tools">
@@ -111,7 +113,7 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-results__heading { margin-bottom: var(--dn-space-4); }
+    .dn-listing-results__heading { display: none; }
   }
 
   .dn-listing-sort__value {
@@ -211,7 +213,7 @@
     align-items: stretch;
   }
 
-  @media (min-width: 1360px) {
+  @media (min-width: 1600px) {
     .dn-listing-results__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
   }
 
