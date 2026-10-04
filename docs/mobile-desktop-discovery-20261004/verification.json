@@ -1,0 +1,687 @@
+{
+  "date": "2026-10-04",
+  "template": "mobile",
+  "sourceAtStart": "2814c6890d88d34d75a27fb984bd7960ec00953f",
+  "preview": "http://127.0.0.1:6478/",
+  "desktopBreakpoint": 1024,
+  "node": "22.20.0",
+  "productionBuild": "passed: 51 generated routes",
+  "lint": "passed",
+  "typecheck": "passed",
+  "domainAndLocalizationTests": 92,
+  "desktop": {
+    "checks": [
+      "chromium 1023x768: hero breakpoint, photo requests and reflow",
+      "chromium 1024x768: hero breakpoint, photo requests and reflow",
+      "chromium 1024x768: make/model filters apply and survive reload",
+      "chromium 1024x768: cancel discards price draft and restores opener focus",
+      "chromium 1024x768: clear and budget preset filter actual stock",
+      "chromium 1024x768: hero search, Enter, Escape and focus return",
+      "chromium 1024x768: browse CTA, details and filtered Back navigation",
+      "chromium 1280x720: hero breakpoint, photo requests and reflow",
+      "chromium 1280x720: make/model filters apply and survive reload",
+      "chromium 1280x720: cancel discards price draft and restores opener focus",
+      "chromium 1280x720: clear and budget preset filter actual stock",
+      "chromium 1280x720: hero search, Enter, Escape and focus return",
+      "chromium 1280x720: browse CTA, details and filtered Back navigation",
+      "chromium 1440x960: hero breakpoint, photo requests and reflow",
+      "chromium 1440x960: make/model filters apply and survive reload",
+      "chromium 1440x960: cancel discards price draft and restores opener focus",
+      "chromium 1440x960: clear and budget preset filter actual stock",
+      "chromium 1440x960: hero search, Enter, Escape and focus return",
+      "chromium 1440x960: browse CTA, details and filtered Back navigation",
+      "chromium 1920x1080: hero breakpoint, photo requests and reflow",
+      "chromium 1920x1080: make/model filters apply and survive reload",
+      "chromium 1920x1080: cancel discards price draft and restores opener focus",
+      "chromium 1920x1080: clear and budget preset filter actual stock",
+      "chromium 1920x1080: hero search, Enter, Escape and focus return",
+      "chromium 1920x1080: browse CTA, details and filtered Back navigation",
+      "chromium 1024x600: hero breakpoint, photo requests and reflow",
+      "chromium 1024x600: make/model filters apply and survive reload",
+      "chromium 1024x600: cancel discards price draft and restores opener focus",
+      "chromium 1024x600: clear and budget preset filter actual stock",
+      "chromium 1024x600: hero search, Enter, Escape and focus return",
+      "chromium 1024x600: browse CTA, details and filtered Back navigation",
+      "webkit 1023x768: hero breakpoint, photo requests and reflow",
+      "webkit 1024x768: hero breakpoint, photo requests and reflow",
+      "webkit 1024x768: make/model filters apply and survive reload",
+      "webkit 1024x768: cancel discards price draft and restores opener focus",
+      "webkit 1024x768: clear and budget preset filter actual stock",
+      "webkit 1024x768: hero search, Enter, Escape and focus return",
+      "webkit 1024x768: browse CTA, details and filtered Back navigation",
+      "webkit 1280x720: hero breakpoint, photo requests and reflow",
+      "webkit 1280x720: make/model filters apply and survive reload",
+      "webkit 1280x720: cancel discards price draft and restores opener focus",
+      "webkit 1280x720: clear and budget preset filter actual stock",
+      "webkit 1280x720: hero search, Enter, Escape and focus return",
+      "webkit 1280x720: browse CTA, details and filtered Back navigation",
+      "webkit 1440x960: hero breakpoint, photo requests and reflow",
+      "webkit 1440x960: make/model filters apply and survive reload",
+      "webkit 1440x960: cancel discards price draft and restores opener focus",
+      "webkit 1440x960: clear and budget preset filter actual stock",
+      "webkit 1440x960: hero search, Enter, Escape and focus return",
+      "webkit 1440x960: browse CTA, details and filtered Back navigation",
+      "webkit 1920x1080: hero breakpoint, photo requests and reflow",
+      "webkit 1920x1080: make/model filters apply and survive reload",
+      "webkit 1920x1080: cancel discards price draft and restores opener focus",
+      "webkit 1920x1080: clear and budget preset filter actual stock",
+      "webkit 1920x1080: hero search, Enter, Escape and focus return",
+      "webkit 1920x1080: browse CTA, details and filtered Back navigation",
+      "webkit 1024x600: hero breakpoint, photo requests and reflow",
+      "webkit 1024x600: make/model filters apply and survive reload",
+      "webkit 1024x600: cancel discards price draft and restores opener focus",
+      "webkit 1024x600: clear and budget preset filter actual stock",
+      "webkit 1024x600: hero search, Enter, Escape and focus return",
+      "webkit 1024x600: browse CTA, details and filtered Back navigation"
+    ],
+    "errors": [],
+    "geometry": [
+      {
+        "engine": "chromium",
+        "width": 920,
+        "height": 704,
+        "x": 52,
+        "y": 32,
+        "footerBottom": 736,
+        "viewportHeight": 768
+      },
+      {
+        "engine": "chromium",
+        "width": 920,
+        "height": 656,
+        "x": 180,
+        "y": 32,
+        "footerBottom": 688,
+        "viewportHeight": 720
+      },
+      {
+        "engine": "chromium",
+        "width": 920,
+        "height": 728,
+        "x": 260,
+        "y": 116,
+        "footerBottom": 844,
+        "viewportHeight": 960
+      },
+      {
+        "engine": "chromium",
+        "width": 920,
+        "height": 728,
+        "x": 500,
+        "y": 176,
+        "footerBottom": 904,
+        "viewportHeight": 1080
+      },
+      {
+        "engine": "chromium",
+        "width": 920,
+        "height": 536,
+        "x": 52,
+        "y": 32,
+        "footerBottom": 568,
+        "viewportHeight": 600
+      },
+      {
+        "engine": "webkit",
+        "width": 920,
+        "height": 704,
+        "x": 52,
+        "y": 32,
+        "footerBottom": 736,
+        "viewportHeight": 768
+      },
+      {
+        "engine": "webkit",
+        "width": 920,
+        "height": 656,
+        "x": 180,
+        "y": 32,
+        "footerBottom": 688,
+        "viewportHeight": 720
+      },
+      {
+        "engine": "webkit",
+        "width": 920,
+        "height": 728,
+        "x": 260,
+        "y": 116,
+        "footerBottom": 844,
+        "viewportHeight": 960
+      },
+      {
+        "engine": "webkit",
+        "width": 920,
+        "height": 728,
+        "x": 500,
+        "y": 176,
+        "footerBottom": 904,
+        "viewportHeight": 1080
+      },
+      {
+        "engine": "webkit",
+        "width": 920,
+        "height": 536,
+        "x": 52,
+        "y": 32,
+        "footerBottom": 568,
+        "viewportHeight": 600
+      }
+    ]
+  },
+  "phones": {
+    "sourceBefore": "http://127.0.0.1:6474",
+    "after": "http://127.0.0.1:6478",
+    "results": [
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "bg",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "chromium",
+        "width": 320,
+        "lang": "en",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "bg",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "chromium",
+        "width": 390,
+        "lang": "en",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "bg",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "webkit",
+        "width": 320,
+        "lang": "en",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "bg",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "home",
+        "same": true,
+        "elements": 59
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "make",
+        "same": true,
+        "elements": 112
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "price",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "more",
+        "same": true,
+        "elements": 85
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "services",
+        "same": true,
+        "elements": 47
+      },
+      {
+        "engine": "webkit",
+        "width": 390,
+        "lang": "en",
+        "state": "detail",
+        "same": true,
+        "elements": 50
+      }
+    ],
+    "errors": [],
+    "failures": [],
+    "assetHashes": [
+      {
+        "src": "/images/x6-gallery-02.webp",
+        "hashes": [
+          "08b7eda007cbec267dc6cf459725a9ca6e34e43d13e86eed8b47c4c89c97bfba",
+          "08b7eda007cbec267dc6cf459725a9ca6e34e43d13e86eed8b47c4c89c97bfba"
+        ]
+      },
+      {
+        "src": "/images/bmw-540-gallery-01.webp",
+        "hashes": [
+          "f020519add1e6ab61fa128a37f2585bae89bcd59fa7b4056f62c9c91e4e17870",
+          "f020519add1e6ab61fa128a37f2585bae89bcd59fa7b4056f62c9c91e4e17870"
+        ]
+      }
+    ]
+  },
+  "screenshots": {
+    "rawComparisons": [
+      {
+        "name": "bg-320-home.png",
+        "changedChannels": 54440
+      },
+      {
+        "name": "bg-320-make.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-320-price.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-320-more.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-320-services.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-320-detail.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-320-home.png",
+        "changedChannels": 15346
+      },
+      {
+        "name": "en-320-make.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-320-price.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-320-more.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-320-services.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-320-detail.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-390-home.png",
+        "changedChannels": 98638
+      },
+      {
+        "name": "bg-390-make.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-390-price.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-390-more.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-390-services.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "bg-390-detail.png",
+        "changedChannels": 81827
+      },
+      {
+        "name": "en-390-home.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-390-make.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-390-price.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-390-more.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-390-services.png",
+        "changedChannels": 0
+      },
+      {
+        "name": "en-390-detail.png",
+        "changedChannels": 0
+      }
+    ],
+    "caveat": "Four Chromium phone captures have photo-pixel differences despite matching visible text, styles, control and photo geometry, selections, image paths and fetched image bytes. Twenty of twenty-four phone captures match pixel-for-pixel. The earlier 6478 build predates the already-committed phone picker simplification; the current baseline is served on 6474."
+  },
+  "captureHealth": {
+    "captures": 36,
+    "errors": [],
+    "failures": []
+  },
+  "generatedFiles": "next-env.d.ts and tsconfig.json retain their pre-existing content and dirty state",
+  "publication": "local preview only; release lock and dealer hosting unchanged"
+}

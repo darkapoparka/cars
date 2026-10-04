@@ -418,6 +418,7 @@ export function Modal({
   picker = false,
   pickerHeight,
   label,
+  xstyle,
 }: {
   open: boolean;
   onClose: () => void;
@@ -436,6 +437,7 @@ export function Modal({
   picker?: boolean;
   pickerHeight?: number;
   label?: string;
+  xstyle?: stylex.StyleXStyles;
 }) {
   const { t } = useLocale();
   const ref = useRef<HTMLDialogElement>(null);
@@ -474,6 +476,7 @@ export function Modal({
         selection && s.selectionDialog,
         picker && s.pickerDialog,
         picker && pickerHeight !== undefined && s.pickerHeight(pickerHeight),
+        xstyle,
       )}
       aria-label={t(label || title || 'Options')}
       onKeyDown={(event) => {

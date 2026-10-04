@@ -23,22 +23,51 @@ import { Icon } from './Icon';
 import { Button, CheckRow, IconButton, Modal } from './ui';
 
 const s = stylex.create({
+  desktopDialog: {
+    maxWidth: { default: 640, '@media (min-width: 700px)': 820, '@media (min-width: 1024px)': 920 },
+    height: {
+      default: '100dvh',
+      '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
+      '@media (min-width: 1024px)': 'min(728px, calc(100dvh - 64px))',
+    },
+    maxHeight: {
+      default: '100dvh',
+      '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
+      '@media (min-width: 1024px)': 'calc(100dvh - 64px)',
+    },
+    borderRadius: { default: 0, '@media (min-width: 700px)': 20, '@media (min-width: 1024px)': 24 },
+  },
   editor: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0, minWidth: 0 },
   heading: {
     display: 'grid',
-    gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr)',
+    gridTemplateColumns: {
+      default: 'minmax(0,1fr) auto minmax(0,1fr)',
+      '@media (min-width: 1024px)': 'minmax(0,1fr) auto auto',
+    },
     alignItems: 'center',
     gap: 8,
-    paddingInline: { default: 12, '@media (min-width: 700px)': 16 },
-    paddingTop: 'max(8px, env(safe-area-inset-top))',
+    paddingInline: {
+      default: 12,
+      '@media (min-width: 700px)': 16,
+      '@media (min-width: 1024px)': 24,
+    },
+    paddingTop: { default: 'max(8px, env(safe-area-inset-top))', '@media (min-width: 1024px)': 16 },
+    paddingBottom: { default: 0, '@media (min-width: 1024px)': 8 },
     flexShrink: 0,
   },
   title: {
-    fontSize: 20,
+    fontSize: { default: 20, '@media (min-width: 1024px)': 24 },
     fontWeight: 700,
-    lineHeight: '28px',
+    lineHeight: { default: '28px', '@media (min-width: 1024px)': '32px' },
     minWidth: 0,
-    textAlign: 'center',
+    textAlign: { default: 'center', '@media (min-width: 1024px)': 'left' },
+    gridColumn: { default: null, '@media (min-width: 1024px)': 1 },
+    gridRow: { default: null, '@media (min-width: 1024px)': 1 },
+  },
+  closeAction: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
+    gridColumn: { default: null, '@media (min-width: 1024px)': 3 },
+    gridRow: { default: null, '@media (min-width: 1024px)': 1 },
   },
   clearFilters: {
     justifySelf: 'end',
@@ -51,6 +80,8 @@ const s = stylex.create({
     fontSize: { default: 14, '@media (min-width: 700px)': 15 },
     fontWeight: 600,
     lineHeight: '20px',
+    gridColumn: { default: null, '@media (min-width: 1024px)': 2 },
+    gridRow: { default: null, '@media (min-width: 1024px)': 1 },
   },
   tabs: { flexShrink: 0 },
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
@@ -78,7 +109,8 @@ const s = stylex.create({
     padding: { default: 20, '@media (min-width: 700px)': 24 },
     display: 'flex',
     flexDirection: 'column',
-    gap: 28,
+    gap: { default: 28, '@media (min-width: 1024px)': 24 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.stripe },
   },
   readableFields: {
     width: '100%',
@@ -96,7 +128,24 @@ const s = stylex.create({
       '@media (min-width: 700px)': '1 / -1',
     },
   },
-  group: { borderWidth: 0, padding: 0, minWidth: 0 },
+  group: {
+    borderWidth: 0,
+    padding: { default: 0, '@media (min-width: 1024px)': 20 },
+    minWidth: 0,
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
+  },
+  rangeCard: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
+    padding: { default: 0, '@media (min-width: 1024px)': 24 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
+  },
+  mileageCard: {
+    padding: { default: 0, '@media (min-width: 1024px)': 24 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
+  },
   choiceList: {
     display: 'flex',
     flexDirection: 'column',
@@ -292,10 +341,19 @@ export function ShowroomFilterSheet({
     setDraft((current) => updateShowroomFilterDraft(current, patch));
   }
   return (
-    <Modal open onClose={onClose} label={t('Search and filters')} flowSheet wide>
+    <Modal
+      open
+      onClose={onClose}
+      label={t('Search and filters')}
+      flowSheet
+      wide
+      xstyle={s.desktopDialog}
+    >
       <div ref={editorRef} {...stylex.props(s.editor)}>
         <div {...stylex.props(s.heading)}>
-          <IconButton icon="close" label={t('Close filters')} onClick={onClose} />
+          <div {...stylex.props(s.closeAction)}>
+            <IconButton icon="close" label={t('Close filters')} onClick={onClose} />
+          </div>
           <h2 {...stylex.props(s.title)}>{sheet === 'search' ? t('Search') : t('Filters')}</h2>
           <button
             type="button"
@@ -412,17 +470,19 @@ export function ShowroomFilterSheet({
               )}
               {sheet === 'price' && (
                 <>
-                  <RangeField
-                    comfortable
-                    label={t('Price')}
-                    floor={0}
-                    ceiling={100000}
-                    step={500}
-                    unit="€"
-                    min={draft.minPrice}
-                    max={draft.maxPrice}
-                    onChange={(minPrice, maxPrice) => change({ minPrice, maxPrice })}
-                  />
+                  <div {...stylex.props(s.rangeCard)}>
+                    <RangeField
+                      comfortable
+                      label={t('Price')}
+                      floor={0}
+                      ceiling={100000}
+                      step={500}
+                      unit="€"
+                      min={draft.minPrice}
+                      max={draft.maxPrice}
+                      onChange={(minPrice, maxPrice) => change({ minPrice, maxPrice })}
+                    />
+                  </div>
                   <div role="group" aria-label={t('Price')} {...stylex.props(s.budgetPresets)}>
                     {['', '40000', '60000', '100000'].map((maxPrice) => {
                       const selected = !Number(draft.minPrice) && draft.maxPrice === maxPrice;
@@ -442,15 +502,17 @@ export function ShowroomFilterSheet({
                 </>
               )}
               {sheet === 'year' && (
-                <RangeField
-                  comfortable
-                  label={t('Year')}
-                  floor={1980}
-                  ceiling={new Date().getFullYear() + 1}
-                  min={draft.minYear}
-                  max={draft.maxYear}
-                  onChange={(minYear, maxYear) => change({ minYear, maxYear })}
-                />
+                <div {...stylex.props(s.rangeCard)}>
+                  <RangeField
+                    comfortable
+                    label={t('Year')}
+                    floor={1980}
+                    ceiling={new Date().getFullYear() + 1}
+                    min={draft.minYear}
+                    max={draft.maxYear}
+                    onChange={(minYear, maxYear) => change({ minYear, maxYear })}
+                  />
+                </div>
               )}
               {sheet === 'fuel' &&
                 (fuels.length ? (
@@ -477,7 +539,7 @@ export function ShowroomFilterSheet({
               )}
               {sheet === 'more' && (
                 <>
-                  <div {...stylex.props(s.moreRange)}>
+                  <div {...stylex.props(s.moreRange, s.mileageCard)}>
                     <RangeField
                       comfortable
                       label={t('Mileage')}

@@ -4,6 +4,11 @@ export const bgMessages: Record<string, string> = {
   Services: 'Услуги',
   Contact: 'Контакт',
   'Your showroom': 'Вашият автосалон',
+  'Find your next vehicle': 'Намерете своя автомобил',
+  'All makes': 'Всички марки',
+  'Any price': 'Всяка цена',
+  'Explore the showroom. Find a vehicle that fits you.':
+    'Разгледайте автосалона. Намерете автомобил, който ви подхожда.',
   'Main navigation': 'Основна навигация',
   'Skip to content': 'Към съдържанието',
   'Find a vehicle': 'Намерете автомобил',

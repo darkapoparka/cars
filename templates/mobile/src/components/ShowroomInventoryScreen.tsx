@@ -26,6 +26,7 @@ import { ShowroomFilterSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearch } from './ShowroomSearch';
+import { ShowroomDesktopHero } from './ShowroomDesktopHero';
 import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
@@ -37,7 +38,20 @@ const s = stylex.create({
     objectFit: 'contain',
     flexShrink: 0,
   },
-  search: { paddingTop: 4 },
+  search: {
+    paddingTop: 4,
+    display: { default: 'block', '@media (min-width: 1024px)': 'none' },
+  },
+  stockHeading: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 16,
+    paddingTop: 12,
+    paddingBottom: 20,
+  },
+  stockTitle: { fontSize: 24, fontWeight: 700, lineHeight: '32px' },
+  stockCount: { color: colors.muted, fontSize: 15, lineHeight: '24px' },
   controls: {
     position: 'sticky',
     top: 0,
@@ -62,6 +76,7 @@ const s = stylex.create({
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
   content: {
     backgroundColor: colors.background,
+    scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 136 },
     paddingInline: 16,
     paddingTop: { default: 12, '@media (max-width: 699px)': 8 },
     paddingBottom: 24,
@@ -238,6 +253,29 @@ export function ShowroomInventoryScreen() {
   return (
     <>
       <Header home showLanguageSwitcher sticky={false} />
+      <ShowroomDesktopHero
+        query={filters.query}
+        makeLabel={pills[0].active ? t(pills[0].label) : t('All makes')}
+        priceLabel={t(filters.minPrice || filters.maxPrice ? priceLabel : 'Any price')}
+        resultLabel={
+          t('Show ') +
+          results.length +
+          ' ' +
+          t(results.length === 1 ? category.singular : category.plural)
+        }
+        sheet={sheet}
+        onOpen={openSheet}
+        onBrowse={() => {
+          const stock = document.getElementById('showroom-stock');
+          stock?.focus({ preventScroll: true });
+          stock?.scrollIntoView({
+            block: 'start',
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+              ? 'instant'
+              : 'smooth',
+          });
+        }}
+      />
       <div {...stylex.props(s.search)}>
         <ShowroomSearch
           label={t('Search make or model')}
@@ -325,6 +363,7 @@ export function ShowroomInventoryScreen() {
       </section>
       <section
         id="showroom-stock"
+        tabIndex={-1}
         role="tabpanel"
         aria-labelledby={'category-' + filters.category}
         {...stylex.props(s.content)}
@@ -332,6 +371,12 @@ export function ShowroomInventoryScreen() {
         <h1 aria-live="polite" {...stylex.props(ui.srOnly)}>
           {results.length} {t(results.length === 1 ? category.singular : category.plural)}
         </h1>
+        <div {...stylex.props(s.stockHeading)}>
+          <h2 {...stylex.props(s.stockTitle)}>{t('In this showroom')}</h2>
+          <span aria-live="polite" {...stylex.props(s.stockCount)}>
+            {results.length} {t(results.length === 1 ? category.singular : category.plural)}
+          </span>
+        </div>
         {results.length ? (
           <div {...stylex.props(s.grid)}>
             {results.map((vehicle, index) => (
