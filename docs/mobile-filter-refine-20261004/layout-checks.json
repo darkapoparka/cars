@@ -1,0 +1,709 @@
+{
+  "cases": 32,
+  "rows": [
+    {
+      "width": 320,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "make",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "price",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "year",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "fuel",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "condition",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 320,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "make",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "price",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "year",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "fuel",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "condition",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": true,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 700,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 652,
+          "height": 640
+        },
+        "after": {
+          "width": 652,
+          "height": 540
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 700,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 652,
+          "height": 640
+        },
+        "after": {
+          "width": 652,
+          "height": 616
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1024,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 976,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 532
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1024,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 976,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 608
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 532
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 608
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1920,
+      "section": "search",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 532
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1920,
+      "section": "more",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 608
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "search",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 532
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "make",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 614
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "price",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 398
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "year",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 398
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "fuel",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 376
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "condition",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 376
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 1440,
+      "section": "more",
+      "locale": "en",
+      "dialog": {
+        "before": {
+          "width": 1100,
+          "height": 640
+        },
+        "after": {
+          "width": 820,
+          "height": 608
+        }
+      },
+      "blur": "blur(8px)",
+      "tabs": 7,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    },
+    {
+      "width": 320,
+      "section": "service",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 320,
+          "height": 900
+        },
+        "after": {
+          "width": 320,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 0,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 390,
+      "section": "service",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 390,
+          "height": 900
+        },
+        "after": {
+          "width": 390,
+          "height": 900
+        }
+      },
+      "blur": "none",
+      "tabs": 0,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0,
+      "changedPixels": 0,
+      "significantPixels": 0
+    },
+    {
+      "width": 1440,
+      "section": "service",
+      "locale": "bg",
+      "dialog": {
+        "before": {
+          "width": 640,
+          "height": 760
+        },
+        "after": {
+          "width": 640,
+          "height": 760
+        }
+      },
+      "blur": "none",
+      "tabs": 0,
+      "clippedLabels": false,
+      "horizontalTabScroll": false,
+      "overflow": false,
+      "errors": 0
+    }
+  ]
+}

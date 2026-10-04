@@ -26,7 +26,7 @@ const s = stylex.create({
     display: 'flex',
     alignItems: 'center',
     gap: 8,
-    paddingInline: 12,
+    paddingInline: { default: 12, '@media (min-width: 700px)': 16 },
     paddingTop: 'max(8px, env(safe-area-inset-top))',
     flexShrink: 0,
   },
@@ -42,11 +42,13 @@ const s = stylex.create({
   panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
   makePanel: {
     display: 'flex',
-    flex: '1',
+    flex: { default: '1', '@media (min-width: 700px)': '0 1 auto' },
     minHeight: 0,
     minWidth: 0,
     width: '100%',
-    maxWidth: { default: 'none', '@media (min-width: 700px)': 760 },
+    height: { default: 'auto', '@media (min-width: 700px)': 'min(420px, calc(100dvh - 240px))' },
+    paddingInline: { default: 0, '@media (min-width: 700px)': 8 },
+    paddingBottom: { default: 0, '@media (min-width: 700px)': 8 },
     marginInline: 'auto',
   },
   hidden: { display: 'none' },
@@ -56,22 +58,18 @@ const s = stylex.create({
     minWidth: 0,
     overflowY: 'auto',
     overscrollBehaviorY: 'contain',
-    padding: 20,
+    padding: { default: 20, '@media (min-width: 700px)': 24 },
     display: 'flex',
     flexDirection: 'column',
     gap: 28,
   },
   readableFields: {
     width: '100%',
-    maxWidth: { default: 'none', '@media (min-width: 700px)': 760 },
     marginInline: 'auto',
   },
   moreFields: {
     display: { default: 'flex', '@media (min-width: 700px)': 'grid' },
-    gridTemplateColumns: {
-      default: 'repeat(2,minmax(0,1fr))',
-      '@media (min-width: 1000px)': 'repeat(3,minmax(0,1fr))',
-    },
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
     alignContent: { default: 'normal', '@media (min-width: 700px)': 'start' },
   },
   moreRange: {
@@ -79,7 +77,6 @@ const s = stylex.create({
     gridColumn: {
       default: 'auto',
       '@media (min-width: 700px)': '1 / -1',
-      '@media (min-width: 1000px)': 'auto',
     },
   },
   group: { borderWidth: 0, padding: 0, minWidth: 0 },
@@ -109,7 +106,7 @@ const s = stylex.create({
   suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
   footer: {
     flexShrink: 0,
-    paddingInline: 16,
+    paddingInline: { default: 16, '@media (min-width: 700px)': 24 },
     paddingTop: 12,
     paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
     backgroundColor: colors.background,
@@ -119,7 +116,7 @@ const s = stylex.create({
     display: { default: 'block', '@media (min-width: 700px)': 'flex' },
     justifyContent: 'flex-end',
   },
-  footerAction: { width: { default: '100%', '@media (min-width: 700px)': 240 } },
+  footerAction: { width: { default: '100%', '@media (min-width: 700px)': 200 } },
 });
 function Choices({
   title,

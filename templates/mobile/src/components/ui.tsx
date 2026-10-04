@@ -214,10 +214,19 @@ const s = stylex.create({
     '::backdrop': { backgroundColor: 'rgba(0,0,0,.4)' },
   },
   wideFlowSheet: {
-    maxWidth: { default: 640, '@media (min-width: 700px)': 1100 },
-    height: {
+    maxWidth: { default: 640, '@media (min-width: 700px)': 820 },
+    // Native modal insets stretch an auto height; use the content's intrinsic size on desktop.
+    height: { default: '100dvh', '@media (min-width: 700px)': 'fit-content' },
+    maxHeight: {
       default: '100dvh',
-      '@media (min-width: 700px)': 'min(640px, calc(100dvh - 48px))',
+      '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
+    },
+    '::backdrop': {
+      backgroundColor: {
+        default: 'rgba(0,0,0,.4)',
+        '@media (min-width: 700px)': 'rgba(20,24,32,.22)',
+      },
+      backdropFilter: { default: 'none', '@media (min-width: 700px)': 'blur(8px)' },
     },
   },
   wideDialog: { width: 'calc(100% - 48px)', padding: 0 },

@@ -24,7 +24,10 @@ const s = stylex.create({
     borderBottomColor: colors.line,
   },
   fillRail: { paddingInline: 0, overflowX: 'visible' },
-  desktopFillRail: { overflowX: { default: 'auto', '@media (min-width: 700px)': 'visible' } },
+  desktopFillRail: {
+    overflowX: { default: 'auto', '@media (min-width: 700px)': 'visible' },
+    paddingInline: { default: 16, '@media (min-width: 700px)': 12 },
+  },
   flushRail: { marginTop: 0 },
   tab: {
     position: 'relative',
@@ -67,9 +70,11 @@ const s = stylex.create({
     flexShrink: { default: 0, '@media (min-width: 700px)': 1 },
     flexBasis: { default: 'auto', '@media (min-width: 700px)': 0 },
     minWidth: { default: 72, '@media (min-width: 700px)': 0 },
-    paddingInline: { default: 16, '@media (min-width: 700px)': 12 },
+    paddingInline: { default: 16, '@media (min-width: 700px)': 4 },
+    fontSize: { default: 16, '@media (min-width: 700px)': 14 },
+    lineHeight: { default: '22px', '@media (min-width: 700px)': '20px' },
     whiteSpace: { default: 'nowrap', '@media (min-width: 700px)': 'normal' },
-    overflowWrap: { default: 'normal', '@media (min-width: 700px)': 'anywhere' },
+    overflowWrap: 'normal',
   },
   selected: {
     color: colors.accent,

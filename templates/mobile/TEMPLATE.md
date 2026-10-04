@@ -69,14 +69,15 @@ taxonomy and selection logic power a dedicated showroom list inside that editor.
 Compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
 Optional variants and exclusion live in a collapsed More options section.
-At 700px and wider, this filter editor uses the site's 1100px width cap with
-24px viewport gutters. All seven tabs share the available width. Its height is
-capped at 640px or the viewport minus 48px, with options scrolling above the
-fixed footer. Search, make/model and single-setting panels retain a readable
-760px content cap. More groups mileage, transmission and body type into three
-columns from 1000px; below that, mileage spans two columns. The desktop apply
-action is 240px wide. Phones retain the full-screen editor, scrolling tabs,
-stacked settings and full-width apply action.
+At 700px and wider, this filter editor is capped at 820px with 24px viewport
+gutters. Seven compact tabs fit the available width and wrap labels at spaces.
+The dialog uses its content height, at most 680px or the viewport minus 48px,
+with options scrolling above the fixed footer. The make/model list retains a
+bounded scrolling area. More puts mileage across the first row, with transmission
+and body type in two columns below. Desktop content has 24px gutters and a 200px
+apply action. The native backdrop uses an 8px blur with a light 22% dim on desktop.
+Phones retain the full-screen editor, scrolling tabs, stacked settings and
+full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Inventory photos sit inside a 12px white frame with 10px
 inner corners. The title and price share a wrapping row; the trim stays below,
