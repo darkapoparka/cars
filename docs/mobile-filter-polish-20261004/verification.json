@@ -1,0 +1,2861 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6474/",
+  "checks": [
+    {
+      "label": "1440 dialog, heading and footer preserved",
+      "pass": true,
+      "details": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 57,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 larger steady tab labels",
+      "pass": true,
+      "details": [
+        {
+          "label": "Търсене",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Марка и модел",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Цена",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Година",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Гориво",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Състояние",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        },
+        {
+          "label": "Още",
+          "fontSize": "16px",
+          "fontWeight": "600"
+        }
+      ]
+    },
+    {
+      "label": "1440 no tab or footer motion",
+      "pass": true,
+      "details": {
+        "footer": {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        "reducedMotion": true,
+        "tabs": [
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          },
+          {
+            "animation": "none",
+            "transform": "none",
+            "transitionProperty": "none"
+          }
+        ]
+      }
+    },
+    {
+      "label": "BG 700 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          91.8125,
+          140.25,
+          63.59375,
+          80.640625,
+          81.3125,
+          111.296875,
+          59.09375
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "BG 700 Търсене",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Цена",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Година",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Гориво",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Състояние",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Още",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 700 Марка и модел",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          101.53125,
+          149.96875,
+          73.296875,
+          90.359375,
+          91.015625,
+          121.015625,
+          68.8125
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "BG 768 Търсене",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Цена",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Година",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Гориво",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Състояние",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Още",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 768 Марка и модел",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          115.8125,
+          164.25,
+          87.59375,
+          104.640625,
+          105.3125,
+          135.296875,
+          83.09375
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "BG 1024 Търсене",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Цена",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Година",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Гориво",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Състояние",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Още",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1024 Марка и модел",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          115.8125,
+          164.25,
+          87.59375,
+          104.640625,
+          105.3125,
+          135.296875,
+          83.09375
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "BG 1440 Търсене",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Цена",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Година",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Гориво",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Състояние",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Още",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1440 Марка и модел",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          115.8125,
+          164.25,
+          87.59375,
+          104.640625,
+          105.3125,
+          135.296875,
+          83.09375
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "BG 1920 Търсене",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Цена",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Година",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Гориво",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Състояние",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Още",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "BG 1920 Марка и модел",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700x900 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          88.453125,
+          143.140625,
+          74.078125,
+          69.65625,
+          67.3125,
+          109.953125,
+          75.40625
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "EN 700 Search",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 Price",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 Year",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 Fuel",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 Condition",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 More",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 700 Make & model",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024x500 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          112.453125,
+          167.140625,
+          98.078125,
+          93.65625,
+          91.3125,
+          133.953125,
+          99.40625
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "EN 1024 Search",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 Price",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 Year",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 Fuel",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 Condition",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 More",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1024 Make & model",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440x900 all tabs fit",
+      "pass": true,
+      "details": {
+        "tabWidths": [
+          112.453125,
+          167.140625,
+          98.078125,
+          93.65625,
+          91.3125,
+          133.953125,
+          99.40625
+        ],
+        "textHeights": [
+          19,
+          19,
+          19,
+          19,
+          19,
+          19,
+          19
+        ]
+      }
+    },
+    {
+      "label": "EN 1440 Search",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 Price",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 Year",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 Fuel",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 Condition",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 More",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "EN 1440 Make & model",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Keyboard End focuses More",
+      "pass": true
+    },
+    {
+      "label": "Keyboard Home focuses Search",
+      "pass": true
+    },
+    {
+      "label": "Keyboard Right focuses Make and model",
+      "pass": true
+    },
+    {
+      "label": "Keyboard navigation keeps frame and tab positions",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Desktop search fields and checkboxes align",
+      "pass": true,
+      "details": [
+        {
+          "checkboxWidth": 20,
+          "searchHeight": 44,
+          "searchWidth": 374,
+          "width": 374
+        },
+        {
+          "checkboxWidth": 20,
+          "searchHeight": 44,
+          "searchWidth": 374,
+          "width": 374
+        }
+      ]
+    },
+    {
+      "label": "Model search keeps frame and tabs",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "X6 selection keeps frame and tabs",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Expanded model settings keep frame and tabs",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Brand deselection keeps frame and tabs",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Deselected brand disables model search",
+      "pass": true
+    },
+    {
+      "label": "Remove action keeps frame and tabs",
+      "pass": true,
+      "details": {
+        "maximumShift": 0,
+        "railHeight": 57
+      }
+    },
+    {
+      "label": "Apply closes the editor",
+      "pass": true
+    },
+    {
+      "label": "Apply retains X6 in the URL",
+      "pass": true
+    },
+    {
+      "label": "320 phone layout preserved",
+      "pass": true,
+      "details": {
+        "dialog": {
+          "height": 844,
+          "width": 320,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 320,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 288,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 140,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 140,
+            "x": 164,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 320,
+          "x": 0,
+          "y": 64
+        }
+      }
+    },
+    {
+      "label": "320 phone tab typography preserved",
+      "pass": true
+    },
+    {
+      "label": "Phone apply transition remains unchanged",
+      "pass": true,
+      "details": {
+        "animation": "none",
+        "transform": "none",
+        "transitionProperty": "filter, transform"
+      }
+    },
+    {
+      "label": "320 last tab scrolls into view",
+      "pass": true
+    },
+    {
+      "label": "390 phone layout preserved",
+      "pass": true,
+      "details": {
+        "dialog": {
+          "height": 844,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 390,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 358,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 175,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 175,
+            "x": 199,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 390,
+          "x": 0,
+          "y": 64
+        }
+      }
+    },
+    {
+      "label": "390 phone tab typography preserved",
+      "pass": true
+    }
+  ],
+  "before": {
+    "desktop": {
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "tabs": [
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Търсене",
+          "rect": {
+            "height": 52,
+            "width": 113.703125,
+            "x": 322,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 55.40625,
+            "x": 351.140625,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "600",
+          "label": "Марка и модел",
+          "rect": {
+            "height": 52,
+            "width": 113.71875,
+            "x": 435.703125,
+            "y": 174
+          },
+          "selected": "true",
+          "text": {
+            "height": 17,
+            "width": 101.5,
+            "x": 441.8125,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "3px",
+            "left": "2px",
+            "right": "2px",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Цена",
+          "rect": {
+            "height": 52,
+            "width": 113.703125,
+            "x": 549.421875,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 33.671875,
+            "x": 589.4375,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Година",
+          "rect": {
+            "height": 52,
+            "width": 113.71875,
+            "x": 663.125,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 45.640625,
+            "x": 697.15625,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Гориво",
+          "rect": {
+            "height": 52,
+            "width": 113.71875,
+            "x": 776.84375,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 45.109375,
+            "x": 811.140625,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Състояние",
+          "rect": {
+            "height": 52,
+            "width": 113.71875,
+            "x": 890.5625,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 70.828125,
+            "x": 912,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "14px",
+          "fontWeight": "500",
+          "label": "Още",
+          "rect": {
+            "height": 52,
+            "width": 113.71875,
+            "x": 1004.28125,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 17,
+            "width": 30.046875,
+            "x": 1046.109375,
+            "y": 191
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        }
+      ]
+    },
+    "mobile320": {
+      "origin": "http://127.0.0.1:6478",
+      "frame": {
+        "dialog": {
+          "height": 844,
+          "width": 320,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 320,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 288,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 140,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 140,
+            "x": 164,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 320,
+          "x": 0,
+          "y": 64
+        }
+      },
+      "tabs": {
+        "frame": {
+          "dialog": {
+            "height": 844,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
+          "footer": {
+            "height": 77,
+            "width": 320,
+            "x": 0,
+            "y": 767
+          },
+          "heading": {
+            "height": 56,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
+          "tabs": {
+            "height": 52,
+            "width": 320,
+            "x": 0,
+            "y": 64
+          }
+        },
+        "overflow": true,
+        "pageOverflow": false,
+        "tabs": [
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Търсене",
+            "rect": {
+              "height": 52,
+              "width": 98.46875,
+              "x": 16,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 66.46875,
+              "x": 32,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "label": "Марка и модел",
+            "rect": {
+              "height": 52,
+              "width": 152.890625,
+              "x": 114.46875,
+              "y": 64
+            },
+            "selected": "true",
+            "text": {
+              "height": 20,
+              "width": 120.890625,
+              "x": 130.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "3px",
+              "left": "2px",
+              "right": "2px",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Цена",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 267.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 39.609375,
+              "x": 283.546875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Година",
+            "rect": {
+              "height": 52,
+              "width": 87.625,
+              "x": 339.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.625,
+              "x": 355.359375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Гориво",
+            "rect": {
+              "height": 52,
+              "width": 87.484375,
+              "x": 426.984375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.484375,
+              "x": 442.984375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Състояние",
+            "rect": {
+              "height": 52,
+              "width": 117.65625,
+              "x": 514.46875,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 85.65625,
+              "x": 530.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Още",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 632.125,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 34.90625,
+              "x": 650.671875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          }
+        ]
+      }
+    },
+    "mobile390": {
+      "origin": "http://127.0.0.1:6478",
+      "frame": {
+        "dialog": {
+          "height": 844,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 390,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 358,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 175,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 175,
+            "x": 199,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 390,
+          "x": 0,
+          "y": 64
+        }
+      },
+      "tabs": {
+        "frame": {
+          "dialog": {
+            "height": 844,
+            "width": 390,
+            "x": 0,
+            "y": 0
+          },
+          "footer": {
+            "height": 77,
+            "width": 390,
+            "x": 0,
+            "y": 767
+          },
+          "heading": {
+            "height": 56,
+            "width": 390,
+            "x": 0,
+            "y": 0
+          },
+          "tabs": {
+            "height": 52,
+            "width": 390,
+            "x": 0,
+            "y": 64
+          }
+        },
+        "overflow": true,
+        "pageOverflow": false,
+        "tabs": [
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Търсене",
+            "rect": {
+              "height": 52,
+              "width": 98.46875,
+              "x": 16,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 66.46875,
+              "x": 32,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "label": "Марка и модел",
+            "rect": {
+              "height": 52,
+              "width": 152.890625,
+              "x": 114.46875,
+              "y": 64
+            },
+            "selected": "true",
+            "text": {
+              "height": 20,
+              "width": 120.890625,
+              "x": 130.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "3px",
+              "left": "2px",
+              "right": "2px",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Цена",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 267.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 39.609375,
+              "x": 283.546875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Година",
+            "rect": {
+              "height": 52,
+              "width": 87.625,
+              "x": 339.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.625,
+              "x": 355.359375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Гориво",
+            "rect": {
+              "height": 52,
+              "width": 87.484375,
+              "x": 426.984375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.484375,
+              "x": 442.984375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Състояние",
+            "rect": {
+              "height": 52,
+              "width": 117.65625,
+              "x": 514.46875,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 85.65625,
+              "x": 530.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Още",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 632.125,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 34.90625,
+              "x": 650.671875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "after": {
+    "desktop": {
+      "footerMotion": {
+        "animation": "none",
+        "transform": "none",
+        "transition": "1e-05s"
+      },
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 57,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      },
+      "overflow": false,
+      "pageOverflow": false,
+      "tabs": [
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Търсене",
+          "rect": {
+            "height": 56,
+            "width": 115.8125,
+            "x": 322,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 67.578125,
+            "x": 346.109375,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgb(255, 249, 246)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Марка и модел",
+          "rect": {
+            "height": 56,
+            "width": 164.25,
+            "x": 437.8125,
+            "y": 174
+          },
+          "selected": "true",
+          "text": {
+            "height": 19,
+            "width": 116,
+            "x": 461.9375,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "3px",
+            "left": "12px",
+            "right": "12px",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Цена",
+          "rect": {
+            "height": 56,
+            "width": 87.59375,
+            "x": 602.0625,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 39.34375,
+            "x": 626.1875,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Година",
+          "rect": {
+            "height": 56,
+            "width": 104.640625,
+            "x": 689.65625,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 56.390625,
+            "x": 713.78125,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Гориво",
+          "rect": {
+            "height": 56,
+            "width": 105.3125,
+            "x": 794.296875,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 57.0625,
+            "x": 818.421875,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Състояние",
+          "rect": {
+            "height": 56,
+            "width": 135.296875,
+            "x": 899.609375,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 87.046875,
+            "x": 923.734375,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        },
+        {
+          "animation": "none",
+          "background": "rgba(0, 0, 0, 0)",
+          "fontSize": "16px",
+          "fontWeight": "600",
+          "label": "Още",
+          "rect": {
+            "height": 56,
+            "width": 83.09375,
+            "x": 1034.90625,
+            "y": 174
+          },
+          "selected": "false",
+          "text": {
+            "height": 19,
+            "width": 34.84375,
+            "x": 1059.03125,
+            "y": 192
+          },
+          "transform": "none",
+          "transition": "1e-05s",
+          "underline": {
+            "animation": "none",
+            "height": "auto",
+            "left": "auto",
+            "right": "auto",
+            "transition": "1e-05s"
+          }
+        }
+      ]
+    },
+    "mobile320": {
+      "frame": {
+        "dialog": {
+          "height": 844,
+          "width": 320,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 320,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 278,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 288,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 140,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 140,
+            "x": 164,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 320,
+          "x": 0,
+          "y": 64
+        }
+      },
+      "tabs": {
+        "footerMotion": {
+          "animation": "none",
+          "transform": "none",
+          "transition": "1e-05s"
+        },
+        "frame": {
+          "dialog": {
+            "height": 844,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
+          "footer": {
+            "height": 77,
+            "width": 320,
+            "x": 0,
+            "y": 767
+          },
+          "heading": {
+            "height": 56,
+            "width": 320,
+            "x": 0,
+            "y": 0
+          },
+          "tabs": {
+            "height": 52,
+            "width": 320,
+            "x": 0,
+            "y": 64
+          }
+        },
+        "overflow": true,
+        "pageOverflow": false,
+        "tabs": [
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Търсене",
+            "rect": {
+              "height": 52,
+              "width": 98.46875,
+              "x": 16,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 66.46875,
+              "x": 32,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "label": "Марка и модел",
+            "rect": {
+              "height": 52,
+              "width": 152.890625,
+              "x": 114.46875,
+              "y": 64
+            },
+            "selected": "true",
+            "text": {
+              "height": 20,
+              "width": 120.890625,
+              "x": 130.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "3px",
+              "left": "2px",
+              "right": "2px",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Цена",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 267.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 39.609375,
+              "x": 283.546875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Година",
+            "rect": {
+              "height": 52,
+              "width": 87.625,
+              "x": 339.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.625,
+              "x": 355.359375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Гориво",
+            "rect": {
+              "height": 52,
+              "width": 87.484375,
+              "x": 426.984375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.484375,
+              "x": 442.984375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Състояние",
+            "rect": {
+              "height": 52,
+              "width": 117.65625,
+              "x": 514.46875,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 85.65625,
+              "x": 530.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Още",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 632.125,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 34.90625,
+              "x": 650.671875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          }
+        ]
+      }
+    },
+    "mobile390": {
+      "frame": {
+        "dialog": {
+          "height": 844,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        },
+        "footer": {
+          "height": 77,
+          "width": 390,
+          "x": 0,
+          "y": 767
+        },
+        "models": [
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 296
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 348
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 400
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 452
+          },
+          {
+            "height": 52,
+            "width": 348,
+            "x": 16,
+            "y": 504
+          }
+        ],
+        "search": [
+          {
+            "height": 48,
+            "width": 358,
+            "x": 16,
+            "y": 188
+          }
+        ],
+        "selectors": [
+          {
+            "height": 48,
+            "width": 175,
+            "x": 16,
+            "y": 128
+          },
+          {
+            "height": 48,
+            "width": 175,
+            "x": 199,
+            "y": 128
+          }
+        ],
+        "tabs": {
+          "height": 52,
+          "width": 390,
+          "x": 0,
+          "y": 64
+        }
+      },
+      "tabs": {
+        "footerMotion": {
+          "animation": "none",
+          "transform": "none",
+          "transition": "1e-05s"
+        },
+        "frame": {
+          "dialog": {
+            "height": 844,
+            "width": 390,
+            "x": 0,
+            "y": 0
+          },
+          "footer": {
+            "height": 77,
+            "width": 390,
+            "x": 0,
+            "y": 767
+          },
+          "heading": {
+            "height": 56,
+            "width": 390,
+            "x": 0,
+            "y": 0
+          },
+          "tabs": {
+            "height": 52,
+            "width": 390,
+            "x": 0,
+            "y": 64
+          }
+        },
+        "overflow": true,
+        "pageOverflow": false,
+        "tabs": [
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Търсене",
+            "rect": {
+              "height": 52,
+              "width": 98.46875,
+              "x": 16,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 66.46875,
+              "x": 32,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "600",
+            "label": "Марка и модел",
+            "rect": {
+              "height": 52,
+              "width": 152.890625,
+              "x": 114.46875,
+              "y": 64
+            },
+            "selected": "true",
+            "text": {
+              "height": 20,
+              "width": 120.890625,
+              "x": 130.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "3px",
+              "left": "2px",
+              "right": "2px",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Цена",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 267.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 39.609375,
+              "x": 283.546875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Година",
+            "rect": {
+              "height": 52,
+              "width": 87.625,
+              "x": 339.359375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.625,
+              "x": 355.359375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Гориво",
+            "rect": {
+              "height": 52,
+              "width": 87.484375,
+              "x": 426.984375,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 55.484375,
+              "x": 442.984375,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Състояние",
+            "rect": {
+              "height": 52,
+              "width": 117.65625,
+              "x": 514.46875,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 85.65625,
+              "x": 530.46875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          },
+          {
+            "animation": "none",
+            "background": "rgba(0, 0, 0, 0)",
+            "fontSize": "16px",
+            "fontWeight": "500",
+            "label": "Още",
+            "rect": {
+              "height": 52,
+              "width": 72,
+              "x": 632.125,
+              "y": 64
+            },
+            "selected": "false",
+            "text": {
+              "height": 20,
+              "width": 34.90625,
+              "x": 650.671875,
+              "y": 80
+            },
+            "transform": "none",
+            "transition": "1e-05s",
+            "underline": {
+              "animation": "none",
+              "height": "auto",
+              "left": "auto",
+              "right": "auto",
+              "transition": "1e-05s"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "motion": {
+    "desktop": {
+      "footer": {
+        "animation": "none",
+        "transform": "none",
+        "transitionProperty": "none"
+      },
+      "reducedMotion": true,
+      "tabs": [
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        }
+      ]
+    },
+    "phone": {
+      "footer": {
+        "animation": "none",
+        "transform": "none",
+        "transitionProperty": "filter, transform"
+      },
+      "reducedMotion": true,
+      "tabs": [
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        },
+        {
+          "animation": "none",
+          "transform": "none",
+          "transitionProperty": "none"
+        }
+      ]
+    }
+  },
+  "consoleErrors": []
+}

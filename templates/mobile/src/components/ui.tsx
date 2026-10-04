@@ -293,6 +293,7 @@ export function Button({
   compact = false,
   dense = false,
   floating = false,
+  xstyle,
 }: {
   children: ReactNode;
   href?: string;
@@ -306,6 +307,7 @@ export function Button({
   compact?: boolean;
   dense?: boolean;
   floating?: boolean;
+  xstyle?: stylex.StyleXStyles;
 }) {
   const { t } = useLocale();
   const copy = typeof children === 'string' ? t(children) : children;
@@ -317,6 +319,7 @@ export function Button({
     dense && s.dense,
     floating && s.floating,
     disabled && s.disabled,
+    xstyle,
   );
   return href && !disabled ? (
     <Link href={href} {...attrs} aria-label={label ? t(label) : undefined}>

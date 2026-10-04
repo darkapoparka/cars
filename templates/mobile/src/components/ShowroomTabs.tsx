@@ -27,6 +27,11 @@ const s = stylex.create({
   desktopFillRail: {
     overflowX: { default: 'auto', '@media (min-width: 700px)': 'visible' },
     paddingInline: { default: 16, '@media (min-width: 700px)': 12 },
+    height: { default: 'auto', '@media (min-width: 700px)': 57 },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 700px)': colors.stripe,
+    },
   },
   flushRail: { marginTop: 0 },
   tab: {
@@ -68,13 +73,28 @@ const s = stylex.create({
   desktopFillTab: {
     flexGrow: { default: 0, '@media (min-width: 700px)': 1 },
     flexShrink: { default: 0, '@media (min-width: 700px)': 1 },
-    flexBasis: { default: 'auto', '@media (min-width: 700px)': 0 },
+    flexBasis: 'auto',
     minWidth: { default: 72, '@media (min-width: 700px)': 0 },
-    paddingInline: { default: 16, '@media (min-width: 700px)': 4 },
-    fontSize: { default: 16, '@media (min-width: 700px)': 14 },
-    lineHeight: { default: '22px', '@media (min-width: 700px)': '20px' },
+    height: { default: 'auto', '@media (min-width: 700px)': 56 },
+    minHeight: { default: 52, '@media (min-width: 700px)': 56 },
+    paddingInline: { default: 16, '@media (min-width: 700px)': 8 },
+    paddingBlock: { default: 10, '@media (min-width: 700px)': 6 },
+    fontSize: 16,
+    lineHeight: '22px',
+    fontWeight: { default: 500, '@media (min-width: 700px)': 600 },
     whiteSpace: { default: 'nowrap', '@media (min-width: 700px)': 'normal' },
     overflowWrap: 'normal',
+    borderTopLeftRadius: { default: 0, '@media (min-width: 700px)': 8 },
+    borderTopRightRadius: { default: 0, '@media (min-width: 700px)': 8 },
+    backgroundColor: {
+      default: 'transparent',
+      ':active': colors.controlSurface,
+      '@media (min-width: 700px)': {
+        default: 'transparent',
+        ':hover': colors.controlSurface,
+      },
+    },
+    transition: 'none',
   },
   selected: {
     color: colors.accent,
@@ -91,6 +111,23 @@ const s = stylex.create({
     },
   },
   selectedText: { fontWeight: 600 },
+  desktopFillSelected: {
+    backgroundColor: {
+      default: 'transparent',
+      ':active': {
+        default: colors.controlSurface,
+        '@media (min-width: 700px)': colors.activeSurface,
+      },
+      '@media (min-width: 700px)': {
+        default: colors.activeSurface,
+        ':hover': colors.activeSurface,
+      },
+    },
+    '::after': {
+      left: { default: 2, '@media (min-width: 700px)': 12 },
+      right: { default: 2, '@media (min-width: 700px)': 12 },
+    },
+  },
   selectedNeutral: {
     color: colors.text,
     '::after': { backgroundColor: colors.text },
@@ -128,6 +165,7 @@ export function ShowroomTabs<T extends string>({
     const rail = tab?.parentElement;
     if (!tab || !rail) return;
     const reveal = () => {
+      if (rail.scrollWidth <= rail.clientWidth) return;
       const bounds = tab.getBoundingClientRect();
       const visible = rail.getBoundingClientRect();
       if (bounds.left < visible.left) rail.scrollLeft += bounds.left - visible.left;
@@ -191,6 +229,7 @@ export function ShowroomTabs<T extends string>({
             selected === value && s.selected,
             selected === value && tone === 'neutral' && s.selectedNeutral,
             selected === value && variant === 'text' && s.selectedText,
+            selected === value && layout === 'desktop-fill' && s.desktopFillSelected,
           )}
         >
           {content ?? tabText(tabLabel)}

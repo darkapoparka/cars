@@ -83,7 +83,12 @@ quiet stripe token on desktop, with rounded row hover
 feedback; phones retain their existing rows and selector layout.
 Optional variants and exclusion live in a collapsed More options section.
 At 700px and wider, this filter editor is capped at 820px with 24px viewport
-gutters. Seven compact tabs fit the available width and wrap labels at spaces.
+gutters. Seven 16px tabs share a fixed 56px height, a quiet background and an
+inset underline. Their weight stays constant on selection, and their widths
+follow their labels so larger text fits without shifting neighboring tabs.
+Long labels can wrap at spaces. Search fields use a light surface and border;
+selected brands have a warm surface, aligned 20px checkboxes and a visible Remove
+action. The desktop apply button stays stationary with instant hover feedback.
 The dialog has a fixed height of 680px or the viewport minus 48px, so tab changes,
 selections, searches and family expansion cannot recenter the frame. Only the
 inner content scrolls above the fixed footer. The model list and its always

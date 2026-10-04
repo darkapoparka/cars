@@ -124,6 +124,17 @@ const s = stylex.create({
     justifyContent: 'flex-end',
   },
   footerAction: { width: { default: '100%', '@media (min-width: 700px)': 200 } },
+  footerButton: {
+    transition: {
+      default: 'filter 120ms, transform 120ms',
+      '@media (min-width: 700px)': 'none',
+    },
+    transform: {
+      default: 'none',
+      ':active': { default: 'translateY(1px)', '@media (min-width: 700px)': 'none' },
+      '@media (min-width: 700px)': 'none',
+    },
+  },
 });
 function Choices({
   title,
@@ -407,7 +418,7 @@ export function ShowroomFilterSheet({
         </div>
         <div data-filter-footer {...stylex.props(s.footer)}>
           <div {...stylex.props(s.footerAction)}>
-            <Button block floating onClick={() => onApply(draft)}>
+            <Button block floating xstyle={s.footerButton} onClick={() => onApply(draft)}>
               <span aria-live="polite" aria-atomic="true">
                 {t('Show ')}
                 {count} {t(count === 1 ? category.singular : category.plural)}
