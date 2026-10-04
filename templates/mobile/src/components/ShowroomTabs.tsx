@@ -1,8 +1,16 @@
 'use client';
-import { useEffect, useRef, type ReactNode } from 'react';
+import { useEffect, useRef, useSyncExternalStore, type ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
+
+function subscribeDesktop(onChange: () => void) {
+  const media = window.matchMedia('(min-width: 1024px)');
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+}
+const desktopSnapshot = () => window.matchMedia('(min-width: 1024px)').matches;
+const serverSnapshot = () => false;
 
 const s = stylex.create({
   rail: {
@@ -134,6 +142,101 @@ const s = stylex.create({
     color: colors.text,
     '::after': { backgroundColor: colors.text },
   },
+  desktopCategories: {
+    justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
+    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    paddingTop: { default: 0, '@media (min-width: 1024px)': 4 },
+    paddingBottom: { default: 0, '@media (min-width: 1024px)': 4 },
+    borderBottomWidth: {
+      default: 0,
+      '@media (min-width: 700px)': 1,
+      '@media (min-width: 1024px)': 0,
+    },
+  },
+  sidebarRail: {
+    flexDirection: { default: 'row', '@media (min-width: 1024px)': 'column' },
+    gap: { default: 0, '@media (min-width: 1024px)': 6 },
+    height: {
+      default: 'auto',
+      '@media (min-width: 700px)': 57,
+      '@media (min-width: 1024px)': '100%',
+    },
+    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    paddingInline: {
+      default: 16,
+      '@media (min-width: 700px)': 12,
+      '@media (min-width: 1024px)': 12,
+    },
+    paddingBlock: { default: 0, '@media (min-width: 1024px)': 16 },
+    overflowY: { default: 'visible', '@media (min-width: 1024px)': 'auto' },
+    borderBottomWidth: {
+      default: 0,
+      '@media (min-width: 700px)': 1,
+      '@media (min-width: 1024px)': 0,
+    },
+    borderRightWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderRightStyle: 'solid',
+    borderRightColor: colors.line,
+  },
+  sidebarTab: {
+    outlineColor: {
+      default: colors.accent,
+      '@media (min-width: 700px)': colors.text,
+      '@media (min-width: 1024px)': colors.accent,
+    },
+    outlineOffset: {
+      default: -3,
+      '@media (min-width: 700px)': -5,
+      '@media (min-width: 1024px)': -2,
+    },
+    outlineWidth: {
+      default: null,
+      '@media (min-width: 1024px)': { default: null, ':focus-visible': 2 },
+    },
+    justifyContent: { default: 'center', '@media (min-width: 1024px)': 'flex-start' },
+    flexGrow: {
+      default: 0,
+      '@media (min-width: 700px)': 1,
+      '@media (min-width: 1024px)': 0,
+    },
+    height: {
+      default: 'auto',
+      '@media (min-width: 700px)': 56,
+      '@media (min-width: 1024px)': 44,
+    },
+    minHeight: {
+      default: 52,
+      '@media (min-width: 700px)': 56,
+      '@media (min-width: 1024px)': 44,
+    },
+    paddingInline: {
+      default: 16,
+      '@media (min-width: 700px)': 8,
+      '@media (min-width: 1024px)': 12,
+    },
+    fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
+    borderTopLeftRadius: {
+      default: 0,
+      '@media (min-width: 700px)': 8,
+      '@media (min-width: 1024px)': 10,
+    },
+    borderTopRightRadius: {
+      default: 0,
+      '@media (min-width: 700px)': 8,
+      '@media (min-width: 1024px)': 10,
+    },
+    borderBottomLeftRadius: { default: 0, '@media (min-width: 1024px)': 10 },
+    borderBottomRightRadius: { default: 0, '@media (min-width: 1024px)': 10 },
+  },
+  sidebarSelected: {
+    color: colors.accent,
+    backgroundColor: {
+      default: 'transparent',
+      '@media (min-width: 700px)': colors.activeSurface,
+      '@media (min-width: 1024px)': '#fff0eb',
+    },
+    '::after': { height: { default: 3, '@media (min-width: 1024px)': 0 } },
+  },
 });
 
 export function ShowroomTabs<T extends string>({
@@ -155,11 +258,14 @@ export function ShowroomTabs<T extends string>({
   idPrefix: string;
   variant?: 'text' | 'icon';
   tone?: 'accent' | 'neutral';
-  layout?: 'scroll' | 'fill' | 'desktop-fill';
+  layout?: 'scroll' | 'fill' | 'desktop-fill' | 'desktop-sidebar' | 'desktop-categories';
   flush?: boolean;
   onChange: (value: T) => void;
 }) {
   const { t, locale } = useLocale();
+  const desktopFill = layout === 'desktop-fill' || layout === 'desktop-sidebar';
+  const desktop = useSyncExternalStore(subscribeDesktop, desktopSnapshot, serverSnapshot);
+  const vertical = layout === 'desktop-sidebar' && desktop;
   const tabText = (text: string) => (locale === 'bg' && text === 'Features' ? 'Екстри' : t(text));
   const activeTab = useRef<HTMLButtonElement | null>(null);
   useEffect(() => {
@@ -167,26 +273,34 @@ export function ShowroomTabs<T extends string>({
     const rail = tab?.parentElement;
     if (!tab || !rail) return;
     const reveal = () => {
-      if (rail.scrollWidth <= rail.clientWidth) return;
       const bounds = tab.getBoundingClientRect();
       const visible = rail.getBoundingClientRect();
-      if (bounds.left < visible.left) rail.scrollLeft += bounds.left - visible.left;
-      else if (bounds.right > visible.right) rail.scrollLeft += bounds.right - visible.right;
+      if (rail.scrollWidth > rail.clientWidth) {
+        if (bounds.left < visible.left) rail.scrollLeft += bounds.left - visible.left;
+        else if (bounds.right > visible.right) rail.scrollLeft += bounds.right - visible.right;
+      }
+      if (layout === 'desktop-sidebar' && rail.scrollHeight > rail.clientHeight) {
+        if (bounds.top < visible.top) rail.scrollTop += bounds.top - visible.top;
+        else if (bounds.bottom > visible.bottom) rail.scrollTop += bounds.bottom - visible.bottom;
+      }
     };
     reveal();
     const observer = new ResizeObserver(reveal);
     observer.observe(tab);
     observer.observe(rail);
     return () => observer.disconnect();
-  }, [selected]);
+  }, [selected, layout]);
   return (
     <div
       role="tablist"
       aria-label={t(label)}
+      aria-orientation={vertical ? 'vertical' : undefined}
       {...stylex.props(
         s.rail,
         layout === 'fill' && s.fillRail,
-        layout === 'desktop-fill' && s.desktopFillRail,
+        desktopFill && s.desktopFillRail,
+        layout === 'desktop-sidebar' && s.sidebarRail,
+        layout === 'desktop-categories' && s.desktopCategories,
         flush && s.flushRail,
       )}
     >
@@ -205,9 +319,9 @@ export function ShowroomTabs<T extends string>({
           onClick={() => onChange(value)}
           onKeyDown={(event) => {
             const next =
-              event.key === 'ArrowRight'
+              event.key === 'ArrowRight' || (vertical && event.key === 'ArrowDown')
                 ? (index + 1) % tabs.length
-                : event.key === 'ArrowLeft'
+                : event.key === 'ArrowLeft' || (vertical && event.key === 'ArrowUp')
                   ? (index + tabs.length - 1) % tabs.length
                   : event.key === 'Home'
                     ? 0
@@ -227,11 +341,13 @@ export function ShowroomTabs<T extends string>({
             variant === 'text' && s.textTab,
             variant === 'icon' && s.iconTab,
             layout === 'fill' && s.fillTab,
-            layout === 'desktop-fill' && s.desktopFillTab,
+            desktopFill && s.desktopFillTab,
+            layout === 'desktop-sidebar' && s.sidebarTab,
             selected === value && s.selected,
             selected === value && tone === 'neutral' && s.selectedNeutral,
             selected === value && variant === 'text' && s.selectedText,
-            selected === value && layout === 'desktop-fill' && s.desktopFillSelected,
+            selected === value && desktopFill && s.desktopFillSelected,
+            selected === value && layout === 'desktop-sidebar' && s.sidebarSelected,
           )}
         >
           {content ?? tabText(tabLabel)}

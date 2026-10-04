@@ -31,10 +31,28 @@ import { ShowroomQuickPill, ShowroomQuickPills } from './ShowroomQuickPills';
 import { Button, IconButton, Modal, ui } from './ui';
 
 const s = stylex.create({
+  desktopFlow: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    flexDirection: 'column',
+  },
+  categoryBar: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
+    order: 1,
+  },
+  categoryChoice: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    alignItems: 'center',
+    gap: 8,
+  },
+  categoryLabel: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
+    fontSize: 14,
+    lineHeight: '20px',
+  },
   categoryImage: {
     display: 'block',
-    width: 64,
-    height: 40,
+    width: { default: 64, '@media (min-width: 1024px)': 48 },
+    height: { default: 40, '@media (min-width: 1024px)': 30 },
     objectFit: 'contain',
     flexShrink: 0,
   },
@@ -47,17 +65,29 @@ const s = stylex.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 16,
-    paddingTop: 12,
-    paddingBottom: 20,
+    paddingTop: 8,
+    paddingBottom: 16,
   },
-  stockTitle: { fontSize: 24, fontWeight: 700, lineHeight: '32px' },
+  stockTitle: { fontSize: 20, fontWeight: 700, lineHeight: '28px' },
   stockCount: { color: colors.muted, fontSize: 15, lineHeight: '24px' },
   controls: {
-    position: 'sticky',
+    position: { default: 'sticky', '@media (min-width: 1024px)': 'static' },
     top: 0,
     zIndex: 25,
-    display: 'flow-root',
+    display: { default: 'flow-root', '@media (min-width: 1024px)': 'contents' },
     backgroundColor: colors.background,
+  },
+  quickBar: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
+    order: 3,
+    position: { default: 'static', '@media (min-width: 1024px)': 'sticky' },
+    top: 0,
+    zIndex: 25,
+    paddingBlock: { default: 0, '@media (min-width: 1024px)': 12 },
+    backgroundColor: colors.background,
+    borderBottomWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
   },
   filterCount: {
     display: 'inline-flex',
@@ -75,8 +105,9 @@ const s = stylex.create({
   },
   pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
   content: {
+    order: 4,
     backgroundColor: colors.background,
-    scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 136 },
+    scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 96 },
     paddingInline: 16,
     paddingTop: { default: 12, '@media (max-width: 699px)': 8 },
     paddingBottom: 24,
@@ -87,6 +118,7 @@ const s = stylex.create({
     gridTemplateColumns: {
       default: 'minmax(0,1fr)',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 1024px)': 'repeat(4,minmax(0,1fr))',
     },
   },
   note: {
@@ -251,7 +283,7 @@ export function ShowroomInventoryScreen() {
     { key: 'more', label: 'More', active: otherFilterCount > 0, name: 'More' },
   ];
   return (
-    <>
+    <div {...stylex.props(s.desktopFlow)}>
       <Header home showLanguageSwitcher sticky={false} />
       <ShowroomDesktopHero
         query={filters.query}
@@ -288,78 +320,86 @@ export function ShowroomInventoryScreen() {
         data-showroom-controls
         {...stylex.props(s.controls)}
       >
-        <ShowroomTabs
-          label={t('Vehicle category')}
-          variant="icon"
-          tone="neutral"
-          tabs={showroomCategories.map(({ value, label, image }) => ({
-            value,
-            label,
-            content: (
-              <Image
-                src={image}
-                alt=""
-                width={64}
-                height={40}
-                sizes="64px"
-                loading="eager"
-                draggable={false}
-                {...stylex.props(s.categoryImage)}
-              />
-            ),
-          }))}
-          selected={filters.category}
-          panelId="showroom-stock"
-          idPrefix="category-"
-          onChange={selectCategory}
-        />
-        <ShowroomQuickPills label={t('Quick filters')}>
-          <ShowroomQuickPill
-            aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
-            aria-haspopup="dialog"
-            aria-expanded={sorting}
-            active={sort !== 'standard'}
-            onClick={(event) => openSheet('sort', event.currentTarget)}
-          >
-            <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
-            {t(compactSortLabel)}
-          </ShowroomQuickPill>
-          {pills.map((pill) => (
+        <div {...stylex.props(s.categoryBar)}>
+          <ShowroomTabs
+            label={t('Vehicle category')}
+            variant="icon"
+            tone="neutral"
+            layout="desktop-categories"
+            tabs={showroomCategories.map(({ value, label, image }) => ({
+              value,
+              label,
+              content: (
+                <span {...stylex.props(s.categoryChoice)}>
+                  <Image
+                    src={image}
+                    alt=""
+                    width={64}
+                    height={40}
+                    sizes="64px"
+                    loading="eager"
+                    draggable={false}
+                    {...stylex.props(s.categoryImage)}
+                  />
+                  <span {...stylex.props(s.categoryLabel)}>{t(label)}</span>
+                </span>
+              ),
+            }))}
+            selected={filters.category}
+            panelId="showroom-stock"
+            idPrefix="category-"
+            onChange={selectCategory}
+          />
+        </div>
+        <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
+          <ShowroomQuickPills label={t('Quick filters')}>
             <ShowroomQuickPill
-              key={pill.key}
-              type="button"
-              data-quick-filter={pill.key}
-              aria-label={
-                t(pill.name) + ' · ' + t('Filters') + (pill.active ? ': ' + t(pill.label) : '')
-              }
+              aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
               aria-haspopup="dialog"
-              aria-describedby={
-                pill.key === 'more' && otherFilterCount > 0 ? 'showroom-filter-count' : undefined
-              }
-              onClick={(event) => openSheet(pill.key, event.currentTarget)}
-              active={pill.active}
+              aria-expanded={sorting}
+              active={sort !== 'standard'}
+              onClick={(event) => openSheet('sort', event.currentTarget)}
             >
-              <span {...stylex.props(s.pillText)}>{t(pill.label)}</span>
-              {pill.key === 'more' && otherFilterCount > 0 && (
-                <>
-                  <span aria-hidden="true" {...stylex.props(s.filterCount)}>
-                    {otherFilterCount}
-                  </span>
-                  <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
-                    {otherFilterCount} active {otherFilterCount === 1 ? 'filter' : 'filters'}
-                  </span>
-                </>
-              )}
-              <Icon name="down" size={14} />
+              <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
+              {t(compactSortLabel)}
             </ShowroomQuickPill>
-          ))}
-          {active && (
-            <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
-              {t('Clear')}
-              <Icon name="close" size={14} />
-            </ShowroomQuickPill>
-          )}
-        </ShowroomQuickPills>
+            {pills.map((pill) => (
+              <ShowroomQuickPill
+                key={pill.key}
+                type="button"
+                data-quick-filter={pill.key}
+                aria-label={
+                  t(pill.name) + ' · ' + t('Filters') + (pill.active ? ': ' + t(pill.label) : '')
+                }
+                aria-haspopup="dialog"
+                aria-describedby={
+                  pill.key === 'more' && otherFilterCount > 0 ? 'showroom-filter-count' : undefined
+                }
+                onClick={(event) => openSheet(pill.key, event.currentTarget)}
+                active={pill.active}
+              >
+                <span {...stylex.props(s.pillText)}>{t(pill.label)}</span>
+                {pill.key === 'more' && otherFilterCount > 0 && (
+                  <>
+                    <span aria-hidden="true" {...stylex.props(s.filterCount)}>
+                      {otherFilterCount}
+                    </span>
+                    <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
+                      {otherFilterCount} active {otherFilterCount === 1 ? 'filter' : 'filters'}
+                    </span>
+                  </>
+                )}
+                <Icon name="down" size={14} />
+              </ShowroomQuickPill>
+            ))}
+            {active && (
+              <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
+                {t('Clear')}
+                <Icon name="close" size={14} />
+              </ShowroomQuickPill>
+            )}
+          </ShowroomQuickPills>
+        </div>
       </section>
       <section
         id="showroom-stock"
@@ -442,6 +482,6 @@ export function ShowroomInventoryScreen() {
           </label>
         ))}
       </Modal>
-    </>
+    </div>
   );
 }

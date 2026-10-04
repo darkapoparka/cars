@@ -24,20 +24,28 @@ import { Button, CheckRow, IconButton, Modal } from './ui';
 
 const s = stylex.create({
   desktopDialog: {
-    maxWidth: { default: 640, '@media (min-width: 700px)': 820, '@media (min-width: 1024px)': 920 },
+    maxWidth: { default: 640, '@media (min-width: 700px)': 820, '@media (min-width: 1024px)': 980 },
     height: {
       default: '100dvh',
       '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
-      '@media (min-width: 1024px)': 'min(728px, calc(100dvh - 64px))',
+      '@media (min-width: 1024px)': 'min(620px, calc(100dvh - 64px))',
     },
     maxHeight: {
       default: '100dvh',
       '@media (min-width: 700px)': 'min(680px, calc(100dvh - 48px))',
       '@media (min-width: 1024px)': 'calc(100dvh - 64px)',
     },
-    borderRadius: { default: 0, '@media (min-width: 700px)': 20, '@media (min-width: 1024px)': 24 },
+    borderRadius: { default: 0, '@media (min-width: 700px)': 20, '@media (min-width: 1024px)': 20 },
   },
-  editor: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0, minWidth: 0 },
+  editor: {
+    display: { default: 'flex', '@media (min-width: 1024px)': 'grid' },
+    flexDirection: 'column',
+    flex: '1',
+    minHeight: 0,
+    minWidth: 0,
+    gridTemplateColumns: '164px minmax(0,1fr)',
+    gridTemplateRows: 'auto minmax(0,1fr) auto',
+  },
   heading: {
     display: 'grid',
     gridTemplateColumns: {
@@ -51,12 +59,16 @@ const s = stylex.create({
       '@media (min-width: 700px)': 16,
       '@media (min-width: 1024px)': 24,
     },
-    paddingTop: { default: 'max(8px, env(safe-area-inset-top))', '@media (min-width: 1024px)': 16 },
-    paddingBottom: { default: 0, '@media (min-width: 1024px)': 8 },
+    paddingTop: { default: 'max(8px, env(safe-area-inset-top))', '@media (min-width: 1024px)': 12 },
+    paddingBottom: { default: 0, '@media (min-width: 1024px)': 12 },
     flexShrink: 0,
+    gridColumn: '1 / -1',
+    borderBottomWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.line,
   },
   title: {
-    fontSize: { default: 20, '@media (min-width: 1024px)': 24 },
+    fontSize: { default: 20, '@media (min-width: 1024px)': 22 },
     fontWeight: 700,
     lineHeight: { default: '28px', '@media (min-width: 1024px)': '32px' },
     minWidth: 0,
@@ -83,8 +95,16 @@ const s = stylex.create({
     gridColumn: { default: null, '@media (min-width: 1024px)': 2 },
     gridRow: { default: null, '@media (min-width: 1024px)': 1 },
   },
-  tabs: { flexShrink: 0 },
-  panel: { flex: '1', minHeight: 0, minWidth: 0, display: 'flex', flexDirection: 'column' },
+  tabs: { flexShrink: 0, minHeight: 0, gridColumn: 1, gridRow: 2 },
+  panel: {
+    flex: '1',
+    minHeight: 0,
+    minWidth: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    gridColumn: 2,
+    gridRow: 2,
+  },
   makePanel: {
     display: 'flex',
     flex: '1',
@@ -110,7 +130,7 @@ const s = stylex.create({
     display: 'flex',
     flexDirection: 'column',
     gap: { default: 28, '@media (min-width: 1024px)': 24 },
-    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.stripe },
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
   },
   readableFields: {
     width: '100%',
@@ -130,19 +150,19 @@ const s = stylex.create({
   },
   group: {
     borderWidth: 0,
-    padding: { default: 0, '@media (min-width: 1024px)': 20 },
+    padding: 0,
     minWidth: 0,
     borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
   },
   rangeCard: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
-    padding: { default: 0, '@media (min-width: 1024px)': 24 },
+    padding: 0,
     borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
   },
   mileageCard: {
-    padding: { default: 0, '@media (min-width: 1024px)': 24 },
+    padding: 0,
     borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.background },
   },
@@ -230,6 +250,7 @@ const s = stylex.create({
   suggestionArrow: { display: 'flex', color: colors.muted },
   suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
   footer: {
+    gridColumn: '1 / -1',
     flexShrink: 0,
     paddingInline: { default: 16, '@media (min-width: 700px)': 24 },
     paddingTop: 12,
@@ -374,7 +395,7 @@ export function ShowroomFilterSheet({
             selected={sheet}
             panelId="showroom-filter-options"
             idPrefix="filter-section-"
-            layout="desktop-fill"
+            layout="desktop-sidebar"
             onChange={onTabChange}
           />
         </div>

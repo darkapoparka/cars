@@ -1,0 +1,1194 @@
+{
+  "date": "2026-10-04",
+  "template": "Mobile",
+  "scope": "Desktop at 1024px and wider",
+  "baselineHead": "49ff7189a0a042d3f2d2242de27d008beb66f4e3",
+  "sourceHashes": {
+    "ShowroomDesktopHero.tsx": "dca1f8d1b947bbfd0e8a723f766714677d7725d2380d2a33560c4c8080bade2c",
+    "ShowroomFilterSheet.tsx": "2d15aed91c6647e825de41685b70448ae15a9f531e5f5f8852c457aea076756e",
+    "ShowroomInventoryScreen.tsx": "12311119c0b4813885edfa744135f465aa486be1f90236ea555af88a25da622b",
+    "ShowroomQuickPills.tsx": "8f3a4724e7658a596f765e4058db8bedd0cb868fb07d5e55552946cbe29265a8",
+    "ShowroomTabs.tsx": "8d5431a21b677372e9eec940138f6a278d3ea71c308b66d9c4cdbd0df228e516",
+    "ShowroomVehicleCard.tsx": "8e872834169377a6279c69b9ccec579df2de520bb50e01f5dff834b8842004ef",
+    "showroom-desktop-make-model.stylex.ts": "11252750d05b61c3b4c172ec63bbec5dae1787a304cfaf914ad84e924b517aee"
+  },
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "productionBuild": {
+      "status": "passed",
+      "node": "22.20.0",
+      "routes": 51,
+      "dist": ".next-desktop-density-final-20261004"
+    },
+    "retainedTests": {
+      "code": 0,
+      "tests": 95,
+      "passed": 95,
+      "failed": 0
+    },
+    "desktop": {
+      "passed": 72,
+      "errors": [],
+      "engines": [
+        "Chromium",
+        "WebKit"
+      ],
+      "viewports": [
+        "1023x768",
+        "1024x768",
+        "1280x720",
+        "1440x960",
+        "1920x1080",
+        "1024x600"
+      ],
+      "checks": [
+        "chromium 1023x768: desktop breakpoint and no horizontal overflow",
+        "chromium 1024x768: desktop breakpoint and no horizontal overflow",
+        "chromium 1024x768: 280px banner, types above, pills below, four compact cards",
+        "chromium 1024x768: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "chromium 1024x768: make/model apply and reload",
+        "chromium 1024x768: draft cancel, focus restoration, clear and real budget filtering",
+        "chromium 1024x768: Enter, Escape and search results",
+        "chromium 1024x768: results action, detail route and filtered Back",
+        "chromium 1280x720: desktop breakpoint and no horizontal overflow",
+        "chromium 1280x720: 280px banner, types above, pills below, four compact cards",
+        "chromium 1280x720: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "chromium 1280x720: make/model apply and reload",
+        "chromium 1280x720: draft cancel, focus restoration, clear and real budget filtering",
+        "chromium 1280x720: Enter, Escape and search results",
+        "chromium 1280x720: results action, detail route and filtered Back",
+        "chromium 1440x960: desktop breakpoint and no horizontal overflow",
+        "chromium 1440x960: 280px banner, types above, pills below, four compact cards",
+        "chromium 1440x960: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "chromium 1440x960: make/model apply and reload",
+        "chromium 1440x960: draft cancel, focus restoration, clear and real budget filtering",
+        "chromium 1440x960: Enter, Escape and search results",
+        "chromium 1440x960: results action, detail route and filtered Back",
+        "chromium 1920x1080: desktop breakpoint and no horizontal overflow",
+        "chromium 1920x1080: 280px banner, types above, pills below, four compact cards",
+        "chromium 1920x1080: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "chromium 1920x1080: make/model apply and reload",
+        "chromium 1920x1080: draft cancel, focus restoration, clear and real budget filtering",
+        "chromium 1920x1080: Enter, Escape and search results",
+        "chromium 1920x1080: results action, detail route and filtered Back",
+        "chromium 1024x600: desktop breakpoint and no horizontal overflow",
+        "chromium 1024x600: 280px banner, types above, pills below, four compact cards",
+        "chromium 1024x600: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "chromium 1024x600: make/model apply and reload",
+        "chromium 1024x600: draft cancel, focus restoration, clear and real budget filtering",
+        "chromium 1024x600: Enter, Escape and search results",
+        "chromium 1024x600: results action, detail route and filtered Back",
+        "webkit 1023x768: desktop breakpoint and no horizontal overflow",
+        "webkit 1024x768: desktop breakpoint and no horizontal overflow",
+        "webkit 1024x768: 280px banner, types above, pills below, four compact cards",
+        "webkit 1024x768: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "webkit 1024x768: make/model apply and reload",
+        "webkit 1024x768: draft cancel, focus restoration, clear and real budget filtering",
+        "webkit 1024x768: Enter, Escape and search results",
+        "webkit 1024x768: results action, detail route and filtered Back",
+        "webkit 1280x720: desktop breakpoint and no horizontal overflow",
+        "webkit 1280x720: 280px banner, types above, pills below, four compact cards",
+        "webkit 1280x720: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "webkit 1280x720: make/model apply and reload",
+        "webkit 1280x720: draft cancel, focus restoration, clear and real budget filtering",
+        "webkit 1280x720: Enter, Escape and search results",
+        "webkit 1280x720: results action, detail route and filtered Back",
+        "webkit 1440x960: desktop breakpoint and no horizontal overflow",
+        "webkit 1440x960: 280px banner, types above, pills below, four compact cards",
+        "webkit 1440x960: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "webkit 1440x960: make/model apply and reload",
+        "webkit 1440x960: draft cancel, focus restoration, clear and real budget filtering",
+        "webkit 1440x960: Enter, Escape and search results",
+        "webkit 1440x960: results action, detail route and filtered Back",
+        "webkit 1920x1080: desktop breakpoint and no horizontal overflow",
+        "webkit 1920x1080: 280px banner, types above, pills below, four compact cards",
+        "webkit 1920x1080: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "webkit 1920x1080: make/model apply and reload",
+        "webkit 1920x1080: draft cancel, focus restoration, clear and real budget filtering",
+        "webkit 1920x1080: Enter, Escape and search results",
+        "webkit 1920x1080: results action, detail route and filtered Back",
+        "webkit 1024x600: desktop breakpoint and no horizontal overflow",
+        "webkit 1024x600: 280px banner, types above, pills below, four compact cards",
+        "webkit 1024x600: sidebar, seven tabs, vertical keyboard navigation and reachable footer",
+        "webkit 1024x600: make/model apply and reload",
+        "webkit 1024x600: draft cancel, focus restoration, clear and real budget filtering",
+        "webkit 1024x600: Enter, Escape and search results",
+        "webkit 1024x600: results action, detail route and filtered Back"
+      ],
+      "geometry": [
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 768,
+          "hero": {
+            "x": 16,
+            "y": 128,
+            "width": 992,
+            "height": 280
+          },
+          "categories": {
+            "x": 0,
+            "y": 60,
+            "width": 1024,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 0,
+            "y": 408,
+            "width": 1024,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 16,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 267.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 519,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 770.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            }
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1280,
+          "height": 720,
+          "hero": {
+            "x": 106,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 90,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 90,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 106,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 376.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 647,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 917.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "height": 960,
+          "hero": {
+            "x": 186,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 170,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 170,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 186,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 456.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 727,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 997.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1920,
+          "height": 1080,
+          "hero": {
+            "x": 426,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 410,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 410,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 426,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 696.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 967,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 1237.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 600,
+          "hero": {
+            "x": 16,
+            "y": 128,
+            "width": 992,
+            "height": 280
+          },
+          "categories": {
+            "x": 0,
+            "y": 60,
+            "width": 1024,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 0,
+            "y": 408,
+            "width": 1024,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 16,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 267.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 519,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 770.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 768,
+          "hero": {
+            "x": 16,
+            "y": 128,
+            "width": 992,
+            "height": 280
+          },
+          "categories": {
+            "x": 0,
+            "y": 60,
+            "width": 1024,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 0,
+            "y": 408,
+            "width": 1024,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 16,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 267.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 519,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 770.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1280,
+          "height": 720,
+          "hero": {
+            "x": 106,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 90,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 90,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 106,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 376.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 647,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 917.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1440,
+          "height": 960,
+          "hero": {
+            "x": 186,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 170,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 170,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 186,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 456.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 727,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 997.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1920,
+          "height": 1080,
+          "hero": {
+            "x": 426,
+            "y": 128,
+            "width": 1068,
+            "height": 280
+          },
+          "categories": {
+            "x": 410,
+            "y": 60,
+            "width": 1100,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 410,
+            "y": 408,
+            "width": 1100,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 426,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 696.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 967,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            },
+            {
+              "x": 1237.5,
+              "y": 553,
+              "width": 256.5,
+              "height": 295.0625
+            }
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 600,
+          "hero": {
+            "x": 16,
+            "y": 128,
+            "width": 992,
+            "height": 280
+          },
+          "categories": {
+            "x": 0,
+            "y": 60,
+            "width": 1024,
+            "height": 60
+          },
+          "quickFilters": {
+            "x": 0,
+            "y": 408,
+            "width": 1024,
+            "height": 81
+          },
+          "cards": [
+            {
+              "x": 16,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 267.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 519,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            },
+            {
+              "x": 770.5,
+              "y": 553,
+              "width": 237.5,
+              "height": 283.1875
+            }
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "passed": 48,
+      "widths": [
+        320,
+        390
+      ],
+      "locales": [
+        "bg",
+        "en"
+      ],
+      "engines": [
+        "Chromium",
+        "WebKit"
+      ],
+      "compared": "Visible text, geometry, computed styles, controls, checked/selected state and image URLs",
+      "results": [
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "bg",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "chromium",
+          "width": 320,
+          "lang": "en",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "bg",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "chromium",
+          "width": 390,
+          "lang": "en",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "bg",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "webkit",
+          "width": 320,
+          "lang": "en",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "bg",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "home",
+          "same": true,
+          "elements": 59
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "make",
+          "same": true,
+          "elements": 106
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "price",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "more",
+          "same": true,
+          "elements": 85
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "services",
+          "same": true,
+          "elements": 47
+        },
+        {
+          "engine": "webkit",
+          "width": 390,
+          "lang": "en",
+          "state": "detail",
+          "same": true,
+          "elements": 50
+        }
+      ],
+      "errors": [],
+      "failures": [],
+      "assetHashes": [
+        {
+          "src": "/images/x6-gallery-02.webp",
+          "hashes": [
+            "08b7eda007cbec267dc6cf459725a9ca6e34e43d13e86eed8b47c4c89c97bfba",
+            "08b7eda007cbec267dc6cf459725a9ca6e34e43d13e86eed8b47c4c89c97bfba"
+          ]
+        },
+        {
+          "src": "/images/bmw-540-gallery-01.webp",
+          "hashes": [
+            "f020519add1e6ab61fa128a37f2585bae89bcd59fa7b4056f62c9c91e4e17870",
+            "f020519add1e6ab61fa128a37f2585bae89bcd59fa7b4056f62c9c91e4e17870"
+          ]
+        }
+      ],
+      "pixelComparisons": [
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "home",
+          "changedChannels": 103225
+        },
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "make",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "price",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "more",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "services",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 320,
+          "state": "detail",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "home",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "make",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "price",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "more",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "services",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 320,
+          "state": "detail",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "home",
+          "changedChannels": 43917
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "make",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "price",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "more",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "services",
+          "changedChannels": 0
+        },
+        {
+          "lang": "bg",
+          "width": 390,
+          "state": "detail",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "home",
+          "changedChannels": 4145
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "make",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "price",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "more",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "services",
+          "changedChannels": 0
+        },
+        {
+          "lang": "en",
+          "width": 390,
+          "state": "detail",
+          "changedChannels": 0
+        }
+      ],
+      "pixelNote": "21 of 24 Chromium screenshot pairs are pixel identical. Three home captures differ in photo pixels; DOM, layout, styles and source image hashes match. Raw pairs are retained under runtime/mobile-desktop-density-20261004/phones."
+    },
+    "captureHealth": [
+      {
+        "phase": "before-density",
+        "states": 36,
+        "status": "all HTTP 200; no overflow, broken images or console errors"
+      },
+      {
+        "phase": "after-density",
+        "states": 36,
+        "status": "all HTTP 200; no overflow, broken images or console errors"
+      }
+    ]
+  },
+  "preview": "http://127.0.0.1:6478/",
+  "publication": "Source revision and local preview only; no release lock or dealer deployment changed."
+}
