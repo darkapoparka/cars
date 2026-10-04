@@ -1,42 +1,29 @@
 import { ScrollArea } from "@repo/design-system/components/ui/scroll-area";
 import type { desktopFullFilterGroups } from "../lib/desktop-full-filter-policy";
 import {
-  DesktopFullFilterContent,
   type DesktopFullFilterDraftProps,
   DesktopFullFilterSectionFields,
 } from "./desktop-full-filter-content";
 import styles from "./desktop-full-filter-dialog.module.css";
+import { DesktopMakeModelColumns } from "./desktop-make-model-columns";
 
 export function DesktopFullFilterGroupContent({
   group,
+  onChooseCategory,
   resetVersion,
-  vehicleInitialStep,
   ...fields
 }: DesktopFullFilterDraftProps & {
   group: (typeof desktopFullFilterGroups)[number];
+  onChooseCategory: () => void;
   resetVersion: number;
-  vehicleInitialStep: "auto" | "make" | "model";
 }) {
   if (group.id === "vehicle") {
     return (
-      <>
-        <div className={styles.vehicleContent}>
-          <DesktopFullFilterContent
-            {...fields}
-            resetVersion={resetVersion}
-            section="vehicle"
-            taxonomy={fields.taxonomy}
-            vehicleInitialStep={vehicleInitialStep}
-          />
-        </div>
-        <div className={styles.vehicleKeyword}>
-          <DesktopFullFilterSectionFields
-            {...fields}
-            section="search"
-            showHeading={false}
-          />
-        </div>
-      </>
+      <DesktopMakeModelColumns
+        {...fields}
+        key={`${fields.draft.category}:${resetVersion}`}
+        onChooseCategory={onChooseCategory}
+      />
     );
   }
   return (

@@ -201,7 +201,7 @@ for (const locale of ["bg", "en"] as const) {
       exact: true,
     });
     const vehicleTab = navigation.getByRole("tab", {
-      name: isBg ? "Автомобил" : "Vehicle",
+      name: isBg ? "Марка и модел" : "Make and model",
       exact: true,
     });
     const maximum = dialog.getByRole("spinbutton", {
@@ -211,7 +211,7 @@ for (const locale of ["bg", "en"] as const) {
     const apply = dialog.getByRole("button", { name: applyLabel, exact: true });
     for (const commit of [false, true]) {
       await makeTrigger.click();
-      await expect(navigation.getByRole("tab")).toHaveCount(4);
+      await expect(navigation.getByRole("tab")).toHaveCount(5);
       await expect(
         dialog.getByRole("button", {
           name: isBg ? "Всички марки" : "All makes",
@@ -219,7 +219,10 @@ for (const locale of ["bg", "en"] as const) {
         })
       ).toHaveAttribute("aria-pressed", "true");
       await dialog.getByRole("button", { name: "BMW", exact: true }).click();
-      await dialog.getByRole("searchbox").first().fill("X5");
+      await dialog
+        .locator('[data-slot="desktop-filter-model-panel"]')
+        .getByRole("searchbox")
+        .fill("X5");
       await dialog.locator('[data-slot="model-option"]').click();
       await priceTab.click();
       await maximum.fill("150000");
@@ -242,8 +245,12 @@ for (const locale of ["bg", "en"] as const) {
         .click();
       await vehicleTab.click();
       await expect(
-        dialog.getByRole("tab", { name: stageLabels[locale].model })
-      ).toContainText("X5");
+        dialog
+          .locator(
+            '[data-slot="desktop-filter-model-panel"] [data-slot="model-option"]'
+          )
+          .filter({ hasText: "X5" })
+      ).toHaveAttribute("aria-pressed", "true");
       expect(page.url()).toBe(original);
       if (commit) {
         await apply.click();

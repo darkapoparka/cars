@@ -19,7 +19,7 @@ import { getPublicAppBaseUrl } from "@/lib/public-app-url";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
-  getPublicVehicleTaxonomy,
+  getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
@@ -80,12 +80,15 @@ export const CategoryMarketplacePage = async ({
       : "results";
 
   try {
-    const [{ facets, listings, totalListings }, taxonomy, cookieStore] =
-      await Promise.all([
-        getPublicMarketplaceListings(filters),
-        getPublicVehicleTaxonomy(category),
-        cookies(),
-      ]);
+    const [
+      { facets, listings, totalListings },
+      taxonomyByCategory,
+      cookieStore,
+    ] = await Promise.all([
+      getPublicMarketplaceListings(filters),
+      getPublicVehicleTaxonomies(),
+      cookies(),
+    ]);
     const pageRedirect = getMarketplacePageRedirect({
       basePath,
       filters,
@@ -124,7 +127,8 @@ export const CategoryMarketplacePage = async ({
             filters.category,
             listings
           )}
-          taxonomy={taxonomy}
+          taxonomy={taxonomyByCategory[category]}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
         <Footer locale={normalizedLocale} />

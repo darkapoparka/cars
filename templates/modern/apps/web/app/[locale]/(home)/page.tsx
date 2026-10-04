@@ -18,7 +18,7 @@ import { getPublicContentCards } from "@/lib/public-content-data";
 import { getPublicInventorySearchListings } from "@/lib/public-inventory-search";
 import {
   getPublicMarketplaceListings,
-  getPublicVehicleTaxonomy,
+  getPublicVehicleTaxonomies,
   normalizePublicShowroomFilters,
   PUBLIC_LISTING_PAGE_SIZE,
 } from "@/lib/public-marketplace-data";
@@ -86,10 +86,11 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
     const hasSearchCriteria = createMarketplaceSearchParams(filters).size > 0;
     const desktopSearchVariant =
       !isDealershipSite && hasSearchCriteria ? "results" : "discovery";
-    const [{ facets, listings, totalListings }, taxonomy] = await Promise.all([
-      getPublicMarketplaceListings(filters),
-      getPublicVehicleTaxonomy(filters.category),
-    ]);
+    const [{ facets, listings, totalListings }, taxonomyByCategory] =
+      await Promise.all([
+        getPublicMarketplaceListings(filters),
+        getPublicVehicleTaxonomies(),
+      ]);
     const pageRedirect = getMarketplacePageRedirect({
       basePath: getLocalizedPath(normalizeSeoLocale(locale), "/"),
       filters,
@@ -139,7 +140,8 @@ const MarketplaceResults = async ({ params, searchParams }: HomeProps) => {
             filters.category,
             listings
           )}
-          taxonomy={taxonomy}
+          taxonomy={taxonomyByCategory[filters.category]}
+          taxonomyByCategory={taxonomyByCategory}
           totalListings={totalListings}
         />
         <Footer locale={locale} />

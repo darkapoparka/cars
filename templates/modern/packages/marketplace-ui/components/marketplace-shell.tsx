@@ -83,6 +83,9 @@ interface MarketplaceShellProps {
   locale?: string;
   searchListings?: readonly InventorySearchListing[];
   taxonomy?: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
+  >;
   totalListings: number;
 }
 
@@ -132,6 +135,7 @@ export const MarketplaceShell = ({
   searchListings = listings,
   locale,
   taxonomy = fallbackVehicleTaxonomy,
+  taxonomyByCategory,
   totalListings,
 }: MarketplaceShellProps) => {
   const router = useRouter();
@@ -538,6 +542,7 @@ export const MarketplaceShell = ({
           onOpenChange={setFilterOpen}
           open={filterOpen}
           taxonomy={taxonomy}
+          taxonomyByCategory={taxonomyByCategory}
         />
         <MarketplaceQuickFilterDrawer
           activeFilter={activeQuickFilter}

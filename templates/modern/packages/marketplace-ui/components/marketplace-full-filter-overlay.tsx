@@ -4,12 +4,14 @@ import { Button } from "@repo/design-system/components/ui/button";
 import {
   defaultVehicleCategory,
   type MarketplaceSearchParams,
+  type VehicleCategory,
   type VehicleTaxonomyMakeOption,
   withCategory,
 } from "@repo/marketplace";
 import { RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
+import { canUseDesktopFilterModelCounts } from "../lib/desktop-full-filter-policy";
 import {
   getMarketplaceControlCopy,
   isBulgarianMarketplaceLocale,
@@ -45,6 +47,7 @@ export const MarketplaceFullFilterOverlay = ({
   onOpenChange,
   open,
   taxonomy,
+  taxonomyByCategory,
 }: {
   applyLabel?: string;
   filters: MarketplaceSearchParams;
@@ -56,6 +59,9 @@ export const MarketplaceFullFilterOverlay = ({
   onOpenChange: (open: boolean) => void;
   open: boolean;
   taxonomy: VehicleTaxonomyMakeOption[];
+  taxonomyByCategory?: Partial<
+    Record<VehicleCategory, VehicleTaxonomyMakeOption[]>
+  >;
 }) => {
   const isDesktop = useDesktopMarketplaceViewport();
   const applyFilters = isDesktop ? (onDesktopApply ?? onApply) : onApply;
@@ -145,7 +151,11 @@ export const MarketplaceFullFilterOverlay = ({
         draft={draft}
         initialEntry={initialDesktopEntry}
         locale={locale}
-        modelCounts={modelCounts}
+        modelCounts={
+          canUseDesktopFilterModelCounts(filters, draft)
+            ? modelCounts
+            : undefined
+        }
         onApply={applyAndClose}
         onChange={(nextDraft) =>
           setNormalizedDraft({
@@ -163,7 +173,7 @@ export const MarketplaceFullFilterOverlay = ({
           setDraft((current) => ({ ...current, currency: undefined }));
         }}
         open={open}
-        taxonomy={taxonomy}
+        taxonomy={taxonomyByCategory?.[draft.category] ?? taxonomy}
       />
     ) : null;
   }

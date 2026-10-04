@@ -45,7 +45,7 @@ function getDialogPresentation(entry: DesktopFullFilterEntry, locale?: string) {
   const section: DesktopFullFilterSection =
     entry === "make" || entry === "model" ? "vehicle" : entry;
   const focused = ["make", "model", "price", "search"].includes(entry);
-  let title = isBg ? "Филтри за автомобили" : "Vehicle filters";
+  let title = isBg ? "Филтри" : "Filters";
   if (focused) {
     title = getDesktopFullFilterLabel(section, locale);
     if (entry === "make") {
@@ -87,10 +87,8 @@ export function DesktopFullFilterDialog({
   const [group, setGroup] = useState<DesktopFullFilterGroup>(
     getDesktopFullFilterGroup(section)
   );
-  const [vehicleVisited, setVehicleVisited] = useState(false);
   const [resetVersion, setResetVersion] = useState(0);
   const contentRef = useRef<HTMLDivElement>(null);
-  const vehicleInitialStep = vehicleVisited ? "auto" : initialStep;
 
   // Numeric ranges commit on blur before pointer navigation unmounts their group.
   const commitActiveInput = () => {
@@ -108,7 +106,7 @@ export function DesktopFullFilterDialog({
     modelCounts,
     resetVersion,
     taxonomy,
-    vehicleInitialStep,
+    vehicleInitialStep: initialStep,
   };
 
   return (
@@ -169,9 +167,6 @@ export function DesktopFullFilterDialog({
             className={styles.workspace}
             onValueChange={(value) => {
               setGroup(value as DesktopFullFilterGroup);
-              if (value === "vehicle") {
-                setVehicleVisited(true);
-              }
             }}
             value={group}
           >
@@ -184,6 +179,7 @@ export function DesktopFullFilterDialog({
               {desktopFullFilterGroups.map((item) => (
                 <TabsTrigger
                   className={styles.menuItem}
+                  data-filter-group={item.id}
                   key={item.id}
                   value={item.id}
                 >
@@ -202,6 +198,14 @@ export function DesktopFullFilterDialog({
                   <DesktopFullFilterGroupContent
                     {...vehicleProps}
                     group={item}
+                    onChooseCategory={() => {
+                      const tab =
+                        contentRef.current?.querySelector<HTMLButtonElement>(
+                          '[data-filter-group="category"]'
+                        );
+                      tab?.click();
+                      tab?.focus({ preventScroll: true });
+                    }}
                   />
                 ) : null}
               </TabsContent>

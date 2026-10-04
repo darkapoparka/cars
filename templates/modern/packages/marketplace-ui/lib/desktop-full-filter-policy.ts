@@ -26,10 +26,16 @@ export type DesktopFullFilterEntry =
 
 export const desktopFullFilterGroups = [
   {
+    id: "category",
+    bg: "Какво",
+    en: "Vehicle type",
+    sections: ["category"],
+  },
+  {
     id: "vehicle",
-    bg: "Автомобил",
-    en: "Vehicle",
-    sections: ["vehicle", "search"],
+    bg: "Марка и модел",
+    en: "Make and model",
+    sections: ["vehicle"],
   },
   {
     id: "budget",
@@ -41,13 +47,13 @@ export const desktopFullFilterGroups = [
     id: "details",
     bg: "Характеристики",
     en: "Specifications",
-    sections: ["category", "body", "fuel", "transmission", "seller"],
+    sections: ["body", "fuel", "transmission"],
   },
   {
     id: "location",
-    bg: "Местоположение",
-    en: "Location",
-    sections: ["location", "origin", "deliver-to"],
+    bg: "Още опции",
+    en: "More options",
+    sections: ["location", "origin", "deliver-to", "seller", "search"],
   },
 ] as const;
 export type DesktopFullFilterGroup =
@@ -73,7 +79,7 @@ export function getDesktopFullFilterLabel(
     return isBg ? "Ключова дума" : "Keyword";
   }
   if (section === "category") {
-    return isBg ? "Категория" : "Category";
+    return isBg ? "Какво търсите?" : "Vehicle type";
   }
   return getMarketplaceControlCopy(locale).filters[section];
 }
@@ -117,3 +123,29 @@ export const clearDesktopFullFilterSection = (
   ...draft,
   ...(clearUpdates[section] ?? { [section]: undefined }),
 });
+
+/** Facets describe the applied result set, excluding the vehicle selection. */
+export function canUseDesktopFilterModelCounts(
+  applied: MarketplaceSearchParams,
+  draft: MarketplaceSearchParams
+) {
+  const keys = [
+    "category",
+    "q",
+    "priceMin",
+    "priceMax",
+    "currency",
+    "yearMin",
+    "yearMax",
+    "mileageMax",
+    "fuel",
+    "transmission",
+    "body",
+    "seller",
+    "location",
+    "radius",
+    "origin",
+    "deliverTo",
+  ] as const;
+  return keys.every((key) => applied[key] === draft[key]);
+}

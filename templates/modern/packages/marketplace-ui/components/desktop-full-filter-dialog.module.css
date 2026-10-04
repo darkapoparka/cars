@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    width: min(calc(var(--spacing) * 240), calc(100vw - var(--spacing) * 16));
+    width: min(calc(var(--spacing) * 280), calc(100vw - var(--spacing) * 16));
     max-width: none;
     height: min(calc(var(--spacing) * 185), calc(100dvh - var(--spacing) * 16));
     padding: 0;
@@ -56,7 +56,7 @@
   .menu {
     display: grid;
     flex: none;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: var(--spacing);
     width: auto;
     height: auto;
@@ -115,17 +115,71 @@
     color: var(--brand-hover-foreground);
     background: var(--lead-site-accent-hover);
   }
-  .vehicleContent {
-    display: flex;
+  .vehicleColumns {
+    display: grid;
     flex: 1;
-    flex-direction: column;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 4);
     min-height: 0;
-    padding-inline: calc(var(--spacing) * 6);
+    padding: 0 calc(var(--spacing) * 6) calc(var(--spacing) * 6);
   }
-  .vehicleKeyword {
-    flex: none;
-    padding: calc(var(--spacing) * 3) calc(var(--spacing) * 6)
-      calc(var(--spacing) * 4);
+  .vehiclePanel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    padding-top: calc(var(--spacing) * 4);
+    overflow: hidden;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .vehicleEmpty {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: calc(var(--spacing) * 4);
+    align-content: center;
+    justify-items: center;
+    padding: calc(var(--spacing) * 6);
+    text-align: center;
+    border: var(--desktop-border-width) solid var(--border);
+    border-radius: calc(var(--spacing) * 4);
+  }
+  .vehicleEmpty p {
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--muted-foreground);
+  }
+  .vehicleSearch {
+    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 4);
+  }
+  .vehicleSearch > div {
+    margin: 0;
+  }
+  .makeOptions,
+  .modelOptions {
+    padding: 0 calc(var(--spacing) * 4) calc(var(--spacing) * 4);
+  }
+  .makeOptions > div:first-child {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .makeOptions button {
+    padding-inline: calc(var(--spacing) * 2);
+    white-space: normal;
+  }
+  .vehiclePanel
+    :global(button[aria-pressed="false"] [data-slot="picker-option-meta"]) {
+    color: var(--desktop-prose-text);
+  }
+  .modelPrompt {
+    display: grid;
+    flex: 1;
+    place-content: center;
+    padding: calc(var(--spacing) * 6);
+    font-size: calc(var(--spacing) * 3.5);
+    color: var(--muted-foreground);
+    text-align: center;
+  }
+  .derivatives {
+    margin-top: calc(var(--spacing) * 4);
     border-top: var(--desktop-border-width) solid var(--border);
   }
   .groupGrid {
@@ -140,8 +194,15 @@
     border: var(--desktop-border-width) solid var(--border);
     border-radius: calc(var(--spacing) * 4);
   }
-  .groupGrid .options[data-filter-section="price"] {
+  .groupGrid
+    .options:is(
+      [data-filter-section="price"],
+      [data-filter-section="category"]
+    ) {
     grid-column: 1 / -1;
+  }
+  .groupGrid :global([data-slot="marketplace-category-options"]) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .optionsHeading {
     display: flex;
@@ -167,6 +228,9 @@
     height: calc(var(--spacing) * 11);
     background: var(--control);
     border-radius: calc(var(--spacing) * 3);
+  }
+  .groupGrid .keyword {
+    padding: calc(var(--spacing) * 4);
   }
   .footer {
     display: flex;

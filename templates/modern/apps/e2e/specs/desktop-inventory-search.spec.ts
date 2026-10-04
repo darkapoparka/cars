@@ -223,7 +223,7 @@ for (const locale of ["bg", "en"] as const) {
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(
       fullDialog.getByRole("tab", {
-        name: isBg ? "Автомобил" : "Vehicle",
+        name: isBg ? "Марка и модел" : "Make and model",
         exact: true,
       })
     ).toHaveAttribute("data-state", "active");
@@ -231,7 +231,7 @@ for (const locale of ["bg", "en"] as const) {
       fullDialog
         .locator('[data-slot="desktop-full-filter-navigation"]')
         .getByRole("tab")
-    ).toHaveCount(4);
+    ).toHaveCount(5);
     await page.keyboard.press("Escape");
     await expect(allFilters).toBeFocused();
   });

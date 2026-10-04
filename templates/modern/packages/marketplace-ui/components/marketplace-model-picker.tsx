@@ -118,12 +118,14 @@ const ModelDerivativeOption = ({
 };
 
 export const MakeModelSearchField = ({
+  ariaLabel,
   step,
   isDesktop,
   search,
   onSearch,
   locale,
 }: {
+  ariaLabel?: string;
   step: "make" | "model";
   isDesktop: boolean;
   search: string;
@@ -161,7 +163,7 @@ export const MakeModelSearchField = ({
         className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground"
       />
       <Input
-        aria-label={copy.makeModel.searchAriaLabel}
+        aria-label={ariaLabel ?? copy.makeModel.searchAriaLabel}
         className={styles.searchInput}
         onChange={(event) => onSearch(event.target.value)}
         placeholder={
