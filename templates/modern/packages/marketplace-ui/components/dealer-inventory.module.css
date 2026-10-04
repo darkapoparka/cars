@@ -44,10 +44,6 @@
     --inventory-grid-columns: 4;
     grid-template-columns: minmax(0, 1fr);
   }
-  .quickFilters {
-    min-width: 0;
-    margin-top: calc(var(--spacing) * 3);
-  }
   .layoutToggle {
     display: inline-flex;
     flex: none;
@@ -84,59 +80,57 @@
     outline: var(--desktop-focus-width) solid var(--foreground);
     outline-offset: var(--desktop-focus-offset);
   }
-  .filterBar :global([data-slot="desktop-quick-filter-scroll"]) {
-    flex: 1;
+  .activeFilter:focus-visible,
+  .clearFilters:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--foreground);
+    outline-offset: var(--desktop-focus-offset);
   }
-  .filterBar :global([data-slot="desktop-quick-filter-items"]) {
-    justify-content: flex-start;
-    width: 100%;
+  .activeFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    min-width: 0;
+    padding: 0;
+    margin: calc(var(--spacing) * 3) 0 0;
+    border: 0;
   }
-  .quickFilters :global([data-slot="desktop-quick-filter"]) {
-    min-width: calc(var(--spacing) * 24);
-    height: calc(var(--spacing) * 11);
-    padding-inline: calc(var(--spacing) * 3);
+  .activeFilter {
+    display: inline-flex;
+    gap: calc(var(--spacing) * 2);
+    align-items: center;
+    max-width: 100%;
+    min-height: calc(var(--spacing) * 8);
+    padding: var(--spacing) calc(var(--spacing) * 3);
+    font-size: calc(var(--spacing) * 3.25);
     color: var(--foreground);
+    cursor: pointer;
     background: var(--panel);
     border: var(--desktop-border-width) solid var(--border);
-    border-radius: calc(var(--spacing) * 3);
+    border-radius: calc(var(--spacing) * 5);
   }
-  .quickFilters :global([data-slot="desktop-quick-filter"]:hover),
-  .quickFilters :global([data-slot="desktop-quick-filter"][data-state="open"]) {
-    color: var(--foreground);
+  .activeFilter span {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .activeFilter svg {
+    flex-shrink: 0;
+  }
+  .activeFilter:hover {
     background: var(--control-hover);
   }
-  .quickFilters
-    :global([data-slot="desktop-quick-filter"][aria-pressed="true"]) {
-    display: inline-flex;
-    color: var(--desktop-filter-selected-text);
-    background: var(--desktop-filter-selected-background);
-    border-color: var(--desktop-filter-selected-border);
+  .clearFilters {
+    min-height: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 2);
+    font-size: calc(var(--spacing) * 3.25);
+    color: var(--brand-text);
+    cursor: pointer;
+    border-radius: calc(var(--spacing) * 2);
   }
-  .quickFilters
-    :global([data-slot="desktop-quick-filter"][data-clearable="true"]) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  .quickFilters :global([data-slot="desktop-quick-filter-clear"]) {
-    width: calc(var(--spacing) * 7);
-    height: calc(var(--spacing) * 11);
-    color: var(--desktop-filter-selected-text);
-    background: var(--desktop-filter-selected-background);
-    border: var(--desktop-border-width) solid
-      var(--desktop-filter-selected-border);
-    border-left: 0;
-    border-radius: 0 calc(var(--spacing) * 3) calc(var(--spacing) * 3) 0;
-  }
-  .quickFilters :global([data-slot="desktop-quick-filter-clear"]:hover) {
+  .clearFilters:hover {
     background: var(--control-hover);
-  }
-  .quickFilters :global([data-slot="desktop-primary-control"]),
-  .quickFilters :global([data-slot="desktop-clear-all-filters"]) {
-    height: calc(var(--spacing) * 11);
-    border-radius: calc(var(--spacing) * 3);
-  }
-  .quickFilters :global([data-slot="desktop-filter-actions"]) {
-    align-self: flex-start;
   }
   .summary {
     display: grid;

@@ -19,6 +19,7 @@ import { DealerDesktopDiscoveryHero } from "./dealer-desktop-discovery-hero";
 import { DealerDesktopHeader } from "./dealer-desktop-header";
 import { DealerDesktopToolbar } from "./dealer-desktop-toolbar";
 import type { DesktopCategoryInventoryCount } from "./desktop-discovery-search";
+import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
 import {
   DesktopLeadServiceSurface,
   DesktopServiceShortcuts,
@@ -44,6 +45,7 @@ interface DesktopMarketplaceBarProps {
   locale?: string;
   onApply: ApplyFilters;
   onClearFilters: () => void;
+  onOpenFilterSection: (section: DesktopFullFilterEntry) => void;
   onOpenFilters: () => void;
   onOpenMake: () => void;
   onOpenModel: () => void;
@@ -86,6 +88,7 @@ export const DesktopMarketplaceBar = ({
   onApply,
   onClearFilters,
   onOpenFilters,
+  onOpenFilterSection,
   onOpenMake,
   onOpenModel,
   onViewModeChange,
@@ -150,7 +153,12 @@ export const DesktopMarketplaceBar = ({
         {showDealerDesktopLanding ? (
           <DealerDesktopDiscoveryHero {...dealerToolbarProps} />
         ) : (
-          <DealerDesktopToolbar {...dealerToolbarProps} />
+          <DealerDesktopToolbar
+            filterCount={filterCount}
+            filters={filters}
+            locale={locale}
+            onOpenSection={onOpenFilterSection}
+          />
         )}
       </DealerDesktopHeader>
     );

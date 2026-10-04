@@ -24,7 +24,6 @@ import { getLocalizedPublicPath } from "../lib/public-path";
 import { DealerHeroSearch } from "./dealer-hero-search";
 import dealerStyles from "./dealer-inventory.module.css";
 import { DealerInventoryFilters } from "./dealer-inventory-filters";
-import type { DesktopFullFilterSection } from "./desktop-full-filter-dialog";
 import { ResultToolbar } from "./desktop-marketplace-controls";
 import { MarketplacePagination } from "./marketplace-pagination";
 import { MarketplaceResultsEmptyState } from "./marketplace-results-empty-state";
@@ -56,10 +55,7 @@ export const MarketplaceResults = ({
   onApply,
   onClearFilters,
   onDesktopFilterLayoutChange,
-  onOpenMake,
-  onOpenModel,
   onOpenFilters,
-  onOpenFilterSection,
   onViewModeChange,
   totalListings,
   viewMode,
@@ -80,10 +76,7 @@ export const MarketplaceResults = ({
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
   onDesktopFilterLayoutChange: (layout: PublicInventoryFilterLayout) => void;
-  onOpenMake: () => void;
-  onOpenModel: () => void;
   onOpenFilters: () => void;
-  onOpenFilterSection: (section: DesktopFullFilterSection) => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   totalListings: number;
   viewMode: ListingViewMode;
@@ -122,17 +115,12 @@ export const MarketplaceResults = ({
     >
       {isDealershipSite && !hideDesktop ? (
         <DealerInventoryFilters
-          filterCount={activeFilterCount}
           filters={filters}
           layout={desktopFilterLayout}
           locale={locale}
           onApply={onApply}
           onClearFilters={onClearFilters}
           onLayoutChange={onDesktopFilterLayoutChange}
-          onOpenFilters={onOpenFilters}
-          onOpenMake={onOpenMake}
-          onOpenModel={onOpenModel}
-          onOpenSection={onOpenFilterSection}
           onViewModeChange={onViewModeChange}
           totalListings={totalListings}
           viewMode={viewMode}

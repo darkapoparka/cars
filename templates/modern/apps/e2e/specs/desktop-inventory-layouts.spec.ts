@@ -45,15 +45,18 @@ for (const locale of ["bg", "en"] as const) {
     await page.setViewportSize({ width: 1024, height: 900 });
     await page.goto(`/${locale}/cars?priceMax=150000`);
     const bar = page.locator('[data-slot="dealer-inventory-filters"]');
+    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
     const summary = bar.locator('[data-slot="dealer-inventory-summary"]');
     await expect(summary).toBeVisible();
     await expect(summary.getByRole("combobox")).toHaveCount(1);
     await expect(
       summary.getByRole("button", { name: sidebarLabel, exact: true })
     ).toBeVisible();
-    expect((await bar.boundingBox())?.height).toBeLessThanOrEqual(128);
+    await expect(
+      hero.locator('[data-slot="dealer-inventory-search"]')
+    ).toBeVisible();
     const originalUrl = page.url();
-    const trigger = bar.getByRole("button", {
+    const trigger = hero.getByRole("button", {
       name: isBg ? "Марка" : "Make",
       exact: true,
     });
@@ -115,7 +118,7 @@ for (const locale of ["bg", "en"] as const) {
   }) => {
     await page.goto(`/${locale}/cars?priceMax=150000`);
     await page
-      .locator('[data-slot="dealer-inventory-filters"]')
+      .locator('[data-slot="dealer-desktop-inventory-hero"]')
       .getByRole("button", { name: isBg ? "Марка" : "Make", exact: true })
       .click();
     const dialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
@@ -180,8 +183,8 @@ for (const locale of ["bg", "en"] as const) {
   }) => {
     await page.goto(`/${locale}/cars?sort=price_asc`);
     const original = page.url();
-    const bar = page.locator('[data-slot="dealer-inventory-filters"]');
-    const makeTrigger = bar.getByRole("button", {
+    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
+    const makeTrigger = hero.getByRole("button", {
       name: isBg ? "Марка" : "Make",
       exact: true,
     });
@@ -260,7 +263,7 @@ for (const locale of ["bg", "en"] as const) {
     expect(selected.get("fuel")).toBe("diesel");
     expect(selected.get("transmission")).toBe("automatic");
     expect(selected.get("sort")).toBe("price_asc");
-    await bar.getByRole("button", { name: "BMW", exact: true }).click();
+    await makeTrigger.click();
     await fuelTab.click();
     await dialog
       .getByRole("button", {
@@ -274,7 +277,7 @@ for (const locale of ["bg", "en"] as const) {
       .toBeNull();
     expect(new URL(page.url()).searchParams.get("model")).toBe("X5");
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
-    await bar.getByRole("button", { name: "BMW", exact: true }).click();
+    await makeTrigger.click();
     await dialog.locator('[data-slot="desktop-full-filter-reset"]').click();
     await expect(dialog).toBeVisible();
     await apply.click();
@@ -354,7 +357,8 @@ for (const locale of ["bg", "en"] as const) {
     await page.setViewportSize({ width: 1024, height: 900 });
     await page.goto(`/${locale}/cars`);
     const bar = page.locator('[data-slot="dealer-inventory-filters"]');
-    const price = bar.getByRole("button", {
+    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
+    const price = hero.getByRole("button", {
       name: isBg ? "Цена" : "Price",
       exact: true,
     });
@@ -371,7 +375,7 @@ for (const locale of ["bg", "en"] as const) {
     await expect
       .poll(() => new URL(page.url()).searchParams.get("priceMax"))
       .toBe("150000");
-    await bar
+    await hero
       .getByRole("button", { name: isBg ? "Марка" : "Make", exact: true })
       .click();
     const makeDialog = page.getByRole("dialog");
@@ -393,7 +397,7 @@ for (const locale of ["bg", "en"] as const) {
       sidebar.locator('[data-slot="desktop-hero-make"]')
     ).toContainText("BMW");
     await bar.getByRole("button", { name: quickLabel, exact: true }).click();
-    const allFilters = bar.locator('[data-slot="desktop-primary-control"]');
+    const allFilters = hero.locator('[data-slot="desktop-primary-control"]');
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(fullDialog).toBeVisible();
@@ -407,10 +411,10 @@ for (const locale of ["bg", "en"] as const) {
     expect(new URL(page.url()).searchParams.get("priceMax")).toBeNull();
     await page.goto(`/${locale}/cars?q=BMW&fuel=diesel&mileageMax=200000`);
     await expect(
-      bar.locator('[data-slot="desktop-quick-filter"][aria-pressed="true"]')
+      bar.locator('[data-slot="dealer-inventory-active-filter"]')
     ).toHaveCount(3);
     for (const pill of await bar
-      .locator('[data-slot="desktop-quick-filter"][aria-pressed="true"]')
+      .locator('[data-slot="dealer-inventory-active-filter"]')
       .all()) {
       await expect(pill).toBeVisible();
     }
@@ -465,7 +469,10 @@ test("desktop inventory remains usable when preference storage is blocked", asyn
   await expect(
     page.locator('[data-slot="dealer-inventory-sidebar"]')
   ).toBeHidden();
-  await bar.getByRole("button", { name: "Price", exact: true }).click();
+  await page
+    .locator('[data-slot="dealer-desktop-inventory-hero"]')
+    .getByRole("button", { name: "Price", exact: true })
+    .click();
   await expect(
     page.locator('[data-slot="desktop-full-filter-dialog"]')
   ).toBeVisible();

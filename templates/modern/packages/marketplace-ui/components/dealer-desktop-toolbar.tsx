@@ -1,31 +1,31 @@
 "use client";
 
-import type {
-  ListingViewMode,
-  MarketplaceSearchParams,
-  VehicleTaxonomyMakeOption,
-} from "@repo/marketplace";
-import type { InventorySearchListing } from "@repo/marketplace/inventory-search";
+import type { MarketplaceSearchParams } from "@repo/marketplace";
 import { publicSite } from "@repo/marketplace/site-config";
-import type { ReactNode } from "react";
 import { getMarketplaceResultTitle } from "../lib/marketplace-results-toolbar-policy";
 import { DealerDesktopHero } from "./dealer-desktop-hero";
 import styles from "./dealer-desktop-toolbar.module.css";
-export interface DealerDesktopToolbarProps {
-  assistantSlot?: ReactNode;
+import { DealerInventorySearch } from "./dealer-inventory-search";
+import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
+export type DealerDesktopToolbarProps = {
   filters: MarketplaceSearchParams;
   locale?: string;
-  onViewModeChange?: (mode: ListingViewMode) => void;
-  searchListings?: readonly InventorySearchListing[];
-  taxonomy?: VehicleTaxonomyMakeOption[];
-  totalListings?: number;
-  viewMode?: ListingViewMode;
-}
+} & (
+  | { loading: true; filterCount?: never; onOpenSection?: never }
+  | {
+      loading?: false;
+      filterCount: number;
+      onOpenSection: (section: DesktopFullFilterEntry) => void;
+    }
+);
 
-export const DealerDesktopToolbar = ({
-  filters,
-  locale,
-}: DealerDesktopToolbarProps) => {
+export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
+  const { filters, locale } = props;
+  const openSection = (section: DesktopFullFilterEntry) => {
+    if (!props.loading) {
+      props.onOpenSection(section);
+    }
+  };
   return (
     <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
       <DealerDesktopHero
@@ -40,7 +40,17 @@ export const DealerDesktopToolbar = ({
         locale={locale}
         title={getMarketplaceResultTitle(filters, locale)}
         variant="inventory"
-      />
+      >
+        <div className={styles.content}>
+          <DealerInventorySearch
+            disabled={props.loading}
+            filterCount={props.loading ? 0 : props.filterCount}
+            filters={filters}
+            locale={locale}
+            onOpenSection={openSection}
+          />
+        </div>
+      </DealerDesktopHero>
     </div>
   );
 };

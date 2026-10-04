@@ -249,6 +249,7 @@ export const PublicRouteLoading = async ({
           <DealerDesktopHeader activeMode="buy" locale={locale}>
             <DealerDesktopToolbar
               filters={{ ...parseMarketplaceSearchParams({}), category }}
+              loading
               locale={locale}
             />
           </DealerDesktopHeader>

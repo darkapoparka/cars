@@ -186,6 +186,29 @@
     width: auto;
     border-radius: calc(var(--spacing) * 10);
   }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"] .form {
+    min-inline-size: 0;
+    height: calc(var(--spacing) * 16);
+    padding: calc(var(--spacing) * 2);
+    margin: 0;
+    border: var(--desktop-border-width) solid var(--border);
+  }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
+    .filterField {
+    height: calc(var(--spacing) * 12);
+  }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
+    :is(.field, .submit) {
+    height: calc(var(--spacing) * 12);
+    min-height: calc(var(--spacing) * 12);
+    padding-inline: calc(var(--spacing) * 5);
+  }
+  .desktopSearch[data-surface="hero"][data-search-context="inventory"]
+    :is(.field, .submit):focus-visible {
+    outline: var(--desktop-focus-width) solid var(--foreground);
+    outline-offset: var(--desktop-focus-offset);
+    border-radius: calc(var(--spacing) * 10);
+  }
 }
 
 @media (min-width: 1024px) and (max-width: 1279px) {

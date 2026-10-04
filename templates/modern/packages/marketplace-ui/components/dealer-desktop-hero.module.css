@@ -289,12 +289,17 @@
     background-size: cover;
     border-radius: var(--radius-desktop-frame);
   }
-  .hero[data-variant="inventory"] .banner,
   .hero[data-appearance="photo"] .banner {
     min-height: calc(var(--spacing) * 56);
     padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
   }
+  .hero[data-variant="inventory"] {
+    gap: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+  }
   .hero[data-variant="inventory"] .banner {
+    min-height: 0;
+    padding: 0;
     background: transparent;
   }
   .hero[data-variant="inventory"],

@@ -3,40 +3,29 @@ import type {
   MarketplaceSearchParams,
 } from "@repo/marketplace";
 import type { PublicInventoryFilterLayout } from "@repo/marketplace/inventory-presentation";
-import { PanelLeft, SlidersHorizontal } from "lucide-react";
+import { PanelLeft, SlidersHorizontal, X } from "lucide-react";
+import { getActiveFilterChips } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
 import { DealerInventorySummary } from "./dealer-inventory-summary";
-import type { DesktopFullFilterSection } from "./desktop-full-filter-dialog";
-import { DesktopQuickFilters } from "./desktop-quick-filters";
 
 /** Desktop catalog filters reuse the same URL state and accessible dialogs. */
 export function DealerInventoryFilters({
   filters,
   locale,
-  filterCount,
   layout,
   onLayoutChange,
   onApply,
   onClearFilters,
-  onOpenFilters,
-  onOpenMake,
-  onOpenModel,
-  onOpenSection,
   onViewModeChange,
   totalListings,
   viewMode,
 }: {
   filters: MarketplaceSearchParams;
   locale?: string;
-  filterCount: number;
   layout: PublicInventoryFilterLayout;
   onLayoutChange: (layout: PublicInventoryFilterLayout) => void;
   onApply: (updates: Partial<MarketplaceSearchParams>) => void;
   onClearFilters: () => void;
-  onOpenFilters: () => void;
-  onOpenMake: () => void;
-  onOpenModel: () => void;
-  onOpenSection: (section: DesktopFullFilterSection) => void;
   onViewModeChange: (viewMode: ListingViewMode) => void;
   totalListings: number;
   viewMode: ListingViewMode;
@@ -81,26 +70,61 @@ export function DealerInventoryFilters({
           </button>
         </fieldset>
       </DealerInventorySummary>
-      {layout === "quick" ? (
-        <div className={styles.quickFilters} data-slot="dealer-inventory-rail">
-          <DesktopQuickFilters
-            compact
-            filterCount={filterCount}
-            filters={filters}
-            isBg={isBg}
-            layout="toolbar"
-            numberFormatter={new Intl.NumberFormat(isBg ? "bg-BG" : "en-US")}
-            onApply={onApply}
-            onClearFilters={onClearFilters}
-            onOpenFilters={onOpenFilters}
-            onOpenMake={onOpenMake}
-            onOpenModel={onOpenModel}
-            onOpenSection={onOpenSection}
-            showSearchChip
-            showSort={false}
-          />
-        </div>
-      ) : null}
+      <DealerInventoryAppliedFilters
+        filters={filters}
+        isBg={isBg}
+        locale={locale}
+        onApply={onApply}
+        onClearFilters={onClearFilters}
+      />
     </section>
+  );
+}
+
+function DealerInventoryAppliedFilters({
+  filters,
+  isBg,
+  locale,
+  onApply,
+  onClearFilters,
+}: {
+  filters: MarketplaceSearchParams;
+  isBg: boolean;
+  locale?: string;
+  onApply: (updates: Partial<MarketplaceSearchParams>) => void;
+  onClearFilters: () => void;
+}) {
+  const chips = getActiveFilterChips(filters, locale);
+  if (chips.length === 0) {
+    return null;
+  }
+  return (
+    <fieldset
+      aria-label={isBg ? "Приложени филтри" : "Applied filters"}
+      className={styles.activeFilters}
+    >
+      {chips.map((chip) => (
+        <button
+          aria-label={`${isBg ? "Премахни" : "Remove"}: ${chip.label}`}
+          className={styles.activeFilter}
+          data-filter-id={chip.id}
+          data-slot="dealer-inventory-active-filter"
+          key={chip.id}
+          onClick={() => onApply(chip.updates)}
+          type="button"
+        >
+          <span>{chip.label}</span>
+          <X aria-hidden="true" size={14} />
+        </button>
+      ))}
+      <button
+        className={styles.clearFilters}
+        data-slot="desktop-clear-all-filters"
+        onClick={onClearFilters}
+        type="button"
+      >
+        {isBg ? "Изчисти всички" : "Clear all"}
+      </button>
+    </fieldset>
   );
 }

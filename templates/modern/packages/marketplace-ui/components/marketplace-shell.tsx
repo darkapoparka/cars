@@ -262,6 +262,12 @@ export const MarketplaceShell = ({
       openOverlay();
     });
   };
+  const openDesktopFilterSection = (section: DesktopFullFilterEntry) => {
+    openMarketplaceOverlay(() => {
+      setDesktopFilterEntry(section);
+      setFilterOpen(true);
+    });
+  };
 
   const appliedSearchLabel = getCanonicalAppliedSearchLabel(
     filters.q,
@@ -396,11 +402,14 @@ export const MarketplaceShell = ({
           appBaseUrl={appUrl}
           assistantSlot={assistantSlot}
           categoryCounts={inventoryFacets?.categoryCounts}
-          filterCount={structuredFilterCount}
+          filterCount={
+            isDealershipSite ? activeFilterChips.length : structuredFilterCount
+          }
           filters={filters}
           locale={locale}
           onApply={commitDesktopFilters}
           onClearFilters={clearFilters}
+          onOpenFilterSection={openDesktopFilterSection}
           onOpenFilters={() =>
             openMarketplaceOverlay(() => setFilterOpen(true))
           }
@@ -446,30 +455,7 @@ export const MarketplaceShell = ({
           }
           onClearFilters={clearFilters}
           onDesktopFilterLayoutChange={changeDesktopFilterLayout}
-          onOpenFilterSection={(section) =>
-            openMarketplaceOverlay(() => {
-              setDesktopFilterEntry(section);
-              setFilterOpen(true);
-            })
-          }
-          onOpenFilters={() =>
-            openMarketplaceOverlay(() => {
-              setDesktopFilterEntry("vehicle");
-              setFilterOpen(true);
-            })
-          }
-          onOpenMake={() =>
-            openMarketplaceOverlay(() => {
-              setDesktopFilterEntry("make");
-              setFilterOpen(true);
-            })
-          }
-          onOpenModel={() =>
-            openMarketplaceOverlay(() => {
-              setDesktopFilterEntry("model");
-              setFilterOpen(true);
-            })
-          }
+          onOpenFilters={() => openDesktopFilterSection("vehicle")}
           onViewModeChange={changeViewMode}
           searchListings={searchListings}
           taxonomy={taxonomy}
