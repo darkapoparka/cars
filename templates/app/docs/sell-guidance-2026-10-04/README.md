@@ -101,7 +101,7 @@ The owner requested a centered, larger How it works entry and proposed moving Be
 | Bulgarian, 320px full page | - | [After](combined-guidance/after-320.jpg) |
 | Bulgarian, 390px full page | - | [After](combined-guidance/after-390.jpg) |
 | Bulgarian, 768px full page | - | [After](combined-guidance/after-768.jpg) |
-| English, 320px full page | - | [After](combined-guidance/after-en-320.jpg) |
+| English, 320 x 884 viewport, scrolled page end | - | [After](combined-guidance/after-en-320.jpg) |
 | English, 1440px full page | - | [After](combined-guidance/after-en-1440.jpg) |
 
 [Rendered measurements and interactions](combined-guidance/verification.json) cover Bulgarian at 320px, 360px, 390px, 768px and 1440px, and English at 320px and 1440px. Each entry measures 220 x 48px, with no offset from the content center, one line of regular 16px text, two selling cards, one guidance entry and no separate preparation panel or horizontal overflow.
@@ -111,3 +111,5 @@ The [desktop drawer](combined-guidance/drawer-1440.jpg) shows all three process 
 The sale and exchange actions open the existing make/model enquiry form with the matching intent selected; no enquiry was submitted. Browser diagnostics contained no errors or warnings. The Bulgarian preview was restored and temporary viewport overrides were reset. Initial automation attempts immediately after navigation or against the unfocused body are recorded in the verification file; the settled drawer interactions and responsive captures completed successfully.
 
 `npm run check` passed with Node 22.20.0: ESLint, TypeScript and the webpack production build generated all 407 pages. The existing isolated `.next-build-check` output was used and development `next-env.d.ts` was preserved. The scoped source delivery includes `components/FeatureContent.tsx`, `components/ReferenceInfoSheet.tsx`, `TEMPLATE.md`, this receipt, `combined-guidance/` and the preceding uncommitted `process-drawer-entry/` evidence. Unrelated shared work is preserved.
+
+The earlier shared Git lock cleared before this revision was committed on Cars `main` as `974ee654a92cd1c18efcaaf09a83c5c3326f181d`. Two full-page capture artifacts were then replaced with visibly verified viewport screenshots for English 320px and the restored Bulgarian preview; no source change was needed.

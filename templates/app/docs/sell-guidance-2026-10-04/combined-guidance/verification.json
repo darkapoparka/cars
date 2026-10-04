@@ -239,6 +239,14 @@
     "An initial English action immediately after navigation did not open the drawer; the settled page opened successfully.",
     "Two body Control+End actions timed out; responsive full-page captures and verification were completed.",
     "No enquiry was submitted.",
-    "Temporary viewport overrides were reset."
-  ]
+    "Temporary viewport overrides were reset.",
+    "English 320px and default-view full-page capture artifacts were replaced with visually verified viewport screenshots."
+  ],
+  "restoredPreview": {
+    "dialogCount": 0,
+    "height": 884,
+    "scrollY": 108,
+    "url": "http://127.0.0.1:6483/bg/sell",
+    "width": 370
+  }
 }
