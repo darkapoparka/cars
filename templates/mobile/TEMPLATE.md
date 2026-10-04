@@ -68,6 +68,11 @@ Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
 Compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
+On desktop, the selected Make control has a separate, labelled Remove action
+that stays available while browsing models. Removing a make clears its model
+search and selections, then returns keyboard focus to the make list. Brand and
+model dividers use the quiet stripe token on desktop, with rounded row hover
+feedback; phones retain their existing rows and selector layout.
 Optional variants and exclusion live in a collapsed More options section.
 At 700px and wider, this filter editor is capped at 820px with 24px viewport
 gutters. Seven compact tabs fit the available width and wrap labels at spaces.

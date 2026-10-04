@@ -5,7 +5,7 @@ export const modelOptionStyles = stylex.create({
   group: {
     borderBottomWidth: 1,
     borderBottomStyle: 'solid',
-    borderBottomColor: colors.line,
+    borderBottomColor: { default: colors.line, '@media (min-width: 700px)': colors.stripe },
   },
   choice: {
     display: 'flex',
@@ -16,7 +16,12 @@ export const modelOptionStyles = stylex.create({
     lineHeight: '24px',
     color: colors.text,
     cursor: 'pointer',
-    backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
+    borderRadius: { default: 0, '@media (min-width: 700px)': 8 },
+    backgroundColor: {
+      default: 'transparent',
+      '@media (min-width: 700px)': { default: 'transparent', ':hover': colors.stripe },
+      ':active': colors.controlSurface,
+    },
   },
   childChoice: { paddingLeft: 24, fontWeight: 400 },
   name: { flex: '1', minWidth: 0, overflowWrap: 'anywhere', textAlign: 'left' },
@@ -41,7 +46,16 @@ export const modelOptionStyles = stylex.create({
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
   },
-  familyRow: { display: 'flex', alignItems: 'center', minHeight: 52 },
+  familyRow: {
+    display: 'flex',
+    alignItems: 'center',
+    minHeight: 52,
+    borderRadius: { default: 0, '@media (min-width: 700px)': 8 },
+    backgroundColor: {
+      default: 'transparent',
+      '@media (min-width: 700px)': { default: 'transparent', ':hover': colors.stripe },
+    },
+  },
   familyButton: {
     display: 'flex',
     alignItems: 'center',

@@ -522,7 +522,10 @@ async function run(name, engine) {
     await page.getByRole('textbox', { name: 'Search models', exact: true }).fill('X6');
     assert.equal(await page.getByRole('checkbox', { name: 'X6', exact: true }).isChecked(), true);
     await page.getByRole('button', { name: 'Make: BMW', exact: true }).click();
-    await page.getByRole('button', { name: 'Remove BMW', exact: true }).click();
+    await page
+      .locator('[data-make-option="BMW"]')
+      .getByRole('button', { name: 'Remove make: BMW', exact: true })
+      .click();
     assert.equal(await page.getByRole('button', { name: /^Model:/ }).isDisabled(), true);
     await page
       .locator('[data-make-option="BMW"]')

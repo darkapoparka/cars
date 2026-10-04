@@ -1,0 +1,384 @@
+[
+  {
+    "name": "BMW removal clears the model query, resets the model selector, retains the draft URL and restores focus",
+    "passed": true,
+    "evidence": {
+      "focus": "BMW",
+      "modelDisabled": true,
+      "search": "",
+      "url": "http://127.0.0.1:6474/?filter=make"
+    }
+  },
+  {
+    "name": "Remove is reachable by keyboard and has a visible focus outline",
+    "passed": true,
+    "evidence": {
+      "label": "Премахни марката: BMW",
+      "outline": "3px"
+    }
+  },
+  {
+    "name": "BMW X6 applies only with Show cars and returns the matching vehicle",
+    "passed": true,
+    "evidence": {
+      "cars": [
+        "bmw-x6"
+      ],
+      "url": "http://127.0.0.1:6474/?makes=BMW&models=X6&makeModels=%7B%22BMW%22%3A%5B%22X6%22%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D"
+    }
+  },
+  {
+    "name": "Escape cancels a draft brand removal and returns focus to its filter pill",
+    "passed": true,
+    "evidence": {
+      "cars": [
+        "bmw-x6"
+      ],
+      "dialogOpen": false,
+      "focus": "Марка и модел · Филтри: BMW · X6",
+      "url": "http://127.0.0.1:6474/?makes=BMW&models=X6&makeModels=%7B%22BMW%22%3A%5B%22X6%22%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D"
+    }
+  },
+  {
+    "name": "Browser Back cancels a brand-removal draft on the final build",
+    "passed": true,
+    "evidence": {
+      "cars": [
+        "bmw-x6"
+      ],
+      "dialogOpen": false,
+      "url": "http://127.0.0.1:6474/?makes=BMW&models=X6&makeModels=%7B%22BMW%22%3A%5B%22X6%22%5D%7D&makeVariants=%7B%22BMW%22%3A%22%22%7D&modelVariants=%7B%22BMW%22%3A%7B%7D%7D"
+    }
+  },
+  {
+    "name": "Applying brand removal clears make, models and variants while retaining the price filter",
+    "passed": true,
+    "evidence": {
+      "cars": [
+        "bmw-x6",
+        "bmw-540",
+        "bmw-x3"
+      ],
+      "url": "http://127.0.0.1:6474/?minPrice=50000"
+    }
+  },
+  {
+    "name": "700 by 500 desktop fits all seven tabs and the Remove control without overflow",
+    "passed": true,
+    "evidence": {
+      "dialog": {
+        "bottom": 476,
+        "left": 24,
+        "right": 676,
+        "top": 24
+      },
+      "remove": {
+        "left": 247.078125,
+        "right": 346
+      },
+      "scrollWidth": 700,
+      "tabs": [
+        {
+          "label": "Търсене",
+          "left": 36,
+          "right": 125.703125
+        },
+        {
+          "label": "Марка и модел",
+          "left": 125.703125,
+          "right": 215.421875
+        },
+        {
+          "label": "Цена",
+          "left": 215.421875,
+          "right": 305.125
+        },
+        {
+          "label": "Година",
+          "left": 305.125,
+          "right": 394.84375
+        },
+        {
+          "label": "Гориво",
+          "left": 394.84375,
+          "right": 484.5625
+        },
+        {
+          "label": "Състояние",
+          "left": 484.5625,
+          "right": 574.28125
+        },
+        {
+          "label": "Още",
+          "left": 574.28125,
+          "right": 664
+        }
+      ],
+      "viewport": 700
+    }
+  },
+  {
+    "name": "Optional variants and excluded brand criteria remain removable on a short screen",
+    "passed": true,
+    "evidence": {
+      "apply": " Покажи 4 коли",
+      "modelDisabled": true,
+      "search": ""
+    }
+  },
+  {
+    "name": "Desktop layout 700px: seven tabs, clear action, blur and no overflow",
+    "passed": true,
+    "evidence": {
+      "blur": "blur(8px)",
+      "dialog": {
+        "bottom": 791,
+        "left": 24,
+        "right": 676,
+        "top": 169,
+        "width": 652
+      },
+      "listOverflow": 0,
+      "remove": {
+        "left": 247.078125,
+        "right": 346,
+        "width": 98.921875
+      },
+      "scrollWidth": 700,
+      "tabs": [
+        {
+          "label": "Търсене",
+          "left": 36,
+          "right": 125.703125
+        },
+        {
+          "label": "Марка и модел",
+          "left": 125.703125,
+          "right": 215.421875
+        },
+        {
+          "label": "Цена",
+          "left": 215.421875,
+          "right": 305.125
+        },
+        {
+          "label": "Година",
+          "left": 305.125,
+          "right": 394.84375
+        },
+        {
+          "label": "Гориво",
+          "left": 394.84375,
+          "right": 484.5625
+        },
+        {
+          "label": "Състояние",
+          "left": 484.5625,
+          "right": 574.28125
+        },
+        {
+          "label": "Още",
+          "left": 574.28125,
+          "right": 664
+        }
+      ],
+      "viewport": 700
+    }
+  },
+  {
+    "name": "Desktop layout 1024px: seven tabs, clear action, blur and no overflow",
+    "passed": true,
+    "evidence": {
+      "blur": "blur(8px)",
+      "dialog": {
+        "bottom": 787,
+        "left": 102,
+        "right": 922,
+        "top": 173,
+        "width": 820
+      },
+      "listOverflow": 0,
+      "remove": {
+        "left": 409.078125,
+        "right": 508,
+        "width": 98.921875
+      },
+      "scrollWidth": 1024,
+      "tabs": [
+        {
+          "label": "Търсене",
+          "left": 114,
+          "right": 227.703125
+        },
+        {
+          "label": "Марка и модел",
+          "left": 227.703125,
+          "right": 341.421875
+        },
+        {
+          "label": "Цена",
+          "left": 341.421875,
+          "right": 455.125
+        },
+        {
+          "label": "Година",
+          "left": 455.125,
+          "right": 568.84375
+        },
+        {
+          "label": "Гориво",
+          "left": 568.84375,
+          "right": 682.5625
+        },
+        {
+          "label": "Състояние",
+          "left": 682.5625,
+          "right": 796.28125
+        },
+        {
+          "label": "Още",
+          "left": 796.28125,
+          "right": 910
+        }
+      ],
+      "viewport": 1024
+    }
+  },
+  {
+    "name": "Desktop layout 1440px: seven tabs, clear action, blur and no overflow",
+    "passed": true,
+    "evidence": {
+      "blur": "blur(8px)",
+      "dialog": {
+        "bottom": 787,
+        "left": 310,
+        "right": 1130,
+        "top": 173,
+        "width": 820
+      },
+      "listOverflow": 0,
+      "remove": {
+        "left": 617.078125,
+        "right": 716,
+        "width": 98.921875
+      },
+      "scrollWidth": 1440,
+      "tabs": [
+        {
+          "label": "Търсене",
+          "left": 322,
+          "right": 435.703125
+        },
+        {
+          "label": "Марка и модел",
+          "left": 435.703125,
+          "right": 549.421875
+        },
+        {
+          "label": "Цена",
+          "left": 549.421875,
+          "right": 663.125
+        },
+        {
+          "label": "Година",
+          "left": 663.125,
+          "right": 776.84375
+        },
+        {
+          "label": "Гориво",
+          "left": 776.84375,
+          "right": 890.5625
+        },
+        {
+          "label": "Състояние",
+          "left": 890.5625,
+          "right": 1004.28125
+        },
+        {
+          "label": "Още",
+          "left": 1004.28125,
+          "right": 1118
+        }
+      ],
+      "viewport": 1440
+    }
+  },
+  {
+    "name": "Desktop layout 1920px: seven tabs, clear action, blur and no overflow",
+    "passed": true,
+    "evidence": {
+      "blur": "blur(8px)",
+      "dialog": {
+        "bottom": 787,
+        "left": 550,
+        "right": 1370,
+        "top": 173,
+        "width": 820
+      },
+      "listOverflow": 0,
+      "remove": {
+        "left": 857.078125,
+        "right": 956,
+        "width": 98.921875
+      },
+      "scrollWidth": 1920,
+      "tabs": [
+        {
+          "label": "Търсене",
+          "left": 562,
+          "right": 675.703125
+        },
+        {
+          "label": "Марка и модел",
+          "left": 675.703125,
+          "right": 789.421875
+        },
+        {
+          "label": "Цена",
+          "left": 789.421875,
+          "right": 903.125
+        },
+        {
+          "label": "Година",
+          "left": 903.125,
+          "right": 1016.84375
+        },
+        {
+          "label": "Гориво",
+          "left": 1016.84375,
+          "right": 1130.5625
+        },
+        {
+          "label": "Състояние",
+          "left": 1130.5625,
+          "right": 1244.28125
+        },
+        {
+          "label": "Още",
+          "left": 1244.28125,
+          "right": 1358
+        }
+      ],
+      "viewport": 1920
+    }
+  },
+  {
+    "name": "English empty model search is visible and still offers Remove BMW",
+    "passed": true,
+    "evidence": {
+      "locale": "en",
+      "width": 700,
+      "height": 500
+    }
+  },
+  {
+    "name": "English Remove resets the model search and restores brand focus without overflow",
+    "passed": true,
+    "evidence": {
+      "focus": "BMW",
+      "modelDisabled": true,
+      "overflow": 0,
+      "search": ""
+    }
+  }
+]

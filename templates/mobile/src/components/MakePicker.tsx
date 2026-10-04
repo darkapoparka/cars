@@ -126,6 +126,7 @@ export function MakePicker({
   const [expanded, setExpanded] = useState<string[]>([]);
   const listRef = useRef<HTMLDivElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+  const makeSelectorRef = useRef<HTMLButtonElement>(null);
   const modelSelectorRef = useRef<HTMLButtonElement>(null);
   const modelsVisible = Boolean(make) && (!embedded || selector === 'model');
   const selectedMakes = [
@@ -136,6 +137,11 @@ export function MakePicker({
     excluded,
     summary: makeSelectionSummary(filters, name, excluded),
   }));
+  const currentSelection = selectedMakes.find(
+    (selection) => selection.name === make && selection.excluded === exclude,
+  );
+  const removeLabel = (name: string, excluded: boolean) =>
+    t(excluded ? 'Remove excluded make' : 'Remove make') + ': ' + name;
   const modelSummary = draft.selected.length ? draft.selected.map(modelLabel).join(', ') : 'Any';
   const groups = modelGroupsFor(make);
   const q = query.trim().toLocaleLowerCase();
@@ -246,13 +252,16 @@ export function MakePicker({
       setMake('');
       setSelector('make');
       setExclude(false);
+      setQuery('');
+      setExpanded([]);
       setDraft({ selected: [], variants: {} });
     }
     requestAnimationFrame(() => {
       const row = [
         ...(listRef.current?.querySelectorAll<HTMLElement>('[data-make-option]') || []),
       ].find((element) => element.dataset.makeOption === name);
-      row?.querySelector<HTMLButtonElement>('button')?.focus({ preventScroll: true });
+      const target = row?.querySelector<HTMLButtonElement>('button') || makeSelectorRef.current;
+      target?.focus({ preventScroll: true });
     });
   }
   function applyDraft(
@@ -401,15 +410,32 @@ export function MakePicker({
     <>
       {embedded ? (
         <div {...stylex.props(s.selectors)}>
-          <SelectionButton
-            label={t('Make')}
-            value={make || 'Any'}
-            active={!modelsVisible}
-            onClick={() => {
-              setSelector('make');
-              setQuery('');
-            }}
-          />
+          <div {...stylex.props(s.makeSelector)}>
+            <SelectionButton
+              buttonRef={makeSelectorRef}
+              label={t('Make')}
+              value={make || 'Any'}
+              active={!modelsVisible}
+              onClick={() => {
+                setSelector('make');
+                setQuery('');
+              }}
+            />
+            {currentSelection && (
+              <button
+                type="button"
+                aria-label={removeLabel(make, exclude)}
+                title={removeLabel(make, exclude)}
+                onClick={() => removeSelectedMake(make, exclude)}
+                {...stylex.props(s.removeCurrentMake)}
+              >
+                <span {...stylex.props(s.removeSurface)}>
+                  <Icon name="close" size={14} />
+                  {t('Remove')}
+                </span>
+              </button>
+            )}
+          </div>
           <SelectionButton
             buttonRef={modelSelectorRef}
             label={t('Model')}
@@ -606,7 +632,7 @@ export function MakePicker({
                         {selected && (
                           <IconButton
                             icon="close"
-                            label={'Remove ' + (selected.excluded ? 'excluded ' : '') + name}
+                            label={removeLabel(name, selected.excluded)}
                             onClick={() => removeSelectedMake(name, selected.excluded)}
                           />
                         )}
