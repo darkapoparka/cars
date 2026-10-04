@@ -113,7 +113,9 @@
 			box-shadow: var(--bc-editorial-shadow);
 		}
 		h1 {
+			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-hero-title);
+			font-weight: var(--bc-desktop-title-weight);
 		}
 		.article-cover {
 			border-radius: var(--bc-desktop-media-radius);

@@ -163,7 +163,10 @@
 		h1 {
 			max-width: var(--bc-desktop-hero-title-width);
 			margin-inline: auto;
+			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-hero-title);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-leading-h1);
 			text-wrap: balance;
 		}
 		.site-intro--image {

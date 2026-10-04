@@ -378,7 +378,9 @@
 	.site-shell {
 		--bc-text-meta: 0.875rem;
 		--bc-desktop-page-hero-height: 400px;
-		--bc-desktop-hero-title: clamp(2.25rem, 3vw, 2.75rem);
+		--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
+		--bc-desktop-title-weight: var(--bc-weight-emphasis);
+		--bc-desktop-section-leading: 1.2;
 		--bc-desktop-hero-title-width: 32ch;
 		--bc-desktop-hero-padding-start: calc(var(--bc-space-8) + var(--bc-space-6));
 		--bc-desktop-hero-padding-end: var(--bc-space-6);
@@ -403,7 +405,7 @@
 		--bc-desktop-editorial-radius: var(--bc-editorial-radius);
 		--bc-desktop-editorial-photo-radius: var(--bc-editorial-photo-radius);
 		--bc-desktop-editorial-portrait-height: 200px;
-		--bc-desktop-editorial-title: 1.75rem;
+		--bc-desktop-editorial-title: clamp(2rem, 2.5vw, 2.25rem);
 		--bc-desktop-editorial-shadow: var(--bc-editorial-shadow);
 	}
 }

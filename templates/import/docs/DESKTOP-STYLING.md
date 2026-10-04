@@ -39,6 +39,8 @@ Use the accepted About surfaces as the starting point: neutral canvas, white car
 
 Components own layout and interaction. Prefer the existing `Action`, `DesktopDiscoveryPanel`, `DesktopSearchControl`, `InventoryFilter`, `InventoryDisplayControls`, `VehicleInformationSection`, form, modal and mobile primitives. Add a small explicit variant only where the component's responsibility warrants it. Keep useful component dimensions, breakpoints, borders, aspect ratios and data-driven grid counts. Avoid hundreds of tokens for unrelated geometry or a metric requiring zero numeric literals.
 
+The subsequent [desktop title hierarchy](desktop-title-hierarchy-2026-10-04/README.md) gives section headings 32–36px/700 and hero/article titles 40–52px/700 in the wider Sofia Sans face. Section leading is 1.2; hero leading uses the existing H1 role. Keep controls at their established regular weight, card/panel titles subordinate and the 56px hero anchor. The accepted canvas, frames and artwork retain their owners. This change starts at 768px; mobile type and admin typography stay independent.
+
 The hardcoding to remove is repeated brand values, competing CSS overrides, copied component markup, inline localized UI copy, duplicated route/filter rules, and literal dealer identity, phones or addresses outside their owners. Do not replace typed data and native links/forms with abstractions that conceal the product behavior.
 
 | Concern                                                                      | Authoritative owner                                                |

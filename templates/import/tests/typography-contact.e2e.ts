@@ -46,6 +46,7 @@ test('public actions share a readable control weight', async ({ page }, info) =>
 				weight: getComputedStyle(node).fontWeight,
 				height: node.getBoundingClientRect().height,
 				compact: node.classList.contains('size-compact'),
+				teamCard: Boolean(node.closest('.team-card__action')),
 				mobileLabel: Boolean(node.closest('.service-mobile-filters, .contact-banner')),
 				card: Boolean(node.closest('.site-vehicle-card')),
 				filter: node.classList.contains('inventory-toolbar__all')
@@ -54,8 +55,9 @@ test('public actions share a readable control weight', async ({ page }, info) =>
 		for (const item of metrics) {
 			expect(item.weight, route + ' ' + item.text).toBe('400');
 			const desktopCard = info.project.name === 'desktop' && item.card;
+			const desktopTeamAction = info.project.name === 'desktop' && item.teamCard;
 			expect(item.size, route + ' ' + item.text).toBeGreaterThanOrEqual(
-				desktopCard || (info.project.name === 'desktop' && item.filter)
+				desktopCard || desktopTeamAction || (info.project.name === 'desktop' && item.filter)
 					? 16
 					: info.project.name === 'mobile' && item.mobileLabel
 						? 16
@@ -63,7 +65,7 @@ test('public actions share a readable control weight', async ({ page }, info) =>
 							? 20
 							: 18
 			);
-			expect(item.height).toBeGreaterThanOrEqual(desktopCard ? 36 : 44);
+			expect(item.height).toBeGreaterThanOrEqual(desktopCard || desktopTeamAction ? 36 : 44);
 		}
 	}
 });

@@ -181,7 +181,7 @@
 		.about-heading :global(.site-heading) {
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-editorial-title);
-			line-height: var(--bc-leading-h4);
+			line-height: var(--bc-desktop-section-leading);
 		}
 		.about-team {
 			width: 100%;

@@ -70,7 +70,8 @@
 	}
 	.site-shell .site-heading {
 		font-family: var(--bc-font-body);
-		line-height: var(--bc-leading-h4);
+		font-weight: var(--bc-desktop-title-weight);
+		line-height: var(--bc-desktop-section-leading);
 	}
 	.site-empty-state {
 		display: grid;

@@ -228,6 +228,13 @@
 	.daynight-youtube__poster:hover .daynight-youtube__play {
 		background: var(--bc-accent-hover);
 	}
+	@media (min-width: 768px) {
+		h2 {
+			font-family: var(--bc-font-body);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-desktop-section-leading);
+		}
+	}
 	@media (max-width: 767px) {
 		.daynight-youtube {
 			padding-block: 12px;

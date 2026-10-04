@@ -98,6 +98,13 @@
 		flex-wrap: wrap;
 		gap: var(--bc-space-3);
 	}
+	@media (min-width: 768px) {
+		h2 {
+			font-family: var(--bc-font-body);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-desktop-section-leading);
+		}
+	}
 	@media (max-width: 767.98px) {
 		.contact-banner {
 			min-height: 0;

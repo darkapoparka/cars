@@ -133,6 +133,8 @@
 		.contact-location--desktop-framed h2 {
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-editorial-title);
+			font-weight: var(--bc-desktop-title-weight);
+			line-height: var(--bc-desktop-section-leading);
 		}
 		.contact-location--desktop-framed iframe {
 			border-radius: var(--bc-desktop-editorial-photo-radius);
