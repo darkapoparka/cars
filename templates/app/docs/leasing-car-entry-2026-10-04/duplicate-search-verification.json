@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6483/bg/finance",
+  "sourceAtStart": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "change": "Remove separate inline import make/model search; preserve overlay car search and country filters.",
+  "checks": [
+    {
+      "name": "BG 390 page has one car entry and no inline import search",
+      "passed": true,
+      "details": {
+        "width": 390
+      }
+    },
+    {
+      "name": "Country filter still selects Germany and shows its car",
+      "passed": true,
+      "details": {
+        "cards": [
+          "Германия\n\nBMW\n\n2020 320i\n\nSport Line\n\n€\n21,500\n86,000 км\nАвтоматик\nБензин"
+        ],
+        "status": "Коли за внос: 1"
+      }
+    },
+    {
+      "name": "All countries restores the five import cards",
+      "passed": true,
+      "details": {
+        "count": 5
+      }
+    },
+    {
+      "name": "Car picker is the only visible car search",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Overlay model search finds its stock car",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Selected stock car still fills the calculator price",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "BG 320 has no duplicate field or page overflow",
+      "passed": true,
+      "details": {
+        "width": 320
+      }
+    },
+    {
+      "name": "EN 320 has no duplicate field or page overflow",
+      "passed": true,
+      "details": {
+        "width": 320
+      }
+    },
+    {
+      "name": "EN 390 has no duplicate field or page overflow",
+      "passed": true,
+      "details": {
+        "width": 390
+      }
+    },
+    {
+      "name": "Desktop country filters start directly below the banner",
+      "passed": true,
+      "details": {
+        "width": 1440
+      }
+    },
+    {
+      "name": "Desktop Calculate still opens its calculator",
+      "passed": true,
+      "details": {}
+    }
+  ],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "passed": true,
+    "pages": 407
+  },
+  "diagnostics": [],
+  "boundary": "Local source and browser verification only; shared index lock prevents commit/push."
+}

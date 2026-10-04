@@ -38,10 +38,10 @@ export default function ServiceCatalogue({searchState}: {searchState: ServiceSea
 }
 
 const s = stylex.create({
-  catalogue: {marginTop: {[media.mobile]: 16, default: 24}},
+  catalogue: {marginTop: {[media.mobile]: $.mobilePillGap, default: 24}},
   desktopSearch: {display: {[media.mobile]: 'none', default: 'block'}},
-  pills: {display: 'flex', gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, default: 10}, paddingBlock: 3, scrollbarWidth: 'none'},
-  cards: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: 14, default: 20}, marginTop: 14},
+  pills: {display: 'flex', gap: 8, overflowX: 'auto', marginTop: {[media.mobile]: 0, default: 10}, paddingBlock: {[media.mobile]: 0, default: 3}, scrollbarWidth: 'none'},
+  cards: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 20}, marginTop: {[media.mobile]: $.mobilePillGap, default: 14}},
   card: {display: 'flex', flexDirection: 'column', minWidth: 0, overflow: 'hidden', color: $.ink, textDecoration: 'none', borderRadius: 20, backgroundColor: {default: $.surfaceAlt, ':hover': '#ededf0'}, outline: {default: 'none', ':focus-visible': '2px solid #242428'}, outlineOffset: 3},
   image: {display: 'block', width: '100%', height: 'auto', aspectRatio: '2 / 1', objectFit: 'cover', objectPosition: 'center 55%'},
   cardBody: {padding: {[media.mobile]: 18, default: 24}},
@@ -51,7 +51,7 @@ const s = stylex.create({
   checks: {display: 'grid', gap: 8, margin: '10px 0 0', padding: 0, listStyle: 'none'},
   check: {display: 'flex', alignItems: 'center', gap: 8, color: $.muted},
   icon: {flexShrink: 0, color: $.muted},
-  empty: {display: 'grid', justifyItems: 'start', alignContent: 'center', gap: 16, minHeight: 220, marginTop: 14, padding: 24, borderRadius: 20, backgroundColor: $.surfaceAlt},
+  empty: {display: 'grid', justifyItems: 'start', alignContent: 'center', gap: 16, minHeight: 220, marginTop: {[media.mobile]: $.mobilePillGap, default: 14}, padding: 24, borderRadius: 20, backgroundColor: $.surfaceAlt},
   reset: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 44, padding: '10px 18px', color: $.ink, borderWidth: 0, borderRadius: 30, backgroundColor: '#fff', cursor: 'pointer'},
   srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap'},
 });

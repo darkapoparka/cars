@@ -1,0 +1,401 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6483/bg/finance",
+  "sourceAtStart": "ea0e9676ce2588833b07849dcf42658d30111a7c",
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "passed": true,
+    "pages": 407
+  },
+  "checks": [
+    {
+      "name": "Mobile entry opens priced stock picker and focuses search",
+      "passed": true,
+      "details": {
+        "count": "42 автомобила"
+      }
+    },
+    {
+      "name": "Picker search filters a model to its actual stock result",
+      "passed": true,
+      "details": {
+        "query": "Ciaz"
+      }
+    },
+    {
+      "name": "Selecting a car opens calculator with its stock price",
+      "passed": true,
+      "details": {
+        "price": "28799"
+      }
+    },
+    {
+      "name": "Closing calculator returns focus to its search entry",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Reopening the same car retains its edited estimate",
+      "passed": true,
+      "details": {
+        "price": "33000"
+      }
+    },
+    {
+      "name": "Picker and empty state fit at 320px",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 296
+          }
+        ],
+        "clientWidth": 320,
+        "dialogs": [
+          {
+            "focusInside": true,
+            "height": 276,
+            "width": 320,
+            "x": 0,
+            "y": 568
+          }
+        ],
+        "focusedRole": null,
+        "focusedType": "search",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "name": "Empty search keeps a usable custom-price path",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Custom price clears the selected car",
+      "passed": true,
+      "details": {
+        "price": "25000"
+      }
+    },
+    {
+      "name": "Calculator still fits the narrow phone",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 296
+          }
+        ],
+        "clientWidth": 320,
+        "dialogs": [
+          {
+            "focusInside": true,
+            "height": 615,
+            "width": 320,
+            "x": 0,
+            "y": 229
+          }
+        ],
+        "focusedRole": null,
+        "focusedType": "range",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "name": "Custom calculation retains edited price, rate, term and deposit",
+      "passed": true,
+      "details": {
+        "deposit": "21",
+        "price": "31000",
+        "rate": "8",
+        "term": "6"
+      }
+    },
+    {
+      "name": "Back dismisses the picker/calculator without leaving Leasing",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Picker keyboard focus stays within the overlay",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "English 320 entry keeps the shared panel and search treatment",
+      "passed": true,
+      "details": {
+        "layout": {
+          "banners": [
+            {
+              "height": 150,
+              "width": 281
+            }
+          ],
+          "clientWidth": 305,
+          "dialogs": [],
+          "focusedRole": null,
+          "focusedType": null,
+          "scrollWidth": 305,
+          "width": 320
+        },
+        "entry": {
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "height": 44,
+          "icons": 1,
+          "popup": "dialog"
+        }
+      }
+    },
+    {
+      "name": "English picker search and custom-price copy are localized",
+      "passed": true,
+      "details": {
+        "results": "1 car"
+      }
+    },
+    {
+      "name": "English selection opens the same calculator with stock price",
+      "passed": true,
+      "details": {
+        "price": "28799"
+      }
+    },
+    {
+      "name": "English 390 layout remains aligned and has no overflow",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 351
+          }
+        ],
+        "clientWidth": 375,
+        "dialogs": [],
+        "focusedRole": null,
+        "focusedType": null,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "name": "Desktop retains its direct calculator entry",
+      "passed": true,
+      "details": {
+        "banners": [],
+        "clientWidth": 1440,
+        "dialogs": [
+          {
+            "focusInside": true,
+            "height": 615,
+            "width": 560,
+            "x": 440,
+            "y": 142.5
+          }
+        ],
+        "focusedRole": "dialog",
+        "focusedType": null,
+        "scrollWidth": 1440,
+        "width": 1440
+      }
+    },
+    {
+      "name": "Services retains its inline search and 150px panel",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 351
+          }
+        ],
+        "clientWidth": 375,
+        "dialogs": [],
+        "focusedRole": null,
+        "focusedType": null,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "name": "Sell keeps its valuation action and shared panel",
+      "passed": true,
+      "details": {
+        "layout": {
+          "banners": [
+            {
+              "height": 150,
+              "width": 351
+            }
+          ],
+          "clientWidth": 375,
+          "dialogs": [],
+          "focusedRole": null,
+          "focusedType": null,
+          "scrollWidth": 375,
+          "width": 390
+        },
+        "entry": {
+          "height": 44,
+          "icons": 2
+        }
+      }
+    },
+    {
+      "name": "Home keeps the dealer search and shared panel",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 351
+          }
+        ],
+        "clientWidth": 375,
+        "dialogs": [],
+        "focusedRole": null,
+        "focusedType": null,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "name": "Bulgarian 320 search entry keeps its 150px panel without overflow",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 281
+          }
+        ],
+        "clientWidth": 305,
+        "dialogs": [],
+        "focusedRole": null,
+        "focusedType": null,
+        "scrollWidth": 305,
+        "width": 320
+      }
+    },
+    {
+      "name": "320 picker retains readable search and contained modal focus",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 296
+          }
+        ],
+        "clientWidth": 320,
+        "dialogs": [
+          {
+            "focusInside": true,
+            "height": 290,
+            "width": 320,
+            "x": 0,
+            "y": 554
+          }
+        ],
+        "focusedRole": null,
+        "focusedType": "search",
+        "scrollWidth": 320,
+        "width": 320
+      }
+    },
+    {
+      "name": "Picker uses the shared rounded keyboard focus instead of an inner square",
+      "passed": true,
+      "details": {
+        "fieldOutline": "solid",
+        "fieldRadius": "9999px",
+        "focus": true,
+        "inputOutline": "none"
+      }
+    },
+    {
+      "name": "Bulgarian 390 entry remains aligned without overflow",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 351
+          }
+        ],
+        "clientWidth": 375,
+        "dialogs": [],
+        "focusedRole": null,
+        "focusedType": null,
+        "scrollWidth": 375,
+        "width": 390
+      }
+    },
+    {
+      "name": "English 390 picker-to-calculator flow fits without overflow",
+      "passed": true,
+      "details": {
+        "banners": [
+          {
+            "height": 150,
+            "width": 366
+          }
+        ],
+        "clientWidth": 390,
+        "dialogs": [
+          {
+            "focusInside": true,
+            "height": 615,
+            "width": 390,
+            "x": 0,
+            "y": 229
+          }
+        ],
+        "focusedRole": "dialog",
+        "focusedType": null,
+        "scrollWidth": 390,
+        "width": 390
+      }
+    },
+    {
+      "name": "Changing the selected car starts with the new stock price",
+      "passed": true,
+      "details": {
+        "stock": 64699,
+        "calculator": 64699
+      }
+    },
+    {
+      "name": "No application warnings or errors during focused verification",
+      "passed": true,
+      "details": {
+        "applicationEntries": [],
+        "developmentEntries": [
+          {
+            "level": "warn",
+            "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+            "timestamp": "2026-10-03T23:46:26.960Z",
+            "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+          }
+        ]
+      }
+    }
+  ],
+  "diagnostics": [
+    {
+      "level": "warn",
+      "message": "[Fast Refresh] performing full reload\n\nFast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.\nYou might have a file which exports a React component but also exports a value that is imported by a non-React component file.\nConsider migrating the non-React component export to a separate file and importing it into both files.\n\nIt is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.\nFast Refresh requires at least one parent function component in your React tree.",
+      "timestamp": "2026-10-03T23:46:26.960Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/next/dist/next-devtools/shared/forward-logs-shared.js"
+    }
+  ],
+  "boundary": "Local template UI, browser and production build. No connected finance application or external enquiry. Physical-device and hosted deployment acceptance are separate."
+}

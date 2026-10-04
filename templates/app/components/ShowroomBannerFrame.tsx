@@ -13,6 +13,6 @@ export default function ShowroomBannerFrame({children}: {children: ReactNode}) {
 }
 
 const s = stylex.create({
-  wrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 4, paddingBottom: 6},
+  wrap: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 4, paddingBottom: {[media.mobile]: 0, default: 6}},
   frame: {isolation: 'isolate', overflow: 'hidden', borderRadius: 20},
 });

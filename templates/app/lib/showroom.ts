@@ -6,7 +6,7 @@ import {bannerArtwork, type BannerTheme} from './showroom-art';
 import type {ShowroomIconName} from '@/components/ShowroomIcon';
 
 type MenuItem = {href: string; label: string; icon: ShowroomIconName; location?: boolean; primary?: boolean};
-type MenuGroup = {label: string; items: readonly MenuItem[]};
+type MenuGroup = {label: string; items: readonly MenuItem[]; contacts?: boolean};
 
 // Change this setting per dealer; artwork and campaign colors switch together.
 const branding: {bannerTheme: BannerTheme} = {bannerTheme: 'black'};
@@ -52,11 +52,11 @@ export const showroom = {
   ],
   // Countries used by the import listing filters and enquiry form.
   importCountries: [
-    {code: 'DE', name: 'Germany'},
-    {code: 'CA', name: 'Canada'},
-    {code: 'US', name: 'USA'},
-    {code: 'IT', name: 'Italy'},
-    {code: 'NL', name: 'Netherlands'},
+    {code: 'DE', name: 'Germany', flagSrc: '/flags/de.svg'},
+    {code: 'CA', name: 'Canada', flagSrc: '/flags/ca.svg'},
+    {code: 'US', name: 'USA', flagSrc: '/flags/us.svg'},
+    {code: 'IT', name: 'Italy', flagSrc: '/flags/it.svg'},
+    {code: 'NL', name: 'Netherlands', flagSrc: '/flags/nl.svg'},
   ],
   navigation: [
     {href: '/', label: 'Home', icon: 'home'},
@@ -65,15 +65,17 @@ export const showroom = {
     {href: '/more', label: 'More', icon: 'more'},
   ],
   menu: [
-    {label: 'Your showroom', items: [
-      {href: '/cars', label: 'Browse cars', icon: 'cars', primary: true},
-      {href: '/stores', label: 'Visit showroom', icon: 'location', location: true},
-    ]},
-    {label: 'More', items: [
+    {label: 'Cars', items: [
+      {href: '/cars', label: 'View cars', icon: 'cars', primary: true},
       {href: '/saved', label: 'Saved cars', icon: 'saved'},
+    ]},
+    {label: 'Services', items: [
       {href: '/sell', label: 'Sell or part-exchange', icon: 'sell'},
-      {href: '/finance', label: 'Payment options', icon: 'finance'},
+      {href: '/finance', label: 'Finance navigation', icon: 'finance'},
       {href: '/service', label: 'Vehicle services', icon: 'service'},
+    ]},
+    {label: 'Your showroom', contacts: true, items: [
+      {href: '/stores', label: 'Visit showroom', icon: 'location'},
     ]},
   ] as readonly MenuGroup[],
 } as const;

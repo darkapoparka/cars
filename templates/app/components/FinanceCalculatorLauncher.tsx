@@ -42,7 +42,11 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView}:
   }, [view, panel]);
 
   function choose(car: Vehicle) {
-    setSelection(previous => ({car, version: previous.version + 1}));
+    setSelection(previous => previous.car?.slug === car.slug ? previous : {car, version: previous.version + 1});
+    setView('calculator');
+  }
+  function chooseCustomPrice() {
+    setSelection(previous => previous.car ? {car: null, version: previous.version + 1} : previous);
     setView('calculator');
   }
   return <div hidden={!view} {...stylex.props(s.backdrop, !view && s.hidden)} onMouseDown={event => {if (event.currentTarget === event.target) close();}}>
@@ -50,8 +54,8 @@ export default function FinanceCalculatorLauncher({view, onViewChange: setView}:
         <header {...stylex.props(s.header)}><h2 id={id + '-title'} {...stylex.props(t.heading)}>{tx(view === 'cars' ? 'Choose your car' : 'Finance calculator')}</h2><button type="button" aria-label={tx(view === 'cars' ? 'Close car selection' : 'Close calculator')} onClick={close} {...stylex.props(s.close)}><X size={23} aria-hidden="true"/></button></header>
         <div ref={content} {...stylex.props(s.body)}>
           {view === 'cars' ? <div data-finance-car-picker>
-            <div role="search" {...stylex.props(searchField.field, s.pickerSearch)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)}/><input ref={input} type="search" aria-label={tx('Search cars')} placeholder={tx('Make or model')} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input)}/>{query ? <button type="button" aria-label={tx('Clear search')} onClick={() => {setQuery(''); input.current?.focus();}} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button> : null}</div>
-            <p role="status" aria-live="polite" {...stylex.props(s.note, t.caption)}>{results.length} {tx(results.length === 1 ? 'car' : 'cars')}</p>
+            <div data-search-field role="search" {...stylex.props(searchField.field, s.pickerSearch)}><Search size={20} aria-hidden="true" {...stylex.props(searchField.icon)}/><input ref={input} data-search-input type="search" aria-label={tx('Search cars')} placeholder={tx('Make or model')} autoComplete="off" autoCapitalize="none" spellCheck={false} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input)}/>{query ? <button type="button" aria-label={tx('Clear search')} onClick={() => {setQuery(''); input.current?.focus();}} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button> : null}</div>
+            <div {...stylex.props(s.pickerMeta)}><p role="status" aria-live="polite" {...stylex.props(s.note, s.resultCount, t.caption)}>{results.length} {tx(results.length === 1 ? 'car' : 'cars')}</p><button type="button" onClick={chooseCustomPrice} {...stylex.props(s.customPrice, t.caption)}>{tx('Enter a price')}<ChevronRight size={16} aria-hidden="true"/></button></div>
             <div aria-busy={query !== deferredQuery} {...stylex.props(s.choices)}>{results.map(car => <button type="button" key={car.slug} data-finance-car-choice aria-label={tx('Choose your car') + ': ' + car.year + ' ' + car.make + ' ' + car.model} onClick={() => choose(car)} {...stylex.props(s.choice)}>
               <img src={assetPath(car.image)} width={88} height={66} loading="lazy" alt="" {...stylex.props(s.choiceImage)}/><span {...stylex.props(s.choiceCopy)}><span {...stylex.props(s.note, t.caption)}>{car.make} · {car.year}</span><span {...stylex.props(s.model, t.control)}>{car.model}</span><span {...stylex.props(t.body)}>{currency.symbol} {formatPrice(car.price)}</span></span><ChevronRight size={20} aria-hidden="true" {...stylex.props(s.icon)}/>
             </button>)}</div>
@@ -76,6 +80,9 @@ const s = stylex.create({
   close: {display: 'grid', placeItems: 'center', flexShrink: 0, width: 44, height: 44, padding: 0, color: $.ink, borderWidth: 0, borderRadius: '50%', backgroundColor: '#f2f2f3', cursor: 'pointer'},
   body: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '0 20px calc(20px + env(safe-area-inset-bottom))'},
   pickerSearch: {marginTop: 14, marginBottom: 8},
+  pickerMeta: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
+  resultCount: {margin: 0},
+  customPrice: {display: 'inline-flex', alignItems: 'center', gap: 4, minHeight: 44, padding: '8px 0', color: $.ink, borderWidth: 0, borderRadius: 8, backgroundColor: 'transparent', cursor: 'pointer', outlineOffset: -3},
   choices: {display: 'grid', gap: 4, marginTop: 8},
   choice: {display: 'grid', gridTemplateColumns: '88px minmax(0,1fr) 20px', alignItems: 'center', gap: 12, width: '100%', minHeight: 92, padding: '10px 0', color: $.ink, textAlign: 'left', borderWidth: 0, borderRadius: 8, backgroundColor: {default: '#fff', ':hover': '#f7f7f8'}, cursor: 'pointer'},
   choiceImage: {width: 88, height: 66, borderRadius: 8, objectFit: 'cover'},

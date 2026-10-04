@@ -1,0 +1,628 @@
+{
+  "checkedAt": "2026-10-04T01:38:04.626Z",
+  "origin": "http://127.0.0.1:6483",
+  "sourceHead": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "scope": "Local App menu refinement; uncommitted",
+  "checks": [
+    {
+      "name": "Bulgarian 390px uniform text-only rows",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": null,
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 630,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/cars",
+            "iconWidth": 32,
+            "text": "Вижте колите",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/saved",
+            "iconWidth": 32,
+            "text": "Запазени автомобили",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/sell",
+            "iconWidth": 32,
+            "text": "Продайте или заменете",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/finance",
+            "iconWidth": 32,
+            "text": "Лизинг",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/service",
+            "iconWidth": 32,
+            "text": "Услуги за автомобила",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/stores",
+            "iconWidth": 32,
+            "text": "Посетете ни",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/bg/more",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    },
+    {
+      "name": "Bulgarian 320px labels fit",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": null,
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 630,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/cars",
+            "iconWidth": 32,
+            "text": "Вижте колите",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/saved",
+            "iconWidth": 32,
+            "text": "Запазени автомобили",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/sell",
+            "iconWidth": 32,
+            "text": "Продайте или заменете",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/finance",
+            "iconWidth": 32,
+            "text": "Лизинг",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/service",
+            "iconWidth": 32,
+            "text": "Услуги за автомобила",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/stores",
+            "iconWidth": 32,
+            "text": "Посетете ни",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/bg/more",
+        "viewport": {
+          "height": 720,
+          "width": 320
+        }
+      }
+    },
+    {
+      "name": "English 320px rows and language switch",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": null,
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 648,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/cars",
+            "iconWidth": 32,
+            "text": "View cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/saved",
+            "iconWidth": 32,
+            "text": "Saved cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/sell",
+            "iconWidth": 32,
+            "text": "Sell or part-exchange",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/finance",
+            "iconWidth": 32,
+            "text": "Finance",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/service",
+            "iconWidth": 32,
+            "text": "Vehicle services",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/stores",
+            "iconWidth": 32,
+            "text": "Visit showroom",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/en/more",
+        "viewport": {
+          "height": 720,
+          "width": 320
+        }
+      }
+    },
+    {
+      "name": "English 390px labels fit",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": null,
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 630,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/cars",
+            "iconWidth": 32,
+            "text": "View cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/saved",
+            "iconWidth": 32,
+            "text": "Saved cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/sell",
+            "iconWidth": 32,
+            "text": "Sell or part-exchange",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/finance",
+            "iconWidth": 32,
+            "text": "Finance",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/service",
+            "iconWidth": 32,
+            "text": "Vehicle services",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/stores",
+            "iconWidth": 32,
+            "text": "Visit showroom",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/en/more",
+        "viewport": {
+          "height": 844,
+          "width": 390
+        }
+      }
+    },
+    {
+      "name": "Text-only rows retain visible keyboard focus",
+      "passed": true,
+      "details": {
+        "href": "/en/saved",
+        "outline": "solid",
+        "width": "2px"
+      }
+    },
+    {
+      "name": "English desktop text-only menu fits",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": null,
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 697,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/cars",
+            "iconWidth": 32,
+            "text": "View cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/saved",
+            "iconWidth": 32,
+            "text": "Saved cars",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/sell",
+            "iconWidth": 32,
+            "text": "Sell or part-exchange",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/finance",
+            "iconWidth": 32,
+            "text": "Finance",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/service",
+            "iconWidth": 32,
+            "text": "Vehicle services",
+            "titleLines": 1
+          },
+          {
+            "font": "Geist, Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/en/stores",
+            "iconWidth": 32,
+            "text": "Visit showroom",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/en/more",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Bulgarian desktop text-only menu fits",
+      "passed": true,
+      "details": {
+        "groupGaps": [
+          12,
+          12
+        ],
+        "languages": [
+          {
+            "height": 44,
+            "selected": null,
+            "text": "English"
+          },
+          {
+            "height": 44,
+            "selected": "true",
+            "text": "Български"
+          }
+        ],
+        "noticeBottom": 697,
+        "overflow": false,
+        "rows": [
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/cars",
+            "iconWidth": 32,
+            "text": "Вижте колите",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/saved",
+            "iconWidth": 32,
+            "text": "Запазени автомобили",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/sell",
+            "iconWidth": 32,
+            "text": "Продайте или заменете",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/finance",
+            "iconWidth": 32,
+            "text": "Лизинг",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/service",
+            "iconWidth": 32,
+            "text": "Услуги за автомобила",
+            "titleLines": 1
+          },
+          {
+            "font": "Roboto, Arial, sans-serif",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "glyphWidth": "20",
+            "height": 56,
+            "href": "/bg/stores",
+            "iconWidth": 32,
+            "text": "Посетете ни",
+            "titleLines": 1
+          }
+        ],
+        "url": "http://127.0.0.1:6483/bg/more",
+        "viewport": {
+          "height": 1000,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Text-only visit link opens showroom details",
+      "passed": true,
+      "details": {
+        "headings": [
+          "Посетете ни"
+        ],
+        "url": "http://127.0.0.1:6483/bg/stores"
+      }
+    },
+    {
+      "name": "No console warnings or errors during the refinement",
+      "passed": true,
+      "details": []
+    }
+  ],
+  "showroomRowHeight": {
+    "before": 66,
+    "after": 56
+  },
+  "build": {
+    "command": "npm run check",
+    "runtime": "Node 22.20.0",
+    "distDir": ".next-build-check",
+    "exitCode": 0,
+    "staticPages": 407,
+    "compatibility": "Retained optional MenuItem.location field for preserved source snapshots"
+  },
+  "console": [],
+  "delivery": "Commit/push blocked by existing shared Git index lock"
+}

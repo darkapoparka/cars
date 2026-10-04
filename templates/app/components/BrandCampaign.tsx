@@ -6,7 +6,7 @@ import {ArrowRight} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {campaignTokens as theme} from '@/app/campaign-theme.stylex';
 import {showroom} from '@/lib/showroom';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
 type Kind = 'sell' | 'care' | 'finance';
@@ -32,7 +32,7 @@ export default function BrandCampaign({kind, onAction, image}: {kind: Kind; onAc
   </section>;
 }
 const s = stylex.create({
-  campaign: {position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', width: '100%', aspectRatio: '1', minHeight: {[media.mobile]: 0, default: 350}, maxWidth: 680, marginInline: 'auto', marginTop: 28, overflow: 'hidden', borderRadius: 20, color: '#fff', backgroundColor: theme.surface},
+  campaign: {position: 'relative', isolation: 'isolate', display: 'flex', flexDirection: 'column', width: '100%', aspectRatio: '1', minHeight: {[media.mobile]: 0, default: 350}, maxWidth: 680, marginInline: 'auto', marginTop: {[media.mobile]: $.mobileSectionGap, default: 28}, overflow: 'hidden', borderRadius: 20, color: '#fff', backgroundColor: theme.surface},
   wide: {aspectRatio: 'auto', minHeight: 0, maxWidth: 'none'},
   care: {aspectRatio: 'auto', minHeight: 0, maxWidth: 'none'},
   art: {position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover'},

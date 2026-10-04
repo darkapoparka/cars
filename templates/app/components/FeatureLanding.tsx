@@ -1,6 +1,6 @@
 'use client';
 import {Suspense, useState} from 'react';
-import {Calculator, ClipboardCheck} from 'lucide-react';
+import {ClipboardCheck, Search} from 'lucide-react';
 import {useRouter} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
 import DiscoveryHeader from '@/components/DiscoveryHeader';
@@ -48,7 +48,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   return <div {...stylex.props(s.screen)}>
     <DiscoveryHeader active={kind} hideMobileIdentity />
     <DealerMobileBanner title={current.mobileTitle}>
-      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark/> : kind === 'finance' ? <DealerBannerAction label="Calculate payment" icon={<Calculator size={20} aria-hidden="true"/>} expanded={financeView === 'calculator'} onClick={() => setFinanceView('calculator')}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
+      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
     </DealerMobileBanner>
     {kind !== 'sell' ? <div {...stylex.props(s.desktopOnly)}><ShowroomBanner {...banner} compactCopy={kind === 'service'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/></div> : null}
     <main {...stylex.props(s.content)}>

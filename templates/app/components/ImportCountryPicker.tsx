@@ -1,7 +1,7 @@
 'use client';
 
-import {useId, useRef, useState} from 'react';
-import {ArrowRight, Search, X} from 'lucide-react';
+import {useId, useState} from 'react';
+import {ArrowRight, X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {useCopy} from '@/lib/locale';
 import {showroom} from '@/lib/showroom';
@@ -11,16 +11,13 @@ import {importListings, type ImportListing} from '@/lib/import-inventory';
 import VehicleCard from './VehicleCard';
 import DealerEnquirySheet from './DealerEnquirySheet';
 import {useModal} from './useModal';
-import {searchField} from './search-field.stylex';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 import FilterPill from '@/components/FilterPill';
 
-/** Search import listings, filter by country and prepare a local enquiry. */
+/** Filter import listings by country and prepare a local enquiry. */
 export default function ImportCountryPicker() {
   const tx = useCopy(), id = useId();
-  const searchInput = useRef<HTMLInputElement>(null);
-  const [query, setQuery] = useState('');
   const [filterCountry, setFilterCountry] = useState('all');
   const [selectedListing, setSelectedListing] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
@@ -28,13 +25,7 @@ export default function ImportCountryPicker() {
   const [details, setDetails] = useState({country: '',model: '',budget: '',listing: ''});
   const [enquiry, setEnquiry] = useState<string | null>(null);
   const country = showroom.importCountries.find(item => item.code === origin);
-  const words = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-  const visible = importListings.filter(listing => {
-    const vehicle = listing.vehicle;
-    const originName = showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode;
-    const terms = [vehicle.make, vehicle.model, vehicle.trim, String(vehicle.year), vehicle.fuel, originName].flatMap(term => [term, tx(term)]).join(' ').toLocaleLowerCase();
-    return (filterCountry === 'all' || filterCountry === listing.countryCode) && words.every(word => terms.includes(word));
-  });
+  const visible = importListings.filter(listing => filterCountry === 'all' || filterCountry === listing.countryCode);
   function close() {setEnquiry(null); setOpen(false);}
   const panel = useModal(open, close);
   function choose(listing: ImportListing) {
@@ -46,8 +37,7 @@ export default function ImportCountryPicker() {
     }
     setEnquiry(null); setOpen(true);
   }
-  function clearSearch() {setQuery(''); searchInput.current?.focus();}
-  function showAll() {setFilterCountry('all'); clearSearch();}
+  function showAll() {setFilterCountry('all');}
   function update(field: keyof typeof details, value: string) {setDetails(previous => ({...previous,[field]: value}));}
   function prepare() {
     const lines = [tx('Country') + ': ' + (country ? tx(country.name) : details.country.trim())];
@@ -59,14 +49,8 @@ export default function ImportCountryPicker() {
 
   return <>
     <section data-import-countries aria-label={tx('Import cars')} {...stylex.props(s.discovery)}>
-      <div role="search"><div data-search-field {...stylex.props(searchField.field,s.search)}>
-        <Search aria-hidden="true" {...stylex.props(searchField.icon)}/>
-        <input ref={searchInput} type="search" aria-label={tx('Search import cars')} placeholder={tx(showroom.mobileSearchPlaceholder)} value={query} onChange={event => setQuery(event.target.value)} {...stylex.props(searchField.input,s.searchInput)}/>
-        <span aria-hidden="true" {...stylex.props(searchField.count)}>({visible.length})</span>
-        {query ? <button type="button" aria-label={tx('Clear search')} onClick={clearSearch} {...stylex.props(searchField.clear,s.clear)}><X size={18} aria-hidden="true"/></button> : null}
-      </div></div>
       <div role="group" aria-label={tx('Import country')} {...stylex.props(s.pills)}>
-        {[{code: 'all', name: 'All'}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)}/>)}
+        {[{code: 'all', name: 'All', flagSrc: undefined}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} flagSrc={item.flagSrc} pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)}/>)}
       </div>
       <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
       {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}
@@ -89,13 +73,10 @@ export default function ImportCountryPicker() {
 }
 
 const s = stylex.create({
-  discovery: {marginTop: {[media.mobile]: 16,default: 24},color: $.ink,minWidth: 0},
-  search: {minHeight: 48,outline: {default: 'none',':focus-within': '2px solid #242428'},outlineOffset: 2},
-  searchInput: {minHeight: 44,appearance: {default: 'auto','::-webkit-search-cancel-button': 'none'}},
-  clear: {width: 44,height: 44},
-  pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',marginTop: 8,paddingBlock: 3,scrollbarWidth: 'none'},
-  listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: 12,marginTop: 12},
-  empty: {display: 'grid',justifyItems: 'start',gap: 12,marginTop: 12,padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
+  discovery: {marginTop: {[media.mobile]: $.mobilePillGap,default: 24},color: $.ink,minWidth: 0},
+  pills: {display: 'flex',flexWrap: 'nowrap',gap: 8,overflowX: 'auto',overscrollBehaviorX: 'contain',paddingBlock: {[media.mobile]: 0,default: 3},scrollbarWidth: 'none'},
+  listings: {display: 'grid',gridTemplateColumns: {[media.mobile]: '1fr',default: 'repeat(2,minmax(0,1fr))'},gap: {[media.mobile]: $.mobileSectionGap,default: 12},marginTop: {[media.mobile]: $.mobilePillGap,default: 12}},
+  empty: {display: 'grid',justifyItems: 'start',gap: 12,marginTop: {[media.mobile]: $.mobilePillGap,default: 12},padding: '24px 16px',borderRadius: 16,backgroundColor: '#f5f5f6'},
   reset: {display: 'inline-flex',alignItems: 'center',gap: 8,minHeight: 44,padding: '8px 12px',color: '#fff',borderWidth: 0,borderRadius: 12,backgroundColor: $.ink,cursor: 'pointer'},
   srOnly: {position: 'absolute',width: 1,height: 1,padding: 0,margin: -1,overflow: 'hidden',clip: 'rect(0,0,0,0)',whiteSpace: 'nowrap',borderWidth: 0},
   backdrop: {position: 'fixed',inset: 0,zIndex: 240,display: 'flex',alignItems: {[media.mobile]: 'flex-end',default: 'center'},justifyContent: 'center',padding: {[media.mobile]: 0,default: 24},backgroundColor: 'rgba(0,0,0,.48)'},

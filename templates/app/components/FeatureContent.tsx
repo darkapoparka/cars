@@ -10,7 +10,7 @@ import ServiceCatalogue from '@/components/ServiceCatalogue';
 import type {ServiceSearchState} from '@/components/ServiceSearchField';
 import type {SellIntent} from '@/components/SellEnquirySheet';
 import {showroom} from '@/lib/showroom';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 import {campaignTokens as campaign} from '@/app/campaign-theme.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
@@ -77,7 +77,7 @@ export default function FeatureContent({kind, onStart, serviceSearch}: {kind: Ki
 const s = stylex.create({
   heading: {color: '#202024', textWrap: 'pretty'},
   section: {marginTop: 28},
-  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: 16, marginTop: {[media.mobile]: 14, default: 20}},
+  methods: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', [media.tablet]: '1fr', default: 'repeat(2,minmax(0,1fr))'}, gap: {[media.mobile]: $.mobileSectionGap, default: 16}, marginTop: {[media.mobile]: $.mobileSectionGap, default: 20}},
   method: {position: 'relative', isolation: 'isolate', overflow: 'hidden', width: '100%', borderRadius: 20, backgroundColor: campaign.lightSurface},
   methodMedia: {position: 'absolute', inset: 0},
   methodArtwork: {position: 'absolute', right: 0, bottom: 0, width: '65%', height: '100%', objectFit: 'cover', objectPosition: 'right bottom', maskImage: 'linear-gradient(to right,transparent,#000 28%),linear-gradient(to bottom,transparent,#000 32%)', maskComposite: 'intersect', pointerEvents: 'none'},
@@ -89,7 +89,7 @@ const s = stylex.create({
   pointIcon: {flexShrink: 0, color: campaign.lightInk},
   methodAction: {position: 'absolute', inset: 0, zIndex: 2, width: '100%', height: '100%', padding: 0, color: campaign.lightInk, borderWidth: 0, borderRadius: 20, backgroundColor: {default: 'transparent', ':hover': 'rgba(38,38,41,.025)'}, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #262629'}, outlineOffset: -3},
   methodActionLabel: {position: 'absolute', left: {[media.mobile]: 20, default: 26}, bottom: {[media.mobile]: 18, default: 24}, display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, minHeight: 36, padding: '8px 14px', fontWeight: 500, borderRadius: 30, backgroundColor: '#fff'},
-  process: {marginTop: 24, padding: '12px 18px 18px', borderRadius: 20, backgroundColor: campaign.lightSurface},
+  process: {marginTop: {[media.mobile]: $.mobileSectionGap, default: 24}, padding: '12px 18px 18px', borderRadius: 20, backgroundColor: campaign.lightSurface},
   processHeader: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12},
   processDetails: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, gap: 6, minHeight: 44, padding: 0, color: campaign.lightInk, borderWidth: 0, borderRadius: 4, backgroundColor: 'transparent', textDecoration: 'underline', textUnderlineOffset: 3, cursor: 'pointer', outline: {default: 'none', ':focus-visible': '2px solid #262629'}, outlineOffset: 3},
   steps: {display: 'grid', gridTemplateColumns: 'repeat(3,minmax(0,1fr))', gap: 16, padding: 0, margin: '12px 0 0', listStyle: 'none'},

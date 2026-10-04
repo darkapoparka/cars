@@ -47,7 +47,7 @@ export function BrandRow({title='Browse by brands',showTitle=true,onSelect,compa
 
   const stocked = [...new Map(vehicles.filter(vehicle => vehicle.make.trim()).map(vehicle => [vehicle.make.toLowerCase(), vehicle.make])).values()];
   if (!stocked.length) return null;
-  return <section data-stocked-brands aria-label={tx(title)} {...stylex.props(s.brandSection)}>{showTitle?<h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2>:null}<div {...stylex.props(s.brandRow,!showTitle&&s.brandRowWithoutTitle)}>{stocked.map(make=>{
+  return <section data-stocked-brands aria-label={tx(title)} {...stylex.props(s.brandSection,!showTitle&&s.brandSectionWithoutTitle)}>{showTitle?<h2 {...stylex.props(s.sectionTitle)}>{tx(title)}</h2>:null}<div {...stylex.props(s.brandRow,!showTitle&&s.brandRowWithoutTitle)}>{stocked.map(make=>{
     const content=<><BrandEmblem make={make}/><span {...stylex.props(s.brandLabel,compact&&s.brandLabelCompact)}>{tx(make === 'Mercedes-Benz' ? 'Mercedes' : make)}</span></>;
     return onSelect?<button key={make} type="button" aria-label={tx(make)} onClick={()=>onSelect(make)} {...stylex.props(s.brand)}>{content}</button>:<Link key={make} aria-label={tx(make)} href={`/cars?brand=${encodeURIComponent(make)}`} {...stylex.props(s.brand)}>{content}</Link>;
   })}</div></section>;
@@ -91,6 +91,7 @@ const s=stylex.create({
  tabTitle:{position:{[media.mobile]:'static',default:'absolute'},top:16,left:0,right:0,maxWidth:'100%',textAlign:'center',zIndex:1,whiteSpace:'pre-line',overflowWrap:'anywhere',letterSpacing:0},
  sectionTitle:{fontSize:{[media.mobile]:18,default:25},fontWeight:{[media.mobile]:600,default:500},lineHeight:1.35,color:$.text},
  brandSection:{paddingTop:10},
+ brandSectionWithoutTitle:{paddingTop:{[media.mobile]:$.mobileBrandGap,default:10}},
  brandRow:{display:'flex',gap:{[media.mobile]:10,default:12},overflowX:'auto',overscrollBehaviorX:'contain',marginTop:12,marginRight:{[media.mobile]:-12,default:0},paddingRight:{[media.mobile]:12,default:0},paddingBlock:4,scrollbarWidth:'none'},
  brandRowWithoutTitle:{marginTop:0},
  brand:{display:'flex',flexShrink:0,alignItems:'center',flexDirection:'column',gap:8,width:{[media.mobile]:72,default:108},padding:0,textAlign:'center',color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},

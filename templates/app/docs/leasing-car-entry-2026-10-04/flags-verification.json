@@ -1,0 +1,168 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6483/bg/finance",
+  "sourceAtStart": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "change": "Five configured decorative country flags in the shared filter pill.",
+  "checks": [
+    {
+      "name": "BG 390 displays five loaded decorative flags and unchanged touch targets",
+      "passed": true,
+      "details": {
+        "pills": [
+          {
+            "flags": [],
+            "height": 44,
+            "label": "Всички",
+            "pressed": "true"
+          },
+          {
+            "flags": [
+              {
+                "alt": "",
+                "height": 15,
+                "hidden": "true",
+                "loaded": true,
+                "src": "/flags/de.svg",
+                "width": 20
+              }
+            ],
+            "height": 44,
+            "label": "Германия",
+            "pressed": "false"
+          },
+          {
+            "flags": [
+              {
+                "alt": "",
+                "height": 15,
+                "hidden": "true",
+                "loaded": true,
+                "src": "/flags/ca.svg",
+                "width": 20
+              }
+            ],
+            "height": 44,
+            "label": "Канада",
+            "pressed": "false"
+          },
+          {
+            "flags": [
+              {
+                "alt": "",
+                "height": 15,
+                "hidden": "true",
+                "loaded": true,
+                "src": "/flags/us.svg",
+                "width": 20
+              }
+            ],
+            "height": 44,
+            "label": "САЩ",
+            "pressed": "false"
+          },
+          {
+            "flags": [
+              {
+                "alt": "",
+                "height": 15,
+                "hidden": "true",
+                "loaded": true,
+                "src": "/flags/it.svg",
+                "width": 20
+              }
+            ],
+            "height": 44,
+            "label": "Италия",
+            "pressed": "false"
+          },
+          {
+            "flags": [
+              {
+                "alt": "",
+                "height": 15,
+                "hidden": "true",
+                "loaded": true,
+                "src": "/flags/nl.svg",
+                "width": 20
+              }
+            ],
+            "height": 44,
+            "label": "Нидерландия",
+            "pressed": "false"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Flag pill selects Germany and filters to its BMW",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "All still restores every import card",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "BG 320 flags keep a scrolling pill rail without page overflow",
+      "passed": true,
+      "details": {
+        "width": 320
+      }
+    },
+    {
+      "name": "Keyboard activation reaches the last country and filters its Audi",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "EN 320 keeps all five flag assets and translated labels",
+      "passed": true,
+      "details": {
+        "width": 320
+      }
+    },
+    {
+      "name": "EN 390 retains 44px country targets without page overflow",
+      "passed": true,
+      "details": {
+        "width": 390
+      }
+    },
+    {
+      "name": "Desktop shows the same five flags at 20 by 15px",
+      "passed": true,
+      "details": {
+        "width": 1440
+      }
+    },
+    {
+      "name": "Other shared service pills retain their existing labels and appearance",
+      "passed": true,
+      "details": {
+        "flags": 0,
+        "labels": [
+          "Всички",
+          "Обслужване",
+          "Диагностика"
+        ]
+      }
+    }
+  ],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "passed": true,
+    "pages": 407
+  },
+  "diagnostics": [],
+  "assets": {
+    "source": "https://github.com/lipis/flag-icons",
+    "commit": "086f7e97d657358203916dbe84f61c2bccaa81eb",
+    "license": "MIT",
+    "files": 5,
+    "svgBytes": 2008
+  },
+  "boundary": "Local source and browser checks; existing shared Git index lock prevents commit/push."
+}

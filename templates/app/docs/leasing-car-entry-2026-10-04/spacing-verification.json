@@ -1,0 +1,1995 @@
+{
+  "date": "2026-10-04",
+  "preview": "http://127.0.0.1:6483",
+  "sourceAtStart": "6c92fdc2758d5d5b985a9c8a9004c7bb969d313a",
+  "change": "Shared 12px visible gaps for the mobile discovery stack, retaining 44px pill targets and brand focus padding.",
+  "before": [
+    {
+      "brand": null,
+      "card": null,
+      "gaps": {
+        "cardToCard": null,
+        "panelToPill": null,
+        "panelToSell": null,
+        "pillToCard": null,
+        "tabsToPanel": 12
+      },
+      "nextCard": null,
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg",
+      "pill": null,
+      "row": null,
+      "scroll": 0,
+      "tabs": {
+        "bottom": 94,
+        "height": 86,
+        "top": 8,
+        "width": 351
+      },
+      "width": 390
+    },
+    {
+      "brand": null,
+      "card": {
+        "bottom": 685.5,
+        "height": 343.5,
+        "top": 342,
+        "width": 351
+      },
+      "gaps": {
+        "cardToCard": 14,
+        "panelToPill": 27,
+        "panelToSell": null,
+        "pillToCard": 19,
+        "tabsToPanel": 12
+      },
+      "nextCard": {
+        "bottom": 1043,
+        "height": 343.5,
+        "top": 699.5,
+        "width": 351
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/service",
+      "pill": {
+        "bottom": 323,
+        "height": 40,
+        "top": 283,
+        "width": 76.984375
+      },
+      "row": {
+        "bottom": 328,
+        "height": 50,
+        "top": 278,
+        "width": 351
+      },
+      "scroll": 0,
+      "tabs": {
+        "bottom": 94,
+        "height": 86,
+        "top": 8,
+        "width": 351
+      },
+      "width": 390
+    },
+    {
+      "brand": null,
+      "card": {
+        "bottom": 478,
+        "height": 138,
+        "top": 340,
+        "width": 351
+      },
+      "gaps": {
+        "cardToCard": 12,
+        "panelToPill": 27,
+        "panelToSell": null,
+        "pillToCard": 17,
+        "tabsToPanel": 12
+      },
+      "nextCard": {
+        "bottom": 628,
+        "height": 138,
+        "top": 490,
+        "width": 351
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/finance",
+      "pill": {
+        "bottom": 323,
+        "height": 40,
+        "top": 283,
+        "width": 76.984375
+      },
+      "row": {
+        "bottom": 328,
+        "height": 50,
+        "top": 278,
+        "width": 351
+      },
+      "scroll": 0,
+      "tabs": {
+        "bottom": 94,
+        "height": 86,
+        "top": 8,
+        "width": 351
+      },
+      "width": 390
+    },
+    {
+      "brand": null,
+      "card": {
+        "bottom": 514,
+        "height": 238,
+        "top": 276,
+        "width": 351
+      },
+      "gaps": {
+        "cardToCard": 16,
+        "panelToPill": null,
+        "panelToSell": 20,
+        "pillToCard": null,
+        "tabsToPanel": 12
+      },
+      "nextCard": {
+        "bottom": 768,
+        "height": 238,
+        "top": 530,
+        "width": 351
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/sell",
+      "pill": null,
+      "row": null,
+      "scroll": 0,
+      "tabs": {
+        "bottom": 94,
+        "height": 86,
+        "top": 8,
+        "width": 351
+      },
+      "width": 390
+    }
+  ],
+  "phoneLayouts": [
+    {
+      "banner": null,
+      "card": {
+        "bottom": 765,
+        "height": 157,
+        "top": 608,
+        "width": 281
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": 12,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 12,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": 12,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/bg",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 506,
+        "height": 238,
+        "top": 268,
+        "width": 281
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": 12,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 170,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/bg/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 458,
+        "height": 138,
+        "top": 320,
+        "width": 281
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/bg/finance",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 281
+      },
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 628.5,
+        "height": 308.5,
+        "top": 320,
+        "width": 281
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/bg/service",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 281
+      },
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 325,
+        "height": 157,
+        "top": 168,
+        "width": 281
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 12,
+        "stockPillsToCards": 12,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/bg/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 765,
+        "height": 157,
+        "top": 608,
+        "width": 351
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": 12,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 12,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": 12,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 506,
+        "height": 238,
+        "top": 268,
+        "width": 351
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": 12,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 170,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 458,
+        "height": 138,
+        "top": 320,
+        "width": 351
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/finance",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 351
+      },
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 663.5,
+        "height": 343.5,
+        "top": 320,
+        "width": 351
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/bg/service",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 351
+      },
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 325,
+        "height": 157,
+        "top": 168,
+        "width": 351
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 12,
+        "stockPillsToCards": 12,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/bg/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 765,
+        "height": 157,
+        "top": 608,
+        "width": 281
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": 12,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 12,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": 12,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/en",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 506,
+        "height": 238,
+        "top": 268,
+        "width": 281
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": 12,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 170,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/en/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 458,
+        "height": 138,
+        "top": 320,
+        "width": 281
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/en/finance",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 281
+      },
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 628.5,
+        "height": 308.5,
+        "top": 320,
+        "width": 281
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 281
+      },
+      "path": "/en/service",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 281
+      },
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 325,
+        "height": 157,
+        "top": 168,
+        "width": 281
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 12,
+        "stockPillsToCards": 12,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 320
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 765,
+        "height": 157,
+        "top": 608,
+        "width": 351
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": 12,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 12,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": 12,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/en",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 506,
+        "height": 238,
+        "top": 268,
+        "width": 351
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": 12,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 170,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/en/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 458,
+        "height": 138,
+        "top": 320,
+        "width": 351
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/en/finance",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 351
+      },
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 663.5,
+        "height": 343.5,
+        "top": 320,
+        "width": 351
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": 12,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": 12,
+        "carouselToCards": null,
+        "pillsToCards": 12,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": 12
+      },
+      "overflow": false,
+      "panel": {
+        "bottom": 256,
+        "height": 150,
+        "top": 106,
+        "width": 351
+      },
+      "path": "/en/service",
+      "row": {
+        "bottom": 310,
+        "height": 44,
+        "top": 266,
+        "width": 351
+      },
+      "scroll": 0,
+      "width": 390
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 325,
+        "height": 157,
+        "top": 168,
+        "width": 351
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": 12,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 12,
+        "stockPillsToCards": 12,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 390
+    }
+  ],
+  "desktopBefore": [
+    {
+      "banner": {
+        "bottom": 365,
+        "height": 142,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 1230,
+        "height": 187,
+        "top": 1043,
+        "width": 585
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 28,
+        "cards": -187,
+        "cardsToCampaign": null,
+        "carouselToCards": 74,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 489,
+        "height": 250,
+        "top": 239,
+        "width": 584
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -250,
+        "cardsToCampaign": 182,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": {
+        "bottom": 471,
+        "height": 248,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 731,
+        "height": 168,
+        "top": 563,
+        "width": 586
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -168,
+        "cardsToCampaign": 28,
+        "carouselToCards": null,
+        "pillsToCards": 19,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/finance",
+      "row": {
+        "bottom": 551,
+        "height": 50,
+        "top": 501,
+        "width": 1184
+      },
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": {
+        "bottom": 471,
+        "height": 248,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 1100,
+        "height": 477,
+        "top": 623,
+        "width": 582
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -477,
+        "cardsToCampaign": 28,
+        "carouselToCards": null,
+        "pillsToCards": 21,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/service",
+      "row": {
+        "bottom": 609,
+        "height": 50,
+        "top": 559,
+        "width": 1184
+      },
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 454,
+        "height": 187,
+        "top": 267,
+        "width": 451
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -187,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 16,
+        "stockPillsToCards": 26,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    }
+  ],
+  "desktopAfter": [
+    {
+      "banner": {
+        "bottom": 365,
+        "height": 142,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 1230,
+        "height": 187,
+        "top": 1043,
+        "width": 585
+      },
+      "cards": 16,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": 28,
+        "cards": -187,
+        "cardsToCampaign": null,
+        "carouselToCards": 74,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 489,
+        "height": 250,
+        "top": 239,
+        "width": 584
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -250,
+        "cardsToCampaign": 182,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/sell",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": {
+        "bottom": 471,
+        "height": 248,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 731,
+        "height": 168,
+        "top": 563,
+        "width": 586
+      },
+      "cards": 5,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -168,
+        "cardsToCampaign": 28,
+        "carouselToCards": null,
+        "pillsToCards": 19,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/finance",
+      "row": {
+        "bottom": 551,
+        "height": 50,
+        "top": 501,
+        "width": 1184
+      },
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": {
+        "bottom": 471,
+        "height": 248,
+        "top": 223,
+        "width": 1184
+      },
+      "card": {
+        "bottom": 1100,
+        "height": 477,
+        "top": 623,
+        "width": 582
+      },
+      "cards": 2,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -477,
+        "cardsToCampaign": 28,
+        "carouselToCards": null,
+        "pillsToCards": 21,
+        "searchToPills": null,
+        "stockPillsToCards": null,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/service",
+      "row": {
+        "bottom": 609,
+        "height": 50,
+        "top": 559,
+        "width": 1184
+      },
+      "scroll": 0,
+      "width": 1440
+    },
+    {
+      "banner": null,
+      "card": {
+        "bottom": 454,
+        "height": 187,
+        "top": 267,
+        "width": 451
+      },
+      "cards": 48,
+      "gaps": {
+        "bannerToBrands": null,
+        "bannerToPills": null,
+        "bannerToSell": null,
+        "brandsToPromo": null,
+        "cards": -187,
+        "cardsToCampaign": null,
+        "carouselToCards": null,
+        "pillsToCards": null,
+        "searchToPills": 16,
+        "stockPillsToCards": 26,
+        "tabsToBanner": null
+      },
+      "overflow": false,
+      "panel": null,
+      "path": "/en/cars",
+      "row": null,
+      "scroll": 0,
+      "width": 1440
+    }
+  ],
+  "checks": [
+    {
+      "name": "bg 320 / visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": 12,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": 12,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": 12,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 320 /sell visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": 12,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 170,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 320 /finance visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 320 /service visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 320 /cars visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": 12,
+          "stockPillsToCards": 12,
+          "tabsToBanner": null
+        }
+      }
+    },
+    {
+      "name": "bg 390 / visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": 12,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": 12,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": 12,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 390 /sell visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": 12,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 170,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 390 /finance visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 390 /service visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "bg 390 /cars visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": 12,
+          "stockPillsToCards": 12,
+          "tabsToBanner": null
+        }
+      }
+    },
+    {
+      "name": "en 320 / visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": 12,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": 12,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": 12,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 320 /sell visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": 12,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 170,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 320 /finance visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 320 /service visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 320 /cars visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": 12,
+          "stockPillsToCards": 12,
+          "tabsToBanner": null
+        }
+      }
+    },
+    {
+      "name": "en 390 / visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": 12,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": 12,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": 12,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 390 /sell visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": 12,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 170,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 390 /finance visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 390 /service visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": 12,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": 12,
+          "carouselToCards": null,
+          "pillsToCards": 12,
+          "searchToPills": null,
+          "stockPillsToCards": null,
+          "tabsToBanner": 12
+        }
+      }
+    },
+    {
+      "name": "en 390 /cars visible gaps follow 12px rhythm",
+      "passed": true,
+      "details": {
+        "gaps": {
+          "bannerToBrands": null,
+          "bannerToPills": null,
+          "bannerToSell": null,
+          "brandsToPromo": null,
+          "cards": 12,
+          "cardsToCampaign": null,
+          "carouselToCards": null,
+          "pillsToCards": null,
+          "searchToPills": 12,
+          "stockPillsToCards": 12,
+          "tabsToBanner": null
+        }
+      }
+    },
+    {
+      "name": "Desktop /en preserves measured component geometry",
+      "passed": true,
+      "details": {
+        "before": {
+          "banner": {
+            "bottom": 365,
+            "height": 142,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 1230,
+            "height": 187,
+            "top": 1043,
+            "width": 585
+          },
+          "cards": 16,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": 28,
+            "cards": -187,
+            "cardsToCampaign": null,
+            "carouselToCards": 74,
+            "pillsToCards": null,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        },
+        "after": {
+          "banner": {
+            "bottom": 365,
+            "height": 142,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 1230,
+            "height": 187,
+            "top": 1043,
+            "width": 585
+          },
+          "cards": 16,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": 28,
+            "cards": -187,
+            "cardsToCampaign": null,
+            "carouselToCards": 74,
+            "pillsToCards": null,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Desktop /en/sell preserves measured component geometry",
+      "passed": true,
+      "details": {
+        "before": {
+          "banner": null,
+          "card": {
+            "bottom": 489,
+            "height": 250,
+            "top": 239,
+            "width": 584
+          },
+          "cards": 2,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -250,
+            "cardsToCampaign": 182,
+            "carouselToCards": null,
+            "pillsToCards": null,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/sell",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        },
+        "after": {
+          "banner": null,
+          "card": {
+            "bottom": 489,
+            "height": 250,
+            "top": 239,
+            "width": 584
+          },
+          "cards": 2,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -250,
+            "cardsToCampaign": 182,
+            "carouselToCards": null,
+            "pillsToCards": null,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/sell",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Desktop /en/finance preserves measured component geometry",
+      "passed": true,
+      "details": {
+        "before": {
+          "banner": {
+            "bottom": 471,
+            "height": 248,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 731,
+            "height": 168,
+            "top": 563,
+            "width": 586
+          },
+          "cards": 5,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -168,
+            "cardsToCampaign": 28,
+            "carouselToCards": null,
+            "pillsToCards": 19,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/finance",
+          "row": {
+            "bottom": 551,
+            "height": 50,
+            "top": 501,
+            "width": 1184
+          },
+          "scroll": 0,
+          "width": 1440
+        },
+        "after": {
+          "banner": {
+            "bottom": 471,
+            "height": 248,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 731,
+            "height": 168,
+            "top": 563,
+            "width": 586
+          },
+          "cards": 5,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -168,
+            "cardsToCampaign": 28,
+            "carouselToCards": null,
+            "pillsToCards": 19,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/finance",
+          "row": {
+            "bottom": 551,
+            "height": 50,
+            "top": 501,
+            "width": 1184
+          },
+          "scroll": 0,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Desktop /en/service preserves measured component geometry",
+      "passed": true,
+      "details": {
+        "before": {
+          "banner": {
+            "bottom": 471,
+            "height": 248,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 1100,
+            "height": 477,
+            "top": 623,
+            "width": 582
+          },
+          "cards": 2,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -477,
+            "cardsToCampaign": 28,
+            "carouselToCards": null,
+            "pillsToCards": 21,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/service",
+          "row": {
+            "bottom": 609,
+            "height": 50,
+            "top": 559,
+            "width": 1184
+          },
+          "scroll": 0,
+          "width": 1440
+        },
+        "after": {
+          "banner": {
+            "bottom": 471,
+            "height": 248,
+            "top": 223,
+            "width": 1184
+          },
+          "card": {
+            "bottom": 1100,
+            "height": 477,
+            "top": 623,
+            "width": 582
+          },
+          "cards": 2,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -477,
+            "cardsToCampaign": 28,
+            "carouselToCards": null,
+            "pillsToCards": 21,
+            "searchToPills": null,
+            "stockPillsToCards": null,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/service",
+          "row": {
+            "bottom": 609,
+            "height": 50,
+            "top": 559,
+            "width": 1184
+          },
+          "scroll": 0,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Desktop /en/cars preserves measured component geometry",
+      "passed": true,
+      "details": {
+        "before": {
+          "banner": null,
+          "card": {
+            "bottom": 454,
+            "height": 187,
+            "top": 267,
+            "width": 451
+          },
+          "cards": 48,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -187,
+            "cardsToCampaign": null,
+            "carouselToCards": null,
+            "pillsToCards": null,
+            "searchToPills": 16,
+            "stockPillsToCards": 26,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/cars",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        },
+        "after": {
+          "banner": null,
+          "card": {
+            "bottom": 454,
+            "height": 187,
+            "top": 267,
+            "width": 451
+          },
+          "cards": 48,
+          "gaps": {
+            "bannerToBrands": null,
+            "bannerToPills": null,
+            "bannerToSell": null,
+            "brandsToPromo": null,
+            "cards": -187,
+            "cardsToCampaign": null,
+            "carouselToCards": null,
+            "pillsToCards": null,
+            "searchToPills": 16,
+            "stockPillsToCards": 26,
+            "tabsToBanner": null
+          },
+          "overflow": false,
+          "panel": null,
+          "path": "/en/cars",
+          "row": null,
+          "scroll": 0,
+          "width": 1440
+        }
+      }
+    },
+    {
+      "name": "Country pill keeps its 44px keyboard target and inset focus ring",
+      "passed": true,
+      "details": {
+        "focused": true,
+        "height": 44,
+        "offset": "-5px",
+        "outline": "solid"
+      }
+    }
+  ],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "next": "16.3.6",
+    "passed": true,
+    "pages": 407
+  },
+  "diagnostics": [],
+  "boundary": "Local source and rendered verification; shared Git index lock prevents scoped commit/push."
+}

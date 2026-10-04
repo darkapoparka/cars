@@ -8,7 +8,7 @@ import ShowroomBannerFrame from '@/components/ShowroomBannerFrame';
 import {searchField} from '@/components/search-field.stylex';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
-import {media} from '@/app/tokens.stylex';
+import {media, tokens as $} from '@/app/tokens.stylex';
 
 /** One dealer identity and one useful control under the phone's service tabs. */
 export default function DealerMobileBanner({title, children}: {title?: string; children: ReactNode}) {
@@ -24,10 +24,10 @@ export default function DealerMobileBanner({title, children}: {title?: string; c
   </ShowroomBannerFrame></div>;
 }
 
-export function DealerBannerAction({label, icon, onClick, expanded}: {label: string; icon: ReactNode; onClick: () => void; expanded: boolean}) {
+export function DealerBannerAction({label, icon, onClick, expanded, searchEntry = false}: {label: string; icon: ReactNode; onClick: () => void; expanded: boolean; searchEntry?: boolean}) {
   const tx = useCopy();
-  return <button type="button" aria-haspopup="dialog" aria-expanded={expanded} onClick={onClick} {...stylex.props(searchField.field, s.action)}>
-    <span {...stylex.props(s.icon)}>{icon}</span><span {...stylex.props(s.label)}>{tx(label)}</span><ArrowRight size={18} aria-hidden="true"/>
+  return <button type="button" aria-haspopup="dialog" aria-expanded={expanded} onClick={onClick} {...stylex.props(searchField.field, s.action, searchEntry && s.searchEntry)}>
+    <span {...stylex.props(s.icon, searchEntry && searchField.icon)}>{icon}</span><span {...stylex.props(s.label)}>{tx(label)}</span>{!searchEntry ? <ArrowRight size={18} aria-hidden="true"/> : null}
   </button>;
 }
 
@@ -39,6 +39,7 @@ const s = stylex.create({
   brand: {display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 204, maxWidth: '100%', minWidth: 0, margin: 0, padding: 0},
   control: {position: 'relative', padding: '0 14px 14px'},
   action: {width: '100%', color: '#202024', backgroundColor: {default: '#fff', ':hover': '#f4f4f5'}, textAlign: 'left', cursor: 'pointer', outlineColor: {':focus-visible': '#fff'}, outlineOffset: 3},
+  searchEntry: {color: $.muted},
   icon: {display: 'flex', flexShrink: 0, alignItems: 'center', justifyContent: 'center', width: 20, height: 20},
   label: {flexGrow: 1, minWidth: 0},
   srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clipPath: 'inset(50%)', whiteSpace: 'nowrap', borderWidth: 0},

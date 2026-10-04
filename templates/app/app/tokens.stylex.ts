@@ -41,6 +41,10 @@ export const tokens = stylex.defineVars({
   bannerTitleLineHeight: '28px',
   bannerCopySize: '15px',
   bannerCopyLineHeight: '21px',
+  // Visible 12px gaps account for 2px pill hit padding and 4px brand focus padding.
+  mobileSectionGap: '12px',
+  mobilePillGap: '10px',
+  mobileBrandGap: '8px',
 });
 
 // The retained Geist subset has no Cyrillic. Use one complete family
