@@ -75,8 +75,10 @@
   /* Responsive shell aliases. */
   --dn-mobile-canvas: var(--dn-surface-canvas);
   --dn-mobile-surface: var(--dn-surface-raised);
-  /* Page clearance includes the fixed bar and separation from page actions. */
-  --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + 16px);
+  /* Page clearance includes the dock, its offset and separation from page actions. */
+  --dn-mobile-nav-gutter: var(--dn-space-3);
+  --dn-mobile-nav-offset: var(--dn-space-2);
+  --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + var(--dn-mobile-nav-offset) + var(--dn-space-4));
   --dn-mobile-nav-bar-height: max(60px, calc(24px + 0.975rem + 12px));
   --dn-mobile-detail-bar-height: max(60px, calc(2.75rem + 16px));
   --dn-mobile-page-end: var(--dn-space-4);

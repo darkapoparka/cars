@@ -268,12 +268,17 @@ try {
           const dockStyle = await dock.evaluate(el => {
             const box = el.getBoundingClientRect(), style = getComputedStyle(el);
             const inactive = el.querySelector('a:not(.active)');
-            return { left: box.left, right: box.right, viewport: document.documentElement.clientWidth,
+            return { left: box.left, right: box.right, bottom: box.bottom, viewport: document.documentElement.clientWidth, height: innerHeight,
               background: style.backgroundColor, radius: style.borderRadius, shadow: style.boxShadow,
+              targets: [...el.querySelectorAll('a,button')].map(control => control.getBoundingClientRect().toJSON()),
               inactive: getComputedStyle(inactive).color, ink: getComputedStyle(document.body).color };
           });
-          assert(dockStyle.left <= 1 && Math.abs(dockStyle.right - dockStyle.viewport) <= 1 && dockStyle.radius === '0px' && dockStyle.shadow === 'none' && dockStyle.background === 'rgb(255, 255, 255)',
-            'The dock is a flat white bar spanning the mobile viewport');
+          assert(dockStyle.left > 0 && dockStyle.right < dockStyle.viewport && Math.abs(dockStyle.left - (dockStyle.viewport - dockStyle.right)) <= 1 && dockStyle.bottom < dockStyle.height,
+            'The dock has balanced side insets and clears the bottom edge');
+          assert(parseFloat(dockStyle.radius) > 0 && dockStyle.shadow !== 'none' && dockStyle.background === 'rgb(255, 255, 255)',
+            'The dock is a rounded white surface with a subtle shadow');
+          assert(dockStyle.targets.every(box => box.width >= 44 && box.height >= 44 && box.left >= dockStyle.left && box.right <= dockStyle.right && box.bottom <= dockStyle.bottom),
+            'All five dock actions retain separate 44px touch targets inside the surface');
           assert.notEqual(dockStyle.inactive, dockStyle.ink, 'Inactive dock icons and labels stay quieter than body ink');
           assert.equal(await dock.locator('svg[data-icon-family="fluent-system-regular"][data-icon-state="regular"][viewBox="0 0 24 24"][fill="currentColor"]').count(), 5,
             'All five mobile dock glyphs use official Fluent Regular geometry');
