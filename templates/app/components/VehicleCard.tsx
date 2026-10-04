@@ -107,7 +107,7 @@ const s = stylex.create({
   factCue: {display: {[media.mobile]: 'block', default: 'none'}, position: 'absolute', top: 0, bottom: 0, width: 14, pointerEvents: 'none'},
   factCueLeft: {left: 0, backgroundImage: 'linear-gradient(to right, #fff, rgba(255,255,255,0))'},
   factCueRight: {right: 0, backgroundImage: 'linear-gradient(to left, #fff, rgba(255,255,255,0))'},
-  meta: {display: {[media.mobile]: 'flex', default: 'grid'}, gridTemplateColumns: 'max-content minmax(0,1fr)', justifyItems: 'start', alignItems: 'stretch', minWidth: 0, maxWidth: '100%', gap: 4, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
+  meta: {display: {[media.mobile]: 'flex', [media.desktop]: 'flex', default: 'grid'}, flexWrap: {[media.desktop]: 'wrap', default: 'nowrap'}, gridTemplateColumns: 'max-content minmax(0,1fr)', justifyItems: 'start', alignItems: 'stretch', minWidth: 0, maxWidth: '100%', gap: 4, overflowX: {[media.mobile]: 'auto', default: 'visible'}, overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
   equipment: {gridColumn: '1 / -1'},
   pill: {display: 'flex', alignItems: 'center', flexShrink: 0, minWidth: 0, maxWidth: {[media.mobile]: 'none', default: '100%'}, padding: '3px 4px', color: $.muted, fontSize: {[media.mobile]: 12, default: 11}, fontWeight: 400, lineHeight: '16px', whiteSpace: {[media.mobile]: 'nowrap', default: 'normal'}, overflowWrap: 'normal', borderRadius: 6, backgroundColor: '#f4f4f4'},
   error: {padding: '10px 12px', color: '#b42318', fontSize: 12, lineHeight: 1.4},

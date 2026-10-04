@@ -1,0 +1,2330 @@
+[
+  {
+    "name": "home-listings",
+    "path": "/bg",
+    "width": 1440,
+    "height": 1000,
+    "file": "home-listings-1440-before.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 836,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Автомобили",
+        "x": 120.5,
+        "y": 84.125,
+        "width": 146.46875,
+        "height": 33.75
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 120.5,
+        "y": 137,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 133.5,
+        "y": 422.46875,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 420,
+        "y": 137,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "92,000 кмАвтоматикКруиз контрол",
+        "x": 433,
+        "y": 422.46875,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2025 VELOZGX • GCC Specs€64,699€984/мес.*прибл.47,000 кмАвтоматикДобри гуми",
+        "x": 719.5,
+        "y": 137,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "47,000 кмАвтоматикДобри гуми",
+        "x": 732.5,
+        "y": 422.46875,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Kia2022 SELTOSLX • GCC Specs€43,499€661/мес.*прибл.99,000 кмАвтоматикКруиз контрол",
+        "x": 1019,
+        "y": 137,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "99,000 кмАвтоматикКруиз контрол",
+        "x": 1032,
+        "y": 422.46875,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 LAND CRUISEREXR • GCC Specs€224,599€3,413/мес.*прибл.44,000 кмАвтоматикБързо зареждане",
+        "x": 120.5,
+        "y": 497.46875,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "44,000 кмАвтоматикБързо зареждане",
+        "x": 133.5,
+        "y": 782.9375,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 GRAND VITARAGLX • GCC Specs€52,399€797/мес.*прибл.51,000 кмАвтоматикСервизна история",
+        "x": 420,
+        "y": 497.46875,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "51,000 кмАвтоматикСервизна история",
+        "x": 433,
+        "y": 782.9375,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2022 LAND CRUISEREXR BLACK EDITION • GCC Specs€201,999€3,070/мес.*прибл.69,000 кмАвтоматикЗадвижване 4×4",
+        "x": 719.5,
+        "y": 497.46875,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "69,000 кмАвтоматикЗадвижване 4×4",
+        "x": 732.5,
+        "y": 782.9375,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Nissan2024 PATROLLE T2 • GCC Specs€183,099€2,782/мес.*прибл.49,000 кмАвтоматикОтлично състояние",
+        "x": 1019,
+        "y": 497.46875,
+        "width": 285.5,
+        "height": 346.46875
+      },
+      {
+        "tag": "DIV",
+        "text": "49,000 кмАвтоматикОтлично състояние",
+        "x": 1032,
+        "y": 782.9375,
+        "width": 259.5,
+        "height": 48
+      },
+      {
+        "tag": "H2",
+        "text": "Последно разгледани",
+        "x": 120.5,
+        "y": 870.9375,
+        "width": 1184,
+        "height": 33.75
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 121.5,
+        "y": 138,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 421,
+        "y": 138,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9718403147.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 720.5,
+        "y": 138,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9718423696.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 1020,
+        "y": 138,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9718425910.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 121.5,
+        "y": 498.46875,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9718424077.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 421,
+        "y": 498.46875,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9714841440.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 720.5,
+        "y": 498.46875,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9714842271.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 1020,
+        "y": 498.46875,
+        "width": 283.5,
+        "height": 159.46875
+      },
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 121.5,
+        "y": 917.6875,
+        "width": 190,
+        "height": 108
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "cars",
+    "path": "/bg/cars",
+    "width": 1440,
+    "height": 1000,
+    "file": "cars-1440-before.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "H1",
+        "text": "Нашите автомобили",
+        "x": 176.5,
+        "y": 95,
+        "width": 1072,
+        "height": 24
+      },
+      {
+        "tag": "LABEL",
+        "text": "Марка или модел(48)48 автомобила",
+        "x": 120.5,
+        "y": 145,
+        "width": 1184,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "ФилтриПодредиМаркаМоделБюджетОтстъпкиГодинаПробегТип купеГориво",
+        "x": 92.5,
+        "y": 189,
+        "width": 1240,
+        "height": 68
+      },
+      {
+        "tag": "H2",
+        "text": "Филтри за автомобили",
+        "x": 139.5,
+        "y": 286,
+        "width": 207,
+        "height": 48
+      },
+      {
+        "tag": "LABEL",
+        "text": "",
+        "x": 139.5,
+        "y": 334,
+        "width": 207,
+        "height": 44
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 389.5,
+        "y": 267,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 402.5,
+        "y": 515.0625,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 621.5,
+        "y": 267,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "92,000 кмАвтоматикКруиз контрол",
+        "x": 634.5,
+        "y": 515.0625,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2025 VELOZGX • GCC Specs€64,699€984/мес.*прибл.47,000 кмАвтоматикДобри гуми",
+        "x": 853.5,
+        "y": 267,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "47,000 кмАвтоматикДобри гуми",
+        "x": 866.5,
+        "y": 515.0625,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Kia2022 SELTOSLX • GCC Specs€43,499€661/мес.*прибл.99,000 кмАвтоматикКруиз контрол",
+        "x": 1085.5,
+        "y": 267,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "99,000 кмАвтоматикКруиз контрол",
+        "x": 1098.5,
+        "y": 515.0625,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 LAND CRUISEREXR • GCC Specs€224,599€3,413/мес.*прибл.44,000 кмАвтоматикБързо зареждане",
+        "x": 389.5,
+        "y": 589.0625,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "44,000 кмАвтоматикБързо зареждане",
+        "x": 402.5,
+        "y": 837.125,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 GRAND VITARAGLX • GCC Specs€52,399€797/мес.*прибл.51,000 кмАвтоматикСервизна история",
+        "x": 621.5,
+        "y": 589.0625,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "51,000 кмАвтоматикСервизна история",
+        "x": 634.5,
+        "y": 837.125,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2022 LAND CRUISEREXR BLACK EDITION • GCC Specs€201,999€3,070/мес.*прибл.69,000 кмАвтоматикЗадвижване 4×4",
+        "x": 853.5,
+        "y": 589.0625,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "69,000 кмАвтоматикЗадвижване 4×4",
+        "x": 866.5,
+        "y": 837.125,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Nissan2024 PATROLLE T2 • GCC Specs€183,099€2,782/мес.*прибл.49,000 кмАвтоматикОтлично състояние",
+        "x": 1085.5,
+        "y": 589.0625,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "DIV",
+        "text": "49,000 кмАвтоматикОтлично състояние",
+        "x": 1098.5,
+        "y": 837.125,
+        "width": 193,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Haval2023 H6 GTTOP • GCC Specs€55,399€842/мес.*прибл.69,000 кмАвтоматикСервизна история",
+        "x": 389.5,
+        "y": 911.125,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Очаквайте скороMitsubishi2022 XpanderMID • GCC Specs€41,099€625/мес.*прибл.78,000 кмАвтоматик7 seats",
+        "x": 621.5,
+        "y": 911.125,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Mercedes-Benz2021 C 200AMG LINE • GCC Specs€107,500€1,650/мес.*прибл.48,200 кмАвтоматикПанорамен покрив",
+        "x": 853.5,
+        "y": 911.125,
+        "width": 219,
+        "height": 309.0625
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "BMW2023 X3xDRIVE30i • GCC Specs€173,900€2,635/мес.*прибл.22,900 кмАвтоматикM Sport package",
+        "x": 1085.5,
+        "y": 911.125,
+        "width": 219,
+        "height": 309.0625
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 390.5,
+        "y": 268,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 622.5,
+        "y": 268,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9718403147.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 854.5,
+        "y": 268,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9718423696.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 1086.5,
+        "y": 268,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9718425910.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 390.5,
+        "y": 590.0625,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9718424077.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 622.5,
+        "y": 590.0625,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9714841440.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 854.5,
+        "y": 590.0625,
+        "width": 217,
+        "height": 122.0625
+      },
+      {
+        "src": "/reference-assets/catalog/9714842271.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 1086.5,
+        "y": 590.0625,
+        "width": 217,
+        "height": 122.0625
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1440,
+    "height": 1000,
+    "file": "pdp-1440-before.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 92.5,
+        "y": 73,
+        "width": 1240,
+        "height": 697.65625
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 100.5,
+        "y": 81,
+        "width": 1224,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 120.5,
+        "y": 782.65625,
+        "width": 824,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 120.5,
+        "y": 872.65625,
+        "width": 824,
+        "height": 35
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 120.5,
+        "y": 989.65625,
+        "width": 824,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 997.5,
+        "y": 818.65625,
+        "width": 284,
+        "height": 27
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 92.5,
+        "y": 73,
+        "width": 1240,
+        "height": 697.65625
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 120.5,
+        "y": 782.65625,
+        "width": 269.328125,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 397.828125,
+        "y": 782.65625,
+        "width": 269.34375,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 675.171875,
+        "y": 782.65625,
+        "width": 269.328125,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-information",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1440,
+    "height": 1000,
+    "file": "pdp-information-1440-before.png",
+    "errors": [],
+    "documentWidth": 1425,
+    "scrollY": 704,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Меню",
+        "x": 1152.34375,
+        "y": 14,
+        "width": 152.15625,
+        "height": 44
+      },
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 92.5,
+        "y": -631,
+        "width": 1240,
+        "height": 697.65625
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 120.5,
+        "y": 78.65625,
+        "width": 824,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 120.5,
+        "y": 168.65625,
+        "width": 824,
+        "height": 35
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 120.5,
+        "y": 285.65625,
+        "width": 824,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 136.5,
+        "y": 361.65625,
+        "width": 792,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 136.5,
+        "y": 665.65625,
+        "width": 792,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 120.5,
+        "y": 895.65625,
+        "width": 824,
+        "height": 72
+      },
+      {
+        "tag": "H2",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 997.5,
+        "y": 171,
+        "width": 284,
+        "height": 27
+      },
+      {
+        "tag": "NAV",
+        "text": "ЦенаОбща информацияОборудванеСервизна историяПодобни автомобили",
+        "x": 0,
+        "y": 73,
+        "width": 1425,
+        "height": 59
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 92.5,
+        "y": -631,
+        "width": 1240,
+        "height": 697.65625
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 120.5,
+        "y": 78.65625,
+        "width": 269.328125,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 397.828125,
+        "y": 78.65625,
+        "width": 269.34375,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 675.171875,
+        "y": 78.65625,
+        "width": 269.328125,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "home",
+    "path": "/bg",
+    "width": 320,
+    "height": 844,
+    "file": "home-320-before.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "КупиПродайЛизингУслуги",
+        "x": 12,
+        "y": 8,
+        "width": 296,
+        "height": 86
+      },
+      {
+        "tag": "H1",
+        "text": "",
+        "x": 58,
+        "y": 121,
+        "width": 204,
+        "height": 68
+      },
+      {
+        "tag": "A",
+        "text": "Марка или моделМарка или модел(48)",
+        "x": 27,
+        "y": 197,
+        "width": 266,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Избери автомобил",
+        "x": 28,
+        "y": 394,
+        "width": 264,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Лизинг",
+        "x": 336,
+        "y": 394,
+        "width": 264,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Продай колата си",
+        "x": 644,
+        "y": 394,
+        "width": 264,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Вижте на място",
+        "x": 952,
+        "y": 394,
+        "width": 264,
+        "height": 28
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 12,
+        "y": 568,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 153.546875,
+        "y": 692,
+        "width": 143.453125,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 737,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 66,
+        "y": 782,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/sell-brand-1.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 12,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/sell-brand-8.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 176,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-nissan.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 258,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-mercedes.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 504,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-bmw.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 586,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-audi.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 668,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-hyundai.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 1160,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/sell-brand-7.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 1406,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 579,
+        "width": 120.546875,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 23,
+        "y": 748,
+        "width": 120.546875,
+        "height": 135
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "cars",
+    "path": "/bg/cars",
+    "width": 320,
+    "height": 844,
+    "file": "cars-320-before.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "H1",
+        "text": "Нашите автомобили",
+        "x": 68,
+        "y": 16,
+        "width": 184,
+        "height": 24
+      },
+      {
+        "tag": "LABEL",
+        "text": "Марка или модел(48)48 автомобила",
+        "x": 12,
+        "y": 60,
+        "width": 296,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "ФилтриПодредиМаркаМоделБюджетОтстъпкиГодинаПробегТип купеГориво",
+        "x": 0,
+        "y": 104,
+        "width": 320,
+        "height": 54
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 12,
+        "y": 168,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 153.546875,
+        "y": 292,
+        "width": 143.453125,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 337,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "92,000 кмАвтоматикКруиз контрол",
+        "x": 153.546875,
+        "y": 461,
+        "width": 143.453125,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2025 VELOZGX • GCC Specs€64,699€984/мес.*прибл.47,000 кмАвтоматикДобри гуми",
+        "x": 12,
+        "y": 506,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "47,000 кмАвтоматикДобри гуми",
+        "x": 153.546875,
+        "y": 630,
+        "width": 143.453125,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Kia2022 SELTOSLX • GCC Specs€43,499€661/мес.*прибл.99,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 675,
+        "width": 296,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "99,000 кмАвтоматикКруиз контрол",
+        "x": 153.546875,
+        "y": 799,
+        "width": 143.453125,
+        "height": 22
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 66,
+        "y": 782,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 179,
+        "width": 120.546875,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 23,
+        "y": 348,
+        "width": 120.546875,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/catalog/9718403147.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 517,
+        "width": 120.546875,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/catalog/9718423696.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 686,
+        "width": 120.546875,
+        "height": 135
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "height": 844,
+    "file": "pdp-320-before.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 304,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": 212,
+        "width": 288,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 302,
+        "width": 288,
+        "height": 27
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 411,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 483,
+        "width": 264,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 743,
+        "width": 256,
+        "height": 26
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 16,
+        "y": 212,
+        "width": 90.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 114.65625,
+        "y": 212,
+        "width": 90.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 213.328125,
+        "y": 212,
+        "width": 90.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-information",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 320,
+    "height": 844,
+    "file": "pdp-information-320-before.png",
+    "errors": [],
+    "documentWidth": 320,
+    "scrollY": 284,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": -72,
+        "width": 288,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 18,
+        "width": 288,
+        "height": 27
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 127,
+        "width": 288,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 199,
+        "width": 264,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 459,
+        "width": 256,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 741,
+        "width": 288,
+        "height": 72
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 16,
+        "y": -72,
+        "width": 90.65625,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 114.65625,
+        "y": -72,
+        "width": 90.671875,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 213.328125,
+        "y": -72,
+        "width": 90.671875,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "home",
+    "path": "/bg",
+    "width": 390,
+    "height": 844,
+    "file": "home-390-before.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "КупиПродайЛизингУслуги",
+        "x": 12,
+        "y": 8,
+        "width": 366,
+        "height": 86
+      },
+      {
+        "tag": "H1",
+        "text": "",
+        "x": 93,
+        "y": 121,
+        "width": 204,
+        "height": 68
+      },
+      {
+        "tag": "A",
+        "text": "Марка или моделМарка или модел(48)",
+        "x": 27,
+        "y": 197,
+        "width": 336,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Избери автомобил",
+        "x": 28,
+        "y": 394,
+        "width": 334,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Лизинг",
+        "x": 406,
+        "y": 394,
+        "width": 334,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Продай колата си",
+        "x": 784,
+        "y": 394,
+        "width": 334,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Вижте на място",
+        "x": 1162,
+        "y": 394,
+        "width": 334,
+        "height": 28
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 12,
+        "y": 568,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 184.359375,
+        "y": 692,
+        "width": 182.640625,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 737,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 101,
+        "y": 782,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/sell-brand-1.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 12,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/sell-brand-8.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 176,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-nissan.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 258,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-mercedes.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 504,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-bmw.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 586,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-audi.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 668,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/brand-hyundai.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 1160,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/sell-brand-7.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 1406,
+        "y": 268,
+        "width": 72,
+        "height": 72
+      },
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 579,
+        "width": 151.359375,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 23,
+        "y": 748,
+        "width": 151.359375,
+        "height": 135
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "cars",
+    "path": "/bg/cars",
+    "width": 390,
+    "height": 844,
+    "file": "cars-390-before.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "H1",
+        "text": "Нашите автомобили",
+        "x": 68,
+        "y": 16,
+        "width": 254,
+        "height": 24
+      },
+      {
+        "tag": "LABEL",
+        "text": "Марка или модел(48)48 автомобила",
+        "x": 12,
+        "y": 60,
+        "width": 366,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "ФилтриПодредиМаркаМоделБюджетОтстъпкиГодинаПробегТип купеГориво",
+        "x": 0,
+        "y": 104,
+        "width": 390,
+        "height": 54
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 12,
+        "y": 168,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 184.359375,
+        "y": 292,
+        "width": 182.640625,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 337,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "92,000 кмАвтоматикКруиз контрол",
+        "x": 184.359375,
+        "y": 461,
+        "width": 182.640625,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2025 VELOZGX • GCC Specs€64,699€984/мес.*прибл.47,000 кмАвтоматикДобри гуми",
+        "x": 12,
+        "y": 506,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "47,000 кмАвтоматикДобри гуми",
+        "x": 184.359375,
+        "y": 630,
+        "width": 182.640625,
+        "height": 22
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Kia2022 SELTOSLX • GCC Specs€43,499€661/мес.*прибл.99,000 кмАвтоматикКруиз контрол",
+        "x": 12,
+        "y": 675,
+        "width": 366,
+        "height": 157
+      },
+      {
+        "tag": "DIV",
+        "text": "99,000 кмАвтоматикКруиз контрол",
+        "x": 184.359375,
+        "y": 799,
+        "width": 182.640625,
+        "height": 22
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 101,
+        "y": 782,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 179,
+        "width": 151.359375,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 23,
+        "y": 348,
+        "width": 151.359375,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/catalog/9718403147.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 517,
+        "width": 151.359375,
+        "height": 135
+      },
+      {
+        "src": "/reference-assets/catalog/9718423696.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 23,
+        "y": 686,
+        "width": 151.359375,
+        "height": 135
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 390,
+    "height": 844,
+    "file": "pdp-390-before.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 243.75
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 374,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": 255.75,
+        "width": 358,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 345.75,
+        "width": 358,
+        "height": 27
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 454.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 526.75,
+        "width": 334,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 786.75,
+        "width": 326,
+        "height": 26
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 243.75
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 16,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 138,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 260,
+        "y": 255.75,
+        "width": 114,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp-information",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 390,
+    "height": 844,
+    "file": "pdp-information-390-before.png",
+    "errors": [],
+    "documentWidth": 390,
+    "scrollY": 328,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 16,
+        "y": -72.25,
+        "width": 358,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 16,
+        "y": 17.75,
+        "width": 358,
+        "height": 27
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 16,
+        "y": 126.75,
+        "width": 358,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Характеристики",
+        "x": 28,
+        "y": 198.75,
+        "width": 334,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Оборудване",
+        "x": 32,
+        "y": 458.75,
+        "width": 326,
+        "height": 26
+      },
+      {
+        "tag": "H2",
+        "text": "Сервизна историяПримерни записи",
+        "x": 16,
+        "y": 740.75,
+        "width": 358,
+        "height": 72
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 16,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 138,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 260,
+        "y": -72.25,
+        "width": 114,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "home",
+    "path": "/bg",
+    "width": 1099,
+    "height": 900,
+    "file": "home-1099-before.png",
+    "errors": [],
+    "documentWidth": 1084,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "NAV",
+        "text": "КупиПродайЛизингУслуги",
+        "x": 28,
+        "y": 74,
+        "width": 1028,
+        "height": 104
+      },
+      {
+        "tag": "H1",
+        "text": "",
+        "x": 326.28125,
+        "y": 225,
+        "width": 256,
+        "height": 80
+      },
+      {
+        "tag": "A",
+        "text": "Марка или моделМарка или модел(48)",
+        "x": 28,
+        "y": 352,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "H2",
+        "text": "Избери автомобил",
+        "x": 52,
+        "y": 596,
+        "width": 460,
+        "height": 34
+      },
+      {
+        "tag": "H2",
+        "text": "Лизинг",
+        "x": 572,
+        "y": 596,
+        "width": 460,
+        "height": 34
+      },
+      {
+        "tag": "H2",
+        "text": "Продай колата си",
+        "x": 52,
+        "y": 766,
+        "width": 460,
+        "height": 34
+      },
+      {
+        "tag": "H2",
+        "text": "Вижте на място",
+        "x": 572,
+        "y": 766,
+        "width": 460,
+        "height": 34
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 448,
+        "y": 838,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/sell-brand-1.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 28,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/sell-brand-8.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 268,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/brand-nissan.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 388,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/brand-mercedes.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 748,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/brand-bmw.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 868,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/brand-audi.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 988,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/brand-hyundai.png",
+        "naturalWidth": 210,
+        "naturalHeight": 192,
+        "x": 1708,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      },
+      {
+        "src": "/reference-assets/sell-brand-7.png",
+        "naturalWidth": 249,
+        "naturalHeight": 216,
+        "x": 2068,
+        "y": 410,
+        "width": 108,
+        "height": 108
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "cars",
+    "path": "/bg/cars",
+    "width": 1099,
+    "height": 900,
+    "file": "cars-1099-before.png",
+    "errors": [],
+    "documentWidth": 1084,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "H1",
+        "text": "Нашите автомобили",
+        "x": 84,
+        "y": 22,
+        "width": 916,
+        "height": 24
+      },
+      {
+        "tag": "LABEL",
+        "text": "Марка или модел(48)48 автомобила",
+        "x": 28,
+        "y": 72,
+        "width": 1028,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "ФилтриПодредиМаркаМоделБюджетОтстъпкиГодинаПробегТип купеГориво",
+        "x": 0,
+        "y": 116,
+        "width": 1084,
+        "height": 68
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 FORTUNEREXR • GCC Specs€94,099€1,430/мес.*прибл.50,000 кмАвтоматикОтлично състояние",
+        "x": 28,
+        "y": 194,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "50,000 кмАвтоматикОтлично състояние",
+        "x": 238.78125,
+        "y": 320,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 CiazGLX • GCC Specs€28,799€438/мес.*прибл.92,000 кмАвтоматикКруиз контрол",
+        "x": 548.5,
+        "y": 194,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "92,000 кмАвтоматикКруиз контрол",
+        "x": 759.28125,
+        "y": 320,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2025 VELOZGX • GCC Specs€64,699€984/мес.*прибл.47,000 кмАвтоматикДобри гуми",
+        "x": 28,
+        "y": 394,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "47,000 кмАвтоматикДобри гуми",
+        "x": 238.78125,
+        "y": 520,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Kia2022 SELTOSLX • GCC Specs€43,499€661/мес.*прибл.99,000 кмАвтоматикКруиз контрол",
+        "x": 548.5,
+        "y": 394,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "99,000 кмАвтоматикКруиз контрол",
+        "x": 759.28125,
+        "y": 520,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2024 LAND CRUISEREXR • GCC Specs€224,599€3,413/мес.*прибл.44,000 кмАвтоматикБързо зареждане",
+        "x": 28,
+        "y": 594,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "44,000 кмАвтоматикБързо зареждане",
+        "x": 238.78125,
+        "y": 720,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Suzuki2023 GRAND VITARAGLX • GCC Specs€52,399€797/мес.*прибл.51,000 кмАвтоматикСервизна история",
+        "x": 548.5,
+        "y": 594,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "DIV",
+        "text": "51,000 кмАвтоматикСервизна история",
+        "x": 759.28125,
+        "y": 720,
+        "width": 283.71875,
+        "height": 48
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Toyota2022 LAND CRUISEREXR BLACK EDITION • GCC Specs€201,999€3,070/мес.*прибл.69,000 кмАвтоматикЗадвижване 4×4",
+        "x": 28,
+        "y": 794,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "ARTICLE",
+        "text": "Nissan2024 PATROLLE T2 • GCC Specs€183,099€2,782/мес.*прибл.49,000 кмАвтоматикОтлично състояние",
+        "x": 548.5,
+        "y": 794,
+        "width": 507.5,
+        "height": 187
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 448,
+        "y": 838,
+        "width": 188,
+        "height": 50
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/catalog/9714841126.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 41,
+        "y": 207,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714842062/photo-0.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 561.5,
+        "y": 207,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9718403147.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 41,
+        "y": 407,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9718423696.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 561.5,
+        "y": 407,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9718425910.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 41,
+        "y": 607,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9718424077.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 561.5,
+        "y": 607,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9714841440.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 41,
+        "y": 807,
+        "width": 187.78125,
+        "height": 161
+      },
+      {
+        "src": "/reference-assets/catalog/9714842271.jpg",
+        "naturalWidth": 1000,
+        "naturalHeight": 563,
+        "x": 561.5,
+        "y": 807,
+        "width": 187.78125,
+        "height": 161
+      }
+    ],
+    "brokenImages": []
+  },
+  {
+    "name": "pdp",
+    "path": "/bg/cars/2024-toyota-fortuner-exr",
+    "width": 1099,
+    "height": 900,
+    "file": "pdp-1099-before.png",
+    "errors": [],
+    "documentWidth": 1084,
+    "scrollY": 0,
+    "elements": [
+      {
+        "tag": "DIV",
+        "text": "Подобни1 / 18",
+        "x": 0,
+        "y": 0,
+        "width": 1084,
+        "height": 609.890625
+      },
+      {
+        "tag": "NAV",
+        "text": "",
+        "x": 8,
+        "y": 8,
+        "width": 1068,
+        "height": 44
+      },
+      {
+        "tag": "NAV",
+        "text": "Екстериор6 снимкиИнтериор7 снимкиДетайли5 снимки",
+        "x": 28,
+        "y": 621.890625,
+        "width": 1028,
+        "height": 74
+      },
+      {
+        "tag": "H1",
+        "text": "2024 TOYOTA FORTUNER EXR",
+        "x": 28,
+        "y": 711.890625,
+        "width": 1028,
+        "height": 35
+      },
+      {
+        "tag": "DIV",
+        "text": "ИнфоИнформацияЕкстериорИнтериор",
+        "x": 28,
+        "y": 828.890625,
+        "width": 1028,
+        "height": 44
+      }
+    ],
+    "photos": [
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 0,
+        "y": 0,
+        "width": 1084,
+        "height": 609.890625
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/primary.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 28,
+        "y": 621.890625,
+        "width": 337.328125,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-5.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 373.328125,
+        "y": 621.890625,
+        "width": 337.34375,
+        "height": 74
+      },
+      {
+        "src": "/reference-assets/vehicle-details/9714841126/photo-12.jpg",
+        "naturalWidth": 1365,
+        "naturalHeight": 768,
+        "x": 718.671875,
+        "y": 621.890625,
+        "width": 337.328125,
+        "height": 74
+      }
+    ],
+    "brokenImages": []
+  }
+]

@@ -1,0 +1,147 @@
+{
+  "checks": [
+    "bg desktop route Home",
+    "bg desktop route /cars",
+    "bg desktop route /cars/2024-toyota-fortuner-exr",
+    "bg desktop route /cars/2024-toyota-fortuner-exr/features",
+    "bg desktop route /cars/2024-toyota-fortuner-exr/gallery",
+    "bg desktop route /cars/2024-toyota-fortuner-exr/inspection",
+    "bg desktop route /sell",
+    "bg desktop route /finance",
+    "bg desktop route /service",
+    "bg desktop route /saved",
+    "bg desktop route /more",
+    "bg desktop route /stores",
+    "bg desktop route /search",
+    "bg desktop route /luxe",
+    "bg desktop route /benefits/warranty",
+    "bg desktop route /sell/details",
+    "bg desktop route /service/details",
+    "en desktop route Home",
+    "en desktop route /cars",
+    "en desktop route /cars/2024-toyota-fortuner-exr",
+    "en desktop route /cars/2024-toyota-fortuner-exr/features",
+    "en desktop route /cars/2024-toyota-fortuner-exr/gallery",
+    "en desktop route /cars/2024-toyota-fortuner-exr/inspection",
+    "en desktop route /sell",
+    "en desktop route /finance",
+    "en desktop route /service",
+    "en desktop route /saved",
+    "en desktop route /more",
+    "en desktop route /stores",
+    "en desktop route /search",
+    "en desktop route /luxe",
+    "en desktop route /benefits/warranty",
+    "en desktop route /sell/details",
+    "en desktop route /service/details",
+    "bg PDP 1100: gallery/actions, sticky panel and three-column specifications",
+    "bg Cars 1100: badges use one row when they fit and wrap without clipping",
+    "bg PDP 1280: gallery/actions, sticky panel and three-column specifications",
+    "bg Cars 1280: badges use one row when they fit and wrap without clipping",
+    "bg PDP 1440: gallery/actions, sticky panel and three-column specifications",
+    "bg Cars 1440: badges use one row when they fit and wrap without clipping",
+    "bg PDP 1920: gallery/actions, sticky panel and three-column specifications",
+    "bg Cars 1920: badges use one row when they fit and wrap without clipping",
+    "en PDP 1100: gallery/actions, sticky panel and three-column specifications",
+    "en Cars 1100: badges use one row when they fit and wrap without clipping",
+    "en PDP 1280: gallery/actions, sticky panel and three-column specifications",
+    "en Cars 1280: badges use one row when they fit and wrap without clipping",
+    "en PDP 1440: gallery/actions, sticky panel and three-column specifications",
+    "en Cars 1440: badges use one row when they fit and wrap without clipping",
+    "en PDP 1920: gallery/actions, sticky panel and three-column specifications",
+    "en Cars 1920: badges use one row when they fit and wrap without clipping",
+    "PDP album, keyboard photo navigation, zoom, Escape and focus return",
+    "Information/Exterior/Interior tab keyboard and content",
+    "Price drawer and focus restoration",
+    "Service records drawer preserves sample disclosure and focus",
+    "Viewing options open the existing enquiry draft",
+    "PDP wishlist persists in Saved",
+    "Equipment search filters and clears",
+    "Full gallery category navigation and photo viewer",
+    "PDP Back preserves filtered inventory",
+    "Home banner search filters actual stock",
+    "Right-side menu and return Home"
+  ],
+  "errors": [],
+  "preservation": [
+    {
+      "name": "home",
+      "width": 320,
+      "changed": 3953,
+      "outsidePhotos": 1,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "cars",
+      "width": 320,
+      "changed": 18356,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "pdp",
+      "width": 320,
+      "changed": 0,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "pdp-information",
+      "width": 320,
+      "changed": 0,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "home",
+      "width": 390,
+      "changed": 17878,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "cars",
+      "width": 390,
+      "changed": 33450,
+      "outsidePhotos": 2,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "pdp",
+      "width": 390,
+      "changed": 3024,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "pdp-information",
+      "width": 390,
+      "changed": 109,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "home",
+      "width": 1099,
+      "changed": 0,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "cars",
+      "width": 1099,
+      "changed": 18709,
+      "outsidePhotos": 6,
+      "significantOutsidePhotos": 0
+    },
+    {
+      "name": "pdp",
+      "width": 1099,
+      "changed": 0,
+      "outsidePhotos": 0,
+      "significantOutsidePhotos": 0
+    }
+  ],
+  "reusedRouteLayoutPass": true,
+  "notes": "The 50 route/layout checks completed in the preceding invocation on the same source; interaction checks were rerun after correcting the Save assertion to use its updated accessible name. Errors records the completed interaction run."
+}
