@@ -50,6 +50,7 @@ function ModelCheckbox({
 }
 
 export function ShowroomModelOptions({
+  make,
   groups,
   draft,
   query,
@@ -57,9 +58,11 @@ export function ShowroomModelOptions({
   excluded,
   desktop = false,
   onChange,
+  onRemoveMake,
   onToggleFamily,
   onToggleExcluded,
 }: {
+  make?: string;
   groups: NativeModelGroup[];
   draft: ModelDraft;
   query: string;
@@ -67,6 +70,7 @@ export function ShowroomModelOptions({
   excluded: boolean;
   desktop?: boolean;
   onChange: (draft: ModelDraft) => void;
+  onRemoveMake?: () => void;
   onToggleFamily: (name: string) => void;
   onToggleExcluded: () => void;
 }) {
@@ -98,13 +102,19 @@ export function ShowroomModelOptions({
       : !draft.selected.length;
     return (
       <label {...stylex.props(s.choice, parent && s.childChoice)}>
-        <span {...stylex.props(s.name)}>{name || t('Any model')}</span>
+        <span {...stylex.props(s.name)}>
+          {name || make || t('Any model')}
+          {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}
+        </span>
         <span {...stylex.props(s.checkTarget)}>
           <ModelCheckbox
-            name={name || 'Any model'}
+            name={name || (make ? make + ' · ' + t('All models') : 'Any model')}
             modelKey={key}
             checked={checked}
-            onChange={(next) => onChange(toggleModelDraft(draft, key, next, groups, parent?.name))}
+            onChange={(next) => {
+              if (!name && !next && onRemoveMake) onRemoveMake();
+              else onChange(toggleModelDraft(draft, key, next, groups, parent?.name));
+            }}
           />
         </span>
       </label>

@@ -19,6 +19,7 @@ import { ShowroomDesktopMakeModel } from './ShowroomDesktopMakeModel';
 import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearchField } from './ShowroomSearch';
+import { Icon } from './Icon';
 import { Button, CheckRow, IconButton, Modal } from './ui';
 
 const s = stylex.create({
@@ -106,7 +107,9 @@ const s = stylex.create({
     fontSize: 15,
     lineHeight: '22px',
   },
-  suggestionName: { minWidth: 0, overflowWrap: 'anywhere', fontWeight: 500 },
+  suggestionName: { flex: '1', minWidth: 0, overflowWrap: 'anywhere', fontWeight: 500 },
+  suggestionTail: { display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 },
+  suggestionArrow: { display: 'flex', color: colors.muted },
   suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
   footer: {
     flexShrink: 0,
@@ -301,7 +304,12 @@ export function ShowroomFilterSheet({
                         <span {...stylex.props(s.suggestionName)}>
                           {vehicle.make} {vehicle.model}
                         </span>
-                        <span {...stylex.props(s.suggestionPrice)}>{money(vehicle.price)}</span>
+                        <span {...stylex.props(s.suggestionTail)}>
+                          <span {...stylex.props(s.suggestionPrice)}>{money(vehicle.price)}</span>
+                          <span aria-hidden="true" {...stylex.props(s.suggestionArrow)}>
+                            <Icon name="arrow" size={16} />
+                          </span>
+                        </span>
                       </button>
                     ))}
                     {!count && (

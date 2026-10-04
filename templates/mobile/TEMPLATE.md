@@ -68,6 +68,11 @@ Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
 On phones, compact Make/Model controls switch views; selected makes remain editable. Model
 choices have aligned labels and selection controls, with expandable families.
+The phone model list names its brand in the All models row. Unchecking that row
+removes the brand and returns focus to its brand choice. The brand selector has
+a back arrow that returns to brands while retaining model selections and clearing
+the model search. Search suggestions show a right arrow beside their prices;
+selecting a suggestion still edits the draft until Show cars applies it.
 Desktop uses separate brand and model panels with independent search fields.
 Brand checkboxes select and deselect directly; a separate edit action opens an
 existing brand's models. A labelled Remove action stays beside the model heading.

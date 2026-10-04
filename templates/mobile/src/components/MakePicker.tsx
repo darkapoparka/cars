@@ -51,6 +51,7 @@ function SelectionButton({
   label,
   value,
   active,
+  back = false,
   disabled = false,
   buttonRef,
   onClick,
@@ -58,20 +59,22 @@ function SelectionButton({
   label: string;
   value: string;
   active: boolean;
+  back?: boolean;
   disabled?: boolean;
   buttonRef?: Ref<HTMLButtonElement>;
   onClick: () => void;
 }) {
   const { t } = useLocale();
+  const accessibleLabel = back ? t('Back') + ': ' + t('Makes') : t(label) + ': ' + t(value);
   return (
     <button
       ref={buttonRef}
       type="button"
       disabled={disabled}
-      aria-label={t(label) + ': ' + t(value)}
+      aria-label={accessibleLabel}
       aria-controls="showroom-make-model-options"
       aria-expanded={active}
-      title={disabled ? t('Choose a make first') : t(value)}
+      title={disabled ? t('Choose a make first') : back ? accessibleLabel : t(value)}
       onClick={onClick}
       {...stylex.props(s.selector)}
     >
@@ -83,12 +86,19 @@ function SelectionButton({
           disabled && s.selectorDisabled,
         )}
       >
+        {back && (
+          <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
+            <Icon name="back" size={16} />
+          </span>
+        )}
         <span {...stylex.props(s.selectorLabel)}>{t(label)}</span>
         <span {...stylex.props(s.selectorValue)}>
           <span {...stylex.props(s.selectorText)}>{t(value)}</span>
-          <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
-            <Icon name={active ? 'up' : 'down'} size={14} />
-          </span>
+          {!back && (
+            <span aria-hidden="true" {...stylex.props(s.selectorArrow)}>
+              <Icon name={active ? 'up' : 'down'} size={14} />
+            </span>
+          )}
         </span>
       </span>
     </button>
@@ -407,6 +417,7 @@ export function MakePicker({
               label={t('Make')}
               value={make || 'Any'}
               active={!modelsVisible}
+              back={modelsVisible}
               onClick={() => {
                 setSelector('make');
                 setQuery('');
@@ -502,12 +513,14 @@ export function MakePicker({
             embedded ? (
               <ShowroomModelOptions
                 key={make}
+                make={make}
                 groups={groups}
                 draft={draft}
                 query={query}
                 expanded={expanded}
                 excluded={exclude}
                 onChange={changeDraft}
+                onRemoveMake={() => removeSelectedMake(make, exclude)}
                 onToggleFamily={(name) =>
                   setExpanded((current) =>
                     current.includes(name)

@@ -1,0 +1,110 @@
+{
+  "at": "2026-10-04T07:28:25.9150998Z",
+  "passed": true,
+  "cases": 12,
+  "errors": [],
+  "base": "http://127.0.0.1:6478",
+  "reports": [
+    {
+      "at": "2026-10-04T07:26:05.499Z",
+      "base": "http://127.0.0.1:6478",
+      "checks": [
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 320,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 390,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search arrows and draft/apply behavior"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 320,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 390,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search arrows and draft/apply behavior"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    },
+    {
+      "at": "2026-10-04T07:26:05.189Z",
+      "base": "http://127.0.0.1:6478",
+      "checks": [
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 320,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 390,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search arrows and draft/apply behavior"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 320,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 390,
+          "description": "Search arrows, draft/apply behavior, brand removal/back navigation and preserved model selections"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search arrows and draft/apply behavior"
+        }
+      ],
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "build": {
+    "at": "2026-10-04T07:17:45.0282917Z",
+    "passed": true,
+    "distDir": ".next-search-return-20261004",
+    "buildId": "3mWf0f-rY6CtBk5lT34c2",
+    "sourceChecks": [
+      "lint",
+      "TypeScript",
+      "92 domain/localization tests",
+      "touched file formatting",
+      "QA script syntax"
+    ]
+  }
+}

@@ -44,6 +44,7 @@ export const modelOptionStyles = stylex.create({
   },
   childChoice: { paddingLeft: 24, fontWeight: 400 },
   name: { flex: '1', minWidth: 0, overflowWrap: 'anywhere', textAlign: 'left' },
+  allModelCopy: { display: 'block', fontSize: 13, lineHeight: '20px', color: colors.muted },
   checkTarget: {
     display: 'flex',
     alignItems: 'center',
