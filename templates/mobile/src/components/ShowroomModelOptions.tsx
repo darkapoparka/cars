@@ -143,8 +143,7 @@ export function ShowroomModelOptions({
             onClick={onBack}
             {...stylex.props(s.backButton)}
           >
-            <Icon name="left" size={18} />
-            {t('Back')}
+            <Icon name="back" size={20} />
           </button>
           <label htmlFor={inputId} {...stylex.props(s.choice, s.allMakeLabel)}>
             {copy}

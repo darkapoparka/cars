@@ -1,0 +1,115 @@
+{
+  "checkedAt": "2026-10-04T22:06:08.755Z",
+  "preview": "http://127.0.0.1:6474/?lang=bg&makes=BMW&filter=make",
+  "build": {
+    "buildId": "EE1llO0ju_JiQmtV0Oev2",
+    "distDir": ".next-picker-back-icon-20261005",
+    "node": "v22.20.0",
+    "passed": true,
+    "prerenderedRoutes": 41
+  },
+  "backControl": {
+    "accessibleName": "Назад: Марки",
+    "background": "rgba(0, 0, 0, 0)",
+    "height": 44,
+    "iconHeight": 20,
+    "iconWidth": 20,
+    "visibleText": "",
+    "width": 44
+  },
+  "validation": {
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainTests": 95
+  },
+  "passed": true,
+  "checks": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    {
+      "file": "before-320.jpg",
+      "width": 320,
+      "height": 844
+    },
+    {
+      "file": "after-320.jpg",
+      "width": 320,
+      "height": 844
+    }
+  ],
+  "boundary": "Mobile candidate source and local preview; no release selection or dealer deployment"
+}
