@@ -20,20 +20,22 @@ export const daynightContact = {
 } as const;
 
 export const daynightBrand = {
-	name: 'Day Night Auto Group',
-	displayName: 'DAY NIGHT AUTO GROUP',
-	bulgarianName: 'Ден и Нощ Ауто Груп',
-	domain: 'day-night-auto-group.demo',
-	tagline: 'Премиум автомобили в София с подреден процес за оглед и запитване',
+	name: 'Import Template',
+	displayName: 'IMPORT TEMPLATE',
+	bulgarianName: 'Import Template',
+	domain: 'import-template.demo',
+	tagline: 'Демонстрационен шаблон за автомобилен търговец',
 	legalNote:
-		'Proposal build reflects public contact channels for Day Night Auto Group; verify final assets and inventory before outreach.'
+		'Reusable template preview with sample content; replace identity, contacts and inventory before creating a dealer proposal.'
 } as const;
 
 const contactVisitBanner = '/assets/daynight/banners/contact-visit-desktop-v3.webp';
 
 export const daynightAssets = {
-	logoDark: '/assets/daynight/brand/daynight-logo-generated-600.webp',
-	logoLight: '/assets/daynight/brand/daynight-logo-generated-600.webp',
+	// Dealer copies replace these paths once; shared headers, footers and banners reuse them.
+	// The suffix names the background: logoDark is for dark surfaces, logoLight for light ones.
+	logoDark: '/brand/import-template-logo-v1.webp',
+	logoLight: '/brand/import-template-logo-v1.webp',
 	hero: '/assets/daynight/hero/home-05-showroom-exterior.webp',
 	homeHeroSlides: [],
 	footerImage: '/assets/daynight/footer-premium-request-v2.webp',

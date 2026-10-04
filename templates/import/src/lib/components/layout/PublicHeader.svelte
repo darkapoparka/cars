@@ -31,7 +31,7 @@
 	<div class="site-container site-header__inner">
 		<a class="site-header__logo" href={linkHref(localizedHref('/'))} aria-label={site.identity.name}
 			><img
-				src={assetHref(site.identity.logoOnDark)}
+				src={assetHref(site.identity.logo)}
 				alt={site.identity.name}
 				width="1744"
 				height="512"
