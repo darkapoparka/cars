@@ -101,6 +101,7 @@
     margin-bottom: calc(var(--spacing) * 7.5);
   }
   .contactCard {
+    position: relative;
     display: flex;
     gap: calc(var(--spacing) * 4.5);
     align-items: flex-start;
@@ -112,7 +113,8 @@
     background: var(--desktop-surface);
     border-radius: calc(var(--spacing) * 4);
   }
-  .contactCard > svg {
+  .contactCard > svg,
+  .contactCardMain > svg {
     flex: none;
     margin-top: calc(var(--spacing) * 0.5);
     color: var(--brand);
@@ -127,10 +129,77 @@
     margin: 0;
     overflow-wrap: anywhere;
   }
-  .contactCard a:hover {
+  .contactCard > div,
+  .contactCardMain > div {
+    min-width: 0;
+  }
+  .contactCardLink,
+  .contactCardMain {
+    text-decoration: none;
+  }
+  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) {
+    color: var(--brand-foreground);
+    background: var(--foreground);
+  }
+  :is(.contactCardLink, .phoneCard):is(:hover, :focus-within) svg {
+    color: currentcolor;
+  }
+  .contactCard > .cardArrow {
+    position: absolute;
+    top: calc(var(--spacing) * 5);
+    right: calc(var(--spacing) * 5);
+    margin: 0;
+  }
+  .phoneCard {
+    gap: calc(var(--spacing) * 3);
+    align-items: center;
+  }
+  .contactCardMain {
+    display: flex;
+    flex: 1;
+    gap: calc(var(--spacing) * 4.5);
+    align-items: flex-start;
+    min-width: 0;
+    border-radius: inherit;
+  }
+  .contactCardMain::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    border-radius: inherit;
+  }
+  .phoneTitle {
+    display: grid;
+  }
+  .phoneTitle > span {
+    grid-area: 1 / 1;
+  }
+  .phoneTitleActive,
+  .phoneCard:is(:hover, :focus-within) .phoneTitleRest {
+    visibility: hidden;
+  }
+  .phoneCard:is(:hover, :focus-within) .phoneTitleActive {
+    visibility: visible;
+  }
+  .copyPhone {
+    position: relative;
+    z-index: var(--desktop-layer-raised);
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    width: var(--desktop-icon-target);
+    height: var(--desktop-icon-target);
+    padding: 0;
     color: var(--brand);
-    text-decoration: underline;
-    text-underline-offset: calc(var(--spacing) * 1);
+    cursor: pointer;
+    background: var(--desktop-support-surface);
+    border: 0;
+    border-radius: calc(var(--spacing) * 3);
+  }
+  .phoneCard:is(:hover, :focus-within) .copyPhone {
+    color: var(--brand-foreground);
+    background: var(--desktop-inverse-soft);
   }
   .social {
     padding: calc(var(--spacing) * 4.5) calc(var(--spacing) * 5);
@@ -410,5 +479,16 @@
   }
   .details a:focus-visible {
     outline-color: var(--ring);
+  }
+  .details .contactCardLink:focus-visible,
+  .details .copyPhone:focus-visible {
+    outline-color: var(--brand-foreground);
+  }
+  .details .contactCardMain:focus-visible {
+    outline: 0;
+  }
+  .contactCardMain:focus-visible::after {
+    outline: var(--desktop-focus-width) solid var(--brand-foreground);
+    outline-offset: calc(var(--spacing) * 1);
   }
 }

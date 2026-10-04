@@ -9,7 +9,7 @@ import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-deskto
 import { DealerDesktopLogo } from "@repo/marketplace-ui/components/dealer-desktop-logo";
 import { DealerSocialLinks } from "@repo/marketplace-ui/components/dealer-social-links";
 import { normalizeSeoLocale } from "@repo/seo/metadata";
-import { ArrowUpRight, CarFront, Mail, MapPin, Phone } from "lucide-react";
+import { ArrowUpRight, CarFront, Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import { isPublicContactSubmissionAvailable } from "@/lib/public-contact-readiness";
 import {
@@ -20,6 +20,7 @@ import { requirePublicSitePath } from "@/lib/public-site-access";
 import { getPublicWebBaseUrl } from "@/lib/public-url";
 import { parseSellVehicleDraft } from "@/lib/sell-vehicle-draft";
 import desktopStyles from "../components/boxcar-desktop-pages.module.css";
+import { DesktopContactPhoneCard } from "../components/desktop-contact-phone-card";
 import { DesktopContactPreviewForm } from "../components/desktop-contact-preview-form";
 import { MobileAboutContact } from "../components/mobile-about-contact";
 import {
@@ -166,44 +167,54 @@ function DesktopContact({
                 "Find your favourite car online, then take a closer look in person."
               )}
             </p>
-            <div className={desktopStyles.contactCard}>
+            <a
+              className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+              data-slot="desktop-contact-showroom-card"
+              href={withBasePath(leadSite.mapsUrl)}
+              rel="noreferrer"
+              target="_blank"
+            >
               <MapPin aria-hidden size={26} />
               <div>
                 <h3>{text("Автосалон", "Showroom")}</h3>
                 <p>
-                  <a
-                    href={withBasePath(leadSite.mapsUrl)}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
-                  </a>
+                  {getLeadCopy(locale).address}, {getLeadCopy(locale).city}
                 </p>
               </div>
-            </div>
-            <div className={desktopStyles.contactCard}>
-              <Phone aria-hidden size={26} />
-              <div>
-                <h3>{text("Телефон", "Phone")}</h3>
-                <p>
-                  <a href={withBasePath(leadSite.phoneHref)}>
-                    {leadSite.phoneDisplay}
-                  </a>
-                </p>
-              </div>
-            </div>
+              <ArrowUpRight
+                aria-hidden
+                className={desktopStyles.cardArrow}
+                size={18}
+              />
+            </a>
+            <DesktopContactPhoneCard
+              locale={locale}
+              phoneDisplay={leadSite.phoneDisplay}
+              phoneHref={withBasePath(leadSite.phoneHref)}
+            />
             {leadSite.email && (
-              <div className={desktopStyles.contactCard}>
+              <a
+                className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+                data-slot="desktop-contact-email-card"
+                href={`mailto:${leadSite.email}`}
+              >
                 <Mail aria-hidden size={26} />
                 <div>
                   <h3>{text("Имейл", "Email")}</h3>
-                  <p>
-                    <a href={`mailto:${leadSite.email}`}>{leadSite.email}</a>
-                  </p>
+                  <p>{leadSite.email}</p>
                 </div>
-              </div>
+                <ArrowUpRight
+                  aria-hidden
+                  className={desktopStyles.cardArrow}
+                  size={18}
+                />
+              </a>
             )}
-            <div className={desktopStyles.contactCard}>
+            <a
+              className={`${desktopStyles.contactCard} ${desktopStyles.contactCardLink}`}
+              data-slot="desktop-contact-viewing-card"
+              href={withBasePath(leadSite.phoneHref)}
+            >
               <CarFront aria-hidden size={26} />
               <div>
                 <h3>{text("Уговорете оглед", "Arrange a viewing")}</h3>
@@ -211,7 +222,12 @@ function DesktopContact({
                   {text("Обадете се за удобен час.", "Call to book a viewing.")}
                 </p>
               </div>
-            </div>
+              <ArrowUpRight
+                aria-hidden
+                className={desktopStyles.cardArrow}
+                size={18}
+              />
+            </a>
             {Object.values(publicSite.contact.socialLinks).some(Boolean) && (
               <div className={desktopStyles.social}>
                 <h3>{text("Последвайте ни", "Follow us")}</h3>
