@@ -1,8 +1,8 @@
 # Sell guidance — 4 October 2026
 
-How it works now shows only the three step numbers and single-line titles in the page. Phone layouts use a compact vertical sequence with numbered circles and quiet connecting lines; tablet and desktop retain three columns. Tablet tracks follow their text width so the longer titles fit. The panel follows its content height, and the white View steps pill retains the existing information drawer with its fuller explanations. Shared guidance headings use 18px text on phones and 20px on wider screens. The English heading remains on one line at 320px.
+How it works now uses one centered white outlined information button beneath the selling cards. Regular 16px text, a quiet information icon and a trailing arrow keep it secondary to the selling actions. Its 220px minimum width and 48px target make the single guidance entry easier to notice and use.
 
-Before you sell now uses one compact near-black panel. Three single-line drawer rows have 20px line icons, regular white labels and muted arrows, with a 44px target each. Phone and tablet rows stack with quiet dividers; desktop shows three columns. Full supporting explanations remain in the original advice drawers, and keyboard focus has an inset white outline. The leading selling cards, configured dealer panel, assets and enquiry workflow retain their existing boundaries.
+The same drawer includes all three process steps and a Before you sell section with the complete valuation, service-history and photo-checklist advice. The separate preparation panel and its three advice buttons are removed. The leading selling cards, configured dealer panel, assets and enquiry workflow retain their existing boundaries. The sections below record the successive owner-requested revisions, including layouts that have now been superseded.
 
 ## Before and after
 
@@ -69,3 +69,45 @@ The owner removed the requirement for two supporting lines and requested no inli
 The before captures reuse the verified compact-panel screenshots from the preceding pass, which match the starting source state and viewport sizes. The retained `after-768.jpg` is an intermediate capture before the tablet track correction.
 
 `npm run check` passed using Node 22.20.0 after the final tablet change: ESLint, TypeScript and the webpack build generated all 407 pages through the separate `.next-build-check` output, with development `next-env.d.ts` preserved. Browser automation then repeatedly timed out. Final Bulgarian tablet recheck, drawer recheck, console inspection, preview locale and viewport reset could not be confirmed; the drawer descriptions and handlers remain unchanged in source. A transient full-disk error interrupted the first baseline save; no historical screenshots, source, Git files or active caches were deleted.
+
+## Secondary process drawer button
+
+The owner identified that the grey process card competed with the selling actions and proposed a smaller drawer entry. The process now occupies a single 44px row with a content-width white outlined button. Regular 14px labels, quiet icons and a thin border keep it visually secondary. All three step titles and full descriptions remain in the original information drawer; the black preparation panel is unchanged.
+
+| View | Before | After |
+| --- | --- | --- |
+| Bulgarian, 360 x 884, scrolled page end | [Before](process-drawer-entry/before-360.jpg) | [After](process-drawer-entry/after-360.jpg) |
+| Bulgarian, 1440 x 900, full page | [Before](process-drawer-entry/before-1440.jpg) | [After](process-drawer-entry/after-1440.jpg) |
+| Bulgarian, 320px full page | - | [After](process-drawer-entry/after-320.jpg) |
+| Bulgarian, 390px full page | - | [After](process-drawer-entry/after-390.jpg) |
+| English, 320px full page | - | [After](process-drawer-entry/after-en-320.jpg) |
+
+[Rendered measurements and interaction checks](process-drawer-entry/verification.json) cover Bulgarian at 320px, 360px, 390px, 768px and 1440px, and English at 320px and 1440px. The entry is 44px high in each case; its button is about 152px wide in Bulgarian and 164px in English. No inline steps, clipped labels or horizontal overflow remain. The original black-panel heights are retained.
+
+Enter opens the full Bulgarian three-step drawer at 320px; Escape restores focus and its visible outline. Back dismisses the desktop drawer while keeping `/bg/sell` and restoring the button focus. The English button opens the full translated explanation and closes through its existing close control. The [320px drawer](process-drawer-entry/drawer-320.jpg) records the retained content. Browser diagnostics contained no errors or warnings. The Bulgarian preview was restored and the temporary viewport override was reset successfully, resolving the preceding pass's browser-verification limitation.
+
+`npm run check` passed after the drawer-entry change using Node 22.20.0: ESLint, TypeScript and the webpack production build generated all 407 pages. The existing isolated `.next-build-check` output was used and development `next-env.d.ts` was preserved. Source delivery is scoped to `components/FeatureContent.tsx`, `TEMPLATE.md`, this receipt and `process-drawer-entry/`; unrelated shared work is preserved.
+
+Source delivery is blocked by the shared Cars index lock at `L:/CODEX/cars/.git/index.lock`, which remains zero bytes with a last-write time of 4 October 2026 at 08:11:21 local. The lock was preserved. The repository is `L:/CODEX/cars`, on `main` at `64f702a95dd76022f89f9faeb8cf1bd1f5e20b8e`; the implementation and evidence remain unstaged and no commit or push was made for this drawer-entry change. Once the active index owner releases the lock, refresh remote ancestry and stage, commit and push only `templates/app/components/FeatureContent.tsx`, `templates/app/TEMPLATE.md`, `templates/app/docs/sell-guidance-2026-10-04/README.md` and `templates/app/docs/sell-guidance-2026-10-04/process-drawer-entry/`.
+
+## Centered entry and combined guidance
+
+The owner requested a centered, larger How it works entry and proposed moving Before you sell into the same drawer. The page now has one centered 220 x 48px white outlined button, with regular 16px text and 24px spacing below the selling cards. The separate black preparation panel and its three advice actions are removed. The combined drawer retains the three numbered process steps and every original preparation title and description beneath a Before you sell heading.
+
+| View | Before | After |
+| --- | --- | --- |
+| Bulgarian, 360 x 884, scrolled page end | [Before](combined-guidance/before-360.jpg) | [After](combined-guidance/after-360.jpg) |
+| Bulgarian, 1440 x 900, full page | [Before](combined-guidance/before-1440.jpg) | [After](combined-guidance/after-1440.jpg) |
+| Bulgarian, 320px full page | - | [After](combined-guidance/after-320.jpg) |
+| Bulgarian, 390px full page | - | [After](combined-guidance/after-390.jpg) |
+| Bulgarian, 768px full page | - | [After](combined-guidance/after-768.jpg) |
+| English, 320px full page | - | [After](combined-guidance/after-en-320.jpg) |
+| English, 1440px full page | - | [After](combined-guidance/after-en-1440.jpg) |
+
+[Rendered measurements and interactions](combined-guidance/verification.json) cover Bulgarian at 320px, 360px, 390px, 768px and 1440px, and English at 320px and 1440px. Each entry measures 220 x 48px, with no offset from the content center, one line of regular 16px text, two selling cards, one guidance entry and no separate preparation panel or horizontal overflow.
+
+The [desktop drawer](combined-guidance/drawer-1440.jpg) shows all three process steps and all three preparation topics in one dialog. At 320px, the [top](combined-guidance/drawer-320-top.jpg) and [bottom](combined-guidance/drawer-320-bottom.jpg) captures show the same content in a scrollable sheet; the final photo advice can be reached fully. Enter opens the drawer, Escape returns focus to the centered entry with its visible 2px outline, and Back dismisses the desktop drawer while preserving the Sell route. The English drawer includes the complete translated process and preparation advice and dismisses through its existing close control.
+
+The sale and exchange actions open the existing make/model enquiry form with the matching intent selected; no enquiry was submitted. Browser diagnostics contained no errors or warnings. The Bulgarian preview was restored and temporary viewport overrides were reset. Initial automation attempts immediately after navigation or against the unfocused body are recorded in the verification file; the settled drawer interactions and responsive captures completed successfully.
+
+`npm run check` passed with Node 22.20.0: ESLint, TypeScript and the webpack production build generated all 407 pages. The existing isolated `.next-build-check` output was used and development `next-env.d.ts` was preserved. The scoped source delivery includes `components/FeatureContent.tsx`, `components/ReferenceInfoSheet.tsx`, `TEMPLATE.md`, this receipt, `combined-guidance/` and the preceding uncommitted `process-drawer-entry/` evidence. Unrelated shared work is preserved.

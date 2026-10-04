@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-04",
+  "origin": "http://127.0.0.1:6483",
+  "requirement": "Secondary content-width white information button opens the three-step drawer; remove the grey inline process card.",
+  "checks": [
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "Как работи",
+        "textOverflow": false,
+        "width": 151.53125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 192,
+      "height": 884,
+      "inlineStepCount": 0,
+      "locale": "bg",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "Как работи",
+        "textOverflow": false,
+        "width": 151.53125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 192,
+      "height": 884,
+      "inlineStepCount": 0,
+      "locale": "bg",
+      "overflow": false,
+      "width": 360
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "Как работи",
+        "textOverflow": false,
+        "width": 151.53125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 192,
+      "height": 884,
+      "inlineStepCount": 0,
+      "locale": "bg",
+      "overflow": false,
+      "width": 390
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "Как работи",
+        "textOverflow": false,
+        "width": 151.53125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 202,
+      "height": 884,
+      "inlineStepCount": 0,
+      "locale": "bg",
+      "overflow": false,
+      "width": 768
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "Как работи",
+        "textOverflow": false,
+        "width": 151.53125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 112,
+      "height": 900,
+      "inlineStepCount": 0,
+      "locale": "bg",
+      "overflow": false,
+      "width": 1440
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "How it works",
+        "textOverflow": false,
+        "width": 164.125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 192,
+      "height": 884,
+      "inlineStepCount": 0,
+      "locale": "en",
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "button": {
+        "background": "rgb(255, 255, 255)",
+        "fontSize": "14px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 44,
+        "label": "How it works",
+        "textOverflow": false,
+        "width": 164.125
+      },
+      "entryBackground": "rgba(0, 0, 0, 0)",
+      "entryHeight": 44,
+      "guidesHeight": 112,
+      "height": 900,
+      "inlineStepCount": 0,
+      "locale": "en",
+      "overflow": false,
+      "width": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "action": "Enter",
+      "dialog": "Как работи\n\nПродажба или замяна.\n\nДанни за колата\n\nМарка, модел, година и пробег.\n\nОглед и оценка\n\nАвтокъщата проверява състоянието и потвърждава цената.\n\nПродажба или замяна\n\nУточнявате условията и документите с автокъщата.",
+      "locale": "bg",
+      "overflow": false,
+      "steps": 3
+    },
+    {
+      "action": "Escape",
+      "closed": true,
+      "focus": "Как работи",
+      "outline": "rgb(38, 38, 41) solid 2px"
+    },
+    {
+      "action": "Back",
+      "closed": true,
+      "focus": "Как работи",
+      "path": "/bg/sell"
+    },
+    {
+      "action": "Click",
+      "dialog": "How it works\n\nSell or part-exchange.\n\nYour car details\n\nShare make, model, year and mileage.\n\nReview and valuation\n\nThe dealer reviews the condition and confirms the price.\n\nSale or trade-in\n\nAgree the terms and paperwork with the dealer.",
+      "locale": "en",
+      "steps": 3
+    }
+  ],
+  "browserDiagnostics": []
+}

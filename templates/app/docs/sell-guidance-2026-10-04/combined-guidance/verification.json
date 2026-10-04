@@ -1,0 +1,244 @@
+{
+  "date": "2026-10-04",
+  "route": "http://127.0.0.1:6483/bg/sell",
+  "layout": [
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "Как работи",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 884,
+      "inlineSteps": 0,
+      "scrollWidth": 305,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/bg/sell",
+      "width": 320
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "Как работи",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 884,
+      "inlineSteps": 0,
+      "scrollWidth": 375,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/bg/sell",
+      "width": 390
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "Как работи",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 884,
+      "inlineSteps": 0,
+      "scrollWidth": 753,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/bg/sell",
+      "width": 768
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "Как работи",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 900,
+      "inlineSteps": 0,
+      "scrollWidth": 1425,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/bg/sell",
+      "width": 1440
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "Как работи",
+        "outline": "2px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 884,
+      "inlineSteps": 0,
+      "scrollWidth": 345,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/bg/sell",
+      "width": 360
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "How it works",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 884,
+      "inlineSteps": 0,
+      "scrollWidth": 305,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/en/sell",
+      "width": 320
+    },
+    {
+      "button": {
+        "centerOffset": 0,
+        "fontSize": "16px",
+        "fontWeight": "400",
+        "hasPopup": "dialog",
+        "height": 48,
+        "label": "How it works",
+        "outline": "3px",
+        "whiteSpace": "nowrap",
+        "width": 220
+      },
+      "guidanceEntries": 1,
+      "height": 900,
+      "inlineSteps": 0,
+      "scrollWidth": 1425,
+      "sellingCards": 2,
+      "separatePreparationPanels": 0,
+      "url": "http://127.0.0.1:6483/en/sell",
+      "width": 1440
+    }
+  ],
+  "interactions": [
+    {
+      "case": "bg-desktop-combined-drawer",
+      "clientHeight": 722,
+      "dialogLabel": "Как работи",
+      "height": 721.6875,
+      "preparationCount": 3,
+      "preparationHeading": "Преди продажбата",
+      "scrollHeight": 722,
+      "stepCount": 3
+    },
+    {
+      "case": "bg-desktop-back-dismissal",
+      "dialogs": 0,
+      "focus": "Как работи",
+      "url": "http://127.0.0.1:6483/bg/sell"
+    },
+    {
+      "case": "bg-320-keyboard-open",
+      "clientHeight": 836,
+      "clientWidth": 305,
+      "label": "Как работи",
+      "overflowY": "auto",
+      "preparationCount": 3,
+      "scrollHeight": 990,
+      "scrollWidth": 305,
+      "stepCount": 3
+    },
+    {
+      "case": "bg-320-scroll-to-last-advice",
+      "dialogBottom": 884,
+      "finalAdviceBottom": 844.375,
+      "lastAdviceTitle": "Списък за снимките",
+      "scrollTop": 154
+    },
+    {
+      "case": "bg-320-escape-focus-return",
+      "dialogs": 0,
+      "focus": "Как работи",
+      "focusVisible": true,
+      "outline": "rgb(38, 38, 41) solid 2px",
+      "url": "http://127.0.0.1:6483/bg/sell"
+    },
+    {
+      "adviceTitles": [
+        "Car valuation",
+        "Service history",
+        "Photo checklist"
+      ],
+      "case": "en-320-combined-drawer",
+      "clientWidth": 305,
+      "label": "How it works",
+      "preparationHeading": "Before you sell",
+      "scrollWidth": 305,
+      "stepCount": 3
+    },
+    {
+      "case": "en-desktop-exchange-action",
+      "choices": [],
+      "dialog": "sell-enquiry-title",
+      "accessibilityObservation": {
+        "Sell": false,
+        "Exchange": true
+      }
+    },
+    {
+      "case": "bg-320-sale-action",
+      "choices": [],
+      "dialog": "sell-enquiry-title",
+      "accessibilityObservation": {
+        "Продай": true,
+        "Замяна": false
+      }
+    }
+  ],
+  "consoleErrorsAndWarnings": [],
+  "layoutFailures": [],
+  "build": {
+    "command": "npm run check",
+    "node": "22.20.0",
+    "distDir": ".next-build-check",
+    "exitCode": 0,
+    "staticPages": 407
+  },
+  "notes": [
+    "Measurements were recorded after the page settled.",
+    "An initial English action immediately after navigation did not open the drawer; the settled page opened successfully.",
+    "Two body Control+End actions timed out; responsive full-page captures and verification were completed.",
+    "No enquiry was submitted.",
+    "Temporary viewport overrides were reset."
+  ]
+}
