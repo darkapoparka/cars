@@ -341,7 +341,9 @@ The mobile menu uses plain navigation rows on white, with the neutral selection 
 
 Visible mobile overlay titles use the 1.3 control leading role so enlarged glyphs fit inside their heading box while preserving room for the close button. Inventory uses the concise localized Filters title below 768px, while desktop retains Car search. Escape closes advice search immediately, including when its search field contains a query, and restores focus to its opener. Sell/Import mobile entry grids allow their single column to shrink within the card, including at 200% text size in WebKit.
 
-Below 768px, `QuickFilterSheet.svelte` gives native radio and checkbox inputs a shared 20px selection mark: round for single choices, rounded square for multiple choices, and a solid brand-accent fill with a white check when selected. Selected rows use a white surface and the existing neutral outline; keyboard focus outlines the complete row. Choice labels can wrap with enlarged text while controls remain centered and rows retain their 44px minimum target. Forced-colors mode uses native input rendering. Tablet and desktop retain their existing input presentation.
+Below 768px, `QuickFilterSheet.svelte` retains 20px single-choice radios with a 2px outline and centered 8px dot. Selected rows use the shared `--dn-mobile-filter-selection-surface` and `--dn-mobile-filter-selection-ink` roles: the CTA charcoal surface with white copy, radio outline and dot. Equipment checkboxes retain native rendering with a white selected accent. Unselected rows keep the pale panel surface. Keyboard focus uses an inset white outline on selected rows and the existing dark outline otherwise. Choice labels can wrap with enlarged text while controls remain centered and rows retain their 44px minimum target. Forced-colors mode uses native radio rendering. Tablet and desktop retain their existing input presentation. Home option cards consume the same selected surface/ink roles.
+
+Matched 320px captures compare the [grey selected row](mobile-selection-2026-10-04/before-bg-320.jpg) with the [black selected row](mobile-selection-2026-10-04/after-bg-320.jpg).
 
 ## Homepage patterns
 
