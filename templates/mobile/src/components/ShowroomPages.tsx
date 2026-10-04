@@ -55,13 +55,13 @@ const s = stylex.create({
   title: { fontSize: 28, lineHeight: '36px', fontWeight: 700 },
   intro: { fontSize: 16, lineHeight: '24px', color: colors.muted },
   subTitle: { fontSize: 18, lineHeight: '24px', fontWeight: 700 },
+  search: { paddingTop: 4 },
   tabs: {
     position: 'sticky',
-    top: 60,
+    top: 0,
     zIndex: 25,
+    display: 'flow-root',
     backgroundColor: colors.background,
-    paddingTop: 4,
-    paddingBottom: 0,
   },
   serviceFlow: {
     display: 'grid',
@@ -427,10 +427,12 @@ export function ShowroomServicesScreen() {
   }
   return (
     <>
-      <Header home />
+      <Header home sticky={false} />
       <h1 {...stylex.props(ui.srOnly)}>{t('Services')}</h1>
-      <div {...stylex.props(s.tabs)}>
+      <div {...stylex.props(s.search)}>
         <ShowroomSearch label={t('Search services')} value={query} onOpen={openSearch} />
+      </div>
+      <div data-showroom-controls {...stylex.props(s.tabs)}>
         <ShowroomTabs
           label={t('Service category')}
           tabs={serviceCategories}

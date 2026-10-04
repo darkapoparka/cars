@@ -1,0 +1,121 @@
+{
+  "At": "2026-10-04T03:36:11.9779211Z",
+  "Base": "http://127.0.0.1:6474",
+  "Engines": ["chromium", "webkit"],
+  "Checks": [
+    {
+      "engine": "chromium",
+      "description": "The standard favicon URL serves a real icon"
+    },
+    {
+      "engine": "chromium",
+      "description": "bg: main routes render with images and without overflow at 320/390/1440px"
+    },
+    {
+      "engine": "chromium",
+      "description": "bg: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus"
+    },
+    {
+      "engine": "chromium",
+      "description": "bg: dock labels stay visible, equal and contained at 200% text size"
+    },
+    {
+      "engine": "chromium",
+      "description": "en: main routes render with images and without overflow at 320/390/1440px"
+    },
+    {
+      "engine": "chromium",
+      "description": "en: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus"
+    },
+    {
+      "engine": "chromium",
+      "description": "en: dock labels stay visible, equal and contained at 200% text size"
+    },
+    {
+      "engine": "chromium",
+      "description": "Narrow BG cards keep paired facts; search fits and Escape cancels the draft and returns focus"
+    },
+    {
+      "engine": "chromium",
+      "description": "PDP enquiry targets and vehicle context survive detail-tab keyboard navigation"
+    },
+    {
+      "engine": "chromium",
+      "description": "Specifications return focus to their pointer opener in both browser engines"
+    },
+    {
+      "engine": "chromium",
+      "description": "Contact reports denied storage, retains session edits across navigation, and retries with one write that survives reload"
+    },
+    {
+      "engine": "chromium",
+      "description": "Validation keeps field names stable and exposes errors as descriptions"
+    },
+    {
+      "engine": "chromium",
+      "description": "The service stepper cannot claim a ready Contact draft when only its own form storage succeeds"
+    },
+    {
+      "engine": "chromium",
+      "description": "Reference message screen suppresses false success; all enquiry actions stay local"
+    },
+    {
+      "engine": "webkit",
+      "description": "The standard favicon URL serves a real icon"
+    },
+    {
+      "engine": "webkit",
+      "description": "bg: main routes render with images and without overflow at 320/390/1440px"
+    },
+    {
+      "engine": "webkit",
+      "description": "bg: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus"
+    },
+    {
+      "engine": "webkit",
+      "description": "bg: dock labels stay visible, equal and contained at 200% text size"
+    },
+    {
+      "engine": "webkit",
+      "description": "en: main routes render with images and without overflow at 320/390/1440px"
+    },
+    {
+      "engine": "webkit",
+      "description": "en: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus"
+    },
+    {
+      "engine": "webkit",
+      "description": "en: dock labels stay visible, equal and contained at 200% text size"
+    },
+    {
+      "engine": "webkit",
+      "description": "Narrow BG cards keep paired facts; search fits and Escape cancels the draft and returns focus"
+    },
+    {
+      "engine": "webkit",
+      "description": "PDP enquiry targets and vehicle context survive detail-tab keyboard navigation"
+    },
+    {
+      "engine": "webkit",
+      "description": "Specifications return focus to their pointer opener in both browser engines"
+    },
+    {
+      "engine": "webkit",
+      "description": "Contact reports denied storage, retains session edits across navigation, and retries with one write that survives reload"
+    },
+    {
+      "engine": "webkit",
+      "description": "Validation keeps field names stable and exposes errors as descriptions"
+    },
+    {
+      "engine": "webkit",
+      "description": "The service stepper cannot claim a ready Contact draft when only its own form storage succeeds"
+    },
+    {
+      "engine": "webkit",
+      "description": "Reference message screen suppresses false success; all enquiry actions stay local"
+    }
+  ],
+  "Errors": [],
+  "Passed": true
+}

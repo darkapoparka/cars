@@ -13,6 +13,10 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
+On Cars and Services, the logo header and search scroll with the page. Only the
+category tabs and quick-filter pills stay pinned at the top while browsing.
+The raised white tab rail retains its spacing and shadow. Detail and editor
+headers remain sticky so Back and dismissal controls stay available.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
 capped at 204px with at least 16px side gutters, 24px corners and a restrained
 shadow. At normal text size it is 48px tall. The three equal-width links retain
@@ -54,7 +58,7 @@ fields outline their complete rounded container; their inner inputs have no
 separate outline. Range keyboard focus identifies the active thumb. Price, year
 and mileage cards are 64px tall at normal text size, retain 16px values and keep
 both bounds side by side at 320px. They stack when enlarged text needs more width.
-Orange remains the primary action, selected range and validation-error color.
+Orange remains the form-action, selected-range and validation-error color.
 
 Home search and filter pills open one editor with the same underline tabs: Search,
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
@@ -73,12 +77,15 @@ as the header, with a 36px face inside a 48px button and an explicit pressed sta
 Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
 The retained price rating sits opposite the price, with slimmer bars and a 44px
 details target. The finance entry uses a neutral rounded row and shorter label;
-48px Contact and Enquire actions use 15px medium text, with Enquire as the primary
-action. Price reductions use a small plain chip. One raised white information
+Contact and Enquire actions use 15px medium text, with 44px mobile targets and
+48px targets on larger screens. Enquire uses the existing near-black text token
+with white text and a visible outside focus ring. Price reductions use a small
+plain chip. One raised white information
 sheet overlaps the photo by 20px, with rounded top corners and a small handle.
 Three equal-width Details / Photos / Features underline tabs sit at the sheet's
 entrance, before the title and price, so they remain visible on short phone screens.
-The handle and tab rail stick beneath the header within the information section;
+The selected detail tab uses the same neutral text token for its label and
+underline. The handle and tab rail stick beneath the header within the information section;
 the page retains one browser scroll.
 Details contains the title, price, finance and contact block, mileage and other
 summary facts, technical data and description. These sections share one continuous
@@ -123,9 +130,8 @@ editor tabs scroll horizontally at their own widths. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills sit on the same white canvas as the listings below.
-Their grey 40px outlined faces use 15px text
-inside 48px targets. Selected pills keep their grey background, with darker
-text and a stronger border.
+Their white 40px outlined faces use 15px text inside 48px targets. Selected pills
+use a near-black fill with white labels and icons.
 Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
 the 52px rail height and horizontal scrolling. Their original pixels and alpha
 are preserved.

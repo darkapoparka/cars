@@ -37,12 +37,13 @@ const s = stylex.create({
     objectFit: 'contain',
     flexShrink: 0,
   },
+  search: { paddingTop: 4 },
   controls: {
     position: 'sticky',
-    top: 60,
+    top: 0,
     zIndex: 25,
+    display: 'flow-root',
     backgroundColor: colors.background,
-    paddingTop: 4,
   },
   filterCount: {
     display: 'inline-flex',
@@ -236,13 +237,19 @@ export function ShowroomInventoryScreen() {
   ];
   return (
     <>
-      <Header home showLanguageSwitcher />
-      <section aria-label={t('Find a vehicle')} {...stylex.props(s.controls)}>
+      <Header home showLanguageSwitcher sticky={false} />
+      <div {...stylex.props(s.search)}>
         <ShowroomSearch
           label={t('Search make or model')}
           value={filters.query}
           onOpen={(button) => openSheet('search', button)}
         />
+      </div>
+      <section
+        aria-label={t('Find a vehicle')}
+        data-showroom-controls
+        {...stylex.props(s.controls)}
+      >
         <ShowroomTabs
           label={t('Vehicle category')}
           variant="icon"

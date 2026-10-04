@@ -360,6 +360,7 @@ export function VehicleSections({
               selected={section}
               panelId={panelId}
               idPrefix={tabPrefix}
+              tone="neutral"
               layout="fill"
               flush
               onChange={selectSection}

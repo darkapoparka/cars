@@ -161,6 +161,49 @@ async function run(name, engine) {
         }
       }
       check(`${locale}: main routes render with images and without overflow at 320/390/1440px`);
+      for (const width of [320, 390]) {
+        viewport = { width, height: 844 };
+        for (const [route, searchLabel] of [
+          ['/', locale === 'bg' ? 'Марка или модел' : 'Search make or model'],
+          ['/services', locale === 'bg' ? 'Търсене на услуга' : 'Search services'],
+        ]) {
+          await go(route, locale);
+          const search = page.getByRole('button', { name: searchLabel, exact: true });
+          await page.evaluate(() => window.scrollTo(0, 250));
+          await page.waitForFunction(
+            () =>
+              Math.abs(
+                document.querySelector('[data-showroom-controls]').getBoundingClientRect().top,
+              ) < 1,
+          );
+          assert.ok(
+            await page
+              .locator('header')
+              .evaluate((element) => element.getBoundingClientRect().bottom <= 0),
+            'The showroom brand header scrolls away',
+          );
+          assert.ok(
+            await search.evaluate((element) => element.getBoundingClientRect().bottom <= 0),
+            'Search scrolls away while category tabs and filters remain available',
+          );
+          if (route === '/') {
+            const price = page.locator('[data-quick-filter="price"]');
+            const scrollPosition = await page.evaluate(() => scrollY);
+            await price.click();
+            await page.getByRole('dialog').waitFor();
+            await page.keyboard.press('Escape');
+            await page.getByRole('dialog').waitFor({ state: 'hidden' });
+            assert.equal(
+              await price.evaluate((element) => element === document.activeElement),
+              true,
+            );
+            assert.ok(Math.abs((await page.evaluate(() => scrollY)) - scrollPosition) < 1);
+          }
+        }
+      }
+      check(
+        `${locale}: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus`,
+      );
       viewport = { width: 320, height: 700 };
       await go('/', locale);
       await page.addStyleTag({ content: 'html { font-size: 200%; }' });
@@ -204,6 +247,25 @@ async function run(name, engine) {
       'Narrow BG cards keep paired facts; search fits and Escape cancels the draft and returns focus',
     );
 
+    viewport = { width: 390, height: 844 };
+    await go('/vehicle/bmw-540');
+    const inlineEnquiry = page.getByRole('link', { name: 'Enquire', exact: true });
+    assert.ok((await inlineEnquiry.boundingBox()).height >= 44, 'Comfortable enquiry target');
+    const details = page.getByRole('tab', { name: 'Details', exact: true });
+    await details.focus();
+    await page.keyboard.press('ArrowRight');
+    await page.getByRole('tab', { name: 'Photos', exact: true, selected: true }).waitFor();
+    const fixedEnquiry = page.locator('[data-vehicle-contact-dock] a');
+    assert.ok((await fixedEnquiry.boundingBox()).height >= 44);
+    assert.equal(await fixedEnquiry.getAttribute('href'), '/contact?vehicle=bmw-540');
+    await page.keyboard.press('ArrowRight');
+    const extras = page.getByRole('tab', { name: 'Features', exact: true, selected: true });
+    await extras.waitFor();
+    assert.equal(
+      await page.locator('header').evaluate((element) => element.getBoundingClientRect().top),
+      0,
+    );
+    check('PDP enquiry targets and vehicle context survive detail-tab keyboard navigation');
     viewport = { width: 390, height: 844 };
     await go('/vehicle/bmw-x6');
     await page.getByRole('tab', { name: 'Details', exact: true }).focus();

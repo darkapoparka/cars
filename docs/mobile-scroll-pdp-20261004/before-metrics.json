@@ -1,0 +1,71 @@
+{
+  "showroom": {
+    "height": 844,
+    "scrollY": 633,
+    "sticky": [
+      {
+        "height": 60,
+        "label": null,
+        "tag": "HEADER",
+        "top": "0px",
+        "y": 0
+      },
+      {
+        "height": 172,
+        "label": "Намерете автомобил",
+        "tag": "SECTION",
+        "top": "60px",
+        "y": 60
+      }
+    ],
+    "width": 390
+  },
+  "services": {
+    "height": 844,
+    "scrollY": 306,
+    "sticky": [
+      {
+        "height": 60,
+        "tag": "HEADER",
+        "top": "0px",
+        "y": 0
+      },
+      {
+        "height": 172,
+        "tag": "DIV",
+        "top": "60px",
+        "y": 60
+      }
+    ],
+    "width": 390
+  },
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pdpScrollY": 633,
+  "pdp": {
+    "width": 390,
+    "height": 844,
+    "scrollY": 0,
+    "actions": [
+      {
+        "width": 167.5,
+        "height": 48,
+        "y": 523.296875,
+        "background": "rgb(219, 48, 0)",
+        "color": "rgb(255, 255, 255)"
+      }
+    ]
+  },
+  "pdpDock": {
+    "scrollY": 633,
+    "dock": [
+      {
+        "width": 104.203125,
+        "height": 44,
+        "background": "rgb(219, 48, 0)"
+      }
+    ]
+  }
+}

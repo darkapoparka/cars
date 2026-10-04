@@ -21,6 +21,8 @@ const s = stylex.create({
     paddingInline: 0,
     gap: 4,
     backgroundColor: colors.background,
+  },
+  sticky: {
     position: 'sticky',
     top: 0,
     zIndex: 30,
@@ -87,6 +89,7 @@ export function Header({
   back,
   children,
   home = false,
+  sticky = true,
   showLanguageSwitcher = false,
   onBack,
   backIcon = 'back',
@@ -95,6 +98,7 @@ export function Header({
   back?: string;
   children?: ReactNode;
   home?: boolean;
+  sticky?: boolean;
   showLanguageSwitcher?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
@@ -102,7 +106,7 @@ export function Header({
   const { t } = useLocale();
   const { parked, filters, inventorySort } = useAppState();
   return (
-    <header {...stylex.props(s.header, home && s.home)}>
+    <header {...stylex.props(s.header, sticky && s.sticky, home && s.home)}>
       {(back || onBack) && (
         <IconButton
           href={onBack ? undefined : back}

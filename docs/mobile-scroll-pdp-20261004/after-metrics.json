@@ -1,0 +1,56 @@
+{
+  "showroom": {
+    "controls": {
+      "height": 124,
+      "y": 0
+    },
+    "headerBottom": -573,
+    "height": 844,
+    "scrollY": 633,
+    "searchBottom": -525,
+    "width": 390
+  },
+  "showroomTop": {
+    "controls": {
+      "height": 124,
+      "y": 108
+    },
+    "scrollY": 0
+  },
+  "services": {
+    "controls": {
+      "height": 124,
+      "y": 0
+    },
+    "headerBottom": -246,
+    "height": 844,
+    "scrollY": 306,
+    "width": 390
+  },
+  "pdp": {
+    "actions": [
+      {
+        "background": "rgb(27, 27, 33)",
+        "color": "rgb(255, 255, 255)",
+        "height": 44,
+        "width": 167.5,
+        "y": 523.296875
+      }
+    ],
+    "height": 844,
+    "scrollY": 0,
+    "underline": "rgb(27, 27, 33)",
+    "width": 390
+  },
+  "pdpDock": {
+    "dock": [
+      {
+        "background": "rgb(27, 27, 33)",
+        "height": 44,
+        "width": 104.203125
+      }
+    ],
+    "headerTop": 0,
+    "scrollY": 633
+  }
+}
