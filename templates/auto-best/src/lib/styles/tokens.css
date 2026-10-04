@@ -64,6 +64,7 @@
   --dn-space-8: 32px;
   --dn-control-height-compact: 40px;
   --dn-control-height-default: 44px;
+  --dn-control-height-entry-mobile: 48px;
   --dn-control-height-prominent: 52px;
   --dn-control-height-editor: var(--dn-control-height-default);
   --dn-compact-control-visual-height: var(--dn-control-height-compact);
