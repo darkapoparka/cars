@@ -642,9 +642,9 @@
       left: max(var(--dn-mobile-nav-gutter), env(safe-area-inset-left));
       min-height: var(--dn-mobile-nav-bar-height);
       grid-template-columns: repeat(5, minmax(0, 1fr));
-      padding: var(--dn-space-1) var(--dn-space-2);
+      padding: var(--dn-space-half) var(--dn-space-2);
       border: 1px solid var(--dn-line);
-      border-radius: var(--dn-radius-lg);
+      border-radius: var(--dn-radius);
       background: var(--dn-mobile-surface);
       box-shadow: var(--dn-card-shadow);
       transition: transform 180ms ease, opacity 150ms ease;
@@ -665,9 +665,9 @@
       min-height: var(--dn-control-height-default);
       place-items: center;
       align-content: center;
-      grid-template-rows: var(--dn-space-7) auto;
+      grid-template-rows: var(--dn-space-6) auto;
       gap: var(--dn-space-half);
-      padding: 3px 0;
+      padding: 0;
       border: 0;
       border-radius: var(--dn-radius);
       background: transparent;
@@ -688,17 +688,24 @@
       font-weight: var(--dn-weight-semibold);
     }
 
-    .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon {
-      background: var(--dn-mobile-selection-surface);
-      color: inherit;
+    .dn-mobile-bottom-nav :is(a.active, button.active) .dn-mobile-bottom-nav__icon::after {
+      position: absolute;
+      right: 0;
+      bottom: calc(0px - var(--dn-space-half));
+      left: 0;
+      width: var(--dn-space-3);
+      height: var(--dn-space-half);
+      margin-inline: auto;
+      background: currentColor;
+      content: '';
     }
 
     .dn-mobile-bottom-nav__icon {
+      position: relative;
       display: grid;
-      width: var(--dn-compact-control-visual-height);
-      height: var(--dn-space-7);
+      width: var(--dn-space-6);
+      height: var(--dn-space-6);
       place-items: center;
-      border-radius: var(--dn-pill);
     }
 
     .dn-mobile-bottom-nav :global(.dn-icon) {
@@ -732,7 +739,7 @@
 
       .dn-mobile-bottom-nav a,
       .dn-mobile-bottom-nav button {
-        grid-template-rows: var(--dn-space-7);
+        grid-template-rows: var(--dn-space-6);
         gap: 0;
       }
     }

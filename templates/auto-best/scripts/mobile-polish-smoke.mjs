@@ -250,7 +250,9 @@ try {
             transmission: locale === 'bg' ? 'Автоматик' : 'Automatic', fits: true }, 'Model and price have distinct roles; full transmission fits');
           const viewAll = page.locator('.dn-search__mobile-all:visible').first();
           await compactControl(viewAll, { icon: true });
-          assert.match(await viewAll.innerText(), /\([1-9]\d*\)/, 'Home action exposes the inventory count');
+          assert.equal((await viewAll.innerText()).trim(), locale === 'bg' ? 'Виж всички' : 'View all',
+            'Home action has a concise localized label without a competing count');
+          assert.match(await viewAll.getAttribute('href'), /\/listing-grid$/, 'Home action still opens the inventory');
           await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
           const dock = page.locator('.dn-mobile-bottom-nav');
           const dockControls = dock.locator('a,button');
@@ -283,7 +285,14 @@ try {
           assert.equal(await dock.locator('svg[data-icon-family="fluent-system-regular"][data-icon-state="regular"][viewBox="0 0 24 24"][fill="currentColor"]').count(), 5,
             'All five mobile dock glyphs use official Fluent Regular geometry');
           assert.equal(await dock.locator('a[aria-current="page"] [data-icon-active="true"]').count(), 1,
-            'The active destination retains Regular geometry and its existing selection highlight');
+            'The active destination retains Regular geometry');
+          const activeMark = await dock.locator('a[aria-current="page"] .dn-mobile-bottom-nav__icon').evaluate(el => {
+            const mark = getComputedStyle(el, '::after');
+            return { surface: getComputedStyle(el).backgroundColor, color: mark.backgroundColor, radius: mark.borderRadius,
+              width: parseFloat(mark.width), height: parseFloat(mark.height) };
+          });
+          assert(activeMark.surface === 'rgba(0, 0, 0, 0)' && activeMark.color !== 'rgba(0, 0, 0, 0)' && activeMark.radius === '0px' && activeMark.width > activeMark.height,
+            'Selection uses a visible flat mark beneath the icon without a surrounding pill');
           assert.equal(await dock.locator('a:not([aria-current="page"]) [data-icon-active="false"]').count(), 3,
             'Inactive destinations retain the same Regular geometry');
           assert.equal(await dock.locator('path[opacity]').count(), 0, 'Dock glyphs have no grey duotone layer');

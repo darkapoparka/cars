@@ -79,7 +79,7 @@
   --dn-mobile-nav-gutter: var(--dn-space-3);
   --dn-mobile-nav-offset: var(--dn-space-2);
   --dn-mobile-nav-height: calc(var(--dn-mobile-nav-bar-height) + var(--dn-mobile-nav-offset) + var(--dn-space-4));
-  --dn-mobile-nav-bar-height: max(60px, calc(24px + 0.975rem + 12px));
+  --dn-mobile-nav-bar-height: max(52px, calc(24px + 0.975rem + 8px));
   --dn-mobile-detail-bar-height: max(60px, calc(2.75rem + 16px));
   --dn-mobile-page-end: var(--dn-space-4);
   --dn-radius-control: 12px;
