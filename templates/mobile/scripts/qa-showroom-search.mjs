@@ -81,20 +81,25 @@ for (const [engineName, engine] of engines) {
             const rowLayout = await makeRows.evaluateAll((rows) =>
               rows.map((row) => {
                 const button = row.querySelector('button');
-                const logo = button.children[0].getBoundingClientRect();
                 return {
+                  name: row.dataset.makeOption,
                   border: getComputedStyle(row).borderBottomWidth,
                   buttonBorder: getComputedStyle(button).borderBottomWidth,
-                  logoWidth: logo.width,
-                  textLeft: button.children[1].getBoundingClientRect().left,
+                  logoWidth: button.querySelector('img')?.getBoundingClientRect().width || 0,
                   buttonHeight: button.getBoundingClientRect().height,
                 };
               }),
             );
             assert.equal(rowLayout.length, 2);
             assert.ok(rowLayout.every((row) => row.border === '0px' && row.buttonBorder === '0px'));
-            assert.ok(rowLayout.every((row) => row.logoWidth === 32 && row.buttonHeight >= 48));
-            assert.equal(rowLayout[0].textLeft, rowLayout[1].textLeft);
+            assert.ok(rowLayout.every((row) => row.buttonHeight >= 48));
+            assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 0);
+            assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
+            assert.equal(
+              await allMakes.evaluate((element) => getComputedStyle(element).borderRadius),
+              '12px',
+            );
             assert.equal(
               await allMakes
                 .locator(':scope > span:last-child')
@@ -117,6 +122,29 @@ for (const [engineName, engine] of engines) {
                   rows.every((row) => getComputedStyle(row).borderBottomWidth === '0px'),
                 ),
             );
+            const familyButton = page.getByRole('button', {
+              name: labels.expandSeries,
+              exact: true,
+            });
+            const familyLayout = await familyButton.evaluate((button) => {
+              const name = button.firstElementChild.getBoundingClientRect();
+              const arrow = button.lastElementChild.getBoundingClientRect();
+              const circle = button.parentElement.querySelector('input').getBoundingClientRect();
+              return {
+                nameLeft: name.left,
+                arrowRight: arrow.right,
+                arrowCenterY: arrow.top + arrow.height / 2,
+                circleCenterY: circle.top + circle.height / 2,
+              };
+            });
+            assert.ok(familyLayout.arrowRight < familyLayout.nameLeft);
+            assert.equal(familyLayout.arrowCenterY, familyLayout.circleCenterY);
+            const plainNameLeft = await page
+              .locator(
+                '[data-showroom-model-options] [data-model-node="2002"] label > span:first-child',
+              )
+              .evaluate((element) => element.getBoundingClientRect().left);
+            assert.equal(plainNameLeft, familyLayout.nameLeft);
             await allModels.press('Space');
             await page.getByRole('textbox', { name: labels.makeSearch, exact: true }).waitFor();
             assert.equal(await allModels.count(), 0);
@@ -156,6 +184,13 @@ for (const [engineName, engine] of engines) {
             assert.equal(await series.isChecked(), true);
             await allModels.check();
             assert.equal(await series.isChecked(), false);
+            await page.getByRole('button', { name: labels.back, exact: true }).click();
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'false');
+            // The reset preset clears brand/model criteria, including taps on its padding.
+            await allMakes.click({ position: { x: 2, y: 24 } });
+            assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
+            await bmw.click();
+            assert.equal(await allModels.isChecked(), true);
             await allModels.press('Space');
             await page.getByRole('button', { name: labels.apply }).click();
             await page.locator('dialog[open]').waitFor({ state: 'hidden' });
@@ -169,6 +204,14 @@ for (const [engineName, engine] of engines) {
               await allModels.evaluate((element) => getComputedStyle(element).borderRadius),
               '5px',
             );
+            const arrowOnRight = await page
+              .getByRole('button', { name: labels.expandSeries, exact: true })
+              .evaluate(
+                (button) =>
+                  button.lastElementChild.getBoundingClientRect().left >
+                  button.firstElementChild.getBoundingClientRect().left,
+              );
+            assert.equal(arrowOnRight, true);
             await page.getByRole('button', { name: labels.close, exact: true }).click();
           }
           assert.equal(
@@ -181,8 +224,8 @@ for (const [engineName, engine] of engines) {
             width,
             description:
               width < 700
-                ? 'Search draft/apply, aligned borderless make rows, full-row taps, circular native checkboxes, mixed selection and brand back navigation'
-                : 'Desktop search draft/apply and preserved square model checkboxes',
+                ? 'Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation'
+                : 'Desktop search draft/apply, square checkboxes and trailing disclosure arrows',
           });
         } finally {
           await context.close();

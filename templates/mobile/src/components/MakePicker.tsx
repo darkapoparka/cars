@@ -587,6 +587,9 @@ export function MakePicker({
                       <button
                         type="button"
                         key={name}
+                        aria-pressed={
+                          embedded && name === 'Any' ? !selectedMakes.length : undefined
+                        }
                         onClick={() =>
                           selected
                             ? editSelectedMake(name, selected.excluded)
@@ -595,17 +598,14 @@ export function MakePicker({
                         {...stylex.props(
                           s.make,
                           embedded && s.embeddedMake,
+                          embedded && name === 'Any' && s.allMakes,
                           sectionIndex === sections.length - 1 &&
                             index === section.names.length - 1 &&
                             !embedded &&
                             s.lastMake,
                         )}
                       >
-                        {embedded && name === 'Any' ? (
-                          <span aria-hidden="true" {...stylex.props(s.allMakesIcon)}>
-                            <Icon name="grid" size={20} />
-                          </span>
-                        ) : (
+                        {(name !== 'Any' || !embedded) && (
                           <BrandLogo make={name} size={embedded ? 32 : 40} />
                         )}
                         <span
@@ -629,9 +629,9 @@ export function MakePicker({
                             <span aria-hidden="true" {...stylex.props(s.selectedMark)}>
                               <Icon name="check" size={14} />
                             </span>
-                          ) : (
+                          ) : name !== 'Any' ? (
                             <Icon name="right" size={18} />
-                          ))}
+                          ) : null)}
                       </button>
                     );
                     return embedded ? (

@@ -1,0 +1,126 @@
+{
+  "at": "2026-10-04T08:52:37.7428369Z",
+  "passed": true,
+  "build": {
+    "at": "2026-10-04T08:45:13.392233Z",
+    "passed": true,
+    "distDir": ".next-picker-affordance-20261004",
+    "buildId": "ASuyGy9-pEaymsdhYw5lB",
+    "sourceChecks": [
+      "lint",
+      "TypeScript",
+      "92 domain/localization tests",
+      "touched file formatting",
+      "QA script syntax"
+    ]
+  },
+  "browserCases": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "description": "Search draft/apply, compact brand reset, leading disclosure arrows, aligned model names, full-row taps, mixed selection and brand back navigation"
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 1440,
+      "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+    }
+  ],
+  "screenshots": [
+    {
+      "view": "makes-390",
+      "width": 390,
+      "height": 844,
+      "changedPixels": 20736
+    },
+    {
+      "view": "models-390",
+      "width": 390,
+      "height": 844,
+      "changedPixels": 38677
+    },
+    {
+      "view": "desktop-1440",
+      "width": 1440,
+      "height": 900,
+      "changedPixels": 64942
+    }
+  ],
+  "preview": {
+    "url": "http://127.0.0.1:6474/?lang=bg&filter=make",
+    "verified": true,
+    "allBrands": {
+      "height": 48,
+      "pressed": true,
+      "cornerRadius": "12px",
+      "logoCount": 0
+    },
+    "disclosure": {
+      "arrowLeft": 24,
+      "nameLeft": 50,
+      "rowHeight": 52
+    }
+  }
+}

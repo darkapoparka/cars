@@ -101,7 +101,7 @@ export function ShowroomModelOptions({
       ? draft.selected.includes(key) || Boolean(parent && draft.selected.includes(parent.name))
       : !draft.selected.length;
     return (
-      <label {...stylex.props(s.choice, parent && s.childChoice)}>
+      <label {...stylex.props(s.choice, !desktop && !name && s.allChoice, parent && s.childChoice)}>
         <span {...stylex.props(s.name)}>
           {name || make || t('Any model')}
           {!name && make && <span {...stylex.props(s.allModelCopy)}>{t('All models')}</span>}

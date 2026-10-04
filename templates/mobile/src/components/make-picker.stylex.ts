@@ -122,14 +122,13 @@ export const pickerStyles = stylex.create({
     borderBottomStyle: 'solid',
     borderBottomColor: colors.stripe,
   },
-  allMakesIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 32,
-    height: 32,
-    flexShrink: 0,
-    color: colors.muted,
+  allMakes: {
+    minHeight: 48,
+    marginBottom: 8,
+    paddingInline: 12,
+    borderRadius: 12,
+    backgroundColor: { default: colors.stripe, ':active': colors.controlSurface },
+    fontSize: 14,
   },
   selectedMark: {
     display: 'flex',
