@@ -50,14 +50,6 @@ export const mobileActionArtwork = {
 export const homeActionArtwork = mobileActionArtwork;
 export const homeServicesArtwork = serviceIllustrationArtwork.overview;
 
-// Letterbox an illustration into an existing hero frame without stretching it.
-export function frameIllustration(artwork: FeatureArtwork, ratio: number): FeatureArtwork {
-  const [x, y, width, height] = artwork.crop;
-  const frameWidth = Math.max(width, height * ratio);
-  const frameHeight = frameWidth / ratio;
-  return { ...artwork, crop: [x - (frameWidth - width) / 2, y - (frameHeight - height) / 2, frameWidth, frameHeight] };
-}
-
 export function illustrationVehicleArtwork(artwork: FeatureArtwork, view: string) {
   const [x, y, width, height] = artwork.crop;
   return { src: artwork.src, width: artwork.width, height: artwork.height, bounds: [x, y, x + width, y + height], view } as const;

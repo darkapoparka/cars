@@ -1,0 +1,15 @@
+# Scoped integration record
+
+The services action/copy, [responsive correction](../services-banner-responsive-2026-10-04/README.md), [compact follow-up](../services-banner-compact-2026-10-04/README.md) and [CTA shape follow-up](../services-banner-cta-shape-2026-10-04/README.md) are implemented and verified locally. The final owner correction restores the shared rounded button shape while keeping the slim height and medium text. Earlier passes were blocked by the shared `L:/CODEX/cars/.git/index.lock` (zero bytes, last write 4 October 2026 at 03:08:06 +03); this task did not remove or bypass it. On the final rounded correction, an explicit path check found the lock absent and workspace-doctor fetched Cars main with no divergence. The repository is `L:/CODEX/cars`, branch `main`, initial source baseline `6c92fdc2758d5d5b985a9c8a9004c7bb969d313a`, integration parent `aaf7af021a30fffe1967fd84d9b6fc30223a627d`. The intervening App commit was reviewed and changes no Auto Best path. The active preview is `http://127.0.0.1:6461`.
+
+This combined plan includes the earlier restoration of the original front-facing mobile heroes. Use this handoff instead of the earlier restoration-only helper. It owns the hero data rollback, its mobile source assertions, the services overview component, the scoped locale messages/catalog/manifest, task-only styling/provenance notes, and all five evidence folders. Pre-existing desktop/content drafts, including the team contact message and reviewed catalog edits, stay outside staging.
+
+The guarded integration commands below apply only to that integration parent; after a successful commit, their HEAD guard prevents replay. From `L:/CODEX/cars/templates/auto-best`:
+
+```powershell
+& 'L:/Toolchains/Node/22.20.0/node.exe' 'runtime/services-banner-cta-20261004/prepare-scoped-staging.mjs'
+& 'L:/Toolchains/Node/22.20.0/node.exe' 'runtime/services-banner-cta-20261004/stage-reviewed.mjs'
+& 'L:/Toolchains/Node/22.20.0/node.exe' 'runtime/services-banner-cta-20261004/commit-reviewed.mjs'
+```
+
+Review the generated partial patch before staging. The helpers check source baselines, hashes, main/HEAD, an empty index and exact owned files/hunks; stop if another writer has changed or staged them. Non-force push the exact committed SHA to `origin/main`, fetch and verify it on remote main. The final rounded correction passed CSS/token/typography checks, a fresh production build and four native geometry cases. Its only source change from the preceding slim version removes the local button-radius override. The preceding slim version passed eleven BG/EN geometry cases and stays hidden at 768/1440px; its Svelte check had zero errors and one existing desktop-filter warning. The older compact version passed local validation/build and both reflow cases, while its broad smoke runner stalled before producing a result. Those earlier results remain historical. Working-tree checks include preserved unrelated drafts; they do not certify an immutable release. No template promotion or dealer deployment is included.

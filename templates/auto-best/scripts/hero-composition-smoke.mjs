@@ -23,10 +23,11 @@ try {
         await images.evaluateAll(imgs=>Promise.all(imgs.map(image=>image.decode())));
         assert(box.x>=0&&box.x+box.width<=width,'Complete hero scene stays within viewport');
         assert(box.y>=frame.y-1&&box.y+box.height<=frame.y+frame.height+1,'Hero scene is not clipped vertically');
+        if(topic==='home') assert.match(await images.first().evaluate(e=>e.currentSrc),/\/day-night-collection-banner-v2(?:-480)?\.webp$/,'Home keeps the original front-facing hero pair');
         if(topic!=='home') {
           const car=main.locator('.dn-hero-vehicles__shared-car');
           const carImage=car.locator('img');
-          assert.match(await carImage.evaluate(e=>e.currentSrc),/\/service-car-silver-v2\.webp$/,'Both routes use the exact same approved silver estate cutout');
+          assert.match(await carImage.evaluate(e=>e.currentSrc),/\/service-sell-front-v3(?:-480)?\.webp$/,'Both routes keep the original shared front-facing hero car');
           const carBox=await car.boundingBox();
           await car.screenshot({path:`${output}/${locale}-${width}-${topic}-car.png`});
           const rendering=await carImage.evaluate(async image=>{

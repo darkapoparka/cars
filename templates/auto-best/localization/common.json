@@ -233,12 +233,16 @@
     "bg": "Всички услуги"
   },
   "home.services.detail": {
-    "en": "Viewing, import & finance",
-    "bg": "Оглед, внос и лизинг"
+    "en": "For your car",
+    "bg": "За вашата кола"
   },
   "home.services.action": {
-    "en": "Explore services",
+    "en": "See services",
     "bg": "Виж услугите"
+  },
+  "home.services.actionShort": {
+    "en": "View",
+    "bg": "Виж"
   },
   "locale.title": {
     "en": "Country and language",

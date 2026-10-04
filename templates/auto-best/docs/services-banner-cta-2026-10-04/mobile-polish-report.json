@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-10-04T00:32:20.836Z",
+  "base": "http://127.0.0.1:6461",
+  "results": [
+    {
+      "name": "bg mobile polish 320",
+      "passed": true,
+      "evidence": {
+        "locale": "bg",
+        "width": 320,
+        "passed": true
+      },
+      "durationMs": 24079
+    },
+    {
+      "name": "bg mobile polish 390",
+      "passed": true,
+      "evidence": {
+        "locale": "bg",
+        "width": 390,
+        "passed": true
+      },
+      "durationMs": 20461
+    },
+    {
+      "name": "bg mobile polish 430",
+      "passed": true,
+      "evidence": {
+        "locale": "bg",
+        "width": 430,
+        "passed": true
+      },
+      "durationMs": 17082
+    },
+    {
+      "name": "bg mobile polish 1440",
+      "passed": true,
+      "evidence": {
+        "locale": "bg",
+        "width": 1440,
+        "passed": true
+      },
+      "durationMs": 12313
+    },
+    {
+      "name": "en mobile polish 320",
+      "passed": true,
+      "evidence": {
+        "locale": "en",
+        "width": 320,
+        "passed": true
+      },
+      "durationMs": 18345
+    },
+    {
+      "name": "en mobile polish 390",
+      "passed": true,
+      "evidence": {
+        "locale": "en",
+        "width": 390,
+        "passed": true
+      },
+      "durationMs": 14368
+    },
+    {
+      "name": "en mobile polish 430",
+      "passed": true,
+      "evidence": {
+        "locale": "en",
+        "width": 430,
+        "passed": true
+      },
+      "durationMs": 16329
+    },
+    {
+      "name": "en mobile polish 1440",
+      "passed": true,
+      "evidence": {
+        "locale": "en",
+        "width": 1440,
+        "passed": true
+      },
+      "durationMs": 13690
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Shared silver service artwork — 4 October 2026
 
+The owner subsequently rejected the hero substitutions in this pass. The [hero restoration](../front-hero-restoration-2026-10-04/README.md) restores the original front-facing Home and Sell/Import artwork while preserving the service-card updates. The hero screenshots and measurements below document this earlier state.
+
 The owner requested one bright silver vehicle family across mobile Sell/Leasing cards, desktop About trade-in/leasing cards, and the remaining service illustration placements. The older dark sedan has been replaced with the silver estate from the approved Home services overview. Two ImageGen edits preserve the valuation/finance props; a third provides a standalone estate for the shared mobile Sell/Import hero.
 
 The dealer-owned source registry is <code>leadSite.artwork.serviceIllustrations</code>. Measured delivery dimensions/crops live in <code>serviceIllustrationArtwork</code>; Home actions, About, service menus, discovery, banners and hero car consumers reuse those entries. Existing layouts, card CSS, copy, links, typography and icons are unchanged. Hero framing uses the existing aspect ratios and transparent letterboxing rather than stretching the art. Superseded images remain as provenance sources.
