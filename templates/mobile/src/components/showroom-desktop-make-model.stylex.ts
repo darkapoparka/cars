@@ -7,7 +7,7 @@ export const desktopMakeModelStyles = stylex.create({
     flex: '1',
     minHeight: 0,
     minWidth: 0,
-    gridTemplateColumns: 'minmax(200px, .85fr) minmax(0, 1.65fr)',
+    gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
     gap: 24,
     paddingInline: 24,
     paddingBlock: { default: 24, '@media (max-height: 600px)': 16 },
@@ -18,12 +18,6 @@ export const desktopMakeModelStyles = stylex.create({
     gap: { default: 12, '@media (max-height: 600px)': 8 },
     minWidth: 0,
     minHeight: 0,
-  },
-  modelPane: {
-    borderLeftWidth: 1,
-    borderLeftStyle: 'solid',
-    borderLeftColor: colors.stripe,
-    paddingLeft: 24,
   },
   heading: {
     display: 'flex',

@@ -77,8 +77,9 @@ Desktop uses separate brand and model panels with independent search fields.
 Brand checkboxes select and deselect directly; a separate edit action opens an
 existing brand's models. A labelled Remove action stays beside the model heading.
 Removing a brand clears its model criteria and search, then returns keyboard
-focus to that brand's checkbox. Brand and
-model dividers use the quiet stripe token on desktop, with rounded row hover
+focus to that brand's checkbox. Make and Model use equal-width panels with
+matching search fields and a simple gap between them. Model dividers use the
+quiet stripe token on desktop, with rounded row hover
 feedback; phones retain their existing rows and selector layout.
 Optional variants and exclusion live in a collapsed More options section.
 At 700px and wider, this filter editor is capped at 820px with 24px viewport

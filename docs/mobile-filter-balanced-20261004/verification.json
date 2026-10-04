@@ -1,0 +1,2152 @@
+{
+  "beforeDesktop": {
+    "frame": {
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 110
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 713
+      },
+      "heading": {
+        "height": 56,
+        "width": 820,
+        "x": 310,
+        "y": 110
+      },
+      "tabs": {
+        "height": 53,
+        "width": 820,
+        "x": 310,
+        "y": 174
+      }
+    },
+    "pageOverflow": false,
+    "panes": [
+      {
+        "content": {
+          "height": 334,
+          "width": 254.3125,
+          "x": 334,
+          "y": 355
+        },
+        "heading": {
+          "height": 36,
+          "width": 254.3125,
+          "x": 334,
+          "y": 251
+        },
+        "pane": {
+          "height": 438,
+          "width": 254.3125,
+          "x": 334,
+          "y": 251
+        },
+        "search": {
+          "height": 44,
+          "width": 254.3125,
+          "x": 334,
+          "y": 299
+        }
+      },
+      {
+        "content": {
+          "height": 334,
+          "width": 468.6875,
+          "x": 637.3125,
+          "y": 355
+        },
+        "heading": {
+          "height": 36,
+          "width": 468.6875,
+          "x": 637.3125,
+          "y": 251
+        },
+        "pane": {
+          "height": 438,
+          "width": 493.6875,
+          "x": 612.3125,
+          "y": 251
+        },
+        "search": {
+          "height": 44,
+          "width": 468.6875,
+          "x": 637.3125,
+          "y": 299
+        }
+      }
+    ]
+  },
+  "afterDesktop": {
+    "frame": {
+      "dialog": {
+        "height": 680,
+        "width": 820,
+        "x": 310,
+        "y": 110
+      },
+      "footer": {
+        "height": 77,
+        "width": 820,
+        "x": 310,
+        "y": 713
+      },
+      "heading": {
+        "height": 56,
+        "width": 820,
+        "x": 310,
+        "y": 110
+      },
+      "tabs": {
+        "height": 53,
+        "width": 820,
+        "x": 310,
+        "y": 174
+      }
+    },
+    "pageOverflow": false,
+    "panes": [
+      {
+        "content": {
+          "height": 334,
+          "width": 374,
+          "x": 334,
+          "y": 355
+        },
+        "heading": {
+          "height": 36,
+          "width": 374,
+          "x": 334,
+          "y": 251
+        },
+        "pane": {
+          "height": 438,
+          "width": 374,
+          "x": 334,
+          "y": 251
+        },
+        "search": {
+          "height": 44,
+          "width": 374,
+          "x": 334,
+          "y": 299
+        }
+      },
+      {
+        "content": {
+          "height": 334,
+          "width": 374,
+          "x": 732,
+          "y": 355
+        },
+        "heading": {
+          "height": 36,
+          "width": 374,
+          "x": 732,
+          "y": 251
+        },
+        "pane": {
+          "height": 438,
+          "width": 374,
+          "x": 732,
+          "y": 251
+        },
+        "search": {
+          "height": 44,
+          "width": 374,
+          "x": 732,
+          "y": 299
+        }
+      }
+    ]
+  },
+  "mobile": {
+    "before320": {
+      "dialog": {
+        "height": 844,
+        "width": 320,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 77,
+        "width": 320,
+        "x": 0,
+        "y": 767
+      },
+      "models": [
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 297
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 350
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 403
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 456
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 509
+        }
+      ],
+      "search": [
+        {
+          "height": 48,
+          "width": 288,
+          "x": 16,
+          "y": 188
+        }
+      ],
+      "selectors": [
+        {
+          "height": 48,
+          "width": 140,
+          "x": 16,
+          "y": 128
+        },
+        {
+          "height": 48,
+          "width": 140,
+          "x": 164,
+          "y": 128
+        }
+      ],
+      "tabs": {
+        "height": 52,
+        "width": 320,
+        "x": 0,
+        "y": 64
+      }
+    },
+    "after320": {
+      "dialog": {
+        "height": 844,
+        "width": 320,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 77,
+        "width": 320,
+        "x": 0,
+        "y": 767
+      },
+      "models": [
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 297
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 350
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 403
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 456
+        },
+        {
+          "height": 53,
+          "width": 278,
+          "x": 16,
+          "y": 509
+        }
+      ],
+      "search": [
+        {
+          "height": 48,
+          "width": 288,
+          "x": 16,
+          "y": 188
+        }
+      ],
+      "selectors": [
+        {
+          "height": 48,
+          "width": 140,
+          "x": 16,
+          "y": 128
+        },
+        {
+          "height": 48,
+          "width": 140,
+          "x": 164,
+          "y": 128
+        }
+      ],
+      "tabs": {
+        "height": 52,
+        "width": 320,
+        "x": 0,
+        "y": 64
+      }
+    },
+    "before390": {
+      "dialog": {
+        "height": 844,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 77,
+        "width": 390,
+        "x": 0,
+        "y": 767
+      },
+      "models": [
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 297
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 350
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 403
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 456
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 509
+        }
+      ],
+      "search": [
+        {
+          "height": 48,
+          "width": 358,
+          "x": 16,
+          "y": 188
+        }
+      ],
+      "selectors": [
+        {
+          "height": 48,
+          "width": 175,
+          "x": 16,
+          "y": 128
+        },
+        {
+          "height": 48,
+          "width": 175,
+          "x": 199,
+          "y": 128
+        }
+      ],
+      "tabs": {
+        "height": 52,
+        "width": 390,
+        "x": 0,
+        "y": 64
+      }
+    },
+    "after390": {
+      "dialog": {
+        "height": 844,
+        "width": 390,
+        "x": 0,
+        "y": 0
+      },
+      "footer": {
+        "height": 77,
+        "width": 390,
+        "x": 0,
+        "y": 767
+      },
+      "models": [
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 297
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 350
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 403
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 456
+        },
+        {
+          "height": 53,
+          "width": 348,
+          "x": 16,
+          "y": 509
+        }
+      ],
+      "search": [
+        {
+          "height": 48,
+          "width": 358,
+          "x": 16,
+          "y": 188
+        }
+      ],
+      "selectors": [
+        {
+          "height": 48,
+          "width": 175,
+          "x": 16,
+          "y": 128
+        },
+        {
+          "height": 48,
+          "width": 175,
+          "x": 199,
+          "y": 128
+        }
+      ],
+      "tabs": {
+        "height": 52,
+        "width": 390,
+        "x": 0,
+        "y": 64
+      }
+    }
+  },
+  "checks": [
+    {
+      "label": "1440 initial frame preserved",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 310,
+            "y": 713
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 310,
+            "y": 174
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 334,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 334,
+              "y": 299
+            }
+          },
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 732,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 732,
+              "y": 299
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1440 brand search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 model search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 searches keep equal widths",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 310,
+            "y": 713
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 310,
+            "y": 174
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 334,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 334,
+              "y": 299
+            }
+          },
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 732,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 732,
+              "y": 299
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1440 select X6",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 expand model settings",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 expanded settings keep equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 310,
+            "y": 713
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 310,
+            "y": 110
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 310,
+            "y": 174
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 334,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 334,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 334,
+              "y": 299
+            }
+          },
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 732,
+              "y": 355
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 732,
+              "y": 251
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 732,
+              "y": 299
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1440 tab Търсене",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Цена",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Година",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Гориво",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Състояние",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Още",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 tab Марка и модел",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 deselect BMW",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "BMW deselection disables model search",
+      "pass": true
+    },
+    {
+      "label": "1440 remove BMW",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1440 reselect BMW",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 310,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 310,
+          "y": 110
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 310,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "700 equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 652,
+            "x": 24,
+            "y": 110
+          },
+          "footer": {
+            "height": 77,
+            "width": 652,
+            "x": 24,
+            "y": 713
+          },
+          "heading": {
+            "height": 56,
+            "width": 652,
+            "x": 24,
+            "y": 110
+          },
+          "tabs": {
+            "height": 61,
+            "width": 652,
+            "x": 24,
+            "y": 174
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 326,
+              "width": 290,
+              "x": 48,
+              "y": 363
+            },
+            "heading": {
+              "height": 36,
+              "width": 290,
+              "x": 48,
+              "y": 259
+            },
+            "pane": {
+              "height": 430,
+              "width": 290,
+              "x": 48,
+              "y": 259
+            },
+            "search": {
+              "height": 44,
+              "width": 290,
+              "x": 48,
+              "y": 307
+            }
+          },
+          {
+            "content": {
+              "height": 326,
+              "width": 290,
+              "x": 362,
+              "y": 363
+            },
+            "heading": {
+              "height": 36,
+              "width": 290,
+              "x": 362,
+              "y": 259
+            },
+            "pane": {
+              "height": 430,
+              "width": 290,
+              "x": 362,
+              "y": 259
+            },
+            "search": {
+              "height": 44,
+              "width": 290,
+              "x": 362,
+              "y": 307
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "700 all seven tabs fit",
+      "pass": true
+    },
+    {
+      "label": "700 tab Цена",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "700 tab Още",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "700 tab Марка и модел",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "700 model search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "footer": {
+          "height": 77,
+          "width": 652,
+          "x": 24,
+          "y": 713
+        },
+        "heading": {
+          "height": 56,
+          "width": 652,
+          "x": 24,
+          "y": 110
+        },
+        "tabs": {
+          "height": 61,
+          "width": 652,
+          "x": 24,
+          "y": 174
+        }
+      }
+    },
+    {
+      "label": "1024 equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 820,
+            "x": 102,
+            "y": 44
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 102,
+            "y": 647
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 102,
+            "y": 44
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 102,
+            "y": 108
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 126,
+              "y": 289
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 126,
+              "y": 185
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 126,
+              "y": 185
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 126,
+              "y": 233
+            }
+          },
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 524,
+              "y": 289
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 524,
+              "y": 185
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 524,
+              "y": 185
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 524,
+              "y": 233
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1024 all seven tabs fit",
+      "pass": true
+    },
+    {
+      "label": "1024 tab Цена",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 tab Още",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 tab Марка и модел",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1024 model search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 647
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 44
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 108
+        }
+      }
+    },
+    {
+      "label": "1920 equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 680,
+            "width": 820,
+            "x": 550,
+            "y": 200
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 550,
+            "y": 803
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 550,
+            "y": 200
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 550,
+            "y": 264
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 574,
+              "y": 445
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 574,
+              "y": 341
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 574,
+              "y": 341
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 574,
+              "y": 389
+            }
+          },
+          {
+            "content": {
+              "height": 334,
+              "width": 374,
+              "x": 972,
+              "y": 445
+            },
+            "heading": {
+              "height": 36,
+              "width": 374,
+              "x": 972,
+              "y": 341
+            },
+            "pane": {
+              "height": 438,
+              "width": 374,
+              "x": 972,
+              "y": 341
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 972,
+              "y": 389
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1920 all seven tabs fit",
+      "pass": true
+    },
+    {
+      "label": "1920 tab Цена",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "1920 tab Още",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "1920 tab Марка и модел",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "1920 model search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 680,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 550,
+          "y": 803
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 550,
+          "y": 200
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 550,
+          "y": 264
+        }
+      }
+    },
+    {
+      "label": "320 phone layout preserved",
+      "pass": true
+    },
+    {
+      "label": "390 phone layout preserved",
+      "pass": true
+    },
+    {
+      "label": "1024x500 English equal columns",
+      "pass": true,
+      "layout": {
+        "frame": {
+          "dialog": {
+            "height": 452,
+            "width": 820,
+            "x": 102,
+            "y": 24
+          },
+          "footer": {
+            "height": 77,
+            "width": 820,
+            "x": 102,
+            "y": 399
+          },
+          "heading": {
+            "height": 56,
+            "width": 820,
+            "x": 102,
+            "y": 24
+          },
+          "tabs": {
+            "height": 53,
+            "width": 820,
+            "x": 102,
+            "y": 88
+          }
+        },
+        "pageOverflow": false,
+        "panes": [
+          {
+            "content": {
+              "height": 134,
+              "width": 374,
+              "x": 126,
+              "y": 249
+            },
+            "heading": {
+              "height": 32,
+              "width": 374,
+              "x": 126,
+              "y": 157
+            },
+            "pane": {
+              "height": 226,
+              "width": 374,
+              "x": 126,
+              "y": 157
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 126,
+              "y": 197
+            }
+          },
+          {
+            "content": {
+              "height": 134,
+              "width": 374,
+              "x": 524,
+              "y": 249
+            },
+            "heading": {
+              "height": 32,
+              "width": 374,
+              "x": 524,
+              "y": 157
+            },
+            "pane": {
+              "height": 226,
+              "width": 374,
+              "x": 524,
+              "y": 157
+            },
+            "search": {
+              "height": 44,
+              "width": 374,
+              "x": 524,
+              "y": 197
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "1024x500 English tab Search",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab Price",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab Year",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab Fuel",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab Condition",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab More",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English tab Make & model",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    },
+    {
+      "label": "1024x500 English expanded model settings",
+      "pass": true,
+      "frame": {
+        "dialog": {
+          "height": 452,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "footer": {
+          "height": 77,
+          "width": 820,
+          "x": 102,
+          "y": 399
+        },
+        "heading": {
+          "height": 56,
+          "width": 820,
+          "x": 102,
+          "y": 24
+        },
+        "tabs": {
+          "height": 53,
+          "width": 820,
+          "x": 102,
+          "y": 88
+        }
+      }
+    }
+  ],
+  "consoleErrors": []
+}

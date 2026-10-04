@@ -196,7 +196,7 @@ export function ShowroomDesktopMakeModel({
           )}
         </div>
       </section>
-      <section aria-labelledby={id + '-models'} {...stylex.props(s.pane, s.modelPane)}>
+      <section aria-labelledby={id + '-models'} {...stylex.props(s.pane)}>
         <div {...stylex.props(s.heading)}>
           <h3 id={id + '-models'} {...stylex.props(s.title)}>
             {t('Models')}
