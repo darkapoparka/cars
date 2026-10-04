@@ -137,9 +137,6 @@ export function ShowroomModelOptions({
     if (!name && make && onBack && !desktop) {
       return (
         <div {...stylex.props(s.familyRow, s.allChoice)}>
-          <label htmlFor={inputId} {...stylex.props(s.choice, s.allMakeLabel)}>
-            {copy}
-          </label>
           <button
             type="button"
             aria-label={t('Back') + ': ' + t('Makes')}
@@ -149,6 +146,9 @@ export function ShowroomModelOptions({
             <Icon name="left" size={18} />
             {t('Back')}
           </button>
+          <label htmlFor={inputId} {...stylex.props(s.choice, s.allMakeLabel)}>
+            {copy}
+          </label>
           <label htmlFor={inputId} {...stylex.props(s.checkTarget)}>
             {checkbox}
           </label>

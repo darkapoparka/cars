@@ -255,6 +255,11 @@ for (const [engineName, engine] of engines) {
             assert.equal(await model120.isChecked(), true);
             assert.equal(await series.evaluate((element) => element.indeterminate), true);
             const back = page.getByRole('button', { name: labels.back, exact: true });
+            const backPosition = await back.evaluate((button) => ({
+              right: button.getBoundingClientRect().right,
+              makeLeft: button.parentElement.querySelector('label').getBoundingClientRect().left,
+            }));
+            assert.ok(backPosition.right <= backPosition.makeLeft, 'Back precedes the make label');
             assert.ok(
               await back.evaluate((element) => element.getBoundingClientRect().height >= 44),
             );
