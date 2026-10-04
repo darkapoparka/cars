@@ -7,6 +7,7 @@
   const i18n = getI18n();
 
   import { preserveScrollOffset } from '$lib/ui/overlay';
+  import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { onDestroy, onMount, type Snippet } from 'svelte';
   import { resolve } from '$app/paths';
   import {
@@ -161,13 +162,14 @@
   <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopInitialField} {returnFocus} />
 {:else}
 
-<QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft} fullScreen>
+<QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft}>
 {#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
   id="dn-listing-filter-dialog"
   aria-labelledby="dn-listing-filter-title"
   {@attach attachFilterDialog}
+  {@attach dialogViewport}
   onclick={handleDialogClick}
   oncancel={handleCancel}
   onclose={restorePage}
@@ -718,9 +720,9 @@
 
     .dn-listing-filter__dialog {
       width: 100%;
-      height: 100dvh;
-      max-height: 100dvh;
-      inset: 0;
+      height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
+      max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
+      inset: calc(var(--dn-dialog-viewport-top, 0px) + env(safe-area-inset-top, 0px)) 0 auto;
       margin: 0;
       border-radius: 0;
     }

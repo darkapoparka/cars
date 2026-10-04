@@ -217,6 +217,22 @@ The existing discovery/enquiry suites use `locale-smoke-fixture.mjs` to seed a r
 
 ## Overlay control regression checks
 
+Mobile facet pickers use `QuickFilterSheet.svelte`: their panel fits its content on
+opening, expands once when Search receives focus, and stays expanded until closed.
+Both direct and nested pickers use `dialogViewport` for the visible viewport;
+`VehicleSearchDialog.svelte` uses the same attachment for its mobile filter form,
+and `VehicleQuickSearch.svelte` uses it for Home search.
+Check short/long lists, empty searches, clear/reopen, nested Apply/Cancel, backdrop
+dismissal and focus return at 320/390px. The result list scrolls independently;
+the header and footer remain visible when the viewport shrinks. Desktop geometry
+is unchanged. `scripts/check-overlay.mjs` also checks viewport resize/panning,
+nested ownership, listener cleanup and the missing-API fallback. Real Android and
+iPhone keyboards remain a separate device check.
+
+Matched 320x844 captures show the [previous fixed-height panel](mobile-drawer-2026-10-04/before-idle-320.jpg),
+the [content-sized panel](mobile-drawer-2026-10-04/after-idle-320.jpg), and the
+[expanded search state](mobile-drawer-2026-10-04/after-search-320.jpg).
+
 Run `node scripts/check-overlay.mjs` for scroll-lock release order, duplicate cleanup and exact scroll restoration. With `BASE_URL` set to the intended local preview, run `node scripts/overlay-controls-smoke.mjs`; run again with `OVERLAY_ENGINE=webkit` for the installed WebKit engine. Missing browsers are errors, not silent skips.
 
 The matrix covers BG/EN at 320, 390, 430, 768 and 1440px, with short 420px viewports for form/filter controls. It checks the token-derived 44px interaction shell and 40px visible circle, SVG centering within 0.5 CSS pixels, native appearance, icon size, reachable Close/Save actions, nested dialog dismissal, focus return and discarded editor drafts. Existing route, discovery, enquiry, phase4, typography and localization suites remain separate. Desktop Chrome and Windows WebKit emulation do not replace physical iOS/Android keyboard and safe-area testing.

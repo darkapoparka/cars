@@ -6,6 +6,7 @@
   const i18n = getI18n();
 
   import { preserveScrollOffset } from '$lib/ui/overlay';
+  import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { onDestroy, tick, type Snippet } from 'svelte';
   import { page } from '$app/state';
   import { resolve } from '$app/paths';
@@ -44,6 +45,7 @@
   let searchInput: HTMLInputElement;
   let trigger: HTMLElement;
   let opened = $state(false);
+  let searchExpanded = $state(false);
   let field = $state<ListingFacetField>('make');
   let title = $state(i18n.t("m_ccdd25d4230f"));
   let selected = $state('');
@@ -69,6 +71,7 @@
     field = nextField;
     title = listingFacetTitle(nextField, i18n.locale);
     search = '';
+    searchExpanded = false;
     selected = params.get(field) ?? '';
     minimum = params.get(`${field}_min`) ?? '';
     maximum = params.get(`${field}_max`) ?? '';
@@ -97,7 +100,7 @@
 
 {@render props.children(open, opened)}
 
-<dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)} {id} class={['dn-quick-sheet', { searchable, 'full-screen': fullScreen, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
+<dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)} {id} class={['dn-quick-sheet', { searchable, 'search-expanded': searchExpanded, 'full-screen': fullScreen, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} {@attach dialogViewport} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={(event) => cleanListingFormData(event.formData)} onsubmit={submit}>
     <header class:dn-mobile-overlay-header={fullScreen}>
       <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
@@ -107,7 +110,7 @@
       <div class="search-wrap">
         <div class:dn-mobile-overlay-search={fullScreen} class="search-field dn-mobile-search-field">
           <Icon name="search" size={18} />
-          <input {@attach i18n.validation} type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
+          <input {@attach i18n.validation} type="search" {@attach attachSearch} bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onfocus={() => searchExpanded = true} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); if (event.key === 'Escape') { event.preventDefault(); dialog.close(); } }} />
           {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t("m_c8191190a026")} onclick={() => { search = ''; searchInput.focus(); }}><Icon name="x" size={18} /></button>{/if}
         </div>
       </div>
@@ -191,8 +194,12 @@
   .apply:hover { background: var(--dn-red-hover); }
   .apply:disabled { opacity: .5; cursor: default; }
   @media (max-width: 767px) {
-    .dn-quick-sheet { --dn-primary-action-surface: var(--dn-ink-strong); --dn-primary-action-surface-hover: var(--dn-ink-hover); inset: auto 0 0; width: 100%; max-height: calc(100dvh - max(24px, env(safe-area-inset-top))); margin: 0; border-radius: 24px 24px 0 0; }
-    form { max-height: calc(100dvh - max(24px, env(safe-area-inset-top))); }
+    /* The transparent viewport frame anchors a naturally sized panel above the keyboard. */
+    .dn-quick-sheet { --dn-primary-action-surface: var(--dn-ink-strong); --dn-primary-action-surface-hover: var(--dn-ink-hover); position: fixed; inset: var(--dn-dialog-viewport-top, 0px) 0 auto; width: 100%; height: var(--dn-dialog-viewport-height, 100dvh); max-height: var(--dn-dialog-viewport-height, 100dvh); margin: 0; border-radius: 0; background: transparent; }
+    .dn-quick-sheet[open] { display: flex; flex-direction: column; justify-content: flex-end; }
+    form { min-height: 0; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - max(var(--dn-space-6), env(safe-area-inset-top, 0px))); border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; background: var(--dn-white); }
+    .searchable form { height: auto; }
+    .searchable .content { flex: 0 1 auto; }
     .choice { padding-block: var(--dn-space-2); }
     .choice > span { min-width: 0; overflow-wrap: anywhere; }
     .choice:has(:checked) { background: var(--dn-mobile-filter-selection-surface); box-shadow: none; }
@@ -226,9 +233,9 @@
     .choice input:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
   }
   @media (max-width: 767px) {
-    .dn-quick-sheet.full-screen { inset: 0; height: 100dvh; max-height: 100dvh; border-radius: 0; }
-    .full-screen form { height: 100%; max-height: 100%; }
-    .full-screen .content { flex: 1; }
+    .dn-quick-sheet:is(.full-screen, .search-expanded) { padding-top: env(safe-area-inset-top, 0px); }
+    :is(.full-screen, .search-expanded) form { height: 100%; max-height: 100%; border-radius: 0; }
+    :is(.full-screen, .search-expanded) .content { flex: 1; }
   }
   @media (prefers-reduced-motion: no-preference) {
     .dn-quick-sheet[open] { animation: sheet-enter 200ms cubic-bezier(.16, 1, .3, 1); }

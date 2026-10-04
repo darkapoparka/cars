@@ -1,6 +1,7 @@
 <script lang="ts">
   import { MediaQuery } from 'svelte/reactivity';
   import { trapDialogTab } from '$lib/ui/overlay';
+  import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { specificationLabel } from '$lib/i18n/presentation';
 
   import { getI18n } from '$lib/locale/context';
@@ -178,6 +179,7 @@
   class="dn-quick-search__dialog"
   id="dn-quick-search-dialog"
   {@attach attachDialog}
+  {@attach dialogViewport}
   aria-labelledby="quick-search-title"
   onclick={handleDialogClick}
   oncancel={handleCancel}
@@ -464,9 +466,11 @@
     }
 
     .dn-quick-search__dialog {
+      position: fixed;
+      inset: calc(var(--dn-dialog-viewport-top, 0px) + env(safe-area-inset-top, 0px)) 0 auto;
       width: 100%;
-      height: 100dvh;
-      max-height: none;
+      height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
+      max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
       margin: 0;
       border-radius: 0;
       background: #fff;
