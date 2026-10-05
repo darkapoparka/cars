@@ -1,0 +1,11 @@
+# Mobile template desktop navigation — 5 October 2026
+
+At 1024px and above, Cars, Services, Contact and Saved cars have a 72px logo header with a top-right labelled hamburger control beside Saved cars. Its anchored dropdown contains the same Cars / Services / Contact destinations as the phone dock, plus eight shortcuts derived from the existing showroom services. The desktop bottom dock is hidden and its reserved clearance reduced. Phones retain their existing composition.
+
+Primary navigation is shared in showroom-navigation.ts; the menu reads existing service definitions and URL helpers rather than creating another service catalogue. Returning to Cars retains inventory filters and sorting. The menu supports outside dismissal, native focus navigation, arrows, Home/End, Escape with focus return, and dismissal when resizing below the desktop breakpoint. It uses native links and a disclosure button. The local WebKit engine skips links with Tab by default; arrow navigation reaches every menu link, and Tab dismisses when focus leaves. Chromium Tab traversal is also verified.
+
+Validation: full source lint, TypeScript, 95 retained domain/localization tests, and production build (51 generated routes) passed. Sixteen Chromium/WebKit cases at 1023px, 1024x600, 1440x960 and 1920x1080 in BG/EN passed, including 32 actual service link destinations, Contact/Saved access, retained Cars criteria, menu containment and 44px targets. Forty-eight matched phone comparisons at 320/390px, BG/EN, Chromium/WebKit, across Home, Services, Contact, Saved, vehicle detail and More filters found no sampled geometry, text, state or computed-style changes and no console errors. Independent phone shadow/generated-file edits were preserved outside this commit; pixel statistics are not described as blanket pixel identity.
+
+See [BG before/after](bg-home-before-after.jpg), [EN before/after](en-home-before-after.jpg), [BG menu open](bg-desktop-menu.png), [EN menu open](en-desktop-menu.png), and [source hashes and verification](verification.json). Before/after uses matched 1440x960 captures, cropped to the full desktop page frame; the original bottom dock is retained in the before view.
+
+Local preview: http://127.0.0.1:6478/. No template release selection or dealer publication is included.

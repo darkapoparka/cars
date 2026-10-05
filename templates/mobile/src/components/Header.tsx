@@ -11,6 +11,7 @@ import type { IconName } from './Icon';
 import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { ShowroomDesktopMenu } from './ShowroomDesktopMenu';
 const s = stylex.create({
   header: {
     height: 60,
@@ -44,7 +45,12 @@ const s = stylex.create({
     objectFit: 'contain',
     objectPosition: 'left center',
   },
-  home: { paddingLeft: 16, paddingRight: 8, color: colors.text },
+  home: {
+    height: { default: 60, '@media (min-width: 1024px)': 72 },
+    paddingLeft: 16,
+    paddingRight: { default: 8, '@media (min-width: 1024px)': 16 },
+    color: colors.text,
+  },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
   savedAction: {
     display: 'inline-flex',
@@ -164,6 +170,7 @@ export function Header({
               </span>
             )}
           </span>
+          <ShowroomDesktopMenu />
         </div>
       ) : (
         children

@@ -1,0 +1,2773 @@
+{
+  "source": [
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\AppShell.tsx",
+      "Hash": "DF54C9AACD0BE352E43712C242FACFD6DEE9D95BB1F6FE5DF72A164325118B68"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\Header.tsx",
+      "Hash": "B30D30C353FDC47CF372DFBB52E8FF78C6F5D8D68846654CF33C70CF8629CD64"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\ShowroomDesktopMenu.tsx",
+      "Hash": "8508CA0695110AC1FD83B90797D675916B3216AE5BAF461FA9A1A90FC4AC9792"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\showroom-navigation.ts",
+      "Hash": "518253B7AE9342B61C66275CCE82074198C489E183A023CB410FD3B282ED3E1F"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\lib\\messages.bg.ts",
+      "Hash": "4CD2BFE0BE254A641678E2C8CDDBE615D934057A634E98B1B901F2DB87579B01"
+    }
+  ],
+  "checks": {
+    "lint": "Full source passed",
+    "typecheck": "Passed with --noEmit --incremental false",
+    "build": "Node 22 production build; 51 generated routes"
+  },
+  "scope": [
+    "AppShell.tsx",
+    "Header.tsx",
+    "ShowroomDesktopMenu.tsx",
+    "showroom-navigation.ts",
+    "messages.bg.ts",
+    "TEMPLATE.md"
+  ],
+  "concurrentSource": "Another phone task changed ShowroomQuickPills.tsx shadow and preview generated configuration during this task; preserved and excluded from the commit. Phone comparisons verify sampled geometry, text, state and computed styles, with pixel counts reported separately.",
+  "reports": {
+    "before/report": {
+      "phase": "before",
+      "base": "http://127.0.0.1:6478",
+      "states": [
+        {
+          "lang": "bg",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 68,
+            "width": 1068,
+            "height": 280,
+            "top": 68,
+            "right": 1254,
+            "bottom": 348,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 429,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 429,
+            "right": 1270,
+            "bottom": 868.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 505,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 505,
+            "right": 442.5,
+            "bottom": 800.0625,
+            "left": 186
+          }
+        }
+      ],
+      "errors": []
+    },
+    "after/report": {
+      "phase": "after",
+      "base": "http://127.0.0.1:6496",
+      "states": [
+        {
+          "lang": "bg",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 80,
+            "width": 1068,
+            "height": 280,
+            "top": 80,
+            "right": 1254,
+            "bottom": 360,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 441,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 441,
+            "right": 1270,
+            "bottom": 880.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 517,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 517,
+            "right": 442.5,
+            "bottom": 812.0625,
+            "left": 186
+          }
+        },
+        {
+          "lang": "en",
+          "state": "home",
+          "status": 200,
+          "overflow": false,
+          "brokenImages": [],
+          "hero": {
+            "x": 186,
+            "y": 80,
+            "width": 1068,
+            "height": 280,
+            "top": 80,
+            "right": 1254,
+            "bottom": 360,
+            "left": 186
+          },
+          "stock": {
+            "x": 170,
+            "y": 441,
+            "width": 1100,
+            "height": 439.0625,
+            "top": 441,
+            "right": 1270,
+            "bottom": 880.0625,
+            "left": 170
+          },
+          "firstCard": {
+            "x": 186,
+            "y": 517,
+            "width": 256.5,
+            "height": 295.0625,
+            "top": 517,
+            "right": 442.5,
+            "bottom": 812.0625,
+            "left": 186
+          }
+        }
+      ],
+      "errors": []
+    },
+    "desktop-verification": {
+      "base": "http://127.0.0.1:6496",
+      "cases": [
+        {
+          "engine": "chromium",
+          "width": 1023,
+          "height": 768,
+          "lang": "bg",
+          "checks": [
+            "tablet dock retained; desktop menu hidden",
+            "no page overflow"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1023,
+          "height": 768,
+          "lang": "en",
+          "checks": [
+            "tablet dock retained; desktop menu hidden",
+            "no page overflow"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 600,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 588,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1008,
+              "bottom": 489,
+              "left": 588
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 599,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 997,
+                  "bottom": 119,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 599,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 997,
+                  "bottom": 163,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 599,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 997,
+                  "bottom": 207,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 599,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 796,
+                  "bottom": 306,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 800,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 997,
+                  "bottom": 306,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 599,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 796,
+                  "bottom": 366,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 800,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 997,
+                  "bottom": 366,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 599,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 796,
+                  "bottom": 422,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 800,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 997,
+                  "bottom": 422,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 599,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 796,
+                  "bottom": 478,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 800,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 997,
+                  "bottom": 478,
+                  "left": 800
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1024,
+          "height": 600,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 588,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1008,
+              "bottom": 485,
+              "left": 588
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 599,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 997,
+                  "bottom": 119,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 599,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 997,
+                  "bottom": 163,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 599,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 997,
+                  "bottom": 207,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 599,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 796,
+                  "bottom": 306,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 800,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 997,
+                  "bottom": 306,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 599,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 796,
+                  "bottom": 362,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 800,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 997,
+                  "bottom": 362,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 599,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 796,
+                  "bottom": 418,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 800,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 997,
+                  "bottom": 418,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 599,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 796,
+                  "bottom": 474,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 800,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 997,
+                  "bottom": 474,
+                  "left": 800
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "height": 960,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 834,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1254,
+              "bottom": 489,
+              "left": 834
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 845,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1243,
+                  "bottom": 119,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 845,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1243,
+                  "bottom": 163,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 845,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1243,
+                  "bottom": 207,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 845,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1042,
+                  "bottom": 306,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 1046,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1243,
+                  "bottom": 306,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 845,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1042,
+                  "bottom": 366,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 1046,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1243,
+                  "bottom": 366,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 845,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1042,
+                  "bottom": 422,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 1046,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1243,
+                  "bottom": 422,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 845,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1042,
+                  "bottom": 478,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 1046,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1243,
+                  "bottom": 478,
+                  "left": 1046
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "all eight actual service destinations; Contact and Saved reachable",
+            "Cars retains inventory filters and sorting after Services",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1440,
+          "height": 960,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 834,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1254,
+              "bottom": 485,
+              "left": 834
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 845,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1243,
+                  "bottom": 119,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 845,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1243,
+                  "bottom": 163,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 845,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1243,
+                  "bottom": 207,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 845,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1042,
+                  "bottom": 306,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 1046,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1243,
+                  "bottom": 306,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 845,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1042,
+                  "bottom": 362,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 1046,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1243,
+                  "bottom": 362,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 845,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1042,
+                  "bottom": 418,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 1046,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1243,
+                  "bottom": 418,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 845,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1042,
+                  "bottom": 474,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 1046,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1243,
+                  "bottom": 474,
+                  "left": 1046
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "all eight actual service destinations; Contact and Saved reachable",
+            "Cars retains inventory filters and sorting after Services",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1920,
+          "height": 1080,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 1074,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1494,
+              "bottom": 489,
+              "left": 1074
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 1085,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1483,
+                  "bottom": 119,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 1085,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1483,
+                  "bottom": 163,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 1085,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1483,
+                  "bottom": 207,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 1085,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1282,
+                  "bottom": 306,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 1286,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1483,
+                  "bottom": 306,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 1085,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1282,
+                  "bottom": 366,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 1286,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1483,
+                  "bottom": 366,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 1085,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1282,
+                  "bottom": 422,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 1286,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1483,
+                  "bottom": 422,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 1085,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1282,
+                  "bottom": 478,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 1286,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1483,
+                  "bottom": 478,
+                  "left": 1286
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "chromium",
+          "width": 1920,
+          "height": 1080,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 1074,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1494,
+              "bottom": 485,
+              "left": 1074
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 1085,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1483,
+                  "bottom": 119,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 1085,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1483,
+                  "bottom": 163,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 1085,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1483,
+                  "bottom": 207,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 1085,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1282,
+                  "bottom": 306,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 1286,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1483,
+                  "bottom": 306,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 1085,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1282,
+                  "bottom": 362,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 1286,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1483,
+                  "bottom": 362,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 1085,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1282,
+                  "bottom": 418,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 1286,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1483,
+                  "bottom": 418,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 1085,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1282,
+                  "bottom": 474,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 1286,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1483,
+                  "bottom": 474,
+                  "left": 1286
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, native Tab, arrows and Home/End",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1023,
+          "height": 768,
+          "lang": "bg",
+          "checks": [
+            "tablet dock retained; desktop menu hidden",
+            "no page overflow"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1023,
+          "height": 768,
+          "lang": "en",
+          "checks": [
+            "tablet dock retained; desktop menu hidden",
+            "no page overflow"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 600,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 588,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1008,
+              "bottom": 489,
+              "left": 588
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 599,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 997,
+                  "bottom": 119,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 599,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 997,
+                  "bottom": 163,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 599,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 997,
+                  "bottom": 207,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 599,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 796,
+                  "bottom": 306,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 800,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 997,
+                  "bottom": 306,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 599,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 796,
+                  "bottom": 366,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 800,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 997,
+                  "bottom": 366,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 599,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 796,
+                  "bottom": 422,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 800,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 997,
+                  "bottom": 422,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 599,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 796,
+                  "bottom": 478,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 800,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 997,
+                  "bottom": 478,
+                  "left": 800
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1024,
+          "height": 600,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 588,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1008,
+              "bottom": 485,
+              "left": 588
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 599,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 997,
+                  "bottom": 119,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 599,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 997,
+                  "bottom": 163,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 599,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 997,
+                  "bottom": 207,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 599,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 796,
+                  "bottom": 306,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 800,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 997,
+                  "bottom": 306,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 599,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 796,
+                  "bottom": 362,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 800,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 997,
+                  "bottom": 362,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 599,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 796,
+                  "bottom": 418,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 800,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 997,
+                  "bottom": 418,
+                  "left": 800
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 599,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 796,
+                  "bottom": 474,
+                  "left": 599
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 800,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 997,
+                  "bottom": 474,
+                  "left": 800
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1440,
+          "height": 960,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 834,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1254,
+              "bottom": 489,
+              "left": 834
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 845,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1243,
+                  "bottom": 119,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 845,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1243,
+                  "bottom": 163,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 845,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1243,
+                  "bottom": 207,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 845,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1042,
+                  "bottom": 306,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 1046,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1243,
+                  "bottom": 306,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 845,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1042,
+                  "bottom": 366,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 1046,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1243,
+                  "bottom": 366,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 845,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1042,
+                  "bottom": 422,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 1046,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1243,
+                  "bottom": 422,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 845,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1042,
+                  "bottom": 478,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 1046,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1243,
+                  "bottom": 478,
+                  "left": 1046
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "all eight actual service destinations; Contact and Saved reachable",
+            "Cars retains inventory filters and sorting after Services",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1440,
+          "height": 960,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 834,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1254,
+              "bottom": 485,
+              "left": 834
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 845,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1243,
+                  "bottom": 119,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 845,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1243,
+                  "bottom": 163,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 845,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1243,
+                  "bottom": 207,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 845,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1042,
+                  "bottom": 306,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 1046,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1243,
+                  "bottom": 306,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 845,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1042,
+                  "bottom": 362,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 1046,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1243,
+                  "bottom": 362,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 845,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1042,
+                  "bottom": 418,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 1046,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1243,
+                  "bottom": 418,
+                  "left": 1046
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 845,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1042,
+                  "bottom": 474,
+                  "left": 845
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 1046,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1243,
+                  "bottom": 474,
+                  "left": 1046
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "all eight actual service destinations; Contact and Saved reachable",
+            "Cars retains inventory filters and sorting after Services",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1920,
+          "height": 1080,
+          "lang": "bg",
+          "geometry": {
+            "box": {
+              "x": 1074,
+              "y": 64,
+              "width": 420,
+              "height": 425,
+              "top": 64,
+              "right": 1494,
+              "bottom": 489,
+              "left": 1074
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Коли",
+                "box": {
+                  "x": 1085,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1483,
+                  "bottom": 119,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Услуги",
+                "box": {
+                  "x": 1085,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1483,
+                  "bottom": 163,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Контакт",
+                "box": {
+                  "x": 1085,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1483,
+                  "bottom": 207,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Внос на автомобил",
+                "box": {
+                  "x": 1085,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1282,
+                  "bottom": 306,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Продайте колата си",
+                "box": {
+                  "x": 1286,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1483,
+                  "bottom": 306,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Оглед и пробно шофиране",
+                "box": {
+                  "x": 1085,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1282,
+                  "bottom": 366,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Замяна",
+                "box": {
+                  "x": 1286,
+                  "y": 310,
+                  "width": 197,
+                  "height": 56,
+                  "top": 310,
+                  "right": 1483,
+                  "bottom": 366,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Търсене на автомобил",
+                "box": {
+                  "x": 1085,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1282,
+                  "bottom": 422,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Сервиз и ремонти",
+                "box": {
+                  "x": 1286,
+                  "y": 370,
+                  "width": 197,
+                  "height": 52,
+                  "top": 370,
+                  "right": 1483,
+                  "bottom": 422,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Финансиране",
+                "box": {
+                  "x": 1085,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1282,
+                  "bottom": 478,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Части и аксесоари",
+                "box": {
+                  "x": 1286,
+                  "y": 426,
+                  "width": 197,
+                  "height": 52,
+                  "top": 426,
+                  "right": 1483,
+                  "bottom": 478,
+                  "left": 1286
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        },
+        {
+          "engine": "webkit",
+          "width": 1920,
+          "height": 1080,
+          "lang": "en",
+          "geometry": {
+            "box": {
+              "x": 1074,
+              "y": 64,
+              "width": 420,
+              "height": 421,
+              "top": 64,
+              "right": 1494,
+              "bottom": 485,
+              "left": 1074
+            },
+            "scrollable": false,
+            "links": [
+              {
+                "href": "/",
+                "text": "Cars",
+                "box": {
+                  "x": 1085,
+                  "y": 75,
+                  "width": 398,
+                  "height": 44,
+                  "top": 75,
+                  "right": 1483,
+                  "bottom": 119,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services",
+                "text": "Services",
+                "box": {
+                  "x": 1085,
+                  "y": 119,
+                  "width": 398,
+                  "height": 44,
+                  "top": 119,
+                  "right": 1483,
+                  "bottom": 163,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/contact",
+                "text": "Contact",
+                "box": {
+                  "x": 1085,
+                  "y": 163,
+                  "width": 398,
+                  "height": 44,
+                  "top": 163,
+                  "right": 1483,
+                  "bottom": 207,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=import",
+                "text": "Import a car",
+                "box": {
+                  "x": 1085,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1282,
+                  "bottom": 306,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=sell",
+                "text": "Sell your car",
+                "box": {
+                  "x": 1286,
+                  "y": 254,
+                  "width": 197,
+                  "height": 52,
+                  "top": 254,
+                  "right": 1483,
+                  "bottom": 306,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?topic=viewing",
+                "text": "Viewings & test drives",
+                "box": {
+                  "x": 1085,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1282,
+                  "bottom": 362,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=trade-in",
+                "text": "Part exchange",
+                "box": {
+                  "x": 1286,
+                  "y": 310,
+                  "width": 197,
+                  "height": 52,
+                  "top": 310,
+                  "right": 1483,
+                  "bottom": 362,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?q=Find+a+car",
+                "text": "Find a car",
+                "box": {
+                  "x": 1085,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1282,
+                  "bottom": 418,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?topic=servicing",
+                "text": "Servicing & repairs",
+                "box": {
+                  "x": 1286,
+                  "y": 366,
+                  "width": 197,
+                  "height": 52,
+                  "top": 366,
+                  "right": 1483,
+                  "bottom": 418,
+                  "left": 1286
+                }
+              },
+              {
+                "href": "/services?tab=financing",
+                "text": "Financing",
+                "box": {
+                  "x": 1085,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1282,
+                  "bottom": 474,
+                  "left": 1085
+                }
+              },
+              {
+                "href": "/services?tab=parts",
+                "text": "Parts & accessories",
+                "box": {
+                  "x": 1286,
+                  "y": 422,
+                  "width": 197,
+                  "height": 52,
+                  "top": 422,
+                  "right": 1483,
+                  "bottom": 474,
+                  "left": 1286
+                }
+              }
+            ]
+          },
+          "checks": [
+            "desktop dock replaced by header menu",
+            "localized primary and eight service links",
+            "menu fits viewport; 44px targets",
+            "toggle, arrows and Home/End",
+            "local WebKit Tab skips links and dismisses; arrows navigate all links",
+            "Escape with focus return",
+            "outside dismissal",
+            "open menu dismisses on phone breakpoint; visible focus and dock restored"
+          ]
+        }
+      ],
+      "serviceDestinations": [
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "import",
+          "url": "http://127.0.0.1:6496/services?tab=import"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "sell",
+          "url": "http://127.0.0.1:6496/services?tab=sell"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "viewing",
+          "url": "http://127.0.0.1:6496/services?topic=viewing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "trade-in",
+          "url": "http://127.0.0.1:6496/services?topic=trade-in"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "sourcing",
+          "url": "http://127.0.0.1:6496/services?q=Find+a+car"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "servicing",
+          "url": "http://127.0.0.1:6496/services?topic=servicing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "financing",
+          "url": "http://127.0.0.1:6496/services?tab=financing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "bg",
+          "service": "parts",
+          "url": "http://127.0.0.1:6496/services?tab=parts"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "import",
+          "url": "http://127.0.0.1:6496/services?tab=import"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "sell",
+          "url": "http://127.0.0.1:6496/services?tab=sell"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "viewing",
+          "url": "http://127.0.0.1:6496/services?topic=viewing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "trade-in",
+          "url": "http://127.0.0.1:6496/services?topic=trade-in"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "sourcing",
+          "url": "http://127.0.0.1:6496/services?q=Find+a+car"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "servicing",
+          "url": "http://127.0.0.1:6496/services?topic=servicing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "financing",
+          "url": "http://127.0.0.1:6496/services?tab=financing"
+        },
+        {
+          "engine": "chromium",
+          "lang": "en",
+          "service": "parts",
+          "url": "http://127.0.0.1:6496/services?tab=parts"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "import",
+          "url": "http://127.0.0.1:6496/services?tab=import"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "sell",
+          "url": "http://127.0.0.1:6496/services?tab=sell"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "viewing",
+          "url": "http://127.0.0.1:6496/services?topic=viewing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "trade-in",
+          "url": "http://127.0.0.1:6496/services?topic=trade-in"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "sourcing",
+          "url": "http://127.0.0.1:6496/services?q=Find+a+car"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "servicing",
+          "url": "http://127.0.0.1:6496/services?topic=servicing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "financing",
+          "url": "http://127.0.0.1:6496/services?tab=financing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "bg",
+          "service": "parts",
+          "url": "http://127.0.0.1:6496/services?tab=parts"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "import",
+          "url": "http://127.0.0.1:6496/services?tab=import"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "sell",
+          "url": "http://127.0.0.1:6496/services?tab=sell"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "viewing",
+          "url": "http://127.0.0.1:6496/services?topic=viewing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "trade-in",
+          "url": "http://127.0.0.1:6496/services?topic=trade-in"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "sourcing",
+          "url": "http://127.0.0.1:6496/services?q=Find+a+car"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "servicing",
+          "url": "http://127.0.0.1:6496/services?topic=servicing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "financing",
+          "url": "http://127.0.0.1:6496/services?tab=financing"
+        },
+        {
+          "engine": "webkit",
+          "lang": "en",
+          "service": "parts",
+          "url": "http://127.0.0.1:6496/services?tab=parts"
+        }
+      ],
+      "errors": []
+    },
+    "phone-verification": {
+      "cases": 48,
+      "differences": [],
+      "errors": [],
+      "pixels": [
+        {
+          "key": "chromium-bg-320-home",
+          "changedChannels": 44879
+        },
+        {
+          "key": "chromium-bg-320-services",
+          "changedChannels": 5646
+        },
+        {
+          "key": "chromium-bg-320-contact",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-320-saved",
+          "changedChannels": 11295
+        },
+        {
+          "key": "chromium-bg-320-detail",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-320-more",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-320-home",
+          "changedChannels": 62496
+        },
+        {
+          "key": "chromium-en-320-services",
+          "changedChannels": 7191
+        },
+        {
+          "key": "chromium-en-320-contact",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-320-saved",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-320-detail",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-320-more",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-390-home",
+          "changedChannels": 20601
+        },
+        {
+          "key": "chromium-bg-390-services",
+          "changedChannels": 8034
+        },
+        {
+          "key": "chromium-bg-390-contact",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-390-saved",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-390-detail",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-bg-390-more",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-390-home",
+          "changedChannels": 11550
+        },
+        {
+          "key": "chromium-en-390-services",
+          "changedChannels": 9540
+        },
+        {
+          "key": "chromium-en-390-contact",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-390-saved",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-390-detail",
+          "changedChannels": 0
+        },
+        {
+          "key": "chromium-en-390-more",
+          "changedChannels": 0
+        }
+      ]
+    },
+    "domain-tests": {
+      "code": 0,
+      "tests": 95,
+      "passed": 95,
+      "failed": 0
+    }
+  }
+}

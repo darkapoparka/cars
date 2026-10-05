@@ -3,18 +3,13 @@ import { hydrateLocale, useLocale } from '@/lib/use-locale';
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { CarFront, LayoutGrid, MessageSquare } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { translate } from '@/lib/locale';
 import { getVehicle } from '@/lib/catalog';
-const tabs = [
-  ['/', 'Cars', CarFront],
-  ['/services', 'Services', LayoutGrid],
-  ['/contact', 'Contact', MessageSquare],
-] as const;
+import { showroomNavigation as tabs } from './showroom-navigation';
 const s = stylex.create({
   root: {
     backgroundColor: colors.background,
@@ -29,7 +24,10 @@ const s = stylex.create({
     },
   },
   primary: {
-    paddingBottom: 'calc(4.5rem + env(safe-area-inset-bottom))',
+    paddingBottom: {
+      default: 'calc(4.5rem + env(safe-area-inset-bottom))',
+      '@media (min-width: 1024px)': 32,
+    },
   },
   nav: {
     position: 'fixed',
@@ -39,7 +37,7 @@ const s = stylex.create({
     width: 'calc(100% - 32px)',
     maxWidth: 204,
     padding: 1,
-    display: 'flex',
+    display: { default: 'flex', '@media (min-width: 1024px)': 'none' },
     gap: 2,
     backgroundColor: colors.background,
     zIndex: 40,
@@ -84,7 +82,10 @@ const s = stylex.create({
     position: 'fixed',
     left: '50%',
     transform: 'translateX(-50%)',
-    bottom: 'calc(4rem + 10px + env(safe-area-inset-bottom))',
+    bottom: {
+      default: 'calc(4rem + 10px + env(safe-area-inset-bottom))',
+      '@media (min-width: 1024px)': 24,
+    },
     maxWidth: 'calc(100% - 32px)',
     width: 'max-content',
     zIndex: 120,

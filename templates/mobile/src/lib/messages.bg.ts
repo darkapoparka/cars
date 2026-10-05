@@ -10,6 +10,9 @@ export const bgMessages: Record<string, string> = {
   'Explore the showroom. Find a vehicle that fits you.':
     'Разгледайте автосалона. Намерете автомобил, който ви подхожда.',
   'Main navigation': 'Основна навигация',
+  Menu: 'Меню',
+  'Open menu': 'Отвори менюто',
+  'Close menu': 'Затвори менюто',
   'Skip to content': 'Към съдържанието',
   'Find a vehicle': 'Намерете автомобил',
   'Vehicle category': 'Вид превозно средство',
