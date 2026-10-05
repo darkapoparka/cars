@@ -3,7 +3,14 @@ import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import { ArrowDownUp } from 'lucide-react';
+import {
+  ArrowDownUp,
+  CalendarDays,
+  Fuel,
+  Settings2,
+  SlidersHorizontal,
+  type LucideIcon,
+} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -87,6 +94,7 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: -2,
   },
+  stockClear: { minHeight: 44, color: colors.muted },
   pillWrapper: { display: 'contents' },
   phoneOnly: { display: { default: 'contents', '@media (min-width: 1024px)': 'none' } },
   desktopOnly: { display: { default: 'none', '@media (min-width: 1024px)': 'contents' } },
@@ -102,11 +110,8 @@ const s = stylex.create({
     position: { default: 'static', '@media (min-width: 1024px)': 'sticky' },
     top: 0,
     zIndex: 25,
-    paddingBlock: { default: 0, '@media (min-width: 1024px)': 12 },
+    paddingBlock: { default: 0, '@media (min-width: 1024px)': 16 },
     backgroundColor: colors.background,
-    borderBottomWidth: { default: 0, '@media (min-width: 1024px)': 1 },
-    borderBottomStyle: 'solid',
-    borderBottomColor: colors.line,
   },
   filterCount: {
     display: 'inline-flex',
@@ -122,7 +127,18 @@ const s = stylex.create({
     fontWeight: 700,
     lineHeight: '20px',
   },
-  pillText: { maxWidth: 160, overflow: 'hidden', textOverflow: 'ellipsis' },
+  pillText: {
+    maxWidth: { default: 160, '@media (min-width: 1024px)': 'none' },
+    flex: { default: 'initial', '@media (min-width: 1024px)': '1' },
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    textAlign: 'left',
+  },
+  pillIcon: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'inline-flex' },
+    flexShrink: 0,
+    color: colors.muted,
+  },
   content: {
     backgroundColor: colors.background,
     scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 96 },
@@ -258,6 +274,7 @@ export function ShowroomInventoryScreen() {
     label: string;
     active: boolean;
     name: string;
+    icon?: LucideIcon;
   }[] = [
     {
       key: 'make',
@@ -280,20 +297,29 @@ export function ShowroomInventoryScreen() {
       label: yearLabel,
       active: Boolean(filters.minYear || filters.maxYear),
       name: 'Year',
+      icon: CalendarDays,
     },
     {
       key: 'fuel',
       label: filters.fuel.map(t).join(', ') || 'Fuel',
       active: Boolean(filters.fuel.length),
       name: 'Fuel',
+      icon: Fuel,
     },
     {
       key: 'gearbox',
       label: filters.transmission.map(t).join(', ') || 'Gearbox',
       active: filters.transmission.length > 0,
       name: 'Gearbox',
+      icon: Settings2,
     },
-    { key: 'more', label: 'More', active: otherFilterCount > 0, name: 'More' },
+    {
+      key: 'more',
+      label: 'More',
+      active: otherFilterCount > 0,
+      name: 'More',
+      icon: SlidersHorizontal,
+    },
   ];
   return (
     <>
@@ -367,7 +393,7 @@ export function ShowroomInventoryScreen() {
           />
         </div>
         <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
-          <ShowroomQuickPills label={t('Quick filters')}>
+          <ShowroomQuickPills label={t('Quick filters')} fillDesktop>
             <div {...stylex.props(s.phoneOnly)}>
               <ShowroomQuickPill
                 aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
@@ -386,7 +412,7 @@ export function ShowroomInventoryScreen() {
                 {...stylex.props(
                   s.pillWrapper,
                   pill.key === 'gearbox' && s.desktopOnly,
-                  (pill.key === 'make' || pill.key === 'price') && !pill.active && s.phoneOnly,
+                  (pill.key === 'make' || pill.key === 'price') && s.phoneOnly,
                 )}
               >
                 <ShowroomQuickPill
@@ -405,7 +431,13 @@ export function ShowroomInventoryScreen() {
                     openSheet(pill.key === 'gearbox' ? 'more' : pill.key, event.currentTarget)
                   }
                   active={pill.active}
+                  fillDesktop
                 >
+                  {pill.icon && (
+                    <span aria-hidden="true" {...stylex.props(s.pillIcon)}>
+                      <pill.icon size={18} strokeWidth={1.8} />
+                    </span>
+                  )}
                   <span {...stylex.props(s.pillText)}>{t(pill.label)}</span>
                   {pill.key === 'more' && otherFilterCount > 0 && (
                     <>
@@ -422,10 +454,12 @@ export function ShowroomInventoryScreen() {
               </div>
             ))}
             {active && (
-              <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
-                {t('Clear')}
-                <Icon name="close" size={14} />
-              </ShowroomQuickPill>
+              <div {...stylex.props(s.phoneOnly)}>
+                <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
+                  {t('Clear')}
+                  <Icon name="close" size={14} />
+                </ShowroomQuickPill>
+              </div>
             )}
           </ShowroomQuickPills>
         </div>
@@ -446,6 +480,18 @@ export function ShowroomInventoryScreen() {
             <span aria-live="polite" {...stylex.props(s.stockCount)}>
               {results.length} {t(results.length === 1 ? category.singular : category.plural)}
             </span>
+            {active && (
+              <button
+                type="button"
+                data-desktop-clear-filters
+                aria-label={t('Clear filters')}
+                onClick={reset}
+                {...stylex.props(s.stockSort, s.stockClear)}
+              >
+                <Icon name="close" size={16} />
+                {t('Clear')}
+              </button>
+            )}
             <button
               type="button"
               data-desktop-sort

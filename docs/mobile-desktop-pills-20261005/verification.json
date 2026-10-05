@@ -1,0 +1,409 @@
+{
+  "scope": "Desktop inventory quick-filter rail; no release selection or dealer publication",
+  "builtAndVerifiedSources": [
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\ShowroomQuickPills.tsx",
+      "Hash": "2321D4EEF46D71469403664CA770C6DEF6E91D5F0157810EC8161EB0B33FF2FC"
+    },
+    {
+      "Path": "L:\\CODEX\\cars\\templates\\mobile\\src\\components\\ShowroomInventoryScreen.tsx",
+      "Hash": "56F568678399076215B6DC3D1D0021F7298263F1BB1470612B63B78CE0D4F5A4"
+    }
+  ],
+  "checks": {
+    "lint": "full src passed",
+    "typecheck": "noEmit passed",
+    "domainAndLocale": "95 passed",
+    "build": "production passed; 51 generated routes"
+  },
+  "desktop": {
+    "cases": 16,
+    "errors": [],
+    "samples": [
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "tablet horizontal rail and targets retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "tablet horizontal rail and targets retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          237.5,
+          237.5,
+          237.5,
+          237.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          237.5,
+          237.5,
+          237.5,
+          237.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow",
+          "all four filter destinations open with Enter; Escape restores opener focus",
+          "applied pills remain white with stronger neutral borders; hero owns Make/Price; Clear resets criteria",
+          "Fuel selection applies to actual inventory and can be cleared",
+          "rail remains accessible when pinned while scrolling",
+          "long selected values retain accessible labels without overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow",
+          "all four filter destinations open with Enter; Escape restores opener focus",
+          "applied pills remain white with stronger neutral borders; hero owns Make/Price; Clear resets criteria",
+          "Fuel selection applies to actual inventory and can be cleared",
+          "rail remains accessible when pinned while scrolling",
+          "long selected values retain accessible labels without overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "tablet horizontal rail and targets retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "tablet horizontal rail and targets retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          237.5,
+          237.5,
+          237.5,
+          237.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          237.5,
+          237.5,
+          237.5,
+          237.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow",
+          "all four filter destinations open with Enter; Escape restores opener focus",
+          "applied pills remain white with stronger neutral borders; hero owns Make/Price; Clear resets criteria",
+          "Fuel selection applies to actual inventory and can be cleared",
+          "rail remains accessible when pinned while scrolling",
+          "long selected values retain accessible labels without overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow",
+          "all four filter destinations open with Enter; Escape restores opener focus",
+          "applied pills remain white with stronger neutral borders; hero owns Make/Price; Clear resets criteria",
+          "Fuel selection applies to actual inventory and can be cleared",
+          "rail remains accessible when pinned while scrolling",
+          "long selected values retain accessible labels without overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "lang": "bg",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "lang": "en",
+        "checks": [
+          "four equal pills align with car columns",
+          "white faces, light borders, no shadows or rail divider",
+          "48px targets; no page or rail overflow"
+        ],
+        "pillWidths": [
+          256.5,
+          256.5,
+          256.5,
+          256.5
+        ],
+        "railDivider": "0px"
+      }
+    ]
+  },
+  "phones": {
+    "cases": 32,
+    "scope": "Phone filter controls, dialog, header and dock; full Services view",
+    "differences": [],
+    "fullPageDifferences": [
+      "chromium-bg-320-home",
+      "chromium-bg-320-applied",
+      "chromium-bg-320-more",
+      "chromium-en-320-home",
+      "chromium-en-320-applied",
+      "chromium-en-320-more",
+      "chromium-bg-390-home",
+      "chromium-bg-390-applied",
+      "chromium-bg-390-more",
+      "chromium-en-390-home",
+      "chromium-en-390-applied",
+      "chromium-en-390-more",
+      "webkit-bg-320-home",
+      "webkit-bg-320-applied",
+      "webkit-bg-320-more",
+      "webkit-en-320-home",
+      "webkit-en-320-applied",
+      "webkit-en-320-more",
+      "webkit-bg-390-home",
+      "webkit-bg-390-applied",
+      "webkit-bg-390-more",
+      "webkit-en-390-home",
+      "webkit-en-390-applied",
+      "webkit-en-390-more"
+    ],
+    "errors": [],
+    "pixels": [
+      {
+        "key": "chromium-bg-320-home",
+        "changedChannels": 241878
+      },
+      {
+        "key": "chromium-bg-320-applied",
+        "changedChannels": 252426
+      },
+      {
+        "key": "chromium-bg-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-home",
+        "changedChannels": 258549
+      },
+      {
+        "key": "chromium-en-320-applied",
+        "changedChannels": 250909
+      },
+      {
+        "key": "chromium-en-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-home",
+        "changedChannels": 329136
+      },
+      {
+        "key": "chromium-bg-390-applied",
+        "changedChannels": 280732
+      },
+      {
+        "key": "chromium-bg-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-home",
+        "changedChannels": 280619
+      },
+      {
+        "key": "chromium-en-390-applied",
+        "changedChannels": 280114
+      },
+      {
+        "key": "chromium-en-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-services",
+        "changedChannels": 0
+      }
+    ]
+  },
+  "phonePillFaces": {
+    "cases": 32,
+    "differences": [],
+    "errors": [],
+    "compared": "normal and applied pill geometry, typography, background, borders, shadows, padding, gaps and alignment"
+  },
+  "limitations": [
+    "Full inventory screenshots also contain a concurrent ShowroomVehicleCard.tsx draft. That source was not edited or staged by this task.",
+    "Phone preservation is established for filter controls, dialogs, header, dock, pill faces and Services; full inventory pixel identity is not claimed."
+  ]
+}

@@ -50,6 +50,15 @@ remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their existing header, floating dock, spacing and navigation behavior.
 
+Desktop inventory places Year, Fuel, Gearbox and More in four equal-width pills
+aligned with the four vehicle columns. The white 44px faces sit inside 48px
+targets, with small icons, left-aligned values and a right chevron. Selected
+inventory pills stay white with a stronger neutral border and text. The sticky
+rail uses spacing instead of a full-width separator. Selected Make and Price
+remain in the hero fields; Clear sits beside the stock count and sorting.
+The fillDesktop presentation is opt-in for inventory; phone pills and Services
+retain their existing horizontal rails and appearance.
+
 Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
