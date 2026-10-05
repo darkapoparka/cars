@@ -297,7 +297,11 @@ export const showroomFilterSheetStyles = stylex.create({
       '@media (max-width: 699px)': 12,
       '@media (min-width: 1024px)': 12,
     },
-    fontSize: { default: 14, '@media (min-width: 700px)': 16 },
+    fontSize: {
+      default: 14,
+      '@media (max-width: 699px)': 16,
+      '@media (min-width: 700px)': 16,
+    },
     fontWeight: { default: 700, '@media (max-width: 699px)': 500 },
     lineHeight: { default: '20px', '@media (min-width: 700px)': '24px' },
     paddingInline: { default: 24, '@media (min-width: 700px)': 16 },

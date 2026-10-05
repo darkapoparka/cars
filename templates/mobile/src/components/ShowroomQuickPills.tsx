@@ -53,7 +53,7 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 6,
     minHeight: 40,
-    paddingInline: 14,
+    paddingInline: { default: 14, '@media (max-width: 699px)': 12 },
     paddingBlock: 8,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -68,9 +68,9 @@ const s = stylex.create({
       '@media (min-width: 1024px)': 'none',
     },
     color: colors.text,
-    fontSize: { default: 15, '@media (min-width: 1024px)': 14 },
+    fontSize: { default: 15, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 14 },
     fontWeight: 500,
-    lineHeight: '20px',
+    lineHeight: { default: '20px', '@media (max-width: 699px)': '22px' },
     whiteSpace: 'nowrap',
   },
   active: {
@@ -85,7 +85,11 @@ const s = stylex.create({
   },
   desktopFace: {
     minHeight: { default: 40, '@media (min-width: 1024px)': 36 },
-    paddingInline: { default: 14, '@media (min-width: 1024px)': 12 },
+    paddingInline: {
+      default: 14,
+      '@media (max-width: 699px)': 12,
+      '@media (min-width: 1024px)': 12,
+    },
     paddingBlock: { default: 8, '@media (min-width: 1024px)': 7 },
     borderRadius: { default: 20, '@media (min-width: 1024px)': 18 },
     borderColor: {
@@ -96,7 +100,7 @@ const s = stylex.create({
       default: colors.background,
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.panel },
     },
-    fontSize: { default: 15, '@media (min-width: 1024px)': 14 },
+    fontSize: { default: 15, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 14 },
   },
   desktopEmphasis: {
     borderColor: {
