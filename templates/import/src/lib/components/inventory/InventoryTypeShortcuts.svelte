@@ -46,6 +46,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: center;
 		gap: var(--bc-space-2);
 		min-width: 0;
 	}
@@ -57,16 +58,15 @@
 		min-width: 0;
 		min-height: var(--bc-control-height-standard);
 		padding: var(--bc-space-1) var(--bc-space-4);
-		border: 1px solid var(--bc-border-strong);
+		border: 1px solid transparent;
 		border-radius: var(--bc-radius-pill);
-		background: var(--bc-surface-raised);
+		background: transparent;
 		color: var(--bc-copy);
 		font-size: var(--bc-text-label);
 		font-weight: var(--bc-weight-control);
 		text-decoration: none;
 	}
 	a:hover {
-		border-color: var(--bc-ink);
 		background: var(--bc-surface-hover);
 		color: var(--bc-ink);
 	}

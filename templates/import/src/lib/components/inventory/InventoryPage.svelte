@@ -66,11 +66,13 @@
 			desktopDescription={desktop.subtitle}
 		>
 			{#snippet desktopActions()}
-				<DesktopDiscoveryPanel class="inventory-discovery">
-					<InventorySearch {english} />
+				<div class="inventory-discovery-stack">
 					{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
-					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
-				</DesktopDiscoveryPanel>
+					<DesktopDiscoveryPanel class="inventory-discovery">
+						<InventorySearch {english} />
+						<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
+					</DesktopDiscoveryPanel>
+				</div>
 			{/snippet}
 		</PageIntro>
 		<InventoryFiltersDialog bind:this={dialog} {desktop} {english} bind:allOpen bind:activeFilter />
@@ -203,6 +205,14 @@
 		font-size: var(--bc-text-label);
 	}
 	@media (min-width: 768px) {
+		.inventory-discovery-stack {
+			display: grid;
+			gap: var(--bc-space-4);
+			width: 100%;
+			max-width: var(--bc-desktop-discovery-width);
+			min-width: 0;
+			margin-inline: auto;
+		}
 		:global(.inventory-discovery) {
 			--bc-desktop-discovery-panel-height: 0px;
 		}
