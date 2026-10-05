@@ -18,7 +18,6 @@
   const fields: readonly Field[] = ['make', 'model', 'type', 'body', 'price', 'year', 'fuel', 'transmission', 'mileage_max', 'condition', 'version', 'equipment'];
   let draft = $state<ListingDraft>(emptyListingDraft());
   let field = $state<Field>();
-  let modelMake = $state('');
   let search = $state('');
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
@@ -27,7 +26,8 @@
   let revealField = $state<Field | 'q'>();
   let commandValue = $state('');
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
-  const title = $derived(field ? listingFacetTitle(field, i18n.locale) : i18n.t('m_3deeda2a1ebe'));
+  const vehicle = $derived(field === 'make' || field === 'model');
+  const title = $derived(vehicle ? i18n.t('inventory.search.makeModel') : field ? listingFacetTitle(field, i18n.locale) : i18n.t('m_3deeda2a1ebe'));
   // Choice search only narrows suggestions; the keyword command explicitly applies q.
   const effectiveFilters = $derived(listingFiltersFromDraft(draft));
   const matching = $derived(filterListingVehicles(listingVehicles, effectiveFilters, i18n.locale).length);
@@ -41,8 +41,10 @@
     : item === 'equipment' ? draft.equipment.length : draft[item]));
   const filteredFields = $derived(fields.filter(item => matches(listingFacetTitle(item, i18n.locale))));
   const showAddFilter = $derived(Boolean(field || search || activeFields.length || draft.q));
-  const choices = $derived(field && !range ? options(field, field === 'model' ? modelMake : draft.make)
-    .map(value => choice(field!, value)).filter(item => matches(`${item.label} ${item.make}`)) : []);
+  const choices = $derived(field && !range ? options(vehicle ? 'model' : field, draft.make)
+    .map(value => choice(vehicle ? 'model' : field!, value)).filter(item => matches(`${item.label} ${item.make}`)) : []);
+  const makeChoices = $derived(vehicle ? options('make', '').map(value => choice('make', value))
+    .filter(item => matches(item.label)) : []);
   const searchChoices = $derived(!field && search.trim() ? fields.flatMap(item =>
     options(item, item === 'model' ? '' : draft.make).map(value => choice(item, value))
       .filter(option => matches(`${option.label} ${option.make}`))).slice(0, 40) : []);
@@ -53,9 +55,8 @@
       draft = listingDraftFromFilters(filters);
       const requested = initialField?.startsWith('price') ? 'price' : initialField?.startsWith('year') ? 'year' : initialField;
       field = fields.find(item => item === requested);
-      modelMake = draft.make;
       search = '';
-      commandValue = '';
+      commandValue = initialChoice();
       revealField = field;
       tokenScrolled = false;
     });
@@ -102,7 +103,12 @@
     return filterListingVehicles(listingVehicles, listingFiltersFromDraft(candidate(item)), i18n.locale).length;
   }
   async function focusSearch() { await tick(); (range ? rangeInput : searchInput)?.focus({ preventScroll: true }); }
-  function browse(item?: Field) { field = item; revealField = item; modelMake = draft.make; search = ''; commandValue = ''; void focusSearch(); }
+  function initialChoice() {
+    if (field === 'model') return draft.model ? `model:${draft.model}` : 'clear-model';
+    if (field === 'make') return draft.make ? `make:${draft.make}` : 'clear-make';
+    return '';
+  }
+  function browse(item?: Field) { field = item; revealField = item; search = ''; commandValue = initialChoice(); void focusSearch(); }
   function select(item: Choice) {
     if (isSelected(item) && item.field !== 'equipment') {
       if (!field) search = '';
@@ -113,6 +119,7 @@
     revealField = item.field;
     // Selecting a value keeps the dialog open, including equipment multi-selection.
     if (!field) { search = ''; commandValue = ''; }
+    else if (vehicle && item.field === 'make') { search = ''; commandValue = 'clear-model'; }
     void focusSearch();
   }
   function clear(item: Field | 'q') {
@@ -122,15 +129,13 @@
     else if (item === 'mileage_max') draft = { ...draft, mileageMax: '' };
     else if (item === 'equipment') draft = { ...draft, equipment: [] };
     else draft = { ...draft, [item]: '' };
-    if (item === 'make') modelMake = '';
-    commandValue = '';
+    commandValue = search ? '' : initialChoice();
     void focusSearch();
   }
   function clearAll() {
     draft = emptyListingDraft(filters.sort);
-    modelMake = '';
     search = '';
-    commandValue = '';
+    commandValue = initialChoice();
     void focusSearch();
   }
   function apply(event: SubmitEvent) {
@@ -152,6 +157,13 @@
   }
 </script>
 
+{#snippet optionRow(item: Choice)}
+  <Command.Item class="dn-search-row dn-search-choice" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}>
+    <span class="dn-search-row-label">{item.label}{#if item.make && !draft.make}<small>{item.make}</small>{/if}</span>
+    <span class="dn-search-row-count">{choiceCount(item)}</span><span class="dn-search-check" data-checked={isSelected(item)}>✓</span>
+  </Command.Item>
+{/snippet}
+
 <Dialog.Root bind:open>
   <Dialog.Portal>
     <Dialog.Overlay class="dn-search-overlay" />
@@ -159,6 +171,8 @@
       <Dialog.Title class="dn-search-sr-only">{title}</Dialog.Title>
       <Dialog.Description class="dn-search-sr-only">{i18n.t('inventory.search.placeholder')}</Dialog.Description>
       <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={event => cleanListingFormData(event.formData)}>
+        <!-- A new scope or make initializes Command's selection after its rows change. -->
+        {#key `${field ?? ''}:${vehicle ? draft.make : ''}`}
         <Command.Root class="dn-search-command" shouldFilter={false} columns={!field && !search ? 2 : 1} loop bind:value={commandValue} label={title}>
           <div class="dn-search-header" data-range={range} role="presentation" onkeydown={controlKeyboard}>
             {#if field}
@@ -199,9 +213,6 @@
                 {/each}
               </div>
             </div>
-            {#if field === 'make' && draft.make}
-              <button class="dn-search-next" type="button" onclick={() => browse('model')}>{listingFacetTitle('model', i18n.locale)}<Icon name="arrow-right" size={16} /></button>
-            {/if}
           </div>
 
           {#if range}
@@ -255,6 +266,39 @@
               {/if}
               {#if invalidRange}<p class="dn-search-range-error" role="alert">{i18n.t(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax) ? 'm_2157bc34d38a' : 'm_e35acfc7ae2e')}</p>{/if}
             </div>
+          {:else if vehicle}
+            <Command.List class="dn-search-results dn-search-vehicle-results">
+              <Command.Viewport class="dn-search-vehicle-grid">
+                <Command.Group class="dn-search-makes">
+                  <Command.GroupHeading class="dn-search-group-title">{listingFacetTitle('make', i18n.locale)}</Command.GroupHeading>
+                  <Command.GroupItems>
+                    {#if !search}
+                      <Command.Item class="dn-search-row" value="clear-make" aria-checked={!draft.make} onSelect={() => clear('make')}>
+                        <span class="dn-search-row-label">{i18n.t('inventory.search.allMakes')}</span><span class="dn-search-check" data-checked={!draft.make}>✓</span>
+                      </Command.Item>
+                    {/if}
+                    {#each makeChoices as item (item.value)}{@render optionRow(item)}{/each}
+                  </Command.GroupItems>
+                </Command.Group>
+                <Command.Group class="dn-search-models">
+                  <Command.GroupHeading class="dn-search-group-title">{listingFacetTitle('model', i18n.locale)}</Command.GroupHeading>
+                  <Command.GroupItems>
+                    {#if !search}
+                      <Command.Item class="dn-search-row" value="clear-model" aria-checked={!draft.model} onSelect={() => clear('model')}>
+                        <span class="dn-search-row-label">{i18n.t('inventory.search.allModels')}</span><span class="dn-search-check" data-checked={!draft.model}>✓</span>
+                      </Command.Item>
+                    {/if}
+                    {#each choices as item (item.value)}{@render optionRow(item)}{/each}
+                  </Command.GroupItems>
+                  {#if !choices.length}
+                    <div class="dn-search-empty">
+                      <Icon name="search" size={24} /><p role="status">{i18n.t('inventory.search.empty')}</p>
+                      {#if search}<button type="button" onkeydown={controlKeyboard} onclick={() => { search = ''; void focusSearch(); }}>{i18n.t('inventory.search.clearQuery')}</button>{/if}
+                    </div>
+                  {/if}
+                </Command.Group>
+              </Command.Viewport>
+            </Command.List>
           {:else}
             <Command.List class="dn-search-results" aria-multiselectable={field === 'equipment'}>
               <Command.Viewport>
@@ -265,10 +309,7 @@
                     </Command.Item>
                   {/if}
                   {#each choices as item (`${item.field}:${item.value}`)}
-                    <Command.Item class="dn-search-row dn-search-choice" value={`${item.field}:${item.value}`} aria-checked={isSelected(item)} onSelect={() => select(item)}>
-                      <span class="dn-search-row-label">{item.label}{#if item.make && !modelMake}<small>{item.make}</small>{/if}</span>
-                      <span class="dn-search-row-count">{choiceCount(item)}</span><span class="dn-search-check" data-checked={isSelected(item)}>✓</span>
-                    </Command.Item>
+                    {@render optionRow(item)}
                   {/each}
                   {#if !choices.length}
                     <div class="dn-search-empty">
@@ -301,9 +342,12 @@
             </Command.List>
           {/if}
         </Command.Root>
+        {/key}
         <footer class="dn-search-footer">
           <div class="dn-search-actions">
-            {#if field && activeFields.includes(field)}
+            {#if vehicle && draft.make}
+              <button class="dn-search-clear-field" type="button" onclick={() => clear('make')}>{i18n.t('inventory.search.clearMakeModel')}</button>
+            {:else if field && activeFields.includes(field)}
               <button class="dn-search-clear-field" type="button" aria-label={`${i18n.t('inventory.search.clearFilter')}: ${title}`} onclick={() => field && clear(field)}>{i18n.t('inventory.search.clearFilter')}</button>
             {/if}
             {#if activeFields.length || draft.q}
@@ -343,8 +387,6 @@
   .dn-search-token-window:has(button:focus-visible)::before { display: none; }
   .dn-search-token-list { display: flex; align-items: center; gap: var(--dn-space-2); min-width: 0; height: 56px; overflow-x: auto; overscroll-behavior-x: contain; scroll-padding-inline: var(--dn-space-1); padding-inline: var(--dn-space-1); scrollbar-width: none; }
   .dn-search-token-list::-webkit-scrollbar { display: none; }
-  .dn-search-next { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-2); height: var(--dn-control-height-compact); padding: 0 var(--dn-space-2); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
-  .dn-search-next:hover { background: var(--dn-surface-subtle); }
   .dn-search-section-title { color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
   .dn-search-add { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-2); height: var(--dn-control-height-compact); padding: 0 var(--dn-space-3); border: 1px solid transparent; border-radius: var(--dn-radius-button); background: var(--dn-surface-subtle); color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
   .dn-search-add > span { font-size: var(--dn-text-card); line-height: var(--dn-leading-control); }
@@ -358,6 +400,12 @@
   .dn-search-token:has(button:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   .dn-search-token button:focus-visible { outline: 0; background: var(--dn-surface-hover); }
   :global(.dn-search-results) { flex: 1 1 328px; height: 328px; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-6); scrollbar-width: thin; }
+  :global(.dn-search-vehicle-results) { overflow: hidden; }
+  :global(.dn-search-vehicle-grid) { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: var(--dn-space-6); height: 100%; min-height: 0; }
+  :global(.dn-search-makes), :global(.dn-search-models) { min-width: 0; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scroll-padding-block: var(--dn-space-2); scrollbar-width: thin; }
+  :global(.dn-search-vehicle-grid .dn-search-group-title) { position: sticky; top: 0; z-index: 1; background: var(--dn-surface-raised); }
+  :global(.dn-search-makes .dn-search-choice[aria-checked='true']) { background-color: var(--dn-surface-subtle); color: var(--dn-ink); }
+  :global(.dn-search-makes .dn-search-choice[aria-checked='true'] .dn-search-row-count) { color: var(--dn-muted); }
   :global(.dn-search-group-title) { padding: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); }
   :global(.dn-search-field-grid[data-grid='true']) { display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--dn-space-6); }
   :global(.dn-search-row) { display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-prominent); padding: var(--dn-space-2); border-block: var(--dn-space-half) solid transparent; border-radius: var(--dn-radius-control); background-clip: padding-box; outline: 0; color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }

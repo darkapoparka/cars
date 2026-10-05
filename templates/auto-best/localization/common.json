@@ -23,6 +23,22 @@
     "en": "Clear all",
     "bg": "Изчисти всички"
   },
+  "inventory.search.makeModel": {
+    "en": "Make and model",
+    "bg": "Марка и модел"
+  },
+  "inventory.search.clearMakeModel": {
+    "en": "Clear make and model",
+    "bg": "Изчисти марка и модел"
+  },
+  "inventory.search.allMakes": {
+    "en": "All makes",
+    "bg": "Всички марки"
+  },
+  "inventory.search.allModels": {
+    "en": "All models",
+    "bg": "Всички модели"
+  },
   "inventory.search.empty": {
     "en": "No matches found",
     "bg": "Няма съвпадения"

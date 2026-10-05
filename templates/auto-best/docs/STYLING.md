@@ -69,20 +69,26 @@ no separator rules; spacing carries the hierarchy. Command rows have a 52px targ
 Token keyboard focus stays visible outside clipped values.
 Add filter stays pinned beside the horizontally scrollable token list. Edited
 values reveal their token automatically without shifting the row or dialog.
-A selected make exposes a direct Model action while keeping the make choices open.
+Make and Model shortcuts open the same paired view: makes stay on the left while
+the selected make's models appear on the right. Each column has its own scroll
+area and a plain All makes/All models reset row. Selecting a different make updates
+the model column in place; it clears an incompatible model. Search narrows both
+columns, and choosing a make moves keyboard selection to All models. Opening the
+Model shortcut starts keyboard selection in the model column. The selected make
+uses a quiet neutral surface; the selected model retains charcoal.
 Range inputs show units beside their values and an unrestricted placeholder;
 choice search with no results offers Clear search. Keyboard focus remains visible
 on a selected charcoal choice. Number inputs retain their native arrow-key editing
 without invoking Command list navigation.
-The current filter has an explicit Clear filter action; Clear all resets the
-whole draft while retaining sort. Token removal remains available for any one
+The paired view has Clear make and model; other active fields have Clear filter.
+Clear all resets the whole draft while retaining sort. Token removal remains available for any one
 filter. Clearing a make also clears its model and releases the model list scope;
 clearing all releases the scope too. Both actions retain the current dialog view.
 The reference direction uses the current [shadcn-Svelte Command dialog](https://www.shadcn-svelte.com/docs/components/command)
 and [Linear filters](https://linear.app/docs/filters), adapted to the existing Cars tokens.
 Choice search tolerates accents and model spacing. Typing only narrows suggestions;
 the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
-choices. Model respects the opening make and a uniquely owned model can infer
+choices. Model respects the current make and a uniquely owned model can infer
 its make. Changing make clears an incompatible model. Budget/year use paired
 number inputs; mileage has an input and presets. Invalid ranges block Show cars.
 Show cars applies the complete draft to the existing GET URL, retaining sort;
