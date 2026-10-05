@@ -1,0 +1,143 @@
+{
+  "stage": "after",
+  "base": "http://127.0.0.1:6475",
+  "at": "2026-10-05T15:54:13.562Z",
+  "views": [
+    {
+      "width": 320,
+      "heading": {
+        "size": "16px",
+        "weight": "400"
+      },
+      "rows": [
+        {
+          "name": "Any",
+          "height": 44,
+          "logo": {
+            "src": "/branding/cars-circle-20261005.png",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 270
+        },
+        {
+          "name": "BMW",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/bmw.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 270
+        },
+        {
+          "name": "Abarth",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/abarth.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 270
+        },
+        {
+          "name": "AC",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/ac.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 270
+        },
+        {
+          "name": "Acura",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/acura.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 270
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "heading": {
+        "size": "16px",
+        "weight": "400"
+      },
+      "rows": [
+        {
+          "name": "Any",
+          "height": 44,
+          "logo": {
+            "src": "/branding/cars-circle-20261005.png",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 340
+        },
+        {
+          "name": "BMW",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/bmw.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 340
+        },
+        {
+          "name": "Abarth",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/abarth.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 340
+        },
+        {
+          "name": "AC",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/ac.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 340
+        },
+        {
+          "name": "Acura",
+          "height": 56,
+          "logo": {
+            "src": "/images/makes/acura.webp",
+            "width": 32,
+            "complete": true
+          },
+          "labelX": 68,
+          "trailingCenterX": 340
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "heading": {
+        "size": "20px",
+        "weight": "700"
+      }
+    }
+  ],
+  "errors": []
+}

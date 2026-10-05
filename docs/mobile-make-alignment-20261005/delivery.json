@@ -1,0 +1,121 @@
+{
+  "verifiedAt": "2026-10-05T16:01:04.753Z",
+  "sourceCommit": "77b31acf6e2a974b53454157bfc67b798cc59ed5",
+  "sourceTree": "3f94fdb409cc35b1dff3e667699965eff39a7f9a",
+  "sourceDigest": "d980088f16ea4e0ecfc23609a3bb8513134281b10f1af7f70f937dc2da5bf812",
+  "publishingCommit": "2edfe85a3e8c9030c7bf914889ad1ae76c87cc2f",
+  "deployment": {
+    "id": "dpl_Bd4iJ2qwkNLc4tR58VKjZjZwNLCu",
+    "url": "cars-template-mobile-4gb45nku3-tyj5.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "alias": [
+      "cars-template-mobile.vercel.app",
+      "cars-template-mobile-tyj5.vercel.app",
+      "cars-template-mobile-git-main-tyj5.vercel.app"
+    ],
+    "githubCommitSha": "2edfe85a3e8c9030c7bf914889ad1ae76c87cc2f",
+    "source": "git",
+    "readyAt": "2026-10-05T15:59:00.734Z",
+    "verifiedAt": "2026-10-05T16:00:55.754Z"
+  },
+  "changed": [
+    "templates/mobile/src/components/MakePicker.tsx",
+    "templates/mobile/src/components/make-picker.stylex.ts",
+    "templates/mobile/scripts/qa-showroom-search.mjs",
+    "templates/mobile/public/branding/cars-circle-20261005.png"
+  ],
+  "localPreview": {
+    "url": "http://127.0.0.1:6474/?filter=make&lang=bg",
+    "mode": "dev",
+    "canonicalSource": "templates/mobile",
+    "report": {
+      "base": "http://127.0.0.1:6474",
+      "checks": [
+        {
+          "locale": "bg",
+          "width": 320,
+          "typography": {
+            "title": "500",
+            "price": "400"
+          },
+          "enlargedAllMakesFits": true
+        },
+        {
+          "locale": "bg",
+          "width": 390,
+          "typography": {
+            "title": "500",
+            "price": "400"
+          },
+          "enlargedAllMakesFits": true
+        },
+        {
+          "locale": "en",
+          "width": 320,
+          "typography": {
+            "title": "500",
+            "price": "400"
+          },
+          "enlargedAllMakesFits": true
+        },
+        {
+          "locale": "en",
+          "width": 390,
+          "typography": {
+            "title": "500",
+            "price": "400"
+          },
+          "enlargedAllMakesFits": true
+        }
+      ],
+      "errors": [],
+      "passed": true
+    }
+  },
+  "platformMark": {
+    "generatedAtOwnerRequest": true,
+    "original": "platform-mark-original.png",
+    "originalSha256": "aacd377832e319c8563982a2fe0811af3e5f68a38d07a50b18b6ce129d601cf8",
+    "asset": "templates/mobile/public/branding/cars-circle-20261005.png",
+    "assetSha256": "1f2d97d6a5290542f03da0d529f5acd0aa5a199b07b71abfb68a14589ea0e785",
+    "width": 96,
+    "height": 96,
+    "displaySize": 32,
+    "bytes": 8141
+  },
+  "checks": {
+    "lint": true,
+    "typescript": true,
+    "formatting": true,
+    "domainLocalizationTests": 95,
+    "productionBuildStaticPages": 51,
+    "localChromiumWebKitChecks": 20,
+    "hostedChromiumWebKitChecks": 8,
+    "localTypographyAndEnlargedTextChecks": 4,
+    "hostedMakeViews": 3
+  },
+  "desktopComparison": [
+    {
+      "name": "make",
+      "width": 1440,
+      "height": 844,
+      "changedPixels": 612,
+      "maxChannelDelta": 28,
+      "modalContentPixels": 396,
+      "modalContentMaxDelta": 28,
+      "modalContentBounds": {
+        "x": 250,
+        "y": 132,
+        "width": 940,
+        "height": 580
+      }
+    }
+  ],
+  "sharedCheckout": {
+    "localHead": "08c89d63f9e11939acd5b135ece4278252b80f43",
+    "sharedIndexPreserved": true,
+    "existingIndexLockPreserved": true,
+    "explanation": "The occupied checkout retains its older HEAD. The scoped source and evidence commits use separate indexes based on fetched main and non-force pushes, following WORKSPACE.md."
+  }
+}

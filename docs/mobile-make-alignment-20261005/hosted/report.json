@@ -1,0 +1,64 @@
+{
+  "base": "https://cars-template-mobile.vercel.app",
+  "at": "2026-10-05T15:59:53.789Z",
+  "checks": [
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 320,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "chromium",
+      "locale": "bg",
+      "width": 390,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 320,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "chromium",
+      "locale": "en",
+      "width": 390,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 320,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "webkit",
+      "locale": "bg",
+      "width": 390,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 320,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    },
+    {
+      "engine": "webkit",
+      "locale": "en",
+      "width": 390,
+      "passed": true,
+      "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

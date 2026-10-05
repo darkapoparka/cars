@@ -1,0 +1,43 @@
+{
+  "base": "http://127.0.0.1:6474",
+  "checks": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "typography": {
+        "title": "500",
+        "price": "400"
+      },
+      "enlargedAllMakesFits": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "typography": {
+        "title": "500",
+        "price": "400"
+      },
+      "enlargedAllMakesFits": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "typography": {
+        "title": "500",
+        "price": "400"
+      },
+      "enlargedAllMakesFits": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "typography": {
+        "title": "500",
+        "price": "400"
+      },
+      "enlargedAllMakesFits": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}
