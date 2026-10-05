@@ -6,6 +6,7 @@ import {usePathname} from '@/lib/navigation';
 import * as stylex from '@stylexjs/stylex';
 import {Heart, Menu, Phone} from 'lucide-react';
 import DealerBrand from '@/components/DealerBrand';
+import AppImage from '@/components/AppImage';
 import ShowroomIcon from '@/components/ShowroomIcon';
 import {showroom} from '@/lib/showroom';
 import {dealer} from '@/lib/dealer-config';
@@ -31,7 +32,7 @@ export default function AppShell({children}: {children:ReactNode}){
       <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
       <nav data-desktop-journeys aria-label={tx('Car services')} {...stylex.props(s.journeys)}>{showroom.services.map(item=>{
         const active=item.key==='buy'?pathname==='/'||['/cars','/saved','/search','/luxe'].some(route=>pathname===route||pathname.startsWith(route+'/')):pathname===item.href||pathname.startsWith(item.href+'/');
-        return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey,active&&s.journeyActive)}>{tx(item.key==='finance'?'Leasing':item.label)}</Link>;
+        return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey,active&&s.journeyActive)}><span data-desktop-journey-art aria-hidden="true" {...stylex.props(s.journeyArtwork)}><AppImage src={item.image} alt="" fill sizes="54px" {...stylex.props(s.journeyImage,(item.key==='buy'||item.key==='sell')&&s.journeyCarImage)}/></span><span>{tx(item.key==='finance'?'Leasing':item.label)}</span></Link>;
       })}</nav>
       <nav data-desktop-tools aria-label={tx("Primary navigation")} {...stylex.props(s.actions)}>
         <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton)}><Heart size={21} aria-hidden="true"/></Link>
@@ -58,7 +59,10 @@ const s=stylex.create({
  headerInner:{display:'grid',gridTemplateColumns:'minmax(0,1fr) auto minmax(0,1fr)',alignItems:'center',gap:24,width:'100%',maxWidth:$.content,minHeight:72,marginInline:'auto',paddingInline:28},
  wordmark:{display:'inline-flex',alignItems:'center',justifySelf:'start',minHeight:44,color:$.ink},
  journeys:{display:'flex',alignItems:'center',gap:8},
- journey:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,paddingInline:18,color:$.ink,fontSize:14,fontWeight:400,whiteSpace:'nowrap',borderWidth:1,borderStyle:'solid',borderColor:$.line,borderRadius:999,backgroundColor:{default:$.surface,':hover':$.surfaceAlt}},
+ journey:{display:'inline-flex',alignItems:'center',justifyContent:'center',gap:8,minHeight:48,paddingInline:14,color:$.ink,fontSize:15,fontWeight:400,lineHeight:'20px',whiteSpace:'nowrap',borderWidth:1,borderStyle:'solid',borderColor:$.line,borderRadius:14,backgroundColor:{default:$.surfaceAlt,':hover':$.violetSoft}},
+ journeyArtwork:{display:'block',position:'relative',flexShrink:0,width:54,height:34,overflow:'hidden'},
+ journeyImage:{objectFit:'contain'},
+ journeyCarImage:{transform:'scale(1.12)'},
  journeyActive:{color:'#fff',borderColor:$.ink,backgroundColor:{default:$.ink,':hover':$.violetDark}},
  actions:{display:'flex',alignItems:'center',justifySelf:'end',gap:8},
  iconButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:999,backgroundColor:{default:'#fff',':hover':$.surfaceAlt}},

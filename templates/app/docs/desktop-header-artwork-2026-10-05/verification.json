@@ -1,0 +1,26 @@
+{
+  "checks": [
+    "bg 1440: content below the header keeps its text and geometry",
+    "bg 1100: content below the header keeps its text and geometry",
+    "en 1100: content below the header keeps its text and geometry",
+    "bg 1099: phone/tablet pixel, text and geometry preservation",
+    "bg 390: phone/tablet pixel, text and geometry preservation",
+    "bg 320: phone/tablet pixel, text and geometry preservation",
+    "bg 1100 /sell: keyboard navigation, active state, original artwork and header fit",
+    "bg 1100 /finance: keyboard navigation, active state, original artwork and header fit",
+    "bg 1100 /service: keyboard navigation, active state, original artwork and header fit",
+    "bg 1100 /: keyboard navigation, active state, original artwork and header fit",
+    "bg 1100: configured Call button space remains available",
+    "en 1100 /sell: keyboard navigation, active state, original artwork and header fit",
+    "en 1100 /finance: keyboard navigation, active state, original artwork and header fit",
+    "en 1100 /service: keyboard navigation, active state, original artwork and header fit",
+    "en 1100 /: keyboard navigation, active state, original artwork and header fit",
+    "en 1100: configured Call button space remains available",
+    "bg 1440 /sell: keyboard navigation, active state, original artwork and header fit",
+    "bg 1440 /finance: keyboard navigation, active state, original artwork and header fit",
+    "bg 1440 /service: keyboard navigation, active state, original artwork and header fit",
+    "bg 1440 /: keyboard navigation, active state, original artwork and header fit",
+    "bg 1440: configured Call button space remains available"
+  ],
+  "errors": []
+}
