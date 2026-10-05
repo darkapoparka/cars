@@ -1,0 +1,401 @@
+{
+  "at": "2026-10-05T16:25:59.227Z",
+  "scope": "Mobile platform logo sizing",
+  "sourceCommit": "a45ae42e554f9e935333c5c1a963839d1a63cd4b",
+  "sourceTree": "c0f60d2bed70f9f6e21694d15d8d8013f6bdb500",
+  "sourceDigest": "08e42a64359295306dc33e70dbbe958251c1a03da1d801f079aaa37e92a30861",
+  "publishingCommit": "6809242ab93531e93dfa96c0f2e58b93119c7993",
+  "deploymentId": "dpl_Hthc6GH126CJytuuGAmEy365bWSz",
+  "deploymentState": "READY",
+  "publicUrl": "https://cars-template-mobile.vercel.app/?filter=make&lang=bg",
+  "checks": {
+    "productionBuild": {
+      "passed": true,
+      "pages": 51
+    },
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainAndLocalization": {
+      "passed": true,
+      "count": 95
+    },
+    "browser": {
+      "passed": true,
+      "scenarios": [
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        }
+      ]
+    },
+    "local": [
+      {
+        "width": 320,
+        "heading": {
+          "size": "16px",
+          "weight": "400"
+        },
+        "rows": [
+          {
+            "name": "Any",
+            "height": 44,
+            "logo": {
+              "src": "/branding/cars-circle-20261005.png",
+              "width": 28,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "BMW",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/bmw.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "Mercedes-Benz",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/mercedes-benz.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "Audi",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/audi.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "Abarth",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/abarth.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "heading": {
+          "size": "16px",
+          "weight": "400"
+        },
+        "rows": [
+          {
+            "name": "Any",
+            "height": 44,
+            "logo": {
+              "src": "/branding/cars-circle-20261005.png",
+              "width": 28,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "BMW",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/bmw.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "Mercedes-Benz",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/mercedes-benz.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "Audi",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/audi.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "Abarth",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/abarth.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "heading": {
+          "size": "20px",
+          "weight": "700"
+        }
+      }
+    ],
+    "hosted": [
+      {
+        "width": 320,
+        "heading": {
+          "size": "16px",
+          "weight": "400"
+        },
+        "rows": [
+          {
+            "name": "Any",
+            "height": 44,
+            "logo": {
+              "src": "/branding/cars-circle-20261005.png",
+              "width": 28,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "BMW",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/bmw.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "Abarth",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/abarth.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "AC",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/ac.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          },
+          {
+            "name": "Acura",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/acura.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 270
+          }
+        ]
+      },
+      {
+        "width": 390,
+        "heading": {
+          "size": "16px",
+          "weight": "400"
+        },
+        "rows": [
+          {
+            "name": "Any",
+            "height": 44,
+            "logo": {
+              "src": "/branding/cars-circle-20261005.png",
+              "width": 28,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "BMW",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/bmw.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "Abarth",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/abarth.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "AC",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/ac.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          },
+          {
+            "name": "Acura",
+            "height": 56,
+            "logo": {
+              "src": "/images/makes/acura.webp",
+              "width": 32,
+              "slotWidth": 32,
+              "complete": true
+            },
+            "labelX": 68,
+            "trailingCenterX": 340
+          }
+        ]
+      },
+      {
+        "width": 1440,
+        "heading": {
+          "size": "20px",
+          "weight": "700"
+        }
+      }
+    ]
+  },
+  "preservation": {
+    "sharedIndex": true,
+    "existingIndexLock": true,
+    "canonicalGeneratedFiles": true,
+    "localCheckoutHead": "08c89d63f9e11939acd5b135ece4278252b80f43"
+  }
+}
