@@ -1,0 +1,455 @@
+{
+  "scope": "Desktop inventory filter rail and direct editor section navigation; no release or publication",
+  "baseCommit": "77a3459e109ba1949e488f9a87b220eceb6fbaf4",
+  "builtAndVerifiedSources": {
+    "src/components/ShowroomQuickPills.tsx": "67AEF455544A9E6BD20A1224DA4DB5692E837D66B9D0F6463C1CABFB64DF8B0E",
+    "src/lib/messages.bg.ts": "6896E6AE7DBB0EC3B6FE7395578C93B99143E88AD5DACBC334E163D2D1FC42B4",
+    "src/lib/showroom-filter-editor.ts": "CF59363C59AA08B3D707AAAC375151668F7CAEBDB758961362C14E422E8EEC28",
+    "src/components/ShowroomFilterSheet.tsx": "30FF3C9FB967A0EFEAFBB93B0F859F66334C84B7532262A4492705BED4A2142C",
+    "src/components/ShowroomInventoryScreen.tsx": "00B1053A4DB45AD4DEADAF6EDF9BC0500A041BAB9B6BCD0BABFD37403A65AD9B"
+  },
+  "checks": {
+    "lint": "full src passed",
+    "typecheck": "noEmit passed",
+    "domainAndLocale": {
+      "code": 0,
+      "tests": 95,
+      "passed": 95,
+      "failed": 0
+    },
+    "build": "production passed; 51 generated routes; Node 22.20.0"
+  },
+  "desktop": {
+    "cases": 16,
+    "errors": [],
+    "samples": [
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "existing tablet rail retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "existing tablet rail retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "Body shortcut visible and focused in 600px-high dialog"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "Body shortcut visible and focused in 600px-high dialog"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "all seven pills open correct sections with keyboard; Escape restores focus",
+          "applied criteria show orange accents and total count; Clear resets criteria",
+          "Fuel, Mileage, Body and Condition filter real inventory; drafts survive sidebar changes",
+          "sticky compact rail remains accessible while scrolling",
+          "long values truncate and wrap without hiding All filters",
+          "direct section URLs open correct fields and close cleanly"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "all seven pills open correct sections with keyboard; Escape restores focus",
+          "applied criteria show orange accents and total count; Clear resets criteria",
+          "Fuel, Mileage, Body and Condition filter real inventory; drafts survive sidebar changes",
+          "sticky compact rail remains accessible while scrolling",
+          "long values truncate and wrap without hiding All filters",
+          "direct section URLs open correct fields and close cleanly"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "chromium",
+        "width": 1920,
+        "height": 1080,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "existing tablet rail retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "existing tablet rail retained",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "Body shortcut visible and focused in 600px-high dialog"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "Body shortcut visible and focused in 600px-high dialog"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "all seven pills open correct sections with keyboard; Escape restores focus",
+          "applied criteria show orange accents and total count; Clear resets criteria",
+          "Fuel, Mileage, Body and Condition filter real inventory; drafts survive sidebar changes",
+          "sticky compact rail remains accessible while scrolling",
+          "long values truncate and wrap without hiding All filters",
+          "direct section URLs open correct fields and close cleanly"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained",
+          "all seven pills open correct sections with keyboard; Escape restores focus",
+          "applied criteria show orange accents and total count; Clear resets criteria",
+          "Fuel, Mileage, Body and Condition filter real inventory; drafts survive sidebar changes",
+          "sticky compact rail remains accessible while scrolling",
+          "long values truncate and wrap without hiding All filters",
+          "direct section URLs open correct fields and close cleanly"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "lang": "bg",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained"
+        ],
+        "pillWidths": [
+          91.640625,
+          92.390625,
+          91.109375,
+          152.78125,
+          76.53125,
+          116.828125,
+          154.921875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      },
+      {
+        "engine": "webkit",
+        "width": 1920,
+        "height": 1080,
+        "lang": "en",
+        "checks": [
+          "six compact pills plus All filters",
+          "white faces on gray rail; dark All filters",
+          "36px faces and 44px targets",
+          "no page or rail overflow; four car columns retained"
+        ],
+        "pillWidths": [
+          74.78125,
+          99.046875,
+          72.734375,
+          101.703125,
+          109.921875,
+          109.90625,
+          103.671875
+        ],
+        "railBackground": "rgb(240, 242, 245)",
+        "railDivider": "0px"
+      }
+    ]
+  },
+  "phones": {
+    "cases": 32,
+    "scope": "Phone filter controls, dialog, header and dock; full Services view",
+    "differences": [],
+    "fullPageDifferences": [],
+    "errors": [],
+    "pixels": [
+      {
+        "key": "chromium-bg-320-home",
+        "changedChannels": 184625
+      },
+      {
+        "key": "chromium-bg-320-applied",
+        "changedChannels": 148250
+      },
+      {
+        "key": "chromium-bg-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-home",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-applied",
+        "changedChannels": 3
+      },
+      {
+        "key": "chromium-en-320-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-home",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-applied",
+        "changedChannels": 135911
+      },
+      {
+        "key": "chromium-bg-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-home",
+        "changedChannels": 37643
+      },
+      {
+        "key": "chromium-en-390-applied",
+        "changedChannels": 86725
+      },
+      {
+        "key": "chromium-en-390-more",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-services",
+        "changedChannels": 0
+      }
+    ]
+  },
+  "phonePillFaces": {
+    "cases": 32,
+    "differences": [],
+    "errors": [],
+    "compared": "geometry, typography, background, borders, shadows, padding, gaps and alignment"
+  },
+  "limitations": [
+    "Whole phone screenshot pixels are not identical in every capture; matched sampled DOM, geometry and computed styles are identical. No whole-page raster identity claim is made.",
+    "Acceptance covers the local source and preview; no template release or dealer publication."
+  ]
+}

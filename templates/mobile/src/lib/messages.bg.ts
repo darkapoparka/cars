@@ -18,6 +18,7 @@ export const bgMessages: Record<string, string> = {
   'Vehicle category': 'Вид превозно средство',
   'Vehicle type': 'Вид',
   Gearbox: 'Скоростна кутия',
+  'All filters': 'Всички филтри',
   Motorbikes: 'Мотоциклети',
   'E-bikes': 'Електрически велосипеди',
   Motorhomes: 'Кемпери',

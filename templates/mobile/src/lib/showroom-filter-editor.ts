@@ -11,6 +11,11 @@ export const showroomFilterTabs = [
   { value: 'more', label: 'More' },
 ] as const;
 export type ShowroomFilterTab = (typeof showroomFilterTabs)[number]['value'];
+export type ShowroomMoreSection = 'mileage' | 'transmission' | 'body';
+
+export function showroomMoreSection(value: string | null): ShowroomMoreSection | null {
+  return value === 'mileage' || value === 'transmission' || value === 'body' ? value : null;
+}
 
 export function showroomFilterTab(value: string | null) {
   return showroomFilterTabs.find((tab) => tab.value === value)?.value || null;

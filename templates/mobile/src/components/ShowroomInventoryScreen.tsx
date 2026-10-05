@@ -3,14 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-import {
-  ArrowDownUp,
-  CalendarDays,
-  Fuel,
-  Settings2,
-  SlidersHorizontal,
-  type LucideIcon,
-} from 'lucide-react';
+import { ArrowDownUp, SlidersHorizontal } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -27,7 +20,12 @@ import {
 } from '@/lib/showroom';
 import { Header } from './Header';
 import { Icon } from './Icon';
-import { showroomFilterTab, type ShowroomFilterTab } from '@/lib/showroom-filter-editor';
+import {
+  showroomFilterTab,
+  showroomMoreSection,
+  type ShowroomFilterTab,
+  type ShowroomMoreSection,
+} from '@/lib/showroom-filter-editor';
 import { excludedMakeNames, makeSelectionSummary } from '@/lib/make-selection';
 import { ShowroomFilterSheet } from './ShowroomFilterSheet';
 import { ShowroomVehicleCard } from './ShowroomVehicleCard';
@@ -110,7 +108,8 @@ const s = stylex.create({
     position: { default: 'static', '@media (min-width: 1024px)': 'sticky' },
     top: 0,
     zIndex: 25,
-    paddingBlock: { default: 0, '@media (min-width: 1024px)': 16 },
+    paddingTop: { default: 0, '@media (min-width: 1024px)': 16 },
+    paddingBottom: { default: 0, '@media (min-width: 1024px)': 8 },
     backgroundColor: colors.background,
   },
   filterCount: {
@@ -128,8 +127,7 @@ const s = stylex.create({
     lineHeight: '20px',
   },
   pillText: {
-    maxWidth: { default: 160, '@media (min-width: 1024px)': 'none' },
-    flex: { default: 'initial', '@media (min-width: 1024px)': '1' },
+    maxWidth: { default: 160, '@media (min-width: 1024px)': 200 },
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     textAlign: 'left',
@@ -137,7 +135,6 @@ const s = stylex.create({
   pillIcon: {
     display: { default: 'none', '@media (min-width: 1024px)': 'inline-flex' },
     flexShrink: 0,
-    color: colors.muted,
   },
   content: {
     backgroundColor: colors.background,
@@ -165,13 +162,14 @@ const s = stylex.create({
 });
 
 export function ShowroomInventoryScreen() {
-  const { t, locale, money } = useLocale();
+  const { t, locale, money, number } = useLocale();
   const params = useSearchParams();
   const query = params.toString();
   const filters = showroomFilters(parseFilters(query));
   const sort = showroomSorts.find(([value]) => value === params.get('sort'))?.[0] || 'standard';
   const [sorting, setSorting] = useState(false);
   const sheet = showroomFilterTab(params.get('filter'));
+  const moreSection = sheet === 'more' ? showroomMoreSection(params.get('section')) : null;
   const opener = useRef<HTMLButtonElement | null>(null);
   const category = showroomCategory(filters.category);
   const excludedNames = excludedMakeNames(filters);
@@ -222,13 +220,19 @@ export function ShowroomInventoryScreen() {
     patchState({ filters: next, inventorySort: sort });
     window.scrollTo(0, 0);
   }
-  function openSheet(value: ShowroomFilterTab | 'sort', button: HTMLButtonElement) {
+  function openSheet(
+    value: ShowroomFilterTab | 'sort',
+    button: HTMLButtonElement,
+    section?: ShowroomMoreSection,
+  ) {
     opener.current = button;
     button.focus({ preventScroll: true });
     if (value === 'sort') setSorting(true);
     else {
       const url = new URL(window.location.href);
       url.searchParams.set('filter', value);
+      if (section) url.searchParams.set('section', section);
+      else url.searchParams.delete('section');
       window.history.pushState({ carsMobileFilterEditor: true }, '', url.pathname + url.search);
     }
   }
@@ -243,6 +247,7 @@ export function ShowroomInventoryScreen() {
   function selectFilterTab(value: ShowroomFilterTab) {
     const url = new URL(window.location.href);
     url.searchParams.set('filter', value);
+    url.searchParams.delete('section');
     window.history.replaceState(
       window.history.state?.carsMobileFilterEditor ? { carsMobileFilterEditor: true } : null,
       '',
@@ -269,15 +274,40 @@ export function ShowroomInventoryScreen() {
           ? t('From') + ' ' + filters.minYear
           : t('To') + ' ' + filters.maxYear
       : 'Year';
+  const mileageLabel =
+    filters.minMileage || filters.maxMileage
+      ? (filters.minMileage && filters.maxMileage
+          ? number(Number(filters.minMileage)) + '–' + number(Number(filters.maxMileage))
+          : filters.maxMileage
+            ? t('Up to') + ' ' + number(Number(filters.maxMileage))
+            : t('From') + ' ' + number(Number(filters.minMileage))) +
+        ' ' +
+        t('km')
+      : 'Mileage';
+  const allFilterCount =
+    otherFilterCount +
+    [
+      filters.query,
+      filters.makes.length || excludedNames.length || filters.models.length,
+      filters.minPrice || filters.maxPrice,
+      filters.minYear || filters.maxYear,
+      filters.fuel.length,
+    ].filter(Boolean).length;
   const pills: {
-    key: ShowroomFilterTab | 'gearbox';
+    key: ShowroomFilterTab | 'mileage' | 'gearbox' | 'body' | 'all';
+    tab: ShowroomFilterTab;
+    section?: ShowroomMoreSection;
     label: string;
     active: boolean;
     name: string;
-    icon?: LucideIcon;
+    desktopOnly?: boolean;
+    phoneOnly?: boolean;
+    count?: number;
   }[] = [
     {
       key: 'make',
+      tab: 'make',
+      phoneOnly: true,
       label:
         filters.makes.length === 1 && filters.models.length
           ? filters.makes[0] + ' · ' + makeSelectionSummary(filters, filters.makes[0])
@@ -288,37 +318,78 @@ export function ShowroomInventoryScreen() {
     },
     {
       key: 'price',
+      tab: 'price',
+      phoneOnly: true,
       label: priceLabel,
       active: Boolean(filters.minPrice || filters.maxPrice),
       name: 'Price',
     },
     {
       key: 'year',
+      tab: 'year',
       label: yearLabel,
       active: Boolean(filters.minYear || filters.maxYear),
       name: 'Year',
-      icon: CalendarDays,
+    },
+    {
+      key: 'mileage',
+      tab: 'more',
+      section: 'mileage',
+      desktopOnly: true,
+      label: mileageLabel,
+      active: Boolean(filters.minMileage || filters.maxMileage),
+      name: 'Mileage',
     },
     {
       key: 'fuel',
+      tab: 'fuel',
       label: filters.fuel.map(t).join(', ') || 'Fuel',
       active: Boolean(filters.fuel.length),
       name: 'Fuel',
-      icon: Fuel,
     },
     {
       key: 'gearbox',
+      tab: 'more',
+      section: 'transmission',
+      desktopOnly: true,
       label: filters.transmission.map(t).join(', ') || 'Gearbox',
       active: filters.transmission.length > 0,
       name: 'Gearbox',
-      icon: Settings2,
+    },
+    {
+      key: 'body',
+      tab: 'more',
+      section: 'body',
+      desktopOnly: true,
+      label: filters.body.map(t).join(', ') || 'Body type',
+      active: filters.body.length > 0,
+      name: 'Body type',
+    },
+    {
+      key: 'condition',
+      tab: 'condition',
+      desktopOnly: true,
+      label: filters.condition.map(t).join(', ') || 'Condition',
+      active: filters.condition.length > 0,
+      name: 'Condition',
     },
     {
       key: 'more',
+      tab: 'more',
+      phoneOnly: true,
       label: 'More',
       active: otherFilterCount > 0,
       name: 'More',
-      icon: SlidersHorizontal,
+      count: otherFilterCount,
+    },
+    {
+      key: 'all',
+      tab: 'more',
+      desktopOnly: true,
+      label: 'All filters',
+      active: allFilterCount > 0,
+      name: 'All filters',
+      count: allFilterCount,
     },
   ];
   return (
@@ -393,7 +464,7 @@ export function ShowroomInventoryScreen() {
           />
         </div>
         <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
-          <ShowroomQuickPills label={t('Quick filters')} fillDesktop>
+          <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop>
             <div {...stylex.props(s.phoneOnly)}>
               <ShowroomQuickPill
                 aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
@@ -411,8 +482,8 @@ export function ShowroomInventoryScreen() {
                 key={pill.key}
                 {...stylex.props(
                   s.pillWrapper,
-                  pill.key === 'gearbox' && s.desktopOnly,
-                  (pill.key === 'make' || pill.key === 'price') && s.phoneOnly,
+                  pill.desktopOnly && s.desktopOnly,
+                  pill.phoneOnly && s.phoneOnly,
                 )}
               >
                 <ShowroomQuickPill
@@ -422,34 +493,29 @@ export function ShowroomInventoryScreen() {
                     t(pill.name) + ' · ' + t('Filters') + (pill.active ? ': ' + t(pill.label) : '')
                   }
                   aria-haspopup="dialog"
-                  aria-describedby={
-                    pill.key === 'more' && otherFilterCount > 0
-                      ? 'showroom-filter-count'
-                      : undefined
-                  }
-                  onClick={(event) =>
-                    openSheet(pill.key === 'gearbox' ? 'more' : pill.key, event.currentTarget)
-                  }
+                  aria-describedby={pill.count ? 'showroom-filter-count-' + pill.key : undefined}
+                  onClick={(event) => openSheet(pill.tab, event.currentTarget, pill.section)}
                   active={pill.active}
-                  fillDesktop
+                  inventoryDesktop
+                  desktopEmphasis={pill.key === 'all'}
                 >
-                  {pill.icon && (
+                  {pill.key === 'all' && (
                     <span aria-hidden="true" {...stylex.props(s.pillIcon)}>
-                      <pill.icon size={18} strokeWidth={1.8} />
+                      <SlidersHorizontal size={16} strokeWidth={1.8} />
                     </span>
                   )}
                   <span {...stylex.props(s.pillText)}>{t(pill.label)}</span>
-                  {pill.key === 'more' && otherFilterCount > 0 && (
+                  {Boolean(pill.count) && (
                     <>
                       <span aria-hidden="true" {...stylex.props(s.filterCount)}>
-                        {otherFilterCount}
+                        {pill.count}
                       </span>
-                      <span id="showroom-filter-count" {...stylex.props(ui.srOnly)}>
-                        {otherFilterCount} active {otherFilterCount === 1 ? 'filter' : 'filters'}
+                      <span id={'showroom-filter-count-' + pill.key} {...stylex.props(ui.srOnly)}>
+                        {pill.count} active {pill.count === 1 ? 'filter' : 'filters'}
                       </span>
                     </>
                   )}
-                  <Icon name="down" size={14} />
+                  {pill.key !== 'all' && <Icon name="down" size={14} />}
                 </ShowroomQuickPill>
               </div>
             ))}
@@ -542,6 +608,7 @@ export function ShowroomInventoryScreen() {
       {sheet && (
         <ShowroomFilterSheet
           sheet={sheet}
+          moreSection={moreSection}
           filters={filters}
           onApply={applyFilters}
           onClose={close}

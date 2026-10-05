@@ -22,15 +22,18 @@ const s = stylex.create({
   },
   flush: { paddingInline: 0, paddingTop: 0, paddingBottom: 0 },
   desktopRow: {
-    display: { default: 'flex', '@media (min-width: 1024px)': 'grid' },
-    gridTemplateColumns: {
-      default: 'none',
-      '@media (min-width: 1024px)': 'repeat(4,minmax(0,1fr))',
-    },
-    gap: { default: 8, '@media (min-width: 1024px)': 14 },
+    flexWrap: { default: 'nowrap', '@media (min-width: 1024px)': 'wrap' },
+    gap: 8,
     overflowX: { default: 'auto', '@media (min-width: 1024px)': 'visible' },
-    paddingTop: { default: 4, '@media (max-width: 699px)': 12, '@media (min-width: 1024px)': 0 },
-    paddingBottom: { default: 4, '@media (min-width: 1024px)': 0 },
+    paddingInline: { default: 16, '@media (min-width: 1024px)': 12 },
+    paddingTop: { default: 4, '@media (max-width: 699px)': 12, '@media (min-width: 1024px)': 8 },
+    paddingBottom: { default: 4, '@media (min-width: 1024px)': 8 },
+    marginInline: { default: 0, '@media (min-width: 1024px)': 16 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 12 },
+    backgroundColor: {
+      default: colors.stripe,
+      '@media (min-width: 1024px)': colors.controlSurface,
+    },
   },
   button: {
     position: 'relative',
@@ -80,49 +83,60 @@ const s = stylex.create({
     fontWeight: 600,
   },
   desktopButton: {
-    width: { default: 'auto', '@media (min-width: 1024px)': '100%' },
-    outlineColor: { default: colors.accent, '@media (min-width: 1024px)': colors.text },
+    minHeight: { default: 48, '@media (min-width: 1024px)': 44 },
   },
   desktopFace: {
-    width: { default: 'auto', '@media (min-width: 1024px)': '100%' },
-    justifyContent: { default: 'center', '@media (min-width: 1024px)': 'flex-start' },
-    gap: { default: 6, '@media (min-width: 1024px)': 10 },
-    minHeight: { default: 40, '@media (min-width: 1024px)': 44 },
-    paddingInline: { default: 14, '@media (min-width: 1024px)': 16 },
-    borderRadius: { default: 20, '@media (min-width: 1024px)': 22 },
+    minHeight: { default: 40, '@media (min-width: 1024px)': 36 },
+    paddingInline: { default: 14, '@media (min-width: 1024px)': 12 },
+    paddingBlock: { default: 8, '@media (min-width: 1024px)': 7 },
+    borderRadius: { default: 20, '@media (min-width: 1024px)': 18 },
     borderColor: {
       default: 'transparent',
       '@media (min-width: 1024px)': { default: colors.line, ':hover': colors.muted },
     },
-    fontSize: 15,
-  },
-  desktopActive: {
-    borderColor: {
-      default: colors.text,
-      '@media (min-width: 1024px)': { default: colors.text, ':hover': colors.text },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.panel },
     },
-    backgroundColor: { default: colors.text, '@media (min-width: 1024px)': colors.background },
-    color: { default: colors.background, '@media (min-width: 1024px)': colors.text },
+    fontSize: { default: 15, '@media (min-width: 1024px)': 14 },
   },
+  desktopEmphasis: {
+    borderColor: {
+      default: 'transparent',
+      '@media (min-width: 1024px)': colors.text,
+    },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 1024px)': { default: colors.text, ':hover': colors.muted },
+    },
+    color: { default: colors.text, '@media (min-width: 1024px)': colors.background },
+    fontWeight: 600,
+  },
+  desktopTrailing: { marginInlineStart: { default: 0, '@media (min-width: 1024px)': 'auto' } },
 });
 
 export function ShowroomQuickPills({
   label,
   children,
   inset = true,
-  fillDesktop = false,
+  inventoryDesktop = false,
 }: {
   label: string;
   children: ReactNode;
   inset?: boolean;
-  fillDesktop?: boolean;
+  inventoryDesktop?: boolean;
 }) {
   const { t } = useLocale();
   return (
     <div
       role="group"
       aria-label={t(label)}
-      {...stylex.props(s.row, fillDesktop && s.desktopRow, inset && s.backdrop, !inset && s.flush)}
+      {...stylex.props(
+        s.row,
+        inset && s.backdrop,
+        !inset && s.flush,
+        inventoryDesktop && s.desktopRow,
+      )}
     >
       {children}
     </div>
@@ -132,12 +146,14 @@ export function ShowroomQuickPills({
 export function ShowroomQuickPill({
   children,
   active = false,
-  fillDesktop = false,
+  inventoryDesktop = false,
+  desktopEmphasis = false,
   ...props
 }: Omit<ComponentPropsWithRef<'button'>, 'children' | 'className' | 'style'> & {
   children: ReactNode;
   active?: boolean;
-  fillDesktop?: boolean;
+  inventoryDesktop?: boolean;
+  desktopEmphasis?: boolean;
 }) {
   const { t } = useLocale();
   return (
@@ -145,15 +161,19 @@ export function ShowroomQuickPill({
       type="button"
       {...props}
       aria-label={props['aria-label'] ? t(props['aria-label']) : undefined}
-      {...stylex.props(s.button, fillDesktop && s.desktopButton)}
+      {...stylex.props(
+        s.button,
+        inventoryDesktop && s.desktopButton,
+        desktopEmphasis && s.desktopTrailing,
+      )}
     >
       <span
         data-pill-surface
         {...stylex.props(
           s.face,
-          fillDesktop && s.desktopFace,
+          inventoryDesktop && s.desktopFace,
           active && s.active,
-          fillDesktop && active && s.desktopActive,
+          desktopEmphasis && s.desktopEmphasis,
         )}
       >
         {typeof children === 'string' ? t(children) : children}

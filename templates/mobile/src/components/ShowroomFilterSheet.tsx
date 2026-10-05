@@ -11,6 +11,7 @@ import {
   showroomFilterTabs,
   updateShowroomFilterDraft,
   type ShowroomFilterTab,
+  type ShowroomMoreSection,
 } from '@/lib/showroom-filter-editor';
 import { showroomFilterSheetStyles as s } from './showroom-filter-sheet.stylex';
 import { RangeField } from './RangeField';
@@ -37,7 +38,7 @@ function Choices({
 }) {
   const { t } = useLocale();
   return (
-    <fieldset {...stylex.props(s.group)}>
+    <fieldset data-filter-section={field} {...stylex.props(s.group)}>
       <legend {...stylex.props(s.fieldTitle)}>{t(title)}</legend>
       <div {...stylex.props(s.choiceList)}>
         {options.map((value) => (
@@ -64,12 +65,14 @@ function Choices({
 
 export function ShowroomFilterSheet({
   sheet,
+  moreSection = null,
   filters,
   onTabChange,
   onApply,
   onClose,
 }: {
   sheet: ShowroomFilterTab;
+  moreSection?: ShowroomMoreSection | null;
   filters: Filters;
   onTabChange: (tab: ShowroomFilterTab) => void;
   onApply: (filters: Filters) => void;
@@ -88,20 +91,38 @@ export function ShowroomFilterSheet({
   const bodies = [...new Set(stock.map((vehicle) => vehicle.body))];
   const matches = filterVehicles(stock, draft);
   const count = matches.length;
-  const initialSheet = useRef(sheet);
+  const initial = useRef({ sheet, moreSection });
   useEffect(() => {
     const selector =
-      initialSheet.current === 'search'
-        ? '[data-showroom-search-input]'
-        : '[role="tab"][aria-selected="true"]';
+      initial.current.moreSection && window.matchMedia('(min-width: 1024px)').matches
+        ? `[data-filter-section="${initial.current.moreSection}"] input`
+        : initial.current.sheet === 'search'
+          ? '[data-showroom-search-input]'
+          : '[role="tab"][aria-selected="true"]';
     const frame = requestAnimationFrame(() =>
       editorRef.current?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: true }),
     );
     return () => cancelAnimationFrame(frame);
   }, []);
   useEffect(() => {
-    fieldsRef.current?.scrollTo(0, 0);
-  }, [sheet]);
+    const fields = fieldsRef.current;
+    const target =
+      sheet === 'more' && moreSection && window.matchMedia('(min-width: 1024px)').matches
+        ? fields?.querySelector<HTMLElement>(`[data-filter-section="${moreSection}"]`)
+        : null;
+    fields?.scrollTo({
+      top: target
+        ? Math.max(
+            0,
+            fields.scrollTop +
+              target.getBoundingClientRect().top -
+              fields.getBoundingClientRect().top -
+              24,
+          )
+        : 0,
+      behavior: 'instant',
+    });
+  }, [sheet, moreSection]);
   function change(patch: Partial<Filters>) {
     setDraft((current) => updateShowroomFilterDraft(current, patch));
   }
@@ -304,7 +325,7 @@ export function ShowroomFilterSheet({
               )}
               {sheet === 'more' && (
                 <>
-                  <div {...stylex.props(s.moreRange, s.mileageCard)}>
+                  <div data-filter-section="mileage" {...stylex.props(s.moreRange, s.mileageCard)}>
                     <RangeField
                       comfortable
                       label={t('Mileage')}
