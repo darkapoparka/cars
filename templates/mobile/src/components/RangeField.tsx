@@ -106,6 +106,10 @@ const s = stylex.create({
     minHeight: 64,
     borderRadius: 12,
     borderColor: colors.line,
+    backgroundColor: {
+      default: colors.controlSurface,
+      '@media (min-width: 1024px)': colors.background,
+    },
     flexDirection: 'column',
     alignItems: 'stretch',
     gap: 2,

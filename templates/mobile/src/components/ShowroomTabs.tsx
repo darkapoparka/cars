@@ -182,7 +182,7 @@ const s = stylex.create({
     outlineColor: {
       default: colors.accent,
       '@media (min-width: 700px)': colors.text,
-      '@media (min-width: 1024px)': colors.accent,
+      '@media (min-width: 1024px)': colors.muted,
     },
     outlineOffset: {
       default: -3,
@@ -212,9 +212,14 @@ const s = stylex.create({
     paddingInline: {
       default: 16,
       '@media (min-width: 700px)': 8,
-      '@media (min-width: 1024px)': 12,
+      '@media (min-width: 1024px)': 16,
     },
     fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
+    fontWeight: {
+      default: 500,
+      '@media (min-width: 700px)': 600,
+      '@media (min-width: 1024px)': 500,
+    },
     borderTopLeftRadius: {
       default: 0,
       '@media (min-width: 700px)': 8,
@@ -229,11 +234,37 @@ const s = stylex.create({
     borderBottomRightRadius: { default: 0, '@media (min-width: 1024px)': 10 },
   },
   sidebarSelected: {
-    color: colors.accent,
+    color: { default: colors.accent, '@media (min-width: 1024px)': colors.text },
     backgroundColor: {
       default: 'transparent',
-      '@media (min-width: 700px)': colors.activeSurface,
-      '@media (min-width: 1024px)': colors.activeSurface,
+      ':active': {
+        default: colors.controlSurface,
+        '@media (min-width: 700px)': colors.activeSurface,
+        '@media (min-width: 1024px)': colors.background,
+      },
+      '@media (min-width: 700px)': {
+        default: colors.activeSurface,
+        ':hover': colors.activeSurface,
+      },
+      '@media (min-width: 1024px)': {
+        default: colors.background,
+        ':hover': colors.background,
+      },
+    },
+    boxShadow: {
+      default: 'none',
+      '@media (min-width: 1024px)': '0 1px 3px rgba(27, 27, 33, .08)',
+    },
+    '::before': {
+      content: '""',
+      display: { default: 'none', '@media (min-width: 1024px)': 'block' },
+      position: 'absolute',
+      left: 0,
+      top: 12,
+      bottom: 12,
+      width: 3,
+      borderRadius: 3,
+      backgroundColor: colors.accent,
     },
     '::after': { height: { default: 3, '@media (min-width: 1024px)': 0 } },
   },
