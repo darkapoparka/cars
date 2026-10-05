@@ -1,0 +1,962 @@
+{
+  "url": "http://127.0.0.1:6474/",
+  "buildId": "Ww1HJlatAT5dt6MkkH2uc",
+  "changed": "Inactive phone and tablet pill shadow: 0 1px 4px at 12% to 0 1px 3px at 8%.",
+  "inventory": {
+    "results": [
+      {
+        "width": 390,
+        "geometryUnchanged": true,
+        "noPageOverflow": true,
+        "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px"
+      },
+      {
+        "width": 320,
+        "geometryUnchanged": true,
+        "noPageOverflow": true,
+        "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px"
+      },
+      {
+        "width": 1440,
+        "geometryUnchanged": true,
+        "noPageOverflow": true,
+        "shadow": "none"
+      }
+    ],
+    "before": [
+      {
+        "documentWidth": 305,
+        "height": 844,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 147.3125,
+              "x": 16,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 147.3125
+            },
+            "text": "Подреждане"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 162.59375,
+              "x": 171.3125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 162.59375
+            },
+            "text": "Марка и модел"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 87.265625,
+              "x": 341.90625,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 87.265625
+            },
+            "text": "Цена"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.359375,
+              "x": 437.171875,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.359375
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.25,
+              "x": 547.53125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.25
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 82.796875,
+              "x": 657.78125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 82.796875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 320
+      },
+      {
+        "documentWidth": 1440,
+        "height": 1000,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 95.640625,
+              "x": 186,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 95.640625
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 95.109375,
+              "x": 289.640625,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 95.109375
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 156.78125,
+              "x": 392.75,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 156.78125
+            },
+            "text": "Скоростна кутия"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 80.046875,
+              "x": 557.53125,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 80.046875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 1440
+      },
+      {
+        "documentWidth": 375,
+        "height": 844,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 147.3125,
+              "x": 16,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 147.3125
+            },
+            "text": "Подреждане"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 162.59375,
+              "x": 171.3125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 162.59375
+            },
+            "text": "Марка и модел"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 87.265625,
+              "x": 341.90625,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 87.265625
+            },
+            "text": "Цена"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.359375,
+              "x": 437.171875,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.359375
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.25,
+              "x": 547.53125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.25
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 82.796875,
+              "x": 657.78125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+            "target": {
+              "height": 48,
+              "width": 82.796875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 390
+      }
+    ],
+    "after": [
+      {
+        "documentWidth": 375,
+        "height": 844,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 147.3125,
+              "x": 16,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 147.3125
+            },
+            "text": "Подреждане"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 162.59375,
+              "x": 171.3125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 162.59375
+            },
+            "text": "Марка и модел"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 87.265625,
+              "x": 341.90625,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 87.265625
+            },
+            "text": "Цена"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.359375,
+              "x": 437.171875,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.359375
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.25,
+              "x": 547.53125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.25
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 82.796875,
+              "x": 657.78125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 82.796875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 390
+      },
+      {
+        "documentWidth": 305,
+        "height": 844,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 147.3125,
+              "x": 16,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 147.3125
+            },
+            "text": "Подреждане"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 162.59375,
+              "x": 171.3125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 162.59375
+            },
+            "text": "Марка и модел"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 87.265625,
+              "x": 341.90625,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 87.265625
+            },
+            "text": "Цена"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.359375,
+              "x": 437.171875,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.359375
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 102.25,
+              "x": 547.53125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 102.25
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgba(0, 0, 0, 0)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 82.796875,
+              "x": 657.78125,
+              "y": 184
+            },
+            "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+            "target": {
+              "height": 48,
+              "width": 82.796875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 320
+      },
+      {
+        "documentWidth": 1440,
+        "height": 1000,
+        "pills": [
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 95.640625,
+              "x": 186,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 95.640625
+            },
+            "text": "Година"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 95.109375,
+              "x": 289.640625,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 95.109375
+            },
+            "text": "Гориво"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 156.78125,
+              "x": 392.75,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 156.78125
+            },
+            "text": "Скоростна кутия"
+          },
+          {
+            "background": "rgb(255, 255, 255)",
+            "border": "rgb(213, 218, 224)",
+            "color": "rgb(27, 27, 33)",
+            "rect": {
+              "height": 40,
+              "width": 80.046875,
+              "x": 557.53125,
+              "y": 368
+            },
+            "shadow": "none",
+            "target": {
+              "height": 48,
+              "width": 80.046875
+            },
+            "text": "Още"
+          }
+        ],
+        "scrollY": 0,
+        "width": 1440
+      }
+    ],
+    "errors": []
+  },
+  "services": {
+    "before": {
+      "documentWidth": 375,
+      "height": 844,
+      "pills": [
+        {
+          "background": "rgb(27, 27, 33)",
+          "border": "rgb(27, 27, 33)",
+          "color": "rgb(255, 255, 255)",
+          "rect": {
+            "height": 40,
+            "width": 108.75,
+            "x": 16,
+            "y": 184
+          },
+          "shadow": "none",
+          "target": {
+            "height": 48,
+            "width": 108.75
+          },
+          "text": "Всички (8)"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 83.796875,
+            "x": 132.75,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "target": {
+            "height": 48,
+            "width": 83.796875
+          },
+          "text": "Огледи"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 131.09375,
+            "x": 224.546875,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "target": {
+            "height": 48,
+            "width": 131.09375
+          },
+          "text": "Финансиране"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 74.015625,
+            "x": 363.640625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "target": {
+            "height": 48,
+            "width": 74.015625
+          },
+          "text": "Части"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 116.921875,
+            "x": 445.65625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "target": {
+            "height": 48,
+            "width": 116.921875
+          },
+          "text": "Поддръжка"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 85.46875,
+            "x": 570.578125,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "target": {
+            "height": 48,
+            "width": 85.46875
+          },
+          "text": "Замяна"
+        }
+      ],
+      "scrollY": 0,
+      "width": 390
+    },
+    "after": {
+      "documentWidth": 375,
+      "height": 844,
+      "pills": [
+        {
+          "background": "rgb(27, 27, 33)",
+          "border": "rgb(27, 27, 33)",
+          "color": "rgb(255, 255, 255)",
+          "rect": {
+            "height": 40,
+            "width": 108.75,
+            "x": 16,
+            "y": 184
+          },
+          "shadow": "none",
+          "target": {
+            "height": 48,
+            "width": 108.75
+          },
+          "text": "Всички (8)"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 83.796875,
+            "x": 132.75,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 83.796875
+          },
+          "text": "Огледи"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 131.09375,
+            "x": 224.546875,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 131.09375
+          },
+          "text": "Финансиране"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 74.015625,
+            "x": 363.640625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 74.015625
+          },
+          "text": "Части"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 116.921875,
+            "x": 445.65625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 116.921875
+          },
+          "text": "Поддръжка"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 85.46875,
+            "x": 570.578125,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 85.46875
+          },
+          "text": "Замяна"
+        }
+      ],
+      "scrollY": 0,
+      "width": 390
+    },
+    "narrow": {
+      "documentWidth": 305,
+      "height": 844,
+      "pills": [
+        {
+          "background": "rgb(27, 27, 33)",
+          "border": "rgb(27, 27, 33)",
+          "color": "rgb(255, 255, 255)",
+          "rect": {
+            "height": 40,
+            "width": 108.75,
+            "x": 16,
+            "y": 184
+          },
+          "shadow": "none",
+          "target": {
+            "height": 48,
+            "width": 108.75
+          },
+          "text": "Всички (8)"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 83.796875,
+            "x": 132.75,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 83.796875
+          },
+          "text": "Огледи"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 131.09375,
+            "x": 224.546875,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 131.09375
+          },
+          "text": "Финансиране"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 74.015625,
+            "x": 363.640625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 74.015625
+          },
+          "text": "Части"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 116.921875,
+            "x": 445.65625,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 116.921875
+          },
+          "text": "Поддръжка"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "border": "rgba(0, 0, 0, 0)",
+          "color": "rgb(27, 27, 33)",
+          "rect": {
+            "height": 40,
+            "width": 85.46875,
+            "x": 570.578125,
+            "y": 184
+          },
+          "shadow": "rgba(27, 27, 33, 0.08) 0px 1px 3px 0px",
+          "target": {
+            "height": 48,
+            "width": 85.46875
+          },
+          "text": "Замяна"
+        }
+      ],
+      "scrollY": 0,
+      "width": 320
+    },
+    "selected": {
+      "background": "rgb(27, 27, 33)",
+      "pressed": "true",
+      "shadow": "none"
+    },
+    "errors": []
+  }
+}
