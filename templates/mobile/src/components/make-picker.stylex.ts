@@ -82,6 +82,14 @@ export const pickerStyles = stylex.create({
     flexShrink: 0,
   },
   selectedMark: { borderColor: colors.accent, backgroundColor: colors.accent },
+  platformLogoSlot: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 32,
+    height: 32,
+    flexShrink: 0,
+  },
   makeTrailing: {
     display: 'flex',
     alignItems: 'center',

@@ -525,13 +525,15 @@ export function MakePicker({
                         )}
                       >
                         {isAllMakes ? (
-                          <Image
-                            src="/branding/cars-circle-20261005.png"
-                            alt=""
-                            width={32}
-                            height={32}
-                            {...stylex.props(s.logo(32))}
-                          />
+                          <span aria-hidden="true" {...stylex.props(s.platformLogoSlot)}>
+                            <Image
+                              src="/branding/cars-circle-20261005.png"
+                              alt=""
+                              width={28}
+                              height={28}
+                              {...stylex.props(s.logo(28))}
+                            />
+                          </span>
                         ) : (
                           <BrandLogo make={name} size={embedded ? 32 : 40} />
                         )}

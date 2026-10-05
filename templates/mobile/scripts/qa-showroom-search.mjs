@@ -106,7 +106,7 @@ for (const [engineName, engine] of engines) {
             );
             assert.ok(rowLayout.every((row) => row.border === '0px' && row.buttonBorder === '0px'));
             assert.ok(rowLayout.every((row) => row.buttonHeight >= (row.name === 'Any' ? 44 : 48)));
-            assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 32);
+            assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 28);
             assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
             assert.equal(rowLayout[0].labelX, rowLayout[1].labelX);
             assert.ok(
