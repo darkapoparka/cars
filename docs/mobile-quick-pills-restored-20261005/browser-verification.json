@@ -1,0 +1,105 @@
+{
+  "url": "http://127.0.0.1:6474/",
+  "buildId": "RFue7O4fnldMttn_7PHGr",
+  "restoredShadow": "0 1px 4px rgba(27, 27, 33, 0.12)",
+  "viewports": [
+    {
+      "width": 390,
+      "geometryAndColorsUnchanged": true,
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+      "noPageOverflow": true,
+      "targetHeight": 48,
+      "faceHeight": 40
+    },
+    {
+      "width": 320,
+      "noPageOverflow": true,
+      "faceHeight": 40,
+      "targetHeight": 48,
+      "fill": "rgb(255, 255, 255)",
+      "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+    },
+    {
+      "width": 1440,
+      "noPageOverflow": true,
+      "shadow": "none",
+      "faceHeight": 40,
+      "targetHeight": 48
+    }
+  ],
+  "errors": [],
+  "pixelInspection": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "image": {
+      "width": 375,
+      "height": 812
+    },
+    "samples": [
+      {
+        "label": "pill_upper_fill",
+        "css": {
+          "x": 80,
+          "y": 190
+        },
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "label": "model_pill_upper_fill",
+        "css": {
+          "x": 250,
+          "y": 190
+        },
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "label": "canvas",
+        "css": {
+          "x": 8,
+          "y": 230
+        },
+        "rgb": [
+          255,
+          255,
+          255
+        ]
+      },
+      {
+        "label": "pill_lower_rim",
+        "css": {
+          "x": 80,
+          "y": 226
+        },
+        "rgb": [
+          250,
+          250,
+          250
+        ]
+      },
+      {
+        "label": "gap_below_tab_rail",
+        "css": {
+          "x": 190,
+          "y": 174
+        },
+        "rgb": [
+          245,
+          245,
+          245
+        ]
+      }
+    ]
+  },
+  "tabRailBottom": 168,
+  "pillTop": 184
+}

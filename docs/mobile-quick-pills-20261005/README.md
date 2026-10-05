@@ -1,5 +1,7 @@
 # Mobile quick-pill shadow polish
 
+Owner review: the lighter-shadow experiment was rejected and the previous shadow was restored. See [the restoration comparison](../mobile-quick-pills-restored-20261005/README.md). The captures below remain as historical experiment evidence.
+
 Inactive pills were already pure white, but their surrounding shadow gave them a grey rim. Reduced the shared shadow from `0 1px 4px rgba(27, 27, 33, 0.12)` to `0 1px 3px rgba(27, 27, 33, 0.08)` below the desktop breakpoint.
 
 The white fill, transparent mobile border, black selected state, 40px faces and 48px touch targets retain their existing values. Desktop pills retain their existing border and no-shadow treatment.
