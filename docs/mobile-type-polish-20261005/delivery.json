@@ -1,0 +1,69 @@
+{
+  "verifiedAt": "2026-10-05T14:55:40.819Z",
+  "sourceCommit": "9a547e0783f3ebf58646cf07a5518417f12d8b02",
+  "sourceTree": "43facb8197d8dacc1c8f044d9cf725ec9d75c2f9",
+  "sourceDigest": "1d689f3e0cbc6730ea269b88cb4e7dae8f8f4eb69de157d6537caa43204c713c",
+  "publishingCommit": "6eb83a290fbcca9d2c80201364af8a733e3d2113",
+  "deployment": {
+    "id": "dpl_74F1Nna6cuieodXiejEE3oMK4m81",
+    "url": "cars-template-mobile-4ewa3rk7j-tyj5.vercel.app",
+    "readyState": "READY",
+    "target": "production",
+    "alias": [
+      "cars-template-mobile.vercel.app",
+      "cars-template-mobile-tyj5.vercel.app",
+      "cars-template-mobile-git-main-tyj5.vercel.app"
+    ],
+    "githubCommitSha": "6eb83a290fbcca9d2c80201364af8a733e3d2113",
+    "source": "git",
+    "readyAt": "2026-10-05T14:53:00.539Z",
+    "verifiedAt": "2026-10-05T14:54:37.206Z"
+  },
+  "changed": [
+    "templates/mobile/src/components/ShowroomVehicleCard.tsx",
+    "templates/mobile/src/components/ShowroomFilterSheet.tsx",
+    "templates/mobile/src/components/showroom-filter-sheet.stylex.ts",
+    "templates/mobile/src/components/MakePicker.tsx",
+    "templates/mobile/src/components/make-picker.stylex.ts",
+    "templates/mobile/scripts/qa-showroom-search.mjs"
+  ],
+  "checks": {
+    "lint": true,
+    "typescript": true,
+    "formatting": true,
+    "domainLocalizationTests": 95,
+    "productionBuildStaticPages": 51,
+    "localChromiumWebKitChecks": 20,
+    "hostedChromiumWebKitChecks": 8,
+    "hostedCardMakeSearchViews": 9
+  },
+  "desktopComparison": [
+    {
+      "name": "card",
+      "width": 257,
+      "height": 294,
+      "changedPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "make",
+      "width": 1440,
+      "height": 900,
+      "changedPixels": 0,
+      "maxChannelDelta": 0
+    },
+    {
+      "name": "search",
+      "width": 1440,
+      "height": 900,
+      "changedPixels": 13,
+      "maxChannelDelta": 1
+    }
+  ],
+  "sharedCheckout": {
+    "localHead": "08c89d63f9e11939acd5b135ece4278252b80f43",
+    "sharedIndexPreserved": true,
+    "existingIndexLockPreserved": true,
+    "explanation": "The occupied local checkout retains its older HEAD. The isolated commit uses current fetched remote main and a non-force push, following WORKSPACE.md."
+  }
+}

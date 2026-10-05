@@ -1,0 +1,326 @@
+{
+  "stage": "hosted",
+  "base": "https://cars-template-mobile.vercel.app",
+  "at": "2026-10-05T14:54:40.873Z",
+  "views": [
+    {
+      "name": "cards",
+      "width": 320,
+      "typography": {
+        "h2": {
+          "size": "17px",
+          "weight": "500",
+          "lineHeight": "24px"
+        },
+        "strong": {
+          "size": "18px",
+          "weight": "400",
+          "lineHeight": "24px"
+        }
+      }
+    },
+    {
+      "name": "make",
+      "width": 320,
+      "heading": {
+        "text": "Филтри",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "24px"
+      },
+      "close": {
+        "box": {
+          "x": 12,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 260,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "input": {
+        "height": 44,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 16,
+          "y": 788,
+          "width": 288,
+          "height": 44
+        },
+        "text": "Покажи 4 коли",
+        "weight": "500"
+      },
+      "allMakes": {
+        "text": "Всички марки\n(181)",
+        "box": {
+          "x": 16,
+          "y": 180,
+          "width": 278,
+          "height": 44
+        }
+      }
+    },
+    {
+      "name": "search",
+      "width": 320,
+      "heading": {
+        "text": "Търсене",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "24px"
+      },
+      "close": {
+        "box": {
+          "x": 12,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 260,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "input": {
+        "height": 44,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 16,
+          "y": 788,
+          "width": 288,
+          "height": 44
+        },
+        "text": "Покажи 4 коли",
+        "weight": "500"
+      }
+    },
+    {
+      "name": "cards",
+      "width": 390,
+      "typography": {
+        "h2": {
+          "size": "17px",
+          "weight": "500",
+          "lineHeight": "24px"
+        },
+        "strong": {
+          "size": "18px",
+          "weight": "400",
+          "lineHeight": "24px"
+        }
+      }
+    },
+    {
+      "name": "make",
+      "width": 390,
+      "heading": {
+        "text": "Филтри",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "24px"
+      },
+      "close": {
+        "box": {
+          "x": 12,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 330,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "input": {
+        "height": 44,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 16,
+          "y": 788,
+          "width": 358,
+          "height": 44
+        },
+        "text": "Покажи 4 коли",
+        "weight": "500"
+      },
+      "allMakes": {
+        "text": "Всички марки\n(181)",
+        "box": {
+          "x": 16,
+          "y": 180,
+          "width": 348,
+          "height": 44
+        }
+      }
+    },
+    {
+      "name": "search",
+      "width": 390,
+      "heading": {
+        "text": "Търсене",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "24px"
+      },
+      "close": {
+        "box": {
+          "x": 12,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 330,
+          "y": 8,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "input": {
+        "height": 44,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 16,
+          "y": 788,
+          "width": 358,
+          "height": 44
+        },
+        "text": "Покажи 4 коли",
+        "weight": "500"
+      }
+    },
+    {
+      "name": "cards",
+      "width": 1440,
+      "typography": {
+        "h2": {
+          "size": "16px",
+          "weight": "700",
+          "lineHeight": "24px"
+        },
+        "strong": {
+          "size": "18px",
+          "weight": "700",
+          "lineHeight": "26px"
+        }
+      }
+    },
+    {
+      "name": "make",
+      "width": 1440,
+      "heading": {
+        "text": "Филтри",
+        "size": "20px",
+        "weight": "700",
+        "lineHeight": "32px"
+      },
+      "close": {
+        "box": {
+          "x": 1138,
+          "y": 156,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 1045.484375,
+          "y": 160,
+          "width": 84.515625,
+          "height": 40
+        },
+        "text": "Изчисти"
+      },
+      "input": {
+        "height": 46,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 946,
+          "y": 696,
+          "width": 240,
+          "height": 48
+        },
+        "text": "Покажи 4 коли",
+        "weight": "700"
+      }
+    },
+    {
+      "name": "search",
+      "width": 1440,
+      "heading": {
+        "text": "Търсене",
+        "size": "20px",
+        "weight": "700",
+        "lineHeight": "32px"
+      },
+      "close": {
+        "box": {
+          "x": 1138,
+          "y": 156,
+          "width": 48,
+          "height": 48
+        },
+        "text": ""
+      },
+      "reset": {
+        "box": {
+          "x": 1045.484375,
+          "y": 160,
+          "width": 84.515625,
+          "height": 40
+        },
+        "text": "Изчисти"
+      },
+      "input": {
+        "height": 44,
+        "size": "16px"
+      },
+      "apply": {
+        "box": {
+          "x": 946,
+          "y": 696,
+          "width": 240,
+          "height": 48
+        },
+        "text": "Покажи 4 коли",
+        "weight": "700"
+      }
+    }
+  ],
+  "errors": []
+}

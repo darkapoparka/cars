@@ -1,0 +1,146 @@
+{
+  "searchMake": {
+    "at": "2026-10-05T14:46:04.598Z",
+    "base": "http://127.0.0.1:6475",
+    "checks": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 320,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 390,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 1440,
+        "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 320,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 390,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 1440,
+        "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 320,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 390,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 1440,
+        "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 320,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 390,
+        "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 1440,
+        "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  "reset": {
+    "base": "http://127.0.0.1:6475",
+    "at": "2026-10-05T14:48:02.177Z",
+    "checks": [
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 320,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "chromium",
+        "locale": "bg",
+        "width": 390,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 320,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "chromium",
+        "locale": "en",
+        "width": 390,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 320,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "webkit",
+        "locale": "bg",
+        "width": 390,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 320,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      },
+      {
+        "engine": "webkit",
+        "locale": "en",
+        "width": 390,
+        "passed": true,
+        "behavior": "Inline make count; keyboard Reset restores all makes and 4 cars; Apply closes the overlay and preserves a clean URL."
+      }
+    ],
+    "errors": [],
+    "passed": true
+  }
+}
