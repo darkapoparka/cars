@@ -58,7 +58,7 @@
 		min-width: 0;
 		min-height: var(--bc-control-height-standard);
 		padding: var(--bc-space-1) var(--bc-space-4);
-		border: 1px solid transparent;
+		border: 1px solid color-mix(in srgb, var(--bc-ink) 16%, transparent);
 		border-radius: var(--bc-radius-pill);
 		background: transparent;
 		color: var(--bc-copy);
@@ -67,6 +67,7 @@
 		text-decoration: none;
 	}
 	a:hover {
+		border-color: color-mix(in srgb, var(--bc-ink) 30%, transparent);
 		background: var(--bc-surface-hover);
 		color: var(--bc-ink);
 	}
