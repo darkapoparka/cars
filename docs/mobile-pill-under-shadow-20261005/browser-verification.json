@@ -1,0 +1,92 @@
+{
+  "url": "http://127.0.0.1:6474/",
+  "locale": "bg",
+  "scope": "Inactive quick-pill shadow only",
+  "phoneChecks": [
+    {
+      "width": 320,
+      "railBefore": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "railAfter": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "pillGeometryAndColoursUnchanged": true,
+      "minimumTargetHeight": 48,
+      "documentOverflow": false
+    },
+    {
+      "width": 390,
+      "railBefore": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "railAfter": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "pillGeometryAndColoursUnchanged": true,
+      "minimumTargetHeight": 48,
+      "documentOverflow": false
+    }
+  ],
+  "pillShadow": {
+    "before": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+    "after": "rgba(27, 27, 33, 0.18) 0px 2px 4px -2px"
+  },
+  "selected": {
+    "background": "rgb(27, 27, 33)",
+    "shadow": "none",
+    "targetHeight": 48
+  },
+  "desktop": {
+    "width": 1440,
+    "documentOverflow": false,
+    "pillShadows": [
+      "none",
+      "none",
+      "none",
+      "none"
+    ]
+  },
+  "services": {
+    "whiteInactivePills": true,
+    "blackSelectedPill": true,
+    "minimumTargetHeight": 48
+  },
+  "consoleErrors": []
+}

@@ -50,7 +50,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
     },
     boxShadow: {
-      default: '0 1px 4px rgba(27, 27, 33, 0.12)',
+      default: '0 2px 4px -2px rgba(27, 27, 33, 0.18)',
       '@media (min-width: 1024px)': 'none',
     },
     color: colors.text,
