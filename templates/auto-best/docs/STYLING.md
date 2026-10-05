@@ -49,32 +49,39 @@ Home and Inventory use the same search-panel bounds, padding and
 radius. Desktop facets retain the 44px control target and the shared
 prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
-Inventory's seven desktop shortcuts and search/filter buttons open one filter
+Inventory's seven desktop shortcuts, search field and filter button open one filter
 workspace, owned by `DesktopVehicleSearch.svelte`. Its centered 860px window
 keeps a 704px height, constrained to the viewport. The header and footer stay
 fixed while the category navigation and editor scroll independently.
 The left rail exposes Search and all twelve filters as vertical Bits UI tabs.
 Each category has a fixed 40px target, a 16px label and an optional current-value
 summary. Opening a shortcut selects its category directly; changing categories
-retains the complete draft and the same window bounds. Arrow keys navigate the
-categories without moving focus out of the tab list.
-The right editor has one field title, an inset search input for choice filters,
-and Clear filter when that field is active. Make and Model have separate lists;
+retains the complete draft and the same window bounds. Clicking a category focuses
+its search or first number input. Arrow keys navigate the categories without
+moving focus out of the tab list.
+The right editor has one field title, a soft grey pill search field for choice
+filters, and Clear filter when that field is active. The close action has a visible
+neutral circular surface. Make and Model have separate lists;
 the model list respects the current make, and changing make clears an incompatible
 model. A uniquely owned model can infer its make. Single choices use a quiet
 neutral surface and checkmark; equipment uses checkboxes for multiple choices.
+Option labels use the 450 entry role and 500 when selected. The current choice
+initializes the command highlight in every choice editor.
 Selecting values keeps the editor open. Clear all resets the draft, retains sort
 and stays in the current category. The footer has one separator and a red Show
-cars action with a live count and fixed width. Controls use the existing Inter
-and Cars tokens.
+cars action with a live count and fixed width. Individual options omit
+prospective result counts. Controls use the existing Inter and Cars tokens.
 Search finds makes, models and filter values across the catalog, tolerating
-accents and model spacing. Typing narrows suggestions; the explicit keyword
+accents and model spacing; the model editor also searches the make name.
+Typing narrows suggestions; the explicit keyword
 command applies a keyword filter. Empty choice results offer Clear search.
 Budget/year retain paired number inputs, units and presets; mileage has an input
-and presets. Number inputs keep native arrow-key editing, and invalid ranges
+and presets. Range editors sit outside Command so number inputs keep native
+arrow-key editing and Enter submission. Invalid ranges
 block Show cars even after changing categories.
-Bits UI provides the [vertical Tabs](https://www.shadcn-svelte.com/docs/components/tabs),
-[Command](https://www.shadcn-svelte.com/docs/components/command) and Dialog behavior,
+Bits UI provides the [vertical Tabs](https://www.bits-ui.com/docs/components/tabs),
+[Command](https://www.bits-ui.com/docs/components/command) and
+[Dialog](https://www.bits-ui.com/docs/components/dialog) behavior,
 adapted to the selected Filter workspace prototype and the existing Cars styling.
 Show cars applies the complete draft to the existing GET URL, retaining sort.
 Escape, Close and outside click discard the draft and restore the opener's focus.
