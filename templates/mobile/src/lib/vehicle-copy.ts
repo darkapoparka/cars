@@ -24,6 +24,13 @@ const promotionalPhotos = new Set([
   '/images/bmw-x3-gallery-01.webp',
   '/images/bmw-x3-gallery-05.webp',
 ]);
+const letterboxedPhotos = new Set([
+  '/images/bmw-120-gallery-01.webp',
+  '/images/bmw-120-gallery-02.webp',
+]);
+export function showroomPhotoHasLetterbox(src: string): boolean {
+  return letterboxedPhotos.has(src);
+}
 export function showroomVehiclePhotos(vehicle: Vehicle): string[] {
   const photos = vehicle.images.filter((src) => !promotionalPhotos.has(src));
   return photos.length ? photos : vehicle.images;
@@ -55,6 +62,27 @@ export function localizeSpecification(value: string, locale: Locale): string {
     .replace(/assuming an average CO₂ price of/g, 'при средна цена на CO₂ от')
     .replace(/assuming a low average CO₂ price of/g, 'при ниска средна цена на CO₂ от')
     .replace(/assuming a high average CO₂ price of/g, 'при висока средна цена на CO₂ от');
+}
+// Compact PDP previews only; the captured facts and full technical sheet stay intact.
+export function compactVehicleSpecification(
+  label: string,
+  value: string,
+  locale: Locale,
+): [string, string] {
+  const t = (message: string) => translate(message, locale);
+  let shortValue = localizeSpecification(value, locale);
+  if (label === 'Power') {
+    const horsepower = shortValue.match(/(\d+)\s*(?:hp|к\.с\.)\)?$/);
+    if (horsepower) shortValue = horsepower[1] + ' ' + t('hp');
+  }
+  if (label === 'Fuel')
+    shortValue = shortValue.replace(/,\s*(?:E10-enabled|съвместим с E10)$/i, '');
+  if (label === 'Origin' && (value === 'German edition' || value === t('German edition')))
+    shortValue = t('Germany');
+  return [
+    label === 'Transmission' ? (locale === 'bg' ? 'Скорости' : 'Gearbox') : t(label),
+    shortValue,
+  ];
 }
 // Keep the reference intact; the showroom shows vehicle photos instead of seller adverts.
 export function localizeVehicle(vehicle: Vehicle, locale: Locale): Vehicle {

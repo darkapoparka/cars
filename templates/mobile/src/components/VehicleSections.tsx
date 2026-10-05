@@ -8,7 +8,7 @@ import { DealerLogo } from './DealerLogo';
 import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { colors } from '@/styles/tokens.stylex';
-import { localizeSpecification } from '@/lib/vehicle-copy';
+import { compactVehicleSpecification, localizeSpecification } from '@/lib/vehicle-copy';
 import { vehicles } from '@/lib/catalog';
 import { showroom } from '@/lib/showroom';
 import { vehicleDetailSections, type VehicleDetailSection } from '@/lib/vehicle-detail-navigation';
@@ -21,6 +21,11 @@ import { ShowroomVehicleCard } from './ShowroomVehicleCard';
 import { GalleryScreen } from './GalleryScreen';
 import { ShowroomTabs } from './ShowroomTabs';
 import { selectVehicleDetailSection, useVehicleDetailSection } from './useVehicleDetailSection';
+const mobileDetailSections = [
+  vehicleDetailSections[0],
+  vehicleDetailSections[2],
+  vehicleDetailSections[1],
+] as const;
 const s = stylex.create({
   body: {
     backgroundColor: colors.surface,
@@ -43,7 +48,10 @@ const s = stylex.create({
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     backgroundColor: colors.background,
-    boxShadow: '0 -4px 16px #00000012',
+    boxShadow: {
+      default: '0 -4px 16px #00000012',
+      '@media (max-width: 699px)': '0 -2px 12px #0000000a',
+    },
   },
   sectionNav: {
     position: 'sticky',
@@ -54,13 +62,53 @@ const s = stylex.create({
     borderTopRightRadius: 24,
     scrollMarginTop: 60,
   },
+  afterMobileSummary: {
+    borderTopLeftRadius: { default: 24, '@media (max-width: 699px)': 0 },
+    borderTopRightRadius: { default: 24, '@media (max-width: 699px)': 0 },
+  },
+  summaryGrip: { height: { default: 24, '@media (max-width: 699px)': 0 } },
   grip: {
     display: 'flex',
-    height: 24,
+    height: { default: 24, '@media (max-width: 699px)': 8 },
     alignItems: 'center',
     justifyContent: 'center',
   },
-  gripBar: { width: 36, height: 4, borderRadius: 4, backgroundColor: colors.line },
+  gripBar: {
+    display: { default: 'block', '@media (max-width: 699px)': 'none' },
+    width: 36,
+    height: 4,
+    borderRadius: 4,
+    backgroundColor: colors.line,
+  },
+  fullSpecification: { display: { default: 'inline', '@media (max-width: 699px)': 'none' } },
+  compactSpecification: { display: { default: 'none', '@media (max-width: 699px)': 'inline' } },
+  mobileFinanceSection: {
+    display: { default: 'none', '@media (max-width: 699px)': 'block' },
+  },
+  financeAction: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+    width: '100%',
+    minHeight: 72,
+    padding: 16,
+    borderWidth: 0,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    color: colors.text,
+    textAlign: 'left',
+    outlineColor: colors.accent,
+    outlineOffset: -3,
+  },
+  financeCopy: { display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 },
+  financeLabel: { fontSize: 14, fontWeight: 500, lineHeight: '20px' },
+  financeAmount: {
+    fontSize: 12,
+    lineHeight: '18px',
+    color: colors.muted,
+    overflowWrap: 'anywhere',
+  },
+  financeChevron: { display: 'inline-flex', flexShrink: 0, color: colors.muted },
   panel: {
     display: 'flex',
     flexDirection: 'column',
@@ -139,7 +187,7 @@ const s = stylex.create({
   label: { fontSize: 12, lineHeight: '20px', color: colors.muted },
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
   showroomSpecs: { padding: 0, gap: 16 },
-  showroomSpec: { paddingLeft: 34 },
+  showroomSpec: { paddingLeft: { default: 34, '@media (max-width: 699px)': 44 } },
   specIcon: {
     display: 'inline-flex',
     position: 'absolute',
@@ -269,28 +317,42 @@ export function VehicleSections({
   vehicle: v,
   onReport,
   showroomMode = false,
+  mobileView = false,
+  onFinance,
   overview,
+  mobileOverview,
 }: {
   vehicle: Vehicle;
   onReport: () => void;
   showroomMode?: boolean;
+  mobileView?: boolean;
+  onFinance?: () => void;
   overview?: ReactNode;
+  mobileOverview?: ReactNode;
 }) {
-  const { t, locale, number } = useLocale();
+  const { t, locale, number, money } = useLocale();
   const section = useVehicleDetailSection();
   const navigation = useRef<HTMLDivElement>(null);
   const panelId = 'vehicle-detail-panel-' + v.id;
   const tabPrefix = 'vehicle-detail-tab-' + v.id + '-';
   const showDetails = !showroomMode || section === 'details';
   const showFeatures = !showroomMode || section === 'features';
+  const monthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
   function selectSection(value: VehicleDetailSection) {
     selectVehicleDetailSection(value);
     requestAnimationFrame(() => {
       const sheet = navigation.current?.closest('[data-vehicle-detail-sheet]');
       if (!sheet) return;
-      // A sticky rail's visible position changes; the sheet retains its page position.
+      const summary = sheet.querySelector<HTMLElement>('[data-vehicle-mobile-summary]');
+      const anchor = summary?.getBoundingClientRect();
+      // Use the normal-flow summary to retain the rail's page position while it is sticky.
       window.scrollTo({
-        top: Math.max(0, window.scrollY + sheet.getBoundingClientRect().top - 60),
+        top: Math.max(
+          0,
+          window.scrollY +
+            (anchor?.height ? anchor.bottom : sheet.getBoundingClientRect().top) -
+            60,
+        ),
         behavior: 'instant',
       });
     });
@@ -349,14 +411,22 @@ export function VehicleSections({
         data-vehicle-detail-sheet={showroomMode ? '' : undefined}
         {...stylex.props(showroomMode && s.sheet)}
       >
+        {showroomMode && mobileOverview}
         {showroomMode && (
-          <div ref={navigation} data-vehicle-detail-nav {...stylex.props(s.sectionNav)}>
-            <span aria-hidden="true" {...stylex.props(s.grip)}>
+          <div
+            ref={navigation}
+            data-vehicle-detail-nav
+            {...stylex.props(s.sectionNav, Boolean(mobileOverview) && s.afterMobileSummary)}
+          >
+            <span
+              aria-hidden="true"
+              {...stylex.props(s.grip, Boolean(mobileOverview) && s.summaryGrip)}
+            >
               <span {...stylex.props(s.gripBar)} />
             </span>
             <ShowroomTabs
               label={t('Vehicle information')}
-              tabs={vehicleDetailSections}
+              tabs={mobileView ? mobileDetailSections : vehicleDetailSections}
               selected={section}
               panelId={panelId}
               idPrefix={tabPrefix}
@@ -391,12 +461,24 @@ export function VehicleSections({
                   <div key={label} {...stylex.props(s.spec, showroomMode && s.showroomSpec)}>
                     <dt {...stylex.props(s.label, showroomMode && s.showroomLabel)}>
                       <span {...stylex.props(ui.orange, s.specIcon)}>
-                        <Icon name={icon} size={showroomMode ? 24 : 28} />
+                        <Icon name={icon} size={showroomMode ? (mobileView ? 32 : 24) : 28} />
                       </span>
-                      {t(label)}
+                      <span {...stylex.props(showroomMode && s.fullSpecification)}>{t(label)}</span>
+                      {showroomMode && (
+                        <span {...stylex.props(s.compactSpecification)}>
+                          {compactVehicleSpecification(label, value, locale)[0]}
+                        </span>
+                      )}
                     </dt>
                     <dd {...stylex.props(s.value, showroomMode && s.showroomValue)}>
-                      {localizeSpecification(value, locale)}
+                      <span {...stylex.props(showroomMode && s.fullSpecification)}>
+                        {localizeSpecification(value, locale)}
+                      </span>
+                      {showroomMode && (
+                        <span {...stylex.props(s.compactSpecification)}>
+                          {compactVehicleSpecification(label, value, locale)[1]}
+                        </span>
+                      )}
                     </dd>
                   </div>
                 ))}
@@ -454,9 +536,25 @@ export function VehicleSections({
                     {data.slice(0, 6).map(([label, value]) => (
                       <tr key={label} {...stylex.props(s.row)}>
                         <th scope="row" {...stylex.props(s.cell, s.key)}>
-                          {t(label)}
+                          <span {...stylex.props(showroomMode && s.fullSpecification)}>
+                            {t(label)}
+                          </span>
+                          {showroomMode && (
+                            <span {...stylex.props(s.compactSpecification)}>
+                              {compactVehicleSpecification(label, value, locale)[0]}
+                            </span>
+                          )}
                         </th>
-                        <td {...stylex.props(s.cell)}>{localizeSpecification(value, locale)}</td>
+                        <td {...stylex.props(s.cell)}>
+                          <span {...stylex.props(showroomMode && s.fullSpecification)}>
+                            {localizeSpecification(value, locale)}
+                          </span>
+                          {showroomMode && (
+                            <span {...stylex.props(s.compactSpecification)}>
+                              {compactVehicleSpecification(label, value, locale)[1]}
+                            </span>
+                          )}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -581,6 +679,39 @@ export function VehicleSections({
                   {description ? t('Show less') : t('Show more')}
                 </button>
               )}
+            </section>
+          )}
+          {showroomMode && showDetails && onFinance && (
+            <section
+              data-mobile-vehicle-finance
+              {...stylex.props(
+                s.card,
+                s.showroomSection,
+                s.showroomDivider,
+                s.mobileFinanceSection,
+              )}
+            >
+              <button
+                type="button"
+                data-mobile-monthly-payment
+                aria-label={t('Calculate Financing') + ': ' + money(monthly) + ' ' + t('per month')}
+                aria-haspopup="dialog"
+                onClick={(event) => {
+                  event.currentTarget.focus({ preventScroll: true });
+                  onFinance();
+                }}
+                {...stylex.props(s.financeAction)}
+              >
+                <span {...stylex.props(s.financeCopy)}>
+                  <span {...stylex.props(s.financeLabel)}>{t('Financing')}</span>
+                  <span {...stylex.props(s.financeAmount)}>
+                    {t('from')} {money(monthly)} / {locale === 'bg' ? 'мес.' : 'mo.'}
+                  </span>
+                </span>
+                <span {...stylex.props(s.financeChevron)}>
+                  <Icon name="right" size={18} />
+                </span>
+              </button>
             </section>
           )}
         </div>
