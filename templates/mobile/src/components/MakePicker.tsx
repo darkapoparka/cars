@@ -69,7 +69,7 @@ export function MakePicker({
   availableMakes,
   embedded = false,
 }: Props) {
-  const { t, locale, number } = useLocale();
+  const { t, number } = useLocale();
   const makeSummaryId = useId();
   const state = useAppState();
   const filters = suppliedFilters || state.filters;
@@ -529,6 +529,7 @@ export function MakePicker({
                           {...stylex.props(
                             embedded && s.makeName,
                             (Boolean(selected) || isAllMakes) && s.optionCopy,
+                            isAllMakes && s.allMakesCopy,
                           )}
                         >
                           <span>
@@ -537,7 +538,7 @@ export function MakePicker({
                           </span>
                           {isAllMakes && (
                             <span id={makeSummaryId} {...stylex.props(s.selectionSummary)}>
-                              {number(catalogMakeCount)} {t('Makes').toLocaleLowerCase(locale)}
+                              ({number(catalogMakeCount)})
                             </span>
                           )}
                           {selected && (

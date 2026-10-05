@@ -5,8 +5,9 @@ export const pickerStyles = stylex.create({
   embeddedInput: {
     fontSize: 16,
     lineHeight: '24px',
-    height: 'auto',
-    minHeight: 48,
+    height: { default: 'auto', '@media (max-width: 699px)': 44 },
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    paddingBlock: { default: null, '@media (max-width: 699px)': 8 },
     borderRadius: 12,
     borderColor: colors.line,
   },
@@ -20,7 +21,12 @@ export const pickerStyles = stylex.create({
     display: 'flex',
     color: colors.muted,
   },
-  embeddedClear: { width: 48, height: 48, top: '50%', transform: 'translateY(-50%)' },
+  embeddedClear: {
+    width: { default: 48, '@media (max-width: 699px)': 44 },
+    height: { default: 48, '@media (max-width: 699px)': 44 },
+    top: '50%',
+    transform: 'translateY(-50%)',
+  },
   embeddedList: {
     marginInline: 0,
     paddingInline: 16,
@@ -51,8 +57,8 @@ export const pickerStyles = stylex.create({
     borderBottomColor: colors.stripe,
   },
   allMakes: {
-    minHeight: 52,
-    marginBottom: 8,
+    minHeight: { default: 52, '@media (max-width: 699px)': 44 },
+    marginBottom: { default: 8, '@media (max-width: 699px)': 4 },
     paddingLeft: 8,
     paddingRight: 14,
     borderRadius: 10,
@@ -84,6 +90,7 @@ export const pickerStyles = stylex.create({
     flex: '1',
     overflowWrap: 'anywhere',
   },
+  allMakesCopy: { flexDirection: 'row', alignItems: 'baseline', gap: 6, whiteSpace: 'nowrap' },
   selectionSummary: { fontSize: 14, lineHeight: '20px', fontWeight: 400, color: colors.muted },
   header: {
     display: 'flex',

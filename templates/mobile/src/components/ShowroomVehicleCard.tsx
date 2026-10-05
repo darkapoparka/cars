@@ -71,9 +71,9 @@ const s = stylex.create({
   body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 6 },
   title: {
     minWidth: 0,
-    fontSize: { default: 18, '@media (min-width: 1024px)': 16 },
+    fontSize: { default: 18, '@media (max-width: 699px)': 17, '@media (min-width: 1024px)': 16 },
     lineHeight: '24px',
-    fontWeight: 700,
+    fontWeight: { default: 700, '@media (max-width: 699px)': 500 },
     overflowWrap: 'anywhere',
   },
   titleText: {
@@ -88,9 +88,9 @@ const s = stylex.create({
     gap: 4,
   },
   price: {
-    fontSize: { default: 20, '@media (min-width: 1024px)': 18 },
-    lineHeight: '26px',
-    fontWeight: 700,
+    fontSize: { default: 20, '@media (max-width: 699px)': 18, '@media (min-width: 1024px)': 18 },
+    lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
+    fontWeight: { default: 700, '@media (max-width: 699px)': 400 },
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   },

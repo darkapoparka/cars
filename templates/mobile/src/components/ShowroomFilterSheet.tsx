@@ -150,7 +150,10 @@ export function ShowroomFilterSheet({
             }}
             {...stylex.props(s.clearFilters)}
           >
-            {t('Clear')}
+            <span {...stylex.props(s.clearLabel)}>{t('Clear')}</span>
+            <span aria-hidden="true" {...stylex.props(s.clearIcon)}>
+              <Icon name="reset" />
+            </span>
           </button>
         </div>
         <div {...stylex.props(s.tabs)}>
