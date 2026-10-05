@@ -524,7 +524,17 @@ export function MakePicker({
                             s.lastMake,
                         )}
                       >
-                        {!isAllMakes && <BrandLogo make={name} size={embedded ? 32 : 40} />}
+                        {isAllMakes ? (
+                          <Image
+                            src="/branding/cars-circle-20261005.png"
+                            alt=""
+                            width={32}
+                            height={32}
+                            {...stylex.props(s.logo(32))}
+                          />
+                        ) : (
+                          <BrandLogo make={name} size={embedded ? 32 : 40} />
+                        )}
                         <span
                           {...stylex.props(
                             embedded && s.makeName,
@@ -547,17 +557,19 @@ export function MakePicker({
                             </span>
                           )}
                         </span>
-                        {embedded &&
-                          (selected || isAllMakes ? (
-                            <span
-                              aria-hidden="true"
-                              {...stylex.props(s.selectionMark, isSelected && s.selectedMark)}
-                            >
-                              {isSelected && <Icon name="check" size={14} />}
-                            </span>
-                          ) : (
-                            <Icon name="right" size={18} />
-                          ))}
+                        {embedded && (
+                          <span aria-hidden="true" {...stylex.props(s.makeTrailing)}>
+                            {selected || isAllMakes ? (
+                              <span
+                                {...stylex.props(s.selectionMark, isSelected && s.selectedMark)}
+                              >
+                                {isSelected && <Icon name="check" size={14} />}
+                              </span>
+                            ) : (
+                              <Icon name="right" size={18} />
+                            )}
+                          </span>
+                        )}
                       </button>
                     );
                     return embedded ? (

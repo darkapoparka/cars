@@ -87,12 +87,15 @@ for (const [engineName, engine] of engines) {
             const rowLayout = await makeRows.evaluateAll((rows) =>
               rows.map((row) => {
                 const button = row.querySelector('button');
+                const trailing = button.lastElementChild.getBoundingClientRect();
                 return {
                   name: row.dataset.makeOption,
                   border: getComputedStyle(row).borderBottomWidth,
                   buttonBorder: getComputedStyle(button).borderBottomWidth,
                   logoWidth: button.querySelector('img')?.getBoundingClientRect().width || 0,
                   buttonHeight: button.getBoundingClientRect().height,
+                  labelX: button.querySelector('span:not([aria-hidden])').getBoundingClientRect().x,
+                  trailingCenterX: trailing.x + trailing.width / 2,
                 };
               }),
             );
@@ -103,8 +106,14 @@ for (const [engineName, engine] of engines) {
             );
             assert.ok(rowLayout.every((row) => row.border === '0px' && row.buttonBorder === '0px'));
             assert.ok(rowLayout.every((row) => row.buttonHeight >= (row.name === 'Any' ? 44 : 48)));
-            assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 0);
+            assert.equal(rowLayout.find((row) => row.name === 'Any').logoWidth, 32);
             assert.equal(rowLayout.find((row) => row.name === 'BMW').logoWidth, 32);
+            assert.equal(rowLayout[0].labelX, rowLayout[1].labelX);
+            assert.ok(
+              rowLayout.every(
+                (row) => Math.abs(row.trailingCenterX - rowLayout[0].trailingCenterX) < 0.5,
+              ),
+            );
             assert.equal(await allMakes.getAttribute('aria-pressed'), 'true');
             const catalogSummary = '(' + String(catalogMakeCount) + ')';
             const summary = allMakes.getByText(catalogSummary, { exact: true });
@@ -150,14 +159,14 @@ for (const [engineName, engine] of engines) {
               'rgba(0, 0, 0, 0)',
             );
             const allMakesCircleX = await allMakes
-              .locator(':scope > span:last-child')
+              .locator(':scope > span:last-child > span:first-child')
               .evaluate((element) => {
                 const box = element.getBoundingClientRect();
                 return box.left + box.width / 2;
               });
             assert.equal(
               await allMakes
-                .locator(':scope > span:last-child')
+                .locator(':scope > span:last-child > span:first-child')
                 .evaluate((element) => getComputedStyle(element).borderRadius),
               '50%',
             );

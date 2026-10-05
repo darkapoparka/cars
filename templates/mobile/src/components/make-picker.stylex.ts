@@ -36,7 +36,8 @@ export const pickerStyles = stylex.create({
   },
   embeddedMake: {
     minHeight: 56,
-    paddingInline: 8,
+    paddingLeft: 8,
+    paddingRight: 12,
     gap: 12,
     borderWidth: 0,
     borderBottomWidth: 0,
@@ -60,7 +61,7 @@ export const pickerStyles = stylex.create({
     minHeight: { default: 52, '@media (max-width: 699px)': 44 },
     marginBottom: { default: 8, '@media (max-width: 699px)': 4 },
     paddingLeft: 8,
-    paddingRight: 14,
+    paddingRight: 12,
     borderRadius: 10,
     backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
     fontSize: 16,
@@ -81,6 +82,14 @@ export const pickerStyles = stylex.create({
     flexShrink: 0,
   },
   selectedMark: { borderColor: colors.accent, backgroundColor: colors.accent },
+  makeTrailing: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 24,
+    height: 24,
+    flexShrink: 0,
+  },
   makeName: { flex: '1', minWidth: 0 },
   optionCopy: {
     display: 'flex',
@@ -90,7 +99,7 @@ export const pickerStyles = stylex.create({
     flex: '1',
     overflowWrap: 'anywhere',
   },
-  allMakesCopy: { flexDirection: 'row', alignItems: 'baseline', gap: 6, whiteSpace: 'nowrap' },
+  allMakesCopy: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'baseline', gap: 6 },
   selectionSummary: { fontSize: 14, lineHeight: '20px', fontWeight: 400, color: colors.muted },
   header: {
     display: 'flex',
