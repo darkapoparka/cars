@@ -39,6 +39,7 @@ import {
 import {
   formatVehicleCardMoney,
   getMobileVehicleCardHeading,
+  getShowroomVehicleCardSpecFacts,
   getShowroomVehicleHeading,
   getVehicleCardBadgeLabels,
   getVehicleCardPricePolicy,
@@ -628,7 +629,7 @@ const ShowroomVehicleCardContent = ({
 }) => {
   const heading = getShowroomVehicleHeading(listing, locale);
   const title = heading.title.slice(`${listing.spec.year} `.length);
-  const facts = getVehicleCardSpecFacts(listing, locale);
+  const facts = getShowroomVehicleCardSpecFacts(listing, locale);
   return (
     <Link
       className="min-w-0"
@@ -637,9 +638,6 @@ const ShowroomVehicleCardContent = ({
     >
       <div data-slot="showroom-vehicle-heading">
         <h3 data-slot="vehicle-card-title">{title}</h3>
-        <p data-slot="showroom-vehicle-subtitle" title={heading.subtitle}>
-          {listing.spec.year} · {heading.subtitle}
-        </p>
       </div>
       <ul
         aria-label={getVehicleCardCopy(locale).specs}

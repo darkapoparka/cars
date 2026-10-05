@@ -119,7 +119,9 @@ for (const width of [1024, 1280, 1440, 1920]) {
               ? Number.parseFloat(getComputedStyle(title).fontSize)
               : 0,
             completeFacts:
-              facts.length === 3 &&
+              ["year", "body", "mileage", "fuel", "transmission"].every((id) =>
+                facts.some((fact) => fact.getAttribute("data-fact") === id)
+              ) &&
               facts.every((fact) => {
                 const value = fact.querySelector("span");
                 if (!value) {
@@ -738,11 +740,11 @@ test("home make selection applies to the draft, not the route", async ({
 
 test("catalog list mode retains showroom card hierarchy", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto("/cars");
+  await page.goto("/bg/cars");
   await settleModernPage(page);
   await selectInventoryViewMode(page, "list", "bg");
   const card = page
-    .locator('[data-slot="marketplace-listing-grid"] article')
+    .locator('[data-slot="marketplace-listing-grid"]:visible article')
     .first();
   await expect(card).toHaveAttribute("data-presentation", "showroom");
   await expect(card).toHaveAttribute("data-view-mode", "list");

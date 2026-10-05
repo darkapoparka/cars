@@ -30,6 +30,10 @@ export interface VehicleCardSpecFact {
   value: string;
 }
 
+type ShowroomVehicleCardSpecFact = Omit<VehicleCardSpecFact, "id"> & {
+  id: VehicleCardSpecFactId | "variant" | "body";
+};
+
 export interface VehicleCardBadgeCopy {
   featured: string;
   imported: string;
@@ -112,11 +116,12 @@ export const getShowroomVehicleHeading = (
       break;
     }
   }
+  const bodyType = formatBodyType(listing.spec.bodyType, locale);
   return {
+    detail,
+    bodyType,
     title: `${listing.spec.year} ${model || original}`,
-    subtitle: [detail, formatBodyType(listing.spec.bodyType, locale)]
-      .filter(Boolean)
-      .join(" · "),
+    subtitle: [detail, bodyType].filter(Boolean).join(" · "),
   };
 };
 
@@ -166,6 +171,25 @@ export const getVehicleCardSpecFacts = (
       },
     ] satisfies VehicleCardSpecFact[]
   ).filter((fact) => fact.value);
+};
+
+/** Desktop badges retain the complete variant and body style alongside the shared vehicle facts. */
+export const getShowroomVehicleCardSpecFacts = (
+  listing: VehicleListing,
+  locale?: string
+): ShowroomVehicleCardSpecFact[] => {
+  const heading = getShowroomVehicleHeading(listing, locale);
+  const facts = getVehicleCardSpecFacts(listing, locale);
+  return [
+    ...facts.filter((fact) => fact.id === "year"),
+    ...(
+      [
+        { id: "variant", value: heading.detail },
+        { id: "body", value: heading.bodyType },
+      ] satisfies ShowroomVehicleCardSpecFact[]
+    ).filter((fact) => fact.value),
+    ...facts.filter((fact) => fact.id !== "year"),
+  ];
 };
 
 export const getVehicleCardBadgeLabels = (

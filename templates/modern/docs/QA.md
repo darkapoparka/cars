@@ -30,6 +30,8 @@ For desktop changes, also run `pnpm refactor:contracts`, `pnpm release:preflight
 
 ## Browser matrix
 
+[Desktop card badges](DESKTOP-CARD-BADGES-2026-10-05.md) replace the showroom subtitle with visible year, full variant, body style, mileage, fuel and gearbox badges. Check Home, Cars in Grid/List, and related stock in BG/EN at 1024, 1280, 1440 and 1920 px. Long variants wrap within their badge, price and the filled brand-color Details action do not overlap, and keyboard activation of the card opens the correct listing. Keep matched 320/390 and 1023 px captures for mobile preservation.
+
 [Compact desktop Home](HOME-BANNER-COMPACT-2026-10-05.md) keeps the banner between 400 and 440 px, with a 52 px headline cap and 76 px search bar. Check BG/EN at 1024, 1280, 1440 and 1920 px: the configured photo keeps both wheels visible and the first stock row starts before 800 px. Run the Home frame and search/sidebar cases in `desktop-panel-flows.spec.ts` against Chromium and WebKit. Compare matched Home captures at 320, 390 and 1023 px, plus Cars and Leasing at 1440 px, to confirm the change stays within desktop Home.
 
 [Current inventory Type and controls](DESKTOP-INVENTORY-TYPE-AND-CENTERED-CONTROLS-2026-10-05.md) record a four-field search capsule and Filters/Sort centered together outside the banner. Check the group midpoint against the card grid, all four Type options, keyboard focus against the white page, all six sort labels in both locales at 1024 px, and both Type and View menus in a 600 px-high window. [The preceding placement](DESKTOP-INVENTORY-CONTROLS-BELOW-BANNER-2026-10-05.md) is retained as history. [The preceding control polish](DESKTOP-INVENTORY-CONTROL-POLISH-2026-10-05.md) remains historical evidence.
