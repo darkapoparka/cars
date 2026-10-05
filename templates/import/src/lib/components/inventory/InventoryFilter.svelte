@@ -70,9 +70,9 @@
 			min-height: var(--bc-control-height-primary);
 			min-width: 0;
 			max-width: min(100%, 240px);
-			border-radius: var(--bc-desktop-control-radius);
-			border-color: transparent;
-			background: transparent;
+			border-radius: var(--bc-radius-pill);
+			border-color: var(--bc-border-strong);
+			background: var(--bc-surface-raised);
 			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);
 		}
@@ -81,7 +81,7 @@
 		}
 		.site-filter-trigger:hover,
 		.site-filter-trigger[aria-expanded='true'] {
-			border-color: transparent;
+			border-color: var(--bc-ink);
 			background: var(--bc-surface-hover);
 		}
 		.site-filter-trigger[data-active='true'] {

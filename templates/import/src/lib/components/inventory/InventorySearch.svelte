@@ -42,7 +42,7 @@
 
 <style>
 	.inventory-search {
-		flex: 1 1 260px;
+		width: 100%;
 		min-width: 0;
 		margin: 0;
 	}

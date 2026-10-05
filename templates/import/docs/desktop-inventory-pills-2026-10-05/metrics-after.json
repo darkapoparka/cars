@@ -1,0 +1,1454 @@
+[
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 410.234375
+		},
+		"firstCard": {
+			"height": 378.203125,
+			"width": 315,
+			"x": 52.5,
+			"y": 599.234375
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 272.5,
+			"y": 261.234375
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 286.234375
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 286.234375
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 297.5,
+			"y": 350.234375
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 108,
+			"width": 591,
+			"x": 81,
+			"y": 435.640625
+		},
+		"firstCard": {
+			"height": 390.390625,
+			"width": 334.5,
+			"x": 32,
+			"y": 684.640625
+		},
+		"overflow": false,
+		"panel": {
+			"height": 282,
+			"width": 641,
+			"x": 56,
+			"y": 286.640625
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 311.640625
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 311.640625
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 591,
+			"x": 81,
+			"y": 375.640625
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 768
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 435.640625
+		},
+		"firstCard": {
+			"height": 369.859375,
+			"width": 301.65625,
+			"x": 32,
+			"y": 624.640625
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 64.5,
+			"y": 286.640625
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 311.640625
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 311.640625
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 89.5,
+			"y": 375.640625
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1024
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 411.953125
+		},
+		"firstCard": {
+			"height": 378.203125,
+			"width": 315,
+			"x": 292.5,
+			"y": 600.953125
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 512.5,
+			"y": 262.953125
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 287.953125
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 287.953125
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 537.5,
+			"y": 351.953125
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1920
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCard": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchFont": "20px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 320
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Марка",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Модел",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Цена",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Пробег",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Гориво",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Тип",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCard": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchFont": "20px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Всички",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Седан",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Кабрио",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"url": "http://127.0.0.1:6793/bg/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 390
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 410.234375
+		},
+		"firstCard": {
+			"height": 378.203125,
+			"width": 315,
+			"x": 52.5,
+			"y": 599.234375
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 272.5,
+			"y": 261.234375
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 286.234375
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 297.5,
+			"y": 286.234375
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 297.5,
+			"y": 350.234375
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1440
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 108,
+			"width": 591,
+			"x": 81,
+			"y": 435.640625
+		},
+		"firstCard": {
+			"height": 390.390625,
+			"width": 334.5,
+			"x": 32,
+			"y": 684.640625
+		},
+		"overflow": false,
+		"panel": {
+			"height": 282,
+			"width": 641,
+			"x": 56,
+			"y": 286.640625
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 311.640625
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 591,
+			"x": 81,
+			"y": 311.640625
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 591,
+			"x": 81,
+			"y": 375.640625
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 768
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 435.640625
+		},
+		"firstCard": {
+			"height": 369.859375,
+			"width": 301.65625,
+			"x": 32,
+			"y": 624.640625
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 64.5,
+			"y": 286.640625
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 311.640625
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 89.5,
+			"y": 311.640625
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 89.5,
+			"y": 375.640625
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1024
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 48,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 411.953125
+		},
+		"firstCard": {
+			"height": 378.203125,
+			"width": 315,
+			"x": 292.5,
+			"y": 600.953125
+		},
+		"overflow": false,
+		"panel": {
+			"height": 222,
+			"width": 880,
+			"x": 512.5,
+			"y": 262.953125
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 287.953125
+		},
+		"searchControl": {
+			"height": 48,
+			"width": 830,
+			"x": 537.5,
+			"y": 287.953125
+		},
+		"searchFont": "18px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 44,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 44,
+			"width": 830,
+			"x": 537.5,
+			"y": 351.953125
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 1000,
+			"width": 1920
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCard": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchFont": "20px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 320
+		},
+		"visibleImagesLoaded": true
+	},
+	{
+		"filterPills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Make",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Model",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Price",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Mileage",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Fuel",
+				"radius": "999px"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Type",
+				"radius": "999px"
+			}
+		],
+		"filters": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"firstCard": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"overflow": false,
+		"panel": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"scroll": {
+			"x": 0,
+			"y": 0
+		},
+		"search": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchControl": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"searchFont": "20px",
+		"searchRadius": "999px",
+		"separators": ["none", "none", "none", "none", "none", "none"],
+		"submitLabelDisplay": "none",
+		"typePills": [
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "All cars",
+				"radius": "999px",
+				"selected": "page"
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "SUV",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Sedan",
+				"radius": "999px",
+				"selected": null
+			},
+			{
+				"border": "1px",
+				"height": 0,
+				"label": "Cabriolet",
+				"radius": "999px",
+				"selected": null
+			}
+		],
+		"types": {
+			"height": 0,
+			"width": 0,
+			"x": 0,
+			"y": 0
+		},
+		"url": "http://127.0.0.1:6793/en/inventory",
+		"viewport": {
+			"height": 844,
+			"width": 390
+		},
+		"visibleImagesLoaded": true
+	}
+]

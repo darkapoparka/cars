@@ -119,26 +119,19 @@
 	}
 	@media (min-width: 768px) {
 		.inventory-toolbar__field {
-			position: relative;
 			min-width: 0;
-		}
-		.inventory-toolbar__field + .inventory-toolbar__field::before {
-			content: '';
-			position: absolute;
-			inset: var(--bc-space-3) auto var(--bc-space-3) calc(-1 * var(--bc-space-1));
-			width: 1px;
-			background: var(--bc-border);
 		}
 		.inventory-toolbar__field :global(.site-filter-trigger) {
 			width: 100%;
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			font-size: var(--bc-text-label);
-			border: 1px solid transparent;
-			border-radius: var(--bc-desktop-control-radius);
-			background: transparent;
+			border: 1px solid var(--bc-border-strong);
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-surface-raised);
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all:hover) {
+			border-color: var(--bc-ink);
 			background: var(--bc-surface-hover);
 		}
 	}
@@ -158,9 +151,6 @@
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			grid-column: span 2;
-		}
-		.inventory-toolbar__field:nth-child(5)::before {
-			display: none;
 		}
 	}
 </style>

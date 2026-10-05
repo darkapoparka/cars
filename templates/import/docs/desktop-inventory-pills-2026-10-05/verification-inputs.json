@@ -1,0 +1,67 @@
+{
+	"qa": "C:/Users/radev/.codex/tmp/cars-import-inventory-pills-2026-10-05-qa",
+	"baselineCommit": "d9af90f381b94eda336a0febebc11148f794a86c",
+	"baselineCaptureSource": "docs/desktop-inventory-hierarchy-2026-10-05/*-after.jpg",
+	"node": "v24.21.0",
+	"lockfile": "aa596db7046c3f226ce50b488e283e30121eb49122d5006c60035ef57a952e1c",
+	"taskSources": [
+		{
+			"path": "src/lib/components/common/DesktopSearchControl.svelte",
+			"sha256": "04c23bb31618338670f2eb23eceb059771e7e14c04a344dd23259285ba5e571a"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryPage.svelte",
+			"sha256": "92845b8d081043b3d1535d5169f49295854fdcf3682c1c9bfa53e0824a1a1a02"
+		},
+		{
+			"path": "src/lib/components/inventory/InventorySearch.svelte",
+			"sha256": "9933da24b073264d47b94dc60de25516d41c3ebbecf5e8cc4c823bb9852503fe"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryFilter.svelte",
+			"sha256": "d1ef819ec36a3bd9433c6bc1a20750be25b452653eb6fdab02243732e7fd3d38"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryToolbar.svelte",
+			"sha256": "cb03df5968b3d98e08f469170c184e721c4778bc03ac6fef174e4d9f3fdddfaa"
+		},
+		{
+			"path": "src/lib/components/inventory/InventoryTypeShortcuts.svelte",
+			"sha256": "97c476ce3b689d776e8438802273e736e6a142a64eb77e3ecd02a9c2eb532e65"
+		}
+	],
+	"dependencies": {
+		"svelte": "5.57.1",
+		"@sveltejs/kit": "2.70.3",
+		"vite": "8.3.0"
+	},
+	"canonicalTaskSourcesMatchFrozenQa": true,
+	"compiled": [
+		{
+			"path": ".svelte-kit/output/server/index.js",
+			"sha256": "5ceaf3d256f7e98e530180c594f3c037627a11281f358f43b34752f957efa7bd"
+		},
+		{
+			"path": ".svelte-kit/output/client/.vite/manifest.json",
+			"sha256": "b88e8aa3df1a845707ab8cb2c502a6e7fde5e9619b4575727abc0dee4afc58a5"
+		}
+	],
+	"productionBuild": "Passed, including retained adapter and public asset packaging, from frozen QA source.",
+	"browserChecks": {
+		"passed": 9,
+		"baseUrl": "http://127.0.0.1:6793",
+		"project": "desktop",
+		"filter": "inventory|compact filters|all-filters search|desktop catalogue"
+	},
+	"finalPreview": "http://127.0.0.1:6790/bg/inventory",
+	"capture": {
+		"viewport": {
+			"width": 1440,
+			"height": 1000
+		},
+		"nativeCanvas": {
+			"width": 1425,
+			"height": 990
+		}
+	}
+}

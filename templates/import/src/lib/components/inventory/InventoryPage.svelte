@@ -67,10 +67,8 @@
 		>
 			{#snippet desktopActions()}
 				<DesktopDiscoveryPanel class="inventory-discovery">
-					<div class="inventory-discovery__entry">
-						<InventorySearch {english} />
-						{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
-					</div>
+					<InventorySearch {english} />
+					{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
 					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
 				</DesktopDiscoveryPanel>
 			{/snippet}
@@ -129,13 +127,6 @@
 </main>
 
 <style>
-	.inventory-discovery__entry {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: var(--bc-space-3) var(--bc-space-4);
-		min-width: 0;
-	}
 	.inventory-results__layout,
 	.inventory-results__content {
 		min-width: 0;
