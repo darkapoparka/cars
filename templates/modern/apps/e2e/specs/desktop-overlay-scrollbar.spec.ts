@@ -49,6 +49,13 @@ for (const locale of ["bg", "en"] as const) {
       const summary = page.locator('[data-slot="dealer-inventory-summary"]');
       const overlays = [
         {
+          trigger: hero.getByRole("combobox", {
+            name: isBg ? "Тип" : "Type",
+            exact: true,
+          }),
+          content: '[data-slot="select-content"]',
+        },
+        {
           trigger: hero.getByRole("button", {
             name: isBg ? "Марка" : "Make",
             exact: true,

@@ -1,8 +1,21 @@
 import { Button } from "@repo/design-system/components/ui/button";
-import type { MarketplaceSearchParams } from "@repo/marketplace";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@repo/design-system/components/ui/select";
+import { type MarketplaceSearchParams, withCategory } from "@repo/marketplace";
 import { ChevronDown, Search } from "lucide-react";
 import type { MouseEvent } from "react";
-import { getDesktopPriceQuickFilterLabel } from "../lib/desktop-filter-policy";
+import {
+  getDesktopPriceQuickFilterLabel,
+  getLocalizedDesktopCategoryLabel,
+} from "../lib/desktop-filter-policy";
+import { marketplaceCategorySelectorOptions } from "../lib/marketplace-filter-config";
 import searchStyles from "./dealer-hero-search.module.css";
 import styles from "./dealer-inventory-search.module.css";
 import type { DesktopFullFilterEntry } from "./desktop-full-filter-dialog";
@@ -55,15 +68,18 @@ export function DealerInventorySearch({
   disabled = false,
   filters,
   locale,
+  onApply,
   onOpenSection,
 }: {
   disabled?: boolean;
   filters: MarketplaceSearchParams;
   locale?: string;
+  onApply?: (updates: Partial<MarketplaceSearchParams>) => void;
   onOpenSection: (section: DesktopFullFilterEntry) => void;
 }) {
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const text = (bg: string, en: string) => (isBg ? bg : en);
+  const category = filters.category === "lease" ? "car" : filters.category;
   const hasPrice =
     filters.priceMin !== undefined || filters.priceMax !== undefined;
   const price = hasPrice
@@ -86,9 +102,58 @@ export function DealerInventorySearch({
         data-surface="hero"
       >
         <fieldset
-          aria-label={text("Търсене на автомобили", "Vehicle search")}
+          aria-label={text("Търсене на превозни средства", "Vehicle search")}
           className={searchStyles.form}
         >
+          <div className={searchStyles.filterField} data-field="category">
+            <Select
+              disabled={disabled || !onApply}
+              onValueChange={(nextCategory) =>
+                onApply?.(
+                  withCategory(
+                    filters,
+                    nextCategory as MarketplaceSearchParams["category"]
+                  )
+                )
+              }
+              value={category}
+            >
+              <SelectTrigger
+                aria-label={text("Тип", "Type")}
+                className={searchStyles.field}
+                data-slot="dealer-inventory-search-field"
+              >
+                <span className={styles.typeValue}>
+                  <span className={styles.typeLabel}>
+                    {text("Тип:", "Type:")}
+                  </span>
+                  <SelectValue>
+                    {getLocalizedDesktopCategoryLabel(category, isBg)}
+                  </SelectValue>
+                </span>
+              </SelectTrigger>
+              <SelectContent
+                align="start"
+                className={styles.typeMenu}
+                sideOffset={6}
+              >
+                <SelectGroup>
+                  <SelectLabel>
+                    {text("Тип превозно средство", "Vehicle type")}
+                  </SelectLabel>
+                  {marketplaceCategorySelectorOptions.map((option) => (
+                    <SelectItem
+                      className={styles.typeOption}
+                      key={option.id}
+                      value={option.id}
+                    >
+                      {getLocalizedDesktopCategoryLabel(option.id, isBg)}
+                    </SelectItem>
+                  ))}
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
           <SearchField
             active={Boolean(filters.make)}
             disabled={disabled}
@@ -121,7 +186,7 @@ export function DealerInventorySearch({
             type="button"
           >
             <Search aria-hidden="true" size={20} />
-            <span>{text("Търси автомобили", "Search cars")}</span>
+            <span>{text("Търси", "Search")}</span>
           </Button>
         </fieldset>
       </div>

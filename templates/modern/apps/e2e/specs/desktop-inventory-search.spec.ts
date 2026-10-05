@@ -19,7 +19,70 @@ test.beforeEach(async ({ context, baseURL, page }) => {
 });
 
 for (const locale of ["bg", "en"] as const) {
-  test(`inventory banner centers Filters and Sort and keeps display choices in a floating menu (${locale})`, async ({
+  test(`inventory Type switches categories, preserves budget and restores browser Back context (${locale})`, async ({
+    page,
+  }) => {
+    const isBg = locale === "bg";
+    await page.goto(
+      `/${locale}/cars?make=BMW&model=X5&priceMax=100000&yearMin=2010&sort=newest`
+    );
+    const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
+    const type = hero.getByRole("combobox", {
+      name: isBg ? "Тип" : "Type",
+      exact: true,
+    });
+    await expect(type).toBeEnabled();
+    const initialUrl = page.url();
+    await type.focus();
+    await page.keyboard.press("Enter");
+    await expect(page.getByRole("option")).toHaveCount(4);
+    await page.keyboard.press("Escape");
+    await expect(type).toBeFocused();
+    expect(page.url()).toBe(initialUrl);
+    await page.waitForLoadState("networkidle");
+    await page.evaluate(() => {
+      document.documentElement.dataset.typeNavigation = "initial";
+    });
+
+    for (const [name, path] of [
+      [isBg ? "Мотори" : "Motorbikes", "motorbikes"],
+      [isBg ? "Бусове" : "Vans", "vans"],
+      [isBg ? "Камиони" : "Trucks", "trucks"],
+      [isBg ? "Автомобили" : "Cars", "cars"],
+    ]) {
+      await type.click();
+      await page.getByRole("option", { name, exact: true }).click();
+      await expect
+        .poll(() => new URL(page.url()).pathname)
+        .toBe(`/${locale}/${path}`);
+      await expect(type).toBeEnabled();
+      await expect(type).toContainText(name);
+      const params = new URL(page.url()).searchParams;
+      expect(params.get("priceMax")).toBe("100000");
+      expect(params.get("yearMin")).toBe("2010");
+      expect(params.get("sort")).toBe("newest");
+      expect(params.get("make")).toBeNull();
+      expect(params.get("model")).toBeNull();
+      await expect(page.locator("html")).toHaveAttribute(
+        "data-type-navigation",
+        "initial"
+      );
+    }
+    for (const path of ["trucks", "vans", "motorbikes", "cars"]) {
+      await page.goBack();
+      await expect
+        .poll(() => new URL(page.url()).pathname)
+        .toBe(`/${locale}/${path}`);
+      await expect(type).toBeEnabled();
+    }
+    expect(new URL(page.url()).searchParams.get("make")).toBe("BMW");
+    expect(new URL(page.url()).searchParams.get("model")).toBe("X5");
+    await expect(
+      hero.getByRole("button", { name: isBg ? "Марка" : "Make", exact: true })
+    ).toContainText("BMW");
+  });
+
+  test(`inventory controls center below the banner above the cards and keep display choices in a floating menu (${locale})`, async ({
     page,
   }) => {
     const isBg = locale === "bg";
@@ -28,30 +91,37 @@ for (const locale of ["bg", "en"] as const) {
       await page.goto(`/${locale}/cars`);
       const hero = page.locator('[data-slot="dealer-desktop-inventory-hero"]');
       const bar = page.locator('[data-slot="dealer-inventory-filters"]');
-      const controls = hero.locator('[data-slot="desktop-results-controls"]');
+      const summary = page.locator('[data-slot="dealer-inventory-summary"]');
+      const controls = summary.locator(
+        '[data-slot="desktop-results-controls"]'
+      );
       const filters = controls.locator('[data-slot="desktop-primary-control"]');
       await expect(filters).toHaveCount(1);
       await expect(filters).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
       await expect(controls.getByRole("combobox")).toBeVisible();
       await expect(
+        hero.locator('[data-slot="desktop-results-controls"]')
+      ).toHaveCount(0);
+      await expect(
         bar.locator('[data-slot="desktop-primary-control"]')
       ).toHaveCount(0);
       const frame = await hero.boundingBox();
       const box = await controls.boundingBox();
-      const search = await hero
-        .locator('[data-slot="dealer-inventory-search"]')
+      const grid = await page
+        .locator('[data-slot="marketplace-listing-grid"]')
         .boundingBox();
+      expect(box?.y).toBeGreaterThan((frame?.y ?? 0) + (frame?.height ?? 0));
+      expect((box?.y ?? 0) + (box?.height ?? 0)).toBeLessThan(grid?.y ?? 0);
       expect(
-        frame &&
-          box &&
-          Math.abs(box.x + box.width / 2 - frame.x - frame.width / 2)
+        Math.abs(
+          (box?.x ?? 0) +
+            (box?.width ?? 0) / 2 -
+            (grid?.x ?? 0) -
+            (grid?.width ?? 0) / 2
+        )
       ).toBeLessThan(1);
-      expect(box?.y).toBeGreaterThan((search?.y ?? 0) + (search?.height ?? 0));
-      expect((box?.y ?? 0) + (box?.height ?? 0)).toBeLessThan(
-        (frame?.y ?? 0) + (frame?.height ?? 0)
-      );
-      const count = hero.locator('[data-slot="dealer-inventory-count"]');
+      const count = summary.locator('[data-slot="dealer-inventory-count"]');
       await expect(count).toHaveClass("sr-only");
       expect((await count.boundingBox())?.width).toBeLessThanOrEqual(1);
       const view = bar.locator('[data-slot="dealer-inventory-preview"]');
@@ -177,7 +247,7 @@ for (const locale of ["bg", "en"] as const) {
     ).toBeTruthy();
     await expect(
       searchBox.locator('[data-slot="dealer-inventory-search-field"]')
-    ).toHaveCount(3);
+    ).toHaveCount(4);
     await expect(
       searchBox.getByRole("button", {
         name: isBg ? "Цена" : "Price",
@@ -235,7 +305,9 @@ for (const locale of ["bg", "en"] as const) {
       .toBeNull();
     expect(new URL(page.url()).searchParams.get("priceMax")).toBe("150000");
     expect(new URL(page.url()).searchParams.get("fuel")).toBe("diesel");
-    const allFilters = hero.locator('[data-slot="desktop-primary-control"]');
+    const allFilters = page.locator(
+      '[data-slot="dealer-inventory-summary"] [data-slot="desktop-primary-control"]'
+    );
     await allFilters.click();
     const fullDialog = page.locator('[data-slot="desktop-full-filter-dialog"]');
     await expect(

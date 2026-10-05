@@ -87,7 +87,7 @@
     font-size: clamp(
       calc(var(--spacing) * 10),
       4.2vw,
-      calc(var(--spacing) * 15)
+      calc(var(--spacing) * 13)
     );
     line-height: var(--desktop-leading-display);
     letter-spacing: var(--desktop-heading-tracking);
@@ -292,6 +292,9 @@
   .hero[data-appearance="photo"] .banner {
     min-height: calc(var(--spacing) * 56);
     padding: calc(var(--spacing) * 8) calc(var(--spacing) * 6);
+  }
+  .hero[data-variant="landing"] {
+    background-position: center 95%;
   }
   .hero[data-variant="inventory"] {
     gap: calc(var(--spacing) * 6);

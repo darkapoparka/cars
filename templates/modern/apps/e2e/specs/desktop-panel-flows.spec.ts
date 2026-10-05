@@ -37,8 +37,8 @@ for (const width of [1024, 1440, 1920]) {
       const heroBox = await hero.boundingBox();
       expect(heroBox?.x).toBeGreaterThanOrEqual(40);
       expect(heroBox?.y).toBe(90);
-      expect(heroBox?.height).toBeGreaterThanOrEqual(460);
-      expect(heroBox?.height).toBeLessThanOrEqual(520);
+      expect(heroBox?.height).toBeGreaterThanOrEqual(400);
+      expect(heroBox?.height).toBeLessThanOrEqual(440);
       expect(heroBox?.width).toBeLessThanOrEqual(1320);
       expect((heroBox?.x ?? 0) + (heroBox?.width ?? 0)).toBeLessThanOrEqual(
         pageWidth - 40
@@ -119,7 +119,7 @@ for (const width of [1024, 1440, 1920]) {
       ).toBeLessThanOrEqual(2);
       expect(
         (await stockGrid.locator("article").first().boundingBox())?.y
-      ).toBeLessThan(900);
+      ).toBeLessThan(800);
       if (width === 1440 && locale === "en") {
         expect((await search.boundingBox())?.width).toBe(1090);
         expect(
@@ -129,7 +129,7 @@ for (const width of [1024, 1440, 1920]) {
               Number.parseFloat(getComputedStyle(element).fontSize)
             )
           // The OS gutter slightly trims the width used by responsive vw type.
-        ).toBeCloseTo(60, 0);
+        ).toBeCloseTo(52, 0);
       }
       for (const path of [
         "/cars",
@@ -196,10 +196,8 @@ for (const width of [1024, 1440, 1920]) {
           ).toBe(width < 1280 ? 2 : 3);
           if (width === 1440) {
             expect(sidebar?.x).toBe((panel?.x ?? 0) + 24);
-            const layoutBox = await layout.boundingBox();
-            expect(sidebar?.y).toBe(
-              (layoutBox?.y ?? 0) + (layoutBox?.height ?? 0) + 24
-            );
+            expect(sidebar?.y).toBe((panel?.y ?? 0) + 24);
+            expect(sidebar?.y).toBe(gridBox?.y);
           }
           await selectInventoryFilterLayout(page, "quick", locale);
         }

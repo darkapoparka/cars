@@ -15,7 +15,7 @@ import { marketplaceSortLabelsBg } from "../lib/marketplace-filter-config";
 import { formatVehicleCount } from "../lib/marketplace-results-toolbar-policy";
 import styles from "./dealer-inventory.module.css";
 
-/** The inventory banner owns filtering, sorting and the live result announcement. */
+/** Controls below the inventory banner own filtering, sorting and result announcements. */
 export function DealerInventorySummary({
   filterCount,
   filters,

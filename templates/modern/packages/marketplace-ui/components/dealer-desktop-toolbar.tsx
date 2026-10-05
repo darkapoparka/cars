@@ -31,39 +31,42 @@ export const DealerDesktopToolbar = (props: DealerDesktopToolbarProps) => {
     }
   };
   return (
-    <div className={styles.toolbar} data-slot="dealer-desktop-inventory-hero">
-      <DealerDesktopHero
-        artwork={
-          publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
-        }
-        description={
-          locale?.startsWith("bg")
-            ? "Открийте автомобил. Запазете и сравнете избора си."
-            : "Find your next car. Save your favourites and compare the details."
-        }
-        locale={locale}
-        title={getMarketplaceResultTitle(filters, locale)}
-        variant="inventory"
-      >
-        <div className={styles.content}>
-          <DealerInventorySearch
-            disabled={props.loading}
-            filters={filters}
-            locale={locale}
-            onOpenSection={openSection}
-          />
-          {!props.loading && (
-            <DealerInventorySummary
-              filterCount={props.filterCount}
+    <div className={styles.toolbar}>
+      <div data-slot="dealer-desktop-inventory-hero">
+        <DealerDesktopHero
+          artwork={
+            publicSite.artwork.desktopHeroScene ?? publicSite.artwork.heroScene
+          }
+          description={
+            locale?.startsWith("bg")
+              ? "Открийте автомобил. Запазете и сравнете избора си."
+              : "Find your next car. Save your favourites and compare the details."
+          }
+          locale={locale}
+          title={getMarketplaceResultTitle(filters, locale)}
+          variant="inventory"
+        >
+          <div className={styles.content}>
+            <DealerInventorySearch
+              disabled={props.loading}
               filters={filters}
               locale={locale}
-              onApply={props.onApply}
-              onOpenFilters={props.onOpenFilters}
-              totalListings={props.totalListings}
+              onApply={props.loading ? undefined : props.onApply}
+              onOpenSection={openSection}
             />
-          )}
-        </div>
-      </DealerDesktopHero>
+          </div>
+        </DealerDesktopHero>
+      </div>
+      {!props.loading && (
+        <DealerInventorySummary
+          filterCount={props.filterCount}
+          filters={filters}
+          locale={locale}
+          onApply={props.onApply}
+          onOpenFilters={props.onOpenFilters}
+          totalListings={props.totalListings}
+        />
+      )}
     </div>
   );
 };

@@ -21,7 +21,7 @@
 :root {
   --desktop-frame-max: 78rem;
   --desktop-showroom-max: 1320px;
-  --desktop-home-hero-height: clamp(460px, 38vw, 520px);
+  --desktop-home-hero-height: clamp(400px, 30vw, 440px);
   --desktop-content-max: 82.5rem;
   --desktop-content-width: min(calc(100% - 5rem), var(--desktop-content-max));
   --desktop-frame-width: var(--desktop-content-width);

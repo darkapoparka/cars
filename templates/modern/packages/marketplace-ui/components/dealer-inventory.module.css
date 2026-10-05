@@ -22,6 +22,9 @@
     background: var(--desktop-surface-subtle);
     border-radius: calc(var(--spacing) * 4);
   }
+  .results[data-desktop-hidden="false"] {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .sidebar {
     display: block;
     padding: calc(var(--spacing) * 5.5);
@@ -131,12 +134,15 @@
   .summary {
     display: flex;
     justify-content: center;
+    width: var(--desktop-content-width);
+    padding-inline: calc(var(--spacing) * 6);
+    margin: calc(var(--spacing) * 6) auto 0;
   }
   .controls {
     display: flex;
     gap: calc(var(--spacing) * 2);
     align-items: center;
-    justify-self: center;
+    justify-content: center;
   }
   .filters {
     display: inline-flex;
@@ -162,9 +168,9 @@
   }
   .filters:focus-visible,
   .sort:focus-visible {
-    outline: var(--desktop-focus-width) solid var(--panel);
+    outline: var(--desktop-focus-width) solid var(--brand);
     outline-offset: var(--desktop-focus-offset);
-    box-shadow: 0 0 0 var(--desktop-focus-width) var(--brand);
+    box-shadow: none;
   }
   .filterBadge {
     display: grid;
