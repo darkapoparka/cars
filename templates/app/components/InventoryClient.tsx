@@ -13,18 +13,20 @@ import {useModal} from '@/components/useModal';
 import {vehicles,type Vehicle} from '@/lib/data';
 import {dealer} from '@/lib/dealer-config';
 import NativeFilterPane from '@/components/NativeFilterPane';
+import DealerHomeBanner from '@/components/DealerHomeBanner';
 import {useInventoryHistory} from '@/components/useInventoryHistory';
 import {filterTabs as tabs,quickFilterTabs,filterMakes as makes,emptyFilters,hasActiveFilters,matchesInventory as matches,type Filters,type FilterTab as Tab} from '@/lib/inventory-filters';
 import {media,tokens as $} from '@/app/tokens.stylex';
 import {searchField} from '@/components/search-field.stylex';
 
 const sortGroups=[{title:'',items:[['Best match','default'],['Recently added','recent']]},{title:'Discount',items:[['High to low','discount']]},{title:'Price',items:[['Low to high','price-asc'],['High to low','price-desc']]},{title:'Mileage',items:[['Low to high','kms-asc'],['High to low','kms-desc']]},{title:'Car age',items:[['Oldest first','age-asc'],['Newest first','age-desc']]}];
-type Props={initialEmiMax?:number;initialQuery?:string;initialBrand?:string;initialBody?:string;initialOverlay?:'filters'|'sort'|null;initialOpen?:string|null;variant?:'standard'|'luxe'};
+type Props={initialEmiMax?:number;initialQuery?:string;initialBrand?:string;initialBody?:string;initialOverlay?:'filters'|'sort'|null;initialOpen?:string|null;variant?:'standard'|'luxe';presentation?:'page'|'home'};
 
-export default function InventoryClient({initialEmiMax,initialQuery='',initialBrand='',initialBody='',initialOverlay=null,initialOpen=null,variant='standard'}:Props){
+export default function InventoryClient({initialEmiMax,initialQuery='',initialBrand='',initialBody='',initialOverlay=null,initialOpen=null,variant='standard',presentation='page'}:Props){
   const tx = useCopy();
 
  const luxe=variant==='luxe';
+ const home=presentation==='home';
  const [query,setQuery]=useState(initialQuery);
  const deferredQuery=useDeferredValue(query);
  const [emiMax,setEmiMax]=useState(initialEmiMax);
@@ -35,7 +37,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  const [login,setLogin]=useState(false);
  const [brandSearch,setBrandSearch]=useState('');
  const railRef=useRef<HTMLElement>(null);
- useInventoryHistory({query,filters,sort,emiMax},{setQuery,setFilters,setSort,setEmiMax});
+ useInventoryHistory({query,filters,sort,emiMax},{setQuery,setFilters,setSort,setEmiMax},home);
  useEffect(()=>{const pop=()=>setOverlay(null);window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
  const results=useMemo(()=>{
   const items=vehicles.filter(car=>(!luxe||car.tier==='Luxe'||car.slug==='2024-toyota-fortuner-exr')&&(emiMax===undefined||car.monthly<=emiMax)&&matches(car,filters,deferredQuery));
@@ -52,9 +54,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  function reset(){setFilters(emptyFilters());setQuery('');setEmiMax(undefined);}
  function categoryLabel(tab:Tab){const label=tx(tab);return label==='EMI'?label:label.charAt(0)+label.slice(1).toLowerCase();}
  const modal=useModal(overlay!==null,close,{history:false});
- return <div {...stylex.props(s.screen)}>
-  <PageHeader compact title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>
-  <div role="search" {...stylex.props(s.topInner)}><label data-search-field {...stylex.props(searchField.field)}>
+ const search=<div role="search" {...stylex.props(!home&&s.topInner)}><label data-search-field {...stylex.props(searchField.field)}>
     <Search size={22} strokeWidth={2} aria-hidden="true" {...stylex.props(searchField.icon)}/>
     <span {...stylex.props(searchField.editableGroup)}>
       <span {...stylex.props(searchField.inputSlot)}>
@@ -64,16 +64,19 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
       <span id="inventory-result-count" data-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(searchField.count)}><span aria-hidden="true">({count})</span><span className="visually-hidden">{count} {tx(count===1?'car':'cars')}</span></span>
     </span>
     {query?<button type="button" aria-label={tx('Clear search')} onClick={()=>setQuery('')} {...stylex.props(searchField.clear)}><X size={18} aria-hidden="true"/></button>:null}
-  </label></div>
-  <nav aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar)}>
+  </label></div>;
+ return <div data-desktop-buy-inventory={home?'':undefined} {...stylex.props(s.screen)}>
+  {home?<DealerHomeBanner desktopSearch={search}/>:<><PageHeader compact title={tx(luxe?'Select collection':'Our cars')} action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/>{search}</>}
+  <nav aria-label={tx("Inventory filters")} {...stylex.props(s.toolbar,home&&s.homeToolbar)}>
     <FilterPill label={tx("Filter")} icon="filter" selected={filtered} onClick={()=>open('filters')}/>
     <FilterPill label={tx("Sort")} icon="sort" selected={sort!=='default'} onClick={()=>open('sort')}/>
     {quickFilterTabs.map(tab=><FilterPill key={tab} label={tx(titleCase(tab))} selected={quickSelection[tab]} onClick={()=>open('filters',tab)}/>)}
   </nav>
-  <main {...stylex.props(s.content)}><aside {...stylex.props(s.sidebar)}><h2 {...stylex.props(s.sideTitle)}>{tx("Filter cars")}</h2><label data-search-field {...stylex.props(searchField.field)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label>{makes.filter(make=>make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><CheckRow key={make} label={tx(make)} checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make)})}/>)}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>
+  <main {...stylex.props(s.content,home&&s.homeContent)}>{!home?<aside {...stylex.props(s.sidebar)}><h2 {...stylex.props(s.sideTitle)}>{tx("Filter cars")}</h2><label data-search-field {...stylex.props(searchField.field)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label>{makes.filter(make=>make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><CheckRow key={make} label={tx(make)} checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make)})}/>)}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>:null}
    <section aria-label={tx('Available cars')} aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
+    {home?<div {...stylex.props(s.homeHeading)}><h2 {...stylex.props(s.sideTitle)}>{tx('Available cars')}</h2>{filtered?<button type="button" onClick={reset} {...stylex.props(s.homeReset)}>{tx('Clear all filters')}</button>:null}</div>:null}
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
-    {results.length?<div {...stylex.props(s.grid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
+    {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
    </section>
   </main>
@@ -90,6 +93,11 @@ function toggle(values:string[],value:string){return values.includes(value)?valu
 function titleCase(value:string){return value.toLowerCase().replace(/(^|\s)\S/g,letter=>letter.toUpperCase());}
 function discount(car:Vehicle){return (car.previousPrice??car.price)-car.price;}
 const s=stylex.create({
+ homeToolbar:{top:73,paddingTop:18,paddingBottom:8},
+ homeContent:{gridTemplateColumns:'minmax(0,1fr)',paddingTop:4},
+ homeGrid:{gridTemplateColumns:'repeat(4,minmax(0,1fr))'},
+ homeHeading:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,minHeight:44,marginBottom:12},
+ homeReset:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,paddingInline:16,color:$.ink,fontSize:14,fontWeight:400,borderWidth:1,borderStyle:'solid',borderColor:$.line,borderRadius:999,backgroundColor:{default:'#fff',':hover':$.surfaceAlt},cursor:'pointer'},
  screen:{minHeight:'100vh',paddingBottom:{[media.mobile]:0,default:110},backgroundColor:'#fff'},
  topInner:{maxWidth:$.content,marginInline:'auto',paddingTop:4,paddingInline:{[media.mobile]:12,default:28}},
  toolbar:{display:'flex',position:'sticky',top:{[media.mobile]:'calc(56px + env(safe-area-inset-top))',[media.desktop]:141,default:'calc(68px + env(safe-area-inset-top))'},zIndex:45,gap:{[media.mobile]:8,default:6},overflowX:'auto',overscrollBehaviorX:'contain',maxWidth:$.content,marginInline:'auto',paddingTop:{[media.mobile]:$.mobilePillGap,default:12},paddingBottom:{[media.mobile]:0,default:12},paddingInline:{[media.mobile]:12,default:28},backgroundColor:'#fff',scrollbarWidth:'none'},

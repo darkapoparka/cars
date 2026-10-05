@@ -8,10 +8,10 @@ import {withoutLocale} from '@/lib/paths';
 type State = {query: string; filters: Filters; sort: string; emiMax?: number};
 type Controls = {setQuery: (value: string) => void; setFilters: (value: Filters) => void; setSort: (value: string) => void; setEmiMax: (value: number | undefined) => void};
 const validSorts = ['default', 'recent', 'price-asc', 'price-desc', 'kms-asc', 'kms-desc', 'discount', 'age-asc', 'age-desc'];
-let pendingReturn: {entry: string; detail: string} | null = null;
+let pendingReturn: {entry: string; detail: string; home?: boolean} | null = null;
 
 /** Remember which collection opened the car without changing its URL or scroll position. */
-export function useVehicleReturn() {
+export function useVehicleReturn(home = false) {
   useEffect(() => {
     pendingReturn = null;
     const entry = `${location.pathname}${location.search}`;
@@ -21,16 +21,16 @@ export function useVehicleReturn() {
       if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
       const destination = new URL(link.href);
       pendingReturn = destination.origin === location.origin && /^\/cars\/[^/]+$/.test(withoutLocale(destination.pathname))
-        ? {entry, detail: destination.pathname} : null;
+        ? {entry, detail: destination.pathname, ...(home?{home:true}:{})} : null;
     }
     document.addEventListener('click', rememberReturn, true);
     return () => document.removeEventListener('click', rememberReturn, true);
-  }, []);
+  }, [home]);
 }
 
 /** Store list state on its own history entry, so Back from a car restores the list. */
-export function useInventoryHistory(state: State, controls: Controls) {
-  useVehicleReturn();
+export function useInventoryHistory(state: State, controls: Controls, home = false) {
+  useVehicleReturn(home);
   const latest = useRef(state);
   const setters = useRef(controls);
   const ready = useRef(false);
@@ -74,7 +74,7 @@ export function useInventoryBack() {
     const origin = history.state?.cars24InventoryReturn;
     if (origin?.detail === location.pathname && typeof origin.entry === 'string') {
       const entry = new URL(origin.entry, location.origin);
-      if (entry.origin === location.origin && ['/cars', '/luxe', '/saved'].includes(withoutLocale(entry.pathname))) {
+      if (entry.origin === location.origin && (['/cars', '/luxe', '/saved'].includes(withoutLocale(entry.pathname)) || origin.home===true&&withoutLocale(entry.pathname)==='/')) {
         router.back();
         return;
       }

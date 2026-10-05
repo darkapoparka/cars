@@ -50,9 +50,9 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
     <DealerMobileBanner title={current.mobileTitle}>
       {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
     </DealerMobileBanner>
-    {kind !== 'sell' ? <div {...stylex.props(s.desktopOnly)}><ShowroomBanner {...banner} compactCopy={kind === 'service'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/></div> : null}
+    <div {...stylex.props(kind==='sell'?s.desktopSellBanner:s.desktopOnly)}><ShowroomBanner {...banner} centeredDesktop priority={kind!=='sell'} compactCopy={kind === 'service'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'||kind==='sell'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/></div>
     <main {...stylex.props(s.content)}>
-      {kind === 'sell' ? <h1 {...stylex.props(s.srOnly, s.desktopOnly)}>{tx(current.title)}</h1> : null}
+      {kind === 'sell' ? <h1 {...stylex.props(s.srOnly, s.tabletHeading)}>{tx(current.title)}</h1> : null}
       {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/></> : null}
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
     </main>
@@ -64,5 +64,7 @@ const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
   desktopOnly: {display: {[media.mobile]: 'none', default: 'block'}},
+  desktopSellBanner: {display: {[media.desktop]:'block',default:'none'}},
+  tabletHeading: {display: {[media.tablet]:'block',default:'none'}},
   srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', borderWidth: 0},
 });

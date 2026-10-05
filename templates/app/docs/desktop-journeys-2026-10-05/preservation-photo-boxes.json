@@ -1,0 +1,76 @@
+[
+  {
+    "name": "service",
+    "width": 320,
+    "photos": [
+      {
+        "src": "/_next/image?url=%2Fshowroom%2Fservices%2Fmaintenance-v1.webp&w=3840&q=75",
+        "x": 12,
+        "y": 320,
+        "width": 296,
+        "height": 148
+      },
+      {
+        "src": "/_next/image?url=%2Fshowroom%2Fservices%2Fdiagnostics-v1.webp&w=3840&q=75",
+        "x": 12,
+        "y": 648,
+        "width": 296,
+        "height": 148
+      }
+    ]
+  },
+  {
+    "name": "service",
+    "width": 390,
+    "photos": [
+      {
+        "src": "/_next/image?url=%2Fshowroom%2Fservices%2Fmaintenance-v1.webp&w=3840&q=75",
+        "x": 12,
+        "y": 320,
+        "width": 366,
+        "height": 183
+      },
+      {
+        "src": "/_next/image?url=%2Fshowroom%2Fservices%2Fdiagnostics-v1.webp&w=3840&q=75",
+        "x": 12,
+        "y": 683,
+        "width": 366,
+        "height": 183
+      }
+    ]
+  },
+  {
+    "name": "finance",
+    "width": 390,
+    "photos": [
+      {
+        "src": "/showroom/imports/rav4-ca-v1.webp",
+        "x": 23,
+        "y": 331,
+        "width": 151.359375,
+        "height": 116
+      },
+      {
+        "src": "/showroom/imports/model3-us-v1.webp",
+        "x": 23,
+        "y": 481,
+        "width": 151.359375,
+        "height": 116
+      },
+      {
+        "src": "/showroom/imports/320-de-v1.webp",
+        "x": 23,
+        "y": 631,
+        "width": 151.359375,
+        "height": 116
+      },
+      {
+        "src": "/showroom/imports/golf-it-v1.webp",
+        "x": 23,
+        "y": 781,
+        "width": 151.359375,
+        "height": 116
+      }
+    ]
+  }
+]

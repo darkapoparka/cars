@@ -1,6 +1,6 @@
 'use client';
 import {useCopy} from '@/lib/locale';
-import {useEffect, useRef, useState} from 'react';
+import {useEffect, useRef, useState, useSyncExternalStore} from 'react';
 import Link from '@/components/AppLink';
 import * as stylex from '@stylexjs/stylex';
 import DiscoveryHeader, {ShowroomSearch} from '@/components/DiscoveryHeader';
@@ -9,6 +9,7 @@ import ShowroomHighlights from '@/components/ShowroomHighlights';
 import WelcomeBanner from '@/components/WelcomeBanner';
 
 import VehicleCard from '@/components/VehicleCard';
+import InventoryClient from '@/components/InventoryClient';
 import {BrandRow, ShowroomPromotion} from '@/components/ReferenceUI';
 import {useRecentVehicles} from '@/components/useVehicleState';
 import {getVehicle, homeFeed, hotDeals} from '@/lib/data';
@@ -23,9 +24,14 @@ const collectionCandidates = [...hotDeals, ...homeFeed.slice(8)].filter(vehicle 
 const collectionVehicles = [...new Map(collectionCandidates.map(vehicle => [vehicle.slug, vehicle])).values()].slice(0, 3);
 const collectionSlugs = new Set(collectionVehicles.map(vehicle => vehicle.slug));
 const moreFeed = homeFeed.slice(8).filter(vehicle => !collectionSlugs.has(vehicle.slug));
+const desktopQuery='(min-width: 1100px)';
+function subscribeDesktop(notify:()=>void){const query=window.matchMedia(desktopQuery);query.addEventListener('change',notify);return()=>query.removeEventListener('change',notify);}
+function desktopSnapshot(){return window.matchMedia(desktopQuery).matches;}
+function serverSnapshot(){return false;}
 
 export default function HomePage() {
   const tx = useCopy();
+  const desktop=useSyncExternalStore(subscribeDesktop,desktopSnapshot,serverSnapshot);
 
   const [visibleCount, setVisibleCount] = useState(4);
   const sentinel = useRef<HTMLDivElement>(null);
@@ -41,6 +47,7 @@ export default function HomePage() {
   }, [visibleCount]);
   return <div {...stylex.props(s.screen)}>
     <WelcomeBanner/>
+    <div {...stylex.props(s.phoneTablet)}>
     <DiscoveryHeader active="buy" hideMobileIdentity />
     <ShowroomPromotion />
     <ShowroomSearch desktopOnly />
@@ -74,9 +81,12 @@ export default function HomePage() {
       <div ref={sentinel} aria-hidden="true" {...stylex.props(s.sentinel)} />
       <Link href="/cars" {...stylex.props(s.browse)}>{tx("View all cars")}</Link>
     </main>
+    </div>
+    {desktop?<InventoryClient presentation="home"/>:null}
   </div>;
 }
 const s = stylex.create({
+  phoneTablet:{display:{[media.desktop]:'none',default:'contents'}},
   screen: {minHeight: '100vh', backgroundColor: '#fff'},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}, paddingBottom: {[media.mobile]: 16, [media.desktop]: 48, default: 170}},
   heading: {fontSize: {[media.mobile]: 18, default: 25}, fontWeight: {[media.mobile]: 600, default: 500}, lineHeight: 1.35, letterSpacing: 0},

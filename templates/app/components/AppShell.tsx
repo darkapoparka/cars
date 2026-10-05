@@ -17,7 +17,7 @@ export default function AppShell({children}: {children:ReactNode}){
   const pathname=usePathname();
   const hideMobileNav=pathname.startsWith('/cars/')||pathname==='/search'||pathname.endsWith('/details')||pathname.startsWith('/benefits/');
   function skipNavigation(event: MouseEvent<HTMLAnchorElement>) {
-    const content = document.querySelector<HTMLElement>('main') ?? document.getElementById('app-content');
+    const content = [...document.querySelectorAll<HTMLElement>('main')].find(element=>element.getClientRects().length>0) ?? document.getElementById('app-content');
     if (!content) return;
     event.preventDefault();
     content.tabIndex = -1;
@@ -29,6 +29,10 @@ export default function AppShell({children}: {children:ReactNode}){
     <div data-desktop-shell {...stylex.props(s.pageShell)}>
     <header data-desktop-header {...stylex.props(s.desktopHeader)}><div {...stylex.props(s.headerInner)}>
       <Link href="/" aria-label={tx(`${showroom.name} home`)} {...stylex.props(s.wordmark)}><DealerBrand/></Link>
+      <nav data-desktop-journeys aria-label={tx('Car services')} {...stylex.props(s.journeys)}>{showroom.services.map(item=>{
+        const active=item.key==='buy'?pathname==='/'||['/cars','/saved','/search','/luxe'].some(route=>pathname===route||pathname.startsWith(route+'/')):pathname===item.href||pathname.startsWith(item.href+'/');
+        return <Link key={item.key} href={item.href} aria-current={active?'page':undefined} {...stylex.props(s.journey,active&&s.journeyActive)}>{tx(item.key==='finance'?'Leasing':item.label)}</Link>;
+      })}</nav>
       <nav data-desktop-tools aria-label={tx("Primary navigation")} {...stylex.props(s.actions)}>
         <Link href="/saved" aria-label={tx("Saved cars")} title={tx("Saved cars")} {...stylex.props(s.iconButton)}><Heart size={21} aria-hidden="true"/></Link>
         {dealer.phoneE164 ? <a href={`tel:${dealer.phoneE164}`} aria-label={`${tx('Call')} · ${dealer.phoneDisplay || dealer.phoneE164}`} title={dealer.phoneDisplay || dealer.phoneE164} {...stylex.props(s.iconButton)}><Phone size={20} aria-hidden="true"/></a> : null}
@@ -51,9 +55,12 @@ const s=stylex.create({
  main:{minHeight:{[media.desktop]:'calc(100svh - 73px)',default:'100svh'},paddingBottom:{[media.desktop]:0,default:'calc(80px + env(safe-area-inset-bottom))'}},
  mainWithoutNav:{paddingBottom:0},
  desktopHeader:{display:{[media.desktop]:'block',default:'none'},position:'sticky',top:0,zIndex:90,borderBottomColor:$.line,borderBottomStyle:'solid',borderBottomWidth:1,backgroundColor:'rgba(255,255,255,.97)',backdropFilter:'blur(16px)'},
- headerInner:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:24,width:'100%',maxWidth:$.content,minHeight:72,marginInline:'auto',paddingInline:28},
- wordmark:{display:'inline-flex',alignItems:'center',minHeight:44,color:$.ink},
- actions:{display:'flex',alignItems:'center',gap:8},
+ headerInner:{display:'grid',gridTemplateColumns:'minmax(0,1fr) auto minmax(0,1fr)',alignItems:'center',gap:24,width:'100%',maxWidth:$.content,minHeight:72,marginInline:'auto',paddingInline:28},
+ wordmark:{display:'inline-flex',alignItems:'center',justifySelf:'start',minHeight:44,color:$.ink},
+ journeys:{display:'flex',alignItems:'center',gap:8},
+ journey:{display:'inline-flex',alignItems:'center',justifyContent:'center',minHeight:44,paddingInline:18,color:$.ink,fontSize:14,fontWeight:400,whiteSpace:'nowrap',borderWidth:1,borderStyle:'solid',borderColor:$.line,borderRadius:999,backgroundColor:{default:$.surface,':hover':$.surfaceAlt}},
+ journeyActive:{color:'#fff',borderColor:$.ink,backgroundColor:{default:$.ink,':hover':$.violetDark}},
+ actions:{display:'flex',alignItems:'center',justifySelf:'end',gap:8},
  iconButton:{display:'grid',placeItems:'center',width:44,height:44,color:$.ink,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:999,backgroundColor:{default:'#fff',':hover':$.surfaceAlt}},
  menuButton:{display:'inline-flex',justifyContent:'center',gap:8,width:'auto',paddingInline:14,fontSize:14,fontWeight:400},
  bottomNav:{display:{[media.desktop]:'none',default:'grid'},gridTemplateColumns:'repeat(4,44px)',gap:2,position:'fixed',bottom:'calc(12px + env(safe-area-inset-bottom))',left:'50%',transform:'translateX(-50%)',width:'max-content',zIndex:100,padding:2,borderColor:'#e4e4e7',borderStyle:'solid',borderWidth:1,borderRadius:26,backgroundColor:'rgba(255,255,255,.97)',backdropFilter:'blur(16px)',boxShadow:'0 4px 18px rgba(20,20,24,.1)'},
