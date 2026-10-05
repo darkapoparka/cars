@@ -1,0 +1,674 @@
+{
+  "scope": "Phone quick-filter strip padding; no template release promotion or dealer deployment",
+  "checks": {
+    "lint": "passed",
+    "typecheck": "passed",
+    "format": "passed",
+    "domainAndLocale": 95,
+    "productionBuild": "passed; 51 generated pages"
+  },
+  "inventory": {
+    "320": {
+      "before": {
+        "above": 16,
+        "below": 8,
+        "card": {
+          "bottom": 516.375,
+          "height": 276.375,
+          "width": 273,
+          "x": 16,
+          "y": 240
+        },
+        "documentWidth": 305,
+        "face": {
+          "bottom": 224,
+          "height": 40,
+          "width": 147.3125,
+          "x": 16,
+          "y": 184
+        },
+        "group": {
+          "bottom": 232,
+          "height": 64,
+          "width": 305,
+          "x": 0,
+          "y": 168
+        },
+        "padding": {
+          "bottom": "4px",
+          "top": "12px"
+        },
+        "pillFill": "rgb(255, 255, 255)",
+        "pillShadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+        "rail": {
+          "bottom": 168,
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+        "scrollY": 0,
+        "stock": {
+          "bottom": 1481.5,
+          "height": 1249.5,
+          "width": 305,
+          "x": 0,
+          "y": 232
+        },
+        "toCard": 16,
+        "width": 320
+      },
+      "after": {
+        "above": 16,
+        "below": 16,
+        "card": {
+          "bottom": 524.375,
+          "height": 276.375,
+          "width": 273,
+          "x": 16,
+          "y": 248
+        },
+        "documentWidth": 305,
+        "face": {
+          "bottom": 224,
+          "height": 40,
+          "width": 147.3125,
+          "x": 16,
+          "y": 184
+        },
+        "group": {
+          "bottom": 240,
+          "height": 72,
+          "width": 305,
+          "x": 0,
+          "y": 168
+        },
+        "padding": {
+          "bottom": "12px",
+          "top": "12px"
+        },
+        "pillFill": "rgb(255, 255, 255)",
+        "pillShadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+        "rail": {
+          "bottom": 168,
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+        "scrollY": 0,
+        "stock": {
+          "bottom": 1489.5,
+          "height": 1249.5,
+          "width": 305,
+          "x": 0,
+          "y": 240
+        },
+        "toCard": 24,
+        "width": 320
+      }
+    },
+    "390": {
+      "before": {
+        "above": 16,
+        "below": 8,
+        "card": {
+          "bottom": 560.125,
+          "height": 320.125,
+          "width": 343,
+          "x": 16,
+          "y": 240
+        },
+        "documentWidth": 375,
+        "face": {
+          "bottom": 224,
+          "height": 40,
+          "width": 147.3125,
+          "x": 16,
+          "y": 184
+        },
+        "group": {
+          "bottom": 232,
+          "height": 64,
+          "width": 375,
+          "x": 0,
+          "y": 168
+        },
+        "padding": {
+          "bottom": "4px",
+          "top": "12px"
+        },
+        "pillFill": "rgb(255, 255, 255)",
+        "pillShadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+        "rail": {
+          "bottom": 168,
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+        "scrollY": 0,
+        "stock": {
+          "bottom": 1630.5,
+          "height": 1398.5,
+          "width": 375,
+          "x": 0,
+          "y": 232
+        },
+        "toCard": 16,
+        "width": 390
+      },
+      "after": {
+        "above": 16,
+        "below": 16,
+        "card": {
+          "bottom": 568.125,
+          "height": 320.125,
+          "width": 343,
+          "x": 16,
+          "y": 248
+        },
+        "documentWidth": 375,
+        "face": {
+          "bottom": 224,
+          "height": 40,
+          "width": 147.3125,
+          "x": 16,
+          "y": 184
+        },
+        "group": {
+          "bottom": 240,
+          "height": 72,
+          "width": 375,
+          "x": 0,
+          "y": 168
+        },
+        "padding": {
+          "bottom": "12px",
+          "top": "12px"
+        },
+        "pillFill": "rgb(255, 255, 255)",
+        "pillShadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+        "rail": {
+          "bottom": 168,
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+        "scrollY": 0,
+        "stock": {
+          "bottom": 1638.5,
+          "height": 1398.5,
+          "width": 375,
+          "x": 0,
+          "y": 240
+        },
+        "toCard": 24,
+        "width": 390
+      }
+    }
+  },
+  "services390": {
+    "before": {
+      "above": 16,
+      "below": 8,
+      "documentWidth": 375,
+      "face": {
+        "bottom": 224,
+        "height": 40,
+        "width": 108.75,
+        "x": 16,
+        "y": 184
+      },
+      "group": {
+        "bottom": 232,
+        "height": 64,
+        "width": 375,
+        "x": 0,
+        "y": 168
+      },
+      "padding": {
+        "bottom": "4px",
+        "top": "12px"
+      },
+      "pills": [
+        {
+          "background": "rgb(27, 27, 33)",
+          "height": 40,
+          "shadow": "none",
+          "targetHeight": 48,
+          "text": "Всички (8)"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Огледи"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Финансиране"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Части"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Поддръжка"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Замяна"
+        }
+      ],
+      "rail": {
+        "bottom": 168,
+        "height": 52,
+        "width": 375,
+        "x": 0,
+        "y": 116
+      },
+      "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+      "width": 390
+    },
+    "after": {
+      "above": 16,
+      "below": 16,
+      "documentWidth": 375,
+      "face": {
+        "bottom": 224,
+        "height": 40,
+        "width": 108.75,
+        "x": 16,
+        "y": 184
+      },
+      "group": {
+        "bottom": 240,
+        "height": 72,
+        "width": 375,
+        "x": 0,
+        "y": 168
+      },
+      "padding": {
+        "bottom": "12px",
+        "top": "12px"
+      },
+      "pills": [
+        {
+          "background": "rgb(27, 27, 33)",
+          "height": 40,
+          "shadow": "none",
+          "targetHeight": 48,
+          "text": "Всички (8)"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Огледи"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Финансиране"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Части"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Поддръжка"
+        },
+        {
+          "background": "rgb(255, 255, 255)",
+          "height": 40,
+          "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+          "targetHeight": 48,
+          "text": "Замяна"
+        }
+      ],
+      "rail": {
+        "bottom": 168,
+        "height": 52,
+        "width": 375,
+        "x": 0,
+        "y": 116
+      },
+      "railShadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px",
+      "width": 390
+    }
+  },
+  "desktop1440": {
+    "comparison": "Newly committed desktop preview at 6478 versus rebuilt preview at 6474",
+    "before": {
+      "documentWidth": 1440,
+      "gap": "8px",
+      "group": {
+        "height": 60,
+        "width": 1068,
+        "x": 186,
+        "y": 376
+      },
+      "padding": {
+        "bottom": "8px",
+        "top": "8px"
+      },
+      "pills": [
+        {
+          "box": {
+            "height": 36,
+            "width": 91.640625,
+            "x": 198,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 91.640625,
+            "x": 198,
+            "y": 384
+          },
+          "text": "Година"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 92.390625,
+            "x": 297.640625,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 92.390625,
+            "x": 297.640625,
+            "y": 384
+          },
+          "text": "Пробег"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 91.109375,
+            "x": 398.03125,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 91.109375,
+            "x": 398.03125,
+            "y": 384
+          },
+          "text": "Гориво"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 152.78125,
+            "x": 497.140625,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 152.78125,
+            "x": 497.140625,
+            "y": 384
+          },
+          "text": "Скоростна кутия"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 76.53125,
+            "x": 657.921875,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 76.53125,
+            "x": 657.921875,
+            "y": 384
+          },
+          "text": "Купе"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 116.828125,
+            "x": 742.453125,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 116.828125,
+            "x": 742.453125,
+            "y": 384
+          },
+          "text": "Състояние"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 154.921875,
+            "x": 1087.078125,
+            "y": 388
+          },
+          "fill": "rgb(27, 27, 33)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 154.921875,
+            "x": 1087.078125,
+            "y": 384
+          },
+          "text": "Всички филтри"
+        }
+      ],
+      "width": 1440
+    },
+    "after": {
+      "documentWidth": 1440,
+      "gap": "8px",
+      "group": {
+        "height": 60,
+        "width": 1068,
+        "x": 186,
+        "y": 376
+      },
+      "padding": {
+        "bottom": "8px",
+        "top": "8px"
+      },
+      "pills": [
+        {
+          "box": {
+            "height": 36,
+            "width": 91.640625,
+            "x": 198,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 91.640625,
+            "x": 198,
+            "y": 384
+          },
+          "text": "Година"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 92.390625,
+            "x": 297.640625,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 92.390625,
+            "x": 297.640625,
+            "y": 384
+          },
+          "text": "Пробег"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 91.109375,
+            "x": 398.03125,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 91.109375,
+            "x": 398.03125,
+            "y": 384
+          },
+          "text": "Гориво"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 152.78125,
+            "x": 497.140625,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 152.78125,
+            "x": 497.140625,
+            "y": 384
+          },
+          "text": "Скоростна кутия"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 76.53125,
+            "x": 657.921875,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 76.53125,
+            "x": 657.921875,
+            "y": 384
+          },
+          "text": "Купе"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 116.828125,
+            "x": 742.453125,
+            "y": 388
+          },
+          "fill": "rgb(255, 255, 255)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 116.828125,
+            "x": 742.453125,
+            "y": 384
+          },
+          "text": "Състояние"
+        },
+        {
+          "box": {
+            "height": 36,
+            "width": 154.921875,
+            "x": 1087.078125,
+            "y": 388
+          },
+          "fill": "rgb(27, 27, 33)",
+          "fontSize": "14px",
+          "shadow": "none",
+          "target": {
+            "height": 44,
+            "width": 154.921875,
+            "x": 1087.078125,
+            "y": 384
+          },
+          "text": "Всички филтри"
+        }
+      ],
+      "width": 1440
+    },
+    "identical": true
+  },
+  "preservation": {
+    "pillFaces": 40,
+    "pillTargets": 48,
+    "whiteFill": true,
+    "pillShadow": true,
+    "typeRailShadow": true,
+    "cardHeight": true,
+    "cardFacts": "4 badges, at most 2 rows; price below",
+    "documentOverflow": false
+  },
+  "errors": {
+    "inventory": [],
+    "services": []
+  }
+}

@@ -13,8 +13,7 @@ const s = stylex.create({
     overflowX: 'auto',
     scrollbarWidth: 'none',
     paddingInline: 16,
-    paddingTop: { default: 4, '@media (max-width: 699px)': 12 },
-    paddingBottom: 4,
+    paddingBlock: { default: 4, '@media (max-width: 699px)': 12 },
     minWidth: 0,
   },
   backdrop: {
@@ -26,8 +25,7 @@ const s = stylex.create({
     gap: 8,
     overflowX: { default: 'auto', '@media (min-width: 1024px)': 'visible' },
     paddingInline: { default: 16, '@media (min-width: 1024px)': 12 },
-    paddingTop: { default: 4, '@media (max-width: 699px)': 12, '@media (min-width: 1024px)': 8 },
-    paddingBottom: { default: 4, '@media (min-width: 1024px)': 8 },
+    paddingBlock: { default: 4, '@media (max-width: 699px)': 12, '@media (min-width: 1024px)': 8 },
     marginInline: { default: 0, '@media (min-width: 1024px)': 16 },
     borderRadius: { default: 0, '@media (min-width: 1024px)': 12 },
     backgroundColor: {
