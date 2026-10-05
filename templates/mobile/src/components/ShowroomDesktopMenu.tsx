@@ -18,6 +18,26 @@ const s = stylex.create({
     zIndex: 60,
     marginLeft: 8,
   },
+  rootOpen: {
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      top: 'calc(100% + 6px)',
+      right: 'calc(50% - 4px)',
+      width: 8,
+      height: 8,
+      transform: 'translateY(-50%) rotate(45deg)',
+      backgroundColor: colors.background,
+      borderTopWidth: 1,
+      borderTopStyle: 'solid',
+      borderTopColor: colors.line,
+      borderLeftWidth: 1,
+      borderLeftStyle: 'solid',
+      borderLeftColor: colors.line,
+      pointerEvents: 'none',
+      zIndex: 1,
+    },
+  },
   trigger: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -43,7 +63,7 @@ const s = stylex.create({
   triggerOpen: { backgroundColor: colors.stripe },
   panel: {
     position: 'absolute',
-    top: 'calc(100% + 8px)',
+    top: 'calc(100% + 6px)',
     right: 0,
     width: 260,
     maxWidth: 'calc(100vw - 48px)',
@@ -56,10 +76,10 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 16,
+    borderRadius: 14,
     backgroundColor: colors.background,
     color: colors.text,
-    boxShadow: '0 12px 36px rgba(20, 24, 32, .16)',
+    boxShadow: '0 8px 24px rgba(20, 24, 32, .10)',
   },
   link: {
     display: 'flex',
@@ -141,7 +161,7 @@ export function ShowroomDesktopMenu() {
         setOpen(false);
         trigger.current?.focus({ preventScroll: true });
       }}
-      {...stylex.props(s.root)}
+      {...stylex.props(s.root, open && s.rootOpen)}
     >
       <button
         ref={trigger}

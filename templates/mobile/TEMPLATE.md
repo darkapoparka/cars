@@ -42,6 +42,8 @@ At 1024px and wider, Cars, Services, Contact and Saved cars use a 72px logo head
 with Saved cars and a labelled hamburger control on the right. The bottom dock is
 hidden at this breakpoint. The 260px dropdown has exactly three destinations:
 Cars, Services and Contact, using the same navigation data as the phone dock.
+It sits 6px below its trigger, with a small pointer centered on the Menu button
+and a restrained shadow to make the header attachment clear.
 Individual service choices remain on the Services page. The menu retains the
 current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
