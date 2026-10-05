@@ -1,0 +1,778 @@
+{
+  "scope": "Desktop menu only; no phone source edits, release selection or dealer publishing",
+  "source": {
+    "path": "templates/mobile/src/components/ShowroomDesktopMenu.tsx",
+    "beforeSha256": "8508CA0695110AC1FD83B90797D675916B3216AE5BAF461FA9A1A90FC4AC9792",
+    "builtAndVerifiedSha256": "FE13159471892BE18CF9F9479134CB0E8390292BFBB30ACF7EA0C6AEF5AE5F42"
+  },
+  "baseline": {
+    "source": "docs/mobile-desktop-menu-20261005/{bg,en}-desktop-menu.png",
+    "viewport": "1440x960",
+    "provenance": "Previous delivery source hash matches this task preimage"
+  },
+  "checks": {
+    "lint": "passed: full src",
+    "typecheck": "passed: full noEmit",
+    "domainAndLocale": "95 passed",
+    "build": "production build passed; 51 generated routes"
+  },
+  "desktop": {
+    "base": "http://127.0.0.1:6496",
+    "cases": [
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "tablet dock retained; desktop menu hidden",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "tablet dock retained; desktop menu hidden",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "geometry": {
+          "box": {
+            "x": 748,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1008,
+            "bottom": 238,
+            "left": 748
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Коли",
+              "box": {
+                "x": 759,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 997,
+                "bottom": 123,
+                "left": 759
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Услуги",
+              "box": {
+                "x": 759,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 997,
+                "bottom": 175,
+                "left": 759
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Контакт",
+              "box": {
+                "x": 759,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 997,
+                "bottom": 227,
+                "left": 759
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "native Tab traverses links and dismisses on exit",
+          "Escape returns focus; outside dismissal",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "geometry": {
+          "box": {
+            "x": 748,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1008,
+            "bottom": 238,
+            "left": 748
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Cars",
+              "box": {
+                "x": 759,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 997,
+                "bottom": 123,
+                "left": 759
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Services",
+              "box": {
+                "x": 759,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 997,
+                "bottom": 175,
+                "left": 759
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Contact",
+              "box": {
+                "x": 759,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 997,
+                "bottom": 227,
+                "left": 759
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "native Tab traverses links and dismisses on exit",
+          "Escape returns focus; outside dismissal",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "geometry": {
+          "box": {
+            "x": 994,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1254,
+            "bottom": 238,
+            "left": 994
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Коли",
+              "box": {
+                "x": 1005,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 1243,
+                "bottom": 123,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Услуги",
+              "box": {
+                "x": 1005,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 1243,
+                "bottom": 175,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Контакт",
+              "box": {
+                "x": 1005,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 1243,
+                "bottom": 227,
+                "left": 1005
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "native Tab traverses links and dismisses on exit",
+          "Escape returns focus; outside dismissal",
+          "Services and Contact reachable; Cars retains inventory criteria",
+          "Saved remains reachable from header",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "chromium",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "geometry": {
+          "box": {
+            "x": 994,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1254,
+            "bottom": 238,
+            "left": 994
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Cars",
+              "box": {
+                "x": 1005,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 1243,
+                "bottom": 123,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Services",
+              "box": {
+                "x": 1005,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 1243,
+                "bottom": 175,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Contact",
+              "box": {
+                "x": 1005,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 1243,
+                "bottom": 227,
+                "left": 1005
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "native Tab traverses links and dismisses on exit",
+          "Escape returns focus; outside dismissal",
+          "Services and Contact reachable; Cars retains inventory criteria",
+          "Saved remains reachable from header",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "bg",
+        "checks": [
+          "tablet dock retained; desktop menu hidden",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1023,
+        "height": 768,
+        "lang": "en",
+        "checks": [
+          "tablet dock retained; desktop menu hidden",
+          "no page overflow"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "bg",
+        "geometry": {
+          "box": {
+            "x": 748,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1008,
+            "bottom": 238,
+            "left": 748
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Коли",
+              "box": {
+                "x": 759,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 997,
+                "bottom": 123,
+                "left": 759
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Услуги",
+              "box": {
+                "x": 759,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 997,
+                "bottom": 175,
+                "left": 759
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Контакт",
+              "box": {
+                "x": 759,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 997,
+                "bottom": 227,
+                "left": 759
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "local WebKit Tab skips links and dismisses; arrows navigate all links",
+          "Escape returns focus; outside dismissal",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1024,
+        "height": 600,
+        "lang": "en",
+        "geometry": {
+          "box": {
+            "x": 748,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1008,
+            "bottom": 238,
+            "left": 748
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Cars",
+              "box": {
+                "x": 759,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 997,
+                "bottom": 123,
+                "left": 759
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Services",
+              "box": {
+                "x": 759,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 997,
+                "bottom": 175,
+                "left": 759
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Contact",
+              "box": {
+                "x": 759,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 997,
+                "bottom": 227,
+                "left": 759
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "local WebKit Tab skips links and dismisses; arrows navigate all links",
+          "Escape returns focus; outside dismissal",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "bg",
+        "geometry": {
+          "box": {
+            "x": 994,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1254,
+            "bottom": 238,
+            "left": 994
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Коли",
+              "box": {
+                "x": 1005,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 1243,
+                "bottom": 123,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Услуги",
+              "box": {
+                "x": 1005,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 1243,
+                "bottom": 175,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Контакт",
+              "box": {
+                "x": 1005,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 1243,
+                "bottom": 227,
+                "left": 1005
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "local WebKit Tab skips links and dismisses; arrows navigate all links",
+          "Escape returns focus; outside dismissal",
+          "Services and Contact reachable; Cars retains inventory criteria",
+          "Saved remains reachable from header",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      },
+      {
+        "engine": "webkit",
+        "width": 1440,
+        "height": 960,
+        "lang": "en",
+        "geometry": {
+          "box": {
+            "x": 994,
+            "y": 64,
+            "width": 260,
+            "height": 174,
+            "top": 64,
+            "right": 1254,
+            "bottom": 238,
+            "left": 994
+          },
+          "links": [
+            {
+              "href": "/",
+              "text": "Cars",
+              "box": {
+                "x": 1005,
+                "y": 75,
+                "width": 238,
+                "height": 48,
+                "top": 75,
+                "right": 1243,
+                "bottom": 123,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/services",
+              "text": "Services",
+              "box": {
+                "x": 1005,
+                "y": 127,
+                "width": 238,
+                "height": 48,
+                "top": 127,
+                "right": 1243,
+                "bottom": 175,
+                "left": 1005
+              }
+            },
+            {
+              "href": "/contact",
+              "text": "Contact",
+              "box": {
+                "x": 1005,
+                "y": 179,
+                "width": 238,
+                "height": 48,
+                "top": 179,
+                "right": 1243,
+                "bottom": 227,
+                "left": 1005
+              }
+            }
+          ]
+        },
+        "checks": [
+          "exactly three localized links",
+          "260px dropdown fits viewport; 48px rows",
+          "toggle, arrows and Home/End",
+          "local WebKit Tab skips links and dismisses; arrows navigate all links",
+          "Escape returns focus; outside dismissal",
+          "Services and Contact reachable; Cars retains inventory criteria",
+          "Saved remains reachable from header",
+          "phone breakpoint dismisses menu and restores dock with visible focus"
+        ]
+      }
+    ],
+    "destinations": [
+      {
+        "engine": "chromium",
+        "lang": "bg",
+        "destination": "Services",
+        "url": "http://127.0.0.1:6496/services"
+      },
+      {
+        "engine": "chromium",
+        "lang": "bg",
+        "destination": "Contact",
+        "url": "http://127.0.0.1:6496/contact"
+      },
+      {
+        "engine": "chromium",
+        "lang": "bg",
+        "destination": "Cars",
+        "url": "http://127.0.0.1:6496/?makes=BMW&maxPrice=60000&sort=price-asc"
+      },
+      {
+        "engine": "chromium",
+        "lang": "en",
+        "destination": "Services",
+        "url": "http://127.0.0.1:6496/services"
+      },
+      {
+        "engine": "chromium",
+        "lang": "en",
+        "destination": "Contact",
+        "url": "http://127.0.0.1:6496/contact"
+      },
+      {
+        "engine": "chromium",
+        "lang": "en",
+        "destination": "Cars",
+        "url": "http://127.0.0.1:6496/?makes=BMW&maxPrice=60000&sort=price-asc"
+      },
+      {
+        "engine": "webkit",
+        "lang": "bg",
+        "destination": "Services",
+        "url": "http://127.0.0.1:6496/services"
+      },
+      {
+        "engine": "webkit",
+        "lang": "bg",
+        "destination": "Contact",
+        "url": "http://127.0.0.1:6496/contact"
+      },
+      {
+        "engine": "webkit",
+        "lang": "bg",
+        "destination": "Cars",
+        "url": "http://127.0.0.1:6496/?makes=BMW&maxPrice=60000&sort=price-asc"
+      },
+      {
+        "engine": "webkit",
+        "lang": "en",
+        "destination": "Services",
+        "url": "http://127.0.0.1:6496/services"
+      },
+      {
+        "engine": "webkit",
+        "lang": "en",
+        "destination": "Contact",
+        "url": "http://127.0.0.1:6496/contact"
+      },
+      {
+        "engine": "webkit",
+        "lang": "en",
+        "destination": "Cars",
+        "url": "http://127.0.0.1:6496/?makes=BMW&maxPrice=60000&sort=price-asc"
+      }
+    ],
+    "errors": []
+  },
+  "phones": {
+    "cases": 32,
+    "differences": [],
+    "errors": [],
+    "pixels": [
+      {
+        "key": "chromium-bg-320-home",
+        "changedChannels": 70776
+      },
+      {
+        "key": "chromium-bg-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-contact",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-320-saved",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-home",
+        "changedChannels": 36404
+      },
+      {
+        "key": "chromium-en-320-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-contact",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-320-saved",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-home",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-bg-390-contact",
+        "changedChannels": 11295
+      },
+      {
+        "key": "chromium-bg-390-saved",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-home",
+        "changedChannels": 26363
+      },
+      {
+        "key": "chromium-en-390-services",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-contact",
+        "changedChannels": 0
+      },
+      {
+        "key": "chromium-en-390-saved",
+        "changedChannels": 0
+      }
+    ]
+  }
+}

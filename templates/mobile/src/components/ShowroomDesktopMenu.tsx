@@ -8,16 +8,7 @@ import * as stylex from '@stylexjs/stylex';
 import { useLocale } from '@/lib/use-locale';
 import { useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
-import {
-  showroomServices,
-  serviceCategoryHref,
-  serviceQuickFilters,
-  serviceQuickFilterHref,
-  serviceSearchHref,
-  type ShowroomService,
-} from '@/lib/showroom-services';
 import { colors } from '@/styles/tokens.stylex';
-import { Icon, type IconName } from './Icon';
 import { showroomNavigation } from './showroom-navigation';
 
 const s = stylex.create({
@@ -54,11 +45,13 @@ const s = stylex.create({
     position: 'absolute',
     top: 'calc(100% + 8px)',
     right: 0,
-    width: 420,
+    width: 260,
     maxWidth: 'calc(100vw - 48px)',
     maxHeight: 'calc(100dvh - 92px)',
     overflowY: 'auto',
     overscrollBehavior: 'contain',
+    display: 'grid',
+    gap: 4,
     padding: 10,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -72,7 +65,7 @@ const s = stylex.create({
     display: 'flex',
     alignItems: 'center',
     gap: 10,
-    minHeight: 44,
+    minHeight: 48,
     paddingBlock: 8,
     paddingInline: 12,
     borderRadius: 10,
@@ -88,41 +81,7 @@ const s = stylex.create({
   current: { backgroundColor: colors.stripe, fontWeight: 600 },
   linkLabel: { flex: '1', minWidth: 0 },
   icon: { flexShrink: 0, color: colors.muted },
-  services: {
-    marginTop: 8,
-    paddingTop: 12,
-    borderTopWidth: 1,
-    borderTopStyle: 'solid',
-    borderTopColor: colors.line,
-  },
-  sectionTitle: {
-    paddingInline: 12,
-    paddingBottom: 8,
-    color: colors.muted,
-    fontSize: 12,
-    fontWeight: 600,
-    lineHeight: '18px',
-  },
-  serviceGrid: { display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 4 },
-  serviceLink: { minHeight: 52, paddingInline: 10, gap: 8, fontSize: 14, lineHeight: '20px' },
 });
-
-const serviceIcons: Record<string, IconName> = {
-  import: 'globe',
-  sell: 'tag',
-  viewing: 'calendar',
-  'trade-in': 'reset',
-  sourcing: 'search',
-  servicing: 'wrench',
-  financing: 'euro',
-  parts: 'settings',
-};
-
-function serviceHref(service: ShowroomService) {
-  if (service.category !== 'services') return serviceCategoryHref(service.category);
-  const quickFilter = serviceQuickFilters.find(({ value }) => value === service.id);
-  return quickFilter ? serviceQuickFilterHref(quickFilter.value) : serviceSearchHref(service.title);
-}
 
 export function ShowroomDesktopMenu() {
   const { t } = useLocale();
@@ -247,26 +206,6 @@ export function ShowroomDesktopMenu() {
               <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.icon)} />
             </Link>
           ))}
-          <div {...stylex.props(s.services)}>
-            <h2 {...stylex.props(s.sectionTitle)}>{t('Services')}</h2>
-            <div {...stylex.props(s.serviceGrid)}>
-              {showroomServices.map((service) => (
-                <Link
-                  key={service.id}
-                  href={serviceHref(service)}
-                  prefetch={false}
-                  data-desktop-service={service.id}
-                  onClick={() => setOpen(false)}
-                  {...stylex.props(s.link, s.serviceLink)}
-                >
-                  <span {...stylex.props(s.icon)}>
-                    <Icon name={serviceIcons[service.id] || 'grid'} size={18} />
-                  </span>
-                  <span {...stylex.props(s.linkLabel)}>{t(service.title)}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
         </nav>
       )}
     </div>

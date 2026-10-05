@@ -40,9 +40,10 @@ sort and scroll position. The native make/model picker and range controls remain
 
 At 1024px and wider, Cars, Services, Contact and Saved cars use a 72px logo header
 with Saved cars and a labelled hamburger control on the right. The bottom dock is
-hidden at this breakpoint. The compact dropdown uses the same primary navigation
-data as the phone dock, plus shortcuts derived from the existing showroom services.
-It retains the current inventory filters and sort when returning to Cars. Links
+hidden at this breakpoint. The 260px dropdown has exactly three destinations:
+Cars, Services and Contact, using the same navigation data as the phone dock.
+Individual service choices remain on the Services page. The menu retains the
+current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their existing header, floating dock, spacing and navigation behavior.
