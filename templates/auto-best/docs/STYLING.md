@@ -49,50 +49,35 @@ Home and Inventory use the same search-panel bounds, padding and
 radius. Desktop facets retain the 44px control target and the shared
 prominent-control type. The whole field opens its control, including the border.
 Mobile and tablet controls retain their existing roles.
-Inventory's seven desktop shortcuts and search/filter buttons open one 880px
-search dialog, owned by `DesktopVehicleSearch.svelte`. Its inset search
-field finds makes, models and filter values directly. The overview exposes
-all twelve filters as two columns of plain command rows. A shortcut opens the
-same window scoped to its field, with a left Back control and one visible field
-title. Selected filters form editable/removable tokens; Add filter returns to
-the overview without discarding the draft. There are no nested desktop dialogs.
-Bits UI supplies the Command keyboard behavior and Dialog focus/scroll handling.
-The window keeps the same top anchor and 328px result area across every field,
-the overview and search states. Short windows shrink that scrollable area while
-retaining the header and footer. Content shares a 32px inset; Show cars has a
-52px target and a stable width, and tokens keep their removal controls visible.
-The dialog uses shared sheet/control radii and surface/shadow roles; its
-actions and filter tokens follow the pill family. Selected values and presets
-use charcoal with white text. Neutral command focus stays light, and the white
-footer keeps the primary action distinct. The header, footer and scope title have
-no separator rules; spacing carries the hierarchy. Command rows have a 52px target.
-Token keyboard focus stays visible outside clipped values.
-Add filter stays pinned beside the horizontally scrollable token list. Edited
-values reveal their token automatically without shifting the row or dialog.
-Make and Model shortcuts open the same paired view: makes stay on the left while
-the selected make's models appear on the right. Each column has its own scroll
-area and a plain All makes/All models reset row. Selecting a different make updates
-the model column in place; it clears an incompatible model. Search narrows both
-columns, and choosing a make moves keyboard selection to All models. Opening the
-Model shortcut starts keyboard selection in the model column. The selected make
-uses a quiet neutral surface; the selected model retains charcoal.
-Range inputs show units beside their values and an unrestricted placeholder;
-choice search with no results offers Clear search. Keyboard focus remains visible
-on a selected charcoal choice. Number inputs retain their native arrow-key editing
-without invoking Command list navigation.
-The paired view has Clear make and model; other active fields have Clear filter.
-Clear all resets the whole draft while retaining sort. Token removal remains available for any one
-filter. Clearing a make also clears its model and releases the model list scope;
-clearing all releases the scope too. Both actions retain the current dialog view.
-The reference direction uses the current [shadcn-Svelte Command dialog](https://www.shadcn-svelte.com/docs/components/command)
-and [Linear filters](https://linear.app/docs/filters), adapted to the existing Cars tokens.
-Choice search tolerates accents and model spacing. Typing only narrows suggestions;
-the explicit keyword command applies a keyword filter. Make and Model remain single choices; equipment supports multiple
-choices. Model respects the current make and a uniquely owned model can infer
-its make. Changing make clears an incompatible model. Budget/year use paired
-number inputs; mileage has an input and presets. Invalid ranges block Show cars.
-Show cars applies the complete draft to the existing GET URL, retaining sort;
-Escape, Close and outside click discard it and restore the opener's focus.
+Inventory's seven desktop shortcuts and search/filter buttons open one filter
+workspace, owned by `DesktopVehicleSearch.svelte`. Its centered 860px window
+keeps a 704px height, constrained to the viewport. The header and footer stay
+fixed while the category navigation and editor scroll independently.
+The left rail exposes Search and all twelve filters as vertical Bits UI tabs.
+Each category has a fixed 40px target, a 16px label and an optional current-value
+summary. Opening a shortcut selects its category directly; changing categories
+retains the complete draft and the same window bounds. Arrow keys navigate the
+categories without moving focus out of the tab list.
+The right editor has one field title, an inset search input for choice filters,
+and Clear filter when that field is active. Make and Model have separate lists;
+the model list respects the current make, and changing make clears an incompatible
+model. A uniquely owned model can infer its make. Single choices use a quiet
+neutral surface and checkmark; equipment uses checkboxes for multiple choices.
+Selecting values keeps the editor open. Clear all resets the draft, retains sort
+and stays in the current category. The footer has one separator and a red Show
+cars action with a live count and fixed width. Controls use the existing Inter
+and Cars tokens.
+Search finds makes, models and filter values across the catalog, tolerating
+accents and model spacing. Typing narrows suggestions; the explicit keyword
+command applies a keyword filter. Empty choice results offer Clear search.
+Budget/year retain paired number inputs, units and presets; mileage has an input
+and presets. Number inputs keep native arrow-key editing, and invalid ranges
+block Show cars even after changing categories.
+Bits UI provides the [vertical Tabs](https://www.shadcn-svelte.com/docs/components/tabs),
+[Command](https://www.shadcn-svelte.com/docs/components/command) and Dialog behavior,
+adapted to the selected Filter workspace prototype and the existing Cars styling.
+Show cars applies the complete draft to the existing GET URL, retaining sort.
+Escape, Close and outside click discard the draft and restore the opener's focus.
 The sticky opener hides while the dialog is open and returns at the same scroll
 position. Home and widths below 992px retain their native facets/mobile sheets.
 Blog uses that same center lane with one white panel containing the
