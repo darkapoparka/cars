@@ -6,7 +6,7 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
-import { localizeVehicle } from '@/lib/vehicle-copy';
+import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
 import { rememberInventory } from '@/lib/showroom';
 import { togglePark, useAppState } from '@/lib/store';
 
@@ -32,6 +32,7 @@ const s = stylex.create({
     backgroundColor: colors.surface,
   },
   link: {
+    display: 'block',
     textDecoration: 'none',
     '::after': { content: '""', position: 'absolute', inset: 0, borderRadius: 16 },
   },
@@ -68,42 +69,25 @@ const s = stylex.create({
     backgroundColor: colors.background,
   },
   body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 6 },
-  heading: {
-    display: { default: 'flex', '@media (min-width: 1024px)': 'contents' },
-    alignItems: 'baseline',
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-    columnGap: 12,
-    rowGap: 4,
-  },
   title: {
-    order: { default: 0, '@media (min-width: 1024px)': 1 },
     minWidth: 0,
-    flexGrow: { default: 1, '@media (min-width: 1024px)': 0 },
-    flexBasis: { default: 120, '@media (min-width: 1024px)': 'auto' },
     fontSize: { default: 18, '@media (min-width: 1024px)': 16 },
     lineHeight: '24px',
     fontWeight: 700,
     overflowWrap: 'anywhere',
   },
-  variant: {
-    order: { default: 0, '@media (min-width: 1024px)': 2 },
-    color: colors.muted,
-    fontSize: { default: 14, '@media (min-width: 1024px)': 13 },
-    lineHeight: '20px',
-    whiteSpace: 'nowrap',
+  titleText: {
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    WebkitLineClamp: 2,
     overflow: 'hidden',
-    textOverflow: 'ellipsis',
   },
   specs: {
-    order: { default: 0, '@media (min-width: 1024px)': 3 },
     display: 'flex',
-    flexWrap: 'nowrap',
+    flexWrap: 'wrap',
     gap: 4,
-    marginTop: 2,
   },
   price: {
-    order: { default: 0, '@media (min-width: 1024px)': 4 },
     fontSize: { default: 20, '@media (min-width: 1024px)': 18 },
     lineHeight: '26px',
     fontWeight: 700,
@@ -112,6 +96,9 @@ const s = stylex.create({
   },
   fact: {
     minWidth: 0,
+    // Four badges, each at most half the row, fit within two rows.
+    maxWidth: 'calc(50% - 2px)',
+    flexShrink: 0,
     paddingInline: 6,
     paddingBlock: 2,
     borderRadius: 4,
@@ -133,17 +120,22 @@ export function ShowroomVehicleCard({
   priority?: boolean;
 }) {
   const { t, locale, number, money } = useLocale();
-  const displayVehicle = localizeVehicle(vehicle, locale);
+  const photos = showroomVehiclePhotos(vehicle);
   const { parked } = useAppState();
   const saved = parked.includes(vehicle.id);
   const name = vehicle.make + ' ' + vehicle.model;
   const href = '/vehicle/' + vehicle.id;
-  const specs = [String(vehicle.year), number(vehicle.mileage) + ' ' + t('km'), t(vehicle.fuel)];
+  const specs = {
+    year: String(vehicle.year),
+    mileage: number(vehicle.mileage) + ' ' + t('km'),
+    fuel: t(vehicle.fuel),
+    transmission: t(vehicle.transmission),
+  };
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
       <div {...stylex.props(s.photo)}>
         <Image
-          src={displayVehicle.images[0]}
+          src={photos[0]}
           alt={name}
           fill
           priority={priority}
@@ -175,28 +167,21 @@ export function ShowroomVehicleCard({
         </span>
       </div>
       <div {...stylex.props(s.body)}>
-        <div {...stylex.props(s.heading)}>
-          <h2 {...stylex.props(s.title)}>
-            <Link
-              href={href}
-              onClick={() => rememberInventory(vehicle.id)}
-              {...stylex.props(s.link)}
-            >
+        <h2 {...stylex.props(s.title)}>
+          <Link href={href} onClick={() => rememberInventory(vehicle.id)} {...stylex.props(s.link)}>
+            <span title={name} {...stylex.props(s.titleText)}>
               {name}
-            </Link>
-          </h2>
-          <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
-        </div>
-        <p title={displayVehicle.variant} {...stylex.props(s.variant)}>
-          {displayVehicle.variant}
-        </p>
-        <p title={specs.join(' · ')} {...stylex.props(s.specs)}>
-          {specs.map((fact) => (
-            <span key={fact} title={fact} {...stylex.props(s.fact)}>
+            </span>
+          </Link>
+        </h2>
+        <p title={Object.values(specs).join(' · ')} {...stylex.props(s.specs)}>
+          {Object.entries(specs).map(([key, fact]) => (
+            <span key={key} title={fact} {...stylex.props(s.fact)}>
               {fact}
             </span>
           ))}
         </p>
+        <strong {...stylex.props(s.price)}>{money(vehicle.price)}</strong>
       </div>
     </article>
   );

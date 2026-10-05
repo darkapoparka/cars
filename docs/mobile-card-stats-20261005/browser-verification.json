@@ -1,0 +1,245 @@
+{
+  "url": "http://127.0.0.1:6474/",
+  "layout": {
+    "title": "Maximum two lines with full accessible text",
+    "stats": [
+      "Year",
+      "Mileage",
+      "Fuel",
+      "Transmission"
+    ],
+    "maximumBadgeRows": 2,
+    "price": "Separate row below badges"
+  },
+  "rendered": [
+    {
+      "width": 320,
+      "documentOverflow": false,
+      "cards": [
+        {
+          "id": "bmw-x6",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 276.375,
+          "beforeHeight": 274.375
+        },
+        {
+          "id": "bmw-540",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 2,
+          "priceBelowBadges": true,
+          "height": 302.375,
+          "beforeHeight": 274.375
+        },
+        {
+          "id": "bmw-x3",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 276.375,
+          "beforeHeight": 274.375
+        },
+        {
+          "id": "bmw-120",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 276.375,
+          "beforeHeight": 274.375
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "documentOverflow": false,
+      "cards": [
+        {
+          "id": "bmw-x6",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 320.125,
+          "beforeHeight": 318.125
+        },
+        {
+          "id": "bmw-540",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 320.125,
+          "beforeHeight": 318.125
+        },
+        {
+          "id": "bmw-x3",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 320.125,
+          "beforeHeight": 318.125
+        },
+        {
+          "id": "bmw-120",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 320.125,
+          "beforeHeight": 318.125
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "documentOverflow": false,
+      "cards": [
+        {
+          "id": "bmw-x6",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 2,
+          "priceBelowBadges": true,
+          "height": 293.0625,
+          "beforeHeight": 295.0625
+        },
+        {
+          "id": "bmw-540",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 2,
+          "priceBelowBadges": true,
+          "height": 293.0625,
+          "beforeHeight": 295.0625
+        },
+        {
+          "id": "bmw-x3",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 293.0625,
+          "beforeHeight": 295.0625
+        },
+        {
+          "id": "bmw-120",
+          "titleLines": 1,
+          "badgeCount": 4,
+          "badgeRows": 1,
+          "priceBelowBadges": true,
+          "height": 293.0625,
+          "beforeHeight": 295.0625
+        }
+      ]
+    }
+  ],
+  "english320": {
+    "width": 320,
+    "documentOverflow": false,
+    "cards": [
+      {
+        "id": "bmw-x6",
+        "titleLines": 1,
+        "badgeCount": 4,
+        "badgeRows": 1,
+        "priceBelowBadges": true,
+        "height": 276.375
+      },
+      {
+        "id": "bmw-540",
+        "titleLines": 1,
+        "badgeCount": 4,
+        "badgeRows": 1,
+        "priceBelowBadges": true,
+        "height": 276.375
+      },
+      {
+        "id": "bmw-x3",
+        "titleLines": 1,
+        "badgeCount": 4,
+        "badgeRows": 1,
+        "priceBelowBadges": true,
+        "height": 276.375
+      },
+      {
+        "id": "bmw-120",
+        "titleLines": 1,
+        "badgeCount": 4,
+        "badgeRows": 1,
+        "priceBelowBadges": true,
+        "height": 276.375
+      }
+    ]
+  },
+  "longNameFixtures": {
+    "description": "Captured production card markup and CSS with synthetic names, prices and stats; inventory unchanged",
+    "cases320": [
+      {
+        "name": "Mercedes-Benz GLE 350 de 4MATIC",
+        "beforeTitleLines": 3,
+        "afterTitleLines": 2,
+        "badgeRows": 2,
+        "price": "129 990 €",
+        "priceBelowBadges": true
+      },
+      {
+        "name": "Land Rover Range Rover Sport P460e Dynamic SE",
+        "beforeTitleLines": 4,
+        "afterTitleLines": 2,
+        "badgeRows": 2,
+        "price": "109 900 €",
+        "priceBelowBadges": true
+      },
+      {
+        "name": "VeryLongUnbrokenManufacturerAndModelNameForOverflowVerification",
+        "beforeTitleLines": 5,
+        "afterTitleLines": 2,
+        "badgeRows": 2,
+        "price": "1 299 990 €",
+        "priceBelowBadges": true
+      }
+    ],
+    "cases390": [
+      {
+        "name": "Mercedes-Benz GLE 350 de 4MATIC",
+        "titleLines": 1,
+        "badgeRows": 1,
+        "priceBelowBadges": true
+      },
+      {
+        "name": "Land Rover Range Rover Sport P460e Dynamic SE",
+        "titleLines": 2,
+        "badgeRows": 1,
+        "priceBelowBadges": true
+      },
+      {
+        "name": "VeryLongUnbrokenManufacturerAndModelNameForOverflowVerification",
+        "titleLines": 2,
+        "badgeRows": 2,
+        "priceBelowBadges": true
+      }
+    ]
+  },
+  "interactions": {
+    "saveToggledWithoutNavigation": true,
+    "savedScreenVerified": true,
+    "wholeCardPhotoAreaOpensDetails": true,
+    "returnToInventory": true,
+    "originalSavedStateRestored": true
+  },
+  "acceptedMobilePillsUnchanged": true,
+  "checks": {
+    "lint": true,
+    "typecheck": true,
+    "format": true,
+    "tests": 95,
+    "productionBuild": true
+  },
+  "consoleErrors": []
+}
