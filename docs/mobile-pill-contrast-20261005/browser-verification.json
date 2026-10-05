@@ -1,0 +1,133 @@
+{
+  "url": "http://127.0.0.1:6474/",
+  "locale": "bg",
+  "scope": "Neutral backdrop behind inset mobile quick-pill rows; earlier pill shadow restored",
+  "backdrop": {
+    "before": "rgb(255, 255, 255)",
+    "after": "rgb(245, 247, 250)"
+  },
+  "pillFill": "rgb(255, 255, 255)",
+  "pillShadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px",
+  "phoneChecks": [
+    {
+      "width": 320,
+      "railBefore": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "railAfter": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 305,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "pillGeometryAndColoursUnchanged": true,
+      "documentOverflow": false,
+      "minimumTargetHeight": 48
+    },
+    {
+      "width": 390,
+      "railBefore": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "railAfter": {
+        "background": "rgb(255, 255, 255)",
+        "borderBottom": "0px",
+        "gapToPill": 16,
+        "rect": {
+          "height": 52,
+          "width": 375,
+          "x": 0,
+          "y": 116
+        },
+        "shadow": "rgba(23, 32, 43, 0.12) 0px 4px 8px 0px"
+      },
+      "pillGeometryAndColoursUnchanged": true,
+      "documentOverflow": false,
+      "minimumTargetHeight": 48
+    }
+  ],
+  "desktop": {
+    "width": 1440,
+    "backdrop": "rgb(255, 255, 255)",
+    "shadows": [
+      "none",
+      "none",
+      "none",
+      "none"
+    ],
+    "documentOverflow": false
+  },
+  "selectedPill": {
+    "background": "rgb(27, 27, 33)",
+    "shadow": "none"
+  },
+  "services": {
+    "backdrop": "rgb(245, 247, 250)",
+    "pills": [
+      {
+        "text": "Всички (8)",
+        "background": "rgb(27, 27, 33)",
+        "shadow": "none"
+      },
+      {
+        "text": "Огледи",
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+      },
+      {
+        "text": "Финансиране",
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+      },
+      {
+        "text": "Части",
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+      },
+      {
+        "text": "Поддръжка",
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+      },
+      {
+        "text": "Замяна",
+        "background": "rgb(255, 255, 255)",
+        "shadow": "rgba(27, 27, 33, 0.12) 0px 1px 4px 0px"
+      }
+    ],
+    "documentOverflow": false,
+    "consoleErrors": []
+  },
+  "checks": {
+    "lint": true,
+    "types": true,
+    "format": true,
+    "tests": 95,
+    "productionBuild": true
+  },
+  "consoleErrors": []
+}

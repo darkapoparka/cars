@@ -17,7 +17,9 @@ const s = stylex.create({
     paddingBottom: 4,
     minWidth: 0,
   },
-  backdrop: { backgroundColor: colors.background },
+  backdrop: {
+    backgroundColor: { default: colors.stripe, '@media (min-width: 1024px)': colors.background },
+  },
   flush: { paddingInline: 0, paddingTop: 0, paddingBottom: 0 },
   button: {
     position: 'relative',
@@ -50,7 +52,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
     },
     boxShadow: {
-      default: '0 2px 4px -2px rgba(27, 27, 33, 0.18)',
+      default: '0 1px 4px rgba(27, 27, 33, 0.12)',
       '@media (min-width: 1024px)': 'none',
     },
     color: colors.text,
