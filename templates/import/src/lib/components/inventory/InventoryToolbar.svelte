@@ -41,12 +41,16 @@
 
 <div class="inventory-toolbar">
 	<div class="inventory-toolbar__row">
-		{#each quickFilters as filter (filter.id)}<InventoryFilter
-				filter={filter.name === 'bodyType' ? { ...filter, label: controlsCopy.typeLabel } : filter}
-				summary={appliedRangeSummary(filter)}
-				expanded={allOpen && activeFilter?.id === filter.id}
-				onopen={() => onopen(filter)}
-			/>{/each}
+		{#each quickFilters as filter (filter.id)}<div class="inventory-toolbar__field">
+				<InventoryFilter
+					filter={filter.name === 'bodyType'
+						? { ...filter, label: controlsCopy.typeLabel }
+						: filter}
+					summary={appliedRangeSummary(filter)}
+					expanded={allOpen && activeFilter?.id === filter.id}
+					onopen={() => onopen(filter)}
+				/>
+			</div>{/each}
 		<Action
 			variant="secondary"
 			size="compact"
@@ -114,17 +118,35 @@
 		white-space: nowrap;
 	}
 	@media (min-width: 768px) {
+		.inventory-toolbar__field {
+			position: relative;
+			min-width: 0;
+		}
+		.inventory-toolbar__field + .inventory-toolbar__field::before {
+			content: '';
+			position: absolute;
+			inset: var(--bc-space-3) auto var(--bc-space-3) calc(-1 * var(--bc-space-1));
+			width: 1px;
+			background: var(--bc-border);
+		}
+		.inventory-toolbar__field :global(.site-filter-trigger) {
+			width: 100%;
+		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			font-size: var(--bc-text-label);
-			border: 1px solid var(--bc-border);
+			border: 1px solid transparent;
 			border-radius: var(--bc-desktop-control-radius);
+			background: transparent;
+		}
+		.inventory-toolbar__row :global(.inventory-toolbar__all:hover) {
+			background: var(--bc-surface-hover);
 		}
 	}
 	@media (min-width: 901px) {
 		.inventory-toolbar__row {
 			flex-wrap: nowrap;
 		}
-		.inventory-toolbar__row :global(.site-filter-trigger) {
+		.inventory-toolbar__field {
 			flex: 1 1 0;
 		}
 	}
@@ -136,6 +158,9 @@
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all) {
 			grid-column: span 2;
+		}
+		.inventory-toolbar__field:nth-child(5)::before {
+			display: none;
 		}
 	}
 </style>

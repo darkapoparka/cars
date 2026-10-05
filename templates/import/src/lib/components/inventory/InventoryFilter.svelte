@@ -71,8 +71,8 @@
 			min-width: 0;
 			max-width: min(100%, 240px);
 			border-radius: var(--bc-desktop-control-radius);
-			border-color: var(--bc-border-strong);
-			background: var(--bc-surface-raised);
+			border-color: transparent;
+			background: transparent;
 			padding-inline: var(--bc-space-3);
 			gap: var(--bc-space-2);
 		}
@@ -81,8 +81,8 @@
 		}
 		.site-filter-trigger:hover,
 		.site-filter-trigger[aria-expanded='true'] {
-			border-color: var(--bc-ink);
-			background: var(--bc-surface);
+			border-color: transparent;
+			background: var(--bc-surface-hover);
 		}
 		.site-filter-trigger[data-active='true'] {
 			border-color: var(--bc-accent);
