@@ -1,0 +1,296 @@
+{
+  "at": "2026-10-05T13:48:21.427Z",
+  "base": "http://127.0.0.1:6475",
+  "checks": [
+    {
+      "engine": "chromium",
+      "description": "320px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "320px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "390px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "430px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "chromium",
+      "description": "Mobile tab keyboard order and Details-only financing in bg"
+    },
+    {
+      "engine": "chromium",
+      "description": "Mobile tab keyboard order and Details-only financing in en"
+    },
+    {
+      "engine": "chromium",
+      "description": "Monthly sheet exposes the captured lease quote; rating and full technical dialogs preserve facts and restore focus"
+    },
+    {
+      "engine": "chromium",
+      "description": "Overlay save persists and can be undone; Share copies the locale-aware vehicle link"
+    },
+    {
+      "engine": "chromium",
+      "description": "Gallery/section return, compact header, conditional dock and scroll-to-top restoration"
+    },
+    {
+      "engine": "chromium",
+      "description": "Full variant wraps without truncation at 390"
+    },
+    {
+      "engine": "chromium",
+      "description": "Lamborghini Aventador SVJ Roadster retains one full-width title row at 390"
+    },
+    {
+      "engine": "chromium",
+      "description": "Full variant wraps without truncation at 320"
+    },
+    {
+      "engine": "chromium",
+      "description": "Lamborghini Aventador SVJ Roadster retains one full-width title row at 320"
+    },
+    {
+      "engine": "chromium",
+      "description": "320x480 long names and 200% text reflow with a reachable dock"
+    },
+    {
+      "engine": "chromium",
+      "description": "Mobile keeps one vehicle price and no segment; desktop retains its purchase/leasing behavior"
+    },
+    {
+      "engine": "chromium",
+      "description": "Enquiry keeps vehicle context without submitting a form"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "320px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "390px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px bg bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px bg bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px bg bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px bg bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px en bmw-x6: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px en bmw-540: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px en bmw-x3: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "430px en bmw-120: calm summary, Details/Features/Photos tabs, financing below description, no payment segment and no overflow"
+    },
+    {
+      "engine": "webkit",
+      "description": "Mobile tab keyboard order and Details-only financing in bg"
+    },
+    {
+      "engine": "webkit",
+      "description": "Mobile tab keyboard order and Details-only financing in en"
+    },
+    {
+      "engine": "webkit",
+      "description": "Monthly sheet exposes the captured lease quote; rating and full technical dialogs preserve facts and restore focus"
+    },
+    {
+      "engine": "webkit",
+      "description": "Overlay save persists and can be undone; Share copies the locale-aware vehicle link"
+    },
+    {
+      "engine": "webkit",
+      "description": "Gallery/section return, compact header, conditional dock and scroll-to-top restoration"
+    },
+    {
+      "engine": "webkit",
+      "description": "Full variant wraps without truncation at 390"
+    },
+    {
+      "engine": "webkit",
+      "description": "Lamborghini Aventador SVJ Roadster retains one full-width title row at 390"
+    },
+    {
+      "engine": "webkit",
+      "description": "Full variant wraps without truncation at 320"
+    },
+    {
+      "engine": "webkit",
+      "description": "Lamborghini Aventador SVJ Roadster retains one full-width title row at 320"
+    },
+    {
+      "engine": "webkit",
+      "description": "320x480 long names and 200% text reflow with a reachable dock"
+    },
+    {
+      "engine": "webkit",
+      "description": "Mobile keeps one vehicle price and no segment; desktop retains its purchase/leasing behavior"
+    },
+    {
+      "engine": "webkit",
+      "description": "Enquiry keeps vehicle context without submitting a form"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,38 @@
+{
+  "verifiedAt": "2026-10-05T14:07:21.922Z",
+  "sourceCommit": "d77f8c893f588818049ee1bb6ae8467224068fca",
+  "sourceTree": "3001e581235af0c897eac23bdca511f82e971a16",
+  "sourceDigest": "2b35180ba8be99fe26b1afdde63387704598dcb0f9c27ea5b33f510c9590a597",
+  "publishingCommit": "719db42aa381ae0ce73c68860ab59340d97740af",
+  "deployment": {
+    "id": "dpl_9mq7kn7zK9GZEdA6d18Yre9uqhhu",
+    "projectId": "prj_PsCXLysg0t3owguVyrnnXQXa7x1r",
+    "url": "cars-template-mobile-qqzke0dc1-tyj5.vercel.app",
+    "readyState": "READY",
+    "source": "git",
+    "target": "production",
+    "createdAt": 1791208431286,
+    "ready": 1791208529483,
+    "alias": [
+      "cars-template-mobile.vercel.app",
+      "cars-template-mobile-tyj5.vercel.app",
+      "cars-template-mobile-git-main-tyj5.vercel.app"
+    ],
+    "githubCommitSha": "719db42aa381ae0ce73c68860ab59340d97740af"
+  },
+  "checks": {
+    "lint": true,
+    "typescript": true,
+    "formatting": true,
+    "domainLocalizationTests": 95,
+    "productionBuildStaticPages": 51,
+    "localChromiumWebKitChecks": 72,
+    "hostedChecks": 14
+  },
+  "sharedCheckout": {
+    "localHead": "08c89d63f9e11939acd5b135ece4278252b80f43",
+    "sharedIndexPreserved": true,
+    "existingIndexLockPreserved": true,
+    "explanation": "The occupied local checkout retains its older HEAD. The isolated commit is based on fetched remote main and pushed without force, as documented in WORKSPACE.md."
+  }
+}

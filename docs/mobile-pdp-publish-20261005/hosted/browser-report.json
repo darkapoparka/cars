@@ -1,0 +1,110 @@
+{
+  "base": "https://cars-template-mobile.vercel.app",
+  "at": "2026-10-05T14:00:55.749Z",
+  "before": false,
+  "checks": [
+    {
+      "engine": "chromium",
+      "id": "bmw-120",
+      "width": 1440,
+      "changedPixels": 0,
+      "significantPixels": 0,
+      "maximumChannelDelta": 0,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-x6",
+      "width": 1440,
+      "changedPixels": 4,
+      "significantPixels": 0,
+      "maximumChannelDelta": 4,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-120",
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-120",
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-120",
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-x6",
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-x6",
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "chromium",
+      "id": "bmw-x6",
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-120",
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-120",
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-120",
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-x6",
+      "locale": "bg",
+      "width": 320,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-x6",
+      "locale": "bg",
+      "width": 390,
+      "passed": true
+    },
+    {
+      "engine": "webkit",
+      "id": "bmw-x6",
+      "locale": "en",
+      "width": 390,
+      "passed": true
+    }
+  ],
+  "errors": []
+}
