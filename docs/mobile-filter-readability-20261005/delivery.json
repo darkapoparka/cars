@@ -1,0 +1,493 @@
+{
+  "at": "2026-10-05T17:36:22.045Z",
+  "scope": "Mobile filter readability at 16px",
+  "sourceCommit": "b6243dbc2b2ccc9a536fdab9d5d7e712891fb5de",
+  "sourceTree": "93037bb4a4b907a8a249f2a226a406fa67a0301c",
+  "sourceDigest": "e1d8cd42ff77e8bc21461028c83764a67c8fe7ac4cc8d36bc060007dfb2876c0",
+  "publishingCommit": "0fd4796bffa08d39b4b3f3fee5125e7295299b21",
+  "deploymentId": "dpl_4Ex6nnB84yKSNTstU17nxL2ybNxa",
+  "deploymentState": "READY",
+  "publicUrl": "https://cars-template-mobile.vercel.app/?filter=make&lang=bg",
+  "checks": {
+    "productionBuild": {
+      "passed": true,
+      "pages": 51
+    },
+    "lint": true,
+    "typecheck": true,
+    "formatting": true,
+    "domainAndLocalization": {
+      "passed": true,
+      "count": 95
+    },
+    "browser": {
+      "passed": true,
+      "scenarios": [
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "chromium",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "bg",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 320,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 390,
+          "description": "Full make catalog with accessible count; BMW families; Back preserves a selected model and clears search; full-width fields, aligned circles, keyboard focus, full-row taps and mixed selection"
+        },
+        {
+          "engine": "webkit",
+          "locale": "en",
+          "width": 1440,
+          "description": "Desktop search draft/apply, square checkboxes and trailing disclosure arrows"
+        }
+      ],
+      "retry": {
+        "firstFailure": [
+          {
+            "engine": "webkit",
+            "message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nfalse !== true\n\n    at file:///L:/CODEX/cars/runtime/mobile-pdp-publish-20261005/export/scripts/qa-showroom-search.mjs:311:22"
+          }
+        ],
+        "unchangedBuild": true,
+        "webkitRepeatPassed": true,
+        "sourceCommit": "b6243dbc2b2ccc9a536fdab9d5d7e712891fb5de"
+      }
+    },
+    "local": [
+      {
+        "card": [
+          {
+            "size": "17px",
+            "weight": "500"
+          },
+          {
+            "size": "18px",
+            "weight": "400"
+          }
+        ],
+        "overflow": false,
+        "pills": [
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 16,
+              "right": 157.671875,
+              "top": 184,
+              "width": 141.671875,
+              "x": 16,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "Подреждане"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 165.671875,
+              "right": 323.640625,
+              "top": 184,
+              "width": 157.96875,
+              "x": 165.671875,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "Марка и моделМарка и модел"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 331.640625,
+              "right": 416.109375,
+              "top": 184,
+              "width": 84.46875,
+              "x": 331.640625,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "ЦенаЦена"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 424.109375,
+              "right": 522.265625,
+              "top": 184,
+              "width": 98.15625,
+              "x": 424.109375,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "ГодинаГодина"
+          }
+        ],
+        "width": 320
+      },
+      {
+        "card": [
+          {
+            "size": "17px",
+            "weight": "500"
+          },
+          {
+            "size": "18px",
+            "weight": "400"
+          }
+        ],
+        "overflow": false,
+        "pills": [
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 16,
+              "right": 165.34375,
+              "top": 184,
+              "width": 149.34375,
+              "x": 16,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "Подреждане"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 173.34375,
+              "right": 339.046875,
+              "top": 184,
+              "width": 165.703125,
+              "x": 173.34375,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "Марка и моделМарка и модел"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 347.046875,
+              "right": 432.65625,
+              "top": 184,
+              "width": 85.609375,
+              "x": 347.046875,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "ЦенаЦена"
+          },
+          {
+            "box": {
+              "bottom": 224,
+              "height": 40,
+              "left": 440.65625,
+              "right": 542.28125,
+              "top": 184,
+              "width": 101.625,
+              "x": 440.65625,
+              "y": 184
+            },
+            "height": 40,
+            "size": "16px",
+            "target": 48,
+            "text": "ГодинаГодина"
+          }
+        ],
+        "width": 390
+      }
+    ],
+    "overlay": [
+      {
+        "apply": {
+          "height": 44,
+          "size": "16px",
+          "weight": "500"
+        },
+        "brand": {
+          "height": 56,
+          "size": "16px",
+          "weight": "500"
+        },
+        "heading": {
+          "height": 24,
+          "size": "16px",
+          "weight": "400"
+        },
+        "input": {
+          "height": 44,
+          "size": "16px",
+          "weight": "400"
+        },
+        "overflow": false,
+        "tab": {
+          "height": 52,
+          "size": "16px",
+          "weight": "500"
+        },
+        "width": 320
+      },
+      {
+        "apply": {
+          "height": 44,
+          "size": "16px",
+          "weight": "500"
+        },
+        "brand": {
+          "height": 56,
+          "size": "16px",
+          "weight": "500"
+        },
+        "heading": {
+          "height": 24,
+          "size": "16px",
+          "weight": "400"
+        },
+        "input": {
+          "height": 44,
+          "size": "16px",
+          "weight": "400"
+        },
+        "overflow": false,
+        "tab": {
+          "height": 52,
+          "size": "16px",
+          "weight": "500"
+        },
+        "width": 390
+      }
+    ],
+    "hosted": {
+      "homes": [
+        {
+          "card": [
+            {
+              "size": "17px",
+              "weight": "500"
+            },
+            {
+              "size": "18px",
+              "weight": "400"
+            }
+          ],
+          "overflow": false,
+          "pills": [
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Подреждане"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Марка и модел"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Цена"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Година"
+            }
+          ],
+          "width": 320
+        },
+        {
+          "card": [
+            {
+              "size": "17px",
+              "weight": "500"
+            },
+            {
+              "size": "18px",
+              "weight": "400"
+            }
+          ],
+          "overflow": false,
+          "pills": [
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Подреждане"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Марка и модел"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Цена"
+            },
+            {
+              "height": 40,
+              "size": "16px",
+              "target": 48,
+              "text": "Година"
+            }
+          ],
+          "width": 390
+        },
+        {
+          "card": [
+            {
+              "size": "16px",
+              "weight": "700"
+            },
+            {
+              "size": "18px",
+              "weight": "700"
+            }
+          ],
+          "overflow": false,
+          "pills": [
+            {
+              "height": 36,
+              "size": "14px",
+              "target": 44,
+              "text": "Година"
+            },
+            {
+              "height": 36,
+              "size": "14px",
+              "target": 44,
+              "text": "Пробег"
+            },
+            {
+              "height": 36,
+              "size": "14px",
+              "target": 44,
+              "text": "Гориво"
+            },
+            {
+              "height": 36,
+              "size": "14px",
+              "target": 44,
+              "text": "Скоростна кутия"
+            }
+          ],
+          "width": 1440
+        }
+      ],
+      "overlay": {
+        "apply": {
+          "height": 44,
+          "size": "16px",
+          "weight": "500"
+        },
+        "brand": {
+          "height": 56,
+          "size": "16px",
+          "weight": "500"
+        },
+        "heading": {
+          "height": 24,
+          "size": "16px",
+          "weight": "400"
+        },
+        "input": {
+          "height": 44,
+          "size": "16px",
+          "weight": "400"
+        },
+        "overflow": false,
+        "tab": {
+          "height": 52,
+          "size": "16px",
+          "weight": "500"
+        },
+        "width": 390
+      }
+    }
+  },
+  "preservation": {
+    "sharedIndex": true,
+    "existingIndexLock": true,
+    "canonicalGeneratedFiles": true,
+    "localCheckoutHead": "08c89d63f9e11939acd5b135ece4278252b80f43"
+  }
+}
