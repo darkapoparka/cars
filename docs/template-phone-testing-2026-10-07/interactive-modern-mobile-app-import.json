@@ -1,0 +1,50 @@
+[
+  {
+    "key": "modern",
+    "filter": "Отвори филтрите",
+    "opened": true,
+    "closed": true,
+    "focusRestored": true,
+    "menu": {
+      "opened": true,
+      "closed": true,
+      "focusRestored": true
+    },
+    "dialogText": "Филтри\n\nРазширени филтри за автомобил, цена, пробег и продавач.\n\nАвтомобил\nАвтомобили\nМарка и модел\nВсички марки\nБюджет\nВсеки бюджет\nГориво\nВсяко гориво\nПробег\nВсеки пробег\nСкорост",
+    "errors": []
+  },
+  {
+    "key": "mobile",
+    "filter": "Марка и модел · Филтри",
+    "opened": true,
+    "closed": true,
+    "focusRestored": true,
+    "menu": null,
+    "dialogText": "Филтри\nТърсене\nМарка и модел\nЦена\nГодина\nГориво\nСъстояние\nОще\nВсички марки\n(181)\nBMW\nMercedes-Benz\nAudi\nAbarth\nAC\nAcura\nAiways\nAixam\nAlfa Romeo\nALPINA\nAlpine\nAlvis\nAriel\nArtega\nAsi",
+    "errors": []
+  },
+  {
+    "key": "app",
+    "filter": "Филтри",
+    "opened": true,
+    "closed": true,
+    "focusRestored": true,
+    "menu": null,
+    "dialogText": "Филтри\nМарка\nМодел\nБюджет\nОтстъпки\nВноска\nПървоначална вноска\nГодина\nТип купе\nПробег\nВид автомобил\nГориво\nКатегории\nОборудване\nДвигател\nВсички марки\nNissan\nToyota\nMitsubishi\nMG\nMer",
+    "errors": []
+  },
+  {
+    "key": "import",
+    "filter": "Филтри",
+    "opened": true,
+    "closed": true,
+    "focusRestored": true,
+    "menu": {
+      "opened": true,
+      "closed": true,
+      "focusRestored": false
+    },
+    "dialogText": "Филтри\nВсички 42\n\nТИП КУПЕ\n\nВсички типове\n42\nSUV\n26\nСедан\n11\nКабрио\n4\n\nГОРИВО\n\nЕлектрически\n1\nБензин\n39\nPlug-in хибрид\n2\n\nПРОБЕГ\n\nВсеки пробег\n42\nДо 80 000 km\n9\nДо 120 000 km\n30\nДо",
+    "errors": []
+  }
+]

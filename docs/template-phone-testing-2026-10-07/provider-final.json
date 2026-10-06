@@ -1,0 +1,82 @@
+[
+  {
+    "key": "modern",
+    "id": "dpl_D2j6D8qrsoe1aosBYm7b8vpVkhTz",
+    "state": "READY",
+    "sha": "a6cadf6ede798179aca84adf7d5f0071c44cbdd0",
+    "sourceMessage": "Publish polished modern template for phone testing\n\nCars source: c71ec81977b592bde32106282ec1a7a4b3377c9b\nCars subtree: templates/modern\nCars digest: a7e8881d9337856d7c5fe2b2c6762c1788f2d33eae8117e65b9f58dfd04841e3",
+    "alias": [
+      "cars-template-modern.vercel.app",
+      "cars-template-modern-tyj5.vercel.app",
+      "cars-template-modern-git-main-tyj5.vercel.app"
+    ],
+    "target": "production",
+    "createdAt": 1791323690246,
+    "buildingAt": 1791323691421,
+    "ready": 1791323800757
+  },
+  {
+    "key": "mobile",
+    "id": "dpl_HS8GBRABgd5cz9KrAr51Xr6thYUh",
+    "state": "READY",
+    "sha": "5c0e771fba1cef600d9f623bf792e5e134f32b07",
+    "sourceMessage": "Publish polished mobile template for phone testing\n\nCars source: c71ec81977b592bde32106282ec1a7a4b3377c9b\nCars subtree: templates/mobile\nCars digest: 20090ba331426abb1b186d0530c96980df90f3ccf223c2b025d51665bef98b8e",
+    "alias": [
+      "cars-template-mobile.vercel.app",
+      "cars-template-mobile-tyj5.vercel.app",
+      "cars-template-mobile-git-main-tyj5.vercel.app"
+    ],
+    "target": "production",
+    "createdAt": 1791323702403,
+    "buildingAt": 1791323802079,
+    "ready": 1791323913289
+  },
+  {
+    "key": "app",
+    "id": "dpl_6ka1wvyAoazUQPLEDpe5fQgkfGXb",
+    "state": "READY",
+    "sha": "bb76cc12de5fb90f7f70d378cca096eed7d22f0a",
+    "sourceMessage": "Publish polished app template for phone testing\n\nCars source: c71ec81977b592bde32106282ec1a7a4b3377c9b\nCars subtree: templates/app\nCars digest: 0d799460889ad81ba7e558c1a9bfb643a630bf9a2e648d49c3b1d986ad9637ad",
+    "alias": [
+      "cars-template-app.vercel.app",
+      "cars-template-app-tyj5.vercel.app",
+      "cars-template-app-git-main-tyj5.vercel.app"
+    ],
+    "target": "production",
+    "createdAt": 1791323739509,
+    "buildingAt": 1791323914299,
+    "ready": 1791324012875
+  },
+  {
+    "key": "auto-best",
+    "id": "dpl_FStsamMUcbygrG8Q79wkWrCRc1eS",
+    "state": "READY",
+    "sha": "636af93a040f697e8f40a7a014f3fdfb0f823d77",
+    "sourceMessage": "Publish polished auto-best template for phone testing\n\nCars source: 439d104b071a6f066106fa5cbac4549c746c0882\nCars subtree: templates/auto-best\nCars digest: 562bf0e6063a81f3a03089bb0b219821cc569ef76e4140475ef160fe24c79121",
+    "alias": [
+      "cars-template-auto-best.vercel.app",
+      "cars-template-auto-best-tyj5.vercel.app",
+      "cars-template-auto-best-git-main-tyj5.vercel.app"
+    ],
+    "target": "production",
+    "createdAt": 1791324210587,
+    "buildingAt": 1791324212098,
+    "ready": 1791324249541
+  },
+  {
+    "key": "import",
+    "id": "dpl_HoYST2y8fzzvjqAZo4owSfvxTNx9",
+    "state": "READY",
+    "sha": "05cba90b7690231cb45b11ec983dd67ad0d51c71",
+    "sourceMessage": "Publish polished import template for phone testing\n\nCars source: c71ec81977b592bde32106282ec1a7a4b3377c9b\nCars subtree: templates/import\nCars digest: 565439c0f736d4d706b6ca5cb48f97aeac7b23f0124f53d769cbbb364c5d5419",
+    "alias": [
+      "cars-template-import.vercel.app",
+      "cars-template-import-tyj5.vercel.app",
+      "cars-template-import-git-main-tyj5.vercel.app"
+    ],
+    "target": "production",
+    "createdAt": 1791323796062,
+    "buildingAt": 1791324028079,
+    "ready": 1791324091835
+  }
+]
