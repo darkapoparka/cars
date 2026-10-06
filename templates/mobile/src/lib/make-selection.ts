@@ -14,6 +14,18 @@ export function clearMakeSelections(): Partial<Filters> {
     excludedModelVariants: {},
   };
 }
+/** Clear model and trim criteria while preserving makes and whole-make exclusions. */
+export function clearModelSelections(filters: Filters): Partial<Filters> {
+  return {
+    models: [],
+    makeModels: Object.fromEntries(filters.makes.map((make) => [make, []])),
+    makeVariants: {},
+    modelVariants: {},
+    excludedModels: {},
+    excludedMakeVariants: {},
+    excludedModelVariants: {},
+  };
+}
 /** Legacy unscoped URLs remain readable; new edits are always scoped to their make. */
 export function modelsForMake(filters: Filters, make: string, exclude = false): string[] {
   if (exclude) return filters.excludedModels[make] || [];

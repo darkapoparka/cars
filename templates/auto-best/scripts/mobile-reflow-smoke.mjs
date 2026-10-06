@@ -33,11 +33,22 @@ async function fits(page, mode) {
         client: { width: el.clientWidth, height: el.clientHeight }, scroll: { width: el.scrollWidth, height: el.scrollHeight } }));
     const cardHeights = [...root.querySelectorAll('.dn-vehicle-card--listing')].map(card => card.getBoundingClientRect().height);
     const cardHeightSpread = cardHeights.length ? Math.max(...cardHeights) - Math.min(...cardHeights) : 0;
-    return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped, cardHeightSpread };
+    const homeHeader = root.querySelector('.dn-quick-search__header, .dn-mobile-filter-header');
+    let headerFits = true;
+    if (homeHeader) {
+      const title = homeHeader.querySelector('h2').getBoundingClientRect();
+      const buttons = [...homeHeader.querySelectorAll('button')].filter(visible).map(button => button.getBoundingClientRect());
+      const header = homeHeader.getBoundingClientRect();
+      const centered = Math.abs((title.left + title.right) / 2 - (header.left + header.right) / 2) < 1;
+      const controlsFit = buttons.length === 2 ? buttons[0].right <= title.left + 1 && title.right <= buttons[1].left + 1 : title.right <= buttons[0].left + 1;
+      headerFits = centered && controlsFit && buttons.every(button => Math.abs(button.width - 44) < 1);
+    }
+    return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped, cardHeightSpread, headerFits };
   }, mode === 'enlarged');
   assert(!geometry.pageOverflow && !geometry.dialogOverflow, JSON.stringify(geometry));
   assert.deepEqual(geometry.clipped, [], `${mode}: visible copy and actions must fit: ${JSON.stringify(geometry.clipped)}`);
   assert(geometry.cardHeightSpread <= 1, `${mode}: inventory cards retain equal heights`);
+  assert(geometry.headerFits, `${mode}: Home selector titles must clear Back and Close`);
   return geometry;
 }
 
@@ -71,18 +82,26 @@ try {
           return await checkReflow(page);
         } finally { await page.close(); }
       });
-      for (const name of ['filters', 'home-make', 'make', 'preferences', 'import', 'sell', 'import-guide', 'sell-guide']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
+      for (const name of ['filters', 'home-make', 'home-model', 'home-price', 'make', 'listing-filters', 'listing-transmission', 'listing-price', 'listing-equipment', 'preferences', 'import', 'sell', 'import-guide', 'sell-guide']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
         const page = await context.newPage();
         page.setDefaultNavigationTimeout(60000);
-        const route = name === 'make' ? '/listing-grid' : name.startsWith('import') ? '/contact?topic=import' : name.startsWith('sell') ? '/contact?topic=trade-in' : '';
+        const route = name === 'make' || name.startsWith('listing-') ? '/listing-grid' : name.startsWith('import') ? '/contact?topic=import' : name.startsWith('sell') ? '/contact?topic=trade-in' : '';
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });
-          if (name === 'filters' || name === 'home-make') {
+          if (name === 'filters' || name.startsWith('home-')) {
             await page.locator('.dn-quick-search__trigger').click();
-            if (name === 'home-make') await page.locator('.dn-quick-search__filter-row').first().click();
-          } else if (name === 'make') {
+            if (name === 'home-make' || name === 'home-model') await page.locator('.dn-quick-search__filter-row[data-view=make]').click();
+            if (name === 'home-model') {
+              await page.getByRole('button', { name: 'Mercedes-Benz', exact: true }).click();
+              await page.locator('.dn-quick-search__mobile-footer button').click();
+            }
+            if (name === 'home-price') await page.locator('.dn-quick-search__filter-row[data-view=price]').click();
+          } else if (name === 'make' || name.startsWith('listing-')) {
             await page.locator('.dn-listing-filter__toggle').click();
-            await page.locator('.dn-mobile-filter-fields button').nth(1).click();
+            if (name !== 'listing-filters') {
+              const field = name === 'listing-price' ? 'price' : name === 'listing-equipment' ? 'equipment' : name === 'listing-transmission' ? 'transmission' : 'make';
+              await page.locator(`.dn-mobile-filter-fields button[data-field=${field}]`).click();
+            }
           } else if (name === 'preferences') {
             const trigger = page.locator('.dn-mobile-bottom-nav button');
             await trigger.click();

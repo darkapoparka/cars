@@ -1,5 +1,6 @@
 import { normalizeFilters } from './filters';
 import { defaultFilters, type Filters } from './types';
+import { clearMakeSelections } from './make-selection';
 
 export const showroomFilterTabs = [
   { value: 'search', label: 'Search' },
@@ -12,6 +13,23 @@ export const showroomFilterTabs = [
 ] as const;
 export type ShowroomFilterTab = (typeof showroomFilterTabs)[number]['value'];
 export type ShowroomMoreSection = 'mileage' | 'transmission' | 'body';
+export type ShowroomQuickFilter =
+  Exclude<ShowroomFilterTab, 'more'> | 'mileage' | 'gearbox' | 'body';
+
+export function clearShowroomQuickFilter(filters: Filters, key: ShowroomQuickFilter): Filters {
+  const patches: Record<ShowroomQuickFilter, Partial<Filters>> = {
+    make: clearMakeSelections(),
+    price: { minPrice: '', maxPrice: '' },
+    year: { minYear: '', maxYear: '' },
+    mileage: { minMileage: '', maxMileage: '' },
+    fuel: { fuel: [] },
+    gearbox: { transmission: [] },
+    body: { body: [] },
+    condition: { condition: [] },
+    search: { query: '' },
+  };
+  return normalizeFilters({ ...filters, ...patches[key] });
+}
 
 export function showroomMoreSection(value: string | null): ShowroomMoreSection | null {
   return value === 'mileage' || value === 'transmission' || value === 'body' ? value : null;

@@ -167,7 +167,7 @@ test('desktop sorting and view changes retain filters and keyboard menu behavior
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/en/inventory?brand=BMW&q=X3&maxPrice=50000&view=4&lang=en');
 	const hero = page.locator('.inventory-hero');
-	await expect(hero.locator('.site-filter-trigger')).toHaveCount(6);
+	await expect(hero.locator('.site-filter-trigger')).toHaveCount(5);
 	await expect(hero.getByRole('button', { name: 'All filters', exact: true })).toBeVisible();
 	await expect(hero.getByRole('button', { name: 'Make: BMW', exact: true })).toBeVisible();
 	const model = hero.getByRole('button', { name: 'Model: X3', exact: true });

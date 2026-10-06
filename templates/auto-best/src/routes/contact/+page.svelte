@@ -49,7 +49,7 @@
       <div class="dn-contact-location" aria-labelledby="contact-location-title">
         <div class="dn-contact-location__heading">
           <h2 id="contact-location-title">{i18n.t("m_8647c430b400", { p0: i18n.dealer('city') })}</h2>
-          <p>{i18n.dealer('address')} · {i18n.dealer('appointment')}</p>
+          <p>{i18n.dealer('address')}</p>
         </div>
         <ShowroomMap />
       </div>

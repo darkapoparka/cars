@@ -9,15 +9,12 @@
   import EntryAction from '$components/ui/entry/EntryAction.svelte';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import VehicleQuickSearch from './VehicleQuickSearch.svelte';
-  import { emptyListingDraft, listingFiltersFromDraft } from '$data/listing-draft';
-  import VehicleDiscoveryForm from '$components/listing/VehicleDiscoveryForm.svelte';
-  import VehicleSearchDialog from '$components/listing/VehicleSearchDialog.svelte';
+  import HomeBrowseBox from './HomeBrowseBox.svelte';
   import { resolveImportUrl } from '$data/company';
   import { listingBudgetCaps } from '$data/listing';
   import { formatPrice, currencySymbol } from '$lib/locale/core';
 
   const budgetCaps = listingBudgetCaps();
-  let desktopFilters = $state(listingFiltersFromDraft(emptyListingDraft()));
   let mode = $state<'buy' | 'import'>('buy');
   let importUrl = $state('');
   let importError = $state('');
@@ -72,11 +69,7 @@
         </form>
       </div>
       <div class="dn-search__desktop-form">
-        <VehicleSearchDialog filters={desktopFilters}>
-          {#snippet children(openFilters, filtersOpen)}
-            <VehicleDiscoveryForm filters={desktopFilters} {openFilters} {filtersOpen} onDraftChange={(filters) => desktopFilters = filters} showFilterAction={false} enableSticky={false} />
-          {/snippet}
-        </VehicleSearchDialog>
+        <HomeBrowseBox />
       </div>
     </EntryCard>
 
@@ -95,8 +88,6 @@
   .dn-search-wrap {
     --dn-home-search-top: var(--dn-route-hero-control-top);
     --dn-discovery-width: min(var(--dn-content), calc(100% - 48px));
-    --dn-discovery-padding: 18px;
-    --dn-discovery-radius: 16px;
 
     position: relative;
     z-index: 20;
@@ -117,15 +108,20 @@
     display: none;
   }
 
-  @media (min-width: 992px) {
-    .dn-search-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); margin-bottom: 34px; }
-    .dn-search-wrap > .container { width: var(--dn-discovery-width); }
+  @media (min-width: 768px) {
+    .dn-search-wrap { min-height: calc(var(--dn-route-hero-height) - var(--dn-home-search-top)); padding-bottom: var(--dn-space-8); }
     .dn-search-wrap :global(.dn-search) {
-      padding: var(--dn-discovery-padding);
+      padding: 0;
       border: 0;
-      border-radius: var(--dn-discovery-radius);
-      box-shadow: 0 12px 32px rgb(32 35 41 / 6%);
+      border-radius: var(--dn-pill);
+      background: transparent;
+      box-shadow: none;
     }
+  }
+
+  @media (min-width: 992px) {
+    .dn-search-wrap { --dn-discovery-width: min(var(--dn-hero-center-width), calc(100% - 48px)); }
+    .dn-search-wrap > .container { width: var(--dn-discovery-width); }
   }
 
   @media (max-width: 991px) {

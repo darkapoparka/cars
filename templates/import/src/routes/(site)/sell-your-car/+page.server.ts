@@ -16,6 +16,7 @@ export const load: PageServerLoad = ({ url, locals }) => {
 			locals.localeState.locale
 		),
 		vin: url.searchParams.get('vin') ?? '',
+		desktopMode: url.searchParams.get('mode') === 'manual' ? 'manual' : 'vin',
 		mobileCopy: localizedCopy(sellCarMobileCopy, locals.localeState.locale),
 		mobileSteps: localizedCopy(auxeroSellMobileSteps, locals.localeState.locale),
 		steps: localizedCopy(auxeroSellSteps, locals.localeState.locale)

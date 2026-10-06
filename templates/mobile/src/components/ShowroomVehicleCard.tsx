@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState } from 'react';
@@ -14,20 +15,20 @@ import { togglePark, useAppState } from '@/lib/store';
 const s = stylex.create({
   card: {
     position: 'relative',
+    display: { default: 'block', '@media (min-width: 1024px)': 'flex' },
+    flexDirection: 'column',
     minWidth: 0,
     backgroundColor: colors.background,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: { default: 'transparent', '@media (max-width: 699px)': colors.cardLine },
-    borderRadius: 16,
-    boxShadow: {
-      default: '0 1px 4px rgba(27, 27, 33, 0.08)',
-      '@media (max-width: 699px)': '0 3px 12px rgba(27, 27, 33, 0.035)',
-    },
+    borderColor: colors.cardLine,
+    borderRadius: { default: 16, '@media (min-width: 1024px)': showroomDesktop.panelRadius },
+    boxShadow: '0 3px 12px rgba(27, 27, 33, 0.035)',
     overflow: 'hidden',
   },
   photo: {
     position: 'relative',
+    flexShrink: 0,
     aspectRatio: '16 / 10',
     margin: { default: 12, '@media (min-width: 1024px)': 8 },
     marginBottom: 0,
@@ -38,7 +39,12 @@ const s = stylex.create({
   link: {
     display: 'block',
     textDecoration: 'none',
-    '::after': { content: '""', position: 'absolute', inset: 0, borderRadius: 16 },
+    '::after': {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      borderRadius: { default: 16, '@media (min-width: 1024px)': showroomDesktop.panelRadius },
+    },
   },
   image: { objectFit: 'cover' },
   save: {
@@ -72,12 +78,26 @@ const s = stylex.create({
     borderRadius: 18,
     backgroundColor: colors.background,
   },
-  body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 6 },
+  body: {
+    padding: { default: 12, '@media (min-width: 1024px)': 14 },
+    flexGrow: { default: 0, '@media (min-width: 1024px)': 1 },
+    fontFamily: {
+      default: 'inherit',
+      '@media (min-width: 1024px)': '"Mobile UI", Arial, sans-serif',
+    },
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { default: 6, '@media (min-width: 1024px)': 8 },
+  },
   title: {
     minWidth: 0,
     fontSize: { default: 18, '@media (max-width: 699px)': 17, '@media (min-width: 1024px)': 16 },
-    lineHeight: '24px',
-    fontWeight: { default: 700, '@media (max-width: 699px)': 500 },
+    lineHeight: { default: '24px', '@media (min-width: 1024px)': '22px' },
+    fontWeight: {
+      default: 700,
+      '@media (max-width: 699px)': 500,
+      '@media (min-width: 1024px)': 400,
+    },
     overflowWrap: 'anywhere',
   },
   titleText: {
@@ -92,6 +112,7 @@ const s = stylex.create({
     flexWrap: {
       default: 'wrap',
       '@media (max-width: 699px)': 'nowrap',
+      '@media (min-width: 1024px)': 'nowrap',
     },
     gap: 4,
   },
@@ -104,16 +125,22 @@ const s = stylex.create({
   },
   fuelFact: { flexShrink: { default: 0, '@media (max-width: 699px)': 1 } },
   price: {
-    fontSize: { default: 20, '@media (max-width: 699px)': 18, '@media (min-width: 1024px)': 18 },
+    marginTop: { default: 0, '@media (min-width: 1024px)': 'auto' },
+    fontSize: { default: 20, '@media (max-width: 699px)': 18, '@media (min-width: 1024px)': 20 },
     lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
-    fontWeight: { default: 700, '@media (max-width: 699px)': 400 },
+    fontWeight: {
+      default: 700,
+      '@media (max-width: 699px)': 400,
+      '@media (min-width: 1024px)': 600,
+    },
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   },
   fact: {
     minWidth: 0,
-    maxWidth: 'calc(50% - 2px)',
-    flexShrink: 0,
+    maxWidth: { default: 'calc(50% - 2px)', '@media (min-width: 1024px)': '100%' },
+    justifySelf: 'start',
+    flexShrink: { default: 0, '@media (min-width: 1024px)': 1 },
     paddingInline: 6,
     paddingBlock: 2,
     borderRadius: 4,
@@ -125,6 +152,7 @@ const s = stylex.create({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
+  phoneFact: { display: { default: 'inline', '@media (min-width: 1024px)': 'none' } },
 });
 
 export function ShowroomVehicleCard({
@@ -227,6 +255,7 @@ export function ShowroomVehicleCard({
               {...stylex.props(
                 s.fact,
                 key === 'fuel' && s.fuelFact,
+                key === 'transmission' && s.phoneFact,
                 key === 'transmission' && hideTransmission && s.hiddenFact,
               )}
             >

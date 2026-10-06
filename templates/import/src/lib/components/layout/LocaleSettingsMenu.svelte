@@ -92,4 +92,9 @@
 		justify-content: flex-start;
 		white-space: normal;
 	}
+	@media (min-width: 768px) {
+		.locale-settings-menu > button:hover {
+			background: var(--bc-control-hover);
+		}
+	}
 </style>

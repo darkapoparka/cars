@@ -44,7 +44,7 @@ try {
           await page.locator('.dn-quick-search__trigger').click();
           await frame(page.locator('.dn-quick-search__input-wrap'), 44, 18);
           assert.equal(await page.locator('#quick-search-input').evaluate(el => getComputedStyle(el).fontSize), '18px');
-          await frame(page.locator('.dn-quick-search__filter-row').first(), 44, 16);
+          await frame(page.locator('.dn-quick-search__filter-row').first(), 48, 16);
           assert.equal(await page.locator('.dn-quick-search__filter-row > span').first().evaluate(el => getComputedStyle(el).fontSize), '14px');
           await frame(page.locator('.dn-quick-search__mobile-footer button'), 44, 16);
           await page.screenshot({ path: `${output}/${locale}-${width}-home.png` });
@@ -61,29 +61,34 @@ try {
           const labelWeight = await page.locator('.dn-quick-search__filter-row strong').first().evaluate(el => getComputedStyle(el).fontWeight);
           assert.equal(labelWeight, '500');
           await page.locator('.dn-quick-search__filter-row').first().click();
-          await frame(page.locator('.dn-quick-search__option').first(), 44, 16, true);
+          await frame(page.locator('.dn-quick-search__option').first(), 48, 16, true);
           await page.keyboard.press('Escape');
           await page.keyboard.press('Escape');
         } else if (flow === 'listing') {
           await page.locator('.dn-listing-filter__toggle').click();
-          await frame(page.locator('.dn-listing-filter__dialog-search'), 44);
-          assert.equal(await page.locator('.dn-listing-filter__dialog-search input').evaluate(el => getComputedStyle(el).fontSize), '18px');
-          await frame(page.locator('.dn-mobile-filter-fields button').first(), 44, 16);
+          await frame(page.locator('#dn-listing-filter-dialog .search-field'), 44);
+          assert.equal(await page.locator('#dn-listing-dialog-query').evaluate(el => getComputedStyle(el).fontSize), '18px');
+          await frame(page.locator('.dn-mobile-filter-fields button').first(), 48, 16);
           await frame(page.locator('.dn-listing-filter__dialog-submit'), 44, 16);
           await page.screenshot({ path: `${output}/${locale}-${width}-listing.png` });
-          await page.locator('.dn-mobile-filter-fields button').nth(1).click();
-          const picker = page.locator('#dn-dialog-choice');
+          await page.locator('.dn-mobile-filter-fields button[data-field=make]').click();
+          const picker = page.locator('.dn-mobile-filter-editor');
           await frame(picker.locator('.search-field'), 44);
           await frame(picker.locator('.search-field input'), 44, 18);
-          await frame(picker.locator('.choice:visible').first(), 44, 16);
-          await frame(picker.locator('.clear'), 44, 16);
-          await frame(picker.locator('.apply'), 44, 16);
+          await frame(picker.locator('.choice:visible').first(), 48, 16);
+          await frame(page.locator('#dn-listing-filter-dialog .dn-mobile-filter-editor-footer button[type=submit]'), 44, 16);
           await page.screenshot({ path: `${output}/${locale}-${width}-picker.png` });
           await page.keyboard.press('Escape');
           await page.keyboard.press('Escape');
+          await page.locator('.dn-listing-filter__quick button').filter({ hasText: locale === 'bg' ? /^Марка$/ : /^Make$/ }).click();
+          const quick = page.locator('#dn-quick-filter');
+          await frame(quick.locator('.choice:visible').first(), 48, 16);
+          await frame(quick.locator('.clear'), 44, 16);
+          await frame(quick.locator('.apply'), 44, 16);
+          await page.keyboard.press('Escape');
         } else {
           const entry = page.locator('#import-service-field');
-          await frame(entry, 44, 18);
+          await frame(entry, 48, 18);
           await frame(page.locator('.dn-service-entry__submit:visible'), 44, 16);
           await entry.click();
           const editor = page.locator('.dn-service-editor[open]');
@@ -92,6 +97,12 @@ try {
           await frame(editor.locator('.dn-service-editor__cancel'), 44, 16);
           await page.screenshot({ path: output + '/' + locale + '-' + width + '-entry.png' });
           await page.setViewportSize({ width, height: 420 });
+          await page.waitForFunction(() => {
+            const save = document.querySelector('.dn-service-editor[open] .dn-service-editor__save');
+            if (!save) return false;
+            const box = save.getBoundingClientRect();
+            return box.top >= 0 && box.bottom <= innerHeight;
+          });
           const save = await editor.locator('.dn-service-editor__save').boundingBox();
           assert(save.y >= 0 && save.y + save.height <= 420);
           await page.keyboard.press('Escape');
@@ -101,7 +112,7 @@ try {
         assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
         assert.deepEqual(errors, []);
         return {
-          locale, width, flow, fieldFrame: 44, overviewRow: 44,
+          locale, width, flow, fieldFrame: flow === 'service' ? 48 : 44, overviewRow: 48,
           fieldFont: 18, optionFont: 16, compactOptionFont: 16, actionFont: 16
         };
       } finally { await page.close(); }

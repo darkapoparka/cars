@@ -77,6 +77,15 @@
 	.locale-trigger--button:hover {
 		background: var(--bc-surface);
 	}
+	@media (min-width: 768px) {
+		.locale-trigger--button {
+			border-color: transparent;
+		}
+		.locale-trigger--button:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+	}
 	.locale-trigger__copy {
 		display: grid;
 		gap: 3px;

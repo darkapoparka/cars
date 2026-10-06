@@ -5,34 +5,14 @@
 	import { page } from '$app/state';
 	import { site, type SocialLink } from '$lib/config/site';
 	import { siteShellCopy } from '$lib/content/site-shell';
-	import {
-		Facebook01Icon,
-		InstagramIcon,
-		TiktokIcon,
-		YoutubeIcon
-	} from '@hugeicons/core-free-icons';
-	const brandIcons = {
-		facebook: Facebook01Icon,
-		instagram: InstagramIcon,
-		tiktok: TiktokIcon,
-		youtube: YoutubeIcon
-	};
-	const svgAttributes = (attributes: Record<string, string | number>) =>
-		Object.fromEntries(
-			Object.entries(attributes)
-				.filter(([name]) => name !== 'key')
-				.map(([name, value]) => [
-					name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`),
-					value
-				])
-		);
+	import { socialBrandMarks } from './social-brand-marks';
 	let {
 		links = site.socials ?? [],
 		tone = 'light',
 		align = 'center'
 	}: {
 		links?: readonly SocialLink[];
-		tone?: 'light' | 'dark' | 'glass';
+		tone?: 'light' | 'dark' | 'glass' | 'plain';
 		align?: 'start' | 'center';
 	} = $props();
 </script>
@@ -42,6 +22,7 @@
 		class="social-links"
 		class:social-links--dark={tone === 'dark'}
 		class:social-links--glass={tone === 'glass'}
+		class:social-links--plain={tone === 'plain'}
 		class:social-links--start={align === 'start'}
 		aria-label={siteShellCopy[page.data.locale === 'en' ? 'en' : 'bg'].socialMedia}
 	>
@@ -53,11 +34,9 @@
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				{#if tone === 'glass'}
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-						{#each brandIcons[link.platform] as [tag, attributes], index (index)}
-							<svelte:element this={tag} {...svgAttributes(attributes)} />
-						{/each}
+				{#if tone === 'glass' || tone === 'plain'}
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<path d={socialBrandMarks[link.platform]} />
 					</svg>
 				{:else}
 					<img
@@ -108,6 +87,9 @@
 		background: var(--bc-white);
 		color: var(--bc-ink);
 	}
+	.social-links--plain a {
+		background: transparent;
+	}
 	.social-links img,
 	.social-links svg {
 		width: 24px;
@@ -116,14 +98,18 @@
 		object-fit: contain;
 	}
 	@media (min-width: 768px) {
+		.social-links a:hover,
+		.social-links--dark a:hover {
+			background: var(--bc-control-hover);
+		}
 		.social-links--glass a {
-			border: 1px solid var(--bc-desktop-hero-quiet-border);
+			border: 1px solid transparent;
 			background: var(--bc-desktop-hero-quiet-surface);
 			color: var(--bc-desktop-hero-ink);
 		}
 		.social-links--glass a:hover {
-			border-color: var(--bc-desktop-hero-copy);
-			background: var(--bc-desktop-hero-quiet-hover);
+			border-color: transparent;
+			background: var(--bc-control-hover);
 		}
 	}
 </style>

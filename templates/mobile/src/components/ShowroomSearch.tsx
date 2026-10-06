@@ -28,6 +28,20 @@ const s = stylex.create({
     outlineOffset: 3,
     backgroundColor: { default: colors.controlSurface, ':active': colors.surface },
   },
+  bannerTrigger: {
+    width: { default: 'calc(100% - 32px)', '@media (min-width: 1024px)': '100%' },
+    marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
+    minHeight: { default: 44, '@media (min-width: 1024px)': 60 },
+    paddingLeft: { default: 12, '@media (min-width: 1024px)': 20 },
+    paddingRight: { default: 12, '@media (min-width: 1024px)': 20 },
+    borderRadius: { default: 12, '@media (min-width: 1024px)': 30 },
+    backgroundColor: {
+      default: colors.controlSurface,
+      ':active': colors.surface,
+      '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
+    },
+    boxShadow: { default: 'none', '@media (min-width: 1024px)': '0 8px 24px rgba(14,25,36,.12)' },
+  },
   text: {
     flex: '1',
     minWidth: 0,
@@ -78,10 +92,12 @@ export function ShowroomSearch({
   label,
   value,
   onOpen,
+  inBanner = false,
 }: {
   label: string;
   value: string;
   onOpen: (button: HTMLButtonElement) => void;
+  inBanner?: boolean;
 }) {
   const { t } = useLocale();
   return (
@@ -91,7 +107,7 @@ export function ShowroomSearch({
       aria-haspopup="dialog"
       title={value || undefined}
       onClick={(event) => onOpen(event.currentTarget)}
-      {...stylex.props(s.search, s.trigger)}
+      {...stylex.props(s.search, s.trigger, inBanner && s.bannerTrigger)}
     >
       <Icon name="search" size={20} />
       <span {...stylex.props(s.text, Boolean(value) && s.value)}>{value || t(label)}</span>

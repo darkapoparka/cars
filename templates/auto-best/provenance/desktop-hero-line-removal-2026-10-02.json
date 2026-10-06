@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-02",
+  "tool": "Built-in image_gen (edit)",
+  "purpose": "Remove decorative red curves from the approved desktop About and Contact/service scenes. These remain decorative campaign artwork, not photographs of the dealer premises or inventory.",
+  "prompt": "Use case: precise-object-edit. Asset type: existing website hero background, 2160 by 720 pixels, a wide 3:1 banner. The referenced file is the edit target, not an inspiration reference. Remove ONLY the thin decorative red curved lines in the upper left and upper right background. Fill the removed line areas with the existing dark background and gray halftone dots so the repair is invisible. Keep exactly the same two cars, their paint, mirrors, grilles, wheels, brake calipers, badges, light shapes, sharpness, scale, position, crop, camera perspective, lighting, floor, reflections, subtle gray dot patterns and dark empty center. Keep the original canvas and all vehicle geometry unchanged. Do not remove red details belonging to the cars. Do not add elements, text, borders, decorative graphics, logos, highlights, new patterns, or objects. Deliver the same composition without the two red background curves.",
+  "export": "Generated 2172 by 724 PNGs converted to 2160 by 720 WebP quality 88; same 3:1 aspect ratio, no crop.",
+  "assets": [
+    {
+      "scene": "about",
+      "input": "static/assets/images/lead/auto-best-desktop-home-v2.webp",
+      "generated": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-ee4f6ec5-bf2f-4a3c-8597-fc007068645d.png",
+      "output": "static/assets/images/lead/auto-best-desktop-home-v3.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 78096,
+      "sha256": "da2e4c41f9bfd36101521d63b2bf84238fe653157437162a52545ed04443af59"
+    },
+    {
+      "scene": "contact and service entries, including leasing",
+      "input": "static/assets/images/lead/auto-best-desktop-inventory-v2.webp",
+      "generated": "C:/Users/radev/.codex/generated_images/01a0f637-14fa-7292-8291-55b0b4f0e12f/exec-3fd36417-772e-4cb7-aacf-479515248783.png",
+      "output": "static/assets/images/lead/auto-best-desktop-inventory-v3.webp",
+      "width": 2160,
+      "height": 720,
+      "bytes": 80096,
+      "sha256": "46c5b48faa1e5a2e62210d69399be31521cef75c7604f03c701fa2da06e01256"
+    }
+  ]
+}

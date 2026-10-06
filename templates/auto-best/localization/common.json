@@ -27,6 +27,54 @@
     "en": "Make and model",
     "bg": "Марка и модел"
   },
+  "inventory.filters.priceYearMileage": {
+    "en": "Price, year & mileage",
+    "bg": "Цена, година и пробег"
+  },
+  "inventory.filters.specifications": {
+    "en": "Specifications",
+    "bg": "Характеристики"
+  },
+  "inventory.filters.main": {
+    "en": "Main",
+    "bg": "Основни"
+  },
+  "inventory.filters.mileageLimit": {
+    "en": "Mileage up to",
+    "bg": "Пробег до"
+  },
+  "inventory.filters.more": {
+    "en": "More",
+    "bg": "Още"
+  },
+  "inventory.filters.details": {
+    "en": "Details",
+    "bg": "Данни"
+  },
+  "inventory.equipment.search": {
+    "en": "Search features…",
+    "bg": "Търсене на екстри…"
+  },
+  "inventory.equipment.comfort": {
+    "en": "Comfort",
+    "bg": "Комфорт"
+  },
+  "inventory.equipment.assistance": {
+    "en": "Driver assistance",
+    "bg": "Помощни системи"
+  },
+  "inventory.equipment.multimedia": {
+    "en": "Multimedia",
+    "bg": "Мултимедия"
+  },
+  "inventory.equipment.drivetrain": {
+    "en": "Drivetrain",
+    "bg": "Задвижване"
+  },
+  "inventory.equipment.other": {
+    "en": "Other features",
+    "bg": "Други екстри"
+  },
   "inventory.search.clearMakeModel": {
     "en": "Clear make and model",
     "bg": "Изчисти марка и модел"
@@ -655,6 +703,7 @@
   "company.team.title": { "en": "Our team", "bg": "Нашият екип" },
   "company.team.demo": { "en": "Demo profiles", "bg": "Демонстрационни профили" },
   "company.team.contact": { "en": "Contact", "bg": "Контакт" },
+  "company.team.contactUs": { "en": "Contact us", "bg": "Свържете се" },
   "company.team.sales": { "en": "Sales", "bg": "Продажби" },
   "company.team.import": { "en": "Vehicle imports", "bg": "Внос на автомобили" },
   "company.team.finance": { "en": "Financing", "bg": "Финансиране" },

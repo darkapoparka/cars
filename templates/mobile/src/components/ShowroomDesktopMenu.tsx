@@ -9,6 +9,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { showroomNavigation } from './showroom-navigation';
 
 const s = stylex.create({
@@ -42,14 +43,14 @@ const s = stylex.create({
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
-    minHeight: 44,
-    paddingInline: 12,
-    borderWidth: 1,
+    width: 48,
+    minHeight: 48,
+    padding: 0,
+    borderWidth: 0,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 12,
-    backgroundColor: { default: colors.background, ':hover': colors.stripe },
+    borderRadius: 24,
+    backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     color: colors.text,
     fontSize: 14,
     fontWeight: 600,
@@ -61,6 +62,13 @@ const s = stylex.create({
     outlineStyle: { default: 'none', ':focus-visible': 'solid' },
   },
   triggerOpen: { backgroundColor: colors.stripe },
+  triggerHero: {
+    borderWidth: 0,
+    backgroundColor: { default: 'transparent', ':hover': 'rgba(255, 255, 255, .12)' },
+    color: '#fff',
+    outlineColor: '#fff',
+  },
+  triggerHeroOpen: { backgroundColor: 'rgba(255, 255, 255, .12)' },
   panel: {
     position: 'absolute',
     top: 'calc(100% + 6px)',
@@ -72,19 +80,19 @@ const s = stylex.create({
     overscrollBehavior: 'contain',
     display: 'grid',
     gap: 4,
-    padding: 10,
+    padding: 8,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 14,
+    borderColor: colors.cardLine,
+    borderRadius: showroomDesktop.panelRadius,
     backgroundColor: colors.background,
     color: colors.text,
-    boxShadow: '0 8px 24px rgba(20, 24, 32, .10)',
+    boxShadow: '0 12px 32px rgba(20, 24, 32, .12)',
   },
   link: {
     display: 'flex',
     alignItems: 'center',
-    gap: 10,
+    gap: 12,
     minHeight: 48,
     paddingBlock: 8,
     paddingInline: 12,
@@ -96,14 +104,17 @@ const s = stylex.create({
     lineHeight: '22px',
     textDecoration: 'none',
     outlineColor: colors.text,
-    outlineOffset: -2,
+    outlineOffset: -3,
+    outlineWidth: 2,
+    outlineStyle: { default: 'none', ':focus-visible': 'solid' },
   },
   current: { backgroundColor: colors.stripe, fontWeight: 600 },
   linkLabel: { flex: '1', minWidth: 0 },
   icon: { flexShrink: 0, color: colors.muted },
+  currentIcon: { color: colors.text },
 });
 
-export function ShowroomDesktopMenu() {
+export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }) {
   const { t } = useLocale();
   const { filters, inventorySort } = useAppState();
   const pathname = usePathname();
@@ -167,6 +178,7 @@ export function ShowroomDesktopMenu() {
         ref={trigger}
         type="button"
         data-desktop-menu-trigger
+        data-desktop-menu-surface={overHero ? 'hero' : undefined}
         aria-label={t(open ? 'Close menu' : 'Open menu')}
         aria-expanded={open}
         aria-controls={open ? id : undefined}
@@ -177,10 +189,18 @@ export function ShowroomDesktopMenu() {
           setOpen(true);
           requestAnimationFrame(() => focusLink(event.key === 'ArrowUp' ? -1 : 0));
         }}
-        {...stylex.props(s.trigger, open && s.triggerOpen)}
+        {...stylex.props(
+          s.trigger,
+          open && s.triggerOpen,
+          overHero && s.triggerHero,
+          overHero && open && s.triggerHeroOpen,
+        )}
       >
-        {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
-        <span>{t('Menu')}</span>
+        {open ? (
+          <X size={30} strokeWidth={1.8} aria-hidden="true" />
+        ) : (
+          <Menu size={30} strokeWidth={1.8} aria-hidden="true" />
+        )}
       </button>
       {open && (
         <nav
@@ -220,7 +240,7 @@ export function ShowroomDesktopMenu() {
                 size={20}
                 strokeWidth={1.8}
                 aria-hidden="true"
-                {...stylex.props(s.icon)}
+                {...stylex.props(s.icon, pathname === href && s.currentIcon)}
               />
               <span {...stylex.props(s.linkLabel)}>{t(label)}</span>
               <ChevronRight size={16} aria-hidden="true" {...stylex.props(s.icon)} />

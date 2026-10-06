@@ -3,34 +3,50 @@ import { useLocale } from '@/lib/use-locale';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { vehicles } from '@/lib/catalog';
 import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
 import { importCountryLabel, importExamplesFor, type ImportCountry } from '@/lib/showroom-services';
 
 const s = stylex.create({
   section: { minWidth: 0 },
-  heading: { fontSize: 16, fontWeight: 600, lineHeight: '24px', marginBottom: 10 },
+  heading: {
+    fontSize: { default: 16, '@media (min-width: 1024px)': 18 },
+    fontWeight: { default: 600, '@media (min-width: 1024px)': 500 },
+    lineHeight: '24px',
+    marginBottom: { default: 10, '@media (min-width: 1024px)': 16 },
+  },
   grid: {
     display: 'grid',
     gridTemplateColumns: {
       default: 'minmax(0,1fr)',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
     },
-    gap: 12,
+    gap: { default: 12, '@media (min-width: 1024px)': showroomDesktop.cardGap },
   },
   card: {
     backgroundColor: colors.background,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 16,
+    borderColor: { default: colors.line, '@media (min-width: 1024px)': colors.cardLine },
+    borderRadius: { default: 16, '@media (min-width: 1024px)': showroomDesktop.panelRadius },
     overflow: 'hidden',
     minWidth: 0,
   },
   photo: { position: 'relative', aspectRatio: '16 / 10', backgroundColor: colors.surface },
   image: { objectFit: 'cover' },
-  body: { padding: 12, display: 'flex', flexDirection: 'column', gap: 3 },
-  title: { fontSize: 18, fontWeight: 600, lineHeight: '24px', overflowWrap: 'anywhere' },
+  body: {
+    padding: { default: 12, '@media (min-width: 1024px)': 14 },
+    display: 'flex',
+    flexDirection: 'column',
+    gap: { default: 3, '@media (min-width: 1024px)': 4 },
+  },
+  title: {
+    fontSize: { default: 18, '@media (min-width: 1024px)': 16 },
+    fontWeight: { default: 600, '@media (min-width: 1024px)': 500 },
+    lineHeight: '24px',
+    overflowWrap: 'anywhere',
+  },
   copy: { fontSize: 14, lineHeight: '20px', color: colors.muted },
   badge: {
     position: 'absolute',

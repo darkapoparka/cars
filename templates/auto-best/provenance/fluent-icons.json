@@ -6,7 +6,7 @@
   "license": "MIT",
   "licenseUrl": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/LICENSE",
   "noticeUrl": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/NOTICE",
-  "moduleSha256": "a24a98df223b0b5621a5c5cccb9fd4c0d970019ad98c9faa8478e43f985f7bb7",
+  "moduleSha256": "03cefa8964e6cd148b733108c035b7af1021c82f9ca8413e626d2f275666f7e9",
   "names": {
     "home": "ic_fluent_home_24_regular",
     "cars": "ic_fluent_vehicle_car_24_regular",
@@ -24,7 +24,8 @@
     "article": "ic_fluent_document_text_24_regular",
     "company": "ic_fluent_building_24_regular",
     "arrow": "ic_fluent_arrow_right_24_regular",
-    "reset": "ic_fluent_arrow_counterclockwise_24_regular"
+    "reset": "ic_fluent_arrow_counterclockwise_24_regular",
+    "back": "ic_fluent_arrow_left_24_regular"
   },
   "sources": {
     "ic_fluent_home_24_regular": {
@@ -219,6 +220,19 @@
       "paths": [
         {
           "d": "M12 4.5C16.1421 4.5 19.5 7.85786 19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 11.6236 4.52772 11.2538 4.58123 10.8923C4.64845 10.4382 4.31609 10 3.85708 10C3.48623 10 3.161 10.2562 3.10471 10.6228C3.03576 11.0718 3 11.5317 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C9.69494 3 7.59227 3.86656 6 5.29168V4.25C6 3.83579 5.66421 3.5 5.25 3.5C4.83579 3.5 4.5 3.83579 4.5 4.25V7.25C4.5 7.66421 4.83579 8 5.25 8H8.25C8.66421 8 9 7.66421 9 7.25C9 6.83579 8.66421 6.5 8.25 6.5H6.90093C8.23907 5.25883 10.0309 4.5 12 4.5Z"
+        }
+      ]
+    },
+    "ic_fluent_arrow_left_24_regular": {
+      "title": "Arrow Left",
+      "symbol": "ic_fluent_arrow_left_24_regular",
+      "url": "https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/assets/Arrow%20Left/SVG/ic_fluent_arrow_left_24_regular.svg",
+      "sha256": "746b500d735b5f6ab075151ba0588600c7bb88d43102c03b2284fd064f5080ab",
+      "geometrySha256": "c8fb4cf29bfa62c0ed52cc50047751eb372c052f452c85a2382bcc0a94891ad3",
+      "viewBox": "0 0 24 24",
+      "paths": [
+        {
+          "d": "M10.7327 19.7905C11.0326 20.0762 11.5074 20.0646 11.7931 19.7647C12.0788 19.4648 12.0672 18.99 11.7673 18.7043L5.51587 12.7497L20.25 12.7497C20.6642 12.7497 21 12.4139 21 11.9997C21 11.5855 20.6642 11.2497 20.25 11.2497L5.51577 11.2497L11.7673 5.29502C12.0672 5.00933 12.0787 4.5346 11.7931 4.23467C11.5074 3.93475 11.0326 3.9232 10.7327 4.20889L3.31379 11.2756C3.14486 11.4365 3.04491 11.6417 3.01393 11.8551C3.00479 11.9019 3 11.9503 3 11.9997C3 12.0493 3.00481 12.0977 3.01398 12.1446C3.04502 12.3579 3.14496 12.563 3.31379 12.7238L10.7327 19.7905Z"
         }
       ]
     }

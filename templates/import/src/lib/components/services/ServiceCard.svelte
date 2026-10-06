@@ -9,23 +9,34 @@
 		type ServiceDetail
 	} from '$lib/content/service-directory';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
+	import type { ServiceRequestKind } from '$lib/domain/service-request';
 	let {
 		service,
 		detail,
 		english = false,
-		priority = false
+		priority = false,
+		desktop = false,
+		onrequest
 	}: {
 		service: AuxeroSupportService;
 		detail: ServiceDetail;
 		english?: boolean;
 		priority?: boolean;
+		desktop?: boolean;
+		onrequest?: (kind: ServiceRequestKind, event: MouseEvent) => void;
 	} = $props();
 	const mobileImage = $derived(imageDelivery(service.image));
 	const desktopArtwork = $derived(serviceArtwork[service.id]);
 </script>
 
-<article class="service-card">
-	<a href={linkHref(detail.href)}>
+<article class="service-card" data-service={service.id}>
+	<a
+		href={linkHref(detail.href)}
+		aria-haspopup={desktop && detail.requestKind ? 'dialog' : undefined}
+		onclick={(event) => {
+			if (detail.requestKind) onrequest?.(detail.requestKind, event);
+		}}
+	>
 		<picture>
 			<source media="(min-width: 768px)" srcset={assetHref(desktopArtwork.src)} />
 			{#if mobileImage.srcset}<source

@@ -8,6 +8,9 @@ type ShowroomConfig = {
   email: string | null;
   address: string | null;
   directionsUrl: string | null;
+  mapEmbedUrl: string | null;
+  socialLinks: readonly { label: string; href: string }[];
+  contactPreview: boolean;
   hours: readonly string[];
 };
 
@@ -19,8 +22,46 @@ export const showroom: ShowroomConfig = {
   email: null,
   address: null,
   directionsUrl: null,
+  mapEmbedUrl: null,
+  socialLinks: [],
+  contactPreview: true,
   hours: [],
 };
+
+// Example requested for the template preview; a configured dealer address takes precedence.
+export const showroomPreviewLocation = {
+  bg: 'Варна · ул. Райко Жинзифов 41',
+  en: 'Varna · 41 Rayko Zhinzifov St.',
+};
+
+// Display-only example: never create a tel: link for this placeholder.
+export const showroomPreviewPhone = '+359 000 000 000';
+
+// Google Maps Share > Embed for the owner's existing example address.
+// Personalization replaces this with a verified mapEmbedUrl and disables contactPreview.
+const previewMapEmbedUrl =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2908.3074689030154!2d27.90437507615317!3d43.20303997112714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a4538cafcd1c7b%3A0xdb5a0d4da87b01d7!2sVarna%20CenterOdesos%2C%20ul.%20%22Rayko%20Zhinzifov%22%2041%2C%209000%20Varna!5e0!3m2!1sen!2sbg!4v1791261558768!5m2!1sen!2sbg';
+
+export function showroomContactLocation(locale: 'bg' | 'en') {
+  const preview =
+    showroom.contactPreview &&
+    !showroom.address &&
+    !showroom.directionsUrl &&
+    !showroom.mapEmbedUrl;
+  return {
+    address: preview ? showroomPreviewLocation[locale] : showroom.address,
+    embedUrl: preview ? previewMapEmbedUrl : showroom.mapEmbedUrl,
+    directionsUrl: preview
+      ? 'https://www.google.com/maps/search/?api=1&query=43.20304%2C27.90695'
+      : showroom.directionsUrl,
+    preview,
+  };
+}
+
+export const showroomPageContent = {
+  services: { title: 'Services', description: 'Import, sell or look after your car.' },
+  contact: { title: 'Contact', description: 'Ask about a car, a viewing or a service.' },
+} as const;
 
 export const showroomSorts = [
   ['standard', 'Recommended'],

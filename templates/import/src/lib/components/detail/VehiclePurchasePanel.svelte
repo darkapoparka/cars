@@ -88,7 +88,7 @@
 		<Action size="primary" onclick={oninquiry}
 			>{informationCopy.inquiry}<ArrowRight size={18} aria-hidden="true" /></Action
 		>
-		<Action href={site.contact.phoneHref} variant="strong"
+		<Action href={site.contact.phoneHref} variant="secondary"
 			><Phone size={18} aria-hidden="true" />{site.contact.phone}</Action
 		>
 	</div>

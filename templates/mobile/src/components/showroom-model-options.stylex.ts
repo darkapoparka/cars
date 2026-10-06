@@ -9,6 +9,7 @@ export const modelOptionStyles = stylex.create({
     minHeight: 0,
     overflowY: 'auto',
     scrollbarGutter: 'stable',
+    scrollbarWidth: { default: 'auto', '@media (min-width: 1024px)': 'thin' },
     overscrollBehaviorY: 'contain',
   },
   desktopExtras: {

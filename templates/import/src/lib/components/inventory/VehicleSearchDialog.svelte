@@ -349,14 +349,27 @@
 			padding-top: 0;
 		}
 		.vehicle-search__input {
+			border-color: transparent;
 			border-radius: var(--bc-radius-md);
+			background: var(--bc-control);
+		}
+		.vehicle-search__input:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.vehicle-search__input:focus-within {
+			border-color: var(--bc-focus);
+		}
+		.vehicle-search__clear-query:hover {
+			background: var(--bc-control-hover);
 		}
 		li a {
 			border-color: transparent;
 			border-radius: var(--bc-radius-md);
 		}
 		li a:hover {
-			border-color: var(--bc-border-strong);
+			border-color: transparent;
+			background: var(--bc-control-hover);
 		}
 		.vehicle-search__car strong {
 			display: -webkit-box;

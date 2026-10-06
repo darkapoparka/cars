@@ -2,7 +2,14 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import './gallery.test.mjs';
 import { defaultFilters } from '../.qa/domain/types.mjs';
-import { vehicles } from '../.qa/domain/catalog.mjs';
+// Native-capture contracts remain pinned to the four original reference fixtures.
+import {
+  capturedVehicles as vehicles,
+  vehicles as showroomVehicles,
+  demoVehicles,
+  getVehicle,
+} from '../.qa/domain/catalog.mjs';
+import { existsSync } from 'node:fs';
 import {
   normalizeFilters,
   filterVehicles,
@@ -24,6 +31,60 @@ import {
   vehiclePhotoViewerIndex,
 } from '../.qa/domain/vehicle-detail-navigation.mjs';
 const filters = (patch) => ({ ...structuredClone(defaultFilters), ...patch });
+
+test('expanded demo stock has unique routable IDs and local photos', () => {
+  assert.equal(showroomVehicles.length, 16);
+  assert.equal(demoVehicles.length, 12);
+  assert.equal(new Set(showroomVehicles.map((vehicle) => vehicle.id)).size, 16);
+  assert.deepEqual(showroomVehicles.slice(0, 4), vehicles);
+  for (const vehicle of demoVehicles) {
+    assert.equal(getVehicle(vehicle.id), vehicle);
+    assert.equal(vehicle.dealer, 'Demo showroom');
+    assert.match(vehicle.attributes.description, /Sample vehicle/);
+    assert.equal(vehicle.financeMonthly, undefined);
+    for (const image of vehicle.images) {
+      assert.ok(image.startsWith('/images/'));
+      assert.ok(existsSync(new URL('../public' + image, import.meta.url)), image);
+    }
+  }
+});
+
+test('expanded stock supports make, fuel and budget filtering with price sorting', () => {
+  assert.equal(filterVehicles(showroomVehicles, filters({ makes: ['Audi'] })).length, 3);
+  assert.equal(filterVehicles(showroomVehicles, filters({ makes: ['Mercedes-Benz'] })).length, 4);
+  assert.equal(filterVehicles(showroomVehicles, filters({ fuel: ['Diesel'] })).length, 9);
+  const before = showroomVehicles.map((vehicle) => vehicle.id);
+  const affordable = sortVehicles(
+    filterVehicles(showroomVehicles, filters({ fuel: ['Diesel'], maxPrice: '35000' })),
+    'price-asc',
+  );
+  assert.deepEqual(
+    affordable.map((vehicle) => vehicle.id),
+    ['demo-mercedes-gle-2018', 'demo-mercedes-gle-2019', 'demo-bmw-x6-2017'],
+  );
+  assert.equal(sortVehicles(showroomVehicles, 'price-asc')[0].id, 'demo-bmw-120-2025');
+  assert.deepEqual(
+    showroomVehicles.map((vehicle) => vehicle.id),
+    before,
+  );
+  for (const vehicle of demoVehicles) {
+    const modelMatches = filterVehicles(
+      showroomVehicles,
+      filters({
+        makes: [vehicle.make],
+        makeModels: { [vehicle.make]: [vehicle.model] },
+      }),
+    );
+    assert.ok(modelMatches.includes(vehicle), vehicle.id + ' must be selectable by model');
+  }
+  assert.deepEqual(
+    filterVehicles(
+      showroomVehicles,
+      filters({ makes: ['Audi'], makeModels: { Audi: ['RSQ8'] } }),
+    ).map((vehicle) => vehicle.id),
+    ['demo-audi-rs-q8-2020'],
+  );
+});
 
 test('PDP sections accept only known views and unknown fragments show details', () => {
   for (const section of ['details', 'photos', 'features']) {
@@ -273,7 +334,13 @@ test('loan arithmetic never returns NaN for invalid input', () => {
 });
 test('assistant respects budget even with cheapest wording', () => {
   assert.deepEqual(answerLocally('cheapest under 1000').ids, []);
-  assert.deepEqual(answerLocally('cheapest diesel under 55k').ids, ['bmw-540']);
+  const results = answerLocally('cheapest diesel under 55k').ids.map(getVehicle);
+  assert.equal(results.length, 3);
+  assert.ok(results.every((vehicle) => vehicle.fuel === 'Diesel' && vehicle.price <= 55000));
+  assert.equal(results[0].price, 31900);
+  assert.ok(
+    results.every((vehicle, index) => index === 0 || results[index - 1].price <= vehicle.price),
+  );
 });
 test('assistant does not invent missing electric inventory', () =>
   assert.deepEqual(answerLocally('electric under 80k').ids, []));
@@ -387,9 +454,52 @@ test('photo state rejects invalid indexes and preserves read notification state'
   assert.equal(state.readWelcome, true);
 });
 
+test('contact details restore with a message draft and old storage remains compatible', () => {
+  const old = decodeState(
+    JSON.stringify({ messageDrafts: { 'showroom-general': 'Existing enquiry' } }),
+  );
+  assert.equal(old.messageDrafts['showroom-general'], 'Existing enquiry');
+  assert.deepEqual(old.showroomContactDetails, {});
+  const state = decodeState(
+    JSON.stringify({
+      messageDrafts: { 'showroom-general': 'Could we arrange a viewing?' },
+      showroomContactDetails: {
+        'showroom-general': {
+          name: '  Alex  ',
+          phone: '+359 888 000 000',
+          email: 'alex@example.test',
+          unknown: 'discard',
+        },
+      },
+    }),
+  );
+  assert.equal(state.messageDrafts['showroom-general'], 'Could we arrange a viewing?');
+  assert.deepEqual(state.showroomContactDetails['showroom-general'], {
+    name: 'Alex',
+    phone: '+359 888 000 000',
+    email: 'alex@example.test',
+  });
+});
+
+test('contact storage bounds text and rejects invalid fields and prototype keys', () => {
+  const state = decodeState(
+    '{"showroomContactDetails":{"__proto__":{"name":"bad"},"constructor":{"name":"bad"},"":{"name":"bad"},"good":{"name":"' +
+      'a'.repeat(100) +
+      '","phone":23,"email":null}}}',
+  );
+  assert.deepEqual(Object.keys(state.showroomContactDetails), ['good']);
+  assert.deepEqual(state.showroomContactDetails.good, {
+    name: 'a'.repeat(80),
+    phone: '',
+    email: '',
+  });
+  assert.deepEqual(decodeState('{"showroomContactDetails":[]}').showroomContactDetails, {});
+});
+
 import {
   applyMakeSelection,
   clearMakeSelections,
+  clearModelSelections,
   modelsForMake,
   removeMakeSelection,
 } from '../.qa/domain/make-selection.mjs';
@@ -406,6 +516,31 @@ test('Any make clears scoped model and exclusion criteria while retaining other 
   const cleared = { ...selected, ...clearMakeSelections() };
   assert.deepEqual(parseFilters(serializeFilters(cleared)), budget);
   assert.deepEqual(filterVehicles(vehicles, cleared), filterVehicles(vehicles, budget));
+});
+test('clearing models preserves makes, whole-make exclusions and unrelated filters', () => {
+  const budget = filters({ minPrice: '20000', maxPrice: '80000', fuel: ['Diesel'] });
+  let selected = {
+    ...budget,
+    ...applyMakeSelection(budget, 'BMW', ['X6'], false, 'M Sport', { X6: 'M Sport' }),
+  };
+  selected = { ...selected, ...applyMakeSelection(selected, 'Audi', ['RS6'], false) };
+  selected = { ...selected, ...applyMakeSelection(selected, 'Mercedes-Benz', [], true) };
+  selected = {
+    ...selected,
+    ...applyMakeSelection(selected, 'BMW', ['X5'], true, 'M', { X5: 'M' }),
+  };
+  const cleared = { ...selected, ...clearModelSelections(selected) };
+  const expected = filters({
+    ...budget,
+    makes: ['BMW', 'Audi'],
+    makeModels: { BMW: [], Audi: [] },
+    excludedMakes: ['Mercedes-Benz'],
+  });
+  assert.deepEqual(parseFilters(serializeFilters(cleared)), normalizeFilters(expected));
+  assert.deepEqual(
+    filterVehicles(showroomVehicles, cleared),
+    filterVehicles(showroomVehicles, expected),
+  );
 });
 test('make-scoped model selections combine with OR across makes', () => {
   let f = filters({});
@@ -738,10 +873,84 @@ import {
   validateServiceRequestStep,
 } from '../.qa/domain/service-requests.mjs';
 import {
+  clearShowroomQuickFilter,
   showroomFilterTab,
   updateShowroomFilterDraft,
   resetShowroomFilterDraft,
 } from '../.qa/domain/showroom-filter-editor.mjs';
+
+test('removing Fuel restores matching cars without clearing Year, Price or Gearbox', () => {
+  const applied = normalizeFilters(
+    filters({
+      minYear: '2025',
+      maxYear: '2027',
+      maxPrice: '80000',
+      transmission: ['Automatic'],
+      fuel: ['Diesel'],
+    }),
+  );
+  const baseline = structuredClone(applied);
+  const next = clearShowroomQuickFilter(applied, 'fuel');
+  assert.deepEqual(applied, baseline);
+  assert.equal(next.minYear, '2025');
+  assert.equal(next.maxYear, '2027');
+  assert.equal(next.maxPrice, '80000');
+  assert.deepEqual(next.transmission, ['Automatic']);
+  assert.deepEqual(
+    filterVehicles(vehicles, applied).map((v) => v.id),
+    ['bmw-x6', 'bmw-x3'],
+  );
+  assert.deepEqual(
+    filterVehicles(vehicles, next).map((v) => v.id),
+    ['bmw-x6', 'bmw-x3', 'bmw-120'],
+  );
+});
+
+test('removing Make clears model exclusions and variant criteria while retaining budget and Fuel', () => {
+  const applied = normalizeFilters(
+    filters({
+      makes: ['BMW'],
+      models: ['X6'],
+      makeModels: { BMW: ['X6'] },
+      excludedMakes: ['Audi'],
+      excludedModels: { BMW: ['X3'] },
+      makeVariants: { BMW: 'M' },
+      excludedMakeVariants: { Audi: 'RS' },
+      modelVariants: { BMW: { X6: 'M' } },
+      excludedModelVariants: { BMW: { X3: 'M' } },
+      maxPrice: '80000',
+      fuel: ['Diesel'],
+    }),
+  );
+  const baseline = structuredClone(applied);
+  const next = clearShowroomQuickFilter(applied, 'make');
+  assert.deepEqual(applied, baseline);
+  assert.equal(next.maxPrice, '80000');
+  assert.deepEqual(next.fuel, ['Diesel']);
+  const params = new URLSearchParams(serializeFilters(next));
+  assert.deepEqual([...params.keys()], ['maxPrice', 'fuel']);
+  assert.equal(filterVehicles(vehicles, next).length, 3);
+});
+
+test('removing Mileage clears both bounds and preserves vehicle category and other ranges', () => {
+  const applied = normalizeFilters(
+    filters({
+      category: 'bike',
+      minMileage: '1000',
+      maxMileage: '20000',
+      minYear: '2020',
+      maxPrice: '10000',
+    }),
+  );
+  const next = clearShowroomQuickFilter(applied, 'mileage');
+  assert.equal(next.minMileage, '');
+  assert.equal(next.maxMileage, '');
+  assert.equal(next.category, 'bike');
+  assert.equal(next.minYear, '2020');
+  assert.equal(next.maxPrice, '10000');
+  assert.equal(applied.minMileage, '1000');
+  assert.equal(applied.maxMileage, '20000');
+});
 
 test('unified filter sections reject unknown editor URLs', () => {
   for (const value of ['search', 'make', 'price', 'year', 'fuel', 'condition', 'more'])
@@ -834,6 +1043,25 @@ test('service search finds buyout and import offerings and keeps financing and p
   assert.deepEqual(searchShowroomServices(showroomServices, 'absent service'), []);
   assert.deepEqual(searchShowroomServices(showroomServices, ''), showroomServices);
   assert.ok(showroomServices.some((service) => service.id === 'parts'));
+});
+
+test('service searches find concise card summaries and full service descriptions', () => {
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'Explore').map(({ id }) => id),
+    ['financing'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'Възможности').map(({ id }) => id),
+    ['financing'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'Discuss').map(({ id }) => id),
+    ['financing'],
+  );
+  assert.deepEqual(
+    searchShowroomServices(showroomServices, 'следващата').map(({ id }) => id),
+    ['trade-in', 'financing'],
+  );
 });
 
 test('service search URLs encode text and retain existing finance/parts deep links', () => {

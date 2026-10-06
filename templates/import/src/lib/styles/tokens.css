@@ -328,11 +328,22 @@
 	/* The public desktop theme also reaches public dialog portals. Mobile and
 	   the independently owned legacy/admin shells retain their existing values. */
 	.site-shell,
-	.site-dialog {
+	.site-dialog,
+	.desktop-home-filter__menu,
+	.site-nav-popover,
+	.site-language {
 		--bc-desktop-canvas: #fafbfc;
 		--bc-desktop-panel-surface: var(--bc-surface-raised);
 		--bc-desktop-control-surface: #f2f4f7;
 		--bc-desktop-hero-surface: #e5edf4;
+		/* Pointer hover changes the fill; selection and keyboard focus stay distinct. */
+		--bc-control-hover: color-mix(in srgb, var(--bc-ink) 5%, var(--bc-desktop-control-surface));
+		--bc-control-selected-surface: var(--bc-desktop-hero-surface);
+		--bc-control-selected-hover: color-mix(
+			in srgb,
+			var(--bc-ink) 5%,
+			var(--bc-control-selected-surface)
+		);
 		--bc-desktop-hero-ink: var(--bc-ink);
 		--bc-desktop-hero-copy: var(--bc-description-copy);
 		--bc-desktop-hero-hover: color-mix(in srgb, var(--bc-ink) 6%, var(--bc-desktop-hero-surface));
@@ -353,7 +364,7 @@
 		--bc-surface: var(--bc-desktop-control-surface);
 		--bc-surface-soft: var(--bc-desktop-panel-surface);
 		--bc-control: var(--bc-desktop-control-surface);
-		--bc-surface-hover: var(--bc-editorial-hover);
+		--bc-surface-hover: var(--bc-control-hover);
 		--bc-border: var(--bc-editorial-border);
 		--bc-border-strong: color-mix(
 			in srgb,
@@ -378,6 +389,8 @@
 	.site-shell {
 		--bc-text-meta: 0.875rem;
 		--bc-desktop-page-hero-height: 400px;
+		--bc-desktop-intake-hero-height: 240px;
+		--bc-desktop-search-height: 52px;
 		--bc-desktop-hero-title: clamp(2.5rem, 3.5vw, 3.25rem);
 		--bc-desktop-title-weight: var(--bc-weight-emphasis);
 		--bc-desktop-section-leading: 1.2;
@@ -387,9 +400,10 @@
 		--bc-desktop-hero-gap: var(--bc-space-4);
 		--bc-desktop-section-title: var(--bc-desktop-editorial-title);
 		--bc-desktop-discovery-width: 880px;
-		--bc-desktop-service-search-width: var(--bc-container-narrow);
+		--bc-desktop-service-search-width: 620px;
 		--bc-desktop-action-panel-width: var(--bc-desktop-editorial-action-width);
 		--bc-desktop-discovery-panel-height: 160px;
+		--bc-desktop-hero-panel-height: 228px;
 		--bc-desktop-card-title: 18px;
 		--bc-desktop-service-title: 22px;
 		--bc-desktop-card-price: 26px;
@@ -412,7 +426,9 @@
 
 @media (min-width: 768px) and (max-width: 900px) {
 	.site-shell {
-		--bc-desktop-page-hero-height: 450px;
+		--bc-desktop-page-hero-height: 452px;
+		--bc-desktop-intake-hero-height: 260px;
+		--bc-desktop-hero-panel-height: 312px;
 	}
 }
 

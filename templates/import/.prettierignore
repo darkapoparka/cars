@@ -23,6 +23,7 @@ PROJECT_PLAN.md
 /.codex-screenshots/
 /.playwright-mcp/
 /outputs/
+/runtime/
 /test-results/
 /tmp/
 *.audit.png

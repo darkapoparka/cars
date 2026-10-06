@@ -9,7 +9,7 @@
 		actionHref,
 		actionLabel
 	}: {
-		children: Snippet;
+		children?: Snippet;
 		steps: ComponentProps<typeof ProcessSteps>['steps'];
 		processTitle: string;
 		actionHref: string;
@@ -19,7 +19,7 @@
 
 <section class="site-section">
 	<div class="site-container intake-page">
-		<div class="site-panel site-stack service-intake">{@render children()}</div>
+		{#if children}<div class="site-panel site-stack service-intake">{@render children()}</div>{/if}
 		<div class="service-process">
 			<h2 class="site-heading">{processTitle}</h2>
 			<ProcessSteps {steps} horizontal />

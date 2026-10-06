@@ -5,7 +5,7 @@ type DesktopPageCopy = {
 	servicesCaption: string;
 	aboutCaption: string;
 	aboutCars: string;
-	aboutContact: string;
+	aboutServices: string;
 	contactEnquiry: string;
 };
 
@@ -14,8 +14,8 @@ export const desktopCopy: Record<Locale, DesktopPageCopy> = {
 		inventoryCaption: 'Сравни цена, пробег и оборудване. Избери автомобил за оглед.',
 		servicesCaption: 'Подбор, проверка и съдействие за твоя автомобил.',
 		aboutCaption: 'Подбор и внос на автомобили от Европа с проверка преди покупката.',
-		aboutCars: 'Разгледай коли',
-		aboutContact: 'Свържи се с нас',
+		aboutCars: 'Разгледай автомобили',
+		aboutServices: 'Виж услугите',
 		contactEnquiry: 'Изпрати запитване'
 	},
 	en: {
@@ -23,7 +23,7 @@ export const desktopCopy: Record<Locale, DesktopPageCopy> = {
 		servicesCaption: 'Sourcing, checks and support for your next car.',
 		aboutCaption: 'Sourcing and importing European cars, with checks before you buy.',
 		aboutCars: 'Browse our cars',
-		aboutContact: 'Contact us',
+		aboutServices: 'View services',
 		contactEnquiry: 'Send an enquiry'
 	}
 };

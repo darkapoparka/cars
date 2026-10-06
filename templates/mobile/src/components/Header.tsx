@@ -12,6 +12,7 @@ import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
 import { LanguageSwitcher } from './LanguageSwitcher';
 import { ShowroomDesktopMenu } from './ShowroomDesktopMenu';
+import { ShowroomBrandLogo } from './ShowroomBrandLogo';
 const s = stylex.create({
   header: {
     height: 60,
@@ -51,6 +52,23 @@ const s = stylex.create({
     paddingRight: { default: 8, '@media (min-width: 1024px)': 16 },
     color: colors.text,
   },
+  overHero: {
+    position: { default: 'static', '@media (min-width: 1024px)': 'relative' },
+    zIndex: { default: 'auto', '@media (min-width: 1024px)': 40 },
+    paddingLeft: { default: 16, '@media (min-width: 1024px)': 24 },
+    paddingRight: { default: 8, '@media (min-width: 1024px)': 24 },
+    backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
+    color: { default: colors.text, '@media (min-width: 1024px)': '#fff' },
+  },
+  overHeroLogo: {
+    // Fallback for personalized artwork without its own light presentation.
+    filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },
+  },
+  overHeroSticky: {
+    position: { default: 'sticky', '@media (min-width: 1024px)': 'relative' },
+    zIndex: { default: 30, '@media (min-width: 1024px)': 40 },
+  },
+  phoneLogo: { display: { default: 'block', '@media (min-width: 1024px)': 'none' } },
   actions: { display: 'flex', alignItems: 'center', gap: 0 },
   savedAction: {
     display: 'inline-flex',
@@ -97,6 +115,7 @@ export function Header({
   home = false,
   sticky = true,
   showLanguageSwitcher = false,
+  overHeroDesktop = false,
   onBack,
   backIcon = 'back',
 }: {
@@ -106,13 +125,24 @@ export function Header({
   home?: boolean;
   sticky?: boolean;
   showLanguageSwitcher?: boolean;
+  overHeroDesktop?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
 }) {
   const { t } = useLocale();
   const { parked, filters, inventorySort } = useAppState();
+  const generatedDesktopLogo = showroom.logo === '/branding/showroom-placeholder-20261002.png';
   return (
-    <header {...stylex.props(s.header, sticky && s.sticky, home && s.home)}>
+    <header
+      data-desktop-hero-header={overHeroDesktop || undefined}
+      {...stylex.props(
+        s.header,
+        sticky && s.sticky,
+        home && s.home,
+        overHeroDesktop && s.overHero,
+        overHeroDesktop && sticky && s.overHeroSticky,
+      )}
+    >
       {(back || onBack) && (
         <IconButton
           href={onBack ? undefined : back}
@@ -129,15 +159,24 @@ export function Header({
           aria-label={t(showroom.name) + ' · ' + t('Cars')}
         >
           {showroom.logo ? (
-            <Image
-              src={showroom.logo}
-              alt={t(showroom.name)}
-              width={176}
-              height={52}
-              sizes="176px"
-              priority
-              {...stylex.props(s.logo)}
-            />
+            <>
+              {generatedDesktopLogo && (
+                <ShowroomBrandLogo light={overHeroDesktop} label={t(showroom.name)} />
+              )}
+              <Image
+                src={showroom.logo}
+                alt={t(showroom.name)}
+                width={176}
+                height={52}
+                sizes="176px"
+                priority
+                {...stylex.props(
+                  s.logo,
+                  generatedDesktopLogo && s.phoneLogo,
+                  !generatedDesktopLogo && overHeroDesktop && s.overHeroLogo,
+                )}
+              />
+            </>
           ) : (
             <span {...stylex.props(s.placeholder)}>{t(showroom.name)}</span>
           )}
@@ -170,7 +209,7 @@ export function Header({
               </span>
             )}
           </span>
-          <ShowroomDesktopMenu />
+          <ShowroomDesktopMenu overHero={overHeroDesktop} />
         </div>
       ) : (
         children

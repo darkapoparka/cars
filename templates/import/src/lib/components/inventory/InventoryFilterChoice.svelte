@@ -91,4 +91,16 @@
 		object-fit: contain;
 		flex-shrink: 0;
 	}
+	@media (min-width: 768px) {
+		.filter-choice:hover {
+			background: var(--bc-control-hover);
+		}
+		.filter-choice:has(:checked) {
+			background: var(--bc-control-selected-surface);
+			font-weight: var(--bc-weight-control);
+		}
+		.filter-choice:has(:checked):hover {
+			background: var(--bc-control-selected-hover);
+		}
+	}
 </style>

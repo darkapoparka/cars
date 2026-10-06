@@ -1,5 +1,6 @@
 import { defaultFilters, type Filters, type SavedSearch } from './types';
 import { normalizeFilters } from './filters';
+export type ShowroomContactDetails = { name: string; phone: string; email: string };
 export type State = {
   filters: Filters;
   inventorySort: string;
@@ -13,6 +14,7 @@ export type State = {
   checklist: string[];
   viewed: string[];
   messageDrafts: Record<string, string>;
+  showroomContactDetails: Record<string, ShowroomContactDetails>;
   view: 'list' | 'grid';
   theme: 'light' | 'dark';
   language: string;
@@ -38,6 +40,7 @@ export function createInitialState(): State {
     checklist: [],
     viewed: [],
     messageDrafts: {},
+    showroomContactDetails: {},
     view: 'list',
     theme: 'light',
     language: 'English',
@@ -78,6 +81,12 @@ function textRecord(value: unknown): Record<string, string> {
       .map(([key, text]) => [key.slice(0, 100), String(text).slice(0, 4000)]),
   );
 }
+export function normalizeShowroomContactDetails(value: unknown): ShowroomContactDetails {
+  const data = record(value);
+  const text = (key: string, limit: number) =>
+    typeof data[key] === 'string' ? data[key].trim().slice(0, limit) : '';
+  return { name: text('name', 80), phone: text('phone', 60), email: text('email', 254) };
+}
 /** Only known, validated fields survive an old/corrupt browser-storage record. */
 export function decodeState(raw: string | null): State {
   const initial = createInitialState();
@@ -105,6 +114,14 @@ export function decodeState(raw: string | null): State {
     result.draft = textRecord(data.draft);
 
     result.messageDrafts = textRecord(data.messageDrafts);
+    result.showroomContactDetails = Object.fromEntries(
+      Object.entries(record(data.showroomContactDetails))
+        .filter(
+          ([key]) => key.length > 0 && !['__proto__', 'constructor', 'prototype'].includes(key),
+        )
+        .slice(0, 100)
+        .map(([key, value]) => [key.slice(0, 100), normalizeShowroomContactDetails(value)]),
+    );
     result.parkNotes = textRecord(data.parkNotes);
     result.parkedAt = Object.fromEntries(
       Object.entries(record(data.parkedAt))

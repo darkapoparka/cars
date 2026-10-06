@@ -13,6 +13,7 @@
 		mobileActions,
 		mobileAlign = 'start',
 		vehicleArtwork = false,
+		compact = false,
 		artworkPanelWidth,
 		titleId,
 		class: className = '',
@@ -30,11 +31,12 @@
 		mobileActions?: Snippet;
 		mobileAlign?: 'start' | 'center';
 		vehicleArtwork?: boolean;
+		compact?: boolean;
 		artworkPanelWidth?: string;
 		titleId?: string;
 		class?: string;
 		desktopDescription?: string;
-		desktopActions?: Snippet;
+		desktopActions?: Snippet<[string | undefined]>;
 		desktopSecondaryActions?: Snippet;
 		children?: Snippet;
 	} = $props();
@@ -51,7 +53,10 @@
 	class={['site-intro', 'site-desktop-only', className]}
 	class:site-intro--image={Boolean(image) || vehicleArtwork}
 	class:site-intro--cars={vehicleArtwork}
-	style:--hero-panel-width={artworkPanelWidth}
+	class:site-intro--compact={compact}
+	style:--hero-panel-width={vehicleArtwork
+		? 'var(--bc-desktop-discovery-width)'
+		: artworkPanelWidth}
 >
 	{#if vehicleArtwork}<HeroCars />{/if}
 	{#if image && !vehicleArtwork}<picture>
@@ -66,9 +71,11 @@
 		>{/if}
 	<div class="site-container site-intro__content">
 		<h1 id={titleId}>{title}</h1>
-		{#if desktopDescription ?? description}<p>{desktopDescription ?? description}</p>{/if}
+		{#if (desktopDescription ?? description) && (!vehicleArtwork || !desktopActions)}<p>
+				{desktopDescription ?? description}
+			</p>{/if}
 		{#if desktopActions}<div class="site-intro__desktop-actions">
-				{@render desktopActions()}
+				{@render desktopActions(vehicleArtwork ? (desktopDescription ?? description) : undefined)}
 			</div>{/if}
 		{#if desktopSecondaryActions}<div class="site-intro__desktop-secondary">
 				{@render desktopSecondaryActions()}
@@ -171,6 +178,9 @@
 		}
 		.site-intro--image {
 			min-height: var(--bc-desktop-page-hero-height);
+		}
+		.site-intro--compact {
+			min-height: var(--bc-desktop-intake-hero-height);
 		}
 		p {
 			max-width: 76ch;

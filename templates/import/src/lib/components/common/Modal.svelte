@@ -19,6 +19,7 @@
 		onBack,
 		backLabel,
 		onOpenAutoFocus,
+		onCloseAutoFocus,
 		onEscapeKeydown,
 		headerContent,
 		headerActions,
@@ -35,6 +36,7 @@
 		onBack?: () => void;
 		backLabel?: string;
 		onOpenAutoFocus?: (event: Event) => void;
+		onCloseAutoFocus?: (event: Event) => void;
 		onEscapeKeydown?: (event: KeyboardEvent) => void;
 		headerContent?: Snippet;
 		headerActions?: Snippet;
@@ -47,6 +49,7 @@
 		<Dialog.Overlay class="site-dialog-backdrop" />
 		<Dialog.Content
 			{onOpenAutoFocus}
+			{onCloseAutoFocus}
 			{onEscapeKeydown}
 			class={[
 				'site-dialog',
@@ -246,6 +249,9 @@
 			width: var(--bc-control-height-primary);
 			height: var(--bc-control-height-primary);
 		}
+		:global(.site-dialog__icon:hover) {
+			background: var(--bc-control-hover);
+		}
 		:global(.site-dialog:not(.site-dialog--filter):not(.site-dialog--muted)) {
 			padding: 0;
 			overflow: hidden;
@@ -267,7 +273,7 @@
 			border-radius: var(--bc-radius-md);
 		}
 		.site-dialog__header :global(.bc-mobile-icon-action:hover) {
-			background: var(--bc-surface);
+			background: var(--bc-control-hover);
 		}
 		:global(.filter-picker-dialog) {
 			padding: var(--bc-space-6);

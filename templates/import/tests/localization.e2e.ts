@@ -272,9 +272,11 @@ test('both import modes and sell wizard validate without business writes', async
 	await page.goto(route('en', '/import'));
 	await expect(page.locator('html')).toHaveAttribute('data-daynight-hydrated', 'true');
 	const wizard = page.locator('.site-desktop-only .bc-import-wizard');
-	await expect(wizard).toContainText('Which car should we check?');
+	await expect(
+		wizard.getByRole('textbox', { name: 'Listing link or VIN', exact: true })
+	).toBeVisible();
 	await wizard.getByRole('button', { name: 'Continue' }).click();
-	await expect(wizard.getByRole('alert')).toContainText('Add a listing');
+	await expect(wizard.getByRole('alert')).toContainText('valid listing link');
 	await page.getByRole('tab', { name: 'Find a car', exact: true }).click();
 	await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
 	await wizard.locator('[id^="import-wizard-make-"]').fill('Synthetic');

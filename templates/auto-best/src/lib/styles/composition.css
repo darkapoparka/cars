@@ -236,7 +236,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: var(--dn-space-3);
     margin-bottom: var(--dn-space-3);
     color: var(--dn-muted-on-ink);
     font-size: var(--dn-text-meta);
@@ -244,13 +243,6 @@
     line-height: var(--dn-leading-meta);
     letter-spacing: var(--dn-tracking-label);
     text-transform: uppercase;
-  }
-
-  .dn-company-hero__eyebrow::before {
-    width: var(--dn-space-6);
-    height: var(--dn-space-half);
-    background: var(--dn-red);
-    content: '';
   }
 
   .dn-route-hero--company .dn-route-hero__copy h1 {

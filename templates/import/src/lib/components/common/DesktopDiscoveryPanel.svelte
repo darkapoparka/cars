@@ -2,14 +2,31 @@
 	import type { Snippet } from 'svelte';
 	let {
 		header,
+		compactHeader = false,
+		description,
+		descriptionContent,
 		children,
 		class: className = ''
-	}: { header?: Snippet; children: Snippet; class?: string } = $props();
+	}: {
+		header?: Snippet;
+		compactHeader?: boolean;
+		description?: string;
+		descriptionContent?: Snippet;
+		children: Snippet;
+		class?: string;
+	} = $props();
 </script>
 
-<div class={['desktop-discovery-panel', className]}>
+<div
+	class={['desktop-discovery-panel', className]}
+	class:has-header={Boolean(header)}
+	class:has-compact-header={compactHeader && Boolean(header)}
+>
 	{#if header}<div class="desktop-discovery-panel__header">{@render header()}</div>{/if}
 	<div class="desktop-discovery-panel__body" class:has-header={Boolean(header)}>
+		{#if descriptionContent || description}<p class="desktop-discovery-panel__description">
+				{#if descriptionContent}{@render descriptionContent()}{:else}{description}{/if}
+			</p>{/if}
 		{@render children()}
 	</div>
 </div>
@@ -41,7 +58,7 @@
 		--desktop-discovery-control-radius: var(--bc-desktop-control-radius);
 		display: grid;
 		align-content: center;
-		gap: var(--bc-space-4);
+		gap: var(--desktop-discovery-gap, var(--bc-space-4));
 		min-width: 0;
 		min-height: var(--bc-desktop-discovery-panel-height);
 		padding: var(--desktop-discovery-padding, var(--desktop-discovery-inset));
@@ -55,12 +72,36 @@
 	}
 	@media (min-width: 768px) {
 		.desktop-discovery-panel {
+			display: grid;
+			grid-template-rows: minmax(0, 1fr);
+			min-height: var(--bc-desktop-hero-panel-height);
+			max-width: var(--bc-desktop-discovery-width);
 			--desktop-discovery-inset: var(--bc-space-6);
 			--bc-control: var(--bc-desktop-control-surface, var(--bc-surface-raised));
 			--bc-border: var(--desktop-discovery-border, var(--bc-editorial-border));
 		}
+		.desktop-discovery-panel.has-header {
+			grid-template-rows: auto minmax(0, 1fr);
+		}
+		.desktop-discovery-panel__description {
+			margin: 0;
+			color: var(--desktop-discovery-copy, var(--bc-copy));
+			font: var(--bc-weight-body) var(--bc-text-body) / var(--bc-space-6) var(--bc-font-body);
+			text-align: center;
+		}
 		.desktop-discovery-panel__header {
 			padding-top: var(--bc-space-4);
+		}
+		.desktop-discovery-panel__body.has-header {
+			min-height: 0;
+			padding-bottom: var(--bc-space-5);
+		}
+		.desktop-discovery-panel.has-compact-header .desktop-discovery-panel__header {
+			padding-top: var(--desktop-discovery-inset);
+		}
+		.desktop-discovery-panel.has-compact-header .desktop-discovery-panel__body {
+			align-content: start;
+			padding-top: var(--bc-space-3);
 		}
 	}
 </style>

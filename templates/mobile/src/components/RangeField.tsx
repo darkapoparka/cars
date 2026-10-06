@@ -129,6 +129,7 @@ type Props = {
   step?: number;
   unit?: string;
   comfortable?: boolean;
+  hideHeading?: boolean;
   onChange: (min: string, max: string) => void;
 };
 export function RangeField({
@@ -140,6 +141,7 @@ export function RangeField({
   step = 1,
   unit = '',
   comfortable = false,
+  hideHeading = false,
   onChange,
 }: Props) {
   const { t, number } = useLocale();
@@ -194,10 +196,14 @@ export function RangeField({
   }
   return (
     <div {...stylex.props(s.root, comfortable && s.comfortableRoot)}>
-      <div {...stylex.props(s.head)}>
-        <h3 {...stylex.props(s.title, comfortable && s.comfortableTitle)}>{t(label)}</h3>
-        <output {...stylex.props(s.summary, comfortable && s.comfortableSummary)}>{summary}</output>
-      </div>
+      {!hideHeading && (
+        <div {...stylex.props(s.head)}>
+          <h3 {...stylex.props(s.title, comfortable && s.comfortableTitle)}>{t(label)}</h3>
+          <output {...stylex.props(s.summary, comfortable && s.comfortableSummary)}>
+            {summary}
+          </output>
+        </div>
+      )}
       <div
         data-range-track={label}
         {...stylex.props(s.rail)}

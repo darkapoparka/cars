@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-10-06T12:20:17.339Z",
+  "generator": "image_gen",
+  "purpose": "Mobile Call and Visit contact cards matching the approved enquiry illustration.",
+  "style": "Matte porcelain white, charcoal and coral; isolated 3D phone receiver and folded map with location pin.",
+  "processing": "Resize into a transparent 256px square and encode WebP; original generation files preserved.",
+  "integratedIn": "src/components/ShowroomContactCards.tsx",
+  "mobileOnly": true,
+  "assets": [
+    {
+      "name": "call",
+      "originalPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-73dc3ad4-d6e1-4d41-a749-4d70c5a03ad3.png",
+      "publicPath": "/images/contact/call-20261006.webp",
+      "bytes": 11844,
+      "sha256": "0afcf74643f3221ac7f16fc65dfdb7c35bfe27b969c210b8fb7753dabd5ec44a",
+      "width": 256,
+      "height": 256,
+      "hasAlpha": true
+    },
+    {
+      "name": "visit",
+      "originalPath": "C:\\Users\\radev\\.codex\\generated_images\\01a10aaf-2314-7de0-9b09-b5dfe4f3c810\\exec-d97a6975-1119-4af3-8ccf-a56b90d77a03.png",
+      "publicPath": "/images/contact/visit-20261006.webp",
+      "bytes": 12338,
+      "sha256": "47cddda384009b620880116e1c1372e72192d7c65f41a96478899bc08df2f0c3",
+      "width": 256,
+      "height": 256,
+      "hasAlpha": true
+    }
+  ]
+}

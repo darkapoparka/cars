@@ -38,10 +38,7 @@
 	@media (min-width: 1200px) {
 		.hero-cars {
 			--car-baseline: calc(100% - var(--bc-space-8));
-			--side-room: calc(
-				(100cqw - var(--hero-panel-width, var(--bc-desktop-discovery-width))) / 2 -
-					var(--bc-space-6)
-			);
+			--side-room: calc((100cqw - var(--bc-desktop-discovery-width)) / 2 - var(--bc-space-6));
 			display: block;
 			position: absolute;
 			inset: 0;

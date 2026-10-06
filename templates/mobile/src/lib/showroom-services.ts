@@ -62,9 +62,15 @@ export function saleEnquiryHref(type: SaleEnquiryType) {
 }
 export type ShowroomService = {
   id: string;
+  image?: string;
+  mobileImage?: string;
+  icon?: 'globe' | 'car' | 'calendar' | 'reset' | 'search' | 'wrench' | 'calculator' | 'settings';
   category: ServiceCategory;
   title: string;
+  mobileTitle?: string;
   copy: string;
+  summary?: string;
+  mobileSummary?: string;
   action: string;
   keywords?: readonly string[];
   details?: readonly { label: string; copy: string }[];
@@ -74,9 +80,14 @@ export type ShowroomService = {
 export const showroomServices: readonly ShowroomService[] = [
   {
     id: 'import',
+    image: '/images/services/import-20261006.webp',
+    mobileImage: '/images/service-cutouts/import-20261006.webp',
+    icon: 'globe',
     category: 'import',
     title: 'Import a car',
     copy: 'Source a car abroad to match your budget.',
+    summary: 'Import within your budget.',
+    mobileSummary: 'Within your budget',
     action: 'Start an import enquiry',
     keywords: [
       'imports',
@@ -93,9 +104,14 @@ export const showroomServices: readonly ShowroomService[] = [
   },
   {
     id: 'sell',
+    image: '/images/services/sell-20261006.webp',
+    mobileImage: '/images/service-cutouts/sell-20261006.webp',
+    icon: 'car',
     category: 'sell',
     title: 'Sell your car',
     copy: 'Ask for a buyout or part exchange valuation.',
+    summary: 'Get a sale or trade-in valuation.',
+    mobileSummary: 'Sale or part exchange',
     action: 'Start a sale enquiry',
     keywords: [
       'buyout',
@@ -110,37 +126,64 @@ export const showroomServices: readonly ShowroomService[] = [
   },
   {
     id: 'viewing',
+    image: '/images/services/viewing-20261006.webp',
+    mobileImage: '/images/service-cutouts/viewing-20261006.webp',
+    icon: 'calendar',
     category: 'services',
     title: 'Viewings & test drives',
+    mobileTitle: 'Viewing & test drive',
     copy: 'Arrange a car viewing or test drive.',
+    summary: 'Arrange a viewing or test drive.',
+    mobileSummary: 'Arrange a viewing',
     action: 'Arrange a viewing',
   },
   {
     id: 'trade-in',
+    image: '/images/services/trade-in-20261006.webp',
+    mobileImage: '/images/service-cutouts/trade-in-20261006.webp',
+    icon: 'reset',
     category: 'services',
     title: 'Part exchange',
     copy: 'Get a valuation towards your next car.',
+    summary: 'Value your car towards an upgrade.',
+    mobileSummary: 'Value your current car',
     action: 'Ask about part exchange',
   },
   {
     id: 'sourcing',
+    image: '/images/services/sourcing-20261006.webp',
+    mobileImage: '/images/service-cutouts/sourcing-20261006.webp',
+    icon: 'search',
     category: 'services',
     title: 'Find a car',
+    mobileTitle: 'Car search',
     copy: 'Share your preferred make, model and budget.',
+    summary: 'Tell us your make, model and budget.',
+    mobileSummary: 'Make, model and budget',
     action: 'Ask us to find a car',
   },
   {
     id: 'servicing',
+    image: '/images/services/servicing-20261006.webp',
+    mobileImage: '/images/service-cutouts/servicing-20261006.webp',
+    icon: 'wrench',
     category: 'services',
     title: 'Servicing & repairs',
     copy: 'Ask about maintenance and repairs.',
+    summary: 'Ask about servicing and repairs.',
+    mobileSummary: 'Maintenance and repairs',
     action: 'Ask about servicing',
   },
   {
     id: 'financing',
+    image: '/images/services/financing-20261006.webp',
+    mobileImage: '/images/service-cutouts/financing-20261006.webp',
+    icon: 'calculator',
     category: 'financing',
     title: 'Financing',
     copy: 'Discuss payment options for your next car.',
+    summary: 'Explore payment options.',
+    mobileSummary: 'Payment options',
     action: 'Ask about financing',
     details: [
       { label: 'Budget', copy: 'The car or price range you have in mind.' },
@@ -150,9 +193,14 @@ export const showroomServices: readonly ShowroomService[] = [
   },
   {
     id: 'parts',
+    image: '/images/services/parts-20261006.webp',
+    mobileImage: '/images/service-cutouts/parts-20261006.webp',
+    icon: 'settings',
     category: 'parts',
     title: 'Parts & accessories',
     copy: 'Ask about replacement parts and accessories.',
+    summary: 'Ask about parts and accessories.',
+    mobileSummary: 'For your vehicle',
     action: 'Ask about parts',
     keywords: ['vehicle'],
     details: [
@@ -211,7 +259,14 @@ export function searchShowroomServices(services: readonly ShowroomService[], que
       .toLocaleLowerCase();
   const words = fold(query).trim().split(/\s+/).filter(Boolean);
   return services.filter((service) => {
-    const phrases = [service.title, service.copy, ...(service.keywords || [])];
+    const phrases = [
+      service.title,
+      service.copy,
+      service.summary || '',
+      service.mobileTitle || '',
+      service.mobileSummary || '',
+      ...(service.keywords || []),
+    ];
     const text = fold([...phrases, ...phrases.map((phrase) => translate(phrase, 'bg'))].join(' '));
     return words.every((word) => text.includes(word));
   });

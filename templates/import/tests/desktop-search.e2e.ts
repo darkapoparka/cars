@@ -6,7 +6,7 @@ test.beforeEach(({ isMobile }) => {
 	test.skip(Boolean(isMobile));
 });
 
-test('desktop artwork tabs connect to compact fields without changing the mobile tab variant', async ({
+test('desktop segmented modes sit above compact fields and retain contained artwork', async ({
 	page
 }) => {
 	await visit(page, '/');
@@ -18,7 +18,7 @@ test('desktop artwork tabs connect to compact fields without changing the mobile
 	for (const width of [768, 1024, 1440, 1920]) {
 		await page.setViewportSize({ width, height: 900 });
 		for (const tab of await tabs.all()) {
-			await expect(tab).toHaveCSS('font-size', '20px');
+			await expect(tab).toHaveCSS('font-size', '16px');
 			await expect(tab).toHaveCSS('font-weight', '400');
 		}
 		await expect
@@ -32,8 +32,8 @@ test('desktop artwork tabs connect to compact fields without changing the mobile
 							image.complete &&
 							image.naturalWidth > 1 &&
 							image.alt === '' &&
-							bounds.width >= 40 &&
-							bounds.height >= 40 &&
+							bounds.width >= 24 &&
+							bounds.height === 24 &&
 							bounds.x >= target.x &&
 							bounds.right <= target.right &&
 							bounds.y >= target.y &&
@@ -46,15 +46,22 @@ test('desktop artwork tabs connect to compact fields without changing the mobile
 		const metrics = await box.locator('.hfp__field').evaluateAll((nodes) =>
 			nodes.map((n) => ({
 				height: n.getBoundingClientRect().height,
+				x: n.getBoundingClientRect().x,
+				width: n.getBoundingClientRect().width,
 				size: getComputedStyle(n.querySelector('.hfp__value')!).fontSize,
 				weight: getComputedStyle(n.querySelector('.hfp__value')!).fontWeight
 			}))
 		);
 		expect(metrics).toHaveLength(4);
 		for (const m of metrics) {
-			expect(m.height).toBe(48);
-			expect(m.size).toBe('20px');
+			expect(m.height).toBe(44);
+			expect(m.size).toBe('16px');
 			expect(m.weight).toBe('400');
+		}
+		if (width > 900) {
+			for (const field of metrics) {
+				expect(Math.abs(field.width - metrics[0].width)).toBeLessThanOrEqual(1);
+			}
 		}
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 			true
@@ -191,19 +198,24 @@ test('header search reuses the same focused result dialog', async ({ page }) => 
 	await expect(opener).toBeFocused();
 });
 
-test('inventory type pills and header search preserve filters alongside compact inline search', async ({
+test('inventory category shortcuts retain the complete body picker and header search preserves the query', async ({
 	page
 }) => {
 	await visit(
 		page,
 		'/inventory?lang=en&brand=BMW&bodyType=Sedan&maxPrice=100000&sort=lowest-price&view=3&layout=dashboard&marker=keep'
 	);
-	const types = page.getByRole('navigation', { name: 'Vehicle type', exact: true });
-	await expect(types.getByRole('link', { name: 'Sedan', exact: true })).toHaveAttribute(
-		'aria-current',
-		'page'
-	);
-	await types.getByRole('link', { name: 'SUV', exact: true }).click();
+	await expect(
+		page.getByRole('navigation', { name: 'Vehicle type', exact: true }).getByRole('link')
+	).toHaveCount(4);
+	const allFilters = page.getByRole('button', { name: 'All filters', exact: true });
+	const picker = page.locator('.inventory-filters-dialog');
+	await allFilters.click();
+	await picker.getByRole('tab', { name: /^Body/ }).click();
+	await expect(picker.getByLabel('Sedan', { exact: true })).toBeChecked();
+	await picker.getByRole('button', { name: 'Clear selection', exact: true }).click();
+	await picker.getByLabel('SUV', { exact: true }).check();
+	await picker.getByRole('button', { name: /^Show cars/ }).click();
 	await expect(page).toHaveURL(
 		(url) =>
 			url.pathname === '/en/inventory' &&
@@ -216,12 +228,13 @@ test('inventory type pills and header search preserve filters alongside compact 
 			url.searchParams.get('layout') === 'dashboard' &&
 			url.searchParams.get('marker') === 'keep'
 	);
-	await expect(types.getByRole('link', { name: 'SUV', exact: true })).toHaveAttribute(
-		'aria-current',
-		'page'
-	);
 	await expect(page.locator('.inventory-hero__search')).toHaveCount(0);
 	await expect(page.locator('.inventory-search').getByRole('searchbox')).toBeVisible();
+	const clippedFilters = await page
+		.locator('.inventory-toolbar__field .filter-trigger-label')
+		.evaluateAll((nodes) => nodes.filter((node) => node.scrollWidth > node.clientWidth).length);
+	expect(clippedFilters).toBe(0);
+	await expect(page.locator('.inventory-toolbar__all-label')).toBeVisible();
 	const opener = page
 		.locator('.site-header')
 		.getByRole('button', { name: 'Search cars', exact: true });
@@ -251,26 +264,75 @@ test('inventory type pills and header search preserve filters alongside compact 
 	await opener.click();
 	await expect(search.getByRole('searchbox')).toHaveValue('X5');
 	await page.keyboard.press('Escape');
-	await types.getByRole('link', { name: 'All cars', exact: true }).click();
+	await allFilters.click();
+	await picker.getByRole('tab', { name: /^Body/ }).click();
+	await expect(picker.getByLabel('SUV', { exact: true })).toBeChecked();
+	await picker.getByRole('button', { name: 'Clear selection', exact: true }).click();
+	await picker.getByRole('button', { name: /^Show cars/ }).click();
 	await expect(page).toHaveURL(
 		(url) =>
 			!url.searchParams.has('body') &&
 			url.searchParams.get('keyword') === 'X5' &&
 			url.searchParams.get('brand') === 'BMW'
 	);
-	await expect(types.getByRole('link', { name: 'All cars', exact: true })).toHaveAttribute(
-		'aria-current',
-		'page'
-	);
-	await page.getByRole('button', { name: 'Type', exact: true }).click();
-	const picker = page.locator('.inventory-filters-dialog');
+	await expect(page.getByRole('button', { name: 'Type', exact: true })).toHaveCount(0);
+	await allFilters.click();
 	await expect(picker).toBeVisible();
+	await picker.getByRole('tab', { name: 'Body', exact: true }).click();
 	await expect(picker).toContainText('SUV');
 	await page.keyboard.press('Escape');
-	await expect(page.getByRole('button', { name: 'Type', exact: true })).toBeFocused();
+	await expect(allFilters).toBeFocused();
 });
 
 for (const locale of ['bg', 'en']) {
+	test(`illustrated inventory categories preserve search context in ${locale}`, async ({
+		page
+	}) => {
+		await visit(
+			page,
+			`/${locale}/inventory?brand=BMW&keyword=X5&maxPrice=100000&sort=lowest-price&view=3&layout=dashboard&page=2&marker=keep&marker=also`
+		);
+		const categories = page.getByRole('navigation', {
+			name: locale === 'en' ? 'Vehicle type' : 'Тип автомобил',
+			exact: true
+		});
+		await expect(categories.getByRole('link')).toHaveCount(4);
+		await expect(
+			categories.getByRole('link', { name: locale === 'en' ? 'Cars' : 'Коли', exact: true })
+		).toHaveAttribute('aria-current', 'page');
+		await categories
+			.getByRole('link', { name: locale === 'en' ? 'SUVs' : 'SUV', exact: true })
+			.click();
+		await expect(page).toHaveURL(
+			(url) =>
+				url.searchParams.get('body') === 'SUV' &&
+				url.searchParams.get('keyword') === 'X5' &&
+				url.searchParams.get('brand') === 'BMW' &&
+				url.searchParams.get('maxPrice') === '100000' &&
+				url.searchParams.get('sort') === 'lowest-price' &&
+				url.searchParams.get('view') === '3' &&
+				url.searchParams.get('layout') === 'dashboard' &&
+				url.searchParams.getAll('marker').join(',') === 'keep,also' &&
+				!url.searchParams.has('page')
+		);
+		await categories
+			.getByRole('link', { name: locale === 'en' ? 'Bikes' : 'Мотори', exact: true })
+			.click();
+		await expect(page).toHaveURL((url) => url.searchParams.get('body') === 'Motorcycle');
+		await expect(page.locator('.inventory-empty')).toBeVisible();
+		await categories
+			.getByRole('link', { name: locale === 'en' ? 'Cars' : 'Коли', exact: true })
+			.click();
+		await expect(page).toHaveURL(
+			(url) => !url.searchParams.has('body') && url.searchParams.get('keyword') === 'X5'
+		);
+		await expect(page.locator('main .site-vehicle-card').first()).toContainText('BMW X5');
+		await page.goBack();
+		await expect(
+			categories.getByRole('link', { name: locale === 'en' ? 'Bikes' : 'Мотори', exact: true })
+		).toHaveAttribute('aria-current', 'page');
+	});
+
 	test(`compact inventory search submits and clears keywords while retaining filters in ${locale}`, async ({
 		page
 	}) => {
@@ -383,9 +445,9 @@ test('home Search follows selected filters and newest vehicles retains the inven
 }) => {
 	await visit(page, '/');
 	await page.getByRole('button', { name: 'Марка: Всички марки', exact: true }).click();
-	const picker = page.getByRole('dialog').filter({ has: page.locator('.hfp-picker') });
-	await picker.locator('.hfp__chip').filter({ hasText: 'BMW' }).click();
-	await page.keyboard.press('Escape');
+	const picker = page.getByRole('dialog', { name: 'Избери марка', exact: true });
+	await picker.getByRole('button', { name: /^BMW\s/ }).click();
+	await picker.getByRole('button', { name: 'Готово', exact: true }).click();
 	await page
 		.locator('.home-hero__search')
 		.getByRole('link', { name: 'Търси', exact: true })

@@ -136,4 +136,13 @@
 	.site-action :global(svg) {
 		flex-shrink: 0;
 	}
+	@media (min-width: 768px) {
+		:global(:where(.site-shell, .site-dialog, .desktop-home-filter__menu))
+			:is(.secondary, .quiet):not(:disabled):not([aria-disabled='true']):not(
+				[aria-pressed='true']
+			):hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+	}
 </style>

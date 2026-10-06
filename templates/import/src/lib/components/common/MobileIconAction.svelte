@@ -158,4 +158,14 @@
 			transition: none;
 		}
 	}
+	@media (min-width: 768px) and (hover: hover) and (pointer: fine) {
+		:global(:where(.site-shell, .site-dialog))
+			.bc-mobile-icon-action:not(.dark):not(.active)::before {
+			box-shadow: none;
+		}
+		:global(:where(.site-shell, .site-dialog))
+			.bc-mobile-icon-action:not(.dark):not(.active):hover::before {
+			background: var(--bc-control-hover);
+		}
+	}
 </style>

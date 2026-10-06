@@ -227,6 +227,20 @@
 		line-height: 1;
 		pointer-events: none;
 	}
+	@media (min-width: 768px) {
+		:global(.site-header__icon:hover) {
+			background: var(--bc-control-hover);
+		}
+		:global(.site-language a:hover) {
+			background: var(--bc-control-hover);
+		}
+		:global(.site-language a[aria-current='true']) {
+			background: var(--bc-control-selected-surface);
+		}
+		:global(.site-language a[aria-current='true']:hover) {
+			background: var(--bc-control-selected-hover);
+		}
+	}
 	@media (min-width: 768px) and (max-width: 1279px) {
 		.site-header__inner {
 			grid-template-columns: minmax(0, 1fr) auto;

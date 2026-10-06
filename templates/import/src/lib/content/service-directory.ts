@@ -1,8 +1,10 @@
 import type { Locale } from '$lib/locale/core';
 import { desktopCopy } from './desktop-copy';
 import type { AuxeroSupportService } from './services';
+import type { ServiceRequestKind } from '$lib/domain/service-request';
 
 export type ServiceDetail = {
+	requestKind?: ServiceRequestKind;
 	href: string;
 	action: string;
 	summary: string;
@@ -25,7 +27,8 @@ export const serviceArtwork: Record<
 	},
 	comparison: { src: '/assets/daynight/services/desktop/comparison-reference-v4.webp' }
 };
-type DirectoryCopy = {
+
+export type DirectoryCopy = {
 	pageTitle: string;
 	titleDesktop: string;
 	searchAction: string;
@@ -74,6 +77,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				includes: ['Избор според бюджет и изисквания', 'История, оборудване и крайна цена']
 			},
 			'listing-check': {
+				requestKind: 'vin-check',
 				summary: 'VIN, история и разходи.',
 				mobileContext: 'Преди покупка',
 				mobileSummary: 'VIN и история',
@@ -94,6 +98,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			registration: {
+				requestKind: 'registration',
 				summary: 'Документи и КАТ.',
 				mobileContext: 'След покупка',
 				mobileTitle: 'Регистрация',
@@ -106,6 +111,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			viewing: {
+				requestKind: 'viewing',
 				summary: 'Оглед с уговорка.',
 				mobileContext: 'На място',
 				mobileSummary: 'Час за оглед',
@@ -159,6 +165,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			'listing-check': {
+				requestKind: 'vin-check',
 				summary: 'VIN, history and costs.',
 				mobileContext: 'Before buying',
 				mobileSummary: 'VIN and history',
@@ -178,6 +185,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			registration: {
+				requestKind: 'registration',
 				summary: 'Registration paperwork.',
 				mobileContext: 'After buying',
 				mobileTitle: 'Registration',
@@ -190,6 +198,7 @@ export const serviceDirectoryCopy: Record<Locale, DirectoryCopy> = {
 				]
 			},
 			viewing: {
+				requestKind: 'viewing',
 				summary: 'Viewings by appointment.',
 				mobileContext: 'Visit us',
 				mobileTitle: 'Book a viewing',

@@ -7,8 +7,8 @@ export type ListingSort = 'default' | 'newest' | 'price-asc' | 'price-desc' | 'm
 export type ListingFilters = {
   q: string;
   type: '' | VehicleType;
-  make: string;
-  model: string;
+  make: string[];
+  model: string[];
   body: string;
   fuel: string;
   transmission: string;
@@ -32,7 +32,7 @@ export const listingParams = (filters: ListingFilters): URLSearchParams => {
   const params = new URLSearchParams();
   for (const [key, value] of Object.entries(filters)) {
     const name = key.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`);
-    if (Array.isArray(value)) [...new Set(value)].forEach(item => params.append(name, item));
+    if (Array.isArray(value)) listingSelections(value).forEach(item => params.append(name, item));
     else if (value !== null && value !== '' && !(key === 'sort' && value === 'default')) params.set(name, String(value));
   }
   return params;
@@ -46,7 +46,11 @@ export const activeFilterCount = (filters: ListingFilters) => listingHiddenField
 export function removeListingFilter(filters: ListingFilters, key: string, value: string) {
   const params = listingParams(filters);
   params.delete(key, value);
-  if (key === 'make') params.delete('model');
+  if (key === 'make') {
+    const models = listingModelsAfterMakeChange(filters.make, params.getAll('make'), filters.model);
+    params.delete('model');
+    models.forEach(model => params.append('model', model));
+  }
   return params;
 }
 
@@ -70,6 +74,23 @@ export const listingFilterOptions = {
   ] as const
 } as const;
 
+const equipmentGroups = [
+  { id: 'comfort', titleKey: 'inventory.equipment.comfort', values: ['Панорамен покрив', 'Подгряване на седалки', 'Безключов достъп'] },
+  { id: 'assistance', titleKey: 'inventory.equipment.assistance', values: ['360° камера', 'Парктроник', 'Адаптивен круиз контрол'] },
+  { id: 'multimedia', titleKey: 'inventory.equipment.multimedia', values: ['Навигация'] },
+  { id: 'drivetrain', titleKey: 'inventory.equipment.drivetrain', values: ['4x4'] }
+] as const;
+
+/** Group the available catalog, retaining new dealer features until they are categorized. */
+export function listingEquipmentGroups(values: readonly string[] = listingFilterOptions.equipment) {
+  const unique = [...new Set(values.filter(Boolean))];
+  const groups = equipmentGroups.map(group => ({ id: group.id as string, titleKey: group.titleKey,
+    values: unique.filter(value => (group.values as readonly string[]).includes(value)) }));
+  const assigned = new Set(groups.flatMap(group => group.values));
+  return [...groups, { id: 'other', titleKey: 'inventory.equipment.other' as const,
+    values: unique.filter(value => !assigned.has(value)) }].filter(group => group.values.length);
+}
+
 const integerParam = (params: URLSearchParams, key: string) => {
   const raw = params.get(key) ?? '';
   const value = Number(raw);
@@ -86,8 +107,8 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
   return {
     q: params.get('q')?.trim() ?? '',
     type: vehicleTypes.includes(params.get('type') as VehicleType) ? params.get('type') as VehicleType : '',
-    make: params.get('make')?.trim() ?? '',
-    model: params.get('model')?.trim() ?? '',
+    make: listingSelections(params.getAll('make')),
+    model: listingSelections(params.getAll('model')),
     body: params.get('body')?.trim() ?? '',
     fuel: params.get('fuel')?.trim() ?? '',
     transmission: params.get('transmission')?.trim() ?? '',
@@ -105,14 +126,48 @@ export const parseListingFilters = (params: URLSearchParams): ListingFilters => 
 
 const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
 
-export const listingModelsForMake = (make: string) => {
-  const normalizedMake = normalize(make);
+/** Repeated URL values are the selection contract; preserve their readable labels. */
+export function listingSelections(values: string | readonly string[]): string[] {
+  const unique = new Map<string, string>();
+  for (const value of typeof values === 'string' ? [values] : values) {
+    const trimmed = value.trim();
+    if (trimmed && !unique.has(normalize(trimmed))) unique.set(normalize(trimmed), trimmed);
+  }
+  return [...unique.values()];
+}
+
+export function toggleListingSelection(values: readonly string[], value: string): string[] {
+  if (!value) return [];
+  const exists = listingSelectionHas(values, value);
+  return exists ? values.filter(selected => normalize(selected) !== normalize(value)) : listingSelections([...values, value]);
+}
+
+/** Menus use the same equality as URL filtering and selection toggles. */
+export function listingSelectionHas(values: readonly string[], value: string): boolean {
+  return values.some(selected => normalize(selected) === normalize(value));
+}
+
+export const listingModelsForMake = (make: string | readonly string[]) => {
+  const makes = listingSelections(make).map(normalize);
   const models = featuredVehicles
-    .filter((vehicle) => !normalizedMake || normalize(vehicle.make) === normalizedMake)
+    .filter((vehicle) => !makes.length || makes.includes(normalize(vehicle.make)))
     .map((vehicle) => vehicle.title.replace(`${vehicle.make} `, ''));
 
   return ['', ...new Set(models)];
 };
+
+/** Keep models belonging to a remaining brand, including legacy partial model URLs. */
+export function listingModelsAfterMakeChange(current: readonly string[], next: readonly string[], models: readonly string[]): string[] {
+  const currentMakes = listingSelections(current).map(normalize);
+  const nextMakes = listingSelections(next).map(normalize);
+  if (currentMakes.length === nextMakes.length && currentMakes.every(make => nextMakes.includes(make))) return [...models];
+  if (!nextMakes.length) return [];
+  return models.filter(model => {
+    const owners = featuredVehicles.filter(vehicle => normalize(vehicle.title).includes(normalize(model)));
+    // An applied value outside current stock has no known incompatible owner.
+    return !owners.length || owners.some(vehicle => nextMakes.includes(normalize(vehicle.make)));
+  });
+}
 
 export const vehicleMatchesQuery = (vehicle: Vehicle, query: string, locale: Locale = 'en') => {
   const normalizedQuery = normalize(query);
@@ -134,8 +189,8 @@ export const vehicleMatchesQuery = (vehicle: Vehicle, query: string, locale: Loc
 
 export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: ListingFilters, locale: Locale = 'en') => {
   const query = normalize(filters.q);
-  const model = normalize(filters.model);
-  const make = normalize(filters.make);
+  const models = filters.model.map(normalize);
+  const makes = filters.make.map(normalize);
   const body = normalize(filters.body);
   const fuel = normalize(filters.fuel);
   const transmission = normalize(filters.transmission);
@@ -144,8 +199,8 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
   const filtered = vehicles.filter((vehicle) => {
     if (query && !vehicleMatchesQuery(vehicle, query, locale)) return false;
     if (filters.type && vehicle.type !== filters.type) return false;
-    if (make && normalize(vehicle.make) !== make) return false;
-    if (model && !normalize(vehicle.title).includes(model)) return false;
+    if (makes.length && !makes.includes(normalize(vehicle.make))) return false;
+    if (models.length && !models.some(model => normalize(vehicle.title).includes(model))) return false;
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
     if (fuel && normalize(vehicle.fuel) !== fuel) return false;
     if (transmission && normalize(vehicle.transmission) !== transmission) return false;
@@ -185,4 +240,10 @@ export function listingBudgetCaps(vehicles: readonly Vehicle[] = featuredVehicle
     if (result.length === 3) break;
   }
   return result;
+}
+
+/** A slider still needs a finite browsing range when a dealer has no stock. */
+export function listingBudgetLimit(vehicles: readonly Vehicle[] = featuredVehicles): number {
+  const maximum = vehicles.reduce((limit, vehicle) => Number.isFinite(vehicle.priceEur) ? Math.max(limit, vehicle.priceEur) : limit, 0);
+  return Math.max(10000, Math.ceil(maximum / 10000) * 10000);
 }

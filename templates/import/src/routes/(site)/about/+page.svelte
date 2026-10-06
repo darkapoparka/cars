@@ -59,16 +59,16 @@
 				>
 			</div>
 		{/snippet}
-		{#snippet desktopActions()}
-			<DesktopHeroActions>
+		{#snippet desktopActions(caption: string | undefined)}
+			<DesktopHeroActions description={caption}>
 				{#snippet secondaryActions()}
-					<SocialLinks links={data.site.socials} tone="glass" />
+					<SocialLinks links={data.site.socials ?? []} tone="plain" />
 				{/snippet}
-				<Action href={about.hero.actions?.[0]?.href ?? '/inventory'} size="primary"
+				<Action href={about.hero.actions?.[0]?.href ?? '/inventory'} variant="strong" size="primary"
 					>{desktopCopy[data.locale].aboutCars}<ArrowRight size={18} aria-hidden="true" /></Action
 				>
-				<Action href={about.hero.actions?.[1]?.href ?? '/contact'} variant="strong" size="primary"
-					>{desktopCopy[data.locale].aboutContact}</Action
+				<Action href="/services" variant="secondary" size="primary"
+					>{desktopCopy[data.locale].aboutServices}</Action
 				>
 			</DesktopHeroActions>
 		{/snippet}

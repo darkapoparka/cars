@@ -28,24 +28,26 @@
 	function appliedRangeSummary(filter: AuxeroInventoryFilter) {
 		if (!filter.numericInput) return undefined;
 		const min = page.url.searchParams.get(filter.name === 'priceTo' ? 'minPrice' : 'minMileage');
-		if (!min) return undefined;
+		const max = filter.selectedValues[0];
 		const format = (value: string) => Number(value).toLocaleString(english ? 'en' : 'bg');
-		return `${filter.selectedValues[0] ? format(min) + ' – ' + format(filter.selectedValues[0]) : (english ? 'From ' : 'От ') + format(min)} ${filter.numericInput.unit}`;
+		const unit = filter.name === 'priceTo' ? '€' : filter.numericInput.unit;
+		if (min && max) return `${format(min)} – ${format(max)} ${unit}`;
+		if (min) return `${english ? 'From' : 'От'} ${format(min)} ${unit}`;
+		if (max) return `≤${format(max)} ${unit}`;
+		return undefined;
 	}
 	const quickFilters = $derived(
-		['brand', 'q', 'maxPrice', 'maxMileage', 'fuel', 'body']
+		['brand', 'q', 'maxPrice', 'maxMileage', 'fuel']
 			.map((name) => desktop.filters.find((filter) => inventoryFilterParam(filter.name) === name))
 			.filter((filter) => filter !== undefined)
 	);
 </script>
 
 <div class="inventory-toolbar">
-	<div class="inventory-toolbar__row">
+	<div class="inventory-toolbar__row" style:--inventory-quick-filter-count={quickFilters.length}>
 		{#each quickFilters as filter (filter.id)}<div class="inventory-toolbar__field">
 				<InventoryFilter
-					filter={filter.name === 'bodyType'
-						? { ...filter, label: controlsCopy.typeLabel }
-						: filter}
+					{filter}
 					summary={appliedRangeSummary(filter)}
 					expanded={allOpen && activeFilter?.id === filter.id}
 					onopen={() => onopen(filter)}
@@ -55,10 +57,14 @@
 			variant="secondary"
 			size="compact"
 			class="inventory-toolbar__all"
+			aria-label={controlsCopy.allFilters}
+			title={controlsCopy.allFilters}
 			aria-haspopup="dialog"
 			aria-expanded={allOpen}
 			onclick={() => onopen()}
-			><SlidersHorizontal size={18} aria-hidden="true" />{controlsCopy.allFilters}</Action
+			><SlidersHorizontal size={20} aria-hidden="true" /><span class="inventory-toolbar__all-label"
+				>{controlsCopy.allFilters}</span
+			></Action
 		>
 	</div>
 	{#if desktop.activeFilters}<div class="inventory-toolbar__active">
@@ -118,39 +124,62 @@
 		white-space: nowrap;
 	}
 	@media (min-width: 768px) {
+		.inventory-toolbar__row {
+			display: grid;
+			grid-template-columns: repeat(var(--inventory-quick-filter-count), minmax(0, 1fr)) max-content;
+			gap: var(--bc-space-3);
+		}
 		.inventory-toolbar__field {
 			min-width: 0;
 		}
 		.inventory-toolbar__field :global(.site-filter-trigger) {
 			width: 100%;
+			padding-inline: var(--bc-space-2);
+			gap: var(--bc-space-1);
 		}
-		.inventory-toolbar__row :global(.inventory-toolbar__all) {
-			font-size: var(--bc-text-label);
-			border: 1px solid var(--bc-border-strong);
+		.inventory-toolbar__active {
+			padding-top: var(--bc-space-3);
+		}
+		.inventory-toolbar__active a {
+			min-height: var(--bc-space-8);
+			padding-inline: var(--bc-space-3);
 			border-radius: var(--bc-radius-pill);
 			background: var(--bc-surface-raised);
+			border-color: transparent;
+			font-size: var(--bc-text-meta);
+		}
+		.inventory-toolbar__active a:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.inventory-toolbar__row :global(.inventory-toolbar__all) {
+			min-height: var(--bc-control-height-standard);
+			padding-inline: var(--bc-space-4);
+			justify-content: center;
+			gap: var(--bc-space-2);
+			font-size: var(--bc-text-body);
+			border: 1px solid transparent;
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-control);
+		}
+		.inventory-toolbar__all-label {
+			display: inline;
 		}
 		.inventory-toolbar__row :global(.inventory-toolbar__all:hover) {
-			border-color: var(--bc-ink);
-			background: var(--bc-surface-hover);
+			border-color: transparent;
+			background: var(--bc-control-hover);
 		}
 	}
-	@media (min-width: 901px) {
+	@media (min-width: 768px) and (max-width: 1023px) {
 		.inventory-toolbar__row {
-			flex-wrap: nowrap;
-		}
-		.inventory-toolbar__field {
-			flex: 1 1 0;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
 		}
 	}
-	@media (max-width: 900px) {
+	@media (max-width: 767px) {
 		.inventory-toolbar__row {
 			display: grid;
 			grid-template-columns: repeat(4, minmax(0, 1fr));
 			row-gap: var(--bc-space-3);
-		}
-		.inventory-toolbar__row :global(.inventory-toolbar__all) {
-			grid-column: span 2;
 		}
 	}
 </style>

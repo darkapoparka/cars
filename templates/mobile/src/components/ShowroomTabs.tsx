@@ -42,6 +42,45 @@ const s = stylex.create({
     },
   },
   flushRail: { marginTop: 0 },
+  phoneFlushRail: {
+    marginTop: { default: 8, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
+  },
+  heroRail: {
+    minHeight: 50,
+    marginTop: 0,
+    padding: 4,
+    justifyContent: 'center',
+    gap: 4,
+    backgroundColor: 'rgba(255,255,255,.12)',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: 'rgba(255,255,255,.24)',
+    borderRadius: 25,
+    boxShadow: 'none',
+  },
+  primaryTab: {
+    fontSize: 18,
+    lineHeight: '26px',
+    paddingInline: 4,
+    whiteSpace: 'nowrap',
+    overflowWrap: 'normal',
+  },
+  heroTab: {
+    minHeight: 40,
+    paddingInline: 16,
+    paddingBlock: 0,
+    fontSize: 18,
+    lineHeight: '26px',
+    color: '#fff',
+    borderRadius: 20,
+    backgroundColor: { default: 'transparent', ':hover': 'rgba(255,255,255,.08)' },
+    outlineColor: '#fff',
+  },
+  heroSelected: {
+    color: colors.text,
+    backgroundColor: { default: '#fff', ':hover': '#fff', ':active': '#fff' },
+    '::after': { height: 0 },
+  },
   tab: {
     position: 'relative',
     display: 'flex',
@@ -154,6 +193,46 @@ const s = stylex.create({
       '@media (min-width: 1024px)': 0,
     },
   },
+  pillsRail: {
+    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    gap: { default: 0, '@media (min-width: 1024px)': 6 },
+    flexShrink: 0,
+    borderBottomWidth: {
+      default: 0,
+      '@media (min-width: 700px)': 1,
+      '@media (min-width: 1024px)': 0,
+    },
+  },
+  pillsTab: {
+    flexGrow: { default: 1, '@media (min-width: 1024px)': 0 },
+    flexShrink: { default: 1, '@media (min-width: 1024px)': 0 },
+    flexBasis: { default: 0, '@media (min-width: 1024px)': 'auto' },
+    minHeight: { default: 52, '@media (min-width: 1024px)': 44 },
+    paddingInline: { default: 8, '@media (min-width: 1024px)': 0 },
+    paddingBlock: { default: 10, '@media (min-width: 1024px)': 0 },
+    fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 19 },
+  },
+  pillsSelected: {
+    fontWeight: { default: 600, '@media (min-width: 1024px)': 500 },
+    '::after': { height: { default: 3, '@media (min-width: 1024px)': 0 } },
+  },
+  pillFace: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'inline-flex' },
+    alignItems: 'center',
+    minHeight: 38,
+    paddingInline: 12,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 19,
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.stripe },
+  },
+  pillFaceSelected: {
+    borderColor: colors.text,
+    backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.text },
+    color: { default: 'inherit', '@media (min-width: 1024px)': colors.background },
+  },
   sidebarRail: {
     flexDirection: { default: 'row', '@media (min-width: 1024px)': 'column' },
     gap: { default: 0, '@media (min-width: 1024px)': 6 },
@@ -183,7 +262,7 @@ const s = stylex.create({
     outlineColor: {
       default: colors.accent,
       '@media (min-width: 700px)': colors.text,
-      '@media (min-width: 1024px)': colors.muted,
+      '@media (min-width: 1024px)': colors.accent,
     },
     outlineOffset: {
       default: -3,
@@ -280,7 +359,9 @@ export function ShowroomTabs<T extends string>({
   variant = 'text',
   tone = 'accent',
   layout = 'scroll',
+  primary = false,
   flush = false,
+  flushOnPhone = false,
   onChange,
 }: {
   label: string;
@@ -290,12 +371,22 @@ export function ShowroomTabs<T extends string>({
   idPrefix: string;
   variant?: 'text' | 'icon';
   tone?: 'accent' | 'neutral';
-  layout?: 'scroll' | 'fill' | 'desktop-fill' | 'desktop-sidebar' | 'desktop-categories';
+  layout?:
+    | 'scroll'
+    | 'fill'
+    | 'desktop-fill'
+    | 'desktop-sidebar'
+    | 'desktop-categories'
+    | 'desktop-pills'
+    | 'hero';
+  primary?: boolean;
   flush?: boolean;
+  flushOnPhone?: boolean;
   onChange: (value: T) => void;
 }) {
   const { t, locale } = useLocale();
   const desktopFill = layout === 'desktop-fill' || layout === 'desktop-sidebar';
+  const filled = layout === 'fill' || layout === 'desktop-pills';
   const desktop = useSyncExternalStore(subscribeDesktop, desktopSnapshot, serverSnapshot);
   const vertical = layout === 'desktop-sidebar' && desktop;
   const tabText = (text: string) => (locale === 'bg' && text === 'Features' ? 'Екстри' : t(text));
@@ -329,11 +420,14 @@ export function ShowroomTabs<T extends string>({
       aria-orientation={vertical ? 'vertical' : undefined}
       {...stylex.props(
         s.rail,
-        layout === 'fill' && s.fillRail,
+        filled && s.fillRail,
         desktopFill && s.desktopFillRail,
         layout === 'desktop-sidebar' && s.sidebarRail,
         layout === 'desktop-categories' && s.desktopCategories,
+        layout === 'desktop-pills' && s.pillsRail,
         flush && s.flushRail,
+        flushOnPhone && s.phoneFlushRail,
+        layout === 'hero' && s.heroRail,
       )}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
@@ -372,17 +466,28 @@ export function ShowroomTabs<T extends string>({
             tone === 'neutral' && s.neutralTab,
             variant === 'text' && s.textTab,
             variant === 'icon' && s.iconTab,
-            layout === 'fill' && s.fillTab,
+            filled && s.fillTab,
             desktopFill && s.desktopFillTab,
             layout === 'desktop-sidebar' && s.sidebarTab,
+            layout === 'desktop-pills' && s.pillsTab,
             selected === value && s.selected,
             selected === value && tone === 'neutral' && s.selectedNeutral,
             selected === value && variant === 'text' && s.selectedText,
             selected === value && desktopFill && s.desktopFillSelected,
             selected === value && layout === 'desktop-sidebar' && s.sidebarSelected,
+            selected === value && layout === 'desktop-pills' && s.pillsSelected,
+            primary && s.primaryTab,
+            layout === 'hero' && s.heroTab,
+            selected === value && layout === 'hero' && s.heroSelected,
           )}
         >
-          {content ?? tabText(tabLabel)}
+          {layout === 'desktop-pills' ? (
+            <span {...stylex.props(s.pillFace, selected === value && s.pillFaceSelected)}>
+              {content ?? tabText(tabLabel)}
+            </span>
+          ) : (
+            (content ?? tabText(tabLabel))
+          )}
         </button>
       ))}
     </div>

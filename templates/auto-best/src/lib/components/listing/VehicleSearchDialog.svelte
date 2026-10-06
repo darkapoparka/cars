@@ -8,14 +8,12 @@
 
   import { preserveScrollOffset } from '$lib/ui/overlay';
   import { dialogViewport } from '$lib/ui/dialog-viewport';
-  import { onDestroy, onMount, type Snippet } from 'svelte';
+  import { onDestroy, onMount, tick, type Snippet } from 'svelte';
+  import { MediaQuery } from 'svelte/reactivity';
   import { resolve } from '$app/paths';
   import {
-    bodyLabel,
     filterListingVehicles,
     listingFilterOptions,
-    listingTypeCount,
-    listingModelsForMake,
     listingVehicles,
     type ListingFilters
   } from '$data/listing';
@@ -24,22 +22,21 @@
     emptyListingDraft,
     listingDraftFromFilters,
     listingDraftHasFilters,
-    listingFacetSummary,
-    listingFacetOptionLabel,
-    listingFacetTitle,
+    listingFilterGroups,
     listingFiltersFromDraft,
-    withListingMake,
-    type ListingDraft,
-    type ListingFacetField
+    type ListingDraft
   } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
-  import QuickFilterSheet from './QuickFilterSheet.svelte';
+  import MobileListingFilters from './MobileListingFilters.svelte';
+  import ListingChoicePicker from './ListingChoicePicker.svelte';
+  import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopVehicleSearch from './DesktopVehicleSearch.svelte';
   import type { Attachment } from 'svelte/attachments';
 
   let { filters, children, desktopPickers = false }: { filters: ListingFilters; desktopPickers?: boolean; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
   let releaseOffset: ((restoreScroll?: boolean) => void) | undefined;
-  onDestroy(() => releaseOffset?.(false));
+  let destroyed = false;
+  onDestroy(() => { destroyed = true; releaseOffset?.(false); });
 
   let draft = $state<ListingDraft>(emptyListingDraft());
   let draftFilters = $derived(listingFiltersFromDraft(draft));
@@ -48,15 +45,17 @@
   let hasInvalidPriceRange = $derived(Boolean(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax)));
   let hasInvalidYearRange = $derived(Boolean(draft.yearMin && draft.yearMax && Number(draft.yearMin) > Number(draft.yearMax)));
   let hasInvalidRange = $derived(hasInvalidPriceRange || hasInvalidYearRange);
-  let modelOptions = $derived(listingModelsForMake(draft.make));
   let filterDialog = $state<HTMLDialogElement>();
   let dialogSearch = $state<HTMLInputElement>();
   let filtersOpen = $state(false);
-  let activeChoice = $state<string>();
   let desktopMatches = $state(false);
-  const desktopMode = $derived(desktopPickers && desktopMatches);
   let desktopInitialField = $state<string>();
+  const desktopFacet = $derived(listingFilterGroups.flatMap(group => group.fields).find(field => field === desktopInitialField));
+  const desktopMode = $derived(desktopPickers && desktopMatches && Boolean(desktopFacet));
+  const dialogTitle = $derived(i18n.t(desktopPickers && !desktopInitialField ? 'm_546ebb8eb993' : 'm_32729e44de2d'));
   let returnFocus = $state<HTMLButtonElement>();
+  const mobile = new MediaQuery('(max-width: 767px)', false);
+  const desktopIcons = { close: 'x', search: 'search', arrow: 'arrow-right' } as const;
 
   onMount(() => {
     const media = window.matchMedia('(min-width: 992px)');
@@ -82,53 +81,27 @@
     draft = listingDraftFromFilters(current);
   };
 
-  const mobileFieldDefinitions = [
-    { field: 'type', label: 'Vehicle type' },
-    { field: 'make', label: 'Марка' },
-    { field: 'model', label: 'Модел' },
-    { field: 'body', label: 'Купе' },
-    { field: 'price', label: 'Бюджет' },
-    { field: 'year', label: 'Година' },
-    { field: 'fuel', label: 'Гориво' },
-    { field: 'mileage_max', label: 'Пробег' },
-    { field: 'transmission', label: 'Скорости' },
-    { field: 'version', label: 'Версия' },
-    { field: 'condition', label: 'Състояние' },
-    { field: 'equipment', label: 'Екстри' }
-  ] satisfies readonly { field: ListingFacetField; label: string }[];
-  let mobileFields = $derived(mobileFieldDefinitions.map(item => {
-    const active = item.field === 'price' ? Boolean(draft.priceMin || draft.priceMax)
-      : item.field === 'year' ? Boolean(draft.yearMin || draft.yearMax)
-      : item.field === 'mileage_max' ? Boolean(draft.mileageMax)
-      : item.field === 'equipment' ? draft.equipment.length > 0
-      : Boolean(draft[item.field]);
-    const range = item.field === 'price' || item.field === 'year' || item.field === 'mileage_max';
-    return {
-      ...item,
-      active,
-      value: active || item.field === 'equipment' ? listingFacetSummary(item.field, draft, i18n.locale)
-        : i18n.t(range ? 'inventory.range.unlimited' : 'm_a52ace420f21')
-    };
-  }));
-
   const resetDraft = () => { draft = emptyListingDraft(filters.sort); };
+  const toggleEquipment = (value: ListingDraft['equipment'][number]) => {
+    draft.equipment = draft.equipment.includes(value)
+      ? draft.equipment.filter(item => item !== value) : [...draft.equipment, value];
+  };
 
-  const openFilters = (event: MouseEvent, field?: string) => {
+  const openFilters = async (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
-    if (desktopMode) { desktopInitialField = field; filtersOpen = true; return; }
+    desktopInitialField = field;
+    if (desktopMode || mobile.current) { filtersOpen = true; return; }
     initializeDraft();
     releaseOffset = preserveScrollOffset('--dn-dialog-scroll-offset');
     filtersOpen = true;
+    // Home search and the listing overview share one full filter form.
+    await tick();
+    if (destroyed || !filtersOpen) return;
     filterDialog?.showModal();
-    requestAnimationFrame(() => {
-      const compact = window.matchMedia('(max-width: 767px)').matches;
-      const target = field
-        ? filterDialog?.querySelector<HTMLSelectElement>(`select[name="${field}"]`)
-        : compact
-          ? filterDialog?.querySelector<HTMLElement>('#dn-listing-filter-title')
-          : dialogSearch;
-      target?.focus();
-    });
+    const target = field && field !== 'search'
+      ? filterDialog?.querySelector<HTMLElement>(`[data-field="${field}"] button`)
+      : desktopPickers && !field ? filterDialog?.querySelector<HTMLElement>('#dn-listing-filter-title') : dialogSearch;
+    target?.focus({ preventScroll: true });
   };
   const closeFilters = () => { if (desktopMode) filtersOpen = false; else if (filterDialog?.open) filterDialog.close(); };
   const handleDialogClick = (event: MouseEvent) => { if (event.target === event.currentTarget) closeFilters(); };
@@ -138,32 +111,31 @@
   };
   const handleDialogSubmit = () => { closeFilters(); };
   const handleClear = () => {
-    resetDraft(); closeFilters();
+    resetDraft();
+    void tick().then(() => {
+      if (!destroyed && filterDialog?.open) filterDialog.querySelector<HTMLElement>('#dn-listing-filter-title')?.focus({ preventScroll: true });
+    });
   };
   const restorePage = () => {
     filtersOpen = false;
     releaseOffset?.();
+    releaseOffset = undefined;
     const target = returnFocus;
-    let attempts = 0;
-    const restoreFocus = () => {
-      if (target?.isConnected) {
-        target.focus({ preventScroll: true });
-        if (target.matches(':focus')) return;
-      }
-      if (attempts++ < 60) requestAnimationFrame(restoreFocus);
-    };
-    setTimeout(() => requestAnimationFrame(restoreFocus), 0);
+    void tick().then(() => { if (!destroyed && !filtersOpen && target?.isConnected) target.focus({ preventScroll: true }); });
   };
   const cleanFormData = (event: FormDataEvent) => { cleanListingFormData(event.formData); };
 </script>
 
+{#snippet actionIcon(name: keyof typeof desktopIcons, size = 20)}
+  <Icon name={desktopIcons[name]} {size} />
+{/snippet}
+
 {@render children(openFilters, filtersOpen)}
 {#if desktopMode}
-  <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopInitialField} {returnFocus} />
+  <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopFacet} {returnFocus} />
+{:else if mobile.current}
+  <MobileListingFilters {filters} bind:open={filtersOpen} {returnFocus} focusSearch={desktopInitialField === 'search'} />
 {:else}
-
-<QuickFilterSheet mode="draft" id="dn-dialog-choice" filters={draftFilters} onApply={initializeDraft}>
-{#snippet children(openChoice, choiceOpen)}
 <dialog onkeydown={(event) => containDialogTab(event, event.currentTarget)}
   class="dn-listing-filter__dialog"
   id="dn-listing-filter-dialog"
@@ -182,21 +154,21 @@
     onformdata={cleanFormData}
   >
     <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header">
-      <h2 id="dn-listing-filter-title" tabindex="-1"><span class="dn-listing-filter__title-desktop">{i18n.t("m_32729e44de2d")}</span><span class="dn-listing-filter__title-mobile">{i18n.t("m_546ebb8eb993")}</span></h2>
+      <h2 id="dn-listing-filter-title" tabindex="-1">{dialogTitle}</h2>
       <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t("m_2b3fff4a027c")} onclick={closeFilters}>
-        <Icon name="x" />
+        {@render actionIcon('close')}
       </button>
     </header>
 
     <div class="dn-listing-filter__dialog-content">
       <div class="dn-listing-filter__dialog-search dn-mobile-overlay-search" role="search">
         <label class="dn-sr-only" for="dn-listing-dialog-query">{i18n.t("m_0ae7a3ecbc83")}</label>
-        <Icon name="search" size={18} />
+        {@render actionIcon('search', 18)}
         <input {@attach i18n.validation} id="dn-listing-dialog-query" {@attach attachDialogSearch} bind:value={draft.q} onkeydown={handleSearchKeydown} type="search" name="q" placeholder={i18n.t("m_cb8bed4ff8b8")} autocomplete="off" />
         <button
           class="dn-listing-filter__inline-submit"
           type="submit"
-          disabled={matchingVehicles.length === 0 || hasInvalidRange}
+          disabled={hasInvalidRange}
           aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}
         >
           {templateMessage(i18n, "Show {p0}", { p0: matchingVehicles.length })}
@@ -204,132 +176,31 @@
         </button>
       </div>
 
-      <div class="dn-mobile-filter-fields">
-        {#each mobileFields as item (item.field)}
-          <button class="dn-mobile-overlay-row" type="button" aria-haspopup="dialog" aria-controls="dn-dialog-choice" aria-expanded={choiceOpen && activeChoice === item.field} onclick={event => { activeChoice = item.field; openChoice(event, item.field, item.label); }}><strong>{listingFacetTitle(item.field, i18n.locale)}</strong><span data-active={item.active}>{item.value}</span><Icon name="arrow-right" size={18} /></button>
-        {/each}
-      </div>
       <div class="dn-listing-filter__filter-groups">
         <div class="dn-listing-filter__core-grid">
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t('inventory.facet.type')}</span>
-            <select {@attach i18n.validation} name="type" aria-label={i18n.t('inventory.facet.type')} bind:value={draft.type}>
-              {#each listingFilterOptions.types as option (option)}
-                <option value={option}>{listingFacetOptionLabel('type', option, i18n.locale)} ({listingTypeCount(option)})</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_ccdd25d4230f")}</span>
-            <select {@attach i18n.validation} name="make" aria-label={i18n.t("m_ccdd25d4230f")} value={draft.make} onchange={(event) => { draft = withListingMake(draft, event.currentTarget.value); }}>
-              {#each listingFilterOptions.makes as option (option)}
-                <option value={option}>{option || i18n.t("m_ccdd25d4230f")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_5e2c614c23f0")}</span>
-            <select {@attach i18n.validation} name="model" aria-label={i18n.t("m_5e2c614c23f0")} bind:value={draft.model}>
-              {#each modelOptions as option (option)}
-                <option value={option}>{option || i18n.t("m_5e2c614c23f0")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_191c24bf12d5")}</span>
-            <select {@attach i18n.validation} name="body" aria-label={i18n.t("m_191c24bf12d5")} bind:value={draft.body}>
-              {#each listingFilterOptions.bodies as option (option)}
-                <option value={option}>{specificationLabel(bodyLabel(option), i18n.locale) || i18n.t("m_191c24bf12d5")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_39b36d38d6eb")}</span>
-            <select {@attach i18n.validation} name="condition" aria-label={i18n.t("m_39b36d38d6eb")} bind:value={draft.condition}>
-              <option value="">{i18n.t("m_39b36d38d6eb")}</option>
-              <option value="new">{i18n.t("m_18fdd549b2ed")}</option>
-              <option value="used">{i18n.t("m_2b705510e73a")}</option>
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_94470b41eead")}</span>
-            <select {@attach i18n.validation} name="price_min" aria-label={i18n.t("m_94470b41eead")} bind:value={draft.priceMin}>
-              {#if draft.priceMin && !listingFilterOptions.prices.some(value => value === draft.priceMin)}<option value={draft.priceMin}>{draft.priceMin}</option>{/if}
-              {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? i18n.t("m_d7f76d3f0f5a", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_94470b41eead")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_363c4f34635c")}</span>
-            <select {@attach i18n.validation} name="price_max" aria-label={i18n.t("m_363c4f34635c")} bind:value={draft.priceMax}>
-              {#if draft.priceMax && !listingFilterOptions.prices.some(value => value === draft.priceMax)}<option value={draft.priceMax}>{draft.priceMax}</option>{/if}
-              {#each listingFilterOptions.prices as option (option)}
-                <option value={option}>{option ? i18n.t("m_a04d91558e9c", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_363c4f34635c")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_349ee8568241")}</span>
-            <select {@attach i18n.validation} name="year_min" aria-label={i18n.t("m_349ee8568241")} bind:value={draft.yearMin}>
-              {#if draft.yearMin && !listingFilterOptions.years.some(value => value === draft.yearMin)}<option value={draft.yearMin}>{draft.yearMin}</option>{/if}
-              {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || i18n.t("m_349ee8568241")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_07339ff9faf8")}</span>
-            <select {@attach i18n.validation} name="year_max" aria-label={i18n.t("m_07339ff9faf8")} bind:value={draft.yearMax}>
-              {#if draft.yearMax && !listingFilterOptions.years.some(value => value === draft.yearMax)}<option value={draft.yearMax}>{draft.yearMax}</option>{/if}
-              {#each listingFilterOptions.years as option (option)}
-                <option value={option}>{option || i18n.t("m_07339ff9faf8")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_5679c2543732")}</span>
-            <select {@attach i18n.validation} name="mileage_max" aria-label={i18n.t("m_5679c2543732")} bind:value={draft.mileageMax}>
-              {#if draft.mileageMax && !listingFilterOptions.mileages.some(value => value === draft.mileageMax)}<option value={draft.mileageMax}>{draft.mileageMax}</option>{/if}
-              {#each listingFilterOptions.mileages as option (option)}
-                <option value={option}>{option ? i18n.t("m_243dcf897937", { p0: new Intl.NumberFormat(i18n.locale).format(Number(option)) }) : i18n.t("m_5679c2543732")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_a80f942f4112")}</span>
-            <select {@attach i18n.validation} name="fuel" aria-label={i18n.t("m_a80f942f4112")} bind:value={draft.fuel}>
-              {#each listingFilterOptions.fuels as option (option)}
-                <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_a80f942f4112")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_3e10134259ab")}</span>
-            <select {@attach i18n.validation} name="transmission" aria-label={i18n.t("m_3e10134259ab")} bind:value={draft.transmission}>
-              {#each listingFilterOptions.transmissions as option (option)}
-                <option value={option}>{specificationLabel(option, i18n.locale) || i18n.t("m_3e10134259ab")}</option>
-              {/each}
-            </select>
-          </label>
-          <label>
-            <span class="dn-listing-filter__field-label">{i18n.t("m_1f46b4649491")}</span>
-            <select {@attach i18n.validation} name="version" aria-label={i18n.t("m_1f46b4649491")} bind:value={draft.version}>
-              {#each listingFilterOptions.versions as option (option)}
-                <option value={option}>{option || i18n.t("m_3f19fe84a2de")}</option>
-              {/each}
-            </select>
-          </label>
+          <ListingChoicePicker field="type" bind:draft showCounts />
+          <ListingChoicePicker field="make" bind:draft />
+          <ListingChoicePicker field="model" bind:draft />
+          <ListingChoicePicker field="body" bind:draft label={i18n.t('m_191c24bf12d5')} placeholder={i18n.t('m_191c24bf12d5')} />
+          <ListingChoicePicker field="condition" bind:draft label={i18n.t('m_39b36d38d6eb')} placeholder={i18n.t('m_39b36d38d6eb')} />
+          <ListingChoicePicker field="price_min" bind:draft placeholder={i18n.t('m_94470b41eead')} />
+          <ListingChoicePicker field="price_max" bind:draft placeholder={i18n.t('m_363c4f34635c')} />
+          <ListingChoicePicker field="year_min" bind:draft placeholder={i18n.t('m_349ee8568241')} />
+          <ListingChoicePicker field="year_max" bind:draft placeholder={i18n.t('m_07339ff9faf8')} />
+          <ListingChoicePicker field="mileage_max" bind:draft placeholder={i18n.t('m_5679c2543732')} />
+          <ListingChoicePicker field="fuel" bind:draft label={i18n.t('m_a80f942f4112')} placeholder={i18n.t('m_a80f942f4112')} />
+          <ListingChoicePicker field="transmission" bind:draft label={i18n.t('m_3e10134259ab')} placeholder={i18n.t('m_3e10134259ab')} />
+          <ListingChoicePicker field="version" bind:draft label={i18n.t('m_1f46b4649491')} placeholder={i18n.t('m_3f19fe84a2de')} />
         </div>
 
         <section class="dn-listing-filter__filter-group dn-listing-filter__filter-group--equipment" aria-labelledby="dn-listing-filter-equipment-title">
           <h3 id="dn-listing-filter-equipment-title">{i18n.t("m_5697d03daef4")}</h3>
           <div class="dn-listing-filter__equipment-grid">
             {#each listingFilterOptions.equipment as option (option)}
-              <label class="dn-listing-filter__equipment-option">
-                <input {@attach i18n.validation} type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
-                <span>{specificationLabel(option, i18n.locale)}</span>
-              </label>
+              <div class="dn-listing-filter__equipment-option">
+                <DesktopFilterChoice value={option} label={specificationLabel(option, i18n.locale)}
+                  checked={draft.equipment.includes(option)} multiple name="equipment" onchange={() => toggleEquipment(option)} />
+              </div>
             {/each}
           </div>
         </section>
@@ -342,29 +213,23 @@
           {hasInvalidPriceRange ? i18n.t("m_2157bc34d38a") : i18n.t("m_e35acfc7ae2e")}
         </p>
       {/if}
-      {#if hasLiveFilters}<a class="dn-listing-filter__clear dn-mobile-overlay-clear" href={i18n.href(resolve('/listing-grid'))} onclick={handleClear}>{i18n.t("action.clearShort")}</a>{/if}
-      <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={matchingVehicles.length === 0 || hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
+      {#if hasLiveFilters}<button class="dn-listing-filter__clear dn-mobile-overlay-clear" type="button" onclick={handleClear}>{i18n.t("action.clearShort")}</button>{/if}
+      <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
         <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
-        <span class="dn-listing-filter__submit-compact">{i18n.t("action.showCount", { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
       </button>
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
     </footer>
   </form>
 </dialog>
-{/snippet}
-</QuickFilterSheet>
-
 {/if}
 
 <style>
-  .dn-listing-filter__submit-compact { display: none; }
-  .dn-mobile-filter-fields { display: none; }
   label {
     display: block;
     min-width: 0;
   }
-  input[type='search'], select {
+  input[type='search'] {
     width: 100%;
     height: var(--dn-control-height-default);
     padding: 0 var(--dn-space-4);
@@ -379,7 +244,7 @@
     color: #737984;
     opacity: 1;
   }
-  input:focus, select:focus {
+  input:focus {
     border-color: #777e88;
     background: #fff;
     box-shadow: 0 0 0 3px rgba(32, 35, 41, 0.12);
@@ -412,8 +277,7 @@
   }
 
   .dn-listing-filter__dialog::backdrop {
-    background: rgba(8, 10, 14, 0.72);
-    backdrop-filter: blur(4px);
+    background: rgb(8 10 14 / .35);
   }
 
   .dn-listing-filter__dialog-panel {
@@ -440,7 +304,6 @@
   }
 
   .dn-listing-filter__dialog-header h2:focus { outline: none; }
-  .dn-listing-filter__title-mobile { display: none; }
 
   .dn-listing-filter__close { margin-left: auto; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: #202329; }
 
@@ -451,9 +314,14 @@
   }
 
   .dn-listing-filter__clear {
+    min-height: var(--dn-control-height-default);
+    padding: 0;
+    border: 0;
+    background: transparent;
     color: #555c66;
     font-size: var(--dn-text-body);
     font-weight: var(--dn-weight-semibold);
+    cursor: pointer;
   }
 
   .dn-listing-filter__clear:hover,
@@ -561,28 +429,15 @@
     min-width: 0;
   }
 
-  .dn-listing-filter__field-label {
-    display: none;
-  }
-
-  @media (min-width: 768px) {
-    .dn-listing-filter__field-label {
-      display: block;
-      margin: 0 0 6px 2px;
-      color: var(--dn-muted);
-      font-size: var(--dn-text-meta);
-      font-weight: var(--dn-weight-semibold);
-      line-height: var(--dn-leading-meta);
-    }
-
-
-  }
-
-  .dn-listing-filter__core-grid select {
+  .dn-listing-filter__core-grid :global(.dn-identity-trigger) {
     height: var(--dn-control-height-default);
-    padding-inline: var(--dn-space-4);
-    border-radius: var(--dn-radius-control);
+    min-height: var(--dn-control-height-default);
     font: var(--dn-entry-font);
+  }
+
+  .dn-listing-filter__core-grid :global(.dn-field-label) {
+    margin: 0 0 6px 2px;
+    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-listing-filter__filter-group--equipment {
@@ -609,40 +464,14 @@
   }
 
   .dn-listing-filter__equipment-option {
-    display: flex !important;
-    min-height: var(--dn-control-height-default);
-    align-items: center;
-    gap: var(--dn-overlay-gap);
-    padding: 10px 14px;
     border-radius: var(--dn-radius-control);
     background: #fff;
-    color: #353a42;
-    font: var(--dn-overlay-option-font);
-    cursor: pointer;
-    transition: background-color 150ms ease-out, color 150ms ease-out;
   }
 
-  .dn-listing-filter__equipment-option:hover {
-    background: #e9ebee;
-  }
-
-  .dn-listing-filter__equipment-option:has(input:checked) {
+  .dn-listing-filter__equipment-option:has(:global(input:checked)) {
     background: var(--dn-selection-surface);
     color: var(--dn-ink);
     box-shadow: inset 0 0 0 1px var(--dn-selection-line);
-  }
-
-  .dn-listing-filter__equipment-option:has(input:focus-visible) {
-    outline: 3px solid rgba(32, 35, 41, 0.24);
-    outline-offset: 2px;
-  }
-
-  .dn-listing-filter__equipment-option input {
-    width: 18px;
-    height: 18px;
-    flex: 0 0 auto;
-    margin: 0;
-    accent-color: var(--dn-red);
   }
 
   .dn-listing-filter__dialog-footer {
@@ -691,6 +520,13 @@
     cursor: not-allowed;
   }
 
+  @media (min-width: 992px) {
+    .dn-listing-filter__dialog-submit { background: var(--dn-ink); }
+    .dn-listing-filter__dialog-submit:hover, .dn-listing-filter__dialog-submit:focus-visible { background: var(--dn-ink-hover); }
+    .dn-listing-filter__dialog-submit:disabled { background: var(--dn-line-strong); color: var(--dn-muted); }
+    .dn-listing-filter__equipment-option:has(:global(input:checked)) { background: var(--dn-home-panel); color: var(--dn-ink); box-shadow: inset 0 0 0 1px var(--dn-line-strong); }
+  }
+
   @media (max-width: 991px) {
     .dn-listing-filter__core-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -700,88 +536,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .dn-listing-filter__equipment-option:has(input:checked) {
+    .dn-listing-filter__equipment-option:has(:global(input:checked)) {
       background: var(--dn-mobile-selection-surface);
       box-shadow: inset 0 0 0 1px var(--dn-mobile-selection-line);
     }
 
   }
 
-  @media (max-width: 767px) {
-    .dn-listing-filter__title-desktop { display: none; }
-    .dn-listing-filter__title-mobile { display: inline; }
-    .dn-listing-filter__inline-submit, .dn-listing-filter__filter-groups { display: none; }
-    .dn-mobile-filter-fields { display: grid; gap: var(--dn-overlay-gap); }
-    .dn-listing-filter__dialog-submit :global(svg),
-    .dn-listing-filter__submit-full { display: none; }
-    .dn-listing-filter__submit-compact { display: inline; }
-    .dn-listing-filter__dialog-footer { flex: 0 0 auto; }
-    .dn-listing-filter__clear { display: inline-flex; align-items: center; min-height: var(--dn-overlay-control-height); font: var(--dn-overlay-option-font); white-space: nowrap; }
-
-    .dn-listing-filter__dialog {
-      width: 100%;
-      height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
-      max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - env(safe-area-inset-top, 0px));
-      inset: calc(var(--dn-dialog-viewport-top, 0px) + env(safe-area-inset-top, 0px)) 0 auto;
-      margin: 0;
-      border-radius: 0;
-    }
-
-    .dn-listing-filter__dialog-panel {
-      height: 100%;
-      max-height: none;
-    }
-
-    .dn-listing-filter__dialog-content {
-      flex: 1;
-      padding: 0 var(--dn-overlay-gutter) var(--dn-space-6);
-    }
-
-    .dn-listing-filter__dialog-search {
-      height: var(--dn-overlay-control-height);
-      flex-basis: var(--dn-overlay-control-height);
-      margin-bottom: var(--dn-overlay-gap);
-      padding: 0 var(--dn-space-4);
-    }
-
-    .dn-listing-filter__dialog-search input[type='search'] {
-      font: var(--dn-overlay-field-font);
-    }
-
-    .dn-listing-filter__core-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--dn-overlay-gap);
-    }
-
-    .dn-listing-filter__core-grid select {
-      height: var(--dn-control-height-default);
-    }
-
-    .dn-listing-filter__filter-group--equipment {
-      margin-top: 16px;
-      padding: 20px;
-    }
-
-    .dn-listing-filter__equipment-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .dn-listing-filter__dialog-footer {
-      gap: var(--dn-space-4);
-      padding: var(--dn-space-3) var(--dn-overlay-gutter) calc(var(--dn-space-4) + env(safe-area-inset-bottom));
-    }
-
-    .dn-listing-filter__dialog-footer .dn-listing-filter__clear {
-      flex: 0 0 auto;
-    }
-
-    .dn-listing-filter__dialog-submit {
-      white-space: nowrap;
-      min-width: 0;
-      flex: 1;
-      padding-inline: 16px;
-      font: var(--dn-cta-font);
-    }
-
-  }
 </style>

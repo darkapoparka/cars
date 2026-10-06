@@ -11,14 +11,22 @@
 	import { desktopCopy } from '$lib/content/desktop-copy';
 	import ContactMobilePage from '$lib/components/contact/ContactMobilePage.svelte';
 	import ContactLocation from '$lib/components/contact/ContactLocation.svelte';
-	import ContactHeroDetails from '$lib/components/contact/ContactHeroDetails.svelte';
+	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
 	import { contactDesktopCopy } from '$lib/content/contact-desktop';
+	import { dealerCopy } from '$lib/config/dealer-copy';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import Phone from '@lucide/svelte/icons/phone';
+	import MapPin from '@lucide/svelte/icons/map-pin';
+	import Mail from '@lucide/svelte/icons/mail';
+	import MessageSquare from '@lucide/svelte/icons/message-square';
 	import { receiptMessage } from '$lib/domain/inquiry';
 	let { data, form }: PageProps = $props();
 	const english = $derived(data.locale === 'en');
 	const copy = $derived(contactDesktopCopy[data.locale]);
+	const emailHref = $derived(
+		data.site.contact.contactHref.startsWith('mailto:') ? data.site.contact.contactHref : undefined
+	);
+	const emailLabel = $derived(emailHref ? new URL(emailHref).pathname : '');
 </script>
 
 <svelte:head>
@@ -29,21 +37,36 @@
 	<div class="site-desktop-only">
 		<PageIntro
 			title={copy.title}
-			description={data.site.contact.appointment}
+			description={dealerCopy[data.locale].address}
 			image="/assets/daynight/proof-studio-import-handoff.webp"
 			vehicleArtwork
 			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 		>
-			{#snippet desktopActions()}
-				<DesktopHeroActions>
-					{#snippet secondaryActions()}
-						<ContactHeroDetails site={data.site} locale={data.locale} />
+			{#snippet desktopActions(caption: string | undefined)}
+				<DesktopHeroActions description={caption}>
+					{#snippet descriptionContent()}
+						<a
+							class="contact-hero-location"
+							href={data.site.contact.mapHref}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<MapPin size={16} aria-hidden="true" />{caption ?? data.site.contact.address}
+						</a>
+						{#if emailHref && emailLabel}
+							<a class="contact-hero-email" href={emailHref}>
+								<Mail size={16} aria-hidden="true" />{emailLabel}
+							</a>
+						{/if}
 					{/snippet}
-					<Action href={data.site.contact.phoneHref} size="primary"
+					{#snippet secondaryActions()}
+						<SocialLinks links={data.site.socials ?? []} tone="plain" />
+					{/snippet}
+					<Action href={data.site.contact.phoneHref} variant="strong" size="primary"
 						><Phone size={18} aria-hidden="true" />{data.site.contact.phone}</Action
 					>
-					<Action href="#contact-enquiry" variant="strong" size="primary"
-						>{desktopCopy[data.locale].contactEnquiry}</Action
+					<Action href="#contact-enquiry" variant="secondary" size="primary"
+						><MessageSquare size={18} aria-hidden="true" />{copy.enquiry}</Action
 					>
 				</DesktopHeroActions>
 			{/snippet}
@@ -93,6 +116,25 @@
 </main>
 
 <style>
+	.contact-hero-location,
+	.contact-hero-email {
+		display: inline-flex;
+		align-items: center;
+		vertical-align: top;
+		gap: var(--bc-space-1);
+		color: var(--bc-copy);
+		text-decoration: underline;
+		text-decoration-color: var(--bc-muted-light);
+		text-underline-offset: var(--bc-space-1);
+	}
+	.contact-hero-email {
+		margin-inline-start: var(--bc-space-6);
+	}
+	.contact-hero-location:hover,
+	.contact-hero-email:hover {
+		color: var(--bc-ink);
+		text-decoration-color: currentColor;
+	}
 	.contact-intake {
 		padding-block: var(--bc-space-8);
 	}
@@ -114,6 +156,11 @@
 	.contact-form-panel header {
 		margin-bottom: var(--bc-space-6);
 		text-align: left;
+	}
+	@media (min-width: 768px) {
+		.contact-form-panel {
+			padding: var(--bc-space-8);
+		}
 	}
 	@media (max-width: 1023px) {
 		.contact-intake-grid {

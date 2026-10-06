@@ -9,6 +9,7 @@ export const contactDesktopCopy: Record<
 		title: string;
 		details: string;
 		phone: string;
+		enquiry: string;
 		visit: string;
 		message: string;
 		location: string;
@@ -20,6 +21,7 @@ export const contactDesktopCopy: Record<
 		title: 'Контакти',
 		details: 'Връзка с нас',
 		phone: 'Обади се',
+		enquiry: 'Запитване',
 		visit: 'Посети ни',
 		message: 'Пиши ни',
 		location: 'Нашият адрес',
@@ -30,6 +32,7 @@ export const contactDesktopCopy: Record<
 		title: 'Contact us',
 		details: 'Contact details',
 		phone: 'Call us',
+		enquiry: 'Enquiry',
 		visit: 'Visit us',
 		message: 'Message us',
 		location: 'Our location',

@@ -502,6 +502,16 @@
 		font-size: var(--bc-text-label);
 		flex: 1;
 	}
+	@media (min-width: 768px) {
+		.inventory-all__navigation button:hover,
+		.inventory-all__clear-category:hover {
+			background: var(--bc-control-hover);
+		}
+		.inventory-all__navigation button[aria-selected='true']:hover {
+			background: var(--bc-accent-hover);
+			color: var(--bc-accent-contrast);
+		}
+	}
 	@media (min-width: 768px) and (max-width: 900px) {
 		.inventory-all__panel {
 			padding-block: var(--bc-space-4);

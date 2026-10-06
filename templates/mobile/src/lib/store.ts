@@ -2,7 +2,13 @@
 import { useSyncExternalStore } from 'react';
 import { defaultFilters, type Filters } from './types';
 import { normalizeFilters } from './filters';
-import { createInitialState, decodeState, type State } from './persistence';
+import {
+  createInitialState,
+  decodeState,
+  normalizeShowroomContactDetails,
+  type ShowroomContactDetails,
+  type State,
+} from './persistence';
 const initial = createInitialState();
 let state: State = initial;
 let hydrated = false;
@@ -99,10 +105,22 @@ export function markViewed(id: string) {
   if (state.viewed[0] !== id)
     patchState({ viewed: [id, ...state.viewed.filter((value) => value !== id)].slice(0, 20) });
 }
-export function saveMessageDraft(id: string, message: string): boolean {
+export function saveMessageDraft(
+  id: string,
+  message: string,
+  details?: ShowroomContactDetails,
+): boolean {
   ensureHydrated();
   const persisted = patchState({
     messageDrafts: { ...state.messageDrafts, [id]: message.trim().slice(0, 4000) },
+    ...(details
+      ? {
+          showroomContactDetails: {
+            ...state.showroomContactDetails,
+            [id]: normalizeShowroomContactDetails(details),
+          },
+        }
+      : {}),
   });
   notify(
     persisted

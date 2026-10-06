@@ -88,28 +88,49 @@ try {
     await check('filters', '/listing-grid', async page => {
       const trigger = page.locator(width < 768 ? '.dn-listing-filter__toggle' : '.dn-listing-results__filters');
       await trigger.click();
+      if (width >= 992) {
+        const workspace = page.locator('.dn-search-dialog[data-compact=false]');
+        const close = workspace.locator('.dn-search-close');
+        const geometry = await close.evaluate(el => {
+          const box = el.getBoundingClientRect(), icon = el.querySelector('svg').getBoundingClientRect();
+          return { width: box.width, height: box.height,
+            dx: icon.x + icon.width / 2 - box.x - box.width / 2,
+            dy: icon.y + icon.height / 2 - box.y - box.height / 2,
+            inViewport: box.left >= 0 && box.right <= innerWidth && box.top >= 0 && box.bottom <= innerHeight };
+        });
+        assert(geometry.width >= 44 && geometry.height >= 44 && geometry.inViewport);
+        assert(Math.abs(geometry.dx) <= .5 && Math.abs(geometry.dy) <= .5);
+        await close.click();
+        await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+        await trigger.click();
+        await page.keyboard.press('Escape');
+        await workspace.waitFor({ state: 'hidden' });
+        await page.waitForFunction(el => document.activeElement === el, await trigger.elementHandle());
+        return { desktopClose: geometry };
+      }
       const close = page.locator('.dn-listing-filter__close');
       const mainHeader = await mobileHeaderGeometry(page.locator('.dn-listing-filter__dialog-header'));
       const evidence = [await centered(close)];
       await page.screenshot({ path: `${output}/${locale}-${width}-filters.png` });
       if (width < 768) {
-        const facet = page.locator('.dn-mobile-filter-fields button').nth(1);
+        const facet = page.locator('.dn-mobile-filter-fields button[data-field=make]');
         await facet.click();
-        const picker = page.locator('#dn-dialog-choice');
-        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 1, 'Only the active facet reports an expanded dialog');
+        const picker = page.locator('#dn-listing-filter-dialog');
+        assert.equal(await page.locator('dialog[open]').count(), 1, 'A facet uses the same mobile dialog');
+        assert.equal(await page.locator('.dn-mobile-filter-fields').count(), 0, 'The active pane replaces the overview');
         const nestedHeader = await mobileHeaderGeometry(picker.locator('header'));
         assert.equal(mainHeader.shared, true, 'Main mobile overlay must use the shared header primitive');
-        assert.equal(nestedHeader.shared, true, 'Nested mobile overlay must use the shared header primitive');
-        assert.deepEqual(nestedHeader, mainHeader, 'Main and nested overlay headers must align exactly');
+        assert.equal(nestedHeader.shared, true, 'The choice pane uses the shared header primitive');
+        assert.deepEqual(nestedHeader, mainHeader, 'Overview and choice headers must align exactly');
         evidence.push({ headerAlignment: { main: mainHeader, nested: nestedHeader } });
-        evidence.push(await centered(picker.locator('.close')));
+        evidence.push(await centered(close));
         await picker.locator('input[type=search]').fill('Audi');
         evidence.push(await centered(picker.locator('.clear-search')));
         await picker.locator('.clear-search').click();
         assert.equal(await picker.locator('input[type=search]').inputValue(), '');
-        await picker.locator('.close').click();
-        assert.equal(await page.locator('.dn-mobile-filter-fields button[aria-expanded="true"]').count(), 0, 'Closing the picker clears the expanded state');
-        assert.equal(await page.locator('dialog[open]').count(), 1, 'Nested Close must retain its parent');
+        await picker.locator('.back').click();
+        assert.equal(await page.locator('.dn-mobile-filter-fields button').count(), 12, 'Back returns to all criteria');
+        assert.equal(await page.locator('dialog[open]').count(), 1, 'Back retains the open filter sheet');
         await page.waitForFunction(el => document.activeElement === el, await facet.elementHandle());
         await page.setViewportSize({ width, height: 420 });
         evidence.push(await centered(close));

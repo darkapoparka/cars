@@ -13,7 +13,7 @@
 	import SellYourCarMobilePage from '$lib/components/sell-your-car/SellYourCarMobilePage.svelte';
 	let { data }: PageProps = $props();
 	const copy = $derived(publicPageCopy[data.locale].sell);
-	let mode = $state('vin');
+	let mode = $derived(data.desktopMode);
 	let session = $state(0);
 	const title = $derived(copy.title);
 </script>
@@ -36,6 +36,7 @@
 			{title}
 			image="/assets/daynight/services/sell-car-service.webp"
 			vehicleArtwork
+			compact
 			artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 			description={copy.heroDescription}
 		/>

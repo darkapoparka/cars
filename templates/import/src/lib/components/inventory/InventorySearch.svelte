@@ -35,7 +35,6 @@
 		label={copy.keyword}
 		placeholder={controlsCopy.searchPlaceholder}
 		actionLabel={copy.search}
-		appearance="compact"
 		controls="inventory-results"
 	/>
 </form>

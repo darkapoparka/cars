@@ -2,11 +2,14 @@ import { appPath, returningContext, returningPage } from './locale-smoke-fixture
 import assert from 'node:assert/strict';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
+import { verifyHomeBrowse } from './home-browse-smoke.mjs';
 
 const base = previewUrl();
 const output = 'artifacts/phase4-smoke';
 const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
+const casePattern = process.env.PHASE4_CASE ? new RegExp(process.env.PHASE4_CASE) : null;
+const check = (name, run) => casePattern && !casePattern.test(name) ? Promise.resolve() : suite.check(name, run);
 
 async function assertCleanDom(page) {
   const state = await page.evaluate(() => {
@@ -24,7 +27,7 @@ async function assertCleanDom(page) {
 const mobileField = (page, title) => page.locator('.dn-mobile-filter-fields button').filter({ has: page.getByText(title, { exact: true }) });
 
 try {
-  await suite.check('URL sort and chip removal retain unrelated filters', async () => {
+  await check('URL sort and chip removal retain unrelated filters', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
       await page.goto(`${base}/listing-grid?make=BMW&fuel=${encodeURIComponent('Дизел')}&sort=price-asc`, { waitUntil: 'networkidle' });
@@ -48,18 +51,19 @@ try {
     } finally { await page.close(); }
   });
 
-  await suite.check('nested and outer dialog drafts apply or cancel at their owner', async () => {
+  await check('facet and outer filter drafts save or cancel at their owner', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
       await page.goto(`${base}/listing-grid?fuel=${encodeURIComponent('Дизел')}&sort=price-asc`, { waitUntil: 'networkidle' });
       const trigger = page.locator('.dn-listing-filter__toggle');
       const dialog = page.locator('#dn-listing-filter-dialog');
-      const picker = page.locator('#dn-dialog-choice');
+      const picker = dialog.locator('.dn-mobile-filter-editor');
+      const save = dialog.getByRole('button', { name: 'Запазете', exact: true });
       await trigger.click();
       await dialog.waitFor({ state: 'visible' });
       const makeField = mobileField(page, 'Марка');
       await makeField.click();
-      await picker.getByRole('radio', { name: 'Audi', exact: true }).check();
+      await picker.getByRole('checkbox', { name: 'Audi', exact: true }).check();
       await page.keyboard.press('Escape');
       await picker.waitFor({ state: 'hidden' });
       assert.match(await makeField.innerText(), /Всички/, 'Nested Cancel must preserve the parent draft');
@@ -68,19 +72,20 @@ try {
       assert.equal(await makeField.evaluate(element => element === document.activeElement), true, 'Nested Cancel must restore focus');
 
       await makeField.click();
-      await picker.getByRole('radio', { name: 'Audi', exact: true }).check();
-      await picker.locator('.apply').click();
+      await picker.getByRole('checkbox', { name: 'Audi', exact: true }).check();
+      await save.click();
       assert.equal(new URL(page.url()).searchParams.has('make'), false, 'Nested Apply must not update the URL');
       assert.match(await makeField.innerText(), /Audi/);
 
       await mobileField(page, 'Модел').click();
-      await picker.getByRole('radio', { name: 'RS Q8', exact: true }).check();
-      await picker.locator('.apply').click();
+      await picker.getByRole('checkbox', { name: 'RS Q8', exact: true }).check();
+      await save.click();
       assert.match(await mobileField(page, 'Модел').innerText(), /RS Q8/);
 
       await mobileField(page, 'Марка').click();
-      await picker.getByRole('radio', { name: 'BMW', exact: true }).check();
-      await picker.locator('.apply').click();
+      await picker.getByRole('checkbox', { name: 'BMW', exact: true }).check();
+      await picker.getByRole('checkbox', { name: 'Audi', exact: true }).uncheck();
+      await save.click();
       assert.match(await mobileField(page, 'Марка').innerText(), /BMW/);
       assert.match(await mobileField(page, 'Модел').innerText(), /Всички/, 'Changing make must reset model');
 
@@ -93,8 +98,8 @@ try {
       await dialog.waitFor({ state: 'visible' });
       assert.match(await mobileField(page, 'Марка').innerText(), /Всички/, 'Outer Cancel must discard its draft');
       await mobileField(page, 'Марка').click();
-      await picker.getByRole('radio', { name: 'BMW', exact: true }).check();
-      await picker.locator('.apply').click();
+      await picker.getByRole('checkbox', { name: 'BMW', exact: true }).check();
+      await save.click();
       await dialog.locator('.dn-listing-filter__dialog-submit').click();
       await page.waitForURL(url => url.searchParams.get('make') === 'BMW');
       const params = new URL(page.url()).searchParams;
@@ -105,32 +110,18 @@ try {
     } finally { await page.close(); }
   });
 
-  await suite.check('Home desktop pending values survive dialog cancel and apply on submit', async () => {
+  await check('Home desktop selector drafts save, cancel and reach filtered results', async () => {
     const page = await returningPage(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     try {
       await page.goto(base, { waitUntil: 'networkidle' });
       await assertCleanDom(page);
-      const form = page.locator('.dn-search__desktop-form .dn-discovery');
-      await form.locator('select[name=make]').selectOption('Audi');
-      const opener = form.locator('.dn-discovery__keyword');
-      await opener.click();
-      const dialog = page.locator('#dn-listing-filter-dialog');
-      await dialog.waitFor({ state: 'visible' });
-      assert.equal(await dialog.locator('select[name=make]').inputValue(), 'Audi');
-      await page.keyboard.press('Escape');
-      await dialog.waitFor({ state: 'hidden' });
-      assert.equal(await opener.evaluate(element => element === document.activeElement), true);
-      assert.equal(appPath(page.url()), '/');
-      assert.equal(await form.locator('select[name=make]').inputValue(), 'Audi');
-      await form.locator('.dn-discovery__submit').click();
-      await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
-      assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
+      await verifyHomeBrowse(page);
       await assertCleanDom(page);
       return { url: page.url() };
     } finally { await page.close(); }
   });
 
-  await suite.check('desktop mega menu keeps keyboard ownership', async () => {
+  await check('desktop mega menu keeps keyboard ownership', async () => {
     const page = await returningPage(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     try {
       await page.goto(base, { waitUntil: 'networkidle' });
@@ -149,7 +140,7 @@ try {
       return { focusedTrigger: true };
     } finally { await page.close(); }
   });
-  await suite.check('shell state stays correct across direct and client navigation', async () => {
+  await check('shell state stays correct across direct and client navigation', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
       await page.goto(base, { waitUntil: 'networkidle' });
@@ -219,7 +210,7 @@ try {
     } finally { await page.close(); }
   });
 
-  await suite.check('responsive shell and discovery boundaries', async () => {
+  await check('responsive shell and discovery boundaries', async () => {
     const results = [];
     for (const [width, height] of [[320, 677], [390, 844], [430, 932], [844, 390], [767, 900], [768, 900], [991, 900], [992, 900], [1024, 900], [1440, 900], [1920, 1080]]) {
       const page = await returningPage(browser, { viewport: { width, height }, reducedMotion: 'reduce' });

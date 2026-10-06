@@ -89,7 +89,7 @@ try {
           const errors = [];
           const sceneRequests = [];
           const onError = error => errors.push(error.message);
-          const onRequest = request => { if (/auto-best-desktop-.+-v[12]\.webp/.test(request.url())) sceneRequests.push(request.url()); };
+          const onRequest = request => { if (/auto-best-desktop-.+-v[123]\.webp/.test(request.url())) sceneRequests.push(request.url()); };
           page.on('pageerror', onError);
           page.on('request', onRequest);
           try {
@@ -141,7 +141,7 @@ try {
               }
               assert.equal(geometry.scene.artwork, imageScene ? 'image' : 'vehicles', 'Search heroes use cutouts; company heroes use larger car scenes');
               if (imageScene) {
-                const scene = route === 'about-us' ? 'home-v2' : 'inventory-v2';
+                const scene = route === 'about-us' ? 'home-v3' : 'inventory-v3';
                 assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'About and Contact reuse the approved larger car banners');
               } else {
                 const pair = { '': ['gclass', 'urus'], 'listing-grid': ['golf', 'a45'], blog: ['m5', 'e63'] }[route];
@@ -409,7 +409,7 @@ try {
             const geometry = await heroGeometry(page);
             assertDesktopFrame(geometry);
             assert.equal(geometry.scene.artwork, 'image', 'Service entries share the larger Contact car scene');
-            assert(geometry.scene.src.endsWith('auto-best-desktop-inventory-v2.webp'), 'Service entries use the approved Contact banner');
+            assert(geometry.scene.src.endsWith('auto-best-desktop-inventory-v3.webp'), 'Service entries use the approved Contact banner');
             assert.equal(geometry.cutouts.length, 0, 'Service entries have one artwork layer');
             assert.equal(await page.locator('.dn-hero-vehicles__car').count(), 0, 'Service illustrations remain mobile only');
             assert(geometry.overflow <= 1, 'Service route has no horizontal overflow');

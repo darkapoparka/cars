@@ -95,8 +95,12 @@
 	.site-field input,
 	.site-field select,
 	.site-field textarea {
-		border-color: var(--bc-border-strong);
+		border-color: transparent;
 		background: var(--bc-surface);
+	}
+	.site-field :is(input, select, textarea):hover {
+		border-color: transparent;
+		background: var(--bc-control-hover);
 	}
 	.site-field :is(input, select, textarea):focus-visible {
 		outline: 2px solid var(--bc-focus);
@@ -152,7 +156,7 @@
 		:is([data-intake-field], [data-intake-fields])
 		:is(input, select, textarea) {
 		min-height: var(--bc-control-height-primary);
-		border: 1px solid var(--bc-border-strong);
+		border: 1px solid transparent;
 		border-radius: var(--bc-desktop-control-radius);
 		padding: var(--bc-space-2) var(--bc-space-3);
 		background: var(--bc-control);
@@ -161,6 +165,14 @@
 		font-weight: var(--bc-weight-control);
 		line-height: var(--bc-leading-control);
 		box-shadow: none;
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		:is([data-intake-field], [data-intake-fields])
+		:is(input, select, textarea):hover {
+		border-color: transparent;
+		background: var(--bc-control-hover);
 	}
 	.site-shell
 		.site-desktop-only
@@ -200,12 +212,20 @@
 		font-weight: var(--bc-weight-control);
 	}
 	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button:hover {
-		background: var(--bc-surface-hover);
+		border-color: transparent;
+		background: var(--bc-control-hover);
 	}
 	.site-shell .site-desktop-only .desktop-intake [data-intake-choices] button[aria-pressed='true'] {
 		background: var(--bc-accent);
 		color: var(--bc-accent-contrast);
-		border-color: var(--bc-accent);
+		border-color: transparent;
+	}
+	.site-shell
+		.site-desktop-only
+		.desktop-intake
+		[data-intake-choices]
+		button[aria-pressed='true']:hover {
+		background: var(--bc-accent-hover);
 	}
 	.site-shell .site-desktop-only .desktop-intake :is([data-intake-next], [data-intake-back]) {
 		min-height: var(--bc-control-height-primary);

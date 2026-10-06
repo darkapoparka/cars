@@ -6,7 +6,10 @@
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import Icon from '$components/ui/Icon.svelte';
-  import { activeFilterCount, listingHiddenFields, listingFilterOptions, type ListingFilters } from '$data/listing';
+  import { tick } from 'svelte';
+  import { activeFilterCount, listingHiddenFields, type ListingFilters } from '$data/listing';
+  import { cleanListingFormData, listingDraftFromFilters } from '$data/listing-draft';
+  import ListingChoicePicker from './ListingChoicePicker.svelte';
   import type { Vehicle } from '$data/inventory';
 
   let { filters, vehicles, draftFilters, openFilters, filtersOpen }: {
@@ -17,6 +20,8 @@
     filtersOpen: boolean;
   } = $props();
   let activeCount = $derived(activeFilterCount(draftFilters));
+  let sortDraft = $derived(listingDraftFromFilters(filters));
+  let sortForm = $state<HTMLFormElement>();
   const compactSortLabels = {
     default: 'Препоръчани',
     newest: 'Най-нови',
@@ -27,10 +32,8 @@
 
   const hiddenFields = (filters: ListingFilters) => listingHiddenFields(filters, ['sort']);
 
-  const submitSort = (event: Event) => {
-    const select = event.currentTarget as HTMLSelectElement;
-    select.form?.requestSubmit();
-  };
+  // Browse with radio arrows; submit only after an explicit menu choice.
+  const submitSort = async () => { await tick(); sortForm?.requestSubmit(); };
 </script>
 
 <section class="dn-listing-results" data-slot="listing-results" aria-labelledby="listing-results-title">
@@ -42,18 +45,12 @@
           <Icon name="adjustments" size={18} /><span>{i18n.t("m_546ebb8eb993")}</span>
           {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
         </button>
-      <form class="dn-listing-sort" method="GET" action={i18n.href(resolve('/listing-grid'))}>
+      <form bind:this={sortForm} class="dn-listing-sort" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={event => cleanListingFormData(event.formData)}>
         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
         {/each}
-        <label class="dn-sr-only" for="listing-sort">{i18n.t("m_bec69036aa27")}</label>
         <span class="dn-listing-sort__icon" aria-hidden="true"></span>
-        <select {@attach i18n.validation} id="listing-sort" name="sort" onchange={submitSort} aria-label={i18n.t("m_c7d3914bb4d7")}>
-          {#each listingFilterOptions.sorts as [value, label] (value)}
-            <option value={value === 'default' ? '' : value} selected={filters.sort === value}>{i18n.text(label)}</option>
-          {/each}
-        </select>
-        <span class="dn-listing-sort__value" aria-hidden="true">{i18n.text(compactSortLabels[filters.sort])}</span>
+        <ListingChoicePicker field="sort" bind:draft={sortDraft} label={i18n.t('m_c7d3914bb4d7')} displayValue={i18n.text(compactSortLabels[sortDraft.sort])} showLabel={false} compact oncommit={submitSort} />
         <button class="dn-sr-only" type="submit">{i18n.t("m_323ef154f92d")}</button>
       </form>
       </div>
@@ -114,18 +111,6 @@
     .dn-listing-results__heading { margin-bottom: var(--dn-space-4); }
   }
 
-  .dn-listing-sort__value {
-    position: relative;
-    z-index: 2;
-    padding: 0 32px 0 38px;
-    overflow: hidden;
-    color: #202329;
-    font: var(--dn-control-font);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    pointer-events: none;
-  }
-
   .dn-listing-sort {
     position: relative;
     display: inline-flex;
@@ -148,20 +133,6 @@
     background: var(--dn-surface-subtle);
   }
 
-  .dn-listing-sort::after {
-    position: absolute;
-    top: 50%;
-    right: 16px;
-    z-index: 2;
-    width: 7px;
-    height: 7px;
-    border-right: 1.5px solid #4d5562;
-    border-bottom: 1.5px solid #4d5562;
-    content: '';
-    pointer-events: none;
-    transform: translateY(-70%) rotate(45deg);
-  }
-
   .dn-listing-sort__icon {
     position: absolute;
     left: 14px;
@@ -176,33 +147,7 @@
     pointer-events: none;
   }
 
-  .dn-listing-sort select {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    width: 100%;
-    height: 44px;
-    padding: 0 38px 0 42px;
-    border: 0;
-    border-radius: inherit;
-    outline: 0;
-    background: transparent;
-    color: transparent;
-    overflow: hidden;
-    font-size: var(--dn-text-meta);
-    font-weight: var(--dn-weight-medium);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    appearance: none;
-    cursor: pointer;
-  }
-
-  .dn-listing-sort select:focus-visible {
-    outline: 2px solid var(--dn-red);
-    outline-offset: 2px;
-  }
-
-  .dn-listing-sort select option { color: #202329; }
+  .dn-listing-sort :global(.dn-identity-trigger) { height: 44px; padding: 0 14px 0 38px; border: 0; border-radius: var(--dn-pill); background: transparent; }
 
   .dn-listing-results__grid {
     display: grid;
@@ -267,29 +212,13 @@
       border-radius: var(--dn-pill);
     }
 
-    .dn-listing-sort::after {
-      right: 13px;
-    }
-
     .dn-listing-sort__icon {
       left: 12px;
     }
 
-    .dn-listing-sort select {
-      height: 44px;
-      padding: 0 30px 0 36px;
-      font-size: var(--dn-control-size);
-      color: transparent;
-    }
 
-    .dn-listing-sort select option {
-      color: #202329;
-    }
 
-    .dn-listing-sort__value {
-      right: 28px;
-      left: 36px;
-    }
+
 
     .dn-listing-results__grid {
       grid-template-columns: minmax(0, 1fr);

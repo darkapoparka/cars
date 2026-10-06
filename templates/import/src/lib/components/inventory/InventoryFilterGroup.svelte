@@ -271,9 +271,19 @@
 		}
 		.filter-group__search {
 			min-height: var(--bc-control-height-primary);
-			border-color: var(--bc-border-strong);
+			border-color: transparent;
 			border-radius: var(--bc-desktop-control-radius);
 			background: var(--bc-surface);
+		}
+		.filter-group__search:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.filter-group__search:focus-within {
+			border-color: var(--bc-focus);
+		}
+		.filter-group__more:hover {
+			background: var(--bc-control-hover);
 		}
 		.filter-group__options {
 			gap: var(--bc-space-1);
@@ -291,9 +301,13 @@
 		}
 		.filter-group__option:has(input:checked) {
 			border-color: transparent;
-			background: var(--bc-accent-tint);
-			color: var(--bc-accent);
+			background: var(--bc-control-selected-surface);
+			color: var(--bc-ink);
 			box-shadow: none;
+		}
+		.filter-group__option:has(input:checked):hover {
+			border-color: transparent;
+			background: var(--bc-control-selected-hover);
 		}
 		.filter-group__option:has(input:focus-visible) {
 			outline: 2px solid var(--bc-focus);

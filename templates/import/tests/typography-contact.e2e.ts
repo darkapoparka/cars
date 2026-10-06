@@ -111,8 +111,10 @@ test('About opens with the team and retains accessible social destinations', asy
 			? '.desktop-hero-action-panel .social-links a:visible'
 			: '.about-socials .social-links a:visible'
 	);
-	if (info.project.name === 'desktop')
+	if (info.project.name === 'desktop') {
 		await expect(page.locator('.site-footer .social-links a')).toHaveCount(3);
+		await expect(page.locator('.desktop-hero-action-panel .social-links--plain')).toBeVisible();
+	}
 	await expect(socials).toHaveCount(3);
 	for (const link of await socials.all()) {
 		await expect(link).toHaveAttribute('href', /^https:/);
@@ -120,6 +122,8 @@ test('About opens with the team and retains accessible social destinations', asy
 		if (info.project.name === 'desktop') {
 			await expect(link.locator('svg')).toBeVisible();
 			await expect(link.locator('svg')).toHaveAttribute('aria-hidden', 'true');
+			await expect(link.locator('svg')).toHaveAttribute('fill', 'currentColor');
+			await expect(link.locator('svg path')).toHaveCount(1);
 		} else {
 			await expect(link.locator('img')).toHaveAttribute('src', /assets\/icons\/brands\//);
 		}
@@ -138,15 +142,20 @@ test('Contact pairs the framed location with a usable form and reflows at narrow
 	const map = (await location.boundingBox())!;
 	expect(map.x + map.width).toBeLessThan(bounds!.x);
 	expect(Math.abs(map.y - bounds!.y)).toBeLessThan(1);
+	const locationTitle = (await location.getByRole('heading').boundingBox())!;
+	const formTitle = (await form.getByRole('heading').boundingBox())!;
+	expect(Math.abs(locationTitle.y - formTitle.y)).toBeLessThan(1);
+	expect(Math.abs(locationTitle.x - map.x - (formTitle.x - bounds!.x))).toBeLessThan(1);
 	expect(Math.abs(bounds!.x + bounds!.width - parent!.x - parent!.width)).toBeLessThan(1);
 	await expect(page.locator('#contact-details .contact-intake-grid')).toBeVisible();
 	await expect(page.locator('.contact-channel')).toHaveCount(0);
 	const heroPanel = page.locator('.desktop-hero-action-panel .desktop-discovery-panel');
 	await expect(heroPanel).toBeVisible();
 	await expect(heroPanel.locator('a[href^="tel:"]')).toHaveCount(1);
+	await expect(heroPanel.locator('.site-action')).toHaveCount(2);
 	await expect(heroPanel.locator('a[href="#contact-enquiry"]')).toBeVisible();
-	await expect(heroPanel.locator('.contact-hero-details')).toBeVisible();
-	await expect(page.locator('.desktop-hero-actions__secondary a')).toHaveCount(2);
+	await expect(heroPanel.locator('.social-links a')).toHaveCount(3);
+	await expect(page.locator('.desktop-hero-actions__secondary a')).toHaveCount(3);
 	expect(
 		await page.locator('.site-intro__content').evaluate((node) => getComputedStyle(node).textAlign)
 	).toBe('center');
@@ -183,7 +192,7 @@ test('buying-panel selections retain their size and weight after choosing', asyn
 	await expect(trigger).toBeFocused();
 	const value = trigger.locator('.hfp__value');
 	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('400');
-	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('20px');
+	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('16px');
 	await expect(trigger).toHaveClass(/hfp__field--compact/);
 	await expect(value).toContainText('BMW');
 });

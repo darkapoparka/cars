@@ -1,4 +1,5 @@
 import type { Locale } from '$lib/locale/core';
+import { homeModeArtwork } from './home-discovery';
 
 type InventoryDesktopControlsCopy = {
 	searchPlaceholder: string;
@@ -40,12 +41,23 @@ export const inventoryDesktopControlsCopy: Record<Locale, InventoryDesktopContro
 	}
 };
 
-/** Retained template artwork for body types present in the inventory options. */
-export const inventoryTypeArtwork: Record<string, string> = {
-	Sedan: '/assets/daynight/home-modes/buy-graphite-v3-192.webp',
-	SUV: '/assets/daynight/home2/home2-hero-suv.webp',
-	Cabriolet: '/assets/images/card/card-34.webp'
-};
+const categoryArtwork = (name: string) => ({
+	src: `/assets/daynight/inventory-types/${name}-1x.webp`,
+	width: 64,
+	height: 48,
+	sources: [1, 2, 3].map((density) => ({
+		src: `/assets/daynight/inventory-types/${name}-${density}x.webp`,
+		density
+	}))
+});
+
+/** Desktop category shortcuts reuse Home's choice row and canonical body filter. */
+export const inventoryCategories = [
+	{ value: '', label: { bg: 'Коли', en: 'Cars' }, artwork: homeModeArtwork.buy },
+	{ value: 'SUV', label: { bg: 'SUV', en: 'SUVs' }, artwork: categoryArtwork('suv') },
+	{ value: 'Motorcycle', label: { bg: 'Мотори', en: 'Bikes' }, artwork: categoryArtwork('bikes') },
+	{ value: 'Van', label: { bg: 'Бусове', en: 'Vans' }, artwork: categoryArtwork('vans') }
+] as const;
 
 type InventoryDialogCopy = {
 	filters: string;

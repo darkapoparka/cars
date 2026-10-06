@@ -5,20 +5,21 @@ import process from 'node:process';
 const root = process.cwd();
 const sourceRoot = path.join(root, 'src');
 const staticRoot = path.join(root, 'static');
-// Includes the reviewed 960px and 480px Contact and advice banner encodings.
-// The mobile Audi chrome mark is a separate responsive source.
+// Includes the reviewed 960px/480px banners and the two cleaned desktop scenes.
 // Rejected Home section textures remain archived for provenance.
+// The mobile Audi chrome mark is a separate responsive source.
 // The mobile Volkswagen badge is a curated Home shortcut.
 // The Home advice banner has a separate editorial plate.
-// Superseded advice illustrations remain retained for provenance.
 // The mobile BMW vector replaces the low-resolution bitmap at phone widths.
+// Superseded advice illustrations remain retained for provenance.
 // One shared graphite-dot background replaces the separate Home section materials.
 // Matching desktop Import/Leasing cutouts retain their full transparent canvases.
-// The rejected generated dock trial remains archived for provenance.
 // Four transparent desktop service illustrations complement the retained mobile icons.
+// The rejected generated dock trial remains archived for provenance.
 // Home adds a silver collection pair and the reviewed services-overview cutout.
 // The shared silver family replaces older service cars with three versioned assets.
-const guardedMediaCount = 197;
+// The wagon now has a transparent v2 cutout; its opaque original remains retained.
+const guardedMediaCount = 200;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
@@ -39,6 +40,8 @@ for (const name of ['home', 'inventory', 'contact']) retainedSourceAssets.add(`/
 // These proposals were rejected for warm colour or distorted props. Reuse reviewed cutouts instead.
 retainedSourceAssets.add('/assets/images/lead/auto-best-desktop-about-v1.webp');
 for (const name of ['blog', 'contact']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v2.webp`);
+// Keep the original red-curve scenes; the runtime uses their cleaned v3 editions.
+for (const name of ['home', 'inventory']) retainedSourceAssets.add(`/assets/images/lead/auto-best-desktop-${name}-v2.webp`);
 for (const asset of homeScenePrototypes) retainedSourceAssets.add(asset);
 // Rejected desktop section images remain available as source history, without runtime requests.
 for (const name of ['inventory', 'body', 'brands', 'guides']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-v1.webp`);
@@ -51,6 +54,7 @@ retainedSourceAssets.add('/assets/images/template/auto-best-logo-v2-source.png')
 retainedSourceAssets.add('/assets/images/template/auto-best-logo-v2.svg');
 retainedSourceAssets.add('/assets/images/template/auto-best-logo-v2-light.svg');
 retainedSourceAssets.add('/assets/images/template/body-wagon-v1.png');
+retainedSourceAssets.add('/assets/images/template/body-wagon-v1.webp');
 // Previous campaign art is retained for provenance; active cards use front-facing compositions.
 for (const name of ['day-night-mobile-sell-v1.webp', 'day-night-mobile-import-v1.webp', 'day-night-sell-banner-v2.webp']) retainedSourceAssets.add('/assets/images/lead/' + name);
 retainedSourceAssets.add('/assets/images/template/service-sell-euros-v1.webp');

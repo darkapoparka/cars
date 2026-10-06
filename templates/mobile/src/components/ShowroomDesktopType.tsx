@@ -15,21 +15,21 @@ const s = stylex.create({
   image: { width: 48, height: 30, objectFit: 'contain', flexShrink: 0 },
   menu: {
     position: 'absolute',
-    top: 'calc(100% + 10px)',
+    top: 'calc(100% + 8px)',
     left: 0,
     zIndex: 40,
-    width: 320,
+    width: 288,
     maxWidth: 'calc(100vw - 64px)',
     maxHeight: 'min(360px, calc(100dvh - 320px))',
-    padding: 6,
+    padding: 8,
     overflowY: 'auto',
     overscrollBehavior: 'contain',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: colors.line,
-    borderRadius: 16,
+    borderColor: colors.cardLine,
+    borderRadius: 18,
     backgroundColor: colors.background,
-    boxShadow: '0 12px 32px rgba(14, 25, 36, .14)',
+    boxShadow: '0 16px 48px rgba(20,24,32,.16), 0 2px 8px rgba(20,24,32,.06)',
     color: colors.text,
   },
   option: {
@@ -37,9 +37,9 @@ const s = stylex.create({
     alignItems: 'center',
     gap: 12,
     width: '100%',
-    minHeight: 56,
+    minHeight: 52,
     paddingInline: 12,
-    paddingBlock: 10,
+    paddingBlock: 8,
     borderWidth: 0,
     borderRadius: 10,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
@@ -50,9 +50,9 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: -2,
   },
-  selected: { backgroundColor: colors.activeSurface, fontWeight: 600 },
+  selected: { backgroundColor: colors.controlSurface, fontWeight: 600 },
   optionLabel: { flex: '1', minWidth: 0 },
-  check: { display: 'flex', color: colors.accent, flexShrink: 0 },
+  check: { display: 'flex', color: colors.text, flexShrink: 0 },
 });
 
 export function ShowroomDesktopType({
@@ -137,7 +137,7 @@ export function ShowroomDesktopType({
             show();
           }
         }}
-        {...stylex.props(field.field, open && field.open)}
+        {...stylex.props(field.field, field.divider, open && field.open, open && field.hideDivider)}
       >
         <Image
           src={selected.image}

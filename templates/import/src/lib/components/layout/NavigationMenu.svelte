@@ -123,4 +123,10 @@
 	nav a {
 		font-size: var(--bc-text-body-lg);
 	}
+	@media (min-width: 768px) {
+		nav a:hover,
+		:global(.site-nav-toggle:hover) {
+			background: var(--bc-control-hover);
+		}
+	}
 </style>

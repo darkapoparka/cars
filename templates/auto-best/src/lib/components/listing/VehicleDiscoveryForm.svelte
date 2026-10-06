@@ -1,30 +1,22 @@
 <script lang="ts">
-  import { listingFacetOptionLabel, listingFacetTitle, listingFacetSummary, listingDraftFromFilters, type ListingFacetField } from '$data/listing-draft';
-  import { specificationLabel } from '$lib/i18n/presentation';
+  import { listingFacetTitle, listingFacetSummary, listingDraftFromFilters, type ListingFacetField } from '$data/listing-draft';
 
   import { getI18n } from '$lib/locale/context';
-  import { formatPrice } from '$lib/locale/core';
 
   const i18n = getI18n();
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
+  import ListingChoicePicker from './ListingChoicePicker.svelte';
   import type { Attachment } from 'svelte/attachments';
   import {
     activeFilterCount,
-    bodyLabel,
-    listingFilterOptions,
     listingHiddenFields,
-    listingModelsForMake,
     type ListingFilters
   } from '$data/listing';
   import {
     cleanListingFormData,
-    formatListingNumber,
-    listingFiltersFromFormData,
-    listingModelAfterMakeChange,
-    listingOptionsWithCurrent,
-    normalizeListingMakeTransition
+    listingFiltersFromDraft,
   } from '$data/listing-draft';
 
   let { filters, openFilters, filtersOpen, onDraftChange, showFilterAction = true, enableSticky = true, keywordPlaceholder = 'Марка, модел или ключова дума', modalFacets = false }: {
@@ -37,9 +29,12 @@
     filtersOpen: boolean;
     onDraftChange: (filters: ListingFilters) => void;
   } = $props();
-  let make = $derived(filters.make);
-  let model = $derived(filters.model);
   let pending = $derived(filters);
+  let controlDraft = $derived(listingDraftFromFilters(filters));
+  function updateControls(draft: typeof controlDraft) {
+    pending = listingFiltersFromDraft(draft);
+    onDraftChange(pending);
+  }
   let pinned = $state(false);
   let modalReady = $state(false);
   let stickyBar = $state<HTMLDivElement>();
@@ -63,39 +58,30 @@
     if (pinned && !filtersOpen) stickyBar.showPopover();
     else stickyBar.hidePopover();
   });
-  let models = $derived(listingModelsForMake(make));
   let activeCount = $derived(activeFilterCount(pending));
-  let summary = $derived([pending.q, pending.make, pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
-  let prices = $derived(listingOptionsWithCurrent(listingFilterOptions.prices, filters.priceMax?.toString() ?? ''));
-  let years = $derived(listingOptionsWithCurrent(listingFilterOptions.years, filters.yearMin?.toString() ?? ''));
-  let mileages = $derived(listingOptionsWithCurrent(listingFilterOptions.mileages, filters.mileageMax?.toString() ?? ''));
+  let summary = $derived([pending.q, ...pending.make, ...pending.model].filter(Boolean).join(' · ') || i18n.text(keywordPlaceholder));
   let hiddenFields = $derived(listingHiddenFields(filters, ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max']));
   const facetFields = ['type', 'make', 'model', 'body', 'price', 'year', 'mileage_max'] satisfies readonly ListingFacetField[];
-  const facetKeys = ['type', 'make', 'model', 'body', 'price_max', 'year_min', 'mileage_max'];
   const appliedDraft = $derived(listingDraftFromFilters(filters));
+  function facetActive(field: ListingFacetField) {
+    if (field === 'price') return filters.priceMin !== null || filters.priceMax !== null;
+    if (field === 'year') return filters.yearMin !== null || filters.yearMax !== null;
+    if (field === 'mileage_max') return filters.mileageMax !== null;
+    if (field === 'make' || field === 'model') return filters[field].length > 0;
+    return Boolean(filters[field as 'type' | 'body']);
+  }
   function facetValue(field: ListingFacetField) {
-    if (field === 'price') return filters.priceMax ? formatPrice(filters.priceMax, i18n.locale) : listingFacetTitle(field, i18n.locale);
-    if (field === 'year') return filters.yearMin ? String(filters.yearMin) : listingFacetTitle(field, i18n.locale);
-    if (field === 'mileage_max') return filters.mileageMax ? listingFacetSummary(field, appliedDraft, i18n.locale) : listingFacetTitle(field, i18n.locale);
-    return filters[field as 'type' | 'make' | 'model' | 'body'] ? listingFacetSummary(field, appliedDraft, i18n.locale) : field === 'body' ? i18n.t('inventory.facet.bodyShort') : listingFacetTitle(field, i18n.locale);
+    return facetActive(field) ? listingFacetSummary(field, appliedDraft, i18n.locale)
+      : field === 'body' ? i18n.t('inventory.facet.bodyShort') : listingFacetTitle(field, i18n.locale);
   }
 
-  function updateDraft(event: Event) {
-    pending = normalizeListingMakeTransition(pending, listingFiltersFromFormData(new FormData(event.currentTarget as HTMLFormElement)));
-    onDraftChange(pending);
-  }
-  function changeMake(event: Event) {
-    const nextMake = (event.currentTarget as HTMLSelectElement).value;
-    model = listingModelAfterMakeChange(make, nextMake, model);
-    make = nextMake;
-  }
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} onchange={updateDraft} onformdata={clean}>
+<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
-      <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+      <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
         <Icon name="search" size={20} />
         <span>{filters.q || i18n.text(keywordPlaceholder)}</span>
       </button>
@@ -110,26 +96,26 @@
   </div>
   {#if modalFacets && modalReady}
     <div class="dn-discovery__facet-buttons">
-      {#each facetFields as field, index (field)}
-        <button type="button" data-facet={field} aria-label={facetValue(field) === listingFacetTitle(field, i18n.locale) ? listingFacetTitle(field, i18n.locale) : `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}`} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" onclick={event => openFilters(event, facetKeys[index])}><span>{facetValue(field)}</span><Icon name="arrow-right" size={16} /></button>
+      {#each facetFields as field (field)}
+        <button type="button" data-facet={field} data-active={facetActive(field)} aria-label={facetActive(field) ? `${listingFacetTitle(field, i18n.locale)}: ${facetValue(field)}` : listingFacetTitle(field, i18n.locale)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" onclick={event => openFilters(event, field)}><span>{facetValue(field)}</span><Icon name="chevron-down" size={16} /></button>
       {/each}
     </div>
   {/if}
   <div class="dn-discovery__facets" class:dn-discovery__facets--fallback={modalFacets && modalReady}>
-    <label><span class="dn-sr-only">{i18n.t('inventory.facet.type')}</span><select {@attach i18n.validation} name="type" value={filters.type}>{#each listingFilterOptions.types as value (value)}<option {value}>{value ? listingFacetOptionLabel('type', value, i18n.locale) : i18n.t('inventory.facet.type')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_ccdd25d4230f")}</span><select {@attach i18n.validation} name="make" value={make} onchange={changeMake}>{#each listingFilterOptions.makes as value (value)}<option {value}>{value || i18n.t('inventory.facet.make')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_5e2c614c23f0")}</span><select {@attach i18n.validation} name="model" bind:value={model}>{#each models as value (value)}<option {value}>{value || i18n.t('inventory.facet.model')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_191c24bf12d5")}</span><select {@attach i18n.validation} name="body" value={filters.body}>{#each listingFilterOptions.bodies as value (value)}<option {value}>{value ? specificationLabel(bodyLabel(value), i18n.locale) : i18n.t('inventory.facet.bodyShort')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_363c4f34635c")}</span><select {@attach i18n.validation} name="price_max" value={filters.priceMax?.toString() ?? ''}>{#each prices as value (value)}<option {value}>{value ? formatPrice(Number(value), i18n.locale) : i18n.t('inventory.facet.price')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_349ee8568241")}</span><select {@attach i18n.validation} name="year_min" value={filters.yearMin?.toString() ?? ''}>{#each years as value (value)}<option {value}>{value || i18n.t('inventory.facet.year')}</option>{/each}</select></label>
-    <label><span class="dn-sr-only">{i18n.t("m_5679c2543732")}</span><select {@attach i18n.validation} name="mileage_max" value={filters.mileageMax?.toString() ?? ''}>{#each mileages as value (value)}<option {value}>{value ? i18n.t("m_9f595d190089", { p0: formatListingNumber(value, i18n.locale) }) : i18n.t('inventory.facet.mileage_max')}</option>{/each}</select></label>
+    <ListingChoicePicker field="type" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
+    <ListingChoicePicker field="make" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
+    <ListingChoicePicker field="model" bind:draft={controlDraft} showLabel={false} compact onchange={updateControls} />
+    <ListingChoicePicker field="body" bind:draft={controlDraft} showLabel={false} compact placeholder={i18n.t('inventory.facet.bodyShort')} onchange={updateControls} />
+    <ListingChoicePicker field="price_max" bind:draft={controlDraft} showLabel={false} compact placeholder={i18n.t('inventory.facet.price')} onchange={updateControls} />
+    <ListingChoicePicker field="year_min" bind:draft={controlDraft} showLabel={false} compact placeholder={i18n.t('inventory.facet.year')} onchange={updateControls} />
+    <ListingChoicePicker field="mileage_max" bind:draft={controlDraft} showLabel={false} compact placeholder={i18n.t('inventory.facet.mileage_max')} onchange={updateControls} />
   </div>
 
   {#each hiddenFields as [name, value], index (`${name}-${value}-${index}`)}<input type="hidden" {name} {value} />{/each}
 </form>
 
 <div class="dn-discovery-sticky" popover="manual" {@attach attachSticky} role="region" aria-label={i18n.t("m_8451d82f9587")}>
-  <button class="dn-discovery-sticky__keyword" type="button" aria-label={i18n.t("m_a6403c514411")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
+  <button class="dn-discovery-sticky__keyword" type="button" aria-label={i18n.t("m_a6403c514411")} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>
     <Icon name="search" size={20} /><span>{summary}</span>
   </button>
   <button class="dn-discovery-sticky__filters" type="button" aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={openFilters}>
@@ -153,16 +139,13 @@
   .dn-discovery__submit { display: inline-flex; flex: 0 0 48px; align-items: center; justify-content: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: var(--dn-pill); background: var(--dn-red); color: white; cursor: pointer; }
   .dn-discovery__submit:hover { background: var(--dn-red-hover); }
   .dn-discovery__facets { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
+  .dn-discovery__facets :global(.dn-identity-field) { --dn-identity-control-height: 64px; }
   .dn-discovery__facet-buttons { display: none; }
-  .dn-discovery__facets label { position: relative; display: grid; min-width: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
-  .dn-discovery .dn-discovery__facets label > select { width: 100%; min-width: 0; height: 64px; padding: 0 var(--dn-space-8) 0 var(--dn-space-3); border: 0; border-radius: inherit; background-color: transparent; background-position: right var(--dn-space-2) center; color: var(--dn-ink); font: var(--dn-control-font); text-overflow: ellipsis; cursor: pointer; }
-  .dn-discovery__facets label:hover { background: var(--dn-surface-hover); }
-  .dn-discovery__facets label:focus-within { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
-  .dn-discovery__facets select:focus-visible { outline: 0; }
+  .dn-discovery__facet-buttons button { position: relative; min-width: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); }
   .dn-discovery__filters { position: relative; display: flex; flex: 0 0 auto; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 16px; border: 1px solid #202329; border-radius: var(--dn-pill); background: #202329; color: #fff; font: var(--dn-control-font); cursor: pointer; }
   .dn-discovery__filters:hover { background: #3a3e46; }
   .dn-discovery__count { position: absolute; top: -6px; right: -6px; display: grid; place-items: center; min-width: 20px; height: 20px; padding: 0 4px; border: 2px solid white; border-radius: var(--dn-pill); background: var(--dn-red); color: white; font-size: var(--dn-text-meta); }
-  button:focus-visible, select:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
+  button:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 3px; }
   .dn-discovery-sticky { position: fixed; inset: 12px auto auto 50%; width: min(800px, calc(100% - 48px)); box-sizing: border-box; margin: 0; padding: 8px; border: 0; border-radius: var(--dn-pill); background: #fff; color: var(--dn-ink); box-shadow: 0 8px 32px rgb(18 25 38 / .2); transform: translateX(-50%); }
   .dn-discovery-sticky:popover-open { display: flex; align-items: center; gap: 8px; }
   .dn-discovery-sticky__keyword { display: flex; flex: 1; align-items: center; gap: 12px; min-width: 0; height: 48px; padding: 0 16px; border: 0; border-radius: var(--dn-pill); background: #f5f6f7; color: #596370; font: var(--dn-body-font); text-align: left; cursor: pointer; }
@@ -180,14 +163,16 @@
     .dn-discovery__keyword :global(svg) { flex-shrink: 0; }
   }
   @media (min-width: 992px) {
+    .dn-discovery__facets :global(.dn-identity-field) { --dn-identity-control-height: var(--dn-control-hit-height); }
+    .dn-discovery__facets :global(.dn-identity-trigger) { font-size: var(--dn-text-control-prominent); }
+    .dn-discovery__submit, .dn-discovery-sticky__submit { background: var(--dn-ink); }
+    .dn-discovery__submit:hover, .dn-discovery-sticky__submit:hover { background: var(--dn-ink-hover); }
     .dn-discovery__facets--fallback { display: none; }
     .dn-discovery__facet-buttons { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .dn-discovery__facet-buttons button { display: flex; min-width: 0; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); text-align: left; cursor: pointer; }
+    .dn-discovery__facet-buttons button { display: flex; min-height: var(--dn-control-height-default); align-items: center; justify-content: space-between; gap: var(--dn-space-2); padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-control-prominent); text-align: left; cursor: pointer; }
     .dn-discovery__facet-buttons span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     .dn-discovery__facet-buttons :global(svg) { flex: 0 0 16px; color: var(--dn-muted); }
-    .dn-discovery__facet-buttons button:hover { background: var(--dn-surface-hover); }
-    .dn-discovery .dn-discovery__facets label { min-height: var(--dn-control-height-default); box-sizing: border-box; }
-    .dn-discovery .dn-discovery__facets label > select { height: auto; min-height: calc(var(--dn-control-height-default) - 2px); padding-block: var(--dn-space-2); font-size: var(--dn-text-control-prominent); }
+    .dn-discovery__facet-buttons button[data-active='true'] { border-color: var(--dn-line-emphasis); }
     .dn-discovery__search:focus-within { border-color: var(--dn-focus); }
     .dn-discovery :is(.dn-discovery__keyword, .dn-discovery__submit) { transition: none; }
   }

@@ -55,7 +55,7 @@ try {
           assert.deepEqual(await hero.locator('.dn-campaign-vehicles__car').evaluateAll(cars=>cars.map(car=>car.dataset.vehicle)),['gclass','urus'],'Home keeps its original inward-facing car pair');
         } else {
           assert.equal(await hero.getAttribute('data-artwork'),'image','Service heroes use the larger Contact car scene');
-          assert((await hero.locator('img').evaluate(image=>image.currentSrc)).endsWith('auto-best-desktop-inventory-v2.webp'),'Both service routes reuse the approved Contact banner');
+          assert((await hero.locator('img').evaluate(image=>image.currentSrc)).endsWith('auto-best-desktop-inventory-v3.webp'),'Both service routes reuse the approved Contact banner');
         }
         assert.equal(await page.locator('.dn-hero-vehicles__car').count(),0,'Desktop does not mount additional cutout pairs');
       }

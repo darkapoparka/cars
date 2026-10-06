@@ -1,0 +1,32 @@
+<script lang="ts">
+  let { value, label, description = '', checked, multiple = false, name, onchange }: {
+    value: string; label: string; description?: string; checked: boolean;
+    multiple?: boolean; name?: string; onchange: (value: string) => void;
+  } = $props();
+</script>
+
+<label class="dn-desktop-choice">
+  <input type={multiple ? 'checkbox' : 'radio'} {name} {value} {checked} onchange={() => onchange(value)}
+    onclick={() => { if (!multiple && checked) onchange(value); }}
+    onkeydown={event => { if (event.key === 'Enter' || !multiple && event.key === ' ') { event.preventDefault(); onchange(value); } }} />
+  <span class="dn-desktop-choice-mark" data-multiple={multiple} aria-hidden="true">{#if multiple}✓{/if}</span>
+  <span class="dn-desktop-choice-label">{label}</span>
+  {#if description}<small>{description}</small>{/if}
+</label>
+
+<style>
+  .dn-desktop-choice { position: relative; display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border-radius: var(--dn-radius-control); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
+  input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+  .dn-desktop-choice:hover { background: var(--dn-surface-subtle); }
+  .dn-desktop-choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+  .dn-desktop-choice-mark { display: grid; flex: 0 0 var(--dn-space-5); place-items: center; width: var(--dn-space-5); height: var(--dn-space-5); border: 1px solid var(--dn-line-strong); border-radius: var(--dn-pill); background: var(--dn-white); color: transparent; font-size: var(--dn-text-caption); line-height: var(--dn-leading-control); }
+  input:checked + .dn-desktop-choice-mark { border-color: var(--dn-ink); }
+  input:checked + [data-multiple='true'] { background: var(--dn-ink); color: var(--dn-white); }
+  input:checked + [data-multiple='false']::after { width: var(--dn-space-2); height: var(--dn-space-2); border-radius: var(--dn-pill); background: var(--dn-ink); content: ''; }
+  .dn-desktop-choice-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  small { flex: 0 1 auto; min-width: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-ui); overflow-wrap: anywhere; }
+  @media (forced-colors: active) {
+    input { position: static; flex: 0 0 var(--dn-space-5); width: var(--dn-space-5); height: var(--dn-space-5); opacity: 1; accent-color: auto; }
+    .dn-desktop-choice-mark { display: none; }
+  }
+</style>

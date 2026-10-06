@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { translate, validLocale, defaultLocale, localeMoney } from '../.qa/domain/locale.mjs';
-import { vehicles } from '../.qa/domain/catalog.mjs';
+import { capturedVehicles as vehicles } from '../.qa/domain/catalog.mjs';
 import { defaultFilters } from '../.qa/domain/types.mjs';
 import { localizeVehicle } from '../.qa/domain/vehicle-copy.mjs';
 import { filterVehicles } from '../.qa/domain/search.mjs';
@@ -67,6 +67,15 @@ test('translated vehicle search retains canonical fuel filter values', () => {
     filterVehicles(vehicles, { ...structuredClone(defaultFilters), query: 'Автоматик' }).length,
     4,
   );
+});
+
+test('service search finds the short mobile labels in both locales', () => {
+  for (const query of ['Car search', 'Търсене на кола']) {
+    assert.deepEqual(
+      searchShowroomServices(showroomServices, query).map(({ id }) => id),
+      ['sourcing'],
+    );
+  }
 });
 
 test('Bulgarian service drafts translate labels but preserve user text', () => {

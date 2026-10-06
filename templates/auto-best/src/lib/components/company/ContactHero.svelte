@@ -18,7 +18,7 @@
 
   let { topic, vehicle = null }: { topic: ContactTopic; vehicle?: Vehicle | null } = $props();
   const heroDescriptions = $derived({
-    general: i18n.t("m_46b43b69d985", { p0: i18n.dealer('city') }),
+    general: `${i18n.dealer('city')} · ${i18n.dealer('addressLine')}`,
     inspection: i18n.t("m_2f96cf230044"),
     import: i18n.t("m_235089e39df4"),
     leasing: i18n.t("m_b420bfd268bc"),

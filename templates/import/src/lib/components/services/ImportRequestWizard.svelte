@@ -27,7 +27,11 @@
 	import { mobileServiceCopy } from '$lib/content/service-mobile';
 	import { translateVehicleTerm } from '$lib/i18n/messages';
 	import { onMount, tick } from 'svelte';
+	import type { Snippet } from 'svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
+	import DesktopImportEntry from './DesktopImportEntry.svelte';
+	import { importEntryComplete, type ImportIntent } from '$lib/domain/import-entry';
+	import { importEntryCopy } from '$lib/content/import-entry';
 	import {
 		emptyImportCriteria,
 		importBodyTypes,
@@ -38,21 +42,23 @@
 		type ImportCriteria
 	} from '$lib/data/import-criteria';
 
-	type ImportIntent = 'listing' | 'source';
-
 	type Props = {
 		embedded?: boolean;
+		desktopLayout?: Snippet<[Snippet, boolean]>;
 		initialIntent: ImportIntent;
 		initialVehicle?: string;
 		initialCriteria?: ImportCriteria;
+		initialStep?: 0 | 1;
 		onclose: () => void;
 	};
 
 	let {
 		embedded = false,
+		desktopLayout,
 		initialIntent,
 		initialVehicle = '',
 		initialCriteria = emptyImportCriteria,
+		initialStep,
 		onclose
 	}: Props = $props();
 
@@ -64,7 +70,9 @@
 
 	// The keyed parent recreates the wizard for each new intake session.
 	// svelte-ignore state_referenced_locally
-	let step = $state(initialIntent === 'listing' && initialVehicle.trim() ? 1 : 0);
+	let step = $state<number>(
+		initialStep ?? (initialIntent === 'listing' && initialVehicle.trim() ? 1 : 0)
+	);
 	// svelte-ignore state_referenced_locally
 	let intent = $state<ImportIntent>(initialIntent);
 	// svelte-ignore state_referenced_locally
@@ -97,13 +105,15 @@
 	let validationMessage = $state('');
 	let draftReady = $state(false);
 	let wizardRoot = $state<HTMLDivElement | null>(null);
+	const heroEntry = $derived(Boolean(desktopLayout) && step === 0 && !submitted);
 	const draftKey = $derived(
 		'template:import:v2:' +
 			site.identity.origin +
 			':' +
 			initialIntent +
 			':' +
-			JSON.stringify(initialCriteria)
+			JSON.stringify(initialCriteria) +
+			(desktopLayout ? ':desktop:' + JSON.stringify({ initialVehicle, initialStep }) : '')
 	);
 	const historyId = `daynight-import-wizard-${Math.random().toString(36).slice(2)}`;
 	let historyEntryActive = false;
@@ -213,9 +223,11 @@
 
 	let canContinue = $derived(
 		step === 0
-			? intent === 'listing'
-				? vehicle.trim().length > 3
-				: Boolean(origin) || make.trim().length > 1 || model.trim().length > 1
+			? desktopLayout
+				? importEntryComplete(intent, vehicle, { make, model, origin })
+				: intent === 'listing'
+					? vehicle.trim().length > 3
+					: Boolean(origin) || make.trim().length > 1 || model.trim().length > 1
 			: step === 2
 				? name.trim().length >= 2 && phone.trim().length >= 6
 				: true
@@ -224,7 +236,9 @@
 	const focusFirstInvalid = async () => {
 		let selector: string;
 		if (step === 0 && intent === 'listing') {
-			validationMessage = nt('ui243');
+			validationMessage = desktopLayout
+				? importEntryCopy[page.data.locale === 'en' ? 'en' : 'bg'].invalidListing
+				: nt('ui243');
 			selector = '[id^="import-wizard-vehicle-"]';
 		} else if (step === 0) {
 			validationMessage = nt('ui244');
@@ -240,9 +254,18 @@
 		wizardRoot?.querySelector<HTMLElement>(selector)?.focus({ preventScroll: false });
 	};
 
+	const focusDesktopStep = async () => {
+		if (!desktopLayout) return;
+		await tick();
+		wizardRoot?.querySelector<HTMLElement>('input, select')?.focus();
+	};
+
 	const goBack = () => {
 		validationMessage = '';
-		if (step > 0) step -= 1;
+		if (step > 0) {
+			step -= 1;
+			void focusDesktopStep();
+		}
 	};
 
 	const goNext = async () => {
@@ -254,6 +277,7 @@
 		validationMessage = '';
 		if (step < stepLabels.length - 1) {
 			step += 1;
+			await focusDesktopStep();
 			return;
 		}
 		submitting = true;
@@ -280,292 +304,328 @@
 	};
 </script>
 
-<div
-	class="bc-import-wizard"
-	class:bc-import-wizard--embedded={embedded}
-	class:desktop-intake={embedded}
-	bind:this={wizardRoot}
->
-	{#if submitted}
-		<div class="bc-import-wizard__success" role="status">
-			<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
-			<h2>{nt('ui215')}</h2>
-			<p>
-				{receipt ? receiptMessage(receipt, page.data.locale === 'en') : ''}
-			</p>
-			<button type="button" onclick={requestClose}>{nt('ui33')}</button>
-		</div>
-	{:else}
-		<header class="bc-import-wizard__header" data-intake-header>
-			<div>
-				<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
-				<h2>{stepLabels[step]}</h2>
+{#snippet wizardContent()}
+	<div
+		class="bc-import-wizard"
+		class:bc-import-wizard--embedded={embedded}
+		class:bc-import-wizard--hero-entry={heroEntry}
+		class:desktop-intake={embedded}
+		bind:this={wizardRoot}
+	>
+		{#if submitted}
+			<div class="bc-import-wizard__success" role="status">
+				<span><Check size={25} strokeWidth={2.4} aria-hidden="true" /></span>
+				<h2>{nt('ui215')}</h2>
+				<p>
+					{receipt ? receiptMessage(receipt, page.data.locale === 'en') : ''}
+				</p>
+				<button type="button" onclick={requestClose}>{nt('ui33')}</button>
 			</div>
-			<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
-				<X size={20} strokeWidth={2.3} aria-hidden="true" />
-			</button>
-		</header>
-
-		<div
-			class="bc-import-wizard__progress"
-			role="progressbar"
-			aria-valuemin={0}
-			aria-valuemax={3}
-			aria-valuenow={step + 1}
-			aria-label={`${nt('ui165')} ${step + 1} ${nt('ui216')} 3`}
-		>
-			{#each stepLabels as label, index (label)}
-				<span class:done={index <= step}></span>
-			{/each}
-		</div>
-
-		<div class="bc-import-wizard__body">
-			{#if step === 0}
-				<div class="bc-import-wizard__intro" data-intake-intro>
-					<h3>{nt('ui217')}</h3>
-					<p>{nt('ui218')}</p>
+		{:else}
+			<header class="bc-import-wizard__header" data-intake-header>
+				<div>
+					<p>{nt('ui165')} {step + 1} {nt('ui216')} {stepLabels.length}</p>
+					<h2>{stepLabels[step]}</h2>
 				</div>
+				<button type="button" aria-label={nt('ui33')} onclick={requestClose}>
+					<X size={20} strokeWidth={2.3} aria-hidden="true" />
+				</button>
+			</header>
 
-				{#if !embedded}<div class="bc-import-wizard__intent" aria-label={nt('ui219')}>
-						<button
-							type="button"
-							class:active={intent === 'listing'}
-							aria-pressed={intent === 'listing'}
-							onclick={() => (intent = 'listing')}
-						>
-							<Link2 size={17} strokeWidth={2.2} aria-hidden="true" />
-							{nt('ui220')}
-						</button>
-						<button
-							type="button"
-							class:active={intent === 'source'}
-							aria-pressed={intent === 'source'}
-							onclick={() => (intent = 'source')}
-						>
-							<Search size={17} strokeWidth={2.2} aria-hidden="true" />
-							{nt('ui221')}
-						</button>
-					</div>{/if}
+			<div
+				class="bc-import-wizard__progress"
+				role="progressbar"
+				aria-valuemin={0}
+				aria-valuemax={3}
+				aria-valuenow={step + 1}
+				aria-label={`${nt('ui165')} ${step + 1} ${nt('ui216')} 3`}
+			>
+				{#each stepLabels as label, index (label)}
+					<span class:done={index <= step}></span>
+				{/each}
+			</div>
 
-				<div class="bc-import-wizard__fields" data-intake-fields>
-					{#if intent === 'listing'}
-						<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
-							<span>{nt('ui222')}</span>
-							<input
-								id={fieldId('vehicle')}
-								type="text"
-								placeholder={nt('ui223')}
-								required
-								bind:value={vehicle}
-							/>
-						</label>
-					{/if}
-					<fieldset class="bc-import-wizard__field--wide">
-						<legend>{nt('ui224')}</legend>
-						<div class="bc-import-wizard__country-grid" data-intake-choices>
-							{#each importCountries as country (country.value)}
-								<button
-									type="button"
-									class:active={origin === country.value}
-									aria-pressed={origin === country.value}
-									onclick={() => (origin = country.value)}
-								>
-									<img
-										src={assetHref(country.flagSrc)}
-										alt=""
-										aria-hidden="true"
-										width="24"
-										height="18"
-									/><strong
-										>{optionLabel(country.label, page.data.locale === 'en' ? 'en' : 'bg')}</strong
+			<div class="bc-import-wizard__body">
+				{#if step === 0 && heroEntry}
+					<DesktopImportEntry
+						{intent}
+						bind:vehicle
+						bind:make
+						bind:model
+						bind:bodyType
+						bind:origin
+						locale={page.data.locale === 'en' ? 'en' : 'bg'}
+						fieldIds={{
+							vehicle: fieldId('vehicle'),
+							make: fieldId('make'),
+							model: fieldId('model'),
+							type: fieldId('type')
+						}}
+						error={validationMessage}
+						oncontinue={goNext}
+					/>
+				{:else if step === 0}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{nt('ui217')}</h3>
+						<p>{nt('ui218')}</p>
+					</div>
+
+					{#if !embedded}<div class="bc-import-wizard__intent" aria-label={nt('ui219')}>
+							<button
+								type="button"
+								class:active={intent === 'listing'}
+								aria-pressed={intent === 'listing'}
+								onclick={() => (intent = 'listing')}
+							>
+								<Link2 size={17} strokeWidth={2.2} aria-hidden="true" />
+								{nt('ui220')}
+							</button>
+							<button
+								type="button"
+								class:active={intent === 'source'}
+								aria-pressed={intent === 'source'}
+								onclick={() => (intent = 'source')}
+							>
+								<Search size={17} strokeWidth={2.2} aria-hidden="true" />
+								{nt('ui221')}
+							</button>
+						</div>{/if}
+
+					<div class="bc-import-wizard__fields" data-intake-fields>
+						{#if intent === 'listing'}
+							<label class="bc-import-wizard__field--wide" for={fieldId('vehicle')}>
+								<span class:sr-only={heroEntry}>{nt('ui222')}</span>
+								<input
+									id={fieldId('vehicle')}
+									type="text"
+									placeholder={nt('ui223')}
+									required
+									bind:value={vehicle}
+								/>
+							</label>
+						{/if}
+						<fieldset class="bc-import-wizard__field--wide">
+							<legend class:sr-only={heroEntry}>{nt('ui224')}</legend>
+							<div class="bc-import-wizard__country-grid" data-intake-choices>
+								{#each importCountries as country (country.value)}
+									<button
+										type="button"
+										class:active={origin === country.value}
+										aria-pressed={origin === country.value}
+										onclick={() => (origin = country.value)}
 									>
-								</button>
-							{/each}
-						</div>
-					</fieldset>
-					{#if intent === 'source'}
-						<label for={fieldId('make')}>
-							<span>{nt('ui171')}</span>
-							<input id={fieldId('make')} type="text" placeholder={nt('ui225')} bind:value={make} />
-						</label>
-						<label for={fieldId('model')}>
-							<span>{nt('ui172')}</span>
+										<img
+											src={assetHref(country.flagSrc)}
+											alt=""
+											aria-hidden="true"
+											width="24"
+											height="18"
+										/><strong
+											>{optionLabel(country.label, page.data.locale === 'en' ? 'en' : 'bg')}</strong
+										>
+									</button>
+								{/each}
+							</div>
+						</fieldset>
+						{#if intent === 'source'}
+							<label for={fieldId('make')}>
+								<span class:sr-only={heroEntry}>{nt('ui171')}</span>
+								<input
+									id={fieldId('make')}
+									type="text"
+									placeholder={nt('ui225')}
+									bind:value={make}
+								/>
+							</label>
+							<label for={fieldId('model')}>
+								<span class:sr-only={heroEntry}>{nt('ui172')}</span>
+								<input
+									id={fieldId('model')}
+									type="text"
+									placeholder={nt('ui226')}
+									bind:value={model}
+								/>
+							</label>
+							<label
+								class="bc-import-wizard__field--wide bc-import-wizard__source-type"
+								for={fieldId('type')}
+							>
+								<span class:sr-only={heroEntry}
+									>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].type}</span
+								>
+								<select id={fieldId('type')} bind:value={bodyType}>
+									<option value=""
+										>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].anyType}</option
+									>
+									{#each importBodyTypes as value (value)}
+										<option {value}
+											>{translateVehicleTerm(
+												page.data.locale === 'en' ? 'en' : 'bg',
+												'bodyTypes',
+												value
+											)}</option
+										>
+									{/each}
+								</select>
+							</label>
+						{/if}
+					</div>
+				{:else if step === 1}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{nt('ui227')}</h3>
+						<p>{nt('ui228')}</p>
+					</div>
+					<div class="bc-import-wizard__fields" data-intake-fields>
+						<label for={fieldId('year')}>
+							<span>{nt('ui130')}</span>
 							<input
-								id={fieldId('model')}
+								id={fieldId('year')}
 								type="text"
-								placeholder={nt('ui226')}
-								bind:value={model}
+								inputmode="numeric"
+								maxlength="4"
+								placeholder="2021"
+								bind:value={minYear}
 							/>
 						</label>
-						<label class="bc-import-wizard__field--wide" for={fieldId('type')}>
-							<span>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].type}</span>
-							<select id={fieldId('type')} bind:value={bodyType}>
-								<option value=""
-									>{mobileServiceCopy[page.data.locale === 'en' ? 'en' : 'bg'].anyType}</option
-								>
-								{#each importBodyTypes as value (value)}
-									<option {value}
-										>{translateVehicleTerm(
-											page.data.locale === 'en' ? 'en' : 'bg',
-											'bodyTypes',
-											value
-										)}</option
+						<label for={fieldId('budget')}>
+							<span>{nt('ui229')}</span>
+							<input
+								id={fieldId('budget')}
+								type="text"
+								inputmode="numeric"
+								placeholder="EUR"
+								bind:value={budget}
+							/>
+						</label>
+						<fieldset class="bc-import-wizard__field--wide">
+							<legend>{nt('ui230')}</legend>
+							<div class="bc-import-wizard__chips" data-intake-choices>
+								{#each timeframeOptions as option (option)}
+									<button
+										type="button"
+										class:active={timeframe === option}
+										aria-pressed={timeframe === option}
+										onclick={() => (timeframe = option)}
+										>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
 									>
 								{/each}
-							</select>
+							</div>
+						</fieldset>
+						<fieldset class="bc-import-wizard__field--wide">
+							<legend>{nt('ui61')}</legend>
+							<div class="bc-import-wizard__chips" data-intake-choices>
+								{#each importFuels as option (option)}
+									<button
+										type="button"
+										class:active={fuel === option}
+										aria-pressed={fuel === option}
+										onclick={() => (fuel = fuel === option ? '' : option)}
+										>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
+									>
+								{/each}
+							</div>
+						</fieldset>
+						<fieldset class="bc-import-wizard__field--wide">
+							<legend>{nt('ui231')}</legend>
+							<div class="bc-import-wizard__chips" data-intake-choices>
+								{#each importTransmissions as option (option)}
+									<button
+										type="button"
+										class:active={transmission === option}
+										aria-pressed={transmission === option}
+										onclick={() => (transmission = transmission === option ? '' : option)}
+										>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
+									>
+								{/each}
+							</div>
+						</fieldset>
+						<label class="bc-import-wizard__field--wide" for={fieldId('notes')}>
+							<span>{nt('ui232')}</span>
+							<textarea id={fieldId('notes')} rows="4" placeholder={nt('ui233')} bind:value={notes}
+							></textarea>
 						</label>
-					{/if}
-				</div>
-			{:else if step === 1}
-				<div class="bc-import-wizard__intro" data-intake-intro>
-					<h3>{nt('ui227')}</h3>
-					<p>{nt('ui228')}</p>
-				</div>
-				<div class="bc-import-wizard__fields" data-intake-fields>
-					<label for={fieldId('year')}>
-						<span>{nt('ui130')}</span>
-						<input
-							id={fieldId('year')}
-							type="text"
-							inputmode="numeric"
-							maxlength="4"
-							placeholder="2021"
-							bind:value={minYear}
-						/>
-					</label>
-					<label for={fieldId('budget')}>
-						<span>{nt('ui229')}</span>
-						<input
-							id={fieldId('budget')}
-							type="text"
-							inputmode="numeric"
-							placeholder="EUR"
-							bind:value={budget}
-						/>
-					</label>
-					<fieldset class="bc-import-wizard__field--wide">
-						<legend>{nt('ui230')}</legend>
-						<div class="bc-import-wizard__chips" data-intake-choices>
-							{#each timeframeOptions as option (option)}
-								<button
-									type="button"
-									class:active={timeframe === option}
-									aria-pressed={timeframe === option}
-									onclick={() => (timeframe = option)}
-									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<fieldset class="bc-import-wizard__field--wide">
-						<legend>{nt('ui61')}</legend>
-						<div class="bc-import-wizard__chips" data-intake-choices>
-							{#each importFuels as option (option)}
-								<button
-									type="button"
-									class:active={fuel === option}
-									aria-pressed={fuel === option}
-									onclick={() => (fuel = fuel === option ? '' : option)}
-									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<fieldset class="bc-import-wizard__field--wide">
-						<legend>{nt('ui231')}</legend>
-						<div class="bc-import-wizard__chips" data-intake-choices>
-							{#each importTransmissions as option (option)}
-								<button
-									type="button"
-									class:active={transmission === option}
-									aria-pressed={transmission === option}
-									onclick={() => (transmission = transmission === option ? '' : option)}
-									>{optionLabel(option, page.data.locale === 'en' ? 'en' : 'bg')}</button
-								>
-							{/each}
-						</div>
-					</fieldset>
-					<label class="bc-import-wizard__field--wide" for={fieldId('notes')}>
-						<span>{nt('ui232')}</span>
-						<textarea id={fieldId('notes')} rows="4" placeholder={nt('ui233')} bind:value={notes}
-						></textarea>
-					</label>
-				</div>
-			{:else}
-				<div class="bc-import-wizard__intro" data-intake-intro>
-					<h3>{nt('ui41')}</h3>
-					<p>{nt('ui234')}</p>
-					{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
-				</div>
-				<div class="bc-import-wizard__fields" data-intake-fields>
-					<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
-						<span>{nt('ui178')}</span>
-						<input
-							id={fieldId('phone')}
-							type="tel"
-							inputmode="tel"
-							autocomplete="tel"
-							placeholder={nt('ui235')}
-							required
-							bind:value={phone}
-						/>
-					</label>
-					<label for={fieldId('name')}>
-						<span>{nt('ui236')}</span>
-						<input
-							id={fieldId('name')}
-							type="text"
-							autocomplete="name"
-							required
-							minlength="2"
-							bind:value={name}
-						/>
-					</label>
-					<label for={fieldId('email')}>
-						<span>{nt('ui22')}</span>
-						<input
-							id={fieldId('email')}
-							type="email"
-							inputmode="email"
-							autocomplete="email"
-							bind:value={email}
-						/>
-					</label>
-				</div>
-				<p class="bc-import-wizard__promise">{ct(templateInquiryCopy.notice)}</p>
-			{/if}
-		</div>
+					</div>
+				{:else}
+					<div class="bc-import-wizard__intro" data-intake-intro>
+						<h3>{nt('ui41')}</h3>
+						<p>{nt('ui234')}</p>
+						{#if criteriaSummary}<p class="bc-import-wizard__summary">{criteriaSummary}</p>{/if}
+					</div>
+					<div class="bc-import-wizard__fields" data-intake-fields>
+						<label class="bc-import-wizard__field--wide" for={fieldId('phone')}>
+							<span>{nt('ui178')}</span>
+							<input
+								id={fieldId('phone')}
+								type="tel"
+								inputmode="tel"
+								autocomplete="tel"
+								placeholder={nt('ui235')}
+								required
+								bind:value={phone}
+							/>
+						</label>
+						<label for={fieldId('name')}>
+							<span>{nt('ui236')}</span>
+							<input
+								id={fieldId('name')}
+								type="text"
+								autocomplete="name"
+								required
+								minlength="2"
+								bind:value={name}
+							/>
+						</label>
+						<label for={fieldId('email')}>
+							<span>{nt('ui22')}</span>
+							<input
+								id={fieldId('email')}
+								type="email"
+								inputmode="email"
+								autocomplete="email"
+								bind:value={email}
+							/>
+						</label>
+					</div>
+					<p class="bc-import-wizard__promise">{ct(templateInquiryCopy.notice)}</p>
+				{/if}
+			</div>
 
-		{#if validationMessage}<p class="bc-import-wizard__error" role="alert">
-				{validationMessage}
-			</p>{/if}
-		{#if submitError}<p class="bc-import-wizard__error" role="alert">{submitError}</p>{/if}
-		<footer class="bc-import-wizard__nav" aria-busy={submitting}>
-			{#if step > 0}
-				<button
-					type="button"
-					class="bc-import-wizard__back"
-					data-intake-back
-					onclick={goBack}
-					disabled={submitting}
-				>
-					<ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />
-					{nt('ui183')}
-				</button>
-			{/if}
-			<button
-				type="button"
-				class="bc-import-wizard__next"
-				data-intake-next
-				disabled={submitting}
-				onclick={goNext}
-			>
-				{submitting ? nt('ui184') : step < stepLabels.length - 1 ? nt('ui185') : nt('ui237')}
-				<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
-			</button>
-		</footer>
-	{/if}
-</div>
+			{#if validationMessage && !heroEntry}<p class="bc-import-wizard__error" role="alert">
+					{validationMessage}
+				</p>{/if}
+			{#if submitError}<p class="bc-import-wizard__error" role="alert">{submitError}</p>{/if}
+			{#if !heroEntry}<footer class="bc-import-wizard__nav" aria-busy={submitting}>
+					{#if step > 0}
+						<button
+							type="button"
+							class="bc-import-wizard__back"
+							data-intake-back
+							onclick={goBack}
+							disabled={submitting}
+						>
+							<ChevronLeft size={18} strokeWidth={2.4} aria-hidden="true" />
+							{nt('ui183')}
+						</button>
+					{/if}
+					<button
+						type="button"
+						class="bc-import-wizard__next"
+						data-intake-next
+						disabled={submitting}
+						onclick={goNext}
+					>
+						{submitting ? nt('ui184') : step < stepLabels.length - 1 ? nt('ui185') : nt('ui237')}
+						<ArrowRight size={18} strokeWidth={2.4} aria-hidden="true" />
+					</button>
+				</footer>{/if}
+		{/if}
+	</div>
+{/snippet}
+
+{#if desktopLayout}{@render desktopLayout(
+		wizardContent,
+		heroEntry
+	)}{:else}{@render wizardContent()}{/if}
 
 <style>
 	.bc-import-wizard__error {
@@ -1142,5 +1202,52 @@
 	.bc-import-wizard--embedded .bc-import-wizard__success {
 		min-height: 320px;
 		align-content: center;
+	}
+	@media (min-width: 768px) {
+		.bc-import-wizard--hero-entry {
+			grid-template-columns: minmax(0, 1fr);
+			grid-template-rows: auto;
+			gap: var(--bc-space-4);
+		}
+		.bc-import-wizard--hero-entry
+			:is(.bc-import-wizard__header, .bc-import-wizard__progress, .bc-import-wizard__intro) {
+			display: none;
+		}
+		.bc-import-wizard--hero-entry :is(.bc-import-wizard__body, .bc-import-wizard__fields) {
+			display: contents;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__fields > label {
+			grid-row: 1;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__field--wide {
+			grid-column: 1 / span 3;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__source-type {
+			grid-column: auto;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__fields > fieldset {
+			grid-column: 1 / -1;
+			grid-row: 2;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__nav {
+			grid-column: 4;
+			grid-row: 1;
+			padding: 0;
+			border: 0;
+		}
+		:global(.site-shell .site-desktop-only)
+			.bc-import-wizard--hero-entry
+			[data-intake-fields]
+			:is(input, select),
+		:global(.site-shell .site-desktop-only) .bc-import-wizard--hero-entry [data-intake-next] {
+			min-height: var(--bc-desktop-search-height);
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__country-grid {
+			justify-content: center;
+			padding: 0;
+		}
+		.bc-import-wizard--hero-entry .bc-import-wizard__error {
+			grid-column: 1 / -1;
+		}
 	}
 </style>

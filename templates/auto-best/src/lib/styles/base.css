@@ -48,20 +48,38 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog .dn-mobile-overlay-header { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-overlay-header-padding); background: var(--dn-white); }
   .dn-app-shell dialog .dn-mobile-overlay-header > h2 { min-width: 0; margin: 0; font-size: var(--dn-text-card); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); letter-spacing: var(--dn-tracking-heading); overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-header > .dn-overlay-close { margin-inline-start: auto; }
+  .dn-app-shell dialog .dn-mobile-filter-header { display: grid; grid-template-columns: var(--dn-control-hit-height) minmax(0, 1fr) var(--dn-control-hit-height); }
+  .dn-app-shell dialog .dn-mobile-filter-header > h2 { grid-column: 2; grid-row: 1; text-align: center; }
+  .dn-app-shell dialog .dn-mobile-filter-header > .back { grid-column: 1; grid-row: 1; }
+  .dn-app-shell dialog .dn-mobile-filter-header > .dn-overlay-close { grid-column: 3; grid-row: 1; }
   .dn-app-shell dialog .dn-mobile-overlay-search { display: flex; min-height: var(--dn-overlay-control-height); align-items: center; gap: var(--dn-entry-icon-gap); padding: 0 var(--dn-space-1) 0 var(--dn-space-4); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-entry-prominent-surface); color: var(--dn-muted); box-shadow: none; }
   .dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field):focus-within { border: 0; outline: 1px solid var(--dn-focus); outline-offset: -1px; box-shadow: none; }
   .dn-app-shell dialog .dn-mobile-overlay-search > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); flex: 0 0 var(--dn-control-icon-size); }
-  .dn-app-shell dialog .dn-mobile-overlay-search input[type='search'] { flex: 1; width: 100%; min-width: 0; height: var(--dn-overlay-control-height); padding: 0; border: 0; outline: 0; background: transparent; box-shadow: none; color: var(--dn-ink); font: var(--dn-overlay-field-font); }
+  .dn-app-shell dialog .dn-mobile-overlay-search input[type='search'] { flex: 1; width: 100%; min-width: 0; min-height: 0; height: var(--dn-overlay-control-height); padding: 0; border: 0; outline: 0; background: transparent; box-shadow: none; color: var(--dn-ink); font: var(--dn-overlay-field-font); }
   .dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field) input[type='search']:focus-visible { outline: none; box-shadow: none; }
 
   /* Shared mobile filter rows, choices and actions; labels stay quieter than input text. */
-  .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-align: left; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-align: left; cursor: pointer; }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-filter-choice) { min-height: var(--dn-mobile-filter-control-height); border: 0; border-radius: var(--dn-overlay-row-radius); background: transparent; touch-action: manipulation; }
+  /* Inset paint restores breathing room without reducing the full button target. */
+  .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option) { position: relative; isolation: isolate; }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option)::before { position: absolute; z-index: -1; inset: var(--dn-mobile-filter-control-inset) 0; border-radius: inherit; background: var(--dn-mobile-filter-control-surface); content: ''; pointer-events: none; }
+  .dn-app-shell dialog .dn-mobile-overlay-option[aria-pressed='true']::before { background: var(--dn-surface-hover); }
+  .dn-app-shell dialog .dn-mobile-overlay-row[data-active='true']::before { background: var(--dn-mobile-filter-selection-surface); }
+  .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option):active::before { background: var(--dn-surface-hover); }
+  .dn-app-shell dialog .dn-mobile-filter-choice { background: var(--dn-white); }
+  .dn-app-shell dialog .dn-mobile-filter-choice:has(:checked) { background: var(--dn-mobile-filter-selection-surface); color: var(--dn-mobile-filter-selection-ink); }
+  .dn-app-shell dialog .dn-mobile-filter-choice:active { background: var(--dn-surface-hover); }
+  /* Multiselect keeps checkbox semantics and a checkmark inside the shared circular frame. */
+  .dn-app-shell dialog .dn-mobile-filter-check { display: inline-grid; place-items: center; flex: 0 0 var(--dn-space-5); width: var(--dn-space-5); height: var(--dn-space-5); margin: 0; padding: 0; appearance: none; border: 1px solid var(--dn-line-strong); border-radius: var(--dn-pill); background: var(--dn-white); color: transparent; font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-filter-check:is(:checked, [data-checked='true']) { border-color: var(--dn-ink); background: var(--dn-ink); color: var(--dn-white); }
+  .dn-app-shell dialog input.dn-mobile-filter-check::before { content: '✓'; opacity: 0; }
+  .dn-app-shell dialog input.dn-mobile-filter-check:checked::before { opacity: 1; }
   .dn-app-shell dialog .dn-mobile-overlay-row strong { min-width: 0; max-width: 60%; font: inherit; overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-row > span { flex: 1; min-width: 0; color: var(--dn-muted); font: var(--dn-overlay-value-font); text-align: right; overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-row > span[data-active='true'] { color: var(--dn-ink); }
   .dn-app-shell dialog .dn-mobile-overlay-row > svg { flex: 0 0 var(--dn-control-icon-size); width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); color: var(--dn-muted); }
-  .dn-app-shell dialog .dn-mobile-overlay-option { min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); overflow-wrap: anywhere; cursor: pointer; }
-  .dn-app-shell dialog .dn-mobile-overlay-option[aria-pressed='true'] { background: var(--dn-mobile-filter-selection-surface); color: var(--dn-mobile-filter-selection-ink); }
+  .dn-app-shell dialog .dn-mobile-overlay-option { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-overlay-option-font); overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-overlay-gutter) max(var(--dn-space-3), env(safe-area-inset-bottom)); background: var(--dn-white); }
   .dn-app-shell dialog .dn-mobile-overlay-clear { display: inline-flex; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-clear:disabled { color: var(--dn-muted); cursor: default; }
@@ -69,9 +87,17 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog .dn-mobile-overlay-action:disabled { background: var(--dn-line); color: var(--dn-muted); cursor: not-allowed; }
   .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear, .dn-mobile-overlay-action):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   @media (hover: hover) and (pointer: fine) {
-    .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-overlay-clear):enabled:not([aria-pressed='true']):hover { background: var(--dn-surface-hover); }
+    .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option):enabled:not([aria-pressed='true']):hover::before { background: var(--dn-surface-hover); }
+    .dn-app-shell dialog .dn-mobile-overlay-clear:enabled:hover { background: var(--dn-surface-hover); }
     .dn-app-shell dialog .dn-mobile-overlay-action:enabled:hover { background: var(--dn-primary-action-surface-hover); }
   }
+}
+@media (max-width: 767px) and (forced-colors: active) {
+  .dn-app-shell dialog input.dn-mobile-filter-check,
+  .dn-app-shell dialog input.dn-mobile-filter-check:checked { appearance: auto; border: revert; background: revert; color: revert; }
+  .dn-app-shell dialog input.dn-mobile-filter-check::before { content: none; }
+  .dn-app-shell dialog span.dn-mobile-filter-check { forced-color-adjust: none; border-color: CanvasText; background: Canvas; }
+  .dn-app-shell dialog span.dn-mobile-filter-check[data-checked='true'] { border-color: Highlight; background: Highlight; color: HighlightText; }
 }
 .dn-app-shell .dn-compact-control { position: relative; z-index: 0; isolation: isolate; display: inline-flex; min-height: var(--dn-entry-action-height); align-items: center; justify-content: center; gap: var(--dn-entry-action-gap); border: 0; border-radius: var(--dn-radius-button); background: transparent; color: var(--dn-compact-control-ink, var(--dn-ink)); font: var(--dn-compact-control-font); text-decoration: none; white-space: nowrap; }
 .dn-app-shell .dn-compact-control::before { position: absolute; z-index: -1; inset: var(--dn-compact-control-inset) 0; border-radius: inherit; background: var(--dn-compact-control-surface, var(--dn-white)); content: ''; transition: background-color 160ms ease-out; }

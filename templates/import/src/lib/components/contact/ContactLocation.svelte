@@ -118,6 +118,7 @@
 	}
 	@media (min-width: 768px) {
 		.contact-location--desktop-framed {
+			--bc-control: var(--bc-desktop-control-surface);
 			gap: var(--bc-space-2);
 			padding: var(--bc-space-2);
 			border-color: var(--bc-desktop-editorial-border);

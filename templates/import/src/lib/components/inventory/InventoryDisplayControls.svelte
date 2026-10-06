@@ -121,11 +121,11 @@
 		display: flex;
 		align-items: center;
 		gap: var(--bc-space-2);
-		border: 1px solid var(--bc-border);
+		border: 1px solid transparent;
 		border-radius: var(--bc-desktop-control-radius);
 		min-height: var(--bc-control-height-primary);
 		padding: 0 var(--bc-space-4);
-		background: var(--bc-surface-raised);
+		background: var(--bc-control);
 		color: var(--bc-ink);
 		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
@@ -141,8 +141,8 @@
 	}
 	summary:hover,
 	.inventory-menu[open] summary {
-		background: var(--bc-surface);
-		border-color: var(--bc-border-strong);
+		background: var(--bc-control-hover);
+		border-color: transparent;
 	}
 	.inventory-menu[open] summary :global(svg:last-child) {
 		transform: rotate(180deg);
@@ -192,8 +192,12 @@
 	}
 	.inventory-menu a[aria-current='true'],
 	.inventory-menu :global(.inventory-sort__option[aria-pressed='true']) {
-		background: var(--bc-accent-tint);
-		color: var(--bc-accent);
+		background: var(--bc-control-selected-surface);
+		color: var(--bc-ink);
+	}
+	.inventory-menu a[aria-current='true']:hover,
+	.inventory-menu :global(.inventory-sort__option[aria-pressed='true']:hover) {
+		background: var(--bc-control-selected-hover);
 	}
 	summary:focus-visible,
 	.inventory-menu a:focus-visible,

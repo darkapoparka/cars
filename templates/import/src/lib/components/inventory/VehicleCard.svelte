@@ -22,7 +22,10 @@
 </script>
 
 <article class="site-vehicle-card">
-	<div class="site-vehicle-card__media">
+	<div
+		class="site-vehicle-card__media"
+		class:site-vehicle-card__media--cutout={card.imagePresentation === 'cutout'}
+	>
 		<a href={linkHref(href)} aria-label={card.title}
 			><img
 				use:imageFallback
@@ -58,8 +61,8 @@
 				<li>{card.year}</li>
 				<li title={card.fuel}>{card.fuel}</li>
 				<li title={card.transmission}>{card.transmission}</li>
+				<li class="site-vehicle-card__desktop-mileage">{card.mileageLabel}</li>
 			</ul>
-			<span class="site-vehicle-card__desktop-mileage">{card.mileageLabel}</span>
 		</div>
 		<div class="site-vehicle-card__price">
 			<strong>{card.priceLabel}</strong>{#if card.monthlyLabel}<a
@@ -234,6 +237,11 @@
 			border-radius: var(--bc-desktop-card-radius);
 			box-shadow: var(--bc-editorial-shadow);
 		}
+		.site-vehicle-card:hover,
+		.site-vehicle-card:focus-within {
+			border-color: var(--bc-border);
+			box-shadow: var(--bc-editorial-shadow);
+		}
 		h2 {
 			font-family: var(--bc-font-body);
 			font-size: var(--bc-desktop-card-title);
@@ -241,7 +249,12 @@
 		}
 		h2 a {
 			display: block;
-			white-space: nowrap;
+			min-height: 2.8em;
+			overflow: visible;
+			white-space: normal;
+			text-overflow: clip;
+			overflow-wrap: anywhere;
+			text-wrap: pretty;
 		}
 		.site-vehicle-card__body {
 			gap: var(--bc-space-2);
@@ -250,44 +263,37 @@
 			display: none;
 		}
 		.site-vehicle-card__metadata {
-			display: flex;
-			align-items: center;
-			gap: var(--bc-space-2);
+			display: block;
 		}
 		.site-vehicle-card__desktop-mileage {
 			display: block;
-			flex: none;
 			color: var(--bc-copy);
 			font-size: var(--bc-text-meta);
 			line-height: var(--bc-leading-meta);
 			font-variant-numeric: tabular-nums;
 			white-space: nowrap;
+			text-align: right;
 		}
 		.site-vehicle-card__price {
-			margin-top: var(--bc-space-1);
+			margin-top: auto;
+			padding-top: var(--bc-space-1);
 		}
 		ul {
-			flex: 1;
-			min-width: 0;
-			flex-wrap: nowrap;
-			gap: var(--bc-space-1);
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: var(--bc-space-1) var(--bc-space-2);
 		}
 		li {
 			min-width: 0;
-			overflow: hidden;
+			overflow: visible;
 			padding: 0;
 			background: transparent;
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			text-overflow: clip;
+			white-space: normal;
+			overflow-wrap: anywhere;
 		}
-		li:first-child,
-		li:last-child {
-			flex-shrink: 0;
-		}
-		li + li::before {
-			content: '·';
-			margin-right: var(--bc-space-1);
-			color: var(--bc-muted);
+		li:nth-child(2) {
+			text-align: right;
 		}
 		strong {
 			font-family: var(--bc-font-body);
@@ -299,6 +305,10 @@
 			margin: var(--bc-space-2) var(--bc-space-2) 0;
 			border-radius: var(--bc-desktop-media-radius);
 			overflow: hidden;
+		}
+		.site-vehicle-card__media--cutout img {
+			object-fit: contain;
+			padding: var(--bc-space-3);
 		}
 		.site-vehicle-card {
 			container-type: inline-size;
@@ -318,7 +328,7 @@
 			color: var(--bc-copy);
 		}
 		.site-vehicle-card__actions > button:hover {
-			background: var(--bc-bg-strong);
+			background: var(--bc-control-hover);
 		}
 		@container vehicle-card (max-width: 280px) {
 			.site-vehicle-card__body {

@@ -1,11 +1,15 @@
 import { vehicleTypes, type VehicleEquipment } from './inventory';
-import { currencySymbol, intlLocale, type Locale } from '$lib/locale/core';
+import { currencySymbol, formatPrice, intlLocale, type Locale } from '$lib/locale/core';
 import { message, templateText } from '$lib/locale/messages';
 import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
 import {
   bodyLabel,
   listingFilterOptions,
   listingModelsForMake,
+  listingModelsAfterMakeChange,
+  listingSelections,
+  listingSelectionHas,
+  toggleListingSelection,
   parseListingFilters,
   type ListingFilters,
   type ListingSort
@@ -33,8 +37,8 @@ export const listingFacetTitle = (field: ListingFacetField, locale: Locale): str
 export type ListingDraft = {
   q: string;
   type: ListingFilters['type'];
-  make: string;
-  model: string;
+  make: string[];
+  model: string[];
   body: string;
   fuel: string;
   transmission: string;
@@ -49,14 +53,88 @@ export type ListingDraft = {
   sort: ListingSort;
 };
 
+/** Styled selects share the URL field names; range drafts keep their typed keys. */
+const listingChoiceKeys = {
+  type: 'type', make: 'make', model: 'model', body: 'body', fuel: 'fuel',
+  transmission: 'transmission', condition: 'condition', version: 'version', sort: 'sort',
+  price_min: 'priceMin', price_max: 'priceMax', year_min: 'yearMin', year_max: 'yearMax', mileage_max: 'mileageMax'
+} as const satisfies Record<string, keyof ListingDraft>;
+export type ListingChoiceField = keyof typeof listingChoiceKeys;
+
+export function listingChoiceValue(draft: ListingDraft, field: ListingChoiceField): string | string[] {
+  const value = draft[listingChoiceKeys[field]];
+  return field === 'sort' && value === 'default' ? '' : value;
+}
+
+export function withListingChoice(draft: ListingDraft, field: ListingChoiceField, value: string): ListingDraft {
+  if (field === 'make' || field === 'model') return toggleListingIdentity(draft, field, value);
+  return { ...draft, [listingChoiceKeys[field]]: field === 'sort' && !value ? 'default' : value };
+}
+
+export function listingChoiceTitle(field: ListingChoiceField, locale: Locale): string {
+  switch (field) {
+    case 'price_min': return message(locale, 'm_94470b41eead');
+    case 'price_max': return message(locale, 'm_363c4f34635c');
+    case 'year_min': return message(locale, 'm_349ee8568241');
+    case 'year_max': return message(locale, 'm_07339ff9faf8');
+    case 'mileage_max': return message(locale, 'm_5679c2543732');
+    default: return listingFacetTitle(field, locale);
+  }
+}
+
+export function listingChoiceOptions(field: ListingChoiceField, make: readonly string[]): readonly string[] {
+  switch (field) {
+    case 'price_min': case 'price_max': return listingFilterOptions.prices;
+    case 'year_min': case 'year_max': return listingFilterOptions.years;
+    case 'mileage_max': return listingFilterOptions.mileages;
+    default: return listingFacetOptions(field, make);
+  }
+}
+
+export function listingChoiceLabel(field: ListingChoiceField, value: string, locale: Locale): string {
+  if (field === 'price_min' || field === 'price_max') return formatPrice(Number(value), locale);
+  if (field === 'year_min' || field === 'year_max') return value;
+  if (field === 'mileage_max') return formatTemplate(locale, 'To {p0} km', { p0: formatListingNumber(value, locale) });
+  return listingFacetOptionLabel(field, value, locale);
+}
+
+/** The same category order is used by the desktop form and mobile overview. */
+export const listingFilterGroups = [
+  { id: 'vehicle', fields: ['make', 'model', 'price', 'year', 'fuel', 'transmission', 'mileage_max'] },
+  { id: 'features', fields: ['type', 'body', 'condition', 'version'] },
+  { id: 'equipment', fields: ['equipment'] }
+] as const satisfies readonly { id: string; fields: readonly ListingFacetField[] }[];
+export type ListingFilterGroup = typeof listingFilterGroups[number]['id'];
+
+export const listingDraftFacetActive = (draft: ListingDraft, field: ListingFacetField): boolean => {
+  if (field === 'price') return Boolean(draft.priceMin || draft.priceMax);
+  if (field === 'year') return Boolean(draft.yearMin || draft.yearMax);
+  if (field === 'mileage_max') return Boolean(draft.mileageMax);
+  if (field === 'equipment' || field === 'make' || field === 'model') return draft[field].length > 0;
+  if (field === 'sort') return draft.sort !== 'default';
+  return Boolean(draft[field]);
+};
+
+export const listingDraftGroupCount = (draft: ListingDraft, group: ListingFilterGroup): number =>
+  group === 'equipment' ? draft.equipment.length
+    : listingFilterGroups.find(item => item.id === group)!.fields.filter(field => listingDraftFacetActive(draft, field)).length;
+
 const draftNumber = (value: number | null) => value === null ? '' : String(value);
-const normalize = (value: string) => value.toLocaleLowerCase('bg-BG').trim();
+const numberFields = new Set(['price_min', 'price_max', 'year_min', 'year_max', 'mileage_max']);
+
+/** Native number inputs accept exponent notation; submit its exact safe integer. */
+const listingInputValue = (key: string, raw: string): string => {
+  const value = raw.trim();
+  const number = Number(value);
+  return numberFields.has(key) && /^(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(value)
+    && Number.isSafeInteger(number) && number >= 0 ? String(number) : value;
+};
 
 export const emptyListingDraft = (sort: ListingSort = 'default'): ListingDraft => ({
   q: '',
   type: '',
-  make: '',
-  model: '',
+  make: [],
+  model: [],
   body: '',
   fuel: '',
   transmission: '',
@@ -74,8 +152,8 @@ export const emptyListingDraft = (sort: ListingSort = 'default'): ListingDraft =
 export const listingDraftFromFilters = (filters: ListingFilters): ListingDraft => ({
   q: filters.q,
   type: filters.type,
-  make: filters.make,
-  model: filters.model,
+  make: [...filters.make],
+  model: [...filters.model],
   body: filters.body,
   fuel: filters.fuel,
   transmission: filters.transmission,
@@ -95,8 +173,6 @@ export const listingFiltersFromDraft = (draft: ListingDraft): ListingFilters => 
   const values: [string, string][] = [
     ['q', draft.q],
     ['type', draft.type],
-    ['make', draft.make],
-    ['model', draft.model],
     ['body', draft.body],
     ['fuel', draft.fuel],
     ['transmission', draft.transmission],
@@ -110,17 +186,19 @@ export const listingFiltersFromDraft = (draft: ListingDraft): ListingFilters => 
     ['sort', draft.sort === 'default' ? '' : draft.sort]
   ];
   for (const [key, value] of values) {
-    const trimmed = value.trim();
+    const trimmed = listingInputValue(key, value);
     if (trimmed) params.set(key, trimmed);
   }
-  for (const value of draft.equipment) params.append('equipment', value);
+  for (const field of ['make', 'model', 'equipment'] as const) {
+    for (const value of listingSelections(draft[field])) params.append(field, value);
+  }
   return parseListingFilters(params);
 };
 
 export const listingFiltersFromFormData = (formData: FormData): ListingFilters => {
   const params = new URLSearchParams();
   for (const [key, value] of formData) {
-    if (typeof value === 'string') params.append(key, value);
+    if (typeof value === 'string') params.append(key, listingInputValue(key, value));
   }
   return parseListingFilters(params);
 };
@@ -128,22 +206,58 @@ export const listingFiltersFromFormData = (formData: FormData): ListingFilters =
 export function cleanListingFormData(formData: FormData): void {
   for (const key of new Set(formData.keys())) {
     const values = formData.getAll(key);
-    if (values.every(value => typeof value === 'string' && !value.trim())) formData.delete(key);
+    if (values.every(value => typeof value === 'string' && !value.trim())) {
+      formData.delete(key);
+    } else if (numberFields.has(key)) {
+      formData.delete(key);
+      for (const value of values) formData.append(key, typeof value === 'string' ? listingInputValue(key, value) : value);
+    }
   }
 }
 
-export function withListingMake(draft: ListingDraft, make: string): ListingDraft {
+export function withListingMake(draft: ListingDraft, value: string | readonly string[]): ListingDraft {
+  const make = listingSelections(value);
   return {
     ...draft,
     make,
-    model: listingModelAfterMakeChange(draft.make, make, draft.model)
+    model: listingModelsAfterMakeChange(draft.make, make, draft.model)
+  };
+}
+
+export function listingMakeForModel(model: string): string {
+  if (!model) return '';
+  const makes = listingFilterOptions.makes.filter(make => make && listingSelectionHas(listingModelsForMake(make), model));
+  return makes.length === 1 ? makes[0] : '';
+}
+
+export function withListingModel(draft: ListingDraft, value: string | readonly string[]): ListingDraft {
+  const model = listingSelections(value);
+  const owners = model.map(listingMakeForModel).filter(Boolean);
+  // Choosing across brands widens an existing brand selection without dropping its models.
+  const make = draft.make.length && owners.length ? listingSelections([...draft.make, ...owners]) : [...draft.make];
+  return { ...draft, make, model };
+}
+
+export function toggleListingIdentity(draft: ListingDraft, field: 'make' | 'model', value: string): ListingDraft {
+  const selection = toggleListingSelection(draft[field], value);
+  return field === 'make' ? withListingMake(draft, selection) : withListingModel(draft, selection);
+}
+
+/** Suggestion matching is separate from the applied vehicle keyword. */
+export function listingSuggestionMatcher(query: string, locale: Locale): (value: string) => boolean {
+  const normalizeSuggestion = (value: string) => value.normalize('NFKD')
+    .replace(/\p{M}/gu, '').toLocaleLowerCase(locale).replace(/[\s\p{P}]+/gu, '');
+  const terms = query.trim().split(/\s+/).map(normalizeSuggestion).filter(Boolean);
+  return value => {
+    const normalized = normalizeSuggestion(value);
+    return terms.every(term => normalized.includes(term));
   };
 }
 
 export const listingDraftHasFilters = (draft: ListingDraft) => {
   const filters = listingFiltersFromDraft(draft);
   return Boolean(
-    filters.q || filters.type || filters.make || filters.model || filters.body || filters.fuel ||
+    filters.q || filters.type || filters.make.length || filters.model.length || filters.body || filters.fuel ||
     filters.transmission || filters.version || filters.equipment.length || filters.condition ||
     filters.yearMin !== null || filters.yearMax !== null || filters.priceMin !== null ||
     filters.priceMax !== null || filters.mileageMax !== null
@@ -153,14 +267,16 @@ export const listingDraftHasFilters = (draft: ListingDraft) => {
 export const formatListingNumber = (value: string | number, locale: Locale = 'en') =>
   new Intl.NumberFormat(intlLocale(locale)).format(Number(value));
 
-export function listingOptionsWithCurrent(options: readonly string[], current: string): readonly string[] {
-  return current && !options.includes(current) ? [...options, current] : options;
+export function listingOptionsWithCurrent(options: readonly string[], current: string | readonly string[]): readonly string[] {
+  if (typeof current === 'string') return [...new Set([...options, ...listingSelections(current)])];
+  const values = listingSelections([...options, ...current]);
+  return options.includes('') ? ['', ...values] : values;
 }
 
 const listingRangeSummary = (minimum: string, maximum: string, suffix: string, locale: Locale) =>
   minimum || maximum ? `${minimum ? (suffix ? formatListingNumber(minimum, locale) : minimum) : '—'} – ${maximum ? (suffix ? formatListingNumber(maximum, locale) : maximum) : '—'}${suffix}` : message(locale, 'inventory.range.unlimited');
 
-export function listingFacetOptions(field: ListingFacetField, make = ''): readonly string[] {
+export function listingFacetOptions(field: ListingFacetField, make: string | readonly string[] = []): readonly string[] {
   switch (field) {
     case 'sort': return listingFilterOptions.sorts.map(([value]) => value === 'default' ? '' : value);
     case 'type': return listingFilterOptions.types;
@@ -194,8 +310,8 @@ export function listingFacetOptionLabel(field: ListingFacetField, option: string
 export function listingFacetSummary(field: ListingFacetField, draft: ListingDraft, locale: Locale = 'en'): string {
   switch (field) {
     case 'type': return listingFacetOptionLabel('type', draft.type, locale);
-    case 'make': return draft.make || templateText(locale, 'All brands');
-    case 'model': return draft.model || templateText(locale, 'All модели');
+    case 'make': return draft.make.join(', ') || templateText(locale, 'All brands');
+    case 'model': return draft.model.join(', ') || templateText(locale, 'All модели');
     case 'body': return specificationLabel(bodyLabel(draft.body), locale) || templateText(locale, 'All купета');
     case 'price': return listingRangeSummary(draft.priceMin, draft.priceMax, ' ' + currencySymbol(locale), locale);
     case 'year': return listingRangeSummary(draft.yearMin, draft.yearMax, '', locale);
@@ -209,17 +325,14 @@ export function listingFacetSummary(field: ListingFacetField, draft: ListingDraf
   }
 }
 
-export function preservedListingFacetEntries(params: URLSearchParams, field: ListingFacetField, selected: string): [string, string][] {
+export function preservedListingFacetEntries(params: URLSearchParams, field: ListingFacetField, selected: string | readonly string[]): [string, string][] {
   const range = field === 'price' || field === 'year';
-  return [...params.entries()].filter(([key]) => {
+  const models = field === 'make' ? listingModelsAfterMakeChange(params.getAll('make'), listingSelections(selected), params.getAll('model')) : undefined;
+  return [...params.entries()].filter(([key, value]) => {
     if (range) return key !== `${field}_min` && key !== `${field}_max`;
-    if (field === 'make' && key === 'model' && normalize(selected) !== normalize(params.get('make') ?? '')) return false;
+    if (key === 'model' && models && !models.includes(value)) return false;
     return key !== field;
   });
-}
-
-export function listingModelAfterMakeChange(currentMake: string, nextMake: string, currentModel: string): string {
-  return normalize(currentMake) === normalize(nextMake) ? currentModel : '';
 }
 
 export function listingAppliedFilterLabel(filters: ListingFilters, key: string, value: string, locale: Locale = 'en'): string {
@@ -238,6 +351,6 @@ export function listingAppliedFilterLabel(filters: ListingFilters, key: string, 
 }
 
 export function normalizeListingMakeTransition(current: ListingFilters, next: ListingFilters): ListingFilters {
-  const model = listingModelAfterMakeChange(current.make, next.make, next.model);
-  return model === next.model ? next : { ...next, model };
+  const model = listingModelsAfterMakeChange(current.make, next.make, next.model);
+  return model.length === next.model.length && model.every((value, index) => value === next.model[index]) ? next : { ...next, model };
 }

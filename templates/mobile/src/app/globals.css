@@ -116,6 +116,12 @@
 }
 @stylex;
 
+@media (min-width: 1024px) {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+
 @font-face {
   font-family: 'Mobile Hero';
   src: url('/fonts/hero-medium.otf') format('opentype');

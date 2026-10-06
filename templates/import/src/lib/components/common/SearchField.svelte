@@ -76,4 +76,17 @@
 		color: var(--bc-copy);
 		opacity: 1;
 	}
+	@media (min-width: 768px) {
+		.search-field {
+			border-color: transparent;
+			background: var(--bc-control);
+		}
+		.search-field:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.search-field:focus-within {
+			border-color: var(--bc-focus);
+		}
+	}
 </style>

@@ -11,8 +11,8 @@
 	import type { InventoryCopy, Locale } from '$lib/i18n/messages';
 	import InventoryMobilePage from './InventoryMobilePage.svelte';
 	import InventoryToolbar from './InventoryToolbar.svelte';
-	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
 	import InventorySearch from './InventorySearch.svelte';
+	import InventoryTypeShortcuts from './InventoryTypeShortcuts.svelte';
 	import InventoryDisplayControls from './InventoryDisplayControls.svelte';
 	import InventoryFiltersDialog from './InventoryFiltersDialog.svelte';
 	import VehicleCard from './VehicleCard.svelte';
@@ -54,21 +54,15 @@
 	let activeFilter = $state<AuxeroInventoryFilter | null>(null);
 	let dialog = $state<InventoryFiltersDialog>();
 	const openFilters = (filter?: AuxeroInventoryFilter) => dialog?.openFilters(filter);
-	const typeFilter = $derived(desktop.filters.find((filter) => filter.name === 'bodyType'));
 </script>
 
 <main id="main-content">
 	<div class="site-desktop-only">
-		<PageIntro
-			title={desktop.title}
-			class="inventory-hero"
-			vehicleArtwork
-			desktopDescription={desktop.subtitle}
-		>
+		<PageIntro title={desktop.title} class="inventory-hero" vehicleArtwork>
 			{#snippet desktopActions()}
-				<DesktopDiscoveryPanel class="inventory-discovery">
+				<DesktopDiscoveryPanel class="inventory-discovery" compactHeader>
 					{#snippet header()}
-						{#if typeFilter}<InventoryTypeShortcuts filter={typeFilter} {english} />{/if}
+						<InventoryTypeShortcuts {english} />
 					{/snippet}
 					<InventorySearch {english} />
 					<InventoryToolbar {desktop} {english} {allOpen} {activeFilter} onopen={openFilters} />
@@ -203,11 +197,6 @@
 	.inventory-more span {
 		color: var(--bc-muted);
 		font-size: var(--bc-text-label);
-	}
-	@media (min-width: 768px) {
-		:global(.inventory-discovery) {
-			--bc-desktop-discovery-panel-height: 0px;
-		}
 	}
 	@media (min-width: 768px) and (max-width: 1199px) {
 		.inventory-grid[data-view] {

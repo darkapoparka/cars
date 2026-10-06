@@ -22,6 +22,7 @@
 		{title}
 		image="/assets/daynight/services/evaluate-link-service.webp"
 		vehicleArtwork
+		compact
 		artworkPanelWidth="var(--bc-desktop-action-panel-width)"
 		description={copy.heroDescription}
 	/>

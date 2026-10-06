@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { createHash } from 'node:crypto';
-import { vehicles } from '../.qa/domain/catalog.mjs';
+import { capturedVehicles as vehicles } from '../.qa/domain/catalog.mjs';
 const byId = (id) => vehicles.find((v) => v.id === id);
 test('all four captured vehicle galleries contain the observed complete photo sets', () => {
   const counts = { 'bmw-x6': 20, 'bmw-540': 32, 'bmw-x3': 16, 'bmw-120': 4 };

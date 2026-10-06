@@ -8,7 +8,6 @@
 		label,
 		placeholder = label,
 		actionLabel,
-		appearance = 'default',
 		name = 'keyword',
 		controls,
 		href,
@@ -21,7 +20,6 @@
 		label: string;
 		placeholder?: string;
 		actionLabel: string;
-		appearance?: 'default' | 'compact';
 		name?: string;
 		controls?: string;
 		href?: string;
@@ -31,7 +29,7 @@
 	} = $props();
 </script>
 
-<div class={['desktop-search-control', className]} class:compact={appearance === 'compact'}>
+<div class={['desktop-search-control', className]}>
 	<div class="desktop-search-control__field">
 		{#if onopen}
 			<button
@@ -45,15 +43,9 @@
 				aria-controls={controls}
 				onclick={onopen}
 			>
-				<span class="desktop-search-control__leading-icon" aria-hidden="true"
-					><Search size={20} /></span
-				>
 				<span>{value || placeholder}</span>
 			</button>
 		{:else}
-			<label class="desktop-search-control__leading-icon" for={id} aria-hidden="true"
-				><Search size={20} /></label
-			>
 			<label class="sr-only" for={id}>{label}</label>
 			<input
 				{id}
@@ -75,7 +67,6 @@
 		class="desktop-search-control__action"
 	>
 		<span class="desktop-search-control__action-icon" aria-hidden="true"><Search size={20} /></span>
-		<span class="desktop-search-control__action-label" aria-hidden="true">{actionLabel}</span>
 	</Action>
 </div>
 
@@ -137,14 +128,8 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
-	.desktop-search-control__action-label {
-		display: none;
-	}
 	.desktop-search-control__field {
 		display: contents;
-	}
-	.desktop-search-control__leading-icon {
-		display: none;
 	}
 	.desktop-search-control__action-icon {
 		display: flex;
@@ -159,114 +144,56 @@
 	}
 	@media (min-width: 768px) {
 		.desktop-search-control {
-			min-height: var(--bc-control-height-primary);
-			gap: var(--bc-space-3);
-			padding: 0;
-			border: 0;
-			background: transparent;
+			gap: 0;
+			min-height: var(--bc-desktop-search-height);
+			padding: 1px;
+			border: 1px solid transparent;
+			border-radius: var(--bc-radius-control);
+			background: var(--bc-desktop-control-surface);
 		}
-		.desktop-search-control:has(input:focus-visible) {
-			outline: none;
+		.desktop-search-control:hover {
+			border-color: transparent;
+			background: var(--bc-control-hover);
+		}
+		.desktop-search-control:focus-within {
+			border-color: var(--bc-focus);
 		}
 		.desktop-search-control__field {
 			display: flex;
 			align-items: center;
 			flex: 1;
 			min-width: 0;
-			min-height: var(--bc-control-height-primary);
-			border: 1px solid var(--bc-border-strong);
-			border-radius: var(--bc-desktop-control-radius);
-			background: var(--bc-surface-raised);
-		}
-		.desktop-search-control__field:hover {
-			border-color: var(--bc-ink);
-		}
-		.desktop-search-control__field:focus-within {
-			border-color: var(--bc-focus);
-		}
-		.desktop-search-control__field:has(input:focus-visible) {
-			outline: 3px solid var(--bc-focus);
-			outline-offset: 3px;
-		}
-		.desktop-search-control__leading-icon {
-			display: flex;
-			flex: none;
-			color: var(--bc-muted);
-		}
-		label.desktop-search-control__leading-icon {
-			margin-left: var(--bc-space-4);
 		}
 		.desktop-search-control__entry {
 			align-self: stretch;
-			gap: var(--bc-space-3);
-			font-size: var(--bc-text-search);
-		}
-		button.desktop-search-control__entry {
 			padding-inline: var(--bc-space-4);
+			font-size: var(--bc-text-search);
 		}
 		.desktop-search-control :global(.desktop-search-control__action) {
-			width: auto;
-			min-height: var(--bc-control-height-primary);
-			padding: 0 var(--bc-space-6);
+			min-height: var(--bc-control-height-standard);
 			border: 0;
-			border-radius: var(--bc-desktop-control-radius);
-			background-clip: border-box;
-			font-size: var(--bc-text-search);
+			background: transparent;
 		}
 		.desktop-search-control__action-icon {
-			display: none;
+			display: grid;
+			place-items: center;
+			width: var(--bc-control-height-compact);
+			height: var(--bc-control-height-compact);
+			border-radius: var(--bc-radius-pill);
+			background: var(--desktop-search-action-background, var(--bc-accent));
+			color: var(--bc-accent-contrast);
 		}
-		.desktop-search-control__action-label {
-			display: inline;
+		.desktop-search-control__action-icon :global(svg) {
+			width: 18px;
+			height: 18px;
+		}
+		.desktop-search-control :global(.desktop-search-control__action:hover) {
+			--desktop-search-action-background: var(--bc-accent-hover);
+			background: transparent;
 		}
 		.placeholder,
 		input::placeholder {
-			color: var(--bc-subtle);
-		}
-		.desktop-search-control.compact {
-			gap: 0;
-			min-height: var(--bc-control-height-primary);
-			padding: 1px;
-			border: 1px solid var(--bc-border-strong);
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-surface-raised);
-		}
-		.desktop-search-control.compact:has(input:focus-visible) {
-			outline: 3px solid var(--bc-focus);
-			outline-offset: 3px;
-		}
-		.compact .desktop-search-control__field {
-			min-height: 0;
-			border: 0;
-			background: transparent;
-		}
-		.compact .desktop-search-control__field:has(input:focus-visible) {
-			outline: none;
-		}
-		.compact .desktop-search-control__entry {
-			padding-inline: var(--bc-space-4);
-			font-size: var(--bc-text-search);
-		}
-		.compact .desktop-search-control__leading-icon,
-		.compact .desktop-search-control__action-label {
-			display: none;
-		}
-		.compact .desktop-search-control__action-icon {
-			display: flex;
-		}
-		.compact :global(.desktop-search-control__action) {
-			width: var(--bc-control-height-standard);
-			min-height: var(--bc-control-height-standard);
-			height: var(--bc-control-height-standard);
-			padding: 0;
-			border: 0;
-			border-radius: var(--bc-radius-pill);
-			background: transparent;
 			color: var(--bc-copy);
-		}
-		.compact :global(.desktop-search-control__action:hover) {
-			background: var(--bc-surface-hover);
-			color: var(--bc-ink);
 		}
 	}
 </style>

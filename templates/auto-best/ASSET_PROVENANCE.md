@@ -38,10 +38,10 @@ A filename does not prove a file is currently rendered. Component/data reference
 | [Desktop service illustrations](provenance/desktop-service-cards-2026-10-03.md) | Four coordinated generated cutouts for the About service cards; mobile icons and source PNGs are retained. |
 | [Desktop service vignettes](provenance/desktop-service-vignettes-2026-10-04.md) | Reception and car-with-container revisions plus aligned leasing artwork; shared by desktop About cards and navigation. |
 | [Homepage brand marks](provenance/homepage-brand-marks-2026-09-15.md) | Curated Land Rover, Mercedes-Benz and Audi card assets, source limits and optical sizing |
-| [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
 | [Mobile Audi chrome mark](provenance/mobile-audi-chrome-2026-10-02.md) | Unchanged transparent Import-template source; mobile rings crop and desktop source preserved |
 | [Mobile Volkswagen badge](provenance/mobile-volkswagen-badge-2026-10-02.md) | Unchanged pinned Cardog emblem; curated mobile trio with existing Mercedes-Benz and BMW artwork |
 | [Mobile BMW roundel](provenance/mobile-bmw-roundel-2026-10-02.md) | Unchanged pinned Cardog vector for sharp mobile rendering; compact Mercedes label retains the canonical make filter |
+| [Menu services](provenance/menu-service-assets-2026-09-08.md) | Reception, import and leasing concepts |
 | [Editorial photos](provenance/editorial-photos-2026-09-08.md) | Photo sources and credits |
 | [Borderless editorial](provenance/borderless-editorial-2026-09-08.md) | Generated edits of photo inputs |
 

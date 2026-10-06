@@ -1,6 +1,6 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
@@ -22,6 +22,13 @@ import { ShowroomTabs } from './ShowroomTabs';
 import { ShowroomSearchField } from './ShowroomSearch';
 import { Icon } from './Icon';
 import { Button, CheckRow, IconButton, Modal } from './ui';
+import { ShowroomDesktopFilters } from './ShowroomDesktopFilters';
+
+function subscribeDesktop(listener: () => void) {
+  const media = window.matchMedia('(min-width: 1024px)');
+  media.addEventListener('change', listener);
+  return () => media.removeEventListener('change', listener);
+}
 
 function Choices({
   title,
@@ -67,18 +74,33 @@ export function ShowroomFilterSheet({
   sheet,
   moreSection = null,
   filters,
+  desktopPresentation = 'sheet',
+  desktopAnchor,
+  desktopKeyboardOpening = false,
+  desktopMakeView = 'make',
   onTabChange,
   onApply,
   onClose,
+  onDesktopDismiss,
 }: {
   sheet: ShowroomFilterTab;
   moreSection?: ShowroomMoreSection | null;
   filters: Filters;
+  desktopPresentation?: 'sheet' | 'quick' | 'all';
+  desktopAnchor?: HTMLElement;
+  desktopKeyboardOpening?: boolean;
+  desktopMakeView?: 'make' | 'model';
   onTabChange: (tab: ShowroomFilterTab) => void;
   onApply: (filters: Filters) => void;
   onClose: () => void;
+  onDesktopDismiss?: () => void;
 }) {
   const { t, money } = useLocale();
+  const desktop = useSyncExternalStore(
+    subscribeDesktop,
+    () => window.matchMedia('(min-width: 1024px)').matches,
+    () => false,
+  );
   const [draft, setDraft] = useState(() => structuredClone(filters));
   const [resetVersion, setResetVersion] = useState(0);
   const editorRef = useRef<HTMLDivElement>(null);
@@ -125,6 +147,30 @@ export function ShowroomFilterSheet({
   }, [sheet, moreSection]);
   function change(patch: Partial<Filters>) {
     setDraft((current) => updateShowroomFilterDraft(current, patch));
+  }
+  if (desktop) {
+    return (
+      <ShowroomDesktopFilters
+        sheet={sheet}
+        moreSection={moreSection}
+        draft={draft}
+        presentation={desktopPresentation}
+        makeView={desktopMakeView}
+        anchor={desktopAnchor}
+        keyboardOpening={desktopKeyboardOpening}
+        stock={stock}
+        matches={matches}
+        resetVersion={resetVersion}
+        onChange={change}
+        onReset={() => {
+          setDraft(resetShowroomFilterDraft(draft));
+          setResetVersion((current) => current + 1);
+        }}
+        onApply={() => onApply(draft)}
+        onClose={onClose}
+        onDismiss={onDesktopDismiss}
+      />
+    );
   }
   return (
     <Modal

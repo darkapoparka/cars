@@ -4,36 +4,35 @@ import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
 import type { VehicleCategory } from '@/lib/types';
+import { showroom, showroomPreviewLocation } from '@/lib/showroom';
 import { Icon } from './Icon';
 import { ShowroomDesktopType } from './ShowroomDesktopType';
 import { desktopSearchStyles as field } from './showroom-desktop-controls.stylex';
 
 const s = stylex.create({
   hero: {
-    display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
+    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 24,
-    minHeight: 280,
-    marginInline: 16,
-    marginTop: 8,
+    minHeight: { default: 280, '@media (min-width: 1024px)': 340 },
+    marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
+    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     marginBottom: 0,
-    paddingBlock: 32,
-    paddingInline: 40,
-    borderRadius: 20,
+    paddingTop: { default: 32, '@media (min-width: 1024px)': 40 },
+    // Balance the heading and search within the part above the overlapping results.
+    paddingBottom: { default: 32, '@media (min-width: 1024px)': 68 },
+    paddingInline: { default: 24, '@media (min-width: 1200px)': 40 },
+    borderRadius: { default: 20, '@media (min-width: 1024px)': 0 },
     color: '#fff',
-    backgroundColor: '#263644',
-    // The media query also keeps this decorative photo out of phone requests.
-    backgroundImage: {
-      default: 'none',
-      '@media (min-width: 1024px)':
-        'linear-gradient(180deg, rgba(14, 25, 36, .55), rgba(14, 25, 36, .3)), url("/images/desktop/discovery-hero.jpg")',
-    },
-    backgroundSize: 'cover',
-    backgroundPosition: 'center 80%',
+    backgroundColor: { default: '#263644', '@media (min-width: 1024px)': 'transparent' },
   },
-  copy: { textAlign: 'center', maxWidth: 800 },
+  copy: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
+    textAlign: 'center',
+    maxWidth: 800,
+  },
   title: {
     fontFamily: 'var(--font-base), Arial, sans-serif',
     fontSize: 'clamp(32px, 3vw, 40px)',
@@ -42,103 +41,217 @@ const s = stylex.create({
     letterSpacing: '-.02em',
     textWrap: 'balance',
   },
-  description: { marginTop: 12, fontSize: 15, lineHeight: '24px', textWrap: 'balance' },
-  search: {
-    display: 'grid',
-    gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
+  location: {
+    display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
+    gap: 6,
+    marginBottom: 12,
+    color: 'rgba(255, 255, 255, .82)',
+    fontSize: 13,
+    fontWeight: 400,
+    lineHeight: '20px',
+  },
+  searchPanel: {
+    display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
     width: '100%',
-    padding: 6,
-    borderRadius: 16,
+    maxWidth: 780,
+    borderRadius: 34,
     color: colors.text,
     backgroundColor: colors.background,
     boxShadow: '0 8px 24px rgba(14, 25, 36, .12)',
   },
+  search: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: 'minmax(0, .95fr) minmax(0, 1.35fr) minmax(0, .85fr) auto',
+    alignItems: 'center',
+    width: '100%',
+    padding: 6,
+    gap: 6,
+  },
+  expandedSearchPanel: { maxWidth: 880 },
+  splitSearch: {
+    gridTemplateColumns:
+      'minmax(210px, 1.1fr) minmax(0, 1fr) minmax(0, 1.1fr) minmax(0, .85fr) auto',
+  },
+  disabledField: { opacity: 0.6, cursor: 'not-allowed' },
   submit: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
-    minHeight: 56,
-    paddingInline: 20,
+    width: 48,
+    minHeight: 48,
+    padding: 0,
     borderWidth: 0,
-    borderRadius: 12,
+    borderRadius: 24,
     backgroundColor: { default: colors.accent, ':hover': '#b72800' },
     color: '#fff',
-    fontSize: 15,
-    fontWeight: 600,
-    lineHeight: '22px',
-    whiteSpace: 'nowrap',
     outlineColor: colors.text,
     outlineOffset: -4,
+  },
+  fieldWrapper: { position: 'relative', minWidth: 0 },
+  clearableField: { paddingInlineEnd: 44 },
+  clearField: {
+    position: 'absolute',
+    right: 4,
+    top: 6,
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 36,
+    minHeight: 44,
+    padding: 0,
+    borderWidth: 0,
+    borderRadius: 18,
+    backgroundColor: { default: 'transparent', ':hover': colors.stripe },
+    color: colors.muted,
+    outlineColor: colors.accent,
+    outlineOffset: -2,
   },
 });
 
 export function ShowroomDesktopHero({
   category,
-  query,
   makeLabel,
+  modelLabel,
   priceLabel,
   resultLabel,
   sheet,
+  makeView,
   onSelectCategory,
   onOpen,
   onBrowse,
+  makeActive,
+  modelActive,
+  modelReady,
+  priceActive,
+  onClear,
 }: {
   category: VehicleCategory;
-  query: string;
   makeLabel: string;
+  modelLabel: string;
   priceLabel: string;
   resultLabel: string;
   sheet: ShowroomFilterTab | null;
+  makeView: 'make' | 'model';
   onSelectCategory: (category: VehicleCategory) => void;
-  onOpen: (tab: ShowroomFilterTab, button: HTMLButtonElement) => void;
+  onOpen: (
+    tab: ShowroomFilterTab | 'model',
+    button: HTMLButtonElement,
+    keyboardOpening: boolean,
+  ) => void;
   onBrowse: () => void;
+  makeActive: boolean;
+  modelActive: boolean;
+  modelReady: boolean;
+  priceActive: boolean;
+  onClear: (tab: 'make' | 'model' | 'price') => void;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
+  const location = showroom.address || showroomPreviewLocation[locale];
   const fields = [
-    { tab: 'make', label: 'Make & model', value: query || makeLabel },
-    { tab: 'price', label: 'Price', value: priceLabel },
+    {
+      tab: 'make',
+      label: category === 'car' ? 'Make' : 'Make & model',
+      value: makeLabel,
+      active: makeActive,
+      disabled: false,
+    },
+    ...(category === 'car'
+      ? [
+          {
+            tab: 'model',
+            label: 'Model',
+            value: modelLabel,
+            active: modelActive,
+            disabled: !modelReady,
+          } as const,
+        ]
+      : []),
+    { tab: 'price', label: 'Price', value: priceLabel, active: priceActive, disabled: false },
   ] as const;
   return (
-    <section
-      aria-labelledby="desktop-discovery-title"
-      data-desktop-discovery-hero
-      {...stylex.props(s.hero)}
-    >
+    <div data-desktop-discovery-hero {...stylex.props(s.hero)}>
       <div {...stylex.props(s.copy)}>
+        <p data-desktop-showroom-location {...stylex.props(s.location)}>
+          <Icon name="pin" size={14} />
+          <span>{location}</span>
+        </p>
         <h2 id="desktop-discovery-title" {...stylex.props(s.title)}>
           {t('Find your next vehicle')}
         </h2>
-        <p {...stylex.props(s.description)}>
-          {t('Explore the showroom. Find a vehicle that fits you.')}
-        </p>
       </div>
-      <div role="group" aria-label={t('Find a vehicle')} {...stylex.props(s.search)}>
-        <ShowroomDesktopType category={category} onSelect={onSelectCategory} />
-        {fields.map(({ tab, label, value }) => (
+      <div
+        data-desktop-search-box
+        {...stylex.props(s.searchPanel, category === 'car' && s.expandedSearchPanel)}
+      >
+        <div
+          role="group"
+          aria-label={t('Find a vehicle')}
+          {...stylex.props(s.search, category === 'car' && s.splitSearch)}
+        >
+          <ShowroomDesktopType category={category} onSelect={onSelectCategory} />
+          {fields.map(({ tab, label, value, active, disabled }) => {
+            const open =
+              tab === 'model'
+                ? sheet === 'make' && makeView === 'model'
+                : sheet === tab && (tab !== 'make' || makeView === 'make');
+            return (
+              <div
+                key={tab}
+                data-selected-filter={active ? tab : undefined}
+                {...stylex.props(s.fieldWrapper)}
+              >
+                <button
+                  type="button"
+                  data-desktop-hero-filter={tab}
+                  aria-label={t(label) + ': ' + value}
+                  aria-haspopup="dialog"
+                  aria-expanded={open}
+                  disabled={disabled}
+                  onClick={(event) => onOpen(tab, event.currentTarget, event.detail === 0)}
+                  {...stylex.props(
+                    field.field,
+                    tab !== 'price' && field.divider,
+                    active && s.clearableField,
+                    open && field.open,
+                    open && field.hideDivider,
+                    disabled && s.disabledField,
+                  )}
+                >
+                  <span {...stylex.props(field.copy)}>
+                    <span {...stylex.props(field.label)}>{t(label)}</span>
+                    <span {...stylex.props(field.value)}>{value}</span>
+                  </span>
+                  {!active && <Icon name="down" size={16} />}
+                </button>
+                {active && (
+                  <button
+                    type="button"
+                    data-remove-selected-filter={tab}
+                    aria-label={t('Clear filters') + ': ' + t(label)}
+                    title={t('Clear filters') + ': ' + t(label)}
+                    onClick={() => onClear(tab)}
+                    {...stylex.props(s.clearField)}
+                  >
+                    <Icon name="close" size={14} />
+                  </button>
+                )}
+              </div>
+            );
+          })}
           <button
-            key={tab}
             type="button"
-            data-desktop-hero-filter={tab}
-            aria-label={t(label) + ': ' + value}
-            aria-haspopup="dialog"
-            aria-expanded={sheet === tab}
-            onClick={(event) => onOpen(tab, event.currentTarget)}
-            {...stylex.props(field.field, field.divided, sheet === tab && field.open)}
+            data-desktop-browse
+            aria-label={resultLabel}
+            title={t('Search')}
+            onClick={onBrowse}
+            {...stylex.props(s.submit)}
           >
-            <span {...stylex.props(field.copy)}>
-              <span {...stylex.props(field.label)}>{t(label)}</span>
-              <span {...stylex.props(field.value)}>{value}</span>
-            </span>
-            <Icon name="down" size={16} />
+            <Icon name="search" size={20} />
           </button>
-        ))}
-        <button type="button" data-desktop-browse onClick={onBrowse} {...stylex.props(s.submit)}>
-          <Icon name="search" size={18} />
-          {resultLabel}
-        </button>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
