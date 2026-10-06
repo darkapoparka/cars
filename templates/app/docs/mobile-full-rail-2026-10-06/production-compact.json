@@ -1,0 +1,2258 @@
+[
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 54.65625,
+      "width": 164,
+      "x": 113,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 12,
+          "y": 45
+        },
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 207.09375,
+      "x": 91.453125,
+      "y": -33
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 45
+        },
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/sell",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 131.765625,
+      "x": 129.109375,
+      "y": -430
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 195,
+          "y": 45
+        },
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/finance",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 188.390625,
+      "x": 100.796875,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 45
+        },
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/service",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 54.65625,
+      "width": 164,
+      "x": 78,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 12,
+          "y": 45
+        },
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 207.09375,
+      "x": 56.453125,
+      "y": -33
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 86,
+          "y": 45
+        },
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/sell",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 131.765625,
+      "x": 94.109375,
+      "y": -430
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 160,
+          "y": 45
+        },
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/finance",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 188.390625,
+      "x": 65.796875,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/bg/service",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 234,
+          "y": 45
+        },
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/bg/service",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 54.65625,
+      "width": 164,
+      "x": 113,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 12,
+          "y": 45
+        },
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 149.890625,
+      "x": 120.046875,
+      "y": -33
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 45
+        },
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/sell",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 214.828125,
+      "x": 87.578125,
+      "y": -430
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 195,
+          "y": 45
+        },
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/finance",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 148.5,
+      "x": 120.75,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 366,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 103.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 195,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/service",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 45
+        },
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 91.5,
+          "x": 286.5,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/service",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 54.65625,
+      "width": 164,
+      "x": 78,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 12,
+          "y": 45
+        },
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 149.890625,
+      "x": 85.046875,
+      "y": -33
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 86,
+          "y": 45
+        },
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/sell",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 214.828125,
+      "x": 52.578125,
+      "y": -430
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 160,
+          "y": 45
+        },
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/service",
+        "indicator": null,
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/finance",
+    "width": 320
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 66,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "true",
+      "height": 52,
+      "width": 320,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 148.5,
+      "x": 85.75,
+      "y": -431
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 44,
+      "width": 296,
+      "x": 12,
+      "y": 4
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en",
+        "indicator": null,
+        "label": "Buy",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 12,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 12,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/sell",
+        "indicator": null,
+        "label": "Sell",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 86,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 86,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 44,
+        "href": "/en/finance",
+        "indicator": null,
+        "label": "Finance",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 160,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 74,
+        "x": 160,
+        "y": 4
+      },
+      {
+        "art": null,
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 44,
+        "href": "/en/service",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 74,
+          "x": 234,
+          "y": 45
+        },
+        "label": "Services",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 32,
+          "width": 74,
+          "x": 234,
+          "y": 10
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 74,
+        "x": 234,
+        "y": 4
+      }
+    ],
+    "url": "http://127.0.0.1:6485/en/service",
+    "width": 320
+  }
+]

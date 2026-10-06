@@ -8,6 +8,7 @@ type CarsSearchParams = {
   q?: string | string[];
   brand?: string | string[];
   body?: string | string[];
+  maxPrice?: string | string[];
   filters?: string | string[];
   sort?: string | string[];
   open?: string | string[];
@@ -19,6 +20,7 @@ function first(value: string | string[] | undefined) {
 
 export default async function CarsPage({ searchParams }: { searchParams: Promise<CarsSearchParams> }) {
   const params = await searchParams;
+  const maxPrice = first(params.maxPrice).trim();
   const initialOverlay = params.filters !== undefined ? 'filters' : params.sort !== undefined ? 'sort' : null;
 
   return (
@@ -28,6 +30,7 @@ export default async function CarsPage({ searchParams }: { searchParams: Promise
       initialQuery={first(params.q)}
       initialBrand={first(params.brand)}
       initialBody={first(params.body)}
+      initialPriceMax={maxPrice && Number.isFinite(Number(maxPrice)) ? Number(maxPrice) : undefined}
       initialOverlay={initialOverlay}
       initialOpen={first(params.open).toUpperCase() || null}
     />

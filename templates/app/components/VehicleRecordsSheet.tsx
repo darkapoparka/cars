@@ -52,7 +52,7 @@ export default function VehicleRecordsSheet({kind,vehicleTitle,reference,service
 const s=stylex.create({
   backdrop:{position:'fixed',inset:0,zIndex:240,display:'flex',alignItems:{[media.mobile]:'flex-end',default:'center'},justifyContent:'center',padding:{[media.mobile]:0,default:24},backgroundColor:'rgba(0,0,0,.48)'},
   sheet:{display:'flex',flexDirection:'column',width:'100%',maxWidth:650,maxHeight:'92dvh',color:$.ink,fontFamily:$.fontSans,borderRadius:{[media.mobile]:'24px 24px 0 0',default:24},backgroundColor:$.surface,outlineStyle:'none',overflow:'hidden'},
-  header:{display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0,gap:12,padding:'16px 20px',borderBottomColor:$.line,borderBottomStyle:'solid',borderBottomWidth:1},
+  header:{display:'flex',alignItems:'center',justifyContent:'space-between',flexShrink:0,gap:12,padding:'16px 20px',},
   title:{minWidth:0,fontSize:20,fontWeight:600,lineHeight:'28px'},
   close:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
   body:{minHeight:0,overflowY:'auto',overscrollBehaviorY:'contain',padding:'16px 20px calc(24px + env(safe-area-inset-bottom))'},

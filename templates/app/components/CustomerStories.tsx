@@ -25,7 +25,7 @@ const s=stylex.create({
   section:{scrollMarginTop:164,marginTop:37,color:'#202024'},
   heading:{fontFamily:$.fontDisplay,fontSize:16,fontWeight:600,lineHeight:'24px'},
   stats:{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',marginTop:27,marginInline:{[media.mobile]:-22,default:0}},
-  stat:{position:'relative',display:'flex',alignItems:'center',flexDirection:'column',height:78,color:'#202024',borderRightColor:'#ededed',borderRightWidth:1,borderRightStyle:'solid'},
+  stat:{position:'relative',display:'flex',alignItems:'center',flexDirection:'column',height:78,color:'#202024',},
   number:{fontFamily:$.fontDisplay,marginTop:13,color:'#202024',fontSize:19,fontWeight:600,lineHeight:'25px'},
   label:{marginTop:2,color:'#535353',fontFamily:$.fontDisplay,fontSize:11,lineHeight:'18px',whiteSpace:'nowrap'},
   ratingIcon:{position:'relative',height:22},

@@ -4,6 +4,7 @@ import {useEffect, useRef} from 'react';
 import {restoreFilters, type Filters} from '@/lib/inventory-filters';
 import {useRouter} from '@/lib/navigation';
 import {withoutLocale} from '@/lib/paths';
+import {primaryHomePath} from '@/lib/home-alternative';
 
 type State = {query: string; filters: Filters; sort: string; emiMax?: number};
 type Controls = {setQuery: (value: string) => void; setFilters: (value: Filters) => void; setSort: (value: string) => void; setEmiMax: (value: number | undefined) => void};
@@ -11,8 +12,9 @@ const validSorts = ['default', 'recent', 'price-asc', 'price-desc', 'kms-asc', '
 let pendingReturn: {entry: string; detail: string; home?: boolean} | null = null;
 
 /** Remember which collection opened the car without changing its URL or scroll position. */
-export function useVehicleReturn(home = false) {
+export function useVehicleReturn(home = false, enabled = true) {
   useEffect(() => {
+    if (!enabled) return;
     pendingReturn = null;
     const entry = `${location.pathname}${location.search}`;
     function rememberReturn(event: MouseEvent) {
@@ -25,7 +27,7 @@ export function useVehicleReturn(home = false) {
     }
     document.addEventListener('click', rememberReturn, true);
     return () => document.removeEventListener('click', rememberReturn, true);
-  }, [home]);
+  }, [home, enabled]);
 }
 
 /** Store list state on its own history entry, so Back from a car restores the list. */
@@ -74,7 +76,8 @@ export function useInventoryBack() {
     const origin = history.state?.cars24InventoryReturn;
     if (origin?.detail === location.pathname && typeof origin.entry === 'string') {
       const entry = new URL(origin.entry, location.origin);
-      if (entry.origin === location.origin && (['/cars', '/luxe', '/saved'].includes(withoutLocale(entry.pathname)) || origin.home===true&&withoutLocale(entry.pathname)==='/')) {
+      const entryPath = primaryHomePath(withoutLocale(entry.pathname));
+      if (entry.origin === location.origin && (['/cars', '/luxe', '/saved'].includes(entryPath) || origin.home===true&&entryPath==='/')) {
         router.back();
         return;
       }

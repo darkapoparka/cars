@@ -65,7 +65,7 @@ const styles = stylex.create({
   count: {fontSize: 18, fontWeight: 600, lineHeight: '24px'},
   caption: {marginTop: 6, color: $.muted, fontSize: 14, lineHeight: '21px'},
   emptyTitle: {marginTop: 20, fontSize: 22, fontWeight: 600, lineHeight: 1.25},
-  grid: { display: 'grid', gridTemplateColumns: { [media.mobile]: '1fr', [media.tablet]: 'repeat(2,1fr)', default: 'repeat(3,1fr)' }, gap: 16 },
+  grid: { display: 'grid', gridTemplateColumns: { [media.mobile]: '1fr', [media.tablet]: 'repeat(2,1fr)', [media.desktop]: 'repeat(4,minmax(0,1fr))', default: 'repeat(3,1fr)' }, gap: 16 },
   empty: { display: 'flex', alignItems: 'center', maxWidth: 520, minHeight: { [media.mobile]: '62vh', default: 520 }, marginInline: 'auto', paddingInline: 20, flexDirection: 'column', justifyContent: 'center', color: $.text, textAlign: 'center' },
   heart: { display: 'grid', flexShrink: 0, width: 96, height: 96, placeItems: 'center', color: $.violet, borderRadius: '50%', backgroundColor: $.violetSoft },
   explore: { display: 'grid', width: '100%', maxWidth: 360, minHeight: 48, marginTop: 24, padding: '10px 12px', placeItems: 'center', color: '#fff', fontSize: 14, fontWeight: 500, lineHeight: 1.4, textAlign: 'center', borderRadius: 12, backgroundColor: $.violet, outlineOffset: 3 },

@@ -37,7 +37,7 @@ const s=stylex.create({
   noteTitle:{display:'block',fontSize:13,fontWeight:600,lineHeight:'19px'},
   noteCopy:{display:'block',marginTop:2,color:'#535353',fontSize:14,fontWeight:400,lineHeight:'21px'},
   records:{margin:'21px 0 0',padding:'2px 12px',listStyle:'none',color:'#535353',fontFamily:$.fontDisplay,borderRadius:15,backgroundColor:'#f8f8f8'},
-  record:{padding:'13px 0 15px',borderBottomColor:'#e0e0e0',borderBottomStyle:'dashed',borderBottomWidth:{default:1,':last-child':0}},
+  record:{padding:'13px 0 15px',},
   recordHeader:{fontFamily:'Roboto,Arial,sans-serif',display:'flex',flexWrap:'wrap',justifyContent:'space-between',gap:'4px 16px',color:$.ink,fontSize:14,fontWeight:500,lineHeight:'20px'},
   location:{marginTop:6,color:'#555',fontSize:11.5,lineHeight:'17px'},
   embeddedLocation:{fontSize:14,lineHeight:'22px',overflowWrap:'anywhere'},

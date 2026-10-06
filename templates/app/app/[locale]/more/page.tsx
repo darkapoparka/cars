@@ -9,6 +9,7 @@ import ShowroomIcon, {type ShowroomIconName} from '@/components/ShowroomIcon';
 import {dealer} from '@/lib/dealer-config';
 import {useCopy, useLocale} from '@/lib/locale';
 import {browserPath} from '@/lib/paths';
+import {homeAlternativeHref, useHomeAlternative} from '@/lib/home-alternative';
 import {showroom} from '@/lib/showroom';
 import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
@@ -18,6 +19,7 @@ const languageNames = {en: 'English', bg: 'Български'};
 export default function MorePage() {
   const tx = useCopy();
   const locale = useLocale();
+  const alternative = useHomeAlternative();
 
   return <div data-menu-page {...stylex.props(s.screen)}>
     <PageHeader title="Menu" compact wrapTitle action={<span {...stylex.props(s.brand)}><DealerBrand compact/></span>}/>
@@ -34,7 +36,7 @@ export default function MorePage() {
       {dealer.enabledLocales.length > 1 ? <footer data-menu-language {...stylex.props(s.languageFooter)}>
         <div role="group" aria-label={tx('Language')} {...stylex.props(s.languages)}>
           <span data-menu-language-rail aria-hidden="true" {...stylex.props(s.languageRail)}/>
-          {dealer.enabledLocales.map(language => <a key={language} href={browserPath('/more', language)} lang={language} hrefLang={language} aria-current={locale === language ? 'true' : undefined} {...stylex.props(s.language)}><span {...stylex.props(s.languageLabel, locale === language && s.languageSelected)}>{locale === language ? <Check size={12} aria-hidden="true"/> : null}{languageNames[language]}</span></a>)}
+          {dealer.enabledLocales.map(language => <a key={language} href={browserPath(homeAlternativeHref('/more', alternative), language)} lang={language} hrefLang={language} aria-current={locale === language ? 'true' : undefined} {...stylex.props(s.language)}><span {...stylex.props(s.languageLabel, locale === language && s.languageSelected)}>{locale === language ? <Check size={12} aria-hidden="true"/> : null}{languageNames[language]}</span></a>)}
         </div>
       </footer> : null}
     </main>
@@ -55,9 +57,11 @@ const s = stylex.create({
   content: {display: 'flex', flexDirection: 'column', flexGrow: 1, paddingInline: {[media.mobile]: 12, default: 28}, paddingTop: 8, paddingBottom: 12},
   section: {marginBottom: $.mobileSectionGap},
   sectionTitle: {margin: 0, paddingBottom: 8, paddingInline: 2, color: $.muted},
-  list: {borderColor: $.line, borderStyle: 'solid', borderWidth: 1, borderRadius: $.radiusMd, overflow: 'hidden'},
-  row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left', borderBottomWidth: {default: 1, ':last-child': 0}, borderBottomStyle: 'solid', borderBottomColor: '#ededf0', backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': $.rail}, outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
-  icon: {display: 'grid', placeItems: 'center', width: 32, height: 32, borderRadius: 10, backgroundColor: $.surfaceAlt},
+  list: {display: {[media.mobile]: 'flex', default: 'block'}, flexDirection: 'column', gap: {[media.mobile]: 6, default: 0}, padding: {[media.mobile]: 6, default: 0}, backgroundColor: {[media.mobile]: $.surfaceAlt, default: 'transparent'}, borderColor: $.line, borderStyle: 'solid', borderWidth: {[media.mobile]: 0, default: 1}, borderRadius: $.radiusMd, overflow: 'hidden'},
+  row: {display: 'grid', gridTemplateColumns: '32px minmax(0,1fr) 16px', alignItems: 'center', gap: 12, minHeight: 56, paddingBlock: 10, paddingInline: 12, color: $.ink, textAlign: 'left',
+    borderRadius: {[media.mobile]: 10, default: 0}, backgroundColor: {default: $.surface, ':hover': $.surfaceAlt, ':active': {default: $.rail, [media.mobile]: $.line}},
+    outlineOffset: -3, outlineWidth: 2, outlineStyle: {default: 'none', ':focus-visible': 'solid'}, outlineColor: $.ink},
+  icon: {display: 'grid', placeItems: 'center', width: 32, height: 32, borderRadius: 10, backgroundColor: {[media.mobile]: 'transparent', default: $.surfaceAlt}},
   label: {minWidth: 0, overflowWrap: 'anywhere'},
   chevron: {color: $.subtle},
   languageFooter: {display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: 'auto', paddingTop: 24},

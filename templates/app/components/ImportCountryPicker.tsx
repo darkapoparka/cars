@@ -50,7 +50,7 @@ export default function ImportCountryPicker() {
   return <>
     <section data-import-countries aria-label={tx('Import cars')} {...stylex.props(s.discovery)}>
       <div role="group" aria-label={tx('Import country')} {...stylex.props(s.pills)}>
-        {[{code: 'all', name: 'All', flagSrc: undefined}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} flagSrc={item.flagSrc} pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)}/>)}
+        {[{code: 'all', name: 'All', flagSrc: undefined}, ...showroom.importCountries].map(item => <FilterPill key={item.code} label={item.name} flagSrc={item.flagSrc} tone="soft" pressed={filterCountry === item.code} onClick={() => setFilterCountry(item.code)}/>)}
       </div>
       <span role="status" {...stylex.props(s.srOnly)}>{tx('Import cars')}: {visible.length}</span>
       {visible.length ? <div data-import-listings {...stylex.props(s.listings)}>{visible.map(listing => <VehicleCard key={listing.vehicle.slug} vehicle={listing.vehicle} importListing={{country: tx(showroom.importCountries.find(item => item.code === listing.countryCode)?.name || listing.countryCode), onEnquire: () => choose(listing)}}/>)}</div> : <div {...stylex.props(s.empty)}><p {...stylex.props(t.body)}>{tx('No matching import cars.')}</p><button type="button" onClick={showAll} {...stylex.props(s.reset,t.control)}>{tx('Show all cars')}<ArrowRight size={18} aria-hidden="true"/></button></div>}

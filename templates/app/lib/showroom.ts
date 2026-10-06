@@ -15,6 +15,7 @@ const artwork = bannerArtwork[branding.bannerTheme];
 export const showroom = {
   bannerTheme: branding.bannerTheme,
   artwork,
+  desktopHeroArtwork: '/showroom/desktop/graphite-coupe-v1.webp',
   name: dealer.name,
   locationLabel: 'Visit showroom',
   locationHref: '/stores',

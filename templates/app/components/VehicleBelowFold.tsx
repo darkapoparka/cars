@@ -77,7 +77,7 @@ export default function VehicleBelowFold({vehicle, onLogin,reference,equipment}:
       {fortuner ? <OverviewRow icon={<Music2 size={22}/>} title={tx("Apple play")} copy={tx("Enjoy your drive with apple play")} /> : null}
       </>}
       </div> : null}
-      {comparison ? <section aria-labelledby="price-comparison" {...stylex.props(s.comparison)}><div {...stylex.props(s.dividerHeading)}><i {...stylex.props(s.dividerLine)} /><h2 id="price-comparison" {...stylex.props(s.comparisonHeading)}>{tx("Understanding Price Comparison")}</h2><i {...stylex.props(s.dividerLine)} /></div><div {...stylex.props(s.comparisonGraphic)}><span {...stylex.props(s.savings)}>{tx(currency.code)} {tx(formatPrice(comparison.totalSavings))} {tx(" Savings")}</span><span {...stylex.props(s.savingsStripe)} /><img src={assetPath("/reference-assets/continuation/comparison-car.png")} width={450} height={210} alt={tx("Vehicle price comparison")} {...stylex.props(s.comparisonCar)} /><div {...stylex.props(s.comparisonRows)}>{comparedPrices.map(([label, value, length], index) => <div key={label} {...stylex.props(s.comparisonRow)}><span>{tx(label)}</span><i style={{width: Number(length)}} {...stylex.props(s.comparisonLine, index === 0 && s.primaryLine)} /><strong {...stylex.props(s.comparisonValue, index === 0 && s.primaryValue)}>{tx(currency.code)} {tx(formatPrice(Number(value)))}</strong></div>)}</div></div></section> : null}
+      {comparison ? <section aria-labelledby="price-comparison" {...stylex.props(s.comparison)}><div {...stylex.props(s.dividerHeading)}><h2 id="price-comparison" {...stylex.props(s.comparisonHeading)}>{tx("Understanding Price Comparison")}</h2></div><div {...stylex.props(s.comparisonGraphic)}><span {...stylex.props(s.savings)}>{tx(currency.code)} {tx(formatPrice(comparison.totalSavings))} {tx(" Savings")}</span><span {...stylex.props(s.savingsStripe)} /><img src={assetPath("/reference-assets/continuation/comparison-car.png")} width={450} height={210} alt={tx("Vehicle price comparison")} {...stylex.props(s.comparisonCar)} /><div {...stylex.props(s.comparisonRows)}>{comparedPrices.map(([label, value, length], index) => <div key={label} {...stylex.props(s.comparisonRow)}><span>{tx(label)}</span><i style={{width: Number(length)}} {...stylex.props(s.comparisonLine, index === 0 && s.primaryLine)} /><strong {...stylex.props(s.comparisonValue, index === 0 && s.primaryValue)}>{tx(currency.code)} {tx(formatPrice(Number(value)))}</strong></div>)}</div></div></section> : null}
     </section>
     {structural?<StructuralSummary vin={reference!.vin!}/>:null}
     <section id="features" aria-label={tx('Features')} {...stylex.props(s.features,structural&&s.featuresAfterSummary)}>
@@ -99,17 +99,16 @@ overviewDetails: {marginTop: 12, padding: 16, borderRadius: $.radiusMd, backgrou
 overviewRow: {display: 'grid', gridTemplateColumns: '38px minmax(0,1fr)', alignItems: 'center', gap: 12, minHeight: 58, paddingBlock: 8},
 overviewIcon: {display: 'grid', placeItems: 'center', width: 38, height: 38, color: $.ink, borderRadius: '50%', backgroundColor: $.surfaceAlt},
 rowCopy: {minWidth: 0},
-rowTitle: {display: 'flex', alignItems: 'center', gap: 8, color: $.ink, fontFamily: $.fontSans, fontSize: 15, fontWeight: 500, lineHeight: '22px'},
-rowText: {marginTop: 3, color: $.muted, fontFamily: $.fontSans, fontSize: 13, fontWeight: 400, lineHeight: '19px'},
+rowTitle: {display: 'flex', alignItems: 'center', gap: 8, color: $.ink, fontFamily: $.fontSans, fontSize: {[media.desktop]: $.desktopTextSize, default: 15}, fontWeight: 500, lineHeight: {[media.desktop]: '24px', default: '22px'}},
+rowText: {marginTop: 3, color: $.muted, fontFamily: $.fontSans, fontSize: {[media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400, lineHeight: {[media.desktop]: '20px', default: '19px'}},
 specCard: {padding: {[media.mobile]: 12, default: 16}, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
 contentSpecs: {display:{[media.desktop]:'none',default:'block'}},
-sidebarSpecs: {marginTop:22,padding:'20px 0 0',borderTopWidth:1,borderTopStyle:'solid',borderTopColor:$.line,borderRadius:0,backgroundColor:'transparent'},
+sidebarSpecs: {marginTop:22,padding:'20px 0 0',borderRadius:0,backgroundColor:'transparent'},
 sidebarSpecGrid: {gridTemplateColumns:'repeat(2,minmax(0,1fr))'},
 specGrid: {display: 'grid', gridTemplateColumns: {[media.desktop]: 'repeat(3,minmax(0,1fr))', default: 'repeat(auto-fit,minmax(min(100%,max(9em,calc(50% - 4px))),1fr))'}, gap: {[media.mobile]: 6, default: 8}, margin: '10px 0 0', padding: 0, fontSize: 14},
 spec: {display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 4, minWidth: 0, minHeight: {[media.mobile]: 56, default: 68}, padding: {[media.mobile]: 8, default: 12}, borderRadius: $.radiusSm, backgroundColor: $.surface},
-specLabel: {color: $.muted, fontFamily: $.fontSans, fontSize: {[media.mobile]: 12, default: 13}, fontWeight: 400, lineHeight: {[media.mobile]: '16px', default: '18px'}},
+specLabel: {color: $.muted, fontFamily: $.fontSans, fontSize: {[media.mobile]: 12, [media.desktop]: $.desktopSupportSize, default: 13}, fontWeight: 400, lineHeight: {[media.mobile]: '16px', [media.desktop]: '20px', default: '18px'}},
 dividerHeading: {display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10, color: '#202024', fontSize: 14, fontWeight: 500, lineHeight: '22px'},
-dividerLine: {flexGrow: 1, height: 1, backgroundColor: '#e7e7e7'},
 comparison: {marginTop: 20, paddingBottom: 18},
 comparisonHeading: {fontSize: 14, fontWeight: 600, lineHeight: '22px'},
 comparisonGraphic: {position: 'relative', minHeight: 226, marginTop: 18},
@@ -118,12 +117,12 @@ savingsStripe: {position: 'absolute', top: 34, left: '50%', width: 24, height: 1
 comparisonCar: {position: 'absolute', top: 48, left: '31%', width: 152, height: 71, objectFit: 'contain'},
 comparisonRows: {position: 'absolute', top: 122, left: 25, right: 25},
 comparisonRow: {display: 'flex', alignItems: 'center', gap: 8, position: 'relative', minHeight: 30, color: '#535353', fontSize: 14, lineHeight: '20px'},
-comparisonLine: {position: 'absolute', left: 96, top: 17, height: 3, borderTopColor: '#a9a9a9', borderTopStyle: 'dashed', borderTopWidth: 2},
-primaryLine: {borderTopColor: '#f77400'},
-comparisonValue: {marginLeft: 'auto', color: '#202024', fontSize: 11, fontWeight: 500},
+comparisonLine: {position: 'absolute', left: 96, top: 17, height: 3,},
+primaryLine: {},
+comparisonValue: {marginLeft: 'auto', color: '#202024', fontSize: {[media.desktop]: $.desktopLabelSize, default: 11}, fontWeight: 500},
 primaryValue: {color: '#f17400'},
 featuresAfterSummary:{marginTop:16},
-specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',default:'22px'},overflowWrap:'anywhere'},
+specValue:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:4,minWidth:0,margin:0,color:$.ink,fontFamily:$.fontSans,fontSize:{[media.mobile]:14,[media.desktop]:$.desktopTextSize,default:15},fontWeight:600,lineHeight:{[media.mobile]:'20px',[media.desktop]:'24px',default:'22px'},overflowWrap:'anywhere'},
 specInfo:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:$.surfaceAlt,cursor:'pointer'},
 features: {scrollMarginTop: 152, marginTop: 16, padding: 16, borderRadius: $.radiusMd, backgroundColor: $.surfaceAlt},
 allFeatures: {display:'flex',alignItems:'center',justifyContent:'center',gap:8,width:'100%',minHeight:44,marginTop:12,padding:'10px 12px',color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:500,lineHeight:'20px',borderWidth:1,borderStyle:'solid',borderColor:$.controlBorder,borderRadius:$.radiusPill,backgroundColor:{default:$.surface,':hover':$.rail},outlineOffset:3},
@@ -136,5 +135,5 @@ recordSection: {scrollMarginTop:152},
 recordRow: {display:'grid',gridTemplateColumns:'36px minmax(0,1fr) 20px',alignItems:'center',gap:12,width:'100%',minHeight:72,padding:12,textAlign:'left',color:$.ink,borderColor:$.line,borderStyle:'solid',borderWidth:1,borderRadius:$.radiusMd,backgroundColor:{default:$.surfaceAlt,':hover':$.line},outlineOffset:3,cursor:'pointer'},
 recordIcon: {display:'grid',placeItems:'center',width:36,height:36,borderRadius:'50%',backgroundColor:$.surface},
 recordTitle: {display:'block',fontFamily:$.fontSans,fontSize:16,fontWeight:500,lineHeight:'22px'},
-recordStatus: {display:'block',marginTop:2,color:$.muted,fontFamily:$.fontSans,fontSize:13,fontWeight:400,lineHeight:'18px'}
+recordStatus: {display:'block',marginTop:2,color:$.muted,fontFamily:$.fontSans,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},fontWeight:400,lineHeight:{[media.desktop]:'20px',default:'18px'}}
 });

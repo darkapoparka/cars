@@ -16,7 +16,7 @@ export default function PageHeader({title, backHref = '/', backLabel = 'Back hom
   </div></header>;
 }
 const s = stylex.create({
-  header: {position: 'sticky', top: {[media.desktop]: 73, default: 0}, zIndex: 65, paddingTop: 'env(safe-area-inset-top)', fontFamily: $.fontSans, color: $.ink, backgroundColor: $.surface},
+  header: {position: 'sticky', top: {[media.desktop]: 69, default: 0}, zIndex: 65, paddingTop: 'env(safe-area-inset-top)', fontFamily: $.fontSans, color: $.ink, backgroundColor: $.surface},
   inner: {display: 'flex', alignItems: 'center', gap: 12, minHeight: 68, maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
   compact: {minHeight: {[media.mobile]: 56, default: 68}},
   wrappingInner: {paddingBlock: 6},

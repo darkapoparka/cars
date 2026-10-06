@@ -18,7 +18,7 @@ export default function SimilarVehiclesSheet({vehicle,related,onClose}:{vehicle:
 const s=stylex.create({
   backdrop:{position:'fixed',inset:0,zIndex:210,display:'flex',alignItems:{[media.mobile]:'flex-end',default:'center'},justifyContent:'center',backgroundColor:'rgba(0,0,0,.48)'},
   sheet:{fontFamily:$.fontSans,width:'100%',maxWidth:650,maxHeight:'calc(100dvh - 48px)',overflowY:'auto',overscrollBehaviorY:'contain',paddingTop:20,paddingInline:16,paddingBottom:'calc(24px + env(safe-area-inset-bottom))',borderRadius:24,outlineStyle:'none',backgroundColor:'#fff'},
-  header:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:18,minHeight:49,paddingBottom:15,borderBottomColor:'#eaeaea',borderBottomStyle:'solid',borderBottomWidth:1},
+  header:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:18,minHeight:49,paddingBottom:15,},
   title:{color:$.ink,fontFamily:$.fontSans,fontSize:18,fontWeight:600,lineHeight:'26px'},
   subtitle:{marginTop:4,color:$.muted,fontSize:13,lineHeight:'19px'},
   close:{display:'grid',placeItems:'center',flexShrink:0,width:44,height:44,padding:0,color:$.ink,borderWidth:0,borderRadius:'50%',backgroundColor:'#f4f4f5',cursor:'pointer'},

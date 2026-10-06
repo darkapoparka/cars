@@ -1,30 +1,38 @@
 'use client';
 import {Suspense, useState} from 'react';
-import {ClipboardCheck, Search} from 'lucide-react';
+import {ClipboardCheck, Heart, Search} from 'lucide-react';
 import {useRouter} from '@/lib/navigation';
+import {useCopy} from '@/lib/locale';
 import * as stylex from '@stylexjs/stylex';
 import DiscoveryHeader from '@/components/DiscoveryHeader';
-import ShowroomBanner from '@/components/ShowroomBanner';
+import PageHeader from '@/components/PageHeader';
+import IconButton from '@/components/IconButton';
+import ShowroomBanner, {ShowroomBannerSkeleton} from '@/components/ShowroomBanner';
 import DealerMobileBanner, {DealerBannerAction} from '@/components/DealerMobileBanner';
+import LandingContentFrame, {landingContent} from '@/components/LandingContentFrame';
 import ServiceSearchField, {useServiceSearch, type ServiceSearchState} from '@/components/ServiceSearchField';
 import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
+import FinanceQuoteHero, {type QuoteSelection} from '@/components/FinanceQuoteHero';
 import ImportCountryPicker from '@/components/ImportCountryPicker';
 import LoginSheet from '@/components/DealerEnquirySheet';
-import SellEnquirySheet, {type SellIntent} from '@/components/SellEnquirySheet';
-import {showroom} from '@/lib/showroom';
-import {useCopy} from '@/lib/locale';
+import SellEnquirySheet, {type SellCarDetails, type SellIntent} from '@/components/SellEnquirySheet';
+import SellCarEntry from '@/components/SellCarEntry';
+import SellQuoteHero from '@/components/SellQuoteHero';
+import {useHomeAlternative} from '@/lib/home-alternative';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 export type FeatureKind = 'sell' | 'finance' | 'service';
 const config = {
-  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', copy: 'Sell or part-exchange.', mobileCopy: 'Sell or part-exchange.', cta: 'Request a valuation', mobileCta: 'Request a valuation'},
-  finance: {mobileTitle: 'Finance calculator', title: 'Finance calculator', copy: 'Explore your monthly payment.', mobileCopy: 'Monthly payment', cta: 'Calculate', mobileCta: 'Calculate'},
-  service: {mobileTitle: 'Car services.', title: 'Care for your car.', copy: 'Find the right service for your car.', mobileCopy: 'Servicing and diagnostics.', cta: 'Book a service', mobileCta: 'Choose a service'},
+  sell: {mobileTitle: 'Sell your car.', title: 'Sell your car.', mobileCopy: 'Sell or part-exchange.'},
+  finance: {mobileTitle: 'Finance calculator', title: 'Finance calculator', mobileCopy: 'Monthly payment'},
+  service: {mobileTitle: 'Car services.', title: 'Care for your car.', mobileCopy: 'Servicing and diagnostics.'},
 } as const;
 
 export default function FeatureLanding({kind}: {kind: FeatureKind}) {
-  return kind === 'service' ? <Suspense fallback={null}><ServiceLanding/></Suspense> : <FeatureLandingContent kind={kind}/>;
+  return kind === 'service'
+    ? <Suspense fallback={<ShowroomBannerSkeleton title={config.service.title}/>}><ServiceLanding/></Suspense>
+    : <FeatureLandingContent kind={kind}/>;
 }
 
 function ServiceLanding() {
@@ -33,38 +41,47 @@ function ServiceLanding() {
 }
 
 function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; serviceSearch?: ServiceSearchState}) {
-  const tx = useCopy();
   const router = useRouter();
+  const tx = useCopy();
+  const alternative = useHomeAlternative();
   const current = config[kind];
   const [loginOpen, setLoginOpen] = useState(false);
   const [financeView, setFinanceView] = useState<FinanceView>(null);
+  const [quotePicker, setQuotePicker] = useState(false);
+  const [quoteSelection, setQuoteSelection] = useState<QuoteSelection>({car: null, custom: false});
   const [sellIntent, setSellIntent] = useState<SellIntent | null>(null);
-  const banner = {title: current.title, mobileTitle: current.mobileTitle, description: current.copy, mobileDescription: current.mobileCopy, image: kind === 'finance' ? showroom.artwork.campaigns.finance : showroom.artwork.heroes[kind], colourful: true, containArtwork: kind === 'finance'};
+  const [sellChoice, setSellChoice] = useState<SellIntent>('sale');
+  const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
   function start(intent: SellIntent = 'sale') {
-    if (kind === 'sell') {setSellIntent(intent); return;}
+    if (kind === 'sell') {setSellChoice(intent); setSellIntent(intent); return;}
     if (kind === 'finance') {setLoginOpen(true); return;}
     router.push(`/${kind}/details`);
   }
+  const desktopControl = kind === 'finance'
+    ? <FinanceQuoteHero selection={quoteSelection} pickerOpen={quotePicker && financeView === 'cars'} onChooseCar={() => {setQuotePicker(true); setFinanceView('cars');}}/>
+    : kind === 'sell'
+      ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} intent={sellChoice} onIntentChange={setSellChoice} onStart={() => start(sellChoice)} expanded={sellIntent !== null}/>
+      : serviceSearch ? <ServiceSearchField state={serviceSearch} onDark desktopHero/> : null;
   return <div {...stylex.props(s.screen)}>
-    <DiscoveryHeader active={kind} hideMobileIdentity />
-    <DealerMobileBanner title={current.mobileTitle}>
-      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
+    {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
+    <div {...stylex.props(s.discovery, alternative && s.alternativeDiscovery)}><DiscoveryHeader active={kind} hideMobileIdentity /></div>
+    <DealerMobileBanner mobileCard={alternative} controlOnly={alternative} title={current.mobileTitle} description={current.mobileCopy}>
+      {kind === 'service' && serviceSearch ? <ServiceSearchField state={serviceSearch} onDark plainOnMobile={alternative}/> : kind === 'finance' ? <DealerBannerAction label="Choose your car" icon={<Search size={20} aria-hidden="true"/>} searchEntry plainOnMobile={alternative} expanded={financeView !== null} onClick={() => setFinanceView('cars')}/> : alternative ? <SellCarEntry expanded={sellIntent !== null} onClick={() => start()}/> : <DealerBannerAction label="Value my car" icon={<ClipboardCheck size={20} aria-hidden="true"/>} expanded={sellIntent !== null} onClick={() => start()}/>}
     </DealerMobileBanner>
-    <div {...stylex.props(kind==='sell'?s.desktopSellBanner:s.desktopOnly)}><ShowroomBanner {...banner} centeredDesktop priority={kind!=='sell'} compactCopy={kind === 'service'} action={current.cta} mobileAction={current.mobileCta} opensDialog={kind === 'finance'||kind==='sell'} onClick={() => kind === 'finance' ? setFinanceView('calculator') : start()}/></div>
-    <main {...stylex.props(s.content)}>
-      {kind === 'sell' ? <h1 {...stylex.props(s.srOnly, s.tabletHeading)}>{tx(current.title)}</h1> : null}
-      {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={setFinanceView}/></> : null}
+    <ShowroomBanner title={current.title} control={desktopControl}/>
+    <LandingContentFrame><main data-landing-content {...stylex.props(landingContent.panel, s.content, alternative && s.alternativeContent)}>
+      {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={view => {setFinanceView(view); if (!view) setQuotePicker(false);}} backNavigation={alternative} onChooseCar={quotePicker ? car => setQuoteSelection({car, custom: !car}) : undefined}/></> : null}
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
-    </main>
+    </main></LandingContentFrame>
     <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
-    {kind === 'sell' ? <SellEnquirySheet intent={sellIntent} onIntentChange={setSellIntent} onClose={() => setSellIntent(null)}/> : null}
+    {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={intent => {setSellChoice(intent); setSellIntent(intent);}} onClose={() => setSellIntent(null)}/> : null}
   </div>;
 }
 const s = stylex.create({
   screen: {minHeight: '100vh', paddingBottom: 'calc(84px + env(safe-area-inset-bottom))', backgroundColor: '#fff'},
+  alternativeHeader: {display: {[media.mobile]: 'contents', default: 'none'}},
+  discovery: {display: 'contents'},
+  alternativeDiscovery: {display: {[media.mobile]: 'none', default: 'contents'}},
+  alternativeContent: {paddingTop: {[media.mobile]: 0, default: 8}, borderTopLeftRadius: {[media.mobile]: 0, default: 32}, borderTopRightRadius: {[media.mobile]: 0, default: 32}},
   content: {maxWidth: $.content, marginInline: 'auto', paddingInline: {[media.mobile]: 12, default: 28}},
-  desktopOnly: {display: {[media.mobile]: 'none', default: 'block'}},
-  desktopSellBanner: {display: {[media.desktop]:'block',default:'none'}},
-  tabletHeading: {display: {[media.tablet]:'block',default:'none'}},
-  srOnly: {position: 'absolute', width: 1, height: 1, padding: 0, margin: -1, overflow: 'hidden', clip: 'rect(0,0,0,0)', whiteSpace: 'nowrap', borderWidth: 0},
 });

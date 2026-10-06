@@ -27,6 +27,6 @@ const s = stylex.create({
   steps: {display: 'grid', gridTemplateColumns: {[media.mobile]: '1fr', default: 'repeat(3,1fr)'}, gap: 12, marginTop: 16},
   step: {display: 'flex', gap: 14, padding: 18, borderRadius: 18, backgroundColor: '#f5f5f6'},
   number: {fontSize: 13, color: $.muted, lineHeight: '22px'}, title: {fontSize: 16, fontWeight: 600, lineHeight: 1.35}, copy: {marginTop: 6, color: $.muted, fontSize: 14, lineHeight: 1.5},
-  faq: {paddingBlock: 16, borderBottomWidth: 1, borderBottomStyle: 'solid', borderBottomColor: '#e7e7ea'}, summary: {display: 'flex', justifyContent: 'space-between', gap: 16, cursor: 'pointer', fontSize: 14, fontWeight: 500},
+  faq: {paddingBlock: 16,}, summary: {display: 'flex', justifyContent: 'space-between', gap: 16, cursor: 'pointer', fontSize: 14, fontWeight: 500},
   visit: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 20, marginTop: 32, padding: 24, borderRadius: 20, backgroundColor: '#f4f4f5'},
 });

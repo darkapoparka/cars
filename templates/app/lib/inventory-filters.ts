@@ -2,7 +2,9 @@ import {currency} from './currency';
 import {vehicles, type Vehicle} from './data';
 
 export const filterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'EMI', 'DOWN PAYMENT', 'YEAR', 'BODY TYPE', 'MILEAGE', 'CAR TYPE', 'FUEL TYPE', 'CATEGORIES', 'FEATURES', 'ENGINE'] as const;
-export type FilterTab = (typeof filterTabs)[number];
+export type FilterTab = (typeof filterTabs)[number] | 'TRANSMISSION';
+// Home's desktop refinements add gearbox without changing phone/tablet categories.
+export const desktopFilterTabs: readonly FilterTab[] = filterTabs.flatMap<FilterTab>(tab => tab === 'FUEL TYPE' ? [tab, 'TRANSMISSION'] : [tab]);
 export const quickFilterTabs = ['BRAND', 'MODEL', 'BUDGET', 'DISCOUNTS', 'YEAR', 'MILEAGE', 'BODY TYPE', 'FUEL TYPE'] as const satisfies readonly FilterTab[];
 const referenceMakes = ['Nissan', 'Toyota', 'Mitsubishi', 'MG', 'Mercedes-Benz', 'BMW', 'Ford', 'Chevrolet', 'Hyundai', 'Kia', 'Jeep', 'JAC', 'Mazda', 'Honda', 'Suzuki', 'Audi', 'Volkswagen', 'Lexus', 'Renault', 'Volvo', 'Land Rover', 'Infiniti', 'Peugeot', 'Porsche', 'Haval', 'Tesla', 'GMC', 'Dodge', 'Mini', 'Jaguar'];
 // Every make offered by the brand strip must also be selectable in the filters.
@@ -72,7 +74,7 @@ export function restoreFilters(value: unknown): Filters {
     if (typeof source[maximum] === 'number' && Number.isFinite(source[maximum])) defaults[maximum] = Math.max(defaults[minimum], Math.min(high, source[maximum]));
   }
   if (typeof source.emiLimit === 'number' && Number.isFinite(source.emiLimit)) defaults.emiLimit = Math.max(0, Math.min(100000, source.emiLimit));
-  if (source.extra && typeof source.extra === 'object') for (const [key, values] of Object.entries(source.extra)) if (filterTabs.includes(key as FilterTab)) defaults.extra[key] = strings(values);
+  if (source.extra && typeof source.extra === 'object') for (const [key, values] of Object.entries(source.extra)) if (desktopFilterTabs.includes(key as FilterTab)) defaults.extra[key] = strings(values);
   return defaults;
 }
 
@@ -130,6 +132,7 @@ export function matchesInventory(vehicle: Vehicle, filters: Filters, query: stri
     if (type === 'CAR TYPE') return vehicle.tier === value;
     if (type === 'CATEGORIES') return matchesCategory(vehicle, value);
     if (type === 'FEATURES') return matchesFeature(vehicle, value);
+    if (type === 'TRANSMISSION') return vehicle.transmission === value;
     return true;
   }));
 }

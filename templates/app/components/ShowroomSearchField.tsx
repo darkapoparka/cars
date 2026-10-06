@@ -23,7 +23,7 @@ export default function ShowroomSearchField({onDark = false}: {onDark?: boolean}
 }
 
 const s = stylex.create({
-  onDark: {backgroundColor: '#fff', outlineColor: {':focus-visible': '#fff'}, outlineOffset: 3},
+  onDark: {backgroundColor: '#fff', outlineColor: {':focus-visible': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
   desktopPrompt: {display: {[media.mobile]: 'none', default: 'block'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
   mobilePrompt: {display: {[media.mobile]: 'block', default: 'none'}, minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap'},
 });

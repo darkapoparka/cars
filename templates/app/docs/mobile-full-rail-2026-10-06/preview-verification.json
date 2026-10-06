@@ -1,0 +1,74 @@
+{
+  "states": [
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 336
+        },
+        {
+          "loaded": true,
+          "width": 336
+        }
+      ],
+      "overflow": false,
+      "variant": "Buy"
+    },
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 336
+        },
+        {
+          "loaded": true,
+          "width": 336
+        }
+      ],
+      "overflow": false,
+      "variant": "Sell"
+    },
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 336
+        },
+        {
+          "loaded": true,
+          "width": 336
+        }
+      ],
+      "overflow": false,
+      "variant": "Leasing"
+    },
+    {
+      "images": [
+        {
+          "loaded": true,
+          "width": 336
+        },
+        {
+          "loaded": true,
+          "width": 336
+        }
+      ],
+      "overflow": false,
+      "variant": "Services"
+    }
+  ],
+  "narrow": {
+    "images": [
+      {
+        "loaded": true,
+        "width": 272
+      },
+      {
+        "loaded": true,
+        "width": 272
+      }
+    ],
+    "overflow": false
+  },
+  "errors": []
+}

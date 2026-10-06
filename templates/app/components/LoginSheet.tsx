@@ -36,7 +36,7 @@ export default function LoginSheet({open,onClose}: {open:boolean;onClose:()=>voi
 const s=stylex.create({
  backdrop:{display:'flex',alignItems:{[media.mobile]:'flex-end',default:'center'},justifyContent:'center',position:'fixed',inset:0,zIndex:220,padding:{[media.mobile]:0,default:24},backgroundColor:'rgba(0,0,0,.4)'},
  sheet:{width:'100%',maxWidth:560,maxHeight:'92dvh',overflowY:'auto',color:$.text,borderRadius:{[media.mobile]:'24px 24px 0 0',default:24},backgroundColor:'#fff',outlineStyle:'none'},
- header:{display:'flex',alignItems:'center',justifyContent:'space-between',minHeight:52,paddingInline:12,borderBottomColor:'#e9e9e9',borderBottomStyle:'solid',borderBottomWidth:1},
+ header:{display:'flex',alignItems:'center',justifyContent:'space-between',minHeight:52,paddingInline:12,},
  title:{fontSize:18,fontWeight:500,lineHeight:'24px'},
  close:{display:'grid',placeItems:'center',width:24,height:34,padding:0,color:$.text,borderWidth:0,backgroundColor:'transparent',cursor:'pointer'},
  body:{padding:'16px 12px 32px'},

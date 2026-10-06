@@ -1,8 +1,8 @@
-# App template candidate
+# App template instructions
 
-Follow [Cars instructions](../../AGENTS.md) and [TEMPLATE](TEMPLATE.md). This is the Cars-owned `app` candidate at `L:/CODEX/cars/templates/app`. Work on the existing Cars main checkout; do not create a nested Git repository or another editable master.
+Follow [Cars instructions](../../AGENTS.md) and [TEMPLATE](TEMPLATE.md). This is the Cars-owned `app` master at `L:/CODEX/cars/templates/app`. Work on the existing Cars main checkout; do not create a nested Git repository or another editable master.
 
-This is a faithful working-copy import of `L:/cars-app`, including uncommitted UI work. The original remains preserved as reference; shared App template improvements belong here. No approved App release is selected in `templates.lock.json`; default client trios remain unchanged. Dealer-generator, mounted routing and publishing integration follow adaptation and QA.
+Shared App template improvements belong here. `templates.lock.json` is the authority for the approved release; it contains a pinned App release. Existing dealer copies change through the requested refresh/publishing workflow, not automatically when this master changes. Original import notes and parity ledgers are historical evidence.
 
 The current Cars24 identity, captured inventory, finance/inspection claims and reference assets are retained for local comparison. Replace them with appropriate dealer or neutral content before client release. Do not present simulated login, bookings, payments or finance as completed transactions. Historical parity/capture scripts and ledgers are provenance, not an active queue.
 

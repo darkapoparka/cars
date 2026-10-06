@@ -1,0 +1,678 @@
+[
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "false",
+      "height": 102,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 54.65625,
+      "width": 164,
+      "x": 113,
+      "y": 118
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 86,
+      "width": 366,
+      "x": 12,
+      "y": 8
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+          "width": 79.5,
+          "x": 18,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 86,
+        "href": "/bg",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 40,
+          "x": 37.75,
+          "y": 91
+        },
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 31.609375,
+          "x": 41.9375,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 12,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 109.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 49.5,
+          "x": 124.5,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 201,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 47.140625,
+          "x": 217.171875,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 292.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 44.359375,
+          "x": 310.0625,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 8
+      }
+    ],
+    "url": "http://127.0.0.1:6483/bg",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "false",
+      "height": 102,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 207.09375,
+      "x": 91.453125,
+      "y": 118
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 86,
+      "width": 366,
+      "x": 12,
+      "y": 8
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+          "width": 79.5,
+          "x": 18,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 31.515625,
+          "x": 41.984375,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 109.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 86,
+        "href": "/bg/sell",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 40,
+          "x": 129.25,
+          "y": 91
+        },
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 49.46875,
+          "x": 124.515625,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 201,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 47.140625,
+          "x": 217.171875,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 292.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 44.359375,
+          "x": 310.0625,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 8
+      }
+    ],
+    "url": "http://127.0.0.1:6483/bg/sell",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "false",
+      "height": 102,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 131.765625,
+      "x": 129.109375,
+      "y": 118
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 86,
+      "width": 366,
+      "x": 12,
+      "y": 8
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+          "width": 79.5,
+          "x": 18,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 31.515625,
+          "x": 41.984375,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 109.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 49.5,
+          "x": 124.5,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 201,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 86,
+        "href": "/bg/finance",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 40,
+          "x": 220.75,
+          "y": 91
+        },
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 46.921875,
+          "x": 217.28125,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 195,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 292.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/service",
+        "indicator": null,
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 44.359375,
+          "x": 310.0625,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 8
+      }
+    ],
+    "url": "http://127.0.0.1:6483/bg/finance",
+    "width": 390
+  },
+  {
+    "dock": [
+      {
+        "background": "rgba(255, 255, 255, 0.97)",
+        "height": 50,
+        "width": 188,
+        "x": 101,
+        "y": 782
+      }
+    ],
+    "header": {
+      "background": "rgb(245, 245, 246)",
+      "compact": "false",
+      "height": 102,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    "heading": {
+      "height": 28.796875,
+      "width": 188.390625,
+      "x": 100.796875,
+      "y": 118
+    },
+    "height": 844,
+    "nav": {
+      "borderBottom": "0px",
+      "gap": "0px",
+      "height": 86,
+      "width": 366,
+      "x": 12,
+      "y": 8
+    },
+    "overflow": false,
+    "tabs": [
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fcutouts%2Fbuy-sedan-v1.png&w=96&q=75",
+          "width": 79.5,
+          "x": 18,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg",
+        "indicator": null,
+        "label": "Купи",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 31.515625,
+          "x": 41.984375,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 12,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fsell-v2.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 109.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/sell",
+        "indicator": null,
+        "label": "Продай",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 49.5,
+          "x": 124.5,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 103.5,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Ffinance-v5.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 201,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": null,
+        "height": 86,
+        "href": "/bg/finance",
+        "indicator": null,
+        "label": "Лизинг",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 47.140625,
+          "x": 217.171875,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "400",
+        "width": 91.5,
+        "x": 195,
+        "y": 8
+      },
+      {
+        "art": {
+          "height": 48,
+          "loaded": true,
+          "src": "http://127.0.0.1:6483/_next/image?url=%2Fshowroom%2Fnavigation%2Fservice-v4.webp&w=96&q=75",
+          "width": 79.5,
+          "x": 292.5,
+          "y": 39
+        },
+        "background": "rgba(0, 0, 0, 0)",
+        "borderRadius": "0px",
+        "borderWidth": "0px",
+        "current": "page",
+        "height": 86,
+        "href": "/bg/service",
+        "indicator": {
+          "background": "rgb(32, 32, 36)",
+          "height": 3,
+          "width": 40,
+          "x": 312.25,
+          "y": 91
+        },
+        "label": "Услуги",
+        "labelBackground": "rgba(0, 0, 0, 0)",
+        "labelColor": "rgb(32, 32, 36)",
+        "labelRect": {
+          "height": 20,
+          "width": 44.421875,
+          "x": 310.03125,
+          "y": 15
+        },
+        "shadow": "none",
+        "weight": "500",
+        "width": 91.5,
+        "x": 286.5,
+        "y": 8
+      }
+    ],
+    "url": "http://127.0.0.1:6483/bg/service",
+    "width": 390
+  }
+]

@@ -31,9 +31,12 @@ export const tokens = stylex.defineVars({
   radiusLg: '24px',
   radiusXl: '32px',
   radiusPill: '999px',
-  content: '1240px',
-  // Fixed desktop page bars align inside the shell's 1px side borders.
-  desktopShellInset: 'max(1px, calc((100% - 1240px) / 2 + 1px))',
+  content: '1364px',
+  // Fixed desktop page bars align with the borderless shell.
+  desktopShellInset: 'max(0px, calc((100% - 1364px) / 2))',
+  desktopLabelSize: '12px',
+  desktopSupportSize: '14px',
+  desktopTextSize: '16px',
   controlHeight: '44px',
   controlCompactHeight: '36px',
   controlIconSize: '18px',

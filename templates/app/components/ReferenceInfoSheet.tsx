@@ -34,7 +34,7 @@ const s=stylex.create({
   steps:{display:'grid',gap:18,marginTop:20,paddingLeft:20,color:$.muted},
   stepTitle:{color:$.ink,fontSize:15,fontWeight:500,lineHeight:'22px'},
   stepBody:{marginTop:4,fontSize:14,fontWeight:400,lineHeight:1.6},
-  guidance:{marginTop:24,paddingTop:20,borderTopWidth:1,borderTopStyle:'solid',borderTopColor:'#e8e8eb'},
+  guidance:{marginTop:24,paddingTop:20,},
   guidanceTitle:{color:$.ink,fontSize:16,fontWeight:600,lineHeight:'24px'},
   guidanceItems:{display:'grid',gap:18,marginTop:16,padding:0,color:$.muted,listStyle:'none'},
 });

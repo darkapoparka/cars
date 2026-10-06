@@ -11,15 +11,15 @@ import {media, tokens as $} from '@/app/tokens.stylex';
 import {typography as t} from '@/app/typography.stylex';
 
 export type SellIntent = 'sale' | 'exchange';
+export type SellCarDetails = {make: string; model: string; year: string; mileage: string; notes: string};
 
 /** Car details stay local; the next sheet prepares a draft for the configured dealer. */
-export default function SellEnquirySheet({intent, onIntentChange, onClose}: {intent: SellIntent | null; onIntentChange: (intent: SellIntent) => void; onClose: () => void}) {
+export default function SellEnquirySheet({car, onCarChange, intent, onIntentChange, onClose}: {car: SellCarDetails; onCarChange: (car: SellCarDetails) => void; intent: SellIntent | null; onIntentChange: (intent: SellIntent) => void; onClose: () => void}) {
   const tx = useCopy();
-  const [car, setCar] = useState({make: '', model: '', year: '', mileage: '', notes: ''});
   const [enquiry, setEnquiry] = useState<string | null>(null);
   function close() {setEnquiry(null); onClose();}
   const panel = useModal(intent !== null, close);
-  function update(field: keyof typeof car, value: string) {setCar(previous => ({...previous, [field]: value}));}
+  function update(field: keyof SellCarDetails, value: string) {onCarChange({...car, [field]: value});}
   function prepare() {
     const lines = [car.make.trim() + ' ' + car.model.trim(), tx(intent === 'exchange' ? 'Part-exchange enquiry' : 'Selling enquiry')];
     if (car.year) lines.push(tx('Year') + ': ' + car.year);

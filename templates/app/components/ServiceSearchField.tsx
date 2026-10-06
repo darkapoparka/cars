@@ -4,9 +4,11 @@ import {useRef, useState} from 'react';
 import {Search, X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {searchField} from '@/components/search-field.stylex';
+import {desktopHero as hero} from '@/components/desktop-hero.stylex';
 import {useCopy} from '@/lib/locale';
 import {useSearchParams} from '@/lib/navigation';
 import {serviceOptions} from '@/lib/service-catalogue';
+import {media} from '@/app/tokens.stylex';
 
 /** Both responsive search fields and the category strip share the URL state. */
 export function useServiceSearch() {
@@ -34,20 +36,23 @@ export function useServiceSearch() {
 
 export type ServiceSearchState = ReturnType<typeof useServiceSearch>;
 
-export default function ServiceSearchField({state, onDark = false}: {state: ServiceSearchState; onDark?: boolean}) {
+export default function ServiceSearchField({state, onDark = false, plainOnMobile = false, desktopHero = false}: {state: ServiceSearchState; onDark?: boolean; plainOnMobile?: boolean; desktopHero?: boolean}) {
   const tx = useCopy();
   return <div role="search">
-    <div data-search-field {...stylex.props(searchField.field, s.search, onDark && s.onDark)}>
-      <Search aria-hidden="true" {...stylex.props(searchField.icon)}/>
-      <input ref={onDark ? state.mobileInput : state.desktopInput} data-search-input type="search" aria-label={tx('Search services')} placeholder={tx('Search services')} value={state.query} onChange={event => state.update(event.target.value, state.category)} {...stylex.props(searchField.input, s.input, onDark && s.compactInput)}/>
-      {state.query ? <button type="button" aria-label={tx('Clear search')} onClick={() => state.clear()} {...stylex.props(searchField.clear, s.clear, onDark && s.compactClear)}><X size={18} aria-hidden="true"/></button> : null}
+    <div data-search-field {...stylex.props(searchField.field, s.search, onDark && s.onDark, plainOnMobile && s.plainMobileSearch, desktopHero && hero.bar)}>
+      <Search aria-hidden="true" {...stylex.props(searchField.icon, desktopHero && s.heroIcon)}/>
+      <input ref={desktopHero ? state.desktopInput : onDark ? state.mobileInput : state.desktopInput} data-search-input type="search" aria-label={tx('Search services')} placeholder={tx('Search services')} value={state.query} onChange={event => state.update(event.target.value, state.category)} {...stylex.props(searchField.input, s.input, onDark && s.compactInput, desktopHero && hero.cell)}/>
+      {state.query ? <button type="button" aria-label={tx('Clear search')} onClick={() => state.clear()} {...stylex.props(searchField.clear, s.clear, onDark && s.compactClear, desktopHero && s.heroClear)}><X size={18} aria-hidden="true"/></button> : null}
     </div>
   </div>;
 }
 
 const s = stylex.create({
   search: {minHeight: 48, outline: {default: 'none', ':focus-within': '2px solid #242428'}, outlineOffset: 2},
-  onDark: {minHeight: 44, backgroundColor: '#fff', outlineColor: {':focus-within': '#fff'}, outlineOffset: 3},
+  onDark: {minHeight: 44, backgroundColor: '#fff', outlineColor: {':focus-within': {[media.mobile]: '#242428', default: '#fff'}}, outlineOffset: 3},
+  heroIcon: {marginInlineStart: {[media.desktop]: 14, default: null}},
+  heroClear: {marginRight: {[media.desktop]: 0, default: null}},
+  plainMobileSearch: {backgroundColor: {[media.mobile]: '#f7f7f8', default: '#fff'}, outlineColor: {':focus-within': {default: '#fff', [media.mobile]: '#242428'}}, outlineOffset: {[media.mobile]: 2, default: 3}},
   input: {minHeight: 44, appearance: {default: 'auto', '::-webkit-search-cancel-button': 'none'}},
   compactInput: {minHeight: 40},
   clear: {width: 44, height: 44},
