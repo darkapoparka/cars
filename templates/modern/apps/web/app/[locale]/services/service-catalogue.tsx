@@ -200,7 +200,6 @@ export function ServiceCatalogue({
   return (
     <>
       <DealerDesktopHero
-        appearance="neutral"
         artwork={artwork}
         controls={
           <div className={styles.discovery}>
