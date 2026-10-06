@@ -323,6 +323,10 @@ const s = stylex.create({
     color: colors.text,
     fontSize: 16,
     lineHeight: '24px',
+    '::placeholder': {
+      color: { default: null, '@media (max-width: 699px)': colors.muted },
+      opacity: { default: null, '@media (max-width: 699px)': 1 },
+    },
     resize: 'vertical',
   },
   form: { width: '100%', display: 'flex', flexDirection: 'column', gap: 12 },

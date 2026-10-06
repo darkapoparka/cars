@@ -265,13 +265,18 @@ export const showroomFilterSheetStyles = stylex.create({
     color: colors.text,
     textAlign: 'left',
     outlineColor: colors.accent,
-    fontSize: 15,
-    lineHeight: '22px',
+    fontSize: { default: 15, '@media (max-width: 699px)': 16 },
+    lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
   },
   suggestionName: { flex: '1', minWidth: 0, overflowWrap: 'anywhere', fontWeight: 500 },
   suggestionTail: { display: 'flex', alignItems: 'center', gap: 8, flexShrink: 0 },
   suggestionArrow: { display: 'flex', color: colors.muted },
-  suggestionPrice: { flexShrink: 0, color: colors.muted, fontSize: 13, lineHeight: '20px' },
+  suggestionPrice: {
+    flexShrink: 0,
+    color: colors.muted,
+    fontSize: { default: 13, '@media (max-width: 699px)': 14 },
+    lineHeight: '20px',
+  },
   footer: {
     gridArea: 'footer',
     flexShrink: 0,
@@ -294,7 +299,7 @@ export const showroomFilterSheetStyles = stylex.create({
     paddingBlock: 10,
     borderRadius: {
       default: 24,
-      '@media (max-width: 699px)': 12,
+      '@media (max-width: 699px)': 22,
       '@media (min-width: 1024px)': 12,
     },
     fontSize: {

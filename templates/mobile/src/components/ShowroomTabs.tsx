@@ -143,6 +143,7 @@ const s = stylex.create({
     '::after': { backgroundColor: colors.text },
   },
   desktopCategories: {
+    boxShadow: 'none',
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     paddingTop: { default: 0, '@media (min-width: 1024px)': 4 },

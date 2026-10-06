@@ -9,6 +9,7 @@ import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { translate } from '@/lib/locale';
 import { getVehicle } from '@/lib/catalog';
+import { useMobileKeyboard } from '@/lib/use-mobile-keyboard';
 import { showroomNavigation as tabs } from './showroom-navigation';
 const s = stylex.create({
   root: {
@@ -47,6 +48,7 @@ const s = stylex.create({
     borderRadius: 24,
     boxShadow: '0 2px 12px #17202b12',
   },
+  keyboardHidden: { display: { default: null, '@media (max-width: 699px)': 'none' } },
   tab: {
     display: 'flex',
     flexDirection: 'column',
@@ -54,9 +56,9 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 2,
     color: colors.muted,
-    fontSize: '0.75rem',
-    lineHeight: 1.2,
-    fontWeight: 600,
+    fontSize: { default: '0.75rem', '@media (max-width: 699px)': 13 },
+    lineHeight: { default: 1.2, '@media (max-width: 699px)': '16px' },
+    fontWeight: { default: 600, '@media (max-width: 699px)': 500 },
     textDecoration: 'none',
     minWidth: 0,
     minHeight: 44,
@@ -109,6 +111,7 @@ export function AppShell({ children }: { children: ReactNode }) {
     () => false,
   );
   const state = useAppState();
+  const keyboard = useMobileKeyboard();
   const primary = tabs.some(([href]) => href === pathname) || pathname === '/car-park';
   useEffect(() => {
     hydrateStore();
@@ -161,7 +164,10 @@ export function AppShell({ children }: { children: ReactNode }) {
       </a>
       <main id="main-content">{children}</main>
       {primary && (
-        <nav aria-label={t('Main navigation')} {...stylex.props(s.nav)}>
+        <nav
+          aria-label={t('Main navigation')}
+          {...stylex.props(s.nav, keyboard.open && s.keyboardHidden)}
+        >
           {tabs.map(([href, label, NavigationIcon]) => (
             <Link
               key={href}

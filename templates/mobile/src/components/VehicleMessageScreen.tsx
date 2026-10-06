@@ -25,7 +25,10 @@ const s = stylex.create({
   form: {
     padding: 16,
     paddingTop: 16,
-    paddingBottom: 110,
+    paddingBottom: {
+      default: 110,
+      '@media (max-width: 699px)': 'max(18px, env(safe-area-inset-bottom))',
+    },
     display: 'flex',
     flexDirection: 'column',
     gap: 16,
@@ -38,7 +41,12 @@ const s = stylex.create({
     flexDirection: 'column',
     gap: 4,
   },
-  input: { height: 44, fontSize: 14, fontWeight: 400, paddingInline: 12 },
+  input: {
+    height: 44,
+    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
+    fontWeight: 400,
+    paddingInline: 12,
+  },
   textarea: {
     height: 126,
     width: '100%',
@@ -51,8 +59,8 @@ const s = stylex.create({
     borderRadius: 8,
     backgroundColor: colors.background,
     color: colors.text,
-    fontSize: 14,
-    lineHeight: '17px',
+    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
+    lineHeight: { default: '17px', '@media (max-width: 699px)': '24px' },
     fontWeight: 400,
   },
   pair: { display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 16 },
@@ -120,17 +128,25 @@ const s = stylex.create({
   dot: { width: 16, height: 16, borderRadius: '50%', backgroundColor: '#818592' },
   dotOn: { backgroundColor: '#fff' },
   footer: {
-    position: 'fixed',
+    position: { default: 'fixed', '@media (max-width: 699px)': 'static' },
     bottom: 0,
-    left: '50%',
-    transform: 'translateX(-50%)',
+    left: { default: '50%', '@media (max-width: 699px)': 'auto' },
+    transform: { default: 'translateX(-50%)', '@media (max-width: 699px)': 'none' },
     maxWidth: 1100,
     width: '100%',
-    paddingInline: 16,
-    paddingTop: 6,
-    paddingBottom: 'calc(18px + env(safe-area-inset-bottom))',
+    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
+    paddingTop: { default: 6, '@media (max-width: 699px)': 0 },
+    paddingBottom: {
+      default: 'calc(18px + env(safe-area-inset-bottom))',
+      '@media (max-width: 699px)': 0,
+    },
     backgroundColor: colors.background,
     zIndex: 30,
+  },
+  action: {
+    minHeight: 44,
+    paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
+    borderRadius: { default: 8, '@media (max-width: 699px)': 22 },
   },
   consent: {
     padding: 16,
@@ -320,27 +336,12 @@ export function VehicleMessageScreen({ vehicle: v }: { vehicle: Vehicle }) {
           This form reproduces the captured seller-enquiry interface. The Send action saves a local
           message draft; it does not contact the dealer. Do not enter private information.
         </p>
+        <div data-message-actions {...stylex.props(s.footer)}>
+          <Button icon="send" type="submit" block xstyle={s.action}>
+            Send
+          </Button>
+        </div>
       </form>
-      <div {...stylex.props(s.footer)}>
-        <button
-          type="submit"
-          form="vehicle-message-form"
-          {...stylex.props(ui.srOnly)}
-          tabIndex={-1}
-        >
-          Save local message
-        </button>
-        <Button
-          icon="send"
-          onClick={() => {
-            const form = document.getElementById('vehicle-message-form') as HTMLFormElement;
-            form.requestSubmit();
-          }}
-          block
-        >
-          Send
-        </Button>
-      </div>
       <Modal open={sent} onClose={() => setSent(false)} title="Local draft saved">
         <div {...stylex.props(ui.column)}>
           <p>

@@ -79,10 +79,16 @@ export function compactVehicleSpecification(
     shortValue = shortValue.replace(/,\s*(?:E10-enabled|съвместим с E10)$/i, '');
   if (label === 'Origin' && (value === 'German edition' || value === t('German edition')))
     shortValue = t('Germany');
-  return [
-    label === 'Transmission' ? (locale === 'bg' ? 'Скорости' : 'Gearbox') : t(label),
-    shortValue,
-  ];
+  const shortLabel = label.toLowerCase().startsWith('first regist')
+    ? locale === 'bg'
+      ? 'Първа рег.'
+      : 'First reg.'
+    : label === 'Transmission'
+      ? locale === 'bg'
+        ? 'Скорости'
+        : 'Gearbox'
+      : t(label);
+  return [shortLabel, shortValue];
 }
 // Keep the reference intact; the showroom shows vehicle photos instead of seller adverts.
 export function localizeVehicle(vehicle: Vehicle, locale: Locale): Vehicle {

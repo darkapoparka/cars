@@ -136,4 +136,8 @@
     --font-base: 'Mobile UI';
     --font-hero: 'Mobile UI';
   }
+  dialog[data-mobile-keyboard='true'] [data-filter-footer],
+  dialog[data-mobile-keyboard='true'] [data-service-search-footer] {
+    display: none;
+  }
 }

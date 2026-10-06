@@ -283,6 +283,7 @@ export const bgMessages: Record<string, string> = {
   'Close enquiry': 'Затвори запитването',
   Done: 'Готово',
   'Save import draft': 'Запази запитването за внос',
+  'Save draft': 'Запази чернова',
   'Save sale draft': 'Запази запитването за продажба',
   'Draft saved': 'Черновата е запазена',
   'View enquiry draft': 'Виж черновата',

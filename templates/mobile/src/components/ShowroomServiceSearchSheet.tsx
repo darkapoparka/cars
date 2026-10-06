@@ -12,13 +12,21 @@ const s = stylex.create({
   heading: {
     display: 'flex',
     alignItems: 'center',
-    gap: 8,
+    gap: { default: 8, '@media (max-width: 699px)': 0 },
     paddingInline: 12,
     paddingTop: 'max(8px, env(safe-area-inset-top))',
     paddingBottom: 8,
     flexShrink: 0,
   },
-  title: { fontSize: 20, lineHeight: '28px', fontWeight: 600, minWidth: 0 },
+  title: {
+    fontSize: { default: 20, '@media (max-width: 699px)': 16 },
+    lineHeight: { default: '28px', '@media (max-width: 699px)': '24px' },
+    fontWeight: { default: 600, '@media (max-width: 699px)': 400 },
+    flexGrow: { default: 0, '@media (max-width: 699px)': 1 },
+    paddingRight: { default: 0, '@media (max-width: 699px)': 48 },
+    textAlign: { default: 'left', '@media (max-width: 699px)': 'center' },
+    minWidth: 0,
+  },
   body: {
     flex: '1',
     minHeight: 0,
@@ -47,12 +55,17 @@ const s = stylex.create({
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.text,
     outlineColor: colors.accent,
-    fontSize: 15,
+    fontSize: { default: 15, '@media (max-width: 699px)': 16 },
     fontWeight: 500,
-    lineHeight: '22px',
+    lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
     overflowWrap: 'anywhere',
   },
   icon: { color: colors.muted, flexShrink: 0 },
+  apply: {
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    paddingBlock: { default: 10, '@media (max-width: 699px)': 0 },
+    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
+  },
   footer: {
     flexShrink: 0,
     paddingInline: 16,
@@ -112,7 +125,7 @@ export function ShowroomServiceSearchSheet({
         </div>
       </div>
       <div data-service-search-footer {...stylex.props(s.footer)}>
-        <Button block floating onClick={() => onApply(draft)}>
+        <Button block floating xstyle={s.apply} onClick={() => onApply(draft)}>
           <span aria-live="polite" aria-atomic="true">
             {t('Show ')}
             {matches.length} {matches.length === 1 ? t('service') : t('services')}

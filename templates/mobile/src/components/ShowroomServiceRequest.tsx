@@ -122,6 +122,7 @@ const s = stylex.create({
   progressStep: {
     display: 'flex',
     flexDirection: 'column',
+    textAlign: { default: 'left', '@media (max-width: 699px)': 'center' },
     gap: 6,
     minWidth: 0,
     fontSize: 13,
@@ -131,13 +132,22 @@ const s = stylex.create({
   current: { color: colors.text, fontWeight: 600 },
   rail: { height: 3, borderRadius: 2, backgroundColor: colors.controlSurface },
   filledRail: { backgroundColor: colors.accent },
-  form: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0 },
-  body: {
-    overflowY: 'auto',
-    overscrollBehaviorY: 'contain',
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
     flex: '1',
     minHeight: 0,
+    overflowY: { default: 'visible', '@media (max-width: 699px)': 'auto' },
+    overscrollBehaviorY: 'contain',
+    scrollPaddingBlock: 20,
+  },
+  body: {
+    overflowY: { default: 'auto', '@media (max-width: 699px)': 'visible' },
+    overscrollBehaviorY: 'contain',
+    flex: { default: '1', '@media (max-width: 699px)': 'none' },
+    minHeight: 0,
     padding: 20,
+    paddingBottom: { default: 20, '@media (max-width: 699px)': 16 },
     scrollPaddingBlock: 20,
   },
   stepHeading: { fontSize: 24, lineHeight: '32px', fontWeight: 700, marginBottom: 4 },
@@ -164,10 +174,13 @@ const s = stylex.create({
   error: { fontSize: 13, lineHeight: '20px', color: colors.accent },
   footer: {
     flexShrink: 0,
-    paddingInline: 16,
-    paddingTop: 12,
-    paddingBottom: 'max(16px, env(safe-area-inset-bottom))',
-    borderTopWidth: 1,
+    paddingInline: { default: 16, '@media (max-width: 699px)': 20 },
+    paddingTop: { default: 12, '@media (max-width: 699px)': 0 },
+    paddingBottom: {
+      default: 'max(16px, env(safe-area-inset-bottom))',
+      '@media (max-width: 699px)': 'max(20px, env(safe-area-inset-bottom))',
+    },
+    borderTopWidth: { default: 1, '@media (max-width: 699px)': 0 },
     borderTopStyle: 'solid',
     borderTopColor: colors.line,
     backgroundColor: colors.background,
@@ -175,18 +188,18 @@ const s = stylex.create({
   actions: { display: 'grid', gridTemplateColumns: 'max-content minmax(0,1fr)', gap: 12 },
   singleAction: { gridTemplateColumns: 'minmax(0,1fr)' },
   back: {
-    minHeight: 48,
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingInline: 16,
-    paddingBlock: 10,
-    borderRadius: 24,
+    paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
+    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
     backgroundColor: colors.controlSurface,
     color: colors.text,
-    fontSize: 14,
-    lineHeight: '20px',
-    fontWeight: 600,
+    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
+    lineHeight: { default: '20px', '@media (max-width: 699px)': '22px' },
+    fontWeight: { default: 600, '@media (max-width: 699px)': 500 },
     cursor: 'pointer',
   },
   note: {
@@ -196,6 +209,8 @@ const s = stylex.create({
     marginTop: 8,
     textAlign: 'center',
   },
+  phoneLabel: { display: { default: 'none', '@media (max-width: 699px)': 'inline' } },
+  largerLabel: { display: { default: 'inline', '@media (max-width: 699px)': 'none' } },
   review: { backgroundColor: colors.stripe, padding: 16, borderRadius: 12, marginBottom: 24 },
   reviewHeading: { fontSize: 16, lineHeight: '24px', fontWeight: 600, marginBottom: 8 },
   reviewRows: { display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 8 },
@@ -716,11 +731,16 @@ export function ShowroomServiceRequest({
                     </button>
                   )}
                   <Button type="submit" block floating>
-                    {step < 2
-                      ? t('Continue')
-                      : importing
-                        ? t('Save import draft')
-                        : t('Save sale draft')}
+                    {step < 2 ? (
+                      t('Continue')
+                    ) : (
+                      <>
+                        <span {...stylex.props(s.phoneLabel)}>{t('Save draft')}</span>
+                        <span {...stylex.props(s.largerLabel)}>
+                          {importing ? t('Save import draft') : t('Save sale draft')}
+                        </span>
+                      </>
+                    )}
                   </Button>
                 </>
               )}

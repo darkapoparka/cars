@@ -6,6 +6,7 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
 import { lockDocumentScroll } from '@/lib/scroll-lock';
+import { useMobileKeyboard } from '@/lib/use-mobile-keyboard';
 import { Icon, type IconName } from './Icon';
 export const ui = stylex.create({
   row: { display: 'flex', alignItems: 'center', gap: 8 },
@@ -45,6 +46,10 @@ export const ui = stylex.create({
     outlineColor: colors.text,
     outlineWidth: 2,
     outlineOffset: 2,
+    '::placeholder': {
+      color: { default: null, '@media (max-width: 699px)': colors.muted },
+      opacity: { default: null, '@media (max-width: 699px)': 1 },
+    },
   },
   label: { display: 'flex', flexDirection: 'column', gap: 8, fontSize: 14, fontWeight: 500 },
   divider: { height: 1, backgroundColor: colors.line, borderWidth: 0, marginBlock: 16 },
@@ -61,8 +66,8 @@ export const ui = stylex.create({
     borderRadius: 6,
     paddingBlock: 2,
     paddingInline: 8,
-    fontSize: 12,
-    fontWeight: 700,
+    fontSize: { default: 12, '@media (max-width: 699px)': 14 },
+    fontWeight: { default: 700, '@media (max-width: 699px)': 500 },
   },
   empty: {
     padding: 32,
@@ -96,9 +101,9 @@ const s = stylex.create({
     borderRadius: 8,
     borderWidth: 1.5,
     borderStyle: 'solid',
-    fontSize: 14,
-    fontWeight: 700,
-    lineHeight: '20px',
+    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
+    fontWeight: { default: 700, '@media (max-width: 699px)': 500 },
+    lineHeight: { default: '20px', '@media (max-width: 699px)': '22px' },
     textDecoration: 'none',
     cursor: { default: 'pointer', ':disabled': 'not-allowed' },
     transition: 'filter 120ms, transform 120ms',
@@ -107,7 +112,12 @@ const s = stylex.create({
     opacity: { default: 1, ':disabled': 0.45 },
   },
   compact: { minHeight: 32, paddingBlock: 4, paddingInline: 8 },
-  floating: { minHeight: 48, borderRadius: 24, paddingInline: 24 },
+  floating: {
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
+    paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
+    paddingInline: 24,
+  },
   dense: { minHeight: 36, paddingBlock: 6 },
   disabled: {
     backgroundColor: colors.controlSurface,
@@ -232,6 +242,13 @@ const s = stylex.create({
       backdropFilter: { default: 'none', '@media (min-width: 700px)': 'blur(8px)' },
     },
   },
+  keyboardFrame: (height: number, offsetTop: number) => ({
+    height: { default: null, '@media (max-width: 699px)': `${height}px` },
+    maxHeight: { default: null, '@media (max-width: 699px)': `${height}px` },
+    top: { default: null, '@media (max-width: 699px)': `${offsetTop}px` },
+    bottom: { default: null, '@media (max-width: 699px)': 'auto' },
+    marginBlock: { default: null, '@media (max-width: 699px)': 0 },
+  }),
   wideDialog: { width: 'calc(100% - 48px)', padding: 0 },
   pickerHeight: (height: number) => ({ height: `min(${height}px, calc(100dvh - 44px))` }),
   pickerDialog: {
@@ -441,6 +458,7 @@ export function Modal({
 }) {
   const { t } = useLocale();
   const ref = useRef<HTMLDialogElement>(null);
+  const keyboard = useMobileKeyboard(open && (flowSheet || fullScreen));
   useEffect(() => {
     if (!open) return;
     const dialog = ref.current;
@@ -461,6 +479,7 @@ export function Modal({
     <dialog
       ref={ref}
       tabIndex={-1}
+      data-mobile-keyboard={keyboard.open ? 'true' : undefined}
       {...stylex.props(
         s.dialog,
         sheet && s.sheet,
@@ -477,6 +496,7 @@ export function Modal({
         picker && s.pickerDialog,
         picker && pickerHeight !== undefined && s.pickerHeight(pickerHeight),
         xstyle,
+        keyboard.open && s.keyboardFrame(keyboard.height, keyboard.offsetTop),
       )}
       aria-label={t(label || title || 'Options')}
       onKeyDown={(event) => {

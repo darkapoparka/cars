@@ -49,6 +49,10 @@ const s = stylex.create({
     paddingBlock: 10,
     paddingRight: 12,
     outlineWidth: 0,
+    '::placeholder': {
+      color: { default: null, '@media (max-width: 699px)': colors.muted },
+      opacity: { default: null, '@media (max-width: 699px)': 1 },
+    },
     '::-webkit-search-cancel-button': { WebkitAppearance: 'none' },
     '::-webkit-search-decoration': { WebkitAppearance: 'none' },
   },
