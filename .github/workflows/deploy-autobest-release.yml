@@ -1,11 +1,7 @@
 name: Deploy Auto Best release candidate
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "templates/auto-best/**"
-      - ".github/workflows/deploy-autobest-release.yml"
+  # Production publication and historical repair require explicit dispatch.
   workflow_dispatch:
 
 permissions:
@@ -57,7 +53,7 @@ jobs:
           test -n "${VERCEL_TOKEN:-}" || { echo 'VERCEL_TOKEN is not configured.' >&2; exit 1; }
           mkdir -p .vercel "$RUNNER_TEMP/auto-best-release"
           printf '{"orgId":"%s","projectId":"%s"}\n' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > .vercel/project.json
-          deployment_url="$(npx --yes vercel@59.19.1 deploy --prod --force --archive=tgz --token="$VERCEL_TOKEN" | tail -n 1)"
+          deployment_url="$(npx --yes vercel@59.19.1 deploy --prod --archive=tgz --token="$VERCEL_TOKEN" | tail -n 1)"
           case "$deployment_url" in https://*) ;; *) echo "Invalid deployment URL: $deployment_url" >&2; exit 1;; esac
           echo "deployment_url=$deployment_url" >> "$GITHUB_OUTPUT"
           DEPLOYMENT_URL="$deployment_url" node <<'NODE'
