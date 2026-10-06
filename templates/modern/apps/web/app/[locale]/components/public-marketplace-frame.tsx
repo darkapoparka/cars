@@ -136,7 +136,7 @@ export const PublicMarketplaceFrame = ({
             className={
               mobileDealerHeaderTone === "clean"
                 ? "bg-white text-zinc-950 lg:hidden"
-                : "bg-black text-white lg:hidden"
+                : "bg-brand text-white [--lead-site-accent-bright:white] lg:hidden"
             }
           >
             <MobileDealerChrome

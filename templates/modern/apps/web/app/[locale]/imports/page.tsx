@@ -306,10 +306,10 @@ export default async function ImportsPage({ params, searchParams }: PageProps) {
           imageClassName="object-center"
           imageSrc="/images/services/import-shipping-yellow-v1.png"
           locale={normalizedLocale}
+          title={text.mobileTitle}
           tone="import"
         >
           <div className="h-full">
-            <h1 className="sr-only">{text.mobileTitle}</h1>
             <MobileImportSourceSearch
               actionHref={`${localize(path)}#import-request`}
               defaultOrigin={formOrigin}

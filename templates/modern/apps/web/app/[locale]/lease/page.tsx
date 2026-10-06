@@ -144,6 +144,7 @@ export default async function LeasePage({
     mileageLabel: formatMileage(listing.spec.mileageValue, normalizedLocale),
     ...(listing.monthlyEstimate
       ? {
+          monthlyEstimate: listing.monthlyEstimate,
           monthlyLabel: `${formatMoney(
             listing.monthlyEstimate,
             normalizedLocale

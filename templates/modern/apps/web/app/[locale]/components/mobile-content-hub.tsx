@@ -54,7 +54,13 @@ const contentCategoryLabels = {
   en: "Content categories",
 } as const;
 
+const contentResultsLabels = {
+  bg: "Намерени статии",
+  en: "Matching articles",
+} as const;
+
 function DesktopContentSearch({
+  count,
   isBg,
   ready,
   query,
@@ -62,6 +68,7 @@ function DesktopContentSearch({
   onQueryChange,
   onClear,
 }: {
+  count: number;
   isBg: boolean;
   ready: boolean;
   query: string;
@@ -82,6 +89,15 @@ function DesktopContentSearch({
         type="search"
         value={query}
       />
+      <output
+        aria-atomic="true"
+        aria-label={isBg ? "Намерени статии" : "Matching articles"}
+        aria-live="polite"
+        className="shrink-0 text-meta text-muted-foreground tabular-nums"
+        data-slot="content-search-count-desktop"
+      >
+        ({count})
+      </output>
       {query && (
         <button
           aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
@@ -149,7 +165,7 @@ export const MobileContentHub = ({
         desktopStyles.editorial
       )}
     >
-      <section className="bg-zinc-950 text-white lg:hidden">
+      <section className="bg-brand text-white [--lead-site-accent-bright:white] lg:hidden">
         <div className="mx-auto w-full max-w-lg">
           <MobileDealerChrome
             brandRow={
@@ -188,6 +204,7 @@ export const MobileContentHub = ({
                 }
               />
             }
+            title={isBg ? "Съвети и статии" : "Guides and articles"}
           >
             <div
               className={cn(
@@ -214,13 +231,20 @@ export const MobileContentHub = ({
                 onChange={(event) =>
                   updateSearch({ query: event.target.value, filter })
                 }
-                placeholder={
-                  isBg ? "Търси съвети и статии" : "Search guides and articles"
-                }
+                placeholder={isBg ? "Търси статии" : "Search articles"}
                 ref={searchInput}
                 type="search"
                 value={query}
               />
+              <output
+                aria-atomic="true"
+                aria-label={contentResultsLabels[locale]}
+                aria-live="polite"
+                className="shrink-0 px-2 text-meta text-muted-foreground tabular-nums"
+                data-slot="content-search-count"
+              >
+                ({visibleItems.length})
+              </output>
               {query ? (
                 <button
                   aria-label={isBg ? "Изчисти търсенето" : "Clear search"}
@@ -241,6 +265,7 @@ export const MobileContentHub = ({
       </section>
 
       <DesktopContentSearch
+        count={visibleItems.length}
         inputRef={desktopSearchInput}
         isBg={isBg}
         onClear={() => {
@@ -280,21 +305,7 @@ export const MobileContentHub = ({
             </MobilePillRail>
           </div>
 
-          <div className="px-4 pt-3 pb-2 lg:px-0">
-            <div className="flex items-center justify-between gap-3">
-              <h1 className="font-semibold text-section-title tracking-heading lg:hidden">
-                {isBg ? "Съвети и статии" : "Guides and articles"}
-              </h1>
-              <output
-                aria-atomic="true"
-                className="text-micro text-muted-foreground tabular-nums"
-              >
-                {visibleItems.length} {isBg ? "материала" : "items"}
-              </output>
-            </div>
-          </div>
-
-          <div className="grid gap-2 px-4 pb-8 md:grid-cols-2 lg:gap-5 lg:px-0 xl:grid-cols-3">
+          <div className="mt-3 grid gap-2 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3">
             {visibleItems.map((item, index) => (
               <Link
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
@@ -304,7 +315,7 @@ export const MobileContentHub = ({
                 prefetch={false}
               >
                 <div
-                  className="relative w-24 min-w-24 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[35%] min-[360px]:min-w-28"
+                  className="relative w-20 min-w-20 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[28%] min-[360px]:min-w-24"
                   data-slot="content-card-media"
                 >
                   <Image
@@ -312,7 +323,7 @@ export const MobileContentHub = ({
                     className="object-cover"
                     fill
                     loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 359px) 96px, (max-width: 768px) 140px, (max-width: 1023px) 260px, (min-width: 1280px) 30vw, 44vw"
+                    sizes="(max-width: 359px) 80px, (max-width: 768px) 120px, (max-width: 1023px) 260px, (min-width: 1280px) 30vw, 44vw"
                     src={item.image}
                   />
                 </div>
@@ -321,13 +332,12 @@ export const MobileContentHub = ({
                   data-slot="content-card-body"
                 >
                   <div
-                    className="grid grid-cols-1 items-center gap-0 font-semibold text-micro text-muted-foreground uppercase tracking-label min-[360px]:flex min-[360px]:flex-wrap min-[360px]:gap-x-1.5"
+                    className="font-medium text-meta text-muted-foreground"
                     data-slot="content-card-meta"
                   >
                     <span className="whitespace-nowrap">{item.category}</span>
-                    <span className="whitespace-nowrap">{item.meta}</span>
                   </div>
-                  <h2 className="mt-1 line-clamp-3 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
+                  <h2 className="mt-1 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
                     {item.title}
                   </h2>
                   <p

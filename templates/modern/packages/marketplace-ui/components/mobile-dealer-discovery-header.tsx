@@ -14,6 +14,7 @@ import {
   X,
 } from "lucide-react";
 import type { MouseEvent } from "react";
+import { getMobileDiscoveryTitle } from "../lib/mobile-dealer-title";
 import {
   mobileSearchIconClassName,
   mobileSearchTriggerClassName,
@@ -335,7 +336,7 @@ export const MobileCompactSearchHeader = ({
   }
 
   return (
-    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-zinc-950 px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 motion-reduce:animate-none lg:hidden">
+    <div className="fade-in-0 slide-in-from-top-2 fixed inset-x-0 top-0 z-50 animate-in rounded-b-[18px] bg-brand px-4 pt-[max(0.75rem,env(safe-area-inset-top))] pb-2 text-white shadow-[0_3px_12px_rgba(0,0,0,0.16)] duration-150 [--lead-site-accent-bright:white] motion-reduce:animate-none lg:hidden">
       <div className="mx-auto w-full max-w-lg">
         <MobileCompactDiscoverySurface
           category={category}
@@ -371,7 +372,7 @@ export const MobileDealerDiscoveryHeader = ({
   const searchLabel = getMobileSearchText(isBg, totalListings, category);
 
   return (
-    <div className="bg-zinc-950 text-white">
+    <div className="bg-brand text-white [--lead-site-accent-bright:white]">
       <MobileDealerChrome
         brandRow={
           <div className="grid h-11 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-3">
@@ -409,6 +410,7 @@ export const MobileDealerDiscoveryHeader = ({
             </button>
           </div>
         }
+        title={getMobileDiscoveryTitle(category, isBg)}
       >
         <MobileSearchButton
           hasMakeModelSelection={hasMakeModelSelection}

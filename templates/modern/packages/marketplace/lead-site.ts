@@ -48,6 +48,7 @@ export interface LeadSiteConfig {
     readonly sourceSlug: string;
     readonly label: string;
     readonly wordmark: string;
+    readonly markArtwork?: string;
     readonly copy: Readonly<Record<"bg" | "en", string>>;
   };
   readonly district: { readonly bg: string; readonly en: string };
@@ -68,6 +69,8 @@ export interface LeadSiteConfig {
   readonly logoPath: string;
   readonly mapsEmbedUrl: string;
   readonly mapsUrl: string;
+  readonly mobileFinancingArtworkPath?: string;
+  readonly mobileShowroomArtworkPath?: string;
   readonly name: string;
   readonly phoneDisplay: string;
   readonly phoneHref: string;
@@ -107,13 +110,14 @@ export const leadSite: LeadSiteConfig = {
       tagline: "Premium vehicles, imports and in-house leasing in Sofia.",
     },
   },
-  accent: "#c40101",
+  accent: "#30343b",
   desktopAccent: "#405ff2",
   desktopInventoryFilterLayout: "quick",
   desktopPreviewIdentity: {
     sourceSlug: "day-night-auto-group",
     label: "Modern",
     wordmark: "Modern",
+    markArtwork: "/images/brand/modern-logo-v2.webp",
     copy: {
       bg: "Открийте следващия си автомобил.",
       en: "Find your next car.",
@@ -129,6 +133,9 @@ export const leadSite: LeadSiteConfig = {
     van: "/lead-sell-van-v1.png",
   },
   financingArtworkPath: "/images/services/leasing-red-suv-v2.webp",
+  mobileFinancingArtworkPath: "/images/lease/mobile-pdp-finance-studio-v2.webp",
+  mobileShowroomArtworkPath:
+    "/images/lease/mobile-pdp-showroom-blue-hour-v1.webp",
   contactUrl: "tel:+359877733110",
   country: "България",
   countryCode: "BG",

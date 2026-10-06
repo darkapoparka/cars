@@ -1,3 +1,4 @@
+import { cn } from "@repo/design-system/lib/utils";
 import {
   formatFuelType,
   formatMileage,
@@ -17,6 +18,7 @@ import {
   getSourceLabel,
 } from "../lib/listing-truth";
 import Image from "./public-image";
+import styles from "./related-listing-card.module.css";
 import { VehicleCard } from "./vehicle-card";
 
 interface RelatedListingCardProps {
@@ -120,7 +122,13 @@ export const RelatedListingCard = ({
   locale,
 }: RelatedListingCardProps) => (
   <>
-    <div className="min-w-0 snap-start lg:hidden">
+    <div
+      className={cn(
+        styles.mobileCard,
+        "min-w-0 snap-start overflow-hidden rounded-2xl bg-zinc-100 lg:hidden"
+      )}
+      data-slot="listing-related-card"
+    >
       <VehicleCard
         density="compact"
         desktopHeadingLevel={3}

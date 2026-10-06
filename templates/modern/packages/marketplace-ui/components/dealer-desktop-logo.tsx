@@ -1,9 +1,10 @@
+import { withBasePath } from "@repo/internationalization/paths";
 import type { PublicSiteConfig } from "@repo/marketplace/site-config";
 import { publicSite } from "@repo/marketplace/site-config";
 import styles from "./dealer-desktop-logo.module.css";
 import Image from "./public-image";
 
-/** Master preview wordmark; personalized copies retain their configured raster logo. */
+/** Source-bound preview artwork; personalized copies retain their configured logo. */
 export function DealerDesktopLogo({
   className,
   inverse = false,
@@ -14,11 +15,30 @@ export function DealerDesktopLogo({
   site?: PublicSiteConfig;
 }) {
   if (site.identity.desktopPreview) {
+    const preview = site.identity.desktopPreview;
+    if (preview.logo) {
+      return (
+        <span
+          aria-label={preview.name}
+          className={className}
+          data-logo-source={preview.logo}
+          data-slot="template-brand-logo"
+          role="img"
+        >
+          <span
+            aria-hidden="true"
+            className={styles.artwork}
+            style={{
+              maskImage: `url("${withBasePath(preview.logo)}")`,
+              ...(inverse ? { backgroundColor: "white" } : {}),
+            }}
+          />
+        </span>
+      );
+    }
     return (
       <span className={className}>
-        <span className={styles.wordmark}>
-          {site.identity.desktopPreview.shortName}
-        </span>
+        <span className={styles.wordmark}>{preview.shortName}</span>
       </span>
     );
   }

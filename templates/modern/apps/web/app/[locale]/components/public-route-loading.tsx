@@ -14,6 +14,7 @@ import {
 import { DealerDesktopHeader } from "@repo/marketplace-ui/components/dealer-desktop-header";
 import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import { DealerDesktopToolbar } from "@repo/marketplace-ui/components/dealer-desktop-toolbar";
+import { getMobileDiscoveryTitle } from "@repo/marketplace-ui/lib/mobile-dealer-title";
 import { mobileSearchFieldHeightClassName } from "@repo/marketplace-ui/lib/mobile-form-control";
 import {
   mobileVehicleCardClassName,
@@ -66,9 +67,11 @@ const LoadingCardContent = () => (
 );
 
 const MobileLoadingHeader = ({
+  category,
   mobileTone,
   locale,
 }: {
+  category?: MarketplaceSearchParams["category"];
   mobileTone?: "leasing";
   locale: string;
 }) => (
@@ -78,6 +81,7 @@ const MobileLoadingHeader = ({
         helpAction={<div className="size-11" />}
         imageSrc=""
         locale={locale === "bg" ? "bg" : "en"}
+        title={locale === "bg" ? "Лизинг на автомобил" : "Vehicle financing"}
         tone={mobileTone}
       >
         <div
@@ -85,7 +89,7 @@ const MobileLoadingHeader = ({
         />
       </MobileDealerServiceHero>
     ) : (
-      <div className="bg-zinc-950">
+      <div className="bg-brand text-white">
         <MobileDealerChrome
           brandRow={
             <div className="grid h-11 grid-cols-[2.75rem_minmax(0,1fr)_2.75rem] items-center gap-3">
@@ -98,6 +102,7 @@ const MobileLoadingHeader = ({
               <div className="size-11" />
             </div>
           }
+          title={getMobileDiscoveryTitle(category ?? "car", locale === "bg")}
         >
           <div
             className={`${mobileSearchFieldHeightClassName} rounded-full bg-white`}
@@ -243,7 +248,11 @@ export const PublicRouteLoading = async ({
       aria-busy="true"
       className="min-h-screen bg-background text-foreground"
     >
-      <MobileLoadingHeader locale={locale} mobileTone={mobileTone} />
+      <MobileLoadingHeader
+        category={category}
+        locale={locale}
+        mobileTone={mobileTone}
+      />
       {isDealershipSite && category ? (
         <div aria-hidden="true" className="hidden lg:block" inert>
           <DealerDesktopHeader activeMode="buy" locale={locale}>

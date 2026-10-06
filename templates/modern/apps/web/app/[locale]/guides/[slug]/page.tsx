@@ -70,9 +70,7 @@ export default async function GuideOrArticlePage({
   const sections = post?.sections ?? guide?.sections ?? [];
   const guideEyebrow =
     language === "bg" ? "Практично ръководство" : "Practical guide";
-  const eyebrow = post
-    ? `${post.category[language]} · ${post.readTime[language]}`
-    : guideEyebrow;
+  const eyebrow = post ? post.category[language] : guideEyebrow;
   const image = entry.image;
   const backQuery = serializeContentSearch(
     parseContentSearch(await searchParams)
@@ -110,7 +108,7 @@ export default async function GuideOrArticlePage({
             </Link>
 
             <header className="pt-5 pb-4 lg:hidden">
-              <p className="font-semibold text-micro text-muted-foreground uppercase tracking-label">
+              <p className="font-medium text-meta text-muted-foreground">
                 {eyebrow}
               </p>
               <h1 className="mt-2 text-balance font-semibold text-page-title text-zinc-950 tracking-heading lg:text-page-title-lg">

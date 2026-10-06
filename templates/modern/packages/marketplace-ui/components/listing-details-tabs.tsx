@@ -8,7 +8,7 @@ type DesktopListingTabId =
   | "information"
   | "specifications"
   | "equipment";
-type MobileListingTabId = "overview" | "details";
+type MobileListingTabId = "details" | "photos";
 
 interface ListingDetailsTabsProps {
   readonly desktopLayout?: "tabs" | "sections";
@@ -16,6 +16,7 @@ interface ListingDetailsTabsProps {
   readonly information: ReactNode;
   readonly locale?: string;
   readonly mobileDetails: ReactNode;
+  readonly mobilePhotos: ReactNode;
   readonly overview: ReactNode;
   readonly specifications: ReactNode;
 }
@@ -32,6 +33,7 @@ const getTabCopy = (locale?: string) => {
     equipment: isBg ? "Екстри" : "Extras",
     information: isBg ? "Информация" : "Information",
     overview: isBg ? "Обзор" : "Overview",
+    photos: isBg ? "Снимки" : "Photos",
     specifications: isBg ? "Характеристики" : "Specifications",
   };
 };
@@ -42,13 +44,14 @@ export const ListingDetailsTabs = ({
   information,
   locale,
   mobileDetails,
+  mobilePhotos,
   overview,
   specifications,
 }: ListingDetailsTabsProps) => {
   const copy = getTabCopy(locale);
   const mobileTabs: readonly { id: MobileListingTabId; label: string }[] = [
     { id: "details", label: copy.details },
-    { id: "overview", label: copy.description },
+    { id: "photos", label: copy.photos },
   ];
   const desktopTabs: readonly { id: DesktopListingTabId; label: string }[] = [
     { id: "overview", label: copy.overview },
@@ -57,13 +60,8 @@ export const ListingDetailsTabs = ({
     { id: "equipment", label: copy.equipment },
   ];
   const mobilePanels: Record<MobileListingTabId, ReactNode> = {
-    details: (
-      <div className="space-y-6">
-        {mobileDetails}
-        {equipment}
-      </div>
-    ),
-    overview,
+    details: mobileDetails,
+    photos: mobilePhotos,
   };
   const desktopPanels: Record<DesktopListingTabId, ReactNode> = {
     equipment,

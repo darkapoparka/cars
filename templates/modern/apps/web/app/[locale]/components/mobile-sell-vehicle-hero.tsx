@@ -1,10 +1,7 @@
 "use client";
 import { publicSite } from "@repo/marketplace/site-config";
 
-import {
-  getMobileQuickPillClassName,
-  mobileDealerContentClassName,
-} from "@repo/marketplace-ui";
+import { mobileDealerContentClassName } from "@repo/marketplace-ui";
 import { DealerUiIcon } from "@repo/marketplace-ui/components/dealer-ui-icon";
 import {
   mobileSearchIconClassName,
@@ -48,6 +45,7 @@ export const MobileSellVehicleHero = ({
         }
         imageSrc={publicSite.artwork.sellHero}
         locale={locale}
+        title={content.title}
         tone="sell"
       >
         <div className="h-full">
@@ -68,7 +66,8 @@ export const MobileSellVehicleHero = ({
               strokeWidth={1.75}
             />
             <span className={mobileSearchTriggerLabelClassName}>
-              {vin || content.vin}
+              {vin ||
+                (locale === "bg" ? "Въведете VIN номер" : "Enter VIN number")}
             </span>
             <DealerUiIcon
               className={mobileSearchIconClassName}
@@ -81,21 +80,18 @@ export const MobileSellVehicleHero = ({
         className={`${mobileDealerContentClassName} pb-3`}
         data-slot="mobile-dealer-content"
       >
-        <h1 className="sr-only">{content.title}</h1>
         <button
           aria-haspopup="dialog"
-          className={getMobileQuickPillClassName(true, "mx-auto flex w-fit")}
+          aria-label={content.noVin}
+          className="group mx-auto flex min-h-11 items-center rounded-full px-1 font-medium text-compact-control focus-visible:outline-2 focus-visible:outline-ring focus-visible:outline-offset-2 disabled:opacity-60"
           data-slot="mobile-sell-manual-entry"
           disabled={!ready}
           onClick={onOpenDetails}
           type="button"
         >
-          <span>
-            {locale === "bg"
-              ? "Без VIN? Въведете данни"
-              : "No VIN? Enter details"}
+          <span className="inline-flex h-9 items-center rounded-full bg-zinc-950 px-4 text-white transition-colors group-hover:bg-zinc-800 group-active:bg-zinc-700">
+            {content.noVinLabel}
           </span>
-          <DealerUiIcon className="size-4 shrink-0" name="arrowRight" />
         </button>
       </div>
       {inventoryShelf}

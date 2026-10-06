@@ -22,9 +22,15 @@ const getDesktopPreviewIdentity = (
   return {
     name: preview.label,
     shortName: preview.wordmark,
+    logo: preview.markArtwork,
     tagline: preview.copy,
   };
 };
+
+const getDesktopServiceCards = (artwork: LeadSiteConfig["artwork"]) =>
+  artwork?.desktopServiceCards ??
+  artwork?.desktopServices ??
+  defaultSiteArtwork.desktopServiceCards;
 
 /** Translate the existing Cars adaptation contract once, at the configuration boundary. */
 export const createPublicSiteConfig = (
@@ -92,6 +98,8 @@ export const createPublicSiteConfig = (
       ...defaultSiteArtwork,
       financePromotion: config.financingArtworkPath,
       ...config.artwork,
+      // Older dealer service sets remain authoritative unless a card set is supplied.
+      desktopServiceCards: getDesktopServiceCards(config.artwork),
       // Explicit cutouts from older dealer copies must not be hidden by the master scene.
       heroScene:
         config.artwork?.heroScene ??

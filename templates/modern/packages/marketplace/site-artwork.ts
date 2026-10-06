@@ -22,6 +22,12 @@ export const defaultSiteArtwork: PublicSiteArtwork = {
     finance: "/desktop-boxcars/service-finance.webp",
     imports: "/desktop-boxcars/service-imports.webp",
   },
+  desktopServiceCards: {
+    browse: "/images/services/desktop-browse-v1.webp",
+    sell: "/images/services/desktop-sell-v1.webp",
+    finance: "/images/services/desktop-finance-v1.webp",
+    imports: "/images/services/desktop-imports-v1.webp",
+  },
   financePromotion: "/images/services/leasing-red-suv-v2.webp",
   bodyTypes: {
     suv: "/marketplace/discovery/body-suv.webp",

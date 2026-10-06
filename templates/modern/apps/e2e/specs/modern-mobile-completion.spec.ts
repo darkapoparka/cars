@@ -441,7 +441,9 @@ test("320px guide cards keep metadata and primary content readable", async ({
   const mediaBounds = await media.boundingBox();
   expect(mediaBounds?.width).toBeLessThanOrEqual(97);
 
-  const metadata = card.locator('[data-slot="content-card-meta"] > span');
+  const metadata = card.locator(
+    '[data-slot="content-card-meta"] > span:visible'
+  );
   const metrics = await metadata.evaluateAll((elements) =>
     elements.map((element) => ({
       text: element.textContent,
@@ -449,7 +451,7 @@ test("320px guide cards keep metadata and primary content readable", async ({
       scrollWidth: element.scrollWidth,
     }))
   );
-  expect(metrics).toHaveLength(2);
+  expect(metrics).toHaveLength(1);
   for (const metric of metrics) {
     expect(
       metric.scrollWidth,
@@ -460,6 +462,18 @@ test("320px guide cards keep metadata and primary content readable", async ({
     card.locator('[data-slot="content-card-description"]')
   ).toBeHidden();
   await expect(card.getByText("Прочети", { exact: true })).toBeVisible();
+  const count = page.locator('[data-slot="content-search-count"]');
+  const total = await page.locator('[data-slot="content-card"]').count();
+  await expect(count).toHaveText(`(${total})`);
+  await page
+    .getByRole("searchbox", { name: "Търси съвети и статии", exact: true })
+    .fill("no-guide-matches-this-query");
+  await expect(count).toHaveText("(0)");
+  await expect(page.locator('[data-slot="content-card"]')).toHaveCount(0);
+  await page
+    .getByRole("button", { name: "Изчисти търсенето", exact: true })
+    .click();
+  await expect(count).toHaveText(`(${total})`);
 });
 
 test("320px inventory keeps semantic type and complete vehicle facts", async ({

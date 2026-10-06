@@ -57,6 +57,14 @@ export const publicArtworkSchema = z.object({
       imports: publicAssetPathSchema,
     })
     .optional(),
+  desktopServiceCards: z
+    .object({
+      browse: publicAssetPathSchema,
+      sell: publicAssetPathSchema,
+      finance: publicAssetPathSchema,
+      imports: publicAssetPathSchema,
+    })
+    .optional(),
   financePromotion: publicAssetPathSchema,
   bodyTypes: z.record(z.string(), publicAssetPathSchema),
   brands: z.record(z.string(), publicAssetPathSchema),
@@ -82,6 +90,7 @@ export const publicSiteSchema = z
         .object({
           name: z.string().trim().min(1).max(120),
           shortName: z.string().trim().min(1).max(60),
+          logo: publicAssetPathSchema.optional(),
           tagline: z.object({
             bg: z.string().trim().max(300),
             en: z.string().trim().max(300),
@@ -189,6 +198,11 @@ export const isPublicSitePathEnabled = (
   const route = first === "bg" || first === "en" ? segments[1] : first;
   if (!route) {
     return site.services.buy;
+  }
+  if (route === "services") {
+    return ["buy", "sell", "imports", "lease"].some(
+      (service) => site.services[service as PublicService]
+    );
   }
   const service = serviceRoutes[route];
   if (service && !site.services[service]) {
