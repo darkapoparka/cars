@@ -311,17 +311,28 @@
     align-items: center;
   }
   .detail
-    :global([data-slot="listing-summary-header"])
+    :global([data-slot="listing-title-actions"])
+    :global([data-slot="desktop-save-car"]),
+  .detail
+    :global([data-slot="listing-title-actions"])
     :global([data-slot="listing-actions"])
     button {
     width: auto;
     height: calc(var(--spacing) * 11);
-    padding: 0 calc(var(--spacing) * 3.5);
+    padding: 0 calc(var(--spacing) * 4);
     font-size: calc(var(--spacing) * 3.5);
     font-weight: var(--font-weight-normal);
-    background: var(--control);
+    background: var(--desktop-surface);
     border: 0;
-    border-radius: var(--radius-pill);
+    border-radius: calc(var(--spacing) * 3);
+    box-shadow: var(--desktop-surface-shadow);
+  }
+  .detail :global([data-slot="listing-title-actions"]) button:hover {
+    background: var(--desktop-control-neutral-hover);
+  }
+  .detail :global([data-slot="listing-title-actions"]) button:focus-visible {
+    outline: var(--desktop-focus-width) solid var(--ring);
+    outline-offset: var(--desktop-focus-offset);
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) {
     display: grid;
@@ -378,9 +389,9 @@
   .detail
     :global([data-slot="listing-vehicle-facts"])
     :global([data-slot="listing-specifications"]) {
-    padding-top: calc(var(--spacing) * 4);
-    margin-top: calc(var(--spacing) * 4);
-    border-top: var(--desktop-border-width) solid var(--border);
+    padding-top: 0;
+    margin-top: calc(var(--spacing) * 3);
+    border-top: 0;
   }
   .detail
     :global([data-slot="listing-vehicle-facts"])
@@ -439,6 +450,11 @@
   }
   .detail :global([data-slot="listing-details-sections-desktop"]) dl {
     gap: calc(var(--spacing) * 5);
+  }
+  .detail
+    :global([data-slot="listing-vehicle-facts"])
+    :global([data-slot="listing-specifications"]) {
+    margin-top: calc(var(--spacing) * 5);
   }
   .detail :global([data-slot="listing-equipment"]) ul {
     grid-template-columns: repeat(2, minmax(0, 1fr));
