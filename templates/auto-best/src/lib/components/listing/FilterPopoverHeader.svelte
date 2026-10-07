@@ -36,11 +36,12 @@
   :global(.dn-picker-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
   :global(.dn-picker-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   @media (min-width: 992px) {
+    h2 { color: var(--dn-muted); font: var(--dn-field-label-font); }
     .dn-picker-header--search { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; padding-block: var(--dn-space-2); }
     .dn-picker-header--search h2 { white-space: nowrap; }
     .dn-picker-search { min-width: 0; }
     .dn-picker-header--navigation { display: flex; gap: var(--dn-space-2); }
-    .dn-picker-header--navigation h2 { flex: 0 1 auto; min-width: 0; max-width: 44%; }
+    .dn-picker-header--navigation h2 { flex: 0 1 auto; min-width: 0; max-width: 44%; color: var(--dn-ink); font: var(--dn-control-font); }
     .dn-picker-header--navigation h2 > span { display: block; overflow: hidden; text-overflow: ellipsis; }
     .dn-picker-header--navigation .dn-picker-search { flex: 1 1 0; }
   }
