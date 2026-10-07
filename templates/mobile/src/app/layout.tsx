@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import * as stylex from '@stylexjs/stylex';
 import { AppShell } from '@/components/AppShell';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomMetadata } from '@/lib/showroom-config';
 import './globals.css';
 const s = stylex.create({
   canvas: {
@@ -11,13 +12,7 @@ const s = stylex.create({
     },
   },
 });
-export const metadata: Metadata = {
-  title: { default: 'Коли — Вашият автосалон', template: '%s — Вашият автосалон' },
-  description:
-    'Browse cars, explore showroom services and contact the dealer. Showroom template with sample inventory.',
-  robots: { index: false, follow: false },
-  applicationName: 'Cars Mobile',
-};
+export const metadata: Metadata = showroomMetadata();
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,

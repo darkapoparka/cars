@@ -72,7 +72,7 @@ const s = stylex.create({
 
 export function ShowroomContactArtwork({ name }: { name: 'call' | 'visit' | 'enquiry' }) {
   return (
-    <picture data-contact-option-artwork aria-hidden="true" {...stylex.props(s.artwork)}>
+    <picture data-contact-option-artwork {...stylex.props(s.artwork)}>
       <source
         media="(max-width: 699px)"
         type="image/webp"

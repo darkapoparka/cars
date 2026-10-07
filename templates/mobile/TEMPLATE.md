@@ -344,7 +344,7 @@ Keep source and build unchanged during acceptance.
 
 ## Personalization and release
 
-Brand boundaries are `src/lib/showroom.ts`, `src/app/layout.tsx`,
+Brand boundaries are `src/lib/showroom-config.ts`, `src/lib/showroom.ts`, `src/app/layout.tsx`,
 `src/styles/tokens.stylex.ts`, `src/lib/catalog.ts` and `public/`.
 The header uses a fictional SHOWROOM placeholder logo until an actual dealer logo is supplied.
 The showroom configuration holds verified logo, phone, email, address, directions,
@@ -361,6 +361,14 @@ A verified address, directions URL or map always takes precedence over that
 example, so a real dealer address is never paired with the demo map.
 Replace sample stock, imagery and captured detail facts for a real dealer proposal.
 Preserve truthful demo responses. Example services require dealer confirmation.
+
+Set a stable dealer slug in `showroom.storageNamespace` when personalizing. It
+isolates saved cars, all local enquiry drafts, language and browsing records when
+dealers share a browser origin. Keep that slug across template updates. The
+standalone template uses `null` to retain its existing saved data. The build
+rejects personalized configurations that reuse the standalone namespace, retain
+example contacts, or contain invalid contact links. Server and browser metadata
+use the configured name. See [the finalization contract](docs/FINALIZATION.md).
 
 Run `npm run qa:showroom` against port 6474 after lint, typecheck, domain tests and
 the production build. This adaptation has its own browser checks; historical

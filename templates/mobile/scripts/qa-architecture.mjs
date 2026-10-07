@@ -3,6 +3,10 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium, webkit } from 'playwright';
 
+await import('./prepare-domain-tests.mjs');
+const { storageKeys, showroomTitle } = await import('../.qa/domain/showroom-config.mjs');
+const { translate } = await import('../.qa/domain/locale.mjs');
+
 const base = process.env.QA_URL || 'http://127.0.0.1:6474';
 const output = path.resolve(process.env.QA_OUTPUT || '.qa/architecture');
 const engines = Object.entries({ chromium, webkit }).filter(
@@ -24,8 +28,10 @@ async function run(name, engine) {
       reducedMotion: 'reduce',
     });
     await context.addInitScript(
-      ({ locale = 'en', corrupt = false, denied = false, origin }) => {
+      ({ locale = 'en', corrupt = false, denied = false, full = false, origin, keys }) => {
         if (location.origin !== origin) return;
+        window.__qaStorageEvents = [];
+        window.addEventListener('storage', (event) => window.__qaStorageEvents.push(event.key));
         if (denied) {
           Object.defineProperty(window, 'localStorage', {
             get() {
@@ -33,11 +39,16 @@ async function run(name, engine) {
             },
           });
         } else {
-          localStorage.setItem('cars-mobile-language', locale);
-          if (corrupt) localStorage.setItem('mobile-reference-v1', '{invalid-json');
+          if (localStorage.getItem(keys.language) === null)
+            localStorage.setItem(keys.language, locale);
+          if (corrupt) localStorage.setItem(keys.appState, '{invalid-json');
+          if (full)
+            Storage.prototype.setItem = function () {
+              throw new DOMException('Storage full', 'QuotaExceededError');
+            };
         }
       },
-      { ...options, origin: new URL(base).origin },
+      { ...options, origin: new URL(base).origin, keys: storageKeys },
     );
     context.on('page', (page) => {
       page.setDefaultTimeout(15000);
@@ -58,8 +69,12 @@ async function run(name, engine) {
     await context.close();
   }
   async function go(page, route, locale = 'en') {
-    if (page.url().startsWith(base)) await page.waitForLoadState('networkidle');
-    const response = await page.goto(base + route, { waitUntil: 'load', timeout: 45000 });
+    if (page.url().startsWith(base)) await page.waitForLoadState('networkidle', { timeout: 45000 });
+    const response = await page.goto(base + route, {
+      waitUntil: 'domcontentloaded',
+      timeout: 45000,
+    });
+    assert.ok(response, route + ' must perform a document navigation');
     assert.equal(response.status(), 200, route + ' HTTP status');
     await page.locator('[data-hydrated="true"]').waitFor();
     await page.waitForFunction((locale) => document.documentElement.lang === locale, locale);
@@ -92,6 +107,20 @@ async function run(name, engine) {
       label + ' horizontal overflow',
     );
     check(label + ': images and viewport geometry');
+    if (process.env.QA_CAPTURE === '1') {
+      const filename = name + '-' + label.replace(/[^a-z0-9-]+/gi, '-');
+      await page.screenshot({
+        path: path.join(output, filename + '.png'),
+        animations: 'disabled',
+      });
+      await writeFile(
+        path.join(output, filename + '.json'),
+        JSON.stringify(await page.locator('img').evaluateAll((images) => images.map((image) => {
+          const { x, y, width, height } = image.getBoundingClientRect();
+          return { x, y, width, height, src: image.currentSrc };
+        })), null, 2) + '\n',
+      );
+    }
   }
   async function openContact(page) {
     await page.locator('[data-hydrated="true"]').waitFor();
@@ -107,41 +136,119 @@ async function run(name, engine) {
   }
   try {
     for (const width of [320, 390, 1440]) {
-      const ctx = await context(width);
-      const page = await ctx.newPage();
-      await go(page, '/');
-      const first = page.locator('[data-showroom-vehicle]').first();
-      await first.waitFor();
-      const detail = await first.locator('a[href^="/vehicle/"]').first().getAttribute('href');
-      await geometry(page, 'Cars ' + width);
-      if (width === 1440) {
-        const opener = page.getByRole('button', { name: /^All filters/ });
-        await opener.click();
-        await page.locator('dialog[open]').waitFor();
-        await page.keyboard.press('Escape');
-        await page.locator('dialog[open]').waitFor({ state: 'hidden' });
-        assert.equal(await opener.evaluate((el) => el === document.activeElement), true);
-        check('Desktop filters open, dismiss and restore focus');
-      }
-      for (const [label, route] of [
-        ['Services', '/services'],
-        ['Contact', '/contact'],
-        ['Vehicle', detail],
-      ]) {
-        await go(page, route);
-        await geometry(page, label + ' ' + width);
-      }
-      if (width === 390) {
-        const historyLength = await page.evaluate(() => history.length);
-        for (const section of ['Photos', 'Features', 'Details']) {
-          await page.getByRole('tab', { name: section, exact: true }).click();
-          await page.getByRole('tabpanel', { name: section, exact: true }).waitFor();
+      for (const locale of ['en', 'bg']) {
+        const t = (text) => translate(text, locale);
+        const ctx = await context(width, { locale });
+        const page = await ctx.newPage();
+        await go(page, '/', locale);
+        await page.waitForFunction(
+          (title) => document.title === title,
+          showroomTitle('Cars', locale),
+        );
+        const first = page.locator('[data-showroom-vehicle]').first();
+        await first.waitFor();
+        const detail = await first.locator('a[href^="/vehicle/"]').first().getAttribute('href');
+        await geometry(page, 'Cars ' + width + ' ' + locale);
+        if (width === 1440) {
+          const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
+          await menu.click();
+          const navigation = page.getByRole('navigation', {
+            name: t('Main navigation'),
+            exact: true,
+          });
+          await navigation.waitFor();
+          const menuLinks = navigation.getByRole('link');
+          assert.deepEqual(
+            await menuLinks.evaluateAll((links) => links.map((link) => new URL(link.href).pathname)),
+            ['/', '/services', '/contact'],
+          );
+          // Safari does not focus every button after a pointer click. Escape
+          // must also dismiss a pointer-opened menu while focus is elsewhere.
+          await page.evaluate(
+            () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+          );
+          await page.keyboard.press('Escape');
+          await navigation.waitFor({ state: 'hidden' });
+          assert.equal(await menu.evaluate((el) => el === document.activeElement), true);
+          check('Desktop menu destinations, Escape and focus return: ' + locale);
+          await menu.press('ArrowDown');
+          await menuLinks.first().waitFor();
+          await page.waitForFunction(
+            () => Boolean(document.activeElement?.closest('[data-desktop-navigation]')),
+          );
+          await page.keyboard.press('End');
+          assert.equal(await menuLinks.last().evaluate((el) => el === document.activeElement), true);
+          await page.keyboard.press('Home');
+          assert.equal(await menuLinks.first().evaluate((el) => el === document.activeElement), true);
+          await page.keyboard.press('ArrowUp');
+          assert.equal(await menuLinks.last().evaluate((el) => el === document.activeElement), true);
+          await page.keyboard.press('Escape');
+          await navigation.waitFor({ state: 'hidden' });
+          assert.equal(await menu.evaluate((el) => el === document.activeElement), true);
+          check('Desktop menu keyboard navigation wraps and restores focus: ' + locale);
+          const opener = page.getByRole('button', { name: new RegExp('^' + t('All filters')) });
+          await opener.click();
+          await page.locator('dialog[open]').waitFor();
+          await page.keyboard.press('Escape');
+          await page.locator('dialog[open]').waitFor({ state: 'hidden' });
+          assert.equal(await opener.evaluate((el) => el === document.activeElement), true);
+          check('Desktop filters open, dismiss and restore focus: ' + locale);
         }
-        assert.equal(await page.evaluate(() => history.length), historyLength);
-        check('Vehicle sections switch without adding Back-history entries');
+        for (const [label, route] of [
+          ['Services', '/services'],
+          ['Contact', '/contact'],
+          ['Vehicle', detail],
+        ]) {
+          await go(page, route, locale);
+          await geometry(page, label + ' ' + width + ' ' + locale);
+          if (label === 'Services') {
+            for (const tab of ['Import', 'Sell', 'All']) {
+              await page.getByRole('tab', { name: t(tab), exact: true }).click();
+              await geometry(page, 'Services ' + tab + ' ' + width + ' ' + locale);
+            }
+          }
+        }
+        {
+          const historyLength = await page.evaluate(() => history.length);
+          for (const section of ['Photos', 'Features', 'Details']) {
+            // The preserved native tab uses "Екстри", while the content heading
+            // uses the longer Bulgarian translation of "Features".
+            const tabName = locale === 'bg' && section === 'Features' ? 'Екстри' : t(section);
+            await page.getByRole('tab', { name: tabName, exact: true }).click();
+            await page.getByRole('tabpanel', { name: tabName, exact: true }).waitFor();
+            await geometry(page, 'Vehicle ' + section + ' ' + width + ' ' + locale);
+          }
+          assert.equal(await page.evaluate(() => history.length), historyLength);
+          check('Vehicle sections preserve Back history: ' + width + ' ' + locale);
+        }
+        await closeContext(ctx);
       }
-      await closeContext(ctx);
     }
+
+    const languageContext = await context();
+    const shared = await languageContext.newPage();
+    await go(shared, '/?lang=en');
+    const other = await languageContext.newPage();
+    await go(other, '/');
+    await other.evaluate((key) => localStorage.setItem(key, 'bg'), storageKeys.language);
+    await shared.waitForFunction(
+      (key) => window.__qaStorageEvents.includes(key),
+      storageKeys.language,
+    );
+    assert.equal(await shared.evaluate(() => document.documentElement.lang), 'en');
+    assert.equal(
+      await shared.evaluate((key) => localStorage.getItem(key), storageKeys.language),
+      'bg',
+    );
+    check('Shared-link language stays explicit without echoing cross-tab preference writes');
+    await shared.goto(base + '/');
+    await shared.waitForFunction(() => document.documentElement.lang === 'bg');
+    await shared.waitForLoadState('networkidle');
+    await other.evaluate((key) => localStorage.setItem(key, 'en'), storageKeys.language);
+    await shared.waitForFunction(() => document.documentElement.lang === 'en');
+    assert.equal(await shared.title(), showroomTitle('Cars', 'en'));
+    check('Language changes synchronize between tabs when no link override applies');
+    await closeContext(languageContext);
 
     const ctx = await context();
     const page = await ctx.newPage();
@@ -193,6 +300,12 @@ async function run(name, engine) {
     );
     const filtered = await page.locator('[data-showroom-vehicle]').count();
     assert.ok(filtered > 0 && filtered <= stock);
+    // Newly mounted filtered cards schedule prefetches on the next frame.
+    // Let those settle before the deliberate document reload.
+    await page.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
+    await page.waitForLoadState('networkidle');
     await page.reload({ waitUntil: 'load' });
     await cars(page, filtered);
     check('Filter cancellation preserves state/focus; applying search survives reload');
@@ -237,6 +350,23 @@ async function run(name, engine) {
     assert.equal(await (await openContact(page)).inputValue(), draft);
     check('Contact drafts survive overlay dismissal and reload');
     await closeContext(ctx);
+
+    const fullContext = await context(390, { full: true });
+    const fullPage = await fullContext.newPage();
+    await go(fullPage, '/contact?lang=en');
+    const sessionDraft = 'Keep this enquiry in the current session when storage is full.';
+    await (await openContact(fullPage)).fill(sessionDraft);
+    await fullPage.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
+    await fullPage
+      .getByText(
+        'Saving is unavailable. Your draft is kept for this session only. Nothing was sent.',
+        { exact: true },
+      )
+      .first()
+      .waitFor();
+    assert.equal(await (await openContact(fullPage)).inputValue(), sessionDraft);
+    check('Full storage reports session-only retention and keeps the enquiry editable');
+    await closeContext(fullContext);
 
     for (const [label, options, route, locale] of [
       ['Bulgarian locale', { locale: 'bg' }, '/', 'bg'],

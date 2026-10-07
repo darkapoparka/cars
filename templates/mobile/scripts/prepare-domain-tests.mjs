@@ -4,6 +4,8 @@ const files = [
   'types',
   'messages.bg',
   'locale',
+  'showroom-config',
+  'locale-store',
   'vehicle-copy',
   'gallery',
   'filters',

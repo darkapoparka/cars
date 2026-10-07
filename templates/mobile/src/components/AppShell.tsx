@@ -1,5 +1,5 @@
 'use client';
-import { hydrateLocale, useLocale } from '@/lib/use-locale';
+import { hydrateLocale, syncLocale, useLocale } from '@/lib/use-locale';
 import { useEffect, useSyncExternalStore, type ReactNode } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -7,7 +7,7 @@ import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
 import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
-import { translate } from '@/lib/locale';
+import { showroomTitle } from '@/lib/showroom-config';
 import { getVehicle } from '@/lib/catalog';
 import { useMobileKeyboard } from '@/lib/use-mobile-keyboard';
 import { showroomNavigation as tabs } from './showroom-navigation';
@@ -117,11 +117,11 @@ export function AppShell({ children }: { children: ReactNode }) {
     hydrateStore();
     hydrateLocale();
     window.addEventListener('storage', syncStorage);
-    window.addEventListener('storage', hydrateLocale);
+    window.addEventListener('storage', syncLocale);
     window.addEventListener('popstate', hydrateLocale);
     return () => {
       window.removeEventListener('storage', syncStorage);
-      window.removeEventListener('storage', hydrateLocale);
+      window.removeEventListener('storage', syncLocale);
       window.removeEventListener('popstate', hydrateLocale);
     };
   }, []);
@@ -139,7 +139,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           : pathname === '/car-park'
             ? 'Saved cars'
             : 'Cars';
-    const title = translate(page, locale) + ' — ' + translate('Your showroom', locale);
+    const title = showroomTitle(page, locale);
     const syncTitle = () => {
       if (document.title !== title) document.title = title;
     };

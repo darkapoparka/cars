@@ -8,7 +8,7 @@ not a second independently maintained implementation. Source changes do not
 select a fleet release or update an existing dealer; the Cars release lock and
 publisher remain the separate authority for those operations.
 
-Keep dealer identity and contact configuration in `src/lib/showroom.ts`, inventory
+Keep dealer identity and contact configuration in `src/lib/showroom-config.ts`, inventory
 in the catalog boundary, and presentation in the existing components and StyleX
 tokens. Architectural changes must not silently rewrite component markup,
 spacing, breakpoints, imagery or styling. Compare phone and desktop renders when
@@ -30,7 +30,7 @@ write is reported separately from session-only retention.
 
 `store.ts` is the React adapter and existing domain-action API. Components continue
 to use `useAppState` and named actions; they do not need to know about storage
-serialization or subscription internals. The persisted key remains
+serialization or subscription internals. The standalone template's persisted key remains
 `mobile-reference-v1`, so valid existing user data is retained. Toasts stay
 transient and are never restored from storage.
 
@@ -38,8 +38,22 @@ Cross-tab synchronization accepts only events for this store's localStorage area
 and key (including clear). It rereads current storage rather than replaying a
 possibly stale queued event value, and does not echo writes back to other tabs.
 This is browser-local, last-write-wins persistence, not a multi-user database or a
-transactional merge across simultaneous edits. Dealer instances sharing an origin
-and storage keys need an explicit isolation design before such hosting is adopted.
+transactional merge across simultaneous edits. `showroom.storageNamespace` sets a
+stable dealer slug. It isolates app state, language, Import/Sell drafts, and the
+inventory return/scroll records. Never include a release SHA in this namespace:
+updating the renderer must preserve the dealer's existing data. Namespaced dealers
+never hydrate or migrate the standalone template's private drafts. A personalized
+showroom must use its own namespace and disable example contact details; invalid
+configuration fails during the build. This prevents accidental key reuse; it does
+not create a security boundary between scripts hosted on the same origin.
+
+`locale-store.ts` owns the React-independent locale snapshot and browser storage
+synchronization. It accepts only the configured localStorage key/area, reads the
+latest preference, and never echoes a write from a storage event. A valid `?lang`
+override wins on that page; pages without the override follow the stored choice.
+The adapter in `use-locale.ts` preserves router state when updating shared links.
+Both server-rendered metadata and client browser titles derive the dealer name
+from the same configuration.
 
 Service request drafts keep their separate existing versioned serialization in
 `service-requests.ts`. The template's enquiry forms save local drafts; they do not
@@ -71,14 +85,17 @@ npx playwright install chromium webkit
 npm run qa:architecture
 ```
 
-The browser gate checks 320px, 390px and 1440px layouts, vehicle tabs, filter
+The browser gate checks Bulgarian and English at 320px, 390px and 1440px,
+all Services and vehicle tabs, desktop menu and filter
 application/cancellation, focus restoration, cross-tab saves, draft persistence,
 Bulgarian preference, corrupt and denied storage, image loading, horizontal
-overflow, and absence of application enquiry POSTs. It derives inventory counts
+overflow, cross-tab language overrides, full storage, and absence of application
+enquiry POSTs. It derives inventory counts
 from the current catalog rather than hardcoding the original four captured cars.
 `QA_URL` selects an already-running preview. `QA_ENGINE=chromium` or `webkit`
 selects a subset, which must not be reported as a two-engine pass.
 
+`QA_CAPTURE=1` retains matched page screenshots in the evidence directory.
 The latest report overwrites `.qa/architecture/report.json`; `QA_OUTPUT` can select
 an explicit evidence directory. Generated build directories, reports and logs are
 ignored. Keep useful failure evidence until it is understood, but do not commit

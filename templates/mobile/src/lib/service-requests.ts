@@ -5,6 +5,7 @@ import {
   type SaleEnquiryType,
 } from './showroom-services';
 import { translate, type Locale } from './locale';
+import { storageKeys } from './showroom-config';
 
 export type ServiceRequestKind = 'import' | 'sell';
 
@@ -108,7 +109,7 @@ export function seedServiceRequest(
 }
 
 export function serviceRequestStorageKey(kind: ServiceRequestKind) {
-  return 'cars-mobile-service-request-v1:' + kind;
+  return storageKeys.serviceRequests[kind];
 }
 
 export function serializeServiceRequest(kind: ServiceRequestKind, values: ServiceRequestValues) {

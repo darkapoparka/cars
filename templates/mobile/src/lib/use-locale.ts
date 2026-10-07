@@ -1,63 +1,24 @@
 'use client';
 import { useSyncExternalStore } from 'react';
-import {
-  defaultLocale,
-  localeMoney,
-  localeNumber,
-  translate,
-  validLocale,
-  type Locale,
-} from './locale';
+import { localeMoney, localeNumber, translate, validLocale, type Locale } from './locale';
+import { createLocaleStore } from './locale-store';
 
-const key = 'cars-mobile-language';
-const listeners = new Set<() => void>();
-let current: Locale = defaultLocale;
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  return () => {
-    listeners.delete(listener);
-  };
-}
-function publish(locale: Locale) {
-  if (current === locale) return;
-  current = locale;
-  listeners.forEach((listener) => listener());
-}
-export function hydrateLocale() {
-  const requested = new URLSearchParams(window.location.search).get('lang');
-  if (validLocale(requested)) {
-    publish(requested);
-    try {
-      localStorage.setItem(key, requested);
-    } catch {
-      /* The session remains usable. */
-    }
-    return;
-  }
-  try {
-    const saved = localStorage.getItem(key);
-    if (validLocale(saved)) publish(saved);
-  } catch {
-    /* Bulgarian remains the default without storage. */
-  }
-}
+const store = createLocaleStore({
+  isBrowser: () => typeof window !== 'undefined',
+  getStorage: () => window.localStorage,
+  getSearch: () => window.location.search,
+});
+export const hydrateLocale = store.hydrate;
+export const syncLocale = store.syncStorage;
 export function setLocale(locale: Locale) {
-  publish(locale);
-  try {
-    localStorage.setItem(key, locale);
-  } catch {
-    /* Keep the current session language. */
-  }
+  if (typeof window === 'undefined' || !validLocale(locale)) return;
+  store.set(locale);
   const url = new URL(window.location.href);
   url.searchParams.set('lang', locale);
   window.history.replaceState(window.history.state, '', url.pathname + url.search + url.hash);
 }
 export function useLocale() {
-  const locale = useSyncExternalStore(
-    subscribe,
-    () => current,
-    () => defaultLocale,
-  );
+  const locale = useSyncExternalStore(store.subscribe, store.getSnapshot, store.getServerSnapshot);
   return {
     locale,
     setLocale,

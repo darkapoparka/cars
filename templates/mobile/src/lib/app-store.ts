@@ -1,6 +1,7 @@
 import { createInitialState, decodeState, type State } from './persistence';
+import { storageKeys } from './showroom-config';
 
-export const appStateStorageKey = 'mobile-reference-v1';
+export const appStateStorageKey = storageKeys.appState;
 
 /** The domain store needs no React, DOM or global browser state. */
 export type StateStorage = {
@@ -16,7 +17,7 @@ export type StateStorageEvent = {
   storageArea: StateStorage | null;
 };
 
-export function createAppStore(environment: StoreEnvironment) {
+export function createAppStore(environment: StoreEnvironment, storageKey = appStateStorageKey) {
   const initial = createInitialState();
   let state = initial;
   let hydrated = false;
@@ -29,7 +30,7 @@ export function createAppStore(environment: StoreEnvironment) {
     if (!hydrated && environment.isBrowser()) {
       hydrated = true;
       try {
-        state = decodeState(environment.getStorage().getItem(appStateStorageKey));
+        state = decodeState(environment.getStorage().getItem(storageKey));
       } catch {
         // Denied storage must not prevent a usable in-memory session.
         state = createInitialState();
@@ -51,7 +52,7 @@ export function createAppStore(environment: StoreEnvironment) {
     state = { ...state, ...patch };
     let persisted = false;
     try {
-      environment.getStorage().setItem(appStateStorageKey, JSON.stringify({ ...state, toast: '' }));
+      environment.getStorage().setItem(storageKey, JSON.stringify({ ...state, toast: '' }));
       persisted = true;
     } catch {
       // Preserve this session's changes when storage is denied or full.
@@ -62,13 +63,13 @@ export function createAppStore(environment: StoreEnvironment) {
 
   function syncStorage(event: StateStorageEvent): boolean {
     if (!environment.isBrowser()) return false;
-    if (event.key !== appStateStorageKey && event.key !== null) return false;
+    if (event.key !== storageKey && event.key !== null) return false;
     try {
       const storage = environment.getStorage();
       // sessionStorage has its own events; they must not reset the app store.
       if (event.storageArea !== storage) return false;
       // Read the latest value, not a queued event's potentially stale newValue.
-      state = decodeState(storage.getItem(appStateStorageKey));
+      state = decodeState(storage.getItem(storageKey));
       hydrated = true;
     } catch {
       return false;

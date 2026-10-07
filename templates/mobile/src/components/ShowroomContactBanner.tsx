@@ -82,7 +82,7 @@ export function ShowroomContactBanner() {
       aria-label={t('Showroom location')}
       {...stylex.props(s.banner)}
     >
-      <picture aria-hidden="true" {...stylex.props(s.artwork)}>
+      <picture {...stylex.props(s.artwork)}>
         <source
           media="(max-width: 699px)"
           type="image/webp"

@@ -1,32 +1,7 @@
 import { normalizeFilters, serializeFilters } from './search';
 import type { Filters } from './types';
-
-type ShowroomConfig = {
-  name: string;
-  logo: string | null;
-  phone: string | null;
-  email: string | null;
-  address: string | null;
-  directionsUrl: string | null;
-  mapEmbedUrl: string | null;
-  socialLinks: readonly { label: string; href: string }[];
-  contactPreview: boolean;
-  hours: readonly string[];
-};
-
-// A neutral template placeholder. Add verified dealer details when personalizing.
-export const showroom: ShowroomConfig = {
-  name: 'Your showroom',
-  logo: '/branding/showroom-placeholder-20261002.png',
-  phone: null,
-  email: null,
-  address: null,
-  directionsUrl: null,
-  mapEmbedUrl: null,
-  socialLinks: [],
-  contactPreview: true,
-  hours: [],
-};
+import { showroom, storageKeys } from './showroom-config';
+export { showroom } from './showroom-config';
 
 // Example requested for the template preview; a configured dealer address takes precedence.
 export const showroomPreviewLocation = {
@@ -138,8 +113,8 @@ export function showroomInventoryHref(filters: Filters, sort = 'standard'): stri
 }
 
 type InventoryContext = { href: string; scrollY: number; vehicleId: string; vehicleIds?: string[] };
-const contextKey = 'cars-mobile-inventory-context';
-const restoreKey = 'cars-mobile-restore-inventory';
+const contextKey = storageKeys.inventoryContext;
+const restoreKey = storageKeys.restoreInventory;
 
 export function rememberInventory(vehicleId: string): void {
   try {

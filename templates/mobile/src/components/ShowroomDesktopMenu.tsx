@@ -133,6 +133,12 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
     function close() {
       setOpen(false);
     }
+    function dismissKeyboard(event: KeyboardEvent) {
+      if (event.key !== 'Escape') return;
+      event.preventDefault();
+      close();
+      trigger.current?.focus({ preventScroll: true });
+    }
     function resize(event: MediaQueryListEvent) {
       if (event.matches) return;
       if (root.current?.contains(document.activeElement)) {
@@ -144,10 +150,12 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
       close();
     }
     document.addEventListener('pointerdown', dismiss);
+    document.addEventListener('keydown', dismissKeyboard);
     window.addEventListener('popstate', close);
     desktop.addEventListener('change', resize);
     return () => {
       document.removeEventListener('pointerdown', dismiss);
+      document.removeEventListener('keydown', dismissKeyboard);
       window.removeEventListener('popstate', close);
       desktop.removeEventListener('change', resize);
     };
@@ -165,12 +173,6 @@ export function ShowroomDesktopMenu({ overHero = false }: { overHero?: boolean }
       ref={root}
       onBlur={(event) => {
         if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
-      }}
-      onKeyDown={(event) => {
-        if (event.key !== 'Escape' || !open) return;
-        event.preventDefault();
-        setOpen(false);
-        trigger.current?.focus({ preventScroll: true });
       }}
       {...stylex.props(s.root, open && s.rootOpen)}
     >
