@@ -11,6 +11,18 @@ const pattern = process.env.MODEL_CASE ? new RegExp(process.env.MODEL_CASE) : nu
 await mkdir(output, { recursive: true });
 const browser = engine === 'webkit' ? await webkit.launch({ headless: true }) : await launchBrowser();
 const results = [];
+async function checkRootGrid(menu, next, compact, stock) {
+  const reset = menu.locator('.all-models');
+  assert.equal(await reset.count(), 1, 'The root has one All models choice');
+  assert.match(await reset.locator('small').innerText(), new RegExp(`^${stock} `), 'All models counts only the chosen makes');
+  const [first, second] = await Promise.all([reset.locator('label'), next].map(node => node.boundingBox()));
+  assert(Math.abs(first.width - second.width) < 1 && first.height >= 44 && second.height >= 44, 'Reset and catalogue choices share usable card sizes');
+  if (compact) {
+    assert(Math.abs(first.x - second.x) < 1 && Math.abs(second.y - first.y - first.height - 8) < 1, 'The compact picker retains its single column');
+  } else {
+    assert(Math.abs(first.y - second.y) < 1 && Math.abs(second.x - first.x - first.width - 8) < 1, 'The first catalogue card fills the cell beside All models');
+  }
+}
 async function checkModelHeader(menu, label) {
   const header = menu.locator('.dn-picker-header');
   const back = header.locator('.back');
@@ -58,11 +70,13 @@ try {
       assert.deepEqual((await menu.locator('[data-model-family]').evaluateAll(nodes => nodes.map(node => node.dataset.modelFamily))).slice(0, 8), Array.from({ length: 8 }, (_, i) => `${i + 1} Series`));
       assert.equal(await menu.getByRole('checkbox', { name: '320', exact: true }).count(), 0, 'Collapsed families do not mount thousands of checkbox rows');
       assert.match(await menu.locator('[data-model-family="X Series"]').innerText(), /2/);
+      await checkRootGrid(menu, menu.locator('[data-model-family="1 Series"]'), nested, 2);
       const before = await footer().boundingBox();
       const pageScroll = await page.evaluate(() => scrollY);
       await menu.locator('[data-model-family="3 Series"]').press('Enter');
       assert(await menu.locator('[data-model-view="3 Series"]').isVisible(), 'Keyboard opens a focused family');
       assert.equal(await menu.locator('[data-model-family]').count(), 0, 'Only the chosen family is displayed');
+      assert.equal(await menu.locator('.all-models').count(), 0, 'All models is not repeated inside a family');
       assert.equal(await menu.getByRole('checkbox', { name: '118', exact: true }).count(), 0, 'Other families are not mixed into the model list');
       assert(await menu.locator('.back').evaluate(node => node === document.activeElement), 'Entering a family places keyboard focus on Back');
       await checkModelHeader(menu, 'BMW / 3 Series');
@@ -101,6 +115,7 @@ try {
       await menu.locator('[data-model-family="3 Series"]').click();
       assert(await menu.getByRole('checkbox', { name: '320', exact: true }).isChecked(), 'Changing families retains selected models');
       await search().fill('118');
+      assert.equal(await menu.locator('.all-models').count(), 0, 'Search only shows matching model choices');
       assert.equal(await menu.locator('[data-model-family]').count(), 0, 'Search goes directly to matching model choices');
       await menu.getByRole('checkbox', { name: '118', exact: true }).uncheck();
       await search().fill('');
@@ -142,9 +157,28 @@ try {
       }
       const allMenu = page.locator(nested ? '.dn-filter-picker' : '#dn-listing-filter-dialog');
       assert(await allMenu.getByRole('checkbox').count() < 10, 'All makes does not render the complete leaf catalogue at once');
+      await checkRootGrid(allMenu, allMenu.locator('[data-model-make]').first(), nested, 7);
       await allMenu.locator('[data-model-make="BMW"]').click();
       assert(await allMenu.locator('[data-model-family="1 Series"]').isVisible());
       assert.equal(await allMenu.locator('[data-model-make]').count(), 0, 'Entering BMW replaces the brand list');
+      assert.equal(await allMenu.locator('.all-models').count(), 0, 'The global reset is not repeated inside a brand');
+      await allMenu.locator('.back').click();
+      await allMenu.locator('[data-model-make="Audi"]').click();
+      assert.equal(await allMenu.locator('.all-models').count(), 0, 'Audi also begins directly with its model groups');
+      await allMenu.locator('[data-model-family="A1"]').click();
+      await allMenu.getByRole('checkbox', { name: 'A1', exact: true }).check();
+      await allMenu.locator('.back').click();
+      await allMenu.locator('.back').click();
+      const reset = allMenu.locator('.all-models input');
+      assert.equal(await reset.isChecked(), false, 'The root reset reflects a pending model selection');
+      await reset.check();
+      assert(await reset.isChecked(), 'All models clears the pending model selection');
+      await allMenu.locator('[data-model-make="Audi"]').click();
+      await allMenu.locator('[data-model-family="A1"]').click();
+      assert.equal(await allMenu.getByRole('checkbox', { name: 'A1', exact: true }).isChecked(), false, 'Clearing at the root also clears selections in other brands');
+      await allMenu.locator('.back').click();
+      await allMenu.locator('.back').click();
+      await allMenu.locator('[data-model-make="BMW"]').click();
       await allMenu.getByRole('searchbox').fill('Mercedes GT Coupé');
       assert(await allMenu.getByRole('checkbox', { name: 'Mercedes-AMG GT Coupé', exact: true }).isVisible(), 'Search crosses brands and opens the relevant family');
       await allMenu.getByRole('checkbox', { name: 'Mercedes-AMG GT Coupé', exact: true }).check();

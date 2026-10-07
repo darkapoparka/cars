@@ -84,21 +84,22 @@
 </script>
 
 {#snippet families(group: ModelMake)}
-  <div class="families">
-    {#each group.families as family (family.name)}
-      {#if family.choices.length === 1 && family.choices[0].label === family.name}
-        {@const choice = family.choices[0]}
-        <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple tile={!compact} {name} {onchange} />
-      {:else}
-        <button type="button" class="disclosure" class:selected={hasSelection(family)} data-model-family={family.name} data-model-key={familyKey(group.make, family.name)} onclick={() => enter(group.make, family.name)}>
-          <span class="disclosure-label">{family.name}</span>{#if hasSelection(family)}<span class="selection-mark" aria-hidden="true">✓</span>{/if}<small>{vehicleCount(i18n.locale, family.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
-        </button>
-      {/if}
-    {/each}
-  </div>
+  {#each group.families as family (family.name)}
+    {#if family.choices.length === 1 && family.choices[0].label === family.name}
+      {@const choice = family.choices[0]}
+      <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple tile={!compact} {name} {onchange} />
+    {:else}
+      <button type="button" class="disclosure" class:selected={hasSelection(family)} data-model-family={family.name} data-model-key={familyKey(group.make, family.name)} onclick={() => enter(group.make, family.name)}>
+        <span class="disclosure-label">{family.name}</span>{#if hasSelection(family)}<span class="selection-mark" aria-hidden="true">✓</span>{/if}<small>{vehicleCount(i18n.locale, family.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
+      </button>
+    {/if}
+  {/each}
 {/snippet}
 
 <div bind:this={root} class="dn-model-groups" class:compact style:min-height={paneHeight ? `${paneHeight}px` : undefined} role="group" aria-label={i18n.t('inventory.facet.model')}>
+  {#if !searching && !currentFamily && (!currentMake || singleMake)}
+    <div class="all-models"><DesktopFilterChoice value="" label={i18n.t('inventory.search.allModels')} accessibleLabel={i18n.t('inventory.search.allModels')} description={vehicleCount(i18n.locale, total)} checked={!selected.length} multiple tile={!compact} {name} {onchange} /></div>
+  {/if}
   {#if searching}
     {#each groups as group (group.make)}
       {#each group.families as family (family.name)}
@@ -119,11 +120,9 @@
         {/each}
       </div>
     {:else}
-      <div class="all-models"><DesktopFilterChoice value="" label={i18n.t('inventory.search.allModels')} accessibleLabel={i18n.t('inventory.search.allModels')} description={vehicleCount(i18n.locale, total)} checked={!selected.length} multiple tile={!compact} {name} {onchange} /></div>
       {@render families(currentMake)}
     {/if}
   {:else}
-    <div class="all-models"><DesktopFilterChoice value="" label={i18n.t('inventory.search.allModels')} accessibleLabel={i18n.t('inventory.search.allModels')} description={vehicleCount(i18n.locale, total)} checked={!selected.length} multiple tile={!compact} {name} {onchange} /></div>
     {#each catalogue as group (group.make)}
       <button type="button" class="disclosure make-title" class:selected={group.families.some(hasSelection)} data-model-make={group.make} data-model-key={familyKey(group.make)} onclick={() => enter(group.make)}>
         <span class="disclosure-label">{group.make}</span>{#if group.families.some(hasSelection)}<span class="selection-mark" aria-hidden="true">✓</span>{/if}<small>{vehicleCount(i18n.locale, group.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
@@ -136,10 +135,9 @@
 </div>
 
 <style>
-  .dn-model-groups, .families, .models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: var(--dn-space-2); min-width: 0; }
+  .dn-model-groups, .models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: var(--dn-space-2); min-width: 0; }
   .dn-model-groups { align-self: start; }
-  .all-models, .families, .models, .search-group, .empty { grid-column: 1 / -1; }
-  .all-models { width: calc(50% - var(--dn-space-1)); }
+  .models, .search-group, .empty { grid-column: 1 / -1; }
   .disclosure { display: flex; align-items: center; gap: var(--dn-space-2); width: 100%; min-width: 0; min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-field-font); text-align: left; cursor: pointer; }
   .disclosure-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
   small { flex: none; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-ui); white-space: nowrap; }
@@ -153,8 +151,7 @@
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
   .make-title { font: var(--dn-control-font); }
   .empty { padding: var(--dn-space-3); color: var(--dn-muted); font: var(--dn-field-font); }
-  .compact, .compact .families, .compact .models { grid-template-columns: minmax(0, 1fr); }
-  .compact .all-models { width: 100%; }
+  .compact, .compact .models { grid-template-columns: minmax(0, 1fr); }
   .compact .disclosure { background: transparent; }
   .compact .disclosure:hover { background: var(--dn-surface-subtle); }
 </style>

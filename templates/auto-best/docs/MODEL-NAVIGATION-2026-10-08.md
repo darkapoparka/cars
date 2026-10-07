@@ -20,6 +20,14 @@ The header follow-up passed all 18 Chromium cases with normal motion and 18 WebK
 
 Iteration checks caught short-path clipping, limited compact-header space and the oversized initial viewport measurement; these were fixed before the final suites. One early WebKit run did not open its initial Make menu and reported no JavaScript errors; a focused repeat and the final full run passed. Failed/intermediate evidence remains in the ignored artifact folders. Native browser captures show Audi/A1 and a matched BMW 3 Series before/after, with the separate navigation row removed. Follow-up evidence is in `artifacts/desktop-model-header-*` and `runtime/auto-best-model-header-2026-10-08-01a115ed/`.
 
+## Root choice and grid follow-up
+
+`All models` now appears once at the editor's root: the brand list, or the family list when one make is already selected. Entering a brand from the brand list starts directly with its groups. The reset no longer repeats inside each brand, where its global inventory count could be mistaken for that brand's stock. Family views and search retain their direct model choices. The outer Model field still means that no specific model filter has been chosen; browsing a group does not apply a selection.
+
+The reset and first actual brand/family now share the same two-column grid row, with equal card widths and the existing 8px gap. Removing the separate family grid eliminates the empty cell beside the half-width reset. The compact nested editor keeps its single column. The established widths, header, footer, opening motion, catalogue and mobile editor are unchanged.
+
+The updated focused suite checks root placement and stock counts, reset absence after brand/family drilldown and during search, and clearing pending selections across brands. All 18 Chromium and 18 WebKit cases passed, including the 99-choice fixtures. The six filter-code cases and final ten Home cases passed. The initial Home run stopped at its open-field background assertion in EN/1440; that focused case and the final complete run passed without source changes. Root and BMW captures plus run records are saved in `runtime/auto-best-model-grid-2026-10-08-01a115ed/`; model screenshots remain in `artifacts/desktop-model-grid-*`.
+
 ## Verification
 
 The updated `scripts/desktop-model-groups-smoke.mjs` covers focused family navigation, stationary frame/footer/page, Back and focus restoration, selection retention across families, direct search, zero-stock application, cancellation and legacy stock URLs in BG/EN across all three surfaces. A browser-only fixture adds 80 model choices to BMW 3 Series, producing a 99-choice family without changing source data. It checks the last model, scrolling, sticky Back, retained selection and exact search.
