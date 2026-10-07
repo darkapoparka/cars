@@ -455,11 +455,8 @@ async function run(name, engine) {
             .locator('[data-desktop-picker-open="make"]')
             .boundingBox();
           assert.ok(
-            searchBounds &&
-              makeBounds &&
-              searchBounds.x < makeBounds.x &&
-              searchBounds.y < makeBounds.y + makeBounds.height,
-            'Keyword search must come first in the top row',
+            searchBounds && makeBounds && searchBounds.y + searchBounds.height <= makeBounds.y,
+            'Keyword search must span the body above the vehicle controls',
           );
           assert.equal(
             await dialog.locator('section[aria-label]').first().getAttribute('aria-label'),

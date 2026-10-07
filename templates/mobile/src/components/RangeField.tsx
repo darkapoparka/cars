@@ -94,6 +94,27 @@ const s = stylex.create({
     '::-webkit-inner-spin-button': { appearance: 'none' },
   },
   unit: { fontSize: 14, flexShrink: 0 },
+  groupedRail: { height: 48 },
+  groupedInputs: {
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    gap: 0,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+  },
+  groupedField: {
+    minHeight: 52,
+    borderWidth: 0,
+    borderRadius: 10,
+    backgroundColor: 'transparent',
+  },
+  groupedEnd: {
+    borderInlineStartWidth: 1,
+    borderInlineStartStyle: 'solid',
+    borderInlineStartColor: colors.cardLine,
+  },
   comfortableRoot: { fontSize: 16 },
   comfortableTitle: {
     fontSize: { default: 16, '@media (min-width: 700px)': 18 },
@@ -130,6 +151,7 @@ type Props = {
   unit?: string;
   comfortable?: boolean;
   hideHeading?: boolean;
+  grouped?: boolean;
   onChange: (min: string, max: string) => void;
 };
 export function RangeField({
@@ -142,6 +164,7 @@ export function RangeField({
   unit = '',
   comfortable = false,
   hideHeading = false,
+  grouped = false,
   onChange,
 }: Props) {
   const { t, number } = useLocale();
@@ -206,7 +229,7 @@ export function RangeField({
       )}
       <div
         data-range-track={label}
-        {...stylex.props(s.rail)}
+        {...stylex.props(s.rail, grouped && s.groupedRail)}
         onPointerDown={(event) => {
           if (event.target instanceof HTMLInputElement) return;
           const value = point(event);
@@ -269,8 +292,17 @@ export function RangeField({
           {...stylex.props(s.slider)}
         />
       </div>
-      <div {...stylex.props(s.inputs, comfortable && s.comfortableInputs)}>
-        <label {...stylex.props(s.field, comfortable && s.comfortableField, controls.fieldFocus)}>
+      <div
+        {...stylex.props(s.inputs, comfortable && s.comfortableInputs, grouped && s.groupedInputs)}
+      >
+        <label
+          {...stylex.props(
+            s.field,
+            comfortable && s.comfortableField,
+            grouped && s.groupedField,
+            controls.fieldFocus,
+          )}
+        >
           {comfortable ? (
             <>
               <span {...stylex.props(s.fieldLabel)}>{t('From')}</span>
@@ -280,7 +312,15 @@ export function RangeField({
             numericInput('from')
           )}
         </label>
-        <label {...stylex.props(s.field, comfortable && s.comfortableField, controls.fieldFocus)}>
+        <label
+          {...stylex.props(
+            s.field,
+            comfortable && s.comfortableField,
+            grouped && s.groupedField,
+            grouped && s.groupedEnd,
+            controls.fieldFocus,
+          )}
+        >
           {comfortable ? (
             <>
               <span {...stylex.props(s.fieldLabel)}>{t('To')}</span>

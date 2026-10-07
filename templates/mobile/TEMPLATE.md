@@ -67,9 +67,12 @@ inventory layout. Home and Saved cars share that grid; vehicle and enquiry actio
 bars use the same frame bounds. Cards use 18px titles, 14px facts and 22px prices
 with distinct weights. These choices apply from 1024px; smaller screens retain
 their existing composition. Responsive listing image sizes follow the wider grid.
-In desktop All filters, keyword search comes first in visual and DOM order,
-before Make and Model. The existing fixed footer applies the draft; Escape still
-cancels and restores the opener.
+In desktop All filters, keyword search spans the modal body beneath the title
+and close control. Two quiet surfaces group make/model and numeric ranges, then
+fuel, gearbox, body type and condition. From/To share one outlined field; checkbox
+options use plain rows within their group. These compact styles apply only to
+All filters; phone editors and desktop quick popovers retain their presentation.
+The fixed footer applies the draft; Escape cancels and restores the opener.
 Desktop Services uses three equal glass segments in a compact 48px rail with
 14px labels, 44px targets, uniform translucent edges and a stable width across selection.
 The rail stays smaller than the 60px search field. The phone Services tabs retain their

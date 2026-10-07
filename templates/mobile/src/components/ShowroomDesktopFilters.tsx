@@ -21,6 +21,7 @@ import {
 } from './ShowroomDesktopFilterFields';
 import { ShowroomDesktopFilterDialog } from './ShowroomDesktopFilterDialog';
 import { Icon } from './Icon';
+import { ui } from './ui';
 import { desktopFilterStyles as s } from './showroom-desktop-filters.stylex';
 
 type Props = DesktopFilterFieldsProps & {
@@ -112,11 +113,15 @@ export function ShowroomDesktopFilters({
     >
       {all ? (
         <div {...stylex.props(s.overview)}>
-          <div {...stylex.props(s.overviewLead)}>
-            <section aria-label={t('Search')} {...stylex.props(s.fieldGroup)}>
-              <h3 {...stylex.props(s.fieldTitle)}>{t('Search')}</h3>
-              <ShowroomDesktopFilterFields {...fields} section="search" compact />
-            </section>
+          <section
+            aria-label={t('Search')}
+            data-desktop-filter-query
+            {...stylex.props(s.fieldGroup)}
+          >
+            <h3 {...stylex.props(ui.srOnly)}>{t('Search')}</h3>
+            <ShowroomDesktopFilterFields {...fields} section="search" compact />
+          </section>
+          <div data-desktop-filter-group="vehicle" {...stylex.props(s.overviewPanel)}>
             <div
               {...stylex.props(
                 s.makeModelSummary,
@@ -153,10 +158,23 @@ export function ShowroomDesktopFilters({
                 </button>
               )}
             </div>
+            <div {...stylex.props(s.overviewGrid)}>
+              {desktopFilterSections
+                .filter(({ key }) => ['price', 'year', 'mileage'].includes(key))
+                .map(({ key, label }) => (
+                  <section key={key} aria-label={t(label)} {...stylex.props(s.fieldGroup)}>
+                    <h3 {...stylex.props(s.fieldTitle)}>{t(label)}</h3>
+                    <ShowroomDesktopFilterFields {...fields} section={key} compact />
+                  </section>
+                ))}
+            </div>
           </div>
-          <div {...stylex.props(s.overviewGrid)}>
+          <div
+            data-desktop-filter-group="specifications"
+            {...stylex.props(s.overviewPanel, s.overviewOptions)}
+          >
             {desktopFilterSections
-              .filter(({ key }) => key !== 'make' && key !== 'search')
+              .filter(({ key }) => ['fuel', 'transmission', 'body', 'condition'].includes(key))
               .map(({ key, label }) => (
                 <section key={key} aria-label={t(label)} {...stylex.props(s.fieldGroup)}>
                   <h3 {...stylex.props(s.fieldTitle)}>{t(label)}</h3>

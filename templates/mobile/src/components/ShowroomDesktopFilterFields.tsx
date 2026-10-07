@@ -64,6 +64,7 @@ export function ShowroomDesktopFilterFields({
       <RangeField
         comfortable
         hideHeading
+        grouped={compact}
         label={t(label)}
         floor={floor}
         ceiling={ceiling}
@@ -84,12 +85,17 @@ export function ShowroomDesktopFilterFields({
     return options.length ? (
       <fieldset {...stylex.props(s.group)}>
         <legend {...stylex.props(ui.srOnly)}>{t(label)}</legend>
-        <div {...stylex.props(s.choices)}>
+        <div {...stylex.props(s.choices, compact && s.flatChoices)}>
           {options.map((value) => (
             <CheckRow
               key={value}
               checked={draft[field].includes(value)}
-              xstyle={[s.choice, draft[field].includes(value) && s.selected]}
+              xstyle={[
+                s.choice,
+                draft[field].includes(value) && s.selected,
+                compact && s.flatChoice,
+                compact && draft[field].includes(value) && s.flatSelected,
+              ]}
               checkboxStyle={s.checkbox}
               onChange={(checked) =>
                 onChange({
