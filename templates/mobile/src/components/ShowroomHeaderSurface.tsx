@@ -9,11 +9,7 @@ const s = stylex.create({
     display: { default: 'contents', '@media (max-width: 699px)': 'block' },
     position: { default: 'static', '@media (max-width: 699px)': 'relative' },
     zIndex: { default: 'auto', '@media (max-width: 699px)': 26 },
-    backgroundColor: colors.background,
-    boxShadow: {
-      default: 'none',
-      '@media (max-width: 699px)': '0 4px 8px rgba(23, 32, 43, 0.12)',
-    },
+    backgroundColor: { default: colors.background, '@media (max-width: 699px)': '#1b1b21' },
   },
 });
 

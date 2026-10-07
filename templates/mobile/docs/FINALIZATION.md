@@ -6,6 +6,15 @@ Preserve the reviewed design, the Next.js App Router, React, TypeScript, StyleX,
 Node 22.x and the npm lockfile. Reopen engineering work for a demonstrated defect,
 a required dependency patch, or an explicit product request.
 
+The owner's 7 October visual refinement groups phone Home search and category
+tabs on graphite, removes the quick-filter strip/shadows, and retains the original
+logo, category artwork, listing photos and navigation. Desktop Services has equal
+44px glass segments with uniform insets and no width jump on selection. Showroom
+cards retain year, mileage, fuel and gearbox at every viewport using CSS wrapping;
+per-card resize observers and hidden-fact state are removed. The phone price has
+a clearer weight. Browser acceptance checks readable facts and segment geometry
+in BG/EN in addition to the existing interaction and storage gates.
+
 ## Dealer configuration
 
 Edit `src/lib/showroom-config.ts` for the dealer's name, actual logo, verified

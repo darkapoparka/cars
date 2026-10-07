@@ -37,7 +37,7 @@ const s = stylex.create({
   inventory: {
     display: 'flex',
     minHeight: { default: '100svh', '@media (min-width: 1024px)': 0 },
-    backgroundColor: { default: colors.stripe, '@media (min-width: 1024px)': colors.background },
+    backgroundColor: colors.background,
   },
   phoneResults: {
     display: {

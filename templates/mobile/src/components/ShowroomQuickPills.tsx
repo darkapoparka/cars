@@ -32,7 +32,7 @@ const s = stylex.create({
     marginInline: 0,
     borderRadius: 0,
     backgroundColor: {
-      default: colors.stripe,
+      default: colors.background,
       '@media (min-width: 1024px)': 'transparent',
     },
   },
@@ -77,7 +77,7 @@ const s = stylex.create({
     },
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: { default: 'transparent', '@media (min-width: 1024px)': colors.line },
+    borderColor: { default: colors.cardLine, '@media (min-width: 1024px)': colors.line },
     borderRadius: {
       default: 18,
       '@media (max-width: 699px)': 20,
@@ -86,11 +86,6 @@ const s = stylex.create({
     backgroundColor: {
       default: colors.background,
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
-    },
-    boxShadow: {
-      default: '0 1px 4px rgba(27, 27, 33, 0.06)',
-      '@media (max-width: 699px)': '0 1px 4px rgba(27, 27, 33, 0.12)',
-      '@media (min-width: 1024px)': 'none',
     },
     color: colors.text,
     fontSize: { default: 14, '@media (max-width: 699px)': 16 },
@@ -131,7 +126,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': 19,
     },
     borderColor: {
-      default: 'transparent',
+      default: colors.cardLine,
       '@media (min-width: 1024px)': { default: colors.cardLine, ':hover': colors.line },
     },
     backgroundColor: {

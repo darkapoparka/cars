@@ -15,7 +15,9 @@ Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
 On Cars and Services, the logo header and search scroll with the page. On Cars,
 the category tabs also scroll away, leaving only the quick-filter pills pinned
-above a white results sheet with rounded upper corners on phones. Applying
+above the continuous white results canvas on phones. The phone Home header groups
+the retained logo, search and vehicle categories on graphite; light image backing
+keeps the original category artwork readable. Applying
 filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
 area, including short and empty result lists. Services retains its pinned category
 tabs and quick-filter pills. Its phone category rail sits flush below search;
@@ -58,7 +60,10 @@ Individual service choices remain on the Services page. The menu retains the
 current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
-Phones keep their existing header, floating dock, spacing and navigation behavior.
+Phones keep their floating dock, spacing and navigation behavior.
+Desktop Services uses three equal glass segments with 44px targets, uniform
+insets and a stable width across selection. The phone Services tabs retain their
+underline composition.
 
 Desktop inventory uses compact, natural-width pills for Year, Mileage, Fuel,
 Gearbox, Body type and Condition in a soft gray sticky rail. White 36px faces
@@ -77,22 +82,21 @@ Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
 fields and secondary actions. Inactive quick-filter
-pills use the white page token with a soft shadow and transparent border. Applied or selected pills invert the
+pills use the white page token with a faint border and no shadow. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
-matches the fill, without a shadow. Phone quick pills use 36px faces, 14px labels
-and at least 44px tap targets. Their lighter shadow keeps them secondary to the
-raised category rail; the regular phone rows retain 16px above and below each
-face. Both selected and inactive pills retain the same geometry. Desktop
-inventory keeps 36px faces and 44px targets; other desktop pill rows retain their
-40px faces and 48px targets.
+matches the fill, without a shadow. Phone Cars pills use 40px faces and 16px
+labels; secondary Services pills use 36px faces and 14px labels. Both keep 48px
+tap targets and the same geometry when selected. Desktop inventory pills use
+38px faces and 44px targets. Their flat presentation keeps them secondary to
+search and category navigation.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
 White vehicle cards use a faint 1px `colors.cardLine` edge and a low-opacity
 neutral shadow, retaining their geometry while separating each listing from the
 white canvas. On phones, a `colors.background` results sheet sits beneath the
-quick pills with 24px upper corners, a quiet top shadow and 16px before the first
-card. The list retains the page's natural scroll; the pill row stays sticky above
+quick pills with 16px before the first card. Cars uses a continuous white canvas;
+Services retains its rounded upper sheet. The list retains the page's natural scroll; the pill row stays sticky above
 it. The edge token has a corresponding dark-theme value.
 Service and import cards, Contact panels and enquiry starters retain the same
 1px `colors.line` border. Existing corner radii and padding remain.
@@ -153,11 +157,11 @@ Phones retain the full-screen editor, scrolling tabs, stacked settings and
 full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Inventory photos sit inside a 12px white frame with 10px
-inner corners. The title and price share a wrapping row; the trim stays below,
-followed by one compact row of year, mileage and fuel badges. The row stays
-single-line across inventory, Saved and related cars. Long future values can
-truncate with their full text retained in the badge title; vehicle names can wrap.
-Power and transmission remain in the vehicle details.
+inner corners. Showroom cards place the name above compact year, mileage, fuel
+and gearbox badges, with the price below. Facts wrap naturally across inventory,
+Saved and related cars instead of hiding the gearbox on narrow screens.
+Phone prices use 20px, weight 600 for a clearer hierarchy. Vehicle names can wrap.
+Power remains in the vehicle details.
 Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
 
