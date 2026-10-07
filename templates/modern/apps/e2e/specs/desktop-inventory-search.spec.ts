@@ -116,10 +116,16 @@ for (const locale of ["bg", "en"] as const) {
       expect((await count.boundingBox())?.width).toBeLessThanOrEqual(1);
       const view = bar.locator('[data-slot="dealer-inventory-preview"]');
       const beforeScroll = await view.boundingBox();
+      const documentY =
+        (beforeScroll?.y ?? 0) + (await page.evaluate(() => scrollY));
       await page.evaluate(() => scrollTo(0, 300));
       await expect
-        .poll(async () => (await view.boundingBox())?.y)
-        .toBe(beforeScroll?.y);
+        .poll(
+          async () =>
+            ((await view.boundingBox())?.y ?? 0) +
+            (await page.evaluate(() => scrollY))
+        )
+        .toBe(documentY);
       await view.click();
       await expect(
         page.getByRole("menuitemradio", {
