@@ -168,7 +168,7 @@ const s = stylex.create({
     gridTemplateColumns: {
       default: 'minmax(0,1fr)',
       '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
-      '@media (min-width: 1024px)': 'repeat(4,minmax(0,1fr))',
+      '@media (min-width: 1024px)': showroomDesktop.inventoryColumns,
     },
   },
   note: {

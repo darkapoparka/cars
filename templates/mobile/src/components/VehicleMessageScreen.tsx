@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { saveMessageDraft, useAppState } from '@/lib/store';
 import { Header } from './Header';
@@ -132,8 +133,11 @@ const s = stylex.create({
     bottom: 0,
     left: { default: '50%', '@media (max-width: 699px)': 'auto' },
     transform: { default: 'translateX(-50%)', '@media (max-width: 699px)': 'none' },
-    maxWidth: 1100,
-    width: '100%',
+    maxWidth: { default: 1100, '@media (min-width: 1024px)': showroomDesktop.shellWidth },
+    width: {
+      default: '100%',
+      '@media (min-width: 1024px)': `calc(100% - ${showroomDesktop.viewportGutter} * 2)`,
+    },
     paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
     paddingTop: { default: 6, '@media (max-width: 699px)': 0 },
     paddingBottom: {

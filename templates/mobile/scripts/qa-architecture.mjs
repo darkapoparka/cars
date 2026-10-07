@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { setTimeout as delay } from 'node:timers/promises';
 import { chromium, webkit } from 'playwright';
 
 await import('./prepare-domain-tests.mjs');
@@ -19,6 +20,7 @@ await mkdir(output, { recursive: true });
 async function run(name, engine) {
   const browser = await engine.launch({ headless: true });
   const posts = [];
+  const network = new WeakMap();
   const check = (description) => report.checks.push({ engine: name, description });
   async function context(width = 390, options = {}) {
     const context = await browser.newContext({
@@ -52,10 +54,20 @@ async function run(name, engine) {
     );
     context.on('page', (page) => {
       page.setDefaultTimeout(15000);
+      const activity = { pending: new Set(), lastActivity: Date.now() };
+      network.set(page, activity);
+      const finished = (request) => {
+        activity.pending.delete(request);
+        activity.lastActivity = Date.now();
+      };
+      page.on('requestfinished', finished);
+      page.on('requestfailed', finished);
       page.on('pageerror', (error) =>
         report.errors.push({ engine: name, url: page.url(), message: error.message }),
       );
       page.on('request', (request) => {
+        activity.pending.add(request);
+        activity.lastActivity = Date.now();
         // Ignore a third-party map frame's telemetry, not application submissions.
         if (request.method() === 'POST' && request.frame() === page.mainFrame())
           posts.push(request.url());
@@ -63,13 +75,30 @@ async function run(name, engine) {
     });
     return context;
   }
+  async function quietNetwork(page) {
+    // networkidle may already be satisfied before React/Next schedules new links.
+    // Require a fresh quiet period after their layout and prefetch callbacks.
+    await page.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
+    const activity = network.get(page);
+    const started = Date.now();
+    while (activity.pending.size || Date.now() - Math.max(started, activity.lastActivity) < 600) {
+      assert.ok(
+        Date.now() - started < 45000,
+        'Network did not settle before navigation: ' +
+          [...activity.pending].map((request) => request.url()).join(', '),
+      );
+      await delay(50);
+    }
+  }
   async function closeContext(context) {
     // Finish background route prefetches before deliberately destroying their pages.
-    for (const page of context.pages()) await page.waitForLoadState('networkidle');
+    for (const page of context.pages()) await quietNetwork(page);
     await context.close();
   }
   async function go(page, route, locale = 'en') {
-    if (page.url().startsWith(base)) await page.waitForLoadState('networkidle', { timeout: 45000 });
+    if (page.url().startsWith(base)) await quietNetwork(page);
     const response = await page.goto(base + route, {
       waitUntil: 'domcontentloaded',
       timeout: 45000,
@@ -224,9 +253,99 @@ async function run(name, engine) {
       );
     }
   }
+  async function desktopFrame(page, label, inventory = false) {
+    // A stable scrollbar gutter can reserve space even when Chromium reports
+    // the full viewport as clientWidth. Measure the actual containing block.
+    await page.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
+    const frame = await page.locator('[data-hydrated]').evaluate((shell) => {
+      const { x, width } = shell.getBoundingClientRect();
+      const parent = shell.parentElement;
+      const css = getComputedStyle(parent);
+      const start = parseFloat(css.paddingLeft);
+      const end = parseFloat(css.paddingRight);
+      return {
+        x,
+        width,
+        available: parent.clientWidth - start - end,
+        origin: parent.getBoundingClientRect().x + start,
+        viewport: document.documentElement.clientWidth,
+      };
+    });
+    assert.ok(
+      Math.abs(frame.width - Math.min(1280, frame.available - 48)) <= 1,
+      label +
+        ' must use the shared desktop frame with safe outer gutters: ' +
+        JSON.stringify(frame),
+    );
+    assert.ok(
+      Math.abs(frame.x - (frame.origin + (frame.available - frame.width) / 2)) <= 1,
+      label + ' frame must remain centered',
+    );
+    if (inventory) {
+      const cards = await page.locator('[data-showroom-vehicle]').evaluateAll((cards) =>
+        cards.slice(0, 4).map((card) => {
+          const { x, y, width } = card.getBoundingClientRect();
+          return {
+            x,
+            y,
+            width,
+            title: getComputedStyle(card.querySelector('h2')).fontSize,
+            price: getComputedStyle(card.querySelector('strong')).fontSize,
+            facts: [...card.querySelectorAll('[data-vehicle-fact]')].map(
+              (fact) => getComputedStyle(fact).fontSize,
+            ),
+          };
+        }),
+      );
+      assert.ok(cards.length >= 3, label + ' needs three cards to verify the grid');
+      assert.equal(
+        cards.filter((card) => Math.abs(card.y - cards[0].y) < 1).length,
+        3,
+        label + ' must retain three readable columns',
+      );
+      assert.ok(
+        cards.every(
+          (card) =>
+            card.width >= 290 &&
+            card.title === '18px' &&
+            card.price === '22px' &&
+            card.facts.every((size) => size === '14px'),
+        ),
+        label + ' cards must retain readable desktop type and width',
+      );
+    }
+    check(
+      label + ': centered desktop frame' + (inventory ? ', three columns and readable type' : ''),
+    );
+  }
+  async function fixedFrameActions(page, label) {
+    await page.locator('[data-vehicle-contact-dock], [data-message-actions]').waitFor();
+    const failures = await page.locator('button, a').evaluateAll((actions) => {
+      const shell = document.querySelector('[data-hydrated]').getBoundingClientRect();
+      const docks = new Set(
+        actions
+          .map((action) => action.parentElement)
+          .filter(
+            (parent) =>
+              getComputedStyle(parent).position === 'fixed' &&
+              getComputedStyle(parent).bottom === '0px',
+          ),
+      );
+      return [...docks]
+        .filter((dock) => {
+          const bounds = dock.getBoundingClientRect();
+          return Math.abs(bounds.x - shell.x) > 1 || Math.abs(bounds.width - shell.width) > 1;
+        })
+        .map((dock) => ({ text: dock.textContent, width: dock.getBoundingClientRect().width }));
+    });
+    assert.deepEqual(failures, [], label + ' fixed actions must align with the shared frame');
+    check(label + ': fixed actions align with desktop frame');
+  }
   async function openContact(page) {
     await page.locator('[data-hydrated="true"]').waitFor();
-    await page.waitForLoadState('networkidle');
+    await quietNetwork(page);
     await page.evaluate(
       () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
     );
@@ -237,7 +356,7 @@ async function run(name, engine) {
     return message;
   }
   try {
-    for (const width of [320, 390, 1440]) {
+    for (const width of [320, 390, 768, 1024, 1280, 1366, 1440, 1920]) {
       for (const locale of ['en', 'bg']) {
         const t = (text) => translate(text, locale);
         const ctx = await context(width, { locale });
@@ -252,11 +371,12 @@ async function run(name, engine) {
         const detail = await first.locator('a[href^="/vehicle/"]').first().getAttribute('href');
         await geometry(page, 'Cars ' + width + ' ' + locale);
         await visibleVehicleFacts(page, 'Cars ' + width + ' ' + locale);
+        if (width >= 1024) await desktopFrame(page, 'Cars ' + width + ' ' + locale, true);
         const savedColor = await page
           .getByRole('link', { name: t('Saved cars'), exact: true })
           .evaluate((link) => getComputedStyle(link).color.match(/\d+/g).slice(0, 3).map(Number));
         assert.ok(
-          savedColor.every((channel) => (width === 1440 ? channel >= 200 : channel <= 100)),
+          savedColor.every((channel) => (width >= 1024 ? channel >= 200 : channel <= 100)),
           'Saved-car action must contrast with the Home header',
         );
         const categoryFrames = await page
@@ -276,7 +396,7 @@ async function run(name, engine) {
           );
         assert.deepEqual(categoryFrames, [], 'Original category artwork must remain unboxed');
         check('Home header contrast and unboxed category artwork: ' + width + ' ' + locale);
-        if (width === 1440) {
+        if (width >= 1024) {
           const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
           await menu.click();
           const navigation = page.getByRole('navigation', {
@@ -328,10 +448,83 @@ async function run(name, engine) {
           const opener = page.getByRole('button', { name: new RegExp('^' + t('All filters')) });
           await opener.click();
           await page.locator('dialog[open]').waitFor();
+          const dialog = page.locator('dialog[open]');
+          const search = dialog.getByRole('searchbox');
+          const searchBounds = await search.boundingBox();
+          const makeBounds = await dialog
+            .locator('[data-desktop-picker-open="make"]')
+            .boundingBox();
+          assert.ok(
+            searchBounds &&
+              makeBounds &&
+              searchBounds.x < makeBounds.x &&
+              searchBounds.y < makeBounds.y + makeBounds.height,
+            'Keyword search must come first in the top row',
+          );
+          assert.equal(
+            await dialog.locator('section[aria-label]').first().getAttribute('aria-label'),
+            t('Search'),
+          );
+          const conditionBounds = await dialog
+            .locator('section[aria-label="' + t('Condition') + '"]')
+            .boundingBox();
+          const contentBounds = await dialog
+            .locator('[data-desktop-filter-section="all"]')
+            .boundingBox();
+          assert.ok(
+            conditionBounds &&
+              contentBounds &&
+              conditionBounds.y + conditionBounds.height <= contentBounds.y + contentBounds.height,
+            'The normal All filters view must keep Condition visible without extra scrolling',
+          );
+          await search.fill('bmw');
           await page.keyboard.press('Escape');
           await page.locator('dialog[open]').waitFor({ state: 'hidden' });
           assert.equal(await opener.evaluate((el) => el === document.activeElement), true);
           check('Desktop filters open, dismiss and restore focus: ' + locale);
+          assert.equal(
+            new URL(page.url()).searchParams.has('query'),
+            false,
+            'Closing must discard keyword draft',
+          );
+          await opener.click();
+          await dialog.waitFor();
+          assert.equal(await search.inputValue(), '', 'Cancelled keyword draft must not reopen');
+          await search.fill('bmw');
+          await search.press('Enter');
+          await dialog.waitFor({ state: 'hidden' });
+          await page.waitForFunction(
+            () => new URL(location.href).searchParams.get('query') === 'bmw',
+          );
+          // The URL changes before React necessarily commits the filtered cards.
+          // Verify the results before the next deliberate document navigation.
+          await page.waitForFunction(() => {
+            const cards = [...document.querySelectorAll('[data-showroom-vehicle]')];
+            return (
+              cards.length > 0 &&
+              cards.every((card) => card.querySelector('h2')?.textContent?.startsWith('BMW'))
+            );
+          });
+          await go(page, '/', locale);
+          check(
+            'Desktop keyword search appears first, cancels drafts and applies with Enter: ' +
+              width +
+              ' ' +
+              locale,
+          );
+          for (const card of await page.locator('[data-showroom-vehicle]').all()) {
+            await card.locator('button').click();
+            if (
+              (await page
+                .locator('[data-showroom-vehicle] button[aria-pressed="true"]')
+                .count()) === 3
+            )
+              break;
+          }
+          await go(page, '/car-park', locale);
+          await cars(page, 3);
+          await desktopFrame(page, 'Saved cars ' + width + ' ' + locale, true);
+          await visibleVehicleFacts(page, 'Saved cars ' + width + ' ' + locale);
         }
         for (const [label, route] of [
           ['Services', '/services'],
@@ -340,13 +533,14 @@ async function run(name, engine) {
         ]) {
           await go(page, route, locale);
           await geometry(page, label + ' ' + width + ' ' + locale);
+          if (width >= 1024) await desktopFrame(page, label + ' ' + width + ' ' + locale);
           if (label === 'Services') {
             const segmentWidth =
-              width === 1440 ? await serviceSegment(page, 'Services ' + locale, locale) : null;
+              width >= 1024 ? await serviceSegment(page, 'Services ' + locale, locale) : null;
             for (const tab of ['Import', 'Sell', 'All']) {
               await page.getByRole('tab', { name: t(tab), exact: true }).click();
               await geometry(page, 'Services ' + tab + ' ' + width + ' ' + locale);
-              if (width === 1440) {
+              if (width >= 1024) {
                 const selectedWidth = await serviceSegment(
                   page,
                   'Services ' + tab + ' ' + locale,
@@ -369,9 +563,17 @@ async function run(name, engine) {
             await page.getByRole('tab', { name: tabName, exact: true }).click();
             await page.getByRole('tabpanel', { name: tabName, exact: true }).waitFor();
             await geometry(page, 'Vehicle ' + section + ' ' + width + ' ' + locale);
+            if (width >= 1024 && section === 'Features')
+              await fixedFrameActions(page, 'Vehicle ' + width + ' ' + locale);
           }
           assert.equal(await page.evaluate(() => history.length), historyLength);
           check('Vehicle sections preserve Back history: ' + width + ' ' + locale);
+        }
+        if (width >= 1024) {
+          await go(page, detail + '/message', locale);
+          await geometry(page, 'Vehicle enquiry ' + width + ' ' + locale);
+          await desktopFrame(page, 'Vehicle enquiry ' + width + ' ' + locale);
+          await fixedFrameActions(page, 'Vehicle enquiry ' + width + ' ' + locale);
         }
         await closeContext(ctx);
       }
@@ -395,7 +597,7 @@ async function run(name, engine) {
     check('Shared-link language stays explicit without echoing cross-tab preference writes');
     await shared.goto(base + '/');
     await shared.waitForFunction(() => document.documentElement.lang === 'bg');
-    await shared.waitForLoadState('networkidle');
+    await quietNetwork(shared);
     await other.evaluate((key) => localStorage.setItem(key, 'en'), storageKeys.language);
     await shared.waitForFunction(() => document.documentElement.lang === 'en');
     assert.equal(await shared.title(), showroomTitle('Cars', 'en'));
@@ -420,16 +622,16 @@ async function run(name, engine) {
     await savedPage.evaluate(
       () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
     );
-    await savedPage.waitForLoadState('networkidle');
+    await quietNetwork(savedPage);
     await savedPage.reload({ waitUntil: 'load' });
-    await savedPage.waitForLoadState('networkidle');
+    await quietNetwork(savedPage);
     await cars(savedPage, 1);
     await savedPage
       .locator('[data-showroom-vehicle]')
       .getByRole('button', { name: /^Remove .* from saved cars/ })
       .click();
     await save.waitFor();
-    await savedPage.waitForLoadState('networkidle');
+    await quietNetwork(savedPage);
     await savedPage.close();
     check('Saved cars synchronize both ways between tabs and survive reload');
 
@@ -457,7 +659,7 @@ async function run(name, engine) {
     await page.evaluate(
       () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
     );
-    await page.waitForLoadState('networkidle');
+    await quietNetwork(page);
     await page.reload({ waitUntil: 'load' });
     await cars(page, filtered);
     check('Filter cancellation preserves state/focus; applying search survives reload');
@@ -487,7 +689,7 @@ async function run(name, engine) {
     await page.keyboard.press('Escape');
     await page.locator('dialog[open]').waitFor({ state: 'hidden' });
     await page.waitForFunction(() => !new URL(location.href).searchParams.has('request'));
-    await page.waitForLoadState('networkidle');
+    await quietNetwork(page);
     check('The import wizard validates, saves locally and restores its draft');
 
     await go(page, '/contact');
@@ -562,13 +764,15 @@ async function run(name, engine) {
     await browser.close();
   }
 }
-for (const [name, engine] of engines) {
-  try {
-    await run(name, engine);
-  } catch (error) {
-    report.errors.push({ engine: name, message: error.stack || String(error) });
-  }
-}
+await Promise.all(
+  engines.map(async ([name, engine]) => {
+    try {
+      await run(name, engine);
+    } catch (error) {
+      report.errors.push({ engine: name, message: error.stack || String(error) });
+    }
+  }),
+);
 await writeFile(path.join(output, 'report.json'), JSON.stringify(report, null, 2) + '\n');
 console.log(
   JSON.stringify(

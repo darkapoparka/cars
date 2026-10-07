@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { Icon } from './Icon';
 import { Button, ui } from './ui';
 const s = stylex.create({
@@ -40,7 +41,10 @@ const s = stylex.create({
   },
   fab: {
     position: 'fixed',
-    right: 'max(16px, calc((100vw - 1100px) / 2 + 16px))',
+    right: {
+      default: 'max(16px, calc((100vw - 1100px) / 2 + 16px))',
+      '@media (min-width: 1024px)': `max(calc(${showroomDesktop.viewportGutter} + 16px), calc((100vw - ${showroomDesktop.shellWidth}) / 2 + 16px))`,
+    },
     bottom: 80,
     display: 'flex',
     alignItems: 'center',

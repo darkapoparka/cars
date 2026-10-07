@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
 import { colors, darkTheme } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { hydrateStore, notify, syncStorage, useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
 import { showroomTitle } from '@/lib/showroom-config';
@@ -16,7 +17,11 @@ const s = stylex.create({
     backgroundColor: colors.background,
     color: colors.text,
     minHeight: '100dvh',
-    maxWidth: 1100,
+    width: {
+      default: '100%',
+      '@media (min-width: 1024px)': `calc(100% - ${showroomDesktop.viewportGutter} * 2)`,
+    },
+    maxWidth: { default: 1100, '@media (min-width: 1024px)': showroomDesktop.shellWidth },
     marginInline: 'auto',
     position: 'relative',
     boxShadow: {

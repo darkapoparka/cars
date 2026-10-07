@@ -90,12 +90,9 @@ const s = stylex.create({
   },
   title: {
     minWidth: 0,
-    fontSize: { default: 18, '@media (max-width: 699px)': 17, '@media (min-width: 1024px)': 16 },
-    lineHeight: { default: '24px', '@media (min-width: 1024px)': '22px' },
-    fontWeight: {
-      default: 500,
-      '@media (min-width: 1024px)': 400,
-    },
+    fontSize: { default: 18, '@media (max-width: 699px)': 17 },
+    lineHeight: '24px',
+    fontWeight: 500,
     overflowWrap: 'anywhere',
   },
   titleText: {
@@ -114,8 +111,12 @@ const s = stylex.create({
   },
   price: {
     marginTop: { default: 0, '@media (min-width: 1024px)': 'auto' },
-    fontSize: 20,
-    lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
+    fontSize: { default: 20, '@media (min-width: 1024px)': 22 },
+    lineHeight: {
+      default: '26px',
+      '@media (max-width: 699px)': '24px',
+      '@media (min-width: 1024px)': '28px',
+    },
     fontWeight: {
       default: 700,
       '@media (min-width: 1024px)': 600,
@@ -131,8 +132,12 @@ const s = stylex.create({
     maxWidth: '100%',
     flexShrink: { default: 0, '@media (min-width: 1024px)': 1 },
     color: colors.muted,
-    fontSize: { default: 12, '@media (max-width: 699px)': 13 },
-    lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
+    fontSize: { default: 12, '@media (max-width: 699px)': 13, '@media (min-width: 1024px)': 14 },
+    lineHeight: {
+      default: '18px',
+      '@media (max-width: 699px)': '20px',
+      '@media (min-width: 1024px)': '20px',
+    },
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
@@ -166,7 +171,7 @@ export function ShowroomVehicleCard({
           alt={name}
           fill
           priority={priority}
-          sizes="(max-width: 699px) calc(100vw - 56px), 520px"
+          sizes="(min-width: 1328px) 380px, (min-width: 1024px) calc((100vw - 190px) / 3), (max-width: 699px) calc(100vw - 56px), 520px"
           {...stylex.props(s.image)}
         />
         <span {...stylex.props(s.save)}>

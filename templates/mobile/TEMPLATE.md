@@ -61,6 +61,15 @@ current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their floating dock, spacing and navigation behavior.
+The desktop page frame is capped at 1280px with at least 24px outer gutters.
+`showroom-desktop-tokens.stylex.ts` owns the frame width, gutters and three-column
+inventory layout. Home and Saved cars share that grid; vehicle and enquiry action
+bars use the same frame bounds. Cards use 18px titles, 14px facts and 22px prices
+with distinct weights. These choices apply from 1024px; smaller screens retain
+their existing composition. Responsive listing image sizes follow the wider grid.
+In desktop All filters, keyword search comes first in visual and DOM order,
+before Make and Model. The existing fixed footer applies the draft; Escape still
+cancels and restores the opener.
 Desktop Services uses three equal glass segments in a compact 48px rail with
 14px labels, 44px targets, uniform translucent edges and a stable width across selection.
 The rail stays smaller than the 60px search field. The phone Services tabs retain their
@@ -399,7 +408,7 @@ ready for phone testing. Its private GitHub publishing mirror is
 Vercel builds that repository on Node 22.x; its production branch is `main`.
 
 Cars `templates/mobile` remains the editable master. The publishing repository
-contains an exported source snapshot and `.cars-template-source.json` receipt.
+contains an exported source snapshot and `.template/source.json` receipt.
 Update the master first and publish a scoped export through the existing Cars
 source utilities, preserving the mirror's history. The separate
 `darkapoparka/cars-app-mobile` marketplace project is independently maintained.

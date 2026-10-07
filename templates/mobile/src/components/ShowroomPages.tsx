@@ -415,8 +415,12 @@ const s = stylex.create({
   },
   grid: {
     display: 'grid',
-    gridTemplateColumns: { default: '1fr', '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))' },
-    gap: 20,
+    gridTemplateColumns: {
+      default: '1fr',
+      '@media (min-width: 700px)': 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 1024px)': showroomDesktop.inventoryColumns,
+    },
+    gap: { default: 20, '@media (min-width: 1024px)': showroomDesktop.cardGap },
   },
   card: {
     backgroundColor: colors.background,

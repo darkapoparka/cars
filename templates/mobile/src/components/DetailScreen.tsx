@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
+import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
 import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/showroom';
@@ -297,8 +298,11 @@ const s = stylex.create({
     bottom: 0,
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '100%',
-    maxWidth: 1100,
+    width: {
+      default: '100%',
+      '@media (min-width: 1024px)': `calc(100% - ${showroomDesktop.viewportGutter} * 2)`,
+    },
+    maxWidth: { default: 1100, '@media (min-width: 1024px)': showroomDesktop.shellWidth },
     display: 'grid',
     gridTemplateColumns: 'minmax(0,1fr) auto',
     alignItems: 'center',
@@ -561,7 +565,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
             alt={v.make + ' ' + v.model}
             fill
             priority
-            sizes="(max-width: 1100px) 100vw, 1100px"
+            sizes="(min-width: 1328px) 1280px, (min-width: 1024px) calc(100vw - 48px), 100vw"
             {...stylex.props(
               s.image,
               showroomPhotoHasLetterbox(v.images[photoIndex]) && s.letterboxedImage,

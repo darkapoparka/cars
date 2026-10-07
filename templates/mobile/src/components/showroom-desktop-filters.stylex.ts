@@ -51,6 +51,12 @@ export const desktopFilterStyles = stylex.create({
     borderRadius: 10,
   },
   overview: { display: 'flex', flexDirection: 'column', gap: 24 },
+  overviewLead: {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) minmax(0,2fr)',
+    gap: 24,
+    alignItems: 'end',
+  },
   makeModelSummary: { display: 'grid', gridTemplateColumns: 'repeat(2,minmax(0,1fr))', gap: 12 },
   singleSummary: { gridTemplateColumns: 'minmax(0,1fr)' },
   disabledSummary: { opacity: 0.6, cursor: 'not-allowed' },
@@ -64,7 +70,6 @@ export const desktopFilterStyles = stylex.create({
   },
   fieldGroup: { display: 'flex', flexDirection: 'column', gap: 12, minWidth: 0 },
   fieldTitle: { fontSize: 15, fontWeight: 600, lineHeight: '22px' },
-  searchGroup: { gridColumn: 'span 2' },
   makeSummary: {
     display: 'flex',
     alignItems: 'center',

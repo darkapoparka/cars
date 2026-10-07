@@ -76,6 +76,13 @@ enquiry POSTs must remain absent. Retain matched before/after renders for any
 presentation-affecting change. A browser-emulated viewport is not physical-device
 certification or owner visual acceptance.
 
+The desktop frame and card readability gate also covers 1024, 1280, 1366 and
+1920px, plus tablet preservation at 768px. It checks centered frame bounds,
+three-column Home/Saved cards, readable facts and price hierarchy, fixed action
+bar alignment, and keyword search placement, cancellation and Enter submission
+in All filters. Keep the shared desktop geometry tokens as the source of frame
+and grid sizing; bounded editor/reading panels retain their own widths.
+
 The desktop menu handles Escape at the document boundary while open, including
 Safari pointer clicks that leave focus outside the button. Keyboard opening,
 Home/End, arrow wrapping and focus return are included in the same browser gate.
