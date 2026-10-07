@@ -57,11 +57,6 @@
     gap: calc(var(--spacing) * 4);
     align-items: center;
     justify-content: space-between;
-    width: calc(
-      100% +
-      var(--listing-purchase-column-width) +
-      var(--listing-column-gap)
-    );
     min-height: calc(var(--spacing) * 11);
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -293,7 +288,7 @@
   .detail :global([data-slot="listing-title-panel"]) {
     display: flex;
     gap: calc(var(--spacing) * 5);
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     min-width: 0;
     padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
@@ -302,6 +297,7 @@
     box-shadow: var(--desktop-surface-shadow);
   }
   .detail :global([data-slot="listing-title-panel"]) > div:first-child {
+    flex: 1;
     min-width: 0;
   }
   .detail :global([data-slot="listing-title-panel"]) p {
@@ -313,6 +309,7 @@
   }
   .detail :global([data-slot="listing-title-actions"]) {
     display: flex;
+    flex: none;
     flex-wrap: nowrap;
     gap: calc(var(--spacing) * 2);
     align-items: center;
@@ -324,15 +321,21 @@
     :global([data-slot="listing-title-actions"])
     :global([data-slot="listing-actions"])
     button {
-    width: auto;
+    position: static;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--spacing) * 11);
     height: calc(var(--spacing) * 11);
-    padding: 0 calc(var(--spacing) * 4);
-    font-size: calc(var(--spacing) * 3.5);
-    font-weight: var(--font-weight-normal);
-    background: var(--desktop-surface);
+    padding: 0;
+    background: var(--control);
     border: 0;
     border-radius: calc(var(--spacing) * 3);
-    box-shadow: var(--desktop-surface-shadow);
+    box-shadow: none;
+  }
+  .detail :global([data-slot="listing-title-actions"]) svg {
+    width: calc(var(--spacing) * 4.5);
+    height: calc(var(--spacing) * 4.5);
   }
   .detail :global([data-slot="listing-title-actions"]) button:hover {
     background: var(--desktop-control-neutral-hover);
@@ -452,9 +455,6 @@
 }
 
 @media (min-width: 1024px) and (max-width: 1199px) {
-  .detail :global([data-slot="listing-title-panel"]) {
-    flex-wrap: wrap;
-  }
   .detail :global([data-slot="listing-details-sections-desktop"]) dl {
     gap: calc(var(--spacing) * 5);
   }

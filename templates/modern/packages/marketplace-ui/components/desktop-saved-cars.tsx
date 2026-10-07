@@ -24,24 +24,28 @@ export function DesktopSaveCarButton({
   car,
   locale,
   presentation = "bookmark",
+  showTooltip = false,
 }: {
   car: DesktopSavedCar;
   locale?: string;
   presentation?: "bookmark" | "action";
+  showTooltip?: boolean;
 }) {
   const saved = useSavedCars().some((savedCar) => savedCar.id === car.id);
   const isBg = locale?.startsWith("bg");
   const saveLabel = isBg ? "Запази" : "Save";
   const removeLabel = isBg ? "Премахни" : "Unsave";
   const savedLabel = isBg ? "Запазен" : "Saved";
+  const actionLabel = saved ? removeLabel : saveLabel;
   return (
     <button
-      aria-label={`${saved ? removeLabel : saveLabel} ${car.title}`}
+      aria-label={`${actionLabel} ${car.title}`}
       aria-pressed={saved}
       className={styles.bookmark}
       data-presentation={presentation}
       data-slot="desktop-save-car"
       onClick={() => desktopSavedCarsStore.toggleCar(car)}
+      title={showTooltip ? actionLabel : undefined}
       type="button"
     >
       <Bookmark aria-hidden fill={saved ? "currentColor" : "none"} size={18} />
