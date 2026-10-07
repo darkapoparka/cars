@@ -37,6 +37,7 @@ async function verify(route, sourceKey) {
   let expectedImages = original('main img').length;
   if (sourceKey === 'login') expectedImages -= original('.form-login img').length;
   if (sourceKey === 'pricing') expectedImages -= original('.section-pricing-1 img[src$="/pricing-1/check-primary.svg"]').length;
+  if (sourceKey === 'contact') expectedImages += 4;
   if (sourceKey === 'index-3') {
     const previous = original('.section-cta-6').add(original('.box-author-testimonials').closest('section'));
     const replacements = home2('.section-cta-4').add(home2('.block-testimonials').closest('section'));
@@ -107,6 +108,16 @@ for (const step of ['choose', 'talk', 'view', 'collect']) {
 }
 assert.equal((await fetch(base + '/assets/karento-best/how-it-works/not-an-image.webp')).status, 404);
 assert.equal((await fetch(base + '/assets/karento-best/how-it-works/toString')).status, 404);
+for (const portrait of ['01', '02', '03', '04']) {
+  const filename = `portrait-${portrait}-20261007.webp`;
+  const response = await fetch(`${base}/assets/karento-best/contact-avatars/${filename}`);
+  assert.equal(response.status, 200, filename);
+  assert.equal(response.headers.get('content-type'), 'image/webp', filename);
+  const local = await readFile(path.join(root, 'src/lib/server/assets/contact-avatars', filename));
+  assert.deepEqual(Buffer.from(await response.arrayBuffer()), local, `${filename}: production serves the generated portrait intact`);
+}
+assert.equal((await fetch(base + '/assets/karento-best/contact-avatars/not-an-image.webp')).status, 404);
+assert.equal((await fetch(base + '/assets/karento-best/contact-avatars/toString')).status, 404);
 const assets = capture.files.filter(file => file.path);
 for (let start = 0; start < assets.length; start += 12) {
   await Promise.all(assets.slice(start, start + 12).map(async file => {
@@ -120,9 +131,9 @@ assert.equal(referenceResponse.status, 200);
 assert((await referenceResponse.text()).includes('box-banner-home7'), 'Original Karento root remains Home 2');
 const report = { checkedAt: new Date().toISOString(), base, referenceBase: 'http://127.0.0.1:6462',
   selectedPages: { home: 'index-3', list: 'cars-list-2', details: 'cars-details-3' },
-  routes: results, assetsChecked: assets.length, generatedAssetsChecked: 4, menu: expectedMenu,
+  routes: results, assetsChecked: assets.length, generatedAssetsChecked: 8, menu: expectedMenu,
   scope: 'HTTP routes, complete menu destinations, retained sections/artwork, chosen layout links and reference preservation. Browser interaction evidence is recorded separately.' };
 const destination = path.resolve(root, '../../docs/karento');
 await mkdir(destination, { recursive: true });
 await writeFile(path.join(destination, 'best-http-qa.json'), JSON.stringify(report, null, 2) + '\n');
-console.log(`${results.length} routes, ${assets.length} reference assets and 4 generated assets, desktop/mobile menus and preserved reference checks passed`);
+console.log(`${results.length} routes, ${assets.length} reference assets and 8 generated assets, desktop/mobile menus and preserved reference checks passed`);

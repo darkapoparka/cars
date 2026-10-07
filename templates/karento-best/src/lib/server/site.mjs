@@ -243,6 +243,61 @@ function polishMembership($) {
   </svg>`);
 }
 
+function polishContactCards($) {
+  const locations = [
+    ['New York', 'United States', 'portrait-01'],
+    ['Tokyo', 'Japan', 'portrait-04'],
+    ['Paris', 'France', 'portrait-03'],
+    ['Sydney', 'Australia', 'portrait-02']
+  ];
+  const cards = $('main .card-contact');
+  if (cards.length !== locations.length) throw new Error('Expected four Contact location cards');
+  const section = cards.first().closest('.box-section');
+  section.addClass('karento-contact-team').attr('aria-labelledby', 'contact-team-title');
+  const heading = section.find('.text-start').first();
+  heading.removeClass('text-start').addClass('text-center karento-contact-heading');
+  heading.find('h4').text('Speak with our team').attr('id', 'contact-team-title');
+  heading.append('<p class="karento-contact-sample neutral-500">Sample locations · AI-generated portraits</p>');
+  cards.each((_, element) => {
+    const card = $(element).addClass('karento-contact-card');
+    const title = card.find('.card-title > a');
+    const location = locations.find(([city]) => city === title.text().trim());
+    if (!location) throw new Error('Unknown Contact location');
+    const [, country, portrait] = location;
+    card.find('.card-image').html(`<img class="karento-contact-avatar" src="/assets/karento-best/contact-avatars/${portrait}-20261007.webp" alt="" width="160" height="160" loading="lazy" decoding="async">`);
+    title.attr('href', '#contact-enquiry');
+    card.find('.card-title').append(`<p class="karento-contact-country neutral-500">${country}</p>`);
+    const email = card.find('a.email');
+    email.attr('href', `mailto:${email.text().trim()}`);
+    const address = card.find('a.location');
+    address.attr('href', `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address.text().trim())}`);
+  });
+}
+
+function polishContactEnquiry($) {
+  const section = $('main .box-contact-form');
+  section.removeClass('background-body').addClass('karento-contact-enquiry')
+    .attr('aria-labelledby', 'contact-enquiry');
+  const row = section.children('.container').children('.row');
+  row.wrap('<div class="karento-enquiry-panel"></div>');
+  row.children('.col-lg-6').removeClass('mb-30');
+  const map = row.find('.ps-lg-5').removeClass('ps-lg-5').addClass('karento-contact-map');
+  map.children('p').removeClass('mb-30');
+  map.find('iframe').attr('title', 'Illustrative dealership location');
+  const fields = [
+    ['input[placeholder="First Name"]', 'contact-first-name', 'First name'],
+    ['input[placeholder="Last Name"]', 'contact-last-name', 'Last name'],
+    ['input.email', 'contact-email', 'Email address'],
+    ['input.phone', 'contact-phone', 'Phone number'],
+    ['textarea', 'contact-message', 'Your message']
+  ];
+  for (const [selector, id, label] of fields) {
+    const field = section.find(selector);
+    field.attr('id', id);
+    field.closest('.form-group').find('label').attr('for', id).text(label);
+  }
+}
+
 function polishPageHeroes($, sourceKey) {
   const hero = $('main > .page-header');
   if (hero.length) {
@@ -413,6 +468,10 @@ export function composeSitePage(sourceKey, page, body, home2Body, home3Body, hom
   });
   organizeImport($, sourceKey);
   polishPageHeroes($, sourceKey);
+  if (sourceKey === 'contact') {
+    polishContactCards($);
+    polishContactEnquiry($);
+  }
   $('main .card-news').each((_, element) => {
     const card = $(element);
     const titleLink = card.find('.card-title > a[href="/news/article"]');

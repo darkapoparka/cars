@@ -49,6 +49,10 @@ Product details use a centered breadcrumb with the Shop page's rounded border tr
 
 Inner image heroes share centered titles, balanced photo shading and responsive content height. Contact links to the existing enquiry section, Services opens Contact, and the centered calculator introduction links down to its calculator. Plans, About, Import and Terms keep text-only introductions. Article titles/metadata remain inside their hero on phones; featured news stories and vehicle breadcrumbs are centered too. Existing centered Home, catalogue, Shop, support and account introductions are retained. See the [30-page hero review and before/after comparisons](../../docs/karento/HERO-REVIEW-2026-10-07.md).
 
+Contact uses four matching generated portraits as circular avatars, centered location titles and country labels. Its example locations and fictional portraits are disclosed together; dealer copies should supply their own locations, contacts and permitted staff photos. Location titles jump to the enquiry form, and email/map links match the displayed contacts. See [Contact artwork and comparison](../../docs/karento/CONTACT-AVATAR-ARTWORK.md).
+
+The enquiry form and location share one white, bordered panel on a soft background, matching the site's other contained sections. They sit side by side on desktop and stack on phones. The address and map have their own smaller white card with a subtle border inside the panel, with reduced padding on phones. Labels are connected to their fields, keyboard focus is visible, and enquiry shortcuts leave the panel's top clear of the fixed header.
+
 The approved catalogue filter row/drawer and conversion of rental panels to vehicle-sale enquiry panels remain follow-up functional adaptations. This pass organizes the requested pages and preserves their layout and existing interactions.
 
 ## Reuse direction
