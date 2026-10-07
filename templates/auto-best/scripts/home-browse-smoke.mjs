@@ -9,7 +9,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   const form = page.locator('.dn-home-browse');
   const field = name => form.locator(`[data-field="${name}"]`);
   const menu = page.locator('.dn-home-browse-picker[data-state=open]');
-  const save = () => menu.getByRole('button', { name: locale === 'bg' ? 'Запазете' : 'Save', exact: true }).click();
+  const save = () => menu.locator('.dn-home-browse-picker__save').click();
   const clear = () => menu.getByRole('button', { name: locale === 'bg' ? 'Изчисти' : 'Clear', exact: true }).click();
   const choice = value => menu.getByRole('checkbox', { name: value, exact: true });
   const values = name => form.locator(`input[type=hidden][name="${name}"]`).evaluateAll(inputs => inputs.map(input => input.value));
@@ -27,6 +27,12 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
     const frame = await menu.boundingBox();
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
+    if (name === 'model' && viewport.width >= 992) {
+      const bar = await form.boundingBox();
+      assert.equal(frame.width, bar.width, 'The desktop model panel follows the whole Home bar');
+      assert.equal(await menu.getAttribute('data-model-panel'), 'true');
+      assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Model choices show the pending result count');
+    }
   };
   const dismiss = async name => {
     await menu.getByRole('searchbox').press('Escape');
@@ -58,6 +64,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   assert.deepEqual(await values('price_max'), [], 'Switching fields discards the previous editor draft');
   assert.equal(await choice('X6 M Sport').count(), 0, 'Models follow the saved makes');
   await choice('RS 6 Avant').check();
+  if (page.viewportSize().width >= 992) assert.equal((await menu.locator('.dn-home-browse-picker__count').innerText()).trim(), locale === 'bg' ? '· 1 автомобил' : '· 1 car', 'The Home count follows the pending model before Save');
   await save();
   assert.deepEqual(await values('model'), ['RS 6 Avant']);
   await open('make');

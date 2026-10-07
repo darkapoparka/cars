@@ -7,7 +7,8 @@
   import { resolve } from '$app/paths';
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
-  import { listingBudgetCaps, listingHiddenFields } from '$data/listing';
+  import { vehicleCount } from '$lib/locale/messages';
+  import { filterListingVehicles, listingBudgetCaps, listingHiddenFields, listingVehicles } from '$data/listing';
   import {
     cleanListingFormData, emptyListingDraft, formatListingNumber,
     listingDraftFromFilters, listingFacetSummary, listingFacetTitle,
@@ -23,15 +24,18 @@
   const i18n = getI18n();
   const id = $props.id();
   const mobile = new MediaQuery('(max-width: 767px)', false);
+  const desktop = new MediaQuery('(min-width: 992px)', false);
   const budgetPresets = listingBudgetCaps().map(String);
   let draft = $state<ListingDraft>(emptyListingDraft());
   let pending = $state<ListingDraft>(emptyListingDraft());
   let openField = $state<Field>();
   let keyboardOpen = false;
   let portalTarget = $state<HTMLElement>();
+  let browseAnchor = $state<HTMLFormElement>();
   let pickers = $state<Record<Field, HTMLDivElement | null>>({ make: null, model: null, body: null, price: null });
   let triggers = $state<Record<Field, HTMLButtonElement | null>>({ make: null, model: null, body: null, price: null });
   const hiddenFields = $derived(listingHiddenFields(listingFiltersFromDraft(draft)));
+  const matching = $derived(filterListingVehicles(listingVehicles, listingFiltersFromDraft(pending), i18n.locale).length);
   const invalidRange = $derived(Boolean(pending.priceMin && pending.priceMax && Number(pending.priceMin) > Number(pending.priceMax)));
   const attachRoot: Attachment<HTMLFormElement> = node => { portalTarget = node.closest<HTMLElement>('.dn-app-shell') ?? undefined; };
 
@@ -82,7 +86,7 @@
   }
 </script>
 
-<form class="dn-home-browse" aria-label={i18n.t('m_0ae7a3ecbc83')} method="GET" action={i18n.href(resolve('/listing-grid'))}
+<form bind:this={browseAnchor} class="dn-home-browse" aria-label={i18n.t('m_0ae7a3ecbc83')} method="GET" action={i18n.href(resolve('/listing-grid'))}
   {@attach attachRoot} onformdata={event => cleanListingFormData(event.formData)}>
   {#each fields as field (field)}
     <Popover.Root open={openField === field} onOpenChange={open => setOpen(field, open)}>
@@ -97,13 +101,14 @@
       </Popover.Trigger>
       <Popover.Portal to={portalTarget}>
         <Popover.Content bind:ref={pickers[field]} class="dn-home-browse-picker" role="dialog" aria-labelledby={`${id}-${field}-title`}
+          data-model-panel={field === 'model' && desktop.current} customAnchor={field === 'model' && desktop.current ? browseAnchor : undefined}
           sideOffset={8} align="start" collisionPadding={16}
           onOpenAutoFocus={event => { event.preventDefault(); void tick().then(() => { if (openField === field) focusPopover(pickers[field], pickers[field]?.querySelector<HTMLInputElement>('input[type=search], input[type=number], input:checked') ?? null, keyboardOpen); }); }}
           onCloseAutoFocus={event => restoreFocus(event, field)}
           onkeydown={event => { if (event.key === 'Enter' && event.target instanceof HTMLInputElement && event.target.type === 'number') { event.preventDefault(); save(); } }}>
           <FilterPopoverHeader id={`${id}-${field}-title`} title={title(field)} />
           <div class="dn-home-browse-picker__editor" class:dn-home-browse-picker__editor--price={field === 'price'}>
-            <ListingFacetEditor {field} bind:draft={pending} desktopChoices />
+            <ListingFacetEditor {field} bind:draft={pending} desktopChoices modelPanel={field === 'model' && desktop.current} />
             {#if field === 'price'}
               <div class="dn-home-browse-picker__presets">
                 {#each budgetPresets as value (value)}
@@ -114,7 +119,7 @@
           </div>
           <footer class="dn-home-browse-picker__footer">
             <button class="dn-home-browse-picker__clear" type="button" onclick={() => clear(field)}>{i18n.t('action.clearShort')}</button>
-            <button class="dn-home-browse-picker__save" type="button" disabled={invalidRange} onclick={save}>{i18n.t('m_1509f561f241')}</button>
+            <button class="dn-home-browse-picker__save" type="button" disabled={invalidRange} onclick={save} aria-live={field === 'model' && desktop.current ? 'polite' : undefined}>{i18n.t('m_1509f561f241')}{#if field === 'model' && desktop.current} <span class="dn-home-browse-picker__count">· {vehicleCount(i18n.locale, matching)}</span>{/if}</button>
           </footer>
         </Popover.Content>
       </Popover.Portal>
@@ -152,6 +157,11 @@
   .dn-home-browse-picker__clear:hover, .dn-home-browse-picker__presets button:hover { background: var(--dn-surface-hover); }
   .dn-home-browse-picker__save:enabled:hover { background: var(--dn-ink-hover); }
   .dn-home-browse-picker__footer button:focus-visible, .dn-home-browse-picker__presets button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
+  @media (min-width: 992px) {
+    :global(.dn-home-browse-picker[data-model-panel='true']) { width: min(var(--bits-floating-anchor-width, 880px), calc(100vw - 32px)); }
+    .dn-home-browse-picker__save:has(.dn-home-browse-picker__count) { display: flex; align-items: center; gap: var(--dn-space-2); }
+    .dn-home-browse-picker__count { white-space: nowrap; }
+  }
   @media (min-width: 768px) and (max-width: 991px) { :global(.dn-home-browse__field) { gap: var(--dn-space-2); padding-inline: var(--dn-space-3); } }
   @media (prefers-reduced-motion: reduce) { :global(.dn-home-browse__field), .dn-home-browse__search { transition: none; } }
 </style>

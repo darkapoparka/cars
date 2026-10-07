@@ -40,10 +40,12 @@ try {
    const choiceFrame=await dialog.boundingBox();
    const choiceFooter=await dialog.locator('.dn-search-footer').boundingBox();
    const anchor=await shortcut.boundingBox();
-   assert.equal(choiceFrame.width,380);
+   assert.equal(choiceFrame.width,field === 'model' ? (await page.locator('.dn-discovery').boundingBox()).width : 380);
+   if (field === 'model') assert.equal(await dialog.getAttribute('data-model-panel'),'true','Model shortcuts use the wider inventory panel');
    assert(choiceFrame.x>=15 && choiceFrame.y>=15 && choiceFrame.y+choiceFrame.height<=height-15);
    assert(choiceFrame.x<=anchor.x+anchor.width && choiceFrame.x+choiceFrame.width>=anchor.x,'The menu stays attached to its shortcut');
-   const anchorGap=Math.min(Math.abs(choiceFrame.y-anchor.y-anchor.height),Math.abs(anchor.y-choiceFrame.y-choiceFrame.height));
+   const placementAnchor=field === 'model' ? await page.locator('.dn-discovery').boundingBox() : anchor;
+   const anchorGap=Math.min(Math.abs(choiceFrame.y-placementAnchor.y-placementAnchor.height),Math.abs(placementAnchor.y-choiceFrame.y-choiceFrame.height));
    assert(anchorGap<=10,'A direct selector opens beside its control, including collision flips');
    assert.equal(await page.locator('.dn-search-overlay').count(),0,'Quick menus leave the results visible');
    assert.notEqual(await page.evaluate(()=>getComputedStyle(document.body).position),'fixed','A shortcut does not lock page scrolling');

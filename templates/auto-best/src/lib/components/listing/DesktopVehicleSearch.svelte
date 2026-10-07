@@ -27,6 +27,7 @@
   const yearPresets = listingFilterOptions.years.filter(Boolean).slice(-4);
   let draft = $state<ListingDraft>(emptyListingDraft());
   const field = $derived(initialFacet);
+  const modelAnchor = $derived(field === 'model' ? returnFocus?.closest<HTMLElement>('.dn-discovery') ?? returnFocus : returnFocus);
   let search = $state('');
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
@@ -192,14 +193,14 @@
           {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
         </div>
       {/if}
-      <div class="dn-search-results" role="group" aria-label={title}>
+      <div class="dn-search-results" class:dn-search-results--models={field === 'model'} role="group" aria-label={title}>
         {#if field !== 'equipment' && !search}
           <DesktopFilterChoice value="" label={i18n.t(field === 'make' ? 'inventory.search.allMakes' : field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069')}
-            multiple={field === 'make' || field === 'model'} name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
+            multiple={field === 'make' || field === 'model'} tile={field === 'model'} name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
         {/if}
         {#each choices as choice (choice.value)}
           <DesktopFilterChoice value={choice.value} label={choice.label} description={choice.make && !draft.make.length ? choice.make : ''}
-            multiple={choice.field === 'equipment' || choice.field === 'make' || choice.field === 'model'} name={'draft-' + choice.field}
+            multiple={choice.field === 'equipment' || choice.field === 'make' || choice.field === 'model'} tile={field === 'model'} name={'draft-' + choice.field}
             checked={isSelected(choice)} onchange={() => select(choice)} />
         {/each}
         {#if !choices.length}
@@ -228,7 +229,7 @@
   <Popover.Root bind:open>
     <Popover.Portal to=".dn-app-shell">
       <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
-        role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side={shortWindow.current ? 'right' : 'bottom'} align="start" sideOffset={8}
+        data-model-panel={field === 'model'} role="dialog" aria-labelledby="dn-facet-title" customAnchor={modelAnchor} side={field !== 'model' && shortWindow.current ? 'right' : 'bottom'} align="start" sideOffset={8}
         collisionPadding={16} strategy="fixed" hideWhenDetached
         onOpenAutoFocus={event => event.preventDefault()}
         onInteractOutside={() => restoreFocusOnClose = false} onCloseAutoFocus={returnToPage}>
@@ -250,6 +251,11 @@
   :global(.dn-search-popover) .dn-search-footer { height: 72px; gap: var(--dn-space-2); padding-inline: var(--dn-space-4); }
   :global(.dn-search-popover) .dn-search-reset { padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); text-decoration: none; }
   :global(.dn-search-popover) .dn-search-apply { min-height: var(--dn-control-height-default); padding-inline: var(--dn-space-4); font-size: var(--dn-text-meta); }
+  @media (min-width: 992px) {
+    :global(.dn-search-popover[data-model-panel='true']) { width: min(var(--bits-floating-anchor-width, 880px), calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-model-panel='true']) .dn-search-query { width: min(100%, 488px); margin-inline: auto; }
+    .dn-search-results--models { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--dn-space-2); }
+  }
   .dn-search-icon { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-sm); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-icon:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-filter-workspace { display: flex; flex: 1; min-width: 0; min-height: 0; }

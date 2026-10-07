@@ -2,6 +2,8 @@
 
 Auto Best combines an image-led automotive layout, Inter typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
+The [7 October desktop Model update](DESKTOP-MODEL-PICKER-2026-10-07.md) specifies the wider panels, neutral option grid and live Home count from 992px.
+
 At desktop widths, the vehicle detail preview uses a 16:10 frame. `VehiclePhoto.svelte`
 opens the full, uncropped photograph in a native dialog with keyboard focus containment,
 Escape/backdrop/close actions and focus restoration. Its image link also works without

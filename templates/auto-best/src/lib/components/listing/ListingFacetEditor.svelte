@@ -14,10 +14,11 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
 
-  let { field, draft = $bindable(), desktopChoices = false, onChoose, contentElement = $bindable() }: {
+  let { field, draft = $bindable(), desktopChoices = false, modelPanel = false, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
     draft: ListingDraft;
     desktopChoices?: boolean;
+    modelPanel?: boolean;
     onChoose?: () => void;
     contentElement?: HTMLDivElement;
   } = $props();
@@ -38,7 +39,7 @@
   const choices = $derived(field === 'equipment' ? listingFacetOptions(field)
     : listingOptionsWithCurrent(listingFacetOptions(field, draft.make), selected));
   const matches = $derived(listingSuggestionMatcher(search, i18n.locale));
-  const optionLabel = (option: string) => listingFacetOptionLabel(field, option, i18n.locale);
+  const optionLabel = (option: string) => modelPanel && !option ? i18n.t('inventory.search.allModels') : listingFacetOptionLabel(field, option, i18n.locale);
   const invalid = $derived(range && draft[minimumKey] !== '' && draft[maximumKey] !== '' && Number(draft[minimumKey]) > Number(draft[maximumKey]));
   const budgetPresets = listingBudgetCaps().map(String);
   const yearPresets = listingFilterOptions.years.filter(Boolean).slice(-4);
@@ -77,7 +78,7 @@
   {#if mobile.current}<MobileActionIcon {name} {size} />{:else}<Icon name={name === 'close' ? 'x' : 'search'} {size} />{/if}
 {/snippet}
 
-<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices}>
+<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:model-panel={modelPanel}>
   {#if searchable}
     <div class="search-wrap">
       <div class="search-field dn-mobile-search-field">
@@ -116,7 +117,7 @@
         {#each choices as option (option)}
           {#if desktopChoices && matches(optionLabel(option))}
               <DesktopFilterChoice value={option} label={optionLabel(option)} name={field}
-                multiple={field === 'make' || field === 'model' || field === 'equipment'}
+                multiple={field === 'make' || field === 'model' || field === 'equipment'} tile={modelPanel}
                 checked={isSelected(option)} onchange={choose} />
           {:else if !desktopChoices}
             <label class="choice dn-mobile-filter-choice" hidden={!matches(optionLabel(option))}>
@@ -149,6 +150,10 @@
   fieldset { display: grid; gap: var(--dn-overlay-gap); padding: 0; margin: 0; border: 0; }
   .desktop-choices fieldset { gap: 0; }
   .desktop-choices .search-field { border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); }
+  @media (min-width: 992px) {
+    .model-panel .search-wrap { width: min(100%, 520px); margin-inline: auto; }
+    .model-panel fieldset { grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: var(--dn-space-2); }
+  }
   .choice { display: flex; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-field-font); cursor: pointer; }
   .choice[hidden] { display: none; }
   .choice > span { min-width: 0; overflow-wrap: anywhere; }

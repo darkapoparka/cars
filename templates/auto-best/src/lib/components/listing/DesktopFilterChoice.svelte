@@ -1,11 +1,11 @@
 <script lang="ts">
-  let { value, label, description = '', checked, multiple = false, name, onchange }: {
+  let { value, label, description = '', checked, multiple = false, tile = false, name, onchange }: {
     value: string; label: string; description?: string; checked: boolean;
-    multiple?: boolean; name?: string; onchange: (value: string) => void;
+    multiple?: boolean; tile?: boolean; name?: string; onchange: (value: string) => void;
   } = $props();
 </script>
 
-<label class="dn-desktop-choice">
+<label class="dn-desktop-choice" class:dn-desktop-choice--tile={tile} class:dn-desktop-choice--all={tile && !value}>
   <input type={multiple ? 'checkbox' : 'radio'} {name} {value} {checked} onchange={() => onchange(value)}
     onclick={() => { if (!multiple && checked) onchange(value); }}
     onkeydown={event => { if (event.key === 'Enter' || !multiple && event.key === ' ') { event.preventDefault(); onchange(value); } }} />
@@ -25,6 +25,13 @@
   input:checked + [data-multiple='false']::after { width: var(--dn-space-2); height: var(--dn-space-2); border-radius: var(--dn-pill); background: var(--dn-ink); content: ''; }
   .dn-desktop-choice-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
   small { flex: 0 1 auto; min-width: 0; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-ui); overflow-wrap: anywhere; }
+  @media (min-width: 992px) {
+    .dn-desktop-choice--tile { min-width: 0; background: var(--dn-surface-subtle); }
+    .dn-desktop-choice--tile:hover { background: var(--dn-surface-hover); }
+    .dn-desktop-choice--tile:has(input:checked) { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
+    .dn-desktop-choice--tile .dn-desktop-choice-mark { border-radius: var(--dn-space-1); }
+    .dn-desktop-choice--all { grid-column: 1 / -1; }
+  }
   @media (forced-colors: active) {
     input { position: static; flex: 0 0 var(--dn-space-5); width: var(--dn-space-5); height: var(--dn-space-5); opacity: 1; accent-color: auto; }
     .dn-desktop-choice-mark { display: none; }
