@@ -16,7 +16,7 @@
     type ListingDraft
   } from '$data/listing-draft';
   import ListingFacetEditor from '$components/listing/ListingFacetEditor.svelte';
-  import FilterPopoverHeader from '$components/listing/FilterPopoverHeader.svelte';
+  import FilterPopoverHeader, { type PickerNavigation } from '$components/listing/FilterPopoverHeader.svelte';
   import Icon from '$components/ui/Icon.svelte';
 
   type Field = 'make' | 'model' | 'body' | 'price';
@@ -88,8 +88,8 @@
 <form class="dn-home-browse" aria-label={i18n.t('m_0ae7a3ecbc83')} method="GET" action={i18n.href(resolve('/listing-grid'))}
   {@attach attachRoot} onformdata={event => cleanListingFormData(event.formData)}>
   {#each fields as field (field)}
-    {#snippet facetHeader(search: Snippet | undefined)}
-      <FilterPopoverHeader id={`${id}-${field}-title`} title={title(field)} {search} />
+    {#snippet facetHeader(search: Snippet | undefined, navigation: PickerNavigation | undefined)}
+      <FilterPopoverHeader id={`${id}-${field}-title`} title={title(field)} {search} {navigation} />
     {/snippet}
     <Popover.Root open={openField === field} onOpenChange={open => setOpen(field, open)}>
       <Popover.Trigger bind:ref={triggers[field]} type="button" class="dn-home-browse__field" data-field={field}

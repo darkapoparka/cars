@@ -11,6 +11,24 @@ const pattern = process.env.MODEL_CASE ? new RegExp(process.env.MODEL_CASE) : nu
 await mkdir(output, { recursive: true });
 const browser = engine === 'webkit' ? await webkit.launch({ headless: true }) : await launchBrowser();
 const results = [];
+async function checkModelHeader(menu, label) {
+  const header = menu.locator('.dn-picker-header');
+  const back = header.locator('.back');
+  assert.equal(await back.innerText(), label, 'The header replaces Model with the full make/family path');
+  assert.equal(await back.getAttribute('title'), label, 'Truncated paths retain their complete label');
+  assert((await back.getAttribute('aria-label')).endsWith(label), 'Back exposes its full context to assistive technology');
+  const text = await back.locator('span').evaluate(node => ({ width: node.clientWidth, content: node.scrollWidth }));
+  if (label.length < 24) assert(text.content <= text.width, 'Short make/family paths remain fully visible');
+  else assert(text.content > text.width, 'Long family paths truncate without growing the header');
+  assert.equal(await menu.locator('.dn-model-groups .path').count(), 0, 'The list has no duplicate Back/breadcrumb row');
+  const boxes = await Promise.all([back, header.getByRole('searchbox'), header.locator('.dn-picker-close')].map(node => node.boundingBox()));
+  const centers = boxes.map(box => box.y + box.height / 2);
+  assert(Math.max(...centers) - Math.min(...centers) < 2, 'Back, search and close share one header row');
+  assert(boxes[0].height >= 44 && boxes[1].width >= 100, 'Long paths retain usable Back and search controls');
+  const first = await menu.locator('.dn-model-groups input[type=checkbox]').first().evaluate(node => node.closest('label').getBoundingClientRect().top);
+  const headerBox = await header.boundingBox();
+  assert(first >= headerBox.y + headerBox.height && first <= headerBox.y + headerBox.height + 16, 'Model choices begin directly beneath the header');
+}
 try {
   for (const locale of ['bg', 'en']) for (const surface of ['home', 'listing', 'nested']) for (const [width, height] of [[992, 600], [1440, 900]]) {
     const name = `${locale}-${surface}-${width}`;
@@ -47,6 +65,7 @@ try {
       assert.equal(await menu.locator('[data-model-family]').count(), 0, 'Only the chosen family is displayed');
       assert.equal(await menu.getByRole('checkbox', { name: '118', exact: true }).count(), 0, 'Other families are not mixed into the model list');
       assert(await menu.locator('.back').evaluate(node => node === document.activeElement), 'Entering a family places keyboard focus on Back');
+      await checkModelHeader(menu, 'BMW / 3 Series');
       assert(await menu.getByRole('checkbox', { name: '320', exact: true }).isEnabled(), 'Zero-stock catalogue models remain selectable');
       const description = await menu.getByRole('checkbox', { name: '320', exact: true }).getAttribute('aria-describedby');
       assert.match(await menu.locator(`[id="${description}"]`).innerText(), /^0 /);
@@ -68,6 +87,12 @@ try {
       await menu.locator('[data-model-family="8 Series"]').click();
       assert.equal(await menu.getByRole('checkbox').count(), 2, 'Short families open the same focused view');
       assert.equal((await menu.boundingBox()).height, frame.height, 'A two-choice family does not shrink the menu');
+      assert(await menu.locator('.dn-model-groups').evaluate(node => {
+        for (let pane = node.parentElement; pane; pane = pane.parentElement) {
+          if (/auto|scroll/.test(getComputedStyle(pane).overflowY)) return pane.scrollHeight <= pane.clientHeight + 1;
+        }
+        return false;
+      }), 'Short families do not retain a phantom scrollbar from popover placement');
       assert(Math.abs(before.y - (await footer().boundingBox()).y) < 1, 'Short families retain the footer position');
       await menu.locator('.back').click();
       await menu.locator('[data-model-family="1 Series"]').click();
@@ -130,7 +155,7 @@ try {
       assert.equal(new URL(page.url()).searchParams.has('q'), false);
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 1, 'Existing stock values still select the exact car');
       assert.deepEqual(errors, []);
-      results.push({ name, passed: true }); console.log(`PASS ${name}: focused families, Back/focus, fixed frame, retained selections, zero stock, search and legacy GET`);
+      results.push({ name, passed: true }); console.log(`PASS ${name}: compact contextual header, Back/focus, fixed frame, retained selections, zero stock, search and legacy GET`);
     } catch (error) {
       await page.screenshot({ path: `${output}/${name}-failure.png` });
       await writeFile(`${output}/${name}-failure.json`, JSON.stringify({ message: error.message, errors }, null, 2));
@@ -146,11 +171,12 @@ try {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     const additions = Array.from({ length: 80 }, (_, index) => `320 QA variant ${String(index + 1).padStart(2, '0')}`);
+    const family = '3 Series Gran Turismo with a deliberately long catalogue family name';
     let fixtureApplied = false;
     await page.route('**/src/lib/data/model-catalogue-data.ts*', async route => {
       const response = await route.fetch({ maxRetries: 2 });
       const source = await response.text();
-      const body = source.replace(/(["']?name["']?:\s*"3 Series",\s*["']?children["']?:\s*\[)([\s\S]*?)(\])/, (_, start, choices, end) => `${start}${choices},${additions.map(value => JSON.stringify(value)).join(',')}${end}`);
+      const body = source.replace(/(["']?name["']?:\s*"3 Series",\s*["']?children["']?:\s*\[)([\s\S]*?)(\])/, (_, start, choices, end) => `${start.replace('"3 Series"', JSON.stringify(family))}${choices},${additions.map(value => JSON.stringify(value)).join(',')}${end}`);
       assert.notEqual(body, source, 'The development-only fixture extends BMW 3 Series');
       fixtureApplied = true;
       await route.fulfill({ response, body });
@@ -173,8 +199,9 @@ try {
       const footer = page.locator(home ? '.dn-home-browse-picker__footer' : nested ? '.dn-listing-filter__dialog-footer' : '.dn-search-footer');
       const footerBefore = await footer.boundingBox();
       const pageScroll = await page.evaluate(() => scrollY);
-      await menu.locator('[data-model-family="3 Series"]').click();
+      await menu.locator(`[data-model-family="${family}"]`).click();
       assert.equal(await menu.locator('input[type=checkbox]').count(), 99, 'Only the 99 choices belonging to the active family are mounted');
+      await checkModelHeader(menu, `BMW / ${family}`);
       await menu.getByRole('checkbox', { name: additions.at(-1), exact: true }).check();
       assert(await menu.locator('.back').isVisible(), 'Back stays visible after scrolling to the last of 99 models');
       const backBox = await menu.locator('.back').boundingBox();
@@ -188,11 +215,11 @@ try {
         await menu.getByRole('checkbox', { name: label, exact: true }).focus();
         const focused = await menu.getByRole('checkbox', { name: label, exact: true }).boundingBox();
         const back = await menu.locator('.back').boundingBox();
-        assert(focused.y >= back.y + back.height && focused.y + focused.height <= (await footer.boundingBox()).y, 'Keyboard focus remains visible below the sticky navigation');
+        assert(focused.y >= back.y + back.height && focused.y + focused.height <= (await footer.boundingBox()).y, 'Keyboard focus remains visible below the fixed header');
       }
       await menu.locator('.back').click();
-      assert(await menu.locator('[data-model-family="3 Series"]').evaluate(node => node === document.activeElement), 'Back returns focus after a long scroll');
-      await menu.locator('[data-model-family="3 Series"]').click();
+      assert(await menu.locator(`[data-model-family="${family}"]`).evaluate(node => node === document.activeElement), 'Back returns focus after a long scroll');
+      await menu.locator(`[data-model-family="${family}"]`).click();
       assert(await menu.getByRole('checkbox', { name: additions.at(-1), exact: true }).isChecked(), 'The long-list selection survives returning to its family');
       await menu.getByRole('searchbox').fill(additions.at(-1));
       assert.equal(await menu.getByRole('checkbox').count(), 1, 'Exact search finds the last model without browsing 99 rows');
@@ -200,7 +227,7 @@ try {
       await page.screenshot({ path: `${output}/${name}.png` });
       assert.deepEqual(errors, []);
       results.push({ name, passed: true, familyChoices: 99 });
-      console.log(`PASS ${name}: 99 model choices, direct search, retained selection, sticky Back and fixed menu/footer`);
+      console.log(`PASS ${name}: 99 model choices, long header path, direct search, retained selection and fixed menu/footer`);
     } catch (error) {
       await page.screenshot({ path: `${output}/${name}-failure.png` });
       await writeFile(`${output}/${name}-failure.json`, JSON.stringify({ message: error.message, errors }, null, 2));

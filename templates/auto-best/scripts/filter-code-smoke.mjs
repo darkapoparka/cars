@@ -91,7 +91,7 @@ try {
           await identityTrigger.click();
           await assertFocus(page, '.dn-filter-picker');
           await page.keyboard.press('Tab');
-          await assertFocus(page, '.dn-filter-picker .dn-picker-close');
+          await assertFocus(page, field === 'model' ? '.dn-filter-picker .back' : '.dn-filter-picker .dn-picker-close');
           await assertIdentity(page.locator('.dn-filter-picker'), field, label);
           await page.keyboard.press('Escape');
           assert(await main.isVisible(), 'Escape dismisses the nested picker before the native dialog');

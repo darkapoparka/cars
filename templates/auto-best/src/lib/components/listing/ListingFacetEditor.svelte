@@ -16,14 +16,15 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
-  import DesktopModelGroups from './DesktopModelGroups.svelte';
+  import DesktopModelGroups, { type ModelPicker } from './DesktopModelGroups.svelte';
+  import type { PickerNavigation } from './FilterPopoverHeader.svelte';
 
   let { field, draft = $bindable(), desktopChoices = false, widePanel = false, header, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
     draft: ListingDraft;
     desktopChoices?: boolean;
     widePanel?: boolean;
-    header?: Snippet<[Snippet | undefined]>;
+    header?: Snippet<[Snippet | undefined, PickerNavigation | undefined]>;
     onChoose?: () => void;
     contentElement?: HTMLDivElement;
   } = $props();
@@ -31,6 +32,7 @@
   const mobile = new MediaQuery('(max-width: 767px)', false);
   let search = $state('');
   let searchInput: HTMLInputElement;
+  let modelPicker = $state<ModelPicker>();
   const attachSearch: Attachment<HTMLInputElement> = node => { searchInput = node; };
   const attachContent: Attachment<HTMLDivElement> = node => { contentElement = node; return () => { contentElement = undefined; }; };
   const title = $derived(listingFacetTitle(field, i18n.locale));
@@ -94,7 +96,7 @@
 {/snippet}
 
 <div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel} class:make-grid={widePanel && field === 'make'}>
-  {#if header}{@render header(widePanel && searchable ? searchControl : undefined)}{/if}
+  {#if header}{@render header(widePanel && searchable ? searchControl : undefined, modelPicker?.navigation())}{/if}
   {#if searchable && !(header && widePanel)}
     <div class="search-wrap">{@render searchControl()}</div>
   {/if}
@@ -122,7 +124,7 @@
         </div>
       {/if}
     {:else if field === 'model' && desktopChoices && widePanel}
-      <DesktopModelGroups makes={draft.make} selected={draft.model} {search} onchange={choose} />
+      <DesktopModelGroups bind:this={modelPicker} makes={draft.make} selected={draft.model} {search} onchange={choose} />
     {:else}
       <fieldset>
         <legend class="dn-sr-only">{title}</legend>

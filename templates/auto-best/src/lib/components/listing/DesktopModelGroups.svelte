@@ -1,5 +1,12 @@
+<script module lang="ts">
+  import type { PickerNavigation } from './FilterPopoverHeader.svelte';
+
+  export type ModelPicker = { navigation: () => PickerNavigation | undefined };
+</script>
+
 <script lang="ts">
   import { onMount, tick } from 'svelte';
+  import type { Attachment } from 'svelte/attachments';
   import { getI18n } from '$lib/locale/context';
   import { vehicleCount } from '$lib/locale/messages';
   import { featuredVehicles } from '$data/inventory';
@@ -16,6 +23,8 @@
   const i18n = getI18n();
   let root: HTMLDivElement;
   let pane: HTMLElement | undefined;
+  let backButton: HTMLButtonElement | undefined;
+  const attachBack: Attachment<HTMLButtonElement> = node => { backButton = node; return () => { backButton = undefined; }; };
   let paneHeight = $state(0);
   let activeMake = $state<string | null>(null);
   let activeFamily = $state<string | null>(null);
@@ -33,15 +42,19 @@
   const retained = $derived(selected.filter(value => !catalogue.some(group => group.families.some(family => family.choices.some(choice => listingSelectionHas([choice.value], value))))));
   const familyKey = (make: string, family = '') => JSON.stringify([make, family]);
   const hasSelection = (family: ModelFamily) => family.choices.some(choice => listingSelectionHas(selected, choice.value));
+  // Reading this from the owner keeps its fixed header in the same browsing state.
+  export function navigation(): PickerNavigation | undefined {
+    if (searching || !currentMake) return;
+    return { label: `${currentMake.make}${currentFamily ? ' / ' + currentFamily.name : ''}`,
+      back: currentFamily || !singleMake ? back : undefined, attachBack };
+  }
   onMount(() => {
     for (let node = root.parentElement; node; node = node.parentElement) {
       if (/auto|scroll/.test(getComputedStyle(node).overflowY)) { pane = node; break; }
     }
-    if (pane) {
-      const style = getComputedStyle(pane);
-      // Hold the established viewport when a large family is replaced by a short one.
-      paneHeight = pane.clientHeight - parseFloat(style.paddingTop) - parseFloat(style.paddingBottom);
-    }
+    // Measure after popover placement, then retain the actual viewport for short families.
+    const observer = pane ? new ResizeObserver(([entry]) => { paneHeight = entry.contentRect.height; }) : undefined;
+    if (pane) observer?.observe(pane);
     const chosen = catalogue.flatMap(group => group.families.filter(hasSelection).map(family => ({ make: group.make, family })));
     // Reopening a single selected family should reveal its checked choices immediately.
     if (chosen.length === 1 && !retained.length && chosen[0].family.choices.length > 1) {
@@ -50,6 +63,7 @@
       history.push({ make: singleMake ? null : make, family: null, scroll: 0, key: familyKey(make, family.name) });
       activeMake = make; activeFamily = family.name;
     }
+    return () => observer?.disconnect();
   });
   $effect(() => { search; if (pane) pane.scrollTop = 0; });
   async function enter(make: string, family: string | null = null) {
@@ -57,7 +71,7 @@
     activeMake = make; activeFamily = family;
     await tick();
     if (pane) pane.scrollTop = 0;
-    root.querySelector<HTMLButtonElement>('.back')?.focus({ preventScroll: true });
+    backButton?.focus({ preventScroll: true });
   }
   async function back() {
     const previous = history.pop();
@@ -98,12 +112,6 @@
     {/each}
     {#if !groups.length && !retained.some(matches)}<p class="empty" role="status">{i18n.t('inventory.search.empty')}</p>{/if}
   {:else if currentMake}
-    {#if currentFamily || !singleMake}
-      <div class="path">
-        <button type="button" class="back" onclick={back}><Icon name="arrow-left" size={16} /><span>{i18n.t('m_76900f1bfd16')}</span></button>
-        <h3 aria-label={`${currentMake.make}${currentFamily ? ' ' + currentFamily.name : ''}`}><span>{currentMake.make}</span>{#if currentFamily}<span aria-hidden="true">›</span><span>{currentFamily.name}</span>{/if}</h3>
-      </div>
-    {/if}
     {#if currentFamily}
       <div class="models" data-model-view={currentFamily.name} role="group" aria-label={`${currentMake.make} ${currentFamily.name}`}>
         {#each currentFamily.choices as choice (choice.value)}
@@ -130,7 +138,7 @@
 <style>
   .dn-model-groups, .families, .models { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: start; gap: var(--dn-space-2); min-width: 0; }
   .dn-model-groups { align-self: start; }
-  .all-models, .families, .models, .path, .search-group, .empty { grid-column: 1 / -1; }
+  .all-models, .families, .models, .search-group, .empty { grid-column: 1 / -1; }
   .all-models { width: calc(50% - var(--dn-space-1)); }
   .disclosure { display: flex; align-items: center; gap: var(--dn-space-2); width: 100%; min-width: 0; min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-field-font); text-align: left; cursor: pointer; }
   .disclosure-label { flex: 1; min-width: 0; overflow-wrap: anywhere; }
@@ -140,12 +148,7 @@
   .disclosure.selected { box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
   .chevron { display: flex; flex: none; color: var(--dn-muted); transform: rotate(-90deg); }
   .selection-mark { color: var(--dn-ink); }
-  .path { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; gap: var(--dn-space-3); padding-bottom: var(--dn-space-2); background: var(--dn-white); }
   h3 { min-width: 0; margin: 0; color: var(--dn-ink); font: var(--dn-control-font); overflow-wrap: anywhere; }
-  .path h3 { display: flex; flex-wrap: wrap; align-items: center; gap: var(--dn-space-2); }
-  .back { display: flex; flex: none; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-pill); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
-  .back:hover { background: var(--dn-surface-hover); }
-  .back:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .search-group { min-width: 0; }
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
   .make-title { font: var(--dn-control-font); }

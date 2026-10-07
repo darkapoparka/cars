@@ -8,6 +8,18 @@ The shared desktop editor serves Home, inventory shortcuts and the compact Model
 
 Catalogue names, actual inventory counts, zero-stock choices and query contracts remain owned by the existing data helpers. Mobile and tablet retain their existing editor. No manufacturer catalogue, inventory, asset, dependency or dealer release was changed.
 
+## Compact header follow-up
+
+The desktop header now shows the current make or a clickable `← Audi / A1` path in place of the generic Model title. Back, search and close share that row on Home, inventory shortcuts and the compact full-form picker. The separate Back/breadcrumb row is removed, so model choices begin directly below the header. Back retains the existing selection, scroll and keyboard-focus behavior.
+
+Short paths stay fully visible. Long paths truncate within the header while retaining their full tooltip and accessible Back label; the compact search retains at least 100px of input width. The search query still opens direct matching choices and clearing it restores the browsing path. Mobile/tablet and the approved desktop widths, footer, frame and motion are preserved.
+
+The retained model viewport now follows the scroll pane through a ResizeObserver after popover placement. This prevents a two-choice family retaining an oversized initial measurement and an unnecessary scrollbar. The observer disconnects when its editor unmounts.
+
+The header follow-up passed all 18 Chromium cases with normal motion and 18 WebKit cases with reduced motion, including BG/EN, all three picker surfaces, short desktop windows, short paths and six long-name/99-choice fixtures per engine. The existing Home suite passed 10 cases; filter-code checks passed six cases at 320, 390 and 1440px. Full Node 22 validation and the production build passed with 0 Svelte errors and 0 warnings. Svelte CLI analysis reported no issues in the six edited components.
+
+Iteration checks caught short-path clipping, limited compact-header space and the oversized initial viewport measurement; these were fixed before the final suites. One early WebKit run did not open its initial Make menu and reported no JavaScript errors; a focused repeat and the final full run passed. Failed/intermediate evidence remains in the ignored artifact folders. Native browser captures show Audi/A1 and a matched BMW 3 Series before/after, with the separate navigation row removed. Follow-up evidence is in `artifacts/desktop-model-header-*` and `runtime/auto-best-model-header-2026-10-08-01a115ed/`.
+
 ## Verification
 
 The updated `scripts/desktop-model-groups-smoke.mjs` covers focused family navigation, stationary frame/footer/page, Back and focus restoration, selection retention across families, direct search, zero-stock application, cancellation and legacy stock URLs in BG/EN across all three surfaces. A browser-only fixture adds 80 model choices to BMW 3 Series, producing a 99-choice family without changing source data. It checks the last model, scrolling, sticky Back, retained selection and exact search.

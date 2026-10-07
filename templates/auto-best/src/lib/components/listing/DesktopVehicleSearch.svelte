@@ -12,7 +12,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
-  import DesktopModelGroups from './DesktopModelGroups.svelte';
+  import DesktopModelGroups, { type ModelPicker } from './DesktopModelGroups.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   type Field = Exclude<ListingFacetField, 'sort'>;
@@ -29,6 +29,7 @@
   let draft = $state<ListingDraft>(emptyListingDraft());
   const field = $derived(initialFacet);
   let search = $state('');
+  let modelPicker = $state<ModelPicker>();
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
   let picker = $state<HTMLDivElement | null>(null);
@@ -195,7 +196,7 @@
       {#if invalidRange}<p class="dn-search-range-error" role="alert">{i18n.t(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax) ? 'm_2157bc34d38a' : 'm_e35acfc7ae2e')}</p>{/if}
     </div>
   {:else if field === 'model'}
-    <div class="dn-facet-options"><div class="dn-search-results"><DesktopModelGroups makes={draft.make} selected={draft.model} {search} name="draft-model" onchange={value => draft = toggleListingIdentity(draft, 'model', value)} /></div></div>
+    <div class="dn-facet-options"><div class="dn-search-results"><DesktopModelGroups bind:this={modelPicker} makes={draft.make} selected={draft.model} {search} name="draft-model" onchange={value => draft = toggleListingIdentity(draft, 'model', value)} /></div></div>
   {:else if field}
     <div class="dn-facet-options">
       <div class="dn-search-results dn-search-results--choices" class:dn-search-results--makes={field === 'make'} role="group" aria-label={title}>
@@ -226,7 +227,7 @@
 
 {#snippet filterForm()}
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={cleanForm}>
-    <FilterPopoverHeader id="dn-facet-title" {title} search={searchable ? searchControl : undefined} />
+    <FilterPopoverHeader id="dn-facet-title" {title} search={searchable ? searchControl : undefined} navigation={field === 'model' ? modelPicker?.navigation() : undefined} />
     <div class="dn-filter-workspace">
       <section class="dn-filter-panel" aria-label={title}>{@render editor()}</section>
     </div>

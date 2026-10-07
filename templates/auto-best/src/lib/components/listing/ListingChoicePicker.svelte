@@ -11,7 +11,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
-  import DesktopModelGroups from './DesktopModelGroups.svelte';
+  import DesktopModelGroups, { type ModelPicker } from './DesktopModelGroups.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   let { field, draft = $bindable(), label, placeholder, displayValue, showCounts = false, showLabel = true, compact = false, submitValues = true, resetKey = 0, onchange, oncommit }: {
@@ -24,6 +24,7 @@
   const id = $props.id();
   let open = $state(false);
   let search = $state('');
+  let modelPicker = $state<ModelPicker>();
   let browsedValue = $state<string | null>(null);
   let searchInput = $state<HTMLInputElement | null>(null);
   let picker = $state<HTMLDivElement | null>(null);
@@ -38,6 +39,7 @@
   const title = $derived(label ?? listingChoiceTitle(field, i18n.locale));
   const multiple = $derived(field === 'make' || field === 'model');
   const searchable = $derived(multiple || field === 'version');
+  const desktopModel = $derived(field === 'model' && desktop.current);
   const searchLabel = $derived(i18n.t(field === 'make' ? 'm_150bec5925bd' : field === 'model' ? 'm_269619120191' : 'inventory.search.within'));
   const allLabel = $derived(field === 'sort' ? listingChoiceLabel(field, '', i18n.locale) : i18n.t(field === 'make' ? 'inventory.search.allMakes' : field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069'));
   const selected = $derived(listingChoiceValue(draft, field));
@@ -96,6 +98,10 @@
   }
 </script>
 
+{#snippet searchControl()}
+  <label class="dn-picker-search" class:inline={desktopModel}><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>
+{/snippet}
+
 <div class="dn-identity-field" class:compact data-field={field} {@attach attachRoot}>
   <span class:dn-sr-only={!showLabel} class="dn-field-label" id={id + '-label'}>{title}</span>
   <Popover.Root bind:open onOpenChange={value => { if (value) { search = ''; browsedValue = null; keyboardBrowsing = false; focusOnClose = trigger; } }}>
@@ -108,11 +114,11 @@
         onOpenAutoFocus={focusPicker}
         onCloseAutoFocus={restoreFocus} onInteractOutside={interactOutside}
         onkeydowncapture={event => { keyboardBrowsing = event.key.startsWith('Arrow'); }} onpointerdowncapture={() => { keyboardBrowsing = false; }}>
-        <FilterPopoverHeader id={id + '-title'} {title} />
-        {#if searchable}<label class="dn-picker-search"><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>{/if}
+        <FilterPopoverHeader id={id + '-title'} {title} search={desktopModel ? searchControl : undefined} navigation={desktopModel ? modelPicker?.navigation() : undefined} />
+        {#if searchable && !desktopModel}{@render searchControl()}{/if}
         <div bind:this={optionsList} class="dn-picker-options" role="group" aria-label={title}>
-          {#if field === 'model' && desktop.current}
-            <DesktopModelGroups makes={draft.make} selected={draft.model} {search} compact name={id + '-choice'} onchange={choose} />
+          {#if desktopModel}
+            <DesktopModelGroups bind:this={modelPicker} makes={draft.make} selected={draft.model} {search} compact name={id + '-choice'} onchange={choose} />
           {:else}
           {#if field === 'make' && desktop.current}
             <DesktopMakeChoice value="" label={optionLabel('')} checked={!checkedValue.length} portrait={false} name={id + '-choice'} onchange={choose} />
@@ -150,6 +156,7 @@
   .compact :global(.dn-identity-trigger) { min-height: var(--dn-identity-control-height, var(--dn-control-hit-height)); background: var(--dn-surface-subtle); padding-inline: var(--dn-space-3); }
   :global(.dn-filter-picker) { z-index: 11002; width: min(380px, calc(100vw - 32px)); max-height: min(480px, var(--bits-popover-content-available-height, 480px)); padding: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-shadow); display: flex; flex-direction: column; outline: none; }
   .dn-picker-search { display: flex; flex: none; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-hit-height); margin: 0 var(--dn-space-4) var(--dn-space-2); padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-muted); }
+  .dn-picker-search.inline { gap: var(--dn-space-1); margin: 0; padding-inline: var(--dn-space-2); }
   .dn-picker-search input { width: 0; flex: 1; min-width: 0; padding: var(--dn-space-2) 0; border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-field-font); outline: none; }
   .dn-picker-search:has(input:focus-visible) { outline: 1px solid var(--dn-focus); outline-offset: -1px; }
   .dn-picker-options { min-height: 0; margin: 0 var(--dn-space-4) var(--dn-space-4); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
