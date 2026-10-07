@@ -61,8 +61,9 @@ current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their floating dock, spacing and navigation behavior.
-Desktop Services uses three equal glass segments in a compact 52px rail with
-16px labels, 44px targets, uniform insets and a stable width across selection. The phone Services tabs retain their
+Desktop Services uses three equal glass segments in a compact 48px rail with
+14px labels, 44px targets, uniform translucent edges and a stable width across selection.
+The rail stays smaller than the 60px search field. The phone Services tabs retain their
 underline composition.
 
 Desktop inventory uses compact, natural-width pills for Year, Mileage, Fuel,

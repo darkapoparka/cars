@@ -126,10 +126,11 @@ async function run(name, engine) {
     assert.deepEqual(failures, [], label + ' must retain readable vehicle facts');
     check(label + ': compact readable facts and distinct title/price hierarchy');
   }
-  async function serviceSegment(page, label) {
-    const bounds = await page.getByRole('tablist').evaluate((rail) => {
+  async function serviceSegment(page, label, locale) {
+    const { height, borders, bounds } = await page.getByRole('tablist').evaluate((rail) => {
       const outer = rail.getBoundingClientRect();
-      return [...rail.querySelectorAll('[role="tab"]')].map((tab) => {
+      const css = getComputedStyle(rail);
+      const bounds = [...rail.querySelectorAll('[role="tab"]')].map((tab) => {
         const rect = tab.getBoundingClientRect();
         return {
           width: rect.width,
@@ -140,7 +141,29 @@ async function run(name, engine) {
           right: outer.right - rect.right,
         };
       });
+      return {
+        height: outer.height,
+        borders: [
+          css.borderTopColor,
+          css.borderRightColor,
+          css.borderBottomColor,
+          css.borderLeftColor,
+        ],
+        bounds,
+      };
     });
+    const search = await page
+      .getByRole('button', { name: translate('Search services', locale), exact: true })
+      .boundingBox();
+    assert.ok(
+      search && height <= search.height * 0.8,
+      label + ' service segment must remain visibly smaller than search',
+    );
+    assert.equal(
+      new Set(borders).size,
+      1,
+      label + ' glass rail must have matching borders without an opaque bottom line',
+    );
     assert.ok(
       Math.max(...bounds.map((b) => b.width)) - Math.min(...bounds.map((b) => b.width)) < 1,
       label + ' service segments must have equal widths',
@@ -156,7 +179,7 @@ async function run(name, engine) {
         Math.abs(bounds.at(-1).right - bounds.at(-1).top) < 1,
       label + ' service segments must retain uniform insets at both rounded ends',
     );
-    check(label + ': service segments stay equal and centered');
+    check(label + ': smaller service segments stay equal and centered with matching glass edges');
     return bounds.reduce((sum, bound) => sum + bound.width, 0);
   }
   async function geometry(page, label) {
@@ -319,12 +342,16 @@ async function run(name, engine) {
           await geometry(page, label + ' ' + width + ' ' + locale);
           if (label === 'Services') {
             const segmentWidth =
-              width === 1440 ? await serviceSegment(page, 'Services ' + locale) : null;
+              width === 1440 ? await serviceSegment(page, 'Services ' + locale, locale) : null;
             for (const tab of ['Import', 'Sell', 'All']) {
               await page.getByRole('tab', { name: t(tab), exact: true }).click();
               await geometry(page, 'Services ' + tab + ' ' + width + ' ' + locale);
               if (width === 1440) {
-                const selectedWidth = await serviceSegment(page, 'Services ' + tab + ' ' + locale);
+                const selectedWidth = await serviceSegment(
+                  page,
+                  'Services ' + tab + ' ' + locale,
+                  locale,
+                );
                 assert.ok(
                   Math.abs(selectedWidth - segmentWidth) < 1,
                   'Service segments must not resize when switching tabs',

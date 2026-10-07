@@ -59,7 +59,6 @@
 				{#each data.posts as post (post.slug)}
 					<ArticleCard {post} {english} compact mobileRow readLabel={mobileCopy.read} />
 				{/each}
-				<HomeBrowseCard href={href('/blog')} label={mobileCopy.allArticles} context={copy.guides} />
 			</div>
 		</section>
 	{/if}
@@ -156,26 +155,6 @@
 			justify-content: flex-start;
 			gap: 6px;
 			padding: 12px;
-		}
-		.guide-list :global(.home-browse-card) {
-			flex-direction: row;
-			justify-content: space-between;
-			gap: 12px;
-			min-height: 64px;
-			padding: 14px 16px;
-			font-size: 16px;
-		}
-		.guide-list :global(.home-browse-card__arrow) {
-			flex: none;
-			width: 32px;
-			height: 32px;
-			padding: 7px;
-			border-radius: var(--bc-radius-pill);
-			background: var(--bc-ink);
-			color: var(--bc-white);
-		}
-		.guide-list :global(.home-browse-card strong) {
-			order: -1;
 		}
 		.contact-section :global(.commerce-banner) {
 			aspect-ratio: auto;
