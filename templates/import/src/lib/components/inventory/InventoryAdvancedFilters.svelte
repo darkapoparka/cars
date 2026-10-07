@@ -4,6 +4,12 @@
 	const nt = (key: import('$lib/i18n/native').NativeKey) =>
 		nativeMessage(page.data.locale === 'en' ? 'en' : 'bg', key);
 	import { untrack } from 'svelte';
+	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import {
+		inventoryDraftFromQuery,
+		serializeInventoryDraft,
+		updateInventoryDraft
+	} from '$lib/domain/inventory-draft';
 	import { goto } from '$app/navigation';
 	import { linkHref as resolve } from '$lib/utils/links';
 	import { page } from '$app/state';
@@ -71,19 +77,14 @@
 	const selectedFeatures = $derived((draft.feature ?? '').split(',').filter(Boolean));
 	const optionList = (name: string, options: AuxeroInventoryFilterOption[]) =>
 		name === 'model' ? models : options;
-	const queryString = () =>
-		new URLSearchParams(
-			Object.entries(draft).filter(([, value]) => value && value.toLowerCase() !== 'all')
-		).toString();
+	const queryString = () => serializeInventoryDraft(draft, page.url.searchParams).toString();
 
 	async function refreshCount() {
 		const request = new AbortController();
 		controller = request;
 		try {
-			const params = new URLSearchParams({
-				...Object.fromEntries(new URLSearchParams(queryString())),
-				lang: page.data.locale === 'en' ? 'en' : 'bg'
-			});
+			const params = new SvelteURLSearchParams(queryString());
+			params.set('lang', page.data.locale === 'en' ? 'en' : 'bg');
 			const response = await fetch(`${resolve('/api/inventory/count')}?${params}`, {
 				signal: request.signal
 			});
@@ -107,9 +108,7 @@
 		timer = setTimeout(() => void refreshCount(), 200);
 	}
 	function setField(name: string, value: string) {
-		draft[name] = value;
-		if (name === 'model') draft.q = '';
-		if (name === 'q') draft.model = '';
+		draft = updateInventoryDraft(draft, name, value);
 		if (name === 'brand') {
 			draft.model = '';
 			models = [];
@@ -149,7 +148,7 @@
 	}
 	const mountDialog: Attachment<HTMLDialogElement> = (element) =>
 		untrack(() => {
-			draft = Object.fromEntries(page.url.searchParams);
+			draft = inventoryDraftFromQuery(page.url.searchParams);
 			for (const filter of desktop.filters) {
 				if (filter.name !== 'model') draft[filter.name] = filter.selectedValues.join(',');
 			}

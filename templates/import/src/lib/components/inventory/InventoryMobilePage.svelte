@@ -19,7 +19,11 @@
 	import type { AuxeroInventoryVehicleCard } from '$lib/auxero/inventory';
 	import type { InventoryMobileData } from '$lib/auxero/inventory-mobile';
 	import type { InventoryCopy } from '$lib/i18n/messages';
-	import { SvelteURLSearchParams } from 'svelte/reactivity';
+	import {
+		inventoryMobileDraftFromQuery,
+		serializeInventoryMobileDraft,
+		type InventoryMobileDraft as FilterDraft
+	} from '$lib/domain/inventory-mobile-draft';
 	import { Drawer } from 'vaul-svelte';
 	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 	import MobileVehicleCard from '$lib/components/common/MobileVehicleCard.svelte';
@@ -36,18 +40,6 @@
 		| 'price'
 		| 'extras'
 		| 'year';
-	type FilterDraft = {
-		body: string;
-		brand: string;
-		feature: string;
-		fuel: string;
-		mileage: string;
-		model: string;
-		price: string;
-		sort: string;
-		transmission: string;
-		year: string;
-	};
 	type InventoryMobileOption = InventoryMobileData['brandOptions'][number];
 
 	let {
@@ -118,13 +110,6 @@
 		sort: 'daynight-inventory-mobile-sort-drawer',
 		year: 'daynight-inventory-mobile-year-drawer'
 	} as const;
-	const activeOptionValue = (options: InventoryMobileData['brandOptions']) =>
-		options.find((option) => option.active)?.value ?? '';
-	const activeOptionValues = (options: InventoryMobileData['brandOptions']) =>
-		options
-			.filter((option) => option.active && option.value)
-			.map((option) => option.value)
-			.join(',');
 	const normalizedOptionQuery = (value: string) => value.trim().toLocaleLowerCase();
 	const optionSearchText = (option: InventoryMobileOption) =>
 		`${option.label} ${option.value}`.toLocaleLowerCase();
@@ -152,26 +137,8 @@
 				: [...values, value]
 		);
 	};
-	const rangeParams = (value: string) => {
-		const [min, max] = value.split('-');
-
-		return {
-			max: max ? Number(max) : undefined,
-			min: min ? Number(min) : undefined
-		};
-	};
-	const currentFilterDraft = (): FilterDraft => ({
-		body: activeOptionValues(mobile.bodyOptions),
-		brand: activeOptionValues(mobile.brandOptions),
-		feature: activeOptionValues(mobile.featureOptions),
-		fuel: activeOptionValues(mobile.fuelOptions),
-		mileage: activeOptionValue(mobile.mileageOptions),
-		model: mobile.searchValue || activeOptionValue(mobile.modelOptions),
-		price: activeOptionValue(mobile.priceOptions),
-		sort: activeOptionValue(mobile.sortOptions) || 'best-match',
-		transmission: activeOptionValues(mobile.transmissionOptions),
-		year: activeOptionValue(mobile.yearOptions)
-	});
+	const currentFilterDraft = (): FilterDraft =>
+		inventoryMobileDraftFromQuery(page.url.searchParams);
 
 	let searchDrawerOpen = $state(false);
 	let overlayWasOpen = false;
@@ -406,53 +373,7 @@
 		filterDraft[key] = filterDraft[key] === value ? '' : value;
 	};
 	const filterDraftHref = () => {
-		const params = new SvelteURLSearchParams(page.url.search);
-		const setParam = (key: string, value: string, defaultValue = '') => {
-			if (!value || value === defaultValue) {
-				params.delete(key);
-				return;
-			}
-
-			params.set(key, value);
-		};
-
-		setParam('brand', filterDraft.brand);
-		params.delete('query');
-		params.delete('keyword');
-		params.delete('model');
-		setParam('q', filterDraft.model);
-		params.delete('body');
-		params.delete('bodystyle');
-		setParam('bodyType', filterDraft.body);
-		params.delete('equipment');
-		params.delete('extra');
-		params.delete('features');
-		setParam('feature', filterDraft.feature);
-		params.delete('FuelType');
-		setParam('fuel', filterDraft.fuel);
-		params.delete('mileageFrom');
-		params.delete('mileageTo');
-		const mileage = rangeParams(filterDraft.mileage);
-		setParam('minMileage', mileage.min ? String(mileage.min) : '');
-		setParam('maxMileage', mileage.max ? String(mileage.max) : '');
-		params.delete('price');
-		params.delete('priceFrom');
-		params.delete('priceTo');
-		const price = rangeParams(filterDraft.price);
-		setParam('minPrice', price.min ? String(price.min) : '');
-		setParam('maxPrice', price.max ? String(price.max) : '');
-		setParam('sort', filterDraft.sort, 'best-match');
-		params.delete('Transmission');
-		params.delete('gearbox');
-		setParam('transmission', filterDraft.transmission);
-		params.delete('yearFrom');
-		params.delete('yearTo');
-		const year = rangeParams(filterDraft.year);
-		setParam('minYear', year.min ? String(year.min) : '');
-		setParam('maxYear', year.max ? String(year.max) : '');
-
-		const query = params.toString();
-
+		const query = serializeInventoryMobileDraft(filterDraft, page.url.searchParams).toString();
 		return `/inventory${query ? `?${query}` : ''}`;
 	};
 	const clearFilterDraft = () => {
