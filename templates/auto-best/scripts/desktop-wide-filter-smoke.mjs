@@ -103,6 +103,7 @@ try {
   const identity=async(field,value,checked=true)=> {
    await dialog.locator('[data-field='+field+'] button').click();
    const popup=page.locator('.dn-filter-picker'); await popup.waitFor({state:'visible'});
+   if (field === 'model') await popup.getByRole('searchbox').fill(value);
    const choice=popup.locator('input[value="'+value+'"]');
    await choice.setChecked(checked);
    await page.keyboard.press('Escape'); await popup.waitFor({state:'hidden'});

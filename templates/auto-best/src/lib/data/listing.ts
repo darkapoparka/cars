@@ -1,4 +1,5 @@
 import { featuredVehicles, vehicleTypes, type VehicleType, type Vehicle, type VehicleCondition, type VehicleEquipment } from './inventory';
+import { catalogueModel, catalogueModelMatches } from './model-catalogue';
 import type { Locale } from '$lib/locale/core';
 import { specificationLabel } from '$lib/i18n/presentation';
 
@@ -163,6 +164,8 @@ export function listingModelsAfterMakeChange(current: readonly string[], next: r
   if (currentMakes.length === nextMakes.length && currentMakes.every(make => nextMakes.includes(make))) return [...models];
   if (!nextMakes.length) return [];
   return models.filter(model => {
+    const catalogueOwner = catalogueModel(model)?.make;
+    if (catalogueOwner) return nextMakes.includes(normalize(catalogueOwner));
     const owners = featuredVehicles.filter(vehicle => normalize(vehicle.title).includes(normalize(model)));
     // An applied value outside current stock has no known incompatible owner.
     return !owners.length || owners.some(vehicle => nextMakes.includes(normalize(vehicle.make)));
@@ -200,7 +203,7 @@ export const filterListingVehicles = (vehicles: readonly Vehicle[], filters: Lis
     if (query && !vehicleMatchesQuery(vehicle, query, locale)) return false;
     if (filters.type && vehicle.type !== filters.type) return false;
     if (makes.length && !makes.includes(normalize(vehicle.make))) return false;
-    if (models.length && !models.some(model => normalize(vehicle.title).includes(model))) return false;
+    if (models.length && !models.some(model => catalogueModelMatches(vehicle, model) ?? normalize(vehicle.title).includes(model))) return false;
     if (body && normalize(vehicle.body) !== body && !normalize(vehicle.category).includes(body)) return false;
     if (fuel && normalize(vehicle.fuel) !== fuel) return false;
     if (transmission && normalize(vehicle.transmission) !== transmission) return false;

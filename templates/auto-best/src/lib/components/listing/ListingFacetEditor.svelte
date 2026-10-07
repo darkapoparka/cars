@@ -16,6 +16,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
+  import DesktopModelGroups from './DesktopModelGroups.svelte';
 
   let { field, draft = $bindable(), desktopChoices = false, widePanel = false, header, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
@@ -120,6 +121,8 @@
           {/each}
         </div>
       {/if}
+    {:else if field === 'model' && desktopChoices && widePanel}
+      <DesktopModelGroups makes={draft.make} selected={draft.model} {search} onchange={choose} />
     {:else}
       <fieldset>
         <legend class="dn-sr-only">{title}</legend>

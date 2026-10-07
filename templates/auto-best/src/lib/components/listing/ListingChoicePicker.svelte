@@ -11,6 +11,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
+  import DesktopModelGroups from './DesktopModelGroups.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   let { field, draft = $bindable(), label, placeholder, displayValue, showCounts = false, showLabel = true, compact = false, submitValues = true, resetKey = 0, onchange, oncommit }: {
@@ -110,6 +111,9 @@
         <FilterPopoverHeader id={id + '-title'} {title} />
         {#if searchable}<label class="dn-picker-search"><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>{/if}
         <div bind:this={optionsList} class="dn-picker-options" role="group" aria-label={title}>
+          {#if field === 'model' && desktop.current}
+            <DesktopModelGroups makes={draft.make} selected={draft.model} {search} compact name={id + '-choice'} onchange={choose} />
+          {:else}
           {#if field === 'make' && desktop.current}
             <DesktopMakeChoice value="" label={optionLabel('')} checked={!checkedValue.length} portrait={false} name={id + '-choice'} onchange={choose} />
           {:else}
@@ -126,6 +130,7 @@
             {/if}
           {/each}
           {#if !options.length}<p class="dn-empty" role="status">{i18n.t('inventory.search.empty')}</p>{/if}
+          {/if}
         </div>
       </Popover.Content>
     </Popover.Portal>

@@ -1,4 +1,5 @@
 import { vehicleTypes, type VehicleEquipment } from './inventory';
+import { catalogueModel } from './model-catalogue';
 import { currencySymbol, formatPrice, intlLocale, type Locale } from '$lib/locale/core';
 import { message, templateText } from '$lib/locale/messages';
 import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
@@ -226,6 +227,8 @@ export function withListingMake(draft: ListingDraft, value: string | readonly st
 
 export function listingMakeForModel(model: string): string {
   if (!model) return '';
+  const catalogueOwner = catalogueModel(model)?.make;
+  if (catalogueOwner) return catalogueOwner;
   const makes = listingFilterOptions.makes.filter(make => make && listingSelectionHas(listingModelsForMake(make), model));
   return makes.length === 1 ? makes[0] : '';
 }

@@ -12,6 +12,10 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   const save = () => menu.locator('.dn-home-browse-picker__save').click();
   const clear = () => menu.getByRole('button', { name: locale === 'bg' ? 'Изчисти' : 'Clear', exact: true }).click();
   const choice = value => menu.getByRole('checkbox', { name: value, exact: true });
+  const chooseModel = async value => {
+    if (page.viewportSize().width >= 992) await menu.getByRole('searchbox').fill(value);
+    await choice(value).check();
+  };
   const values = name => form.locator(`input[type=hidden][name="${name}"]`).evaluateAll(inputs => inputs.map(input => input.value));
   const open = async name => {
     await field(name).click();
@@ -81,7 +85,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   assert.equal(await menu.evaluate(node => node === document.activeElement), true, 'Pointer switching keeps the new input neutral');
   assert.deepEqual(await values('price_max'), [], 'Switching fields discards the previous editor draft');
   assert.equal(await choice('X6 M Sport').count(), 0, 'Models follow the saved makes');
-  await choice('RS 6 Avant').check();
+  await chooseModel('RS 6 Avant');
   if (page.viewportSize().width >= 992) assert.equal((await menu.locator('.dn-home-browse-picker__count').innerText()).trim(), locale === 'bg' ? '· 1 автомобил' : '· 1 car', 'The Home count follows the pending model before Save');
   await save();
   assert.deepEqual(await values('model'), ['RS 6 Avant']);
@@ -95,7 +99,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   await choice('Audi').check();
   await save();
   await open('model');
-  await choice('RS 6 Avant').check();
+  await chooseModel('RS 6 Avant');
   await save();
 
   await open('body');

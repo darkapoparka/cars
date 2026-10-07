@@ -9,6 +9,7 @@ const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
 const modules = [["src/lib/locale/formatters.ts","locale-formatters"],["src/lib/data/demo-content.ts","demo-content"],["src/lib/config/lead-site.ts","lead-site"],["src/lib/data/inventory.ts","inventory"],["src/lib/data/listing.ts","listing"],["src/lib/data/listing-draft.ts","listing-draft"],["src/lib/data/journeys.ts","journeys"],["src/lib/config/brand.ts","brand"],["src/lib/locale/policy.ts","locale-policy"],["src/lib/locale/config.ts","locale-config"],["src/lib/config/locale.ts","dealer-locale-config"],["src/lib/locale/core.ts","locale-core"],["src/lib/locale/catalog.ts","locale-catalog"],["src/lib/locale/messages.ts","locale-messages"],["src/lib/i18n/presentation.ts","locale-presentation"]];
 modules.push(['src/lib/data/desktop-makes.ts', 'desktop-makes'], ['src/lib/data/make-artwork.ts', 'make-artwork']);
+modules.push(['src/lib/data/model-catalogue-data.ts', 'model-catalogue-data'], ['src/lib/data/model-catalogue.ts', 'model-catalogue']);
 const moduleOutputs = new Map(modules.map(([file,name]) => [path.resolve(file), name]));
 for (const [input,name] of modules) {
   let code = ts.transpileModule(await readFile(input,'utf8'), {compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
@@ -27,8 +28,38 @@ for (const [input,name] of modules) {
 const inventory = await import(pathToFileURL(`${out}/inventory.mjs`));
 const listing = await import(pathToFileURL(`${out}/listing.mjs`));
 const listingDraft = await import(pathToFileURL(`${out}/listing-draft.mjs`));
+const modelCatalogue = await import(pathToFileURL(`${out}/model-catalogue.mjs`));
 const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
 const records = inventory.featuredVehicles;
+const bmwFamilies = modelCatalogue.modelMakes(records, ['BMW'], [], ['BMW'])[0].families;
+assert.deepEqual(bmwFamilies.slice(0, 8).map(family => family.name), Array.from({ length: 8 }, (_, index) => `${index + 1} Series`));
+assert.equal(bmwFamilies.find(family => family.name === 'X Series').count, 2);
+assert.equal(bmwFamilies.find(family => family.name === '3 Series').count, 0, 'Empty familiar families remain browsable');
+assert(bmwFamilies.find(family => family.name === '3 Series').choices.some(choice => choice.value === 'BMW 320'));
+assert.equal(bmwFamilies.find(family => family.name === 'X Series').choices.find(choice => choice.value === 'BMW X6').count, 2);
+assert.equal(bmwFamilies.find(family => family.name === 'X Series').choices.find(choice => choice.value === 'BMW X6 M').count, 0, 'M Sport is a trim, not an X6 M');
+assert.equal(bmwFamilies.find(family => family.name === 'X Series').choices.find(choice => choice.value === 'X6 M Sport').count, 1, 'Legacy exact model values are retained');
+const mercedesFamilies = modelCatalogue.modelMakes(records, ['Mercedes-Benz'], [], ['Mercedes-Benz'])[0].families;
+assert.equal(mercedesFamilies[0].name, 'A-Class', 'Class families precede historical standalone model numbers');
+assert.equal(mercedesFamilies.find(family => family.name === 'GLE-Class').count, 1);
+assert.equal(mercedesFamilies.find(family => family.name === 'G-Class').count, 0, 'G-Class must not include GLE');
+assert.equal(mercedesFamilies.find(family => family.name === 'GT-Class').count, 2, 'AMG titles retain their Mercedes-Benz owner');
+const catalogueFilter = value => listing.parseListingFilters(new URLSearchParams({ model: value }));
+assert.deepEqual(listing.filterListingVehicles(records, catalogueFilter('BMW X6')).map(vehicle => vehicle.id), [4, 7]);
+assert.deepEqual(listing.filterListingVehicles(records, catalogueFilter('Audi RS6')).map(vehicle => vehicle.id), [1], 'Catalogues and titles may space model numbers differently');
+assert.equal(listing.filterListingVehicles(records, catalogueFilter('BMW 320')).length, 0, 'A catalogue choice never fabricates inventory');
+assert.equal(listingDraft.listingMakeForModel('BMW 320'), 'BMW', 'A zero-stock model retains a known make');
+assert.deepEqual(listing.listingModelsAfterMakeChange(['BMW', 'Audi'], ['Audi'], ['BMW 320', 'Audi RS6']), ['Audi RS6']);
+assert.equal(modelCatalogue.catalogueModelMatches({ make: 'BMW', title: 'BMW 118d' }, 'BMW 118'), true);
+assert.equal(modelCatalogue.catalogueModelMatches({ make: 'BMW', title: 'BMW 1180' }, 'BMW 118'), false);
+const futureStock = [...records, { ...records[0], make: 'Saab', title: 'Saab Dealer Special' }];
+assert(modelCatalogue.modelMakes(futureStock, ['Saab'], [], ['Saab'])[0].families.some(family => family.choices.some(choice => choice.value === 'Dealer Special' && choice.count === 1)), 'New dealer models are retained even outside the pinned catalogue');
+assert(modelCatalogue.modelMakes([], ['Saab'], ['9-3'], ['Saab'])[0].families.some(family => family.choices.some(choice => choice.value === '9-3')), 'Previously applied values survive empty stock');
+for (const make of Object.keys((await import(pathToFileURL(`${out}/model-catalogue-data.mjs`))).modelCatalogueData)) {
+  const families = modelCatalogue.modelMakes([], [make], [], [make])[0].families;
+  assert.equal(new Set(families.map(family => family.name)).size, families.length, `${make}: stable unique disclosure keys`);
+  for (const family of families) assert.equal(new Set(family.choices.map(choice => choice.value)).size, family.choices.length, `${make} ${family.name}: stable unique model choices`);
+}
 const desktopMakes = await import(pathToFileURL(`${out}/desktop-makes.mjs`));
 assert.equal(desktopMakes.desktopMakeCatalogue.length, 179);
 assert.equal(desktopMakes.desktopMakeCount(''), records.length);

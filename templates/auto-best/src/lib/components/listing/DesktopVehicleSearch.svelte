@@ -12,6 +12,7 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopMakeChoice from './DesktopMakeChoice.svelte';
+  import DesktopModelGroups from './DesktopModelGroups.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   type Field = Exclude<ListingFacetField, 'sort'>;
@@ -193,6 +194,8 @@
       {/if}
       {#if invalidRange}<p class="dn-search-range-error" role="alert">{i18n.t(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax) ? 'm_2157bc34d38a' : 'm_e35acfc7ae2e')}</p>{/if}
     </div>
+  {:else if field === 'model'}
+    <div class="dn-facet-options"><div class="dn-search-results"><DesktopModelGroups makes={draft.make} selected={draft.model} {search} name="draft-model" onchange={value => draft = toggleListingIdentity(draft, 'model', value)} /></div></div>
   {:else if field}
     <div class="dn-facet-options">
       <div class="dn-search-results dn-search-results--choices" class:dn-search-results--makes={field === 'make'} role="group" aria-label={title}>
@@ -200,8 +203,8 @@
           {#if field === 'make'}
             <DesktopMakeChoice value="" label={i18n.t('inventory.search.allMakes')} name="draft-make" checked={!activeFields.includes('make')} onchange={() => clear('make', false)} />
           {:else}
-          <DesktopFilterChoice value="" label={i18n.t(field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069')}
-            multiple={field === 'model'} tile name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
+          <DesktopFilterChoice value="" label={i18n.t('m_3cd085e8c069')}
+            tile name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
           {/if}
         {/if}
         {#each choices as choice (choice.value)}

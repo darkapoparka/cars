@@ -1,5 +1,8 @@
 # Testing reference
 
+`node scripts/desktop-model-groups-smoke.mjs` checks the shared desktop model-family editor on Home, inventory shortcuts and the full form's nested picker. It covers numbered BMW families, 0-stock catalogue choices, accurate availability, keyboard/pointer expansion, stationary page/footer, compact targets, cancelled drafts, cross-brand search and legacy model GET results in BG/EN at 992x600 and 1440x900. Set `MODEL_ENGINE=webkit` for the installed second engine, `MODEL_CASE` for focused cases, `MODEL_MOTION=no-preference` for normal opening motion and `MODEL_EVIDENCE_DIR` for a run's output. The [grouping verification record](MODEL-GROUPS-2026-10-07.md) records the source and preservation boundaries.
+
+
 The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 840/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
 
 Home checks also measure the desktop menu's visible 8px gap from the entire
