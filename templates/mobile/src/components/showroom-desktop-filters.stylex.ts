@@ -92,8 +92,10 @@ export const desktopFilterStyles = stylex.create({
   overviewGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
-    gap: 20,
-    alignItems: 'start',
+    gap: 8,
+    alignItems: 'stretch',
+    // Share the outer padding with the card inset to retain the control positions.
+    margin: -8,
   },
   fieldGroup: { display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 },
   fieldTitle: { fontSize: 15, fontWeight: 600, lineHeight: '22px' },
