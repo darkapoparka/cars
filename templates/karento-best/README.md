@@ -25,21 +25,35 @@ How It Works is a custom four-step dealer journey using image-generated photogra
 | --- | --- |
 | Home | Home 3 at `/` |
 | Vehicles | List 2 at `/vehicles`, selected Details 3 at `/vehicle` |
-| Import | Direct link to `/import`; source names and logos open the profile at `/import/source` |
-| Shop | Grid at `/shop`, product at `/shop/product` |
-| Explore | About, Services, Membership & Pricing, Calculator, FAQ, Terms, Contact, Login, Register, designed 404 preview |
-| News | Grid at `/news`, article at `/news/article` |
+| Services | `/services` |
+| Shop | Direct link to `/shop`; product images and names open `/shop/product` |
+| Explore | About, Import, News, Calculator, FAQ, Terms |
+| Plans | Direct link to membership packages at `/membership` |
 | Contact | `/contact` |
 
-Sign in opens the login preview. Selecting Dealership owner and Sign in to demo opens `/dashboard`; Member opens `/account`. The chosen preview area persists in the current browser tab, changes the header/mobile entry to Dashboard or My account, and provides Sign out. Dashboard access is not in the footer. The six member screens and five owner screens live inside their existing sidebars. Add Listing is available in the owner area; the public header has a View cars action. Dashboard screens explicitly identify their sample data and unsaved changes. This preview collects no credentials and is not authentication or a working inventory backend.
+The header's Account button opens Login, or the selected demo account. The grid button retains the original desktop drawer, with account actions and website links. Signed-out visitors see Sign in and Create an account. Selecting Dealership owner and Sign in to demo opens `/dashboard`; Member opens `/account`. The chosen preview area persists in the current browser tab and updates the drawer to View account, Account settings and Sign out. Sign out is not an inline header action. The mobile navigation retains one direct account entry. Login/Register are outside Explore, and Register links back to Login. The six member screens and five owner screens live inside their existing sidebars. Add Listing is available inside the owner dashboard. Dashboard screens explicitly identify their sample data and unsaved changes. This sign-in preview collects no credentials and is not authentication or a working inventory backend.
+
+Missing website URLs return HTTP 404 and render the existing Karento error design with the shared website header and a Back to Home link. Error pages are not menu entries. Normal pages and the error screen use the same captured-page renderer and vendor initialization. Contact appears once in the main menu; Import and News live under Explore. News opens `/news`; article images, titles and featured stories open `/news/article`.
 
 Motion is restrained throughout the derivative: scroll reveals and lifting classes are removed before rendering; counters are static; brand lists wrap without a ticker; decorative artwork and sticky-header entrance animations are disabled. Carousels start paused and retain deliberate arrows/swiping with a short transition, respecting reduced-motion preferences. Buttons, links and cards retain subtle color/border feedback and visible keyboard focus. The shared original vendor assets remain untouched.
 
-Every page uses Home 3's header, mobile menu and side panel, composed from the preserved `index-3` source before applying the shared navigation and account controls in `src/lib/server/site.mjs`. Inner pages no longer inherit their original header contact strips. All existing home, catalogue and vehicle-detail links lead to the selected layouts. Original captured route names remain accessible directly for reference, but alternate layout selectors are removed from the website menus.
+Every page uses Home 3's header and mobile menu, composed from the preserved `index-3` source before applying the shared navigation and account controls in `src/lib/server/site.mjs`. The original drawer and scrollbar lifecycle are retained, with account/navigation content replacing the stock profile and products. The drawer supports keyboard focus containment, Escape, close-button and overlay dismissal. Inner pages no longer inherit their original header contact strips. All existing home, catalogue and vehicle-detail links lead to the selected layouts. Original captured route names remain accessible directly for reference, but alternate layout selectors are removed from the website menus.
+
+Best uses one consistent light appearance. The inactive theme switch and its late-initializing vendor script are removed from this derivative. The preserved Karento reference still includes its dark styles and controls.
+
+The homepage brand section uses nine unique monochrome logos from Home 1, with a centered heading and a static responsive grid. It removes repeated ticker entries and invented stock counts. View all vehicles opens the selected catalogue; brand filtering remains part of the pending inventory adaptation.
 
 Import reuses the original dealer directory/profile composition with source-oriented labels and explicitly illustrative source content. It is not an assertion of approved sourcing relationships. Shop, memberships, authentication, wallet, bookings, calculators and dashboard data retain their reference demo behavior; working commerce, authentication and saved user data require separate backend implementation.
 
+Product details use a centered breadcrumb with the Shop page's rounded border treatment and the displayed product title. The purchase summary sits in a bordered card beside the gallery on desktop and below it on phones; quantity and Add to cart are grouped above Share/Wishlist. This layout does not add checkout functionality.
+
+Inner image heroes share centered titles, balanced photo shading and responsive content height. Contact links to the existing enquiry section, Services opens Contact, and the centered calculator introduction links down to its calculator. Plans, About, Import and Terms keep text-only introductions. Article titles/metadata remain inside their hero on phones; featured news stories and vehicle breadcrumbs are centered too. Existing centered Home, catalogue, Shop, support and account introductions are retained. See the [30-page hero review and before/after comparisons](../../docs/karento/HERO-REVIEW-2026-10-07.md).
+
 The approved catalogue filter row/drawer and conversion of rental panels to vehicle-sale enquiry panels remain follow-up functional adaptations. This pass organizes the requested pages and preserves their layout and existing interactions.
+
+## Reuse direction
+
+The starter accent is neutral black. Four values at the top of `src/lib/server/dealer-site.css` control accent, hover, contrast and soft surfaces; they map to the existing vendor variables. Header/footer starter logos are displayed in monochrome with CSS, preserving the original asset files. The later dealer build must supply the lead's recognizable logo, permitted inventory/imagery, copy, locations and contacts through the existing Cars workflow. See [the reuse handoff](../../docs/karento/REUSE-HANDOFF.md) for the intentionally small scope of the next architecture pass.
 
 ## Source preservation and publishing boundary
 

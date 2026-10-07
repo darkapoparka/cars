@@ -10,7 +10,7 @@ const reference = path.resolve(root, '../karento');
 const base = process.env.KARENTO_BEST_QA_URL || 'http://127.0.0.1:6466';
 const pages = JSON.parse(await readFile(path.join(reference, 'src/lib/server/pages.json'), 'utf8'));
 const capture = JSON.parse(await readFile(path.join(reference, 'provenance/capture.json'), 'utf8'));
-const expectedMenu = ['Home', 'Vehicles', 'Import', 'Shop', 'Explore', 'News', 'Contact'];
+const expectedMenu = ['Home', 'Vehicles', 'Services', 'Shop', 'Explore', 'Plans', 'Contact'];
 const selectedRoutes = new Set(Object.keys(siteRoutes).map(route => '/' + route));
 const results = [];
 const home2 = load(await readFile(path.join(reference, 'src/lib/server/pages/index-2.html'), 'utf8'));
@@ -25,18 +25,27 @@ async function verify(route, sourceKey) {
   assert.equal($('header.header').length, 1, `${route}: one website header`);
   assert.equal($('header.header').attr('class'), home3('header.header').attr('class'), `${route}: Home 3 header composition`);
   assert.equal($('header .top-bar,header .text-header-info').length, 0, `${route}: alternate header strip removed`);
-  assert.equal($('header .change-mode').length, home3('header .change-mode').length, `${route}: shared Home 3 controls`);
+  assert.equal($('header .change-mode').length, 0, `${route}: unused theme switch removed`);
+  assert.equal($('header .karento-menu-toggle[aria-controls="karento-account-drawer"]').length, 1, `${route}: shared drawer opener`);
+  assert.equal($('header .karento-header-cta[data-demo-account-link]').text().trim(), 'Account', `${route}: direct account entry`);
+  assert.equal($('.karento-account-drawer[role="dialog"][inert] .sidebar-canvas-container').length, 1, `${route}: retained account drawer`);
+  assert.equal($('.karento-drawer-account .karento-demo-signout').length, 1, `${route}: drawer sign-out entry`);
+  assert.equal($('header .karento-header-actions .karento-demo-signout').length, 0, `${route}: sign-out is inside the account menu`);
   assert.deepEqual($('.main-menu > li > a').map((_, element) => $(element).text()).get(), expectedMenu, `${route}: desktop menu`);
   assert.deepEqual($('.mobile-menu > li > a').map((_, element) => $(element).text()).get(), expectedMenu, `${route}: mobile menu`);
   let expectedHeadings = original('main').find('h1,h2,h3,h4,h5,h6').length;
   let expectedImages = original('main img').length;
   if (sourceKey === 'login') expectedImages -= original('.form-login img').length;
+  if (sourceKey === 'pricing') expectedImages -= original('.section-pricing-1 img[src$="/pricing-1/check-primary.svg"]').length;
   if (sourceKey === 'index-3') {
     const previous = original('.section-cta-6').add(original('.box-author-testimonials').closest('section'));
     const replacements = home2('.section-cta-4').add(home2('.block-testimonials').closest('section'));
     expectedHeadings += replacements.find('h1,h2,h3,h4,h5,h6').length - previous.find('h1,h2,h3,h4,h5,h6').length;
     expectedImages += replacements.find('img').length - previous.find('img').length;
     expectedImages += 4 - original('.box-why-book-22 img').length;
+    expectedImages += 9 - original('.box-list-brand-car img').length;
+    assert.equal($('.karento-home-brands[data-brand-source="index"] .karento-brand-logo').length, 9, `${route}: Home 1 brand logos`);
+    assert.equal($('.karento-home-brands .carouselTicker,.karento-home-brands .item-brand-2').length, 0, `${route}: repeated ticker cards removed`);
     assert.equal($('.karento-how-it-works').length, 1, `${route}: photographic process section`);
     assert.equal($('.karento-process-step').length, 4, `${route}: four process steps`);
     assert.equal($('.karento-process-grid svg,.box-why-book-22').length, 0, `${route}: old icon diagram removed`);
@@ -58,7 +67,7 @@ async function verify(route, sourceKey) {
   }
   assert.equal($('.wow,.hover-up,.odometer,#preloader-active').length, 0, `${route}: immediate content without decorative motion`);
   const ownerPage = sourceKey.startsWith('agent-dashboard-');
-  assert.equal($('.header-right a[href="/dashboard/add-listing"]').length, ownerPage ? 1 : 0, `${route}: Add Listing is an owner action`);
+  assert.equal($('.header-right a[href="/dashboard/add-listing"]').length, 0, `${route}: Add Listing lives inside the owner dashboard`);
   if (ownerPage) {
     assert.equal($('.dashboard-sidebar-menu a[href="/dashboard/earnings"]').length, 1, `${route}: owner pages remain inside dashboard`);
     assert.equal($('.dashboard-sidebar-menu a[aria-current="page"]').length, 1, `${route}: current dashboard page identified`);
@@ -78,7 +87,14 @@ for (const sourceKey of Object.keys(pages)) {
   await verify('/' + sourceKey, sourceKey);
   await verify('/' + sourceKey + '.html', sourceKey);
 }
-assert.equal((await fetch(base + '/this-page-does-not-exist')).status, 404);
+for (const missingRoute of ['/this-page-does-not-exist', '/news/missing-article', '/toString']) {
+  const missingResponse = await fetch(base + missingRoute);
+  assert.equal(missingResponse.status, 404, `${missingRoute}: real missing-page status`);
+  const missingPage = load(await missingResponse.text());
+  assert.equal(missingPage('main h1').text(), '404', `${missingRoute}: designed error screen`);
+  assert.equal(missingPage('header.header').attr('data-header-source'), 'index-3', `${missingRoute}: shared website header`);
+  assert(missingPage('main a[href="/"]').length >= 1, `${missingRoute}: recovery link`);
+}
 assert.equal((await fetch(base + '/dealer-site.css')).status, 200);
 assert.equal((await fetch(base + '/dealer-ui.js')).status, 200);
 for (const step of ['choose', 'talk', 'view', 'collect']) {

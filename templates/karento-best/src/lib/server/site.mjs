@@ -35,10 +35,9 @@ export const siteRoutes = {
 };
 
 const companyLinks = [
-  ['About Us', '/about'], ['Services', '/services'],
-  ['Membership & Pricing', '/membership'], ['Car Calculator', '/calculator'],
-  ['FAQ', '/faq'], ['Terms', '/terms'], ['Contact', '/contact'],
-  ['Login', '/login'], ['Register', '/register'], ['404 Preview', '/404']
+  ['About Us', '/about'], ['Import', '/import'],
+  ['News', '/news'], ['Car Calculator', '/calculator'],
+  ['FAQ', '/faq'], ['Terms', '/terms']
 ];
 const memberLinks = [
   ['Member Overview', '/account'], ['My Bookings', '/account/bookings'],
@@ -54,10 +53,10 @@ const dealerLinks = [
 export const siteNavigation = [
   { label: 'Home', href: '/' },
   { label: 'Vehicles', href: '/vehicles' },
-  { label: 'Import', href: '/import' },
+  { label: 'Services', href: '/services' },
   { label: 'Shop', href: '/shop' },
   { label: 'Explore', links: companyLinks },
-  { label: 'News', links: [['News', '/news'], ['News Article', '/news/article']] },
+  { label: 'Plans', href: '/membership' },
   { label: 'Contact', href: '/contact' }
 ];
 
@@ -204,23 +203,140 @@ function polishMotion($) {
   $('.carouselTicker-left,.carouselTicker-right').removeClass('carouselTicker-left carouselTicker-right').addClass('karento-static-brands');
 }
 
+function composeHomeBrands($, home1Body) {
+  if (!home1Body) throw new Error('Home 1 source is required for the Karento Best brand strip');
+  const home1 = load(home1Body, undefined, false);
+  const logos = [...new Set(home1('.item-brand img.light-mode').map((_, image) => home1(image).attr('src')).get())];
+  const names = { lexus: 'Lexus', mer: 'Mercedes-Benz', bugatti: 'Bugatti', jaguar: 'Jaguar', honda: 'Honda', chevrolet: 'Chevrolet', acura: 'Acura', bmw: 'BMW', toyota: 'Toyota' };
+  const section = $('.box-list-brand-car').closest('.py-96');
+  if (section.length !== 1 || logos.length !== 9) throw new Error('Expected one Home 3 brand section and nine unique Home 1 logos');
+  section.removeClass('py-96 border-top').addClass('karento-home-brands background-100').attr('data-brand-source', 'index');
+  section.find('.box-search-category').html(`<div class="karento-brands-heading">
+    <h3 class="heading-3 neutral-1000">Popular Brands</h3>
+    <p class="text-lg-medium neutral-500">Explore a range of leading car manufacturers.</p>
+    <a href="/vehicles" class="text-sm-bold neutral-1000">View all vehicles <span aria-hidden="true">↗</span></a>
+  </div>
+  <ul class="karento-brands-grid" aria-label="Sample car brands">
+    ${logos.map(src => {
+      const key = src.split('/').pop().replace('.png', '');
+      return `<li class="karento-brand-logo"><img src="${src}" alt="${names[key]}" loading="lazy" decoding="async"></li>`;
+    }).join('')}
+  </ul>`);
+}
+
+function polishMembership($) {
+  const section = $('.section-pricing-1');
+  section.find('.change-price-plan').replaceWith(`<fieldset class="karento-billing-control" data-billing-control>
+    <legend class="visually-hidden">Billing period</legend>
+    <label class="karento-billing-option"><input class="visually-hidden" type="radio" name="billing-period" value="monthly" checked><span>Monthly</span></label>
+    <label class="karento-billing-option"><input class="visually-hidden" type="radio" name="billing-period" value="annual"><span>Annual</span></label>
+  </fieldset>`);
+  section.find('h3[class*="text-price-"]').each((_, element) => {
+    const price = $(element);
+    const monthly = Number(price.text().trim());
+    price.attr({ 'data-plan-price': '', 'data-monthly-price': monthly, 'data-annual-price': monthly * 12 });
+    price.next().attr('data-plan-price-unit', '').text('/ month');
+  });
+  section.find('img[src$="/pricing-1/check-primary.svg"]').replaceWith(`<svg class="karento-plan-check" width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true" focusable="false">
+    <circle cx="13" cy="13" r="13" fill="currentColor"/>
+    <path d="m8 13 3.25 3.25L18 9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`);
+}
+
+function polishPageHeroes($, sourceKey) {
+  const hero = $('main > .page-header');
+  if (hero.length) {
+    const copy = hero.find('.container.position-absolute.top-50').first();
+    const title = copy.find('h2').first();
+    hero.addClass('karento-page-hero').attr('aria-labelledby', 'karento-page-title');
+    copy.removeClass('d-none d-lg-block').addClass('karento-hero-copy');
+    title.removeClass('w-75 py-3').addClass('karento-hero-title').attr('id', 'karento-page-title');
+    copy.children('.text-xl-medium').addClass('karento-hero-description');
+
+    if (sourceKey === 'about-us') {
+      copy.find('.karento-hero-description').text('Meet our team and explore what we do.');
+    }
+    if (sourceKey === 'dealer-details') hero.addClass('karento-source-hero');
+    if (sourceKey === 'contact') {
+      title.text('Contact Us');
+      copy.append('<p class="karento-hero-description text-white">Ask about a vehicle, arrange a viewing or talk with our team.</p>');
+      copy.append('<a class="btn btn-white karento-hero-action" href="#contact-enquiry">Send an enquiry <span aria-hidden="true">↗</span></a>');
+      const enquiryTitle = $('main .form-contact').closest('.col-lg-6').find('h2').first();
+      enquiryTitle.attr({ id: 'contact-enquiry', tabindex: '-1' }).addClass('karento-hero-target');
+    }
+    if (sourceKey === 'services') {
+      copy.find('.karento-hero-description').text('Explore our services and find the right support for your car.');
+      copy.append('<a class="btn btn-white karento-hero-action" href="/contact">Contact us <span aria-hidden="true">↗</span></a>');
+    }
+    if (sourceKey === 'blog-details') {
+      hero.addClass('karento-article-hero');
+      // The hero is visible on phones too; retain the captured duplicate, hidden.
+      $('main > .box-section > .container.d-block.d-lg-none').first()
+        .removeClass('d-block d-lg-none').addClass('d-none').attr('aria-hidden', 'true');
+    }
+  }
+
+  if (sourceKey === 'blog-grid') {
+    const intro = $('main > section').first().find('.text-center').first();
+    intro.find('a[href="#"]').text('News');
+    $('.item-banner-slide-review').addClass('karento-news-hero')
+      .children('.position-relative.z-1').removeClass('ps-md-5 ps-2').addClass('karento-news-hero-copy');
+  }
+  if (sourceKey === 'calculator') {
+    const intro = $('main > .section-cta-11');
+    intro.addClass('karento-calculator-hero');
+    intro.find('.col-lg-5').removeClass('col-lg-5').addClass('col-lg-12 karento-calculator-copy');
+    intro.find('h4').first().text('Car Loan Calculator').addClass('karento-hero-title');
+    intro.find('.karento-calculator-copy > p').text('Estimate monthly payments and explore the numbers for your next car.');
+    intro.find('.col-lg-7').removeClass('col-lg-7').addClass('col-lg-12 karento-calculator-images');
+    intro.find('.karento-calculator-copy').append('<a class="btn btn-primary karento-hero-action" href="#car-loan-calculator">Use calculator <span aria-hidden="true">↓</span></a>');
+    const calculatorTitle = $('main .section-cta-12 h5').first();
+    calculatorTitle.attr({ id: 'car-loan-calculator', tabindex: '-1' }).addClass('karento-hero-target');
+  }
+  if (sourceKey === 'cars-details-3') {
+    $('main .box-breadcrumb').addClass('karento-product-breadcrumb')
+      .attr({ role: 'navigation', 'aria-label': 'Breadcrumb' });
+    $('main .breadcrumbs .text-breadcrumb').attr('aria-current', 'page');
+  }
+}
+
 function organizeAccountAreas($, sourceKey) {
   $('.header-right > .d-none.d-xxl-inline-block').addClass('karento-header-actions');
   const ownerPage = sourceKey.startsWith('agent-dashboard-');
   const memberPage = sourceKey.startsWith('user-dashboard-');
-  $('.header-right a').filter((_, element) => $(element).text().trim() === 'Add Listing')
-    .attr('href', ownerPage ? '/dashboard/add-listing' : '/vehicles')
-    .text(ownerPage ? 'Add Listing' : 'View cars');
   if (ownerPage) {
-    $('.header-right .btn-signin[href="/login"]').attr('href', '/dashboard').text('Dashboard');
     $('main').find('h1,h2,h3,h4,a').filter((_, element) => $(element).text().trim() === 'Agent Dashboard').text('Owner Dashboard');
   }
-  $('.header-right .btn-signin').filter((_, element) => ['/login', '/dashboard'].includes($(element).attr('href')))
-    .attr('data-demo-account-link', 'true')
-    .after('<button class="karento-demo-signout" type="button" hidden>Sign out</button>');
+  const profileIcon = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="8" r="3.5" stroke="currentColor" stroke-width="1.6"/><path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>';
+  $('.karento-header-actions').html(`<a class="btn btn-primary karento-header-cta" href="/login" data-demo-account-link data-demo-fixed-label>${profileIcon}<span>Account</span></a>`);
+  $('.header-right .burger-icon-2').replaceWith(`<button class="burger-icon-2 karento-menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="karento-account-drawer">
+    <img src="/assets/imgs/template/icons/menu.svg" alt="" width="18" height="18">
+  </button>`);
+  const drawer = $('.sidebar-canvas-wrapper');
+  const logo = drawer.find('.sidebar-canvas-logo').toString();
+  const mainLinks = siteNavigation.filter(item => item.href).map(item => [item.label, item.href]);
+  // Retain the reference drawer and vendor scrollbar lifecycle with useful site/account links.
+  drawer.attr({ id: 'karento-account-drawer', role: 'dialog', 'aria-label': 'Menu and account', 'aria-modal': 'true', 'aria-hidden': 'true', inert: '' })
+    .addClass('karento-account-drawer').html(`<div class="sidebar-canvas-container">
+      <div class="sidebar-canvas-head">${logo}
+        <button class="close-canvas" type="button" aria-label="Close menu"><img src="/assets/imgs/template/icons/close.png" alt="" width="16" height="16"></button>
+      </div>
+      <div class="sidebar-canvas-content">
+        <nav class="karento-drawer-account" aria-label="Account">
+          <p class="karento-account-heading" data-demo-account-heading>Your account</p>
+          <a href="/login" data-demo-account-link data-demo-drawer-account>Sign in</a>
+          <a href="/register" data-demo-register-link>Create an account</a>
+          <a href="/account/settings" data-demo-settings-link hidden>Account settings</a>
+          <button class="karento-demo-signout" type="button" hidden>Sign out</button>
+        </nav>
+        <nav class="karento-drawer-navigation" aria-label="Website" data-site-navigation="karento-best">
+          <ul>${linksHtml(mainLinks)}</ul>
+          <details class="karento-drawer-explore"><summary>Explore</summary><ul>${linksHtml(companyLinks)}</ul></details>
+        </nav>
+      </div>
+    </div>`);
   $('.mobile-menu').after(`<div class="karento-mobile-account">
-    <a href="${ownerPage ? '/dashboard' : '/login'}" data-demo-account-link="true">${ownerPage ? 'Dashboard' : 'Sign in'}</a>
-    <button class="karento-demo-signout" type="button" hidden>Sign out</button>
+    <a href="/login" data-demo-account-link="true">Sign in</a>
   </div>`);
   if (sourceKey === 'login') {
     const form = $('.form-login form');
@@ -232,7 +348,8 @@ function organizeAccountAreas($, sourceKey) {
           <option value="owner">Dealership owner</option><option value="member">Member</option>
         </select>
       </div>
-      <div class="form-group mb-0"><button class="btn btn-primary w-100" type="submit">Sign in to demo ${arrow}</button></div>`);
+      <div class="form-group mb-0"><button class="btn btn-primary w-100" type="submit">Sign in to demo ${arrow}</button></div>
+      <p class="text-sm-medium neutral-500 text-center mt-20">New here? <a class="neutral-1000" href="/register">Create an account</a></p>`);
   }
   if (!ownerPage && !memberPage) return;
   const links = ownerPage ? dealerLinks : memberLinks;
@@ -265,10 +382,14 @@ function composeSharedHeader($, home3Body) {
   $('header.header').attr('data-header-source', 'index-3');
 }
 
-export function composeSitePage(sourceKey, page, body, home2Body, home3Body) {
+export function composeSitePage(sourceKey, page, body, home2Body, home3Body, home1Body) {
   const $ = load(body, undefined, false);
   composeSharedHeader($, home3Body);
-  if (sourceKey === 'index-3') composeHomeSections($, home2Body);
+  if (sourceKey === 'index-3') {
+    composeHomeSections($, home2Body);
+    composeHomeBrands($, home1Body);
+  }
+  if (sourceKey === 'pricing') polishMembership($);
   $('.main-menu').html(navigationHtml());
   $('.mobile-menu').html(navigationHtml(true));
   $('.main-menu, .mobile-menu').attr('data-site-navigation', 'karento-best');
@@ -291,6 +412,21 @@ export function composeSitePage(sourceKey, page, body, home2Body, home3Body) {
     if (href) anchor.attr('href', href);
   });
   organizeImport($, sourceKey);
+  polishPageHeroes($, sourceKey);
+  $('main .card-news').each((_, element) => {
+    const card = $(element);
+    const titleLink = card.find('.card-title > a[href="/news/article"]');
+    if (!titleLink.length) return;
+    titleLink.addClass('d-block');
+    card.find('.card-image > img').wrap('<a class="d-block" href="/news/article" aria-label="Read article"></a>');
+  });
+  if (sourceKey === 'blog-grid') {
+    $('main .item-banner-slide-review').wrap('<a class="d-block" href="/news/article"></a>');
+  }
+  if (sourceKey === 'blog-details') {
+    $('main .page-header a[href="#"]').filter((_, element) => $(element).text().trim() === 'News')
+      .attr('href', '/news');
+  }
   if (sourceKey === 'shop-list') {
     $('main .box-grid-tours .card-journey-small .card-image > img')
       .wrap('<a class="d-block" href="/shop/product" aria-label="View product"></a>');
@@ -325,6 +461,6 @@ export function composeSitePage(sourceKey, page, body, home2Body, home3Body) {
   });
   const title = titles[sourceKey] ? `${titles[sourceKey]} | Karento` : page.title;
   const head = `${page.head}\n<link rel="stylesheet" href="/dealer-site.css">`;
-  return { ...page, title, head, scripts: [...page.scripts, { src: '/dealer-ui.js' }],
+  return { ...page, title, head, scripts: [...page.scripts.filter(script => !script.src?.endsWith('/plugins/dark.js')), { src: '/dealer-ui.js' }],
     bodyAttributes: { ...page.bodyAttributes, 'data-karento-site': 'best' }, body: $.html() };
 }

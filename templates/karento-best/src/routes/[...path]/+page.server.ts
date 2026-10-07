@@ -8,10 +8,13 @@ const bodies = import.meta.glob('../../../../karento/src/lib/server/pages/*.html
 
 export function load({ params }: { params: { path?: string } }) {
   const sourceKey = resolveSiteRoute(params.path || '');
-  const page = (pages as Record<string, unknown>)[sourceKey];
-  if (!page) error(404, 'Page not found');
-  return { page: composeSitePage(sourceKey, page,
-    bodies[`../../../../karento/src/lib/server/pages/${sourceKey}.html`],
+  const found = Object.hasOwn(pages, sourceKey);
+  const selectedKey = found ? sourceKey : '404';
+  const page = composeSitePage(selectedKey, (pages as Record<string, unknown>)[selectedKey],
+    bodies[`../../../../karento/src/lib/server/pages/${selectedKey}.html`],
     bodies['../../../../karento/src/lib/server/pages/index-2.html'],
-    bodies['../../../../karento/src/lib/server/pages/index-3.html']) };
+    bodies['../../../../karento/src/lib/server/pages/index-3.html'],
+    bodies['../../../../karento/src/lib/server/pages/index.html']);
+  if (!found) error(404, { message: 'Page not found', templatePage: page });
+  return { page };
 }

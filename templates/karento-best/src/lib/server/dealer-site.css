@@ -1,4 +1,429 @@
 /* Preserve the reference styling; make its existing menus keyboard-accessible. */
+:root {
+  /* Neutral starter identity; dealer colors can replace these four values. */
+  --karento-accent: #171717;
+  --karento-accent-hover: #333333;
+  --karento-accent-contrast: #ffffff;
+  --karento-accent-soft: #f2f2f2;
+  --bs-brand-2: var(--karento-accent);
+  --bs-brand-2-dark: var(--karento-accent);
+  --bs-brand-2-darken: var(--karento-accent-hover);
+  --bs-brand-2-light: #454545;
+  --bs-button-bg: var(--karento-accent);
+  --bs-button-text: var(--karento-accent-contrast);
+  --bs-background-2: var(--karento-accent-soft);
+  --bs-link-hover-color: var(--karento-accent-hover);
+  color-scheme: light;
+}
+/* The reference's important anchor hover reads this token, even on white links. */
+:where(.footer, .background-1000, .bg-dark),
+a:is(.text-white, .color-white, .neutral-0) {
+  --bs-link-hover-color: var(--bs-color-white);
+}
+:where(.background-brand-2, .btn-primary, .btn-brand-2, .btn-book) {
+  --bs-link-hover-color: var(--karento-accent-contrast);
+}
+:where(.background-body, .background-card, .background-0, .bg-white,
+  .bg-2, .btn-white, .btn-white-md) {
+  --bs-link-hover-color: var(--karento-accent-hover);
+}
+.btn.btn-primary, .btn.btn-brand-2, .background-brand-2,
+.background-brand-2.text-dark, .background-brand-2 .text-dark,
+.background-brand-2 .neutral-1000 {
+  color: var(--karento-accent-contrast) !important;
+}
+.btn.btn-primary:hover, .btn.btn-brand-2:hover {
+  color: var(--karento-accent-contrast) !important;
+  background-color: var(--karento-accent-hover);
+}
+.btn.btn-primary.bg-white, .btn.btn-primary.bg-white:hover,
+.btn.btn-brand-2.bg-white, .btn.btn-brand-2.bg-white:hover {
+  color: var(--karento-accent) !important;
+}
+.btn.btn-primary.bg-white:hover, .btn.btn-brand-2.bg-white:hover {
+  background-color: var(--karento-accent-soft) !important;
+}
+.btn.btn-primary.bg-transparent, .btn.btn-primary.bg-transparent:hover,
+.btn.btn-book.bg-2, .btn.btn-book.bg-2:hover {
+  color: var(--bs-neutral-1000) !important;
+}
+.btn.btn-primary.bg-transparent:hover, .btn.btn-book.bg-2:hover,
+.btn.btn-login:hover {
+  background-color: var(--karento-accent-soft) !important;
+  color: var(--bs-neutral-1000) !important;
+}
+.btn.btn-signin:hover {
+  color: var(--karento-accent-contrast) !important;
+}
+.btn.btn-signin:hover svg path { fill: currentColor; }
+.btn.btn-label-tag:hover,
+.dropdown .dropdown-menu.show .dropdown-item:is(.active, :active) {
+  --bs-link-hover-color: var(--bs-neutral-0);
+  color: var(--bs-neutral-0) !important;
+}
+.pagination li a:is(:hover, :focus-visible, .active) {
+  --bs-link-hover-color: var(--karento-accent-contrast);
+  background-color: var(--karento-accent);
+  color: var(--karento-accent-contrast) !important;
+}
+.pagination li a:focus-visible {
+  outline: 2px solid var(--bs-neutral-500) !important;
+  outline-offset: 2px;
+}
+.pagination li a:is(:hover, :focus-visible, .active) svg,
+.pagination li a:is(:hover, :focus-visible, .active) svg [stroke]:not([stroke="none"]) {
+  stroke: currentColor !important;
+}
+.btn.btn-gray:hover, .btn.btn-gray2:hover, .btn.btn-primary2:hover, .btn.btn-book {
+  color: var(--karento-accent-contrast) !important;
+}
+.btn.btn-gray:hover svg, .btn.btn-gray2:hover svg, .btn.btn-primary2:hover svg,
+.btn.btn-book svg { stroke: currentColor; }
+.btn-gray:hover svg [fill]:not([fill="none"]),
+.btn-gray2:hover svg [fill]:not([fill="none"]),
+.btn-primary2:hover svg [fill]:not([fill="none"]),
+.btn-book svg [fill]:not([fill="none"]) { fill: currentColor; }
+.btn-gray:hover svg [stroke]:not([stroke="none"]),
+.btn-gray2:hover svg [stroke]:not([stroke="none"]),
+.btn-primary2:hover svg [stroke]:not([stroke="none"]) { stroke: currentColor; }
+.datepicker table tr td.active,
+#calendar-events .datepicker-inline .table-condensed tbody tr td.day.active,
+.category-link:hover, .category-link.active {
+  color: var(--karento-accent-contrast) !important;
+}
+input:checked + .slider { background-color: var(--karento-accent); }
+.form-subscriber .btn-submit { color: var(--karento-accent-contrast); }
+.form-subscriber .btn-submit:hover { color: var(--bs-neutral-1000); }
+.card-why-choose-us,
+.card-popular-2.card-popular-3,
+.card-journey-big .card-info .card-rating .card-left .lightning,
+.card-journey-small .card-info .card-rating .card-left .lightning,
+.box-authors-partner .authors-partner-left .item-author {
+  background-color: var(--karento-accent-soft);
+}
+.card-popular .card-info .card-meta .card-button a:hover,
+.card-popular-2 .card-meta .card-button a:hover,
+.card-spot .card-info .card-right .card-button a:hover,
+.card-home-link:hover .card-icon,
+.box-list-quicklinks .item-quicklinks:hover .item-icon,
+.swiper-button-prev-style-1:hover, .swiper-button-next-style-1:hover {
+  background-color: var(--karento-accent-soft);
+}
+.card-news:hover .icon-shape-arrow { background-color: var(--karento-accent-soft) !important; }
+.card-banner-slide.card-banner-slide-3 .card-info .box-title-top p,
+.card-banner-slide.card-banner-slide-3 .card-info .box-title-middle h6 {
+  color: var(--karento-accent-contrast);
+}
+.btn.btn-primary svg, .btn.btn-primary:hover svg, .btn.btn-brand-2 svg,
+.btn.btn-brand-2:hover svg { stroke: currentColor; }
+.btn-primary svg [fill]:not([fill="none"]),
+.btn-brand-2 svg [fill]:not([fill="none"]),
+.background-brand-2 svg [fill]:not([fill="none"]) { fill: currentColor; }
+.btn-primary svg [stroke]:not([stroke="none"]),
+.btn-brand-2 svg [stroke]:not([stroke="none"]) { stroke: currentColor; }
+svg [fill="#70f46d" i] { fill: var(--karento-accent); }
+svg [stroke="#70f46d" i] { stroke: var(--karento-accent); }
+img.background-brand-2[src*="star-black"] { background: transparent !important; }
+.header-logo .light-mode[src*="/template/logo-"],
+.mobile-header-logo .light-mode[src*="/template/logo-"],
+.sidebar-canvas-logo .light-mode[src*="/template/logo-"] {
+  filter: grayscale(1) brightness(0);
+}
+footer .light-mode[src*="/template/logo-"] { filter: grayscale(1) brightness(0) invert(1); }
+.footer .phone-support, .footer a:hover { color: var(--bs-color-white) !important; }
+.footer .menu-footer li a:hover { padding-left: 0; }
+.noUi-tooltip { color: var(--bs-neutral-1000); background-color: var(--bs-background-card); }
+#scrollUp svg path { fill: var(--karento-accent-contrast); }
+
+/* Center page introductions; actions follow the task of each page. */
+.karento-page-hero .custom-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  padding-block: 64px;
+}
+.karento-page-hero .custom-container .bg-overlay::after {
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .56), rgba(0, 0, 0, .64) 50%, rgba(0, 0, 0, .56));
+}
+.karento-page-hero .custom-container .bg-overlay .img-banner { object-position: center bottom; }
+.karento-page-hero.karento-source-hero .custom-container .bg-overlay .img-banner { object-position: center top; }
+.karento-page-hero .custom-container > .karento-hero-copy {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  padding-inline: 24px;
+  text-align: center;
+}
+.karento-hero-title {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 48px;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+.karento-hero-description {
+  display: block;
+  max-width: 660px;
+  margin: 14px auto 0;
+  font-size: 18px;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+.btn.karento-hero-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  margin-inline: auto;
+  min-height: 48px;
+  gap: 10px;
+}
+.btn.karento-hero-action:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px var(--bs-neutral-0) !important;
+}
+.karento-hero-target { scroll-margin-top: 100px; }
+.karento-article-hero .karento-hero-title { margin-top: 16px; }
+.karento-article-hero .card-meta-user,
+.karento-news-hero .card-meta-user {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 24px;
+}
+.karento-article-hero .card-meta-user .card-meta { flex-wrap: wrap; justify-content: center; }
+.karento-news-hero {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  padding: 56px 24px 88px;
+}
+.karento-news-hero::after {
+  width: 100%;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .36), rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, .36));
+}
+.karento-news-hero-copy { width: 100%; max-width: 860px; text-align: center; }
+.karento-news-hero-copy > .text-primary { color: var(--bs-color-white) !important; }
+.karento-news-hero-copy h3 { text-wrap: balance; }
+.karento-calculator-hero.section-cta-11 { padding-block: 64px; }
+.karento-calculator-copy { text-align: center; }
+.karento-calculator-copy > p { max-width: 660px; margin-inline: auto; text-wrap: balance; }
+.karento-calculator-images { margin-top: 32px !important; }
+.karento-calculator-images > .d-flex { margin-bottom: 0 !important; }
+.karento-calculator-images img { height: 160px; width: auto; max-width: 100%; object-fit: cover; }
+@media (max-width: 767px) {
+  .karento-page-hero .custom-container { min-height: 300px; padding-block: 48px; }
+  .karento-page-hero .custom-container > .karento-hero-copy { padding-inline: 20px; }
+  .karento-hero-title { font-size: clamp(30px, 6vw, 40px); }
+  .karento-hero-description { font-size: 16px; line-height: 1.5; }
+  .karento-article-hero .card-meta-user { flex-direction: column; gap: 12px; }
+  .karento-article-hero .card-meta-user .card-meta { font-size: 12px; }
+  .karento-news-hero { min-height: 380px; padding: 40px 20px 88px; }
+  .karento-news-hero-copy h3 { font-size: 30px; line-height: 1.25; }
+  .karento-news-hero-copy br { display: none; }
+  .karento-news-hero .card-meta-user { flex-direction: column; gap: 8px; }
+  .karento-calculator-hero.section-cta-11 { padding-block: 48px; }
+  .karento-calculator-images > .d-flex { flex-direction: row !important; gap: 12px !important; }
+  .karento-calculator-images > .d-flex > div { min-width: 0; }
+  .karento-calculator-images img { width: 100%; height: 112px; }
+}
+
+/* One billing choice, with native radio selection and keyboard behavior. */
+.karento-billing-control {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 280px;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 4px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 999px;
+  background: var(--karento-accent-soft);
+}
+.karento-billing-option { position: relative; min-width: 0; margin: 0; cursor: pointer; }
+.karento-billing-option span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  color: var(--bs-neutral-700);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  transition: background-color 140ms ease-out, color 140ms ease-out;
+}
+.karento-billing-option:hover span { background: var(--bs-neutral-200); color: var(--bs-neutral-1000); }
+.karento-billing-option input:checked + span {
+  background: var(--karento-accent);
+  color: var(--karento-accent-contrast);
+}
+.karento-billing-option:hover input:checked + span { background: var(--karento-accent-hover); }
+.karento-billing-option input:focus-visible + span {
+  outline: 2px solid var(--bs-neutral-700);
+  outline-offset: 2px;
+}
+.karento-plan-check {
+  display: block;
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  color: var(--karento-accent);
+}
+.karento-plan-check path { stroke: var(--karento-accent-contrast); }
+
+/* Direct account access and the original desktop drawer. */
+.header .karento-menu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 10px;
+  background: var(--bs-background-card);
+  cursor: pointer;
+  transition: background-color 140ms ease-out, border-color 140ms ease-out;
+}
+.header .karento-menu-toggle:hover, .header .karento-menu-toggle[aria-expanded="true"] {
+  background: var(--bs-neutral-100);
+  border-color: var(--bs-neutral-300);
+}
+.header .karento-menu-toggle:focus-visible, .karento-account-drawer :focus-visible {
+  outline: 2px solid var(--bs-neutral-1000);
+  outline-offset: 3px;
+}
+.header .karento-menu-toggle img { display: block; width: 18px; height: 18px; }
+.karento-account-drawer { max-width: min(385px, 100vw); transition: opacity 140ms ease-out, visibility 140ms; }
+.karento-account-drawer .sidebar-canvas-head { min-height: 88px; gap: 20px; }
+.karento-account-drawer .sidebar-canvas-logo img { width: 166px; height: auto; }
+.karento-account-drawer .close-canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 10px;
+  background: var(--bs-background-card);
+}
+.karento-account-drawer .close-canvas:hover { background: var(--bs-neutral-100); }
+.karento-drawer-account {
+  padding: 12px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 12px;
+  background: var(--bs-background-card);
+}
+.karento-account-heading {
+  margin: 0 0 4px;
+  padding: 8px 12px;
+  color: var(--bs-neutral-500);
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.karento-drawer-account a, .karento-drawer-account .karento-demo-signout,
+.karento-drawer-navigation a, .karento-drawer-explore > summary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--bs-neutral-1000);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+.karento-drawer-account a:hover, .karento-drawer-account .karento-demo-signout:hover,
+.karento-drawer-navigation a:hover, .karento-drawer-explore > summary:hover {
+  color: var(--bs-neutral-1000);
+  background: var(--bs-neutral-100);
+}
+.karento-drawer-account .karento-demo-signout {
+  margin-top: 6px;
+  border-top: 1px solid var(--bs-neutral-200);
+  border-radius: 0 0 8px 8px;
+  color: var(--bs-neutral-500);
+}
+.karento-account-drawer [hidden] { display: none !important; }
+.karento-drawer-navigation { margin-top: 24px; }
+.karento-drawer-navigation ul { margin: 0; padding: 0; list-style: none; }
+.karento-drawer-explore { border-top: 1px solid var(--bs-neutral-200); margin-top: 12px; padding-top: 12px; }
+.karento-drawer-explore > summary { cursor: pointer; }
+.karento-drawer-explore > summary::after { content: '+'; float: right; font-size: 18px; font-weight: 400; }
+.karento-drawer-explore[open] > summary::after { content: '−'; }
+.karento-drawer-explore ul { margin-top: 4px; }
+.header .karento-header-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.header .karento-header-cta:hover { background-color: var(--karento-accent-hover) !important; }
+
+/* Home 1 logo treatment with no repeated ticker items or sample stock counts. */
+.karento-home-brands { padding: 64px 0; }
+.karento-brands-heading { text-align: center; }
+.karento-brands-heading h3 { margin: 0 0 12px; }
+.karento-brands-heading p { margin: 0 0 16px; }
+.karento-brands-heading a { display: inline-block; }
+.karento-brands-heading a span { margin-left: 6px; }
+.karento-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 12px;
+  margin: 32px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.karento-brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  height: 96px;
+  padding: 16px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 12px;
+  background: var(--bs-background-card);
+}
+.karento-brand-logo img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+}
+@media (max-width: 991px) {
+  .karento-brands-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 575px) {
+  .karento-home-brands { padding: 48px 0; }
+  .karento-brands-heading h3 { font-size: 28px; line-height: 1.2; }
+  .karento-brands-heading p { font-size: 16px; line-height: 24px; }
+  .karento-brands-grid { gap: 10px; margin-top: 24px; }
+  .karento-brand-logo { height: 80px; padding: 14px; }
+}
+
 /* Product detail: shared Shop breadcrumb treatment and a contained buy box. */
 .karento-product-breadcrumb > .container {
   display: flex;
@@ -127,6 +552,7 @@ a, button, .btn, .card, [class*="card-"], img, input, select, textarea, span, h4
 }
 .karento-demo-signout[hidden] { display: none; }
 @media (min-width: 1200px) {
+  .header .main-header .header-right .burger-icon { display: none; }
   .header .container-fluid { padding-inline: clamp(24px, 2.5vw, 60px); }
   .header .main-header { gap: 20px; min-height: 76px; }
   .header .main-header .header-left { width: auto; flex: 1; min-width: 0; }
@@ -143,14 +569,6 @@ a, button, .btn, .card, [class*="card-"], img, input, select, textarea, span, h4
     margin: 0 !important;
     white-space: nowrap;
   }
-  .karento-header-actions > .d-none.d-xxl-inline-block {
-    display: flex !important;
-    align-items: center;
-    margin: 0 !important;
-  }
-  .karento-header-actions .btn-signin { padding-inline: 12px; }
-  .karento-header-actions .btn-mode { width: 44px; height: 44px; padding: 10px; margin: 0 !important; }
-  .karento-header-actions .karento-demo-signout { white-space: nowrap; }
 }
 .karento-dashboard-notice {
   display: flex;
@@ -227,7 +645,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   height: 36px;
   border-radius: 8px;
   background: var(--bs-brand-2);
-  color: #101010;
+  color: var(--karento-accent-contrast);
   font-size: 14px;
   font-weight: 700;
 }
