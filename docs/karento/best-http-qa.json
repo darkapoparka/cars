@@ -1,0 +1,672 @@
+{
+  "checkedAt": "2026-10-07T04:06:59.816Z",
+  "base": "http://127.0.0.1:6466",
+  "referenceBase": "http://127.0.0.1:6462",
+  "selectedPages": {
+    "home": "index-3",
+    "list": "cars-list-2",
+    "details": "cars-details-3"
+  },
+  "routes": [
+    {
+      "route": "/404",
+      "sourceKey": "404",
+      "status": 200,
+      "bytes": 60335
+    },
+    {
+      "route": "/",
+      "sourceKey": "index-3",
+      "status": 200,
+      "bytes": 340471
+    },
+    {
+      "route": "/vehicles",
+      "sourceKey": "cars-list-2",
+      "status": 200,
+      "bytes": 261179
+    },
+    {
+      "route": "/vehicle",
+      "sourceKey": "cars-details-3",
+      "status": 200,
+      "bytes": 220324
+    },
+    {
+      "route": "/import",
+      "sourceKey": "dealer-listing",
+      "status": 200,
+      "bytes": 125291
+    },
+    {
+      "route": "/import/source",
+      "sourceKey": "dealer-details",
+      "status": 200,
+      "bytes": 172112
+    },
+    {
+      "route": "/shop",
+      "sourceKey": "shop-list",
+      "status": 200,
+      "bytes": 236154
+    },
+    {
+      "route": "/shop/product",
+      "sourceKey": "shop-details",
+      "status": 200,
+      "bytes": 179463
+    },
+    {
+      "route": "/about",
+      "sourceKey": "about-us",
+      "status": 200,
+      "bytes": 215172
+    },
+    {
+      "route": "/services",
+      "sourceKey": "services",
+      "status": 200,
+      "bytes": 146082
+    },
+    {
+      "route": "/membership",
+      "sourceKey": "pricing",
+      "status": 200,
+      "bytes": 160108
+    },
+    {
+      "route": "/calculator",
+      "sourceKey": "calculator",
+      "status": 200,
+      "bytes": 124009
+    },
+    {
+      "route": "/faq",
+      "sourceKey": "faqs",
+      "status": 200,
+      "bytes": 223297
+    },
+    {
+      "route": "/terms",
+      "sourceKey": "term",
+      "status": 200,
+      "bytes": 84613
+    },
+    {
+      "route": "/contact",
+      "sourceKey": "contact",
+      "status": 200,
+      "bytes": 147662
+    },
+    {
+      "route": "/login",
+      "sourceKey": "login",
+      "status": 200,
+      "bytes": 62437
+    },
+    {
+      "route": "/register",
+      "sourceKey": "register",
+      "status": 200,
+      "bytes": 66924
+    },
+    {
+      "route": "/news",
+      "sourceKey": "blog-grid",
+      "status": 200,
+      "bytes": 124422
+    },
+    {
+      "route": "/news/article",
+      "sourceKey": "blog-details",
+      "status": 200,
+      "bytes": 159213
+    },
+    {
+      "route": "/account",
+      "sourceKey": "user-dashboard-home",
+      "status": 200,
+      "bytes": 166893
+    },
+    {
+      "route": "/account/bookings",
+      "sourceKey": "user-dashboard-bookings",
+      "status": 200,
+      "bytes": 146066
+    },
+    {
+      "route": "/account/wishlist",
+      "sourceKey": "user-dashboard-wishlist",
+      "status": 200,
+      "bytes": 136841
+    },
+    {
+      "route": "/account/wallet",
+      "sourceKey": "user-dashboard-wallet",
+      "status": 200,
+      "bytes": 117044
+    },
+    {
+      "route": "/account/profile",
+      "sourceKey": "user-dashboard-profile",
+      "status": 200,
+      "bytes": 99781
+    },
+    {
+      "route": "/account/settings",
+      "sourceKey": "user-dashboard-setting",
+      "status": 200,
+      "bytes": 102957
+    },
+    {
+      "route": "/dashboard",
+      "sourceKey": "agent-dashboard-home",
+      "status": 200,
+      "bytes": 168651
+    },
+    {
+      "route": "/dashboard/listings",
+      "sourceKey": "agent-dashboard-listing",
+      "status": 200,
+      "bytes": 128816
+    },
+    {
+      "route": "/dashboard/add-listing",
+      "sourceKey": "agent-dashboard-add-listing",
+      "status": 200,
+      "bytes": 120441
+    },
+    {
+      "route": "/dashboard/earnings",
+      "sourceKey": "agent-dashboard-earning",
+      "status": 200,
+      "bytes": 111195
+    },
+    {
+      "route": "/dashboard/settings",
+      "sourceKey": "agent-dashboard-setting",
+      "status": 200,
+      "bytes": 102876
+    },
+    {
+      "route": "/404",
+      "sourceKey": "404",
+      "status": 200,
+      "bytes": 60335
+    },
+    {
+      "route": "/404.html",
+      "sourceKey": "404",
+      "status": 200,
+      "bytes": 60335
+    },
+    {
+      "route": "/index-3",
+      "sourceKey": "index-3",
+      "status": 200,
+      "bytes": 340471
+    },
+    {
+      "route": "/index-3.html",
+      "sourceKey": "index-3",
+      "status": 200,
+      "bytes": 340471
+    },
+    {
+      "route": "/index-2",
+      "sourceKey": "index-2",
+      "status": 200,
+      "bytes": 383505
+    },
+    {
+      "route": "/index-2.html",
+      "sourceKey": "index-2",
+      "status": 200,
+      "bytes": 383505
+    },
+    {
+      "route": "/index",
+      "sourceKey": "index",
+      "status": 200,
+      "bytes": 342078
+    },
+    {
+      "route": "/index.html",
+      "sourceKey": "index",
+      "status": 200,
+      "bytes": 342078
+    },
+    {
+      "route": "/cars-list-3",
+      "sourceKey": "cars-list-3",
+      "status": 200,
+      "bytes": 236448
+    },
+    {
+      "route": "/cars-list-3.html",
+      "sourceKey": "cars-list-3",
+      "status": 200,
+      "bytes": 236448
+    },
+    {
+      "route": "/cars-list-1",
+      "sourceKey": "cars-list-1",
+      "status": 200,
+      "bytes": 254930
+    },
+    {
+      "route": "/cars-list-1.html",
+      "sourceKey": "cars-list-1",
+      "status": 200,
+      "bytes": 254930
+    },
+    {
+      "route": "/cars-list-2",
+      "sourceKey": "cars-list-2",
+      "status": 200,
+      "bytes": 261179
+    },
+    {
+      "route": "/cars-list-2.html",
+      "sourceKey": "cars-list-2",
+      "status": 200,
+      "bytes": 261179
+    },
+    {
+      "route": "/cars-details-1",
+      "sourceKey": "cars-details-1",
+      "status": 200,
+      "bytes": 220080
+    },
+    {
+      "route": "/cars-details-1.html",
+      "sourceKey": "cars-details-1",
+      "status": 200,
+      "bytes": 220080
+    },
+    {
+      "route": "/cars-details-2",
+      "sourceKey": "cars-details-2",
+      "status": 200,
+      "bytes": 227590
+    },
+    {
+      "route": "/cars-details-2.html",
+      "sourceKey": "cars-details-2",
+      "status": 200,
+      "bytes": 227590
+    },
+    {
+      "route": "/cars-list-4",
+      "sourceKey": "cars-list-4",
+      "status": 200,
+      "bytes": 213739
+    },
+    {
+      "route": "/cars-list-4.html",
+      "sourceKey": "cars-list-4",
+      "status": 200,
+      "bytes": 213739
+    },
+    {
+      "route": "/shop-list",
+      "sourceKey": "shop-list",
+      "status": 200,
+      "bytes": 236154
+    },
+    {
+      "route": "/shop-list.html",
+      "sourceKey": "shop-list",
+      "status": 200,
+      "bytes": 236154
+    },
+    {
+      "route": "/dealer-listing",
+      "sourceKey": "dealer-listing",
+      "status": 200,
+      "bytes": 125291
+    },
+    {
+      "route": "/dealer-listing.html",
+      "sourceKey": "dealer-listing",
+      "status": 200,
+      "bytes": 125291
+    },
+    {
+      "route": "/shop-details",
+      "sourceKey": "shop-details",
+      "status": 200,
+      "bytes": 179451
+    },
+    {
+      "route": "/shop-details.html",
+      "sourceKey": "shop-details",
+      "status": 200,
+      "bytes": 179451
+    },
+    {
+      "route": "/dealer-details",
+      "sourceKey": "dealer-details",
+      "status": 200,
+      "bytes": 172100
+    },
+    {
+      "route": "/dealer-details.html",
+      "sourceKey": "dealer-details",
+      "status": 200,
+      "bytes": 172100
+    },
+    {
+      "route": "/cars-details-4",
+      "sourceKey": "cars-details-4",
+      "status": 200,
+      "bytes": 217548
+    },
+    {
+      "route": "/cars-details-4.html",
+      "sourceKey": "cars-details-4",
+      "status": 200,
+      "bytes": 217548
+    },
+    {
+      "route": "/cars-details-3",
+      "sourceKey": "cars-details-3",
+      "status": 200,
+      "bytes": 220324
+    },
+    {
+      "route": "/cars-details-3.html",
+      "sourceKey": "cars-details-3",
+      "status": 200,
+      "bytes": 220324
+    },
+    {
+      "route": "/term",
+      "sourceKey": "term",
+      "status": 200,
+      "bytes": 84613
+    },
+    {
+      "route": "/term.html",
+      "sourceKey": "term",
+      "status": 200,
+      "bytes": 84613
+    },
+    {
+      "route": "/about-us",
+      "sourceKey": "about-us",
+      "status": 200,
+      "bytes": 215172
+    },
+    {
+      "route": "/about-us.html",
+      "sourceKey": "about-us",
+      "status": 200,
+      "bytes": 215172
+    },
+    {
+      "route": "/calculator",
+      "sourceKey": "calculator",
+      "status": 200,
+      "bytes": 124009
+    },
+    {
+      "route": "/calculator.html",
+      "sourceKey": "calculator",
+      "status": 200,
+      "bytes": 124009
+    },
+    {
+      "route": "/faqs",
+      "sourceKey": "faqs",
+      "status": 200,
+      "bytes": 223297
+    },
+    {
+      "route": "/faqs.html",
+      "sourceKey": "faqs",
+      "status": 200,
+      "bytes": 223297
+    },
+    {
+      "route": "/pricing",
+      "sourceKey": "pricing",
+      "status": 200,
+      "bytes": 160108
+    },
+    {
+      "route": "/pricing.html",
+      "sourceKey": "pricing",
+      "status": 200,
+      "bytes": 160108
+    },
+    {
+      "route": "/services",
+      "sourceKey": "services",
+      "status": 200,
+      "bytes": 146082
+    },
+    {
+      "route": "/services.html",
+      "sourceKey": "services",
+      "status": 200,
+      "bytes": 146082
+    },
+    {
+      "route": "/register",
+      "sourceKey": "register",
+      "status": 200,
+      "bytes": 66924
+    },
+    {
+      "route": "/register.html",
+      "sourceKey": "register",
+      "status": 200,
+      "bytes": 66924
+    },
+    {
+      "route": "/login",
+      "sourceKey": "login",
+      "status": 200,
+      "bytes": 62437
+    },
+    {
+      "route": "/login.html",
+      "sourceKey": "login",
+      "status": 200,
+      "bytes": 62437
+    },
+    {
+      "route": "/contact",
+      "sourceKey": "contact",
+      "status": 200,
+      "bytes": 147662
+    },
+    {
+      "route": "/contact.html",
+      "sourceKey": "contact",
+      "status": 200,
+      "bytes": 147662
+    },
+    {
+      "route": "/blog-list",
+      "sourceKey": "blog-list",
+      "status": 200,
+      "bytes": 115639
+    },
+    {
+      "route": "/blog-list.html",
+      "sourceKey": "blog-list",
+      "status": 200,
+      "bytes": 115639
+    },
+    {
+      "route": "/blog-grid",
+      "sourceKey": "blog-grid",
+      "status": 200,
+      "bytes": 124422
+    },
+    {
+      "route": "/blog-grid.html",
+      "sourceKey": "blog-grid",
+      "status": 200,
+      "bytes": 124422
+    },
+    {
+      "route": "/user-dashboard-profile",
+      "sourceKey": "user-dashboard-profile",
+      "status": 200,
+      "bytes": 99769
+    },
+    {
+      "route": "/user-dashboard-profile.html",
+      "sourceKey": "user-dashboard-profile",
+      "status": 200,
+      "bytes": 99769
+    },
+    {
+      "route": "/user-dashboard-wallet",
+      "sourceKey": "user-dashboard-wallet",
+      "status": 200,
+      "bytes": 117032
+    },
+    {
+      "route": "/user-dashboard-wallet.html",
+      "sourceKey": "user-dashboard-wallet",
+      "status": 200,
+      "bytes": 117032
+    },
+    {
+      "route": "/blog-details",
+      "sourceKey": "blog-details",
+      "status": 200,
+      "bytes": 159201
+    },
+    {
+      "route": "/blog-details.html",
+      "sourceKey": "blog-details",
+      "status": 200,
+      "bytes": 159201
+    },
+    {
+      "route": "/user-dashboard-wishlist",
+      "sourceKey": "user-dashboard-wishlist",
+      "status": 200,
+      "bytes": 136829
+    },
+    {
+      "route": "/user-dashboard-wishlist.html",
+      "sourceKey": "user-dashboard-wishlist",
+      "status": 200,
+      "bytes": 136829
+    },
+    {
+      "route": "/user-dashboard-bookings",
+      "sourceKey": "user-dashboard-bookings",
+      "status": 200,
+      "bytes": 146054
+    },
+    {
+      "route": "/user-dashboard-bookings.html",
+      "sourceKey": "user-dashboard-bookings",
+      "status": 200,
+      "bytes": 146054
+    },
+    {
+      "route": "/user-dashboard-home",
+      "sourceKey": "user-dashboard-home",
+      "status": 200,
+      "bytes": 166893
+    },
+    {
+      "route": "/user-dashboard-home.html",
+      "sourceKey": "user-dashboard-home",
+      "status": 200,
+      "bytes": 166893
+    },
+    {
+      "route": "/agent-dashboard-setting",
+      "sourceKey": "agent-dashboard-setting",
+      "status": 200,
+      "bytes": 102864
+    },
+    {
+      "route": "/agent-dashboard-setting.html",
+      "sourceKey": "agent-dashboard-setting",
+      "status": 200,
+      "bytes": 102864
+    },
+    {
+      "route": "/user-dashboard-setting",
+      "sourceKey": "user-dashboard-setting",
+      "status": 200,
+      "bytes": 102945
+    },
+    {
+      "route": "/user-dashboard-setting.html",
+      "sourceKey": "user-dashboard-setting",
+      "status": 200,
+      "bytes": 102945
+    },
+    {
+      "route": "/agent-dashboard-earning",
+      "sourceKey": "agent-dashboard-earning",
+      "status": 200,
+      "bytes": 111183
+    },
+    {
+      "route": "/agent-dashboard-earning.html",
+      "sourceKey": "agent-dashboard-earning",
+      "status": 200,
+      "bytes": 111183
+    },
+    {
+      "route": "/agent-dashboard-home",
+      "sourceKey": "agent-dashboard-home",
+      "status": 200,
+      "bytes": 168651
+    },
+    {
+      "route": "/agent-dashboard-home.html",
+      "sourceKey": "agent-dashboard-home",
+      "status": 200,
+      "bytes": 168651
+    },
+    {
+      "route": "/agent-dashboard-listing",
+      "sourceKey": "agent-dashboard-listing",
+      "status": 200,
+      "bytes": 128804
+    },
+    {
+      "route": "/agent-dashboard-listing.html",
+      "sourceKey": "agent-dashboard-listing",
+      "status": 200,
+      "bytes": 128804
+    },
+    {
+      "route": "/agent-dashboard-add-listing",
+      "sourceKey": "agent-dashboard-add-listing",
+      "status": 200,
+      "bytes": 120429
+    },
+    {
+      "route": "/agent-dashboard-add-listing.html",
+      "sourceKey": "agent-dashboard-add-listing",
+      "status": 200,
+      "bytes": 120429
+    }
+  ],
+  "assetsChecked": 526,
+  "generatedAssetsChecked": 4,
+  "menu": [
+    "Home",
+    "Vehicles",
+    "Import",
+    "Shop",
+    "Explore",
+    "News",
+    "Contact"
+  ],
+  "scope": "HTTP routes, complete menu destinations, retained sections/artwork, chosen layout links and reference preservation. Browser interaction evidence is recorded separately."
+}

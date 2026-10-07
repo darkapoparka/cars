@@ -1,0 +1,670 @@
+{
+  "checkedAt": "2026-10-06T16:31:20.362Z",
+  "base": "http://127.0.0.1:6462",
+  "pageCount": 39,
+  "routes": [
+    {
+      "route": "/404",
+      "status": 200,
+      "bytes": 99225
+    },
+    {
+      "route": "/404.html",
+      "status": 200,
+      "bytes": 99225
+    },
+    {
+      "route": "/index-3",
+      "status": 200,
+      "bytes": 422780
+    },
+    {
+      "route": "/index-3.html",
+      "status": 200,
+      "bytes": 422780
+    },
+    {
+      "route": "/index-2",
+      "status": 200,
+      "bytes": 426707
+    },
+    {
+      "route": "/index-2.html",
+      "status": 200,
+      "bytes": 426707
+    },
+    {
+      "route": "/index",
+      "status": 200,
+      "bytes": 388319
+    },
+    {
+      "route": "/index.html",
+      "status": 200,
+      "bytes": 388319
+    },
+    {
+      "route": "/cars-list-3",
+      "status": 200,
+      "bytes": 276622
+    },
+    {
+      "route": "/cars-list-3.html",
+      "status": 200,
+      "bytes": 276622
+    },
+    {
+      "route": "/cars-list-1",
+      "status": 200,
+      "bytes": 295374
+    },
+    {
+      "route": "/cars-list-1.html",
+      "status": 200,
+      "bytes": 295374
+    },
+    {
+      "route": "/cars-list-2",
+      "status": 200,
+      "bytes": 301639
+    },
+    {
+      "route": "/cars-list-2.html",
+      "status": 200,
+      "bytes": 301639
+    },
+    {
+      "route": "/cars-details-1",
+      "status": 200,
+      "bytes": 259062
+    },
+    {
+      "route": "/cars-details-1.html",
+      "status": 200,
+      "bytes": 259062
+    },
+    {
+      "route": "/cars-details-2",
+      "status": 200,
+      "bytes": 266572
+    },
+    {
+      "route": "/cars-details-2.html",
+      "status": 200,
+      "bytes": 266572
+    },
+    {
+      "route": "/cars-list-4",
+      "status": 200,
+      "bytes": 253265
+    },
+    {
+      "route": "/cars-list-4.html",
+      "status": 200,
+      "bytes": 253265
+    },
+    {
+      "route": "/shop-list",
+      "status": 200,
+      "bytes": 273556
+    },
+    {
+      "route": "/shop-list.html",
+      "status": 200,
+      "bytes": 273556
+    },
+    {
+      "route": "/dealer-listing",
+      "status": 200,
+      "bytes": 162425
+    },
+    {
+      "route": "/dealer-listing.html",
+      "status": 200,
+      "bytes": 162425
+    },
+    {
+      "route": "/shop-details",
+      "status": 200,
+      "bytes": 218463
+    },
+    {
+      "route": "/shop-details.html",
+      "status": 200,
+      "bytes": 218463
+    },
+    {
+      "route": "/dealer-details",
+      "status": 200,
+      "bytes": 212438
+    },
+    {
+      "route": "/dealer-details.html",
+      "status": 200,
+      "bytes": 212438
+    },
+    {
+      "route": "/cars-details-4",
+      "status": 200,
+      "bytes": 256530
+    },
+    {
+      "route": "/cars-details-4.html",
+      "status": 200,
+      "bytes": 256530
+    },
+    {
+      "route": "/cars-details-3",
+      "status": 200,
+      "bytes": 259338
+    },
+    {
+      "route": "/cars-details-3.html",
+      "status": 200,
+      "bytes": 259338
+    },
+    {
+      "route": "/term",
+      "status": 200,
+      "bytes": 123501
+    },
+    {
+      "route": "/term.html",
+      "status": 200,
+      "bytes": 123501
+    },
+    {
+      "route": "/about-us",
+      "status": 200,
+      "bytes": 255118
+    },
+    {
+      "route": "/about-us.html",
+      "status": 200,
+      "bytes": 255118
+    },
+    {
+      "route": "/calculator",
+      "status": 200,
+      "bytes": 162931
+    },
+    {
+      "route": "/calculator.html",
+      "status": 200,
+      "bytes": 162931
+    },
+    {
+      "route": "/faqs",
+      "status": 200,
+      "bytes": 262125
+    },
+    {
+      "route": "/faqs.html",
+      "status": 200,
+      "bytes": 262125
+    },
+    {
+      "route": "/pricing",
+      "status": 200,
+      "bytes": 199290
+    },
+    {
+      "route": "/pricing.html",
+      "status": 200,
+      "bytes": 199290
+    },
+    {
+      "route": "/services",
+      "status": 200,
+      "bytes": 185560
+    },
+    {
+      "route": "/services.html",
+      "status": 200,
+      "bytes": 185560
+    },
+    {
+      "route": "/register",
+      "status": 200,
+      "bytes": 105816
+    },
+    {
+      "route": "/register.html",
+      "status": 200,
+      "bytes": 105816
+    },
+    {
+      "route": "/login",
+      "status": 200,
+      "bytes": 105627
+    },
+    {
+      "route": "/login.html",
+      "status": 200,
+      "bytes": 105627
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "bytes": 186654
+    },
+    {
+      "route": "/contact.html",
+      "status": 200,
+      "bytes": 186654
+    },
+    {
+      "route": "/blog-list",
+      "status": 200,
+      "bytes": 154913
+    },
+    {
+      "route": "/blog-list.html",
+      "status": 200,
+      "bytes": 154913
+    },
+    {
+      "route": "/blog-grid",
+      "status": 200,
+      "bytes": 163790
+    },
+    {
+      "route": "/blog-grid.html",
+      "status": 200,
+      "bytes": 163790
+    },
+    {
+      "route": "/user-dashboard-profile",
+      "status": 200,
+      "bytes": 138420
+    },
+    {
+      "route": "/user-dashboard-profile.html",
+      "status": 200,
+      "bytes": 138420
+    },
+    {
+      "route": "/user-dashboard-wallet",
+      "status": 200,
+      "bytes": 155685
+    },
+    {
+      "route": "/user-dashboard-wallet.html",
+      "status": 200,
+      "bytes": 155685
+    },
+    {
+      "route": "/blog-details",
+      "status": 200,
+      "bytes": 198479
+    },
+    {
+      "route": "/blog-details.html",
+      "status": 200,
+      "bytes": 198479
+    },
+    {
+      "route": "/user-dashboard-wishlist",
+      "status": 200,
+      "bytes": 175838
+    },
+    {
+      "route": "/user-dashboard-wishlist.html",
+      "status": 200,
+      "bytes": 175838
+    },
+    {
+      "route": "/user-dashboard-bookings",
+      "status": 200,
+      "bytes": 185215
+    },
+    {
+      "route": "/user-dashboard-bookings.html",
+      "status": 200,
+      "bytes": 185215
+    },
+    {
+      "route": "/user-dashboard-home",
+      "status": 200,
+      "bytes": 206020
+    },
+    {
+      "route": "/user-dashboard-home.html",
+      "status": 200,
+      "bytes": 206020
+    },
+    {
+      "route": "/agent-dashboard-setting",
+      "status": 200,
+      "bytes": 142810
+    },
+    {
+      "route": "/agent-dashboard-setting.html",
+      "status": 200,
+      "bytes": 142810
+    },
+    {
+      "route": "/user-dashboard-setting",
+      "status": 200,
+      "bytes": 141586
+    },
+    {
+      "route": "/user-dashboard-setting.html",
+      "status": 200,
+      "bytes": 141586
+    },
+    {
+      "route": "/agent-dashboard-earning",
+      "status": 200,
+      "bytes": 151335
+    },
+    {
+      "route": "/agent-dashboard-earning.html",
+      "status": 200,
+      "bytes": 151335
+    },
+    {
+      "route": "/agent-dashboard-home",
+      "status": 200,
+      "bytes": 209077
+    },
+    {
+      "route": "/agent-dashboard-home.html",
+      "status": 200,
+      "bytes": 209077
+    },
+    {
+      "route": "/agent-dashboard-listing",
+      "status": 200,
+      "bytes": 169214
+    },
+    {
+      "route": "/agent-dashboard-listing.html",
+      "status": 200,
+      "bytes": 169214
+    },
+    {
+      "route": "/agent-dashboard-add-listing",
+      "status": 200,
+      "bytes": 160383
+    },
+    {
+      "route": "/agent-dashboard-add-listing.html",
+      "status": 200,
+      "bytes": 160383
+    }
+  ],
+  "assetsChecked": 526,
+  "sourceGaps": [
+    {
+      "url": "https://carento-demo.vercel.app/destination.html",
+      "error": "Error: HTTP 404",
+      "kind": "page"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/privacy.html",
+      "error": "Error: HTTP 404",
+      "kind": "page"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/testimonials/Testimonials-2/img-1.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/testimonials/Testimonials-2/img-2.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/testimonials/Testimonials-2/img-3.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/testimonials/Testimonials-2/img-4.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/bg-top-rate.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/plane-w.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/blog/icon-search-dark.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/favicon.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage9/bathroom.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage9/room.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage9/size.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/hotel/pax.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage9/bed.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/sign.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/property/pet.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/property/parking.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage9/property.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/blog/post.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/fast-booking.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage6/flag.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/best-price.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/advance.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/walking.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/walking2.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage3/bg-support.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/vacation.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage3/bg-explore.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage4/bg-slider.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/waking-up.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage3/bg-bestprice.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/tour/bg-trans-black.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/bg-activity.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage6/bg-image-why.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/bg-trans.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage6/bg-banner.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage6/bg-banner-main.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/banner.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/activities.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/bg-mega.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/tour.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage5/bg-banner.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/blog/trans.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage6/bg-banner2.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/destination.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/ticket.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/quick-link.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/template/icons/events.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/blog/banner-explorer.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage1/plane.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/homepage4/check.svg",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/property/banner.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    },
+    {
+      "url": "https://carento-demo.vercel.app/assets/imgs/page/tickets/banner.png",
+      "error": "Error: HTTP 404",
+      "kind": "asset"
+    }
+  ]
+}

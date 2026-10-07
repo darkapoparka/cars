@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-06T16:24:17.387Z",
+  "tests": [
+    {
+      "test": "mobile menu opens and closes",
+      "pass": true
+    },
+    {
+      "test": "location dropdown opens",
+      "pass": true
+    },
+    {
+      "test": "FAQ accordion expands",
+      "pass": true
+    },
+    {
+      "test": "shop quantity increments",
+      "pass": true
+    },
+    {
+      "test": "shop quantity decrements",
+      "pass": true
+    },
+    {
+      "test": "hero next-slide control changes slide",
+      "pass": true
+    },
+    {
+      "test": "home to inventory navigation uses local page",
+      "pass": true
+    }
+  ]
+}

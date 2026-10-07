@@ -71,6 +71,7 @@ describe('native source localization boundary', () => {
 				'src/routes/(site)/locale-settings/+page.svelte: English',
 				'src/lib/components/common/YouTubeSection.svelte: YouTube',
 				'src/lib/components/common/YouTubeSection.svelte: YouTube',
+				'src/lib/components/common/YouTubeSection.svelte: YouTube',
 				'src/lib/components/home/DesktopHomeHero.svelte: VIN',
 				'src/lib/components/home/DesktopHomeHero.svelte: VIN',
 				'src/lib/components/services/ImportRequestWizard.svelte: EUR',

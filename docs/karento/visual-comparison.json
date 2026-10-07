@@ -1,0 +1,890 @@
+{
+  "checkedAt": "2026-10-06T16:29:26.536Z",
+  "source": "https://carento-demo.vercel.app/",
+  "clone": "http://127.0.0.1:6462",
+  "scope": "First viewport of every available HTML page at 1440, 390 and 320 px, after vendor initialization and preloader dismissal. Full-page DOM geometry was also inspected during capture. Screenshots are JPEG; font antialiasing and running chart/carousel animations may differ.",
+  "threshold": 0.15,
+  "comparisons": [
+    {
+      "route": "404",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.049193691298954456
+    },
+    {
+      "route": "about-us",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.008009923799397484
+    },
+    {
+      "route": "agent-dashboard-add-listing",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002126528442317916
+    },
+    {
+      "route": "agent-dashboard-earning",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.4026227184121921
+    },
+    {
+      "route": "agent-dashboard-home",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 1.6598972177919546
+    },
+    {
+      "route": "agent-dashboard-listing",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002126528442317916
+    },
+    {
+      "route": "agent-dashboard-setting",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002410065567960305
+    },
+    {
+      "route": "blog-details",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.051249335459861774
+    },
+    {
+      "route": "blog-grid",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.0075846181109339005
+    },
+    {
+      "route": "blog-list",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.005245436824384193
+    },
+    {
+      "route": "calculator",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.013751550593655857
+    },
+    {
+      "route": "cars-details-1",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.0030480241006556794
+    },
+    {
+      "route": "cars-details-2",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.024242424242424242
+    },
+    {
+      "route": "cars-details-3",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.023604465709728868
+    },
+    {
+      "route": "cars-details-4",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1418,
+      "screenshotHeight": 985,
+      "differentPercent": 0.0026490445540655674
+    },
+    {
+      "route": "cars-list-1",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.010278220804536595
+    },
+    {
+      "route": "cars-list-2",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.014247740563530037
+    },
+    {
+      "route": "cars-list-3",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.010490873648768386
+    },
+    {
+      "route": "cars-list-4",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.02076909445330498
+    },
+    {
+      "route": "contact",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.009214956583377636
+    },
+    {
+      "route": "dealer-details",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.010349105085947191
+    },
+    {
+      "route": "dealer-listing",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.007939039517986886
+    },
+    {
+      "route": "faqs",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.0034024455077086655
+    },
+    {
+      "route": "index",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.010774410774410775
+    },
+    {
+      "route": "index-2",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.26227184121920966
+    },
+    {
+      "route": "index-3",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.01573631047315258
+    },
+    {
+      "route": "login",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002126528442317916
+    },
+    {
+      "route": "pricing",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.006379585326953748
+    },
+    {
+      "route": "register",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.004891015417331207
+    },
+    {
+      "route": "services",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.007230196703880914
+    },
+    {
+      "route": "shop-details",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.02204501151869573
+    },
+    {
+      "route": "shop-list",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.0075846181109339005
+    },
+    {
+      "route": "term",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.006096048201311359
+    },
+    {
+      "route": "user-dashboard-bookings",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.02225766436292752
+    },
+    {
+      "route": "user-dashboard-home",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.8012050327839801
+    },
+    {
+      "route": "user-dashboard-profile",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002126528442317916
+    },
+    {
+      "route": "user-dashboard-setting",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.002410065567960305
+    },
+    {
+      "route": "user-dashboard-wallet",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.1363104731525784
+    },
+    {
+      "route": "user-dashboard-wishlist",
+      "viewportWidth": 1440,
+      "screenshotWidth": 1425,
+      "screenshotHeight": 990,
+      "differentPercent": 0.004678362573099415
+    },
+    {
+      "route": "404",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "about-us",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.032432432432432434
+    },
+    {
+      "route": "agent-dashboard-add-listing",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "agent-dashboard-earning",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.0002772002772002772
+    },
+    {
+      "route": "agent-dashboard-home",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.8371448371448371
+    },
+    {
+      "route": "agent-dashboard-listing",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "agent-dashboard-setting",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.002772002772002772
+    },
+    {
+      "route": "blog-details",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.007484407484407485
+    },
+    {
+      "route": "blog-grid",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.045183645183645184
+    },
+    {
+      "route": "blog-list",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.03132363132363132
+    },
+    {
+      "route": "calculator",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.032986832986832984
+    },
+    {
+      "route": "cars-details-1",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.004712404712404712
+    },
+    {
+      "route": "cars-details-2",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.00498960498960499
+    },
+    {
+      "route": "cars-details-3",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.0033264033264033266
+    },
+    {
+      "route": "cars-details-4",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.011365211365211365
+    },
+    {
+      "route": "cars-list-1",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.01496881496881497
+    },
+    {
+      "route": "cars-list-2",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.013305613305613306
+    },
+    {
+      "route": "cars-list-3",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.013305613305613306
+    },
+    {
+      "route": "cars-list-4",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.02494802494802495
+    },
+    {
+      "route": "contact",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.02966042966042966
+    },
+    {
+      "route": "dealer-details",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.01968121968121968
+    },
+    {
+      "route": "dealer-listing",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.002772002772002772
+    },
+    {
+      "route": "faqs",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.002772002772002772
+    },
+    {
+      "route": "index",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.14164934164934165
+    },
+    {
+      "route": "index-2",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "index-3",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.013028413028413028
+    },
+    {
+      "route": "login",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "pricing",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.0077616077616077615
+    },
+    {
+      "route": "register",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.00498960498960499
+    },
+    {
+      "route": "services",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.02467082467082467
+    },
+    {
+      "route": "shop-details",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.013582813582813583
+    },
+    {
+      "route": "shop-list",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.03132363132363132
+    },
+    {
+      "route": "term",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "user-dashboard-bookings",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "user-dashboard-home",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.4063756063756064
+    },
+    {
+      "route": "user-dashboard-profile",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "user-dashboard-setting",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.009702009702009701
+    },
+    {
+      "route": "user-dashboard-wallet",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0
+    },
+    {
+      "route": "user-dashboard-wishlist",
+      "viewportWidth": 390,
+      "screenshotWidth": 375,
+      "screenshotHeight": 962,
+      "differentPercent": 0.00498960498960499
+    },
+    {
+      "route": "404",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.21502416871656374
+    },
+    {
+      "route": "about-us",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.041284640393580235
+    },
+    {
+      "route": "agent-dashboard-add-listing",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "agent-dashboard-earning",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "agent-dashboard-home",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.7496602618134278
+    },
+    {
+      "route": "agent-dashboard-listing",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.011009237438288064
+    },
+    {
+      "route": "agent-dashboard-setting",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.000688077339893004
+    },
+    {
+      "route": "blog-details",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.004128464039358024
+    },
+    {
+      "route": "blog-grid",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.043692911083205756
+    },
+    {
+      "route": "blog-list",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.021674436206629625
+    },
+    {
+      "route": "calculator",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "cars-details-1",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.011353276108234566
+    },
+    {
+      "route": "cars-details-2",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.011353276108234566
+    },
+    {
+      "route": "cars-details-3",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.011009237438288064
+    },
+    {
+      "route": "cars-details-4",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.011697314778181067
+    },
+    {
+      "route": "cars-list-1",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.005504618719144032
+    },
+    {
+      "route": "cars-list-2",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.005504618719144032
+    },
+    {
+      "route": "cars-list-3",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.006192696059037036
+    },
+    {
+      "route": "cars-list-4",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.02236251354652263
+    },
+    {
+      "route": "contact",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.022706552216469132
+    },
+    {
+      "route": "dealer-details",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.025114822906094646
+    },
+    {
+      "route": "dealer-listing",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.00344038669946502
+    },
+    {
+      "route": "faqs",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.006536734728983537
+    },
+    {
+      "route": "index",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.001032116009839506
+    },
+    {
+      "route": "index-2",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "index-3",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.001032116009839506
+    },
+    {
+      "route": "login",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "pricing",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "register",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.00688077339893004
+    },
+    {
+      "route": "services",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.02098635886673662
+    },
+    {
+      "route": "shop-details",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.013417508127913577
+    },
+    {
+      "route": "shop-list",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.25390053842051846
+    },
+    {
+      "route": "term",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.00688077339893004
+    },
+    {
+      "route": "user-dashboard-bookings",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.000344038669946502
+    },
+    {
+      "route": "user-dashboard-home",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.23566648891335387
+    },
+    {
+      "route": "user-dashboard-profile",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.000344038669946502
+    },
+    {
+      "route": "user-dashboard-setting",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.014105585467806582
+    },
+    {
+      "route": "user-dashboard-wallet",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0
+    },
+    {
+      "route": "user-dashboard-wishlist",
+      "viewportWidth": 320,
+      "screenshotWidth": 305,
+      "screenshotHeight": 953,
+      "differentPercent": 0.006536734728983537
+    }
+  ],
+  "summary": {
+    "comparisons": 117,
+    "underOnePercent": 116,
+    "largestDifferences": [
+      {
+        "route": "agent-dashboard-home",
+        "viewportWidth": 1440,
+        "screenshotWidth": 1425,
+        "screenshotHeight": 990,
+        "differentPercent": 1.6598972177919546
+      },
+      {
+        "route": "agent-dashboard-home",
+        "viewportWidth": 390,
+        "screenshotWidth": 375,
+        "screenshotHeight": 962,
+        "differentPercent": 0.8371448371448371
+      },
+      {
+        "route": "user-dashboard-home",
+        "viewportWidth": 1440,
+        "screenshotWidth": 1425,
+        "screenshotHeight": 990,
+        "differentPercent": 0.8012050327839801
+      },
+      {
+        "route": "agent-dashboard-home",
+        "viewportWidth": 320,
+        "screenshotWidth": 305,
+        "screenshotHeight": 953,
+        "differentPercent": 0.7496602618134278
+      },
+      {
+        "route": "user-dashboard-home",
+        "viewportWidth": 390,
+        "screenshotWidth": 375,
+        "screenshotHeight": 962,
+        "differentPercent": 0.4063756063756064
+      },
+      {
+        "route": "agent-dashboard-earning",
+        "viewportWidth": 1440,
+        "screenshotWidth": 1425,
+        "screenshotHeight": 990,
+        "differentPercent": 0.4026227184121921
+      },
+      {
+        "route": "index-2",
+        "viewportWidth": 1440,
+        "screenshotWidth": 1425,
+        "screenshotHeight": 990,
+        "differentPercent": 0.26227184121920966
+      },
+      {
+        "route": "shop-list",
+        "viewportWidth": 320,
+        "screenshotWidth": 305,
+        "screenshotHeight": 953,
+        "differentPercent": 0.25390053842051846
+      }
+    ]
+  }
+}

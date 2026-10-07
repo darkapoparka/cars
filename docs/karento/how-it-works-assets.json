@@ -1,0 +1,65 @@
+{
+  "generatedOn": "2026-10-06",
+  "generator": "image_gen",
+  "styleReferences": [
+    "templates/mobile/public/images/services/sell-20261006.webp",
+    "templates/mobile/public/images/services/sourcing-20261006.webp"
+  ],
+  "packaging": "WebP encoding only; no crop, resize or composition changes. Generated originals preserved.",
+  "assets": [
+    {
+      "key": "choose",
+      "target": "src/lib/server/assets/how-it-works/choose-20261006.webp",
+      "generatedOriginal": "C:/Users/radev/.codex/generated_images/01a11220-5165-7a83-b59e-510532c5e17e/exec-7bde9a41-41fb-46c7-9648-5ba1f5f4850a.png",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "3eaf6ce6e0af76cecb47c419bde5842f2f5649ede885b13fc01b1fdc2c24200c",
+      "webpSha256": "a300d19d1345ab22a7a52b8b043182cc031acdfe9f07b7550d6f4ba76011a95d",
+      "bytes": 156918
+    },
+    {
+      "key": "talk",
+      "target": "src/lib/server/assets/how-it-works/talk-20261006.webp",
+      "generatedOriginal": "C:/Users/radev/.codex/generated_images/01a11220-5165-7a83-b59e-510532c5e17e/exec-dc6f51e0-51a2-4577-b711-b7e9045e4674.png",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "129472eda8ba490714dfc91bc1cec3facb84dc46d7e7ef56968e962e1853d3c2",
+      "webpSha256": "ff2d44baa2fbf6230529b5d40a5121a157bc3f41f226903658a917bd0ec51620",
+      "bytes": 124014
+    },
+    {
+      "key": "view",
+      "target": "src/lib/server/assets/how-it-works/view-20261006-v2.webp",
+      "generatedOriginal": "C:/Users/radev/.codex/generated_images/01a11220-5165-7a83-b59e-510532c5e17e/exec-a0679651-a2dd-4f40-b9b8-483a271f30fe.png",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "3351a7889e8a134e7616daf1febf3d832111157c1bc367705eb87a89a957994c",
+      "webpSha256": "a399003fa943150cdb4fde4b8259539fe167b6e7d7728d9ef950233fcc867774",
+      "bytes": 163102,
+      "scene": "Adult customer wearing a seatbelt, hands on the wheel, viewed through the driver window."
+    },
+    {
+      "key": "collect",
+      "target": "src/lib/server/assets/how-it-works/collect-20261006.webp",
+      "generatedOriginal": "C:/Users/radev/.codex/generated_images/01a11220-5165-7a83-b59e-510532c5e17e/exec-d045a6a2-02eb-42ea-96af-59e6f5295ced.png",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "0093a85198feec17908ea4e1ea3fa27df46555376b61ef4533f96b878b3a216e",
+      "webpSha256": "a7d1e48c6ead5a908bf017ca616471b6ad0a93f0e0c49631228c777dbf165bf2",
+      "bytes": 142310
+    }
+  ],
+  "previousVersions": [
+    {
+      "key": "view",
+      "target": "src/lib/server/assets/how-it-works/view-20261006.webp",
+      "generatedOriginal": "C:/Users/radev/.codex/generated_images/01a11220-5165-7a83-b59e-510532c5e17e/exec-67c275fc-2342-4ee1-9455-ddf5c8c45da8.png",
+      "width": 1672,
+      "height": 941,
+      "sourceSha256": "cebc52350b1645b513d678a991938777357d02046c379857e802fd88f06c9470",
+      "webpSha256": "a95d81db05bb838999fe6b7eed760d9e29a3a394f583aefb12ede51cd168d92b",
+      "bytes": 223436
+    }
+  ],
+  "revision": "2026-10-06 test-drive human scene"
+}
