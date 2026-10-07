@@ -65,6 +65,11 @@ export const desktopFilterStyles = stylex.create({
     gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
     gap: 20,
     alignItems: 'start',
+    padding: 15,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    backgroundColor: colors.background,
   },
   makeModelSummary: {
     display: 'grid',
