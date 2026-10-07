@@ -6,6 +6,7 @@
   import { getI18n } from '$lib/locale/context';
   import { templateMessage } from '$lib/i18n/presentation';
   import { listingBudgetCaps, listingFilterOptions, listingSelectionHas, listingTypeCount } from '$data/listing';
+  import { desktopMakeOptions } from '$data/desktop-makes';
   import {
     listingFacetOptionLabel, listingFacetOptions, listingFacetTitle,
     listingOptionsWithCurrent, listingSuggestionMatcher, toggleListingIdentity,
@@ -39,7 +40,8 @@
   const searchLabel = $derived(field === 'make' ? i18n.t('m_150bec5925bd') : field === 'model' ? i18n.t('m_269619120191') : i18n.t('m_f0549fa54b59', { p0: title.toLocaleLowerCase(i18n.locale) }));
   const selected = $derived(field === 'sort' ? (draft.sort === 'default' ? '' : draft.sort)
     : field === 'price' || field === 'year' || field === 'equipment' || field === 'mileage_max' ? '' : draft[field]);
-  const choices = $derived(field === 'equipment' ? listingFacetOptions(field)
+  const choices = $derived(field === 'make' && desktopChoices && widePanel ? desktopMakeOptions(selected, i18n.locale)
+    : field === 'equipment' ? listingFacetOptions(field)
     : listingOptionsWithCurrent(listingFacetOptions(field, draft.make), selected));
   const matches = $derived(listingSuggestionMatcher(search, i18n.locale));
   const optionLabel = (option: string) => widePanel && !option && (field === 'make' || field === 'model')
@@ -164,7 +166,7 @@
   @media (min-width: 992px) {
     .wide-panel .content { flex: 1; }
     .wide-panel fieldset { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .make-grid fieldset { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .make-grid fieldset { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .wide-panel .range { width: min(100%, 488px); margin-inline: auto; }
     .wide-panel .presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
     .wide-panel .price-presets { grid-template-columns: repeat(3, minmax(0, 1fr)); }

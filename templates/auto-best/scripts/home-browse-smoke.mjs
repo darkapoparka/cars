@@ -28,7 +28,11 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
     if (viewport.width >= 992) {
-      assert.equal(frame.width, name === 'make' ? 720 : name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
+      const bar = await form.boundingBox();
+      const gap = (await menu.getAttribute('data-side')) === 'top'
+        ? bar.y - frame.y - frame.height : frame.y - bar.y - bar.height;
+      assert(Math.abs(gap - 8) <= 1, 'Desktop selectors have an 8px visible gap from the complete search bar, including collision flips');
+      assert.equal(frame.width, name === 'make' ? 840 : name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
       assert.equal(await menu.getAttribute('data-desktop-panel'), 'true');
       assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Every selector shows the pending result count');
       const tiles = await menu.locator('.dn-desktop-choice').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().width));
@@ -36,7 +40,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
       if (name === 'make') {
         const logoTiles = await menu.locator('.dn-desktop-choice--portrait').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
         assert.equal(logoTiles.length, tiles.length, 'Every make, including All makes, uses the logo grid');
-        assert(logoTiles.every(box => box.width <= frame.width / 4 && box.height >= 104), 'Brand tiles retain room for their logo and label');
+        assert(logoTiles.every(box => box.width <= frame.width / 6 && box.height >= 112), 'Six-column brand tiles retain room for logos, labels and stock counts');
         await page.waitForFunction(() => [...document.querySelectorAll('.dn-home-browse-picker[data-state=open] .dn-make-logo img')].every(img => img.complete && img.naturalWidth > 0));
       }
       if (await menu.getByRole('searchbox').count()) {

@@ -8,6 +8,7 @@ import ts from 'typescript';
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
 const modules = [["src/lib/locale/formatters.ts","locale-formatters"],["src/lib/data/demo-content.ts","demo-content"],["src/lib/config/lead-site.ts","lead-site"],["src/lib/data/inventory.ts","inventory"],["src/lib/data/listing.ts","listing"],["src/lib/data/listing-draft.ts","listing-draft"],["src/lib/data/journeys.ts","journeys"],["src/lib/config/brand.ts","brand"],["src/lib/locale/policy.ts","locale-policy"],["src/lib/locale/config.ts","locale-config"],["src/lib/config/locale.ts","dealer-locale-config"],["src/lib/locale/core.ts","locale-core"],["src/lib/locale/catalog.ts","locale-catalog"],["src/lib/locale/messages.ts","locale-messages"],["src/lib/i18n/presentation.ts","locale-presentation"]];
+modules.push(['src/lib/data/desktop-makes.ts', 'desktop-makes'], ['src/lib/data/make-artwork.ts', 'make-artwork']);
 const moduleOutputs = new Map(modules.map(([file,name]) => [path.resolve(file), name]));
 for (const [input,name] of modules) {
   let code = ts.transpileModule(await readFile(input,'utf8'), {compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
@@ -28,6 +29,22 @@ const listing = await import(pathToFileURL(`${out}/listing.mjs`));
 const listingDraft = await import(pathToFileURL(`${out}/listing-draft.mjs`));
 const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
 const records = inventory.featuredVehicles;
+const desktopMakes = await import(pathToFileURL(`${out}/desktop-makes.mjs`));
+assert.equal(desktopMakes.desktopMakeCatalogue.length, 179);
+assert.equal(desktopMakes.desktopMakeCount(''), records.length);
+assert.equal(desktopMakes.desktopMakeCount(' bMw '), 2, 'Stock and logo lookups ignore case and surrounding space');
+assert.equal(desktopMakes.desktopMakeCount('Toyota'), 0);
+assert.match(desktopMakes.desktopMakeArtwork(' volkswagen ').image, /volkswagen-badge-cardog\.svg$/);
+for (const locale of ['bg', 'en']) {
+  const options = desktopMakes.desktopMakeOptions(['bmw', 'Future Dealer Make', 'Future Dealer Make'], locale);
+  assert.deepEqual(options.slice(0, 4), ['', 'Audi', 'BMW', 'Mercedes-Benz']);
+  assert.deepEqual(options.slice(4, 10), ['Ford', 'Opel', 'Porsche', 'Skoda', 'Toyota', 'Volkswagen'], 'Familiar brands remain reachable before the alphabetical catalogue');
+  assert.equal(options.length, 181, 'Outside-catalogue selections are retained once');
+  assert.equal(options.filter(make => make.toLowerCase() === 'bmw').length, 1);
+  assert(options.includes('Future Dealer Make'));
+  assert.deepEqual(new Set(listing.listingFilterOptions.makes.filter(Boolean)), new Set(records.map(vehicle => vehicle.make)), 'The desktop catalogue never changes stock-derived model owners');
+  assert.equal(listing.filterListingVehicles(records, listing.parseListingFilters(new URLSearchParams({ make: 'Toyota' })), locale).length, 0);
+}
 const demoContent = await import(pathToFileURL(out + '/demo-content.mjs'));
 const formatters = await import(pathToFileURL(out + '/locale-formatters.mjs'));
 const localeMessages = await import(pathToFileURL(out + '/locale-messages.mjs'));

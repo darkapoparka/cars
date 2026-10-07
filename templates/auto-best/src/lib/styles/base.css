@@ -9,6 +9,16 @@ html { scroll-behavior: smooth; scrollbar-gutter: stable; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }
+/* Fade anchored desktop selectors in place; Floating UI retains placement. */
+@media (min-width: 992px) and (prefers-reduced-motion: no-preference) {
+  .dn-app-shell :is(.dn-home-browse-picker, .dn-search-popover, .dn-filter-picker)[data-state='open'] {
+    animation: dn-picker-enter 120ms ease-out;
+  }
+  @keyframes dn-picker-enter {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
 @media (max-width: 991px) {
   html { scrollbar-gutter: auto; scroll-padding-bottom: calc(var(--dn-mobile-nav-height) + env(safe-area-inset-bottom) + var(--dn-space-4)); }
 }

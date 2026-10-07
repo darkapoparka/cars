@@ -1,13 +1,16 @@
 <script lang="ts">
   import { Popover } from 'bits-ui';
   import { tick } from 'svelte';
+  import { MediaQuery } from 'svelte/reactivity';
   import type { Attachment } from 'svelte/attachments';
   import { focusPopover } from '$lib/ui/focus';
   import { getI18n } from '$lib/locale/context';
   import { listingSelectionHas, listingTypeCount } from '$data/listing';
+  import { desktopMakeOptions } from '$data/desktop-makes';
   import { listingChoiceOptions, listingChoiceLabel, listingChoiceTitle, listingChoiceValue, withListingChoice, listingMakeForModel, listingOptionsWithCurrent, listingSuggestionMatcher, type ListingChoiceField, type ListingDraft } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import DesktopMakeChoice from './DesktopMakeChoice.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   let { field, draft = $bindable(), label, placeholder, displayValue, showCounts = false, showLabel = true, compact = false, submitValues = true, resetKey = 0, onchange, oncommit }: {
@@ -16,6 +19,7 @@
     submitValues?: boolean; resetKey?: number; onchange?: (draft: ListingDraft) => void; oncommit?: (draft: ListingDraft) => void;
   } = $props();
   const i18n = getI18n();
+  const desktop = new MediaQuery('(min-width: 992px)', false);
   const id = $props.id();
   let open = $state(false);
   let search = $state('');
@@ -40,9 +44,10 @@
   const optionLabel = (value: string) => (value ? listingChoiceLabel(field, value, i18n.locale) : allLabel) + (showCounts && field === 'type' ? ` (${listingTypeCount(value)})` : '');
   const summary = $derived(displayValue ?? ((Array.isArray(selected) ? selected.join(', ') : selected && optionLabel(selected)) || placeholder || (field === 'type' && showCounts ? optionLabel('') : showLabel ? allLabel : title)));
   const matches = $derived(listingSuggestionMatcher(search, i18n.locale));
-  const availableOptions = $derived(listingOptionsWithCurrent(listingChoiceOptions(field, draft.make), selected)
+  const availableOptions = $derived((field === 'make' && desktop.current ? desktopMakeOptions(selected, i18n.locale)
+    : listingOptionsWithCurrent(listingChoiceOptions(field, draft.make), selected))
     .filter(value => value && matches(optionLabel(value) + (field === 'model' ? ' ' + listingMakeForModel(value) : ''))));
-  const options = $derived(multiple ? availableOptions.toSorted((a, b) => a.localeCompare(b, i18n.locale, { numeric: true })) : availableOptions);
+  const options = $derived(multiple && !(field === 'make' && desktop.current) ? availableOptions.toSorted((a, b) => a.localeCompare(b, i18n.locale, { numeric: true })) : availableOptions);
   $effect(() => { resetKey; search = ''; focusOnClose = null; open = false; });
 
   function choose(value: string) {
@@ -105,12 +110,20 @@
         <FilterPopoverHeader id={id + '-title'} {title} />
         {#if searchable}<label class="dn-picker-search"><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>{/if}
         <div bind:this={optionsList} class="dn-picker-options" role="group" aria-label={title}>
-          <DesktopFilterChoice value="" label={optionLabel('')} checked={!checkedValue.length} {multiple} name={id + '-choice'} onchange={choose} />
+          {#if field === 'make' && desktop.current}
+            <DesktopMakeChoice value="" label={optionLabel('')} checked={!checkedValue.length} portrait={false} name={id + '-choice'} onchange={choose} />
+          {:else}
+            <DesktopFilterChoice value="" label={optionLabel('')} checked={!checkedValue.length} {multiple} name={id + '-choice'} onchange={choose} />
+          {/if}
           {#each options as value (value)}
-            <DesktopFilterChoice {value} label={optionLabel(value)}
+            {#if field === 'make' && desktop.current}
+              <DesktopMakeChoice {value} label={optionLabel(value)} checked={listingSelectionHas(draft.make, value)} portrait={false} name={id + '-choice'} onchange={choose} />
+            {:else}
+              <DesktopFilterChoice {value} label={optionLabel(value)}
               description={field === 'model' && !draft.make.length ? listingMakeForModel(value) : ''}
               checked={Array.isArray(checkedValue) ? listingSelectionHas(checkedValue, value) : checkedValue === value}
-              {multiple} name={id + '-choice'} onchange={choose} />
+                {multiple} name={id + '-choice'} onchange={choose} />
+            {/if}
           {/each}
           {#if !options.length}<p class="dn-empty" role="status">{i18n.t('inventory.search.empty')}</p>{/if}
         </div>

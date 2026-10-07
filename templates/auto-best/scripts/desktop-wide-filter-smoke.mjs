@@ -40,14 +40,14 @@ try {
    const choiceFrame=await dialog.boundingBox();
    const choiceFooter=await dialog.locator('.dn-search-footer').boundingBox();
    const anchor=await shortcut.boundingBox();
-   assert.equal(choiceFrame.width,field === 'make' ? 720 : field === 'model' ? 640 : 480,'Inventory menus use a width suited to their content');
+   assert.equal(choiceFrame.width,field === 'make' ? 840 : field === 'model' ? 640 : 480,'Inventory menus use a width suited to their content');
    assert.equal(await dialog.getAttribute('data-desktop-panel'),'true');
    const tiles=await dialog.locator('.dn-desktop-choice').evaluateAll(nodes=>nodes.map(node=>node.getBoundingClientRect().width));
    assert(tiles.every(width=>width<=choiceFrame.width/2),'All and filtered choices retain compact tiles');
    if (field === 'make') {
     const logoTiles=await dialog.locator('.dn-desktop-choice--portrait').evaluateAll(nodes=>nodes.map(node=>node.getBoundingClientRect().toJSON()));
     assert.equal(logoTiles.length,tiles.length,'Every make, including All makes, uses the logo grid');
-    assert(logoTiles.every(box=>box.width<=choiceFrame.width/4 && box.height>=104),'Brand tiles retain room for their logo and label');
+    assert(logoTiles.every(box=>box.width<=choiceFrame.width/6 && box.height>=112),'Six-column brand tiles retain room for logos, labels and stock counts');
     await page.waitForFunction(()=>[...document.querySelectorAll('#dn-listing-filter-dialog .dn-make-logo img')].every(img=>img.complete && img.naturalWidth>0));
    }
    assert(choiceFrame.x>=15 && choiceFrame.y>=15 && choiceFrame.y+choiceFrame.height<=height-15);

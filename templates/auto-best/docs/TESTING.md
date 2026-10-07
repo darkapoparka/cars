@@ -1,6 +1,20 @@
 # Testing reference
 
-The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 720/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
+The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 840/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
+
+Home checks also measure the desktop menu's visible 8px gap from the entire
+search bar, including menus flipped above it in short windows. Desktop selectors
+share a 120ms opacity-only opening; reduced motion retains immediate opening.
+
+`node scripts/desktop-make-catalogue-smoke.mjs` checks the 179-brand desktop
+catalogue on Home and inventory in BG/EN at 992x600 and 1440x900. It checks
+stock-first ordering, accessible counts, loaded logos, Volkswagen artwork,
+accent-insensitive search, a compact single result, the full checkbox keyboard
+sequence, internal scrolling with a stationary footer, cancellation and applying
+a zero-stock make through the canonical GET flow. Use the same `BASE_URL`,
+`FILTER_EVIDENCE_DIR` and optional `FILTER_CASE` settings as the listing suite.
+Two additional 992x600 BG/EN cases cover the full Filters form's compact Make
+rows, catalogue, nested focus and zero-stock results with sorting retained.
 
 Tests cover different layers: source/type checks, domain logic, runtime media, build output and real browser behavior. This document explains the available commands; it is not a claim that every suite currently passes.
 

@@ -7,6 +7,7 @@
   import { currencySymbol } from '$lib/locale/core';
   import { filterListingVehicles, listingBudgetCaps, listingFilterOptions, listingHiddenFields, listingSelectionHas, listingVehicles, type ListingFilters } from '$data/listing';
   import { cleanListingFormData, emptyListingDraft, listingDraftFacetActive, listingDraftFromFilters, listingFacetOptions, listingFacetOptionLabel, listingFacetTitle, listingFiltersFromDraft, listingMakeForModel, listingOptionsWithCurrent, listingSuggestionMatcher, toggleListingIdentity, withListingMake, withListingModel, type ListingDraft, type ListingFacetField } from '$data/listing-draft';
+  import { desktopMakeOptions } from '$data/desktop-makes';
   import type { VehicleEquipment } from '$data/inventory';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
@@ -71,9 +72,10 @@
   });
 
   function options(item: Field, make: string | readonly string[]) {
+    if (item === 'make') return desktopMakeOptions(draft.make, i18n.locale).filter(Boolean);
     const current = item === 'equipment' || item === 'price' || item === 'year' || item === 'mileage_max' ? '' : draft[item];
     const values = [...listingOptionsWithCurrent(listingFacetOptions(item, make), current)].filter(Boolean);
-    return item === 'make' || item === 'model' ? values.sort((a, b) => a.localeCompare(b, i18n.locale, { numeric: true })) : values;
+    return item === 'model' ? values.sort((a, b) => a.localeCompare(b, i18n.locale, { numeric: true })) : values;
   }
   function choice(item: Field, value: string): Choice {
     return { field: item, value, label: listingFacetOptionLabel(item, value, i18n.locale),
@@ -251,7 +253,8 @@
   :global(.dn-search-dialog) { z-index: 11001; overflow: hidden; border: 1px solid var(--dn-line); background: var(--dn-surface-raised); color: var(--dn-ink); }
   :global(.dn-search-popover) { position: relative; top: auto; left: auto; width: min(380px, calc(100vw - 32px)); height: auto; max-height: min(560px, var(--bits-popover-content-available-height, calc(100dvh - 32px))); border-radius: var(--dn-radius); transform: none; box-shadow: var(--dn-shadow); }
   /* Keep anchored menus static, including inherited effects. */
-  :global(.dn-search-dialog), :global(.dn-search-dialog *), :global(.dn-search-dialog *::before), :global(.dn-search-dialog *::after) { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  :global(.dn-search-dialog) { transition: none !important; scroll-behavior: auto !important; }
+  :global(.dn-search-dialog *), :global(.dn-search-dialog *::before), :global(.dn-search-dialog *::after) { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   form { display: flex; flex-direction: column; height: 100%; min-width: 0; min-height: 0; margin: 0; }
   :global(.dn-search-popover) form { height: auto; max-height: min(558px, calc(var(--bits-popover-content-available-height, calc(100dvh - 32px)) - 2px)); }
   :global(.dn-search-popover) .dn-filter-panel { padding: 0 var(--dn-space-4) var(--dn-space-4); }
@@ -308,10 +311,10 @@
   @media (min-width: 992px) {
     :global(.dn-search-popover[data-desktop-panel='true']) { width: min(480px, calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true'][data-wide-choices='true']) { width: min(640px, calc(100vw - 32px)); }
-    :global(.dn-search-popover[data-desktop-panel='true'][data-make-grid='true']) { width: min(720px, calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-desktop-panel='true'][data-make-grid='true']) { width: min(840px, calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true']) .dn-search-query { width: 100%; margin: 0; }
     .dn-search-results--choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .dn-search-results--makes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .dn-search-results--makes { grid-template-columns: repeat(6, minmax(0, 1fr)); }
     .dn-search-empty { grid-column: 1 / -1; }
     .dn-search-range-fields, .dn-search-range > label { width: min(100%, 488px); margin-inline: auto; }
     .dn-search-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }

@@ -104,7 +104,7 @@
       <Popover.Portal to={portalTarget}>
         <Popover.Content bind:ref={pickers[field]} class="dn-home-browse-picker" role="dialog" aria-labelledby={`${id}-${field}-title`}
           data-desktop-panel={desktop.current} data-wide-choices={field === 'make' || field === 'model'} data-make-grid={field === 'make'}
-          sideOffset={8} align={desktop.current && field === 'price' ? 'end' : 'start'} collisionPadding={16}
+          sideOffset={desktop.current ? 16 : 8} align={desktop.current && field === 'price' ? 'end' : 'start'} collisionPadding={16}
           onOpenAutoFocus={event => { event.preventDefault(); void tick().then(() => { if (openField === field) focusPopover(pickers[field], pickers[field]?.querySelector<HTMLInputElement>('input[type=search], input[type=number], input:checked') ?? null, keyboardOpen); }); }}
           onCloseAutoFocus={event => restoreFocus(event, field)}
           onkeydown={event => { if (event.key === 'Enter' && event.target instanceof HTMLInputElement && event.target.type === 'number') { event.preventDefault(); save(); } }}>
@@ -162,7 +162,7 @@
   @media (min-width: 992px) {
     :global(.dn-home-browse-picker[data-desktop-panel='true']) { width: min(480px, calc(100vw - 32px)); }
     :global(.dn-home-browse-picker[data-desktop-panel='true'][data-wide-choices='true']) { width: min(640px, calc(100vw - 32px)); }
-    :global(.dn-home-browse-picker[data-desktop-panel='true'][data-make-grid='true']) { width: min(720px, calc(100vw - 32px)); }
+    :global(.dn-home-browse-picker[data-desktop-panel='true'][data-make-grid='true']) { width: min(840px, calc(100vw - 32px)); }
     .dn-home-browse-picker__editor { overflow: hidden; }
     .dn-home-browse-picker__editor--price :global(.dn-facet-editor) { flex: 1; }
     .dn-home-browse-picker__save:has(.dn-home-browse-picker__count) { display: flex; align-items: center; gap: var(--dn-space-2); }
