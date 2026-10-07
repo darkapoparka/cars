@@ -49,10 +49,10 @@ const s = stylex.create({
     display: 'grid',
     gridAutoFlow: 'column',
     gridAutoColumns: '1fr',
-    minHeight: 54,
+    minHeight: 52,
     marginTop: 0,
-    paddingInline: 4,
-    paddingBlock: 4,
+    paddingInline: 3,
+    paddingBlock: 3,
     justifyContent: 'center',
     gap: 4,
     backgroundColor: 'rgba(255,255,255,.12)',
@@ -60,7 +60,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'rgba(255,255,255,.24)',
-    borderRadius: 27,
+    borderRadius: 26,
     boxShadow: 'none',
   },
   primaryTab: {
@@ -71,12 +71,12 @@ const s = stylex.create({
     overflowWrap: 'normal',
   },
   heroTab: {
-    minWidth: 96,
+    minWidth: 80,
     minHeight: 44,
-    paddingInline: 16,
+    paddingInline: 12,
     paddingBlock: 0,
-    fontSize: 18,
-    lineHeight: '26px',
+    fontSize: 16,
+    lineHeight: '24px',
     fontWeight: 500,
     color: '#fff',
     borderRadius: 22,
@@ -204,21 +204,6 @@ const s = stylex.create({
       default: 0,
       '@media (min-width: 700px)': 1,
       '@media (min-width: 1024px)': 0,
-    },
-  },
-  darkPhoneRail: {
-    backgroundColor: { default: null, '@media (max-width: 699px)': 'transparent' },
-  },
-  darkPhoneTab: {
-    outlineColor: { default: null, '@media (max-width: 699px)': '#fff' },
-    backgroundColor: {
-      default: null,
-      '@media (max-width: 699px)': { default: 'transparent', ':active': 'rgba(255,255,255,.12)' },
-    },
-  },
-  darkPhoneSelected: {
-    '::after': {
-      backgroundColor: { default: null, '@media (max-width: 699px)': '#fff' },
     },
   },
   pillsRail: {
@@ -390,7 +375,6 @@ export function ShowroomTabs<T extends string>({
   primary = false,
   flush = false,
   flushOnPhone = false,
-  darkOnPhone = false,
   onChange,
 }: {
   label: string;
@@ -411,7 +395,6 @@ export function ShowroomTabs<T extends string>({
   primary?: boolean;
   flush?: boolean;
   flushOnPhone?: boolean;
-  darkOnPhone?: boolean;
   onChange: (value: T) => void;
 }) {
   const { t, locale } = useLocale();
@@ -458,7 +441,6 @@ export function ShowroomTabs<T extends string>({
         flush && s.flushRail,
         flushOnPhone && s.phoneFlushRail,
         layout === 'hero' && s.heroRail,
-        darkOnPhone && s.darkPhoneRail,
       )}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
@@ -510,8 +492,6 @@ export function ShowroomTabs<T extends string>({
             primary && s.primaryTab,
             layout === 'hero' && s.heroTab,
             selected === value && layout === 'hero' && s.heroSelected,
-            darkOnPhone && s.darkPhoneTab,
-            darkOnPhone && selected === value && s.darkPhoneSelected,
           )}
         >
           {layout === 'desktop-pills' ? (

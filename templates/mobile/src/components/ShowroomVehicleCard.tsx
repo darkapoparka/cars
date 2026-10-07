@@ -93,8 +93,7 @@ const s = stylex.create({
     fontSize: { default: 18, '@media (max-width: 699px)': 17, '@media (min-width: 1024px)': 16 },
     lineHeight: { default: '24px', '@media (min-width: 1024px)': '22px' },
     fontWeight: {
-      default: 700,
-      '@media (max-width: 699px)': 500,
+      default: 500,
       '@media (min-width: 1024px)': 400,
     },
     overflowWrap: 'anywhere',
@@ -109,7 +108,9 @@ const s = stylex.create({
     position: 'relative',
     display: 'flex',
     flexWrap: 'wrap',
-    gap: 4,
+    alignItems: 'center',
+    columnGap: 6,
+    rowGap: 4,
   },
   price: {
     marginTop: { default: 0, '@media (min-width: 1024px)': 'auto' },
@@ -117,28 +118,26 @@ const s = stylex.create({
     lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
     fontWeight: {
       default: 700,
-      '@media (max-width: 699px)': 600,
       '@media (min-width: 1024px)': 600,
     },
     fontVariantNumeric: 'tabular-nums',
     whiteSpace: 'nowrap',
   },
   fact: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 6,
     minWidth: 0,
     maxWidth: '100%',
-    justifySelf: 'start',
     flexShrink: { default: 0, '@media (min-width: 1024px)': 1 },
-    paddingInline: 6,
-    paddingBlock: 2,
-    borderRadius: 4,
-    backgroundColor: colors.controlSurface,
     color: colors.muted,
-    fontSize: { default: 12, '@media (max-width: 699px)': 14 },
+    fontSize: { default: 12, '@media (max-width: 699px)': 13 },
     lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
+  separator: { opacity: 0.55 },
 });
 
 export function ShowroomVehicleCard({
@@ -158,7 +157,6 @@ export function ShowroomVehicleCard({
     year: String(vehicle.year),
     mileage: number(vehicle.mileage) + ' ' + t('km'),
     fuel: t(vehicle.fuel),
-    transmission: t(vehicle.transmission),
   };
   return (
     <article data-showroom-vehicle={vehicle.id} {...stylex.props(s.card)}>
@@ -204,8 +202,13 @@ export function ShowroomVehicleCard({
           </Link>
         </h2>
         <p title={Object.values(specs).join(' · ')} {...stylex.props(s.specs)}>
-          {Object.entries(specs).map(([key, fact]) => (
+          {Object.entries(specs).map(([key, fact], index) => (
             <span key={key} data-vehicle-fact={key} title={fact} {...stylex.props(s.fact)}>
+              {index > 0 && (
+                <span aria-hidden="true" {...stylex.props(s.separator)}>
+                  ·
+                </span>
+              )}
               {fact}
             </span>
           ))}

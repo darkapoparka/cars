@@ -68,8 +68,6 @@ const s = stylex.create({
     height: { default: 40, '@media (min-width: 1024px)': 30 },
     objectFit: 'contain',
     flexShrink: 0,
-    backgroundColor: { default: 'transparent', '@media (max-width: 699px)': '#f0f2f5' },
-    borderRadius: { default: 0, '@media (max-width: 699px)': 10 },
   },
   search: {
     paddingTop: 4,
@@ -537,7 +535,7 @@ export function ShowroomInventoryScreen() {
     <>
       <ShowroomBanner discovery>
         <ShowroomHeaderSurface>
-          <Header home showLanguageSwitcher sticky={false} overHeroDesktop darkOnPhone />
+          <Header home showLanguageSwitcher sticky={false} overHeroDesktop />
           <div {...stylex.props(s.search)}>
             <ShowroomSearch
               label={t('Search make or model')}
@@ -556,7 +554,6 @@ export function ShowroomInventoryScreen() {
                 variant="icon"
                 tone="neutral"
                 layout="desktop-categories"
-                darkOnPhone
                 tabs={showroomCategories.map(({ value, label, image }) => ({
                   value,
                   label,
