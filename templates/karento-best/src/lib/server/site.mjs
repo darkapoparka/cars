@@ -55,7 +55,7 @@ export const siteNavigation = [
   { label: 'Home', href: '/' },
   { label: 'Vehicles', href: '/vehicles' },
   { label: 'Import', href: '/import' },
-  { label: 'Shop', links: [['Shop', '/shop'], ['Product Details', '/shop/product']] },
+  { label: 'Shop', href: '/shop' },
   { label: 'Explore', links: companyLinks },
   { label: 'News', links: [['News', '/news'], ['News Article', '/news/article']] },
   { label: 'Contact', href: '/contact' }
@@ -291,6 +291,23 @@ export function composeSitePage(sourceKey, page, body, home2Body, home3Body) {
     if (href) anchor.attr('href', href);
   });
   organizeImport($, sourceKey);
+  if (sourceKey === 'shop-list') {
+    $('main .box-grid-tours .card-journey-small .card-image > img')
+      .wrap('<a class="d-block" href="/shop/product" aria-label="View product"></a>');
+    $('main .box-grid-tours .card-title > a').addClass('d-block');
+  }
+  if (sourceKey === 'shop-details') {
+    const buyBox = $('main .box-banner-home2 .tour-header');
+    buyBox.addClass('karento-product-buybox');
+    buyBox.find('.tour-title-main br').remove();
+    const productTitle = buyBox.find('.tour-title-main').text().replace(/\s+/g, ' ').trim();
+    $('main .box-breadcrumb').addClass('karento-product-breadcrumb')
+      .attr('role', 'navigation').attr('aria-label', 'Breadcrumb');
+    $('main .breadcrumbs li:nth-child(2) a').text('Shop');
+    $('main .breadcrumbs .text-breadcrumb').text(productTitle).attr('aria-current', 'page');
+    buyBox.find('.btn-wishlish').contents().filter((_, node) => node.type === 'text')
+      .last().replaceWith(' Wishlist ');
+  }
   organizeAccountAreas($, sourceKey);
   polishMotion($);
   // Four upstream collage portraits were never supplied. Reuse the reviewed

@@ -161,6 +161,8 @@
   --dn-control-weight: var(--dn-weight-medium);
   --dn-control-font: var(--dn-control-weight) var(--dn-control-size) / var(--dn-leading-control) var(--dn-font);
   --dn-body-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-body) var(--dn-font);
+  --dn-field-font: var(--dn-weight-ui) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
+  --dn-field-label-font: var(--dn-weight-ui) var(--dn-text-meta) / var(--dn-leading-meta) var(--dn-font);
   --dn-tab-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
   --dn-entry-font: var(--dn-weight-ui) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
   --dn-cta-size: var(--dn-text-lead);

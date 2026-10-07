@@ -89,10 +89,11 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   <LandingContentFrame enabled={home}><main data-landing-content={home||undefined} {...stylex.props(home&&landingContent.panel,s.content,home&&s.homeContent)}>{!home?<aside {...stylex.props(s.sidebar)}><h2 {...stylex.props(s.sideTitle)}>{tx("Filter cars")}</h2><label data-search-field {...stylex.props(searchField.field)}><Search size={18} aria-hidden="true" {...stylex.props(searchField.icon)}/><input data-search-input aria-label={tx("Search sidebar brands")} placeholder={tx("Search brand")} autoComplete="off" autoCapitalize="none" spellCheck={false} value={brandSearch} onChange={e=>setBrandSearch(e.target.value)} {...stylex.props(searchField.input)}/></label>{makes.filter(make=>make.toLowerCase().includes(brandSearch.toLowerCase())).map(make=><CheckRow key={make} label={tx(make)} checked={filters.brands.includes(make)} onChange={()=>setFilters({...filters,brands:toggle(filters.brands,make)})}/>)}<button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Clear all filters")}</button></aside>:null}
    <section ref={resultsRef} tabIndex={home?-1:undefined} aria-label={tx('Available cars')} aria-busy={query!==deferredQuery} {...stylex.props(s.results)}>
     {home?<><div data-desktop-inventory-toolbar {...stylex.props(s.homeToolbar)}>
+      <span data-desktop-result-count role="status" aria-live="polite" aria-atomic="true" {...stylex.props(s.homeCount)}>{count} {tx(count===1?'car':'cars')}</span>
       <button type="button" data-desktop-all-filters aria-haspopup="dialog" onClick={()=>open('filters')} {...stylex.props(s.homeFilterButton)}><SlidersHorizontal size={16} aria-hidden="true"/>{tx('All filters')}</button>
       <DesktopQuickFilters filters={filters} quickFilter={quickFilter} setQuickFilter={setQuickFilter} railRef={quickFiltersRef}/>
       <DesktopSortMenu value={sort} groups={sortGroups} onChange={setSort} onOpen={()=>setQuickFilter(null)}/>
-    </div><span className="visually-hidden" role="status" aria-live="polite" aria-atomic="true">{count} {tx(count===1?'car':'cars')}</span>{filtered?<div {...stylex.props(s.homeApplied)}><DesktopAppliedFilters filters={filters} update={setFilters} query={query} setQuery={setQuery}/><button type="button" onClick={reset} {...stylex.props(s.homeReset)}>{tx('Clear all filters')}</button></div>:null}</>:null}
+    </div>{filtered?<div {...stylex.props(s.homeApplied)}><DesktopAppliedFilters filters={filters} update={setFilters} query={query} setQuery={setQuery}/><button type="button" onClick={reset} {...stylex.props(s.homeReset)}>{tx('Clear all filters')}</button></div>:null}</>:null}
     {luxe?<div {...stylex.props(s.luxeBrands)}><BrandRow compact title={tx("Explore by brand")} onSelect={brand=>setFilters({...filters,brands:[brand]})}/></div>:null}
     {results.length?<div {...stylex.props(s.grid,home&&s.homeGrid)}>{results.map(vehicle=><VehicleCard key={vehicle.slug} vehicle={vehicle} desktopTile/>)}</div>:<div {...stylex.props(s.empty)}><Search size={32}/><h3>{tx("No cars match these filters")}</h3><p>{tx("Reset the filters or try a broader search.")}</p><button type="button" onClick={reset} {...stylex.props(s.reset)}>{tx("Reset filters")}</button></div>}
     {dealer.inventoryNotice?<p {...stylex.props(s.inventoryNotice)}>{tx(dealer.inventoryNotice)}</p>:null}
@@ -114,6 +115,7 @@ const s=stylex.create({
  homeContent:{gridTemplateColumns:'minmax(0,1fr)',paddingTop:16},
  homeGrid:{gridTemplateColumns:'repeat(4,minmax(0,1fr))'},
  homeToolbar:{display:'flex',alignItems:'center',justifyContent:'center',flexWrap:'nowrap',gap:6,marginBottom:16},
+ homeCount:{flexShrink:0,marginRight:6,color:$.muted,fontSize:$.desktopSupportSize,fontWeight:400,lineHeight:'20px',whiteSpace:'nowrap'},
  homeApplied:{display:'flex',alignItems:'center',justifyContent:'space-between',gap:12,minHeight:36,marginBottom:12},
  homeFilterButton:{display:'inline-flex',alignItems:'center',justifyContent:'center',flexShrink:0,gap:8,minHeight:44,paddingInline:12,color:$.ink,fontFamily:$.fontSans,fontSize:14,fontWeight:400,whiteSpace:'nowrap',borderWidth:0,borderRadius:8,backgroundColor:{default:$.surfaceAlt,':hover':$.line},cursor:'pointer'},
  homeFilterBackdrop:{display:'flex',alignItems:'center',justifyContent:'center',position:'fixed',inset:0,zIndex:200,backgroundColor:'rgba(20,20,24,.38)'},
@@ -132,7 +134,7 @@ const s=stylex.create({
  results:{minWidth:0},
  luxeBrands:{marginTop:-2,marginBottom:28},
  inventoryNotice:{marginTop:20,paddingTop:16,color:$.muted,fontSize:{[media.desktop]:$.desktopSupportSize,default:13},lineHeight:'20px',},
- grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr',[media.desktop]:'repeat(3,minmax(0,1fr))',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
+ grid:{display:'grid',gridTemplateColumns:{[media.mobile]:'1fr','@media (min-width: 1100px) and (max-width: 1399px)':'repeat(3,minmax(0,1fr))','@media (min-width: 1400px)':'repeat(4,minmax(0,1fr))',default:'repeat(2,minmax(0,1fr))'},gap:{[media.mobile]:$.mobileSectionGap,default:13}},
  empty:{display:'flex',alignItems:'center',flexDirection:'column',gap:16,padding:'50px 20px',textAlign:'center',color:$.muted},
  reset:{display:'block',width:'100%',minHeight:44,marginTop:20,color:$.violet,fontSize:14,fontWeight:500,borderColor:$.violet,borderWidth:1,borderStyle:'solid',borderRadius:12,backgroundColor:'#fff',cursor:'pointer'},
  filterOverlay:{display:'flex',flexDirection:'column',position:'fixed',inset:0,zIndex:200,color:$.ink,backgroundColor:'#fff',outlineStyle:'none'},

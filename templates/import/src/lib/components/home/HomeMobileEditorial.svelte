@@ -37,19 +37,6 @@
 		channelHref={youtubeChannelHref}
 		mobileHomeTitle={mobileCopy.videos}
 	/>
-	{#if data.posts.length}
-		<section class="site-container editorial-section">
-			<header>
-				<h2>{copy.guides}</h2>
-			</header>
-			<div class="guide-list">
-				{#each data.posts as post (post.slug)}
-					<ArticleCard {post} {english} compact mobileRow />
-				{/each}
-				<HomeBrowseCard href={href('/blog')} label={copy.allGuides} context={copy.guides} />
-			</div>
-		</section>
-	{/if}
 	<section
 		class="site-container editorial-section contact-section"
 		aria-label={mobileCopy.contactTitle}
@@ -63,6 +50,19 @@
 			compact
 		/>
 	</section>
+	{#if data.posts.length}
+		<section class="site-container editorial-section guide-section">
+			<header>
+				<h2>{copy.guides}</h2>
+			</header>
+			<div class="guide-list">
+				{#each data.posts as post (post.slug)}
+					<ArticleCard {post} {english} compact mobileRow readLabel={mobileCopy.read} />
+				{/each}
+				<HomeBrowseCard href={href('/blog')} label={mobileCopy.allArticles} context={copy.guides} />
+			</div>
+		</section>
+	{/if}
 </div>
 
 <style>
@@ -117,8 +117,11 @@
 			display: grid;
 			gap: 12px;
 		}
+		.guide-section {
+			padding-bottom: 24px;
+		}
 		.guide-list :global(.article-card__image) {
-			min-height: 132px;
+			min-height: 120px;
 			object-fit: cover;
 		}
 		.guide-list :global(.article-card__link) {
@@ -142,25 +145,37 @@
 		}
 		.guide-list :global(.article-card__more) {
 			display: flex;
+			justify-content: flex-end;
+			gap: 6px;
 			min-height: 28px;
 			font-size: 13px;
+			font-weight: var(--bc-weight-body);
+			color: var(--bc-muted);
 		}
 		.guide-list :global(.article-card__body) {
 			justify-content: flex-start;
+			gap: 6px;
 			padding: 12px;
 		}
 		.guide-list :global(.home-browse-card) {
 			flex-direction: row;
 			justify-content: space-between;
-			min-height: 72px;
-			padding: 16px;
+			gap: 12px;
+			min-height: 64px;
+			padding: 14px 16px;
 			font-size: 16px;
+		}
+		.guide-list :global(.home-browse-card__arrow) {
+			flex: none;
+			width: 32px;
+			height: 32px;
+			padding: 7px;
+			border-radius: var(--bc-radius-pill);
+			background: var(--bc-ink);
+			color: var(--bc-white);
 		}
 		.guide-list :global(.home-browse-card strong) {
 			order: -1;
-		}
-		.contact-section {
-			padding-bottom: 24px;
 		}
 		.contact-section :global(.commerce-banner) {
 			aspect-ratio: auto;

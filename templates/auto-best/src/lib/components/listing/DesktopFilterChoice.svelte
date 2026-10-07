@@ -15,7 +15,7 @@
 </label>
 
 <style>
-  .dn-desktop-choice { position: relative; display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border-radius: var(--dn-radius-control); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-body); cursor: pointer; }
+  .dn-desktop-choice { position: relative; display: flex; align-items: center; gap: var(--dn-space-3); min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border-radius: var(--dn-radius-control); color: var(--dn-ink); font: var(--dn-field-font); cursor: pointer; }
   input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
   .dn-desktop-choice:hover { background: var(--dn-surface-subtle); }
   .dn-desktop-choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }

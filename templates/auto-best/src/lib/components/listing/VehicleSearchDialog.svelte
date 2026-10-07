@@ -439,7 +439,6 @@
 
   .dn-listing-filter__core-grid :global(.dn-field-label) {
     margin: 0 0 6px 2px;
-    font-weight: var(--dn-weight-semibold);
   }
 
   .dn-listing-filter__filter-group--equipment {

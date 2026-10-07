@@ -59,7 +59,7 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog :is(.dn-mobile-overlay-search, .dn-mobile-search-field) input[type='search']:focus-visible { outline: none; box-shadow: none; }
 
   /* Shared mobile filter rows, choices and actions; labels stay quieter than input text. */
-  .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-align: left; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-row { display: flex; align-items: center; gap: var(--dn-overlay-gap); width: 100%; padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-field-font); text-align: left; cursor: pointer; }
   .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option, .dn-mobile-filter-choice) { min-height: var(--dn-mobile-filter-control-height); border: 0; border-radius: var(--dn-overlay-row-radius); background: transparent; touch-action: manipulation; }
   /* Inset paint restores breathing room without reducing the full button target. */
   .dn-app-shell dialog :is(.dn-mobile-overlay-row, .dn-mobile-overlay-option) { position: relative; isolation: isolate; }
@@ -76,10 +76,10 @@ button { font: var(--dn-control-font); }
   .dn-app-shell dialog input.dn-mobile-filter-check::before { content: '✓'; opacity: 0; }
   .dn-app-shell dialog input.dn-mobile-filter-check:checked::before { opacity: 1; }
   .dn-app-shell dialog .dn-mobile-overlay-row strong { min-width: 0; max-width: 60%; font: inherit; overflow-wrap: anywhere; }
-  .dn-app-shell dialog .dn-mobile-overlay-row > span { flex: 1; min-width: 0; color: var(--dn-muted); font: var(--dn-overlay-value-font); text-align: right; overflow-wrap: anywhere; }
+  .dn-app-shell dialog .dn-mobile-overlay-row > span { flex: 1; min-width: 0; color: var(--dn-muted); font: var(--dn-field-font); text-align: right; overflow-wrap: anywhere; }
   .dn-app-shell dialog .dn-mobile-overlay-row > span[data-active='true'] { color: var(--dn-ink); }
   .dn-app-shell dialog .dn-mobile-overlay-row > svg { flex: 0 0 var(--dn-control-icon-size); width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); color: var(--dn-muted); }
-  .dn-app-shell dialog .dn-mobile-overlay-option { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-overlay-option-font); overflow-wrap: anywhere; cursor: pointer; }
+  .dn-app-shell dialog .dn-mobile-overlay-option { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-ink); font: var(--dn-field-font); overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-footer { display: flex; flex: 0 0 auto; align-items: center; gap: var(--dn-space-3); padding: var(--dn-space-3) var(--dn-overlay-gutter) max(var(--dn-space-3), env(safe-area-inset-bottom)); background: var(--dn-white); }
   .dn-app-shell dialog .dn-mobile-overlay-clear { display: inline-flex; min-width: 0; min-height: var(--dn-overlay-control-height); align-items: center; justify-content: center; padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); text-decoration: none; overflow-wrap: anywhere; cursor: pointer; }
   .dn-app-shell dialog .dn-mobile-overlay-clear:disabled { color: var(--dn-muted); cursor: default; }

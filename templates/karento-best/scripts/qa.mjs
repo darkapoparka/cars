@@ -48,7 +48,7 @@ async function verify(route, sourceKey) {
   assert.equal($('main').find('h1,h2,h3,h4,h5,h6').length, expectedHeadings, `${route}: retained selected content sections`);
   assert.equal($('main img').length, expectedImages, `${route}: retained selected artwork`);
   const destinations = $('[data-site-navigation] a[href]').map((_, element) => $(element).attr('href')).get();
-  assert(destinations.includes('/shop/product'), `${route}: product details reachable`);
+  assert(destinations.includes('/shop'), `${route}: shop grid reachable`);
   assert.equal($('footer a[href="/dashboard"],footer a[href="/account"]').length, 0, `${route}: account access does not live in footer`);
   assert.equal($('.karento-mobile-account [data-demo-account-link]').length, 1, `${route}: mobile sign-in/dashboard entry reachable`);
   if (sourceKey === 'login') {

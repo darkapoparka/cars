@@ -9,13 +9,15 @@
 		english = false,
 		level = 3,
 		compact = false,
-		mobileRow = false
+		mobileRow = false,
+		readLabel
 	}: {
 		post: BlogPost;
 		english?: boolean;
 		level?: 2 | 3;
 		compact?: boolean;
 		mobileRow?: boolean;
+		readLabel?: string;
 	} = $props();
 </script>
 
@@ -41,7 +43,7 @@
 			>
 			<p>{post.excerpt}</p>
 			<span class="article-card__more"
-				>{editorialCopy[english ? 'en' : 'bg'].read}<ArrowRight
+				>{readLabel ?? editorialCopy[english ? 'en' : 'bg'].read}<ArrowRight
 					size={18}
 					aria-hidden="true"
 				/></span

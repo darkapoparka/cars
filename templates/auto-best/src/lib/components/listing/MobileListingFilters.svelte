@@ -181,7 +181,7 @@
   .clear-search { border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-ink); }
   .dn-mobile-filter-fields { display: grid; gap: var(--dn-mobile-filter-control-gap); }
   .field-row strong { min-width: 0; max-width: 45%; font: inherit; overflow-wrap: anywhere; }
-  .field-row > span { flex: 1; min-width: 0; color: var(--dn-muted); font: var(--dn-overlay-value-font); text-align: right; overflow-wrap: anywhere; }
+  .field-row > span { flex: 1; min-width: 0; color: var(--dn-muted); text-align: right; overflow-wrap: anywhere; }
   .field-row > span[data-active=true] { color: var(--dn-ink); }
   .field-row :global(svg) { flex: none; color: var(--dn-muted); }
   .dn-mobile-filter-editor { display: flex; flex-direction: column; min-height: 0; padding-bottom: max(var(--dn-space-3), env(safe-area-inset-bottom, 0px)); }
