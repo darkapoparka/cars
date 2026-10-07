@@ -176,7 +176,11 @@ export function ShowroomDesktopFilters({
             {desktopFilterSections
               .filter(({ key }) => ['fuel', 'transmission', 'body', 'condition'].includes(key))
               .map(({ key, label }) => (
-                <section key={key} aria-label={t(label)} {...stylex.props(s.fieldGroup)}>
+                <section
+                  key={key}
+                  aria-label={t(label)}
+                  {...stylex.props(s.fieldGroup, s.optionPanel)}
+                >
                   <h3 {...stylex.props(s.fieldTitle)}>{t(label)}</h3>
                   <ShowroomDesktopFilterFields {...fields} section={key} compact />
                 </section>

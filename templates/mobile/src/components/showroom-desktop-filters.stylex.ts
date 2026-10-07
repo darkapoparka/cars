@@ -63,12 +63,16 @@ export const desktopFilterStyles = stylex.create({
   overviewOptions: {
     display: 'grid',
     gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
-    gap: 20,
-    alignItems: 'start',
-    padding: 15,
+    gap: 8,
+    alignItems: 'stretch',
+    padding: 8,
+  },
+  optionPanel: {
+    padding: 7,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
+    borderRadius: 12,
     backgroundColor: colors.background,
   },
   makeModelSummary: {
