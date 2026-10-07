@@ -1,0 +1,1451 @@
+{
+  "verifiedAt": "2026-10-07T04:28:31.538Z",
+  "sourceHead": "ca8aca86c0f13f06fdb3506fe00299a36a3fa07b",
+  "templates": [
+    {
+      "key": "modern",
+      "sourceCommit": "ca8aca86c0f13f06fdb3506fe00299a36a3fa07b",
+      "publishingCommit": "86c8afc683dfd46735af0fe9ef7b58832de469c5",
+      "deployment": "dpl_48sf5WHPPAUbhszL4NW5mfJL2DkM",
+      "url": "https://cars-template-modern.vercel.app/bg"
+    },
+    {
+      "key": "mobile",
+      "sourceCommit": "4f4892ab971a48df546b6d3428ddd1e88035a579",
+      "publishingCommit": "af4cdceebb599620b2e5172798e39a596c82cd8b",
+      "deployment": "dpl_BJVtX5rx9P3mcwGEg7G2yiWaczyd",
+      "url": "https://cars-template-mobile.vercel.app/?lang=bg"
+    },
+    {
+      "key": "app",
+      "sourceCommit": "ca8aca86c0f13f06fdb3506fe00299a36a3fa07b",
+      "publishingCommit": "a433c9e552b3c3e369e457156b61175ac527051d",
+      "deployment": "dpl_GXpooLa2WyRGRt4Bb1VS9KBMtcTV",
+      "url": "https://cars-template-app.vercel.app/bg"
+    },
+    {
+      "key": "auto-best",
+      "sourceCommit": "ca8aca86c0f13f06fdb3506fe00299a36a3fa07b",
+      "publishingCommit": "b0914d93b00bf787896ddacb868b6ba4064aa28b",
+      "deployment": "dpl_EZRbM6QcJow1B2z2X5RahXXQ6ZW5",
+      "url": "https://cars-template-auto-best.vercel.app/bg"
+    },
+    {
+      "key": "import",
+      "sourceCommit": "ca8aca86c0f13f06fdb3506fe00299a36a3fa07b",
+      "publishingCommit": "a41a072d7099bbfda883d2073f28bb7289743cba",
+      "deployment": "dpl_Qtgm3ZWoHMUxEJnpu3Jhhu21U8yr",
+      "url": "https://cars-template-import.vercel.app/bg"
+    }
+  ],
+  "provider": [
+    {
+      "key": "modern",
+      "id": "dpl_48sf5WHPPAUbhszL4NW5mfJL2DkM",
+      "state": "READY",
+      "sha": "86c8afc683dfd46735af0fe9ef7b58832de469c5",
+      "alias": [
+        "cars-template-modern.vercel.app",
+        "cars-template-modern-tyj5.vercel.app",
+        "cars-template-modern-git-main-tyj5.vercel.app"
+      ],
+      "target": "production",
+      "ready": 1791346997733
+    },
+    {
+      "key": "mobile",
+      "id": "dpl_BJVtX5rx9P3mcwGEg7G2yiWaczyd",
+      "state": "READY",
+      "sha": "af4cdceebb599620b2e5172798e39a596c82cd8b",
+      "alias": [
+        "cars-template-mobile.vercel.app",
+        "cars-template-mobile-tyj5.vercel.app",
+        "cars-template-mobile-git-main-tyj5.vercel.app"
+      ],
+      "target": "production",
+      "ready": 1791346383363
+    },
+    {
+      "key": "app",
+      "id": "dpl_GXpooLa2WyRGRt4Bb1VS9KBMtcTV",
+      "state": "READY",
+      "sha": "a433c9e552b3c3e369e457156b61175ac527051d",
+      "alias": [
+        "cars-template-app.vercel.app",
+        "cars-template-app-tyj5.vercel.app",
+        "cars-template-app-git-main-tyj5.vercel.app"
+      ],
+      "target": "production",
+      "ready": 1791347098311
+    },
+    {
+      "key": "auto-best",
+      "id": "dpl_EZRbM6QcJow1B2z2X5RahXXQ6ZW5",
+      "state": "READY",
+      "sha": "b0914d93b00bf787896ddacb868b6ba4064aa28b",
+      "alias": [
+        "cars-template-auto-best.vercel.app",
+        "cars-template-auto-best-tyj5.vercel.app",
+        "cars-template-auto-best-git-main-tyj5.vercel.app"
+      ],
+      "target": "production",
+      "ready": 1791347135290
+    },
+    {
+      "key": "import",
+      "id": "dpl_Qtgm3ZWoHMUxEJnpu3Jhhu21U8yr",
+      "state": "READY",
+      "sha": "a41a072d7099bbfda883d2073f28bb7289743cba",
+      "alias": [
+        "cars-template-import.vercel.app",
+        "cars-template-import-tyj5.vercel.app",
+        "cars-template-import-git-main-tyj5.vercel.app"
+      ],
+      "target": "production",
+      "ready": 1791347202356
+    }
+  ],
+  "observations": [
+    {
+      "key": "modern",
+      "width": 320,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nОткрийте автомобил\nТърси 12 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\n\n12 автомобила\n\nАвтомобили за продажба\nПрепоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 320,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/cars",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nОткрийте автомобил\nТърси 12 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\n\n12 автомобила\n\nАвтомобили за продажба\nПрепоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 320,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/contact",
+      "title": "За нас и контакти | Day & Night | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nЗа нас и контакти\nОбадете ни се\n0877 733 110\nПосетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София\nС какво можем да помогнем\nАвтомобили в наличност\nВнос по заявка\nСо",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 320,
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+      "title": "2020 BMW X5 M50d | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "1\n\n89 379 лв.\n\n~1360 лв./мес.\n\n2020 BMW X5 M50d\nДетайли\nСнимки\nДанни за автомобила\nГодина\n2020\nПробег\n167 000 км\nГориво\nДизел\nКупе\nSUV\nСкорости\nАвтоматик\nМощност\n400 к.с.\nВерсия\nM50d\nЕкстри\n360° камер",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 390,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nОткрийте автомобил\nТърси 12 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\n\n12 автомобила\n\nАвтомобили за продажба\nПрепоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 390,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/cars",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nОткрийте автомобил\nТърси 12 автомобила\nЦена\nГодина\nПробег\nГориво\nСкорости\n\n12 автомобила\n\nАвтомобили за продажба\nПрепоръчана\n\nBMW\n\nX5 M50d\n\n89 379 лв.\n\nот 1360 лв./мес.\n\n2020\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 390,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/contact",
+      "title": "За нас и контакти | Day & Night | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nЗа нас и контакти\nОбадете ни се\n0877 733 110\nПосетете шоурума\nул. „Атанас Манчев“ 18, Студентски град, София\nС какво можем да помогнем\nАвтомобили в наличност\nВнос по заявка\nСо",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 390,
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+      "title": "2020 BMW X5 M50d | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "1\n\n89 379 лв.\n\n~1360 лв./мес.\n\n2020 BMW X5 M50d\nДетайли\nСнимки\nДанни за автомобила\nГодина\n2020\nПробег\n167 000 км\nГориво\nДизел\nКупе\nSUV\nСкорости\nАвтоматик\nМощност\n400 к.с.\nВерсия\nM50d\nЕкстри\n360° камер",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 1440,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nЗапазени\nСвържете се\nНамерете своя автомобил\nВсички марки\nВсички модели\nВсяка цена\nАвтомобили\nМотори\nБусове\nКамиони\nРазгледайте автомо",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 1440,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/cars",
+      "title": "Автомобили от Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nЗапазени\nСвържете се\nАвтомобили за продажба\nВсички марки\nВсички модели\nВсяка цена\nАвтомобили\nМотори\nБусове\nКамиони\n12 автомобила\nФилтр",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020",
+        "/bg/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 1440,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/contact",
+      "title": "За нас и контакти | Day & Night | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към основното съдържание\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nЗапазени\nСвържете се\n\nСофия · Студентски град\n\nСвържете се с нас\nОбадете се\nКак да ни намерите\nКак да ни намерите\nНека поговорим\n\nВъпр",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "modern",
+      "width": 1440,
+      "route": "/bg/listing/bmw-x5-m50d-sofia-2020",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/bg/listing/bmw-x5-m50d-sofia-2020",
+      "title": "2020 BMW X5 M50d | Day & Night Auto Group",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Начало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nЗапазени\nСвържете се\nНазад към търсенето\nЗапази\nСподели\n2020 BMW X5 M50d\n\nM50d · SUV\n\nОтвори галерията\n1 / 1\nПрепоръчана\nДанни за автомобила\nГодина\n2020\nПробег",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021",
+        "/bg/listing/bmw-m4-competition-sofia-2021"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 320,
+      "route": "/?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/?lang=bg",
+      "title": "Коли — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nBG\nМарка или модел\nПодреждане\nМарка и модел\nЦена\nГодина\nГориво\nОще\n16 коли\nBMW X6\n\n2025\n18 500 км\nДизел\n\n73 937 €\nBMW 540\n\n2024\n33 987 км\nДизел\n\n52 440 €\nBMW X3\n\n2025\n0 км\nДизел\nАвтом",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6",
+        "/vehicle/bmw-540",
+        "/vehicle/bmw-x3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 320,
+      "route": "/vehicle/bmw-x6?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/vehicle/bmw-x6?lang=bg",
+      "title": "BMW X6 — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\n1 / 16\nBMW X6\nДобра цена\nxDrive30d\nM Sport Pro\nАвтоматик\n73 937 €\n62 132 € без ДДС\nЗапитване\nКонтакт\nДетайли\nЕкстри\nСнимки\nПробег\n18 500 км\nПърва рег.\n06/2025\nМощност\n286 к.с.\nСобстве",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6/checklist",
+        "/vehicle/bmw-x6/gallery",
+        "/vehicle/bmw-540"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 320,
+      "route": "/contact?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/contact?lang=bg",
+      "title": "Контакт — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКонтакт\nСвържи се с нас\n\nЗа автомобил, оглед или услуга.\n\nОбади се\nПиши ни\nСъобщение\nНапишете как можем да помогнем…\nВарна · ул. Райко Жинзифов 41\n\nПримерна локация\n\nПосети ни\nКоли\nУс",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 320,
+      "route": "/services?tab=import&lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/services?tab=import&lang=bg",
+      "title": "Услуги — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nУслуги\nТърсене на услуга\nВсички\nВнос\nПродажба\nВсички държави\nГермания\nКанада\nСАЩ\nВнос на автомобил\n\nПосочете автомобил или въведете VIN.\n\nVIN или данни за автомобила\nЗапочни\nПримерни ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 390,
+      "route": "/?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/?lang=bg",
+      "title": "Коли — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nBG\nМарка или модел\nПодреждане\nМарка и модел\nЦена\nГодина\nГориво\nОще\n16 коли\nBMW X6\n\n2025\n18 500 км\nДизел\nАвтоматик\n\n73 937 €\nBMW 540\n\n2024\n33 987 км\nДизел\nАвтоматик\n\n52 440 €\nBMW X3\n\n2",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6",
+        "/vehicle/bmw-540",
+        "/vehicle/bmw-x3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 390,
+      "route": "/vehicle/bmw-x6?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/vehicle/bmw-x6?lang=bg",
+      "title": "BMW X6 — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\n1 / 16\nBMW X6\nДобра цена\nxDrive30d\nM Sport Pro\nАвтоматик\n73 937 €\n62 132 € без ДДС\nЗапитване\nКонтакт\nДетайли\nЕкстри\nСнимки\nПробег\n18 500 км\nПърва рег.\n06/2025\nМощност\n286 к.с.\nСобстве",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6/checklist",
+        "/vehicle/bmw-x6/gallery",
+        "/vehicle/bmw-540"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 390,
+      "route": "/contact?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/contact?lang=bg",
+      "title": "Контакт — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКонтакт\nСвържи се с нас\n\nЗа автомобил, оглед или услуга.\n\nОбади се\nПиши ни\nСъобщение\nНапишете как можем да помогнем…\nВарна · ул. Райко Жинзифов 41\n\nПримерна локация\n\nПосети ни\nКоли\nУс",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 390,
+      "route": "/services?tab=import&lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/services?tab=import&lang=bg",
+      "title": "Услуги — Вашият автосалон",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nУслуги\nТърсене на услуга\nВсички\nВнос\nПродажба\nВсички държави\nГермания\nКанада\nСАЩ\nВнос на автомобил\n\nПосочете автомобил или въведете VIN.\n\nVIN или данни за автомобила\nЗапочни\nПримерни ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 1440,
+      "route": "/?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/?lang=bg",
+      "title": "Коли — Вашият автосалон",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\n\nВарна · ул. Райко Жинзифов 41\n\nНамерете своя автомобил\nВид\nКоли\nМарка\nВсички марки\nМодел\nПърво изберете марка\nЦена\nВсяка цена\nВсички филтри\nГодина\nПробег\nГориво\nСкоростна кутия\nКупе\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6",
+        "/vehicle/bmw-540",
+        "/vehicle/bmw-x3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 1440,
+      "route": "/vehicle/bmw-x6?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/vehicle/bmw-x6?lang=bg",
+      "title": "BMW X6 — Вашият автосалон",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nBMW X6\n1 / 16\nДетайли\nСнимки\nЕкстри\nBMW X6\n\nxDrive30d · M Sport Pro\n\n73 937 €\nДобра цена\n\n62 132 € без ДДС, 19% ДДС\n\nот\n784 €\n/ месец\nФинансиране\nКонтакт\nЗапитване\nПробег\n18 500 км\nПъ",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6/checklist",
+        "/vehicle/bmw-x6/gallery",
+        "/vehicle/bmw-540"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 1440,
+      "route": "/contact?lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/contact?lang=bg",
+      "title": "Контакт — Вашият автосалон",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКонтакт\n\nПопитайте за автомобил, оглед или услуга.\n\nПиши ни\nВашият автосалон\nВиж на картата\nВарна · ул. Райко Жинзифов 41\n\nПримерна локация\n\n+359 000 000 000\n\nПримерен телефон\n\nЗапитв",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 1440,
+      "route": "/services?tab=import&lang=bg",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/services?tab=import&lang=bg",
+      "title": "Услуги — Вашият автосалон",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nУслуги\nВсички\nВнос\nПродажба\nТърсене на услуга\nВсички държави\nГермания\nКанада\nСАЩ\nВнос на автомобил\n\nПосочете автомобил или въведете VIN.\n\nVIN или данни за автомобила\nЗапочни\nПримерни ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nМарка или модел\n(48)\nToyota\nSuzuki\nKia\nNissan\nHaval\nMitsubishi\nMercedes\nBMW\nAudi\nLexus\nVolvo\nLand Rover\nMG\nJAC\nHyundai\nMazda\nVolkswagen\nFord\nJeep\nИзбери авто",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/2",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/2",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nМарка или модел\n(48)\nНашите автомобили\nРазгледай\nЛизинг\nФинансирай\nПродай колата си\nОценка\nГрижа за колата\nИзбери\nДо €30,000\nДо €50,000\nДо €80,000\nSUV\n\nToyota\n\n2024 FORTUNER\n\nEXR • GC",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars",
+      "title": "Our cars · Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНашите автомобили\n(48)\n48 автомобила\nФилтри\nПодреди\nМарка\nМодел\nБюджет\nОтстъпки\nГодина\nПробег\nТип купе\nГориво\n\nToyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/мес.*\nприбл.\n\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/service",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/service",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nСервизни услуги\n\nОбслужване и диагностика.\n\nВсички\nОбслужване\nДиагностика\nГуми\nСпирачки\nКлиматик\n5 Възможности за обслужване\nОбслужване\nМасло и филтри\nБезопа",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/sell",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/sell",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nПродай колата си.\n\nПродажба или замяна.\n\nОцени моя автомобил\nПродай ни колата\nОценка\nПреглед\nДокументи\nПоискай оценка\nЗамяна\nОценка\nИзбор\nДоплащане\nЗаяви зам",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/finance",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/finance",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nКалкулатор\n\nМесечна вноска\n\nИзбери кола\nВсички\nГермания\nКанада\nСАЩ\nИталия\nНидерландия\nКоли за внос: 5\nКанада\n\nToyota\n\n2021 RAV4\n\nHybrid AWD\n\n€\n19,800\n72,000 ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 320,
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+      "title": "2024 Toyota FORTUNER · Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nПодобни\n1 / 18\nЕкстериор\n6 снимки\nИнтериор\n7 снимки\nДетайли\n5 снимки\n2024 TOYOTA FORTUNER EXR\n\n50,000 км · Автоматична · Бензин\n\n€94,099\n\nИнфо\nЕкстериор\nИнтериор\nХарактеристики\nДвигат",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr/features"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nМарка или модел\n(48)\nToyota\nSuzuki\nKia\nNissan\nHaval\nMitsubishi\nMercedes\nBMW\nAudi\nLexus\nVolvo\nLand Rover\nMG\nJAC\nHyundai\nMazda\nVolkswagen\nFord\nJeep\nИзбери авто",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/2",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/2",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nМарка или модел\n(48)\nНашите автомобили\nРазгледай\nЛизинг\nФинансирай\nПродай колата си\nОценка\nГрижа за колата\nИзбери\nДо €30,000\nДо €50,000\nДо €80,000\nSUV\n\nToyota\n\n2024 FORTUNER\n\nEXR • GC",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars",
+      "title": "Our cars · Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНашите автомобили\n(48)\n48 автомобила\nФилтри\nПодреди\nМарка\nМодел\nБюджет\nОтстъпки\nГодина\nПробег\nТип купе\nГориво\n\nToyota\n\n2024 FORTUNER\n\nEXR • GCC Specs\n\n€\n94,099\n\n€\n1,430/мес.*\nприбл.\n\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/service",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/service",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nСервизни услуги\n\nОбслужване и диагностика.\n\nВсички\nОбслужване\nДиагностика\nГуми\nСпирачки\nКлиматик\n5 Възможности за обслужване\nОбслужване\nМасло и филтри\nБезопа",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/sell",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/sell",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nПродай колата си.\n\nПродажба или замяна.\n\nОцени моя автомобил\nПродай ни колата\nОценка\nПреглед\nДокументи\nПоискай оценка\nЗамяна\nОценка\nИзбор\nДоплащане\nЗаяви зам",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/finance",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/finance",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nКалкулатор\n\nМесечна вноска\n\nИзбери кола\nВсички\nГермания\nКанада\nСАЩ\nИталия\nНидерландия\nКоли за внос: 5\nКанада\n\nToyota\n\n2021 RAV4\n\nHybrid AWD\n\n€\n19,800\n72,000 ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+      "title": "2024 Toyota FORTUNER · Drive24",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nПодобни\n1 / 18\nЕкстериор\n6 снимки\nИнтериор\n7 снимки\nДетайли\n5 снимки\n2024 TOYOTA FORTUNER EXR\n\n50,000 км · Автоматична · Бензин\n\n€94,099\n\nИнфо\nЕкстериор\nИнтериор\nХарактеристики\nДвигат",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr/features"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nОткрийте следващия си автомобил.\nМарка\nВсички марки\nМодел\nВсички модели\nБюджет\nБез ограничение\n48 автомобила\nВсички филтри\nТип\nГодина\nПробег\nГориво\nСкорости\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/2",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/2",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nОткрийте следващия си автомобил.\nМарка\nВсички марки\nМодел\nВсички модели\nБюджет\nБез ограничение\n48 автомобила\nВсички филтри\nТип\nГодина\nПробег\nГориво\nСкорости\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/cars",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars",
+      "title": "Our cars · Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nНашите автомобили\n(48)\n48 автомобила\nФилтри\nПодреди\nМарка\nМодел\nБюджет\nОтстъпки\nГодина\nПробег\nТип купе\nГориво\nФилтри за автомобили\nNissan\nToyota\nMitsubishi\nM",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2024-toyota-fortuner-exr",
+        "/bg/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/service",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/service",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nПогрижете се за автомобила си.\nВсички\nОбслужване\nДиагностика\nГуми\nСпирачки\nКлиматик\nЗапитване за услуга\n5 Възможности за обслужване\nОбслужване\nМасло и филтри",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/sell",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/sell",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nПродай колата си.\nМарка\nМодел\nПродай\n\nАвтокъщата потвърждава оценката след преглед на колата.\n\nПродай ни колата\nОценка на автомобила\nПреглед на състоянието\nС",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/finance",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/finance",
+      "title": "Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nКалкулатор\nИзбери кола\nТърси в каталога\nСамоучастие\n%\nСрок\n12 месеца\n24 месеца\n36 месеца\n48 месеца\n60 месеца\n72 месеца\n84 месеца\n—\n/ мес.\nИзбери кола за изчи",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 1440,
+      "route": "/bg/cars/2024-toyota-fortuner-exr",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/bg/cars/2024-toyota-fortuner-exr",
+      "title": "2024 Toyota FORTUNER · Drive24",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nКупи\nПродай\nЛизинг\nУслуги\nПодобни\n1 / 18\nЕкстериор\n6 снимки\nИнтериор\n7 снимки\nДетайли\n5 снимки\n2024 TOYOTA FORTUNER EXR\n\n50,000 км · Автоматична · Бензин\n\nИнформация\nЕкстериор\nИнтерио",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/cars/2024-toyota-fortuner-exr/features"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg",
+      "title": "Auto Best — Концепция за шоурум в София",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nНамерете автомобил\nКупи\nВнос\nМарка или модел\nВиж всички\n≤ 60k €\n≤ 80k €\n≤ 100k €\nAudi\nMercedes\nBMW\nКоли\n7 примерни\nПродай\nБърза оценка\nВнос\nПо заявка\nЛизи",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 320,
+      "route": "/listing-grid",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-grid",
+      "title": "Примерни автомобили — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nТърсете (7)\nТип\nМарка\nМодел\nБюджет\nГодина\nКупе\nГориво\nСкорости\nПробег\nВерсия\nСъстояние\nЕкстри\nПримерни автомобили\n\nAudi\n\nRS 6 Avant\n68 804 €\n2024\n99701\n99",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "/bg/listing-detail-v1/2?return=%2Fbg%2Flisting-grid%23vehicle-2",
+        "/bg/listing-detail-v1/3?return=%2Fbg%2Flisting-grid%23vehicle-3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 320,
+      "route": "/contact",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/contact",
+      "title": "Контакти — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nКонтакти\n\nЗа наличност, следващи стъпки или друг въпрос за Auto Best.\n\n087 982 4625\nУпътвания\nАдрес\nул. „Атанас Манчев“ 18, София\nПосещения\nС предварителн",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 320,
+      "route": "/bg/listing-detail-v1/1",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1",
+      "title": "Audi RS 6 Avant — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nЗа оглед\nОбади се\nAudi RS 6 Avant\nДанни\nОписание\nЕкстри\nМарка\nAudi\nКатегория\nКомби\nСъстояние\nУпотребяван\nГодина\n2024\nПробег\n99 701 km\nГориво\nБензин\nСкоростна кутия\nАвтоматик\nМестополо",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/3",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/4"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg",
+      "title": "Auto Best — Концепция за шоурум в София",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nНамерете автомобил\nКупи\nВнос\nМарка или модел\nВиж всички\n≤ 60k €\n≤ 80k €\n≤ 100k €\nAudi\nMercedes\nBMW\nКоли\n7 примерни\nПродай\nБърза оценка\nВнос\nПо заявка\nЛизи",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 390,
+      "route": "/listing-grid",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-grid",
+      "title": "Примерни автомобили — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nТърсете (7)\nТип\nМарка\nМодел\nБюджет\nГодина\nКупе\nГориво\nСкорости\nПробег\nВерсия\nСъстояние\nЕкстри\nПримерни автомобили\n\nAudi\n\nRS 6 Avant\n68 804 €\n2024\n99701\n99",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "/bg/listing-detail-v1/2?return=%2Fbg%2Flisting-grid%23vehicle-2",
+        "/bg/listing-detail-v1/3?return=%2Fbg%2Flisting-grid%23vehicle-3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 390,
+      "route": "/contact",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/contact",
+      "title": "Контакти — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nНачало\nКоли\nПродай\nВнос\nМеню\nКонтакти\n\nЗа наличност, следващи стъпки или друг въпрос за Auto Best.\n\n087 982 4625\nУпътвания\nАдрес\nул. „Атанас Манчев“ 18, София\nПосещения\nС предварителн",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 390,
+      "route": "/bg/listing-detail-v1/1",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1",
+      "title": "Audi RS 6 Avant — Auto Best",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nЗа оглед\nОбади се\nAudi RS 6 Avant\nДанни\nОписание\nЕкстри\nМарка\nAudi\nКатегория\nКомби\nСъстояние\nУпотребяван\nГодина\n2024\nПробег\n99 701 km\nГориво\nБензин\nСкоростна кутия\nАвтоматик\nМестополо",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/3",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/4"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg",
+      "title": "Auto Best — Концепция за шоурум в София",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nул. „Атанас Манчев“ 18, Студентски град, София\n087 982 4625\nПосещения с предварителна уговорка\nНачало\nАвтомобили\nПолезно\nЗа нас\nКонтакти\nЗапитване\nЗа оглед\nНамерете следващия си автом",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 1440,
+      "route": "/listing-grid",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-grid",
+      "title": "Примерни автомобили — Auto Best",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nул. „Атанас Манчев“ 18, Студентски град, София\n087 982 4625\nПосещения с предварителна уговорка\nНачало\nАвтомобили\nПолезно\nЗа нас\nКонтакти\nЗапитване\nЗа оглед\nНамерете следващия си автом",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/1?return=%2Fbg%2Flisting-grid%23vehicle-1",
+        "/bg/listing-detail-v1/2?return=%2Fbg%2Flisting-grid%23vehicle-2",
+        "/bg/listing-detail-v1/3?return=%2Fbg%2Flisting-grid%23vehicle-3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 1440,
+      "route": "/contact",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/contact",
+      "title": "Контакти — Auto Best",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nул. „Атанас Манчев“ 18, Студентски град, София\n087 982 4625\nПосещения с предварителна уговорка\nНачало\nАвтомобили\nПолезно\nЗа нас\nКонтакти\nЗапитване\nЗа оглед\nКОНТАКТИ\nДа поговорим\nза ва",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 1440,
+      "route": "/bg/listing-detail-v1/1",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/bg/listing-detail-v1/1",
+      "title": "Audi RS 6 Avant — Auto Best",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nПолезно\nЗа нас\nКонтакти\nЗапитване\nЗа оглед\nНазад\nAudi RS 6 Avant\nВижте снимката\nДанни\nОписание\nЕкстри\nМарка\nAudi\nКатегория\nКомби\nСъстояние\nУпотребяван\nГодина\n2024\nПр",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/listing-detail-v1/3",
+        "/bg/listing-detail-v1/2",
+        "/bg/listing-detail-v1/4"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 320,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg",
+      "title": "Import — Автомобили и внос по заявка",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи автомобил\nКупи\nВнос\nТърси марка, модел, цена...\nВиж всички (42)\nДо 10 000\nДо 20 000\nДо 30 000\nНови обяви\nНалични\n\n79k км\nпробег: 79 000 km\n\nMercedes-Benz GLA 45 AMG 4M AMG Night ",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 320,
+      "route": "/bg/inventory",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory",
+      "title": "Налични автомобили — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nАвтомобили\nТърси\n(42)\nМарка\nМодел\nЦена\nГодина\nОще\n\nВсички 42\n\nНова обява\nBMW X5 40i M Sport Shadow Line\n36 500 €\n507 €/мес.\n2019\nБензин\nАвтомат\n140k км\nНова обява\nBMW X4 M Competition",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 320,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/contact",
+      "title": "Свържете се с IMPORT — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКонтакти\n\nОгледи с предварителна уговорка\n\nОбади се\nПиши ни\nгр. София, Студентски град, ул. Атанас Манчев 18\nОтвори карта\nИзпрати запитване\n\nПоследвай ни\n\nНачало\nКоли\nПродай\nВнос\nМеню",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 320,
+      "route": "/bg/about",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/about",
+      "title": "За нас — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nЗа нас\n\nПодбор, внос и проверка на автомобили.\n\nКоли\nКонтакти\nКак работим\n01\nЗаявка\n\nИзпрати линк, VIN или предпочитан модел.\n\n02\nПроверка\n\nПроверяваме история, документи и разходи.\n\n",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 320,
+      "route": "/bg/inventory/21754658377544573",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory/21754658377544573",
+      "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\n\n19 500 €\n\nMercedes-Benz GLA 45 AMG 4M AMG Night Package\nЗапитване\nОбади се\nНаличен в България. Закупен от дилър на Мерцедес в Европа. Без инциденти, пълна сервизна история. Предостав",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg",
+      "title": "Import — Автомобили и внос по заявка",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКупи автомобил\nКупи\nВнос\nТърси марка, модел, цена...\nВиж всички (42)\nДо 10 000\nДо 20 000\nДо 30 000\nНови обяви\nНалични\n\n79k км\nпробег: 79 000 km\n\nMercedes-Benz GLA 45 AMG 4M AMG Night ",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/bg/inventory",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory",
+      "title": "Налични автомобили — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nАвтомобили\nТърси\n(42)\nМарка\nМодел\nЦена\nГодина\nОще\n\nВсички 42\n\nНова обява\nBMW X5 40i M Sport Shadow Line\n36 500 €\n507 €/мес.\n2019\nБензин\nАвтомат\n140k км\nНова обява\nBMW X4 M Competition",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/contact",
+      "title": "Свържете се с IMPORT — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nКонтакти\n\nОгледи с предварителна уговорка\n\nОбади се\nПиши ни\nгр. София, Студентски град, ул. Атанас Манчев 18\nОтвори карта\nИзпрати запитване\n\nПоследвай ни\n\nНачало\nКоли\nПродай\nВнос\nМеню",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/bg/about",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/about",
+      "title": "За нас — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\nЗа нас\n\nПодбор, внос и проверка на автомобили.\n\nКоли\nКонтакти\nКак работим\n01\nЗаявка\n\nИзпрати линк, VIN или предпочитан модел.\n\n02\nПроверка\n\nПроверяваме история, документи и разходи.\n\n",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/bg/inventory/21754658377544573",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory/21754658377544573",
+      "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package — Import",
+      "lang": "bg",
+      "overflow": 0,
+      "bodyText": "Към съдържанието\n\n19 500 €\n\nMercedes-Benz GLA 45 AMG 4M AMG Night Package\n271 €/мес.\nЗапитване\nОбади се\nНаличен в България. Закупен от дилър на Мерцедес в Европа. Без инциденти, пълна сервизна история",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "route": "/bg",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg",
+      "title": "Import — Автомобили и внос по заявка",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nИзбрани автомобили: 0\nЗапазени автомобили: 0\nКупи автомобил\nКупи\nЛизинг\nПродай\nВнос\nМарка, модел или ключова дума\nМарка\nМодел\nЦена\nПробег\nНай-",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573",
+        "/bg/inventory/21754658377544573"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "route": "/bg/inventory",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory",
+      "title": "Налични автомобили — Import",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nИзбрани автомобили: 0\nЗапазени автомобили: 0\nНалични автомобили\nКоли\nSUV\nМотори\nБусове\nМарка, модел или ключова дума\nМарка\nМодел\nЦена\nПробег\nГ",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "route": "/bg/contact",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/contact",
+      "title": "Свържете се с IMPORT — Import",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nИзбрани автомобили: 0\nЗапазени автомобили: 0\nКонтакти\n\nгр. София, Студентски град, ул. Атанас Манчев 18\n\n0877 733 110\nЗапитване\nПосети ни\n\nгр.",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "route": "/bg/about",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/about",
+      "title": "За нас — Import",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nИзбрани автомобили: 0\nЗапазени автомобили: 0\nЗа нас\n\nПодбор и внос на автомобили от Европа с проверка преди покупката.\n\nРазгледай автомобили\nВ",
+      "brokenImages": [],
+      "detailLinks": [],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 1440,
+      "route": "/bg/inventory/21754658377544573",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/bg/inventory/21754658377544573",
+      "title": "Mercedes-Benz GLA 45 AMG 4M AMG Night Package — Import",
+      "lang": "bg",
+      "overflow": -15,
+      "bodyText": "Към съдържанието\nНачало\nАвтомобили\nУслуги\nЗа нас\nКонтакти\nИзбрани автомобили: 0\nЗапазени автомобили: 0\nMercedes-Benz GLA 45 AMG 4M AMG Night Package\nЗапази\nСравни\n1 / 1\nВ брой\nФинансиране\nЦена на авто",
+      "brokenImages": [],
+      "detailLinks": [
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174",
+        "/bg/inventory/21764342419542174"
+      ],
+      "errors": []
+    }
+  ],
+  "english": [
+    {
+      "key": "modern",
+      "width": 390,
+      "route": "/en",
+      "status": 200,
+      "url": "https://cars-template-modern.vercel.app/en",
+      "title": "Vehicles for sale at Day & Night Auto Group | Day & Night Auto Group",
+      "lang": "en",
+      "overflow": -15,
+      "bodyText": "Skip to main content\nFind your next car\nSearch 12 cars\nPrice\nYear\nMileage\nFuel\nTransmission\n\n12 vehicles\n\nCars for sale\nFeatured\n\nBMW\n\nX5 M50d\n\nBGN 89,379\n\nfrom BGN 1,360/mo\n\n2020\n167,000 km\nDiesel\nAu",
+      "brokenImages": [],
+      "detailLinks": [
+        "/en/listing/bmw-x5-m50d-sofia-2020",
+        "/en/listing/bmw-x5-m50d-sofia-2020",
+        "/en/listing/bmw-x5-m50d-sofia-2020"
+      ],
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "width": 390,
+      "route": "/?lang=en",
+      "status": 200,
+      "url": "https://cars-template-mobile.vercel.app/?lang=en",
+      "title": "Cars — Your showroom",
+      "lang": "en",
+      "overflow": 0,
+      "bodyText": "Skip to content\nEN\nSearch make or model\nSort\nMake & model\nPrice\nYear\nFuel\nMore\n16 cars\nBMW X6\n\n2025\n18,500 km\nDiesel\nAutomatic\n\n€73,937\nBMW 540\n\n2024\n33,987 km\nDiesel\nAutomatic\n\n€52,440\nBMW X3\n\n2025\n0",
+      "brokenImages": [],
+      "detailLinks": [
+        "/vehicle/bmw-x6",
+        "/vehicle/bmw-540",
+        "/vehicle/bmw-x3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "app",
+      "width": 390,
+      "route": "/en",
+      "status": 200,
+      "url": "https://cars-template-app.vercel.app/en",
+      "title": "Drive24",
+      "lang": "en",
+      "overflow": 0,
+      "bodyText": "Skip to content\nBuy\nSell\nFinance\nServices\nMake or model\n(48)\nToyota\nSuzuki\nKia\nNissan\nHaval\nMitsubishi\nMercedes\nBMW\nAudi\nLexus\nVolvo\nLand Rover\nMG\nJAC\nHyundai\nMazda\nVolkswagen\nFord\nJeep\nChoose a car\n\n",
+      "brokenImages": [],
+      "detailLinks": [
+        "/en/cars/2024-toyota-fortuner-exr",
+        "/en/cars/2024-toyota-fortuner-exr",
+        "/en/cars/2023-suzuki-ciaz-glx"
+      ],
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "width": 390,
+      "route": "/en",
+      "status": 200,
+      "url": "https://cars-template-auto-best.vercel.app/en",
+      "title": "Auto Best — Showroom concept in Sofia",
+      "lang": "en",
+      "overflow": 0,
+      "bodyText": "Skip to content\nHome\nCars\nSell\nImport\nMenu\nFind a car\nBuy\nImport\nMake or model\nView all\n≤ €60k\n≤ €80k\n≤ €100k\nAudi\nMercedes\nBMW\nCars\n7 sample cars\nSell\nQuick valuation\nImport\nOn request\nFinance\nFlexib",
+      "brokenImages": [],
+      "detailLinks": [
+        "/en/listing-detail-v1/1",
+        "/en/listing-detail-v1/2",
+        "/en/listing-detail-v1/3"
+      ],
+      "errors": []
+    },
+    {
+      "key": "import",
+      "width": 390,
+      "route": "/en",
+      "status": 200,
+      "url": "https://cars-template-import.vercel.app/en",
+      "title": "Import — Cars and vehicle sourcing",
+      "lang": "en",
+      "overflow": 0,
+      "bodyText": "Skip to content\nBuy a car\nBuy\nImport\nSearch brand, model, price...\nView all (42)\nUnder 10k\nUnder 20k\nUnder 30k\nNew listings\nIn stock\n\n79k km\nmileage: 79 000 km\n\nMercedes-Benz GLA 45 AMG 4M AMG Night P",
+      "brokenImages": [],
+      "detailLinks": [
+        "/en/inventory/21754658377544573",
+        "/en/inventory/21754658377544573",
+        "/en/inventory/21754658377544573"
+      ],
+      "errors": []
+    }
+  ],
+  "interactions": [
+    {
+      "key": "modern",
+      "filter": "Отвори филтрите",
+      "opened": true,
+      "closed": true,
+      "focusRestored": true,
+      "menu": {
+        "opened": true,
+        "closed": true,
+        "focusRestored": true
+      },
+      "dialogText": "Филтри\n\nРазширени филтри за автомобил, цена, пробег и продавач.\n\nАвтомобил\nАвтомобили\nМарка и модел\nВсички марки\nБюджет\nВсеки бюджет\nГориво\nВсяко гориво\nПробег\nВсеки пробег\nСкорост",
+      "errors": []
+    },
+    {
+      "key": "mobile",
+      "filter": "Марка и модел · Филтри",
+      "opened": true,
+      "closed": true,
+      "focusRestored": true,
+      "menu": null,
+      "dialogText": "Филтри\nТърсене\nМарка и модел\nЦена\nГодина\nГориво\nСъстояние\nОще\nВсички марки\n(181)\nBMW\nMercedes-Benz\nAudi\nAbarth\nAC\nAcura\nAiways\nAixam\nAlfa Romeo\nALPINA\nAlpine\nAlvis\nAriel\nArtega\nAsi",
+      "errors": []
+    },
+    {
+      "key": "app",
+      "filter": "Филтри",
+      "opened": true,
+      "closed": true,
+      "focusRestored": true,
+      "menu": null,
+      "dialogText": "Филтри\nМарка\nМодел\nБюджет\nОтстъпки\nВноска\nПървоначална вноска\nГодина\nТип купе\nПробег\nВид автомобил\nГориво\nКатегории\nОборудване\nДвигател\nВсички марки\nNissan\nToyota\nMitsubishi\nMG\nMer",
+      "errors": []
+    },
+    {
+      "key": "auto-best",
+      "filter": "Филтри",
+      "opened": true,
+      "closed": true,
+      "focusRestored": true,
+      "menu": {
+        "opened": true,
+        "closed": true,
+        "focusRestored": true
+      },
+      "dialogText": "Филтри\nТърсене на автомобил\nМарка\nВсички\nМодел\nВсички\nБюджет\nБез ограничение\nГодина\nБез ограничение\nГориво\nВсички\nСкорости\nВсички\nПробег\nБез ограничение\nТип\nВсички\nКупе\nВсички\nСъст",
+      "errors": []
+    },
+    {
+      "key": "import",
+      "filter": "Филтри",
+      "opened": true,
+      "closed": true,
+      "focusRestored": true,
+      "menu": {
+        "opened": true,
+        "closed": true,
+        "focusRestored": false
+      },
+      "dialogText": "Филтри\nВсички 42\n\nТИП КУПЕ\n\nВсички типове\n42\nSUV\n26\nСедан\n11\nКабрио\n4\n\nГОРИВО\n\nЕлектрически\n1\nБензин\n39\nPlug-in хибрид\n2\n\nПРОБЕГ\n\nВсеки пробег\n42\nДо 80 000 km\n9\nДо 120 000 km\n30\nДо",
+      "errors": []
+    }
+  ],
+  "workflow": {
+    "passed": 337,
+    "failed": 2,
+    "reason": "Pre-existing Modern dealer-refresh fixtures: Missing Modern financing logo anchor"
+  },
+  "karento": {
+    "committed": true,
+    "published": false,
+    "reason": "No existing standalone Vercel project; candidate source checks passed"
+  },
+  "sharedIndexUnchanged": true
+}
