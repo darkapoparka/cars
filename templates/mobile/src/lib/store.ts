@@ -2,74 +2,26 @@
 import { useSyncExternalStore } from 'react';
 import { defaultFilters, type Filters } from './types';
 import { normalizeFilters } from './filters';
-import {
-  createInitialState,
-  decodeState,
-  normalizeShowroomContactDetails,
-  type ShowroomContactDetails,
-  type State,
-} from './persistence';
-const initial = createInitialState();
-let state: State = initial;
-let hydrated = false;
-const listeners = new Set<() => void>();
-const key = 'mobile-reference-v1';
-const emit = () => {
-  for (const listener of listeners) listener();
-};
-function ensureHydrated() {
-  if (hydrated || typeof window === 'undefined') return;
-  hydrated = true;
-  try {
-    state = decodeState(localStorage.getItem(key));
-  } catch {
-    state = createInitialState();
-  }
-}
-export function hydrateStore() {
-  ensureHydrated();
-  emit();
-}
-export function syncStorage(event: StorageEvent) {
-  if (event.key === key || event.key === null) {
-    state = decodeState(event.newValue);
-    hydrated = true;
-    emit();
-  }
-}
-export function patchState(patch: Partial<State>): boolean {
-  // Child route effects may run before AppShell: hydrate before any first write.
-  ensureHydrated();
-  state = { ...state, ...patch };
-  let persisted = false;
-  try {
-    localStorage.setItem(key, JSON.stringify({ ...state, toast: '' }));
-    persisted = true;
-  } catch {
-    /* Storage can be unavailable in private browsing. */
-  }
-  emit();
-  return persisted;
-}
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  return () => {
-    listeners.delete(listener);
-  };
-}
+import { normalizeShowroomContactDetails, type ShowroomContactDetails } from './persistence';
+import { createAppStore } from './app-store';
+
+const store = createAppStore({
+  isBrowser: () => typeof window !== 'undefined',
+  getStorage: () => window.localStorage,
+});
+export const hydrateStore = store.hydrate;
+export const syncStorage = store.syncStorage;
+export const patchState = store.patch;
+
 export function useAppState() {
-  return useSyncExternalStore(
-    subscribe,
-    () => state,
-    () => initial,
-  );
+  return useSyncExternalStore(store.subscribe, store.getSnapshot, store.getServerSnapshot);
 }
 export function updateFilters(patch: Partial<Filters>) {
-  ensureHydrated();
+  const state = store.read();
   patchState({ filters: normalizeFilters({ ...state.filters, ...patch }) });
 }
 export function resetFilters() {
-  ensureHydrated();
+  const state = store.read();
   const filters = { ...structuredClone(defaultFilters), category: state.filters.category };
   patchState({
     filters,
@@ -77,7 +29,7 @@ export function resetFilters() {
   });
 }
 export function togglePark(id: string) {
-  ensureHydrated();
+  const state = store.read();
   const exists = state.parked.includes(id);
   patchState({
     parked: exists ? state.parked.filter((value) => value !== id) : [...state.parked, id],
@@ -86,7 +38,7 @@ export function togglePark(id: string) {
   });
 }
 export function saveSearch(name: string, filters: Filters) {
-  ensureHydrated();
+  const state = store.read();
   patchState({
     saved: [
       ...state.saved,
@@ -101,7 +53,7 @@ export function saveSearch(name: string, filters: Filters) {
   });
 }
 export function markViewed(id: string) {
-  ensureHydrated();
+  const state = store.read();
   if (state.viewed[0] !== id)
     patchState({ viewed: [id, ...state.viewed.filter((value) => value !== id)].slice(0, 20) });
 }
@@ -110,7 +62,7 @@ export function saveMessageDraft(
   message: string,
   details?: ShowroomContactDetails,
 ): boolean {
-  ensureHydrated();
+  const state = store.read();
   const persisted = patchState({
     messageDrafts: { ...state.messageDrafts, [id]: message.trim().slice(0, 4000) },
     ...(details
@@ -129,23 +81,18 @@ export function saveMessageDraft(
   );
   return persisted;
 }
-export function notify(toast: string) {
-  // Transient feedback does not need a storage write.
-  ensureHydrated();
-  state = { ...state, toast };
-  emit();
-}
+export const notify = store.notify;
 
 /** Remember the active image across gallery and detail navigation. */
 export function setVehiclePhoto(id: string, index: number) {
   if (!Number.isInteger(index) || index < 0 || index >= 1000) return;
-  ensureHydrated();
+  const state = store.read();
   if (state.photoIndexes[id] === index) return;
   patchState({ photoIndexes: { ...state.photoIndexes, [id]: index } });
 }
 
 export function switchVehicleCategory(category: Filters['category']) {
-  ensureHydrated();
+  const state = store.read();
   const previous = state.filters;
   const snapshots = { ...state.categoryFilters, [previous.category]: previous };
   let next =
@@ -158,11 +105,11 @@ export function switchVehicleCategory(category: Filters['category']) {
       details: next.details.filter((value) => !value.startsWith('truckCategory=')),
     };
   patchState({ filters: normalizeFilters(next), categoryFilters: snapshots });
-  return state.filters;
+  return store.getSnapshot().filters;
 }
 
 export function removeParkedVehicle(id: string) {
-  ensureHydrated();
+  const state = store.read();
   patchState({
     parked: state.parked.filter((value) => value !== id),
     parkedAt: { ...state.parkedAt, [id]: state.parkedAt[id] || Date.now() },

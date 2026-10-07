@@ -22,3 +22,10 @@ reference/android/fonts/
 reference/web/live-final-20260928/
 reference/web/parity-followup-20260928/
 reference/web/pass3-visual/reference-review/
+
+# Generated build and QA output never belongs in the template source.
+.next-*/
+runtime/
+test-results/
+playwright-report/
+blob-report/

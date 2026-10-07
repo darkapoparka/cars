@@ -70,13 +70,15 @@ function strings(value: unknown): string[] {
       ].slice(0, 200)
     : [];
 }
+const reservedKeys = new Set(['__proto__', 'constructor', 'prototype']);
+function validRecordKey(key: string): boolean {
+  // Reject rather than truncate keys: truncation can merge unrelated records.
+  return key.length > 0 && key.length <= 100 && !reservedKeys.has(key);
+}
 function textRecord(value: unknown): Record<string, string> {
   return Object.fromEntries(
     Object.entries(record(value))
-      .filter(
-        ([key, text]) =>
-          !['__proto__', 'constructor', 'prototype'].includes(key) && typeof text === 'string',
-      )
+      .filter(([key, text]) => validRecordKey(key) && typeof text === 'string')
       .slice(0, 100)
       .map(([key, text]) => [key.slice(0, 100), String(text).slice(0, 4000)]),
   );
@@ -116,9 +118,7 @@ export function decodeState(raw: string | null): State {
     result.messageDrafts = textRecord(data.messageDrafts);
     result.showroomContactDetails = Object.fromEntries(
       Object.entries(record(data.showroomContactDetails))
-        .filter(
-          ([key]) => key.length > 0 && !['__proto__', 'constructor', 'prototype'].includes(key),
-        )
+        .filter(([key]) => validRecordKey(key))
         .slice(0, 100)
         .map(([key, value]) => [key.slice(0, 100), normalizeShowroomContactDetails(value)]),
     );
@@ -127,7 +127,10 @@ export function decodeState(raw: string | null): State {
       Object.entries(record(data.parkedAt))
         .filter(
           (entry): entry is [string, number] =>
-            typeof entry[1] === 'number' && Number.isFinite(entry[1]) && entry[1] >= 0,
+            validRecordKey(entry[0]) &&
+            typeof entry[1] === 'number' &&
+            Number.isFinite(entry[1]) &&
+            entry[1] >= 0,
         )
         .slice(0, 200),
     );
@@ -135,6 +138,7 @@ export function decodeState(raw: string | null): State {
       Object.entries(record(data.photoIndexes))
         .filter(
           (entry): entry is [string, number] =>
+            validRecordKey(entry[0]) &&
             typeof entry[1] === 'number' &&
             Number.isInteger(entry[1]) &&
             entry[1] >= 0 &&
@@ -143,6 +147,7 @@ export function decodeState(raw: string | null): State {
         .slice(0, 200),
     );
     if (Array.isArray(data.saved)) {
+      const savedIds = new Set<string>();
       result.saved = data.saved.slice(0, 100).flatMap((value) => {
         const item = record(value);
         if (
@@ -152,9 +157,12 @@ export function decodeState(raw: string | null): State {
           !item.name.trim()
         )
           return [];
+        const id = item.id.slice(0, 100);
+        if (savedIds.has(id)) return [];
+        savedIds.add(id);
         return [
           {
-            id: item.id.slice(0, 100),
+            id,
             name: item.name.trim().slice(0, 80),
             filters: normalizeFilters(item.filters),
             notifications: item.notifications !== false,

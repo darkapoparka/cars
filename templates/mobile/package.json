@@ -6,10 +6,10 @@
     "dev": "node scripts/review-preview.mjs dev",
     "build": "node scripts/review-preview.mjs build",
     "start": "node scripts/review-preview.mjs start",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --project tsconfig.check.json --noEmit",
     "lint": "eslint src",
     "check": "npm run lint && npm run typecheck && npm test && npm run build",
-    "test": "node scripts/prepare-domain-tests.mjs && node --test tests/domain.test.mjs tests/localization.test.mjs",
+    "test": "node scripts/test.mjs",
     "qa:browser": "node scripts/qa-final-release.mjs",
     "qa:showroom": "node scripts/qa-showroom.mjs",
     "qa:polish": "node scripts/qa-showroom-polish.mjs",
@@ -30,7 +30,8 @@
     "qa:make-model": "node scripts/qa-make-model.mjs",
     "qa:make-catalog": "node scripts/prepare-domain-tests.mjs && node scripts/qa-make-catalog.mjs",
     "qa:make-visual": "node scripts/qa-make-model-visual.mjs",
-    "qa:make-release": "node scripts/qa-make-model-release.mjs"
+    "qa:make-release": "node scripts/qa-make-model-release.mjs",
+    "qa:architecture": "node scripts/qa-architecture.mjs"
   },
   "dependencies": {
     "@stylexjs/stylex": "0.19.1",

@@ -11,6 +11,7 @@ const files = [
   'search',
   'assistant',
   'persistence',
+  'app-store',
   'model-groups',
   'make-selection',
   'make-picker-options',
