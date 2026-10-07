@@ -65,8 +65,16 @@ const s = stylex.create({
     filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },
   },
   darkPhone: {
-    backgroundColor: { default: null, '@media (max-width: 699px)': 'transparent' },
-    color: { default: null, '@media (max-width: 699px)': '#fff' },
+    backgroundColor: {
+      default: colors.background,
+      '@media (max-width: 699px)': 'transparent',
+      '@media (min-width: 1024px)': 'transparent',
+    },
+    color: {
+      default: colors.text,
+      '@media (max-width: 699px)': '#fff',
+      '@media (min-width: 1024px)': '#fff',
+    },
   },
   overHeroSticky: {
     position: { default: 'sticky', '@media (min-width: 1024px)': 'relative' },
@@ -147,7 +155,7 @@ export function Header({
         home && s.home,
         overHeroDesktop && s.overHero,
         overHeroDesktop && sticky && s.overHeroSticky,
-        darkOnPhone && s.darkPhone,
+        darkOnPhone && overHeroDesktop && s.darkPhone,
       )}
     >
       {(back || onBack) && (

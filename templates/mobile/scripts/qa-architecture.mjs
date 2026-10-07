@@ -215,6 +215,14 @@ async function run(name, engine) {
         const detail = await first.locator('a[href^="/vehicle/"]').first().getAttribute('href');
         await geometry(page, 'Cars ' + width + ' ' + locale);
         await visibleVehicleFacts(page, 'Cars ' + width + ' ' + locale);
+        const savedColor = await page
+          .getByRole('link', { name: t('Saved cars'), exact: true })
+          .evaluate((link) => getComputedStyle(link).color.match(/\d+/g).slice(0, 3).map(Number));
+        assert.ok(
+          savedColor.every((channel) => channel >= 200),
+          'Saved-car action must stay readable on the dark header',
+        );
+        check('Light Home header icons: ' + width + ' ' + locale);
         if (width === 1440) {
           const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
           await menu.click();
