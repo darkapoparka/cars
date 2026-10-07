@@ -1,24 +1,26 @@
 @media (min-width: 1024px) {
   .detail .content {
+    --listing-purchase-column-width: calc(var(--spacing) * 85);
+    --listing-column-gap: calc(var(--spacing) * 8);
     width: min(
       calc(100% - calc(var(--spacing) * 20)),
       var(--desktop-showroom-max)
     );
     max-width: none;
-    padding: calc(var(--spacing) * 10) 0 calc(var(--spacing) * 22.5);
+    padding: calc(var(--spacing) * 8) 0 calc(var(--spacing) * 22.5);
     margin-inline: auto;
   }
 
   .detail .columns {
-    grid-template-columns: minmax(0, 1fr) calc(var(--spacing) * 85);
-    gap: calc(var(--spacing) * 8);
+    grid-template-columns: minmax(0, 1fr) var(--listing-purchase-column-width);
+    gap: var(--listing-column-gap);
   }
 
   .detail :global([data-slot="listing-summary-header"]) {
     display: block;
     min-height: 0;
     padding: 0;
-    margin-bottom: calc(var(--spacing) * 6);
+    margin-bottom: calc(var(--spacing) * 4);
     background: transparent;
     border: 0;
     border-radius: 0;
@@ -55,6 +57,11 @@
     gap: calc(var(--spacing) * 4);
     align-items: center;
     justify-content: space-between;
+    width: calc(
+      100% +
+      var(--listing-purchase-column-width) +
+      var(--listing-column-gap)
+    );
     min-height: calc(var(--spacing) * 11);
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -289,7 +296,7 @@
     align-items: center;
     justify-content: space-between;
     min-width: 0;
-    padding: calc(var(--spacing) * 6);
+    padding: calc(var(--spacing) * 5) calc(var(--spacing) * 6);
     background: var(--desktop-surface);
     border-radius: calc(var(--spacing) * 4);
     box-shadow: var(--desktop-surface-shadow);
