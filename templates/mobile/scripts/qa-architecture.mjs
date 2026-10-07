@@ -52,6 +52,11 @@ async function run(name, engine) {
     });
     return context;
   }
+  async function closeContext(context) {
+    // Finish background route prefetches before deliberately destroying their pages.
+    for (const page of context.pages()) await page.waitForLoadState('networkidle');
+    await context.close();
+  }
   async function go(page, route, locale = 'en') {
     if (page.url().startsWith(base)) await page.waitForLoadState('networkidle');
     const response = await page.goto(base + route, { waitUntil: 'load', timeout: 45000 });
@@ -135,7 +140,7 @@ async function run(name, engine) {
         assert.equal(await page.evaluate(() => history.length), historyLength);
         check('Vehicle sections switch without adding Back-history entries');
       }
-      await ctx.close();
+      await closeContext(ctx);
     }
 
     const ctx = await context();
@@ -151,13 +156,21 @@ async function run(name, engine) {
     await cars(savedPage, 0);
     await save.click();
     await cars(savedPage, 1);
+    // A cross-tab update mounts a new Link and schedules its background prefetch.
+    // Do not interrupt that request with the test's deliberate hard reload.
+    await savedPage.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
+    await savedPage.waitForLoadState('networkidle');
     await savedPage.reload({ waitUntil: 'load' });
+    await savedPage.waitForLoadState('networkidle');
     await cars(savedPage, 1);
     await savedPage
       .locator('[data-showroom-vehicle]')
       .getByRole('button', { name: /^Remove .* from saved cars/ })
       .click();
     await save.waitFor();
+    await savedPage.waitForLoadState('networkidle');
     await savedPage.close();
     check('Saved cars synchronize both ways between tabs and survive reload');
 
@@ -187,8 +200,15 @@ async function run(name, engine) {
     await go(page, '/services');
     await page.getByRole('tab', { name: 'Import', exact: true }).click();
     await page.getByRole('button', { name: 'Start import enquiry', exact: true }).click();
+    await page.locator('dialog[open]').waitFor();
+    // Let the dialog's initial focus frames finish before synthetic keyboard input.
+    await page.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
     await page.getByLabel('Make', { exact: true }).fill('BMW');
     await page.getByLabel('Model', { exact: true }).fill('X3');
+    assert.equal(await page.getByLabel('Make', { exact: true }).inputValue(), 'BMW');
+    assert.equal(await page.getByLabel('Model', { exact: true }).inputValue(), 'X3');
     await page.getByRole('button', { name: 'Continue', exact: true }).click();
     await page.getByLabel('Maximum budget (€)', { exact: true }).fill('35000');
     await page.getByRole('button', { name: 'Continue', exact: true }).click();
@@ -216,7 +236,7 @@ async function run(name, engine) {
     await page.reload({ waitUntil: 'load' });
     assert.equal(await (await openContact(page)).inputValue(), draft);
     check('Contact drafts survive overlay dismissal and reload');
-    await ctx.close();
+    await closeContext(ctx);
 
     for (const [label, options, route, locale] of [
       ['Bulgarian locale', { locale: 'bg' }, '/', 'bg'],
@@ -238,10 +258,24 @@ async function run(name, engine) {
         await cars(page, 1);
         check('Saving remains usable for the current session without localStorage');
       }
-      await ctx.close();
+      await closeContext(ctx);
     }
     assert.deepEqual(posts, [], 'Application forms must not transmit demo enquiries');
     check('No application POST submissions');
+  } catch (error) {
+    // Keep one current failure image per engine, not an accumulating dated dump.
+    const page = browser
+      .contexts()
+      .flatMap((context) => context.pages())
+      .at(-1);
+    if (page) {
+      try {
+        await page.screenshot({ path: path.join(output, name + '-failure.png') });
+      } catch {
+        // The original assertion remains authoritative if the page already closed.
+      }
+    }
+    throw error;
   } finally {
     await browser.close();
   }
