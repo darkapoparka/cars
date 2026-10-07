@@ -90,7 +90,7 @@ async function run(name, engine) {
     const failures = await page.locator('[data-showroom-vehicle]').evaluateAll((cards) =>
       cards.flatMap((card) => {
         const facts = [...card.querySelectorAll('[data-vehicle-fact]')];
-        const missing = ['year', 'mileage', 'fuel', 'transmission'].filter(
+        const missing = ['year', 'mileage', 'fuel'].filter(
           (key) => !facts.some((fact) => fact.dataset.vehicleFact === key),
         );
         const unreadable = facts
@@ -104,13 +104,27 @@ async function run(name, engine) {
             );
           })
           .map((fact) => fact.dataset.vehicleFact);
-        return missing.length || unreadable.length
-          ? [{ vehicle: card.dataset.showroomVehicle, missing, unreadable }]
+        const rows = new Set(facts.map((fact) => Math.round(fact.getBoundingClientRect().top)));
+        const title = getComputedStyle(card.querySelector('h2'));
+        const price = getComputedStyle(card.querySelector('strong'));
+        const hierarchy =
+          parseFloat(price.fontSize) >= parseFloat(title.fontSize) + 2 &&
+          Number(price.fontWeight) >= Number(title.fontWeight) + 100;
+        return missing.length || unreadable.length || rows.size !== 1 || !hierarchy
+          ? [
+              {
+                vehicle: card.dataset.showroomVehicle,
+                missing,
+                unreadable,
+                rows: rows.size,
+                hierarchy,
+              },
+            ]
           : [];
       }),
     );
     assert.deepEqual(failures, [], label + ' must retain readable vehicle facts');
-    check(label + ': every card retains year, mileage, fuel and gearbox');
+    check(label + ': compact readable facts and distinct title/price hierarchy');
   }
   async function serviceSegment(page, label) {
     const bounds = await page.getByRole('tablist').evaluate((rail) => {
@@ -219,10 +233,26 @@ async function run(name, engine) {
           .getByRole('link', { name: t('Saved cars'), exact: true })
           .evaluate((link) => getComputedStyle(link).color.match(/\d+/g).slice(0, 3).map(Number));
         assert.ok(
-          savedColor.every((channel) => channel >= 200),
-          'Saved-car action must stay readable on the dark header',
+          savedColor.every((channel) => (width === 1440 ? channel >= 200 : channel <= 100)),
+          'Saved-car action must contrast with the Home header',
         );
-        check('Light Home header icons: ' + width + ' ' + locale);
+        const categoryFrames = await page
+          .getByRole('tablist', { name: t('Vehicle category'), exact: true })
+          .locator('img')
+          .evaluateAll((images) =>
+            images
+              .filter((image) => {
+                const css = getComputedStyle(image);
+                return (
+                  !['transparent', 'rgba(0, 0, 0, 0)'].includes(css.backgroundColor) ||
+                  parseFloat(css.borderRadius) !== 0 ||
+                  parseFloat(css.borderWidth) !== 0
+                );
+              })
+              .map((image) => image.src),
+          );
+        assert.deepEqual(categoryFrames, [], 'Original category artwork must remain unboxed');
+        check('Home header contrast and unboxed category artwork: ' + width + ' ' + locale);
         if (width === 1440) {
           const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
           await menu.click();

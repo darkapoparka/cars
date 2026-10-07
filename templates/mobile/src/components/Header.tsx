@@ -64,18 +64,6 @@ const s = stylex.create({
     // Fallback for personalized artwork without its own light presentation.
     filter: { default: 'none', '@media (min-width: 1024px)': 'brightness(0) invert(1)' },
   },
-  darkPhone: {
-    backgroundColor: {
-      default: colors.background,
-      '@media (max-width: 699px)': 'transparent',
-      '@media (min-width: 1024px)': 'transparent',
-    },
-    color: {
-      default: colors.text,
-      '@media (max-width: 699px)': '#fff',
-      '@media (min-width: 1024px)': '#fff',
-    },
-  },
   overHeroSticky: {
     position: { default: 'sticky', '@media (min-width: 1024px)': 'relative' },
     zIndex: { default: 30, '@media (min-width: 1024px)': 40 },
@@ -128,7 +116,6 @@ export function Header({
   sticky = true,
   showLanguageSwitcher = false,
   overHeroDesktop = false,
-  darkOnPhone = false,
   onBack,
   backIcon = 'back',
 }: {
@@ -139,7 +126,6 @@ export function Header({
   sticky?: boolean;
   showLanguageSwitcher?: boolean;
   overHeroDesktop?: boolean;
-  darkOnPhone?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
 }) {
@@ -155,7 +141,6 @@ export function Header({
         home && s.home,
         overHeroDesktop && s.overHero,
         overHeroDesktop && sticky && s.overHeroSticky,
-        darkOnPhone && overHeroDesktop && s.darkPhone,
       )}
     >
       {(back || onBack) && (

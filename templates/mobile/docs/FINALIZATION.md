@@ -6,14 +6,16 @@ Preserve the reviewed design, the Next.js App Router, React, TypeScript, StyleX,
 Node 22.x and the npm lockfile. Reopen engineering work for a demonstrated defect,
 a required dependency patch, or an explicit product request.
 
-The owner's 7 October visual refinement groups phone Home search and category
-tabs on graphite, removes the quick-filter strip/shadows, and retains the original
-logo, category artwork, listing photos and navigation. Desktop Services has equal
-44px glass segments with uniform insets and no width jump on selection. Showroom
-cards retain year, mileage, fuel and gearbox at every viewport using CSS wrapping;
-per-card resize observers and hidden-fact state are removed. The phone price has
-a clearer weight. Browser acceptance checks readable facts and segment geometry
-in BG/EN in addition to the existing interaction and storage gates.
+The owner's 7 October visual refinement keeps phone Home search and category
+tabs on white, removes the quick-filter strip/shadows and artwork backing boxes,
+and retains the original logo, category artwork, listing photos and navigation.
+Desktop Services has a 52px glass rail with equal 44px targets, 16px labels,
+uniform insets and no width jump on selection. Showroom cards use a quiet row of
+year, mileage and fuel; gearbox remains in vehicle details. CSS can wrap facts
+when text is enlarged, without per-card resize observers or hidden-fact state.
+The phone price is 20px bold, distinct from the 17px medium title. Browser
+acceptance checks compact readable facts, title/price hierarchy, unboxed artwork
+and segment geometry in BG/EN alongside the existing interaction and storage gates.
 
 ## Dealer configuration
 

@@ -9,7 +9,7 @@ const s = stylex.create({
     display: { default: 'contents', '@media (max-width: 699px)': 'block' },
     position: { default: 'static', '@media (max-width: 699px)': 'relative' },
     zIndex: { default: 'auto', '@media (max-width: 699px)': 26 },
-    backgroundColor: { default: colors.background, '@media (max-width: 699px)': '#1b1b21' },
+    backgroundColor: colors.background,
   },
 });
 

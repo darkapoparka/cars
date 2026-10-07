@@ -16,8 +16,8 @@ own filters; categories without sample stock show an honest empty state.
 On Cars and Services, the logo header and search scroll with the page. On Cars,
 the category tabs also scroll away, leaving only the quick-filter pills pinned
 above the continuous white results canvas on phones. The phone Home header groups
-the retained logo, search and vehicle categories on graphite; light image backing
-keeps the original category artwork readable. Applying
+the retained logo, search and vehicle categories on white, with the original
+unboxed category artwork. Applying
 filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
 area, including short and empty result lists. Services retains its pinned category
 tabs and quick-filter pills. Its phone category rail sits flush below search;
@@ -61,8 +61,8 @@ current inventory filters and sort when returning to Cars. Links
 remain native navigation, with arrow-key shortcuts, Home/End, Escape and focus
 return. Outside clicks, focus leaving the menu and the phone breakpoint dismiss it.
 Phones keep their floating dock, spacing and navigation behavior.
-Desktop Services uses three equal glass segments with 44px targets, uniform
-insets and a stable width across selection. The phone Services tabs retain their
+Desktop Services uses three equal glass segments in a compact 52px rail with
+16px labels, 44px targets, uniform insets and a stable width across selection. The phone Services tabs retain their
 underline composition.
 
 Desktop inventory uses compact, natural-width pills for Year, Mileage, Fuel,
@@ -157,11 +157,11 @@ Phones retain the full-screen editor, scrolling tabs, stacked settings and
 full-width apply action.
 Inventory and import cards share 16:10 photo frames, 16px corners and compact
 12px body padding. Inventory photos sit inside a 12px white frame with 10px
-inner corners. Showroom cards place the name above compact year, mileage, fuel
-and gearbox badges, with the price below. Facts wrap naturally across inventory,
-Saved and related cars instead of hiding the gearbox on narrow screens.
-Phone prices use 20px, weight 600 for a clearer hierarchy. Vehicle names can wrap.
-Power remains in the vehicle details.
+inner corners. Showroom cards place the name above a quiet row of year, mileage
+and fuel, with the price below. Specs stay compact across inventory, Saved and
+related cars at normal text size and can wrap when text is enlarged.
+Phone prices use 20px, weight 700 beneath 17px medium vehicle names.
+Power and gearbox remain in the vehicle details. Vehicle names can wrap.
 Photo save actions use the same outline-heart family
 as the header, with a 36px face inside a 48px button and an explicit pressed state.
 
