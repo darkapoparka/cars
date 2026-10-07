@@ -28,12 +28,18 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
     if (viewport.width >= 992) {
-      const bar = await form.boundingBox();
-      assert.equal(frame.width, bar.width, 'Every desktop selector follows the whole Home bar');
+      assert.equal(frame.width, name === 'make' || name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
       assert.equal(await menu.getAttribute('data-desktop-panel'), 'true');
       assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Every selector shows the pending result count');
       const tiles = await menu.locator('.dn-desktop-choice').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().width));
-      assert(tiles.every(width => width <= bar.width / 2), 'All and filtered choices retain compact tiles');
+      assert(tiles.every(width => width <= frame.width / 2), 'All and filtered choices retain compact tiles');
+      if (await menu.getByRole('searchbox').count()) {
+        const heading = await menu.getByRole('heading').boundingBox();
+        const search = await menu.getByRole('searchbox').boundingBox();
+        const close = await menu.locator('.dn-picker-close').boundingBox();
+        assert(Math.abs(search.y + search.height / 2 - heading.y - heading.height / 2) < 1, 'Desktop search shares the title row');
+        assert(Math.abs(search.y + search.height / 2 - close.y - close.height / 2) < 1, 'Search and close are vertically aligned');
+      }
     }
   };
   const dismiss = async name => {

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { MediaQuery } from 'svelte/reactivity';
+  import type { Snippet } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
   import { currencySymbol } from '$lib/locale/core';
   import { getI18n } from '$lib/locale/context';
@@ -14,11 +15,12 @@
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
 
-  let { field, draft = $bindable(), desktopChoices = false, widePanel = false, onChoose, contentElement = $bindable() }: {
+  let { field, draft = $bindable(), desktopChoices = false, widePanel = false, header, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
     draft: ListingDraft;
     desktopChoices?: boolean;
     widePanel?: boolean;
+    header?: Snippet<[Snippet | undefined]>;
     onChoose?: () => void;
     contentElement?: HTMLDivElement;
   } = $props();
@@ -79,15 +81,18 @@
   {#if mobile.current}<MobileActionIcon {name} {size} />{:else}<Icon name={name === 'close' ? 'x' : 'search'} {size} />{/if}
 {/snippet}
 
-<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel}>
-  {#if searchable}
-    <div class="search-wrap">
-      <div class="search-field dn-mobile-search-field">
+{#snippet searchControl()}
+  <div class="search-field dn-mobile-search-field">
         {@render actionIcon('search')}
         <input {@attach i18n.validation} {@attach attachSearch} type="search" bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
         {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t('m_c8191190a026')} onclick={() => { search = ''; searchInput.focus(); }}>{@render actionIcon('close')}</button>{/if}
-      </div>
-    </div>
+  </div>
+{/snippet}
+
+<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel}>
+  {#if header}{@render header(widePanel && searchable ? searchControl : undefined)}{/if}
+  {#if searchable && !(header && widePanel)}
+    <div class="search-wrap">{@render searchControl()}</div>
   {/if}
   <div class="content" {@attach attachContent}>
     {#if range}
@@ -96,8 +101,8 @@
         <label>{templateMessage(i18n, 'To{p0}', { p0: field === 'price' ? ' (' + currencySymbol(i18n.locale) + ')' : '' })}<input {@attach i18n.validationFor(field)} type="number" inputmode="numeric" name={`${field}_max`} value={draft[maximumKey]} oninput={event => draft[maximumKey] = event.currentTarget.value} min={field === 'year' ? 1900 : 0} max={field === 'year' ? new Date().getFullYear() + 1 : undefined} step="1" placeholder={i18n.t('m_585b0741c5fb')} aria-invalid={invalid || undefined} /></label>
       </div>
       {#if invalid}<p role="alert">{i18n.t('m_8418439e87ac')}</p>{/if}
-      {#if mobile.current}
-        <div class="presets">
+      {#if mobile.current || widePanel}
+        <div class="presets" class:price-presets={field === 'price'}>
           {#each (field === 'price' ? budgetPresets : yearPresets) as value (value)}
             <button type="button" aria-pressed={(field === 'price' ? draft.priceMax : draft.yearMin) === value} onclick={() => choosePreset(value)}>{field === 'price' ? i18n.t('inventory.search.upTo', { value: new Intl.NumberFormat(i18n.locale).format(Number(value)), currency: currencySymbol(i18n.locale) }) : i18n.t('inventory.search.fromYear', { year: value })}</button>
           {/each}
@@ -152,9 +157,16 @@
   .desktop-choices fieldset { gap: 0; }
   .desktop-choices .search-field { border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); }
   @media (min-width: 992px) {
-    .wide-panel .search-wrap { width: min(100%, 520px); margin-inline: auto; }
-    .wide-panel fieldset { grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: var(--dn-space-2); }
+    .wide-panel .content { flex: 1; }
+    .wide-panel fieldset { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
     .wide-panel .range { width: min(100%, 488px); margin-inline: auto; }
+    .wide-panel .presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
+    .wide-panel .price-presets { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .wide-panel .presets button { min-width: 0; min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); color: var(--dn-ink); font: var(--dn-control-font); text-align: left; cursor: pointer; }
+    .wide-panel .price-presets button { padding-inline: var(--dn-space-2); }
+    .wide-panel .presets button:hover { background: var(--dn-surface-hover); }
+    .wide-panel .presets button[aria-pressed=true] { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
+    .wide-panel .presets button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   }
   .choice { display: flex; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-field-font); cursor: pointer; }
   .choice[hidden] { display: none; }

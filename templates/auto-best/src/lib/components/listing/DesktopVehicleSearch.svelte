@@ -25,7 +25,6 @@
   const yearPresets = listingFilterOptions.years.filter(Boolean).slice(-4);
   let draft = $state<ListingDraft>(emptyListingDraft());
   const field = $derived(initialFacet);
-  const formAnchor = $derived(returnFocus?.closest<HTMLElement>('.dn-discovery') ?? returnFocus);
   let search = $state('');
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
@@ -33,6 +32,7 @@
   let restoreFocusOnClose = true;
   const matchesSearch = $derived(listingSuggestionMatcher(search, i18n.locale));
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
+  const searchable = $derived(field === 'make' || field === 'model' || field === 'version' || field === 'equipment');
   const title = $derived(field ? listingFacetTitle(field, i18n.locale) : i18n.t('m_49c266baaaa7'));
   // Suggestion search never changes the applied vehicle keyword.
   const effectiveFilters = $derived(listingFiltersFromDraft(draft));
@@ -130,6 +130,14 @@
   }
 </script>
 
+{#snippet searchControl()}
+  <div class="dn-search-query">
+    <Icon name="search" size={18} />
+    <input class="dn-search-input" type="text" role="searchbox" bind:this={searchInput} bind:value={search} aria-label={title} placeholder={i18n.t('inventory.search.within')} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
+    {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
+  </div>
+{/snippet}
+
 {#snippet editor()}
   {#if range}
     <div class="dn-search-results dn-search-range">
@@ -174,7 +182,7 @@
             </span>
           </label>
         </div>
-        <div class="dn-search-presets">
+        <div class="dn-search-presets" class:dn-search-presets--price={field === 'price'}>
           {#each (field === 'price' ? pricePresets : yearPresets) as value (value)}
             <button type="button" data-active={(field === 'price' ? draft.priceMax : draft.yearMin) === value} aria-pressed={(field === 'price' ? draft.priceMax : draft.yearMin) === value} onclick={() => { if (field === 'price') draft.priceMax = value; else draft.yearMin = value; }}>{field === 'price' ? i18n.t('inventory.search.upTo', { value: new Intl.NumberFormat(i18n.locale).format(Number(value)), currency: currencySymbol(i18n.locale) }) : i18n.t('inventory.search.fromYear', { year: value })}</button>
           {/each}
@@ -184,13 +192,6 @@
     </div>
   {:else if field}
     <div class="dn-facet-options">
-      {#if field === 'make' || field === 'model' || field === 'version' || field === 'equipment'}
-        <div class="dn-search-query">
-          <Icon name="search" size={18} />
-          <input class="dn-search-input" type="text" role="searchbox" bind:this={searchInput} bind:value={search} aria-label={title} placeholder={i18n.t('inventory.search.within')} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
-          {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
-        </div>
-      {/if}
       <div class="dn-search-results dn-search-results--choices" role="group" aria-label={title}>
         {#if field !== 'equipment' && !search}
           <DesktopFilterChoice value="" label={i18n.t(field === 'make' ? 'inventory.search.allMakes' : field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069')}
@@ -211,7 +212,7 @@
 
 {#snippet filterForm()}
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={cleanForm}>
-    <FilterPopoverHeader id="dn-facet-title" {title} />
+    <FilterPopoverHeader id="dn-facet-title" {title} search={searchable ? searchControl : undefined} />
     <div class="dn-filter-workspace">
       <section class="dn-filter-panel" aria-label={title}>{@render editor()}</section>
     </div>
@@ -227,7 +228,7 @@
   <Popover.Root bind:open>
     <Popover.Portal to=".dn-app-shell">
       <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
-        data-desktop-panel="true" role="dialog" aria-labelledby="dn-facet-title" customAnchor={formAnchor} side="bottom" align="start" sideOffset={8}
+        data-desktop-panel="true" data-wide-choices={searchable} role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side="bottom" align={range ? 'end' : 'start'} sideOffset={8}
         collisionPadding={16} strategy="fixed" hideWhenDetached
         onOpenAutoFocus={event => event.preventDefault()}
         onInteractOutside={() => restoreFocusOnClose = false} onCloseAutoFocus={returnToPage}>
@@ -296,13 +297,16 @@
   input[type='number']:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .dn-search-apply:focus-visible { outline-color: var(--dn-white); }
   @media (min-width: 992px) {
-    :global(.dn-search-popover[data-desktop-panel='true']) { width: min(var(--bits-floating-anchor-width, 880px), calc(100vw - 32px)); }
-    :global(.dn-search-popover[data-desktop-panel='true']) .dn-search-query { width: min(100%, 488px); margin-inline: auto; }
-    .dn-search-results--choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); gap: var(--dn-space-2); }
+    :global(.dn-search-popover[data-desktop-panel='true']) { width: min(480px, calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-desktop-panel='true'][data-wide-choices='true']) { width: min(640px, calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-desktop-panel='true']) .dn-search-query { width: 100%; margin: 0; }
+    .dn-search-results--choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
     .dn-search-empty { grid-column: 1 / -1; }
     .dn-search-range-fields, .dn-search-range > label { width: min(100%, 488px); margin-inline: auto; }
-    .dn-search-presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
-    .dn-search-presets button { border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); text-align: left; }
+    .dn-search-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .dn-search-presets--price { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .dn-search-presets button { padding-inline: var(--dn-space-3); border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); text-align: left; }
+    .dn-search-presets--price button { padding-inline: var(--dn-space-2); }
     .dn-search-presets button[data-active='true'] { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
   }
   @media (forced-colors: active) {

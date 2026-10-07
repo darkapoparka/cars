@@ -40,18 +40,25 @@ try {
    const choiceFrame=await dialog.boundingBox();
    const choiceFooter=await dialog.locator('.dn-search-footer').boundingBox();
    const anchor=await shortcut.boundingBox();
-   assert.equal(choiceFrame.width,(await page.locator('.dn-discovery').boundingBox()).width);
-   assert.equal(await dialog.getAttribute('data-desktop-panel'),'true','Every inventory shortcut uses the wider panel');
+   assert.equal(choiceFrame.width,field === 'make' || field === 'model' ? 640 : 480,'Inventory menus use a width suited to their content');
+   assert.equal(await dialog.getAttribute('data-desktop-panel'),'true');
    const tiles=await dialog.locator('.dn-desktop-choice').evaluateAll(nodes=>nodes.map(node=>node.getBoundingClientRect().width));
    assert(tiles.every(width=>width<=choiceFrame.width/2),'All and filtered choices retain compact tiles');
    assert(choiceFrame.x>=15 && choiceFrame.y>=15 && choiceFrame.y+choiceFrame.height<=height-15);
    assert(choiceFrame.x<=anchor.x+anchor.width && choiceFrame.x+choiceFrame.width>=anchor.x,'The menu stays attached to its shortcut');
-   const placementAnchor=await page.locator('.dn-discovery').boundingBox();
+   const placementAnchor=anchor;
    const anchorGap=Math.min(Math.abs(choiceFrame.y-placementAnchor.y-placementAnchor.height),Math.abs(placementAnchor.y-choiceFrame.y-choiceFrame.height));
    assert(anchorGap<=10,'A direct selector opens beside its control, including collision flips');
    assert.equal(await page.locator('.dn-search-overlay').count(),0,'Quick menus leave the results visible');
    assert.notEqual(await page.evaluate(()=>getComputedStyle(document.body).position),'fixed','A shortcut does not lock page scrolling');
    assert(choiceFooter.y+choiceFooter.height<=choiceFrame.y+choiceFrame.height);
+   if (await dialog.getByRole('searchbox').count()) {
+    const heading=await dialog.getByRole('heading').boundingBox();
+    const search=await dialog.getByRole('searchbox').boundingBox();
+    const close=await dialog.locator('.dn-picker-close').boundingBox();
+    assert(Math.abs(search.y+search.height/2-heading.y-heading.height/2)<1,'Desktop search shares the title row');
+    assert(Math.abs(search.y+search.height/2-close.y-close.height/2)<1,'Search and close are vertically aligned');
+   }
    if (width===1440) await page.screenshot({path:output+'/shortcut-'+locale+'-'+field+'-'+width+'.jpg',type:'jpeg',quality:90});
    await page.keyboard.press('Escape'); await dialog.waitFor({state:'hidden'});
    assert(await shortcut.evaluate(el=>el===document.activeElement),'Escape returns focus to the exact shortcut');
