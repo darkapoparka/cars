@@ -51,7 +51,7 @@ Inner image heroes share centered titles, balanced photo shading and responsive 
 
 Contact uses four matching generated portraits as circular avatars, centered location titles and country labels. Its example locations and fictional portraits are disclosed together; dealer copies should supply their own locations, contacts and permitted staff photos. Location titles jump to the enquiry form, and email/map links match the displayed contacts. See [Contact artwork and comparison](../../docs/karento/CONTACT-AVATAR-ARTWORK.md).
 
-The enquiry form and location share one white, bordered panel on a soft background, matching the site's other contained sections. They sit side by side on desktop and stack on phones. The address and map have their own smaller white card with a subtle border inside the panel, with reduced padding on phones. Labels are connected to their fields, keyboard focus is visible, and enquiry shortcuts leave the panel's top clear of the fixed header.
+The enquiry form sits in its own white, bordered card beside a full-height map on the soft section background. The map fills the right column with matching rounded corners, without a heading or an inset card; phones stack the form above a 320px map. The sample address and Get directions link sit beneath the form, and both the link and map query use that address. Labels are connected to their fields, keyboard focus is visible, and enquiry shortcuts leave the form card's top clear of the fixed header.
 
 The approved catalogue filter row/drawer and conversion of rental panels to vehicle-sale enquiry panels remain follow-up functional adaptations. This pass organizes the requested pages and preserves their layout and existing interactions.
 

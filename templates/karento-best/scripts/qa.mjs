@@ -37,7 +37,10 @@ async function verify(route, sourceKey) {
   let expectedImages = original('main img').length;
   if (sourceKey === 'login') expectedImages -= original('.form-login img').length;
   if (sourceKey === 'pricing') expectedImages -= original('.section-pricing-1 img[src$="/pricing-1/check-primary.svg"]').length;
-  if (sourceKey === 'contact') expectedImages += 4;
+  if (sourceKey === 'contact') {
+    expectedImages += 4;
+    expectedHeadings -= 1; // The map fills its column without the stock location heading.
+  }
   if (sourceKey === 'index-3') {
     const previous = original('.section-cta-6').add(original('.box-author-testimonials').closest('section'));
     const replacements = home2('.section-cta-4').add(home2('.block-testimonials').closest('section'));

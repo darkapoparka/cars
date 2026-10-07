@@ -279,11 +279,22 @@ function polishContactEnquiry($) {
   section.removeClass('background-body').addClass('karento-contact-enquiry')
     .attr('aria-labelledby', 'contact-enquiry');
   const row = section.children('.container').children('.row');
-  row.wrap('<div class="karento-enquiry-panel"></div>');
+  row.addClass('karento-contact-layout');
   row.children('.col-lg-6').removeClass('mb-30');
+  const formColumn = row.children('.col-lg-6').has('.form-contact');
+  formColumn.wrapInner('<div class="karento-enquiry-panel"></div>');
   const map = row.find('.ps-lg-5').removeClass('ps-lg-5').addClass('karento-contact-map');
-  map.children('p').removeClass('mb-30');
-  map.find('iframe').attr('title', 'Illustrative dealership location');
+  const address = map.children('p').removeClass('mb-30').addClass('karento-contact-address');
+  const locationQuery = encodeURIComponent(address.text().trim());
+  const location = $('<div class="karento-contact-location"></div>').append(address);
+  location.append($('<a class="karento-contact-directions">Get directions <span aria-hidden="true">↗</span></a>')
+    .attr({ href: `https://www.google.com/maps/search/?api=1&query=${locationQuery}`, target: '_blank', rel: 'noopener noreferrer' }));
+  formColumn.find('.karento-enquiry-panel').append(location);
+  map.children('h4').remove();
+  map.find('iframe').removeClass('h-520 rounded-3').attr({
+    title: 'Illustrative dealership location',
+    src: `https://maps.google.com/maps?q=${locationQuery}&z=13&output=embed`
+  });
   const fields = [
     ['input[placeholder="First Name"]', 'contact-first-name', 'First name'],
     ['input[placeholder="Last Name"]', 'contact-last-name', 'Last name'],

@@ -65,20 +65,25 @@
   border-radius: 2px;
 }
 
-/* Group the enquiry and location in the same quiet card as other site panels. */
+/* A contained form sits beside a full-height map, without nested cards. */
 .box-contact-form.karento-contact-enquiry {
   padding: 64px 0;
   background: var(--karento-accent-soft);
 }
+.karento-contact-layout {
+  --bs-gutter-x: 24px;
+  row-gap: 24px;
+}
+.karento-contact-layout > .col-lg-6 {
+  display: flex;
+  min-width: 0;
+}
 .karento-enquiry-panel {
-  padding: 40px;
+  width: 100%;
+  padding: 32px;
   border: 1px solid var(--bs-border-color);
   border-radius: 16px;
   background: var(--bs-background-card);
-}
-.karento-enquiry-panel > .row {
-  --bs-gutter-x: 64px;
-  row-gap: 40px;
 }
 .karento-enquiry-panel #contact-enquiry {
   font-size: 36px;
@@ -86,30 +91,38 @@
   scroll-margin-top: 144px;
 }
 .karento-contact-map {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  position: relative;
+  width: 100%;
   min-width: 0;
-  padding: 24px;
-  border: 1px solid var(--bs-border-color);
-  border-radius: 12px;
-  background: var(--bs-background-card);
-}
-.karento-contact-map > h4 {
-  margin-bottom: 8px;
-  font-size: 24px;
-  line-height: 32px;
-}
-.karento-contact-map > p {
-  margin: 0 0 24px;
-  font-size: 14px;
-  line-height: 22px;
+  min-height: 520px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--karento-accent-soft);
 }
 .karento-contact-map iframe {
-  flex: 1;
-  height: auto;
-  min-height: 360px;
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
   max-height: none;
+}
+.karento-contact-location {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--bs-border-color);
+}
+.karento-contact-location > p { margin: 0; font-size: 14px; line-height: 22px; }
+.karento-contact-directions {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 /* Override the reference's important input[type=text].form-control focus reset. */
 .box-contact-form.karento-contact-enquiry .karento-enquiry-panel :is(input, textarea, button, a):focus-visible {
@@ -117,20 +130,13 @@
   outline-offset: 3px;
 }
 @media (max-width: 991px) {
-  .karento-enquiry-panel { padding: 32px; }
-  .karento-enquiry-panel > .row { --bs-gutter-x: 24px; }
-  .karento-contact-map { height: auto; }
-  .karento-contact-map iframe {
-    flex: none;
-    height: 320px;
-    min-height: 0;
-  }
+  .karento-contact-map { min-height: 360px; }
 }
 @media (max-width: 640px) {
   .box-contact-form.karento-contact-enquiry { padding: 40px 0; }
   .karento-enquiry-panel { padding: 24px; }
   .karento-enquiry-panel #contact-enquiry { font-size: 28px; }
-  .karento-contact-map { padding: 12px; }
+  .karento-contact-map { min-height: 320px; }
 }
 /* The reference's important anchor hover reads this token, even on white links. */
 :where(.footer, .background-1000, .bg-dark),
