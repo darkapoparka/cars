@@ -101,14 +101,14 @@
       </Popover.Trigger>
       <Popover.Portal to={portalTarget}>
         <Popover.Content bind:ref={pickers[field]} class="dn-home-browse-picker" role="dialog" aria-labelledby={`${id}-${field}-title`}
-          data-model-panel={field === 'model' && desktop.current} customAnchor={field === 'model' && desktop.current ? browseAnchor : undefined}
+          data-desktop-panel={desktop.current} customAnchor={desktop.current ? browseAnchor : undefined}
           sideOffset={8} align="start" collisionPadding={16}
           onOpenAutoFocus={event => { event.preventDefault(); void tick().then(() => { if (openField === field) focusPopover(pickers[field], pickers[field]?.querySelector<HTMLInputElement>('input[type=search], input[type=number], input:checked') ?? null, keyboardOpen); }); }}
           onCloseAutoFocus={event => restoreFocus(event, field)}
           onkeydown={event => { if (event.key === 'Enter' && event.target instanceof HTMLInputElement && event.target.type === 'number') { event.preventDefault(); save(); } }}>
           <FilterPopoverHeader id={`${id}-${field}-title`} title={title(field)} />
           <div class="dn-home-browse-picker__editor" class:dn-home-browse-picker__editor--price={field === 'price'}>
-            <ListingFacetEditor {field} bind:draft={pending} desktopChoices modelPanel={field === 'model' && desktop.current} />
+            <ListingFacetEditor {field} bind:draft={pending} desktopChoices widePanel={desktop.current} />
             {#if field === 'price'}
               <div class="dn-home-browse-picker__presets">
                 {#each budgetPresets as value (value)}
@@ -119,7 +119,7 @@
           </div>
           <footer class="dn-home-browse-picker__footer">
             <button class="dn-home-browse-picker__clear" type="button" onclick={() => clear(field)}>{i18n.t('action.clearShort')}</button>
-            <button class="dn-home-browse-picker__save" type="button" disabled={invalidRange} onclick={save} aria-live={field === 'model' && desktop.current ? 'polite' : undefined}>{i18n.t('m_1509f561f241')}{#if field === 'model' && desktop.current} <span class="dn-home-browse-picker__count">· {vehicleCount(i18n.locale, matching)}</span>{/if}</button>
+            <button class="dn-home-browse-picker__save" type="button" disabled={invalidRange} onclick={save} aria-live={desktop.current ? 'polite' : undefined}>{i18n.t('m_1509f561f241')}{#if desktop.current} <span class="dn-home-browse-picker__count">· {vehicleCount(i18n.locale, matching)}</span>{/if}</button>
           </footer>
         </Popover.Content>
       </Popover.Portal>
@@ -158,7 +158,10 @@
   .dn-home-browse-picker__save:enabled:hover { background: var(--dn-ink-hover); }
   .dn-home-browse-picker__footer button:focus-visible, .dn-home-browse-picker__presets button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: 2px; }
   @media (min-width: 992px) {
-    :global(.dn-home-browse-picker[data-model-panel='true']) { width: min(var(--bits-floating-anchor-width, 880px), calc(100vw - 32px)); }
+    :global(.dn-home-browse-picker[data-desktop-panel='true']) { width: min(var(--bits-floating-anchor-width, 880px), calc(100vw - 32px)); }
+    .dn-home-browse-picker__presets { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr)); }
+    .dn-home-browse-picker__presets button { border: 0; border-radius: var(--dn-radius-control); background: var(--dn-surface-subtle); text-align: left; }
+    .dn-home-browse-picker__presets button[aria-pressed=true] { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
     .dn-home-browse-picker__save:has(.dn-home-browse-picker__count) { display: flex; align-items: center; gap: var(--dn-space-2); }
     .dn-home-browse-picker__count { white-space: nowrap; }
   }

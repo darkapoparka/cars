@@ -1,6 +1,6 @@
 # Testing reference
 
-The [desktop Model checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover full-form panel anchoring, pending inventory counts and preserved mobile journeys.
+The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's full-form anchoring, compact choices, pending counts and preserved mobile journeys.
 
 Tests cover different layers: source/type checks, domain logic, runtime media, build output and real browser behavior. This document explains the available commands; it is not a claim that every suite currently passes.
 

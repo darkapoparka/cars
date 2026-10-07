@@ -27,11 +27,13 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
     const frame = await menu.boundingBox();
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
-    if (name === 'model' && viewport.width >= 992) {
+    if (viewport.width >= 992) {
       const bar = await form.boundingBox();
-      assert.equal(frame.width, bar.width, 'The desktop model panel follows the whole Home bar');
-      assert.equal(await menu.getAttribute('data-model-panel'), 'true');
-      assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Model choices show the pending result count');
+      assert.equal(frame.width, bar.width, 'Every desktop selector follows the whole Home bar');
+      assert.equal(await menu.getAttribute('data-desktop-panel'), 'true');
+      assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Every selector shows the pending result count');
+      const tiles = await menu.locator('.dn-desktop-choice').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().width));
+      assert(tiles.every(width => width <= bar.width / 2), 'All and filtered choices retain compact tiles');
     }
   };
   const dismiss = async name => {
@@ -108,7 +110,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   await open('price');
   await minimum.fill('90000');
   await maximum.fill('80000');
-  assert.equal(await menu.getByRole('button', { name: locale === 'bg' ? 'Запазете' : 'Save', exact: true }).isEnabled(), false);
+  assert.equal(await menu.locator('.dn-home-browse-picker__save').isEnabled(), false);
   assert.equal(await menu.getByRole('alert').count(), 1, 'An invalid range is explained before it can be saved');
   await clear();
   await maximum.fill('80000');

@@ -5,7 +5,7 @@
   } = $props();
 </script>
 
-<label class="dn-desktop-choice" class:dn-desktop-choice--tile={tile} class:dn-desktop-choice--all={tile && !value}>
+<label class="dn-desktop-choice" class:dn-desktop-choice--tile={tile}>
   <input type={multiple ? 'checkbox' : 'radio'} {name} {value} {checked} onchange={() => onchange(value)}
     onclick={() => { if (!multiple && checked) onchange(value); }}
     onkeydown={event => { if (event.key === 'Enter' || !multiple && event.key === ' ') { event.preventDefault(); onchange(value); } }} />
@@ -29,8 +29,7 @@
     .dn-desktop-choice--tile { min-width: 0; background: var(--dn-surface-subtle); }
     .dn-desktop-choice--tile:hover { background: var(--dn-surface-hover); }
     .dn-desktop-choice--tile:has(input:checked) { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
-    .dn-desktop-choice--tile .dn-desktop-choice-mark { border-radius: var(--dn-space-1); }
-    .dn-desktop-choice--all { grid-column: 1 / -1; }
+    .dn-desktop-choice--tile .dn-desktop-choice-mark[data-multiple='true'] { border-radius: var(--dn-space-1); }
   }
   @media (forced-colors: active) {
     input { position: static; flex: 0 0 var(--dn-space-5); width: var(--dn-space-5); height: var(--dn-space-5); opacity: 1; accent-color: auto; }
