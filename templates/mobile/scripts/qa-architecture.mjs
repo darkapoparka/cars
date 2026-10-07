@@ -86,6 +86,65 @@ async function run(name, engine) {
       expected,
     );
   }
+  async function visibleVehicleFacts(page, label) {
+    const failures = await page.locator('[data-showroom-vehicle]').evaluateAll((cards) =>
+      cards.flatMap((card) => {
+        const facts = [...card.querySelectorAll('[data-vehicle-fact]')];
+        const missing = ['year', 'mileage', 'fuel', 'transmission'].filter(
+          (key) => !facts.some((fact) => fact.dataset.vehicleFact === key),
+        );
+        const unreadable = facts
+          .filter((fact) => {
+            const css = getComputedStyle(fact);
+            return (
+              css.display === 'none' ||
+              css.visibility === 'hidden' ||
+              fact.clientWidth === 0 ||
+              fact.scrollWidth > fact.clientWidth + 1
+            );
+          })
+          .map((fact) => fact.dataset.vehicleFact);
+        return missing.length || unreadable.length
+          ? [{ vehicle: card.dataset.showroomVehicle, missing, unreadable }]
+          : [];
+      }),
+    );
+    assert.deepEqual(failures, [], label + ' must retain readable vehicle facts');
+    check(label + ': every card retains year, mileage, fuel and gearbox');
+  }
+  async function serviceSegment(page, label) {
+    const bounds = await page.getByRole('tablist').evaluate((rail) => {
+      const outer = rail.getBoundingClientRect();
+      return [...rail.querySelectorAll('[role="tab"]')].map((tab) => {
+        const rect = tab.getBoundingClientRect();
+        return {
+          width: rect.width,
+          height: rect.height,
+          top: rect.top - outer.top,
+          bottom: outer.bottom - rect.bottom,
+          left: rect.left - outer.left,
+          right: outer.right - rect.right,
+        };
+      });
+    });
+    assert.ok(
+      Math.max(...bounds.map((b) => b.width)) - Math.min(...bounds.map((b) => b.width)) < 1,
+      label + ' service segments must have equal widths',
+    );
+    assert.ok(
+      bounds.every(
+        (b) => b.height >= 44 && b.top >= 0 && b.bottom >= 0 && Math.abs(b.top - b.bottom) < 1,
+      ),
+      label + ' service segments must be centered with comfortable hit targets',
+    );
+    assert.ok(
+      Math.abs(bounds[0].left - bounds[0].top) < 1 &&
+        Math.abs(bounds.at(-1).right - bounds.at(-1).top) < 1,
+      label + ' service segments must retain uniform insets at both rounded ends',
+    );
+    check(label + ': service segments stay equal and centered');
+    return bounds.reduce((sum, bound) => sum + bound.width, 0);
+  }
   async function geometry(page, label) {
     const failures = await page.locator('img').evaluateAll(async (images) => {
       for (const image of images) image.loading = 'eager';
@@ -115,10 +174,16 @@ async function run(name, engine) {
       });
       await writeFile(
         path.join(output, filename + '.json'),
-        JSON.stringify(await page.locator('img').evaluateAll((images) => images.map((image) => {
-          const { x, y, width, height } = image.getBoundingClientRect();
-          return { x, y, width, height, src: image.currentSrc };
-        })), null, 2) + '\n',
+        JSON.stringify(
+          await page.locator('img').evaluateAll((images) =>
+            images.map((image) => {
+              const { x, y, width, height } = image.getBoundingClientRect();
+              return { x, y, width, height, src: image.currentSrc };
+            }),
+          ),
+          null,
+          2,
+        ) + '\n',
       );
     }
   }
@@ -149,6 +214,7 @@ async function run(name, engine) {
         await first.waitFor();
         const detail = await first.locator('a[href^="/vehicle/"]').first().getAttribute('href');
         await geometry(page, 'Cars ' + width + ' ' + locale);
+        await visibleVehicleFacts(page, 'Cars ' + width + ' ' + locale);
         if (width === 1440) {
           const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
           await menu.click();
@@ -159,13 +225,16 @@ async function run(name, engine) {
           await navigation.waitFor();
           const menuLinks = navigation.getByRole('link');
           assert.deepEqual(
-            await menuLinks.evaluateAll((links) => links.map((link) => new URL(link.href).pathname)),
+            await menuLinks.evaluateAll((links) =>
+              links.map((link) => new URL(link.href).pathname),
+            ),
             ['/', '/services', '/contact'],
           );
           // Safari does not focus every button after a pointer click. Escape
           // must also dismiss a pointer-opened menu while focus is elsewhere.
           await page.evaluate(
-            () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+            () =>
+              new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
           );
           await page.keyboard.press('Escape');
           await navigation.waitFor({ state: 'hidden' });
@@ -173,15 +242,24 @@ async function run(name, engine) {
           check('Desktop menu destinations, Escape and focus return: ' + locale);
           await menu.press('ArrowDown');
           await menuLinks.first().waitFor();
-          await page.waitForFunction(
-            () => Boolean(document.activeElement?.closest('[data-desktop-navigation]')),
+          await page.waitForFunction(() =>
+            Boolean(document.activeElement?.closest('[data-desktop-navigation]')),
           );
           await page.keyboard.press('End');
-          assert.equal(await menuLinks.last().evaluate((el) => el === document.activeElement), true);
+          assert.equal(
+            await menuLinks.last().evaluate((el) => el === document.activeElement),
+            true,
+          );
           await page.keyboard.press('Home');
-          assert.equal(await menuLinks.first().evaluate((el) => el === document.activeElement), true);
+          assert.equal(
+            await menuLinks.first().evaluate((el) => el === document.activeElement),
+            true,
+          );
           await page.keyboard.press('ArrowUp');
-          assert.equal(await menuLinks.last().evaluate((el) => el === document.activeElement), true);
+          assert.equal(
+            await menuLinks.last().evaluate((el) => el === document.activeElement),
+            true,
+          );
           await page.keyboard.press('Escape');
           await navigation.waitFor({ state: 'hidden' });
           assert.equal(await menu.evaluate((el) => el === document.activeElement), true);
@@ -202,9 +280,18 @@ async function run(name, engine) {
           await go(page, route, locale);
           await geometry(page, label + ' ' + width + ' ' + locale);
           if (label === 'Services') {
+            const segmentWidth =
+              width === 1440 ? await serviceSegment(page, 'Services ' + locale) : null;
             for (const tab of ['Import', 'Sell', 'All']) {
               await page.getByRole('tab', { name: t(tab), exact: true }).click();
               await geometry(page, 'Services ' + tab + ' ' + width + ' ' + locale);
+              if (width === 1440) {
+                const selectedWidth = await serviceSegment(page, 'Services ' + tab + ' ' + locale);
+                assert.ok(
+                  Math.abs(selectedWidth - segmentWidth) < 1,
+                  'Service segments must not resize when switching tabs',
+                );
+              }
             }
           }
         }

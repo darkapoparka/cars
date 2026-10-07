@@ -16,7 +16,7 @@ const s = stylex.create({
     borderWidth: 0,
     borderRadius: 24,
     backgroundColor: 'transparent',
-    color: colors.text,
+    color: 'inherit',
     fontSize: 13,
     fontWeight: 600,
     lineHeight: '20px',

@@ -68,6 +68,8 @@ const s = stylex.create({
     height: { default: 40, '@media (min-width: 1024px)': 30 },
     objectFit: 'contain',
     flexShrink: 0,
+    backgroundColor: { default: 'transparent', '@media (max-width: 699px)': '#f0f2f5' },
+    borderRadius: { default: 0, '@media (max-width: 699px)': 10 },
   },
   search: {
     paddingTop: 4,
@@ -78,7 +80,7 @@ const s = stylex.create({
   desktopOnly: { display: { default: 'none', '@media (min-width: 1024px)': 'contents' } },
   controls: {
     display: { default: 'flow-root', '@media (min-width: 1024px)': 'contents' },
-    backgroundColor: colors.background,
+    backgroundColor: { default: colors.background, '@media (max-width: 699px)': 'transparent' },
   },
   quickBar: {
     position: { default: 'sticky', '@media (min-width: 1024px)': 'static' },
@@ -87,7 +89,7 @@ const s = stylex.create({
     flexShrink: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    backgroundColor: { default: colors.stripe, '@media (min-width: 1024px)': 'transparent' },
+    backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
   },
   desktopRail: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
@@ -157,10 +159,6 @@ const s = stylex.create({
     backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
     borderTopLeftRadius: { default: 0, '@media (max-width: 699px)': 24 },
     borderTopRightRadius: { default: 0, '@media (max-width: 699px)': 24 },
-    boxShadow: {
-      default: 'none',
-      '@media (max-width: 699px)': '0 -2px 12px rgba(23, 32, 43, 0.05)',
-    },
     scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 96 },
     paddingInline: { default: 16, '@media (min-width: 1024px)': 0 },
     paddingTop: { default: 12, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
@@ -539,7 +537,7 @@ export function ShowroomInventoryScreen() {
     <>
       <ShowroomBanner discovery>
         <ShowroomHeaderSurface>
-          <Header home showLanguageSwitcher sticky={false} overHeroDesktop />
+          <Header home showLanguageSwitcher sticky={false} overHeroDesktop darkOnPhone />
           <div {...stylex.props(s.search)}>
             <ShowroomSearch
               label={t('Search make or model')}
@@ -558,6 +556,7 @@ export function ShowroomInventoryScreen() {
                 variant="icon"
                 tone="neutral"
                 layout="desktop-categories"
+                darkOnPhone
                 tabs={showroomCategories.map(({ value, label, image }) => ({
                   value,
                   label,

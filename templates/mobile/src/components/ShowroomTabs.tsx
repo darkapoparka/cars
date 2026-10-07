@@ -46,16 +46,21 @@ const s = stylex.create({
     marginTop: { default: 8, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
   },
   heroRail: {
-    minHeight: 50,
+    display: 'grid',
+    gridAutoFlow: 'column',
+    gridAutoColumns: '1fr',
+    minHeight: 54,
     marginTop: 0,
-    padding: 4,
+    paddingInline: 4,
+    paddingBlock: 4,
     justifyContent: 'center',
     gap: 4,
     backgroundColor: 'rgba(255,255,255,.12)',
+    backdropFilter: 'blur(12px)',
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: 'rgba(255,255,255,.24)',
-    borderRadius: 25,
+    borderRadius: 27,
     boxShadow: 'none',
   },
   primaryTab: {
@@ -66,18 +71,26 @@ const s = stylex.create({
     overflowWrap: 'normal',
   },
   heroTab: {
-    minHeight: 40,
+    minWidth: 96,
+    minHeight: 44,
     paddingInline: 16,
     paddingBlock: 0,
     fontSize: 18,
     lineHeight: '26px',
+    fontWeight: 500,
     color: '#fff',
-    borderRadius: 20,
-    backgroundColor: { default: 'transparent', ':hover': 'rgba(255,255,255,.08)' },
+    borderRadius: 22,
+    backgroundColor: {
+      default: 'transparent',
+      ':hover': 'rgba(255,255,255,.08)',
+      ':active': 'rgba(255,255,255,.16)',
+    },
     outlineColor: '#fff',
   },
   heroSelected: {
     color: colors.text,
+    fontWeight: 500,
+    outlineColor: colors.text,
     backgroundColor: { default: '#fff', ':hover': '#fff', ':active': '#fff' },
     '::after': { height: 0 },
   },
@@ -191,6 +204,21 @@ const s = stylex.create({
       default: 0,
       '@media (min-width: 700px)': 1,
       '@media (min-width: 1024px)': 0,
+    },
+  },
+  darkPhoneRail: {
+    backgroundColor: { default: null, '@media (max-width: 699px)': 'transparent' },
+  },
+  darkPhoneTab: {
+    outlineColor: { default: null, '@media (max-width: 699px)': '#fff' },
+    backgroundColor: {
+      default: null,
+      '@media (max-width: 699px)': { default: 'transparent', ':active': 'rgba(255,255,255,.12)' },
+    },
+  },
+  darkPhoneSelected: {
+    '::after': {
+      backgroundColor: { default: null, '@media (max-width: 699px)': '#fff' },
     },
   },
   pillsRail: {
@@ -362,6 +390,7 @@ export function ShowroomTabs<T extends string>({
   primary = false,
   flush = false,
   flushOnPhone = false,
+  darkOnPhone = false,
   onChange,
 }: {
   label: string;
@@ -382,6 +411,7 @@ export function ShowroomTabs<T extends string>({
   primary?: boolean;
   flush?: boolean;
   flushOnPhone?: boolean;
+  darkOnPhone?: boolean;
   onChange: (value: T) => void;
 }) {
   const { t, locale } = useLocale();
@@ -428,6 +458,7 @@ export function ShowroomTabs<T extends string>({
         flush && s.flushRail,
         flushOnPhone && s.phoneFlushRail,
         layout === 'hero' && s.heroRail,
+        darkOnPhone && s.darkPhoneRail,
       )}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
@@ -479,6 +510,8 @@ export function ShowroomTabs<T extends string>({
             primary && s.primaryTab,
             layout === 'hero' && s.heroTab,
             selected === value && layout === 'hero' && s.heroSelected,
+            darkOnPhone && s.darkPhoneTab,
+            darkOnPhone && selected === value && s.darkPhoneSelected,
           )}
         >
           {layout === 'desktop-pills' ? (
