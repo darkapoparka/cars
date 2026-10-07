@@ -9,8 +9,9 @@ a required dependency patch, or an explicit product request.
 The owner's 7 October visual refinement keeps phone Home search and category
 tabs on white, removes the quick-filter strip/shadows and artwork backing boxes,
 and retains the original logo, category artwork, listing photos and navigation.
-Desktop Services has a 52px glass rail with equal 44px targets, 16px labels,
-uniform insets and no width jump on selection. Showroom cards use a quiet row of
+Desktop Services has a 48px glass rail with equal 44px targets, 14px labels,
+matching translucent edges and no width jump on selection. The segment stays
+visibly smaller than the 60px search field. Showroom cards use a quiet row of
 year, mileage and fuel; gearbox remains in vehicle details. CSS can wrap facts
 when text is enlarged, without per-card resize observers or hidden-fact state.
 The phone price is 20px bold, distinct from the 17px medium title. Browser
