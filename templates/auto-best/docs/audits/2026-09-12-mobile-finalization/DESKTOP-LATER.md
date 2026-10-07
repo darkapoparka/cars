@@ -1,5 +1,8 @@
 # Desktop later — scope and guardrails
 
+> Historical audit, not the current implementation or an active task list. Generated logs and captures were removed from the current source tree on 7 October 2026; the [immutable evidence archive](https://github.com/darkapoparka/cars/tree/4a94d6f47d682b2dafd49870b528c92a8688c644/templates/auto-best/docs/audits/2026-09-12-mobile-finalization/evidence) retains the original files. References to `evidence/` below describe that archived run. Current checks live in `scripts/` and write to ignored `artifacts/`.
+
+
 Desktop design follows mobile finalization. This audit sampled desktop/breakpoint behavior and ran the existing desktop-discovery suite; it did not approve the entire desktop visual design. Preserve the mobile contract established by [MOBILE-FINALIZATION-PLAN.md](MOBILE-FINALIZATION-PLAN.md).
 
 ## Fix now because shared code is already broken

@@ -1,5 +1,6 @@
 import { sourceKeys } from '$lib/locale/catalog';
-import { intlLocale, type Locale } from '$lib/locale/core';
+import type { Locale } from '$lib/locale/core';
+import { localeFormatters } from '$lib/locale/formatters';
 import type { getI18n } from '$lib/locale/context';
 import { message, templateText, type MessageKey, type MessageParameters } from '$lib/locale/messages';
 
@@ -69,11 +70,11 @@ export const specificationLabel = (value: string, locale: Locale): string =>
   Object.hasOwn(specificationCopy, value) ? message(locale, specificationCopy[value]) : value;
 
 export const formatMileage = (value: number, locale: Locale): string =>
-  new Intl.NumberFormat(intlLocale(locale), { style: 'unit', unit: 'kilometer', unitDisplay: 'short' }).format(value);
+  localeFormatters(locale).mileage.format(value);
 
 // Compact list badges keep their full, unit-bearing label in accessible text.
 export const compactMileage = (value: number, locale: Locale): string =>
-  new Intl.NumberFormat(intlLocale(locale), { useGrouping: false }).format(value);
+  localeFormatters(locale).compactMileage.format(value);
 
 const compactSpecificationCopy: Record<string, MessageKey> = {
   'inventory.spec.automatic': 'inventory.spec.automaticCompact',

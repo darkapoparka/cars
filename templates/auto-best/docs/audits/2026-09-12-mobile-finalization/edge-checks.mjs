@@ -1,6 +1,6 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
-const base='http://127.0.0.1:6461',out='docs/audits/2026-09-12-mobile-finalization/evidence';
+const base='http://127.0.0.1:6461',out='artifacts/audits/2026-09-12-mobile-finalization';
 const browser=await chromium.launch({channel:'chrome',headless:true});const results=[];
 const save=()=>fs.writeFileSync(`${out}/edge-checks.json`,JSON.stringify(results,null,2));
 const visit=async(page,route)=>{await page.goto(base+route,{waitUntil:'domcontentloaded',timeout:30000});await page.evaluate(()=>document.fonts.ready);await page.waitForTimeout(450)};

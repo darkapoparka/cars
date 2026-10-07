@@ -3,7 +3,7 @@
 | Property | Value |
 | --- | --- |
 | Name / key | Auto Best / `auto-best` |
-| Project repository | `darkapoparka/cars-template-auto-best` |
+| Project repository | `darkapoparka/cars`, under `templates/auto-best` |
 | Application | One Svelte 5 / SvelteKit application |
 | Main entry | `/` |
 | Homepage variants | One retained homepage; legacy home URLs redirect to it |
@@ -27,7 +27,7 @@ A client copy retains the application structure and changes its content and rele
 
 ## Source and working preview
 
-The standalone repository owns future shared improvements. The earlier Cars preview at J:/cars/templates/auto-best contains separately preserved refinements; compare and reconcile them before promoting a release. A listener or documentation update does not synchronize either copy. See [Cars integration](docs/CARS-INTEGRATION.md).
+The authoritative reusable master is `templates/auto-best` in `darkapoparka/cars`, edited in the saved Cars checkout on `main`. Former standalone/J: checkouts are recovery history, not editable masters. Shared source changes do not promote a release or update dealer copies; follow [Cars template promotion](../../docs/TEMPLATE-PROMOTION.md) for that separate operation.
 
 ## Reference
 

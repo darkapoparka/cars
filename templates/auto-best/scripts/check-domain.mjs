@@ -7,7 +7,7 @@ import ts from 'typescript';
 // Compile the real pure domain modules, with the same TypeScript compiler as the app.
 const out = path.resolve('artifacts/domain');
 await mkdir(out, { recursive: true });
-const modules = [["src/lib/config/lead-site.ts","lead-site"],["src/lib/data/inventory.ts","inventory"],["src/lib/data/listing.ts","listing"],["src/lib/data/listing-draft.ts","listing-draft"],["src/lib/data/journeys.ts","journeys"],["src/lib/config/brand.ts","brand"],["src/lib/locale/policy.ts","locale-policy"],["src/lib/locale/config.ts","locale-config"],["src/lib/config/locale.ts","dealer-locale-config"],["src/lib/locale/core.ts","locale-core"],["src/lib/locale/catalog.ts","locale-catalog"],["src/lib/locale/messages.ts","locale-messages"],["src/lib/i18n/presentation.ts","locale-presentation"]];
+const modules = [["src/lib/locale/formatters.ts","locale-formatters"],["src/lib/data/demo-content.ts","demo-content"],["src/lib/config/lead-site.ts","lead-site"],["src/lib/data/inventory.ts","inventory"],["src/lib/data/listing.ts","listing"],["src/lib/data/listing-draft.ts","listing-draft"],["src/lib/data/journeys.ts","journeys"],["src/lib/config/brand.ts","brand"],["src/lib/locale/policy.ts","locale-policy"],["src/lib/locale/config.ts","locale-config"],["src/lib/config/locale.ts","dealer-locale-config"],["src/lib/locale/core.ts","locale-core"],["src/lib/locale/catalog.ts","locale-catalog"],["src/lib/locale/messages.ts","locale-messages"],["src/lib/i18n/presentation.ts","locale-presentation"]];
 const moduleOutputs = new Map(modules.map(([file,name]) => [path.resolve(file), name]));
 for (const [input,name] of modules) {
   let code = ts.transpileModule(await readFile(input,'utf8'), {compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
@@ -28,6 +28,36 @@ const listing = await import(pathToFileURL(`${out}/listing.mjs`));
 const listingDraft = await import(pathToFileURL(`${out}/listing-draft.mjs`));
 const journeys = await import(pathToFileURL(`${out}/journeys.mjs`));
 const records = inventory.featuredVehicles;
+const demoContent = await import(pathToFileURL(out + '/demo-content.mjs'));
+const formatters = await import(pathToFileURL(out + '/locale-formatters.mjs'));
+const localeMessages = await import(pathToFileURL(out + '/locale-messages.mjs'));
+const localeCore = await import(pathToFileURL(out + '/locale-core.mjs'));
+for (let count = 0; count <= records.length; count++) {
+  const stock = Object.freeze(records.slice(0, count));
+  const showcases = demoContent.createDemoWorkflowShowcases(stock);
+  for (const [topic, positions] of [['trade-in', [0, 3, 5]], ['import', [1, 2, 4]]]) {
+    assert.deepEqual(showcases[topic].vehicles, positions.filter(position => position < count).map(position => stock[position]), 'Sparse dealer inventory never emits undefined cards');
+    assert.notEqual(showcases[topic].vehicles, stock);
+  }
+}
+assert.deepEqual(demoContent.demoWorkflowShowcases['trade-in'].vehicles.map(vehicle => vehicle.id), [1, 4, 7]);
+assert.deepEqual(demoContent.demoWorkflowShowcases.import.vehicles.map(vehicle => vehicle.id), [2, 3, 6]);
+for (const locale of ['en', 'bg']) {
+  const first = formatters.localeFormatters(locale);
+  assert.equal(formatters.localeFormatters(locale), first, 'Repeated rendering reuses formatters');
+  assert.notEqual(formatters.localeFormatters(locale === 'en' ? 'bg' : 'en'), first, 'Locale formatter caches are separate');
+  const formatLocale = localeCore.intlLocale(locale);
+  for (const value of [-1, 0, 1, 2, 0.5, 1234, 9999999, NaN, Infinity]) {
+    assert.equal(first.number.format(value), new Intl.NumberFormat(formatLocale).format(value));
+    assert.equal(first.mileage.format(value), new Intl.NumberFormat(formatLocale, { style: 'unit', unit: 'kilometer', unitDisplay: 'short' }).format(value));
+    assert.equal(first.compactMileage.format(value), new Intl.NumberFormat(formatLocale, { useGrouping: false }).format(value));
+    assert.equal(first.plural.select(value), new Intl.PluralRules(formatLocale).select(value));
+    const key = new Intl.PluralRules(formatLocale).select(value) === 'one' ? 'inventory.count.one' : 'inventory.count.other';
+    assert.equal(localeMessages.vehicleCount(locale, value), localeMessages.message(locale, key, { count: new Intl.NumberFormat(formatLocale).format(value) }));
+  }
+}
+assert.throws(() => formatters.localeFormatters('invalid'), /Language is not enabled/);
+
 const presentation = await import(pathToFileURL(`${out}/locale-presentation.mjs`));
 for (const source of ['Бензин/ЛПГ', 'Бензин / ЛПГ', 'Petrol/LPG', 'Petrol / LPG']) {
   assert.equal(presentation.specificationLabel(source, 'bg'), 'Бензин/ЛПГ');

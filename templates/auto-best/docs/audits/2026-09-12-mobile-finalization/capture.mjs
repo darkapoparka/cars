@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 import fs from 'node:fs';
 const base='http://127.0.0.1:6461';
-const out='docs/audits/2026-09-12-mobile-finalization/evidence';
+const out='artifacts/audits/2026-09-12-mobile-finalization';
 fs.mkdirSync(`${out}/screenshots`,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const sitemap=await (await fetch(`${base}/sitemap.xml`)).text();

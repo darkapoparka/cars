@@ -21,7 +21,7 @@
     "quality": "npm run validate && npm run smoke",
     "smoke": "node scripts/sveltekit-smoke.mjs && node scripts/enquiry-smoke.mjs && node scripts/mobile-filter-smoke.mjs && node scripts/home-browse-smoke.mjs && node scripts/desktop-discovery-smoke.mjs && npm run smoke:phase4",
     "smoke:typography": "node scripts/typography-smoke.mjs",
-    "check:domain": "node scripts/check-domain.mjs",
+    "check:domain": "node scripts/check-domain.mjs && node --test scripts/enquiry-resources.test.mjs && node scripts/check-overlay.mjs",
     "smoke:phase4": "node scripts/phase4-smoke.mjs",
     "locales:build": "node scripts/build-locales.mjs",
     "check:locales": "node scripts/build-locales.mjs --check",

@@ -27,6 +27,7 @@ SOURCE_LICENSE.md
 SVELTE_TASKS.md
 
 # Local verification output is never a deployment input.
+runtime/
 artifacts/
 playwright-report/
 test-results/

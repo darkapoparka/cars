@@ -1,5 +1,8 @@
 # Auto Best — mobile finalization audit
 
+> Historical audit, not the current implementation or an active task list. Generated logs and captures were removed from the current source tree on 7 October 2026; the [immutable evidence archive](https://github.com/darkapoparka/cars/tree/4a94d6f47d682b2dafd49870b528c92a8688c644/templates/auto-best/docs/audits/2026-09-12-mobile-finalization/evidence) retains the original files. References to `evidence/` below describe that archived run. Current checks live in `scripts/` and write to ignored `artifacts/`.
+
+
 Audit date: 12 September 2026. Repository: `J:\cars`, branch `main`, HEAD `adc16cc3e3ae430c1f53e64dd7086ce632e29e38`, plus the pre-existing dirty working tree. Template: `templates/auto-best`. Development URL: `http://127.0.0.1:6461`.
 
 ## Verdict

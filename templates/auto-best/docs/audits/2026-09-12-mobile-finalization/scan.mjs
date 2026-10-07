@@ -3,7 +3,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 const root = process.cwd();
-const out = path.join(root, 'docs/audits/2026-09-12-mobile-finalization/evidence');
+const out = path.join(root, 'artifacts/audits/2026-09-12-mobile-finalization');
 const walk = dir => fs.readdirSync(dir,{withFileTypes:true}).flatMap(e => e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
 const relative = p => path.relative(root,p).replaceAll('\\','/');
 const files = walk(path.join(root,'src'));

@@ -1,16 +1,18 @@
-import { featuredVehicles } from './inventory';
+import { featuredVehicles, type Vehicle } from './inventory';
 
 // Visual examples only: these selections are not records of completed transactions.
-export const demoWorkflowShowcases = {
-  'trade-in': {
-    title: 'Наскоро продадени',
-    vehicles: [featuredVehicles[0], featuredVehicles[3], featuredVehicles[5]]
-  },
-  import: {
-    title: 'Последно внесени',
-    vehicles: [featuredVehicles[1], featuredVehicles[2], featuredVehicles[4]]
-  }
-};
+export function createDemoWorkflowShowcases(vehicles: readonly Vehicle[]) {
+  const select = (positions: readonly number[]) => positions
+    .map(position => vehicles[position])
+    .filter((vehicle): vehicle is Vehicle => vehicle !== undefined);
+  return {
+    'trade-in': { title: 'Наскоро продадени', vehicles: select([0, 3, 5]) },
+    import: { title: 'Последно внесени', vehicles: select([1, 2, 4]) }
+  };
+}
+
+// Smaller dealer inventories must not create undefined vehicle cards.
+export const demoWorkflowShowcases = createDemoWorkflowShowcases(featuredVehicles);
 
 type DemoTeamMember = {
   id: string;

@@ -1,6 +1,6 @@
 import { chromium, webkit, firefox } from 'playwright';
 import fs from 'node:fs';
-const base='http://127.0.0.1:6461', out='docs/audits/2026-09-12-mobile-finalization/evidence';
+const base='http://127.0.0.1:6461', out='artifacts/audits/2026-09-12-mobile-finalization';
 const axe='J:/cars/runtime/auto-best-audit-tools/package/axe.min.js';
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const results=[];

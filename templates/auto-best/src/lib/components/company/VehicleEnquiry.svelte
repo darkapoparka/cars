@@ -2,7 +2,9 @@
   import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
   import EntryInput from '$components/ui/entry/EntryInput.svelte';
   import EntryAction from '$components/ui/entry/EntryAction.svelte';
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
+  import { appendEnquiryPhotos, removeEnquiryPhoto, releaseEnquiryPhotos, type EnquiryPhoto } from '$lib/ui/enquiry-photos';
+  import { shareEnquiry } from '$lib/ui/enquiry-share';
   import { getI18n } from '$lib/locale/context';
   import { templateMessage } from '$lib/i18n/presentation';
   const i18n = getI18n();
@@ -63,7 +65,7 @@
   let heading: HTMLHeadingElement;
   let entryEditor = $state<{ edit: (trigger?: HTMLElement) => Promise<void> }>();
   let returnFocus: HTMLElement | undefined;
-  let scrollY = 0;
+  let releaseScroll: (() => void) | undefined;
   let step = $state(0);
   let opened = false;
   let linkDraft = $state<string | null>(null);
@@ -80,7 +82,7 @@
   let name = $state('');
   let phone = $state('');
   let notes = $state('');
-  let photos = $state<{ file: File; url: string }[]>([]);
+  let photos = $state<EnquiryPhoto[]>([]);
   let photoError = $state('');
   let feedback = $state('');
   let completion = $state<'copied' | 'shared' | ''>('');
@@ -125,8 +127,7 @@
   async function show(trigger: HTMLElement, nextStep: number) {
     step = nextStep;
     returnFocus = trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-enquiry-scroll', `-${scrollY}px`);
+    releaseScroll = preserveScrollOffset('--dn-enquiry-scroll');
     opened = true;
     feedback = '';
     completion = '';
@@ -136,9 +137,10 @@
   }
 
   function restore() {
+    if (!opened) return;
     opened = false;
-    document.body.style.removeProperty('--dn-enquiry-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
+    releaseScroll?.();
+    releaseScroll = undefined;
     returnFocus?.isConnected && returnFocus.focus({ preventScroll: true });
   }
 
@@ -153,26 +155,17 @@
 
   function addPhotos(event: Event) {
     const input = event.currentTarget as HTMLInputElement;
-    photoError = '';
-    for (const file of Array.from(input.files || [])) {
-      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-        photoError = i18n.t("m_df14621607d6");
-        continue;
-      }
-      if (file.size > 10 * 1024 * 1024) {
-        photoError = i18n.t("m_c1140eeec913");
-        continue;
-      }
-      if (photos.some((photo) => photo.file.name === file.name && photo.file.size === file.size && photo.file.lastModified === file.lastModified)) continue;
-      if (photos.length >= 6) { photoError = 'Можете да добавите до 6 снимки.'; break; }
-      photos = [...photos, { file, url: URL.createObjectURL(file) }];
-    }
-    input.value = '';
+    try {
+      const result = appendEnquiryPhotos(photos, Array.from(input.files ?? []));
+      photos = result.photos;
+      photoError = result.error === 'type' ? i18n.t("m_df14621607d6")
+        : result.error === 'size' ? i18n.t("m_c1140eeec913")
+        : result.error === 'limit' ? 'Можете да добавите до 6 снимки.' : '';
+    } finally { input.value = ''; }
   }
 
   function removePhoto(url: string) {
-    URL.revokeObjectURL(url);
-    photos = photos.filter((photo) => photo.url !== url);
+    photos = removeEnquiryPhoto(photos, url);
     photoError = '';
   }
 
@@ -188,30 +181,25 @@
   }
 
   async function share() {
+    if (sharing) return;
     sharing = true;
     feedback = '';
     try {
-      const files = photos.map((photo) => photo.file);
-      if (files.length && !navigator.canShare?.({ files })) {
-        feedback = 'Този браузър не може да споделя снимки. Копирайте текста и добавете снимките в избраното приложение.';
-        return;
-      }
-      if (!navigator.share) {
-        await copy();
-        return;
-      }
-      await navigator.share({ title, text: summary, ...(files.length ? { files } : {}) });
-      completion = selling ? '' : 'shared';
-      feedback = selling ? i18n.t("m_09fcdf658591") : '';
-    } catch (error) {
-      if (!(error instanceof Error && error.name === 'AbortError')) {
+      const files = photos.map(photo => photo.file);
+      const result = await shareEnquiry({ title: title, text: summary, ...(files.length ? { files } : {}) });
+      if (result === 'unsupported-files') feedback = 'Този браузър не може да споделя снимки. Копирайте текста и добавете снимките в избраното приложение.';
+      else if (result === 'copy') await copy();
+      else if (result === 'shared') {
+        completion = selling ? '' : 'shared';
+        feedback = selling ? i18n.t("m_09fcdf658591") : '';
+      } else if (result === 'failed') {
         completion = '';
         feedback = i18n.t("m_f1eb07fa5cd0");
       }
     } finally { sharing = false; }
   }
 
-  onDestroy(() => photos.forEach((photo) => URL.revokeObjectURL(photo.url)));
+  onDestroy(() => releaseEnquiryPhotos(photos));
 </script>
 
 {#if inlineEntry}

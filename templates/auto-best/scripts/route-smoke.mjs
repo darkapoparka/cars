@@ -40,7 +40,19 @@ try {
           assert.deepEqual(geometry.broken, []); assert.deepEqual(errors, []); assert.deepEqual(failedAssets, []);
           assert.equal(geometry.main, 1); assert(geometry.headings >= 1); assert(geometry.token);
           assert.equal(geometry.dock, appPath(route).startsWith('/listing-detail-v1/') && !invalid.includes(route));
-          if (route === '/about-us') assert.equal(await page.locator('[data-demo-content]').count(), 0);
+          if (route === '/about-us') {
+            // Preview configuration deliberately permits labeled sample sections.
+            // Do not remove the approved team UI just to satisfy a retired zero-count assumption.
+            const demos = page.locator('[data-demo-content]');
+            const count = await demos.count();
+            if (count) {
+              const robots = await page.locator('meta[name="robots"]').getAttribute('content');
+              assert.match(robots ?? '', /(?:^|[,\s])noindex(?:$|[,\s])/i, 'Sample sections must never be indexable');
+              const introductions = await demos.locator('header p').allTextContents();
+              assert.equal(introductions.length, count, 'Every sample section requires an introductory disclaimer');
+              assert(introductions.every(text => text.trim()), 'Sample introductions must not be empty');
+            }
+          }
           await page.evaluate(() => scrollTo(0, 0));
           await page.screenshot({ path: `${output}/${width}-${route.replace(/[^a-z0-9]/gi, '_') || 'home'}.png` });
           return geometry;

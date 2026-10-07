@@ -2,7 +2,9 @@
   import EntrySegments from '$components/ui/entry/EntrySegments.svelte';
   import EntryInput from '$components/ui/entry/EntryInput.svelte';
   import EntryAction from '$components/ui/entry/EntryAction.svelte';
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
+  import { appendEnquiryPhotos, removeEnquiryPhoto, releaseEnquiryPhotos, type EnquiryPhoto } from '$lib/ui/enquiry-photos';
+  import { shareEnquiry } from '$lib/ui/enquiry-share';
   import { getI18n } from '$lib/locale/context';
 
   const i18n = getI18n();
@@ -56,7 +58,7 @@
   let heading: HTMLHeadingElement;
   let returnFocus: HTMLElement | undefined;
   let opened = false;
-  let scrollY = 0;
+  let releaseScroll: (() => void) | undefined;
   let step = $state(0);
   let purpose = $state('Продажба');
   let reference = $state('');
@@ -72,7 +74,7 @@
   let notes = $state('');
   let name = $state('');
   let phone = $state('');
-  let photos = $state<{ file: File; url: string }[]>([]);
+  let photos = $state<EnquiryPhoto[]>([]);
   let photoError = $state('');
   let feedback = $state('');
   let sharing = $state(false);
@@ -106,8 +108,7 @@
     step = nextStep;
     openedReference = reference;
     returnFocus = trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-tradein-scroll', `-${scrollY}px`);
+    releaseScroll = preserveScrollOffset('--dn-tradein-scroll');
     opened = true;
     feedback = '';
     dialog.showModal();
@@ -127,8 +128,8 @@
       }
     }
     opened = false;
-    document.body.style.removeProperty('--dn-tradein-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
+    releaseScroll?.();
+    releaseScroll = undefined;
     returnFocus?.isConnected && returnFocus.focus({ preventScroll: true });
   }
 
@@ -148,29 +149,17 @@
 
   function addPhotos(event: Event) {
     const input = event.currentTarget as HTMLInputElement;
-    photoError = '';
-    for (const file of Array.from(input.files || [])) {
-      if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type)) {
-        photoError = i18n.t("m_f584ec8f827b");
-        continue;
-      }
-      if (file.size > 10 * 1024 * 1024) {
-        photoError = i18n.t("m_c1140eeec913");
-        continue;
-      }
-      if (photos.some((photo) => photo.file.name === file.name && photo.file.size === file.size && photo.file.lastModified === file.lastModified)) continue;
-      if (photos.length >= 6) {
-        photoError = i18n.t("m_a59a2cac14f1");
-        break;
-      }
-      photos = [...photos, { file, url: URL.createObjectURL(file) }];
-    }
-    input.value = '';
+    try {
+      const result = appendEnquiryPhotos(photos, Array.from(input.files ?? []));
+      photos = result.photos;
+      photoError = result.error === 'type' ? i18n.t("m_f584ec8f827b")
+        : result.error === 'size' ? i18n.t("m_c1140eeec913")
+        : result.error === 'limit' ? i18n.t("m_a59a2cac14f1") : '';
+    } finally { input.value = ''; }
   }
 
   function removePhoto(url: string) {
-    URL.revokeObjectURL(url);
-    photos = photos.filter((photo) => photo.url !== url);
+    photos = removeEnquiryPhoto(photos, url);
     photoError = '';
   }
 
@@ -184,31 +173,24 @@
   }
 
   async function share() {
+    if (sharing) return;
     sharing = true;
     feedback = '';
     try {
-      const files = photos.map((photo) => photo.file);
-      if (files.length && !navigator.canShare?.({ files })) {
-        feedback = i18n.t("m_c1ee33fffd0f");
-        return;
-      }
-      if (!navigator.share) {
-        await copy();
-        return;
-      }
-      await navigator.share({ title: i18n.t("m_b9b49dbed887", { p0: brand.name }), text: summary, ...(files.length ? { files } : {}) });
-      feedback = i18n.t("m_26d3c9788f18", { p0: brand.name });
-    } catch (error) {
-      if (!(error instanceof Error && error.name === 'AbortError')) {
+      const files = photos.map(photo => photo.file);
+      const result = await shareEnquiry({ title: i18n.t("m_b9b49dbed887", { p0: brand.name }), text: summary, ...(files.length ? { files } : {}) });
+      if (result === 'unsupported-files') feedback = i18n.t("m_c1ee33fffd0f");
+      else if (result === 'copy') await copy();
+      else if (result === 'shared') {
+        feedback = i18n.t("m_26d3c9788f18", { p0: brand.name });
+      } else if (result === 'failed') {
         feedback = i18n.t("m_54deb07743c0");
       }
-    } finally {
-      sharing = false;
-    }
+    } finally { sharing = false; }
   }
 
   onDestroy(() => {
-    photos.forEach((photo) => URL.revokeObjectURL(photo.url));
+    releaseEnquiryPhotos(photos);
     restore();
   });
 </script>

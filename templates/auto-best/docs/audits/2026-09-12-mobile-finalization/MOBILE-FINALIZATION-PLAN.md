@@ -1,5 +1,8 @@
 # Mobile finalization plan
 
+> Historical audit, not the current implementation or an active task list. Generated logs and captures were removed from the current source tree on 7 October 2026; the [immutable evidence archive](https://github.com/darkapoparka/cars/tree/4a94d6f47d682b2dafd49870b528c92a8688c644/templates/auto-best/docs/audits/2026-09-12-mobile-finalization/evidence) retains the original files. References to `evidence/` below describe that archived run. Current checks live in `scripts/` and write to ignored `artifacts/`.
+
+
 Status: original audited plan; implementation and verification are now tracked in the [implementation record](../../implementation/2026-09-12-mobile/README.md). Start from the audited dirty working tree, not the last commit or an earlier screenshot. Work in `J:\cars\templates\auto-best`; keep preview at port 6461. Preserve existing uncommitted changes. Do not run build and dev against the same generated output concurrently. No commit, push, deployment, stock promotion, or backend integration is implied by this plan.
 
 ## Definition of finished

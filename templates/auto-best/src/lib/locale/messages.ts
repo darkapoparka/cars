@@ -1,6 +1,7 @@
 import { dealerLocalizedText } from './config';
 import { en, bg, sourceKeys, ambiguousAliases } from './catalog';
-import { localeContract, intlLocale, type Locale } from './core';
+import { localeContract, type Locale } from './core';
+import { localeFormatters } from './formatters';
 export type MessageKey = keyof typeof en;
 export type MessageParameters = Record<string, string | number>;
 
@@ -32,9 +33,10 @@ export function templateText<T>(locale: Locale, value: T): T {
 }
 
 export function vehicleCount(locale: Locale, count: number): string {
-  const category = new Intl.PluralRules(intlLocale(locale)).select(count);
+  const formatters = localeFormatters(locale);
+  const category = formatters.plural.select(count);
   return message(locale, category === 'one' ? 'inventory.count.one' : 'inventory.count.other', {
-    count: new Intl.NumberFormat(intlLocale(locale)).format(count)
+    count: formatters.number.format(count)
   });
 }
 

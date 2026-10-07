@@ -91,3 +91,11 @@ For a new article or vehicle, extend its typed records. For a new page, add a ro
 The pure portable policy lives in `src/lib/locale/policy.ts`; explicit dealer configuration lives in `src/lib/config/locale.ts`. `src/hooks.ts` performs URL-only rerouting, while `locale/server.ts` resolves request locals before the existing read-only application handler. `+layout.server.ts` passes that state into the native Svelte context. No mutable visitor-global locale store or rendered-text replacement is used.
 
 Common, template and dealer-owned catalog inputs generate typed messages and a source/hash manifest. Ambiguous aliases are excluded; contextual field titles use explicit keys. Preferences have a same-origin bounded server endpoint and an SSR form. The endpoint sets preference cookies only; business operations remain disabled. See [Localization](docs/localization/README.md) and [coverage](docs/localization/COVERAGE.md) for contracts and evidence.
+
+## Enquiry resources and formatting ownership
+
+Enquiry components own draft state and presentation. `ui/enquiry-photos.ts` owns file validation and object-URL allocation/release; `ui/enquiry-share.ts` reports native browser handoff outcomes without submitting leads. Use the existing overlay scroll owner and release resources on close/destruction. Keep share calls inside the initiating user gesture.
+
+`locale/formatters.ts` caches only immutable formatter instances for validated dealer locales, never visitor preferences or rendered values. `data/demo-content.ts` owns safe sample showcase selection for empty and smaller inventories.
+
+These contracts are covered by `check:domain`, enquiry-resource and overlay tests. See the [architecture/code-quality verification record](docs/ARCHITECTURE-QUALITY-2026-10-07.md) for the preserved visual contract and rollout boundaries.
