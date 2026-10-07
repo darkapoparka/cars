@@ -10,6 +10,7 @@
   import type { VehicleEquipment } from '$data/inventory';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import DesktopMakeChoice from './DesktopMakeChoice.svelte';
   import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   type Field = Exclude<ListingFacetField, 'sort'>;
@@ -192,15 +193,23 @@
     </div>
   {:else if field}
     <div class="dn-facet-options">
-      <div class="dn-search-results dn-search-results--choices" role="group" aria-label={title}>
+      <div class="dn-search-results dn-search-results--choices" class:dn-search-results--makes={field === 'make'} role="group" aria-label={title}>
         {#if field !== 'equipment' && !search}
-          <DesktopFilterChoice value="" label={i18n.t(field === 'make' ? 'inventory.search.allMakes' : field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069')}
-            multiple={field === 'make' || field === 'model'} tile name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
+          {#if field === 'make'}
+            <DesktopMakeChoice value="" label={i18n.t('inventory.search.allMakes')} name="draft-make" checked={!activeFields.includes('make')} onchange={() => clear('make', false)} />
+          {:else}
+          <DesktopFilterChoice value="" label={i18n.t(field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069')}
+            multiple={field === 'model'} tile name={'draft-' + field} checked={!activeFields.includes(field)} onchange={() => field && clear(field, false)} />
+          {/if}
         {/if}
         {#each choices as choice (choice.value)}
+          {#if field === 'make'}
+            <DesktopMakeChoice value={choice.value} label={choice.label} name="draft-make" checked={isSelected(choice)} onchange={() => select(choice)} />
+          {:else}
           <DesktopFilterChoice value={choice.value} label={choice.label} description={choice.make && !draft.make.length ? choice.make : ''}
             multiple={choice.field === 'equipment' || choice.field === 'make' || choice.field === 'model'} tile name={'draft-' + choice.field}
             checked={isSelected(choice)} onchange={() => select(choice)} />
+          {/if}
         {/each}
         {#if !choices.length}
           <div class="dn-search-empty"><p role="status">{i18n.t('inventory.search.empty')}</p>{#if search}<button type="button" onclick={() => { search = ''; void focusSearch(); }}>{i18n.t('inventory.search.clearQuery')}</button>{/if}</div>
@@ -228,7 +237,7 @@
   <Popover.Root bind:open>
     <Popover.Portal to=".dn-app-shell">
       <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
-        data-desktop-panel="true" data-wide-choices={searchable} role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side="bottom" align={range ? 'end' : 'start'} sideOffset={8}
+        data-desktop-panel="true" data-wide-choices={searchable} data-make-grid={field === 'make'} role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side="bottom" align={range ? 'end' : 'start'} sideOffset={8}
         collisionPadding={16} strategy="fixed" hideWhenDetached
         onOpenAutoFocus={event => event.preventDefault()}
         onInteractOutside={() => restoreFocusOnClose = false} onCloseAutoFocus={returnToPage}>
@@ -299,8 +308,10 @@
   @media (min-width: 992px) {
     :global(.dn-search-popover[data-desktop-panel='true']) { width: min(480px, calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true'][data-wide-choices='true']) { width: min(640px, calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-desktop-panel='true'][data-make-grid='true']) { width: min(720px, calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true']) .dn-search-query { width: 100%; margin: 0; }
     .dn-search-results--choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
+    .dn-search-results--makes { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .dn-search-empty { grid-column: 1 / -1; }
     .dn-search-range-fields, .dn-search-range > label { width: min(100%, 488px); margin-inline: auto; }
     .dn-search-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }

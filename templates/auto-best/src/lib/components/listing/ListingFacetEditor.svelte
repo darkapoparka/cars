@@ -14,6 +14,7 @@
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import DesktopMakeChoice from './DesktopMakeChoice.svelte';
 
   let { field, draft = $bindable(), desktopChoices = false, widePanel = false, header, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
@@ -89,7 +90,7 @@
   </div>
 {/snippet}
 
-<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel}>
+<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices} class:wide-panel={widePanel} class:make-grid={widePanel && field === 'make'}>
   {#if header}{@render header(widePanel && searchable ? searchControl : undefined)}{/if}
   {#if searchable && !(header && widePanel)}
     <div class="search-wrap">{@render searchControl()}</div>
@@ -122,9 +123,13 @@
         <legend class="dn-sr-only">{title}</legend>
         {#each choices as option (option)}
           {#if desktopChoices && matches(optionLabel(option))}
+            {#if widePanel && field === 'make'}
+              <DesktopMakeChoice value={option} label={optionLabel(option)} name={field} checked={isSelected(option)} onchange={choose} />
+            {:else}
               <DesktopFilterChoice value={option} label={optionLabel(option)} name={field}
                 multiple={field === 'make' || field === 'model' || field === 'equipment'} tile={widePanel}
                 checked={isSelected(option)} onchange={choose} />
+            {/if}
           {:else if !desktopChoices}
             <label class="choice dn-mobile-filter-choice" hidden={!matches(optionLabel(option))}>
               <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
@@ -159,6 +164,7 @@
   @media (min-width: 992px) {
     .wide-panel .content { flex: 1; }
     .wide-panel fieldset { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
+    .make-grid fieldset { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     .wide-panel .range { width: min(100%, 488px); margin-inline: auto; }
     .wide-panel .presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
     .wide-panel .price-presets { grid-template-columns: repeat(3, minmax(0, 1fr)); }

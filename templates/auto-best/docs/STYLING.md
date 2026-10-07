@@ -2,7 +2,7 @@
 
 Auto Best combines an image-led automotive layout, Inter typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
-The [7 October desktop search update](DESKTOP-MODEL-PICKER-2026-10-07.md) specifies 640px Make/Model panels, 480px companion panels, search in the header row, compact option tiles and live Home counts from 992px.
+The [7 October desktop search update](DESKTOP-MODEL-PICKER-2026-10-07.md) specifies a 720px Make logo grid, 640px Model panels, 480px companion panels, search in the header row and live Home counts from 992px.
 
 At desktop widths, the vehicle detail preview uses a 16:10 frame. `VehiclePhoto.svelte`
 opens the full, uncropped photograph in a native dialog with keyboard focus containment,

@@ -1,6 +1,6 @@
 # Testing reference
 
-The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 640/480px widths, header search alignment, compact choices, pending counts and preserved mobile journeys.
+The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 720/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
 
 Tests cover different layers: source/type checks, domain logic, runtime media, build output and real browser behavior. This document explains the available commands; it is not a claim that every suite currently passes.
 

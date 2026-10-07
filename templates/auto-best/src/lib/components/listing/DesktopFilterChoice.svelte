@@ -1,15 +1,17 @@
 <script lang="ts">
-  let { value, label, description = '', checked, multiple = false, tile = false, name, onchange }: {
+  import type { Snippet } from 'svelte';
+  let { value, label, description = '', checked, multiple = false, tile = false, portrait = false, media, name, onchange }: {
     value: string; label: string; description?: string; checked: boolean;
-    multiple?: boolean; tile?: boolean; name?: string; onchange: (value: string) => void;
+    multiple?: boolean; tile?: boolean; portrait?: boolean; media?: Snippet; name?: string; onchange: (value: string) => void;
   } = $props();
 </script>
 
-<label class="dn-desktop-choice" class:dn-desktop-choice--tile={tile}>
+<label class="dn-desktop-choice" class:dn-desktop-choice--tile={tile} class:dn-desktop-choice--portrait={portrait}>
   <input type={multiple ? 'checkbox' : 'radio'} {name} {value} {checked} onchange={() => onchange(value)}
     onclick={() => { if (!multiple && checked) onchange(value); }}
     onkeydown={event => { if (event.key === 'Enter' || !multiple && event.key === ' ') { event.preventDefault(); onchange(value); } }} />
   <span class="dn-desktop-choice-mark" data-multiple={multiple} aria-hidden="true">{#if multiple}✓{/if}</span>
+  {#if media}<span class="dn-desktop-choice-media" aria-hidden="true">{@render media()}</span>{/if}
   <span class="dn-desktop-choice-label">{label}</span>
   {#if description}<small>{description}</small>{/if}
 </label>
@@ -30,6 +32,13 @@
     .dn-desktop-choice--tile:hover { background: var(--dn-surface-hover); }
     .dn-desktop-choice--tile:has(input:checked) { background: var(--dn-surface-hover); box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
     .dn-desktop-choice--tile .dn-desktop-choice-mark[data-multiple='true'] { border-radius: var(--dn-space-1); }
+    .dn-desktop-choice--portrait { flex-direction: column; justify-content: center; gap: var(--dn-space-2); min-height: calc(var(--dn-control-height-default) * 2 + var(--dn-space-4)); padding: var(--dn-space-3) var(--dn-space-2); background: transparent; text-align: center; }
+    .dn-desktop-choice--portrait .dn-desktop-choice-media { display: grid; place-items: center; width: 100%; height: var(--dn-control-height-entry-mobile); pointer-events: none; }
+    .dn-desktop-choice--portrait .dn-desktop-choice-label { flex: 0 0 auto; width: 100%; font: var(--dn-control-font); }
+    .dn-desktop-choice--portrait .dn-desktop-choice-mark { position: absolute; top: var(--dn-space-2); right: var(--dn-space-2); opacity: 0; }
+    .dn-desktop-choice--portrait:hover .dn-desktop-choice-mark,
+    .dn-desktop-choice--portrait:has(input:checked) .dn-desktop-choice-mark,
+    .dn-desktop-choice--portrait:has(input:focus-visible) .dn-desktop-choice-mark { opacity: 1; }
   }
   @media (forced-colors: active) {
     input { position: static; flex: 0 0 var(--dn-space-5); width: var(--dn-space-5); height: var(--dn-space-5); opacity: 1; accent-color: auto; }

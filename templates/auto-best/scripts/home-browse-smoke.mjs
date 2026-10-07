@@ -28,11 +28,17 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
     if (viewport.width >= 992) {
-      assert.equal(frame.width, name === 'make' || name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
+      assert.equal(frame.width, name === 'make' ? 720 : name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
       assert.equal(await menu.getAttribute('data-desktop-panel'), 'true');
       assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Every selector shows the pending result count');
       const tiles = await menu.locator('.dn-desktop-choice').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().width));
       assert(tiles.every(width => width <= frame.width / 2), 'All and filtered choices retain compact tiles');
+      if (name === 'make') {
+        const logoTiles = await menu.locator('.dn-desktop-choice--portrait').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
+        assert.equal(logoTiles.length, tiles.length, 'Every make, including All makes, uses the logo grid');
+        assert(logoTiles.every(box => box.width <= frame.width / 4 && box.height >= 104), 'Brand tiles retain room for their logo and label');
+        await page.waitForFunction(() => [...document.querySelectorAll('.dn-home-browse-picker[data-state=open] .dn-make-logo img')].every(img => img.complete && img.naturalWidth > 0));
+      }
       if (await menu.getByRole('searchbox').count()) {
         const heading = await menu.getByRole('heading').boundingBox();
         const search = await menu.getByRole('searchbox').boundingBox();
