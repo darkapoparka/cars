@@ -1,0 +1,124 @@
+<svelte:options preserveWhitespace={true} />
+
+<script lang="ts">
+</script>
+
+<section class="box-cta-7 background-body">
+  <div class="container position-relative z-1">
+    <div class="bg-shape"></div>
+    <div class="row position-relative z-1">
+      <div class="col-lg-6 p-md-5 p-4">
+        <div class="background-card p-md-5 p-4 rounded-3 my-3">
+          <h5 class="neutral-1000 mb-2">Car Loan Calculator</h5>
+          <p class="text-sm-medium neutral-500 mb-25"
+            >Estimate your monthly auto loan payments with this calculator.</p
+          >
+          <div class="form-contact">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label
+                    class="text-sm-medium neutral-1000"
+                    for="field-d472647c-0">Price of vehicle</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="$20,000"
+                    id="field-d472647c-0"
+                    aria-label="$20,000"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label
+                    class="text-sm-medium neutral-1000"
+                    for="field-d472647c-1">Interest rate</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="5%"
+                    id="field-d472647c-1"
+                    aria-label="5%"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label
+                    class="text-sm-medium neutral-1000"
+                    for="field-d472647c-2">Terms</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="12 months"
+                    id="field-d472647c-2"
+                    aria-label="12 months"
+                  />
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label
+                    class="text-sm-medium neutral-1000"
+                    for="field-d472647c-3">Down payment</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="$12,000"
+                    id="field-d472647c-3"
+                    aria-label="$12,000"
+                  />
+                </div>
+              </div>
+              <div class="row pt-3 pb-4">
+                <div class="col-md-5 col-8 d-flex flex-column gap-1">
+                  <p class="text-sm-bold neutral-1000">Down payment ammout</p>
+                  <p class="text-sm-bold neutral-1000">Amount financed</p>
+                  <p class="text-sm-bold neutral-1000">Monthly payment</p>
+                </div>
+                <div
+                  class="col-md-7 col-4 d-flex flex-column gap-1 align-items-end align-items-md-start"
+                >
+                  <p class="text-sm-bold neutral-1000">$12,000</p>
+                  <p class="text-sm-bold neutral-1000">$800,00</p>
+                  <p class="text-sm-bold text-primary-dark">$480,00</p>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <button
+                  class="btn btn-book"
+                  aria-label="Apply for a loan"
+                  type="button"
+                >
+                  Apply for a loan
+                  <svg
+                    width="17"
+                    height="16"
+                    viewBox="0 0 17 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M8.5 15L15.5 8L8.5 1M15.5 8L1.5 8"
+                      stroke=""
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

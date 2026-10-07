@@ -1,0 +1,33 @@
+{
+  "key": "karento",
+  "name": "Karento Best",
+  "aliases": ["karento-best", "astra"],
+  "path": ".",
+  "version": "2026.10.07-native-svelte",
+  "family": "karento",
+  "stack": "sveltekit",
+  "sourcePort": 6466,
+  "referencePort": 19478,
+  "entry": "/",
+  "homes": [{ "id": "main", "route": "/", "composition": "index-3" }],
+  "readiness": "native-svelte-frontend",
+  "personalizationRequired": true,
+  "brandFiles": ["src/lib/content.ts", "src/lib/reference-locations.json", "src/lib/sections", "static"],
+  "palette": { "default": "neutral", "mode": "light", "reviewedAccentOverrides": true, "automaticRecoloring": false },
+  "contentStatus": "reference-demo",
+  "sourceSnapshot": { "baselineCommit": "93ff0fd", "receipt": "provenance/baseline.json", "includesDirtyFiles": true },
+  "maintainedSource": "darkapoparka/cars:templates/karento-best",
+  "publishingMirror": "darkapoparka/cars-template-karento",
+  "fleetRegistration": "not-performed",
+  "crmRegistration": "not-performed",
+  "leadBatchGeneration": "not-performed",
+  "deployment": "not-performed",
+  "releaseBlockers": [
+    "owner visual approval",
+    "verified real dealer identity, assets, contacts and inventory",
+    "sales/import/enquiry adaptation and working contact destination",
+    "complete localization when required",
+    "existing Cars publisher and mounted-base integration",
+    "accessibility and licence review"
+  ]
+}

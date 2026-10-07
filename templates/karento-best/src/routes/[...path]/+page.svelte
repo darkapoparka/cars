@@ -1,7 +1,6 @@
 <script lang="ts">
-  import CapturedPage from '../../lib/components/CapturedPage.svelte';
-  import type { CapturedPageData } from '../../lib/page-types';
-  let { data }: { data: { page: CapturedPageData } } = $props();
+  import type { PageData } from "./$types";
+  let { data }: { data: PageData } = $props();
 </script>
 
-<CapturedPage page={data.page} />
+{#key data.key}<data.component />{/key}

@@ -1,66 +1,52 @@
 # Karento Best
 
-The owner-selected dealer website: **Home 3, Car List 2, Car Details 3**, with all requested supporting pages and dashboard screens organized into one navigation. The complete original Karento remains at `../karento`, independently available on port 6462.
+The owner-selected dealer website, implemented in Svelte 5 and SvelteKit 3: Home 3, Car List 2 and Car Details 3, with 30 website routes and all 39 preserved page variants. The neutral palette, fixed light appearance, original artwork and latest approved Contact panel are retained.
+
+Cars `templates/karento-best` is the editable master. `darkapoparka/cars-template-karento` is the standalone publishing mirror. Original captured source remains in Git history and immutable preservation evidence; it is not loaded by the native application.
 
 ## Run
 
-Use Node 26.10.0, matching the installed Karento reference runtime and pinned package-lock versions.
+Use the Node version in `.node-version` (26.10.0).
 
-```powershell
+```sh
 npm ci
-npm run check
-npm run build
-npm run dev -- --host 127.0.0.1 --port 6466 --strictPort
+npm run dev
 ```
 
-For a production preview after building, set `HOST=127.0.0.1` and `PORT=6466`, then run `node build/index.js`. `npm run qa` checks the active Best preview; `KARENTO_BEST_QA_URL` can override its URL. The original reference preview on 6462 must be available for its preservation check.
+The canonical development preview binds strictly to [127.0.0.1:6466](http://127.0.0.1:6466/). After `npm run build`, set `HOST=127.0.0.1`, `PORT=6466` and `ORIGIN=http://127.0.0.1:6466`, then run `node build/index.js` for the Node production preview. Never stop an unrelated process to claim a port.
 
-## Website organization
+## Website and source
 
-The Home 3 base uses Home 2's centered Car Rental System section and testimonial card slider. Home 2's five stats sit in a bordered card inside the system section; there is no separate stats block. The source sections are read directly from the preserved Home 2 capture.
+The main navigation is Home, Vehicles, Services, Shop, Explore, Plans and Contact. Explore contains About, Import, News, Calculator, FAQ and Terms. Account opens the sign-in flow or selected demo account; sign out stays inside the drawer. Member and owner dashboard routes retain their sidebars. Unknown URLs return the designed screen with HTTP 404.
 
-How It Works is a custom four-step dealer journey using image-generated photography inspired by the Mobile Services page. Its WebP assets are owned and bundled by Karento Best, with centered captions and four desktop/two mobile columns. See [artwork provenance](../../docs/karento/HOW-IT-WORKS-ARTWORK.md).
+`src/lib/routes.ts` defines canonical routes and original aliases. `src/lib/pages` contains compiled Svelte variants; `sections`, `cards` and `components` contain reusable markup. `Header.svelte` owns shared navigation, `content.ts` owns typed dealer inputs, and `preview.svelte.ts` owns visitor state per layout.
 
-| Header | Pages |
-| --- | --- |
-| Home | Home 3 at `/` |
-| Vehicles | List 2 at `/vehicles`, selected Details 3 at `/vehicle` |
-| Services | `/services` |
-| Shop | Direct link to `/shop`; product images and names open `/shop/product` |
-| Explore | About, Import, News, Calculator, FAQ, Terms |
-| Plans | Direct link to membership packages at `/membership` |
-| Contact | `/contact` |
+`CalendarInput.svelte`, `Gallery.svelte` and `PhotoViewer.svelte` provide native date selection, galleries and modal viewing, including keyboard/mobile controls and route cleanup. Billing uses native radios and consistent monthly/annual amounts. The application does not load jQuery, Slick, the legacy datepicker, captured whole-page HTML or the global legacy `main.js` runner.
 
-The header's Account button opens Login, or the selected demo account. The grid button retains the original desktop drawer, with account actions and website links. Signed-out visitors see Sign in and Create an account. Selecting Dealership owner and Sign in to demo opens `/dashboard`; Member opens `/account`. The chosen preview area persists in the current browser tab and updates the drawer to View account, Account settings and Sign out. Sign out is not an inline header action. The mobile navigation retains one direct account entry. Login/Register are outside Explore, and Register links back to Login. The six member screens and five owner screens live inside their existing sidebars. Add Listing is available inside the owner dashboard. Dashboard screens explicitly identify their sample data and unsaved changes. This sign-in preview collects no credentials and is not authentication or a working inventory backend.
+Swiper, PerfectScrollbar, ApexCharts and noUiSlider remain independent libraries behind lifecycle-owned Svelte actions. Their markup, state boundaries and disposal belong to the maintained app. Original vendor files remain byte-preserved in `static/`; retaining an asset is different from loading it.
 
-Missing website URLs return HTTP 404 and render the existing Karento error design with the shared website header and a Back to Home link. Error pages are not menu entries. Normal pages and the error screen use the same captured-page renderer and vendor initialization. Contact appears once in the main menu; Import and News live under Explore. News opens `/news`; article images, titles and featured stories open `/news/article`.
+The homepage keeps the selected Home 2 system/testimonial sections, nine unique static brand logos and the approved four-step photography. Contact preserves reviewed portraits and location links inside one white outer panel. Get in Touch has its own inner card on the left, while the map fills the right column without an inset card or heading. Its address and directions link agree with the map; phones stack the form and map. Demo forms show truthful feedback and do not send or save information.
 
-Motion is restrained throughout the derivative: scroll reveals and lifting classes are removed before rendering; counters are static; brand lists wrap without a ticker; decorative artwork and sticky-header entrance animations are disabled. Carousels start paused and retain deliberate arrows/swiping with a short transition, respecting reduced-motion preferences. Buttons, links and cards retain subtle color/border feedback and visible keyboard focus. The shared original vendor assets remain untouched.
+## Verification
 
-Every page uses Home 3's header and mobile menu, composed from the preserved `index-3` source before applying the shared navigation and account controls in `src/lib/server/site.mjs`. The original drawer and scrollbar lifecycle are retained, with account/navigation content replacing the stock profile and products. The drawer supports keyboard focus containment, Escape, close-button and overlay dismissal. Inner pages no longer inherit their original header contact strips. All existing home, catalogue and vehicle-detail links lead to the selected layouts. Original captured route names remain accessible directly for reference, but alternate layout selectors are removed from the website menus.
+```sh
+npm run check
+npm run format:check
+npm test
+npm run build
+npm run qa
+```
 
-Best uses one consistent light appearance. The inactive theme switch and its late-initializing vendor script are removed from this derivative. The preserved Karento reference still includes its dark styles and controls.
+`qa` checks 102 server-rendered route/alias compositions, nine real 404 responses, 14 browser journeys, native widgets at 320/390/1440px and 30 page-loading smoke tests. Set `KARENTO_NATIVE_URL` to override the active preview. Browser tests use local temporary profiles; `KARENTO_BROWSER_CHANNEL=chrome` selects installed Chrome.
 
-The homepage brand section uses nine unique monochrome logos from Home 1, with a centered heading and a static responsive grid. It removes repeated ticker entries and invented stock counts. View all vehicles opens the selected catalogue; brand filtering remains part of the pending inventory adaptation.
+`npm run test:visual` compares all 39 variants at 320, 390 and 1440px, plus the drawer. Set `KARENTO_BASELINE_URL` to a preserved approved build, `KARENTO_EVIDENCE_DIR` for evidence output, or `KARENTO_ROUTES` for a focused subset. Both sides use the same browser, fixed clock and reduced motion. Overlapping 900px-high browser views cover the complete document; settled scrolling and stable height are asserted. The comparison checks text/section geometry, image errors and native horizontal overflow, recording original overflow separately. The declared Contact design adjustment, wallet chart resize fix and stable 2D range-slider layer are applied to the preserved reference only, without changing its source. The native application contains these changes. Raw pixel equality and differences above the fixed 0.1 pixel threshold are reported separately.
 
-Import reuses the original dealer directory/profile composition with source-oriented labels and explicitly illustrative source content. It is not an assertion of approved sourcing relationships. Shop, memberships, authentication, wallet, bookings, calculators and dashboard data retain their reference demo behavior; working commerce, authentication and saved user data require separate backend implementation.
+`provenance/reviewed-source.json` identifies the preserved approved composition and stylesheet. `reviewed-compositions.json` stores semantic contracts, not runtime HTML. All 607 original recorded files and original asset bytes remain protected by unit contracts. The standalone mirror contains `karento/` and `karento-best/`; Cars checks its preserved `../karento` library and the hash-locked `provenance/frozen-best` archive. `provenance/tooling` is migration history, not a supported generator.
 
-Product details use a centered breadcrumb with the Shop page's rounded border treatment and the displayed product title. The purchase summary sits in a bordered card beside the gallery on desktop and below it on phones; quantity and Add to cart are grouped above Share/Wishlist. This layout does not add checkout functionality.
+Actual validation results and limitations are recorded in `IMPLEMENTATION-REPORT.md`. A local pass does not assert a GitHub Actions pass or owner visual approval.
 
-Inner image heroes share centered titles, balanced photo shading and responsive content height. Contact links to the existing enquiry section, Services opens Contact, and the centered calculator introduction links down to its calculator. Plans, About, Import and Terms keep text-only introductions. Article titles/metadata remain inside their hero on phones; featured news stories and vehicle breadcrumbs are centered too. Existing centered Home, catalogue, Shop, support and account introductions are retained. See the [30-page hero review and before/after comparisons](../../docs/karento/HERO-REVIEW-2026-10-07.md).
+## Reuse boundary
 
-Contact uses four matching generated portraits as circular avatars, centered location titles and country labels. Its example locations and fictional portraits are disclosed together; dealer copies should supply their own locations, contacts and permitted staff photos. Location titles jump to the enquiry form, and email/map links match the displayed contacts. See [Contact artwork and comparison](../../docs/karento/CONTACT-AVATAR-ARTWORK.md).
+Read `REUSE.md` and `.template/template.json`. Dealer identity, logo, contacts, locations, selected copy and inventory overrides have typed inputs. Keep reviewed neutral/light defaults; optional accents require individual review. A locale setting is not a complete translation.
 
-The enquiry form sits in its own white, bordered card beside a full-height map on the soft section background. The map fills the right column with matching rounded corners, without a heading or an inset card; phones stack the form above a 320px map. The sample address and Get directions link sit beneath the form, and both the link and map query use that address. Labels are connected to their fields, keyboard focus is visible, and enquiry shortcuts leave the form card's top clear of the fixed header.
-
-The approved catalogue filter row/drawer and conversion of rental panels to vehicle-sale enquiry panels remain follow-up functional adaptations. This pass organizes the requested pages and preserves their layout and existing interactions.
-
-## Reuse direction
-
-The starter accent is neutral black. Four values at the top of `src/lib/server/dealer-site.css` control accent, hover, contrast and soft surfaces; they map to the existing vendor variables. Header/footer starter logos are displayed in monochrome with CSS, preserving the original asset files. The later dealer build must supply the lead's recognizable logo, permitted inventory/imagery, copy, locations and contacts through the existing Cars workflow. See [the reuse handoff](../../docs/karento/REUSE-HANDOFF.md) for the intentionally small scope of the next architecture pass.
-
-## Source preservation and publishing boundary
-
-The HTML page bodies, metadata and vendor assets are read from `../karento`; this project does not maintain a second copy of the captured library. SvelteKit bundles the HTML and shared static assets into its own production output. CSS for this derivative is served from `/dealer-site.css`.
-
-Before publisher/release integration, source packaging must include the explicit Karento dependency and license evidence. This local candidate is not an approved template-lock entry and does not change any existing dealer or hosting provider. See [design decisions](../../docs/karento/DESIGN-SELECTION.md).
+Account, shop, wallet, booking, membership and dashboard data are demonstrations. Real authentication, saved enquiries, payments and inventory services are separate integrations. This frontend promotion does not change the approved template lock, dealer manifests, fleet registration, the 25 lead projects or hosting. Use the existing Cars release and publishing workflow for that work.

@@ -1,0 +1,15 @@
+{
+  "contact": {
+    "reason": "The owner subsequently requested one white outer container with an inner card only for Get in Touch. This approved native Contact adjustment follows the preserved 4dda988 checkpoint; other reference routes are unchanged.",
+    "sourceDecision": "Cars docs/karento/DESIGN-SELECTION.md: shared outer Contact container, 7 October 2026",
+    "styles": ".karento-contact-enquiry .karento-enquiry-shell{padding:24px;border:1px solid var(--bs-border-color);border-radius:16px;background:var(--bs-background-card)}.karento-contact-enquiry .karento-enquiry-panel{padding:24px;border-radius:12px}.karento-contact-enquiry .karento-contact-map{border-radius:12px}@media(max-width:640px){.karento-contact-enquiry .karento-enquiry-shell,.karento-contact-enquiry .karento-enquiry-panel{padding:16px}.karento-contact-enquiry .karento-contact-layout{--bs-gutter-x:16px;row-gap:16px}}"
+  },
+  "wallet": {
+    "reason": "Disable the preserved wallet chart's parent-resize feedback loop to compare a settled chart. The native implementation contains this same resize fix. No chart data, dimensions, pixels or comparison threshold are removed or changed.",
+    "chartOptions": { "redrawOnParentResize": false }
+  },
+  "ranges": {
+    "reason": "Use the native range-slider fix's stable 2D layer for the preserved reference too. The former 3D layer produced a 59-pixel label rasterization difference despite identical Urbanist font files, computed styles and rectangles. Font, geometry, labels and values stay unchanged, and all pixels remain compared at the original threshold.",
+    "styles": ".noUi-base,.noUi-handle{transform:translate(0,0)}"
+  }
+}

@@ -1,5 +1,10 @@
 node_modules/
 .svelte-kit/
 build/
+dist/
 .env
 .env.*
+!.env.example
+.runtime/
+test-results/
+playwright-report/

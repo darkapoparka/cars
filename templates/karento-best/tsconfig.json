@@ -1,14 +1,14 @@
 {
   "extends": "$app/tsconfig",
-  "include": ["src", "*"],
+  "include": ["src", "scripts/*.ts", "tests/*.ts", "*.ts"],
   "exclude": ["src/service-worker"],
   "compilerOptions": {
+    "strict": true,
     "allowJs": true,
-    "checkJs": false,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "moduleResolution": "bundler"
+    "moduleResolution": "bundler",
+    "types": ["$app/types", "node"],
+    "checkJs": true
   }
 }

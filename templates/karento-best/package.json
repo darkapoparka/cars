@@ -1,24 +1,43 @@
 {
   "name": "cars-template-karento-best",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --host 127.0.0.1 --port 6466 --strictPort",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host 127.0.0.1 --port 6466 --strictPort",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "qa": "node scripts/qa.mjs",
-    "prepare": "svelte-kit sync"
+    "test": "node --test tests/*.test.ts",
+    "format": "prettier --write src scripts tests *.ts *.json",
+    "format:check": "prettier --check src scripts tests *.ts *.json",
+    "prepare": "svelte-kit sync",
+    "test:ssr": "node scripts/validate-ssr.ts",
+    "test:browser": "node scripts/validate-interactions.ts",
+    "test:visual": "node scripts/validate-browser.ts",
+    "test:smoke": "node scripts/validate-smoke.ts",
+    "qa": "node scripts/qa.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "6.0.0",
     "@sveltejs/kit": "3.0.1",
     "@sveltejs/vite-plugin-svelte": "7.3.1",
+    "@types/node": "25.5.0",
     "cheerio": "1.2.0",
+    "pixelmatch": "7.2.0",
+    "playwright": "1.60.0",
+    "prettier": "3.8.1",
+    "prettier-plugin-svelte": "3.4.1",
+    "sharp": "0.35.5",
     "svelte": "5.57.2",
     "svelte-check": "4.7.6",
     "typescript": "6.0.3",
     "vite": "8.3.3"
+  },
+  "imports": {
+    "#lib/*": "./src/lib/*"
+  },
+  "engines": {
+    "node": "26.10.0"
   }
 }
