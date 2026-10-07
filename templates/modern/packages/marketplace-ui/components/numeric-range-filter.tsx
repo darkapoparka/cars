@@ -53,7 +53,7 @@ const NumericRangeField = ({
     </span>
     <Input
       aria-label={ariaLabel}
-      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-[var(--lead-site-accent-ring)] group-focus-within:text-zinc-950 md:text-base"
+      className="h-14 rounded-xl border-transparent bg-zinc-100 pt-5 pb-1 text-base text-transparent tabular-nums shadow-none hover:bg-zinc-200/70 focus-visible:border-[var(--lead-site-accent)] focus-visible:bg-white focus-visible:text-zinc-950 focus-visible:ring-2 focus-visible:ring-ring/15 focus-visible:ring-offset-0 group-focus-within:text-zinc-950 md:text-base"
       id={fieldId}
       inputMode="numeric"
       max={maximum}
