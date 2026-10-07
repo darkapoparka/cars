@@ -13,10 +13,20 @@ category tabs, horizontal filter pills and photo-led inventory share one screen.
 The native icon row offers cars, motorbikes, e-bikes, motorhomes and trucks & more.
 Used/New condition choices live inside Filters. Category selections retain their
 own filters; categories without sample stock show an honest empty state.
-On Cars and Services, the logo header and search scroll with the page. Only the
-category tabs and quick-filter pills stay pinned at the top while browsing.
-The raised white tab rail retains its spacing and shadow. Detail and editor
-headers remain sticky so Back and dismissal controls stay available.
+On Cars and Services, the logo header and search scroll with the page. On Cars,
+the category tabs also scroll away, leaving only the quick-filter pills pinned
+above a white results sheet with rounded upper corners on phones. Applying
+filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
+area, including short and empty result lists. Services retains its pinned category
+tabs and quick-filter pills. Its phone category rail sits flush below search;
+the rail's shadow is clipped above the tabs and retained below them. The service
+list uses the same white sheet, 24px upper corners and 16px top spacing as Cars.
+Phone service cards retain their artwork and use the lighter car-card edge and
+subtle shadow. The raised white tab rail retains its spacing and
+shadow. Cancelling an editor or closing sorting restores the opener and the saved
+browsing position. Detail and editor headers remain sticky so Back and dismissal controls
+stay available. The sort dialog uses a concise localized title and keeps 48px
+close and option targets on small screens.
 The bottom navigation is a centered floating Cars / Services / Contact dock,
 capped at 204px with at least 16px side gutters, 24px corners and a restrained
 shadow. At normal text size it is 48px tall. The three equal-width links retain
@@ -52,27 +62,38 @@ Phones keep their existing header, floating dock, spacing and navigation behavio
 
 Desktop inventory uses compact, natural-width pills for Year, Mileage, Fuel,
 Gearbox, Body type and Condition in a soft gray sticky rail. White 36px faces
-sit inside 44px targets; applied criteria use the existing orange accent. A dark
-All filters pill sits at the end of the rail, with a count of applied criteria.
+sit inside 44px targets; applied criteria use the existing orange accent. All
+filters stays neutral with a quiet count badge, alongside a matching Sort pill
+at the right end of the rail. Clear is a small labelled icon when criteria apply.
 The rail wraps when needed without a horizontal separator. Mileage, Gearbox and
 Body type open and focus their actual fields in More, using the filter editor's
-existing draft and apply flow. Make and Price remain in the hero fields; Clear
-sits beside the stock count and sorting. The inventoryDesktop presentation is
+existing draft and apply flow. Make and Price remain in the hero fields. The
+cards follow the rail directly; the extra stock heading and duplicate count are
+removed. Desktop browsing accounts for the rail's actual height when it wraps.
+The inventoryDesktop presentation is
 opt-in; phone pills and Services retain their existing rails and appearance.
 
 Backgrounds use the same roles across routes and viewport sizes:
 `colors.background` for the continuous white page canvas, header, sticky page
 controls, cards, information surfaces and overlays; `colors.controlSurface` for
-fields and secondary actions. Inactive quick-filter pills use the white page token
-with a soft shadow and transparent border. Applied or selected pills invert the
+fields and secondary actions. Inactive quick-filter
+pills use the white page token with a soft shadow and transparent border. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
-matches the fill, without a shadow. Both states retain the same geometry and
-48px targets.
+matches the fill, without a shadow. Phone quick pills use 36px faces, 14px labels
+and at least 44px tap targets. Their lighter shadow keeps them secondary to the
+raised category rail; the regular phone rows retain 16px above and below each
+face. Both selected and inactive pills retain the same geometry. Desktop
+inventory keeps 36px faces and 44px targets; other desktop pill rows retain their
+40px faces and 48px targets.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
-White vehicle cards use a shallow neutral shadow and a transparent border,
-retaining their geometry while separating each listing from the white canvas.
+White vehicle cards use a faint 1px `colors.cardLine` edge and a low-opacity
+neutral shadow, retaining their geometry while separating each listing from the
+white canvas. On phones, a `colors.background` results sheet sits beneath the
+quick pills with 24px upper corners, a quiet top shadow and 16px before the first
+card. The list retains the page's natural scroll; the pill row stays sticky above
+it. The edge token has a corresponding dark-theme value.
 Service and import cards, Contact panels and enquiry starters retain the same
 1px `colors.line` border. Existing corner radii and padding remain.
 
@@ -247,11 +268,28 @@ vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
 700px; desktop retains its original typography and framed detail footer.
 
-Contact puts rounded grey Call us / Visit us actions on the shared white page
-canvas below the logo header. The enquiry form sits in a white outlined card, centered within
-620px on wider screens. Verified phone and directions enable the native links;
+On phones, Contact opens with a concise heading and one-line description, then
+compact rounded Call us / Write to us buttons in one row, using the existing
+illustrations at 32px inside 52px targets. A compact message card has an input-style
+prompt and previews the current message. Both Write to us and this card open the
+same full-screen enquiry overlay, with native autofocus on the message field.
+Close, Escape and browser Back dismiss it and return focus to the opener; edits
+remain intact. The overlay header stays visible above its scrollable form.
+The form has 16px input text, 48px fields and a rounded submit button below the
+final field. Phone and email share a row from 380px and stack on narrower phones.
+Contact details and the message save together as a local draft; the form does not
+transmit enquiries. The location card follows
+with the optically centered conceptual showroom illustration, configured address
+and a rounded Visit us button; example locations remain labelled as examples.
+Opening hours only appear when configured. The floating dock hides while the
+mobile keyboard is open, and the page leaves scroll space below the location card.
+Verified phone and directions enable the links;
 missing details show inactive preview actions. Email is offered when configured.
-The compact Save enquiry draft button retains local storage and native validation.
+At 1024px and wider, Contact shares Home's image/header banner and rounded drawer.
+Its location panel and enquiry form use equal-height grid columns, with no fixed
+card height. `ShowroomContactPanel` shows a compact, lazy-loaded map, configured
+address, phone/email, opening hours and social links. The form grows with the
+panel while retaining local storage and native validation.
 
 The imported marketplace screens and taxonomy remain reference source. Old
 `/search` and `/results` entry links resolve to Cars. Fixture data and local storage
@@ -309,8 +347,18 @@ Keep source and build unchanged during acceptance.
 Brand boundaries are `src/lib/showroom.ts`, `src/app/layout.tsx`,
 `src/styles/tokens.stylex.ts`, `src/lib/catalog.ts` and `public/`.
 The header uses a fictional SHOWROOM placeholder logo until an actual dealer logo is supplied.
-The showroom configuration holds verified logo, phone, email, address, directions
-and opening hours; absent contact details do not create invented call/map links.
+The showroom configuration holds verified logo, phone, email, address, directions,
+opening hours, `mapEmbedUrl`, and `socialLinks` entries with `label`/`href`.
+Use the dealer's Google Maps Share > Embed URL for `mapEmbedUrl`; no API key is
+embedded in the template. Phone and social destinations remain absent until
+supplied. Desktop shows a display-only example phone when `contactPreview` is
+enabled; it never creates a call action for that placeholder. Address and phone
+share the same small muted icons and row typography. The map CTA sits beside
+the showroom heading, keeping contact details together below it.
+The neutral desktop Contact demo uses the owner's existing Varna example address
+and labels it as an example. Set `contactPreview: false` when personalizing.
+A verified address, directions URL or map always takes precedence over that
+example, so a real dealer address is never paired with the demo map.
 Replace sample stock, imagery and captured detail facts for a real dealer proposal.
 Preserve truthful demo responses. Example services require dealer confirmation.
 

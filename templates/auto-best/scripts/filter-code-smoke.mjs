@@ -89,6 +89,9 @@ try {
         for (const [field, label] of [['make', 'BMW'], ['model', 'X6 M Sport']]) {
           const identityTrigger = main.locator(`[data-field="${field}"] button`);
           await identityTrigger.click();
+          await assertFocus(page, '.dn-filter-picker');
+          await page.keyboard.press('Tab');
+          await assertFocus(page, '.dn-filter-picker .dn-picker-close');
           await assertIdentity(page.locator('.dn-filter-picker'), field, label);
           await page.keyboard.press('Escape');
           assert(await main.isVisible(), 'Escape dismisses the nested picker before the native dialog');
@@ -97,7 +100,7 @@ try {
         await main.locator('[data-field=make] button').click();
         await main.locator('[data-field=model] button').click();
         await assertIdentity(page.locator('.dn-filter-picker'), 'model', 'X6 M Sport');
-        await assertFocus(page, '.dn-filter-picker input[type=search]');
+        await assertFocus(page, '.dn-filter-picker');
         await page.keyboard.press('Escape');
         await assertFocus(page, '#dn-listing-filter-dialog [data-field=model] button');
         await main.locator('[data-field=make] button').click();
@@ -124,7 +127,7 @@ try {
         await page.keyboard.press('Escape');
         const fuelTrigger = main.locator('[data-field=fuel] button');
         const picker = page.locator('.dn-filter-picker');
-        await fuelTrigger.click();
+        await fuelTrigger.press('Enter');
         await assertFocus(page, '.dn-filter-picker input[value="Дизел"]');
         await page.keyboard.press('ArrowUp');
         assert(await picker.locator('input[value="Бензин"]').isChecked(), 'Radio arrows browse without closing');
@@ -132,12 +135,12 @@ try {
         await page.keyboard.press('Escape');
         await picker.waitFor({ state: 'hidden' });
         await assertFocus(page, '#dn-listing-filter-dialog [data-field=fuel] button');
-        await fuelTrigger.click();
+        await fuelTrigger.press('Enter');
         await page.keyboard.press('ArrowUp');
         await page.keyboard.press('Enter');
         await picker.waitFor({ state: 'hidden' });
         assert.equal(await listingFormValue(main, 'fuel'), 'Бензин', 'Enter commits the browsed choice');
-        await fuelTrigger.click();
+        await fuelTrigger.press('Space');
         await page.keyboard.press('ArrowDown');
         await page.keyboard.press('Space');
         await picker.waitFor({ state: 'hidden' });
@@ -179,10 +182,23 @@ try {
         await assertFocus(page, '.dn-listing-results__filters');
         await page.locator('[data-facet=make]').click();
         await assertIdentity(main, 'make', 'BMW');
+        await assertFocus(page, '.dn-search-popover');
         await page.keyboard.press('Escape');
         await page.waitForFunction(() => document.activeElement === document.querySelector('[data-facet=make]'));
+        await page.locator('[data-facet=make]').press('Enter');
+        await assertFocus(page, '.dn-search-popover input[role=searchbox]');
+        await page.keyboard.press('Escape');
+        await main.waitFor({ state: 'hidden' });
+        await page.locator('[data-facet=price]').click();
+        await assertFocus(page, '.dn-search-popover');
+        await page.keyboard.press('Escape');
+        await main.waitFor({ state: 'hidden' });
+        await page.locator('[data-facet=price]').press('Space');
+        await assertFocus(page, '.dn-search-popover input[type=number]');
+        await page.keyboard.press('Escape');
+        await main.waitFor({ state: 'hidden' });
         const sort = page.locator('.dn-listing-sort [data-field=sort] button');
-        await sort.click();
+        await sort.press('Enter');
         await page.keyboard.press('ArrowDown');
         assert(await page.locator('.dn-filter-picker').isVisible(), 'Sorting remains open while browsing');
         await page.keyboard.press('Escape');

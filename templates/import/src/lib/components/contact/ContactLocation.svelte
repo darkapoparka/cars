@@ -2,6 +2,7 @@
 	import { MediaQuery } from 'svelte/reactivity';
 	import ArrowUpRight from '@lucide/svelte/icons/arrow-up-right';
 	import { site } from '$lib/config/site';
+	import { assetHref } from '$lib/utils/assets';
 	import { daynightContact } from '$lib/config/dealer';
 	import { dealerCopy } from '$lib/config/dealer-copy';
 	import Action from '$lib/components/common/Action.svelte';
@@ -9,8 +10,14 @@
 	let {
 		english = false,
 		layout = 'split',
-		desktopFramed = false
-	}: { english?: boolean; layout?: 'split' | 'stacked'; desktopFramed?: boolean } = $props();
+		desktopFramed = false,
+		showLogo = false
+	}: {
+		english?: boolean;
+		layout?: 'split' | 'stacked';
+		desktopFramed?: boolean;
+		showLogo?: boolean;
+	} = $props();
 	const desktop = new MediaQuery('(min-width: 768px)', false);
 	const copy = $derived(dealerCopy[english ? 'en' : 'bg']);
 	const labels = $derived(contactDesktopCopy[english ? 'en' : 'bg']);
@@ -22,7 +29,18 @@
 	class:contact-location--desktop-framed={desktopFramed}
 	aria-label={labels.location}
 >
-	<div class="contact-location__info">
+	<div class="contact-location__info" class:contact-location__info--branded={showLogo}>
+		{#if showLogo && desktop.current}
+			<img
+				class="contact-location__logo"
+				src={assetHref(site.identity.logo)}
+				alt={site.identity.name}
+				width="160"
+				height="46"
+				loading="lazy"
+				decoding="async"
+			/>
+		{/if}
 		<h2>{labels.visit}</h2>
 		<p class="contact-location__address">{copy.address}</p>
 		<p class="contact-location__appointment">{copy.appointment}</p>
@@ -117,6 +135,15 @@
 		}
 	}
 	@media (min-width: 768px) {
+		.contact-location__info--branded {
+			align-content: start;
+		}
+		.contact-location__logo {
+			width: 160px;
+			height: 46px;
+			object-fit: contain;
+			object-position: left center;
+		}
 		.contact-location--desktop-framed {
 			--bc-control: var(--bc-desktop-control-surface);
 			gap: var(--bc-space-2);

@@ -54,6 +54,7 @@
   const desktopMode = $derived(desktopPickers && desktopMatches && Boolean(desktopFacet));
   const dialogTitle = $derived(i18n.t(desktopPickers && !desktopInitialField ? 'm_546ebb8eb993' : 'm_32729e44de2d'));
   let returnFocus = $state<HTMLButtonElement>();
+  let keyboardOpen = $state(false);
   const mobile = new MediaQuery('(max-width: 767px)', false);
   const desktopIcons = { close: 'x', search: 'search', arrow: 'arrow-right' } as const;
 
@@ -89,6 +90,7 @@
 
   const openFilters = async (event: MouseEvent, field?: string) => {
     returnFocus = event.currentTarget as HTMLButtonElement;
+    keyboardOpen = event.detail === 0;
     desktopInitialField = field;
     if (desktopMode || mobile.current) { filtersOpen = true; return; }
     initializeDraft();
@@ -132,7 +134,7 @@
 
 {@render children(openFilters, filtersOpen)}
 {#if desktopMode}
-  <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopFacet} {returnFocus} />
+  <DesktopVehicleSearch {filters} bind:open={filtersOpen} initialField={desktopFacet} {returnFocus} {keyboardOpen} />
 {:else if mobile.current}
   <MobileListingFilters {filters} bind:open={filtersOpen} {returnFocus} focusSearch={desktopInitialField === 'search'} />
 {:else}

@@ -15,6 +15,7 @@
 	import YouTubeSection from '$lib/components/common/YouTubeSection.svelte';
 	import { aboutVideos, youtubeChannelHref } from '$lib/data/about-videos';
 	import ArticleCard from '$lib/components/blog/ArticleCard.svelte';
+	import HomeMobileEditorial from './HomeMobileEditorial.svelte';
 	let { data }: { data: ReturnType<typeof homePageData> } = $props();
 	const mobile = new MediaQuery('(max-width: 767.98px)', false);
 	const copy = $derived(homeDiscoveryCopy[data.locale]);
@@ -110,40 +111,47 @@
 				>{/each}
 		</div>
 	</section>
-	<YouTubeSection videos={aboutVideos} {english} channelHref={youtubeChannelHref} />
-	{#if data.reviewItems.length}
+	<HomeMobileEditorial {data} />
+	<div class="home-desktop-editorial">
+		<YouTubeSection videos={aboutVideos} {english} channelHref={youtubeChannelHref} />
+		{#if data.reviewItems.length}
+			<section class="site-section site-container site-stack">
+				<header class="home-section-heading">
+					<h2 class="site-heading home-section-title">
+						{copy.reviews}
+					</h2>
+				</header>
+				<!-- Keyboard focus lets readers scroll the review rail with arrow keys. -->
+				<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
+				<div class="home-reviews" tabindex="0" role="region" aria-label={copy.reviews}>
+					{#each data.reviewItems as review (review.name)}<ReviewCard
+							{review}
+							{english}
+							compactRole={copy.customer}
+						/>{/each}
+					<HomeBrowseCard
+						href={localized('/reviews')}
+						label={copy.viewAll}
+						context={copy.reviews}
+					/>
+				</div>
+			</section>
+		{/if}
+		<ActionBand copy={data.copy} variant="consultation" />
 		<section class="site-section site-container site-stack">
 			<header class="home-section-heading">
 				<h2 class="site-heading home-section-title">
-					{copy.reviews}
+					{copy.guides}
 				</h2>
 			</header>
-			<!-- Keyboard focus lets readers scroll the review rail with arrow keys. -->
+			<!-- Keyboard focus lets readers scroll the article rail with arrow keys. -->
 			<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-			<div class="home-reviews" tabindex="0" role="region" aria-label={copy.reviews}>
-				{#each data.reviewItems as review (review.name)}<ReviewCard
-						{review}
-						{english}
-						compactRole={copy.customer}
-					/>{/each}
-				<HomeBrowseCard href={localized('/reviews')} label={copy.viewAll} context={copy.reviews} />
+			<div class="home-news" tabindex="0" role="region" aria-label={copy.guides}>
+				{#each data.posts as post (post.slug)}<ArticleCard {post} {english} compact />{/each}
+				<HomeBrowseCard href={localized('/blog')} label={copy.allGuides} context={copy.guides} />
 			</div>
 		</section>
-	{/if}
-	<ActionBand copy={data.copy} variant="consultation" />
-	<section class="site-section site-container site-stack">
-		<header class="home-section-heading">
-			<h2 class="site-heading home-section-title">
-				{copy.guides}
-			</h2>
-		</header>
-		<!-- Keyboard focus lets readers scroll the article rail with arrow keys. -->
-		<!-- svelte-ignore a11y_no_noninteractive_tabindex -->
-		<div class="home-news" tabindex="0" role="region" aria-label={copy.guides}>
-			{#each data.posts as post (post.slug)}<ArticleCard {post} {english} compact />{/each}
-			<HomeBrowseCard href={localized('/blog')} label={copy.allGuides} context={copy.guides} />
-		</div>
-	</section>
+	</div>
 </main>
 
 <style>
@@ -248,6 +256,9 @@
 		}
 	}
 	@media (max-width: 767.98px) {
+		.home-desktop-editorial {
+			display: none;
+		}
 		.home-brands .home-mobile-browse,
 		.home-types .home-mobile-browse {
 			display: grid;

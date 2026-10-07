@@ -45,4 +45,12 @@ npm run build
 npm start
 ```
 
+Isolated QA outputs selected with `NEXT_DIST_DIR` ending in `next-check`,
+`.next-build*` or `.next-qa*` do not retain production Webpack or Turbopack
+compiler caches. These checks use a new output directory for each run, so the
+cache cannot speed up the next check. Development caches and ordinary `.next`
+builds keep their existing behavior. Inactive generated QA output can be
+removed after its preview and checks have finished; retain source, lockfiles,
+screenshots, reports and recovery evidence.
+
 The current inventory is fixture-backed. Replace `lib/data.ts` with a typed API adapter without changing the page contracts.

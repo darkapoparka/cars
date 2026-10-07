@@ -9,7 +9,7 @@ export const geometry = stylex.defineVars({
   inset: '8px',
 });
 
-/** One desktop size for Buy, Sell, Leasing and Services hero controls. */
+/** Shared desktop sizing and pill surfaces; form widths fit each journey's controls. */
 export const desktopHero = stylex.create({
   container: {width: '100%', maxWidth: {[media.desktop]: geometry.width, default: null}, marginInline: 'auto'},
   bar: {width: '100%', maxWidth: {[media.desktop]: geometry.width, default: null}, minHeight: {[media.desktop]: geometry.barHeight, default: null}, marginInline: 'auto', paddingBlock: {[media.desktop]: geometry.inset, default: null}, paddingInline: {[media.desktop]: geometry.inset, default: null}, gap: {[media.desktop]: geometry.inset, default: null}},

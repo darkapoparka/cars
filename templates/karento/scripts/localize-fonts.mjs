@@ -1,0 +1,31 @@
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const source = 'https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap';
+const response = await fetch(source, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36' } });
+if (!response.ok) throw new Error(`Font stylesheet HTTP ${response.status}`);
+let css = await response.text();
+const fonts = [...new Set([...css.matchAll(/url\((https:\/\/fonts\.gstatic\.com\/[^)]+)\)/g)].map(match => match[1]))];
+const manifest = JSON.parse(await readFile(path.join(root, 'provenance/capture.json'), 'utf8'));
+await mkdir(path.join(root, 'static/assets/fonts/urbanist'), { recursive: true });
+for (const url of fonts) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Font HTTP ${res.status}`);
+  const bytes = Buffer.from(await res.arrayBuffer());
+  const local = '/assets/fonts/urbanist/' + new URL(url).pathname.split('/').at(-1);
+  await writeFile(path.join(root, 'static', local), bytes);
+  css = css.replaceAll(url, local);
+  manifest.files.push({ url, path: 'static' + local, bytes: bytes.length, sha256: createHash('sha256').update(bytes).digest('hex'), kind: 'font' });
+}
+const localCss = '/assets/css/vendors/urbanist.css';
+await writeFile(path.join(root, 'static', localCss), css);
+manifest.files = manifest.files.filter(file => file.path !== 'static' + localCss);
+manifest.files.push({ url: source, path: 'static' + localCss, bytes: Buffer.byteLength(css), sha256: createHash('sha256').update(css).digest('hex'), kind: 'font-css' });
+const mainPath = path.join(root, 'static/assets/css/main.css');
+const main = await readFile(mainPath, 'utf8');
+await writeFile(mainPath, main.replaceAll(source, localCss));
+manifest.fontsLocalizedAt = new Date().toISOString();
+await writeFile(path.join(root, 'provenance/capture.json'), JSON.stringify(manifest, null, 2) + '\n');
+console.log(`Localized Urbanist: ${fonts.length} font files`);

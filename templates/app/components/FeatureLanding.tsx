@@ -50,17 +50,16 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   const [quotePicker, setQuotePicker] = useState(false);
   const [quoteSelection, setQuoteSelection] = useState<QuoteSelection>({car: null, custom: false});
   const [sellIntent, setSellIntent] = useState<SellIntent | null>(null);
-  const [sellChoice, setSellChoice] = useState<SellIntent>('sale');
   const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
   function start(intent: SellIntent = 'sale') {
-    if (kind === 'sell') {setSellChoice(intent); setSellIntent(intent); return;}
+    if (kind === 'sell') {setSellIntent(intent); return;}
     if (kind === 'finance') {setLoginOpen(true); return;}
     router.push(`/${kind}/details`);
   }
   const desktopControl = kind === 'finance'
     ? <FinanceQuoteHero selection={quoteSelection} pickerOpen={quotePicker && financeView === 'cars'} onChooseCar={() => {setQuotePicker(true); setFinanceView('cars');}}/>
     : kind === 'sell'
-      ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} intent={sellChoice} onIntentChange={setSellChoice} onStart={() => start(sellChoice)} expanded={sellIntent !== null}/>
+      ? <SellQuoteHero car={sellCar} onCarChange={setSellCar} onStart={() => start()} expanded={sellIntent !== null}/>
       : serviceSearch ? <ServiceSearchField state={serviceSearch} onDark desktopHero/> : null;
   return <div {...stylex.props(s.screen)}>
     {alternative ? <div {...stylex.props(s.alternativeHeader)}><PageHeader compact title={tx(current.mobileTitle).replace(/\.$/, '')} backHref="/services" backLabel="Back to services" action={<IconButton href="/saved" label={tx('Saved cars')} icon={Heart}/>}/></div> : null}
@@ -74,7 +73,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
     </main></LandingContentFrame>
     <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
-    {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={intent => {setSellChoice(intent); setSellIntent(intent);}} onClose={() => setSellIntent(null)}/> : null}
+    {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={setSellIntent} onClose={() => setSellIntent(null)}/> : null}
   </div>;
 }
 const s = stylex.create({

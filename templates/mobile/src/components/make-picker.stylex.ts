@@ -322,5 +322,8 @@ export const pickerStyles = stylex.create({
   },
   empty: { padding: 24, fontSize: 14, color: colors.muted },
   logo: (size: number) => ({ width: size, height: size, objectFit: 'contain', flexShrink: 0 }),
+  blendLogo: {
+    mixBlendMode: { default: 'normal', '@media (min-width: 1024px)': 'multiply' },
+  },
   fallback: { width: 40, flexShrink: 0 },
 });

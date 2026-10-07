@@ -91,7 +91,13 @@ export function ShowroomContactArtwork({ name }: { name: 'call' | 'visit' | 'enq
   );
 }
 
-export function ShowroomContactCards({ formId, onWrite }: { formId: string; onWrite: () => void }) {
+export function ShowroomContactCards({
+  enquiryOpen,
+  onWrite,
+}: {
+  enquiryOpen: boolean;
+  onWrite: (button: HTMLButtonElement) => void;
+}) {
   const { t } = useLocale();
   const call = (
     <>
@@ -124,8 +130,9 @@ export function ShowroomContactCards({ formId, onWrite }: { formId: string; onWr
         data-contact-option="write"
         data-contact-enquiry-trigger
         type="button"
-        aria-controls={formId}
-        onClick={onWrite}
+        aria-haspopup="dialog"
+        aria-expanded={enquiryOpen}
+        onClick={(event) => onWrite(event.currentTarget)}
         {...stylex.props(s.card)}
       >
         <ShowroomContactArtwork name="enquiry" />

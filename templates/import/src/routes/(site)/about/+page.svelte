@@ -106,7 +106,7 @@
 		</section>
 	</div>
 	<section class="site-section site-container site-desktop-only">
-		<ContactLocation {english} desktopFramed />
+		<ContactLocation {english} desktopFramed showLogo />
 	</section>
 	<section class="site-section site-container about-contact site-mobile-only">
 		<ContactBanner {english} title={`${copy.visitLabel} ${data.site.identity.name}`} />

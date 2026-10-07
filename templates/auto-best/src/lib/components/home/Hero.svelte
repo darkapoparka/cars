@@ -34,7 +34,17 @@
   }
 
   @media (min-width: 992px) {
-    .dn-hero { background: var(--dn-theme-hero-surface-deep); }
+    .dn-hero { --dn-home-car-height: clamp(128px, 11.111vw, 184px); background: var(--dn-theme-hero-surface-deep); }
+    /* Normalize the painted height rather than the transparent image frame. */
+    .dn-hero :global(.dn-campaign-vehicles__car) { --car-size: calc(var(--dn-home-car-height) / var(--art-body-height-ratio)); }
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .dn-hero { --dn-home-car-height: 72px; }
+  }
+
+  @media (min-width: 1200px) {
+    .dn-hero :global(.dn-campaign-vehicles) { --side-room: max(0px, calc((100% - var(--dn-hero-center-width)) / 2 - var(--dn-space-6))); }
   }
 
   .dn-hero__title-mobile {

@@ -242,6 +242,7 @@ try {
     await homeTrigger.click();
     for (const view of ['make','body','price','fuel','mileage','year']) {
       await homeRow(view).click();
+      await home.locator('.dn-quick-search__option').first().waitFor({ state: 'visible' });
       assert(await home.locator('.dn-quick-search__option').count(), 'Each Home control opens its own choices');
       await page.keyboard.press('Escape');
       await homeRow(view).waitFor({ state: 'visible' });

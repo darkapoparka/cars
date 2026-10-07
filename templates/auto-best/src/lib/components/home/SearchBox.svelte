@@ -72,7 +72,13 @@
         <HomeBrowseBox />
       </div>
     </EntryCard>
-
+    {#if budgetCaps.length}
+      <nav class="dn-search__desktop-budgets" aria-label={i18n.t('m_dea1661dff21')}>
+        {#each budgetCaps as cap (cap)}
+          <a class="dn-compact-control dn-quick-pill dn-search__budget" href={i18n.href(resolve(`/listing-grid?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+        {/each}
+      </nav>
+    {/if}
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label={i18n.t("m_dea1661dff21")}>
     {#each budgetCaps as cap (cap)}
@@ -100,6 +106,7 @@
 
   .dn-search__mobile-modes,
   .dn-search__import,
+  .dn-search__desktop-budgets,
   .dn-search__mobile-shortcuts {
     display: none;
   }
@@ -110,6 +117,12 @@
 
   @media (min-width: 768px) {
     .dn-search-wrap { min-height: calc(var(--dn-route-hero-height) - var(--dn-home-search-top)); padding-bottom: var(--dn-space-8); }
+    .dn-search__desktop-budgets { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
+    .dn-search__budget { --dn-compact-control-surface: transparent; --dn-compact-control-ink: var(--dn-text-on-ink); padding-inline: var(--dn-space-4); font-size: var(--dn-text-meta); }
+    .dn-search__budget::before { border: 1px solid var(--dn-line-on-ink); }
+    .dn-search__budget:is(:hover, :focus-visible) { --dn-compact-control-surface: color-mix(in srgb, var(--dn-white) 8%, transparent); }
+    .dn-search__budget:is(:hover, :focus-visible)::before { border-color: var(--dn-muted-on-ink); }
+    .dn-search__budget:focus-visible { outline: 2px solid var(--dn-white); outline-offset: 2px; }
     .dn-search-wrap :global(.dn-search) {
       padding: 0;
       border: 0;

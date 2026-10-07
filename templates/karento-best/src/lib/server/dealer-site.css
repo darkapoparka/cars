@@ -1,0 +1,313 @@
+/* Preserve the reference styling; make its existing menus keyboard-accessible. */
+/* Restrained motion: stable surfaces, immediate content, deliberate controls. */
+html { scroll-behavior: auto; }
+a, button, .btn, .card, [class*="card-"], img, input, select, textarea, span, h4 {
+  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-duration: 140ms;
+  transition-timing-function: ease-out;
+}
+.hover-up, .hover-up:hover, a.icon-socials:hover, .mobile-social-icon a:hover {
+  transform: none;
+}
+.mobile-social-icon a:hover { margin-top: 0; }
+.jump, .blur-move, .shape-1, .shape-2, .shape-3, #scrollUp,
+.spinning-coin-fall::before, .sticky-bar.stick {
+  animation: none !important;
+}
+.header.sticky-bar, .header.sticky-bar.stick {
+  position: sticky;
+  top: 0;
+  transform: none;
+  transition: box-shadow 140ms ease-out;
+}
+.card-journey-small:hover, .card-journey-big:hover, .card-news:hover,
+.card-home-link:hover, .card-why-choose-us:hover {
+  box-shadow: none;
+  border-color: var(--bs-neutral-400);
+}
+.karento-static-brands .carouselTicker__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: auto;
+  padding: 0;
+  margin: 0;
+}
+.karento-static-brands .carouselTicker__item { float: none; margin: 0; }
+.karento-mobile-account { padding: 20px; border-top: 1px solid var(--bs-neutral-200); }
+.karento-mobile-account a { color: var(--bs-neutral-1000); font-weight: 600; }
+.karento-demo-signout {
+  border: 0;
+  background: transparent;
+  padding: 8px 10px;
+  color: var(--bs-neutral-500);
+  font-size: 13px;
+}
+.karento-demo-signout[hidden] { display: none; }
+@media (min-width: 1200px) {
+  .header .container-fluid { padding-inline: clamp(24px, 2.5vw, 60px); }
+  .header .main-header { gap: 20px; min-height: 76px; }
+  .header .main-header .header-left { width: auto; flex: 1; min-width: 0; }
+  .header .main-header .header-left .header-nav { width: auto; flex: 1; min-width: 0; }
+  .header .main-header .header-right { width: auto; min-width: 0; flex: 0 0 auto; gap: 12px; }
+  .header .main-menu { display: flex; align-items: center; flex-wrap: nowrap; }
+  .header .main-menu > li { padding: 0 3px; flex: 0 0 auto; }
+  .header .main-menu > li > a { white-space: nowrap; }
+  .header .main-header .header-right .karento-header-actions {
+    display: flex !important;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+  .karento-header-actions > .d-none.d-xxl-inline-block {
+    display: flex !important;
+    align-items: center;
+    margin: 0 !important;
+  }
+  .karento-header-actions .btn-signin { padding-inline: 12px; }
+  .karento-header-actions .btn-mode { width: 44px; height: 44px; padding: 10px; margin: 0 !important; }
+  .karento-header-actions .karento-demo-signout { white-space: nowrap; }
+}
+.karento-dashboard-notice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border: 1px solid var(--bs-neutral-200);
+  border-radius: 8px;
+  color: var(--bs-neutral-500);
+  font-size: 14px;
+}
+.karento-dashboard-notice strong { color: var(--bs-neutral-1000); }
+.dashboard-sidebar-menu a[aria-current="page"] { color: var(--bs-neutral-1000); font-weight: 700; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.karento-how-it-works {
+  padding: 72px 0;
+}
+.karento-process-heading {
+  margin-bottom: 36px;
+}
+.karento-process-label {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.karento-process-heading h3 {
+  margin: 18px 0 12px;
+}
+.karento-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.karento-process-step {
+  min-width: 0;
+  text-align: center;
+}
+.karento-process-image {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.karento-process-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1672 / 941;
+}
+.karento-process-number {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--bs-brand-2);
+  color: #101010;
+  font-size: 14px;
+  font-weight: 700;
+}
+.karento-process-step h6 {
+  margin: 18px 0 10px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+.karento-process-step h6 a {
+  color: inherit;
+}
+.karento-process-step p {
+  max-width: 28ch;
+  margin: 0 auto;
+}
+.karento-process-step a:focus-visible {
+  outline: 2px solid var(--bs-neutral-1000);
+  outline-offset: 4px;
+}
+@media (max-width: 991px) {
+  .karento-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+}
+@media (max-width: 640px) {
+  .karento-how-it-works {
+    padding: 48px 0;
+  }
+  .karento-process-heading {
+    margin-bottom: 28px;
+  }
+  .karento-process-heading h3 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .karento-process-grid {
+    column-gap: 14px;
+  }
+  .karento-process-number {
+    left: 8px;
+    bottom: 8px;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .karento-process-step h6 {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .karento-process-step p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+.section-cta-4[data-home-section-source="index-2"] {
+  padding-top: 64px;
+  padding-bottom: 56px;
+}
+.section-cta-4[data-home-section-source="index-2"] .row.mt-60,
+.section-cta-4[data-home-section-source="index-2"] .karento-system-stats.mt-60 {
+  margin-top: 32px !important;
+}
+.section-cta-4[data-home-section-source="index-2"] .col-lg-4 > .p-5 {
+  padding: 28px !important;
+  gap: 16px !important;
+}
+.section-cta-4[data-home-section-source="index-2"] .row > .col-lg-4.text-center > img {
+  max-height: 300px;
+  width: auto;
+  max-width: 100%;
+}
+.section-cta-4[data-home-section-source="index-2"] .row {
+  align-items: center;
+  row-gap: 24px;
+}
+.karento-system-stats.pt-30.pb-30 {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+.karento-system-stats h3 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+.karento-system-stats .text-lg-bold {
+  font-size: 16px;
+  line-height: 24px;
+}
+.karento-system-stats .justify-content-md-start {
+  justify-content: center !important;
+}
+.karento-system-stats .text-md-start {
+  text-align: center !important;
+}
+.header .main-menu > li:focus-within > .sub-menu,
+.header .main-menu > li:focus-within > .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  section[data-home-section-source="index-2"] .block-testimonials {
+    padding-inline: 12px;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  section[data-home-section-source="index-2"] .container-testimonials {
+    width: 100%;
+    min-width: 0;
+  }
+  section[data-home-section-source="index-2"] .swiper-group-journey .swiper-slide {
+    width: 100%;
+  }
+  section[data-home-section-source="index-2"] .card-testimonial {
+    max-width: none;
+    padding: 24px;
+  }
+  section[data-home-section-source="index-2"] .card-testimonial .card-top {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .dashboard .flex-fill {
+    min-width: 0;
+  }
+  .dashboard .flex-fill .text-truncate {
+    min-width: 0;
+  }
+  .dashboard .card-header > .d-flex {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .dashboard .card-header .fillter {
+    min-width: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.header .main-menu a:focus-visible,
+.mobile-menu a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* The reference's 170px logo + 150px controls overflow a 320px screen. */
+@media (max-width: 360px) {
+  .header .main-header .header-left .header-logo {
+    min-width: 0;
+    width: 150px;
+    max-width: 150px;
+    flex: 0 0 150px;
+  }
+  .header .main-header .header-left .header-logo img {
+    max-width: 100%;
+  }
+  .header .main-header .header-nav {
+    display: none;
+  }
+  .header .main-header .header-right {
+    min-width: 100px;
+    width: 100px;
+    margin-left: auto;
+  }
+}

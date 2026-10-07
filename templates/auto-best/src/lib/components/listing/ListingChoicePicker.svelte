@@ -2,11 +2,13 @@
   import { Popover } from 'bits-ui';
   import { tick } from 'svelte';
   import type { Attachment } from 'svelte/attachments';
+  import { focusPopover } from '$lib/ui/focus';
   import { getI18n } from '$lib/locale/context';
   import { listingSelectionHas, listingTypeCount } from '$data/listing';
   import { listingChoiceOptions, listingChoiceLabel, listingChoiceTitle, listingChoiceValue, withListingChoice, listingMakeForModel, listingOptionsWithCurrent, listingSuggestionMatcher, type ListingChoiceField, type ListingDraft } from '$data/listing-draft';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   let { field, draft = $bindable(), label, placeholder, displayValue, showCounts = false, showLabel = true, compact = false, submitValues = true, resetKey = 0, onchange, oncommit }: {
     field: ListingChoiceField; draft: ListingDraft; label?: string; placeholder?: string; displayValue?: string;
@@ -24,6 +26,7 @@
   let trigger = $state<HTMLButtonElement | null>(null);
   let focusOnClose: HTMLElement | null = null;
   let keyboardBrowsing = false;
+  let keyboardOpen = false;
   let portalTarget = $state<HTMLElement>();
   // A native dialog's top layer must also own its nested picker and focus targets.
   const attachRoot: Attachment<HTMLDivElement> = node => { portalTarget = node.closest('dialog') ?? node.closest<HTMLElement>('.dn-app-shell') ?? undefined; };
@@ -61,7 +64,7 @@
         if (option.top < list.top) optionsList.scrollTop -= list.top - option.top;
         else if (option.bottom > list.bottom) optionsList.scrollTop += option.bottom - list.bottom;
       }
-      target?.focus({ preventScroll: true });
+      focusPopover(picker, target ?? null, keyboardOpen);
     });
   }
   function restoreFocus(event: Event) {
@@ -90,7 +93,8 @@
 <div class="dn-identity-field" class:compact data-field={field} {@attach attachRoot}>
   <span class:dn-sr-only={!showLabel} class="dn-field-label" id={id + '-label'}>{title}</span>
   <Popover.Root bind:open onOpenChange={value => { if (value) { search = ''; browsedValue = null; keyboardBrowsing = false; focusOnClose = trigger; } }}>
-    <Popover.Trigger bind:ref={trigger} type="button" class="dn-identity-trigger" aria-labelledby={id + '-label' + (selected.length ? ' ' + id + '-value' : '')}>
+    <Popover.Trigger bind:ref={trigger} type="button" class="dn-identity-trigger" aria-labelledby={id + '-label' + (selected.length ? ' ' + id + '-value' : '')}
+      onclick={event => { keyboardOpen = event.detail === 0; }} onkeydowncapture={event => { if (event.key === 'Enter' || event.key === ' ') keyboardOpen = true; }}>
       <span id={id + '-value'}>{summary}</span><Icon name="chevron-down" size={18} />
     </Popover.Trigger>
     <Popover.Portal to={portalTarget}>
@@ -98,7 +102,7 @@
         onOpenAutoFocus={focusPicker}
         onCloseAutoFocus={restoreFocus} onInteractOutside={interactOutside}
         onkeydowncapture={event => { keyboardBrowsing = event.key.startsWith('Arrow'); }} onpointerdowncapture={() => { keyboardBrowsing = false; }}>
-        <header class="dn-picker-header"><h3 id={id + '-title'}>{title}</h3><Popover.Close type="button" class="dn-picker-close dn-icon-button" aria-label={i18n.t('m_84305a580997')}><Icon name="x" size={18} /></Popover.Close></header>
+        <FilterPopoverHeader id={id + '-title'} {title} />
         {#if searchable}<label class="dn-picker-search"><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>{/if}
         <div bind:this={optionsList} class="dn-picker-options" role="group" aria-label={title}>
           <DesktopFilterChoice value="" label={optionLabel('')} checked={!checkedValue.length} {multiple} name={id + '-choice'} onchange={choose} />
@@ -126,15 +130,10 @@
   :global(.dn-identity-trigger:hover) { border-color: var(--dn-line-strong); }
   :global(.dn-identity-trigger:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .compact :global(.dn-identity-trigger) { min-height: var(--dn-identity-control-height, var(--dn-control-hit-height)); background: var(--dn-surface-subtle); padding-inline: var(--dn-space-3); }
-  :global(.dn-filter-picker) { z-index: 11002; width: min(380px, calc(100vw - 32px)); max-height: min(480px, var(--bits-popover-content-available-height, 480px)); padding: 0 var(--dn-space-4) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-shadow); display: flex; flex-direction: column; outline: none; }
-  .dn-picker-header { display: flex; flex: none; align-items: center; justify-content: space-between; gap: var(--dn-space-3); min-height: 64px; }
-  .dn-picker-header h3 { margin: 0; color: var(--dn-ink); font-size: var(--dn-text-body); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-control); }
-  :global(.dn-picker-close) { background-color: var(--dn-home-panel); color: var(--dn-ink); }
-  :global(.dn-picker-close:hover) { background-color: var(--dn-surface-hover); }
-  :global(.dn-picker-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
-  .dn-picker-search { display: flex; flex: none; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-hit-height); margin-bottom: var(--dn-space-2); padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-muted); }
+  :global(.dn-filter-picker) { z-index: 11002; width: min(380px, calc(100vw - 32px)); max-height: min(480px, var(--bits-popover-content-available-height, 480px)); padding: 0; border: 1px solid var(--dn-line); border-radius: var(--dn-radius); background: var(--dn-white); color: var(--dn-ink); box-shadow: var(--dn-shadow); display: flex; flex-direction: column; outline: none; }
+  .dn-picker-search { display: flex; flex: none; align-items: center; gap: var(--dn-space-2); min-height: var(--dn-control-hit-height); margin: 0 var(--dn-space-4) var(--dn-space-2); padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); color: var(--dn-muted); }
   .dn-picker-search input { width: 0; flex: 1; min-width: 0; padding: var(--dn-space-2) 0; border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-entry-font); font-size: var(--dn-text-body); outline: none; }
   .dn-picker-search:has(input:focus-visible) { outline: 1px solid var(--dn-focus); outline-offset: -1px; }
-  .dn-picker-options { min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+  .dn-picker-options { min-height: 0; margin: 0 var(--dn-space-4) var(--dn-space-4); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
   .dn-empty { padding: var(--dn-space-3); color: var(--dn-muted); font-size: var(--dn-text-meta); }
 </style>

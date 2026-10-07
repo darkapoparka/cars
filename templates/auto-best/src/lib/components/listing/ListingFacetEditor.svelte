@@ -12,10 +12,12 @@
   } from '$data/listing-draft';
   import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import DesktopFilterChoice from './DesktopFilterChoice.svelte';
 
-  let { field, draft = $bindable(), onChoose, contentElement = $bindable() }: {
+  let { field, draft = $bindable(), desktopChoices = false, onChoose, contentElement = $bindable() }: {
     field: ListingFacetField;
     draft: ListingDraft;
+    desktopChoices?: boolean;
     onChoose?: () => void;
     contentElement?: HTMLDivElement;
   } = $props();
@@ -41,6 +43,12 @@
   const budgetPresets = listingBudgetCaps().map(String);
   const yearPresets = listingFilterOptions.years.filter(Boolean).slice(-4);
 
+  function isSelected(value: string) {
+    if (field === 'equipment') return draft.equipment.includes(value as ListingDraft['equipment'][number]);
+    if (Array.isArray(selected)) return value ? listingSelectionHas(selected, value) : selected.length === 0;
+    return selected === value;
+  }
+
   function choosePreset(value: string) {
     if (field === 'price') draft.priceMax = value;
     else if (field === 'year') draft.yearMin = value;
@@ -48,6 +56,11 @@
   }
 
   function choose(value: string) {
+    if (field === 'equipment') {
+      const equipment = value as ListingDraft['equipment'][number];
+      draft.equipment = draft.equipment.includes(equipment) ? draft.equipment.filter(item => item !== equipment) : [...draft.equipment, equipment];
+      return;
+    }
     if (field === 'make' || field === 'model') {
       draft = toggleListingIdentity(draft, field, value);
       return;
@@ -55,7 +68,7 @@
     if (field === 'type') draft.type = value as ListingDraft['type'];
     else if (field === 'condition') draft.condition = value as ListingDraft['condition'];
     else if (field === 'sort') draft.sort = (value || 'default') as ListingDraft['sort'];
-    else if (field !== 'price' && field !== 'year' && field !== 'mileage_max' && field !== 'equipment') draft[field] = value;
+    else if (field !== 'price' && field !== 'year' && field !== 'mileage_max') draft[field] = value;
     onChoose?.();
   }
 </script>
@@ -64,7 +77,7 @@
   {#if mobile.current}<MobileActionIcon {name} {size} />{:else}<Icon name={name === 'close' ? 'x' : 'search'} {size} />{/if}
 {/snippet}
 
-<div class="dn-facet-editor" class:searchable>
+<div class="dn-facet-editor" class:searchable class:desktop-choices={desktopChoices}>
   {#if searchable}
     <div class="search-wrap">
       <div class="search-field dn-mobile-search-field">
@@ -101,12 +114,18 @@
       <fieldset>
         <legend class="dn-sr-only">{title}</legend>
         {#each choices as option (option)}
-          <label class="choice dn-mobile-filter-choice" hidden={!matches(optionLabel(option))}>
-            <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
-            {#if field === 'equipment'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
-            {:else if field === 'make' || field === 'model'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name={option ? field : undefined} value={option} checked={option ? listingSelectionHas(draft[field], option) : draft[field].length === 0} onchange={() => choose(option)} />
-            {:else}<input {@attach i18n.validation} type="radio" name={field} value={option} checked={selected === option} onclick={() => { if (selected === option) onChoose?.(); }} onchange={() => choose(option)} />{/if}
-          </label>
+          {#if desktopChoices && matches(optionLabel(option))}
+              <DesktopFilterChoice value={option} label={optionLabel(option)} name={field}
+                multiple={field === 'make' || field === 'model' || field === 'equipment'}
+                checked={isSelected(option)} onchange={choose} />
+          {:else if !desktopChoices}
+            <label class="choice dn-mobile-filter-choice" hidden={!matches(optionLabel(option))}>
+              <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
+              {#if field === 'equipment'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
+              {:else if field === 'make' || field === 'model'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name={option ? field : undefined} value={option} checked={isSelected(option)} onchange={() => choose(option)} />
+              {:else}<input {@attach i18n.validation} type="radio" name={field} value={option} checked={isSelected(option)} onclick={() => { if (selected === option) onChoose?.(); }} onchange={() => choose(option)} />{/if}
+            </label>
+          {/if}
         {/each}
       </fieldset>
       {#if !choices.some(option => matches(optionLabel(option)))}
@@ -128,6 +147,8 @@
   .content { min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 0 var(--dn-overlay-gutter) var(--dn-space-4); }
   .searchable .content { flex: 1; }
   fieldset { display: grid; gap: var(--dn-overlay-gap); padding: 0; margin: 0; border: 0; }
+  .desktop-choices fieldset { gap: 0; }
+  .desktop-choices .search-field { border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); }
   .choice { display: flex; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); cursor: pointer; }
   .choice[hidden] { display: none; }
   .choice > span { min-width: 0; overflow-wrap: anywhere; }

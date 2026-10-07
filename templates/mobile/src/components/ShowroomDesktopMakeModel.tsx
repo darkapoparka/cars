@@ -4,6 +4,7 @@ import { useId, useRef, useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
+import { useAppState } from '@/lib/store';
 import { showroomMakeOptions } from '@/lib/make-picker-options';
 import { modelGroupsFor, modelLabel, nativeCarMakes } from '@/lib/native-taxonomy';
 import { makeImages, popularMakes } from '@/lib/makes';
@@ -42,6 +43,8 @@ export function ShowroomDesktopMakeModel({
   dropdown?: boolean;
 }) {
   const { t } = useLocale();
+  const { theme } = useAppState();
+  const blendLogos = theme !== 'dark';
   const id = useId();
   const rootRef = useRef<HTMLDivElement>(null);
   const selections: Selection[] = [
@@ -274,13 +277,13 @@ export function ShowroomDesktopMakeModel({
                       {name === 'Any' ? (
                         <Icon name="grid" size={28} />
                       ) : makeImages[name] ? (
-                        <BrandLogo make={name} size={32} />
+                        <BrandLogo make={name} size={32} blend={blendLogos} />
                       ) : (
                         <span {...stylex.props(s.gridMark)}>{name.slice(0, 2).toUpperCase()}</span>
                       )}
                     </span>
                   ) : name !== 'Any' ? (
-                    <BrandLogo make={name} size={compact ? 32 : 28} />
+                    <BrandLogo make={name} size={compact ? 32 : 28} blend={blendLogos} />
                   ) : null}
                   <span {...stylex.props(s.makeName, grid && s.gridName)}>
                     <span
@@ -368,7 +371,7 @@ export function ShowroomDesktopMakeModel({
                     s.currentMake,
                 )}
               >
-                <BrandLogo make={selection.name} size={20} />
+                <BrandLogo make={selection.name} size={20} blend={blendLogos} />
                 {selection.name}
                 {selection.excluded && <span {...stylex.props(s.excluded)}>{t('Excluded')}</span>}
               </button>
@@ -392,7 +395,7 @@ export function ShowroomDesktopMakeModel({
               {...stylex.props(s.back)}
             >
               <Icon name="back" size={18} />
-              <BrandLogo make={current.name} size={24} />
+              <BrandLogo make={current.name} size={24} blend={blendLogos} />
               {current.name}
             </button>
           )}
@@ -402,7 +405,7 @@ export function ShowroomDesktopMakeModel({
           >
             {single && current ? (
               <>
-                <BrandLogo make={current.name} size={24} />
+                <BrandLogo make={current.name} size={24} blend={blendLogos} />
                 {current.name}
               </>
             ) : (

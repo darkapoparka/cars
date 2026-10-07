@@ -8,7 +8,7 @@ import { appPath, returningContext } from './locale-smoke-fixture.mjs';
 export async function verifyHomeBrowse(page, locale = 'bg') {
   const form = page.locator('.dn-home-browse');
   const field = name => form.locator(`[data-field="${name}"]`);
-  const menu = page.locator('.dn-home-browse-picker');
+  const menu = page.locator('.dn-home-browse-picker[data-state=open]');
   const save = () => menu.getByRole('button', { name: locale === 'bg' ? 'Запазете' : 'Save', exact: true }).click();
   const clear = () => menu.getByRole('button', { name: locale === 'bg' ? 'Изчисти' : 'Clear', exact: true }).click();
   const choice = value => menu.getByRole('checkbox', { name: value, exact: true });
@@ -16,6 +16,14 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   const open = async name => {
     await field(name).click();
     await menu.waitFor({ state: 'visible' });
+    await page.waitForFunction(() => document.activeElement === document.querySelector('.dn-home-browse-picker[data-state=open]'));
+    await page.waitForFunction(() => {
+      const picker = document.querySelector('.dn-home-browse-picker[data-state=open]');
+      if (!picker) return false;
+      const box = picker.getBoundingClientRect();
+      return box.width > 0 && box.x >= 15 && box.y >= 15 && box.right <= innerWidth - 15 && box.bottom <= innerHeight - 15;
+    }, undefined, { timeout: 5000 });
+    assert.notEqual(await field(name).evaluate(button => getComputedStyle(button).backgroundColor), 'rgba(0, 0, 0, 0)', 'An open selector retains its rounded surface');
     const frame = await menu.boundingBox();
     const viewport = page.viewportSize();
     assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= viewport.width - 15 && frame.y + frame.height <= viewport.height - 15, 'A selector and its footer must fit inside the viewport');
@@ -27,7 +35,13 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   };
 
   await open('make');
-  assert.equal(await menu.getByRole('searchbox').evaluate(input => input === document.activeElement), true);
+  assert.equal(await menu.evaluate(node => node === document.activeElement), true, 'Pointer opening leaves the search input neutral');
+  await page.keyboard.press('Escape');
+  await menu.waitFor({ state: 'hidden' });
+  await field('make').press('Enter');
+  await menu.waitFor({ state: 'visible' });
+  await page.waitForFunction(() => document.activeElement === document.querySelector('.dn-home-browse-picker[data-state=open] input[type=search]'));
+  assert.equal(await menu.getByRole('searchbox').evaluate(input => input === document.activeElement), true, 'Keyboard opening enters search');
   await choice('Audi').check();
   assert.deepEqual(await values('make'), [], 'A selector draft must not change Home before Save');
   await save();
@@ -40,7 +54,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   await open('price');
   await menu.locator('input[name=price_max]').fill('65000');
   await open('model');
-  assert.equal(await menu.getByRole('searchbox').evaluate(input => input === document.activeElement), true, 'Switching fields gives the new editor focus');
+  assert.equal(await menu.evaluate(node => node === document.activeElement), true, 'Pointer switching keeps the new input neutral');
   assert.deepEqual(await values('price_max'), [], 'Switching fields discards the previous editor draft');
   assert.equal(await choice('X6 M Sport').count(), 0, 'Models follow the saved makes');
   await choice('RS 6 Avant').check();
@@ -59,6 +73,24 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   await choice('RS 6 Avant').check();
   await save();
 
+  await open('body');
+  await menu.locator('input[type=radio][name=body][value=SUV]').check();
+  assert.deepEqual(await values('body'), [], 'Body style stays pending until Save');
+  await dismiss('body');
+  assert.deepEqual(await values('body'), [], 'Escape discards a pending body style');
+  await open('body');
+  await menu.locator('input[type=radio][name=body][value=Wagon]').check();
+  await save();
+  assert.deepEqual(await values('body'), ['Wagon']);
+  await open('body');
+  await clear();
+  await save();
+  assert.deepEqual(await values('body'), [], 'Clear restores every body style');
+  await open('body');
+  await menu.locator('input[type=radio][name=body][value=Wagon]').check();
+  await save();
+  const savedBodySummary = await field('body').locator('.dn-home-browse__value').innerText();
+
   await open('price');
   const minimum = menu.locator('input[name=price_min]');
   const maximum = menu.locator('input[name=price_max]');
@@ -76,12 +108,14 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   await save();
   assert.deepEqual(await values('price_min'), []);
   assert.deepEqual(await values('price_max'), ['80000']);
+  assert.equal(await field('body').locator('.dn-home-browse__value').innerText(), savedBodySummary, 'Saving Budget preserves the Body style label');
 
   await form.getByRole('button', { name: locale === 'bg' ? 'Търсете' : 'Search', exact: true }).press('Enter');
   await page.waitForURL(url => appPath(url.href) === '/listing-grid');
   const params = new URL(page.url()).searchParams;
   assert.deepEqual(params.getAll('make'), ['Audi']);
   assert.deepEqual(params.getAll('model'), ['RS 6 Avant']);
+  assert.equal(params.get('body'), 'Wagon');
   assert.equal(params.get('price_max'), '80000');
   assert.equal(params.has('price_min') || params.has('sort') || params.has('q'), false, 'Empty/default criteria stay out of the URL');
   await page.waitForLoadState('networkidle');
@@ -113,18 +147,32 @@ if (process.argv[1] && path.resolve(process.argv[1]) === path.resolve(import.met
         const rect = button.getBoundingClientRect();
         return { x: rect.x, y: rect.y, width: rect.width, height: rect.height };
       }));
-      assert.equal(geometry.length, 4);
+      assert.equal(geometry.length, 5);
       for (const button of geometry) {
         assert(button.width >= 44 && button.height >= 44, 'Every part of the bar remains a complete click target');
         assert(Math.abs(button.y - geometry[0].y) < 1, 'Desktop fields and search remain in one row');
       }
       assert.equal(await page.locator('.dn-search__desktop-form select').count(), 0);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+      const fields = form.locator('[data-field]');
+      assert.deepEqual(await fields.evaluateAll(buttons => buttons.map(button => getComputedStyle(button).backgroundColor)), Array(4).fill('rgba(0, 0, 0, 0)'), 'The resting bar is one white surface');
+      await fields.first().hover();
+      assert.notEqual(await fields.first().evaluate(button => getComputedStyle(button).backgroundColor), 'rgba(0, 0, 0, 0)', 'Hover reveals the rounded field surface');
+      await page.mouse.move(0, 0);
+      if (width >= 992) {
+        const cars = await page.locator('.dn-hero .dn-campaign-vehicles__car').evaluateAll(elements => elements.map(car => {
+          const style = getComputedStyle(car), box = car.getBoundingClientRect();
+          const scale = box.height / parseFloat(style.getPropertyValue('--art-height-ratio'));
+          return { height: scale * parseFloat(style.getPropertyValue('--art-body-height-ratio')), bottom: box.y + scale * parseFloat(style.getPropertyValue('--art-bottom-ratio')) };
+        }));
+        assert(Math.abs(cars[0].height - cars[1].height) < 1, 'Home cars have balanced painted heights');
+        assert(Math.abs(cars[0].bottom - cars[1].bottom) < 1, 'Home tyres share one baseline');
+      }
       await verifyHomeBrowse(page, locale);
       assert.deepEqual(errors, []);
       results.push({ engine, locale, width, height, passed: true });
       await context.close();
-      console.log(`PASS ${locale} ${width}: draft, dependent models, budget validation, keyboard, GET and result`);
+      console.log(`PASS ${locale} ${width}: make/model/body drafts, budget validation, surfaces, hero, keyboard, GET and result`);
     }
     await writeFile(`${output}/results.json`, JSON.stringify(results, null, 2));
   } finally { await browser.close(); }

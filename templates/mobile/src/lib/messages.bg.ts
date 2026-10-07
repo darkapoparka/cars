@@ -337,6 +337,7 @@ export const bgMessages: Record<string, string> = {
   'Local draft only. Nothing is sent.': 'Чернова на това устройство. Не се изпраща.',
   'Call us': 'Обади се',
   'Write to us': 'Пиши ни',
+  'Write a message': 'Напиши съобщение',
   'Contact us': 'Свържи се с нас',
   'Before your visit': 'Преди посещението',
   'How do I arrange a viewing?': 'Как да уговоря оглед?',

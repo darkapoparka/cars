@@ -2,6 +2,7 @@
   import { Popover } from 'bits-ui';
   import { tick, untrack } from 'svelte';
   import { MediaQuery } from 'svelte/reactivity';
+  import { focusPopover } from '$lib/ui/focus';
   import { resolve } from '$app/paths';
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
@@ -10,11 +11,12 @@
   import type { VehicleEquipment } from '$data/inventory';
   import Icon from '$components/ui/Icon.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import FilterPopoverHeader from './FilterPopoverHeader.svelte';
 
   type Field = Exclude<ListingFacetField, 'sort'>;
   type Choice = { field: Field; value: string; label: string; make: string };
-  let { filters, open = $bindable(false), initialField, returnFocus }: {
-    filters: ListingFilters; open: boolean; initialField?: string; returnFocus?: HTMLElement;
+  let { filters, open = $bindable(false), initialField, returnFocus, keyboardOpen = false }: {
+    filters: ListingFilters; open: boolean; initialField?: string; returnFocus?: HTMLElement; keyboardOpen?: boolean;
   } = $props();
   const i18n = getI18n();
   const fields: readonly Field[] = ['make', 'model', 'price', 'year', 'type', 'body', 'fuel', 'transmission', 'mileage_max', 'condition', 'version', 'equipment'];
@@ -28,7 +30,7 @@
   let search = $state('');
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
-  let dialogTitle = $state<HTMLHeadingElement | null>(null);
+  let picker = $state<HTMLDivElement | null>(null);
   let restoreFocusOnClose = true;
   const matchesSearch = $derived(listingSuggestionMatcher(search, i18n.locale));
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
@@ -54,7 +56,7 @@
       draft = listingDraftFromFilters(filters);
       search = '';
       restoreFocusOnClose = true;
-      if (compactMode) void focusSearch();
+      if (compactMode) void focusOpening();
     });
   });
 
@@ -90,7 +92,11 @@
   }
   async function focusSearch() {
     await tick();
-    if (open) (range ? rangeInput : searchInput ?? dialogTitle)?.focus({ preventScroll: true });
+    if (open) (range ? rangeInput : searchInput ?? picker)?.focus({ preventScroll: true });
+  }
+  async function focusOpening() {
+    await tick();
+    if (open) focusPopover(picker, range ? rangeInput : searchInput ?? picker?.querySelector<HTMLInputElement>('input:checked') ?? null, keyboardOpen);
   }
   function select(item: Choice) {
     if (isSelected(item) && item.field !== 'equipment' && item.field !== 'make' && item.field !== 'model') {
@@ -206,10 +212,7 @@
 
 {#snippet filterForm()}
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={cleanForm}>
-    <header class="dn-filter-header">
-      <h2 id="dn-facet-title" class="dn-filter-title" tabindex="-1" bind:this={dialogTitle}>{title}</h2>
-      <Popover.Close class="dn-search-close" type="button" aria-label={i18n.t('m_84305a580997')}><Icon name="x" size={20} /></Popover.Close>
-    </header>
+    <FilterPopoverHeader id="dn-facet-title" {title} />
     <div class="dn-filter-workspace">
       <section class="dn-filter-panel" aria-label={title}>{@render editor()}</section>
     </div>
@@ -224,10 +227,10 @@
 {#if compactMode}
   <Popover.Root bind:open>
     <Popover.Portal to=".dn-app-shell">
-      <Popover.Content id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
+      <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
         role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side={shortWindow.current ? 'right' : 'bottom'} align="start" sideOffset={8}
         collisionPadding={16} strategy="fixed" hideWhenDetached
-        onOpenAutoFocus={event => { event.preventDefault(); void focusSearch(); }}
+        onOpenAutoFocus={event => event.preventDefault()}
         onInteractOutside={() => restoreFocusOnClose = false} onCloseAutoFocus={returnToPage}>
         {@render filterForm()}
       </Popover.Content>
@@ -242,21 +245,12 @@
   :global(.dn-search-dialog), :global(.dn-search-dialog *), :global(.dn-search-dialog *::before), :global(.dn-search-dialog *::after) { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   form { display: flex; flex-direction: column; height: 100%; min-width: 0; min-height: 0; margin: 0; }
   :global(.dn-search-popover) form { height: auto; max-height: min(558px, calc(var(--bits-popover-content-available-height, calc(100dvh - 32px)) - 2px)); }
-  :global(.dn-search-popover) .dn-filter-header { height: 64px; padding-inline: var(--dn-space-4); }
-  :global(.dn-search-popover .dn-filter-title) { font-size: var(--dn-text-body); }
-  :global(.dn-search-popover .dn-search-close) { flex-basis: var(--dn-control-height-compact); width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); }
   :global(.dn-search-popover) .dn-filter-panel { padding: 0 var(--dn-space-4) var(--dn-space-4); }
   :global(.dn-search-popover) .dn-search-query { height: var(--dn-control-height-default); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); margin-bottom: var(--dn-space-2); background: var(--dn-white); }
   :global(.dn-search-popover) .dn-search-footer { height: 72px; gap: var(--dn-space-2); padding-inline: var(--dn-space-4); }
   :global(.dn-search-popover) .dn-search-reset { padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); text-decoration: none; }
   :global(.dn-search-popover) .dn-search-apply { min-height: var(--dn-control-height-default); padding-inline: var(--dn-space-4); font-size: var(--dn-text-meta); }
-  .dn-filter-header { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); height: 80px; padding: 0 var(--dn-space-6); }
-  :global(.dn-filter-title) { margin: 0; font-size: var(--dn-text-subheading); font-weight: var(--dn-weight-semibold); line-height: var(--dn-leading-heading); letter-spacing: var(--dn-tracking-heading); }
-  :global(.dn-filter-title:focus) { outline: none; }
-  :global(.dn-search-close), .dn-search-icon { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-sm); background: transparent; color: var(--dn-muted); cursor: pointer; }
-  :global(.dn-search-close) { margin-left: auto; border-radius: var(--dn-radius-button); }
-  :global(.dn-search-close) { flex-basis: var(--dn-control-height-default); width: var(--dn-control-height-default); height: var(--dn-control-height-default); background: var(--dn-home-panel); color: var(--dn-ink); }
-  :global(.dn-search-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
+  .dn-search-icon { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-sm); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-icon:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-filter-workspace { display: flex; flex: 1; min-width: 0; min-height: 0; }
   .dn-filter-field-label { color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-control); }
@@ -299,7 +293,7 @@
   .dn-search-apply:hover { background: var(--dn-ink-hover); }
   .dn-search-apply:disabled { opacity: .45; cursor: not-allowed; }
   /* Inset focus stays intact inside scroll areas and never crowds adjacent controls. */
-  button:focus-visible, :global(.dn-search-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -3px; }
+  button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -3px; }
   input[type='number']:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   .dn-search-apply:focus-visible { outline-color: var(--dn-white); }
   @media (forced-colors: active) {

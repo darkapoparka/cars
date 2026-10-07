@@ -1,6 +1,6 @@
 # Auto Best
 
-**Working branch: `main`.** Use one writer per checkout. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
+**Working branch: `main`.** Coordinate overlapping files and shared Git/build writes; independent files may be edited concurrently. Read [AGENTS.md](AGENTS.md) before starting; temporary branches/worktrees require an explicit request and a completed integration/cleanup handoff.
 
 A reusable automotive website template built with **Svelte 5, SvelteKit, TypeScript and Vite**. Clone it for a dealership, replace the business content and imagery, and build on the existing interface instead of rebuilding the site.
 

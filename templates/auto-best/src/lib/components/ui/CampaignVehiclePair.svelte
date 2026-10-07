@@ -25,6 +25,7 @@
     <div class="dn-campaign-vehicles__car dn-campaign-vehicles__car--{side}" data-vehicle={vehicle}
       style:--art-width-ratio={ratios.width}
       style:--art-height-ratio={ratios.height}
+      style:--art-body-height-ratio={ratios.bodyHeight}
       style:--art-bottom-ratio={ratios.bottom}
       style:--art-front-ratio={ratios.front}>
       <VehicleCutout media="(min-width: 992px)" {vehicle} eager={priority} />

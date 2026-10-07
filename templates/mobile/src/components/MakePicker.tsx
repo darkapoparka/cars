@@ -39,12 +39,26 @@ import { ShowroomModelOptions } from './ShowroomModelOptions';
 import { pickerStyles as s } from './make-picker.stylex';
 const catalogMakeCount = new Set(allMakes).size;
 
-export function BrandLogo({ make, size = 40 }: { make: string; size?: number }) {
+export function BrandLogo({
+  make,
+  size = 40,
+  blend = false,
+}: {
+  make: string;
+  size?: number;
+  blend?: boolean;
+}) {
   const src =
     makeImages[make] ||
     (topMakes.includes(make) ? '/images/brand-' + make.toLowerCase() + '.webp' : null);
   return src ? (
-    <Image src={src} alt="" width={size} height={size} {...stylex.props(s.logo(size))} />
+    <Image
+      src={src}
+      alt=""
+      width={size}
+      height={size}
+      {...stylex.props(s.logo(size), blend && s.blendLogo)}
+    />
   ) : (
     <span aria-hidden="true" {...stylex.props(s.fallback)} />
   );
