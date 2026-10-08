@@ -13,7 +13,6 @@
 	import Calendar from '@lucide/svelte/icons/calendar';
 	import CarFront from '@lucide/svelte/icons/car-front';
 	import Fuel from '@lucide/svelte/icons/fuel';
-	import Gauge from '@lucide/svelte/icons/gauge';
 
 	let {
 		card,
@@ -77,36 +76,25 @@
 			<li aria-label={(locale === 'en' ? 'Year: ' : 'Година: ') + card.year}>
 				<Calendar size={13} strokeWidth={1.8} aria-hidden="true" /><span>{card.year}</span>
 			</li>
-			{#if variant === 'inventory'}
-				<li title={card.fuel} aria-label={(locale === 'en' ? 'Fuel: ' : 'Гориво: ') + card.fuel}>
-					<Fuel size={13} strokeWidth={1.8} aria-hidden="true" /><span
-						>{compactCardFuel(card.fuel)}</span
-					>
-				</li>
-				<li
-					class="mobile-vehicle-card__transmission"
-					title={card.transmission}
-					aria-label={(locale === 'en' ? 'Transmission: ' : 'Скоростна кутия: ') +
-						card.transmission}
+			<li title={card.fuel} aria-label={(locale === 'en' ? 'Fuel: ' : 'Гориво: ') + card.fuel}>
+				<Fuel size={13} strokeWidth={1.8} aria-hidden="true" /><span
+					>{compactCardFuel(card.fuel)}</span
 				>
-					<span>{compactCardTransmission(card.transmission)}</span>
-				</li>
-				<li
-					class="mobile-vehicle-card__distance"
-					title={card.mileageLabel}
-					aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
-				>
-					<span>{mileage}</span>
-				</li>
-			{:else}
-				<li
-					class="mobile-vehicle-card__mileage"
-					title={card.mileageLabel}
-					aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
-				>
-					<Gauge size={13} strokeWidth={1.8} aria-hidden="true" /><span>{mileage}</span>
-				</li>
-			{/if}
+			</li>
+			<li
+				class="mobile-vehicle-card__transmission"
+				title={card.transmission}
+				aria-label={(locale === 'en' ? 'Transmission: ' : 'Скоростна кутия: ') + card.transmission}
+			>
+				<span>{compactCardTransmission(card.transmission)}</span>
+			</li>
+			<li
+				class="mobile-vehicle-card__distance"
+				title={card.mileageLabel}
+				aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
+			>
+				<span>{mileage}</span>
+			</li>
 		</ul>
 	</div>
 </a>
@@ -264,13 +252,9 @@
 		white-space: nowrap;
 	}
 	.mobile-vehicle-card__transmission,
-	.mobile-vehicle-card__distance,
-	.mobile-vehicle-card__mileage {
+	.mobile-vehicle-card__distance {
 		justify-content: center;
 		font-variant-numeric: tabular-nums;
-	}
-	.mobile-vehicle-card--import ul {
-		grid-template-columns: max-content minmax(0, 1fr);
 	}
 	@media (hover: none) and (pointer: coarse) {
 		.mobile-vehicle-card:active {

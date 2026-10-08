@@ -1,0 +1,35 @@
+
+Running 17 tests using 3 workers
+
+(node:52348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:52348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:13680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:11628) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  3 [mobile] › tests\mobile-discovery.e2e.ts:7:2 › Home search and filters have separate entries at 320px (4.4s)
+  ok  2 [mobile] › tests\mobile-discovery.e2e.ts:32:2 › filter category drafts survive Back and apply together at 320px (4.6s)
+  ok  4 [mobile] › tests\mobile-discovery.e2e.ts:7:2 › Home search and filters have separate entries at 390px (1.6s)
+  ok  1 [mobile] › tests\mobile-discovery.e2e.ts:62:2 › Import country links preserve car preferences at 320px (7.2s)
+  ok  5 [mobile] › tests\mobile-discovery.e2e.ts:32:2 › filter category drafts survive Back and apply together at 390px (3.2s)
+  ok  6 [mobile] › tests\mobile-discovery.e2e.ts:62:2 › Import country links preserve car preferences at 390px (5.5s)
+  ok  8 [mobile] › tests\service-discovery.e2e.ts:123:3 › Sell card opens both entry modes at 320px in en (5.6s)
+  ok 10 [mobile] › tests\service-discovery.e2e.ts:123:3 › Sell card opens both entry modes at 320px in bg (5.3s)
+  ok  7 [mobile] › tests\service-discovery.e2e.ts:57:3 › Import preferences reach the request at 320px in en (13.1s)
+  ok  9 [mobile] › tests\service-discovery.e2e.ts:57:3 › Import preferences reach the request at 320px in bg (13.3s)
+  ok 12 [mobile] › tests\service-discovery.e2e.ts:123:3 › Sell card opens both entry modes at 390px in en (5.7s)
+  ok 14 [mobile] › tests\service-discovery.e2e.ts:123:3 › Sell card opens both entry modes at 390px in bg (5.3s)
+  ok 11 [mobile] › tests\service-discovery.e2e.ts:57:3 › Import preferences reach the request at 390px in en (13.2s)
+  -  16 [mobile] › tests\service-discovery.e2e.ts:207:1 › desktop service routes keep their existing layout without mobile Sell artwork downloads
+  ok 13 [mobile] › tests\service-discovery.e2e.ts:57:3 › Import preferences reach the request at 390px in bg (13.0s)
+  ok 17 [mobile] › tests\service-discovery.e2e.ts:224:1 › mobile footer belongs to Home and hides navigation only while visible (6.1s)
+  ok 15 [mobile] › tests\service-discovery.e2e.ts:160:1 › Import picker back, empty requests, model reset and changed-criteria drafts work (11.6s)
+
+  1 skipped
+  16 passed (45.8s)
