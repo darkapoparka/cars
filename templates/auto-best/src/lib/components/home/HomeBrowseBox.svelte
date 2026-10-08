@@ -4,6 +4,7 @@
   import { MediaQuery } from 'svelte/reactivity';
   import type { Attachment } from 'svelte/attachments';
   import { focusPopover } from '$lib/ui/focus';
+  import { continuesIdentityPicker } from '$lib/ui/identity-picker';
   import { resolve } from '$app/paths';
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
@@ -43,8 +44,9 @@
   const title = (field: Field) => field === 'body' ? i18n.t('m_191c24bf12d5') : listingFacetTitle(field, i18n.locale);
 
   function summary(field: Field) {
-    if (field === 'make') return draft.make.join(', ') || i18n.t('inventory.search.allMakes');
-    if (field === 'model') return draft.model.join(', ') || i18n.t('inventory.search.allModels');
+    const identity = desktop.current && (openField === 'make' || openField === 'model') ? pending : draft;
+    if (field === 'make') return identity.make.join(', ') || i18n.t('inventory.search.allMakes');
+    if (field === 'model') return identity.model.join(', ') || i18n.t('inventory.search.allModels');
     if (field === 'price' && draft.priceMax && !draft.priceMin) return i18n.t('inventory.search.upTo', {
       value: formatListingNumber(draft.priceMax, i18n.locale), currency: currencySymbol(i18n.locale)
     });
@@ -53,10 +55,18 @@
 
   function setOpen(field: Field, open: boolean) {
     if (open) {
-      // Each selector owns a temporary draft; only Save changes the Home bar.
-      pending = listingDraftFromFilters(listingFiltersFromDraft(draft));
+      // Make and Model continue one pending selection; other fields start a fresh draft.
+      if (!desktop.current || !continuesIdentityPicker(openField, field)) {
+        pending = listingDraftFromFilters(listingFiltersFromDraft(draft));
+      }
       openField = field;
     } else if (openField === field) openField = undefined;
+  }
+
+  function interactOutside(event: PointerEvent, field: Field) {
+    const trigger = event.target instanceof Element ? event.target.closest<HTMLButtonElement>('.dn-home-browse__field') : null;
+    const next = fields.find(candidate => triggers[candidate] === trigger);
+    if (desktop.current && continuesIdentityPicker(field, next)) event.preventDefault();
   }
 
   function clear(field: Field) {
@@ -104,9 +114,10 @@
       <Popover.Portal to={portalTarget}>
         <Popover.Content bind:ref={pickers[field]} class="dn-home-browse-picker" role="dialog" aria-labelledby={`${id}-${field}-title`}
           data-desktop-panel={desktop.current} data-wide-choices={field === 'make' || field === 'model'} data-make-grid={field === 'make'}
-          sideOffset={desktop.current ? 16 : 8} align={desktop.current && field === 'price' ? 'end' : 'start'} collisionPadding={16}
+          sideOffset={desktop.current ? 16 : 8} align={desktop.current && field === 'price' ? 'end' : 'start'} collisionPadding={16} trapFocus={!desktop.current}
           onOpenAutoFocus={event => { event.preventDefault(); void tick().then(() => { if (openField === field) focusPopover(pickers[field], pickers[field]?.querySelector<HTMLInputElement>('input[type=search], input[type=number], input:checked') ?? null, keyboardOpen); }); }}
           onCloseAutoFocus={event => restoreFocus(event, field)}
+          onInteractOutside={event => interactOutside(event, field)}
           onkeydown={event => { if (event.key === 'Enter' && event.target instanceof HTMLInputElement && event.target.type === 'number') { event.preventDefault(); save(); } }}>
           {#if !desktop.current}<FilterPopoverHeader id={`${id}-${field}-title`} title={title(field)} />{/if}
           <div class="dn-home-browse-picker__editor" class:dn-home-browse-picker__editor--price={field === 'price'}>

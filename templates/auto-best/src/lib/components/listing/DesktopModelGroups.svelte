@@ -10,11 +10,12 @@
   import { getI18n } from '$lib/locale/context';
   import { vehicleCount } from '$lib/locale/messages';
   import { featuredVehicles } from '$data/inventory';
-  import { desktopMakeCatalogue } from '$data/desktop-makes';
+  import { desktopMakeCatalogue, desktopMakeOptions } from '$data/desktop-makes';
   import { modelMakes, type ModelMake, type ModelFamily } from '$data/model-catalogue';
   import { listingSelectionHas } from '$data/listing';
   import { listingSuggestionMatcher } from '$data/listing-draft';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
+  import DesktopMakeLogo from './DesktopMakeLogo.svelte';
   import Icon from '$components/ui/Icon.svelte';
   import CheckmarkIcon from '$components/ui/CheckmarkIcon.svelte';
 
@@ -31,7 +32,9 @@
   let activeFamily = $state<string | null>(null);
   const history: { make: string | null; family: string | null; scroll: number; key: string }[] = [];
   const matches = $derived(listingSuggestionMatcher(search, i18n.locale));
-  const catalogue = $derived(modelMakes(featuredVehicles, makes, selected, desktopMakeCatalogue));
+  const makeOrder = $derived(new Map(desktopMakeOptions(makes, i18n.locale).map((make, index) => [make.toLocaleLowerCase('en'), index])));
+  const catalogue = $derived(modelMakes(featuredVehicles, makes, selected, desktopMakeCatalogue).toSorted((a, b) =>
+    (makeOrder.get(a.make.toLocaleLowerCase('en')) ?? Number.MAX_SAFE_INTEGER) - (makeOrder.get(b.make.toLocaleLowerCase('en')) ?? Number.MAX_SAFE_INTEGER)));
   const groups = $derived(catalogue.map(group => ({ ...group, families: group.families.map(family => ({ ...family,
     choices: family.choices.filter(choice => matches(`${group.make} ${family.name} ${choice.label}`))
   })).filter(family => family.choices.length) })).filter(group => group.families.length));
@@ -39,6 +42,7 @@
   const currentMake = $derived(singleMake ? catalogue[0] : catalogue.find(group => group.make === activeMake));
   const currentFamily = $derived(currentMake?.families.find(family => family.name === activeFamily));
   const searching = $derived(Boolean(search.trim()));
+  const makeGrid = $derived(!compact && !searching && !currentMake);
   const total = $derived(catalogue.reduce((count, group) => count + group.count, 0));
   const retained = $derived(selected.filter(value => !catalogue.some(group => group.families.some(family => family.choices.some(choice => listingSelectionHas([choice.value], value))))));
   const familyKey = (make: string, family = '') => JSON.stringify([make, family]);
@@ -84,6 +88,10 @@
   }
 </script>
 
+{#snippet allModelsIcon()}
+  <Icon name="adjustments" size={40} />
+{/snippet}
+
 {#snippet families(group: ModelMake)}
   {#each group.families as family (family.name)}
     {#if family.choices.length === 1 && family.choices[0].label === family.name}
@@ -97,9 +105,9 @@
   {/each}
 {/snippet}
 
-<div bind:this={root} class="dn-model-groups" class:compact style:min-height={paneHeight ? `${paneHeight}px` : undefined} role="group" aria-label={i18n.t('inventory.facet.model')}>
+<div bind:this={root} class="dn-model-groups" class:compact class:make-grid={makeGrid} style:min-height={paneHeight ? `${paneHeight}px` : undefined} role="group" aria-label={i18n.t('inventory.facet.model')}>
   {#if !searching && !currentFamily && (!currentMake || singleMake)}
-    <div class="all-models"><DesktopFilterChoice value="" label={i18n.t('inventory.search.allModels')} accessibleLabel={i18n.t('inventory.search.allModels')} description={vehicleCount(i18n.locale, total)} checked={!selected.length} multiple tile={!compact} {name} {onchange} /></div>
+    <div class="all-models"><DesktopFilterChoice value="" label={i18n.t('inventory.search.allModels')} accessibleLabel={i18n.t('inventory.search.allModels')} description={vehicleCount(i18n.locale, total)} checked={!selected.length} multiple tile={!compact} portrait={makeGrid} media={makeGrid ? allModelsIcon : undefined} {name} {onchange} /></div>
   {/if}
   {#if searching}
     {#each groups as group (group.make)}
@@ -126,6 +134,7 @@
   {:else}
     {#each catalogue as group (group.make)}
       <button type="button" class="disclosure make-title" class:selected={group.families.some(hasSelection)} data-model-make={group.make} data-model-key={familyKey(group.make)} onclick={() => enter(group.make)}>
+        <span class="make-media" aria-hidden="true"><DesktopMakeLogo value={group.make} portrait={!compact} /></span>
         <span class="disclosure-label">{group.make}</span>{#if group.families.some(hasSelection)}<span class="selection-mark" aria-hidden="true"><CheckmarkIcon /></span>{/if}<small>{vehicleCount(i18n.locale, group.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
       </button>
     {/each}
@@ -150,6 +159,16 @@
   .search-group { min-width: 0; }
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
   .make-title { font: var(--dn-control-font); }
+  .make-media { display: grid; flex: 0 0 var(--dn-control-height-entry-mobile); place-items: center; width: var(--dn-control-height-entry-mobile); height: var(--dn-space-7); }
+  .make-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .make-grid .make-title { position: relative; flex-direction: column; justify-content: center; gap: var(--dn-space-1); min-height: calc(var(--dn-control-height-default) * 2 + var(--dn-space-6)); padding: var(--dn-space-2); background: transparent; text-align: center; }
+  .make-grid .make-title:hover { background: var(--dn-surface-hover); }
+  .make-grid .make-title.selected { background: var(--dn-surface-subtle); }
+  .make-grid .make-media { flex: 0 0 var(--dn-control-height-compact); width: 100%; height: var(--dn-control-height-compact); }
+  .make-grid .make-title .disclosure-label { flex: 0 0 auto; width: 100%; }
+  .make-grid .make-title small { width: 100%; }
+  .make-grid .make-title .chevron { position: absolute; top: var(--dn-space-2); right: var(--dn-space-2); }
+  .make-grid .make-title .selection-mark { position: absolute; top: var(--dn-space-2); left: var(--dn-space-2); }
   .empty { padding: var(--dn-space-3); color: var(--dn-muted); font: var(--dn-field-font); }
   .compact, .compact .models { grid-template-columns: minmax(0, 1fr); }
   .compact .disclosure { background: transparent; }

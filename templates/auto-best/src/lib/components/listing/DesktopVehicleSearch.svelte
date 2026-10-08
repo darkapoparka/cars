@@ -2,6 +2,7 @@
   import { Popover } from 'bits-ui';
   import { tick, untrack } from 'svelte';
   import { focusPopover } from '$lib/ui/focus';
+  import { continuesIdentityPicker } from '$lib/ui/identity-picker';
   import { resolve } from '$app/paths';
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
@@ -34,6 +35,7 @@
   let rangeInput = $state<HTMLInputElement | null>(null);
   let picker = $state<HTMLDivElement | null>(null);
   let restoreFocusOnClose = true;
+  let editingFacet: Field | undefined;
   const matchesSearch = $derived(listingSuggestionMatcher(search, i18n.locale));
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
   const searchable = $derived(field === 'make' || field === 'model' || field === 'version' || field === 'equipment');
@@ -53,12 +55,12 @@
     .map(value => choice(field!, value)).filter(item => matchesSearch(item.label + ' ' + item.make)) : []);
 
   $effect(() => {
-    if (!open) return;
-    // Switching an anchored shortcut starts a fresh draft for that field.
-    initialFacet;
+    if (!open) { editingFacet = undefined; return; }
+    const next = initialFacet;
     returnFocus;
     untrack(() => {
-      draft = listingDraftFromFilters(filters);
+      if (!continuesIdentityPicker(editingFacet, next)) draft = listingDraftFromFilters(filters);
+      editingFacet = next;
       search = '';
       restoreFocusOnClose = true;
       if (compactMode) void focusOpening();
@@ -133,7 +135,14 @@
     event.preventDefault();
     if (compactMode && !restoreFocusOnClose) return;
     const target = returnFocus;
-    void tick().then(() => target?.focus({ preventScroll: true }));
+    void tick().then(() => {
+      if (!open && target?.isConnected && returnFocus === target) target.focus({ preventScroll: true });
+    });
+  }
+  function interactOutside(event: PointerEvent) {
+    restoreFocusOnClose = false;
+    const next = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-facet]')?.dataset.facet : undefined;
+    if (continuesIdentityPicker(field, next)) event.preventDefault();
   }
 </script>
 
@@ -246,9 +255,9 @@
     <Popover.Portal to=".dn-app-shell">
       <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
         data-desktop-panel="true" data-wide-choices={searchable} data-make-grid={field === 'make'} role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side="bottom" align={range ? 'end' : 'start'} sideOffset={8}
-        collisionPadding={16} strategy="fixed" hideWhenDetached
+        collisionPadding={16} strategy="fixed" hideWhenDetached trapFocus={false}
         onOpenAutoFocus={event => event.preventDefault()}
-        onInteractOutside={() => restoreFocusOnClose = false} onCloseAutoFocus={returnToPage}>
+        onInteractOutside={interactOutside} onCloseAutoFocus={returnToPage}>
         {@render filterForm()}
       </Popover.Content>
     </Popover.Portal>

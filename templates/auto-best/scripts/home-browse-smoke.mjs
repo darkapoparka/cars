@@ -51,7 +51,8 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
         const heading = await menu.getByRole('heading').boundingBox();
         const search = await menu.getByRole('searchbox').boundingBox();
         const close = await menu.locator('.dn-picker-close').boundingBox();
-        assert(Math.abs(search.y + search.height / 2 - heading.y - heading.height / 2) < 1, 'Desktop search shares the title row');
+        assert(heading.width <= 1 || heading.width === 44 && await menu.locator('.back').count() === 1, 'Only the Back icon can occupy the title area beside search');
+        assert(search.width >= (name === 'make' ? 680 : name === 'model' ? 480 : 340), 'Search retains room without a competing visible title');
         assert(Math.abs(search.y + search.height / 2 - close.y - close.height / 2) < 1, 'Search and close are vertically aligned');
       }
     }
