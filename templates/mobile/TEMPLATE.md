@@ -128,10 +128,16 @@ Orange remains the form-action, selected-range and validation-error color.
 Home search and filter pills open one editor with the same underline tabs: Search,
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
-The phone editor's scrolling tab rail reaches both viewport edges. Labels retain
-16px inner padding in 52px targets; the 3px underline fills the selected target,
-with the existing 13px gap below its text box. This edge treatment is scoped to
+The phone editor's scrolling tab rail reaches both viewport edges. Labels use
+12px inner padding in 52px targets; the 3px underline fills the selected target,
+with space below its text box. This edge treatment is scoped to
 the phone filter editor; the category row and other tab layouts retain their styles.
+Phone filter headings use 18px semibold type. Search, make search, numeric bounds
+and budget presets share 16px outer gutters; search fields and the apply action
+have 48px targets. Search results follow the field directly, without an introductory
+heading. Suggestions align regular-weight muted prices with the 17px vehicle name
+and use 14px facts below it. The white heading remains continuous with the tabs,
+whose shadow is clipped above and retained below the underline.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
 On phones, choosing or editing a brand opens its models directly. A single Makes
@@ -295,6 +301,14 @@ BG/EN header action has a transparent background and a 44px touch target. Mobile
 vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
 700px; desktop retains its original typography and framed detail footer.
+
+Phone vehicle actions retain 44px tap targets; the header uses 20px icons and a
+quiet shadow. The summary leaves 8px below Enquire and Contact before the tabs.
+Switching a visible Details, Features or Photos rail keeps the page steady.
+When the rail is pinned after scrolling into a panel, the next panel starts at
+its beginning beneath the rail. Selecting the active tab preserves the position.
+Phone tab rails share one clipped upper-shadow rule, keeping white surfaces
+continuous while preserving the underline and elevation below each rail.
 
 On phones, Contact opens with a concise heading and one-line description. Call
 and email actions use configured contact details. The neutral template also shows

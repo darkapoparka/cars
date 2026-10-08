@@ -14,6 +14,7 @@ const s = stylex.create({
     display: { default: 'none', '@media (max-width: 699px)': 'block' },
     position: 'relative',
     padding: 16,
+    paddingBottom: 8,
   },
   summaryGrid: {
     display: 'grid',

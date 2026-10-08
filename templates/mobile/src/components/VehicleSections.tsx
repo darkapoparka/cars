@@ -350,8 +350,18 @@ export function VehicleSections({
   const showFeatures = !showroomMode || section === 'features';
   const monthly = v.financeMonthly || v.monthly || Math.round(v.price * 0.01061);
   function selectSection(value: VehicleDetailSection) {
+    if (value === section) return;
+    const nav = navigation.current;
+    const stickyTop = nav ? Number.parseFloat(getComputedStyle(nav).top) : 0;
+    const resetScroll = nav && nav.getBoundingClientRect().top <= stickyTop + 1;
+    const scrollTop = window.scrollY;
     selectVehicleDetailSection(value);
+    // Keep a visible rail steady; start the next panel at the rail when it is pinned.
     requestAnimationFrame(() => {
+      if (!resetScroll) {
+        window.scrollTo({ top: scrollTop, behavior: 'instant' });
+        return;
+      }
       const sheet = navigation.current?.closest('[data-vehicle-detail-sheet]');
       if (!sheet) return;
       const summary = sheet.querySelector<HTMLElement>('[data-vehicle-mobile-summary]');
@@ -362,7 +372,7 @@ export function VehicleSections({
           0,
           window.scrollY +
             (anchor?.height ? anchor.bottom : sheet.getBoundingClientRect().top) -
-            60,
+            stickyTop,
         ),
         behavior: 'instant',
       });

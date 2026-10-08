@@ -48,7 +48,7 @@ const s = stylex.create({
     borderWidth: 0,
     borderRadius: controlShape.circle,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
-    boxShadow: '0 1px 8px #0002',
+    boxShadow: '0 1px 5px #00000014',
     color: colors.text,
     outlineColor: colors.accent,
     outlineOffset: -3,
@@ -112,7 +112,7 @@ export function VehicleDetailHeader({
           onClick={onBack}
           {...stylex.props(s.control, compact && s.compactControl)}
         >
-          <Icon name="back" />
+          <Icon name="back" size={20} />
         </button>
         <span title={title} {...stylex.props(s.title, compact && s.compactTitle)}>
           {title}
@@ -124,7 +124,7 @@ export function VehicleDetailHeader({
           onClick={onShare}
           {...stylex.props(s.control, compact && s.compactControl)}
         >
-          <Icon name="share" />
+          <Icon name="share" size={20} />
         </button>
         <button
           type="button"
@@ -133,7 +133,7 @@ export function VehicleDetailHeader({
           onClick={onSave}
           {...stylex.props(s.control, compact && s.compactControl)}
         >
-          <Icon name="heart" filled={saved} />
+          <Icon name="heart" size={20} filled={saved} />
         </button>
       </header>
     </>

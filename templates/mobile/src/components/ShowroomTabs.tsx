@@ -24,6 +24,8 @@ const s = stylex.create({
     marginTop: 8,
     paddingInline: 16,
     backgroundColor: colors.background,
+    // Keep elevation below each phone rail without tinting the white surface above.
+    clipPath: { default: 'none', '@media (max-width: 699px)': 'inset(0 -16px -16px)' },
     boxShadow: {
       default: '0 4px 8px rgba(23, 32, 43, 0.12)',
       '@media (min-width: 700px)': 'none',
@@ -199,8 +201,6 @@ const s = stylex.create({
     '::after': { backgroundColor: colors.text },
   },
   desktopCategories: {
-    // Keep the rail's upper shadow from tinting the shared white header.
-    clipPath: { default: 'none', '@media (max-width: 699px)': 'inset(0 -16px -16px)' },
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
@@ -265,7 +265,7 @@ const s = stylex.create({
       '@media (min-width: 700px)': 57,
       '@media (min-width: 1024px)': '100%',
     },
-    marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    marginTop: { default: 8, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
     paddingInline: {
       default: 16,
       '@media (min-width: 700px)': 12,
@@ -298,6 +298,7 @@ const s = stylex.create({
     },
   },
   sidebarTab: {
+    lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
     outlineColor: {
       default: colors.accent,
       '@media (min-width: 700px)': colors.text,
@@ -330,6 +331,7 @@ const s = stylex.create({
     },
     paddingInline: {
       default: 16,
+      '@media (max-width: 699px)': 12,
       '@media (min-width: 700px)': 8,
       '@media (min-width: 1024px)': 16,
     },

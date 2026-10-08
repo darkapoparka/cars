@@ -116,13 +116,16 @@ const s = stylex.create({
     borderInlineStartStyle: 'solid',
     borderInlineStartColor: colors.cardLine,
   },
-  comfortableRoot: { fontSize: 16 },
-  comfortableTitle: {
-    fontSize: { default: 16, '@media (min-width: 700px)': 18 },
-    fontWeight: { default: 500, '@media (min-width: 700px)': 600 },
-    lineHeight: { default: '24px', '@media (min-width: 700px)': '26px' },
+  comfortableRoot: {
+    fontSize: 16,
+    paddingInline: { default: 4, '@media (max-width: 699px)': 0 },
   },
-  comfortableSummary: { fontSize: { default: 14, '@media (min-width: 700px)': 15 } },
+  comfortableTitle: {
+    fontSize: 18,
+    fontWeight: 600,
+    lineHeight: '26px',
+  },
+  comfortableSummary: { fontSize: 15 },
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
     minHeight: 64,
@@ -137,7 +140,12 @@ const s = stylex.create({
     gap: 2,
     paddingBlock: 8,
   },
-  fieldLabel: { fontSize: 13, lineHeight: '18px', fontWeight: 500, color: colors.muted },
+  fieldLabel: {
+    fontSize: { default: 13, '@media (max-width: 699px)': 14 },
+    lineHeight: '18px',
+    fontWeight: 500,
+    color: colors.muted,
+  },
   valueRow: { display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 },
   comfortableText: { fontSize: 16, lineHeight: '24px' },
   comfortableFill: { backgroundColor: colors.accent },

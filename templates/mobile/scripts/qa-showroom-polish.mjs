@@ -42,7 +42,12 @@ async function run(name, engine) {
         report.errors.push({ engine: name, message: message.text() });
     });
     current.on('request', (request) => {
-      if (['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method())) submissions += 1;
+      // The embedded map sends its own telemetry; application forms stay in the main frame.
+      if (
+        ['POST', 'PUT', 'PATCH', 'DELETE'].includes(request.method()) &&
+        request.frame() === current.mainFrame()
+      )
+        submissions += 1;
     });
     const response = await page.goto(
       base + route + (route.includes('?') ? '&' : '?') + 'lang=' + locale,
@@ -52,6 +57,19 @@ async function run(name, engine) {
     await page.locator('[data-hydrated="true"]').waitFor();
     await page.waitForFunction((expected) => document.documentElement.lang === expected, locale);
     await page.evaluate(() => document.fonts.ready);
+    await page.waitForFunction(() =>
+      [...document.images].every((image) => {
+        const box = image.getBoundingClientRect();
+        const visible =
+          box.width > 0 &&
+          box.height > 0 &&
+          box.bottom > 0 &&
+          box.top < innerHeight &&
+          box.right > 0 &&
+          box.left < innerWidth;
+        return !visible || (image.complete && image.naturalWidth > 0);
+      }),
+    );
   }
   const check = (description) => report.checks.push({ engine: name, description });
   async function dockGeometry(locale, enlarged = false) {
@@ -136,22 +154,28 @@ async function run(name, engine) {
             `${locale} ${width} ${route} overflow`,
           );
           assert.equal(
-            await page
-              .locator('img')
-              .evaluateAll(
-                (images) =>
-                  images.filter(
-                    (image) =>
-                      image.getBoundingClientRect().top < innerHeight &&
-                      (!image.complete || !image.naturalWidth),
-                  ).length,
-              ),
+            await page.locator('img').evaluateAll(
+              (images) =>
+                images.filter((image) => {
+                  const box = image.getBoundingClientRect();
+                  return (
+                    box.width > 0 &&
+                    box.height > 0 &&
+                    box.bottom > 0 &&
+                    box.top < innerHeight &&
+                    box.right > 0 &&
+                    box.left < innerWidth &&
+                    (!image.complete || !image.naturalWidth)
+                  );
+                }).length,
+            ),
             0,
             `${locale} ${width} ${route} visible images`,
           );
           const badgeRows = await page.locator('[data-showroom-vehicle]').evaluateAll((cards) =>
             cards.map((card) => {
-              const row = card.querySelector('p[title]:last-child');
+              const row = card.querySelector('[data-vehicle-fact="year"]')?.parentElement;
+              if (!row) return false;
               const bounds = row.getBoundingClientRect();
               const badges = [...row.children];
               const first = badges[0].getBoundingClientRect();
@@ -173,7 +197,7 @@ async function run(name, engine) {
             badgeRows.every(Boolean),
             `${locale} ${width} ${route}: all vehicle cards have one readable badge row`,
           );
-          if (!route.startsWith('/vehicle/')) {
+          if (width < 1024 && !route.startsWith('/vehicle/')) {
             const positions = await dockGeometry(locale);
             if (dockPositions)
               assert.ok(
@@ -193,12 +217,17 @@ async function run(name, engine) {
         ]) {
           await go(route, locale);
           const search = page.getByRole('button', { name: searchLabel, exact: true });
-          await page.evaluate(() => window.scrollTo(0, 250));
+          const pinnedSelector =
+            route === '/' ? '[data-desktop-quick-bar]' : '[data-showroom-controls]';
+          await page
+            .locator(pinnedSelector)
+            .evaluate((element) =>
+              window.scrollTo(0, scrollY + element.getBoundingClientRect().top + 100),
+            );
           await page.waitForFunction(
-            () =>
-              Math.abs(
-                document.querySelector('[data-showroom-controls]').getBoundingClientRect().top,
-              ) < 1,
+            (selector) =>
+              Math.abs(document.querySelector(selector).getBoundingClientRect().top) < 1,
+            pinnedSelector,
           );
           assert.ok(
             await page
@@ -226,7 +255,7 @@ async function run(name, engine) {
         }
       }
       check(
-        `${locale}: only showroom tabs and pills stay pinned; filter dismissal preserves scroll and focus`,
+        `${locale}: showroom filter rails stay pinned; filter dismissal preserves scroll and focus`,
       );
       viewport = { width: 320, height: 700 };
       await go('/', locale);
@@ -298,15 +327,27 @@ async function run(name, engine) {
     const details = page.getByRole('tab', { name: 'Details', exact: true });
     await details.focus();
     await page.keyboard.press('ArrowRight');
-    await page.getByRole('tab', { name: 'Photos', exact: true, selected: true }).waitFor();
+    await page.getByRole('tab', { name: 'Features', exact: true, selected: true }).waitFor();
+    await page.evaluate(
+      () => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+    );
+    assert.equal(
+      await page.evaluate(() => scrollY),
+      0,
+      'Visible PDP tabs do not jump on selection',
+    );
+    await page.evaluate(() => window.scrollTo(0, 700));
     const fixedEnquiry = page.locator('[data-vehicle-contact-dock] a');
+    await fixedEnquiry.waitFor();
     assert.ok((await fixedEnquiry.boundingBox()).height >= 44);
     assert.equal(await fixedEnquiry.getAttribute('href'), '/contact?vehicle=bmw-540');
     await page.keyboard.press('ArrowRight');
-    const extras = page.getByRole('tab', { name: 'Features', exact: true, selected: true });
-    await extras.waitFor();
+    const photos = page.getByRole('tab', { name: 'Photos', exact: true, selected: true });
+    await photos.waitFor();
     assert.equal(
-      await page.locator('header').evaluate((element) => element.getBoundingClientRect().top),
+      await page
+        .locator('[data-vehicle-mobile-header]')
+        .evaluate((element) => element.getBoundingClientRect().top),
       0,
     );
     check('PDP enquiry targets and vehicle context survive detail-tab keyboard navigation');
@@ -325,6 +366,7 @@ async function run(name, engine) {
     check('Specifications return focus to their pointer opener in both browser engines');
 
     await go('/contact');
+    await page.getByRole('button', { name: 'Write a message', exact: true }).click();
     await page.evaluate(() => {
       window.__qaOriginalSetItem = Storage.prototype.setItem;
       Storage.prototype.setItem = () => {
@@ -337,15 +379,20 @@ async function run(name, engine) {
     await page.getByRole('status').filter({ hasText: unavailable }).first().waitFor();
     assert.equal(
       await page
-        .getByText('Draft saved on this device. Nothing was sent.', { exact: true })
+        .getByText('Message saved as a local draft. Nothing was sent.', { exact: true })
         .count(),
       0,
     );
     assert.equal(await message.inputValue(), enquiry);
+    await page.keyboard.press('Escape');
+    await page
+      .getByRole('dialog', { name: 'Write to us', exact: true })
+      .waitFor({ state: 'hidden' });
     await page.getByRole('navigation').getByRole('link', { name: 'Cars', exact: true }).click();
     await page.locator('#showroom-stock').waitFor();
     await page.getByRole('navigation').getByRole('link', { name: 'Contact', exact: true }).click();
     await page.waitForURL((url) => url.pathname === '/contact');
+    await page.getByRole('button', { name: 'Write a message', exact: true }).click();
     assert.equal(await message.inputValue(), enquiry);
     await page.evaluate(() => {
       window.__qaWrites = [];
@@ -356,7 +403,8 @@ async function run(name, engine) {
     });
     await page.getByRole('button', { name: 'Save enquiry draft', exact: true }).click();
     await page
-      .getByText('Draft saved on this device. Nothing was sent.', { exact: true })
+      .getByRole('form', { name: 'Enquiry', exact: true })
+      .getByText('Message saved as a local draft. Nothing was sent.', { exact: true })
       .waitFor();
     assert.deepEqual(await page.evaluate(() => window.__qaWrites), ['mobile-reference-v1']);
     await page.reload({ waitUntil: 'networkidle' });
@@ -386,7 +434,7 @@ async function run(name, engine) {
         return original.call(this, key, value);
       };
     });
-    await page.getByRole('button', { name: 'Save import draft', exact: true }).click();
+    await page.getByRole('button', { name: 'Save draft', exact: true }).click();
     await page
       .getByText('Saving is unavailable. Keep this sheet open to retain your details.', {
         exact: true,

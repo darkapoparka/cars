@@ -532,6 +532,7 @@ export function MakePicker({
                           s.make,
                           embedded && s.embeddedMake,
                           isAllMakes && s.allMakes,
+                          embedded && isAllMakes && s.embeddedAllMakes,
                           sectionIndex === sections.length - 1 &&
                             index === section.names.length - 1 &&
                             !embedded &&

@@ -6,13 +6,16 @@ export const pickerStyles = stylex.create({
   embeddedInput: {
     fontSize: 16,
     lineHeight: '24px',
-    height: { default: 'auto', '@media (max-width: 699px)': 44 },
-    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    height: { default: 'auto', '@media (max-width: 699px)': 48 },
+    minHeight: 48,
     paddingBlock: { default: null, '@media (max-width: 699px)': 8 },
     borderRadius: controlShape.pill,
     borderColor: colors.line,
   },
-  embeddedSearchBox: { marginTop: 12, marginBottom: 8 },
+  embeddedSearchBox: {
+    marginTop: { default: 12, '@media (max-width: 699px)': 16 },
+    marginBottom: { default: 8, '@media (max-width: 699px)': 12 },
+  },
   embeddedSearch: { paddingLeft: 40, backgroundColor: colors.controlSurface },
   searchIcon: {
     position: 'absolute',
@@ -37,8 +40,8 @@ export const pickerStyles = stylex.create({
   },
   embeddedMake: {
     minHeight: 56,
-    paddingLeft: 8,
-    paddingRight: 12,
+    paddingLeft: { default: 8, '@media (max-width: 699px)': 0 },
+    paddingRight: { default: 12, '@media (max-width: 699px)': 0 },
     gap: 12,
     borderWidth: 0,
     borderBottomWidth: 0,
@@ -67,6 +70,13 @@ export const pickerStyles = stylex.create({
     backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
     fontSize: 16,
     fontWeight: 400,
+  },
+  embeddedAllMakes: {
+    minHeight: { default: 52, '@media (max-width: 699px)': 56 },
+    marginBottom: { default: 8, '@media (max-width: 699px)': 0 },
+    paddingLeft: { default: 8, '@media (max-width: 699px)': 0 },
+    paddingRight: { default: 12, '@media (max-width: 699px)': 0 },
+    fontWeight: { default: 400, '@media (max-width: 699px)': 500 },
   },
   selectionMark: {
     display: 'flex',

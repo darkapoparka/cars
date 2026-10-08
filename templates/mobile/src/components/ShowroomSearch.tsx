@@ -150,12 +150,14 @@ export function ShowroomSearchField({
   onChange,
   onSubmit,
   autoFocus = false,
+  xstyle,
 }: {
   label: string;
   value: string;
   onChange: (value: string) => void;
   onSubmit: () => void;
   autoFocus?: boolean;
+  xstyle?: stylex.StyleXStyles;
 }) {
   const { t } = useLocale();
   const input = useRef<HTMLInputElement>(null);
@@ -165,7 +167,7 @@ export function ShowroomSearchField({
     return () => cancelAnimationFrame(frame);
   }, [autoFocus]);
   return (
-    <div {...stylex.props(s.search, controls.fieldFocus)}>
+    <div {...stylex.props(s.search, controls.fieldFocus, xstyle)}>
       <Icon name="search" size={20} />
       <input
         ref={input}

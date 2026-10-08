@@ -273,11 +273,9 @@ export function ShowroomFilterSheet({
                     value={draft.query}
                     onChange={(query) => change({ query })}
                     onSubmit={() => onApply(draft)}
+                    xstyle={s.searchField}
                   />
                   <div {...stylex.props(s.suggestions)}>
-                    <h3 {...stylex.props(s.copy)}>
-                      {draft.query.trim() ? t('Matching vehicles') : t('In this showroom')}
-                    </h3>
                     {matches.slice(0, 6).map((vehicle) => (
                       <Link
                         key={vehicle.id}
