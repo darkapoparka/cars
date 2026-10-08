@@ -21,7 +21,7 @@ $env:NEXT_PUBLIC_APP_URL='http://127.0.0.1:6467'
 pnpm --filter web exec next dev -H 127.0.0.1 -p 6462
 ```
 
-Do not replace or stop another task's preview. For an isolated production build, set `AUTOMARKET_PUBLIC_E2E=true`, a unique `E2E_PUBLIC_RUN_ID`, and `E2E_PUBLIC_MODE=demo` before both `next build` and `next start`. This uses the existing per-run output directory rather than overwriting the active development output. QA-only Turbopack filesystem caches are disabled; ordinary runs retain their cache policy.
+Do not replace or stop another task's preview. For an isolated production build, set `AUTOMARKET_PUBLIC_E2E=true`, a unique `E2E_PUBLIC_RUN_ID`, and `E2E_PUBLIC_MODE=demo` before both `next build` and `next start`. This uses the existing per-run output directory rather than overwriting the active development output. QA-only Turbopack and Webpack filesystem caches are disabled; ordinary runs retain their cache policy.
 
 ## Code checks
 
@@ -60,7 +60,7 @@ Check mobile menu, bottom navigation, horizontal pill rails, search, gallery/Pho
 
 ### Visual and asset invariants
 
-Keep the current shared desktop frame, graphite discovery artwork, search capsule, four vehicle-type pills, card facts, quiet arrow actions and equal Filters/Sort controls described in TEMPLATE. Preserve all mobile composition, spacing, typography and artwork. Check missing images, overflow, clipped text, card/action collisions and visible keyboard focus; do not redesign them during architectural work.
+Keep the shared desktop frame, graphite discovery artwork, Type/Make/Model search capsule with its small Type cutout, rounded refinement pills, card facts, quiet arrow actions and compact Sort/View controls described in TEMPLATE. Home has four refinement pills; Cars has six. Verify that Home retains its draft until Search, cancelled dialog edits are discarded, category changes clear incompatible make/model and retain compatible ranges, and dialogs/Type menus close across the desktop breakpoint. Preserve all mobile composition, spacing, typography and artwork. Check missing images, overflow, clipped text, card/action collisions and visible keyboard focus; do not redesign them during architectural work.
 
 On Windows, retain the bounded image encoder and disabled libvips operation cache. Check cold and warm optimized transparent-image requests, including AVIF, rather than trusting a warm cache. Standalone image optimization and mounted raw-asset behaviour are separate deployment contracts. Preserve source artwork, licences, provenance and compatible dealer overrides.
 
@@ -75,3 +75,7 @@ Dealer copies require an identity/content/contact/metadata/asset sweep through t
 Store transient screenshots, traces and logs in ignored `runtime/` or the existing Playwright output directories. Loose images in the E2E source root are not fixtures. Keep intentional `specs/*-snapshots`, executable regressions, unresolved reproductions, licences and asset provenance. Retired captures remain available in Git history. Never follow directory links during cleanup or delete output owned by a live process.
 
 Report the actual checks and their limits. Source verification, a production build, public-hosted behaviour, mounted-path behaviour and owner visual acceptance are separate facts. Do not claim a full release is flawless from unit tests or a localhost HTTP 200 alone.
+
+Local development previews disable Turbopack filesystem caching. Their compiler
+stays warm in memory; restarting recompiles instead of keeping another large
+persistent cache on the Windows temporary drive.

@@ -9,6 +9,8 @@ import {
   DrawerTitle,
 } from "@repo/design-system/components/ui/drawer";
 import { cn } from "@repo/design-system/lib/utils";
+import { withBasePath } from "@repo/internationalization/paths";
+import { publicSite } from "@repo/marketplace/site-config";
 import {
   DealerMobileBrandBar,
   DealerMobileHeaderIcon,
@@ -17,6 +19,7 @@ import {
   MobilePillRail,
   mobileHeaderIconActionClassName,
 } from "@repo/marketplace-ui";
+import { DealerDesktopHero } from "@repo/marketplace-ui/components/dealer-desktop-hero";
 import Image from "@repo/marketplace-ui/components/public-image";
 import {
   mobileSearchFieldClassName,
@@ -49,6 +52,11 @@ interface MobileContentHubProps {
   locale: "bg" | "en";
 }
 
+const desktopGuideVehicles = publicSite.artwork.desktopPageVehicles?.guides;
+const desktopGuideHeroAppearance = desktopGuideVehicles
+  ? "vehicles"
+  : undefined;
+
 const contentCategoryLabels = {
   bg: "Категории материали",
   en: "Content categories",
@@ -58,6 +66,52 @@ const contentResultsLabels = {
   bg: "Намерени статии",
   en: "Matching articles",
 } as const;
+
+function ContentCategoryPills({
+  filter,
+  locale,
+  mobile = false,
+  onSelect,
+  ready,
+}: {
+  filter: ContentFilter;
+  locale: "bg" | "en";
+  mobile?: boolean;
+  onSelect: (value: ContentFilter) => void;
+  ready: boolean;
+}) {
+  const buttons = contentFilters.map(({ id: value, ...labels }) => (
+    <button
+      aria-pressed={filter === value}
+      className={
+        mobile ? getMobileQuickPillClassName(filter === value) : undefined
+      }
+      disabled={!ready}
+      key={value}
+      onClick={() => onSelect(value)}
+      type="button"
+    >
+      {labels[locale]}
+    </button>
+  ));
+  return mobile ? (
+    <MobilePillRail
+      className="gap-2"
+      data-slot="editorial-filter-pills"
+      label={contentCategoryLabels[locale]}
+    >
+      {buttons}
+    </MobilePillRail>
+  ) : (
+    <fieldset
+      aria-label={contentCategoryLabels[locale]}
+      className={desktopStyles.editorialPills}
+      data-slot="editorial-desktop-filter-pills"
+    >
+      {buttons}
+    </fieldset>
+  );
+}
 
 function DesktopContentSearch({
   count,
@@ -142,7 +196,6 @@ export const MobileContentHub = ({
     );
   };
   useEffect(() => {
-    setReady(true);
     const restore = () => {
       const search = parseContentSearch(
         Object.fromEntries(new URLSearchParams(window.location.search))
@@ -150,6 +203,9 @@ export const MobileContentHub = ({
       setQuery(search.query);
       setFilter(search.filter);
     };
+    // Returning to a cached page can restore props from before URL-only filtering.
+    restore();
+    setReady(true);
     window.addEventListener("popstate", restore);
     return () => window.removeEventListener("popstate", restore);
   }, []);
@@ -165,6 +221,34 @@ export const MobileContentHub = ({
         desktopStyles.editorial
       )}
     >
+      <DealerDesktopHero
+        appearance={desktopGuideHeroAppearance}
+        controls={
+          <div className={desktopStyles.editorialDiscovery}>
+            <DesktopContentSearch
+              count={visibleItems.length}
+              inputRef={desktopSearchInput}
+              isBg={isBg}
+              onClear={() => {
+                updateSearch({ query: "", filter });
+                focusSearch();
+              }}
+              onQueryChange={(value) => updateSearch({ query: value, filter })}
+              query={query}
+              ready={ready}
+            />
+            <ContentCategoryPills
+              filter={filter}
+              locale={locale}
+              onSelect={selectFilter}
+              ready={ready}
+            />
+          </div>
+        }
+        locale={locale}
+        title={isBg ? "Съвети и статии" : "Guides and articles"}
+        vehicleArtwork={desktopGuideVehicles}
+      />
       <section className="bg-brand text-white [--lead-site-accent-bright:white] lg:hidden">
         <div className="mx-auto w-full max-w-lg">
           <MobileDealerChrome
@@ -264,50 +348,35 @@ export const MobileContentHub = ({
         </div>
       </section>
 
-      <DesktopContentSearch
-        count={visibleItems.length}
-        inputRef={desktopSearchInput}
-        isBg={isBg}
-        onClear={() => {
-          updateSearch({ query: "", filter });
-          focusSearch();
-        }}
-        onQueryChange={(value) => updateSearch({ query: value, filter })}
-        query={query}
-        ready={ready}
-      />
-
       <div
         className={cn(
           "mx-auto w-full max-w-lg lg:max-w-[90rem]",
           desktopStyles.editorialBody
         )}
       >
-        <div className="relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8">
+        <div
+          className={cn(
+            "relative -mt-3 rounded-t-2xl bg-background pt-3 lg:mt-0 lg:rounded-none lg:pt-8",
+            desktopStyles.editorialPanel
+          )}
+        >
           <div className="px-4 lg:px-0">
-            <MobilePillRail
-              className="gap-2"
-              data-slot="editorial-filter-pills"
-              label={contentCategoryLabels[locale]}
-            >
-              {contentFilters.map(({ id: value, ...labels }) => (
-                <button
-                  aria-pressed={filter === value}
-                  className={getMobileQuickPillClassName(filter === value)}
-                  disabled={!ready}
-                  key={value}
-                  onClick={() => selectFilter(value)}
-                  type="button"
-                >
-                  {labels[locale]}
-                </button>
-              ))}
-            </MobilePillRail>
+            <ContentCategoryPills
+              filter={filter}
+              locale={locale}
+              mobile
+              onSelect={selectFilter}
+              ready={ready}
+            />
           </div>
 
-          <div className="mt-3 grid gap-2 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3">
+          <div
+            className="mt-3 grid gap-2 px-4 pb-8 md:grid-cols-2 lg:mt-5 lg:gap-5 lg:px-0 xl:grid-cols-3"
+            data-slot="editorial-content-grid"
+          >
             {visibleItems.map((item, index) => (
               <Link
+                aria-label={item.title}
                 className="group flex min-h-[124px] overflow-hidden rounded-2xl bg-white focus-visible:outline-2 focus-visible:outline-zinc-950 focus-visible:outline-offset-2 active:scale-[0.995]"
                 data-slot="content-card"
                 href={`${localize(`/guides/${item.slug}`)}${serializeContentSearch({ query, filter })}`}
@@ -318,14 +387,22 @@ export const MobileContentHub = ({
                   className="relative w-20 min-w-20 shrink-0 overflow-hidden bg-zinc-200 min-[360px]:w-[28%] min-[360px]:min-w-24"
                   data-slot="content-card-media"
                 >
-                  <Image
-                    alt=""
-                    className="object-cover"
-                    fill
-                    loading={index === 0 ? "eager" : "lazy"}
-                    sizes="(max-width: 359px) 80px, (max-width: 768px) 120px, (max-width: 1023px) 260px, (min-width: 1280px) 30vw, 44vw"
-                    src={item.image}
-                  />
+                  <picture className="absolute inset-0 block">
+                    {item.desktopImage && (
+                      <source
+                        media="(min-width: 1024px)"
+                        srcSet={withBasePath(item.desktopImage)}
+                      />
+                    )}
+                    <Image
+                      alt=""
+                      className="object-cover object-right"
+                      fill
+                      loading={index === 0 ? "eager" : "lazy"}
+                      sizes="(max-width: 359px) 80px, (max-width: 768px) 120px, (max-width: 1023px) 260px, (min-width: 1600px) 260px, (min-width: 1280px) 330px, 30vw"
+                      src={item.image}
+                    />
+                  </picture>
                 </div>
                 <div
                   className="flex min-w-0 flex-1 flex-col px-2 py-2.5 min-[360px]:px-3"
@@ -338,7 +415,10 @@ export const MobileContentHub = ({
                     <span className="whitespace-nowrap">{item.category}</span>
                   </div>
                   <h2 className="mt-1 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
-                    {item.title}
+                    <span className="lg:hidden">{item.title}</span>
+                    <span className="hidden lg:inline">
+                      {item.desktopTitle ?? item.title}
+                    </span>
                   </h2>
                   <p
                     className="mt-1 hidden text-meta text-zinc-600 lg:line-clamp-2 min-[360px]:line-clamp-1"

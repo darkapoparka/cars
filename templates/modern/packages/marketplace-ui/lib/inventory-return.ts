@@ -15,6 +15,8 @@ interface InventoryReturn {
   scrollY: number;
 }
 
+let pendingReturn: Pick<InventoryReturn, "href" | "scrollY"> | null = null;
+
 const normalizePath = (path: string) =>
   withoutBasePath(path).replace(localePrefix, "");
 
@@ -67,4 +69,28 @@ export function getInventoryReturnHref(fallback: string) {
         withoutBasePath(saved.href)
       )
     : fallback;
+}
+
+/** Only the listing's Back action requests a custom scroll restoration. */
+export function prepareInventoryReturn(href: string) {
+  pendingReturn = null;
+  const saved = readInventoryReturn();
+  if (
+    saved?.listingPath === normalizePath(location.pathname) &&
+    normalizePath(saved.href) === normalizePath(href)
+  ) {
+    pendingReturn = { href: withoutBasePath(href), scrollY: saved.scrollY };
+  }
+}
+
+/** Consume in the animation frame so effect replay cannot discard the return. */
+export function takeInventoryReturnScrollY(): number | null {
+  const pending = pendingReturn;
+  pendingReturn = null;
+  if (!pending) {
+    return null;
+  }
+  return pending.href === withoutBasePath(location.pathname) + location.search
+    ? pending.scrollY
+    : null;
 }

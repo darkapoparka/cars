@@ -1,11 +1,89 @@
 import { afterEach, expect, it, vi } from "vitest";
 import {
   getInventoryReturnHref,
+  prepareInventoryReturn,
   readInventoryReturn,
   rememberInventoryReturn,
+  takeInventoryReturnScrollY,
 } from "./inventory-return";
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  takeInventoryReturnScrollY();
+  vi.unstubAllGlobals();
+});
+
+const stubSavedReturn = (scrollY = 1000) => {
+  vi.stubGlobal("sessionStorage", {
+    getItem: () =>
+      JSON.stringify({
+        href: "/bg/cars?make=BMW",
+        listingPath: "/listing/x",
+        scrollY,
+      }),
+  });
+};
+
+it("does not restore an old listing position on a fresh inventory visit", () => {
+  stubSavedReturn();
+  vi.stubGlobal("location", {
+    pathname: "/bg/cars",
+    search: "?make=BMW",
+  });
+  expect(readInventoryReturn()?.scrollY).toBe(1000);
+  expect(takeInventoryReturnScrollY()).toBeNull();
+});
+
+it("restores a requested listing return once, retaining filters and locale", () => {
+  stubSavedReturn();
+  vi.stubGlobal("location", { pathname: "/en/listing/x" });
+  prepareInventoryReturn("/en/cars?make=BMW");
+  vi.stubGlobal("location", {
+    pathname: "/en/cars",
+    search: "?make=BMW",
+  });
+  expect(takeInventoryReturnScrollY()).toBe(1000);
+  expect(takeInventoryReturnScrollY()).toBeNull();
+});
+
+it("restores a saved position at the top rather than treating zero as missing", () => {
+  stubSavedReturn(0);
+  vi.stubGlobal("location", { pathname: "/bg/listing/x" });
+  prepareInventoryReturn("/bg/cars?make=BMW");
+  vi.stubGlobal("location", {
+    pathname: "/bg/cars",
+    search: "?make=BMW",
+  });
+  expect(takeInventoryReturnScrollY()).toBe(0);
+});
+
+it.each([
+  ["/bg/listing/another-car", "/bg/cars?make=BMW"],
+  ["/bg/listing/x", "/bg/cars"],
+  ["/bg/listing/x", "/bg/trucks?make=BMW"],
+])("does not restore an unrelated listing or search: %s -> %s", (pathname, href) => {
+  stubSavedReturn();
+  vi.stubGlobal("location", { pathname });
+  prepareInventoryReturn(href);
+  const target = new URL(href, "http://localhost");
+  vi.stubGlobal("location", {
+    pathname: target.pathname,
+    search: target.search,
+  });
+  expect(takeInventoryReturnScrollY()).toBeNull();
+});
+
+it("discards a pending return if a different inventory page is mounted", () => {
+  stubSavedReturn();
+  vi.stubGlobal("location", { pathname: "/bg/listing/x" });
+  prepareInventoryReturn("/bg/cars?make=BMW");
+  vi.stubGlobal("location", { pathname: "/bg/cars", search: "" });
+  expect(takeInventoryReturnScrollY()).toBeNull();
+  vi.stubGlobal("location", {
+    pathname: "/bg/cars",
+    search: "?make=BMW",
+  });
+  expect(takeInventoryReturnScrollY()).toBeNull();
+});
 
 it("retains filters and scroll across localized listing navigation", () => {
   const values = new Map<string, string>();
@@ -50,6 +128,8 @@ it("falls back when browser storage is unavailable", () => {
   });
   vi.stubGlobal("location", { pathname: "/listing/x" });
   expect(getInventoryReturnHref("/cars")).toBe("/cars");
+  expect(() => prepareInventoryReturn("/cars")).not.toThrow();
+  expect(takeInventoryReturnScrollY()).toBeNull();
 });
 
 it("retains the current explicit locale when returning across languages", () => {
