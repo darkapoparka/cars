@@ -46,3 +46,17 @@ The category pills stay: they provide a clear active state across many categorie
 Browser measurements on Model: footer height 64 to 56px at 320/390px, 96 to 68px at 768px, and 80 to 64px at 1440px. That restores 8, 28 and 16px of visible filter content respectively, without horizontal overflow. The desktop quick picker footer is 56px with 44px controls. Matched captures: footer-before/after-{320,390,768,1440}.jpg; measurements: footer-before.json and footer-after.json.
 
 Publication scope is the three reviewed filter components, based on the existing deployed publishing baseline f08f679ff091e446ca0b57eec9c3710baaec7ef9. Other unpublished App work remains in the canonical checkout. The existing deployed architecture is reconciled into the Cars source snapshot; template pins and dealer copies are unchanged. The local full check passed lint, types and 68 tests but ran out of disk during the production build after Git auto-maintenance. Release validation uses an immutable export on C:; its outcome is recorded separately.
+
+## Published verification
+
+Production is READY at https://cars-template-app.vercel.app/bg/cars?filters=1 for publishing commit e2504af29c9e6e86911f3a1e5b61e1b4e1894674. Cars source commit: 1f80d598b690059e7a5d6fce9361aaf1b8032866. The shared checkout HEAD and index were preserved during both non-force pushes.
+
+The exact runtime snapshot passed npm run check on Node 22.20.0: lint, TypeScript, 58 tests, and 431 generated pages. The deployment snapshot contains the three reviewed filter components over the existing f08f679 publishing baseline. Unpublished mobile, search and services drafts were not included. The already deployed architecture was reconciled into Cars source; 1399 older reference files were preserved byte-for-byte in .template/recovery/41cbcf7fb30366e849660607190bb4c925009587/, excluded by the existing lint/type/build export boundaries. This does not promote template pins or refresh dealers.
+
+The first isolated build shared dependencies from L: and hit a Windows cross-drive module-resolution error. A physical dependency copy on C: passed the complete check. Logs: C:/Users/radev/.codex/tmp/cars-app-filters-20261008/release-check-physical.log. Scope and push records remain in runtime/filter-footer-20261008.
+
+Browser verification on the exact built preview covered Model, Budget and Body type at 320px, 390px and 1440px; BMW selected 3 cars, X3 selected 1, and that result restored after reload and hydration. Keyword Toyota returned 9; reset restored 48. Buy Make/Model pickers were 620px wide with 56px footers and 44px actions.
+
+Hosted checks covered Bulgarian Cars at 320px, 390px, 768px and 1440px; English Cars keyword, Model and selected type; and English Buy Make/Model selectors. Footer heights were 56px on phone, 68px on tablet and 64px on desktop. All actions were 44px high, there was no positive horizontal overflow, and panes contained at most one visible search field. The last action's Tab wrapped to Close filters. All 14 original body assets loaded and blended correctly; one was still loading in the immediate first snapshot and then completed. No console errors were recorded.
+
+Evidence: hosted-checks.json, release-built-checks.json, hosted-footer-{320,390,768,1440}.jpg, hosted-type-{320,390,1440}.jpg and hosted-model-quick-1440.jpg.
