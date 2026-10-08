@@ -34,7 +34,21 @@ try {
     };
     const open = async () => { await opener.click(); await menu.waitFor({ state: 'visible' }); };
     try {
+      if (home) {
+        const bodyOpener = page.locator('.dn-home-browse [data-field=body]');
+        await bodyOpener.click(); await menu.waitFor({ state: 'visible' });
+        assert.equal((await menu.boundingBox()).width, 480, 'Body-type menus keep their existing size');
+        assert((await menu.getByRole('heading').boundingBox()).width <= 1, 'Long filter titles remain accessible without crowding search');
+        assert((await search().boundingBox()).width >= 340, 'Body-type search retains enough space for its localized placeholder');
+        await search().fill('SUV');
+        assert.equal(await menu.getByRole('radio').count(), 1, 'The expanded search still filters body types');
+        await page.screenshot({ path: `${output}/${name}-body-header.png` });
+        await page.keyboard.press('Escape'); await menu.waitFor({ state: 'hidden' });
+        assert(await bodyOpener.evaluate(element => element === document.activeElement), 'Body-type dismissal restores its opener');
+      }
       await open();
+      assert((await menu.getByRole('heading').boundingBox()).width <= 1, 'The Make title remains accessible without duplicating the opener');
+      assert((await search().boundingBox()).width >= 680, 'Brand search spans the header');
       assert.equal(await menu.getByRole('checkbox').count(), 180, 'All makes plus the 179-brand catalogue');
       const options = await menu.locator('input[type=checkbox]').evaluateAll(inputs => inputs.map(input => input.value));
       assert.deepEqual(options.slice(0, 4), ['', 'Audi', 'BMW', 'Mercedes-Benz'], 'In-stock makes lead the catalogue');

@@ -23,21 +23,18 @@ async function checkRootGrid(menu, next, compact, stock) {
     assert(Math.abs(first.y - second.y) < 1 && Math.abs(second.x - first.x - first.width - 8) < 1, 'The first catalogue card fills the cell beside All models');
   }
 }
-async function checkModelHeader(menu, label, compactLabel) {
+async function checkModelHeader(menu, label, compact) {
   const header = menu.locator('.dn-picker-header');
   const back = header.locator('.back');
-  const visibleLabel = compactLabel ?? label;
-  assert.equal(await back.innerText(), visibleLabel, 'Compact headers show the family while wide headers retain the full path');
-  assert.equal(await back.getAttribute('title'), label, 'Truncated paths retain their complete label');
+  assert.equal(await back.getAttribute('title'), label, 'Icon-only Back retains the complete path on hover');
   assert((await back.getAttribute('aria-label')).endsWith(label), 'Back exposes its full context to assistive technology');
-  const text = await back.locator('span').evaluate(node => ({ width: node.clientWidth, content: node.scrollWidth }));
-  if (visibleLabel.length < 24) assert(text.content <= text.width, 'Short make/family paths remain fully visible');
-  else assert(text.content > text.width, 'Long family paths truncate without growing the header');
+  assert((await back.locator('span').boundingBox()).width <= 1, 'Breadcrumb text never takes space from search');
   assert.equal(await menu.locator('.dn-model-groups .path').count(), 0, 'The list has no duplicate Back/breadcrumb row');
   const boxes = await Promise.all([back, header.getByRole('searchbox'), header.locator('.dn-picker-close')].map(node => node.boundingBox()));
   const centers = boxes.map(box => box.y + box.height / 2);
   assert(Math.max(...centers) - Math.min(...centers) < 2, 'Back, search and close share one header row');
-  assert(boxes[0].height >= 44 && boxes[1].width >= (compactLabel ? 150 : 200), 'Long paths retain usable Back and readable search controls');
+  assert.equal(boxes[0].width, 44, 'Back has a fixed icon target regardless of the path length');
+  assert(boxes[0].height >= 44 && boxes[1].width >= (compact ? 200 : 400), 'Search retains room even with a long family name');
   const first = await menu.locator('.dn-model-groups input[type=checkbox]').first().evaluate(node => node.closest('label').getBoundingClientRect().top);
   const headerBox = await header.boundingBox();
   assert(first >= headerBox.y + headerBox.height && first <= headerBox.y + headerBox.height + 16, 'Model choices begin directly beneath the header');
@@ -80,7 +77,7 @@ try {
       assert.equal(await menu.locator('.all-models').count(), 0, 'All models is not repeated inside a family');
       assert.equal(await menu.getByRole('checkbox', { name: '118', exact: true }).count(), 0, 'Other families are not mixed into the model list');
       assert(await menu.locator('.back').evaluate(node => node === document.activeElement), 'Entering a family places keyboard focus on Back');
-      await checkModelHeader(menu, 'BMW / 3 Series', nested ? '3 Series' : undefined);
+      await checkModelHeader(menu, 'BMW / 3 Series', nested);
       assert(await menu.getByRole('checkbox', { name: '320', exact: true }).isEnabled(), 'Zero-stock catalogue models remain selectable');
       const description = await menu.getByRole('checkbox', { name: '320', exact: true }).getAttribute('aria-describedby');
       assert.match(await menu.locator(`[id="${description}"]`).innerText(), /^0 /);
@@ -190,7 +187,7 @@ try {
       assert.equal(new URL(page.url()).searchParams.has('q'), false);
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 1, 'Existing stock values still select the exact car');
       assert.deepEqual(errors, []);
-      results.push({ name, passed: true }); console.log(`PASS ${name}: compact contextual header, Back/focus, fixed frame, retained selections, zero stock, search and legacy GET`);
+      results.push({ name, passed: true }); console.log(`PASS ${name}: search-first header, Back/focus, fixed frame, retained selections, zero stock, search and legacy GET`);
     } catch (error) {
       await page.screenshot({ path: `${output}/${name}-failure.png` });
       await writeFile(`${output}/${name}-failure.json`, JSON.stringify({ message: error.message, errors }, null, 2));
@@ -236,7 +233,7 @@ try {
       const pageScroll = await page.evaluate(() => scrollY);
       await menu.locator(`[data-model-family="${family}"]`).click();
       assert.equal(await menu.locator('input[type=checkbox]').count(), 99, 'Only the 99 choices belonging to the active family are mounted');
-      await checkModelHeader(menu, `BMW / ${family}`, nested ? family : undefined);
+      await checkModelHeader(menu, `BMW / ${family}`, nested);
       await menu.getByRole('checkbox', { name: additions.at(-1), exact: true }).check();
       assert(await menu.locator('.back').isVisible(), 'Back stays visible after scrolling to the last of 99 models');
       const backBox = await menu.locator('.back').boundingBox();
@@ -248,9 +245,21 @@ try {
       assert.equal(await page.evaluate(() => scrollY), pageScroll, 'Model scrolling is contained');
       for (const label of [additions[39], '315']) {
         await menu.getByRole('checkbox', { name: label, exact: true }).focus();
+        // Native focus scrolling can finish after focus() returns in WebKit.
+        await page.waitForFunction(({ menuSelector, footerSelector, label }) => {
+          const active = document.activeElement;
+          const menu = document.querySelector(menuSelector);
+          if (!menu?.contains(active) || active?.getAttribute('aria-label') !== label) return false;
+          const focused = active.getBoundingClientRect();
+          const back = menu.querySelector('.back').getBoundingClientRect();
+          const footer = document.querySelector(footerSelector).getBoundingClientRect();
+          return focused.top >= back.bottom && focused.bottom <= footer.top;
+        }, { menuSelector: home ? '.dn-home-browse-picker[data-state=open]' : nested ? '.dn-filter-picker' : '#dn-listing-filter-dialog',
+          footerSelector: home ? '.dn-home-browse-picker__footer' : nested ? '.dn-listing-filter__dialog-footer' : '.dn-search-footer', label });
         const focused = await menu.getByRole('checkbox', { name: label, exact: true }).boundingBox();
         const back = await menu.locator('.back').boundingBox();
-        assert(focused.y >= back.y + back.height && focused.y + focused.height <= (await footer.boundingBox()).y, 'Keyboard focus remains visible below the fixed header');
+        const footerBox = await footer.boundingBox();
+        assert(focused.y >= back.y + back.height && focused.y + focused.height <= footerBox.y, `Keyboard focus remains visible below the fixed header: ${JSON.stringify({ label, focused, back, footer: footerBox })}`);
       }
       await menu.locator('.back').click();
       assert(await menu.locator(`[data-model-family="${family}"]`).evaluate(node => node === document.activeElement), 'Back returns focus after a long scroll');

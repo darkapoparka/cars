@@ -1,7 +1,7 @@
 <script module lang="ts">
   import type { Attachment } from 'svelte/attachments';
 
-  export type PickerNavigation = { label: string; compactLabel?: string; back?: () => void; attachBack?: Attachment<HTMLButtonElement> };
+  export type PickerNavigation = { label: string; back?: () => void; attachBack?: Attachment<HTMLButtonElement> };
 </script>
 
 <script lang="ts">
@@ -14,11 +14,11 @@
   const i18n = getI18n();
 </script>
 
-<header class="dn-picker-header" class:dn-picker-header--search={Boolean(search)} class:dn-picker-header--navigation={Boolean(navigation)} class:dn-picker-header--compact={Boolean(navigation?.compactLabel)}>
+<header class="dn-picker-header" class:dn-picker-header--search={Boolean(search)} class:dn-picker-header--navigation={Boolean(navigation)} class:dn-picker-header--back={Boolean(navigation?.back)}>
   <h2 {id}>
     {#if navigation?.back}
-      <button type="button" class="back" onclick={navigation.back} {@attach navigation.attachBack} aria-label={`${i18n.t('m_76900f1bfd16')}: ${navigation.label}`} title={navigation.label}><Icon name="arrow-left" size={16} /><span>{navigation.compactLabel ?? navigation.label}</span></button>
-    {:else}<span title={navigation?.label}>{navigation?.compactLabel ?? navigation?.label ?? title}</span>{/if}
+      <button type="button" class="back" onclick={navigation.back} {@attach navigation.attachBack} aria-label={`${i18n.t('m_76900f1bfd16')}: ${navigation.label}`} title={navigation.label}><Icon name="arrow-left" size={16} /><span>{navigation.label}</span></button>
+    {:else}<span>{navigation?.label ?? title}</span>{/if}
   </h2>
   {#if search}<div class="dn-picker-search">{@render search()}</div>{/if}
   <Popover.Close type="button" class="dn-picker-close" aria-label={i18n.t('m_84305a580997')}><Icon name="x" size={18} /></Popover.Close>
@@ -37,13 +37,13 @@
   :global(.dn-picker-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   @media (min-width: 992px) {
     h2 { color: var(--dn-muted); font: var(--dn-field-label-font); }
-    .dn-picker-header--search { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; padding-block: var(--dn-space-2); }
-    .dn-picker-header--search h2 { white-space: nowrap; }
-    .dn-picker-search { min-width: 0; }
+    .dn-picker-header--search { display: flex; align-items: center; padding-block: var(--dn-space-2); }
+    /* The opener supplies the visible title; keep its duplicate available to screen readers. */
+    .dn-picker-header--search h2, .dn-picker-header--search .back > span { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .dn-picker-header--search.dn-picker-header--back h2 { position: static; flex: 0 0 var(--dn-control-hit-height); width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); margin: 0; overflow: visible; clip-path: none; }
+    .dn-picker-header--search .back { justify-content: center; width: var(--dn-control-hit-height); padding: 0; }
+    .dn-picker-search { flex: 1 1 0; min-width: 0; }
     .dn-picker-header--navigation { display: flex; gap: var(--dn-space-2); }
-    .dn-picker-header--navigation h2 { flex: 0 1 auto; min-width: 0; max-width: 44%; color: var(--dn-ink); font: var(--dn-control-font); }
-    .dn-picker-header--compact h2 { max-width: 30%; }
-    .dn-picker-header--navigation h2 > span { display: block; overflow: hidden; text-overflow: ellipsis; }
-    .dn-picker-header--navigation .dn-picker-search { flex: 1 1 0; }
+    .dn-picker-header--navigation h2 { color: var(--dn-ink); font: var(--dn-control-font); }
   }
 </style>

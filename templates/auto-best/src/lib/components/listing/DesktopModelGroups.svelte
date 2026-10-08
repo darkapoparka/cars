@@ -47,7 +47,6 @@
   export function navigation(): PickerNavigation | undefined {
     if (searching || !currentMake) return;
     return { label: `${currentMake.make}${currentFamily ? ' / ' + currentFamily.name : ''}`,
-      compactLabel: compact ? currentFamily?.name ?? currentMake.make : undefined,
       back: currentFamily || !singleMake ? back : undefined, attachBack };
   }
   onMount(() => {

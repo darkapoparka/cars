@@ -62,7 +62,8 @@ try {
     const heading=await dialog.getByRole('heading').boundingBox();
     const search=await dialog.getByRole('searchbox').boundingBox();
     const close=await dialog.locator('.dn-picker-close').boundingBox();
-    assert(Math.abs(search.y+search.height/2-heading.y-heading.height/2)<1,'Desktop search shares the title row');
+    assert(heading.width<=1,'The accessible title does not occupy desktop search space');
+    assert(search.width>=choiceFrame.width-160,'Desktop search uses the available header width');
     assert(Math.abs(search.y+search.height/2-close.y-close.height/2)<1,'Search and close are vertically aligned');
    }
    if (width===1440) await page.screenshot({path:output+'/shortcut-'+locale+'-'+field+'-'+width+'.jpg',type:'jpeg',quality:90});
