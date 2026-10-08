@@ -16,6 +16,7 @@
   import { listingSuggestionMatcher } from '$data/listing-draft';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import CheckmarkIcon from '$components/ui/CheckmarkIcon.svelte';
 
   let { makes, selected, search = '', compact = false, name = 'model', onchange }: {
     makes: readonly string[]; selected: readonly string[]; search?: string; compact?: boolean; name?: string; onchange: (value: string) => void;
@@ -90,7 +91,7 @@
       <DesktopFilterChoice value={choice.value} label={choice.label} accessibleLabel={choice.label} description={vehicleCount(i18n.locale, choice.count)} checked={listingSelectionHas(selected, choice.value)} multiple tile={!compact} {name} {onchange} />
     {:else}
       <button type="button" class="disclosure" class:selected={hasSelection(family)} data-model-family={family.name} data-model-key={familyKey(group.make, family.name)} onclick={() => enter(group.make, family.name)}>
-        <span class="disclosure-label">{family.name}</span>{#if hasSelection(family)}<span class="selection-mark" aria-hidden="true">✓</span>{/if}<small>{vehicleCount(i18n.locale, family.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
+        <span class="disclosure-label">{family.name}</span>{#if hasSelection(family)}<span class="selection-mark" aria-hidden="true"><CheckmarkIcon /></span>{/if}<small>{vehicleCount(i18n.locale, family.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
       </button>
     {/if}
   {/each}
@@ -125,7 +126,7 @@
   {:else}
     {#each catalogue as group (group.make)}
       <button type="button" class="disclosure make-title" class:selected={group.families.some(hasSelection)} data-model-make={group.make} data-model-key={familyKey(group.make)} onclick={() => enter(group.make)}>
-        <span class="disclosure-label">{group.make}</span>{#if group.families.some(hasSelection)}<span class="selection-mark" aria-hidden="true">✓</span>{/if}<small>{vehicleCount(i18n.locale, group.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
+        <span class="disclosure-label">{group.make}</span>{#if group.families.some(hasSelection)}<span class="selection-mark" aria-hidden="true"><CheckmarkIcon /></span>{/if}<small>{vehicleCount(i18n.locale, group.count)}</small><span class="chevron"><Icon name="chevron-down" size={16} /></span>
       </button>
     {/each}
   {/if}
@@ -143,9 +144,8 @@
   small { flex: none; color: var(--dn-muted); font-size: var(--dn-text-caption); font-weight: var(--dn-weight-ui); white-space: nowrap; }
   .disclosure:hover { background: var(--dn-surface-hover); }
   .disclosure:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
-  .disclosure.selected { box-shadow: inset 0 0 0 1px var(--dn-line-emphasis); }
   .chevron { display: flex; flex: none; color: var(--dn-muted); transform: rotate(-90deg); }
-  .selection-mark { color: var(--dn-ink); }
+  .selection-mark { display: flex; flex: none; color: var(--dn-ink); }
   h3 { min-width: 0; margin: 0; color: var(--dn-ink); font: var(--dn-control-font); overflow-wrap: anywhere; }
   .search-group { min-width: 0; }
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
