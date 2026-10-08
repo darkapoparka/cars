@@ -442,7 +442,15 @@
       letter-spacing: var(--dn-tracking-normal);
     }
 
-    .dn-editorial-item__meta,
+    .dn-editorial-item__meta {
+      margin-bottom: var(--dn-space-1);
+    }
+
+    .dn-editorial-item__meta span {
+      color: var(--dn-muted);
+      font: var(--dn-mobile-card-meta-font);
+    }
+
     .dn-editorial-item__summary {
       display: none;
     }

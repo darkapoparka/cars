@@ -63,6 +63,7 @@
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
   let heading: HTMLHeadingElement;
+  const attachHeading = (node: HTMLHeadingElement) => { heading = node; };
   let entryEditor = $state<{ edit: (trigger?: HTMLElement) => Promise<void> }>();
   let returnFocus: HTMLElement | undefined;
   let releaseScroll: (() => void) | undefined;
@@ -247,9 +248,9 @@
 
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} class="dn-enquiry" class:dn-enquiry--import={!selling} aria-labelledby="enquiry-title" {@attach attachDialog} onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-enquiry-panel">
-    <header class="dn-enquiry-header">
-      <div><h2 id="enquiry-title" tabindex="-1" bind:this={heading}>{step === 0 ? (selling ? title : i18n.t("m_302415e752d4")) : step === 1 ? (selling ? i18n.t("m_0cd108851eb3") : i18n.t("m_a7f00a2555a1")) : i18n.t("m_a12d84419d88")}</h2></div>
-      <button class="dn-enquiry-close dn-icon-button" type="button" aria-label={i18n.t("m_0a778b356dc9")} onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+    <header class="dn-mobile-overlay-heading dn-enquiry-header">
+      <div><h2 id="enquiry-title" tabindex="-1" {@attach attachHeading}>{step === 0 ? (selling ? title : i18n.t("m_302415e752d4")) : step === 1 ? (selling ? i18n.t("m_0cd108851eb3") : i18n.t("m_a7f00a2555a1")) : i18n.t("m_a12d84419d88")}</h2></div>
+      <button class="dn-enquiry-close dn-icon-button" type="button" aria-label={i18n.t("m_0a778b356dc9")} onclick={() => dialog.close()}><span class="dn-mobile-overlay-icon"><MobileActionIcon name="close" /></span><span class="dn-desktop-overlay-icon"><Icon name="x" size={22} /></span></button>
     </header>
     <ol class="dn-enquiry-steps" aria-label={i18n.t("m_0781a49bafd0")}>
       {#each steps as label, index (label)}<li class:current={step === index} class:complete={step > index} aria-current={step === index ? 'step' : undefined}><span>{index + 1}</span>{label}</li>{/each}
@@ -307,10 +308,10 @@
       {#if feedback}<p class="dn-enquiry-feedback" role="status">{feedback}</p>{/if}
     </form>
 
-    <footer class="dn-enquiry-footer">
-      {#if step > 0}<button class="dn-enquiry-back" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={18} />{i18n.t("m_76900f1bfd16")}</button>{/if}
-      {#if step < 2}<button class="dn-enquiry-primary" type="button" onclick={() => move(step + 1)}>{step === 0 ? i18n.t("m_31fbef162594") : i18n.t("m_21ab579a4c37")}<Icon name="arrow-right" size={18} /></button>
-      {:else}<button class="dn-enquiry-primary" type="button" disabled={sharing} onclick={share}>{sharing ? i18n.t("m_7001d98040b4") : i18n.t("m_2aaec190e1b0")}<Icon name="arrow-right" size={18} /></button>{/if}
+    <footer class="dn-enquiry-footer dn-mobile-overlay-footer">
+      {#if step > 0}<button class="dn-enquiry-back dn-mobile-overlay-clear" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={18} />{i18n.t("m_76900f1bfd16")}</button>{/if}
+      {#if step < 2}<button class="dn-enquiry-primary dn-mobile-overlay-action" type="button" onclick={() => move(step + 1)}><span class="dn-overlay-action-label">{step === 0 ? i18n.t("m_31fbef162594") : i18n.t("m_21ab579a4c37")}</span><Icon name="arrow-right" size={18} /></button>
+      {:else}<button class="dn-enquiry-primary" type="button" disabled={sharing} onclick={share}><span class="dn-overlay-action-label">{sharing ? i18n.t("m_7001d98040b4") : i18n.t("m_2aaec190e1b0")}</span><Icon name="arrow-right" size={18} /></button>{/if}
     </footer>
   </div>
 </dialog>
@@ -397,7 +398,10 @@
     .dn-enquiry-header { padding: var(--dn-overlay-header-padding); }
     .dn-enquiry-header h2 { font-size: var(--dn-text-subheading); }
     .dn-enquiry-steps { gap: 14px; padding: 0 16px 16px; }
-    .dn-enquiry-body { flex: 1; padding: 20px 16px; }
+    .dn-enquiry-body { flex: 1; padding: var(--dn-space-5) var(--dn-overlay-gutter); }
+    .dn-enquiry-fields label, .dn-enquiry-notes { font-weight: var(--dn-weight-medium); }
+    .dn-enquiry-fields input, textarea { min-height: var(--dn-overlay-control-height); border: 0; background: var(--dn-entry-surface); font: var(--dn-overlay-field-font); }
+    .dn-enquiry-fields input:focus, textarea:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
     .dn-enquiry-footer { padding: 12px 16px max(12px,env(safe-area-inset-bottom)); }
     .dn-enquiry-footer .dn-enquiry-primary { min-width: 0; overflow-wrap: anywhere; padding-inline: 12px; font-size: var(--dn-cta-size); }
   }

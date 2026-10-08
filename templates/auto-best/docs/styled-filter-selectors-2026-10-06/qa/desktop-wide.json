@@ -1,0 +1,142 @@
+[
+  {
+    "locale": "bg",
+    "width": 992,
+    "height": 700,
+    "frame": {
+      "x": 16.5,
+      "y": 24,
+      "width": 944,
+      "height": 652
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1024,
+    "height": 600,
+    "frame": {
+      "x": 16.5,
+      "y": 24,
+      "width": 976,
+      "height": 552
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "height": 720,
+    "frame": {
+      "x": 32.5,
+      "y": 24,
+      "width": 1200,
+      "height": 672
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "height": 900,
+    "frame": {
+      "x": 112.5,
+      "y": 59.265625,
+      "width": 1200,
+      "height": 781.453125
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1920,
+    "height": 1080,
+    "frame": {
+      "x": 352.5,
+      "y": 149.265625,
+      "width": 1200,
+      "height": 781.453125
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 992,
+    "height": 700,
+    "frame": {
+      "x": 16.5,
+      "y": 24,
+      "width": 944,
+      "height": 652
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "height": 600,
+    "frame": {
+      "x": 16.5,
+      "y": 24,
+      "width": 976,
+      "height": 552
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "height": 720,
+    "frame": {
+      "x": 32.5,
+      "y": 24,
+      "width": 1200,
+      "height": 672
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "frame": {
+      "x": 112.5,
+      "y": 59.265625,
+      "width": 1200,
+      "height": 781.453125
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1920,
+    "height": 1080,
+    "frame": {
+      "x": 352.5,
+      "y": 149.265625,
+      "width": 1200,
+      "height": 781.453125
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "scenario": "outside-stock values, exact numbers and local reset",
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "scenario": "outside-stock values, exact numbers and local reset",
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "scenario": "68 equipment choices, internal scrolling, footer and local reset",
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "scenario": "68 equipment choices, internal scrolling, footer and local reset",
+    "passed": true
+  }
+]

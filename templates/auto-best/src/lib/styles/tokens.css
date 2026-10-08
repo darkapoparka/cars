@@ -204,10 +204,17 @@
   --dn-overlay-control-height-compact: var(--dn-control-height-default);
   --dn-overlay-control-height-expanded: var(--dn-control-height-editor);
   --dn-overlay-control-height: var(--dn-overlay-control-height-compact);
+  --dn-overlay-header-icon-size: var(--dn-space-6);
+  --dn-overlay-title-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-heading) var(--dn-font);
+  --dn-overlay-row-height: var(--dn-mobile-filter-control-height);
   --dn-overlay-field-font: var(--dn-entry-font);
   --dn-overlay-option-font: var(--dn-control-font);
   --dn-overlay-value-font: var(--dn-weight-regular) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
-  --dn-overlay-action-font: var(--dn-cta-font);
+  --dn-overlay-action-font: var(--dn-overlay-secondary-font);
+  --dn-overlay-action-height: var(--dn-control-hit-height);
+  --dn-overlay-action-inset: var(--dn-space-1);
+  --dn-overlay-action-gap: var(--dn-space-2);
+  --dn-overlay-secondary-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
 
   /* Shared entry and segmented-control aliases. */
   --dn-entry-stack-gap: var(--dn-space-4);

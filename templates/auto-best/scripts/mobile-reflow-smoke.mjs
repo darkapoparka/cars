@@ -33,7 +33,7 @@ async function fits(page, mode) {
         client: { width: el.clientWidth, height: el.clientHeight }, scroll: { width: el.scrollWidth, height: el.scrollHeight } }));
     const cardHeights = [...root.querySelectorAll('.dn-vehicle-card--listing')].map(card => card.getBoundingClientRect().height);
     const cardHeightSpread = cardHeights.length ? Math.max(...cardHeights) - Math.min(...cardHeights) : 0;
-    const homeHeader = root.querySelector('.dn-quick-search__header, .dn-mobile-filter-header');
+    const homeHeader = root.querySelector('.dn-mobile-overlay-heading, .dn-quick-search__header, .dn-mobile-filter-header');
     let headerFits = true;
     if (homeHeader) {
       const title = homeHeader.querySelector('h2').getBoundingClientRect();
@@ -41,7 +41,8 @@ async function fits(page, mode) {
       const header = homeHeader.getBoundingClientRect();
       const centered = Math.abs((title.left + title.right) / 2 - (header.left + header.right) / 2) < 1;
       const controlsFit = buttons.length === 2 ? buttons[0].right <= title.left + 1 && title.right <= buttons[1].left + 1 : title.right <= buttons[0].left + 1;
-      headerFits = centered && controlsFit && buttons.every(button => Math.abs(button.width - 44) < 1);
+      const aligned = homeHeader.classList.contains('dn-mobile-overlay-heading') || centered;
+      headerFits = aligned && controlsFit && buttons.every(button => button.width >= 43 && button.height >= 43);
     }
     return { pageOverflow: document.documentElement.scrollWidth > innerWidth + 1, dialogOverflow: root.tagName === 'DIALOG' && root.scrollWidth > root.clientWidth + 1, clipped, cardHeightSpread, headerFits };
   }, mode === 'enlarged');

@@ -60,7 +60,9 @@ try {
       await page.waitForFunction(selector => [...document.querySelectorAll(`${selector} .dn-make-logo img`)].every(image => image.complete && image.naturalWidth > 0), home ? '.dn-home-browse-picker[data-state=open]' : '#dn-listing-filter-dialog');
       const before = await footer().boundingBox();
       const frame = await menu.boundingBox();
-      assert.equal(frame.width, 840);
+      const bar = await page.locator(home ? '.dn-home-browse' : '.dn-listing-filter').boundingBox();
+      assert.equal(frame.width, bar.width);
+      assert(Math.abs(frame.x - bar.x) <= 1, 'Make aligns with the full search surface');
       assert(frame.x >= 15 && frame.y >= 15 && frame.x + frame.width <= width - 15 && frame.y + frame.height <= height - 15, 'Large catalogues fit short viewports');
       const scroll = await scroller().evaluate(element => ({ client: element.clientHeight, full: element.scrollHeight }));
       assert(scroll.full > scroll.client, 'Only the catalogue body scrolls');
@@ -85,7 +87,7 @@ try {
       const vw = choice('Volkswagen').locator('..');
       assert.match(await vw.locator('img').getAttribute('src'), /volkswagen-badge-cardog\.svg$/, 'Volkswagen uses its existing reviewed logo');
       const one = await vw.boundingBox();
-      assert(one.width <= frame.width / 6, 'Search does not stretch a single result across the menu');
+      assert(one.width <= frame.width / Math.floor((frame.width - 34 + 8) / (136 + 8)), 'Search does not stretch a single result across the menu');
       await choice('Volkswagen').press('Space');
       await close();
       await open();

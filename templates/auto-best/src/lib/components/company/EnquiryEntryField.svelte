@@ -107,9 +107,9 @@
       {/if}
       {#if error}<p class="dn-entry-editor-error" id={`${id}-error`} role="alert">{error}</p>{/if}
     </div>
-    <footer>
-      <button type="button" class="dn-entry-editor-cancel" onclick={() => dialog.close()}>{i18n.t("m_19766ed6ccb2")}</button>
-      <button type="submit" class="dn-entry-editor-save">{i18n.t("m_1509f561f241")}</button>
+    <footer class="dn-overlay-footer">
+      <button type="button" class="dn-entry-editor-cancel dn-overlay-secondary" onclick={() => dialog.close()}>{i18n.t("m_19766ed6ccb2")}</button>
+      <button type="submit" class="dn-entry-editor-save dn-overlay-primary">{i18n.t("m_1509f561f241")}</button>
     </footer>
   </form>
 </dialog>

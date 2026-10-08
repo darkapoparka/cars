@@ -45,6 +45,7 @@
   const title = $derived(listingFacetTitle(field, i18n.locale));
   const range = $derived(field === 'price' || field === 'year');
   const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort' && field !== 'type');
+  const textEntry = $derived(searchable || range || field === 'mileage_max');
   const invalid = $derived(field === 'price' ? Boolean(draft.priceMin && draft.priceMax && Number(draft.priceMin) > Number(draft.priceMax))
     : field === 'year' && Boolean(draft.yearMin && draft.yearMax && Number(draft.yearMin) > Number(draft.yearMax)));
   const draftParams = $derived(listingParams(listingFiltersFromDraft(draft)));
@@ -95,17 +96,17 @@
   {#if mobile.current}<MobileActionIcon {name} {size} />{:else}<Icon name={desktopIcons[name]} {size} />{/if}
 {/snippet}
 {@render props.children(open, opened)}
-<dialog onkeydown={keydown} {id} class={['dn-quick-sheet', { searchable, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} {@attach dialogViewport} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
+<dialog onkeydown={keydown} {id} class={['dn-quick-sheet', { searchable, 'text-entry': textEntry, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} {@attach dialogViewport} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
   <form method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={event => cleanListingFormData(event.formData)} onsubmit={submit}>
-    <header class="dn-mobile-overlay-header dn-mobile-filter-header">
-      <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
-      <button type="button" class="close dn-icon-button dn-overlay-close" aria-label={i18n.t('m_84305a580997')} onclick={() => dialog.close()}>{@render actionIcon('close')}</button>
-    </header>
+      <header class="dn-mobile-overlay-heading dn-mobile-overlay-header dn-mobile-filter-header">
+        <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
+        <button type="button" class="close dn-icon-button dn-overlay-close" aria-label={i18n.t('m_84305a580997')} onclick={() => dialog.close()}>{@render actionIcon('close')}</button>
+      </header>
     {#key `${field}-${revision}`}<ListingFacetEditor {field} bind:draft bind:contentElement={content} />{/key}
     {#each preserved as [name, value], index (`${name}-${index}`)}<input type="hidden" {name} {value} />{/each}
     <footer class="dn-mobile-overlay-footer">
-      <button class="clear dn-mobile-overlay-clear" type="button" onclick={clear}>{i18n.t('m_83b12c2216ef')}</button>
-      <button class="apply dn-mobile-overlay-action" type="submit" disabled={invalid}>{i18n.t('m_31e392d1c037')}{@render actionIcon('arrow', 18)}</button>
+      <button class="clear dn-mobile-overlay-clear" type="button" onclick={clear}>{i18n.t('action.clearShort')}</button>
+      <button class="apply dn-mobile-overlay-action" type="submit" disabled={invalid}>{i18n.t('action.applyShort')}{@render actionIcon('arrow', 18)}</button>
     </footer>
   </form>
 </dialog>
@@ -131,6 +132,7 @@
     .dn-quick-sheet[open] { display: flex; flex-direction: column; justify-content: flex-end; }
     form { min-height: 0; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - max(var(--dn-space-6), env(safe-area-inset-top, 0px))); overflow: hidden; border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; background: var(--dn-white); }
     .searchable form { height: auto; }
+    .text-entry form { height: 100%; max-height: 100%; border-radius: 0; }
     footer { border-top: 1px solid var(--dn-line); }
   }
   @media (prefers-reduced-motion: no-preference) {

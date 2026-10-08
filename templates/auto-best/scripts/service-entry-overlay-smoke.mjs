@@ -1,12 +1,16 @@
 import assert from 'node:assert/strict';
 import { mkdir } from 'node:fs/promises';
+import { webkit } from 'playwright';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
 import { serviceEntry, serviceAction, fillServiceEntry } from './service-entry-fixture.mjs';
 
-const base = previewUrl(), output = 'artifacts/service-entry-overlays';
+const engine = process.env.SERVICE_ENTRY_ENGINE || 'chromium';
+assert(['chromium', 'webkit'].includes(engine), 'Unsupported service editor browser engine');
+const keyboardOnly = process.env.SERVICE_ENTRY_CASE === 'keyboard';
+const base = previewUrl(), output = `artifacts/service-entry-overlays${engine === 'webkit' ? '-webkit' : ''}${keyboardOnly ? '-keyboard' : ''}`;
 await mkdir(output, { recursive: true });
-const suite = await smokeReport(output, base), browser = await launchBrowser();
+const suite = await smokeReport(output, base), browser = await (engine === 'webkit' ? webkit.launch({ headless: true }) : launchBrowser());
 async function fullscreen(page, selector) {
   await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
   const geometry = await page.locator(selector).evaluate(dialog => {
@@ -26,6 +30,51 @@ async function editorReflow(page) {
       });
       assert.deepEqual(clipped, []);
     } finally { await style.evaluate(element => element.remove()); }
+  }
+}
+async function keyboardActions(page, editor) {
+  const layoutHeight = await page.evaluate(() => innerHeight);
+  // Mobile keyboards can shrink/pan the visual viewport while the layout stays tall.
+  await page.evaluate(() => {
+    Object.defineProperty(visualViewport, 'height', { configurable: true, value: 360 });
+    Object.defineProperty(visualViewport, 'offsetTop', { configurable: true, value: 32 });
+    visualViewport.dispatchEvent(new Event('resize'));
+    visualViewport.dispatchEvent(new Event('scroll'));
+  });
+  try {
+    await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    const geometry = await editor.evaluate(dialog => {
+      const box = dialog.getBoundingClientRect(), form = dialog.querySelector('form');
+      const fields = dialog.querySelector('.dn-service-editor__fields');
+      const footer = dialog.querySelector('footer').getBoundingClientRect();
+      const lastField = [...fields.querySelectorAll('input,textarea')].at(-1).getBoundingClientRect();
+      return { top: box.top, height: box.height, layoutHeight: innerHeight,
+        actionGap: footer.top - lastField.bottom, formOverflow: getComputedStyle(form).overflowY,
+        fieldOverflow: getComputedStyle(fields).overflowY };
+    });
+    assert.equal(geometry.layoutHeight, layoutHeight, 'The keyboard fixture retains the full layout viewport');
+    assert(Math.abs(geometry.top - 32) <= 1 && Math.abs(geometry.height - 360) <= 1,
+      `The editor follows the visible keyboard viewport: ${JSON.stringify(geometry)}`);
+    assert(geometry.actionGap >= 0 && geometry.actionGap <= 32, 'Actions follow the final field without a screen-sized gap');
+    assert.equal(geometry.formOverflow, 'auto', 'Fields and actions share one scroll container');
+    assert.equal(geometry.fieldOverflow, 'visible', 'Fields do not trap scrolling above the actions');
+    await editor.locator('input,textarea').last().focus();
+    await editor.locator('form').evaluate(form => { form.scrollTop = form.scrollHeight; });
+    const reachability = await editor.evaluate(dialog => {
+      const footer = dialog.querySelector('footer').getBoundingClientRect();
+      return { top: footer.top, bottom: footer.bottom, activeField: document.activeElement.matches('input,textarea') };
+    });
+    assert(reachability.top >= 32 && reachability.bottom <= 393, JSON.stringify(reachability));
+    assert(reachability.activeField, 'Scrolling to Save does not require dismissing the focused input');
+  } finally {
+    await page.evaluate(() => {
+      delete visualViewport.height;
+      delete visualViewport.offsetTop;
+      visualViewport.dispatchEvent(new Event('resize'));
+      visualViewport.dispatchEvent(new Event('scroll'));
+    });
+    await editor.locator('form').evaluate(form => { form.scrollTop = 0; });
+    await editor.locator('input,textarea').first().focus();
   }
 }
 async function guideCheck(page, locale, width, topic) {
@@ -112,7 +161,24 @@ async function guideCheck(page, locale, width, topic) {
   assert.equal(await serviceEntry(page).locator('.dn-service-entry__field').innerText(), draft, 'Reading guidance preserves saved car details');
 }
 try {
-  for (const locale of ['bg', 'en']) for (const width of [320, 390, 430]) await suite.check(`${locale} ${width} service entry overlays`, async () => {
+  for (const locale of ['bg', 'en']) for (const width of [320, 390, 430]) for (const mode of ['sell', 'listing', 'criteria']) await suite.check(`${locale} ${width} ${mode} keyboard actions`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 }, reducedMotion: 'reduce' });
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.context().addCookies([{ name: 'cars_prompt', value: 'v1', url: base }, { name: 'cars_locale', value: locale, url: base }]);
+    try {
+      await page.goto(`${base}/${locale}/contact?topic=${mode === 'sell' ? 'trade-in' : 'import'}`, { waitUntil: 'networkidle' });
+      await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' });
+      const trigger = mode === 'criteria' ? serviceEntry(page).locator('.dn-service-entry__choices button').nth(1) : serviceEntry(page).locator('.dn-service-entry__field');
+      await trigger.click();
+      const editor = page.locator('.dn-service-editor[open]');
+      await keyboardActions(page, editor);
+      await editor.locator('.dn-service-editor__cancel').click();
+      assert(await trigger.evaluate(button => button === document.activeElement));
+      assert.deepEqual(errors, []);
+    } finally { await page.close(); }
+  });
+  if (!keyboardOnly) for (const locale of ['bg', 'en']) for (const width of [320, 390, 430]) await suite.check(`${locale} ${width} service entry overlays`, async () => {
     const page = await browser.newPage({ viewport: { width, height: 844 }, reducedMotion: 'reduce' });
     const errors = [], posts = [];
     page.on('pageerror', error => errors.push(error.message));
@@ -169,6 +235,7 @@ try {
       await editorReflow(page);
       await page.setViewportSize({ width, height: 420 });
       await fullscreen(page, '.dn-service-editor[open]');
+      await editor.locator('form').evaluate(form => { form.scrollTop = form.scrollHeight; });
       const footer = await editor.locator('footer').boundingBox();
       assert(footer.y >= 0 && footer.y + footer.height <= 421);
       await fillServiceEntry(page, { make: 'BMW', model: 'X5', budget: '40000', year: '2022' });

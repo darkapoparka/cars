@@ -135,7 +135,7 @@
   </div>
 
   <footer class="dn-mobile-overlay-footer dn-blog-search-dialog__footer">
-    <button class="dn-blog-search-dialog__apply" type="submit" form="dn-blog-search-form" disabled={!matches.length}>
+    <button class="dn-blog-search-dialog__apply dn-mobile-overlay-action" type="submit" form="dn-blog-search-form" disabled={!matches.length}>
       {i18n.t('action.showCount', { count: resultLabel })}<MobileActionIcon name="arrow" size={18} />
     </button>
   </footer>

@@ -204,4 +204,13 @@
   @media (max-width: 380px) {
     .dn-finance-calculator__result { grid-template-columns: 1fr; }
   }
+  @media (max-width: 767px) {
+    :global(.dn-detail-finance-dialog) .dn-finance-calculator__fields { margin-top: var(--dn-space-3); gap: var(--dn-space-4); }
+    :global(.dn-detail-finance-dialog) label { font: var(--dn-field-label-font); }
+    :global(.dn-detail-finance-dialog) :is(input, select) { min-height: var(--dn-overlay-control-height); border: 0; border-radius: var(--dn-pill); background: var(--dn-entry-surface); color: var(--dn-ink); font: var(--dn-overlay-field-font); padding-inline-start: var(--dn-space-4); }
+    :global(.dn-detail-finance-dialog) :is(input, select):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    :global(.dn-detail-finance-dialog) .dn-finance-calculator__result div { padding: var(--dn-space-4); border-radius: var(--dn-radius); background: var(--dn-entry-surface); }
+    :global(.dn-detail-finance-dialog) .dn-finance-calculator > a { min-height: var(--dn-overlay-control-height); margin-top: var(--dn-space-5); background: var(--dn-primary-action-surface); font: var(--dn-control-font); white-space: nowrap; }
+    :global(.dn-detail-finance-dialog) .dn-finance-calculator > a:hover { background: var(--dn-primary-action-surface-hover); }
+  }
 </style>

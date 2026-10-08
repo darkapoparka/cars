@@ -3,7 +3,20 @@
 `node scripts/desktop-model-groups-smoke.mjs` checks the shared desktop model-family editor on Home, inventory shortcuts and the full form's nested picker. It covers compact contextual headers, focused BMW families, Back/focus restoration, selection retention, direct model search, 0-stock choices, stationary frame/page/footer, short families without phantom scrolling, cancelled drafts and legacy model GET results in BG/EN at 992x600 and 1440x900. Six development-only cases test a 99-choice family with a long header path at 1024x600. Set `MODEL_ENGINE=webkit` for the installed second engine, `MODEL_CASE` for focused cases, `MODEL_MOTION=no-preference` for normal opening motion and `MODEL_EVIDENCE_DIR` for a run's output. The [navigation verification record](MODEL-NAVIGATION-2026-10-08.md) records the behavior and preserved catalogue boundaries.
 
 
-The [desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) cover every shortcut's trigger anchoring, 840/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
+Desktop brand screens on Home and inventory follow their full search surface
+with adaptive card sizing (six columns at 960px). Model opens at that brand-screen
+width when no single make is selected and retains its opening width during
+navigation. A single selected make still opens its compact 640px model picker
+directly. The identity and make-catalogue checks cover both surfaces' widths,
+alignment and retained selection behaviour.
+
+Search menus share measured anchors and an 8px gap outside the whole search box,
+including collision flips above it in short windows. Focused editors retain their
+field's horizontal alignment. Their header uses the same padding and 44px close
+control; the full Filters form reuses that close-button renderer. The desktop
+wide-filter checks cover every shortcut's gutter, header alignment and gap.
+
+The [earlier desktop search checks](DESKTOP-MODEL-PICKER-2026-10-07.md#verification) record the original shortcut anchoring and 840/640/480px widths, loaded manufacturer logos, header search alignment, compact choices, pending counts and preserved mobile journeys.
 
 Home checks also measure the desktop menu's visible 8px gap from the entire
 search bar, including menus flipped above it in short windows. Desktop selectors
@@ -19,7 +32,58 @@ a zero-stock make through the canonical GET flow. Use the same `BASE_URL`,
 Two additional 992x600 BG/EN cases cover the full Filters form's compact Make
 rows, catalogue, nested focus and zero-stock results with sorting retained.
 
+`node scripts/desktop-wide-filter-smoke.mjs` checks the listing full
+filter form in BG/EN at 992, 1024 (600px tall), 1280, 1440 and 1920px. It verifies
+all 13 criteria together, aligned 44px fields, nested brand/model multiselect and
+dependencies, cancellation, reversed price/year validation, local reset with
+sorting preserved, canonical GET data, empty-result application, focus
+containment/return, fixed footer geometry and horizontal overflow. All seven
+hero shortcuts must still open their own anchored selector directly. Two
+outside-stock cases preserve every applied criterion, including exact numeric
+values. Two development-only 68-option equipment fixtures check scrolling,
+footer stability and reset focus. Set `BASE_URL` to the confirmed template server
+and `FILTER_EVIDENCE_DIR` to a run's evidence directory. `FILTER_CASE` accepts
+names such as `bg-992`, `en-out-of-stock` and `bg-equipment-catalog`; omit it
+for all 14 cases.
+
+`desktop-discovery-smoke.mjs` checks Home/listing search and direct selectors at
+1024/1440/1920px, including model inference, repeated selections, range inputs,
+application/cancellation, query ownership and sticky focus. It checks the shared
+form's 13 standard-height controls and aligned labels. `filter-code-smoke.mjs`
+checks case-insensitive identity retention, all styled scalar menus, equipment
+multiselect, canonical form data, radio-arrow browsing with Enter/Space
+confirmation, nested focus and cancellation. Sorting must preserve applied
+criteria and navigate only after confirmation. Set
+`FILTER_ENGINE=webkit` for WebKit, or `FILTER_CASE='^.*-1440$'` for desktop
+locale cases. Mobile sheets retain their existing range/multiselect/back-arrow
+and responsive checks at 320/390px and short heights.
+
+Current dropdown captures belong in `docs/dropdown-polish-2026-10-07/`;
+the earlier `docs/styled-filter-selectors-2026-10-06/` records the native-to-styled migration.
+The compact-header checks are saved under [current QA](dropdown-polish-2026-10-07/qa/summary.json):
+Chromium/WebKit filter cases, Home opening/selection, mobile journeys and 12
+built-preview desktop cases. The two development-only equipment fixtures remain
+part of the full 14-case suite described above.
+`docs/home-modal-restore-2026-10-06/` records the preserved modal composition.
+Saved dropdown checks: [desktop form](styled-filter-selectors-2026-10-06/qa/desktop-wide.json),
+[Chromium](styled-filter-selectors-2026-10-06/qa/chromium.json),
+[WebKit](styled-filter-selectors-2026-10-06/qa/webkit.json) and
+[mobile journeys](styled-filter-selectors-2026-10-06/qa/mobile.json).
+The earlier [Home-style form](final-filter-polish-2026-10-06/before-keyword-1440.png)
+is the restoration reference. The white-field experiment and tabbed listing
+workspace in previous capture folders are historical comparisons, not the
+current implementation. The transparent Комби artwork remains the separate
+asset correction recorded in `provenance/body-wagon-2026-10-06.md`.
+Set `DISCOVERY_ROUTE=/listing-grid` to verify listing discovery independently
+while Home's browsing box is being updated in another task.
+
 Tests cover different layers: source/type checks, domain logic, runtime media, build output and real browser behavior. This document explains the available commands; it is not a claim that every suite currently passes.
+
+The domain suite also checks the shared desktop suggestion matcher for accents,
+case, punctuation, multiple terms and empty queries. Shared model transitions
+infer a uniquely owned make, preserve the make when clearing or retaining a model
+outside stock, and leave the source draft unchanged. The existing desktop suites
+exercise those helpers through both the full filter form and direct selectors.
 
 Mobile listing badges use four equal cells and compact localized labels on one text line; carousel specifications share one badge row. Model titles stop at two lines while accessible labels and detail views retain complete values. Sell/Import show a compact white How it works card beneath the mobile form, with a centered arrow and complete single-line supporting copy at 320px. The card opens the retained bottom drawer with preparation advice and three service steps. Their mobile form titles are visually hidden but remain accessible; the centered segmented choices use Home's compact sizing. Import uses a charcoal mobile hero while Sell keeps its red hero and both retain the brand accent on their primary actions. The lower mobile page uses a faint configured texture; desktop retains its visible title and process disclosure. `mobile-polish-smoke.mjs` checks these contracts, including long Tesla and petrol/LPG layout fixtures, pale borderless entry fields with one leading glyph and readable muted prompts, pointer/keyboard focus, balanced 22px header icons within 44px targets, guide dismissal/focus return and enquiry preservation. `service-entry-overlay-smoke.mjs` also checks card/arrow geometry and explanation copy after waiting for hydration. `mobile-reflow-smoke.mjs` includes both service routes and their guide drawers at normal/enlarged text sizes and in short viewports.
 
@@ -86,10 +150,11 @@ For the built preview, use that preview URL instead. `scripts/browser.mjs` contr
 | `scripts/journey-smoke.mjs` | Listing/article returns, full-photo dialog keyboard/close/backdrop behavior and focus/scroll restoration, vehicle contact context, discovery and menu interaction |
 | `scripts/enquiry-smoke.mjs` | Enquiry entry, steps, review, local photos and sharing/copy behavior |
 | `scripts/service-entry-overlay-smoke.mjs` | Mobile Sell/Import single-field entry, immediate criteria editor, full-screen geometry, shared close target, Save/Cancel/Escape, draft persistence, invalid URLs, contact/review continuation, 200% text and text spacing; white guide cards with centered arrows, compact entry tabs, accessible titles, 22px header glyphs, focus containment/return, backdrop/drag/keyboard dismissal and release at the desktop breakpoint |
-| `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor filter draft, nested choices, application, empty results and result-label containment |
+| `scripts/mobile-filter-smoke.mjs` | Bulgarian returning-visitor single-pane filter draft, immediate choices, Back/Save/Close, exact GET criteria, standalone quick-picker preservation and empty results |
 | `scripts/mobile-polish-smoke.mjs` | Bulgarian/English mobile actions, full-height photographs loaded when browsed, subtle make and two-line models with complete accessible labels, plain price hierarchy, equal card heights and right-column two-by-two badges with one text line, long Tesla/electric/petrol-LPG layout fixtures, 48px pale borderless entry fields, inset 40px selected pills inside 44px selector frames, compact 40px action surfaces with 44px targets, and pointer/keyboard focus, 22px header glyphs, inventory search and quick filters matching Home pill size with 44px targets, inset rounded white dock with separate 44px targets and official Fluent Regular SVG geometry, destination colors, selected states and baselines across main routes, matching Sort/Filter targets and rightmost Filters, filter footer, detail touch targets, short-viewport editors and configured settings title, white service guide cards and drawer focus/dismissal |
 | `scripts/mobile-reflow-smoke.mjs` | English/Bulgarian pages and dialogs at 320/390/430px, 200% root text, WCAG text-spacing overrides and short viewports; rejects clipped actions and enlarged card copy, and checks equal inventory card heights |
-| `scripts/desktop-discovery-smoke.mjs` | Home native facets and seven inventory shortcuts into the shared desktop Command dialog; direct make/model search, stable keyboard selection, equipment multi-selection, range validation, cancellation/focus, applied URL state, dependent model reset and sticky-control behavior |
+| `scripts/home-browse-smoke.mjs` | Four-field Home bar in BG/EN at 768/992/1440/1920px and short desktop windows; resting/hover/open surfaces, balanced painted car heights and baseline, make/model/body drafts, Escape/focus return, dependent models, exact budgets, range validation, keyboard GET and matching results |
+| `scripts/desktop-discovery-smoke.mjs` | Home browsing-bar journey and seven inventory shortcuts into focused desktop selectors; direct make/model search, stable keyboard selection, equipment multi-selection, range validation, cancellation/focus, applied URL state, dependent model reset and sticky-control behavior |
 | `scripts/desktop-routes-smoke.mjs` | Localized route geometry, individual campaign artwork within a shared frame, compact search-title spacing, plain About subtitle, unified Blog search/category panel and native GET filtering, About panels, discovery-tile hover, showroom actions and desktop-only map mounting |
 | `scripts/phase4-smoke.mjs` | URL/filter preservation, nested and outer draft ownership, pending desktop values, shell transitions, menu focus, duplicate IDs and 767/768/991/992 boundaries |
 | `scripts/typography-smoke.mjs` | Entry/segment/CTA hierarchy, keyboard tab switching, link/VIN/description editor save and discard, stable card height, sell/import validation and review, reference edits and clearing, manual fallback, copied text, Escape/focus return, control reflow and screenshots |
@@ -135,7 +200,8 @@ use the same frame. Header, logo and navigation bounds remain unchanged through
 those page transitions. Artwork framing remains identical through header
 navigation while the image or car pair changes for each main destination. The initial Home
 load waits for hydration before testing the hover disclosure and title click.
-Home and Inventory keep identical search-panel bounds.
+Home and Inventory keep the same search-panel width and top anchor. Home's
+three-field bar is shorter and retains the surrounding hero clearance.
 Blog uses the same panel width and alignment, containing search and category
 pills together on one white surface. Its index has four columns from 1200px and
 two at compact desktop widths, with no extra empty margin below the hero.
@@ -237,20 +303,31 @@ The existing discovery/enquiry suites use `locale-smoke-fixture.mjs` to seed a r
 ## Overlay control regression checks
 
 Mobile facet pickers use `QuickFilterSheet.svelte`: their panel fits its content on
-opening, expands once when Search receives focus, and stays expanded until closed.
-Both direct and nested pickers use `dialogViewport` for the visible viewport;
-`VehicleSearchDialog.svelte` uses the same attachment for its mobile filter form,
-and `VehicleQuickSearch.svelte` uses it for Home search.
-Check short/long lists, empty searches, clear/reopen, nested Apply/Cancel, backdrop
-dismissal and focus return at 320/390px. The result list scrolls independently;
+opening. Focusing Search does not change its height. The opening list space is
+measured as the sheet opens and retained while filtering, so the search field and footer stay
+steady. Flex shrink and the shared visible-viewport attachment constrain the panel
+when the keyboard reduces the available space; only the result list scrolls.
+`MobileListingFilters.svelte` swaps the overview and criterion editor inside one
+native dialog; standalone quick pickers retain their own Apply action. Both use
+`dialogViewport` for the visible viewport, as does `VehicleQuickSearch.svelte` for
+Home search.
+Check short/long lists, empty searches, clear/reopen, Back/Save, quick-picker Apply,
+backdrop dismissal and focus return at 320/390px. The result list scrolls independently;
 the header and footer remain visible when the viewport shrinks. Desktop geometry
 is unchanged. `scripts/check-overlay.mjs` also checks viewport resize/panning,
 nested ownership, listener cleanup and the missing-API fallback. Real Android and
 iPhone keyboards remain a separate device check.
 
-Matched 320x844 captures show the [previous fixed-height panel](mobile-drawer-2026-10-04/before-idle-320.jpg),
-the [content-sized panel](mobile-drawer-2026-10-04/after-idle-320.jpg), and the
-[expanded search state](mobile-drawer-2026-10-04/after-search-320.jpg).
+Mobile pickers use the shared 20px heading role, aligned 16px gutters and compact
+4px option gaps, with 48px minimum choice targets and 44px header/footer actions. Selected choices use a pale
+row with a small black radio or checkbox indicator.
+Mobile action glyphs delegate to the pinned Fluent Regular renderer. The white
+panel animates within its stationary viewport frame; reduced motion disables it.
+
+Matched 320x884 captures compare [idle before](mobile-picker-2026-10-05/before-idle-320.jpg)
+and [idle after](mobile-picker-2026-10-05/after-idle-320.jpg), plus
+[focused search before](mobile-picker-2026-10-05/before-focus-320.jpg) and
+[focused search after](mobile-picker-2026-10-05/after-focus-320.jpg).
 
 Run `node scripts/check-overlay.mjs` for scroll-lock release order, duplicate cleanup and exact scroll restoration. With `BASE_URL` set to the intended local preview, run `node scripts/overlay-controls-smoke.mjs`; run again with `OVERLAY_ENGINE=webkit` for the installed WebKit engine. Missing browsers are errors, not silent skips.
 
@@ -260,8 +337,63 @@ The matrix covers BG/EN at 320, 390, 430, 768 and 1440px, with short 420px viewp
 
 Set `BASE_URL` to a built preview and run `node scripts/mobile-final-smoke.mjs`. It checks EN/BG at 320/390/430px: 200% text reflow, service artwork/copy separation, navigation target containment, reduced motion, menu focus return, inert hidden footer navigation, and responsive image loading/priority. Screenshots and results are saved under `artifacts/mobile-final-smoke/`. Use the existing route, enquiry, mobile-filter and overlay suites for the wider journeys; this focused suite is not a WCAG certification or a physical-device performance test.
 
-Run `node scripts/mobile-reflow-smoke.mjs` against the same preview for seven pages and four dialogs in EN/BG at 320/390/430px. It checks normal layout, 200% root text, WCAG text-spacing overrides and short dialogs. In PowerShell, set `$env:REFLOW_ENGINE = 'webkit'` to repeat with WebKit; remove that variable to use Chromium. Both engines must preserve visible card copy and actions without horizontal overflow. Reports are saved under `artifacts/mobile-reflow-<engine>/`.
+Run `node scripts/mobile-reflow-smoke.mjs` against the same preview for nine routes and thirteen dialog views in EN/BG at 320/390/430px. It checks normal layout, 200% root text, WCAG text-spacing overrides and short dialogs. In PowerShell, set `$env:REFLOW_ENGINE = 'webkit'` to repeat with WebKit; remove that variable to use Chromium. Both engines must preserve visible card copy and actions without horizontal overflow. Reports are saved under `artifacts/mobile-reflow-<engine>/`.
 
 ### Shared entry controls
 
 With `BASE_URL` set, run `node scripts/shared-entry-smoke.mjs`. It compares shared control roles in Home, Sell and Import in EN/BG at 320/390px, and Sell/Import at 768/1440px, while retaining each card's composition. Mobile entry fields are 48px tall. Selectors keep their 44px gray frame and inset 40px selected pill, with equal-width segments that stay stable when selection changes. Primary actions retain 44px touch targets with 40px visible surfaces. Desktop fields stay 44px. The suite checks both selected states, label fit, keyboard selection, overflow, invalid home import links and valid-link prefill. Screenshots and results go to `artifacts/shared-entry-smoke/`. Run `scripts/enquiry-smoke.mjs` for draft, validation, review, photo, sharing and focus behavior; `TYPOGRAPHY_SCOPE=services node scripts/typography-smoke.mjs` covers service typography and short viewports.
+
+### Anchored selectors and mobile filter panes
+
+Desktop shortcuts now open 380px anchored Popovers without a backdrop. The wide
+filter suite checks attachment, viewport clearance, switching shortcuts, outside
+dismissal, Escape focus return and preservation of the applied URL. Discovery
+checks also cover off-screen anchor dismissal and a usable scrollable menu beside
+its control in a 400px-tall desktop window.
+
+`mobile-filter-smoke.mjs` checks twelve directly available criteria in one sheet,
+one-tap single choices, selected-choice return, in-place Clear, Back/Save/Close,
+dependent model reset, exact GET values without duplicate parameters and sorting
+at 320/390/430px and 700x390. It also checks 48px targets, draft-only range presets,
+visibility of every preset when the pane fits, direct keyword focus and search-clear focus. Every standalone quick picker opens
+its own criterion and returns focus on Escape; their Apply action, search-height
+stability and preservation of unrelated criteria remain covered.
+For focused BG/EN text and short-screen coverage, set `REFLOW_CASE` to
+`(filters|make|home-model|home-price|listing-price|listing-equipment) dialog reflow` and run
+`mobile-reflow-smoke.mjs`. The 48 cases cover Home filters, make/model and budget,
+plus inventory make, overview, ranges and extras at 320/390/430px in BG/EN, including
+200% root text, text-spacing overrides and short viewports.
+Model coverage uses Mercedes-Benz to check that the long title clears Back and
+Close. Repeat with `REFLOW_ENGINE=webkit` for the installed second engine.
+
+`overlay-proportions-smoke.mjs` checks the actual 48px filter/choice roles and
+44px searches/footer actions in both languages. Inventory criteria use the same
+dialog for the overview and editor, while direct quick pickers retain Apply.
+
+[Matched mobile comparison and local verification](mobile-filter-soft-2026-10-06/README.md)
+records the restored soft-grey controls and the current local boundary.
+
+`node scripts/filter-code-smoke.mjs` covers applied brands/models with different
+letter case, one checked canonical option in main/quick/desktop menus,
+preservation of selected suggestions hidden by search, exact numeric GET values,
+nested Escape ownership, focus return, click-away focus and switching between
+open selectors. Desktop cases distinguish neutral pointer opening from keyboard
+opening into search or a range input. `home-browse-smoke.mjs` covers the same
+opening behavior in the Home bar. Desktop single-choice cases also cover radio-arrow browsing,
+Enter/Space confirmation and closing an already selected option without changing
+the pending filter or submitting the form. With `BASE_URL` set to the intended
+preview, it runs BG/EN at 320, 390 and 1440px. Repeat with `FILTER_ENGINE=webkit`
+for the second installed engine. Results are saved under
+`artifacts/filter-code-<engine>/`. Set `FILTER_CASE=bg-1440` for a focused case.
+The domain suite also checks safe numeric
+normalization and a finite slider bound for empty stock.
+Saved local results: [Chromium](filter-code-audit-2026-10-06/qa/chromium.json),
+[WebKit](filter-code-audit-2026-10-06/qa/webkit.json),
+[mobile journeys](filter-code-audit-2026-10-06/qa/mobile-journeys.json),
+[desktop discovery](filter-code-audit-2026-10-06/qa/desktop-discovery.json) and
+[desktop filters](filter-code-audit-2026-10-06/qa/desktop-wide.json).
+
+[The outlined experiment](mobile-filter-final-2026-10-06/README.md) preserves the rejected treatment. The prior
+[Wolt comparison](mobile-filter-wolt-2026-10-06/README.md) records the plain-row experiment.
+The earlier
+[App comparison](filter-reference-2026-10-06/README.md) preserves the preceding layout.

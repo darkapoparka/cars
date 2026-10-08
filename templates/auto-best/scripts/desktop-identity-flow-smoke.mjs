@@ -34,7 +34,13 @@ try {
     const cancel = async kind => {
       if (kind === 'escape') await page.keyboard.press('Escape');
       else if (kind === 'close') await menu.locator('.dn-picker-close').click();
-      else await page.locator(home ? '#home-hero-title' : '.dn-listing-empty h3').click();
+      else if (home) await page.locator('#home-hero-title').click();
+      else {
+        // A full-width menu can cover the empty-state heading; use visible page background.
+        const point = { x: 8, y: height / 2 };
+        assert(await page.evaluate(({ x, y }) => !document.querySelector('#dn-listing-filter-dialog')?.contains(document.elementFromPoint(x, y)), point), 'Cancellation clicks the page outside the menu');
+        await page.mouse.click(point.x, point.y);
+      }
       await menu.waitFor({ state: 'hidden' });
     };
     const apply = async () => {
@@ -52,9 +58,15 @@ try {
       await page.waitForFunction(selector => [...document.querySelectorAll(`${selector} .dn-make-logo img`)].every(image => image.complete && image.naturalWidth > 0),
         home ? '.dn-home-browse-picker[data-state=open]' : '#dn-listing-filter-dialog');
       const frame = await menu.boundingBox();
-      assert.equal(frame.width, 640, 'Brand logos retain the approved Model width');
+      const bar = await page.locator(home ? '.dn-home-browse' : '.dn-listing-filter').boundingBox();
+      assert.equal(frame.width, bar.width, 'Brand screens follow their whole search surface');
+      assert(Math.abs(frame.x - bar.x) <= 1, 'Brand panels align with the full search surface');
+      const gap = await menu.getAttribute('data-side') === 'top' ? bar.y - frame.y - frame.height : frame.y - bar.y - bar.height;
+      assert(Math.abs(gap - 8) <= 1, 'Brand menus stay outside the search box, including collision flips');
       const cards = await menu.locator('[data-model-make]').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().toJSON()));
-      assert(cards.every(box => box.height >= 112 && box.width <= frame.width / 4), 'Logo cards use a readable four-column desktop grid');
+      const columns = Math.floor((frame.width - 34 + 8) / (136 + 8));
+      assert.equal(cards.filter(box => box.y === cards[0].y).length, columns - 1, 'Brand grids adapt while leaving one cell for All models');
+      assert(cards.every(box => box.height >= 112 && box.width >= 136 && box.width <= frame.width / columns), 'Brand cards retain readable widths and usable targets');
       assert.equal(await choice('BMW').count(), 0, 'Model brand cards navigate instead of repeating Make checkboxes');
       await page.screenshot({ path: `${output}/${name}-brands.png` });
       await cancel('close');

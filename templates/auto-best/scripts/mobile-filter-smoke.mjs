@@ -38,7 +38,7 @@ try {
     assert.equal(await main.locator('.dn-mobile-filter-categories').count(), 0);
     assert(await main.locator('.dn-mobile-filter-fields button').evaluateAll(buttons => buttons.every(button => button.getBoundingClientRect().height >= 48)), 'Every filter has a full-height touch target');
     const panel = await main.locator('form').boundingBox();
-    assert(panel.height <= height - 23 && Math.abs(panel.y + panel.height - height) <= 1, 'The white sheet fits its contents above the bottom edge');
+    assert(Math.abs(panel.y) <= 1 && Math.abs(panel.height - height) <= 1, 'The filter editor fills the mobile viewport from the top');
     if (width === 390 || width === 430) assert(await overview.evaluate(el => el.scrollHeight <= el.clientHeight + 1), 'All criteria fit the normal phone overview');
     assert.equal(await main.locator('.dn-listing-filter__clear').isDisabled(), true);
     await query.fill('Audi');
@@ -47,7 +47,7 @@ try {
     assert.equal(await query.inputValue(), '');
     await query.fill('123');
     assert.equal(await submit.isDisabled(), true);
-    assert.match(await submit.innerText(), /Покажете 0/);
+    assert.match(await submit.innerText(), /Покажи \(0\)/);
     assert(await submit.evaluate(el => el.scrollWidth <= el.clientWidth), 'The count must fit inside its action');
     await page.screenshot({ path: `${output}/zero-${width}.png` });
     await query.fill('');
@@ -59,11 +59,12 @@ try {
       assert.equal(await page.locator('dialog[open]').count(), 1, 'A facet replaces the overview inside one dialog');
       assert.equal(await main.locator('.overview').count(), 0);
       const header = await main.locator('header').evaluate(el => {
-        const box = el.getBoundingClientRect(), title = el.querySelector('h2').getBoundingClientRect();
+        const title = el.querySelector('h2').getBoundingClientRect();
+        const back = el.querySelector('.back').getBoundingClientRect(), close = el.querySelector('.dn-overlay-close').getBoundingClientRect();
         const buttons = [...el.querySelectorAll('button')].map(button => ({ width: button.getBoundingClientRect().width, text: button.textContent.trim() }));
-        return { offset: Math.abs((title.left + title.right) / 2 - (box.left + box.right) / 2), buttons };
+        return { titleClearsControls: title.left >= back.right && title.right <= close.left, buttons };
       });
-      assert(header.offset < 1, `${field}: title is centered in the sheet`);
+      assert(header.titleClearsControls, `${field}: the title clears Back and Close`);
       assert(header.buttons.every(button => button.width === 44 && !button.text), 'Back and Close are equal-size icon actions');
       if (!['make','model','price','year','mileage_max','equipment'].includes(field)) assert.equal(await main.locator('footer').count(), 0, 'Single choices need no second Apply step');
       if (['price','year','mileage_max'].includes(field)) {
@@ -186,7 +187,7 @@ try {
     assert.equal(new URL(page.url()).searchParams.get('make'), 'Audi');
     await shortcuts.getByRole('button', { name: 'Бюджет', exact: true }).click();
     await quick.locator('input[name=price_max]').fill('100001');
-    await quick.getByRole('button', { name: 'Приложете', exact: true }).click();
+    await quick.getByRole('button', { name: 'Приложи', exact: true }).click();
     await page.waitForURL(url => url.searchParams.get('price_max') === '100001');
     const directParams = new URL(page.url()).searchParams;
     for (const [key,value] of [['make','Audi'],['model','RS Q8'],['price_min','55001'],['year_min','2019'],['year_max','2024'],['equipment','4x4'],['sort','price-asc']]) {
@@ -230,7 +231,7 @@ try {
     // A direct model shortcut also keeps multiple checked values in its GET submission.
     await shortcuts.getByRole('button', { name: 'Модел', exact: true }).click();
     await quick.getByRole('checkbox', { name: 'X6 xDrive', exact: true }).check();
-    await quick.getByRole('button', { name: 'Приложете', exact: true }).click();
+    await quick.getByRole('button', { name: 'Приложи', exact: true }).click();
     await page.waitForURL(url => url.searchParams.getAll('model').length === 2);
     assert.deepEqual(new URL(page.url()).searchParams.getAll('model'), ['X6 M Sport', 'X6 xDrive']);
     assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
@@ -240,6 +241,7 @@ try {
     const home = page.locator('#dn-quick-search-dialog');
     const homeRow = view => home.locator(`button[data-view=${view}]`);
     await homeTrigger.click();
+    await page.waitForFunction(() => document.activeElement?.id === 'quick-search-input');
     for (const view of ['make','body','price','fuel','mileage','year']) {
       await homeRow(view).click();
       await home.locator('.dn-quick-search__option').first().waitFor({ state: 'visible' });
@@ -253,11 +255,11 @@ try {
     await home.getByRole('button', { name: 'BMW', exact: true }).click();
     assert.equal(await home.getByRole('button', { name: 'Audi', exact: true }).getAttribute('aria-pressed'), 'true');
     assert.equal(await home.getByRole('button', { name: 'BMW', exact: true }).getAttribute('aria-pressed'), 'true');
-    await home.locator('.dn-quick-search__mobile-footer button').click();
-    assert.equal(await home.locator('.dn-quick-search__title-mobile').innerText(), 'Модел');
+    await home.locator('.dn-quick-search__mobile-footer .dn-mobile-overlay-action').click();
+    assert.equal(await home.locator('h2').innerText(), 'Модел');
     await home.getByRole('button', { name: 'RS Q8', exact: true }).click();
     await home.getByRole('button', { name: 'X6 M Sport', exact: true }).click();
-    await home.locator('.dn-quick-search__mobile-footer button').click();
+    await home.locator('.dn-quick-search__mobile-footer .dn-mobile-overlay-action').click();
     assert.match(await homeRow('make').innerText(), /Audi, BMW, RS Q8, X6 M Sport/);
     for (const [view, choice] of [['body', /^SUV$/], ['price', /100\s*000/], ['fuel', /^Бензин$/], ['mileage', /100\s*000/], ['year', /2019/]]) {
       await homeRow(view).click();
@@ -265,7 +267,7 @@ try {
       await homeRow(view).waitFor({ state: 'visible' });
     }
     await home.locator('#quick-search-input').fill('Audi');
-    await home.locator('.dn-quick-search__mobile-footer button').click();
+    await home.locator('.dn-quick-search__mobile-footer .dn-mobile-overlay-action').click();
     await page.waitForURL(url => url.searchParams.get('model') === 'RS Q8');
     const homeParams = new URL(page.url()).searchParams;
     for (const [key,value] of [['q','Audi'],['body','SUV'],['price_max','100000'],['fuel','Бензин'],['mileage_max','100000'],['year_min','2019']]) {

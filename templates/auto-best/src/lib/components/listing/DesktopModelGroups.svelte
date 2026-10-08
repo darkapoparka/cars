@@ -160,7 +160,7 @@
   .search-group h3 { padding: var(--dn-space-2) var(--dn-space-3); color: var(--dn-muted); }
   .make-title { font: var(--dn-control-font); }
   .make-media { display: grid; flex: 0 0 var(--dn-control-height-entry-mobile); place-items: center; width: var(--dn-control-height-entry-mobile); height: var(--dn-space-7); }
-  .make-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .make-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--dn-control-height-default) * 3 + var(--dn-space-1))), 1fr)); }
   .make-grid .make-title { position: relative; flex-direction: column; justify-content: center; gap: var(--dn-space-1); min-height: calc(var(--dn-control-height-default) * 2 + var(--dn-space-6)); padding: var(--dn-space-2); background: transparent; text-align: center; }
   .make-grid .make-title:hover { background: var(--dn-surface-hover); }
   .make-grid .make-title.selected { background: var(--dn-surface-subtle); }

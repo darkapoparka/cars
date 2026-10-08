@@ -13,6 +13,7 @@
 
   let { id, mode, value, onapply }: { id: string; mode: 'sell' | 'listing' | 'criteria'; value: ServiceEntryDraft; onapply: (draft: ServiceEntryDraft) => void } = $props();
   const i18n = getI18n();
+  const title = $derived(i18n.t(mode === 'listing' ? 'service.url' : mode === 'sell' ? 'service.entry.vehicleTitle' : 'service.entry.criteriaTitle'));
   const placeholder = $derived(i18n.t(mode === 'sell' ? 'service.entry.vehicle' : mode === 'listing' ? 'service.url' : 'service.entry.criteria'));
   const summary = $derived(mode === 'listing' ? value.reference : [value.make, value.model, value.year].filter(Boolean).join(' ') || value.reference || value.brief);
   let dialog: HTMLDialogElement;
@@ -62,7 +63,7 @@
 </button>
 
 <dialog id={`${id}-dialog`} class="dn-service-editor" bind:this={dialog} {@attach dialogViewport} onkeydown={trapDialogTab} aria-labelledby={`${id}-title`} onclose={restore} onclick={(event) => { if (event.target === dialog) dialog.close(); }}>
-  <header class="dn-mobile-overlay-header"><h2 id={`${id}-title`}>{i18n.t(mode === 'listing' ? 'service.url' : mode === 'sell' ? 'service.entry.vehicleTitle' : 'service.entry.criteriaTitle')}</h2><button class="dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_aea2bd97046c')} onclick={() => dialog.close()}><MobileActionIcon name="close" size={22} /></button></header>
+    <header class="dn-mobile-overlay-heading dn-mobile-overlay-header"><h2 id={`${id}-title`}>{title}</h2><button class="dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_aea2bd97046c')} onclick={() => dialog.close()}><MobileActionIcon name="close" size={22} /></button></header>
   <form bind:this={form} onsubmit={save}>
     <div class="dn-service-editor__fields">
       {#if mode === 'listing'}
@@ -80,7 +81,7 @@
       {/if}
       {#if error}<p id={`${id}-error`} role="alert">{error}</p>{/if}
     </div>
-    <footer><button class="dn-service-editor__cancel" type="button" onclick={() => dialog.close()}>{i18n.t('m_19766ed6ccb2')}</button><button class="dn-service-editor__save" type="submit">{i18n.t('m_1509f561f241')}</button></footer>
+    <footer class="dn-mobile-overlay-footer"><button class="dn-service-editor__cancel dn-mobile-overlay-clear" type="button" onclick={() => dialog.close()}>{i18n.t('m_19766ed6ccb2')}</button><button class="dn-service-editor__save dn-mobile-overlay-action" type="submit">{i18n.t('m_1509f561f241')}</button></footer>
   </form>
 </dialog>
 
@@ -107,4 +108,12 @@
   .dn-service-editor__cancel { background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-overlay-option-font); }
   .dn-service-editor__save { background: var(--dn-primary-action-surface); color: var(--dn-white); font: var(--dn-overlay-action-font); }
   .dn-service-editor :is(button,input,textarea):focus-visible, .dn-service-entry__field:focus-visible { outline: 3px solid var(--dn-focus); outline-offset: 2px; }
+  @media (max-width: 767px) {
+    .dn-service-editor { inset: var(--dn-form-dialog-top) 0 auto; height: var(--dn-form-dialog-height); max-height: var(--dn-form-dialog-height); }
+    form { overflow-y: auto; overscroll-behavior: contain; }
+    .dn-service-editor__fields { flex: 0 0 auto; padding: var(--dn-space-3) var(--dn-overlay-gutter) var(--dn-space-5); overflow: visible; }
+    input, textarea { min-height: var(--dn-overlay-control-height); border: 0; background: var(--dn-entry-surface); }
+    .dn-service-editor :is(input, textarea):focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
+    footer { border-top: 0; }
+  }
 </style>

@@ -122,14 +122,10 @@
   aria-labelledby="dn-listing-filter-title" onkeydown={keydown} oncancel={cancel} onclose={restore}
   onclick={event => { if (event.target === event.currentTarget) close(); }}>
   <form class="dn-listing-filter__dialog-panel" method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={submit} onformdata={event => cleanListingFormData(event.formData)}>
-    <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header dn-mobile-filter-header" class:editing={Boolean(activeField)}>
-      {#if activeField}
-        <button class="back dn-icon-button" type="button" aria-label={i18n.t('m_a779c56e526e')} onclick={back}><MobileActionIcon name="back" size={20} /></button>
-      {:else}
-        <button class="reset dn-listing-filter__clear dn-icon-button" type="button" aria-label={i18n.t('action.clearShort')} title={i18n.t('action.clearShort')} disabled={!hasFilters} onclick={resetFilters}><MobileActionIcon name="reset" size={22} /></button>
-      {/if}
+    <header class="dn-mobile-overlay-heading dn-mobile-overlay-header dn-mobile-filter-header">
+      {#if activeField}<button class="back dn-icon-button" type="button" aria-label={i18n.t('m_a779c56e526e')} onclick={back}><MobileActionIcon name="back" /></button>{/if}
       <h2 id="dn-listing-filter-title" tabindex="-1" {@attach attachHeading}>{title}</h2>
-      <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_2b3fff4a027c')} onclick={close}><MobileActionIcon name="close" size={20} /></button>
+      <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_2b3fff4a027c')} onclick={close}><MobileActionIcon name="close" /></button>
     </header>
     {#if activeField}
       <div class="dn-mobile-filter-editor" data-field={activeField} style:--dn-picker-content-height={choiceHeight ? `${choiceHeight}px` : undefined}>
@@ -137,18 +133,18 @@
       </div>
       {#if needsSave}
         <footer class="dn-mobile-overlay-footer dn-mobile-filter-editor-footer">
-          <button class="clear" type="button" onclick={clearChoice}>{i18n.t('action.clearShort')}</button>
+          <button class="clear dn-mobile-overlay-clear" type="button" onclick={clearChoice}>{i18n.t('action.clearShort')}</button>
           <button class="dn-mobile-overlay-action" type="submit" disabled={invalidChoice}>{i18n.t('m_1509f561f241')}</button>
         </footer>
       {/if}
     {:else}
-      <div class="overview" {@attach attachOverview}>
         <div class="search-field dn-mobile-overlay-search" role="search">
           <MobileActionIcon name="search" size={18} />
           <label class="dn-sr-only" for="dn-listing-dialog-query">{i18n.t('m_0ae7a3ecbc83')}</label>
           <input id="dn-listing-dialog-query" {@attach attachQuery} {@attach i18n.validation} type="search" name="q" bind:value={draft.q} placeholder={i18n.t('m_cb8bed4ff8b8')} autocomplete="off" />
           {#if draft.q}<button class="clear-search dn-icon-button" type="button" aria-label={i18n.t('m_c8191190a026')} onclick={() => { draft.q = ''; queryInput.focus(); }}><MobileActionIcon name="close" size={18} /></button>{/if}
         </div>
+      <div class="overview" {@attach attachOverview}>
         <div class="dn-mobile-filter-fields">
           {#each fields as item (item.field)}
             <button class="field-row dn-mobile-overlay-row" data-field={item.field} data-active={item.active} type="button" onclick={() => chooseField(item.field)}>
@@ -158,7 +154,8 @@
         </div>
       </div>
       <footer class="dn-listing-filter__dialog-footer dn-mobile-overlay-footer">
-        <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={count === 0} aria-live="polite" aria-label={count === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: count })}><span class="dn-listing-filter__submit-compact">{count === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: count })}</span></button>
+        <button class="dn-listing-filter__clear dn-mobile-overlay-clear" type="button" disabled={!hasFilters} onclick={resetFilters}>{i18n.t('action.clearShort')}</button>
+        <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={count === 0} aria-live="polite" aria-label={count === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: count })}><span class="dn-listing-filter__submit-compact">{i18n.t('action.showCount', { count })}</span></button>
       </footer>
     {/if}
     {#each entries as [name, value], index (`${name}-${index}`)}<input type="hidden" {name} {value} />{/each}
@@ -168,15 +165,11 @@
 <style>
   :global(body:has(.dn-mobile-listing-filters[open])) { position: fixed; top: var(--dn-dialog-scroll-offset, 0); right: 0; left: 0; overflow: hidden; }
   .dn-mobile-listing-filters { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); position: fixed; inset: var(--dn-dialog-viewport-top, 0px) 0 auto; width: 100%; max-width: none; height: var(--dn-dialog-viewport-height, 100dvh); max-height: var(--dn-dialog-viewport-height, 100dvh); margin: 0; padding: 0; border: 0; background: transparent; color: var(--dn-ink); overflow: hidden; }
-  .dn-mobile-listing-filters[open] { display: flex; flex-direction: column; justify-content: flex-end; }
+  .dn-mobile-listing-filters[open] { display: flex; flex-direction: column; }
   .dn-mobile-listing-filters::backdrop { background: rgb(8 10 14 / .35); }
-  form { display: flex; flex-direction: column; min-height: 0; max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - max(var(--dn-space-6), env(safe-area-inset-top, 0px))); margin: 0; overflow: hidden; border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0; background: var(--dn-white); }
-  h2:focus { outline: none; }
-  .dn-listing-filter__close { background: var(--dn-home-panel); }
-  .back, .reset { border: 0; border-radius: var(--dn-pill); background: var(--dn-home-panel); color: var(--dn-ink); cursor: pointer; }
-  .reset:disabled { opacity: .5; cursor: default; }
-  .overview { min-height: 0; padding: 0 var(--dn-overlay-gutter) var(--dn-space-1); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
-  .search-field { margin-bottom: var(--dn-space-2); }
+  form { display: flex; flex: 1; flex-direction: column; min-height: 0; height: 100%; max-height: 100%; margin: 0; overflow: hidden; background: var(--dn-white); }
+  .overview { flex: 1; min-height: 0; padding: 0 var(--dn-overlay-gutter) var(--dn-space-1); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+  .search-field { flex: 0 0 auto; margin: 0 var(--dn-overlay-gutter) var(--dn-space-2); }
   .search-field input::-webkit-search-cancel-button { display: none; }
   .clear-search { border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-ink); }
   .dn-mobile-filter-fields { display: grid; gap: var(--dn-mobile-filter-control-gap); }
@@ -184,14 +177,14 @@
   .field-row > span { flex: 1; min-width: 0; color: var(--dn-muted); text-align: right; overflow-wrap: anywhere; }
   .field-row > span[data-active=true] { color: var(--dn-ink); }
   .field-row :global(svg) { flex: none; color: var(--dn-muted); }
-  .dn-mobile-filter-editor { display: flex; flex-direction: column; min-height: 0; padding-bottom: max(var(--dn-space-3), env(safe-area-inset-bottom, 0px)); }
+  .dn-mobile-filter-editor { display: flex; flex: 1; flex-direction: column; min-height: 0; padding-bottom: max(var(--dn-space-3), env(safe-area-inset-bottom, 0px)); }
   .dn-mobile-filter-editor:has(+ footer) { padding-bottom: 0; }
   footer { border-top: 1px solid var(--dn-line); }
   .clear { display: inline-flex; min-height: var(--dn-control-hit-height); flex: 0 0 auto; align-items: center; justify-content: center; padding: 0 var(--dn-space-2); border: 0; background: transparent; color: var(--dn-ink); font: var(--dn-overlay-option-font); cursor: pointer; }
   .clear:disabled { color: var(--dn-muted); cursor: default; }
-  .back:active, .clear:enabled:active { background: var(--dn-surface-hover); }
+  .clear:enabled:active { background: var(--dn-surface-hover); }
   button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
-  @media (hover: hover) and (pointer: fine) { .field-row:hover, .clear:enabled:hover, .back:hover { background: var(--dn-surface-hover); } }
+  @media (hover: hover) and (pointer: fine) { .field-row:hover, .clear:enabled:hover { background: var(--dn-surface-hover); } }
   @media (prefers-reduced-motion: no-preference) {
     .dn-mobile-listing-filters[open] form { animation: sheet-enter 180ms cubic-bezier(.16, 1, .3, 1); }
     @keyframes sheet-enter { from { transform: translateY(24px); } to { transform: translateY(0); } }

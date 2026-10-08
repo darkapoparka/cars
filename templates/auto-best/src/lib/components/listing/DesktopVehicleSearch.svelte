@@ -3,6 +3,7 @@
   import { tick, untrack } from 'svelte';
   import { focusPopover } from '$lib/ui/focus';
   import { continuesIdentityPicker } from '$lib/ui/identity-picker';
+  import { searchPickerAnchor, searchPickerSpacing } from '$lib/ui/search-picker';
   import { resolve } from '$app/paths';
   import { getI18n } from '$lib/locale/context';
   import { currencySymbol } from '$lib/locale/core';
@@ -30,6 +31,8 @@
   let draft = $state<ListingDraft>(emptyListingDraft());
   const field = $derived(initialFacet);
   let search = $state('');
+  let wideModels = $state(false);
+  const anchor = $derived(searchPickerAnchor(returnFocus, returnFocus?.closest<HTMLElement>('.dn-listing-filter'), field === 'make' || field === 'model' && wideModels));
   let modelPicker = $state<ModelPicker>();
   let searchInput = $state<HTMLInputElement | null>(null);
   let rangeInput = $state<HTMLInputElement | null>(null);
@@ -61,6 +64,7 @@
     untrack(() => {
       if (!continuesIdentityPicker(editingFacet, next)) draft = listingDraftFromFilters(filters);
       editingFacet = next;
+      if (next === 'model') wideModels = draft.make.length !== 1;
       search = '';
       restoreFocusOnClose = true;
       if (compactMode) void focusOpening();
@@ -140,9 +144,11 @@
     });
   }
   function interactOutside(event: PointerEvent) {
-    restoreFocusOnClose = false;
-    const next = event.target instanceof Element ? event.target.closest<HTMLElement>('[data-facet]')?.dataset.facet : undefined;
-    if (continuesIdentityPicker(field, next)) event.preventDefault();
+    const target = event.target instanceof Element ? event.target : undefined;
+    const next = target?.closest<HTMLElement>('[data-facet]')?.dataset.facet;
+    // Outside-click delivery can follow the facet change; its new opener still belongs to this menu.
+    if (target && returnFocus?.contains(target) || continuesIdentityPicker(field, next)) event.preventDefault();
+    else restoreFocusOnClose = false;
   }
 </script>
 
@@ -176,7 +182,7 @@
             <span class="dn-search-range-control">
               <input {@attach i18n.validation} type="number" min="0" max={Number.MAX_SAFE_INTEGER} step="1"
                 aria-label={`${i18n.t(field === 'price' ? 'm_94470b41eead' : 'm_349ee8568241')}${field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}`}
-                placeholder={i18n.t('inventory.range.unlimited')} data-unit={field === 'price'} bind:this={rangeInput}
+                placeholder={i18n.t('m_8a702098f672')} data-unit={field === 'price'} bind:this={rangeInput}
                 bind:value={() => field === 'price' ? draft.priceMin : draft.yearMin, value => {
                   if (field === 'price') draft.priceMin = value?.toString() ?? '';
                   else draft.yearMin = value?.toString() ?? '';
@@ -189,7 +195,7 @@
             <span class="dn-search-range-control">
               <input {@attach i18n.validation} type="number" min="0" max={Number.MAX_SAFE_INTEGER} step="1"
                 aria-label={`${i18n.t(field === 'price' ? 'm_363c4f34635c' : 'm_07339ff9faf8')}${field === 'price' ? ' · ' + currencySymbol(i18n.locale) : ''}`}
-                placeholder={i18n.t('inventory.range.unlimited')} data-unit={field === 'price'}
+                placeholder={i18n.t('m_585b0741c5fb')} data-unit={field === 'price'}
                 bind:value={() => field === 'price' ? draft.priceMax : draft.yearMax, value => {
                   if (field === 'price') draft.priceMax = value?.toString() ?? '';
                   else draft.yearMax = value?.toString() ?? '';
@@ -242,9 +248,9 @@
     <div class="dn-filter-workspace">
       <section class="dn-filter-panel" aria-label={title}>{@render editor()}</section>
     </div>
-    <footer class="dn-search-footer">
-      <button class="dn-search-reset" type="button" disabled={!field || !activeFields.includes(field)} onclick={() => field && clear(field)}>{i18n.t('action.clearShort')}</button>
-      <button class="dn-search-apply" type="submit" disabled={invalidRange} aria-live="polite">{matching === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: matching })}</button>
+    <footer class="dn-search-footer dn-overlay-footer">
+      <button class="dn-search-reset dn-overlay-secondary" type="button" disabled={!field || !activeFields.includes(field)} onclick={() => field && clear(field)}>{i18n.t('action.clearShort')}</button>
+      <button class="dn-search-apply dn-overlay-primary" type="submit" disabled={invalidRange} aria-live="polite" aria-label={matching === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: matching })}>{i18n.t('action.showCount', { count: matching })}</button>
     </footer>
     {#each hiddenFields as [name, value], index (name + '-' + value + '-' + index)}<input type="hidden" {name} {value} />{/each}
   </form>
@@ -254,8 +260,8 @@
   <Popover.Root bind:open>
     <Popover.Portal to=".dn-app-shell">
       <Popover.Content bind:ref={picker} id="dn-listing-filter-dialog" class="dn-search-dialog dn-search-popover" data-compact="true"
-        data-desktop-panel="true" data-wide-choices={searchable} data-make-grid={field === 'make'} role="dialog" aria-labelledby="dn-facet-title" customAnchor={returnFocus} side="bottom" align={range ? 'end' : 'start'} sideOffset={8}
-        collisionPadding={16} strategy="fixed" hideWhenDetached trapFocus={false}
+        data-desktop-panel="true" data-wide-choices={searchable} data-make-grid={field === 'make' || field === 'model' && wideModels} role="dialog" aria-labelledby="dn-facet-title" customAnchor={anchor} side="bottom" align={range ? 'end' : 'start'} {...searchPickerSpacing}
+        strategy="fixed" hideWhenDetached trapFocus={false}
         onOpenAutoFocus={event => event.preventDefault()}
         onInteractOutside={interactOutside} onCloseAutoFocus={returnToPage}>
         {@render filterForm()}
@@ -276,11 +282,11 @@
   :global(.dn-search-popover) .dn-search-query { height: var(--dn-control-height-default); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); margin-bottom: var(--dn-space-2); background: var(--dn-white); }
   :global(.dn-search-popover) .dn-search-footer { height: 72px; gap: var(--dn-space-2); padding-inline: var(--dn-space-4); }
   :global(.dn-search-popover) .dn-search-reset { padding-inline: var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-white); text-decoration: none; }
-  :global(.dn-search-popover) .dn-search-apply { min-height: var(--dn-control-height-default); padding-inline: var(--dn-space-4); font-size: var(--dn-text-meta); }
+  :global(.dn-search-popover) .dn-search-apply { min-height: var(--dn-control-height-default); padding-inline: var(--dn-space-4); }
   .dn-search-icon { display: grid; flex: 0 0 var(--dn-control-height-compact); place-items: center; width: var(--dn-control-height-compact); height: var(--dn-control-height-compact); padding: 0; border: 0; border-radius: var(--dn-radius-sm); background: transparent; color: var(--dn-muted); cursor: pointer; }
   .dn-search-icon:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-filter-workspace { display: flex; flex: 1; min-width: 0; min-height: 0; }
-  .dn-filter-field-label { color: var(--dn-ink); font-size: var(--dn-text-meta); font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-control); }
+  .dn-filter-field-label { color: var(--dn-muted); font: var(--dn-field-label-font); }
   .dn-filter-panel { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 0; padding: var(--dn-space-2) var(--dn-space-6) var(--dn-space-6); }
   .dn-facet-options { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 0; }
   .dn-search-query { display: flex; flex-shrink: 0; align-items: center; gap: var(--dn-space-3); height: var(--dn-control-height-prominent); margin-bottom: var(--dn-space-4); padding-inline: var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-home-panel); color: var(--dn-muted); }
@@ -294,21 +300,21 @@
   .dn-search-range { display: block; }
   .dn-search-empty { padding: var(--dn-space-8) var(--dn-space-3); color: var(--dn-muted); text-align: center; font-size: var(--dn-text-meta); }
   .dn-search-empty p { margin: 0 0 var(--dn-space-3); }
-  .dn-search-empty button, .dn-search-reset { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-xs); background: transparent; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-empty button, .dn-search-reset { min-height: var(--dn-control-height-compact); padding: var(--dn-space-2); border: 0; border-radius: var(--dn-radius-xs); background: transparent; color: var(--dn-muted); font: var(--dn-control-font); cursor: pointer; }
   .dn-search-empty button:hover, .dn-search-reset:hover { background: var(--dn-surface-subtle); color: var(--dn-ink); }
   .dn-search-reset:disabled { opacity: .45; cursor: default; text-decoration: none; }
   .dn-search-range-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-4); }
-  .dn-search-range label { position: relative; display: grid; gap: var(--dn-space-2); min-width: 0; color: var(--dn-muted); font: var(--dn-control-font); font-size: var(--dn-text-meta); }
+  .dn-search-range label { position: relative; display: grid; gap: var(--dn-space-2); min-width: 0; color: var(--dn-muted); font: var(--dn-field-label-font); }
   .dn-search-range-control { position: relative; display: block; }
   .dn-search-unit { position: absolute; top: 50%; right: var(--dn-space-3); color: var(--dn-muted); font-size: var(--dn-text-meta); transform: translateY(-50%); pointer-events: none; }
-  input[type='number'] { width: 100%; height: var(--dn-control-height-compact); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line-strong); border-radius: var(--dn-radius-xs); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); appearance: textfield; }
-  input[type='number'][data-unit='true'] { padding-right: var(--dn-control-height-compact); }
-  input[type='number']::placeholder { color: var(--dn-muted); font-size: var(--dn-text-meta); }
+  input[type='number'] { width: 100%; height: var(--dn-control-height-compact); padding: 0 var(--dn-space-3); border: 1px solid var(--dn-line-strong); border-radius: var(--dn-radius-xs); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-field-font); appearance: textfield; }
+  input[type='number'][data-unit='true'] { padding-right: calc(var(--dn-space-3) + var(--dn-space-4)); }
+  input[type='number']::placeholder { color: var(--dn-muted); }
   input[type='number'], .dn-search-presets button { font-variant-numeric: tabular-nums; }
   input[type='number']:hover, .dn-search-query:hover { border-color: var(--dn-line-emphasis); }
   input[type='number']::-webkit-inner-spin-button, input[type='number']::-webkit-outer-spin-button { margin: 0; appearance: none; }
   .dn-search-presets { display: flex; flex-wrap: wrap; gap: var(--dn-space-2); margin-top: var(--dn-space-5); }
-  .dn-search-presets button { min-width: 0; min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); font-size: var(--dn-text-meta); cursor: pointer; }
+  .dn-search-presets button { min-width: 0; min-height: var(--dn-control-height-default); padding: var(--dn-space-2) var(--dn-space-4); border: 1px solid var(--dn-line); border-radius: var(--dn-pill); background: var(--dn-surface-raised); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
   .dn-search-presets button:hover { background: var(--dn-surface-hover); }
   .dn-search-presets button[data-active='true'] { border-color: var(--dn-line-emphasis); background: var(--dn-home-panel); }
   .dn-search-range-error { margin: var(--dn-space-3) 0 0; color: var(--dn-red); font-size: var(--dn-text-meta); }
@@ -316,8 +322,9 @@
   .dn-search-reset { min-width: 0; min-height: var(--dn-control-height-default); padding-inline: 0; color: var(--dn-ink); text-decoration: underline; text-underline-offset: var(--dn-space-1); }
   .dn-search-reset:disabled { text-decoration: none; }
   .dn-search-apply { display: flex; flex: 0 1 auto; align-items: center; justify-content: center; min-width: 0; min-height: var(--dn-control-height-entry-mobile); margin-left: auto; padding: var(--dn-space-2) var(--dn-space-6); border: 0; border-radius: var(--dn-pill); background: var(--dn-ink); color: var(--dn-white); font: var(--dn-control-font); font-size: var(--dn-text-body); white-space: nowrap; cursor: pointer; }
-  :global(.dn-search-popover) input[type='number'] { height: var(--dn-control-height-default); border-color: var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-white); font-size: var(--dn-text-body); }
+  :global(.dn-search-popover) input[type='number'] { height: var(--dn-control-height-default); border-color: var(--dn-line); border-radius: var(--dn-radius-control); background: var(--dn-white); }
   .dn-search-apply:hover { background: var(--dn-ink-hover); }
+  .dn-search-apply { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); }
   .dn-search-apply:disabled { opacity: .45; cursor: not-allowed; }
   /* Inset focus stays intact inside scroll areas and never crowds adjacent controls. */
   button:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -3px; }
@@ -326,10 +333,10 @@
   @media (min-width: 992px) {
     :global(.dn-search-popover[data-desktop-panel='true']) { width: min(480px, calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true'][data-wide-choices='true']) { width: min(640px, calc(100vw - 32px)); }
-    :global(.dn-search-popover[data-desktop-panel='true'][data-make-grid='true']) { width: min(840px, calc(100vw - 32px)); }
+    :global(.dn-search-popover[data-desktop-panel='true'][data-make-grid='true']) { width: min(var(--bits-popover-anchor-width, 840px), calc(100vw - 32px)); }
     :global(.dn-search-popover[data-desktop-panel='true']) .dn-search-query { width: 100%; margin: 0; }
     .dn-search-results--choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .dn-search-results--makes { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .dn-search-results--makes { grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--dn-control-height-default) * 3 + var(--dn-space-1))), 1fr)); }
     .dn-search-empty { grid-column: 1 / -1; }
     .dn-search-range-fields, .dn-search-range > label { width: min(100%, 488px); margin-inline: auto; }
     .dn-search-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }

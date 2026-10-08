@@ -2,6 +2,14 @@
 
 Auto Best combines an image-led automotive layout, Inter typography, rounded surfaces and direct call-to-action controls. This document describes the existing design and where its styling lives. It is not a proposal for a new theme.
 
+Overlay footer actions use the shared `dn-overlay-footer`/`dn-mobile-overlay-footer`
+roles in `base.css`: by default 14px text, a 44px target and a 36px visible pill. Primary
+actions follow the existing surface tokens and use intrinsic width; secondary
+actions have a pale grey surface and muted text. Search editors retain 16px text
+entry and their existing row sizing. Close controls keep their 44px targets.
+The compact localized labels are Clear/Apply and Изчисти/Приложи; result actions
+use Show (count)/Покажи (count). Home retains its Save (count) label.
+
 The [7 October desktop search update](DESKTOP-MODEL-PICKER-2026-10-07.md) specifies a 720px Make logo grid, 640px Model panels, 480px companion panels, search in the header row and live Home counts from 992px.
 
 At desktop widths, the vehicle detail preview uses a 16:10 frame. `VehiclePhoto.svelte`
@@ -30,7 +38,9 @@ It uses the same graphite artwork as the four Home section headers from 992px.
 About and Contact use the
 approved larger car scenes through `DesktopHeroScene.svelte`, giving their simpler
 introductions more presence. Blog keeps its original vehicle pair over the shared background. All use the same
-black palette, subtle halftone dots and restrained red accents. The warm About photograph and
+black palette and subtle halftone dots. The About and Contact/service scenes omit
+decorative red curves; their company page labels use plain text without a red dash.
+The warm About photograph and
 the distorted Blog/Contact props are retained as provenance only. White headings,
 red primary actions and white search panels share one
 treatment. Each scene is selected explicitly from `lead-site.ts`; Contact service
@@ -41,54 +51,92 @@ Below 1200px, those titles use the 32px compact section role to clear the side c
 wider desktop uses the 48px hero role. Service introductions remain at 200px.
 About and general
 Contact start their page label at the same 200px anchor, followed by a stronger
-two-line introduction. Their headlines use the 56px role, or 48px below 1200px.
+two-line introduction. About keeps the complete introductory phrase on the first
+line and the configured business name on the next; Bulgarian reads
+“Запознайте се с” / “Auto Best”. Contact keeps its own natural phrase lengths;
+the two headings do not need equal line widths. Their headlines use the 56px role,
+or 48px below 1200px.
 About keeps its plain location subtitle 8px below the title. Actions flow 24px
 below the copy, followed by any configured social profiles. The shared frame
 stays 540px with the default content; enlarged type or longer business names can
 increase its height so content and actions remain readable. Enlarged type also
 increases the company introduction's clearance below the header.
-Home and Inventory use the same search-panel bounds, padding and
-radius. Desktop facets retain the 44px control target and the shared
-prominent-control type. The whole field opens its control, including the border.
-Mobile and tablet controls retain their existing roles.
-Inventory's seven desktop shortcuts, search field and filter button open one filter
-workspace, owned by `DesktopVehicleSearch.svelte`. Its centered 860px window
-keeps a 704px height, constrained to the viewport. The header and footer stay
-fixed while the category navigation and editor scroll independently.
-The left rail exposes Search and all twelve filters as vertical Bits UI tabs.
-Each category has a fixed 40px target, a 16px label and an optional current-value
-summary. Opening a shortcut selects its category directly; changing categories
-retains the complete draft and the same window bounds. Clicking a category focuses
-its search or first number input. Arrow keys navigate the categories without
-moving focus out of the tab list.
-The right editor has one field title, a soft grey pill search field for choice
-filters, and Clear filter when that field is active. The close action has a visible
-neutral circular surface. Make and Model have separate lists;
-the model list respects the current make, and changing make clears an incompatible
-model. A uniquely owned model can infer its make. Single choices use a quiet
-neutral surface and checkmark; equipment uses checkboxes for multiple choices.
-Option labels use the 450 entry role and 500 when selected. The current choice
-initializes the command highlight in every choice editor.
-Selecting values keeps the editor open. Clear all resets the draft, retains sort
-and stays in the current category. The footer has one separator and a red Show
-cars action with a live count and fixed width. Individual options omit
-prospective result counts. Controls use the existing Inter and Cars tokens.
-Search finds makes, models and filter values across the catalog, tolerating
-accents and model spacing; the model editor also searches the make name.
-Typing narrows suggestions; the explicit keyword
-command applies a keyword filter. Empty choice results offer Clear search.
-Budget/year retain paired number inputs, units and presets; mileage has an input
-and presets. Range editors sit outside Command so number inputs keep native
-arrow-key editing and Enter submission. Invalid ranges
-block Show cars even after changing categories.
-Bits UI provides the [vertical Tabs](https://www.bits-ui.com/docs/components/tabs),
-[Command](https://www.bits-ui.com/docs/components/command) and
-[Dialog](https://www.bits-ui.com/docs/components/dialog) behavior,
-adapted to the selected Filter workspace prototype and the existing Cars styling.
-Show cars applies the complete draft to the existing GET URL, retaining sort.
-Escape, Close and outside click discard the draft and restore the opener's focus.
-The sticky opener hides while the dialog is open and returns at the same scroll
-position. Home and widths below 992px retain their native facets/mobile sheets.
+Home retains the shared hero anchor and center lane, with a single white,
+rounded browsing bar through `HomeBrowseBox.svelte` from 768px. Make, Model,
+Body style and Budget share one white surface with subtle vertical dividers,
+a small permanent label, a 17px value and a 56px circular search action.
+Rounded pale field surfaces appear on hover, keyboard focus or while open;
+adjacent dividers recede in those states. Each complete field opens its own Bits UI selector,
+reusing `ListingFacetEditor.svelte` with its `desktopChoices` presentation and
+the existing listing draft transitions. Desktop choices use the same round
+`DesktopFilterChoice.svelte` rows as Inventory; mobile retains its own rows.
+Save commits a field locally; Escape, Close and outside dismissal discard its
+draft. Search sends saved criteria to `/listing-grid` through native GET.
+Budget supports exact amounts and rejects reversed ranges. The seven Home
+facet shortcuts have been removed. Three inventory-backed budget links sit
+20px below the desktop bar, centered with transparent pill surfaces, subtle
+outlines and light text. They reuse `listingBudgetCaps()`, the localized budget
+labels and native `/listing-grid?price_max=…` links used on mobile. Their shared
+44px hit areas keep a 40px painted outline; hover adds a faint light fill and
+keyboard focus has a visible white ring. The 320/390px mobile entry retains its existing
+Buy/Import tabs, search and shortcuts. Inventory retains its separate search
+panel and seven shortcuts. Desktop facets retain the 44px control target and
+shared prominent-control type.
+Home's desktop G-Class/Urus pair uses equal painted heights and a shared tyre
+baseline while preserving each cutout's proportions. From 1200px, their inward
+noses leave the same 24px clearance beside the search bar; the compact laptop
+composition remains above the controls. `Hero.svelte` owns these Home-only
+overrides; other campaign scenes retain area normalization.
+Inventory's seven desktop shortcuts open anchored, field-specific menus through
+`DesktopVehicleSearch.svelte` at 992px and above. Make and Model open their searchable
+native checkbox choices immediately; Type and Body open short radio lists; Budget,
+Year and Mileage open their number inputs. The 380px menu uses a 16px title,
+44px option targets and a fixed compact footer, with 16px viewport clearance.
+Bits UI owns placement and collision handling. Short windows use a side placement;
+an off-screen anchor dismisses the menu and releases its focus scope.
+`DesktopFilterChoice.svelte` owns white option rows with 12px hover corners,
+dark copy and a left-aligned 20px circular indicator. Checkbox choices retain
+native multiselect semantics and a checkmark; radio choices retain a dot.
+Search and numeric inputs use white surfaces and the shared control radius; range presets wrap as outlined pills
+and use a pale surface with an emphasized border when selected. Radio dots and
+checkbox marks use black; Apply uses the existing ink/white
+roles shared by the full filter form. Home and listing native search actions and
+hero/sticky search actions use the same black treatment at 992px and above.
+The portal mounts in `.dn-app-shell` to retain the existing theme context.
+Quick menus keep the page visible and scrollable. Full filters and native search
+use a lighter backdrop without blur.
+The shortcut surfaces share Home's pale background, border, control radius and
+17px role through `VehicleDiscoveryForm.svelte`; both use a downward chevron.
+Applied values retain their field name in the accessible label and ranges show
+both endpoints through the shared summary helper.
+
+Listing search and the dedicated listing Filters action share
+`VehicleSearchDialog.svelte` as their full desktop form. Its soft grey fields,
+keyword pill and filled equipment section are retained. The 13 criteria stay in
+one visible grid: four columns on desktop, two below 992px. The form uses the
+existing 1200px maximum width, 24px viewport clearance, a scrolling content area
+and a footer outside that scroll area. Native selects retain scalar and range
+presets. Make/model use searchable checkbox popovers, with the same 44px control
+height and label baseline as the native fields. Equipment retains its pale group
+and white option surfaces; shared circular checkbox marks preserve multiselect.
+The separate Main/More/Extras desktop workspace has been removed.
+
+The keyword opener focuses search. Listing Filters focuses its heading and uses
+that same form, while each hero shortcut still opens its own anchored selector.
+Current values outside the sample catalog remain selectable, including exact
+numeric criteria from the URL. Clearing changes the local draft, retains sort
+order and keeps the form open; Apply performs the existing GET navigation.
+Escape, Close and backdrop dismissal discard the local draft and restore the
+opener's focus and page scroll. Reversed price/year ranges cannot be submitted.
+A valid empty result can be applied and displayed by the existing results page.
+
+Make changes clear only incompatible models. Shared model transitions and the
+suggestion matcher in `listing-draft.ts` normalize suggestion queries without
+changing the vehicle keyword. Both the full form and direct menus keep repeated
+make/model values and canonical equipment names in GET data. Native dialog focus
+containment owns the full form; Bits UI owns compact popover placement, nested
+picker focus and collision handling. The pinned typography and icon families
+remain unchanged.
 Blog uses that same center lane with one white panel containing the
 search field, red submit action and category pills. The artwork has identical framing
 across routes. `getVehicleArtworkRatios` in `vehicle-artwork.ts` normalizes desktop
@@ -120,26 +168,34 @@ the white panel; the active and hovered category uses the brand accent.
 `HeroLocation.svelte` owns About's plain 18px location subtitle below its title,
 with the configured city and street address, a localized directions label and
 full address hover title. Home omits its desktop location line; the header keeps
-the business address available.
+the business address available. General
+Contact also shows the localized city and street address below its hero title.
 `DesktopShowroom.svelte`
 owns the shared About/Contact visit panel:
-address and appointment copy, one primary call action, directions, configured
+the street address, one primary call action, directions, configured
 social profiles, and the Google map. Its coordinates come from `brand.ts`.
 The map mounts only at 992px and above; the external map link stays available
 without JavaScript or when the provider is unavailable. Mobile uses its own
 intro and contact cards. General Contact places the desktop visit panel below
 the complete hero, with a 32px gap. About and Contact share one white panel with
-32px padding, a contact column capped at 360px and the remaining width for an
-inset, bordered map. Address and appointment rows use plain muted labels and darker values. The
-call and directions actions span the contact column and align to its bottom.
-The map area reserves both grid rows before hydration so the external map link
-stays at the bottom while the iframe mounts.
+32px padding and a compact header above one full-width, inset map. The visit title
+and address sit on the left without an appointment sentence; Call and
+Directions sit side by side on the right. The header wraps into two rows when
+enlarged text needs more room. The address label remains available to screen
+readers without repeating it visually. The map reserves 300px before hydration,
+includes the provider's fullscreen permission and has a plain address fallback
+without JavaScript. Directions remains available in the header; there is no
+duplicate map action row underneath the iframe.
 
 About's service panel uses the configured transparent light-surface logo above
 its introduction and service cards on desktop. The image replaces the visible
 business-name heading while retaining its accessible heading name. Its bounded
 220px by 58px image box preserves the logo's proportions without a decorative
-background. Mobile retains its existing service composition.
+background. The desktop service cards use white surfaces and the shared soft
+card shadow, matching the article cards' separation from their white panel.
+Hovering anywhere over a desktop service card also fills its action red;
+keyboard focus uses the same action state. Both states use the stronger shared
+shadow. Mobile retains its existing service composition.
 
 `DesktopSocialLinks.svelte` renders the same 44px social controls in both company
 heroes and About's visit panel. General Contact uses its dedicated profile cards
@@ -281,6 +337,8 @@ Shared neutral interface values such as ink, muted text, lines, raised surfaces 
 
 Shared `tokens.css` registers the pinned local Inter v4.1 WOFF2. `--dn-font` is `Inter Variable`, followed by Segoe UI, Arial and sans-serif. Vite bundles the reviewed Latin/Cyrillic subset with a content hash. Both weight and optical-size axes and all OpenType layout features are retained, without an external font service. Body/entry roles use 450, controls 500 and headings/prices 600; existing 400-weight metadata remains quieter. Required Bulgarian characters include Ѝ/ѝ, although the file has no dedicated Bulgarian alternates. Keep real BG/EN language tags and [font provenance/license](../provenance/inter.md).
 
+Desktop discovery values use the 17px prominent-control role at 992px and above, retaining 44px targets and space for the native select arrow. They do not grow to the 20px card-heading role on wider screens.
+
 Mobile card prices use the 1.3 control line height, including the 20px Home price role, so glyph metrics fit at 200% text size.
 
 | Token | Size | Typical use |
@@ -301,9 +359,9 @@ Mobile card prices use the 1.3 control line height, including the 20px Home pric
 
 All live-text typography values belong to `tokens.css`. Components and route sheets select semantic roles; they must not introduce numeric font sizes, font weights, line heights, tracking, or local font shorthands. `check:typography`, included in `validate`, enforces this boundary. Fluid section, hero and display roles also live in tokens. Responsive layouts may select a smaller heading role, but must not shrink ordinary controls below the control role to make them fit.
 
-Use regular 400 for prose, the interpolated UI weight 450 where dense black interface text needs less visual harshness, medium 500 for navigation/actions and semibold 600 for headings and emphasis. Prominent full-width overlay actions use `--dn-cta-font` (18px/500 at the default root size); ordinary compact controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies quieter 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px touch targets inside a 44px shell, pill geometry, pale surface, white selected option and keyboard focus. On mobile, collapsed Home/Sell/Import entry triggers use the 52px prominent field role; their red entry CTAs retain the 44px interaction shell and compact-action typography. Single-line editor inputs use the same 44px field frame. Components retain their existing tab/group behavior.
+Body and entry roles use the interpolated weight 450, navigation/actions use medium 500 and headings use semibold 600. `--dn-field-font` owns ordinary filter values and options (16px/450); `--dn-field-label-font` owns their supporting labels (14px/450). Home's bar keeps its 17px value role and uses the same 14px label role. Mobile Home and inventory overview rows keep labels and summaries at 16px/450, with muted color distinguishing the summary. `DesktopFilterChoice.svelte` and `ListingFacetEditor.svelte` share the field role for options and numeric values. Numeric placeholders inherit the input size and weight; range presets and compact Apply/Clear actions use the 16px/500 control role. Prominent full-width overlay actions use `--dn-cta-font` (18px/500 at the default root size); ordinary compact controls use `--dn-control-font` (16px/500). Both use 1.3 line-height. `--dn-tab-font` supplies 16px/500 entry tabs. The shared `.dn-segmented-control` / `.dn-segmented-option` style owns Buy/Import, Sale/Trade-in and Link/Info controls: 44px touch targets inside a 44px shell, pill geometry, pale surface, white selected option and keyboard focus. On mobile, collapsed Home/Sell/Import entry triggers use the prominent field role; their red entry CTAs retain the 44px interaction shell and compact-action typography. Single-line editor inputs use the same 44px field frame. Components retain their existing tab/group behavior.
 
-`.dn-entry-field` and `.dn-entry-field__input` own the shared field surface, focus and `--dn-entry-font` (18px/400). Single-line editor inputs and overlay search fields use the 44px field frame. The mobile `.dn-entry-field--prominent` variant uses the shared 52px control role, a pale borderless surface and regular 16px/400 copy for Home/Sell/Import entry points. Prompts and icons use the muted text role; entered values use ink. Buy has one leading search glyph; entry fields have no trailing glyph. The whole entry opener retains its existing editor behavior. Home's native Import URL field uses the same variant with a leading listing glyph. Mobile overlay search uses the same pale surface and control radius through `dn-mobile-overlay-search`. The multiline modifier uses the control radius and may grow naturally. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
+`.dn-entry-field` and `.dn-entry-field__input` own the shared field surface, focus and `--dn-entry-font` (18px/450). The full desktop filter form deliberately keeps this larger entry role; supporting labels inherit the shared label role without a local weight override. Single-line editor inputs and overlay search fields use the 44px field frame. The mobile `.dn-entry-field--prominent` variant uses the shared prominent control role, a pale borderless surface and the same entry typography for Home/Sell/Import entry points. Prompts and icons use the muted text role; entered values use ink. Buy has one leading search glyph; entry fields have no trailing glyph. The whole entry opener retains its existing editor behavior. Home's native Import URL field uses the same variant with a leading listing glyph. Mobile overlay search uses the same pale surface and pill radius through `dn-mobile-overlay-search`. The multiline modifier uses the control radius and may grow naturally. `ContactIntent` renders one secondary white phone button below the Sell/Import card, outside `.dn-contact-intent__main`, using the ordinary control type, pill radius and 44px action height. Enquiry components do not duplicate that entry call action.
 
 Home, Sell and Import use `ui/entry/EntryCard.svelte`, `EntrySegments.svelte`, `EntryInput.svelte` and `EntryAction.svelte`. The card owns padding, spacing, border, radius and shadow; routes own placement and workflow content. Use these components instead of redefining controls in route CSS. Native inputs preserve validation, binding and focus. Sale starts with vehicle details and offers a listing/VIN alternative; Import accepts a listing link or search criteria. `EnquiryEntryField.svelte` remains the editor used by the legacy standalone enquiry presentation.
 
@@ -360,7 +418,19 @@ The mobile menu uses plain navigation rows on white, with the neutral selection 
 
 Visible mobile overlay titles use the 1.3 control leading role so enlarged glyphs fit inside their heading box while preserving room for the close button. Inventory uses the concise localized Filters title below 768px, while desktop retains Car search. Escape closes advice search immediately, including when its search field contains a query, and restores focus to its opener. Sell/Import mobile entry grids allow their single column to shrink within the card, including at 200% text size in WebKit.
 
-Below 768px, `QuickFilterSheet.svelte` retains 20px single-choice radios with a 2px outline and centered 8px dot. Selected rows use the shared `--dn-mobile-filter-selection-surface` and `--dn-mobile-filter-selection-ink` roles: the CTA charcoal surface with white copy, radio outline and dot. Equipment checkboxes retain native rendering with a white selected accent. Unselected rows keep the pale panel surface. Keyboard focus uses an inset white outline on selected rows and the existing dark outline otherwise. Choice labels can wrap with enlarged text while controls remain centered and rows retain their 44px minimum target. Forced-colors mode uses native radio rendering. Tablet and desktop retain their existing input presentation. Home option cards consume the same selected surface/ink roles.
+Below 768px, `ListingFacetEditor.svelte` provides the choices shared by quick
+pickers and full inventory filters. Plain white rows retain 48px targets; the
+selected row uses a pale surface and a small black selection indicator.
+Radios retain a 20px frame, thin outline and centered 8px dot. Brand, model and
+equipment multiselects use circular 20px frames with a white checkmark when
+selected. The mobile `dn-mobile-filter-check` rule in `base.css` also owns Home's
+brand/model marks. Home centers the option label beside that shared mark and
+keeps its existing two-column choices, without local sizing or corner overrides.
+Native checkbox behavior and whole-row targets are retained;
+forced-colors mode uses native controls. Focus outlines and wrapping labels
+survive enlarged text. Home's option cards retain their selected surface/ink roles.
+Compare the [square marks](filter-round-controls-2026-10-06/before-brands-390.png)
+with the [circular marks](filter-round-controls-2026-10-06/after-brands-390.png).
 
 Matched 320px captures compare the [grey selected row](mobile-selection-2026-10-04/before-bg-320.jpg) with the [black selected row](mobile-selection-2026-10-04/after-bg-320.jpg).
 
@@ -368,16 +438,30 @@ Matched 320px captures compare the [grey selected row](mobile-selection-2026-10-
 
 **Hero and search.** The hero and its vehicle artwork remain separate from the search panel. Buy/Import tabs share the quieter pill-shaped segmented control with Sell/Import. Mobile entry fields use a pale borderless surface and regular text. Home's browse and Import entry actions use charcoal with white text; its quick pills remain white. Call actions retain the red accent. Desktop discovery is its own presentation. The older charcoal-search token names do not mean the current entire search panel should be recolored charcoal.
 
-Home and Inventory use single-line native facet selects. An unset field shows its
-localized name (Type, Make, Model, Body, Budget, Year or Mileage); a selection
-replaces that name with the chosen value. Permanent accessible labels retain the
-field and range meaning. Text and the shared chevron are vertically centered,
-with space reserved for the arrow and ellipsis for long values. From 992px, the
-select frame remains 56px (58px including the enclosing border); tablet retains
-its 64px frame and mobile uses its separate search controls. Full-field click
-targets, keyboard selection, dependent model reset and native GET filtering stay
-intact. Choosing the field name again removes that restriction. Budget values use
-the configured currency's narrow symbol and locale number formatting.
+Desktop Inventory shortcuts open an anchored 380px menu for their own field.
+`ListingChoicePicker.svelte` owns every dropdown in the shared full desktop form,
+the reusable inline discovery fields and desktop sorting. `listing-draft.ts`
+maps URL field names to draft values and supplies localized options, including
+exact applied values outside the preset catalog. `DesktopFilterChoice.svelte`
+supplies circular radio/checkbox marks; native inputs remain available in
+forced-colors mode. All form triggers retain their soft-grey 44px frames,
+aligned labels and the existing equipment group. Menus have white search fields
+where useful and independently scrolling options. Brand/model menus stay open
+for multiselect. Radio arrows browse; click, Enter or Space commits. Escape
+closes the nested menu first and restores focus to its field. The outer draft
+changes the URL only on Apply; cancelling restores the applied filters.
+Sorting submits only a confirmed choice and retains the applied filters.
+`FilterPopoverHeader.svelte` supplies a shared 52px header with a plain 18px
+close glyph inside a transparent 44px target. `ui/focus.ts` supplies the opening
+focus rule: pointer opening focuses the menu container, while keyboard opening
+enters search, the first range input or the checked option. The listing keyword
+action still focuses search directly. Selected presets scroll into view without
+moving the page. Nested popovers own Tab navigation while the outer native
+dialog's containment is suspended for that child. Compare the [previous quick menu](dropdown-polish-2026-10-07/before-make-1440.png)
+with its [compact header and neutral opening](dropdown-polish-2026-10-07/after-make-1440.png).
+Mobile keeps its separate picker composition. Budget values use the configured
+currency and locale number formatting. Compare the [native Type field](styled-filter-selectors-2026-10-06/before-type-1440.png)
+with its [shared styled menu](styled-filter-selectors-2026-10-06/after-type-1440.png).
 
 **Mobile services.** The current preview has four illustrated cards in a 2-by-2 grid below search. Text sits above a centered lower image region. Inventory, sell, import and leasing each retain their own color and existing generated artwork. This is distinct from the wider desktop campaign pair.
 
@@ -422,8 +506,9 @@ size. Every card links to its complete localized guide.
 ## Footer service strip
 
 On desktop, the four existing service shortcuts sit inside one white rounded
-panel headed "Next steps". Subtle inner card surfaces and the existing red icons
-follow the other information panels. Four columns start at 1360px; smaller
+panel with a centered "Next steps" heading. The inner cards use white surfaces,
+the shared soft card shadow and the existing red icons. Hover and keyboard
+focus use the stronger shared shadow. Four columns start at 1360px; smaller
 desktops use two columns to leave enough room for the labels. Destinations,
 route-specific visibility and the tablet/mobile presentation are preserved.
 
@@ -463,7 +548,7 @@ For a visual adjustment, find the winning rule in the component/route/global cas
 
 ## Role-based mobile control contract
 
-Mobile controls use shared size roles. Home quick links, inventory quick filters and Home/Sell/Import entry CTAs use a 44px interaction shell with a 40px painted surface, 16px control type and an 8px content gap. `dn-entry-action` additionally owns the 180px maximum width, 20px inline inset and 15px arrow icon. `dn-quick-pill` and inventory quick filters use the shared 16px inline inset. Inventory search uses the same 16px control typography and 40px paint within its 44px target; Home/Sell/Import entry openers use regular 16px copy in a 52px field, while editor fields retain their 18px entry role. Segmented options paint a 40px surface inside a 44px shell and use 16px tab type. Longer quick-filter rails scroll horizontally without shrinking their labels.
+Mobile controls use shared size roles. Home quick links, inventory quick filters and Home/Sell/Import entry CTAs use a 44px interaction shell with a 40px painted surface, 16px control type and an 8px content gap. `dn-entry-action` additionally owns the 180px maximum width, 20px inline inset and 15px arrow icon. `dn-quick-pill` and inventory quick filters use the shared 16px inline inset. Inventory search uses the same 16px control typography and 40px paint within its 44px target; Home/Sell/Import entry openers use regular 16px copy in a 52px field, while mobile overlay editor fields use the 48px field role with 16px type. Segmented options paint a 40px surface inside a 44px shell and use 16px tab type. Longer quick-filter rails scroll horizontally without shrinking their labels.
 
 The mobile Home and inventory openers use one 22px Fluent Regular search glyph; overlay search fields retain 18px icons and the shared entry-icon gap. Header location and phone glyphs use 22px frames inside subtle 40px circles and their retained 44px targets. Header and other mobile phone actions use the official Call Regular handset. All of these glyphs use the pinned native SVG geometry with `currentColor` and no added stroke. The circles inherit the icon color for consistent contrast on light, red and dark heroes. Icon-only controls use a 44px target with a 40px painted circle, while each component chooses an icon size appropriate to its visual role. Grid/flex geometry centres icons; do not add device-specific translations or route-specific offsets.
 
@@ -471,7 +556,7 @@ Below 768px, Home/Sell/Import entry fields and overlay searches share a pale sur
 
 ## Overlay control proportions
 
-Home and listing overlay search fields match their opener role: 44px field, 18px type and no decorative border. Home overview rows are 52px with 16px labels, 14px values and 17px arrows. Home option cards are 52px with compact 14px copy and the approved dark selected state. Listing overview rows are 52px with 16px copy; the listing submit action is 54px. Nested picker choices are 52px, while Clear/Apply actions remain 48px. Single-line editor inputs are 44px.
+Home and listing overlay searches use a 48px field with 16px type, the existing grey entry surface, pill corners and no decorative border. Overview buttons and Home choice buttons have a minimum 48px target and grey paint inset 2px vertically; a 4px layout gap leaves 8px between painted surfaces. Native choice lists use white rows and a stronger grey selected surface, with small circular radio/checkbox indicators before the label and the pinned Fluent checkmark. Touch presses visibly change the surface. Labels use 16px control type and summary values use 14px type. Numeric inputs are 48px. Mobile search fields, single-line editor inputs, selects and filter selection/overview controls use the existing pill radius; textareas use the 16px radius. Checkbox/radio indicators, range controls, uploads and desktop styling retain their existing geometry. Mobile overlay headings use 20px/600 type, 20px side gutters and borderless 44px Close/Back targets with 24px Fluent glyphs. Each overlay renders one header; responsive styling belongs to the shared `dn-mobile-overlay-heading` rules in `base.css`. Primary footer actions are 48px; secondary actions retain at least 44px targets. Sell/Import Make and Model retain separate full-width rows. Editor actions follow the fields in the same scroll container so the keyboard cannot hide them behind a separate footer. Long labels grow vertically. Filter geometry is shared through the `--dn-mobile-filter-control-*` tokens.
 
 These dimensions are semantic role tokens or deliberate component geometry; they are not a mandate to flatten all controls. Longer localized option labels may grow vertically instead of shrinking type. `scripts/overlay-proportions-smoke.mjs` verifies the role matrix in BG and EN at 320, 390 and 430px.
 
@@ -496,3 +581,29 @@ Home’s View all action includes `listingVehicles.length` through the localized
 Sell/Import mobile heroes reuse exactly the same central car crop from the Sell asset. A fixed 1:2:1 grid changes only the left/right service details. Do not switch the central car between separately generated scenes: even aligned frames contain different vehicle geometry. Home and service illustrations retain their shared centered frame. Verify with `scripts/hero-composition-smoke.mjs` at 320/390/430/1440px in EN/BG.
 
 PDP mobile tabs use the same 44px control height and inset selection paint as entry segments, with compact three-option labels. The mobile finance trigger belongs inside the white information card below the active tab panel; desktop retains its sidebar calculator. Home and service hero artwork share one frame (56px top, 136px height); one shared car crop fixes the center and tyre baseline across service navigation.
+
+`MobileListingFilters.svelte` presents all twelve inventory criteria as subtle neutral
+controls on one white sheet, using the field order from `listing-draft.ts`. The sheet
+fits its contents and scrolls within the visible viewport on shorter screens.
+The overview keeps every criterion directly available, with borderless button surfaces
+and inset paint between full-size targets. Search is one pale field with a reachable clear button; the result
+action is the sole solid black button and fills the footer. The header reset
+icon matches Home and keeps the reset local to the draft. Inventory's
+Search opener focuses its keyword input directly. Applied quick pills keep an
+outline and removal glyph rather than a solid dark fill.
+Choices replace the overview inside the same native dialog. Single choices return
+immediately; ranges and extras use Save. Back discards the unfinished pane; Close
+discards the whole draft. Search keeps its opening list space to avoid jumping.
+Budget presets derive from the current stock, while year and mileage use the
+existing filter catalog. Presets edit the local draft and retain the Save step.
+Shared opening measurements in `overlay-content.ts` fit wrapped controls without
+unnecessary scrolling or spare space. Range errors appear directly beneath their inputs.
+Home keeps its make-to-model flow and two-column choice buttons, using the same
+soft grey controls and black primary action in a content-sized sheet.
+All action glyphs use the pinned Fluent Regular renderer.
+See [the restored mobile controls and matched captures](mobile-filter-soft-2026-10-06/README.md).
+
+Home's Комби tile uses the transparent `body-wagon-v2.webp` cutout rather than the
+opaque white image. The catalog retains the same visible framing and body-filter
+link. Its [asset provenance](../provenance/body-wagon-2026-10-06.md) records the
+source and alpha bounds; the original PNG and WebP remain retained.

@@ -141,10 +141,14 @@
             {/if}
           {:else if !desktopChoices}
             <label class="choice dn-mobile-filter-choice" hidden={!matches(optionLabel(option))}>
-              <span>{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
-              {#if field === 'equipment'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
-              {:else if field === 'make' || field === 'model'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name={option ? field : undefined} value={option} checked={isSelected(option)} onchange={() => choose(option)} />
+              {#if field === 'equipment' || field === 'make' || field === 'model'}
+                <span class="dn-mobile-filter-checkbox">
+                  {#if field === 'equipment'}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name="equipment" value={option} bind:group={draft.equipment} />
+                  {:else}<input {@attach i18n.validation} class="dn-mobile-filter-check" type="checkbox" name={option ? field : undefined} value={option} checked={isSelected(option)} onchange={() => choose(option)} />{/if}
+                  {#if mobile.current}<MobileActionIcon name="check" size={18} />{/if}
+                </span>
               {:else}<input {@attach i18n.validation} type="radio" name={field} value={option} checked={isSelected(option)} onclick={() => { if (selected === option) onChoose?.(); }} onchange={() => choose(option)} />{/if}
+              <span class="choice-label">{optionLabel(option)}{#if field === 'type'} <span class="choice-count">{listingTypeCount(option)}</span>{/if}</span>
             </label>
           {/if}
         {/each}
@@ -173,7 +177,7 @@
   @media (min-width: 992px) {
     .wide-panel .content { flex: 1; }
     .wide-panel fieldset { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); }
-    .make-grid fieldset { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .make-grid fieldset { grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--dn-control-height-default) * 3 + var(--dn-space-1))), 1fr)); }
     .wide-panel .range { width: min(100%, 488px); margin-inline: auto; }
     .wide-panel .presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
     .wide-panel .price-presets { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -186,6 +190,7 @@
   .choice { display: flex; min-height: var(--dn-overlay-control-height); padding: var(--dn-space-2) var(--dn-space-4); gap: var(--dn-entry-action-gap); justify-content: space-between; align-items: center; border-radius: var(--dn-overlay-row-radius); background: var(--dn-home-panel); color: var(--dn-ink); font: var(--dn-field-font); cursor: pointer; }
   .choice[hidden] { display: none; }
   .choice > span { min-width: 0; overflow-wrap: anywhere; }
+  .choice-label { flex: 1; }
   .choice-count { margin-inline-start: var(--dn-space-2); color: var(--dn-muted); font-size: var(--dn-text-meta); }
   .choice:has(:checked) { background: var(--dn-selection-surface); color: var(--dn-ink); box-shadow: inset 0 0 0 1px var(--dn-selection-line); }
   .choice:has(input:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
@@ -203,7 +208,7 @@
     fieldset { gap: var(--dn-mobile-filter-control-gap); }
     .choice { padding: var(--dn-space-3); }
     .choice:has(:checked) { box-shadow: none; }
-    input[type=number] { min-height: var(--dn-control-height-entry-mobile); background: var(--dn-surface-subtle); border-color: var(--dn-line); font-variant-numeric: tabular-nums; }
+    input[type=number] { min-height: var(--dn-control-height-entry-mobile); background: var(--dn-entry-surface); border: 0; font-variant-numeric: tabular-nums; }
     .presets { display: flex; flex-wrap: wrap; gap: var(--dn-space-2); margin-top: var(--dn-space-4); }
     .presets button { min-height: var(--dn-control-hit-height); padding: var(--dn-space-2) var(--dn-space-3); border: 1px solid var(--dn-line); border-radius: var(--dn-radius-button); background: var(--dn-white); color: var(--dn-ink); font: var(--dn-control-font); cursor: pointer; }
     .presets button[aria-pressed=true] { border-color: var(--dn-line-emphasis); background: var(--dn-home-panel); color: var(--dn-ink); }

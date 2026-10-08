@@ -9,6 +9,7 @@
   import type { Snippet } from 'svelte';
   import { getI18n } from '$lib/locale/context';
   import Icon from '$components/ui/Icon.svelte';
+  import FilterCloseButton from './FilterCloseButton.svelte';
 
   let { id, title, search, navigation }: { id: string; title: string; search?: Snippet; navigation?: PickerNavigation } = $props();
   const i18n = getI18n();
@@ -21,7 +22,9 @@
     {:else}<span>{navigation?.label ?? title}</span>{/if}
   </h2>
   {#if search}<div class="dn-picker-search">{@render search()}</div>{/if}
-  <Popover.Close type="button" class="dn-picker-close" aria-label={i18n.t('m_84305a580997')}><Icon name="x" size={18} /></Popover.Close>
+  <Popover.Close aria-label={i18n.t('m_84305a580997')}>
+    {#snippet child({ props })}<FilterCloseButton {...props} />{/snippet}
+  </Popover.Close>
 </header>
 
 <style>
@@ -32,12 +35,10 @@
   .back :global(svg) { flex: none; }
   .back:hover { background: var(--dn-surface-hover); }
   .back:focus-visible { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
-  :global(.dn-picker-close) { display: grid; flex: 0 0 var(--dn-control-hit-height); place-items: center; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); margin-inline-end: calc(var(--dn-space-2) * -1); padding: 0; border: 0; border-radius: var(--dn-pill); background: transparent; color: var(--dn-muted); cursor: pointer; }
-  :global(.dn-picker-close:hover) { background: var(--dn-surface-hover); color: var(--dn-ink); }
-  :global(.dn-picker-close:focus-visible) { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
   @media (min-width: 992px) {
+    .dn-picker-header { padding-block: var(--dn-space-2); }
     h2 { color: var(--dn-muted); font: var(--dn-field-label-font); }
-    .dn-picker-header--search { display: flex; align-items: center; padding-block: var(--dn-space-2); }
+    .dn-picker-header--search { display: flex; align-items: center; }
     /* The opener supplies the visible title; keep its duplicate available to screen readers. */
     .dn-picker-header--search h2, .dn-picker-header--search .back > span { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
     .dn-picker-header--search.dn-picker-header--back h2 { position: static; flex: 0 0 var(--dn-control-hit-height); width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); margin: 0; overflow: visible; clip-path: none; }

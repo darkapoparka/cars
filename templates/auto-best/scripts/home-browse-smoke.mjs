@@ -36,7 +36,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
       const gap = (await menu.getAttribute('data-side')) === 'top'
         ? bar.y - frame.y - frame.height : frame.y - bar.y - bar.height;
       assert(Math.abs(gap - 8) <= 1, 'Desktop selectors have an 8px visible gap from the complete search bar, including collision flips');
-      assert.equal(frame.width, name === 'make' ? 840 : name === 'model' ? 640 : 480, 'Desktop selectors use a width suited to their content');
+      assert.equal(frame.width, name === 'make' ? bar.width : name === 'model' ? 640 : 480, 'Make follows the full Buy bar; selected-brand models and other facets retain their compact widths');
       assert.equal(await menu.getAttribute('data-desktop-panel'), 'true');
       assert(await menu.locator('.dn-home-browse-picker__count').isVisible(), 'Every selector shows the pending result count');
       const tiles = await menu.locator('.dn-desktop-choice').evaluateAll(nodes => nodes.map(node => node.getBoundingClientRect().width));
@@ -87,7 +87,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   assert.deepEqual(await values('price_max'), [], 'Switching fields discards the previous editor draft');
   assert.equal(await choice('X6 M Sport').count(), 0, 'Models follow the saved makes');
   await chooseModel('RS 6 Avant');
-  if (page.viewportSize().width >= 992) assert.equal((await menu.locator('.dn-home-browse-picker__count').innerText()).trim(), locale === 'bg' ? '· 1 автомобил' : '· 1 car', 'The Home count follows the pending model before Save');
+  if (page.viewportSize().width >= 992) assert.equal((await menu.locator('.dn-home-browse-picker__save').innerText()).replace(/\s+/g, ' ').trim(), locale === 'bg' ? 'Запазете (1)' : 'Save (1)', 'The compact Home label follows the pending model before Save');
   await save();
   assert.deepEqual(await values('model'), ['RS 6 Avant']);
   await open('make');

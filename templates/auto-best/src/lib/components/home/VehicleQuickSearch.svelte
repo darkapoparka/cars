@@ -118,8 +118,7 @@
     searchOpen = true;
     mobileView = 'main';
     dialog?.showModal();
-    if (mobile.current) void focusMobileView();
-    else void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
+    void tick().then(() => { if (dialog?.open) searchInput?.focus({ preventScroll: true }); });
   };
   const closeSearch = () => { if (dialog?.open) dialog.close(); };
   const resetSearch = () => {
@@ -205,9 +204,9 @@
   onclose={restoreTriggerFocus}
 >
   <div class="dn-quick-search__panel">
-    <header class="dn-quick-search__header">
+    <header class="dn-mobile-overlay-heading dn-quick-search__header dn-mobile-overlay-header dn-mobile-filter-header">
       {#if mobileView === 'main'}
-        <button class="dn-quick-search__reset dn-icon-button" type="button" aria-label={i18n.t('action.clearShort')} title={i18n.t('action.clearShort')} disabled={!hasFilters} onclick={resetSearch}><MobileActionIcon name="reset" size={22} /></button>
+        <button class="dn-quick-search__reset dn-icon-button dn-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>
       {:else}
         <button
           class="dn-quick-search__back dn-icon-button"
@@ -220,7 +219,7 @@
       {/if}
       <h2 id="quick-search-title" tabindex="-1" {@attach attachHeading}>
         <span class="dn-quick-search__title-desktop">{i18n.t("m_0ae7a3ecbc83")}</span>
-        <span class="dn-quick-search__title-mobile">{mobileMenuTitle}</span>
+        <span class="dn-quick-search__title-mobile">{mobileView === 'main' ? i18n.t("m_0ae7a3ecbc83") : mobileMenuTitle}</span>
       </h2>
       <button class="dn-quick-search__close dn-icon-button" type="button" aria-label={i18n.t("m_fab9fcfc48bf")} onclick={closeSearch}>
         {#if mobile.current}<MobileActionIcon name="close" size={20} />{:else}<Icon name="x" size={22} strokeWidth={1.8} />{/if}
@@ -308,7 +307,7 @@
         </div>
       {:else}
         <div class="dn-quick-search__option-menu" aria-label={mobileMenuTitle}>
-          <div class="dn-quick-search__option-grid">
+          <div class="dn-quick-search__option-grid" class:identity={identityView}>
             {#each mobileMenuOptions as option (option.value)}
               <button
                 class="dn-quick-search__option dn-mobile-overlay-option"
@@ -316,7 +315,7 @@
                 aria-pressed={optionSelected(option.value)}
                 onclick={() => selectMobileOption(option.value)}
               >
-                <span class="option-label">{option.label}</span>{#if identityView}<span class="identity-check dn-mobile-filter-check" data-checked={optionSelected(option.value)} aria-hidden="true">{optionSelected(option.value) ? '✓' : ''}</span>{/if}
+                <span class="option-label">{option.label}</span>{#if identityView}<span class="identity-check dn-mobile-filter-check" data-checked={optionSelected(option.value)} aria-hidden="true">{#if optionSelected(option.value)}<MobileActionIcon name="check" size={18} />{/if}</span>{/if}
               </button>
             {/each}
           </div>
@@ -324,12 +323,13 @@
       {/if}
 
       <footer class="dn-quick-search__mobile-footer dn-mobile-overlay-footer">
+        {#if mobileView === 'main'}<button class="dn-quick-search__clear dn-mobile-overlay-clear" type="button" disabled={!hasFilters} onclick={resetSearch}>{i18n.t('action.clearShort')}</button>{/if}
         {#if mobileView === 'make'}
           <button class="dn-mobile-overlay-action" type="button" onclick={() => openMobileMenu('model')}>{i18n.t('m_5e2c614c23f0')}<MobileActionIcon name="arrow" size={20} /></button>
         {:else if mobileView === 'model'}
           <button class="dn-mobile-overlay-action" type="button" onclick={() => { mobileView = 'main'; void focusMobileView('make'); }}>{i18n.t('m_1509f561f241')}</button>
-        {:else}<button class="dn-mobile-overlay-action" type="submit" disabled={filteredVehicles.length === 0} aria-live="polite">
-          {filteredVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: filteredVehicles.length })}
+        {:else}<button class="dn-mobile-overlay-action" type="submit" disabled={filteredVehicles.length === 0} aria-live="polite" aria-label={filteredVehicles.length === 1 ? i18n.t('m_047e325f6562') : i18n.t('m_08d2ff28407e', { p0: filteredVehicles.length })}>
+          {i18n.t('action.showCount', { count: filteredVehicles.length })}
         </button>{/if}
       </footer>
     </form>
@@ -498,25 +498,25 @@
       max-height: var(--dn-dialog-viewport-height, 100dvh);
       margin: 0;
       border-radius: 0;
-      background: transparent;
+      background: var(--dn-white);
       box-shadow: none;
     }
-    .dn-quick-search__dialog[open] { display: flex; flex-direction: column; justify-content: flex-end; }
+    .dn-quick-search__dialog[open] { display: flex; flex-direction: column; }
     .dn-quick-search__dialog::backdrop { background: rgb(8 10 14 / .35); backdrop-filter: none; }
 
     .dn-quick-search__panel {
       min-height: 0;
-      height: auto;
-      max-height: calc(var(--dn-dialog-viewport-height, 100dvh) - max(var(--dn-space-6), env(safe-area-inset-top, 0px)));
+      height: 100%;
+      max-height: 100%;
       overflow: hidden;
-      border-radius: var(--dn-radius-sheet) var(--dn-radius-sheet) 0 0;
+      border-radius: 0;
       background: var(--dn-white);
     }
 
     .dn-quick-search__header {
       display: grid;
       min-height: 64px;
-      grid-template-columns: var(--dn-control-hit-height) minmax(0, 1fr) var(--dn-control-hit-height);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
       gap: var(--dn-space-3);
       padding: var(--dn-space-3) var(--dn-overlay-gutter);
       background: #fff;
@@ -560,10 +560,9 @@
       outline-offset: -2px;
     }
 
-    .dn-quick-search__option:has(.identity-check) { display: flex; justify-content: space-between; gap: var(--dn-space-2); }
+    .dn-quick-search__option:has(.identity-check) { display: flex; align-items: center; justify-content: flex-start; gap: var(--dn-space-3); }
+    .identity-check { order: -1; }
     .option-label { min-width: 0; overflow-wrap: anywhere; }
-    .identity-check { display: grid; flex: 0 0 18px; width: 18px; height: 18px; place-items: center; border: 1px solid var(--dn-line-strong); border-radius: var(--dn-space-1); background: var(--dn-white); color: var(--dn-ink); font-size: var(--dn-text-meta); }
-    .identity-check[data-checked=true] { border-color: var(--dn-ink); }
 
     .dn-quick-search__title-desktop {
       display: none;
@@ -588,24 +587,25 @@
     .dn-quick-search__mobile-filters {
       display: flex;
       min-height: 0;
-      flex: 0 1 auto;
+      flex: 1 1 auto;
       flex-direction: column;
     }
 
     .dn-quick-search__filter-rows {
       display: grid;
+      flex: 1 1 auto;
       min-height: 0;
       grid-auto-rows: max-content;
       align-content: start;
       gap: var(--dn-mobile-filter-control-gap);
-      padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
+      padding: var(--dn-space-2) var(--dn-overlay-gutter) var(--dn-overlay-gap);
       overflow-y: auto;
       overscroll-behavior: contain;
     }
 
     .dn-quick-search__option-menu {
       min-height: 0;
-      flex: 0 1 auto;
+      flex: 1 1 auto;
       padding: 0 var(--dn-overlay-gutter) var(--dn-overlay-gap);
       overflow-y: auto;
       overscroll-behavior: contain;
@@ -618,6 +618,8 @@
       column-gap: var(--dn-overlay-gap);
     }
 
+    .dn-quick-search__option-grid.identity { grid-template-columns: minmax(0, 1fr); gap: var(--dn-mobile-filter-control-gap); }
+    .identity .dn-quick-search__option { min-height: var(--dn-overlay-row-height); padding-inline: var(--dn-space-3); }
     .dn-quick-search__mobile-footer { border-top: 1px solid var(--dn-line); }
   }
 

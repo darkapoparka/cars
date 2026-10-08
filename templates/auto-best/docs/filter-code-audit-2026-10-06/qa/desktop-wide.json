@@ -1,0 +1,150 @@
+[
+  {
+    "locale": "bg",
+    "width": 992,
+    "height": 700,
+    "frame": {
+      "x": 32,
+      "y": 40,
+      "width": 913,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1024,
+    "height": 600,
+    "frame": {
+      "x": 44.5,
+      "y": 32,
+      "width": 920,
+      "height": 536
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "height": 720,
+    "frame": {
+      "x": 172.5,
+      "y": 50,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1440,
+    "height": 900,
+    "frame": {
+      "x": 252.5,
+      "y": 140,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1920,
+    "height": 1080,
+    "frame": {
+      "x": 492.5,
+      "y": 230,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 992,
+    "height": 700,
+    "frame": {
+      "x": 32,
+      "y": 40,
+      "width": 913,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "height": 600,
+    "frame": {
+      "x": 44.5,
+      "y": 32,
+      "width": 920,
+      "height": 536
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "height": 720,
+    "frame": {
+      "x": 172.5,
+      "y": 50,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1440,
+    "height": 900,
+    "frame": {
+      "x": 252.5,
+      "y": 140,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1920,
+    "height": 1080,
+    "frame": {
+      "x": 492.5,
+      "y": 230,
+      "width": 920,
+      "height": 620
+    },
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1280,
+    "height": 720,
+    "scenario": "out-of-stock URL criteria and global reset",
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1280,
+    "height": 720,
+    "scenario": "out-of-stock URL criteria and global reset",
+    "passed": true
+  },
+  {
+    "locale": "bg",
+    "width": 1024,
+    "height": 600,
+    "scenario": "68-option browser-only equipment catalog, search and reset",
+    "passed": true
+  },
+  {
+    "locale": "en",
+    "width": 1024,
+    "height": 600,
+    "scenario": "68-option browser-only equipment catalog, search and reset",
+    "passed": true
+  }
+]

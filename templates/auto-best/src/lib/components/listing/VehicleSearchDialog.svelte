@@ -31,6 +31,7 @@
   import ListingChoicePicker from './ListingChoicePicker.svelte';
   import DesktopFilterChoice from './DesktopFilterChoice.svelte';
   import DesktopVehicleSearch from './DesktopVehicleSearch.svelte';
+  import FilterCloseButton from './FilterCloseButton.svelte';
   import type { Attachment } from 'svelte/attachments';
 
   let { filters, children, desktopPickers = false }: { filters: ListingFilters; desktopPickers?: boolean; children: Snippet<[(event: MouseEvent, field?: string) => void, boolean]> } = $props();
@@ -157,9 +158,13 @@
   >
     <header class="dn-listing-filter__dialog-header dn-mobile-overlay-header">
       <h2 id="dn-listing-filter-title" tabindex="-1">{dialogTitle}</h2>
-      <button class="dn-listing-filter__close dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t("m_2b3fff4a027c")} onclick={closeFilters}>
-        {@render actionIcon('close')}
-      </button>
+      {#if desktopMatches}
+        <FilterCloseButton class="dn-listing-filter__close" aria-label={i18n.t('m_2b3fff4a027c')} onclick={closeFilters} />
+      {:else}
+        <button class="dn-listing-filter__close dn-listing-filter__close--legacy dn-icon-button dn-overlay-close" type="button" aria-label={i18n.t('m_2b3fff4a027c')} onclick={closeFilters}>
+          {@render actionIcon('close')}
+        </button>
+      {/if}
     </header>
 
     <div class="dn-listing-filter__dialog-content">
@@ -217,7 +222,7 @@
       {/if}
       {#if hasLiveFilters}<button class="dn-listing-filter__clear dn-mobile-overlay-clear" type="button" onclick={handleClear}>{i18n.t("action.clearShort")}</button>{/if}
       <button class="dn-listing-filter__dialog-submit dn-mobile-overlay-action" type="submit" disabled={hasInvalidRange} aria-live="polite" aria-label={matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}>
-        <span class="dn-listing-filter__submit-full">{matchingVehicles.length === 1 ? i18n.t("m_047e325f6562") : i18n.t("m_08d2ff28407e", { p0: matchingVehicles.length })}</span>
+        <span class="dn-listing-filter__submit-full">{i18n.t('action.showCount', { count: matchingVehicles.length })}</span>
         <Icon name="search" size={18} />
       </button>
       <input type="hidden" name="sort" value={filters.sort === 'default' ? '' : filters.sort} />
@@ -307,10 +312,10 @@
 
   .dn-listing-filter__dialog-header h2:focus { outline: none; }
 
-  .dn-listing-filter__close { margin-left: auto; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: #202329; }
+  .dn-listing-filter__close--legacy { margin-left: auto; border: 0; border-radius: var(--dn-radius-button); background: var(--dn-home-panel); color: #202329; }
 
-  .dn-listing-filter__close:hover,
-  .dn-listing-filter__close:focus-visible {
+  .dn-listing-filter__close--legacy:hover,
+  .dn-listing-filter__close--legacy:focus-visible {
     border-color: #202329;
     background: #e7e9ec;
   }
@@ -406,6 +411,7 @@
   }
 
   @media (min-width: 992px) {
+    .dn-listing-filter__dialog-header { justify-content: space-between; }
     .dn-listing-filter__dialog-search {
       flex: 0 0 auto;
       height: auto;
@@ -522,7 +528,7 @@
   }
 
   @media (min-width: 992px) {
-    .dn-listing-filter__dialog-submit { background: var(--dn-ink); }
+    .dn-listing-filter__dialog-submit { --dn-primary-action-surface: var(--dn-ink); --dn-primary-action-surface-hover: var(--dn-ink-hover); background: var(--dn-ink); }
     .dn-listing-filter__dialog-submit:hover, .dn-listing-filter__dialog-submit:focus-visible { background: var(--dn-ink-hover); }
     .dn-listing-filter__dialog-submit:disabled { background: var(--dn-line-strong); color: var(--dn-muted); }
     .dn-listing-filter__equipment-option:has(:global(input:checked)) { background: var(--dn-home-panel); color: var(--dn-ink); box-shadow: inset 0 0 0 1px var(--dn-line-strong); }

@@ -56,6 +56,7 @@
   let dialog: HTMLDialogElement;
   let form: HTMLFormElement;
   let heading: HTMLHeadingElement;
+  const attachHeading = (node: HTMLHeadingElement) => { heading = node; };
   let returnFocus: HTMLElement | undefined;
   let opened = false;
   let releaseScroll: (() => void) | undefined;
@@ -241,12 +242,12 @@
 
 <dialog onkeydown={trapDialogTab} {@attach dialogViewport} class="dn-tradein-dialog" bind:this={dialog} aria-labelledby="tradein-title" onclose={restore} onclick={(event) => { if (event.target === event.currentTarget) dialog.close(); }}>
   <div class="dn-tradein-panel">
-    <header class="dn-tradein-header">
+    <header class="dn-mobile-overlay-heading dn-tradein-header">
       <div>
         <p>{i18n.t("m_c0ce3e0c1192")}</p>
-        <h2 id="tradein-title" tabindex="-1" bind:this={heading}>{step === 0 ? i18n.t("m_881ec3398409") : step === 1 ? i18n.t("m_3bcc77dee29d") : i18n.t("m_11669a1c9e37")}</h2>
+        <h2 id="tradein-title" tabindex="-1" {@attach attachHeading}>{step === 0 ? i18n.t("m_881ec3398409") : step === 1 ? i18n.t("m_3bcc77dee29d") : i18n.t("m_11669a1c9e37")}</h2>
       </div>
-      <button class="dn-tradein-close dn-icon-button" type="button" aria-label={i18n.t("m_f62bc38ddfaf")} onclick={() => dialog.close()}><Icon name="x" size={22} /></button>
+      <button class="dn-tradein-close dn-icon-button" type="button" aria-label={i18n.t("m_f62bc38ddfaf")} onclick={() => dialog.close()}><span class="dn-mobile-overlay-icon"><MobileActionIcon name="close" /></span><span class="dn-desktop-overlay-icon"><Icon name="x" size={22} /></span></button>
     </header>
 
     <div class="dn-tradein-progress" aria-label={i18n.t("m_c248b5704fda", { p0: step + 1, p1: steps[step] })}>
@@ -309,12 +310,12 @@
       {#if feedback && step < 2}<p class="dn-tradein-feedback" role="status">{feedback}</p>{/if}
     </form>
 
-    <footer class="dn-tradein-footer">
-      {#if step > 0}<button class="dn-tradein-back" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={17} />{i18n.t("m_76900f1bfd16")}</button>{/if}
+    <footer class="dn-tradein-footer dn-mobile-overlay-footer">
+      {#if step > 0}<button class="dn-tradein-back dn-mobile-overlay-clear" type="button" onclick={() => move(step - 1)}><Icon name="arrow-left" size={17} />{i18n.t("m_76900f1bfd16")}</button>{/if}
       {#if step < 2}
-        <button class="dn-tradein-primary" type="button" onclick={() => move(step + 1)}>{step === 0 ? i18n.t("m_7ef2846a7d92") : i18n.t("m_d2b55d5b18b9")}<Icon name="arrow-right" size={18} /></button>
+        <button class="dn-tradein-primary dn-mobile-overlay-action" type="button" onclick={() => move(step + 1)}><span class="dn-overlay-action-label">{step === 0 ? i18n.t("m_7ef2846a7d92") : i18n.t("m_d2b55d5b18b9")}</span><Icon name="arrow-right" size={18} /></button>
       {:else}
-        <button class="dn-tradein-primary" type="button" disabled={sharing} onclick={share}>{sharing ? i18n.t("m_7001d98040b4") : i18n.t("m_38602fbd1ebc")}<Icon name="arrow-right" size={18} /></button>
+        <button class="dn-tradein-primary" type="button" disabled={sharing} onclick={share}><span class="dn-overlay-action-label">{sharing ? i18n.t("m_7001d98040b4") : i18n.t("m_38602fbd1ebc")}</span><Icon name="arrow-right" size={18} /></button>
       {/if}
     </footer>
   </div>
@@ -415,7 +416,11 @@
     .dn-tradein-header { padding: var(--dn-overlay-header-padding); }
     .dn-tradein-header h2 { overflow-wrap: anywhere; font-size: var(--dn-text-subheading); }
     .dn-tradein-progress { padding: 0 16px 14px; }
-    .dn-tradein-body { padding: 18px 16px 22px; }
+    .dn-tradein-body { padding: var(--dn-space-5) var(--dn-overlay-gutter) var(--dn-space-6); }
+    .dn-tradein-progress { padding-inline: var(--dn-overlay-gutter); }
+    .dn-tradein-fields label, .dn-tradein-notes { font-weight: var(--dn-weight-medium); }
+    .dn-tradein-fields input, .dn-tradein-notes textarea { min-height: var(--dn-overlay-control-height); border: 0; background: var(--dn-entry-surface); font: var(--dn-overlay-field-font); }
+    .dn-tradein-fields input:focus, .dn-tradein-notes textarea:focus { outline: 2px solid var(--dn-focus); outline-offset: -2px; }
     .dn-tradein-footer { padding: 11px 16px max(12px,env(safe-area-inset-bottom)); }
     .dn-tradein-contact-block .dn-tradein-fields { grid-template-columns: 1fr; }
   }

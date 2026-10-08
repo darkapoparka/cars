@@ -1,0 +1,83 @@
+{
+  "generatedAt": "2026-10-07T04:05:22.906Z",
+  "tests": [
+    {
+      "name": "filter-chromium",
+      "cases": 6,
+      "base": "http://127.0.0.1:6461",
+      "passed": true
+    },
+    {
+      "name": "filter-webkit",
+      "cases": 6,
+      "base": "http://127.0.0.1:6499",
+      "passed": true
+    },
+    {
+      "name": "home-chromium",
+      "cases": 10,
+      "base": "http://127.0.0.1:6461",
+      "passed": true
+    },
+    {
+      "name": "home-webkit",
+      "cases": 4,
+      "base": "http://127.0.0.1:6499",
+      "passed": true
+    },
+    {
+      "name": "desktop-wide",
+      "cases": 12,
+      "base": "http://127.0.0.1:6499",
+      "passed": true
+    },
+    {
+      "name": "desktop-discovery",
+      "cases": 3,
+      "base": "http://127.0.0.1:6461",
+      "passed": true
+    },
+    {
+      "name": "mobile",
+      "cases": 4,
+      "base": "http://127.0.0.1:6499",
+      "passed": true
+    }
+  ],
+  "passedCases": 45,
+  "check": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "build": "passed",
+  "sources": [
+    {
+      "file": "src/lib/components/listing/FilterPopoverHeader.svelte",
+      "sha256": "d7962bac412cdca4acc650c1500d69b3c4afca4fed31891717f1836dd6e01bf9"
+    },
+    {
+      "file": "src/lib/components/listing/ListingChoicePicker.svelte",
+      "sha256": "b2eb9bd241ebfe800262f9b72089baa6c2661208e0d017b4f7ddb337576896b3"
+    },
+    {
+      "file": "src/lib/components/listing/DesktopVehicleSearch.svelte",
+      "sha256": "1c17926ea5a5a57660897f4757d63eef2f658132ab122b5e6bdafd013321d23b"
+    },
+    {
+      "file": "src/lib/components/listing/VehicleSearchDialog.svelte",
+      "sha256": "2d6274c63b53cf6ddbeff257d51125541f6ff6e442c7c9e30622a1b8687f5c2b"
+    },
+    {
+      "file": "src/lib/components/listing/ListingFacetEditor.svelte",
+      "sha256": "65862cf2fe6e80981001a5d7b1c64cc7e0a90b1c8ff6a0dc3930906d50bae32f"
+    },
+    {
+      "file": "src/lib/components/home/HomeBrowseBox.svelte",
+      "sha256": "b77c22627c203df430f898aa87479fc3ee4812583580ca504e66e56a43b06cc4"
+    },
+    {
+      "file": "src/lib/ui/focus.ts",
+      "sha256": "05e5cfe2b3c38aa326e546b66a1d6867d991a0d05a8e66b3b8c46504929bde58"
+    }
+  ]
+}

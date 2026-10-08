@@ -20,7 +20,8 @@ const staticRoot = path.join(root, 'static');
 // The shared silver family replaces older service cars with three versioned assets.
 // The wagon now has a transparent v2 cutout; its opaque original remains retained.
 // The desktop make catalogue reuses 149 byte-identical logos from Cars Mobile.
-const guardedMediaCount = 349;
+// The mobile vehicle detail finance card adds one optimized transparent cutout.
+const guardedMediaCount = 351;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
@@ -64,6 +65,7 @@ retainedSourceAssets.add('/assets/images/template/service-sell-v2.webp');
 retainedSourceAssets.add('/assets/images/template/service-import-v2.webp');
 // Preserve the previous finance campaign image; mobile now uses the keys composition.
 retainedSourceAssets.add('/assets/images/template/pdp-finance-studio-v1.jpg');
+retainedSourceAssets.add('/assets/images/template/pdp-finance-calculator-key-v1.webp');
 // Original low-resolution body illustrations remain available as source references.
 for (const number of [1, 2, 3, 8]) retainedSourceAssets.add(`/assets/images/icon-box/car-list${number}.png`);
 retainedSourceAssets.add('/assets/images/template/generated-bottom-nav-v3.png');
