@@ -4,7 +4,10 @@ import type { Filters, Vehicle } from '@/lib/types';
 import type { ShowroomFilterTab, ShowroomMoreSection } from '@/lib/showroom-filter-editor';
 import { useLocale } from '@/lib/use-locale';
 import { RangeField } from './RangeField';
-import { ShowroomDesktopMakeModel } from './ShowroomDesktopMakeModel';
+import {
+  ShowroomDesktopMakeModel,
+  type DesktopModelPickerContext,
+} from './ShowroomDesktopMakeModel';
 import { CategoryMakePicker } from './CategoryMakePicker';
 import { ShowroomSearchField } from './ShowroomSearch';
 import { CheckRow, ui } from './ui';
@@ -40,6 +43,11 @@ export function ShowroomDesktopFilterFields({
   dropdown = false,
   onChooseMake,
   onBackToMakes,
+  modelBrowser = false,
+  initialModelContext,
+  onMoreFilters,
+  onEditMakes,
+  pickerFooter,
   draft,
   stock,
   matches,
@@ -53,6 +61,11 @@ export function ShowroomDesktopFilterFields({
   dropdown?: boolean;
   onChooseMake?: () => void;
   onBackToMakes?: () => void;
+  modelBrowser?: boolean;
+  initialModelContext?: DesktopModelPickerContext;
+  onMoreFilters?: (context: DesktopModelPickerContext) => void;
+  onEditMakes?: () => void;
+  pickerFooter?: HTMLElement | null;
 }) {
   const { t, money } = useLocale();
   function range(
@@ -153,6 +166,11 @@ export function ShowroomDesktopFilterFields({
             view="models"
             onBackToMakes={onBackToMakes}
             dropdown={dropdown}
+            modelBrowser={modelBrowser}
+            initialModelContext={initialModelContext}
+            onMoreFilters={onMoreFilters}
+            onEditMakes={onEditMakes}
+            pickerFooter={pickerFooter}
           />
         );
       case 'price':

@@ -43,6 +43,13 @@ export const desktopFilterStyles = stylex.create({
     padding: { default: '8px 12px', '@media (max-height: 700px)': '6px 8px' },
     paddingInline: { default: 12, '@media (max-height: 700px)': 8 },
   },
+  footerWithAction: {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) auto minmax(0,1fr)',
+  },
+  footerClear: { justifySelf: 'start' },
+  footerAction: { display: 'flex', justifyContent: 'center', minWidth: 0 },
+  footerApply: { justifySelf: 'end' },
   popupClear: { minHeight: 40, paddingInline: 8 },
   popupApply: {
     minHeight: 40,
@@ -89,6 +96,12 @@ export const desktopFilterStyles = stylex.create({
   disabledSummary: { opacity: 0.6, cursor: 'not-allowed' },
   pickerSheet: { width: 'min(560px, calc(100vw - 64px))', borderRadius: 22 },
   modelSheet: { height: 'min(640px, calc(100dvh - 64px))' },
+  focusedModelSheet: {
+    width: 'min(880px, calc(100vw - 64px))',
+    height: 'min(656px, calc(100dvh - 64px))',
+  },
+  focusedHeader: { padding: '18px 24px' },
+  focusedFooter: { padding: '12px 24px' },
   overviewGrid: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3,minmax(0,1fr))',

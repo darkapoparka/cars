@@ -3,6 +3,22 @@ import { colors } from '@/styles/tokens.stylex';
 
 // Applied only by the desktop editor; phone and native picker styles stay independent.
 export const desktopModelOptions = stylex.create({
+  browserChoices: {
+    flex: 'none',
+    maxHeight: 'none',
+    overflowY: 'visible',
+    scrollbarGutter: 'auto',
+  },
+  browserFields: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    alignItems: 'end',
+    gap: 24,
+    paddingTop: 20,
+    paddingInline: 0,
+    paddingBottom: 0,
+  },
+  browserExclude: { order: 1 },
   dropdownOptions: { height: 'auto', flex: '0 1 auto', minHeight: 0 },
   dropdownChoices: {
     display: 'grid',
@@ -12,7 +28,7 @@ export const desktopModelOptions = stylex.create({
     gap: 6,
     flex: '0 1 auto',
     minHeight: 40,
-    maxHeight: 224,
+    maxHeight: 270,
   },
   dropdownGroup: {
     marginBottom: { default: 0, '@media (min-width: 1024px)': 0 },

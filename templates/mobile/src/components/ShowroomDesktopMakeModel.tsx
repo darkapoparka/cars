@@ -1,6 +1,7 @@
 'use client';
 
 import { useId, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
@@ -24,6 +25,7 @@ import { ui } from './ui';
 import { desktopMakeModelStyles as s } from './showroom-desktop-make-model.stylex';
 
 type Selection = { name: string; excluded: boolean };
+export type DesktopModelPickerContext = Selection & { query: string; expanded: string[] };
 
 const desktopCatalogue = [...popularMakes, ...nativeCarMakes];
 
@@ -36,6 +38,11 @@ export function ShowroomDesktopMakeModel({
   compact = false,
   view = 'split',
   dropdown = false,
+  modelBrowser = false,
+  initialModelContext,
+  onMoreFilters,
+  onEditMakes,
+  pickerFooter,
 }: {
   availableMakes: string[];
   filters: Filters;
@@ -45,6 +52,11 @@ export function ShowroomDesktopMakeModel({
   compact?: boolean;
   view?: 'split' | 'makes' | 'models';
   dropdown?: boolean;
+  modelBrowser?: boolean;
+  initialModelContext?: DesktopModelPickerContext;
+  onMoreFilters?: (context: DesktopModelPickerContext) => void;
+  onEditMakes?: () => void;
+  pickerFooter?: HTMLElement | null;
 }) {
   const { t } = useLocale();
   const { theme } = useAppState();
@@ -55,11 +67,13 @@ export function ShowroomDesktopMakeModel({
     ...filters.makes.map((name) => ({ name, excluded: false })),
     ...excludedMakeNames(filters).map((name) => ({ name, excluded: true })),
   ];
-  const [editing, setEditing] = useState<Selection | null>(() => selections[0] || null);
+  const [editing, setEditing] = useState<Selection | null>(
+    () => initialModelContext || selections[0] || null,
+  );
   const [browsingMakes, setBrowsingMakes] = useState(!selections.length);
   const [makeQuery, setMakeQuery] = useState('');
-  const [modelQuery, setModelQuery] = useState('');
-  const [expanded, setExpanded] = useState<string[]>([]);
+  const [modelQuery, setModelQuery] = useState(initialModelContext?.query || '');
+  const [expanded, setExpanded] = useState<string[]>(initialModelContext?.expanded || []);
   // The parent draft is the only filter state. A removed selection cannot leave stale models open.
   const current =
     selections.find(
@@ -162,7 +176,7 @@ export function ShowroomDesktopMakeModel({
       <div
         {...stylex.props(
           s.search,
-          dropdown && s.dropdownSearch,
+          (dropdown || modelBrowser) && s.dropdownSearch,
           controls.fieldFocus,
           disabled && s.disabledSearch,
         )}
@@ -177,7 +191,7 @@ export function ShowroomDesktopMakeModel({
           placeholder={
             disabled
               ? t('Choose a make first')
-              : model && dropdown && current
+              : model && (dropdown || modelBrowser) && current
                 ? label + ' · ' + current.name
                 : label
           }
@@ -185,7 +199,11 @@ export function ShowroomDesktopMakeModel({
           autoComplete="off"
           value={value}
           onChange={(event) => setValue(event.target.value)}
-          {...stylex.props(ui.input, s.searchInput, dropdown && s.dropdownSearchInput)}
+          {...stylex.props(
+            ui.input,
+            s.searchInput,
+            (dropdown || modelBrowser) && s.dropdownSearchInput,
+          )}
         />
         <button
           type="button"
@@ -207,6 +225,7 @@ export function ShowroomDesktopMakeModel({
     <div
       ref={rootRef}
       data-desktop-make-model
+      data-desktop-model-browser={modelBrowser ? '' : undefined}
       data-desktop-make-view={single ? view : compact ? (makeView ? 'makes' : 'models') : 'split'}
       {...stylex.props(
         s.layout,
@@ -216,6 +235,7 @@ export function ShowroomDesktopMakeModel({
         view === 'makes' && s.singleMakesLayout,
         dropdown && s.dropdownLayout,
         dropdown && modelView && s.dropdownModelLayout,
+        modelBrowser && s.browserLayout,
       )}
     >
       <section
@@ -351,23 +371,29 @@ export function ShowroomDesktopMakeModel({
         {...stylex.props(
           s.pane,
           single && s.singlePane,
+          modelBrowser && s.browserPane,
           dropdown && s.dropdownPane,
           (compact || single) && !modelView && s.hidden,
         )}
       >
-        {dropdown && onBackToMakes && (
-          <button
-            type="button"
-            aria-label={t('Back') + ': ' + t('Makes')}
-            onClick={() => {
-              onBackToMakes();
-              focusSearch('make');
-            }}
-            {...stylex.props(s.back, s.dropdownBack)}
-          >
-            <Icon name="back" size={16} />
-            {t('Makes')}
-          </button>
+        {dropdown && (
+          <div data-desktop-model-header {...stylex.props(s.dropdownModelHeader)}>
+            {onBackToMakes && (
+              <button
+                type="button"
+                aria-label={t('Back') + ': ' + t('Makes')}
+                onClick={() => {
+                  onBackToMakes();
+                  focusSearch('make');
+                }}
+                {...stylex.props(s.back, s.dropdownBack)}
+              >
+                <Icon name="back" size={16} />
+                {t('Makes')}
+              </button>
+            )}
+            <div {...stylex.props(s.modelHeaderSearch)}>{searchField('model')}</div>
+          </div>
         )}
         {single && selections.length > 1 && (
           <div
@@ -406,7 +432,8 @@ export function ShowroomDesktopMakeModel({
             compact && s.compactHeading,
             single && s.singleHeading,
             dropdown && ui.srOnly,
-            single && selections.length > 1 && ui.srOnly,
+            single && selections.length > 1 && !modelBrowser && ui.srOnly,
+            modelBrowser && s.browserHeading,
           )}
         >
           {compact && current && (
@@ -425,7 +452,9 @@ export function ShowroomDesktopMakeModel({
             id={id + '-models'}
             {...stylex.props(compact ? ui.srOnly : s.title, single && s.singleTitle)}
           >
-            {single && current ? (
+            {modelBrowser ? (
+              t('Make & model')
+            ) : single && current ? (
               <>
                 <BrandLogo make={current.name} size={24} blend={blendLogos} />
                 {current.name}
@@ -437,6 +466,18 @@ export function ShowroomDesktopMakeModel({
               </>
             )}
           </h3>
+          {modelBrowser && current && onEditMakes && (
+            <button
+              type="button"
+              aria-label={t('Make') + ': ' + current.name}
+              onClick={onEditMakes}
+              {...stylex.props(s.browserMake)}
+            >
+              <BrandLogo make={current.name} size={20} blend={blendLogos} />
+              {current.name}
+              <Icon name="right" size={16} />
+            </button>
+          )}
           {!single && (
             <button
               type="button"
@@ -454,13 +495,21 @@ export function ShowroomDesktopMakeModel({
             </button>
           )}
         </div>
-        {searchField('model')}
-        <div {...stylex.props(s.modelContent, dropdown && s.dropdownModelContent)}>
+        {!dropdown && searchField('model')}
+        <div
+          {...stylex.props(
+            s.modelContent,
+            dropdown && s.dropdownModelContent,
+            modelBrowser && s.browserModelContent,
+          )}
+        >
           {current && draft ? (
             <ShowroomModelOptions
               key={current.name}
               desktop
               dropdown={dropdown}
+              modelBrowser={modelBrowser}
+              hideOptions={dropdown && Boolean(onMoreFilters)}
               groups={modelGroupsFor(current.name)}
               draft={draft}
               query={modelQuery}
@@ -489,6 +538,26 @@ export function ShowroomDesktopMakeModel({
           )}
         </div>
       </section>
+      {dropdown && current && pickerFooter && onMoreFilters &&
+        createPortal(
+          <button
+            type="button"
+            data-desktop-more-filters
+            aria-haspopup="dialog"
+            onClick={() =>
+              onMoreFilters({
+                name: current.name,
+                excluded: current.excluded,
+                query: modelQuery,
+                expanded,
+              })
+            }
+            {...stylex.props(s.moreFilters)}
+          >
+            {t('More filters')}
+          </button>,
+          pickerFooter,
+        )}
     </div>
   );
 }

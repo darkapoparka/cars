@@ -42,11 +42,14 @@ export function ShowroomDesktopFilterDialog({
   narrow,
   fullHeight,
   picker = false,
+  focusedModels = false,
   anchor,
   keyboardOpening,
   anchorSelector,
   onBack,
   backLabel = 'All filters',
+  pickerAction = false,
+  onPickerFooter,
   onReset,
   onApply,
   onClose,
@@ -61,11 +64,14 @@ export function ShowroomDesktopFilterDialog({
   narrow: boolean;
   fullHeight: boolean;
   picker?: boolean;
+  focusedModels?: boolean;
   anchor?: HTMLElement;
   keyboardOpening?: boolean;
   anchorSelector: string;
   onBack?: () => void;
   backLabel?: string;
+  pickerAction?: boolean;
+  onPickerFooter?: (element: HTMLDivElement | null) => void;
   onReset: () => void;
   onApply: () => void;
   onClose: () => void;
@@ -97,7 +103,12 @@ export function ShowroomDesktopFilterDialog({
       {...stylex.props(s.editor, (!fullHeight || dropdown) && s.autoEditor)}
     >
       <div
-        {...stylex.props(s.header, dropdown && s.popupHeader, dropdown && picker && s.hiddenHeader)}
+        {...stylex.props(
+          s.header,
+          dropdown && s.popupHeader,
+          dropdown && picker && s.hiddenHeader,
+          focusedModels && s.focusedHeader,
+        )}
       >
         {onBack && (
           <button
@@ -128,17 +139,36 @@ export function ShowroomDesktopFilterDialog({
         {children}
       </div>
       <div
-        {...stylex.props(s.footer, dropdown && s.popupFooter, dropdown && picker && s.pickerFooter)}
+        data-desktop-filter-footer
+        {...stylex.props(
+          s.footer,
+          dropdown && s.popupFooter,
+          dropdown && picker && s.pickerFooter,
+          focusedModels && s.focusedFooter,
+          pickerAction && s.footerWithAction,
+        )}
       >
         <button
           type="button"
           aria-label={t('Clear filters')}
           onClick={onReset}
-          {...stylex.props(s.clear, dropdown && s.popupClear)}
+          {...stylex.props(
+            s.clear,
+            (dropdown || focusedModels) && s.popupClear,
+            pickerAction && s.footerClear,
+          )}
         >
           {t('Clear')}
         </button>
-        <Button xstyle={[s.apply, dropdown && s.popupApply]} onClick={onApply}>
+        {pickerAction && <div ref={onPickerFooter} {...stylex.props(s.footerAction)} />}
+        <Button
+          xstyle={[
+            s.apply,
+            (dropdown || focusedModels) && s.popupApply,
+            pickerAction && s.footerApply,
+          ]}
+          onClick={onApply}
+        >
           <span aria-live="polite" aria-atomic="true">
             {t('Show ')}
             {count} {t(count === 1 ? categoryCopy.singular : categoryCopy.plural)}
@@ -173,6 +203,7 @@ export function ShowroomDesktopFilterDialog({
         !fullHeight && s.smallSheet,
         picker && s.pickerSheet,
         picker && fullHeight && s.modelSheet,
+        focusedModels && s.focusedModelSheet,
       ]}
     >
       {editor}

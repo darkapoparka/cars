@@ -623,6 +623,7 @@ export const bgMessages: Record<string, string> = {
   'i Models': 'i модели',
   Cancel: 'Отказ',
   'More options': 'Още опции',
+  'More filters': 'Още филтри',
   'Up to': 'До',
   Collapse: 'Свий',
   Expand: 'Разгъни',

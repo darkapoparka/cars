@@ -2,6 +2,29 @@ import * as stylex from '@stylexjs/stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 export const desktopMakeModelStyles = stylex.create({
+  browserLayout: {
+    height: 'auto',
+    flex: 'none',
+    padding: 0,
+    paddingInline: 0,
+    paddingBlock: { default: 0, '@media (max-height: 600px)': 0 },
+  },
+  browserPane: { flex: 'none', gap: 12 },
+  browserHeading: { height: 'auto', minHeight: 32 },
+  browserModelContent: { flex: 'none', overflowY: 'visible' },
+  browserMake: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    minHeight: 32,
+    padding: '4px 8px',
+    borderWidth: 0,
+    borderRadius: 8,
+    fontSize: 14,
+    fontWeight: 600,
+    color: colors.text,
+    backgroundColor: { default: 'transparent', ':hover': colors.stripe },
+  },
   dropdownLayout: {
     paddingInline: { default: 12, '@media (max-height: 700px)': 8 },
     paddingBlock: { default: 12, '@media (max-height: 700px)': 8 },
@@ -9,7 +32,7 @@ export const desktopMakeModelStyles = stylex.create({
   },
   dropdownModelLayout: {
     height: 'auto',
-    maxHeight: 'min(370px, calc(var(--filter-height, 600px) - 56px))',
+    maxHeight: 'min(416px, calc(var(--filter-height, 600px) - 56px))',
     flex: '0 1 auto',
   },
   dropdownPane: {
@@ -17,6 +40,27 @@ export const desktopMakeModelStyles = stylex.create({
     gap: { default: 8, '@media (max-height: 700px)': 6, '@media (max-height: 600px)': 6 },
   },
   dropdownModelContent: { display: 'flex', flexDirection: 'column', flex: '0 1 auto' },
+  dropdownModelHeader: {
+    display: 'grid',
+    gridTemplateColumns: 'minmax(0,1fr) minmax(0,340px) minmax(0,1fr)',
+    alignItems: 'center',
+    gap: 8,
+    flexShrink: 0,
+    minHeight: 40,
+  },
+  modelHeaderSearch: { gridColumn: 2, minWidth: 0 },
+  moreFilters: {
+    minHeight: 40,
+    padding: '8px 12px',
+    borderWidth: 0,
+    borderRadius: 8,
+    fontSize: 14,
+    fontWeight: 500,
+    lineHeight: '22px',
+    color: colors.text,
+    backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
+    outlineColor: colors.text,
+  },
   dropdownBack: {
     flex: 'none',
     alignSelf: 'flex-start',

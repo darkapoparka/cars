@@ -70,6 +70,8 @@ export function ShowroomModelOptions({
   excluded,
   desktop = false,
   dropdown = false,
+  modelBrowser = false,
+  hideOptions = false,
   onChange,
   onRemoveMake,
   onBack,
@@ -84,6 +86,8 @@ export function ShowroomModelOptions({
   excluded: boolean;
   desktop?: boolean;
   dropdown?: boolean;
+  modelBrowser?: boolean;
+  hideOptions?: boolean;
   onChange: (draft: ModelDraft) => void;
   onRemoveMake?: () => void;
   onBack?: () => void;
@@ -91,7 +95,7 @@ export function ShowroomModelOptions({
   onToggleExcluded: () => void;
 }) {
   const { t } = useLocale();
-  const compact = desktop && dropdown;
+  const compact = desktop && (dropdown || modelBrowser);
   const optionsId = useId();
   const [optionsOpen, setOptionsOpen] = useState(false);
   const [searchExpansion, setSearchExpansion] = useState({ query: '', collapsed: [] as string[] });
@@ -204,6 +208,43 @@ export function ShowroomModelOptions({
     );
   }
 
+  const optionFields = (
+    <div
+      {...stylex.props(
+        s.optionFields,
+        desktop && ds.optionFields,
+        compact && ds.dropdownFields,
+        modelBrowser && ds.browserFields,
+      )}
+    >
+      <button
+        type="button"
+        role="switch"
+        aria-label={t('Exclude make')}
+        aria-checked={excluded}
+        onClick={onToggleExcluded}
+        {...stylex.props(
+          s.excludeRow,
+          desktop && ds.excludeRow,
+          compact && ds.dropdownExclude,
+          modelBrowser && ds.browserExclude,
+        )}
+      >
+        <span {...stylex.props(s.name)}>{t('Exclude this selection')}</span>
+        <span aria-hidden="true" {...stylex.props(s.switch, excluded && s.switchOn)}>
+          <span {...stylex.props(s.thumb)} />
+        </span>
+      </button>
+      {!draft.selected.length
+        ? variantField('')
+        : variantGroups.map((group) => (
+            <div key={modelNodeKey(group, groups)}>
+              {variantField(modelNodeKey(group, groups), group)}
+            </div>
+          ))}
+    </div>
+  );
+
   return (
     <div
       data-showroom-model-options={desktop ? undefined : ''}
@@ -214,6 +255,7 @@ export function ShowroomModelOptions({
         {...stylex.props(
           desktop ? s.desktopChoices : s.phoneChoices,
           compact && ds.dropdownChoices,
+          modelBrowser && ds.browserChoices,
         )}
       >
         {(!q || Boolean(make && onBack && !desktop)) && (
@@ -357,56 +399,36 @@ export function ShowroomModelOptions({
           </p>
         )}
       </div>
-      <details
-        open={optionsOpen}
-        onToggle={(event) => setOptionsOpen(event.currentTarget.open)}
-        {...stylex.props(
-          s.options,
-          desktop && s.desktopExtras,
-          desktop && ds.extras,
-          compact && ds.dropdownExtras,
-        )}
-      >
-        <summary {...stylex.props(s.summary, desktop && ds.summary, compact && ds.dropdownSummary)}>
-          <span {...stylex.props(s.name)}>{t('More options')}</span>
-          {activeOptions > 0 && (
-            <span {...stylex.props(s.activeCount)}>
-              {activeOptions} {t('active')}
-            </span>
-          )}
-          <span aria-hidden="true" {...stylex.props(s.chevron)}>
-            <Icon name={optionsOpen ? 'up' : 'down'} size={18} />
-          </span>
-        </summary>
-        <div
-          {...stylex.props(
-            s.optionFields,
-            desktop && ds.optionFields,
-            compact && ds.dropdownFields,
-          )}
-        >
-          <button
-            type="button"
-            role="switch"
-            aria-label={t('Exclude make')}
-            aria-checked={excluded}
-            onClick={onToggleExcluded}
-            {...stylex.props(s.excludeRow, desktop && ds.excludeRow, compact && ds.dropdownExclude)}
+      {!hideOptions &&
+        (modelBrowser ? (
+          optionFields
+        ) : (
+          <details
+            open={optionsOpen}
+            onToggle={(event) => setOptionsOpen(event.currentTarget.open)}
+            {...stylex.props(
+              s.options,
+              desktop && s.desktopExtras,
+              desktop && ds.extras,
+              compact && ds.dropdownExtras,
+            )}
           >
-            <span {...stylex.props(s.name)}>{t('Exclude this selection')}</span>
-            <span aria-hidden="true" {...stylex.props(s.switch, excluded && s.switchOn)}>
-              <span {...stylex.props(s.thumb)} />
-            </span>
-          </button>
-          {!draft.selected.length
-            ? variantField('')
-            : variantGroups.map((group) => (
-                <div key={modelNodeKey(group, groups)}>
-                  {variantField(modelNodeKey(group, groups), group)}
-                </div>
-              ))}
-        </div>
-      </details>
+            <summary
+              {...stylex.props(s.summary, desktop && ds.summary, compact && ds.dropdownSummary)}
+            >
+              <span {...stylex.props(s.name)}>{t('More options')}</span>
+              {activeOptions > 0 && (
+                <span {...stylex.props(s.activeCount)}>
+                  {activeOptions} {t('active')}
+                </span>
+              )}
+              <span aria-hidden="true" {...stylex.props(s.chevron)}>
+                <Icon name={optionsOpen ? 'up' : 'down'} size={18} />
+              </span>
+            </summary>
+            {optionFields}
+          </details>
+        ))}
     </div>
   );
 }

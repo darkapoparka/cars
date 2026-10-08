@@ -20,6 +20,7 @@ import {
   type DesktopFilterFieldsProps,
 } from './ShowroomDesktopFilterFields';
 import { ShowroomDesktopFilterDialog } from './ShowroomDesktopFilterDialog';
+import type { DesktopModelPickerContext } from './ShowroomDesktopMakeModel';
 import { ui } from './ui';
 import { desktopFilterStyles as s } from './showroom-desktop-filters.stylex';
 
@@ -45,7 +46,9 @@ export function ShowroomDesktopFilters({
 }: Props) {
   const { t } = useLocale();
   const [editingMake, setEditingMake] = useState<'make' | 'model' | null>(null);
-  const all = presentation === 'all' && !editingMake;
+  const [pickerFooter, setPickerFooter] = useState<HTMLDivElement | null>(null);
+  const [modelContext, setModelContext] = useState<DesktopModelPickerContext | null>(null);
+  const all = (presentation === 'all' || Boolean(modelContext)) && !editingMake;
   const requestedSection =
     editingMake ||
     (sheet === 'make' ? makeView : sheet === 'more' ? moreSection || 'mileage' : sheet);
@@ -58,7 +61,7 @@ export function ShowroomDesktopFilters({
       : section === 'make' && fields.draft.category === 'car'
         ? 'Make'
         : desktopFilterSections.find(({ key }) => key === section)!.label;
-  const dropdown = presentation !== 'all';
+  const dropdown = presentation !== 'all' && !modelContext;
   const picker = !all && ['make', 'model'].includes(section) && fields.draft.category === 'car';
   const excluded = excludedMakeNames(fields.draft);
   const modelReady = Boolean(fields.draft.makes.length || excluded.length);
@@ -77,8 +80,10 @@ export function ShowroomDesktopFilters({
       .join(', ') || t(modelReady ? 'All models' : 'Choose a make first');
 
   function reset() {
-    if (all) onReset();
-    else if (section === 'make') fields.onChange(clearMakeSelections());
+    if (all) {
+      if (modelContext) setModelContext({ ...modelContext, query: '', expanded: [] });
+      onReset();
+    } else if (section === 'make') fields.onChange(clearMakeSelections());
     else if (section === 'model') fields.onChange(clearModelSelections(fields.draft));
     else {
       fields.onChange(
@@ -97,6 +102,9 @@ export function ShowroomDesktopFilters({
       narrow={['fuel', 'transmission', 'body', 'condition'].includes(section)}
       fullHeight={all || section === 'model' || (section === 'make' && !picker)}
       picker={picker}
+      focusedModels={all && Boolean(modelContext)}
+      pickerAction={dropdown && picker && section === 'model' && modelReady}
+      onPickerFooter={setPickerFooter}
       anchor={anchor}
       keyboardOpening={keyboardOpening}
       anchorSelector={
@@ -108,7 +116,7 @@ export function ShowroomDesktopFilters({
       onBack={
         section === 'model'
           ? () => setEditingMake('make')
-          : editingMake && presentation === 'all'
+          : editingMake && (presentation === 'all' || Boolean(modelContext))
             ? () => setEditingMake(null)
             : undefined
       }
@@ -129,40 +137,50 @@ export function ShowroomDesktopFilters({
           </section>
           <div data-desktop-filter-group="fields" {...stylex.props(s.overviewPanel)}>
             <div data-desktop-filter-group="vehicle" {...stylex.props(s.fieldGroup)}>
-              <div
-                {...stylex.props(
-                  s.makeModelSummary,
-                  fields.draft.category !== 'car' && s.singleSummary,
-                )}
-              >
-                <button
-                  type="button"
-                  data-desktop-picker-open="make"
-                  onClick={() => setEditingMake('make')}
-                  {...stylex.props(s.makeSummary)}
+              {modelContext && fields.draft.category === 'car' && modelReady ? (
+                <ShowroomDesktopFilterFields
+                  {...fields}
+                  section="model"
+                  modelBrowser
+                  initialModelContext={modelContext}
+                  onEditMakes={() => setEditingMake('make')}
+                />
+              ) : (
+                <div
+                  {...stylex.props(
+                    s.makeModelSummary,
+                    fields.draft.category !== 'car' && s.singleSummary,
+                  )}
                 >
-                  <span {...stylex.props(s.makeSummaryCopy)}>
-                    <span {...stylex.props(s.fieldTitle)}>
-                      {t(fields.draft.category === 'car' ? 'Make' : 'Make & model')}
-                    </span>
-                    <span {...stylex.props(s.copy)}>{makeSummary}</span>
-                  </span>
-                </button>
-                {fields.draft.category === 'car' && (
                   <button
                     type="button"
-                    data-desktop-picker-open="model"
-                    disabled={!modelReady}
-                    onClick={() => setEditingMake('model')}
-                    {...stylex.props(s.makeSummary, !modelReady && s.disabledSummary)}
+                    data-desktop-picker-open="make"
+                    onClick={() => setEditingMake('make')}
+                    {...stylex.props(s.makeSummary)}
                   >
                     <span {...stylex.props(s.makeSummaryCopy)}>
-                      <span {...stylex.props(s.fieldTitle)}>{t('Model')}</span>
-                      <span {...stylex.props(s.copy)}>{modelSummary}</span>
+                      <span {...stylex.props(s.fieldTitle)}>
+                        {t(fields.draft.category === 'car' ? 'Make' : 'Make & model')}
+                      </span>
+                      <span {...stylex.props(s.copy)}>{makeSummary}</span>
                     </span>
                   </button>
-                )}
-              </div>
+                  {fields.draft.category === 'car' && (
+                    <button
+                      type="button"
+                      data-desktop-picker-open="model"
+                      disabled={!modelReady}
+                      onClick={() => setEditingMake('model')}
+                      {...stylex.props(s.makeSummary, !modelReady && s.disabledSummary)}
+                    >
+                      <span {...stylex.props(s.makeSummaryCopy)}>
+                        <span {...stylex.props(s.fieldTitle)}>{t('Model')}</span>
+                        <span {...stylex.props(s.copy)}>{modelSummary}</span>
+                      </span>
+                    </button>
+                  )}
+                </div>
+              )}
               <div {...stylex.props(s.overviewGrid)}>
                 {desktopFilterSections
                   .filter(({ key }) => ['price', 'year', 'mileage'].includes(key))
@@ -204,6 +222,11 @@ export function ShowroomDesktopFilters({
           dropdown={dropdown}
           onChooseMake={() => setEditingMake('model')}
           onBackToMakes={() => setEditingMake('make')}
+          pickerFooter={pickerFooter}
+          onMoreFilters={(context) => {
+            setModelContext(context);
+            setEditingMake(null);
+          }}
         />
       )}
     </ShowroomDesktopFilterDialog>
