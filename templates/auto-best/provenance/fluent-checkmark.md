@@ -3,8 +3,9 @@
 Home and inventory desktop choices and selected model-family indicators share
 `src/lib/components/ui/CheckmarkIcon.svelte`. This renders the official Microsoft
 Fluent System Icons **Checkmark, native 24px Regular**, at the shared 18px control
-icon size. Checkbox frames remain 20px; multiple choices use a 4px corner radius,
-while single choices retain their round radio indicator.
+icon size. Selection slots remain 20px. Unchecked multiple choices use a 4px
+rounded frame; selected choices show the same unboxed charcoal tick as family
+rows. Single choices retain their round radio indicator.
 
 - Upstream commit: `a563cf9166f4f91aa617557ed272612b7f0a2f72`.
 - Original [library SVG](https://raw.githubusercontent.com/microsoft/fluentui-system-icons/a563cf9166f4f91aa617557ed272612b7f0a2f72/assets/Checkmark/SVG/ic_fluent_checkmark_24_regular.svg).
