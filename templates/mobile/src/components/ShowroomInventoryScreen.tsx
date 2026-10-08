@@ -12,13 +12,13 @@ import { defaultFilters, type Filters } from '@/lib/types';
 import { filterVehicles, parseFilters, sortVehicles } from '@/lib/search';
 import { patchState, switchVehicleCategory } from '@/lib/store';
 import {
-  restoreInventoryPosition,
   showroomCategories,
   showroomCategory,
   showroomFilters,
   showroomInventoryHref,
   showroomSorts,
 } from '@/lib/showroom';
+import { restoreInventoryPosition } from '@/lib/inventory-navigation';
 import { Header } from './Header';
 import { Icon } from './Icon';
 import {

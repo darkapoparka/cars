@@ -1,12 +1,14 @@
 'use client';
+import { useMediaQuery } from '@/lib/use-media-query';
 import Link from 'next/link';
 import { useLocale } from '@/lib/use-locale';
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
 import { filterVehicles } from '@/lib/search';
-import { rememberInventory, showroomCategory } from '@/lib/showroom';
+import { showroomCategory } from '@/lib/showroom';
+import { rememberInventory } from '@/lib/inventory-navigation';
 import {
   resetShowroomFilterDraft,
   showroomFilterTabs,
@@ -24,12 +26,6 @@ import { ShowroomSearchField } from './ShowroomSearch';
 import { Icon } from './Icon';
 import { Button, CheckRow, IconButton, Modal } from './ui';
 import { ShowroomDesktopFilters } from './ShowroomDesktopFilters';
-
-function subscribeDesktop(listener: () => void) {
-  const media = window.matchMedia('(min-width: 1024px)');
-  media.addEventListener('change', listener);
-  return () => media.removeEventListener('change', listener);
-}
 
 function Choices({
   title,
@@ -97,11 +93,7 @@ export function ShowroomFilterSheet({
   onDesktopDismiss?: () => void;
 }) {
   const { t, money, number } = useLocale();
-  const desktop = useSyncExternalStore(
-    subscribeDesktop,
-    () => window.matchMedia('(min-width: 1024px)').matches,
-    () => false,
-  );
+  const desktop = useMediaQuery('(min-width: 1024px)');
   const [draft, setDraft] = useState(() => structuredClone(filters));
   const [resetVersion, setResetVersion] = useState(0);
   const editorRef = useRef<HTMLDivElement>(null);

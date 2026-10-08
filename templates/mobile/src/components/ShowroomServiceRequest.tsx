@@ -1,6 +1,7 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useServiceDraft } from '@/lib/use-service-draft';
+import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
@@ -12,12 +13,10 @@ import {
   normalizeServiceRequest,
   seedServiceRequest,
   saleConditions,
-  serializeServiceRequest,
   serviceRequestErrorStep,
   serviceRequestLimits,
   serviceRequestMessage,
   serviceRequestSteps,
-  serviceRequestStorageKey,
   validateServiceRequest,
   validateServiceRequestStep,
   type ServiceRequestErrors,
@@ -265,32 +264,7 @@ const s = stylex.create({
   success: { display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 16 },
 });
 
-const draftEvent = 'cars-service-draft-change';
 const requestEntry = 'carsMobileServiceRequest';
-function subscribeDrafts(listener: () => void) {
-  window.addEventListener('storage', listener);
-  window.addEventListener(draftEvent, listener);
-  return () => {
-    window.removeEventListener('storage', listener);
-    window.removeEventListener(draftEvent, listener);
-  };
-}
-function readDraft(kind: ServiceRequestKind) {
-  try {
-    return localStorage.getItem(serviceRequestStorageKey(kind)) || '';
-  } catch {
-    return '';
-  }
-}
-function persistDraft(kind: ServiceRequestKind, values: ServiceRequestValues) {
-  try {
-    localStorage.setItem(serviceRequestStorageKey(kind), serializeServiceRequest(kind, values));
-    window.dispatchEvent(new Event(draftEvent));
-    return true;
-  } catch {
-    return false;
-  }
-}
 
 export function ShowroomServiceRequest({
   kind,
@@ -304,11 +278,7 @@ export function ShowroomServiceRequest({
   const { t, locale, number } = useLocale();
   const params = useSearchParams();
   const open = params.get('request') === '1';
-  const raw = useSyncExternalStore(
-    subscribeDrafts,
-    () => readDraft(kind),
-    () => '',
-  );
+  const { raw, persist: persistDraft } = useServiceDraft(kind);
   const [edited, setEdited] = useState<ServiceRequestValues | null>(null);
   const [errors, setErrors] = useState<ServiceRequestErrors>({});
   const [status, setStatus] = useState<'saved' | 'unavailable' | null>(null);
@@ -362,7 +332,7 @@ export function ShowroomServiceRequest({
     });
     startContext.current = { country, saleType };
     setEdited(next);
-    setStatus(persistDraft(kind, next) ? null : 'unavailable');
+    setStatus(persistDraft(next) ? null : 'unavailable');
     errorFocus.current = 'vin';
     closing.current = false;
     const url = new URL(window.location.href);
@@ -387,7 +357,7 @@ export function ShowroomServiceRequest({
     const next = { ...values, [key]: value };
     setEdited((current) => ({ ...(current ?? values), [key]: value }));
     setErrors((previous) => ({ ...previous, [key]: undefined }));
-    setStatus(persistDraft(kind, next) ? null : 'unavailable');
+    setStatus(persistDraft(next) ? null : 'unavailable');
   }
   function showErrors(next: ServiceRequestErrors) {
     setErrors(next);
@@ -600,7 +570,7 @@ export function ShowroomServiceRequest({
               setStep(step === 0 ? 1 : 2);
               return;
             }
-            if (!persistDraft(kind, normalized)) {
+            if (!persistDraft(normalized)) {
               setStatus('unavailable');
               return;
             }

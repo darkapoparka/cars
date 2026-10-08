@@ -1,6 +1,7 @@
 'use client';
+import { useMediaQuery } from '@/lib/use-media-query';
 
-import { useEffect, useRef, useSyncExternalStore } from 'react';
+import { useEffect, useRef } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
@@ -71,12 +72,6 @@ const s = stylex.create({
   radio: { width: 22, height: 22, flexShrink: 0, accentColor: colors.accent },
 });
 
-function subscribeDesktop(listener: () => void) {
-  const media = window.matchMedia('(min-width: 1024px)');
-  media.addEventListener('change', listener);
-  return () => media.removeEventListener('change', listener);
-}
-
 export function ShowroomSortDialog({
   open,
   value,
@@ -94,11 +89,7 @@ export function ShowroomSortDialog({
 }) {
   const { t } = useLocale();
   const root = useRef<HTMLDivElement>(null);
-  const desktop = useSyncExternalStore(
-    subscribeDesktop,
-    () => window.matchMedia('(min-width: 1024px)').matches,
-    () => false,
-  );
+  const desktop = useMediaQuery('(min-width: 1024px)');
   useEffect(() => {
     if (!open || !desktop) return;
     const frame = requestAnimationFrame(() =>

@@ -1,18 +1,11 @@
 'use client';
+import { useMediaQuery } from '@/lib/use-media-query';
 import { useLocale } from '@/lib/use-locale';
-import { useRef, useSyncExternalStore, type PointerEvent } from 'react';
+import { useRef, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
-
-function subscribePhone(onChange: () => void) {
-  const media = window.matchMedia('(max-width: 699px)');
-  media.addEventListener('change', onChange);
-  return () => media.removeEventListener('change', onChange);
-}
-const phoneSnapshot = () => window.matchMedia('(max-width: 699px)').matches;
-const serverSnapshot = () => false;
 
 const s = stylex.create({
   root: { minWidth: 0, paddingInline: 4 },
@@ -194,7 +187,7 @@ export function RangeField({
   onChange,
 }: Props) {
   const { t, number } = useLocale();
-  const phone = useSyncExternalStore(subscribePhone, phoneSnapshot, serverSnapshot);
+  const phone = useMediaQuery('(max-width: 699px)');
   const drag = useRef<{ id: number; side: 'from' | 'to' } | null>(null);
   const low = min ? Math.max(floor, Math.min(ceiling, Number(min))) : floor;
   const high = max ? Math.max(low, Math.min(ceiling, Number(max))) : ceiling;

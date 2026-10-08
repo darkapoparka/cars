@@ -1,4 +1,4 @@
-import { SavedCarsScreen } from '@/components/ShowroomPages';
+import { SavedCarsScreen } from '@/components/SavedCarsScreen';
 export default function Page() {
   return <SavedCarsScreen />;
 }

@@ -1,6 +1,5 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import './gallery.test.mjs';
 import { defaultFilters } from '../.qa/domain/types.mjs';
 // Native-capture contracts remain pinned to the four original reference fixtures.
 import {
@@ -841,8 +840,6 @@ test('all captured model families can be evaluated without recursive loops', () 
       );
     }
 });
-
-import './native-listings.test.mjs';
 
 import {
   serviceCategoriesFor,

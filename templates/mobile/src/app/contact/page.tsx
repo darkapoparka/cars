@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getVehicle } from '@/lib/catalog';
 import { showroomService } from '@/lib/showroom-services';
-import { ShowroomContactScreen } from '@/components/ShowroomPages';
+import { ShowroomContactScreen } from '@/components/ShowroomContactScreen';
 export const metadata: Metadata = { title: 'Contact' };
 export default async function Page({
   searchParams,

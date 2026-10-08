@@ -1,6 +1,7 @@
 'use client';
+import { useMediaQuery } from '@/lib/use-media-query';
 
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -219,15 +220,6 @@ function ContactContext({
     </span>
   );
 }
-
-function subscribePhone(listener: () => void) {
-  const media = window.matchMedia('(max-width: 699px)');
-  media.addEventListener('change', listener);
-  return () => media.removeEventListener('change', listener);
-}
-function phoneSnapshot() {
-  return window.matchMedia('(max-width: 699px)').matches;
-}
 function messageFocusTarget(field: HTMLTextAreaElement | null) {
   // Native dialog focus reads this attribute when showModal runs.
   if (field) field.autofocus = true;
@@ -252,7 +244,7 @@ export function ShowroomContactForm({
 }) {
   const { t } = useLocale();
   const params = useSearchParams();
-  const phone = useSyncExternalStore(subscribePhone, phoneSnapshot, () => false);
+  const phone = useMediaQuery('(max-width: 699px)');
   const open = phone && params.get('enquiry') === '1';
   const { showroomContactDetails } = useAppState();
   const [editedDetails, setEditedDetails] = useState<ShowroomContactDetails | null>(null);

@@ -341,7 +341,40 @@ async function run(name, engine) {
     );
   }
   async function fixedFrameActions(page, label) {
-    await page.locator('[data-vehicle-contact-dock], [data-message-actions]').waitFor();
+    const summary = page.locator('[data-vehicle-desktop-summary]');
+    if (await summary.isVisible()) {
+      assert.equal(
+        await page.locator('[data-vehicle-contact-dock]').isVisible(),
+        false,
+        label + ' desktop summary must replace, not duplicate, the mobile dock',
+      );
+      const enquiry = summary.locator('a[href^="/contact?vehicle="]');
+      assert.equal(
+        await enquiry.isVisible(),
+        true,
+        label + ' desktop enquiry must remain available',
+      );
+      const href = await enquiry.getAttribute('href');
+      assert.equal(
+        new URL(href, base).searchParams.get('vehicle'),
+        new URL(page.url()).pathname.split('/')[2],
+        label + ' enquiry retains the current car',
+      );
+      assert.equal(
+        await summary.evaluate((element) => {
+          const box = element.getBoundingClientRect();
+          const frame = document.querySelector('[data-hydrated]').getBoundingClientRect();
+          return box.left >= frame.left - 1 && box.right <= frame.right + 1;
+        }),
+        true,
+        label + ' desktop summary must stay inside the showroom frame',
+      );
+      check(label + ': desktop sidebar replaces the mobile dock and retains the vehicle enquiry');
+    } else {
+      await page
+        .locator('[data-vehicle-contact-dock]:visible, [data-message-actions]:visible')
+        .waitFor();
+    }
     const failures = await page.locator('button, a').evaluateAll((actions) => {
       const shell = document.querySelector('[data-hydrated]').getBoundingClientRect();
       const docks = new Set(
@@ -349,6 +382,7 @@ async function run(name, engine) {
           .map((action) => action.parentElement)
           .filter(
             (parent) =>
+              parent.getClientRects().length > 0 &&
               getComputedStyle(parent).position === 'fixed' &&
               getComputedStyle(parent).bottom === '0px',
           ),

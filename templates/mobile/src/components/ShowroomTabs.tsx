@@ -1,17 +1,10 @@
 'use client';
-import { useEffect, useRef, useSyncExternalStore, type ReactNode } from 'react';
+import { useMediaQuery } from '@/lib/use-media-query';
+import { useEffect, useRef, type ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
-
-function subscribeDesktop(onChange: () => void) {
-  const media = window.matchMedia('(min-width: 1024px)');
-  media.addEventListener('change', onChange);
-  return () => media.removeEventListener('change', onChange);
-}
-const desktopSnapshot = () => window.matchMedia('(min-width: 1024px)').matches;
-const serverSnapshot = () => false;
 
 const s = stylex.create({
   rail: {
@@ -441,7 +434,7 @@ export function ShowroomTabs<T extends string>({
   const { t, locale } = useLocale();
   const desktopFill = layout === 'desktop-fill' || layout === 'desktop-sidebar';
   const filled = layout === 'fill' || layout === 'desktop-pills';
-  const desktop = useSyncExternalStore(subscribeDesktop, desktopSnapshot, serverSnapshot);
+  const desktop = useMediaQuery('(min-width: 1024px)');
   const vertical = layout === 'desktop-sidebar' && desktop;
   const tabText = (text: string) => (locale === 'bg' && text === 'Features' ? 'Екстри' : t(text));
   const activeTab = useRef<HTMLButtonElement | null>(null);

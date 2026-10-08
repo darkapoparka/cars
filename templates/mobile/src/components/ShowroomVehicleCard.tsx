@@ -9,7 +9,7 @@ import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
 import { localizeVehicle } from '@/lib/vehicle-copy';
-import { rememberInventory } from '@/lib/showroom';
+import { rememberInventory } from '@/lib/inventory-navigation';
 import { togglePark, useAppState } from '@/lib/store';
 
 const s = stylex.create({

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { connection } from 'next/server';
-import { ShowroomServicesScreen } from '@/components/ShowroomPages';
+import { ShowroomServicesScreen } from '@/components/ShowroomServicesScreen';
 export const metadata: Metadata = { title: 'Services' };
 export default async function Page() {
   await connection();

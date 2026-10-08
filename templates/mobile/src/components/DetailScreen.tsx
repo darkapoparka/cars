@@ -1,7 +1,8 @@
 'use client';
+import { useMediaQuery } from '@/lib/use-media-query';
 import { useLocale } from '@/lib/use-locale';
 import { localizeVehicle, showroomPhotoHasLetterbox } from '@/lib/vehicle-copy';
-import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -11,7 +12,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { markViewed, setVehiclePhoto, notify, togglePark, useAppState } from '@/lib/store';
-import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/showroom';
+import { inventoryCanGoBack, inventoryReturnHref } from '@/lib/inventory-navigation';
 import { vehicleGalleryHref } from '@/lib/vehicle-detail-navigation';
 import { VehicleSections } from './VehicleSections';
 import { VehicleDetailHeader } from './VehicleDetailHeader';
@@ -434,13 +435,6 @@ const s = stylex.create({
     lineHeight: '18px',
   },
 });
-function subscribeMobile(onChange: () => void) {
-  const media = window.matchMedia('(max-width: 699px)');
-  media.addEventListener('change', onChange);
-  return () => media.removeEventListener('change', onChange);
-}
-const mobileSnapshot = () => window.matchMedia('(max-width: 699px)').matches;
-const serverMobileSnapshot = () => false;
 export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
   const { t, locale, money, number } = useLocale();
   const v = localizeVehicle(vehicle, locale);
@@ -449,7 +443,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
   const actions = useRef<HTMLDivElement>(null);
   const mobileActions = useRef<HTMLDivElement>(null);
   const image = useRef<HTMLDivElement>(null);
-  const mobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot);
+  const mobile = useMediaQuery('(max-width: 699px)');
   const [contactDock, setContactDock] = useState(false);
   const { parked, filters, photoIndexes } = useAppState();
   const photoIndex = Math.min(v.images.length - 1, Math.max(0, photoIndexes[v.id] || 0));
