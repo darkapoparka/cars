@@ -8,14 +8,14 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "check": "npm run lint && npm run typecheck && npm run build",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build",
     "qa:routes": "node scripts/qa-production.mjs routes",
     "qa:screenshots": "node scripts/qa-production.mjs screenshots",
-    "qa:parity": "node scripts/verify-continuation.mjs",
     "qa:loan": "node --experimental-strip-types --test scripts/test-reference-loan.mjs",
-    "clean": "shx rm -rf .next .next-build-check",
+    "clean": "shx rm -rf .next .next-qa .next-build-check runtime/unit-tests",
     "dev:turbopack": "next dev --turbopack",
-    "preview": "next start"
+    "preview": "next start",
+    "test": "node scripts/test.mjs"
   },
   "dependencies": {
     "@stylexjs/stylex": "0.19.1",

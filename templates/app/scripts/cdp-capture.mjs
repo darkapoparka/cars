@@ -75,15 +75,15 @@ try {
     width,
     height,
     deviceScaleFactor: 1,
-    mobile: true,
+    mobile: width < 768,
     screenWidth: width,
     screenHeight: height,
     positionX: 0,
     positionY: 0,
     dontSetVisibleSize: false,
   });
-  await send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 5 });
-  await send('Emulation.setUserAgentOverride', {
+  await send('Emulation.setTouchEmulationEnabled', { enabled: width < 768, maxTouchPoints: 5 });
+  if (width < 768) await send('Emulation.setUserAgentOverride', {
     userAgent: 'Mozilla/5.0 (Linux; Android 16; Pixel 9 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Mobile Safari/537.36',
     platform: 'Android',
   });

@@ -75,7 +75,8 @@ export function useInventoryBack() {
   return () => {
     const origin = history.state?.cars24InventoryReturn;
     if (origin?.detail === location.pathname && typeof origin.entry === 'string') {
-      const entry = new URL(origin.entry, location.origin);
+      let entry: URL;
+      try {entry = new URL(origin.entry, location.origin);} catch {router.push('/cars'); return;}
       const entryPath = primaryHomePath(withoutLocale(entry.pathname));
       if (entry.origin === location.origin && (['/cars', '/luxe', '/saved'].includes(entryPath) || origin.home===true&&entryPath==='/')) {
         router.back();

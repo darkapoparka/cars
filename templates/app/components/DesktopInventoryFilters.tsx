@@ -51,7 +51,7 @@ function selectionLabel(filters: Filters, tab: FilterTab, tx: (value: string) =>
 export default function DesktopInventoryFilters({filters, update, count, onShowResults, quickFilter, setQuickFilter, quickFiltersRef}: Props) {
   const tx = useCopy();
   const active = quickFilter?.tab ?? null;
-  const [position, setPosition] = useState({left: 0, top: 0, maxHeight: 520});
+  const [position, setPosition] = useState({left: 0, top: 0, width: 380, maxHeight: 520});
   const navigation = useRef<HTMLDivElement>(null);
   const panel = useRef<HTMLDivElement>(null);
   const [budgetDraft, setBudgetDraft] = useState({minimum: '', maximum: ''});
@@ -65,24 +65,25 @@ export default function DesktopInventoryFilters({filters, update, count, onShowR
     if (validBudget(range)) update({...filters, budget: [], ...range});
   }
   function close(restoreFocus = true) {setQuickFilter(null); if (restoreFocus) quickFilter?.trigger.focus({preventScroll: true});}
-  function place(button: HTMLButtonElement) {
+  function place(button: HTMLButtonElement, tab: FilterTab) {
     const anchor = button.getBoundingClientRect();
     const shell = button.closest('[data-desktop-shell]')?.getBoundingClientRect();
     const leftEdge = (shell?.left ?? 0) + 16;
     const rightEdge = (shell?.right ?? window.innerWidth) - 16;
     const top = Math.max(82, Math.min(anchor.bottom + 8, window.innerHeight - 220));
-    setPosition({left: Math.max(leftEdge, Math.min(anchor.left, rightEdge - 380)), top, maxHeight: Math.min(560, window.innerHeight - top - 16)});
+    const width = Math.min(tab === 'BRAND' || tab === 'MODEL' ? 620 : 380, rightEdge - leftEdge);
+    setPosition({left: Math.max(leftEdge, Math.min(anchor.left, rightEdge - width)), top, width, maxHeight: Math.min(tab === 'BRAND' || tab === 'MODEL' ? 640 : 560, window.innerHeight - top - 16)});
   }
   function open(tab: FilterTab, button: HTMLButtonElement) {
     if (active === tab) {close(); return;}
     if (tab === 'BUDGET') setBudgetDraft({minimum: filters.minimum === defaults.minimum ? '' : String(filters.minimum), maximum: filters.maximum === defaults.maximum ? '' : String(filters.maximum)});
-    place(button); setQuickFilter({tab, trigger: button});
+    place(button, tab); setQuickFilter({tab, trigger: button});
   }
   useEffect(() => {
     if (!quickFilter) return;
-    const button = quickFilter.trigger;
+    const {trigger: button, tab} = quickFilter;
     const dismiss = () => setQuickFilter(null);
-    const frame = requestAnimationFrame(() => {place(button); panel.current?.querySelector<HTMLElement>('input,button')?.focus({preventScroll: true});});
+    const frame = requestAnimationFrame(() => {place(button, tab); panel.current?.querySelector<HTMLElement>('input,button')?.focus({preventScroll: true});});
     function outside(event: PointerEvent | FocusEvent) {
       if (event.target instanceof Node && !navigation.current?.contains(event.target) && !quickFiltersRef.current?.contains(event.target) && !panel.current?.contains(event.target)) dismiss();
     }
@@ -91,7 +92,7 @@ export default function DesktopInventoryFilters({filters, update, count, onShowR
     }
     function move() {
       if (!button || window.innerWidth < 1100 || button.getBoundingClientRect().bottom < 82) {dismiss(); return;}
-      place(button);
+      place(button, tab);
     }
     document.addEventListener('pointerdown', outside);
     document.addEventListener('focusin', outside);
@@ -201,9 +202,9 @@ const s = stylex.create({
   title: {fontSize: 17, fontWeight: 500},
   close: {display: 'grid', placeItems: 'center', width: 36, height: 36, padding: 0, color: $.ink, borderWidth: 0, borderRadius: 999, backgroundColor: $.surfaceAlt, cursor: 'pointer'},
   pane: {minHeight: 0, overflowY: 'auto', overscrollBehaviorY: 'contain', padding: '14px 18px 18px'},
-  footer: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexShrink: 0, padding: '12px 16px',},
-  clear: {minHeight: 40, paddingInline: 14, color: $.ink, fontSize: 14, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 999, backgroundColor: $.surface, cursor: 'pointer'},
-  show: {minHeight: 40, paddingInline: 16, color: '#fff', fontSize: 14, borderWidth: 0, borderRadius: 999, backgroundColor: $.ink, opacity: {default: 1, ':disabled': .45}, cursor: {default: 'pointer', ':disabled': 'default'}},
+  footer: {display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexShrink: 0, padding: '6px 16px',},
+  clear: {minHeight: 44, paddingInline: 14, color: $.ink, fontSize: 14, borderWidth: 1, borderStyle: 'solid', borderColor: $.line, borderRadius: 999, backgroundColor: $.surface, cursor: 'pointer'},
+  show: {minHeight: 44, paddingInline: 16, color: '#fff', fontSize: 14, borderWidth: 0, borderRadius: 999, backgroundColor: $.ink, opacity: {default: 1, ':disabled': .45}, cursor: {default: 'pointer', ':disabled': 'default'}},
   applied: {display: 'flex', flexGrow: 1, minWidth: 0, flexWrap: 'nowrap', alignItems: 'center', gap: 6, overflowX: 'auto', overscrollBehaviorX: 'contain', scrollbarWidth: 'none'},
   mobileApplied: {display: {[media.mobile]: 'contents', default: 'none'}},
   mobileChip: {minHeight: 44, paddingInline: 12, color: '#fff', fontSize: 14, borderRadius: $.radiusPill, backgroundColor: {default: $.ink, ':hover': $.violetDark}, outlineColor: {':focus-visible': '#fff'}},

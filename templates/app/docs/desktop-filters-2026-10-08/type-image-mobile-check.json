@@ -1,0 +1,91 @@
+{
+  "before": [
+    {
+      "width": 320,
+      "card": "{\"bottom\":243,\"height\":91,\"left\":8,\"right\":150,\"top\":152,\"width\":142,\"x\":8,\"y\":152}",
+      "image": [
+        {
+          "blend": "normal",
+          "rect": {
+            "bottom": 204,
+            "height": 43,
+            "left": 38,
+            "right": 120,
+            "top": 161,
+            "width": 82,
+            "x": 38,
+            "y": 161
+          },
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        }
+      ],
+      "selected": "true"
+    },
+    {
+      "width": 390,
+      "card": "{\"bottom\":243,\"height\":91,\"left\":8,\"right\":185,\"top\":152,\"width\":177,\"x\":8,\"y\":152}",
+      "image": [
+        {
+          "blend": "normal",
+          "rect": {
+            "bottom": 204,
+            "height": 43,
+            "left": 55.5,
+            "right": 137.5,
+            "top": 161,
+            "width": 82,
+            "x": 55.5,
+            "y": 161
+          },
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        }
+      ],
+      "selected": "true"
+    }
+  ],
+  "after": [
+    {
+      "width": 320,
+      "card": "{\"bottom\":243,\"height\":91,\"left\":8,\"right\":150,\"top\":152,\"width\":142,\"x\":8,\"y\":152}",
+      "image": [
+        {
+          "blend": "multiply",
+          "rect": {
+            "bottom": 204,
+            "height": 43,
+            "left": 38,
+            "right": 120,
+            "top": 161,
+            "width": 82,
+            "x": 38,
+            "y": 161
+          },
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        }
+      ],
+      "selected": "true"
+    },
+    {
+      "width": 390,
+      "card": "{\"bottom\":243,\"height\":91,\"left\":8,\"right\":185,\"top\":152,\"width\":177,\"x\":8,\"y\":152}",
+      "image": [
+        {
+          "blend": "multiply",
+          "rect": {
+            "bottom": 204,
+            "height": 43,
+            "left": 55.5,
+            "right": 137.5,
+            "top": 161,
+            "width": 82,
+            "x": 55.5,
+            "y": 161
+          },
+          "src": "/reference-assets/continuation/filter-body-0.png"
+        }
+      ],
+      "selected": "true"
+    }
+  ],
+  "layoutMatches": true
+}

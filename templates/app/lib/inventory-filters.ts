@@ -111,12 +111,12 @@ export function matchesInventory(vehicle: Vehicle, filters: Filters, query: stri
   if (filters.fuel.length && !filters.fuel.includes(vehicle.fuel)) return false;
   const defaults = emptyFilters();
   if ((filters.minimum !== defaults.minimum || filters.maximum !== defaults.maximum) && (vehicle.priceOnRequest || vehicle.price < filters.minimum || vehicle.price > filters.maximum)) return false;
-  if (filters.budget.length && !filters.budget.some(value => value.startsWith('Above') ? vehicle.price >= 100000 : vehicle.price < Number(value.replace(/\D/g, '')) * 1000)) return false;
+  if (filters.budget.length && (vehicle.priceOnRequest || !filters.budget.some(value => value.startsWith('Above') ? vehicle.price >= 100000 : vehicle.price < Number(value.replace(/\D/g, '')) * 1000))) return false;
   if ((filters.yearMinimum !== defaults.yearMinimum || filters.yearMaximum !== defaults.yearMaximum) && (vehicle.year < filters.yearMinimum || vehicle.year > filters.yearMaximum)) return false;
   if (filters.year && vehicle.year < Number.parseInt(filters.year)) return false;
   if ((filters.mileageMinimum !== defaults.mileageMinimum || filters.mileageMaximum !== defaults.mileageMaximum) && (vehicle.mileageOnRequest || vehicle.mileage < filters.mileageMinimum || vehicle.mileage > filters.mileageMaximum)) return false;
-  if (filters.mileage && vehicle.mileage >= Number(filters.mileage.replace(/\D/g, ''))) return false;
-  if (filters.emiLimit !== null && vehicle.monthly > filters.emiLimit) return false;
+  if (filters.mileage && (vehicle.mileageOnRequest || vehicle.mileage >= Number(filters.mileage.replace(/\D/g, '')))) return false;
+  if (filters.emiLimit !== null && (vehicle.priceOnRequest || vehicle.monthly <= 0 || vehicle.monthly > filters.emiLimit)) return false;
   if (filters.engineMinimum !== 0 || filters.engineMaximum !== 7) {
     const engine = Number.parseFloat(vehicle.engine);
     if (!Number.isFinite(engine) || engine < filters.engineMinimum || engine > filters.engineMaximum) return false;
@@ -127,7 +127,7 @@ export function matchesInventory(vehicle: Vehicle, filters: Filters, query: stri
   }
   return Object.entries(filters.extra).every(([type, choices]) => !choices.length || choices.some(value => {
     if (type === 'DISCOUNTS') return vehicleDiscount(vehicle) > 0;
-    if (type === 'EMI') {const amount = Number(value.replace(/\D/g, '')); return value.startsWith('Above') ? vehicle.monthly >= amount : vehicle.monthly < amount;}
+    if (type === 'EMI') {if (vehicle.priceOnRequest || vehicle.monthly <= 0) return false; const amount = Number(value.replace(/\D/g, '')); return value.startsWith('Above') ? vehicle.monthly >= amount : vehicle.monthly < amount;}
     if (type === 'DOWN PAYMENT') return vehicle.zeroDownPayment === true;
     if (type === 'CAR TYPE') return vehicle.tier === value;
     if (type === 'CATEGORIES') return matchesCategory(vehicle, value);

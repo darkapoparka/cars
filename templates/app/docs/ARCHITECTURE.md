@@ -1,21 +1,33 @@
-# Architecture
+# App architecture
 
-## Product boundary
+## Presentation and routes
 
-This repository is a single-dealer showroom, not a multi-seller marketplace. Dealer identity, inventory, services, finance offers and lead routing belong to one configured client.
+The Next.js App Router owns locale pages, metadata and shared layouts. `app/[locale]/2` is an alias layer for the alternative mobile journey, not a separate application. Both journeys use the same vehicle-detail routes, catalogue and enquiry components. Styling remains in existing StyleX definitions and tokens; no redesign is part of architectural maintenance.
 
-## Rendering
+`AppLink` and the navigation wrapper compose locale and alternative paths. Pure alternative-path decisions live in `lib/home-paths.ts`; React context remains in `lib/home-alternative.tsx`. `lib/paths.ts` is the mount/asset boundary. Do not write bare `/cars` or `/sell` browser URLs around these boundaries.
 
-Public inventory and vehicle routes are server-rendered and statically generated where possible. Interactive search, favourites, filters and sheets are isolated client components. This preserves SEO and browser performance while keeping app-like navigation.
+`lib/locale-policy.ts` resolves enabled locales without importing translation dictionaries or React. Explicit URL locale wins; cookies are only preferences and must also be enabled. Disabled locale prefixes are replaced once rather than repeatedly prepended. Proxy still rejects submissions in this preview. Locale-dependent layouts read request headers, so application pages should not be described as universally statically generated.
 
-## Styling
+## Inventory and formatting
 
-StyleX owns component styling and semantic tokens. Avoid introducing Tailwind or a second styling system. Brand overrides should be expressed through token themes rather than copied component trees.
+`lib/vehicle.ts` defines the shared vehicle type without importing fixtures. `lib/data.ts` retains the established catalogue API, selects dealer/template inventory, and indexes vehicle lookup by slug. Existing imports remain compatible through re-exports. `lib/format.ts` reuses one currency formatter rather than constructing one for every displayed price.
 
-## Future native delivery
+Full captured inspection/detail snapshots are server-route inputs; only the selected detail is passed to a client component. The architecture regression test follows import graphs to prevent these snapshots and server request helpers from entering client bundles. A `.server.ts` filename alone is not treated as sufficient enforcement.
 
-Capacitor can wrap a static or hosted version of this web app. A later React Native app should reuse domain types, schemas, API clients, localization catalogs, analytics events and tokens—not DOM components. Keep browser APIs behind adapters so this boundary remains clean.
+`lib/inventory-filters.ts` owns filter normalization and matching. Untrusted restored state is bounded before use. Explicit numeric filters exclude unpublished prices, unpublished mileage and absent monthly estimates; an unfiltered catalogue continues to show those vehicles honestly. Formatting and default catalogue ordering remain unchanged.
 
-## Data model
+## Browser state
 
-`lib/data.ts` currently supplies fixtures. The production adapter should expose the same `Vehicle` contract and add dealership configuration, availability, lead submission, saved searches and account state.
+`lib/vehicle-storage.ts` contains browser-independent persistence rules with injected storage access. The hooks in `components/useVehicleState.ts` own subscriptions and React lifecycle integration. String snapshots remain stable for `useSyncExternalStore`; decoded lists are validated, deduplicated and bounded. Denied or full storage does not crash browsing or report a failed save as successful.
+
+Only the original unmounted template retains `drive24:saved` and `cars24:recent`. Other instances are scoped by mode, dealer ID and mount. Primary and `/2` journeys intentionally share that scope. Dealer previews do not inherit the template's recent-car example.
+
+The service search uses URL parameters as its source of truth, so history restoration cannot leave a stale category or query in local component state. `lib/history-state.ts` carries application-owned fields through native history writes without copying Next.js internal router markers. Inventory back navigation validates stored destinations and falls back safely when browser history is malformed.
+
+## Verification and release boundary
+
+`npm run check` runs lint, application type checking, domain/architecture tests and a production build. The test runner uses TypeScript already in the toolchain and Node's built-in test runner; it adds no testing-framework dependency. Temporary test output is removed in `finally`. CI uses the same gate and production route smoke checks. Browser capture is a review utility, not a substitute for interaction testing or visual comparison.
+
+Historical `.template` recovery files and ignored `runtime` output are outside active lint/type-check inputs. Public assets and fixture data remain protected. Old QA iterations are recoverable from Git history rather than shipped as an ever-growing documentation archive.
+
+This repository is still a preview/publishing snapshot. It does not implement a transactional backend, silently send leads, approve template releases, or update existing dealers. Reconcile changes into the canonical Cars template before the next publishing export and complete dealer-specific acceptance before rollout.

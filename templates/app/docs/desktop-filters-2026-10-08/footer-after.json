@@ -1,0 +1,198 @@
+[
+  {
+    "size": {
+      "width": 320,
+      "height": 844
+    },
+    "buttons": [
+      {
+        "height": 44,
+        "text": "Изчистете",
+        "width": 88
+      },
+      {
+        "height": 44,
+        "text": "Покажете 48 автомобила",
+        "width": 200
+      }
+    ],
+    "footer": {
+      "bottom": 844,
+      "height": 56,
+      "left": 0,
+      "right": 320,
+      "top": 788,
+      "width": 320,
+      "x": 0,
+      "y": 788
+    },
+    "nav": {
+      "bottom": 128,
+      "height": 60,
+      "left": 0,
+      "right": 320,
+      "top": 68,
+      "width": 320,
+      "x": 0,
+      "y": 68
+    },
+    "overflow": 0,
+    "scrollPane": {
+      "bottom": 788,
+      "height": 660,
+      "left": 0,
+      "right": 320,
+      "top": 128,
+      "width": 320,
+      "x": 0,
+      "y": 128
+    }
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "buttons": [
+      {
+        "height": 44,
+        "text": "Изчистете",
+        "width": 88
+      },
+      {
+        "height": 44,
+        "text": "Покажете 48 автомобила",
+        "width": 270
+      }
+    ],
+    "footer": {
+      "bottom": 844,
+      "height": 56,
+      "left": 0,
+      "right": 390,
+      "top": 788,
+      "width": 390,
+      "x": 0,
+      "y": 788
+    },
+    "nav": {
+      "bottom": 128,
+      "height": 60,
+      "left": 0,
+      "right": 390,
+      "top": 68,
+      "width": 390,
+      "x": 0,
+      "y": 68
+    },
+    "overflow": 0,
+    "scrollPane": {
+      "bottom": 788,
+      "height": 660,
+      "left": 0,
+      "right": 390,
+      "top": 128,
+      "width": 390,
+      "x": 0,
+      "y": 128
+    }
+  },
+  {
+    "size": {
+      "width": 768,
+      "height": 1000
+    },
+    "buttons": [
+      {
+        "height": 44,
+        "text": "ИЗЧИСТИ ВСИЧКО",
+        "width": 241.046875
+      },
+      {
+        "height": 44,
+        "text": "ПОКАЖИ 48 АВТОМОБИЛИ",
+        "width": 459.953125
+      }
+    ],
+    "footer": {
+      "bottom": 1000,
+      "height": 68,
+      "left": 0,
+      "right": 753,
+      "top": 932,
+      "width": 753,
+      "x": 0,
+      "y": 932
+    },
+    "nav": {
+      "bottom": 932,
+      "height": 818,
+      "left": 0,
+      "right": 266.546875,
+      "top": 114,
+      "width": 266.546875,
+      "x": 0,
+      "y": 114
+    },
+    "overflow": -15,
+    "scrollPane": {
+      "bottom": 932,
+      "height": 818,
+      "left": 266.546875,
+      "right": 753,
+      "top": 114,
+      "width": 486.453125,
+      "x": 266.546875,
+      "y": 114
+    }
+  },
+  {
+    "size": {
+      "width": 1440,
+      "height": 1000
+    },
+    "buttons": [
+      {
+        "height": 44,
+        "text": "Изчисти всички филтри",
+        "width": 177.671875
+      },
+      {
+        "height": 44,
+        "text": "Покажете 48 автомобила",
+        "width": 197.140625
+      }
+    ],
+    "footer": {
+      "bottom": 880,
+      "height": 64,
+      "left": 222.5,
+      "right": 1202.5,
+      "top": 816,
+      "width": 980,
+      "x": 222.5,
+      "y": 816
+    },
+    "nav": {
+      "bottom": 816,
+      "height": 624,
+      "left": 222.5,
+      "right": 432.5,
+      "top": 192,
+      "width": 210,
+      "x": 222.5,
+      "y": 192
+    },
+    "overflow": -15,
+    "scrollPane": {
+      "bottom": 816,
+      "height": 624,
+      "left": 432.5,
+      "right": 1202.5,
+      "top": 192,
+      "width": 770,
+      "x": 432.5,
+      "y": 192
+    }
+  }
+]

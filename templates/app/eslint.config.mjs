@@ -18,5 +18,5 @@ export default defineConfig([
     files: ['babel.config.js', 'postcss.config.js', 'next.config.js'],
     rules: { '@typescript-eslint/no-require-imports': 'off' },
   },
-  globalIgnores(['.next*/**', 'runtime/**', 'out/**', 'build.log', 'build-final.log', 'dev.log', 'check.log']),
+  globalIgnores(['.next*/**', '.template/**', 'runtime/**', 'out/**', 'build.log', 'build-final.log', 'dev.log', 'check.log']),
 ]);

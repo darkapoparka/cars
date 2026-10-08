@@ -1,5 +1,6 @@
 import configuration from './dealer.json';
-export type AppLocale = 'en' | 'bg';
+import type {AppLocale} from './locale-policy';
+export type {AppLocale} from './locale-policy';
 export type DealerConfiguration = {
   mode: 'template' | 'dealer'; id: string; name: string; shortName: string;
   logo: {light: string; dark: string; icon: string};

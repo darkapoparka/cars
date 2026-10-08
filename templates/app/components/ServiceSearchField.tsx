@@ -1,6 +1,7 @@
 'use client';
 
-import {useRef, useState} from 'react';
+import {useRef} from 'react';
+import {applicationHistoryState} from '@/lib/history-state';
 import {Search, X} from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import {searchField} from '@/components/search-field.stylex';
@@ -15,16 +16,15 @@ export function useServiceSearch() {
   const params = useSearchParams();
   const mobileInput = useRef<HTMLInputElement>(null);
   const desktopInput = useRef<HTMLInputElement>(null);
-  const [query, setQuery] = useState(params.get('q') || '');
-  const [category, setCategory] = useState<string>(serviceOptions.find(option => option.id === params.get('category'))?.id ?? 'all');
+  const query = params.get('q') || '';
+  const category = serviceOptions.find(option => option.id === params.get('category'))?.id ?? 'all';
 
   function update(nextQuery: string, nextCategory: string) {
-    setQuery(nextQuery); setCategory(nextCategory);
     const next = new URLSearchParams(window.location.search);
     if (nextQuery) next.set('q', nextQuery); else next.delete('q');
     if (nextCategory !== 'all') next.set('category', nextCategory); else next.delete('category');
     const suffix = next.toString();
-    window.history.replaceState(null, '', `${window.location.pathname}${suffix ? `?${suffix}` : ''}${window.location.hash}`);
+    window.history.replaceState(applicationHistoryState(window.history.state), '', `${window.location.pathname}${suffix ? `?${suffix}` : ''}${window.location.hash}`);
   }
   function clear(nextCategory = category) {
     update('', nextCategory);

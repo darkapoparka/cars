@@ -1,40 +1,11 @@
 import {isDealer} from './dealer-config';
 import dealerInventory from './dealer-inventory.json';
-import {currency} from './currency';
+export {formatPrice} from './format';
 import {capturedVehicles} from './captured-inventory';
 import {capturedRelatedVehicles} from './captured-related';
 
-export type Vehicle = {
-  images?: string[]; sourceUrl?: string; observedAt?: string; specifications?: string; priceOnRequest?: boolean; mileageOnRequest?: boolean;
-  imagePlaceholder?: boolean; proposalBenefits?: string[];
-  referenceId?: string;
-  tier?: 'Luxe' | 'Prime' | 'Lite';
-  optionsType?: string;
-  originalMileage?: number;
-  cylinders?: number;
-  zeroDownPayment?: boolean;
-  slug: string;
-  year: number;
-  make: string;
-  model: string;
-  trim: string;
-  price: number;
-  previousPrice?: number;
-  monthly: number;
-  mileage: number;
-  fuel: 'Petrol' | 'Diesel' | 'Hybrid' | 'Electric' | 'Not published';
-  transmission: 'Automatic' | 'Manual' | 'Not published';
-  body: 'SUV' | 'Sedan' | 'Hatchback' | 'Coupe' | 'MPV' | 'Convertible' | 'Pickup' | 'Other';
-  location: string;
-  image: string;
-  color: string;
-  badges: string[];
-  highlights: string[];
-  power: string;
-  engine: string;
-  warranty: string;
-  condition: string;
-};
+import type {Vehicle} from './vehicle';
+export type {Vehicle} from './vehicle';
 
 const existingVehicles: Vehicle[] = [
   {
@@ -129,5 +100,5 @@ export const homeFeed = isDealer ? vehicles : [
 export const hotDeals = isDealer ? vehicles.slice(0, 4) : capturedVehicles.filter(vehicle =>
   ['9718349728', '9714839863', '9714841097'].includes(vehicle.referenceId ?? ''));
 
-export const formatPrice = (value: number) => new Intl.NumberFormat(currency.locale).format(value);
-export const getVehicle = (slug: string) => vehicles.find((vehicle) => vehicle.slug === slug);
+const vehiclesBySlug = new Map(vehicles.map(vehicle => [vehicle.slug, vehicle]));
+export const getVehicle = (slug: string) => vehiclesBySlug.get(slug);
