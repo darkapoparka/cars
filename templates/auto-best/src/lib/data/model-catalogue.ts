@@ -6,7 +6,10 @@ export type ModelFamily = { name: string; choices: ModelChoice[]; count: number 
 export type ModelMake = { make: string; families: ModelFamily[]; count: number };
 const key = (value: string) => value.normalize('NFKD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^a-z0-9+]/g, '');
 const makeNames = Object.keys(modelCatalogueData);
-const canonicalMake = (make: string) => makeNames.find(name => key(name) === key(make)) ?? make;
+const makeByKey = new Map<string, string>();
+for (const make of makeNames) if (!makeByKey.has(key(make))) makeByKey.set(key(make), make);
+const canonicalMake = (make: string) => makeByKey.get(key(make)) ?? make;
+const emptyFamilies: readonly CatalogueFamily[] = Object.freeze([]);
 
 /** Preserve the source tree, with familiar numbered BMW and Audi families first. */
 function buildCatalogueFamilies(make: string): readonly CatalogueFamily[] {
@@ -55,6 +58,8 @@ function buildCatalogueFamilies(make: string): readonly CatalogueFamily[] {
 const familyCache = new Map<string, readonly CatalogueFamily[]>();
 export function catalogueFamilies(make: string): readonly CatalogueFamily[] {
   const makeKey = key(make);
+  // URL selections can contain arbitrary dealer makes; cache only the finite source catalogue.
+  if (!makeByKey.has(makeKey)) return emptyFamilies;
   let families = familyCache.get(makeKey);
   if (!families) { families = buildCatalogueFamilies(make); familyCache.set(makeKey, families); }
   return families;

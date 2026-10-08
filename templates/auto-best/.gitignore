@@ -39,3 +39,11 @@ Thumbs.db
 
 # Archived captures must not return to the source tree.
 /docs/audits/2026-09-12-mobile-finalization/evidence/
+
+# Superseded one-off QA: use ignored runtime, not archived source.
+/docs/audits/pre-refactor-2026-09-12/**/*.py
+/docs/audits/pre-refactor-2026-09-12/**/*.mjs
+/docs/audits/pre-refactor-2026-09-12/**/*.json
+/docs/audits/pre-refactor-2026-09-12/**/*.png
+/docs/audits/pre-refactor-2026-09-12/**/*.jpg
+/docs/audits/pre-refactor-2026-09-12/**/*.jpeg

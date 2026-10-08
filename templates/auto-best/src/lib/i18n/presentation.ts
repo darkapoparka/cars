@@ -2,7 +2,7 @@ import { sourceKeys } from '$lib/locale/catalog';
 import type { Locale } from '$lib/locale/core';
 import { localeFormatters } from '$lib/locale/formatters';
 import type { getI18n } from '$lib/locale/context';
-import { message, templateText, type MessageKey, type MessageParameters } from '$lib/locale/messages';
+import { message, type MessageKey, type MessageParameters } from '$lib/locale/messages';
 
 /** Immutable template patterns only. Values are interpolated after translation. */
 export function templateMessage(i18n: ReturnType<typeof getI18n>, source: string, parameters: MessageParameters): string {

@@ -78,7 +78,7 @@ Static media is referenced by public paths. Artwork helpers render existing crop
 
 ## Server and build boundary
 
-`src/hooks.server.ts` handles the explicit legacy redirect set and response headers. `robots.txt` and `sitemap.xml` are route handlers. `template.ts` determines indexability. Build output is produced by the Vercel adapter selected in `svelte.config.js`; configuration details belong in [Deployment](docs/DEPLOYMENT.md).
+`src/hooks.server.ts` composes security, request-local locale resolution and the read-only/legacy-route handlers. `src/lib/server/security.ts` applies the shared headers to normal responses, locale redirects, preference responses and rejected writes without mutating immutable responses. `robots.txt` and `sitemap.xml` are route handlers. `template.ts` determines indexability. Build output is produced by the Vercel adapter selected in `svelte.config.js`; configuration details belong in [Deployment](docs/DEPLOYMENT.md).
 
 ## Extending the template
 
@@ -96,6 +96,6 @@ Common, template and dealer-owned catalog inputs generate typed messages and a s
 
 Enquiry components own draft state and presentation. `ui/enquiry-photos.ts` owns file validation and object-URL allocation/release; `ui/enquiry-share.ts` reports native browser handoff outcomes without submitting leads. Use the existing overlay scroll owner and release resources on close/destruction. Keep share calls inside the initiating user gesture.
 
-`locale/formatters.ts` caches only immutable formatter instances for validated dealer locales, never visitor preferences or rendered values. `data/demo-content.ts` owns safe sample showcase selection for empty and smaller inventories.
+`locale/formatters.ts` caches only immutable formatter instances for validated dealer locales, never visitor preferences or rendered values. `data/demo-content.ts` owns explicitly labelled sample team and partner records; the unused vehicle-showcase helper was retired.
 
 These contracts are covered by `check:domain`, enquiry-resource and overlay tests. See the [architecture/code-quality verification record](docs/ARCHITECTURE-QUALITY-2026-10-07.md) for the preserved visual contract and rollout boundaries.

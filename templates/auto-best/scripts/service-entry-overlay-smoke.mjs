@@ -78,6 +78,8 @@ async function keyboardActions(page, editor) {
   }
 }
 async function guideCheck(page, locale, width, topic) {
+  // Viewport units update asynchronously in WebKit after the short-keyboard fixture.
+  await page.waitForFunction(() => Math.abs(parseFloat(getComputedStyle(document.querySelector('.dn-service-landing')).minHeight) - innerHeight) <= 1, null, { timeout: 5000 });
   const pageEnd = await page.locator('.dn-service-landing').evaluate(landing => {
     const canvas = landing.getBoundingClientRect(), paint = getComputedStyle(landing, '::before');
     const dock = document.querySelector('.dn-mobile-bottom-nav').getBoundingClientRect();
@@ -156,6 +158,9 @@ async function guideCheck(page, locale, width, topic) {
   assert.equal(await info.isVisible(), false, 'The drag handle also supports keyboard dismissal');
   await trigger.click();
   await page.setViewportSize({ width: 768, height: 844 });
+  // CSS hides the desktop guide before WebKit delivers its asynchronous resize.
+  // Verify native closure before returning to mobile; invisibility alone is not closure.
+  await page.waitForFunction(dialog => !dialog.open, await info.elementHandle(), { timeout: 5000 });
   assert.equal(await info.isVisible(), false, 'Entering the desktop service layout releases the modal');
   await page.setViewportSize({ width, height: 844 });
   assert.equal(await serviceEntry(page).locator('.dn-service-entry__field').innerText(), draft, 'Reading guidance preserves saved car details');
@@ -235,7 +240,7 @@ try {
       await editorReflow(page);
       await page.setViewportSize({ width, height: 420 });
       await fullscreen(page, '.dn-service-editor[open]');
-      await editor.locator('form').evaluate(form => { form.scrollTop = form.scrollHeight; });
+      await editor.locator('footer').scrollIntoViewIfNeeded();
       const footer = await editor.locator('footer').boundingBox();
       assert(footer.y >= 0 && footer.y + footer.height <= 421);
       await fillServiceEntry(page, { make: 'BMW', model: 'X5', budget: '40000', year: '2022' });

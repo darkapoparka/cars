@@ -1,4 +1,4 @@
-import { appPath, returningContext, returningPage } from './locale-smoke-fixture.mjs';
+import { appPath, returningPage } from './locale-smoke-fixture.mjs';
 import assert from 'node:assert/strict';
 import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
@@ -10,6 +10,14 @@ const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
 const casePattern = process.env.PHASE4_CASE ? new RegExp(process.env.PHASE4_CASE) : null;
 const check = (name, run) => casePattern && !casePattern.test(name) ? Promise.resolve() : suite.check(name, run);
+
+// Test application readiness, not third-party map/network inactivity.
+async function navigate(page, destination) {
+  const response = await page.goto(destination, { waitUntil: 'domcontentloaded' });
+  assert.equal(response.status(), 200, destination);
+  await page.locator('[data-locale-ready="true"]').waitFor({ state: 'attached' });
+  await page.evaluate(() => document.fonts.ready.then(() => undefined));
+}
 
 async function assertCleanDom(page) {
   const state = await page.evaluate(() => {
@@ -30,7 +38,7 @@ try {
   await check('URL sort and chip removal retain unrelated filters', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
-      await page.goto(`${base}/listing-grid?make=BMW&fuel=${encodeURIComponent('Дизел')}&sort=price-asc`, { waitUntil: 'networkidle' });
+      await navigate(page, `${base}/listing-grid?make=BMW&fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
       await assertCleanDom(page);
       await page.locator('.dn-listing-filter__mobile-sort').click();
       const sortSheet = page.locator('#dn-listing-sort-sheet');
@@ -54,7 +62,7 @@ try {
   await check('facet and outer filter drafts save or cancel at their owner', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
-      await page.goto(`${base}/listing-grid?fuel=${encodeURIComponent('Дизел')}&sort=price-asc`, { waitUntil: 'networkidle' });
+      await navigate(page, `${base}/listing-grid?fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
       const trigger = page.locator('.dn-listing-filter__toggle');
       const dialog = page.locator('#dn-listing-filter-dialog');
       const picker = dialog.locator('.dn-mobile-filter-editor');
@@ -113,7 +121,7 @@ try {
   await check('Home desktop selector drafts save, cancel and reach filtered results', async () => {
     const page = await returningPage(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     try {
-      await page.goto(base, { waitUntil: 'networkidle' });
+      await navigate(page, base);
       await assertCleanDom(page);
       await verifyHomeBrowse(page);
       await assertCleanDom(page);
@@ -124,7 +132,7 @@ try {
   await check('desktop mega menu keeps keyboard ownership', async () => {
     const page = await returningPage(browser, { viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
     try {
-      await page.goto(base, { waitUntil: 'networkidle' });
+      await navigate(page, base);
       const trigger = page.locator('.dn-nav__link--disclosure').first();
       await trigger.focus();
       await page.keyboard.press('ArrowDown');
@@ -143,7 +151,7 @@ try {
   await check('shell state stays correct across direct and client navigation', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
-      await page.goto(base, { waitUntil: 'networkidle' });
+      await navigate(page, base);
       const shell = page.locator('.dn-app-shell');
       assert.equal(await shell.getAttribute('data-route'), 'home');
       assert.equal(await shell.getAttribute('data-mobile-bottom'), 'footer');
@@ -159,7 +167,7 @@ try {
       assert.equal(await page.locator('.dn-mobile-bottom-nav a[href="/bg/listing-grid"]').getAttribute('aria-current'), 'page');
       await assertCleanDom(page);
 
-      await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
+      await navigate(page, `${base}/listing-grid?make=BMW&sort=price-asc`);
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
       await first.click({ position: { x: 5, y: 5 } });
@@ -215,7 +223,7 @@ try {
     for (const [width, height] of [[320, 677], [390, 844], [430, 932], [844, 390], [767, 900], [768, 900], [991, 900], [992, 900], [1024, 900], [1440, 900], [1920, 1080]]) {
       const page = await returningPage(browser, { viewport: { width, height }, reducedMotion: 'reduce' });
       try {
-        await page.goto(base, { waitUntil: 'networkidle' });
+        await navigate(page, base);
         const shell = page.locator('.dn-app-shell');
         assert.equal(await shell.getAttribute('data-route'), 'home');
         assert.equal(await shell.getAttribute('data-mobile-bottom'), 'footer');
@@ -225,12 +233,12 @@ try {
           `Mobile bottom-nav visibility mismatch at ${width}x${height}`
         );
         await assertCleanDom(page);
-        await page.goto(`${base}/listing-grid?make=Audi&sort=price-asc`, { waitUntil: 'networkidle' });
+        await navigate(page, `${base}/listing-grid?make=Audi&sort=price-asc`);
         assert.equal(await shell.getAttribute('data-route'), 'listing');
         assert.equal(await shell.getAttribute('data-mobile-bottom'), 'nav');
         await assertCleanDom(page);
 
-        await page.goto(`${base}/listing-detail-v1/1`, { waitUntil: 'networkidle' });
+        await navigate(page, `${base}/listing-detail-v1/1`);
         assert.equal(await shell.getAttribute('data-route'), 'vehicle-detail');
         assert.equal(await shell.getAttribute('data-mobile-bottom'), 'detail');
         assert.equal(
@@ -240,6 +248,7 @@ try {
         );
         await assertCleanDom(page);
         results.push({ width, height, passed: true });
+        console.log(`PASS responsive boundary ${width}x${height}`);
       } finally { await page.close(); }
     }
     return results;

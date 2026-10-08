@@ -108,8 +108,10 @@ try {
         assert.equal(await dialog.getByRole('tab').count(), 0, 'Brand opens its choices directly without category navigation');
         const frame = await dialog.boundingBox();
         const footer = await dialog.locator('.dn-search-footer').boundingBox();
-        assert.equal(frame.width, 380);
-        assert.equal(await dialog.locator('.dn-search-apply').evaluate(el => getComputedStyle(el).backgroundColor),
+        const anchor = await page.locator('.dn-listing-filter').boundingBox();
+        assert(Math.abs(frame.width - Math.min(anchor.width, width - 32)) < 1, 'The make grid follows its discovery-panel anchor');
+        assert(frame.x >= 15 && frame.x + frame.width <= width - 15, 'The expanded make grid stays inside the viewport');
+        assert.equal(await dialog.locator('.dn-search-apply').evaluate(el => { const base = getComputedStyle(el).backgroundColor; return base === 'rgba(0, 0, 0, 0)' ? getComputedStyle(el, '::before').backgroundColor : base; }),
           await form.locator('.dn-discovery__submit').evaluate(el => getComputedStyle(el).backgroundColor),
           'Focused selector actions share the neutral black desktop search treatment');
         assert((await dialog.locator('.dn-search-apply').boundingBox()).height >= 44);
@@ -184,6 +186,7 @@ try {
         await form.locator('.dn-discovery__keyword').click();
         const searchIdentity = async (field, value) => {
           await dialog.locator(`[data-field=${field}] button`).click();
+          if (field === "model") await page.locator(".dn-filter-picker").getByRole("searchbox").fill(value);
           await page.locator(`.dn-filter-picker input[value="${value}"]`).click();
           await page.keyboard.press('Escape');
           await page.locator('.dn-filter-picker').waitFor({ state: 'hidden' });
@@ -191,6 +194,7 @@ try {
         await searchIdentity('make','BMW');
         await dialog.locator('[data-field=model] button').click();
         assert.equal(await page.locator('.dn-filter-picker input[value="RS 6 Avant"]').count(), 0, 'Model choices respect the draft brands');
+        await page.locator('.dn-filter-picker').getByRole('searchbox').fill('X6 M Sport');
         await page.locator('.dn-filter-picker input[value="X6 M Sport"]').check();
         await page.keyboard.press('Escape');
         await searchIdentity('make','Audi');
@@ -270,7 +274,10 @@ try {
         } else {
           for (const [field, values] of [['make', brands], ['model', models]]) {
             await form.locator(`[data-facet=${field}]`).click();
-            for (const value of values) await page.locator(`#dn-listing-filter-dialog .dn-desktop-choice input[value="${value}"]`).check();
+            for (const value of values) {
+              if (field === "model") await page.locator("#dn-listing-filter-dialog").getByRole("searchbox").fill(value);
+              await page.locator(`#dn-listing-filter-dialog .dn-desktop-choice input[value="${value}"]`).check();
+            }
             await page.locator('#dn-listing-filter-dialog .dn-search-apply').click();
             await page.waitForURL(url => url.searchParams.getAll(field).length === 2);
           }
@@ -283,7 +290,10 @@ try {
         for (const [field, values] of [['make', brands], ['model', models]]) {
           assert.deepEqual(await multiSearch.locator(`input[type=hidden][name=${field}]`).evaluateAll(inputs => inputs.map(input => input.value)), values, 'Search preserves repeated applied selections');
           await multiSearch.locator(`[data-field=${field}] button`).click();
-          for (const value of values) assert(await page.locator(`.dn-filter-picker input[value="${value}"]`).isChecked());
+          for (const value of values) {
+            if (field === "model") await page.locator(".dn-filter-picker").getByRole("searchbox").fill(value);
+            assert(await page.locator(`.dn-filter-picker input[value="${value}"]`).isChecked());
+          }
           await page.keyboard.press('Escape');
           assert(await multiSearch.isVisible(), 'Escape closes the nested picker and retains native search');
         }

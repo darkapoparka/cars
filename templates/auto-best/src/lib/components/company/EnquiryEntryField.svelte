@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
 
 
   import { getI18n } from '$lib/locale/context';
@@ -31,7 +31,7 @@
   let error = $state('');
   let errorField = $state<'entry-value' | 'entry-budget'>('entry-value');
   let returnFocus: HTMLElement | undefined;
-  let scrollY = 0;
+  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;
   let opened = false;
 
   export async function edit(returnTo?: HTMLElement) {
@@ -39,20 +39,22 @@
     budgetDraft = budget;
     error = '';
     returnFocus = returnTo ?? trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-entry-editor-scroll', `-${scrollY}px`);
+    if (!opened) releaseScroll = preserveScrollOffset('--dn-entry-editor-scroll');
     opened = true;
     dialog.showModal();
     await tick();
+    if (!dialog?.open || !dialog.isConnected) return;
     form.querySelector<HTMLInputElement | HTMLTextAreaElement>('[name="entry-value"]')?.focus();
   }
 
-  function restore() {
+  function restore() { release(true); }
+
+  function release(restoreScroll: boolean) {
     if (!opened) return;
     opened = false;
-    document.body.style.removeProperty('--dn-entry-editor-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
-    if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    releaseScroll?.(restoreScroll);
+    releaseScroll = undefined;
+    if (restoreScroll && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
   }
 
   function save(event: SubmitEvent) {
@@ -79,8 +81,8 @@
   }
 
   onDestroy(() => {
+    release(false);
     if (dialog?.open) dialog.close();
-    restore();
   });
 </script>
 

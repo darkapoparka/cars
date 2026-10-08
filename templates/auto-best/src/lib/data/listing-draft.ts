@@ -1,6 +1,7 @@
 import { vehicleTypes, type VehicleEquipment } from './inventory';
 import { catalogueModel } from './model-catalogue';
-import { currencySymbol, formatPrice, intlLocale, type Locale } from '$lib/locale/core';
+import { currencySymbol, formatPrice, type Locale } from '$lib/locale/core';
+import { localeFormatters } from '$lib/locale/formatters';
 import { message, templateText } from '$lib/locale/messages';
 import { formatTemplate, specificationLabel } from '$lib/i18n/presentation';
 import {
@@ -268,7 +269,7 @@ export const listingDraftHasFilters = (draft: ListingDraft) => {
 };
 
 export const formatListingNumber = (value: string | number, locale: Locale = 'en') =>
-  new Intl.NumberFormat(intlLocale(locale)).format(Number(value));
+  localeFormatters(locale).number.format(Number(value));
 
 export function listingOptionsWithCurrent(options: readonly string[], current: string | readonly string[]): readonly string[] {
   if (typeof current === 'string') return [...new Set([...options, ...listingSelections(current)])];

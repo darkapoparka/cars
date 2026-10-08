@@ -5,7 +5,7 @@
 <script lang="ts">
   import { tick, onDestroy } from 'svelte';
   import { getI18n } from '$lib/locale/context';
-  import { trapDialogTab } from '$lib/ui/overlay';
+  import { preserveScrollOffset, trapDialogTab } from '$lib/ui/overlay';
   import { dialogViewport } from '$lib/ui/dialog-viewport';
   import { parseVehicleReference } from '$data/vehicle-reference';
   import { resolveImportUrl } from '$data/company';
@@ -23,25 +23,27 @@
   let error = $state('');
   let opened = false;
   let returnFocus: HTMLElement;
-  let scrollY = 0;
+  let releaseScroll: ((restoreScroll?: boolean) => void) | undefined;
 
   export async function edit(returnTo?: HTMLElement) {
     draft = { ...value };
     error = '';
     returnFocus = returnTo ?? trigger;
-    scrollY = window.scrollY;
-    document.body.style.setProperty('--dn-service-editor-scroll', `-${scrollY}px`);
+    if (!opened) releaseScroll = preserveScrollOffset('--dn-service-editor-scroll');
     opened = true;
     dialog.showModal();
     await tick();
+    if (!dialog?.open || !dialog.isConnected) return;
     form.querySelector<HTMLInputElement>('input')?.focus();
   }
-  function restore() {
+  function restore() { release(true); }
+
+  function release(restoreScroll: boolean) {
     if (!opened) return;
     opened = false;
-    document.body.style.removeProperty('--dn-service-editor-scroll');
-    window.scrollTo({ top: scrollY, behavior: 'instant' });
-    if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
+    releaseScroll?.(restoreScroll);
+    releaseScroll = undefined;
+    if (restoreScroll && returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
   }
   function save(event: SubmitEvent) {
     event.preventDefault();
@@ -54,7 +56,7 @@
     onapply(Object.fromEntries(Object.entries(draft).map(([key, text]) => [key, text.trim()])) as ServiceEntryDraft);
     dialog.close();
   }
-  onDestroy(() => { if (dialog?.open) dialog.close(); restore(); });
+  onDestroy(() => { release(false); if (dialog?.open) dialog.close(); });
 </script>
 
 <button {id} class="dn-service-entry__field dn-entry-field dn-entry-field--prominent" bind:this={trigger} type="button" onclick={() => edit()} aria-haspopup="dialog" aria-controls={`${id}-dialog`} aria-label={`${placeholder}${summary ? `: ${summary}` : ''}`} title={summary || placeholder}>

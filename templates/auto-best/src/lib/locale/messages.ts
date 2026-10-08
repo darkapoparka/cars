@@ -9,6 +9,8 @@ export type MessageParameters = Record<string, string | number>;
 export function message(locale: Locale, key: MessageKey, parameters: MessageParameters = {}): string {
   const pattern: string = (locale === 'bg' ? bg : en)[key];
   if (typeof pattern !== 'string') throw new Error(`Missing ${locale} message: ${key}`);
+  // Most labels have no interpolation; avoid allocating dealer values for each render.
+  if (!pattern.includes('{')) return pattern;
   const values: MessageParameters = {
     dealerName: localeContract.dealerName,
     dealerCity: dealerLabel(locale, 'city'),

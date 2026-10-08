@@ -13,7 +13,6 @@
     listingHiddenFields,
     removeListingFilter,
     listingFilterOptions,
-    parseListingFilters,
     type ListingFilters
   } from '$data/listing';
   import {

@@ -1027,9 +1027,9 @@
     "key": "m_38602fbd1ebc",
     "source": "Сподели заявката",
     "en": "Share enquiry",
-    "bg": "Споделете запитването",
+    "bg": "Сподели",
     "disposition": "translate",
-    "notes": "Public display copy. Source: auto-best/src/lib/components/company/TradeInEnquiry.svelte:252"
+    "notes": "Public display copy. Source: auto-best/src/lib/components/company/TradeInEnquiry.svelte:252 Compact Bulgarian action label: prevent truncation in the 320px review footer; sharing behavior and English copy unchanged."
   },
   {
     "key": "m_be7facad160c",
@@ -1467,9 +1467,9 @@
     "key": "m_7122ee6ded29",
     "source": "Изберете „Сподели запитването“ или копирайте текста към предпочитано приложение.",
     "en": "Choose “Share enquiry” or copy the text into your preferred app.",
-    "bg": "Изберете „Споделете запитването“ или копирайте текста в предпочитаното приложение.",
+    "bg": "Изберете „Сподели“ или копирайте текста в предпочитаното приложение.",
     "disposition": "translate",
-    "notes": "Public display copy. Source: auto-best/src/lib/components/company/VehicleEnquiry.svelte:233"
+    "notes": "Public display copy. Source: auto-best/src/lib/components/company/VehicleEnquiry.svelte:233 Keep the quoted instruction aligned with the compact Bulgarian share action."
   },
   {
     "key": "m_b745b0b76701",
@@ -1523,9 +1523,9 @@
     "key": "m_2aaec190e1b0",
     "source": "Сподели запитването",
     "en": "Share enquiry",
-    "bg": "Споделете запитването",
+    "bg": "Сподели",
     "disposition": "translate",
-    "notes": "Public display copy. Source: auto-best/src/lib/components/company/VehicleEnquiry.svelte:248"
+    "notes": "Public display copy. Source: auto-best/src/lib/components/company/VehicleEnquiry.svelte:248 Compact Bulgarian action label: prevent truncation in the 320px review footer; sharing behavior and English copy unchanged."
   },
   {
     "key": "m_5d82e4d122eb",

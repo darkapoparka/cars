@@ -103,11 +103,13 @@ Mobile listing badges use four equal cells and compact localized labels on one t
 | `npm run smoke:phase4` | Phase 4 discovery-draft, shell/navigation, focus, return-state and breakpoint contracts |
 | `npm run check:assets` | Static media and source-reference checks |
 | `npm run validate` | Architecture, CSS policy, tokens, typography, assets and domain checks followed by Svelte/type check and build |
-| `npm run quality` | Combined validation and browser suite chain |
+| `npm run check:dependencies` | Registry advisory audit; fail on high/critical vulnerabilities |
+| `npm run quality` | Validation/build, dependency audit, then smoke on a fresh owned preview |
+| `npm run smoke:preview` | Test the existing build on an automatically started/stopped loopback preview |
 | `npm run smoke` | Route/journey, enquiry and discovery browser suites |
 | `npm run check:domain` | Inventory, filter and journey/domain assertions |
 
-The exact command definitions are in [package.json](../package.json). `quality` composes existing scripts rather than starting the application server itself.
+The exact command definitions are in [package.json](../package.json). `quality` composes the existing suites and starts its own preview after the build. The operating system chooses a free loopback port; the runner checks readiness, stops on a failed suite and closes only its own server. It does not reuse `BASE_URL` or stop another preview. `smoke` still targets an explicitly supplied `BASE_URL`.
 
 ## Typical development checks
 
@@ -122,7 +124,7 @@ npm run build
 
 `validate` combines the static/domain/build stages defined in the package. Architecture checks examine native application boundaries; CSS policy checks enforce semantic selectors and centralized dealer theme ownership; token checks verify the shared reference graph and component aliases; asset checks compare public media with references; domain checks exercise actual TypeScript domain functions rather than separately reimplementing them.
 
-The standalone `check` script currently uses `--threshold error`; warnings are not automatically equivalent to a failed warning-free check. To inspect stricter diagnostics explicitly, run `npx svelte-check --tsconfig ./tsconfig.json --fail-on-warnings` after synchronization. Its `quality` chain is validation followed by smoke.
+The `check` script fails on Svelte errors and warnings. TypeScript also rejects unused locals and parameters. `quality` runs validation, the registry dependency audit and browser smoke on a fresh owned preview; no `BASE_URL` is required. For manually managed previews, build first, then start/restart the preview before running `smoke`. Rebuilding beneath a running preview can invalidate its loaded output. `validate` remains usable without registry access. The HTTP smoke checks security headers on localized pages, redirects, errors and rejected writes, without submitting enquiries.
 
 ## Browser setup
 
