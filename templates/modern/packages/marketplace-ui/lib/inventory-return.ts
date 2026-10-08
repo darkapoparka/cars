@@ -5,9 +5,11 @@ import {
 
 const storageKey = "modern-inventory-return-v1";
 const localePrefix = /^\/(bg|en)(?=\/)/;
-const inventoryHref =
-  /^\/(?:bg\/|en\/)?(?:cars|motorbikes|trucks|vans|lease)(?:\?|$)/;
-const inventoryPath = /^\/(?:bg\/|en\/)?(?:cars|motorbikes|trucks|vans|lease)$/;
+// Match the same canonical make/model slugs produced by getMakePath/getModelPath.
+const inventoryPath =
+  /^\/(?:bg\/|en\/)?(?:cars(?:\/[a-z0-9]+(?:-[a-z0-9]+)*){0,2}|motorbikes|trucks|vans|lease)$/;
+const isInventoryHref = (href: string) =>
+  inventoryPath.test(withoutBasePath(href).split("?")[0] ?? "");
 
 interface InventoryReturn {
   href: string;
@@ -26,7 +28,7 @@ export function readInventoryReturn(): InventoryReturn | null {
     if (
       !value ||
       typeof value.href !== "string" ||
-      !inventoryHref.test(withoutBasePath(value.href)) ||
+      !isInventoryHref(value.href) ||
       typeof value.listingPath !== "string" ||
       !Number.isFinite(value.scrollY) ||
       value.scrollY < 0
