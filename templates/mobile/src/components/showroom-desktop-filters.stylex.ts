@@ -54,8 +54,8 @@ export const desktopFilterStyles = stylex.create({
   overviewPanel: {
     display: 'flex',
     flexDirection: 'column',
-    gap: 16,
-    padding: 16,
+    gap: 8,
+    padding: 8,
     borderRadius: 16,
     backgroundColor: colors.stripe,
     minWidth: 0,
@@ -65,7 +65,6 @@ export const desktopFilterStyles = stylex.create({
     gridTemplateColumns: 'repeat(4,minmax(0,1fr))',
     gap: 8,
     alignItems: 'stretch',
-    padding: 8,
   },
   optionPanel: {
     padding: 7,
@@ -79,7 +78,6 @@ export const desktopFilterStyles = stylex.create({
     display: 'grid',
     gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
     gap: 0,
-    marginInline: -8,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
@@ -95,15 +93,12 @@ export const desktopFilterStyles = stylex.create({
     gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
     gap: 8,
     alignItems: 'stretch',
-    // Share the outer padding with the card inset to retain the control positions.
-    margin: -8,
   },
   fieldGroup: { display: 'flex', flexDirection: 'column', gap: 8, minWidth: 0 },
   fieldTitle: { fontSize: 15, fontWeight: 600, lineHeight: '22px' },
   makeSummary: {
     display: 'flex',
     alignItems: 'center',
-    gap: 16,
     padding: '10px 16px',
     minHeight: 64,
     borderWidth: 0,

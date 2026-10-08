@@ -20,7 +20,6 @@ import {
   type DesktopFilterFieldsProps,
 } from './ShowroomDesktopFilterFields';
 import { ShowroomDesktopFilterDialog } from './ShowroomDesktopFilterDialog';
-import { Icon } from './Icon';
 import { ui } from './ui';
 import { desktopFilterStyles as s } from './showroom-desktop-filters.stylex';
 
@@ -121,46 +120,63 @@ export function ShowroomDesktopFilters({
             <h3 {...stylex.props(ui.srOnly)}>{t('Search')}</h3>
             <ShowroomDesktopFilterFields {...fields} section="search" compact />
           </section>
-          <div data-desktop-filter-group="vehicle" {...stylex.props(s.overviewPanel)}>
-            <div
-              {...stylex.props(
-                s.makeModelSummary,
-                fields.draft.category !== 'car' && s.singleSummary,
-              )}
-            >
-              <button
-                type="button"
-                data-desktop-picker-open="make"
-                onClick={() => setEditingMake('make')}
-                {...stylex.props(s.makeSummary)}
+          <div data-desktop-filter-group="fields" {...stylex.props(s.overviewPanel)}>
+            <div data-desktop-filter-group="vehicle" {...stylex.props(s.fieldGroup)}>
+              <div
+                {...stylex.props(
+                  s.makeModelSummary,
+                  fields.draft.category !== 'car' && s.singleSummary,
+                )}
               >
-                <span {...stylex.props(s.makeSummaryCopy)}>
-                  <span {...stylex.props(s.fieldTitle)}>
-                    {t(fields.draft.category === 'car' ? 'Make' : 'Make & model')}
-                  </span>
-                  <span {...stylex.props(s.copy)}>{makeSummary}</span>
-                </span>
-                <Icon name="right" size={18} />
-              </button>
-              {fields.draft.category === 'car' && (
                 <button
                   type="button"
-                  data-desktop-picker-open="model"
-                  disabled={!modelReady}
-                  onClick={() => setEditingMake('model')}
-                  {...stylex.props(s.makeSummary, !modelReady && s.disabledSummary)}
+                  data-desktop-picker-open="make"
+                  onClick={() => setEditingMake('make')}
+                  {...stylex.props(s.makeSummary)}
                 >
                   <span {...stylex.props(s.makeSummaryCopy)}>
-                    <span {...stylex.props(s.fieldTitle)}>{t('Model')}</span>
-                    <span {...stylex.props(s.copy)}>{modelSummary}</span>
+                    <span {...stylex.props(s.fieldTitle)}>
+                      {t(fields.draft.category === 'car' ? 'Make' : 'Make & model')}
+                    </span>
+                    <span {...stylex.props(s.copy)}>{makeSummary}</span>
                   </span>
-                  <Icon name="right" size={18} />
                 </button>
-              )}
+                {fields.draft.category === 'car' && (
+                  <button
+                    type="button"
+                    data-desktop-picker-open="model"
+                    disabled={!modelReady}
+                    onClick={() => setEditingMake('model')}
+                    {...stylex.props(s.makeSummary, !modelReady && s.disabledSummary)}
+                  >
+                    <span {...stylex.props(s.makeSummaryCopy)}>
+                      <span {...stylex.props(s.fieldTitle)}>{t('Model')}</span>
+                      <span {...stylex.props(s.copy)}>{modelSummary}</span>
+                    </span>
+                  </button>
+                )}
+              </div>
+              <div {...stylex.props(s.overviewGrid)}>
+                {desktopFilterSections
+                  .filter(({ key }) => ['price', 'year', 'mileage'].includes(key))
+                  .map(({ key, label }) => (
+                    <section
+                      key={key}
+                      aria-label={t(label)}
+                      {...stylex.props(s.fieldGroup, s.optionPanel)}
+                    >
+                      <h3 {...stylex.props(s.fieldTitle)}>{t(label)}</h3>
+                      <ShowroomDesktopFilterFields {...fields} section={key} compact />
+                    </section>
+                  ))}
+              </div>
             </div>
-            <div {...stylex.props(s.overviewGrid)}>
+            <div
+              data-desktop-filter-group="specifications"
+              {...stylex.props(s.overviewOptions)}
+            >
               {desktopFilterSections
-                .filter(({ key }) => ['price', 'year', 'mileage'].includes(key))
+                .filter(({ key }) => ['fuel', 'transmission', 'body', 'condition'].includes(key))
                 .map(({ key, label }) => (
                   <section
                     key={key}
@@ -172,23 +188,6 @@ export function ShowroomDesktopFilters({
                   </section>
                 ))}
             </div>
-          </div>
-          <div
-            data-desktop-filter-group="specifications"
-            {...stylex.props(s.overviewPanel, s.overviewOptions)}
-          >
-            {desktopFilterSections
-              .filter(({ key }) => ['fuel', 'transmission', 'body', 'condition'].includes(key))
-              .map(({ key, label }) => (
-                <section
-                  key={key}
-                  aria-label={t(label)}
-                  {...stylex.props(s.fieldGroup, s.optionPanel)}
-                >
-                  <h3 {...stylex.props(s.fieldTitle)}>{t(label)}</h3>
-                  <ShowroomDesktopFilterFields {...fields} section={key} compact />
-                </section>
-              ))}
           </div>
         </div>
       ) : (
