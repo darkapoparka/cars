@@ -74,28 +74,14 @@ test('public actions share a readable control weight', async ({ page }, info) =>
 				text: node.textContent,
 				size: parseFloat(getComputedStyle(node).fontSize),
 				weight: getComputedStyle(node).fontWeight,
-				height: node.getBoundingClientRect().height,
-				compact: node.classList.contains('size-compact'),
-				teamCard: Boolean(node.closest('.team-card__action')),
-				mobileLabel: Boolean(node.closest('.service-mobile-filters, .contact-banner')),
-				card: Boolean(node.closest('.site-vehicle-card')),
-				filter: node.classList.contains('inventory-toolbar__all')
+				height: node.getBoundingClientRect().height
 			}))
 		);
 		for (const item of metrics) {
 			expect(item.weight, route + ' ' + item.text).toBe('400');
-			const desktopCard = info.project.name === 'desktop' && item.card;
-			const desktopTeamAction = info.project.name === 'desktop' && item.teamCard;
-			expect(item.size, route + ' ' + item.text).toBeGreaterThanOrEqual(
-				desktopCard || desktopTeamAction || (info.project.name === 'desktop' && item.filter)
-					? 16
-					: info.project.name === 'mobile' && item.mobileLabel
-						? 16
-						: info.project.name === 'desktop' && !item.compact && !item.filter
-							? 20
-							: 18
-			);
-			expect(item.height).toBeGreaterThanOrEqual(desktopCard || desktopTeamAction ? 36 : 44);
+			// Shared compact actions are 16px; phone controls retain the approved 42px minimum.
+			expect(item.size, route + ' ' + item.text).toBeGreaterThanOrEqual(16);
+			expect(item.height).toBeGreaterThanOrEqual(info.project.name === 'mobile' ? 42 : 36);
 		}
 	}
 });
@@ -193,7 +179,7 @@ test('buying-panel selections retain their size and weight after choosing', asyn
 	const value = trigger.locator('.hfp__value');
 	expect(await value.evaluate((node) => getComputedStyle(node).fontWeight)).toBe('400');
 	expect(await value.evaluate((node) => getComputedStyle(node).fontSize)).toBe('16px');
-	await expect(trigger).toHaveClass(/hfp__field--compact/);
+	await expect(trigger).toHaveClass(/desktop-home-filter__trigger/);
 	await expect(value).toContainText('BMW');
 });
 

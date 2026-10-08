@@ -14,8 +14,8 @@ test('homepage makes and models use the retained modal picker, not native select
 	const dialog = page.getByRole('dialog');
 	await expect(dialog).toBeVisible();
 	await expect(dialog.getByRole('searchbox')).toBeFocused();
-	await expect(dialog.locator('.hfp__chip img').first()).toBeVisible();
-	const make = dialog.locator('.hfp__chip').filter({ hasText: 'BMW' });
+	await expect(dialog.locator('img').first()).toBeVisible();
+	const make = dialog.getByRole('button', { name: /^BMW(?:\s|$)/ });
 	await make.click();
 	await expect(make).toHaveAttribute('aria-pressed', 'true');
 	await dialog.getByRole('button', { name: /^Готово/ }).click();
@@ -23,16 +23,19 @@ test('homepage makes and models use the retained modal picker, not native select
 	await fields.nth(1).click();
 	await expect(dialog).toBeVisible();
 	await dialog.getByRole('searchbox').fill('X5');
-	await dialog.locator('.hfp__row').first().click();
+	await dialog
+		.getByRole('button', { name: /^X5(?:\s|$)/ })
+		.first()
+		.click();
 	await dialog.getByRole('button', { name: /^Готово/ }).click();
 	await expect(page.locator('.home-hero input[name="q"]')).toHaveCount(1);
 	await fields.first().click();
 	await dialog.getByRole('button', { name: 'Изчисти', exact: true }).click();
-	await dialog.locator('.hfp__chip').filter({ hasText: 'Audi' }).click();
+	await dialog.getByRole('button', { name: /^Audi(?:\s|$)/ }).click();
 	await dialog.getByRole('button', { name: /^Готово/ }).click();
 	await expect(page.locator('.home-hero input[name="q"]')).toHaveCount(0);
 	await fields.nth(1).click();
-	await expect(dialog.locator('.hfp__row').filter({ hasText: 'X5' })).toHaveCount(0);
+	await expect(dialog.getByRole('button', { name: /^X5(?:\s|$)/ })).toHaveCount(0);
 	await page.keyboard.press('Escape');
 	await expect(fields.nth(1)).toBeFocused();
 	await page.locator('#home-query').click();

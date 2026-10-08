@@ -103,8 +103,15 @@ for (const width of [320, 390, 1440])
 				await expect(wizard.getByRole('alert')).toBeVisible();
 				if (mode === 'vin') await wizard.locator('#sell-flow-vin').fill('WBA12345678901234');
 				else {
-					await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
-					await wizard.locator('#sell-flow-model').fill('X5');
+					if (width < 768) {
+						await wizard.locator('#sell-mobile-make').click();
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await wizard.locator('#sell-mobile-model').click();
+						await wizard.getByRole('button', { name: 'X5', exact: true }).click();
+					} else {
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await wizard.locator('#sell-flow-model').fill('X5');
+					}
 				}
 				await wizard.locator('.sell-flow__next').click();
 				await wizard.locator('#sell-flow-phone').fill('+359000000000');
@@ -157,7 +164,7 @@ for (const width of [320, 390, 1440])
 			await form.locator('[name=name]').fill('Synthetic Verification');
 			await form.locator('[name=phone]').fill('+359000000000');
 			await form.locator('[name=email]').fill('synthetic@example.invalid');
-			await form
+			await (width < 768 ? page.getByRole('dialog') : form)
 				.getByRole('button', { name: english ? 'Send request' : 'Изпрати запитване', exact: true })
 				.click();
 			await expect(

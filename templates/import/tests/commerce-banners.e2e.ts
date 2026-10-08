@@ -86,7 +86,7 @@ for (const locale of ['en', 'bg'] as const) {
 					iconBarrels.push(request.url());
 			});
 			await visit(page, `/${locale}?lang=${locale}`);
-			const campaign = page.locator('.daynight-action-band--mobile .commerce-banner');
+			const campaign = page.locator('.home-mobile-editorial .commerce-banner');
 			await campaign.scrollIntoViewIfNeeded();
 			await expect(campaign).toBeVisible();
 			await expect
@@ -97,7 +97,7 @@ for (const locale of ['en', 'bg'] as const) {
 				)
 				.toBe(true);
 			expect(await campaign.getAttribute('href')).toContain('/contact');
-			const articles = page.locator('.home-news .article-card');
+			const articles = page.locator('.home-mobile-editorial .article-card');
 			await articles.first().scrollIntoViewIfNeeded();
 			for (const article of await articles.all()) {
 				await article.scrollIntoViewIfNeeded();

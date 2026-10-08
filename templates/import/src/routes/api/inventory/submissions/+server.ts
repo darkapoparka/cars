@@ -1,4 +1,4 @@
-import { sellSubmissionSchema } from '$lib/domain/vehicle-intake';
+import { sellSubmissionSchema } from '$lib/server/sell-submission';
 import { createInquiry } from '$lib/server/inquiries';
 import { runtimeConfig } from '$lib/server/runtime-config';
 import { errorJson, okJson, payloadString, readApiPayload } from '$lib/server/api';

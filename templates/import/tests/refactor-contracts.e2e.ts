@@ -80,8 +80,9 @@ test('desktop import country choices do not clip or need horizontal scrolling', 
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/import');
-	const countries = page.locator('.bc-import-wizard--embedded .bc-import-wizard__country-grid');
+	const countries = page.getByRole('group', { name: 'Пазар за покупка', exact: true });
 	await expect(countries).toBeVisible();
+	await expect(countries.getByRole('button')).toHaveCount(6);
 	expect(await countries.evaluate((element) => element.scrollWidth <= element.clientWidth)).toBe(
 		true
 	);

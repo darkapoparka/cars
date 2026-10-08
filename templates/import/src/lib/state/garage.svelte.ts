@@ -1,5 +1,6 @@
 import { createContext } from 'svelte';
 import { browser } from '$app/environment';
+import { base } from '$app/paths';
 import {
 	compareSlugsWith,
 	favoriteSlugsWith,
@@ -82,7 +83,7 @@ const syncGarageApi = async () => {
 		const headers: Record<string, string> = { 'content-type': 'application/json' };
 		if (role) headers['x-daynight-prototype-role'] = role;
 
-		await fetch('/api/account/garage', {
+		await fetch(base + '/api/account/garage', {
 			body: JSON.stringify({
 				compare: normalizeGarageSlugs(readGarageCompare(garageStorage())),
 				favorites: readGarageFavorites(garageStorage()),
@@ -157,14 +158,14 @@ export class GarageState {
 	toggleFavorite(slug: string) {
 		this.favorites = favoriteSlugsWith(this.favorites, slug);
 		writeGarageFavorites(garageStorage(), this.favorites);
-		syncGarageDom();
+		syncGarageDom(this.favorites, this.compare);
 		void syncGarageApi();
 	}
 
 	addCompare(slug: string) {
 		this.compare = compareSlugsWith(this.compare, slug);
 		writeGarageCompare(garageStorage(), this.compare);
-		syncGarageDom();
+		syncGarageDom(this.favorites, this.compare);
 		void syncGarageApi();
 	}
 
@@ -176,7 +177,7 @@ export class GarageState {
 	removeCompare(slug: string) {
 		this.compare = this.compare.filter((item) => item !== slug);
 		writeGarageCompare(garageStorage(), this.compare);
-		syncGarageDom();
+		syncGarageDom(this.favorites, this.compare);
 		void syncGarageApi();
 	}
 
@@ -198,7 +199,7 @@ export class GarageState {
 	clearCompare() {
 		this.compare = [];
 		writeGarageCompare(garageStorage(), this.compare);
-		syncGarageDom();
+		syncGarageDom(this.favorites, this.compare);
 		void syncGarageApi();
 	}
 

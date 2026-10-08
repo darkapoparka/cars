@@ -59,6 +59,9 @@ for (const locale of ['bg', 'en']) {
 		test.skip(info.project.name !== 'mobile');
 		await visit(page, `/account/listings/new?lang=${locale}`);
 		let form = page.locator('[data-mobile-listing-form]');
+		await form
+			.getByRole('button', { name: english ? 'Enter manually' : 'Въведи ръчно', exact: true })
+			.click();
 		const title = `Mobile finalization ${locale} ${Date.now()}`;
 		await expect(form.getByLabel(nameLabel)).toHaveValue('');
 		await form.getByLabel(nameLabel).fill(title);
@@ -145,6 +148,7 @@ test('finalize: invalid uploads leave the draft form intact without creating a r
 	await visit(page, '/account/listings/new?lang=en');
 	const form = page.locator('[data-mobile-listing-form]');
 	const title = `Rejected upload ${Date.now()}`;
+	await form.getByRole('button', { name: 'Enter manually', exact: true }).click();
 	await form.getByRole('button', { name: 'Save draft', exact: true }).click();
 	await expect(form.getByLabel('Make and model')).toBeFocused();
 	await form.getByLabel('Make and model').fill(title);

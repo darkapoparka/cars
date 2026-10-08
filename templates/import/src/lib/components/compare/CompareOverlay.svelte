@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { untrack } from 'svelte';
 	import { beforeNavigate, preloadData, pushState } from '$app/navigation';
 	import { routeParts } from '$lib/locale/core';
 	import { getGarageContext } from '$lib/state/garage.svelte';
@@ -15,7 +16,7 @@
 	let trigger: HTMLElement | null = null;
 	let previousPageFocus: HTMLElement | null = null;
 	let nativePageNavigation = false;
-	let requestedURL: URL | undefined;
+	let requestedURL = $state<URL>();
 	let requestSequence = 0;
 
 	function isCompareEntry(url: URL) {
@@ -95,7 +96,14 @@
 		}
 		requestedURL = navigation.to.url;
 		pushState('', { ...page.state, __bcCompareDialog: historyId });
-		void loadCards();
+	});
+	// Shallow Back/Forward changes page state without another beforeNavigate handoff.
+	$effect(() => {
+		if (!open || !requestedURL) return;
+		untrack(() => void loadCards());
+		return () => {
+			requestSequence += 1;
+		};
 	});
 	function restoreFocus(event: Event) {
 		event.preventDefault();

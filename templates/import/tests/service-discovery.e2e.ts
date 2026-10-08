@@ -35,6 +35,16 @@ const copy = {
 	}
 } as const;
 
+async function openPreference(page: Page, label: string) {
+	await page.locator('.import-browse__countries > button').click();
+	await page.getByRole('dialog').getByRole('button', { name: label, exact: true }).click();
+}
+
+async function openSourceRequest(page: Page) {
+	await page.locator('#import-mode-source').click();
+	await page.locator('#import-entry-panel button').click();
+}
+
 async function accessible(page: Page) {
 	const result = await new AxeBuilder({ page })
 		.withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])
@@ -57,7 +67,7 @@ for (const width of [320, 390]) {
 			await expect(page.getByRole('link', { name: 'Browse all', exact: true })).not.toBeVisible();
 			expect(
 				await page
-					.locator('.import-browse__pills button')
+					.locator('.import-browse__countries a')
 					.evaluateAll((buttons) =>
 						buttons.every(
 							(button) =>
@@ -66,7 +76,7 @@ for (const width of [320, 390]) {
 					)
 			).toBe(true);
 			await accessible(page);
-			await page.getByRole('button', { name: c.country, exact: true }).click();
+			await openPreference(page, c.country);
 			const country = page.getByRole('dialog', { name: c.country, exact: true });
 			await country.getByRole('button', { name: c.germany, exact: true }).click();
 			await expect(country.getByRole('button', { name: c.germany, exact: true })).toHaveAttribute(
@@ -83,7 +93,7 @@ for (const width of [320, 390]) {
 				[c.make, 'make', 'BMW'],
 				[c.model, 'model', 'X5']
 			]) {
-				await page.getByRole('button', { name: label, exact: true }).click();
+				await openPreference(page, label);
 				const dialog = page.getByRole('dialog', { name: label, exact: true });
 				await dialog.getByRole('button', { name: value, exact: true }).click();
 				await dialog.getByRole('button', { name: c.apply, exact: true }).click();
@@ -95,19 +105,16 @@ for (const width of [320, 390]) {
 			for (const card of await matches.all()) {
 				await expect(card.getByRole('heading')).toContainText('BMW X5');
 			}
-			await page.getByRole('button', { name: c.find, exact: true }).click();
+			await openSourceRequest(page);
 			const request = page.getByRole('dialog');
-			await expect(request.getByLabel(c.make, { exact: true })).toHaveValue('BMW');
-			await expect(request.getByLabel(c.model, { exact: true })).toHaveValue('X5');
-			await expect(request.getByRole('combobox', { name: c.type, exact: true })).toHaveValue('SUV');
-			await expect(request.getByRole('button', { name: c.germany, exact: true })).toHaveAttribute(
-				'aria-pressed',
-				'true'
-			);
+			await expect(request.locator('[id^="import-wizard-make-"]')).toContainText('BMW');
+			await expect(request.locator('[id^="import-wizard-model-"]')).toContainText('X5');
+			await expect(request.locator('[id^="import-wizard-type-"]')).toContainText('SUV');
+			await expect(request.locator('[id^="import-wizard-country-"]')).toContainText(c.germany);
 			await accessible(page);
 			await request.getByRole('button', { name: c.close, exact: true }).click();
 			await expect(request).not.toBeVisible();
-			await expect(page.getByRole('button', { name: c.find, exact: true })).toBeFocused();
+			await expect(page.locator('#import-entry-panel button')).toBeFocused();
 			expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
 				true
 			);
@@ -135,7 +142,7 @@ for (const width of [320, 390]) {
 				await page.getByRole('button', { name: c.valuation, exact: true }).click();
 				const dialog = page.getByRole('dialog');
 				if (manual) {
-					await expect(dialog.getByRole('group', { name: c.make, exact: true })).toBeVisible();
+					await expect(dialog.locator('#sell-mobile-make')).toBeVisible();
 					await expect(dialog.getByLabel('VIN', { exact: true })).not.toBeVisible();
 				} else {
 					await expect(dialog.getByLabel('VIN', { exact: true })).toBeVisible();
@@ -155,24 +162,26 @@ test('Import picker back, empty requests, model reset and changed-criteria draft
 }, info) => {
 	test.skip(info.project.name !== 'mobile');
 	await visit(page, '/en/import?make=BMW&model=X5');
-	const country = page.getByRole('button', { name: 'Country', exact: true });
-	await country.click();
+	const country = page.locator('.import-browse__countries > button');
+	await openPreference(page, 'Country');
 	await page.goBack();
 	await expect(page.getByRole('dialog')).not.toBeVisible();
 	await expect(country).toBeFocused();
-	await page.getByRole('button', { name: 'Find this car', exact: true }).click();
+	await openSourceRequest(page);
 	const request = page.getByRole('dialog');
-	await request.getByLabel('Model', { exact: true }).fill('draft model');
+	await request.locator('[id^="import-wizard-model-"]').click();
+	await request.getByRole('searchbox').fill('draft model');
+	await request.getByRole('button', { name: 'Use “draft model”', exact: true }).click();
 	await request.getByRole('button', { name: 'Close', exact: true }).click();
 	await expect(request).not.toBeVisible();
-	await page.getByRole('button', { name: 'Make: BMW', exact: true }).click();
+	await openPreference(page, 'Make: BMW');
 	const make = page.getByRole('dialog', { name: 'Make', exact: true });
 	await make.getByRole('button', { name: 'Audi', exact: true }).click();
 	await make.getByRole('button', { name: 'Apply', exact: true }).click();
 	await expect(page).toHaveURL(
 		(url) => url.searchParams.get('make') === 'Audi' && !url.searchParams.has('model')
 	);
-	await page.getByRole('button', { name: 'Model', exact: true }).click();
+	await openPreference(page, 'Model');
 	const model = page.getByRole('dialog', { name: 'Model', exact: true });
 	await model.getByRole('searchbox', { name: 'Model', exact: true }).fill('custom future model');
 	await model.getByRole('button', { name: 'Apply', exact: true }).click();
@@ -180,12 +189,15 @@ test('Import picker back, empty requests, model reset and changed-criteria draft
 	await expect(
 		page.getByRole('heading', { name: 'Nothing in stock matches yet.', exact: true })
 	).toBeVisible();
-	await page.getByRole('button', { name: 'Find this car', exact: true }).click();
-	await expect(request.getByLabel('Make', { exact: true })).toHaveValue('Audi');
-	await expect(request.getByLabel('Model', { exact: true })).toHaveValue('custom future model');
+	await openSourceRequest(page);
+	await expect(request.locator('[id^="import-wizard-make-"]')).toContainText('Audi');
+	await expect(request.locator('[id^="import-wizard-model-"]')).toContainText(
+		'custom future model'
+	);
 	await request.getByRole('button', { name: 'Close', exact: true }).click();
 	await expect(request).not.toBeVisible();
-	await page.getByRole('link', { name: 'Reset', exact: true }).click();
+	await page.locator('.import-browse__countries > button').click();
+	await page.getByRole('dialog').getByRole('button', { name: 'Reset', exact: true }).click();
 	await expect(page).toHaveURL(
 		(url) => !url.searchParams.has('make') && !url.searchParams.has('model')
 	);

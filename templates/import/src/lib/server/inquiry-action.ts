@@ -1,5 +1,6 @@
 import { fail, type Action } from '@sveltejs/kit';
-import { inquirySubmissionSchema, type InquiryReceipt } from '$lib/domain/inquiry';
+import type { InquiryReceipt } from '$lib/domain/inquiry';
+import { inquirySubmissionSchema } from './inquiry-validation';
 import { readApiPayload, payloadString } from './api';
 import { createInquiry } from './inquiries';
 import { hasInquiryDatabase } from './inquiry-config';

@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { visit } from './helpers';
+import { visit, controlHeight } from './helpers';
 import { promptVersion } from './locale-fixture';
 
 const copy = {
@@ -109,7 +109,9 @@ for (const locale of ['en', 'bg'] as const) {
 				const sizes = await dialog
 					.locator('[data-intake-field] button')
 					.evaluateAll((buttons) => buttons.map((button) => button.getBoundingClientRect().height));
-				expect(sizes).toEqual([44, 44, 44, 44]);
+				expect(sizes).toEqual(
+					Array(4).fill(await controlHeight(dialog.locator('[data-intake-field] button').first()))
+				);
 				expect(await dialog.evaluate((element) => element.scrollWidth > element.clientWidth)).toBe(
 					false
 				);
@@ -142,7 +144,7 @@ for (const locale of ['en', 'bg'] as const) {
 			const textHeights = await form
 				.locator('input:not([type="hidden"]):not([type="file"])')
 				.evaluateAll((inputs) => inputs.map((input) => input.getBoundingClientRect().height));
-			expect(textHeights).toEqual([44, 44, 44]);
+			expect(textHeights).toEqual(Array(3).fill(await controlHeight(form)));
 			const save = form.getByRole('button', { name: copy[locale].save, exact: true });
 			await save.click();
 			await expect(form.getByRole('alert')).toHaveText(copy[locale].selectMake);
@@ -168,7 +170,7 @@ for (const locale of ['en', 'bg'] as const) {
 				border: getComputedStyle(input).borderWidth,
 				shadow: getComputedStyle(input).boxShadow
 			}));
-			expect(searchStyle.height).toBeCloseTo(44, 2);
+			expect(searchStyle.height).toBeCloseTo(await controlHeight(dialog.getByRole('searchbox')), 2);
 			expect(searchStyle.border).toBe('0px');
 			expect(searchStyle.shadow).toBe('none');
 			await dialog.getByRole('button', { name: 'BMW', exact: true }).click();

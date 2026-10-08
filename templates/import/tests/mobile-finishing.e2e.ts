@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { visit } from './helpers';
+import { visit, controlHeight } from './helpers';
 
 test.skip(({ isMobile }) => !isMobile, 'Mobile finishing regressions');
 
@@ -49,7 +49,9 @@ for (const locale of ['en', 'bg']) {
 			});
 			expect(geometry.contained).toBe(true);
 			expect(geometry.separated).toBe(true);
-			expect(geometry.editHeight).toBeGreaterThanOrEqual(44);
+			expect(geometry.editHeight).toBeGreaterThanOrEqual(
+				await controlHeight(summary.getByRole('button'))
+			);
 			expect(geometry.overflow).toBeLessThanOrEqual(1);
 			await summary.getByRole('button').click();
 			await expect(wizard.locator('#sell-flow-vin')).toHaveValue(vin);

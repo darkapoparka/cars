@@ -9,7 +9,7 @@ import { errorJson, okJson, payloadString, readApiPayload } from '$lib/server/ap
 import { requireDayNightApiAccess } from '$lib/server/api-auth';
 import { normalizeDayNightRole } from '$lib/server/roles';
 import type { ApiPayload } from '$lib/server/api';
-import { inquirySubmissionSchema as submissionSchema } from '$lib/domain/inquiry';
+import { inquirySubmissionSchema as submissionSchema } from '$lib/server/inquiry-validation';
 import { hasInquiryDatabase } from '$lib/server/inquiry-config';
 import { serviceRequestSchema, serviceRequestInquiry } from '$lib/domain/service-request';
 

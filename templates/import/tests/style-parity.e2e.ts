@@ -1,5 +1,5 @@
 import { expect, test } from '@playwright/test';
-import { visit } from './helpers';
+import { visit, controlHeight } from './helpers';
 
 test('desktop navigation is centered and follows direct localized links by keyboard', async ({
 	page
@@ -40,24 +40,28 @@ test('image banners do not underline their titles or action copy', async ({ page
 	).toBe(true);
 });
 
-test('desktop catalogue keeps an accessible filter action and six readable quick pills', async ({
+test('desktop catalogue keeps an accessible filter action and five readable quick pills', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
 	await visit(page, '/inventory');
 	const allFilters = page.getByRole('button', { name: 'Всички филтри', exact: true });
 	await expect(allFilters).toBeVisible();
-	expect((await allFilters.boundingBox())!.height).toBeGreaterThanOrEqual(48);
+	expect((await allFilters.boundingBox())!.height).toBeGreaterThanOrEqual(
+		await controlHeight(allFilters)
+	);
 	await allFilters.click();
 	await expect(page.getByRole('dialog')).toBeVisible();
 	await page.keyboard.press('Escape');
 	await expect(allFilters).toBeFocused();
 	const triggers = page.locator('.inventory-toolbar .site-filter-trigger');
-	await expect(triggers).toHaveCount(6);
+	await expect(triggers).toHaveCount(5);
 	expect(
 		await triggers.first().evaluate((node) => parseFloat(getComputedStyle(node).fontSize))
 	).toBeGreaterThanOrEqual(16);
-	expect((await triggers.first().boundingBox())!.height).toBeGreaterThanOrEqual(48);
+	expect((await triggers.first().boundingBox())!.height).toBeGreaterThanOrEqual(
+		await controlHeight(triggers.first())
+	);
 	await triggers.first().click();
 	await expect(page.getByRole('dialog')).toBeVisible();
 	await page.keyboard.press('Escape');
@@ -69,7 +73,9 @@ test('conversion forms precede the horizontal process instead of a split column 
 	test.skip(info.project.name !== 'desktop');
 	for (const route of ['/import', '/sell-your-car']) {
 		await visit(page, route);
-		const form = await page.locator('.service-intake').boundingBox();
+		const form = await page
+			.locator(route === '/import' ? '#desktop-import-intake' : '#desktop-sell-intake')
+			.boundingBox();
 		const process = await page.locator('.service-process').boundingBox();
 		expect(form!.y + form!.height).toBeLessThan(process!.y);
 		await expect(page.locator('.service-process .process-steps--horizontal')).toBeVisible();

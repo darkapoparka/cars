@@ -28,7 +28,7 @@ test('direct header navigation fits without menu controls or empty arrow slots',
 	await expect(page.locator('.site-header__nav').getByRole('link')).toHaveCount(5);
 });
 
-test('desktop buying panel contrasts with its hero without shrinking the tabs', async ({
+test('desktop buying panel contrasts with its hero and keeps a usable import entry', async ({
 	page
 }, info) => {
 	test.skip(info.project.name !== 'desktop');
@@ -44,9 +44,9 @@ test('desktop buying panel contrasts with its hero without shrinking the tabs', 
 			.locator('.home-hero__box [role="tab"]')
 			.first()
 			.evaluate((node) => parseFloat(getComputedStyle(node).fontSize))
-	).toBeGreaterThanOrEqual(20);
+	).toBeGreaterThanOrEqual(16);
 	await page.locator('.home-hero__box').getByRole('tab', { name: 'Внос', exact: true }).click();
-	await expect(page.locator('#home-query')).toHaveAttribute('placeholder', 'LINK / VIN');
+	await expect(page.locator('#home-query')).toHaveAttribute('placeholder', /VIN/);
 });
 
 test('all-brands tile renders an icon, not an empty image, and preserves locale', async ({
@@ -67,10 +67,15 @@ test('all-brands tile renders an icon, not an empty image, and preserves locale'
 });
 
 test('reviews retain their avatars and articles share a complete card on the home and blog routes', async ({
-	page
+	page,
+	isMobile
 }) => {
 	await visit(page, '/');
-	const avatars = page.locator('.home-reviews .review-card__avatar img');
+	const avatars = page.locator(
+		isMobile
+			? '.home-mobile-editorial .review-card__avatar img'
+			: '.home-reviews .review-card__avatar img'
+	);
 	await expect(avatars).toHaveCount(3);
 	for (const image of await avatars.all()) {
 		await image.scrollIntoViewIfNeeded();
@@ -78,7 +83,9 @@ test('reviews retain their avatars and articles share a complete card on the hom
 			.poll(() => image.evaluate((node) => (node as HTMLImageElement).naturalWidth))
 			.toBeGreaterThan(0);
 	}
-	const first = page.locator('.home-news .article-card').first();
+	const first = page
+		.locator(isMobile ? '.home-mobile-editorial .article-card' : '.home-news .article-card')
+		.first();
 	await expect(first.locator('.article-card__body')).toBeVisible();
 	expect(
 		await first

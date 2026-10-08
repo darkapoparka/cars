@@ -1,6 +1,6 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
-import { visit } from './helpers';
+import { visit, controlHeight } from './helpers';
 
 test.skip(({ isMobile }) => !isMobile, 'Mobile intake and enquiry treatment');
 
@@ -13,7 +13,7 @@ async function fixedAction(page: Page, dialog: Locator) {
 		await dialog
 			.locator('.bc-mobile-sheet__footer button')
 			.evaluate((node) => Math.round(node.getBoundingClientRect().height))
-	).toBe(44);
+	).toBe(await controlHeight(dialog.locator('.bc-mobile-sheet__footer button')));
 	expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
 		true
 	);
@@ -66,7 +66,11 @@ for (const locale of ['en', 'bg'] as const) {
 					rows: new Set(nodes.map((node) => Math.round(node.getBoundingClientRect().top))).size,
 					heights: nodes.map((node) => Math.round(node.getBoundingClientRect().height))
 				}))
-			).toEqual({ count: 2, rows: 1, heights: [44, 44] });
+			).toEqual({
+				count: 2,
+				rows: 1,
+				heights: Array(2).fill(await controlHeight(wizard.locator('fieldset button').first()))
+			});
 			await fuel.click();
 			await wizard
 				.getByRole('button', { name: locale === 'en' ? 'Any fuel' : 'Без значение', exact: true })

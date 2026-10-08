@@ -42,13 +42,13 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={base + site.identity.favicon} type="image/svg+xml" />
+	<link rel="icon" href={base + site.identity.favicon} />
 	{#if nativeSite}
 		<!-- Discover desktop text faces before the stylesheet to shorten the fallback-font flash. -->
 		{#each ['Regular', 'SemiBold', 'Bold'] as weight (weight)}
 			<link
 				rel="preload"
-				href={`/fonts/sofia-sans/SofiaSans-${weight}.latin.woff2`}
+				href={`${base}/fonts/sofia-sans/SofiaSans-${weight}.latin.woff2`}
 				as="font"
 				type="font/woff2"
 				crossorigin="anonymous"
@@ -57,7 +57,7 @@
 			{#if page.data.locale !== 'en'}
 				<link
 					rel="preload"
-					href={`/fonts/sofia-sans/SofiaSans-${weight}.cyrillic.woff2`}
+					href={`${base}/fonts/sofia-sans/SofiaSans-${weight}.cyrillic.woff2`}
 					as="font"
 					type="font/woff2"
 					crossorigin="anonymous"

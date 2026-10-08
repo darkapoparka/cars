@@ -11,7 +11,8 @@ for (const locale of ['bg', 'en']) {
 			await page.setViewportSize({ width, height: 844 });
 			await visit(page, `/account/listings?lang=${locale}`);
 			const listings = page.locator('[data-mobile-account-listings]');
-			const cards = listings.locator('[data-mobile-submission-id]');
+			// Other form journeys legitimately add submissions to the shared preview server.
+			const cards = listings.locator('[data-mobile-submission-id^="submission-seed-"]');
 			const search = listings.getByRole('searchbox');
 			const sort = listings.getByRole('combobox', {
 				name: locale === 'en' ? 'Sort your cars' : 'Подреди автомобилите'

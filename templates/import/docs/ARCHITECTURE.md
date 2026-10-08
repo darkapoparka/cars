@@ -168,6 +168,15 @@ Customer listing create/edit pages use `MobileAccountListingForm.svelte` below 7
 
 ## Preview and live are different capabilities
 
+Public inquiry and sell-submission schemas live in `server/inquiry-validation.ts`
+and `server/sell-submission.ts`. Browser receipt copy and VIN/reference helpers
+retain their domain owners; payload types are inferred through type-only imports.
+Services keeps its shared client validation. Garage mutations project the current
+in-memory selection into compatibility controls even when browser persistence
+fails. Compare data loading follows its shallow-history open state and invalidates
+obsolete requests when the overlay closes. Garage API and font preload URLs respect
+the configured application base path.
+
 TEMPLATE_MODE defaults to preview. Database and AI credentials alone cannot enable live features. Preview stores synthetic requests and never claims notification delivery. Live inquiry storage requires its explicit configuration; storage failures do not silently fall back to demos.
 
 The file-backed CMS and uploads are demonstration features. Live-mode gates apply to both page actions and the filesystem service, not only JSON endpoints. Staff forms and public API parsing have bounded request sizes. Upload filename extensions must agree with the allowed media family. This is not a production malware-scanning or private-document service.
