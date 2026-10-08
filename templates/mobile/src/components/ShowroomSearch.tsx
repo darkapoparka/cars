@@ -38,7 +38,7 @@ const s = stylex.create({
     borderWidth: { default: 1, '@media (min-width: 1024px)': 0 },
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: { default: controlShape.pill, '@media (max-width: 699px)': controlShape.field },
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: colors.background,
       ':active': colors.stripe,
@@ -60,7 +60,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: { default: controlShape.pill, '@media (max-width: 699px)': controlShape.field },
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.background, ':active': colors.stripe },
     boxShadow: '0 2px 8px rgba(27,27,33,.10), 0 1px 2px rgba(27,27,33,.04)',
   },

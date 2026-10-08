@@ -106,7 +106,7 @@ search and category navigation.
 Tab rails use the same page
 or sheet surface token. No route adds its own neutral palette. The centered desktop
 frame keeps the white page token, with the existing stripe token outside it.
-Phone search uses the existing 16px field corners around its raised 48px target.
+Phone search keeps the shared pill shape around its raised 48px target.
 Home and Services category rails use a quieter lower shadow, retaining their
 active underline. Quick-filter pills use the existing stronger line token below
 700px, separating their white faces from the white rail without a gray fill.
