@@ -143,6 +143,7 @@ export function ShowroomDesktopFilterFields({
             availableMakes={[...new Set(stock.map((vehicle) => vehicle.make))]}
             filters={draft}
             onChange={onChange}
+            onClose={onClose}
             view="makes"
             onChooseMake={onChooseMake}
             dropdown={dropdown}
@@ -163,6 +164,7 @@ export function ShowroomDesktopFilterFields({
             availableMakes={[...new Set(stock.map((vehicle) => vehicle.make))]}
             filters={draft}
             onChange={onChange}
+            onClose={onClose}
             view="models"
             onBackToMakes={onBackToMakes}
             dropdown={dropdown}

@@ -40,7 +40,7 @@ export const desktopMakeModelStyles = stylex.create({
     gap: { default: 8, '@media (max-height: 700px)': 6, '@media (max-height: 600px)': 6 },
   },
   dropdownModelContent: { display: 'flex', flexDirection: 'column', flex: '0 1 auto' },
-  dropdownModelHeader: {
+  dropdownHeader: {
     display: 'grid',
     gridTemplateColumns: 'minmax(0,1fr) minmax(0,340px) minmax(0,1fr)',
     alignItems: 'center',
@@ -48,7 +48,22 @@ export const desktopMakeModelStyles = stylex.create({
     flexShrink: 0,
     minHeight: 40,
   },
-  modelHeaderSearch: { gridColumn: 2, minWidth: 0 },
+  headerSearch: { gridColumn: 2, minWidth: 0 },
+  dropdownClose: {
+    gridColumn: 3,
+    justifySelf: 'end',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    padding: 0,
+    borderWidth: 0,
+    borderRadius: 8,
+    color: colors.text,
+    backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
+    outlineColor: colors.text,
+  },
   moreFilters: {
     minHeight: 40,
     padding: '8px 12px',

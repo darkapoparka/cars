@@ -35,6 +35,7 @@ export function ShowroomDesktopMakeModel({
   onChange,
   onChooseMake,
   onBackToMakes,
+  onClose,
   compact = false,
   view = 'split',
   dropdown = false,
@@ -49,6 +50,7 @@ export function ShowroomDesktopMakeModel({
   onChange: (patch: Partial<Filters>) => void;
   onChooseMake?: () => void;
   onBackToMakes?: () => void;
+  onClose?: () => void;
   compact?: boolean;
   view?: 'split' | 'makes' | 'models';
   dropdown?: boolean;
@@ -166,6 +168,21 @@ export function ShowroomDesktopMakeModel({
     } else remove(name);
   }
 
+  function closeButton() {
+    return onClose ? (
+      <button
+        type="button"
+        data-desktop-picker-close
+        aria-label={t('Close filters')}
+        title={t('Close filters')}
+        onClick={onClose}
+        {...stylex.props(s.dropdownClose)}
+      >
+        <Icon name="close" size={18} />
+      </button>
+    ) : null;
+  }
+
   function searchField(kind: 'make' | 'model') {
     const model = kind === 'model';
     const value = model ? modelQuery : makeQuery;
@@ -252,7 +269,14 @@ export function ShowroomDesktopMakeModel({
             {t('Makes')}
           </h3>
         </div>
-        {searchField('make')}
+        {dropdown ? (
+          <div data-desktop-make-header {...stylex.props(s.dropdownHeader)}>
+            <div {...stylex.props(s.headerSearch)}>{searchField('make')}</div>
+            {closeButton()}
+          </div>
+        ) : (
+          searchField('make')
+        )}
         <div
           data-desktop-make-list
           {...stylex.props(
@@ -377,7 +401,7 @@ export function ShowroomDesktopMakeModel({
         )}
       >
         {dropdown && (
-          <div data-desktop-model-header {...stylex.props(s.dropdownModelHeader)}>
+          <div data-desktop-model-header {...stylex.props(s.dropdownHeader)}>
             {onBackToMakes && (
               <button
                 type="button"
@@ -392,7 +416,8 @@ export function ShowroomDesktopMakeModel({
                 {t('Makes')}
               </button>
             )}
-            <div {...stylex.props(s.modelHeaderSearch)}>{searchField('model')}</div>
+            <div {...stylex.props(s.headerSearch)}>{searchField('model')}</div>
+            {closeButton()}
           </div>
         )}
         {single && selections.length > 1 && (
