@@ -2,6 +2,7 @@
 import { useLocale } from '@/lib/use-locale';
 import { useRef, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
 const s = stylex.create({
@@ -75,7 +76,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 8,
+    borderRadius: controlShape.field,
     minHeight: 44,
     paddingBlock: 10,
     backgroundColor: colors.controlSurface,
@@ -101,13 +102,13 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: 12,
+    borderRadius: controlShape.field,
     backgroundColor: colors.background,
   },
   groupedField: {
     minHeight: 52,
     borderWidth: 0,
-    borderRadius: 10,
+    borderRadius: controlShape.field,
     backgroundColor: 'transparent',
   },
   groupedEnd: {
@@ -125,7 +126,7 @@ const s = stylex.create({
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
     minHeight: 64,
-    borderRadius: 12,
+    borderRadius: controlShape.field,
     borderColor: colors.line,
     backgroundColor: {
       default: colors.controlSurface,

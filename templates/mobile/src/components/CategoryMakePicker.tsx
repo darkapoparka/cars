@@ -2,6 +2,7 @@
 import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { nativeMakesFor } from '@/lib/native-taxonomy';
 import { applyMakeSelection, removeMakeSelection } from '@/lib/make-selection';
@@ -20,7 +21,7 @@ const s = stylex.create({
     paddingInline: 16,
     paddingTop: 16,
   },
-  embeddedInput: { fontSize: 16, height: 48, borderRadius: 12 },
+  embeddedInput: { fontSize: 16, height: 48, borderRadius: controlShape.pill },
   title: {
     fontFamily: 'var(--font-base)',
     fontSize: 20,

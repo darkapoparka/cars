@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -158,7 +159,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 8,
+    borderRadius: controlShape.field,
     padding: 12,
   },
 });

@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 // These fields are shared by the desktop hero and its vehicle-type selector.
@@ -14,7 +15,7 @@ export const desktopSearchStyles = stylex.create({
     paddingInline: 16,
     paddingBlock: 6,
     borderWidth: 0,
-    borderRadius: 28,
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: colors.controlSurface,
       ':hover': colors.surface,

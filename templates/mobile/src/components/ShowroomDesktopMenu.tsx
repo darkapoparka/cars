@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ChevronRight, Menu, X } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import { useAppState } from '@/lib/store';
 import { showroomInventoryHref } from '@/lib/showroom';
@@ -49,7 +50,7 @@ const s = stylex.create({
     borderWidth: 0,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 24,
+    borderRadius: controlShape.circle,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     color: colors.text,
     fontSize: 14,
@@ -96,7 +97,7 @@ const s = stylex.create({
     minHeight: 48,
     paddingBlock: 8,
     paddingInline: 12,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     color: colors.text,
     fontSize: 15,

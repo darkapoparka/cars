@@ -3,6 +3,7 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import type { VehicleCategory } from '@/lib/types';
 import { showroomCategories, showroomCategory } from '@/lib/showroom';
 import { useLocale } from '@/lib/use-locale';
@@ -41,7 +42,7 @@ const s = stylex.create({
     paddingInline: 12,
     paddingBlock: 8,
     borderWidth: 0,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     color: colors.text,
     fontSize: 15,

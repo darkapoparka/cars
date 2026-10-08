@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { IconButton } from './ui';
 import type { IconName } from './Icon';
@@ -76,7 +77,7 @@ const s = stylex.create({
     justifyContent: 'center',
     width: 48,
     height: 48,
-    borderRadius: 24,
+    borderRadius: controlShape.circle,
     color: 'inherit',
     textDecoration: 'none',
   },

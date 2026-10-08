@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
@@ -57,7 +58,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 8,
+    borderRadius: controlShape.field,
     backgroundColor: colors.background,
     color: colors.text,
     fontSize: { default: 14, '@media (max-width: 699px)': 16 },
@@ -114,7 +115,7 @@ const s = stylex.create({
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 20,
+    borderRadius: controlShape.pill,
     backgroundColor: colors.background,
     padding: 5,
     display: 'flex',
@@ -126,7 +127,7 @@ const s = stylex.create({
     backgroundColor: colors.deepPurple,
     justifyContent: 'flex-end',
   },
-  dot: { width: 16, height: 16, borderRadius: '50%', backgroundColor: '#818592' },
+  dot: { width: 16, height: 16, borderRadius: controlShape.circle, backgroundColor: '#818592' },
   dotOn: { backgroundColor: '#fff' },
   footer: {
     position: { default: 'fixed', '@media (max-width: 699px)': 'static' },
@@ -150,7 +151,7 @@ const s = stylex.create({
   action: {
     minHeight: 44,
     paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
-    borderRadius: { default: 8, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
   },
   consent: {
     padding: 16,

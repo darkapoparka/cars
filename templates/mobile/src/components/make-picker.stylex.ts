@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 export const pickerStyles = stylex.create({
   embedded: { display: 'flex', flexDirection: 'column', flex: '1', minHeight: 0, minWidth: 0 },
@@ -8,7 +9,7 @@ export const pickerStyles = stylex.create({
     height: { default: 'auto', '@media (max-width: 699px)': 44 },
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingBlock: { default: null, '@media (max-width: 699px)': 8 },
-    borderRadius: 12,
+    borderRadius: controlShape.pill,
     borderColor: colors.line,
   },
   embeddedSearchBox: { marginTop: 12, marginBottom: 8 },
@@ -48,7 +49,7 @@ export const pickerStyles = stylex.create({
       '@media (min-width: 700px)': { default: colors.background, ':hover': colors.stripe },
       ':active': colors.controlSurface,
     },
-    borderRadius: { default: 0, '@media (min-width: 700px)': 8 },
+    borderRadius: { default: 0, '@media (min-width: 700px)': controlShape.option },
   },
   makeOption: {
     display: 'flex',
@@ -62,7 +63,7 @@ export const pickerStyles = stylex.create({
     marginBottom: { default: 8, '@media (max-width: 699px)': 4 },
     paddingLeft: 8,
     paddingRight: 12,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
     fontSize: 16,
     fontWeight: 400,
@@ -76,7 +77,7 @@ export const pickerStyles = stylex.create({
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: colors.muted,
-    borderRadius: '50%',
+    borderRadius: controlShape.circle,
     backgroundColor: 'transparent',
     color: '#fff',
     flexShrink: 0,
@@ -143,7 +144,7 @@ export const pickerStyles = stylex.create({
     borderWidth: 2,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 20,
+    borderRadius: controlShape.pill,
     padding: 5,
     display: 'flex',
     alignItems: 'center',
@@ -155,7 +156,7 @@ export const pickerStyles = stylex.create({
     backgroundColor: colors.deepPurple,
     padding: 3,
   },
-  dot: { width: 16, height: 16, borderRadius: '50%', backgroundColor: '#818592' },
+  dot: { width: 16, height: 16, borderRadius: controlShape.circle, backgroundColor: '#818592' },
   dotOn: { width: 24, height: 24, backgroundColor: '#fff' },
   searchBox: {
     position: 'relative',

@@ -2,6 +2,7 @@
 // Reference-only editor: returns temporary form values, never sends requests or messages.
 import { useState } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { colors } from '@/styles/tokens.stylex';
 import { capturedDealers } from '@/lib/dealers';
@@ -67,7 +68,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 8,
+    borderRadius: controlShape.field,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -105,7 +106,7 @@ const s = stylex.create({
   action: {
     minHeight: 44,
     paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
-    borderRadius: { default: 8, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
   },
   suffix: { position: 'relative' },
   suffixText: { position: 'absolute', right: 12, bottom: 12, fontSize: 14, color: colors.muted },

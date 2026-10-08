@@ -3,6 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, type ReactNode } from 'react';
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
 import { lockDocumentScroll } from '@/lib/scroll-lock';
@@ -39,7 +40,7 @@ export const ui = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: '#818592',
-    borderRadius: 8,
+    borderRadius: controlShape.field,
     backgroundColor: colors.controlSurface,
     color: colors.text,
     fontSize: 16,
@@ -98,7 +99,7 @@ const s = stylex.create({
     minHeight: 44,
     paddingInline: 16,
     paddingBlock: 10,
-    borderRadius: 8,
+    borderRadius: controlShape.pill,
     borderWidth: 1.5,
     borderStyle: 'solid',
     fontSize: { default: 14, '@media (max-width: 699px)': 16 },
@@ -114,7 +115,7 @@ const s = stylex.create({
   compact: { minHeight: 32, paddingBlock: 4, paddingInline: 8 },
   floating: {
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
-    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
     paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
     paddingInline: 24,
   },
@@ -140,7 +141,7 @@ const s = stylex.create({
     backgroundColor: { default: 'transparent', ':hover': colors.surface },
     borderWidth: 0,
     color: 'inherit',
-    borderRadius: 24,
+    borderRadius: controlShape.circle,
     cursor: 'pointer',
     flexShrink: 0,
   },
@@ -291,7 +292,7 @@ const s = stylex.create({
     paddingBlock: 6,
     paddingInline: 8,
     backgroundColor: colors.surface,
-    borderRadius: 8,
+    borderRadius: controlShape.pill,
     fontSize: 14,
     lineHeight: '16px',
     whiteSpace: 'nowrap',

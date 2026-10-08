@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 export const desktopFilterStyles = stylex.create({
@@ -56,7 +57,7 @@ export const desktopFilterStyles = stylex.create({
     minWidth: 140,
     paddingInline: 16,
     paddingBlock: 8,
-    borderRadius: 10,
+    borderRadius: controlShape.pill,
   },
   overview: { display: 'flex', flexDirection: 'column', gap: 16 },
   overviewPanel: {
@@ -89,7 +90,7 @@ export const desktopFilterStyles = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: 12,
+    borderRadius: controlShape.field,
     backgroundColor: colors.background,
   },
   singleSummary: { gridTemplateColumns: 'minmax(0,1fr)' },
@@ -181,7 +182,7 @@ export const desktopFilterStyles = stylex.create({
     width: 36,
     height: 36,
     borderWidth: 0,
-    borderRadius: '50%',
+    borderRadius: controlShape.circle,
     color: colors.text,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
   },
@@ -210,7 +211,7 @@ export const desktopFilterStyles = stylex.create({
     minHeight: 44,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 6,
+    borderRadius: controlShape.pill,
     fontSize: 14,
     fontWeight: 500,
     lineHeight: '20px',
@@ -218,7 +219,7 @@ export const desktopFilterStyles = stylex.create({
     backgroundColor: 'transparent',
     textDecoration: { default: 'none', ':hover': 'underline' },
   },
-  apply: { minHeight: 44, minWidth: 200, borderRadius: 12, paddingInline: 24, fontSize: 14 },
+  apply: { minHeight: 44, minWidth: 200, borderRadius: controlShape.pill, paddingInline: 24, fontSize: 14 },
   group: { borderWidth: 0, padding: 0, margin: 0, minWidth: 0 },
   choices: { display: 'grid', gap: 8, gridTemplateColumns: 'repeat(2,minmax(0,1fr))' },
   choice: {
@@ -227,7 +228,7 @@ export const desktopFilterStyles = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 12,
+    borderRadius: controlShape.option,
     gap: 10,
     fontSize: 14,
     lineHeight: '20px',
@@ -243,7 +244,7 @@ export const desktopFilterStyles = stylex.create({
     minHeight: 40,
     padding: '8px 6px',
     borderWidth: 0,
-    borderRadius: 8,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':hover': colors.surface },
   },
   flatSelected: { backgroundColor: colors.background },
@@ -262,7 +263,7 @@ export const desktopFilterStyles = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     color: colors.text,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
   },
@@ -280,7 +281,7 @@ export const desktopFilterStyles = stylex.create({
     minHeight: 48,
     padding: '8px 12px',
     borderWidth: 0,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     fontSize: 14,
     lineHeight: '22px',
     color: colors.text,

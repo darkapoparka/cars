@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
@@ -60,7 +61,7 @@ const s = stylex.create({
     minHeight: 48,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 24,
+    borderRadius: controlShape.circle,
     backgroundColor: 'transparent',
     color: colors.text,
     outlineColor: colors.text,
@@ -74,7 +75,7 @@ const s = stylex.create({
     justifyContent: 'center',
     width: 36,
     height: 36,
-    borderRadius: 18,
+    borderRadius: controlShape.circle,
     backgroundColor: colors.background,
   },
   body: {

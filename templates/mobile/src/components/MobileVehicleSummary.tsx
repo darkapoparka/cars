@@ -3,6 +3,7 @@
 import { useLayoutEffect, useRef, useState, type RefObject } from 'react';
 import Link from 'next/link';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
 import { colors } from '@/styles/tokens.stylex';
@@ -77,7 +78,7 @@ const s = stylex.create({
     justifySelf: 'end',
     padding: 0,
     borderWidth: 0,
-    borderRadius: 8,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.text,
     textAlign: 'left',
@@ -139,7 +140,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 10,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     color: colors.text,
     fontSize: 16,

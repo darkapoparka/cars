@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 // Applied only by the desktop editor; phone and native picker styles stay independent.
@@ -32,7 +33,7 @@ export const desktopModelOptions = stylex.create({
   },
   dropdownGroup: {
     marginBottom: { default: 0, '@media (min-width: 1024px)': 0 },
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: colors.stripe,
   },
   dropdownExpandedGroup: { gridColumn: '1 / -1' },
@@ -66,7 +67,7 @@ export const desktopModelOptions = stylex.create({
   dropdownVariant: {
     minHeight: 40,
     paddingBlock: 8,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     fontSize: 14,
     lineHeight: '22px',
   },
@@ -75,7 +76,7 @@ export const desktopModelOptions = stylex.create({
     minHeight: { default: 48, '@media (min-width: 1024px)': 54 },
     paddingInline: { default: 8, '@media (min-width: 1024px)': 12 },
     gap: { default: 4, '@media (min-width: 1024px)': 8 },
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
     lineHeight: { default: '24px', '@media (min-width: 1024px)': '22px' },
     backgroundColor: {
@@ -104,7 +105,7 @@ export const desktopModelOptions = stylex.create({
     paddingInline: { default: 8, '@media (min-width: 1024px)': 12 },
     gap: { default: 4, '@media (min-width: 1024px)': 8 },
     minHeight: { default: 48, '@media (min-width: 1024px)': 54 },
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
   },
   familyButton: {
@@ -122,7 +123,7 @@ export const desktopModelOptions = stylex.create({
     minHeight: 48,
     fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
     lineHeight: { default: '24px', '@media (min-width: 1024px)': '22px' },
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     backgroundColor: { default: colors.stripe, ':active': colors.controlSurface },
   },
   optionFields: { paddingTop: 12 },

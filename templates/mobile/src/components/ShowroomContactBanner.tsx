@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { showroomContactLocation } from '@/lib/showroom';
 import { useLocale } from '@/lib/use-locale';
 import { colors } from '@/styles/tokens.stylex';
@@ -50,7 +51,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: 24,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.stripe },
     color: colors.text,
     fontSize: 16,

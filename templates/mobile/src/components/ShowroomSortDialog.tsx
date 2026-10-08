@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useSyncExternalStore } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import { showroomSorts } from '@/lib/showroom';
@@ -16,7 +17,7 @@ const s = stylex.create({
   dropdownOption: {
     minHeight: 52,
     borderWidth: 0,
-    borderRadius: 10,
+    borderRadius: controlShape.option,
     fontSize: 15,
     lineHeight: '22px',
   },
@@ -56,7 +57,7 @@ const s = stylex.create({
     borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: { default: 0, '@media (min-width: 1024px)': 12 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': controlShape.option },
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 1024px)': { default: 'transparent', ':hover': colors.stripe },

@@ -2,6 +2,7 @@
 import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
 import { Icon } from './Icon';
@@ -14,7 +15,7 @@ const s = stylex.create({
     paddingLeft: 12,
     minHeight: 44,
     backgroundColor: colors.controlSurface,
-    borderRadius: 12,
+    borderRadius: controlShape.pill,
     color: colors.muted,
   },
   trigger: {
@@ -34,7 +35,7 @@ const s = stylex.create({
     minHeight: { default: 44, '@media (min-width: 1024px)': 60 },
     paddingLeft: { default: 12, '@media (min-width: 1024px)': 20 },
     paddingRight: { default: 12, '@media (min-width: 1024px)': 20 },
-    borderRadius: { default: 12, '@media (min-width: 1024px)': 30 },
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: colors.controlSurface,
       ':active': colors.surface,
@@ -79,7 +80,7 @@ const s = stylex.create({
     minHeight: 44,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 12,
+    borderRadius: controlShape.circle,
     backgroundColor: 'transparent',
     color: colors.muted,
     outlineColor: colors.text,

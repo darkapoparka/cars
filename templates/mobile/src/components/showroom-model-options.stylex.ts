@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 export const modelOptionStyles = stylex.create({
@@ -36,7 +37,7 @@ export const modelOptionStyles = stylex.create({
     lineHeight: { default: '24px', '@media (min-width: 700px)': '22px' },
     color: colors.text,
     cursor: 'pointer',
-    borderRadius: { default: 10, '@media (min-width: 700px)': 8 },
+    borderRadius: controlShape.option,
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 700px)': { default: 'transparent', ':hover': colors.stripe },
@@ -76,7 +77,7 @@ export const modelOptionStyles = stylex.create({
     display: 'flex',
     alignItems: 'center',
     minHeight: { default: 52, '@media (min-width: 700px)': 44 },
-    borderRadius: { default: 10, '@media (min-width: 700px)': 8 },
+    borderRadius: controlShape.option,
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 700px)': { default: 'transparent', ':hover': colors.stripe },
@@ -92,7 +93,7 @@ export const modelOptionStyles = stylex.create({
     paddingLeft: 8,
     paddingRight: 4,
     borderWidth: 0,
-    borderRadius: { default: 10, '@media (min-width: 700px)': 8 },
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':active': colors.controlSurface },
     color: colors.text,
     fontSize: { default: 16, '@media (min-width: 700px)': 14 },
@@ -145,12 +146,12 @@ export const modelOptionStyles = stylex.create({
     width: 36,
     height: 22,
     padding: 3,
-    borderRadius: 12,
+    borderRadius: controlShape.pill,
     backgroundColor: colors.muted,
     flexShrink: 0,
   },
   switchOn: { justifyContent: 'flex-end', backgroundColor: colors.accent },
-  thumb: { width: 16, height: 16, borderRadius: '50%', backgroundColor: '#fff' },
+  thumb: { width: 16, height: 16, borderRadius: controlShape.circle, backgroundColor: '#fff' },
   variantField: {
     display: 'flex',
     flexDirection: 'column',
@@ -165,7 +166,7 @@ export const modelOptionStyles = stylex.create({
     height: 'auto',
     minHeight: 48,
     paddingBlock: 10,
-    borderRadius: 12,
+    borderRadius: controlShape.field,
     borderColor: colors.line,
   },
   empty: { padding: 24, fontSize: 14, color: colors.muted },

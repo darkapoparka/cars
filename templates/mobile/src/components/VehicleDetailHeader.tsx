@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState, type RefObject } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import { Header } from './Header';
@@ -45,7 +46,7 @@ const s = stylex.create({
     height: 44,
     flexShrink: 0,
     borderWidth: 0,
-    borderRadius: 24,
+    borderRadius: controlShape.circle,
     backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     boxShadow: '0 1px 8px #0002',
     color: colors.text,

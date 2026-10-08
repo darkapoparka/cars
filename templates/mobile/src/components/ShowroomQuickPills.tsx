@@ -2,6 +2,7 @@
 
 import type { ComponentPropsWithRef, ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import { Icon } from './Icon';
@@ -49,11 +50,7 @@ const s = stylex.create({
     flexShrink: 0,
     padding: 0,
     borderWidth: 0,
-    borderRadius: {
-      default: 18,
-      '@media (max-width: 699px)': 20,
-      '@media (min-width: 1024px)': 20,
-    },
+    borderRadius: controlShape.pill,
     backgroundColor: 'transparent',
     outlineColor: colors.accent,
     outlineOffset: -2,
@@ -78,11 +75,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: { default: colors.cardLine, '@media (min-width: 1024px)': colors.line },
-    borderRadius: {
-      default: 18,
-      '@media (max-width: 699px)': 20,
-      '@media (min-width: 1024px)': 20,
-    },
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: colors.background,
       '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
@@ -102,11 +95,7 @@ const s = stylex.create({
   },
   desktopButton: {
     minHeight: { default: 44, '@media (max-width: 699px)': 48 },
-    borderRadius: {
-      default: 18,
-      '@media (max-width: 699px)': 20,
-      '@media (min-width: 1024px)': 19,
-    },
+    borderRadius: controlShape.pill,
   },
   desktopFace: {
     minHeight: {
@@ -120,11 +109,7 @@ const s = stylex.create({
       '@media (max-width: 699px)': 8,
       '@media (min-width: 1024px)': 8,
     },
-    borderRadius: {
-      default: 18,
-      '@media (max-width: 699px)': 20,
-      '@media (min-width: 1024px)': 19,
-    },
+    borderRadius: controlShape.pill,
     borderColor: {
       default: colors.cardLine,
       '@media (min-width: 1024px)': { default: colors.cardLine, ':hover': colors.line },
@@ -175,7 +160,7 @@ const s = stylex.create({
     minHeight: 44,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 19,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: 'transparent', ':hover': 'rgba(255,255,255,.16)' },
     color: colors.background,
     outlineColor: colors.accent,

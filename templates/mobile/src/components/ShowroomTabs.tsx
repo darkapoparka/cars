@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useSyncExternalStore, type ReactNode } from 'react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 
@@ -63,7 +64,7 @@ const s = stylex.create({
     borderRightColor: 'rgba(255,255,255,.24)',
     borderBottomColor: 'rgba(255,255,255,.24)',
     borderLeftColor: 'rgba(255,255,255,.24)',
-    borderRadius: 24,
+    borderRadius: controlShape.pill,
     boxShadow: 'none',
   },
   primaryTab: {
@@ -82,7 +83,7 @@ const s = stylex.create({
     lineHeight: '20px',
     fontWeight: 500,
     color: '#fff',
-    borderRadius: 22,
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: 'transparent',
       ':hover': 'rgba(255,255,255,.08)',
@@ -227,7 +228,7 @@ const s = stylex.create({
     paddingInline: { default: 8, '@media (min-width: 1024px)': 0 },
     paddingBlock: { default: 10, '@media (min-width: 1024px)': 0 },
     fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
-    borderRadius: { default: 0, '@media (min-width: 1024px)': 19 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': controlShape.pill },
   },
   pillsSelected: {
     fontWeight: { default: 600, '@media (min-width: 1024px)': 500 },
@@ -241,7 +242,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
-    borderRadius: 19,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: 'transparent', '@media (min-width: 1024px)': colors.stripe },
   },
   pillFaceSelected: {

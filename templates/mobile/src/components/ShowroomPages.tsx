@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { ChevronRight, Clock3, Mail, MapPin, Phone } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { vehicles } from '@/lib/catalog';
@@ -308,7 +309,7 @@ const s = stylex.create({
     minHeight: 44,
     flexShrink: 0,
     padding: 0,
-    borderRadius: 18,
+    borderRadius: controlShape.pill,
     textDecoration: 'none',
     outlineColor: colors.accent,
   },
@@ -322,7 +323,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: { default: 18, '@media (min-width: 1024px)': 20 },
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
     color: colors.text,
     fontSize: 14,
@@ -394,7 +395,7 @@ const s = stylex.create({
     display: { default: 'none', '@media (min-width: 1024px)': 'inline-flex' },
     minHeight: 44,
     paddingInline: 22,
-    borderRadius: 22,
+    borderRadius: controlShape.pill,
     borderColor: '#fff',
     backgroundColor: { default: '#fff', ':hover': colors.controlSurface },
     color: colors.text,
@@ -449,7 +450,7 @@ const s = stylex.create({
     minWidth: 0,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 22,
+    borderRadius: controlShape.pill,
     backgroundColor: 'transparent',
     textDecoration: 'none',
     outlineColor: colors.accent,
@@ -464,7 +465,7 @@ const s = stylex.create({
     minHeight: 44,
     paddingBlock: 10,
     paddingInline: { default: 12, '@media (max-width: 699px)': 10 },
-    borderRadius: 22,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
     borderWidth: 1,
     borderStyle: 'solid',
@@ -489,7 +490,7 @@ const s = stylex.create({
     alignSelf: 'flex-start',
     borderWidth: 0,
     backgroundColor: 'transparent',
-    borderRadius: { default: 18, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
   },
   contactSubmitFace: {
     minHeight: {
@@ -497,11 +498,7 @@ const s = stylex.create({
       '@media (max-width: 699px)': 44,
       '@media (min-width: 1024px)': 40,
     },
-    borderRadius: {
-      default: 18,
-      '@media (max-width: 699px)': 22,
-      '@media (min-width: 1024px)': 20,
-    },
+    borderRadius: controlShape.pill,
     fontSize: { default: 14, '@media (max-width: 699px)': 16 },
   },
   info: { display: 'flex', flexDirection: 'column', gap: 12 },
@@ -548,7 +545,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: { default: 10, '@media (min-width: 1024px)': showroomDesktop.fieldRadius },
+    borderRadius: controlShape.field,
     padding: 12,
     backgroundColor: {
       default: colors.controlSurface,

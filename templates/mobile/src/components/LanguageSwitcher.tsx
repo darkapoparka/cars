@@ -1,6 +1,7 @@
 'use client';
 import { Globe } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 const s = stylex.create({
@@ -14,7 +15,7 @@ const s = stylex.create({
     paddingInline: 8,
     flexShrink: 0,
     borderWidth: 0,
-    borderRadius: 24,
+    borderRadius: controlShape.pill,
     backgroundColor: 'transparent',
     color: 'inherit',
     fontSize: 13,

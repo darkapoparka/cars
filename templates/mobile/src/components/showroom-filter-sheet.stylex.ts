@@ -1,4 +1,5 @@
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 
 export const showroomFilterSheetStyles = stylex.create({
@@ -79,7 +80,7 @@ export const showroomFilterSheetStyles = stylex.create({
     minHeight: { default: 48, '@media (min-width: 1024px)': 40 },
     paddingInline: { default: 8, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 12 },
     borderWidth: 0,
-    borderRadius: { default: 8, '@media (max-width: 699px)': 24 },
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 1024px)': { default: 'transparent', ':hover': colors.stripe },
@@ -175,7 +176,7 @@ export const showroomFilterSheetStyles = stylex.create({
   },
   desktopChoice: {
     paddingInline: { default: 0, '@media (min-width: 700px)': 12 },
-    borderRadius: { default: 0, '@media (min-width: 700px)': 12 },
+    borderRadius: { default: 0, '@media (min-width: 700px)': controlShape.option },
     backgroundColor: {
       default: 'transparent',
       '@media (min-width: 700px)': { default: colors.stripe, ':hover': colors.controlSurface },
@@ -225,7 +226,7 @@ export const showroomFilterSheetStyles = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 12,
+    borderRadius: controlShape.option,
     backgroundColor: { default: colors.controlSurface, ':hover': colors.stripe },
     color: colors.text,
     fontSize: {
@@ -260,7 +261,7 @@ export const showroomFilterSheetStyles = stylex.create({
     paddingInline: 12,
     paddingBlock: 10,
     borderWidth: 0,
-    borderRadius: 12,
+    borderRadius: controlShape.option,
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.text,
     textAlign: 'left',
@@ -297,11 +298,7 @@ export const showroomFilterSheetStyles = stylex.create({
   footerButton: {
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingBlock: 10,
-    borderRadius: {
-      default: 24,
-      '@media (max-width: 699px)': 22,
-      '@media (min-width: 1024px)': 12,
-    },
+    borderRadius: controlShape.pill,
     fontSize: {
       default: 14,
       '@media (max-width: 699px)': 16,

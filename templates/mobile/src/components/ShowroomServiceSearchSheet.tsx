@@ -3,6 +3,7 @@ import { useLocale } from '@/lib/use-locale';
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { searchShowroomServices, showroomServices } from '@/lib/showroom-services';
 import { colors } from '@/styles/tokens.stylex';
 import { ShowroomSearchField } from './ShowroomSearch';
@@ -50,7 +51,7 @@ const s = stylex.create({
     paddingBlock: 10,
     paddingInline: 12,
     borderWidth: 0,
-    borderRadius: 12,
+    borderRadius: controlShape.option,
     textAlign: 'left',
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.text,
@@ -64,7 +65,7 @@ const s = stylex.create({
   apply: {
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingBlock: { default: 10, '@media (max-width: 699px)': 0 },
-    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
   },
   footer: {
     flexShrink: 0,

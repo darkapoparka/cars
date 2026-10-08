@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import type { ShowroomContactDetails } from '@/lib/persistence';
 import { useAppState } from '@/lib/store';
 import { useLocale } from '@/lib/use-locale';
@@ -76,7 +77,7 @@ const s = stylex.create({
     justifyContent: 'center',
     width: 30,
     height: 30,
-    borderRadius: 15,
+    borderRadius: controlShape.circle,
     backgroundColor: colors.background,
     color: colors.text,
   },
@@ -129,7 +130,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: { default: 'transparent', ':focus-visible': colors.text },
-    borderRadius: 12,
+    borderRadius: controlShape.field,
     backgroundColor: colors.controlSurface,
     color: colors.text,
     fontSize: 16,
@@ -176,7 +177,7 @@ const s = stylex.create({
   submit: {
     width: '100%',
     minHeight: 48,
-    borderRadius: 24,
+    borderRadius: controlShape.pill,
     paddingInline: 16,
     paddingBlock: 10,
     fontWeight: 500,

@@ -1,5 +1,6 @@
 'use client';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { useLocale } from '@/lib/use-locale';
 import type { ShowroomFilterTab } from '@/lib/showroom-filter-editor';
@@ -56,7 +57,7 @@ const s = stylex.create({
     display: { default: 'contents', '@media (min-width: 1024px)': 'block' },
     width: '100%',
     maxWidth: 780,
-    borderRadius: 34,
+    borderRadius: controlShape.pill,
     color: colors.text,
     backgroundColor: colors.background,
     boxShadow: '0 8px 24px rgba(14, 25, 36, .12)',
@@ -83,7 +84,7 @@ const s = stylex.create({
     minHeight: 48,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 24,
+    borderRadius: controlShape.pill,
     backgroundColor: { default: colors.accent, ':hover': '#b72800' },
     color: '#fff',
     outlineColor: colors.text,
@@ -102,7 +103,7 @@ const s = stylex.create({
     minHeight: 44,
     padding: 0,
     borderWidth: 0,
-    borderRadius: 18,
+    borderRadius: controlShape.circle,
     backgroundColor: { default: 'transparent', ':hover': colors.stripe },
     color: colors.muted,
     outlineColor: colors.accent,

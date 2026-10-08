@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
@@ -29,14 +30,14 @@ const s = stylex.create({
     marginTop: 12,
     padding: 3,
     minHeight: 48,
-    borderRadius: 12,
+    borderRadius: controlShape.pill,
     backgroundColor: colors.controlSurface,
   },
   paymentTab: {
     backgroundColor: 'transparent',
     color: colors.text,
     borderWidth: 0,
-    borderRadius: 9,
+    borderRadius: controlShape.pill,
     minHeight: 44,
     padding: 8,
     fontSize: 14,
@@ -273,7 +274,7 @@ const s = stylex.create({
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingBlock: { default: 12, '@media (max-width: 699px)': 10 },
     paddingInline: { default: 12, '@media (max-width: 359px)': 8 },
-    borderRadius: { default: 12, '@media (max-width: 699px)': 10 },
+    borderRadius: controlShape.pill,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
@@ -354,7 +355,7 @@ const s = stylex.create({
     marginLeft: 'auto',
     paddingBlock: 4,
     paddingInline: 6,
-    borderRadius: 8,
+    borderRadius: controlShape.pill,
     borderWidth: 0,
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     color: colors.muted,

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Globe } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
+import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import {
@@ -73,7 +74,7 @@ const s = stylex.create({
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
-    borderRadius: 12,
+    borderRadius: controlShape.pill,
     backgroundColor: {
       default: colors.controlSurface,
       '@media (min-width: 1024px)': colors.stripe,
@@ -100,7 +101,7 @@ const s = stylex.create({
     minHeight: { default: 32, '@media (min-width: 1024px)': 36 },
     paddingBlock: 6,
     paddingInline: 12,
-    borderRadius: { default: 20, '@media (min-width: 1024px)': 18 },
+    borderRadius: controlShape.pill,
     backgroundColor: colors.accent,
     color: '#fff',
     fontSize: 14,
@@ -170,7 +171,7 @@ const s = stylex.create({
     gap: 16,
   },
   field: { minWidth: 0, overflowWrap: 'anywhere' },
-  input: { minWidth: 0, borderColor: colors.line, borderRadius: 12 },
+  input: { minWidth: 0, borderColor: colors.line, borderRadius: controlShape.field },
   wide: { gridColumn: '1 / -1' },
   textarea: {
     height: 'auto',
@@ -200,7 +201,7 @@ const s = stylex.create({
     minHeight: { default: 48, '@media (max-width: 699px)': 44 },
     paddingInline: 16,
     paddingBlock: { default: 10, '@media (max-width: 699px)': 8 },
-    borderRadius: { default: 24, '@media (max-width: 699px)': 22 },
+    borderRadius: controlShape.pill,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.line,
