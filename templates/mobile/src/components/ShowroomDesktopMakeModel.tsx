@@ -193,8 +193,8 @@ export function ShowroomDesktopMakeModel({
       <div
         {...stylex.props(
           s.search,
-          (dropdown || modelBrowser) && s.dropdownSearch,
           controls.fieldFocus,
+          (dropdown || modelBrowser) && s.dropdownSearch,
           disabled && s.disabledSearch,
         )}
       >
