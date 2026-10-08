@@ -26,6 +26,9 @@ async function checkRootGrid(menu, next, compact, stock) {
 async function checkModelHeader(menu, label, compact) {
   const header = menu.locator('.dn-picker-header');
   const back = header.locator('.back');
+  const search = header.getByRole('searchbox');
+  assert((await search.getAttribute('placeholder')).endsWith(`${label}…`), 'The search prompt identifies the current brand and family');
+  assert((await search.getAttribute('aria-label')).endsWith(label), 'The search input exposes its browsing context');
   assert.equal(await back.getAttribute('title'), label, 'Icon-only Back retains the complete path on hover');
   assert((await back.getAttribute('aria-label')).endsWith(label), 'Back exposes its full context to assistive technology');
   assert((await back.locator('span').boundingBox()).width <= 1, 'Breadcrumb text never takes space from search');
@@ -86,6 +89,7 @@ try {
       assert.equal((await menu.boundingBox()).height, frame.height, 'Family navigation retains the outer menu height');
       assert.equal(await page.evaluate(() => scrollY), pageScroll, 'Keyboard navigation does not move the page');
       await menu.locator('.back').press('Enter');
+      assert((await search().getAttribute('placeholder')).endsWith('BMW…'), 'Back updates the search prompt to the brand');
       assert(await menu.locator('[data-model-family="3 Series"]').evaluate(node => node === document.activeElement), 'Back restores focus to the originating family');
       assert.equal(await page.evaluate(() => scrollY), pageScroll, 'Going back does not move the page');
       await menu.locator('[data-model-family="3 Series"]').click();
@@ -113,6 +117,7 @@ try {
       await menu.locator('[data-model-family="3 Series"]').click();
       assert(await menu.getByRole('checkbox', { name: '320', exact: true }).isChecked(), 'Changing families retains selected models');
       await search().fill('118');
+      assert((await search().getAttribute('aria-label')).endsWith('BMW / 3 Series'), 'Browsing context remains accessible while typing across families');
       assert.equal(await menu.locator('.all-models').count(), 0, 'Search only shows matching model choices');
       assert.equal(await menu.locator('[data-model-family]').count(), 0, 'Search goes directly to matching model choices');
       await menu.getByRole('checkbox', { name: '118', exact: true }).uncheck();

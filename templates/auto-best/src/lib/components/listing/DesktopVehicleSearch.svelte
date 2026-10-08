@@ -38,6 +38,8 @@
   const range = $derived(field === 'price' || field === 'year' || field === 'mileage_max');
   const searchable = $derived(field === 'make' || field === 'model' || field === 'version' || field === 'equipment');
   const title = $derived(field ? listingFacetTitle(field, i18n.locale) : i18n.t('m_49c266baaaa7'));
+  const searchContext = $derived(field === 'model' ? modelPicker?.navigation()?.label : undefined);
+  const searchPrompt = $derived(i18n.t('inventory.search.context', { context: searchContext ?? title.toLocaleLowerCase(i18n.locale) }));
   // Suggestion search never changes the applied vehicle keyword.
   const effectiveFilters = $derived(listingFiltersFromDraft(draft));
   const matching = $derived(filterListingVehicles(listingVehicles, effectiveFilters, i18n.locale).length);
@@ -138,7 +140,7 @@
 {#snippet searchControl()}
   <div class="dn-search-query">
     <Icon name="search" size={18} />
-    <input class="dn-search-input" type="text" role="searchbox" bind:this={searchInput} bind:value={search} aria-label={title} placeholder={i18n.t('inventory.search.within')} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
+    <input class="dn-search-input" type="text" role="searchbox" bind:this={searchInput} bind:value={search} aria-label={searchContext ? `${title}: ${searchContext}` : title} placeholder={searchPrompt} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
     {#if search}<button class="dn-search-icon" type="button" aria-label={i18n.t('inventory.search.clearQuery')} onclick={() => { search = ''; void focusSearch(); }}><Icon name="x" size={16} /></button>{/if}
   </div>
 {/snippet}

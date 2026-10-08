@@ -41,6 +41,8 @@
   const searchable = $derived(multiple || field === 'version');
   const desktopModel = $derived(field === 'model' && desktop.current);
   const searchLabel = $derived(i18n.t(field === 'make' ? 'm_150bec5925bd' : field === 'model' ? 'm_269619120191' : 'inventory.search.within'));
+  const searchContext = $derived(desktopModel ? modelPicker?.navigation()?.label : undefined);
+  const searchPrompt = $derived(desktopModel ? i18n.t('inventory.search.context', { context: searchContext ?? title.toLocaleLowerCase(i18n.locale) }) : searchLabel);
   const allLabel = $derived(field === 'sort' ? listingChoiceLabel(field, '', i18n.locale) : i18n.t(field === 'make' ? 'inventory.search.allMakes' : field === 'model' ? 'inventory.search.allModels' : 'm_3cd085e8c069'));
   const selected = $derived(listingChoiceValue(draft, field));
   const checkedValue = $derived(browsedValue ?? selected);
@@ -99,7 +101,7 @@
 </script>
 
 {#snippet searchControl()}
-  <label class="dn-picker-search" class:inline={desktopModel}><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchLabel} placeholder={searchLabel} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>
+  <label class="dn-picker-search" class:inline={desktopModel}><Icon name="search" size={18} /><input bind:this={searchInput} type="search" bind:value={search} aria-label={searchContext ? `${searchLabel}: ${searchContext}` : searchLabel} placeholder={searchPrompt} onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} /></label>
 {/snippet}
 
 <div class="dn-identity-field" class:compact data-field={field} {@attach attachRoot}>

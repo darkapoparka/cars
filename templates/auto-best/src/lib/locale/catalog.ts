@@ -2,6 +2,7 @@
 export const en = {
   "inventory.search.placeholder": "Search makes, models or filters…",
   "inventory.search.within": "Search…",
+  "inventory.search.context": "Search {context}…",
   "inventory.search.addFilter": "Add filter",
   "inventory.search.clearQuery": "Clear search",
   "inventory.search.clearFilter": "Clear filter",
@@ -1105,6 +1106,7 @@ export const en = {
 export const bg = {
   "inventory.search.placeholder": "Търси марка, модел или филтър…",
   "inventory.search.within": "Търси…",
+  "inventory.search.context": "Търси {context}…",
   "inventory.search.addFilter": "Добави филтър",
   "inventory.search.clearQuery": "Изчисти търсенето",
   "inventory.search.clearFilter": "Изчисти филтъра",

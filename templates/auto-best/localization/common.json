@@ -7,6 +7,10 @@
     "en": "Search…",
     "bg": "Търси…"
   },
+  "inventory.search.context": {
+    "en": "Search {context}…",
+    "bg": "Търси {context}…"
+  },
   "inventory.search.addFilter": {
     "en": "Add filter",
     "bg": "Добави филтър"

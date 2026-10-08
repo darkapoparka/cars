@@ -41,6 +41,8 @@
   const maximumKey = $derived(field === 'price' ? 'priceMax' : 'yearMax');
   const searchable = $derived(!range && field !== 'mileage_max' && field !== 'sort' && field !== 'type');
   const searchLabel = $derived(field === 'make' ? i18n.t('m_150bec5925bd') : field === 'model' ? i18n.t('m_269619120191') : i18n.t('m_f0549fa54b59', { p0: title.toLocaleLowerCase(i18n.locale) }));
+  const searchContext = $derived(widePanel && field === 'model' ? modelPicker?.navigation()?.label : undefined);
+  const searchPrompt = $derived(widePanel ? i18n.t('inventory.search.context', { context: searchContext ?? title.toLocaleLowerCase(i18n.locale) }) : `${searchLabel}…`);
   const selected = $derived(field === 'sort' ? (draft.sort === 'default' ? '' : draft.sort)
     : field === 'price' || field === 'year' || field === 'equipment' || field === 'mileage_max' ? '' : draft[field]);
   const choices = $derived(field === 'make' && desktopChoices && widePanel ? desktopMakeOptions(selected, i18n.locale)
@@ -90,7 +92,7 @@
 {#snippet searchControl()}
   <div class="search-field dn-mobile-search-field">
         {@render actionIcon('search')}
-        <input {@attach i18n.validation} {@attach attachSearch} type="search" bind:value={search} aria-label={searchLabel} placeholder={`${searchLabel}…`} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
+        <input {@attach i18n.validation} {@attach attachSearch} type="search" bind:value={search} aria-label={searchContext ? `${searchLabel}: ${searchContext}` : searchLabel} placeholder={searchPrompt} autocomplete="off" onkeydown={event => { if (event.key === 'Enter') event.preventDefault(); }} />
         {#if search}<button type="button" class="clear-search dn-icon-button" aria-label={i18n.t('m_c8191190a026')} onclick={() => { search = ''; searchInput.focus(); }}>{@render actionIcon('close')}</button>{/if}
   </div>
 {/snippet}

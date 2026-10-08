@@ -45,9 +45,9 @@
   const hasSelection = (family: ModelFamily) => family.choices.some(choice => listingSelectionHas(selected, choice.value));
   // Reading this from the owner keeps its fixed header in the same browsing state.
   export function navigation(): PickerNavigation | undefined {
-    if (searching || !currentMake) return;
+    if (!currentMake) return;
     return { label: `${currentMake.make}${currentFamily ? ' / ' + currentFamily.name : ''}`,
-      back: currentFamily || !singleMake ? back : undefined, attachBack };
+      back: !searching && (currentFamily || !singleMake) ? back : undefined, attachBack };
   }
   onMount(() => {
     for (let node = root.parentElement; node; node = node.parentElement) {
