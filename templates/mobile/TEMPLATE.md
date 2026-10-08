@@ -302,8 +302,9 @@ vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
 700px; desktop retains its original typography and framed detail footer.
 
-Phone vehicle actions retain 44px tap targets; the header uses 20px icons and a
-quiet shadow. The summary leaves 8px below Enquire and Contact before the tabs.
+Phone vehicle actions retain 44px tap targets; the header uses its original 24px
+icons inside 36px visible circles with a quiet shadow. The summary leaves 8px
+below Enquire and Contact before the tabs.
 Switching a visible Details, Features or Photos rail keeps the page steady.
 When the rail is pinned after scrolling into a panel, the next panel starts at
 its beginning beneath the rail. Selecting the active tab preserves the position.

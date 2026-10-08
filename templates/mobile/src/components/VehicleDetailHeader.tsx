@@ -44,16 +44,26 @@ const s = stylex.create({
     justifyContent: 'center',
     width: 44,
     height: 44,
+    padding: 0,
     flexShrink: 0,
     borderWidth: 0,
     borderRadius: controlShape.circle,
-    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
-    boxShadow: '0 1px 5px #00000014',
+    backgroundColor: 'transparent',
     color: colors.text,
     outlineColor: colors.accent,
     outlineOffset: -3,
   },
-  compactControl: {
+  controlFace: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 36,
+    height: 36,
+    borderRadius: controlShape.circle,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    boxShadow: '0 1px 5px #00000014',
+  },
+  compactFace: {
     backgroundColor: { default: 'transparent', ':hover': colors.controlSurface },
     boxShadow: 'none',
   },
@@ -110,9 +120,11 @@ export function VehicleDetailHeader({
           type="button"
           aria-label={t('Go back')}
           onClick={onBack}
-          {...stylex.props(s.control, compact && s.compactControl)}
+          {...stylex.props(s.control)}
         >
-          <Icon name="back" size={20} />
+          <span {...stylex.props(s.controlFace, compact && s.compactFace)}>
+            <Icon name="back" />
+          </span>
         </button>
         <span title={title} {...stylex.props(s.title, compact && s.compactTitle)}>
           {title}
@@ -122,18 +134,22 @@ export function VehicleDetailHeader({
           type="button"
           aria-label={t('Share via')}
           onClick={onShare}
-          {...stylex.props(s.control, compact && s.compactControl)}
+          {...stylex.props(s.control)}
         >
-          <Icon name="share" size={20} />
+          <span {...stylex.props(s.controlFace, compact && s.compactFace)}>
+            <Icon name="share" />
+          </span>
         </button>
         <button
           type="button"
           aria-label={saveLabel}
           aria-pressed={saved}
           onClick={onSave}
-          {...stylex.props(s.control, compact && s.compactControl)}
+          {...stylex.props(s.control)}
         >
-          <Icon name="heart" size={20} filled={saved} />
+          <span {...stylex.props(s.controlFace, compact && s.compactFace)}>
+            <Icon name="heart" filled={saved} />
+          </span>
         </button>
       </header>
     </>
