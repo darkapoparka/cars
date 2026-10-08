@@ -206,6 +206,7 @@ const s = stylex.create({
   desktopCategories: {
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    marginInline: { default: 0, '@media (max-width: 699px)': 16 },
     paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
     paddingTop: { default: 0, '@media (min-width: 1024px)': 4 },
     paddingBottom: { default: 0, '@media (min-width: 1024px)': 4 },

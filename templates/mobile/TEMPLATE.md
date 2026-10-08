@@ -17,8 +17,9 @@ On Cars and Services, the logo header and search scroll with the page. On Cars,
 the category tabs also scroll away, leaving only the quick-filter pills pinned
 above the continuous white results canvas on phones. The phone Home header groups
 the retained logo, search and vehicle categories on white, with the original
-unboxed category artwork. Its category rail shares the Services tab rail's soft
-shadow below 700px. Applying
+unboxed category artwork. The phone category scroll viewport uses the same 16px
+side gutters as search and quick filters. Its category rail shares the Services
+tab rail's soft shadow below 700px. Applying
 filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
 area, including short and empty result lists. Services retains its pinned category
 tabs and quick-filter pills. Its phone category rail sits 8px below the same
