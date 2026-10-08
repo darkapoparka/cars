@@ -121,10 +121,11 @@ const s = stylex.create({
     paddingInline: { default: 4, '@media (max-width: 699px)': 0 },
   },
   comfortableTitle: {
-    fontSize: 18,
+    fontSize: { default: 18, '@media (max-width: 699px)': 16 },
     fontWeight: 600,
-    lineHeight: '26px',
+    lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
   },
+  comfortableRail: { height: { default: 68, '@media (max-width: 699px)': 56 } },
   comfortableSummary: { fontSize: 15 },
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
@@ -238,7 +239,7 @@ export function RangeField({
       )}
       <div
         data-range-track={label}
-        {...stylex.props(s.rail, grouped && s.groupedRail)}
+        {...stylex.props(s.rail, comfortable && s.comfortableRail, grouped && s.groupedRail)}
         onPointerDown={(event) => {
           if (event.target instanceof HTMLInputElement) return;
           const value = point(event);

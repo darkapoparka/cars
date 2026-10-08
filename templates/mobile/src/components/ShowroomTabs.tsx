@@ -287,9 +287,10 @@ const s = stylex.create({
     borderRightColor: colors.line,
   },
   phoneEdgeRail: {
+    // The rail and tab half-gutters align the first label with 16px field gutters.
     paddingInline: {
       default: 16,
-      '@media (max-width: 699px)': 0,
+      '@media (max-width: 699px)': 8,
       '@media (min-width: 700px)': 12,
     },
   },
@@ -302,6 +303,7 @@ const s = stylex.create({
     },
   },
   sidebarTab: {
+    minWidth: { default: 72, '@media (max-width: 699px)': 48 },
     lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
     outlineColor: {
       default: colors.accent,
@@ -335,7 +337,7 @@ const s = stylex.create({
     },
     paddingInline: {
       default: 16,
-      '@media (max-width: 699px)': 12,
+      '@media (max-width: 699px)': 8,
       '@media (min-width: 700px)': 8,
       '@media (min-width: 1024px)': 16,
     },

@@ -14,12 +14,15 @@ export const pickerStyles = stylex.create({
   },
   embeddedSearchBox: {
     marginTop: { default: 12, '@media (max-width: 699px)': 16 },
-    marginBottom: { default: 8, '@media (max-width: 699px)': 12 },
+    marginBottom: 8,
   },
-  embeddedSearch: { paddingLeft: 40, backgroundColor: colors.controlSurface },
+  embeddedSearch: {
+    paddingLeft: { default: 40, '@media (max-width: 699px)': 44 },
+    backgroundColor: colors.controlSurface,
+  },
   searchIcon: {
     position: 'absolute',
-    left: 12,
+    left: { default: 12, '@media (max-width: 699px)': 16 },
     top: '50%',
     transform: 'translateY(-50%)',
     display: 'flex',

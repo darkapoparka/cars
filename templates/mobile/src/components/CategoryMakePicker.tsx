@@ -33,6 +33,18 @@ const s = stylex.create({
     borderBottomColor: colors.line,
   },
   summaryTitle: { padding: 0, paddingBottom: 16, marginInline: -16, paddingInline: 16 },
+  embeddedTitle: {
+    fontSize: { default: 20, '@media (max-width: 699px)': 16 },
+    fontWeight: { default: 700, '@media (max-width: 699px)': 600 },
+    lineHeight: { default: '28px', '@media (max-width: 699px)': '24px' },
+    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
+    paddingBottom: { default: 16, '@media (max-width: 699px)': 8 },
+    borderBottomWidth: { default: 1, '@media (max-width: 699px)': 0 },
+  },
+  embeddedMakeTitle: { paddingTop: { default: 16, '@media (max-width: 699px)': 0 } },
+  embeddedSummaryTitle: { marginInline: { default: -16, '@media (max-width: 699px)': 0 } },
+  embeddedRow: { paddingInline: { default: 16, '@media (max-width: 699px)': 0 } },
+  embeddedAction: { paddingInline: { default: 8, '@media (max-width: 699px)': 0 } },
   content: { flex: '1', minHeight: 0, overflowY: 'auto', overscrollBehavior: 'contain' },
   row: {
     width: '100%',
@@ -173,7 +185,7 @@ export function CategoryMakePicker({
               setExclude(isExcluded);
               setScreen('make');
             }}
-            {...stylex.props(s.name)}
+            {...stylex.props(s.name, embedded && s.embeddedAction)}
           >
             {make}
           </button>
@@ -209,7 +221,14 @@ export function CategoryMakePicker({
   }
   const content = (
     <>
-      <h2 {...stylex.props(s.title, screen === 'summary' && s.summaryTitle)}>
+      <h2
+        {...stylex.props(
+          s.title,
+          screen === 'summary' && s.summaryTitle,
+          embedded && s.embeddedTitle,
+          embedded && (screen === 'summary' ? s.embeddedSummaryTitle : s.embeddedMakeTitle),
+        )}
+      >
         {screen === 'summary' ? t('Make, Model') : t('Make')}
       </h2>
       <div {...stylex.props(s.content)}>
@@ -223,12 +242,14 @@ export function CategoryMakePicker({
                 setExclude(false);
                 setScreen('make');
               }}
-              {...stylex.props(s.row, s.action)}
+              {...stylex.props(s.row, s.action, embedded && s.embeddedAction)}
             >
               {t('Add vehicle')}
             </button>
             {excludedNames.length > 0 && (
-              <h3 {...stylex.props(s.excluded)}>{t('Excluded vehicles')}</h3>
+              <h3 {...stylex.props(s.excluded, embedded && s.embeddedAction)}>
+                {t('Excluded vehicles')}
+              </h3>
             )}
             {excludedNames.map((make) => selection(make, true))}
             <button
@@ -238,20 +259,24 @@ export function CategoryMakePicker({
                 setExclude(true);
                 setScreen('make');
               }}
-              {...stylex.props(s.row, s.action)}
+              {...stylex.props(s.row, s.action, embedded && s.embeddedAction)}
             >
               {t('Exclude vehicle')}
             </button>
           </>
         ) : (
           <>
-            <button type="button" onClick={() => choose('Any')} {...stylex.props(s.row)}>
+            <button
+              type="button"
+              onClick={() => choose('Any')}
+              {...stylex.props(s.row, embedded && s.embeddedRow)}
+            >
               {t('Any')}
               {!editingMake && <Icon name="check" size={20} />}
             </button>
             {letters.map((letter) => (
               <section key={letter}>
-                <h3 {...stylex.props(s.group)}>{letter}</h3>
+                <h3 {...stylex.props(s.group, embedded && s.embeddedRow)}>{letter}</h3>
                 {options
                   .filter((name) => name !== 'Other' && name[0].toUpperCase() === letter)
                   .map((make) => (
@@ -259,7 +284,7 @@ export function CategoryMakePicker({
                       key={make}
                       type="button"
                       onClick={() => choose(make)}
-                      {...stylex.props(s.row)}
+                      {...stylex.props(s.row, embedded && s.embeddedRow)}
                     >
                       {make}
                       {editingMake === make && <Icon name="check" size={20} />}
@@ -267,7 +292,11 @@ export function CategoryMakePicker({
                   ))}
               </section>
             ))}
-            <button type="button" onClick={() => choose('Other')} {...stylex.props(s.row)}>
+            <button
+              type="button"
+              onClick={() => choose('Other')}
+              {...stylex.props(s.row, embedded && s.embeddedRow)}
+            >
               Other
             </button>
           </>

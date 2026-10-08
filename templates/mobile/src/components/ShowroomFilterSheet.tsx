@@ -264,6 +264,7 @@ export function ShowroomFilterSheet({
                 s.fields,
                 sheet === 'more' ? s.moreFields : s.readableFields,
                 sheet === 'search' && s.searchPanel,
+                sheet === 'price' && s.pricePanel,
               )}
             >
               {sheet === 'search' && (

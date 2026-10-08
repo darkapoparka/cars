@@ -135,14 +135,22 @@ Home search and filter pills open one editor with the same underline tabs: Searc
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
 The phone editor's scrolling tab rail reaches both viewport edges. Labels use
-12px inner padding in 52px targets; the 3px underline fills the selected target,
-with space below its text box. This edge treatment is scoped to
+equal 8px inner padding in 52px targets, with an 8px rail gutter so the first label
+aligns with the 16px fields. Short labels retain a 48px minimum width rather than
+extra width that changes their apparent gaps. The 3px underline fills the selected
+target, with space below its text box. This edge treatment is scoped to
 the phone filter editor; the category row and other tab layouts retain their styles.
-Phone filter headings use 18px semibold type. Search, make search, numeric bounds
-and budget presets share 16px outer gutters; search fields and the apply action
-have 48px targets. Search results follow the field directly, without an introductory
-heading. Suggestions align regular-weight muted prices with the 17px vehicle name
-and use 14px facts below it. The white heading remains continuous with the tabs,
+The phone editor title uses 18px semibold type; section headings use 16px semibold,
+tabs use 16px medium, and the active tab uses semibold. Search, make search,
+numeric bounds and budget presets share 16px outer gutters and start 16px below
+the rail. Search and make fields have matching icon/text insets and an 8px gap
+before their list rows. Range controls use a 56px slider area, with 16px before
+price shortcuts and 24px between separate filter groups. Search fields and the
+apply action have 48px targets. Search results follow the field directly, without
+an introductory heading. Suggestions align regular-weight muted prices with the
+16px medium vehicle name and use 14px facts below it. Embedded category and model
+lists share the fields' outer gutters; nested model rows retain their indentation.
+The white heading remains continuous with the tabs,
 whose shadow is clipped above and retained below the underline.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.

@@ -207,7 +207,12 @@ export const showroomFilterSheetStyles = stylex.create({
       '@media (min-width: 700px)': { default: colors.background, ':checked': colors.text },
     },
   },
-  fieldTitle: { fontSize: 18, fontWeight: 600, lineHeight: '26px', marginBottom: 12 },
+  fieldTitle: {
+    fontSize: { default: 18, '@media (max-width: 699px)': 16 },
+    fontWeight: 600,
+    lineHeight: { default: '26px', '@media (max-width: 699px)': '24px' },
+    marginBottom: { default: 12, '@media (max-width: 699px)': 8 },
+  },
   copy: { color: colors.muted, fontSize: 14, lineHeight: '22px' },
   budgetPresets: {
     display: 'grid',
@@ -250,7 +255,10 @@ export const showroomFilterSheetStyles = stylex.create({
     borderColor: { default: colors.text, '@media (min-width: 1024px)': colors.accent },
     color: { default: colors.background, '@media (min-width: 1024px)': colors.accent },
   },
-  searchPanel: { gap: { default: 16, '@media (max-width: 699px)': 20 } },
+  searchPanel: { gap: { default: 16, '@media (max-width: 699px)': 8 } },
+  pricePanel: {
+    gap: { default: 28, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 24 },
+  },
   searchField: {
     minHeight: { default: 44, '@media (max-width: 699px)': 48 },
     paddingLeft: { default: 12, '@media (max-width: 699px)': 16 },
@@ -281,7 +289,7 @@ export const showroomFilterSheetStyles = stylex.create({
     textAlign: 'left',
     outlineColor: colors.accent,
     textDecoration: 'none',
-    fontSize: { default: 15, '@media (max-width: 699px)': 17 },
+    fontSize: { default: 15, '@media (max-width: 699px)': 16 },
     lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
   },
   suggestionName: {
@@ -291,7 +299,7 @@ export const showroomFilterSheetStyles = stylex.create({
     flex: '1',
     minWidth: 0,
     overflowWrap: 'anywhere',
-    fontWeight: { default: 500, '@media (max-width: 699px)': 600 },
+    fontWeight: 500,
   },
   suggestionFacts: {
     color: colors.muted,
