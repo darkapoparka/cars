@@ -104,7 +104,14 @@ export function ShowroomDesktopFilters({
           ? `[data-quick-filter="${section === 'transmission' ? 'gearbox' : section}"]`
           : `[data-desktop-hero-filter="${section}"]`
       }
-      onBack={editingMake ? () => setEditingMake(null) : undefined}
+      backLabel={section === 'model' ? 'Makes' : 'All filters'}
+      onBack={
+        section === 'model'
+          ? () => setEditingMake('make')
+          : editingMake && presentation === 'all'
+            ? () => setEditingMake(null)
+            : undefined
+      }
       onReset={reset}
       onApply={fields.onApply}
       onClose={fields.onClose}
@@ -191,7 +198,13 @@ export function ShowroomDesktopFilters({
           </div>
         </div>
       ) : (
-        <ShowroomDesktopFilterFields {...fields} section={section} dropdown={dropdown} />
+        <ShowroomDesktopFilterFields
+          {...fields}
+          section={section}
+          dropdown={dropdown}
+          onChooseMake={() => setEditingMake('model')}
+          onBackToMakes={() => setEditingMake('make')}
+        />
       )}
     </ShowroomDesktopFilterDialog>
   );

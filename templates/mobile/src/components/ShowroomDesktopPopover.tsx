@@ -4,6 +4,7 @@ import { useEffect, useLayoutEffect, useRef, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
 import * as stylex from '@stylexjs/stylex';
 import { desktopFilterStyles as s } from './showroom-desktop-filters.stylex';
+import { desktopPopoverPosition } from '@/lib/desktop-popover';
 
 const filterTrigger = '[data-desktop-hero-filter], [data-quick-filter], [data-desktop-sort]';
 const focusable = 'button, input, select, textarea, a[href], summary, [tabindex]';
@@ -45,7 +46,8 @@ export function ShowroomDesktopPopover({
     const popup = root.current;
     const opener = anchor?.isConnected
       ? anchor
-      : document.querySelector<HTMLElement>(anchorSelector);
+      : document.querySelector<HTMLElement>(anchorSelector) ||
+        document.querySelector<HTMLElement>('[data-desktop-search-box]');
     trigger.current = opener;
     if (!popup || !opener) return;
     const widthAnchor = matchAnchorSelector
@@ -63,19 +65,16 @@ export function ShowroomDesktopPopover({
       else popup.style.removeProperty('--filter-width');
       const width = popup.offsetWidth;
       const height = popup.getBoundingClientRect().height;
-      const below = window.innerHeight - box.bottom - 24;
-      const above = box.top - 24;
-      const down = below >= height || below >= above;
-      const available = Math.max(120, down ? below : above);
-      popup.style.setProperty('--filter-height', available + 'px');
-      popup.style.setProperty(
-        '--filter-top',
-        Math.max(16, down ? box.bottom + 8 : box.top - Math.min(height, available) - 8) + 'px',
+      const position = desktopPopoverPosition(
+        box,
+        { width, height },
+        { width: window.innerWidth, height: window.innerHeight },
       );
-      popup.style.setProperty(
-        '--filter-left',
-        Math.max(16, Math.min(box.left, window.innerWidth - width - 16)) + 'px',
-      );
+      popup.style.setProperty('--filter-height', position.maxHeight + 'px');
+      popup.style.setProperty('--filter-top', position.top + 'px');
+      popup.style.setProperty('--filter-left', position.left + 'px');
+      // The fallback position must never be painted while the anchor is being measured.
+      popup.style.visibility = 'visible';
     }
     position();
     const observer = new ResizeObserver(position);

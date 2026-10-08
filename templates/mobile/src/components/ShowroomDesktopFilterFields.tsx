@@ -38,6 +38,8 @@ export function ShowroomDesktopFilterFields({
   section,
   compact = false,
   dropdown = false,
+  onChooseMake,
+  onBackToMakes,
   draft,
   stock,
   matches,
@@ -49,6 +51,8 @@ export function ShowroomDesktopFilterFields({
   section: DesktopFilterSection;
   compact?: boolean;
   dropdown?: boolean;
+  onChooseMake?: () => void;
+  onBackToMakes?: () => void;
 }) {
   const { t, money } = useLocale();
   function range(
@@ -127,6 +131,7 @@ export function ShowroomDesktopFilterFields({
             filters={draft}
             onChange={onChange}
             view="makes"
+            onChooseMake={onChooseMake}
             dropdown={dropdown}
           />
         ) : (
@@ -146,6 +151,7 @@ export function ShowroomDesktopFilterFields({
             filters={draft}
             onChange={onChange}
             view="models"
+            onBackToMakes={onBackToMakes}
             dropdown={dropdown}
           />
         );

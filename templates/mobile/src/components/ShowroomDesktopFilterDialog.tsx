@@ -46,6 +46,7 @@ export function ShowroomDesktopFilterDialog({
   keyboardOpening,
   anchorSelector,
   onBack,
+  backLabel = 'All filters',
   onReset,
   onApply,
   onClose,
@@ -64,6 +65,7 @@ export function ShowroomDesktopFilterDialog({
   keyboardOpening?: boolean;
   anchorSelector: string;
   onBack?: () => void;
+  backLabel?: string;
   onReset: () => void;
   onApply: () => void;
   onClose: () => void;
@@ -100,7 +102,7 @@ export function ShowroomDesktopFilterDialog({
         {onBack && (
           <button
             type="button"
-            aria-label={t('Back') + ': ' + t('All filters')}
+            aria-label={t('Back') + ': ' + t(backLabel)}
             onClick={onBack}
             {...stylex.props(s.close)}
           >

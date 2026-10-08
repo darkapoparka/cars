@@ -5,6 +5,7 @@ export const showroomDesktop = stylex.defineVars({
   shellWidth: '1280px',
   viewportGutter: '24px',
   inventoryColumns: 'repeat(3,minmax(0,1fr))',
+  wideInventoryColumns: 'repeat(4,minmax(0,1fr))',
   gutter: '28px',
   sectionGap: '24px',
   cardGap: '16px',

@@ -31,6 +31,8 @@ export function ShowroomDesktopMakeModel({
   availableMakes,
   filters,
   onChange,
+  onChooseMake,
+  onBackToMakes,
   compact = false,
   view = 'split',
   dropdown = false,
@@ -38,6 +40,8 @@ export function ShowroomDesktopMakeModel({
   availableMakes: string[];
   filters: Filters;
   onChange: (patch: Partial<Filters>) => void;
+  onChooseMake?: () => void;
+  onBackToMakes?: () => void;
   compact?: boolean;
   view?: 'split' | 'makes' | 'models';
   dropdown?: boolean;
@@ -141,6 +145,10 @@ export function ShowroomDesktopMakeModel({
     } else if (checked) {
       onChange(applyMakeSelection(filters, name, [], false));
       edit({ name, excluded: false });
+      if (onChooseMake) {
+        onChooseMake();
+        focusSearch('model');
+      }
     } else remove(name);
   }
 
@@ -347,6 +355,20 @@ export function ShowroomDesktopMakeModel({
           (compact || single) && !modelView && s.hidden,
         )}
       >
+        {dropdown && onBackToMakes && (
+          <button
+            type="button"
+            aria-label={t('Back') + ': ' + t('Makes')}
+            onClick={() => {
+              onBackToMakes();
+              focusSearch('make');
+            }}
+            {...stylex.props(s.back, s.dropdownBack)}
+          >
+            <Icon name="back" size={16} />
+            {t('Makes')}
+          </button>
+        )}
         {single && selections.length > 1 && (
           <div
             role="group"

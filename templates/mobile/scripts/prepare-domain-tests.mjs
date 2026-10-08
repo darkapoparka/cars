@@ -27,6 +27,7 @@ const files = [
   'showroom-services',
   'service-requests',
   'showroom-filter-editor',
+  'desktop-popover',
   'vehicle-detail-navigation',
 ];
 await mkdir('.qa/domain/native-data', { recursive: true });

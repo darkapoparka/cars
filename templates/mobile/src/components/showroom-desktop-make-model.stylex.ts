@@ -17,6 +17,14 @@ export const desktopMakeModelStyles = stylex.create({
     gap: { default: 8, '@media (max-height: 700px)': 6, '@media (max-height: 600px)': 6 },
   },
   dropdownModelContent: { display: 'flex', flexDirection: 'column', flex: '0 1 auto' },
+  dropdownBack: {
+    flex: 'none',
+    alignSelf: 'flex-start',
+    height: 32,
+    minHeight: 32,
+    paddingInline: 8,
+    fontSize: 14,
+  },
   dropdownSelectedMakes: { flexWrap: 'nowrap', overflowX: 'auto', gap: 6 },
   dropdownSelectedMake: {
     flexShrink: 0,

@@ -171,7 +171,7 @@ export function ShowroomVehicleCard({
           alt={name}
           fill
           priority={priority}
-          sizes="(min-width: 1328px) 380px, (min-width: 1024px) calc((100vw - 190px) / 3), (max-width: 699px) calc(100vw - 56px), 520px"
+          sizes="(min-width: 1328px) 276px, (min-width: 1280px) calc((100vw - 224px) / 4), (min-width: 1024px) calc((100vw - 190px) / 3), (max-width: 699px) calc(100vw - 56px), 520px"
           {...stylex.props(s.image)}
         />
         <span {...stylex.props(s.save)}>
