@@ -23,20 +23,21 @@ async function checkRootGrid(menu, next, compact, stock) {
     assert(Math.abs(first.y - second.y) < 1 && Math.abs(second.x - first.x - first.width - 8) < 1, 'The first catalogue card fills the cell beside All models');
   }
 }
-async function checkModelHeader(menu, label) {
+async function checkModelHeader(menu, label, compactLabel) {
   const header = menu.locator('.dn-picker-header');
   const back = header.locator('.back');
-  assert.equal(await back.innerText(), label, 'The header replaces Model with the full make/family path');
+  const visibleLabel = compactLabel ?? label;
+  assert.equal(await back.innerText(), visibleLabel, 'Compact headers show the family while wide headers retain the full path');
   assert.equal(await back.getAttribute('title'), label, 'Truncated paths retain their complete label');
   assert((await back.getAttribute('aria-label')).endsWith(label), 'Back exposes its full context to assistive technology');
   const text = await back.locator('span').evaluate(node => ({ width: node.clientWidth, content: node.scrollWidth }));
-  if (label.length < 24) assert(text.content <= text.width, 'Short make/family paths remain fully visible');
+  if (visibleLabel.length < 24) assert(text.content <= text.width, 'Short make/family paths remain fully visible');
   else assert(text.content > text.width, 'Long family paths truncate without growing the header');
   assert.equal(await menu.locator('.dn-model-groups .path').count(), 0, 'The list has no duplicate Back/breadcrumb row');
   const boxes = await Promise.all([back, header.getByRole('searchbox'), header.locator('.dn-picker-close')].map(node => node.boundingBox()));
   const centers = boxes.map(box => box.y + box.height / 2);
   assert(Math.max(...centers) - Math.min(...centers) < 2, 'Back, search and close share one header row');
-  assert(boxes[0].height >= 44 && boxes[1].width >= 100, 'Long paths retain usable Back and search controls');
+  assert(boxes[0].height >= 44 && boxes[1].width >= (compactLabel ? 150 : 200), 'Long paths retain usable Back and readable search controls');
   const first = await menu.locator('.dn-model-groups input[type=checkbox]').first().evaluate(node => node.closest('label').getBoundingClientRect().top);
   const headerBox = await header.boundingBox();
   assert(first >= headerBox.y + headerBox.height && first <= headerBox.y + headerBox.height + 16, 'Model choices begin directly beneath the header');
@@ -79,7 +80,7 @@ try {
       assert.equal(await menu.locator('.all-models').count(), 0, 'All models is not repeated inside a family');
       assert.equal(await menu.getByRole('checkbox', { name: '118', exact: true }).count(), 0, 'Other families are not mixed into the model list');
       assert(await menu.locator('.back').evaluate(node => node === document.activeElement), 'Entering a family places keyboard focus on Back');
-      await checkModelHeader(menu, 'BMW / 3 Series');
+      await checkModelHeader(menu, 'BMW / 3 Series', nested ? '3 Series' : undefined);
       assert(await menu.getByRole('checkbox', { name: '320', exact: true }).isEnabled(), 'Zero-stock catalogue models remain selectable');
       const description = await menu.getByRole('checkbox', { name: '320', exact: true }).getAttribute('aria-describedby');
       assert.match(await menu.locator(`[id="${description}"]`).innerText(), /^0 /);
@@ -235,7 +236,7 @@ try {
       const pageScroll = await page.evaluate(() => scrollY);
       await menu.locator(`[data-model-family="${family}"]`).click();
       assert.equal(await menu.locator('input[type=checkbox]').count(), 99, 'Only the 99 choices belonging to the active family are mounted');
-      await checkModelHeader(menu, `BMW / ${family}`);
+      await checkModelHeader(menu, `BMW / ${family}`, nested ? family : undefined);
       await menu.getByRole('checkbox', { name: additions.at(-1), exact: true }).check();
       assert(await menu.locator('.back').isVisible(), 'Back stays visible after scrolling to the last of 99 models');
       const backBox = await menu.locator('.back').boundingBox();

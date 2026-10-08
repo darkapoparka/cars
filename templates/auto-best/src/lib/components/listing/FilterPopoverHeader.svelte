@@ -1,7 +1,7 @@
 <script module lang="ts">
   import type { Attachment } from 'svelte/attachments';
 
-  export type PickerNavigation = { label: string; back?: () => void; attachBack?: Attachment<HTMLButtonElement> };
+  export type PickerNavigation = { label: string; compactLabel?: string; back?: () => void; attachBack?: Attachment<HTMLButtonElement> };
 </script>
 
 <script lang="ts">
@@ -14,11 +14,11 @@
   const i18n = getI18n();
 </script>
 
-<header class="dn-picker-header" class:dn-picker-header--search={Boolean(search)} class:dn-picker-header--navigation={Boolean(navigation)}>
+<header class="dn-picker-header" class:dn-picker-header--search={Boolean(search)} class:dn-picker-header--navigation={Boolean(navigation)} class:dn-picker-header--compact={Boolean(navigation?.compactLabel)}>
   <h2 {id}>
     {#if navigation?.back}
-      <button type="button" class="back" onclick={navigation.back} {@attach navigation.attachBack} aria-label={`${i18n.t('m_76900f1bfd16')}: ${navigation.label}`} title={navigation.label}><Icon name="arrow-left" size={16} /><span>{navigation.label}</span></button>
-    {:else}<span title={navigation?.label}>{navigation?.label ?? title}</span>{/if}
+      <button type="button" class="back" onclick={navigation.back} {@attach navigation.attachBack} aria-label={`${i18n.t('m_76900f1bfd16')}: ${navigation.label}`} title={navigation.label}><Icon name="arrow-left" size={16} /><span>{navigation.compactLabel ?? navigation.label}</span></button>
+    {:else}<span title={navigation?.label}>{navigation?.compactLabel ?? navigation?.label ?? title}</span>{/if}
   </h2>
   {#if search}<div class="dn-picker-search">{@render search()}</div>{/if}
   <Popover.Close type="button" class="dn-picker-close" aria-label={i18n.t('m_84305a580997')}><Icon name="x" size={18} /></Popover.Close>
@@ -42,6 +42,7 @@
     .dn-picker-search { min-width: 0; }
     .dn-picker-header--navigation { display: flex; gap: var(--dn-space-2); }
     .dn-picker-header--navigation h2 { flex: 0 1 auto; min-width: 0; max-width: 44%; color: var(--dn-ink); font: var(--dn-control-font); }
+    .dn-picker-header--compact h2 { max-width: 30%; }
     .dn-picker-header--navigation h2 > span { display: block; overflow: hidden; text-overflow: ellipsis; }
     .dn-picker-header--navigation .dn-picker-search { flex: 1 1 0; }
   }
