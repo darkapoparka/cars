@@ -17,12 +17,14 @@ On Cars and Services, the logo header and search scroll with the page. On Cars,
 the category tabs also scroll away, leaving only the quick-filter pills pinned
 above the continuous white results canvas on phones. The phone Home header groups
 the retained logo, search and vehicle categories on white, with the original
-unboxed category artwork. Applying
+unboxed category artwork. Its category rail shares the Services tab rail's soft
+shadow below 700px. Applying
 filters moves browsing to that panel after the editor closes; the page keeps a single natural scroll
 area, including short and empty result lists. Services retains its pinned category
-tabs and quick-filter pills. Its phone category rail sits flush below search;
-the rail's shadow is clipped above the tabs and retained below them. The service
-list uses the same white sheet, 24px upper corners and 16px top spacing as Cars.
+tabs and quick-filter pills. Its phone category rail sits 8px below the same
+raised white 48px search used on Home; the rail's shadow is clipped above the
+tabs and retained below them. Services uses the same continuous white canvas
+and compact white quick-pill rail as Cars, with 16px from pill face to content.
 Phone service cards retain their artwork and use the lighter car-card edge and
 subtle shadow. The raised white tab rail retains its spacing and
 shadow. Cancelling an editor or closing sorting restores the opener and the saved
@@ -51,7 +53,7 @@ and work locally without an account. Vehicle Back retains the inventory filters,
 sort and scroll position. The native make/model picker and range controls remain.
 
 At 1024px and wider, Cars, Services, Contact and Saved cars use a 72px logo header
-with Saved cars and a labelled hamburger control on the right. The bottom dock is
+with one avatar menu for Saved cars, Settings and language on the right. The bottom dock is
 hidden at this breakpoint. The 260px dropdown has exactly three destinations:
 Cars, Services and Contact, using the same navigation data as the phone dock.
 It sits 6px below its trigger, with a small pointer centered on the Menu button
@@ -97,9 +99,8 @@ controls, cards, information surfaces and overlays; `colors.controlSurface` for
 fields and secondary actions. Inactive quick-filter
 pills use the white page token with a faint border and no shadow. Applied or selected pills invert the
 existing text/page tokens for a near-black fill and white text; their border
-matches the fill, without a shadow. Phone Cars pills use 40px faces and 16px
-labels; secondary Services pills use 36px faces and 14px labels. Both keep 48px
-tap targets and the same geometry when selected. Desktop inventory pills use
+matches the fill, without a shadow. Phone Cars and Services quick pills share compact white 36px faces and 14px
+labels inside 48px tap targets, with the same geometry when selected. Desktop inventory pills use
 38px faces and 44px targets. Their flat presentation keeps them secondary to
 search and category navigation.
 Tab rails use the same page
@@ -107,9 +108,12 @@ or sheet surface token. No route adds its own neutral palette. The centered desk
 frame keeps the white page token, with the existing stripe token outside it.
 White vehicle cards use a faint 1px `colors.cardLine` edge and a low-opacity
 neutral shadow, retaining their geometry while separating each listing from the
-white canvas. On phones, a `colors.background` results sheet sits beneath the
+white canvas. Year, mileage and fuel appear as separate specification badges with
+6px corners, a neutral `colors.badgeSurface` fill and a 1px `colors.cardLine` edge. Their existing text sizes
+and wrapping remain; dot separators are removed between the badges.
+On phones, a `colors.background` results sheet sits beneath the
 quick pills with 16px before the first card. Cars uses a continuous white canvas;
-Services retains its rounded upper sheet. The list retains the page's natural scroll; the pill row stays sticky above
+Services also uses a continuous white canvas without raised upper corners. The list retains the page's natural scroll; the pill row stays sticky above
 it. The edge token has a corresponding dark-theme value.
 Service and import cards, Contact panels and enquiry starters retain the same
 1px `colors.line` border. Existing corner radii and padding remain.
@@ -124,6 +128,10 @@ Orange remains the form-action, selected-range and validation-error color.
 Home search and filter pills open one editor with the same underline tabs: Search,
 Make & model, Price, Year, Fuel, Condition and More. Search opens at the text
 field with matching vehicle suggestions. Options update a draft; Show cars applies it.
+The phone editor's scrolling tab rail reaches both viewport edges. Labels retain
+16px inner padding in 52px targets; the 3px underline fills the selected target,
+with the existing 13px gap below its text box. This edge treatment is scoped to
+the phone filter editor; the category row and other tab layouts retain their styles.
 Close, Escape and browser Back cancel unapplied changes. The native make/model
 taxonomy and selection logic power a dedicated showroom list inside that editor.
 On phones, choosing or editing a brand opens its models directly. A single Makes
@@ -133,8 +141,10 @@ controls, with expandable families.
 The phone model list names its brand in the All models row. Unchecking that row
 removes the brand and returns focus to its brand choice. The Makes back action
 returns to brands while retaining model selections and clearing
-the model search. Search suggestions show a right arrow beside their prices;
-selecting a suggestion still edits the draft until Show cars applies it.
+the model search. Phone search results show year and mileage beneath the model,
+with a right arrow beside the price. Selecting a result applies the current search
+and opens that vehicle; returning to inventory preserves the search. Show cars
+still applies the draft to the full matching inventory.
 Desktop uses separate brand and model panels with independent search fields.
 Brand checkboxes select and deselect directly; a separate edit action opens an
 existing brand's models. A labelled Remove action stays beside the model heading.
@@ -173,10 +183,11 @@ Inventory and import cards share 16:10 photo frames, 16px corners and compact
 inner corners. Showroom cards place the name above a quiet row of year, mileage
 and fuel, with the price below. Specs stay compact across inventory, Saved and
 related cars at normal text size and can wrap when text is enlarged.
-Phone prices use 20px, weight 700 beneath 17px medium vehicle names.
+Phone prices use 20px, weight 700 beneath 18px semibold vehicle names. A quiet
+14px trim line appears when available, followed by higher-contrast 14px specs.
 Power and gearbox remain in the vehicle details. Vehicle names can wrap.
-Photo save actions use the same outline-heart family
-as the header, with a 36px face inside a 48px button and an explicit pressed state.
+Photo save actions use the outline-heart family, with a 36px face inside a
+48px button and an explicit pressed state.
 
 Vehicle detail uses a 24px title, a quieter 14px trim line and a 24px price.
 The retained price rating sits opposite the price, with slimmer bars and a 44px
@@ -235,7 +246,7 @@ width on desktop. Services distributes its
 three categories equally across the viewport, allowing labels to wrap at larger
 text sizes. The wider indicator follows the retained native search reference.
 Home and service pills sit on the same white canvas as the listings below.
-Their white 40px outlined faces use 15px text inside 48px targets. Selected pills
+Their compact white outlined faces use 14px text inside 48px targets. Selected pills
 use a near-black fill with white labels and icons.
 Vehicle category assets use contained 64 x 40 boxes in 88px-wide tabs, retaining
 the 52px rail height and horizontal scrolling. Their original pixels and alpha
@@ -285,11 +296,13 @@ vehicle detail ends on a white surface with dividers around contact and related
 cars, without outer card frames. The mobile font and flat detail footer stay below
 700px; desktop retains its original typography and framed detail footer.
 
-On phones, Contact opens with a concise heading and one-line description, then
-compact rounded Call us / Write to us buttons in one row, using the existing
-illustrations at 32px inside 52px targets. A compact message card has an input-style
-prompt and previews the current message. Both Write to us and this card open the
-same full-screen enquiry overlay, with native autofocus on the message field.
+On phones, Contact opens with a concise heading and one-line description. Call
+and email actions use configured contact details. The neutral template also shows
+a disabled Call us preview with the phone inside the same white card pattern
+as Write to us. The placeholder remains display-only. One Write
+to us card previews the current message and opens the full-screen enquiry overlay,
+with native autofocus on the message field. Vehicle enquiries show the selected
+car's photo, model and price in the card and overlay; the overlay also links to the car.
 Close, Escape and browser Back dismiss it and return focus to the opener; edits
 remain intact. The overlay header stays visible above its scrollable form.
 The form has 16px input text, 48px fields and a rounded submit button below the
@@ -297,11 +310,11 @@ final field. Phone and email share a row from 380px and stack on narrower phones
 Contact details and the message save together as a local draft; the form does not
 transmit enquiries. The location card follows
 with the optically centered conceptual showroom illustration, configured address
-and a rounded Visit us button; example locations remain labelled as examples.
+and a rounded Visit us button, without an extra location caption.
 Opening hours only appear when configured. The floating dock hides while the
 mobile keyboard is open, and the page leaves scroll space below the location card.
-Verified phone and directions enable the links;
-missing details show inactive preview actions. Email is offered when configured.
+Phone and email links appear when configured; missing dealer contacts are omitted.
+Directions retain their existing location preview behavior.
 At 1024px and wider, Contact shares Home's image/header banner and rounded drawer.
 Its location panel and enquiry form use equal-height grid columns, with no fixed
 card height. `ShowroomContactPanel` shows a compact, lazy-loaded map, configured
@@ -334,18 +347,34 @@ the committed product assets without these native captures. Donor secrets, Git m
 deployment identity, dependencies, generated builds and old browser QA outputs
 were excluded using the existing Cars source exporter.
 
+## Header menu
+
+Cars, Services and Contact share one avatar control on the right. Its Radix
+dropdown follows the shadcn menu pattern in the existing StyleX design system.
+Saved cars links to the existing saved inventory and displays the local count.
+Bulgarian and English choices use the shared locale store; Settings opens the
+same working language preference at `/settings`. Desktop navigation remains
+available inside the menu; phones retain their bottom navigation.
+
+The portrait at `public/images/demo/profile-avatar-20261008.webp` was generated
+for this demonstration and depicts a fictional person. The menu is labelled
+Guest; it does not imply an authenticated account or a real customer identity.
+Replace the demo portrait when wiring a verified account avatar. The generation
+receipt is recorded in Cars `docs/mobile-profile-menu-20261008/`.
+
 ## Development and checks
 
 Use Node 22.x (this workstation: `L:/Toolchains/Node/22.20.0/node.exe`).
 From this directory run `npm ci`, then `npm run check`.
-`npm start` serves the production `.next-review` build on port **6474**.
+`npm start` serves the production build on port **6474**.
 `npm run dev` uses the same port; run one mode at a time.
 Dev and production share the preview launcher, which preserves project-facing
 dependency paths for Windows junctions on another drive. Dev writes to `.next`;
-on Windows an existing dev-output junction selects the physical `.next-preview-6474`
-fallback, including when `NEXT_DIST_DIR` explicitly points at the junction.
-The launcher refuses a junction at the fallback too, keeping dev routes readable.
-The local production build writes to `.next-review`. For dependencies on
+on Windows an existing output junction selects the physical `.next-preview-6474`
+fallback for dev or `.next-review-local` for build/start, including when
+`NEXT_DIST_DIR` explicitly points at the junction. The launcher refuses a junction
+at the fallback too, keeping route output and server dependency resolution on the
+source drive. The usual production output remains `.next-review`. For dependencies on
 another drive, the launcher also supplies an external `NEXT_WEBPACK_CACHE_DIR`
 for dev. Route output stays on the source drive while large webpack caches use
 the dependency cache location. Explicit cache paths and `NEXT_DIST_DIR` remain supported.
@@ -358,6 +387,14 @@ The shared launcher also supports this template:
 Run that command from the Cars root. Supply `QA_URL=http://127.0.0.1:6474`
 and a fresh `QA_OUTPUT` under Cars `runtime/` before running copied browser suites.
 Keep source and build unchanged during acceptance.
+After the layout matrix passes on a frozen build, `QA_SCOPE=state` reruns only
+the architecture suite's cross-tab, draft and storage checks. The default scope
+still includes the complete viewport matrix and state checks in both engines.
+
+The header logo and five category illustrations use display-sized lossless WebP
+derivatives of the approved PNG artwork. The original masters remain in `public/`.
+Run `node scripts/prepare-showroom-assets.mjs` after replacing those masters to
+regenerate the derivatives. This only resizes and encodes existing artwork.
 
 ## Personalization and release
 
@@ -372,8 +409,8 @@ supplied. Desktop shows a display-only example phone when `contactPreview` is
 enabled; it never creates a call action for that placeholder. Address and phone
 share the same small muted icons and row typography. The map CTA sits beside
 the showroom heading, keeping contact details together below it.
-The neutral desktop Contact demo uses the owner's existing Varna example address
-and labels it as an example. Set `contactPreview: false` when personalizing.
+The neutral Contact demo uses the owner's existing Varna example address
+without an extra location caption. Set `contactPreview: false` when personalizing.
 A verified address, directions URL or map always takes precedence over that
 example, so a real dealer address is never paired with the demo map.
 Replace sample stock, imagery and captured detail facts for a real dealer proposal.
@@ -421,3 +458,16 @@ the initial deployed source and its focused live browser checks.
 [The drawer correction](../../docs/mobile-pdp-drawer-correction-20261003.md) records
 the subsequent owner-requested layout repair. This test preview does not select
 a dealer release or refresh existing dealer copies.
+
+## Mobile contact and Services polish — 8 October 2026
+
+The Contact location caption is removed on phone and desktop. Mobile Call us
+contains its number beneath the heading inside a white card matching the enquiry
+entry. The configured phone still controls real dialing; the neutral preview
+number remains disabled. Services reserves a right chevron column even at 320px
+and aligns it with the title. Its search surface sits above the tab rail below
+1024px, and the phone tab wrapper contains its top spacing. The tablet Services
+divider is removed. Raised search uses the same white surface and 48px height
+throughout the non-desktop layout. Inactive discovery pills and their rail
+use the same white page token below 1024px, with faint borders; selected pills
+retain their dark state and the category rail retains its soft lift.

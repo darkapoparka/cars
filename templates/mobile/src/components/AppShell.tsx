@@ -143,7 +143,9 @@ export function AppShell({ children }: { children: ReactNode }) {
           ? 'Contact'
           : pathname === '/car-park'
             ? 'Saved cars'
-            : 'Cars';
+            : pathname === '/settings'
+              ? 'Settings'
+              : 'Cars';
     const title = showroomTitle(page, locale);
     const syncTitle = () => {
       if (document.title !== title) document.title = title;

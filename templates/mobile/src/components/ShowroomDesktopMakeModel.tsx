@@ -338,22 +338,8 @@ export function ShowroomDesktopMakeModel({
                     <BrandLogo make={name} size={compact ? 32 : 28} blend={blendLogos} />
                   ) : null}
                   <span {...stylex.props(s.makeName, grid && s.gridName)}>
-                    <span
-                      {...stylex.props(
-                        grid && s.gridCaption,
-                        grid && checked && s.gridSelectedName,
-                      )}
-                    >
+                    <span {...stylex.props(grid && s.gridCaption)}>
                       <span>{name === 'Any' ? t('Any make') : name}</span>
-                      {grid && checked && (
-                        <span
-                          aria-hidden="true"
-                          data-desktop-make-check
-                          {...stylex.props(s.gridTick)}
-                        >
-                          <Icon name="check" size={12} />
-                        </span>
-                      )}
                     </span>
                     {selection && !grid && (
                       <span
@@ -367,6 +353,11 @@ export function ShowroomDesktopMakeModel({
                       <span {...stylex.props(s.excluded)}>{t('Excluded')}</span>
                     )}
                   </span>
+                  {grid && checked && (
+                    <span aria-hidden="true" data-desktop-make-check {...stylex.props(s.gridTick)}>
+                      <Icon name="check" size={12} />
+                    </span>
+                  )}
                 </label>
                 {!single && (
                   <button

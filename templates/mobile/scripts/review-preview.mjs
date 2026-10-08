@@ -12,20 +12,21 @@ const requestedDistDir =
   process.env.NEXT_DIST_DIR ||
   (mode === 'dev' ? '.next' : process.env.VERCEL ? '.next' : '.next-review');
 const requestedDistPath = path.resolve(root, requestedDistDir);
-const needsPhysicalDevOutput =
-  mode === 'dev' &&
+const needsPhysicalOutput =
   process.platform === 'win32' &&
   fs.existsSync(requestedDistPath) &&
   fs.lstatSync(requestedDistPath).isSymbolicLink();
-const distDir = needsPhysicalDevOutput ? '.next-preview-6474' : requestedDistDir;
-if (needsPhysicalDevOutput) {
+const distDir = needsPhysicalOutput
+  ? mode === 'dev'
+    ? '.next-preview-6474'
+    : '.next-review-local'
+  : requestedDistDir;
+if (needsPhysicalOutput) {
   const fallbackPath = path.join(root, distDir);
   if (fs.existsSync(fallbackPath) && fs.lstatSync(fallbackPath).isSymbolicLink()) {
-    throw new Error(
-      'Windows dev route output must use a physical directory; fallback is a junction',
-    );
+    throw new Error('Windows route output must use a physical directory; fallback is a junction');
   }
-  console.warn(`Windows dev output ${requestedDistDir} is a junction; using ${distDir}`);
+  console.warn(`Windows ${mode} output ${requestedDistDir} is a junction; using ${distDir}`);
 }
 const env = { ...process.env, NEXT_DIST_DIR: distDir };
 // Next's relative client entries need the project-facing dependency paths on Windows.

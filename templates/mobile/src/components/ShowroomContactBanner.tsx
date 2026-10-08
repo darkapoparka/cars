@@ -36,7 +36,6 @@ const s = stylex.create({
   icon: { flexShrink: 0, color: colors.accent, marginTop: 2 },
   copy: { display: 'flex', flexDirection: 'column', gap: 4, minWidth: 0 },
   address: { fontStyle: 'normal', fontSize: 16, lineHeight: '24px', overflowWrap: 'anywhere' },
-  note: { fontSize: 12, lineHeight: '18px', color: colors.muted },
   actions: { padding: 16, paddingTop: 0 },
   directions: {
     display: 'flex',
@@ -104,11 +103,6 @@ export function ShowroomContactBanner() {
           <MapPin size={18} strokeWidth={1.8} aria-hidden="true" {...stylex.props(s.icon)} />
           <div {...stylex.props(s.copy)}>
             <address {...stylex.props(s.address)}>{location.address}</address>
-            {location.preview && (
-              <p id="showroom-mobile-location-preview" {...stylex.props(s.note)}>
-                {t('Example location')}
-              </p>
-            )}
           </div>
         </div>
       )}
@@ -119,7 +113,6 @@ export function ShowroomContactBanner() {
             href={location.directionsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-describedby={location.preview ? 'showroom-mobile-location-preview' : undefined}
             {...stylex.props(s.directions)}
           >
             {visit}

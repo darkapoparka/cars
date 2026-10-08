@@ -199,26 +199,33 @@ const s = stylex.create({
     '::after': { backgroundColor: colors.text },
   },
   desktopCategories: {
-    boxShadow: 'none',
+    // Keep the rail's upper shadow from tinting the shared white header.
+    clipPath: { default: 'none', '@media (max-width: 699px)': 'inset(0 -16px -16px)' },
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
+    paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
     paddingTop: { default: 0, '@media (min-width: 1024px)': 4 },
     paddingBottom: { default: 0, '@media (min-width: 1024px)': 4 },
     borderBottomWidth: {
-      default: 0,
-      '@media (min-width: 700px)': 1,
+      default: 1,
       '@media (min-width: 1024px)': 0,
     },
+    borderBottomColor: {
+      default: colors.cardLine,
+      '@media (min-width: 700px)': colors.line,
+    },
+  },
+  categoryTab: {
+    minWidth: { default: 88, '@media (max-width: 699px)': 64 },
+    flexGrow: 0,
+    flexBasis: { default: 'auto', '@media (max-width: 699px)': '25%' },
+    paddingInline: { default: 12, '@media (max-width: 699px)': 0 },
   },
   pillsRail: {
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     gap: { default: 0, '@media (min-width: 1024px)': 6 },
     flexShrink: 0,
-    borderBottomWidth: {
-      default: 0,
-      '@media (min-width: 700px)': 1,
-      '@media (min-width: 1024px)': 0,
-    },
+    borderBottomWidth: 0,
   },
   pillsTab: {
     flexGrow: { default: 1, '@media (min-width: 1024px)': 0 },
@@ -274,6 +281,21 @@ const s = stylex.create({
     borderRightWidth: { default: 0, '@media (min-width: 1024px)': 1 },
     borderRightStyle: 'solid',
     borderRightColor: colors.line,
+  },
+  phoneEdgeRail: {
+    paddingInline: {
+      default: 16,
+      '@media (max-width: 699px)': 0,
+      '@media (min-width: 700px)': 12,
+    },
+  },
+  phoneEdgeSelected: {
+    '::after': {
+      left: { default: 2, '@media (max-width: 699px)': 0, '@media (min-width: 700px)': 12 },
+      right: { default: 2, '@media (max-width: 699px)': 0, '@media (min-width: 700px)': 12 },
+      borderTopLeftRadius: { default: 3, '@media (max-width: 699px)': 0 },
+      borderTopRightRadius: { default: 3, '@media (max-width: 699px)': 0 },
+    },
   },
   sidebarTab: {
     outlineColor: {
@@ -379,6 +401,7 @@ export function ShowroomTabs<T extends string>({
   primary = false,
   flush = false,
   flushOnPhone = false,
+  edgeToEdgeOnPhone = false,
   onChange,
 }: {
   label: string;
@@ -399,6 +422,7 @@ export function ShowroomTabs<T extends string>({
   primary?: boolean;
   flush?: boolean;
   flushOnPhone?: boolean;
+  edgeToEdgeOnPhone?: boolean;
   onChange: (value: T) => void;
 }) {
   const { t, locale } = useLocale();
@@ -445,6 +469,7 @@ export function ShowroomTabs<T extends string>({
         flush && s.flushRail,
         flushOnPhone && s.phoneFlushRail,
         layout === 'hero' && s.heroRail,
+        edgeToEdgeOnPhone && s.phoneEdgeRail,
       )}
     >
       {tabs.map(({ value, label: tabLabel, content }, index) => (
@@ -483,6 +508,7 @@ export function ShowroomTabs<T extends string>({
             tone === 'neutral' && s.neutralTab,
             variant === 'text' && s.textTab,
             variant === 'icon' && s.iconTab,
+            layout === 'desktop-categories' && s.categoryTab,
             filled && s.fillTab,
             desktopFill && s.desktopFillTab,
             layout === 'desktop-sidebar' && s.sidebarTab,
@@ -496,6 +522,7 @@ export function ShowroomTabs<T extends string>({
             primary && s.primaryTab,
             layout === 'hero' && s.heroTab,
             selected === value && layout === 'hero' && s.heroSelected,
+            selected === value && edgeToEdgeOnPhone && s.phoneEdgeSelected,
           )}
         >
           {layout === 'desktop-pills' ? (

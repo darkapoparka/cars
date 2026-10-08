@@ -5,6 +5,7 @@ export const colors = stylex.defineVars({
   surface: '#e6eaf0',
   panel: '#fcfbfd',
   stripe: '#f5f7fa', // Quiet grouped content and alternating rows.
+  badgeSurface: '#f3f3f3', // Neutral fill for noninteractive specification badges.
   controlSurface: '#f0f2f5', // Fields, secondary actions and control states.
   activeSurface: '#fff9f6',
   text: '#1b1b21',
@@ -24,6 +25,7 @@ export const darkTheme = stylex.createTheme(colors, {
   surface: '#302e37',
   panel: '#24212a',
   stripe: '#2b2831',
+  badgeSurface: '#2b2b2b',
   controlSurface: '#302e37',
   activeSurface: '#442c25',
   text: '#faf8fc',

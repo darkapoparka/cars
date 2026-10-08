@@ -140,7 +140,7 @@ export function ShowroomContactPanel() {
         <div data-showroom-contact-map {...stylex.props(s.map)}>
           <iframe
             src={location.embedUrl}
-            title={t(location.preview ? 'Example location map' : 'Showroom map')}
+            title={t('Showroom map')}
             loading="lazy"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -171,7 +171,6 @@ export function ShowroomContactPanel() {
               <MapPin size={18} strokeWidth={1.6} aria-hidden="true" {...stylex.props(s.icon)} />
               <div {...stylex.props(s.contactText)}>
                 <address {...stylex.props(s.address)}>{location.address}</address>
-                {location.preview && <p {...stylex.props(s.note)}>{t('Example location')}</p>}
               </div>
             </ContactRow>
           )}

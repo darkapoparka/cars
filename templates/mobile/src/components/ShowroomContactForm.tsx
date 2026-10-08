@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
@@ -17,6 +18,13 @@ import { Button, IconButton, Modal } from './ui';
 const emptyDetails: ShowroomContactDetails = { name: '', email: '', phone: '' };
 const formId = 'showroom-mobile-enquiry';
 const historyEntry = 'cars-showroom-enquiry';
+type EnquiryContext = {
+  title: string;
+  href: string;
+  linkLabel: string;
+  image?: string;
+  price?: string;
+};
 const s = stylex.create({
   phone: {
     display: { default: 'flex', '@media (min-width: 700px)': 'none' },
@@ -47,38 +55,31 @@ const s = stylex.create({
   entryHeader: { display: 'flex', alignItems: 'center', gap: 8 },
   entryTitle: { fontSize: 18, lineHeight: '26px', fontWeight: 500 },
   prompt: {
-    position: 'relative',
     display: 'block',
-    minHeight: 112,
-    padding: 14,
-    paddingRight: 54,
-    borderRadius: 12,
-    backgroundColor: colors.controlSurface,
     minWidth: 0,
   },
   preview: {
     display: '-webkit-box',
     WebkitBoxOrient: 'vertical',
-    WebkitLineClamp: 3,
+    WebkitLineClamp: 2,
     overflow: 'hidden',
     overflowWrap: 'anywhere',
-    color: colors.text,
-    fontSize: 16,
-    lineHeight: '24px',
+    color: colors.muted,
+    fontSize: 14,
+    lineHeight: '20px',
     fontWeight: 400,
   },
   placeholder: { color: colors.muted },
   promptArrow: {
-    position: 'absolute',
-    right: 12,
-    bottom: 12,
+    marginLeft: 'auto',
+    flexShrink: 0,
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     width: 30,
     height: 30,
     borderRadius: controlShape.circle,
-    backgroundColor: colors.background,
+    backgroundColor: colors.controlSurface,
     color: colors.text,
   },
   header: {
@@ -129,7 +130,7 @@ const s = stylex.create({
     paddingBlock: 11,
     borderWidth: 1,
     borderStyle: 'solid',
-    borderColor: { default: 'transparent', ':focus-visible': colors.text },
+    borderColor: 'transparent',
     borderRadius: controlShape.field,
     backgroundColor: colors.controlSurface,
     color: colors.text,
@@ -144,25 +145,25 @@ const s = stylex.create({
   message: { minHeight: 160, resize: 'vertical', scrollMarginBottom: 24 },
   context: {
     display: 'flex',
-    flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
+    gap: 12,
     minWidth: 0,
-    marginBottom: 16,
     paddingInline: 12,
-    paddingBlock: 8,
+    paddingBlock: 12,
     borderRadius: 12,
     backgroundColor: colors.stripe,
   },
+  formContext: { marginBottom: 16 },
+  contextImage: { width: 72, height: 54, flexShrink: 0, objectFit: 'cover', borderRadius: 8 },
+  contextCopy: { display: 'flex', flexDirection: 'column', gap: 2, flexGrow: 1, minWidth: 0 },
   contextTitle: {
-    flex: '1 1 140px',
     minWidth: 0,
     fontSize: 15,
     lineHeight: '22px',
     fontWeight: 500,
     overflowWrap: 'anywhere',
   },
+  contextPrice: { fontSize: 14, lineHeight: '20px', color: colors.muted },
   contextLink: {
     display: 'inline-flex',
     alignItems: 'center',
@@ -186,6 +187,38 @@ const s = stylex.create({
   note: { fontSize: 12, lineHeight: '18px', color: colors.muted, textAlign: 'center' },
   status: { fontSize: 14, lineHeight: '22px', color: colors.muted, overflowWrap: 'anywhere' },
 });
+
+function ContactContext({
+  context,
+  showLink = false,
+}: {
+  context: EnquiryContext;
+  showLink?: boolean;
+}) {
+  const { t } = useLocale();
+  return (
+    <span {...stylex.props(s.context)}>
+      {context.image && (
+        <Image
+          src={context.image}
+          alt=""
+          width={72}
+          height={54}
+          {...stylex.props(s.contextImage)}
+        />
+      )}
+      <span {...stylex.props(s.contextCopy)}>
+        <span {...stylex.props(s.contextTitle)}>{context.title}</span>
+        {context.price && <span {...stylex.props(s.contextPrice)}>{context.price}</span>}
+        {showLink && (
+          <Link href={context.href} {...stylex.props(s.contextLink)}>
+            {t(context.linkLabel)}
+          </Link>
+        )}
+      </span>
+    </span>
+  );
+}
 
 function subscribePhone(listener: () => void) {
   const media = window.matchMedia('(max-width: 699px)');
@@ -215,7 +248,7 @@ export function ShowroomContactForm({
   onEdit: () => void;
   onSave: (details: ShowroomContactDetails) => void;
   saveStatus: 'saved' | 'unavailable' | null;
-  context?: { title: string; href: string; linkLabel: string };
+  context?: EnquiryContext;
 }) {
   const { t } = useLocale();
   const params = useSearchParams();
@@ -296,9 +329,10 @@ export function ShowroomContactForm({
   return (
     <div data-contact-enquiry-entry {...stylex.props(s.phone)}>
       <ShowroomContactIntro />
-      <ShowroomContactCards enquiryOpen={open} onWrite={start} />
+      <ShowroomContactCards />
       <button
         data-contact-message-entry
+        data-contact-enquiry-trigger
         type="button"
         aria-label={t('Write a message')}
         aria-haspopup="dialog"
@@ -309,14 +343,15 @@ export function ShowroomContactForm({
       >
         <span {...stylex.props(s.entryHeader)}>
           <ShowroomContactArtwork name="enquiry" />
-          <span {...stylex.props(s.entryTitle)}>{t('Message')}</span>
+          <span {...stylex.props(s.entryTitle)}>{t('Write to us')}</span>
+          <span {...stylex.props(s.promptArrow)}>
+            <ChevronRight size={18} strokeWidth={1.8} aria-hidden="true" />
+          </span>
         </span>
+        {context && <ContactContext context={context} />}
         <span {...stylex.props(s.prompt)}>
           <span {...stylex.props(s.preview, !message.trim() && s.placeholder)}>
             {message.trim() || placeholder}
-          </span>
-          <span {...stylex.props(s.promptArrow)}>
-            <ChevronRight size={18} strokeWidth={1.8} aria-hidden="true" />
           </span>
         </span>
       </button>
@@ -328,11 +363,8 @@ export function ShowroomContactForm({
         </div>
         <div id={formId} data-contact-enquiry-body {...stylex.props(s.body)}>
           {context && (
-            <div {...stylex.props(s.context)}>
-              <p {...stylex.props(s.contextTitle)}>{context.title}</p>
-              <Link href={context.href} {...stylex.props(s.contextLink)}>
-                {t(context.linkLabel)}
-              </Link>
+            <div {...stylex.props(s.formContext)}>
+              <ContactContext context={context} showLink />
             </div>
           )}
           <form

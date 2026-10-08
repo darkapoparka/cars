@@ -32,16 +32,37 @@ const s = stylex.create({
   bannerTrigger: {
     width: { default: 'calc(100% - 32px)', '@media (min-width: 1024px)': '100%' },
     marginInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    minHeight: { default: 44, '@media (min-width: 1024px)': 60 },
-    paddingLeft: { default: 12, '@media (min-width: 1024px)': 20 },
-    paddingRight: { default: 12, '@media (min-width: 1024px)': 20 },
+    minHeight: { default: 48, '@media (min-width: 1024px)': 60 },
+    paddingLeft: { default: 16, '@media (min-width: 1024px)': 20 },
+    paddingRight: { default: 16, '@media (min-width: 1024px)': 20 },
+    borderWidth: { default: 1, '@media (min-width: 1024px)': 0 },
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
     borderRadius: controlShape.pill,
     backgroundColor: {
-      default: colors.controlSurface,
-      ':active': colors.surface,
-      '@media (min-width: 1024px)': { default: colors.background, ':hover': colors.stripe },
+      default: colors.background,
+      ':active': colors.stripe,
+      '@media (min-width: 1024px)': {
+        default: colors.background,
+        ':hover': colors.stripe,
+        ':active': colors.surface,
+      },
     },
-    boxShadow: { default: 'none', '@media (min-width: 1024px)': '0 8px 24px rgba(14,25,36,.12)' },
+    boxShadow: {
+      default: '0 2px 8px rgba(27,27,33,.10), 0 1px 2px rgba(27,27,33,.04)',
+      '@media (min-width: 1024px)': '0 8px 24px rgba(14,25,36,.12)',
+    },
+  },
+  elevatedPhoneTrigger: {
+    minHeight: 48,
+    paddingLeft: 16,
+    paddingRight: 16,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: controlShape.pill,
+    backgroundColor: { default: colors.background, ':active': colors.stripe },
+    boxShadow: '0 2px 8px rgba(27,27,33,.10), 0 1px 2px rgba(27,27,33,.04)',
   },
   text: {
     flex: '1',
@@ -94,11 +115,13 @@ export function ShowroomSearch({
   value,
   onOpen,
   inBanner = false,
+  elevatedOnPhone = false,
 }: {
   label: string;
   value: string;
   onOpen: (button: HTMLButtonElement) => void;
   inBanner?: boolean;
+  elevatedOnPhone?: boolean;
 }) {
   const { t } = useLocale();
   return (
@@ -108,7 +131,12 @@ export function ShowroomSearch({
       aria-haspopup="dialog"
       title={value || undefined}
       onClick={(event) => onOpen(event.currentTarget)}
-      {...stylex.props(s.search, s.trigger, inBanner && s.bannerTrigger)}
+      {...stylex.props(
+        s.search,
+        s.trigger,
+        elevatedOnPhone && s.elevatedPhoneTrigger,
+        inBanner && s.bannerTrigger,
+      )}
     >
       <Icon name="search" size={20} />
       <span {...stylex.props(s.text, Boolean(value) && s.value)}>{value || t(label)}</span>

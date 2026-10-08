@@ -28,14 +28,17 @@ const s = stylex.create({
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     gap: 8,
     overflowX: { default: 'auto', '@media (min-width: 1024px)': 'visible' },
-    paddingInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    paddingBlock: { default: 4, '@media (max-width: 699px)': 12, '@media (min-width: 1024px)': 0 },
+    paddingInline: 0,
+    paddingBlock: { default: 4, '@media (max-width: 699px)': 8, '@media (min-width: 1024px)': 0 },
     marginInline: 0,
     borderRadius: 0,
     backgroundColor: {
       default: colors.background,
       '@media (min-width: 1024px)': 'transparent',
     },
+  },
+  compactPhoneRow: {
+    paddingBlock: { default: 4, '@media (max-width: 699px)': 6, '@media (min-width: 1024px)': 0 },
   },
   button: {
     position: 'relative',
@@ -114,10 +117,6 @@ const s = stylex.create({
       default: colors.cardLine,
       '@media (min-width: 1024px)': { default: colors.cardLine, ':hover': colors.line },
     },
-    backgroundColor: {
-      default: colors.background,
-      '@media (min-width: 1024px)': { default: colors.stripe, ':hover': colors.controlSurface },
-    },
   },
   desktopEmphasis: {
     borderColor: {
@@ -138,7 +137,26 @@ const s = stylex.create({
     fontSize: 14,
     lineHeight: '20px',
   },
+  secondaryPhoneFace: {
+    minHeight: { default: 36, '@media (min-width: 1024px)': 38 },
+    paddingBlock: { default: 6, '@media (min-width: 1024px)': 8 },
+    fontSize: 14,
+    lineHeight: '20px',
+  },
+  secondarySurface: {
+    borderColor: { default: colors.cardLine, '@media (min-width: 1024px)': colors.line },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 1024px)': { default: colors.stripe, ':hover': colors.controlSurface },
+    },
+  },
   desktopTrailing: { marginInlineStart: { default: 0, '@media (min-width: 1024px)': 'auto' } },
+  iconOnlyButton: { width: 44, justifyContent: 'center' },
+  iconOnlyFace: {
+    width: { default: 36, '@media (min-width: 1024px)': 38 },
+    paddingInline: 0,
+    borderRadius: controlShape.circle,
+  },
   removable: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'inline-flex' },
     position: 'relative',
@@ -167,11 +185,12 @@ const s = stylex.create({
     outlineOffset: -2,
   },
   rail: {
-    display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
+    display: { default: 'block', '@media (min-width: 1024px)': 'flex' },
     alignItems: 'center',
     flex: '0 1 auto',
     minWidth: 0,
   },
+  railInset: { paddingInline: { default: 16, '@media (min-width: 1024px)': 0 } },
 });
 
 export function ShowroomQuickPills({
@@ -179,11 +198,13 @@ export function ShowroomQuickPills({
   children,
   inset = true,
   inventoryDesktop = false,
+  compactOnPhone = false,
 }: {
   label: string;
   children: ReactNode;
   inset?: boolean;
   inventoryDesktop?: boolean;
+  compactOnPhone?: boolean;
 }) {
   const { t } = useLocale();
   const content = (
@@ -195,6 +216,7 @@ export function ShowroomQuickPills({
         inset && s.backdrop,
         !inset && s.flush,
         inventoryDesktop && s.desktopRow,
+        inventoryDesktop && compactOnPhone && s.compactPhoneRow,
       )}
     >
       {children}
@@ -202,7 +224,7 @@ export function ShowroomQuickPills({
   );
   if (!inventoryDesktop) return content;
   return (
-    <div data-quick-filter-rail {...stylex.props(s.rail)}>
+    <div data-quick-filter-rail {...stylex.props(s.rail, inset && s.railInset)}>
       {content}
     </div>
   );
@@ -214,6 +236,8 @@ export function ShowroomQuickPill({
   inventoryDesktop = false,
   trailingDesktop = false,
   secondary = false,
+  secondaryOnPhone = false,
+  iconOnly = false,
   emphasizedDesktop = false,
   clearDesktop,
   ...props
@@ -223,6 +247,8 @@ export function ShowroomQuickPill({
   inventoryDesktop?: boolean;
   trailingDesktop?: boolean;
   secondary?: boolean;
+  secondaryOnPhone?: boolean;
+  iconOnly?: boolean;
   emphasizedDesktop?: boolean;
   clearDesktop?: { key: string; label: string; onClear: () => void };
 }) {
@@ -236,6 +262,7 @@ export function ShowroomQuickPill({
         s.button,
         inventoryDesktop && s.desktopButton,
         trailingDesktop && s.desktopTrailing,
+        iconOnly && s.iconOnlyButton,
       )}
     >
       <span
@@ -246,9 +273,12 @@ export function ShowroomQuickPill({
           emphasizedDesktop && s.desktopEmphasis,
           clearDesktop && s.removableFace,
           active && clearDesktop && s.removableActiveFace,
+          (inventoryDesktop || secondaryOnPhone) && s.secondarySurface,
           active && s.active,
           active && inventoryDesktop && s.desktopActive,
           secondary && s.secondaryFace,
+          secondaryOnPhone && s.secondaryPhoneFace,
+          iconOnly && s.iconOnlyFace,
         )}
       >
         {typeof children === 'string' ? t(children) : children}

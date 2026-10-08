@@ -1,11 +1,12 @@
 'use client';
+import Link from 'next/link';
 import { useLocale } from '@/lib/use-locale';
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import type { Filters } from '@/lib/types';
 import { vehicles } from '@/lib/catalog';
 import { filterVehicles } from '@/lib/search';
-import { showroomCategory } from '@/lib/showroom';
+import { rememberInventory, showroomCategory } from '@/lib/showroom';
 import {
   resetShowroomFilterDraft,
   showroomFilterTabs,
@@ -95,7 +96,7 @@ export function ShowroomFilterSheet({
   onClose: () => void;
   onDesktopDismiss?: () => void;
 }) {
-  const { t, money } = useLocale();
+  const { t, money, number } = useLocale();
   const desktop = useSyncExternalStore(
     subscribeDesktop,
     () => window.matchMedia('(min-width: 1024px)').matches,
@@ -210,6 +211,7 @@ export function ShowroomFilterSheet({
             panelId="showroom-filter-options"
             idPrefix="filter-section-"
             layout="desktop-sidebar"
+            edgeToEdgeOnPhone
             onChange={onTabChange}
           />
         </div>
@@ -277,15 +279,37 @@ export function ShowroomFilterSheet({
                       {draft.query.trim() ? t('Matching vehicles') : t('In this showroom')}
                     </h3>
                     {matches.slice(0, 6).map((vehicle) => (
-                      <button
+                      <Link
                         key={vehicle.id}
-                        type="button"
-                        aria-label={t('Search') + ': ' + vehicle.make + ' ' + vehicle.model}
-                        onClick={() => change({ query: vehicle.make + ' ' + vehicle.model })}
+                        href={'/vehicle/' + vehicle.id}
+                        aria-label={
+                          t('View car') +
+                          ': ' +
+                          vehicle.make +
+                          ' ' +
+                          vehicle.model +
+                          ', ' +
+                          vehicle.year +
+                          ', ' +
+                          number(vehicle.mileage) +
+                          ' ' +
+                          t('km') +
+                          ', ' +
+                          money(vehicle.price)
+                        }
+                        onNavigate={() => {
+                          onApply(draft);
+                          rememberInventory(vehicle.id);
+                        }}
                         {...stylex.props(s.suggestion)}
                       >
                         <span {...stylex.props(s.suggestionName)}>
-                          {vehicle.make} {vehicle.model}
+                          <span>
+                            {vehicle.make} {vehicle.model}
+                          </span>
+                          <span {...stylex.props(s.suggestionFacts)}>
+                            {vehicle.year} · {number(vehicle.mileage)} {t('km')}
+                          </span>
                         </span>
                         <span {...stylex.props(s.suggestionTail)}>
                           <span {...stylex.props(s.suggestionPrice)}>{money(vehicle.price)}</span>
@@ -293,7 +317,7 @@ export function ShowroomFilterSheet({
                             <Icon name="arrow" size={16} />
                           </span>
                         </span>
-                      </button>
+                      </Link>
                     ))}
                     {!count && (
                       <p {...stylex.props(s.copy)}>

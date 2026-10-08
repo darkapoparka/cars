@@ -10,11 +10,13 @@ const { translate } = await import('../.qa/domain/locale.mjs');
 
 const base = process.env.QA_URL || 'http://127.0.0.1:6474';
 const output = path.resolve(process.env.QA_OUTPUT || '.qa/architecture');
+const scope = process.env.QA_SCOPE || 'all';
+assert.ok(['all', 'state'].includes(scope), 'QA_SCOPE must be all or state');
 const engines = Object.entries({ chromium, webkit }).filter(
   ([name]) => !process.env.QA_ENGINE || process.env.QA_ENGINE === name,
 );
 assert.ok(engines.length, 'QA_ENGINE must be chromium or webkit');
-const report = { at: new Date().toISOString(), base, checks: [], errors: [] };
+const report = { at: new Date().toISOString(), base, scope, checks: [], errors: [] };
 await mkdir(output, { recursive: true });
 
 async function run(name, engine) {
@@ -22,6 +24,17 @@ async function run(name, engine) {
   const posts = [];
   const network = new WeakMap();
   const check = (description) => report.checks.push({ engine: name, description });
+  async function focusAt(page, selector, edge = 'first') {
+    // Radix restores and moves focus after its mount/unmount effects finish.
+    await page.waitForFunction(
+      ({ selector, edge }) => {
+        const targets = [...document.querySelectorAll(selector)];
+        const target = edge === 'last' ? targets.at(-1) : targets[0];
+        return Boolean(target) && target === document.activeElement;
+      },
+      { selector, edge },
+    );
+  }
   async function context(width = 390, options = {}) {
     const context = await browser.newContext({
       viewport: { width, height: width < 700 ? 844 : 900 },
@@ -76,6 +89,9 @@ async function run(name, engine) {
     return context;
   }
   async function quietNetwork(page) {
+    // WebKit pauses animation frames in background tabs. Activate each page
+    // before waiting for the layout frames that schedule its prefetches.
+    await page.bringToFront();
     // networkidle may already be satisfied before React/Next schedules new links.
     // Require a fresh quiet period after their layout and prefetch callbacks.
     await page.evaluate(
@@ -113,6 +129,7 @@ async function run(name, engine) {
     await page.waitForFunction(
       (expected) => document.querySelectorAll('[data-showroom-vehicle]').length === expected,
       expected,
+      { polling: 100 },
     );
   }
   async function visibleVehicleFacts(page, label) {
@@ -253,7 +270,7 @@ async function run(name, engine) {
       );
     }
   }
-  async function desktopFrame(page, label, inventory = false) {
+  async function desktopFrame(page, label, inventory = false, saved = false) {
     // A stable scrollbar gutter can reserve space even when Chromium reports
     // the full viewport as clientWidth. Measure the actual containing block.
     await page.evaluate(
@@ -299,16 +316,17 @@ async function run(name, engine) {
           };
         }),
       );
-      assert.ok(cards.length >= 3, label + ' needs three cards to verify the grid');
+      const columns = !saved && page.viewportSize().width >= 1280 ? 4 : 3;
+      assert.ok(cards.length >= columns, label + ' needs enough cards to verify the grid');
       assert.equal(
         cards.filter((card) => Math.abs(card.y - cards[0].y) < 1).length,
-        3,
-        label + ' must retain three readable columns',
+        columns,
+        label + ' must retain its responsive readable columns',
       );
       assert.ok(
         cards.every(
           (card) =>
-            card.width >= 290 &&
+            card.width >= (columns === 4 ? 270 : 290) &&
             card.title === '18px' &&
             card.price === '22px' &&
             card.facts.every((size) => size === '14px'),
@@ -317,7 +335,9 @@ async function run(name, engine) {
       );
     }
     check(
-      label + ': centered desktop frame' + (inventory ? ', three columns and readable type' : ''),
+      label +
+        ': centered desktop frame' +
+        (inventory ? ', responsive columns and readable type' : ''),
     );
   }
   async function fixedFrameActions(page, label) {
@@ -351,12 +371,13 @@ async function run(name, engine) {
     );
     const message = page.getByRole('textbox', { name: 'Enquiry message', exact: true });
     if (!(await message.isVisible()))
-      await page.getByRole('button', { name: 'Write to us', exact: true }).click();
+      await page.getByRole('button', { name: 'Write a message', exact: true }).click();
     await message.waitFor();
     return message;
   }
   try {
-    for (const width of [320, 390, 768, 1024, 1280, 1366, 1440, 1920]) {
+    const widths = scope === 'state' ? [] : [320, 390, 768, 1024, 1280, 1366, 1440, 1920];
+    for (const width of widths) {
       for (const locale of ['en', 'bg']) {
         const t = (text) => translate(text, locale);
         const ctx = await context(width, { locale });
@@ -372,12 +393,33 @@ async function run(name, engine) {
         await geometry(page, 'Cars ' + width + ' ' + locale);
         await visibleVehicleFacts(page, 'Cars ' + width + ' ' + locale);
         if (width >= 1024) await desktopFrame(page, 'Cars ' + width + ' ' + locale, true);
-        const savedColor = await page
-          .getByRole('link', { name: t('Saved cars'), exact: true })
-          .evaluate((link) => getComputedStyle(link).color.match(/\d+/g).slice(0, 3).map(Number));
+        const profile = page.getByRole('button', { name: t('Open profile menu'), exact: true });
+        const profileBounds = await profile.boundingBox();
         assert.ok(
-          savedColor.every((channel) => (width >= 1024 ? channel >= 200 : channel <= 100)),
-          'Saved-car action must contrast with the Home header',
+          profileBounds.width >= 48 && profileBounds.height >= 48,
+          'Profile has a usable touch target',
+        );
+        await profile.click();
+        const profileMenu = page.locator('[data-profile-menu]');
+        await profileMenu.waitFor();
+        const profileLinks = profileMenu.getByRole('menuitem');
+        assert.deepEqual(
+          await profileLinks.evaluateAll((links) =>
+            links.map((link) => new URL(link.href).pathname),
+          ),
+          width >= 1024
+            ? ['/car-park', '/settings', '/', '/services', '/contact']
+            : ['/car-park', '/settings'],
+        );
+        assert.equal(await profileMenu.getByRole('menuitemradio').count(), 2);
+        await page.keyboard.press('Escape');
+        await profileMenu.waitFor({ state: 'hidden' });
+        await focusAt(page, '[data-profile-menu-trigger]');
+        check(
+          'Profile destinations, language choices, Escape and focus return: ' +
+            width +
+            ' ' +
+            locale,
         );
         const categoryFrames = await page
           .getByRole('tablist', { name: t('Vehicle category'), exact: true })
@@ -395,21 +437,18 @@ async function run(name, engine) {
               .map((image) => image.src),
           );
         assert.deepEqual(categoryFrames, [], 'Original category artwork must remain unboxed');
-        check('Home header contrast and unboxed category artwork: ' + width + ' ' + locale);
+        check('Home profile touch target and unboxed category artwork: ' + width + ' ' + locale);
         if (width >= 1024) {
-          const menu = page.getByRole('button', { name: t('Open menu'), exact: true });
+          const menu = page.getByRole('button', { name: t('Open profile menu'), exact: true });
           await menu.click();
-          const navigation = page.getByRole('navigation', {
-            name: t('Main navigation'),
-            exact: true,
-          });
+          const navigation = page.locator('[data-profile-menu]');
           await navigation.waitFor();
-          const menuLinks = navigation.getByRole('link');
+          const menuLinks = navigation.getByRole('menuitem');
           assert.deepEqual(
             await menuLinks.evaluateAll((links) =>
               links.map((link) => new URL(link.href).pathname),
             ),
-            ['/', '/services', '/contact'],
+            ['/car-park', '/settings', '/', '/services', '/contact'],
           );
           // Safari does not focus every button after a pointer click. Escape
           // must also dismiss a pointer-opened menu while focus is elsewhere.
@@ -419,31 +458,22 @@ async function run(name, engine) {
           );
           await page.keyboard.press('Escape');
           await navigation.waitFor({ state: 'hidden' });
-          assert.equal(await menu.evaluate((el) => el === document.activeElement), true);
+          await focusAt(page, '[data-profile-menu-trigger]');
           check('Desktop menu destinations, Escape and focus return: ' + locale);
           await menu.press('ArrowDown');
           await menuLinks.first().waitFor();
           await page.waitForFunction(() =>
-            Boolean(document.activeElement?.closest('[data-desktop-navigation]')),
+            Boolean(document.activeElement?.closest('[data-profile-menu]')),
           );
           await page.keyboard.press('End');
-          assert.equal(
-            await menuLinks.last().evaluate((el) => el === document.activeElement),
-            true,
-          );
+          await focusAt(page, '[data-profile-menu] [role="menuitem"]', 'last');
           await page.keyboard.press('Home');
-          assert.equal(
-            await menuLinks.first().evaluate((el) => el === document.activeElement),
-            true,
-          );
+          await focusAt(page, '[data-profile-menu] [role="menuitem"]');
           await page.keyboard.press('ArrowUp');
-          assert.equal(
-            await menuLinks.last().evaluate((el) => el === document.activeElement),
-            true,
-          );
+          await focusAt(page, '[data-profile-menu] [role="menuitem"]', 'last');
           await page.keyboard.press('Escape');
           await navigation.waitFor({ state: 'hidden' });
-          assert.equal(await menu.evaluate((el) => el === document.activeElement), true);
+          await focusAt(page, '[data-profile-menu-trigger]');
           check('Desktop menu keyboard navigation wraps and restores focus: ' + locale);
           const opener = page.getByRole('button', { name: new RegExp('^' + t('All filters')) });
           await opener.click();
@@ -514,13 +544,13 @@ async function run(name, engine) {
             if (
               (await page
                 .locator('[data-showroom-vehicle] button[aria-pressed="true"]')
-                .count()) === 3
+                .count()) === 4
             )
               break;
           }
           await go(page, '/car-park', locale);
-          await cars(page, 3);
-          await desktopFrame(page, 'Saved cars ' + width + ' ' + locale, true);
+          await cars(page, 4);
+          await desktopFrame(page, 'Saved cars ' + width + ' ' + locale, true, true);
           await visibleVehicleFacts(page, 'Saved cars ' + width + ' ' + locale);
         }
         for (const [label, route] of [
@@ -585,6 +615,7 @@ async function run(name, engine) {
     await shared.waitForFunction(
       (key) => window.__qaStorageEvents.includes(key),
       storageKeys.language,
+      { polling: 100 },
     );
     assert.equal(await shared.evaluate(() => document.documentElement.lang), 'en');
     assert.equal(
@@ -593,10 +624,14 @@ async function run(name, engine) {
     );
     check('Shared-link language stays explicit without echoing cross-tab preference writes');
     await shared.goto(base + '/');
-    await shared.waitForFunction(() => document.documentElement.lang === 'bg');
+    await shared.waitForFunction(() => document.documentElement.lang === 'bg', null, {
+      polling: 100,
+    });
     await quietNetwork(shared);
     await other.evaluate((key) => localStorage.setItem(key, 'en'), storageKeys.language);
-    await shared.waitForFunction(() => document.documentElement.lang === 'en');
+    await shared.waitForFunction(() => document.documentElement.lang === 'en', null, {
+      polling: 100,
+    });
     assert.equal(await shared.title(), showroomTitle('Cars', 'en'));
     check('Language changes synchronize between tabs when no link override applies');
     await closeContext(languageContext);
@@ -735,7 +770,8 @@ async function run(name, engine) {
           .first()
           .getByRole('button', { name: /^Save / })
           .click();
-        await page.getByRole('link', { name: /^Saved cars/ }).click();
+        await page.getByRole('button', { name: 'Open profile menu', exact: true }).click();
+        await page.getByRole('menuitem', { name: /^Saved cars/ }).click();
         await cars(page, 1);
         check('Saving remains usable for the current session without localStorage');
       }

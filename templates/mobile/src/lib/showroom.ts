@@ -53,7 +53,7 @@ export const showroomCategories = [
     singular: 'car',
     plural: 'cars',
     icon: 'car',
-    image: '/categories/car-realistic-20261003-v1.png',
+    image: '/categories/car-realistic-20261003-v1.webp',
   },
   {
     value: 'bike',
@@ -61,7 +61,7 @@ export const showroomCategories = [
     singular: 'motorbike',
     plural: 'motorbikes',
     icon: 'bike',
-    image: '/categories/motorbike-realistic-20261003-v1.png',
+    image: '/categories/motorbike-realistic-20261003-v1.webp',
   },
   {
     value: 'electric-bike',
@@ -69,7 +69,7 @@ export const showroomCategories = [
     singular: 'e-bike',
     plural: 'e-bikes',
     icon: 'electric',
-    image: '/categories/ebike-realistic-20261003-v1.png',
+    image: '/categories/ebike-realistic-20261003-v1.webp',
   },
   {
     value: 'motorhome',
@@ -77,7 +77,7 @@ export const showroomCategories = [
     singular: 'motorhome',
     plural: 'motorhomes',
     icon: 'motorhome',
-    image: '/categories/motorhome-realistic-20261003-v1.png',
+    image: '/categories/motorhome-realistic-20261003-v1.webp',
   },
   {
     value: 'truck',
@@ -85,7 +85,7 @@ export const showroomCategories = [
     singular: 'vehicle',
     plural: 'vehicles',
     icon: 'truck',
-    image: '/categories/truck-realistic-20261003-v1.png',
+    image: '/categories/truck-realistic-20261003-v1.webp',
   },
 ] as const;
 

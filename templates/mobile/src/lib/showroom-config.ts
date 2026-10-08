@@ -1,5 +1,7 @@
 import { defaultLocale, translate, type Locale } from './locale';
 
+export const showroomPlaceholderLogo = '/branding/showroom-placeholder-20261002.webp';
+
 export type ShowroomConfig = {
   name: string;
   logo: string | null;
@@ -52,7 +54,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
   storageKeysFor(config.storageNamespace);
   const personalized =
     config.name !== 'Your showroom' ||
-    config.logo !== '/branding/showroom-placeholder-20261002.png' ||
+    config.logo !== showroomPlaceholderLogo ||
     !config.contactPreview ||
     [config.phone, config.email, config.address, config.directionsUrl, config.mapEmbedUrl].some(
       (value) => value !== null,
@@ -92,7 +94,7 @@ export function defineShowroom(config: ShowroomConfig): Readonly<ShowroomConfig>
 // A neutral template placeholder. Replace only with verified dealer details.
 export const showroom = defineShowroom({
   name: 'Your showroom',
-  logo: '/branding/showroom-placeholder-20261002.png',
+  logo: showroomPlaceholderLogo,
   phone: null,
   email: null,
   address: null,

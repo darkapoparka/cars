@@ -87,7 +87,10 @@ const s = stylex.create({
     flexShrink: 0,
     paddingTop: 0,
     paddingBottom: 0,
-    backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 1024px)': 'transparent',
+    },
   },
   desktopRail: {
     display: { default: 'contents', '@media (min-width: 1024px)': 'flex' },
@@ -149,9 +152,6 @@ const s = stylex.create({
     display: { default: 'none', '@media (min-width: 1024px)': 'inline-flex' },
     flexShrink: 0,
   },
-  desktopSortLabel: {
-    display: { default: 'none', '@media (min-width: 1200px)': 'inline' },
-  },
   content: {
     flexGrow: { default: 1, '@media (min-width: 1024px)': 0 },
     backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
@@ -159,7 +159,8 @@ const s = stylex.create({
     borderTopRightRadius: { default: 0, '@media (max-width: 699px)': 24 },
     scrollMarginTop: { default: 0, '@media (min-width: 1024px)': 96 },
     paddingInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    paddingTop: { default: 12, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
+    // The pill targets and rail inset supply 12px of the 16px gap before the cards.
+    paddingTop: { default: 12, '@media (max-width: 699px)': 4, '@media (min-width: 1024px)': 16 },
     paddingBottom: 24,
   },
   grid: {
@@ -239,13 +240,6 @@ export function ShowroomInventoryScreen() {
     filters.damagedOnly || !filters.excludeDamaged,
   ].filter(Boolean).length;
   const sortLabel = showroomSorts.find(([value]) => value === sort)?.[1] || 'Recommended';
-  const compactSortLabel = {
-    standard: 'Sort',
-    'price-asc': 'Price ↑',
-    'price-desc': 'Price ↓',
-    newest: 'Newest',
-    mileage: 'Low mileage',
-  }[sort];
   useEffect(() => {
     patchState({ filters: showroomFilters(parseFilters(query)), inventorySort: sort });
   }, [query, sort]);
@@ -536,12 +530,13 @@ export function ShowroomInventoryScreen() {
     <>
       <ShowroomBanner discovery>
         <ShowroomHeaderSurface>
-          <Header home showLanguageSwitcher sticky={false} overHeroDesktop />
+          <Header home sticky={false} overHeroDesktop />
           <div {...stylex.props(s.search)}>
             <ShowroomSearch
               label={t('Search make or model')}
               value={filters.query}
               onOpen={(button) => openSheet('search', button)}
+              elevatedOnPhone
             />
           </div>
           <section
@@ -616,17 +611,19 @@ export function ShowroomInventoryScreen() {
       <ShowroomDrawer id="showroom-results" inventory>
         <div data-desktop-quick-bar {...stylex.props(s.quickBar)}>
           <div {...stylex.props(s.desktopRail)}>
-            <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop>
+            <ShowroomQuickPills label={t('Quick filters')} inventoryDesktop compactOnPhone>
               <div {...stylex.props(s.phoneOnly)}>
                 <ShowroomQuickPill
                   aria-label={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
+                  title={t('Sort') + ' · ' + t(category.plural) + ': ' + t(sortLabel)}
                   aria-haspopup="dialog"
                   aria-expanded={sorting}
                   active={sort !== 'standard'}
+                  secondaryOnPhone
+                  iconOnly
                   onClick={(event) => openSheet('sort', event.currentTarget)}
                 >
                   <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
-                  {t(compactSortLabel)}
                 </ShowroomQuickPill>
               </div>
               {pills.map((pill) => (
@@ -666,6 +663,7 @@ export function ShowroomInventoryScreen() {
                     }
                     active={pill.key !== 'all' && pill.active}
                     inventoryDesktop
+                    secondaryOnPhone
                     emphasizedDesktop={pill.key === 'all'}
                     clearDesktop={
                       pill.key !== 'all' && !pill.phoneOnly
@@ -722,7 +720,11 @@ export function ShowroomInventoryScreen() {
               ))}
               {active && (
                 <div {...stylex.props(s.phoneOnly)}>
-                  <ShowroomQuickPill aria-label={t('Clear filters')} onClick={reset}>
+                  <ShowroomQuickPill
+                    aria-label={t('Clear filters')}
+                    secondaryOnPhone
+                    onClick={reset}
+                  >
                     {t('Clear')}
                     <Icon name="close" size={14} />
                   </ShowroomQuickPill>
@@ -739,10 +741,10 @@ export function ShowroomInventoryScreen() {
                 active={sort !== 'standard'}
                 inventoryDesktop
                 trailingDesktop
+                iconOnly
                 onClick={(event) => openSheet('sort', event.currentTarget)}
               >
                 <ArrowDownUp size={16} strokeWidth={1.8} aria-hidden="true" />
-                <span {...stylex.props(s.pillText, s.desktopSortLabel)}>{t('Sort')}</span>
               </ShowroomQuickPill>
             </div>
           </div>

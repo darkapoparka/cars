@@ -8,7 +8,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
-import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
+import { localizeVehicle } from '@/lib/vehicle-copy';
 import { rememberInventory } from '@/lib/showroom';
 import { togglePark, useAppState } from '@/lib/store';
 
@@ -23,7 +23,10 @@ const s = stylex.create({
     borderStyle: 'solid',
     borderColor: colors.cardLine,
     borderRadius: { default: 16, '@media (min-width: 1024px)': showroomDesktop.panelRadius },
-    boxShadow: '0 3px 12px rgba(27, 27, 33, 0.035)',
+    boxShadow: {
+      default: '0 3px 12px rgba(27, 27, 33, 0.035)',
+      '@media (max-width: 699px)': 'none',
+    },
     overflow: 'hidden',
   },
   photo: {
@@ -91,9 +94,9 @@ const s = stylex.create({
   },
   title: {
     minWidth: 0,
-    fontSize: { default: 18, '@media (max-width: 699px)': 17 },
+    fontSize: 18,
     lineHeight: '24px',
-    fontWeight: 500,
+    fontWeight: { default: 500, '@media (max-width: 699px)': 600 },
     overflowWrap: 'anywhere',
   },
   titleText: {
@@ -102,13 +105,23 @@ const s = stylex.create({
     WebkitLineClamp: 2,
     overflow: 'hidden',
   },
+  variant: {
+    display: { default: 'none', '@media (max-width: 699px)': 'block' },
+    minWidth: 0,
+    color: colors.muted,
+    fontSize: 14,
+    lineHeight: '20px',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
   specs: {
     position: 'relative',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     columnGap: 6,
-    rowGap: 4,
+    rowGap: 6,
   },
   price: {
     marginTop: { default: 0, '@media (min-width: 1024px)': 'auto' },
@@ -128,12 +141,18 @@ const s = stylex.create({
   fact: {
     display: 'inline-flex',
     alignItems: 'center',
-    gap: 6,
     minWidth: 0,
     maxWidth: '100%',
     flexShrink: { default: 0, '@media (min-width: 1024px)': 1 },
-    color: colors.muted,
-    fontSize: { default: 12, '@media (max-width: 699px)': 13, '@media (min-width: 1024px)': 14 },
+    paddingInline: 8,
+    paddingBlock: 3,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 6,
+    backgroundColor: colors.badgeSurface,
+    color: { default: colors.muted, '@media (max-width: 699px)': colors.text },
+    fontSize: { default: 12, '@media (max-width: 699px)': 14, '@media (min-width: 1024px)': 14 },
     lineHeight: {
       default: '18px',
       '@media (max-width: 699px)': '20px',
@@ -143,7 +162,6 @@ const s = stylex.create({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
   },
-  separator: { opacity: 0.55 },
 });
 
 export function ShowroomVehicleCard({
@@ -154,7 +172,8 @@ export function ShowroomVehicleCard({
   priority?: boolean;
 }) {
   const { t, locale, number, money } = useLocale();
-  const photos = showroomVehiclePhotos(vehicle);
+  const localizedVehicle = localizeVehicle(vehicle, locale);
+  const photos = localizedVehicle.images;
   const { parked } = useAppState();
   const saved = parked.includes(vehicle.id);
   const name = vehicle.make + ' ' + vehicle.model;
@@ -207,14 +226,14 @@ export function ShowroomVehicleCard({
             </span>
           </Link>
         </h2>
+        {localizedVehicle.variant && (
+          <p title={localizedVehicle.variant} {...stylex.props(s.variant)}>
+            {localizedVehicle.variant}
+          </p>
+        )}
         <p title={Object.values(specs).join(' · ')} {...stylex.props(s.specs)}>
-          {Object.entries(specs).map(([key, fact], index) => (
+          {Object.entries(specs).map(([key, fact]) => (
             <span key={key} data-vehicle-fact={key} title={fact} {...stylex.props(s.fact)}>
-              {index > 0 && (
-                <span aria-hidden="true" {...stylex.props(s.separator)}>
-                  ·
-                </span>
-              )}
               {fact}
             </span>
           ))}

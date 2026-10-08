@@ -108,6 +108,35 @@ const s = stylex.create({
     lineHeight: '20px',
     fontWeight: 600,
   },
+  overviewSteps: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: 'repeat(3,minmax(0,1fr))',
+    gap: 20,
+    padding: 0,
+    paddingTop: 20,
+    margin: 0,
+    marginTop: 24,
+    listStyle: 'none',
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.cardLine,
+  },
+  overviewStep: { display: 'grid', alignContent: 'start', gap: 6, minWidth: 0 },
+  overviewNumber: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 28,
+    height: 28,
+    marginBottom: 2,
+    borderRadius: controlShape.circle,
+    backgroundColor: colors.stripe,
+    color: colors.text,
+    fontSize: 12,
+    fontWeight: 600,
+  },
+  overviewLabel: { fontSize: 14, lineHeight: '20px', fontWeight: 600 },
+  overviewDetail: { color: colors.muted, fontSize: 12, lineHeight: '18px' },
   choiceGroup: { borderWidth: 0, padding: 0, margin: 0, minWidth: 0 },
   choiceLegend: { fontSize: 14, fontWeight: 500, lineHeight: '22px', marginBottom: 4 },
   header: {
@@ -507,6 +536,25 @@ export function ShowroomServiceRequest({
             {t('Start')}
           </span>
         </button>
+        {!importing && (
+          <ol aria-label={t('Enquiry progress')} {...stylex.props(s.overviewSteps)}>
+            {steps.map(({ label }, index) => (
+              <li key={label} {...stylex.props(s.overviewStep)}>
+                <span aria-hidden="true" {...stylex.props(s.overviewNumber)}>
+                  {number(index + 1)}
+                </span>
+                <span {...stylex.props(s.overviewLabel)}>{t(label)}</span>
+                <span {...stylex.props(s.overviewDetail)}>
+                  {index === 0
+                    ? t('VIN or vehicle details')
+                    : index === 1
+                      ? t('Mileage') + ' · ' + t('Condition')
+                      : t('Phone') + ' · ' + t('Email')}
+                </span>
+              </li>
+            ))}
+          </ol>
+        )}
       </section>
       <Modal open={open} onClose={close} label={t(title)} flowSheet>
         <div {...stylex.props(s.header)}>

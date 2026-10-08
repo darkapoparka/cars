@@ -3,17 +3,15 @@ import { useLocale } from '@/lib/use-locale';
 import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart } from 'lucide-react';
 import * as stylex from '@stylexjs/stylex';
-import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { IconButton } from './ui';
 import type { IconName } from './Icon';
 import { useAppState } from '@/lib/store';
 import { showroom, showroomInventoryHref } from '@/lib/showroom';
-import { LanguageSwitcher } from './LanguageSwitcher';
-import { ShowroomDesktopMenu } from './ShowroomDesktopMenu';
+import { ShowroomProfileMenu } from './ShowroomProfileMenu';
 import { ShowroomBrandLogo } from './ShowroomBrandLogo';
+import { showroomPlaceholderLogo } from '@/lib/showroom-config';
 const s = stylex.create({
   header: {
     height: 60,
@@ -42,7 +40,7 @@ const s = stylex.create({
   },
   backTitle: { paddingInline: 8 },
   logo: {
-    width: { default: 176, '@media (max-width: 699px)': 152 },
+    width: { default: 176, '@media (max-width: 699px)': 128 },
     height: { default: 52, '@media (max-width: 699px)': 'auto' },
     objectFit: 'contain',
     objectPosition: 'left center',
@@ -70,18 +68,6 @@ const s = stylex.create({
     zIndex: { default: 30, '@media (min-width: 1024px)': 40 },
   },
   phoneLogo: { display: { default: 'block', '@media (min-width: 1024px)': 'none' } },
-  actions: { display: 'flex', alignItems: 'center', gap: 0 },
-  savedAction: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 48,
-    height: 48,
-    borderRadius: controlShape.circle,
-    color: 'inherit',
-    textDecoration: 'none',
-  },
-  savedActive: { color: '#db3000' },
   logoLink: {
     display: 'flex',
     alignItems: 'center',
@@ -93,20 +79,6 @@ const s = stylex.create({
     fontWeight: 700,
     lineHeight: '26px',
   },
-  badge: {
-    position: 'absolute',
-    right: 9,
-    top: 4,
-    width: 16,
-    height: 16,
-    borderRadius: 20,
-    backgroundColor: '#db3000',
-    color: '#fff',
-    fontSize: 11,
-    textAlign: 'center',
-    lineHeight: '16px',
-  },
-  relative: { position: 'relative' },
   placeholder: { minWidth: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' },
 });
 export function Header({
@@ -115,7 +87,6 @@ export function Header({
   children,
   home = false,
   sticky = true,
-  showLanguageSwitcher = false,
   overHeroDesktop = false,
   onBack,
   backIcon = 'back',
@@ -125,14 +96,13 @@ export function Header({
   children?: ReactNode;
   home?: boolean;
   sticky?: boolean;
-  showLanguageSwitcher?: boolean;
   overHeroDesktop?: boolean;
   onBack?: () => void;
   backIcon?: IconName;
 }) {
   const { t } = useLocale();
-  const { parked, filters, inventorySort } = useAppState();
-  const generatedDesktopLogo = showroom.logo === '/branding/showroom-placeholder-20261002.png';
+  const { filters, inventorySort } = useAppState();
+  const generatedDesktopLogo = showroom.logo === showroomPlaceholderLogo;
   return (
     <header
       data-desktop-hero-header={overHeroDesktop || undefined}
@@ -169,7 +139,7 @@ export function Header({
                 alt={t(showroom.name)}
                 width={176}
                 height={52}
-                sizes="176px"
+                sizes="(max-width: 699px) 128px, 176px"
                 priority
                 {...stylex.props(
                   s.logo,
@@ -187,34 +157,7 @@ export function Header({
           {title ? t(title) : title}
         </h1>
       )}
-      {home ? (
-        <div {...stylex.props(s.actions)}>
-          {showLanguageSwitcher && <LanguageSwitcher />}
-          <span {...stylex.props(s.relative)}>
-            <Link
-              href="/car-park"
-              aria-label={t('Saved cars') + (parked.length ? ', ' + parked.length : '')}
-              {...stylex.props(s.savedAction, parked.length > 0 && s.savedActive)}
-            >
-              <Heart
-                size={22}
-                strokeWidth={2}
-                fill={parked.length > 0 ? 'currentColor' : 'none'}
-                aria-hidden="true"
-                focusable="false"
-              />
-            </Link>
-            {parked.length > 0 && (
-              <span aria-hidden="true" {...stylex.props(s.badge)}>
-                {parked.length}
-              </span>
-            )}
-          </span>
-          <ShowroomDesktopMenu overHero={overHeroDesktop} />
-        </div>
-      ) : (
-        children
-      )}
+      {home ? <ShowroomProfileMenu overHero={overHeroDesktop} /> : children}
     </header>
   );
 }

@@ -18,7 +18,7 @@ const s = stylex.create({
     // The generated master supplies one compact silhouette on either header surface.
     maskImage: {
       default: 'none',
-      '@media (min-width: 1024px)': 'url("/branding/showroom-compact-20261005.png")',
+      '@media (min-width: 1024px)': 'url("/branding/showroom-compact-20261005.webp")',
     },
     maskSize: '194.28px 86.35px',
     maskPosition: '-9.4px -21.9px',

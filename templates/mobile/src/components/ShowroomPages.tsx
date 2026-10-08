@@ -10,6 +10,7 @@ import { colors } from '@/styles/tokens.stylex';
 import { showroomDesktop } from '@/styles/showroom-desktop-tokens.stylex';
 import { vehicles } from '@/lib/catalog';
 import type { Vehicle } from '@/lib/types';
+import { showroomVehiclePhotos } from '@/lib/vehicle-copy';
 import {
   restoreInventoryPosition,
   showroom,
@@ -61,14 +62,11 @@ const s = stylex.create({
   },
   servicesPage: {
     minHeight: { default: 'calc(100dvh - 242px)', '@media (min-width: 1024px)': 0 },
-    paddingTop: { default: 16, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 20 },
+    paddingTop: { default: 16, '@media (max-width: 699px)': 4, '@media (min-width: 1024px)': 20 },
     paddingInline: { default: 16, '@media (min-width: 1024px)': 0 },
-    borderTopLeftRadius: { default: 0, '@media (max-width: 699px)': 24 },
-    borderTopRightRadius: { default: 0, '@media (max-width: 699px)': 24 },
-    boxShadow: {
-      default: 'none',
-      '@media (max-width: 699px)': '0 -2px 12px rgba(23, 32, 43, 0.05)',
-    },
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    boxShadow: 'none',
   },
   head: { paddingBlock: 12, marginBottom: 20, display: 'flex', flexDirection: 'column', gap: 8 },
   title: { fontSize: 28, lineHeight: '36px', fontWeight: 700 },
@@ -79,6 +77,9 @@ const s = stylex.create({
     fontWeight: { default: 700, '@media (min-width: 1024px)': 500 },
   },
   search: {
+    position: { default: 'relative', '@media (min-width: 1024px)': 'static' },
+    zIndex: { default: 26, '@media (min-width: 1024px)': 'auto' },
+    backgroundColor: { default: colors.background, '@media (min-width: 1024px)': 'transparent' },
     paddingTop: { default: 4, '@media (min-width: 1024px)': 0 },
     width: '100%',
     maxWidth: { default: 'none', '@media (min-width: 1024px)': 620 },
@@ -97,7 +98,7 @@ const s = stylex.create({
   phoneServiceControls: {
     display: {
       default: 'contents',
-      '@media (max-width: 699px)': 'block',
+      '@media (max-width: 699px)': 'flow-root',
       '@media (min-width: 1024px)': 'none',
     },
     clipPath: { default: 'none', '@media (max-width: 699px)': 'inset(0 -16px -16px)' },
@@ -167,10 +168,7 @@ const s = stylex.create({
     },
   },
   serviceCardLink: {
-    gridTemplateColumns: {
-      default: 'minmax(0,1fr)',
-      '@media (min-width: 360px)': 'minmax(0,1fr) auto',
-    },
+    gridTemplateColumns: 'minmax(0,1fr) auto',
     gridTemplateRows: { default: 'auto', '@media (min-width: 1024px)': 'auto auto 1fr' },
     paddingBlock: { default: 12, '@media (min-width: 1024px)': 0 },
     paddingInline: { default: 14, '@media (min-width: 1024px)': 0 },
@@ -238,19 +236,19 @@ const s = stylex.create({
     margin: { default: 0, '@media (min-width: 1024px)': 18 },
   },
   serviceCardCue: {
-    display: { default: 'none', '@media (min-width: 360px)': 'inline-flex' },
+    display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
     justifySelf: 'end',
-    alignSelf: { default: 'center', '@media (min-width: 1024px)': 'start' },
-    gridColumn: { default: 'auto', '@media (min-width: 1024px)': 2 },
-    gridRow: { default: 'auto', '@media (min-width: 1024px)': 2 },
+    alignSelf: 'start',
+    gridColumn: 2,
+    gridRow: { default: 1, '@media (min-width: 1024px)': 2 },
     gap: 3,
-    minHeight: 26,
+    minHeight: { default: 24, '@media (min-width: 1024px)': 26 },
     width: { default: 24, '@media (min-width: 1024px)': 32 },
     paddingBlock: 0,
     paddingInline: 0,
-    marginTop: { default: 0, '@media (min-width: 1024px)': 14 },
+    marginTop: { default: 0, '@media (min-width: 360px)': 4, '@media (min-width: 1024px)': 14 },
     marginRight: 0,
     backgroundColor: 'transparent',
     color: colors.text,
@@ -677,12 +675,12 @@ export function ShowroomServicesScreen() {
   }
   const contextFilters =
     selected === 'import' ? (
-      <ShowroomQuickPills label={t('Import countries')} inventoryDesktop>
+      <ShowroomQuickPills label={t('Import countries')} inventoryDesktop compactOnPhone>
         {importCountries.map(({ value, label }) => (
           <ShowroomQuickPill
             key={value}
             inventoryDesktop
-            secondary
+            secondaryOnPhone
             active={country === value}
             aria-pressed={country === value}
             onClick={() => window.history.pushState(null, '', importCountryHref(value))}
@@ -692,12 +690,12 @@ export function ShowroomServicesScreen() {
         ))}
       </ShowroomQuickPills>
     ) : selected === 'sell' ? (
-      <ShowroomQuickPills label={t('Sale type')} inventoryDesktop>
+      <ShowroomQuickPills label={t('Sale type')} inventoryDesktop compactOnPhone>
         {saleEnquiryTypes.map(({ value, label }) => (
           <ShowroomQuickPill
             key={value}
             inventoryDesktop
-            secondary
+            secondaryOnPhone
             active={saleType === value}
             aria-pressed={saleType === value}
             onClick={() => window.history.pushState(null, '', saleEnquiryHref(value))}
@@ -740,7 +738,7 @@ export function ShowroomServicesScreen() {
           </div>
         </ShowroomPageHero>
       </ShowroomBanner>
-      <ShowroomDrawer phoneResults>
+      <ShowroomDrawer>
         <div data-showroom-controls {...stylex.props(s.tabs)}>
           <div {...stylex.props(s.phoneServiceControls)}>
             <ShowroomTabs
@@ -751,19 +749,18 @@ export function ShowroomServicesScreen() {
               idPrefix="service-category-"
               layout="desktop-pills"
               primary
-              flushOnPhone
               onChange={selectCategory}
             />
           </div>
           {contextFilters || (
-            <ShowroomQuickPills label={t('Service filters')} inventoryDesktop>
+            <ShowroomQuickPills label={t('Service filters')} inventoryDesktop compactOnPhone>
               {quickFilters
                 .filter(({ value }) => value !== 'all')
                 .map(({ value, label }) => (
                   <ShowroomQuickPill
                     key={value}
                     inventoryDesktop
-                    secondary
+                    secondaryOnPhone
                     active={quickFilter === value}
                     aria-pressed={quickFilter === value}
                     aria-label={label}
@@ -986,7 +983,7 @@ export function ShowroomContactScreen({
   vehicle?: Vehicle;
   serviceId?: string;
 }) {
-  const { t, locale } = useLocale();
+  const { t, locale, money } = useLocale();
   const { messageDrafts } = useAppState();
   const service = showroomService(serviceId);
   const hasContactDetails = Boolean(showroom.address || showroom.hours.length);
@@ -1093,6 +1090,8 @@ export function ShowroomContactScreen({
                           title: vehicle.make + ' ' + vehicle.model,
                           href: '/vehicle/' + vehicle.id,
                           linkLabel: 'View car',
+                          image: showroomVehiclePhotos(vehicle)[0],
+                          price: money(vehicle.price),
                         }
                       : service
                         ? {
