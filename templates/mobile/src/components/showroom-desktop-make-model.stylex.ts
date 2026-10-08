@@ -63,7 +63,9 @@ export const desktopMakeModelStyles = stylex.create({
   },
   dropdownBack: {
     flex: 'none',
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
+    justifySelf: 'start',
+    width: 'auto',
     height: 32,
     minHeight: 32,
     paddingInline: 8,
