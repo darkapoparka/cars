@@ -200,6 +200,9 @@ const s = stylex.create({
     color: colors.text,
     '::after': { backgroundColor: colors.text },
   },
+  categoryRail: {
+    boxShadow: { default: 'none', '@media (max-width: 699px)': '0 2px 4px rgba(27,27,33,.06)' },
+  },
   desktopCategories: {
     justifyContent: { default: 'flex-start', '@media (min-width: 1024px)': 'center' },
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
@@ -468,6 +471,7 @@ export function ShowroomTabs<T extends string>({
         layout === 'desktop-sidebar' && s.sidebarRail,
         layout === 'desktop-categories' && s.desktopCategories,
         layout === 'desktop-pills' && s.pillsRail,
+        (layout === 'desktop-categories' || layout === 'desktop-pills') && s.categoryRail,
         flush && s.flushRail,
         flushOnPhone && s.phoneFlushRail,
         layout === 'hero' && s.heroRail,

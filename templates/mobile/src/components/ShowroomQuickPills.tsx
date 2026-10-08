@@ -144,7 +144,11 @@ const s = stylex.create({
     lineHeight: '20px',
   },
   secondarySurface: {
-    borderColor: { default: colors.cardLine, '@media (min-width: 1024px)': colors.line },
+    borderColor: {
+      default: colors.cardLine,
+      '@media (max-width: 699px)': colors.line,
+      '@media (min-width: 1024px)': colors.line,
+    },
     backgroundColor: {
       default: colors.background,
       '@media (min-width: 1024px)': { default: colors.stripe, ':hover': colors.controlSurface },
