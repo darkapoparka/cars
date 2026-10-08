@@ -208,6 +208,7 @@ const s = stylex.create({
     marginTop: { default: 8, '@media (min-width: 1024px)': 0 },
     marginInline: { default: 0, '@media (max-width: 699px)': 16 },
     paddingInline: { default: 16, '@media (max-width: 699px)': 0 },
+    gap: { default: 0, '@media (max-width: 699px)': 8 },
     paddingTop: { default: 0, '@media (min-width: 1024px)': 4 },
     paddingBottom: { default: 0, '@media (min-width: 1024px)': 4 },
     borderBottomWidth: {
@@ -220,9 +221,9 @@ const s = stylex.create({
     },
   },
   categoryTab: {
-    minWidth: { default: 88, '@media (max-width: 699px)': 64 },
+    minWidth: { default: 88, '@media (max-width: 699px)': 56 },
     flexGrow: 0,
-    flexBasis: { default: 'auto', '@media (max-width: 699px)': '25%' },
+    flexBasis: { default: 'auto', '@media (max-width: 699px)': 'calc((100% - 24px) / 4)' },
     paddingInline: { default: 12, '@media (max-width: 699px)': 0 },
   },
   pillsRail: {
@@ -263,7 +264,11 @@ const s = stylex.create({
   },
   sidebarRail: {
     flexDirection: { default: 'row', '@media (min-width: 1024px)': 'column' },
-    gap: { default: 0, '@media (min-width: 1024px)': 6 },
+    gap: {
+      default: 0,
+      '@media (max-width: 699px)': 8,
+      '@media (min-width: 1024px)': 6,
+    },
     height: {
       default: 'auto',
       '@media (min-width: 700px)': 57,
@@ -448,8 +453,11 @@ export function ShowroomTabs<T extends string>({
       const bounds = tab.getBoundingClientRect();
       const visible = rail.getBoundingClientRect();
       if (rail.scrollWidth > rail.clientWidth) {
-        if (bounds.left < visible.left) rail.scrollLeft += bounds.left - visible.left;
-        else if (bounds.right > visible.right) rail.scrollLeft += bounds.right - visible.right;
+        const spacing = getComputedStyle(rail);
+        const left = visible.left + parseFloat(spacing.paddingLeft);
+        const right = visible.right - parseFloat(spacing.paddingRight);
+        if (bounds.left < left) rail.scrollLeft += bounds.left - left;
+        else if (bounds.right > right) rail.scrollLeft += bounds.right - right;
       }
       if (layout === 'desktop-sidebar' && rail.scrollHeight > rail.clientHeight) {
         if (bounds.top < visible.top) rail.scrollTop += bounds.top - visible.top;

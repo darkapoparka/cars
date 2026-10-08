@@ -37,36 +37,54 @@ const s = stylex.create({
     gap: 12,
   },
   showroomBody: {
-    backgroundColor: { default: colors.surface, '@media (max-width: 699px)': colors.background },
+    backgroundColor: {
+      default: colors.surface,
+      '@media (max-width: 699px)': colors.background,
+      '@media (min-width: 1024px)': colors.background,
+    },
     padding: 0,
-    paddingBottom: 'calc(100px + env(safe-area-inset-bottom))',
-    gap: 16,
+    paddingBottom: {
+      default: 'calc(100px + env(safe-area-inset-bottom))',
+      '@media (min-width: 1024px)': 24,
+    },
+    gap: { default: 16, '@media (min-width: 1024px)': 24 },
   },
   sheet: {
     position: 'relative',
-    marginTop: -20,
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
+    marginTop: { default: -20, '@media (min-width: 1024px)': 0 },
+    borderTopLeftRadius: { default: 24, '@media (min-width: 1024px)': 0 },
+    borderTopRightRadius: { default: 24, '@media (min-width: 1024px)': 0 },
     backgroundColor: colors.background,
     boxShadow: {
       default: '0 -4px 16px #00000012',
       '@media (max-width: 699px)': '0 -2px 12px #0000000a',
+      '@media (min-width: 1024px)': 'none',
     },
   },
   sectionNav: {
     position: 'sticky',
-    top: 60,
+    top: { default: 60, '@media (min-width: 1024px)': 72 },
     zIndex: 25,
     backgroundColor: colors.background,
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
-    scrollMarginTop: 60,
+    scrollMarginTop: { default: 60, '@media (min-width: 1024px)': 72 },
   },
   afterMobileSummary: {
-    borderTopLeftRadius: { default: 24, '@media (max-width: 699px)': 0 },
-    borderTopRightRadius: { default: 24, '@media (max-width: 699px)': 0 },
+    borderTopLeftRadius: {
+      default: 24,
+      '@media (max-width: 699px)': 0,
+      '@media (min-width: 1024px)': 0,
+    },
+    borderTopRightRadius: {
+      default: 24,
+      '@media (max-width: 699px)': 0,
+      '@media (min-width: 1024px)': 0,
+    },
   },
-  summaryGrip: { height: { default: 24, '@media (max-width: 699px)': 0 } },
+  summaryGrip: {
+    height: { default: 24, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
+  },
   grip: {
     display: 'flex',
     height: { default: 24, '@media (max-width: 699px)': 8 },
@@ -74,7 +92,11 @@ const s = stylex.create({
     justifyContent: 'center',
   },
   gripBar: {
-    display: { default: 'block', '@media (max-width: 699px)': 'none' },
+    display: {
+      default: 'block',
+      '@media (max-width: 699px)': 'none',
+      '@media (min-width: 1024px)': 'none',
+    },
     width: 36,
     height: 4,
     borderRadius: 4,
@@ -84,6 +106,7 @@ const s = stylex.create({
   compactSpecification: { display: { default: 'none', '@media (max-width: 699px)': 'inline' } },
   mobileFinanceSection: {
     display: { default: 'none', '@media (max-width: 699px)': 'block' },
+    padding: 16,
   },
   financeAction: {
     display: 'flex',
@@ -91,16 +114,28 @@ const s = stylex.create({
     justifyContent: 'space-between',
     gap: 12,
     width: '100%',
-    minHeight: 72,
+    minHeight: 84,
     padding: 16,
     borderWidth: 0,
-    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    borderRadius: 16,
+    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
     color: colors.text,
     textAlign: 'left',
     outlineColor: colors.accent,
     outlineOffset: -3,
   },
-  financeCopy: { display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 },
+  financeIcon: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexShrink: 0,
+    width: 44,
+    height: 44,
+    borderRadius: 12,
+    backgroundColor: colors.background,
+    color: colors.accent,
+  },
+  financeCopy: { display: 'flex', flexDirection: 'column', flex: '1', gap: 2, minWidth: 0 },
   financeLabel: { fontSize: 16, fontWeight: 500, lineHeight: '24px' },
   financeAmount: {
     fontSize: 14,
@@ -116,10 +151,13 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: 2,
   },
-  showroomPanel: { gap: 0 },
+  showroomPanel: {
+    gap: { default: 0, '@media (min-width: 1024px)': 20 },
+    paddingTop: { default: 0, '@media (min-width: 1024px)': 20 },
+  },
   showroomSection: {
-    borderWidth: 0,
-    borderRadius: 0,
+    borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     overflow: 'visible',
   },
   showroomDivider: {
@@ -127,16 +165,22 @@ const s = stylex.create({
     borderTopStyle: 'solid',
     borderTopColor: colors.line,
   },
-  showroomTitle: { borderBottomWidth: 0, paddingBottom: 0, marginBottom: 12, fontSize: 18 },
+  showroomTitle: {
+    borderBottomWidth: 0,
+    paddingBottom: 0,
+    marginBottom: 12,
+    fontSize: { default: 18, '@media (min-width: 1024px)': 20 },
+    lineHeight: { default: '24px', '@media (min-width: 1024px)': '28px' },
+  },
   showroomFooter: {
-    marginInline: { default: 12, '@media (max-width: 699px)': 0 },
+    marginInline: { default: 12, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
     borderWidth: { default: 1, '@media (max-width: 699px)': 0 },
     borderTopWidth: 1,
     borderRadius: { default: 16, '@media (max-width: 699px)': 0 },
   },
   showroomFooterTitle: {
     borderBottomWidth: { default: 1, '@media (max-width: 699px)': 0 },
-    fontSize: { default: 16, '@media (max-width: 699px)': 18 },
+    fontSize: { default: 16, '@media (max-width: 699px)': 18, '@media (min-width: 1024px)': 20 },
     marginBottom: { default: 8, '@media (max-width: 699px)': 0 },
   },
   showroomContactTitle: { paddingBottom: { default: 8, '@media (max-width: 699px)': 0 } },
@@ -147,6 +191,27 @@ const s = stylex.create({
   },
   featureValue: { fontWeight: 500 },
   featureTags: { marginBottom: 16 },
+  mobileFeatureTable: { display: { default: 'table', '@media (min-width: 1024px)': 'none' } },
+  desktopFeatures: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'grid' },
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    columnGap: 24,
+    margin: 0,
+    padding: 0,
+    listStyleType: 'none',
+  },
+  desktopFeature: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 10,
+    minHeight: 40,
+    minWidth: 0,
+    paddingBlock: 10,
+    fontSize: 14,
+    lineHeight: '20px',
+  },
+  desktopFeatureCheck: { display: 'inline-flex', flexShrink: 0, color: colors.muted },
+  desktopFeatureLabel: { minWidth: 0, overflowWrap: 'anywhere' },
   card: {
     backgroundColor: colors.background,
     borderWidth: 1,
@@ -155,7 +220,7 @@ const s = stylex.create({
     borderRadius: 16,
     overflow: 'hidden',
   },
-  pad: { padding: 16 },
+  pad: { padding: { default: 16, '@media (min-width: 1024px)': 24 } },
   title: {
     fontSize: 16,
     fontWeight: 700,
@@ -186,7 +251,14 @@ const s = stylex.create({
   },
   label: { fontSize: 12, lineHeight: '20px', color: colors.muted },
   value: { fontSize: 14, lineHeight: '20px', fontWeight: 700 },
-  showroomSpecs: { padding: 0, gap: 16 },
+  showroomSpecs: {
+    padding: 0,
+    gap: { default: 16, '@media (min-width: 1024px)': 20 },
+    gridTemplateColumns: {
+      default: 'repeat(2,minmax(0,1fr))',
+      '@media (min-width: 1280px)': 'repeat(3,minmax(0,1fr))',
+    },
+  },
   showroomSpec: { paddingLeft: { default: 34, '@media (max-width: 699px)': 44 } },
   specIcon: {
     display: 'inline-flex',
@@ -196,12 +268,16 @@ const s = stylex.create({
     transform: 'translateY(-50%)',
   },
   showroomLabel: {
-    fontSize: { default: 12, '@media (max-width: 699px)': 14 },
+    fontSize: { default: 12, '@media (max-width: 699px)': 14, '@media (min-width: 1024px)': 13 },
     lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
   },
   showroomValue: {
-    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
-    lineHeight: { default: '20px', '@media (max-width: 699px)': '24px' },
+    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 16 },
+    lineHeight: {
+      default: '20px',
+      '@media (max-width: 699px)': '24px',
+      '@media (min-width: 1024px)': '24px',
+    },
     fontWeight: 500,
   },
   seller: {
@@ -236,7 +312,7 @@ const s = stylex.create({
     whiteSpace: 'pre-line',
     padding: 8,
     paddingBlock: 6,
-    height: 52,
+    height: { default: 52, '@media (min-width: 1024px)': 44 },
     fontWeight: 400,
     textAlign: 'left',
     verticalAlign: 'middle',
@@ -311,8 +387,12 @@ const s = stylex.create({
   tags: { display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 8 },
   description: {
     whiteSpace: 'pre-line',
-    fontSize: { default: 14, '@media (max-width: 699px)': 16 },
-    lineHeight: { default: '22px', '@media (max-width: 699px)': '24px' },
+    fontSize: { default: 14, '@media (max-width: 699px)': 16, '@media (min-width: 1024px)': 15 },
+    lineHeight: {
+      default: '22px',
+      '@media (max-width: 699px)': '24px',
+      '@media (min-width: 1024px)': '26px',
+    },
   },
   carousel: {
     display: 'flex',
@@ -322,7 +402,15 @@ const s = stylex.create({
     scrollSnapType: 'x mandatory',
   },
   featuresLabel: { width: '80%' },
-  showroomCar: { width: 281, flexShrink: 0, scrollSnapAlign: 'start' },
+  showroomCar: {
+    width: {
+      default: 281,
+      '@media (min-width: 1024px)': 260,
+      '@media (min-width: 1280px)': 'calc((100% - 32px) / 3)',
+    },
+    flexShrink: 0,
+    scrollSnapAlign: 'start',
+  },
 });
 export function VehicleSections({
   vehicle: v,
@@ -621,7 +709,23 @@ export function VehicleSections({
                 {!v.features.length && (
                   <p {...stylex.props(ui.muted)}>{t('No features listed.')}</p>
                 )}
-                <table {...stylex.props(s.table)}>
+                {showroomMode && v.features.length > 0 && (
+                  <ul
+                    data-vehicle-desktop-features
+                    aria-label={t('Features')}
+                    {...stylex.props(s.desktopFeatures)}
+                  >
+                    {v.features.map((feature) => (
+                      <li key={feature} {...stylex.props(s.desktopFeature)}>
+                        <span aria-hidden="true" {...stylex.props(s.desktopFeatureCheck)}>
+                          <Icon name="check" size={18} />
+                        </span>
+                        <span {...stylex.props(s.desktopFeatureLabel)}>{t(feature)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <table {...stylex.props(s.table, showroomMode && s.mobileFeatureTable)}>
                   <tbody>
                     {(showroomMode ? v.features : v.features.slice(0, 6)).map((feature) => (
                       <tr key={feature} {...stylex.props(s.row)}>
@@ -705,12 +809,7 @@ export function VehicleSections({
           {showroomMode && showDetails && onFinance && (
             <section
               data-mobile-vehicle-finance
-              {...stylex.props(
-                s.card,
-                s.showroomSection,
-                s.showroomDivider,
-                s.mobileFinanceSection,
-              )}
+              {...stylex.props(s.mobileFinanceSection)}
             >
               <button
                 type="button"
@@ -723,6 +822,9 @@ export function VehicleSections({
                 }}
                 {...stylex.props(s.financeAction)}
               >
+                <span aria-hidden="true" {...stylex.props(s.financeIcon)}>
+                  <Icon name="calculator" size={24} />
+                </span>
                 <span {...stylex.props(s.financeCopy)}>
                   <span {...stylex.props(s.financeLabel)}>{t('Financing')}</span>
                   <span {...stylex.props(s.financeAmount)}>

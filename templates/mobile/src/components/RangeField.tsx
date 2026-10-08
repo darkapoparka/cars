@@ -1,10 +1,19 @@
 'use client';
 import { useLocale } from '@/lib/use-locale';
-import { useRef, type PointerEvent } from 'react';
+import { useRef, useSyncExternalStore, type PointerEvent } from 'react';
 import * as stylex from '@stylexjs/stylex';
 import { controlShape } from '@/styles/control-tokens.stylex';
 import { colors } from '@/styles/tokens.stylex';
 import { controls } from '@/styles/controls.stylex';
+
+function subscribePhone(onChange: () => void) {
+  const media = window.matchMedia('(max-width: 699px)');
+  media.addEventListener('change', onChange);
+  return () => media.removeEventListener('change', onChange);
+}
+const phoneSnapshot = () => window.matchMedia('(max-width: 699px)').matches;
+const serverSnapshot = () => false;
+
 const s = stylex.create({
   root: { minWidth: 0, paddingInline: 4 },
   head: {
@@ -129,25 +138,32 @@ const s = stylex.create({
   comfortableSummary: { fontSize: 15 },
   comfortableInputs: { gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,8em),1fr))' },
   comfortableField: {
-    minHeight: 64,
+    minHeight: { default: 64, '@media (max-width: 699px)': 44 },
     borderRadius: controlShape.field,
     borderColor: colors.line,
     backgroundColor: {
       default: colors.controlSurface,
       '@media (min-width: 1024px)': colors.background,
     },
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    gap: 2,
+    flexDirection: { default: 'column', '@media (max-width: 699px)': 'row' },
+    alignItems: { default: 'stretch', '@media (max-width: 699px)': 'center' },
+    gap: { default: 2, '@media (max-width: 699px)': 8 },
     paddingBlock: 8,
   },
   fieldLabel: {
+    display: { default: 'block', '@media (max-width: 699px)': 'none' },
     fontSize: { default: 13, '@media (max-width: 699px)': 14 },
     lineHeight: '18px',
     fontWeight: 500,
     color: colors.muted,
   },
-  valueRow: { display: 'flex', alignItems: 'center', gap: 8, minWidth: 0 },
+  valueRow: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    minWidth: 0,
+    flexGrow: { default: 0, '@media (max-width: 699px)': 1 },
+  },
   comfortableText: { fontSize: 16, lineHeight: '24px' },
   comfortableFill: { backgroundColor: colors.accent },
 });
@@ -178,6 +194,7 @@ export function RangeField({
   onChange,
 }: Props) {
   const { t, number } = useLocale();
+  const phone = useSyncExternalStore(subscribePhone, phoneSnapshot, serverSnapshot);
   const drag = useRef<{ id: number; side: 'from' | 'to' } | null>(null);
   const low = min ? Math.max(floor, Math.min(ceiling, Number(min))) : floor;
   const high = max ? Math.max(low, Math.min(ceiling, Number(max))) : ceiling;
@@ -220,7 +237,7 @@ export function RangeField({
           maxLength={9}
           value={side === 'from' ? min : max}
           onChange={(event) => (side === 'from' ? from : to)(event.target.value)}
-          placeholder={comfortable ? t('Any') : t(side)}
+          placeholder={comfortable && !phone ? t('Any') : t(side === 'from' ? 'From' : 'To')}
           {...stylex.props(s.input, comfortable && s.comfortableText)}
         />
         {unit && <span {...stylex.props(s.unit, comfortable && s.comfortableText)}>{t(unit)}</span>}

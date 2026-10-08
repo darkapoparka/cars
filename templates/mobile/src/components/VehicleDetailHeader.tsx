@@ -9,7 +9,53 @@ import { Icon } from './Icon';
 import { IconButton } from './ui';
 
 const s = stylex.create({
-  desktop: { display: { default: 'contents', '@media (max-width: 699px)': 'none' } },
+  desktop: {
+    display: {
+      default: 'contents',
+      '@media (max-width: 699px)': 'none',
+      '@media (min-width: 1024px)': 'none',
+    },
+  },
+  showroomHeader: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'block' },
+    position: 'sticky',
+    top: 0,
+    zIndex: 40,
+    paddingInline: 12,
+    backgroundColor: colors.background,
+    borderBottomWidth: 1,
+    borderBottomStyle: 'solid',
+    borderBottomColor: colors.cardLine,
+  },
+  toolbar: {
+    display: { default: 'none', '@media (min-width: 1024px)': 'flex' },
+    alignItems: 'center',
+    gap: 12,
+    paddingInline: 28,
+    paddingTop: 28,
+    paddingBottom: 0,
+    minHeight: 68,
+    color: colors.muted,
+  },
+  back: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: 8,
+    minHeight: 40,
+    paddingInline: 14,
+    paddingBlock: 8,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.line,
+    borderRadius: 24,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
+    color: colors.text,
+    fontSize: 13,
+    lineHeight: '20px',
+    cursor: 'pointer',
+    outlineColor: colors.accent,
+    outlineOffset: 3,
+  },
   mobile: {
     display: { default: 'none', '@media (max-width: 699px)': 'flex' },
     position: 'fixed',
@@ -24,7 +70,7 @@ const s = stylex.create({
     backgroundColor: 'transparent',
     color: colors.text,
   },
-  compact: { backgroundColor: colors.background, boxShadow: '0 1px 8px #0000000a' },
+  compact: { gap: 0, backgroundColor: colors.background, boxShadow: '0 1px 8px #0000000a' },
   title: {
     display: 'none',
     flex: '1',
@@ -86,7 +132,7 @@ export function VehicleDetailHeader({
   onShare: () => void;
   onSave: () => void;
 }) {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [compact, setCompact] = useState(false);
   useEffect(() => {
     if (!image.current) return;
@@ -100,6 +146,15 @@ export function VehicleDetailHeader({
   const saveLabel = saved ? t('Remove from saved cars') : t('Save car');
   return (
     <>
+      <div {...stylex.props(s.showroomHeader)}>
+        <Header home sticky={false} logoPriority={false} />
+      </div>
+      <div data-vehicle-desktop-toolbar {...stylex.props(s.toolbar)}>
+        <button type="button" onClick={onBack} {...stylex.props(s.back)}>
+          <Icon name="back" size={16} />
+          {locale === 'bg' ? 'Обратно към колите' : 'Back to cars'}
+        </button>
+      </div>
       <div {...stylex.props(s.desktop)}>
         <Header title={title} back="/" onBack={onBack}>
           <IconButton icon="share" label={t('Share via')} onClick={onShare} />

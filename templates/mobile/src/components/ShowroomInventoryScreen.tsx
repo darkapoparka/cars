@@ -64,8 +64,16 @@ const s = stylex.create({
   },
   categoryImage: {
     display: 'block',
-    width: { default: 64, '@media (min-width: 1024px)': 48 },
-    height: { default: 40, '@media (min-width: 1024px)': 30 },
+    width: {
+      default: 64,
+      '@media (max-width: 699px)': 'clamp(56px, calc(25vw - 24px), 64px)',
+      '@media (min-width: 1024px)': 48,
+    },
+    height: {
+      default: 40,
+      '@media (max-width: 699px)': 'clamp(35px, calc(15.625vw - 15px), 40px)',
+      '@media (min-width: 1024px)': 30,
+    },
     objectFit: 'contain',
     flexShrink: 0,
   },

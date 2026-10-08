@@ -16,6 +16,9 @@ import { vehicleGalleryHref } from '@/lib/vehicle-detail-navigation';
 import { VehicleSections } from './VehicleSections';
 import { VehicleDetailHeader } from './VehicleDetailHeader';
 import { MobileVehicleSummary } from './MobileVehicleSummary';
+import { DesktopVehicleOverview } from './DesktopVehicleOverview';
+import { DesktopVehicleSummary } from './DesktopVehicleSummary';
+import { vehicleDesktop } from './vehicle-detail-desktop.stylex';
 import { Icon } from './Icon';
 import { Button, Modal, ui } from './ui';
 import { ContactSheet } from './ContactSheet';
@@ -58,7 +61,12 @@ const s = stylex.create({
     touchAction: 'pan-y',
     display: 'block',
     position: 'relative',
-    aspectRatio: { default: '1280 / 810', '@media (max-width: 699px)': '4 / 3' },
+    aspectRatio: {
+      default: '1280 / 810',
+      '@media (max-width: 699px)': '4 / 3',
+      '@media (min-width: 1024px)': '16 / 10',
+    },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 18 },
     backgroundColor: colors.surface,
     overflow: 'hidden',
   },
@@ -69,7 +77,7 @@ const s = stylex.create({
   counter: {
     position: 'absolute',
     right: 12,
-    bottom: 28,
+    bottom: { default: 28, '@media (min-width: 1024px)': 16 },
     width: 84,
     height: 32,
     display: 'flex',
@@ -83,7 +91,13 @@ const s = stylex.create({
     color: '#fff',
   },
   overview: { display: 'contents' },
-  desktopOverview: { display: { default: 'contents', '@media (max-width: 699px)': 'none' } },
+  desktopOverview: {
+    display: {
+      default: 'contents',
+      '@media (max-width: 699px)': 'none',
+      '@media (min-width: 1024px)': 'none',
+    },
+  },
   leaseOption: {
     padding: 12,
     marginBottom: 16,
@@ -304,7 +318,7 @@ const s = stylex.create({
       '@media (min-width: 1024px)': `calc(100% - ${showroomDesktop.viewportGutter} * 2)`,
     },
     maxWidth: { default: 1100, '@media (min-width: 1024px)': showroomDesktop.shellWidth },
-    display: 'grid',
+    display: { default: 'grid', '@media (min-width: 1024px)': 'none' },
     gridTemplateColumns: 'minmax(0,1fr) auto',
     alignItems: 'center',
     gap: 12,
@@ -334,8 +348,38 @@ const s = stylex.create({
   },
   dockPeriod: { fontSize: 12, fontWeight: 400, lineHeight: '18px', color: colors.muted },
   dockAction: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: 8,
+    minHeight: { default: 48, '@media (max-width: 699px)': 44 },
+    minWidth: { default: 'auto', '@media (max-width: 699px)': 120 },
+    paddingBlock: { default: 12, '@media (max-width: 699px)': 0 },
+    paddingInline: { default: 12, '@media (max-width: 699px)': 0 },
+    borderWidth: { default: 1, '@media (max-width: 699px)': 0 },
+    borderStyle: 'solid',
+    borderColor: colors.text,
+    borderRadius: controlShape.pill,
+    backgroundColor: { default: colors.text, '@media (max-width: 699px)': 'transparent' },
+    color: colors.background,
     fontSize: { default: 15, '@media (max-width: 699px)': 14 },
+    fontWeight: 500,
     lineHeight: { default: '22px', '@media (max-width: 699px)': '20px' },
+    textDecoration: 'none',
+    outlineColor: colors.text,
+    outlineOffset: 3,
+  },
+  dockActionFace: {
+    display: { default: 'contents', '@media (max-width: 699px)': 'inline-flex' },
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '100%',
+    minHeight: 36,
+    paddingBlock: 8,
+    paddingInline: 18,
+    borderRadius: controlShape.pill,
+    backgroundColor: colors.text,
   },
   actionIcon: { display: 'inline-flex', flexShrink: 0 },
   financeAmount: {
@@ -532,208 +576,295 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
           else router.replace(href, { scroll: false });
         }}
       />
-      <div ref={image} data-vehicle-hero>
-        <Link
-          href={vehicleGalleryHref(v.id, section)}
-          {...stylex.props(s.hero)}
-          aria-label={t('Vehicle image')}
-          onPointerDown={(event) => {
-            photoGesture.current = { x: event.clientX, y: event.clientY, moved: false };
-          }}
-          onPointerUp={(event) => {
-            const dx = event.clientX - photoGesture.current.x;
-            const dy = event.clientY - photoGesture.current.y;
-            if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
-              photoGesture.current.moved = true;
-              changePhoto(dx < 0 ? 1 : -1);
-            }
-          }}
-          onClick={(event) => {
-            if (photoGesture.current.moved) {
-              event.preventDefault();
-              photoGesture.current.moved = false;
-            }
-          }}
-          onKeyDown={(event) => {
-            if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-              event.preventDefault();
-              changePhoto(event.key === 'ArrowRight' ? 1 : -1);
-            }
-          }}
-        >
-          <Image
-            src={v.images[photoIndex]}
-            alt={v.make + ' ' + v.model}
-            fill
-            priority
-            sizes="(min-width: 1328px) 1280px, (min-width: 1024px) calc(100vw - 48px), 100vw"
-            {...stylex.props(
-              s.image,
-              showroomPhotoHasLetterbox(v.images[photoIndex]) && s.letterboxedImage,
-            )}
-          />
-          <span {...stylex.props(s.counter)}>
-            <Icon name="photo" size={20} />
-            {photoIndex + 1} / {v.images.length}
-          </span>
-        </Link>
-      </div>
-      <VehicleSections
-        key={v.id}
-        vehicle={v}
-        showroomMode
-        mobileView={mobile}
-        onReport={() => setReport(true)}
-        onFinance={() => setFinance(true)}
-        mobileOverview={
-          <MobileVehicleSummary
-            vehicle={v}
-            actions={mobileActions}
-            onPriceInfo={() => setPriceInfo(true)}
-            onContact={() => setContact(true)}
-          />
-        }
-        overview={
-          <div {...stylex.props(s.overview, summaryLayout && s.purchaseSummary, s.desktopOverview)}>
-            <section {...stylex.props(s.info, summaryLayout ? s.purchaseInfo : s.leaseInfo)}>
-              <h1 {...stylex.props(s.model)}>
-                {v.make} {v.model}
-              </h1>
-              <p {...stylex.props(s.variant)}>{v.variant}</p>
-            </section>
-            {v.leaseTerms && (
-              <div
-                {...stylex.props(
-                  s.paymentTabs,
-                  summaryLayout && s.purchaseControl,
-                  summaryLayout && s.purchasePaymentTabs,
-                )}
-                role="group"
-                aria-label={t('Payment type')}
-              >
-                <button
-                  type="button"
-                  aria-pressed={!leasing}
-                  onClick={() => setPaymentOverride('buy')}
-                  {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
-                >
-                  {t('Buying')}
-                </button>
-                <button
-                  type="button"
-                  aria-pressed={leasing}
-                  onClick={() => setPaymentOverride('lease')}
-                  {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
-                >
-                  {t('Leasing')}
-                </button>
-              </div>
-            )}
-            <section
-              aria-label={t('Vehicle price and contact')}
-              {...stylex.props(s.offer, summaryLayout && s.purchaseOffer)}
+      <div data-vehicle-desktop-layout {...stylex.props(vehicleDesktop.layout)}>
+        <DesktopVehicleOverview
+          vehicle={v}
+          saved={parked.includes(v.id)}
+          onSave={() => togglePark(v.id)}
+          onShare={share}
+        />
+        <div ref={image} data-vehicle-hero {...stylex.props(vehicleDesktop.media)}>
+          <div {...stylex.props(vehicleDesktop.photoFrame)}>
+            <Link
+              href={vehicleGalleryHref(v.id, section)}
+              {...stylex.props(s.hero)}
+              aria-label={t('Vehicle image')}
+              onPointerDown={(event) => {
+                photoGesture.current = { x: event.clientX, y: event.clientY, moved: false };
+              }}
+              onPointerUp={(event) => {
+                const dx = event.clientX - photoGesture.current.x;
+                const dy = event.clientY - photoGesture.current.y;
+                if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+                  photoGesture.current.moved = true;
+                  changePhoto(dx < 0 ? 1 : -1);
+                }
+              }}
+              onClick={(event) => {
+                if (photoGesture.current.moved) {
+                  event.preventDefault();
+                  photoGesture.current.moved = false;
+                }
+              }}
+              onKeyDown={(event) => {
+                if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+                  event.preventDefault();
+                  changePhoto(event.key === 'ArrowRight' ? 1 : -1);
+                }
+              }}
             >
-              {leasing && v.leaseTerms ? (
-                <>
-                  <div {...stylex.props(s.leasePrice, s.mobileLeasePrice)}>
-                    <div {...stylex.props(s.priceCluster)}>
-                      <strong data-vehicle-price {...stylex.props(s.price)}>
-                        {money(v.monthly || 0)}
-                      </strong>
-                      <span {...stylex.props(s.leaseCopy, s.mobileLeasePeriod)}>
-                        / {t('month')}
-                      </span>
-                    </div>
-                    <span {...stylex.props(s.leaseCopy, s.desktopLeasePeriod)}>
-                      {t('Monthly incl. VAT.')}
-                    </span>
-                  </div>
-                  <p {...stylex.props(s.leaseCopy, s.mobileLeaseNote)}>
-                    {v.leaseTerms.months} {t('months')} · {number(v.leaseTerms.annualMileage)}{' '}
-                    {t('km per year')} · {t(v.leaseTerms.customer)}
-                  </p>
-                  <button
-                    type="button"
-                    aria-label={t('Leasing details')}
-                    aria-haspopup="dialog"
-                    {...stylex.props(s.finance, summaryLayout && s.purchaseControl)}
-                    onClick={(event) => {
-                      event.currentTarget.focus({ preventScroll: true });
-                      setLeaseQuote(true);
-                    }}
-                  >
-                    {t('Leasing details')}
-                    <Icon name="right" size={18} />
-                  </button>
-                </>
-              ) : (
-                <>
-                  {purchasePrice}
-                  {v.previousPrice && (
-                    <p {...stylex.props(s.oldRow, s.desktopPreviousPrice)}>
-                      <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
-                      <span {...stylex.props(s.discount)}>-{money(v.previousPrice - v.price)}</span>
-                    </p>
-                  )}
-                  <p
-                    {...stylex.props(
-                      s.priceNote,
-                      v.priceNote === t('may include delivery costs') && s.mobileDeliveryNote,
-                    )}
-                  >
-                    {v.priceNote ||
-                      money(v.price / 1.19) +
-                        (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
-                  </p>
-                  <button
-                    type="button"
-                    aria-label={
-                      t('Calculate Financing') +
-                      ': ' +
-                      t('From') +
-                      ' ' +
-                      money(financeMonthly) +
-                      t(' per month')
-                    }
-                    aria-haspopup="dialog"
-                    onClick={() => setFinance(true)}
-                    {...stylex.props(s.finance, s.purchaseControl)}
-                  >
-                    <span {...stylex.props(s.financeAmount)}>
-                      {t('from')}{' '}
-                      <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong> /{' '}
-                      {t('month')}
-                    </span>
-                    <span {...stylex.props(s.financeAction)}>
-                      {t('Financing ')}
-                      <Icon name="right" size={18} />
-                    </span>
-                  </button>
-                </>
-              )}
-              <div ref={actions} {...stylex.props(s.actions, summaryLayout && s.purchaseControl)}>
+              <Image
+                src={v.images[photoIndex]}
+                alt={v.make + ' ' + v.model}
+                fill
+                priority
+                sizes="(min-width: 1328px) 840px, (min-width: 1024px) calc(100vw - 488px), 100vw"
+                {...stylex.props(
+                  s.image,
+                  showroomPhotoHasLetterbox(v.images[photoIndex]) && s.letterboxedImage,
+                )}
+              />
+              <span {...stylex.props(s.counter)}>
+                <Icon name="photo" size={20} />
+                {photoIndex + 1} / {v.images.length}
+              </span>
+            </Link>
+            {v.images.length > 1 && (
+              <div {...stylex.props(vehicleDesktop.photoControls)}>
                 <button
                   type="button"
-                  aria-haspopup="dialog"
-                  onClick={() => setContact(true)}
-                  {...stylex.props(s.action)}
+                  aria-label={t('Previous photo')}
+                  onClick={() => changePhoto(-1)}
+                  {...stylex.props(vehicleDesktop.photoButton)}
                 >
-                  <span {...stylex.props(s.actionIcon)}>
-                    <Icon name="phone" size={18} />
-                  </span>
-                  {t('Contact')}
+                  <Icon name="back" />
                 </button>
-                <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
-                  <span {...stylex.props(s.actionIcon)}>
-                    <Icon name="mail" size={18} />
-                  </span>
-                  {t('Enquire')}
-                </Link>
+                <button
+                  type="button"
+                  aria-label={t('Next photo')}
+                  onClick={() => changePhoto(1)}
+                  {...stylex.props(vehicleDesktop.photoButton)}
+                >
+                  <Icon name="right" />
+                </button>
               </div>
-            </section>
+            )}
           </div>
-        }
-      />
+          {v.images.length > 1 && (
+            <div
+              role="group"
+              aria-label={t('Vehicle photos')}
+              {...stylex.props(vehicleDesktop.photoRail)}
+            >
+              {v.images.slice(0, 5).map((src, index) => (
+                <button
+                  key={src}
+                  type="button"
+                  aria-label={t('Photos') + ' ' + number(index + 1)}
+                  aria-pressed={index === photoIndex}
+                  onClick={() => setVehiclePhoto(v.id, index)}
+                  {...stylex.props(
+                    vehicleDesktop.thumbnail,
+                    index === photoIndex && vehicleDesktop.selectedThumbnail,
+                  )}
+                >
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="140px"
+                    loading="lazy"
+                    {...stylex.props(vehicleDesktop.thumbnailImage)}
+                  />
+                </button>
+              ))}
+              <Link
+                href={vehicleGalleryHref(v.id, section)}
+                {...stylex.props(vehicleDesktop.thumbnail, vehicleDesktop.photosLink)}
+              >
+                <Icon name="photo" />
+                <span>
+                  {t('Photos')} · {number(v.images.length)}
+                </span>
+              </Link>
+            </div>
+          )}
+        </div>
+        <DesktopVehicleSummary
+          vehicle={v}
+          leasing={leasing}
+          onPaymentChange={setPaymentOverride}
+          onFinance={() => setFinance(true)}
+          onLeaseDetails={() => setLeaseQuote(true)}
+          onPriceInfo={() => setPriceInfo(true)}
+          onContact={() => setContact(true)}
+        />
+        <div {...stylex.props(vehicleDesktop.content)}>
+          <VehicleSections
+            key={v.id}
+            vehicle={v}
+            showroomMode
+            mobileView={mobile}
+            onReport={() => setReport(true)}
+            onFinance={() => setFinance(true)}
+            mobileOverview={
+              <MobileVehicleSummary
+                vehicle={v}
+                actions={mobileActions}
+                onPriceInfo={() => setPriceInfo(true)}
+                onContact={() => setContact(true)}
+              />
+            }
+            overview={
+              <div
+                {...stylex.props(s.overview, summaryLayout && s.purchaseSummary, s.desktopOverview)}
+              >
+                <section {...stylex.props(s.info, summaryLayout ? s.purchaseInfo : s.leaseInfo)}>
+                  <h1 {...stylex.props(s.model)}>
+                    {v.make} {v.model}
+                  </h1>
+                  <p {...stylex.props(s.variant)}>{v.variant}</p>
+                </section>
+                {v.leaseTerms && (
+                  <div
+                    {...stylex.props(
+                      s.paymentTabs,
+                      summaryLayout && s.purchaseControl,
+                      summaryLayout && s.purchasePaymentTabs,
+                    )}
+                    role="group"
+                    aria-label={t('Payment type')}
+                  >
+                    <button
+                      type="button"
+                      aria-pressed={!leasing}
+                      onClick={() => setPaymentOverride('buy')}
+                      {...stylex.props(s.paymentTab, !leasing && s.selectedTab)}
+                    >
+                      {t('Buying')}
+                    </button>
+                    <button
+                      type="button"
+                      aria-pressed={leasing}
+                      onClick={() => setPaymentOverride('lease')}
+                      {...stylex.props(s.paymentTab, leasing && s.selectedTab)}
+                    >
+                      {t('Leasing')}
+                    </button>
+                  </div>
+                )}
+                <section
+                  aria-label={t('Vehicle price and contact')}
+                  {...stylex.props(s.offer, summaryLayout && s.purchaseOffer)}
+                >
+                  {leasing && v.leaseTerms ? (
+                    <>
+                      <div {...stylex.props(s.leasePrice, s.mobileLeasePrice)}>
+                        <div {...stylex.props(s.priceCluster)}>
+                          <strong data-vehicle-price {...stylex.props(s.price)}>
+                            {money(v.monthly || 0)}
+                          </strong>
+                          <span {...stylex.props(s.leaseCopy, s.mobileLeasePeriod)}>
+                            / {t('month')}
+                          </span>
+                        </div>
+                        <span {...stylex.props(s.leaseCopy, s.desktopLeasePeriod)}>
+                          {t('Monthly incl. VAT.')}
+                        </span>
+                      </div>
+                      <p {...stylex.props(s.leaseCopy, s.mobileLeaseNote)}>
+                        {v.leaseTerms.months} {t('months')} · {number(v.leaseTerms.annualMileage)}{' '}
+                        {t('km per year')} · {t(v.leaseTerms.customer)}
+                      </p>
+                      <button
+                        type="button"
+                        aria-label={t('Leasing details')}
+                        aria-haspopup="dialog"
+                        {...stylex.props(s.finance, summaryLayout && s.purchaseControl)}
+                        onClick={(event) => {
+                          event.currentTarget.focus({ preventScroll: true });
+                          setLeaseQuote(true);
+                        }}
+                      >
+                        {t('Leasing details')}
+                        <Icon name="right" size={18} />
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      {purchasePrice}
+                      {v.previousPrice && (
+                        <p {...stylex.props(s.oldRow, s.desktopPreviousPrice)}>
+                          <span {...stylex.props(s.old)}>{money(v.previousPrice)}</span>
+                          <span {...stylex.props(s.discount)}>
+                            -{money(v.previousPrice - v.price)}
+                          </span>
+                        </p>
+                      )}
+                      <p
+                        {...stylex.props(
+                          s.priceNote,
+                          v.priceNote === t('may include delivery costs') && s.mobileDeliveryNote,
+                        )}
+                      >
+                        {v.priceNote ||
+                          money(v.price / 1.19) +
+                            (locale === 'bg' ? ' без ДДС, 19% ДДС' : ' Net, 19.00% VAT')}
+                      </p>
+                      <button
+                        type="button"
+                        aria-label={
+                          t('Calculate Financing') +
+                          ': ' +
+                          t('From') +
+                          ' ' +
+                          money(financeMonthly) +
+                          t(' per month')
+                        }
+                        aria-haspopup="dialog"
+                        onClick={() => setFinance(true)}
+                        {...stylex.props(s.finance, s.purchaseControl)}
+                      >
+                        <span {...stylex.props(s.financeAmount)}>
+                          {t('from')}{' '}
+                          <strong {...stylex.props(s.financeValue)}>{money(financeMonthly)}</strong>{' '}
+                          / {t('month')}
+                        </span>
+                        <span {...stylex.props(s.financeAction)}>
+                          {t('Financing ')}
+                          <Icon name="right" size={18} />
+                        </span>
+                      </button>
+                    </>
+                  )}
+                  <div
+                    ref={actions}
+                    {...stylex.props(s.actions, summaryLayout && s.purchaseControl)}
+                  >
+                    <button
+                      type="button"
+                      aria-haspopup="dialog"
+                      onClick={() => setContact(true)}
+                      {...stylex.props(s.action)}
+                    >
+                      <span {...stylex.props(s.actionIcon)}>
+                        <Icon name="phone" size={18} />
+                      </span>
+                      {t('Contact')}
+                    </button>
+                    <Link href={'/contact?vehicle=' + v.id} {...stylex.props(s.action, s.enquire)}>
+                      <span {...stylex.props(s.actionIcon)}>
+                        <Icon name="mail" size={18} />
+                      </span>
+                      {t('Enquire')}
+                    </Link>
+                  </div>
+                </section>
+              </div>
+            }
+          />
+        </div>
+      </div>
       {(contactDock || (!mobile && section !== 'details')) && (
         <aside
           aria-label={t('Vehicle enquiry')}
@@ -747,9 +878,9 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
           <Link
             href={'/contact?vehicle=' + v.id}
             aria-label={t('Enquire about this car') + ': ' + v.make + ' ' + v.model}
-            {...stylex.props(s.action, s.enquire, s.dockAction)}
+            {...stylex.props(s.dockAction)}
           >
-            {t('Enquire')}
+            <span {...stylex.props(s.dockActionFace)}>{t('Enquire')}</span>
           </Link>
         </aside>
       )}

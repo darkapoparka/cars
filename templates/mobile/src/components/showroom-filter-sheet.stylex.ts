@@ -340,8 +340,6 @@ export const showroomFilterSheetStyles = stylex.create({
   },
   footerAction: { width: { default: '100%', '@media (min-width: 700px)': 240 } },
   footerButton: {
-    minHeight: 48,
-    paddingBlock: 10,
     borderRadius: controlShape.pill,
     fontSize: {
       default: 14,
