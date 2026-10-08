@@ -78,7 +78,13 @@ for (const width of [320, 390]) {
 			await page.getByRole('tab', { name: service.tab, exact: true }).click();
 			await page.getByRole('button', { name: service.trigger, exact: true }).click();
 			const dialog = page.getByRole('dialog', { name: service.dialog, exact: true });
-			await expect(dialog.getByRole('textbox').first()).toBeVisible();
+			if (service.link === 'Import') {
+				await expect(
+					dialog.getByRole('button', { name: 'Make: Select make', exact: true })
+				).toBeVisible();
+			} else {
+				await expect(dialog.getByRole('textbox').first()).toBeVisible();
+			}
 			await dialog.getByRole('button', { name: 'Close', exact: true }).click();
 			await expect(dialog).not.toBeVisible();
 			await expect(navigation).toBeVisible();

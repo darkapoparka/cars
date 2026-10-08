@@ -1,0 +1,60 @@
+{
+  "createdAt": "2026-10-08T07:26:21.383Z",
+  "css": [
+    {
+      "file": "src/lib/components/layout/PublicHeader.svelte",
+      "styleBlocksUnchanged": true
+    },
+    {
+      "file": "src/lib/components/layout/MobileNavigationMenu.svelte",
+      "styleBlocksUnchanged": true
+    },
+    {
+      "file": "src/lib/components/common/MobileMenuAction.svelte",
+      "styleBlocksUnchanged": true
+    },
+    {
+      "file": "src/lib/components/inventory/InventoryPage.svelte",
+      "styleBlocksUnchanged": true
+    }
+  ],
+  "changedSinceBuild": [
+    "src/lib/components/home/HomeFiveHero.svelte",
+    "src/lib/components/inventory/InventoryMobilePage.svelte",
+    "src/lib/components/services/ImportBrowseControls.svelte",
+    "src/lib/styles/tokens.css",
+    "tests/account-hydration.e2e.ts"
+  ],
+  "comparisons": [
+    {
+      "beforeName": "before-home-1440.jpg",
+      "afterName": "after-home-1440.jpg",
+      "dimensionsMatch": true,
+      "width": 1425,
+      "height": 990,
+      "threshold": 10,
+      "changedPixels": 323,
+      "changedPercent": 0.022895622895622896
+    },
+    {
+      "beforeName": "before-home-390.jpg",
+      "afterName": "after-home-390.jpg",
+      "dimensionsMatch": true,
+      "width": 390,
+      "height": 844,
+      "threshold": 10,
+      "changedPixels": 0,
+      "changedPercent": 0
+    },
+    {
+      "beforeName": "before-home-390.jpg",
+      "afterName": "production-home-390.jpg",
+      "dimensionsMatch": true,
+      "width": 390,
+      "height": 844,
+      "threshold": 10,
+      "changedPixels": 4739,
+      "changedPercent": 1.4397253615263095
+    }
+  ]
+}

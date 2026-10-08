@@ -267,7 +267,7 @@
 	.mobile-service-entry__help {
 		display: flex;
 		width: auto;
-		min-height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-chip);
 		align-items: center;
 		gap: var(--bc-space-2);
 		margin: 0;
@@ -278,10 +278,10 @@
 		background-clip: padding-box;
 		box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
 		color: var(--bc-white);
-		font-size: var(--bc-text-cta);
+		font-size: var(--bc-text-control);
 		font-weight: var(--bc-weight-control);
 		cursor: pointer;
-		line-height: var(--bc-leading-cta);
+		line-height: var(--bc-leading-control);
 	}
 	.mobile-service-entry__browse {
 		position: relative;
@@ -289,7 +289,7 @@
 		flex: 1;
 		margin-top: -20px;
 		border-radius: 24px 24px 0 0;
-		padding: var(--bc-space-5) var(--bc-mobile-gutter) var(--bc-space-6);
+		padding: var(--bc-mobile-browse-top-inset) var(--bc-mobile-gutter) var(--bc-space-6);
 		background: var(--bc-bg-strong);
 		box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.14);
 	}

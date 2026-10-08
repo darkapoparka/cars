@@ -105,18 +105,21 @@ for (const locale of ['bg', 'en']) {
 					true
 				);
 				if (!['services', 'about', 'contact'].includes(route)) continue;
-				const underline = await page.locator('.site-nav-item.active > a').evaluate((node) => {
-					const style = getComputedStyle(node, '::after');
+				const selection = await page.locator('.site-nav-item.active > a').evaluate((node) => {
+					const style = getComputedStyle(node);
+					const inactive = document.querySelector('.site-nav-item:not(.active) > a')!;
 					return {
-						width: parseFloat(style.width),
-						link: node.getBoundingClientRect().width,
-						left: style.left,
-						right: style.right
+						underline: getComputedStyle(node, '::after').display,
+						background: style.backgroundColor,
+						inactiveBackground: getComputedStyle(inactive).backgroundColor,
+						radius: parseFloat(style.borderRadius),
+						height: node.getBoundingClientRect().height
 					};
 				});
-				expect(underline.width).toBeCloseTo(underline.link, 1);
-				expect(underline.left).toBe('0px');
-				expect(underline.right).toBe('0px');
+				expect(selection.underline).toBe('none');
+				expect(selection.background).not.toBe(selection.inactiveBackground);
+				expect(selection.radius).toBeGreaterThan(0);
+				expect(selection.height).toBeGreaterThanOrEqual(44);
 			}
 		}
 	});

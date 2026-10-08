@@ -124,6 +124,28 @@
 		font-size: var(--bc-text-body-lg);
 	}
 	@media (min-width: 768px) {
+		.site-nav-item > a {
+			padding-inline: var(--bc-space-2);
+			margin-inline: calc(-1 * var(--bc-space-2));
+			border-radius: var(--bc-radius-pill);
+		}
+		.site-nav-item > a:hover {
+			background: var(--bc-control-hover);
+		}
+		.site-nav-item.active > a {
+			background: var(--bc-control-selected-surface);
+			box-shadow: inset 0 0 0 1px var(--bc-border);
+		}
+		.site-nav-item.active > a:hover {
+			background: var(--bc-control-selected-hover);
+		}
+		.site-nav-item.active > a::after {
+			display: none;
+		}
+		.site-nav-item > a:focus-visible {
+			outline: 2px solid var(--bc-focus);
+			outline-offset: 3px;
+		}
 		nav a:hover,
 		:global(.site-nav-toggle:hover) {
 			background: var(--bc-control-hover);

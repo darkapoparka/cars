@@ -28,11 +28,17 @@ for (const width of [320, 390]) {
 			await wizard
 				.locator('[id^="import-wizard-vehicle-"]')
 				.fill('https://example.invalid/mobile-qa');
+			await wizard.getByRole('button', { name: /^Purchase market:/ }).click();
 			await wizard.getByRole('button', { name: 'Germany', exact: true }).click();
+			await expect(
+				wizard.getByRole('button', { name: 'Purchase market: Germany', exact: true })
+			).toBeVisible();
 			await wizard.getByRole('button', { name: 'Continue', exact: true }).click();
 			await stableSheet(page, '.bc-import-wizard__header', 'Continue');
 			await wizard.locator('[id^="import-wizard-budget-"]').fill('30000');
+			await wizard.getByRole('button', { name: /^Fuel:/ }).click();
 			await wizard.getByRole('button', { name: 'Hybrid', exact: true }).click();
+			await expect(wizard.getByRole('button', { name: 'Fuel: Hybrid', exact: true })).toBeVisible();
 			await wizard.getByRole('button', { name: 'Automatic', exact: true }).click();
 			await wizard.getByRole('button', { name: 'Continue', exact: true }).click();
 			await expect(wizard.getByLabel('Name *', { exact: true })).toHaveAccessibleName('Name *');

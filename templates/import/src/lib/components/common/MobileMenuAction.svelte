@@ -7,6 +7,7 @@
 		icon: Icon,
 		variant = 'row',
 		active = false,
+		target,
 		onclick
 	}: {
 		href: string;
@@ -14,6 +15,7 @@
 		icon: Component<{ size?: number; strokeWidth?: number }>;
 		variant?: 'row' | 'primary' | 'secondary';
 		active?: boolean;
+		target?: '_blank';
 		onclick?: (event: MouseEvent) => void;
 	} = $props();
 </script>
@@ -22,6 +24,8 @@
 	class={`bc-mobile-menu-action bc-mobile-menu-action--${variant}`}
 	class:active
 	{href}
+	{target}
+	rel={target === '_blank' ? 'noopener noreferrer' : undefined}
 	aria-current={active ? 'page' : undefined}
 	{onclick}
 >

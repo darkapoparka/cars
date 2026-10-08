@@ -12,11 +12,11 @@ The customer mobile Profile now composes shared form fields and Actions rather t
 
 The before images show the rejected previous presentation on the active server, captured before this correction. Main comparisons use the in-app Browser at 390×844; supplementary mobile checks use 320×568. The desktop Profile was inspected at 1440×1000, with the legacy form visible and the mobile form hidden. Full-page captures include the browser's fixed navigation overlay; the lower viewport capture is provided for reviewing all three disclosure rows and the save action.
 
-| Page | Before | After |
-| --- | --- | --- |
-| Contact | [390px](before/contact-390.jpg) | [390px](after/contact-390.jpg) |
+| Page     | Before                           | After                           |
+| -------- | -------------------------------- | ------------------------------- |
+| Contact  | [390px](before/contact-390.jpg)  | [390px](after/contact-390.jpg)  |
 | Services | [390px](before/services-390.jpg) | [390px](after/services-390.jpg) |
-| Profile | [390px](before/profile-390.jpg) | [390px](after/profile-390.jpg) |
+| Profile  | [390px](before/profile-390.jpg)  | [390px](after/profile-390.jpg)  |
 
 See [Profile lower view](after/profile-bottom-390.jpg) and [large-font stress evidence](after/large-font/).
 

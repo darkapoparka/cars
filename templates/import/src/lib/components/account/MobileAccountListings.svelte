@@ -174,14 +174,15 @@
 	.mobile-account-listings__toolbar select {
 		width: auto;
 		max-width: 100%;
-		min-height: var(--bc-control-height-standard);
+		height: var(--bc-control-height-chip);
+		min-height: var(--bc-control-height-chip);
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-pill);
-		padding: var(--bc-space-2) var(--bc-space-7) var(--bc-space-2) var(--bc-space-3);
+		padding: 0 var(--bc-space-7) 0 var(--bc-space-3);
 		appearance: none;
 		background: var(--bc-white);
 		color: var(--bc-ink);
-		font: var(--bc-weight-body) var(--bc-mobile-label)/1.4 var(--bc-font-body);
+		font: var(--bc-weight-body) var(--bc-text-control)/var(--bc-leading-control) var(--bc-font-body);
 	}
 	.mobile-account-listings__sort {
 		position: relative;
@@ -256,15 +257,22 @@
 	}
 	.mobile-account-car__actions {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		gap: var(--bc-space-2);
 		margin-top: var(--bc-space-3);
 	}
 	.mobile-account-car__actions :global(.site-action) {
-		min-height: var(--bc-control-height-standard);
-		padding: var(--bc-space-2) var(--bc-space-3);
-		font-size: var(--bc-mobile-label);
-		white-space: normal;
+		display: block;
+		min-width: 0;
+		max-width: 100%;
+		height: var(--bc-control-height-chip);
+		min-height: var(--bc-control-height-chip);
+		padding: 0 var(--bc-space-3);
+		font-size: var(--bc-text-control);
+		line-height: calc(var(--bc-control-height-chip) - 2px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.mobile-account-listings__empty {
 		padding-block: var(--bc-space-6);

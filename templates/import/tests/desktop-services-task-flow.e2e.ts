@@ -68,7 +68,7 @@ for (const locale of ['bg', 'en']) {
 			await finder.locator('.service-entry-row input').press('Enter');
 			const dialog = page.getByRole('dialog');
 			await expect(dialog.locator('[name=reference]')).toHaveValue(reference);
-			await expect(dialog.locator('[name=name]')).toBeFocused();
+			await expect(dialog).toBeFocused();
 			await dialog.locator('[name=name]').fill('Synthetic Service QA');
 			await dialog.locator('[name=phone]').fill('+359000000000');
 			await page.keyboard.press('Escape');
@@ -113,18 +113,14 @@ for (const locale of ['bg', 'en']) {
 		await expect(finder.getByRole('alert')).toBeVisible();
 		await finder.locator('.service-entry-row input').fill('WBA12345678901234');
 		await finder.locator('[data-service-next]').click();
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/sell-your-car` &&
-				url.searchParams.get('vin') === 'WBA12345678901234'
-		);
+		await expect(page).toHaveURL(`/${locale}/services?service=selling`);
+		await expect(page.getByRole('dialog')).toBeVisible();
 		await expect(page.locator('#sell-flow-vin:visible')).toHaveValue('WBA12345678901234');
 		await visit(page, `/${locale}/services?service=selling`);
 		await finder.locator('.service-utility a').click();
-		await expect(page.locator('#desktop-sell-mode-manual')).toHaveAttribute(
-			'aria-selected',
-			'true'
-		);
+		await expect(page.getByRole('dialog')).toBeVisible();
+		await expect(page).toHaveURL(`/${locale}/services?service=selling`);
+		await expect(page.locator('#dialog-sell-mode-manual')).toHaveAttribute('aria-selected', 'true');
 		await expect(page.locator('#sell-flow-model:visible')).toBeVisible();
 	});
 }

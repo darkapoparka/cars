@@ -242,6 +242,14 @@
 		.finance-estimator {
 			gap: var(--bc-space-4);
 		}
+		.site-field input,
+		.site-field select {
+			height: var(--bc-control-height-chip);
+			min-height: var(--bc-control-height-chip);
+			padding-block: 0;
+			font-size: var(--bc-text-control);
+			line-height: var(--bc-leading-control);
+		}
 		.finance-estimator > h2 {
 			order: -2;
 			font-size: var(--bc-text-h4);
@@ -271,11 +279,12 @@
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			gap: var(--bc-space-3);
 		}
+		.site-field {
+			grid-row: span 2;
+			grid-template-rows: subgrid;
+		}
 		.site-fields > label:nth-child(-n + 2) {
 			grid-column: 1 / -1;
-		}
-		.site-fields > label:nth-child(n + 3) > span {
-			min-height: 2.5em;
 		}
 	}
 </style>

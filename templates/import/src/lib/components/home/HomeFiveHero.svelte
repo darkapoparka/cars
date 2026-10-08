@@ -26,6 +26,7 @@
 	import InventoryAdvancedFilters from '$lib/components/inventory/InventoryAdvancedFilters.svelte';
 	import InventoryMobilePage from '$lib/components/inventory/InventoryMobilePage.svelte';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import MobileModeTabs from '$lib/components/common/MobileModeTabs.svelte';
 	import MobileSearchControl from '$lib/components/common/MobileSearchControl.svelte';
 	import HeroFilterDialog from './HeroFilterDialog.svelte';
 
@@ -122,11 +123,8 @@
 	const mobileActionTabs = $derived.by(() =>
 		(hero?.actions ?? []).filter((action) => action.mode !== 'sell')
 	);
-	const mobileTabIndex = $derived(
-		Math.max(
-			0,
-			mobileActionTabs.findIndex((tab) => tab.mode === mobileMode)
-		)
+	const mobileModeOptions = $derived(
+		mobileActionTabs.map((tab) => ({ value: tab.mode, label: tab.label }))
 	);
 	const mobileQuickFilters = $derived(
 		isEnglish
@@ -197,6 +195,7 @@
 	let mobileSearchTrigger: HTMLElement | null = null;
 	const mobileSearchHistoryId = `daynight-home-search-${Math.random().toString(36).slice(2)}`;
 	let inventorySearchOpen = $state(false);
+	let inventoryOverlayMode = $state<'search' | 'filters'>('search');
 	let desktopSearchOpen = $state(false);
 	const openDesktopSearch = () => {
 		inventorySearchTrigger =
@@ -213,10 +212,18 @@
 		if (mobileMode === 'buy' && hero?.inventorySearch) {
 			inventorySearchTrigger =
 				document.activeElement instanceof HTMLElement ? document.activeElement : null;
+			inventoryOverlayMode = 'search';
 			inventorySearchOpen = true;
 			return;
 		}
 		mobileSearchOpen = true;
+	};
+	const openMobileFilters = () => {
+		if (!hero?.inventorySearch) return openMobileSearch();
+		inventorySearchTrigger =
+			document.activeElement instanceof HTMLElement ? document.activeElement : null;
+		inventoryOverlayMode = 'filters';
+		inventorySearchOpen = true;
 	};
 	const closeMobileSearch = () => {
 		mobileSearchOpen = false;
@@ -414,7 +421,8 @@
 		mobile={hero.inventorySearch.mobile}
 		copy={hero.inventorySearch.copy}
 		filtersOnly
-		filterDrawerOpen={true}
+		initialOverlay={inventoryOverlayMode}
+		filterDrawerOpen={inventoryOverlayMode === 'filters'}
 		onclose={closeInventorySearch}
 	/>
 {/if}
@@ -427,24 +435,14 @@
 				</div>
 
 				<div class="daynight-mobile-hero__search-module">
-					<div
+					<MobileModeTabs
 						class="daynight-mobile-hero__tabs"
-						style:--daynight-tab-index={mobileTabIndex}
-						aria-label={hero.heading}
-						role="tablist"
-					>
-						{#each mobileActionTabs as tab (tab.mode)}
-							<button
-								type="button"
-								role="tab"
-								class={`daynight-mobile-hero__tab daynight-mobile-hero__tab--${tab.mode} ${tab.mode === mobileMode ? 'active' : ''}`}
-								aria-selected={tab.mode === mobileMode}
-								onclick={() => selectMobileMode(tab.mode)}
-							>
-								{tab.label}
-							</button>
-						{/each}
-					</div>
+						value={mobileMode}
+						options={mobileModeOptions}
+						label={hero.heading}
+						idPrefix="home-mobile-mode"
+						onchange={(value) => selectMobileMode(value as HomeFiveHeroActionMode)}
+					/>
 
 					<MobileSearchControl
 						mode="trigger"
@@ -619,7 +617,7 @@
 							aria-haspopup="dialog"
 							aria-expanded={mobileSearchOpen || inventorySearchOpen}
 							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
-							onclick={openMobileSearch}
+							onclick={openMobileFilters}
 						>
 							<SlidersHorizontal size={18} strokeWidth={2.2} aria-hidden="true" />
 						</button>
@@ -1493,65 +1491,6 @@
 			padding: 0;
 		}
 
-		/* Buying and importing are the two discovery modes. Selling remains available
-		   in the persistent bottom navigation instead of being duplicated here. */
-		.daynight-mobile-hero__tabs {
-			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
-			gap: 0;
-			min-height: 0;
-			border: 0;
-			border-bottom: 1px solid rgb(255 255 255 / 0.2);
-			border-radius: 0;
-			background: transparent;
-			box-shadow: none;
-			padding: 0;
-		}
-
-		.daynight-mobile-hero__tabs button {
-			position: relative;
-			display: flex;
-			min-height: 44px;
-			width: 100%;
-			align-items: flex-end;
-			justify-content: center;
-			padding: 0 0 6px;
-			border: 0;
-			border-radius: 0;
-			background: transparent;
-			color: rgb(255 255 255 / 0.72);
-			font-family: var(--bc-font-body);
-			font-size: var(--bc-text-mode-tab);
-			font-weight: var(--bc-weight-control);
-			letter-spacing: 0;
-			line-height: 24px;
-			text-align: center;
-			text-decoration: none;
-			cursor: pointer;
-			user-select: none;
-			-webkit-user-select: none;
-		}
-
-		.daynight-mobile-hero__tab.active {
-			background: transparent;
-			box-shadow: none;
-			color: var(--bc-white);
-			font-weight: var(--bc-weight-control);
-		}
-
-		.daynight-mobile-hero__tab.active::after {
-			position: absolute;
-			inset: auto 0 -1px;
-			height: 2px;
-			background: var(--bc-white);
-			content: '';
-		}
-
-		.daynight-mobile-hero__tab:focus-visible {
-			outline: 2px solid rgb(255 255 255 / 0.72);
-			outline-offset: -3px;
-		}
-
 		/* No press-move on mobile: tapping must not nudge the search bar, CTAs or chips. */
 
 		.bc-drawer {
@@ -1573,7 +1512,7 @@
 
 		.daynight-mobile-hero__all {
 			display: inline-flex;
-			min-height: var(--bc-control-height-standard);
+			min-height: var(--bc-control-height-chip);
 			min-width: 0;
 			max-width: 100%;
 			align-items: center;
@@ -1586,9 +1525,9 @@
 			box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.14);
 			padding: 0 12px;
 			color: var(--bc-accent-contrast) !important;
-			font-size: var(--bc-text-cta);
+			font-size: var(--bc-text-control);
 			font-weight: var(--bc-weight-control);
-			line-height: var(--bc-leading-cta);
+			line-height: var(--bc-leading-control);
 			text-decoration: none;
 		}
 
@@ -1804,6 +1743,7 @@
 		   below; the keyboard opens beneath the input and never fights the panel. Appears
 		   instantly (no slide). The authored inner markup keeps normal scoped styles. */
 		.daynight-home-search-overlay {
+			--bc-control-height-standard: var(--bc-control-height-chip);
 			position: fixed;
 			inset: 0;
 			z-index: 1300;
@@ -1875,7 +1815,7 @@
 
 		.daynight-home-search-drawer__field {
 			display: flex;
-			min-height: 46px;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			gap: 10px;
 			border-radius: 999px;
@@ -1887,7 +1827,7 @@
 		.daynight-home-search-drawer__field input {
 			min-width: 0;
 			width: 100%;
-			height: 44px;
+			height: calc(var(--bc-control-height-standard) - 2px);
 			flex: 1 1 auto;
 			border: 0 !important;
 			border-radius: 0 !important;
@@ -1955,7 +1895,7 @@
 
 		.daynight-home-search-drawer__group a {
 			display: inline-flex;
-			min-height: 44px;
+			min-height: var(--bc-control-height-chip);
 			align-items: center;
 			border-radius: 8px;
 			background: var(--bc-white);
@@ -2063,26 +2003,16 @@
 			z-index: 2;
 			background: var(--bc-bg-strong);
 			margin: -20px 0 0;
-			padding: 26px 0 9px;
+			padding: var(--bc-mobile-browse-top-inset) 0 9px;
 			border: 0;
 			border-radius: 24px 24px 0 0;
 			box-shadow: 0 -1px 0 rgb(255 255 255 / 0.14);
 			overflow: hidden;
 		}
 
-		.daynight-mobile-home-quick::before {
-			position: absolute;
-			top: 9px;
-			left: 50%;
-			width: 38px;
-			height: 4px;
-			border-radius: var(--bc-radius-pill);
-			background: #c3cad2;
-			content: '';
-			transform: translateX(-50%);
-		}
-
 		.daynight-mobile-home-quick__scroller {
+			--bc-text-filter: var(--bc-text-quick-pill);
+			--bc-leading-filter: var(--bc-leading-quick-pill);
 			display: flex;
 			gap: 8px;
 			width: calc(100% + 24px);
@@ -2101,7 +2031,7 @@
 		.daynight-mobile-home-quick__scroller button {
 			display: inline-flex;
 			min-width: max-content;
-			min-height: var(--bc-control-height-standard);
+			min-height: var(--bc-control-height-chip);
 			align-items: center;
 			justify-content: center;
 			gap: 8px;
@@ -2121,8 +2051,8 @@
 		}
 
 		.daynight-mobile-home-quick__scroller .daynight-mobile-home-quick__filter {
-			width: var(--bc-control-height-standard);
-			min-width: var(--bc-control-height-standard);
+			width: var(--bc-control-height-chip);
+			min-width: var(--bc-control-height-chip);
 			padding: 0;
 		}
 

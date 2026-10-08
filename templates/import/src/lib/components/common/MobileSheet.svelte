@@ -116,6 +116,10 @@
 	<Drawer.Content
 		bind:ref={contentElement}
 		tabindex={-1}
+		onOpenAutoFocus={(event) => {
+			event.preventDefault();
+			contentElement?.focus({ preventScroll: true });
+		}}
 		class={`bc-mobile-sheet__content bc-mobile-sheet__content--${mode} ${contentClass}`.trim()}
 	>
 		{#if showHandle}<Drawer.Handle class="bc-mobile-sheet__handle" />{/if}
@@ -154,6 +158,7 @@
 	}
 
 	:global(.bc-mobile-sheet__content) {
+		--bc-control-height-standard: var(--bc-control-height-chip);
 		position: fixed;
 		right: 0;
 		bottom: var(--bc-kb-inset, 0px);

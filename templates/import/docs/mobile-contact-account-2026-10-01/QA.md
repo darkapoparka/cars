@@ -12,12 +12,12 @@ The account navigation fits all four links at 320px. Stat labels have the full c
 
 Normal mobile captures use the in-app Browser on the owner's existing server at port 6790. Main comparison views use 390×844; supplementary views use 320×568. Desktop was inspected at 1440×1000.
 
-| Page | Before | After |
-| --- | --- | --- |
-| Contact | [390px](before/contact-390.jpg) | [390px](after/contact-390.jpg) |
-| Services | [390px](before/services-390.jpg) | [390px](after/services-390.jpg) |
-| Account overview | [390px](before/account-390.jpg) | [390px](after/account-390.jpg) |
-| Profile | [390px](before/profile-390.jpg) | [390px](after/profile-390.jpg) |
+| Page             | Before                           | After                           |
+| ---------------- | -------------------------------- | ------------------------------- |
+| Contact          | [390px](before/contact-390.jpg)  | [390px](after/contact-390.jpg)  |
+| Services         | [390px](before/services-390.jpg) | [390px](after/services-390.jpg) |
+| Account overview | [390px](before/account-390.jpg)  | [390px](after/account-390.jpg)  |
+| Profile          | [390px](before/profile-390.jpg)  | [390px](after/profile-390.jpg)  |
 
 The isolated production tests also capture [large-font evidence](after/large-font/). The `before/large-font-regression/` images record the button-clipping issue found during this pass, before its final fix; they are not the original template baseline.
 

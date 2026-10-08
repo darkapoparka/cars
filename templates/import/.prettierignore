@@ -34,3 +34,14 @@ tmp-vite*.log
 # Local QA snapshots and Claude tooling config (not project source)
 /.claude/
 inv-snap*.md
+
+# Cars owns this canonical script; repository tests require identical template copies.
+/scripts/public-asset-retention.mjs
+
+# Generated browser measurements and reports; authored Markdown stays checked.
+/docs/**/*.json
+/docs/**/e2e-output/
+/docs/**/playwright-report/
+
+# Archived rendered previews retain their original markup.
+/docs/**/index.html

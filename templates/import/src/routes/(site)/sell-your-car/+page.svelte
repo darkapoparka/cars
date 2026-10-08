@@ -73,6 +73,7 @@
 	<div class="site-mobile-only">
 		<h1 class="sr-only">{title}</h1>
 		<SellYourCarMobilePage
+			intakeOptions={data.intakeOptions}
 			copy={data.mobileCopy}
 			form={data.form}
 			steps={data.mobileSteps}

@@ -300,11 +300,15 @@ for (const locale of ['en', 'bg']) {
 for (const width of [320, 390]) {
 	test(`account navigation and Messages remain usable at ${width}x568`, async ({ page }) => {
 		await page.setViewportSize({ width, height: 568 });
-		await visit(page, '/account?lang=en');
+		await visit(page, '/account/listings?lang=en');
 		const links = page.getByRole('navigation', { name: 'Account pages', exact: true });
 		await links.getByRole('link', { name: 'Profile', exact: true }).click();
 		await expect(page).toHaveURL(/\/account\/profile\?lang=en$/);
 		await expect(page.getByRole('heading', { level: 1, name: 'Your profile' })).toBeVisible();
+		await expect(links.getByRole('link', { name: 'Profile', exact: true })).toHaveAttribute(
+			'aria-current',
+			'page'
+		);
 		await expect(page.locator('#dashboardToggleBtn')).not.toBeVisible();
 		const profileMap = page.locator('[data-mobile-profile-form] iframe');
 		const mapAddress = new URL((await profileMap.getAttribute('src'))!).searchParams.get('q');
@@ -315,6 +319,10 @@ for (const width of [320, 390]) {
 			.getByRole('link', { name: 'Cars', exact: true })
 			.click();
 		await expect(page).toHaveURL(/\/account\/listings\?lang=en$/);
+		await expect(links.getByRole('link', { name: 'Cars', exact: true })).toHaveAttribute(
+			'aria-current',
+			'page'
+		);
 		expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(
 			true
 		);
@@ -324,6 +332,10 @@ for (const width of [320, 390]) {
 			.click();
 		const composer = page.getByRole('textbox', { name: 'Write a message', exact: true });
 		await expect(composer).toBeInViewport();
+		await expect(links.getByRole('link', { name: 'Messages', exact: true })).toHaveAttribute(
+			'aria-current',
+			'page'
+		);
 		await expect(
 			page.getByText('Demo conversation · messages are not delivered', { exact: true })
 		).toBeVisible();
@@ -332,8 +344,11 @@ for (const width of [320, 390]) {
 		await expect(page.getByText('Synthetic preview message', { exact: true })).toBeInViewport();
 		await expect(composer).toBeEmpty();
 		await expect(page.locator('.mobile-bottom-nav svg path')).not.toHaveCount(0);
-		await page.getByRole('link', { name: 'Your account', exact: true }).click();
-		await expect(page).toHaveURL(/\/account\?lang=en$/);
+		await page.route('https://cars-admin-blue.vercel.app/**', (route) =>
+			route.fulfill({ contentType: 'text/html', body: '<title>Shared admin destination</title>' })
+		);
+		await links.getByRole('link', { name: 'Overview', exact: true }).click();
+		await expect(page).toHaveURL('https://cars-admin-blue.vercel.app/');
 	});
 }
 
@@ -352,7 +367,7 @@ test('account forms hydrate their mobile menu and preserve keyboard focus', asyn
 	}
 });
 
-for (const route of ['/account', '/account/listings', '/account/messages']) {
+for (const route of ['/account/profile', '/account/listings', '/account/messages']) {
 	test(`account language preferences open from the menu and restore focus: ${route}`, async ({
 		page
 	}) => {

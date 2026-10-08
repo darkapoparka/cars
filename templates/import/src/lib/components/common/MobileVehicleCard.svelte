@@ -61,14 +61,6 @@
 			/>
 		{/if}
 		{#if card.tag}<span class="mobile-vehicle-card__tag">{card.tag}</span>{/if}
-		{#if variant === 'import'}
-			<span class="mobile-vehicle-card__mileage" title={card.mileageLabel}>
-				<Gauge size={12} strokeWidth={1.8} aria-hidden="true" /><span aria-hidden="true"
-					>{mileage}</span
-				>
-				<span class="sr-only">{locale === 'en' ? 'Mileage: ' : 'Пробег: '}{card.mileageLabel}</span>
-			</span>
-		{/if}
 	</div>
 	<div class="mobile-vehicle-card__body">
 		{#if !card.title.toLocaleLowerCase().startsWith(card.brand.toLocaleLowerCase())}<p
@@ -105,6 +97,14 @@
 					aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
 				>
 					<span>{mileage}</span>
+				</li>
+			{:else}
+				<li
+					class="mobile-vehicle-card__mileage"
+					title={card.mileageLabel}
+					aria-label={(locale === 'en' ? 'Mileage: ' : 'Пробег: ') + card.mileageLabel}
+				>
+					<Gauge size={13} strokeWidth={1.8} aria-hidden="true" /><span>{mileage}</span>
 				</li>
 			{/if}
 		</ul>
@@ -143,8 +143,7 @@
 		height: 100%;
 		object-fit: cover;
 	}
-	.mobile-vehicle-card__tag,
-	.mobile-vehicle-card__mileage {
+	.mobile-vehicle-card__tag {
 		position: absolute;
 		left: 8px;
 		max-width: calc(100% - 16px);
@@ -161,19 +160,9 @@
 	}
 	.mobile-vehicle-card__tag {
 		top: 8px;
-	}
-	.mobile-vehicle-card__mileage {
-		bottom: 8px;
-		font-size: var(--bc-mobile-stat);
-		line-height: 1.3334;
-		font-variant-numeric: tabular-nums;
-	}
-	.mobile-vehicle-card__mileage span {
-		min-width: 0;
-		overflow-wrap: anywhere;
-	}
-	.mobile-vehicle-card__mileage :global(svg) {
-		flex: 0 0 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.mobile-vehicle-card__placeholder {
 		position: absolute;
@@ -232,7 +221,11 @@
 		font-weight: var(--bc-weight-emphasis);
 		line-height: 1.2;
 		font-variant-numeric: tabular-nums;
-		overflow-wrap: anywhere;
+		min-width: 0;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	small {
 		color: var(--bc-muted);
@@ -266,16 +259,18 @@
 	}
 	li span {
 		min-width: 0;
-		overflow-wrap: anywhere;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.mobile-vehicle-card__transmission,
-	.mobile-vehicle-card__distance {
+	.mobile-vehicle-card__distance,
+	.mobile-vehicle-card__mileage {
 		justify-content: center;
 		font-variant-numeric: tabular-nums;
 	}
 	.mobile-vehicle-card--import ul {
-		grid-template-columns: minmax(0, 1fr);
-		justify-items: start;
+		grid-template-columns: max-content minmax(0, 1fr);
 	}
 	@media (hover: none) and (pointer: coarse) {
 		.mobile-vehicle-card:active {

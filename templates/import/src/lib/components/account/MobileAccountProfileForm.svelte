@@ -271,6 +271,14 @@
 		font-size: var(--bc-mobile-body);
 		line-height: 1.4;
 	}
+	.mobile-profile-form input:not([type='hidden']),
+	.mobile-profile-form select {
+		height: var(--bc-control-height-chip);
+		min-height: var(--bc-control-height-chip);
+		padding-block: 0;
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-leading-control);
+	}
 	.site-field > span {
 		color: var(--bc-copy);
 		font-size: var(--bc-mobile-label);

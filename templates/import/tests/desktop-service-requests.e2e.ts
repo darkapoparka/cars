@@ -21,7 +21,7 @@ for (const locale of ['bg', 'en'] as const) {
 			await page.keyboard.press('Enter');
 			const dialog = page.getByRole('dialog', { name: dialogs[locale][index], exact: true });
 			await expect(dialog).toBeVisible();
-			await expect(dialog.locator('input, textarea').first()).toBeFocused();
+			await expect(dialog).toBeFocused();
 			expect(page.url()).toBe(url);
 			const accessibility = await new AxeBuilder({ page })
 				.withTags(['wcag2a', 'wcag2aa', 'wcag21aa'])
@@ -48,7 +48,7 @@ for (const locale of ['bg', 'en'] as const) {
 			await opener.click();
 			await expect(page.getByRole('dialog')).toBeVisible();
 			await expect(page.getByRole('dialog').locator('[name="reference"]')).toHaveValue(reference);
-			await expect(page.getByRole('dialog').locator('[name="name"]')).toBeFocused();
+			await expect(page.getByRole('dialog')).toBeFocused();
 			await page.mouse.click(10, 10);
 			await expect(page.getByRole('dialog')).not.toBeVisible();
 			await expect(opener).toBeFocused();
@@ -60,15 +60,14 @@ for (const locale of ['bg', 'en'] as const) {
 			.locator('.desktop-import-entry [name="vehicle"]')
 			.fill('https://example.com/car/123');
 		await finder.locator('[data-intake-next]').click();
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/import` &&
-				url.searchParams.get('vehicle') === 'https://example.com/car/123'
-		);
-		await expect(page.locator('.service-intake .bc-import-wizard')).toBeVisible();
+		await expect(page).toHaveURL(url);
+		await expect(page.getByRole('dialog')).toBeVisible();
+		await expect(page.locator('.desktop-import-request .bc-import-wizard')).toBeVisible();
 		await visit(page, `/${locale}/services`);
 		await page.locator('[data-service="selling"] > a').click();
-		await expect(page).toHaveURL(new RegExp(`/${locale}/sell-your-car$`));
+		await expect(page).toHaveURL(url);
+		await expect(page.getByRole('dialog')).toBeVisible();
+		await expect(page.locator('.desktop-sell-request .sell-flow')).toBeVisible();
 	});
 
 	test(`all three desktop requests save their service context through the demo API in ${locale}`, async ({

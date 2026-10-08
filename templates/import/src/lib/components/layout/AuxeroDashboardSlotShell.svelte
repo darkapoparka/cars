@@ -2,7 +2,7 @@
 	import type { Snippet } from 'svelte';
 	import { page } from '$app/state';
 	import { routeParts } from '$lib/locale/core';
-	import { linkHref } from '$lib/utils/links';
+	import AccountMobileNavigation from '$lib/components/account/AccountMobileNavigation.svelte';
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
 	import MobileBottomNav from './MobileBottomNav.svelte';
 	import type { AuxeroPageDocument } from '$lib/auxero/page-document';
@@ -45,12 +45,6 @@
 			return english ? 'Your car' : 'Твоят автомобил';
 		return english ? 'Your account' : 'Твоят профил';
 	});
-	const accountLinks = $derived([
-		{ href: '/account', label: english ? 'Overview' : 'Табло' },
-		{ href: '/account/profile', label: english ? 'Profile' : 'Профил' },
-		{ href: '/account/listings', label: english ? 'Cars' : 'Обяви' },
-		{ href: '/account/messages', label: english ? 'Messages' : 'Съобщения' }
-	]);
 	const containerOpenTag = '<div class="dashboard-container">';
 	const innerOpenTag = '<div class="dashboard-content--inner">';
 	const detailsOpenTag = '<div class="dashboard-content--details">';
@@ -101,15 +95,7 @@
 
 <div class:account-mobile-shell={mobileAccount}>
 	{#if mobileAccount}<MobilePageHero title={accountTitle}>
-			{#snippet actions()}<nav
-					class="account-mobile-links"
-					aria-label={english ? 'Account pages' : 'Страници на профила'}
-				>
-					{#each accountLinks as item (item.href)}<a
-							href={linkHref(item.href + (english ? '?lang=en' : ''))}
-							aria-current={accountPath === item.href ? 'page' : undefined}>{item.label}</a
-						>{/each}
-				</nav>{/snippet}
+			{#snippet actions()}<AccountMobileNavigation />{/snippet}
 		</MobilePageHero>{/if}
 	{#if dashboardShell}
 		<AuxeroPageShell
@@ -160,28 +146,6 @@
 </div>
 
 <style>
-	.account-mobile-links {
-		display: flex;
-		justify-content: space-between;
-		gap: var(--bc-space-2);
-		overflow-x: auto;
-		scrollbar-width: none;
-	}
-	.account-mobile-links a {
-		flex: none;
-		display: flex;
-		align-items: center;
-		min-height: var(--bc-control-height-standard);
-		padding-block: var(--bc-space-1);
-		color: var(--bc-dark-muted);
-		border-bottom: 2px solid transparent;
-		text-decoration: none;
-		font: var(--bc-weight-control) var(--bc-mobile-label)/1.2 var(--bc-font-body);
-	}
-	.account-mobile-links a[aria-current='page'] {
-		color: var(--bc-white);
-		border-bottom-color: var(--bc-white);
-	}
 	@media (max-width: 767.98px) {
 		.account-mobile-shell {
 			--bc-bg: var(--bc-bg-strong);

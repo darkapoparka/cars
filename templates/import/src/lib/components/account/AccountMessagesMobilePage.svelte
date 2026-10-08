@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { linkHref as resolve } from '$lib/utils/links';
+	import AccountMobileNavigation from './AccountMobileNavigation.svelte';
 	import { page } from '$app/state';
 	import { tick } from 'svelte';
 	import MobilePageHero from '$lib/components/common/MobilePageHero.svelte';
 	import type { AuxeroMessageBubble, AuxeroMessageThreadData } from '$lib/auxero/messages';
 	import MobileBottomNav from '$lib/components/layout/MobileBottomNav.svelte';
-	import ArrowLeft from '@lucide/svelte/icons/arrow-left';
 	import CheckCheck from '@lucide/svelte/icons/check-check';
 	import Send from '@lucide/svelte/icons/send';
 
@@ -53,11 +52,7 @@
 					? ' разговор'
 					: ' разговора')}
 	>
-		{#snippet actions()}<a
-				class="messages-account-link"
-				href={resolve('/account' + (english ? '?lang=en' : ''))}
-				><ArrowLeft size={20} aria-hidden="true" />{english ? 'Your account' : 'Твоят профил'}</a
-			>{/snippet}
+		{#snippet actions()}<AccountMobileNavigation />{/snippet}
 	</MobilePageHero>
 
 	<main class="daynight-messages-mobile__main" aria-labelledby="messages-mobile-title">
@@ -262,6 +257,7 @@
 		}
 
 		.daynight-messages-mobile__composer {
+			--bc-control-height-standard: var(--bc-control-height-chip);
 			display: grid;
 			grid-template-columns: minmax(0, 1fr) var(--bc-control-height-standard);
 			align-items: center;
@@ -286,7 +282,8 @@
 			color: #17191b;
 			padding: 0 14px;
 			font: inherit;
-			font-size: var(--bc-mobile-body);
+			font-size: var(--bc-text-control);
+			line-height: var(--bc-leading-control);
 			font-weight: var(--bc-weight-body);
 			outline: 0;
 		}
@@ -329,16 +326,5 @@
 			padding-right: 10px;
 			padding-left: 10px;
 		}
-	}
-
-	.messages-account-link {
-		display: flex;
-		align-items: center;
-		gap: var(--bc-space-2);
-		width: fit-content;
-		min-height: var(--bc-control-height-standard);
-		color: var(--bc-white);
-		text-decoration: none;
-		font: var(--bc-weight-action) var(--bc-text-control)/1.2 var(--bc-font-body);
 	}
 </style>

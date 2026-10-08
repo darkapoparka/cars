@@ -31,14 +31,23 @@ for (const width of [320, 390, 1440])
 						.fill('https://listing.example.invalid/synthetic');
 				} else {
 					await expect(wizard.locator('[id^="import-wizard-make-"]')).toBeVisible();
-					await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
-					await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
+					if (width < 768) {
+						await wizard.locator('[id^="import-wizard-make-"]').click();
+						await wizard.getByRole('button', { name: 'BMW', exact: true }).click();
+						await expect(wizard.locator('[id^="import-wizard-make-"]')).toContainText('BMW');
+						await wizard.locator('[id^="import-wizard-model-"]').click();
+						await wizard.getByRole('button', { name: 'X5', exact: true }).click();
+					} else {
+						await wizard.locator('[id^="import-wizard-make-"]').fill('BMW');
+						await wizard.locator('[id^="import-wizard-model-"]').fill('X5');
+					}
 				}
 				await wizard
 					.getByRole('button', { name: english ? 'Continue' : 'Продължи', exact: true })
 					.click();
 				await expect(wizard.locator('[id^="import-wizard-budget-"]')).toBeVisible();
 				await wizard.locator('[id^="import-wizard-budget-"]').fill('30000');
+				if (width < 768) await wizard.locator('[id^="import-wizard-fuel-"]').click();
 				await wizard
 					.getByRole('button', { name: english ? 'Petrol' : 'Бензин', exact: true })
 					.click();
@@ -201,7 +210,8 @@ for (const width of [320, 390, 1440])
 				await expect(form).toBeVisible();
 				await form.locator('[name=name]').fill('Synthetic Verification');
 				await form.locator('[name=phone]').fill('+359000000000');
-				await form
+				await page
+					.locator('.daynight-mobile-pdp__inquiry')
 					.getByRole('button', {
 						name: english ? 'Send Inquiry' : 'Изпрати запитване',
 						exact: true

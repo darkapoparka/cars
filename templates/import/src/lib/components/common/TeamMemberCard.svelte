@@ -271,6 +271,8 @@
 			align-self: center;
 		}
 		.team-card__action {
+			--action-height: var(--bc-control-height-chip);
+			--action-text: var(--bc-text-control);
 			grid-column: 1 / -1;
 		}
 	}

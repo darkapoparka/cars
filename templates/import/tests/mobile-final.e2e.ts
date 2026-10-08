@@ -5,7 +5,7 @@ import { visit } from './helpers';
 test.skip(({ isMobile }) => !isMobile, 'Mobile viewport coverage');
 
 for (const locale of ['en', 'bg']) {
-	test(`mobile ${locale} account menu keeps legacy routes outside the locale prefix`, async ({
+	test(`mobile ${locale} menu uses the shared admin demo and keeps saved cars`, async ({
 		page
 	}) => {
 		await visit(page, `/${locale}`);
@@ -16,25 +16,34 @@ for (const locale of ['en', 'bg']) {
 			.getByRole('button')
 			.click();
 		const menu = page.getByRole('dialog');
-		const account = menu.getByRole('link', {
-			name: locale === 'en' ? 'Account' : 'Вход / профил',
+		const admin = menu.getByRole('link', {
+			name: locale === 'en' ? 'Admin dashboard (demo)' : 'Админ панел (демо)',
 			exact: true
 		});
-		await expect(account).toHaveAttribute(
-			'href',
-			locale === 'en' ? '/account?lang=en' : '/account'
-		);
-		const messages = menu.getByRole('link', {
-			name: locale === 'en' ? 'Messages' : 'Съобщения',
-			exact: true
-		});
-		await expect(messages).toHaveAttribute(
-			'href',
-			locale === 'en' ? '/account/messages?lang=en' : '/account/messages'
-		);
-		await account.click();
-		await expect(page).toHaveURL(/\/account(?:\?lang=en)?$/);
-		await expect(page.locator('body')).not.toContainText('Auxero template route not found');
+		await expect(admin).toHaveAttribute('href', 'https://cars-admin-blue.vercel.app/');
+		await expect(admin).toHaveAttribute('target', '_blank');
+		await expect(admin).toHaveAttribute('rel', 'noopener noreferrer');
+		await expect(menu.locator('a[href^="/account/messages"]')).toHaveCount(0);
+		await expect(menu.locator('a[href="/account"], a[href^="/account?"]')).toHaveCount(0);
+		await expect(
+			menu.getByRole('link', {
+				name: locale === 'en' ? 'Saved cars' : 'Любими автомобили',
+				exact: true
+			})
+		).toHaveAttribute('href', `/${locale}/account/favorites${locale === 'en' ? '?lang=en' : ''}`);
+		// Check the external navigation contract independently of the hosted demo's availability.
+		await page
+			.context()
+			.route('https://cars-admin-blue.vercel.app/**', (route) =>
+				route.fulfill({ contentType: 'text/html', body: '<title>Shared admin destination</title>' })
+			);
+		const storefrontURL = page.url();
+		const popupPromise = page.waitForEvent('popup');
+		await admin.click();
+		const popup = await popupPromise;
+		await expect(popup).toHaveURL('https://cars-admin-blue.vercel.app/');
+		await expect(page).toHaveURL(storefrontURL);
+		await popup.close();
 	});
 }
 

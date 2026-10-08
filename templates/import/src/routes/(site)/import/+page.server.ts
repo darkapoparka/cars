@@ -1,5 +1,6 @@
 import { localizedCopy } from '$lib/content/localized';
 import type { PageServerLoad } from './$types';
+import { vehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 import { importRequestFormData, importRequestSteps } from '$lib/content/services';
 import { listPublicVehicles } from '$lib/server/public-vehicles';
 import { importCriteriaFromParams } from '$lib/data/import-criteria';
@@ -12,6 +13,7 @@ export const load: PageServerLoad = ({ url, locals }) => {
 	const stock = listPublicVehicles();
 	const browse = importBrowseData(stock, url.searchParams, locals.localeState.locale);
 	return {
+		intakeOptions: vehicleIntakeOptions(stock),
 		form: importRequestFormData(url.searchParams.get('vehicle') ?? ''),
 		steps: localizedCopy(importRequestSteps, locals.localeState.locale),
 		criteria: importCriteriaFromParams(url.searchParams),

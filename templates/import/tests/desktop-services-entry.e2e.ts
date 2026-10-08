@@ -52,24 +52,17 @@ for (const locale of ['bg', 'en']) {
 		await expect(entry.locator('.desktop-import-entry__choices')).toHaveCount(0);
 		await expect(entry.locator('[name=origin]')).toHaveValue('');
 		await entry.locator('[name=vehicle]').press('Enter');
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/import` &&
-				url.searchParams.get('origin') === '' &&
-				url.searchParams.get('vehicle') === 'https://example.com/car/from-services'
-		);
-		const wizard = page.locator('.service-intake .bc-import-wizard');
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}/services`);
+		const wizard = page.getByRole('dialog');
 		await expect(wizard).toBeVisible();
 		await wizard
 			.getByRole('button', { name: locale === 'en' ? 'Back' : 'Назад', exact: true })
 			.click();
-		await expect(page.locator('.desktop-import-entry [name=vehicle]')).toHaveValue(
+		await expect(wizard.locator('[id^="import-wizard-vehicle-"]')).toHaveValue(
 			'https://example.com/car/from-services'
 		);
 		await expect(
-			page
-				.locator('.desktop-import-entry')
-				.getByRole('button', { name: locale === 'en' ? 'All' : 'Всички', exact: true })
+			wizard.getByRole('button', { name: locale === 'en' ? 'All' : 'Всички', exact: true })
 		).toHaveAttribute('aria-pressed', 'true');
 	});
 
@@ -107,16 +100,15 @@ for (const locale of ['bg', 'en']) {
 			result.violations.map((v) => ({ id: v.id, targets: v.nodes.map((n) => n.target) }))
 		).toEqual([]);
 		await entry.locator('[data-intake-next]').click();
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/import` &&
-				url.searchParams.get('intent') === 'source' &&
-				url.searchParams.get('make') === 'BMW' &&
-				url.searchParams.get('model') === 'X5' &&
-				url.searchParams.get('bodyType') === 'SUV' &&
-				url.searchParams.get('origin') === ''
-		);
-		await expect(page.locator('.service-intake .bc-import-wizard')).toBeVisible();
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}/services`);
+		const wizard = page.getByRole('dialog');
+		await expect(wizard).toBeVisible();
+		await wizard
+			.getByRole('button', { name: locale === 'en' ? 'Back' : 'Назад', exact: true })
+			.click();
+		await expect(wizard.locator('[id^="import-wizard-make-"]')).toHaveValue('BMW');
+		await expect(wizard.locator('[id^="import-wizard-model-"]')).toHaveValue('X5');
+		await expect(wizard.locator('[id^="import-wizard-type-"]')).toHaveValue('SUV');
 	});
 
 	test(`${locale}: Services entry keeps its compact action and has no country controls`, async ({

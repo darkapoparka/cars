@@ -22,6 +22,7 @@
 		idPrefix = 'mobile-mode',
 		surface = 'dark',
 		appearance = 'underline',
+		layout = 'equal',
 		navigation = false,
 		class: className = '',
 		onchange
@@ -32,6 +33,7 @@
 		idPrefix?: string;
 		surface?: 'dark' | 'light';
 		appearance?: 'underline' | 'attached' | 'panel' | 'compact' | 'choices' | 'segmented';
+		layout?: 'equal' | 'scrollable';
 		navigation?: boolean;
 		class?: string;
 		onchange?: (value: string) => void;
@@ -47,6 +49,50 @@
 
 	const focusTab = (index: number) => {
 		document.getElementById(`${idPrefix}-${options[index]?.value}`)?.focus({ preventScroll: true });
+	};
+
+	const revealActiveTab = (currentValue: string) => (rail: HTMLElement) => {
+		const activeTab = Array.from(rail.querySelectorAll<HTMLElement>('[data-mode]')).find(
+			(tab) => tab.dataset.mode === currentValue
+		);
+		if (!activeTab) return;
+
+		const updateEdges = () => {
+			rail.toggleAttribute('data-overflow-start', rail.scrollLeft > 1);
+			rail.toggleAttribute(
+				'data-overflow-end',
+				rail.scrollWidth - rail.clientWidth - rail.scrollLeft > 1
+			);
+		};
+		const reveal = (tab: HTMLElement) => {
+			const railBounds = rail.getBoundingClientRect();
+			const tabBounds = tab.getBoundingClientRect();
+			if (!railBounds.width) return;
+			if (tabBounds.left < railBounds.left) {
+				rail.scrollLeft += tabBounds.left - railBounds.left;
+			} else if (tabBounds.right > railBounds.right) {
+				rail.scrollLeft += tabBounds.right - railBounds.right;
+			}
+			updateEdges();
+		};
+		const handleFocus = (event: FocusEvent) => {
+			if (event.target instanceof HTMLElement && event.target.matches('[data-mode]')) {
+				reveal(event.target);
+			}
+		};
+		reveal(activeTab);
+		rail.addEventListener('scroll', updateEdges, { passive: true });
+		rail.addEventListener('focusin', handleFocus);
+		const observer = new ResizeObserver(() => reveal(activeTab));
+		observer.observe(rail);
+		observer.observe(activeTab);
+		return () => {
+			observer.disconnect();
+			rail.removeEventListener('scroll', updateEdges);
+			rail.removeEventListener('focusin', handleFocus);
+			rail.removeAttribute('data-overflow-start');
+			rail.removeAttribute('data-overflow-end');
+		};
 	};
 
 	const handleKeydown = (event: KeyboardEvent, index: number) => {
@@ -109,14 +155,17 @@
 	class:mobile-mode-tabs--compact={appearance === 'compact'}
 	class:mobile-mode-tabs--choices={appearance === 'choices'}
 	class:mobile-mode-tabs--segmented={appearance === 'segmented'}
+	class:mobile-mode-tabs--scrollable={layout === 'scrollable'}
 	style:--mobile-mode-count={options.length}
 	role={navigation ? undefined : 'tablist'}
 	aria-label={label}
+	{@attach layout === 'scrollable' && revealActiveTab(value)}
 >
 	{#each options as option, index (option.value)}
 		{#if navigation}
 			<a
 				href={option.href}
+				data-mode={option.value}
 				class:active={value === option.value}
 				class:has-artwork={Boolean(option.artwork)}
 				aria-current={value === option.value ? 'page' : undefined}
@@ -443,6 +492,68 @@
 		}
 		.mobile-mode-tabs--segmented :is(button, a).active .mode-tab-icon {
 			color: inherit;
+		}
+	}
+
+	@media (max-width: 767px) {
+		.mobile-mode-tabs:not(.mobile-mode-tabs--panel):not(.mobile-mode-tabs--attached) {
+			border-bottom-color: transparent;
+		}
+
+		.mobile-mode-tabs:not(.mobile-mode-tabs--panel):not(.mobile-mode-tabs--attached)
+			:is(button, a) {
+			min-width: 0;
+			align-items: center;
+			padding-block: 0;
+			letter-spacing: 0;
+		}
+
+		.mobile-mode-tabs:not(.mobile-mode-tabs--panel):not(.mobile-mode-tabs--attached)
+			.mode-tab-content {
+			display: block;
+			min-width: 0;
+			max-width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.mobile-mode-tabs:not(.mobile-mode-tabs--panel):not(.mobile-mode-tabs--attached)
+			:is(button, a).active::after {
+			inset: auto var(--bc-mobile-tab-indicator-inset) 0;
+			height: var(--bc-mobile-tab-indicator-height);
+			border-radius: var(--bc-mobile-tab-indicator-radius);
+		}
+
+		.mobile-mode-tabs--scrollable {
+			display: flex;
+			overflow-x: auto;
+			scrollbar-width: none;
+			mask-image: linear-gradient(
+				to right,
+				transparent,
+				#000 var(--tab-overflow-start, 0px),
+				#000 calc(100% - var(--tab-overflow-end, 0px)),
+				transparent
+			);
+		}
+
+		.mobile-mode-tabs--scrollable:global([data-overflow-start]) {
+			--tab-overflow-start: var(--bc-space-3);
+		}
+
+		.mobile-mode-tabs--scrollable:global([data-overflow-end]) {
+			--tab-overflow-end: var(--bc-space-3);
+		}
+
+		.mobile-mode-tabs--scrollable::-webkit-scrollbar {
+			display: none;
+		}
+
+		.mobile-mode-tabs--scrollable :is(button, a) {
+			flex: 1 0 auto;
+			padding-inline: var(--bc-space-3);
+			white-space: nowrap;
 		}
 	}
 </style>

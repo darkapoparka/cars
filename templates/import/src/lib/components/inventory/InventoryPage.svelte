@@ -119,7 +119,11 @@
 				<span>{count} / {cards.length}</span></Action
 			>
 		</div>{/if}
-	<p class="sr-only" role="status">{desktop.showingText}</p>
+	<p class="sr-only" role="status">
+		{english
+			? `Showing ${count} of ${desktop.resultCount} cars`
+			: `Показани ${count} от ${desktop.resultCount} автомобила`}
+	</p>
 </main>
 
 <style>

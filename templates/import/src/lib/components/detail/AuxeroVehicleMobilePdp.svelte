@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { tick } from 'svelte';
 	import { contentText } from '$lib/content/localized';
 	const english = $derived(page.data.locale === 'en');
 	import { assetHref } from '$lib/utils/assets';
@@ -22,6 +23,7 @@
 	import { Drawer } from 'vaul-svelte';
 	import { templateInquiryCopy } from '$lib/data/template-settings';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
+	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 
 	let { detail }: { detail: AuxeroVehicleDetailData } = $props();
 
@@ -42,10 +44,16 @@
 	let gallerySwiped = $state(false);
 	let shareStatus = $state('');
 	let viewerOpen = $state(false);
+	const inquiryFormId = $props.id();
 	let inquiryOpen = $state(false);
+	$effect(() => {
+		if (!inquiryOpen) return;
+		return trackKeyboardInset();
+	});
 	let inquiryStatus = $state('');
 	let inquirySubmitting = $state(false);
 	let inquirySaved = $state(false);
+	let inquirySession = 0;
 
 	const heroGalleryImages = $derived(Array.from(new Set(detail.galleryImages)));
 	const heroImage = $derived(heroGalleryImages[selectedImageIndex] ?? detail.image);
@@ -219,6 +227,7 @@
 	};
 
 	const openInquiry = () => {
+		inquirySession += 1;
 		// Start each inquiry session clean so a previous success message doesn't linger
 		// under a fresh, empty form when the drawer is reopened.
 		inquiryStatus = '';
@@ -228,6 +237,7 @@
 	};
 
 	const closeInquiry = () => {
+		inquirySession += 1;
 		inquiryOpen = false;
 	};
 
@@ -238,6 +248,7 @@
 		inquiryStatus = '';
 
 		const form = event.currentTarget as HTMLFormElement;
+		const session = inquirySession;
 		const payload = Object.fromEntries(new FormData(form).entries());
 
 		inquirySubmitting = true;
@@ -248,15 +259,21 @@
 				source: 'vehicle-detail-mobile',
 				vehicleSlug: detail.slug
 			});
+			if (!inquiryOpen || session !== inquirySession) return;
 			inquirySaved = true;
 			inquiryStatus = receiptMessage(receipt, english);
 			form.reset();
 		} catch {
+			if (!inquiryOpen || session !== inquirySession) return;
 			inquiryStatus = english
 				? 'The request was not saved. Check the details and try again.'
 				: 'Заявката не е запазена. Провери данните и опитай отново.';
 		} finally {
-			inquirySubmitting = false;
+			if (inquiryOpen && session === inquirySession) {
+				inquirySubmitting = false;
+				await tick();
+				form.querySelector<HTMLElement>('[aria-live]')?.scrollIntoView({ block: 'nearest' });
+			}
 		}
 	};
 
@@ -512,7 +529,12 @@
 		<p class="daynight-mobile-pdp__inquiry-intro">
 			{contentText(english ? 'en' : 'bg', templateInquiryCopy.notice)}
 		</p>
-		<form class="daynight-mobile-pdp__inquiry-form" onsubmit={submitInquiry}>
+		<form
+			id={inquiryFormId}
+			class="daynight-mobile-pdp__inquiry-form"
+			onsubmit={submitInquiry}
+			aria-busy={inquirySubmitting}
+		>
 			<label>
 				<span>{detail.copy.name}</span>
 				<input name="name" type="text" autocomplete="name" required />
@@ -534,15 +556,6 @@
 				<textarea name="message" rows="3" placeholder={detail.copy.messagePlaceholder}></textarea>
 			</label>
 
-			<button
-				type="submit"
-				class="daynight-mobile-pdp__inquiry-submit"
-				disabled={inquirySubmitting}
-			>
-				<Send size={18} strokeWidth={2.3} aria-hidden="true" />
-				{detail.copy.sendInquiry}
-			</button>
-
 			<p class="daynight-mobile-pdp__inquiry-status" aria-live="polite">
 				{#if inquirySaved}
 					<Check size={16} strokeWidth={2.4} aria-hidden="true" />
@@ -555,6 +568,23 @@
 			<PhoneCall size={18} strokeWidth={2.3} aria-hidden="true" />
 			{detail.contact.primaryPhoneLabel}
 		</a>
+		{#snippet footer()}
+			{#if inquirySaved}
+				<button type="button" class="daynight-mobile-pdp__inquiry-submit" onclick={closeInquiry}>
+					{detail.mobileDrawer.closeLabel}
+				</button>
+			{:else}
+				<button
+					type="submit"
+					form={inquiryFormId}
+					class="daynight-mobile-pdp__inquiry-submit"
+					disabled={inquirySubmitting}
+				>
+					<Send size={18} strokeWidth={2.3} aria-hidden="true" />
+					{inquirySubmitting ? (english ? 'Saving…' : 'Запазване…') : detail.copy.sendInquiry}
+				</button>
+			{/if}
+		{/snippet}
 	</MobileSheet>
 
 	<MobileSheet
@@ -1210,8 +1240,8 @@
 
 		.daynight-mobile-pdp :global(.daynight-mobile-pdp__inquiry.bc-mobile-sheet__content) {
 			width: min(100%, 520px);
-			max-height: min(92dvh, 780px);
-			background: var(--bc-white);
+			max-height: min(calc(92dvh - var(--bc-kb-inset, 0px)), 780px);
+			background: var(--bc-bg-strong);
 			color: var(--bc-ink);
 		}
 
@@ -1237,7 +1267,7 @@
 
 		.daynight-mobile-pdp__inquiry-form label {
 			display: grid;
-			gap: 6px;
+			gap: 5px;
 		}
 
 		.daynight-mobile-pdp__inquiry-form label span {
@@ -1251,41 +1281,47 @@
 		.daynight-mobile-pdp__inquiry-form select,
 		.daynight-mobile-pdp__inquiry-form textarea {
 			width: 100%;
-			border: 1px solid var(--bc-border);
+			min-width: 0;
+			border: 0;
 			border-radius: 10px;
-			background: var(--bc-surface-soft);
-			color: #1c1c1c;
-			padding: 12px 13px;
+			background: var(--bc-white);
+			color: var(--bc-ink);
+			padding: 10px 11px;
 			font: inherit;
-			/* >=16px stops iOS Safari from auto-zooming on focus inside the drawer. */
 			font-size: var(--bc-text-control);
-			font-weight: var(--bc-weight-control);
+			font-weight: var(--bc-weight-body);
 			line-height: var(--bc-leading-control);
 		}
-
+		.daynight-mobile-pdp__inquiry-form input,
+		.daynight-mobile-pdp__inquiry-form select {
+			height: var(--bc-control-height-standard);
+			padding-block: 0;
+		}
+		.daynight-mobile-pdp__inquiry-form select {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 		.daynight-mobile-pdp__inquiry-form textarea {
+			min-height: 104px;
 			resize: none;
 		}
-
-		.daynight-mobile-pdp__inquiry-form input:focus,
-		.daynight-mobile-pdp__inquiry-form select:focus,
-		.daynight-mobile-pdp__inquiry-form textarea:focus {
-			border-color: var(--bc-accent);
-			background: #ffffff;
-			outline: 0;
+		.daynight-mobile-pdp__inquiry-form :is(input, select, textarea):focus-visible {
+			outline: 2px solid var(--bc-accent);
+			outline-offset: 2px;
 		}
 
 		.daynight-mobile-pdp__inquiry-submit {
 			display: inline-flex;
-			min-height: 50px;
+			width: 100%;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 8px;
-			margin-top: 2px;
+			margin-top: 0;
 			border: 0;
 			border-radius: 10px;
-			background: var(--bc-accent);
-			color: #ffffff;
+			background: var(--bc-ink);
+			color: var(--bc-white);
 			cursor: pointer;
 			font-size: var(--bc-text-control);
 			font-weight: var(--bc-weight-heading);
@@ -1294,14 +1330,14 @@
 		}
 
 		.daynight-mobile-pdp__inquiry-submit:focus-visible {
-			background: var(--bc-accent-hover);
+			background: var(--bc-dark-hover);
 			outline: 3px solid var(--bc-focus);
 			outline-offset: 2px;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
 			.daynight-mobile-pdp__inquiry-submit:hover {
-				background: var(--bc-accent-hover);
+				background: var(--bc-dark-hover);
 			}
 		}
 
@@ -1328,7 +1364,7 @@
 
 		.daynight-mobile-pdp__inquiry-call {
 			display: inline-flex;
-			min-height: 48px;
+			min-height: var(--bc-control-height-standard);
 			align-items: center;
 			justify-content: center;
 			gap: 8px;

@@ -1,4 +1,5 @@
 import type { DayNightVehicleSubmissionRecord } from '$lib/types/account';
+import type { VehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 
 export type AuxeroListingFormMode = 'clone-static' | 'create' | 'edit';
 
@@ -74,6 +75,7 @@ export type AuxeroListingFormAttachment = {
 };
 
 export type AuxeroAccountListingFormData = {
+	intakeOptions?: VehicleIntakeOptions;
 	address: string;
 	attachments: AuxeroListingFormAttachment[];
 	detailFields: AuxeroListingFormDetailField[];

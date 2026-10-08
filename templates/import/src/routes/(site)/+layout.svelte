@@ -8,6 +8,9 @@
 	import PublicHeader from '$lib/components/layout/PublicHeader.svelte';
 	import PublicFooter from '$lib/components/layout/PublicFooter.svelte';
 	import SiteSkipLink from '$lib/components/layout/SiteSkipLink.svelte';
+	import DesktopImportRequestDialog from '$lib/components/services/DesktopImportRequestDialog.svelte';
+	import DesktopSellRequestDialog from '$lib/components/services/DesktopSellRequestDialog.svelte';
+	import CompareOverlay from '$lib/components/compare/CompareOverlay.svelte';
 	import type { LayoutProps } from './$types';
 	let { data, children }: LayoutProps = $props();
 	const canonicalFor = (locale: 'bg' | 'en') =>
@@ -44,6 +47,9 @@
 		<div class="site-container"><LocaleTrigger /></div>
 	</div>
 	<LocalePreferences />
+	<DesktopImportRequestDialog />
+	<DesktopSellRequestDialog />
+	<CompareOverlay />
 </div>
 
 <style>

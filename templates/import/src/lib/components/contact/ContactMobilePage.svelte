@@ -17,17 +17,27 @@
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import LeadForm from '$lib/components/common/LeadForm.svelte';
 	import SocialLinks from '$lib/components/common/SocialLinks.svelte';
+	import { trackKeyboardInset } from '$lib/utils/keyboard-inset';
 	let {
 		form,
 		info,
 		embedded = false
 	}: { form: AuxeroContactFormData; info: AuxeroContactPageInfo; embedded?: boolean } = $props();
+	const formId = $props.id();
 	let formOpen = $state(false);
+	let pending = $state(false);
+	let completed = $state(false);
+	$effect(() => {
+		if (!formOpen) return;
+		return trackKeyboardInset();
+	});
 	const english = $derived(page.data.locale === 'en');
 	const copy = $derived(dealerCopy[english ? 'en' : 'bg']);
 	const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(daynightContact.addressLabel)}`;
 	const hrefAttributes = (href: string) => ({ href: linkHref(href) });
 	const openForm = () => {
+		pending = false;
+		completed = false;
 		formOpen = true;
 	};
 	const heroDelivery = imageDelivery('/assets/daynight/proof-studio-import-handoff.webp');
@@ -108,12 +118,37 @@
 		</div>
 	</svelte:element>
 
-	<MobileSheet bind:open={formOpen} title={form.title}
-		><LeadForm
+	<MobileSheet bind:open={formOpen} title={form.title}>
+		<LeadForm
 			{english}
+			{formId}
+			mobile
+			submitInFooter
+			bind:pending
+			bind:completed
 			source={page.url.searchParams.get('topic') === 'trade-in' ? 'trade-in' : 'contact'}
-		/></MobileSheet
-	>
+		/>
+		{#snippet footer()}
+			{#if !completed}
+				<Action
+					type="submit"
+					form={formId}
+					variant="strong"
+					size="standard"
+					disabled={pending}
+					style="width: 100%; border-radius: 10px;"
+				>
+					{pending
+						? english
+							? 'Saving…'
+							: 'Запазване…'
+						: english
+							? 'Send request'
+							: 'Изпрати запитване'}
+				</Action>
+			{/if}
+		{/snippet}
+	</MobileSheet>
 </div>
 
 <style>

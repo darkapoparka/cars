@@ -144,6 +144,13 @@
 			background: var(--bc-white);
 			color: var(--bc-ink);
 		}
+		select {
+			height: var(--bc-control-height-chip);
+			min-height: var(--bc-control-height-chip);
+			padding-block: 0;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
 		button[value='save'] {
 			background: var(--bc-ink);
 			color: var(--bc-white);

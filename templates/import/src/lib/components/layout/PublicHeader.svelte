@@ -7,10 +7,11 @@
 	import Heart from '@lucide/svelte/icons/heart';
 	import ArrowLeftRight from '@lucide/svelte/icons/arrow-left-right';
 	import PhoneCall from '@lucide/svelte/icons/phone-call';
-	import UserRound from '@lucide/svelte/icons/user-round';
+	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
 	import Search from '@lucide/svelte/icons/search';
 	import { getGarageContext } from '$lib/state/garage.svelte';
 	import { site, siteNavigation } from '$lib/config/site';
+	import { sharedAdminDemoHref } from '$lib/config/admin-demo';
 	import { linkHref } from '$lib/utils/links';
 	import NavigationMenu from './NavigationMenu.svelte';
 	import MobileAppbar from './MobileAppbar.svelte';
@@ -70,19 +71,13 @@
 				/>{/each}
 		</nav>
 		<div class="site-header__actions">
+			<LocaleSettingsMenu />
 			<a
 				class="site-header__icon"
 				href={linkHref(site.contact.phoneHref)}
 				aria-label={copy.call}
 				title={copy.callPhonePrefix + site.contact.phoneHref.replace('tel:', '')}
 				><PhoneCall size={22} strokeWidth={1.7} aria-hidden="true" /></a
-			>
-			<LocaleSettingsMenu />
-			<a
-				class="site-header__icon site-header__account"
-				href={linkHref('/account')}
-				aria-label={copy.account}
-				title={copy.account}><UserRound size={22} strokeWidth={1.7} aria-hidden="true" /></a
 			>
 			<button
 				class="site-header__icon"
@@ -120,6 +115,14 @@
 				<span class="sr-only" id={countId + '-favorites'}
 					>{copy.savedCount}{garage.favorites.length}</span
 				></a
+			>
+			<a
+				class="site-header__icon site-header__admin"
+				href={sharedAdminDemoHref}
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label={copy.adminDemo}
+				title={copy.adminDemo}><LayoutDashboard size={22} strokeWidth={1.7} aria-hidden="true" /></a
 			>
 		</div>
 	</div>

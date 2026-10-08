@@ -74,9 +74,29 @@ Before a dealer build is complete, inspect light and dark surfaces, the compact 
 - `npm run build`
 - `npm run test:e2e`
 
+Formatting checks include application source, tests, configuration and authored
+documentation. Generated browser JSON/reports and archived rendered previews are excluded from formatting.
+`scripts/public-asset-retention.mjs` is an exact copy of Cars'
+`scripts/publishing/public-asset-retention.mjs`; preserve its bytes and validate
+the shared engine with `node --test scripts/public-asset-retention.test.mjs`
+from the Cars repository root.
+
+The retained npm lockfile pins patched transitive `cookie` 0.7.2 and
+`source-map-js` 1.2.2 through `overrides`. These address the
+[cookie validation advisory](https://github.com/advisories/GHSA-pxg6-pf52-xh8x)
+and [indexed source-map advisory](https://github.com/advisories/GHSA-68fv-2mgg-jv7q)
+without replacing the SvelteKit or Bits UI versions. Review these overrides when
+their upstream dependency ranges adopt the fixes.
+
 ## Inquiry persistence
 
 Optional Neon-backed inquiry storage and private template admin access are documented in [Inquiry database](docs/INQUIRY-DATABASE.md). Preview mode stays synthetic even when credentials are present. Live persistence must be explicitly enabled. Saving is separate from notification delivery.
+
+## Shared Admin demo
+
+The public desktop header and mobile menu open the existing [Cars Admin demo](https://cars-admin-blue.vercel.app/) in a new tab. `src/lib/config/admin-demo.ts` owns this shared destination; each template does not need its own dashboard design. The entry is labelled as a demo in Bulgarian and English. The former `/account` overview redirects to the same destination without forwarding query parameters.
+
+Saved cars at the localized `/account/favorites` route and Compare remain part of the storefront. Retained legacy customer subpages and the optional private inquiry-admin backend are preserved; they are separate from the shared browser-local Admin demo. No real customer delivery or live dealership administration is implied by the shared demo.
 
 ## Current constraints
 

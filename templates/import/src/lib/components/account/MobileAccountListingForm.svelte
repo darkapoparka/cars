@@ -6,6 +6,7 @@
 	import { assetHref } from '$lib/utils/assets';
 	import { localizedValidation } from '$lib/browser/localized-validation';
 	import Action from '$lib/components/common/Action.svelte';
+	import MobileAccountVehicleFields from './MobileAccountVehicleFields.svelte';
 	import { tick, untrack } from 'svelte';
 
 	let { form }: { form: AuxeroAccountListingFormData } = $props();
@@ -44,9 +45,14 @@
 		}))
 	);
 	let busy = $state(false);
+	let vehicleFields = $state<MobileAccountVehicleFields>();
 	let saveError = $state('');
 	let noticeEl = $state<HTMLParagraphElement | null>(null);
 	const save: SubmitFunction = ({ cancel, formElement }) => {
+		if (vehicleFields && !vehicleFields.validate()) {
+			cancel();
+			return;
+		}
 		if (busy) {
 			cancel();
 			return;
@@ -106,16 +112,13 @@
 	{/if}
 	<section class="mobile-listing-form__section" aria-labelledby="mobile-listing-details">
 		<h2 id="mobile-listing-details">{english ? 'Car details' : 'Данни за автомобила'}</h2>
-		<label>
-			<span>{english ? 'Make and model' : 'Марка и модел'} <span aria-hidden="true">*</span></span>
-			<input
-				name="title"
-				bind:value={fields.title}
-				placeholder={english ? 'e.g. BMW 320d' : 'напр. BMW 320d'}
-				autocomplete="off"
-				required
-			/>
-		</label>
+		<MobileAccountVehicleFields
+			bind:this={vehicleFields}
+			bind:title={fields.title}
+			locale={english ? 'en' : 'bg'}
+			options={form.intakeOptions}
+			disabled={busy}
+		/>
 		<div class="mobile-listing-form__pair">
 			<label
 				><span>{english ? 'Price (EUR)' : 'Цена (EUR)'}</span><input
@@ -227,6 +230,7 @@
 
 <style>
 	.mobile-listing-form {
+		--bc-control-height-standard: var(--bc-control-height-chip);
 		display: grid;
 		gap: var(--bc-space-3);
 		padding-bottom: 76px;
@@ -234,12 +238,12 @@
 	}
 	.mobile-listing-form__section {
 		display: grid;
-		gap: var(--bc-space-4);
+		gap: 12px;
 		min-width: 0;
 		padding: var(--bc-space-4);
-		border: 1px solid var(--bc-border);
+		border: 0;
 		border-radius: var(--bc-radius-panel);
-		background: var(--bc-white);
+		background: var(--bc-bg-strong);
 	}
 	h2 {
 		margin: 0;
@@ -248,7 +252,8 @@
 	label {
 		display: grid;
 		min-width: 0;
-		gap: var(--bc-space-2);
+		gap: 5px;
+		color: var(--bc-muted);
 		font: var(--bc-weight-control) var(--bc-mobile-label)/1.35 var(--bc-font-body);
 	}
 	input,
@@ -257,33 +262,38 @@
 		width: 100%;
 		min-width: 0;
 		min-height: var(--bc-control-height-standard);
-		padding: var(--bc-space-3);
-		border: 1px solid var(--bc-border);
-		border-radius: var(--bc-radius-control);
-		background: var(--bc-surface);
+		padding: 10px 11px;
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
 		color: var(--bc-ink);
-		font: var(--bc-weight-body) max(16px, var(--bc-mobile-body))/1.4 var(--bc-font-body);
+		font: var(--bc-weight-body) var(--bc-text-control)/var(--bc-leading-control) var(--bc-font-body);
 		scroll-margin-block: 24px 180px;
 	}
 	textarea {
 		resize: vertical;
+	}
+	.mobile-listing-form label input:not([type='file']) {
+		height: var(--bc-control-height-standard) !important;
+		padding-block: 0;
 	}
 	input::placeholder,
 	textarea::placeholder {
 		color: var(--bc-muted);
 		opacity: 1;
 	}
-	input[type='file'] {
+	.mobile-listing-form label input[type='file'] {
+		height: auto !important;
 		padding: var(--bc-space-2);
 		font-size: var(--bc-mobile-label);
 	}
 	input::file-selector-button {
-		min-height: 36px;
+		min-height: var(--bc-control-height-standard);
 		margin-right: var(--bc-space-2);
 		padding: var(--bc-space-2);
 		border: 0;
 		border-radius: var(--bc-radius-md);
-		background: var(--bc-white);
+		background: var(--bc-bg-strong);
 		color: var(--bc-ink);
 		font: inherit;
 	}
@@ -375,7 +385,9 @@
 		min-height: 44px;
 		padding: var(--bc-space-2);
 		font-size: var(--bc-mobile-body);
-		white-space: normal;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 	.mobile-listing-form__actions :global(.secondary) {
 		border-color: var(--bc-border);

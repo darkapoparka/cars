@@ -1,0 +1,37 @@
+[
+  {
+    "check": "check",
+    "exitCode": 0,
+    "elapsedSeconds": 75.4
+  },
+  {
+    "check": "format",
+    "exitCode": -1,
+    "elapsedSeconds": 353.4
+  },
+  {
+    "check": "eslint",
+    "exitCode": 0,
+    "elapsedSeconds": 248.6
+  },
+  {
+    "check": "architecture",
+    "exitCode": 0,
+    "elapsedSeconds": 4.3
+  },
+  {
+    "check": "assets",
+    "exitCode": 0,
+    "elapsedSeconds": 6.6
+  },
+  {
+    "check": "units",
+    "exitCode": 0,
+    "elapsedSeconds": 20.4
+  },
+  {
+    "check": "build",
+    "exitCode": 0,
+    "elapsedSeconds": 143.9
+  }
+]

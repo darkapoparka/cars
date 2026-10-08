@@ -110,6 +110,7 @@
 	<div class="site-mobile-only">
 		<h1 class="sr-only">{title}</h1>
 		<ImportRequestMobilePage
+			intakeOptions={data.intakeOptions}
 			form={data.form}
 			serviceVehicles={data.serviceVehicles}
 			browse={data.browse}

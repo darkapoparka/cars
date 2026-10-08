@@ -24,18 +24,21 @@
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
 	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
 	import SellCarWizard from './SellCarWizard.svelte';
+	import type { VehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 	import SellValuationCard from './SellValuationCard.svelte';
 
 	let {
 		embedded = false,
 		copy,
 		form,
-		steps
+		steps,
+		intakeOptions
 	}: {
 		embedded?: boolean;
 		copy: AuxeroSellCarMobileCopy;
 		form: AuxeroSellCarFormData;
 		steps: AuxeroSellCarMobileStep[];
+		intakeOptions: VehicleIntakeOptions;
 	} = $props();
 
 	let wizardOpen = $state(false);
@@ -171,6 +174,8 @@
 	>
 		{#key wizardSession}
 			<SellCarWizard
+				mobile
+				{intakeOptions}
 				initial={{
 					make: '',
 					model: '',

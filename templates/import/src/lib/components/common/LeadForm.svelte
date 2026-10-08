@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { enhance, applyAction } from '$app/forms';
 	import { page } from '$app/state';
-	import { tick } from 'svelte';
+	import { onDestroy, tick } from 'svelte';
 	import type { SubmitFunction } from '@sveltejs/kit';
 	import type { InquiryReceipt } from '$lib/domain/inquiry';
 	import { receiptMessage } from '$lib/domain/inquiry';
@@ -16,17 +16,30 @@
 		english = false,
 		source = 'contact',
 		vehicleSlug,
-		result = null
+		result = null,
+		mobile = false,
+		formId,
+		submitInFooter = false,
+		pending = $bindable(false),
+		completed = $bindable(false)
 	}: {
 		english?: boolean;
 		source?: string;
 		vehicleSlug?: string;
 		result?: FormResult | null;
+		mobile?: boolean;
+		formId?: string;
+		submitInFooter?: boolean;
+		pending?: boolean;
+		completed?: boolean;
 	} = $props();
 	const id = $props.id();
-	let pending = $state(false);
 	let localResult = $state<FormResult | null>(null);
 	let formElement = $state<HTMLFormElement>();
+	let destroyed = false;
+	onDestroy(() => {
+		destroyed = true;
+	});
 	const current = $derived(localResult ?? result);
 	const submit: SubmitFunction = ({ cancel }) => {
 		if (pending) {
@@ -35,9 +48,11 @@
 		}
 		pending = true;
 		return async ({ result }) => {
+			if (destroyed) return;
 			pending = false;
 			if (result.type === 'success' || result.type === 'failure') {
 				localResult = result.data as FormResult;
+				completed = Boolean(localResult.receipt);
 				if (localResult.errors) {
 					await tick();
 					formElement?.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus();
@@ -55,13 +70,16 @@
 			variant="secondary"
 			onclick={() => {
 				localResult = {};
+				completed = false;
 				formElement?.reset();
 			}}>{english ? 'New request' : 'Нова заявка'}</Action
 		>
 	</div>
 {:else}
 	<form
+		id={formId}
 		class="site-form"
+		class:site-form--mobile={mobile}
 		method="POST"
 		action={linkHref('/contact' + (source === 'trade-in' ? '?topic=trade-in' : ''))}
 		use:enhance={submit}
@@ -123,7 +141,7 @@
 				><span>{english ? 'Message' : 'Съобщение'}</span><textarea
 					id={id + '-message'}
 					name="message"
-					rows="4"
+					rows={mobile ? 3 : 4}
 					maxlength="5000"
 					value={result?.values?.message ?? ''}
 					aria-invalid={Boolean(current?.errors?.message)}
@@ -152,19 +170,61 @@
 					: 'Запазването е отделно от известяването. Свържи се с търговеца за отговор.'}
 			<a href={linkHref('/privacy')}>{english ? 'Privacy' : 'Поверителност'}</a>
 		</p>
-		<Action type="submit" size="primary" disabled={pending}
-			>{pending
-				? english
-					? 'Saving…'
-					: 'Запазване…'
-				: english
-					? 'Send request'
-					: 'Изпрати запитване'}</Action
-		>
+		{#if !submitInFooter && !completed}
+			<Action type="submit" size="primary" disabled={pending}
+				>{pending
+					? english
+						? 'Saving…'
+						: 'Запазване…'
+					: english
+						? 'Send request'
+						: 'Изпрати запитване'}</Action
+			>
+		{/if}
 	</form>
 {/if}
 
 <style>
+	.site-form--mobile,
+	.site-form--mobile .site-fields {
+		gap: var(--bc-space-3);
+	}
+	.site-form--mobile .site-fields {
+		grid-template-columns: minmax(0, 1fr);
+	}
+	.site-form--mobile .site-field {
+		gap: 5px;
+	}
+	.site-form--mobile .site-field > span {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-label);
+		font-weight: var(--bc-weight-heading);
+		line-height: var(--bc-mobile-label-leading);
+	}
+	.site-form--mobile .site-field input,
+	.site-form--mobile .site-field textarea {
+		border: 0;
+		border-radius: 10px;
+		background: var(--bc-white);
+		font-weight: var(--bc-weight-body);
+		padding: 10px 11px;
+	}
+	.site-form--mobile .site-field input {
+		height: var(--bc-control-height-standard);
+		min-height: var(--bc-control-height-standard);
+		padding-block: 0;
+	}
+	.site-form--mobile .site-field textarea {
+		min-height: 104px;
+		resize: none;
+	}
+	.site-form--mobile .site-field :is(input, textarea):focus-visible {
+		outline: 2px solid var(--bc-accent);
+		outline-offset: 2px;
+	}
+	.site-form--mobile .site-field [aria-invalid='true'] {
+		box-shadow: inset 0 0 0 1px var(--bc-danger);
+	}
 	.site-form-trap {
 		position: absolute;
 		left: -10000px;

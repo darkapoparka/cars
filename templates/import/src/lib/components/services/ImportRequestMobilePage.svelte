@@ -15,6 +15,7 @@
 	import MobileServiceEntry from '$lib/components/services/MobileServiceEntry.svelte';
 	import MobileServiceManualEntry from '$lib/components/services/MobileServiceManualEntry.svelte';
 	import MobileModeTabs from '$lib/components/common/MobileModeTabs.svelte';
+	import { mobileIntakeCopy } from '$lib/content/mobile-intake';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import Link2 from '@lucide/svelte/icons/link-2';
@@ -22,6 +23,7 @@
 	import ImportRequestWizard from './ImportRequestWizard.svelte';
 	import ImportBrowseControls from './ImportBrowseControls.svelte';
 	import type { ImportBrowseData } from '$lib/server/import-browse';
+	import type { VehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
 
 	type ImportIntent = 'listing' | 'source';
 
@@ -29,15 +31,18 @@
 		embedded = false,
 		form,
 		serviceVehicles,
-		browse
+		browse,
+		intakeOptions
 	}: {
 		embedded?: boolean;
 		form: AuxeroServiceFormData;
 		serviceVehicles: VehicleCardSummary[];
 		browse: ImportBrowseData;
+		intakeOptions: VehicleIntakeOptions;
 	} = $props();
 
 	const vehicle = $derived(form.vehicleField.value ?? '');
+	const intakeCopy = $derived(mobileIntakeCopy[page.data.locale === 'en' ? 'en' : 'bg']);
 	let entryMode = $state<ImportIntent>('listing');
 	let wizardOpen = $state(false);
 	let wizardIntent = $state<ImportIntent>('listing');
@@ -81,7 +86,7 @@
 				label={nt('ui211')}
 				idPrefix="import-mode"
 				options={[
-					{ value: 'listing', label: 'LINK / VIN', panelId: 'import-entry-panel' },
+					{ value: 'listing', label: intakeCopy.listingMode, panelId: 'import-entry-panel' },
 					{ value: 'source', label: nt('ui212'), panelId: 'import-entry-panel' }
 				]}
 			/>
@@ -120,6 +125,8 @@
 	>
 		{#key wizardSession}
 			<ImportRequestWizard
+				mobile
+				{intakeOptions}
 				initialCriteria={criteria}
 				initialIntent={wizardIntent}
 				initialVehicle={vehicle}
@@ -148,5 +155,32 @@
 
 	:global(.daynight-import-wizard-drawer__sheet .bc-mobile-sheet__body) {
 		overflow: hidden;
+	}
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__intent button) {
+		display: flex;
+		min-width: 0;
+		min-height: var(--bc-control-height-standard);
+		align-items: center;
+		justify-content: center;
+		gap: 7px;
+		font-size: var(--bc-text-filter);
+	}
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__intent button span),
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__country-grid strong) {
+		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__intent svg),
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__country-grid img) {
+		flex: 0 0 auto;
+	}
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__country-grid button) {
+		min-height: var(--bc-control-height-standard);
+		max-width: min(220px, 70vw);
+	}
+	:global(.daynight-import-wizard-drawer__sheet .bc-import-wizard__nav button) {
+		white-space: nowrap;
 	}
 </style>

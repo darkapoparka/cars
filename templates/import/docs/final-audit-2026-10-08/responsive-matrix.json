@@ -1,0 +1,98 @@
+[
+  {
+    "route": "home",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Buy a car"
+    ],
+    "hydrated": "true",
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en?lang=en",
+    "width": 768
+  },
+  {
+    "route": "inventory",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Available vehicles"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/inventory?lang=en",
+    "width": 768
+  },
+  {
+    "route": "services",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Services for your car"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/services?lang=en",
+    "width": 768
+  },
+  {
+    "route": "about",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "About us"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/about?lang=en",
+    "width": 768
+  },
+  {
+    "route": "contact",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Contact us"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/contact?lang=en",
+    "width": 768
+  },
+  {
+    "route": "sell",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Sell your car"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/sell-your-car?lang=en",
+    "width": 768
+  },
+  {
+    "route": "import",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Import a car"
+    ],
+    "hydrated": null,
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/import?lang=en",
+    "width": 768
+  },
+  {
+    "route": "financing",
+    "brokenImages": [],
+    "clientWidth": 753,
+    "h1": [
+      "Car financing"
+    ],
+    "hydrated": "true",
+    "scrollWidth": 753,
+    "url": "http://localhost:6794/en/financing?lang=en",
+    "width": 768
+  }
+]

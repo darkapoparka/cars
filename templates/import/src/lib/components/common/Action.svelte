@@ -136,6 +136,11 @@
 	.site-action :global(svg) {
 		flex-shrink: 0;
 	}
+	@media (max-width: 767.98px) {
+		.size-compact {
+			min-height: var(--action-height, var(--bc-control-height-chip));
+		}
+	}
 	@media (min-width: 768px) {
 		:global(:where(.site-shell, .site-dialog, .desktop-home-filter__menu))
 			:is(.secondary, .quiet):not(:disabled):not([aria-disabled='true']):not(

@@ -58,7 +58,7 @@ for (const locale of ['bg', 'en']) {
 			await expect(page.locator('.site-skip')).toBeFocused();
 			await page.keyboard.press('Enter');
 			await expect(page.locator('main')).toBeInViewport();
-			await expect(page.locator('.site-shell')).toHaveCSS('background-color', 'rgb(246, 246, 247)');
+			await expect(page.locator('.site-shell')).toHaveCSS('background-color', 'rgb(250, 251, 252)');
 			await expect(
 				page.getByRole('navigation', {
 					name: locale === 'en' ? 'Main navigation' : 'Основна навигация',

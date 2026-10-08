@@ -23,19 +23,16 @@ for (const locale of ['bg', 'en']) {
 		await input.fill('https://example.com/car/123');
 		await expect(box.locator('.desktop-import-entry fieldset')).toHaveCount(0);
 		await input.press('Enter');
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/import` &&
-				url.searchParams.get('vehicle') === 'https://example.com/car/123'
-		);
-		const wizard = page.locator('.service-intake .bc-import-wizard');
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}`);
+		const wizard = page.getByRole('dialog');
 		await expect(wizard).toBeVisible();
 		await expect(page.locator('.site-intro .bc-import-wizard')).toHaveCount(0);
 		await wizard
 			.getByRole('button', { name: locale === 'en' ? 'Back' : 'Назад', exact: true })
 			.click();
-		const entry = page.locator('.site-intro .desktop-import-entry');
-		await expect(entry.locator('[name="vehicle"]')).toHaveValue('https://example.com/car/123');
+		await expect(wizard.locator('[id^="import-wizard-vehicle-"]')).toHaveValue(
+			'https://example.com/car/123'
+		);
 	});
 
 	test(`${locale}: no-link mode retains its fields across tabs and opens sourcing details`, async ({
@@ -63,23 +60,15 @@ for (const locale of ['bg', 'en']) {
 		await box
 			.getByRole('button', { name: locale === 'en' ? 'Continue' : 'Продължи', exact: true })
 			.click();
-		await expect(page).toHaveURL(
-			(url) =>
-				url.pathname === `/${locale}/import` &&
-				url.searchParams.get('intent') === 'source' &&
-				url.searchParams.get('make') === 'BMW' &&
-				url.searchParams.get('model') === 'X5' &&
-				url.searchParams.get('bodyType') === 'SUV'
-		);
-		const wizard = page.locator('.service-intake .bc-import-wizard');
+		await expect(page).toHaveURL((url) => url.pathname === `/${locale}`);
+		const wizard = page.getByRole('dialog');
 		await expect(wizard).toBeVisible();
 		await wizard
 			.getByRole('button', { name: locale === 'en' ? 'Back' : 'Назад', exact: true })
 			.click();
-		const entry = page.locator('.site-intro .desktop-import-entry');
-		await expect(entry.locator('[name="make"]')).toHaveValue('BMW');
-		await expect(entry.locator('[name="model"]')).toHaveValue('X5');
-		await expect(entry.locator('[name="bodyType"]')).toHaveValue('SUV');
+		await expect(wizard.locator('[id^="import-wizard-make-"]')).toHaveValue('BMW');
+		await expect(wizard.locator('[id^="import-wizard-model-"]')).toHaveValue('X5');
+		await expect(wizard.locator('[id^="import-wizard-type-"]')).toHaveValue('SUV');
 	});
 }
 

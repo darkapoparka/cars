@@ -13,8 +13,10 @@
 	import type { ImportBrowseData } from '$lib/server/import-browse';
 	import MobileSheet from '$lib/components/common/MobileSheet.svelte';
 	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import Check from '@lucide/svelte/icons/check';
+	import SlidersHorizontal from '@lucide/svelte/icons/sliders-horizontal';
 
 	let {
 		browse,
@@ -29,6 +31,7 @@
 	const locale = $derived(page.data.locale === 'en' ? 'en' : 'bg');
 	const copy = $derived(mobileServiceCopy[locale]);
 	let open = $state(false);
+	let overview = $state(true);
 	let field = $state<Field>('origin');
 	let draft = $state('');
 	let query = $state('');
@@ -53,7 +56,7 @@
 		model: copy.modelHelp
 	});
 	const country = $derived(
-		importCountries.find((value) => value.value === criteria.origin) ?? importCountries[0]
+		importCountries.find((market) => market.value === criteria.origin) ?? importCountries[0]
 	);
 	const pills = $derived([
 		{
@@ -95,9 +98,14 @@
 	);
 
 	function openField(value: Field) {
+		overview = false;
 		field = value;
 		draft = criteria[value];
 		query = '';
+		open = true;
+	}
+	function openFilters() {
+		overview = true;
 		open = true;
 	}
 	function apply() {
@@ -117,34 +125,29 @@
 </script>
 
 <section class="import-browse" aria-label={copy.preferences}>
-	<div class="import-browse__pills">
-		{#each pills as pill (pill.key)}
-			<button
-				type="button"
-				class:active={Boolean(criteria[pill.key])}
-				aria-label={criteria[pill.key] ? `${labels[pill.key]}: ${pill.text}` : labels[pill.key]}
-				aria-haspopup="dialog"
-				aria-expanded={open && field === pill.key}
-				onclick={() => openField(pill.key)}
+	<nav class="import-browse__countries" aria-label={copy.countryHelp}>
+		<button
+			type="button"
+			aria-label={copy.filters}
+			aria-haspopup="dialog"
+			aria-expanded={open}
+			onclick={openFilters}
+		>
+			<SlidersHorizontal size={18} aria-hidden="true" />
+		</button>
+		{#each importCountries as market (market.value)}
+			<a
+				href={importCriteriaUrl(page.url, { ...criteria, origin: market.value })}
+				data-sveltekit-noscroll
+				class:active={criteria.origin === market.value}
+				aria-current={criteria.origin === market.value ? 'page' : undefined}
+				title={market.value ? optionLabel(market.label, locale) : copy.anyCountry}
 			>
-				{#if pill.key === 'origin'}<img
-						src={assetHref(country.flagSrc)}
-						width="20"
-						height="16"
-						alt=""
-					/>{/if}
-				<span>{pill.text}</span><ChevronDown size={15} aria-hidden="true" />
-			</button>
+				{#if market.value}<img src={assetHref(market.flagSrc)} width="20" height="15" alt="" />{/if}
+				<span>{market.value ? optionLabel(market.label, locale) : copy.all}</span>
+			</a>
 		{/each}
-	</div>
-	{#if hasPreferences}
-		<div class="import-browse__request">
-			<button type="button" onclick={onrequest}
-				>{copy.find}<ArrowRight size={18} aria-hidden="true" /></button
-			>
-			<a href={importCriteriaUrl(page.url, emptyImportCriteria)}>{copy.reset}</a>
-		</div>
-	{/if}
+	</nav>
 	{#if !browse.count}
 		<div class="import-browse__empty">
 			<h2>{copy.noMatches}</h2>
@@ -158,8 +161,8 @@
 
 <MobileSheet
 	bind:open
-	title={labels[field]}
-	description={helps[field]}
+	title={overview ? copy.filters : labels[field]}
+	description={overview ? copy.preferences : helps[field]}
 	onclose={finishClose}
 	contentClass="import-preferences-sheet"
 >
@@ -170,57 +173,93 @@
 			apply();
 		}}
 	>
-		{#if field === 'make' || field === 'model'}
-			<label for={`import-preference-${id}`}>{labels[field]}</label>
-			<input
-				id={`import-preference-${id}`}
-				type="search"
-				maxlength={field === 'make' ? 60 : 80}
-				placeholder={labels[field]}
-				value={draft}
-				autocomplete="off"
-				oninput={(event) => {
-					draft = event.currentTarget.value;
-					query = draft;
-				}}
-			/>
-		{/if}
-		<div
-			class="import-preferences__choices"
-			class:import-preferences__choices--countries={field === 'origin'}
-			role="group"
-			aria-label={labels[field]}
-		>
-			{#each visibleChoices as choice (choice.value)}
-				<button
-					type="button"
-					class:active={draft === choice.value}
-					aria-pressed={draft === choice.value}
-					onclick={() => {
-						draft = choice.value;
-						query = '';
+		{#if overview}
+			<div class="import-preferences__categories">
+				{#each pills as pill (pill.key)}
+					<button
+						type="button"
+						class:active={Boolean(criteria[pill.key])}
+						aria-label={criteria[pill.key] ? `${labels[pill.key]}: ${pill.text}` : labels[pill.key]}
+						title={pill.text}
+						onclick={() => openField(pill.key)}
+					>
+						<span
+							><strong>{labels[pill.key]}</strong>{#if criteria[pill.key]}<small>{pill.text}</small
+								>{/if}</span
+						>
+						<ChevronDown size={15} aria-hidden="true" />
+					</button>
+				{/each}
+			</div>
+		{:else}
+			<button class="import-preferences__back" type="button" onclick={() => (overview = true)}>
+				<ChevronLeft size={18} aria-hidden="true" />{copy.back}
+			</button>
+			{#if field === 'make' || field === 'model'}
+				<label for={`import-preference-${id}`}>{labels[field]}</label>
+				<input
+					id={`import-preference-${id}`}
+					type="search"
+					maxlength={field === 'make' ? 60 : 80}
+					placeholder={labels[field]}
+					value={draft}
+					autocomplete="off"
+					oninput={(event) => {
+						draft = event.currentTarget.value;
+						query = draft;
 					}}
-				>
-					{#if choice.flag}<img src={assetHref(choice.flag)} width="24" height="18" alt="" />{/if}
-					<span>{choice.label}</span>{#if draft === choice.value}<Check
-							size={17}
-							aria-hidden="true"
-						/>{/if}
-				</button>
-			{/each}
-		</div>
+				/>
+			{/if}
+			<div
+				class="import-preferences__choices"
+				class:import-preferences__choices--countries={field === 'origin'}
+				role="group"
+				aria-label={labels[field]}
+			>
+				{#each visibleChoices as choice (choice.value)}
+					<button
+						type="button"
+						class:active={draft === choice.value}
+						aria-pressed={draft === choice.value}
+						onclick={() => {
+							draft = choice.value;
+							query = '';
+						}}
+					>
+						{#if choice.flag}<img src={assetHref(choice.flag)} width="24" height="18" alt="" />{/if}
+						<span>{choice.label}</span>{#if draft === choice.value}<Check
+								size={17}
+								aria-hidden="true"
+							/>{/if}
+					</button>
+				{/each}
+			</div>
+		{/if}
 	</form>
 	{#snippet footer()}
 		<div class="import-preferences__actions">
 			<button
 				type="button"
 				onclick={() => {
-					draft = '';
-					query = '';
+					if (overview) {
+						pendingHref = importCriteriaUrl(page.url, emptyImportCriteria);
+						open = false;
+					} else {
+						draft = '';
+						query = '';
+					}
 				}}>{copy.reset}</button
 			>
-			<button type="button" onclick={apply}
-				>{copy.apply}<ArrowRight size={18} aria-hidden="true" /></button
+			<button
+				type="button"
+				onclick={() => {
+					if (overview) open = false;
+					else apply();
+				}}
+				>{overview ? copy.done : copy.apply}{#if !overview}<ArrowRight
+						size={18}
+						aria-hidden="true"
+					/>{/if}</button
 			>
 		</div>
 	{/snippet}
@@ -229,27 +268,33 @@
 <style>
 	.import-browse {
 		display: grid;
-		gap: var(--bc-space-3);
+		gap: var(--bc-space-2);
 		margin-bottom: var(--bc-space-3);
 	}
-	.import-browse__pills {
+	.import-browse__countries {
+		--bc-text-filter: var(--bc-text-quick-pill);
+		--bc-leading-filter: var(--bc-leading-quick-pill);
 		display: flex;
-		overflow-x: auto;
-		scrollbar-width: none;
 		gap: var(--bc-space-2);
+		overflow-x: auto;
 		padding: 2px 0;
+		scrollbar-width: none;
 	}
-	.import-browse__pills::-webkit-scrollbar {
+	.import-browse__countries::-webkit-scrollbar {
 		display: none;
 	}
-	.import-browse__pills button {
-		display: flex;
+	/* Market pills share the same height, padding, typography and radius.
+	   Labels and flags determine their width, including the unrestricted market,
+	   so translations follow the same sizing rule within the scrolling rail. */
+	.import-browse__countries :is(a, button) {
+		display: inline-flex;
 		flex: 0 0 auto;
-		min-width: 0;
 		align-items: center;
-		gap: 6px;
-		min-height: 44px;
-		max-width: 220px;
+		justify-content: center;
+		gap: 7px;
+		min-width: var(--bc-control-height-chip);
+		max-width: 180px;
+		min-height: var(--bc-control-height-chip);
 		padding: 0 12px;
 		border: 1px solid transparent;
 		border-radius: var(--bc-radius-control);
@@ -257,30 +302,33 @@
 		color: var(--bc-ink);
 		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
 			var(--bc-font-body);
+		text-decoration: none;
 		cursor: pointer;
 	}
-	.import-browse__pills button span {
-		flex: 1;
+	.import-browse__countries button {
+		width: var(--bc-control-height-chip);
+		padding: 0;
+	}
+	.import-browse__countries a.active {
+		background: var(--bc-accent);
+		color: var(--bc-white);
+	}
+	.import-browse__countries span {
 		min-width: 0;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	.import-browse__pills button :global(svg),
-	.import-browse__pills button img {
-		flex: 0 0 auto;
+	.import-browse__countries img,
+	.import-preferences__choices img {
+		position: static;
+		inset: auto;
+		width: 20px;
+		height: 15px;
+		flex: 0 0 20px;
+		object-fit: cover;
+		border-radius: 2px;
 	}
-	.import-browse__pills button.active {
-		background: var(--bc-accent);
-		color: var(--bc-white);
-	}
-	.import-browse__request {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		gap: var(--bc-space-3);
-	}
-	.import-browse__request button,
 	.import-browse__empty button {
 		display: flex;
 		align-items: center;
@@ -295,14 +343,19 @@
 		font-family: var(--bc-font-body);
 		font-size: var(--bc-mobile-body);
 		cursor: pointer;
+		min-width: 0;
+		white-space: nowrap;
+	}
+	.import-browse__empty :global(svg) {
+		flex: 0 0 auto;
 	}
 	.import-browse a {
 		display: flex;
 		align-items: center;
 		gap: 6px;
-		min-height: 44px;
+		min-height: var(--bc-control-height-chip);
 		color: var(--bc-copy);
-		font-size: var(--bc-mobile-label);
+		font-size: var(--bc-text-quick-pill);
 	}
 	.import-browse__empty {
 		display: grid;
@@ -326,11 +379,71 @@
 		display: grid;
 		gap: var(--bc-space-3);
 	}
+	.import-preferences__categories {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: var(--bc-space-2);
+	}
+	.import-preferences__categories button {
+		display: flex;
+		min-width: 0;
+		min-height: var(--bc-control-height-standard);
+		align-items: center;
+		justify-content: space-between;
+		gap: var(--bc-space-2);
+		padding: 0 12px;
+		border: 1px solid transparent;
+		border-radius: var(--bc-radius-control);
+		background: var(--bc-white);
+		color: var(--bc-ink);
+		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
+			var(--bc-font-body);
+		cursor: pointer;
+	}
+	.import-preferences__categories button.active {
+		border-color: var(--bc-accent);
+	}
+	.import-preferences__categories button > span {
+		display: flex;
+		min-width: 0;
+		gap: 6px;
+		align-items: baseline;
+	}
+	.import-preferences__categories strong,
+	.import-preferences__categories small {
+		min-width: 0;
+		overflow: hidden;
+		font: inherit;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	.import-preferences__categories small {
+		color: var(--bc-muted);
+		font-size: var(--bc-mobile-meta);
+	}
+	.import-preferences__categories :global(svg) {
+		flex: 0 0 auto;
+	}
+	.import-preferences__back {
+		display: flex;
+		width: fit-content;
+		min-height: var(--bc-control-height-standard);
+		align-items: center;
+		gap: 6px;
+		padding: 0 4px;
+		border: 0;
+		border-radius: var(--bc-radius-control);
+		background: transparent;
+		color: var(--bc-ink);
+		font: var(--bc-weight-control) var(--bc-text-filter)/var(--bc-leading-filter)
+			var(--bc-font-body);
+		cursor: pointer;
+	}
 	.import-preferences label {
 		font-size: var(--bc-mobile-label);
 	}
 	.import-preferences input {
-		min-height: 48px;
+		min-height: var(--bc-control-height-standard);
 		width: 100%;
 		min-width: 0;
 		padding: 0 14px;
@@ -349,23 +462,27 @@
 	}
 	.import-preferences__choices button {
 		display: flex;
+		min-width: 0;
 		align-items: center;
 		gap: var(--bc-space-2);
-		min-height: 48px;
-		padding: 10px 12px;
+		min-height: var(--bc-control-height-standard);
+		padding: 0 12px;
 		border: 1px solid var(--bc-border);
 		border-radius: var(--bc-radius-control);
 		background: var(--bc-white);
 		color: var(--bc-ink);
 		text-align: left;
 		font-family: var(--bc-font-body);
-		font-size: var(--bc-mobile-body);
-		line-height: var(--bc-mobile-body-leading);
+		font-size: var(--bc-text-filter);
+		line-height: var(--bc-leading-filter);
 		cursor: pointer;
 	}
 	.import-preferences__choices button span {
 		flex: 1;
 		min-width: 0;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
 	}
 	.import-preferences__choices button img,
 	.import-preferences__choices button :global(svg) {
@@ -393,8 +510,11 @@
 		background: var(--bc-white);
 		color: var(--bc-ink);
 		font-family: var(--bc-font-body);
-		font-size: var(--bc-mobile-body);
+		font-size: var(--bc-text-control);
+		line-height: var(--bc-leading-control);
 		cursor: pointer;
+		white-space: nowrap;
+		min-width: 0;
 	}
 	.import-preferences__actions button:last-child {
 		border-color: transparent;
@@ -407,7 +527,7 @@
 		outline: 2px solid var(--bc-accent);
 		outline-offset: 2px;
 	}
-	.import-browse__pills button:focus-visible {
-		outline-offset: -3px;
+	.import-browse__countries :is(a, button):focus-visible {
+		--control-focus-offset: -3px;
 	}
 </style>

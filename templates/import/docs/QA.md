@@ -1,5 +1,81 @@
 # QA contract — Import
 
+Desktop Services task flow: check all four compact service segments in BG/EN at
+768/1024/1440/1920px, including invalid entries, keyboard tab selection and separate
+drafts. Task selection must not filter the catalogue or alter the search query;
+native search must preserve the selected `service`. Check prefilled VIN/viewing
+modals, initial focus on the dialog container, dismissal/restoration and actual
+demo submission context. Verify VIN and manual Selling handoffs in the desktop
+overlay without changing the Services URL, task or search; verify Import listing
+and sourcing handoffs. Services has no country controls in either entry mode;
+country choices remain inside the Import dialog/direct entry. Keep input,
+inset action and panel bounds stable across tasks. The joined rail is 44px high,
+uses equal segments and 16px text, and is narrower than the 52px entry. Verify helper text
+and no-link/manual actions below the input and the task rail above it, including
+visible validation with no overlap or reflow. Match Home/Services/Import
+mobile at 320/390px and retain the existing localized Import/Selling journeys.
+
+Home, Inventory and Services opt into the shared `MobileModeTabs` segmented appearance
+and `DesktopDiscoveryPanel` compact header. Check all three 44px rails, exactly
+12px above aligned fields, with equal segments, contained labels, white selection
+and fill-only pointer hover. Home and Inventory keep their 24px artwork and
+existing search/filter dimensions. Check native Cars/SUV/Bikes/Vans links,
+query-context retention and pagination reset, Arrow/Home/End tab keys, search
+dialog focus/restoration, Home filters and native task handoffs. Compare 320/390px.
+
+Home/Services Import: verify listing and sourcing entries in BG/EN, country choices inside the dialog/direct entry,
+no-link toggle, state across Home tabs, Enter/GET enhancement and retained
+fields on the dialog's Back step. The desktop handoff must leave the page URL and
+underlying task/search unchanged. Closing/reopening must retain the active request,
+restore its actual opener and keep the footer reachable at short screen heights.
+A new listing URL must not restore a
+previous vehicle's draft. Keep the Home frame, panel and heading anchors stable
+across modes at 768/1440px. Measure the actual field row and its inset Continue,
+not just the outer panel, including no-link and invalid-entry states. Compare Home/Services/Import at 320/390px. Run the existing
+Import wizard journeys, Home search/popover checks and service request checks.
+Run `desktop-import-dialog.e2e.ts` for accessible dismissal, draft isolation,
+failed-save retry, actual demo receipts and mobile resize. Verify the native
+Import URL and no-JS GET fallback independently.
+
+Desktop service requests: verify all three card entries plus the VIN/viewing hero
+actions in BG/EN, dialog-container focus, Escape/outside dismissal and opener focus,
+separate service drafts, validation on both client/server, failed-save retry and
+duplicate-send prevention. Confirm demo receipts do not imply delivery or a
+confirmed viewing. At 768px and short heights verify contained scrolling, focus
+trapping and a visible submit action. Resize to mobile while open and check overlay
+removal and unchanged native destinations. Import/Sell retain direct-page, modified-link,
+mobile and no-JS fallbacks. Browse retains its page link; Compare enhances ordinary
+links at desktop and phone widths while retaining its direct page. Compare matched
+Services presentation at 320/390px.
+
+Run `desktop-sell-dialog.e2e.ts` for card/VIN/manual entries, carried VIN, mode
+selection, invalid-field focus, active-request restoration, different-car draft
+isolation, retry and duplicate-send prevention, accessible dismissal, trapped
+focus and the short-screen footer. Verify actual demo receipts and native GET,
+modified-link and phone navigation. Compare matched Services and Selling at
+320/390px in BG/EN and run the existing direct Selling submission journeys.
+
+Run `compare-overlay.e2e.ts` for the [Compare overlay](compare-overlay-focus-2026-10-08/README.md) and [selection/table UX](compare-ux-2026-10-08/README.md): BG/EN entry, selecting several cars without losing search or jumping to the table, minimum two/maximum four, stable column order, selected chips, removal/clear, stored selection, Only differences, actual clipboard sharing and denied-clipboard page fallback, load failure/retry, Back/Forward and dismissal, focus trapping/restoration, modified links and no-JS navigation. Check 768px short-height scrolling, two fully visible columns at 320/390px and 320x540px, sticky vehicle headings and full-screen containment. Run `form-opening-focus.e2e.ts` on desktop and touch-emulated phone projects: opening Import and vehicle enquiry must produce no editable-field focus before a tap. Keep invalid-field focus after a deliberate submission and existing search focus. Match direct Compare, Services, Import and Selling phone presentation before/after. Browser focus evidence does not establish real-device keyboard acceptance.
+
+For the [Import hero entry](desktop-import-hero-entry-2026-10-06/README.md), verify
+the first step is inside the shared hero panel in both modes, with no clipping
+or overlapping artwork at 768/1024/1440/1920px. Check invalid input, country
+selection, state retained across forward/back navigation, focus after moving
+between hero and below-hero steps, draft restoration and both demo submissions.
+Retain matched 320/390px mobile captures and mobile wizard journeys. Other page
+compositions remain unchanged.
+
+For the [final desktop cohesion pass](desktop-final-cohesion-2026-10-06/README.md),
+verify the shared 52px search, 36px magnifier, unchanged main-page outer panels
+and artwork anchors, complete vehicle titles/specs, contained cutout images,
+covered photographs, aligned card prices/actions and primary Enquiry/secondary Call roles.
+Import, Sell and Financing use compact 240px headers (260px at 768–900px) with
+the same title anchor; their first fields should appear at least 140px sooner.
+Check forms, modes, search, native destinations, keyboard focus and neutral
+fill-only hovers in BG/EN at 768/1024/1440/1920px. Compare all affected routes at
+320/390px against matched mobile captures and computed presentation. External
+map pixels may be masked consistently; retain their frame checks.
+
 Passing a build is necessary but not sufficient. A lead variant must also be inspected as a dealership experience.
 
 ## Install/run
@@ -12,6 +88,22 @@ Passing a build is necessary but not sufficient. A lead variant must also be ins
 - `npm run verify`
 - `npm run build`
 - `npm run test:e2e`
+
+## Current desktop discovery checks
+
+About pairs black Разгледай автомобили/Browse our cars with grey Виж услугите/View services from the [About action refinement](desktop-about-actions-2026-10-06/README.md). Check localized native inventory/services destinations, equal button dimensions, canonical filled monochrome brand marks centered below, fill-only pointer hovers and matched 320/390px mobile preservation. Existing mobile and team contact links remain unchanged. Contact's [paired actions](desktop-contact-paired-actions-2026-10-06/README.md) use black Call and grey Запитване/Enquiry buttons, with plain monochrome social icons centered below. Check equal-width 48px buttons, configured social destinations, safe new-tab relationships and 48px icon targets. The address is an inline Maps link in the existing 24px caption row; a real email appears only for a configured `mailto:` destination. The sample enquiry-page URL must not display as email. Directions remains at the map, with no separate Directions/Viber hero button. Verify fill-only hover without border/shadow changes, keyboard focus, enquiry fragment and native form validation. Hero/panel/artwork and vertical action anchors remain stable for the current data; Call retains its normal button dimensions while joining the left column. Verify BG/EN desktop states, About's unchanged composition and matched mobile at 320/390px.
+
+The [Services pill refinement](desktop-service-pills-2026-10-06/README.md) uses five compact pills above the shared search: All, Check/VIN, Selling, Import and Viewing. Check immediate query filtering, Arrow/Home/End navigation, the selected tab's labelled panel, contextual native CTA destinations and GET/SSR query preservation. The visible result count is integrated into the full-width search placeholder, initially Търси услуга (6)/Search services (6). Its accessible label stays stable and a visually hidden live status announces filtered counts. Check placeholder/status updates for 6, 1 and 0 results, clearing and native GET/SSR. The contextual CTA is the sole visible item below search and stays centered on the full panel. Check that the CTA stays centered for all five categories. Preserve Home/Cars/Services frame and artwork bounds, fill-only pointer hovers and matched BG/EN mobile views at 320/390px.
+
+The [Cars/Home box alignment](desktop-inventory-homebox-2026-10-05/README.md) is the latest Inventory composition: reuse Home's illustrated choices header above search, with Cars, SUVs, Bikes and Vans. Preserve the existing full-width quick-filter row and All filters. Verify native category links, preserved search/sort/view/locale and repeated context parameters, pagination reset, correct empty results for categories without stock, stable Home/Cars box bounds and matched 320/390px mobile preservation. Earlier receipts describe their historical category-row states.
+
+The [5 October control correction](desktop-discovery-controls-2026-10-05/README.md) keeps Home's full-width search and four equal quick filters. Verify the illustrated grey selected mode without an underline, Arrow/Home/End navigation, filter drafts and dialog focus. Home/Inventory/Services search actions are round black icon controls with accessible labels. Inventory has no extra vehicle-type tab row; selecting and clearing Body through All filters must preserve keyword, other filters and display settings. Services now uses the category row described above. Shared frame/panel and About/Contact CTA bounds stay stable. Check BG/EN desktop states and matched 320/390px mobile preservation with the existing search, Home popover and page-pattern suites.
+
+The [inventory row refinement](desktop-inventory-row-2026-10-05/README.md) keeps a
+44px action target around the smaller 36px search circle. Check the five equal
+Inventory fields and trailing All filters at wide desktop, the three-column grid
+at 768–1023px, compact maximum-price/mileage summaries and keyboard focus without
+horizontal overflow. Long ranges retain their full summary in the trigger title.
 
 ## Incremental desktop polish
 

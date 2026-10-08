@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { assetHref } from '$lib/utils/assets';
 	import { dealerCopy } from '$lib/config/dealer-copy';
+	import { sharedAdminDemoHref } from '$lib/config/admin-demo';
+	import { siteShellCopy } from '$lib/content/site-shell';
 	import LocaleTrigger from '$lib/locale/LocaleTrigger.svelte';
 	import { linkHref as resolve } from '$lib/utils/links';
 	import Calculator from '@lucide/svelte/icons/calculator';
@@ -11,7 +13,7 @@
 	import MessageCircle from '@lucide/svelte/icons/message-circle';
 	import MapPin from '@lucide/svelte/icons/map-pin';
 	import PhoneCall from '@lucide/svelte/icons/phone-call';
-	import UserRound from '@lucide/svelte/icons/user-round';
+	import LayoutDashboard from '@lucide/svelte/icons/layout-dashboard';
 	import Wrench from '@lucide/svelte/icons/wrench';
 	import MobileMenuAction from '$lib/components/common/MobileMenuAction.svelte';
 	import { site } from '$lib/config/site';
@@ -28,10 +30,12 @@
 	} = $props();
 
 	const english = $derived(page.data.locale === 'en');
+	const copy = $derived(siteShellCopy[english ? 'en' : 'bg']);
 	const localHref = (href: string) => href + (english ? '?lang=en' : '');
 	const menuSections = $derived([
 		{
 			title: english ? 'Cars' : 'Автомобили',
+			showAdminDemo: false,
 			links: [
 				{ href: '/inventory', label: english ? 'All cars' : 'Всички коли', icon: CarFront },
 				{
@@ -59,16 +63,11 @@
 		},
 		{
 			title: site.identity.name,
+			showAdminDemo: true,
 			links: [
 				{ href: '/services', label: english ? 'Services' : 'Услуги', icon: Wrench },
 				{ href: '/about', label: english ? 'About us' : 'За нас', icon: Info },
-				{ href: '/contact', label: english ? 'Contact' : 'Контакти', icon: PhoneCall },
-				{
-					href: '/account/messages',
-					label: english ? 'Messages' : 'Съобщения',
-					icon: MessageCircle
-				},
-				{ href: '/account', label: english ? 'Account' : 'Вход / профил', icon: UserRound }
+				{ href: '/contact', label: english ? 'Contact' : 'Контакти', icon: PhoneCall }
 			]
 		}
 	] as const);
@@ -136,6 +135,14 @@
 						onclick={(event) => onnavigate(event, localHref(link.href))}
 					/>
 				{/each}
+				{#if section.showAdminDemo}
+					<MobileMenuAction
+						href={sharedAdminDemoHref}
+						label={copy.adminDemo}
+						icon={LayoutDashboard}
+						target="_blank"
+					/>
+				{/if}
 			</div>
 		</section>
 	{/each}

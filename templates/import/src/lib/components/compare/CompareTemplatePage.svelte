@@ -398,6 +398,54 @@
 			min-width: 560px;
 		}
 
+		/* The account shell already owns the header and page gutters. */
+		:global(.account-mobile-shell) .dashboard-box.daynight-dashboard-compare {
+			border: 0 !important;
+			background: transparent !important;
+			padding: 0 !important;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-dashboard-compare-scroll) {
+			overflow: visible;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile) {
+			min-height: 0;
+			padding: 0;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__appbar),
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__intro) {
+			display: none;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__pair-head button) {
+			min-width: 44px;
+			min-height: 44px;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__remove) {
+			width: 44px;
+			height: 44px;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__mini-title) {
+			overflow: hidden !important;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__mini-title a) {
+			display: -webkit-box !important;
+			max-height: 36px;
+			overflow: hidden;
+			line-clamp: 2;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+		}
+
+		:global(.daynight-dashboard-compare .daynight-compare-mobile__mini-car) {
+			grid-template-rows: 48px 36px 16px;
+		}
+
 		:global(.daynight-dashboard-compare .daynight-compare-table td:first-child) {
 			min-width: 120px;
 		}

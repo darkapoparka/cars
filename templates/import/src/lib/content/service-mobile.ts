@@ -1,6 +1,10 @@
 export const mobileServiceCopy = {
 	en: {
 		preferences: 'Import preferences',
+		all: 'Everywhere',
+		filters: 'Filters',
+		back: 'Back',
+		done: 'Done',
 		country: 'Country',
 		type: 'Type',
 		make: 'Make',
@@ -33,6 +37,10 @@ export const mobileServiceCopy = {
 	},
 	bg: {
 		preferences: 'Предпочитания за внос',
+		all: 'Навсякъде',
+		filters: 'Филтри',
+		back: 'Назад',
+		done: 'Готово',
 		country: 'Държава',
 		type: 'Тип',
 		make: 'Марка',

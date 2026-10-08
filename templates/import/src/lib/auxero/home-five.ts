@@ -627,7 +627,7 @@ const showcaseBrandCard = (
 		return {
 			...brand,
 			count: locale === 'bg' ? 'Внос по заявка' : 'Import on request',
-			href: '/import'
+			href: `/import?intent=source&make=${encodeURIComponent(brand.query)}`
 		};
 	}
 

@@ -42,13 +42,23 @@
 		headerActions?: Snippet;
 		class?: string;
 	} = $props();
+	let contentElement = $state<HTMLElement | null>(null);
+	function focusOnOpen(event: Event) {
+		if (onOpenAutoFocus) onOpenAutoFocus(event);
+		else {
+			event.preventDefault();
+			contentElement?.focus({ preventScroll: true });
+		}
+	}
 </script>
 
 <Dialog.Root bind:open>
 	<Dialog.Portal>
 		<Dialog.Overlay class="site-dialog-backdrop" />
 		<Dialog.Content
-			{onOpenAutoFocus}
+			bind:ref={contentElement}
+			tabindex={-1}
+			onOpenAutoFocus={focusOnOpen}
 			{onCloseAutoFocus}
 			{onEscapeKeydown}
 			class={[

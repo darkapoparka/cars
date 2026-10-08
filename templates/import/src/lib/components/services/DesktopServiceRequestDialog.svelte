@@ -63,15 +63,6 @@
 		form.receipt = null;
 	});
 
-	function focusFirstField(event: Event) {
-		const input = formElement?.querySelector<HTMLElement>(
-			entry?.kind === kind && current.values.reference ? '[name="name"]' : 'input, textarea'
-		);
-		if (input) {
-			event.preventDefault();
-			input.focus({ preventScroll: true });
-		}
-	}
 	async function submit(event: SubmitEvent) {
 		event.preventDefault();
 		const submittedKind = kind;
@@ -116,7 +107,6 @@
 	title={detail.title}
 	description={detail.description}
 	class="desktop-service-request"
-	onOpenAutoFocus={focusFirstField}
 	{onCloseAutoFocus}
 >
 	{#if current.receipt}

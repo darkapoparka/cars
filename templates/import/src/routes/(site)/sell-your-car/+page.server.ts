@@ -1,5 +1,7 @@
 import { localizedCopy } from '$lib/content/localized';
 import type { PageServerLoad } from './$types';
+import { vehicleIntakeOptions } from '$lib/domain/vehicle-intake-options';
+import { listPublicVehicles } from '$lib/server/public-vehicles';
 import {
 	auxeroSellMobileSteps,
 	auxeroSellSteps,
@@ -11,6 +13,7 @@ export const load: PageServerLoad = ({ url, locals }) => {
 	void url.pathname;
 	void url.search;
 	return {
+		intakeOptions: vehicleIntakeOptions(listPublicVehicles()),
 		form: localizedCopy(
 			sellCarFormDataWithPrefill(url.searchParams.get('vin') ?? ''),
 			locals.localeState.locale

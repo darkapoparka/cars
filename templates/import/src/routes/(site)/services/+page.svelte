@@ -258,7 +258,8 @@
 			flex: 0 0 auto;
 			border-radius: var(--bc-radius-control);
 			padding-inline: var(--bc-space-3);
-			font-size: var(--bc-mobile-label);
+			font-size: var(--bc-text-quick-pill);
+			line-height: var(--bc-leading-quick-pill);
 			white-space: nowrap;
 		}
 		.service-mobile-filters :global(.site-action.secondary) {

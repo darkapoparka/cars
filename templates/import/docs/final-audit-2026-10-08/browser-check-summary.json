@@ -1,0 +1,18 @@
+{
+	"original": {
+		"startTime": "2026-10-08T05:45:28.648Z",
+		"duration": 540394.955,
+		"expected": 158,
+		"skipped": 48,
+		"unexpected": 8,
+		"flaky": 0
+	},
+	"diagnostic": {
+		"startTime": "2026-10-08T06:00:30.682Z",
+		"duration": 69757.552,
+		"expected": 14,
+		"skipped": 2,
+		"unexpected": 0,
+		"flaky": 0
+	}
+}
