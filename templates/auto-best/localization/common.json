@@ -718,5 +718,11 @@
   "company.team.support": {
     "en": "Customer support",
     "bg": "Обслужване на клиенти"
-  }
+  },
+  "home.bannerPreview.title": { "en": "Banner preview", "bg": "Банери" },
+  "home.bannerPreview.stripes": { "en": "Stripes", "bg": "Ивици" },
+  "home.bannerPreview.kerb": { "en": "Kerbs", "bg": "Бордюри" },
+  "home.bannerPreview.circuit": { "en": "Nordschleife", "bg": "Нюрбургринг" },
+  "home.bannerPreview.headlights": { "en": "Headlights", "bg": "Фарове" },
+  "home.bannerPreview.taillights": { "en": "Taillights", "bg": "Стопове" }
 }

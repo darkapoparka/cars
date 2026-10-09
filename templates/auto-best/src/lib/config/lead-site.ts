@@ -1,4 +1,5 @@
 export type SiteAssetPath = `/${string}`;
+export type HomeBannerVariant = 'motorsport' | 'kerb' | 'circuit' | 'headlights' | 'taillights';
 
 type RouteHeroAsset = 'cars' | 'keys' | 'guide' | 'silver' | 'graphite' | 'portrait' | 'phone' | 'showroom' | 'email';
 type RouteHeroVariant = 'cars' | 'keys' | 'guide' | 'about' | 'contact' | 'sell';
@@ -43,6 +44,10 @@ type LeadSiteConfig = {
     editorialBanner: SiteAssetPath;
     sectionBanners: { graphite: SiteAssetPath; crimson: SiteAssetPath };
     discoveryBackground: SiteAssetPath;
+    homeSectionBanner: { variant: HomeBannerVariant; mobile: 'featured' | 'none' };
+    homeSectionBannerAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeSectionBannerMobileAssets: Record<HomeBannerVariant, SiteAssetPath>;
+    homeCircuitOutline: SiteAssetPath;
     home: { collection: SiteAssetPath; sell: SiteAssetPath; sellCompact: SiteAssetPath; import: SiteAssetPath };
     routeHero: {
       standard: Record<RouteHeroAsset, SiteAssetPath>;
@@ -216,6 +221,23 @@ export const leadSite = {
       crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
     },
     discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
+    // Client copies can choose one retained style and a compact mobile placement.
+    homeSectionBanner: { variant: 'kerb', mobile: 'featured' },
+    homeSectionBannerAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeSectionBannerMobileAssets: {
+      motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
+      kerb: '/assets/images/template/home-section-kerb-photographic-v5-960.webp',
+      circuit: '/assets/images/template/home-section-circuit-asphalt-v3-960.webp',
+      headlights: '/assets/images/template/home-section-headlights-v1.webp',
+      taillights: '/assets/images/template/home-section-taillights-v1.webp'
+    },
+    homeCircuitOutline: '/assets/images/template/home-section-nordschleife-outline-v2.svg',
     home: {
       collection: serviceIllustrations.collection,
       sell: serviceIllustrations.sell,

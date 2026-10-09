@@ -21,11 +21,20 @@ const staticRoot = path.join(root, 'static');
 // The wagon now has a transparent v2 cutout; its opaque original remains retained.
 // The desktop make catalogue reuses 149 byte-identical logos from Cars Mobile.
 // The mobile vehicle detail finance card adds one optimized transparent cutout.
-const guardedMediaCount = 351;
+// Three background-only plates support the requested desktop comparison.
+// Five client choices retain a photographic kerb plate and smaller mobile encodings.
+const guardedMediaCount = 366;
 // Preserve the two earlier local Home scene options for provenance.
 const homeScenePrototypes = ['/assets/images/template/home-sell-handover-v1.webp', '/assets/images/template/home-finance-scene-v1.webp'];
 // Preserve source identity/artwork for provenance; the default logo and icon are Auto Best.
 const retainedSourceAssets = new Set(['/assets/images/template/service-sell-key-v1.png', '/assets/images/icon-box/car-list4.png', '/assets/images/icon-box/car-list7.png', '/assets/images/lead/day-night-guide-import.webp', '/assets/images/lead/day-night-guide-inspection.webp', '/assets/images/lead/day-night-guide-leasing.webp', '/assets/images/lead/day-night-home-hero-v3.webp', '/assets/images/lead/day-night-home-black-v1.webp', '/assets/images/lead/day-night-logo.png', '/favicon.ico', '/assets/images/section/car-slide1.png', '/assets/images/section/car-slide2.png', '/assets/images/section/car-slide3.png']);
+// Keep the first comparison's alternate plates and the earlier two-corner kerb.
+for (const name of ['satin-metal', 'soft-studio']) retainedSourceAssets.add(`/assets/images/template/home-section-${name}-comparison-v1.webp`);
+retainedSourceAssets.add('/assets/images/template/home-section-kerb-balanced-v1.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-kerb-corner-v2.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-kerb-clean-v3.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-kerb-paired-v4.webp');
+retainedSourceAssets.add('/assets/images/template/home-section-circuit-balanced-v1.webp');
 // Earlier Home section and advice artwork is retained without runtime requests.
 retainedSourceAssets.add('/assets/images/template/home-section-guides-editorial-v2.webp');
 retainedSourceAssets.add('/assets/images/template/home-section-guides-notebook-cutout-v3.webp');

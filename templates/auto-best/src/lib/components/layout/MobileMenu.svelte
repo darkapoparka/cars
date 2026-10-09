@@ -9,6 +9,8 @@
   import type { Attachment } from 'svelte/attachments';
   import { trapDialogTab } from '$lib/ui/overlay';
   import { brand } from '$config/brand';
+  import { canPreviewHomeBanners } from '$lib/ui/home-banner';
+  import HomeBannerPicker from './HomeBannerPicker.svelte';
   import SocialBrandIcon from '$components/company/SocialBrandIcon.svelte';
   import MobileNavIcon from './MobileActionIcon.svelte';
   import type { HeaderPresentation } from '$data/shell';
@@ -60,6 +62,9 @@
           <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="company" size={22} /><span>{i18n.t("m_b4b580a9ad8c")}</span><MobileNavIcon name="arrow" size={18} /></a>
           <a href={i18n.href(resolve('/contact'))} aria-current={active.contact ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={22} /><span>{i18n.t("m_d58d4100d4e6")}</span><MobileNavIcon name="arrow" size={18} /></a>
         </nav>
+        {#if canPreviewHomeBanners}
+          <HomeBannerPicker {closeMobile} />
+        {/if}
         {#if brand.instagramUrl || brand.youtubeUrl || brand.facebookUrl}
         <div class="dn-mobile-menu__social" role="group" aria-label={i18n.t("m_b16446d4331a")}>
           {#if brand.instagramUrl}<a {...{ href: brand.instagramUrl }} target="_blank" rel="noopener noreferrer"><SocialBrandIcon name="instagram" /><span>{i18n.t("m_bad57ef7837c")}</span></a>{/if}
