@@ -236,6 +236,7 @@
   --dn-compact-control-padding-inline: var(--dn-space-4);
   --dn-entry-action-padding-inline: var(--dn-space-5);
   --dn-control-icon-size: 18px;
+  --dn-mobile-header-icon-size: var(--dn-space-5);
   --dn-entry-action-icon-size: 15px;
   --dn-entry-segment-width: min(240px, calc(100% - var(--dn-space-6)));
   --dn-entry-action-width: min(13rem, 100%);

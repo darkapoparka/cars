@@ -116,12 +116,12 @@
 
             <div class="dn-detail-card dn-detail-media-card">
               <figure class="dn-detail-gallery">
-                <a class="dn-detail-mobile-back" href={i18n.href(data.returnTo)} aria-label={i18n.t("m_82331f7533ac")}>
+                <a class="dn-detail-mobile-back dn-icon-button dn-mobile-header-action" href={i18n.href(data.returnTo)} aria-label={i18n.t("m_82331f7533ac")}>
                   <MobileActionIcon name="back" />
                 </a>
                 <div class="dn-detail-mobile-actions">
-                  <a {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}><MobileActionIcon name="phone" /></a>
-                  <button type="button" onclick={shareVehicle} aria-label={shareCopied ? i18n.t("m_bd845e0879a3") : i18n.t("m_d8977651889f")}>
+                  <a class="dn-icon-button dn-mobile-header-action" {...phoneLinkAttributes} aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}><MobileActionIcon name="phone" /></a>
+                  <button class="dn-icon-button dn-mobile-header-action" type="button" onclick={shareVehicle} aria-label={shareCopied ? i18n.t("m_bd845e0879a3") : i18n.t("m_d8977651889f")}>
                     <MobileActionIcon name="share" />
                   </button>
                 </div>

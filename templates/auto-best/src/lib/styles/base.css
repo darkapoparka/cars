@@ -52,6 +52,9 @@ button { font: var(--dn-control-font); }
 /* One browser-independent frame for close, back and clear icon controls. */
 .dn-icon-button { display: inline-grid; place-items: center; flex: 0 0 auto; width: var(--dn-control-hit-height); height: var(--dn-control-hit-height); min-width: var(--dn-control-hit-height); min-height: var(--dn-control-hit-height); padding: var(--dn-compact-control-inset); box-sizing: border-box; appearance: none; border: 0; border-radius: var(--dn-pill); background-clip: content-box; color: inherit; cursor: pointer; touch-action: manipulation; }
 .dn-icon-button > svg { display: block; flex: none; pointer-events: none; }
+@media (max-width: 991px) {
+  .dn-mobile-header-action > svg { width: var(--dn-mobile-header-icon-size); height: var(--dn-mobile-header-icon-size); }
+}
 .dn-overlay-close > svg { width: var(--dn-control-icon-size); height: var(--dn-control-icon-size); }
 .dn-mobile-overlay-icon { display: none; }
 

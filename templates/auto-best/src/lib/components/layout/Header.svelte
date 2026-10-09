@@ -309,11 +309,11 @@
           </div>
 
           <div class="dn-mobile-controls">
-            <a class="dn-mobile-control" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
+            <a class="dn-mobile-control dn-icon-button dn-mobile-header-action" href={i18n.href(resolve('/contact'))} aria-label={i18n.t("m_8dc51841d515")}>
               <MobileNavIcon name="location" size={22} />
             </a>
             <a
-              class="dn-mobile-control dn-mobile-control--call"
+              class="dn-mobile-control dn-mobile-control--call dn-icon-button dn-mobile-header-action"
               {...phoneLinkAttributes}
               aria-label={i18n.t("m_772c70f449af", { p0: brand.phone })}
             >
@@ -321,7 +321,7 @@
             </a>
             {#if vehicleDetailHeader}
             <button
-              class="dn-mobile-toggle"
+              class="dn-mobile-toggle dn-icon-button dn-mobile-header-action"
               type="button"
               {@attach attachMobileToggle}
               aria-expanded={mobileOpen}
@@ -860,7 +860,7 @@
     .dn-mobile-control::before {
       position: absolute;
       z-index: -1;
-      inset: 2px;
+      inset: var(--dn-compact-control-inset);
       border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
       border-radius: 50%;
       background: color-mix(in srgb, currentColor 6%, transparent);

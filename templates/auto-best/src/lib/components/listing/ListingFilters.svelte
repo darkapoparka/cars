@@ -93,7 +93,7 @@
           <span class={['dn-listing-filter__keyword-value', { 'dn-listing-filter__keyword-value--empty': !query }]}>{query || `${i18n.t("m_49c266baaaa7")} (${resultCount})`}</span>
           <span class="dn-listing-filter__keyword-hint">{i18n.t("m_27194051d1f9")} <Icon name="arrow-right" size={16} /></span>
         </button>
-        <button class="dn-listing-filter__mobile-sort dn-icon-button" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
+        <button class="dn-listing-filter__mobile-sort dn-icon-button dn-mobile-header-action" class:dn-listing-filter__mobile-sort--active={filters.sort !== 'default'} type="button" title={i18n.t("m_bec69036aa27")}
           aria-label={i18n.t("m_c3f09566c8eb", { p0: i18n.text(listingFilterOptions.sorts.find(([value]) => value === filters.sort)?.[1] ?? 'Recommended') })}
           aria-haspopup="dialog" aria-controls="dn-listing-sort-sheet" aria-expanded={sortOpen}
           onclick={(event) => openSort(event, 'sort')}>
@@ -101,7 +101,7 @@
           {#if filters.sort !== 'default'}<span class="dn-listing-filter__sort-active" aria-hidden="true"></span>{/if}
         </button>
         <button
-          class="dn-listing-filter__toggle dn-icon-button"
+          class="dn-listing-filter__toggle dn-icon-button dn-mobile-header-action"
           class:dn-listing-filter__toggle--active={activeFilterCount > 0}
           type="button"
           aria-haspopup="dialog"
