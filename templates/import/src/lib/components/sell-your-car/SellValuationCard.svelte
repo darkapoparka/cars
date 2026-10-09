@@ -16,7 +16,7 @@
 				<source
 					media="(max-width: 767px)"
 					srcset={`${assetHref(`${banner}-small.webp`)} 360w, ${assetHref(`${banner}.webp`)} 720w, ${assetHref(`${banner}-large.webp`)} 1080w`}
-					sizes="(max-width: 767px) calc(70vw - 19.6px), 1px"
+					sizes="(max-width: 767px) min(calc(78vw - 21.84px), 300px), 1px"
 					type="image/webp"
 				/>
 				<img
@@ -48,8 +48,7 @@
 		<small id="sell-valuation-note" class="sr-only">{copy.sellNote}</small>
 	</div>
 	<div class="sell-valuation__guide">
-		<h2>{copy.howTitle}</h2>
-		<ol>
+		<ol aria-label={copy.howTitle}>
 			{#each copy.sellSteps as step, index (step.title)}
 				<li>
 					<span aria-hidden="true">{index + 1}</span>
@@ -75,7 +74,7 @@
 	}
 	.sell-valuation__banner {
 		position: relative;
-		min-height: 144px;
+		min-height: 128px;
 		background: var(--bc-ink);
 	}
 	.sell-valuation__content {
@@ -97,7 +96,7 @@
 		position: absolute;
 		inset: 0 0 0 auto;
 		display: block;
-		width: 70%;
+		width: min(78%, 300px);
 		height: 100%;
 		mask-image: linear-gradient(to right, transparent, #000 30%);
 	}
@@ -105,7 +104,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		object-fit: contain;
+		object-fit: cover;
 		object-position: right center;
 	}
 	.sell-valuation h2 {
@@ -149,7 +148,6 @@
 	}
 	.sell-valuation__guide {
 		display: grid;
-		gap: var(--bc-space-4);
 		padding: var(--bc-space-4);
 	}
 	.sell-valuation ol {

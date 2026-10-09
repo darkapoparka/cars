@@ -134,7 +134,7 @@ for (const width of [320, 390]) {
 			);
 			await expect(page.locator('.sell-valuation__guide li')).toHaveCount(3);
 			await expect(
-				page.locator('.sell-valuation__guide').getByRole('heading', { name: c.guide, exact: true })
+				page.locator('.sell-valuation__guide').getByRole('list', { name: c.guide, exact: true })
 			).toBeVisible();
 			await accessible(page);
 			for (const manual of [false, true]) {
