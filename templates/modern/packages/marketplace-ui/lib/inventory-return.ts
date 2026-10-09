@@ -5,11 +5,14 @@ import {
 
 const storageKey = "modern-inventory-return-v1";
 const localePrefix = /^\/(bg|en)(?=\/)/;
-// Match the same canonical make/model slugs produced by getMakePath/getModelPath.
+const normalizePath = (path: string) =>
+  withoutBasePath(path).replace(localePrefix, "");
+
+// Retain the existing category, make/model and editorial collection routes.
 const inventoryPath =
-  /^\/(?:bg\/|en\/)?(?:cars(?:\/[a-z0-9]+(?:-[a-z0-9]+)*){0,2}|motorbikes|trucks|vans|lease)$/;
+  /^\/(?:cars(?:\/[a-z0-9]+(?:-[a-z0-9]+)*){0,2}|motorbikes|trucks|vans|lease|collections\/chinese-ev-hybrids)$/;
 const isInventoryHref = (href: string) =>
-  inventoryPath.test(withoutBasePath(href).split("?")[0] ?? "");
+  inventoryPath.test(normalizePath(href).split("?")[0] ?? "");
 
 interface InventoryReturn {
   href: string;
@@ -18,9 +21,6 @@ interface InventoryReturn {
 }
 
 let pendingReturn: Pick<InventoryReturn, "href" | "scrollY"> | null = null;
-
-const normalizePath = (path: string) =>
-  withoutBasePath(path).replace(localePrefix, "");
 
 export function readInventoryReturn(): InventoryReturn | null {
   try {
@@ -42,7 +42,7 @@ export function readInventoryReturn(): InventoryReturn | null {
 }
 
 export function rememberInventoryReturn(listingHref: string) {
-  if (!inventoryPath.test(withoutBasePath(location.pathname))) {
+  if (!isInventoryHref(location.pathname)) {
     return;
   }
   try {

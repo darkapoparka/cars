@@ -147,35 +147,39 @@ it("retains the current explicit locale when returning across languages", () => 
   expect(getInventoryReturnHref("/en/cars")).toBe("/en/cars?make=BMW");
 });
 
-// Listing Back must retain route-level filters as well as query filters.
+// Listing Back must retain the browsing route, query and position.
 it.each([
   "/bg/cars/bmw",
   "/en/cars/bmw/x5",
   "/cars/mercedes-benz/c-class",
-])("retains the make/model browsing route and position: %s", (pathname) => {
+  "/bg/collections/chinese-ev-hybrids",
+  "/en/collections/chinese-ev-hybrids",
+  "/collections/chinese-ev-hybrids",
+])("retains the inventory browsing route and position: %s", (pathname) => {
   const values = new Map<string, string>();
   vi.stubGlobal("sessionStorage", {
     getItem: (key: string) => values.get(key) ?? null,
     setItem: (key: string, value: string) => values.set(key, value),
   });
+  const search = pathname.includes("/collections/")
+    ? "?page=1"
+    : "?sort=price_asc&priceMax=150000";
   vi.stubGlobal("location", {
     origin: "http://localhost:3187",
     pathname,
-    search: "?sort=price_asc&priceMax=150000",
+    search,
   });
   vi.stubGlobal("window", { scrollY: 480 });
   rememberInventoryReturn("/en/listing/selected-car");
-  expect(readInventoryReturn()?.href).toBe(
-    `${pathname}?sort=price_asc&priceMax=150000`
-  );
+  expect(readInventoryReturn()?.href).toBe(`${pathname}${search}`);
   vi.stubGlobal("location", { pathname: "/en/listing/selected-car" });
   const expectedPath = pathname.replace(localePrefix, "");
-  const href = `/en${expectedPath}?sort=price_asc&priceMax=150000`;
+  const href = `/en${expectedPath}${search}`;
   expect(getInventoryReturnHref("/en/cars")).toBe(href);
   prepareInventoryReturn(href);
   vi.stubGlobal("location", {
     pathname: `/en${expectedPath}`,
-    search: "?sort=price_asc&priceMax=150000",
+    search,
   });
   expect(takeInventoryReturnScrollY()).toBe(480);
   expect(takeInventoryReturnScrollY()).toBeNull();
@@ -188,6 +192,10 @@ it.each([
   "/cars/bmw\\contact",
   "//example.com/cars",
   "/cars#javascript:alert(1)",
+  "/collections/chinese-ev-hybrids/edit",
+  "/collections/../contact",
+  "/collections/%2e%2e/contact",
+  "/collections/unknown",
 ])("rejects non-inventory saved destinations: %s", (href) => {
   vi.stubGlobal("sessionStorage", {
     getItem: () =>

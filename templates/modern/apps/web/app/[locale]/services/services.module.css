@@ -343,6 +343,7 @@
   .copy h2 {
     min-width: 0;
     font-size: calc(var(--spacing) * 3.5);
+    font-weight: var(--font-weight-medium);
     line-height: 1.4;
     text-wrap: initial;
   }

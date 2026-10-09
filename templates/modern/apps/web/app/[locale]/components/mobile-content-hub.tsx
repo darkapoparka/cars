@@ -25,6 +25,7 @@ import {
   mobileSearchFieldClassName,
   mobileSearchIconClassName,
 } from "@repo/marketplace-ui/lib/mobile-form-control";
+import { mobileMarketplaceOverlayIconActionClassName } from "@repo/marketplace-ui/lib/mobile-overlay-styles";
 import { getLocalizedPath } from "@repo/seo/metadata";
 import {
   ArrowRight,
@@ -414,7 +415,7 @@ export const MobileContentHub = ({
                   >
                     <span className="whitespace-nowrap">{item.category}</span>
                   </div>
-                  <h2 className="mt-1 font-semibold text-card-title tracking-heading lg:line-clamp-2 lg:text-card-title-lg">
+                  <h2 className="mt-1 font-semibold text-card-title tracking-heading max-lg:font-medium lg:line-clamp-2 lg:text-card-title-lg">
                     <span className="lg:hidden">{item.title}</span>
                     <span className="hidden lg:inline">
                       {item.desktopTitle ?? item.title}
@@ -426,7 +427,7 @@ export const MobileContentHub = ({
                   >
                     {item.description}
                   </p>
-                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control">
+                  <span className="mt-auto inline-flex items-center gap-1 pt-1.5 font-semibold text-compact-control max-lg:font-medium">
                     {isBg ? "Прочети" : "Read"}
                     <ArrowRight aria-hidden="true" className="size-3.5" />
                   </span>
@@ -473,12 +474,15 @@ export const MobileContentHub = ({
           <DrawerHeader className="shrink-0 px-4 pt-2 pb-3">
             <div className="grid grid-cols-[44px_minmax(0,1fr)_44px] items-center gap-2">
               <span />
-              <DrawerTitle className="text-center text-card-title">
-                {isBg ? "Филтрирай материалите" : "Filter content"}
+              <DrawerTitle className="text-center font-medium text-card-title-lg">
+                {isBg ? "Теми" : "Topics"}
               </DrawerTitle>
               <DrawerClose
                 aria-label={isBg ? "Затвори" : "Close"}
-                className="grid size-11 place-items-center rounded-full bg-zinc-100 text-zinc-950 focus-visible:outline-2 focus-visible:outline-ring"
+                className={cn(
+                  mobileMarketplaceOverlayIconActionClassName,
+                  "grid place-items-center bg-zinc-100"
+                )}
               >
                 <X aria-hidden="true" className="size-[18px]" />
               </DrawerClose>

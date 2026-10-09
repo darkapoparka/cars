@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const inventorySearchLabel = /^Search \d+ cars$/;
+const inventorySearchLabel = /^Make or model$/;
 const listingPath = /\/listing\//;
 
 test.beforeEach(async ({ context, baseURL }) => {

@@ -4,10 +4,15 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@repo/design-system/components/ui/dropdown-menu";
 import { cn } from "@repo/design-system/lib/utils";
-import { withoutBasePath } from "@repo/internationalization/paths";
+import {
+  withBasePath,
+  withoutBasePath,
+} from "@repo/internationalization/paths";
+import { getPreferenceMessages } from "@repo/internationalization/preferences-messages";
 import {
   isPublicSitePathEnabled,
   type PublicSiteConfig,
@@ -16,13 +21,15 @@ import {
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 import { useDesktopMarketplaceViewport } from "../hooks/use-desktop-marketplace-viewport";
 import { getLocalizedPublicPath } from "../lib/public-path";
 import styles from "./dealer-desktop-header.module.css";
 import { DealerDesktopLogo } from "./dealer-desktop-logo";
 import { DealerNavigationLink } from "./dealer-navigation-link";
 import { DesktopSavedCars } from "./desktop-saved-cars";
+import { LanguageFlag } from "./language-flag";
+import { useLocalePreferences } from "./locale-preferences";
 import type { MarketplaceMode } from "./marketplace-masthead";
 
 const inventoryRoutePattern =
@@ -51,6 +58,16 @@ export const DealerDesktopHeader = ({
   const isBg = locale?.toLowerCase().startsWith("bg") ?? false;
   const isDesktop = useDesktopMarketplaceViewport();
   const [moreOpen, setMoreOpen] = useState(false);
+  const moreTrigger = useRef<HTMLButtonElement>(null);
+  const preferenceRequested = useRef(false);
+  const preferences = useLocalePreferences();
+  const preferenceLocale = isBg ? "bg" : "en";
+  const preferenceLabel =
+    getPreferenceMessages(preferenceLocale)["locale.trigger"];
+  const preferenceHref =
+    getLocalizedPublicPath(locale, "/locale-settings") +
+    "?returnTo=" +
+    encodeURIComponent(preferences?.returnTo ?? withBasePath(pathname));
   useEffect(() => {
     if (!isDesktop) {
       setMoreOpen(false);
@@ -152,6 +169,7 @@ export const DealerDesktopHeader = ({
                     className={styles.moreTrigger}
                     data-current={moreActive || undefined}
                     disabled={!isDesktop}
+                    ref={moreTrigger}
                     type="button"
                   >
                     {isBg ? "Още" : "More"}
@@ -162,6 +180,12 @@ export const DealerDesktopHeader = ({
                   align="end"
                   aria-label={isBg ? "Още страници" : "More pages"}
                   className={styles.moreMenu}
+                  onCloseAutoFocus={(event) => {
+                    if (preferenceRequested.current) {
+                      event.preventDefault();
+                      preferenceRequested.current = false;
+                    }
+                  }}
                   sideOffset={4}
                 >
                   {secondaryDestinations.map((destination) => {
@@ -185,6 +209,34 @@ export const DealerDesktopHeader = ({
                       </DropdownMenuItem>
                     );
                   })}
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <a
+                      aria-label={preferenceLabel}
+                      className={styles.moreItem}
+                      data-locale-trigger
+                      href={preferenceHref}
+                      onClick={(event) => {
+                        if (
+                          preferences &&
+                          event.button === 0 &&
+                          !event.ctrlKey &&
+                          !event.metaKey &&
+                          !event.shiftKey &&
+                          !event.altKey
+                        ) {
+                          event.preventDefault();
+                          preferenceRequested.current = true;
+                          moreTrigger.current?.focus({ preventScroll: true });
+                          setMoreOpen(false);
+                          preferences.open();
+                        }
+                      }}
+                    >
+                      <LanguageFlag locale={preferenceLocale} />
+                      {preferenceLabel}
+                    </a>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             )}

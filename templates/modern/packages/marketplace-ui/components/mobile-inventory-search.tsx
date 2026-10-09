@@ -121,7 +121,7 @@ export const MobileInventorySearch = ({
         rightAction={
           <MobileMarketplaceOverlayCloseAction ariaLabel={copy.actions.close} />
         }
-        title={isBg ? "Търсене" : "Search"}
+        title={copy.mobileTitles.search}
       />
 
       <div
