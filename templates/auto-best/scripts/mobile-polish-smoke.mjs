@@ -126,7 +126,9 @@ async function longCardCopy(page, locale, layout) {
         const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
         const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
         const mileage = badges[1].querySelector('span');
+        const note = card.querySelector('.dn-vehicle-card__note');
         return {
+          note: note?.checkVisibility() ? { text: note.textContent, clipped: note.scrollWidth > note.clientWidth + 1 } : null,
           expectedFacts: !card.classList.contains('dn-vehicle-card--listing') ? 3 : card.clientWidth <= 24 * parseFloat(getComputedStyle(document.documentElement).fontSize) ? 4 : 5,
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
@@ -145,6 +147,7 @@ async function longCardCopy(page, locale, layout) {
       assert(geometry.lines <= 2.05, `Long model copy stays within two lines: ${JSON.stringify(geometry)}`);
       assert.equal(geometry.title, title);
       assert.equal(geometry.accessible, title, 'Clamped copy retains the complete vehicle name for accessibility');
+      if (layout === 'listing' && geometry.note) assert(geometry.note.text && !geometry.note.clipped, 'A long model title leaves its note readable above the price');
       assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every visible badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
       assert(geometry.badges.every(badge => !badge.clipped), `Known compact fuel and transmission labels remain fully visible: ${JSON.stringify(geometry)}`);
       assert.equal(geometry.badges.length, geometry.expectedFacts, 'Narrow listings prioritize year, mileage, fuel and transmission; roomy listings retain all five facts');

@@ -30,6 +30,9 @@
     ? vehicle.title.slice(cardBrand.length + 1)
     : modelTitle);
   const priceLabel = $derived(formatVehiclePriceLabel(vehicle.priceEur, i18n.locale));
+  const equipmentHighlight = $derived(vehicle.equipment.find(feature => feature === 'Панорамен покрив') ?? vehicle.equipment[0]);
+  const cardNote = $derived(vehicle.cardNote?.[i18n.locale]?.trim() ||
+    (equipmentHighlight ? specificationLabel(equipmentHighlight, i18n.locale) : ''));
   const specifications = $derived([
     { icon: 'fuel' as const, value: vehicle.fuel },
     { icon: 'transmission' as const, value: vehicle.transmission }
@@ -84,6 +87,9 @@
           <h2 class="dn-vehicle-card__name" title={vehicle.title}>
             <span class="dn-vehicle-card__model-title">{modelTitle}</span><span class="dn-vehicle-card__mobile-title">{mobileModelTitle}</span>
           </h2>
+          {#if cardNote}
+            <p class="dn-vehicle-card__note" title={cardNote}>{cardNote}</p>
+          {/if}
         {:else}
           <h3 class="dn-vehicle-card__name" title={vehicle.title}>{modelTitle}</h3>
         {/if}
@@ -143,6 +149,7 @@
     font-size: var(--dn-text-meta);
     line-height: var(--dn-leading-meta);
   }
+  .dn-vehicle-card__note { display: none; }
   .dn-vehicle-card__mobile-meta { display: none; }
   .dn-vehicle-card__mobile-title,
   .dn-vehicle-card__mobile-make { display: none; }
@@ -485,6 +492,17 @@
       grid-area: identity;
     }
 
+    .dn-vehicle-card--listing .dn-vehicle-card__note {
+      display: block;
+      min-width: 0;
+      margin: var(--dn-space-half) 0 0;
+      overflow: hidden;
+      color: var(--dn-muted);
+      font: var(--dn-mobile-card-meta-font);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     .dn-vehicle-card--listing .dn-vehicle-card__make {
       display: block;
       color: var(--dn-muted);
@@ -579,6 +597,10 @@
       .dn-vehicle-card--listing .dn-vehicle-card__content {
         grid-template-rows: auto auto;
         padding: 0;
+      }
+      .dn-vehicle-card--listing .dn-vehicle-card__note {
+        white-space: normal;
+        overflow-wrap: anywhere;
       }
     }
   }

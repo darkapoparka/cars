@@ -1,0 +1,202 @@
+{
+  "checks": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "scale": 1,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Панорамен покрив",
+      "maxNoteFont": "12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "scale": 1,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Panoramic roof",
+      "maxNoteFont": "12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "bg",
+      "width": 390,
+      "scale": 1,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Панорамен покрив",
+      "maxNoteFont": "12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "scale": 1,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Panoramic roof",
+      "maxNoteFont": "12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "scale": 2,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Панорамен покрив",
+      "maxNoteFont": "24px / 34.32px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "scale": 2,
+      "cardsChecked": 7,
+      "visibleNotes": 7,
+      "firstNote": "Panoramic roof",
+      "maxNoteFont": "24px / 34.32px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "allCardsFit": true
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "scale": 1,
+      "cardsChecked": 7,
+      "visibleNotes": 0,
+      "allCardsFit": true
+    }
+  ],
+  "longCopy": [
+    {
+      "locale": "bg",
+      "width": 320,
+      "longModelElectricAndLpg": "passed"
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "longModelElectricAndLpg": "passed"
+    }
+  ],
+  "svelteCheck": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "desktopMatches": true,
+  "firstCardComparison": {
+    "before": {
+      "title": "Audi RS 6 Avant",
+      "card": {
+        "x": 12,
+        "y": 112,
+        "width": 296,
+        "height": 135
+      },
+      "photo": {
+        "x": 20,
+        "y": 120,
+        "width": 126,
+        "height": 88
+      },
+      "model": {
+        "x": 158,
+        "y": 141.15625,
+        "width": 142,
+        "height": 20.796875
+      },
+      "price": {
+        "x": 158,
+        "y": 184.40625,
+        "width": 78.8125,
+        "height": 21.59375
+      },
+      "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "radius": "12px",
+      "note": null,
+      "facts": [
+        {
+          "text": "2024",
+          "clipped": false
+        },
+        {
+          "text": "99 701 km",
+          "clipped": false
+        },
+        {
+          "text": "Бензин",
+          "clipped": false
+        },
+        {
+          "text": "Автомат",
+          "clipped": false
+        }
+      ],
+      "overflow": false
+    },
+    "after": {
+      "title": "Audi RS 6 Avant",
+      "card": {
+        "x": 12,
+        "y": 112,
+        "width": 296,
+        "height": 139.703125
+      },
+      "photo": {
+        "x": 20,
+        "y": 120,
+        "width": 126,
+        "height": 92.703125
+      },
+      "model": {
+        "x": 158,
+        "y": 141.15625,
+        "width": 142,
+        "height": 20.796875
+      },
+      "price": {
+        "x": 158,
+        "y": 189.109375,
+        "width": 78.8125,
+        "height": 21.59375
+      },
+      "titleFont": "500 16px / 20.8px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "priceFont": "600 18px / 21.6px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+      "radius": "12px",
+      "note": {
+        "text": "Панорамен покрив",
+        "box": {
+          "x": 158,
+          "y": 163.953125,
+          "width": 142,
+          "height": 17.15625
+        },
+        "font": "12px / 17.16px \"Inter Variable\", \"Segoe UI\", Arial, sans-serif",
+        "color": "rgb(98, 104, 115)",
+        "clipped": false
+      },
+      "facts": [
+        {
+          "text": "2024",
+          "clipped": false
+        },
+        {
+          "text": "99 701 km",
+          "clipped": false
+        },
+        {
+          "text": "Бензин",
+          "clipped": false
+        },
+        {
+          "text": "Автомат",
+          "clipped": false
+        }
+      ],
+      "overflow": false
+    }
+  }
+}

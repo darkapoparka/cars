@@ -27,6 +27,8 @@ export type Vehicle = {
   make: string;
   /** Optional manufacturer sub-brand used by compact card identity. */
   cardBrand?: string;
+  /** Seller-supplied highlight by locale; import/condition claims require record-specific evidence. */
+  cardNote?: Partial<Record<Locale, string>>;
   title: string;
   year: string;
   yearNumber: number;
