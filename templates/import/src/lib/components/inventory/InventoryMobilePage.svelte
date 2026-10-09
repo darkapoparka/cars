@@ -1287,6 +1287,7 @@
 	}
 
 	.daynight-inventory-mobile__search {
+		--bc-mobile-icon-action-surface-size: var(--bc-control-height-standard);
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) repeat(2, var(--bc-mobile-icon-action-hit-size));
 		align-items: center;

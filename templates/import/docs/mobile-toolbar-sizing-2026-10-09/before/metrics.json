@@ -1,0 +1,418 @@
+{
+  "base": "https://cars-template-import.vercel.app",
+  "phase": "before",
+  "capturedAt": "2026-10-09T14:55:16.199Z",
+  "source": "Actual pages without CSS injection",
+  "results": [
+    {
+      "locale": "bg",
+      "width": 390,
+      "search": {
+        "label": "Търси (42), Търси автомобили",
+        "hit": [
+          266,
+          44
+        ],
+        "position": [
+          14,
+          8
+        ],
+        "paint": [
+          266,
+          44
+        ],
+        "icon": [
+          20,
+          20
+        ],
+        "stroke": "2px",
+        "edges": true
+      },
+      "controls": [
+        {
+          "label": "Филтри",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            284,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Сортирай: Най-подходящи",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            332,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "home": [
+        {
+          "label": "Контакти",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            282,
+            6
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Карта",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            334,
+            6
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "pdp": [
+        {
+          "label": "Назад",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            14,
+            14
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Сравни",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            236,
+            14
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Запази",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            284,
+            14
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Сподели",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            332,
+            14
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "bg",
+      "width": 320,
+      "search": {
+        "label": "Търси (42), Търси автомобили",
+        "hit": [
+          196,
+          44
+        ],
+        "position": [
+          14,
+          8
+        ],
+        "paint": [
+          196,
+          44
+        ],
+        "icon": [
+          20,
+          20
+        ],
+        "stroke": "2px",
+        "edges": true
+      },
+      "controls": [
+        {
+          "label": "Филтри",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            214,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Сортирай: Най-подходящи",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            262,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "search": {
+        "label": "Search (42), Search cars",
+        "hit": [
+          266,
+          44
+        ],
+        "position": [
+          14,
+          8
+        ],
+        "paint": [
+          266,
+          44
+        ],
+        "icon": [
+          20,
+          20
+        ],
+        "stroke": "2px",
+        "edges": true
+      },
+      "controls": [
+        {
+          "label": "Filters",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            284,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Sort: Best Match",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            332,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "locale": "en",
+      "width": 320,
+      "search": {
+        "label": "Search (42), Search cars",
+        "hit": [
+          196,
+          44
+        ],
+        "position": [
+          14,
+          8
+        ],
+        "paint": [
+          196,
+          44
+        ],
+        "icon": [
+          20,
+          20
+        ],
+        "stroke": "2px",
+        "edges": true
+      },
+      "controls": [
+        {
+          "label": "Filters",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            214,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        },
+        {
+          "label": "Sort: Best Match",
+          "hit": [
+            44,
+            44
+          ],
+          "position": [
+            262,
+            8
+          ],
+          "paint": [
+            36,
+            36
+          ],
+          "icon": [
+            20,
+            20
+          ],
+          "stroke": "2px",
+          "edges": true
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
