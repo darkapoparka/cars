@@ -154,7 +154,6 @@
 	}
 	.sell-valuation ol {
 		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
 		gap: var(--bc-space-3);
 		margin: 0;
 		padding: 0;
@@ -162,31 +161,32 @@
 	}
 	.sell-valuation li {
 		display: grid;
+		grid-template-columns: 28px minmax(0, 1fr);
 		min-width: 0;
-		align-content: start;
-		gap: var(--bc-space-2);
+		align-items: start;
+		gap: var(--bc-space-3);
 	}
 	.sell-valuation li > span {
 		display: grid;
-		width: 24px;
-		height: 24px;
+		width: 28px;
+		height: 28px;
 		place-items: center;
 		border-radius: var(--bc-radius-pill);
 		background: var(--bc-control);
 		color: var(--bc-ink);
-		font-size: 13px;
+		font-size: 14px;
 		font-weight: var(--bc-weight-heading);
 		font-variant-numeric: tabular-nums;
 		line-height: 1;
 	}
 	.sell-valuation h3 {
 		margin: 0 0 4px;
-		font-size: 14px;
+		font-size: var(--bc-mobile-card-title);
 		font-weight: var(--bc-weight-heading);
-		line-height: 20px;
+		line-height: var(--bc-mobile-card-title-leading);
 	}
 	.sell-valuation__guide p {
-		font-size: 13px;
-		line-height: 18px;
+		font-size: var(--bc-mobile-label);
+		line-height: var(--bc-mobile-label-leading);
 	}
 </style>
