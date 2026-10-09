@@ -168,13 +168,14 @@ const s = stylex.create({
   },
   showroomSection: {
     borderWidth: { default: 0, '@media (min-width: 1024px)': 1 },
+    borderColor: { default: colors.line, '@media (min-width: 1024px)': colors.cardLine },
     borderRadius: { default: 0, '@media (min-width: 1024px)': 16 },
     overflow: 'visible',
   },
   showroomDivider: {
     borderTopWidth: 1,
     borderTopStyle: 'solid',
-    borderTopColor: colors.line,
+    borderTopColor: { default: colors.line, '@media (min-width: 1024px)': colors.cardLine },
   },
   showroomTitle: {
     borderBottomWidth: 0,
@@ -187,6 +188,7 @@ const s = stylex.create({
     marginInline: { default: 12, '@media (max-width: 699px)': 0, '@media (min-width: 1024px)': 0 },
     borderWidth: { default: 1, '@media (max-width: 699px)': 0 },
     borderTopWidth: 1,
+    borderColor: { default: colors.line, '@media (min-width: 1024px)': colors.cardLine },
     borderRadius: { default: 16, '@media (max-width: 699px)': 0 },
   },
   showroomFooterTitle: {
@@ -296,6 +298,11 @@ const s = stylex.create({
     height: 44,
     alignItems: 'center',
     justifyContent: 'center',
+    transform: {
+      default: 'translateY(-50%)',
+      '@media (min-width: 1024px)': 'translateY(-50%) scale(0.7)',
+    },
+    transformOrigin: 'left center',
   },
   showroomFuelIcon: { left: 2 },
   specIcon: {
@@ -615,7 +622,7 @@ export function VehicleSections({
               panelId={panelId}
               idPrefix={tabPrefix}
               tone="neutral"
-              layout="fill"
+              layout="desktop-segmented"
               flush
               onChange={selectSection}
             />

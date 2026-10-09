@@ -5,6 +5,7 @@ import * as stylex from '@stylexjs/stylex';
 import type { Vehicle } from '@/lib/types';
 import { useLocale } from '@/lib/use-locale';
 import { defaultPaymentEstimate } from '@/lib/search';
+import { localizeSpecification } from '@/lib/vehicle-copy';
 import { colors } from '@/styles/tokens.stylex';
 import { Icon } from './Icon';
 import { PriceRating } from './VehicleCard';
@@ -13,12 +14,11 @@ import { vehicleDesktop } from './vehicle-detail-desktop.stylex';
 const s = stylex.create({
   card: {
     padding: 24,
-    backgroundColor: colors.background,
+    backgroundColor: colors.stripe,
     borderWidth: 1,
     borderStyle: 'solid',
     borderColor: colors.cardLine,
     borderRadius: 18,
-    boxShadow: '0 4px 20px #17202b08',
   },
   paymentTabs: {
     display: 'grid',
@@ -44,14 +44,16 @@ const s = stylex.create({
     outlineOffset: -3,
   },
   selectedTab: { backgroundColor: colors.background, boxShadow: '0 1px 3px #0001' },
-  priceRow: {
+  priceHeader: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     gap: 12,
   },
-  price: { display: 'block', fontSize: 32, lineHeight: '40px', fontWeight: 700 },
+  priceCopy: { minWidth: 0 },
+  priceLabel: { marginBottom: 6, fontSize: 13, lineHeight: '20px', color: colors.muted },
+  price: { display: 'block', fontSize: 36, lineHeight: '44px', fontWeight: 700 },
   note: { marginTop: 4, fontSize: 12, lineHeight: '18px', color: colors.muted },
   previous: { display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 8, marginTop: 4 },
   old: { color: colors.muted, fontSize: 14, lineHeight: '20px' },
@@ -61,10 +63,16 @@ const s = stylex.create({
     alignItems: 'center',
     gap: 6,
     flexShrink: 0,
-    minHeight: 36,
-    padding: 0,
-    borderWidth: 0,
-    backgroundColor: 'transparent',
+    minHeight: 44,
+    width: 'fit-content',
+    maxWidth: '100%',
+    paddingBlock: 8,
+    paddingInline: 10,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
+    borderRadius: 10,
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     color: colors.muted,
     cursor: 'pointer',
     outlineColor: colors.accent,
@@ -72,17 +80,18 @@ const s = stylex.create({
   },
   financing: {
     display: 'flex',
-    flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'space-between',
-    gap: 8,
+    gap: 12,
     width: '100%',
-    minHeight: 48,
-    padding: 12,
-    marginTop: 16,
-    borderWidth: 0,
+    minHeight: 64,
+    padding: 14,
+    marginTop: 20,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: colors.cardLine,
     borderRadius: 12,
-    backgroundColor: { default: colors.controlSurface, ':hover': colors.surface },
+    backgroundColor: { default: colors.background, ':hover': colors.controlSurface },
     color: colors.text,
     fontSize: 13,
     lineHeight: '20px',
@@ -91,20 +100,22 @@ const s = stylex.create({
     outlineColor: colors.accent,
     outlineOffset: 3,
   },
-  financeLabel: { display: 'inline-flex', alignItems: 'center', gap: 4, fontWeight: 500 },
-  financeValue: { display: 'inline-flex', alignItems: 'center', gap: 4 },
+  financeCopy: { display: 'flex', flexDirection: 'column', gap: 2, minWidth: 0 },
+  financeLabel: { fontWeight: 500 },
+  financeValue: { color: colors.muted, overflowWrap: 'anywhere' },
+  financeChevron: { display: 'inline-flex', flexShrink: 0, color: colors.muted },
   actions: { display: 'grid', gap: 8, marginTop: 16 },
   action: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 44,
+    minHeight: 52,
     paddingBlock: 2,
     paddingInline: 0,
     borderWidth: 0,
     backgroundColor: 'transparent',
     color: colors.text,
-    fontSize: 14,
+    fontSize: 15,
     lineHeight: '20px',
     fontWeight: 500,
     textDecoration: 'none',
@@ -118,7 +129,8 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 8,
     width: '100%',
-    height: 40,
+    minHeight: 48,
+    paddingBlock: 12,
     paddingInline: 16,
     borderWidth: 1,
     borderStyle: 'solid',
@@ -137,13 +149,36 @@ const s = stylex.create({
     justifyContent: 'center',
     gap: 8,
     minHeight: 44,
-    marginTop: 12,
+    marginTop: 20,
+    paddingTop: 12,
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.cardLine,
     color: colors.muted,
     fontSize: 13,
     lineHeight: '20px',
     textDecoration: { default: 'none', ':hover': 'underline' },
     outlineColor: colors.accent,
     outlineOffset: 3,
+  },
+  facts: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2,minmax(0,1fr))',
+    gap: 10,
+    paddingTop: 20,
+    marginTop: 20,
+    borderTopWidth: 1,
+    borderTopStyle: 'solid',
+    borderTopColor: colors.cardLine,
+  },
+  fact: { padding: 12, borderRadius: 10, backgroundColor: colors.background, minWidth: 0 },
+  factLabel: { fontSize: 12, lineHeight: '18px', color: colors.muted },
+  factValue: {
+    marginTop: 2,
+    fontSize: 14,
+    lineHeight: '22px',
+    fontWeight: 500,
+    overflowWrap: 'anywhere',
   },
 });
 
@@ -164,7 +199,7 @@ export function DesktopVehicleSummary({
   onPriceInfo: () => void;
   onContact: () => void;
 }) {
-  const { t, money, number } = useLocale();
+  const { t, locale, money, number } = useLocale();
   const monthly = defaultPaymentEstimate(v.price);
   return (
     <aside
@@ -187,10 +222,15 @@ export function DesktopVehicleSummary({
           ))}
         </div>
       )}
-      <div {...stylex.props(s.priceRow)}>
-        <strong data-vehicle-desktop-price {...stylex.props(s.price)}>
-          {money(leasing ? v.monthly || 0 : v.price)}
-        </strong>
+      <div {...stylex.props(s.priceHeader)}>
+        <div {...stylex.props(s.priceCopy)}>
+          <p data-vehicle-desktop-price-label {...stylex.props(s.priceLabel)}>
+            {t(leasing ? 'Leasing' : 'Vehicle price')}
+          </p>
+          <strong data-vehicle-desktop-price {...stylex.props(s.price)}>
+            {money(leasing ? v.monthly || 0 : v.price)}
+          </strong>
+        </div>
         {!(leasing && v.leaseTerms) && v.priceRating && (
           <button
             type="button"
@@ -240,11 +280,17 @@ export function DesktopVehicleSummary({
         }}
         {...stylex.props(s.financing)}
       >
-        <span {...stylex.props(s.financeLabel)}>
-          {t(leasing ? 'Leasing details' : 'Financing ')}
+        <span {...stylex.props(s.financeCopy)}>
+          <span {...stylex.props(s.financeLabel)}>
+            {t(leasing ? 'Leasing details' : 'Financing')}
+          </span>
+          {!leasing && (
+            <span {...stylex.props(s.financeValue)}>
+              {t('Estimate') + ' ' + money(monthly) + ' / ' + t('month')}
+            </span>
+          )}
         </span>
-        <span {...stylex.props(s.financeValue)}>
-          {!leasing && t('Estimate') + ' ' + money(monthly) + ' / ' + t('month')}
+        <span {...stylex.props(s.financeChevron)}>
           <Icon name="right" size={18} />
         </span>
       </button>
@@ -274,6 +320,21 @@ export function DesktopVehicleSummary({
           </span>
         </button>
       </div>
+      <dl aria-label={t('Vehicle overview')} {...stylex.props(s.facts)}>
+        {[
+          ['Mileage', number(v.mileage) + ' ' + t('km')],
+          v.mileage > 0
+            ? ['First registered', v.registration]
+            : ['Vehicle condition', t('New vehicle')],
+          ['Fuel', v.attributes?.fuelLabel || v.fuel],
+          ['Transmission', v.transmission],
+        ].map(([label, value]) => (
+          <div key={label} {...stylex.props(s.fact)}>
+            <dt {...stylex.props(s.factLabel)}>{t(label)}</dt>
+            <dd {...stylex.props(s.factValue)}>{localizeSpecification(value, locale)}</dd>
+          </div>
+        ))}
+      </dl>
       <Link href={'/vehicle/' + v.id + '/checklist'} {...stylex.props(s.checklist)}>
         <Icon name="checklist" size={16} />
         {t('Checklist')}

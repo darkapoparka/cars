@@ -615,7 +615,7 @@ export function DetailScreen({ vehicle }: { vehicle: Vehicle }) {
                 alt={v.make + ' ' + v.model}
                 fill
                 priority
-                sizes="(min-width: 1328px) 840px, (min-width: 1024px) calc(100vw - 488px), 100vw"
+                sizes="(min-width: 1328px) 820px, (min-width: 1024px) calc(100vw - 508px), 100vw"
                 {...stylex.props(
                   s.image,
                   showroomPhotoHasLetterbox(v.images[photoIndex]) && s.letterboxedImage,

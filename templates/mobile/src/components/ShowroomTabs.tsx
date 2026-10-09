@@ -28,6 +28,21 @@ const s = stylex.create({
     borderBottomColor: colors.line,
   },
   fillRail: { paddingInline: 0, overflowX: 'visible' },
+  segmentedRail: {
+    paddingInline: { default: 0, '@media (min-width: 1024px)': 4 },
+    paddingBlock: { default: 0, '@media (min-width: 1024px)': 4 },
+    gap: { default: 0, '@media (min-width: 1024px)': 4 },
+    borderBottomWidth: {
+      default: 0,
+      '@media (min-width: 700px)': 1,
+      '@media (min-width: 1024px)': 0,
+    },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 12 },
+    backgroundColor: {
+      default: colors.background,
+      '@media (min-width: 1024px)': colors.stripe,
+    },
+  },
   desktopFillRail: {
     overflowX: { default: 'auto', '@media (min-width: 700px)': 'visible' },
     paddingInline: { default: 16, '@media (min-width: 700px)': 12 },
@@ -129,6 +144,21 @@ const s = stylex.create({
     whiteSpace: 'normal',
     overflowWrap: 'anywhere',
   },
+  segmentedTab: {
+    minHeight: { default: 52, '@media (min-width: 1024px)': 44 },
+    paddingInline: { default: 8, '@media (min-width: 1024px)': 12 },
+    paddingBlock: { default: 10, '@media (min-width: 1024px)': 8 },
+    fontSize: { default: 16, '@media (min-width: 1024px)': 14 },
+    borderRadius: { default: 0, '@media (min-width: 1024px)': 8 },
+    backgroundColor: {
+      default: 'transparent',
+      ':active': colors.controlSurface,
+      '@media (min-width: 1024px)': {
+        default: 'transparent',
+        ':hover': colors.background,
+      },
+    },
+  },
   desktopFillTab: {
     outlineColor: { default: colors.accent, '@media (min-width: 700px)': colors.text },
     outlineOffset: { default: -3, '@media (min-width: 700px)': -5 },
@@ -192,6 +222,22 @@ const s = stylex.create({
   selectedNeutral: {
     color: colors.text,
     '::after': { backgroundColor: colors.text },
+  },
+  segmentedSelected: {
+    backgroundColor: {
+      default: 'transparent',
+      ':active': colors.controlSurface,
+      '@media (min-width: 1024px)': {
+        default: colors.background,
+        ':hover': colors.background,
+        ':active': colors.background,
+      },
+    },
+    boxShadow: {
+      default: 'none',
+      '@media (min-width: 1024px)': '0 1px 3px rgba(27, 27, 33, .08)',
+    },
+    '::after': { height: { default: 3, '@media (min-width: 1024px)': 0 } },
   },
   categoryRail: {
     boxShadow: { default: 'none', '@media (max-width: 699px)': '0 2px 4px rgba(27,27,33,.06)' },
@@ -424,6 +470,7 @@ export function ShowroomTabs<T extends string>({
     | 'desktop-sidebar'
     | 'desktop-categories'
     | 'desktop-pills'
+    | 'desktop-segmented'
     | 'hero';
   primary?: boolean;
   flush?: boolean;
@@ -433,7 +480,7 @@ export function ShowroomTabs<T extends string>({
 }) {
   const { t, locale } = useLocale();
   const desktopFill = layout === 'desktop-fill' || layout === 'desktop-sidebar';
-  const filled = layout === 'fill' || layout === 'desktop-pills';
+  const filled = layout === 'fill' || layout === 'desktop-pills' || layout === 'desktop-segmented';
   const desktop = useMediaQuery('(min-width: 1024px)');
   const vertical = layout === 'desktop-sidebar' && desktop;
   const tabText = (text: string) => (locale === 'bg' && text === 'Features' ? 'Екстри' : t(text));
@@ -471,6 +518,7 @@ export function ShowroomTabs<T extends string>({
       {...stylex.props(
         s.rail,
         filled && s.fillRail,
+        layout === 'desktop-segmented' && s.segmentedRail,
         desktopFill && s.desktopFillRail,
         layout === 'desktop-sidebar' && s.sidebarRail,
         layout === 'desktop-categories' && s.desktopCategories,
@@ -529,6 +577,8 @@ export function ShowroomTabs<T extends string>({
             selected === value && desktopFill && s.desktopFillSelected,
             selected === value && layout === 'desktop-sidebar' && s.sidebarSelected,
             selected === value && layout === 'desktop-pills' && s.pillsSelected,
+            layout === 'desktop-segmented' && s.segmentedTab,
+            selected === value && layout === 'desktop-segmented' && s.segmentedSelected,
             primary && s.primaryTab,
             layout === 'hero' && s.heroTab,
             selected === value && layout === 'hero' && s.heroSelected,
