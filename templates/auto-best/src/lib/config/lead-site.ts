@@ -221,8 +221,8 @@ export const leadSite = {
       crimson: '/assets/images/lead/auto-best-banner-crimson-v1.png'
     },
     discoveryBackground: '/assets/images/template/home-section-shared-backdrop-v1.webp',
-    // Client copies can choose one retained style and a compact mobile placement.
-    homeSectionBanner: { variant: 'kerb', mobile: 'featured' },
+    // Standard for Auto Best lead/client builds; briefs can select another retained style.
+    homeSectionBanner: { variant: 'circuit', mobile: 'featured' },
     homeSectionBannerAssets: {
       motorsport: '/assets/images/template/home-section-matte-graphite-comparison-v1.webp',
       kerb: '/assets/images/template/home-section-kerb-photographic-v5.webp',

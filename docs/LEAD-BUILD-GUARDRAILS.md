@@ -55,6 +55,8 @@ Do not inherit Git metadata, deployment/CRM bindings, `.env` credentials, caches
 
 Preserve layouts, components, routes, typography, spacing, breakpoints, navigation and interactions. Do not migrate frameworks, upgrade dependencies, add a backend, replace screens with lookalikes, or create Actions to defer copying/personalization. Change only lead data/content/assets and minimal consumer fixes needed for correctness. Masters and unrelated client folders remain unchanged.
 
+For Auto Best lead/client builds and requested client refreshes, the owner-selected Home banner default is Nürburgring: `leadSite.artwork.homeSectionBanner = { variant: 'circuit', mobile: 'featured' }` in `src/lib/config/lead-site.ts`. Keep the existing Circuit artwork and rendering. If the approved release predates this default, apply the configuration during personalization and record it without changing the source release pin. Use another retained style only when the dealer brief selects it. Preview URL choices are review overrides, not the published configuration.
+
 ### Preserve hero composition and media behavior
 
 The template's hero is part of the master composition, not a blank canvas for each dealer. Preserve its section structure, sizing, aspect treatment, masks/overlays, object positioning, responsive behavior and intended visual hierarchy unless the owner explicitly requests shared template work.
