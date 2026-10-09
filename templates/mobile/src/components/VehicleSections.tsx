@@ -299,8 +299,8 @@ const s = stylex.create({
   },
   showroomSpecIcon: {
     color: colors.text,
-    width: 44,
-    height: 44,
+    width: { default: 44, '@media (max-width: 699px)': 40 },
+    height: { default: 44, '@media (max-width: 699px)': 40 },
     alignItems: 'center',
     justifyContent: 'center',
     transform: {
@@ -321,22 +321,18 @@ const s = stylex.create({
   showroomLabel: {
     fontSize: {
       default: 12,
-      '@media (max-width: 699px)': 14,
-      '@media (max-width: 359px)': 13,
       '@media (min-width: 1024px)': 13,
     },
-    lineHeight: { default: '18px', '@media (max-width: 699px)': '20px' },
+    lineHeight: { default: '18px', '@media (max-width: 699px)': '16px' },
   },
   showroomValue: {
     fontSize: {
       default: 14,
-      '@media (max-width: 699px)': 16,
-      '@media (max-width: 359px)': 15,
       '@media (min-width: 1024px)': 16,
     },
     lineHeight: {
       default: '20px',
-      '@media (max-width: 699px)': '24px',
+      '@media (max-width: 699px)': '18px',
       '@media (min-width: 1024px)': '24px',
     },
     fontWeight: 500,
