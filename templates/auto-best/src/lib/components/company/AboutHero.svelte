@@ -27,7 +27,7 @@
       </h1>
       <HeroLocation appearance="subtitle" />
     </div>
-    <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/listing-grid'))}>
+    <a class="dn-about-button dn-about-button--primary dn-route-hero__control" href={i18n.href(resolve('/cars'))}>
       <span>{i18n.t("m_9304497d3f4b")}</span>
       <Icon name="arrow-right" size={18} strokeWidth={1.8} />
     </a>

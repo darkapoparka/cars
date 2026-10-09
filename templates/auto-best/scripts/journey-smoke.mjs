@@ -13,14 +13,14 @@ try {
     page.setDefaultTimeout(8000);
     page.setDefaultNavigationTimeout(30000);
     await suite.check(`list and article return ${width}`, async () => {
-      await page.goto(`${base}/listing-grid?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?make=BMW&sort=price-asc`, { waitUntil: 'networkidle' });
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
       // Exercise the card surface inside its 20px rounded corner, away from title text.
       await first.click({ position: { x: 12, y: 12 } });
       await page.waitForURL('**/listing-detail-v1/**');
       await page.locator(width < 768 ? '.dn-detail-mobile-back' : '.dn-detail-title-card a').click();
-      await page.waitForURL(url => appPath(url) === '/listing-grid');
+      await page.waitForURL(url => appPath(url) === '/cars');
       assert.equal(new URL(page.url()).searchParams.get('make'), 'BMW');
       assert.equal(new URL(page.url()).searchParams.get('sort'), 'price-asc');
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card__link').first().getAttribute('aria-label'), title);
@@ -33,7 +33,7 @@ try {
       assert.equal(new URL(page.url()).searchParams.get('category'), 'Внос');
       assert(new URL(page.url()).hash.startsWith('#article-'));
       await page.goto(`${base}/listing-detail-v1/4?return=https://example.com`, { waitUntil: 'networkidle' });
-      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/listing-grid');
+      assert.equal(await page.locator('.dn-detail-mobile-back').getAttribute('href'), '/bg/cars');
     });
     await suite.check(`full photo viewer ${width}`, async () => {
       await page.goto(`${base}/listing-detail-v1/1`, { waitUntil: 'networkidle' });
@@ -65,7 +65,7 @@ try {
       assert.equal(await page.evaluate(() => document.body.style.overflow), overflowBefore);
     });
     await suite.check(`vehicle context and finance ${width}`, async () => {
-      await page.goto(`${base}/listing-grid`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars`, { waitUntil: 'networkidle' });
       const ids = await page.locator('.dn-listing-results .dn-vehicle-card__link').evaluateAll(links => [...new Set(links.map(link => Number(new URL(link.href).pathname.split('/').at(-1))))]);
       assert(ids.length > 0 && ids.every(Number.isSafeInteger), 'Exercise every actual inventory record');
       for (const id of ids) {
@@ -101,7 +101,7 @@ try {
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), count, `${route} must reflect actual stock`);
         if (!count) assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
       }
-      await page.goto(`${base}/listing-grid?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/cars?equipment=4x4&equipment=4x4&price_max=0`, { waitUntil: 'networkidle' });
       assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
       assert(await page.getByText('Няма съвпадения', { exact: true }).isVisible());
     });

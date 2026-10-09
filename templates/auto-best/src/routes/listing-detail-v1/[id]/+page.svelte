@@ -254,7 +254,7 @@
               <h2 id="related-title">{i18n.t("detail.viewMore")}</h2>
               <p>{i18n.t("m_70f001dd6767")}</p>
             </div>
-            <a class="dn-detail-related__all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_7d6647b063a2")}</a>
+            <a class="dn-detail-related__all" href={i18n.href(resolve('/cars'))}>{i18n.t("m_7d6647b063a2")}</a>
           </div>
           <div class="dn-detail-related__list">
             {#each data.recommendations as vehicle (vehicle.id)}

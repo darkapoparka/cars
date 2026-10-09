@@ -45,7 +45,7 @@
           <Icon name="adjustments" size={18} /><span>{i18n.t("m_546ebb8eb993")}</span>
           {#if activeCount}<span class="dn-listing-results__filter-count">{activeCount}</span>{/if}
         </button>
-      <form bind:this={sortForm} class="dn-listing-sort" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={event => cleanListingFormData(event.formData)}>
+      <form bind:this={sortForm} class="dn-listing-sort" method="GET" action={i18n.href(resolve('/cars'))} onformdata={event => cleanListingFormData(event.formData)}>
         {#each hiddenFields(filters) as [name, value], index (`${name}-${value}-${index}`)}
           <input type="hidden" {name} {value} />
         {/each}
@@ -66,7 +66,7 @@
       <div class="dn-listing-empty">
         <h3>{i18n.t("m_255ca3bfe9fc")}</h3>
         <p>{i18n.t("m_87a5974db52e")}</p>
-        <a class="dn-button dn-button--dark" href={i18n.href(resolve('/listing-grid'))}>{i18n.t("m_3294551fa1d9")}</a>
+        <a class="dn-button dn-button--dark" href={i18n.href(resolve('/cars'))}>{i18n.t("m_3294551fa1d9")}</a>
       </div>
     {/if}
   </div>

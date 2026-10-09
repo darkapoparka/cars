@@ -17,10 +17,11 @@ const exactLegacyRedirects: Readonly<Record<string, string>> = {
   '/home09': '/',
   '/home10': '/',
   '/blog-grid': '/blog',
-  '/listing-grid2': '/listing-grid',
-  '/listing-list': '/listing-grid',
-  '/listing-grid-map': '/listing-grid',
-  '/listing-list-map': '/listing-grid',
+  '/listing-grid': '/cars',
+  '/listing-grid2': '/cars',
+  '/listing-list': '/cars',
+  '/listing-grid-map': '/cars',
+  '/listing-list-map': '/cars',
   '/faq': '/contact'
 };
 

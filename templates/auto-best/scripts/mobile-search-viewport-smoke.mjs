@@ -83,7 +83,7 @@ try {
       page.on('pageerror', error => errors.push(error.message));
       page.setDefaultNavigationTimeout(60000);
       try {
-        await page.goto(`${base}/${locale}${mode === 'listing' ? '/listing-grid' : ''}`, { waitUntil: 'networkidle' });
+        await page.goto(`${base}/${locale}${mode === 'listing' ? '/cars' : ''}`, { waitUntil: 'networkidle' });
         await page.evaluate(() => document.fonts.ready);
         const evidence = {};
         if (mode === 'home') {

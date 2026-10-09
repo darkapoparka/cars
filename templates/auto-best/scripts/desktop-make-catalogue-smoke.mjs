@@ -17,7 +17,7 @@ try {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     const home = surface === 'home';
-    await page.goto(`${base}/${locale}${home ? '' : '/listing-grid'}`, { waitUntil: 'networkidle' });
+    await page.goto(`${base}/${locale}${home ? '' : '/cars'}`, { waitUntil: 'networkidle' });
     const opener = page.locator(home ? '.dn-home-browse [data-field=make]' : '[data-facet=make]');
     const menu = page.locator(home ? '.dn-home-browse-picker[data-state=open]' : '#dn-listing-filter-dialog');
     const scroller = () => menu.locator(home ? '.content' : '.dn-search-results');
@@ -126,7 +126,7 @@ try {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     try {
-      await page.goto(`${base}/${locale}/listing-grid?sort=price-asc`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/${locale}/cars?sort=price-asc`, { waitUntil: 'networkidle' });
       await page.locator('.dn-listing-results__filters').click();
       const form = page.locator('#dn-listing-filter-dialog');
       await form.waitFor({ state: 'visible' });

@@ -51,7 +51,7 @@ try {
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
     const home = surface === 'home', nested = surface === 'nested';
-    await page.goto(`${base}/${locale}${home ? '' : '/listing-grid?make=BMW'}`, { waitUntil: 'networkidle' });
+    await page.goto(`${base}/${locale}${home ? '' : '/cars?make=BMW'}`, { waitUntil: 'networkidle' });
     const parent = page.locator('#dn-listing-filter-dialog');
     const menu = page.locator(home ? '.dn-home-browse-picker[data-state=open]' : nested ? '.dn-filter-picker' : '#dn-listing-filter-dialog');
     const opener = page.locator(home ? '.dn-home-browse [data-field=model]' : nested ? '#dn-listing-filter-dialog [data-field=model] button' : '[data-facet=model]');
@@ -221,7 +221,7 @@ try {
     const home = surface === 'home', nested = surface === 'nested';
     const menu = page.locator(home ? '.dn-home-browse-picker[data-state=open]' : nested ? '.dn-filter-picker' : '#dn-listing-filter-dialog');
     try {
-      await page.goto(`${base}/${locale}${home ? '' : '/listing-grid?make=BMW'}`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/${locale}${home ? '' : '/cars?make=BMW'}`, { waitUntil: 'networkidle' });
       assert(fixtureApplied);
       if (home) {
         await page.locator('.dn-home-browse [data-field=make]').click();

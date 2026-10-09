@@ -53,7 +53,7 @@ export type ShellPresentation = {
 
 const classifyRoute = (pathname: string): ShellRoute => {
   if (pathname === '/') return 'home';
-  if (pathname === '/listing-grid') return 'listing';
+  if (pathname === '/cars') return 'listing';
   if (pathname.startsWith('/listing-detail-v1/')) return 'vehicle-detail';
   if (pathname === '/contact') return 'contact';
   if (pathname === '/about-us') return 'about';
@@ -63,7 +63,7 @@ const classifyRoute = (pathname: string): ShellRoute => {
 
 const navigationActive = (pathname: string, href: string) => {
   if (href === '/') return pathname === '/';
-  if (href === '/listing-grid') return pathname.startsWith('/listing');
+  if (href === '/cars') return pathname === '/cars' || pathname.startsWith('/listing-detail-v1/');
   if (href === '/blog') return pathname.startsWith('/blog');
   return pathname === href || pathname.startsWith(`${href}/`);
 };
@@ -114,7 +114,7 @@ export function resolveShellPresentation(url: URL, status = 200): ShellPresentat
       navigation: navigationPresentation(url),
       mobileNavigation: {
         home: route === 'home',
-        listing: pathname.startsWith('/listing'),
+        listing: route === 'listing' || route === 'vehicle-detail',
         tradeIn: contactTopic === 'trade-in',
         import: contactTopic === 'import',
         menu: mobileMenuSection

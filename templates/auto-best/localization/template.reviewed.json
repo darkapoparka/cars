@@ -1254,5 +1254,37 @@
     "bg": "Освен заявения разход на гориво, включете обслужване, застраховки и необходимите консумативи. Проверете данните за конкретната версия и обсъдете поддръжката, преди да ограничите избора си до едно гориво.",
     "disposition": "translate",
     "notes": "Authored template guide in src/lib/data/editorial.ts; not independent human linguistic review."
+  },
+  {
+    "key": "home.banners.collection.lead",
+    "source": "Разгледайте нашата колекция",
+    "en": "Explore our collection and find",
+    "bg": "Разгледайте нашата колекция",
+    "disposition": "translate",
+    "notes": "Authored desktop collection banner copy; not independent human linguistic review."
+  },
+  {
+    "key": "home.banners.collection.detail",
+    "source": "и открийте автомобила за вас.",
+    "en": "the car that suits you.",
+    "bg": "и открийте автомобила за вас.",
+    "disposition": "translate",
+    "notes": "Authored desktop collection banner copy; not independent human linguistic review."
+  },
+  {
+    "key": "home.banners.tradeIn.lead",
+    "source": "Свържете се с нас за оценка",
+    "en": "Get an appraisal for your car",
+    "bg": "Свържете се с нас за оценка",
+    "disposition": "translate",
+    "notes": "Authored desktop sale and trade-in banner copy; not independent human linguistic review."
+  },
+  {
+    "key": "home.banners.tradeIn.detail",
+    "source": "при продажба или бартер.",
+    "en": "when selling or trading in.",
+    "bg": "при продажба или бартер.",
+    "disposition": "translate",
+    "notes": "Authored desktop sale and trade-in banner copy; not independent human linguistic review."
   }
 ]

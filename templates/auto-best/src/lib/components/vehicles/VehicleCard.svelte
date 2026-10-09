@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { specificationLabel, formatMileage, compactMileage, compactSpecificationLabel } from '$lib/i18n/presentation';
+  import { specificationLabel, formatMileage, compactSpecificationLabel } from '$lib/i18n/presentation';
 
 
   import { getI18n } from '$lib/locale/context';
@@ -60,7 +60,7 @@
       <img
         src={vehicle.image}
         srcset={imageSrcset(vehicle.image)}
-        sizes={layout === 'listing' ? '(max-width: 767px) calc((100vw - 52px) * .5), (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
+        sizes={layout === 'listing' ? '(max-width: 767px) 156px, (max-width: 991px) 50vw, (max-width: 1279px) 33vw, 25vw' : '(max-width: 767px) 250px, (max-width: 991px) 50vw, 25vw'}
         alt={vehicle.title}
         loading={priority ? 'eager' : 'lazy'}
         fetchpriority={priority ? 'high' : 'auto'}
@@ -111,13 +111,16 @@
         {@render amount()}
       {/if}
     </div>
-    {#if layout === 'listing'}
+    {#if layout !== 'showcase'}
       <ul class="dn-vehicle-card__mobile-meta" aria-label={i18n.t("m_148a9be6e575")}>
-        <li class="dn-vehicle-card__fact">{vehicle.year}</li>
-        <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span aria-hidden="true">{compactMileage(vehicle.mileageKm, i18n.locale)}</span><span class="dn-sr-only">{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
-        {#each specifications as spec (spec.icon)}
-          <li class="dn-vehicle-card__fact" title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
+        <li class="dn-vehicle-card__fact"><span>{vehicle.year}</span></li>
+        <li class="dn-vehicle-card__fact" title={formatMileage(vehicle.mileageKm, i18n.locale)}><span>{formatMileage(vehicle.mileageKm, i18n.locale)}</span></li>
+        {#each specifications.filter(spec => layout === 'listing' || spec.icon === 'fuel') as spec (spec.icon)}
+          <li class="dn-vehicle-card__fact dn-vehicle-card__fact--spec" title={spec.label}><span aria-hidden="true">{spec.compactLabel}</span><span class="dn-sr-only">{spec.label}</span></li>
         {/each}
+        {#if layout === 'listing'}
+          <li class="dn-vehicle-card__fact dn-vehicle-card__fact--body" title={specificationLabel(vehicle.body, i18n.locale)}><span>{specificationLabel(vehicle.body, i18n.locale)}</span></li>
+        {/if}
       </ul>
     {/if}
   </a>
@@ -381,6 +384,25 @@
       color: var(--dn-ink);
     }
 
+    .dn-vehicle-card__badges,
+    .dn-vehicle-card__specs { display: none; }
+
+    .dn-vehicle-card__mobile-meta {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      order: 2;
+      gap: var(--dn-space-half);
+      margin: 0 var(--dn-space-3) var(--dn-space-3);
+      padding: 0;
+      list-style: none;
+    }
+
+    .dn-vehicle-card__content {
+      order: 1;
+      padding: var(--dn-space-3) var(--dn-space-3) var(--dn-space-2);
+    }
+
     .dn-vehicle-card__make {
       font: var(--dn-mobile-card-meta-font);
     }
@@ -390,12 +412,6 @@
       letter-spacing: var(--dn-tracking-normal);
     }
 
-    .dn-vehicle-card__specs {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: var(--dn-space-1);
-      margin-top: var(--dn-space-2);
-    }
     .dn-vehicle-card__spec {
       min-height: 28px;
       gap: var(--dn-space-1);
@@ -430,18 +446,19 @@
     .dn-vehicle-card--listing .dn-vehicle-card__link {
       display: grid;
       min-height: 0;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, min(45%, var(--dn-mobile-listing-photo-max-width))) minmax(0, 1fr);
       grid-template-rows: auto auto;
+      grid-template-areas: "visual content" "facts facts";
       column-gap: var(--dn-space-3);
       row-gap: var(--dn-space-2);
       padding: var(--dn-space-2);
     }
 
     .dn-vehicle-card--listing .dn-vehicle-card__visual {
-      height: 100%;
-      min-height: 0;
+      height: auto;
+      min-height: var(--dn-mobile-listing-photo-min-height);
       width: 100%;
-      grid-row: 1 / 3;
+      grid-area: visual;
       align-self: stretch;
       aspect-ratio: auto;
       border-radius: var(--dn-radius-sm);
@@ -452,18 +469,15 @@
       inset: 0;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__badges {
-      display: none;
-    }
-
     .dn-vehicle-card--listing .dn-vehicle-card__content {
       display: grid;
       min-width: 0;
+      grid-area: content;
       grid-template-columns: minmax(0, 1fr);
       grid-template-rows: auto auto;
       grid-template-areas: "identity" "price";
-      align-content: start;
-      gap: var(--dn-space-1);
+      align-content: center;
+      gap: var(--dn-space-2);
       padding: 0;
     }
 
@@ -483,23 +497,18 @@
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-make { display: inline; }
 
     .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta {
-      grid-column: 2;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      grid-auto-rows: 1fr;
-      gap: var(--dn-space-1);
+      grid-area: facts;
       margin: 0;
-      padding: 0;
-      list-style: none;
     }
 
-    .dn-vehicle-card--listing .dn-vehicle-card__fact {
+    .dn-vehicle-card__fact {
       display: inline-flex;
+      flex: 1 1 auto;
       min-width: 0;
       max-width: 100%;
       align-items: center;
       justify-content: center;
-      padding: var(--dn-space-1) var(--dn-space-2);
+      padding: var(--dn-space-1) var(--dn-space-half);
       overflow: hidden;
       border: 0;
       border-radius: var(--dn-radius-xs);
@@ -511,7 +520,7 @@
       white-space: nowrap;
     }
 
-    .dn-vehicle-card__fact > span[aria-hidden="true"] {
+    .dn-vehicle-card__fact > span:not(.dn-sr-only) {
       display: block;
       min-width: 0;
       overflow: hidden;
@@ -547,14 +556,10 @@
       overflow-wrap: anywhere;
     }
 
-    @container (max-width: 15rem) {
-      .dn-vehicle-card--listing .dn-vehicle-card__link {
-        grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: auto minmax(min-content, 1fr) auto;
-      }
-      .dn-vehicle-card--listing .dn-vehicle-card__visual { grid-row: auto; height: auto; aspect-ratio: 3 / 2; }
-      .dn-vehicle-card--listing .dn-vehicle-card__mobile-meta { grid-column: 1; }
-    }
+  }
+
+  @media (max-width: 359px) {
+    .dn-vehicle-card--listing .dn-vehicle-card__fact { padding-inline: 0; }
   }
 
   /* Preserve the desktop narrow-card reflow independently of mobile title limits. */

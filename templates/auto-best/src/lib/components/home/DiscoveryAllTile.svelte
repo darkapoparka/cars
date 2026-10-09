@@ -22,7 +22,7 @@
     {@render content()}
   </button>
 {:else}
-  <a class="dn-discovery-toggle" href={i18n.href(resolve('/listing-grid'))}>
+  <a class="dn-discovery-toggle" href={i18n.href(resolve('/cars'))}>
     {@render content()}
   </a>
 {/if}

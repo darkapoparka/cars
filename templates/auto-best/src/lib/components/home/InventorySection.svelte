@@ -6,6 +6,7 @@
   import { resolve } from '$app/paths';
   import VehicleCard from '$components/vehicles/VehicleCard.svelte';
   import Icon from '$components/ui/Icon.svelte';
+  import MobileActionIcon from '$components/layout/MobileActionIcon.svelte';
   import { featuredVehicles } from '$data/inventory';
 </script>
 
@@ -16,9 +17,13 @@
         <span class="dn-heading-desktop">{i18n.t("m_fd88b7330e98")}</span>
         <span class="dn-heading-mobile">{i18n.t("m_fd88b7330e98")}</span>
       </h2>
-      <a class="dn-inventory__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}>
+      <a class="dn-inventory__all dn-home-section-action" href={i18n.href(resolve('/cars'))} aria-label={i18n.t("m_7d6647b063a2")}>
         <span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span>
         <span class="dn-heading-mobile" aria-hidden="true">{i18n.t("m_a52ace420f21")}</span>
+      </a>
+      <a class="dn-inventory__mobile-all dn-compact-control dn-quick-pill" href={i18n.href(resolve('/cars'))} aria-label={i18n.t("m_7d6647b063a2")}>
+        {i18n.t("m_30a64216eaea")}
+        <MobileActionIcon name="arrow" size={14} />
       </a>
     </div>
 
@@ -32,6 +37,7 @@
 </section>
 
 <style>
+  .dn-inventory__mobile-all { display: none; }
   
 
   .dn-inventory {
@@ -103,6 +109,37 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 30px;
     align-items: stretch;
+  }
+
+  @media (min-width: 768px) {
+    .dn-inventory .dn-inventory__heading .dn-inventory__all {
+      --dn-featured-action-surface: var(--dn-white);
+      --dn-compact-control-font: var(--dn-weight-medium) var(--dn-text-meta) / var(--dn-leading-control) var(--dn-font);
+      isolation: isolate;
+      min-height: var(--dn-control-height-default);
+      padding: 0 var(--dn-space-3);
+      border: 0;
+      background: transparent;
+      color: var(--dn-ink);
+      font: var(--dn-compact-control-font);
+    }
+
+    .dn-inventory__all::before {
+      position: absolute;
+      z-index: -1;
+      inset: var(--dn-space-2) 0;
+      border-radius: inherit;
+      background: var(--dn-featured-action-surface);
+      content: '';
+    }
+
+    .dn-inventory .dn-inventory__heading .dn-inventory__all:is(:hover, :focus-visible) {
+      --dn-featured-action-surface: var(--dn-surface-hover);
+      background: transparent;
+      color: var(--dn-ink);
+    }
+
+    .dn-inventory__all :global(svg) { width: 14px; height: 14px; }
   }
 
   @media (max-width: 1200px) {
@@ -199,6 +236,30 @@
 
     .dn-inventory__grid :global(.dn-vehicle-card) {
       scroll-snap-align: start;
+    }
+
+    .dn-inventory__mobile-all {
+      --dn-compact-control-surface: var(--dn-white);
+      --dn-compact-control-ink: var(--dn-ink);
+      --dn-compact-control-padding-inline: var(--dn-space-3);
+      --dn-compact-control-inset: calc(var(--dn-space-2) + var(--dn-space-half));
+      --dn-entry-action-height: var(--dn-control-height-default);
+      --dn-entry-action-gap: var(--dn-space-1);
+      --dn-compact-control-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-control) var(--dn-font);
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+
+    .dn-inventory__mobile-all:is(:hover, :focus-visible) {
+      --dn-compact-control-surface: var(--dn-surface-hover);
+    }
+
+    .dn-inventory__mobile-all:focus-visible {
+      outline: 2px solid var(--dn-white);
+      outline-offset: 2px;
     }
   }
 

@@ -243,7 +243,7 @@
 {/snippet}
 
 {#snippet filterForm()}
-  <form method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={apply} onformdata={cleanForm}>
+  <form method="GET" action={i18n.href(resolve('/cars'))} onsubmit={apply} onformdata={cleanForm}>
     <FilterPopoverHeader id="dn-facet-title" {title} search={searchable ? searchControl : undefined} navigation={field === 'model' ? modelPicker?.navigation() : undefined} />
     <div class="dn-filter-workspace">
       <section class="dn-filter-panel" aria-label={title}>{@render editor()}</section>

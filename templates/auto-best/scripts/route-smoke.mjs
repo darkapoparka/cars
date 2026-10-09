@@ -7,14 +7,14 @@ const base = previewUrl();
 const output = 'artifacts/route-smoke';
 const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
-const core = ['/', '/listing-grid', '/about-us', '/blog', '/contact', ...['inspection', 'leasing', 'trade-in', 'import'].map(topic => `/contact?topic=${topic}`)];
+const core = ['/', '/cars', '/about-us', '/blog', '/contact', ...['inspection', 'leasing', 'trade-in', 'import'].map(topic => `/contact?topic=${topic}`)];
 const invalid = ['/listing-detail-v1/999', '/listing-detail-v1/01', '/blog-detail/999', '/missing-page'];
 const sitemap = await (await fetch(`${base}/sitemap.xml`)).text();
 const details = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => new URL(match[1]).pathname).filter(path => /\/\d+$/.test(path));
 try {
   for (const width of [390, 1440]) {
     const context = await returningContext(browser, { viewport: { width, height: width === 390 ? 844 : 900 }, reducedMotion: 'reduce' });
-    for (const route of [...core, ...details, '/listing-grid?q=no-match-xyz', '/blog?q=no-match-xyz', ...invalid]) {
+    for (const route of [...core, ...details, '/cars?q=no-match-xyz', '/blog?q=no-match-xyz', ...invalid]) {
       await suite.check(`${width} ${route}`, async () => {
         const page = await context.newPage();
         const errors = [];
@@ -65,7 +65,7 @@ try {
     await suite.check(`responsive ${width}x${height}`, async () => {
       const page = await returningPage(browser, { viewport: { width, height } });
       try {
-        for (const route of ['/', '/listing-grid', '/listing-detail-v1/4', '/blog-detail/1', '/about-us', '/contact?topic=leasing&vehicle=4']) {
+        for (const route of ['/', '/cars', '/listing-detail-v1/4', '/blog-detail/1', '/about-us', '/contact?topic=leasing&vehicle=4']) {
           await page.goto(base + route, { waitUntil: 'networkidle' });
           assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${route}: overflow`);
         }

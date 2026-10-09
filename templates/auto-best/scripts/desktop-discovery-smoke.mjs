@@ -11,7 +11,7 @@ const browser = await launchBrowser();
 const results = [];
 try {
   for (const width of [1024, 1440, 1920]) {
-    for (const route of ['/', '/listing-grid'].filter(route => !process.env.DISCOVERY_ROUTE || route === process.env.DISCOVERY_ROUTE)) {
+    for (const route of ['/', '/cars'].filter(route => !process.env.DISCOVERY_ROUTE || route === process.env.DISCOVERY_ROUTE)) {
       const page = await returningPage(browser, { viewport: { width, height: 900 }, reducedMotion: 'reduce' });
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
@@ -77,7 +77,7 @@ try {
       }
       const facetWidths = await form.locator('.dn-discovery__facets > label, .dn-discovery__facets > .dn-identity-field').evaluateAll(elements => elements.map(el => el.getBoundingClientRect().width));
       assert.ok(Math.max(...facetWidths) - Math.min(...facetWidths) < 1);
-      if (width === 1440 && route === '/listing-grid') await form.screenshot({ path: `${output}/cars-search-panel.png` });
+      if (width === 1440 && route === '/cars') await form.screenshot({ path: `${output}/cars-search-panel.png` });
       const identity = async (field, value) => {
         await form.locator(`[data-field=${field}] button`).click();
         await page.locator(`.dn-filter-picker input[value="${value}"]`).click();
@@ -202,7 +202,7 @@ try {
         assert.equal(await dialog.locator('input[name=model]').count(), 0, 'Removing a brand clears incompatible models');
         if (width === 1440) await dialog.screenshot({ path: `${output}/cars-search-menu.png` });
         await dialog.locator('.dn-listing-filter__dialog-submit').click();
-        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/cars' && url.searchParams.get('make') === 'Audi');
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
         await form.locator('[data-facet=price]').click();
         await dialog.getByRole('spinbutton', { name: 'Цена от · €', exact: true }).fill('90000');
@@ -211,7 +211,7 @@ try {
         await dialog.locator('.dn-search-reset').click();
         assert.equal(await dialog.locator('.dn-search-apply').isEnabled(), true);
         await dialog.locator('.dn-search-apply').click();
-        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/cars' && url.searchParams.get('make') === 'Audi');
         assert.equal(new URL(page.url()).searchParams.has('dn-picker-choice'), false);
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
       }
@@ -221,7 +221,7 @@ try {
         assert.equal(await bar.isVisible(), false, 'Home discovery intentionally stays in the hero instead of becoming sticky');
         await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
         await form.locator('.dn-discovery__submit').click();
-        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/cars' && url.searchParams.get('make') === 'Audi');
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
       } else {
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
@@ -253,7 +253,7 @@ try {
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));
         await bar.waitFor({ state: 'visible' });
         await bar.locator('.dn-discovery-sticky__submit').click();
-        await page.waitForURL(url => appPath(url) === '/listing-grid' && url.searchParams.get('make') === 'Audi');
+        await page.waitForURL(url => appPath(url) === '/cars' && url.searchParams.get('make') === 'Audi');
         assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
         await page.setViewportSize({ width: 390, height: 844 });
         await page.evaluate(() => window.scrollTo({ top: 900, behavior: 'instant' }));

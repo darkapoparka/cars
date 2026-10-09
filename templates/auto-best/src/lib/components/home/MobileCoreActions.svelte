@@ -12,7 +12,7 @@
     {
       title: 'home.action.cars.title',
       detail: 'home.action.cars.detail',
-      href: '/listing-grid',
+      href: '/cars',
       tone: 'blue',
       artwork: homeActionArtwork.collection
     },

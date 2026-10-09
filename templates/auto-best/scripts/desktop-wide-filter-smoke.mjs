@@ -15,7 +15,7 @@ try {
   const page = await browser.newPage({ viewport: { width, height }, locale, reducedMotion: 'reduce' });
   await page.context().addCookies([{name:'cars_prompt',value:'v1',url:base},{name:'cars_locale',value:locale,url:base}]);
   const errors=[]; page.on('pageerror', error=>errors.push(error.message));
-  await page.goto(`${base}/${locale}/listing-grid?sort=price-asc`,{waitUntil:'networkidle'});
+  await page.goto(`${base}/${locale}/cars?sort=price-asc`,{waitUntil:'networkidle'});
   try {
    await page.locator('.dn-discovery__facet-buttons').waitFor({state:'visible'});
   } catch (cause) {
@@ -171,7 +171,7 @@ try {
   await page.context().addCookies([{name:'cars_prompt',value:'v1',url:base},{name:'cars_locale',value:locale,url:base}]);
   const errors=[]; page.on('pageerror',error=>errors.push(error.message));
   const requested={make:'Saab',model:'9-3',body:'Liftback',fuel:'Electric',transmission:'Manual',version:'Aero',price_max:'85123',year_min:'2018',sort:'price-desc'};
-  await page.goto(base+'/'+locale+'/listing-grid?'+new URLSearchParams(requested),{waitUntil:'networkidle'});
+  await page.goto(base+'/'+locale+'/cars?'+new URLSearchParams(requested),{waitUntil:'networkidle'});
   const dialog=page.locator('#dn-listing-filter-dialog');
   for(const opener of ['.dn-discovery__keyword','.dn-listing-results__filters']) {
    await page.locator(opener).click(); await dialog.waitFor({state:'visible'});
@@ -210,7 +210,7 @@ try {
    const body=source.replace(/equipment:\s*\[([^\]]*)\]/,(_,values)=>'equipment: [...['+values+'], ...'+JSON.stringify(additions)+']');
    assert.notEqual(body,source); fixtureApplied=true; await route.fulfill({response,body});
   });
-  await page.goto(base+'/'+locale+'/listing-grid',{waitUntil:'networkidle'}); assert(fixtureApplied);
+  await page.goto(base+'/'+locale+'/cars',{waitUntil:'networkidle'}); assert(fixtureApplied);
   await page.locator('.dn-listing-results__filters').click();
   const dialog=page.locator('#dn-listing-filter-dialog'); await dialog.waitFor({state:'visible'});
   const pane=dialog.locator('.dn-listing-filter__dialog-content');

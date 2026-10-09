@@ -19,9 +19,9 @@
       mobileTitle: 'Автомобили',
       mobileCta: 'Разгледай',
       description: 'Разгледайте автомобилите с удобни филтри.',
-      bannerDescription: ['Изберете автомобил', 'с удобни филтри.'],
+      bannerDescription: ['Разгледайте нашата колекция', 'и открийте автомобила за вас.'],
       cta: 'Към автомобилите',
-      href: '/listing-grid',
+      href: '/cars',
       icon: 'car'
     },
     {
@@ -31,7 +31,7 @@
       mobileTitle: 'Продай/Бартер',
       mobileCta: 'Заяви оценка',
       description: 'Получете оценка за продажба или бартер.',
-      bannerDescription: ['Получете оценка', 'за продажба или бартер.'],
+      bannerDescription: ['Свържете се с нас за оценка', 'при продажба или бартер.'],
       cta: 'Поискайте оценка',
       href: '/contact?topic=trade-in',
       icon: 'value'
@@ -163,6 +163,7 @@
     .dn-trust-card h3 { margin: 0; }
     .dn-trust-card p { margin: 0; }
     .dn-trust-card__description-line { display: inline; }
+    .dn-trust-actions[data-banner-group='browse'] .dn-trust-card p { max-width: none; }
     .dn-trust-card .dn-trust-card__action { width: max-content; max-width: 100%; margin-top: auto; white-space: normal; }
     .dn-trust-card--campaign { container-type: inline-size; }
     .dn-trust-card--campaign .dn-trust-card__content { width: max(52%, 240px); }

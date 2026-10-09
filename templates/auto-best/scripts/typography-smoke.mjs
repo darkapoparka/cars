@@ -77,7 +77,7 @@ try {
           assert.equal((await typeOf(page.locator('.dn-quick-search__mobile-footer button'))).size,18);
           await readable(page,`${width}-home-filters`);
           await page.keyboard.press('Escape');
-          await page.goto(`${base}/listing-grid`,{waitUntil:'networkidle'});
+          await page.goto(`${base}/cars`,{waitUntil:'networkidle'});
           await page.locator('[aria-controls="dn-listing-filter-dialog"]:visible').first().click();
           assert.equal((await typeOf(page.locator('.dn-listing-filter__dialog-submit'))).size,18);
           await readable(page,`${width}-inventory-filters`);

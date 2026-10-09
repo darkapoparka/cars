@@ -103,7 +103,7 @@
   }
 </script>
 
-<form class="dn-home-browse" aria-label={i18n.t('m_0ae7a3ecbc83')} method="GET" action={i18n.href(resolve('/listing-grid'))}
+<form class="dn-home-browse" aria-label={i18n.t('m_0ae7a3ecbc83')} method="GET" action={i18n.href(resolve('/cars'))}
   {@attach attachRoot} onformdata={event => cleanListingFormData(event.formData)}>
   {#each fields as field (field)}
     {#snippet facetHeader(search: Snippet | undefined, navigation: PickerNavigation | undefined)}

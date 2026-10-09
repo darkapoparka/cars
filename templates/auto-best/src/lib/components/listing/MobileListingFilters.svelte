@@ -121,7 +121,7 @@
 <dialog id="dn-listing-filter-dialog" class="dn-listing-filter__dialog dn-mobile-listing-filters" {@attach attachDialog} {@attach dialogViewport}
   aria-labelledby="dn-listing-filter-title" onkeydown={keydown} oncancel={cancel} onclose={restore}
   onclick={event => { if (event.target === event.currentTarget) close(); }}>
-  <form class="dn-listing-filter__dialog-panel" method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={submit} onformdata={event => cleanListingFormData(event.formData)}>
+  <form class="dn-listing-filter__dialog-panel" method="GET" action={i18n.href(resolve('/cars'))} onsubmit={submit} onformdata={event => cleanListingFormData(event.formData)}>
     <header class="dn-mobile-overlay-heading dn-mobile-overlay-header dn-mobile-filter-header">
       {#if activeField}<button class="back dn-icon-button" type="button" aria-label={i18n.t('m_a779c56e526e')} onclick={back}><MobileActionIcon name="back" /></button>{/if}
       <h2 id="dn-listing-filter-title" tabindex="-1" {@attach attachHeading}>{title}</h2>

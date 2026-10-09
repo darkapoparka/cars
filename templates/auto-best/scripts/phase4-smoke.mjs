@@ -38,7 +38,7 @@ try {
   await check('URL sort and chip removal retain unrelated filters', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
-      await navigate(page, `${base}/listing-grid?make=BMW&fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
+      await navigate(page, `${base}/cars?make=BMW&fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
       await assertCleanDom(page);
       await page.locator('.dn-listing-filter__mobile-sort').click();
       const sortSheet = page.locator('#dn-listing-sort-sheet');
@@ -62,7 +62,7 @@ try {
   await check('facet and outer filter drafts save or cancel at their owner', async () => {
     const page = await returningPage(browser, { viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
     try {
-      await navigate(page, `${base}/listing-grid?fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
+      await navigate(page, `${base}/cars?fuel=${encodeURIComponent('Дизел')}&sort=price-asc`);
       const trigger = page.locator('.dn-listing-filter__toggle');
       const dialog = page.locator('#dn-listing-filter-dialog');
       const picker = dialog.locator('.dn-mobile-filter-editor');
@@ -160,14 +160,14 @@ try {
       await page.waitForFunction(() => document.querySelector('.dn-mobile-bottom-nav')?.classList.contains('dn-mobile-bottom-nav--footer-visible'));
       await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
 
-      await page.locator('.dn-mobile-bottom-nav a[href="/bg/listing-grid"]').click();
-      await page.waitForURL(url => appPath(url) === '/listing-grid');
+      await page.locator('.dn-mobile-bottom-nav a[href="/bg/cars"]').click();
+      await page.waitForURL(url => appPath(url) === '/cars');
       assert.equal(await shell.getAttribute('data-route'), 'listing');
       assert.equal(await shell.getAttribute('data-mobile-bottom'), 'nav');
-      assert.equal(await page.locator('.dn-mobile-bottom-nav a[href="/bg/listing-grid"]').getAttribute('aria-current'), 'page');
+      assert.equal(await page.locator('.dn-mobile-bottom-nav a[href="/bg/cars"]').getAttribute('aria-current'), 'page');
       await assertCleanDom(page);
 
-      await navigate(page, `${base}/listing-grid?make=BMW&sort=price-asc`);
+      await navigate(page, `${base}/cars?make=BMW&sort=price-asc`);
       const first = page.locator('.dn-listing-results .dn-vehicle-card__link').first();
       const title = await first.getAttribute('aria-label');
       await first.click({ position: { x: 5, y: 5 } });
@@ -178,7 +178,7 @@ try {
       assert.equal(await page.locator('.dn-mobile-bottom-nav').count(), 0);
       assert.match(await page.locator('.dn-mobile-detail-bar__secondary').getAttribute('href'), /^\/bg\/contact\?topic=inspection&vehicle=\d+$/);
       await page.locator('.dn-detail-mobile-back').click();
-      await page.waitForURL(url => appPath(url) === '/listing-grid');
+      await page.waitForURL(url => appPath(url) === '/cars');
       let url = new URL(page.url());
       assert.equal(url.searchParams.get('make'), 'BMW');
       assert.equal(url.searchParams.get('sort'), 'price-asc');
@@ -233,7 +233,7 @@ try {
           `Mobile bottom-nav visibility mismatch at ${width}x${height}`
         );
         await assertCleanDom(page);
-        await navigate(page, `${base}/listing-grid?make=Audi&sort=price-asc`);
+        await navigate(page, `${base}/cars?make=Audi&sort=price-asc`);
         assert.equal(await shell.getAttribute('data-route'), 'listing');
         assert.equal(await shell.getAttribute('data-mobile-bottom'), 'nav');
         await assertCleanDom(page);

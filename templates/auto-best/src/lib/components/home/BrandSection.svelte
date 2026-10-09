@@ -27,14 +27,14 @@
           <span class="dn-heading-desktop">{i18n.t("m_9eb6d7e50e27")}</span>
           <span class="dn-heading-mobile">{i18n.t("m_5216bd5728f8")}</span>
         </h2>
-        <a class="dn-brand-hero__cta dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}><span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span><span class="dn-heading-mobile" aria-hidden="true">{i18n.t("m_a52ace420f21")}</span></a>
+        <a class="dn-brand-hero__cta dn-home-section-action" href={i18n.href(resolve('/cars'))} aria-label={i18n.t("m_7d6647b063a2")}><span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span><span class="dn-heading-mobile" aria-hidden="true">{i18n.t("m_a52ace420f21")}</span></a>
       </div>
     </div>
     <div class="dn-brand-panel dn-home-section-panel">
       <div id="brands-grid" class="dn-brand-grid" style:--brand-columns={Math.max(1, Math.min(desktopBrands.length, 6))}>
         {#each homeBrandCards as brand (brand.label)}
           {@const mobile = mobileBrandArtwork[brand.label] ?? brand}
-          <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0 && !mobileBrands.has(brand.label)} class:dn-brand-card--mobile-only={!desktopBrandLabels.has(brand.label)} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/listing-grid?make=${encodeURIComponent(brand.label)}`))}>
+          <a class="dn-brand-card" class:dn-brand-card--desktop-only={brand.count === 0 && !mobileBrands.has(brand.label)} class:dn-brand-card--mobile-only={!desktopBrandLabels.has(brand.label)} class:dn-brand-card--additional={!mobileBrands.has(brand.label)} class:dn-brand-card--secondary={!expanded && !mobileBrands.has(brand.label)} data-stock-count={brand.count} href={i18n.href(resolve(`/cars?make=${encodeURIComponent(brand.label)}`))}>
             <span class="dn-brand-card__image">
               <span class="dn-brand-card__frame"
                 style:--logo-tablet-width={`${logoWidth(brand, 46, 84)}px`}

@@ -54,7 +54,7 @@
       .map(([key, value]) => {
         const params = removeListingFilter(filters, key, value);
         const search = params.toString();
-        const href: '/listing-grid' | `/listing-grid?${string}` = search ? `/listing-grid?${search}` : '/listing-grid';
+        const href: '/cars' | `/cars?${string}` = search ? `/cars?${search}` : '/cars';
         return { key: `${key}-${value}`, label: listingAppliedFilterLabel(filters, key, value, i18n.locale), href };
       })
   );
@@ -73,7 +73,7 @@
       <div class="dn-listing-desktop-discovery"><VehicleDiscoveryForm {filters} {openFilters} {filtersOpen} {onDraftChange} showFilterAction={false} modalFacets /></div>
       <QuickFilterSheet mode="url" id="dn-listing-sort-sheet">
       {#snippet children(openSort, sortOpen)}
-      <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
+      <form class="dn-listing-mobile-form" method="GET" action={i18n.href(resolve('/cars'))} onformdata={cleanFormData} oninput={updateDraft} onchange={updateDraft}>
         <div class="dn-listing-filter__primary">
         <div class="dn-listing-filter__search-field">
           <MobileNavIcon name="search" size={22} />

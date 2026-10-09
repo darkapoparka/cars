@@ -56,9 +56,9 @@
   <div class="dn-home-slot dn-home-slot--inventory" style:--dn-home-section-background={`url("${bannerBackground}")`} style:--dn-home-mobile-section-background={`url("${bannerMobileBackground}")`}><InventorySection /></div>
   <div class="dn-home-slot dn-home-slot--body" style:--dn-home-section-background={`url("${bannerBackground}")`}><BodyTypes /></div>
   <div class="dn-home-slot dn-home-slot--brands" style:--dn-home-section-background={`url("${bannerBackground}")`}><BrandSection /></div>
-  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
   <div class="dn-home-slot dn-home-slot--ownership-actions"><TrustActions group="ownership" mobileArtwork={false} /></div>
   <div class="dn-home-slot dn-home-slot--editorial" style:--dn-home-section-background={`url("${bannerBackground}")`}><Editorial /></div>
+  <div class="dn-home-slot dn-home-slot--services"><MobileServicesOverview /></div>
   <div class="dn-home-slot dn-home-slot--videos"><VideoSection /></div>
 </div>
 
@@ -369,8 +369,10 @@
       isolation: isolate;
       overflow: hidden;
       min-height: 64px;
+      flex-direction: column;
       justify-content: center;
-      padding: var(--dn-space-3) 44px;
+      gap: var(--dn-space-half);
+      padding: var(--dn-space-2) var(--dn-space-3);
       border-radius: var(--dn-radius);
       background-color: var(--dn-theme-hero-surface-deep);
       background-image: var(--dn-home-mobile-section-background);

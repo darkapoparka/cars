@@ -564,7 +564,7 @@ async function menusAndFilter(s) {
   }
   await check(s,'one inventory filter dialog / copy / viewport',sources.filters,async d=>{
     if(await prefs(p).isVisible())await dismiss(s);
-    await go(s,s.design==='auto-best'?'/listing-grid':s.design==='carwow'?'/inventory':'/cars');
+    await go(s,s.design==='auto-best'?'/cars':s.design==='carwow'?'/inventory':'/cars');
     let trigger;
     if(s.design==='auto-best')trigger=p.locator('[aria-controls="dn-listing-filter-dialog"]:visible').first();
     else if(s.design==='carwow')trigger=p.locator(s.width<992?'.mobile-inventory-quick button:visible':'.inventory-filter-triggers button:visible').first();

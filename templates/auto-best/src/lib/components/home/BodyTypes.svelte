@@ -28,7 +28,7 @@
         <span class="dn-heading-desktop">{i18n.t("m_555a44ad25a6")}</span>
         <span class="dn-heading-mobile">{i18n.t("m_ef0ecd6a2ade")}</span>
       </h2>
-      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/listing-grid'))} aria-label={i18n.t("m_7d6647b063a2")}>
+      <a class="dn-body-types__all dn-home-section-action" href={i18n.href(resolve('/cars'))} aria-label={i18n.t("m_7d6647b063a2")}>
         <span class="dn-heading-desktop dn-home-action-label">{i18n.t("m_30a64216eaea")} <Icon name="arrow-right" size={18} /></span>
       </a>
     </div>
@@ -36,7 +36,7 @@
     <div class="dn-body-types__viewport dn-home-section-panel">
       <div class="dn-body-types__rail" id="body-types-grid" aria-label={i18n.t("m_b94720bac36c")}>
         {#each desktopBodyTypes as item (item.query)}
-          <a class="dn-body-type" class:dn-body-type--desktop-only={item.count === 0} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/listing-grid?body=${encodeURIComponent(item.query)}`))}>
+          <a class="dn-body-type" class:dn-body-type--desktop-only={item.count === 0} class:dn-body-type--additional={!mobileBodyTypes.has(item.query)} class:dn-body-type--secondary={!expanded && !mobileBodyTypes.has(item.query)} data-stock-count={item.count} href={i18n.href(resolve(`/cars?body=${encodeURIComponent(item.query)}`))}>
             <span class="dn-body-type__image">
               <span class="dn-body-type__frame"
                 style:--body-aspect={`${item.bounds[2] - item.bounds[0]} / ${item.bounds[3] - item.bounds[1]}`}

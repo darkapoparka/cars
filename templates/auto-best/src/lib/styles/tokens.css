@@ -176,8 +176,10 @@
   --dn-mobile-card-title-font: var(--dn-weight-medium) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);
   --dn-mobile-card-meta-font: var(--dn-weight-regular) var(--dn-text-caption) / var(--dn-leading-meta) var(--dn-font);
   --dn-mobile-card-spec-font: var(--dn-weight-medium) var(--dn-text-caption) / var(--dn-leading-badge) var(--dn-font);
-  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-card) / var(--dn-leading-control) var(--dn-font);
-  --dn-mobile-card-price-compact-font: var(--dn-weight-semibold) var(--dn-text-lead) / var(--dn-leading-control) var(--dn-font);
+  --dn-mobile-card-price-font: var(--dn-weight-semibold) var(--dn-text-subheading) / var(--dn-leading-heading) var(--dn-font);
+  --dn-mobile-card-price-compact-font: var(--dn-mobile-card-price-font);
+  --dn-mobile-listing-photo-max-width: 156px;
+  --dn-mobile-listing-photo-min-height: 88px;
 
   /* Mobile body-style and brand tiles share media and label geometry. */
   --dn-discovery-label-font: var(--dn-weight-semibold) var(--dn-text-body) / var(--dn-leading-control) var(--dn-font);

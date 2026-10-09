@@ -72,7 +72,7 @@
           <ContactVehicle {vehicle} hero />
         </div>
       {:else}
-        <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={i18n.href(resolve('/listing-grid'))}>
+        <a class="dn-contact-button dn-contact-button--primary dn-contact-hero__action dn-route-hero__control" href={i18n.href(resolve('/cars'))}>
           {i18n.t("m_f92c64344e85")}
           <Icon name="arrow-right" size={24} strokeWidth={1.8} />
         </a>

@@ -50,7 +50,7 @@ try {
         { name: 'cars_locale', value: locale, url: base },
         { name: 'cars_prompt', value: 'v1', url: base }
       ]);
-      const route = flow === 'home' ? '/' : flow === 'listing' ? '/listing-grid' : '/contact?topic=import';
+      const route = flow === 'home' ? '/' : flow === 'listing' ? '/cars' : '/contact?topic=import';
       try {
         const response = await page.goto(base + route, { waitUntil: 'networkidle' });
         assert.equal(response.status(), 200, `${flow} must render before visual acceptance`);

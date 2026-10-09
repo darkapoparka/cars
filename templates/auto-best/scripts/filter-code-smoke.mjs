@@ -45,7 +45,7 @@ try {
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.context().addCookies([{ name: 'cars_prompt', value: 'v1', url: base }, { name: 'cars_locale', value: locale, url: base }]);
-      await page.goto(`${base}/${locale}/listing-grid?${applied}`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/${locale}/cars?${applied}`, { waitUntil: 'networkidle' });
       const main = page.locator('#dn-listing-filter-dialog');
       const shortcut = field => page.locator('.dn-listing-filter__quick').getByRole('button', { name: copy[`inventory.facet.${field}`][locale], exact: true });
       if (width < 768) {

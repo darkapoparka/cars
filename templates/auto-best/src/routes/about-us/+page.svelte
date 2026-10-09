@@ -46,7 +46,7 @@
         {/each}
       </nav>
     {/if}
-    <a class="dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/listing-grid'))}>
+    <a class="dn-compact-control dn-entry-action dn-compact-primary" href={i18n.href(resolve('/cars'))}>
       <span>{i18n.t("m_f92c64344e85")}</span><MobileActionIcon name="arrow" size={18} />
     </a>
   </EntryCard>

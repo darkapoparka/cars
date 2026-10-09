@@ -17,7 +17,7 @@
     {
       title: i18n.t("m_dce64d6d5cf9"),
       description: i18n.t("m_26c39003300b"),
-      href: '/listing-grid',
+      href: '/cars',
       icon: 'car'
     },
     {
@@ -88,9 +88,9 @@
     </div>
     <nav class="dn-footer__vehicles" aria-label={i18n.t("m_9e499e4cdaf4")}>
       <strong>{i18n.t("m_9e499e4cdaf4")}</strong>
-      <a href={i18n.href(resolve('/listing-grid'))}>{i18n.t('footer.inventory.all')}</a>
-      <a href={i18n.href(resolve('/listing-grid?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
-      <a href={i18n.href(resolve('/listing-grid?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
+      <a href={i18n.href(resolve('/cars'))}>{i18n.t('footer.inventory.all')}</a>
+      <a href={i18n.href(resolve('/cars?condition=used'))}>{i18n.t('footer.inventory.used')}</a>
+      <a href={i18n.href(resolve('/cars?sort=newest'))}>{i18n.t('footer.inventory.latest')}</a>
     </nav>
     <nav class="dn-footer__company" aria-label={i18n.t("m_de4743c87973")}>
       <strong>{i18n.t("m_de4743c87973")}</strong>

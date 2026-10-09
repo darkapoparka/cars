@@ -36,7 +36,7 @@
       <div class="dn-search__mobile-modes"><EntrySegments tabs bind:value={mode} label={i18n.t('m_a78ab3107899')} options={[{ value: 'buy', label: i18n.t('m_64e3cb0e4960'), id: 'home-buy-tab', controls: 'home-buy-search' }, { value: 'import', label: i18n.t('m_2cff9baabf56'), id: 'home-import-tab', controls: 'home-import-search' }]} /></div>
       <div id="home-buy-search" class={['dn-search__buy', { 'dn-search__buy--inactive': mode !== 'buy' }]} role="tabpanel" aria-labelledby="home-buy-tab">
         <VehicleQuickSearch />
-        <EntryAction class="dn-search__mobile-all" href={i18n.href(resolve('/listing-grid'))}>{i18n.t('m_5701bc5c6a95')}</EntryAction>
+        <EntryAction class="dn-search__mobile-all" href={i18n.href(resolve('/cars'))}>{i18n.t('m_5701bc5c6a95')}</EntryAction>
       </div>
       <div id="home-import-search" class={['dn-search__import', { 'dn-search__import--active': mode === 'import' }]} role="tabpanel" aria-labelledby="home-import-tab">
         <form class="dn-search__import-form" method="GET" action={i18n.href(resolve('/contact#contact-intent'))} novalidate onsubmit={validateImport}>
@@ -75,18 +75,18 @@
     {#if budgetCaps.length}
       <nav class="dn-search__desktop-budgets" aria-label={i18n.t('m_dea1661dff21')}>
         {#each budgetCaps as cap (cap)}
-          <a class="dn-compact-control dn-quick-pill dn-search__budget" href={i18n.href(resolve(`/listing-grid?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+          <a class="dn-compact-control dn-quick-pill dn-search__budget" href={i18n.href(resolve(`/cars?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
         {/each}
       </nav>
     {/if}
   </div>
   <nav class="dn-search__mobile-shortcuts" aria-label={i18n.t("m_dea1661dff21")}>
     {#each budgetCaps as cap (cap)}
-      <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve(`/listing-grid?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
+      <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve(`/cars?price_max=${cap}`))} aria-label={i18n.t('inventory.budget.accessible', { amount: formatPrice(cap, i18n.locale) })}>{i18n.t('inventory.budget.short', { amount: cap / 1000, currency: compactInventoryCurrency })}</a>
     {/each}
-    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Audi'))}>{i18n.t("m_ab31803df6d5")}</a>
-    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=Mercedes-Benz'))}>{i18n.t("m_3d0e65dfe82d")}</a>
-    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/listing-grid?make=BMW'))}>{i18n.t("m_c76b5628a9d1")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=Audi'))}>{i18n.t("m_ab31803df6d5")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=Mercedes-Benz'))}>{i18n.t("m_3d0e65dfe82d")}</a>
+    <a class="dn-compact-control dn-compact-pill dn-quick-pill" href={i18n.href(resolve('/cars?make=BMW'))}>{i18n.t("m_c76b5628a9d1")}</a>
   </nav>
 </section>
 

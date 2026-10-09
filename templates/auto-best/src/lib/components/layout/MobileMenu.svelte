@@ -57,7 +57,7 @@
           {/snippet}
         </LocaleTrigger>
         <nav aria-label={i18n.t("m_7b624fe4f7ac")}>
-          <a href={i18n.href(resolve('/listing-grid'))} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={22} /><span>{i18n.t("m_13b5d43d1176")}</span><MobileNavIcon name="arrow" size={18} /></a>
+          <a href={i18n.href(resolve('/cars'))} aria-current={active.listing ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="cars" size={22} /><span>{i18n.t("m_13b5d43d1176")}</span><MobileNavIcon name="arrow" size={18} /></a>
           <a href={i18n.href(resolve('/blog'))} aria-current={active.blog ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="article" size={22} /><span>{i18n.t("m_5b0e082dcfae")}</span><MobileNavIcon name="arrow" size={18} /></a>
           <a href={i18n.href(resolve('/about-us'))} aria-current={active.about ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="company" size={22} /><span>{i18n.t("m_b4b580a9ad8c")}</span><MobileNavIcon name="arrow" size={18} /></a>
           <a href={i18n.href(resolve('/contact'))} aria-current={active.contact ? 'page' : undefined} onclick={() => void closeMobile(false)}><MobileNavIcon name="location" size={22} /><span>{i18n.t("m_d58d4100d4e6")}</span><MobileNavIcon name="arrow" size={18} /></a>

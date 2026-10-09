@@ -12,7 +12,7 @@ const suite = await smokeReport(output, base);
 const casePattern = process.env.REFLOW_CASE ? new RegExp(process.env.REFLOW_CASE) : null;
 const check = (name, run) => casePattern && !casePattern.test(name) ? Promise.resolve() : suite.check(name, run);
 const browser = await (engine === 'webkit' ? webkit.launch({ headless: true }) : launchBrowser());
-const routes = ['', '/listing-grid', '/listing-detail-v1/1', '/about-us', '/blog', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/locale-settings'];
+const routes = ['', '/cars', '/listing-detail-v1/1', '/about-us', '/blog', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/locale-settings'];
 const overrides = {
   spacing: '* { line-height: 1.5 !important; letter-spacing: .12em !important; word-spacing: .16em !important; } p { margin-bottom: 2em !important; }',
   enlarged: 'html { font-size: 200% !important; }'
@@ -86,7 +86,7 @@ try {
       for (const name of ['filters', 'home-make', 'home-model', 'home-price', 'make', 'listing-filters', 'listing-transmission', 'listing-price', 'listing-equipment', 'preferences', 'import', 'sell', 'import-guide', 'sell-guide']) await check(`${locale} ${width} ${name} dialog reflow`, async () => {
         const page = await context.newPage();
         page.setDefaultNavigationTimeout(60000);
-        const route = name === 'make' || name.startsWith('listing-') ? '/listing-grid' : name.startsWith('import') ? '/contact?topic=import' : name.startsWith('sell') ? '/contact?topic=trade-in' : '';
+        const route = name === 'make' || name.startsWith('listing-') ? '/cars' : name.startsWith('import') ? '/contact?topic=import' : name.startsWith('sell') ? '/contact?topic=trade-in' : '';
         try {
           await page.goto(`${base}/${locale}${route}`, { waitUntil: 'networkidle' });
           if (name === 'filters' || name.startsWith('home-')) {

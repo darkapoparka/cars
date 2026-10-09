@@ -11,8 +11,8 @@ export type NavigationHref =
   | `/blog?${string}`
   | '/contact'
   | `/contact?${string}`
-  | '/listing-grid'
-  | `/listing-grid?${string}`
+  | '/cars'
+  | `/cars?${string}`
   | `tel:${string}`;
 
 export type InternalNavigationHref = Exclude<NavigationHref, `tel:${string}`>;
@@ -56,36 +56,36 @@ export const navigation: NavigationItem[] = [
   {
     id: 'vehicles',
     label: 'Автомобили',
-    href: '/listing-grid',
+    href: '/cars',
     menu: {
       title: 'Автомобили',
       description: 'Разгледайте наличностите по състояние, тип купе или марка.',
       features: [
-        { id: 'vehicles-suv', vehicle: 'gclass', title: 'SUV', detail: 'Простор и комфорт', href: '/listing-grid?body=SUV' },
-        { id: 'vehicles-wagon', vehicle: 'graphite', title: 'Комби', detail: 'Място за всеки ден', href: '/listing-grid?body=Wagon' },
-        { id: 'vehicles-coupe', vehicle: 'porsche', title: 'Купе', detail: 'Спортен характер', href: '/listing-grid?body=Coupe' }
+        { id: 'vehicles-suv', vehicle: 'gclass', title: 'SUV', detail: 'Простор и комфорт', href: '/cars?body=SUV' },
+        { id: 'vehicles-wagon', vehicle: 'graphite', title: 'Комби', detail: 'Място за всеки ден', href: '/cars?body=Wagon' },
+        { id: 'vehicles-coupe', vehicle: 'porsche', title: 'Купе', detail: 'Спортен характер', href: '/cars?body=Coupe' }
       ],
       groups: [
         {
           id: 'vehicles-browse',
           title: 'Разгледайте',
           links: [
-            { id: 'vehicles-all', label: 'Всички автомобили', href: '/listing-grid' },
-            { id: 'vehicles-new', label: 'Най-нови предложения', href: '/listing-grid?sort=newest' },
-            { id: 'vehicles-used', label: 'Употребявани', href: '/listing-grid?condition=used' }
+            { id: 'vehicles-all', label: 'Всички автомобили', href: '/cars' },
+            { id: 'vehicles-new', label: 'Най-нови предложения', href: '/cars?sort=newest' },
+            { id: 'vehicles-used', label: 'Употребявани', href: '/cars?condition=used' }
           ]
         },
         {
           id: 'vehicles-body',
           title: 'По тип купе',
           links: [
-            { id: 'vehicles-body-suv', label: 'SUV', href: '/listing-grid?body=SUV' },
-            { id: 'vehicles-body-sedan', label: 'Комби', href: '/listing-grid?body=Wagon' },
-            { id: 'vehicles-body-coupe', label: 'Купе', href: '/listing-grid?body=Coupe' }
+            { id: 'vehicles-body-suv', label: 'SUV', href: '/cars?body=SUV' },
+            { id: 'vehicles-body-sedan', label: 'Комби', href: '/cars?body=Wagon' },
+            { id: 'vehicles-body-coupe', label: 'Купе', href: '/cars?body=Coupe' }
           ]
         }
       ],
-      cta: { id: 'vehicles-cta', label: 'Вижте всички автомобили', href: '/listing-grid', detail: 'Филтрирайте по тип, гориво и състояние.' }
+      cta: { id: 'vehicles-cta', label: 'Вижте всички автомобили', href: '/cars', detail: 'Филтрирайте по тип, гориво и състояние.' }
     }
   },
   {

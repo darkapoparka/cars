@@ -364,7 +364,7 @@
         </a>
         <a
           class:active={presentation.mobileNavigation.listing}
-          href={i18n.href(resolve('/listing-grid'))}
+          href={i18n.href(resolve('/cars'))}
           aria-current={presentation.mobileNavigation.listing ? 'page' : undefined}
         >
           <span class="dn-mobile-bottom-nav__icon"><BottomNavIcon name="cars" active={presentation.mobileNavigation.listing} /></span>

@@ -141,7 +141,7 @@ export async function verifyHomeBrowse(page, locale = 'bg') {
   assert.equal(await field('body').locator('.dn-home-browse__value').innerText(), savedBodySummary, 'Saving Budget preserves the Body style label');
 
   await form.getByRole('button', { name: locale === 'bg' ? 'Търсете' : 'Search', exact: true }).press('Enter');
-  await page.waitForURL(url => appPath(url.href) === '/listing-grid');
+  await page.waitForURL(url => appPath(url.href) === '/cars');
   const params = new URL(page.url()).searchParams;
   assert.deepEqual(params.getAll('make'), ['Audi']);
   assert.deepEqual(params.getAll('model'), ['RS 6 Avant']);

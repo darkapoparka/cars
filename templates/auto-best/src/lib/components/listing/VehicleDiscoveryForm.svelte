@@ -78,7 +78,7 @@
   const clean = (event: FormDataEvent) => cleanListingFormData(event.formData);
 </script>
 
-<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={clean}>
+<form id="dn-desktop-discovery" class="dn-discovery" {@attach observePanel} method="GET" action={i18n.href(resolve('/cars'))} onformdata={clean}>
   <div class="dn-discovery__toolbar">
     <div class="dn-discovery__search">
       <button class="dn-discovery__keyword" type="button" aria-label={i18n.text(keywordPlaceholder)} aria-haspopup="dialog" aria-controls="dn-listing-filter-dialog" aria-expanded={filtersOpen} onclick={event => openFilters(event, modalFacets ? 'search' : undefined)}>

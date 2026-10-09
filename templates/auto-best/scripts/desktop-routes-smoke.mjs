@@ -8,7 +8,7 @@ const caseFilter = process.env.DESKTOP_ROUTE_CASE ? new RegExp(process.env.DESKT
 const output = caseFilter ? 'artifacts/desktop-routes-smoke-focused' : 'artifacts/desktop-routes-smoke';
 const suite = await smokeReport(output, base);
 const browser = await launchBrowser();
-const routes = ['', 'listing-grid', 'about-us', 'blog', 'contact'];
+const routes = ['', 'cars', 'about-us', 'blog', 'contact'];
 
 const check = (name, run) => !caseFilter || caseFilter.test(name) ? suite.check(name, run) : Promise.resolve();
 
@@ -53,7 +53,7 @@ async function heroGeometry(page) {
 
 function assertDesktopFrame(geometry, route = '') {
   const company = route === 'about-us' || route === 'contact';
-  const search = ['', 'listing-grid', 'blog'].includes(route);
+  const search = ['', 'cars', 'blog'].includes(route);
   assert.equal(geometry.hero.height, 540, 'Desktop routes share one hero height');
   if (!search) assert.equal(geometry.copy.y - geometry.hero.y, 200, 'Company and service heroes keep their introduction anchor');
   if (route === 'about-us') {
@@ -144,9 +144,9 @@ try {
                 const scene = route === 'about-us' ? 'home-v3' : 'inventory-v3';
                 assert(geometry.scene.src.endsWith(`auto-best-desktop-${scene}.webp`), 'About and Contact reuse the approved larger car banners');
               } else {
-                const pair = { '': ['gclass', 'urus'], 'listing-grid': ['golf', 'a45'], blog: ['m5', 'e63'] }[route];
+                const pair = { '': ['gclass', 'urus'], 'cars': ['golf', 'a45'], blog: ['m5', 'e63'] }[route];
                 assert.deepEqual(geometry.cutouts.map(car => car.vehicle), pair, 'Each destination has its own reviewed car pair');
-                if (route === '' || route === 'listing-grid' || route === 'blog') {
+                if (route === '' || route === 'cars' || route === 'blog') {
                   const discoveryScene = page.locator('.dn-desktop-hero-scene');
                   assert.equal(await discoveryScene.locator('.dn-campaign-vehicles__dots, .dn-campaign-vehicles__arc').count(), 0, 'Home, Inventory and Advice omit their old native decoration');
                   assert.match(await discoveryScene.evaluate(scene => getComputedStyle(scene).backgroundImage), /home-section-shared-backdrop-v1\.webp/, 'Discovery heroes reuse the shared graphite background');
@@ -178,9 +178,9 @@ try {
                 }));
                 for (const body of vehicleBodies) assert(body.bottom <= geometry.controls.y - 12, 'Laptop search panels leave the painted vehicle bodies visible above their outer corners');
               }
-              assert.deepEqual(await page.locator('.dn-nav__list > li > a').evaluateAll(links => links.map(link => new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, ''))), ['', 'listing-grid', 'blog', 'about-us', 'contact'], 'Desktop places Guides before About in DOM and keyboard order');
+              assert.deepEqual(await page.locator('.dn-nav__list > li > a').evaluateAll(links => links.map(link => new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, ''))), ['', 'cars', 'blog', 'about-us', 'contact'], 'Desktop places Guides before About in DOM and keyboard order');
               assert.equal(geometry.headingSize, imageScene ? (width < 1200 ? '48px' : '56px') : (width < 1200 ? '32px' : '48px'));
-              if (!['', 'listing-grid', 'blog'].includes(route)) {
+              if (!['', 'cars', 'blog'].includes(route)) {
                 assert.equal(geometry.leadSize, '18px', 'Company subtitles use lead type');
                 assert(geometry.lead.y >= geometry.heading.bottom, 'Title and lead do not overlap');
               }
@@ -198,7 +198,7 @@ try {
                   assert(control.y >= geometry.controls.y + panelStyle.padding && control.y + control.height <= geometry.controls.bottom - panelStyle.padding + 1, 'The complete search and category row fit inside the white panel');
                 }
               }
-              if (route === 'listing-grid') {
+              if (route === 'cars') {
                 const count = await page.locator('.dn-listing-results .dn-vehicle-card').count();
                 assert.equal(await page.locator('.dn-listing-hero__copy p').innerText(), locale === 'bg' ? `${count} автомобила` : `${count} cars`);
                 for (const card of await page.locator('.dn-listing-results .dn-vehicle-card').all()) {
@@ -217,7 +217,7 @@ try {
                 const social = page.locator('.dn-desktop-socials a');
                 assert.equal(await social.count(), 0, 'The master has no borrowed dealer social accounts');
               }
-              const surface = { '': '.dn-inventory', 'listing-grid': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];
+              const surface = { '': '.dn-inventory', 'cars': '.dn-listing-results', 'about-us': '.dn-about-process', 'blog': '.dn-blog-index' }[route];
               if (surface) assert.equal(await page.locator(surface).evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(244, 245, 247)', 'Desktop routes share a light-grey content canvas');
               assert.equal(await page.locator('.dn-route-hero').evaluate(e => getComputedStyle(e).backgroundColor), 'rgb(21, 24, 29)', 'Every hero has the same graphite fallback surface');
               assert.equal(await page.locator('.dn-route-hero h1').evaluate(e => getComputedStyle(e).color), 'rgb(255, 255, 255)', 'All desktop hero headings use readable white copy');
@@ -332,7 +332,7 @@ try {
               await page.waitForURL(url => url.searchParams.get('q') === '');
               assert.equal(await page.locator('.dn-blog-card').count(), total, 'Clearing search restores the complete article list');
             }
-            if (route === 'listing-grid' && width === 1440) {
+            if (route === 'cars' && width === 1440) {
               const count = page.locator('.dn-listing-hero__copy p');
               await page.locator('.dn-discovery [data-facet=make]').click();
               const picker = page.locator('#dn-listing-filter-dialog');
@@ -342,7 +342,7 @@ try {
               assert(new URL(page.url()).pathname.startsWith(`/${locale}/`), 'Search preserves the chosen language');
               assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 2);
               assert.equal(await count.innerText(), locale === 'bg' ? '2 автомобила' : '2 cars', 'Hero count agrees with applied results');
-              await page.goto(`${base}/${locale}/listing-grid?q=zzzznomatch`, { waitUntil: 'domcontentloaded' });
+              await page.goto(`${base}/${locale}/cars?q=zzzznomatch`, { waitUntil: 'domcontentloaded' });
               assert.equal(await count.innerText(), locale === 'bg' ? '0 автомобила' : '0 cars', 'Zero matches remain explicit');
               assert.equal(await page.locator('.dn-listing-results .dn-vehicle-card').count(), 0);
             }
@@ -365,7 +365,7 @@ try {
           assert(await about.evaluate(link => link === document.activeElement), 'Keyboard navigation follows Guides with About');
           const initial = await heroGeometry(page);
           const frames = [];
-          for (const route of ['listing-grid', 'about-us', 'contact', 'blog', '']) {
+          for (const route of ['cars', 'about-us', 'contact', 'blog', '']) {
             const links = page.locator('.dn-nav__list > li > a');
             const index = await links.evaluateAll((items, route) => items.findIndex(link =>
               new URL(link.href).pathname.replace(/^\/(bg|en)(?=\/|$)/, '').replace(/^\/|\/$/g, '') === route
@@ -391,7 +391,7 @@ try {
             for (const element of ['header', 'logo', 'navigation']) {
               assert.deepEqual(geometry[element], initial[element], `${element} keeps its position and size when switching routes`);
             }
-            if (route === 'listing-grid' || route === '') {
+            if (route === 'cars' || route === '') {
               assert.deepEqual(geometry.controls, initial.controls, 'Home and Inventory share the complete search-panel bounds');
             }
             if (route === 'blog') {

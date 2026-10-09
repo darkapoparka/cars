@@ -97,7 +97,7 @@
 {/snippet}
 {@render props.children(open, opened)}
 <dialog onkeydown={keydown} {id} class={['dn-quick-sheet', { searchable, 'text-entry': textEntry, standalone: props.mode === 'url' }]} aria-labelledby={`${id}-title`} {@attach attachDialog} {@attach dialogViewport} onclose={restore} onclick={event => { if (event.target === event.currentTarget) dialog.close(); }}>
-  <form method="GET" action={i18n.href(resolve('/listing-grid'))} onformdata={event => cleanListingFormData(event.formData)} onsubmit={submit}>
+  <form method="GET" action={i18n.href(resolve('/cars'))} onformdata={event => cleanListingFormData(event.formData)} onsubmit={submit}>
       <header class="dn-mobile-overlay-heading dn-mobile-overlay-header dn-mobile-filter-header">
         <h2 id={`${id}-title`} tabindex="-1" {@attach attachHeading}>{title}</h2>
         <button type="button" class="close dn-icon-button dn-overlay-close" aria-label={i18n.t('m_84305a580997')} onclick={() => dialog.close()}>{@render actionIcon('close')}</button>

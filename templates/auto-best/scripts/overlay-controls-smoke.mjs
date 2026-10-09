@@ -87,7 +87,7 @@ try {
         } finally { await page.close(); }
       });
     }
-    await check('filters', '/listing-grid', async page => {
+    await check('filters', '/cars', async page => {
       const trigger = page.locator(width < 768 ? '.dn-listing-filter__toggle' : '.dn-listing-results__filters');
       await trigger.click();
       if (width >= 992) {

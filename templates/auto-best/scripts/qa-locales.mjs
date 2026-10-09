@@ -11,7 +11,7 @@ const selected = process.env.LOCALE_QA_DESIGNS?.split(',') ?? ['auto-best'];
 const widths = process.env.LOCALE_QA_WIDTHS?.split(',').map(Number) ?? [320, 390, 1440];
 const locales = ['en', 'bg'];
 const plans = {
-  'auto-best': { mount: '', routes: ['/', '/listing-grid', '/listing-detail-v1/1', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/contact?topic=leasing', '/contact?topic=inspection', '/about-us', '/blog', '/blog-detail/1', '/locale-settings', '/missing-locale-qa-page'] },
+  'auto-best': { mount: '', routes: ['/', '/cars', '/listing-detail-v1/1', '/contact', '/contact?topic=trade-in', '/contact?topic=import', '/contact?topic=leasing', '/contact?topic=inspection', '/about-us', '/blog', '/blog-detail/1', '/locale-settings', '/missing-locale-qa-page'] },
   modern: { mount: '/variant-2', routes: ['/', '/cars', '/cars/bmw', '/listing/demo-audi-1', '/listing/demo-audi-1/contact', '/sell', '/imports', '/imports/china', '/lease', '/contact', '/motorbikes', '/vans', '/trucks', '/collections/chinese-ev-hybrids', '/guides', '/blog', '/legal/privacy', '/legal/terms', '/missing-locale-qa-page'] },
   carwow: { mount: '/variant-3', routes: ['/', '/inventory', '/inventory/map', '/inventory/audi-rs-6-avant-demo-1', '/sell-your-car', '/sell-your-car/request', '/contact', '/contact?intent=import', '/financing', '/calculator', '/compare', '/favorites', '/about', '/services', '/faq', '/blog', '/team', '/reviews', '/terms', '/presentation/home2', '/presentation/home3', '/missing-locale-qa-page'] }
 };

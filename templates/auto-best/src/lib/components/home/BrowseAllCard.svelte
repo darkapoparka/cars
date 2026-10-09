@@ -4,8 +4,8 @@
 
   import { resolve } from '$app/paths';
   import Icon from '$components/ui/Icon.svelte';
-  let { href = '/listing-grid', label = i18n.t("m_5701bc5c6a95"), detail = '', action = i18n.t("m_5701bc5c6a95"), compact = false, image }: {
-    href?: '/listing-grid' | '/blog'; label?: string; detail?: string; action?: string; compact?: boolean; image?: string;
+  let { href = '/cars', label = i18n.t("m_5701bc5c6a95"), detail = '', action = i18n.t("m_5701bc5c6a95"), compact = false, image }: {
+    href?: '/cars' | '/blog'; label?: string; detail?: string; action?: string; compact?: boolean; image?: string;
   } = $props();
 </script>
 

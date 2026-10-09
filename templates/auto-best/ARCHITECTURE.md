@@ -41,7 +41,7 @@ Aliases are configured in `svelte.config.js`: `$components` maps to components, 
 Inventory follows this path:
 
 ```text
-GET /listing-grid?...
+GET /cars?...
   +page.ts
     parseListingFilters(url.searchParams)
     filterListingVehicles(records, filters)

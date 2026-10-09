@@ -4,6 +4,7 @@ import { launchBrowser, previewUrl } from './browser.mjs';
 import { smokeReport } from './smoke-report.mjs';
 
 const base = previewUrl();
+const cardsOnly = process.argv.includes('--cards-only');
 const output = 'artifacts/mobile-polish-smoke';
 await mkdir(output, { recursive: true });
 const suite = await smokeReport(output, base);
@@ -84,7 +85,7 @@ async function alignedDiscovery(page, locale) {
     await disclosure.click();
     assert.equal(await disclosure.getAttribute('aria-expanded'), 'false');
   }
-  assert.equal(await page.locator('#brands-grid a.dn-discovery-toggle').getAttribute('href'), `/${locale}/listing-grid`);
+  assert.equal(await page.locator('#brands-grid a.dn-discovery-toggle').getAttribute('href'), `/${locale}/cars`);
 }
 async function longCardCopy(page, locale, layout) {
   // Exercise future dealer inventory without replacing the master's sample records.
@@ -103,12 +104,14 @@ async function longCardCopy(page, locale, layout) {
       heading.title = title;
       card.querySelector('a').setAttribute('aria-label', title);
       const labels = [fuel, { compact: locale === 'bg' ? 'Автомат' : 'Auto', full: locale === 'bg' ? 'Автоматик' : 'Automatic' }];
-      const badges = [...card.querySelectorAll(layout === 'listing' ? '.dn-vehicle-card__fact' : '.dn-vehicle-card__spec')].slice(layout === 'listing' ? 2 : 0);
+      const badges = [...card.querySelectorAll('.dn-vehicle-card__fact--spec')];
       for (const [index, badge] of badges.entries()) {
         badge.title = labels[index].full;
-        badge.querySelector(layout === 'listing' ? '[aria-hidden="true"]' : '.dn-vehicle-card__spec-compact').textContent = labels[index].compact;
+        badge.querySelector('[aria-hidden="true"]').textContent = labels[index].compact;
         badge.querySelector('.dn-sr-only').textContent = labels[index].full;
       }
+      const body = card.querySelector('.dn-vehicle-card__fact--body');
+      if (body) { body.title = locale === 'bg' ? 'Седан' : 'Sedan'; body.querySelector('span').textContent = body.title; }
       source.parentElement.append(card);
     }, { title, fuel, locale, layout });
     const fixture = page.locator('#vehicle-copy-fixture');
@@ -118,14 +121,18 @@ async function longCardCopy(page, locale, layout) {
       const geometry = await fixture.evaluate(card => {
         const heading = card.querySelector('.dn-vehicle-card__name');
         const headingStyle = getComputedStyle(heading);
-        const listing = card.classList.contains('dn-vehicle-card--listing');
-        const badges = [...card.querySelectorAll(listing ? '.dn-vehicle-card__fact' : '.dn-vehicle-card__spec')];
+        const badges = [...card.querySelectorAll('.dn-vehicle-card__fact')];
+        const photo = card.querySelector('.dn-vehicle-card__visual').getBoundingClientRect();
+        const metadata = card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect();
+        const content = card.querySelector('.dn-vehicle-card__content').getBoundingClientRect();
+        const mileage = badges[1].querySelector('span');
         return {
           lines: heading.getBoundingClientRect().height / parseFloat(headingStyle.lineHeight),
           title: heading.title, accessible: card.querySelector('a').getAttribute('aria-label'),
+          bottomStrip: metadata.top >= photo.bottom && metadata.top >= content.bottom - 1,
+          fullMileageFits: mileage.checkVisibility() && mileage.scrollWidth <= mileage.clientWidth + 1 && /\d.*(?:km|км)/.test(mileage.textContent),
           badges: badges.map(badge => {
-            const text = listing ? badge.querySelector('[aria-hidden="true"]') ?? badge
-              : [...badge.querySelectorAll('.dn-vehicle-card__spec-full, .dn-vehicle-card__spec-compact')].find(label => label.checkVisibility());
+            const text = badge.querySelector('span:not(.dn-sr-only)');
             const box = badge.getBoundingClientRect(), textBox = text.getBoundingClientRect(), style = getComputedStyle(text);
             return { top: box.top, full: badge.title, whiteSpace: style.whiteSpace, height: textBox.height,
               padding: text === badge ? parseFloat(style.paddingTop) + parseFloat(style.paddingBottom) : 0,
@@ -138,8 +145,10 @@ async function longCardCopy(page, locale, layout) {
       assert.equal(geometry.title, title);
       assert.equal(geometry.accessible, title, 'Clamped copy retains the complete vehicle name for accessibility');
       assert(geometry.badges.every(badge => badge.whiteSpace === 'nowrap' && badge.height <= badge.lineHeight + badge.padding + 1 && badge.fits), `Every badge keeps a single line inside its surface: ${JSON.stringify(geometry)}`);
-      assert(geometry.badges.every(badge => !badge.clipped), 'Known compact fuel and transmission labels remain fully visible');
-      if (layout !== 'listing') assert(Math.abs(geometry.badges[0].top - geometry.badges[1].top) <= 1, 'Carousel specification badges share one row');
+      assert(geometry.badges.every(badge => !badge.clipped), `Known compact fuel and transmission labels remain fully visible: ${JSON.stringify(geometry)}`);
+      assert.equal(geometry.badges.length, layout === 'listing' ? 5 : 3);
+      assert(geometry.bottomStrip && geometry.fullMileageFits, 'All mobile cards retain complete mileage in the strip after the title and price');
+      assert(Math.max(...geometry.badges.map(badge => badge.top)) - Math.min(...geometry.badges.map(badge => badge.top)) <= 1, 'All mobile specifications share one row');
       assert(geometry.badges.some(badge => badge.full === fuel.full), 'Full fuel values remain available alongside compact copy');
       await fixture.screenshot({ path: `${output}/${locale}-${page.viewportSize().width}-${layout}-${fuel.name}-copy.png` });
     } finally {
@@ -149,7 +158,7 @@ async function longCardCopy(page, locale, layout) {
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
 }
 try {
-  for (const locale of ['bg', 'en']) for (const width of [320, 390, 430, 1440]) {
+  for (const locale of ['bg', 'en']) for (const width of (cardsOnly ? [320, 390, 430] : [320, 390, 430, 1440])) {
     await suite.check(`${locale} mobile polish ${width}`, async () => {
       const page = await browser.newPage({ viewport: { width, height: width === 1440 ? 900 : 844 }, hasTouch: width < 768, reducedMotion: 'reduce' });
       page.setDefaultNavigationTimeout(60000);
@@ -164,6 +173,13 @@ try {
       };
       try {
         await visit('/');
+        if (cardsOnly) {
+          await longCardCopy(page, locale, 'carousel');
+          await visit('/cars');
+          await longCardCopy(page, locale, 'listing');
+          assert.deepEqual(errors, []);
+          return {locale,width,passed:true};
+        }
         if (width >= 768) assert.equal(await page.locator('.dn-mobile-services').isVisible(), false,
           'The service overview does not change the desktop Home composition');
         if (width < 768) {
@@ -199,9 +215,9 @@ try {
             const box = card.getBoundingClientRect();
             const brands = document.querySelector('.dn-brand-section').getBoundingClientRect();
             const advice = document.querySelector('.dn-editorial').getBoundingClientRect();
-            return box.left >= 0 && box.right <= innerWidth && box.top >= brands.bottom && box.bottom <= advice.top;
+            return box.left >= 0 && box.right <= innerWidth && box.top >= advice.bottom;
           });
-          assert(placement, 'The overview fits between brands and advice without widening the page');
+          assert(placement, 'All services follows Buying guides without widening the page');
           await capture('home');
           await page.locator('.dn-mobile-core-actions').scrollIntoViewIfNeeded();
           await capture('home-actions');
@@ -241,18 +257,18 @@ try {
           const cardTypography = await page.locator('.dn-inventory .dn-vehicle-card').first().evaluate(card => {
             const title = getComputedStyle(card.querySelector('.dn-vehicle-card__name'));
             const price = getComputedStyle(card.querySelector('.dn-vehicle-card__amount'));
-            const transmission = card.querySelector('.dn-vehicle-card__spec--transmission .dn-vehicle-card__spec-full');
+            const fuel = card.querySelector('.dn-vehicle-card__fact--spec [aria-hidden="true"]');
             return { titleSize: title.fontSize, titleWeight: title.fontWeight,
               priceSize: price.fontSize, priceWeight: price.fontWeight,
-              transmission: transmission.innerText, fits: transmission.scrollWidth <= transmission.clientWidth + 1 };
+              fuel: fuel.innerText, fits: fuel.scrollWidth <= fuel.clientWidth + 1 };
           });
-          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '20px', priceWeight: '600',
-            transmission: locale === 'bg' ? 'Автоматик' : 'Automatic', fits: true }, 'Model and price have distinct roles; full transmission fits');
+          assert.deepEqual(cardTypography, { titleSize: '16px', titleWeight: '500', priceSize: '24px', priceWeight: '600',
+            fuel: locale === 'bg' ? 'Бензин' : 'Petrol', fits: true }, 'Price has a clear hierarchy; Home retains three readable facts');
           const viewAll = page.locator('.dn-search__mobile-all:visible').first();
           await compactControl(viewAll, { icon: true });
           assert.equal((await viewAll.innerText()).trim(), locale === 'bg' ? 'Виж всички' : 'View all',
             'Home action has a concise localized label without a competing count');
-          assert.match(await viewAll.getAttribute('href'), /\/listing-grid$/, 'Home action still opens the inventory');
+          assert.match(await viewAll.getAttribute('href'), /\/cars$/, 'Home action still opens the inventory');
           await fits(page.locator('.dn-mobile-bottom-nav a, .dn-mobile-bottom-nav button, .dn-mobile-controls a'));
           const dock = page.locator('.dn-mobile-bottom-nav');
           const dockControls = dock.locator('a,button');
@@ -311,7 +327,7 @@ try {
           await page.keyboard.press('Escape');
           assert.equal(await trigger.evaluate(el => document.activeElement === el), true);
         }
-        await visit('/listing-grid');
+        await visit('/cars');
         if (width < 768) {
           assert.deepEqual(await page.locator('.dn-mobile-bottom-nav__label').allTextContents(), dockNames,
             'Home and inventory retain the same dock destinations and order');
@@ -348,7 +364,7 @@ try {
             const facts = [...card.querySelectorAll('.dn-vehicle-card__fact')];
             const badgeBoxes = facts.map(fact => fact.getBoundingClientRect());
             const badgeTextFits = facts.every(fact => {
-              const text = fact.querySelector('[aria-hidden="true"]') ?? fact;
+              const text = fact.querySelector('span:not(.dn-sr-only)');
               const range = document.createRange(); range.selectNodeContents(text);
               const textBox = range.getBoundingClientRect(), badge = fact.getBoundingClientRect();
               return textBox.left >= badge.left && textBox.right <= badge.right && textBox.top >= badge.top && textBox.bottom <= badge.bottom;
@@ -356,39 +372,39 @@ try {
             const badgeSurface = getComputedStyle(facts[0]).backgroundColor;
             const badgesMatch = facts.every(fact => getComputedStyle(fact).backgroundColor === badgeSurface);
             return { title: photograph.alt, loaded: photograph.complete && photograph.naturalWidth > 0, fits:
-              getComputedStyle(photograph).objectFit === 'cover' && image.width >= (box.width - 28) * .49 &&
-              Math.abs(image.top - identity.top) <= 1 && Math.abs(image.bottom - metadata.bottom) <= 1 &&
+              getComputedStyle(photograph).objectFit === 'cover' && image.width >= 112 && image.width <= 157 &&
+              identity.top >= image.top - 1 && price.bottom <= image.bottom + 1 && image.bottom <= metadata.top &&
               image.left >= box.left && image.right <= content.left - 1 && image.bottom <= box.bottom &&
               make && card.querySelector('.dn-vehicle-card__name').innerText.trim() === model &&
-              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom - 1 && price.top <= identity.bottom + 6 &&
-              metadata.top >= content.bottom && metadata.left > image.right &&
+              Math.abs(price.left - identity.left) <= 1 && price.top >= identity.bottom + 7.5 && price.top <= identity.bottom + 9 &&
+              metadata.top >= content.bottom - 1 && Math.abs(metadata.left - image.left) <= 1 &&
               metadata.left >= box.left && metadata.right <= box.right && metadata.bottom <= box.bottom &&
               parseFloat(priceStyle.fontSize) > parseFloat(headingStyle.fontSize) &&
               parseFloat(priceStyle.fontWeight) > parseFloat(headingStyle.fontWeight) &&
-              facts.length === 4 && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
-              badgeBoxes.every(badge => Math.abs(badge.width - badgeBoxes[0].width) <= 1 && Math.abs(badge.height - badgeBoxes[0].height) <= 1) &&
+              facts.length === 5 && badgesMatch && badgeTextFits && badgeSurface !== 'rgba(0, 0, 0, 0)' &&
+              badgeBoxes.every(badge => Math.abs(badge.height - badgeBoxes[0].height) <= 1) &&
               facts.every(fact => getComputedStyle(fact).borderRadius === '6px') &&
-              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[3].right - metadata.right) <= 1 &&
-              Math.abs(badgeBoxes[0].top - badgeBoxes[1].top) <= 1 &&
-              Math.abs(badgeBoxes[2].top - badgeBoxes[3].top) <= 1 && badgeBoxes[2].top >= badgeBoxes[0].bottom + 3 &&
+              Math.abs(badgeBoxes[0].left - metadata.left) <= 1 && Math.abs(badgeBoxes[4].right - metadata.right) <= 1 &&
+              badgeBoxes.every(badge => Math.abs(badge.top - badgeBoxes[0].top) <= 1) &&
               priceStyle.backgroundColor === 'rgba(0, 0, 0, 0)' };
           }));
           assert(photos.every(photo => photo.loaded && photo.fits),
-            `Photos match the full height of the details and two rows of badges: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
-          const mileageBadge = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2)').first();
-          assert.equal(await page.locator('.dn-vehicle-card__mobile-meta li:last-child [aria-hidden="true"]').first().innerText(),
+            `Compact photos sit beside details, with a full-width strip below both: ${JSON.stringify(photos.filter(photo => !photo.loaded || !photo.fits))}`);
+          const mileage = page.locator('.dn-vehicle-card__mobile-meta li:nth-child(2) span').first();
+          assert.equal(await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__fact--spec').nth(1).locator('[aria-hidden="true"]').innerText(),
             locale === 'bg' ? 'Автомат' : 'Auto', 'Dense cards use a recognizable transmission label');
-          assert.match(await mileageBadge.locator('[aria-hidden="true"]').innerText(), /^\d+$/,
-            'Mobile mileage keeps all digits without an extra unit or grouping');
-          assert.match(await mileageBadge.locator('.dn-sr-only').innerText(), /km|км/,
-            'Accessible mileage retains its full kilometer unit');
+          assert.match(await mileage.innerText(), /\d.*(?:km|км)/,
+            'Mobile mileage visibly retains formatting and its kilometer unit');
+          assert.equal(await page.locator('.dn-vehicle-card__badge--mileage').first().textContent(), await mileage.innerText(),
+            'Mileage retains its complete value');
           const alignment = await page.locator('.dn-vehicle-card--listing').evaluateAll(cards => cards.map(card => {
             const box = card.getBoundingClientRect();
             return { height: box.height, priceTop: card.querySelector('.dn-vehicle-card__amount').getBoundingClientRect().top - box.top,
               factsTop: card.querySelector('.dn-vehicle-card__mobile-meta').getBoundingClientRect().top - box.top };
           }));
-          for (const key of ['height']) assert(Math.max(...alignment.map(item => item[key])) - Math.min(...alignment.map(item => item[key])) <= 1,
-            `All inventory cards share their ${key}, including the longest AMG titles`);
+          const titleLineHeight = await page.locator('.dn-vehicle-card--listing .dn-vehicle-card__name').first().evaluate(title => parseFloat(getComputedStyle(title).lineHeight));
+          assert(Math.max(...alignment.map(item => item.height)) - Math.min(...alignment.map(item => item.height)) <= titleLineHeight + 1,
+            'Compact inventory cards allow one extra title line without empty detail space');
           assert.equal(await page.locator('.dn-vehicle-card--listing img[fetchpriority="high"]').count(), 1,
             'Only the first inventory photograph gets high fetch priority');
           await longCardCopy(page, locale, 'listing');

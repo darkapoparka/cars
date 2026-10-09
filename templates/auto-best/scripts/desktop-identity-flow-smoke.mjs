@@ -49,7 +49,7 @@ try {
       else await page.waitForURL(url => url.searchParams.get('make') === 'BMW');
     };
     try {
-      await page.goto(`${base}/${locale}${home ? '' : '/listing-grid'}`, { waitUntil: 'networkidle' });
+      await page.goto(`${base}/${locale}${home ? '' : '/cars'}`, { waitUntil: 'networkidle' });
       await open('make');
       const makes = await menu.locator('input[type=checkbox]').evaluateAll(inputs => inputs.map(input => input.value).filter(Boolean));
       await open('model');

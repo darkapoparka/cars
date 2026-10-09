@@ -229,7 +229,7 @@
     <form
       class={['dn-quick-search__form', { 'dn-quick-search__form--mobile-hidden': mobileView !== 'main' }]}
       method="GET"
-      action={i18n.href(resolve('/listing-grid'))}
+      action={i18n.href(resolve('/cars'))}
       onsubmit={closeSearch}
       onformdata={cleanFormData}
     >
@@ -257,7 +257,7 @@
       {#if yearMin}<input type="hidden" name="year_min" value={yearMin} />{/if}
     </form>
 
-    <form class="dn-quick-search__mobile-filters" method="GET" action={i18n.href(resolve('/listing-grid'))} onsubmit={closeSearch} onformdata={cleanFormData}>
+    <form class="dn-quick-search__mobile-filters" method="GET" action={i18n.href(resolve('/cars'))} onsubmit={closeSearch} onformdata={cleanFormData}>
       {#if query.trim()}<input type="hidden" name="q" value={query.trim()} />{/if}
       {#each make as value (value)}<input type="hidden" name="make" {value} />{/each}
       {#each model as value (value)}<input type="hidden" name="model" {value} />{/each}

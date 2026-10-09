@@ -18,7 +18,7 @@ try {
     ]);
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
-    await page.goto(`${base}/listing-grid?sort=price-asc`, { waitUntil: 'networkidle' });
+    await page.goto(`${base}/cars?sort=price-asc`, { waitUntil: 'networkidle' });
     const main = page.locator('#dn-listing-filter-dialog');
     const picker = main.locator('.dn-mobile-filter-editor');
     const trigger = page.locator('.dn-listing-filter__toggle');
@@ -195,7 +195,7 @@ try {
       assert.equal(directParams.getAll(key).length, 1);
     }
     // Multiple brands/models persist through application, reopening and individual chip removal.
-    await page.goto(`${base}/bg/listing-grid?sort=price-asc`, { waitUntil: 'networkidle' });
+    await page.goto(`${base}/bg/cars?sort=price-asc`, { waitUntil: 'networkidle' });
     await trigger.click();
     await row('make').click();
     await picker.getByRole('checkbox', { name: 'Audi', exact: true }).check();

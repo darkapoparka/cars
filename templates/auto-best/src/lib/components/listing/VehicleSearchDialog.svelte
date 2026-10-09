@@ -152,7 +152,7 @@
   <form
     class="dn-listing-filter__dialog-panel"
     method="GET"
-    action={i18n.href(resolve('/listing-grid'))}
+    action={i18n.href(resolve('/cars'))}
     onsubmit={handleDialogSubmit}
     onformdata={cleanFormData}
   >

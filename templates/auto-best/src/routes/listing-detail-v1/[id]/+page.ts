@@ -30,5 +30,5 @@ export const load: PageLoad = ({ params, url }) => {
     })
     .slice(0, 3);
 
-  return { returnTo: listReturn(url.searchParams.get('return'), '/listing-grid'), vehicle, recommendations };
+  return { returnTo: listReturn(url.searchParams.get('return'), '/cars'), vehicle, recommendations };
 };
