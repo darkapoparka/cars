@@ -611,15 +611,16 @@
 			<div class="site-container">
 				<nav class="daynight-mobile-home-quick__scroller bc-quick bc-quick--{mobileMode}">
 					{#if mobileMode === 'buy'}
-						<MobileIconAction
+						<button
+							type="button"
 							class="daynight-mobile-home-quick__filter"
-							haspopup="dialog"
-							expanded={mobileSearchOpen || inventorySearchOpen}
-							label={isEnglish ? 'Open filters' : nt('ui62')}
+							aria-haspopup="dialog"
+							aria-expanded={mobileSearchOpen || inventorySearchOpen}
+							aria-label={isEnglish ? 'Open filters' : nt('ui62')}
 							onclick={openMobileFilters}
 						>
 							<SlidersHorizontal size={20} strokeWidth={2} aria-hidden="true" />
-						</MobileIconAction>
+						</button>
 					{/if}
 					{#each activeMobileQuickLinks as filter (filter.href)}
 						<a href={resolve(filter.href as '/')}>{filter.label}</a>
@@ -2034,13 +2035,19 @@
 			white-space: nowrap;
 		}
 
-		.daynight-mobile-home-quick__scroller a:focus-visible {
+		.daynight-mobile-home-quick__scroller .daynight-mobile-home-quick__filter {
+			width: var(--bc-control-height-chip);
+			min-width: var(--bc-control-height-chip);
+			padding: 0;
+		}
+
+		.daynight-mobile-home-quick__scroller :is(button, a):focus-visible {
 			background: var(--bc-surface-hover);
 			box-shadow: none;
 			color: var(--bc-ink);
 		}
 
-		.daynight-mobile-home-quick__scroller a:focus-visible {
+		.daynight-mobile-home-quick__scroller :is(button, a):focus-visible {
 			outline: 2px solid rgba(28, 28, 28, 0.7);
 			outline-offset: 3px;
 		}
