@@ -289,7 +289,11 @@ const s = stylex.create({
     },
   },
   showroomSpec: {
-    paddingLeft: { default: 52, '@media (max-width: 359px)': 48 },
+    paddingLeft: {
+      default: 52,
+      '@media (max-width: 359px)': 48,
+      '@media (min-width: 1024px)': 40,
+    },
     minHeight: 44,
   },
   showroomSpecIcon: {
@@ -300,7 +304,7 @@ const s = stylex.create({
     justifyContent: 'center',
     transform: {
       default: 'translateY(-50%)',
-      '@media (min-width: 1024px)': 'translateY(-50%) scale(0.7)',
+      '@media (min-width: 1024px)': 'translateY(-50%) scale(0.6)',
     },
     transformOrigin: 'left center',
   },
