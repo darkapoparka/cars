@@ -16,7 +16,7 @@
 				<source
 					media="(max-width: 767px)"
 					srcset={`${assetHref(`${banner}-small.webp`)} 360w, ${assetHref(`${banner}.webp`)} 720w, ${assetHref(`${banner}-large.webp`)} 1080w`}
-					sizes="(max-width: 767px) min(calc(78vw - 21.84px), 300px), 1px"
+					sizes="(max-width: 767px) min(calc(40vw - 30.4px), 144px), 1px"
 					type="image/webp"
 				/>
 				<img
@@ -66,41 +66,52 @@
 	.sell-valuation {
 		display: grid;
 		overflow: hidden;
+		width: 100%;
+		max-width: 28rem;
+		margin-inline: auto;
 		border-radius: var(--bc-radius-card);
 		background: var(--bc-white);
 	}
 	.sell-valuation__card {
 		overflow: hidden;
+		padding: var(--bc-space-3) var(--bc-space-3) 0;
 	}
 	.sell-valuation__banner {
-		position: relative;
-		min-height: 128px;
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) min(40%, 144px);
+		gap: var(--bc-space-2);
+		padding: var(--bc-space-2) var(--bc-space-3);
+		border-radius: var(--bc-radius-card);
 		background: var(--bc-ink);
 	}
 	.sell-valuation__content {
-		position: relative;
-		z-index: 1;
 		display: grid;
-		gap: 4px;
+		grid-column: 1;
+		grid-row: 1;
+		gap: 2px;
 		justify-items: start;
-		padding: var(--bc-space-4);
-		max-width: calc(100% - 32px);
+		min-width: 0;
 	}
 	.sell-valuation .sell-valuation__title {
 		color: var(--bc-white);
-		font: var(--bc-weight-heading) 20px/24px var(--bc-font-body);
+		font: var(--bc-weight-heading) 22px/26px var(--bc-font-body);
 		letter-spacing: -0.03em;
-		white-space: nowrap;
+	}
+	.sell-valuation .sell-valuation__title:lang(bg) {
+		font-size: clamp(18px, 5vw, 20px);
 	}
 	.sell-valuation picture {
-		position: absolute;
-		inset: 0 0 0 auto;
+		position: relative;
 		display: block;
-		width: min(78%, 300px);
-		height: 100%;
-		mask-image: linear-gradient(to right, transparent, #000 30%);
+		grid-column: 2;
+		grid-row: 1;
+		overflow: hidden;
+		min-width: 0;
+		border-radius: var(--bc-radius-md);
 	}
 	.sell-valuation img {
+		position: absolute;
+		inset: 0;
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -120,7 +131,7 @@
 	.sell-valuation .sell-valuation__description {
 		max-width: 180px;
 		color: rgb(255 255 255 / 0.76);
-		font-size: 13px;
+		font-size: 14px;
 		line-height: 18px;
 	}
 	.sell-valuation button {
