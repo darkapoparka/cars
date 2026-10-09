@@ -21,7 +21,7 @@
   {#each sides as side, index (side)}
     {@const vehicle = heroVehiclePairs[pair][index]}
     {@const artwork = vehicleArtwork[vehicle]}
-    {@const ratios = getVehicleArtworkRatios(artwork)}
+    {@const ratios = getVehicleArtworkRatios(artwork, framing === 'search' ? 'width' : 'area')}
     <div class="dn-campaign-vehicles__car dn-campaign-vehicles__car--{side}" data-vehicle={vehicle}
       style:--art-width-ratio={ratios.width}
       style:--art-height-ratio={ratios.height}
@@ -49,6 +49,7 @@
       background: linear-gradient(180deg, transparent 45%, var(--dn-ink-deep));
     }
     .dn-campaign-vehicles--plain { background: none; }
+    .dn-campaign-vehicles--search { --car-size: clamp(365px, 31.667vw, 524px); }
     .dn-campaign-vehicles__dots {
       position: absolute;
       top: 28%;
@@ -89,10 +90,14 @@
     .dn-campaign-vehicles--section .dn-campaign-vehicles__arc { top: -200px; }
   }
 
+  @media (min-width: 1200px) {
+    .dn-campaign-vehicles--search { --side-room: max(0px, calc((100% - var(--dn-hero-center-width)) / 2 - var(--dn-space-6))); }
+  }
+
   @media (min-width: 992px) and (max-width: 1199px) {
     .dn-campaign-vehicles:not(.dn-campaign-vehicles--section) { --car-size: 155px; --car-baseline: calc(100% - 30px); }
     .dn-campaign-vehicles.dn-campaign-vehicles--search {
-      --car-size: 120px;
+      --car-size: 200px;
       --car-baseline: calc(100% - var(--dn-route-hero-height) + var(--dn-route-hero-control-top) - var(--dn-space-4));
     }
   }

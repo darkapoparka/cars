@@ -351,16 +351,16 @@
       .dn-vehicle-card--listing:hover .dn-vehicle-card__image img { transform: scale(1.025); }
     }
 
-    .dn-vehicle-card__content { padding: var(--dn-space-5); }
+    .dn-vehicle-card__content { padding: var(--dn-space-4); }
     .dn-vehicle-card--showcase .dn-vehicle-card__content { padding: var(--dn-space-3) var(--dn-space-4); }
-    .dn-vehicle-card__name { line-height: var(--dn-leading-card); }
+    .dn-vehicle-card__name { font-weight: var(--dn-weight-medium); line-height: var(--dn-leading-card); }
     .dn-vehicle-card__badges { inset: 12px 12px auto; }
     .dn-vehicle-card__badge { padding: 5px 10px; font-size: var(--dn-text-meta); font-variant-numeric: tabular-nums; }
-    .dn-vehicle-card__specs { margin-top: auto; padding-top: var(--dn-space-3); }
-    .dn-vehicle-card__amount { margin-top: 0; }
+    .dn-vehicle-card__specs { margin-top: auto; padding-top: var(--dn-space-2); }
+    .dn-vehicle-card__amount { margin-top: 0; padding-top: var(--dn-space-2); }
     .dn-vehicle-card--listing .dn-vehicle-card__content { padding: var(--dn-space-4); }
-    .dn-vehicle-card--listing .dn-vehicle-card__specs { margin-top: var(--dn-space-3); padding-top: 0; }
-    .dn-vehicle-card--listing .dn-vehicle-card__amount { padding-top: var(--dn-space-3); }
+    .dn-vehicle-card--listing .dn-vehicle-card__specs { margin-top: var(--dn-space-2); padding-top: 0; }
+    .dn-vehicle-card--listing .dn-vehicle-card__amount { padding-top: var(--dn-space-2); }
 
     @media (hover: hover) and (pointer: fine) {
       .dn-vehicle-card:hover { box-shadow: var(--dn-card-hover-shadow); }

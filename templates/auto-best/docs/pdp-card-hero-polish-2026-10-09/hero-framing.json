@@ -1,0 +1,1665 @@
+{
+  "passed": true,
+  "cases": 18,
+  "rows": [
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [
+          {
+            "box": {
+              "x": 0,
+              "y": 56,
+              "width": 375,
+              "height": 136,
+              "right": 375,
+              "bottom": 192
+            },
+            "images": [
+              "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2-480.webp"
+            ]
+          }
+        ],
+        "hero": null,
+        "cars": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": null,
+        "cars": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -43.515625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 163.734375,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -39.785125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 813.265625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 1020.515625,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 816.996125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -41,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 161.421875,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -39.78546875,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 815.578125,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 1018,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 816.995078125,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 1009,
+            "height": 400,
+            "right": 1009,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -43.515625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 163.734375,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -39.785125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 845.265625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 1052.515625,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 848.996125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1024,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 1009,
+            "height": 400,
+            "right": 1009,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -41,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 161.421875,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -39.78546875,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 847.578125,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 1050,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 848.995078125,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 540,
+            "right": 1265,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -283.96875,
+              "y": 282.078125,
+              "width": 420.03125,
+              "height": 280.15625,
+              "right": 136.0625,
+              "bottom": 562.234375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -276.4081875,
+              "width": 404.910125,
+              "y": 347.60192559970017,
+              "height": 141.96823463268365,
+              "bottom": 489.57016023238384
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1128.9375,
+              "y": 282.078125,
+              "width": 420.03125,
+              "height": 280.15625,
+              "right": 1548.96875,
+              "bottom": 562.234375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1136.4980625,
+              "width": 404.910125,
+              "y": 347.60192559970017,
+              "height": 141.96823463268365,
+              "bottom": 489.57016023238384
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1280,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1265,
+            "height": 540,
+            "right": 1265,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -278.875,
+              "y": 267.625,
+              "width": 410.25,
+              "height": 273.640625,
+              "right": 131.375,
+              "bottom": 541.265625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -276.4135,
+              "width": 404.91675,
+              "y": 313.57365067466264,
+              "height": 175.99974231634184,
+              "bottom": 489.57339299100454
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 1133.625,
+              "y": 267.625,
+              "width": 410.25,
+              "height": 273.640625,
+              "right": 1543.875,
+              "bottom": 541.265625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 1136.49675,
+              "width": 404.91675,
+              "y": 313.57365067466264,
+              "height": 175.99974231634184,
+              "bottom": 489.57339299100454
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -255.53125,
+              "y": 256.078125,
+              "width": 472.53125,
+              "height": 315.171875,
+              "right": 217,
+              "bottom": 571.25
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -247.0256875,
+              "width": 455.520125,
+              "y": 329.7914870689655,
+              "height": 159.71228448275863,
+              "bottom": 489.5037715517241
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1208,
+              "y": 256.078125,
+              "width": 472.53125,
+              "height": 315.171875,
+              "right": 1680.53125,
+              "bottom": 571.25
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1216.5055625,
+              "width": 455.520125,
+              "y": 329.7914870689655,
+              "height": 159.71228448275863,
+              "bottom": 489.5037715517241
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -249.796875,
+              "y": 239.828125,
+              "width": 461.53125,
+              "height": 307.84375,
+              "right": 211.734375,
+              "bottom": 547.671875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -247.0276875,
+              "width": 455.53134375,
+              "y": 291.520029047976,
+              "height": 197.99845389805097,
+              "bottom": 489.518482946027
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 1213.265625,
+              "y": 239.828125,
+              "width": 461.53125,
+              "height": 307.84375,
+              "right": 1674.796875,
+              "bottom": 547.671875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 1216.49634375,
+              "width": 455.53134375,
+              "y": 291.520029047976,
+              "height": 197.99845389805097,
+              "bottom": 489.518482946027
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 540,
+            "right": 1905,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -124.71875,
+              "y": 221.203125,
+              "width": 543,
+              "height": 362.171875,
+              "right": 418.28125,
+              "bottom": 583.375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -114.94475,
+              "width": 523.452,
+              "y": 305.9089908170914,
+              "height": 183.5293759370315,
+              "bottom": 489.4383667541229
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1486.71875,
+              "y": 221.203125,
+              "width": 543,
+              "height": 362.171875,
+              "right": 2029.71875,
+              "bottom": 583.375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1496.49275,
+              "width": 523.452,
+              "y": 305.9089908170914,
+              "height": 183.5293759370315,
+              "bottom": 489.4383667541229
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 540,
+            "right": 1905,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -118.140625,
+              "y": 202.53125,
+              "width": 530.359375,
+              "height": 353.75,
+              "right": 412.21875,
+              "bottom": 556.28125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -114.95846875,
+              "width": 523.464703125,
+              "y": 261.931549850075,
+              "height": 227.5243628185907,
+              "bottom": 489.4559126686657
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 1492.78125,
+              "y": 202.53125,
+              "width": 530.359375,
+              "height": 353.75,
+              "right": 2023.140625,
+              "bottom": 556.28125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 1496.493765625,
+              "width": 523.464703125,
+              "y": 261.931549850075,
+              "height": 227.5243628185907,
+              "bottom": 489.4559126686657
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 2560,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2545,
+            "height": 540,
+            "right": 2545,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 195.265625,
+              "y": 221.203125,
+              "width": 543,
+              "height": 362.171875,
+              "right": 738.265625,
+              "bottom": 583.375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 205.039625,
+              "width": 523.452,
+              "y": 305.9089908170914,
+              "height": 183.5293759370315,
+              "bottom": 489.4383667541229
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1806.734375,
+              "y": 221.203125,
+              "width": 543,
+              "height": 362.171875,
+              "right": 2349.734375,
+              "bottom": 583.375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1816.508375,
+              "width": 523.452,
+              "y": 305.9089908170914,
+              "height": 183.5293759370315,
+              "bottom": 489.4383667541229
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 2560,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 2545,
+            "height": 540,
+            "right": 2545,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 201.84375,
+              "y": 202.53125,
+              "width": 530.359375,
+              "height": 353.75,
+              "right": 732.203125,
+              "bottom": 556.28125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 205.02590625,
+              "width": 523.464703125,
+              "y": 261.931549850075,
+              "height": 227.5243628185907,
+              "bottom": 489.4559126686657
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 1812.796875,
+              "y": 202.53125,
+              "width": 530.359375,
+              "height": 353.75,
+              "right": 2343.15625,
+              "bottom": 556.28125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 1816.509390625,
+              "width": 523.464703125,
+              "y": 261.931549850075,
+              "height": 227.5243628185907,
+              "bottom": 489.4559126686657
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -43.515625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 163.734375,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -39.785125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 813.265625,
+              "y": 221.40625,
+              "width": 207.25,
+              "height": 138.234375,
+              "right": 1020.515625,
+              "bottom": 359.640625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 816.996125,
+              "width": 199.789,
+              "y": 253.7369284107946,
+              "height": 70.04980322338831,
+              "bottom": 323.7867316341829
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 992,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -41,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 161.421875,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -39.78546875,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 815.578125,
+              "y": 214.28125,
+              "width": 202.421875,
+              "height": 135.015625,
+              "right": 1018,
+              "bottom": 349.296875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 816.995078125,
+              "width": 199.790390625,
+              "y": 236.95253935532233,
+              "height": 86.83913511994002,
+              "bottom": 323.79167447526237
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": -255.53125,
+              "y": 256.078125,
+              "width": 472.53125,
+              "height": 315.171875,
+              "right": 217,
+              "bottom": 571.25
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": -247.0256875,
+              "width": 455.520125,
+              "y": 329.7914870689655,
+              "height": 159.71228448275863,
+              "bottom": 489.5037715517241
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1208,
+              "y": 256.078125,
+              "width": 472.53125,
+              "height": 315.171875,
+              "right": 1680.53125,
+              "bottom": 571.25
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1216.5055625,
+              "width": 455.520125,
+              "y": 329.7914870689655,
+              "height": 159.71228448275863,
+              "bottom": 489.5037715517241
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "bg",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -249.796875,
+              "y": 239.828125,
+              "width": 461.53125,
+              "height": 307.84375,
+              "right": 211.734375,
+              "bottom": 547.671875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -247.0276875,
+              "width": 455.53134375,
+              "y": 291.520029047976,
+              "height": 197.99845389805097,
+              "bottom": 489.518482946027
+            }
+          },
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": 1213.265625,
+              "y": 239.828125,
+              "width": 461.53125,
+              "height": 307.84375,
+              "right": 1674.796875,
+              "bottom": 547.671875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": 1216.49634375,
+              "width": 455.53134375,
+              "y": 291.520029047976,
+              "height": 197.99845389805097,
+              "bottom": 489.518482946027
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "mobileScreenshotsIdentical": true,
+  "before": [
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [
+          {
+            "box": {
+              "x": 0,
+              "y": 56,
+              "width": 375,
+              "height": 136,
+              "right": 375,
+              "bottom": 192
+            },
+            "images": [
+              "http://127.0.0.1:6461/assets/images/lead/day-night-collection-banner-v2-480.webp"
+            ]
+          }
+        ],
+        "hero": null,
+        "cars": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 390,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": null,
+        "cars": []
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -6.265625,
+              "y": 233.234375,
+              "width": 167.4375,
+              "height": 111.671875,
+              "right": 161.171875,
+              "bottom": 344.90625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -5.261,
+              "width": 165.2608125,
+              "y": 251.98587425037482,
+              "height": 71.82493909295353,
+              "bottom": 323.81081334332833
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 813.1875,
+              "y": 218.859375,
+              "width": 212.375,
+              "height": 141.65625,
+              "right": 1025.5625,
+              "bottom": 360.515625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 817.01025,
+              "width": 204.7295,
+              "y": 251.99037200149925,
+              "height": 71.78382683658171,
+              "bottom": 323.77419883808096
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 992,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 140,
+            "width": 977,
+            "height": 400,
+            "right": 977,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "golf",
+            "box": {
+              "x": -40.953125,
+              "y": 220.546875,
+              "width": 204.015625,
+              "height": 136.078125,
+              "right": 163.0625,
+              "bottom": 356.625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 15,
+              "right": 983,
+              "top": 150,
+              "bottom": 506
+            },
+            "body": {
+              "x": -37.484859375,
+              "width": 197.487125,
+              "y": 251.14915198650675,
+              "height": 72.62940404797601,
+              "bottom": 323.7785560344828
+            }
+          },
+          {
+            "vehicle": "a45",
+            "box": {
+              "x": 814.390625,
+              "y": 221.15625,
+              "width": 201.25,
+              "height": 134.234375,
+              "right": 1015.640625,
+              "bottom": 355.390625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 13,
+              "right": 986,
+              "top": 146,
+              "bottom": 510
+            },
+            "body": {
+              "x": 817.006875,
+              "width": 195.81625,
+              "y": 250.5388868065967,
+              "height": 73.25534107946027,
+              "bottom": 323.794227886057
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -160.984375,
+              "y": 288.3125,
+              "width": 372.078125,
+              "height": 248.171875,
+              "right": 211.09375,
+              "bottom": 536.484375
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -158.75190625,
+              "width": 367.241109375,
+              "y": 329.98453898050974,
+              "height": 159.6187921664168,
+              "bottom": 489.6033311469265
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1208,
+              "y": 256.359375,
+              "width": 471.96875,
+              "height": 314.796875,
+              "right": 1679.96875,
+              "bottom": 571.15625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1216.4954375,
+              "width": 454.977875,
+              "y": 329.98503092203896,
+              "height": 159.52225449775113,
+              "bottom": 489.5072854197901
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1440,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1425,
+            "height": 540,
+            "right": 1425,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "golf",
+            "box": {
+              "x": -226.921875,
+              "y": 265.859375,
+              "width": 442.0625,
+              "height": 294.84375,
+              "right": 215.140625,
+              "bottom": 560.703125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 15,
+              "right": 983,
+              "top": 150,
+              "bottom": 506
+            },
+            "body": {
+              "x": -219.4068125,
+              "width": 427.9165,
+              "y": 332.1660654047976,
+              "height": 157.36787856071965,
+              "bottom": 489.5339439655172
+            }
+          },
+          {
+            "vehicle": "a45",
+            "box": {
+              "x": 1210.828125,
+              "y": 267.15625,
+              "width": 436.0625,
+              "height": 290.859375,
+              "right": 1646.890625,
+              "bottom": 558.015625
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 13,
+              "right": 986,
+              "top": 146,
+              "bottom": 510
+            },
+            "body": {
+              "x": 1216.4969375,
+              "width": 424.2888125,
+              "y": 330.82261994003,
+              "height": 158.72985382308846,
+              "bottom": 489.5524737631184
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "home",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 540,
+            "right": 1905,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "gclass",
+            "box": {
+              "x": -16.40625,
+              "y": 258.0625,
+              "width": 427.90625,
+              "height": 285.40625,
+              "right": 411.5,
+              "bottom": 543.46875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-gclass-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 7,
+              "right": 994,
+              "top": 112,
+              "bottom": 541
+            },
+            "body": {
+              "x": -13.8388125,
+              "width": 422.34346875,
+              "y": 305.98678785607194,
+              "height": 183.56713830584707,
+              "bottom": 489.55392616191904
+            }
+          },
+          {
+            "vehicle": "urus",
+            "box": {
+              "x": 1486.734375,
+              "y": 221.3125,
+              "width": 542.765625,
+              "height": 362.015625,
+              "right": 2029.5,
+              "bottom": 583.328125
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-urus-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 18,
+              "right": 982,
+              "top": 156,
+              "bottom": 494
+            },
+            "body": {
+              "x": 1496.50415625,
+              "width": 523.2260625,
+              "y": 305.9818215892054,
+              "height": 183.4501967766117,
+              "bottom": 489.4320183658171
+            }
+          }
+        ]
+      }
+    },
+    {
+      "locale": "en",
+      "width": 1920,
+      "surface": "cars",
+      "state": {
+        "overflow": -15,
+        "mobile": [],
+        "hero": {
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1905,
+            "height": 540,
+            "right": 1905,
+            "bottom": 540
+          },
+          "background": "radial-gradient(at 50% 24%, rgb(32, 35, 41) 0%, rgb(21, 24, 29) 68%)"
+        },
+        "cars": [
+          {
+            "vehicle": "golf",
+            "box": {
+              "x": -127.40625,
+              "y": 214.15625,
+              "width": 544.0625,
+              "height": 362.890625,
+              "right": 416.65625,
+              "bottom": 577.046875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-golf-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 15,
+              "right": 983,
+              "top": 150,
+              "bottom": 506
+            },
+            "body": {
+              "x": -118.15718749999999,
+              "width": 526.6525,
+              "y": 295.76583583208395,
+              "height": 193.6867503748126,
+              "bottom": 489.45258620689657
+            }
+          },
+          {
+            "vehicle": "a45",
+            "box": {
+              "x": 1489.515625,
+              "y": 215.75,
+              "width": 536.6875,
+              "height": 357.96875,
+              "right": 2026.203125,
+              "bottom": 573.71875
+            },
+            "src": "http://127.0.0.1:6461/assets/images/lead/day-night-cutout-a45-v1.webp?v=profile-1",
+            "alpha": {
+              "left": 13,
+              "right": 986,
+              "top": 146,
+              "bottom": 510
+            },
+            "body": {
+              "x": 1496.4925625,
+              "width": 522.1969375,
+              "y": 294.10597826086956,
+              "height": 195.35326086956522,
+              "bottom": 489.4592391304348
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

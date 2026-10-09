@@ -680,7 +680,7 @@
   .dn-detail-summary__price {
     margin: 0;
     color: var(--dn-ink-strong);
-    font-size: var(--dn-text-heading);
+    font-size: var(--dn-text-subheading);
     font-weight: var(--dn-weight-semibold);
     line-height: var(--dn-leading-section);
   }

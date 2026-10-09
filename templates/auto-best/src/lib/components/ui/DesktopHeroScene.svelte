@@ -8,7 +8,6 @@
 </script>
 
 <div class="dn-desktop-hero-scene" class:dn-desktop-hero-scene--discovery={discoveryBackground}
-  style:--dn-discovery-background={discoveryBackground ? `url("${leadSite.artwork.discoveryBackground}")` : undefined}
   data-scene={scene} data-artwork={artwork.kind} aria-hidden="true">
   {#if artwork.kind === 'image'}
     <picture>
@@ -26,7 +25,7 @@
   @media (min-width: 992px) {
     .dn-desktop-hero-scene { display: block; position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
     .dn-desktop-hero-scene--discovery {
-      background-image: var(--dn-discovery-background);
+      background-image: radial-gradient(ellipse at 50% 24%, var(--dn-theme-hero-surface-mid) 0%, var(--dn-theme-hero-surface-deep) 68%);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;

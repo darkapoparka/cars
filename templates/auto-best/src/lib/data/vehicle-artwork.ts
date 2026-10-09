@@ -18,15 +18,16 @@ export const vehicleArtwork = {
 
 export type Vehicle = LeadVehicleArtwork;
 
-// A shared size unit gives every cutout the same visible bounding-box area.
+// Cutouts share visible area by default; discovery scenes can share visible width.
 // Transparent margins do not affect scale; the original proportions and anchors remain intact.
-export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[]; normalizationBounds?: readonly number[] }) {
+export function getVehicleArtworkRatios(artwork: { width: number; height: number; bounds: readonly number[]; normalizationBounds?: readonly number[] }, normalization: 'area' | 'width' = 'area') {
   const [left, top, right, bottom] = artwork.bounds;
   const bodyWidth = right - left;
   const bodyHeight = bottom - top;
   // A service composition can size its main car independently of its small side props.
   const [sizeLeft, sizeTop, sizeRight, sizeBottom] = artwork.normalizationBounds ?? artwork.bounds;
-  const size = Math.sqrt((sizeRight - sizeLeft) * (sizeBottom - sizeTop));
+  // Discovery heroes share a visible width, so taller models keep their horizontal presence.
+  const size = normalization === 'width' ? sizeRight - sizeLeft : Math.sqrt((sizeRight - sizeLeft) * (sizeBottom - sizeTop));
   return {
     width: artwork.width / size,
     height: artwork.height / size,
@@ -38,7 +39,7 @@ export function getVehicleArtworkRatios(artwork: { width: number; height: number
   };
 }
 
-const vehicleRatios = Object.values(vehicleArtwork).map(getVehicleArtworkRatios);
+const vehicleRatios = Object.values(vehicleArtwork).map(artwork => getVehicleArtworkRatios(artwork));
 export const vehicleArtworkFrame = {
   width: Math.max(...vehicleRatios.map(artwork => artwork.bodyWidth)),
   height: Math.max(...vehicleRatios.map(artwork => artwork.bodyHeight))

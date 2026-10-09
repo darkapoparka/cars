@@ -277,8 +277,8 @@ export const leadSite = {
     },
     vehicleCutouts,
     heroVehiclePairs: {
-      home: ['gclass', 'urus'],
-      inventory: ['golf', 'a45'],
+      home: ['urus', 'urus'],
+      inventory: ['gclass', 'gclass'],
       about: ['porsche', 'amggt'],
       blog: ['m5', 'e63'],
       contact: ['m4', 'rs5']
