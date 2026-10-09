@@ -1,7 +1,9 @@
-import {emptyFilters, filterMakes, restoreFilters, type Filters} from './inventory-filters';
+import {emptyFilters, restoreFilters, type Filters} from './inventory-filters';
+import { filterMakes} from './inventory-options';
 
 export type InventoryState = {query: string; filters: Filters; sort: string; emiMax?: number};
-export const inventorySorts = ['default', 'recent', 'price-asc', 'price-desc', 'kms-asc', 'kms-desc', 'discount', 'age-asc', 'age-desc'];
+export {inventorySorts} from './inventory-sort';
+import {isInventorySort} from './inventory-sort';
 type Search = Pick<URLSearchParams, 'get' | 'getAll'>;
 const ownedParameters = ['q', 'brand', 'body', 'maxPrice', 'emiMax', 'selection', 'order'];
 
@@ -26,7 +28,7 @@ export function readInventorySearch(params: Search): InventoryState {
   if (maximum !== undefined) filters.maximum = Math.max(filters.minimum, Math.min(emptyFilters().maximum, maximum));
   const monthly = number(params.get('emiMax'));
   const sort = params.get('order') ?? 'default';
-  return {query: (params.get('q') ?? '').slice(0, 200), filters, sort: inventorySorts.includes(sort) ? sort : 'default', emiMax: monthly === undefined ? undefined : Math.max(0, monthly)};
+  return {query: (params.get('q') ?? '').slice(0, 200), filters, sort: isInventorySort(sort) ? sort : 'default', emiMax: monthly === undefined ? undefined : Math.max(0, monthly)};
 }
 
 export function inventorySearch(search: string, state: InventoryState) {
@@ -38,7 +40,7 @@ export function inventorySearch(search: string, state: InventoryState) {
   const defaults = emptyFilters();
   if (state.filters.maximum !== defaults.maximum) params.set('maxPrice', String(state.filters.maximum));
   if (state.emiMax !== undefined && Number.isFinite(state.emiMax)) params.set('emiMax', String(Math.max(0, state.emiMax)));
-  if (inventorySorts.includes(state.sort) && state.sort !== 'default') params.set('order', state.sort);
+  if (isInventorySort(state.sort) && state.sort !== 'default') params.set('order', state.sort);
   const refinements: Record<string, unknown> = {};
   for (const key of Object.keys(defaults) as (keyof Filters)[]) {
     if (['brands', 'bodies', 'maximum'].includes(key)) continue;
@@ -54,5 +56,5 @@ export function restoreInventoryState(value: unknown, entry: string): InventoryS
   if (!value || typeof value !== 'object') return null;
   const stored = value as Record<string, unknown>;
   if (stored.version !== 1 || stored.entry !== entry) return null;
-  return {query: typeof stored.query === 'string' ? stored.query.slice(0, 200) : '', filters: restoreFilters(stored.filters), sort: typeof stored.sort === 'string' && inventorySorts.includes(stored.sort) ? stored.sort : 'default', emiMax: typeof stored.emiMax === 'number' && Number.isFinite(stored.emiMax) ? Math.max(0, stored.emiMax) : undefined};
+  return {query: typeof stored.query === 'string' ? stored.query.slice(0, 200) : '', filters: restoreFilters(stored.filters), sort: typeof stored.sort === 'string' && isInventorySort(stored.sort) ? stored.sort : 'default', emiMax: typeof stored.emiMax === 'number' && Number.isFinite(stored.emiMax) ? Math.max(0, stored.emiMax) : undefined};
 }

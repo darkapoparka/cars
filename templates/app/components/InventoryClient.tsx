@@ -7,10 +7,9 @@ import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
 import FilterPill from '@/components/FilterPill';
 import VehicleCard from '@/components/VehicleCard';
-import LoginSheet from '@/components/DealerEnquirySheet';
 import {BrandEmblem,BrandRow} from '@/components/ReferenceUI';
 import {useModal} from '@/components/useModal';
-import {vehicles,type Vehicle} from '@/lib/data';
+import {vehicles} from '@/lib/data';
 import {dealer} from '@/lib/dealer-config';
 import NativeFilterPane from '@/components/NativeFilterPane';
 import DealerHomeBanner from '@/components/DealerHomeBanner';
@@ -20,14 +19,16 @@ import DesktopSortMenu from '@/components/DesktopSortMenu';
 import ShowroomSearchSheet from '@/components/ShowroomSearchSheet';
 import type {SearchChoice} from '@/components/SearchClient';
 import {useInventoryHistory} from '@/components/useInventoryHistory';
-import {filterTabs as standardTabs,desktopFilterTabs,quickFilterTabs,filterMakes as makes,emptyFilters,hasActiveFilters,matchesInventory as matches,matchesMonthlyPayment,type Filters,type FilterTab as Tab} from '@/lib/inventory-filters';
+import {filterTabs as standardTabs,desktopFilterTabs,quickFilterTabs,emptyFilters,hasActiveFilters,matchesInventory as matches,matchesMonthlyPayment,type Filters,type FilterTab as Tab} from '@/lib/inventory-filters';
+import {filterMakes as makes} from '@/lib/inventory-options';
 import {media,tokens as $} from '@/app/tokens.stylex';
 import {searchField} from '@/components/search-field.stylex';
 import {pillStyles as pill} from '@/components/pill.stylex';
 import DesktopFilterNavigation from '@/components/DesktopFilterNavigation';
 import {clearDesktopFilter,desktopFilterCount,desktopFilterHelp,desktopFilterTitles} from '@/lib/desktop-filter-ui';
 
-const sortGroups=[{title:'',items:[['Best match','default'],['Recently added','recent']]},{title:'Discount',items:[['High to low','discount']]},{title:'Price',items:[['Low to high','price-asc'],['High to low','price-desc']]},{title:'Mileage',items:[['Low to high','kms-asc'],['High to low','kms-desc']]},{title:'Car age',items:[['Oldest first','age-asc'],['Newest first','age-desc']]}] as const;
+import {inventorySortGroups as sortGroups, sortInventory} from '@/lib/inventory-sort';
+import {toggleFilter as toggle} from '@/lib/inventory-filters';
 type Props={initialEmiMax?:number;initialQuery?:string;initialBrand?:string;initialBody?:string;initialPriceMax?:number;initialFilters?:Filters;initialSort?:string;initialOverlay?:'filters'|'sort'|null;initialOpen?:string|null;variant?:'standard'|'luxe';presentation?:'page'|'home'};
 
 export default function InventoryClient({initialEmiMax,initialQuery='',initialBrand='',initialBody='',initialPriceMax,initialFilters,initialSort='default',initialOverlay=null,initialOpen=null,variant='standard',presentation='page'}:Props){
@@ -49,7 +50,6 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  const [overlay,setOverlay]=useState<'filters'|'sort'|'search'|null>(initialOpen?'filters':initialOverlay);
  const [active,setActive]=useState<Tab>(tabs.includes(initialOpen?.toUpperCase() as Tab)?initialOpen!.toUpperCase() as Tab:'BRAND');
  const [keywordPane,setKeywordPane]=useState(false);
- const [login,setLogin]=useState(false);
  const [brandSearch,setBrandSearch]=useState('');
  const [quickFilter,setQuickFilter]=useState<DesktopQuickFilter|null>(null);
  const railRef=useRef<HTMLElement>(null);
@@ -62,7 +62,7 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
  useEffect(()=>{const pop=()=>setOverlay(null);window.addEventListener('popstate',pop);return()=>window.removeEventListener('popstate',pop);},[]);
  const results=useMemo(()=>{
   const items=vehicles.filter(car=>(!luxe||car.tier==='Luxe'||car.slug==='2024-toyota-fortuner-exr')&&matchesMonthlyPayment(car,emiMax)&&matches(car,filters,deferredQuery));
-  return [...items].sort((a,b)=>sort==='price-asc'?a.price-b.price:sort==='price-desc'?b.price-a.price:sort==='kms-asc'?a.mileage-b.mileage:sort==='kms-desc'?b.mileage-a.mileage:sort==='discount'?discount(b)-discount(a):sort==='age-asc'?a.year-b.year:sort==='age-desc'||sort==='recent'?b.year-a.year:0);
+  return sortInventory(items,sort);
  },[filters,deferredQuery,sort,luxe,emiMax]);
  const filtered=Boolean(emiMax!==undefined||query.trim()||hasActiveFilters(filters));
  // Counts always reflect the inventory actually shown.
@@ -147,13 +147,10 @@ export default function InventoryClient({initialEmiMax,initialQuery='',initialBr
   </div>):null}
   {overlay==='sort'?<div {...stylex.props(s.sortBackdrop)} onMouseDown={e=>e.target===e.currentTarget&&close()}><div ref={modal} tabIndex={-1} role="dialog" aria-modal="true" aria-label={tx("Sort cars")} {...stylex.props(s.sortSheet)}><i {...stylex.props(s.handle)}/><div {...stylex.props(s.sortHeading)}><h2 {...stylex.props(s.filterTitle)}>{tx("Sort")}</h2><button type="button" aria-label={tx("Close sort")} onClick={close} {...stylex.props(s.close)}><X size={22}/></button></div>{sortGroups.map(group=><section key={group.title||'default'} {...stylex.props(s.sortGroup)}>{group.title?<h3 {...stylex.props(s.sortCaption)}>{tx(group.title)}</h3>:null}{group.items.map(([label,value])=><label key={value} {...stylex.props(s.sortRow)}><input type="radio" name="sort" aria-label={group.title?`${tx(group.title)}: ${tx(label)}`:tx(label)} checked={sort===value} onChange={()=>{setSort(value);close();}}/><span>{tx(label)}</span></label>)}</section>)}</div></div>:null}
   {overlay==='search'?<ShowroomSearchSheet initialQuery={query} onSearch={applySearch} onClose={close} history={false}/>:null}
-  <LoginSheet open={login} onClose={()=>setLogin(false)}/>
  </div>;
 }
 
-function toggle(values:string[],value:string){return values.includes(value)?values.filter(item=>item!==value):[...values,value];}
 function titleCase(value:string){return value.toLowerCase().replace(/(^|\s)\S/g,letter=>letter.toUpperCase());}
-function discount(car:Vehicle){return (car.previousPrice??car.price)-car.price;}
 const s=stylex.create({
  homeContent:{gridTemplateColumns:'minmax(0,1fr)',paddingTop:16},
  homeGrid:{gridTemplateColumns:'repeat(4,minmax(0,1fr))'},

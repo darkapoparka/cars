@@ -15,7 +15,7 @@ import FeatureContent from '@/components/FeatureContent';
 import FinanceCalculatorLauncher, {type FinanceView} from '@/components/FinanceCalculatorLauncher';
 import FinanceQuoteHero, {type QuoteSelection} from '@/components/FinanceQuoteHero';
 import ImportCountryPicker from '@/components/ImportCountryPicker';
-import LoginSheet from '@/components/DealerEnquirySheet';
+import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import SellEnquirySheet, {type SellCarDetails, type SellIntent} from '@/components/SellEnquirySheet';
 import SellCarEntry from '@/components/SellCarEntry';
 import SellQuoteHero from '@/components/SellQuoteHero';
@@ -45,7 +45,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   const tx = useCopy();
   const alternative = useHomeAlternative();
   const current = config[kind];
-  const [loginOpen, setLoginOpen] = useState(false);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [financeView, setFinanceView] = useState<FinanceView>(null);
   const [quotePicker, setQuotePicker] = useState(false);
   const [quoteSelection, setQuoteSelection] = useState<QuoteSelection>({car: null, custom: false});
@@ -53,7 +53,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
   const [sellCar, setSellCar] = useState<SellCarDetails>({make: '', model: '', year: '', mileage: '', notes: ''});
   function start(intent: SellIntent = 'sale') {
     if (kind === 'sell') {setSellIntent(intent); return;}
-    if (kind === 'finance') {setLoginOpen(true); return;}
+    if (kind === 'finance') {setEnquiryOpen(true); return;}
     router.push(`/${kind}/details`);
   }
   const desktopControl = kind === 'finance'
@@ -72,7 +72,7 @@ function FeatureLandingContent({kind, serviceSearch}: {kind: FeatureKind; servic
       {kind === 'finance' ? <><ImportCountryPicker/><FinanceCalculatorLauncher view={financeView} onViewChange={view => {setFinanceView(view); if (!view) setQuotePicker(false);}} backNavigation={alternative} onChooseCar={quotePicker ? car => setQuoteSelection({car, custom: !car}) : undefined}/></> : null}
       <FeatureContent kind={kind} onStart={start} serviceSearch={serviceSearch}/>
     </main></LandingContentFrame>
-    <LoginSheet open={loginOpen} onClose={() => setLoginOpen(false)} />
+    <DealerEnquirySheet open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
     {kind === 'sell' ? <SellEnquirySheet car={sellCar} onCarChange={setSellCar} intent={sellIntent} onIntentChange={setSellIntent} onClose={() => setSellIntent(null)}/> : null}
   </div>;
 }

@@ -29,14 +29,14 @@ function imports(file) {
   return {dependencies, client};
 }
 
-it('keeps server snapshots and request APIs outside all client import graphs', () => {
+it('keeps server snapshots, validators and request APIs outside all client import graphs', () => {
   const visited = new Set();
   const reachable = new Set();
   function visit(file, client = false) {
     const key = `${client}:${file}`;
     if (visited.has(key)) return;
     visited.add(key); reachable.add(file);
-    if (client) assert.ok(!/(?:\.server\.ts|locale-server\.ts|captured-vehicle-details\.json)$/.test(file), `Server-only data reached by a client: ${file}`);
+    if (client) assert.ok(!/(?:\.server\.ts|locale-server\.ts|dealer-schema\.ts|captured-vehicle-details\.json)$/.test(file), `Server-only data reached by a client: ${file}`);
     if (!/\.tsx?$/.test(file)) return;
     const parsed = imports(file);
     for (const dependency of parsed.dependencies) visit(dependency, client || parsed.client);
@@ -68,4 +68,9 @@ it('validates the public dealer configuration and inventory identity boundary', 
     assert.ok(slugs.every(slug => typeof slug === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9_-]*$/.test(slug)), `Invalid vehicle slug in ${file}`);
     assert.equal(new Set(slugs).size, slugs.length, `Duplicate vehicle slugs in ${file}`);
   }
+});
+
+it('keeps UI markup and demo catalogues out of the matching engine', () => {
+  const dependencies = imports('lib/inventory-filters.ts').dependencies;
+  assert.ok(!dependencies.some(file => file.includes('components/') || /(?:data|captured-inventory|inventory-options)\.ts$/.test(file)));
 });

@@ -13,7 +13,7 @@ import {useInventoryBack} from '@/components/useInventoryHistory';
 import IconButton from '@/components/IconButton';
 import VehicleComparison from '@/components/VehicleComparison';
 import SimilarVehiclesSheet from '@/components/SimilarVehiclesSheet';
-import LoginSheet,{type DealerEnquiryIntent} from '@/components/DealerEnquirySheet';
+import DealerEnquirySheet,{type DealerEnquiryIntent} from '@/components/DealerEnquirySheet';
 import VehicleBelowFold,{VehicleSpecifications} from '@/components/VehicleBelowFold';
 import VehiclePhotoAlbums from '@/components/VehiclePhotoAlbums';
 import VehicleDetailTabs from '@/components/VehicleDetailTabs';
@@ -40,7 +40,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  const listedPhotos=reference?.gallery.length?reference.gallery:vehicleGallery(vehicle);
  const photos=listedPhotos.some(item=>item.src===primaryImage)?listedPhotos:[{category:'Exteriors' as const,label:'Exterior',src:primaryImage},...listedPhotos];
  const hasDetails=Boolean(approvedReference);
- const [photo,setPhoto]=useState(0),[login,setLogin]=useState(false),[overlay,setOverlay]=useState<Overlay>(null),[shared,setShared]=useState(''),[scrolled,setScrolled]=useState(false),[activeSection,setActiveSection]=useState('price'),[swipe,setSwipe]=useState<number|null>(null);
+ const [photo,setPhoto]=useState(0),[enquiryOpen,setEnquiryOpen]=useState(false),[overlay,setOverlay]=useState<Overlay>(null),[shared,setShared]=useState(''),[scrolled,setScrolled]=useState(false),[activeSection,setActiveSection]=useState('price'),[swipe,setSwipe]=useState<number|null>(null);
  const [gallerySelection,setGallerySelection]=useState<{photos:GalleryPhoto[];index:number}|null>(null);
  const [informationVisible,setInformationVisible]=useState(true);
  const [enquiryIntent,setEnquiryIntent]=useState<DealerEnquiryIntent>('enquiry');
@@ -68,7 +68,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
  function nextPhoto(direction:number){setPhoto(current=>(current+direction+photos.length)%photos.length);}
  function endSwipe(event:TouchEvent){if(swipe!==null&&Math.abs(event.changedTouches[0].clientX-swipe)>40)nextPhoto(event.changedTouches[0].clientX<swipe?1:-1);setSwipe(null);}
  function openPhoto(selectedPhotos:GalleryPhoto[],index=0){setGallerySelection({photos:selectedPhotos,index});setOverlay('gallery');}
- function openEnquiry(intent:DealerEnquiryIntent='enquiry'){setEnquiryIntent(intent);setLogin(true);}
+ function openEnquiry(intent:DealerEnquiryIntent='enquiry'){setEnquiryIntent(intent);setEnquiryOpen(true);}
  function jump(id:string){const target=id==='price'&&innerWidth>=1100?document.querySelector<HTMLElement>('[data-vehicle-heading]'):document.getElementById(id);if(target){const offset=innerWidth>=1100?144:68;if(id==='price'&&innerWidth>=1100)document.querySelector<HTMLElement>('[data-desktop-viewing]')?.scrollTo({top:0,behavior:'instant'});window.scrollTo({top:scrollY+target.getBoundingClientRect().top-offset,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});setActiveSection(id);}else if(id==='similar-cars'){setOverlay('similar');}}
  return <div {...stylex.props(s.screen)}>
   <div data-desktop-detail-layout {...stylex.props(s.desktopLayout)}><main {...stylex.props(s.vehicleContent)}>
@@ -87,7 +87,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
    </section>
    <div {...stylex.props(s.detailRow)}><VehicleDetailTabs photos={photos} onOpenPhoto={openPhoto} onInformationChange={setInformationVisible}><VehicleBelowFold vehicle={vehicle} reference={approvedReference} equipment={reference?.topFeatures} onLogin={intent=>openEnquiry(intent)}/></VehicleDetailTabs></div>
   </div></main><aside data-desktop-viewing aria-label={tx('Vehicle price')} {...stylex.props(s.desktopBuy,scrolled&&informationVisible&&s.desktopBuyWithSections)}><div {...stylex.props(s.buyHeader)}><h2 {...stylex.props(s.buyLabel)}>{tx('Vehicle price')}</h2><IconButton icon={Info} label={tx('Price information')} onClick={()=>setOverlay('price')}/></div><p {...stylex.props(s.desktopPrice,vehicle.priceOnRequest&&s.requestPrice)}>{priceLabel}</p><p {...stylex.props(s.overviewText)}>{tx("Confirm availability and arrange a viewing with the dealer.")}</p><button type="button" onClick={()=>setOverlay('viewing')} {...stylex.props(s.primary,s.actionWithIcon)}><CalendarDays size={18} aria-hidden="true" {...stylex.props(s.actionIcon)}/>{tx("Arrange a viewing")}</button><button type="button" onClick={toggleSaved} aria-label={tx(saved?'Remove from saved cars':'Save car')} aria-pressed={saved} {...stylex.props(s.outline,s.actionWithIcon,s.desktopSave)}><Heart size={18} aria-hidden="true" fill={saved?'currentColor':'none'}/>{tx(saved?'Vehicle saved':'Save vehicle')}</button><VehicleSpecifications vehicle={vehicle} reference={approvedReference} compact/></aside></div>
-  {dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
+  {dealer.mode === 'template' && dealer.referenceClaimsApproved?<VehicleComparison vehicle={vehicle} related={related}/>:null}
   {scrolled&&informationVisible?<nav ref={sectionRail} aria-label={tx("Vehicle sections")} {...stylex.props(s.sectionTabs)}>{[['Price','price'],['Overview','overview'],['Features','features'],...(approvedReference?.inspection.length? [['Inspection report','condition']]:[]),['Service History','service-history'],...(hasDetails?[['Car finance','car-finance'],['Our happy customers','happy-customers']]:[]),['Similar Cars','similar-cars']].map(([label,id])=><button type="button" key={id} onClick={()=>jump(id)} aria-current={activeSection===id?'location':undefined} {...stylex.props(s.sectionTab,activeSection===id&&s.activeSectionTab)}>{tx(label)}</button>)}</nav>:null}
   <div {...stylex.props(s.floating)}><button type="button" onClick={()=>openEnquiry()} aria-label={tx("Contact the dealer")} {...stylex.props(s.whatsapp)}><span {...stylex.props(s.whatsappInner)}><MessageCircle size={24}/></span></button></div>
   <div ref={purchaseSpace} aria-hidden="true" {...stylex.props(s.purchaseSpace)}/>
@@ -99,7 +99,7 @@ export default function VehicleDetailClient({vehicle,related,reference}: {vehicl
   {overlay==='tour'&&reference?.videoTour?<VehicleTourViewer {...reference.videoTour} onClose={()=>setOverlay(null)}/>:null}
   {overlay==='gallery'?<VehiclePhotoViewer photos={gallerySelection?.photos??photos} initialIndex={gallerySelection?.index??0} onClose={()=>setOverlay(null)}/>:null}
   {overlay==='warranty'?<div {...stylex.props(s.backdrop)} onMouseDown={event=>event.target===event.currentTarget&&setOverlay(null)}><div ref={panel} tabIndex={-1} role="dialog" aria-modal="true" aria-label={tx("Showroom information")} {...stylex.props(s.sheet)}><header {...stylex.props(s.sheetHeader)}><h2 {...stylex.props(s.sectionTitle)}>{tx("Showroom information")}</h2><button type="button" aria-label={tx("Close vehicle information")} onClick={()=>setOverlay(null)} {...stylex.props(s.close)}><X size={23}/></button></header><p {...stylex.props(s.overviewText)}>{tx("Ask the showroom about availability, vehicle condition and the terms of any warranty.")}</p><p {...stylex.props(s.referenceNote)}>{tx("Demo inventory; contact and booking services are not connected.")}</p><Link href="/benefits/warranty" {...stylex.props(s.inlineButton)}>{tx("Warranty information ")}<ArrowRight size={17}/></Link></div></div>:null}
-  <LoginSheet vehicleTitle={title} intent={enquiryIntent} open={login} onClose={()=>setLogin(false)}/>
+  <DealerEnquirySheet vehicleTitle={title} intent={enquiryIntent} open={enquiryOpen} onClose={()=>setEnquiryOpen(false)}/>
  </div>;
 }
 const s=stylex.create({

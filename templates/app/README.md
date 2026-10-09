@@ -1,60 +1,38 @@
-# App — Cars template candidate
+# App dealership template
 
-Copied from the current `L:/cars-app` working tree on 26 September 2026, including uncommitted UI work. This is the workspace for polishing the design into a reusable single-reseller template. The UI, routes, data, assets and dependency lockfile are preserved. Cars24 reference branding/content is still present; this import does not claim a finished client template or a production backend.
+A responsive, single-dealer showroom built with Next.js App Router, React, strict TypeScript and StyleX. The primary journey and the alternative phone composition at `/2` share inventory, detail pages, search, saved cars and enquiry drafts. English and Bulgarian are configurable per dealer.
 
-Use Node 22.20+ on the 22 line. Run locally:
+## Develop and verify
 
-```powershell
-Set-Location L:/CODEX/cars/templates/app
+Use Node **22.20 or newer on the 22.x line** and the committed npm lockfile.
+
+```sh
 npm ci
-npm run dev -- --hostname 127.0.0.1 --port 6473
-```
-
-Preview: http://127.0.0.1:6473/. Original reference preview: http://127.0.0.1:4173/. Stop this template's dev server before a production build. The shared Cars launcher does not support this new Next.js candidate yet; use the command above.
-
-See [template boundaries](TEMPLATE.md), [architecture](docs/ARCHITECTURE.md), [copy provenance](docs/IMPORT.md) and [original README](docs/SOURCE-README.md). Dealer configuration and mounted EN/BG journeys are supported; enquiries remain non-submitting drafts.
-
-A dealer-first responsive car showroom inspired by the strongest interaction patterns in modern automotive apps, rebuilt with original branding and reusable dealership configuration.
-
-## Stack
-
-- Next.js 16 App Router and React 19
-- TypeScript with strict checking
-- StyleX 0.19 design system and compiled atomic CSS
-- Static generation for inventory and vehicle pages
-- PWA manifest for installable web-app behavior
-- A domain/data boundary designed for a future Capacitor shell or React Native client
-
-## Routes
-
-- `/` — showroom home and discovery
-- `/cars` — searchable inventory and responsive filters
-- `/cars/[slug]` — vehicle gallery, pricing, finance, trust and contact
-- `/sell` — sell/trade-in lead flow
-- `/finance` — finance lead flow
-- `/service` — service and test-drive flow
-- `/saved` — saved vehicle shortlist
-- `/more` — customer activity and dealer services
-
-## Commands
-
-```bash
 npm run dev
 npm run check
-npm run build
 npm start
 ```
 
-`npm run check` runs lint, application TypeScript checks, domain/architecture regressions and a production build on Node 22. `npm test` runs the maintained regression suite separately. For a built preview, set `QA_BASE_URL` to its origin (including any dealer mount) and run `npm run qa:routes`.
+Development and production builds validate the public dealer configuration and image paths first. Keep the Babel/StyleX integration and webpack flags; the template does not maintain a parallel Turbopack setup. Do not run development and production builds against the same output directory concurrently. `NEXT_DIST_DIR` can isolate a build when needed.
 
-Inventory selections are reflected in the URL and collection history. Home make links, model/budget refinements, search and ordering survive reload and detail return; Clear all removes stale URL selections. Saved and recent cars are isolated by dealer, mode and mount, while the primary and `/2` journeys share that dealer's shortlist. This directory is the canonical source; the release lock and requested dealer refresh workflow still govern client rollout.
+`npm run check` runs lint, application/browser-test type checking, unit and architecture tests, configuration validation and a production build. `npm run test:browser` starts that production build on an isolated port and tests navigation, filtering, persistence, dialogs and responsive layouts. Install its browser once with `npx playwright install chromium`. On a machine with Chrome, set `QA_BROWSER_CHANNEL=chrome` instead.
 
-Isolated QA outputs selected with `NEXT_DIST_DIR` ending in `next-check`,
-`.next-build*` or `.next-qa*` do not retain production Webpack or Turbopack
-compiler caches. These checks use a new output directory for each run, so the
-cache cannot speed up the next check. Development caches and ordinary `.next`
-builds keep their existing behavior. Inactive generated QA output can be
-removed after its preview and checks have finished; retain source, lockfiles,
-screenshots, reports and recovery evidence.
+For an already-running server, set `QA_BASE_URL` to its origin **including the mount path**. `npm run qa:routes` checks the configured locale and journey routes. `npm run qa:screenshots` compares the responsive visual suite against local baselines; `npm run qa:screenshots -- --update-snapshots` deliberately records an accepted baseline. Never update baselines to conceal a regression. Screenshots, reports and traces belong under ignored `runtime/`, not in the application source.
 
-The current inventory is fixture-backed. Replace `lib/data.ts` with a typed API adapter without changing the page contracts.
+## Adapt for a dealer
+
+Start with `lib/dealer.json` for identity, logo, verified contacts, currency and enabled locales. Set `mode` to `dealer` and use a stable, unique dealer ID. Supply actual stock in `lib/dealer-inventory.json` and separate import listings in `lib/dealer-import-inventory.json`. Empty stock is valid. Run `npm run validate` after changing these files.
+
+Missing prices and mileage use the explicit `priceOnRequest` and `mileageOnRequest` flags. Set unavailable monthly estimates to zero; they are not advertised as free finance. Optional `listedAt` is the actual listing date used by Recently added, not the model year or observation timestamp. Undated vehicles retain source order. Local images must exist under `public/`; configured HTTPS image origins are allowlisted for Next Image. Secrets, CRM tokens and private notes never belong in these public files.
+
+Branding and copy beyond dealer identity live in `lib/showroom.ts`, `lib/showroom-art.ts`, locale dictionaries and the shared StyleX tokens. Service catalogue content lives in `lib/service-catalogue.ts`. Review these client-specific claims and imagery rather than assuming three JSON files approve every service or benefit.
+
+Unprefixed routes resolve to an enabled locale. The main destinations are `/[locale]`, `/cars`, `/cars/[slug]`, `/sell`, `/finance`, `/service`, `/saved` and `/more`, with supported `/2` journey aliases. Set `NEXT_PUBLIC_BASE_PATH` **before building** for mounted previews. For an independent mounted site, set `CARS_PREVIEW_SWITCHER=0` so it does not request the Cars host’s `/preview-switcher.js`. The default preserves existing Cars previews. Request-dependent locale layouts mean the application is not universally statically rendered.
+
+## Scope and ownership
+
+This is a demo/enquiry template, not a checkout, booking, account or lending backend. Forms prepare local editable drafts and configured external contact actions. They do not claim to submit a booking or payment. Reference imagery and captured example records are retained for comparison; review permissions, actual claims and client content before release.
+
+The maintained source is this `templates/app` master inside the Cars repository. The separate App repository retains publishing/review history. Reconcile its approved application changes into this subtree while preserving newer local polishing. Existing client releases still follow the Cars release lock and explicit refresh workflow.
+
+See [the current template contract](TEMPLATE.md), [architecture](docs/ARCHITECTURE.md), [Cars PRO reconciliation](docs/pro-integration-2026-10-09/README.md), [original PRO review](docs/PRO-REVIEW.md) and [source provenance](docs/IMPORT.md).

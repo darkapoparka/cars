@@ -1,3 +1,4 @@
+import 'server-only';
 import {headers} from 'next/headers';
 import {dealer} from './dealer-config';
 import {createCopy} from './locale-core';

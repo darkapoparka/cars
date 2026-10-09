@@ -5,9 +5,9 @@ import {useState} from 'react';
 import PageHeader from '@/components/PageHeader';
 import * as stylex from '@stylexjs/stylex';
 import {Armchair, CarFront, Check, ChevronDown, CircleGauge, Cog, Info, ShieldCheck, Wrench, Zap} from 'lucide-react';
-import LoginSheet from '@/components/DealerEnquirySheet';
+import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import type {ReferenceCheckpoint,ReferenceInspectionSection} from '@/lib/reference-types';
-import type {Vehicle} from '@/lib/data';
+import type {Vehicle} from '@/lib/vehicle';
 import {dealer} from '@/lib/dealer-config';
 import {media,tokens as $} from '@/app/tokens.stylex';
 
@@ -33,7 +33,7 @@ export function InspectionSection({section,embedded=false}: {section:ReferenceIn
 export default function InspectionReport({vehicle,capturedSections}: {vehicle: Vehicle;capturedSections:ReferenceInspectionSection[]}) {
   const tx = useCopy();
 
-  const [login, setLogin] = useState(false);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
   const approved = Boolean(dealer.referenceClaimsApproved);
   const vehicleTitle = `${vehicle.year} ${vehicle.make} ${vehicle.model}`;
   return <main {...stylex.props(s.page)}>
@@ -41,8 +41,8 @@ export default function InspectionReport({vehicle,capturedSections}: {vehicle: V
     <div {...stylex.props(s.content)}><section {...stylex.props(s.intro)}><h2 {...stylex.props(s.vehicleTitle)}>{tx(vehicle.year)} {tx(vehicle.make.toUpperCase())} {tx(vehicle.model.toUpperCase())}</h2><p {...stylex.props(s.trim)}>{tx(vehicle.trim.split(' • ')[0])} {tx(" | ")}{tx(vehicle.engine)}</p><img src={assetPath(vehicle.image)} width={1155} height={651} alt={tx(vehicleTitle)} {...stylex.props(s.car)} /><div {...stylex.props(s.inspectionStatement)}><span {...stylex.props(s.inspectionIcon)}>{approved?<ShieldCheck size={43} fill="#50b67f" color="#fff" />:<Info size={32}/>}</span><p>{tx(approved?"Review the recorded condition details for this demo vehicle.":"No verified inspection report is available for this sample car.")}</p></div></section>
       {approved?<><h2 {...stylex.props(s.reportHeading)}>{tx("YOUR CAR CONDITION REPORT")}</h2>{capturedSections.map(section => <InspectionSection key={section.title} section={section} />)}<p {...stylex.props(s.referenceNote)}>{tx("Archived inspection data for this demo vehicle. The recorded checkpoints and findings come from this vehicle’s captured listing. This application has not independently inspected or certified the vehicle.")}</p></>:null}
     </div>
-    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
-    <LoginSheet vehicleTitle={vehicleTitle} open={login} onClose={() => setLogin(false)} />
+    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setEnquiryOpen(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
+    <DealerEnquirySheet vehicleTitle={vehicleTitle} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
   </main>;
 }
 const s = stylex.create({

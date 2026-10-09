@@ -5,7 +5,7 @@ import {X} from 'lucide-react';
 import VehicleCard from '@/components/VehicleCard';
 import {useModal} from '@/components/useModal';
 import {capturedRelatedVehicles} from '@/lib/captured-related';
-import type {Vehicle} from '@/lib/data';
+import type {Vehicle} from '@/lib/vehicle';
 import {media,tokens as $} from '@/app/tokens.stylex';
 
 export default function SimilarVehiclesSheet({vehicle,related,onClose}:{vehicle:Vehicle;related:Vehicle[];onClose:()=>void}){

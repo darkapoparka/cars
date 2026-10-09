@@ -6,10 +6,10 @@ import * as stylex from '@stylexjs/stylex';
 import {Share2, Star} from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 import IconButton from '@/components/IconButton';
-import LoginSheet from '@/components/DealerEnquirySheet';
+import DealerEnquirySheet from '@/components/DealerEnquirySheet';
 import VehiclePhotoViewer from '@/components/VehiclePhotoViewer';
 import {vehicleGallery, type GalleryCategory,type GalleryPhoto} from '@/lib/vehicle-gallery';
-import type {Vehicle} from '@/lib/data';
+import type {Vehicle} from '@/lib/vehicle';
 import {media, tokens as $} from '@/app/tokens.stylex';
 
 const categories: GalleryCategory[] = ['Exteriors', 'Interiors', 'Features'];
@@ -22,7 +22,7 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
   const available = categories.filter(item => photos.some(photo => photo.category === item));
   const [category, setCategory] = useState<GalleryCategory>(available.includes(initialCategory) ? initialCategory : available[0]);
   const [selected, setSelected] = useState<number | null>(null);
-  const [login, setLogin] = useState(false);
+  const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [message, setMessage] = useState('');
   const content = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -53,10 +53,10 @@ export default function VehicleGallery({vehicle, initialCategory = 'Exteriors',c
     <PageHeader title={tx("Photos")} backHref={`/cars/${vehicle.slug}`} backLabel={tx("Back to vehicle details")} action={<IconButton icon={Share2} label={tx('Share car')} onClick={share}/>}/>
     <nav aria-label={tx("Vehicle photo categories")} {...stylex.props(s.tabs)}>{available.map(item => <button type="button" key={item} aria-pressed={item === category} onClick={() => choose(item)} {...stylex.props(s.tab, item === category && s.activeTab)}>{tx(captions[item])}</button>)}</nav>
     <div ref={content} {...stylex.props(s.images)}>{photos.map((photo, index) => <button type="button" key={`${photo.src}-${index}`} data-photo-index={index} data-photo-category={photo.category} aria-label={tx(`Zoom ${photo.label} photo`)} onClick={() => setSelected(index)} {...stylex.props(s.photoButton)}><img src={assetPath(photo.src)} width={1200} height={625} alt={`${vehicle.make} ${vehicle.model}: ${tx(photo.label)}`} loading={index < 2 ? 'eager' : 'lazy'} {...stylex.props(s.photo, vehicle.imagePlaceholder && s.placeholderPhoto)} /><span {...stylex.props(s.photoCaption)}><Star size={12} fill="currentColor" />{tx(photo.label)}</span></button>)}</div>
-    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setLogin(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
+    <footer data-desktop-page-bar {...stylex.props(s.footer)}><button type="button" onClick={() => setEnquiryOpen(true)} {...stylex.props(s.book)}>{tx("Ask about a viewing")}</button></footer>
     {message ? <button type="button" role="status" onClick={() => setMessage('')} {...stylex.props(s.message)}>{tx(message)}</button> : null}
     {selected !== null ? <VehiclePhotoViewer photos={photos} initialIndex={selected} onClose={() => setSelected(null)} /> : null}
-    <LoginSheet vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} open={login} onClose={() => setLogin(false)} />
+    <DealerEnquirySheet vehicleTitle={`${vehicle.year} ${vehicle.make} ${vehicle.model}`} open={enquiryOpen} onClose={() => setEnquiryOpen(false)} />
   </main>;
 }
 const s = stylex.create({

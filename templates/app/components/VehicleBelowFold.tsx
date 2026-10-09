@@ -1,4 +1,5 @@
 'use client';
+import {hasPublishedMileage} from '@/lib/vehicle-values';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 
@@ -44,7 +45,7 @@ export function VehicleSpecifications({vehicle,reference,compact=false}: {vehicl
   const tx = useCopy();
   const [information,setInformation]=useState<{title:string;description:string}|null>(null);
 
-  const fallback=dealer.referenceClaimsApproved&&!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine],['Transmission',vehicle.transmission],['Body Type',vehicle.body],['Fuel Type',vehicle.fuel],['Color',vehicle.color],['Distance driven',`${formatPrice(vehicle.mileage)} ${tx('km')}`]] as const;
+  const fallback=dealer.referenceClaimsApproved&&!isDealer&&vehicle.slug==='2024-toyota-fortuner-exr'?fortunerSpecs:[['Engine',vehicle.engine],['Transmission',vehicle.transmission],['Body Type',vehicle.body],['Fuel Type',vehicle.fuel],['Color',vehicle.color],['Distance driven',hasPublishedMileage(vehicle)?`${formatPrice(vehicle.mileage)} ${tx('km')}`:tx('Mileage on request')]] as const;
   const entries=reference?.specifications.length?reference.specifications.filter(spec=>!['odometerReading','specs','vin'].includes(spec.key)).map(spec=>({label:spec.label,value:spec.value,description:spec.description})):fallback.map(([label,value])=>({label,value,description:undefined}));
   return <><section data-vehicle-specifications aria-label={tx('Specifications')} {...stylex.props(s.specCard,compact?s.sidebarSpecs:s.contentSpecs)}>
     <h2 {...stylex.props(s.sectionHeading)}>{tx('Specifications')}</h2>

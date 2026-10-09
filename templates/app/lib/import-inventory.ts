@@ -1,4 +1,4 @@
-import type {Vehicle} from './data';
+import type {Vehicle} from './vehicle';
 import {isDealer} from './dealer-config';
 import dealerImportInventory from './dealer-import-inventory.json';
 

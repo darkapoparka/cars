@@ -1,17 +1,7 @@
 import configuration from './dealer.json';
-import type {AppLocale} from './locale-policy';
 export type {AppLocale} from './locale-policy';
-export type DealerConfiguration = {
-  mode: 'template' | 'dealer'; id: string; name: string; shortName: string;
-  logo: {light: string; dark: string; icon: string};
-  defaultLocale: AppLocale; enabledLocales: AppLocale[];
-  country: string; currency: string; city: string; address: string;
-  phoneDisplay: string; phoneE164: string; email: string;
-  mapsUrl: string; website: string; whatsappUrl: string;
-  services: string[]; observedAt: string; inventoryNotice: string; previewNotice: string;
-  referenceClaimsApproved?: boolean;
-  welcomeEnabled?: boolean;
-};
+import type {DealerConfiguration} from './dealer-schema';
+export type {DealerConfiguration} from './dealer-schema';
 /** Generated dealer.json is the public content boundary, never private CRM data. */
 export const dealer = configuration as DealerConfiguration;
 export const isDealer = dealer.mode === 'dealer';

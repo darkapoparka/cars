@@ -1,4 +1,5 @@
 'use client';
+import {hasPublishedMileage, hasPublishedMonthlyPayment, vehicleDiscount} from '@/lib/vehicle-values';
 import {memo, useEffect, useRef, useState} from 'react';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
@@ -37,11 +38,11 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, financ
   }, [tx]);
 
   const {saved, toggle, error} = useSavedVehicle(vehicle.slug);
-  const discount = Math.max(0, (vehicle.previousPrice ?? vehicle.price) - vehicle.price);
+  const discount = vehicleDiscount(vehicle);
   const badge = /coming/i.test(vehicle.badges[0] || '') ? 'Coming soon' : '';
   const href = `/cars/${vehicle.slug}`;
   const benefits = vehicle.proposalBenefits?.slice(0, 2) ?? [];
-  const facts = [vehicle.mileageOnRequest ? tx('Mileage on request') : `${formatPrice(vehicle.mileage)} ${tx('km')}`,
+  const facts = [!hasPublishedMileage(vehicle) ? tx('Mileage on request') : `${formatPrice(vehicle.mileage)} ${tx('km')}`,
     vehicle.specifications || vehicle.transmission,
     vehicle.highlights[0] || (vehicle.fuel !== 'Not published' ? vehicle.fuel : vehicle.body)].filter(Boolean);
   const importAction = `${tx('Import enquiry')}: ${vehicle.year} ${vehicle.make} ${vehicle.model}, ${importListing?.country || ''}`;
@@ -55,7 +56,7 @@ function VehicleCard({vehicle, showDiscount = false, desktopTile = false, financ
     <h3 title={`${tx(vehicle.year)} ${tx(vehicle.model)}`} {...stylex.props(s.title, desktopTile && s.tileTitle, importListing && s.importText)}>{tx(vehicle.year)} {tx(vehicle.model)}</h3>
     {vehicle.trim ? <p {...stylex.props(s.trim)}>{tx(vehicle.trim)}</p> : null}
     <div {...stylex.props(s.priceRow)}><strong {...stylex.props(s.price, vehicle.priceOnRequest && s.priceOnRequest)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={18} />{tx(formatPrice(vehicle.price))}</>}</strong>{showDiscount && discount > 0 ? <span {...stylex.props(s.discount)}>{tx(formatPrice(discount))} {tx(" OFF")}</span> : null}</div>
-    {!finance && vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
+    {!finance && hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><span {...stylex.props(s.monthlyPrice)}><CurrencyLabel size={11} />{tx(formatPrice(vehicle.monthly))}{tx("/mo*")}</span><span {...stylex.props(s.monthlyNote)}>{tx("est.")}</span></p> : null}
   </>;
   return <article aria-label={tx(`${vehicle.year} ${vehicle.make} ${vehicle.model}`)} data-desktop-tile={desktopTile || undefined} data-price={vehicle.price} data-mileage={vehicle.mileage} data-monthly={vehicle.monthly} {...stylex.props(s.card)}>
     <div {...stylex.props(s.main, desktopTile && s.tileMain)}>

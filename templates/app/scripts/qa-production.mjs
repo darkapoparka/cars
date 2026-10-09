@@ -1,11 +1,5 @@
-import {access, mkdir, readFile, writeFile} from 'node:fs/promises';
-import {constants} from 'node:fs';
-import {execFile} from 'node:child_process';
-import {promisify} from 'node:util';
-import path from 'node:path';
+import {readFile} from 'node:fs/promises';
 
-const execFileAsync = promisify(execFile);
-const mode = process.argv[2] ?? 'routes';
 const base = new URL(process.env.QA_BASE_URL ?? 'http://127.0.0.1:6473/');
 if (!['http:', 'https:'].includes(base.protocol)) throw new Error('QA_BASE_URL must be an HTTP(S) URL.');
 base.pathname = base.pathname.replace(/\/$/, '') + '/';
@@ -33,35 +27,9 @@ async function checkRoutes() {
   if (results.some(result => !result.ok)) throw new Error('Production route checks failed.');
   return results;
 }
-async function findBrowser() {
-  for (const candidate of [process.env.CHROME_PATH, 'C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe', '/usr/bin/google-chrome', '/usr/bin/chromium', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome']) {
-    if (!candidate) continue;
-    try {await access(candidate, constants.X_OK); return candidate;} catch { /* Try the next installed browser. */ }
-  }
-  throw new Error('Set CHROME_PATH to a Chromium browser executable for screenshot QA.');
-}
-async function captureScreenshots() {
-  const chrome = await findBrowser();
-  const directory = path.resolve(process.env.QA_OUTPUT_DIR ?? 'runtime/qa');
-  await mkdir(directory, {recursive: true});
-  const captures = [];
-  for (const locale of dealer.enabledLocales) for (const variant of ['', '/2']) for (const width of [320, 390, 1440]) {
-    const route = '/' + locale + variant;
-    const file = `${locale}-${variant ? '2' : 'home'}-${width}.png`;
-    await execFileAsync(process.execPath, ['scripts/cdp-capture.mjs', urlFor(route), path.join(directory, file), String(width), '900'], {
-      env: {...process.env, CHROME_PATH: chrome}, timeout: 60000, maxBuffer: 2000000, windowsHide: true,
-    });
-    captures.push({route, width, file});
-    console.log(`CAPTURE ${file}`);
-  }
-  await writeFile(path.join(directory, 'capture-report.json'), JSON.stringify({baseUrl: base.href, captures}, null, 2) + '\n');
-  return captures;
-}
 try {
-  if (!['all', 'routes', 'screenshots'].includes(mode)) throw new Error('Unknown QA mode: ' + mode);
-  const checks = mode === 'screenshots' ? [] : await checkRoutes();
-  const captures = mode === 'routes' ? [] : await captureScreenshots();
-  console.log(`QA complete: ${checks.length} routes, ${captures.length} screenshots.`);
+  const results = await checkRoutes();
+  console.log('QA complete: ' + results.length + ' routes.');
 } catch (error) {
   console.error(error instanceof Error ? error.message : String(error));
   process.exitCode = 1;

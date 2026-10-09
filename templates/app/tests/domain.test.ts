@@ -7,7 +7,8 @@ import {applicationHistoryState} from '../lib/history-state';
 import {decodeVehicleList, readVehicleList, updateVehicleList, vehicleStorageKeys} from '../lib/vehicle-storage';
 import {emptyFilters, hasActiveFilters, matchesInventory, matchesMonthlyPayment, restoreFilters} from '../lib/inventory-filters';
 import {inventorySearch, readInventorySearch, restoreInventoryState} from '../lib/inventory-search';
-import {vehicles, getVehicle, formatPrice} from '../lib/data';
+import {vehicles as catalogue, getVehicle, formatPrice} from '../lib/data';
+import {demoVehicles as vehicles} from '../lib/fixtures/demo-vehicles';
 import {currency} from '../lib/currency';
 import {estimateFinance} from '../lib/finance';
 
@@ -135,13 +136,13 @@ describe('dealer-scoped saved and recent cars', () => {
 describe('inventory domain invariants', () => {
   const car = {...vehicles[0], price:30000, mileage:20000, monthly:500, priceOnRequest:false, mileageOnRequest:false};
   it('keeps all existing inventory visible without active filters', () => {for(const vehicle of vehicles) assert.equal(matchesInventory(vehicle, emptyFilters(), ''),true);});
-  it('keeps slug lookup equivalent to the original first-match lookup', () => {for(const vehicle of vehicles) assert.equal(getVehicle(vehicle.slug),vehicles.find(item=>item.slug===vehicle.slug)); assert.equal(getVehicle('not-a-vehicle'),undefined);});
+  it('keeps slug lookup equivalent to the original first-match lookup', () => {for(const vehicle of catalogue) assert.equal(getVehicle(vehicle.slug),catalogue.find(item=>item.slug===vehicle.slug)); assert.equal(getVehicle('not-a-vehicle'),undefined);});
   it('preserves exact currency formatting', () => {for(const amount of [0,1,30000,1234567.89]) assert.equal(formatPrice(amount),new Intl.NumberFormat(currency.locale).format(amount));});
   it('does not share mutable default filters', () => {const a=emptyFilters(),b=emptyFilters();a.brands.push('Toyota');assert.deepEqual(b.brands,[]);});
   it('detects and clears active filters', () => {assert.equal(hasActiveFilters(emptyFilters()),false);assert.equal(hasActiveFilters({...emptyFilters(),brands:['Toyota']}),true);});
   it('restores untrusted state within valid bounds', () => {
     const restored=restoreFilters({minimum:99999999, maximum:-1, brands:['BMW',1], extra:{TRANSMISSION:['Automatic'],__invalid:['x']}, emiLimit:Infinity});
-    assert.equal(restored.minimum,950000);assert.equal(restored.maximum,950000);assert.deepEqual(restored.brands,['BMW']);assert.deepEqual(restored.extra,{TRANSMISSION:['Automatic']});assert.equal(restored.emiLimit,null);
+    assert.equal(restored.minimum,emptyFilters().maximum);assert.equal(restored.maximum,emptyFilters().maximum);assert.deepEqual(restored.brands,['BMW']);assert.deepEqual(restored.extra,{TRANSMISSION:['Automatic']});assert.equal(restored.emiLimit,null);
   });
   it('does not treat an unpublished price as a bargain', () => {const filters={...emptyFilters(),budget:[`Less than ${currency.code} 40K`]};assert.equal(matchesInventory(car,filters,''),true);assert.equal(matchesInventory({...car,price:0,priceOnRequest:true},filters,''),false);});
   it('does not treat unpublished mileage as low mileage', () => {const filters={...emptyFilters(),mileage:'Under 30,000 kms'};assert.equal(matchesInventory(car,filters,''),true);assert.equal(matchesInventory({...car,mileage:0,mileageOnRequest:true},filters,''),false);});

@@ -1,4 +1,5 @@
 'use client';
+import {hasPublishedMonthlyPayment} from '@/lib/vehicle-values';
 import {assetPath} from '@/lib/paths';
 import {useCopy} from '@/lib/locale';
 import Link from '@/components/AppLink';
@@ -30,7 +31,7 @@ export default function MiniVehicleCard({vehicle, green = false, featured = fals
     <Link href={href} {...stylex.props(s.body)}>
       <h3 {...stylex.props(s.title)}>{tx(vehicle.year)} {tx(vehicle.make)} {tx(vehicle.model)}</h3>
       <p {...stylex.props(s.price)}>{vehicle.priceOnRequest ? tx('Price on request') : <><CurrencyLabel size={11} />{tx(formatPrice(vehicle.price))}</>}</p>
-      {vehicle.monthly > 0 ? <p {...stylex.props(s.monthly)}><CurrencyLabel size={10} />{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
+      {hasPublishedMonthlyPayment(vehicle) ? <p {...stylex.props(s.monthly)}><CurrencyLabel size={10} />{tx(formatPrice(vehicle.monthly))}{tx("/mo* est.")}</p> : null}
     </Link>
     {error ? <p role="alert" {...stylex.props(s.error)}>{tx(error)}</p> : null}
   </article>;
